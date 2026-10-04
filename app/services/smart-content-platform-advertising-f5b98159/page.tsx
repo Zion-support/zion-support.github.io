@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/smart-content-platform-advertising-f5b98159` title="Smart Content Platform - Advertising" />
+        <BreadcrumbSchema path="/services/smart-content-platform-advertising-f5b98159" title="Smart Content Platform - Advertising" />
         <h1 className="text-4xl font-bold mb-6">Smart Content Platform - Advertising</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Smart Content Platform - Advertising. This autonomous system provides content creation with zero manual intervention needed.</p>
 

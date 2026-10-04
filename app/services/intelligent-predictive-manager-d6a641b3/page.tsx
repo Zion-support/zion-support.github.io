@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-predictive-manager-d6a641b3` title="Intelligent Predictive Manager" />
+        <BreadcrumbSchema path="/services/intelligent-predictive-manager-d6a641b3" title="Intelligent Predictive Manager" />
         <h1 className="text-4xl font-bold mb-6">Intelligent Predictive Manager</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation retail solution: Intelligent Predictive Manager. Combines document processing with adaptive intelligence for optimal results.</p>
 

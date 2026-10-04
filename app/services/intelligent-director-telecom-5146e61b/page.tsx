@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-director-telecom-5146e61b` title="Intelligent director-telecom" />
+        <BreadcrumbSchema path="/services/intelligent-director-telecom-5146e61b" title="Intelligent director-telecom" />
         <h1 className="text-4xl font-bold mb-6">Intelligent director-telecom</h1>
         <p className="text-lg text-gray-300 mb-8">The future of telecom is here with Intelligent director-telecom. Powered by cutting-edge AI, this platform delivers predictive analytics like never before.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-image-optimizer-1-b9a867d9` title="Intelligent Image Optimizer #1" />
+        <BreadcrumbSchema path="/services/intelligent-image-optimizer-1-b9a867d9" title="Intelligent Image Optimizer #1" />
         <h1 className="text-4xl font-bold mb-6">Intelligent Image Optimizer #1</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your technology operations with our Intelligent Image Optimizer #1. This AI-driven solution automates resource optimization with unprecedented accurac</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/neural-process-analyzer-1-75c65f49` title="Neural Process Analyzer #1" />
+        <BreadcrumbSchema path="/services/neural-process-analyzer-1-75c65f49" title="Neural Process Analyzer #1" />
         <h1 className="text-4xl font-bold mb-6">Neural Process Analyzer #1</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your healthcare operations with our Neural Process Analyzer #1. This AI-driven solution automates market intelligence with unprecedented accuracy and </p>
 

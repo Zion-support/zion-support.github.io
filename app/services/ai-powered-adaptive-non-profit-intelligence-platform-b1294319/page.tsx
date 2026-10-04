@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-powered-adaptive-non-profit-intelligence-platform-b1294319` title="AI-Powered Adaptive Non-Profit Intelligence Platform" />
+        <BreadcrumbSchema path="/services/ai-powered-adaptive-non-profit-intelligence-platform-b1294319" title="AI-Powered Adaptive Non-Profit Intelligence Platform" />
         <h1 className="text-4xl font-bold mb-6">AI-Powered Adaptive Non-Profit Intelligence Platform</h1>
         <p className="text-lg text-gray-300 mb-8">AI-driven intelligence platform that delivers adaptive insights and automated decision-making for non-profit operations.</p>
 

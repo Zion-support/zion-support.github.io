@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-enterprise-grade-blockchain-decision-engine-43ac917a` title="Cognitive Enterprise-Grade Blockchain Decision Engine" />
+        <BreadcrumbSchema path="/services/cognitive-enterprise-grade-blockchain-decision-engine-43ac917a" title="Cognitive Enterprise-Grade Blockchain Decision Engine" />
         <h1 className="text-4xl font-bold mb-6">Cognitive Enterprise-Grade Blockchain Decision Engine</h1>
         <p className="text-lg text-gray-300 mb-8">Cognitive decision engine that processes enterprise-grade signals to drive blockchain strategy with deep learning.</p>
 

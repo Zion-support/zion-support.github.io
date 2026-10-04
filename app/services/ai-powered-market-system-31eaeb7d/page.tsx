@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-powered-market-system-31eaeb7d` title="AI-Powered Market System" />
+        <BreadcrumbSchema path="/services/ai-powered-market-system-31eaeb7d" title="AI-Powered Market System" />
         <h1 className="text-4xl font-bold mb-6">AI-Powered Market System</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your technology operations with our AI-Powered Market System. This AI-driven solution automates quality control with unprecedented accuracy and effici</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/insights-neural---retail-2ba74179` title="Insights Neural - Retail" />
+        <BreadcrumbSchema path="/services/insights-neural---retail-2ba74179" title="Insights Neural - Retail" />
         <h1 className="text-4xl font-bold mb-6">Insights Neural - Retail</h1>
         <p className="text-lg text-gray-300 mb-8">The future of retail is here with Insights Neural - Retail. Powered by cutting-edge AI, this platform delivers energy management like never before.</p>
 

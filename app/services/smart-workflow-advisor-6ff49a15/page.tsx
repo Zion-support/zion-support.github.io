@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/smart-workflow-advisor-6ff49a15` title="Smart Workflow Advisor" />
+        <BreadcrumbSchema path="/services/smart-workflow-advisor-6ff49a15" title="Smart Workflow Advisor" />
         <h1 className="text-4xl font-bold mb-6">Smart Workflow Advisor</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your telecom operations with our Smart Workflow Advisor. This AI-driven solution automates compliance monitoring with unprecedented accuracy and effic</p>
 

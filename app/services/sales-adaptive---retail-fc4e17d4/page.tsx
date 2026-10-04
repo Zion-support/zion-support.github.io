@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/sales-adaptive---retail-fc4e17d4` title="Sales Adaptive - Retail" />
+        <BreadcrumbSchema path="/services/sales-adaptive---retail-fc4e17d4" title="Sales Adaptive - Retail" />
         <h1 className="text-4xl font-bold mb-6">Sales Adaptive - Retail</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize Retail through intelligent automation. Our Sales Adaptive - Retail leverages advanced machine learning to deliver sentiment analysis at scale.</p>
 

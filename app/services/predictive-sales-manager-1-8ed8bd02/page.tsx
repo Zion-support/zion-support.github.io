@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictive-sales-manager-1-8ed8bd02` title="Predictive Sales Manager #1" />
+        <BreadcrumbSchema path="/services/predictive-sales-manager-1-8ed8bd02" title="Predictive Sales Manager #1" />
         <h1 className="text-4xl font-bold mb-6">Predictive Sales Manager #1</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize telecom through intelligent automation. Our Predictive Sales Manager #1 leverages advanced machine learning to deliver security monitoring at scal</p>
 

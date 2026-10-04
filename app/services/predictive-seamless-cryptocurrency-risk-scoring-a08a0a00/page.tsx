@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictive-seamless-cryptocurrency-risk-scoring-a08a0a00` title="Predictive Seamless Cryptocurrency Risk Scoring" />
+        <BreadcrumbSchema path="/services/predictive-seamless-cryptocurrency-risk-scoring-a08a0a00" title="Predictive Seamless Cryptocurrency Risk Scoring" />
         <h1 className="text-4xl font-bold mb-6">Predictive Seamless Cryptocurrency Risk Scoring</h1>
         <p className="text-lg text-gray-300 mb-8">Predictive risk scoring engine that assesses seamless cryptocurrency vulnerabilities with machine learning.</p>
 

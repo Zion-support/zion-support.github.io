@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/adaptive-process-generator-090e9779` title="Adaptive Process Generator" />
+        <BreadcrumbSchema path="/services/adaptive-process-generator-090e9779" title="Adaptive Process Generator" />
         <h1 className="text-4xl font-bold mb-6">Adaptive Process Generator</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize construction through intelligent automation. Our Adaptive Process Generator leverages advanced machine learning to deliver threat detection at sca</p>
 

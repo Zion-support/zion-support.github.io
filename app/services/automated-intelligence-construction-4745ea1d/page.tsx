@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/automated-intelligence-construction-4745ea1d` title="Automated intelligence-construction" />
+        <BreadcrumbSchema path="/services/automated-intelligence-construction-4745ea1d" title="Automated intelligence-construction" />
         <h1 className="text-4xl font-bold mb-6">Automated intelligence-construction</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation Construction solution: Automated intelligence-construction. Combines customer service automation with adaptive intelligence for optimal results.</p>
 

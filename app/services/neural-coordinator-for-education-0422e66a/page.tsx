@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/neural-coordinator-for-education-0422e66a` title="Neural Coordinator for Education" />
+        <BreadcrumbSchema path="/services/neural-coordinator-for-education-0422e66a" title="Neural Coordinator for Education" />
         <h1 className="text-4xl font-bold mb-6">Neural Coordinator for Education</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize education through intelligent automation. Our Neural Coordinator for Education leverages advanced machine learning to deliver code optimization at</p>
 

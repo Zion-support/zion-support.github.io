@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/automated-orchestrator-for-finance-2171d4da` title="Automated Orchestrator for Finance" />
+        <BreadcrumbSchema path="/services/automated-orchestrator-for-finance-2171d4da" title="Automated Orchestrator for Finance" />
         <h1 className="text-4xl font-bold mb-6">Automated Orchestrator for Finance</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your finance operations with our Automated Orchestrator for Finance. This AI-driven solution automates financial planning with unprecedented accuracy </p>
 

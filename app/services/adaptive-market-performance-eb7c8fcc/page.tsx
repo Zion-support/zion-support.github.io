@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/adaptive-market-performance-eb7c8fcc` title="Adaptive Market Performance" />
+        <BreadcrumbSchema path="/services/adaptive-market-performance-eb7c8fcc" title="Adaptive Market Performance" />
         <h1 className="text-4xl font-bold mb-6">Adaptive Market Performance</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Adaptive Market Performance. This autonomous system provides code optimization with zero manual intervention needed.</p>
 

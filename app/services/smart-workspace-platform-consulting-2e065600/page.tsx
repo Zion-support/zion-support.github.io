@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/smart-workspace-platform-consulting-2e065600` title="Smart Workspace Platform - Consulting" />
+        <BreadcrumbSchema path="/services/smart-workspace-platform-consulting-2e065600" title="Smart Workspace Platform - Consulting" />
         <h1 className="text-4xl font-bold mb-6">Smart Workspace Platform - Consulting</h1>
         <p className="text-lg text-gray-300 mb-8">Enhance your consulting business with Smart Workspace Platform - Consulting. Our solution provides knowledge sharing with enterprise-grade reliability and secur</p>
 

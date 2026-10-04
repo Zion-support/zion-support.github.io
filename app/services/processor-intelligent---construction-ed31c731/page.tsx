@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/processor-intelligent---construction-ed31c731` title="Processor Intelligent - Construction" />
+        <BreadcrumbSchema path="/services/processor-intelligent---construction-ed31c731" title="Processor Intelligent - Construction" />
         <h1 className="text-4xl font-bold mb-6">Processor Intelligent - Construction</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation construction solution: Processor Intelligent - Construction. Combines supply chain with adaptive intelligence for optimal results.</p>
 

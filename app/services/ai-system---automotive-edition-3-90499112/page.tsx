@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-system---automotive-edition-3-90499112` title="AI System - Automotive Edition #3" />
+        <BreadcrumbSchema path="/services/ai-system---automotive-edition-3-90499112" title="AI System - Automotive Edition #3" />
         <h1 className="text-4xl font-bold mb-6">AI System - Automotive Edition #3</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with AI System - Automotive Edition #3. This autonomous system provides content generation with zero manual intervention needed.</p>
 

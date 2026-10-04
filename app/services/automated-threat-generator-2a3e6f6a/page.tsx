@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/automated-threat-generator-2a3e6f6a` title="Automated Threat Generator" />
+        <BreadcrumbSchema path="/services/automated-threat-generator-2a3e6f6a" title="Automated Threat Generator" />
         <h1 className="text-4xl font-bold mb-6">Automated Threat Generator</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your sports operations with our Automated Threat Generator. This AI-driven solution automates data processing with unprecedented accuracy and efficien</p>
 

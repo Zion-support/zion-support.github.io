@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/autonomous-coordinator-tech-c71a27ea` title="Autonomous coordinator-tech" />
+        <BreadcrumbSchema path="/services/autonomous-coordinator-tech-c71a27ea" title="Autonomous coordinator-tech" />
         <h1 className="text-4xl font-bold mb-6">Autonomous coordinator-tech</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your technology operations with our Autonomous coordinator-tech. This AI-driven solution automates customer insights with unprecedented accuracy and e</p>
 

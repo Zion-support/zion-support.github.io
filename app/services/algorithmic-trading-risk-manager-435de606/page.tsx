@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/algorithmic-trading-risk-manager-435de606` title="Algorithmic Trading Risk Manager" />
+        <BreadcrumbSchema path="/services/algorithmic-trading-risk-manager-435de606" title="Algorithmic Trading Risk Manager" />
         <h1 className="text-4xl font-bold mb-6">Algorithmic Trading Risk Manager</h1>
         <p className="text-lg text-gray-300 mb-8">Real-time risk management for algorithmic trading. Pre-trade checks, position monitoring, and automated kill switches with microsecond latency for HFT and quant</p>
 

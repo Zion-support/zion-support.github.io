@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/serverless-ai-inference-726ec48c` title="Serverless AI Inference" />
+        <BreadcrumbSchema path="/services/serverless-ai-inference-726ec48c" title="Serverless AI Inference" />
         <h1 className="text-4xl font-bold mb-6">Serverless AI Inference</h1>
         <p className="text-lg text-gray-300 mb-8">Deploy AI models as serverless functions with auto-scaling and pay-per-use pricing.</p>
 

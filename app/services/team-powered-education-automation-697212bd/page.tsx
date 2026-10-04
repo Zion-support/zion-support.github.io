@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/team-powered-education-automation-697212bd` title="Team-Powered Education Automation" />
+        <BreadcrumbSchema path="/services/team-powered-education-automation-697212bd" title="Team-Powered Education Automation" />
         <h1 className="text-4xl font-bold mb-6">Team-Powered Education Automation</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize education through intelligent automation. Our Team-Powered Education Automation leverages advanced machine learning to deliver meeting intelligenc</p>
 

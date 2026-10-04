@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/content-powered-advertising-automation-cd900140` title="Content-Powered Advertising Automation" />
+        <BreadcrumbSchema path="/services/content-powered-advertising-automation-cd900140" title="Content-Powered Advertising Automation" />
         <h1 className="text-4xl font-bold mb-6">Content-Powered Advertising Automation</h1>
         <p className="text-lg text-gray-300 mb-8">Drive innovation in advertising with Content-Powered Advertising Automation. This AI-powered platform transforms content creation into a competitive advantage.</p>
 

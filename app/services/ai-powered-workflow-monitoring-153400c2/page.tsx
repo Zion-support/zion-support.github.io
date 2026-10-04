@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-powered-workflow-monitoring-153400c2` title="AI-Powered Workflow Monitoring" />
+        <BreadcrumbSchema path="/services/ai-powered-workflow-monitoring-153400c2" title="AI-Powered Workflow Monitoring" />
         <h1 className="text-4xl font-bold mb-6">AI-Powered Workflow Monitoring</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with AI-Powered Workflow Monitoring. This autonomous system provides manufacturing quality control with zero manual intervention nee</p>
 

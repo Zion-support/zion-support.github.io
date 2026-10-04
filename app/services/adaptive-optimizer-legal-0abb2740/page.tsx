@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/adaptive-optimizer-legal-0abb2740` title="Adaptive optimizer-legal" />
+        <BreadcrumbSchema path="/services/adaptive-optimizer-legal-0abb2740" title="Adaptive optimizer-legal" />
         <h1 className="text-4xl font-bold mb-6">Adaptive optimizer-legal</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your legal operations with our Adaptive optimizer-legal. This AI-driven solution automates predictive analytics with unprecedented accuracy and effici</p>
 

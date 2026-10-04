@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/engine-intelligent---sports-0668df60` title="Engine Intelligent - Sports" />
+        <BreadcrumbSchema path="/services/engine-intelligent---sports-0668df60" title="Engine Intelligent - Sports" />
         <h1 className="text-4xl font-bold mb-6">Engine Intelligent - Sports</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation sports solution: Engine Intelligent - Sports. Combines fraud prevention with adaptive intelligence for optimal results.</p>
 

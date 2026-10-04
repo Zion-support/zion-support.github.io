@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/engine-intelligent---hospitality-42055ac6` title="Engine Intelligent - Hospitality" />
+        <BreadcrumbSchema path="/services/engine-intelligent---hospitality-42055ac6" title="Engine Intelligent - Hospitality" />
         <h1 className="text-4xl font-bold mb-6">Engine Intelligent - Hospitality</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Engine Intelligent - Hospitality. This autonomous system provides compliance monitoring with zero manual intervention needed.</p>
 

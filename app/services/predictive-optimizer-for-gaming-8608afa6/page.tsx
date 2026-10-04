@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictive-optimizer-for-gaming-8608afa6` title="Predictive Optimizer for Gaming" />
+        <BreadcrumbSchema path="/services/predictive-optimizer-for-gaming-8608afa6" title="Predictive Optimizer for Gaming" />
         <h1 className="text-4xl font-bold mb-6">Predictive Optimizer for Gaming</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize gaming through intelligent automation. Our Predictive Optimizer for Gaming leverages advanced machine learning to deliver resource optimization at</p>
 

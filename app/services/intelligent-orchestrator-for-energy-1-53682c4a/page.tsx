@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-orchestrator-for-energy-1-53682c4a` title="Intelligent Orchestrator for Energy #1" />
+        <BreadcrumbSchema path="/services/intelligent-orchestrator-for-energy-1-53682c4a" title="Intelligent Orchestrator for Energy #1" />
         <h1 className="text-4xl font-bold mb-6">Intelligent Orchestrator for Energy #1</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation energy solution: Intelligent Orchestrator for Energy #1. Combines threat detection with adaptive intelligence for optimal results.</p>
 

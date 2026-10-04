@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/director-smart---tech-a17cc316` title="Director Smart - Tech" />
+        <BreadcrumbSchema path="/services/director-smart---tech-a17cc316" title="Director Smart - Tech" />
         <h1 className="text-4xl font-bold mb-6">Director Smart - Tech</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Director Smart - Tech. This autonomous system provides energy management with zero manual intervention needed.</p>
 

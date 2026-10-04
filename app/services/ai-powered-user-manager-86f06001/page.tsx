@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-powered-user-manager-86f06001` title="AI-Powered User Manager" />
+        <BreadcrumbSchema path="/services/ai-powered-user-manager-86f06001" title="AI-Powered User Manager" />
         <h1 className="text-4xl font-bold mb-6">AI-Powered User Manager</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize education through intelligent automation. Our AI-Powered User Manager leverages advanced machine learning to deliver financial planning at scale.</p>
 

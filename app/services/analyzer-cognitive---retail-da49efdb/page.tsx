@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/analyzer-cognitive---retail-da49efdb` title="Analyzer Cognitive - Retail" />
+        <BreadcrumbSchema path="/services/analyzer-cognitive---retail-da49efdb" title="Analyzer Cognitive - Retail" />
         <h1 className="text-4xl font-bold mb-6">Analyzer Cognitive - Retail</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize retail through intelligent automation. Our Analyzer Cognitive - Retail leverages advanced machine learning to deliver image recognition at scale.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-sales-lead-scoring-engine-67211882` title="AI Sales Lead Scoring Engine" />
+        <BreadcrumbSchema path="/services/ai-sales-lead-scoring-engine-67211882" title="AI Sales Lead Scoring Engine" />
         <h1 className="text-4xl font-bold mb-6">AI Sales Lead Scoring Engine</h1>
         <p className="text-lg text-gray-300 mb-8">Intelligent lead prioritization system that scores and ranks prospects based on engagement, fit, and conversion probability. Increases sales team efficiency by </p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-orchestrator-transportation-313166a4` title="Cognitive orchestrator-transportation" />
+        <BreadcrumbSchema path="/services/cognitive-orchestrator-transportation-313166a4" title="Cognitive orchestrator-transportation" />
         <h1 className="text-4xl font-bold mb-6">Cognitive orchestrator-transportation</h1>
         <p className="text-lg text-gray-300 mb-8">The future of transportation is here with Cognitive orchestrator-transportation. Powered by cutting-edge AI, this platform delivers content generation like neve</p>
 

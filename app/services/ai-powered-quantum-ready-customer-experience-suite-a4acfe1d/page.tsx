@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-powered-quantum-ready-customer-experience-suite-a4acfe1d` title="AI-Powered Quantum-Ready Customer Experience Suite" />
+        <BreadcrumbSchema path="/services/ai-powered-quantum-ready-customer-experience-suite-a4acfe1d" title="AI-Powered Quantum-Ready Customer Experience Suite" />
         <h1 className="text-4xl font-bold mb-6">AI-Powered Quantum-Ready Customer Experience Suite</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation customer experience platform that delivers quantum-ready service delivery across all touchpoints.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictive-analytics-engine-healthcare-de4babd4` title="Predictive Analytics Engine - Healthcare" />
+        <BreadcrumbSchema path="/services/predictive-analytics-engine-healthcare-de4babd4" title="Predictive Analytics Engine - Healthcare" />
         <h1 className="text-4xl font-bold mb-6">Predictive Analytics Engine - Healthcare</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your healthcare operations with our Predictive Analytics Engine - Healthcare. This AI-driven solution automates campaign optimization with unprecedent</p>
 

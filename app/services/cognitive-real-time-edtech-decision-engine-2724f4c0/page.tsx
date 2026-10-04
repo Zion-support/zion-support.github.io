@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-real-time-edtech-decision-engine-2724f4c0` title="Cognitive Real-Time Edtech Decision Engine" />
+        <BreadcrumbSchema path="/services/cognitive-real-time-edtech-decision-engine-2724f4c0" title="Cognitive Real-Time Edtech Decision Engine" />
         <h1 className="text-4xl font-bold mb-6">Cognitive Real-Time Edtech Decision Engine</h1>
         <p className="text-lg text-gray-300 mb-8">Cognitive decision engine that processes real-time signals to drive edtech strategy with deep learning.</p>
 

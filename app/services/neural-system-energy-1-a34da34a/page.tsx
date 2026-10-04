@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/neural-system-energy-1-a34da34a` title="Neural system-energy #1" />
+        <BreadcrumbSchema path="/services/neural-system-energy-1-a34da34a" title="Neural system-energy #1" />
         <h1 className="text-4xl font-bold mb-6">Neural system-energy #1</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Neural system-energy #1. This autonomous system provides inventory management with zero manual intervention needed.</p>
 

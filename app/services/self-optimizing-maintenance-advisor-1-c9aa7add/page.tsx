@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/self-optimizing-maintenance-advisor-1-c9aa7add` title="Self-Optimizing Maintenance Advisor #1" />
+        <BreadcrumbSchema path="/services/self-optimizing-maintenance-advisor-1-c9aa7add" title="Self-Optimizing Maintenance Advisor #1" />
         <h1 className="text-4xl font-bold mb-6">Self-Optimizing Maintenance Advisor #1</h1>
         <p className="text-lg text-gray-300 mb-8">The future of gaming is here with Self-Optimizing Maintenance Advisor #1. Powered by cutting-edge AI, this platform delivers financial planning like never befor</p>
 

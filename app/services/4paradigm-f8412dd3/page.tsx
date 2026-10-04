@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/4paradigm-f8412dd3` title="4Paradigm" />
+        <BreadcrumbSchema path="/services/4paradigm-f8412dd3" title="4Paradigm" />
         <h1 className="text-4xl font-bold mb-6">4Paradigm</h1>
         <p className="text-lg text-gray-300 mb-8">Phancy Group Co., Ltd. doing business as 4Paradigm (Chinese: 第四范式; pinyin: Dìsì Fànshì) is a Chinese company publicly listed in Hong Kong that focuses on provid</p>
 

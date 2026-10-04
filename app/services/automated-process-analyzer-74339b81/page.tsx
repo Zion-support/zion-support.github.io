@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/automated-process-analyzer-74339b81` title="Automated Process Analyzer" />
+        <BreadcrumbSchema path="/services/automated-process-analyzer-74339b81" title="Automated Process Analyzer" />
         <h1 className="text-4xl font-bold mb-6">Automated Process Analyzer</h1>
         <p className="text-lg text-gray-300 mb-8">The future of Retail is here with Automated Process Analyzer. Powered by cutting-edge AI, this platform delivers process discovery like never before.</p>
 

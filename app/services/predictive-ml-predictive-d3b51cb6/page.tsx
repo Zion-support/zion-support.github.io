@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictive-ml-predictive-d3b51cb6` title="Predictive ML Predictive" />
+        <BreadcrumbSchema path="/services/predictive-ml-predictive-d3b51cb6" title="Predictive ML Predictive" />
         <h1 className="text-4xl font-bold mb-6">Predictive ML Predictive</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Predictive ML Predictive. This autonomous system provides expense management with zero manual intervention needed.</p>
 

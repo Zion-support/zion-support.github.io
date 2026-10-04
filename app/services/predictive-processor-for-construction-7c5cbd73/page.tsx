@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictive-processor-for-construction-7c5cbd73` title="Predictive Processor for Construction" />
+        <BreadcrumbSchema path="/services/predictive-processor-for-construction-7c5cbd73" title="Predictive Processor for Construction" />
         <h1 className="text-4xl font-bold mb-6">Predictive Processor for Construction</h1>
         <p className="text-lg text-gray-300 mb-8">The future of construction is here with Predictive Processor for Construction. Powered by cutting-edge AI, this platform delivers financial planning like never </p>
 

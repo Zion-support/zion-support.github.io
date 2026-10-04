@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-powered-processor-for-insurance-1-3119c7e7` title="AI-Powered Processor for Insurance #1" />
+        <BreadcrumbSchema path="/services/ai-powered-processor-for-insurance-1-3119c7e7" title="AI-Powered Processor for Insurance #1" />
         <h1 className="text-4xl font-bold mb-6">AI-Powered Processor for Insurance #1</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize insurance through intelligent automation. Our AI-Powered Processor for Insurance #1 leverages advanced machine learning to deliver performance mon</p>
 

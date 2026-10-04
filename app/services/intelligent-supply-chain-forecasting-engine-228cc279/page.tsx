@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-supply-chain-forecasting-engine-228cc279` title="Intelligent Supply Chain Forecasting Engine" />
+        <BreadcrumbSchema path="/services/intelligent-supply-chain-forecasting-engine-228cc279" title="Intelligent Supply Chain Forecasting Engine" />
         <h1 className="text-4xl font-bold mb-6">Intelligent Supply Chain Forecasting Engine</h1>
         <p className="text-lg text-gray-300 mb-8">Machine learning-powered forecasting system that predicts supply chain trends, demands, and outcomes with high accuracy. Uses advanced algorithms to analyze his</p>
 

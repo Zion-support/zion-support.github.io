@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/engine-predictive---sports-57cda9da` title="Engine Predictive - Sports" />
+        <BreadcrumbSchema path="/services/engine-predictive---sports-57cda9da" title="Engine Predictive - Sports" />
         <h1 className="text-4xl font-bold mb-6">Engine Predictive - Sports</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Engine Predictive - Sports. This autonomous system provides risk assessment with zero manual intervention needed.</p>
 

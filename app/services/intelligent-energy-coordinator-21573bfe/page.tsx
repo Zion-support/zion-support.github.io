@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-energy-coordinator-21573bfe` title="Intelligent Energy Coordinator" />
+        <BreadcrumbSchema path="/services/intelligent-energy-coordinator-21573bfe" title="Intelligent Energy Coordinator" />
         <h1 className="text-4xl font-bold mb-6">Intelligent Energy Coordinator</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your manufacturing operations with our Intelligent Energy Coordinator. This AI-driven solution automates maintenance scheduling with unprecedented acc</p>
 

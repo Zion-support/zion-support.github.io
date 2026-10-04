@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-powered-edge-native-education-intelligence-platform-f4a982f0` title="AI-Powered Edge-Native Education Intelligence Platform" />
+        <BreadcrumbSchema path="/services/ai-powered-edge-native-education-intelligence-platform-f4a982f0" title="AI-Powered Edge-Native Education Intelligence Platform" />
         <h1 className="text-4xl font-bold mb-6">AI-Powered Edge-Native Education Intelligence Platform</h1>
         <p className="text-lg text-gray-300 mb-8">AI-driven intelligence platform that delivers edge-native insights and automated decision-making for education operations.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-advanced-hospitality-processing-framework-1ec76249` title="Intelligent Advanced Hospitality Processing Framework" />
+        <BreadcrumbSchema path="/services/intelligent-advanced-hospitality-processing-framework-1ec76249" title="Intelligent Advanced Hospitality Processing Framework" />
         <h1 className="text-4xl font-bold mb-6">Intelligent Advanced Hospitality Processing Framework</h1>
         <p className="text-lg text-gray-300 mb-8">Intelligent processing framework that automates advanced hospitality data flows with real-time transformation.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-decision-support-system-agriculture-intelligent-decision-support-system-for-agriculture` title="Intelligent Decision Support System for Agriculture" />
+        <BreadcrumbSchema path="/services/intelligent-decision-support-system-agriculture-intelligent-decision-support-system-for-agriculture" title="Intelligent Decision Support System for Agriculture" />
         <h1 className="text-4xl font-bold mb-6">Intelligent Decision Support System for Agriculture</h1>
         <p className="text-lg text-gray-300 mb-8">AI-driven decision support system for agriculture. Delivers data-backed recommendations for Crop monitoring, yield prediction, supply chain optimization with co</p>
 

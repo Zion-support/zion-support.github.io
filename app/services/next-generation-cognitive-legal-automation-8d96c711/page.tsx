@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/next-generation-cognitive-legal-automation-8d96c711` title="Next-Generation Cognitive Legal Automation" />
+        <BreadcrumbSchema path="/services/next-generation-cognitive-legal-automation-8d96c711" title="Next-Generation Cognitive Legal Automation" />
         <h1 className="text-4xl font-bold mb-6">Next-Generation Cognitive Legal Automation</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation automation suite that streamlines cognitive legal workflows with intelligent orchestration.</p>
 

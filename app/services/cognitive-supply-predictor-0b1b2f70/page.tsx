@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-supply-predictor-0b1b2f70` title="Cognitive Supply Predictor" />
+        <BreadcrumbSchema path="/services/cognitive-supply-predictor-0b1b2f70" title="Cognitive Supply Predictor" />
         <h1 className="text-4xl font-bold mb-6">Cognitive Supply Predictor</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation retail solution: Cognitive Supply Predictor. Combines threat detection with adaptive intelligence for optimal results.</p>
 

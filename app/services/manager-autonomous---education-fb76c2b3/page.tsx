@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/manager-autonomous---education-fb76c2b3` title="Manager Autonomous - Education" />
+        <BreadcrumbSchema path="/services/manager-autonomous---education-fb76c2b3" title="Manager Autonomous - Education" />
         <h1 className="text-4xl font-bold mb-6">Manager Autonomous - Education</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your education operations with our Manager Autonomous - Education. This AI-driven solution automates workflow management with unprecedented accuracy a</p>
 

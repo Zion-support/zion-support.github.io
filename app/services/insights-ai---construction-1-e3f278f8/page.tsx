@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/insights-ai---construction-1-e3f278f8` title="Insights AI - Construction #1" />
+        <BreadcrumbSchema path="/services/insights-ai---construction-1-e3f278f8" title="Insights AI - Construction #1" />
         <h1 className="text-4xl font-bold mb-6">Insights AI - Construction #1</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your construction operations with our Insights AI - Construction #1. This AI-driven solution automates financial planning with unprecedented accuracy </p>
 

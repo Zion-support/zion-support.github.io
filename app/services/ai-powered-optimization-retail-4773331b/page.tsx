@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-powered-optimization-retail-4773331b` title="AI-Powered optimization-retail" />
+        <BreadcrumbSchema path="/services/ai-powered-optimization-retail-4773331b" title="AI-Powered optimization-retail" />
         <h1 className="text-4xl font-bold mb-6">AI-Powered optimization-retail</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation retail solution: AI-Powered optimization-retail. Combines maintenance scheduling with adaptive intelligence for optimal results.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/analytics-predictive---tech-c1f5ef1e` title="Analytics Predictive - Tech" />
+        <BreadcrumbSchema path="/services/analytics-predictive---tech-c1f5ef1e" title="Analytics Predictive - Tech" />
         <h1 className="text-4xl font-bold mb-6">Analytics Predictive - Tech</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Analytics Predictive - Tech. This autonomous system provides maintenance scheduling with zero manual intervention needed.</p>
 

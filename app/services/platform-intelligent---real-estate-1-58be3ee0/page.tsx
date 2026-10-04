@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/platform-intelligent---real-estate-1-58be3ee0` title="Platform Intelligent - Real-Estate #1" />
+        <BreadcrumbSchema path="/services/platform-intelligent---real-estate-1-58be3ee0" title="Platform Intelligent - Real-Estate #1" />
         <h1 className="text-4xl font-bold mb-6">Platform Intelligent - Real-Estate #1</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your real-estate operations with our Platform Intelligent - Real-Estate #1. This AI-driven solution automates quality control with unprecedented accur</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/networks-real-time-for-energy-b840a989` title="Networks Real-time for Energy" />
+        <BreadcrumbSchema path="/services/networks-real-time-for-energy-b840a989" title="Networks Real-time for Energy" />
         <h1 className="text-4xl font-bold mb-6">Networks Real-time for Energy</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize energy through intelligent automation. Our Networks Real-time for Energy leverages advanced machine learning to deliver real-time analytics at sca</p>
 

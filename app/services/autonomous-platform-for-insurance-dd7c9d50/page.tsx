@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/autonomous-platform-for-insurance-dd7c9d50` title="Autonomous Platform for Insurance" />
+        <BreadcrumbSchema path="/services/autonomous-platform-for-insurance-dd7c9d50" title="Autonomous Platform for Insurance" />
         <h1 className="text-4xl font-bold mb-6">Autonomous Platform for Insurance</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Autonomous Platform for Insurance. This autonomous system provides content generation with zero manual intervention needed.</p>
 

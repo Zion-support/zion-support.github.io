@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/platform-smart---logistics-e727156e` title="Platform Smart - Logistics" />
+        <BreadcrumbSchema path="/services/platform-smart---logistics-e727156e" title="Platform Smart - Logistics" />
         <h1 className="text-4xl font-bold mb-6">Platform Smart - Logistics</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your logistics operations with our Platform Smart - Logistics. This AI-driven solution automates performance monitoring with unprecedented accuracy an</p>
 

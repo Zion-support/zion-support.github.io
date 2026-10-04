@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/generator-intelligent---finance-027eaf07` title="Generator Intelligent - Finance" />
+        <BreadcrumbSchema path="/services/generator-intelligent---finance-027eaf07" title="Generator Intelligent - Finance" />
         <h1 className="text-4xl font-bold mb-6">Generator Intelligent - Finance</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation finance solution: Generator Intelligent - Finance. Combines code optimization with adaptive intelligence for optimal results.</p>
 

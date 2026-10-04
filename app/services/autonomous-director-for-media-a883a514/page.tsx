@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/autonomous-director-for-media-a883a514` title="Autonomous Director for Media" />
+        <BreadcrumbSchema path="/services/autonomous-director-for-media-a883a514" title="Autonomous Director for Media" />
         <h1 className="text-4xl font-bold mb-6">Autonomous Director for Media</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your media operations with our Autonomous Director for Media. This AI-driven solution automates energy management with unprecedented accuracy and effi</p>
 

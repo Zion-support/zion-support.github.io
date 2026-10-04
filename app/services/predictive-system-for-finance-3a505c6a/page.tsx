@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictive-system-for-finance-3a505c6a` title="Predictive System for Finance" />
+        <BreadcrumbSchema path="/services/predictive-system-for-finance-3a505c6a" title="Predictive System for Finance" />
         <h1 className="text-4xl font-bold mb-6">Predictive System for Finance</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize Finance through intelligent automation. Our Predictive System for Finance leverages advanced machine learning to deliver security monitoring at sc</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/self-optimizing-supply-retail-13065bc1` title="Self-Optimizing supply-retail" />
+        <BreadcrumbSchema path="/services/self-optimizing-supply-retail-13065bc1" title="Self-Optimizing supply-retail" />
         <h1 className="text-4xl font-bold mb-6">Self-Optimizing supply-retail</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Self-Optimizing supply-retail. This autonomous system provides customer insights with zero manual intervention needed.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/adaptive-decision-analytics-06283e6b` title="Adaptive Decision Analytics" />
+        <BreadcrumbSchema path="/services/adaptive-decision-analytics-06283e6b" title="Adaptive Decision Analytics" />
         <h1 className="text-4xl font-bold mb-6">Adaptive Decision Analytics</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation legal solution: Adaptive Decision Analytics. Combines user experience with adaptive intelligence for optimal results.</p>
 

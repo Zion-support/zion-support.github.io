@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/optimizer-smart---finance-fceb6d32` title="Optimizer Smart - Finance" />
+        <BreadcrumbSchema path="/services/optimizer-smart---finance-fceb6d32" title="Optimizer Smart - Finance" />
         <h1 className="text-4xl font-bold mb-6">Optimizer Smart - Finance</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your finance operations with our Optimizer Smart - Finance. This AI-driven solution automates customer insights with unprecedented accuracy and effici</p>
 

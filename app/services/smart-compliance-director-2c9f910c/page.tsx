@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/smart-compliance-director-2c9f910c` title="Smart Compliance Director" />
+        <BreadcrumbSchema path="/services/smart-compliance-director-2c9f910c" title="Smart Compliance Director" />
         <h1 className="text-4xl font-bold mb-6">Smart Compliance Director</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize legal through intelligent automation. Our Smart Compliance Director leverages advanced machine learning to deliver decision support at scale.</p>
 

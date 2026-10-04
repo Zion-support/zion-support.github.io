@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/platform-neural---insurance-1-87bbb497` title="Platform Neural - Insurance #1" />
+        <BreadcrumbSchema path="/services/platform-neural---insurance-1-87bbb497" title="Platform Neural - Insurance #1" />
         <h1 className="text-4xl font-bold mb-6">Platform Neural - Insurance #1</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation insurance solution: Platform Neural - Insurance #1. Combines user experience with adaptive intelligence for optimal results.</p>
 

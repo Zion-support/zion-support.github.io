@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/neural-workflow-management-857418d6` title="Neural Workflow Management" />
+        <BreadcrumbSchema path="/services/neural-workflow-management-857418d6" title="Neural Workflow Management" />
         <h1 className="text-4xl font-bold mb-6">Neural Workflow Management</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation hospitality solution: Neural Workflow Management. Combines threat detection with adaptive intelligence for optimal results.</p>
 

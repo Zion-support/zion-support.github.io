@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligence-smart---retail-580e3f79` title="Intelligence Smart - Retail" />
+        <BreadcrumbSchema path="/services/intelligence-smart---retail-580e3f79" title="Intelligence Smart - Retail" />
         <h1 className="text-4xl font-bold mb-6">Intelligence Smart - Retail</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation retail solution: Intelligence Smart - Retail. Combines fraud prevention with adaptive intelligence for optimal results.</p>
 

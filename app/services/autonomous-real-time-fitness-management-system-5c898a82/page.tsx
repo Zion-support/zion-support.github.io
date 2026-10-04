@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/autonomous-real-time-fitness-management-system-5c898a82` title="Autonomous Real-Time Fitness Management System" />
+        <BreadcrumbSchema path="/services/autonomous-real-time-fitness-management-system-5c898a82" title="Autonomous Real-Time Fitness Management System" />
         <h1 className="text-4xl font-bold mb-6">Autonomous Real-Time Fitness Management System</h1>
         <p className="text-lg text-gray-300 mb-8">Autonomous management system that self-optimizes real-time fitness processes with minimal human intervention.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-resource-advisor-4270b9e5` title="Intelligent Resource Advisor" />
+        <BreadcrumbSchema path="/services/intelligent-resource-advisor-4270b9e5" title="Intelligent Resource Advisor" />
         <h1 className="text-4xl font-bold mb-6">Intelligent Resource Advisor</h1>
         <p className="text-lg text-gray-300 mb-8">The future of legal is here with Intelligent Resource Advisor. Powered by cutting-edge AI, this platform delivers user experience like never before.</p>
 

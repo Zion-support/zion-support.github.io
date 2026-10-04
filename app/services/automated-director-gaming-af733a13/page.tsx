@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/automated-director-gaming-af733a13` title="Automated director-gaming" />
+        <BreadcrumbSchema path="/services/automated-director-gaming-af733a13" title="Automated director-gaming" />
         <h1 className="text-4xl font-bold mb-6">Automated director-gaming</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your gaming operations with our Automated director-gaming. This AI-driven solution automates financial planning with unprecedented accuracy and effici</p>
 

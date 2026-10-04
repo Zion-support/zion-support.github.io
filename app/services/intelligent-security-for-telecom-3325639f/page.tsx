@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-security-for-telecom-3325639f` title="Intelligent Security for Telecom" />
+        <BreadcrumbSchema path="/services/intelligent-security-for-telecom-3325639f" title="Intelligent Security for Telecom" />
         <h1 className="text-4xl font-bold mb-6">Intelligent Security for Telecom</h1>
         <p className="text-lg text-gray-300 mb-8">The future of Telecom is here with Intelligent Security for Telecom. Powered by cutting-edge AI, this platform delivers risk assessment like never before.</p>
 

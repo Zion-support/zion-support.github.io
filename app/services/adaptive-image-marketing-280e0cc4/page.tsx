@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/adaptive-image-marketing-280e0cc4` title="Adaptive Image Marketing" />
+        <BreadcrumbSchema path="/services/adaptive-image-marketing-280e0cc4" title="Adaptive Image Marketing" />
         <h1 className="text-4xl font-bold mb-6">Adaptive Image Marketing</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Adaptive Image Marketing. This autonomous system provides data quality with zero manual intervention needed.</p>
 

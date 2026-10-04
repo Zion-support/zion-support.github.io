@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/management-intelligent---telecom-d0d0e283` title="Management Intelligent - Telecom" />
+        <BreadcrumbSchema path="/services/management-intelligent---telecom-d0d0e283" title="Management Intelligent - Telecom" />
         <h1 className="text-4xl font-bold mb-6">Management Intelligent - Telecom</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Management Intelligent - Telecom. This autonomous system provides data processing with zero manual intervention needed.</p>
 

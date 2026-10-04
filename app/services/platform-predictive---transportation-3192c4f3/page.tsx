@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/platform-predictive---transportation-3192c4f3` title="Platform Predictive - Transportation" />
+        <BreadcrumbSchema path="/services/platform-predictive---transportation-3192c4f3" title="Platform Predictive - Transportation" />
         <h1 className="text-4xl font-bold mb-6">Platform Predictive - Transportation</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize transportation through intelligent automation. Our Platform Predictive - Transportation leverages advanced machine learning to deliver market inte</p>
 

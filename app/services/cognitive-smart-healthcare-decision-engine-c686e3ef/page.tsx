@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-smart-healthcare-decision-engine-c686e3ef` title="Cognitive Smart Healthcare Decision Engine" />
+        <BreadcrumbSchema path="/services/cognitive-smart-healthcare-decision-engine-c686e3ef" title="Cognitive Smart Healthcare Decision Engine" />
         <h1 className="text-4xl font-bold mb-6">Cognitive Smart Healthcare Decision Engine</h1>
         <p className="text-lg text-gray-300 mb-8">Cognitive decision engine that processes smart signals to drive healthcare strategy with deep learning.</p>
 

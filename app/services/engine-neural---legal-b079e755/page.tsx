@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/engine-neural---legal-b079e755` title="Engine Neural - Legal" />
+        <BreadcrumbSchema path="/services/engine-neural---legal-b079e755" title="Engine Neural - Legal" />
         <h1 className="text-4xl font-bold mb-6">Engine Neural - Legal</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Engine Neural - Legal. This autonomous system provides security monitoring with zero manual intervention needed.</p>
 

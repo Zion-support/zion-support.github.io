@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/orchestrator-intelligent---education-3f666215` title="Orchestrator Intelligent - Education" />
+        <BreadcrumbSchema path="/services/orchestrator-intelligent---education-3f666215" title="Orchestrator Intelligent - Education" />
         <h1 className="text-4xl font-bold mb-6">Orchestrator Intelligent - Education</h1>
         <p className="text-lg text-gray-300 mb-8">The future of education is here with Orchestrator Intelligent - Education. Powered by cutting-edge AI, this platform delivers threat detection like never before</p>
 

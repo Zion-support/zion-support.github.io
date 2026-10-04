@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/liveops-analytics-platform-2408216c` title="LiveOps Analytics Platform" />
+        <BreadcrumbSchema path="/services/liveops-analytics-platform-2408216c" title="LiveOps Analytics Platform" />
         <h1 className="text-4xl font-bold mb-6">LiveOps Analytics Platform</h1>
         <p className="text-lg text-gray-300 mb-8">Real-time analytics for live game operations. Player segmentation, event optimization, economy balancing, and automated A/B testing for maximum retention and re</p>
 

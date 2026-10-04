@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/performance-smart---gaming-f3cc08ac` title="Performance Smart - Gaming" />
+        <BreadcrumbSchema path="/services/performance-smart---gaming-f3cc08ac" title="Performance Smart - Gaming" />
         <h1 className="text-4xl font-bold mb-6">Performance Smart - Gaming</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your Gaming operations with our Performance Smart - Gaming. This AI-driven solution automates financial planning with unprecedented accuracy and effic</p>
 

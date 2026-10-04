@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/smart-performance-platform-63c262fc` title="Smart Performance Platform" />
+        <BreadcrumbSchema path="/services/smart-performance-platform-63c262fc" title="Smart Performance Platform" />
         <h1 className="text-4xl font-bold mb-6">Smart Performance Platform</h1>
         <p className="text-lg text-gray-300 mb-8">The future of hospitality is here with Smart Performance Platform. Powered by cutting-edge AI, this platform delivers data processing like never before.</p>
 

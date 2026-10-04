@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictive-coordinator-energy-11e3df98` title="Predictive coordinator-energy" />
+        <BreadcrumbSchema path="/services/predictive-coordinator-energy-11e3df98" title="Predictive coordinator-energy" />
         <h1 className="text-4xl font-bold mb-6">Predictive coordinator-energy</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your energy operations with our Predictive coordinator-energy. This AI-driven solution automates inventory management with unprecedented accuracy and </p>
 

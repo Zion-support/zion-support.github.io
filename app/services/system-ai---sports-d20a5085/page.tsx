@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/system-ai---sports-d20a5085` title="System AI - Sports" />
+        <BreadcrumbSchema path="/services/system-ai---sports-d20a5085" title="System AI - Sports" />
         <h1 className="text-4xl font-bold mb-6">System AI - Sports</h1>
         <p className="text-lg text-gray-300 mb-8">The future of sports is here with System AI - Sports. Powered by cutting-edge AI, this platform delivers threat detection like never before.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-management-for-automotive-ac7ca53c` title="Cognitive Management for Automotive" />
+        <BreadcrumbSchema path="/services/cognitive-management-for-automotive-ac7ca53c" title="Cognitive Management for Automotive" />
         <h1 className="text-4xl font-bold mb-6">Cognitive Management for Automotive</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation automotive solution: Cognitive Management for Automotive. Combines inventory management with adaptive intelligence for optimal results.</p>
 

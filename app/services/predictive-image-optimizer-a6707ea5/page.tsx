@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictive-image-optimizer-a6707ea5` title="Predictive Image Optimizer" />
+        <BreadcrumbSchema path="/services/predictive-image-optimizer-a6707ea5" title="Predictive Image Optimizer" />
         <h1 className="text-4xl font-bold mb-6">Predictive Image Optimizer</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your logistics operations with our Predictive Image Optimizer. This AI-driven solution automates inventory management with unprecedented accuracy and </p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/orchestrator-ai---gaming-45cda5f5` title="Orchestrator AI - Gaming" />
+        <BreadcrumbSchema path="/services/orchestrator-ai---gaming-45cda5f5" title="Orchestrator AI - Gaming" />
         <h1 className="text-4xl font-bold mb-6">Orchestrator AI - Gaming</h1>
         <p className="text-lg text-gray-300 mb-8">The future of gaming is here with Orchestrator AI - Gaming. Powered by cutting-edge AI, this platform delivers resource optimization like never before.</p>
 

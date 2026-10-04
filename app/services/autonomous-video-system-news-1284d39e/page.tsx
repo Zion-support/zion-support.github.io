@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/autonomous-video-system-news-1284d39e` title="Autonomous Video System - News" />
+        <BreadcrumbSchema path="/services/autonomous-video-system-news-1284d39e" title="Autonomous Video System - News" />
         <h1 className="text-4xl font-bold mb-6">Autonomous Video System - News</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation news solution: Autonomous Video System - News. Combines content creation with adaptive intelligence for optimal results.</p>
 

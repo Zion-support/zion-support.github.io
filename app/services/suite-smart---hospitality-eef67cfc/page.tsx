@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/suite-smart---hospitality-eef67cfc` title="Suite Smart - Hospitality" />
+        <BreadcrumbSchema path="/services/suite-smart---hospitality-eef67cfc" title="Suite Smart - Hospitality" />
         <h1 className="text-4xl font-bold mb-6">Suite Smart - Hospitality</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation hospitality solution: Suite Smart - Hospitality. Combines process automation with adaptive intelligence for optimal results.</p>
 

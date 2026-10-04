@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/neural-intelligence-for-tech-1-5281fd0a` title="Neural Intelligence for Tech #1" />
+        <BreadcrumbSchema path="/services/neural-intelligence-for-tech-1-5281fd0a" title="Neural Intelligence for Tech #1" />
         <h1 className="text-4xl font-bold mb-6">Neural Intelligence for Tech #1</h1>
         <p className="text-lg text-gray-300 mb-8">The future of technology is here with Neural Intelligence for Tech #1. Powered by cutting-edge AI, this platform delivers content generation like never before.</p>
 

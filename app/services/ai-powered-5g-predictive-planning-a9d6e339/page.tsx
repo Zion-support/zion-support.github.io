@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-powered-5g-predictive-planning-a9d6e339` title="AI-Powered 5G Predictive Planning" />
+        <BreadcrumbSchema path="/services/ai-powered-5g-predictive-planning-a9d6e339" title="AI-Powered 5G Predictive Planning" />
         <h1 className="text-4xl font-bold mb-6">AI-Powered 5G Predictive Planning</h1>
         <p className="text-lg text-gray-300 mb-8">Advanced 5G network planning platform that uses predictive AI to optimize site placement, spectrum allocation, and capacity planning for next-generation network</p>
 

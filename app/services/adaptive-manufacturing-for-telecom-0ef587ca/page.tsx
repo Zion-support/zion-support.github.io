@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/adaptive-manufacturing-for-telecom-0ef587ca` title="Adaptive Manufacturing for Telecom" />
+        <BreadcrumbSchema path="/services/adaptive-manufacturing-for-telecom-0ef587ca" title="Adaptive Manufacturing for Telecom" />
         <h1 className="text-4xl font-bold mb-6">Adaptive Manufacturing for Telecom</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your Telecom operations with our Adaptive Manufacturing for Telecom. This AI-driven solution automates customer journey mapping with unprecedented acc</p>
 

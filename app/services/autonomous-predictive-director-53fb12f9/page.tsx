@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/autonomous-predictive-director-53fb12f9` title="Autonomous Predictive Director" />
+        <BreadcrumbSchema path="/services/autonomous-predictive-director-53fb12f9" title="Autonomous Predictive Director" />
         <h1 className="text-4xl font-bold mb-6">Autonomous Predictive Director</h1>
         <p className="text-lg text-gray-300 mb-8">The future of legal is here with Autonomous Predictive Director. Powered by cutting-edge AI, this platform delivers content generation like never before.</p>
 

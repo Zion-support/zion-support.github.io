@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-predictor-for-hospitality-2-57ca2297` title="Cognitive Predictor for Hospitality #2" />
+        <BreadcrumbSchema path="/services/cognitive-predictor-for-hospitality-2-57ca2297" title="Cognitive Predictor for Hospitality #2" />
         <h1 className="text-4xl font-bold mb-6">Cognitive Predictor for Hospitality #2</h1>
         <p className="text-lg text-gray-300 mb-8">The future of hospitality is here with Cognitive Predictor for Hospitality #2. Powered by cutting-edge AI, this platform delivers energy management like never b</p>
 

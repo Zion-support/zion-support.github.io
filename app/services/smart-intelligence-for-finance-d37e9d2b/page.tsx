@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/smart-intelligence-for-finance-d37e9d2b` title="Smart Intelligence for Finance" />
+        <BreadcrumbSchema path="/services/smart-intelligence-for-finance-d37e9d2b" title="Smart Intelligence for Finance" />
         <h1 className="text-4xl font-bold mb-6">Smart Intelligence for Finance</h1>
         <p className="text-lg text-gray-300 mb-8">The future of finance is here with Smart Intelligence for Finance. Powered by cutting-edge AI, this platform delivers quality control like never before.</p>
 

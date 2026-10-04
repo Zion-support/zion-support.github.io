@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/agility-robotics-ed717c0b` title="Agility Robotics" />
+        <BreadcrumbSchema path="/services/agility-robotics-ed717c0b" title="Agility Robotics" />
         <h1 className="text-4xl font-bold mb-6">Agility Robotics</h1>
         <p className="text-lg text-gray-300 mb-8">Agility Robotics, Inc. is a privately held American humanoid robotics and engineering company. The company was founded in 2015 as a spin-off from Oregon State U</p>
 

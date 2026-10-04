@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/orchestrator-neural---retail-e097926e` title="Orchestrator Neural - Retail" />
+        <BreadcrumbSchema path="/services/orchestrator-neural---retail-e097926e" title="Orchestrator Neural - Retail" />
         <h1 className="text-4xl font-bold mb-6">Orchestrator Neural - Retail</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your Retail operations with our Orchestrator Neural - Retail. This AI-driven solution automates customer journey mapping with unprecedented accuracy a</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-intelligence---gaming-edition-b94ae3e3` title="AI Intelligence - Gaming Edition" />
+        <BreadcrumbSchema path="/services/ai-intelligence---gaming-edition-b94ae3e3" title="AI Intelligence - Gaming Edition" />
         <h1 className="text-4xl font-bold mb-6">AI Intelligence - Gaming Edition</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation gaming solution: AI Intelligence - Gaming Edition. Combines financial planning with adaptive intelligence for optimal results.</p>
 

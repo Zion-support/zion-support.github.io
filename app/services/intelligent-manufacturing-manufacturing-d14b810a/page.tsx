@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-manufacturing-manufacturing-d14b810a` title="Intelligent manufacturing-manufacturing" />
+        <BreadcrumbSchema path="/services/intelligent-manufacturing-manufacturing-d14b810a" title="Intelligent manufacturing-manufacturing" />
         <h1 className="text-4xl font-bold mb-6">Intelligent manufacturing-manufacturing</h1>
         <p className="text-lg text-gray-300 mb-8">The future of Manufacturing is here with Intelligent manufacturing-manufacturing. Powered by cutting-edge AI, this platform delivers cost reduction like never b</p>
 

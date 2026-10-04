@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/neural-fraud-coordinator-a7fab275` title="Neural Fraud Coordinator" />
+        <BreadcrumbSchema path="/services/neural-fraud-coordinator-a7fab275" title="Neural Fraud Coordinator" />
         <h1 className="text-4xl font-bold mb-6">Neural Fraud Coordinator</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your hospitality operations with our Neural Fraud Coordinator. This AI-driven solution automates network optimization with unprecedented accuracy and </p>
 

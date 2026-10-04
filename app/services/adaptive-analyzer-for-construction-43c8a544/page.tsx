@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/adaptive-analyzer-for-construction-43c8a544` title="Adaptive Analyzer for Construction" />
+        <BreadcrumbSchema path="/services/adaptive-analyzer-for-construction-43c8a544" title="Adaptive Analyzer for Construction" />
         <h1 className="text-4xl font-bold mb-6">Adaptive Analyzer for Construction</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Adaptive Analyzer for Construction. This autonomous system provides workflow management with zero manual intervention needed.</p>
 

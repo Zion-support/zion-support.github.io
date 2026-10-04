@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-tool-chain-orchestrator-3f2fec86` title="AI Tool Chain Orchestrator" />
+        <BreadcrumbSchema path="/services/ai-tool-chain-orchestrator-3f2fec86" title="AI Tool Chain Orchestrator" />
         <h1 className="text-4xl font-bold mb-6">AI Tool Chain Orchestrator</h1>
         <p className="text-lg text-gray-300 mb-8">Automatically discovers, chains, and optimizes AI tools for complex multi-step workflows.</p>
 

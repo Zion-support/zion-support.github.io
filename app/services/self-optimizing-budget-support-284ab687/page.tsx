@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/self-optimizing-budget-support-284ab687` title="Self-Optimizing Budget Support" />
+        <BreadcrumbSchema path="/services/self-optimizing-budget-support-284ab687" title="Self-Optimizing Budget Support" />
         <h1 className="text-4xl font-bold mb-6">Self-Optimizing Budget Support</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your Finance operations with our Self-Optimizing Budget Support. This AI-driven solution automates manufacturing quality control with unprecedented ac</p>
 

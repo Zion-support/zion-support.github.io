@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/serverless-declarative-telecommunications-deployment-7febc595` title="Serverless Declarative Telecommunications Deployment" />
+        <BreadcrumbSchema path="/services/serverless-declarative-telecommunications-deployment-7febc595" title="Serverless Declarative Telecommunications Deployment" />
         <h1 className="text-4xl font-bold mb-6">Serverless Declarative Telecommunications Deployment</h1>
         <p className="text-lg text-gray-300 mb-8">Serverless deployment platform that auto-scales declarative telecommunications workloads without infrastructure management.</p>
 

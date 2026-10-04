@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-supply-manager-cff8928f` title="Intelligent Supply Manager" />
+        <BreadcrumbSchema path="/services/intelligent-supply-manager-cff8928f" title="Intelligent Supply Manager" />
         <h1 className="text-4xl font-bold mb-6">Intelligent Supply Manager</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation finance solution: Intelligent Supply Manager. Combines image recognition with adaptive intelligence for optimal results.</p>
 

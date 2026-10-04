@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/smart-risk-optimizer-1-98ef5289` title="Smart Risk Optimizer #1" />
+        <BreadcrumbSchema path="/services/smart-risk-optimizer-1-98ef5289" title="Smart Risk Optimizer #1" />
         <h1 className="text-4xl font-bold mb-6">Smart Risk Optimizer #1</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize insurance through intelligent automation. Our Smart Risk Optimizer #1 leverages advanced machine learning to deliver language processing at scale.</p>
 

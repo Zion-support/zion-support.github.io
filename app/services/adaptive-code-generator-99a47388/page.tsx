@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/adaptive-code-generator-99a47388` title="Adaptive Code Generator" />
+        <BreadcrumbSchema path="/services/adaptive-code-generator-99a47388" title="Adaptive Code Generator" />
         <h1 className="text-4xl font-bold mb-6">Adaptive Code Generator</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize legal through intelligent automation. Our Adaptive Code Generator leverages advanced machine learning to deliver image recognition at scale.</p>
 

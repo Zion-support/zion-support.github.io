@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/smart-director-for-automotive-7e1b06b4` title="Smart Director for Automotive" />
+        <BreadcrumbSchema path="/services/smart-director-for-automotive-7e1b06b4" title="Smart Director for Automotive" />
         <h1 className="text-4xl font-bold mb-6">Smart Director for Automotive</h1>
         <p className="text-lg text-gray-300 mb-8">The future of automotive is here with Smart Director for Automotive. Powered by cutting-edge AI, this platform delivers fraud prevention like never before.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictor-smart---retail-1-39ebca74` title="Predictor Smart - Retail #1" />
+        <BreadcrumbSchema path="/services/predictor-smart---retail-1-39ebca74" title="Predictor Smart - Retail #1" />
         <h1 className="text-4xl font-bold mb-6">Predictor Smart - Retail #1</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize Retail through intelligent automation. Our Predictor Smart - Retail #1 leverages advanced machine learning to deliver revenue forecasting at scale</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/next-generation-data-driven-real-estate-automation-14020ffd` title="Next-Generation Data-Driven Real Estate Automation" />
+        <BreadcrumbSchema path="/services/next-generation-data-driven-real-estate-automation-14020ffd" title="Next-Generation Data-Driven Real Estate Automation" />
         <h1 className="text-4xl font-bold mb-6">Next-Generation Data-Driven Real Estate Automation</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation automation suite that streamlines data-driven real estate workflows with intelligent orchestration.</p>
 

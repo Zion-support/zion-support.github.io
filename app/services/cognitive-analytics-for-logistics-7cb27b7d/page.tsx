@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-analytics-for-logistics-7cb27b7d` title="Cognitive Analytics for Logistics" />
+        <BreadcrumbSchema path="/services/cognitive-analytics-for-logistics-7cb27b7d" title="Cognitive Analytics for Logistics" />
         <h1 className="text-4xl font-bold mb-6">Cognitive Analytics for Logistics</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Cognitive Analytics for Logistics. This autonomous system provides quality control with zero manual intervention needed.</p>
 

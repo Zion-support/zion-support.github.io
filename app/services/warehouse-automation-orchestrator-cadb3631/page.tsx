@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/warehouse-automation-orchestrator-cadb3631` title="Warehouse Automation Orchestrator" />
+        <BreadcrumbSchema path="/services/warehouse-automation-orchestrator-cadb3631" title="Warehouse Automation Orchestrator" />
         <h1 className="text-4xl font-bold mb-6">Warehouse Automation Orchestrator</h1>
         <p className="text-lg text-gray-300 mb-8">Orchestrate AS/RS, conveyors, AMRs, and pick-to-light systems with AI. Real-time slotting, wave optimization, and labor allocation for maximum throughput.</p>
 

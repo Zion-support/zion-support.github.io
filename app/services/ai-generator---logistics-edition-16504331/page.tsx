@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-generator---logistics-edition-16504331` title="AI Generator - Logistics Edition" />
+        <BreadcrumbSchema path="/services/ai-generator---logistics-edition-16504331" title="AI Generator - Logistics Edition" />
         <h1 className="text-4xl font-bold mb-6">AI Generator - Logistics Edition</h1>
         <p className="text-lg text-gray-300 mb-8">The future of logistics is here with AI Generator - Logistics Edition. Powered by cutting-edge AI, this platform delivers compliance monitoring like never befor</p>
 

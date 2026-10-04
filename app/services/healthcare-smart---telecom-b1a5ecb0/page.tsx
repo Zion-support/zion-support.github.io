@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/healthcare-smart---telecom-b1a5ecb0` title="Healthcare Smart - Telecom" />
+        <BreadcrumbSchema path="/services/healthcare-smart---telecom-b1a5ecb0" title="Healthcare Smart - Telecom" />
         <h1 className="text-4xl font-bold mb-6">Healthcare Smart - Telecom</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Healthcare Smart - Telecom. This autonomous system provides code optimization with zero manual intervention needed.</p>
 

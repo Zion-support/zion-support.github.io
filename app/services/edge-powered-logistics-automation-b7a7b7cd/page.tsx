@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/edge-powered-logistics-automation-b7a7b7cd` title="Edge-Powered Logistics Automation" />
+        <BreadcrumbSchema path="/services/edge-powered-logistics-automation-b7a7b7cd" title="Edge-Powered Logistics Automation" />
         <h1 className="text-4xl font-bold mb-6">Edge-Powered Logistics Automation</h1>
         <p className="text-lg text-gray-300 mb-8">The future of logistics is here with Edge-Powered Logistics Automation. Powered by cutting-edge AI, this platform delivers smart grid management like never befo</p>
 

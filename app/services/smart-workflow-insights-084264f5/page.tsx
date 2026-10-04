@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/smart-workflow-insights-084264f5` title="Smart Workflow Insights" />
+        <BreadcrumbSchema path="/services/smart-workflow-insights-084264f5" title="Smart Workflow Insights" />
         <h1 className="text-4xl font-bold mb-6">Smart Workflow Insights</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation healthcare solution: Smart Workflow Insights. Combines network optimization with adaptive intelligence for optimal results.</p>
 

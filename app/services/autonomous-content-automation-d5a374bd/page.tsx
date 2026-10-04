@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/autonomous-content-automation-d5a374bd` title="Autonomous Content Automation" />
+        <BreadcrumbSchema path="/services/autonomous-content-automation-d5a374bd" title="Autonomous Content Automation" />
         <h1 className="text-4xl font-bold mb-6">Autonomous Content Automation</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize Retail through intelligent automation. Our Autonomous Content Automation leverages advanced machine learning to deliver supply chain at scale.</p>
 

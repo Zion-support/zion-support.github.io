@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-proactive-energy-processing-framework-c947d291` title="Intelligent Proactive Energy Processing Framework" />
+        <BreadcrumbSchema path="/services/intelligent-proactive-energy-processing-framework-c947d291" title="Intelligent Proactive Energy Processing Framework" />
         <h1 className="text-4xl font-bold mb-6">Intelligent Proactive Energy Processing Framework</h1>
         <p className="text-lg text-gray-300 mb-8">Intelligent processing framework that automates proactive energy data flows with real-time transformation.</p>
 

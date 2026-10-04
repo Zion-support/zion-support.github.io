@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/neural-resource-director-2-a2618318` title="Neural Resource Director #2" />
+        <BreadcrumbSchema path="/services/neural-resource-director-2-a2618318" title="Neural Resource Director #2" />
         <h1 className="text-4xl font-bold mb-6">Neural Resource Director #2</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation manufacturing solution: Neural Resource Director #2. Combines performance monitoring with adaptive intelligence for optimal results.</p>
 

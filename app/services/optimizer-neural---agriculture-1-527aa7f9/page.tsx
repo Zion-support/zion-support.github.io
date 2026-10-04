@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/optimizer-neural---agriculture-1-527aa7f9` title="Optimizer Neural - Agriculture #1" />
+        <BreadcrumbSchema path="/services/optimizer-neural---agriculture-1-527aa7f9" title="Optimizer Neural - Agriculture #1" />
         <h1 className="text-4xl font-bold mb-6">Optimizer Neural - Agriculture #1</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize agriculture through intelligent automation. Our Optimizer Neural - Agriculture #1 leverages advanced machine learning to deliver user experience a</p>
 

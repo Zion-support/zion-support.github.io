@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/neural-predictor-automotive-41f2f781` title="Neural predictor-automotive" />
+        <BreadcrumbSchema path="/services/neural-predictor-automotive-41f2f781" title="Neural predictor-automotive" />
         <h1 className="text-4xl font-bold mb-6">Neural predictor-automotive</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Neural predictor-automotive. This autonomous system provides process automation with zero manual intervention needed.</p>
 

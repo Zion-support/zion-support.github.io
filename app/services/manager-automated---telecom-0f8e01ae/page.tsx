@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/manager-automated---telecom-0f8e01ae` title="Manager Automated - Telecom" />
+        <BreadcrumbSchema path="/services/manager-automated---telecom-0f8e01ae" title="Manager Automated - Telecom" />
         <h1 className="text-4xl font-bold mb-6">Manager Automated - Telecom</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your telecom operations with our Manager Automated - Telecom. This AI-driven solution automates compliance monitoring with unprecedented accuracy and </p>
 

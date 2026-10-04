@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/analytics-predictive---agriculture-5ec7485b` title="Analytics Predictive - Agriculture" />
+        <BreadcrumbSchema path="/services/analytics-predictive---agriculture-5ec7485b" title="Analytics Predictive - Agriculture" />
         <h1 className="text-4xl font-bold mb-6">Analytics Predictive - Agriculture</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize agriculture through intelligent automation. Our Analytics Predictive - Agriculture leverages advanced machine learning to deliver resource optimiz</p>
 

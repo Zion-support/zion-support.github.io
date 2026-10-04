@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-optimizer-for-real-estate-1-33b70c8e` title="Cognitive Optimizer for Real-Estate #1" />
+        <BreadcrumbSchema path="/services/cognitive-optimizer-for-real-estate-1-33b70c8e" title="Cognitive Optimizer for Real-Estate #1" />
         <h1 className="text-4xl font-bold mb-6">Cognitive Optimizer for Real-Estate #1</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your real-estate operations with our Cognitive Optimizer for Real-Estate #1. This AI-driven solution automates code optimization with unprecedented ac</p>
 

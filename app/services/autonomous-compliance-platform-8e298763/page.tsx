@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/autonomous-compliance-platform-8e298763` title="Autonomous Compliance Platform" />
+        <BreadcrumbSchema path="/services/autonomous-compliance-platform-8e298763" title="Autonomous Compliance Platform" />
         <h1 className="text-4xl font-bold mb-6">Autonomous Compliance Platform</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize agriculture through intelligent automation. Our Autonomous Compliance Platform leverages advanced machine learning to deliver supply chain at scal</p>
 

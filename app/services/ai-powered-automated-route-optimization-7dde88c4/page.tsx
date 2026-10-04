@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-powered-automated-route-optimization-7dde88c4` title="AI-Powered Automated Route Optimization" />
+        <BreadcrumbSchema path="/services/ai-powered-automated-route-optimization-7dde88c4" title="AI-Powered Automated Route Optimization" />
         <h1 className="text-4xl font-bold mb-6">AI-Powered Automated Route Optimization</h1>
         <p className="text-lg text-gray-300 mb-8">Advanced logistics platform that computes automated optimal routes, load planning, and delivery scheduling using real-time traffic, weather, and constraint data</p>
 

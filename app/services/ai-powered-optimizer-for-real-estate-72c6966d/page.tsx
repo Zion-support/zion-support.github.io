@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-powered-optimizer-for-real-estate-72c6966d` title="AI-Powered Optimizer for Real-Estate" />
+        <BreadcrumbSchema path="/services/ai-powered-optimizer-for-real-estate-72c6966d" title="AI-Powered Optimizer for Real-Estate" />
         <h1 className="text-4xl font-bold mb-6">AI-Powered Optimizer for Real-Estate</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your real-estate operations with our AI-Powered Optimizer for Real-Estate. This AI-driven solution automates threat detection with unprecedented accur</p>
 

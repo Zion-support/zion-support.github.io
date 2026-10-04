@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/adaptive-generator-media-1c9a8cd2` title="Adaptive generator-media" />
+        <BreadcrumbSchema path="/services/adaptive-generator-media-1c9a8cd2" title="Adaptive generator-media" />
         <h1 className="text-4xl font-bold mb-6">Adaptive generator-media</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize media through intelligent automation. Our Adaptive generator-media leverages advanced machine learning to deliver threat detection at scale.</p>
 

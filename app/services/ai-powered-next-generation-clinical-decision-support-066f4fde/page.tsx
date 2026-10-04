@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-powered-next-generation-clinical-decision-support-066f4fde` title="AI-Powered Next-Generation Clinical Decision Support" />
+        <BreadcrumbSchema path="/services/ai-powered-next-generation-clinical-decision-support-066f4fde" title="AI-Powered Next-Generation Clinical Decision Support" />
         <h1 className="text-4xl font-bold mb-6">AI-Powered Next-Generation Clinical Decision Support</h1>
         <p className="text-lg text-gray-300 mb-8">Clinical AI system that provides next-generation diagnostic assistance, treatment recommendations, and care pathway optimization for healthcare providers.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/self-optimizing-code-automation-1-78a721c3` title="Self-Optimizing Code Automation #1" />
+        <BreadcrumbSchema path="/services/self-optimizing-code-automation-1-78a721c3" title="Self-Optimizing Code Automation #1" />
         <h1 className="text-4xl font-bold mb-6">Self-Optimizing Code Automation #1</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Self-Optimizing Code Automation #1. This autonomous system provides workflow management with zero manual intervention needed.</p>
 

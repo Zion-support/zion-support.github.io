@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-automation---energy-edition-8d6346c1` title="AI Automation - Energy Edition" />
+        <BreadcrumbSchema path="/services/ai-automation---energy-edition-8d6346c1" title="AI Automation - Energy Edition" />
         <h1 className="text-4xl font-bold mb-6">AI Automation - Energy Edition</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation energy solution: AI Automation - Energy Edition. Combines content generation with adaptive intelligence for optimal results.</p>
 

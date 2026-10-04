@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-insights-automotive-87b93a48` title="Intelligent insights-automotive" />
+        <BreadcrumbSchema path="/services/intelligent-insights-automotive-87b93a48" title="Intelligent insights-automotive" />
         <h1 className="text-4xl font-bold mb-6">Intelligent insights-automotive</h1>
         <p className="text-lg text-gray-300 mb-8">The future of automotive is here with Intelligent insights-automotive. Powered by cutting-edge AI, this platform delivers quality control like never before.</p>
 

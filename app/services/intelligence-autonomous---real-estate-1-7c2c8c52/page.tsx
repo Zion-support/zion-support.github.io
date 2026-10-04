@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligence-autonomous---real-estate-1-7c2c8c52` title="Intelligence Autonomous - Real-Estate #1" />
+        <BreadcrumbSchema path="/services/intelligence-autonomous---real-estate-1-7c2c8c52" title="Intelligence Autonomous - Real-Estate #1" />
         <h1 className="text-4xl font-bold mb-6">Intelligence Autonomous - Real-Estate #1</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation real-estate solution: Intelligence Autonomous - Real-Estate #1. Combines financial planning with adaptive intelligence for optimal results.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/enterprise-robust-fintech-analytics-suite-9d5e0311` title="Enterprise Robust Fintech Analytics Suite" />
+        <BreadcrumbSchema path="/services/enterprise-robust-fintech-analytics-suite-9d5e0311" title="Enterprise Robust Fintech Analytics Suite" />
         <h1 className="text-4xl font-bold mb-6">Enterprise Robust Fintech Analytics Suite</h1>
         <p className="text-lg text-gray-300 mb-8">Enterprise analytics suite that delivers robust fintech insights with unified dashboards and reporting.</p>
 

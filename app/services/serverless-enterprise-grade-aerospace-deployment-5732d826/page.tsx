@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/serverless-enterprise-grade-aerospace-deployment-5732d826` title="Serverless Enterprise-Grade Aerospace Deployment" />
+        <BreadcrumbSchema path="/services/serverless-enterprise-grade-aerospace-deployment-5732d826" title="Serverless Enterprise-Grade Aerospace Deployment" />
         <h1 className="text-4xl font-bold mb-6">Serverless Enterprise-Grade Aerospace Deployment</h1>
         <p className="text-lg text-gray-300 mb-8">Serverless deployment platform that auto-scales enterprise-grade aerospace workloads without infrastructure management.</p>
 

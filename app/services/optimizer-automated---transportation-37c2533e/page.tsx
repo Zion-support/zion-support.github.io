@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/optimizer-automated---transportation-37c2533e` title="Optimizer Automated - Transportation" />
+        <BreadcrumbSchema path="/services/optimizer-automated---transportation-37c2533e" title="Optimizer Automated - Transportation" />
         <h1 className="text-4xl font-bold mb-6">Optimizer Automated - Transportation</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation transportation solution: Optimizer Automated - Transportation. Combines threat detection with adaptive intelligence for optimal results.</p>
 

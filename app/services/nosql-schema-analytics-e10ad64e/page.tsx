@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/nosql-schema-analytics-e10ad64e` title="NoSQL Schema - Analytics" />
+        <BreadcrumbSchema path="/services/nosql-schema-analytics-e10ad64e" title="NoSQL Schema - Analytics" />
         <h1 className="text-4xl font-bold mb-6">NoSQL Schema - Analytics</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation analytics solution: NoSQL Schema - Analytics. Combines schema design with adaptive intelligence for optimal results.</p>
 

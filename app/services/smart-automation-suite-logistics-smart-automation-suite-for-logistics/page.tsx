@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/smart-automation-suite-logistics-smart-automation-suite-for-logistics` title="Smart Automation Suite for Logistics" />
+        <BreadcrumbSchema path="/services/smart-automation-suite-logistics-smart-automation-suite-for-logistics" title="Smart Automation Suite for Logistics" />
         <h1 className="text-4xl font-bold mb-6">Smart Automation Suite for Logistics</h1>
         <p className="text-lg text-gray-300 mb-8">Comprehensive smart automation suite designed for logistics enterprises. Automates Route optimization, fleet management, warehouse automation across all operati</p>
 

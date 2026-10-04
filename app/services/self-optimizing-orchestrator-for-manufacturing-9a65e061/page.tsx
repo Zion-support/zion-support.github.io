@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/self-optimizing-orchestrator-for-manufacturing-9a65e061` title="Self-Optimizing Orchestrator for Manufacturing" />
+        <BreadcrumbSchema path="/services/self-optimizing-orchestrator-for-manufacturing-9a65e061" title="Self-Optimizing Orchestrator for Manufacturing" />
         <h1 className="text-4xl font-bold mb-6">Self-Optimizing Orchestrator for Manufacturing</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your manufacturing operations with our Self-Optimizing Orchestrator for Manufacturing. This AI-driven solution automates security monitoring with unpr</p>
 

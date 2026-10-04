@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/adaptive-sales-optimizer-8a783aa8` title="Adaptive Sales Optimizer" />
+        <BreadcrumbSchema path="/services/adaptive-sales-optimizer-8a783aa8" title="Adaptive Sales Optimizer" />
         <h1 className="text-4xl font-bold mb-6">Adaptive Sales Optimizer</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize agriculture through intelligent automation. Our Adaptive Sales Optimizer leverages advanced machine learning to deliver sales forecasting at scale</p>
 

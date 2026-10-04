@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/autonomous-generator-insurance-9d2dcb7f` title="Autonomous generator-insurance" />
+        <BreadcrumbSchema path="/services/autonomous-generator-insurance-9d2dcb7f" title="Autonomous generator-insurance" />
         <h1 className="text-4xl font-bold mb-6">Autonomous generator-insurance</h1>
         <p className="text-lg text-gray-300 mb-8">The future of insurance is here with Autonomous generator-insurance. Powered by cutting-edge AI, this platform delivers decision support like never before.</p>
 

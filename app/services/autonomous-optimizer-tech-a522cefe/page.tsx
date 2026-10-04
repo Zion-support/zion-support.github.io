@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/autonomous-optimizer-tech-a522cefe` title="Autonomous optimizer-tech" />
+        <BreadcrumbSchema path="/services/autonomous-optimizer-tech-a522cefe" title="Autonomous optimizer-tech" />
         <h1 className="text-4xl font-bold mb-6">Autonomous optimizer-tech</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your technology operations with our Autonomous optimizer-tech. This AI-driven solution automates workflow management with unprecedented accuracy and e</p>
 

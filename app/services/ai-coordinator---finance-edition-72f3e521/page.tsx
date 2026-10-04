@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-coordinator---finance-edition-72f3e521` title="AI Coordinator - Finance Edition" />
+        <BreadcrumbSchema path="/services/ai-coordinator---finance-edition-72f3e521" title="AI Coordinator - Finance Edition" />
         <h1 className="text-4xl font-bold mb-6">AI Coordinator - Finance Edition</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation finance solution: AI Coordinator - Finance Edition. Combines decision support with adaptive intelligence for optimal results.</p>
 

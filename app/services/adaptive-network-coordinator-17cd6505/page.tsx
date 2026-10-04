@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/adaptive-network-coordinator-17cd6505` title="Adaptive Network Coordinator" />
+        <BreadcrumbSchema path="/services/adaptive-network-coordinator-17cd6505" title="Adaptive Network Coordinator" />
         <h1 className="text-4xl font-bold mb-6">Adaptive Network Coordinator</h1>
         <p className="text-lg text-gray-300 mb-8">The future of manufacturing is here with Adaptive Network Coordinator. Powered by cutting-edge AI, this platform delivers compliance monitoring like never befor</p>
 

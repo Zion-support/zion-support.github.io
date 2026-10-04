@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-optimization-transportation-b0631ede` title="Intelligent optimization-transportation" />
+        <BreadcrumbSchema path="/services/intelligent-optimization-transportation-b0631ede" title="Intelligent optimization-transportation" />
         <h1 className="text-4xl font-bold mb-6">Intelligent optimization-transportation</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your transportation operations with our Intelligent optimization-transportation. This AI-driven solution automates risk assessment with unprecedented </p>
 

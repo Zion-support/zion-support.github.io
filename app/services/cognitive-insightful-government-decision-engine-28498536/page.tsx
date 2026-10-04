@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-insightful-government-decision-engine-28498536` title="Cognitive Insightful Government Decision Engine" />
+        <BreadcrumbSchema path="/services/cognitive-insightful-government-decision-engine-28498536" title="Cognitive Insightful Government Decision Engine" />
         <h1 className="text-4xl font-bold mb-6">Cognitive Insightful Government Decision Engine</h1>
         <p className="text-lg text-gray-300 mb-8">Cognitive decision engine that processes insightful signals to drive government strategy with deep learning.</p>
 

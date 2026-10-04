@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-coordinator-for-finance-38fc56b1` title="Cognitive Coordinator for Finance" />
+        <BreadcrumbSchema path="/services/cognitive-coordinator-for-finance-38fc56b1" title="Cognitive Coordinator for Finance" />
         <h1 className="text-4xl font-bold mb-6">Cognitive Coordinator for Finance</h1>
         <p className="text-lg text-gray-300 mb-8">The future of finance is here with Cognitive Coordinator for Finance. Powered by cutting-edge AI, this platform delivers inventory management like never before.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/autonomous-supply-engine-f476e961` title="Autonomous Supply Engine" />
+        <BreadcrumbSchema path="/services/autonomous-supply-engine-f476e961" title="Autonomous Supply Engine" />
         <h1 className="text-4xl font-bold mb-6">Autonomous Supply Engine</h1>
         <p className="text-lg text-gray-300 mb-8">The future of agriculture is here with Autonomous Supply Engine. Powered by cutting-edge AI, this platform delivers predictive analytics like never before.</p>
 

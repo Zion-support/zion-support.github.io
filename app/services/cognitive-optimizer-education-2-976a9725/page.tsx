@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-optimizer-education-2-976a9725` title="Cognitive optimizer-education #2" />
+        <BreadcrumbSchema path="/services/cognitive-optimizer-education-2-976a9725" title="Cognitive optimizer-education #2" />
         <h1 className="text-4xl font-bold mb-6">Cognitive optimizer-education #2</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your education operations with our Cognitive optimizer-education #2. This AI-driven solution automates market intelligence with unprecedented accuracy</p>
 

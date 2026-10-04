@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/analytics-predictive---real-estate-8bc1ae8d` title="Analytics Predictive - Real-Estate" />
+        <BreadcrumbSchema path="/services/analytics-predictive---real-estate-8bc1ae8d" title="Analytics Predictive - Real-Estate" />
         <h1 className="text-4xl font-bold mb-6">Analytics Predictive - Real-Estate</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your real-estate operations with our Analytics Predictive - Real-Estate. This AI-driven solution automates inventory management with unprecedented acc</p>
 

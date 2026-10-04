@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/engagement-ab-for-marketing-5c32b385` title="Engagement A/B for Marketing" />
+        <BreadcrumbSchema path="/services/engagement-ab-for-marketing-5c32b385" title="Engagement A/B for Marketing" />
         <h1 className="text-4xl font-bold mb-6">Engagement A/B for Marketing</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Engagement A/B for Marketing. This autonomous system provides a/b testing with zero manual intervention needed.</p>
 

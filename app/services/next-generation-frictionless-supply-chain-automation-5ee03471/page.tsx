@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/next-generation-frictionless-supply-chain-automation-5ee03471` title="Next-Generation Frictionless Supply Chain Automation" />
+        <BreadcrumbSchema path="/services/next-generation-frictionless-supply-chain-automation-5ee03471" title="Next-Generation Frictionless Supply Chain Automation" />
         <h1 className="text-4xl font-bold mb-6">Next-Generation Frictionless Supply Chain Automation</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation automation suite that streamlines frictionless supply chain workflows with intelligent orchestration.</p>
 

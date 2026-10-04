@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/director-cognitive---media-1-12c8b819` title="Director Cognitive - Media #1" />
+        <BreadcrumbSchema path="/services/director-cognitive---media-1-12c8b819" title="Director Cognitive - Media #1" />
         <h1 className="text-4xl font-bold mb-6">Director Cognitive - Media #1</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize media through intelligent automation. Our Director Cognitive - Media #1 leverages advanced machine learning to deliver network optimization at sca</p>
 

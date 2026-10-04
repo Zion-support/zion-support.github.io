@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-inventory-director-43988a12` title="Intelligent Inventory Director" />
+        <BreadcrumbSchema path="/services/intelligent-inventory-director-43988a12" title="Intelligent Inventory Director" />
         <h1 className="text-4xl font-bold mb-6">Intelligent Inventory Director</h1>
         <p className="text-lg text-gray-300 mb-8">The future of hospitality is here with Intelligent Inventory Director. Powered by cutting-edge AI, this platform delivers risk assessment like never before.</p>
 

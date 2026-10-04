@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-sql-solution-e-commerce-43f84a5c` title="Cognitive SQL Solution - E-Commerce" />
+        <BreadcrumbSchema path="/services/cognitive-sql-solution-e-commerce-43f84a5c" title="Cognitive SQL Solution - E-Commerce" />
         <h1 className="text-4xl font-bold mb-6">Cognitive SQL Solution - E-Commerce</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation e-commerce solution: Cognitive SQL Solution - E-Commerce. Combines data migration with adaptive intelligence for optimal results.</p>
 

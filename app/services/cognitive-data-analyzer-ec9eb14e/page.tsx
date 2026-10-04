@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-data-analyzer-ec9eb14e` title="Cognitive Data Analyzer" />
+        <BreadcrumbSchema path="/services/cognitive-data-analyzer-ec9eb14e" title="Cognitive Data Analyzer" />
         <h1 className="text-4xl font-bold mb-6">Cognitive Data Analyzer</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize Real Estate through intelligent automation. Our Cognitive Data Analyzer leverages advanced machine learning to deliver manufacturing quality contr</p>
 

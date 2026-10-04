@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictive-release-engine-manufacturing-e9dbca4b` title="Predictive Release Engine - Manufacturing" />
+        <BreadcrumbSchema path="/services/predictive-release-engine-manufacturing-e9dbca4b" title="Predictive Release Engine - Manufacturing" />
         <h1 className="text-4xl font-bold mb-6">Predictive Release Engine - Manufacturing</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize manufacturing through intelligent automation. Our Predictive Release Engine - Manufacturing leverages advanced machine learning to deliver continu</p>
 

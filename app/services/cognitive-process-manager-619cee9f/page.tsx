@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-process-manager-619cee9f` title="Cognitive Process Manager" />
+        <BreadcrumbSchema path="/services/cognitive-process-manager-619cee9f" title="Cognitive Process Manager" />
         <h1 className="text-4xl font-bold mb-6">Cognitive Process Manager</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation education solution: Cognitive Process Manager. Combines supply chain with adaptive intelligence for optimal results.</p>
 

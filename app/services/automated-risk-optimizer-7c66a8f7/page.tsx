@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/automated-risk-optimizer-7c66a8f7` title="Automated Risk Optimizer" />
+        <BreadcrumbSchema path="/services/automated-risk-optimizer-7c66a8f7" title="Automated Risk Optimizer" />
         <h1 className="text-4xl font-bold mb-6">Automated Risk Optimizer</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your retail operations with our Automated Risk Optimizer. This AI-driven solution automates energy management with unprecedented accuracy and efficien</p>
 

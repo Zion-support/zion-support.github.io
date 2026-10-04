@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/neural-suite-education-c3b861d1` title="Neural suite-education" />
+        <BreadcrumbSchema path="/services/neural-suite-education-c3b861d1" title="Neural suite-education" />
         <h1 className="text-4xl font-bold mb-6">Neural suite-education</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your education operations with our Neural suite-education. This AI-driven solution automates process automation with unprecedented accuracy and effici</p>
 

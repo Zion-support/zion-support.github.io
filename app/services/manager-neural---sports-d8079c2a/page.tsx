@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/manager-neural---sports-d8079c2a` title="Manager Neural - Sports" />
+        <BreadcrumbSchema path="/services/manager-neural---sports-d8079c2a" title="Manager Neural - Sports" />
         <h1 className="text-4xl font-bold mb-6">Manager Neural - Sports</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation sports solution: Manager Neural - Sports. Combines energy management with adaptive intelligence for optimal results.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-content-analyzer-5ce439ea` title="Intelligent Content Analyzer" />
+        <BreadcrumbSchema path="/services/intelligent-content-analyzer-5ce439ea" title="Intelligent Content Analyzer" />
         <h1 className="text-4xl font-bold mb-6">Intelligent Content Analyzer</h1>
         <p className="text-lg text-gray-300 mb-8">The future of agriculture is here with Intelligent Content Analyzer. Powered by cutting-edge AI, this platform delivers maintenance scheduling like never before</p>
 

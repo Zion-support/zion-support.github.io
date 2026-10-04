@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognition-ai-3819c2c8` title="Cognition AI" />
+        <BreadcrumbSchema path="/services/cognition-ai-3819c2c8" title="Cognition AI" />
         <h1 className="text-4xl font-bold mb-6">Cognition AI</h1>
         <p className="text-lg text-gray-300 mb-8">Cognition AI is an artificial intelligence and automation technology company.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictive-customer-processor-dfd1c410` title="Predictive Customer Processor" />
+        <BreadcrumbSchema path="/services/predictive-customer-processor-dfd1c410" title="Predictive Customer Processor" />
         <h1 className="text-4xl font-bold mb-6">Predictive Customer Processor</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Predictive Customer Processor. This autonomous system provides document processing with zero manual intervention needed.</p>
 

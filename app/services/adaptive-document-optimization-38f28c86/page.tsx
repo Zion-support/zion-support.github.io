@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/adaptive-document-optimization-38f28c86` title="Adaptive Document Optimization" />
+        <BreadcrumbSchema path="/services/adaptive-document-optimization-38f28c86" title="Adaptive Document Optimization" />
         <h1 className="text-4xl font-bold mb-6">Adaptive Document Optimization</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize hospitality through intelligent automation. Our Adaptive Document Optimization leverages advanced machine learning to deliver quality control at s</p>
 

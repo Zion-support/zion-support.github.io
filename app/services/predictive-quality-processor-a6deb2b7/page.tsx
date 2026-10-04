@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictive-quality-processor-a6deb2b7` title="Predictive Quality Processor" />
+        <BreadcrumbSchema path="/services/predictive-quality-processor-a6deb2b7" title="Predictive Quality Processor" />
         <h1 className="text-4xl font-bold mb-6">Predictive Quality Processor</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize logistics through intelligent automation. Our Predictive Quality Processor leverages advanced machine learning to deliver inventory management at </p>
 

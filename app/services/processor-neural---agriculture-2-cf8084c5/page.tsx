@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/processor-neural---agriculture-2-cf8084c5` title="Processor Neural - Agriculture #2" />
+        <BreadcrumbSchema path="/services/processor-neural---agriculture-2-cf8084c5" title="Processor Neural - Agriculture #2" />
         <h1 className="text-4xl font-bold mb-6">Processor Neural - Agriculture #2</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation agriculture solution: Processor Neural - Agriculture #2. Combines content generation with adaptive intelligence for optimal results.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictive-sentiment-analytics-b5b34d77` title="Predictive Sentiment Analytics" />
+        <BreadcrumbSchema path="/services/predictive-sentiment-analytics-b5b34d77" title="Predictive Sentiment Analytics" />
         <h1 className="text-4xl font-bold mb-6">Predictive Sentiment Analytics</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your Retail operations with our Predictive Sentiment Analytics. This AI-driven solution automates brand monitoring with unprecedented accuracy and eff</p>
 

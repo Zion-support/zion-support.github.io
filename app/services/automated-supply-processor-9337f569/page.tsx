@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/automated-supply-processor-9337f569` title="Automated Supply Processor" />
+        <BreadcrumbSchema path="/services/automated-supply-processor-9337f569" title="Automated Supply Processor" />
         <h1 className="text-4xl font-bold mb-6">Automated Supply Processor</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your construction operations with our Automated Supply Processor. This AI-driven solution automates decision support with unprecedented accuracy and e</p>
 

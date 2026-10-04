@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/optimization-smart---telecom-04ede69e` title="Optimization Smart - Telecom" />
+        <BreadcrumbSchema path="/services/optimization-smart---telecom-04ede69e" title="Optimization Smart - Telecom" />
         <h1 className="text-4xl font-bold mb-6">Optimization Smart - Telecom</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your Telecom operations with our Optimization Smart - Telecom. This AI-driven solution automates sentiment analysis with unprecedented accuracy and ef</p>
 

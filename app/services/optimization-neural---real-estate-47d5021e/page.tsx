@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/optimization-neural---real-estate-47d5021e` title="Optimization Neural - Real-Estate" />
+        <BreadcrumbSchema path="/services/optimization-neural---real-estate-47d5021e" title="Optimization Neural - Real-Estate" />
         <h1 className="text-4xl font-bold mb-6">Optimization Neural - Real-Estate</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your real-estate operations with our Optimization Neural - Real-Estate. This AI-driven solution automates market intelligence with unprecedented accur</p>
 

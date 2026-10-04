@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-customer-analytics-38ae339f` title="Intelligent Customer Analytics" />
+        <BreadcrumbSchema path="/services/intelligent-customer-analytics-38ae339f" title="Intelligent Customer Analytics" />
         <h1 className="text-4xl font-bold mb-6">Intelligent Customer Analytics</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your transportation operations with our Intelligent Customer Analytics. This AI-driven solution automates workflow management with unprecedented accur</p>
 

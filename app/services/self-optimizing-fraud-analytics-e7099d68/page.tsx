@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/self-optimizing-fraud-analytics-e7099d68` title="Self-Optimizing Fraud Analytics" />
+        <BreadcrumbSchema path="/services/self-optimizing-fraud-analytics-e7099d68" title="Self-Optimizing Fraud Analytics" />
         <h1 className="text-4xl font-bold mb-6">Self-Optimizing Fraud Analytics</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your hospitality operations with our Self-Optimizing Fraud Analytics. This AI-driven solution automates sales forecasting with unprecedented accuracy </p>
 

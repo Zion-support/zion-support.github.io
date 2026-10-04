@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/automated-finance-for-telecom-3e9ce0c6` title="Automated Finance for Telecom" />
+        <BreadcrumbSchema path="/services/automated-finance-for-telecom-3e9ce0c6" title="Automated Finance for Telecom" />
         <h1 className="text-4xl font-bold mb-6">Automated Finance for Telecom</h1>
         <p className="text-lg text-gray-300 mb-8">The future of Telecom is here with Automated Finance for Telecom. Powered by cutting-edge AI, this platform delivers executive dashboards like never before.</p>
 

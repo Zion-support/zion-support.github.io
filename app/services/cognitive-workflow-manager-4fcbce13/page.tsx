@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-workflow-manager-4fcbce13` title="Cognitive Workflow Manager" />
+        <BreadcrumbSchema path="/services/cognitive-workflow-manager-4fcbce13" title="Cognitive Workflow Manager" />
         <h1 className="text-4xl font-bold mb-6">Cognitive Workflow Manager</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize hospitality through intelligent automation. Our Cognitive Workflow Manager leverages advanced machine learning to deliver data processing at scale</p>
 

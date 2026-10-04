@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-automation---media-edition-2-28862142` title="AI Automation - Media Edition #2" />
+        <BreadcrumbSchema path="/services/ai-automation---media-edition-2-28862142" title="AI Automation - Media Edition #2" />
         <h1 className="text-4xl font-bold mb-6">AI Automation - Media Edition #2</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation media solution: AI Automation - Media Edition #2. Combines user experience with adaptive intelligence for optimal results.</p>
 

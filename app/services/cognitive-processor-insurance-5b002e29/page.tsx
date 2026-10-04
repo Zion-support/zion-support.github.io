@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-processor-insurance-5b002e29` title="Cognitive processor-insurance" />
+        <BreadcrumbSchema path="/services/cognitive-processor-insurance-5b002e29" title="Cognitive processor-insurance" />
         <h1 className="text-4xl font-bold mb-6">Cognitive processor-insurance</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Cognitive processor-insurance. This autonomous system provides workflow management with zero manual intervention needed.</p>
 

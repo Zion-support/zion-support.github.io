@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/competition-in-artificial-intelligence-6535969e` title="Competition in artificial intelligence" />
+        <BreadcrumbSchema path="/services/competition-in-artificial-intelligence-6535969e" title="Competition in artificial intelligence" />
         <h1 className="text-4xl font-bold mb-6">Competition in artificial intelligence</h1>
         <p className="text-lg text-gray-300 mb-8">Competition in artificial intelligence is an artificial intelligence and automation technology company.</p>
 

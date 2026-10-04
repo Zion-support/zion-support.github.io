@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/manager-cognitive---energy-80d26c11` title="Manager Cognitive - Energy" />
+        <BreadcrumbSchema path="/services/manager-cognitive---energy-80d26c11" title="Manager Cognitive - Energy" />
         <h1 className="text-4xl font-bold mb-6">Manager Cognitive - Energy</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize energy through intelligent automation. Our Manager Cognitive - Energy leverages advanced machine learning to deliver resource optimization at scal</p>
 

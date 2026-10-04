@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/8-ai-powered-supply-chain-optimization-platform` title="AI-Powered Supply Chain Optimization Platform" />
+        <BreadcrumbSchema path="/services/8-ai-powered-supply-chain-optimization-platform" title="AI-Powered Supply Chain Optimization Platform" />
         <h1 className="text-4xl font-bold mb-6">AI-Powered Supply Chain Optimization Platform</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your supply chain with artificial intelligence for end-to-end visibility, predictive analytics, and autonomous optimization across global networks.</p>
 

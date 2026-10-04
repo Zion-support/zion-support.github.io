@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/adaptive-director-construction-6c17d25d` title="Adaptive director-construction" />
+        <BreadcrumbSchema path="/services/adaptive-director-construction-6c17d25d" title="Adaptive director-construction" />
         <h1 className="text-4xl font-bold mb-6">Adaptive director-construction</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation construction solution: Adaptive director-construction. Combines inventory management with adaptive intelligence for optimal results.</p>
 

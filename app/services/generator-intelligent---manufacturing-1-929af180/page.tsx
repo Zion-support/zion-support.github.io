@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/generator-intelligent---manufacturing-1-929af180` title="Generator Intelligent - Manufacturing #1" />
+        <BreadcrumbSchema path="/services/generator-intelligent---manufacturing-1-929af180" title="Generator Intelligent - Manufacturing #1" />
         <h1 className="text-4xl font-bold mb-6">Generator Intelligent - Manufacturing #1</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize Manufacturing through intelligent automation. Our Generator Intelligent - Manufacturing #1 leverages advanced machine learning to deliver healthca</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/neural-document-manager-d882ac53` title="Neural Document Manager" />
+        <BreadcrumbSchema path="/services/neural-document-manager-d882ac53" title="Neural Document Manager" />
         <h1 className="text-4xl font-bold mb-6">Neural Document Manager</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your telecom operations with our Neural Document Manager. This AI-driven solution automates network optimization with unprecedented accuracy and effic</p>
 

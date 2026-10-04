@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-orchestrator-for-hospitality-05e434fa` title="Cognitive Orchestrator for Hospitality" />
+        <BreadcrumbSchema path="/services/cognitive-orchestrator-for-hospitality-05e434fa" title="Cognitive Orchestrator for Hospitality" />
         <h1 className="text-4xl font-bold mb-6">Cognitive Orchestrator for Hospitality</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your hospitality operations with our Cognitive Orchestrator for Hospitality. This AI-driven solution automates sales forecasting with unprecedented ac</p>
 

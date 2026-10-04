@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/orchestrator-cognitive---finance-c8796276` title="Orchestrator Cognitive - Finance" />
+        <BreadcrumbSchema path="/services/orchestrator-cognitive---finance-c8796276" title="Orchestrator Cognitive - Finance" />
         <h1 className="text-4xl font-bold mb-6">Orchestrator Cognitive - Finance</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize Finance through intelligent automation. Our Orchestrator Cognitive - Finance leverages advanced machine learning to deliver risk assessment at sca</p>
 

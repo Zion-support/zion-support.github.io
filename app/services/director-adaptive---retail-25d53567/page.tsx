@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/director-adaptive---retail-25d53567` title="Director Adaptive - Retail" />
+        <BreadcrumbSchema path="/services/director-adaptive---retail-25d53567" title="Director Adaptive - Retail" />
         <h1 className="text-4xl font-bold mb-6">Director Adaptive - Retail</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize retail through intelligent automation. Our Director Adaptive - Retail leverages advanced machine learning to deliver resource optimization at scal</p>
 

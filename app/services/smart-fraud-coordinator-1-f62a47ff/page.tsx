@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/smart-fraud-coordinator-1-f62a47ff` title="Smart Fraud Coordinator #1" />
+        <BreadcrumbSchema path="/services/smart-fraud-coordinator-1-f62a47ff" title="Smart Fraud Coordinator #1" />
         <h1 className="text-4xl font-bold mb-6">Smart Fraud Coordinator #1</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation agriculture solution: Smart Fraud Coordinator #1. Combines data processing with adaptive intelligence for optimal results.</p>
 

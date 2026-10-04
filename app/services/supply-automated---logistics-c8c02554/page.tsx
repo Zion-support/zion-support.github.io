@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/supply-automated---logistics-c8c02554` title="Supply Automated - Logistics" />
+        <BreadcrumbSchema path="/services/supply-automated---logistics-c8c02554" title="Supply Automated - Logistics" />
         <h1 className="text-4xl font-bold mb-6">Supply Automated - Logistics</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Supply Automated - Logistics. This autonomous system provides predictive modeling with zero manual intervention needed.</p>
 

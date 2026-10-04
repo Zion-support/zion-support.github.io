@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/adaptive-manager-tech-32a17ff6` title="Adaptive manager-tech" />
+        <BreadcrumbSchema path="/services/adaptive-manager-tech-32a17ff6" title="Adaptive manager-tech" />
         <h1 className="text-4xl font-bold mb-6">Adaptive manager-tech</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your technology operations with our Adaptive manager-tech. This AI-driven solution automates code optimization with unprecedented accuracy and efficie</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/edge-native-quantum-ready-healthcare-processing-2098eae9` title="Edge-Native Quantum-Ready Healthcare Processing" />
+        <BreadcrumbSchema path="/services/edge-native-quantum-ready-healthcare-processing-2098eae9" title="Edge-Native Quantum-Ready Healthcare Processing" />
         <h1 className="text-4xl font-bold mb-6">Edge-Native Quantum-Ready Healthcare Processing</h1>
         <p className="text-lg text-gray-300 mb-8">Edge-native processing layer that delivers quantum-ready healthcare insights with sub-millisecond latency.</p>
 

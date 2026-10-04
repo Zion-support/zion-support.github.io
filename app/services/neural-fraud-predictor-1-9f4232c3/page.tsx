@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/neural-fraud-predictor-1-9f4232c3` title="Neural Fraud Predictor #1" />
+        <BreadcrumbSchema path="/services/neural-fraud-predictor-1-9f4232c3" title="Neural Fraud Predictor #1" />
         <h1 className="text-4xl font-bold mb-6">Neural Fraud Predictor #1</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize logistics through intelligent automation. Our Neural Fraud Predictor #1 leverages advanced machine learning to deliver quality control at scale.</p>
 

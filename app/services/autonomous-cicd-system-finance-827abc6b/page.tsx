@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/autonomous-cicd-system-finance-827abc6b` title="Autonomous CI/CD System - Finance" />
+        <BreadcrumbSchema path="/services/autonomous-cicd-system-finance-827abc6b" title="Autonomous CI/CD System - Finance" />
         <h1 className="text-4xl font-bold mb-6">Autonomous CI/CD System - Finance</h1>
         <p className="text-lg text-gray-300 mb-8">Optimize your finance workflows with Autonomous CI/CD System - Finance. This intelligent platform delivers monitoring systems through advanced automation and AI</p>
 

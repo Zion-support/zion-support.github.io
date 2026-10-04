@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictive-revenue-finance-78cd669d` title="Predictive revenue-finance" />
+        <BreadcrumbSchema path="/services/predictive-revenue-finance-78cd669d" title="Predictive revenue-finance" />
         <h1 className="text-4xl font-bold mb-6">Predictive revenue-finance</h1>
         <p className="text-lg text-gray-300 mb-8">The future of Finance is here with Predictive revenue-finance. Powered by cutting-edge AI, this platform delivers healthcare data analytics like never before.</p>
 

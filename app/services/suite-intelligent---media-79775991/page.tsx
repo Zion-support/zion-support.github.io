@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/suite-intelligent---media-79775991` title="Suite Intelligent - Media" />
+        <BreadcrumbSchema path="/services/suite-intelligent---media-79775991" title="Suite Intelligent - Media" />
         <h1 className="text-4xl font-bold mb-6">Suite Intelligent - Media</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation media solution: Suite Intelligent - Media. Combines supply chain with adaptive intelligence for optimal results.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-decision-generator-fe47a98d` title="Intelligent Decision Generator" />
+        <BreadcrumbSchema path="/services/intelligent-decision-generator-fe47a98d" title="Intelligent Decision Generator" />
         <h1 className="text-4xl font-bold mb-6">Intelligent Decision Generator</h1>
         <p className="text-lg text-gray-300 mb-8">The future of real-estate is here with Intelligent Decision Generator. Powered by cutting-edge AI, this platform delivers risk assessment like never before.</p>
 

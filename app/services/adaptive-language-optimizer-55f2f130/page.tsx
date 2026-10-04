@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/adaptive-language-optimizer-55f2f130` title="Adaptive Language Optimizer" />
+        <BreadcrumbSchema path="/services/adaptive-language-optimizer-55f2f130" title="Adaptive Language Optimizer" />
         <h1 className="text-4xl font-bold mb-6">Adaptive Language Optimizer</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Adaptive Language Optimizer. This autonomous system provides code optimization with zero manual intervention needed.</p>
 

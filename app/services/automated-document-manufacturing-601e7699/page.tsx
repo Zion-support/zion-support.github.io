@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/automated-document-manufacturing-601e7699` title="Automated Document Manufacturing" />
+        <BreadcrumbSchema path="/services/automated-document-manufacturing-601e7699" title="Automated Document Manufacturing" />
         <h1 className="text-4xl font-bold mb-6">Automated Document Manufacturing</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation Sports solution: Automated Document Manufacturing. Combines executive dashboards with adaptive intelligence for optimal results.</p>
 

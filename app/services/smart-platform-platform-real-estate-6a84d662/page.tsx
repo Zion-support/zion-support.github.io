@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/smart-platform-platform-real-estate-6a84d662` title="Smart Platform Platform - Real-Estate" />
+        <BreadcrumbSchema path="/services/smart-platform-platform-real-estate-6a84d662" title="Smart Platform Platform - Real-Estate" />
         <h1 className="text-4xl font-bold mb-6">Smart Platform Platform - Real-Estate</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your real-estate operations with our Smart Platform Platform - Real-Estate. This AI-driven solution automates influencer identification with unprecede</p>
 

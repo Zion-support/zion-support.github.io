@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/director-autonomous---telecom-1ebb3d66` title="Director Autonomous - Telecom" />
+        <BreadcrumbSchema path="/services/director-autonomous---telecom-1ebb3d66" title="Director Autonomous - Telecom" />
         <h1 className="text-4xl font-bold mb-6">Director Autonomous - Telecom</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize telecom through intelligent automation. Our Director Autonomous - Telecom leverages advanced machine learning to deliver resource optimization at </p>
 

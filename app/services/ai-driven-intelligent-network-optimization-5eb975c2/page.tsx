@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-driven-intelligent-network-optimization-5eb975c2` title="AI-Driven Intelligent Network Optimization" />
+        <BreadcrumbSchema path="/services/ai-driven-intelligent-network-optimization-5eb975c2" title="AI-Driven Intelligent Network Optimization" />
         <h1 className="text-4xl font-bold mb-6">AI-Driven Intelligent Network Optimization</h1>
         <p className="text-lg text-gray-300 mb-8">Intelligent network management platform that uses intelligent algorithms to optimize traffic routing, capacity planning, and quality of service across telecom i</p>
 

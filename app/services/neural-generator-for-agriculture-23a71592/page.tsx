@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/neural-generator-for-agriculture-23a71592` title="Neural Generator for Agriculture" />
+        <BreadcrumbSchema path="/services/neural-generator-for-agriculture-23a71592" title="Neural Generator for Agriculture" />
         <h1 className="text-4xl font-bold mb-6">Neural Generator for Agriculture</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize agriculture through intelligent automation. Our Neural Generator for Agriculture leverages advanced machine learning to deliver decision support a</p>
 

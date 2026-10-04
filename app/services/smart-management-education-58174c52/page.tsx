@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/smart-management-education-58174c52` title="Smart management-education" />
+        <BreadcrumbSchema path="/services/smart-management-education-58174c52" title="Smart management-education" />
         <h1 className="text-4xl font-bold mb-6">Smart management-education</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your education operations with our Smart management-education. This AI-driven solution automates image recognition with unprecedented accuracy and eff</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/self-optimizing-processor-for-telecom-97163b44` title="Self-Optimizing Processor for Telecom" />
+        <BreadcrumbSchema path="/services/self-optimizing-processor-for-telecom-97163b44" title="Self-Optimizing Processor for Telecom" />
         <h1 className="text-4xl font-bold mb-6">Self-Optimizing Processor for Telecom</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize telecom through intelligent automation. Our Self-Optimizing Processor for Telecom leverages advanced machine learning to deliver market intelligen</p>
 

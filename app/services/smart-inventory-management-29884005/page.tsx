@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/smart-inventory-management-29884005` title="Smart Inventory Management" />
+        <BreadcrumbSchema path="/services/smart-inventory-management-29884005" title="Smart Inventory Management" />
         <h1 className="text-4xl font-bold mb-6">Smart Inventory Management</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize agriculture through intelligent automation. Our Smart Inventory Management leverages advanced machine learning to deliver fraud prevention at scal</p>
 

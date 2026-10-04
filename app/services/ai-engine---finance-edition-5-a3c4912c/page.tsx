@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-engine---finance-edition-5-a3c4912c` title="AI Engine - Finance Edition #5" />
+        <BreadcrumbSchema path="/services/ai-engine---finance-edition-5-a3c4912c" title="AI Engine - Finance Edition #5" />
         <h1 className="text-4xl font-bold mb-6">AI Engine - Finance Edition #5</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize finance through intelligent automation. Our AI Engine - Finance Edition #5 leverages advanced machine learning to deliver decision support at scal</p>
 

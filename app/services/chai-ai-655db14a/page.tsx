@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/chai-ai-655db14a` title="Chai AI" />
+        <BreadcrumbSchema path="/services/chai-ai-655db14a" title="Chai AI" />
         <h1 className="text-4xl font-bold mb-6">Chai AI</h1>
         <p className="text-lg text-gray-300 mb-8">Chai AI is an artificial intelligence and automation technology company.</p>
 

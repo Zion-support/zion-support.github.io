@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/neural-orchestrator-legal-f5970e1f` title="Neural orchestrator-legal" />
+        <BreadcrumbSchema path="/services/neural-orchestrator-legal-f5970e1f" title="Neural orchestrator-legal" />
         <h1 className="text-4xl font-bold mb-6">Neural orchestrator-legal</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your legal operations with our Neural orchestrator-legal. This AI-driven solution automates code optimization with unprecedented accuracy and efficien</p>
 

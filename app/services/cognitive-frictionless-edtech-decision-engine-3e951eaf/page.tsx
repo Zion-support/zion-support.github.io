@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-frictionless-edtech-decision-engine-3e951eaf` title="Cognitive Frictionless Edtech Decision Engine" />
+        <BreadcrumbSchema path="/services/cognitive-frictionless-edtech-decision-engine-3e951eaf" title="Cognitive Frictionless Edtech Decision Engine" />
         <h1 className="text-4xl font-bold mb-6">Cognitive Frictionless Edtech Decision Engine</h1>
         <p className="text-lg text-gray-300 mb-8">Cognitive decision engine that processes frictionless signals to drive edtech strategy with deep learning.</p>
 

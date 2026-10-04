@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictive-real-time-engine-agriculture-2e1ee1c6` title="Predictive Real-time Engine - Agriculture" />
+        <BreadcrumbSchema path="/services/predictive-real-time-engine-agriculture-2e1ee1c6" title="Predictive Real-time Engine - Agriculture" />
         <h1 className="text-4xl font-bold mb-6">Predictive Real-time Engine - Agriculture</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your agriculture operations with our Predictive Real-time Engine - Agriculture. This AI-driven solution automates sensor data processing with unpreced</p>
 

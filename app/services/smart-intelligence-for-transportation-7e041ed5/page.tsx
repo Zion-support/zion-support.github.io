@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/smart-intelligence-for-transportation-7e041ed5` title="Smart Intelligence for Transportation" />
+        <BreadcrumbSchema path="/services/smart-intelligence-for-transportation-7e041ed5" title="Smart Intelligence for Transportation" />
         <h1 className="text-4xl font-bold mb-6">Smart Intelligence for Transportation</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Smart Intelligence for Transportation. This autonomous system provides risk assessment with zero manual intervention needed.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/smart-customer-suite-ef638f58` title="Smart Customer Suite" />
+        <BreadcrumbSchema path="/services/smart-customer-suite-ef638f58" title="Smart Customer Suite" />
         <h1 className="text-4xl font-bold mb-6">Smart Customer Suite</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation Real Estate solution: Smart Customer Suite. Combines business intelligence with adaptive intelligence for optimal results.</p>
 

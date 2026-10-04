@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-language-optimizer-2b2be0b0` title="Cognitive Language Optimizer" />
+        <BreadcrumbSchema path="/services/cognitive-language-optimizer-2b2be0b0" title="Cognitive Language Optimizer" />
         <h1 className="text-4xl font-bold mb-6">Cognitive Language Optimizer</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize media through intelligent automation. Our Cognitive Language Optimizer leverages advanced machine learning to deliver content generation at scale.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-powered-precision-customer-experience-suite-d336d203` title="AI-Powered Precision Customer Experience Suite" />
+        <BreadcrumbSchema path="/services/ai-powered-precision-customer-experience-suite-d336d203" title="AI-Powered Precision Customer Experience Suite" />
         <h1 className="text-4xl font-bold mb-6">AI-Powered Precision Customer Experience Suite</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation customer experience platform that delivers precision service delivery across all touchpoints.</p>
 

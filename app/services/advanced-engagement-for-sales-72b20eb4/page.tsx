@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/advanced-engagement-for-sales-72b20eb4` title="Advanced Engagement for Sales" />
+        <BreadcrumbSchema path="/services/advanced-engagement-for-sales-72b20eb4" title="Advanced Engagement for Sales" />
         <h1 className="text-4xl font-bold mb-6">Advanced Engagement for Sales</h1>
         <p className="text-lg text-gray-300 mb-8">The future of sales is here with Advanced Engagement for Sales. Powered by cutting-edge AI, this platform delivers automation workflows like never before.</p>
 

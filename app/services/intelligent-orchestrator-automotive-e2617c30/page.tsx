@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-orchestrator-automotive-e2617c30` title="Intelligent orchestrator-automotive" />
+        <BreadcrumbSchema path="/services/intelligent-orchestrator-automotive-e2617c30" title="Intelligent orchestrator-automotive" />
         <h1 className="text-4xl font-bold mb-6">Intelligent orchestrator-automotive</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your automotive operations with our Intelligent orchestrator-automotive. This AI-driven solution automates threat detection with unprecedented accurac</p>
 

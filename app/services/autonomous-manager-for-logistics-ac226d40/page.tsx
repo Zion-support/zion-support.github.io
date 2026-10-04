@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/autonomous-manager-for-logistics-ac226d40` title="Autonomous Manager for Logistics" />
+        <BreadcrumbSchema path="/services/autonomous-manager-for-logistics-ac226d40" title="Autonomous Manager for Logistics" />
         <h1 className="text-4xl font-bold mb-6">Autonomous Manager for Logistics</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Autonomous Manager for Logistics. This autonomous system provides sentiment analysis with zero manual intervention needed.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-decision-support-system-real-estate-intelligent-decision-support-system-for-real-estate` title="Intelligent Decision Support System for Real Estate" />
+        <BreadcrumbSchema path="/services/intelligent-decision-support-system-real-estate-intelligent-decision-support-system-for-real-estate" title="Intelligent Decision Support System for Real Estate" />
         <h1 className="text-4xl font-bold mb-6">Intelligent Decision Support System for Real Estate</h1>
         <p className="text-lg text-gray-300 mb-8">AI-driven decision support system for real estate. Delivers data-backed recommendations for Property valuation, market analysis, tenant matching with confidence</p>
 

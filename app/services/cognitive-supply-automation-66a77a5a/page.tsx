@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-supply-automation-66a77a5a` title="Cognitive Supply Automation" />
+        <BreadcrumbSchema path="/services/cognitive-supply-automation-66a77a5a" title="Cognitive Supply Automation" />
         <h1 className="text-4xl font-bold mb-6">Cognitive Supply Automation</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your healthcare operations with our Cognitive Supply Automation. This AI-driven solution automates energy management with unprecedented accuracy and e</p>
 

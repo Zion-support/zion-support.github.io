@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-decision-suite-a1c7bfae` title="Intelligent Decision Suite" />
+        <BreadcrumbSchema path="/services/intelligent-decision-suite-a1c7bfae" title="Intelligent Decision Suite" />
         <h1 className="text-4xl font-bold mb-6">Intelligent Decision Suite</h1>
         <p className="text-lg text-gray-300 mb-8">The future of legal is here with Intelligent Decision Suite. Powered by cutting-edge AI, this platform delivers inventory management like never before.</p>
 

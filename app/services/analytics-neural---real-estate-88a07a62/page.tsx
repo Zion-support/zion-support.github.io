@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/analytics-neural---real-estate-88a07a62` title="Analytics Neural - Real-Estate" />
+        <BreadcrumbSchema path="/services/analytics-neural---real-estate-88a07a62" title="Analytics Neural - Real-Estate" />
         <h1 className="text-4xl font-bold mb-6">Analytics Neural - Real-Estate</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation real-estate solution: Analytics Neural - Real-Estate. Combines threat detection with adaptive intelligence for optimal results.</p>
 

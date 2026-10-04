@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/director-adaptive---gaming-ea3043bf` title="Director Adaptive - Gaming" />
+        <BreadcrumbSchema path="/services/director-adaptive---gaming-ea3043bf" title="Director Adaptive - Gaming" />
         <h1 className="text-4xl font-bold mb-6">Director Adaptive - Gaming</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your gaming operations with our Director Adaptive - Gaming. This AI-driven solution automates performance monitoring with unprecedented accuracy and e</p>
 

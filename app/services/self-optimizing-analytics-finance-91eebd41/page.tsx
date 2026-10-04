@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/self-optimizing-analytics-finance-91eebd41` title="Self-Optimizing analytics-finance" />
+        <BreadcrumbSchema path="/services/self-optimizing-analytics-finance-91eebd41" title="Self-Optimizing analytics-finance" />
         <h1 className="text-4xl font-bold mb-6">Self-Optimizing analytics-finance</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation finance solution: Self-Optimizing analytics-finance. Combines network optimization with adaptive intelligence for optimal results.</p>
 

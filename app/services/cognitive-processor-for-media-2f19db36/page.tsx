@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-processor-for-media-2f19db36` title="Cognitive Processor for Media" />
+        <BreadcrumbSchema path="/services/cognitive-processor-for-media-2f19db36" title="Cognitive Processor for Media" />
         <h1 className="text-4xl font-bold mb-6">Cognitive Processor for Media</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your media operations with our Cognitive Processor for Media. This AI-driven solution automates resource optimization with unprecedented accuracy and </p>
 

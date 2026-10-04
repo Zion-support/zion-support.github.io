@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictive-manager-insurance-a56e9f23` title="Predictive manager-insurance" />
+        <BreadcrumbSchema path="/services/predictive-manager-insurance-a56e9f23" title="Predictive manager-insurance" />
         <h1 className="text-4xl font-bold mb-6">Predictive manager-insurance</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize insurance through intelligent automation. Our Predictive manager-insurance leverages advanced machine learning to deliver supply chain at scale.</p>
 

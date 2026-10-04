@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-proactive-telecommunications-processing-framework-6369f01b` title="Intelligent Proactive Telecommunications Processing Framework" />
+        <BreadcrumbSchema path="/services/intelligent-proactive-telecommunications-processing-framework-6369f01b" title="Intelligent Proactive Telecommunications Processing Framework" />
         <h1 className="text-4xl font-bold mb-6">Intelligent Proactive Telecommunications Processing Framework</h1>
         <p className="text-lg text-gray-300 mb-8">Intelligent processing framework that automates proactive telecommunications data flows with real-time transformation.</p>
 

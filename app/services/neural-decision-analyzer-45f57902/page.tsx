@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/neural-decision-analyzer-45f57902` title="Neural Decision Analyzer" />
+        <BreadcrumbSchema path="/services/neural-decision-analyzer-45f57902" title="Neural Decision Analyzer" />
         <h1 className="text-4xl font-bold mb-6">Neural Decision Analyzer</h1>
         <p className="text-lg text-gray-300 mb-8">The future of hospitality is here with Neural Decision Analyzer. Powered by cutting-edge AI, this platform delivers decision support like never before.</p>
 

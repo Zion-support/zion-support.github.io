@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/advanced-networks-for-smart-city-c3e45955` title="Advanced Networks for Smart-City" />
+        <BreadcrumbSchema path="/services/advanced-networks-for-smart-city-c3e45955" title="Advanced Networks for Smart-City" />
         <h1 className="text-4xl font-bold mb-6">Advanced Networks for Smart-City</h1>
         <p className="text-lg text-gray-300 mb-8">Optimize your smart-city workflows with Advanced Networks for Smart-City. This intelligent platform delivers device management through advanced automation and A</p>
 

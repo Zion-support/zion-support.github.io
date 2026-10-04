@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-experience---finance-edition-1cbb6029` title="AI Experience - Finance Edition" />
+        <BreadcrumbSchema path="/services/ai-experience---finance-edition-1cbb6029" title="AI Experience - Finance Edition" />
         <h1 className="text-4xl font-bold mb-6">AI Experience - Finance Edition</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your Finance operations with our AI Experience - Finance Edition. This AI-driven solution automates customer journey mapping with unprecedented accura</p>
 

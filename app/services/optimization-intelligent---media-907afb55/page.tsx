@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/optimization-intelligent---media-907afb55` title="Optimization Intelligent - Media" />
+        <BreadcrumbSchema path="/services/optimization-intelligent---media-907afb55" title="Optimization Intelligent - Media" />
         <h1 className="text-4xl font-bold mb-6">Optimization Intelligent - Media</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your media operations with our Optimization Intelligent - Media. This AI-driven solution automates document processing with unprecedented accuracy and</p>
 

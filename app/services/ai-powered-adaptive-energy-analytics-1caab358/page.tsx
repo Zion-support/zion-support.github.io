@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-powered-adaptive-energy-analytics-1caab358` title="AI-Powered Adaptive Energy Analytics" />
+        <BreadcrumbSchema path="/services/ai-powered-adaptive-energy-analytics-1caab358" title="AI-Powered Adaptive Energy Analytics" />
         <h1 className="text-4xl font-bold mb-6">AI-Powered Adaptive Energy Analytics</h1>
         <p className="text-lg text-gray-300 mb-8">AI-driven analytics platform that delivers adaptive insights into energy operations, providing real-time monitoring, predictive modeling, and automated reportin</p>
 

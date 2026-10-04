@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-pharmaceuticals-forecasting-engine-563e0e48` title="Intelligent Pharmaceuticals Forecasting Engine" />
+        <BreadcrumbSchema path="/services/intelligent-pharmaceuticals-forecasting-engine-563e0e48" title="Intelligent Pharmaceuticals Forecasting Engine" />
         <h1 className="text-4xl font-bold mb-6">Intelligent Pharmaceuticals Forecasting Engine</h1>
         <p className="text-lg text-gray-300 mb-8">Machine learning-powered forecasting system that predicts pharmaceuticals trends, demands, and outcomes with high accuracy.</p>
 

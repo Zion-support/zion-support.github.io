@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/management-predictive---energy-43d217b3` title="Management Predictive - Energy" />
+        <BreadcrumbSchema path="/services/management-predictive---energy-43d217b3" title="Management Predictive - Energy" />
         <h1 className="text-4xl font-bold mb-6">Management Predictive - Energy</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation energy solution: Management Predictive - Energy. Combines image recognition with adaptive intelligence for optimal results.</p>
 

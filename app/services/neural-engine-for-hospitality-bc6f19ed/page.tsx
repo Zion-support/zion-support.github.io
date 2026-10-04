@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/neural-engine-for-hospitality-bc6f19ed` title="Neural Engine for Hospitality" />
+        <BreadcrumbSchema path="/services/neural-engine-for-hospitality-bc6f19ed" title="Neural Engine for Hospitality" />
         <h1 className="text-4xl font-bold mb-6">Neural Engine for Hospitality</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize hospitality through intelligent automation. Our Neural Engine for Hospitality leverages advanced machine learning to deliver user experience at sc</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-advisor---finance-edition-3-48e9723e` title="AI Advisor - Finance Edition #3" />
+        <BreadcrumbSchema path="/services/ai-advisor---finance-edition-3-48e9723e" title="AI Advisor - Finance Edition #3" />
         <h1 className="text-4xl font-bold mb-6">AI Advisor - Finance Edition #3</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation finance solution: AI Advisor - Finance Edition #3. Combines financial planning with adaptive intelligence for optimal results.</p>
 

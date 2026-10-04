@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/neural-predictor-transportation-607c4553` title="Neural predictor-transportation" />
+        <BreadcrumbSchema path="/services/neural-predictor-transportation-607c4553" title="Neural predictor-transportation" />
         <h1 className="text-4xl font-bold mb-6">Neural predictor-transportation</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your transportation operations with our Neural predictor-transportation. This AI-driven solution automates code optimization with unprecedented accura</p>
 

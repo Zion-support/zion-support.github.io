@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-performance-for-logistics-043f293a` title="Intelligent Performance for Logistics" />
+        <BreadcrumbSchema path="/services/intelligent-performance-for-logistics-043f293a" title="Intelligent Performance for Logistics" />
         <h1 className="text-4xl font-bold mb-6">Intelligent Performance for Logistics</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your Logistics operations with our Intelligent Performance for Logistics. This AI-driven solution automates language processing with unprecedented acc</p>
 

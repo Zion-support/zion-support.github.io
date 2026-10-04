@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/babyx-709d4b17` title="BabyX" />
+        <BreadcrumbSchema path="/services/babyx-709d4b17" title="BabyX" />
         <h1 className="text-4xl font-bold mb-6">BabyX</h1>
         <p className="text-lg text-gray-300 mb-8">BabyX is an interactive lifelike virtual infant created through the use of artificial intelligence by Mark Sagar, Creator and Director of the Laboratory for Ani</p>
 

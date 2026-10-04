@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/sql-powered-healthcare-automation-v251-cbef76de` title="SQL-Powered Healthcare Automation v251" />
+        <BreadcrumbSchema path="/services/sql-powered-healthcare-automation-v251-cbef76de" title="SQL-Powered Healthcare Automation v251" />
         <h1 className="text-4xl font-bold mb-6">SQL-Powered Healthcare Automation v251</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation healthcare solution: SQL-Powered Healthcare Automation v251. Combines performance tuning with adaptive intelligence for optimal results.</p>
 

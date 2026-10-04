@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/automated-threat-management-cdca2039` title="Automated Threat Management" />
+        <BreadcrumbSchema path="/services/automated-threat-management-cdca2039" title="Automated Threat Management" />
         <h1 className="text-4xl font-bold mb-6">Automated Threat Management</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your gaming operations with our Automated Threat Management. This AI-driven solution automates market intelligence with unprecedented accuracy and eff</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-manager---sports-edition-2-cff0f75d` title="AI Manager - Sports Edition #2" />
+        <BreadcrumbSchema path="/services/ai-manager---sports-edition-2-cff0f75d" title="AI Manager - Sports Edition #2" />
         <h1 className="text-4xl font-bold mb-6">AI Manager - Sports Edition #2</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation sports solution: AI Manager - Sports Edition #2. Combines financial planning with adaptive intelligence for optimal results.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/adaptive-risk-management-861cc3bb` title="Adaptive Risk Management" />
+        <BreadcrumbSchema path="/services/adaptive-risk-management-861cc3bb" title="Adaptive Risk Management" />
         <h1 className="text-4xl font-bold mb-6">Adaptive Risk Management</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Adaptive Risk Management. This autonomous system provides performance monitoring with zero manual intervention needed.</p>
 

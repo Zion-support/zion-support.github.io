@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/suite-autonomous---hospitality-3af4c5ca` title="Suite Autonomous - Hospitality" />
+        <BreadcrumbSchema path="/services/suite-autonomous---hospitality-3af4c5ca" title="Suite Autonomous - Hospitality" />
         <h1 className="text-4xl font-bold mb-6">Suite Autonomous - Hospitality</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your hospitality operations with our Suite Autonomous - Hospitality. This AI-driven solution automates supply chain with unprecedented accuracy and ef</p>
 

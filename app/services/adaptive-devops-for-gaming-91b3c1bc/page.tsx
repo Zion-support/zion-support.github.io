@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/adaptive-devops-for-gaming-91b3c1bc` title="Adaptive DevOps for Gaming" />
+        <BreadcrumbSchema path="/services/adaptive-devops-for-gaming-91b3c1bc" title="Adaptive DevOps for Gaming" />
         <h1 className="text-4xl font-bold mb-6">Adaptive DevOps for Gaming</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Adaptive DevOps for Gaming. This autonomous system provides logistics route optimization with zero manual intervention needed.</p>
 

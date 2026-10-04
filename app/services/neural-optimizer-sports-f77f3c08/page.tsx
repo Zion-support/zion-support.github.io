@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/neural-optimizer-sports-f77f3c08` title="Neural optimizer-sports" />
+        <BreadcrumbSchema path="/services/neural-optimizer-sports-f77f3c08" title="Neural optimizer-sports" />
         <h1 className="text-4xl font-bold mb-6">Neural optimizer-sports</h1>
         <p className="text-lg text-gray-300 mb-8">The future of sports is here with Neural optimizer-sports. Powered by cutting-edge AI, this platform delivers network optimization like never before.</p>
 

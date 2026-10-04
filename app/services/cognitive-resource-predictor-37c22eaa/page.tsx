@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-resource-predictor-37c22eaa` title="Cognitive Resource Predictor" />
+        <BreadcrumbSchema path="/services/cognitive-resource-predictor-37c22eaa" title="Cognitive Resource Predictor" />
         <h1 className="text-4xl font-bold mb-6">Cognitive Resource Predictor</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation agriculture solution: Cognitive Resource Predictor. Combines network optimization with adaptive intelligence for optimal results.</p>
 

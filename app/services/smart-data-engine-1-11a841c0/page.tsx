@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/smart-data-engine-1-11a841c0` title="Smart Data Engine #1" />
+        <BreadcrumbSchema path="/services/smart-data-engine-1-11a841c0" title="Smart Data Engine #1" />
         <h1 className="text-4xl font-bold mb-6">Smart Data Engine #1</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your Logistics operations with our Smart Data Engine #1. This AI-driven solution automates document processing with unprecedented accuracy and efficie</p>
 

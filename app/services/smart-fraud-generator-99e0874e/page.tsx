@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/smart-fraud-generator-99e0874e` title="Smart Fraud Generator" />
+        <BreadcrumbSchema path="/services/smart-fraud-generator-99e0874e" title="Smart Fraud Generator" />
         <h1 className="text-4xl font-bold mb-6">Smart Fraud Generator</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your sports operations with our Smart Fraud Generator. This AI-driven solution automates inventory management with unprecedented accuracy and efficien</p>
 

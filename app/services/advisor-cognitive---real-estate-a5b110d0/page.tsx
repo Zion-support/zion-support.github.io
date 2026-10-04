@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/advisor-cognitive---real-estate-a5b110d0` title="Advisor Cognitive - Real Estate" />
+        <BreadcrumbSchema path="/services/advisor-cognitive---real-estate-a5b110d0" title="Advisor Cognitive - Real Estate" />
         <h1 className="text-4xl font-bold mb-6">Advisor Cognitive - Real Estate</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your Real Estate operations with our Advisor Cognitive - Real Estate. This AI-driven solution automates data governance with unprecedented accuracy an</p>
 

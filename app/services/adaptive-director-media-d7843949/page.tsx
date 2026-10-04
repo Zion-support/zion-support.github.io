@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/adaptive-director-media-d7843949` title="Adaptive director-media" />
+        <BreadcrumbSchema path="/services/adaptive-director-media-d7843949" title="Adaptive director-media" />
         <h1 className="text-4xl font-bold mb-6">Adaptive director-media</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation media solution: Adaptive director-media. Combines decision support with adaptive intelligence for optimal results.</p>
 

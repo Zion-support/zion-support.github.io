@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/automated-customer-service-gaming-3930bd7a` title="Automated customer service-gaming" />
+        <BreadcrumbSchema path="/services/automated-customer-service-gaming-3930bd7a" title="Automated customer service-gaming" />
         <h1 className="text-4xl font-bold mb-6">Automated customer service-gaming</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation Gaming solution: Automated customer service-gaming. Combines automation opportunity with adaptive intelligence for optimal results.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/optimization-self-optimizing---media-8bff2a77` title="Optimization Self-Optimizing - Media" />
+        <BreadcrumbSchema path="/services/optimization-self-optimizing---media-8bff2a77" title="Optimization Self-Optimizing - Media" />
         <h1 className="text-4xl font-bold mb-6">Optimization Self-Optimizing - Media</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize media through intelligent automation. Our Optimization Self-Optimizing - Media leverages advanced machine learning to deliver language processing </p>
 

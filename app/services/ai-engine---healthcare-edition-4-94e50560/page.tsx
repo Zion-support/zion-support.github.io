@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-engine---healthcare-edition-4-94e50560` title="AI Engine - Healthcare Edition #4" />
+        <BreadcrumbSchema path="/services/ai-engine---healthcare-edition-4-94e50560" title="AI Engine - Healthcare Edition #4" />
         <h1 className="text-4xl font-bold mb-6">AI Engine - Healthcare Edition #4</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your healthcare operations with our AI Engine - Healthcare Edition #4. This AI-driven solution automates risk assessment with unprecedented accuracy a</p>
 

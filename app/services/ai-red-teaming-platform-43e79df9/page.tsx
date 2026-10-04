@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-red-teaming-platform-43e79df9` title="AI Red Teaming Platform" />
+        <BreadcrumbSchema path="/services/ai-red-teaming-platform-43e79df9" title="AI Red Teaming Platform" />
         <h1 className="text-4xl font-bold mb-6">AI Red Teaming Platform</h1>
         <p className="text-lg text-gray-300 mb-8">AI-powered adversarial testing to identify vulnerabilities and biases in AI systems before deployment.</p>
 

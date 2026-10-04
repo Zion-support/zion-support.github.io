@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-code-generation--optimization-45feb663` title="AI Code Generation &amp; Optimization" />
+        <BreadcrumbSchema path="/services/ai-code-generation--optimization-45feb663" title="AI Code Generation &amp; Optimization" />
         <h1 className="text-4xl font-bold mb-6">AI Code Generation &amp; Optimization</h1>
         <p className="text-lg text-gray-300 mb-8">Development assistant that generates production-ready code from natural language descriptions, optimizes existing code for performance, and suggests security im</p>
 

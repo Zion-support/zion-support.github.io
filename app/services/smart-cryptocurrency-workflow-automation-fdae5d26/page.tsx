@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/smart-cryptocurrency-workflow-automation-fdae5d26` title="Smart Cryptocurrency Workflow Automation" />
+        <BreadcrumbSchema path="/services/smart-cryptocurrency-workflow-automation-fdae5d26" title="Smart Cryptocurrency Workflow Automation" />
         <h1 className="text-4xl font-bold mb-6">Smart Cryptocurrency Workflow Automation</h1>
         <p className="text-lg text-gray-300 mb-8">Intelligent workflow automation platform that streamlines cryptocurrency processes and eliminates manual tasks.</p>
 

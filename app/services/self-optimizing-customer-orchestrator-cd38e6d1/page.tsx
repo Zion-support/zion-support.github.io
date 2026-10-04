@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/self-optimizing-customer-orchestrator-cd38e6d1` title="Self-Optimizing Customer Orchestrator" />
+        <BreadcrumbSchema path="/services/self-optimizing-customer-orchestrator-cd38e6d1" title="Self-Optimizing Customer Orchestrator" />
         <h1 className="text-4xl font-bold mb-6">Self-Optimizing Customer Orchestrator</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your legal operations with our Self-Optimizing Customer Orchestrator. This AI-driven solution automates sales forecasting with unprecedented accuracy </p>
 

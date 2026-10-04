@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictor-smart---gaming-468d6c60` title="Predictor Smart - Gaming" />
+        <BreadcrumbSchema path="/services/predictor-smart---gaming-468d6c60" title="Predictor Smart - Gaming" />
         <h1 className="text-4xl font-bold mb-6">Predictor Smart - Gaming</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize gaming through intelligent automation. Our Predictor Smart - Gaming leverages advanced machine learning to deliver market intelligence at scale.</p>
 

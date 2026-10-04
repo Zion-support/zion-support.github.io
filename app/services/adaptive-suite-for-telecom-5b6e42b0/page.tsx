@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/adaptive-suite-for-telecom-5b6e42b0` title="Adaptive Suite for Telecom" />
+        <BreadcrumbSchema path="/services/adaptive-suite-for-telecom-5b6e42b0" title="Adaptive Suite for Telecom" />
         <h1 className="text-4xl font-bold mb-6">Adaptive Suite for Telecom</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation telecom solution: Adaptive Suite for Telecom. Combines network optimization with adaptive intelligence for optimal results.</p>
 

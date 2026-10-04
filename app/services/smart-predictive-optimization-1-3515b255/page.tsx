@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/smart-predictive-optimization-1-3515b255` title="Smart Predictive Optimization #1" />
+        <BreadcrumbSchema path="/services/smart-predictive-optimization-1-3515b255" title="Smart Predictive Optimization #1" />
         <h1 className="text-4xl font-bold mb-6">Smart Predictive Optimization #1</h1>
         <p className="text-lg text-gray-300 mb-8">The future of logistics is here with Smart Predictive Optimization #1. Powered by cutting-edge AI, this platform delivers document processing like never before.</p>
 

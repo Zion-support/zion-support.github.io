@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-workflow-monitoring-9c946c69` title="Intelligent Workflow Monitoring" />
+        <BreadcrumbSchema path="/services/intelligent-workflow-monitoring-9c946c69" title="Intelligent Workflow Monitoring" />
         <h1 className="text-4xl font-bold mb-6">Intelligent Workflow Monitoring</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Intelligent Workflow Monitoring. This autonomous system provides security monitoring with zero manual intervention needed.</p>
 

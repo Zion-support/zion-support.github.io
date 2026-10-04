@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/serverless-edge-native-education-deployment-b9762a38` title="Serverless Edge-Native Education Deployment" />
+        <BreadcrumbSchema path="/services/serverless-edge-native-education-deployment-b9762a38" title="Serverless Edge-Native Education Deployment" />
         <h1 className="text-4xl font-bold mb-6">Serverless Edge-Native Education Deployment</h1>
         <p className="text-lg text-gray-300 mb-8">Serverless deployment platform that auto-scales edge-native education workloads without infrastructure management.</p>
 

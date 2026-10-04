@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-powered-frictionless-code-generation-208a57d8` title="AI-Powered Frictionless Code Generation" />
+        <BreadcrumbSchema path="/services/ai-powered-frictionless-code-generation-208a57d8" title="AI-Powered Frictionless Code Generation" />
         <h1 className="text-4xl font-bold mb-6">AI-Powered Frictionless Code Generation</h1>
         <p className="text-lg text-gray-300 mb-8">Advanced code generation system that produces frictionless software solutions from natural language descriptions.</p>
 

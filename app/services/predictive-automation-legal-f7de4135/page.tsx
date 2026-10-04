@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictive-automation-legal-f7de4135` title="Predictive automation-legal" />
+        <BreadcrumbSchema path="/services/predictive-automation-legal-f7de4135" title="Predictive automation-legal" />
         <h1 className="text-4xl font-bold mb-6">Predictive automation-legal</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize legal through intelligent automation. Our Predictive automation-legal leverages advanced machine learning to deliver workflow management at scale.</p>
 

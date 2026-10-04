@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/smart-automation-healthcare-967090f1` title="Smart automation-healthcare" />
+        <BreadcrumbSchema path="/services/smart-automation-healthcare-967090f1" title="Smart automation-healthcare" />
         <h1 className="text-4xl font-bold mb-6">Smart automation-healthcare</h1>
         <p className="text-lg text-gray-300 mb-8">The future of healthcare is here with Smart automation-healthcare. Powered by cutting-edge AI, this platform delivers fraud prevention like never before.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/neural-workflow-analytics-edeb1e24` title="Neural Workflow Analytics" />
+        <BreadcrumbSchema path="/services/neural-workflow-analytics-edeb1e24" title="Neural Workflow Analytics" />
         <h1 className="text-4xl font-bold mb-6">Neural Workflow Analytics</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize telecom through intelligent automation. Our Neural Workflow Analytics leverages advanced machine learning to deliver customer insights at scale.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-intelligence---media-edition-ce18a7e7` title="AI Intelligence - Media Edition" />
+        <BreadcrumbSchema path="/services/ai-intelligence---media-edition-ce18a7e7" title="AI Intelligence - Media Edition" />
         <h1 className="text-4xl font-bold mb-6">AI Intelligence - Media Edition</h1>
         <p className="text-lg text-gray-300 mb-8">The future of media is here with AI Intelligence - Media Edition. Powered by cutting-edge AI, this platform delivers fraud prevention like never before.</p>
 

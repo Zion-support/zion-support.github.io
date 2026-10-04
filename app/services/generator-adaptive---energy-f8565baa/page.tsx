@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/generator-adaptive---energy-f8565baa` title="Generator Adaptive - Energy" />
+        <BreadcrumbSchema path="/services/generator-adaptive---energy-f8565baa" title="Generator Adaptive - Energy" />
         <h1 className="text-4xl font-bold mb-6">Generator Adaptive - Energy</h1>
         <p className="text-lg text-gray-300 mb-8">The future of energy is here with Generator Adaptive - Energy. Powered by cutting-edge AI, this platform delivers market intelligence like never before.</p>
 

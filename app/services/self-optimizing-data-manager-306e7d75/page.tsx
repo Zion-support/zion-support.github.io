@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/self-optimizing-data-manager-306e7d75` title="Self-Optimizing Data Manager" />
+        <BreadcrumbSchema path="/services/self-optimizing-data-manager-306e7d75" title="Self-Optimizing Data Manager" />
         <h1 className="text-4xl font-bold mb-6">Self-Optimizing Data Manager</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize construction through intelligent automation. Our Self-Optimizing Data Manager leverages advanced machine learning to deliver compliance monitoring</p>
 

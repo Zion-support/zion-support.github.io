@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/advisor-ai---insurance-1-63e671f9` title="Advisor AI - Insurance #1" />
+        <BreadcrumbSchema path="/services/advisor-ai---insurance-1-63e671f9" title="Advisor AI - Insurance #1" />
         <h1 className="text-4xl font-bold mb-6">Advisor AI - Insurance #1</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Advisor AI - Insurance #1. This autonomous system provides content generation with zero manual intervention needed.</p>
 

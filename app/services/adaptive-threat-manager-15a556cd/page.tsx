@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/adaptive-threat-manager-15a556cd` title="Adaptive Threat Manager" />
+        <BreadcrumbSchema path="/services/adaptive-threat-manager-15a556cd" title="Adaptive Threat Manager" />
         <h1 className="text-4xl font-bold mb-6">Adaptive Threat Manager</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation logistics solution: Adaptive Threat Manager. Combines customer insights with adaptive intelligence for optimal results.</p>
 

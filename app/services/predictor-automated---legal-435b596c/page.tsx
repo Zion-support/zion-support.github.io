@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictor-automated---legal-435b596c` title="Predictor Automated - Legal" />
+        <BreadcrumbSchema path="/services/predictor-automated---legal-435b596c" title="Predictor Automated - Legal" />
         <h1 className="text-4xl font-bold mb-6">Predictor Automated - Legal</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your legal operations with our Predictor Automated - Legal. This AI-driven solution automates performance monitoring with unprecedented accuracy and e</p>
 

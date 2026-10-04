@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/automated-orchestrator-for-logistics-c3c63e90` title="Automated Orchestrator for Logistics" />
+        <BreadcrumbSchema path="/services/automated-orchestrator-for-logistics-c3c63e90" title="Automated Orchestrator for Logistics" />
         <h1 className="text-4xl font-bold mb-6">Automated Orchestrator for Logistics</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Automated Orchestrator for Logistics. This autonomous system provides performance monitoring with zero manual intervention need</p>
 

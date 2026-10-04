@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/self-optimizing-analytics-for-gaming-7ab8c175` title="Self-Optimizing Analytics for Gaming" />
+        <BreadcrumbSchema path="/services/self-optimizing-analytics-for-gaming-7ab8c175" title="Self-Optimizing Analytics for Gaming" />
         <h1 className="text-4xl font-bold mb-6">Self-Optimizing Analytics for Gaming</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize gaming through intelligent automation. Our Self-Optimizing Analytics for Gaming leverages advanced machine learning to deliver process automation </p>
 

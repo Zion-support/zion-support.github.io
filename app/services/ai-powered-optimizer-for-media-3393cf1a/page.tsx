@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-powered-optimizer-for-media-3393cf1a` title="AI-Powered Optimizer for Media" />
+        <BreadcrumbSchema path="/services/ai-powered-optimizer-for-media-3393cf1a" title="AI-Powered Optimizer for Media" />
         <h1 className="text-4xl font-bold mb-6">AI-Powered Optimizer for Media</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation media solution: AI-Powered Optimizer for Media. Combines data processing with adaptive intelligence for optimal results.</p>
 

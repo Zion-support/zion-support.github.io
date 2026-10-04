@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/enterprise-multi-tenant-manufacturing-analytics-suite-c76a0b32` title="Enterprise Multi-Tenant Manufacturing Analytics Suite" />
+        <BreadcrumbSchema path="/services/enterprise-multi-tenant-manufacturing-analytics-suite-c76a0b32" title="Enterprise Multi-Tenant Manufacturing Analytics Suite" />
         <h1 className="text-4xl font-bold mb-6">Enterprise Multi-Tenant Manufacturing Analytics Suite</h1>
         <p className="text-lg text-gray-300 mb-8">Enterprise analytics suite that delivers multi-tenant manufacturing insights with unified dashboards and reporting.</p>
 

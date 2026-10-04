@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/enterprise-modular-real-estate-analytics-suite-bbe289e7` title="Enterprise Modular Real Estate Analytics Suite" />
+        <BreadcrumbSchema path="/services/enterprise-modular-real-estate-analytics-suite-bbe289e7" title="Enterprise Modular Real Estate Analytics Suite" />
         <h1 className="text-4xl font-bold mb-6">Enterprise Modular Real Estate Analytics Suite</h1>
         <p className="text-lg text-gray-300 mb-8">Enterprise analytics suite that delivers modular real estate insights with unified dashboards and reporting.</p>
 

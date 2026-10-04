@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictive-energy-churn-prevention-56c021dc` title="Predictive Energy Churn Prevention" />
+        <BreadcrumbSchema path="/services/predictive-energy-churn-prevention-56c021dc" title="Predictive Energy Churn Prevention" />
         <h1 className="text-4xl font-bold mb-6">Predictive Energy Churn Prevention</h1>
         <p className="text-lg text-gray-300 mb-8">Machine learning system that identifies real-time churn signals in telecom customer behavior, enabling proactive retention strategies and personalized intervent</p>
 

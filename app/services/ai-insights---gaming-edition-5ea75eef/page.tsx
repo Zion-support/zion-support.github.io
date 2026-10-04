@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-insights---gaming-edition-5ea75eef` title="AI Insights - Gaming Edition" />
+        <BreadcrumbSchema path="/services/ai-insights---gaming-edition-5ea75eef" title="AI Insights - Gaming Edition" />
         <h1 className="text-4xl font-bold mb-6">AI Insights - Gaming Edition</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with AI Insights - Gaming Edition. This autonomous system provides workflow management with zero manual intervention needed.</p>
 

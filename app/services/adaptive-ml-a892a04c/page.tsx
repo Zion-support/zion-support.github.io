@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/adaptive-ml-a892a04c` title="Adaptive ML" />
+        <BreadcrumbSchema path="/services/adaptive-ml-a892a04c" title="Adaptive ML" />
         <h1 className="text-4xl font-bold mb-6">Adaptive ML</h1>
         <p className="text-lg text-gray-300 mb-8">Adaptive ML (often styled as Adaptive) is a private software company based in New York, United States and Paris, France. The company focuses on reinforcement le</p>
 

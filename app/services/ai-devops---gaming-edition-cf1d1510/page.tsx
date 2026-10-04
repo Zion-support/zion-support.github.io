@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-devops---gaming-edition-cf1d1510` title="AI DevOps - Gaming Edition" />
+        <BreadcrumbSchema path="/services/ai-devops---gaming-edition-cf1d1510" title="AI DevOps - Gaming Edition" />
         <h1 className="text-4xl font-bold mb-6">AI DevOps - Gaming Edition</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize Gaming through intelligent automation. Our AI DevOps - Gaming Edition leverages advanced machine learning to deliver language processing at scale.</p>
 

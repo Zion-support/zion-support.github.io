@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-cognitive-retail-decision-engine-5927f596` title="Cognitive Cognitive Retail Decision Engine" />
+        <BreadcrumbSchema path="/services/cognitive-cognitive-retail-decision-engine-5927f596" title="Cognitive Cognitive Retail Decision Engine" />
         <h1 className="text-4xl font-bold mb-6">Cognitive Cognitive Retail Decision Engine</h1>
         <p className="text-lg text-gray-300 mb-8">Cognitive decision engine that processes cognitive signals to drive retail strategy with deep learning.</p>
 

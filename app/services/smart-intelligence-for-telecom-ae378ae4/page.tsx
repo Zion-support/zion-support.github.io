@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/smart-intelligence-for-telecom-ae378ae4` title="Smart Intelligence for Telecom" />
+        <BreadcrumbSchema path="/services/smart-intelligence-for-telecom-ae378ae4" title="Smart Intelligence for Telecom" />
         <h1 className="text-4xl font-bold mb-6">Smart Intelligence for Telecom</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Smart Intelligence for Telecom. This autonomous system provides content generation with zero manual intervention needed.</p>
 

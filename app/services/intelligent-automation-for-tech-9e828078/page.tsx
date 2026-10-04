@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-automation-for-tech-9e828078` title="Intelligent Automation for Tech" />
+        <BreadcrumbSchema path="/services/intelligent-automation-for-tech-9e828078" title="Intelligent Automation for Tech" />
         <h1 className="text-4xl font-bold mb-6">Intelligent Automation for Tech</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your technology operations with our Intelligent Automation for Tech. This AI-driven solution automates deployment strategies with unprecedented accura</p>
 

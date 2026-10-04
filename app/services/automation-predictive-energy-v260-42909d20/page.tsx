@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/automation-predictive-energy-v260-42909d20` title="Automation Predictive - Energy v260" />
+        <BreadcrumbSchema path="/services/automation-predictive-energy-v260-42909d20" title="Automation Predictive - Energy v260" />
         <h1 className="text-4xl font-bold mb-6">Automation Predictive - Energy v260</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Automation Predictive - Energy v260. This autonomous system provides predictive maintenance with zero manual intervention neede</p>
 

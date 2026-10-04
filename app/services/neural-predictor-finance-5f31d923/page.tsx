@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/neural-predictor-finance-5f31d923` title="Neural predictor-finance" />
+        <BreadcrumbSchema path="/services/neural-predictor-finance-5f31d923" title="Neural predictor-finance" />
         <h1 className="text-4xl font-bold mb-6">Neural predictor-finance</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your Finance operations with our Neural predictor-finance. This AI-driven solution automates cost reduction with unprecedented accuracy and efficiency</p>
 

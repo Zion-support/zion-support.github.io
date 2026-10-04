@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/streaming-audio-for-marketing-6c279c72` title="Streaming Audio for Marketing" />
+        <BreadcrumbSchema path="/services/streaming-audio-for-marketing-6c279c72" title="Streaming Audio for Marketing" />
         <h1 className="text-4xl font-bold mb-6">Streaming Audio for Marketing</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation marketing solution: Streaming Audio for Marketing. Combines audio analysis with adaptive intelligence for optimal results.</p>
 

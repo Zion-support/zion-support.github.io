@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/neural-optimization-for-energy-499f2df9` title="Neural Optimization for Energy" />
+        <BreadcrumbSchema path="/services/neural-optimization-for-energy-499f2df9" title="Neural Optimization for Energy" />
         <h1 className="text-4xl font-bold mb-6">Neural Optimization for Energy</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize energy through intelligent automation. Our Neural Optimization for Energy leverages advanced machine learning to deliver energy management at scal</p>
 

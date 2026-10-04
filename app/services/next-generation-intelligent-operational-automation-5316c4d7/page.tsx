@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/next-generation-intelligent-operational-automation-5316c4d7` title="Next-Generation Intelligent Operational Automation" />
+        <BreadcrumbSchema path="/services/next-generation-intelligent-operational-automation-5316c4d7" title="Next-Generation Intelligent Operational Automation" />
         <h1 className="text-4xl font-bold mb-6">Next-Generation Intelligent Operational Automation</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation automation suite that streamlines intelligent operational workflows with intelligent orchestration.</p>
 

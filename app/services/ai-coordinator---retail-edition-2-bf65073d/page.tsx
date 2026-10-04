@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-coordinator---retail-edition-2-bf65073d` title="AI Coordinator - Retail Edition #2" />
+        <BreadcrumbSchema path="/services/ai-coordinator---retail-edition-2-bf65073d" title="AI Coordinator - Retail Edition #2" />
         <h1 className="text-4xl font-bold mb-6">AI Coordinator - Retail Edition #2</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your Retail operations with our AI Coordinator - Retail Edition #2. This AI-driven solution automates predictive modeling with unprecedented accuracy </p>
 

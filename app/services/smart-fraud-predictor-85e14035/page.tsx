@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/smart-fraud-predictor-85e14035` title="Smart Fraud Predictor" />
+        <BreadcrumbSchema path="/services/smart-fraud-predictor-85e14035" title="Smart Fraud Predictor" />
         <h1 className="text-4xl font-bold mb-6">Smart Fraud Predictor</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your insurance operations with our Smart Fraud Predictor. This AI-driven solution automates fraud prevention with unprecedented accuracy and efficienc</p>
 

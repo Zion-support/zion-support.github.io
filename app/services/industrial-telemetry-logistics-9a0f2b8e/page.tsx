@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/industrial-telemetry-logistics-9a0f2b8e` title="Industrial Telemetry - Logistics" />
+        <BreadcrumbSchema path="/services/industrial-telemetry-logistics-9a0f2b8e" title="Industrial Telemetry - Logistics" />
         <h1 className="text-4xl font-bold mb-6">Industrial Telemetry - Logistics</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Industrial Telemetry - Logistics. This autonomous system provides telemetry collection with zero manual intervention needed.</p>
 

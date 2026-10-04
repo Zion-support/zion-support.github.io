@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/smart-insurtech-workflow-automation-54cb21d4` title="Smart Insurtech Workflow Automation" />
+        <BreadcrumbSchema path="/services/smart-insurtech-workflow-automation-54cb21d4" title="Smart Insurtech Workflow Automation" />
         <h1 className="text-4xl font-bold mb-6">Smart Insurtech Workflow Automation</h1>
         <p className="text-lg text-gray-300 mb-8">Intelligent workflow automation platform that streamlines insurtech processes and eliminates manual tasks.</p>
 

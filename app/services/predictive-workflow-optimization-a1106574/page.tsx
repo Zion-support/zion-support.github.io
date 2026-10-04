@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictive-workflow-optimization-a1106574` title="Predictive Workflow Optimization" />
+        <BreadcrumbSchema path="/services/predictive-workflow-optimization-a1106574" title="Predictive Workflow Optimization" />
         <h1 className="text-4xl font-bold mb-6">Predictive Workflow Optimization</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation hospitality solution: Predictive Workflow Optimization. Combines predictive analytics with adaptive intelligence for optimal results.</p>
 

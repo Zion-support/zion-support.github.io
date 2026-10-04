@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-financial-analyzer-5f3c50d1` title="Intelligent Financial Analyzer" />
+        <BreadcrumbSchema path="/services/intelligent-financial-analyzer-5f3c50d1" title="Intelligent Financial Analyzer" />
         <h1 className="text-4xl font-bold mb-6">Intelligent Financial Analyzer</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your logistics operations with our Intelligent Financial Analyzer. This AI-driven solution automates threat detection with unprecedented accuracy and </p>
 

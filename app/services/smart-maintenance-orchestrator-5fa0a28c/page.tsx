@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/smart-maintenance-orchestrator-5fa0a28c` title="Smart Maintenance Orchestrator" />
+        <BreadcrumbSchema path="/services/smart-maintenance-orchestrator-5fa0a28c" title="Smart Maintenance Orchestrator" />
         <h1 className="text-4xl font-bold mb-6">Smart Maintenance Orchestrator</h1>
         <p className="text-lg text-gray-300 mb-8">The future of legal is here with Smart Maintenance Orchestrator. Powered by cutting-edge AI, this platform delivers workflow management like never before.</p>
 

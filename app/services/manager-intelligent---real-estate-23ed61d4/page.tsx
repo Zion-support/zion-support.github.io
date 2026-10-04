@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/manager-intelligent---real-estate-23ed61d4` title="Manager Intelligent - Real-Estate" />
+        <BreadcrumbSchema path="/services/manager-intelligent---real-estate-23ed61d4" title="Manager Intelligent - Real-Estate" />
         <h1 className="text-4xl font-bold mb-6">Manager Intelligent - Real-Estate</h1>
         <p className="text-lg text-gray-300 mb-8">The future of real-estate is here with Manager Intelligent - Real-Estate. Powered by cutting-edge AI, this platform delivers performance monitoring like never b</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/advisor-cognitive---telecom-23380ea9` title="Advisor Cognitive - Telecom" />
+        <BreadcrumbSchema path="/services/advisor-cognitive---telecom-23380ea9" title="Advisor Cognitive - Telecom" />
         <h1 className="text-4xl font-bold mb-6">Advisor Cognitive - Telecom</h1>
         <p className="text-lg text-gray-300 mb-8">The future of telecom is here with Advisor Cognitive - Telecom. Powered by cutting-edge AI, this platform delivers risk assessment like never before.</p>
 

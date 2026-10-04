@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/advanced-graph-for-e-commerce-160365c8` title="Advanced Graph for E-Commerce" />
+        <BreadcrumbSchema path="/services/advanced-graph-for-e-commerce-160365c8" title="Advanced Graph for E-Commerce" />
         <h1 className="text-4xl font-bold mb-6">Advanced Graph for E-Commerce</h1>
         <p className="text-lg text-gray-300 mb-8">Optimize your e-commerce workflows with Advanced Graph for E-Commerce. This intelligent platform delivers performance tuning through advanced automation and AI.</p>
 

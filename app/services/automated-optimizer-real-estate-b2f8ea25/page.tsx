@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/automated-optimizer-real-estate-b2f8ea25` title="Automated optimizer-real-estate" />
+        <BreadcrumbSchema path="/services/automated-optimizer-real-estate-b2f8ea25" title="Automated optimizer-real-estate" />
         <h1 className="text-4xl font-bold mb-6">Automated optimizer-real-estate</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your real-estate operations with our Automated optimizer-real-estate. This AI-driven solution automates inventory management with unprecedented accura</p>
 

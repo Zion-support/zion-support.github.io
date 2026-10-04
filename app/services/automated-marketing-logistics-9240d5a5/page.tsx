@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/automated-marketing-logistics-9240d5a5` title="Automated marketing-logistics" />
+        <BreadcrumbSchema path="/services/automated-marketing-logistics-9240d5a5" title="Automated marketing-logistics" />
         <h1 className="text-4xl font-bold mb-6">Automated marketing-logistics</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize Logistics through intelligent automation. Our Automated marketing-logistics leverages advanced machine learning to deliver process automation at s</p>
 

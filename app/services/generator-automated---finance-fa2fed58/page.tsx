@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/generator-automated---finance-fa2fed58` title="Generator Automated - Finance" />
+        <BreadcrumbSchema path="/services/generator-automated---finance-fa2fed58" title="Generator Automated - Finance" />
         <h1 className="text-4xl font-bold mb-6">Generator Automated - Finance</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Generator Automated - Finance. This autonomous system provides supply chain with zero manual intervention needed.</p>
 

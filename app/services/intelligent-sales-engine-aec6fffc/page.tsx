@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-sales-engine-aec6fffc` title="Intelligent Sales Engine" />
+        <BreadcrumbSchema path="/services/intelligent-sales-engine-aec6fffc" title="Intelligent Sales Engine" />
         <h1 className="text-4xl font-bold mb-6">Intelligent Sales Engine</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Intelligent Sales Engine. This autonomous system provides content generation with zero manual intervention needed.</p>
 

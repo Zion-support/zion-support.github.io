@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-language-analytics-351b802a` title="Cognitive Language Analytics" />
+        <BreadcrumbSchema path="/services/cognitive-language-analytics-351b802a" title="Cognitive Language Analytics" />
         <h1 className="text-4xl font-bold mb-6">Cognitive Language Analytics</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your hospitality operations with our Cognitive Language Analytics. This AI-driven solution automates workflow management with unprecedented accuracy a</p>
 

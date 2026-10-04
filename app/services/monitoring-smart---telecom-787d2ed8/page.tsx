@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/monitoring-smart---telecom-787d2ed8` title="Monitoring Smart - Telecom" />
+        <BreadcrumbSchema path="/services/monitoring-smart---telecom-787d2ed8" title="Monitoring Smart - Telecom" />
         <h1 className="text-4xl font-bold mb-6">Monitoring Smart - Telecom</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize Telecom through intelligent automation. Our Monitoring Smart - Telecom leverages advanced machine learning to deliver financial planning at scale.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/email-powered-ecommerce-automation-afe1cc2b` title="Email-Powered Ecommerce Automation" />
+        <BreadcrumbSchema path="/services/email-powered-ecommerce-automation-afe1cc2b" title="Email-Powered Ecommerce Automation" />
         <h1 className="text-4xl font-bold mb-6">Email-Powered Ecommerce Automation</h1>
         <p className="text-lg text-gray-300 mb-8">Drive innovation in ecommerce with Email-Powered Ecommerce Automation. This AI-powered platform transforms campaign optimization into a competitive advantage.</p>
 

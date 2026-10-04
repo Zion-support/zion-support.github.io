@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/delivery-performance-sales-6323fcd3` title="Delivery Performance - Sales" />
+        <BreadcrumbSchema path="/services/delivery-performance-sales-6323fcd3" title="Delivery Performance - Sales" />
         <h1 className="text-4xl font-bold mb-6">Delivery Performance - Sales</h1>
         <p className="text-lg text-gray-300 mb-8">The future of sales is here with Delivery Performance - Sales. Powered by cutting-edge AI, this platform delivers performance insights like never before.</p>
 

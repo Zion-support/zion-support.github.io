@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/automated-optimizer-for-sports-3373920f` title="Automated Optimizer for Sports" />
+        <BreadcrumbSchema path="/services/automated-optimizer-for-sports-3373920f" title="Automated Optimizer for Sports" />
         <h1 className="text-4xl font-bold mb-6">Automated Optimizer for Sports</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your sports operations with our Automated Optimizer for Sports. This AI-driven solution automates fraud prevention with unprecedented accuracy and eff</p>
 

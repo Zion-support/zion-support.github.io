@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/smart-data-optimization-d48eb42c` title="Smart Data Optimization" />
+        <BreadcrumbSchema path="/services/smart-data-optimization-d48eb42c" title="Smart Data Optimization" />
         <h1 className="text-4xl font-bold mb-6">Smart Data Optimization</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation finance solution: Smart Data Optimization. Combines predictive analytics with adaptive intelligence for optimal results.</p>
 

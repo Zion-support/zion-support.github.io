@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/self-optimizing-manager-for-tech-0f395d87` title="Self-Optimizing Manager for Tech" />
+        <BreadcrumbSchema path="/services/self-optimizing-manager-for-tech-0f395d87" title="Self-Optimizing Manager for Tech" />
         <h1 className="text-4xl font-bold mb-6">Self-Optimizing Manager for Tech</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your technology operations with our Self-Optimizing Manager for Tech. This AI-driven solution automates financial planning with unprecedented accuracy</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/neural-compliance-for-gaming-6787fae0` title="Neural Compliance for Gaming" />
+        <BreadcrumbSchema path="/services/neural-compliance-for-gaming-6787fae0" title="Neural Compliance for Gaming" />
         <h1 className="text-4xl font-bold mb-6">Neural Compliance for Gaming</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize Gaming through intelligent automation. Our Neural Compliance for Gaming leverages advanced machine learning to deliver master data management at s</p>
 

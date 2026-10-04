@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/devops-neural---manufacturing-df4c5c6b` title="DevOps Neural - Manufacturing" />
+        <BreadcrumbSchema path="/services/devops-neural---manufacturing-df4c5c6b" title="DevOps Neural - Manufacturing" />
         <h1 className="text-4xl font-bold mb-6">DevOps Neural - Manufacturing</h1>
         <p className="text-lg text-gray-300 mb-8">The future of Manufacturing is here with DevOps Neural - Manufacturing. Powered by cutting-edge AI, this platform delivers data processing like never before.</p>
 

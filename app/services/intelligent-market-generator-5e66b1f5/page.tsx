@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-market-generator-5e66b1f5` title="Intelligent Market Generator" />
+        <BreadcrumbSchema path="/services/intelligent-market-generator-5e66b1f5" title="Intelligent Market Generator" />
         <h1 className="text-4xl font-bold mb-6">Intelligent Market Generator</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your telecom operations with our Intelligent Market Generator. This AI-driven solution automates financial planning with unprecedented accuracy and ef</p>
 

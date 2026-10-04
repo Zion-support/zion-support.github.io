@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/platform-cognitive---logistics-2-dea422ae` title="Platform Cognitive - Logistics #2" />
+        <BreadcrumbSchema path="/services/platform-cognitive---logistics-2-dea422ae" title="Platform Cognitive - Logistics #2" />
         <h1 className="text-4xl font-bold mb-6">Platform Cognitive - Logistics #2</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize logistics through intelligent automation. Our Platform Cognitive - Logistics #2 leverages advanced machine learning to deliver data processing at </p>
 

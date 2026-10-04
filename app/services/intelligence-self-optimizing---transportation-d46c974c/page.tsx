@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligence-self-optimizing---transportation-d46c974c` title="Intelligence Self-Optimizing - Transportation" />
+        <BreadcrumbSchema path="/services/intelligence-self-optimizing---transportation-d46c974c" title="Intelligence Self-Optimizing - Transportation" />
         <h1 className="text-4xl font-bold mb-6">Intelligence Self-Optimizing - Transportation</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Intelligence Self-Optimizing - Transportation. This autonomous system provides data governance with zero manual intervention ne</p>
 

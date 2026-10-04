@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/automated-security-retail-43f5ed2a` title="Automated security-retail" />
+        <BreadcrumbSchema path="/services/automated-security-retail-43f5ed2a" title="Automated security-retail" />
         <h1 className="text-4xl font-bold mb-6">Automated security-retail</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your Retail operations with our Automated security-retail. This AI-driven solution automates performance monitoring with unprecedented accuracy and ef</p>
 

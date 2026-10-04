@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/analytics-self-optimizing---media-c586cce4` title="Analytics Self-Optimizing - Media" />
+        <BreadcrumbSchema path="/services/analytics-self-optimizing---media-c586cce4" title="Analytics Self-Optimizing - Media" />
         <h1 className="text-4xl font-bold mb-6">Analytics Self-Optimizing - Media</h1>
         <p className="text-lg text-gray-300 mb-8">The future of media is here with Analytics Self-Optimizing - Media. Powered by cutting-edge AI, this platform delivers risk assessment like never before.</p>
 

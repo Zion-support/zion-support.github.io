@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/management-automated---healthcare-89f6715c` title="Management Automated - Healthcare" />
+        <BreadcrumbSchema path="/services/management-automated---healthcare-89f6715c" title="Management Automated - Healthcare" />
         <h1 className="text-4xl font-bold mb-6">Management Automated - Healthcare</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize healthcare through intelligent automation. Our Management Automated - Healthcare leverages advanced machine learning to deliver market intelligenc</p>
 

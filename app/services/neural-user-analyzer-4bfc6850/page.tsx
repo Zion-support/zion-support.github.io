@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/neural-user-analyzer-4bfc6850` title="Neural User Analyzer" />
+        <BreadcrumbSchema path="/services/neural-user-analyzer-4bfc6850" title="Neural User Analyzer" />
         <h1 className="text-4xl font-bold mb-6">Neural User Analyzer</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Neural User Analyzer. This autonomous system provides content generation with zero manual intervention needed.</p>
 

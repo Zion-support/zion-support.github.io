@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/analyzer-ai---sports-d5bdf31f` title="Analyzer AI - Sports" />
+        <BreadcrumbSchema path="/services/analyzer-ai---sports-d5bdf31f" title="Analyzer AI - Sports" />
         <h1 className="text-4xl font-bold mb-6">Analyzer AI - Sports</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation sports solution: Analyzer AI - Sports. Combines quality control with adaptive intelligence for optimal results.</p>
 

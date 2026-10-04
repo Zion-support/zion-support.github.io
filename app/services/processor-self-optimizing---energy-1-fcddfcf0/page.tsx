@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/processor-self-optimizing---energy-1-fcddfcf0` title="Processor Self-Optimizing - Energy #1" />
+        <BreadcrumbSchema path="/services/processor-self-optimizing---energy-1-fcddfcf0" title="Processor Self-Optimizing - Energy #1" />
         <h1 className="text-4xl font-bold mb-6">Processor Self-Optimizing - Energy #1</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize energy through intelligent automation. Our Processor Self-Optimizing - Energy #1 leverages advanced machine learning to deliver user experience at</p>
 

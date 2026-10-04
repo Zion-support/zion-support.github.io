@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-powered-context-aware-healthcare-intelligence-platform-9643d2f9` title="AI-Powered Context-Aware Healthcare Intelligence Platform" />
+        <BreadcrumbSchema path="/services/ai-powered-context-aware-healthcare-intelligence-platform-9643d2f9" title="AI-Powered Context-Aware Healthcare Intelligence Platform" />
         <h1 className="text-4xl font-bold mb-6">AI-Powered Context-Aware Healthcare Intelligence Platform</h1>
         <p className="text-lg text-gray-300 mb-8">AI-driven intelligence platform that delivers context-aware insights and automated decision-making for healthcare operations.</p>
 

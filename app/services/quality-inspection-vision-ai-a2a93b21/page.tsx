@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/quality-inspection-vision-ai-a2a93b21` title="Quality Inspection Vision AI" />
+        <BreadcrumbSchema path="/services/quality-inspection-vision-ai-a2a93b21" title="Quality Inspection Vision AI" />
         <h1 className="text-4xl font-bold mb-6">Quality Inspection Vision AI</h1>
         <p className="text-lg text-gray-300 mb-8">Automated visual inspection using computer vision. Detects defects at line speed with 99.9% accuracy. Adapts to new products without reprogramming.</p>
 

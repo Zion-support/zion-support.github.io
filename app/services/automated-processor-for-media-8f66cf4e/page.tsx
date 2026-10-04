@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/automated-processor-for-media-8f66cf4e` title="Automated Processor for Media" />
+        <BreadcrumbSchema path="/services/automated-processor-for-media-8f66cf4e" title="Automated Processor for Media" />
         <h1 className="text-4xl font-bold mb-6">Automated Processor for Media</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your media operations with our Automated Processor for Media. This AI-driven solution automates performance monitoring with unprecedented accuracy and</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/adaptive-inventory-suite-ad4ffc60` title="Adaptive Inventory Suite" />
+        <BreadcrumbSchema path="/services/adaptive-inventory-suite-ad4ffc60" title="Adaptive Inventory Suite" />
         <h1 className="text-4xl font-bold mb-6">Adaptive Inventory Suite</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize real-estate through intelligent automation. Our Adaptive Inventory Suite leverages advanced machine learning to deliver maintenance scheduling at </p>
 

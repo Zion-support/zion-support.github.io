@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-customer-marketing-b25ccf3a` title="Intelligent Customer Marketing" />
+        <BreadcrumbSchema path="/services/intelligent-customer-marketing-b25ccf3a" title="Intelligent Customer Marketing" />
         <h1 className="text-4xl font-bold mb-6">Intelligent Customer Marketing</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your Manufacturing operations with our Intelligent Customer Marketing. This AI-driven solution automates data processing with unprecedented accuracy a</p>
 

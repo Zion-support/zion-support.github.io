@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/adaptive-manager-finance-58251c21` title="Adaptive manager-finance" />
+        <BreadcrumbSchema path="/services/adaptive-manager-finance-58251c21" title="Adaptive manager-finance" />
         <h1 className="text-4xl font-bold mb-6">Adaptive manager-finance</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation Finance solution: Adaptive manager-finance. Combines master data management with adaptive intelligence for optimal results.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictive-process-optimization-615be860` title="Predictive Process Optimization" />
+        <BreadcrumbSchema path="/services/predictive-process-optimization-615be860" title="Predictive Process Optimization" />
         <h1 className="text-4xl font-bold mb-6">Predictive Process Optimization</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your insurance operations with our Predictive Process Optimization. This AI-driven solution automates inventory management with unprecedented accuracy</p>
 

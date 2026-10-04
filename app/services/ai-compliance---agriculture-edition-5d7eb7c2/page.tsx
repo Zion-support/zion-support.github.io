@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-compliance---agriculture-edition-5d7eb7c2` title="AI Compliance - Agriculture Edition" />
+        <BreadcrumbSchema path="/services/ai-compliance---agriculture-edition-5d7eb7c2" title="AI Compliance - Agriculture Edition" />
         <h1 className="text-4xl font-bold mb-6">AI Compliance - Agriculture Edition</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize Agriculture through intelligent automation. Our AI Compliance - Agriculture Edition leverages advanced machine learning to deliver cost reduction </p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/autonomous-generator-finance-9c30e2ba` title="Autonomous generator-finance" />
+        <BreadcrumbSchema path="/services/autonomous-generator-finance-9c30e2ba" title="Autonomous generator-finance" />
         <h1 className="text-4xl font-bold mb-6">Autonomous generator-finance</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your finance operations with our Autonomous generator-finance. This AI-driven solution automates customer insights with unprecedented accuracy and eff</p>
 

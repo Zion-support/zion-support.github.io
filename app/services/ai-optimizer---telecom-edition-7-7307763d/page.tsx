@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-optimizer---telecom-edition-7-7307763d` title="AI Optimizer - Telecom Edition #7" />
+        <BreadcrumbSchema path="/services/ai-optimizer---telecom-edition-7-7307763d" title="AI Optimizer - Telecom Edition #7" />
         <h1 className="text-4xl font-bold mb-6">AI Optimizer - Telecom Edition #7</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation telecom solution: AI Optimizer - Telecom Edition #7. Combines customer insights with adaptive intelligence for optimal results.</p>
 

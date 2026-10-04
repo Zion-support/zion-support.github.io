@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/smart-insights-hospitality-1-65284645` title="Smart insights-hospitality #1" />
+        <BreadcrumbSchema path="/services/smart-insights-hospitality-1-65284645" title="Smart insights-hospitality #1" />
         <h1 className="text-4xl font-bold mb-6">Smart insights-hospitality #1</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation hospitality solution: Smart insights-hospitality #1. Combines threat detection with adaptive intelligence for optimal results.</p>
 

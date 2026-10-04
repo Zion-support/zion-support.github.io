@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-data-pipeline-orchestrator-41f43107` title="AI Data Pipeline Orchestrator" />
+        <BreadcrumbSchema path="/services/ai-data-pipeline-orchestrator-41f43107" title="AI Data Pipeline Orchestrator" />
         <h1 className="text-4xl font-bold mb-6">AI Data Pipeline Orchestrator</h1>
         <p className="text-lg text-gray-300 mb-8">Orchestrates data pipelines for AI training with automated data validation and feature engineering.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-coordinator-insurance-99c8d5e7` title="Intelligent coordinator-insurance" />
+        <BreadcrumbSchema path="/services/intelligent-coordinator-insurance-99c8d5e7" title="Intelligent coordinator-insurance" />
         <h1 className="text-4xl font-bold mb-6">Intelligent coordinator-insurance</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize insurance through intelligent automation. Our Intelligent coordinator-insurance leverages advanced machine learning to deliver document processing</p>
 

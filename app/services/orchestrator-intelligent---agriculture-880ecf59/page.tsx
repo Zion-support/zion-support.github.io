@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/orchestrator-intelligent---agriculture-880ecf59` title="Orchestrator Intelligent - Agriculture" />
+        <BreadcrumbSchema path="/services/orchestrator-intelligent---agriculture-880ecf59" title="Orchestrator Intelligent - Agriculture" />
         <h1 className="text-4xl font-bold mb-6">Orchestrator Intelligent - Agriculture</h1>
         <p className="text-lg text-gray-300 mb-8">The future of agriculture is here with Orchestrator Intelligent - Agriculture. Powered by cutting-edge AI, this platform delivers process automation like never </p>
 

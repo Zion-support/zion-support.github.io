@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-real-time-sustainability-processing-framework-fcf1f55c` title="Intelligent Real-Time Sustainability Processing Framework" />
+        <BreadcrumbSchema path="/services/intelligent-real-time-sustainability-processing-framework-fcf1f55c" title="Intelligent Real-Time Sustainability Processing Framework" />
         <h1 className="text-4xl font-bold mb-6">Intelligent Real-Time Sustainability Processing Framework</h1>
         <p className="text-lg text-gray-300 mb-8">Intelligent processing framework that automates real-time sustainability data flows with real-time transformation.</p>
 

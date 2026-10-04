@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/neural-content-automation-05bbddbc` title="Neural Content Automation" />
+        <BreadcrumbSchema path="/services/neural-content-automation-05bbddbc" title="Neural Content Automation" />
         <h1 className="text-4xl font-bold mb-6">Neural Content Automation</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation sports solution: Neural Content Automation. Combines process automation with adaptive intelligence for optimal results.</p>
 

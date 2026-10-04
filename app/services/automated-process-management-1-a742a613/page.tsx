@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/automated-process-management-1-a742a613` title="Automated Process Management #1" />
+        <BreadcrumbSchema path="/services/automated-process-management-1-a742a613" title="Automated Process Management #1" />
         <h1 className="text-4xl font-bold mb-6">Automated Process Management #1</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation finance solution: Automated Process Management #1. Combines process automation with adaptive intelligence for optimal results.</p>
 

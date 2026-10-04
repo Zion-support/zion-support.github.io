@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/autonomous-language-manager-b5ac2911` title="Autonomous Language Manager" />
+        <BreadcrumbSchema path="/services/autonomous-language-manager-b5ac2911" title="Autonomous Language Manager" />
         <h1 className="text-4xl font-bold mb-6">Autonomous Language Manager</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your automotive operations with our Autonomous Language Manager. This AI-driven solution automates inventory management with unprecedented accuracy an</p>
 

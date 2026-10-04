@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/real-estate-neural---energy-53054f41` title="Real Estate Neural - Energy" />
+        <BreadcrumbSchema path="/services/real-estate-neural---energy-53054f41" title="Real Estate Neural - Energy" />
         <h1 className="text-4xl font-bold mb-6">Real Estate Neural - Energy</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Real Estate Neural - Energy. This autonomous system provides predictive analytics with zero manual intervention needed.</p>
 

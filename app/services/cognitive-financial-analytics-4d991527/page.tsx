@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-financial-analytics-4d991527` title="Cognitive Financial Analytics" />
+        <BreadcrumbSchema path="/services/cognitive-financial-analytics-4d991527" title="Cognitive Financial Analytics" />
         <h1 className="text-4xl font-bold mb-6">Cognitive Financial Analytics</h1>
         <p className="text-lg text-gray-300 mb-8">The future of hospitality is here with Cognitive Financial Analytics. Powered by cutting-edge AI, this platform delivers process automation like never before.</p>
 

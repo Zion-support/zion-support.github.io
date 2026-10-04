@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/smart-cloud-for-retail-6846f98f` title="Smart Cloud for Retail" />
+        <BreadcrumbSchema path="/services/smart-cloud-for-retail-6846f98f" title="Smart Cloud for Retail" />
         <h1 className="text-4xl font-bold mb-6">Smart Cloud for Retail</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation Retail solution: Smart Cloud for Retail. Combines budget optimization with adaptive intelligence for optimal results.</p>
 

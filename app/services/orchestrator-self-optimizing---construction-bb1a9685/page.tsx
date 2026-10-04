@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/orchestrator-self-optimizing---construction-bb1a9685` title="Orchestrator Self-Optimizing - Construction" />
+        <BreadcrumbSchema path="/services/orchestrator-self-optimizing---construction-bb1a9685" title="Orchestrator Self-Optimizing - Construction" />
         <h1 className="text-4xl font-bold mb-6">Orchestrator Self-Optimizing - Construction</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation construction solution: Orchestrator Self-Optimizing - Construction. Combines data processing with adaptive intelligence for optimal results.</p>
 

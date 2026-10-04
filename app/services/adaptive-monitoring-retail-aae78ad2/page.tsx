@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/adaptive-monitoring-retail-aae78ad2` title="Adaptive monitoring-retail" />
+        <BreadcrumbSchema path="/services/adaptive-monitoring-retail-aae78ad2" title="Adaptive monitoring-retail" />
         <h1 className="text-4xl font-bold mb-6">Adaptive monitoring-retail</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your Retail operations with our Adaptive monitoring-retail. This AI-driven solution automates process automation with unprecedented accuracy and effic</p>
 

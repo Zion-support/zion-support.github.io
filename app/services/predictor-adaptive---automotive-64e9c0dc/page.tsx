@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictor-adaptive---automotive-64e9c0dc` title="Predictor Adaptive - Automotive" />
+        <BreadcrumbSchema path="/services/predictor-adaptive---automotive-64e9c0dc" title="Predictor Adaptive - Automotive" />
         <h1 className="text-4xl font-bold mb-6">Predictor Adaptive - Automotive</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize automotive through intelligent automation. Our Predictor Adaptive - Automotive leverages advanced machine learning to deliver fraud prevention at </p>
 

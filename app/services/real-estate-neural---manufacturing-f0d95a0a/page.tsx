@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/real-estate-neural---manufacturing-f0d95a0a` title="Real Estate Neural - Manufacturing" />
+        <BreadcrumbSchema path="/services/real-estate-neural---manufacturing-f0d95a0a" title="Real Estate Neural - Manufacturing" />
         <h1 className="text-4xl font-bold mb-6">Real Estate Neural - Manufacturing</h1>
         <p className="text-lg text-gray-300 mb-8">The future of Manufacturing is here with Real Estate Neural - Manufacturing. Powered by cutting-edge AI, this platform delivers master data management like neve</p>
 

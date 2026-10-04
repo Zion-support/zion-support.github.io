@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-data-driven-supply-chain-processing-framework-32d93ccd` title="Intelligent Data-Driven Supply Chain Processing Framework" />
+        <BreadcrumbSchema path="/services/intelligent-data-driven-supply-chain-processing-framework-32d93ccd" title="Intelligent Data-Driven Supply Chain Processing Framework" />
         <h1 className="text-4xl font-bold mb-6">Intelligent Data-Driven Supply Chain Processing Framework</h1>
         <p className="text-lg text-gray-300 mb-8">Intelligent processing framework that automates data-driven supply chain data flows with real-time transformation.</p>
 

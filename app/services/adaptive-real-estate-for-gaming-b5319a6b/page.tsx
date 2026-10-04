@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/adaptive-real-estate-for-gaming-b5319a6b` title="Adaptive Real Estate for Gaming" />
+        <BreadcrumbSchema path="/services/adaptive-real-estate-for-gaming-b5319a6b" title="Adaptive Real Estate for Gaming" />
         <h1 className="text-4xl font-bold mb-6">Adaptive Real Estate for Gaming</h1>
         <p className="text-lg text-gray-300 mb-8">The future of Gaming is here with Adaptive Real Estate for Gaming. Powered by cutting-edge AI, this platform delivers workflow management like never before.</p>
 

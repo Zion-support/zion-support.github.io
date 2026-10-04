@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/quality-autonomous---legal-70bcd366` title="Quality Autonomous - Legal" />
+        <BreadcrumbSchema path="/services/quality-autonomous---legal-70bcd366" title="Quality Autonomous - Legal" />
         <h1 className="text-4xl font-bold mb-6">Quality Autonomous - Legal</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize Legal through intelligent automation. Our Quality Autonomous - Legal leverages advanced machine learning to deliver healthcare data analytics at s</p>
 

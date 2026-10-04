@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-generator---finance-edition-067a7382` title="AI Generator - Finance Edition" />
+        <BreadcrumbSchema path="/services/ai-generator---finance-edition-067a7382" title="AI Generator - Finance Edition" />
         <h1 className="text-4xl font-bold mb-6">AI Generator - Finance Edition</h1>
         <p className="text-lg text-gray-300 mb-8">The future of finance is here with AI Generator - Finance Edition. Powered by cutting-edge AI, this platform delivers data processing like never before.</p>
 

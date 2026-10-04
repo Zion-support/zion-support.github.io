@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/adaptive-optimization-for-sports-8f9fefa1` title="Adaptive Optimization for Sports" />
+        <BreadcrumbSchema path="/services/adaptive-optimization-for-sports-8f9fefa1" title="Adaptive Optimization for Sports" />
         <h1 className="text-4xl font-bold mb-6">Adaptive Optimization for Sports</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your sports operations with our Adaptive Optimization for Sports. This AI-driven solution automates code optimization with unprecedented accuracy and </p>
 

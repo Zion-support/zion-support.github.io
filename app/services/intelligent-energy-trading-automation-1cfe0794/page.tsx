@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-energy-trading-automation-1cfe0794` title="Intelligent Energy Trading Automation" />
+        <BreadcrumbSchema path="/services/intelligent-energy-trading-automation-1cfe0794" title="Intelligent Energy Trading Automation" />
         <h1 className="text-4xl font-bold mb-6">Intelligent Energy Trading Automation</h1>
         <p className="text-lg text-gray-300 mb-8">Algorithmic trading platform that executes next-generation strategies using AI-driven market analysis, sentiment processing, and real-time risk management.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictive-marketing-engine-advertising-b27ef3f3` title="Predictive Marketing Engine - Advertising" />
+        <BreadcrumbSchema path="/services/predictive-marketing-engine-advertising-b27ef3f3" title="Predictive Marketing Engine - Advertising" />
         <h1 className="text-4xl font-bold mb-6">Predictive Marketing Engine - Advertising</h1>
         <p className="text-lg text-gray-300 mb-8">Drive innovation in advertising with Predictive Marketing Engine - Advertising. This AI-powered platform transforms social media management into a competitive a</p>
 

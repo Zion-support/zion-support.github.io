@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/self-optimizing-content-predictor-0beeb4ad` title="Self-Optimizing Content Predictor" />
+        <BreadcrumbSchema path="/services/self-optimizing-content-predictor-0beeb4ad" title="Self-Optimizing Content Predictor" />
         <h1 className="text-4xl font-bold mb-6">Self-Optimizing Content Predictor</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Self-Optimizing Content Predictor. This autonomous system provides resource optimization with zero manual intervention needed.</p>
 

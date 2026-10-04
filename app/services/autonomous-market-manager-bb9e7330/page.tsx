@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/autonomous-market-manager-bb9e7330` title="Autonomous Market Manager" />
+        <BreadcrumbSchema path="/services/autonomous-market-manager-bb9e7330" title="Autonomous Market Manager" />
         <h1 className="text-4xl font-bold mb-6">Autonomous Market Manager</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Autonomous Market Manager. This autonomous system provides image recognition with zero manual intervention needed.</p>
 

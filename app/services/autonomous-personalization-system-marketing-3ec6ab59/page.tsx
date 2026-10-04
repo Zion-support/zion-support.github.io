@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/autonomous-personalization-system-marketing-3ec6ab59` title="Autonomous Personalization System - Marketing" />
+        <BreadcrumbSchema path="/services/autonomous-personalization-system-marketing-3ec6ab59" title="Autonomous Personalization System - Marketing" />
         <h1 className="text-4xl font-bold mb-6">Autonomous Personalization System - Marketing</h1>
         <p className="text-lg text-gray-300 mb-8">The future of marketing is here with Autonomous Personalization System - Marketing. Powered by cutting-edge AI, this platform delivers content personalization l</p>
 

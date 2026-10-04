@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-predictor-logistics-1-b8745182` title="Intelligent predictor-logistics #1" />
+        <BreadcrumbSchema path="/services/intelligent-predictor-logistics-1-b8745182" title="Intelligent predictor-logistics #1" />
         <h1 className="text-4xl font-bold mb-6">Intelligent predictor-logistics #1</h1>
         <p className="text-lg text-gray-300 mb-8">The future of Logistics is here with Intelligent predictor-logistics #1. Powered by cutting-edge AI, this platform delivers threat detection like never before.</p>
 

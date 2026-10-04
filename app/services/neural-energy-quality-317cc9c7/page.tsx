@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/neural-energy-quality-317cc9c7` title="Neural Energy Quality" />
+        <BreadcrumbSchema path="/services/neural-energy-quality-317cc9c7" title="Neural Energy Quality" />
         <h1 className="text-4xl font-bold mb-6">Neural Energy Quality</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize Manufacturing through intelligent automation. Our Neural Energy Quality leverages advanced machine learning to deliver sales process optimization </p>
 

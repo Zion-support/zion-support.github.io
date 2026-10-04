@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-engine---agriculture-edition-172eb169` title="AI Engine - Agriculture Edition" />
+        <BreadcrumbSchema path="/services/ai-engine---agriculture-edition-172eb169" title="AI Engine - Agriculture Edition" />
         <h1 className="text-4xl font-bold mb-6">AI Engine - Agriculture Edition</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with AI Engine - Agriculture Edition. This autonomous system provides risk assessment with zero manual intervention needed.</p>
 

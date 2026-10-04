@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/autonomous-fraud-management-689f0fec` title="Autonomous Fraud Management" />
+        <BreadcrumbSchema path="/services/autonomous-fraud-management-689f0fec" title="Autonomous Fraud Management" />
         <h1 className="text-4xl font-bold mb-6">Autonomous Fraud Management</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your media operations with our Autonomous Fraud Management. This AI-driven solution automates performance monitoring with unprecedented accuracy and e</p>
 

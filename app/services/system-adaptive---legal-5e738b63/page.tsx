@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/system-adaptive---legal-5e738b63` title="System Adaptive - Legal" />
+        <BreadcrumbSchema path="/services/system-adaptive---legal-5e738b63" title="System Adaptive - Legal" />
         <h1 className="text-4xl font-bold mb-6">System Adaptive - Legal</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your legal operations with our System Adaptive - Legal. This AI-driven solution automates data processing with unprecedented accuracy and efficiency.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/anthropic-4c283164` title="Anthropic" />
+        <BreadcrumbSchema path="/services/anthropic-4c283164" title="Anthropic" />
         <h1 className="text-4xl font-bold mb-6">Anthropic</h1>
         <p className="text-lg text-gray-300 mb-8">Anthropic, PBC is an American artificial intelligence (AI) public benefit corporation headquartered in San Francisco, California. Its flagship product is Claude</p>
 

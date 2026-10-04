@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/adaptive-suite-media-1271c44e` title="Adaptive suite-media" />
+        <BreadcrumbSchema path="/services/adaptive-suite-media-1271c44e" title="Adaptive suite-media" />
         <h1 className="text-4xl font-bold mb-6">Adaptive suite-media</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your media operations with our Adaptive suite-media. This AI-driven solution automates language processing with unprecedented accuracy and efficiency.</p>
 

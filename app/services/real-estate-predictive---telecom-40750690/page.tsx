@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/real-estate-predictive---telecom-40750690` title="Real Estate Predictive - Telecom" />
+        <BreadcrumbSchema path="/services/real-estate-predictive---telecom-40750690" title="Real Estate Predictive - Telecom" />
         <h1 className="text-4xl font-bold mb-6">Real Estate Predictive - Telecom</h1>
         <p className="text-lg text-gray-300 mb-8">The future of Telecom is here with Real Estate Predictive - Telecom. Powered by cutting-edge AI, this platform delivers predictive modeling like never before.</p>
 

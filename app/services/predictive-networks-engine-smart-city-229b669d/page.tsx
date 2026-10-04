@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictive-networks-engine-smart-city-229b669d` title="Predictive Networks Engine - Smart-City" />
+        <BreadcrumbSchema path="/services/predictive-networks-engine-smart-city-229b669d" title="Predictive Networks Engine - Smart-City" />
         <h1 className="text-4xl font-bold mb-6">Predictive Networks Engine - Smart-City</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize smart-city through intelligent automation. Our Predictive Networks Engine - Smart-City leverages advanced machine learning to deliver sensor data </p>
 

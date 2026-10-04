@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-data-quality-32f0a906` title="Intelligent Data Quality" />
+        <BreadcrumbSchema path="/services/intelligent-data-quality-32f0a906" title="Intelligent Data Quality" />
         <h1 className="text-4xl font-bold mb-6">Intelligent Data Quality</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation Healthcare solution: Intelligent Data Quality. Combines network optimization with adaptive intelligence for optimal results.</p>
 

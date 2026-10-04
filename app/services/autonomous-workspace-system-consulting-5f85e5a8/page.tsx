@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/autonomous-workspace-system-consulting-5f85e5a8` title="Autonomous Workspace System - Consulting" />
+        <BreadcrumbSchema path="/services/autonomous-workspace-system-consulting-5f85e5a8" title="Autonomous Workspace System - Consulting" />
         <h1 className="text-4xl font-bold mb-6">Autonomous Workspace System - Consulting</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your consulting operations with our Autonomous Workspace System - Consulting. This AI-driven solution automates document collaboration with unpreceden</p>
 

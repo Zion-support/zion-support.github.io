@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/smart-language-manager-1bd5769b` title="Smart Language Manager" />
+        <BreadcrumbSchema path="/services/smart-language-manager-1bd5769b" title="Smart Language Manager" />
         <h1 className="text-4xl font-bold mb-6">Smart Language Manager</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize legal through intelligent automation. Our Smart Language Manager leverages advanced machine learning to deliver document processing at scale.</p>
 

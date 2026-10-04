@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/automated-optimization-for-agriculture-2cfb6179` title="Automated Optimization for Agriculture" />
+        <BreadcrumbSchema path="/services/automated-optimization-for-agriculture-2cfb6179" title="Automated Optimization for Agriculture" />
         <h1 className="text-4xl font-bold mb-6">Automated Optimization for Agriculture</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your agriculture operations with our Automated Optimization for Agriculture. This AI-driven solution automates code optimization with unprecedented ac</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/enterprise-federated-retail-analytics-suite-dff8f39a` title="Enterprise Federated Retail Analytics Suite" />
+        <BreadcrumbSchema path="/services/enterprise-federated-retail-analytics-suite-dff8f39a" title="Enterprise Federated Retail Analytics Suite" />
         <h1 className="text-4xl font-bold mb-6">Enterprise Federated Retail Analytics Suite</h1>
         <p className="text-lg text-gray-300 mb-8">Enterprise analytics suite that delivers federated retail insights with unified dashboards and reporting.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/advanced-campaign-for-sales-e849d472` title="Advanced Campaign for Sales" />
+        <BreadcrumbSchema path="/services/advanced-campaign-for-sales-e849d472" title="Advanced Campaign for Sales" />
         <h1 className="text-4xl font-bold mb-6">Advanced Campaign for Sales</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Advanced Campaign for Sales. This autonomous system provides spam detection with zero manual intervention needed.</p>
 

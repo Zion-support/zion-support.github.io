@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/neural-compliance-manufacturing-d2c487b8` title="Neural compliance-manufacturing" />
+        <BreadcrumbSchema path="/services/neural-compliance-manufacturing-d2c487b8" title="Neural compliance-manufacturing" />
         <h1 className="text-4xl font-bold mb-6">Neural compliance-manufacturing</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation Manufacturing solution: Neural compliance-manufacturing. Combines predictive modeling with adaptive intelligence for optimal results.</p>
 

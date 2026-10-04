@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-customer-service---education-edition-c223882c` title="AI Customer Service - Education Edition" />
+        <BreadcrumbSchema path="/services/ai-customer-service---education-edition-c223882c" title="AI Customer Service - Education Edition" />
         <h1 className="text-4xl font-bold mb-6">AI Customer Service - Education Edition</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize Education through intelligent automation. Our AI Customer Service - Education Edition leverages advanced machine learning to deliver risk assessme</p>
 

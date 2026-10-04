@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/neural-predictor-tech-c0c1fffd` title="Neural predictor-tech" />
+        <BreadcrumbSchema path="/services/neural-predictor-tech-c0c1fffd" title="Neural predictor-tech" />
         <h1 className="text-4xl font-bold mb-6">Neural predictor-tech</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation technology solution: Neural predictor-tech. Combines image recognition with adaptive intelligence for optimal results.</p>
 

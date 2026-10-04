@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-monitoring-for-automotive-13e0d983` title="Intelligent Monitoring for Automotive" />
+        <BreadcrumbSchema path="/services/intelligent-monitoring-for-automotive-13e0d983" title="Intelligent Monitoring for Automotive" />
         <h1 className="text-4xl font-bold mb-6">Intelligent Monitoring for Automotive</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your automotive operations with our Intelligent Monitoring for Automotive. This AI-driven solution automates influencer identification with unpreceden</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/neural-performance-manufacturing-5ad1eeb1` title="Neural Performance Manufacturing" />
+        <BreadcrumbSchema path="/services/neural-performance-manufacturing-5ad1eeb1" title="Neural Performance Manufacturing" />
         <h1 className="text-4xl font-bold mb-6">Neural Performance Manufacturing</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation Telecom solution: Neural Performance Manufacturing. Combines predictive analytics with adaptive intelligence for optimal results.</p>
 

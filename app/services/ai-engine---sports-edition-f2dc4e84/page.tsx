@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-engine---sports-edition-f2dc4e84` title="AI Engine - Sports Edition" />
+        <BreadcrumbSchema path="/services/ai-engine---sports-edition-f2dc4e84" title="AI Engine - Sports Edition" />
         <h1 className="text-4xl font-bold mb-6">AI Engine - Sports Edition</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize sports through intelligent automation. Our AI Engine - Sports Edition leverages advanced machine learning to deliver decision support at scale.</p>
 

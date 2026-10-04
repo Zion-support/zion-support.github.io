@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/autonomous-optimizer-manufacturing-5bc9c654` title="Autonomous optimizer-manufacturing" />
+        <BreadcrumbSchema path="/services/autonomous-optimizer-manufacturing-5bc9c654" title="Autonomous optimizer-manufacturing" />
         <h1 className="text-4xl font-bold mb-6">Autonomous optimizer-manufacturing</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your manufacturing operations with our Autonomous optimizer-manufacturing. This AI-driven solution automates market intelligence with unprecedented ac</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/neural-orchestrator-for-hospitality-8282bbb5` title="Neural Orchestrator for Hospitality" />
+        <BreadcrumbSchema path="/services/neural-orchestrator-for-hospitality-8282bbb5" title="Neural Orchestrator for Hospitality" />
         <h1 className="text-4xl font-bold mb-6">Neural Orchestrator for Hospitality</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation hospitality solution: Neural Orchestrator for Hospitality. Combines data processing with adaptive intelligence for optimal results.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/adaptive-inventory-manager-a47921ac` title="Adaptive Inventory Manager" />
+        <BreadcrumbSchema path="/services/adaptive-inventory-manager-a47921ac" title="Adaptive Inventory Manager" />
         <h1 className="text-4xl font-bold mb-6">Adaptive Inventory Manager</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Adaptive Inventory Manager. This autonomous system provides image recognition with zero manual intervention needed.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/neural-workflow-engine-1-a7ad1d7a` title="Neural Workflow Engine #1" />
+        <BreadcrumbSchema path="/services/neural-workflow-engine-1-a7ad1d7a" title="Neural Workflow Engine #1" />
         <h1 className="text-4xl font-bold mb-6">Neural Workflow Engine #1</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize manufacturing through intelligent automation. Our Neural Workflow Engine #1 leverages advanced machine learning to deliver security monitoring at </p>
 

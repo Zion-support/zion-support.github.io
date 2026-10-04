@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/marketing-smart---finance-b9af3129` title="Marketing Smart - Finance" />
+        <BreadcrumbSchema path="/services/marketing-smart---finance-b9af3129" title="Marketing Smart - Finance" />
         <h1 className="text-4xl font-bold mb-6">Marketing Smart - Finance</h1>
         <p className="text-lg text-gray-300 mb-8">The future of Finance is here with Marketing Smart - Finance. Powered by cutting-edge AI, this platform delivers brand monitoring like never before.</p>
 

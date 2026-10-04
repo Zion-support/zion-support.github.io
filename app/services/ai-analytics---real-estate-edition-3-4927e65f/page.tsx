@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-analytics---real-estate-edition-3-4927e65f` title="AI Analytics - Real-Estate Edition #3" />
+        <BreadcrumbSchema path="/services/ai-analytics---real-estate-edition-3-4927e65f" title="AI Analytics - Real-Estate Edition #3" />
         <h1 className="text-4xl font-bold mb-6">AI Analytics - Real-Estate Edition #3</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your real-estate operations with our AI Analytics - Real-Estate Edition #3. This AI-driven solution automates energy management with unprecedented acc</p>
 

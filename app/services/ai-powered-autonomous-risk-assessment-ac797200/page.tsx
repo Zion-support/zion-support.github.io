@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-powered-autonomous-risk-assessment-ac797200` title="AI-Powered Autonomous Risk Assessment" />
+        <BreadcrumbSchema path="/services/ai-powered-autonomous-risk-assessment-ac797200" title="AI-Powered Autonomous Risk Assessment" />
         <h1 className="text-4xl font-bold mb-6">AI-Powered Autonomous Risk Assessment</h1>
         <p className="text-lg text-gray-300 mb-8">Advanced risk analytics platform that provides autonomous credit scoring, fraud detection, and portfolio risk analysis using machine learning and alternative da</p>
 

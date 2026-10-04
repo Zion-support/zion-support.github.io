@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/smart-system-for-sports-082e7b23` title="Smart System for Sports" />
+        <BreadcrumbSchema path="/services/smart-system-for-sports-082e7b23" title="Smart System for Sports" />
         <h1 className="text-4xl font-bold mb-6">Smart System for Sports</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Smart System for Sports. This autonomous system provides document processing with zero manual intervention needed.</p>
 
