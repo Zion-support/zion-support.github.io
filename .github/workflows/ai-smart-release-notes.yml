@@ -12,7 +12,7 @@ concurrency:
   push:
     branches: [main]
     paths-ignore:
-      - '*.md'
+      - '**.md'
       - '.github/workflows/**'
       - 'automation/reports/**'
   workflow_dispatch:
@@ -24,10 +24,9 @@ jobs:
     timeout-minutes: 10
     steps:
       - name: Checkout
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83ddc # v6.0.2
         with:
           fetch-depth: 50
-
       - name: Gather recent changes
         id: changes
         run: |
@@ -138,47 +137,54 @@ jobs:
             const tagName = `v${today.replace(/-/g, '.')}`;
             const sha = context.sha;
 
+            // The default GITHUB_TOKEN may lack tag/release write access on this repo
+            // ('Resource not accessible by integration'). Treat publish as best-effort:
+            // notes are always available in the step summary; never fail the job.
             try {
-              await github.rest.git.createRef({
-                ...context.repo,
-                ref: `refs/tags/${tagName}`,
-                sha: sha,
-              });
-            } catch (e) {
-              if (e.status === 422) {
-                const suffix = `-${context.runNumber}`;
+              try {
                 await github.rest.git.createRef({
                   ...context.repo,
-                  ref: `refs/tags/${tagName}${suffix}`,
+                  ref: `refs/tags/${tagName}`,
                   sha: sha,
                 });
+              } catch (e) {
+                if (e.status === 422) {
+                  const suffix = `-${context.runNumber}`;
+                  await github.rest.git.createRef({
+                    ...context.repo,
+                    ref: `refs/tags/${tagName}${suffix}`,
+                    sha: sha,
+                  });
+                } else {
+                  throw e;
+                }
               }
-            }
 
-            const { data: releases } = await github.rest.repos.listReleases({
-              ...context.repo,
-              per_page: 1,
-            });
-
-            const existingToday = releases.find(r => r.tag_name.startsWith(tagName));
-
-            if (existingToday) {
-              await github.rest.repos.updateRelease({
+              const { data: releases } = await github.rest.repos.listReleases({
                 ...context.repo,
-                release_id: existingToday.id,
-                body: notes,
+                per_page: 1,
               });
-              core.info(`Updated release ${existingToday.tag_name}`);
-            } else {
-              await github.rest.repos.createRelease({
-                ...context.repo,
-                tag_name: tagName,
-                name: `Release ${today}`,
-                body: notes,
-                draft: false,
-                prerelease: false,
-              });
-              core.info(`Created release ${tagName}`);
+              const existingToday = releases.find(r => r.tag_name.startsWith(tagName));
+              if (existingToday) {
+                await github.rest.repos.updateRelease({
+                  ...context.repo,
+                  release_id: existingToday.id,
+                  body: notes,
+                });
+                core.info(`Updated release ${existingToday.tag_name}`);
+              } else {
+                await github.rest.repos.createRelease({
+                  ...context.repo,
+                  tag_name: tagName,
+                  name: `Release ${today}`,
+                  body: notes,
+                  draft: false,
+                  prerelease: false,
+                });
+                core.info(`Created release ${tagName}`);
+              }
+            } catch (e) {
+              core.warning(`Release publish skipped: ${e.message}. Notes are in the step summary.`);
             }
 
       - name: Summary
