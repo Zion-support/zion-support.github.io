@@ -1,14 +1,15 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Free AI Discovery — Zion Tech Group</title>
-<meta name="description" content="Free AI Discovery questionnaire: 8 questions, 2 minutes, personalized picks from 770+ AI apps. Results emailed instantly to you and our commercial team. Always online, always free.">
-<style>body{font-family:system-ui;background:linear-gradient(135deg,#0b1020,#1e3a8a);color:#fff;padding:2rem 1rem;max-width:760px;margin:auto}a{color:#22d3ee}.card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:1.25rem;margin:1rem 0}.btn{display:inline-block;background:#22d3ee;color:#082f49;padding:.8rem 1.6rem;border-radius:999px;font-weight:700;text-decoration:none;border:0;cursor:pointer;font-size:1rem}label{display:block;margin:.4rem 0;padding:.6rem .8rem;background:rgba(255,255,255,.05);border-radius:10px;cursor:pointer}input[type=text],input[type=email]{width:100%;padding:.7rem;border-radius:10px;border:1px solid rgba(255,255,255,.25);background:rgba(0,0,0,.25);color:#fff;margin:.3rem 0}h1{margin-bottom:.2rem}.muted{opacity:.85}</style></head>
+<meta name="description" content="Free AI Discovery questionnaire: 8 questions, 2 minutes, personalized picks from 840+ AI apps. Results emailed instantly to you and our commercial team. Always online, always free.">
+<style>body{font-family:system-ui;background:linear-gradient(135deg,#0b1020,#1e3a8a);color:#fff;padding:2rem 1rem;max-width:760px;margin:auto}a{color:#22d3ee}.card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:1.25rem;margin:1rem 0}.btn{display:inline-block;background:#22d3ee;color:#082f49;padding:.8rem 1.6rem;border-radius:999px;font-weight:700;text-decoration:none;border:0;cursor:pointer;font-size:1rem}label{display:block;margin:.4rem 0;padding:.6rem .8rem;background:rgba(255,255,255,.05);border-radius:10px;cursor:pointer}input[type=text],input[type=email]{width:100%;padding:.7rem;border-radius:10px;border:1px solid rgba(255,255,255,.25);background:rgba(0,0,0,.25);color:#fff;margin:.3rem 0}h1{margin-bottom:.2rem}.muted{opacity:.85}.ok{color:#4ade80}.warn{color:#fbbf24}</style></head>
 <body>
 <h1>🔎 Free AI Discovery</h1>
 <p><strong>Always online. Always free. Instant results.</strong></p>
 <div class="card"><strong>Why take the Discovery?</strong><ul>
 <li>8 questions, ~2 minutes</li>
-<li>Personalized picks from <strong>770+ AI apps</strong> in the Zion App Network</li>
-<li>Results emailed <strong>instantly</strong> to you and our commercial team</li>
+<li>Personalized picks from <strong>840+ AI apps</strong> in the Zion App Network</li>
+<li>Results emailed <strong>instantly</strong> to you AND our commercial team (commercial@ziontechgroup.com)</li>
+<li>Instant on-screen recommendations + email confirmation copy</li>
 <li>No signup, no credit card, no cost — ever</li>
 </ul></div>
 <form id="dq">
@@ -17,12 +18,15 @@
 <label><input type="radio" name="industry" value="healthcare"> Healthcare</label>
 <label><input type="radio" name="industry" value="finance"> Finance / FinOps</label>
 <label><input type="radio" name="industry" value="energy"> Energy / Sustainability</label>
+<label><input type="radio" name="industry" value="space"> Space / Satellite Ops</label>
+<label><input type="radio" name="industry" value="software"> Software / DevSecOps</label>
 <label><input type="radio" name="industry" value="retail"> Retail / E-commerce</label>
 <label><input type="radio" name="industry" value="other"> Other</label></div>
 <div class="card"><h3>2. What is your biggest challenge?</h3>
 <label><input type="radio" name="challenge" value="support"> Customer support overload</label>
 <label><input type="radio" name="challenge" value="sla"> SLA breaches / reliability</label>
 <label><input type="radio" name="challenge" value="costs"> Cloud &amp; operating costs</label>
+<label><input type="radio" name="challenge" value="security"> Security &amp; compliance</label>
 <label><input type="radio" name="challenge" value="sales"> Sales &amp; lead generation</label>
 <label><input type="radio" name="challenge" value="data"> Data &amp; reporting</label></div>
 <div class="card"><h3>3. Company size?</h3>
@@ -54,27 +58,35 @@
 <p><button class="btn" type="submit">Get my free Discovery results →</button></p>
 </form>
 <div id="results" style="display:none"></div>
-<p>Questions? <a href="mailto:commercial@ziontechgroup.com">commercial@ziontechgroup.com</a> · <a href="https://ziontechgroup.com/zion-app-network/">Browse the App Network</a> · <a href="https://github.com/Zion-support/zion-app-network">GitHub hub</a></p>
+<p>Questions? <a href="mailto:commercial@ziontechgroup.com">commercial@ziontechgroup.com</a> · <a href="https://ziontechgroup.com/apps/">Browse all apps</a> · <a href="https://github.com/Zion-support/zion-app-network">GitHub hub</a></p>
 <script>
 const MAP={
  'support':['Support Ticket Triager|https://ziontechgroup.com/support-ticket-triager/','SLA Breach Predictor|https://ziontechgroup.com/sla-breach-predictor/'],
  'sla':['SLA Breach Predictor|https://ziontechgroup.com/sla-breach-predictor/','AI Backup Integrity|https://ziontechgroup.com/ai-backup-integrity/'],
  'costs':['FinOps Autopilot|https://ziontechgroup.com/finops-autopilot/','AI Cloud Optimizer|https://ziontechgroup.com/ai-cloud-optimizer/'],
+ 'security':['Zion AI Threat Modeler|https://ziontechgroup.com/zion-ai-threat-modeler/','Zion AI PR Review Swarm|https://ziontechgroup.com/zion-ai-pr-review-swarm/'],
  'sales':['Lead Scoring AI|https://ziontechgroup.com/tools/','Sales Intelligence|https://ziontechgroup.com/tools/'],
  'data':['RAG Eval Kit|https://ziontechgroup.com/zion-rag-eval-kit/','AI Report Builder|https://ziontechgroup.com/tools/'],
- 'field-service':['Site Survey Planner|https://ziontechgroup.com/site-survey-planner/','Field Service AI Suite|https://ziontechgroup.com/zion-app-network/app/network-field-service-showcase.html'],
- 'healthcare':['Clinical Documentation AI|https://ziontechgroup.com/zion-app-network/app-network-batch69-oct01.html'],
- 'finance':['FinOps Autopilot|https://ziontechgroup.com/finops-autopilot/'],
- 'energy':['Carbon Footprint Tracker|https://ziontechgroup.com/zion-app-network/app-network-batch72-oct03.html'],
- 'retail':['Content Commerce AI|https://ziontechgroup.com/zion-app-network/'],
- 'other':['Zion AI App Network|https://ziontechgroup.com/zion-app-network/'] };
+ 'field-service':['Site Survey Planner|https://ziontechgroup.com/site-survey-planner/','Smart Dispatch Optimizer|https://ziontechgroup.com/smart-dispatch-optimizer/'],
+ 'healthcare':['Clinical Documentation AI|https://github.com/Zion-support/clinical-documentation-ai','Patient Engagement Copilot|https://github.com/Zion-support/patient-engagement-copilot'],
+ 'finance':['FinOps Autopilot|https://ziontechgroup.com/finops-autopilot/','Finance Close Copilot|https://github.com/Zion-support/finance-close-copilot'],
+ 'energy':['Carbon Footprint Tracker|https://ziontechgroup.com/carbon-footprint-tracker/','ESG Report Builder|https://ziontechgroup.com/esg-report-builder/'],
+ 'space':['Orbital Conjunction Screener|https://ziontechgroup.com/orbital-conjunction-screener/','Satellite Pass Scheduler|https://ziontechgroup.com/satellite-pass-scheduler/'],
+ 'software':['Zion AI PR Review Swarm|https://ziontechgroup.com/zion-ai-pr-review-swarm/','Model Router Configurator|https://ziontechgroup.com/zion-model-router/'],
+ 'retail':['Content Commerce AI|https://ziontechgroup.com/zion-app-network/','E-commerce Optimizer|https://github.com/Zion-support/ai-ecommerce-optimizer'],
+ 'other':['Zion AI App Network|https://ziontechgroup.com/apps/'] };
 document.getElementById('dq').addEventListener('submit',async e=>{e.preventDefault();
 const f=new FormData(e.target);const a=Object.fromEntries(f.entries());
-const picks=[...(MAP[a.challenge]||[]),...(MAP[a.industry]||[])].slice(0,4);
+const picks=[...new Set([...(MAP[a.challenge]||[]),...(MAP[a.industry]||[])])].slice(0,4);
 const lines=picks.map(p=>{const[n,u]=p.split('|');return `- ${n}: ${u}`}).join('\n');
 const summary=`NEW DISCOVERY SUBMISSION\nName: ${a.name}\nEmail: ${a.email}\nIndustry: ${a.industry}\nChallenge: ${a.challenge}\nSize: ${a.size}\nSpeed: ${a.speed}\nAI usage: ${a.aiuse}\nOutcome: ${a.outcome}\nDeploy: ${a.deploy}\n\nRecommended apps:\n${lines}`;
-document.getElementById('results').style.display='block';
-document.getElementById('results').innerHTML='<div class="card"><h2>🎉 Your personalized picks</h2><ul>'+picks.map(p=>{const[n,u]=p.split('|');return `<li><a href="${u}">${n}</a></li>`}).join('')+'</ul><p>📧 Emailing your full results now — you and our commercial team will receive them within a minute.</p></div>';
-try{await fetch('https://formsubmit.co/ajax/commercial@ziontechgroup.com',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({name:a.name,email:a.email,_cc:a.email,_subject:'New Free AI Discovery — '+a.name,_template:'box',results:summary})})}catch(err){}
-window.scrollTo(0,document.getElementById('results').offsetTop);});
+const r=document.getElementById('results');r.style.display='block';
+r.innerHTML='<div class="card"><h2>🎉 Your personalized picks</h2><ul>'+picks.map(p=>{const[n,u]=p.split('|');return `<li><a href="${u}">${n}</a></li>`}).join('')+'</ul><p id="mail-status">📧 Emailing your full results now — you and our commercial team will receive them within a minute.</p></div>';
+const mailto='mailto:commercial@ziontechgroup.com?cc='+encodeURIComponent(a.email)+'&subject='+encodeURIComponent('New Free AI Discovery — '+a.name)+'&body='+encodeURIComponent(summary);
+try{
+ const res=await fetch('https://formsubmit.co/ajax/commercial@ziontechgroup.com',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({name:a.name,email:a.email,_replyto:a.email,_cc:a.email,_subject:'New Free AI Discovery — '+a.name,_template:'box',_autoresponse:'Thank you '+a.name+'! Your free Zion AI Discovery results are below. Our commercial team (commercial@ziontechgroup.com) received a copy and will follow up shortly. — Zion Tech Group',results:summary})});
+ if(res&&res.ok){document.getElementById('mail-status').innerHTML='<span class="ok">✅ Results emailed to you and commercial@ziontechgroup.com.</span>'}
+ else{throw new Error('mail')}
+}catch(err){document.getElementById('mail-status').innerHTML='<span class="warn">⚠️ Instant email gateway busy — <a href="'+mailto+'">click here to send your results by email</a> (goes to you + commercial@ziontechgroup.com).</span>'}
+window.scrollTo(0,r.offsetTop);});
 </script></body></html>

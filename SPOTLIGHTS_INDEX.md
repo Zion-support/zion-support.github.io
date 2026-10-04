@@ -1,15 +1,17 @@
 # Zion App Network — Spotlight & News Index
 
-One page linking every spotlight, suite doc and news page for the [Zion App Network](https://ziontechgroup.com/zion-app-network/) ([master directory](https://github.com/Zion-support/zion-app-network)). 700+ interlinked AI apps, tools and field playbooks by [Zion Tech Group](https://ziontechgroup.com).
+One page linking every spotlight, suite doc and news page for the [Zion App Network](https://ziontechgroup.com/zion-app-network/) ([master directory](https://github.com/Zion-support/zion-app-network)). 840+ interlinked AI apps, tools and field playbooks by [Zion Tech Group](https://ziontechgroup.com).
 
 ## Homepage spotlight pages (this repo)
-- [APP_NETWORK_SPOTLIGHT_OCT04_BATCH74_SUPPORT.md](APP_NETWORK_SPOTLIGHT_OCT04_BATCH74_SUPPORT.md) — NEW Batch 74b (2026-10-04): Support & Reliability AI — ticket triage, SLA breach prediction, tech debt radar, site survey planning
-- [app-network-discovery.html](app-network-discovery.html) — UPGRADED (2026-10-04): full Free AI Discovery questionnaire — 8 questions, personalized picks from 770+ apps, results emailed instantly to you + commercial@ziontechgroup.com
+- [APP_NETWORK_SPOTLIGHT_OCT4_DEVSECOPS.md](APP_NETWORK_SPOTLIGHT_OCT4_DEVSECOPS.md) — NEW Batch 78 (2026-10-04): DevSecOps & AI Code Quality — PR review swarm, threat modeling, RAG eval, model routing ([HTML](APP_NETWORK_SPOTLIGHT_OCT4_DEVSECOPS.html))
+- [APP_NETWORK_DISCOVERY_AD.md](APP_NETWORK_DISCOVERY_AD.md) — NEW (2026-10-04): Free AI Discovery benefits — always online, always free, instant dual email results
+- [APP_NETWORK_SPOTLIGHT_OCT04_BATCH74_SUPPORT.md](APP_NETWORK_SPOTLIGHT_OCT04_BATCH74_SUPPORT.md) — Batch 74b (2026-10-04): Support & Reliability AI — ticket triage, SLA breach prediction, tech debt radar, site survey planning
+- [app-network-discovery.html](app-network-discovery.html) — UPGRADED v2 (2026-10-04): full Free AI Discovery questionnaire — 8 questions, personalized picks from 840+ apps, instant auto-reply + results emailed to you AND commercial@ziontechgroup.com
 - [APP_NETWORK_SPOTLIGHT_OCT4_TRAVEL_HOSPITALITY.md](APP_NETWORK_SPOTLIGHT_OCT4_TRAVEL_HOSPITALITY.md) — Batch 74 (2026-10-04): Travel, Hospitality & Events AI
 - [What's New — APP_NETWORK_LATEST.md](APP_NETWORK_LATEST.md) — latest launches and weekly features
 - [APPS_SHOWCASE.md](APPS_SHOWCASE.md) — app showcase overview
 - [APP_NETWORK_SPOTLIGHT.md](APP_NETWORK_SPOTLIGHT.md) — original network spotlight
-- [APP_NETWORK_SPOTLIGHT_OCT4_SPACE.md](APP_NETWORK_SPOTLIGHT_OCT4_SPACE.md) — NEW Batch 77 (2026-10-04): Space & Satellite Ops AI — conjunction screening, pass scheduling, link monitoring, edge AI deployment ([HTML](APP_NETWORK_SPOTLIGHT_OCT4_SPACE.html))
+- [APP_NETWORK_SPOTLIGHT_OCT4_SPACE.md](APP_NETWORK_SPOTLIGHT_OCT4_SPACE.md) — Batch 77 (2026-10-04): Space & Satellite Ops AI — conjunction screening, pass scheduling, link monitoring, edge AI deployment ([HTML](APP_NETWORK_SPOTLIGHT_OCT4_SPACE.html))
 - [APP_NETWORK_SPOTLIGHT_OCT3_ESG.md](APP_NETWORK_SPOTLIGHT_OCT3_ESG.md) — Batch 68 (2026-10-03): Sustainability & ESG AI suite ([instant HTML](APP_NETWORK_SPOTLIGHT_OCT3_ESG.html))
 - [APP_NETWORK_SPOTLIGHT_AI_READINESS_EVAL.md](APP_NETWORK_SPOTLIGHT_AI_READINESS_EVAL.md) — Batch 18: readiness scoring, LLM/RAG evaluation, benchmarks & cost simulation
 - [APP_NETWORK_SPOTLIGHT_SECOPS_RELIABILITY.md](APP_NETWORK_SPOTLIGHT_SECOPS_RELIABILITY.md) — 13-app SecOps & reliability toolchain
