@@ -1,0 +1,48 @@
+name: Codemod — fix BreadcrumbSchema JSX backtick props
+# One-shot bulk repair: generated service pages used `path=`/services/...`` (template
+# literal) instead of quotes, causing 13.5k ESLint parsing errors and breaking builds.
+# Runs once on creation (push trigger on this file) and on demand (workflow_dispatch).
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/codemod-breadcrumb-jsx-fix.yml'
+permissions:
+  contents: write
+concurrency:
+  group: codemod-breadcrumb-jsx
+  cancel-in-progress: true
+jobs:
+  codemod:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6.0.2
+        with:
+          fetch-depth: 1
+      - name: Fix backtick JSX props
+        run: |
+          set -e
+          files=$(grep -rl 'path=`' app components 2>/dev/null || true)
+          count=$(echo "$files" | grep -c . || true)
+          echo "files containing backtick path prop: $count"
+          echo "$files" | while IFS= read -r f; do
+            [ -z "$f" ] && continue
+            # skip files where the prop uses ${} interpolation (needs manual review)
+            if grep 'path=`' "$f" | grep -q '\${'; then
+              echo "SKIP (interpolation): $f"
+              continue
+            fi
+            sed -i 's/path=`\([^`]*\)`/path="\1"/g' "$f"
+          done
+          git diff --stat | tail -5 || true
+      - name: Commit fixes
+        run: |
+          git config user.name "zion-codemod-bot"
+          git config user.email "bot@ziontechgroup.com"
+          if ! git diff --quiet; then
+            git add -A
+            git commit -m "fix(codemod): BreadcrumbSchema path backticks -> quotes in JSX props (bulk repair of generated service pages)"
+            git push
+          else
+            echo "No changes needed — already clean."
+          fi
