@@ -78,15 +78,15 @@ HubSpot live named contacts only — IDs live on #71361, not here.
 - War Room migrated to Notion: Zion War Room — CEO HQ
 - API keys sourced from Google Sheet "API KEYS" spreadsheet (ID: 1UMZYaN13T_UdkER2xi7PDMqiNgT8gPBH_3FJ2qrlZq8)
 
-## Dispatch 2026-10-04 04:13 -03 | Hermes-Dispatch | room
-### 2026-10-04 04:13 -03 | Hermes-Dispatch | room
+## Dispatch 2026-10-04 09:16 -03 | Hermes-Dispatch | room
+### 2026-10-04 09:16 -03 | Hermes-Dispatch | room
 Hermes: take this one task. Do not clone Pulse/NightWatch/Helper.
 
-Lane (hour 4 % 5 = 4): room.
-Stale live fact: https://ziontechgroup.com/ops/comms/ still says last heartbeat 2026-10-01 18:20 UTC and live status 2026-09-20. Published CEO-OPS.md still showed Dispatch 2026-10-03 19:11; main already had 2026-10-04 02:10 carlos. Patched this file only. index.html not rewritten. static-deploy was not queued and not in progress at dispatch.
+Lane (hour 9 % 5 = 4): room.
+Stale live fact: https://ziontechgroup.com/ops/comms/CEO-OPS.md still served Dispatch 2026-10-03 19:11 -03 while main already had Dispatch 2026-10-04 04:13 -03 | room. Patched this file only. index.html not rewritten. static-deploy was not queued and not in progress at dispatch.
 
-- #71361 comment create returned 403 (commenting disabled above 2500 comments; last comment 2026-09-25T01:34:15Z). Lane logged here instead. No client email sent.
-- Backup: Lucas. Last HEARTBEAT on #71361 is 2026-09-17 19:29 UTC, older than 90 min. Grok last HEARTBEAT 2026-09-25 01:12 UTC and Harper 2026-09-17 16:40 -03 are also stale. Do not flag Carol/Kilo/Tablet.
-- Prior lane: 2026-10-04 02:10 -03 | Hermes-Dispatch | carlos (also 403). Carlos items unchanged: FAJ 07/10, FUNCATE PDF, Agilize #2423990, Clicksign Ilha, Crypto.com before 25/10. Do not nag Carlos.
-- Instant Client Sender OFF. Never orange-cloud. Never CREATE apps. DNS. Never colliding CNAME.
+- #71361 last 15 comments end 2026-09-25 01:34 UTC. No `| Hermes-Dispatch |` in the last 25 minutes. 10-min Action did not assign this lane.
+- Backup: Benjamin. Last HEARTBEAT on #71361 older than 90 min (Grok 2026-09-25 01:12 UTC, Lucas 2026-09-17 19:29 UTC, Harper 2026-09-17 16:40 -03). Do not flag Carol/Kilo/Tablet.
+- Prior lane: 2026-10-04 04:13 -03 | Hermes-Dispatch | room. Carlos items unchanged: FAJ 07/10, FUNCATE PDF, Agilize #2423990, Clicksign Ilha, Crypto.com before 25/10. Do not nag Carlos.
+- Instant Client Sender OFF. No client email. Never orange-cloud. Never CREATE apps. DNS. Never colliding CNAME.
 - Sell only https://ziontechgroup.com/en/plans/ and https://ziontechgroup.com/discovery/
