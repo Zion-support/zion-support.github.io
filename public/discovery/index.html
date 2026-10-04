@@ -34,7 +34,7 @@ footer{margin-top:36px;border-top:1px solid #e5e7eb;padding-top:14px;font-size:.
 </style>
 </head>
 <body>
-<nav><a href="/">Zion Tech Group</a> · <a href="/apps/">Apps Network</a> · <a href="/plans/">Plans</a> · <a href="/services/">Services</a> · <a href="/contact/">Contact</a></nav>
+<nav><a href="/">Zion Tech Group</a> · <a href="/apps/">Apps Network</a> · <a href="/zion-app-network/">App Network Hub</a> · <a href="/plans/">Plans</a> · <a href="/services/">Services</a> · <a href="/contact/">Contact</a></nav>
 
 <span class="badge">Free · Online · No credit card</span>
 <h1>Free AI &amp; Automation Discovery</h1>
@@ -87,7 +87,7 @@ footer{margin-top:36px;border-top:1px solid #e5e7eb;padding-top:14px;font-size:.
 
 <p class="see-also">See also: <a href="/apps/">Apps Network</a> · <a href="/apps/network.html">Network Map</a> · <a href="/apps/october-2026-batch1.html">Oct Batch 1 — Security &amp; Trust AI</a> · <a href="/apps/october-2026-batch2.html">Oct Batch 2 — Growth &amp; Intelligence AI</a> · <a href="/apps/october-2026-batch3.html">Oct Batch 3 — Customer Experience AI</a> · <a href="/apps/spotlight-2026-10-04-network.html">Network Spotlight</a> · <a href="/roi-calc/">ROI Calculator</a> · <a href="/ai-readiness-assessment/">AI Readiness Assessment</a> · <a href="/plans/">Plans</a> · <a href="/pricing/">Pricing</a> · <a href="/contact/">Contact</a></p>
 
-<footer><p>© 2026 Zion Tech Group · 364 E Main St STE 1008, Middletown, DE 19709 · <a href="mailto:commercial@ziontechgroup.com">commercial@ziontechgroup.com</a> · +1 302 464 0950</p></footer>
+<footer><p>© 2026 Zion Tech Group · 364 E Main St STE 1008, Middletown, DE 19709 · <a href="mailto:commercial@ziontechgroup.com">commercial@ziontechgroup.com</a> · +1 302 464 0950 · Optional paid implementation: <a href="https://buy.stripe.com/7sY00k7JScFV99Bf044ZG06" target="_blank" rel="noopener noreferrer">Starter $2,500</a> (Discovery remains free)</p></footer>
 
 <script>
 const APPMAP={
@@ -112,7 +112,7 @@ document.getElementById('dform').addEventListener('submit',async function(e){
  document.getElementById('rbar').style.width=score+'%';
  document.getElementById('rsummary').innerHTML=`Based on your answers, automating <strong>${f.process}</strong> at <strong>${f.company||'your company'}</strong> could recover a significant share of ~${hrs} team-hours/month — an estimated <strong>${savings}/month</strong> of leaked capacity (order-of-magnitude).`;
  document.getElementById('rapps').innerHTML=apps.map(a=>`<li><a href="${a[1]}">${a[0]}</a></li>`).join('');
- document.getElementById('rnext').textContent = score>=70?'Your case is ready for a Starter implementation — see /plans/.':'Keep exploring with the free apps above; our team will reach out with a tailored readout.';
+ document.getElementById('rnext').innerHTML = score>=70?'Your case is ready for a Starter implementation — <a href="https://buy.stripe.com/7sY00k7JScFV99Bf044ZG06" target="_blank" rel="noopener noreferrer">start the optional $2,500 Starter</a> (Discovery stays free) or see /plans/.':'Keep exploring with the free apps above; our team will reach out with a tailored readout.';
  document.getElementById('result').style.display='block';
  document.getElementById('result').scrollIntoView({behavior:'smooth'});
  const summary=`DISCOVERY RESULT — ${f.name} <${f.email}> (${f.company||'n/a'}, ${f.industry})\nProcess: ${f.process}\nHours/month: ${f.hours}\nSystems: ${f.systems||'n/a'}\nGoal: ${f.goal||'n/a'}\nTimeline: ${f.timeline}\nReadiness score: ${score}/100\nEst. leaked capacity: ${savings}/month\nRecommended apps: ${apps.map(a=>a[0]+' https://ziontechgroup.com'+a[1]).join(' | ')}`;
