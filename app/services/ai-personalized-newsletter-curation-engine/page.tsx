@@ -2,7 +2,7 @@ import { } from 'next/navigation';
 
 export const metadata = {
   title: "AI Personalized Newsletter & Content Curation Engine - Zion Tech Group",
-  description: "Automatically curate, personalize, and deliver newsletters tailored to each subscriber\'s interests. AI analyzes reading behavior, engagement patterns, and trend",
+  description: "Automatically curate, personalize, and deliver newsletters tailored to each subscriber's interests. AI analyzes reading behavior, engagement patterns, and trend",
   alternates: {
     canonical: `https://ziontechgroup.com/services/ai-personalized-newsletter-curation-engine`
   }
