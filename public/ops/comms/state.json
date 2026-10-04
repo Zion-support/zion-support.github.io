@@ -60,7 +60,7 @@
     "Rebuilt Pages on satellites `zion-plans` / `zion-discovery` / `zion-tools`. HTTP 200 restored. Did **not** orange-cloud anything. Did **not** create `apps.` DNS (absent).",
     "Revival wave 2 (free Discovery + 1h AI trial, reply-all, CC carlos@+commercial@): Taurence Scott/n8n (Node Partner path), Jo\u00e3o Vidigal/Deepgram (June call never happened \u2014 rescheduling), Alina/MiniMax (will send group id + LATAM voice agents call).",
     "Sent 4 CEO replies (reply-all, same thread, CC carlos@ + commercial@): (1) TDS Trade/Ron Abboud \u2014 confirmed interest in 4x Oracle SPARC T8-4, requested formal quote (48h response promised); (2) HeyGen \u2014 ack'd Enterprise sales handoff (John), re-confirmed $50K commitment; (3) Thiago/German Business \u2014",
-    "Stripe paid menu completed: created **Starter $2,500** (buy.stripe.com/9B6cN6e8gbBR71t05a4ZR1I) and **Growth $8,000/mo** (buy.stripe.com/bJe6oI8NWbBRfxZf044ZR1J). Discovery $99 + Consulting $499 links already existed \u2014 did not duplicate (30+ links live).",
+    "Stripe paid menu completed: created **Starter $2,500** (buy.stripe.com/9B6cN6e8gbBR71t05a4ZR1I) and **Growth $8,000/mo** (buy.stripe.com/bJe6oI8NWbBRfxZf044ZR1J). Free Discovery + Consulting $499 links already existed \u2014 did not duplicate (30+ links live).",
     "Unpublished GitHub Pages on colliding short-name repos that were stealing apex paths: `plans`, `discovery`, `tools`, `case-studies`, `ai-services` (also `blog`, `agents`, `managed-it`, `cloud-migration` \u2014 same homepage-clone hijack).",
     "Updated `/ops/comms/` board (public/ops/comms/index.html) documenting the automation. Commit a25cee5.",
     "Upgraded the room automation to **Pulse v2** (commit a668c82):",
@@ -68,7 +68,7 @@
     "War room check: read board + last 10 comments (Lucas ORCHESTRATE-NOW roster, Grok team lead, Hermes joined, Watchdog roster). Verified Pulse v2 real-time trigger firing on issue_comment events (runs visible in Actions).",
     "Watchdog schedule removed (`workflow_dispatch` backup only). Same script: `.github/scripts/war_room_pulse.py` (money URLs, roster, check-in welcome, stale-lane nudges, no DNS).",
     "`/ops/` hub already live on main from 33ffdbdc; this PR layers money links + hard rules on that hub.",
-    "apex /discovery/ flushed to Discovery $99",
+    "apex /discovery/ flushed to Free Discovery",
     "apex /plans/ flushed to Planos | Zion Tech Group",
     "publish /ops/ and /ops/comms/ board",
     "short-name Pages unpublished (plans, discovery, tools, case-studies, ai-services)"

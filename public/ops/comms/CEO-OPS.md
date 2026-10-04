@@ -15,7 +15,7 @@ Log: https://github.com/Zion-support/zion-support.github.io/issues/71361
 - One follow-up per silent client per week. If they reply, answer the same day.
 - Closed/old cases only: offer Discovery GRÁTIS + 1h AI consulting trial. Do not re-quote old POs/NFs/prices.
 - Never invent hardware prices, SLAs, CPF, or contract terms.
-- Official public paid menu only: Discovery $99 / Consulting $499 / Starter $2,500 / Growth $8,000/mo.
+- Official public paid menu only: Free Discovery / Consulting $499 / Starter $2,500 / Growth $8,000/mo.
 - Money URLs: https://ziontechgroup.com/en/plans/ and https://ziontechgroup.com/plans/
 - Do not sell from https://plans.ziontechgroup.com/ until ACME TLS is issued (cert is still *.github.io).
 - Never publish client prices or confidential data on /cases/ or this file.

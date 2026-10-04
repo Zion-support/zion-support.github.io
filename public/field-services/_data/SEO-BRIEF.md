@@ -4,7 +4,7 @@
 
 | Page type | Title pattern | Meta description pattern |
 |-----------|---------------|--------------------------|
-| Hub | `Global Field Services Rate Card (USD) \| Zion` (~52 chars) | Mentions 231 countries, Priority/SBD, NBD, 2BD IMAC, T&M, FTE, Stripe, Discovery $99 (~155 chars) |
+| Hub | `Global Field Services Rate Card (USD) \| Zion` (~52 chars) | Mentions 231 countries, Priority/SBD, NBD, 2BD IMAC, T&M, FTE, Stripe, Free Discovery (~155 chars) |
 | Country | `IT Field Service Rates in {Country} (USD) \| Zion` | `{Country}` + NBD/IMAC/T&M price anchors in USD + Stripe |
 
 Primary intents: **IT field service rates**, **onsite IT support cost**, **NBD / SBD / IMAC pricing**, **T&M vs FTE**, country + USD.
@@ -37,7 +37,7 @@ Deterministic variant index = `sha256(slug) % N` picks lead / choose-SLA / deliv
 
 - Hub: H1 + 300–500 word explainer, how-to steps, 6+ FAQ, JSON-LD `WebPage` + `ItemList` + `FAQPage`, `index,follow`, canonical, OG.
 - Country: unique H1/meta, ≥450 words prose beyond price cards, 5–6 FAQ with country baked in, 12 SKU cards with live `buy.stripe.com` links only (never invent), JSON-LD `Service` + `OfferCatalog`, internal links to `/field-services/`, `/discovery/`, `/plans/`, `/enterprise/`.
-- CTA: Discovery $99 Payment Link + contact.
+- CTA: Free Discovery Payment Link + contact.
 
 ## Regeneration
 

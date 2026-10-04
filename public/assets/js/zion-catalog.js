@@ -1,8 +1,8 @@
-// Zion Catálogo vivo — interactive helpers (Discovery $99 entry, Agentes Telegram, Estimador FinOps)
+// Zion Catálogo vivo — interactive helpers (Free Discovery entry, Agentes Telegram, Estimador FinOps)
 (function () {
   "use strict";
   var CATALOG = [
-    { name: "Discovery $99", href: "/discovery/", tag: "Entrada" },
+    { name: "Free Discovery", href: "/discovery/", tag: "Entrada" },
     { name: "Consulting $499", href: "/plans/", tag: "Estratégia" },
     { name: "Agentes Telegram", href: "/telegram/", tag: "Automação" },
     { name: "Estimador FinOps", href: "/finops-consulting/", tag: "FinOps" }
