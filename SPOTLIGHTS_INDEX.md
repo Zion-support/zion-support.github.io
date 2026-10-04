@@ -9,6 +9,7 @@ One page linking every spotlight, suite doc and news page for the [Zion App Netw
 - [What's New — APP_NETWORK_LATEST.md](APP_NETWORK_LATEST.md) — latest launches and weekly features
 - [APPS_SHOWCASE.md](APPS_SHOWCASE.md) — app showcase overview
 - [APP_NETWORK_SPOTLIGHT.md](APP_NETWORK_SPOTLIGHT.md) — original network spotlight
+- [APP_NETWORK_SPOTLIGHT_OCT4_SPACE.md](APP_NETWORK_SPOTLIGHT_OCT4_SPACE.md) — NEW Batch 77 (2026-10-04): Space & Satellite Ops AI — conjunction screening, pass scheduling, link monitoring, edge AI deployment ([HTML](APP_NETWORK_SPOTLIGHT_OCT4_SPACE.html))
 - [APP_NETWORK_SPOTLIGHT_OCT3_ESG.md](APP_NETWORK_SPOTLIGHT_OCT3_ESG.md) — Batch 68 (2026-10-03): Sustainability & ESG AI suite ([instant HTML](APP_NETWORK_SPOTLIGHT_OCT3_ESG.html))
 - [APP_NETWORK_SPOTLIGHT_AI_READINESS_EVAL.md](APP_NETWORK_SPOTLIGHT_AI_READINESS_EVAL.md) — Batch 18: readiness scoring, LLM/RAG evaluation, benchmarks & cost simulation
 - [APP_NETWORK_SPOTLIGHT_SECOPS_RELIABILITY.md](APP_NETWORK_SPOTLIGHT_SECOPS_RELIABILITY.md) — 13-app SecOps & reliability toolchain
