@@ -3,7 +3,8 @@
 One page linking every spotlight, suite doc and news page for the [Zion App Network](https://ziontechgroup.com/zion-app-network/) ([master directory](https://github.com/Zion-support/zion-app-network)). 840+ interlinked AI apps, tools and field playbooks by [Zion Tech Group](https://ziontechgroup.com).
 
 ## Homepage spotlight pages (this repo)
-- [APP_NETWORK_SPOTLIGHT_OCT4_HEALTHCARE.md](APP_NETWORK_SPOTLIGHT_OCT4_HEALTHCARE.md) — NEW Batch 79 (2026-10-04): Healthcare & Life Sciences AI — risk screening, care plans, remote monitoring, documentation, billing audit, engagement ([HTML](APP_NETWORK_SPOTLIGHT_OCT4_HEALTHCARE.html))
+- [APP_NETWORK_SPOTLIGHT_OCT4_EDUCATION.md](APP_NETWORK_SPOTLIGHT_OCT4_EDUCATION.md) — NEW Batch 80 (2026-10-04): Education & Learning AI — curriculum alignment, lesson plans, tutoring analytics, progress tracking, outcome dashboards, assessments ([HTML](APP_NETWORK_SPOTLIGHT_OCT4_EDUCATION.html))
+- [APP_NETWORK_SPOTLIGHT_OCT4_HEALTHCARE.md](APP_NETWORK_SPOTLIGHT_OCT4_HEALTHCARE.md) — Batch 79 (2026-10-04): Healthcare & Life Sciences AI — risk screening, care plans, remote monitoring, documentation, billing audit, engagement ([HTML](APP_NETWORK_SPOTLIGHT_OCT4_HEALTHCARE.html))
 - [APP_NETWORK_SPOTLIGHT_OCT4_DEVSECOPS.md](APP_NETWORK_SPOTLIGHT_OCT4_DEVSECOPS.md) — Batch 78 (2026-10-04): DevSecOps & AI Code Quality — PR review swarm, threat modeling, RAG eval, model routing ([HTML](APP_NETWORK_SPOTLIGHT_OCT4_DEVSECOPS.html))
 - [APP_NETWORK_DISCOVERY_AD.md](APP_NETWORK_DISCOVERY_AD.md) — NEW (2026-10-04): Free AI Discovery benefits — always online, always free, instant dual email results
 - [APP_NETWORK_SPOTLIGHT_OCT04_BATCH74_SUPPORT.md](APP_NETWORK_SPOTLIGHT_OCT04_BATCH74_SUPPORT.md) — Batch 74b (2026-10-04): Support & Reliability AI — ticket triage, SLA breach prediction, tech debt radar, site survey planning
