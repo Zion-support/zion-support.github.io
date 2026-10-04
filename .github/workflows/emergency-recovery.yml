@@ -1,15 +1,13 @@
 name: Emergency Recovery - Minimal Build
+# Manual-only: this diagnostic workflow OOMs/timeouts on the 135k-file tree and must
+# not run on every push (it was failing all jobs and spamming notifications).
+# The production site deploys via GitHub Pages (.nojekyll), not via this workflow.
 "on":
   workflow_dispatch: null
-  push:
-    branches:
-    - main
-    paths-ignore:
-    - '**/STATUS.md'
-    - 'automation/reports/**'
 jobs:
   recovery:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     env:
       NEXT_TELEMETRY_DISABLED: '1'
       NEXT_BUILD_WORKER_COUNT: '1'
@@ -21,9 +19,10 @@ jobs:
     - uses: actions/setup-node@v6.3.0
       with:
         node-version: '22'
+        cache: npm
     - run: rm -rf node_modules .next node
     - run: npm ci --prefer-offline --no-audit --fund=false || npm install --force
     # Turbopack build (Next 16 default) uses a fraction of webpack's memory on this 135k-file tree;
     # webpack build OOMs even with 24GB heap + 16GB swap. Do NOT use `npm run build` (forces --webpack).
     - run: npx next build
-    timeout-minutes: 25
+      timeout-minutes: 25
