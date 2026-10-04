@@ -12,10 +12,10 @@ h1{color:#1d4ed8}form{background:#fff;border:1px solid #e2e8f0;border-radius:14p
 <ul>
 <li><span class="b">Always online &amp; always free</span> — 24/7, no signup, no sales call required.</li>
 <li><span class="b">Instant results by email</span> — your personalized report is emailed to you the moment you submit, and simultaneously to <b>commercial@ziontechgroup.com</b> so a specialist can follow up the same day (optional, free).</li>
-<li><span class="b">Matched to 770+ free apps</span> — answers are mapped to the <a href="https://ziontechgroup.com/zion-app-network/">Zion AI App Network</a> suites and tools.</li>
+<li><span class="b">Matched to 770+ free apps</span> — answers are mapped to the <a href="https://ziontechgroup.com/zion-app-network/">Zion AI App Network</a> suites and tools, including the new <b>Batch-72 Energy, HR & ITOps suite</b>.</li>
 <li><span class="b">Actionable baseline</span> — your score feeds the <a href="https://ziontechgroup.com/ai-roi-calculator/">ROI calculator</a> and stack audit so savings are quantified.</li>
 </ul>
-<p>Explore more: <a href="https://ziontechgroup.com/apps/">All free apps</a> · <a href="https://ziontechgroup.com/apps/spotlight-2026-10-04-discovery.html">Discovery benefits spotlight</a> · <a href="https://ziontechgroup.com/apps/network.html">Network map</a> · <a href="https://ziontechgroup.com/en/plans/">Plans</a></p>
+<p>Explore more: <a href="https://ziontechgroup.com/apps/">All free apps</a> · <a href="https://ziontechgroup.com/app-network-batch72-oct04.html">New: Batch-72 apps</a> · <a href="https://ziontechgroup.com/apps/network.html">Network map</a> · <a href="https://ziontechgroup.com/en/plans/">Plans</a></p>
 </div>
 <h1>🧭 Free AI Discovery Questionnaire</h1>
 <p>Answer 6 quick questions and get <b>instant, personalized recommendations</b> from <a href="https://github.com/Zion-support/zion-network/blob/main/APPS_NETWORK.md">770+ free AI apps</a> by Zion Tech Group. Your results are emailed to you immediately — and to our commercial team so a specialist can help (optional, free).</p>
@@ -23,18 +23,19 @@ h1{color:#1d4ed8}form{background:#fff;border:1px solid #e2e8f0;border-radius:14p
 <input type="hidden" name="_subject" value="New AI Discovery Questionnaire — Zion Tech Group">
 <input type="hidden" name="_template" value="table">
 <input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_autoresponse" value="Thank you for completing the free Zion AI Discovery! Your personalized recommendations are listed below and in this thread. A Zion specialist (commercial@ziontechgroup.com) may follow up with tailored guidance. Explore the apps: https://ziontechgroup.com/apps/ — Plans: https://ziontechgroup.com/en/plans/">
 <label>Your name <input type="text" name="name" required></label>
 <label>Your email (results sent here) <input type="email" name="email" required></label>
 <label>1. Industry
-<select name="industry" required><option value="">Choose…</option><option>Travel & Hospitality</option><option>Retail & Ecommerce</option><option>Healthcare</option><option>Financial Services</option><option>Real Estate</option><option>Education</option><option>Manufacturing & Field Services</option><option>Technology / MSP</option><option>Other</option></select></label>
+<select name="industry" required><option value="">Choose…</option><option>Travel & Hospitality</option><option>Retail & Ecommerce</option><option>Healthcare</option><option>Financial Services</option><option>Real Estate</option><option>Education</option><option>Manufacturing & Field Services</option><option>Energy & Utilities</option><option>Technology / MSP</option><option>Other</option></select></label>
 <label>2. Company size
 <select name="company_size" required><option value="">Choose…</option><option>1–10</option><option>11–50</option><option>51–200</option><option>201–1000</option><option>1000+</option></select></label>
 <label>3. Top priority
-<select name="priority" required><option value="">Choose…</option><option>Grow revenue & sales</option><option>Cut costs / FinOps</option><option>Automate operations</option><option>Customer experience & retention</option><option>Security & compliance</option><option>Sustainability & ESG</option><option>Data & analytics</option></select></label>
+<select name="priority" required><option value="">Choose…</option><option>Grow revenue & sales</option><option>Cut costs / FinOps</option><option>Automate operations</option><option>Customer experience & retention</option><option>Security & compliance</option><option>Sustainability & ESG</option><option>Data & analytics</option><option>People & HR</option></select></label>
 <label>4. Current AI maturity
 <select name="ai_maturity" required><option value="">Choose…</option><option>Just exploring</option><option>Piloting a few tools</option><option>AI in production</option><option>Scaling AI across teams</option></select></label>
 <label>5. Biggest bottleneck
-<select name="bottleneck" required><option value="">Choose…</option><option>Manual repetitive work</option><option>Slow response to customers</option><option>Data silos / reporting</option><option>Rising cloud & IT costs</option><option>Hiring / skills gap</option></select></label>
+<select name="bottleneck" required><option value="">Choose…</option><option>Manual repetitive work</option><option>Slow response to customers</option><option>Data silos / reporting</option><option>Rising cloud & IT costs</option><option>Rising energy costs</option><option>Hiring / skills gap</option></select></label>
 <label>6. Timeline
 <select name="timeline" required><option value="">Choose…</option><option>This month</option><option>This quarter</option><option>This year</option><option>Just researching</option></select></label>
 <button type="submit">Get my free recommendations →</button>
@@ -45,23 +46,26 @@ const MAP={
  "Travel & Hospitality":[["Travel Itinerary Planner","https://ziontechgroup.com/zion-travel-itinerary-planner/"],["Hotel Rate Optimizer","https://ziontechgroup.com/zion-hotel-rate-optimizer/"],["Guest Experience Copilot","https://ziontechgroup.com/zion-guest-experience-copilot/"]],
  "Retail & Ecommerce":[["AI Cart Recovery","https://ziontechgroup.com/ai-cart-recovery/"],["AI Pricing Optimizer","https://ziontechgroup.com/ai-pricing-optimizer/"],["AI Review Insights","https://ziontechgroup.com/ai-review-insights/"]],
  "Grow revenue & sales":[["AI Sales Email Copilot","https://ziontechgroup.com/ai-sales-email-copilot/"],["Proposal Builder AI","https://ziontechgroup.com/proposal-builder-ai/"]],
- "Cut costs / FinOps":[["FinOps Autopilot","https://ziontechgroup.com/finops-autopilot/"],["ROI Calculator","https://ziontechgroup.com/roi-calculator/"]],
+ "Cut costs / FinOps":[["FinOps Autopilot","https://ziontechgroup.com/finops-autopilot/"],["ROI Calculator","https://ziontechgroup.com/roi-calculator/"],["AI Capacity Planner","https://ziontechgroup.com/ai-capacity-planner/"]],
  "Customer experience & retention":[["Churn Radar","https://ziontechgroup.com/churn-radar/"],["NPS Insight Engine","https://ziontechgroup.com/nps-insight-engine/"]],
- "Security & compliance":[["Zion AI Compliance Scanner","https://ziontechgroup.com/zion-ai-compliance-scanner/"],["Vendor Risk Screener","https://ziontechgroup.com/vendor-risk-screener/"]],
- "Sustainability & ESG":[["Carbon Accounting Hub","https://ziontechgroup.com/carbon-accounting-hub/"],["ESG Report Builder","https://ziontechgroup.com/esg-report-builder/"]],
+ "Security & compliance":[["Zion AI Compliance Scanner","https://ziontechgroup.com/zion-ai-compliance-scanner/"],["Vendor Risk Screener","https://ziontechgroup.com/vendor-risk-screener/"],["AI Backup Integrity","https://ziontechgroup.com/ai-backup-integrity/"]],
+ "Sustainability & ESG":[["Carbon Accounting Hub","https://ziontechgroup.com/carbon-accounting-hub/"],["ESG Report Builder","https://ziontechgroup.com/esg-report-builder/"],["Solar ROI Optimizer","https://ziontechgroup.com/solar-roi-optimizer/"],["Building Efficiency Auditor","https://ziontechgroup.com/building-efficiency-auditor/"]],
+ "People & HR":[["Recruiting Screening AI","https://ziontechgroup.com/recruiting-screening-ai/"],["HR Onboarding Copilot","https://ziontechgroup.com/hr-onboarding-copilot/"],["Employee Sentiment Pulse","https://ziontechgroup.com/employee-sentiment-pulse/"],["Shift Scheduler AI","https://ziontechgroup.com/shift-scheduler-ai/"]],
  "Healthcare":[["Healthcare Workflow Copilot","https://ziontechgroup.com/healthcare-workflow-copilot/"],["AI Health Tracker","https://ziontechgroup.com/ai-health-tracker/"],["Patient Intake Automation","https://ziontechgroup.com/patient-intake-automation/"]],
  "Financial Services":[["AI Fraud Prevention","https://ziontechgroup.com/ai-fraud-prevention/"],["Cashflow Forecaster AI","https://ziontechgroup.com/cashflow-forecaster-ai/"],["Compliance Evidence Collector","https://ziontechgroup.com/compliance-evidence-collector/"]],
  "Real Estate":[["AI Real Estate Hub","https://ziontechgroup.com/ai-real-estate-hub/"],["AI Contract Guardian","https://ziontechgroup.com/zion-ai-contract-guardian/"],["AI Deep Research","https://ziontechgroup.com/ai-deep-research/"]],
  "Education":[["Lesson Plan Generator","https://ziontechgroup.com/lesson-plan-generator/"],["Student Progress Tracker","https://ziontechgroup.com/student-progress-tracker/"],["AI Education Platform","https://ziontechgroup.com/ai-education-platform/"]],
  "Manufacturing & Field Services":[["AI Field Dispatch Optimizer","https://ziontechgroup.com/zion-ai-field-dispatch-optimizer/"],["AI Spare Parts Matcher","https://ziontechgroup.com/zion-ai-spare-parts-matcher/"],["Warranty Lens","https://ziontechgroup.com/warranty-lens/"]],
- "Technology / MSP":[["SLA Breach Predictor","https://ziontechgroup.com/sla-breach-predictor/"],["AI Ticket Triage","https://ziontechgroup.com/zion-ai-ticket-triage/"],["AI ROI Tracker","https://ziontechgroup.com/ai-roi-tracker/"]],
+ "Energy & Utilities":[["Energy Consumption Forecaster","https://ziontechgroup.com/energy-consumption-forecaster/"],["Grid Demand Balancer","https://ziontechgroup.com/grid-demand-balancer/"],["Solar ROI Optimizer","https://ziontechgroup.com/solar-roi-optimizer/"],["Building Efficiency Auditor","https://ziontechgroup.com/building-efficiency-auditor/"]],
+ "Technology / MSP":[["SLA Breach Predictor","https://ziontechgroup.com/sla-breach-predictor/"],["AI Ticket Triage","https://ziontechgroup.com/zion-ai-ticket-triage/"],["AI ROI Tracker","https://ziontechgroup.com/ai-roi-tracker/"],["AI Infrastructure Monitor","https://ziontechgroup.com/ai-infrastructure-monitor/"],["AI Cluster Manager","https://ziontechgroup.com/ai-cluster-manager/"]],
  "Other":[["AI ROI Calculator","https://ziontechgroup.com/ai-roi-calculator/"],["Ops Runbook AI","https://ziontechgroup.com/ops-runbook-ai/"],["LLM Cost Calculator","https://ziontechgroup.com/llm-cost-calculator/"]],
- "Automate operations":[["Ops Runbook AI","https://ziontechgroup.com/ops-runbook-ai/"],["AI Ticket Triage","https://ziontechgroup.com/zion-ai-ticket-triage/"]],
+ "Automate operations":[["Ops Runbook AI","https://ziontechgroup.com/ops-runbook-ai/"],["AI Ticket Triage","https://ziontechgroup.com/zion-ai-ticket-triage/"],["Shift Scheduler AI","https://ziontechgroup.com/shift-scheduler-ai/"]],
  "Data & analytics":[["Data Pipeline Doctor","https://ziontechgroup.com/data-pipeline-doctor/"],["Stream Analytics Hub","https://ziontechgroup.com/stream-analytics-hub/"]]
 };
+const BOT={"Rising energy costs":[["Energy Consumption Forecaster","https://ziontechgroup.com/energy-consumption-forecaster/"],["Grid Demand Balancer","https://ziontechgroup.com/grid-demand-balancer/"]],"Hiring / skills gap":[["Recruiting Screening AI","https://ziontechgroup.com/recruiting-screening-ai/"],["HR Onboarding Copilot","https://ziontechgroup.com/hr-onboarding-copilot/"]],"Rising cloud & IT costs":[["AI Capacity Planner","https://ziontechgroup.com/ai-capacity-planner/"],["AI Infrastructure Monitor","https://ziontechgroup.com/ai-infrastructure-monitor/"]]};
 document.getElementById('q').addEventListener('submit',function(e){
- const f=e.target,ind=f.industry.value,pri=f.priority.value;
- const recs=[...(MAP[ind]||[]),...(MAP[pri]||[])].slice(0,5);
+ const f=e.target,ind=f.industry.value,pri=f.priority.value,bot=f.bottleneck.value;
+ const recs=[...(MAP[ind]||[]),...(MAP[pri]||[]),...(BOT[bot]||[])].filter((v,i,a)=>a.findIndex(x=>x[0]===v[0])===i).slice(0,6);
  const html=recs.length?('<ul>'+recs.map(r=>`<li><a class="b" href="${r[1]}">${r[0]}</a></li>`).join('')+'</ul>'):'<p>Explore the full <a href="https://ziontechgroup.com/zion-app-network/">app network</a>.</p>';
  document.getElementById('recs').innerHTML=html;
  const hidden=document.createElement('input');hidden.type='hidden';hidden.name='recommended_apps';
