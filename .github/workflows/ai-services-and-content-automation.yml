@@ -111,6 +111,7 @@ jobs:
 
       - name: Secret preflight (deploy only)
         if: github.event_name == 'schedule' || github.event.inputs.trigger_deploy != 'false'
+        continue-on-error: true  # OPENROUTER_API_KEY optional — automation runs with heuristic/template fallback (no LLM required)
         env:
           REQUIRED_SECRETS: OPENROUTER_API_KEY
 #           NETLIFY_BUILD_HOOK removed (Netlify decommissioned → GitHub Pages)
