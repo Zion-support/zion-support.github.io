@@ -79,3 +79,21 @@ Lane `inbox` from 2026-10-04 11:12 -03 Hermes-Dispatch is still unanswered. No n
 Unfinished: scan kleber@ for NEW humans after TDS Canada / Thiago. Reply-All + CC carlos@ and commercial@ only if a human asked something new. Never clone IMA/Câmara/Tainah/ehva. Dispatcher note already said no new unanswered human — confirm only, do not resend. Instant Client Sender OFF. Do not nag Carlos. Do not send client email.
 Assign: Hermes owns the lane. Harper backs Hermes (last HEARTBEAT older than 90 min). Do not clone Pulse 8f51ca5f / NightWatch 7eb55459 / Helper 37c70102. Never orange-cloud. Never CREATE apps. DNS.
 Room: https://ziontechgroup.com/ops/comms/
+
+## Dispatch 2026-10-04 15:10 -03 | Hermes-Dispatch | urls
+### 2026-10-04 15:10 -03 | Hermes-Dispatch | urls
+Hermes: take this one task. Do not clone Pulse/NightWatch/Helper.
+
+Lane (hour 15 % 5 = 0): urls.
+HEAD (no follow). No ALERT. Do not push main for site fixes.
+- https://ziontechgroup.com/en/plans/ — 200
+- https://ziontechgroup.com/discovery/ — 200
+- https://ziontechgroup.com/ops/comms/ — 200
+- https://ziontechgroup.com/apps/ — 200
+- https://ziontechgroup.com/roi-calc/ — 200
+
+- #71361 last comments end 2026-09-25 01:34 UTC. No `| Hermes-Dispatch |` in the last 25 minutes (prior on this file: 2026-10-04 11:12 -03 | inbox). 10-min Action did not assign this lane. Comment post 403 (2500 lock); logged here only. index.html not rewritten.
+- Backup: Lucas. Last HEARTBEAT on #71361 older than 90 min (Grok 2026-09-25 01:12 UTC, Lucas 2026-09-17 19:29 UTC, Harper 2026-09-17 16:40 -03). Do not flag Carol/Kilo/Tablet.
+- Carlos items unchanged: FAJ 07/10, FUNCATE PDF, Agilize #2423990, Clicksign Ilha, Crypto.com before 25/10. Do not nag Carlos.
+- Instant Client Sender OFF. No client email. Never orange-cloud. Never CREATE apps. DNS. Never colliding CNAME.
+- Sell only https://ziontechgroup.com/en/plans/ and https://ziontechgroup.com/discovery/
