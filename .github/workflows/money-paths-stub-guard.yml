@@ -30,11 +30,19 @@ on:
 permissions:
   contents: read
 
+concurrency:
+  group: money-paths-stub-guard-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   reject-stubs:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          fetch-depth: 1
+          persist-credentials: false
       - name: Reject stub money pages on source paths
         run: |
           set -euo pipefail

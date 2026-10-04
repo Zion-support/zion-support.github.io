@@ -5,11 +5,9 @@ permissions:
   security-events: write
   actions: read
 
+# 2026-10-04: push/PR triggers removed (full JS CodeQL on this 135k-file tree
+# timed out/failed on almost every bot push). Weekly + manual only.
 "on":
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
   schedule:
     - cron: '0 4 * * 1'
   workflow_dispatch:
@@ -22,7 +20,7 @@ jobs:
   analyze:
     name: Analyze
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 60
 
 
     strategy:
@@ -33,6 +31,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          persist-credentials: false
 
       - name: Initialize CodeQL
         uses: github/codeql-action/init@c10b8064de6f491fea524254123dbe5e09572f13 # v4.35.1
@@ -52,8 +52,10 @@ jobs:
       - name: Summary
         if: always()
         run: |
-          echo "## CodeQL Security Analysis" >> "$GITHUB_STEP_SUMMARY"
-          echo "" >> "$GITHUB_STEP_SUMMARY"
-          echo "- **Language:** ${{ matrix.language }}" >> "$GITHUB_STEP_SUMMARY"
-          echo "- **Status:** Completed" >> "$GITHUB_STEP_SUMMARY"
-          echo "- **Queries:** security-and-quality" >> "$GITHUB_STEP_SUMMARY"
+          {
+            echo "## CodeQL Security Analysis"
+            echo ""
+            echo "- **Language:** ${{ matrix.language }}"
+            echo "- **Status:** Completed"
+            echo "- **Queries:** security-and-quality"
+          } >> "$GITHUB_STEP_SUMMARY"

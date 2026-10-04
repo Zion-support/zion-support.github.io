@@ -1,12 +1,13 @@
 name: Stale Issues & PRs
 
 permissions:
+  contents: read
   issues: write
   pull-requests: write
 
 "on":
   schedule:
-    - cron: '0 3 * * *'
+    - cron: '0 3 * * 1'
   workflow_dispatch:
 
 concurrency:
@@ -20,7 +21,7 @@ jobs:
     timeout-minutes: 10
     steps:
       - name: Stale action
-        uses: actions/stale@v10
+        uses: actions/stale@5f858e3efba33a5ca4407a664cc011ad407f2008 # v10.1.0
         with:
           stale-issue-message: >
             This issue has been automatically marked as stale because it has not had
@@ -45,9 +46,11 @@ jobs:
       - name: Summary
         if: always()
         run: |
-          echo "## Stale Issues & PRs Cleanup" >> "$GITHUB_STEP_SUMMARY"
-          echo "" >> "$GITHUB_STEP_SUMMARY"
-          echo "- Marks issues stale after **30 days** of inactivity" >> "$GITHUB_STEP_SUMMARY"
-          echo "- Closes stale issues after **14 days**" >> "$GITHUB_STEP_SUMMARY"
-          echo "- Closes stale PRs after **7 days**" >> "$GITHUB_STEP_SUMMARY"
-          echo "- Exempt labels: pinned, security, bug" >> "$GITHUB_STEP_SUMMARY"
+          {
+            echo "## Stale Issues & PRs Cleanup"
+            echo ""
+            echo "- Marks issues stale after **30 days** of inactivity"
+            echo "- Closes stale issues after **14 days**"
+            echo "- Closes stale PRs after **7 days**"
+            echo "- Exempt labels: pinned, security, bug"
+          } >> "$GITHUB_STEP_SUMMARY"

@@ -1,26 +1,25 @@
 name: Continuous Pages Deploy
 
-# Commercial Pages publisher. public/ is source of truth (prepare-pages-out.sh).
-# Do NOT rebuild Next.js here — that 30–70m job held the concurrency slot and
-# let STATUS.md / CI / dispatch floods cancel the #71405 Family A publish.
-#
-# Hermes Monitor (ops/comms/STATUS.md) and war-room pulse outside public/
-# never match `paths` below, so they never share the deploy slot.
-# Avoid paths+paths-ignore together — GitHub rejects that combo (YAML fail).
+# Commercial Pages publisher on push to main. public/ is source of truth
+# (scripts/prepare-pages-out.sh). Do NOT rebuild Next.js here.
+# Shares the `pages` concurrency group with static-deploy.yml: one publish at
+# a time, never cancelled mid-flight; GitHub keeps only the newest pending run.
+# 2026-10-04 hardening: pinned actions, publish guard
+# (scripts/pages-publish-guard.sh) strips ops/, internal *.md, .netrc and
+# report JSONs from out/ and fails on missing/stub key pages.
 # FIELD-SERVICES LOCK. No invented Stripe/prices. Apollo HOLD.
 
 on:
   push:
     branches: [main]
-    # GitHub forbids paths + paths-ignore on the same event (0s workflow failure).
-    # Allowlist only commercial publish inputs. Negate war-room pulse under public/ops.
-    # Hermes STATUS.md lives at ops/comms/STATUS.md and is not in this list.
+    # GitHub forbids paths + paths-ignore on the same event.
     paths:
       - 'public/**'
       - '!public/ops/**'
       - 'index.html'
       - '_redirects'
       - 'scripts/prepare-pages-out.sh'
+      - 'scripts/pages-publish-guard.sh'
       - 'docs/**'
       - 'assets/**'
       - '.github/workflows/gh-pages.yml'
@@ -28,28 +27,26 @@ on:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 concurrency:
-  # Keep this group name so a merged commercial run can preempt the in-flight
-  # Next.js Continuous Pages Deploy (same group). STATUS/Hermes never join
-  # because they are filtered out of on.push paths above.
-  # cancel-in-progress: latest commercial push wins (prepare is ~1m, not 60m).
-  group: continuous-pages-deploy-${{ github.ref }}
-  cancel-in-progress: true
+  group: pages
+  cancel-in-progress: false
 
 jobs:
   deploy:
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
-    timeout-minutes: 15
-
+    timeout-minutes: 20
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
           fetch-depth: 1
+          persist-credentials: false
 
       - name: Guard main ref
         run: |
@@ -63,11 +60,14 @@ jobs:
       - name: Prepare pages from public/
         run: bash scripts/prepare-pages-out.sh
 
+      - name: Publish guard (strip internal content, assert key pages)
+        run: bash scripts/pages-publish-guard.sh out
+
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3.0.1
         with:
           path: out
 
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4.0.5
