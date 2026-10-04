@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Free AI Discovery Questionnaire — Instant Results | Zion Tech Group</title>
+<meta name="description" content="Free, online, 2-minute AI & automation discovery questionnaire. Get instant tailored app recommendations from the Zion Apps Network — results emailed to you and our team immediately.">
+<link rel="canonical" href="https://ziontechgroup.com/discovery/quiz/">
+<meta name="robots" content="index,follow">
+<meta property="og:title" content="Free AI Discovery Questionnaire — Instant Results | Zion Tech Group">
+<meta property="og:description" content="Answer 6 questions, get instant tailored recommendations from 100+ Zion apps. 100% free, 100% online.">
+<meta property="og:url" content="https://ziontechgroup.com/discovery/quiz/">
+<meta property="og:type" content="website">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"Free AI Discovery Questionnaire","description":"Free online questionnaire with instant tailored app recommendations from the Zion Apps Network.","url":"https://ziontechgroup.com/discovery/quiz/","provider":{"@type":"Organization","name":"Zion Tech Group","url":"https://ziontechgroup.com","email":"commercial@ziontechgroup.com"},"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<link rel="stylesheet" href="/assets/css/site.css">
+<style>
+.q{background:var(--card,#fff);border:1px solid #e2e8f0;border-radius:14px;padding:18px;margin:14px 0}
+.q h3{margin:0 0 10px}
+.q label{display:block;padding:8px 10px;border:1px solid #e2e8f0;border-radius:10px;margin:6px 0;cursor:pointer}
+.q label:hover{background:#f1f5f9}
+#result{display:none;border:2px solid #0ea5e9;border-radius:14px;padding:20px;margin:20px 0}
+.appcard{border:1px solid #e2e8f0;border-radius:10px;padding:12px;margin:8px 0}
+input[type=text],input[type=email]{width:100%;padding:10px;border:1px solid #cbd5e1;border-radius:8px;margin:4px 0 12px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav class="top" aria-label="Main">
+  <a class="brand" href="/">Zion Tech Group</a>
+  <a href="/apps/">Apps Network</a>
+  <a href="/services/">Services</a>
+  <a href="/plans/">Plans</a>
+  <a href="/discovery/">Discovery</a>
+  <a href="/contact/">Contact</a>
+</nav>
+<p class="crumb"><a href="/">Home</a> / <a href="/discovery/">Discovery</a> / Free Questionnaire</p>
+<span class="badge">100% Free · 100% Online · Instant Results</span>
+<h1>Free AI Discovery Questionnaire</h1>
+<p class="lead">Answer 6 quick questions and get <strong>instant, tailored recommendations</strong> from the <a href="/apps/">Zion Apps Network</a>. Your results are shown on-screen immediately and emailed to you and our commercial team (<a href="mailto:commercial@ziontechgroup.com">commercial@ziontechgroup.com</a>) the moment you finish. No payment, no signup, no waiting.</p>
+
+<form id="quiz" onsubmit="return false">
+<div class="q"><h3>1. Your name</h3><input type="text" id="name" placeholder="Jane Doe" required></div>
+<div class="q"><h3>2. Your work email <small>(results are sent here + to our commercial team)</small></h3><input type="email" id="email" placeholder="jane@company.com" required></div>
+<div class="q"><h3>3. Which area hurts the most?</h3>
+<label><input type="radio" name="area" value="support"> Customer support & tickets</label>
+<label><input type="radio" name="area" value="sales"> Sales, pipeline & proposals</label>
+<label><input type="radio" name="area" value="ops"> IT operations & reliability</label>
+<label><input type="radio" name="area" value="finance"> Finance, costs & FinOps</label>
+<label><input type="radio" name="area" value="data"> Data, analytics & reporting</label>
+<label><input type="radio" name="area" value="security"> Security & compliance</label></div>
+<div class="q"><h3>4. Roughly how many hours/week does your team lose to manual work in that area?</h3>
+<label><input type="radio" name="hours" value="5"> Under 5h</label>
+<label><input type="radio" name="hours" value="15"> 5–20h</label>
+<label><input type="radio" name="hours" value="40"> 20–40h</label>
+<label><input type="radio" name="hours" value="80"> 40h+</label></div>
+<div class="q"><h3>5. What tools do you already use?</h3>
+<label><input type="checkbox" name="tools" value="CRM"> CRM (HubSpot/Salesforce)</label>
+<label><input type="checkbox" name="tools" value="ITSM"> ITSM / ticketing</label>
+<label><input type="checkbox" name="tools" value="Email"> Email + spreadsheets</label>
+<label><input type="checkbox" name="tools" value="ERP"> ERP / finance systems</label></div>
+<div class="q"><h3>6. What outcome do you want first?</h3>
+<label><input type="radio" name="goal" value="roi"> Measurable ROI fast (30–90 days)</label>
+<label><input type="radio" name="goal" value="risk"> Reduce risk & compliance gaps</label>
+<label><input type="radio" name="goal" value="scale"> Scale without hiring</label>
+<label><input type="radio" name="goal" value="visibility"> Visibility & dashboards</label></div>
+<div class="cta"><button class="btn" onclick="submitQuiz()" style="cursor:pointer;border:0;font-size:1rem">Get my free instant results →</button></div>
+</form>
+
+<div id="result">
+  <h2>🎯 Your Discovery Results <span id="rname"></span></h2>
+  <p id="summary"></p>
+  <div id="apps"></div>
+  <p><strong>Next step (optional):</strong> a free 30-min readout with our team, or go straight to the <a href="/apps/">full Apps Network</a>.</p>
+  <div class="cta">
+    <a class="btn" id="mailtoBtn" href="#">📧 Send results to me + commercial@ziontechgroup.com</a>
+    <a class="btn alt" href="/apps/">Explore all apps</a>
+    <a class="btn alt" href="/plans/">Plans</a>
+  </div>
+  <p class="muted" id="sendStatus"></p>
+</div>
+
+<section>
+<h2>Why the free Discovery?</h2>
+<div class="grid">
+  <div class="card"><h3>Always online, always free</h3><p>No paywall, no scheduling — the questionnaire is live 24/7 and costs $0.</p></div>
+  <div class="card"><h3>Instant results</h3><p>Recommendations appear on-screen the second you finish — and are emailed to you and our commercial team immediately.</p></div>
+  <div class="card"><h3>Real apps, not slides</h3><p>Every recommendation links to a working app on this domain — try it before you talk to us.</p></div>
+  <div class="card"><h3>Honest next step</h3><p>If automation isn't worth it yet, we say so. If it is: Consulting $499 → Starter $2,500 → Growth $8,000/mo.</p></div>
+</div>
+</section>
+</div>
+<script>
+const MAP={
+ support:[["AI Customer Support Pro","/ai-customer-support-pro/","Omnichannel AI support automation"],["AI Email Triage","/ai-email-triage/","Auto-classify and route inbound email"],["Agent SLA Monitor","/agent-sla-monitor/","Track SLA risk per queue"],["Prompt Library","/prompt-library/","Copy-ready support prompts"]],
+ sales:[["AI Appointment Setting Agent","/ai-appointment-setting-agent/","Books meetings from inbound leads"],["AI Customer 360","/ai-customer-360/","Unified customer view for reps"],["ROI Calculator","/roi-calc/","Quantify pipeline hours saved"],["Prompt Library","/prompt-library/","Sales outreach prompts"]],
+ ops:[["Incident Timeline Reconstructor","/incident-timeline-reconstructor/","Rebuild incidents from logs"],["Log Anomaly Spotter","/log-anomaly-spotter/","Detect anomalies before outage"],["Ops Runbook AI","/ops-runbook-ai/","Guided remediation runbooks"],["API Health Probe","/api-health-probe/","Endpoint uptime & latency checks"]],
+ finance:[["FinOps Estimator","/finops-estimator/","Sketch existing cloud/tool spend"],["Cost Anomaly Detector","/cost-anomaly-detector/","Catch spend spikes early"],["LLM Cost Calculator","/llm-cost-calculator/","Budget AI token spend"],["ROI Calculator","/roi-calc/","Hours leaked vs official SKUs"]],
+ data:[["AI Data Analytics","/ai-data-analytics/","Dashboards and BI with AI"],["Data Pipeline Doctor","/data-pipeline-doctor/","Diagnose broken pipelines"],["Stack Audit","/stack-audit/","Ten-check data stack readiness"],["AI Dashboard","/ai-dashboard/","Unified metrics view"]],
+ security:[["AI Cybersecurity Threat Detection","/ai-cybersecurity-threat-detection/","Real-time threat detection"],["AI Fraud Detection","/ai-fraud-detection/","ML-based fraud prevention"],["K8s Pod Security Scanner","/k8s-pod-security-scanner/","Cluster misconfig scan"],["SSL Config Auditor","/ssl-config-auditor/","TLS posture checks"]]};
+function submitQuiz(){
+ const name=document.getElementById('name').value.trim(),email=document.getElementById('email').value.trim();
+ const area=(document.querySelector('input[name=area]:checked')||{}).value;
+ const hours=(document.querySelector('input[name=hours]:checked')||{}).value;
+ const goal=(document.querySelector('input[name=goal]:checked')||{}).value;
+ if(!name||!email||!area||!hours||!goal){alert('Please answer all questions (name, email, area, hours, goal).');return;}
+ const tools=[...document.querySelectorAll('input[name=tools]:checked')].map(x=>x.value).join(', ')||'none listed';
+ const recs=MAP[area];
+ document.getElementById('rname').textContent='— '+name;
+ const yearly=hours*52*45;
+ document.getElementById('summary').innerHTML=`Area: <strong>${area}</strong> · Manual load: ~${hours}h/week · Goal: ${goal}. At a $45/h blended rate that's roughly <strong>$${yearly.toLocaleString()}/year</strong> of capacity on the table. Recommended apps:`;
+ document.getElementById('apps').innerHTML=recs.map(r=>`<div class="appcard"><strong>${r[0]}</strong> — ${r[2]}<br><a href="${r[1]}">Open the app →</a> · <a href="/apps/">Apps Network</a></div>`).join('');
+ const body=`Free Discovery Questionnaire results%0D%0A%0D%0AName: ${encodeURIComponent(name)}%0D%0AEmail: ${encodeURIComponent(email)}%0D%0AArea: ${area}%0D%0AManual hours/week: ${hours}%0D%0ATools: ${encodeURIComponent(tools)}%0D%0AGoal: ${goal}%0D%0AEstimated capacity at stake: $${yearly.toLocaleString()}/year%0D%0A%0D%0ARecommended apps:%0D%0A${encodeURIComponent(recs.map(r=>`- ${r[0]}: https://ziontechgroup.com${r[1]}`).join('\n'))}%0D%0A%0D%0ASource: https://ziontechgroup.com/discovery/quiz/`;
+ document.getElementById('mailtoBtn').href=`mailto:commercial@ziontechgroup.com?cc=${encodeURIComponent(email)}&subject=${encodeURIComponent('Discovery results — '+name)}&body=${body}`;
+ document.getElementById('result').style.display='block';
+ document.getElementById('result').scrollIntoView({behavior:'smooth'});
+ try{fetch('https://formsubmit.co/ajax/commercial@ziontechgroup.com',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({name,email,_cc:email,subject:'Discovery results — '+name,area,hours,tools,goal,estimate:'$'+yearly.toLocaleString()+'/year',recommendations:recs.map(r=>r[0]+' https://ziontechgroup.com'+r[1]).join('; ')})}).then(r=>{document.getElementById('sendStatus').textContent='✅ A copy was sent to our commercial team. You can also use the email button above to send the full report to yourself (CC commercial).';}).catch(()=>{document.getElementById('sendStatus').textContent='Use the email button above to send your results to yourself and our commercial team.';});}catch(e){}
+}
+</script>
+</body>
+</html>
