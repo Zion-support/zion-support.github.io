@@ -2,7 +2,7 @@ import { } from 'next/navigation';
 
 export const metadata = {
   title: "EdTech Adaptive Learning Engine - Zion Tech Group",
-  description: "Personalized curricula, progress tracking, and assessments. Adapts to each student\'s learning style and pace.",
+  description: "Personalized curricula, progress tracking, and assessments. Adapts to each student's learning style and pace.",
   alternates: {
     canonical: `https://ziontechgroup.com/services/w129-edtech-adaptive`
   }
