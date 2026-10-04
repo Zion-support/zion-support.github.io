@@ -37,6 +37,7 @@ Do not create extra labels.
 - Offline = no named comment for 90 minutes (watchdog checks every 5 min)
 - Watchers: agent-presence-watchdog.yml + Pulse 8f51ca5f + Worker 2ff9fef3
 - static-deploy.yml paths-ignores STATUS.md so Hermes Monitor does not cancel Pages (commit e3dc41fb)
+- #71361 comments locked at 2500 (last comment 2026-09-25 01:34 UTC). New lanes log on this file and the issue body.
 
 ## Checkpoint 2026-09-17 17:26 -03
 Already SENT today — do not clone:
@@ -77,21 +78,15 @@ HubSpot live named contacts only — IDs live on #71361, not here.
 - War Room migrated to Notion: Zion War Room — CEO HQ
 - API keys sourced from Google Sheet "API KEYS" spreadsheet (ID: 1UMZYaN13T_UdkER2xi7PDMqiNgT8gPBH_3FJ2qrlZq8)
 
-## Dispatch 2026-10-04 02:10 -03 | Hermes-Dispatch | carlos
-### 2026-10-04 02:10 -03 | Hermes-Dispatch | carlos
+## Dispatch 2026-10-04 04:13 -03 | Hermes-Dispatch | room
+### 2026-10-04 04:13 -03 | Hermes-Dispatch | room
 Hermes: take this one task. Do not clone Pulse/NightWatch/Helper.
 
-Task (carlos): Help Carlos without mailing him a brief. Log blockers on this issue only. Instant Client Sender OFF. Do not nag Carlos. Do not send client email.
-
-Carlos owns (his clicks, not another brief):
-1. FAJ minuta — vence 07/10. One thread. Parque includes HPE MSA2060 + segundo storage. Gyovanna asked one email only. Do not send Discovery on this live ticket.
-2. FUNCATE PDF to Paulo Blotto on the live thread. Do not re-send.
-3. Agilize Praia Digital Imóveis ticket #2423990 (3 competências) — PIX / contract risk. Amount stays off this public page. Two Zion replies already — no third.
-4. Clicksign Ilha envelope 20260915 — Carlos is missing witness.
-5. Crypto.com BRL withdraw/convert before 25/10.
+Lane (hour 4 % 5 = 4): room.
+Stale live fact: https://ziontechgroup.com/ops/comms/ still says last heartbeat 2026-10-01 18:20 UTC and live status 2026-09-20. Published CEO-OPS.md still showed Dispatch 2026-10-03 19:11; main already had 2026-10-04 02:10 carlos. Patched this file only. index.html not rewritten. static-deploy was not queued and not in progress at dispatch.
 
 - #71361 comment create returned 403 (commenting disabled above 2500 comments; last comment 2026-09-25T01:34:15Z). Lane logged here instead. No client email sent.
-- index.html not rewritten. No DNS. No orange-cloud.
-- Backup: Harper. Last HEARTBEAT on #71361 is 2026-09-17 16:40 -03, older than 90 min. Grok last HEARTBEAT 2026-09-25 01:12 UTC is also stale. Do not flag Carol/Kilo/Tablet.
-- Prior lane: 2026-10-03 19:11 -03 | Hermes-Dispatch | room (also 403).
+- Backup: Lucas. Last HEARTBEAT on #71361 is 2026-09-17 19:29 UTC, older than 90 min. Grok last HEARTBEAT 2026-09-25 01:12 UTC and Harper 2026-09-17 16:40 -03 are also stale. Do not flag Carol/Kilo/Tablet.
+- Prior lane: 2026-10-04 02:10 -03 | Hermes-Dispatch | carlos (also 403). Carlos items unchanged: FAJ 07/10, FUNCATE PDF, Agilize #2423990, Clicksign Ilha, Crypto.com before 25/10. Do not nag Carlos.
+- Instant Client Sender OFF. Never orange-cloud. Never CREATE apps. DNS. Never colliding CNAME.
 - Sell only https://ziontechgroup.com/en/plans/ and https://ziontechgroup.com/discovery/
