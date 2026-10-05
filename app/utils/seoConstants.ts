@@ -1,8 +1,11 @@
 // app/utils/seoConstants.ts
+
 export const SITE_URL = 'https://ziontechgroup.com';
+export const SITE_NAME = 'Zion Tech Group';
 
 export const CONTACT_INFO = {
   email: 'kleber@ziontechgroup.com',
+  salesEmail: 'commercial@ziontechgroup.com',
   phone: '+1 302 464 0950',
   address: {
     street: '364 E Main St STE 1008',
@@ -19,7 +22,7 @@ export const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.png`;
 export const ORGANIZATION_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
-  name: 'Zion Tech Group',
+  name: SITE_NAME,
   url: SITE_URL,
   logo: `${SITE_URL}/logo.png`,
   contactPoint: {
@@ -55,7 +58,7 @@ export const STRUCTURED_DATA = {
   ORGANIZATION: {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'Zion Tech Group',
+    name: SITE_NAME,
     url: SITE_URL,
     logo: `${SITE_URL}/logo.png`,
     contactPoint: {
@@ -83,7 +86,7 @@ export const STRUCTURED_DATA = {
   WEBSITE: {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: 'Zion Tech Group',
+    name: SITE_NAME,
     url: SITE_URL,
     potentialAction: {
       '@type': 'SearchAction',
