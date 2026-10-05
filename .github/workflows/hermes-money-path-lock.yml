@@ -59,8 +59,23 @@ jobs:
 
           check public/services/ai-automation/index.html
           check services/ai-automation/index.html
-          for f in public/plans/index.html plans/index.html public/discovery/index.html discovery/index.html; do
+          # Deployed money pages (prepare-pages-out.sh builds from public/) are fail-closed.
+          for f in public/plans/index.html public/discovery/index.html; do
             if [ -f "$f" ]; then check "$f"; fi
+          done
+          # Legacy root mirrors are NOT deployed: warn only. Previously a NO_PLINK on the
+          # root discovery/index.html mirror forced an ai-automation restore (reverting a
+          # healthy page) and failed every money-path push.
+          for f in plans/index.html discovery/index.html; do
+            if [ -f "$f" ]; then
+              saved=$need_restore
+              out=$(check "$f"; echo "rc=$need_restore")
+              echo "$out" | grep -v '^rc=' || true
+              if echo "$out" | grep -q '^rc=1' && [ "$saved" -eq 0 ]; then
+                echo "::warning::legacy mirror $f failed money check (not deployed; not restoring)"
+              fi
+              need_restore=$saved
+            fi
           done
 
           # Always block Hermes Agent money-path commits that look like service sync
@@ -96,4 +111,7 @@ jobs:
             exit 1
           fi
           git commit -m "lock(money): restore ai-automation pay HTML after Hermes stub (blob ${GOOD_BLOB:0:7})"
+          # Avoid non-fast-forward rejects when another commit lands during the run.
+          git fetch --depth=50 origin main
+          git rebase origin/main
           git push origin HEAD:main
