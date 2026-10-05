@@ -30,7 +30,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 5
+          fetch-depth: 50
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: Fail-closed restore money paths if stubbed
         env:
@@ -45,22 +45,28 @@ jobs:
           echo "head author=${author_name} <${author_email}> msg=${msg}"
 
           need_restore=0
+          # check <file> <require_plink 0|1>
+          # PLINK (ai-automation Stripe link) is only required on the ai-automation
+          # pay pages. plans/discovery use their own Stripe links, so requiring it
+          # there caused false NO_PLINK restores that clobbered healthy ai-automation HTML.
           check() {
-            local f="$1"
-            if [ ! -f "$f" ]; then echo "MISSING $f"; need_restore=1; return; fi
+            local f="$1" need_plink="${2:-0}"
+            if [ ! -f "$f" ]; then echo "MISSING $f"; return 1; fi
             local sz; sz=$(wc -c < "$f" | tr -d ' ')
-            if [ "$sz" -lt "$MIN" ]; then echo "STUB $f (${sz}B)"; need_restore=1; return; fi
-            if ! grep -Fq "$PLINK" "$f"; then echo "NO_PLINK $f"; need_restore=1; return; fi
+            if [ "$sz" -lt "$MIN" ]; then echo "STUB $f (${sz}B)"; return 1; fi
+            if [ "$need_plink" = "1" ] && ! grep -Fq "$PLINK" "$f"; then echo "NO_PLINK $f"; return 1; fi
             if grep -Fi 'http-equiv="refresh"' "$f" >/dev/null || grep -Fq 'PLACEHOLDER' "$f"; then
-              echo "REDIRECT_STUB $f"; need_restore=1; return
+              echo "REDIRECT_STUB $f"; return 1
             fi
             echo "OK $f (${sz}B)"
           }
 
-          check public/services/ai-automation/index.html
-          check services/ai-automation/index.html
+          # Only the ai-automation pair can be restored from GOOD_BLOB.
+          check public/services/ai-automation/index.html 1 || need_restore=1
+          check services/ai-automation/index.html 1 || need_restore=1
+          # plans/discovery: report-only warnings (no blob to restore them from).
           for f in public/plans/index.html plans/index.html public/discovery/index.html discovery/index.html; do
-            if [ -f "$f" ]; then check "$f"; fi
+            if [ -f "$f" ]; then check "$f" 0 || echo "::warning::money page $f looks stubbed; manual review needed"; fi
           done
 
           # Always block Hermes Agent money-path commits that look like service sync
@@ -92,8 +98,16 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add public/services/ai-automation/index.html services/ai-automation/index.html
           if git diff --staged --quiet; then
-            echo "Nothing to commit after restore attempt"
-            exit 1
+            echo "Already matches good blob; nothing to commit"
+            exit 0
           fi
           git commit -m "lock(money): restore ai-automation pay HTML after Hermes stub (blob ${GOOD_BLOB:0:7})"
-          git push origin HEAD:main
+          # main is busy (many bots push); rebase + retry instead of failing on non-fast-forward
+          for i in 1 2 3 4 5; do
+            if git push origin HEAD:main; then exit 0; fi
+            echo "push rejected (attempt $i); rebasing on origin/main"
+            git fetch origin main
+            git rebase origin/main || { git rebase --abort; echo "::error::rebase conflict"; exit 1; }
+            sleep $((i * 5))
+          done
+          echo "::error::push failed after retries"; exit 1
