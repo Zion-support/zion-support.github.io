@@ -103,6 +103,7 @@ jobs:
         run: node automation/ai-content-ideas-to-deploy-pipeline.cjs
 
       - name: Validate build (before commit)
+        timeout-minutes: 12
         run: |
           set -euo pipefail
           npm run rsc:guard
