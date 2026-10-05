@@ -1,11 +1,7 @@
+# Disabled 2026-10-04 per CEO: War Room is private Notion only
+# schedule and issue_comment triggers removed so the public /ops/ board cannot be recreated.
 name: War Room Pulse
-# Real-time: runs on every new comment on the war room issue.
-# Backup: scheduled pulse every 5 minutes.
 on:
-  issue_comment:
-    types: [created]
-  schedule:
-    - cron: '*/5 * * * *'
   workflow_dispatch:
 
 
