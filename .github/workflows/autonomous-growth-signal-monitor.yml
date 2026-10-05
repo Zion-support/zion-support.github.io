@@ -58,7 +58,7 @@ jobs:
           path: |
             automation/reports/autonomous-growth-signal-latest.json
             automation/reports/autonomous-growth-signal-latest.md
-          if-no-files-found: error
+          if-no-files-found: warn
           retention-days: 30
 
       - name: Escalate growth incident
