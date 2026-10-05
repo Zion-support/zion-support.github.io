@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI Opportunity Mapper — Zion Tech Group</title>
+<meta name="description" content="Ferramenta gratuita para mapear uma oportunidade de automação/IA e encontrar os próximos apps da Zion App Network.">
+<link rel="canonical" href="https://ziontechgroup.com/ai-opportunity-mapper/">
+<link rel="stylesheet" href="/assets/css/site.css">
+<style>
+.tool{max-width:820px}.tool label{display:block;font-weight:700;margin:14px 0 6px}.tool select,.tool input{width:100%;padding:11px;border-radius:10px;border:1px solid var(--line);background:#0b1220;color:var(--text);font:inherit}.result{display:none;margin-top:24px}.result ul{color:var(--muted)}.result li{margin:8px 0}
+</style>
+</head>
+<body>
+<header class="nav"><div class="wrap navin"><a class="brand" href="/">Zion Tech Group</a><nav class="links"><a href="/apps/">Apps</a><a href="/zion-app-network/">App Network</a><a href="/services/">Serviços</a><a class="cta" href="/discovery/">Discovery grátis</a></nav></div></header>
+<main class="page"><div class="wrap tool">
+<p class="eyebrow">Free app · Discovery → Action</p>
+<h1>AI Opportunity Mapper</h1>
+<p class="lead">Transforme um problema operacional em uma trilha prática de apps. Tudo roda no navegador. Para um relatório completo e enviado por e-mail, use o <a href="/discovery/">Discovery gratuito</a>.</p>
+<div class="card">
+<label for="area">Área principal</label>
+<select id="area"><option value="ops">IT Ops / incidentes</option><option value="field">Field Services / Smart Hands</option><option value="network">Network & Infrastructure</option><option value="procurement">Procurement / Vendor Risk</option><option value="ai">AI & Automation</option><option value="finops">FinOps / custos</option></select>
+<label for="pain">Horas manuais por mês</label>
+<select id="pain"><option value="20">Menos de 20</option><option value="50">20–80</option><option value="140">80–200</option><option value="260">200+</option></select>
+<label for="urgency">Quando precisa melhorar?</label>
+<select id="urgency"><option value="30">Agora</option><option value="20">Neste trimestre</option><option value="10">Próximo trimestre</option><option value="5">Só explorando</option></select>
+<button class="btn" id="map" type="button">Mapear oportunidade</button>
+</div>
+<div class="card result" id="result">
+<h2>Trilha recomendada</h2>
+<p id="score"></p><p id="summary"></p><ul id="links"></ul>
+<div class="actions"><a class="btn" href="/discovery/">Receber Discovery completo por e-mail</a><a class="btn alt" href="/apps/">Explorar todos os apps</a><a class="btn alt" href="/apps/network.html">Abrir mapa da rede</a></div>
+</div>
+<p class="see-also">Interlinks: <a href="/apps/discovery-to-action.html">Discovery → Action</a> · <a href="/roi-calc/">ROI Calculator</a> · <a href="/ai-governance-checklist/">AI Governance Checklist</a> · <a href="/plans/">Planos opcionais</a></p>
+</div></main>
+<footer><div class="wrap">© 2026 Zion Tech Group · <a href="mailto:commercial@ziontechgroup.com">commercial@ziontechgroup.com</a> · Discovery sempre gratuito.</div></footer>
+<script>
+const M={
+ops:[['AI Incident Response','/ai-incident-response/'],['Ops Runbook AI','/ops-runbook-ai/'],['Site Uptime Watchdog','/site-uptime-watchdog/']],
+field:[['AI Smart Hands Scheduler','/ai-smart-hands-scheduler/'],['Site Survey Planner','/site-survey-planner/'],['SLA Breach Predictor','/sla-breach-predictor/']],
+network:[['WAN Optimization','/ai-network-performance-wan-optimization/'],['Site Uptime Watchdog','/site-uptime-watchdog/'],['Network Map','/apps/network.html']],
+procurement:[['Vendor Risk Assessor','/vendor-risk-assessor/'],['ROI Calculator','/roi-calc/'],['FinOps Estimator','/finops-estimator/']],
+ai:[['AI Use-case Prioritizer','/priorizador-casos-uso-ia/'],['AI Governance Checklist','/ai-governance-checklist/'],['Workflow Automator','/zion-ai-workflow-automator/']],
+finops:[['FinOps Estimator','/finops-estimator/'],['LLM Cost Calculator','/llm-cost-calculator/'],['AI ROI Tracker','/ai-roi-tracker/']]
+};
+document.getElementById('map').onclick=()=>{
+ const area=document.getElementById('area').value, hrs=+document.getElementById('pain').value, urg=+document.getElementById('urgency').value;
+ const score=Math.min(100,Math.round(hrs/3)+urg+20);
+ document.getElementById('score').innerHTML='<strong>Opportunity score:</strong> '+score+'/100';
+ document.getElementById('summary').textContent=score>=70?'Prioridade alta: valide o processo no Discovery e teste os apps abaixo antes de definir escopo de implementação.':'Boa oportunidade para explorar: use os apps abaixo para validar hipótese, baseline e governança.';
+ document.getElementById('links').innerHTML=M[area].map(x=>'<li><a href="'+x[1]+'">'+x[0]+'</a></li>').join('');
+ document.getElementById('result').style.display='block';
+};
+</script>
+</body></html>
