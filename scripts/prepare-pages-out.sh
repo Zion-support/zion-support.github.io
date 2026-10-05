@@ -175,4 +175,44 @@ assert_family_a_home
 assert_mit_fgv
 assert_aaa_official_ladder
 
+assert_discovery_network_integrity() {
+  local required=(
+    "apps/index.html"
+    "apps/network.html"
+    "apps/start-here.html"
+    "apps/discovery-to-action.html"
+    "apps/discovery-app-paths.html"
+    "apps/discovery-report-workbench.html"
+    "global-fe-dispatch/index.html"
+  )
+  local rel
+  for rel in "${required[@]}"; do
+    if [ ! -f "out/$rel" ]; then
+      echo "ERROR: missing Discovery/App Network path out/$rel" >&2
+      exit 1
+    fi
+  done
+
+  local d="out/discovery/index.html"
+  if ! grep -Fq 'commercial@ziontechgroup.com' "$d"; then
+    echo "ERROR: Discovery missing Commercial delivery address" >&2
+    exit 1
+  fi
+  if ! grep -Fq '_cc:f.email' "$d"; then
+    echo "ERROR: Discovery missing client-copy delivery marker" >&2
+    exit 1
+  fi
+  if ! grep -Fq 'formsubmit.co/ajax/commercial@ziontechgroup.com' "$d"; then
+    echo "ERROR: Discovery missing automatic submission endpoint" >&2
+    exit 1
+  fi
+  if ! grep -Fq 'Discovery stays free' "$d" && ! grep -Fq 'Discovery is always free' "$d"; then
+    echo "ERROR: Discovery free-policy marker missing" >&2
+    exit 1
+  fi
+  echo "OK Discovery/App Network integrity"
+}
+
+assert_discovery_network_integrity
+
 echo "Prepared out ($(find out -type f | wc -l) files)"
