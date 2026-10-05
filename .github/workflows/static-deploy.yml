@@ -46,3 +46,29 @@ jobs:
         with:
           path: out
       - uses: actions/deploy-pages@v4
+        id: deployment
+
+      - name: Verify custom domain
+        shell: bash
+        run: |
+          set -euo pipefail
+          base="https://ziontechgroup.com"
+          verify() {
+            local path="$1"
+            local marker="$2"
+            local i
+            for i in $(seq 1 12); do
+              body="$(curl -fsSL --max-time 20 -H 'Cache-Control: no-cache' "${base}${path}?deploy_sha=${GITHUB_SHA}" || true)"
+              if printf '%s' "$body" | grep -Fq "$marker"; then
+                echo "OK ${path} marker=${marker}"
+                return 0
+              fi
+              echo "waiting for ${path} (${i}/12)"
+              sleep 10
+            done
+            echo "::error::${path} did not expose marker '${marker}' after Pages deploy ${GITHUB_SHA}"
+            return 1
+          }
+          verify "/" "~5 minutos"
+          verify "/apps/network-batch75.html" "Logistics &amp; Supply Chain AI Suite"
+          verify "/supplier-risk-radar/" "Supplier Risk Radar"
