@@ -74,6 +74,10 @@ for f in assets/css/site.css assets/js/zion-shell.js css/site.css; do
   fi
 done
 
+# Normalize every full HTML page in the deploy artifact to the shared Zion Family A chrome.
+# This touches only the assembled out/ artifact: source pages and app logic stay unchanged.
+node scripts/apply-family-a-chrome.cjs out
+
 touch out/.nojekyll
 
 # DURABLE GUARD: reject stub / placeholder money paths before Pages publish.
