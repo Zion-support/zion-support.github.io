@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Guia do comprador de Field Services &amp; Smart Hands — grátis · Zion Tech Group</title>
+<meta name="description" content="Checklist prático e gerador de brief de RFP para contratar técnicos de campo e smart hands: escopo, janelas, SLA de chegada, acesso e evidência de conclusão.">
+<link rel="canonical" href="https://ziontechgroup.com/guia-comprador-field-services/">
+<meta property="og:title" content="Guia do comprador de Field Services &amp; Smart Hands — Zion Tech Group"><meta property="og:description" content="Checklist prático e gerador de brief de RFP para contratar técnicos de campo e smart hands: escopo, janelas, SLA de chegada, acesso e evidência de conclusão."><meta property="og:url" content="https://ziontechgroup.com/guia-comprador-field-services/"><meta property="og:type" content="website">
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Guia do comprador de Field Services & Smart Hands", "applicationCategory": "BusinessApplication", "operatingSystem": "Web browser", "inLanguage": "pt-BR", "url": "https://ziontechgroup.com/guia-comprador-field-services/", "description": "Checklist prático e gerador de brief de RFP para contratar técnicos de campo e smart hands: escopo, janelas, SLA de chegada, acesso e evidência de conclusão.", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "Zion Tech Group", "url": "https://ziontechgroup.com"}}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Este guia serve para qualquer fornecedor?", "acceptedAnswer": {"@type": "Answer", "text": "Sim. O brief gerado é neutro e pode ser enviado a qualquer empresa de field services, inclusive à Zion."}}, {"@type": "Question", "name": "Os dados que preencho são enviados?", "acceptedAnswer": {"@type": "Answer", "text": "Não. Tudo roda no seu navegador; nada é salvo ou enviado."}}, {"@type": "Question", "name": "A Zion atende em outros países?", "acceptedAnswer": {"@type": "Answer", "text": "Atendemos projetos em vários países com técnicos próprios e parceiros. Descreva seus locais no Discovery grátis e respondemos com a cobertura real para o seu caso."}}]}]</script>
+<style>body{font-family:ui-sans-serif,system-ui,sans-serif;margin:0;background:#0b1220;color:#e8eef8;line-height:1.55}
+.w{max-width:920px;margin:0 auto;padding:40px 20px 30px}a{color:#7dd3fc;text-decoration:none}a:hover{text-decoration:underline}
+.card{background:#121a2b;border:1px solid #243049;border-radius:14px;padding:20px;margin:14px 0}
+.btn{display:inline-block;background:#7dd3fc;color:#042033;padding:10px 16px;border-radius:999px;font-weight:700;margin-top:10px;border:0;cursor:pointer;font-size:15px}
+.btn.alt{background:#1e293b;color:#e8eef8;border:1px solid #334155}.muted{color:#9aa8bd}
+label{display:block;margin:8px 0}input,select,textarea{background:#0b1220;color:#e8eef8;border:1px solid #334155;border-radius:8px;padding:8px;font:inherit;max-width:100%}
+textarea{width:100%;box-sizing:border-box}pre.out{white-space:pre-wrap;background:#0b1220;padding:12px;border-radius:8px;border:1px solid #243049}
+table{border-collapse:collapse;width:100%;margin-top:8px;font-size:14px}th,td{border:1px solid #243049;padding:6px;text-align:left;vertical-align:top}td input,td select{width:100%;box-sizing:border-box}
+.badge{display:inline-block;background:#0a7d4f;color:#fff;border-radius:999px;padding:3px 12px;font-size:13px;font-weight:600}.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px}
+.tag{display:inline-block;border-radius:999px;padding:1px 9px;font-size:12px;font-weight:700}.t-ok{background:#0a7d4f}.t-warn{background:#9a6b00}.t-bad{background:#9b1c1c}</style></head><body><div class="w">
+<nav class="muted"><a href="/">Zion Tech Group</a> › <a href="/apps/">Apps</a> › <a href="/apps/content-hub.html">Content Hub</a></nav>
+<p><span class="badge">Grátis · roda no seu navegador · nada é enviado</span></p>
+<h1>Guia do comprador: Field Services &amp; Smart Hands</h1>
+<p class="muted">Contratar técnico de campo em outra cidade ou país costuma falhar nos detalhes: acesso ao site, ferramenta errada, ninguém sabe o que conta como “concluído”. Preencha o formulário e gere um brief de RFP pronto para enviar a qualquer fornecedor — inclusive a nós.</p>
+<div class="card"><h2>Gerador de brief de RFP</h2><div class="grid2">
+<label>Empresa / projeto<input id="co" placeholder="Ex.: Rollout de Wi-Fi nas filiais"></label>
+<label>Locais (cidade, país — um por linha)<textarea id="loc" rows="3" placeholder="São Paulo, BR&#10;Lisboa, PT"></textarea></label>
+<label>Tipo de serviço<select id="typ"><option>Smart hands em datacenter</option><option>Instalação / rollout de equipamentos</option><option>Break-fix (reparo sob demanda)</option><option>Site survey / vistoria</option><option>Cabeamento estruturado</option><option>Manutenção preventiva</option></select></label>
+<label>Janela de atendimento<select id="win"><option>Horário comercial local</option><option>Fora do horário comercial</option><option>24x7</option><option>Janela de manutenção agendada</option></select></label>
+<label>Tempo de chegada desejado<select id="sla"><option>Mesmo dia (4h)</option><option>Próximo dia útil</option><option>Agendado com 48–72h</option><option>Projeto com cronograma</option></select></label>
+<label>Volume estimado (visitas/mês)<input id="vol" type="number" min="0" placeholder="Ex.: 10"></label>
+</div>
+<label>Escopo do trabalho (o que o técnico precisa fazer)<textarea id="scope" rows="3" placeholder="Ex.: desembalar, rackear e cabear 2 switches; etiquetar portas; testar uplink com o NOC remoto."></textarea></label>
+<div class="grid2"><label><input type="checkbox" id="c1" checked> Técnico precisa de credenciamento/acesso prévio</label><label><input type="checkbox" id="c2" checked> Ferramentas e materiais por conta do fornecedor</label><label><input type="checkbox" id="c3" checked> Fotos antes/depois obrigatórias</label><label><input type="checkbox" id="c4"> Seguro / documentação trabalhista exigida</label><label><input type="checkbox" id="c5"> Equipamento enviado pelo cliente (logística reversa)</label><label><input type="checkbox" id="c6" checked> Ponte remota com nosso time durante a visita</label></div>
+<button class="btn" onclick="gen()">Gerar brief</button> <button class="btn alt" onclick="cp()">Copiar</button>
+<pre class="out" id="out">Preencha os campos e clique em “Gerar brief”.</pre></div>
+<script>
+function v(i){return (document.getElementById(i).value||'').trim()}function c(i){return document.getElementById(i).checked}
+function gen(){var locs=v('loc').split(/\n/).filter(Boolean);var r=[];
+r.push('BRIEF DE RFP — '+(v('co')||'Field services'));r.push('');
+r.push('1. Serviço: '+v('typ'));r.push('2. Locais ('+locs.length+'):');locs.forEach(function(l){r.push('   - '+l)});
+r.push('3. Janela de atendimento: '+v('win'));r.push('4. Tempo de chegada esperado: '+v('sla'));
+if(v('vol'))r.push('5. Volume estimado: '+v('vol')+' visita(s)/mês');
+r.push('');r.push('ESCOPO');r.push(v('scope')||'(descrever passo a passo o que precisa ser feito)');
+r.push('');r.push('REQUISITOS');
+if(c('c1'))r.push('- Credenciamento/acesso ao site providenciado antes da visita (nome, documento, horário).');
+if(c('c2'))r.push('- Ferramentas, consumíveis e EPI por conta do fornecedor; listar o kit padrão.');
+if(c('c3'))r.push('- Fotos antes/depois e checklist assinado anexados ao chamado.');
+if(c('c4'))r.push('- Comprovar seguro de responsabilidade civil e documentação trabalhista do técnico.');
+if(c('c5'))r.push('- Recebimento, guarda e logística reversa de equipamentos do cliente.');
+if(c('c6'))r.push('- Técnico disponível em ponte remota (telefone/vídeo) com o time do cliente durante a execução.');
+r.push('');r.push('PERGUNTAS PARA O FORNECEDOR');
+['Em quais destes locais vocês têm técnicos próprios e onde usam parceiros?','Como medem o tempo de chegada (do chamado aberto ou da confirmação)?','O que acontece se o técnico não conseguir acesso ao site?','Como cobram visita improdutiva, hora extra e deslocamento?','Qual é a evidência padrão de conclusão (fotos, checklist, assinatura)?','Como escalam quando o técnico encontra algo fora do escopo?','Quem é o ponto de contato único e em qual fuso horário?','Como tratam dados e equipamentos com informação sensível?'].forEach(function(q,i){r.push((i+1)+'. '+q)});
+r.push('');r.push('CRITÉRIO DE CONCLUSÃO');r.push('O chamado só é fechado quando a evidência acima estiver anexada e o time remoto confirmar o teste final.');
+document.getElementById('out').textContent=r.join('\n')}
+function cp(){navigator.clipboard&&navigator.clipboard.writeText(document.getElementById('out').textContent)}
+</script>
+<div class="card"><h2>Checklist em 5 blocos antes de contratar</h2><ol>
+<li><strong>Escopo escrito em passos.</strong> “Instalar o equipamento” não é escopo. Liste cada ação que o técnico vai executar e o que ele <em>não</em> deve fazer.</li>
+<li><strong>Acesso resolvido antes.</strong> A maior parte das visitas perdidas é por acesso: credenciamento, horário da portaria, contato local, chave do rack.</li>
+<li><strong>SLA com definição clara.</strong> Defina de onde o relógio começa a contar e o que é “chegada” versus “resolução”. Use a <a href="/sla-calculator/">SLA Calculator</a> para conversar sobre disponibilidade e penalidades com números.</li>
+<li><strong>Evidência de conclusão.</strong> Fotos antes/depois, checklist e confirmação do time remoto. Sem isso, você não consegue auditar nem cobrar retrabalho.</li>
+<li><strong>Modelo comercial transparente.</strong> Pergunte como são cobradas visita improdutiva, hora extra, deslocamento e materiais — antes do primeiro chamado.</li></ol>
+<p class="muted">Agende janelas de manutenção com o <a href="/patch-window-planner/">Patch Window Planner</a>, organize visitas com o <a href="/ai-smart-hands-scheduler/">AI Smart Hands Scheduler</a> e classifique chamados com o <a href="/maintenance-ticket-triage/">Maintenance Ticket Triage</a>.</p></div>
+<div class="card"><h2>Apps relacionados (grátis)</h2><p><a href="/field-services/">Field Services</a> · <a href="/ai-smart-hands-scheduler/">AI Smart Hands Scheduler</a> · <a href="/sla-calculator/">SLA Calculator</a> · <a href="/maintenance-ticket-triage/">Maintenance Ticket Triage</a> · <a href="/patch-window-planner/">Patch Window Planner</a> · <a href="/vendor-risk-assessor/">Vendor Risk Assessor</a></p></div>
+<div class="card"><h2>Perguntas frequentes</h2><details><summary><strong>Este guia serve para qualquer fornecedor?</strong></summary><p>Sim. O brief gerado é neutro e pode ser enviado a qualquer empresa de field services, inclusive à Zion.</p></details><details><summary><strong>Os dados que preencho são enviados?</strong></summary><p>Não. Tudo roda no seu navegador; nada é salvo ou enviado.</p></details><details><summary><strong>A Zion atende em outros países?</strong></summary><p>Atendemos projetos em vários países com técnicos próprios e parceiros. Descreva seus locais no Discovery grátis e respondemos com a cobertura real para o seu caso.</p></details></div>
+<div class="card"><h2>Quer isso aplicado ao seu caso?</h2><p>O <strong>Discovery é grátis</strong>: você responde um questionário curto, nossa equipe comercial recebe uma cópia na hora e você recebe um readout escrito com o próximo passo recomendado. Sem compromisso.</p>
+<p><a class="btn" href="/discovery/">Começar o Discovery grátis →</a> <a class="btn alt" href="/apps/">Todos os apps</a></p></div>
+<footer class="muted"><small>© 2026 Zion Tech Group · <a href="mailto:commercial@ziontechgroup.com">commercial@ziontechgroup.com</a> · <a href="/plans/">Planos</a> · <a href="/privacy/">Privacidade</a></small></footer>
+</div></body></html>
