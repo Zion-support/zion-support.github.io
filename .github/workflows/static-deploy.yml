@@ -5,14 +5,11 @@ name: Simple Static Deploy
 # This avoids triggering production publishes for unrelated Hermes/status/ops commits.
 
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - 'public/**'
-      - 'assets/**'
-      - 'scripts/prepare-pages-out.sh'
-      - '.github/workflows/static-deploy.yml'
+  # Publish the latest main snapshot on a controlled cadence.
+  # Avoid per-commit Pages runs: concurrent content writers can otherwise replace
+  # a pending deploy before a runner starts it.
+  schedule:
+    - cron: '*/10 * * * *'
   workflow_dispatch:
     inputs:
       note:
