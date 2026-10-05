@@ -4,20 +4,6 @@ permissions:
   pages: write
   id-token: write
 "on":
-  workflow_run:
-    workflows:
-    - CI/CD Pipeline
-    types:
-    - completed
-    branches:
-    - main
-  push:
-    branches:
-    - main
-    # Narrow race fix: war-room pulse may commit STATUS.md without intending a Pages publish.
-    # Do NOT disable war-room pulse - only stop Deploy on Push from calling deploy-pages on STATUS.md-only pushes.
-    paths-ignore:
-    - '**/STATUS.md'
   workflow_dispatch: null
 jobs:
   build:

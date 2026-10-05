@@ -5,6 +5,10 @@ name: Autonomous Bundle Split Analyzer
   push:
     branches:
     - main
+    paths-ignore:
+    - 'public/**'
+    - 'docs/**'
+    - '**/*.md'
   pull_request:
     branches:
     - main

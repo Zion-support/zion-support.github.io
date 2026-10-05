@@ -5,6 +5,10 @@ name: TypeScript Type Coverage & Dead Code Check
   push:
     branches:
     - main
+    paths-ignore:
+    - 'public/**'
+    - 'docs/**'
+    - '**/*.md'
   pull_request:
     branches:
     - main

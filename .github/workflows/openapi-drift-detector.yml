@@ -5,6 +5,10 @@ name: OpenAPI Contract Drift Detector
   push:
     branches:
     - main
+    paths-ignore:
+    - 'public/**'
+    - 'docs/**'
+    - '**/*.md'
   pull_request:
     branches:
     - main

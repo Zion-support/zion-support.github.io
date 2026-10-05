@@ -5,12 +5,14 @@ permissions:
   issues: write
 
 "on":
-  push:
-    branches: [main]
+  workflow_run:
+    workflows: ["Simple Static Deploy"]
+    types: [completed]
   workflow_dispatch:
 
 jobs:
   verify-routes:
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:

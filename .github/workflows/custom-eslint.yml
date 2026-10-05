@@ -5,6 +5,10 @@ name: Autonomous Custom ESLint Rules
   push:
     branches:
     - main
+    paths-ignore:
+    - 'public/**'
+    - 'docs/**'
+    - '**/*.md'
   pull_request:
     branches:
     - main
