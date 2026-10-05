@@ -215,4 +215,47 @@ assert_discovery_network_integrity() {
 
 assert_discovery_network_integrity
 
+assert_locale_journeys() {
+  local required=(
+    "en/index.html"
+    "es/index.html"
+    "fr/index.html"
+    "de/index.html"
+    "pt/discovery/index.html"
+    "es/discovery/index.html"
+    "fr/discovery/index.html"
+    "de/discovery/index.html"
+    "en/plans/index.html"
+    "es/plans/index.html"
+    "fr/plans/index.html"
+    "de/plans/index.html"
+  )
+  local rel
+  for rel in "${required[@]}"; do
+    if [ ! -f "out/$rel" ]; then
+      echo "ERROR: missing localized journey out/$rel" >&2
+      exit 1
+    fi
+  done
+  if grep -Fq '/en/discovery/' out/en/index.html; then
+    echo "ERROR: English homepage links to nonexistent /en/discovery/" >&2
+    exit 1
+  fi
+  if ! grep -Fq '/es/plans/' out/es/index.html; then
+    echo "ERROR: Spanish homepage missing localized plans link" >&2
+    exit 1
+  fi
+  if ! grep -Fq '/fr/plans/' out/fr/index.html; then
+    echo "ERROR: French homepage missing localized plans link" >&2
+    exit 1
+  fi
+  if ! grep -Fq '/de/plans/' out/de/index.html; then
+    echo "ERROR: German homepage missing localized plans link" >&2
+    exit 1
+  fi
+  echo "OK localized journeys"
+}
+
+assert_locale_journeys
+
 echo "Prepared out ($(find out -type f | wc -l) files)"
