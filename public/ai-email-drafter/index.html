@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI Email Drafter · Zion Tech Group</title>
+<meta name="description" content="Draft professional sales, support and follow-up emails with tone control — free tool by Zion Tech Group.">
+<link rel="canonical" href="https://ziontechgroup.com/ai-email-drafter/">
+<style>
+:root{--bg:#0b1220;--card:#121a2b;--ink:#e8eef8;--muted:#9aa8bd;--line:#243049;--accent:#7dd3fc}
+*{box-sizing:border-box}body{margin:0;font-family:ui-sans-serif,system-ui,sans-serif;background:var(--bg);color:var(--ink)}
+.wrap{max-width:960px;margin:0 auto;padding:28px 20px 72px}a{color:var(--accent);text-decoration:none}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;margin:14px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.btn{display:inline-block;margin-top:10px;color:#042033;background:var(--accent);padding:8px 14px;border-radius:999px;font-weight:700;border:0;cursor:pointer}
+.muted{color:var(--muted)}textarea,input,select{width:100%;background:#0d1526;color:var(--ink);border:1px solid var(--line);border-radius:10px;padding:10px;font-family:inherit}
+label{font-size:.9rem;color:var(--muted);display:block;margin:10px 0 4px}pre{background:#0d1526;border:1px solid var(--line);border-radius:10px;padding:14px;white-space:pre-wrap}
+footer{margin-top:40px;font-size:.85rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+<p><a href="/">Zion Tech Group</a> · <a href="/apps/">Apps</a> · <a href="/app-network/">App Network</a> · <a href="/en/plans/">Plans</a> · <a href="/discovery/">Discovery $99</a></p>
+<h1>AI Email Drafter</h1>
+<p class="muted">Pick a scenario, add context, get a ready-to-send draft. Client-side templates — upgrade to <a href="/agents/">Zion Agents</a> for fully autonomous drafting.</p>
+<div class="card">
+<label for="sc">Scenario</label><select id="sc"><option value="sales">Cold sales outreach</option><option value="follow">Follow-up after meeting</option><option value="support">Support apology &amp; resolution</option><option value="invoice">Invoice / payment reminder</option></select>
+<label for="nm">Recipient name</label><input id="nm" placeholder="Jane">
+<label for="ctx">Key context (one line)</label><input id="ctx" placeholder="e.g. they asked about the Growth plan pricing">
+<button class="btn" onclick="draft()">Draft email</button></div>
+<div class="card" id="out" style="display:none"><h2>Your draft</h2><pre id="rep"></pre><button class="btn" onclick="navigator.clipboard.writeText(document.getElementById('rep').textContent)">Copy</button></div>
+<script>
+function draft(){
+ const n=document.getElementById('nm').value||'there',c=document.getElementById('ctx').value||'our recent conversation';
+ const T={sales:'Subject: A faster way to hit your IT goals\n\nHi '+n+',\n\nI noticed '+c+', and I think Zion Tech Group can help. Our AI App Network automates the workflows that slow teams down — most clients see measurable ROI within the first month.\n\nWould a 20-minute call this week work?\n\nBest,\nZion Tech Group',
+ follow:'Subject: Great meeting — next steps\n\nHi '+n+',\n\nThanks for the conversation about '+c+'. As promised, here are the next steps:\n1) We send a scoped proposal within 48h\n2) You review with your team\n3) Kickoff call next week\n\nAnything I missed?\n\nBest,\nZion Tech Group',
+ support:'Subject: Our apologies — here is the fix\n\nHi '+n+',\n\nThank you for flagging '+c+'. You were right to expect better. We have resolved the issue and added a safeguard so it does not recur. Your account has been credited accordingly.\n\nWe appreciate your trust.\n\nZion Tech Group Support',
+ invoice:'Subject: Friendly payment reminder\n\nHi '+n+',\n\nA quick reminder regarding '+c+'. The invoice is now due — you can pay securely via the link in the original invoice email. Questions? Just reply here.\n\nThanks,\nZion Tech Group Billing'};
+ document.getElementById('rep').textContent=T[document.getElementById('sc').value];
+ document.getElementById('out').style.display='block';
+}
+</script>
+<h2>Explore more of the Zion AI App Network</h2>
+<div class="grid">
+<div class="card"><h3><a href="/contract-risk-scanner/">Contract Risk Scanner</a></h3><p class="muted">Score contract clauses for legal &amp; commercial risk.</p></div>
+<div class="card"><h3><a href="/meeting-notes-summarizer/">Meeting Notes Summarizer</a></h3><p class="muted">Turn raw notes into decisions, actions &amp; owners.</p></div>
+<div class="card"><h3><a href="/ai-email-drafter/">AI Email Drafter</a></h3><p class="muted">Draft sales, support &amp; follow-up emails in seconds.</p></div>
+<div class="card"><h3><a href="/cloud-inventory-mapper/">Cloud Inventory Mapper</a></h3><p class="muted">Map cloud resources, owners and cost centers.</p></div>
+<div class="card"><h3><a href="/apps/october-2026-batch1.html">October 2026 Batch 1 Spotlight</a></h3><p class="muted">Launch notes for this batch.</p></div>
+<div class="card"><h3><a href="/sla-calculator/">SLA Calculator</a></h3><p class="muted">Uptime, downtime &amp; penalty math.</p></div>
+<div class="card"><h3><a href="/roi-calc/">ROI Calculator</a></h3><p class="muted">Hours leaked vs official SKUs.</p></div>
+<div class="card"><h3><a href="/stack-audit/">Stack Audit</a></h3><p class="muted">Ten-check ops readiness.</p></div>
+</div>
+<footer class="muted">Part of the <a href="/app-network/">Zion AI App Network</a> · Official menu: <a href="/discovery/">Discovery $99</a> / Consulting $499 / Starter $2,500 / Growth $8,000/mo · <a href="/en/plans/">See plans</a></footer>
+</div>
+</body>
+</html>
