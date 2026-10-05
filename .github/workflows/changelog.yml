@@ -2,13 +2,6 @@ permissions:
   contents: read
 name: Autonomous Changelog Generator
 "on":
-  push:
-    branches:
-    - main
-    paths-ignore:
-    - 'public/**'
-    - 'docs/**'
-    - '**/*.md'
   workflow_dispatch: null
 jobs:
   changelog:
