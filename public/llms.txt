@@ -11,7 +11,7 @@
 
 ## Book and pay
 
-- Book Discovery ($99, 30 min Google Meet): https://ziontechgroup.com/book/
+- Book Discovery (free, 30 min Google Meet): https://ziontechgroup.com/book/
 - Calendly (only active event): https://calendly.com/kleber-ziontechgroup/zion-tech-group-ai-it-discovery-1
 - Plans: https://ziontechgroup.com/plans/
 - Free Discovery: https://buy.stripe.com/3cIdRa6FO5dt0D53hm4ZG05
@@ -19,7 +19,7 @@
 - Starter $2,500: https://buy.stripe.com/7sY00k7JScFV99Bf044ZG06
 - Growth $8,000/mo: https://buy.stripe.com/aFa5kEd4c21h3PhdW04ZG07
 
-There is no free consultation. Older `/consultation` and `calendly.com/ziontechgroup/30min` links are inactive. Public 2026 AI-consulting writeups price discovery in the thousands; Zion's live Discovery is $99.
+There is no free consultation. Older `/consultation` and `calendly.com/ziontechgroup/30min` links are inactive. Public 2026 AI-consulting writeups price discovery in the thousands; Zion's live Discovery is free.
 
 Leftover `/services/*`, `/ai-services/*`, and `/solutions/*` industry URLs (for example `/services/ai-legal-discovery-platform/`, `/solutions/construction-engineering/`, or `/ai-services/process-automation/`) are honest closers, not products. Leftover top-level SKU stubs such as `/5g-solutions/`, `/ai-chatbot-builder/`, `/ai-claims-automation/` are noindex closers (not a catalog). Leftover story URLs such as `/from-start-up-to-success-the-journey-of-zion-tech-group-in-it-services/` are not the homepage and do not mean Discovery was cancelled. They are not a free SKU and not a packaged RPA or cloud-migration catalog. The only free offer is the AI/IT Discovery at `/discovery/`.
 
