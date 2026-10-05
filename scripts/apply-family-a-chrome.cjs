@@ -40,6 +40,9 @@ function normalize(file) {
   if (!/\/assets\/css\/site\.css(?:["'?\s>])/i.test(html)) {
     html = html.replace(/<\/head>/i, CSS_TAG + '\n</head>');
   }
+  if (!/\/assets\/css\/family-a-compat\.css(?:["'?\s>])/i.test(html)) {
+    html = html.replace(/<\/head>/i, COMPAT_TAG + '\n</head>');
+  }
   if (!/\/assets\/js\/zion-shell\.js(?:["'?\s>])/i.test(html)) {
     html = html.replace(/<\/body>/i, JS_TAG + '\n</body>');
   }
@@ -50,6 +53,7 @@ function normalize(file) {
   }
 
   if (!/\/assets\/css\/site\.css(?:["'?\s>])/i.test(html)) failures.push(file + ': missing site.css');
+  if (!/\/assets\/css\/family-a-compat\.css(?:["'?\s>])/i.test(html)) failures.push(file + ': missing family-a-compat.css');
   if (!/\/assets\/js\/zion-shell\.js(?:["'?\s>])/i.test(html)) failures.push(file + ': missing zion-shell.js');
 }
 
