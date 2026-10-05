@@ -9,7 +9,7 @@ on:
   # Avoid per-commit Pages runs: concurrent content writers can otherwise replace
   # a pending deploy before a runner starts it.
   schedule:
-    - cron: '*/10 * * * *'
+    - cron: '*/5 * * * *'
   workflow_dispatch:
     inputs:
       note:
@@ -35,6 +35,9 @@ jobs:
     if: github.ref == 'refs/heads/main'
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
       - name: Confirm main ref
         run: echo "ref=${GITHUB_REF} sha=${GITHUB_SHA} event=${GITHUB_EVENT_NAME} (main-only deploy)"
       - name: Prepare pages
