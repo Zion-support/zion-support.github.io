@@ -24,7 +24,7 @@ h1{color:#1d4ed8}form{background:#fff;border:1px solid #e2e8f0;border-radius:14p
 <input type="hidden" name="_template" value="table">
 <input type="hidden" name="_captcha" value="false">
 <input type="hidden" name="_autoresponse" value="Thank you for completing the free Zion AI Discovery! Your personalized recommendations are listed below and in this thread. A Zion specialist (commercial@ziontechgroup.com) may follow up with tailored guidance. Explore the apps: https://ziontechgroup.com/apps/ — Plans: https://ziontechgroup.com/en/plans/">
-<input type="hidden" name="_next" value="https://ziontechgroup.com/discovery/thanks.html">
+<input type="hidden" name="_next" value="https://ziontechgroup.com/discovery/thanks/">
 <input type="text" name="_honey" style="display:none">
 <label>Your name <input type="text" name="name" required></label>
 <label>Your email (results sent here) <input type="email" name="email" required></label>
@@ -49,7 +49,7 @@ const MAP={
  "Retail & Ecommerce":[["AI Cart Recovery","https://ziontechgroup.com/ai-cart-recovery/"],["AI Pricing Optimizer","https://ziontechgroup.com/ai-pricing-optimizer/"],["AI Review Insights","https://ziontechgroup.com/ai-review-insights/"]],
  "Grow revenue & sales":[["AI Sales Email Copilot","https://ziontechgroup.com/ai-sales-email-copilot/"],["Proposal Builder AI","https://ziontechgroup.com/proposal-builder-ai/"]],
  "Cut costs / FinOps":[["FinOps Autopilot","https://ziontechgroup.com/finops-autopilot/"],["ROI Calculator","https://ziontechgroup.com/roi-calculator/"],["AI Capacity Planner","https://ziontechgroup.com/ai-capacity-planner/"]],
- "Customer experience & retention":[["Churn Radar","https://ziontechgroup.com/churn-radar/"],["NPS Insight Engine","https://ziontechgroup.com/nps-insight-engine/"]],
+ "Customer experience & retention":[["Churn Radar","https://ziontechgroup.com/churn-radar/"],["NPS Insight Engine","https://ziontechgroup.com/nps-insight-engine/"],["Churn Risk Radar","https://ziontechgroup.com/churn-risk-radar/"],["Customer Health Scoreboard","https://ziontechgroup.com/customer-health-scoreboard/"],["NPS Analyzer AI","https://ziontechgroup.com/nps-analyzer-ai/"],["Customer 360 Builder","https://ziontechgroup.com/customer-360-builder/"]],
  "Security & compliance":[["Zion AI Compliance Scanner","https://ziontechgroup.com/zion-ai-compliance-scanner/"],["Vendor Risk Screener","https://ziontechgroup.com/vendor-risk-screener/"],["AI Backup Integrity","https://ziontechgroup.com/ai-backup-integrity/"]],
  "Sustainability & ESG":[["Carbon Accounting Hub","https://ziontechgroup.com/carbon-accounting-hub/"],["ESG Report Builder","https://ziontechgroup.com/esg-report-builder/"],["Solar ROI Optimizer","https://ziontechgroup.com/solar-roi-optimizer/"],["Building Efficiency Auditor","https://ziontechgroup.com/building-efficiency-auditor/"]],
  "People & HR":[["Recruiting Screening AI","https://ziontechgroup.com/recruiting-screening-ai/"],["HR Onboarding Copilot","https://ziontechgroup.com/hr-onboarding-copilot/"],["Employee Sentiment Pulse","https://ziontechgroup.com/employee-sentiment-pulse/"],["Shift Scheduler AI","https://ziontechgroup.com/shift-scheduler-ai/"]],
@@ -66,7 +66,7 @@ const MAP={
  "Insurance":[["Claims Triage AI","https://ziontechgroup.com/claims-triage-ai/"],["Underwriting Copilot","https://ziontechgroup.com/underwriting-copilot/"],["Insurance Fraud Radar","https://ziontechgroup.com/insurance-fraud-radar/"]],
  "Other":[["AI ROI Calculator","https://ziontechgroup.com/ai-roi-calculator/"],["Ops Runbook AI","https://ziontechgroup.com/ops-runbook-ai/"],["LLM Cost Calculator","https://ziontechgroup.com/llm-cost-calculator/"]],
  "Automate operations":[["Ops Runbook AI","https://ziontechgroup.com/ops-runbook-ai/"],["AI Ticket Triage","https://ziontechgroup.com/zion-ai-ticket-triage/"],["Shift Scheduler AI","https://ziontechgroup.com/shift-scheduler-ai/"]],
- "Data & analytics":[["Data Pipeline Doctor","https://ziontechgroup.com/data-pipeline-doctor/"],["Stream Analytics Hub","https://ziontechgroup.com/stream-analytics-hub/"]]
+ "Data & analytics":[["Data Pipeline Doctor","https://ziontechgroup.com/data-pipeline-doctor/"],["Stream Analytics Hub","https://ziontechgroup.com/stream-analytics-hub/"],["Data Drift Detector","https://ziontechgroup.com/data-drift-detector/"],["Data Pipeline Monitor","https://ziontechgroup.com/data-pipeline-monitor/"],["ETL Observability","https://ziontechgroup.com/etl-observability/"],["Data Quality Watchdog","https://ziontechgroup.com/data-quality-watchdog/"]]
 };
 const BOT={"Rising energy costs":[["Energy Consumption Forecaster","https://ziontechgroup.com/energy-consumption-forecaster/"],["Grid Demand Balancer","https://ziontechgroup.com/grid-demand-balancer/"]],"Hiring / skills gap":[["Recruiting Screening AI","https://ziontechgroup.com/recruiting-screening-ai/"],["HR Onboarding Copilot","https://ziontechgroup.com/hr-onboarding-copilot/"]],"Rising cloud & IT costs":[["AI Capacity Planner","https://ziontechgroup.com/ai-capacity-planner/"],["AI Infrastructure Monitor","https://ziontechgroup.com/ai-infrastructure-monitor/"]]};
 document.getElementById('q').addEventListener('submit',function(e){
