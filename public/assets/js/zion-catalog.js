@@ -17,7 +17,7 @@
       var out = document.getElementById("finops-result");
       if (out) {
         out.textContent = spend > 0
-          ? "Estimativa: até US$ " + saving.toLocaleString("pt-BR") + "/mês de economia potencial. Fale conosco no Discovery $99."
+          ? "Estimativa: até US$ " + saving.toLocaleString("pt-BR") + "/mês de economia potencial. Fale conosco no Free Discovery."
           : "Informe o gasto mensal para estimar.";
       }
     });
