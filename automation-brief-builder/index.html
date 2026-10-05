@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Automation Brief Builder — Zion Tech Group</title>
+<meta name="description" content="Gere gratuitamente um brief de automação/IA com problema, sistemas, owner, definição de pronto, riscos e próximo passo.">
+<link rel="canonical" href="https://ziontechgroup.com/automation-brief-builder/"><link rel="stylesheet" href="/assets/css/site.css">
+<style>.tool{max-width:860px}.tool label{display:block;font-weight:700;margin:14px 0 6px}.tool input,.tool textarea,.tool select{width:100%;padding:11px;border-radius:10px;border:1px solid var(--line);background:#0b1220;color:var(--text);font:inherit}.out{display:none;white-space:pre-wrap}.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}@media(max-width:650px){.two{grid-template-columns:1fr}}</style>
+</head><body>
+<header class="nav"><div class="wrap navin"><a class="brand" href="/">Zion Tech Group</a><nav class="links"><a href="/apps/">Apps</a><a href="/apps/discovery-to-action.html">Discovery → Action</a><a class="cta" href="/discovery/">Discovery grátis</a></nav></div></header>
+<main class="page"><div class="wrap tool"><p class="eyebrow">Free app · Scope before build</p><h1>Automation Brief Builder</h1>
+<p class="lead">Transforme um problema operacional em um brief que pode ser levado para TI, procurement ou para um piloto. O conteúdo é gerado no navegador. Para diagnóstico completo, score e recomendações por e-mail, use o <a href="/discovery/">Discovery gratuito</a>.</p>
+<div class="card">
+<label>Problema/processo</label><input id="problem" placeholder="Ex.: triagem manual de tickets">
+<div class="two"><div><label>Owner</label><input id="owner" placeholder="Ex.: Service Desk Manager"></div><div><label>Sistemas envolvidos</label><input id="systems" placeholder="Ex.: ServiceNow, email, Teams"></div></div>
+<label>Como saberemos que está pronto?</label><textarea id="done" rows="3" placeholder="Ex.: tickets classificados e encaminhados com revisão humana para exceções"></textarea>
+<div class="two"><div><label>Risco principal</label><select id="risk"><option>Dados / privacidade</option><option>Acesso / permissões</option><option>Precisão / erro operacional</option><option>Integração / legado</option><option>Adoção / ownership</option></select></div><div><label>Horizonte</label><select id="when"><option>Agora</option><option>Neste trimestre</option><option>Próximo trimestre</option><option>Exploratório</option></select></div></div>
+<button class="btn" id="build" type="button">Gerar brief</button>
+</div>
+<div id="out" class="card out"><h2>Seu brief</h2><pre id="brief" style="white-space:pre-wrap;color:var(--muted);font:inherit"></pre>
+<div class="actions"><button class="btn" id="copy" type="button">Copiar brief</button><a class="btn alt" href="/ai-opportunity-mapper/">Mapear apps relacionados</a><a class="btn alt" href="/discovery/">Receber Discovery por e-mail</a></div></div>
+<p class="see-also">Continue: <a href="/roi-calc/">ROI Calculator</a> · <a href="/ai-governance-checklist/">Governance Checklist</a> · <a href="/vendor-risk-assessor/">Vendor Risk Assessor</a> · <a href="/apps/network.html">Network Map</a>.</p>
+</div></main><footer><div class="wrap">© 2026 Zion Tech Group · Discovery gratuito e online · <a href="mailto:commercial@ziontechgroup.com">commercial@ziontechgroup.com</a></div></footer>
+<script>
+const v=id=>document.getElementById(id).value.trim();
+document.getElementById('build').onclick=()=>{
+ const b=['AUTOMATION BRIEF','Problem / process: '+(v('problem')||'Not defined'),'Owner: '+(v('owner')||'Not assigned'),'Systems: '+(v('systems')||'Not listed'),'Definition of done: '+(v('done')||'Not defined'),'Primary risk: '+v('risk'),'Horizon: '+v('when'),'Human gate: keep exceptions and high-impact actions under named human approval.','Next step: validate baseline and app fit in Zion Free Discovery — https://ziontechgroup.com/discovery/'].join('\n');
+ document.getElementById('brief').textContent=b;document.getElementById('out').style.display='block';
+};
+document.getElementById('copy').onclick=async()=>{await navigator.clipboard.writeText(document.getElementById('brief').textContent);document.getElementById('copy').textContent='Copiado ✓'};
+</script></body></html>
