@@ -10,6 +10,7 @@ on:
       - main
     paths:
       - 'public/**'
+      - 'assets/**'
       - 'scripts/prepare-pages-out.sh'
       - '.github/workflows/static-deploy.yml'
   workflow_dispatch:
@@ -26,7 +27,7 @@ permissions:
 
 concurrency:
   group: pages-deploy
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   deploy:
