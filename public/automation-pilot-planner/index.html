@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Automation Pilot Planner — Zion Tech Group</title>
+<meta name="description" content="Ferramenta gratuita para transformar uma oportunidade de automação ou IA em um plano piloto de 30 dias com owner, baseline, risco, métricas e stop rule.">
+<link rel="canonical" href="https://ziontechgroup.com/automation-pilot-planner/">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" href="/assets/css/site.css">
+<style>
+.tool{max-width:880px}.tool label{display:block;font-weight:700;margin:14px 0 6px}.tool select,.tool input,.tool textarea{width:100%;padding:11px;border-radius:10px;border:1px solid var(--line);background:#0b1220;color:var(--text);font:inherit}.result{display:none;margin-top:24px}.plan{white-space:pre-wrap;background:#0b1220;border:1px solid var(--line);border-radius:12px;padding:16px;color:var(--muted)}.mini{font-size:.92rem;color:var(--muted)}
+</style>
+</head>
+<body>
+<header class="nav"><div class="wrap navin"><a class="brand" href="/">Zion Tech Group</a><nav class="links"><a href="/apps/">Apps</a><a href="/apps/network.html">Network map</a><a href="/ai-opportunity-mapper/">Opportunity Mapper</a><a class="cta" href="/discovery/">Discovery grátis</a></nav></div></header>
+<main class="page"><div class="wrap tool">
+<p class="eyebrow">Free app · Discovery → Action</p>
+<h1>Automation Pilot Planner</h1>
+<p class="lead">Transforme uma oportunidade identificada no <a href="/discovery/">Discovery gratuito</a> em um piloto de 30 dias com objetivo, baseline, owner, gates humanos, métrica de sucesso e stop rule. Tudo roda no navegador.</p>
+
+<div class="grid grid-4" style="margin:20px 0">
+<div class="card"><h3>1. Problema</h3><p>Defina um único processo e um baseline mensurável.</p></div>
+<div class="card"><h3>2. Controle</h3><p>Escolha owner, risco e ponto de aprovação humana.</p></div>
+<div class="card"><h3>3. Piloto</h3><p>Gere uma sequência prática de 30 dias.</p></div>
+<div class="card"><h3>4. Decisão</h3><p>Use success metric + stop rule para build, adjust ou stop.</p></div>
+</div>
+
+<div class="card">
+<label for="process">Processo / problema</label>
+<input id="process" placeholder="Ex.: triagem manual de tickets">
+<label for="baseline">Baseline atual</label>
+<input id="baseline" placeholder="Ex.: 140 horas/mês e SLA de 4h">
+<label for="owner">Owner</label>
+<input id="owner" placeholder="Ex.: Service Desk Manager">
+<label for="systems">Sistemas envolvidos</label>
+<input id="systems" placeholder="Ex.: Gmail, Jira, ServiceNow, Sheets">
+<label for="risk">Risco principal</label>
+<select id="risk"><option>Baixo — recomendação sem ação automática</option><option>Médio — ação com aprovação humana</option><option>Alto — dados sensíveis, financeiro ou produção</option></select>
+<label for="metric">Métrica de sucesso</label>
+<input id="metric" placeholder="Ex.: reduzir 40% do tempo manual sem piorar SLA">
+<label for="stop">Stop rule</label>
+<input id="stop" placeholder="Ex.: parar se erro >5% ou houver incidente P1">
+<button class="btn" id="build" type="button">Gerar plano piloto</button>
+</div>
+
+<div class="card result" id="result">
+<h2>Plano de 30 dias</h2>
+<div class="plan" id="plan"></div>
+<div class="actions">
+<button class="btn" id="copy" type="button">Copiar plano</button>
+<button class="btn alt" id="download" type="button">Baixar .txt</button>
+<a class="btn alt" href="/discovery/">Refazer Discovery</a>
+<a class="btn alt" href="/apps/">Explorar apps</a>
+</div>
+<p class="mini">O planner não envia dados para a Zion. Se quiser compartilhar seu contexto e receber recomendações por e-mail, use o Discovery gratuito.</p>
+</div>
+
+<section class="section">
+<h2>Próximas ferramentas recomendadas</h2>
+<div class="grid grid-4">
+<a class="card card-link" href="/ai-opportunity-mapper/"><h3>AI Opportunity Mapper</h3><p>Encontre a trilha de apps mais adequada para a oportunidade.</p><span class="text-link">Mapear →</span></a>
+<a class="card card-link" href="/roi-calc/"><h3>ROI Calculator</h3><p>Refine o business case antes de aprovar o piloto.</p><span class="text-link">Calcular →</span></a>
+<a class="card card-link" href="/ai-governance-checklist/"><h3>AI Governance Checklist</h3><p>Cheque controles antes de permitir automação em produção.</p><span class="text-link">Revisar →</span></a>
+<a class="card card-link" href="/apps/discovery-to-action.html"><h3>Discovery → Action</h3><p>Veja o caminho completo entre diagnóstico, apps e implementação opcional.</p><span class="text-link">Explorar →</span></a>
+</div>
+</section>
+</div></main>
+<footer><div class="wrap">© 2026 Zion Tech Group · <a href="mailto:commercial@ziontechgroup.com">commercial@ziontechgroup.com</a> · <a href="/discovery/">Discovery sempre gratuito</a> · <a href="/apps/network.html">App Network</a></div></footer>
+<script>
+function v(id,fallback){return document.getElementById(id).value.trim()||fallback}
+let latest='';
+document.getElementById('build').onclick=()=>{
+ const p=v('process','processo prioritário'), b=v('baseline','baseline a medir na semana 1'), o=v('owner','owner a definir'), s=v('systems','sistemas atuais'), r=v('risk','risco a classificar'), m=v('metric','métrica de sucesso a definir'), stop=v('stop','stop rule a definir');
+ latest=`AUTOMATION PILOT — 30 DIAS
+Processo: ${p}
+Baseline: ${b}
+Owner: ${o}
+Sistemas: ${s}
+Risco: ${r}
+Métrica de sucesso: ${m}
+Stop rule: ${stop}
+
+DIAS 1–5 — BASELINE & SCOPE
+• confirmar owner e usuários afetados
+• medir volume, tempo, erro e SLA atual
+• documentar entradas, saídas e exceções
+• selecionar apenas 1 fluxo para o piloto
+
+DIAS 6–10 — CONTROL DESIGN
+• definir human-in-the-loop e permissões mínimas
+• separar dados de teste de dados de produção
+• registrar decisões, logs e rollback
+• validar o stop rule: ${stop}
+
+DIAS 11–20 — PILOT
+• executar em pequena amostra
+• comparar resultado automatizado vs. processo atual
+• revisar exceções diariamente com ${o}
+• não ampliar escopo antes de estabilidade
+
+DIAS 21–25 — MEASURE
+• comparar contra baseline: ${b}
+• avaliar métrica: ${m}
+• registrar riscos, falhas, horas recuperadas e custo
+
+DIAS 26–30 — DECISION
+• BUILD: métrica atingida, risco controlado
+• ADJUST: valor existe, mas controles/qualidade precisam ajuste
+• STOP: stop rule acionado ou business case não comprovado
+
+Próximo passo gratuito:
+https://ziontechgroup.com/discovery/
+https://ziontechgroup.com/ai-opportunity-mapper/
+https://ziontechgroup.com/apps/`;
+ document.getElementById('plan').textContent=latest;document.getElementById('result').style.display='block';document.getElementById('result').scrollIntoView({behavior:'smooth'});
+};
+document.getElementById('copy').onclick=async()=>{if(latest){await navigator.clipboard.writeText(latest);document.getElementById('copy').textContent='Copiado ✓'}};
+document.getElementById('download').onclick=()=>{if(!latest)return;const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([latest],{type:'text/plain'}));a.download='zion-automation-pilot-plan.txt';a.click();URL.revokeObjectURL(a.href)};
+</script>
+</body></html>
