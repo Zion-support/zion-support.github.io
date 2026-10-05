@@ -10,6 +10,7 @@ const path = require('path');
 
 const root = path.resolve(process.argv[2] || 'out');
 const CSS_TAG = '<link rel="stylesheet" href="/assets/css/site.css" data-zion-family-a="1">';
+const COMPAT_TAG = '<link rel="stylesheet" href="/assets/css/family-a-compat.css" data-zion-family-a-compat="1">';
 const JS_TAG = '<script src="/assets/js/zion-shell.js" defer data-zion-family-a="1"></script>';
 
 let total = 0;
