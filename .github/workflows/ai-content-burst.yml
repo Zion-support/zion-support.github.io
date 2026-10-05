@@ -83,6 +83,7 @@ jobs:
 
 
       - name: Validate build (catch content errors before push)
+        timeout-minutes: 12
         run: |
           set -euo pipefail
           npm run rsc:guard
