@@ -5,6 +5,11 @@ name: outreach-live-llm-tailoring
   schedule:
     - cron: "*/5 * * * *"
 
+# Serialize this worker without interrupting a run that may be sending mail.
+concurrency:
+  group: outreach-live-llm-tailoring-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
   outreach:
     runs-on: ubuntu-latest
@@ -34,55 +39,88 @@ jobs:
       - name: Run outreach worker
         id: outreach-worker
         run: |
-          echo "[trace] start outreach_worker_automation.py"
-          python scripts/outreach/outreach_worker_automation.py | tee outreach_run.log
-          echo "[trace] outreach exit=$?"
+          # Worker stdout/stderr can contain recipients, subjects and provider errors.
+          # Keep them runner-local; never stream or upload this raw log.
+          set +e
+          python scripts/outreach/outreach_worker_automation.py > outreach_run.log 2>&1
+          rc=$?
+          echo "exit_code=$rc" >> "$GITHUB_OUTPUT"
+          echo "Outreach worker exit code: $rc. Private diagnostics are not published."
+          exit "$rc"
         continue-on-error: true
 
-      - name: Discover outreach blockers
+      - name: Discover outreach blockers safely
         if: always()
         id: outreach-blockers
+        env:
+          WORKER_OUTCOME: ${{ steps.outreach-worker.outcome }}
+          WORKER_EXIT_CODE: ${{ steps.outreach-worker.outputs.exit_code }}
         run: |
-          echo "[trace] start outreach blocker discovery"
           set -euo pipefail
           python - <<'PY'
-          import json, os
+          import json, os, time
           from pathlib import Path
+
           base = Path('outreach_monitor/processed')
+          outcome = os.getenv('WORKER_OUTCOME', '')
+          raw_exit = os.getenv('WORKER_EXIT_CODE', '')
           report = {
-            'timestamp': int(__import__('time').time()),
-            'cwd': str(Path.cwd()),
-            'files': sorted([p.name for p in base.glob('*')]),
-            'llm_readiness': {},
-            'auth_failed': False,
+              'schema_version': '2026-10-06-public-safe-v1',
+              'timestamp': int(time.time()),
+              'worker_outcome': outcome if outcome in ('success', 'failure', 'cancelled', 'skipped') else 'unknown',
+              'worker_exit_code': int(raw_exit) if raw_exit.isascii() and raw_exit.isdigit() and len(raw_exit) <= 3 and int(raw_exit) <= 255 else None,
+              'files': {},
+              'llm_readiness': {},
+              'auth_failed': True,
+              'auth_evidence': 'unknown',
+              'delivery_confirmed': False,
           }
-          for name in ['llm_tailoring_readiness.json','hot_followup_reply_ledger.jsonl','sent_ledger.jsonl','dry_run_report.jsonl']:
+          # Allowlist only aggregate metadata; never copy rows, errors, paths or keys.
+          for name in ('hot_followup_reply_ledger.jsonl', 'sent_ledger.jsonl', 'dry_run_report.jsonl'):
               p = base / name
-              report[name] = p.exists()
-              if p.exists():
+              info = {'present': p.is_file(), 'nonempty_lines': None, 'readable': False}
+              if info['present']:
                   try:
-                      report[name+'_head'] = p.read_text(encoding='utf-8', errors='ignore').splitlines()[:3]
-                  except Exception as e:
-                      report[name+'_head'] = f'ERR:{e}'
+                      with p.open('r', encoding='utf-8', errors='replace') as source:
+                          info['nonempty_lines'] = sum(1 for line in source if line.strip())
+                      info['readable'] = True
+                  except OSError:
+                      pass
+              report['files'][name] = info
           try:
-              r = json.loads((base/'llm_tailoring_readiness.json').read_text(encoding='utf-8'))
-              report['llm_readiness'] = r
-              report['auth_failed'] = not bool(r.get('local_gmail_modules', {}).get('token_exists')) or bool(r.get('local_gmail_modules', {}).get('auth_error'))
-          except Exception as e:
-              report['auth_failed'] = True
-              report['llm_readiness_error'] = repr(e)
-          print(json.dumps(report, ensure_ascii=False))
+              p = base / 'llm_tailoring_readiness.json'
+              if p.stat().st_size > 1048576:
+                  raise ValueError('oversized readiness input')
+              r = json.loads(p.read_text(encoding='utf-8'))
+              if not isinstance(r, dict):
+                  raise ValueError('invalid readiness shape')
+              for key in ('active', 'has_endpoint', 'has_api_key', 'llm_tailor_enabled'):
+                  value = r.get(key)
+                  report['llm_readiness'][key] = value if isinstance(value, bool) else None
+              modules = r.get('local_gmail_modules')
+              if not isinstance(modules, dict):
+                  raise ValueError('invalid module status shape')
+              token_exists = modules.get('token_exists') is True
+              auth_error_present = bool(modules.get('auth_error'))
+              report['llm_readiness']['token_exists'] = token_exists
+              report['llm_readiness']['auth_error_present'] = auth_error_present
+              report['auth_failed'] = not token_exists or auth_error_present
+              report['auth_evidence'] = 'reported_failure_or_missing_token' if report['auth_failed'] else 'local_checks_only'
+          except (OSError, ValueError, TypeError, UnicodeError):
+              report['readiness_unavailable'] = True
+          # Local checks and ledger line counts are not proof of delivery or interest.
+          output = Path('outreach_monitor/public-safe-summary.json')
+          output.parent.mkdir(parents=True, exist_ok=True)
+          encoded = json.dumps(report, ensure_ascii=True, sort_keys=True)
+          output.write_text(encoded + '\n', encoding='utf-8')
+          print(encoded)
           PY
 
-      - name: Upload outreach reports and trace logs
+      - name: Upload sanitized outreach diagnostics only
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: outreach-reports-${{ github.run_id }}
-          path: |
-            outreach_run.log
-            outreach_monitor/processed/sent_ledger.jsonl
-            outreach_monitor/processed/hot_followup_reply_ledger.jsonl
-            outreach_monitor/processed/dry_run_report.jsonl
-            outreach_monitor/processed/llm_tailoring_readiness.json
+          name: outreach-summary-${{ github.run_id }}
+          path: outreach_monitor/public-safe-summary.json
+          if-no-files-found: warn
           retention-days: 7
