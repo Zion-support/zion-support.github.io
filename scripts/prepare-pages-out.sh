@@ -271,4 +271,28 @@ assert_locale_journeys() {
 
 assert_locale_journeys
 
+
+assert_batch98_routes() {
+  local required=(
+    "apps/october-2026-batch98.html"
+    "fraud-transaction-monitor/index.html"
+    "claims-automation-ai/index.html"
+    "underwriting-copilot-ai/index.html"
+    "aml-screening-ai/index.html"
+    "cash-flow-forecaster/index.html"
+    "ar-collections-copilot/index.html"
+    "policy-comparison-ai/index.html"
+  )
+  local rel
+  for rel in "${required[@]}"; do
+    if [ ! -f "out/$rel" ]; then
+      echo "ERROR: missing Batch 98 route out/$rel" >&2
+      exit 1
+    fi
+  done
+  echo "OK Batch 98 routes"
+}
+
+assert_batch98_routes
+
 echo "Prepared out ($(find out -type f | wc -l) files)"
