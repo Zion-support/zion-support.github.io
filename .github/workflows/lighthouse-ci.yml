@@ -44,23 +44,16 @@ jobs:
       - name: Install dependencies
         run: npm ci --prefer-offline --no-audit --fund=false
 
-      - name: Build
-        env:
-          NODE_OPTIONS: --max-old-space-size=12288 --max-semi-space-size=64
-          NEXT_BUILD_WORKER_COUNT: "1"
+      - name: Prepare static Pages artifact
         run: |
           set -euo pipefail
           npm run rsc:guard
-          if npm run build; then
-            echo "Next.js build succeeded"
-          else
-            echo "::warning::Next.js build failed (heap OOM on 90k+ file tree); falling back to auditing the static site from the repository root (same content GitHub Pages serves)."
-            rm -rf out
-          fi
+          bash scripts/prepare-pages-out.sh
+          test -f out/index.html
 
       - name: Serve and audit
         run: |
-          if [ -d out ]; then npx serve out -l 3000 & else npx serve . -l 3000 & fi
+          npx serve out -l 3000 &
           SERVER_PID=$!
           sleep 3
 
@@ -163,7 +156,7 @@ jobs:
           fi
 
       - name: Upload report
-        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         if: always()
         with:
           name: lighthouse-report-${{ github.run_id }}
