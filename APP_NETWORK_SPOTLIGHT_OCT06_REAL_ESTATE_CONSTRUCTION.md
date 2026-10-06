@@ -1,4 +1,4 @@
-# 🏗️ APP NETWORK SPOTLIGHT — Batch 96: Real Estate & Construction AI (Oct 6, 2026)
+# 🏗️ APP NETWORK SPOTLIGHT — Batch 99: Construction & PropTech AI (Oct 6, 2026)
 
 Six new free, open-source apps, all interlinked via full-mesh ZION_APP_NETWORK.md files:
 
@@ -10,7 +10,7 @@ Six new free, open-source apps, all interlinked via full-mesh ZION_APP_NETWORK.m
 6. Facility Maintenance Predictor — https://github.com/Zion-support/zion-facility-maintenance-predictor
 
 - Showcase: https://ziontechgroup.com/apps/october-2026-batch18.html
-- Hub spotlight: https://github.com/Zion-support/zion-app-network/blob/main/SPOTLIGHT-2026-10-06-BATCH96.md
+- Hub spotlight: https://github.com/Zion-support/zion-app-network/blob/main/SPOTLIGHT-2026-10-06-BATCH99.md
 - Free Discovery (instant on-screen results + email to client and commercial@ziontechgroup.com): https://ziontechgroup.com/discovery/
 
 Fixes shipped with this batch: /discovery/thanks.html 404 resolved (removed file/directory conflict).
