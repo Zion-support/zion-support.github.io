@@ -198,8 +198,21 @@ assert_discovery_network_integrity() {
     echo "ERROR: Discovery missing Commercial delivery address" >&2
     exit 1
   fi
-  if ! grep -Fq '_cc:f.email' "$d"; then
-    echo "ERROR: Discovery missing client-copy delivery marker" >&2
+  # Verify the assembled form's behavior, not one JavaScript spelling.
+  # The current implementation computes cc from the validated client address
+  # and Carlos. Reuse the offline contract tests: their fetch is mocked, so
+  # this gate never sends real email or requires credentials/network access.
+  local contract="scripts/test-discovery-delivery-contract.cjs"
+  if [ ! -f "$contract" ]; then
+    echo "ERROR: missing Discovery delivery contract tests ($contract)" >&2
+    exit 1
+  fi
+  if ! command -v node >/dev/null 2>&1; then
+    echo "ERROR: Node.js is required for the Discovery delivery contract" >&2
+    exit 1
+  fi
+  if ! DISCOVERY_HTML="$ROOT/$d" node --test "$contract"; then
+    echo "ERROR: assembled Discovery failed delivery/safety contract tests" >&2
     exit 1
   fi
   if ! grep -Fq 'formsubmit.co/ajax/commercial@ziontechgroup.com' "$d"; then
