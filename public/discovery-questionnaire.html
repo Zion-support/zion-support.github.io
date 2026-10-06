@@ -1,77 +1,11 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Free AI Discovery Questionnaire — Zion Tech Group</title>
-<meta name="description" content="Free AI Discovery questionnaire: 2 minutes, personalized picks from 770+ AI apps. Results emailed instantly to you and our commercial team. Always online, always free.">
-<style>body{font-family:system-ui;background:linear-gradient(135deg,#0b1020,#1e3a8a);color:#fff;padding:2rem 1rem;max-width:780px;margin:auto}a{color:#22d3ee}.card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:1.25rem;margin:1rem 0}.btn{display:inline-block;background:#22d3ee;color:#082f49;padding:.8rem 1.6rem;border-radius:999px;font-weight:700;text-decoration:none;border:0;cursor:pointer;font-size:1rem}label{display:block;margin:.4rem 0;padding:.6rem .8rem;background:rgba(255,255,255,.05);border-radius:10px;cursor:pointer}input[type=text],input[type=email]{width:100%;padding:.7rem;border-radius:10px;border:1px solid rgba(255,255,255,.25);background:rgba(0,0,0,.25);color:#fff;margin:.3rem 0;box-sizing:border-box}h1{margin-bottom:.2rem}.muted{opacity:.85}.result{display:none}.benefit{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:.8rem}.b{background:rgba(34,211,238,.08);border:1px solid rgba(34,211,238,.35);border-radius:12px;padding:.9rem}</style></head>
-<body>
-<h1>🔎 Free AI Discovery</h1>
-<p><strong>Always online. Always free. Instant results.</strong></p>
-<div class="benefit">
-<div class="b">💸 <b>Free forever</b><br>No cost, no credit card, no commitment.</div>
-<div class="b">🌐 <b>Always online</b><br>24/7 self-service, no call needed.</div>
-<div class="b">⚡ <b>Instant results</b><br>Your report is generated on submit.</div>
-<div class="b">📬 <b>Dual delivery</b><br>Emailed to you <i>and</i> our commercial team for fast follow-up.</div>
-<div class="b">🎯 <b>Actionable</b><br>Recommendations map to 770+ live apps in the <a href="https://github.com/Zion-support/zion-app-network">Zion AI App Network</a>.</div>
-</div>
-<form id="dq">
-<div class="card"><h3>Your details</h3>
-<input type="text" id="name" placeholder="Your name" required>
-<input type="email" id="email" placeholder="Your work email" required>
-<input type="text" id="company" placeholder="Company (optional)"></div>
-<div class="card"><h3>1. What is your industry?</h3>
-<label><input type="radio" name="industry" value="field-service"> Field Service / MSP</label>
-<label><input type="radio" name="industry" value="healthcare"> Healthcare</label>
-<label><input type="radio" name="industry" value="finance"> Finance / FinOps</label>
-<label><input type="radio" name="industry" value="energy"> Energy / Sustainability</label>
-<label><input type="radio" name="industry" value="retail"> Retail / E-commerce</label>
-<label><input type="radio" name="industry" value="legal"> Legal / Compliance</label>
-<label><input type="radio" name="industry" value="hr"> HR / People Ops</label>
-<label><input type="radio" name="industry" value="other"> Other</label></div>
-<div class="card"><h3>2. What is your biggest challenge?</h3>
-<label><input type="radio" name="challenge" value="support"> Customer support overload</label>
-<label><input type="radio" name="challenge" value="sla"> SLA breaches / reliability</label>
-<label><input type="radio" name="challenge" value="costs"> Cloud &amp; operating costs</label>
-<label><input type="radio" name="challenge" value="sales"> Sales &amp; lead generation</label>
-<label><input type="radio" name="challenge" value="data"> Data &amp; reporting</label>
-<label><input type="radio" name="challenge" value="people"> Hiring, scheduling &amp; retention</label></div>
-<div class="card"><h3>3. Company size?</h3>
-<label><input type="radio" name="size" value="1-10"> 1–10</label>
-<label><input type="radio" name="size" value="11-100"> 11–100</label>
-<label><input type="radio" name="size" value="101-1000"> 101–1,000</label>
-<label><input type="radio" name="size" value="1000+"> 1,000+</label></div>
-<div class="card"><h3>4. How fast do you want results?</h3>
-<label><input type="radio" name="speed" value="days"> Days</label>
-<label><input type="radio" name="speed" value="weeks"> Weeks</label>
-<label><input type="radio" name="speed" value="quarter"> This quarter</label></div>
-<div class="card"><h3>5. Priority outcome?</h3>
-<label><input type="radio" name="outcome" value="save-time"> Save time</label>
-<label><input type="radio" name="outcome" value="cut-costs"> Cut costs</label>
-<label><input type="radio" name="outcome" value="grow-revenue"> Grow revenue</label>
-<label><input type="radio" name="outcome" value="reduce-risk"> Reduce risk</label></div>
-<button class="btn" type="submit">Get my free Discovery report →</button>
-<p class="muted">On submit, your personalized report is emailed instantly to you and to commercial@ziontechgroup.com so our team can follow up with a tailored plan.</p>
-</form>
-<div class="card result" id="res"><h3>✅ Your Discovery results</h3><div id="resbody"></div><p><a class="btn" id="sendmail" href="#">📧 Email results to me + Zion commercial team</a></p></div>
-<script>
-const MAP={
-"field-service":[["Field Service AI suite","https://ziontechgroup.com/blog/field-service-ai-suite/"],["Site Survey Planner","https://ziontechgroup.com/site-survey-planner/"],["SLA Breach Predictor","https://ziontechgroup.com/sla-breach-predictor/"]],
-"healthcare":[["Clinical Documentation AI","https://ziontechgroup.com/clinical-documentation-ai/"],["Patient Engagement Copilot","https://ziontechgroup.com/patient-engagement-copilot/"],["Remote Patient Monitoring AI","https://ziontechgroup.com/remote-patient-monitoring-ai/"]],
-"finance":[["AI FinOps Suite","https://ziontechgroup.com/ai-finops-suite/"],["Cloud Cost Estimator","https://ziontechgroup.com/cloud-cost-estimator/"],["Zion AI ROI Calculator","https://ziontechgroup.com/zion-ai-roi-calculator/"]],
-"energy":[["Energy Consumption Forecaster","https://ziontechgroup.com/energy-consumption-forecaster/"],["Carbon Footprint Tracker","https://ziontechgroup.com/carbon-footprint-tracker/"],["Solar ROI Optimizer","https://ziontechgroup.com/solar-roi-optimizer/"]],
-"retail":[["Loyalty Program Optimizer","https://ziontechgroup.com/loyalty-program-optimizer/"],["AI E-commerce Optimizer","https://ziontechgroup.com/ai-ecommerce-optimizer/"],["Customer Feedback Analyzer","https://ziontechgroup.com/customer-feedback-analyzer/"]],
-"legal":[["Contract Clause Analyzer","https://ziontechgroup.com/contract-clause-analyzer/"],["Compliance Gap Scanner","https://ziontechgroup.com/compliance-gap-scanner/"],["GDPR DSAR Autopilot","https://ziontechgroup.com/gdpr-dsar-autopilot/"]],
-"hr":[["Recruiting Screening AI","https://ziontechgroup.com/recruiting-screening-ai/"],["HR Onboarding Copilot","https://ziontechgroup.com/hr-onboarding-copilot/"],["Skills Gap Analyzer","https://ziontechgroup.com/skills-gap-analyzer/"]],
-"other":[["Zion AI App Network hub","https://github.com/Zion-support/zion-app-network"],["AI Workflow Automator","https://ziontechgroup.com/zion-ai-workflow-automator/"],["Zion AI Meeting Copilot","https://ziontechgroup.com/zion-ai-meeting-copilot/"]]};
-const CH={"support":[["Support Sentiment Radar","https://ziontechgroup.com/support-sentiment-radar/"]],"sla":[["SLA Breach Predictor","https://ziontechgroup.com/sla-breach-predictor/"]],"costs":[["AI Cloud Optimizer","https://ziontechgroup.com/ai-cloud-optimizer/"]],"sales":[["NPS Insight Copilot","https://ziontechgroup.com/nps-insight-copilot/"]],"data":[["Customer Feedback Analyzer","https://ziontechgroup.com/customer-feedback-analyzer/"]],"people":[["Shift Scheduler AI","https://ziontechgroup.com/shift-scheduler-ai/"]]};
-document.getElementById('dq').addEventListener('submit',e=>{e.preventDefault();const f=new FormData(e.target);const ind=f.get('industry')||'other';const ch=f.get('challenge');const name=document.getElementById('name').value;const email=document.getElementById('email').value;const company=document.getElementById('company').value;
-const picks=[...(MAP[ind]||MAP.other),...((CH[ch]||[]))].slice(0,4);
-let html='<p>Hi <b>'+name+'</b>, based on your answers ('+ind+', challenge: '+(ch||'-')+', size '+(f.get('size')||'-')+', goal '+(f.get('outcome')||'-')+'), we recommend:</p><ul>';
-let text='Zion AI Discovery results for '+name+' ('+email+', '+(company||'n/a')+')\nIndustry: '+ind+' | Challenge: '+(ch||'-')+' | Size: '+(f.get('size')||'-')+' | Speed: '+(f.get('speed')||'-')+' | Outcome: '+(f.get('outcome')||'-')+'\n\nRecommended apps:\n';
-picks.forEach(p=>{html+='<li><a href="'+p[1]+'">'+p[0]+'</a></li>';text+='- '+p[0]+': '+p[1]+'\n';});
-html+='</ul><p class="muted">All apps are free to try online and open-source.</p>';
-document.getElementById('resbody').innerHTML=html;document.getElementById('res').style.display='block';
-const subj='Zion AI Discovery results — '+name+(company?' ('+company+')':'');
-document.getElementById('sendmail').href='mailto:'+email+',commercial@ziontechgroup.com?subject='+encodeURIComponent(subj)+'&body='+encodeURIComponent(text+'\n— Zion Tech Group · https://ziontechgroup.com');
-document.getElementById('res').scrollIntoView({behavior:'smooth'});});
-</script>
-<p class="muted">© 2026 Zion Tech Group — <a href="https://ziontechgroup.com">ziontechgroup.com</a> · Hub: <a href="https://github.com/Zion-support/zion-app-network">github.com/Zion-support/zion-app-network</a></p>
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="refresh" content="0; url=/discovery/">
+<link rel="canonical" href="https://ziontechgroup.com/discovery/">
+<title>Free Discovery — Zion Tech Group</title>
+<meta name="robots" content="noindex,follow">
+</head><body>
+<p>This questionnaire has moved to Zion's canonical <a href="/discovery/">Free Discovery</a>.</p>
+<p>Discovery remains online 24/7, free, and uses the current 8-question journey with instant browser results and email delivery workflow.</p>
+<script>location.replace('/discovery/');</script>
 </body></html>
