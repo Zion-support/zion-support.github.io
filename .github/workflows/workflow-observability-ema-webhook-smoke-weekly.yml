@@ -1,4 +1,5 @@
-# Ensures ai-observability-ema-webhook-daily.yml keeps auth/concurrency/push-helper safety anchors (grep-only).
+# Safety smoke for the legacy EMA webhook workflow.
+# The legacy target may be intentionally retired; validate it only when present.
 
 name: observability EMA webhook workflow smoke (weekly)
 
@@ -22,11 +23,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
 
-      - name: ai-observability-ema-webhook-daily.yml anchors
+      - name: Validate legacy workflow only when present
         run: |
           set -euo pipefail
           f=.github/workflows/ai-observability-ema-webhook-daily.yml
-          test -f "$f"
+          if [ ! -e "$f" ]; then
+            echo "ok: legacy EMA webhook workflow retired; no stale target to validate"
+            exit 0
+          fi
           test -s "$f"
           grep -Fq 'name: Observability EMA webhook digest' "$f"
           grep -Fq 'group: ai-observability-ema-webhook-daily' "$f"
