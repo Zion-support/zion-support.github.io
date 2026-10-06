@@ -34,7 +34,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: Fail-closed restore money paths if stubbed
         env:
-          GOOD_BLOB: 4a3b859876c6854c53d204828457394d152e645a
+          GOOD_BLOB: 38964b6c860128d47adca32cc636eeeefa11ce34
           PLINK: 7sY00k7JScFV99Bf044ZG06
           MIN: 5120
         run: |
