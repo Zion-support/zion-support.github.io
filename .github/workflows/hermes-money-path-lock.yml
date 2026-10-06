@@ -47,20 +47,26 @@ jobs:
           need_restore=0
           check() {
             local f="$1"
+            local require_plink="${2:-0}"
             if [ ! -f "$f" ]; then echo "MISSING $f"; need_restore=1; return; fi
             local sz; sz=$(wc -c < "$f" | tr -d ' ')
             if [ "$sz" -lt "$MIN" ]; then echo "STUB $f (${sz}B)"; need_restore=1; return; fi
-            if ! grep -Fq "$PLINK" "$f"; then echo "NO_PLINK $f"; need_restore=1; return; fi
+            if [ "$require_plink" = "1" ] && ! grep -Fq "$PLINK" "$f"; then
+              echo "NO_PLINK $f"; need_restore=1; return
+            fi
             if grep -Fi 'http-equiv="refresh"' "$f" >/dev/null || grep -Fq 'PLACEHOLDER' "$f"; then
               echo "REDIRECT_STUB $f"; need_restore=1; return
             fi
             echo "OK $f (${sz}B)"
           }
 
-          check public/services/ai-automation/index.html
-          check services/ai-automation/index.html
+          # Only paid AI-automation pages must carry the Starter payment link.
+          # Plans/Discovery are protected against stubs/redirects, not forced to
+          # embed a payment link. This matches money-paths-stub-guard.yml.
+          check public/services/ai-automation/index.html 1
+          check services/ai-automation/index.html 1
           for f in public/plans/index.html plans/index.html public/discovery/index.html discovery/index.html; do
-            if [ -f "$f" ]; then check "$f"; fi
+            if [ -f "$f" ]; then check "$f" 0; fi
           done
 
           # Always block Hermes Agent money-path commits that look like service sync
