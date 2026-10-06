@@ -11,7 +11,7 @@ jobs:
   setup:
     runs-on: ubuntu-latest
     env:
-      COMPOSICIO_API_KEY: ${{ secrets.COMPOSIO_API_KEY }}
+      COMPOSIO_API_KEY: ${{ secrets.COMPOSIO_API_KEY }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
