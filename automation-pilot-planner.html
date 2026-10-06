@@ -1,0 +1,27 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Automation Pilot Planner — Zion Tech Group</title>
+<meta name="description" content="Free interactive tool: plan a 30-60-90 day automation pilot. Always online, always free — from Zion Tech Group's AI App Network.">
+<style>body{font-family:system-ui;background:linear-gradient(135deg,#0b1020,#065f46);color:#fff;padding:2rem 1rem;max-width:860px;margin:auto}a{color:#34d399}.card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:1.25rem;margin:1rem 0}.btn{display:inline-block;background:#34d399;color:#052e22;padding:.7rem 1.4rem;border-radius:999px;font-weight:700;text-decoration:none;border:0;cursor:pointer}label{display:block;margin:.3rem 0}input,select{width:100%;padding:.6rem;border-radius:10px;border:1px solid rgba(255,255,255,.25);background:rgba(0,0,0,.25);color:#fff;box-sizing:border-box;margin:.2rem 0}.muted{opacity:.85}#out{display:none}</style></head><body>
+<h1>🧭 Automation Pilot Planner</h1>
+<p class="muted">Free, always online. Plan a measurable 30-60-90 day pilot with apps from the <a href="https://ziontechgroup.com/apps/network.html">Zion AI App Network</a>.</p>
+<form id="f" class="card">
+<label>Process to automate <input id="proc" placeholder="e.g. support ticket triage" required></label>
+<label>Baseline weekly hours spent <input id="hours" type="number" min="1" value="40" required></label>
+<label>Team size <input id="team" type="number" min="1" value="5" required></label>
+<label>Primary KPI
+<select id="kpi"><option value="time saved">Time saved</option><option value="cost reduction">Cost reduction</option><option value="quality / error rate">Quality / error rate</option><option value="response time">Response time</option></select></label>
+<button class="btn" type="submit">Generate pilot plan →</button></form>
+<div class="card" id="out"><h3>Your 30-60-90 pilot plan</h3><div id="plan"></div><p class="muted">Next: build your one-pager with the <a href="/automation-brief-builder.html">Automation Brief Builder</a> or get a tailored shortlist via the <a href="https://ziontechgroup.com/discovery-questionnaire.html">Free Discovery</a>.</p></div>
+<script>
+document.getElementById('f').addEventListener('submit',function(e){e.preventDefault();
+var p=document.getElementById('proc').value,h=+document.getElementById('hours').value,t=+document.getElementById('team').value,k=document.getElementById('kpi').value;
+var save=Math.round(h*0.35);
+document.getElementById('plan').innerHTML='<ul>'+
+'<li><b>Days 1–30 — Baseline & quick win:</b> instrument "'+p+'", capture current '+k+', deploy one app from the <a href="https://ziontechgroup.com/apps/network.html">Apps Network</a> to the highest-volume slice. Target: 10% improvement.</li>'+
+'<li><b>Days 31–60 — Scale:</b> roll out to the full team of '+t+', automate hand-offs, weekly KPI review. Target: 25% improvement (~'+save+' h/week saved).</li>'+
+'<li><b>Days 61–90 — Prove & expand:</b> lock the '+k+' baseline vs realized, document ROI, shortlist the next two processes via the <a href="https://ziontechgroup.com/discovery-questionnaire.html">Free Discovery</a>.</li></ul>'+
+'<p>Estimated time savings at steady state: <b>~'+save+' hours/week</b> across the team.</p>';
+document.getElementById('out').style.display='block';document.getElementById('out').scrollIntoView({behavior:'smooth'});});
+</script>
+<p class="muted">© 2026 Zion Tech Group — <a href="https://ziontechgroup.com">ziontechgroup.com</a> · <a href="/free-discovery-playbook.html">Discovery Playbook</a></p>
+</body></html>
