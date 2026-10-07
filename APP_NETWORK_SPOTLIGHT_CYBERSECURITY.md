@@ -1,6 +1,6 @@
-# APP NETWORK SPOTLIGHT — Cybersecurity & Threat AI (Batch 99, 2026-10-07)
+# APP NETWORK SPOTLIGHT — Cybersecurity & Threat AI (Batch 110, 2026-10-07)
 
-The Zion AI App Network now counts **425 free, open-source AI apps**. Batch 99 adds ten Cybersecurity & Threat AI apps, fully interlinked with the network.
+The Zion AI App Network now counts **425+ free, open-source AI apps**. Batch 110 adds ten Cybersecurity & Threat AI apps, fully interlinked with the network.
 
 ## The 10 apps
 1. Threat Intel Aggregator — unified scored threat feeds
@@ -15,8 +15,8 @@ The Zion AI App Network now counts **425 free, open-source AI apps**. Batch 99 a
 10. Dark Web Leak Watcher — leaked credential detection
 
 ## Links
-- Live showcase: https://ziontechgroup.com/apps/october-2026-batch19.html
+- Live showcase: https://ziontechgroup.com/apps/october-2026-batch110-cybersecurity.html
 - Category index: https://github.com/Zion-support/zion-network/blob/main/network/cybersecurity-threat-ai.md
-- Spotlight: https://github.com/Zion-support/zion-network/blob/main/SPOTLIGHT-2026-10-07-BATCH99.md
+- Spotlight: https://github.com/Zion-support/zion-network/blob/main/SPOTLIGHT-2026-10-07-BATCH110.md
 - Network hub: https://zion-support.github.io/zion-network/
 - Free Discovery (instant results emailed to you + commercial@ziontechgroup.com): https://ziontechgroup.com/discovery/
