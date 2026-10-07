@@ -1,0 +1,51 @@
+name: Batch 99 Mirror Guard
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'apps/october-2026-batch99.html'
+      - 'public/apps/october-2026-batch99.html'
+      - '.github/workflows/batch99-mirror-guard.yml'
+  pull_request:
+    paths:
+      - 'apps/october-2026-batch99.html'
+      - 'public/apps/october-2026-batch99.html'
+      - '.github/workflows/batch99-mirror-guard.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Require canonical Batch 99 mirror
+        shell: bash
+        run: |
+          set -euo pipefail
+          root='apps/october-2026-batch99.html'
+          public='public/apps/october-2026-batch99.html'
+
+          for file in "$root" "$public"; do
+            if [ ! -f "$file" ]; then
+              echo "::error::Missing required Batch 99 mirror file: $file"
+              exit 1
+            fi
+          done
+
+          if ! cmp -s "$root" "$public"; then
+            echo "::error::Batch 99 root/public copies diverged. Update both files in the same change."
+            echo "root sha256:   $(sha256sum "$root" | awk '{print $1}')"
+            echo "public sha256: $(sha256sum "$public" | awk '{print $1}')"
+            exit 1
+          fi
+
+          echo "Batch 99 mirror OK: root/public content is identical."
