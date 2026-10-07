@@ -1,0 +1,61 @@
+name: Discovery Mirror Guard
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'discovery/index.html'
+      - 'public/discovery/index.html'
+      - '.github/workflows/discovery-mirror-guard.yml'
+  pull_request:
+    paths:
+      - 'discovery/index.html'
+      - 'public/discovery/index.html'
+      - '.github/workflows/discovery-mirror-guard.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Require Discovery mirror
+        shell: bash
+        run: |
+          set -euo pipefail
+          root='discovery/index.html'
+          public='public/discovery/index.html'
+
+          for file in "$root" "$public"; do
+            if [ ! -f "$file" ]; then
+              echo "::error::Missing Discovery mirror file: $file"
+              exit 1
+            fi
+          done
+
+          if ! cmp -s "$root" "$public"; then
+            echo "::error::Discovery root/public copies diverged. Update both files in the same change."
+            echo "root sha256:   $(sha256sum "$root" | awk '{print $1}')"
+            echo "public sha256: $(sha256sum "$public" | awk '{print $1}')"
+            exit 1
+          fi
+
+          if grep -Fq '_autoresponse' "$public"; then
+            echo "::error::Unsupported FormSubmit _autoresponse returned to Discovery."
+            exit 1
+          fi
+
+          if ! grep -Fq 'Inbox delivery is not yet confirmed' "$public"; then
+            echo "::error::Evidence-safe inbox delivery wording is missing."
+            exit 1
+          fi
+
+          echo "Discovery mirror and evidence-safe delivery contract markers OK."
