@@ -5,7 +5,7 @@
 Our **free AI Discovery questionnaire** at https://ziontechgroup.com/discovery/ runs 24/7, no signup, no sales call required. Benefits:
 - ⚡ **Instant results by email** — personalized app recommendations the moment you submit.
 - 📬 **Simultaneous copy to our commercial team** (commercial@ziontechgroup.com) — a specialist can follow up the same day (optional, free).
-- 🗂️ **Matched to 850+ free apps** — answers map to the full Zion AI App Network across every industry.
+- 🗂️ **Matched to the Zion AI App Network** — answers recommend relevant tools from the network. The current master index lists 800 repositories; do not present repository count as a guaranteed count of free apps.
 - 📊 **Actionable baseline** — feeds the ROI calculator so savings are quantified.
 
 ## 🚀 Batch 85 — Data Quality & Customer Success AI (October 5, 2026)
