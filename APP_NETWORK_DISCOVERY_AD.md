@@ -1,30 +1,16 @@
-# 🔎 Free AI Discovery — Always Online, Always Free
+# 🧭 Free AI Discovery — Always Online, Always Free
 
-**The fastest way to find the right AI apps for your business.** The Zion App Network has **840+ interlinked AI apps** — the Free AI Discovery questionnaire matches you to the right ones in about 2 minutes.
+**Start now: https://ziontechgroup.com/discovery/** (2 minutes, no signup)
 
-👉 **Start now: [ziontechgroup.com/app-network-discovery.html](https://ziontechgroup.com/app-network-discovery.html)** (also at [ziontechgroup.com/discovery/](https://ziontechgroup.com/discovery/))
+## Why it converts
+1. **Instant results by email** — the client's personalized report is emailed the moment they submit, with a copy to **commercial@ziontechgroup.com** so a specialist can follow up the same day (optional, free).
+2. **Matched to 850+ free apps** — answers map across the entire Zion AI App Network (Field Services, Network & Infrastructure, FinOps, CX, Legal, GovTech, Nonprofit, Data & CS and more).
+3. **Actionable baseline** — feeds the [AI ROI Calculator](https://ziontechgroup.com/ai-roi-calculator/) and stack audit so savings are quantified.
+4. **24/7, zero friction** — always online, always free; honeypot-protected, no captcha.
 
-## Benefits
+## Funnel
+Discovery → instant email (client + commercial) → thanks page → app showcase → plans.
 
-- **Always online, always free** — no signup, no credit card, no cost, ever. Available 24/7.
-- **8 questions, ~2 minutes** — industry, challenge, size, speed, AI maturity, outcome, deployment, contact.
-- **Personalized picks** — instant on-screen recommendations mapped from your answers to 840+ apps.
-- **Instant dual email** — your full results are emailed within a minute to **you** AND to our commercial team at **commercial@ziontechgroup.com**, so a specialist can follow up with a tailored plan.
-- **Instant confirmation** — you receive an auto-reply copy of your results immediately; if the gateway is busy, a one-click email fallback delivers the same results.
-- **Covers every suite** — Energy & Utilities, Sustainability & ESG, Space & Satellite Ops, DevSecOps & Code Quality, Healthcare, Field Service, Sales, Marketing, FinOps, Security & Compliance and 40+ more categories.
+Homepage CTA copy: *"Not sure where AI fits your business? Take our free 2-minute Discovery and get instant, personalized recommendations from 850+ free apps — results emailed to you and our team simultaneously."*
 
-## What happens after
-
-1. You get your personalized app picks instantly (on screen + email).
-2. Our commercial team receives the same results at the same time.
-3. Optional: book a **free discovery call** or start a **$99 AI Discovery diagnostic** with a 7-day action plan.
-
-## Related
-
-- 🗂️ [App Network master index](https://github.com/Zion-support/zion-network/blob/main/APPS_NETWORK.md)
-- 📣 [All spotlights](SPOTLIGHTS_INDEX.md)
-- 🧰 [AI Tools & calculators](https://ziontechgroup.com/tools/)
-- 💼 [Plans & pricing](https://ziontechgroup.com/plans/)
-
----
-© 2026 [Zion Tech Group](https://ziontechgroup.com) — ✉️ commercial@ziontechgroup.com
+© 2026 Zion Tech Group · commercial@ziontechgroup.com
