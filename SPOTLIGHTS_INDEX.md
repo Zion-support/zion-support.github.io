@@ -1,5 +1,6 @@
 # Zion AI App Network — Spotlights Index
 
+- 2026-10-05 — Batch 85 Data Quality & Customer Success AI: [showcase](https://ziontechgroup.com/zion-app-network/app-network-batch85-oct05.html) · [spotlight](https://github.com/Zion-support/zion-app-network/blob/main/SPOTLIGHT-2026-10-05-BATCH85.md) · [homepage spotlight](APP_NETWORK_SPOTLIGHT_OCT05_BATCH85_DATA_CS.md)
 - 2026-10-06 — Batch 98 Sports, Venue & Entertainment AI: [showcase](https://ziontechgroup.com/apps/october-2026-batch16.html) · [hub showcase](https://ziontechgroup.com/zion-app-network/app-network-batch98-oct06.html) · [spotlight](https://github.com/Zion-support/zion-app-network/blob/main/SPOTLIGHT-2026-10-06-BATCH98.md) · [homepage spotlight](APP_NETWORK_SPOTLIGHT_OCT06_BATCH98_SPORTS.md)
 - 2026-10-06 — Discovery benefits homepage block: [HOMEPAGE_DISCOVERY_BENEFITS_OCT06.md](HOMEPAGE_DISCOVERY_BENEFITS_OCT06.md) · live: https://ziontechgroup.com/discovery/
 - 2026-10-05 — Batch 93 Education & Green Tech AI: [showcase](https://ziontechgroup.com/zion-app-network/app/network-batch93-showcase.html) · [spotlight](https://github.com/Zion-support/zion-app-network/blob/main/SPOTLIGHT-2026-10-05-BATCH93.md) · [homepage spotlight](APP_NETWORK_SPOTLIGHT_OCT05_BATCH93_EDUCATION_GREEN.md)
