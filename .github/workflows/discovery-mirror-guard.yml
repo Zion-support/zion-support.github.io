@@ -64,21 +64,14 @@ jobs:
 
           echo "Discovery mirror and evidence-safe delivery contract markers OK."
 
-      - name: Require legacy Discovery alias
+      - name: Prevent legacy Discovery questionnaire regression
         shell: bash
         run: |
           set -euo pipefail
-          root='discovery/questionnaire.html'
-          public='public/discovery/questionnaire.html'
-          for file in "$root" "$public"; do
-            test -f "$file" || { echo "::error::Missing legacy alias $file"; exit 1; }
+          for file in 'discovery/questionnaire.html' 'public/discovery/questionnaire.html'; do
+            if [ -f "$file" ]; then
+              echo "::error::Retired legacy questionnaire returned: $file. Keep /discovery/ as the single canonical questionnaire."
+              exit 1
+            fi
           done
-          cmp -s "$root" "$public" || { echo "::error::Legacy Discovery alias mirrors diverged"; exit 1; }
-          grep -Fq '<link rel="canonical" href="https://ziontechgroup.com/discovery/">' "$public"
-          grep -Fq '<meta http-equiv="refresh" content="0;url=/discovery/">' "$public"
-          grep -Fq 'href="/discovery/"' "$public"
-          if grep -Eqi '<form|<script|formsubmit|_autoresponse|innerHTML' "$public"; then
-            echo "::error::Legacy alias must not contain a second questionnaire or submission logic"
-            exit 1
-          fi
-          echo "Legacy Discovery alias mirrors and canonical target OK"
+          echo "Legacy questionnaire remains retired; canonical /discovery/ is the single source of truth."
