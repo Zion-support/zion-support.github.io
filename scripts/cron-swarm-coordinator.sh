@@ -23,7 +23,13 @@ UNCOMMITTED=$(git -C "$REPO" status --porcelain 2>/dev/null | wc -l | tr -d ' ')
 echo "Git: $GIT_SHA | Uncommitted: $UNCOMMITTED"
 
 # --- 3. Service + page counts ---
-SERVICE_DIRS=$(python3 -c "import glob,sys; print(len(glob.glob(sys.argv[1]+'/*/'))" "$REPO/app/services" 2>/dev/null) || true
+SERVICE_DIRS=$(python3 -c "
+import glob,sys
+try:
+    print(len(glob.glob(sys.argv[1]+'/*/')))
+except Exception:
+    print(0)
+" "$REPO/app/services" 2>/dev/null) || true
 SITEMAP_URLS=$(grep -c '<loc>' "$REPO/public/sitemap.xml" 2>/dev/null || echo "0")
 echo "Pages: $SERVICE_DIRS | Sitemap URLs: $SITEMAP_URLS"
 
