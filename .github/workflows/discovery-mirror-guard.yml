@@ -64,14 +64,29 @@ jobs:
 
           echo "Discovery mirror and evidence-safe delivery contract markers OK."
 
-      - name: Prevent legacy Discovery questionnaire regression
+      - name: Require safe legacy-route redirects
         shell: bash
         run: |
           set -euo pipefail
           for file in 'discovery/questionnaire.html' 'public/discovery/questionnaire.html'; do
-            if [ -f "$file" ]; then
-              echo "::error::Retired legacy questionnaire returned: $file. Keep /discovery/ as the single canonical questionnaire."
+            if [ ! -f "$file" ]; then
+              echo "::error::Missing legacy-route compatibility redirect: $file"
+              exit 1
+            fi
+
+            if grep -Eiq '<form([[:space:]>])|formsubmit|_autoresponse|name=["'"'](q[0-9]+|email|company|challenge|goal)["'"']' "$file"; then
+              echo "::error::Legacy Discovery questionnaire behavior returned in $file. Compatibility routes must redirect only."
+              exit 1
+            fi
+
+            if ! grep -Fq 'rel="canonical" href="https://ziontechgroup.com/discovery/"' "$file"; then
+              echo "::error::Canonical /discovery/ marker missing from $file"
+              exit 1
+            fi
+
+            if ! grep -Eq 'http-equiv="refresh"[^>]+(/discovery/|https://ziontechgroup.com/discovery/)' "$file"; then
+              echo "::error::Compatibility redirect to /discovery/ missing from $file"
               exit 1
             fi
           done
-          echo "Legacy questionnaire remains retired; canonical /discovery/ is the single source of truth."
+          echo "Legacy routes are safe redirects; canonical /discovery/ remains the single questionnaire."
