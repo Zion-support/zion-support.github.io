@@ -203,7 +203,7 @@ document.getElementById('dform').addEventListener('submit',async function(e){
  const controller=new AbortController();
  const timeout=setTimeout(()=>controller.abort(),15000);
  try{
-  // _cc is the provider-supported copy mechanism; AJAX does not support _autoresponse.
+  // _cc is the provider-supported copy mechanism; AJAX does not support automatic reply emails.
   const r=await fetch('https://formsubmit.co/ajax/commercial@ziontechgroup.com',{
    method:'POST',signal:controller.signal,
    headers:{'Content-Type':'application/json','Accept':'application/json'},
