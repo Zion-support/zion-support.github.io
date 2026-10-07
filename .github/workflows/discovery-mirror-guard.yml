@@ -7,11 +7,15 @@ on:
     paths:
       - 'discovery/index.html'
       - 'public/discovery/index.html'
+      - 'discovery/questionnaire.html'
+      - 'public/discovery/questionnaire.html'
       - '.github/workflows/discovery-mirror-guard.yml'
   pull_request:
     paths:
       - 'discovery/index.html'
       - 'public/discovery/index.html'
+      - 'discovery/questionnaire.html'
+      - 'public/discovery/questionnaire.html'
       - '.github/workflows/discovery-mirror-guard.yml'
   workflow_dispatch:
 
@@ -59,3 +63,22 @@ jobs:
           fi
 
           echo "Discovery mirror and evidence-safe delivery contract markers OK."
+
+      - name: Require legacy Discovery alias
+        shell: bash
+        run: |
+          set -euo pipefail
+          root='discovery/questionnaire.html'
+          public='public/discovery/questionnaire.html'
+          for file in "$root" "$public"; do
+            test -f "$file" || { echo "::error::Missing legacy alias $file"; exit 1; }
+          done
+          cmp -s "$root" "$public" || { echo "::error::Legacy Discovery alias mirrors diverged"; exit 1; }
+          grep -Fq '<link rel="canonical" href="https://ziontechgroup.com/discovery/">' "$public"
+          grep -Fq '<meta http-equiv="refresh" content="0;url=/discovery/">' "$public"
+          grep -Fq 'href="/discovery/"' "$public"
+          if grep -Eqi '<form|<script|formsubmit|_autoresponse|innerHTML' "$public"; then
+            echo "::error::Legacy alias must not contain a second questionnaire or submission logic"
+            exit 1
+          fi
+          echo "Legacy Discovery alias mirrors and canonical target OK"
