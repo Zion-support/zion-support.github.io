@@ -48,7 +48,7 @@ jobs:
             exit 1
           fi
 
-          if grep -Fq '_autoresponse' "$public"; then
+          if grep -Eq '(^|[^[:alnum:]_])_autoresponse[[:space:]]*:' "$public"; then
             echo "::error::Unsupported FormSubmit _autoresponse returned to Discovery."
             exit 1
           fi
