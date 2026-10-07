@@ -1,0 +1,13 @@
+name: Discovery publication smoke
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - name: Read-only live multilingual publication checks
+        run: node scripts/test-discovery-live.cjs
