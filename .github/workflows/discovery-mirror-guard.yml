@@ -74,7 +74,7 @@ jobs:
               exit 1
             fi
 
-            if grep -Eiq '<form([[:space:]>])|formsubmit|_autoresponse|name=["'"'](q[0-9]+|email|company|challenge|goal)["'"']' "$file"; then
+            if grep -Eiq '<form([[:space:]>])|formsubmit|_autoresponse|name="(q[0-9]+|email|company|challenge|goal)"' "$file"; then
               echo "::error::Legacy Discovery questionnaire behavior returned in $file. Compatibility routes must redirect only."
               exit 1
             fi
