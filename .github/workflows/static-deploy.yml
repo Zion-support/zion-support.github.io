@@ -5,9 +5,15 @@ name: Simple Static Deploy
 # This avoids triggering production publishes for unrelated Hermes/status/ops commits.
 
 on:
-  # Debounced production publishing: this repository receives many commits per
-  # minute, so per-push deploys can cancel each other indefinitely. Each run
-  # checks out the latest main snapshot when it actually starts.
+  # Publish immediately for customer-facing static content, while excluding
+  # Hermes/STATUS/ops-only churn. Scheduled runs remain as a recovery path.
+  push:
+    branches:
+      - main
+    paths:
+      - 'public/**'
+      - 'scripts/prepare-pages-out.sh'
+      - '.github/workflows/static-deploy.yml'
   schedule:
     - cron: '*/5 * * * *'
   workflow_dispatch:
