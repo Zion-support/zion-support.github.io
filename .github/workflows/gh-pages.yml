@@ -49,6 +49,9 @@ jobs:
       - name: Prepare pages from public/
         run: bash scripts/prepare-pages-out.sh
 
+      - name: Render translated Discovery and communications content
+        run: node scripts/render-discovery-showcase.cjs
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
