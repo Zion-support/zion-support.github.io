@@ -1,0 +1,9 @@
+{
+  "release": "2026-10-08-network-start-v1",
+  "entry": "/apps/network-start-here.html",
+  "locales": ["en", "pt", "es", "fr", "de"],
+  "coverage": "/apps/network-publication-coverage.json",
+  "navigation_contract": "Same-page translation links validate declared language. Contextual links use data-network-language; existing canonical head alternate links remain unchanged.",
+  "functionality": "Static editorial guide and navigation only. No model inference, uploads, payments or email sending.",
+  "discovery": "Free report in browser; client and Commercial email submission depends on provider delivery."
+}
