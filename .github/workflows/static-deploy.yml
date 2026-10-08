@@ -7,6 +7,8 @@ on:
       - main
     paths:
       - 'public/**'
+      - 'scripts/render-network-start-here.cjs'
+      - 'scripts/render-network-home-ad.cjs'
       - 'scripts/render-discovery-next-step.cjs'
       - 'scripts/prepare-pages-out.sh'
       - 'scripts/render-discovery-showcase.cjs'
@@ -101,6 +103,8 @@ jobs:
         run: node scripts/test-communications-lab.cjs out
       - name: Offline translated comparison and publication-manifest checks
         run: node scripts/test-communications-decision.cjs out
+      - name: Consolidate app network navigation and five-language entry content
+        run: node scripts/render-network-start-here.cjs && node scripts/render-network-home-ad.cjs
       - uses: actions/upload-pages-artifact@v3
         with:
           path: out
