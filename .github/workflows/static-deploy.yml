@@ -25,6 +25,7 @@ on:
       - 'scripts/test-communications-readiness.cjs'
       - 'scripts/render-treasury-network.cjs'
       - 'scripts/render-insurance-network.cjs'
+      - 'scripts/render-insurance-evidence.cjs'
       - 'scripts/test-discovery-consistency.cjs'
       - 'content/discovery-journey.json'
       - 'scripts/test-discovery-live.cjs'
@@ -92,6 +93,8 @@ jobs:
         run: node scripts/render-treasury-network.cjs
       - name: Render five-language insurance concepts and preserve homepage forms
         run: node scripts/render-insurance-network.cjs
+      - name: Render translated local insurance evidence workbenches and reciprocal links
+        run: node scripts/render-insurance-evidence.cjs
       - name: Offline app experiment safety and language checks
         run: node scripts/test-app-experiments.cjs out
       - name: Offline communications form and navigation regression checks
