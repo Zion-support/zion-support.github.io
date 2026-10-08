@@ -1,0 +1,8 @@
+'use strict';
+// Read-only publication checks. No form submission, email or app-tool access.
+const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
+const live=process.argv.includes('--live'),root=process.argv.find((s,i)=>i>1&&s!=='--live')||'out';
+const base='https://ziontechgroup.com',locales={en:{lang:'en',home:'/en/'},pt:{lang:'pt-BR',home:'/'},es:{lang:'es',home:'/es/'},fr:{lang:'fr',home:'/fr/'},de:{lang:'de',home:'/de/'}};
+async function read(url){if(!live)return fs.readFileSync(path.join(root,url.endsWith('/')?url+'index.html':url),'utf8');const r=await fetch(base+url+'?publication_check=network-benefits-20261008',{headers:{'Cache-Control':'no-cache'},signal:AbortSignal.timeout(20000)});assert.equal(r.status,200,base+url+' HTTP status');return r.text();}
+(async()=>{let checks=0;for(const [l,c] of Object.entries(locales)){for(const slug of ['discovery-benefits','discovery-workflow-paths']){const url=(l==='en'?'':'/'+l)+'/apps/'+slug+'.html',h=await read(url);assert(h.includes('network-benefits-release-2026-10-08'),url+' version');assert(h.includes(`<html lang="${c.lang}">`),url+' lang');assert.equal((h.match(/hreflang=/g)||[]).length,6,url+' alternatives');assert(h.includes(`href="${base+url}"`),url+' canonical');assert(h.includes('commercial@ziontechgroup.com'));assert(!h.includes('780+ production'));checks++;}const home=await read(c.home);assert(home.includes('id="discovery-benefits-paths"'),c.home+' new section');assert(home.includes((l==='en'?'':'/'+l)+'/apps/discovery-workflow-paths.html'));checks++;}
+ console.log(JSON.stringify({passed:checks,mode:live?'live':'offline',release:'2026-10-08',emailSubmitted:false}));})().catch(err=>{console.error(err.message);process.exitCode=1;});
