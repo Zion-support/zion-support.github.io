@@ -40,7 +40,7 @@ document.getElementById('dform').addEventListener('submit',async e=>{
  try{
   const r=await fetch('https://formsubmit.co/ajax/commercial@ziontechgroup.com',{
    method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},signal:controller.signal,
-   body:JSON.stringify({_subject:'Free Discovery result — '+data.name+' — '+score,_cc:data.email+',carlos@ziontechgroup.com',_replyto:data.email,_captcha:'false',_template:'box',_honey:'',_autoresponse:'Vielen Dank für das kostenlose Zion KI-Discovery! Ihre Ergebnisse wurden auch sofort an unser Vertriebsteam (commercial@ziontechgroup.com) gesendet, das noch am selben Tag helfen kann — optional und immer kostenlos. Entdecken Sie Ihre empfohlenen Apps und das Netzwerk mit 830+ Apps: https://ziontechgroup.com/zion-app-network/ — Kostenloses Gespräch buchen: https://calendly.com/kleber-ziontechgroup',name:data.name,email:data.email,company:data.company||'n/a',process:data.process,hours:data.hours,systems:data.systems||'n/a',goal:data.goal||'n/a',timeline:data.timeline,score:score,locale:'de',message:summary})
+   body:JSON.stringify({_subject:'Free Discovery result — '+data.name+' — '+score,_cc:data.email+',carlos@ziontechgroup.com',_replyto:data.email,_captcha:'false',_template:'box',_honey:'',name:data.name,email:data.email,company:data.company||'n/a',process:data.process,hours:data.hours,systems:data.systems||'n/a',goal:data.goal||'n/a',timeline:data.timeline,score:score,locale:'de',message:summary})
   });
   const j=await r.json().catch(()=>({}));
   if(r.ok&&(j.success===true||j.success==='true')){
