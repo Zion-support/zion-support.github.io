@@ -14,6 +14,8 @@ on:
       - 'scripts/render-discovery-pilot-guide.cjs'
       - 'scripts/render-discovery-linked-guide.cjs'
       - 'scripts/render-network-benefits.cjs'
+      - 'scripts/render-app-experiments.cjs'
+      - 'scripts/test-app-experiments.cjs'
       - 'scripts/render-communications-apps.cjs'
       - 'scripts/render-communications-decision.cjs'
       - 'scripts/test-communications-decision.cjs'
@@ -77,6 +79,10 @@ jobs:
         run: node scripts/render-communications-decision.cjs
       - name: Consolidate translated benefits and workflow paths
         run: node scripts/render-network-benefits.cjs
+      - name: Render five-language local app experiment planner and reciprocal paths
+        run: node scripts/render-app-experiments.cjs
+      - name: Offline app experiment safety and language checks
+        run: node scripts/test-app-experiments.cjs out
       - name: Offline communications form and navigation regression checks
         run: node scripts/test-communications-lab.cjs out
       - name: Offline translated comparison and publication-manifest checks
