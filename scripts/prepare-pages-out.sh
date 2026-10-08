@@ -295,4 +295,36 @@ assert_batch98_routes() {
 
 assert_batch98_routes
 
+
+assert_batch121_routes() {
+  local required=(
+    "apps/october-2026-batch24.html"
+    "portfolio-insight-ai/index.html"
+    "kyc-onboarding-copilot/index.html"
+    "trade-surveillance-ai/index.html"
+    "wealth-advisor-copilot/index.html"
+    "credit-memo-generator/index.html"
+    "liquidity-forecaster-ai/index.html"
+    "regulatory-filing-copilot/index.html"
+  )
+  local rel
+  for rel in "${required[@]}"; do
+    if [ ! -f "out/$rel" ]; then
+      echo "ERROR: missing Batch 121 route out/$rel" >&2
+      exit 1
+    fi
+  done
+  if grep -Fqi 'Discovery $99' out/apps/index.html; then
+    echo "ERROR: retired paid Discovery language reappeared in out/apps/index.html" >&2
+    exit 1
+  fi
+  if ! grep -Fq '/discovery/' out/apps/october-2026-batch24.html; then
+    echo "ERROR: Batch 121 missing Free Discovery path" >&2
+    exit 1
+  fi
+  echo "OK Batch 121 routes and free-Discovery policy"
+}
+
+assert_batch121_routes
+
 echo "Prepared out ($(find out -type f | wc -l) files)"
