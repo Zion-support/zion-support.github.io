@@ -47,7 +47,7 @@ function formTest(source,config){
  assert.equal(pages,25);
  const manifest=JSON.parse(await read('/apps/communications-publication.json','2026-10-08-tail-decision'));
  assert.equal(manifest.release,'2026-10-08-tail-decision');assert.deepEqual(manifest.locales,locales);assert.equal(manifest.routes.length,40);assert.equal(new Set(manifest.routes).size,40);
- for(const route of manifest.routes){assert(/^\/[a-z0-9/.-]+$/i.test(route),'Unsafe manifest route');const html=await read(route,'data-communications-decision="2026-10-08-tail-decision"');
+ for(const route of manifest.routes){assert(/^\/[a-z0-9/.-]*$/i.test(route),'Unsafe manifest route');const html=await read(route,'data-communications-decision="2026-10-08-tail-decision"');
   assert.equal((html.match(/data-communications-decision=/g)||[]).length,1,route+': duplicate decision content');
   if(route.endsWith('communications-decision-guide.html')){
    const l=route.startsWith('/apps/')?'en':route.split('/')[1];assert(html.includes('<html lang="'+(l==='pt'?'pt-BR':l)+'"'),route+': language');
