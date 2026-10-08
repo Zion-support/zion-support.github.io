@@ -1,4 +1,4 @@
-# Ensures workflow-report-push-guard.yml keeps path triggers + --push grep subset (grep-only).
+# Ensures workflow-report-push-guard.yml keeps PR path triggers + --push grep subset (grep-only).
 name: workflow report push guard smoke (weekly)
 permissions:
   contents: read
