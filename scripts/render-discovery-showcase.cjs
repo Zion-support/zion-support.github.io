@@ -38,3 +38,4 @@ for (const [file,html] of pages) {
  fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,html);
 }
 console.log(`Discovery publication: ${locales.length} translated pages + ${locales.length} homepage sections, with four communications workflows and a three-step validation checklist; no email sent.`);
+require('./render-discovery-risk-benefits.cjs');
