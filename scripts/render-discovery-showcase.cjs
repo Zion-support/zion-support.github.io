@@ -40,3 +40,17 @@ for (const [file,html] of pages) {
 console.log(`Discovery publication: ${locales.length} translated pages + ${locales.length} homepage sections, with four communications workflows and a three-step validation checklist; no email sent.`);
 require('./render-discovery-risk-benefits.cjs');
 require('./render-risk-app-translations.cjs');
+
+// Approved PT homepage continuation: reuse Family A components; no new form or email handler.
+const pilotFragment=fs.readFileSync(path.join(root,'content/discovery-to-pilot-section.html'),'utf8').trim();
+assert(pilotFragment.includes('id="discovery-to-pilot"'),'Approved pilot section marker missing');
+assert(!/<script|<form/i.test(pilotFragment),'Pilot section must remain read-only');
+const pilotHome=path.join(out,'index.html');
+let pilotHtml=fs.readFileSync(pilotHome,'utf8');
+if(!pilotHtml.includes('id="discovery-to-pilot"')){
+ assert(pilotHtml.includes('</main>'),'Pilot homepage anchor missing');
+ pilotHtml=pilotHtml.replace('</main>',pilotFragment+'\n</main>');
+ fs.writeFileSync(pilotHome,pilotHtml);
+}
+assert((pilotHtml.match(/id="discovery-to-pilot"/g)||[]).length===1,'Duplicate pilot section');
+console.log('Approved PT Discovery-to-pilot homepage section rendered; no email sent.');
