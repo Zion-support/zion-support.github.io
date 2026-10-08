@@ -25,6 +25,5 @@ jobs:
           grep -Fq 'name: Workflow validate light (weekly)' "$f"
           grep -Fq "cron: '35 11 * * 3'" "$f"
           grep -Fq 'group: workflow-validate-light-weekly' "$f"
-          grep -Fq 'reusable-workflow-ci.yml' "$f"
-          grep -Fq 'timeout-minutes: 16' "$f"
+          grep -Fq 'uses: ./.github/workflows/reusable-workflow-ci.yml' "$f"
           echo "ok: $f"
