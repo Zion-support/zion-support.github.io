@@ -15,6 +15,7 @@ on:
       - 'scripts/render-discovery-linked-guide.cjs'
       - 'scripts/render-communications-apps.cjs'
       - 'scripts/render-communications-decision.cjs'
+      - 'scripts/test-communications-decision.cjs'
       - 'scripts/test-communications-lab.cjs'
       - 'scripts/test-discovery-consistency.cjs'
       - 'content/discovery-journey.json'
@@ -71,10 +72,12 @@ jobs:
         run: node scripts/test-discovery-consistency.cjs
       - name: Render and validate five-language communications workflow lab
         run: node scripts/render-communications-apps.cjs
-      - name: Render translated comparison guide and reciprocal navigation
+      - name: Render translated comparison guides and reciprocal navigation
         run: node scripts/render-communications-decision.cjs
       - name: Offline communications form and navigation regression checks
         run: node scripts/test-communications-lab.cjs out
+      - name: Offline translated comparison and publication-manifest checks
+        run: node scripts/test-communications-decision.cjs out
       - uses: actions/upload-pages-artifact@v3
         with:
           path: out
@@ -105,3 +108,5 @@ jobs:
         run: node scripts/test-discovery-live.cjs
       - name: Read-only live communications lab regression checks
         run: node scripts/test-communications-lab.cjs --live
+      - name: Read-only live translated comparison and publication checks
+        run: node scripts/test-communications-decision.cjs --live

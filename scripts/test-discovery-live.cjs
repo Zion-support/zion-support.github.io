@@ -17,7 +17,7 @@ async function get(route){
  for(const l of locales){
   const html=await get(route(l));assert(html.includes('lang="'+(l==='pt'?'pt-BR':l)+'"'),l+': HTML language');assert(html.includes('data-discovery-release="2026-10-08"'),l+': release content');assert(html.includes('rel="canonical" href="https://ziontechgroup.com'+route(l)+'"'),l+': canonical');
   for(const k of locales)assert(html.includes('hreflang="'+(k==='pt'?'pt-BR':k)+'"'),l+': missing '+k+' alternate');
-  for(const slug of apps)assert(html.includes('href="/'+slug+'/"'),l+': missing '+slug);
+  for(const slug of apps)assert(html.includes('href="'+(l==='en'?'/':'/'+l+'/')+slug+'/"'),l+': missing localized '+slug);
   assert(html.includes('href="#main"'),l+': skip link');assert(html.includes('aria-label="'+esc(playbook[l].languages)+'"'),l+': language navigation');assert(html.includes(esc(playbook[l].checklistTitle)),l+': validation checklist');
   for(const text of playbook[l].descriptions)assert(html.includes(esc(text)),l+': untranslated workflow');assert(!html.includes('DRAFT — not published'),l+': draft banner');assert(html.includes('commercial@ziontechgroup.com'),l+': commercial disclosure');
   const home=await get(l==='pt'?'/':'/'+l+'/');assert.equal((home.match(/id="discovery-communications"/g)||[]).length,1,l+': communications section');
