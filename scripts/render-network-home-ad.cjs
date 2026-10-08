@@ -30,5 +30,7 @@ for(const slug of hosted){const f=path.join(out,slug,'index.html');assert(fs.exi
 console.log('PASS '+version+': five translated homepage promotions, corrected source routes and four reciprocal tool links; existing forms preserved.');
 require('./render-finance-insurance-paths.cjs');
 require('./render-operations-baseline.cjs');
+require('./render-operational-tools.cjs');
 require('./test-operations-baseline.cjs');
+require('./test-operational-tools.cjs');
 require('./verify-network-publication.cjs');
