@@ -1,7 +1,6 @@
 name: Simple Static Deploy
 
-# Production Pages publishes the public static source, not a Next.js shell.
-# Keep translated Discovery rendering in scheduled and push deployments.
+# Production publishes public/ and artifact-only renderers, not a Next.js shell.
 on:
   push:
     branches:
@@ -11,6 +10,7 @@ on:
       - 'scripts/prepare-pages-out.sh'
       - 'scripts/render-discovery-showcase.cjs'
       - 'scripts/render-discovery-consistency.cjs'
+      - 'scripts/render-discovery-pilot-guide.cjs'
       - 'scripts/test-discovery-consistency.cjs'
       - 'content/discovery-journey.json'
       - 'scripts/test-discovery-live.cjs'
@@ -55,6 +55,8 @@ jobs:
         run: node scripts/render-discovery-showcase.cjs
       - name: Render consistent multilingual questionnaires and homepage journeys
         run: node scripts/render-discovery-consistency.cjs
+      - name: Render free pilot guide and related-app navigation
+        run: node scripts/render-discovery-pilot-guide.cjs
       - name: Offline multilingual report contract
         run: node scripts/test-discovery-consistency.cjs
       - uses: actions/upload-pages-artifact@v3
