@@ -1,0 +1,29 @@
+name: Operational tools publication contract
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/render-operational-tools.cjs'
+      - 'scripts/test-operational-tools.cjs'
+      - 'content/operational-tools.json'
+      - 'public/assets/js/operational-tools.js'
+      - '.github/workflows/operational-tools-contract.yml'
+  pull_request:
+    paths:
+      - 'scripts/render-operational-tools.cjs'
+      - 'scripts/test-operational-tools.cjs'
+      - 'content/operational-tools.json'
+      - 'public/assets/js/operational-tools.js'
+      - '.github/workflows/operational-tools-contract.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: node scripts/test-operational-tools.cjs
