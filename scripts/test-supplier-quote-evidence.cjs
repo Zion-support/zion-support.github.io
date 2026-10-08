@@ -1,0 +1,12 @@
+const test=require('node:test'),assert=require('node:assert/strict'),vm=require('node:vm'),fs=require('node:fs');
+const sandbox={};vm.runInNewContext(fs.readFileSync('public/assets/js/supplier-quote-evidence.js','utf8'),sandbox);
+const {calculate,gates}=sandbox.ZionQuoteEvidence;
+const row={base:100,travel:0,freight:0,nonrecoverable:0,other:0};
+test('40 percent markup is 140 sell and 28.57 percent margin',()=>{const r=calculate(row,40,0,'USD');assert.equal(r.sell,140);assert.ok(Math.abs(r.margin-28.571428)<.0001);assert.match(r.status,/HOLD/);});
+test('all complete costs included and client tax separate',()=>{const r=calculate({...row,travel:10,freight:5,nonrecoverable:5,other:10},40,10,'BRL');assert.equal(r.cost,130);assert.equal(r.sell,182);assert.equal(r.clientTax,18.2);assert.equal(r.total,200.2);});
+test('round selling floor upward to cents',()=>{assert.equal(calculate({...row,base:.01},40,0,'EUR').sell,.02);});
+test('below-minimum markup is rejected',()=>assert.throws(()=>calculate(row,39,0,'USD')));
+test('invalid/negative/missing/precision/zero costs rejected',()=>{for(const base of [-1,NaN,Infinity,'',undefined,.001,0])assert.throws(()=>calculate({...row,base},40,0,'USD'));});
+test('invalid tax and unknown currency rejected',()=>{assert.throws(()=>calculate(row,40,101,'USD'));assert.throws(()=>calculate(row,40,-1,'USD'));assert.throws(()=>calculate(row,40,0,'XYZ'));});
+test('every declared gate required; even complete gates are not authorization',()=>{const ready={...row};for(const k of gates)ready[k]=true;assert.match(calculate(ready,40,0,'CAD').status,/owner review/);for(const k of gates)assert.match(calculate({...ready,[k]:false},40,0,'CAD').status,/HOLD/);});
+test('tool source never calls network or persistent storage',()=>{const t=fs.readFileSync('public/assets/js/supplier-quote-evidence.js','utf8');assert.doesNotMatch(t,/fetch\s*\(|XMLHttpRequest|localStorage|sessionStorage/);});
