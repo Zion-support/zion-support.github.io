@@ -21,6 +21,8 @@ on:
       - 'scripts/render-communications-decision.cjs'
       - 'scripts/test-communications-decision.cjs'
       - 'scripts/test-communications-lab.cjs'
+      - 'scripts/render-communications-readiness.cjs'
+      - 'scripts/test-communications-readiness.cjs'
       - 'scripts/test-discovery-consistency.cjs'
       - 'content/discovery-journey.json'
       - 'scripts/test-discovery-live.cjs'
@@ -82,6 +84,8 @@ jobs:
         run: node scripts/render-network-benefits.cjs
       - name: Render five-language local app experiment planner and reciprocal paths
         run: node scripts/render-app-experiments.cjs && node scripts/verify-app-experiment-sources.cjs
+      - name: Render and test five-language communications readiness checklist
+        run: node scripts/render-communications-readiness.cjs && node scripts/test-communications-readiness.cjs out
       - name: Offline app experiment safety and language checks
         run: node scripts/test-app-experiments.cjs out
       - name: Offline communications form and navigation regression checks
