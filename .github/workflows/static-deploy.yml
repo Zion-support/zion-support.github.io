@@ -94,6 +94,10 @@ jobs:
               });
               if (response.data.artifacts.some(a => a.name === name && !a.expired)) {
                 core.info(`Artifact metadata visible: ${name}`);
+                // GitHub Pages' deployment API can lag the Actions artifact list
+                // by a few seconds. Give the Pages endpoint time to converge
+                // before deploy-pages performs its own metadata lookup.
+                await new Promise(resolve => setTimeout(resolve, 10000));
                 return;
               }
               core.info(`Waiting for artifact metadata (${attempt + 1}/12)`);
