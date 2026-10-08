@@ -29,6 +29,6 @@ for(const [l,c] of Object.entries(copy)){
 for(const slug of hosted){const f=path.join(out,slug,'index.html');assert(fs.existsSync(f),'Missing learning path tool '+f);let html=fs.readFileSync(f,'utf8');const lang=(html.match(/<html[^>]*lang=["']([^"']+)/i)||[])[1]||'en';const l=lang.startsWith('pt')?'pt':lang.split('-')[0];const c=copy[l]||copy.en,p=l==='en'?'/':'/'+l+'/';const marker='<!--zion-learning-return:start-->';html=html.replace(/<!--zion-learning-return:start-->[\s\S]*?<!--zion-learning-return:end-->/g,'');assert(/<\/body>/i.test(html),'Missing body '+f);const links=marker+'<aside class="card" data-learning-return="2026-10-08-v1"><h2>'+esc(c[7])+'</h2><p><a href="'+p+'apps/network-learning-paths.html">'+esc(c[9])+'</a> · <a href="'+p+'discovery/">'+esc(c[3])+'</a> · <a href="/apps/">'+esc(c[4])+'</a></p></aside><!--zion-learning-return:end-->';fs.writeFileSync(f,html.replace(/<\/body>/i,links+'</body>'));}
 console.log('PASS '+version+': five translated homepage promotions, corrected source routes and four reciprocal tool links; existing forms preserved.');
 require('./render-finance-insurance-paths.cjs');
-require('./render-operational-tools.cjs');
-require('./test-operational-tools.cjs');
+require('./render-operations-baseline.cjs');
+require('./test-operations-baseline.cjs');
 require('./verify-network-publication.cjs');
