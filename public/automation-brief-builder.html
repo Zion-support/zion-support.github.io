@@ -1,0 +1,22 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Automation Brief Builder — Zion Tech Group</title>
+<meta name="description" content="Free interactive tool: build a one-page automation brief you can share with stakeholders. Always online, always free — Zion Tech Group.">
+<style>body{font-family:system-ui;background:linear-gradient(135deg,#0b1020,#7c3aed);color:#fff;padding:2rem 1rem;max-width:860px;margin:auto}a{color:#c4b5fd}.card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:1.25rem;margin:1rem 0}.btn{display:inline-block;background:#c4b5fd;color:#2e1065;padding:.7rem 1.4rem;border-radius:999px;font-weight:700;text-decoration:none;border:0;cursor:pointer}label{display:block;margin:.3rem 0}input,textarea{width:100%;padding:.6rem;border-radius:10px;border:1px solid rgba(255,255,255,.25);background:rgba(0,0,0,.25);color:#fff;box-sizing:border-box;margin:.2rem 0}.muted{opacity:.85}#out{display:none}#brief{background:#fff;color:#111;border-radius:10px;padding:1rem;white-space:pre-wrap}</style></head><body>
+<h1>📝 Automation Brief Builder</h1>
+<p class="muted">Free, always online. Turn your idea into a one-page brief stakeholders can approve.</p>
+<form id="f" class="card">
+<label>Project name <input id="pn" required placeholder="e.g. Support triage automation"></label>
+<label>Problem <textarea id="pb" rows="2" required placeholder="What hurts today?"></textarea></label>
+<label>Proposed automation <textarea id="pa" rows="2" required placeholder="What will the AI/app do?"></textarea></label>
+<label>Success metric <input id="sm" required placeholder="e.g. -30% response time in 90 days"></label>
+<label>Budget range <input id="br" placeholder="e.g. $2.5k pilot"></label>
+<button class="btn" type="submit">Build my brief →</button></form>
+<div class="card" id="out"><h3>Your one-page brief</h3><div id="brief"></div><p><button class="btn" onclick="navigator.clipboard.writeText(document.getElementById('brief').innerText)">📋 Copy brief</button> <a class="btn" href="https://ziontechgroup.com/discovery-questionnaire.html">🎯 Get app shortlist via free Discovery</a></p></div>
+<script>
+document.getElementById('f').addEventListener('submit',function(e){e.preventDefault();
+function g(id){return document.getElementById(id).value;}
+document.getElementById('brief').innerText='AUTOMATION BRIEF — '+g('pn')+'\n\nProblem: '+g('pb')+'\n\nProposed automation: '+g('pa')+'\n\nSuccess metric: '+g('sm')+'\nBudget: '+(g('br')||'TBD')+'\n\nRecommended apps: take the free Zion Discovery for a tailored shortlist — https://ziontechgroup.com/discovery-questionnaire.html\nApps Network: https://ziontechgroup.com/apps/network.html\n\nPrepared with Zion Tech Group\'s free Automation Brief Builder — https://ziontechgroup.com/automation-brief-builder.html';
+document.getElementById('out').style.display='block';document.getElementById('out').scrollIntoView({behavior:'smooth'});});
+</script>
+<p class="muted">© 2026 Zion Tech Group — <a href="https://ziontechgroup.com">ziontechgroup.com</a> · <a href="/automation-pilot-planner.html">Pilot Planner</a></p>
+</body></html>
