@@ -11,6 +11,7 @@ on:
       - 'scripts/render-discovery-showcase.cjs'
       - 'scripts/render-discovery-consistency.cjs'
       - 'scripts/render-discovery-pilot-guide.cjs'
+      - 'scripts/render-discovery-linked-guide.cjs'
       - 'scripts/test-discovery-consistency.cjs'
       - 'content/discovery-journey.json'
       - 'scripts/test-discovery-live.cjs'
@@ -57,6 +58,8 @@ jobs:
         run: node scripts/render-discovery-consistency.cjs
       - name: Render free pilot guide and related-app navigation
         run: node scripts/render-discovery-pilot-guide.cjs
+      - name: Render linked Discovery app guide and repair recommendation routes
+        run: node scripts/render-discovery-linked-guide.cjs
       - name: Offline multilingual report contract
         run: node scripts/test-discovery-consistency.cjs
       - uses: actions/upload-pages-artifact@v3
