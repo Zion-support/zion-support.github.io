@@ -10,6 +10,9 @@ on:
       - 'public/**'
       - 'scripts/prepare-pages-out.sh'
       - 'scripts/render-discovery-showcase.cjs'
+      - 'scripts/render-discovery-consistency.cjs'
+      - 'scripts/test-discovery-consistency.cjs'
+      - 'content/discovery-journey.json'
       - 'scripts/test-discovery-live.cjs'
       - 'content/discovery-showcase.json'
       - 'content/communications-playbook.json'
@@ -50,6 +53,10 @@ jobs:
         run: bash scripts/prepare-pages-out.sh
       - name: Render translated Discovery and communications content
         run: node scripts/render-discovery-showcase.cjs
+      - name: Render consistent multilingual questionnaires and homepage journeys
+        run: node scripts/render-discovery-consistency.cjs
+      - name: Offline multilingual report contract
+        run: node scripts/test-discovery-consistency.cjs
       - uses: actions/upload-pages-artifact@v3
         with:
           path: out
