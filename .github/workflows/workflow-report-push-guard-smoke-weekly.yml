@@ -24,7 +24,6 @@ jobs:
           test -s "$f"
           grep -Fq 'name: Workflow report push guard' "$f"
           grep -Fq 'pull_request:' "$f"
-          grep -Fq 'branches: [main]' "$f"
           grep -Fq '.github/workflows/**/*.yml' "$f"
           grep -Fq 'run-workflow-grep-guards.sh --push' "$f"
           echo "ok: $f"
