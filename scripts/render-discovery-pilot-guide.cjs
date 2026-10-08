@@ -52,3 +52,19 @@ for(const [rel,l] of feTargets){
  fs.writeFileSync(file,html);
 }
 console.log('FE guide linked from five homepages, five questionnaires and two catalogs; no booking or email.');
+
+// Close the return path from the six launch-guide tools. Artifact-only; no app logic changes.
+const launchTools=['apps/discovery-report-workbench.html','roi-calc/index.html','ai-ticket-triage/index.html','ai-governance-checklist/index.html','supplier-risk-radar/index.html','automation-pilot-planner/index.html'];
+for(const rel of launchTools){
+ const file=path.join(out,rel);assert(fs.existsSync(file),'Missing launch tool '+rel);
+ let html=fs.readFileSync(file,'utf8');
+ const marker='discovery-launch-return';
+ const previous=/<nav\b[^>]*\bid="discovery-launch-return"[^>]*>[\s\S]*?<\/nav>(?:\r?\n)?/;
+ html=html.replace(previous,'');
+ const panel='<nav id="'+marker+'" aria-label="Free Discovery pilot journey" style="margin:1.5rem 0;padding:1rem;border:1px solid currentColor;border-radius:.5rem"><p><strong>Continue your free Discovery pilot journey</strong></p><p><a href="'+launch+'">Return to the six-tool launch guide</a> &middot; <a href="/discovery/">Free Discovery</a> &middot; <a href="/apps/">App Network</a></p><p>Choose a process owner, baseline, human reviewer and stop rule before implementation. A planning tool does not authorize a purchase or dispatch.</p></nav>';
+ const close=html.includes('</main>')?'</main>':'</body>';assert(html.includes(close),'Launch tool anchor missing '+rel);
+ html=html.replace(close,panel+'\n'+close);
+ assert(html.split('id="'+marker+'"').length===2,'Duplicate launch return '+rel);
+ fs.writeFileSync(file,html);
+}
+console.log('Six launch tools now link back to the free guide; app logic and email routing unchanged.');
