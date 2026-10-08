@@ -1,9 +1,13 @@
 'use strict';
-const fs=require('node:fs'),path=require('node:path'),os=require('node:os'),assert=require('node:assert/strict'),cp=require('node:child_process');
+const fs=require('node:fs'),path=require('node:path'),os=require('node:os'),assert=require('node:assert/strict'),cp=require('node:child_process'),vm=require('node:vm');
 const root=fs.mkdtempSync(path.join(os.tmpdir(),'zion-evidence-'));
 const locales=['en','pt','es','fr','de'],slugs=['policy-comparison-ai','underwriting-copilot-ai','claims-automation-ai'];
-const {evidenceReport}=require('../public/assets/js/insurance-evidence.js');
-const prefix=l=>l==='en'?'':'/'+l;
+// Browser assets are classic scripts. The repository uses type:module, so
+// require(.js) does not provide CommonJS exports under the CI Node runtime.
+// Execute the exact source in an isolated no-DOM context, without networking.
+const browserModule={exports:{}};
+vm.runInNewContext(fs.readFileSync('public/assets/js/insurance-evidence.js','utf8'),{module:browserModule},{filename:'insurance-evidence.js',timeout:1000});
+const {evidenceReport}=browserModule.exports;assert.equal(typeof evidenceReport,'function');
 const write=(rel,content)=>{const f=path.join(root,rel);fs.mkdirSync(path.dirname(f),{recursive:true});fs.writeFileSync(f,content);};
 try{
 write('assets/js/insurance-evidence.js',fs.readFileSync('public/assets/js/insurance-evidence.js'));
