@@ -21,3 +21,4 @@ for(const [l,c] of Object.entries(copy)){
  assert(html.includes('data-network-home="'+version+'"'));
 }
 console.log('PASS '+version+': five translated homepage promotions linked to the matching guides; existing forms preserved.');
+require('./verify-network-publication.cjs');
