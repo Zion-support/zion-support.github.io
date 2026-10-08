@@ -1,6 +1,7 @@
 {
-  "pages_generated": 0,
-  "pages_skipped": 50,
-  "progress_before": 12550,
-  "progress_after": 12600
+  "pages_generated": 176,
+  "pages_skipped": 0,
+  "progress_before": 12750,
+  "progress_after": 12750,
+  "notes": "Backfilled 176 missing pages at catalog positions 36186+ missed by sequential progress counter. Sitemap regenerated."
 }
