@@ -35,3 +35,20 @@ for(const rel of ['apps/index.html','apps/content-hub.html']){
  fs.writeFileSync(file,html);
 }
 console.log('Approved six-tool launch guide linked from five localized homepages/questionnaires and both catalogs; existing pages and delivery logic preserved.');
+
+// FE evidence-first guide: preserve existing forms and delivery logic.
+const feGuide='/apps/field-engineering-discovery-guide.html';
+assert(fs.existsSync(path.join(out,feGuide.slice(1))),'Missing FE guide');
+const feCopy={en:['Field engineering: evidence before dispatch','Use free Discovery, FE Readiness, SLA Calculator and Supplier Quote Evidence Workbench to identify gaps before a booking.'],pt:['Field engineering: evidências antes do dispatch','Use Discovery gratuito, FE Readiness, SLA Calculator e Supplier Quote Evidence Workbench para identificar pendências antes de reservar.'],es:['Field engineering: evidencia antes del despacho','Use Discovery gratuito, FE Readiness, SLA Calculator y Supplier Quote Evidence Workbench antes de reservar.'],fr:['Field engineering : preuves avant intervention','Utilisez Discovery gratuit, FE Readiness, SLA Calculator et Supplier Quote Evidence Workbench avant toute réservation.'],de:['Field Engineering: Nachweise vor dem Einsatz','Nutzen Sie kostenloses Discovery, FE Readiness, SLA Calculator und Supplier Quote Evidence Workbench vor einer Buchung.']};
+const feTargets=[['index.html','pt'],...['en','es','fr','de'].map(l=>[l+'/index.html',l]),...['en','pt','es','fr','de'].map(l=>[(l==='en'?'':l+'/')+'discovery/index.html',l]),['apps/index.html','en'],['apps/content-hub.html','en']];
+for(const [rel,l] of feTargets){
+ const file=path.join(out,rel);assert(fs.existsSync(file),'Missing FE entry '+rel);
+ let html=fs.readFileSync(file,'utf8');
+ html=html.replace(/<section\b[^>]*\bid="fe-discovery-guide-links"[^>]*>[\s\S]*?<\/section>(?:\r?\n)?/,'');
+ const section='<section class="section section-soft" id="fe-discovery-guide-links"><div class="wrap"><h2>'+esc(feCopy[l][0])+'</h2><p>'+esc(feCopy[l][1])+'</p><p><a href="'+feGuide+'" lang="en">Field Engineering Discovery Guide (EN)</a> · <a href="/global-fe-dispatch/">FE Readiness</a> · <a href="/sla-calculator/">SLA Calculator</a> · <a href="/apps/supplier-quote-evidence-workbench.html">Supplier Quote Evidence Workbench</a></p></div></section>';
+ const close=html.includes('</main>')?'</main>':'</body>';assert(html.includes(close),'FE insertion anchor missing '+rel);
+ html=html.replace(close,section+'\n'+close);
+ assert(html.split('id="fe-discovery-guide-links"').length===2,'Duplicate FE panel');
+ fs.writeFileSync(file,html);
+}
+console.log('FE guide linked from five homepages, five questionnaires and two catalogs; no booking or email.');
