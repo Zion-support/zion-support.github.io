@@ -58,7 +58,6 @@ footer{margin-top:36px;border-top:1px solid #e5e7eb;padding-top:14px;font-size:.
 
 <h2 id="questionnaire">The Discovery questionnaire</h2>
 <form id="dform">
-<input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
 <p id="form-errors" role="alert" hidden></p>
 <label for="discovery-name">Your name *</label><input name="name" id="discovery-name" maxlength="120" autocomplete="name" required>
 <label for="discovery-email">Work email * <small>(your report is sent here)</small></label><input name="email" id="discovery-email" maxlength="254" autocomplete="email" type="email" required>
@@ -208,7 +207,7 @@ document.getElementById('dform').addEventListener('submit',async function(e){
   const r=await fetch('https://formsubmit.co/ajax/commercial@ziontechgroup.com',{
    method:'POST',signal:controller.signal,
    headers:{'Content-Type':'application/json','Accept':'application/json'},
-   body:JSON.stringify({_subject:'Free Discovery result - '+f.name+' ('+(f.company||'n/a')+') - score '+score,_cc:cc,_replyto:f.email,_captcha:'false',_template:'box',_honey:'',_autoresponse:'Thanks for completing the free Zion AI Discovery! Your results (below) were also sent instantly to our commercial team at commercial@ziontechgroup.com, who can help the same day - optional and always free. Explore your matched apps and the full 830+ app network: https://ziontechgroup.com/zion-app-network/ - Benefits: tailored shortlist, ROI snapshot, pilot-to-scale roadmap, always free & online. Book a free call: https://calendly.com/kleber-ziontechgroup',name:f.name,email:f.email,company:f.company||'n/a',industry:f.industry,score,...attribution,event:'discovery_submit',report_version:'2026-10-06-safe-delivery',message:summary})
+   body:JSON.stringify({_subject:'Free Discovery result - '+f.name+' ('+(f.company||'n/a')+') - score '+score,_cc:cc,_replyto:f.email,_captcha:'false',_template:'box',name:f.name,email:f.email,company:f.company||'n/a',industry:f.industry,score,...attribution,event:'discovery_submit',report_version:'2026-10-06-safe-delivery',message:summary})
   });
   const j=await r.json().catch(()=>({}));
   if(r.ok&&(j.success===true||j.success==='true')){
