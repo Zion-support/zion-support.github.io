@@ -25,3 +25,15 @@ const briefSection='<section class="section section-soft" id="discovery-written-
 for(const rel of ['index.html','apps/index.html']){const file=path.join(out,rel);if(!fs.existsSync(file))continue;let page=fs.readFileSync(file,'utf8');if(!page.includes('id="discovery-written-pilot-brief"')){assert(page.includes('</main>'),rel+' brief insertion anchor missing');page=page.replace('</main>',briefSection+'\n</main>');fs.writeFileSync(file,page);}}
 for(const rel of locales){const file=path.join(out,rel);if(!fs.existsSync(file))continue;let page=fs.readFileSync(file,'utf8');if(!page.includes('data-written-pilot-link')){assert(page.includes('</body>'),rel+' body missing');page=page.replace('</body>','<p data-written-pilot-link style="margin:24px"><a href="'+brief+'">Free Written Pilot Brief Builder (EN)</a> · <a href="/apps/network.html">App Network</a></p>\n</body>');fs.writeFileSync(file,page);}}
 console.log(JSON.stringify({guide,deliveryGuide,brief,questionnairesRepaired:repaired,appPagesLinked:linked,mode:'artifact-only; no email sent'}));
+
+// Approved consolidated guide: one idempotent navigation item, no additional sales section.
+const consolidatedGuide='/apps/free-discovery-guide.html';
+assert(fs.existsSync(path.join(out,consolidatedGuide)),'Consolidated free Discovery guide missing');
+for(const rel of ['index.html','apps/index.html']){
+ const file=path.join(out,rel);if(!fs.existsSync(file))continue;let page=fs.readFileSync(file,'utf8');
+ if(!page.includes('data-free-discovery-guide-link')){
+  assert(page.includes('</main>'),rel+' consolidated guide anchor missing');
+  page=page.replace('</main>','<nav class="wrap" data-free-discovery-guide-link="2026-10-08" aria-label="Consolidated Discovery guide"><p><a href="'+consolidatedGuide+'">Discovery gratuito: relatório, apps e próximos passos (EN)</a> · <a href="/discovery/">Questionário grátis</a> · <a href="/apps/">Catálogo de apps</a></p></nav>\n</main>');
+  fs.writeFileSync(file,page);
+ }
+}
