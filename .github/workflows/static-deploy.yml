@@ -8,6 +8,7 @@ on:
     paths:
       - 'public/**'
       - 'scripts/render-ops-field-guides.cjs'
+      - 'scripts/render-ops-field-return-links.cjs'
       - 'scripts/test-ops-field-guides.cjs'
       - 'scripts/render-network-start-here.cjs'
       - 'scripts/render-network-home-ad.cjs'
@@ -109,6 +110,8 @@ jobs:
         run: node scripts/render-ops-field-guides.cjs && node scripts/test-ops-field-guides.cjs
       - name: Consolidate app network navigation and five-language entry content
         run: node scripts/render-network-start-here.cjs && node scripts/render-network-home-ad.cjs
+      - name: Final reciprocal operations and hub navigation
+        run: node scripts/render-ops-field-return-links.cjs
       - uses: actions/upload-pages-artifact@v3
         with:
           path: out
