@@ -1,0 +1,62 @@
+{
+  "en": {
+    "title": "Choose one communications workflow, then validate it",
+    "intro": "Use these examples to choose a small pilot, not to assume that a live page is already connected to your telephone system or CRM.",
+    "descriptions": ["Calls reaching the wrong team? Explore routing decisions, escalation rules and queue ownership with Smart Call Routing AI.", "Need a consistent call-review process? Explore call summaries, quality checks and coaching questions with Call Intelligence Hub.", "Callbacks getting lost? Explore voicemail urgency, accountable owners and callback deadlines with Voicemail Triage AI.", "Meeting decisions disappearing? Explore summaries, action owners and follow-up review with Meeting Intelligence AI."],
+    "checklistTitle": "Before connecting real customer data",
+    "checklist": ["Define a baseline: misrouted calls, callback backlog or overdue actions. Choose one success metric and one accountable owner.", "Use synthetic or consented data first. Confirm recording consent, retention, access permissions and vendor requirements before sharing customer information.", "Require human review, document escalation and a stop rule, and verify integration behavior before expanding the pilot."],
+    "next": "Continue with a written pilot plan",
+    "planner": "Automation Pilot Planner",
+    "catalog": "Communications catalog",
+    "languages": "Choose language",
+    "disclosure": "These are workflow exploration examples, not a technical audit, a production integration guarantee or a promise of savings."
+  },
+  "pt": {
+    "title": "Escolha um fluxo de comunicação e depois valide",
+    "intro": "Use estes exemplos para escolher um piloto pequeno, sem presumir que uma página disponível já está conectada ao seu sistema telefônico ou CRM.",
+    "descriptions": ["As chamadas chegam à equipe errada? Explore decisões de roteamento, regras de escalação e responsáveis pelas filas com Smart Call Routing AI.", "Precisa revisar chamadas de forma consistente? Explore resumos, verificações de qualidade e perguntas de coaching com Call Intelligence Hub.", "Os retornos de ligação se perdem? Explore urgência de mensagens de voz, responsáveis e prazos de retorno com Voicemail Triage AI.", "As decisões das reuniões desaparecem? Explore resumos, responsáveis por ações e revisão de próximos passos com Meeting Intelligence AI."],
+    "checklistTitle": "Antes de conectar dados reais de clientes",
+    "checklist": ["Defina uma linha de base: chamadas encaminhadas incorretamente, retornos pendentes ou ações atrasadas. Escolha uma métrica de sucesso e um responsável.", "Comece com dados sintéticos ou autorizados. Confirme consentimento para gravação, retenção, permissões de acesso e requisitos de fornecedores antes de compartilhar informações de clientes.", "Exija revisão humana, documente a escalação e uma regra de interrupção e verifique o comportamento da integração antes de ampliar o piloto."],
+    "next": "Continue com um plano piloto escrito",
+    "planner": "Planejador de piloto de automação",
+    "catalog": "Catálogo de comunicações",
+    "languages": "Escolher idioma",
+    "disclosure": "São exemplos para explorar fluxos de trabalho, não uma auditoria técnica, garantia de integração em produção ou promessa de economia."
+  },
+  "es": {
+    "title": "Elija un flujo de comunicación y después valídelo",
+    "intro": "Use estos ejemplos para elegir un piloto pequeño, sin asumir que una página disponible ya está conectada a su sistema telefónico o CRM.",
+    "descriptions": ["¿Las llamadas llegan al equipo equivocado? Explore decisiones de enrutamiento, reglas de escalamiento y responsables de las colas con Smart Call Routing AI.", "¿Necesita revisar llamadas de forma consistente? Explore resúmenes, controles de calidad y preguntas de coaching con Call Intelligence Hub.", "¿Se pierden las devoluciones de llamada? Explore urgencia de mensajes de voz, responsables y plazos de respuesta con Voicemail Triage AI.", "¿Se pierden las decisiones de las reuniones? Explore resúmenes, responsables de acciones y revisión del seguimiento con Meeting Intelligence AI."],
+    "checklistTitle": "Antes de conectar datos reales de clientes",
+    "checklist": ["Defina una línea base: llamadas mal dirigidas, devoluciones pendientes o acciones atrasadas. Elija una métrica de éxito y un responsable.", "Empiece con datos sintéticos o autorizados. Confirme consentimiento de grabación, retención, permisos de acceso y requisitos del proveedor antes de compartir información de clientes.", "Exija revisión humana, documente el escalamiento y una regla de parada, y verifique la integración antes de ampliar el piloto."],
+    "next": "Continúe con un plan piloto escrito",
+    "planner": "Planificador de piloto de automatización",
+    "catalog": "Catálogo de comunicaciones",
+    "languages": "Elegir idioma",
+    "disclosure": "Son ejemplos para explorar flujos de trabajo, no una auditoría técnica, garantía de integración en producción ni promesa de ahorro."
+  },
+  "fr": {
+    "title": "Choisissez un flux de communication, puis validez-le",
+    "intro": "Utilisez ces exemples pour choisir un petit pilote, sans supposer qu'une page disponible est déjà connectée à votre système téléphonique ou CRM.",
+    "descriptions": ["Les appels arrivent à la mauvaise équipe ? Explorez les décisions de routage, les règles d'escalade et les responsables des files avec Smart Call Routing AI.", "Besoin d'une revue cohérente des appels ? Explorez les résumés, les contrôles qualité et les questions de coaching avec Call Intelligence Hub.", "Les rappels se perdent ? Explorez l'urgence des messages vocaux, les responsables et les délais de rappel avec Voicemail Triage AI.", "Les décisions de réunion disparaissent ? Explorez les résumés, les responsables des actions et la revue du suivi avec Meeting Intelligence AI."],
+    "checklistTitle": "Avant de connecter de vraies données clients",
+    "checklist": ["Définissez une référence : appels mal dirigés, rappels en attente ou actions en retard. Choisissez un indicateur de réussite et un responsable.", "Commencez avec des données synthétiques ou autorisées. Confirmez le consentement à l'enregistrement, la conservation, les droits d'accès et les exigences des fournisseurs avant de partager des informations clients.", "Exigez une revue humaine, documentez l'escalade et une règle d'arrêt, puis vérifiez l'intégration avant d'élargir le pilote."],
+    "next": "Poursuivez avec un plan pilote écrit",
+    "planner": "Planificateur de pilote d'automatisation",
+    "catalog": "Catalogue des communications",
+    "languages": "Choisir la langue",
+    "disclosure": "Ce sont des exemples d'exploration des flux, pas un audit technique, une garantie d'intégration en production ni une promesse d'économies."
+  },
+  "de": {
+    "title": "Wählen Sie einen Kommunikationsablauf und prüfen Sie ihn",
+    "intro": "Nutzen Sie diese Beispiele für einen kleinen Piloten. Eine erreichbare Seite ist nicht automatisch mit Ihrer Telefonanlage oder Ihrem CRM verbunden.",
+    "descriptions": ["Anrufe landen beim falschen Team? Erkunden Sie Routing-Entscheidungen, Eskalationsregeln und Warteschlangenverantwortung mit Smart Call Routing AI.", "Sie brauchen eine einheitliche Anrufprüfung? Erkunden Sie Zusammenfassungen, Qualitätsprüfungen und Coaching-Fragen mit Call Intelligence Hub.", "Rückrufe gehen verloren? Erkunden Sie die Dringlichkeit von Sprachnachrichten, Zuständigkeiten und Rückruffristen mit Voicemail Triage AI.", "Besprechungsentscheidungen verschwinden? Erkunden Sie Zusammenfassungen, Maßnahmenverantwortung und Nachverfolgung mit Meeting Intelligence AI."],
+    "checklistTitle": "Bevor Sie echte Kundendaten verbinden",
+    "checklist": ["Definieren Sie eine Ausgangsbasis: fehlgeleitete Anrufe, offene Rückrufe oder überfällige Aufgaben. Wählen Sie eine Erfolgskennzahl und eine verantwortliche Person.", "Beginnen Sie mit synthetischen oder freigegebenen Daten. Prüfen Sie Aufzeichnungseinwilligung, Aufbewahrung, Zugriffsrechte und Anbieteranforderungen, bevor Sie Kundendaten teilen.", "Verlangen Sie menschliche Prüfung, dokumentieren Sie Eskalation und eine Abbruchregel, und prüfen Sie die Integration vor einer Ausweitung des Piloten."],
+    "next": "Mit einem schriftlichen Pilotplan fortfahren",
+    "planner": "Automatisierungs-Pilotplaner",
+    "catalog": "Kommunikationskatalog",
+    "languages": "Sprache wählen",
+    "disclosure": "Dies sind Beispiele zur Erkundung von Abläufen, kein technisches Audit, keine Garantie einer Produktionsintegration und kein Einsparversprechen."
+  }
+}
