@@ -13,6 +13,7 @@ on:
       - 'scripts/render-discovery-consistency.cjs'
       - 'scripts/render-discovery-pilot-guide.cjs'
       - 'scripts/render-discovery-linked-guide.cjs'
+      - 'scripts/render-network-benefits.cjs'
       - 'scripts/render-communications-apps.cjs'
       - 'scripts/render-communications-decision.cjs'
       - 'scripts/test-communications-decision.cjs'
@@ -74,6 +75,8 @@ jobs:
         run: node scripts/render-communications-apps.cjs
       - name: Render translated comparison guides and reciprocal navigation
         run: node scripts/render-communications-decision.cjs
+      - name: Consolidate translated benefits and workflow paths
+        run: node scripts/render-network-benefits.cjs
       - name: Offline communications form and navigation regression checks
         run: node scripts/test-communications-lab.cjs out
       - name: Offline translated comparison and publication-manifest checks
@@ -94,9 +97,6 @@ jobs:
               });
               if (response.data.artifacts.some(a => a.name === name && !a.expired)) {
                 core.info(`Artifact metadata visible: ${name}`);
-                // GitHub Pages' deployment API can lag the Actions artifact list
-                // by a few seconds. Give the Pages endpoint time to converge
-                // before deploy-pages performs its own metadata lookup.
                 await new Promise(resolve => setTimeout(resolve, 10000));
                 return;
               }
