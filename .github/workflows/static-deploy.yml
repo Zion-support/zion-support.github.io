@@ -13,6 +13,7 @@ on:
       - 'scripts/render-discovery-consistency.cjs'
       - 'scripts/render-discovery-pilot-guide.cjs'
       - 'scripts/render-discovery-linked-guide.cjs'
+      - 'scripts/render-communications-apps.cjs'
       - 'scripts/test-discovery-consistency.cjs'
       - 'content/discovery-journey.json'
       - 'scripts/test-discovery-live.cjs'
@@ -65,6 +66,8 @@ jobs:
         run: node scripts/render-discovery-next-step.cjs
       - name: Offline multilingual report contract
         run: node scripts/test-discovery-consistency.cjs
+      - name: Render and validate five-language communications workflow lab
+        run: node scripts/render-communications-apps.cjs
       - uses: actions/upload-pages-artifact@v3
         with:
           path: out
