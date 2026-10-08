@@ -1,74 +1,7 @@
 <!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Field Service & Supplier Sourcing Control — Zion App Network</title>
-<meta name="description" content="Free field-service and supplier sourcing control tool: validate all-in cost, minimum 40% markup, taxes, PO gate and bid-readiness before committing a technician or supplier.">
-<link rel="canonical" href="https://ziontechgroup.com/apps/field-service-sourcing-control.html">
-<meta name="robots" content="index,follow">
-<style>
-body{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;margin:0;background:#0b1220;color:#e8eef8;line-height:1.6}
-main{max-width:980px;margin:auto;padding:36px 20px 72px}a{color:#7dd3fc}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
-.card{background:#121a2b;border:1px solid #263149;border-radius:14px;padding:18px}.btn{display:inline-block;background:#7dd3fc;color:#052033;border:0;border-radius:999px;padding:10px 16px;font-weight:800;text-decoration:none;cursor:pointer}
-input{width:100%;box-sizing:border-box;padding:10px;border-radius:8px;border:1px solid #475569;background:#0f172a;color:#fff}
-label{display:block;margin:10px 0}.muted{color:#a8b4c8}.ok{color:#86efac}.warn{color:#fde68a}h1{font-size:clamp(2rem,6vw,3.3rem);line-height:1.05}
-</style>
-</head><body><main>
-<p><a href="/">Zion Tech Group</a> · <a href="/apps/">Apps Network</a> · <a href="/apps/ai-it-ops-command-center.html">AI &amp; IT Ops Command Center</a> · <a href="/discovery/">Free Discovery</a></p>
-<h1>Field Service &amp; Supplier Sourcing Control</h1>
-<p class="muted">A free pre-commitment control for urgent FE, smart-hands, hardware and software sourcing. Verify economics and readiness before you promise a technician, reserve stock or issue a PO.</p>
-
-<div class="grid">
-<section class="card">
-<h2>1. Minimum sell price</h2>
-<label>Verified supplier / FE cost<input id="cost" type="number" min="0" step="0.01" placeholder="0.00"></label>
-<label>Taxes / import / freight passed through separately<input id="tax" type="number" min="0" step="0.01" placeholder="0.00"></label>
-<label>Markup %<input id="markup" type="number" min="40" step="1" value="40"></label>
-<button class="btn" id="calc">Calculate</button>
-<p id="result" class="muted">Enter verified costs. Do not use estimates as confirmed supplier prices.</p>
-</section>
-
-<section class="card">
-<h2>2. PO / dispatch gate</h2>
-<label><input type="checkbox" id="scope"> Scope, site, quantity and service window confirmed</label>
-<label><input type="checkbox" id="supplier"> Supplier/FE availability and rate confirmed in writing</label>
-<label><input type="checkbox" id="client"> Client approval confirmed in writing</label>
-<label><input type="checkbox" id="po"> Client PO / authorization reference received where applicable</label>
-<p id="gate" class="warn"><strong>HOLD:</strong> do not dispatch, reserve, purchase or incur supplier cost.</p>
-</section>
-</div>
-
-<section class="card" style="margin-top:16px">
-<h2>3. BID readiness checklist</h2>
-<div class="grid">
-<div><strong>Commercial</strong><ul><li>Verified all-in cost</li><li>≥40% markup</li><li>Taxes/import separated</li><li>Quote validity</li><li>Payment terms</li></ul></div>
-<div><strong>Delivery</strong><ul><li>Exact site/location</li><li>SLA / response window</li><li>Quantity / skill level</li><li>Access / escort</li><li>Travel / minimum charge</li></ul></div>
-<div><strong>Compliance</strong><ul><li>Certificates</li><li>Insurance / COI</li><li>NDA / MSA / SOW</li><li>Vendor forms</li><li>References / CVs</li></ul></div>
-<div><strong>Commitment gate</strong><ul><li>Client approval</li><li>PO / written authorization</li><li>Selected supplier</li><li>Final price confirmed</li><li>Dispatch owner named</li></ul></div>
-</div>
-</section>
-
-<section class="card" style="margin-top:16px">
-<h2>Continue through the network</h2>
-<p><a href="/global-fe-dispatch/">Global FE Dispatch Readiness</a> · <a href="/supplier-risk-radar/">Supplier Risk Radar</a> · <a href="/vendor-risk-assessor/">Vendor Risk Assessor</a> · <a href="/sla-calculator/">SLA Calculator</a> · <a href="/apps/network.html">Network map</a>.</p>
-<p>Need help deciding what to automate or operationalize first? <a href="/discovery/">Run Zion's free Discovery</a> — always online, no card, instant report.</p>
-</section>
-
-<script>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Field Service &amp; Supplier Sourcing Control — Zion App Network</title><meta name="description" content="Free local sourcing calculator: verified landed cost, minimum 40% markup rounded up to cents, separate client taxes and written approval gates."><link rel="canonical" href="https://ziontechgroup.com/apps/field-service-sourcing-control.html"><meta name="robots" content="index,follow"><link rel="stylesheet" href="/assets/css/site.css"><style>main{max-width:980px;margin:auto;padding:36px 20px 72px}label{display:block;margin:12px 0}input:not([type=checkbox]),select{display:block;width:100%;box-sizing:border-box;padding:10px;border:1px solid #64748b;border-radius:8px}input[type=checkbox]{width:auto;margin-right:8px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}.card{padding:18px;border:1px solid #64748b;border-radius:14px;margin-bottom:16px}:focus-visible{outline:3px solid #0284c7;outline-offset:3px}pre{white-space:pre-wrap;overflow-wrap:anywhere}.skip{position:absolute;left:-9999px}.skip:focus{position:static}</style><script src="/assets/js/sourcing-cost-core.js"></script></head><body><a class="skip" href="#main">Skip to content</a><header class="wrap"><nav aria-label="Primary"><a href="/">Zion Tech Group</a> · <a href="/apps/">Apps Network</a> · <a href="/apps/network.html">Network map</a> · <a href="/discovery/">Free Discovery</a></nav></header><main id="main"><h1>Field Service &amp; Supplier Sourcing Control</h1><p>A free, local pre-commitment tool for FE, smart-hands, hardware and software sourcing. Verify written costs before releasing a client quote. Nothing here sends email, stores your answers, selects a supplier, places an order or dispatches a technician.</p><p><strong>Updated calculation:</strong> negative or malformed amounts are rejected. Sell prices round <em>up</em> to the next cent so rounding cannot reduce the minimum 40% markup.</p><div class="grid"><section class="card"><h2>1. Calculate the minimum sell price</h2><form id="cost-form"><label for="currency">Currency (no exchange conversion)<select id="currency"><option>USD</option><option>BRL</option><option>EUR</option><option>GBP</option><option>CAD</option><option>ZAR</option></select></label><label for="cost">Verified supplier / FE base cost<input id="cost" type="text" inputmode="decimal" required placeholder="100.00" aria-describedby="cost-help"></label><p id="cost-help">Use the same currency for every item. Enter amounts without separators, using a decimal point and at most two decimal places. Maximum per amount: 999999999.99.</p><label for="landed">Additional landed costs borne by Zion<input id="landed" type="text" inputmode="decimal" placeholder="0.00" aria-describedby="landed-help"></label><p id="landed-help">Include travel, freight, insurance, handling, parking and nonrecoverable local/import taxes once. Do not count a charge both here and in client taxes below.</p><label for="tax">Separately charged client taxes<input id="tax" type="text" inputmode="decimal" placeholder="0.00" aria-describedby="tax-help"></label><p id="tax-help">Enter the independently verified client-tax amount. This tool does not determine VAT, sales-tax, import liability, recoverability or exemptions. Unknown tax treatment means HOLD, not zero tax.</p><label for="markup">Markup % (whole number, minimum 40)<input id="markup" type="number" min="40" max="1000" step="1" value="40" required></label><button class="btn" type="submit">Calculate</button><p id="error" role="alert" hidden></p><pre id="result" role="status" aria-live="polite">Enter verified costs. An unverified market estimate is planning-only, never a confirmed supplier quote.</pre></form></section><section class="card"><h2>2. Evidence gates</h2><p>Checking boxes is a self-assessment, not proof or authorization. Keep the underlying documents and re-read the current thread.</p><label><input type="checkbox" id="scope">Scope, site, quantity, exact window and POC confirmed</label><label><input type="checkbox" id="supplier">Named qualified supplier/FE, availability, rate and terms confirmed in writing</label><label><input type="checkbox" id="taxes">Local/import/client tax treatment and all pass-through costs verified</label><label><input type="checkbox" id="client">Formal client confirmation received in writing</label><label><input type="checkbox" id="po">Required client PO / order reference received</label><label><input type="checkbox" id="zion">Separate written Zion authorization and dispatch/purchase owner confirmed</label><p id="gate" role="status" aria-live="polite"><strong>HOLD:</strong> do not reserve, purchase, book, travel, dispatch or incur supplier cost.</p><p>If a PO does not apply, document that exception and have the authorized Zion owner review it. This app cannot waive approval gates.</p></section></div><section class="card"><h2>3. Compare commercial terms, not just the lowest rate</h2><ul><li>Written scope, skills/certifications, OEM warranty/support, included hours and minimum charge.</li><li>Quote validity, delivery lead time, cancellation/rescheduling, payment terms and currency.</li><li>All-in economics with at least 40% markup; 40% markup is approximately 28.57% gross margin before overhead, not 40% margin.</li><li>Separate local taxes, import costs, freight and travel; distinguish borne costs from legally charged client taxes.</li><li>Client RFQ/proposal in the existing thread, with the agreed scope and separately reviewed PDF. Keep supplier-cost calculations in the internal Commercial record, not the client-facing quote.</li><li>One opportunity owner. Check Sent/thread history across agents before replying; no more than one unanswered follow-up per seven full days.</li></ul><p>For a public-market estimate, record source, date, currency, assumptions and uncertainty. Obtain written supplier terms before selecting a partner or promising availability. No market average guarantees profit or stock.</p></section><section class="card"><h2>Continue through the interlinked network</h2><p><a href="/apps/supplier-quote-evidence-workbench.html">Supplier Quote Evidence Workbench</a> · <a href="/global-fe-dispatch/">Global FE Dispatch Readiness</a> · <a href="/supplier-risk-radar/">Supplier Risk Radar</a> · <a href="/vendor-risk-assessor/">Vendor Risk Assessor</a> · <a href="/sla-calculator/">SLA Calculator</a> · <a href="/apps/network.html">Network map</a> · <a href="/apps/ai-it-ops-command-center.html">AI &amp; IT Ops Command Center</a></p><p><a class="btn" href="/discovery/">Start free Discovery</a> — online, no credit card and no required meeting. Your report appears immediately in the browser and is submitted for email delivery to your validated address and commercial@ziontechgroup.com. Provider acceptance does not prove inbox delivery. Copy/download/manual fallback remain available. Paid implementation is optional and separate.</p><p><a href="https://github.com/Zion-support/zion-support.github.io/blob/main/public/apps/field-service-sourcing-control.html">View page source</a> · <a href="https://github.com/Zion-support/zion-support.github.io/blob/main/scripts/test-sourcing-cost-core.cjs">Calculation tests</a></p></section><noscript><p>The calculator needs JavaScript. The checklist and app links remain available; apply verified all-in cost × 1.40 manually and round up to cents.</p></noscript></main><script>
+'use strict';
 const q=id=>document.getElementById(id);
-function money(v){return new Intl.NumberFormat('en-US',{style:'currency',currency:'USD'}).format(v||0)}
-function calculate(){
- const cost=Number(q('cost').value||0), tax=Number(q('tax').value||0), markup=Math.max(40,Number(q('markup').value||40));
- const serviceSell=cost*(1+markup/100), total=serviceSell+tax;
- q('result').innerHTML='<strong>Minimum service/product sell before separate pass-throughs:</strong> '+money(serviceSell)+'<br><strong>Taxes/import/freight shown separately:</strong> '+money(tax)+'<br><strong>Total client-facing amount if those pass-throughs apply:</strong> '+money(total)+'<br><small>Markup is applied to verified supplier cost, not inferred market price.</small>';
-}
-function gate(){
- const ready=['scope','supplier','client','po'].every(id=>q(id).checked);
- q('gate').className=ready?'ok':'warn';
- q('gate').innerHTML=ready?'<strong>READY FOR FINAL OWNER REVIEW:</strong> evidence gates are checked. Re-read the client thread before committing.':'<strong>HOLD:</strong> do not dispatch, reserve, purchase or incur supplier cost.';
-}
-q('calc').addEventListener('click',calculate);
-['scope','supplier','client','po'].forEach(id=>q(id).addEventListener('change',gate));
-</script>
-</main></body></html>
+q('cost-form').addEventListener('submit',function(event){event.preventDefault();q('error').hidden=true;try{const r=ZionSourcing.calculate({cost:q('cost').value,landed:q('landed').value,tax:q('tax').value,markup:q('markup').value});const currency=q('currency').value;const money=c=>currency+' '+(c/100).toFixed(2);q('result').textContent='PLANNING CALCULATION — NOT A QUOTE OR COMMITMENT\nSupplier cost: '+money(r.cost)+'\nAdditional landed costs: '+money(r.landed)+'\nVerified all-in cost: '+money(r.allIn)+'\nMarkup: '+r.markup+'%\nMinimum sell before client taxes (rounded up): '+money(r.sell)+'\nSeparately entered client taxes: '+money(r.tax)+'\nIllustrative client total: '+money(r.total)+'\nAll source evidence and approval gates still require human review.';}catch(error){q('result').textContent='HOLD — no valid calculation.';q('error').textContent=error.message;q('error').hidden=false;}});
+const keys=['scope','supplier','taxes','client','po','zion'];function updateGate(){const flags=Object.fromEntries(keys.map(key=>[key,q(key).checked]));q('gate').textContent=ZionSourcing.gate(flags)?'READY FOR OWNER VERIFICATION ONLY — these self-checked gates do not authorize an order or dispatch. Verify the written evidence and current client thread.':'HOLD — do not reserve, purchase, book, travel, dispatch or incur supplier cost.';}keys.forEach(key=>q(key).addEventListener('change',updateGate));
+</script></body></html>

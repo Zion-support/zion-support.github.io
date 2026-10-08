@@ -1,0 +1,8 @@
+const {test}=require('node:test');const assert=require('node:assert/strict');const fs=require('node:fs');const vm=require('node:vm');const path=require('node:path');
+const context={module:{exports:{}}};vm.runInNewContext(fs.readFileSync(path.join(__dirname,'../public/assets/js/sourcing-cost-core.js'),'utf8'),context);const api=context.module.exports;
+test('all-in cost includes landed charges; client taxes remain separate',()=>{const r=api.calculate({cost:'100.00',landed:'20',tax:'14',markup:'40'});assert.equal(r.allIn,12000);assert.equal(r.sell,16800);assert.equal(r.total,18200);});
+test('round up cents to preserve at least 40 percent',()=>{assert.equal(api.calculate({cost:'0.01',markup:'40'}).sell,2);assert.equal(api.calculate({cost:'99.99',markup:'40'}).sell,13999);});
+test('reject missing, negative, nonfinite, exponent, excessive precision and zero supplier cost',()=>{for(const cost of ['', '-1', 'NaN', 'Infinity', '1e3', '1.001', '0', '1000000000'])assert.throws(()=>api.calculate({cost,markup:'40'}));});
+test('reject invalid add-ons and markup below policy',()=>{for(const tax of ['-1','NaN','1.001'])assert.throws(()=>api.calculate({cost:'100',tax,markup:'40'}));for(const markup of ['0','39','40.5','Infinity','1001'])assert.throws(()=>api.calculate({cost:'100',markup}));});
+test('higher negotiated markup supported without lowering minimum',()=>assert.equal(api.calculate({cost:'100',markup:'60'}).sell,16000));
+test('every evidence gate includes separate Zion written authorization',()=>{const flags={scope:true,supplier:true,taxes:true,client:true,po:true,zion:true};assert.equal(api.gate(flags),true);for(const key of Object.keys(flags))assert.equal(api.gate({...flags,[key]:false}),false);assert.equal(api.gate({...flags,zion:'true'}),false);});
