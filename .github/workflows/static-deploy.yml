@@ -24,6 +24,7 @@ on:
       - 'scripts/render-communications-readiness.cjs'
       - 'scripts/test-communications-readiness.cjs'
       - 'scripts/render-treasury-network.cjs'
+      - 'scripts/render-insurance-network.cjs'
       - 'scripts/test-discovery-consistency.cjs'
       - 'content/discovery-journey.json'
       - 'scripts/test-discovery-live.cjs'
@@ -89,6 +90,8 @@ jobs:
         run: node scripts/render-communications-readiness.cjs && node scripts/test-communications-readiness.cjs out
       - name: Render treasury translations and repair canonical delivery copy
         run: node scripts/render-treasury-network.cjs
+      - name: Render five-language insurance concepts and preserve homepage forms
+        run: node scripts/render-insurance-network.cjs
       - name: Offline app experiment safety and language checks
         run: node scripts/test-app-experiments.cjs out
       - name: Offline communications form and navigation regression checks
