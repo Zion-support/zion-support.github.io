@@ -1,12 +1,8 @@
 name: Simple Static Deploy
 
-# Production Pages is build_type=workflow.
-# Deploy automatically only when public site content or this deployment path changes.
-# This avoids triggering production publishes for unrelated Hermes/status/ops commits.
-
+# Production Pages publishes the public static source, not a Next.js shell.
+# Keep translated Discovery rendering in scheduled and push deployments.
 on:
-  # Publish immediately for customer-facing static content, while excluding
-  # Hermes/STATUS/ops-only churn. Scheduled runs remain as a recovery path.
   push:
     branches:
       - main
@@ -14,7 +10,9 @@ on:
       - 'public/**'
       - 'scripts/prepare-pages-out.sh'
       - 'scripts/render-discovery-showcase.cjs'
+      - 'scripts/test-discovery-live.cjs'
       - 'content/discovery-showcase.json'
+      - 'content/communications-playbook.json'
       - '.github/workflows/static-deploy.yml'
   schedule:
     - cron: '*/5 * * * *'
