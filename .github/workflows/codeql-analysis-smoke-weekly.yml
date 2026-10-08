@@ -28,6 +28,7 @@ jobs:
           grep -Fq 'security-events: write' "$f"
           grep -Fq "language: ['javascript-typescript']" "$f"
           grep -Fq 'github/codeql-action/init@c10b8064de6f491fea524254123dbe5e09572f13' "$f"
+          grep -Fq 'github/codeql-action/autobuild@c10b8064de6f491fea524254123dbe5e09572f13' "$f"
           grep -Fq 'queries: security-and-quality' "$f"
           grep -Fq 'github/codeql-action/analyze@c10b8064de6f491fea524254123dbe5e09572f13' "$f"
           echo "ok: $f"
