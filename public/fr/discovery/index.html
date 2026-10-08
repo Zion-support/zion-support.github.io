@@ -68,7 +68,7 @@
         headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
         body: JSON.stringify({
           _subject: 'Discovery gratuit - ' + reference,
-          _cc: f.email, _replyto: f.email, _captcha: 'false', _template: 'box',_honey:'',_autoresponse:'Merci d\'avoir complété le Discovery IA gratuit de Zion ! Vos résultats ont aussi été envoyés instantanément à notre équipe commerciale (commercial@ziontechgroup.com), qui peut vous aider le jour même — facultatif et toujours gratuit. Explorez vos apps recommandées et le réseau de 830+ apps : https://ziontechgroup.com/zion-app-network/ — Réservez un appel gratuit : https://calendly.com/kleber-ziontechgroup',
+          _cc: f.email+',carlos@ziontechgroup.com', _replyto: f.email, _captcha: 'false', _template: 'box',_honey:'',
           name: f.name, email: f.email, company: f.company || 'Non renseign\u00e9e',
           score: score, process: f.process, hours: f.hours, systems: f.systems || '',
           goal: f.goal || '', timeline: f.timeline, locale: 'fr',
