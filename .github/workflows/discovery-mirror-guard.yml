@@ -7,6 +7,12 @@ on:
     paths:
       - 'discovery/index.html'
       - 'public/discovery/index.html'
+      - 'public/pt/discovery/index.html'
+      - 'public/es/discovery/index.html'
+      - 'public/fr/discovery/index.html'
+      - 'public/de/discovery/index.html'
+      - 'public/assets/js/discovery-delivery.js'
+      - 'scripts/test-discovery-delivery-contract.cjs'
       - 'discovery/questionnaire.html'
       - 'public/discovery/questionnaire.html'
       - '.github/workflows/discovery-mirror-guard.yml'
@@ -14,6 +20,12 @@ on:
     paths:
       - 'discovery/index.html'
       - 'public/discovery/index.html'
+      - 'public/pt/discovery/index.html'
+      - 'public/es/discovery/index.html'
+      - 'public/fr/discovery/index.html'
+      - 'public/de/discovery/index.html'
+      - 'public/assets/js/discovery-delivery.js'
+      - 'scripts/test-discovery-delivery-contract.cjs'
       - 'discovery/questionnaire.html'
       - 'public/discovery/questionnaire.html'
       - '.github/workflows/discovery-mirror-guard.yml'
@@ -31,38 +43,35 @@ jobs:
         with:
           fetch-depth: 1
 
-      - name: Require Discovery mirror
+      - name: Require canonical shared Discovery contract
         shell: bash
         run: |
           set -euo pipefail
-          root='discovery/index.html'
-          public='public/discovery/index.html'
-
-          for file in "$root" "$public"; do
-            if [ ! -f "$file" ]; then
-              echo "::error::Missing Discovery mirror file: $file"
-              exit 1
-            fi
+          # Production is public/ plus the shared module, not legacy root HTML.
+          node <<'NODE'
+          const fs = require('node:fs');
+          const assert = require('node:assert/strict');
+          const source = fs.readFileSync('public/assets/js/discovery-delivery.js', 'utf8');
+          assert(source.includes('https://formsubmit.co/ajax/commercial@ziontechgroup.com'), 'Commercial endpoint missing');
+          assert(!source.toLowerCase().includes('carlos@ziontechgroup.com'), 'Unexpected extra recipient');
+          assert(!/(^|[^\w])_autoresponse\s*:/m.test(source), 'Unsupported AJAX autoresponse');
+          const ids = ['dform','form-errors','rscore','rbar','rsummary','rapps','rnext','report-text','email-fallback','result','copy-report','rsent','submit-report','download-report'];
+          for (const [locale, lang] of [['en','en'],['pt','pt-BR'],['es','es'],['fr','fr'],['de','de']]) {
+            const file = locale === 'en' ? 'public/discovery/index.html' : 'public/' + locale + '/discovery/index.html';
+            const html = fs.readFileSync(file, 'utf8');
+            assert(html.includes('<html lang="' + lang + '"'), 'Wrong language: ' + file);
+            assert.equal((html.match(/src="\/assets\/js\/discovery-delivery\.js"/g) || []).length, 1, 'One shared application required: ' + file);
+            assert(!html.includes('const APPMAP='), 'Obsolete inline application: ' + file);
+            assert(!html.includes('data-discovery-parity'), 'Duplicate submit handler: ' + file);
+            assert(!html.toLowerCase().includes('carlos@ziontechgroup.com'), 'Unexpected recipient: ' + file);
+            for (const id of ids) assert.equal((html.match(new RegExp('id="' + id + '"', 'g')) || []).length, 1, 'Unique element ' + id + ': ' + file);
+          }
+          console.log('Five canonical questionnaires use one shared application; no email sent.');
+          NODE
+          for file in public/discovery/index.html public/{pt,es,fr,de}/discovery/index.html; do
+            DISCOVERY_HTML="$file" node --test scripts/test-discovery-delivery-contract.cjs
           done
-
-          if ! cmp -s "$root" "$public"; then
-            echo "::error::Discovery root/public copies diverged. Update both files in the same change."
-            echo "root sha256:   $(sha256sum "$root" | awk '{print $1}')"
-            echo "public sha256: $(sha256sum "$public" | awk '{print $1}')"
-            exit 1
-          fi
-
-          if grep -Eq '(^|[^[:alnum:]_])_autoresponse[[:space:]]*:' "$public"; then
-            echo "::error::Unsupported FormSubmit _autoresponse returned to Discovery."
-            exit 1
-          fi
-
-          if ! grep -Fq 'Inbox delivery is not yet confirmed' "$public"; then
-            echo "::error::Evidence-safe inbox delivery wording is missing."
-            exit 1
-          fi
-
-          echo "Discovery mirror and evidence-safe delivery contract markers OK."
+          echo "Canonical Discovery recipients, fallback, duplicate suppression and acceptance wording validated offline."
 
       - name: Require safe legacy-route redirects
         shell: bash
