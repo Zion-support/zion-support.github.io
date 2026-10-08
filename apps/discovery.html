@@ -57,7 +57,7 @@ footer{opacity:.6;font-size:.85rem;margin-top:48px}
 <p id="resText"></p>
 <p><strong>Delivery:</strong> a pre-filled email has opened automatically — press send and your results go instantly to your inbox and to commercial@ziontechgroup.com at the same time. Our team typically replies within one business day with a concrete pilot proposal.</p>
 <a class="btn" id="mailtoBtn" href="#">📧 Re-open the pre-filled email</a>
-<a class="btn" href="https://ziontechgroup.com/apps/spotlight-2026-10-08-batch99-telecom.html" style="background:#1a2447">See the newest apps (Batch 99 — Telecom &amp; Connectivity)</a>
+<a class="btn" href="https://ziontechgroup.com/apps/spotlight-2026-10-08-batch126-finance.html" style="background:#1a2447">See the newest apps (Batch 126 — Finance &amp; Insurance)</a>
 </div>
 
 <nav class="links">
@@ -66,9 +66,9 @@ footer{opacity:.6;font-size:.85rem;margin-top:48px}
 <a href="https://ziontechgroup.com/apps/network.html">Network Map</a>
 <a href="https://ziontechgroup.com/apps/discovery-benefits.html">Discovery Benefits</a>
 <a href="https://ziontechgroup.com/apps/discovery-to-action.html">Discovery to Action</a>
-<a href="https://ziontechgroup.com/apps/spotlight-2026-10-08-batch99-telecom.html">Batch 99 — Telecom AI</a>
-<a href="https://ziontechgroup.com/apps/spotlight-2026-10-06b-healthcare.html">Batch 98 — Healthcare AI</a>
-<a href="https://ziontechgroup.com/apps/spotlight-2026-10-06.html">Batch 95 — Manufacturing AI</a>
+<a href="https://ziontechgroup.com/apps/spotlight-2026-10-08-batch126-finance.html">Batch 126 — Finance AI</a>
+<a href="https://ziontechgroup.com/apps/spotlight-2026-10-08-batch125-telecom.html">Batch 125 — Telecom AI</a>
+<a href="https://ziontechgroup.com/apps/spotlight-2026-10-08-batch124-healthcare.html">Batch 124 — Healthcare AI</a>
 <a href="https://ziontechgroup.com/apps/homepage-discovery-boost.html">Homepage Spotlight</a>
 </nav>
 
@@ -80,17 +80,17 @@ e.preventDefault();
 var v=function(id){return document.getElementById(id).value};
 var rec={
 'Manufacturing & Logistics':'Predictive Maintenance AI, Quality Vision Inspector, Production Schedule Optimizer (Batch 95)',
-'Healthcare':'Clinical Documentation Copilot, Patient Triage AI, Claims Appeal Writer (Batch 98)',
+'Healthcare':'Clinical Documentation Copilot, Patient Triage AI, Claims Appeal Writer (Batch 124)',
 'Retail & E-commerce':'Dynamic Pricing AI, Returns Reduction Engine, Merch Copilot',
-'Financial Services':'KYC/AML Triage, Credit Memo Writer, Fraud Anomaly Radar',
+'Financial Services':'KYC/AML Triage, Credit Memo Writer, Fraud Anomaly Radar (Batch 126)',
 'Government & Legal':'Contract Review AI, Grants Finder, eDiscovery Summarizer',
 'Education':'Adaptive Tutoring Engine, Enrollment Copilot, Curriculum QA',
 'Energy & Utilities':'Grid Load Forecaster, Field Crew Copilot, Plant Energy Optimizer',
 'Real Estate & Construction':'Bid Estimator AI, Site Safety Vision, Tenant Concierge',
 'Sports, Fitness & Wellness':'Workout Plan Generator, Fitness Retention Predictor, Race Event Planner (Batch 90)',
 'Nonprofit & NGO':'Grant Prospect Research AI, Donor Retention Radar, Volunteer Shift Scheduler (Batch 84)',
-'Telecom & Connectivity':'Network Anomaly Detector, 5G Rollout Planner, Churn Signal Radar, Field Dispatch Copilot (Batch 99)',
-'Insurance & Risk':'Claims Triage AI, Underwriting Copilot, Fraud Anomaly Radar (Batch 83)',
+'Telecom & Connectivity':'Network Anomaly Detector, 5G Rollout Planner, Churn Signal Radar, Field Dispatch Copilot (Batch 125)',
+'Insurance & Risk':'Claims Triage AI, Underwriting Copilot, Fraud Anomaly Radar (Batch 126)',
 'Agriculture & Food':'Crop Yield Forecaster, Precision Irrigation AI, Food Supply Traceability (Batch 85)',
 'Automotive & Mobility':'Fleet Predictive Maintenance, EV Charging Planner, Mobility Demand Forecaster (Batch 86)',
 'Hospitality & Travel':'Dynamic Room Pricing, Guest Concierge AI, Itinerary Builder (Batch 74)'
@@ -99,7 +99,7 @@ var ind=v('industry');
 var shortlist=rec[ind]||'A custom shortlist from our 900+ app network';
 var txt='Hi '+v('name')+', INSTANT RECOMMENDATIONS based on your answers (industry: '+ind+', size: '+v('size')+', priority: '+v('goal')+'), your tailored shortlist is: '+shortlist+'. Estimated quick-win ROI: 15–30% effort reduction in the first 90 days. Recommended pilot: 4-week proof of value, fixed scope, no lock-in.';
 document.getElementById('resText').textContent=txt;
-var body='AI DISCOVERY RESULTS%0D%0A%0D%0AName: '+encodeURIComponent(v('name'))+'%0D%0AEmail: '+encodeURIComponent(v('email'))+'%0D%0AIndustry: '+encodeURIComponent(ind)+'%0D%0ASize: '+encodeURIComponent(v('size'))+'%0D%0APriority: '+encodeURIComponent(v('goal'))+'%0D%0ANotes: '+encodeURIComponent(v('notes'))+'%0D%0A%0D%0AShortlist: '+encodeURIComponent(shortlist)+'%0D%0A%0D%0ASent instantly by ziontechgroup.com/apps/discovery.html (Discovery v5, Batch 99 live)';
+var body='AI DISCOVERY RESULTS%0D%0A%0D%0AName: '+encodeURIComponent(v('name'))+'%0D%0AEmail: '+encodeURIComponent(v('email'))+'%0D%0AIndustry: '+encodeURIComponent(ind)+'%0D%0ASize: '+encodeURIComponent(v('size'))+'%0D%0APriority: '+encodeURIComponent(v('goal'))+'%0D%0ANotes: '+encodeURIComponent(v('notes'))+'%0D%0A%0D%0AShortlist: '+encodeURIComponent(shortlist)+'%0D%0A%0D%0ASent instantly by ziontechgroup.com/apps/discovery.html (Discovery v5, Batch 126 live)';
 var mail='mailto:'+encodeURIComponent(v('email'))+'?cc=commercial@ziontechgroup.com&subject='+encodeURIComponent('Your free Zion AI Discovery results')+'&body='+body;
 document.getElementById('mailtoBtn').href=mail;
 document.getElementById('res').style.display='block';
