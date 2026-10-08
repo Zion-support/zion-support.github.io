@@ -199,8 +199,9 @@ assert_discovery_network_integrity() {
     exit 1
   fi
   # Verify the assembled form's behavior, not one JavaScript spelling.
-  # The current implementation computes cc from the validated client address
-  # and Carlos. Reuse the offline contract tests: their fetch is mocked, so
+  # Canonical forms use public/assets/js/discovery-delivery.js: Commercial
+  # is the destination and only the validated participant is copied. Reuse
+  # the offline contract tests: their fetch is mocked, so
   # this gate never sends real email or requires credentials/network access.
   local contract="scripts/test-discovery-delivery-contract.cjs"
   if [ ! -f "$contract" ]; then
