@@ -11,6 +11,11 @@ if(typeof document!=='undefined'){
  const copy=JSON.parse(document.getElementById('evidence-copy').textContent);
  const q=new URLSearchParams(location.search).get('mode');
  if(['policy','underwriting','claims'].includes(q))form.elements.mode.value=q;
+ const locale=document.documentElement.lang.slice(0,2);
+ const guide=document.createElement('a');
+ guide.href='https://ziontechgroup.com/zion-app-network/insurance-evidence-network.html#'+(['en','pt','es','fr','de'].includes(locale)?locale:'en');
+ guide.textContent=copy.guide+' · '+copy.network;
+ document.querySelector('main > nav').appendChild(guide);
  let report='';
  form.addEventListener('submit',e=>{
   e.preventDefault();if(!form.reportValidity())return;
