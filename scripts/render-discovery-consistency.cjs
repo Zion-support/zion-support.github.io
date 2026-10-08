@@ -1,40 +1,47 @@
 'use strict';
 // Artifact-only consistency checks and localized homepage journeys.
-// Questionnaires now share one tested source module; never inject a second submit handler.
+// Questionnaires share one tested source module; never inject another submit handler.
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
 const out=path.resolve(process.argv[2]||'out');
 const journey=JSON.parse(fs.readFileSync('content/discovery-journey.json','utf8'));
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const explorerCopy={"en":["Explore related apps before a paid project","Search registered tools, follow related links, and keep your pilot small and human-reviewed. Registry membership is not a production-readiness guarantee.","Search the app registry","Connected-app guide"],"pt":["Explore apps relacionados antes de contratar","Pesquise ferramentas registradas, siga links relacionados e mantenha o piloto pequeno com revisão humana. Estar no registro não garante prontidão para produção.","Pesquisar apps registrados","Guia de apps conectados"],"es":["Explore apps relacionados antes de contratar","Busque herramientas registradas, siga enlaces relacionados y mantenga un piloto pequeño con revisión humana. El registro no garantiza preparación para producción.","Buscar apps registrados","Guía de apps conectados"],"fr":["Explorez les applications avant de vous engager","Recherchez des outils répertoriés, suivez les liens associés et gardez un petit pilote avec validation humaine. Le registre ne garantit pas la préparation à la production.","Rechercher les applications","Guide des applications liées"],"de":["Erkunden Sie Apps vor einer Beauftragung","Suchen Sie registrierte Tools, folgen Sie verwandten Links und prüfen Sie einen kleinen Pilot mit menschlicher Freigabe. Registrierung garantiert keine Produktionsreife.","Registrierte Apps suchen","Leitfaden für verknüpfte Apps"]};
-const asset=path.join(out,'assets/js/discovery-delivery.js');
-assert(fs.existsSync(asset),'Shared Discovery application missing');
-const source=fs.readFileSync(asset,'utf8');
-assert(source.includes('https://formsubmit.co/ajax/commercial@ziontechgroup.com'),'Delivery endpoint missing');
-assert(!source.includes('carlos@ziontechgroup.com'),'Unexpected extra recipient');
+const explorerCopy={en:['Explore related apps before a paid project','Search registered tools, follow related links, and keep your pilot small and human-reviewed. Registry membership is not a production-readiness guarantee.','Search the app registry','Connected-app guide'],pt:['Explore apps relacionados antes de contratar','Pesquise ferramentas registradas, siga links relacionados e mantenha o piloto pequeno com revisão humana. Estar no registro não garante prontidão para produção.','Pesquisar apps registrados','Guia de apps conectados'],es:['Explore apps relacionados antes de contratar','Busque herramientas registradas, siga enlaces relacionados y mantenga un piloto pequeño con revisión humana. El registro no garantiza preparación para producción.','Buscar apps registrados','Guía de apps conectados'],fr:['Explorez les applications avant de vous engager','Recherchez des outils répertoriés, suivez les liens associés et gardez un petit pilote avec validation humaine. Le registre ne garantit pas la préparation à la production.','Rechercher les applications','Guide des applications liées'],de:['Erkunden Sie Apps vor einer Beauftragung','Suchen Sie registrierte Tools, folgen Sie verwandten Links und prüfen Sie einen kleinen Pilot mit menschlicher Freigabe. Registrierung garantiert keine Produktionsreife.','Registrierte Apps suchen','Leitfaden für verknüpfte Apps']};
+const miningCopy={
+ en:['Mining & Metals: four paths to a responsible pilot','Explore documented app concepts with one owner, a measured baseline and human review. Current repositories contain documentation and links—not validated operational AI.','Read the Mining guide','Start free Discovery','Plan human-reviewed hazard categories and escalation.','Validate sampling and uncertainty before decisions.','Compare dispatch scenarios against measured baselines.','Organize evidence without replacing certified monitoring or engineers.','Do not use these concepts for emergency response, dam-stability decisions or autonomous equipment control.'],
+ pt:['Mineração e metais: quatro caminhos para um piloto responsável','Explore conceitos documentados com responsável, baseline medida e revisão humana. Os repositórios atuais contêm documentação e links, não IA operacional validada.','Ler o guia de mineração','Começar Discovery gratuito','Planeje revisão humana de riscos e escalonamento.','Valide amostragem e incerteza antes de decisões.','Compare cenários de despacho com baseline medida.','Organize evidências sem substituir monitoramento certificado ou engenheiros.','Não use esses conceitos para emergências, estabilidade de barragens ou controle autônomo de equipamentos.'],
+ es:['Minería y metales: cuatro caminos para un piloto responsable','Explore conceptos documentados con un responsable, una línea base medida y revisión humana. Los repositorios actuales contienen documentación y enlaces, no IA operativa validada.','Leer la guía de minería','Empezar Discovery gratuito','Planifique categorías de riesgos y escalamiento con revisión humana.','Valide muestreo e incertidumbre antes de decidir.','Compare escenarios de despacho con una línea base medida.','Organice evidencias sin sustituir monitoreo certificado ni ingenieros.','No use estos conceptos para emergencias, estabilidad de presas ni control autónomo de equipos.'],
+ fr:['Mines et métaux : quatre pistes pour un pilote responsable','Explorez des concepts documentés avec un responsable, une référence mesurée et un contrôle humain. Les dépôts contiennent documentation et liens, pas une IA opérationnelle validée.','Lire le guide mines et métaux','Commencer Discovery gratuit','Prévoyez une classification des dangers et une escalade avec contrôle humain.','Validez échantillonnage et incertitude avant de décider.','Comparez les scénarios d’affectation à une référence mesurée.','Organisez les preuves sans remplacer la surveillance certifiée ni les ingénieurs.','Ne pas utiliser pour urgences, décisions de stabilité des barrages ou commande autonome des équipements.'],
+ de:['Bergbau und Metalle: vier Wege zu einem verantwortungsvollen Pilot','Erkunden Sie dokumentierte Konzepte mit Verantwortlichen, gemessenen Ausgangswerten und menschlicher Prüfung. Die Repositories enthalten Dokumentation und Links, keine validierte operative KI.','Bergbau-Leitfaden lesen','Kostenloses Discovery starten','Planen Sie menschlich geprüfte Gefahrenkategorien und Eskalation.','Prüfen Sie Probenqualität und Unsicherheit vor Entscheidungen.','Vergleichen Sie Einsatzszenarien mit gemessenen Ausgangswerten.','Organisieren Sie Nachweise ohne zertifizierte Überwachung oder Ingenieure zu ersetzen.','Nicht für Notfälle, Dammstabilitätsentscheidungen oder autonome Gerätesteuerung einsetzen.']
+};
+const miningApps=[['Mine Safety Sentinel','mine-safety-sentinel'],['Ore Grade Predictor','ore-grade-predictor'],['Mining Fleet Optimizer','mining-fleet-optimizer'],['Tailings Dam Monitor','tailings-dam-monitor']];
+const asset=path.join(out,'assets/js/discovery-delivery.js');assert(fs.existsSync(asset),'Shared Discovery application missing');
+const source=fs.readFileSync(asset,'utf8');assert(source.includes('https://formsubmit.co/ajax/commercial@ziontechgroup.com'),'Delivery endpoint missing');assert(!source.includes('carlos@ziontechgroup.com'),'Unexpected extra recipient');
 for(const locale of ['en','pt','es','fr','de']){
- const rel=locale==='en'?'discovery/index.html':locale+'/discovery/index.html';
- const html=fs.readFileSync(path.join(out,rel),'utf8');
+ const rel=locale==='en'?'discovery/index.html':locale+'/discovery/index.html',html=fs.readFileSync(path.join(out,rel),'utf8');
  assert(html.includes('src="/assets/js/discovery-delivery.js"'),rel+' must use shared application');
- assert(!html.includes('const APPMAP='),rel+' has obsolete duplicate application');
- assert(!html.includes('data-discovery-parity'),rel+' has obsolete duplicate submit handler');
+ assert(!html.includes('const APPMAP='),rel+' has obsolete duplicate application');assert(!html.includes('data-discovery-parity'),rel+' has obsolete duplicate submit handler');
  for(const id of ['dform','form-errors','rscore','rbar','rsummary','rapps','rnext','report-text','email-fallback','result','copy-report','rsent','submit-report','download-report'])assert(html.includes('id="'+id+'"'),rel+' missing '+id);
  assert(!html.includes('carlos@ziontechgroup.com'),'Unexpected recipient in '+rel);
  const home=path.join(out,locale==='pt'?'index.html':locale+'/index.html');let page=fs.readFileSync(home,'utf8');
  const c=journey[locale];assert(c&&c.steps.length===3&&c.benefits.length===4);
  if(!page.includes('id="discovery-pilot-journey"')){
   const section='<section class="section section-soft" id="discovery-pilot-journey" data-discovery-parity="2026-10-08"><div class="wrap"><h2>'+esc(c.title)+'</h2><p>'+esc(c.intro)+'</p><ul>'+c.benefits.map(b=>'<li>'+esc(b)+'</li>').join('')+'</ul><ol>'+c.steps.map(b=>'<li>'+esc(b)+'</li>').join('')+'</ol><p><a class="btn" href="'+esc(c.discoveryUrl)+'">'+esc(c.cta)+'</a> · <a href="/apps/">'+esc(c.related)+'</a></p></div></section>';
-  assert(page.includes('</main>'),'Homepage insertion anchor missing');page=page.replace('</main>',section+'\n</main>');fs.writeFileSync(home,page);
+  assert(page.includes('</main>'),'Homepage insertion anchor missing');page=page.replace('</main>',section+'\n</main>');
  }
  const t=explorerCopy[locale];
  const promo='<!--registry-path:start--><section class="section section-soft" id="registry-explorer-path" data-registry-path="2026-10-08"><div class="wrap"><h2>'+esc(t[0])+'</h2><p>'+esc(t[1])+'</p><p><a class="btn" href="https://ziontechgroup.com/zion-network/registry-explorer.html">'+esc(t[2])+'</a> · <a href="https://ziontechgroup.com/zion-network/discovery-navigation-guide.html">'+esc(t[3])+'</a> · <a href="'+esc(c.discoveryUrl)+'">'+esc(c.cta)+'</a></p></div></section><!--registry-path:end-->';
  if(page.includes('<!--registry-path:start-->')){
-  assert((page.match(/<!--registry-path:start-->/g)||[]).length===1,'Duplicate registry promotion');
-  assert(page.includes('<!--registry-path:end-->'),'Registry promotion closing marker missing');
-  page=page.replace(/<!--registry-path:start-->[\s\S]*?<!--registry-path:end-->/,promo);
- }else{
-  assert(page.includes('</main>'),'Homepage insertion anchor missing');
-  page=page.replace('</main>',promo+'\n</main>');
+  assert((page.match(/<!--registry-path:start-->/g)||[]).length===1,'Duplicate registry promotion');assert(page.includes('<!--registry-path:end-->'),'Registry promotion closing marker missing');page=page.replace(/<!--registry-path:start-->[\s\S]*?<!--registry-path:end-->/,promo);
+ }else{assert(page.includes('</main>'));page=page.replace('</main>',promo+'\n</main>');}
+ const m=miningCopy[locale],guide=locale==='en'?'/apps/mining-discovery-guide.html':'/'+locale+'/apps/mining-discovery-guide.html';
+ assert(fs.existsSync(path.join(out,guide.slice(1))),'Localized Mining guide missing: '+guide);
+ if(!page.includes('id="mining-metals-discovery"')){
+  const cards=miningApps.map(([name,slug],i)=>'<article class="card"><h3><a href="/'+slug+'/">'+esc(name)+'</a></h3><p>'+esc(m[4+i])+'</p></article>').join('');
+  const section='<section class="section section-soft" id="mining-metals-discovery" data-mining-journey="2026-10-08"><div class="wrap"><h2>'+esc(m[0])+'</h2><p>'+esc(m[1])+'</p><div class="grid grid-4">'+cards+'</div><p><a class="btn" href="'+guide+'">'+esc(m[2])+'</a> · <a href="'+esc(c.discoveryUrl)+'">'+esc(m[3])+'</a></p><p>'+esc(m[8])+'</p></div></section>';
+  assert(page.includes('</main>'));page=page.replace('</main>',section+'\n</main>');
  }
+ assert((page.match(/id="mining-metals-discovery"/g)||[]).length===1,'Duplicate Mining homepage section');
+ assert(page.includes('href="'+guide+'"'),'Missing local Mining guide link');
  fs.writeFileSync(home,page);
 }
-console.log('Preserved five shared-module questionnaires and five localized homepage journeys. No email sent.');
+console.log('Five shared questionnaires, five localized Discovery/registry journeys and five Mining promotions validated. No email sent.');
