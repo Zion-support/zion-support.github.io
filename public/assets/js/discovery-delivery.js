@@ -48,7 +48,7 @@ document.getElementById('dform').addEventListener('submit',async function(e){
  // The display text of selected options is translated; canonical values stay stable.
  const selectedText=name=>{const el=document.querySelector?.('[name="'+name+'"]');return el?.selectedOptions?.[0]?.textContent||f[name]||'—';};
  const values=[f.name,f.email,f.company||'—',selectedText('industry'),selectedText('process'),selectedText('hours'),f.systems||'—',f.goal||'—',selectedText('timeline'),score+'/100'];
- const summary=t.title+'\n'+t.fields.map((label,i)=>label+': '+values[i]).join('\n')+'\n'+t.heuristic+'\n'+t.summary+': '+savings+'\n'+assumptions+'\n'+t.next+'\n'+t.apps+':\n'+apps.map(a=>a[0]+' https://ziontechgroup.com'+a[1]).join('\n')+'\nhttps://ziontechgroup.com/apps/discovery-report-workbench.html\n'+t.free+'\nAttribution: '+JSON.stringify(attribution);
+ const summary=t.title+'\n'+t.fields.map((label,i)=>label+': '+values[i]).join('\n')+'\n'+t.heuristic+'\n'+t.summary+': '+savings+'\n'+assumptions+'\n'+t.next+'\n'+t.apps+':\n'+apps.map(a=>a[0]+' — '+recommendationKind(a[1])+' https://ziontechgroup.com'+a[1]).join('\n')+'\nhttps://ziontechgroup.com/apps/discovery-report-workbench.html\n'+t.free+'\nAttribution: '+JSON.stringify(attribution);
  window.__zionDiscoveryReport=summary;
  document.getElementById('rscore').textContent=score;document.getElementById('rbar').style.width=score+'%';
  document.getElementById('rsummary').textContent=f.company+' — '+selectedText('process')+'. '+t.summary+': '+savings+'. '+assumptions;
