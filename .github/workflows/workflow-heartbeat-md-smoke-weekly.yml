@@ -1,4 +1,4 @@
-# Ensures HEARTBEAT.md keeps operating mandate + continuity cross-links (grep-only).
+# Ensures HEARTBEAT.md keeps the current workspace-status continuity anchors (grep-only).
 
 name: HEARTBEAT.md smoke (weekly)
 
@@ -22,15 +22,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
 
-      - name: HEARTBEAT.md mandate anchors
+      - name: HEARTBEAT.md status anchors
         run: |
           set -euo pipefail
           test -f HEARTBEAT.md
           test -s HEARTBEAT.md
-          grep -Fq '# HEARTBEAT.md' HEARTBEAT.md
-          grep -Fq '### Operating Mandate' HEARTBEAT.md
-          grep -Fq 'USER.md' HEARTBEAT.md
-          grep -Fq 'AGENTS' HEARTBEAT.md
-          grep -Fq 'SOUL' HEARTBEAT.md
-          grep -Fq 'Never commit secrets' HEARTBEAT.md
+          grep -Fq '# zion.app — Workspace Status' HEARTBEAT.md
+          grep -Fq 'V32 RESPONDER' HEARTBEAT.md
+          grep -Fq 'PARTNERS PAGE' HEARTBEAT.md
+          grep -Fq 'GITHUB ACTIONS' HEARTBEAT.md
+          grep -Fq 'GMAIL / CALENDAR' HEARTBEAT.md
+          grep -Fq 'FLEET STATUS' HEARTBEAT.md
           echo 'ok: HEARTBEAT.md'
