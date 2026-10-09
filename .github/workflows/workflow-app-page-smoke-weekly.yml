@@ -1,4 +1,4 @@
-# Ensures app/page.tsx keeps the homepage entry (Home export + key imports; grep-only).
+# Ensures app/page.tsx keeps the current homepage entry shell (grep-only).
 
 name: app/page.tsx smoke (weekly)
 
@@ -27,8 +27,9 @@ jobs:
           set -euo pipefail
           test -f app/page.tsx
           test -s app/page.tsx
-          grep -Fq "import Banner from './components/Banner';" app/page.tsx
           grep -Fq "import Link from 'next/link';" app/page.tsx
-          grep -Fq 'export default function Home()' app/page.tsx
-          grep -Fq 'aria-label="Automation health"' app/page.tsx
+          grep -Fq "import ServiceBrowser from '@/components/ServiceBrowser';" app/page.tsx
+          grep -Fq "import AgentsMonitoring from '@/components/AgentsMonitoring';" app/page.tsx
+          grep -Fq 'export default function HomePage()' app/page.tsx
+          grep -Fq "const STAT_SERVICES = 'Services & Solutions';" app/page.tsx
           echo 'ok: app/page.tsx'
