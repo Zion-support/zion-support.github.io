@@ -15,6 +15,6 @@ for(const lang of locales){
  assert.equal((html.match(/data-field-evidence-gates=/g)||[]).length,1,'Duplicate section');assert(!/<form\b|<script\b/i.test(html));assert.equal((html.match(/rel="alternate"/g)||[]).length,6);
  assert(html.includes('href="'+(lang==='en'?'/discovery/':'/'+lang+'/discovery/')+'"'),'Wrong Discovery locale');
 }
-assert(js.includes('recommendationKind(a[1])')&&js.includes('recommendationKind(path)'),'Missing report/page labels');
+assert((js.includes('recommendationKind(a[1])')&&js.includes('recommendationKind(path)'))||(js.includes('resourceType(a)')&&js.includes('resourceType([name,path])')),'Missing supported report/page classifier');
 assert(js.includes('commercial@ziontechgroup.com'),'Recipient changed');
 console.log('PASS 5 locales, 25 capability cases, aliases, JS syntax, single content section and guide safety');

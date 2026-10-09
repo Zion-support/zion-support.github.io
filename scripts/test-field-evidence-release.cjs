@@ -33,7 +33,7 @@ if(process.argv.includes('--live')){
  const js=fs.readFileSync(path.join(out,'assets/js/discovery-delivery.js'),'utf8');
  assert(js.includes('function recommendationKind('),'classifications missing');
  assert(js.includes("commercial@ziontechgroup.com"),'commercial recipient lost');
- assert(js.includes('recommendationKind(a[1])'),'report labels missing');
- assert(js.includes('recommendationKind(path)'),'on-page labels missing');
+ assert(js.includes('recommendationKind(a[1])')||js.includes('resourceType(a)'),'report labels missing');
+ assert(js.includes('recommendationKind(path)')||js.includes('resourceType([name,path])'),'on-page labels missing');
  console.log('PASS five guide locales, alternates, navigation, homepage links and recommendation labels.');
 }

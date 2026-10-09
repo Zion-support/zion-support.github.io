@@ -12,11 +12,13 @@ try{require('./render-field-evidence-locales.cjs');}finally{
 const file=path.join(out,'assets/js/discovery-delivery.js');let js=fs.readFileSync(file,'utf8');
 if(!js.includes('resourceClassificationV1')){
  const delivery=js.slice(js.indexOf(' const cc='));
- const classified="apps.map(a=>a[0]+' ['+recommendationKind(a[1])+'] https://ziontechgroup.com'+a[1])";
  const original="apps.map(a=>a[0]+' https://ziontechgroup.com'+a[1])";
- assert(js.includes(classified),'Concurrent report classification contract changed');
- assert(js.includes('link.textContent=name+" — "+recommendationKind(path);'),'Concurrent display contract changed');
- js=js.replace(classified,original).replace('link.textContent=name+" — "+recommendationKind(path);','link.textContent=name;');
+ const variants=["apps.map(a=>a[0]+' ['+recommendationKind(a[1])+'] https://ziontechgroup.com'+a[1])","apps.map(a=>a[0]+' — '+recommendationKind(a[1])+' https://ziontechgroup.com'+a[1])"];
+ const present=variants.find(v=>js.includes(v));assert(present||js.includes(original),'Unreviewed report classification contract');
+ if(present)js=js.replace(present,original);
+ const displays=['link.textContent=name+" — "+recommendationKind(path);',"kind.textContent=' — '+recommendationKind(path);"];
+ const display=displays.find(v=>js.includes(v));assert(display||js.includes('link.textContent=name;'),'Unreviewed display classification contract');
+ if(display)js=js.replace(display,display.startsWith('kind.')?"kind.textContent='';":'link.textContent=name;');
  assert.equal(js.slice(js.indexOf(' const cc=')),delivery,'Email delivery logic changed');fs.writeFileSync(file,js);
 }
 require('./render-reporting-resources.cjs');
