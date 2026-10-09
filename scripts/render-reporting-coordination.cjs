@@ -1,8 +1,15 @@
 'use strict';
-// Preserve the concurrent field-evidence release before adding reporting guides.
+// Preserve concurrent field evidence and leave the intentional /pt/ redirect unchanged.
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
-require('./render-field-evidence-locales.cjs');
-const file=path.join(process.argv[2]||'out','assets/js/discovery-delivery.js');let js=fs.readFileSync(file,'utf8');
+const out=process.argv[2]||'out',redirect=path.join(out,'pt/index.html'),saved=redirect+'.reporting-preserve';
+let redirectBytes;
+if(fs.existsSync(redirect)&&/http-equiv\s*=\s*["']refresh/i.test(fs.readFileSync(redirect,'utf8'))){
+ redirectBytes=fs.readFileSync(redirect);assert(!fs.existsSync(saved),'Previous redirect preservation not restored');fs.renameSync(redirect,saved);
+}
+try{require('./render-field-evidence-locales.cjs');}finally{
+ if(redirectBytes){fs.renameSync(saved,redirect);assert.deepEqual(fs.readFileSync(redirect),redirectBytes,'Portuguese redirect changed');}
+}
+const file=path.join(out,'assets/js/discovery-delivery.js');let js=fs.readFileSync(file,'utf8');
 if(!js.includes('resourceClassificationV1')){
  const delivery=js.slice(js.indexOf(' const cc='));
  const classified="apps.map(a=>a[0]+' ['+recommendationKind(a[1])+'] https://ziontechgroup.com'+a[1])";
@@ -14,4 +21,4 @@ if(!js.includes('resourceClassificationV1')){
 }
 require('./render-reporting-resources.cjs');
 require('./test-reporting-resource-types.cjs');
-console.log('PASS coordinated field evidence and reporting guides; no lost parallel release.');
+console.log('PASS coordinated field evidence and reporting guides; preserved Portuguese redirect and parallel release.');
