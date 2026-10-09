@@ -19,5 +19,5 @@ for(const [l,c] of Object.entries(labels))for(const slug of slugs){
 }
 console.log('PASS final operations navigation: three hosted-tool return links and ten localized hub links; original forms and six head alternates preserved.');
 
-// Approved reporting-resource classification and five-language guide release.
-require('./render-reporting-resources.cjs');
+// Reconcile concurrent field evidence with approved reporting-resource release.
+require('./render-reporting-coordination.cjs');
