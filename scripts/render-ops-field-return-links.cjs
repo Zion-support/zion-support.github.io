@@ -18,3 +18,4 @@ for(const [l,c] of Object.entries(labels))for(const slug of slugs){
  html=html.replace('</main>',link+'</main>');assert.deepEqual(forms(html),forms(before));assert.equal((html.match(/rel="alternate"/g)||[]).length,6);fs.writeFileSync(f,html);
 }
 console.log('PASS final operations navigation: three hosted-tool return links and ten localized hub links; original forms and six head alternates preserved.');
+require('./render-field-evidence-locales.cjs');
