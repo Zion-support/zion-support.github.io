@@ -36,6 +36,8 @@ on:
       - 'scripts/test-discovery-live.cjs'
       - 'content/discovery-showcase.json'
       - 'content/communications-playbook.json'
+      - 'scripts/render-logistics-evidence.cjs'
+      - 'scripts/test-logistics-evidence.cjs'
       - '.github/workflows/static-deploy.yml'
   schedule:
     - cron: '*/5 * * * *'
@@ -112,6 +114,8 @@ jobs:
         run: node scripts/render-network-start-here.cjs && node scripts/render-network-home-ad.cjs
       - name: Final reciprocal operations and hub navigation
         run: node scripts/render-ops-field-return-links.cjs
+      - name: Validate and render truthful five-language logistics evidence
+        run: node scripts/test-logistics-evidence.cjs && node scripts/render-logistics-evidence.cjs out
       - uses: actions/upload-pages-artifact@v3
         with:
           path: out
