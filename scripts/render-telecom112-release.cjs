@@ -9,6 +9,7 @@ const suffix=l=>l==='en'?'':'.'+(l==='pt'?'pt-br':l);
 const site=l=>'/apps/october-2026-batch112-telecom'+suffix(l)+'.html';
 const field=l=>'/apps/field-service-evidence-guide'+suffix(l)+'.html';
 const home=l=>l==='pt'?'index.html':l+'/index.html';
+const workbench=l=>(l==='en'?'/':'/'+l+'/')+'apps/insurance-evidence-workbench.html';
 const C={
  en:['Telecom workflows: inspect before you implement','Explore six documented concepts, define a baseline and plan a reversible synthetic-data pilot. No deployed AI capability is claimed.','Explore telecom concepts','Free Discovery','Insurance concepts','Field Service Evidence Guide','Related telecom guide'],
  pt:['Processos de telecom: confira antes de implementar','Explore seis conceitos documentados, defina uma referência inicial e planeje um piloto reversível com dados sintéticos. Não há promessa de IA implantada.','Explorar conceitos de telecom','Discovery gratuito','Conceitos de seguros','Guia de evidências para serviços de campo','Guia de telecom relacionado'],
@@ -54,11 +55,11 @@ function render(out,texts){
   assert(html.includes('href="https://ziontechgroup.com'+site(l)+'"'));fs.writeFileSync(f,html);changed.push(site(l));
   const discovery=l==='en'?'/discovery/':'/'+l+'/discovery/';
   const section='<!--telecom112:start--><section class="section section-soft" data-telecom112-promo="'+release+'"><div class="wrap"><h2>'+esc(c[0])+'</h2><p>'+esc(c[1])+'</p><nav aria-label="'+esc(c[6])+'"><a class="btn" href="'+site(l)+'">'+esc(c[2])+'</a> · <a href="'+discovery+'">'+esc(c[3])+'</a> · <a href="/zion-app-network/app-network-batch113-oct07'+(l==='en'?'':'-'+l)+'.html">'+esc(c[4])+'</a> · <a href="'+field(l)+'">'+esc(c[5])+'</a></nav></div></section><!--telecom112:end-->';
-  const targets=[home(l),field(l).slice(1),'apps/insurance-evidence-workbench'+suffix(l)+'.html'];
-  for(const rel of targets){const p=path.join(out,rel);if(!fs.existsSync(p)){assert(rel!==home(l)&&rel!==field(l).slice(1),'Missing required entrypoint '+rel);continue;}fs.writeFileSync(p,addSection(fs.readFileSync(p,'utf8'),section));changed.push('/'+rel.replace(/index\.html$/,''));}
+  const targets=[home(l),field(l).slice(1),workbench(l).slice(1)];
+  for(const rel of targets){const p=path.join(out,rel);assert(fs.existsSync(p),'Missing required entrypoint '+rel);fs.writeFileSync(p,addSection(fs.readFileSync(p,'utf8'),section));changed.push('/'+rel.replace(/index\.html$/,''));}
  }
  fs.writeFileSync(path.join(out,'apps/batch112-publication.json'),JSON.stringify({release,source_commit:sha,changed,scope:'Five translated telecom guides and reciprocal promotions only; no functionality or inbox certification',delivery:'unchanged'},null,2)+'\n');
  console.log('PASS '+release+': pinned five-locale mirrors, localized promotions, form/script preservation');
 }
-module.exports={render,addSection,locales,site,hub,field,home,release};
+module.exports={render,addSection,locales,site,hub,field,home,workbench,release};
 if(require.main===module)sources().then(texts=>render(process.argv[2]||'out',texts)).catch(e=>{console.error(e);process.exitCode=1;});
