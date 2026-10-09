@@ -38,6 +38,11 @@ on:
       - 'content/communications-playbook.json'
       - 'scripts/render-logistics-evidence.cjs'
       - 'scripts/test-logistics-evidence.cjs'
+      - 'scripts/render-field-evidence-locales.cjs'
+      - 'scripts/render-field-evidence-release.cjs'
+      - 'scripts/test-field-evidence-release.cjs'
+      - 'scripts/render-field-evidence-quality.cjs'
+      - 'scripts/test-field-evidence-quality.cjs'
       - '.github/workflows/static-deploy.yml'
   schedule:
     - cron: '*/5 * * * *'
@@ -116,6 +121,8 @@ jobs:
         run: node scripts/render-ops-field-return-links.cjs
       - name: Validate and render truthful five-language logistics evidence
         run: node scripts/test-logistics-evidence.cjs && node scripts/render-logistics-evidence.cjs out
+      - name: Publish five-language field evidence guides and localized resource labels
+        run: node scripts/render-field-evidence-release.cjs out && node scripts/render-field-evidence-quality.cjs out && node scripts/test-field-evidence-quality.cjs out
       - uses: actions/upload-pages-artifact@v3
         with:
           path: out
@@ -149,3 +156,5 @@ jobs:
         run: node scripts/test-communications-lab.cjs --live
       - name: Read-only live translated comparison and publication checks
         run: node scripts/test-communications-decision.cjs --live
+      - name: Read-only live field evidence guide publication checks
+        run: node scripts/test-field-evidence-release.cjs out --live
