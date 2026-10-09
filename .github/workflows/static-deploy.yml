@@ -43,6 +43,8 @@ on:
       - 'scripts/test-field-evidence-release.cjs'
       - 'scripts/render-field-evidence-quality.cjs'
       - 'scripts/test-field-evidence-quality.cjs'
+      - 'scripts/render-telecom112-release.cjs'
+      - 'scripts/test-telecom112-release.cjs'
       - '.github/workflows/static-deploy.yml'
   schedule:
     - cron: '*/5 * * * *'
@@ -123,6 +125,8 @@ jobs:
         run: node scripts/test-logistics-evidence.cjs && node scripts/render-logistics-evidence.cjs out
       - name: Publish five-language field evidence guides and localized resource labels
         run: node scripts/render-field-evidence-release.cjs out && node scripts/render-field-evidence-quality.cjs out && node scripts/test-field-evidence-quality.cjs out
+      - name: Render and test pinned five-language telecom guides and reciprocal promotions
+        run: node scripts/render-telecom112-release.cjs out && node scripts/test-telecom112-release.cjs out
       - uses: actions/upload-pages-artifact@v3
         with:
           path: out
