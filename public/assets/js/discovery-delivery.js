@@ -53,7 +53,7 @@ document.getElementById('dform').addEventListener('submit',async function(e){
  document.getElementById('rscore').textContent=score;document.getElementById('rbar').style.width=score+'%';
  document.getElementById('rsummary').textContent=f.company+' — '+selectedText('process')+'. '+t.summary+': '+savings+'. '+assumptions;
  const list=document.getElementById('rapps');list.replaceChildren();
- for(const [name,path] of apps){const item=document.createElement('li'),link=document.createElement('a'),kind=document.createElement('span');link.href=path;link.textContent=name;kind.className='recommendation-kind';kind.textContent=' — '+recommendationKind(path);item.append(link,kind);list.appendChild(item);}
+ for(const [name,path] of apps){const item=document.createElement('li'),link=document.createElement('a'),kind=document.createElement('span');link.href=path;link.textContent=name;kind.className='recommendation-kind';kind.textContent=' — '+recommendationKind(path);item.appendChild(link);item.appendChild(kind);list.appendChild(item);}
  document.getElementById('rnext').textContent=t.next;
  document.getElementById('report-text').textContent=summary;
  const cc=f.email.toLowerCase()==='commercial@ziontechgroup.com'?'':f.email;
