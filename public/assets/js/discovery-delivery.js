@@ -13,10 +13,19 @@ const APPMAP={
  'Other':[['AI Readiness Assessment','/ai-readiness-assessment/'],['Apps Network','/apps/'],['Network Map','/apps/network.html']]
 };
 const HOURVAL={'Under 20':15,'20–80':50,'80–200':140,'200+':260};
+const RECOMMENDATION_KINDS={
+ en:['Interactive calculator','Documentation / concept','Service page'],
+ pt:['Calculadora interativa','Documentação / conceito','Página de serviço'],
+ es:['Calculadora interactiva','Documentación / concepto','Página de servicio'],
+ fr:['Calculateur interactif','Documentation / concept','Page de service'],
+ de:['Interaktiver Rechner','Dokumentation / Konzept','Dienstleistungsseite']
+};
 function recommendationKind(path){
- if(['/sla-calculator/','/roi-calc/','/finops-estimator/','/automation-pilot-planner/'].includes(path)) return 'Interactive calculator';
- if(path==='/apps/'||path==='/apps/network.html'||path.includes('checklist')||path.includes('assessment')) return 'Documentation / concept';
- return 'Service page';
+ const language=(document.documentElement?.lang||'en').slice(0,2);
+ const kinds=RECOMMENDATION_KINDS[language]||RECOMMENDATION_KINDS.en;
+ if(['/sla-calculator/','/roi-calc/','/finops-estimator/','/automation-pilot-planner/'].includes(path)) return kinds[0];
+ if(path==='/apps/'||path==='/apps/network.html'||path.includes('checklist')||path.includes('assessment')) return kinds[1];
+ return kinds[2];
 }
 const COPY={
  en:{invalid:'Please enter your name, one valid email address, a process and an hours band.',ready:'Report ready. Submitting the same result for email delivery to you and Commercial...',duplicate:'This report was already accepted in this page session. No duplicate was submitted.',accepted:'Accepted by the email service for delivery to you and Commercial. Inbox delivery is not yet confirmed. Check your inbox and spam folder.',failed:'Email acceptance was not confirmed. Copy or download your report or use the manual email fallback. No automatic retry was made.',timeout:'Email confirmation timed out. The request may already have been accepted; check your inbox before submitting again.',offline:'Email confirmation is unavailable. Your report remains available below.',copy:'Copy report',copied:'Copied',copyFail:'Select the report above or download .txt',fallback:'Open email with my report (manual fallback)',summary:'Illustrative monthly capacity value',assumptions:'Assumptions: selected hours band represented by {hours} hours/month; 40% potentially automatable; US$45/hour. Not measured savings, a quote or approval to implement.',next:'Confirm the process owner, baseline and data permissions. Select one low-risk pilot with human review and a stop rule.',free:'Discovery is free. No purchase, meeting or paid engagement is created by this report.',title:'FREE DISCOVERY RESULT',fields:['Name','Email','Company','Industry','Process','Hours/month band','Systems','90-day goal','Timeline','Indicative readiness score'],heuristic:'Self-assessment heuristic, not a technical audit.',apps:'Recommended apps'},
@@ -74,3 +83,4 @@ document.getElementById('dform').addEventListener('submit',async function(e){
 });
 document.getElementById('copy-report').addEventListener('click',async function(){const txt=window.__zionDiscoveryReport||'';if(!txt)return;try{await navigator.clipboard.writeText(txt);this.textContent=t.copied;}catch{this.textContent=t.copyFail;}});
 document.getElementById('download-report').addEventListener('click',function(){const txt=window.__zionDiscoveryReport||'';if(!txt)return;const url=URL.createObjectURL(new Blob([txt],{type:'text/plain;charset=utf-8'})),a=document.createElement('a');a.href=url;a.download='zion-discovery-report.txt';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);});
+

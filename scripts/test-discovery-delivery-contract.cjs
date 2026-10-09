@@ -35,3 +35,25 @@ test('newline recipient injection is rejected before any request',async()=>{cons
 test('manual fallback preserves exact report and participant CC',async()=>{const h=harness('failure');await h.submit();const fallback=new URL(h.nodes['email-fallback'].children[0].href);assert.equal(fallback.pathname,'commercial@ziontechgroup.com');assert.equal(fallback.searchParams.get('cc'),'qa@example.test');assert.equal(fallback.searchParams.get('body'),h.context.window.__zionDiscoveryReport);assert.equal(fallback.href.includes('carlos%40'),false);});
 
 for(const mode of ['malformed-json','missing-success','false-success','numeric-success','http-error-success'])test('provider acknowledgement must be explicit: '+mode,async()=>{const h=harness(mode);await h.submit();assert.equal(h.requests.length,1);assert.equal(h.nodes.rsent.textContent,'Email acceptance was not confirmed. Copy or download your report or use the manual email fallback. No automatic retry was made.');assert.ok(h.context.window.__zionDiscoveryReport);assert.equal(h.nodes.result.style.display,'block');assert.equal(h.nodes['submit-report'].disabled,false);assert.equal(h.nodes.dform.attrs['aria-busy'],'false');const fallback=new URL(h.nodes['email-fallback'].children[0].href);assert.equal(fallback.searchParams.get('body'),h.context.window.__zionDiscoveryReport);});
+
+// Recommendation classifications must use the report locale in the UI and email report.
+const expectedKinds={
+ en:['Interactive calculator','Documentation / concept','Service page'],
+ pt:['Calculadora interativa','Documentação / conceito','Página de serviço'],
+ es:['Calculadora interactiva','Documentación / concepto','Página de servicio'],
+ fr:['Calculateur interactif','Documentation / concept','Page de service'],
+ de:['Interaktiver Rechner','Dokumentation / Konzept','Dienstleistungsseite']
+};
+for(const [lang,kinds] of Object.entries(expectedKinds))test('recommendation classification is localized: '+lang,async()=>{
+ for(const [process,indexes] of [['Reporting & analytics',[0,2]],['Other',[1]]]){
+  const h=harness('success',{process},lang);await h.submit();
+  const rendered=h.nodes.rapps.children.map(item=>item.children[1].textContent).join(' ');
+  for(const i of indexes){assert.ok(rendered.includes(kinds[i]),lang+' UI: '+kinds[i]);assert.ok(h.context.window.__zionDiscoveryReport.includes(kinds[i]),lang+' report: '+kinds[i]);}
+  assert.equal(h.requests[0].payload.message,h.context.window.__zionDiscoveryReport);
+ }
+});
+for(const [lang,expected] of [['pt-BR',expectedKinds.pt],['zz',expectedKinds.en]])test('recommendation locale fallback: '+lang,async()=>{
+ const h=harness('success',{process:'Reporting & analytics'},lang);await h.submit();
+ assert.ok(h.context.window.__zionDiscoveryReport.includes(expected[0]));assert.ok(h.context.window.__zionDiscoveryReport.includes(expected[2]));
+});
+
