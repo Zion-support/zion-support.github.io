@@ -21,3 +21,5 @@ console.log('PASS final operations navigation: three hosted-tool return links an
 
 // Reconcile concurrent field evidence with approved reporting-resource release.
 require('./render-reporting-coordination.cjs');
+// Approved five-language standalone calculator promotion; no email submissions.
+require('./render-roi-home.cjs').run(out);
