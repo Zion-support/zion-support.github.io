@@ -1,0 +1,29 @@
+name: FinOps Scenario Read-only Publication QA
+on:
+  workflow_run:
+    workflows: ['Simple Static Deploy']
+    types: [completed]
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: finops-scenario-read-only-qa
+  cancel-in-progress: false
+jobs:
+  verify:
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          sparse-checkout: |
+            scripts/test-finops-scenario-live.cjs
+          sparse-checkout-cone-mode: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Read-only live publication checks
+        run: node scripts/test-finops-scenario-live.cjs
