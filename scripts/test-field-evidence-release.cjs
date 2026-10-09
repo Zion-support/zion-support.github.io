@@ -15,12 +15,23 @@ function verify(html,l){
  }
  for(const url of ['/apps/supplier-quote-evidence-workbench.html','/sla-calculator/','/roi-calc/','/automation-pilot-planner/'])assert(html.includes('href="'+url+'"'),'tool link '+url);
 }
+function verifyDiscovery(html,l){
+ const owned=html.match(/<!--zion-field-return:start-->[\s\S]*?<!--zion-field-return:end-->/g)||[];
+ assert.equal(owned.length,1,'Discovery return block '+l);
+ assert(owned[0].includes('lang="'+locales[l]+'"'),'Discovery return language '+l);
+ assert(owned[0].includes('href="'+route(l)+'"'),'Discovery localized guide '+l);
+ assert(owned[0].includes('data-field-evidence-return="2026-10-09-v2"'),'Discovery return version '+l);
+ assert(/<form\b/i.test(html),'Discovery form missing '+l);
+}
 if(process.argv.includes('--live')){
  (async()=>{
   for(const l of Object.keys(locales)){
    const url=origin+route(l)+'?qa=field-evidence-20261009-'+Date.now();
    const r=await fetch(url,{headers:{'Cache-Control':'no-cache'},signal:AbortSignal.timeout(30000)});
    assert.equal(r.status,200,url);verify(await r.text(),l);console.log('PASS live '+route(l));
+   const discovery=l==='en'?'/discovery/':'/'+l+'/discovery/';
+   const d=await fetch(origin+discovery+'?qa=field-return-'+Date.now(),{headers:{'Cache-Control':'no-cache'},signal:AbortSignal.timeout(30000)});
+   assert.equal(d.status,200,discovery);verifyDiscovery(await d.text(),l);console.log('PASS live localized return '+discovery);
   }
  })().catch(e=>{console.error(e);process.exitCode=1;});
 }else{
@@ -29,6 +40,10 @@ if(process.argv.includes('--live')){
   const rel=l==='pt'?'index.html':l+'/index.html',f=path.join(out,rel);if(!fs.existsSync(f))continue;
   const html=fs.readFileSync(f,'utf8');if(/http-equiv\s*=\s*["']?refresh/i.test(html))continue;
   assert(html.includes('href="'+route(l)+'"'),'localized homepage '+l);
+ }
+ for(const l of Object.keys(locales)){
+  const rel=l==='en'?'discovery/index.html':l+'/discovery/index.html';
+  verifyDiscovery(fs.readFileSync(path.join(out,rel),'utf8'),l);
  }
  const js=fs.readFileSync(path.join(out,'assets/js/discovery-delivery.js'),'utf8');
  assert(js.includes('function recommendationKind('),'classifications missing');
