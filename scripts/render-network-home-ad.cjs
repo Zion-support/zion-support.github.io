@@ -36,3 +36,4 @@ require('./test-operational-tools.cjs');
 require('./verify-network-publication.cjs');
 require('./render-pilot-evidence.cjs');
 require('./render-batch113-promotion.cjs');
+require('./render-finops-scenario.cjs');
