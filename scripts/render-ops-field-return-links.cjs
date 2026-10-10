@@ -30,3 +30,6 @@ require('./render-field-evidence-release.cjs');
 require('./render-first-win-release.cjs');
 // Consolidate the legacy promotion after the translated release.
 require('./render-first-win-layout.cjs');
+
+// Approved consolidated Discovery-to-pilot content; forms and recipients unchanged.
+require('./render-discovery-pilot-evidence.cjs');

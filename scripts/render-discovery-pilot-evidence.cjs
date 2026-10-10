@@ -1,0 +1,19 @@
+'use strict';
+const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
+const out=process.argv[2]||'out',release='discovery-pilot-evidence-2026-10-10';
+const C={
+en:['Delivery evidence, not just a success message','Your report is shown before email completes. A provider acceptance means submitted, not received. If receipt is missing, check spam, keep the browser report, and use copy/download or the manual email fallback. Do not repeatedly resubmit a timed-out request.','Read the connected Discovery-to-pilot guide'],
+pt:['Evidência de entrega, não apenas mensagem de sucesso','O relatório aparece antes de concluir o e-mail. Aceitação pelo provedor significa envio solicitado, não recebimento. Se não chegar, verifique o spam, mantenha o relatório e use copiar/baixar ou o e-mail manual. Não reenvie repetidamente após timeout.','Abrir guia interligado do Discovery ao piloto'],
+es:['Evidencia de entrega, no solo un mensaje de éxito','El informe aparece antes de completar el correo. La aceptación del proveedor no confirma recepción. Revise spam y conserve el informe; use copiar/descargar o el correo manual. No repita envíos tras un timeout.','Abrir guía conectada de Discovery a piloto'],
+fr:['Preuve de livraison, pas seulement un message de succès','Le rapport apparaît avant la fin de l’envoi. L’acceptation du fournisseur ne confirme pas la réception. Vérifiez les spams et conservez le rapport; copiez, téléchargez ou utilisez le courriel manuel. Évitez les renvois répétés après expiration.','Ouvrir le guide connecté du Discovery au pilote'],
+de:['Zustellnachweis statt bloßer Erfolgsmeldung','Der Bericht erscheint vor Abschluss des E-Mail-Versands. Die Annahme durch den Anbieter bestätigt keinen Empfang. Prüfen Sie Spam und behalten Sie den Bericht; kopieren, herunterladen oder manuell senden. Nach einem Timeout nicht mehrfach erneut senden.','Vernetzten Leitfaden vom Discovery zum Pilotprojekt öffnen']};
+const esc=s=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;');
+const forms=s=>s.match(/<form\b[\s\S]*?<\/form>/gi)||[];
+function edit(rel,fn){const f=path.join(out,rel);assert(fs.existsSync(f),'Missing target '+rel);const before=fs.readFileSync(f,'utf8');const after=fn(before);assert.deepEqual(forms(after),forms(before));fs.writeFileSync(f,after);}
+for(const [l,c] of Object.entries(C)){
+ const p=l==='en'?'':l+'/';
+ edit(p+'apps/discovery-first-win-guide.html',h=>{h=h.replace(/<!--pilot-delivery:start-->[\s\S]*?<!--pilot-delivery:end-->/g,'');assert(h.includes('</main>'));return h.replace('</main>','<!--pilot-delivery:start--><section class="section section-soft" data-pilot-evidence="'+release+'"><div class="wrap"><h2>'+esc(c[0])+'</h2><p>'+esc(c[1])+'</p><p><a lang="en" href="/apps/discovery-to-pilot-guide.html">'+esc(c[2])+' (English)</a></p></div></section><!--pilot-delivery:end--></main>');});
+ edit(l==='pt'?'index.html':l+'/index.html',h=>{h=h.replace(/<!--pilot-guide-home:start-->[\s\S]*?<!--pilot-guide-home:end-->/g,'');const block='<!--pilot-guide-home:start--><p data-pilot-guide-link="'+release+'"><a lang="en" href="/apps/discovery-to-pilot-guide.html">'+esc(c[2])+' (English)</a></p><!--pilot-guide-home:end-->';const marker='<!--first-win:end-->';assert(h.includes(marker),'Missing maintained first-win promotion');return h.replace(marker,block+marker);});
+}
+for(const rel of ['apps/index.html','apps/network.html','apps/content-hub.html'])edit(rel,h=>{h=h.replace(/<!--pilot-guide-hub:start-->[\s\S]*?<!--pilot-guide-hub:end-->/g,'');assert(h.includes('</body>'));return h.replace('</body>','<!--pilot-guide-hub:start--><aside class="section"><div class="wrap"><a href="/apps/discovery-to-pilot-guide.html">Discovery → evidence → a bounded pilot</a></div></aside><!--pilot-guide-hub:end--></body>');});
+console.log('PASS '+release+': 5 localized delivery notes, 5 existing promotion links, 3 reciprocal hub links; forms unchanged.');
