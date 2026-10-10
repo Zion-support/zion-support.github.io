@@ -18,3 +18,6 @@ for(const lang of locales){
 assert((js.includes('recommendationKind(a[1])')&&js.includes('recommendationKind(path)'))||(js.includes('resourceType(a)')&&js.includes('resourceType([name,path])')),'Missing supported report/page classifier');
 assert(js.includes('commercial@ziontechgroup.com'),'Recipient changed');
 console.log('PASS 5 locales, 25 capability cases, aliases, JS syntax, single content section and guide safety');
+
+// Gate exact canonical and hreflang routes in every regular publication test.
+require('./test-field-evidence-alias-integrity.cjs');

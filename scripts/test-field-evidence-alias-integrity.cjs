@@ -1,10 +1,23 @@
 'use strict';
 // Offline publication gate; --live performs read-only HTTPS GETs. Never submit forms.
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
-const out=process.argv[2]||'out',origin='https://ziontechgroup.com',release='field-alias-integrity-2026-10-10';
+const out=process.argv[2]||'out',origin='https://ziontechgroup.com',release='field-alias-integrity-2026-10-10-v2';
 const pairs=['pt','es','fr','de'].map(l=>({language:l==='pt'?'pt-BR':l,canonical:'/apps/field-service-evidence-guide.'+(l==='pt'?'pt-br':l)+'.html',alias:'/'+l+'/apps/field-service-evidence-guide.html'}));
 const pack=html=>{const m=html.match(/<!--field-evidence-pack:start-->[\s\S]*?<!--field-evidence-pack:end-->/);assert(m,'Newest evidence pack missing');assert.equal((m[0].match(/<li>/g)||[]).length,6);return m[0];};
+const guide=l=>'/apps/field-service-evidence-guide'+(l==='en'?'':'.'+(l==='pt-BR'?'pt-br':l))+'.html';
+const attributes=tag=>Object.fromEntries([...tag.matchAll(/([\w-]+)\s*=\s*["']([^"']*)["']/g)].map(m=>[m[1].toLowerCase(),m[2]]));
+function metadata(html,url,canonical){
+ const links=(html.match(/<link\b[^>]*>/gi)||[]).map(attributes);
+ const canon=links.filter(a=>a.rel==='canonical');assert.equal(canon.length,1,'Exactly one canonical required '+url);assert.equal(canon[0].href,origin+canonical,'Wrong canonical target '+url);
+ const alt=links.filter(a=>a.rel==='alternate');const expected=['en','pt-BR','es','fr','de','x-default'];
+ assert.equal(alt.length,expected.length);assert.equal(new Set(alt.map(a=>a.hreflang)).size,expected.length,'Duplicate hreflang '+url);
+ for(const l of expected){const a=alt.find(a=>a.hreflang===l);assert(a,'Missing hreflang '+l+' '+url);assert.equal(a.href,origin+guide(l==='x-default'?'en':l),'Wrong alternate target '+l+' '+url);}
+ const nav=html.match(/<nav\b[^>]*data-field-evidence-languages[^>]*>[\s\S]*?<\/nav>/i);assert(nav,'Language switcher missing '+url);
+ const navLinks=(nav[0].match(/<a\b[^>]*>/gi)||[]).map(attributes);
+ for(const l of expected.filter(l=>l!=='x-default'))assert(navLinks.some(a=>a.href===guide(l)),'Wrong language switch destination '+l+' '+url);
+}
 function check(html,url,language,canonical){
+ metadata(html,url,canonical);
  assert(html.includes('<html lang="'+language+'">'),'Wrong language '+url);
  assert(html.includes('href="'+origin+canonical+'"'),'Canonical lost '+url);
  assert.equal((html.match(/rel="alternate"/g)||[]).length,6,'Alternate set '+url);
@@ -26,3 +39,4 @@ else{
  fs.writeFileSync(path.join(out,'apps/field-evidence-alias-integrity.json'),JSON.stringify({release,pairs,verification:'Offline alias/canonical byte equality after evidence-pack render; live checks compare translated checklist sections across nine routes',scope:'Field guide aliases only; not full-network translation or functionality certification',forms:'read-only guides',delivery:'unchanged'},null,2));
  console.log('PASS '+release+': four byte-identical alias/canonical pairs, nine read-only guides, six checklist items per language');
 }
+
