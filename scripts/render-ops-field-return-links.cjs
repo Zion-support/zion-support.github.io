@@ -25,3 +25,6 @@ require('./render-reporting-coordination.cjs');
 require('./render-roi-home.cjs').run(out);
 // Approved field evidence translations and truthful Discovery classifications.
 require('./render-field-evidence-release.cjs');
+
+// Approved scoped First Win locales, truthful copy and reciprocal navigation.
+require('./render-first-win-release.cjs');
