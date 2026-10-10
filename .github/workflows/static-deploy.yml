@@ -19,6 +19,8 @@ on:
       - 'scripts/render-discovery-pilot-guide.cjs'
       - 'scripts/render-discovery-linked-guide.cjs'
       - 'scripts/render-network-benefits.cjs'
+      - 'scripts/render-discovery-pilot-backlinks.cjs'
+      - 'scripts/test-discovery-pilot-backlinks.cjs'
       - 'scripts/render-app-experiments.cjs'
       - 'scripts/test-app-experiments.cjs'
       - 'scripts/verify-app-experiment-sources.cjs'
@@ -127,6 +129,8 @@ jobs:
         run: node scripts/render-field-evidence-release.cjs out && node scripts/render-field-evidence-quality.cjs out && node scripts/test-field-evidence-quality.cjs out
       - name: Render and test pinned five-language telecom guides and reciprocal promotions
         run: node scripts/render-telecom112-release.cjs out && node scripts/test-telecom112-release.cjs out
+      - name: Preserve and validate final Discovery pilot backlinks
+        run: node scripts/test-discovery-pilot-backlinks.cjs && node scripts/render-discovery-pilot-backlinks.cjs out
       - uses: actions/upload-pages-artifact@v3
         with:
           path: out
@@ -162,3 +166,5 @@ jobs:
         run: node scripts/test-communications-decision.cjs --live
       - name: Read-only live field evidence guide publication checks
         run: node scripts/test-field-evidence-release.cjs out --live
+      - name: Read-only live Discovery pilot backlink checks
+        run: node scripts/render-discovery-pilot-backlinks.cjs --live
