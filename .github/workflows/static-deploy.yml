@@ -44,6 +44,12 @@ on:
       - 'scripts/render-field-evidence-release.cjs'
       - 'scripts/test-field-evidence-release.cjs'
       - 'scripts/render-field-evidence-quality.cjs'
+      - 'scripts/render-field-evidence-faq.cjs'
+      - 'scripts/render-field-evidence-pack.cjs'
+      - 'scripts/render-field-evidence-route-aliases.cjs'
+      - 'scripts/render-field-network-promotion.cjs'
+      - 'scripts/test-field-evidence-alias-integrity.cjs'
+      - 'scripts/finalize-field-evidence-aliases.cjs'
       - 'scripts/test-field-evidence-quality.cjs'
       - 'scripts/render-telecom112-release.cjs'
       - 'scripts/test-telecom112-release.cjs'
@@ -131,6 +137,8 @@ jobs:
         run: node scripts/render-telecom112-release.cjs out && node scripts/test-telecom112-release.cjs out
       - name: Preserve and validate final Discovery pilot backlinks
         run: node scripts/test-discovery-pilot-backlinks.cjs && node scripts/render-discovery-pilot-backlinks.cjs out
+      - name: Finalize and validate complete field-guide locale copies
+        run: node scripts/finalize-field-evidence-aliases.cjs out
       - uses: actions/upload-pages-artifact@v3
         with:
           path: out
@@ -168,3 +176,5 @@ jobs:
         run: node scripts/test-field-evidence-release.cjs out --live
       - name: Read-only live Discovery pilot backlink checks
         run: node scripts/render-discovery-pilot-backlinks.cjs --live
+      - name: Read-only live complete field-guide locale consistency
+        run: node scripts/finalize-field-evidence-aliases.cjs --live
