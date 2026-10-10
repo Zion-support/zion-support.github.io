@@ -26,3 +26,5 @@ fs.writeFileSync(path.join(out,'apps/field-evidence-quality.json'),JSON.stringif
 console.log('PASS five translated evidence-gate sections and conservative localized capability labels');
 
 require('./render-field-network-promotion.cjs');
+
+require('./render-field-evidence-route-aliases.cjs');
