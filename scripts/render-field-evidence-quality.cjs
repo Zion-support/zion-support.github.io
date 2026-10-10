@@ -27,6 +27,8 @@ console.log('PASS five translated evidence-gate sections and conservative locali
 
 require('./render-field-network-promotion.cjs');
 
-require('./render-field-evidence-route-aliases.cjs');
-
 require('./render-field-evidence-pack.cjs');
+
+// Locale aliases must include the complete translated evidence pack.
+require('./render-field-evidence-route-aliases.cjs');
+require('./test-field-evidence-alias-checklist.cjs');
