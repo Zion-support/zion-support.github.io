@@ -28,3 +28,5 @@ console.log('PASS five translated evidence-gate sections and conservative locali
 require('./render-field-network-promotion.cjs');
 
 require('./render-field-evidence-route-aliases.cjs');
+
+require('./render-field-evidence-pack.cjs');
