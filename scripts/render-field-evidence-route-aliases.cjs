@@ -2,6 +2,7 @@
 // Approved additive route aliases and owned promotion cleanup. No network calls.
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
 const out=process.argv[2]||'out';
+require('./render-field-evidence-faq.cjs');
 const pages=[];
 for(const locale of ['pt','es','fr','de']){
  const lang=locale==='pt'?'pt-BR':locale;
