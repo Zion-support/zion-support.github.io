@@ -37,3 +37,6 @@ require('./verify-network-publication.cjs');
 require('./render-pilot-evidence.cjs');
 require('./render-batch113-promotion.cjs');
 require('./render-finops-scenario.cjs');
+
+// Approved scoped editorial consolidation; preserve earlier renderer hooks.
+require('./render-app-verification.cjs');
