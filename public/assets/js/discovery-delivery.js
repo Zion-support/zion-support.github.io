@@ -3,10 +3,10 @@
 const APPMAP={
  'Customer support / ticket triage':[['AI Ticket Triage','/ai-ticket-triage/'],['AI Powered Customer Support','/ai-powered-customer-support/']],
  'Manual data entry / document processing':[['AI Process Mining','/ai-process-mining/'],['AI Data Warehouse','/ai-data-warehouse/']],
- 'Reporting & analytics':[['AI Predictive Analytics','/ai-predictive-analytics/'],['AI ROI Tracker','/ai-roi-tracker/'],['ROI Calculator','/roi-calc/']],
+ 'Reporting & analytics':[['ROI Calculator','/roi-calc/'],['Discovery Report Workbench','/apps/discovery-report-workbench.html']],
  'IT operations / incident response':[['AI Incident Response','/ai-incident-response/'],['Ops Runbook AI','/ops-runbook-ai/'],['Site Uptime Watchdog','/site-uptime-watchdog/']],
  'Sales & proposal generation':[['Proposal Builder AI','/proposal-builder-ai/'],['Sales Call Analyzer','/sales-call-analyzer/']],
- 'Finance ops / cost control (FinOps)':[['FinOps Estimator','/finops-estimator/'],['Cloud Cost Optimization','/cloud-cost-optimization/']],
+ 'Finance ops / cost control (FinOps)':[['ROI Calculator','/roi-calc/'],['Automation Pilot Planner','/automation-pilot-planner/']],
  'Scheduling / dispatch':[['AI Smart Hands Scheduler','/ai-smart-hands-scheduler/'],['Route Optimization AI','/route-optimization-ai/'],['SLA Calculator','/sla-calculator/']],
  'Supply chain / logistics':[['Route Optimization AI','/route-optimization-ai/'],['Supplier Risk Radar','/supplier-risk-radar/'],['Demand Sensing Forecaster','/demand-sensing-forecaster/']],
  'Compliance & audit evidence':[['AI Compliance Auditor','/ai-compliance-auditor/'],['AI Governance Checklist','/ai-governance-checklist/']],
@@ -14,7 +14,8 @@ const APPMAP={
 };
 const HOURVAL={'Under 20':15,'20–80':50,'80–200':140,'200+':260};
 function recommendationKind(path){
- if(['/sla-calculator/','/roi-calc/','/finops-estimator/','/automation-pilot-planner/'].includes(path)) return 'Interactive calculator';
+ if(['/automation-pilot-planner/','/apps/discovery-report-workbench.html'].includes(path)) return 'Interactive planning tool';
+ if(['/sla-calculator/','/roi-calc/','/finops-estimator/'].includes(path)) return 'Interactive calculator';
  if(path==='/apps/'||path==='/apps/network.html'||path.includes('checklist')||path.includes('assessment')) return 'Documentation / concept';
  return 'Service page';
 }
@@ -48,7 +49,7 @@ document.getElementById('dform').addEventListener('submit',async function(e){
  // The display text of selected options is translated; canonical values stay stable.
  const selectedText=name=>{const el=document.querySelector?.('[name="'+name+'"]');return el?.selectedOptions?.[0]?.textContent||f[name]||'—';};
  const values=[f.name,f.email,f.company||'—',selectedText('industry'),selectedText('process'),selectedText('hours'),f.systems||'—',f.goal||'—',selectedText('timeline'),score+'/100'];
- const summary=t.title+'\n'+t.fields.map((label,i)=>label+': '+values[i]).join('\n')+'\n'+t.heuristic+'\n'+t.summary+': '+savings+'\n'+assumptions+'\n'+t.next+'\n'+t.apps+':\n'+apps.map(a=>a[0]+' — '+recommendationKind(a[1])+' https://ziontechgroup.com'+a[1]).join('\n')+'\nhttps://ziontechgroup.com/apps/discovery-report-workbench.html\n'+t.free+'\nAttribution: '+JSON.stringify(attribution);
+ const summary=t.title+'\n'+t.fields.map((label,i)=>label+': '+values[i]).join('\n')+'\n'+t.heuristic+'\n'+t.summary+': '+savings+'\n'+assumptions+'\n'+t.next+'\n'+t.apps+':\n'+apps.map(a=>a[0]+' — '+recommendationKind(a[1])+' https://ziontechgroup.com'+a[1]).join('\n')+'\nhttps://ziontechgroup.com/apps/discovery-report-workbench.html\nhttps://ziontechgroup.com/apps/free-discovery-to-pilot-guide.html\n'+t.free+'\nAttribution: '+JSON.stringify(attribution);
  window.__zionDiscoveryReport=summary;
  document.getElementById('rscore').textContent=score;document.getElementById('rbar').style.width=score+'%';
  document.getElementById('rsummary').textContent=f.company+' — '+selectedText('process')+'. '+t.summary+': '+savings+'. '+assumptions;
@@ -74,3 +75,4 @@ document.getElementById('dform').addEventListener('submit',async function(e){
 });
 document.getElementById('copy-report').addEventListener('click',async function(){const txt=window.__zionDiscoveryReport||'';if(!txt)return;try{await navigator.clipboard.writeText(txt);this.textContent=t.copied;}catch{this.textContent=t.copyFail;}});
 document.getElementById('download-report').addEventListener('click',function(){const txt=window.__zionDiscoveryReport||'';if(!txt)return;const url=URL.createObjectURL(new Blob([txt],{type:'text/plain;charset=utf-8'})),a=document.createElement('a');a.href=url;a.download='zion-discovery-report.txt';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);});
+// release-marker: fair-discovery-verified-recommendations-2026-10-10
