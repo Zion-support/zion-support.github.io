@@ -28,3 +28,5 @@ require('./render-field-evidence-release.cjs');
 
 // Approved scoped First Win locales, truthful copy and reciprocal navigation.
 require('./render-first-win-release.cjs');
+// Consolidate the legacy promotion after the translated release.
+require('./render-first-win-layout.cjs');
