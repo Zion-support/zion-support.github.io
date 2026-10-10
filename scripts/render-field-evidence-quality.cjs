@@ -29,6 +29,7 @@ require('./render-field-network-promotion.cjs');
 
 require('./render-field-evidence-pack.cjs');
 
-// Locale aliases must include the complete translated evidence pack.
+// Generate locale aliases only after the complete translated evidence pack.
 require('./render-field-evidence-route-aliases.cjs');
-require('./test-field-evidence-alias-checklist.cjs');
+
+require('./test-field-evidence-alias-integrity.cjs');
