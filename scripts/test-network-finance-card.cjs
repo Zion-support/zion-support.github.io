@@ -9,7 +9,7 @@ write('en/index.html','en');
 const run=()=>cp.execFileSync(process.execPath,[path.join(scripts,'render-network-start-here.cjs'),out],{encoding:'utf8'});
 try{
  run();const snapshot=new Map();
- for(const l of locales){const f=path.join(out,prefix(l)+'apps/network-start-here.html');const h=fs.readFileSync(f,'utf8');assert(h.includes('href="/'+prefix(l)+'apps/finance-insurance-paths.html"'));assert.equal((h.match(/<article>/g)||[]).length,7);assert.equal((h.match(/rel="alternate"/g)||[]).length,6);assert.equal((h.match(/zion-network-nav:start/g)||[]).length,1);snapshot.set(f,h);}
+ for(const l of locales){const f=path.join(out,prefix(l)+'apps/network-start-here.html');const h=fs.readFileSync(f,'utf8');assert(h.includes('href="/'+prefix(l)+'apps/finance-insurance-paths.html"'));assert.equal((h.match(/<article>/g)||[]).length,7);assert(h.includes('box-sizing:border-box;overflow-wrap:anywhere;max-width:1120px'));assert.equal((h.match(/rel="alternate"/g)||[]).length,6);assert.equal((h.match(/zion-network-nav:start/g)||[]).length,1);snapshot.set(f,h);}
  run();for(const [f,h]of snapshot)assert.equal(fs.readFileSync(f,'utf8'),h,'idempotency');
  for(const l of locales){const h=fs.readFileSync(path.join(out,prefix(l)+'apps/finance-insurance-paths.html'),'utf8');assert(h.includes(form),'original form preserved');}
  fs.unlinkSync(path.join(out,'de/apps/finance-insurance-paths.html'));run();let de=fs.readFileSync(path.join(out,'de/apps/network-start-here.html'),'utf8');assert(!de.includes('href="/de/apps/finance-insurance-paths.html"'));assert.equal((de.match(/<article>/g)||[]).length,7);
