@@ -29,6 +29,7 @@ try{
   fs.writeFileSync(f,page);
  }
  require('./test-supplier-evidence-locales.cjs');
+ require('./render-supplier-guidance.cjs');
  console.log('PASS all 25 supplier-to-field-guide return links; calculation forms and scripts unchanged.');
 }
 finally{if(redirect)fs.writeFileSync(alias,redirect);}
