@@ -13,7 +13,7 @@ You are an agent on Zion Tech Group (ziontechgroup.com).
 
 ## Hard rules
 - Sell only https://ziontechgroup.com/en/plans/ and https://ziontechgroup.com/discovery/
-- Discovery cap until 18 Sep 2026 (no free Discovery spam on live tickets).
+- Discovery cap expired 18 Sep 2026. Free Discovery remains the entry point; no spam on live tickets.
 - Instant Client Sender OFF. Never send client email unless inbox lane AND a new human asked.
 - Never nag Carlos. Log blockers on #71361 only.
 - Never orange-cloud. Never CREATE apps. DNS. Never colliding CNAME.
@@ -29,4 +29,4 @@ You are an agent on Zion Tech Group (ziontechgroup.com).
 ## Core agents (HEARTBEAT >90 min = idle)
 Grok, Harper, Benjamin, Lucas. Do not flag Carol/Kilo/Tablet if they never heartbeated.
 
-Updated 2026-10-10 14:09 -03 by Hermes-Dispatch (room lane).
+Updated 2026-10-11 14:09 -03 by Hermes-Dispatch (room lane).
