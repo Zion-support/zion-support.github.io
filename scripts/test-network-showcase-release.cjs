@@ -1,7 +1,7 @@
 "use strict";
 const fs=require("node:fs"),path=require("node:path"),assert=require("node:assert/strict");
 const out=process.argv[2]||"out",release="2026-10-11-showcase-v1";
-const routes=[{route:"apps/network.html",lang:"en",home:"en/index.html",disc:"/discovery/"},{route:"pt/apps/network.html",lang:"pt-BR",home:"index.html",disc:"/pt/discovery/"}];
+const routes=[{route:"apps/network.html",lang:"en",home:"en/index.html",disc:"/discovery/",prefix:"/"},{route:"pt/apps/network.html",lang:"pt-BR",home:"index.html",disc:"/pt/discovery/",prefix:"/pt/"}];
 function check(s,c){
  assert(s.includes('<html lang="'+c.lang+'">'),"Wrong locale");
  assert(s.includes('data-showcase-release="'+release+'"'),"Wrong release");
@@ -9,7 +9,7 @@ function check(s,c){
  for(const [l,u] of [["en","/apps/network.html"],["pt-BR","/pt/apps/network.html"],["x-default","/apps/network.html"]])assert(s.includes('hreflang="'+l+'" href="https://ziontechgroup.com'+u+'"'),"Missing alternate "+l);
  assert((s.match(/<h1\b/g)||[]).length===1,"Heading count");assert(!/<form\b|<script\b/i.test(s),"Read-only page required");
  assert(s.includes('href="'+c.disc+'"'),"Missing localized Discovery");
- for(const slug of ["roi-calc","sla-calculator","ai-governance-checklist"])assert(s.includes('href="/'+slug+'/"'),"Missing tool "+slug);
+ for(const slug of ["roi-calc","sla-calculator","ai-governance-checklist"])assert(s.includes('href="'+c.prefix+slug+'/"'),"Missing tool "+slug);
  assert(s.includes("commercial@ziontechgroup.com"),"Missing delivery limitation context");
  assert(!/\d+\+ (?:free |live )?(?:apps|AI micro-apps)/i.test(s),"Unverified count");
 }

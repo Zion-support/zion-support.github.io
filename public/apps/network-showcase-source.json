@@ -1,0 +1,9 @@
+{
+  "release": "2026-10-11-showcase-v1",
+  "showcaseSource": "scripts/render-network-showcase-release.cjs",
+  "qaSource": "scripts/test-network-showcase-release.cjs",
+  "toolSource": "scripts/render-operational-tools.cjs",
+  "scope": "English and Portuguese showcase plus existing homepage promotions; not whole-network translation certification",
+  "routes": ["/apps/network.html", "/pt/apps/network.html"],
+  "note": "Artifact-only renderers produce these routes. Live deployment evidence is tracked separately in Notion."
+}
