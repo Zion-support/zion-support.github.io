@@ -1,16 +1,17 @@
-# Five-language Automation Pilot Planner
+# Pilot Planner — additive consolidation, 11 October 2026
 
-Release: `2026-10-11-pilot-planner-v1`.
+Final release `2026-10-11-pilot-planner-v1` preserves prior renderer release `pilot-planner-locales-2026-10-11-v1`, its complete EN/PT-BR/ES/FR/DE runtime, usage/privacy/accessibility layer and guide contracts.
 
-## Scope
-Preserve `/automation-pilot-planner/` as Portuguese; add `/en/`, `/es/`, `/fr/` and `/de/automation-pilot-planner/`. Complete translated labels, placeholders, risk options, default draft text, five 30-day stages, copy/download statuses and privacy limits. Shared responsive layout, language switches and canonical/hreflang. Promotions in five homepage entrypoints and reciprocal localized Discovery/field-guide/learning-path navigation where the generated target exists.
+## Correction
+Initial replacement 8b819ce unintentionally collided with an already existing renderer API. Activation run 38150233568 failed before upload (`locales is not iterable`); no partial release was published. Original renderer blob 4f29af692043251af0c30dfdb8b5670714229ccc restored byte-for-byte. Do not characterize that failure as pre-existing.
 
-The tool creates a **local draft**, not an AI execution or implementation approval. No transmission, persistent storage, account access, paid-plan or delivery changes. Downloaded files stay on the device. Language switching clears inputs. User inputs render with textContent.
+## Canonical URLs preserved
+Portuguese `/automation-pilot-planner/`; EN/ES/FR/DE `/automation-pilot-planner/{en,es,fr,de}/`. New locale-prefix URLs from initial documentation are redirect aliases, not replacement canonical pages.
 
-## Verification before activation
-Exact committed renderer/test source: Node syntax PASS. Five-language VM runtime PASS: defaults and supplied input, safe text handling, all five stages, copy before plan, clipboard missing/denied/success, local download and object URL revocation. Two fixture runs: 20 promotions idempotent, forms/scripts preserved verbatim. This is fixture testing, not complete native browser or full-network QA.
+## Additive improvements
+Consolidated translated homepage promotions and reciprocal Discovery/Field Guide/learning-path entry links; local-only publication manifest; source-aware canonical route registry; final compatibility gate verifies original API, five-language local plans, copy/download fallback, guide returns and translated accessible usage layers. Full field-guide aliases refreshed after canonical-guide additions. Forms, runtime scripts, delivery, calculations and approval gates preserved.
 
-Final production renderer/test step precedes artifact upload and preserves all earlier workflow steps. Live deployment, route/link checks and native browser results must be recorded separately; an HTTP 200 alone does not prove interactive functionality.
+## Offline evidence
+Original committed renderer QA PASS, guide contract PASS, usage/accessibility QA PASS, two clean fixture runs across 20 peer pages with exact forms/scripts preserved and idempotent promotions. Earlier isolated draft QA is not current-source evidence. Native browser and live matrix require separate verification. Whole-network translations/interlinks remain incomplete.
 
-## Continue
-Check latest run on the activation commit, validate all five pages and homepage promotions, sample native browser controls at desktop/mobile, then update the existing Notion release board and durable memory. Full-network translation and interlink reconciliation remain incomplete.
+Commands: `node scripts/render-pilot-planner-locales.cjs out`; `node scripts/test-pilot-planner-locales.cjs out`; `node scripts/test-pilot-planner-live.cjs` (GET only).
