@@ -44,6 +44,3 @@ require('./render-app-verification.cjs');
 // Approved bilingual showcase; preserve all prior hooks and form behavior.
 require('./render-network-showcase-release.cjs');
 require('./test-network-showcase-release.cjs');
-
-// Scoped five-language editorial resource paths; no workflow or form changes.
-require('./render-curated-network.cjs').render(out);
