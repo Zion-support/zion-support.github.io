@@ -24,5 +24,15 @@ const helper='function recommendationKind(path){\n const labels='+JSON.stringify
 js=js.replace(old[0],helper);fs.writeFileSync(file,js);
 fs.writeFileSync(path.join(out,'apps/field-evidence-quality.json'),JSON.stringify({release:'2026-10-09',scope:'Five field evidence guides and localized Discovery resource labels only',pages:Object.keys(copy).map(l=>({language:l,url:route(l)})),verification:'Unknown destinations are not certified interactive apps',delivery:'unchanged'},null,2));
 console.log('PASS five translated evidence-gate sections and conservative localized capability labels');
-// Approved supplier release follows the final field renderer; forms/delivery stay unchanged.
+
+require('./render-field-network-promotion.cjs');
+
+require('./render-field-evidence-pack.cjs');
+
+// Supplier interlinks must precede alias copying so both route families stay identical.
 require('./render-supplier-release.cjs');
+
+// Generate locale aliases only after the complete translated evidence pack.
+require('./render-field-evidence-route-aliases.cjs');
+
+require('./test-field-evidence-alias-integrity.cjs');
