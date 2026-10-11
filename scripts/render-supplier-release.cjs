@@ -7,10 +7,16 @@ if(!/<main\b/i.test(html)){
  assert(html.includes('<body>')&&html.includes('</body>'),'Legacy hub landmarks changed');
  html=html.replace('<body>','<body><main id="content-hub-main">').replace('</body>','</main></body>');fs.writeFileSync(hub,html);
 }
-// Portuguese canonical home is /. Keep any /pt/ redirect byte-for-byte unchanged.
-const alias=path.join(out,'pt/index.html');let redirect=null;
-if(fs.existsSync(alias)){const bytes=fs.readFileSync(alias);if(/http-equiv\s*=\s*["']?refresh/i.test(bytes.toString())){redirect=bytes;fs.unlinkSync(alias);}}
+// Portuguese canonical home is /. Move any /pt/ redirect aside atomically and restore it unchanged.
+const alias=path.join(out,'pt/index.html');
+const backupDir=fs.mkdtempSync(path.join(path.dirname(alias),'.supplier-release-'));
+const backup=path.join(backupDir,'index.html');let redirectMoved=false;
 try{
+ try{fs.renameSync(alias,backup);redirectMoved=true;}
+ catch(error){if(error.code!=='ENOENT')throw error;}
+ if(redirectMoved&&!/http-equiv\s*=\s*["']?refresh/i.test(fs.readFileSync(backup,'utf8'))){
+  fs.renameSync(backup,alias);redirectMoved=false;
+ }
  require('./render-supplier-evidence.cjs');
  // Preserve the established five-guide return contract, not only the selected locale.
  const titles={en:'Field evidence guides — choose a language',pt:'Guias de evidências de campo — escolha o idioma',es:'Guías de evidencias de campo — elija el idioma',fr:'Guides des preuves sur site — choisissez une langue',de:'Vor-Ort-Nachweisleitfäden — Sprache wählen'};
@@ -31,4 +37,7 @@ try{
  require('./test-supplier-evidence-locales.cjs');
  console.log('PASS all 25 supplier-to-field-guide return links; calculation forms and scripts unchanged.');
 }
-finally{if(redirect)fs.writeFileSync(alias,redirect);}
+finally{
+ if(redirectMoved)fs.renameSync(backup,alias);
+ fs.rmSync(backupDir,{recursive:true,force:true});
+}
