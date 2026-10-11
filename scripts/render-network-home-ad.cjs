@@ -40,3 +40,7 @@ require('./render-finops-scenario.cjs');
 
 // Approved scoped editorial consolidation; preserve earlier renderer hooks.
 require('./render-app-verification.cjs');
+
+// Approved bilingual showcase; preserve all prior hooks and form behavior.
+require('./render-network-showcase-release.cjs');
+require('./test-network-showcase-release.cjs');
