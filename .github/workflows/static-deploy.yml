@@ -53,6 +53,8 @@ on:
       - 'scripts/test-field-evidence-quality.cjs'
       - 'scripts/render-telecom112-release.cjs'
       - 'scripts/test-telecom112-release.cjs'
+      - 'scripts/render-pilot-planner-locales.cjs'
+      - 'scripts/test-pilot-planner-locales.cjs'
       - '.github/workflows/static-deploy.yml'
   schedule:
     - cron: '*/5 * * * *'
@@ -139,6 +141,8 @@ jobs:
         run: node scripts/test-discovery-pilot-backlinks.cjs && node scripts/render-discovery-pilot-backlinks.cjs out
       - name: Finalize and validate complete field-guide locale copies
         run: node scripts/finalize-field-evidence-aliases.cjs out
+      - name: Render and test five-language local Pilot Planner and homepage promotions
+        run: node scripts/render-pilot-planner-locales.cjs out && node scripts/test-pilot-planner-locales.cjs out
       - uses: actions/upload-pages-artifact@v3
         with:
           path: out
