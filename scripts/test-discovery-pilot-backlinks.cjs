@@ -12,3 +12,6 @@ try{fs.mkdirSync(path.join(root,'apps'),{recursive:true});fs.writeFileSync(path.
  fs.unlinkSync(path.join(root,guide.slice(1)));assert.throws(()=>render(root),/guide must exist/);checks++;
  console.log('Pilot-backlink regression: '+checks+' checks passed; idempotent ten-page copy preservation and fail-closed prerequisites. No external requests or emails.');
 }finally{fs.rmSync(root,{recursive:true,force:true});}
+
+// Keep the existing backlink checks and add the shared guide/homepage navigation contract.
+require('./test-pilot-tool-paths.cjs').run();
