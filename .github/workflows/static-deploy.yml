@@ -12,6 +12,8 @@ on:
       - 'scripts/test-ops-field-guides.cjs'
       - 'scripts/render-network-start-here.cjs'
       - 'scripts/render-network-home-ad.cjs'
+      - 'scripts/render-home-app-paths.cjs'
+      - 'scripts/test-home-app-paths.cjs'
       - 'scripts/render-discovery-next-step.cjs'
       - 'scripts/prepare-pages-out.sh'
       - 'scripts/render-discovery-showcase.cjs'
@@ -143,6 +145,8 @@ jobs:
         run: node scripts/finalize-field-evidence-aliases.cjs out
       - name: Render and test five-language local Pilot Planner and homepage promotions
         run: node scripts/render-pilot-planner-locales.cjs out && node scripts/test-pilot-planner-locales.cjs out
+      - name: Consolidate and validate final five-language homepage app paths
+        run: node scripts/render-home-app-paths.cjs out && node scripts/test-home-app-paths.cjs out
       - uses: actions/upload-pages-artifact@v3
         with:
           path: out
