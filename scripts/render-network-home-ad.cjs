@@ -37,3 +37,14 @@ require('./verify-network-publication.cjs');
 require('./render-pilot-evidence.cjs');
 require('./render-batch113-promotion.cjs');
 require('./render-finops-scenario.cjs');
+
+// Approved scoped editorial consolidation; preserve earlier renderer hooks.
+require('./render-app-verification.cjs');
+
+// Approved bilingual showcase; preserve all prior hooks and form behavior.
+require('./render-network-showcase-release.cjs');
+require('./test-network-showcase-release.cjs');
+
+// Approved five-language FinOps hub and reciprocal navigation; preserve existing hooks.
+require('./render-finops-hub.cjs');
+require('./test-finops-hub.cjs');

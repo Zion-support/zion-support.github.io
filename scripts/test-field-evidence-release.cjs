@@ -33,6 +33,35 @@ if(process.argv.includes('--live')){
    const d=await fetch(origin+discovery+'?qa=field-return-'+Date.now(),{headers:{'Cache-Control':'no-cache'},signal:AbortSignal.timeout(30000)});
    assert.equal(d.status,200,discovery);verifyDiscovery(await d.text(),l);console.log('PASS live localized return '+discovery);
   }
+
+  // Deployment-artifact aliases and reciprocal promotions are produced after
+  // the early offline gate. Verify them only in this final live phase.
+  async function readOnly(url){
+   const r=await fetch(origin+url+'?qa=field-navigation-'+Date.now(),{headers:{'Cache-Control':'no-cache'},signal:AbortSignal.timeout(30000)});
+   assert.equal(r.status,200,url);assert(new URL(r.url).origin===origin,'Unexpected cross-origin redirect '+url);
+   return r.text();
+  }
+  for(const l of ['pt','es','fr','de']){
+   const alias='/'+l+'/apps/field-service-evidence-guide.html';
+   verify(await readOnly(alias),l);console.log('PASS live canonical-preserving alias '+alias);
+  }
+  for(const l of Object.keys(locales)){
+   const home=l==='pt'?'/':'/'+l+'/';const html=await readOnly(home);
+   assert(html.includes('href="'+route(l)+'"'),'Homepage lost localized field guide '+l);
+   const promos=html.match(/<!--field-evidence-locales:start-->[\s\S]*?<!--field-evidence-locales:end-->/g)||[];
+   assert.equal(promos.length,1,'Duplicate or missing owned homepage promotion '+l);
+   assert(promos[0].includes('href="'+route(l)+'"'),'Owned promotion changed locale '+l);
+   assert(!/<form\b|<script\b/i.test(promos[0]),'Promotion must not submit '+l);
+   assert(!html.includes('<!--zion-field-evidence:start-->'),'Obsolete English promotion '+l);
+   console.log('PASS live localized homepage promotion '+home);
+  }
+  for(const url of ['/apps/supplier-quote-evidence-workbench.html','/sla-calculator/','/roi-calc/','/automation-pilot-planner/']){
+   const html=await readOnly(url);
+   for(const l of Object.keys(locales))assert(html.includes('href="'+route(l)+'"'),'Tool lost guide return '+url+' '+l);
+   console.log('PASS live reciprocal guide links '+url);
+  }
+  console.log('PASS 23 scoped live routes; publication and navigation only, not email delivery or functional certification.');
+
  })().catch(e=>{console.error(e);process.exitCode=1;});
 }else{
  for(const l of Object.keys(locales))verify(fs.readFileSync(path.join(out,route(l).slice(1)),'utf8'),l);
