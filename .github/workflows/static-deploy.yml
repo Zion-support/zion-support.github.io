@@ -57,6 +57,8 @@ on:
       - 'scripts/test-telecom112-release.cjs'
       - 'scripts/render-pilot-planner-locales.cjs'
       - 'scripts/test-pilot-planner-locales.cjs'
+      - 'scripts/render-supplier-pilot-paths.cjs'
+      - 'scripts/test-supplier-pilot-paths.cjs'
       - '.github/workflows/static-deploy.yml'
   schedule:
     - cron: '*/5 * * * *'
@@ -147,6 +149,8 @@ jobs:
         run: node scripts/render-pilot-planner-locales.cjs out && node scripts/test-pilot-planner-locales.cjs out
       - name: Consolidate and validate final five-language homepage app paths
         run: node scripts/render-home-app-paths.cjs out && node scripts/test-home-app-paths.cjs out && node scripts/finalize-field-evidence-aliases.cjs out
+      - name: Final additive five-language supplier-to-pilot paths
+        run: node scripts/render-supplier-pilot-paths.cjs out && node scripts/test-supplier-pilot-paths.cjs out
       - uses: actions/upload-pages-artifact@v3
         with:
           path: out
@@ -186,3 +190,5 @@ jobs:
         run: node scripts/render-discovery-pilot-backlinks.cjs --live
       - name: Read-only live complete field-guide locale consistency
         run: node scripts/finalize-field-evidence-aliases.cjs --live
+      - name: Read-only live supplier-to-pilot path checks
+        run: node scripts/test-supplier-pilot-paths.cjs --live
