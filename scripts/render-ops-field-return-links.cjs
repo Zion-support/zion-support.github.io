@@ -36,3 +36,6 @@ require('./render-discovery-pilot-evidence.cjs');
 
 // Approved three-app locale and capability repair; preserve existing promotions and forms.
 require('./render-legacy-three-locales.cjs').run(out);
+
+// Approved productivity tools and incident planning locales; no external actions.
+require('./render-productivity-incident-locales.cjs').run(out);
