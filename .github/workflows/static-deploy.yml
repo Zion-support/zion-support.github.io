@@ -12,6 +12,8 @@ on:
       - 'scripts/test-ops-field-guides.cjs'
       - 'scripts/render-network-start-here.cjs'
       - 'scripts/render-network-home-ad.cjs'
+      - 'scripts/render-curated-network.cjs'
+      - 'scripts/test-curated-network.cjs'
       - 'scripts/render-discovery-next-step.cjs'
       - 'scripts/prepare-pages-out.sh'
       - 'scripts/render-discovery-showcase.cjs'
@@ -139,6 +141,8 @@ jobs:
         run: node scripts/test-discovery-pilot-backlinks.cjs && node scripts/render-discovery-pilot-backlinks.cjs out
       - name: Finalize and validate complete field-guide locale copies
         run: node scripts/finalize-field-evidence-aliases.cjs out
+      - name: Validate and render curated five-language resource paths
+        run: node --test scripts/test-curated-network.cjs && node scripts/render-curated-network.cjs out
       - uses: actions/upload-pages-artifact@v3
         with:
           path: out
