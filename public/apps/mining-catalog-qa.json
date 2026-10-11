@@ -1,17 +1,10 @@
 {
-  "release": "mining-catalog-qa-2026-10-11-v1",
+  "qa_release": "mining-catalog-qa-2026-10-11-v1",
   "content_release": "mining-catalog-2026-10-11-v1",
-  "test_entry": "scripts/test-discovery-live.cjs",
-  "test_module": "scripts/test-mining-catalog.cjs",
+  "test": "scripts/test-mining-catalog.cjs",
+  "integration": "Awaited by scripts/test-discovery-live.cjs in existing post-deploy checks",
   "resources": 15,
   "locales": ["en", "pt-BR", "es", "fr", "de"],
   "method": "GET only; no form or email submission",
-  "scope": "Mining release markers, single promotion, source links, guide canonicals, six alternates, language switchers and reciprocal catalog links. Not whole-network or browser visual certification.",
-  "localization_audit": {
-    "families": 5,
-    "route_checks": 30,
-    "unique_urls": 29,
-    "field_directory_aliases": "Intentional: retain canonical dotted-suffix destinations."
-  },
-  "full_network_complete": false
+  "scope": "Release markers, single promotions, source links, canonical/hreflang/switcher and reciprocal catalog navigation. Not full-network functionality or visual browser certification."
 }
