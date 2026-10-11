@@ -59,6 +59,7 @@ on:
       - 'scripts/test-pilot-planner-locales.cjs'
       - 'scripts/render-supplier-pilot-paths.cjs'
       - 'scripts/test-supplier-pilot-paths.cjs'
+      - 'scripts/render-supplier-comparison.cjs'
       - '.github/workflows/static-deploy.yml'
   schedule:
     - cron: '*/5 * * * *'
@@ -151,6 +152,8 @@ jobs:
         run: node scripts/render-home-app-paths.cjs out && node scripts/test-home-app-paths.cjs out && node scripts/finalize-field-evidence-aliases.cjs out
       - name: Final additive five-language supplier-to-pilot paths
         run: node scripts/render-supplier-pilot-paths.cjs out && node scripts/test-supplier-pilot-paths.cjs out
+      - name: Render and test five-language supplier worked comparisons
+        run: node scripts/render-supplier-comparison.cjs out
       - uses: actions/upload-pages-artifact@v3
         with:
           path: out
@@ -192,3 +195,5 @@ jobs:
         run: node scripts/finalize-field-evidence-aliases.cjs --live
       - name: Read-only live supplier-to-pilot path checks
         run: node scripts/test-supplier-pilot-paths.cjs --live
+      - name: Read-only live supplier worked comparison checks
+        run: node scripts/render-supplier-comparison.cjs --live
