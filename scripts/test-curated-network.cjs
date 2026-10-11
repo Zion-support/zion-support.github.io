@@ -8,3 +8,5 @@ test('rendering twice is byte-identical',()=>{const {root}=fixture();try{const r
 test('missing target fails before writing a homepage',()=>{const {root,file}=fixture();try{const hp=fs.readFileSync(file(home('en')),'utf8');fs.unlinkSync(file(targets('de')[2]));assert.throws(()=>render(root),/Missing artifact/);assert.equal(fs.readFileSync(file(home('en')),'utf8'),hp);assert(!fs.existsSync(file(route('en'))));}finally{fs.rmSync(root,{recursive:true,force:true});}});
 test('redirect target is rejected before writes',()=>{const {root,file}=fixture();try{fs.writeFileSync(file(targets('fr')[0]),'<html><head><meta http-equiv="refresh" content="0;url=/"></head><body></body></html>');assert.throws(()=>render(root),/Redirect target/);assert(!fs.existsSync(file(route('en'))));}finally{fs.rmSync(root,{recursive:true,force:true});}});
 test('missing insertion anchor is rejected',()=>assert.throws(()=>inject('<body>','<aside>Guide</aside>','body'),/Missing closing/));
+
+test('pilot routes match the published five-language family',()=>{for(const l of locales){const p=l==='en'?'/':'/'+l+'/';assert.equal(targets(l)[3],p+'apps/free-discovery-to-pilot-guide.html');}});

@@ -14,7 +14,7 @@ const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'
 const prefix=l=>l==='en'?'/':'/'+l+'/';
 const home=l=>l==='pt'?'/':'/'+l+'/';
 const route=l=>prefix(l)+'apps/network-resource-paths.html';
-function targets(l){const suffix=l==='en'?'':'.'+(l==='pt'?'pt-br':l);return ['/apps/field-service-evidence-guide'+suffix+'.html','/apps/october-2026-batch112-telecom'+suffix+'.html','/apps/october-2026-batch129-logistics-ai'+suffix+'.html',prefix(l)+'apps/discovery-to-pilot-guide.html'];}
+function targets(l){const suffix=l==='en'?'':'.'+(l==='pt'?'pt-br':l);return ['/apps/field-service-evidence-guide'+suffix+'.html','/apps/october-2026-batch112-telecom'+suffix+'.html','/apps/october-2026-batch129-logistics-ai'+suffix+'.html',prefix(l)+'apps/free-discovery-to-pilot-guide.html'];}
 const css='body{margin:0;background:#0e1628;color:#f4f7ff;font:1rem/1.65 system-ui,sans-serif}main{max-width:1120px;margin:auto;padding:24px;overflow-wrap:anywhere}a{color:#7dd3fc}a:focus-visible{outline:3px solid #f59e0b;outline-offset:4px}.paths{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:16px}.card{border:1px solid #475569;padding:20px;border-radius:16px}nav{display:flex;flex-wrap:wrap;gap:16px}.skip{position:absolute;left:-10000px}.skip:focus{position:static}';
 function cards(l){const c=copy[l];return targets(l).map((u,i)=>'<article class="card"><h3>'+esc(c[3+2*i])+'</h3><p>'+esc(c[4+2*i])+'</p><a href="'+u+'">'+esc(c[11])+': '+esc(c[3+2*i])+'</a></article>').join('');}
 const marker='<!--zion-curated-resource:start-->',end='<!--zion-curated-resource:end-->';
