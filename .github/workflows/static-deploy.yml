@@ -60,6 +60,8 @@ on:
       - 'scripts/render-supplier-pilot-paths.cjs'
       - 'scripts/test-supplier-pilot-paths.cjs'
       - 'scripts/render-supplier-comparison.cjs'
+      - 'scripts/render-sla-evidence.cjs'
+      - 'content/operational-tools.json'
       - '.github/workflows/static-deploy.yml'
   schedule:
     - cron: '*/5 * * * *'
@@ -154,6 +156,8 @@ jobs:
         run: node scripts/render-supplier-pilot-paths.cjs out && node scripts/test-supplier-pilot-paths.cjs out
       - name: Render and test five-language supplier worked comparisons
         run: node scripts/render-supplier-comparison.cjs out
+      - name: Add and validate five-language SLA evidence and existing homepage links
+        run: node scripts/render-sla-evidence.cjs out
       - uses: actions/upload-pages-artifact@v3
         with:
           path: out
@@ -197,3 +201,5 @@ jobs:
         run: node scripts/test-supplier-pilot-paths.cjs --live
       - name: Read-only live supplier worked comparison checks
         run: node scripts/render-supplier-comparison.cjs --live
+      - name: Read-only live SLA evidence and calculation checks
+        run: node scripts/render-sla-evidence.cjs --live
