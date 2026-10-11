@@ -52,3 +52,6 @@ require('./test-finops-hub.cjs');
 // Approved five-language Sales & Revenue editorial guide and homepage promotion.
 require('./render-sales-revenue.cjs');
 require('./test-sales-revenue.cjs');
+
+// Approved Mining promotion consolidation; preserve all prior renderer hooks.
+require('./render-mining-catalog.cjs');
