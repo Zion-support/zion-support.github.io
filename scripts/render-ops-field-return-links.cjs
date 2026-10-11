@@ -33,3 +33,6 @@ require('./render-first-win-layout.cjs');
 
 // Approved consolidated Discovery-to-pilot content; forms and recipients unchanged.
 require('./render-discovery-pilot-evidence.cjs');
+
+// Approved three-app locale and capability repair; preserve existing promotions and forms.
+require('./render-legacy-three-locales.cjs').run(out);
