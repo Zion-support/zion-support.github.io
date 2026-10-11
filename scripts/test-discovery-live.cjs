@@ -34,5 +34,6 @@ async function get(route){
  const app=await get('/assets/js/discovery-delivery.js');assert(!app.includes('carlos@ziontechgroup.com'),'Unexpected shared-module recipient');assert(app.includes('formsubmit.co/ajax/commercial@ziontechgroup.com'),'Commercial endpoint missing');checks++;
  const css=await get('/assets/css/site.css');assert(css.includes('{'),'shared CSS missing');checks++;
  await require('./test-discovery-recommendation-routes.cjs')();
+ await require('./test-mining-catalog.cjs')();
  console.log('PASS '+checks+' publication resources plus recommended routes; GET only, no email submitted.');
 })().catch(e=>{console.error(e);process.exitCode=1;});
