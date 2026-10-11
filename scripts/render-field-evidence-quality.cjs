@@ -29,6 +29,9 @@ require('./render-field-network-promotion.cjs');
 
 require('./render-field-evidence-pack.cjs');
 
+// Supplier interlinks must precede alias copying so both route families stay identical.
+require('./render-supplier-release.cjs');
+
 // Generate locale aliases only after the complete translated evidence pack.
 require('./render-field-evidence-route-aliases.cjs');
 
