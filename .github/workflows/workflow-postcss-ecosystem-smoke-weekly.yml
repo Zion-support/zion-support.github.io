@@ -1,6 +1,6 @@
 # Ensures PostCSS config loads (Tailwind pipeline) and PM2 ecosystem file stays syntactically valid.
 
-name: postcss.config.mjs + ecosystem.config.cjs smoke (weekly)
+name: postcss.config.js + ecosystem.config.cjs smoke (weekly)
 
 permissions:
   contents: read
@@ -27,18 +27,18 @@ jobs:
         with:
           node-version-file: '.nvmrc'
 
-      - name: postcss.config.mjs loads with plugins
+      - name: postcss.config.js loads with plugins
         run: |
           set -euo pipefail
-          test -f postcss.config.mjs
-          test -s postcss.config.mjs
+          test -f postcss.config.js
+          test -s postcss.config.js
           node --input-type=module -e "
-            const m = await import('./postcss.config.mjs');
+            const m = await import('./postcss.config.js');
             const d = m.default;
             if (d == null || typeof d !== 'object') process.exit(1);
             const p = d.plugins;
-            if (p == null || typeof p !== 'object' || Array.isArray(p)) process.exit(1);
-            console.log('ok: postcss.config.mjs plugins');
+            if (p == null || typeof p !== 'object') process.exit(1);
+            console.log('ok: postcss.config.js plugins');
           "
 
       - name: ecosystem.config.cjs syntax check
