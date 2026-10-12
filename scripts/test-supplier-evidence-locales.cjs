@@ -16,3 +16,6 @@ for(const l of ['en','pt','es','fr','de']){
  const home=l==='pt'?'index.html':l+'/index.html';assert.equal((fs.readFileSync(path.join(out,home),'utf8').match(/data-supplier-evidence=/g)||[]).length,1);
 }
 console.log('PASS supplier evidence: 5 locales, calculation integrity, markup/tax/gates/privacy and publication metadata.');
+
+// Protect local UI state and downloaded report parity on every supplier build.
+require('node:child_process').execFileSync(process.execPath, [path.join(__dirname,'test-supplier-evidence-runtime.cjs'),out], {stdio:'inherit'});
