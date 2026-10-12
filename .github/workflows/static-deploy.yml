@@ -11,6 +11,9 @@ on:
       - 'scripts/render-ops-field-return-links.cjs'
       - 'scripts/test-ops-field-guides.cjs'
       - 'scripts/render-network-start-here.cjs'
+      - 'scripts/network-publication-routes.cjs'
+      - 'scripts/verify-network-publication.cjs'
+      - 'scripts/test-network-publication-routes.cjs'
       - 'scripts/render-network-home-ad.cjs'
       - 'scripts/render-home-app-paths.cjs'
       - 'scripts/test-home-app-paths.cjs'
@@ -162,6 +165,8 @@ jobs:
         run: node scripts/render-sla-evidence.cjs out
       - name: Repair and publish five-language local ticket tools and homepage promotions
         run: node scripts/ticket-support-release.cjs out
+      - name: Reconcile and test final folder and suffix localization coverage
+        run: node scripts/verify-network-publication.cjs out && node scripts/test-network-publication-routes.cjs out
       - uses: actions/upload-pages-artifact@v3
         with:
           path: out
@@ -211,3 +216,5 @@ jobs:
         run: node scripts/ticket-support-release.cjs --live
       - name: Read-only live five-language Pilot Planner publication checks
         run: node scripts/test-pilot-planner-live.cjs
+      - name: Read-only live route-family coverage regression
+        run: node scripts/test-network-publication-routes.cjs --live
