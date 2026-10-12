@@ -209,3 +209,5 @@ jobs:
         run: node scripts/render-sla-evidence.cjs --live
       - name: Read-only live local ticket tool and homepage publication checks
         run: node scripts/ticket-support-release.cjs --live
+      - name: Read-only live five-language Pilot Planner publication checks
+        run: node scripts/test-pilot-planner-live.cjs
