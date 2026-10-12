@@ -33,3 +33,7 @@ try{
  console.log('PASS all 25 supplier-to-field-guide return links; calculation forms and scripts unchanged.');
 }
 finally{if(redirect)fs.writeFileSync(alias,redirect);}
+
+// Additive keyboard navigation: preflight tests before artifact writes.
+require('./test-supplier-keyboard.cjs').run(out);
+require('./render-supplier-keyboard.cjs').render(out);
