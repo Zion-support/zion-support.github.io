@@ -45,3 +45,6 @@ require('./render-productivity-workflow-links.cjs').run(out);
 
 // Approved Batch 91 SQL, scheduling-information and scorecard locales.
 require('./render-batch91-locales.cjs').run(out);
+
+// Approved practical three-resource copy inside the existing promotion only.
+require('./render-devops-review-promotion.cjs').run(out);
