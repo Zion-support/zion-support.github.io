@@ -61,6 +61,8 @@ on:
       - 'scripts/test-supplier-pilot-paths.cjs'
       - 'scripts/render-supplier-comparison.cjs'
       - 'scripts/render-sla-evidence.cjs'
+      - 'scripts/render-ticket-support.cjs'
+      - 'scripts/ticket-support-release.cjs'
       - 'content/operational-tools.json'
       - '.github/workflows/static-deploy.yml'
   schedule:
@@ -158,6 +160,8 @@ jobs:
         run: node scripts/render-supplier-comparison.cjs out
       - name: Add and validate five-language SLA evidence and existing homepage links
         run: node scripts/render-sla-evidence.cjs out
+      - name: Repair and publish five-language local ticket tools and homepage promotions
+        run: node scripts/ticket-support-release.cjs out
       - uses: actions/upload-pages-artifact@v3
         with:
           path: out
@@ -203,3 +207,5 @@ jobs:
         run: node scripts/render-supplier-comparison.cjs --live
       - name: Read-only live SLA evidence and calculation checks
         run: node scripts/render-sla-evidence.cjs --live
+      - name: Read-only live local ticket tool and homepage publication checks
+        run: node scripts/ticket-support-release.cjs --live
