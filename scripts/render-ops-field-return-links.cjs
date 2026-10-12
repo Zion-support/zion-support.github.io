@@ -39,3 +39,6 @@ require('./render-legacy-three-locales.cjs').run(out);
 
 // Approved productivity tools and incident planning locales; no external actions.
 require('./render-productivity-incident-locales.cjs').run(out);
+
+// Approved five-language worked workflow links inside existing network promotions.
+require('./render-productivity-workflow-links.cjs').run(out);
