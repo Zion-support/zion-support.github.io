@@ -32,7 +32,11 @@ function unit(){
  // Exercise actual generator and verifier together, retaining forms and head SEO.
  for(const l of R.locales){const p=l==='en'?'':l+'/';write(p+'discovery/index.html',html(l,'<form id="preserved"><input name="client"></form>'));write(p+'apps/index.html',html(l));}
  const before=fs.readFileSync(path.join(root,'pt/apps/suffix.html'),'utf8');
- const run=name=>{const r=cp.spawnSync(process.execPath,[path.join(__dirname,name),root],{encoding:'utf8'});assert.equal(r.status,0,r.stderr||r.stdout);};
+ // Isolate the renderer's optional unrelated release hooks from minimal synthetic fixtures.
+ // The real complete artifact is validated separately by offline(out). No production hooks are changed.
+ const harness=path.join(root,'.fixture-harness');fs.mkdirSync(harness);
+ for(const name of ['render-network-start-here.cjs','verify-network-publication.cjs','network-publication-routes.cjs']){const bytes=fs.readFileSync(path.join(__dirname,name));fs.writeFileSync(path.join(harness,name),bytes);assert.deepEqual(fs.readFileSync(path.join(harness,name)),bytes);}
+ const run=name=>{const r=cp.spawnSync(process.execPath,[path.join(harness,name),root],{encoding:'utf8'});assert.equal(r.status,0,r.stderr||r.stdout);};
  run('render-network-start-here.cjs');run('verify-network-publication.cjs');
  const first=fs.readFileSync(path.join(root,'apps/network-publication-coverage.json'),'utf8');
  assert.equal(JSON.parse(first).coverageRepairRelease,release);
