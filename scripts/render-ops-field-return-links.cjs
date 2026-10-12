@@ -42,3 +42,6 @@ require('./render-productivity-incident-locales.cjs').run(out);
 
 // Approved five-language worked workflow links inside existing network promotions.
 require('./render-productivity-workflow-links.cjs').run(out);
+
+// Approved three DevOps resources, full locales and truthful local capabilities.
+require('./render-devops-three-locales.cjs').run(out);
