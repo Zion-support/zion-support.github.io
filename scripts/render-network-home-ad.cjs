@@ -44,3 +44,14 @@ require('./render-app-verification.cjs');
 // Approved bilingual showcase; preserve all prior hooks and form behavior.
 require('./render-network-showcase-release.cjs');
 require('./test-network-showcase-release.cjs');
+
+// Approved five-language FinOps hub and reciprocal navigation; preserve existing hooks.
+require('./render-finops-hub.cjs');
+require('./test-finops-hub.cjs');
+
+// Approved five-language Sales & Revenue editorial guide and homepage promotion.
+require('./render-sales-revenue.cjs');
+require('./test-sales-revenue.cjs');
+
+// Approved Mining promotion consolidation; preserve all prior renderer hooks.
+require('./render-mining-catalog.cjs');

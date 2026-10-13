@@ -33,3 +33,21 @@ require('./render-first-win-layout.cjs');
 
 // Approved consolidated Discovery-to-pilot content; forms and recipients unchanged.
 require('./render-discovery-pilot-evidence.cjs');
+
+// Approved three-app locale and capability repair; preserve existing promotions and forms.
+require('./render-legacy-three-locales.cjs').run(out);
+
+// Approved productivity tools and incident planning locales; no external actions.
+require('./render-productivity-incident-locales.cjs').run(out);
+
+// Approved five-language worked workflow links inside existing network promotions.
+require('./render-productivity-workflow-links.cjs').run(out);
+
+// Approved Batch 91 SQL, scheduling-information and scorecard locales.
+require('./render-batch91-locales.cjs').run(out);
+
+// Approved practical three-resource copy inside the existing promotion only.
+require('./render-devops-review-promotion.cjs').run(out);
+
+// Approved evidence-led Construction106 mirrors and homepage promotions; pinned source, no submissions.
+require('./render-construction106-release.cjs').run(out).catch(e=>{console.error(e);process.exitCode=1;});

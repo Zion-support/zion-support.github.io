@@ -1,0 +1,7 @@
+'use strict';
+// Final compatibility gate: preserve prior renderer API and usage layers.
+const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict'),cp=require('node:child_process');
+const planner=require('./render-pilot-planner-locales.cjs'),out=process.argv[2]||'out';
+(async()=>{assert.equal(typeof planner.render,'function');assert.equal(typeof planner.html,'function');assert.equal(typeof planner.route,'function');assert.equal(planner.locales.length,5);await planner.qa();cp.execFileSync(process.execPath,[path.join(__dirname,'render-pilot-planner-guide-links.cjs'),out],{stdio:'inherit'});require('./finalize-pilot-planner-release.cjs').finalize(out);for(const l of planner.locales){const h=fs.readFileSync(path.join(out,planner.route(l),'index.html'),'utf8');assert.equal((h.match(/rel="alternate"/g)||[]).length,6);assert(h.includes('data-pilot-usage='));assert(h.includes('data-pilot-guide-return='));assert(h.includes('data-pilot-release="2026-10-11-pilot-planner-v1"'));assert(h.includes('href="'+planner.route(l)+'"'));}
+// Reconcile complete locale aliases after additive canonical-guide promotions.
+const aliases=path.join(__dirname,'finalize-field-evidence-aliases.cjs');if(fs.existsSync(aliases))cp.execFileSync(process.execPath,[aliases,out],{stdio:'inherit'});console.log('PASS five-language Planner compatibility, usage and reciprocal guide contracts.');})().catch(e=>{console.error(e);process.exitCode=1;});

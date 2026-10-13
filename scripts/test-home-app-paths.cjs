@@ -1,0 +1,18 @@
+"use strict";
+const fs=require('node:fs'),path=require('node:path'),os=require('node:os'),assert=require('node:assert/strict');
+const {render,RELEASE,C,home,routes,protectedBlocks,hrefs}=require('./render-home-app-paths.cjs');
+const file=(out,u)=>path.join(out,u.slice(1)+(u.endsWith('/')?'index.html':''));
+function validate(out){const m=JSON.parse(fs.readFileSync(file(out,'/apps/home-app-paths-publication.json'),'utf8'));assert.equal(m.release,RELEASE);assert.equal(m.pages.length,5);assert.equal(m.backlinks.length,25);
+for(const l of Object.keys(C)){const h=fs.readFileSync(file(out,home(l)),'utf8');assert.equal((h.match(/id="app-paths-home"/g)||[]).length,1);assert(h.includes('lang="'+C[l].lang+'"'));const block=h.match(/<!--home-app-paths:start-->[\s\S]*?<!--home-app-paths:end-->/)[0];assert.equal((block.match(/<article>/g)||[]).length,6);assert(block.includes('<details><summary>'));assert(!/<form\b|<script\b/i.test(block));for(const k of Object.keys(C))assert(block.includes('href="'+home(k)+'#app-paths-home"'));for(const u of routes(l))assert(block.includes('href="'+u+'"'));
+for(const u of routes(l).filter(u=>!u.startsWith('/roi-calculator/'))){const s=fs.readFileSync(file(out,u),'utf8');assert.equal((s.match(new RegExp('data-home-app-return="'+RELEASE+'"','g'))||[]).length,1);assert(s.includes('href="'+home(l)+'#app-paths-home"'));}}
+return m;}
+const tmp=fs.mkdtempSync(path.join(os.tmpdir(),'zion-home-paths-'));try{
+const write=(u,s)=>{const f=file(tmp,u);fs.mkdirSync(path.dirname(f),{recursive:true});fs.writeFileSync(f,s);};const before={};
+for(const l of Object.keys(C)){const html='<!DOCTYPE html><html lang="'+C[l].lang+'"><body><main><h1>Home</h1><section id="discovery-pilot-journey"><div><h2>Old</h2><a href="/kept/?x=1&amp;y=2">Kept</a><section><p>Nested section</p></section></div></section><section id="discovery-delivery-guide"><p>Original wording</p></section><section id="discovery-written-pilot-brief"><form action="/unchanged"><input name="value"></form></section></main><script>window.example="unchanged";</script></body></html>';write(home(l),html);before[l]=html;for(const u of routes(l))write(u,'<html lang="'+C[l].lang+'"><body><main><h1>Resource</h1><form><input type="number"></form></main><script src="/keep.js"></script></body></html>');}
+render(tmp);validate(tmp);const snapshots={};function walk(d){for(const e of fs.readdirSync(d,{withFileTypes:true})){const f=path.join(d,e.name);if(e.isDirectory())walk(f);else snapshots[f]=fs.readFileSync(f,'utf8');}}walk(tmp);
+for(const l of Object.keys(C)){const a=fs.readFileSync(file(tmp,home(l)),'utf8');assert.deepEqual(protectedBlocks(a),protectedBlocks(before[l]));for(const u of hrefs(before[l]))assert(hrefs(a).includes(u));assert(a.includes('<section id="discovery-delivery-guide"><p>Original wording</p></section>'));assert(a.indexOf('<form')>a.indexOf('<!--home-app-paths:end-->'),'Interactive promo should remain outside archive');}
+render(tmp);for(const [f,s] of Object.entries(snapshots))assert.equal(fs.readFileSync(f,'utf8'),s,'Repeat-run changed '+f);
+const pt=file(tmp,home('pt')),old=fs.readFileSync(pt,'utf8');fs.writeFileSync(pt,'<html><head><meta http-equiv="refresh" content="0;url=/"></head><body></body></html>');assert.throws(()=>render(tmp),/redirects/);fs.writeFileSync(pt,old);
+console.log('PASS offline fixtures: nested sections, preserved hrefs/scripts/forms, interactive-promo exclusion, five locales, 25 backlinks, idempotence and redirect rejection.');
+}finally{fs.rmSync(tmp,{recursive:true,force:true});}
+if(process.argv[2]){validate(process.argv[2]);console.log('PASS actual artifact: six cards and five homepage-language links per locale; 25 reciprocal resource links.');}
