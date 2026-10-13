@@ -15,7 +15,7 @@ const groups = {
 };
 const copy = {
  en: {
-  language:'English', home:'Homepage', catalog:'App catalog', network:'App network', start:'Free Discovery', other:'Related guide', languages:'Languages', review:'Review draft — not published',
+  language:'English', skip:'Skip to main content', home:'Homepage', catalog:'App catalog', network:'App network', start:'Free Discovery', other:'Related guide', languages:'Languages', review:'Review draft — not published',
   insurance:'Insurance and InsurTech: an evidence-led starting point', governance:'AI governance and engineering quality: review before adoption',
   intro:'Choose one small, reversible workflow. Inspect the source, identify a responsible reviewer, and establish a baseline before evaluating any tool.',
   insuranceLimit:'All six audited Insurance repositories contained README documentation only. These are documented concepts, not implemented AI applications, operational claims systems or verified fraud detectors.',
@@ -28,7 +28,7 @@ const copy = {
   governanceCards:['Regulatory tracking page','DevSecOps checklist page','Compliance review page','Kubernetes security review page','Technical debt review page','Code and document review page','Vendor comparison page']
  },
  'pt-BR': {
-  language:'Português', home:'Página inicial', catalog:'Catálogo de aplicativos', network:'Rede de aplicativos', start:'Discovery gratuito', other:'Guia relacionado', languages:'Idiomas', review:'Rascunho para revisão — não publicado',
+  language:'Português', skip:'Pular para o conteúdo principal', home:'Página inicial', catalog:'Catálogo de aplicativos', network:'Rede de aplicativos', start:'Discovery gratuito', other:'Guia relacionado', languages:'Idiomas', review:'Rascunho para revisão — não publicado',
   insurance:'Seguros e InsurTech: um ponto de partida baseado em evidências', governance:'Governança de IA e qualidade de engenharia: revise antes de adotar',
   intro:'Escolha um fluxo pequeno e reversível. Examine o código-fonte, defina um revisor responsável e registre uma linha de base antes de avaliar uma ferramenta.',
   insuranceLimit:'Os seis repositórios de Seguros auditados continham somente documentação README. São conceitos documentados, não aplicativos de IA implementados, sistemas operacionais de sinistros ou detectores de fraude verificados.',
@@ -41,7 +41,7 @@ const copy = {
   governanceCards:['Página de acompanhamento regulatório','Página de checklist DevSecOps','Página de revisão de conformidade','Página de revisão de segurança do Kubernetes','Página de revisão de dívida técnica','Página de revisão de código e documentos','Página de comparação de fornecedores']
  },
  es: {
-  language:'Español', home:'Inicio', catalog:'Catálogo de aplicaciones', network:'Red de aplicaciones', start:'Discovery gratuito', other:'Guía relacionada', languages:'Idiomas', review:'Borrador para revisión — no publicado',
+  language:'Español', skip:'Saltar al contenido principal', home:'Inicio', catalog:'Catálogo de aplicaciones', network:'Red de aplicaciones', start:'Discovery gratuito', other:'Guía relacionada', languages:'Idiomas', review:'Borrador para revisión — no publicado',
   insurance:'Seguros e InsurTech: un punto de partida basado en evidencias', governance:'Gobernanza de IA y calidad de ingeniería: revise antes de adoptar',
   intro:'Elija un flujo pequeño y reversible. Examine el código fuente, identifique un revisor responsable y establezca una referencia antes de evaluar una herramienta.',
   insuranceLimit:'Los seis repositorios de Seguros auditados contenían únicamente documentación README. Son conceptos documentados, no aplicaciones de IA implementadas, sistemas operativos de siniestros ni detectores de fraude verificados.',
@@ -54,7 +54,7 @@ const copy = {
   governanceCards:['Página de seguimiento regulatorio','Página de lista de control DevSecOps','Página de revisión de cumplimiento','Página de revisión de seguridad de Kubernetes','Página de revisión de deuda técnica','Página de revisión de código y documentos','Página de comparación de proveedores']
  },
  fr: {
-  language:'Français', home:'Accueil', catalog:'Catalogue des applications', network:'Réseau d’applications', start:'Discovery gratuit', other:'Guide associé', languages:'Langues', review:'Brouillon à relire — non publié',
+  language:'Français', skip:'Aller au contenu principal', home:'Accueil', catalog:'Catalogue des applications', network:'Réseau d’applications', start:'Discovery gratuit', other:'Guide associé', languages:'Langues', review:'Brouillon à relire — non publié',
   insurance:'Assurance et InsurTech : un point de départ fondé sur des preuves', governance:'Gouvernance de l’IA et qualité d’ingénierie : examiner avant d’adopter',
   intro:'Choisissez un processus limité et réversible. Examinez le code source, désignez un responsable de la revue et établissez une référence avant d’évaluer un outil.',
   insuranceLimit:'Les six dépôts Assurance audités contenaient uniquement une documentation README. Il s’agit de concepts documentés, pas d’applications d’IA implémentées, de systèmes opérationnels de sinistres ou de détecteurs de fraude vérifiés.',
@@ -67,7 +67,7 @@ const copy = {
   governanceCards:['Page de suivi réglementaire','Page de liste de contrôle DevSecOps','Page de revue de conformité','Page de revue de sécurité Kubernetes','Page de revue de dette technique','Page de revue du code et des documents','Page de comparaison des fournisseurs']
  },
  de: {
-  language:'Deutsch', home:'Startseite', catalog:'Anwendungskatalog', network:'Anwendungsnetzwerk', start:'Kostenlose Discovery', other:'Verwandter Leitfaden', languages:'Sprachen', review:'Prüfentwurf — nicht veröffentlicht',
+  language:'Deutsch', skip:'Zum Hauptinhalt springen', home:'Startseite', catalog:'Anwendungskatalog', network:'Anwendungsnetzwerk', start:'Kostenlose Discovery', other:'Verwandter Leitfaden', languages:'Sprachen', review:'Prüfentwurf — nicht veröffentlicht',
   insurance:'Versicherung und InsurTech: ein evidenzbasierter Einstieg', governance:'KI-Governance und Engineering-Qualität: vor der Einführung prüfen',
   intro:'Wählen Sie einen kleinen, reversiblen Ablauf. Prüfen Sie den Quellcode, benennen Sie eine verantwortliche Prüfperson und erfassen Sie einen Ausgangswert, bevor Sie ein Werkzeug bewerten.',
   insuranceLimit:'Alle sechs geprüften Versicherungs-Repositories enthielten ausschließlich README-Dokumentation. Es sind dokumentierte Konzepte, keine implementierten KI-Anwendungen, betriebsbereiten Schadenssysteme oder geprüften Betrugsdetektoren.',
@@ -89,7 +89,7 @@ function page(group, locale) {
  const c=copy[locale], g=groups[group], other=group==='insurance'?'governance':'insurance';
  const cards=g.repos.map((repo,i)=>`<article class="card"><h2>${esc(c[group+'Cards'][i])}</h2><p><code>${repo}</code></p><p>${esc(c[group+'Limit'])}</p><p>${link('https://github.com/Zion-support/'+repo,c.source)} · ${link('https://github.com/Zion-support/'+repo+'/tree/'+g.trees[i],c.evidence)}</p></article>`).join('\n');
  const langs=locales.map(l=>link(route(group,l),copy[l].language,` hreflang="${l}" lang="${l}"${l===locale?' aria-current="page"':''}`)).join(' ');
- return `<!doctype html>\n<html lang="${locale}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>${esc(c[group])} | Zion Tech Group</title><meta name="description" content="${esc(c.intro)}"><link rel="canonical" href="${ORIGIN}${route(group,locale)}">${alternates(group)}<style>${css}</style></head><body><a class="skip" href="#main">${esc(c.stepsTitle)}</a><main id="main" data-review-release="${RELEASE}" data-family="${group}"><p class="notice"><strong>${esc(c.review)}</strong></p><nav>${link(homes[locale],c.home)} ${link('/apps/',c.catalog)} ${link('/zion-app-network/',c.network)} ${link(discovery[locale],c.start)}</nav><nav aria-label="${esc(c.languages)}">${langs}</nav><h1>${esc(c[group])}</h1><p>${esc(c.intro)}</p><section class="notice"><h2>${esc(c.status)}</h2><p>${esc(c[group+'Limit'])}</p><p>${esc(c.privacy)}</p></section><div class="grid">${cards}</div><section><h2>${esc(c.stepsTitle)}</h2><ol>${c.steps.map(s=>`<li>${esc(s)}</li>`).join('')}</ol></section><section class="notice"><h2>${esc(c.start)}</h2><p>${esc(c.delivery)}</p>${link(discovery[locale],c.start)}</section><footer>${link(route(other,locale),c.other+': '+c[other])} · ${link('/apps/network.html',c.network)} · ${link('/apps/content-hub.html',c.catalog)}</footer></main></body></html>\n`;
+ return `<!doctype html>\n<html lang="${locale}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>${esc(c[group])} | Zion Tech Group</title><meta name="description" content="${esc(c.intro)}"><link rel="canonical" href="${ORIGIN}${route(group,locale)}">${alternates(group)}<style>${css}</style></head><body><a class="skip" href="#main">${esc(c.skip)}</a><main id="main" tabindex="-1" data-review-release="${RELEASE}" data-family="${group}"><p class="notice"><strong>${esc(c.review)}</strong></p><nav>${link(homes[locale],c.home)} ${link('/apps/',c.catalog)} ${link('/zion-app-network/',c.network)} ${link(discovery[locale],c.start)}</nav><nav aria-label="${esc(c.languages)}">${langs}</nav><h1>${esc(c[group])}</h1><p>${esc(c.intro)}</p><section class="notice"><h2>${esc(c.status)}</h2><p>${esc(c[group+'Limit'])}</p><p>${esc(c.privacy)}</p></section><div class="grid">${cards}</div><section><h2>${esc(c.stepsTitle)}</h2><ol>${c.steps.map(s=>`<li>${esc(s)}</li>`).join('')}</ol></section><section class="notice"><h2>${esc(c.start)}</h2><p>${esc(c.delivery)}</p>${link(discovery[locale],c.start)}</section><footer>${link(route(other,locale),c.other+': '+c[other])} · ${link('/apps/network.html',c.network)} · ${link('/apps/content-hub.html',c.catalog)}</footer></main></body></html>\n`;
 }
 function promotion(locale) {
  const c=copy[locale];
@@ -112,6 +112,8 @@ function test() {
   assert(html.includes(`href="${ORIGIN}${route(g,l)}"`));checks++;
   assert.equal((html.match(/aria-current="page"/g)||[]).length,1);checks++;
   assert(html.includes('noindex,nofollow'));checks++;
+  assert(html.includes('<main id="main" tabindex="-1"'));checks++;
+  assert(html.includes(`<a class="skip" href="#main">${esc(c.skip)}</a>`));checks++;
   assert(!/<(?:form|script|iframe)\b/i.test(html));checks++;
   assert(!/all live|pay back fastest|instant results by email|the moment you submit|always on/i.test(html));checks++;
   const other=g==='insurance'?'governance':'insurance';assert(html.includes(`href="${route(other,l)}"`));checks++;
