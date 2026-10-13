@@ -37,3 +37,6 @@ function render(out='out'){
 }
 module.exports={render,RELEASE,C,home,routes,sections,protectedBlocks,hrefs};
 if(require.main===module){const r=render(process.argv[2]||'out');console.log('PASS '+RELEASE+': '+r.pages.length+' localized homepages; '+r.backlinks.length+' reciprocal resource links; existing scripts/forms/hrefs preserved.');}
+
+// Scoped homepage network bridge; retain every existing render/export path.
+if(require.main===module){const out=process.argv[2]||'out';require('./render-network-home-bridge.cjs').render(out);require('./test-network-home-bridge.cjs').verify(out);}
