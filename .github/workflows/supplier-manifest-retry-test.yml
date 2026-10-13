@@ -1,0 +1,21 @@
+name: Supplier Manifest Retry Offline Tests
+on:
+  pull_request:
+    paths:
+      - 'scripts/render-supplier-comparison.cjs'
+      - 'scripts/test-supplier-manifest-retry.cjs'
+      - 'public/assets/js/supplier-quote-evidence.js'
+      - '.github/workflows/supplier-manifest-retry-test.yml'
+permissions:
+  contents: read
+jobs:
+  offline:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Test bounded retries and fail-closed manifest checks without network requests
+        run: node scripts/test-supplier-manifest-retry.cjs

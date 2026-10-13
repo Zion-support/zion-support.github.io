@@ -33,7 +33,20 @@ function render(root){arithmetic();for(const l of L)for(const u of [work(l),revi
 function verify(root){for(const r of routes)verifyHtml(fs.readFileSync(disk(root,r.url),'utf8'),r);return routes.length;}
 function selfTest(){arithmetic();let negative=0;const root=fs.mkdtempSync(path.join(os.tmpdir(),'supplier-comparison-'));try{for(const r of routes){const h='<html><main><h1>Preserve</h1><form><input name="keep"></form><script>/* Keep */</script>'+(r.kind==='home'?'<section data-supplier-evidence="existing"></section>':'')+'</main></html>';const f=disk(root,r.url);fs.mkdirSync(path.dirname(f),{recursive:true});fs.writeFileSync(f,h);const a=transform(h,r.locale,r.kind);verifyHtml(a,r);assert.equal(transform(a,r.locale,r.kind),a);assert.deepEqual(protectedParts(a),protectedParts(h));assert.equal(a.replace(owned,''),h);assert.throws(()=>transform(h.replace('</main>',''),r.locale,r.kind));negative++;assert.throws(()=>transform(a.replace(RELEASE,'unknown'),r.locale,r.kind));negative++;}
  for(const l of L)for(const u of [field(l),pilot(l)]){const f=disk(root,u);fs.mkdirSync(path.dirname(f),{recursive:true});fs.writeFileSync(f,'unchanged destination');}const first=disk(root,work('en')),before=fs.readFileSync(first,'utf8'),missing=disk(root,field('de'));fs.unlinkSync(missing);assert.throws(()=>render(root));negative++;assert.equal(fs.readFileSync(first,'utf8'),before);fs.writeFileSync(missing,'unchanged destination');render(root);const snapshot=routes.map(r=>fs.readFileSync(disk(root,r.url),'utf8'));render(root);assert.deepEqual(routes.map(r=>fs.readFileSync(disk(root,r.url),'utf8')),snapshot);verify(root);return {pages:15,negativeCases:negative,idempotence:true,formsScriptsPreserved:true,missingRouteFailsBeforeWrite:true};}finally{fs.rmSync(root,{recursive:true,force:true});}}
+async function fetchManifest(fetcher=fetch,sleep=ms=>new Promise(resolve=>setTimeout(resolve,ms))){
+ const url='https://ziontechgroup.com/apps/supplier-comparison-publication.json?qa='+Date.now();
+ for(let attempt=0;attempt<3;attempt++){
+  let response;
+  try{response=await fetcher(url,{signal:AbortSignal.timeout(30000),headers:{'Cache-Control':'no-cache'}});}
+  catch(error){if(attempt===2)throw error;await sleep(2000*(attempt+1));continue;}
+  if(response.status===200)return response.json();
+  if([429,500,502,503,504].includes(response.status)&&attempt<2){await sleep(2000*(attempt+1));continue;}
+  assert.equal(response.status,200,'Supplier comparison manifest HTTP status');
+ }
+ throw new Error('Manifest retrieval exhausted');
+}
 async function verifyLive(){const rows=[];for(const r of routes){let last;for(let attempt=0;attempt<3;attempt++){try{const res=await fetch('https://ziontechgroup.com'+r.url+'?supplier-comparison='+Date.now(),{headers:{'Cache-Control':'no-cache'},signal:AbortSignal.timeout(30000)});assert.equal(res.status,200,r.url);verifyHtml(await res.text(),r);rows.push({url:r.url,status:res.status});last=null;break;}catch(e){last=e;if(attempt<2)await new Promise(r=>setTimeout(r,2000));}}if(last)throw last;}
- const response=await fetch('https://ziontechgroup.com/apps/supplier-comparison-publication.json?qa='+Date.now(),{signal:AbortSignal.timeout(30000),headers:{'Cache-Control':'no-cache'}});assert.equal(response.status,200);const m=await response.json();assert.equal(m.release,RELEASE);assert.deepEqual(m.pages,routes);return {release:RELEASE,checkedAt:new Date().toISOString(),result:'PASS',routes:rows,manifest:true};}
-module.exports={render,verify,verifyHtml,transform,block,routes,C,L,RELEASE,selfTest,verifyLive,arithmetic,protectedParts,disk};
+ const m=await fetchManifest();assert.equal(m.release,RELEASE);assert.deepEqual(m.pages,routes);return {release:RELEASE,checkedAt:new Date().toISOString(),result:'PASS',routes:rows,manifest:true};}
+module.exports={fetchManifest,render,verify,verifyHtml,transform,block,routes,C,L,RELEASE,selfTest,verifyLive,arithmetic,protectedParts,disk};
 if(require.main===module){const qa=selfTest();if(process.argv.includes('--live'))verifyLive().then(e=>console.log(JSON.stringify({...e,regressions:qa}))).catch(e=>{console.error(e);process.exitCode=1;});else{const root=process.argv[2]||'out';render(root);console.log(JSON.stringify({release:RELEASE,rendered:verify(root),regressions:qa}));}}
+
