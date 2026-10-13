@@ -18,11 +18,17 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Stage only approved public review files
+        run: |
+          mkdir -p spotlight-preview
+          for f in public/index.html public/en/index.html public/es/index.html public/fr/index.html public/de/index.html public/apps/index.html public/apps/spotlight-2026-10-06b.html public/pt/apps/spotlight-2026-10-06b.html public/es/apps/spotlight-2026-10-06b.html public/fr/apps/spotlight-2026-10-06b.html public/de/apps/spotlight-2026-10-06b.html public/assets/css/discovery.css; do
+            install -D "$f" "spotlight-preview/${f#public/}"
+          done
       - name: Generate isolated review content without deployment
         run: |
-          cp -a public spotlight-preview
           node scripts/preview-discovery-spotlight.cjs spotlight-preview
           node scripts/preview-discovery-spotlight.cjs spotlight-preview
+          test "$(find spotlight-preview -type f | wc -l)" -eq 12
       - uses: actions/upload-artifact@v4
         with:
           name: discovery-spotlight-review
