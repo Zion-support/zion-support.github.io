@@ -167,6 +167,8 @@ jobs:
         run: node scripts/ticket-support-release.cjs out
       - name: Reconcile and test final folder and suffix localization coverage
         run: node scripts/verify-network-publication.cjs out && node scripts/test-network-publication-routes.cjs out
+      - name: Reject private ops artifacts before publication
+        run: python3 scripts/assert-no-private-ops.py out
       - uses: actions/upload-pages-artifact@v3
         with:
           path: out

@@ -52,6 +52,9 @@ jobs:
       - name: Render translated Discovery and communications content
         run: node scripts/render-discovery-showcase.cjs
 
+      - name: Reject private ops artifacts before publication
+        run: python3 scripts/assert-no-private-ops.py out
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
