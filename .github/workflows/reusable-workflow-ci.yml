@@ -42,6 +42,9 @@ jobs:
       - name: Workflow validate light (Ruby YAML contracts + grep + bash + repo hygiene)
         run: npm run automation:preflight
 
+      - name: Workflow validate light (dedupe, integrity, pin)
+        run: npm run workflows:validate:light
+
       - name: Workflow contracts (dedupe, integrity, pin)
         if: ${{ inputs.run_contracts }}
         run: npm run workflows:contracts:node
