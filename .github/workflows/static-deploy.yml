@@ -67,6 +67,14 @@ on:
       - 'scripts/render-ticket-support.cjs'
       - 'scripts/ticket-support-release.cjs'
       - 'content/operational-tools.json'
+      - 'scripts/render-legacy-three-locales.cjs'
+      - 'scripts/render-productivity-incident-locales.cjs'
+      - 'scripts/render-productivity-workflow-links.cjs'
+      - 'scripts/render-network-home-bridge.cjs'
+      - 'scripts/test-network-home-bridge.cjs'
+      - 'scripts/render-productivity-navigation.cjs'
+      - 'scripts/test-productivity-navigation.cjs'
+      - 'scripts/test-productivity-pipeline.cjs'
       - '.github/workflows/static-deploy.yml'
   schedule:
     - cron: '*/5 * * * *'
@@ -167,6 +175,17 @@ jobs:
         run: node scripts/ticket-support-release.cjs out
       - name: Reconcile and test final folder and suffix localization coverage
         run: node scripts/verify-network-publication.cjs out && node scripts/test-network-publication-routes.cjs out
+      - name: Render and gate six-resource five-language productivity navigation
+        run: |
+          node scripts/render-legacy-three-locales.cjs out
+          node scripts/render-productivity-incident-locales.cjs out
+          node scripts/render-productivity-workflow-links.cjs out
+          node scripts/render-network-home-bridge.cjs out
+          node scripts/test-productivity-navigation.cjs out
+          node scripts/test-network-home-bridge.cjs out
+          node scripts/test-productivity-pipeline.cjs out
+          node scripts/verify-network-publication.cjs out
+          node scripts/test-network-publication-routes.cjs out
       - uses: actions/upload-pages-artifact@v3
         with:
           path: out
