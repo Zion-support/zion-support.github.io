@@ -48,3 +48,6 @@ require('./render-batch91-locales.cjs').run(out);
 
 // Approved practical three-resource copy inside the existing promotion only.
 require('./render-devops-review-promotion.cjs').run(out);
+
+// Approved evidence-led Construction106 mirrors and homepage promotions; pinned source, no submissions.
+require('./render-construction106-release.cjs').run(out).catch(e=>{console.error(e);process.exitCode=1;});
