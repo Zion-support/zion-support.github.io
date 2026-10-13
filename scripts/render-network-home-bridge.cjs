@@ -36,7 +36,10 @@ function render(out='out'){
  }
  const report={release:RELEASE,scope:'Five homepage introductions and two additive links per locale only; not a full-network translation or app-functionality certification.',pages,formsAndScriptsPreserved:true};
  fs.mkdirSync(path.join(out,'apps'),{recursive:true});fs.writeFileSync(path.join(out,'apps/network-home-bridge-release.json'),JSON.stringify(report,null,2)+'\n');
- console.log('PASS '+RELEASE+': five owned homepage promotions preserved and linked to the language-specific hub/catalog.');return report;
+ console.log('PASS '+RELEASE+': five owned homepage promotions preserved and linked to the language-specific hub/catalog.');
+ // Run the approved sales release only after the final consolidated-home artifact exists.
+ if(fs.existsSync(path.join(out,'apps','home-app-paths-publication.json')))require('./render-sales-three-evidence.cjs').run(out);
+ return report;
 }
 module.exports={RELEASE,C,transform,render,protectedParts,hrefs};
 if(require.main===module)render(process.argv[2]||'out');
