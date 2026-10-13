@@ -135,3 +135,18 @@ jobs:
           node scripts/test-productivity-pipeline.cjs out
           node scripts/verify-network-publication.cjs out
           node scripts/test-network-publication-routes.cjs out
+      - name: Retrieve byte-pinned catalog source for offline anchor QA
+        run: curl --fail --silent --show-error --location --max-time 30 https://raw.githubusercontent.com/Zion-support/zion-app-network/main/CATALOG-PRODUCTIVITY-REVIEW.md -o _productivity-catalog.md
+      - name: Test source anchors, owned links and artifact staging safety
+        run: node scripts/test-productivity-qa.cjs _productivity-catalog.md
+      - name: Validate and stage scoped generated pages for QA (not deployment)
+        env:
+          GITHUB_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: node scripts/prepare-productivity-qa.cjs out productivity-qa _productivity-catalog.md
+      - name: Retain scoped QA pages and manifest for seven days
+        uses: actions/upload-artifact@v4
+        with:
+          name: productivity-qa-${{ github.event.pull_request.head.sha }}
+          path: productivity-qa
+          retention-days: 7
+          if-no-files-found: error
