@@ -1,35 +1,43 @@
 'use strict';
-const fs=require('node:fs'),os=require('node:os'),path=require('node:path'),assert=require('node:assert/strict');
-const N=require('./render-productivity-navigation.cjs');
-let checks=0;function ok(value,label){assert(value,label);checks++;}function eq(a,b,label){assert.deepEqual(a,b,label);checks++;}function rejects(fn,label){assert.throws(fn,undefined,label);checks++;}
-function fixture(l,i){return '<!doctype html><html lang="'+N.C[l].lang+'"><head><link rel="canonical" href="https://ziontechgroup.com'+N.route(l,i)+'"><title>Preserve</title></head><body><main><h1>Keep translated body</h1><form><input name="original"></form><script>window.keep="</main> text";</script><p>Original</p></main></body></html>';}
-// The source contract rejects apparent extra main closes in scripts rather than editing them.
-function safeFixture(l,i){return fixture(l,i).replace('</main> text','safe text');}
-function verify(out){
- for(const l of Object.keys(N.C))for(let i=0;i<N.S.length;i++){
-  const before=safeFixture(l,i),after=N.transform(before,l,i);
-  eq(N.transform(after,l,i),after,'Idempotence');eq(N.protectedParts(after),N.protectedParts(before),'Protected sections');
-  eq(after.replace(/<!--productivity-navigation:start-->[\s\S]*?<!--productivity-navigation:end-->/g,''),before,'Outside block unchanged');
-  eq((after.match(/data-productivity-navigation=/g)||[]).length,1,'Unique block');
-  ok(after.includes(N.catalog(l))&&after.includes(N.home(l)),'Locale returns');
-  for(const j of N.RELATED[i])ok(after.includes('href="'+N.route(l,j)+'"'),'Related locale route');
-  ok(after.includes('aria-labelledby="productivity-related-heading"')&&after.includes(':focus-visible'),'Semantics and visible focus');
-  rejects(()=>N.transform(before.replace('lang="'+N.C[l].lang+'"','lang="xx"'),l,i),'Wrong language');
-  rejects(()=>N.transform(before.replace('https://ziontechgroup.com'+N.route(l,i),'https://example.com/wrong/'),l,i),'Wrong canonical');
-  rejects(()=>N.transform(before.replace('</main>',''),l,i),'Missing main close');
-  rejects(()=>N.transform(before+N.block(l,i)+N.block(l,i),l,i),'Duplicate owned blocks');
-  rejects(()=>N.transform(before+'<!--productivity-navigation:start-->',l,i),'Malformed marker');
-  rejects(()=>N.transform(before.replace('<h1>','<h1 id="productivity-related-heading">'),l,i),'ID collision');
-  if(out){const h=fs.readFileSync(path.join(out,N.route(l,i).slice(1),'index.html'),'utf8');eq(N.transform(h,l,i),h,'Rendered sample idempotence');}
+const fs=require('node:fs'),path=require('node:path'),os=require('node:os'),assert=require('node:assert/strict');
+const n=require('./render-productivity-navigation.cjs'),a=require('./render-legacy-three-locales.cjs'),b=require('./render-productivity-incident-locales.cjs'),w=require('./render-productivity-workflow-links.cjs');
+let checks=0;const eq=(x,y,msg)=>{assert.deepEqual(x,y,msg);checks++;};const ok=(x,msg)=>{assert(x,msg);checks++;};const fail=f=>{assert.throws(f);checks++;};
+const owned=/<!--productivity-related:start-->[\s\S]*?<!--productivity-related:end-->/g,homeOwned=/<!--productivity-workflow-link:start-->[\s\S]*?<!--productivity-workflow-link:end-->/g;
+function protectedBytes(s){return s.match(/<(?:script|form)\b[\s\S]*?<\/(?:script|form)>/gi)||[];}
+function head(s){return s.match(/<head>[\s\S]*?<\/head>/)[0];}
+const out=fs.mkdtempSync(path.join(os.tmpdir(),'productivity-navigation-')),before=new Map();
+const disk=u=>path.join(out,u.slice(1)+(u.endsWith('/')?'index.html':''));
+const put=(u,s)=>{const f=disk(u);fs.mkdirSync(path.dirname(f),{recursive:true});fs.writeFileSync(f,s);before.set(u,s);};
+try{
+ for(const l of n.L){
+  for(let i=0;i<n.slugs.length;i++){const s=n.slugs[i],renderer=a.slugs.includes(s)?a:b,j=renderer.slugs.indexOf(s);let html=renderer.page(l,j);html=html.replace('</main>','<form action="/unchanged" data-price="100"><input name="recipient" value="unchanged"></form></main>');put(n.route(l,s),html);}
+  // Homepage is a fixture using the real existing promotion renderer, not a live snapshot.
+  const h='<!DOCTYPE html><html lang="'+n.LANG[l]+'"><head><title>Fixture</title></head><body><!--zion-network-home:start--><section><h2>Existing promotion</h2></section><!--zion-network-home:end--><form action="/keep" data-price="100"><input name="recipient" value="unchanged"></form><script>const unchanged=1;</script></body></html>';
+  put(n.home(l),w.transform(h,l));
+  a.checkBrief(l,a.briefJS(l));checks++;b.testRuntime(l,0);checks++;b.testRuntime(l,1);checks++;
  }
- rejects(()=>N.transform(safeFixture('en',0),'xx',0),'Unknown locale');rejects(()=>N.transform(safeFixture('en',0),'en',99),'Unknown resource');
- const tmp=fs.mkdtempSync(path.join(os.tmpdir(),'productivity-nav-'));
- try{
-  for(const l of Object.keys(N.C))for(let i=0;i<N.S.length;i++){const f=path.join(tmp,N.route(l,i).slice(1),'index.html');fs.mkdirSync(path.dirname(f),{recursive:true});fs.writeFileSync(f,safeFixture(l,i));}
-  const first=path.join(tmp,'agent-brief/index.html'),last=path.join(tmp,'de/ai-incident-response/index.html'),original=fs.readFileSync(first,'utf8');
-  fs.writeFileSync(last,'invalid');rejects(()=>N.render(tmp),'All inputs checked before writes');eq(fs.readFileSync(first,'utf8'),original,'No partial writes on validation failure');ok(!fs.existsSync(path.join(tmp,'apps/productivity-navigation-release.json')),'No success manifest on validation failure');
-  fs.writeFileSync(last,safeFixture('de',5));const plan=N.plan(tmp);fs.writeFileSync(last,safeFixture('de',5)+' ');rejects(()=>N.apply(plan),'Stale input rejection');eq(fs.readFileSync(first,'utf8'),original,'No writes on stale input');
- }finally{fs.rmSync(tmp,{recursive:true,force:true});}
- console.log('PASS productivity navigation: '+checks+' assertions; synthetic contracts'+(out?' and 30 rendered sample editions':'')+'. Not a full build or browser certification.');return checks;
-}
-module.exports={verify};if(require.main===module)verify(process.argv[2]);
+ const manifest=n.run(out);eq(manifest.pages.length,30);eq(manifest.homes.length,5);eq(manifest.fullNetworkComplete,false);
+ for(const l of n.L){for(let i=0;i<n.slugs.length;i++){
+  const u=n.route(l,n.slugs[i]),s=fs.readFileSync(disk(u),'utf8'),old=before.get(u);
+  eq(s.replace(owned,''),old,'All original resource bytes preserved');eq(head(s),head(old),'Metadata unchanged');eq(protectedBytes(s),protectedBytes(old),'Form/runtime bytes unchanged');eq(n.transformResource(s,l,i),s);
+  eq((s.match(/data-productivity-navigation=/g)||[]).length,1);for(const j of n.related[i])ok(s.includes('href="'+n.route(l,n.slugs[j])+'"'));
+  ok(s.includes('href="/zion-app-network/CATALOG-PRODUCTIVITY-REVIEW.html#'+l+'"'));ok(s.includes('aria-labelledby="productivity-related-heading"'));ok(s.includes(':focus-visible'));ok(s.includes(n.C[l].privacy));
+ }
+ const u=n.home(l),s=fs.readFileSync(disk(u),'utf8'),old=before.get(u);eq(s.replace(homeOwned,''),old.replace(homeOwned,''));eq(protectedBytes(s),protectedBytes(old));eq(n.transformHome(s,l),s);eq((s.match(/data-productivity-workflow=/g)||[]).length,1);eq((s.match(/<!--zion-network-home:start-->/g)||[]).length,1);for(const slug of n.slugs)ok(s.includes('href="'+n.route(l,slug)+'"'));
+ }
+ const first=fs.readFileSync(disk(n.route('en','agent-brief')),'utf8');
+ fail(()=>n.transformResource(first.replace('lang="en"','lang="fr"'),'en',0));
+ fail(()=>n.transformResource(first.replace('rel="canonical"','rel="not-canonical"'),'en',0));
+ fail(()=>n.transformResource(first.replace('hreflang="x-default"','hreflang="invalid"'),'en',0));
+ fail(()=>n.transformResource(first.replace('</head>','<meta http-equiv="refresh" content="0;url=/"></head>'),'en',0));
+ fail(()=>n.transformResource(first.replace('</main>',''),'en',0));
+ fail(()=>n.transformResource(first.replace('</main>','<!--productivity-related:start--></main>'),'en',0));
+ const hs=before.get(n.home('en'));
+ fail(()=>n.transformHome(hs.replace(homeOwned,''),'en'));
+ fail(()=>n.transformHome(hs+hs.match(homeOwned)[0],'en'));
+ fail(()=>n.transformHome(hs.replace('<!--productivity-workflow-link:end-->','<form></form><!--productivity-workflow-link:end-->'),'en'));
+ const snapshot=fs.readFileSync(disk(n.route('en','agent-brief')),'utf8');
+ // A late missing source must reject the entire preflight before any file is modified.
+ fs.unlinkSync(disk(n.route('de','admissions-essay-reviewer')));fail(()=>n.run(out));eq(fs.readFileSync(disk(n.route('en','agent-brief')),'utf8'),snapshot);
+ console.log('PASS '+checks+' assertions, 30 actual-renderer resource editions, five real-promotion fixtures, 15 existing locale runtime checks, negative controls and no-write-on-preflight-failure. NOT full-site build, live/browser, mobile or native-speaker certification.');
+}finally{fs.rmSync(out,{recursive:true,force:true});}

@@ -1,55 +1,54 @@
 'use strict';
-// Additive navigation only: retain translated bodies, metadata and app behavior.
-const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
+// Artifact-only, final-pass navigation. No network requests or runtime changes.
+const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict'),crypto=require('node:crypto');
+const {L,LANG,route,home}=require('./render-legacy-three-locales.cjs');
 const RELEASE='productivity-navigation-2026-10-13-v1';
-const S=['agent-brief','admissions-essay-reviewer','ai-access-reviewer','ai-email-drafter','ai-meeting-notes-copilot','ai-incident-response'];
-const RELATED=[[3,4],[0],[5,0],[0,4],[0,5],[2,4]];
+const slugs=['agent-brief','ai-email-drafter','ai-meeting-notes-copilot','ai-access-reviewer','ai-incident-response','admissions-essay-reviewer'];
+const related=[[1,2],[0,2],[0,4],[4,0],[3,2],[0]];
 const C={
- en:{lang:'en',heading:'Related resources',catalog:'Back to the catalog',home:'Back to the homepage',note:'Review each resource’s capabilities before continuing. These links are navigation only: they do not connect apps, transfer data or start autonomous work.',names:['Agent Brief','Admissions Essay Reviewer','AI Access Reviewer','AI Email Drafter','AI Meeting Notes Copilot','Incident Response']},
- pt:{lang:'pt-BR',heading:'Recursos relacionados',catalog:'Voltar ao catálogo',home:'Voltar à página inicial',note:'Confira as capacidades de cada recurso antes de continuar. Estes links são apenas navegação: não conectam apps, transferem dados nem iniciam trabalho autônomo.',names:['Briefing de agente','Revisão de redações de admissão','Revisão de acessos','Redator de e-mails','Copiloto de atas','Resposta a incidentes']},
- es:{lang:'es',heading:'Recursos relacionados',catalog:'Volver al catálogo',home:'Volver al inicio',note:'Compruebe las capacidades de cada recurso antes de continuar. Estos enlaces solo sirven para navegar: no conectan aplicaciones, transfieren datos ni inician trabajo autónomo.',names:['Brief de agente','Revisión de ensayos de admisión','Revisión de accesos','Redactor de correos','Copiloto de notas','Respuesta a incidentes']},
- fr:{lang:'fr',heading:'Ressources associées',catalog:'Retour au catalogue',home:'Retour à l’accueil',note:'Vérifiez les capacités de chaque ressource avant de continuer. Ces liens servent uniquement à la navigation : ils ne connectent pas les applications, ne transfèrent pas de données et ne lancent pas de travail autonome.',names:['Brief d’agent','Relecture de dissertations d’admission','Revue des accès','Rédacteur de courriels','Copilote de notes','Réponse aux incidents']},
- de:{lang:'de',heading:'Verwandte Ressourcen',catalog:'Zurück zum Katalog',home:'Zurück zur Startseite',note:'Prüfen Sie vor dem Fortfahren die Funktionen jeder Ressource. Diese Links dienen nur der Navigation: Sie verbinden keine Apps, übertragen keine Daten und starten keine autonome Arbeit.',names:['Agentenbriefing','Prüfung von Bewerbungsaufsätzen','Zugriffsprüfung','E-Mail-Entwürfe','Besprechungsnotizen','Reaktion auf Vorfälle']}
+ en:{related:'Related resources',catalog:'Back to the catalog',home:'Back to the homepage',guide:'Verification guide',manual:'These links are a manual workflow, not an automatic integration. Review each resource’s capabilities before using fictional or sanitized inputs.',privacy:'Do not paste credentials, personal records or confidential client material without authorization.',cta:'Choose a practical productivity or review resource',names:['Agent Brief','Email draft','Meeting recap','Access review','Incident response planning','Admissions essay review'],limits:['Local six-field composer; no autonomous agent execution.','Four browser templates; no model inference or email sending.','Local keyword rules; no audio transcription or semantic AI.','Human-approved planning guide; no account connection or permission revocation.','Human-owned planning guide; no detection, monitoring or containment.','Manual-review rubric; no automated essay processing or admission guarantee.']},
+ pt:{related:'Recursos relacionados',catalog:'Voltar ao catálogo',home:'Voltar à página inicial',guide:'Guia de verificação',manual:'Os links compõem um fluxo manual, não uma integração automática. Confira as capacidades de cada recurso antes de usar dados fictícios ou anonimizados.',privacy:'Não insira credenciais, registros pessoais ou material confidencial de clientes sem autorização.',cta:'Escolha um recurso prático de produtividade ou revisão',names:['Briefing de agente','Rascunho de e-mail','Resumo de reunião','Revisão de acessos','Planejamento de resposta a incidentes','Revisão de redações de admissão'],limits:['Composição local com seis campos; não executa agentes autônomos.','Quatro modelos no navegador; sem inferência de modelos ou envio de e-mail.','Regras locais de palavras-chave; sem transcrição de áudio ou IA semântica.','Guia com aprovação humana; não conecta contas nem revoga permissões.','Guia sob responsabilidade humana; sem detecção, monitoramento ou contenção.','Rubrica de revisão manual; sem processamento automático ou garantia de admissão.']},
+ es:{related:'Recursos relacionados',catalog:'Volver al catálogo',home:'Volver al inicio',guide:'Guía de verificación',manual:'Estos enlaces forman un flujo manual, no una integración automática. Compruebe las capacidades de cada recurso antes de usar datos ficticios o anonimizados.',privacy:'No introduzca credenciales, registros personales ni material confidencial de clientes sin autorización.',cta:'Elija un recurso práctico de productividad o revisión',names:['Brief de agente','Borrador de correo','Resumen de reunión','Revisión de accesos','Plan de respuesta a incidentes','Revisión de ensayos de admisión'],limits:['Composición local con seis campos; no ejecuta agentes autónomos.','Cuatro plantillas del navegador; sin inferencia de modelos ni envío de correos.','Reglas locales de palabras clave; sin transcripción de audio ni IA semántica.','Guía con aprobación humana; no conecta cuentas ni revoca permisos.','Guía bajo responsabilidad humana; sin detección, supervisión ni contención.','Rúbrica de revisión manual; sin procesamiento automático ni garantía de admisión.']},
+ fr:{related:'Ressources associées',catalog:'Retour au catalogue',home:'Retour à l’accueil',guide:'Guide de vérification',manual:'Ces liens constituent un parcours manuel, pas une intégration automatique. Vérifiez les capacités de chaque ressource avec des données fictives ou anonymisées.',privacy:'Ne saisissez pas d’identifiants, de dossiers personnels ou de documents clients confidentiels sans autorisation.',cta:'Choisissez une ressource pratique de productivité ou de révision',names:['Brief d’agent','Brouillon de courriel','Synthèse de réunion','Revue des accès','Plan de réponse aux incidents','Relecture de dossiers d’admission'],limits:['Composition locale à six champs ; aucune exécution d’agent autonome.','Quatre modèles dans le navigateur ; aucune inférence ni expédition de courriel.','Règles locales de mots-clés ; ni transcription audio ni IA sémantique.','Guide avec approbation humaine ; aucune connexion de compte ni révocation.','Guide sous responsabilité humaine ; aucune détection, surveillance ou maîtrise d’incident.','Grille de relecture manuelle ; aucun traitement automatique ni garantie d’admission.']},
+ de:{related:'Verwandte Ressourcen',catalog:'Zurück zum Katalog',home:'Zurück zur Startseite',guide:'Prüfleitfaden',manual:'Diese Links bilden einen manuellen Ablauf, keine automatische Integration. Prüfen Sie die Funktionen mit erfundenen oder anonymisierten Angaben.',privacy:'Geben Sie ohne Genehmigung keine Zugangsdaten, personenbezogenen Unterlagen oder vertraulichen Kundeninformationen ein.',cta:'Wählen Sie eine praktische Ressource für Produktivität oder Prüfung',names:['Agentenbriefing','E-Mail-Entwurf','Besprechungsnotizen','Zugriffsprüfung','Planung der Incident Response','Prüfung von Zulassungsessays'],limits:['Lokale Textzusammenstellung mit sechs Feldern; keine Ausführung autonomer Agenten.','Vier Vorlagen im Browser; keine Modellinferenz und kein E-Mail-Versand.','Lokale Schlüsselwortregeln; keine Audiotranskription oder semantische KI.','Leitfaden mit menschlicher Freigabe; keine Kontoverbindung oder Berechtigungsentziehung.','Leitfaden unter menschlicher Verantwortung; keine Erkennung, Überwachung oder Eindämmung.','Raster zur manuellen Prüfung; keine automatische Verarbeitung oder Zulassungsgarantie.']}
 };
-const START='<!--productivity-navigation:start-->',END='<!--productivity-navigation:end-->';
-const OWN=/<!--productivity-navigation:start-->[\s\S]*?<!--productivity-navigation:end-->/g;
-const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const route=(l,i)=>'/'+(l==='en'?'':l+'/')+S[i]+'/';
-const home=l=>l==='pt'?'/':'/'+l+'/';
+const css='.productivity-related{margin-block:2rem;padding:1rem;border:1px solid #64748b;border-radius:.75rem;overflow-wrap:anywhere}.productivity-related ul{padding-inline-start:1.25rem}.productivity-related a{display:inline-block;min-height:44px;align-content:center;text-decoration:underline}.productivity-related a:focus-visible{outline:3px solid #075985;outline-offset:3px}.productivity-related li{margin-block:.5rem}.productivity-related-home ul{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,16rem),1fr));gap:.75rem}.productivity-related-home li{min-width:0}';
+const START='<!--productivity-related:start-->',END='<!--productivity-related:end-->';
+const re=/<!--productivity-related:start-->[\s\S]*?<!--productivity-related:end-->/g;
+const HS='<!--productivity-workflow-link:start-->',HE='<!--productivity-workflow-link:end-->';
+const hr=/<!--productivity-workflow-link:start-->[\s\S]*?<!--productivity-workflow-link:end-->/g;
+const esc=s=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;');
+const hash=s=>crypto.createHash('sha256').update(s).digest('hex');
+const count=(s,re)=>(s.match(re)||[]).length;
+const prefix=l=>l==='en'?'/':'/'+l+'/';
 const catalog=l=>'/zion-app-network/CATALOG-PRODUCTIVITY-REVIEW.html#'+l;
-const protectedParts=h=>h.match(/<(head|form|script)\b[\s\S]*?<\/\1\s*>/gi)||[];
-function block(l,i){const c=C[l];return START+'<nav class="productivity-navigation" data-productivity-navigation="'+RELEASE+'" lang="'+c.lang+'" aria-labelledby="productivity-related-heading"><style>.productivity-navigation{margin:24px 0;padding:16px;border:1px solid #64748b;border-radius:10px;overflow-wrap:anywhere}.productivity-navigation ul{display:flex;flex-wrap:wrap;gap:12px 24px;padding-left:24px}.productivity-navigation a{color:inherit;text-decoration:underline}.productivity-navigation a:focus-visible{outline:3px solid #0284c7;outline-offset:4px}</style><h2 id="productivity-related-heading">'+esc(c.heading)+'</h2><p>'+esc(c.note)+'</p><ul>'+RELATED[i].map(j=>'<li><a href="'+route(l,j)+'">'+esc(c.names[j])+'</a></li>').join('')+'</ul><p><a href="'+catalog(l)+'">'+esc(c.catalog)+'</a> · <a href="'+home(l)+'">'+esc(c.home)+'</a></p></nav>'+END;}
-function transform(before,l,i){
- assert(C[l],'Unsupported locale');assert(Number.isInteger(i)&&S[i],'Unsupported resource');
- assert.equal((before.match(/<!--productivity-navigation:start-->/g)||[]).length,(before.match(OWN)||[]).length,'Malformed owned block');
- assert.equal((before.match(/<!--productivity-navigation:end-->/g)||[]).length,(before.match(OWN)||[]).length,'Malformed owned block');
- assert((before.match(OWN)||[]).length<=1,'Duplicate owned blocks');
- assert.equal((before.match(/<html\b[^>]*\blang=["']([^"']+)["']/i)||[])[1],C[l].lang,'Wrong document language');
- const canonical=[...before.matchAll(/<link\b[^>]*>/gi)].filter(m=>/\brel=["']canonical["']/i.test(m[0]));
- assert.equal(canonical.length,1,'One canonical required');
- assert.equal((canonical[0][0].match(/\bhref=["']([^"']+)["']/i)||[])[1],'https://ziontechgroup.com'+route(l,i),'Wrong canonical route');
- const base=before.replace(OWN,'');assert(!base.includes('id="productivity-related-heading"'),'Heading ID collision');
- assert.equal((base.match(/<main\b/gi)||[]).length,1,'One main required');assert.equal((base.match(/<\/main\s*>/gi)||[]).length,1,'One main close required');
- const after=base.replace(/<\/main\s*>/i,block(l,i)+'$&');
- assert.equal(after.replace(OWN,''),base,'Only owned insertion may change');
- assert.deepEqual(protectedParts(after),protectedParts(before),'Head/forms/scripts changed');
- return after;
+const link=(u,s)=>'<a href="'+esc(u)+'">'+esc(s)+'</a>';
+function markerCheck(s,start,end){assert.equal(count(s,new RegExp(start,'g')),count(s,new RegExp(end,'g')),'Unpaired owned markers');assert(count(s,new RegExp(start,'g'))<=1,'Duplicate owned markers');}
+function validatePage(s,l,i){
+ assert(!/http-equiv\s*=\s*["']refresh/i.test(s),'Redirect excluded');
+ assert(s.includes('<html lang="'+LANG[l]+'"'),'Expected declared language');
+ assert(s.includes('<link rel="canonical" href="https://ziontechgroup.com'+route(l,slugs[i])+'">'),'Expected self canonical');
+ assert.equal(count(s,/rel="alternate"/g),6,'Six alternates required');
+ for(const k of L)assert(s.includes('hreflang="'+LANG[k]+'" href="https://ziontechgroup.com'+route(k,slugs[i])+'"'),'Expected locale alternate');
+ assert(s.includes('hreflang="x-default" href="https://ziontechgroup.com'+route('en',slugs[i])+'"'),'Expected default alternate');
+ assert.equal(count(s,/<\/main>/gi),1,'One main closing anchor');
 }
-function plan(out='out'){
- const changes=[];
- for(const l of Object.keys(C))for(let i=0;i<S.length;i++){
-  const file=path.join(out,route(l,i).slice(1),'index.html'),before=fs.readFileSync(file,'utf8'),after=transform(before,l,i);
-  assert.equal(transform(after,l,i),after,'Byte idempotence');
-  for(const j of RELATED[i])assert(fs.existsSync(path.join(out,route(l,j).slice(1),'index.html')),'Missing related destination');
-  changes.push({file,before,after,locale:C[l].lang,url:route(l,i),catalog:catalog(l),home:home(l)});
- }
- return changes;
+function resourceBlock(l,i){const c=C[l];return START+'<aside class="productivity-related" data-productivity-navigation="'+RELEASE+'" lang="'+LANG[l]+'"><style>'+css+'</style><h2 id="productivity-related-heading">'+esc(c.related)+'</h2><p>'+esc(c.limits[i])+'</p><p>'+esc(c.manual)+'</p><nav aria-labelledby="productivity-related-heading"><ul>'+related[i].map(j=>'<li>'+link(route(l,slugs[j]),c.names[j])+' — '+esc(c.limits[j])+'</li>').join('')+'</ul><p>'+link(catalog(l),c.catalog)+' · '+link(home(l),c.home)+' · '+link(prefix(l)+'apps/app-verification-guide.html',c.guide)+'</p></nav><p>'+esc(c.privacy)+'</p></aside>'+END;}
+function transformResource(before,l,i){validatePage(before,l,i);markerCheck(before,START,END);const base=before.replace(re,'');const block=resourceBlock(l,i);assert(!/<(?:form|script|input|button)\b/i.test(block),'Navigation only');const after=base.replace(/<\/main>/i,block+'</main>');assert.equal(after.replace(re,''),base,'Only owned addition');return after;}
+function transformHome(before,l){
+ const c=C[l];assert(before.includes('<html lang="'+LANG[l]+'"'),'Homepage language');markerCheck(before,HS,HE);assert.equal(count(before,/<!--zion-network-home:start-->/g),1,'One existing network promotion');
+ const blocks=before.match(hr)||[];assert.equal(blocks.length,1,'One existing workflow promotion required');
+ const old=blocks[0];assert(!/<(?:form|script)\b/i.test(old),'No active content in owned promotion');
+ const network=(before.match(/<!--zion-network-home:start-->[\s\S]*?<!--zion-network-home:end-->/g)||[]);assert.equal(network.length,1);assert(network[0].includes(old),'Workflow promotion inside network section');
+ const fragment=HS+'<div class="productivity-related productivity-related-home" data-productivity-workflow="'+RELEASE+'" lang="'+LANG[l]+'"><style>'+css+'</style><p><strong>'+esc(c.cta)+'</strong></p><p>'+esc(c.manual)+'</p><ul>'+slugs.map((s,i)=>'<li>'+link(route(l,s),c.names[i])+'<br>'+esc(c.limits[i])+'</li>').join('')+'</ul><p>'+link(catalog(l),c.catalog)+' · '+link('/zion-app-network/CATALOG-PRODUCTIVITY-REVIEW.html#workflow-'+l,c.cta)+'</p></div>'+HE;
+ const after=before.replace(hr,()=>fragment);assert.equal(after.replace(hr,''),before.replace(hr,''),'Only existing owned promotion changes');return after;
 }
-function apply(changes){for(const p of changes)assert.equal(fs.readFileSync(p.file,'utf8'),p.before,'Input changed after validation');for(const p of changes)fs.writeFileSync(p.file,p.after);}
-function render(out='out'){
- const changes=plan(out);apply(changes);
- const report={release:RELEASE,pages:changes.map(({locale,url,catalog,home})=>({locale,url,catalog,home})),scope:'Thirty related-resource blocks only; no runtime, form or metadata changes. Not full-network or native-editorial certification.',fullNetworkComplete:false};
- fs.mkdirSync(path.join(out,'apps'),{recursive:true});fs.writeFileSync(path.join(out,'apps/productivity-navigation-release.json'),JSON.stringify(report,null,2)+'\n');return report;
+function disk(out,u){assert(u.startsWith('/')&&!u.includes('..'),'Safe route');return path.join(out,u.slice(1)+(u.endsWith('/')?'index.html':''));}
+function plan(out){const changes=[],pages=[],homes=[];
+ for(const l of L){for(let i=0;i<slugs.length;i++){const u=route(l,slugs[i]),file=disk(out,u),before=fs.readFileSync(file,'utf8'),after=transformResource(before,l,i);assert.equal(transformResource(after,l,i),after,'Resource byte idempotence');changes.push({file,after});pages.push({locale:LANG[l],path:u,related:related[i].map(j=>route(l,slugs[j])),catalog:catalog(l),sha256:hash(after)});}
+ const u=home(l),file=disk(out,u),before=fs.readFileSync(file,'utf8'),after=transformHome(before,l);assert.equal(transformHome(after,l),after,'Homepage byte idempotence');changes.push({file,after});homes.push({locale:LANG[l],path:u,sha256:hash(after)});}
+ return {changes,manifest:{release:RELEASE,pages,homes,scope:'30 resource navigation additions; five replacements within existing homepage workflow promotions. Manual navigation only; bodies, head metadata and runtimes preserved.',fullNetworkComplete:false,nativeSpeakerCertified:false,browserVerified:false}};
 }
-module.exports={RELEASE,S,RELATED,C,route,home,catalog,block,transform,protectedParts,plan,apply,render};
-if(require.main===module){render(process.argv[2]||'out');console.log('PASS '+RELEASE+': 30 validated, byte-idempotent navigation blocks.');}
+function run(out='out'){const {changes,manifest}=plan(out);for(const {file,after} of changes)fs.writeFileSync(file,after);const file=disk(out,'/apps/productivity-navigation-release.json');fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,JSON.stringify(manifest,null,2)+'\n');console.log('PASS '+RELEASE+': 30 resource editions and five existing homepage promotions; preflight complete, exact byte idempotence.');return manifest;}
+module.exports={run,plan,transformResource,transformHome,validatePage,C,L,LANG,slugs,related,route,home,resourceBlock,RELEASE};
+if(require.main===module)run(process.argv[2]||'out');
