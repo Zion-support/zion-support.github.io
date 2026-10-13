@@ -1,0 +1,31 @@
+name: Discovery Spotlight Review Preview
+on:
+  pull_request:
+    paths:
+      - 'public/**/spotlight-2026-10-06b.html'
+      - 'public/apps/spotlight-2026-10-06b.html'
+      - 'scripts/preview-discovery-spotlight.cjs'
+      - '.github/workflows/discovery-spotlight-preview.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Generate isolated review content without deployment
+        run: |
+          cp -a public spotlight-preview
+          node scripts/preview-discovery-spotlight.cjs spotlight-preview
+          node scripts/preview-discovery-spotlight.cjs spotlight-preview
+      - uses: actions/upload-artifact@v4
+        with:
+          name: discovery-spotlight-review
+          path: spotlight-preview
+          retention-days: 7
+          if-no-files-found: error
