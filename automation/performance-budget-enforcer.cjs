@@ -54,7 +54,7 @@ function parseReport(reportPath) {
   const audits = report.audits;
   const getMetric = (id) => {
     const audit = audits[id];
-    return audit ? audit.numericValue / 1000 : null;
+    return audit ? (id === "cumulative-layout-shift" ? audit.numericValue : audit.numericValue / 1000) : null;
   };
   return {
     lcp: getMetric("largest-contentful-paint"),
@@ -91,9 +91,10 @@ function compare(metrics, baseline) {
   const drops = {};
   for (const key of ["lcp", "fid", "cls", "fcp", "ttfb", "overall"]) {
     const cur = key === "overall" ? metrics.performance : metrics[key];
-    const base = (baseline.metrics && baseline.metrics[key]) || null;
+    const baseKey = key === "overall" ? "performance" : key;
+    const base = baseline.metrics?.[baseKey] ?? baseline.metrics?.[key] ?? null;
     if (cur == null || base == null || base === 0) continue;
-    const relativeDrop = (base - cur) / base;
+    const relativeDrop = key === "overall" ? (base - cur) / base : (cur - base) / base;
     if (relativeDrop > REGRESSION_THRESHOLD) {
       drops[key] = { base, cur, dropPct: relativeDrop * 100 };
     }
@@ -205,3 +206,4 @@ main().catch((err) => {
   console.error("❌ Unexpected error:", err);
   process.exit(1);
 });
+
