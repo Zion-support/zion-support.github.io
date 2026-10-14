@@ -5,6 +5,8 @@
 set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT"
+# Fail before copying known private operational artifacts into a deploy tree.
+python3 scripts/assert-no-private-ops.py public
 rm -rf out
 mkdir -p out
 
