@@ -68,6 +68,12 @@ async function check(route) {
   ];
   fs.writeFileSync(mdPath, lines.join('\n') + '\n');
   console.log(`release guardian: ${report.healthyCount}/${report.checkedCount} healthy; severity=${severity}`);
+  // A critical health report must not mark this monitoring job green.
+  // Keep the JSON/Markdown artifacts available for upload and incident triage.
+  if (severity === 'critical') {
+    console.error('::error::Release guardian found critical unhealthy routes; review the report artifact.');
+    process.exitCode = 1;
+  }
 })().catch(error => {
   console.error(error);
   process.exit(2);
