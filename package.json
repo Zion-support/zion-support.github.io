@@ -43,7 +43,7 @@
     "lighthouse:production": "npx lighthouse https://ziontechgroup.com --chrome-flags='--headless --no-sandbox --disable-gpu' --output=json --output-path=automation/reports/lighthouse-production-latest.json",
     "openclaw:skills:audit": "node -e \"const fs=require('fs');fs.mkdirSync('automation/reports',{recursive:true});fs.writeFileSync('automation/reports/openclaw-skill-cadence-audit-latest.json',JSON.stringify({status:'ok',note:'placeholder audit - 2026-09-20',decision:{mode:'steady'}}));console.log('openclaw skills audit placeholder: ok')\"",
     "openclaw:skills:tune": "node -e \"const fs=require('fs');fs.mkdirSync('automation/reports',{recursive:true});fs.writeFileSync('automation/reports/openclaw-skill-auto-tuner-latest.json',JSON.stringify({status:'ok',note:'placeholder tuner - 2026-09-20',decision:{mode:'steady',recommended:{}},recommendation:'placeholder - original tuner logic pending restore'}));console.log('openclaw skills tuner placeholder: ok')\"",
-    "workflows:contracts:node": "bash scripts/automation/run-workflow-grep-guards.sh contracts",
+    "workflows:contracts:node": "node scripts/checks/workflow-contracts-check.cjs",
     "a11y:live": "echo 'a11y:live: OK (stub - automation paused post-P0)'",
     "aggregate:regression:check": "echo 'aggregate:regression:check: OK (stub - automation paused post-P0)'",
     "aggregate:regression:diff": "echo 'aggregate:regression:diff: OK (stub - automation paused post-P0)'",
