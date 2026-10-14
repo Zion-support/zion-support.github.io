@@ -38,20 +38,8 @@ jobs:
       - name: Run growth signal monitor
         run: npm run autonomy:growth-signal
 
-      - name: Detect growth signal artifacts
-        id: growth_artifacts
-        if: always()
-        shell: bash
-        run: |
-          if [ -f automation/reports/autonomous-growth-signal-latest.json ] && [ -f automation/reports/autonomous-growth-signal-latest.md ]; then
-            echo "present=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "present=false" >> "$GITHUB_OUTPUT"
-            echo "Growth signal implementation is paused; no report artifacts were produced."
-          fi
-
       - name: Upload growth signal artifacts
-        if: steps.growth_artifacts.outputs.present == 'true'
+        if: always()
         uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
         with:
           name: autonomous-growth-signal-${{ github.run_id }}

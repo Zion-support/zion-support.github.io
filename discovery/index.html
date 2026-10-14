@@ -1,251 +1,74 @@
-<!DOCTYPE html>
-<!-- Legacy fallback, not the current production Discovery form.
-     Simple Static Deploy assembles public/ into out/; public/discovery/index.html
-     and public/assets/js/discovery-delivery.js define canonical form routing.
-     Inspect final out/ and the live page before changing recipients or claims. -->
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Free AI & Automation Discovery — Zion Tech Group</title>
-<meta name="description" content="Free online Discovery: answer a 5-minute questionnaire and instantly receive your automation & AI readiness report — process map, a rough estimate of hours leaked (from your own answers) and recommended free apps from the Zion network. Always online, always free.">
-<link rel="canonical" href="https://ziontechgroup.com/discovery/">
-<link rel="alternate" hreflang="en" href="https://ziontechgroup.com/discovery/">
-<link rel="alternate" hreflang="pt-BR" href="https://ziontechgroup.com/pt/discovery/">
-<link rel="alternate" hreflang="es" href="https://ziontechgroup.com/es/discovery/">
-<link rel="alternate" hreflang="fr" href="https://ziontechgroup.com/fr/discovery/">
-<link rel="alternate" hreflang="de" href="https://ziontechgroup.com/de/discovery/">
-<link rel="alternate" hreflang="x-default" href="https://ziontechgroup.com/discovery/">
-<meta name="robots" content="index,follow">
-<meta property="og:title" content="Free AI & Automation Discovery — Zion Tech Group">
-<meta property="og:description" content="Answer 8 questions, get your automation readiness report instantly — free, online, no credit card. Results go to you and our commercial team.">
-<meta property="og:url" content="https://ziontechgroup.com/discovery/">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"Free AI & Automation Discovery","description":"Free online discovery questionnaire: map 1 process, get a rough hours-leaked estimate and receive an executive report instantly. Always online and free.","url":"https://ziontechgroup.com/discovery/","areaServed":"Worldwide","provider":{"@type":"Organization","name":"Zion Tech Group","url":"https://ziontechgroup.com","email":"commercial@ziontechgroup.com","telephone":"+1 302 464 0950"},"offers":{"@type":"Offer","name":"Free Discovery","price":"0","priceCurrency":"USD","availability":"https://schema.org/InStock","url":"https://ziontechgroup.com/discovery/"}}</script>
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Free AI Discovery Questionnaire — Zion Tech Group</title>
+<meta name="description" content="Free 2-minute AI discovery questionnaire. Get instant personalized recommendations from 770+ free Zion AI apps, emailed to you immediately.">
 <style>
-body{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;max-width:960px;margin:0 auto;padding:24px;color:#1a1a2e;line-height:1.55}
-h1{font-size:1.9rem;margin-bottom:4px}
-.lead{font-size:1.1rem;color:#444}
-.badge{display:inline-block;background:#0a7d4f;color:#fff;border-radius:999px;padding:4px 14px;font-weight:600;font-size:.9rem}
-.chip{display:inline-block;background:#eef2ff;border:1px solid #c7d2fe;border-radius:999px;padding:3px 12px;margin:3px;font-size:.85rem}
-.btn{display:inline-block;background:#1a1a2e;color:#fff;border-radius:8px;padding:10px 18px;text-decoration:none;font-weight:600;margin:6px 6px 6px 0;border:0;cursor:pointer;font-size:1rem}
-.btn.alt{background:#eef2ff;color:#1a1a2e;border:1px solid #c7d2fe}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
-.card{border:1px solid #e5e7eb;border-radius:12px;padding:16px;background:#fff}
-.card h3{margin-top:0}
-label{display:block;font-weight:600;margin:14px 0 4px}
-input,select,textarea{width:100%;padding:9px;border:1px solid #cbd5e1;border-radius:8px;font-size:1rem;box-sizing:border-box}
-nav{margin:12px 0 20px;font-size:.95rem}
-nav a{margin-right:12px}
-#result{display:none;border:2px solid #0a7d4f;border-radius:12px;padding:20px;margin-top:24px;background:#f0fdf4}
-.scorebar{height:14px;background:#e5e7eb;border-radius:7px;overflow:hidden}
-.scorebar>div{height:100%;background:#0a7d4f;transition:width .6s}
-.see-also{margin-top:28px;font-size:.95rem;color:#444}
-footer{margin-top:36px;border-top:1px solid #e5e7eb;padding-top:14px;font-size:.85rem;color:#666}
-</style>
-</head>
+body{font-family:system-ui,Arial;max-width:820px;margin:0 auto;padding:2rem;line-height:1.6;color:#0f172a;background:#f8fafc}
+h1{color:#1d4ed8}form{background:#fff;border:1px solid #e2e8f0;border-radius:14px;padding:1.5rem}label{font-weight:600;display:block;margin-top:1rem}select,input[type=text],input[type=email]{width:100%;padding:.6rem;border:1px solid #cbd5e1;border-radius:8px;margin-top:.25rem}button{margin-top:1.5rem;background:#1d4ed8;color:#fff;border:0;padding:.8rem 1.6rem;border-radius:10px;font-size:1rem;font-weight:700;cursor:pointer}#result{display:none;background:#ecfdf5;border:1px solid #a7f3d0;border-radius:14px;padding:1.5rem;margin-top:1.5rem}ul{padding-left:1.2rem}.b{color:#1d4ed8;font-weight:700}
+</style></head>
 <body>
-<nav><a href="/en/">Zion Tech Group</a> · <a href="/apps/">Apps Network</a> · <a href="/plans/">Plans</a> · <a href="/contact/">Contact</a> · <strong>EN</strong> · <a href="/pt/discovery/">PT</a> · <a href="/es/discovery/">ES</a> · <a href="/fr/discovery/">FR</a> · <a href="/de/discovery/">DE</a></nav>
-
-<span class="badge">Free · Online · No credit card</span>
-<h1>Free AI &amp; Automation Discovery</h1>
-<p class="lead">Answer 8 quick questions and receive <strong>your readiness report instantly</strong> — a process map outline, a rough hours-leaked estimate, and the exact <a href="/apps/">Zion apps</a> that fit your case. Your result appears immediately on this page, then is submitted for email delivery to <strong>you</strong> and our commercial team (<a href="mailto:commercial@ziontechgroup.com">commercial@ziontechgroup.com</a>), with Carlos copied. Copy or download it immediately; email acceptance is not a guarantee of inbox delivery.</p>
-<p>
-<span class="chip">100% free</span><span class="chip">Always online — 24/7</span><span class="chip">Instant report</span><span class="chip">5 minutes</span><span class="chip">Recommended apps included</span>
-</p>
-
-<section class="grid" style="margin:20px 0">
-<div class="card"><h3>🗺️ Process map</h3><p>Start with the process you select. Use the report to identify its owner, validate the baseline and define a stop rule before testing automation.</p></div>
-<div class="card"><h3>📈 Rough hours estimate</h3><p>An illustrative scenario based on your selected hours band, not a measured saving (assumptions: US$45/hour and 40% automatable). Refine it with your own numbers in the <a href="/roi-calc/">ROI Calculator</a>.</p></div>
-<div class="card"><h3>🧩 Matched apps</h3><p>Direct links into our <a href="/apps/">Apps Network</a> — free tools you can try before any engagement.</p></div>
-<div class="card"><h3>⚡ Instant delivery</h3><p>Your report appears instantly on-screen; the same result is submitted for simultaneous delivery to your inbox and <a href="mailto:commercial@ziontechgroup.com">commercial@ziontechgroup.com</a>. No sales call is required to see the result.</p></div>
-</section>
-
-<h2 id="questionnaire">The Discovery questionnaire</h2>
-<form id="dform">
-<p id="form-errors" role="alert" hidden></p>
-<label for="discovery-name">Your name *</label><input name="name" id="discovery-name" maxlength="120" autocomplete="name" required>
-<label for="discovery-email">Work email * <small>(your report is sent here)</small></label><input name="email" id="discovery-email" maxlength="254" autocomplete="email" type="email" required>
-<label for="discovery-company">Company</label><input name="company" id="discovery-company" maxlength="200" autocomplete="organization">
-<label for="discovery-industry">Industry</label>
-<select name="industry" id="discovery-industry"><option>Technology / SaaS</option><option>Financial services / Fintech</option><option>Healthcare</option><option>Manufacturing / Field service</option><option>Government / Education</option><option>Retail / eCommerce</option><option>Other</option></select>
-<label for="discovery-process">Which single process hurts the most today? *</label>
-<select name="process" id="discovery-process" required><option value="">Choose…</option><option>Customer support / ticket triage</option><option>Manual data entry / document processing</option><option>Reporting &amp; analytics</option><option>IT operations / incident response</option><option>Sales &amp; proposal generation</option><option>Finance ops / cost control (FinOps)</option><option>Scheduling / dispatch</option><option>Supply chain / logistics</option><option>Compliance &amp; audit evidence</option><option>Other</option></select>
-<label for="discovery-hours">Roughly how many hours per month does your team spend on it?</label>
-<select name="hours" id="discovery-hours"><option>Under 20</option><option>20–80</option><option>80–200</option><option>200+</option></select>
-<label for="discovery-systems">What systems are involved? (e.g., email, spreadsheets, ERP, CRM)</label><input name="systems" id="discovery-systems" maxlength="500">
-<label for="discovery-goal">What would "success in 90 days" look like?</label><textarea name="goal" id="discovery-goal" maxlength="1500" rows="3"></textarea>
-<label for="discovery-timeline">When do you want to start?</label>
-<select name="timeline" id="discovery-timeline"><option>Immediately</option><option>This quarter</option><option>Next quarter</option><option>Just exploring</option></select>
-<p style="margin-top:18px"><button class="btn" type="submit" id="submit-report">Get my free Discovery report →</button></p>
-<p><small>Submitting sends your answers through FormSubmit to you, Commercial and Carlos at Zion Tech Group for a written response about your results. Do not include passwords, bank details or confidential client data. Discovery is always free — the optional paid path (<a href="/plans/">Plans</a>) is optional and only after you see value.</small></p>
+<div style="background:#fff;border:1px solid #e2e8f0;border-radius:14px;padding:1.2rem;margin-bottom:1rem">
+<h2 style="margin-top:0">Why this Discovery is different</h2>
+<ul>
+<li><span class="b">Always online &amp; always free</span> — 24/7, no signup, no sales call required.</li>
+<li><span class="b">Instant results by email</span> — your personalized report is emailed to you the moment you submit, and simultaneously to <b>commercial@ziontechgroup.com</b> so a specialist can follow up the same day (optional, free).</li>
+<li><span class="b">Matched to 770+ free apps</span> — answers are mapped to the <a href="https://ziontechgroup.com/zion-app-network/">Zion AI App Network</a> suites and tools.</li>
+<li><span class="b">Actionable baseline</span> — your score feeds the <a href="https://ziontechgroup.com/ai-roi-calculator/">ROI calculator</a> and stack audit so savings are quantified.</li>
+</ul>
+<p>Explore more: <a href="https://ziontechgroup.com/apps/">All free apps</a> · <a href="https://ziontechgroup.com/apps/spotlight-2026-10-04-discovery.html">Discovery benefits spotlight</a> · <a href="https://ziontechgroup.com/apps/network.html">Network map</a> · <a href="https://ziontechgroup.com/en/plans/">Plans</a></p>
+</div>
+<h1>🧭 Free AI Discovery Questionnaire</h1>
+<p>Answer 6 quick questions and get <b>instant, personalized recommendations</b> from <a href="https://github.com/Zion-support/zion-network/blob/main/APPS_NETWORK.md">770+ free AI apps</a> by Zion Tech Group. Your results are emailed to you immediately — and to our commercial team so a specialist can help (optional, free).</p>
+<form id="q" action="https://formsubmit.co/commercial@ziontechgroup.com" method="POST">
+<input type="hidden" name="_subject" value="New AI Discovery Questionnaire — Zion Tech Group">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_captcha" value="false">
+<label>Your name <input type="text" name="name" required></label>
+<label>Your email (results sent here) <input type="email" name="email" required></label>
+<label>1. Industry
+<select name="industry" required><option value="">Choose…</option><option>Travel & Hospitality</option><option>Retail & Ecommerce</option><option>Healthcare</option><option>Financial Services</option><option>Real Estate</option><option>Education</option><option>Manufacturing & Field Services</option><option>Technology / MSP</option><option>Other</option></select></label>
+<label>2. Company size
+<select name="company_size" required><option value="">Choose…</option><option>1–10</option><option>11–50</option><option>51–200</option><option>201–1000</option><option>1000+</option></select></label>
+<label>3. Top priority
+<select name="priority" required><option value="">Choose…</option><option>Grow revenue & sales</option><option>Cut costs / FinOps</option><option>Automate operations</option><option>Customer experience & retention</option><option>Security & compliance</option><option>Sustainability & ESG</option><option>Data & analytics</option></select></label>
+<label>4. Current AI maturity
+<select name="ai_maturity" required><option value="">Choose…</option><option>Just exploring</option><option>Piloting a few tools</option><option>AI in production</option><option>Scaling AI across teams</option></select></label>
+<label>5. Biggest bottleneck
+<select name="bottleneck" required><option value="">Choose…</option><option>Manual repetitive work</option><option>Slow response to customers</option><option>Data silos / reporting</option><option>Rising cloud & IT costs</option><option>Hiring / skills gap</option></select></label>
+<label>6. Timeline
+<select name="timeline" required><option value="">Choose…</option><option>This month</option><option>This quarter</option><option>This year</option><option>Just researching</option></select></label>
+<button type="submit">Get my free recommendations →</button>
 </form>
-
-<div id="result" data-report-version="2026-10-06-safe-delivery">
-<h2 style="margin-top:0">✅ Your Discovery report</h2>
-<p id="rsent" role="status" aria-live="polite">Your report is ready on this page.</p>
-<p><strong>Indicative readiness score (self-assessment, not an audit):</strong> <span id="rscore"></span>/100</p>
-<div class="scorebar"><div id="rbar" style="width:0%"></div></div>
-<p id="rsummary" style="margin-top:12px"></p>
-<p id="report-actions"><button class="btn alt" type="button" id="copy-report">Copy report</button><button class="btn alt" type="button" id="download-report">Download .txt</button><a class="btn alt" href="/apps/discovery-report-workbench.html">Open Report Workbench</a><a class="btn alt" href="/apps/discovery-network-journey.html">Discovery → App Journey</a></p>
-<details><summary>Read or select the full report</summary><pre id="report-text" style="white-space:pre-wrap;overflow-wrap:anywhere"></pre></details>
-<p id="email-fallback"></p>
-<p><strong>Recommended free apps from our network:</strong></p>
-<ul id="rapps"></ul>
-<p><strong>Suggested next step:</strong> <span id="rnext"></span></p>
-<p><a class="btn alt" href="/apps/discovery-action-center.html">Open Discovery Action Center</a><a class="btn alt" href="/apps/">Explore the full Apps Network</a><a class="btn alt" href="/apps/discovery-operations-toolkit.html">Discovery → Operations Toolkit</a><a class="btn alt" href="/apps/discovery-result-action-matrix.html">Interpret my result</a><a class="btn alt" href="/apps/discovery-app-paths.html">Discovery → App Paths</a><a class="btn alt" href="/ai-opportunity-mapper/">AI Opportunity Mapper</a><a class="btn alt" href="/automation-pilot-planner/">Build a 30-day pilot plan</a><a class="btn alt" href="/automation-brief-builder/">Automation Brief Builder</a><a class="btn alt" href="/apps/network.html">Network map</a><a class="btn alt" href="/apps/app-network-use-case-map.html">Use‑case map</a><a class="btn alt" href="/apps/start-here.html">Start Here</a><a class="btn alt" href="/apps/discovery-decision-kit.html">Decision Kit</a><a class="btn alt" href="/plans/">See Plans</a></p>
-</div>
-
-<noscript><p>The questionnaire needs JavaScript to calculate the report. For free written Discovery, email <a href="mailto:commercial@ziontechgroup.com?cc=carlos%40ziontechgroup.com">Commercial and Carlos</a> with your process, hours band, systems and goal. No payment or meeting is required.</p></noscript>
-<h2>Why the Discovery is free and always online</h2>
-<p>Boards don't fund "AI" — they fund a process with an owner, a baseline and a stop rule. Our free Discovery gives you a written starting point for that decision, instantly. Validate ownership, effort, data access and a stop rule with your team. No gatekeeping and no mandatory sales call before you receive the result. If the map points to implementation, the optional next steps are listed in <a href="/plans/">Plans</a>; if it doesn't, you keep the report and owe nothing.</p>
-
-
-<p class="see-also">See also: <a href="/apps/october-2026-batch110.html"><b>NEW: Batch 110 — Energy &amp; Sustainability AI</b></a> · <a href="/apps/october-2026-batch99.html"><b>NEW: Batch 99 — Marketing &amp; Growth AI</b></a> · <a href="/apps/october-2026-batch98.html"><b>NEW: Batch 98 — Fintech & Insurance AI</b></a> · <a href="/apps/october-2026-batch16.html"><b>Batch 97 — Smart Cities & GovTech AI</b></a> ·  <a href="/apps/discovery-action-center.html"><b>NEW: Discovery Action Center</b></a> · <a href="/apps/">Apps Network</a> · <a href="/apps/network.html">Network Map</a> · <a href="/zion-app-network/app-network-batch77-oct04.html"><b>NEW: Batch 77 — Space Ops &amp; Infra AI</b></a> · <a href="/zion-app-network/app-network-batch78-oct04.html"><b>NEW: Batch 78 — HR &amp; Energy AI</b></a> · <a href="/zion-app-network/app-network-batch76-oct04.html">Batch 76 — Sales &amp; Revenue AI (12 apps)</a> · <a href="/apps/october-2026-batch1.html">Oct Batch 1 — Security &amp; Trust AI</a> · <a href="/apps/october-2026-batch2.html">Oct Batch 2 — Growth &amp; Intelligence AI</a> · <a href="/apps/october-2026-batch3.html">Oct Batch 3 — Customer Experience AI</a> · <a href="/apps/spotlight-2026-10-04c.html">Spotlight 77–78</a> · <a href="/apps/spotlight-2026-10-04-network.html">Network Spotlight</a> · <a href="/roi-calc/">ROI Calculator</a> · <a href="/ai-readiness-assessment/">AI Readiness Assessment</a> · <a href="/plans/">Plans</a> · <a href="/pricing/">Pricing</a> · <a href="/contact/">Contact</a></p>
-
-<section class="card" style="margin-top:24px"><h2 style="margin-top:0">Keep exploring the Zion App Network</h2><p>Your report is a starting point, not a dead end. Every recommended app connects to the broader network so you can validate ROI, governance, IT operations, security and implementation readiness before choosing any paid engagement.</p><p><a class="btn alt" href="/apps/">All free apps</a><a class="btn alt" href="/apps/network.html">Interlinked network map</a><a class="btn alt" href="/apps/content-hub.html">Guides &amp; spotlights</a><a class="btn alt" href="/">Zion homepage</a></p></section>
-<p style="text-align:center;margin:1.5rem 0">Explore: <a href="/apps/">Apps Network (free apps)</a> · <a href="/zion-app-network/">App Network hub</a> · <a href="/apps/discovery-benefits.html">Discovery Benefits</a> · <a href="/apps/spotlight-2026-10-04c.html">Latest Apps Spotlight</a></p>
-<section class="see-also">
-<h2>What's new in the network — October 2026</h2>
-<div class="grid">
-<div class="card"><h3>⚡🌱 Batch 110 — Energy &amp; Sustainability AI</h3><p>Eight new free apps: energy optimizer, utilities suite, building efficiency auditor, carbon footprint tracker, carbon accounting hub, AI carbon tracker, climate risk assessor and circular economy tracker.</p><a href="/apps/october-2026-batch110.html">Explore Batch 110 →</a></div>
-<div class="card"><h3>📈 Batch 99 — Marketing &amp; Growth AI</h3><p>Six free apps for SEO content, ad spend, subject-line testing, social listening, landing-page experiments and referral workflows.</p><a href="/apps/october-2026-batch99.html">Explore Batch 99 →</a></div>
-<div class="card"><h3>💳 Batch 98 — Fintech &amp; Insurance AI</h3><p>Fraud monitoring, claims automation, underwriting copilot, AML screening, cash flow and collections.</p><a href="/apps/october-2026-batch98.html">Explore Batch 98 →</a></div>
-<div class="card"><h3>🎁 Why Discovery stays free</h3><p>Answer 8 questions in about 5 minutes. View your report instantly on-screen; the same report is submitted for email delivery to you and Commercial. Inbox delivery is not guaranteed.</p><a href="/apps/discovery-benefits.html">See all Discovery benefits →</a></div>
-</div>
-</section>
-<footer><p>© 2026 Zion Tech Group · 364 E Main St STE 1008, Middletown, DE 19709 · <a href="mailto:commercial@ziontechgroup.com">commercial@ziontechgroup.com</a> · +1 302 464 0950 · Optional paid implementation: <a href="https://buy.stripe.com/7sY00k7JScFV99Bf044ZG06" target="_blank" rel="noopener noreferrer">Starter $2,500</a> (Discovery remains free)</p></footer>
-
+<div id="result"><h2>✅ Your recommended apps</h2><div id="recs"></div><p>A copy has been emailed to you and to <b>commercial@ziontechgroup.com</b>. Want help deploying? Just reply to the email.</p></div>
 <script>
-const APPMAP={
- "Customer support / ticket triage":[["AI Ticket Triage","/ai-ticket-triage/"],["Support Ticket Triager","/apps/spotlight-2026-09-27c.html"],["AI Powered Customer Support","/ai-powered-customer-support/"]],
- "Manual data entry / document processing":[["AI Process Mining","/ai-process-mining/"],["AI Data Warehouse","/ai-data-warehouse/"],["Data Quality Watchdog","/apps/september-2026-batch4.html"]],
- "Reporting & analytics":[["AI Predictive Analytics","/ai-predictive-analytics/"],["AI ROI Tracker","/ai-roi-tracker/"],["ROI Calculator","/roi-calc/"]],
- "IT operations / incident response":[["AI Incident Response","/ai-incident-response/"],["Ops Runbook AI","/ops-runbook-ai/"],["Site Uptime Watchdog","/site-uptime-watchdog/"]],
- "Sales & proposal generation":[["Proposal Builder AI","/proposal-builder-ai/"],["Sales Call Analyzer","/sales-call-analyzer/"],["AI Tender Scout","/ai-tender-scout/"]],
- "Finance ops / cost control (FinOps)":[["FinOps Estimator","/finops-estimator/"],["FinOps Governance Suite","/apps/finops-governance-suite.html"],["Cloud Cost Optimization","/cloud-cost-optimization/"]],
- "Scheduling / dispatch":[["AI Smart Hands Scheduler","/ai-smart-hands-scheduler/"],["Route Optimization AI","/route-optimization-ai/"],["SLA Calculator","/sla-calculator/"]],
- "Supply chain / logistics":[["Route Optimization AI","/route-optimization-ai/"],["Supplier Risk Radar","/supplier-risk-radar/"],["Demand Sensing Forecaster","/demand-sensing-forecaster/"]],
- "Compliance & audit evidence":[["Audit Readiness Copilot","/apps/september-2026-batch4.html"],["AI Compliance Auditor","/ai-compliance-auditor/"],["AI Governance Checklist","/ai-governance-checklist/"]],
- "Other":[["AI Readiness Assessment","/ai-readiness-assessment/"],["Apps Network","/apps/"],["Network Map","/apps/network.html"]]};
-const HOURVAL={"Under 20":15,"20–80":50,"80–200":140,"200+":260};
-// Free, local report generation must not depend on the email provider.
-let discoveryPending=false;
-const acceptedReports=new Set();
-function cleanAnswer(value,limit){
- return String(value||'').replace(/[\u0000-\u001f\u007f]/g,' ').trim().slice(0,limit);
-}
-function publicPageUrl(value,originOnly=false){
- try{
-  const u=new URL(value);
-  return /^https?:$/.test(u.protocol)?u.origin+(originOnly?'':u.pathname):'';
- }catch{return '';}
-}
-document.getElementById('dform').addEventListener('submit',async function(e){
- e.preventDefault();
- if(discoveryPending)return;
- const form=e.target;
- const errors=document.getElementById('form-errors');
- errors.hidden=true;
- if(!form.reportValidity())return;
- const raw=Object.fromEntries(new FormData(form).entries());
- const f={name:cleanAnswer(raw.name,120),email:String(raw.email||'').trim(),company:cleanAnswer(raw.company,200),industry:cleanAnswer(raw.industry,120),process:cleanAnswer(raw.process,120),hours:cleanAnswer(raw.hours,30),systems:cleanAnswer(raw.systems,500),goal:cleanAnswer(raw.goal,1500),timeline:cleanAnswer(raw.timeline,40)};
- if(!f.name||f.email.length>254||!/^[^\s@,;<>"\\]+@[^\s@,;<>"\\]+\.[^\s@,;<>"\\]+$/.test(f.email)||!Object.hasOwn(APPMAP,f.process)||!Object.hasOwn(HOURVAL,f.hours)){
-  errors.textContent='Please enter a name, one valid email address, a process and an hours band.';
-  errors.hidden=false;
-  return;
- }
- const qp=new URLSearchParams(location.search);
- const attribution={};
- for(const key of ['utm_source','utm_medium','utm_campaign','utm_content','utm_term']){
-  attribution[key]=cleanAnswer(qp.get(key),120);
- }
- // Never forward full query strings, URL fragments or private referrer paths.
- attribution.source_url=publicPageUrl(location.href);
- attribution.referrer=publicPageUrl(document.referrer,true);
- const hrs=HOURVAL[f.hours];
- const score=Math.min(100,Math.round(hrs/3)+(f.timeline==='Immediately'?30:f.timeline==='This quarter'?20:10)+(f.systems?10:0)+(f.goal?10:0));
- const savings=(hrs*45*0.4).toLocaleString('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0});
- const apps=APPMAP[f.process];
- const summary=`FREE DISCOVERY RESULT\nName: ${f.name}\nEmail: ${f.email}\nCompany: ${f.company||'n/a'}\nIndustry: ${f.industry}\nProcess: ${f.process}\nHours/month band: ${f.hours}\nSystems: ${f.systems||'not specified'}\n90-day goal: ${f.goal||'to define'}\nTimeline: ${f.timeline}\nIndicative readiness score: ${score}/100 (self-assessment heuristic, not a technical audit or implementation approval)\nIllustrative monthly capacity value: ${savings}\nAssumptions: ${hrs} hours/month represents the selected band; 40% potentially automatable; US$45/hour. Neither measured savings nor a quote; validate all inputs.\nProcess owner: to confirm with your team.\nNext step: document the current workflow and baseline, select one low-risk pilot, and define human review plus a stop rule before implementation.\nRecommended apps:\n${apps.map(a=>a[0]+' https://ziontechgroup.com'+a[1]).join('\n')}\nPlanning tools: https://ziontechgroup.com/apps/discovery-report-workbench.html | https://ziontechgroup.com/automation-pilot-planner/\nDiscovery is free. No purchase, meeting, dispatch or paid engagement is created by this report.\nAttribution: source=${attribution.utm_source||'direct'}; medium=${attribution.utm_medium||'n/a'}; campaign=${attribution.utm_campaign||'n/a'}; content=${attribution.utm_content||'n/a'}; term=${attribution.utm_term||'n/a'}\nSource URL: ${attribution.source_url}\nReferrer origin: ${attribution.referrer||'n/a'}`;
- window.__zionDiscoveryReport=summary;
- document.getElementById('rscore').textContent=score;
- document.getElementById('rbar').style.width=score+'%';
- document.getElementById('rsummary').textContent=`For ${f.process} at ${f.company||'your company'}, the selected hours band is modeled as ${hrs} team-hours/month. At 40% potentially automatable and US$45/hour, the illustrative capacity value is ${savings}/month. These are assumptions, not verified savings, a quote or approval to implement.`;
- const list=document.getElementById('rapps');
- list.replaceChildren();
- for(const [name,path] of apps){
-  const item=document.createElement('li');
-  const link=document.createElement('a');
-  link.href=path;
-  link.textContent=name;
-  item.appendChild(link);
-  list.appendChild(item);
- }
- // Static HTML only: form answers are rendered with textContent above.
- document.getElementById('rnext').innerHTML=score>=70?'Validate scope, baseline and data permissions before any implementation. The existing <a href="https://buy.stripe.com/7sY00k7JScFV99Bf044ZG06" target="_blank" rel="noopener noreferrer">optional $2,500 Starter</a> is separate from this free report; review <a href="/plans/">Plans</a> or continue with free tools.':'Keep exploring with the free apps above. Use the Report Workbench and Pilot Planner to validate a small, reversible next step; implementation help is optional.';
- document.getElementById('report-text').textContent=summary;
- const cc=[...new Set([f.email,'carlos@ziontechgroup.com'])].filter(email=>email.toLowerCase()!=='commercial@ziontechgroup.com').join(',');
- const fallback=document.createElement('a');
- fallback.className='btn alt';
- fallback.href='mailto:commercial@ziontechgroup.com?cc='+encodeURIComponent(cc)+'&subject='+encodeURIComponent('Free Discovery result - '+f.name)+'&body='+encodeURIComponent(summary);
- fallback.textContent='Open email with my report (manual fallback)';
- document.getElementById('email-fallback').replaceChildren(fallback);
+const MAP={
+ "Travel & Hospitality":[["Travel Itinerary Planner","https://ziontechgroup.com/zion-travel-itinerary-planner/"],["Hotel Rate Optimizer","https://ziontechgroup.com/zion-hotel-rate-optimizer/"],["Guest Experience Copilot","https://ziontechgroup.com/zion-guest-experience-copilot/"]],
+ "Retail & Ecommerce":[["AI Cart Recovery","https://ziontechgroup.com/ai-cart-recovery/"],["AI Pricing Optimizer","https://ziontechgroup.com/ai-pricing-optimizer/"],["AI Review Insights","https://ziontechgroup.com/ai-review-insights/"]],
+ "Grow revenue & sales":[["AI Sales Email Copilot","https://ziontechgroup.com/ai-sales-email-copilot/"],["Proposal Builder AI","https://ziontechgroup.com/proposal-builder-ai/"]],
+ "Cut costs / FinOps":[["FinOps Autopilot","https://ziontechgroup.com/finops-autopilot/"],["ROI Calculator","https://ziontechgroup.com/roi-calculator/"]],
+ "Customer experience & retention":[["Churn Radar","https://ziontechgroup.com/churn-radar/"],["NPS Insight Engine","https://ziontechgroup.com/nps-insight-engine/"]],
+ "Security & compliance":[["Zion AI Compliance Scanner","https://ziontechgroup.com/zion-ai-compliance-scanner/"],["Vendor Risk Screener","https://ziontechgroup.com/vendor-risk-screener/"]],
+ "Sustainability & ESG":[["Carbon Accounting Hub","https://ziontechgroup.com/carbon-accounting-hub/"],["ESG Report Builder","https://ziontechgroup.com/esg-report-builder/"]],
+ "Healthcare":[["Healthcare Workflow Copilot","https://ziontechgroup.com/healthcare-workflow-copilot/"],["AI Health Tracker","https://ziontechgroup.com/ai-health-tracker/"],["Patient Intake Automation","https://ziontechgroup.com/patient-intake-automation/"]],
+ "Financial Services":[["AI Fraud Prevention","https://ziontechgroup.com/ai-fraud-prevention/"],["Cashflow Forecaster AI","https://ziontechgroup.com/cashflow-forecaster-ai/"],["Compliance Evidence Collector","https://ziontechgroup.com/compliance-evidence-collector/"]],
+ "Real Estate":[["AI Real Estate Hub","https://ziontechgroup.com/ai-real-estate-hub/"],["AI Contract Guardian","https://ziontechgroup.com/zion-ai-contract-guardian/"],["AI Deep Research","https://ziontechgroup.com/ai-deep-research/"]],
+ "Education":[["Lesson Plan Generator","https://ziontechgroup.com/lesson-plan-generator/"],["Student Progress Tracker","https://ziontechgroup.com/student-progress-tracker/"],["AI Education Platform","https://ziontechgroup.com/ai-education-platform/"]],
+ "Manufacturing & Field Services":[["AI Field Dispatch Optimizer","https://ziontechgroup.com/zion-ai-field-dispatch-optimizer/"],["AI Spare Parts Matcher","https://ziontechgroup.com/zion-ai-spare-parts-matcher/"],["Warranty Lens","https://ziontechgroup.com/warranty-lens/"]],
+ "Technology / MSP":[["SLA Breach Predictor","https://ziontechgroup.com/sla-breach-predictor/"],["AI Ticket Triage","https://ziontechgroup.com/zion-ai-ticket-triage/"],["AI ROI Tracker","https://ziontechgroup.com/ai-roi-tracker/"]],
+ "Other":[["AI ROI Calculator","https://ziontechgroup.com/ai-roi-calculator/"],["Ops Runbook AI","https://ziontechgroup.com/ops-runbook-ai/"],["LLM Cost Calculator","https://ziontechgroup.com/llm-cost-calculator/"]],
+ "Automate operations":[["Ops Runbook AI","https://ziontechgroup.com/ops-runbook-ai/"],["AI Ticket Triage","https://ziontechgroup.com/zion-ai-ticket-triage/"]],
+ "Data & analytics":[["Data Pipeline Doctor","https://ziontechgroup.com/data-pipeline-doctor/"],["Stream Analytics Hub","https://ziontechgroup.com/stream-analytics-hub/"]]
+};
+document.getElementById('q').addEventListener('submit',function(e){
+ const f=e.target,ind=f.industry.value,pri=f.priority.value;
+ const recs=[...(MAP[ind]||[]),...(MAP[pri]||[])].slice(0,5);
+ const html=recs.length?('<ul>'+recs.map(r=>`<li><a class="b" href="${r[1]}">${r[0]}</a></li>`).join('')+'</ul>'):'<p>Explore the full <a href="https://ziontechgroup.com/zion-app-network/">app network</a>.</p>';
+ document.getElementById('recs').innerHTML=html;
+ const hidden=document.createElement('input');hidden.type='hidden';hidden.name='recommended_apps';
+ hidden.value=recs.map(r=>r[0]+' -> '+r[1]).join(' | ');f.appendChild(hidden);
+ const cc=document.createElement('input');cc.type='hidden';cc.name='_cc';cc.value=f.email.value;f.appendChild(cc);
  document.getElementById('result').style.display='block';
- document.getElementById('result').scrollIntoView({behavior:'smooth'});
- document.getElementById('copy-report').textContent='Copy report';
- const status=document.getElementById('rsent');
- const fingerprint=JSON.stringify(f);
- if(acceptedReports.has(fingerprint)){
-  status.textContent='This report was already accepted for email delivery in this page session. No duplicate was submitted. You can copy or download it below.';
-  return;
- }
- status.textContent='Report ready. Submitting the same result for email delivery to you, Commercial and Carlos...';
- discoveryPending=true;
- const button=document.getElementById('submit-report');
- const buttonText=button.textContent;
- button.disabled=true;
- form.setAttribute('aria-busy','true');
- const controller=new AbortController();
- const timeout=setTimeout(()=>controller.abort(),15000);
- try{
-  // _cc is the provider-supported copy mechanism; AJAX does not support automatic reply emails.
-  const r=await fetch('https://formsubmit.co/ajax/commercial@ziontechgroup.com',{
-   method:'POST',signal:controller.signal,
-   headers:{'Content-Type':'application/json','Accept':'application/json'},
-   body:JSON.stringify({_subject:'Free Discovery result - '+f.name+' ('+(f.company||'n/a')+') - score '+score,_cc:cc,_replyto:f.email,_captcha:'false',_template:'box',name:f.name,email:f.email,company:f.company||'n/a',industry:f.industry,score,...attribution,event:'discovery_submit',report_version:'2026-10-06-safe-delivery',message:summary})
-  });
-  const j=await r.json().catch(()=>({}));
-  if(r.ok&&(j.success===true||j.success==='true')){
-   acceptedReports.add(fingerprint);
-   status.textContent='Accepted by the email service for delivery to you, Commercial and Carlos. Inbox delivery is not yet confirmed. Check your inbox and spam folder; your report remains available below.';
-  }else{
-   status.textContent='Email acceptance was not confirmed. Your report is ready below: copy or download it, or use the manual email fallback. No automatic retry was made.';
-  }
- }catch(err){
-  status.textContent=err.name==='AbortError'?'Email confirmation timed out. The request may already have been accepted; check your inbox before submitting again. Your report is still available below.':'Email confirmation is unavailable. Your report is ready below; copy or download it, or use the manual email fallback.';
- }finally{
-  clearTimeout(timeout);
-  discoveryPending=false;
-  button.disabled=false;
-  button.textContent=buttonText;
-  form.setAttribute('aria-busy','false');
- }
-});
-document.getElementById('copy-report').addEventListener('click',async function(){
- const txt=window.__zionDiscoveryReport||'';
- if(!txt)return;
- try{await navigator.clipboard.writeText(txt);this.textContent='Copied';}
- catch{this.textContent='Select the full report above or download .txt';}
-});
-document.getElementById('download-report').addEventListener('click',function(){
- const txt=window.__zionDiscoveryReport||'';
- if(!txt)return;
- const blob=new Blob([txt],{type:'text/plain;charset=utf-8'});
- const a=document.createElement('a');
- const objectUrl=URL.createObjectURL(blob);
- a.href=objectUrl;a.download='zion-discovery-report.txt';a.click();
- setTimeout(()=>URL.revokeObjectURL(objectUrl),1000);
 });
 </script>
-</body>
-</html>
+<footer style="margin-top:2rem;color:#64748b;font-size:.9rem">© 2026 <a href="https://ziontechgroup.com">Zion Tech Group</a> · <a href="https://github.com/Zion-support/zion-network">App Network on GitHub</a> · commercial@ziontechgroup.com</footer>
+</body></html>

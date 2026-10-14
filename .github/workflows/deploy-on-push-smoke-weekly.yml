@@ -1,4 +1,4 @@
-# Ensures deploy-on-push.yml keeps the current manual Pages deployment contract (grep-only).
+# Ensures deploy-on-push.yml keeps workflow_run wiring + Netlify + push-helper (grep-only).
 name: deploy on push smoke (weekly)
 permissions:
   contents: read
@@ -23,13 +23,12 @@ jobs:
           test -f "$f"
           test -s "$f"
           grep -Fq 'name: Deploy on Push' "$f"
-          grep -Fq 'workflow_dispatch: null' "$f"
-          grep -Fq 'pages: write' "$f"
-          grep -Fq 'id-token: write' "$f"
-          grep -Fq 'actions/upload-pages-artifact@v4' "$f"
-          grep -Fq 'actions/deploy-pages@v4' "$f"
-          grep -Fq 'bash scripts/prepare-pages-out.sh' "$f"
+          grep -Fq 'workflow_run:' "$f"
+          grep -Fq 'CI/CD Pipeline' "$f"
+          grep -Fq 'group: deploy-on-push-main' "$f"
+          grep -Fq 'cancel-in-progress: false' "$f"
+          grep -Fq 'github.token' "$f"
+          grep -Fq 'GitHub Pages' "$f"
           grep -Fq 'deploy:status:generate' "$f"
-          grep -Fq 'npm run deploy:watchdog' "$f"
           grep -Fq 'commit-and-push-main.sh' "$f"
           echo "ok: $f"
