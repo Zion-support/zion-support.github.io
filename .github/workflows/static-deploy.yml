@@ -100,6 +100,8 @@ jobs:
         run: node scripts/render-sla-evidence.cjs out
       - name: Repair and publish five-language local ticket tools and homepage promotions
         run: node scripts/ticket-support-release.cjs out
+      - name: Archive inspected repeated promotions without removing links or forms
+        run: node --test scripts/test-home-promotion-consolidation.cjs && node scripts/consolidate-home-promotions.cjs out
       - name: Reconcile and test final folder and suffix localization coverage
         run: node scripts/verify-network-publication.cjs out && node scripts/test-network-publication-routes.cjs out
       - uses: actions/upload-pages-artifact@v3
