@@ -18,3 +18,36 @@ for(const l of locales)test(l+' valid html language syntax is accepted',()=>{con
 test('generic Portuguese declaration is accepted',()=>{const {root,file}=fixture();try{for(const u of [home('pt'),...targets('pt')]){const f=file(u);fs.writeFileSync(f,fs.readFileSync(f,'utf8').replace('lang="pt-BR"',"lang='pt'"));}render(root);assert(fs.existsSync(file(route('pt'))));}finally{fs.rmSync(root,{recursive:true,force:true});}});
 
 test('unowned existing guide is preserved and prevents all writes',()=>{const {root,file}=fixture();try{const hp=fs.readFileSync(file(home('en')),'utf8');const destination=file(route('de'));fs.mkdirSync(path.dirname(destination),{recursive:true});const existing='<html lang="de"><body>Existing independently maintained guide</body></html>';fs.writeFileSync(destination,existing);assert.throws(()=>render(root),/Refusing to overwrite unowned guide/);assert.equal(fs.readFileSync(destination,'utf8'),existing);assert.equal(fs.readFileSync(file(home('en')),'utf8'),hp);assert(!fs.existsSync(file(route('en'))));}finally{fs.rmSync(root,{recursive:true,force:true});}});
+
+// Actual pure filesystem finalizer: reproduce post-render drift, then restore equality.
+test('curated backlinks survive real finalization in all four locale aliases',()=>{
+ const {finalize,pairs}=require('./finalize-field-evidence-aliases.cjs');
+ const {root,file}=fixture();
+ try{
+  const all=['en','pt-BR','es','fr','de'];
+  const canonical=l=>'/apps/field-service-evidence-guide'+(l==='en'?'':'.'+l.toLowerCase())+'.html';
+  for(const l of locales){
+   const hf=file(home(l));fs.writeFileSync(hf,fs.readFileSync(hf,'utf8').replace('</main>','<!--field-evidence-locales:start--><section><div></div></section><!--field-evidence-locales:end--></main>'));
+   const lang=copy[l][0];
+   const alternate=[...all,'x-default'].map(k=>'<link rel="alternate" hreflang="'+k+'" href="https://ziontechgroup.com'+canonical(k==='x-default'?'en':k)+'">').join('');
+   const nav='<nav data-field-evidence-languages>'+all.map(k=>'<a href="'+canonical(k)+'">'+k+'</a>').join('')+'</nav>';
+   const checklist='<!--field-evidence-pack:start--><section id="evidence-pack"><ul>'+Array(6).fill('<li>Evidence</li>').join('')+'</ul></section><!--field-evidence-pack:end-->';
+   const faq='<!--field-evidence-faq:start--><section id="field-evidence-faq" data-field-evidence-faq="fixture">'+Array(4).fill('<details><summary>Question</summary>Answer</details>').join('')+'</section><!--field-evidence-faq:end-->';
+   fs.writeFileSync(file(targets(l)[0]),'<!DOCTYPE html><html lang="'+lang+'"><head><link rel="canonical" href="https://ziontechgroup.com'+canonical(lang)+'">'+alternate+'</head><body><main><h1>Field evidence</h1>'+nav+'<section id="tools"></section>'+checklist+faq+'<a href="'+targets(l)[1]+'">Telecom</a></main></body></html>');
+  }
+  const protectedHome=locales.map(l=>{const h=fs.readFileSync(file(home(l)),'utf8');return [h.match(/<form\b[\s\S]*?<\/form>/g),h.match(/<script\b[\s\S]*?<\/script>/g)];});
+  finalize(root);for(const p of pairs)assert.equal(fs.readFileSync(file(p.alias),'utf8'),fs.readFileSync(file(p.canonical),'utf8'));
+  render(root);for(const p of pairs)assert.notEqual(fs.readFileSync(file(p.alias),'utf8'),fs.readFileSync(file(p.canonical),'utf8'),'Fixture must reproduce stale aliases');
+  finalize(root);
+  for(const p of pairs){const h=fs.readFileSync(file(p.alias),'utf8');assert.equal(h,fs.readFileSync(file(p.canonical),'utf8'));const l=p.language==='pt-BR'?'pt':p.language;assert(h.includes('href="'+route(l)+'"'),'Alias lost curated return');assert.equal((h.match(/zion-curated-resource:start/g)||[]).length,1);}
+  const integrity=JSON.parse(fs.readFileSync(file('/apps/field-evidence-final-integrity.json'),'utf8'));assert.equal(integrity.pairs.length,4);
+  render(root);finalize(root);for(const p of pairs)assert.equal(fs.readFileSync(file(p.alias),'utf8'),fs.readFileSync(file(p.canonical),'utf8'));
+  for(const [i,l] of locales.entries()){const h=fs.readFileSync(file(home(l)),'utf8');assert.deepEqual([h.match(/<form\b[\s\S]*?<\/form>/g),h.match(/<script\b[\s\S]*?<\/script>/g)],protectedHome[i]);}
+ }finally{fs.rmSync(root,{recursive:true,force:true});}
+});
+test('deployment finalizes aliases after curated rendering and before reconciliation/upload',()=>{
+ const yaml=fs.readFileSync(path.join(__dirname,'../.github/workflows/static-deploy.yml'),'utf8');
+ const step=yaml.match(/- name: Validate and render curated five-language resource paths\n\s+run: ([^\n]+)/);assert(step,'Curated deployment step missing');
+ assert(step[1].includes('node scripts/render-curated-network.cjs out && node scripts/finalize-field-evidence-aliases.cjs out'),'Curated rendering must finish with real alias finalization');
+ const start=yaml.indexOf(step[0]);assert(start<yaml.indexOf('node scripts/verify-network-publication.cjs out'));assert(start<yaml.indexOf('actions/upload-pages-artifact@v3'));
+});
