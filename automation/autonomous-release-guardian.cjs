@@ -89,4 +89,3 @@ async function check(route) {
   console.error(error);
   process.exit(2);
 });
-
