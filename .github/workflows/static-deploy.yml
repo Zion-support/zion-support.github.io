@@ -100,6 +100,8 @@ jobs:
         run: node scripts/render-sla-evidence.cjs out
       - name: Repair and publish five-language local ticket tools and homepage promotions
         run: node scripts/ticket-support-release.cjs out
+      - name: Render and test approved Manufacturing89 and HR106 guides
+        run: node scripts/test-industry89-hr106-integration.cjs && node scripts/test-industry89-hr106.cjs && node scripts/render-industry89-hr106.cjs out
       - name: Reconcile and test final folder and suffix localization coverage
         run: node scripts/verify-network-publication.cjs out && node scripts/test-network-publication-routes.cjs out
       - uses: actions/upload-pages-artifact@v3
