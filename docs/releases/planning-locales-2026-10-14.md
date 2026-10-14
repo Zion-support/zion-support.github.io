@@ -18,6 +18,8 @@ Governance and Roadmap English editions retain their existing root routes; trans
 
 ## Review and test
 
-Run node --check scripts/render-planning-locales.cjs and node scripts/test-planning-locales.cjs. Then run the existing full approved artifact pipeline in a controlled checkout. This scoped test uses synthetic Node DOM fixtures and actual homepage source when present; it is not native browser/mobile/assistive-technology or native-speaker certification. Readiness preserves six 1–3 answers, a 0–100 range and boundaries at 35/70. No model, account access, mail submission, storage or production dispatch.
+Run node --check scripts/render-planning-locales.cjs and node scripts/test-readiness-resource-locales.cjs. Then run the existing full approved artifact pipeline in a controlled checkout. This scoped test uses synthetic Node DOM fixtures and actual homepage source when present; it is not native browser/mobile/assistive-technology or native-speaker certification. Readiness preserves six 1–3 answers, a 0–100 range and boundaries at 35/70. No model, account access, mail submission, storage or production dispatch.
+
+The existing scripts/test-planning-locales.cjs belongs to the earlier planning-directory/site-survey release. An initial branch-only filename collision was detected by exact comparison and corrected: that historical file is restored byte-for-byte; this new suite is scripts/test-readiness-resource-locales.cjs. No main or production overwrite occurred.
 
 After reviewed PR approval and required CI gates, use the existing authorized release process. Independently verify generated manifest hashes, all 15 live routes, declared languages, alternates, runtime controls, same-language links, five homepage promotions and absence of changes to forms/pricing/recipients. Until that succeeds, mark publication PENDING, not LIVE.
