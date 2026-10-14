@@ -55,3 +55,20 @@ transform=withDirectory;
 module.exports.transform=transform;
 module.exports={RELEASE,C,transform,render,protectedParts,hrefs};
 if(require.main===module)render(process.argv[2]||'out');
+
+// Approved field-ticket guide and one additive link per existing homepage promotion.
+const ticketGuide=require('./render-field-ticket-types.cjs');
+const ticketTransform=transform;
+transform=function(html,l){
+ const clean=html.replace(/<!--field-ticket-home:start-->[\s\S]*?<!--field-ticket-home:end-->/g,'');
+ const result=ticketTransform(clean,l);
+ const after=result.replace(/<!--zion-network-home:start-->[\s\S]*?<!--zion-network-home:end-->/g,block=>block.replace(/<\/nav>/i,'<!--field-ticket-home:start--><a data-field-ticket-home="field-ticket-types-2026-10-14-v1" href="'+ticketGuide.route(l)+'">'+esc(ticketGuide.C[l].promotion)+'</a><!--field-ticket-home:end--></nav>'));
+ assert.deepEqual(protectedParts(after),protectedParts(html));
+ assert.equal((after.match(/data-field-ticket-home=/g)||[]).length,1);
+ const owned=/<!--field-ticket-home:start-->[\s\S]*?<!--field-ticket-home:end-->/g;
+ for(const u of hrefs(html.replace(owned,'')))assert(hrefs(after).includes(u),'Removed existing destination '+u);
+ return after;
+};
+module.exports.transform=transform;
+module.exports.render=function(out='out'){ticketGuide.run(out);return render(out);};
+if(require.main===module)module.exports.render(process.argv[2]||'out');
