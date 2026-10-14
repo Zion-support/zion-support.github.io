@@ -46,7 +46,7 @@ For aiops anomaly detection: implementation playbook, prefer services with docum
 Pilot aiops anomaly detection: implementation playbook with one team, document runbooks, train operators, then expand. Broad rollouts without ownership create unrecoverable backlogs and erode trust in automation. Operational readiness should be checked before expansion: alerting, on-call coverage, incident response, and change management. Make success visible through dashboards and weekly reviews so momentum builds from real progress, not slide decks. Operational excellence is built during the pilot, not after a failed broad rollout.
 
 ## Success signals
-A successful rollout of aiops anomaly detection: implementation playbook produces clearer metrics, faster execution, and fewer preventable incidents. If those outcomes do not appear, revisit scope and workflow design instead of adding more tooling. Look for consistent adoption, stable error rates, and positive operator feedback before declaring success. Sustained success requires continuous improvement, not a one-time implementation project. Celebrate evidence-based wins publicly; they build momentum for the next phase.
+A successful rollout of aiops anomaly detection: implementation playbook produces clearer metrics, faster execution, and fewer preventable incidents. If those outcomes do not appear, revisit scope andworkflow design instead of adding more tooling. Look for consistent adoption, stable error rates, and positive operator feedback before declaring success. Sustained success requires continuous improvement, not a one-time implementation project. Celebrate evidence-based wins publicly; they build momentum for the next phase.
 
 ## Recommended next step
 Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.
@@ -75,9 +75,10 @@ Start with one workflow, one owner, and one success metric. Expansion should fol
 
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={__html: JSON.stringify(jsonLd)}
+          dangerouslySetInnerHTML={{__html: JSON.stringify(jsonLd)}}
         />
       </article>
     </div>
   );
 }
+
