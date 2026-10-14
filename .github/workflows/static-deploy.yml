@@ -100,6 +100,8 @@ jobs:
         run: node scripts/render-sla-evidence.cjs out
       - name: Repair and publish five-language local ticket tools and homepage promotions
         run: node scripts/ticket-support-release.cjs out
+      - name: Render and validate five-language first-workflow guides and reciprocal links
+        run: node scripts/render-first-workflow.cjs out && node scripts/finalize-field-evidence-aliases.cjs out && node scripts/test-first-workflow.cjs out
       - name: Reconcile and test final folder and suffix localization coverage
         run: node scripts/verify-network-publication.cjs out && node scripts/test-network-publication-routes.cjs out
       - uses: actions/upload-pages-artifact@v3
@@ -153,3 +155,4 @@ jobs:
         run: node scripts/test-pilot-planner-live.cjs
       - name: Read-only live route-family coverage regression
         run: node scripts/test-network-publication-routes.cjs --live
+
