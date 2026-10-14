@@ -173,4 +173,9 @@ assert_family_a_home
 assert_mit_fgv
 assert_aaa_official_ladder
 
+# Approved SQL integration: after existing commercial guards; no publish/trigger change.
+node scripts/test-sql-review-release.cjs
+node scripts/test-sql-review-integration.cjs
+node scripts/render-sql-review-integration.cjs out
+
 echo "Prepared out ($(find out -type f | wc -l) files)"
