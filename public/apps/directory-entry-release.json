@@ -1,0 +1,16 @@
+{
+  "release": "directory-entry-2026-10-13-v1",
+  "kind": "publication-intent",
+  "scope": "Five localized directory entry pages and links inside an existing homepage promotion. Not a full-network translation or functionality certificate.",
+  "hubCommit": "6f4898cb3c220ccb5755a0767c0f61e1f2b284f2",
+  "homepageRendererCommit": "e79ce32eedf652f0f516bf80170748c266652160",
+  "expectedHomepageMarker": "data-directory-entry=directory-entry-2026-10-13-v1",
+  "routes": {
+    "en": "/zion-app-network/directory-en.html",
+    "pt-BR": "/zion-app-network/directory-pt.html",
+    "es": "/zion-app-network/directory-es.html",
+    "fr": "/zion-app-network/directory-fr.html",
+    "de": "/zion-app-network/directory-de.html"
+  },
+  "verification": "Metadata is not proof of successful deployment, HTTP availability or destination behavior. Inspect the rendered homepage marker and matching directory pages."
+}

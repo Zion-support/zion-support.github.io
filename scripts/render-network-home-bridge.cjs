@@ -38,5 +38,53 @@ function render(out='out'){
  fs.mkdirSync(path.join(out,'apps'),{recursive:true});fs.writeFileSync(path.join(out,'apps/network-home-bridge-release.json'),JSON.stringify(report,null,2)+'\n');
  console.log('PASS '+RELEASE+': five owned homepage promotions preserved and linked to the language-specific hub/catalog.');return report;
 }
+
+// Approved directory entry links: extend only the existing owned promotion.
+const directoryLabels={en:'Open the translated directory',pt:'Abrir diretório traduzido',es:'Abrir directorio traducido',fr:'Ouvrir le répertoire traduit',de:'Übersetztes Verzeichnis öffnen'};
+const originalTransform=transform;
+function withDirectory(html,l){
+ const clean=html.replace(/<!--directory-entry-link:start-->[\s\S]*?<!--directory-entry-link:end-->/g,'');
+ const result=originalTransform(clean,l);
+ const owner=/<!--zion-network-home:start-->[\s\S]*?<!--zion-network-home:end-->/g;
+ const after=result.replace(owner,block=>block.replace(/<\/nav>/i,'<!--directory-entry-link:start--><a data-directory-entry="directory-entry-2026-10-13-v1" href="/zion-app-network/directory-'+l+'.html">'+esc(directoryLabels[l])+'</a><!--directory-entry-link:end--></nav>'));
+ assert.deepEqual(protectedParts(after),protectedParts(html));
+ for(const u of hrefs(html))assert(hrefs(after).includes(u),'Removed existing destination '+u);
+ return after;
+}
+transform=withDirectory;
+module.exports.transform=transform;
 module.exports={RELEASE,C,transform,render,protectedParts,hrefs};
 if(require.main===module)render(process.argv[2]||'out');
+
+// Approved field-ticket guide and one additive link per existing homepage promotion.
+const ticketGuide=require('./render-field-ticket-types.cjs');
+const ticketTransform=transform;
+transform=function(html,l){
+ const clean=html.replace(/<!--field-ticket-home:start-->[\s\S]*?<!--field-ticket-home:end-->/g,'');
+ const result=ticketTransform(clean,l);
+ const after=result.replace(/<!--zion-network-home:start-->[\s\S]*?<!--zion-network-home:end-->/g,block=>block.replace(/<\/nav>/i,'<!--field-ticket-home:start--><a data-field-ticket-home="field-ticket-types-2026-10-14-v1" href="'+ticketGuide.route(l)+'">'+esc(ticketGuide.C[l].promotion)+'</a><!--field-ticket-home:end--></nav>'));
+ assert.deepEqual(protectedParts(after),protectedParts(html));
+ assert.equal((after.match(/data-field-ticket-home=/g)||[]).length,1);
+ const owned=/<!--field-ticket-home:start-->[\s\S]*?<!--field-ticket-home:end-->/g;
+ for(const u of hrefs(html.replace(owned,'')))assert(hrefs(after).includes(u),'Removed existing destination '+u);
+ return after;
+};
+module.exports.transform=transform;
+module.exports.render=function(out='out'){ticketGuide.run(out);return render(out);};
+if(require.main===module)module.exports.render(process.argv[2]||'out');
+
+// Approved AgentForge locales; one additive link inside each existing promotion.
+const agentGuide=require('./render-agentforge-locales.cjs'),agentTransform=transform;
+transform=function(html,l){
+ const owned=/<!--agentforge-home:start-->[\s\S]*?<!--agentforge-home:end-->/g;
+ const result=agentTransform(html.replace(owned,''),l);
+ const after=result.replace(/<!--zion-network-home:start-->[\s\S]*?<!--zion-network-home:end-->/g,b=>b.replace(/<\/nav>/i,'<!--agentforge-home:start--><a data-agentforge-home="agentforge-locales-2026-10-14-v1" href="'+agentGuide.route(l)+'">'+esc(agentGuide.C[l].promotion)+'</a><!--agentforge-home:end--></nav>'));
+ assert.deepEqual(protectedParts(after),protectedParts(html));
+ assert.equal((after.match(/data-agentforge-home=/g)||[]).length,1);
+ for(const u of hrefs(html.replace(owned,'')))assert(hrefs(after).includes(u),'Removed existing destination '+u);
+ return after;
+};
+const agentBaseRender=module.exports.render;
+module.exports.transform=transform;
+module.exports.render=function(out='out'){agentGuide.run(out);return agentBaseRender(out);};
+if(require.main===module)module.exports.render(process.argv[2]||'out');
