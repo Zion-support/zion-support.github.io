@@ -46,10 +46,37 @@ const sourceRoutes = [
   'public/apps/pilot-evidence-checklist.html',
 ];
 
+
+// Deliberately narrow source-authoring policy, not a general HTML sanitizer.
+// Only &amp; query separators are allowed; encoded schemes fail closed.
+function allowedHref(href) {
+  const value = href.replace(/&amp;/gi, '&');
+  if (!value || value === '#' || /[\u0000-\u0020\u007f\\]/.test(value) ||
+      /&(?:#|[a-z][a-z0-9]*;)/i.test(value) || value.startsWith('//')) return false;
+  const scheme = /^([a-z][a-z0-9+.-]*):/i.exec(value);
+  if (scheme && !['http', 'https', 'mailto', 'tel'].includes(scheme[1].toLowerCase())) return false;
+  if (scheme && /^https?$/i.test(scheme[1]) && !/^https?:\/\//i.test(value)) return false;
+  try {
+    const url = new URL(value, 'https://navigation.invalid/');
+    return scheme ? ['http:', 'https:', 'mailto:', 'tel:'].includes(url.protocol) :
+      url.origin === 'https://navigation.invalid';
+  } catch { return false; }
+}
+
+const safeHrefs = ['#main', '/', '/apps/', './guide.html', '../apps/', 'guide.html',
+  '?lang=pt-BR', '/apps/?a=1&amp;b=2', 'https://example.com/', 'HTTP://example.com/',
+  'mailto:commercial@ziontechgroup.com', 'tel:+15551234567'];
+const unsafeHrefs = ['', '#', 'javascript:alert(1)', 'JavaScript:alert(1)',
+  'data:text/html,test', 'vbscript:msgbox(1)', 'file:///tmp/test', 'blob:https://example.com/id',
+  'custom:action', '//example.com/', '\\example.com', ' https://example.com/',
+  'java\tscript:alert(1)', 'java\nscript:alert(1)', 'javascript&#58;alert(1)',
+  'java&#x73;cript:alert(1)', 'javascript&colon;alert(1)', 'java&Tab;script:alert(1)',
+  '&#106;avascript:alert(1)', 'https:example.com', 'https://', '/apps/\u0000test'];
+
 function validate(html, spec) {
   const failures = [];
   const ids = [...html.matchAll(/\bid=["']([^"']+)["']/gi)].map(m => m[1]);
-  const links = [...html.matchAll(/<a\b[^>]*\bhref=["']([^"']+)["']/gi)].map(m => m[1]);
+  const links = [...html.matchAll(/<a\b[^>]*\bhref\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s"'=<>`]+))/gi)].map(m => m[1] ?? m[2] ?? m[3]);
   for (const id of new Set(ids)) {
     if (ids.filter(x => x === id).length !== 1) failures.push('duplicate id: ' + id);
   }
@@ -65,7 +92,7 @@ function validate(html, spec) {
   if (links.length < spec.minLinks) failures.push('too few useful internal links');
   for (const id of spec.anchors) if (!ids.includes(id)) failures.push('missing category: ' + id);
   for (const href of links) {
-    if (href === '#' || href.startsWith('javascript:')) failures.push('placeholder/unsafe link');
+    if (!allowedHref(href)) failures.push('placeholder/unsafe link');
     if (href.startsWith('#') && !ids.includes(href.slice(1))) failures.push('broken fragment: ' + href);
   }
   for (const href of spec.paths) if (!links.includes(href)) failures.push('missing curated interlink: ' + href);
@@ -73,6 +100,13 @@ function validate(html, spec) {
 }
 
 let errors = 0;
+for (const href of safeHrefs) {
+  if (!allowedHref(href)) { console.error('FAIL safe URI fixture: ' + href); errors++; }
+}
+for (const href of unsafeHrefs) {
+  if (allowedHref(href)) { console.error('FAIL unsafe URI allowlist: ' + JSON.stringify(href)); errors++; }
+}
+console.log('URI fixtures: ' + safeHrefs.length + ' allowed, ' + unsafeHrefs.length + ' rejected');
 for (const relative of sourceRoutes) {
   if (!fs.existsSync(path.join(root, relative))) {
     console.error('MISSING SOURCE ROUTE ' + relative);
@@ -88,6 +122,19 @@ for (const spec of pages) {
   } else {
     console.log('PASS ' + spec.file + ': anchors, paths, accessibility basics and disclosure');
   }
+
+  // Require the URI-specific failure, not an unrelated missing-route failure.
+  for (const href of unsafeHrefs) {
+    for (const anchor of [`<a href="${href}">fixture</a>`, `<a href = '${href}'>fixture</a>`]) {
+      if (!validate(html + anchor, spec).includes('placeholder/unsafe link')) {
+        console.error('FAIL unsafe URI fixture: ' + JSON.stringify(href)); errors++;
+      }
+    }
+  }
+  if (!validate(html + '<a href=data:text/html,test>fixture</a>', spec).includes('placeholder/unsafe link')) {
+    console.error('FAIL unquoted unsafe URI fixture'); errors++;
+  }
+
   // Built-in negative fixtures prove the checks reject regressions.
   if (!validate(html.replace('id="main"', 'id="removed-main"'), spec).length) {
     console.error('FAIL negative fixture: missing main accepted');
