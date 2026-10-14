@@ -38,5 +38,20 @@ function render(out='out'){
  fs.mkdirSync(path.join(out,'apps'),{recursive:true});fs.writeFileSync(path.join(out,'apps/network-home-bridge-release.json'),JSON.stringify(report,null,2)+'\n');
  console.log('PASS '+RELEASE+': five owned homepage promotions preserved and linked to the language-specific hub/catalog.');return report;
 }
+
+// Approved directory entry links: extend only the existing owned promotion.
+const directoryLabels={en:'Open the translated directory',pt:'Abrir diretório traduzido',es:'Abrir directorio traducido',fr:'Ouvrir le répertoire traduit',de:'Übersetztes Verzeichnis öffnen'};
+const originalTransform=transform;
+function withDirectory(html,l){
+ const clean=html.replace(/<!--directory-entry-link:start-->[\s\S]*?<!--directory-entry-link:end-->/g,'');
+ const result=originalTransform(clean,l);
+ const owner=/<!--zion-network-home:start-->[\s\S]*?<!--zion-network-home:end-->/g;
+ const after=result.replace(owner,block=>block.replace(/<\/nav>/i,'<!--directory-entry-link:start--><a data-directory-entry="directory-entry-2026-10-13-v1" href="/zion-app-network/directory-'+l+'.html">'+esc(directoryLabels[l])+'</a><!--directory-entry-link:end--></nav>'));
+ assert.deepEqual(protectedParts(after),protectedParts(html));
+ for(const u of hrefs(html))assert(hrefs(after).includes(u),'Removed existing destination '+u);
+ return after;
+}
+transform=withDirectory;
+module.exports.transform=transform;
 module.exports={RELEASE,C,transform,render,protectedParts,hrefs};
 if(require.main===module)render(process.argv[2]||'out');
