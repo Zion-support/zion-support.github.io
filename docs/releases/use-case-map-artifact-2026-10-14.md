@@ -1,24 +1,30 @@
-# Use-case map artifact integration — draft only, not deployed
+# Use-case map artifact integration — approved draft workflow edit, not deployed
 
-Follow-on to the five-language generator in existing PR71571. This candidate adds `finalize-use-case-map-artifact.py` and its integration test, not a competing promotional section or pull request.
+Follow-on to the five-language generator in existing PR71571. The user specifically approved adding offline tests/finalizer steps AFTER content rendering and BEFORE publication checks, while retaining the production release pause.
 
 ## Implemented
 
-The local finalizer builds the EN/PT-BR/ES/FR/DE map bodies and inserts one localized contextual paragraph into each homepage's EXISTING `home-app-paths` block, with the inspected `zion-network-home` block as a compatibility fallback. It does not add another section/banner. Repeated execution replaces its owned paragraph exactly once. Original homepage links, forms and scripts are preserved. Missing/wrong-language homepages, duplicate/missing insertion markers, missing internal map destinations, missing cross-page fragments and unsafe paths stop semantic preflight before artifact writes. An unavailable standalone GitHub Pages app route will also stop this local gate: it needs separately verified delivery evidence, not a fabricated placeholder.
+The local finalizer builds EN/PT-BR/ES/FR/DE map bodies and inserts one translated contextual paragraph into each homepage's EXISTING `home-app-paths` block; the inspected `zion-network-home` block is a compatibility fallback. No duplicate banner/section is introduced. Original homepage links, forms and scripts are preserved. Missing/wrong-language homepages, duplicate/missing slots, missing internal destinations/fragments, unsafe paths, symlinks and manifest/file collisions reject semantic preflight before writes. Filesystem I/O failure during writes is not a transactional rollback. Missing standalone project routes require actual delivery evidence, not fabricated placeholders.
 
-## Offline review commands
+## Exact draft workflow integration
+
+Two steps are inserted in `.github/workflows/static-deploy.yml`, after `ticket-support-release.cjs out` and before `verify-network-publication.cjs` / route checks / artifact upload:
 
 ```
+python3 scripts/test-use-case-map-workflow.py
+node scripts/test-guided-app-navigation.cjs
 python3 scripts/test-use-case-map-locales.py
 python3 scripts/test-use-case-map-artifact.py
-node scripts/test-guided-app-navigation.cjs
+python3 scripts/test-use-case-map-artifact-paths.py
 python3 scripts/finalize-use-case-map-artifact.py --out out
 ```
 
-The final command requires a COMPLETE staged site produced by the existing renderers. Do not run it against `public/`; keep the immutable source outside output. The integration tests explicitly seed synthetic target files, so their success is NOT full artifact, HTTP, mobile, app functionality or translation certification. The finalizer does not certify homepage input quality beyond its scoped preservation/language/slot checks.
+The workflow guard strips those exact steps and requires the original Git blob `1d74c2bc2712b72a6244a3a1341288f353fd905e`. All other workflow bytes, triggers, permissions, checkout, main-only job condition, existing renderers/privacy checks, upload/deployment actions and live checks must remain unchanged. This guard intentionally needs owner review if a future approved change modifies the baseline.
 
-## Controlled workflow integration still pending
+## What this does NOT establish
 
-No workflow file, trigger, permission, checkout ref, deployment action or privacy gate is changed here. After exact approval, a maintainer can add the unit tests and finalizer after all content/homepage renderers and before final publication checks/upload. Preserve main-only manual dispatch and the existing automatic publication pause. Review interactions with PR71565/71577 and full route-family manifest ownership. Do not treat this source-only change as production integration or restoration of automatic publishing.
+Integration exists only in the draft source. The PR is not merged, the manual main workflow has not been dispatched, and no production release is claimed. Unit integration fixtures explicitly use synthetic target pages: they are not a complete real artifact build, native-speaker/mobile/accessibility review, HTTPS uptime, app-functionality proof or inbox delivery. Run finalization against the COMPLETE real staged site, not `public/`, preserving immutable source outside output.
 
-Release prerequisites remain: exact-head CI passes, full artifact + private-publication checks, human language/mobile/accessibility review, independently verified destinations and separately approved deployment. Target URLs are not live release receipts. No external email/API call, submission, price, checkout, recipient or payment changes are made.
+## Release prerequisites
+
+Reconcile existing PR71565/71577 content lanes and renderer ordering. Require exact-head CI, complete artifact/privacy/link checks, human language/mobile/accessibility review, separately approved deployment and independently verified live routes. Address actual review findings without suppressing security checks. Preserve automatic-publication pause. No recipient, price, checkout, API submission, email test or paid-inference change is part of this batch.

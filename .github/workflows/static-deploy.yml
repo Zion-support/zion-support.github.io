@@ -100,6 +100,15 @@ jobs:
         run: node scripts/render-sla-evidence.cjs out
       - name: Repair and publish five-language local ticket tools and homepage promotions
         run: node scripts/ticket-support-release.cjs out
+      - name: Offline guided-navigation and use-case map regression checks
+        run: |
+          python3 scripts/test-use-case-map-workflow.py
+          node scripts/test-guided-app-navigation.cjs
+          python3 scripts/test-use-case-map-locales.py
+          python3 scripts/test-use-case-map-artifact.py
+          python3 scripts/test-use-case-map-artifact-paths.py
+      - name: Finalize five-language use-case maps and existing homepage links
+        run: python3 scripts/finalize-use-case-map-artifact.py --out out
       - name: Reconcile and test final folder and suffix localization coverage
         run: node scripts/verify-network-publication.cjs out && node scripts/test-network-publication-routes.cjs out
       - uses: actions/upload-pages-artifact@v3
