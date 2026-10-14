@@ -100,7 +100,7 @@ jobs:
         run: node scripts/render-sla-evidence.cjs out
       - name: Repair and publish five-language local ticket tools and homepage promotions
         run: node scripts/ticket-support-release.cjs out
-      - name: Restore maintained productivity locale inputs and reciprocal navigation
+      - name: Generate maintained six-resource locale and navigation inputs
         run: node scripts/render-legacy-three-locales.cjs out && node scripts/render-productivity-incident-locales.cjs out && node scripts/render-productivity-workflow-links.cjs out
       - name: Test and render five-language productivity resource-choice articles
         run: node --test scripts/test-productivity-choice.cjs scripts/test-productivity-choice-integration.cjs && node scripts/render-productivity-choice.cjs out
