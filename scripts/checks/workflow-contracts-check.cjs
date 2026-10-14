@@ -6,6 +6,7 @@ const fs = require('fs');
 const path = require('path');
 
 const dir = path.join(__dirname, '..', '..', '.github', 'workflows');
+const lightMode = process.argv.includes('--light');
 let errors = 0;
 const fail = (msg) => { console.error(`contract error: ${msg}`); errors++; };
 
@@ -46,6 +47,10 @@ for (const f of files) {
     }
   }
 
+  // In light mode we intentionally stop after dedupe + structural integrity.
+  // Repository-wide pin enforcement remains in the full contracts command and dedicated pin guard.
+  if (lightMode) continue;
+
   // 3) Pin strict: every remote action in `uses:` must be pinned to a 40-char SHA.
   //    Local reusable workflows (./...) and docker:// are exempt.
   const usesLines = text.match(/^\s*(?:-\s*)?uses\s*:\s*[^#\n]+/gm) || [];
@@ -65,4 +70,4 @@ if (errors > 0) {
   console.error(`workflow contracts: ${errors} error(s) across ${files.length} file(s)`);
   process.exit(1);
 }
-console.log(`workflow contracts ok: ${files.length} file(s), dedupe + integrity + pin-strict passed`);
+console.log(`workflow contracts ok: ${files.length} file(s), ${lightMode ? 'dedupe + integrity passed (light mode)' : 'dedupe + integrity + pin-strict passed'}`);
