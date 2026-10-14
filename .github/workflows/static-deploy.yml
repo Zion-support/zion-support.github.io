@@ -2,74 +2,9 @@ name: Simple Static Deploy
 
 # Production publishes public/ and artifact-only renderers, not a Next.js shell.
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - 'public/**'
-      - 'scripts/render-ops-field-guides.cjs'
-      - 'scripts/render-ops-field-return-links.cjs'
-      - 'scripts/test-ops-field-guides.cjs'
-      - 'scripts/render-network-start-here.cjs'
-      - 'scripts/network-publication-routes.cjs'
-      - 'scripts/verify-network-publication.cjs'
-      - 'scripts/test-network-publication-routes.cjs'
-      - 'scripts/render-network-home-ad.cjs'
-      - 'scripts/render-home-app-paths.cjs'
-      - 'scripts/test-home-app-paths.cjs'
-      - 'scripts/render-discovery-next-step.cjs'
-      - 'scripts/prepare-pages-out.sh'
-      - 'scripts/render-discovery-showcase.cjs'
-      - 'scripts/render-discovery-consistency.cjs'
-      - 'scripts/render-discovery-pilot-guide.cjs'
-      - 'scripts/render-discovery-linked-guide.cjs'
-      - 'scripts/render-network-benefits.cjs'
-      - 'scripts/render-discovery-pilot-backlinks.cjs'
-      - 'scripts/test-discovery-pilot-backlinks.cjs'
-      - 'scripts/render-app-experiments.cjs'
-      - 'scripts/test-app-experiments.cjs'
-      - 'scripts/verify-app-experiment-sources.cjs'
-      - 'scripts/render-communications-apps.cjs'
-      - 'scripts/render-communications-decision.cjs'
-      - 'scripts/test-communications-decision.cjs'
-      - 'scripts/test-communications-lab.cjs'
-      - 'scripts/render-communications-readiness.cjs'
-      - 'scripts/test-communications-readiness.cjs'
-      - 'scripts/render-treasury-network.cjs'
-      - 'scripts/render-insurance-network.cjs'
-      - 'scripts/render-insurance-evidence.cjs'
-      - 'scripts/test-discovery-consistency.cjs'
-      - 'content/discovery-journey.json'
-      - 'scripts/test-discovery-live.cjs'
-      - 'content/discovery-showcase.json'
-      - 'content/communications-playbook.json'
-      - 'scripts/render-logistics-evidence.cjs'
-      - 'scripts/test-logistics-evidence.cjs'
-      - 'scripts/render-field-evidence-locales.cjs'
-      - 'scripts/render-field-evidence-release.cjs'
-      - 'scripts/test-field-evidence-release.cjs'
-      - 'scripts/render-field-evidence-quality.cjs'
-      - 'scripts/render-field-evidence-faq.cjs'
-      - 'scripts/render-field-evidence-pack.cjs'
-      - 'scripts/render-field-evidence-route-aliases.cjs'
-      - 'scripts/render-field-network-promotion.cjs'
-      - 'scripts/test-field-evidence-alias-integrity.cjs'
-      - 'scripts/finalize-field-evidence-aliases.cjs'
-      - 'scripts/test-field-evidence-quality.cjs'
-      - 'scripts/render-telecom112-release.cjs'
-      - 'scripts/test-telecom112-release.cjs'
-      - 'scripts/render-pilot-planner-locales.cjs'
-      - 'scripts/test-pilot-planner-locales.cjs'
-      - 'scripts/render-supplier-pilot-paths.cjs'
-      - 'scripts/test-supplier-pilot-paths.cjs'
-      - 'scripts/render-supplier-comparison.cjs'
-      - 'scripts/render-sla-evidence.cjs'
-      - 'scripts/render-ticket-support.cjs'
-      - 'scripts/ticket-support-release.cjs'
-      - 'content/operational-tools.json'
-      - '.github/workflows/static-deploy.yml'
-  schedule:
-    - cron: '*/5 * * * *'
+  # TEMPORARY RELEASE HOLD (2026-10-14): no automatic main push or 5-minute cron.
+  # Restore automation only after reviewed PRs, required CI checks and release approval are enforced.
+
   workflow_dispatch:
     inputs:
       note:
