@@ -128,8 +128,12 @@ assert_family_a_home() {
     echo "ERROR: out/index.html contains /_next/ (broken Next shell)" >&2
     exit 1
   fi
-  if ! grep -Fq 'Discovery $99' "$f"; then
-    echo "ERROR: out/index.html missing Family A marker Discovery \$99" >&2
+  if ! grep -Fq 'Discovery grátis' "$f"; then
+    echo "ERROR: out/index.html missing truthful free Discovery marker" >&2
+    exit 1
+  fi
+  if grep -Eq 'FGV|SDCOMPRASTIC-6963|Discovery \$99' "$f"; then
+    echo "ERROR: out/index.html contains client identifiers or obsolete paid Discovery" >&2
     exit 1
   fi
   if ! grep -Fq '/assets/css/site.css' "$f"; then
@@ -139,23 +143,22 @@ assert_family_a_home() {
   echo "OK Family A homepage (${sz}B)"
 }
 
-assert_mit_fgv() {
+assert_managed_it_public() {
   local f="out/managed-it-services/index.html"
-  if [ ! -f "$f" ]; then
-    echo "ERROR: missing out/managed-it-services/index.html" >&2
+  if [ ! -s "$f" ]; then
+    echo "ERROR: missing or empty managed IT page out/managed-it-services/index.html" >&2
     exit 1
   fi
-  if ! grep -Fq 'proof-fgv' "$f"; then
-    echo "ERROR: out/managed-it-services/index.html missing #proof-fgv" >&2
+  if ! grep -Fq 'Free Discovery' "$f"; then
+    echo "ERROR: managed IT page missing truthful free Discovery" >&2
     exit 1
   fi
-  if ! grep -Fq 'SDCOMPRASTIC-6963' "$f"; then
-    echo "ERROR: out/managed-it-services/index.html missing SDCOMPRASTIC-6963" >&2
+  if grep -Eq 'FGV|SDCOMPRASTIC-6963|Discovery \$99' "$f"; then
+    echo "ERROR: managed IT page exposes client identifiers or obsolete paid Discovery" >&2
     exit 1
   fi
-  echo "OK MIT FGV proof"
+  echo "OK managed IT anonymous/free Discovery"
 }
-
 assert_aaa_official_ladder() {
   local f="out/autonomous-ai-agents/index.html"
   if [ ! -f "$f" ]; then
@@ -170,7 +173,7 @@ assert_aaa_official_ladder() {
 }
 
 assert_family_a_home
-assert_mit_fgv
+assert_managed_it_public
 assert_aaa_official_ladder
 
 echo "Prepared out ($(find out -type f | wc -l) files)"
