@@ -1,0 +1,31 @@
+'use strict';
+const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
+const expected='node scripts/test-industry89-hr106-integration.cjs && node scripts/test-industry89-hr106.cjs && node scripts/render-industry89-hr106.cjs out';
+const heading='      - name: Render and test approved Manufacturing89 and HR106 guides\n';
+const block=heading+'        run: '+expected+'\n';
+function verify(text){
+ assert.equal(text.split(block).length-1,1,'Exactly one explicit integration step');
+ const on=text.match(/^on:\n([\s\S]*?)^permissions:/m);assert(on,'Workflow trigger block');
+ assert(/\n  workflow_dispatch:/.test('\n'+on[1]),'Manual trigger retained');
+ assert(!/^  (push|schedule|pull_request|workflow_run|repository_dispatch)\s*:/m.test(on[1]),'Do not lift production hold');
+ assert(text.includes("    if: github.ref == 'refs/heads/main'"),'Main-only guard retained');
+ assert(text.includes('  cancel-in-progress: false'),'No deployment cancellation');
+ const i=text.indexOf(block),a=text.indexOf('node scripts/render-network-home-ad.cjs'),b=text.indexOf('      - name: Reconcile and test final folder and suffix localization coverage\n'),c=text.indexOf('      - uses: actions/upload-pages-artifact@v3');
+ assert(a>=0&&a<i&&i<b&&b<c,'Home producer before renderer before final coverage before artifact upload');
+ assert.equal((text.match(/node scripts\/render-industry89-hr106\.cjs out/g)||[]).length,1,'One production invocation');
+ return true;
+}
+const input=process.argv[2]||path.join(__dirname,'../.github/workflows/static-deploy.yml');
+const text=fs.readFileSync(input,'utf8');let n=0;
+const check=f=>{f();n++;};
+check(()=>verify(text));
+check(()=>assert.throws(()=>verify(text.replace(block,''))));
+check(()=>assert.throws(()=>verify(text.replace(block,block+block))));
+check(()=>assert.throws(()=>verify(text.replace(expected,'node scripts/render-industry89-hr106.cjs out'))));
+check(()=>assert.throws(()=>verify(text.replace('  workflow_dispatch:','  push:'))));
+check(()=>assert.throws(()=>verify(text.replace("    if: github.ref == 'refs/heads/main'","    if: always()"))));
+check(()=>assert.throws(()=>verify(text.replace('  cancel-in-progress: false','  cancel-in-progress: true'))));
+const without=text.replace(block,''),upload='      - uses: actions/upload-pages-artifact@v3';
+check(()=>assert.throws(()=>verify(without.replace(upload,block+upload))));
+check(()=>assert.throws(()=>verify(block+without)));
+console.log('PASS '+n+' workflow integration assertions, including missing-step/order/hold mutations. Structural workflow checks only, not a full artifact build or live publication.');
