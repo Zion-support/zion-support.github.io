@@ -68,6 +68,12 @@ async function check(route) {
   ];
   fs.writeFileSync(mdPath, lines.join('\n') + '\n');
   console.log(`release guardian: ${report.healthyCount}/${report.checkedCount} healthy; severity=${severity}`);
+  // Reports are written above; upload and escalation use `if: always()` in Actions.
+  // Degraded site health must never produce a green release-gate status.
+  if (severity !== 'ok') {
+    console.error(`::error::Release Guardian: ${report.unhealthyCount}/${report.checkedCount} unhealthy routes (severity=${severity})`);
+    process.exitCode = 1;
+  }
 })().catch(error => {
   console.error(error);
   process.exit(2);
