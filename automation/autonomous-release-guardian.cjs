@@ -9,6 +9,12 @@ const mdPath = path.join(outDir, 'autonomous-release-guardian-latest.md');
 const timeoutMs = Number(process.env.RELEASE_GUARDIAN_TIMEOUT_MS || 10000);
 const maxRoutes = Number(process.env.RELEASE_GUARDIAN_MAX_ROUTES || 60);
 
+if (!Number.isSafeInteger(maxRoutes) || maxRoutes <= 0 ||
+    !Number.isSafeInteger(timeoutMs) || timeoutMs <= 0) {
+  console.error('release guardian: MAX_ROUTES and TIMEOUT_MS must be positive safe integers');
+  process.exit(2);
+}
+
 if (!fs.existsSync(routesFile)) {
   console.error('release guardian: missing config/smoke-routes.txt');
   process.exit(2);
@@ -83,3 +89,4 @@ async function check(route) {
   console.error(error);
   process.exit(2);
 });
+
