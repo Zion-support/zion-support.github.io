@@ -20,6 +20,11 @@ const routes = fs.readFileSync(routesFile, 'utf8')
   .filter(v => v && !v.startsWith('#'))
   .slice(0, maxRoutes);
 
+if (routes.length === 0) {
+  console.error('release guardian: no routes configured; refusing an empty health check');
+  process.exit(2);
+}
+
 async function check(route) {
   const url = baseUrl + (route.startsWith('/') ? route : '/' + route);
   const started = Date.now();
