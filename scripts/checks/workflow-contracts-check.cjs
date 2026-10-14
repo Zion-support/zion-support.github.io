@@ -10,14 +10,14 @@ let errors = 0;
 const fail = (msg) => { console.error(`contract error: ${msg}`); errors++; };
 
 if (!fs.existsSync(dir)) {
-  console.log('No .github/workflows directory; nothing to check.');
-  process.exit(0);
+  console.error('workflow contracts: required .github/workflows directory is missing');
+  process.exit(1);
 }
 
 const files = fs.readdirSync(dir).filter((f) => /\.ya?ml$/i.test(f));
 if (files.length === 0) {
-  console.log('No workflow files found; nothing to check.');
-  process.exit(0);
+  console.error('workflow contracts: no workflow files found');
+  process.exit(1);
 }
 
 // 1) Dedupe: unique file basenames and unique workflow `name:` values.
@@ -48,9 +48,9 @@ for (const f of files) {
 
   // 3) Pin strict: every remote action in `uses:` must be pinned to a 40-char SHA.
   //    Local reusable workflows (./...) and docker:// are exempt.
-  const usesLines = text.match(/^\s*uses\s*:\s*[^#\n]+/gm) || [];
+  const usesLines = text.match(/^\s*(?:-\s*)?uses\s*:\s*[^#\n]+/gm) || [];
   for (const line of usesLines) {
-    const ref = line.replace(/^\s*uses\s*:\s*/, '').replace(/\s+#.*$/, '').trim().replace(/^['"]|['"]$/g, '');
+    const ref = line.replace(/^\s*(?:-\s*)?uses\s*:\s*/, '').replace(/\s+#.*$/, '').trim().replace(/^['"]|['"]$/g, '');
     if (ref.startsWith('./') || ref.startsWith('docker://')) continue;
     const at = ref.lastIndexOf('@');
     if (at === -1) { fail(`${f}: action "${ref}" has no version pin`); continue; }
