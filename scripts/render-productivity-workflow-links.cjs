@@ -6,7 +6,7 @@ const C={
  en:{home:'/en/',lang:'en',label:'Try the reviewed productivity workflow',text:'Meeting recap → agent brief → email draft → human review. Three local browser tools, manually connected; no automatic sending or guaranteed savings.'},
  pt:{home:'/',lang:'pt-BR',label:'Experimente o fluxo de produtividade com revisão',text:'Resumo de reunião → briefing de agente → rascunho de e-mail → revisão humana. Três ferramentas locais, conectadas manualmente; sem envio automático ou economia garantida.'},
  es:{home:'/es/',lang:'es',label:'Pruebe el flujo de productividad con revisión',text:'Resumen de reunión → brief de agente → borrador de correo → revisión humana. Tres herramientas locales, conectadas manualmente; sin envío automático ni ahorro garantizado.'},
- fr:{home:'/fr/',lang:'fr',label:'Essayez le parcours de productivité avec relecture',text:'Synthèse de réunion → brief d’agent → brouillon de courriel → relecture humaine. Trois outils locaux, reliés manuellement ; aucun envoi automático ni économie garantie.'},
+ fr:{home:'/fr/',lang:'fr',label:'Essayez le parcours de productivité avec relecture',text:'Synthèse de réunion → brief d’agent → brouillon de courriel → relecture humaine. Trois outils locaux, reliés manuellement ; aucun envoi automatique ni économie garantie.'},
  de:{home:'/de/',lang:'de',label:'Testen Sie den geprüften Produktivitätsablauf',text:'Besprechungsnotizen → Agentenbriefing → E-Mail-Entwurf → menschliche Prüfung. Drei lokale Werkzeuge, manuell verbunden; kein automatischer Versand und keine garantierte Ersparnis.'}
 };
 const START='<!--productivity-workflow-link:start-->',END='<!--productivity-workflow-link:end-->';
