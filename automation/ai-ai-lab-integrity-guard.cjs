@@ -42,8 +42,8 @@ if (fs.existsSync(globalsPath)) {
   const content = fs.readFileSync(globalsPath, 'utf8');
   // Tailwind v3 uses @tailwind directives; Tailwind v4 uses @import "tailwindcss".
   // Reject stylesheets that contain neither, without weakening the guard.
-  const hasV3 = /@tailwind\\s+(?:base|components|utilities)\\b/.test(content);
-  const hasV4 = /@import\\s+['"]tailwindcss['"]\\s*;?/.test(content);
+  const hasV3 = /@tailwind\s+(?:base|components|utilities)\b/.test(content);
+  const hasV4 = /@import\s+['"]tailwindcss['"]\s*;?/.test(content);
   if (hasV3 || hasV4) {
     console.log('✅ globals.css: Tailwind v3 directives or v4 import present');
   } else {
