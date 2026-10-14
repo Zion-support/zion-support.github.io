@@ -43,6 +43,10 @@ def safe_path(root,relative):
     target=root/relative
     if not target.resolve().is_relative_to(root.resolve()):
         raise ValueError('Artifact path escapes root: '+relative)
+    cursor=root
+    for part in Path(relative).parts:
+        cursor=cursor/part
+        if cursor.is_symlink():raise ValueError('Artifact symlink alias forbidden: '+relative)
     return target
 
 def protected(text):
@@ -106,15 +110,18 @@ def finalize(source,root):
             if not path.is_file():raise ValueError('Missing localized homepage '+name)
             candidates[name]=edit_home(path.read_text(encoding='utf-8'),locale)
         validate_links(root,candidates,list(pages))
-        for name in candidates:safe_path(root,name)
-        # Complete semantic preflight above before writing any artifact bytes.
+        manifest=json.loads((stage/'apps/use-case-map-locales.json').read_text(encoding='utf-8'))
+        manifest.update({'status':'OFFLINE_ARTIFACT_VALIDATED_NOT_LIVE','homepage_links':{k:home(k) for k in maps.LANGS},'release':RELEASE,'scope':'Five maps and five existing homepage contextual links; local target existence only, not app functionality or live HTTP certification','map_sha256':{name:hashlib.sha256(text.encode()).hexdigest() for name,text in pages.items()}})
+        candidates['apps/use-case-map-locales.json']=json.dumps(manifest,ensure_ascii=False,indent=2)+'\n'
+        for name in candidates:
+            target=safe_path(root,name)
+            if target.exists() and not target.is_file():
+                raise ValueError('Artifact output is not a regular file: '+name)
+        # Complete semantic preflight, including manifest, before artifact writes.
+        # Filesystem I/O failure during writes is not a transactional rollback.
         for name,text in candidates.items():
             target=safe_path(root,name);target.parent.mkdir(parents=True,exist_ok=True)
             target.write_text(text,encoding='utf-8')
-        manifest=json.loads((stage/'apps/use-case-map-locales.json').read_text(encoding='utf-8'))
-        manifest.update({'status':'OFFLINE_ARTIFACT_VALIDATED_NOT_LIVE','homepage_links':{k:home(k) for k in maps.LANGS},'release':RELEASE,'scope':'Five maps and five existing homepage contextual links; local target existence only, not app functionality or live HTTP certification','map_sha256':{name:hashlib.sha256(text.encode()).hexdigest() for name,text in pages.items()}})
-        target=safe_path(root,'apps/use-case-map-locales.json')
-        target.write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
         return manifest
 
 if __name__=='__main__':
