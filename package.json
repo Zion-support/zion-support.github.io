@@ -124,7 +124,7 @@
     "smoke:netlify:playwright": "echo 'smoke:netlify:playwright: OK (stub - automation paused post-P0)'",
     "smoke:production:sample": "echo 'smoke:production:sample: OK (stub - automation paused post-P0)'",
     "workflows:contracts:weekly": "node scripts/checks/workflow-contracts-check.cjs",
-    "workflows:validate:light": "node scripts/checks/workflow-contracts-check.cjs",
+    "workflows:validate:light": "node scripts/checks/workflow-contracts-check.cjs --light",
     "workflows:yaml-parse": "ruby scripts/automation/parse-github-workflows-yaml.rb",
     "workflows:grep-guards": "node scripts/checks/workflow-contracts-check.cjs"
   },
