@@ -8,10 +8,6 @@ permissions:
 "on":
   push:
     branches: [main]
-    paths-ignore:
-      - "public/**"
-      - "docs/**"
-      - "**/*.md"
   pull_request:
     branches: [main]
   schedule:

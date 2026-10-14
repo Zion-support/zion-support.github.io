@@ -34,7 +34,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: Fail-closed restore money paths if stubbed
         env:
-          GOOD_BLOB: 38964b6c860128d47adca32cc636eeeefa11ce34
+          GOOD_BLOB: 4a3b859876c6854c53d204828457394d152e645a
           PLINK: 7sY00k7JScFV99Bf044ZG06
           MIN: 5120
         run: |
@@ -47,26 +47,20 @@ jobs:
           need_restore=0
           check() {
             local f="$1"
-            local require_plink="${2:-0}"
             if [ ! -f "$f" ]; then echo "MISSING $f"; need_restore=1; return; fi
             local sz; sz=$(wc -c < "$f" | tr -d ' ')
             if [ "$sz" -lt "$MIN" ]; then echo "STUB $f (${sz}B)"; need_restore=1; return; fi
-            if [ "$require_plink" = "1" ] && ! grep -Fq "$PLINK" "$f"; then
-              echo "NO_PLINK $f"; need_restore=1; return
-            fi
+            if ! grep -Fq "$PLINK" "$f"; then echo "NO_PLINK $f"; need_restore=1; return; fi
             if grep -Fi 'http-equiv="refresh"' "$f" >/dev/null || grep -Fq 'PLACEHOLDER' "$f"; then
               echo "REDIRECT_STUB $f"; need_restore=1; return
             fi
             echo "OK $f (${sz}B)"
           }
 
-          # Only paid AI-automation pages must carry the Starter payment link.
-          # Plans/Discovery are protected against stubs/redirects, not forced to
-          # embed a payment link. This matches money-paths-stub-guard.yml.
-          check public/services/ai-automation/index.html 1
-          check services/ai-automation/index.html 1
+          check public/services/ai-automation/index.html
+          check services/ai-automation/index.html
           for f in public/plans/index.html plans/index.html public/discovery/index.html discovery/index.html; do
-            if [ -f "$f" ]; then check "$f" 0; fi
+            if [ -f "$f" ]; then check "$f"; fi
           done
 
           # Always block Hermes Agent money-path commits that look like service sync
@@ -102,18 +96,4 @@ jobs:
             exit 1
           fi
           git commit -m "lock(money): restore ai-automation pay HTML after Hermes stub (blob ${GOOD_BLOB:0:7})"
-          # Rebase onto latest main with retries to avoid non-fast-forward push races
-          for attempt in 1 2 3; do
-            git fetch origin main
-            if git rebase origin/main && git push origin HEAD:main; then
-              echo "Restore pushed successfully (attempt $attempt)"
-              break
-            fi
-            echo "Push attempt $attempt failed; rebasing and retrying"
-            git rebase --abort 2>/dev/null || true
-            sleep 5
-            if [ "$attempt" -eq 3 ]; then
-              echo "::error::failed to push restore after 3 attempts"
-              exit 1
-            fi
-          done
+          git push origin HEAD:main
