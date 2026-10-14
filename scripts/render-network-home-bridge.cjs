@@ -72,3 +72,19 @@ transform=function(html,l){
 module.exports.transform=transform;
 module.exports.render=function(out='out'){ticketGuide.run(out);return render(out);};
 if(require.main===module)module.exports.render(process.argv[2]||'out');
+
+// Approved AgentForge locales; one additive link inside each existing promotion.
+const agentGuide=require('./render-agentforge-locales.cjs'),agentTransform=transform;
+transform=function(html,l){
+ const owned=/<!--agentforge-home:start-->[\s\S]*?<!--agentforge-home:end-->/g;
+ const result=agentTransform(html.replace(owned,''),l);
+ const after=result.replace(/<!--zion-network-home:start-->[\s\S]*?<!--zion-network-home:end-->/g,b=>b.replace(/<\/nav>/i,'<!--agentforge-home:start--><a data-agentforge-home="agentforge-locales-2026-10-14-v1" href="'+agentGuide.route(l)+'">'+esc(agentGuide.C[l].promotion)+'</a><!--agentforge-home:end--></nav>'));
+ assert.deepEqual(protectedParts(after),protectedParts(html));
+ assert.equal((after.match(/data-agentforge-home=/g)||[]).length,1);
+ for(const u of hrefs(html.replace(owned,'')))assert(hrefs(after).includes(u),'Removed existing destination '+u);
+ return after;
+};
+const agentBaseRender=module.exports.render;
+module.exports.transform=transform;
+module.exports.render=function(out='out'){agentGuide.run(out);return agentBaseRender(out);};
+if(require.main===module)module.exports.render(process.argv[2]||'out');
