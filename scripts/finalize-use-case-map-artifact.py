@@ -15,6 +15,9 @@ SPEC = importlib.util.spec_from_file_location('use_case_maps',Path(__file__).wit
 maps = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(maps)
 RELEASE = 'use-case-map-home-links-2026-10-14-v1'
+# Reviewed current-main homepage bodies; unknown layouts must fail closed.
+CURRENT_HOME_SHA256 = {'pt': '947892ad2ca6496e48f500dfed7ec912b299c30c75f2aa8c8728ec901d2f7b7b', 'en': '95d4081d11c6d809185a0f54ce44320440b9939789b4c0c7f745c7ff0d3c2d7c', 'es': '95d20fc8e1f52608287977e92402575e2b3e540766520e97e89cdb9f8d0cf82f', 'fr': '15e3ec096955b56c0e305cb6aa7926df19247446c764e20b04f2ee94d92bf293', 'de': '01ef57629888ec7ed6b5fff59c2e51110268577637aaff50d42448cd2bed972c'}
+
 PROMO = {
  'en':('Choose the decision before the app.','Compare ten operational questions and follow related app links.'),
  'pt':('Escolha a decisão antes do app.','Compare dez questões operacionais e siga os links de apps relacionados.'),
@@ -60,11 +63,26 @@ def edit_home(text,locale):
     stripped=re.sub(r'<p data-use-case-map-promotion="[^"]*">[\s\S]*?</p>','',text)
     endings=['</section><!--home-app-paths:end-->','</div></section><!--zion-network-home:end-->']
     chosen=next((token for token in endings if token in stripped),None)
-    if chosen is None or stripped.count(chosen)!=1:
-        raise ValueError('Expected one inspected homepage insertion slot: '+locale)
     title,label=PROMO[locale]
     fragment='<p data-use-case-map-promotion="'+RELEASE+'"><strong>'+html.escape(title)+'</strong> <a href="'+maps.route(locale)+'">'+html.escape(label)+'</a></p>'
-    after=stripped.replace(chosen,fragment+chosen)
+    if chosen is not None:
+        if stripped.count(chosen)!=1:
+            raise ValueError('Expected one inspected homepage insertion slot: '+locale)
+        after=stripped.replace(chosen,fragment+chosen)
+    else:
+        # No arbitrary-layout fallback: only the independently reviewed current
+        # bodies qualify, and the ownership wrapper is removed on repeat runs.
+        owned=re.findall(r'<section data-use-case-map-home="'+RELEASE+r'">[\s\S]*?</section>',stripped)
+        if len(owned)>1:
+            raise ValueError('Duplicate owned current-home wrapper: '+locale)
+        clean=re.sub(r'<section data-use-case-map-home="'+RELEASE+r'">[\s\S]*?</section>','',stripped)
+        if hashlib.sha256(clean.encode()).hexdigest()!=CURRENT_HOME_SHA256.get(locale):
+            raise ValueError('Unreviewed current homepage body: '+locale)
+        boundary='<footer class="site-foot">' if locale=='pt' else '</main>'
+        if clean.count(boundary)!=1:
+            raise ValueError('Expected one inspected current homepage boundary: '+locale)
+        section='<section data-use-case-map-home="'+RELEASE+'">'+fragment+'</section>'
+        after=clean.replace(boundary,section+boundary)
     if protected(after)!=protected(text):raise ValueError('Homepage forms/scripts changed')
     if not set(Document(text).links).issubset(set(Document(after).links)):
         raise ValueError('Existing homepage href removed')
