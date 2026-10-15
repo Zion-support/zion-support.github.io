@@ -13,7 +13,7 @@ Hard rules (never violate):
 - Never orange-cloud the apex. Never CREATE apps. DNS.
 - Never point colliding repo CNAMEs at satellite hosts.
 """
-import json, os, re, urllib.request, datetime
+import json, os, re, urllib.request, urllib.error, datetime
 
 REPO = "Zion-support/zion-support.github.io"
 ISSUE = 71361
@@ -110,8 +110,9 @@ def main():
 
     new = [c for c in comments if c["id"] > state.get("last_comment_id", 0)]
     welcomed = set(state.get("welcomed_comment_ids", []))
+    failed_welcome_ids = set(state.get("failed_welcome_ids", []))
     for c in new:
-        if c["id"] in welcomed or not is_new_checkin(c):
+        if c["id"] in welcomed or c["id"] in failed_welcome_ids or not is_new_checkin(c):
             continue
         recent = sorted(state["completed_actions"], key=len)[-8:]
         ack = (
@@ -126,12 +127,30 @@ def main():
               "never point colliding repo CNAMEs at satellite hosts. "
               "Emails: reply-all, same thread, CC carlos@ + commercial@ziontechgroup.com."
         )
-        gh(f"/issues/{ISSUE}/comments", method="POST", data={"body": ack})
-        welcomed.add(c["id"])
+        try:
+            gh(f"/issues/{ISSUE}/comments", method="POST", data={"body": ack})
+            welcomed.add(c["id"])
+        except urllib.error.HTTPError as exc:
+            # Welcome comments are helpful but non-critical. Some repository/org
+            # policies can make GITHUB_TOKEN effectively read-only even when the
+            # workflow requests issues: write. Keep the board/state pulse healthy
+            # and record the exact failed comment instead of crashing every cycle.
+            detail = exc.read().decode("utf-8", "replace")[:500]
+            print(f"::warning::War Room welcome skipped for comment {c['id']}: HTTP {exc.code} {detail}")
+            failed_welcome_ids.add(c["id"])
+            failures = state.setdefault("welcome_failures", [])
+            failures.append({
+                "comment_id": c["id"],
+                "failed_at": now.isoformat(),
+                "http_status": exc.code,
+                "detail": detail,
+            })
+            state["welcome_failures"] = failures[-50:]
 
     if comments:
         state["last_comment_id"] = max(c["id"] for c in comments)
     state["welcomed_comment_ids"] = sorted(welcomed)
+    state["failed_welcome_ids"] = sorted(failed_welcome_ids)
     state["last_pulse"] = now.isoformat()
     with open(STATE_JSON, "w") as f:
         json.dump(state, f, indent=2)
