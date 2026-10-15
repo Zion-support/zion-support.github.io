@@ -30,5 +30,26 @@ try{const out=path.join(tmp,'out');function write(url,text){const f=path.join(ou
 let catalog='';for(const l of Object.keys(nav.C)){catalog+='<a id="'+l+'"></a>\n'+nav.S.map((s,i)=>'https://ziontechgroup.com'+nav.route(l,i)).join('\n')+'\n';for(let i=0;i<nav.S.length;i++){const h='<html lang="'+nav.C[l].lang+'"><head><link rel="canonical" href="https://ziontechgroup.com'+nav.route(l,i)+'"></head><body><main></main></body></html>';write(nav.route(l,i),nav.transform(h,l,i));}write(nav.home(l),'<html lang="'+nav.C[l].lang+'"><a href="'+nav.catalog(l)+'">catalog</a></html>');}
 const cf=path.join(tmp,'catalog.md');fs.writeFileSync(cf,catalog);const expected=qa.blob(Buffer.from(catalog));assert.equal(qa.validate(out,cf,expected).pages.length,35);n++;assert.throws(()=>qa.validate(out,cf,'invalid'));n++;assert.throws(()=>qa.catalogSections(catalog.replace('<a id="de"></a>','')));n++;assert.throws(()=>qa.catalogSections(catalog+'<a id="en"></a>'));n++;
 const late=path.join(out,'de',nav.S[5],'index.html'),before=fs.readFileSync(late,'utf8');fs.writeFileSync(late,before.replace('/de/ai-access-reviewer/','/es/ai-access-reviewer/'));assert.throws(()=>qa.validate(out,cf,expected));n++;fs.writeFileSync(late,before);const home=path.join(out,'fr','index.html');fs.writeFileSync(home,'<html lang="en"></html>');assert.throws(()=>qa.validate(out,cf,expected));n++;
-if(process.argv[2]){fs.writeFileSync(home,'<html lang="fr"><a href="'+nav.catalog('fr')+'">catalog</a></html>');const staged=qa.prepare(out,path.join(tmp,'good'),process.argv[2]);assert.equal(staged.pages.length,35);assert.equal(staged.files.length,35);n++;const first=path.join(out,nav.S[0],'index.html');fs.writeFileSync(first,fs.readFileSync(first,'utf8').replace('</head>','<script src="/assets/missing.js"></script></head>'));const bad=path.join(tmp,'bad');assert.throws(()=>qa.prepare(out,bad,process.argv[2]));assert(!fs.existsSync(bad));n++;}
-console.log('PASS productivity QA fixtures:'+n+' checks;wrong catalog bytes,missing/duplicate anchor,wrong-language owned link,wrong homepage.');}finally{fs.rmSync(tmp,{recursive:true,force:true});}
+if(process.argv[2]){fs.writeFileSync(home,'<html lang="fr"><a href="'+nav.catalog('fr')+'">catalog</a></html>');const staged=qa.prepare(out,path.join(tmp,'good'),process.argv[2]);assert.equal(staged.pages.length,35);assert.equal(staged.files.length,35);n++;const first=path.join(out,nav.S[0],'index.html');fs.writeFileSync(first,fs.readFileSync(first,'utf8').replace('</head>','<script src="/assets/missing.js"></script></head>'));const bad=path.join(tmp,'bad');assert.throws(()=>qa.prepare(out,bad,process.argv[2]));assert(!fs.existsSync(bad));n++;
+// Safety regressions: dependency traversal must fail before writing a review artifact.
+const cleanFirst=fs.readFileSync(first,'utf8').replace('<script src="/assets/missing.js"></script>','');
+fs.writeFileSync(first,cleanFirst);
+assert.throws(()=>qa.prepare(out,path.join(tmp,'good'),process.argv[2]),/already exists/);n++;
+const asset=path.join(out,'assets');fs.mkdirSync(asset,{recursive:true});
+function rejectDependency(tag,name,pattern){
+ fs.writeFileSync(first,cleanFirst.replace('</head>',tag+'</head>'));
+ const dest=path.join(tmp,name);assert.throws(()=>qa.prepare(out,dest,process.argv[2]),pattern);assert(!fs.existsSync(dest),'Failed QA must not stage '+name);n++;fs.writeFileSync(first,cleanFirst);
+}
+const outside=path.join(tmp,'outside.js');fs.writeFileSync(outside,'/* outside artifact */');
+fs.symlinkSync(outside,path.join(asset,'escape.js'));
+rejectDependency('<script src="/assets/escape.js"></script>','symlink-rejected',/Symlink escapes artifact/);
+fs.writeFileSync(path.join(asset,'nested.css'),'body{background:url(./missing-image.png)}');
+rejectDependency('<link rel="stylesheet" href="/assets/nested.css">','css-dependency-rejected',/ENOENT/);
+fs.writeFileSync(path.join(asset,'module.mjs'),'import "./missing-module.mjs";');
+rejectDependency('<script type="module" src="/assets/module.mjs"></script>','module-dependency-rejected',/ENOENT/);
+fs.writeFileSync(path.join(asset,'missing-module.mjs'),'export const ready=true;');
+fs.writeFileSync(first,cleanFirst.replace('</head>','<script type="module" src="/assets/module.mjs"></script></head>'));
+const complete=qa.prepare(out,path.join(tmp,'module-complete'),process.argv[2]);assert(complete.files.some(f=>f.file==='assets/missing-module.mjs'),'Side-effect dependency retained');assert.equal(complete.files.length,37);n++;
+fs.writeFileSync(first,cleanFirst);
+}
+console.log('PASS productivity QA fixtures:'+n+' checks;wrong catalog bytes,missing/duplicate anchor,wrong-language owned link,wrong homepage; optional staging safety/dependency controls when catalog supplied.');}finally{fs.rmSync(tmp,{recursive:true,force:true});}

@@ -31,3 +31,14 @@ Baseline Cloudflare Workers build FAILED: https://dash.cloudflare.com/f634328cf2
 5. Obtain separate exact merge/deployment confirmation; verify successful deployment and fresh release marker/route checks afterward.
 
 Whole-network translations, app functionality, all interlinks and dual-inbox email receipt are NOT certified. Do not repeat existing Discovery delivery tests or submit forms as part of offline QA. No main push, merge, deployment, paid evaluation, email send, payment or business commitment is included.
+
+## 15 October 2026 — exact-source QA and dependency staging correction
+
+Re-read PR #71561 and branch reference at `99b80ddf8a3fbfce976960e02daae5aec58ea774`; the concurrent `c9a47a98` renderer API repair and subsequent regression extension are preserved. This supersedes the obsolete c68388-versus-58a8d5 mismatch, not the outstanding release gates. Branch workflow listing returned all 99 runs; none matched 99b80ddf. Exact-reference check-runs returned one failed Workers build, ID `676c8811-73f6-40fd-93e5-b4acd303d46f`; its summary supplies no root-cause log. PR mergeability was `dirty`. No check has been disabled or bypassed.
+
+Verified downloaded Git blobs against SHA-1 before running Node v20.20.2 offline. Exact-source navigation suite passed 422 assertions; integrated pipeline passed 204 assertions. Running the QA suite with the real pinned catalog blob `6b24c2ec76cd237c1f1797e4872366e4b411d338` exercised staging previously omitted from the October 14 continuation: 35 fixture pages, 115 owned links, five authored catalog anchors and 35 retained files. These pages are synthetic fixtures, not production output.
+
+Added negative controls for pre-existing staging destination, escaping symlink, missing nested CSS image and missing side-effect JavaScript import. The last control reproduced a real staging defect: `import "./missing-module.mjs"` was ignored, allowing an incomplete review artifact. Fixed only dependency discovery in `scripts/prepare-productivity-qa.cjs` to cover side-effect imports and optional whitespace in dynamic imports, preserving existing from/import parsing. All three suites pass after the fix. QA reports 13 fixture checks with the pinned catalog, plus eight shared-interface negative controls. The positive module fixture retains all 37 files, including its side-effect dependency; failed validation creates no staging directory.
+
+This three-file correction changes the QA preparer, its regression tests and this evidence record only. It does not change translated page copy, renderer output, runtime, forms, pricing, recipients, main or deployment configuration. New commit CI/full artifact, moving-main conflict reconciliation, provider logs, rendered catalog HTML, browser/mobile/keyboard and editorial checks remain required. No publication or whole-network completion claim.
+
