@@ -1,0 +1,37 @@
+name: Field Spares Custody - Offline Contract
+
+on:
+  pull_request:
+    paths:
+      - 'public/field-spares-custody-kit/**'
+      - 'tests/field-spares-custody.test.cjs'
+      - '.github/workflows/field-spares-custody-contract.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: field-spares-custody-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  contract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout only contract inputs
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2, existing repository pin
+        with:
+          persist-credentials: false
+          sparse-checkout: |
+            /public/field-spares-custody-kit/
+            /tests/field-spares-custody.test.cjs
+          sparse-checkout-cone-mode: false
+      - name: Syntax and deterministic evidence gates
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --version
+          node --check public/field-spares-custody-kit/app.js
+          node --test tests/field-spares-custody.test.cjs
