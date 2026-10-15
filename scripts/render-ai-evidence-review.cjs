@@ -15,6 +15,7 @@ function render(source,out){
   if(slug==='field-sla-acceptance-matrix')html=html.replace('+verified,','+(verified?'+JSON.stringify(yes[i])+':'+JSON.stringify(no[i])+'),');
   html=require('./harden-ai-evidence-review.cjs').harden(html,slug,i);
   html=require('./complete-ai-evidence-fallbacks.cjs').complete(html,slug,i);
+  html=require('./finalize-ai-evidence-accessibility.cjs').finalize(html);
   fs.writeFileSync(p,html);
  }
 }
