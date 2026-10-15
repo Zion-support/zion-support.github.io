@@ -40,10 +40,16 @@ for (const route of aiLabRoutes) {
 const globalsPath = path.join(appDir, 'globals.css');
 if (fs.existsSync(globalsPath)) {
   const content = fs.readFileSync(globalsPath, 'utf8');
-  if (content.includes('@tailwind')) {
-    console.log('✅ globals.css: Tailwind directives present');
+  // Tailwind v4 uses a CSS import; v3 used all three @tailwind directives.
+  // Strip comments so a commented-out import cannot satisfy this guard.
+  const activeCss = content.replace(/\/\*[\s\S]*?\*\//g, '');
+  const hasLegacyDirectives = ['base', 'components', 'utilities']
+    .every(part => new RegExp('@tailwind\\s+' + part + '\\s*;').test(activeCss));
+  const hasV4Import = /@import\s+["']tailwindcss["']\s*;/.test(activeCss);
+  if (hasLegacyDirectives || hasV4Import) {
+    console.log('✅ globals.css: Tailwind v3 directives or v4 import present');
   } else {
-    console.error('❌ globals.css: Missing Tailwind directives');
+    console.error('❌ globals.css: Missing active Tailwind v3 directives or Tailwind v4 import');
     errors++;
   }
 } else {
