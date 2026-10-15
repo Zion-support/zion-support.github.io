@@ -11,16 +11,31 @@ function sections(h){
  while((m=rx.exec(masked))){if(/^<\//.test(m[0])){assert(depth>0,'Unbalanced section');if(--depth===0)result.push({start,end:rx.lastIndex,id,html:h.slice(start,rx.lastIndex)});}else if(depth++===0){start=m.index;id=(m[0].match(/\bid\s*=\s*(["'])(.*?)\1/i)||[])[2]||'';}}
  assert.equal(depth,0,'Unclosed section');return result;
 }
+function archiveClose(html){
+ const masked=html.replace(/<!--[\s\S]*?-->|<script\b[^>]*>[\s\S]*?<\/script\s*>|<style\b[^>]*>[\s\S]*?<\/style\s*>/gi,s=>' '.repeat(s.length));
+ const rx=/<\/?(?:details|summary)\b[^>]*>/gi;let m,depth=0,outer=0,summaryDepth=0,summaryCount=0,close=-1;
+ while((m=rx.exec(masked))){
+  const ending=/^<\//.test(m[0]),summary=/^<\/?summary\b/i.test(m[0]);
+  if(summary){
+   if(ending){assert(summaryDepth>0&&depth===summaryDepth,'Unbalanced archive summary');summaryDepth=0;}
+   else {assert(depth>0&&!summaryDepth,'Archive summary outside details');summaryDepth=depth;if(depth===1)summaryCount++;}
+  } else if(ending){assert(depth>0&&!summaryDepth,'Unbalanced archive details');if(--depth===0)close=m.index;}
+  else {assert(!summaryDepth,'Details inside archive summary');if(depth++===0)outer++;}
+ }
+ assert(depth===0&&summaryDepth===0,'Unclosed archive details or summary');
+ assert(outer===1&&close>=0,'Exactly one existing archive details required');
+ assert(summaryCount===1,'Exactly one direct archive summary required');
+ return close;
+}
 function transform(before){
- const owner=sections(before).find(s=>s.id==='app-paths-home');assert(owner,'Existing localized app-path archive required');
- const close=owner.html.lastIndexOf('</details>');assert(close>=0,'Existing archive details required');
- assert(/<summary\b/i.test(owner.html),'Archive summary required');
+ const owners=sections(before).filter(s=>s.id==='app-paths-home');assert(owners.length===1,'Exactly one existing localized app-path archive required');const owner=owners[0];
+ archiveClose(owner.html);
  const selected=sections(before).filter(s=>IDS.has(s.id)&&protectedParts(s.html).length===0);
  if(!selected.length)return {html:before,moved:[]};
  let after=before;
  for(const s of [...selected].reverse())after=after.slice(0,s.start)+after.slice(s.end);
  const current=sections(after).find(s=>s.id==='app-paths-home');
- const at=current.start+current.html.lastIndexOf('</details>');
+ const at=current.start+archiveClose(current.html);
  after=after.slice(0,at)+'\n'+selected.map(s=>s.html).join('\n')+'\n'+after.slice(at);
  assert.deepEqual(protectedParts(after),protectedParts(before),'Protected blocks changed');
  assert.deepEqual(attrs(after,'href'),attrs(before,'href'),'Destination multiset changed');
