@@ -14,6 +14,7 @@ function render(source,out){
   html=html.replaceAll('e.message','(["SyntaxError","TypeError","RangeError"].includes(e.name)?'+JSON.stringify(errors[i])+':e.message)');
   if(slug==='field-sla-acceptance-matrix')html=html.replace('+verified,','+(verified?'+JSON.stringify(yes[i])+':'+JSON.stringify(no[i])+'),');
   html=require('./harden-ai-evidence-review.cjs').harden(html,slug,i);
+  html=require('./complete-ai-evidence-fallbacks.cjs').complete(html,slug,i);
   fs.writeFileSync(p,html);
  }
 }
