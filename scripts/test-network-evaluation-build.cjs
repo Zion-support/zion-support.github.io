@@ -7,7 +7,7 @@ let checks=0;const ok=(v,m)=>{assert(v,m);checks++;};const dirs=[];
 const write=(root,rel,text)=>{const f=path.join(root,rel);fs.mkdirSync(path.dirname(f),{recursive:true});fs.writeFileSync(f,text);};
 function fixture(){
  const root=fs.mkdtempSync(path.join(os.tmpdir(),'zion-evaluation-build-'));dirs.push(root);
- for(const f of ['prepare-pages-out.sh','render-network-evaluation.cjs','test-network-evaluation.cjs','bootstrap-network-evaluation.cjs','verify-network-evaluation-artifact.cjs']){fs.mkdirSync(path.join(root,'scripts'),{recursive:true});fs.copyFileSync(path.join(__dirname,f),path.join(root,'scripts',f));}
+ for(const f of ['prepare-pages-out.sh','render-network-evaluation.cjs','render-network-tool-paths.cjs','test-network-evaluation.cjs','bootstrap-network-evaluation.cjs','verify-network-evaluation-artifact.cjs']){fs.mkdirSync(path.join(root,'scripts'),{recursive:true});fs.copyFileSync(path.join(__dirname,f),path.join(root,'scripts',f));}
  for(const [l,c] of Object.entries(copy)){
   const body='<a href="/preserved/">Existing link</a><form action="/unchanged"><input name="example"></form><script>const unchanged=true;</script>';
   const content=l==='pt'?body+'<footer>Existing footer</footer>':'<main>'+body+'</main>';

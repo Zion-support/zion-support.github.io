@@ -34,6 +34,7 @@ function bootstrap(root='out'){
    }
   }
   render(stage);
+  require('./render-network-tool-paths.cjs').render(stage);
   for(const p of plans){const after=fs.readFileSync(p.staged,'utf8');if(p.before!==null){assert.deepEqual(blocks(after),blocks(p.before),'Protected blocks changed');for(const u of hrefs(p.before))assert(hrefs(after).includes(u),`Removed existing href ${u}`);assert.equal((after.match(/<head\b[\s\S]*?<\/head>/i)||[])[0],(p.before.match(/<head\b[\s\S]*?<\/head>/i)||[])[0],'Existing SEO changed');}p.after=after;}
   // Preflight all ten staged pages before writing any artifact destination.
   for(const p of plans){fs.mkdirSync(path.dirname(p.file),{recursive:true});fs.writeFileSync(p.file,p.after);}
@@ -44,3 +45,4 @@ function bootstrap(root='out'){
 }
 module.exports={bootstrap,guide,home};
 if(require.main===module)console.log(JSON.stringify(bootstrap(process.argv[2]||'out')));
+
