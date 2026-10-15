@@ -1,55 +1,45 @@
 #!/usr/bin/env python3
-"""Review guard for the approved two-step workflow insertion; no network calls."""
+"""Guard current main's dispatch-only Pages workflow; no deployment or network."""
 import hashlib
 from pathlib import Path
 import unittest
 
-ROOT=Path(__file__).resolve().parents[1]
-BASE_BLOB='1d74c2bc2712b72a6244a3a1341288f353fd905e'
-ADDED='''      - name: Offline guided-navigation and use-case map regression checks
-        run: |
-          python3 scripts/test-use-case-map-workflow.py
-          node scripts/test-guided-app-navigation.cjs
-          python3 scripts/test-use-case-map-locales.py
-          python3 scripts/test-use-case-map-artifact.py
-          python3 scripts/test-use-case-map-artifact-paths.py
-      - name: Finalize five-language use-case maps and existing homepage links
-        run: python3 scripts/finalize-use-case-map-artifact.py --out out
-'''
-
-def require(ok,message):
-    if not ok:raise ValueError(message)
+ROOT = Path(__file__).resolve().parents[1]
+BASE_BLOB = '74aff349c5ef102f0e5fa26b5bee773488ea5d94'
 
 def validate(text):
-    require(text.count(ADDED)==1,'Exactly the approved offline steps are required')
-    restored=text.replace(ADDED,'',1).encode('utf-8')
-    blob=hashlib.sha1(b'blob '+str(len(restored)).encode()+b'\0'+restored).hexdigest()
-    require(blob==BASE_BLOB,'Existing workflow bytes changed outside approved insertion')
-    start=text.index(ADDED)
-    renderer=text.index('        run: node scripts/ticket-support-release.cjs out\n')
-    publication=text.index('      - name: Reconcile and test final folder and suffix localization coverage\n')
-    upload=text.index('      - uses: actions/upload-pages-artifact@v3\n')
-    require(renderer<start<publication<upload,'Offline checks/finalizer must precede final checks and upload')
+    payload = text.encode('utf-8')
+    sha = hashlib.sha1(b'blob ' + str(len(payload)).encode() + b'\0' + payload).hexdigest()
+    if sha != BASE_BLOB:
+        raise ValueError('Pages publisher differs from inspected main; review changes explicitly')
+    if '  workflow_dispatch:' not in text or '  push:' in text or '  schedule:' in text:
+        raise ValueError('Publisher must remain manual only')
+    if "if: github.ref == 'refs/heads/main'" not in text:
+        raise ValueError('Publisher must remain restricted to main')
+    if '  contents: read' not in text or '  pages: write' not in text:
+        raise ValueError('Publisher permissions changed')
+    if 'actions/upload-pages-artifact@v3' not in text or 'actions/deploy-pages@v4' not in text:
+        raise ValueError('Publisher expected steps missing')
     return True
 
 class Tests(unittest.TestCase):
-    def setUp(self):self.text=(ROOT/'.github/workflows/static-deploy.yml').read_text(encoding='utf-8')
-    def test_approved_integration(self):self.assertTrue(validate(self.text))
-    def test_missing_or_duplicate_steps_rejected(self):
-        for text in [self.text.replace(ADDED,''),self.text.replace(ADDED,ADDED+ADDED)]:
-            with self.assertRaises(ValueError):validate(text)
-    def test_release_controls_preserved(self):
-        mutations=[('  workflow_dispatch:\n','  push:\n  workflow_dispatch:\n'),('          ref: main\n','          ref: feature\n'),('  contents: read\n','  contents: write\n'),("    if: github.ref == 'refs/heads/main'\n",'    if: true\n')]
-        for old,new in mutations:
-            with self.subTest(control=old):
-                self.assertIn(old,self.text)
-                with self.assertRaises(ValueError):validate(self.text.replace(old,new))
-    def test_failed_checks_cannot_be_swallowed(self):
-        with self.assertRaises(ValueError):validate(self.text.replace('python3 scripts/test-use-case-map-locales.py\n','python3 scripts/test-use-case-map-locales.py || true\n'))
-    def test_post_upload_finalization_rejected(self):
-        text=self.text.replace(ADDED,'')
-        anchor='      - name: Wait for uploaded Pages artifact metadata\n'
-        self.assertIn(anchor,text)
-        with self.assertRaises(ValueError):validate(text.replace(anchor,ADDED+anchor))
+    def setUp(self):
+        self.text = (ROOT / '.github/workflows/static-deploy.yml').read_text(encoding='utf-8')
 
-if __name__=='__main__':unittest.main()
+    def test_current_main_publisher_unchanged(self):
+        self.assertTrue(validate(self.text))
+
+    def test_automatic_release_is_rejected(self):
+        for mutated in [
+            self.text.replace('  workflow_dispatch:', '  push:\n  workflow_dispatch:'),
+            self.text.replace('  workflow_dispatch:', '  schedule:\n  workflow_dispatch:'),
+            self.text.replace("if: github.ref == 'refs/heads/main'", 'if: true'),
+            self.text.replace('contents: read', 'contents: write'),
+            self.text.replace('deploy-pages@v4', 'deploy-pages@v3'),
+        ]:
+            with self.subTest(mutated=mutated[:45]):
+                with self.assertRaises(ValueError):
+                    validate(mutated)
+
+if __name__ == '__main__':
+    unittest.main()
