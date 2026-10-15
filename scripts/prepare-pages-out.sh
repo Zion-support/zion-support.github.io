@@ -44,7 +44,7 @@ for sub in solutions/healthcare industries/financial-services tools/phishing-ana
     fi
     # Ensure the parent dir exists (may have just been created from a file move, or
     # may still be missing if public/<parent>/ was never populated for this sub).
-    if [ ! -d "out/$parent" ]; then
+    if [ ! -d "out/$parent>" ]; then
       mkdir -p "out/$parent"
     fi
     cp -a "docs/$sub" "out/$parent/"
@@ -128,10 +128,9 @@ assert_family_a_home() {
     echo "ERROR: out/index.html contains /_next/ (broken Next shell)" >&2
     exit 1
   fi
-  if ! grep -Fq 'Discovery $99' "$f"; then
-    echo "ERROR: out/index.html missing Family A marker Discovery \$99" >&2
-    exit 1
-  fi
+  # Approved policy reconciliation: Discovery remains free; all other guards stay.
+  python3 scripts/test-free-discovery-home.py
+  python3 scripts/assert-free-discovery-home.py "$f"
   if ! grep -Fq '/assets/css/site.css' "$f"; then
     echo "ERROR: out/index.html missing /assets/css/site.css" >&2
     exit 1

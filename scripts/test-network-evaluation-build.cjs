@@ -7,11 +7,11 @@ let checks=0;const ok=(v,m)=>{assert(v,m);checks++;};const dirs=[];
 const write=(root,rel,text)=>{const f=path.join(root,rel);fs.mkdirSync(path.dirname(f),{recursive:true});fs.writeFileSync(f,text);};
 function fixture(){
  const root=fs.mkdtempSync(path.join(os.tmpdir(),'zion-evaluation-build-'));dirs.push(root);
- for(const f of ['prepare-pages-out.sh','render-network-evaluation.cjs','render-network-tool-paths.cjs','test-network-evaluation.cjs','bootstrap-network-evaluation.cjs','verify-network-evaluation-artifact.cjs']){fs.mkdirSync(path.join(root,'scripts'),{recursive:true});fs.copyFileSync(path.join(__dirname,f),path.join(root,'scripts',f));}
+ for(const f of ['prepare-pages-out.sh','assert-free-discovery-home.py','test-free-discovery-home.py','render-network-evaluation.cjs','render-network-tool-paths.cjs','test-network-evaluation.cjs','bootstrap-network-evaluation.cjs','verify-network-evaluation-artifact.cjs']){fs.mkdirSync(path.join(root,'scripts'),{recursive:true});fs.copyFileSync(path.join(__dirname,f),path.join(root,'scripts',f));}
  for(const [l,c] of Object.entries(copy)){
   const body='<a href="/preserved/">Existing link</a><form action="/unchanged"><input name="example"></form><script>const unchanged=true;</script>';
   const content=l==='pt'?body+'<footer>Existing footer</footer>':'<main>'+body+'</main>';
-  write(root,'public'+home(l)+'index.html',`<!doctype html><html lang="${c.lang}"><head><link rel="stylesheet" href="/assets/css/site.css"><title>Existing SEO</title></head><body>Discovery $99${content}</body></html>`);
+  write(root,'public'+home(l)+'index.html',`<!doctype html><html lang="${c.lang}"><head><link rel="stylesheet" href="/assets/css/site.css"><title>Existing SEO</title></head><body><a href="/discovery/">Free Discovery</a>${content}</body></html>`);
  }
  for(const rel of ['services/ai-automation/index.html','plans/index.html','discovery/index.html'])write(root,'public/'+rel,'7sY00k7JScFV99Bf044ZG06<!--'+'x'.repeat(5200)+'-->');
  write(root,'public/managed-it-services/index.html','proof-fgv SDCOMPRASTIC-6963');write(root,'public/autonomous-ai-agents/index.html','Existing scope');return root;
@@ -35,5 +35,9 @@ try{
  negative(out=>{const f=path.join(out,'de/index.html');fs.writeFileSync(f,fs.readFileSync(f,'utf8').replace('lang="de"','lang="en"'));},/Wrong bootstrap language/);
  negative(out=>{const f=path.join(out,'en/index.html');fs.writeFileSync(f,fs.readFileSync(f,'utf8').replace('</head>','<meta http-equiv="refresh" content="0;url=/"></head>'));},/Refuse redirect/);
  negative(out=>{const f=path.join(out,'en/index.html');fs.writeFileSync(f,fs.readFileSync(f,'utf8').replace('</body>','<p id="network-start-title">Conflict</p></body>'));},/Conflicting homepage anchor/);
+ function gateFailure(change,pattern){const r=fixture();change(r);const result=run(r);ok(result.status!==0&&pattern.test(result.stderr),'Unapproved source fails retained gate');ok(!fs.existsSync(path.join(r,'out/apps/network-start-here.html')),'No guide publication before gates');}
+ gateFailure(r=>{const f=path.join(r,'public/index.html');write(r,'public/index.html',fs.readFileSync(f,'utf8').replace('</body>','<p>Discovery $99</p></body>'));},/Paid Discovery claim/);
+ gateFailure(r=>{const f=path.join(r,'public/index.html');write(r,'public/index.html',fs.readFileSync(f,'utf8').replace('<a href="/discovery/">Free Discovery<\/a>','No free CTA'));},/Missing visible free CTA/);
+ gateFailure(r=>write(r,'public/managed-it-services/index.html','No approved proof supplied'),/missing #proof-fgv/);
  console.log(`PASS network build integration: ${checks} assertions; synthetic full shell fixture, no live deployment.`);
 }finally{for(const d of dirs)fs.rmSync(d,{recursive:true,force:true});}
