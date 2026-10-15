@@ -8,7 +8,9 @@ const paths=[
  'scripts/finalize-ai-evidence-accessibility.cjs',
  'scripts/test-ai-evidence-fallbacks.cjs',
  'scripts/test-ai-evidence-navigation.cjs',
- 'scripts/test-ai-evidence-ci-contract.cjs'
+ 'scripts/test-ai-evidence-ci-contract.cjs',
+ 'scripts/guard-ai-evidence-review-paths.cjs',
+ 'scripts/test-ai-evidence-review-paths.cjs'
 ];
 function validate(text){
  for(const p of paths)assert.ok(text.includes("      - '"+p+"'"),'Missing PR path: '+p);

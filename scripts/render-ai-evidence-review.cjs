@@ -6,6 +6,7 @@ const graphLabels=['Dependency JSON','JSON de dependências','JSON de dependenci
 const errors=['Invalid JSON or value; check the documented format.','JSON ou valor inválido; verifique o formato documentado.','JSON o valor no válido; revise el formato documentado.','JSON ou valeur invalide ; vérifiez le format documenté.','Ungültiges JSON oder ungültiger Wert; dokumentiertes Format prüfen.'];
 const yes=['yes','sim','sí','oui','ja'],no=['no','não','no','non','nein'];
 function render(source,out){
+ require('./guard-ai-evidence-review-paths.cjs').assertReviewOutput(source,out);
  base.render(source,out);
  for(let i=0;i<5;i++)for(const slug of base.slugs){
   const p=path.join(out,i===0?'': ['','pt','es','fr','de'][i],slug,'index.html');

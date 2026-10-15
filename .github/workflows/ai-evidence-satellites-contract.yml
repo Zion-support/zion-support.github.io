@@ -17,6 +17,8 @@ on:
       - 'scripts/test-ai-evidence-fallbacks.cjs'
       - 'scripts/test-ai-evidence-navigation.cjs'
       - 'scripts/test-ai-evidence-ci-contract.cjs'
+      - 'scripts/guard-ai-evidence-review-paths.cjs'
+      - 'scripts/test-ai-evidence-review-paths.cjs'
       - '.github/workflows/ai-evidence-satellites-contract.yml'
   workflow_dispatch:
 
