@@ -44,7 +44,7 @@ for sub in solutions/healthcare industries/financial-services tools/phishing-ana
     fi
     # Ensure the parent dir exists (may have just been created from a file move, or
     # may still be missing if public/<parent>/ was never populated for this sub).
-    if [ ! -d "out/$parent>" ]; then
+    if [ ! -d "out/$parent" ]; then
       mkdir -p "out/$parent"
     fi
     cp -a "docs/$sub" "out/$parent/"
