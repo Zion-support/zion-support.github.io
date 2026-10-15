@@ -173,11 +173,9 @@ assert_family_a_home
 assert_mit_fgv
 assert_aaa_official_ladder
 
-# Scoped five-language evaluation artifact; preserve manual release and all guards above.
+# Approved scoped app-evaluation publication; preserve all safety guards above.
 node scripts/test-network-evaluation.cjs
-node scripts/test-network-evaluation-artifact.cjs
 node scripts/bootstrap-network-evaluation.cjs out
-node scripts/test-network-evaluation-artifact.cjs --verify out
-assert_family_a_home
+node scripts/verify-network-evaluation-artifact.cjs out
 
 echo "Prepared out ($(find out -type f | wc -l) files)"

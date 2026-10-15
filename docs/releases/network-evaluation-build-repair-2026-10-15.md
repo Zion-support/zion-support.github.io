@@ -1,24 +1,29 @@
-# Network evaluation build integration — approved draft repair
+# Evaluation build-path repair — draft, not deployed
 
-This continuation supersedes the integration assumptions in `network-evaluation-2026-10-15.md`. PR71599 remains DRAFT, not merged or deployed.
+Supersedes the earlier draft's integration assumption, not its scoped translation/unit-test evidence.
 
-## Implemented
+## Actual entrypoint
 
-The actual manual Pages workflow invokes `scripts/prepare-pages-out.sh`, not the historical broad homepage renderer. The preparation script now runs the 92-assertion evaluation unit suite and 48-assertion bootstrap suite, creates and verifies the scoped ten-page artifact, and rechecks the original homepage guard. All original guards, workflow dispatch/main-only restriction, permissions and publish steps are unchanged.
+The inspected manual, main-only Pages workflow calls `scripts/prepare-pages-out.sh`, which did not invoke the older homepage renderer. Appending only to `render-network-home-ad.cjs` could not publish the evaluation content. The guide prerequisites and owned promotion were absent from the inspected public source.
 
-`scripts/bootstrap-network-evaluation.cjs` stages every change before touching its destination. Missing guide editions are generated with full translated editorial bodies, canonical/six alternate links, five-language navigation and responsive/focus styles. An existing guide is preserved and enriched. Missing homepage promotions are created once; existing owned promotions are retained and extended. Actual homepages with no main element use a footer/body boundary without rewriting their layout. Only five guide pages, five homepages and one deterministic hash manifest are written. There is no broad pipeline restoration or arbitrary repository scan.
+This repair adds three scoped scripts and five lines to the actual preparation shell after all existing safety guards: run the existing 92-assertion unit suite, bootstrap the ten evaluation pages, and verify the output. The workflow, triggers, permissions, gates, DNS and other drafts are unchanged.
 
-## Evidence
+## Self-contained prerequisites
 
-- `node scripts/test-network-evaluation.cjs`: 92 assertions passed.
-- `node scripts/test-network-evaluation-artifact.cjs`: 48 assertions passed, including absent guide prerequisites, all five locales, preservation of entire original homepage content outside the owned addition, no-main layout, repeat-byte parity including manifest, and fail-before-write negative cases.
-- `node scripts/test-network-evaluation-prepare.cjs`: 18 assertions passed by invoking the actual modified preparation script with synthetic supporting routes. Confirms all five unseeded guides are generated, sources remain untouched, a second preparation is identical, original money guards still reject stubs, and a missing locale fails closed. Do not invoke this preparation test from the preparation script itself.
-- Independent scoped bootstrap test used all five actual homepage bodies read at dea09c3. Every original byte was retained outside the new owned promotion. The fixture supporting money/proof pages were synthetic; this is not a full-repository build or live browser evidence.
+`bootstrap-network-evaluation.cjs` creates a missing guide in EN/pt-BR/ES/FR/DE with canonical, reciprocal alternate links, language selector and existing fully localized evaluation copy. Existing guides are preserved and extended rather than replaced. A missing owned homepage promotion is created once inside main, or before the footer for legacy no-main homepages; existing promotions are reused. The original finalizer adds the checklist and reciprocal links. No broad historical renderer pipeline is restored.
 
-## Remaining release blockers — do not bypass
+All ten pages are staged and validated before destination writes. Existing SEO head, script/form blocks and every existing href must be retained. No data collection, AI inference, local storage, email delivery, pricing, checkout, commercial-copy or operational-dispatch behavior is added or changed.
 
-Running preparation against the actual Portuguese homepage body stops at the pre-existing `Discovery $99` Family A marker guard. That source instead advertises free Discovery. Neither source commercial copy nor the guard was changed. The scoped bootstrap passes against that actual body independently; the real preparation path correctly remains blocked until an owner-reviewed source/guard decision. Do not insert a fake paid marker or relax the guard to force publication.
+## Verification
 
-The prior Cloudflare Workers check failed on both base and draft; its GitHub output supplies dashboard links, not root-cause logs. This repair does not claim to fix Cloudflare configuration or make all CI green. Exact-head CI, full-source build, editorial/mobile/keyboard review, explicit release approval and fresh post-deploy HTTP/browser checks are still required.
+- Original 92 synthetic unit assertions pass.
+- New build-integration suite: 42 assertions pass with no preseeded guides/promotions, the real preparation shell, legacy no-main Portuguese fixture, clean repeat builds and negative tests for missing/wrong-language/redirect/conflicting-anchor input. Money guards remain active and prevent generation when they fail.
+- Artifact verifier: 85 checks pass for five generated guide editions and their five matching homepage CTAs.
+- Bootstrap and verifier also pass on all five exact retrieved homepage source bodies, independently of the build shell, with existing SEO/forms/scripts/hrefs preserved. Repeat generation is safe.
+- Node/Bash syntax checks pass. These are local fixture/scoped-source checks, not complete production build or live/browser/native-speaker/accessibility certification.
 
-No new public-source commercial content, price, checkout URL, form, script, DNS, deployment trigger or other draft was rewritten. No email, form submission, purchase, booking or dispatch was made. Full-network translations, interlinks and independent-app capability checks remain unfinished.
+## Independent release blockers
+
+Running the real preparation shell with the retrieved Portuguese homepage stops at its pre-existing `Discovery $99` marker guard. The actual source has Free Discovery copy, no exact paid marker, and no main element. Bootstrap now supports the legacy layout, but this repair intentionally neither changes commercial copy nor weakens the safety guard. Owner decision is required to reconcile that mismatch before publication.
+
+Cloudflare Workers check failed on both parent and original draft. GitHub provides a dashboard build link, not an error log; root cause remains undiagnosed. Full-repository CI, owner review, the commercial guard mismatch, authorized release and fresh live checks remain open. PR71599 stays draft/unmerged; no deployment was performed.
