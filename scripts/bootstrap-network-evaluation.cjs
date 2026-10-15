@@ -1,6 +1,7 @@
 'use strict';
 // Scoped artifact bootstrap: ten pages only; never changes public sources.
 const fs=require('node:fs'),path=require('node:path'),os=require('node:os'),assert=require('node:assert/strict');
+const crypto=require('node:crypto');
 const {render,copy,release}=require('./render-network-evaluation.cjs');
 const locales=Object.keys(copy),names={en:'English',pt:'Português',es:'Español',fr:'Français',de:'Deutsch'};
 const guide=l=>(l==='en'?'/':`/${l}/`)+'apps/network-start-here.html';
@@ -29,13 +30,15 @@ function bootstrap(root='out'){
       const anchor=/<\/main>/i.test(html)?/<\/main>/i:/<footer\b/i.test(html)?/<footer\b/i:/<\/body>/i;html=html.replace(anchor,m=>promo+m);
      }
     }
-    const staged=path.join(stage,url.slice(1));fs.mkdirSync(path.dirname(staged),{recursive:true});fs.writeFileSync(staged,html);plans.push({file,staged,before});
+    const staged=path.join(stage,url.slice(1));fs.mkdirSync(path.dirname(staged),{recursive:true});fs.writeFileSync(staged,html);plans.push({file,staged,before,url});
    }
   }
   render(stage);
   for(const p of plans){const after=fs.readFileSync(p.staged,'utf8');if(p.before!==null){assert.deepEqual(blocks(after),blocks(p.before),'Protected blocks changed');for(const u of hrefs(p.before))assert(hrefs(after).includes(u),`Removed existing href ${u}`);assert.equal((after.match(/<head\b[\s\S]*?<\/head>/i)||[])[0],(p.before.match(/<head\b[\s\S]*?<\/head>/i)||[])[0],'Existing SEO changed');}p.after=after;}
   // Preflight all ten staged pages before writing any artifact destination.
   for(const p of plans){fs.mkdirSync(path.dirname(p.file),{recursive:true});fs.writeFileSync(p.file,p.after);}
+  const report={release,pages:plans.map(p=>({path:p.url,sha256:crypto.createHash('sha256').update(p.after).digest('hex')}))};
+  const manifest=path.join(root,'apps/network-evaluation-publication.json');fs.mkdirSync(path.dirname(manifest),{recursive:true});fs.writeFileSync(manifest,JSON.stringify(report,null,2)+'\n');
   return {release,pages:plans.length,createdGuides:plans.filter(p=>p.before===null).length};
  }finally{fs.rmSync(stage,{recursive:true,force:true});}
 }

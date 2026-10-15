@@ -1,9 +1,11 @@
 'use strict';
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
+const crypto=require('node:crypto');
 const {copy,release}=require('./render-network-evaluation.cjs');
 const {guide,home}=require('./bootstrap-network-evaluation.cjs');
 const esc=s=>s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function verify(root='out'){
+ const report=JSON.parse(fs.readFileSync(path.join(root,'apps/network-evaluation-publication.json'),'utf8'));assert.equal(report.pages.length,10);for(const p of report.pages){assert.equal(crypto.createHash('sha256').update(fs.readFileSync(path.join(root,p.path.slice(1)))).digest('hex'),p.sha256,'Stale publication hash '+p.path);}
  let checks=0;const ok=(v,m)=>{assert(v,m);checks++;};
  for(const [l,c] of Object.entries(copy)){
   const g=fs.readFileSync(path.join(root,guide(l).slice(1)),'utf8'),h=fs.readFileSync(path.join(root,`${home(l)}index.html`.slice(1)),'utf8');
