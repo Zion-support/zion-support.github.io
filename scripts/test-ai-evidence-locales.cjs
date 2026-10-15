@@ -33,3 +33,43 @@ for(let i=0;i<5;i++){
  });
 }
 test('repeated render is byte-idempotent and manifest cannot claim live',()=>{const digest=()=>{const files=[];function walk(d){for(const ent of fs.readdirSync(d,{withFileTypes:true})){const p=path.join(d,ent.name);if(ent.isDirectory())walk(p);else files.push(p);}}walk(output);return files.sort().map(p=>[path.relative(output,p),crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex')]);};const first=digest();review.render(SOURCE,output);assert.deepEqual(digest(),first);const manifest=JSON.parse(fs.readFileSync(path.join(output,'ai-evidence-locales-review.json')));assert.equal(manifest.pages,15);assert.equal(manifest.homepageFragments,5);assert.equal(manifest.productionIntegrated,false);assert.equal(manifest.status,'review-only-not-live');});
+
+
+// Independent release-gate and complete-cost regressions across all review locales.
+for (let i = 0; i < base.locales.length; i++) {
+  test(base.locales[i] + ' each missing written gate independently prevents readiness', async () => {
+    const b = boot('field-sla-acceptance-matrix', i), {el} = b;
+    const gates = ['parts', 'siteaccess', 'client', 'po', 'zion'];
+    function ready() {
+      el('techs').value = '1'; el('skill').value = 'yes'; el('verified').value = 'yes';
+      for (const id of gates) el(id).checked = true;
+      el('assess').click();
+      assert.ok(el('result').textContent.startsWith(msg('EVIDENCE PRESENT - manual final verification still required', i)));
+    }
+    for (const id of gates) {
+      ready(); el(id).checked = false; el('assess').click();
+      assert.ok(el('result').textContent.startsWith('HOLD'), id + ' must independently block readiness');
+      el('copy').click(); await Promise.resolve();
+      assert.ok(b.copied().includes('HOLD'), id + ' must not export the prior positive state');
+      assert.ok(b.copied().includes(msg('No client quotation or dispatch authorization implied.', i)));
+    }
+    for (const [id, value] of [['skill', 'no'], ['techs', '0']]) {
+      ready(); el(id).value = value; el('assess').click();
+      assert.ok(el('result').textContent.startsWith('HOLD'), id + ' must independently block readiness');
+    }
+  });
+  test(base.locales[i] + ' internal markup includes documented extras and never authorizes a quote', async () => {
+    const b = boot('field-sla-acceptance-matrix', i), {el} = b;
+    el('verified').value = 'yes'; el('vendor').value = '620'; el('extras').value = '80'; el('assess').click();
+    const amount = value => Number(value).toLocaleString(base.locales[i], {minimumFractionDigits: 2, maximumFractionDigits: 2});
+    assert.ok(el('commercial').textContent.includes(amount(980)), 'all-in 700 x 1.40, not base-only 620 x 1.40');
+    assert.ok(el('result').textContent.startsWith('HOLD'));
+    el('copy').click(); await Promise.resolve();
+    assert.ok(b.copied().includes(msg('No client quotation or dispatch authorization implied.', i)));
+    el('extras').value = '0'; el('assess').click();
+    assert.ok(el('commercial').textContent.includes(amount(868)), 'removing extras recalculates from current inputs');
+    el('verified').value = 'no'; el('assess').click();
+    assert.ok(!el('commercial').textContent.includes(amount(868)), 'unverified costs cannot keep the old indicative price');
+    assert.ok(el('commercial').textContent.includes(msg('Price blocked: written, current all-in vendor terms and itemization not confirmed.', i)));
+  });
+}
