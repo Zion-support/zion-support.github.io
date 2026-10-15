@@ -131,16 +131,31 @@ for (const spec of pages) {
       }
     }
   }
-  if (!validate(html + '<a href=data:text/html,test>fixture</a>', spec).includes('placeholder/unsafe link')) {
-    console.error('FAIL unquoted unsafe URI fixture'); errors++;
+  // Exercise the extractor as well as allowedHref; allowed links must not
+  // accidentally fail another rule or disappear during attribute parsing.
+  for (const href of safeHrefs) {
+    for (const anchor of [`<a href="${href}">fixture</a>`, `<a href = '${href}'>fixture</a>`]) {
+      const issues = validate(html + anchor, spec);
+      if (issues.length) {
+        console.error('FAIL safe URI integration fixture: ' + JSON.stringify(href) + ': ' + issues.join(', '));
+        errors++;
+      }
+    }
+  }
+  // HTML unquoted attributes cannot contain whitespace or quote/equal/angle/
+  // backtick characters. Do not manufacture invalid HTML for this matrix.
+  for (const href of unsafeHrefs.filter(value => value && !/[\s"'=<>`]/.test(value))) {
+    if (!validate(html + `<a href=${href}>fixture</a>`, spec).includes('placeholder/unsafe link')) {
+      console.error('FAIL unquoted unsafe URI fixture: ' + JSON.stringify(href)); errors++;
+    }
   }
 
   // Built-in negative fixtures prove the checks reject regressions.
-  if (!validate(html.replace('id="main"', 'id="removed-main"'), spec).length) {
+  if (!validate(html.replace('id="main"', 'id="removed-main"'), spec).includes('main landmark')) {
     console.error('FAIL negative fixture: missing main accepted');
     errors++;
   }
-  if (!validate(html.replace('href="#main"', 'href="#missing-destination"'), spec).length) {
+  if (!validate(html.replace('href="#main"', 'href="#missing-destination"'), spec).includes('broken fragment: #missing-destination')) {
     console.error('FAIL negative fixture: broken skip link accepted');
     errors++;
   }
