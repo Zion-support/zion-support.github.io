@@ -55,3 +55,6 @@ require('./test-sales-revenue.cjs');
 
 // Approved Mining promotion consolidation; preserve all prior renderer hooks.
 require('./render-mining-catalog.cjs');
+
+// Approved five-language app selection and matching-locale registry promotion.
+require('./render-app-selection.cjs');

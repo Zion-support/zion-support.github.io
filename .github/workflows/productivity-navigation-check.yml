@@ -1,17 +1,7 @@
 name: Productivity navigation scoped contract
 on:
   pull_request:
-    paths:
-      - 'scripts/render-legacy-three-locales.cjs'
-      - 'scripts/render-productivity-incident-locales.cjs'
-      - 'scripts/render-productivity-workflow-links.cjs'
-      - 'scripts/render-network-home-bridge.cjs'
-      - 'scripts/test-network-home-bridge.cjs'
-      - 'scripts/render-productivity-navigation.cjs'
-      - 'scripts/test-productivity-navigation.cjs'
-      - 'scripts/test-productivity-pipeline.cjs'
-      - '.github/workflows/static-deploy.yml'
-      - '.github/workflows/productivity-navigation-check.yml'
+    paths: ['scripts/**', '.github/workflows/**']
 permissions:
   contents: read
 jobs:
@@ -20,10 +10,11 @@ jobs:
     timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          persist-credentials: false
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - name: Test synthetic navigation contracts
-        run: node scripts/test-productivity-navigation.cjs
-      - name: Test ordered renderer chain and synthetic local-tool behavior
-        run: node scripts/test-productivity-pipeline.cjs
+      - run: node scripts/test-productivity-navigation.cjs
+      - run: node scripts/test-productivity-pipeline.cjs

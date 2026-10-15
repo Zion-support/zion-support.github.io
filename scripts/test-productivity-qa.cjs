@@ -1,55 +1,5 @@
 'use strict';
-const fs=require('node:fs'),path=require('node:path'),os=require('node:os'),assert=require('node:assert/strict'),nav=require('./render-productivity-navigation.cjs'),qa=require('./prepare-productivity-qa.cjs');
-// Fail explicitly if a concurrent renderer replacement breaks the shared QA API.
-function verifyRendererContract(renderer){
- for(const key of ['route','home','catalog','transform','protectedParts','plan','apply','render'])assert.equal(typeof renderer[key],'function','Required renderer export '+key);
- assert(Array.isArray(renderer.S)&&renderer.S.length===6,'Six resource slugs required');
- assert(Array.isArray(renderer.RELATED)&&renderer.RELATED.length===renderer.S.length,'One related-link row per resource required');
- assert.deepEqual(Object.keys(renderer.C),['en','pt','es','fr','de'],'Five explicit locale dictionaries required');
- for(const [locale,c] of Object.entries(renderer.C)){
-  assert.equal(c.lang,locale==='pt'?'pt-BR':locale,'Declared language for '+locale);
-  assert(Array.isArray(c.names)&&c.names.length===renderer.S.length,'Localized resource names for '+locale);
-  assert.equal(new URL(renderer.catalog(locale),'https://ziontechgroup.com').hash,'#'+locale,'Matching catalog anchor');
-  for(let i=0;i<renderer.S.length;i++){
-   assert.equal(renderer.route(locale,i),'/'+(locale==='en'?'':locale+'/')+renderer.S[i]+'/','Canonical resource route');
-   assert(renderer.RELATED[i].every(j=>Number.isInteger(j)&&j>=0&&j<renderer.S.length&&j!==i),'Valid related-resource indices');
-  }
- }
- return true;
-}
-verifyRendererContract(nav);
-for(const key of ['S','RELATED','transform','catalog','apply']){
- const broken={...nav};delete broken[key];assert.throws(()=>verifyRendererContract(broken),'Missing '+key+' must reject');
-}
-const wrongLocale={...nav,C:{...nav.C,de:{...nav.C.de,lang:'en'}}};assert.throws(()=>verifyRendererContract(wrongLocale),'Wrong locale must reject');
-const wrongRoute={...nav,route:()=>'/wrong/'};assert.throws(()=>verifyRendererContract(wrongRoute),'Wrong resource route must reject');
-const wrongRelated={...nav,RELATED:nav.RELATED.map(row=>row.slice())};wrongRelated.RELATED[0]=[0];assert.throws(()=>verifyRendererContract(wrongRelated),'Self-link must reject');
-console.log('PASS renderer API contract: five locales/six resources/eight function exports; eight negative controls.');
-const tmp=fs.mkdtempSync(path.join(os.tmpdir(),'productivity-qa-test-'));let n=0;
-try{const out=path.join(tmp,'out');function write(url,text){const f=path.join(out,url.slice(1),'index.html');fs.mkdirSync(path.dirname(f),{recursive:true});fs.writeFileSync(f,text);return f;}
-let catalog='';for(const l of Object.keys(nav.C)){catalog+='<a id="'+l+'"></a>\n'+nav.S.map((s,i)=>'https://ziontechgroup.com'+nav.route(l,i)).join('\n')+'\n';for(let i=0;i<nav.S.length;i++){const h='<html lang="'+nav.C[l].lang+'"><head><link rel="canonical" href="https://ziontechgroup.com'+nav.route(l,i)+'"></head><body><main></main></body></html>';write(nav.route(l,i),nav.transform(h,l,i));}write(nav.home(l),'<html lang="'+nav.C[l].lang+'"><a href="'+nav.catalog(l)+'">catalog</a></html>');}
-const cf=path.join(tmp,'catalog.md');fs.writeFileSync(cf,catalog);const expected=qa.blob(Buffer.from(catalog));assert.equal(qa.validate(out,cf,expected).pages.length,35);n++;assert.throws(()=>qa.validate(out,cf,'invalid'));n++;assert.throws(()=>qa.catalogSections(catalog.replace('<a id="de"></a>','')));n++;assert.throws(()=>qa.catalogSections(catalog+'<a id="en"></a>'));n++;
-const late=path.join(out,'de',nav.S[5],'index.html'),before=fs.readFileSync(late,'utf8');fs.writeFileSync(late,before.replace('/de/ai-access-reviewer/','/es/ai-access-reviewer/'));assert.throws(()=>qa.validate(out,cf,expected));n++;fs.writeFileSync(late,before);const home=path.join(out,'fr','index.html');fs.writeFileSync(home,'<html lang="en"></html>');assert.throws(()=>qa.validate(out,cf,expected));n++;
-if(process.argv[2]){fs.writeFileSync(home,'<html lang="fr"><a href="'+nav.catalog('fr')+'">catalog</a></html>');const staged=qa.prepare(out,path.join(tmp,'good'),process.argv[2]);assert.equal(staged.pages.length,35);assert.equal(staged.files.length,35);n++;const first=path.join(out,nav.S[0],'index.html');fs.writeFileSync(first,fs.readFileSync(first,'utf8').replace('</head>','<script src="/assets/missing.js"></script></head>'));const bad=path.join(tmp,'bad');assert.throws(()=>qa.prepare(out,bad,process.argv[2]));assert(!fs.existsSync(bad));n++;
-// Safety regressions: dependency traversal must fail before writing a review artifact.
-const cleanFirst=fs.readFileSync(first,'utf8').replace('<script src="/assets/missing.js"></script>','');
-fs.writeFileSync(first,cleanFirst);
-assert.throws(()=>qa.prepare(out,path.join(tmp,'good'),process.argv[2]),/already exists/);n++;
-const asset=path.join(out,'assets');fs.mkdirSync(asset,{recursive:true});
-function rejectDependency(tag,name,pattern){
- fs.writeFileSync(first,cleanFirst.replace('</head>',tag+'</head>'));
- const dest=path.join(tmp,name);assert.throws(()=>qa.prepare(out,dest,process.argv[2]),pattern);assert(!fs.existsSync(dest),'Failed QA must not stage '+name);n++;fs.writeFileSync(first,cleanFirst);
-}
-const outside=path.join(tmp,'outside.js');fs.writeFileSync(outside,'/* outside artifact */');
-fs.symlinkSync(outside,path.join(asset,'escape.js'));
-rejectDependency('<script src="/assets/escape.js"></script>','symlink-rejected',/Symlink escapes artifact/);
-fs.writeFileSync(path.join(asset,'nested.css'),'body{background:url(./missing-image.png)}');
-rejectDependency('<link rel="stylesheet" href="/assets/nested.css">','css-dependency-rejected',/ENOENT/);
-fs.writeFileSync(path.join(asset,'module.mjs'),'import "./missing-module.mjs";');
-rejectDependency('<script type="module" src="/assets/module.mjs"></script>','module-dependency-rejected',/ENOENT/);
-fs.writeFileSync(path.join(asset,'missing-module.mjs'),'export const ready=true;');
-fs.writeFileSync(first,cleanFirst.replace('</head>','<script type="module" src="/assets/module.mjs"></script></head>'));
-const complete=qa.prepare(out,path.join(tmp,'module-complete'),process.argv[2]);assert(complete.files.some(f=>f.file==='assets/missing-module.mjs'),'Side-effect dependency retained');assert.equal(complete.files.length,37);n++;
-fs.writeFileSync(first,cleanFirst);
-}
-console.log('PASS productivity QA fixtures:'+n+' checks;wrong catalog bytes,missing/duplicate anchor,wrong-language owned link,wrong homepage; optional staging safety/dependency controls when catalog supplied.');}finally{fs.rmSync(tmp,{recursive:true,force:true});}
+const fs=require('node:fs'),path=require('node:path'),os=require('node:os'),assert=require('node:assert/strict'),qa=require('./prepare-productivity-qa.cjs'),contract=require('./productivity-qa-contract.cjs'),release=require('./render-productivity-release.cjs'),fixtures=require('./test-productivity-pipeline.cjs');
+function test(catalog){if(!catalog){console.log('SKIP artifact staging: supply the pinned catalog Markdown path; navigation and pipeline tests run separately.');return;}const tmp=fs.mkdtempSync(path.join(os.tmpdir(),'productivity-stage-')),out=path.join(tmp,'out');let n=0;try{fs.mkdirSync(out);fixtures.fixture(out);release.run(out);const r=qa.prepare(out,path.join(tmp,'good'),catalog);assert.equal(r.pages.length,35);assert.equal(r.ownedLinksChecked,315);n++;assert.throws(()=>qa.prepare(out,path.join(tmp,'good'),catalog));n++;const first=contract.disk(out,contract.route('en',contract.S[0])),clean=fs.readFileSync(first,'utf8'),assets=path.join(out,'assets');fs.mkdirSync(assets,{recursive:true});function reject(tag,name,re){fs.writeFileSync(first,clean.replace('</head>',tag+'</head>'));const dest=path.join(tmp,name);assert.throws(()=>qa.prepare(out,dest,catalog),re);assert(!fs.existsSync(dest),'Do not stage failed artifact');fs.writeFileSync(first,clean);n++;}
+reject('<script src="/assets/missing.js"></script>','missing',/ENOENT/);fs.writeFileSync(path.join(tmp,'outside.js'),'outside');fs.symlinkSync(path.join(tmp,'outside.js'),path.join(assets,'escape.js'));reject('<script src="/assets/escape.js"></script>','escape',/Symlink escapes artifact/);fs.writeFileSync(path.join(assets,'nested.css'),'body{background:url(./missing.png)}');reject('<link rel="stylesheet" href="/assets/nested.css">','css',/ENOENT/);fs.writeFileSync(path.join(assets,'module.mjs'),'import "./child.mjs";');reject('<script type="module" src="/assets/module.mjs"></script>','module',/ENOENT/);fs.writeFileSync(path.join(assets,'child.mjs'),'export const ready=true;');fs.writeFileSync(first,clean.replace('</head>','<script type="module" src="/assets/module.mjs"></script></head>'));const valid=qa.prepare(out,path.join(tmp,'complete'),catalog);assert(valid.files.some(f=>f.file==='assets/child.mjs'));n++;fs.writeFileSync(first,clean.replace('lang="en"','lang="fr"'));assert.throws(()=>qa.validate(out,catalog));n++;fs.writeFileSync(first,clean.replace('/agent-brief/','/fr/agent-brief/'));assert.throws(()=>qa.validate(out,catalog));n++;fs.writeFileSync(first,clean);const bad=path.join(tmp,'catalog.md');fs.writeFileSync(bad,fs.readFileSync(catalog,'utf8')+'drift');assert.throws(()=>qa.validate(out,bad));n++;assert.throws(()=>qa.catalogSections('<a id="en"></a>'));n++;const src=fs.readFileSync(catalog,'utf8');assert.throws(()=>qa.catalogSections(src+'<a id="en"></a>'));n++;const home=contract.disk(out,contract.home('de')),h=fs.readFileSync(home,'utf8');fs.writeFileSync(home,h.replace('id="app-paths-home"','id="wrong"'));assert.throws(()=>qa.validate(out,catalog));n++;console.log('PASS current-main artifact staging: '+n+' checks including side-effect imports, symlinks, catalog bytes, locales, anchors and no writes on failed staging.');}finally{fs.rmSync(tmp,{recursive:true,force:true});}}
+module.exports={test};if(require.main===module)test(process.argv[2]);

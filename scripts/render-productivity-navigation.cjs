@@ -1,55 +1,21 @@
 'use strict';
-// Additive navigation only: retain translated bodies, metadata and app behavior.
+// Additive localized navigation only: no runtime, form, recipient or price changes.
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
-const RELEASE='productivity-navigation-2026-10-13-v1';
-const S=['agent-brief','admissions-essay-reviewer','ai-access-reviewer','ai-email-drafter','ai-meeting-notes-copilot','ai-incident-response'];
-const RELATED=[[3,4],[0],[5,0],[0,4],[0,5],[2,4]];
+const RELEASE='productivity-navigation-2026-10-14-v1';
+const slugs=['agent-brief','admissions-essay-reviewer','ai-access-reviewer','ai-email-drafter','ai-meeting-notes-copilot','ai-incident-response'];
 const C={
- en:{lang:'en',heading:'Related resources',catalog:'Back to the catalog',home:'Back to the homepage',note:'Review each resource’s capabilities before continuing. These links are navigation only: they do not connect apps, transfer data or start autonomous work.',names:['Agent Brief','Admissions Essay Reviewer','AI Access Reviewer','AI Email Drafter','AI Meeting Notes Copilot','Incident Response']},
- pt:{lang:'pt-BR',heading:'Recursos relacionados',catalog:'Voltar ao catálogo',home:'Voltar à página inicial',note:'Confira as capacidades de cada recurso antes de continuar. Estes links são apenas navegação: não conectam apps, transferem dados nem iniciam trabalho autônomo.',names:['Briefing de agente','Revisão de redações de admissão','Revisão de acessos','Redator de e-mails','Copiloto de atas','Resposta a incidentes']},
- es:{lang:'es',heading:'Recursos relacionados',catalog:'Volver al catálogo',home:'Volver al inicio',note:'Compruebe las capacidades de cada recurso antes de continuar. Estos enlaces solo sirven para navegar: no conectan aplicaciones, transfieren datos ni inician trabajo autónomo.',names:['Brief de agente','Revisión de ensayos de admisión','Revisión de accesos','Redactor de correos','Copiloto de notas','Respuesta a incidentes']},
- fr:{lang:'fr',heading:'Ressources associées',catalog:'Retour au catalogue',home:'Retour à l’accueil',note:'Vérifiez les capacités de chaque ressource avant de continuer. Ces liens servent uniquement à la navigation : ils ne connectent pas les applications, ne transfèrent pas de données et ne lancent pas de travail autonome.',names:['Brief d’agent','Relecture de dissertations d’admission','Revue des accès','Rédacteur de courriels','Copilote de notes','Réponse aux incidents']},
- de:{lang:'de',heading:'Verwandte Ressourcen',catalog:'Zurück zum Katalog',home:'Zurück zur Startseite',note:'Prüfen Sie vor dem Fortfahren die Funktionen jeder Ressource. Diese Links dienen nur der Navigation: Sie verbinden keine Apps, übertragen keine Daten und starten keine autonome Arbeit.',names:['Agentenbriefing','Prüfung von Bewerbungsaufsätzen','Zugriffsprüfung','E-Mail-Entwürfe','Besprechungsnotizen','Reaktion auf Vorfälle']}
+en:{lang:'en',home:'/en/',title:'Choose a productivity or review resource',catalog:'Capabilities and worked example',back:'Return to homepage app paths',nav:'Catalog navigation',note:'Three local browser tools and three manual-review or planning guides. Check capabilities before using fictional or authorized sanitized inputs; no automatic integration, sending or guaranteed outcome.',names:['Agent Brief','Admissions Essay Reviewer','AI Access Reviewer','AI Email Drafter','AI Meeting Notes Copilot','Incident Response']},
+pt:{lang:'pt-BR',home:'/',title:'Escolha um recurso de produtividade ou revisão',catalog:'Capacidades e exemplo prático',back:'Voltar aos caminhos de apps na página inicial',nav:'Navegação do catálogo',note:'Três ferramentas locais no navegador e três guias de revisão manual ou planejamento. Confira as capacidades antes de usar dados fictícios ou anonimizados com autorização; sem integração automática, envio ou resultado garantido.',names:['Briefing de agente','Revisão de redações de admissão','Revisão de acessos','Redator de e-mails','Copiloto de atas','Resposta a incidentes']},
+es:{lang:'es',home:'/es/',title:'Elija un recurso de productividad o revisión',catalog:'Capacidades y ejemplo práctico',back:'Volver a los recursos de la página de inicio',nav:'Navegación del catálogo',note:'Tres herramientas locales del navegador y tres guías de revisión manual o planificación. Compruebe las capacidades antes de usar datos ficticios o anonimizados con autorización; sin integración automática, envío ni resultado garantizado.',names:['Brief de agente','Revisión de ensayos de admisión','Revisión de accesos','Redactor de correos','Copiloto de notas','Respuesta a incidentes']},
+fr:{lang:'fr',home:'/fr/',title:'Choisissez une ressource de productivité ou de relecture',catalog:'Capacités et exemple pratique',back:'Retour aux ressources de la page d’accueil',nav:'Navigation du catalogue',note:'Trois outils locaux dans le navigateur et trois guides de relecture manuelle ou de préparation. Vérifiez les capacités avant d’utiliser des données fictives ou anonymisées et autorisées ; aucune intégration automatique, expédition ni garantie de résultat.',names:['Brief d’agent','Relecture de dossiers d’admission','Revue des accès','Rédacteur de courriels','Copilote de réunion','Réponse aux incidents']},
+de:{lang:'de',home:'/de/',title:'Wählen Sie eine Produktivitäts- oder Prüfressource',catalog:'Funktionen und Praxisbeispiel',back:'Zurück zu den App-Pfaden auf der Startseite',nav:'Katalognavigation',note:'Drei lokale Browserwerkzeuge und drei Leitfäden zur manuellen Prüfung oder Planung. Prüfen Sie die Funktionen vor der Nutzung erfundener oder autorisiert anonymisierter Angaben; keine automatische Integration, kein Versand und keine Ergebnisgarantie.',names:['Agentenbriefing','Prüfung von Zulassungsessays','Zugriffsprüfung','E-Mail-Entwurf','Besprechungsnotizen','Incident Response']}
 };
-const START='<!--productivity-navigation:start-->',END='<!--productivity-navigation:end-->';
-const OWN=/<!--productivity-navigation:start-->[\s\S]*?<!--productivity-navigation:end-->/g;
-const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const route=(l,i)=>'/'+(l==='en'?'':l+'/')+S[i]+'/';
-const home=l=>l==='pt'?'/':'/'+l+'/';
-const catalog=l=>'/zion-app-network/CATALOG-PRODUCTIVITY-REVIEW.html#'+l;
-const protectedParts=h=>h.match(/<(head|form|script)\b[\s\S]*?<\/\1\s*>/gi)||[];
-function block(l,i){const c=C[l];return START+'<nav class="productivity-navigation" data-productivity-navigation="'+RELEASE+'" lang="'+c.lang+'" aria-labelledby="productivity-related-heading"><style>.productivity-navigation{margin:24px 0;padding:16px;border:1px solid #64748b;border-radius:10px;overflow-wrap:anywhere}.productivity-navigation ul{display:flex;flex-wrap:wrap;gap:12px 24px;padding-left:24px}.productivity-navigation a{color:inherit;text-decoration:underline}.productivity-navigation a:focus-visible{outline:3px solid #0284c7;outline-offset:4px}</style><h2 id="productivity-related-heading">'+esc(c.heading)+'</h2><p>'+esc(c.note)+'</p><ul>'+RELATED[i].map(j=>'<li><a href="'+route(l,j)+'">'+esc(c.names[j])+'</a></li>').join('')+'</ul><p><a href="'+catalog(l)+'">'+esc(c.catalog)+'</a> · <a href="'+home(l)+'">'+esc(c.home)+'</a></p></nav>'+END;}
-function transform(before,l,i){
- assert(C[l],'Unsupported locale');assert(Number.isInteger(i)&&S[i],'Unsupported resource');
- assert.equal((before.match(/<!--productivity-navigation:start-->/g)||[]).length,(before.match(OWN)||[]).length,'Malformed owned block');
- assert.equal((before.match(/<!--productivity-navigation:end-->/g)||[]).length,(before.match(OWN)||[]).length,'Malformed owned block');
- assert((before.match(OWN)||[]).length<=1,'Duplicate owned blocks');
- assert.equal((before.match(/<html\b[^>]*\blang=["']([^"']+)["']/i)||[])[1],C[l].lang,'Wrong document language');
- const canonical=[...before.matchAll(/<link\b[^>]*>/gi)].filter(m=>/\brel=["']canonical["']/i.test(m[0]));
- assert.equal(canonical.length,1,'One canonical required');
- assert.equal((canonical[0][0].match(/\bhref=["']([^"']+)["']/i)||[])[1],'https://ziontechgroup.com'+route(l,i),'Wrong canonical route');
- const base=before.replace(OWN,'');assert(!base.includes('id="productivity-related-heading"'),'Heading ID collision');
- assert.equal((base.match(/<main\b/gi)||[]).length,1,'One main required');assert.equal((base.match(/<\/main\s*>/gi)||[]).length,1,'One main close required');
- const after=base.replace(/<\/main\s*>/i,block(l,i)+'$&');
- assert.equal(after.replace(OWN,''),base,'Only owned insertion may change');
- assert.deepEqual(protectedParts(after),protectedParts(before),'Head/forms/scripts changed');
- return after;
-}
-function plan(out='out'){
- const changes=[];
- for(const l of Object.keys(C))for(let i=0;i<S.length;i++){
-  const file=path.join(out,route(l,i).slice(1),'index.html'),before=fs.readFileSync(file,'utf8'),after=transform(before,l,i);
-  assert.equal(transform(after,l,i),after,'Byte idempotence');
-  for(const j of RELATED[i])assert(fs.existsSync(path.join(out,route(l,j).slice(1),'index.html')),'Missing related destination');
-  changes.push({file,before,after,locale:C[l].lang,url:route(l,i),catalog:catalog(l),home:home(l)});
- }
- return changes;
-}
-function apply(changes){for(const p of changes)assert.equal(fs.readFileSync(p.file,'utf8'),p.before,'Input changed after validation');for(const p of changes)fs.writeFileSync(p.file,p.after);}
-function render(out='out'){
- const changes=plan(out);apply(changes);
- const report={release:RELEASE,pages:changes.map(({locale,url,catalog,home})=>({locale,url,catalog,home})),scope:'Thirty related-resource blocks only; no runtime, form or metadata changes. Not full-network or native-editorial certification.',fullNetworkComplete:false};
- fs.mkdirSync(path.join(out,'apps'),{recursive:true});fs.writeFileSync(path.join(out,'apps/productivity-navigation-release.json'),JSON.stringify(report,null,2)+'\n');return report;
-}
-module.exports={RELEASE,S,RELATED,C,route,home,catalog,block,transform,protectedParts,plan,apply,render};
-if(require.main===module){render(process.argv[2]||'out');console.log('PASS '+RELEASE+': 30 validated, byte-idempotent navigation blocks.');}
+const esc=s=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;');
+const route=(l,s)=>(l==='en'?'/':'/'+l+'/')+s+'/';
+const disk=(out,u)=>path.join(out,u.replace(/^\//,'')+'index.html');
+const re=/<!--productivity-navigation:start-->[\s\S]*?<!--productivity-navigation:end-->/g;
+const protectedParts=h=>h.match(/<(?:form|script)\b[\s\S]*?<\/(?:form|script)>/gi)||[];
+function block(l,current=''){const c=C[l];return '<!--productivity-navigation:start--><nav data-productivity-navigation="'+RELEASE+'" lang="'+c.lang+'" aria-label="'+esc(c.title)+'" style="clear:both;max-width:1120px;margin:1rem auto;padding:1rem;overflow-wrap:anywhere"><h3>'+esc(c.title)+'</h3><p>'+esc(c.note)+'</p><ul>'+slugs.map((s,i)=>'<li><a href="'+route(l,s)+'"'+(s===current?' aria-current="page"':'')+'>'+esc(c.names[i])+'</a></li>').join('')+'</ul><p><a href="/zion-app-network/CATALOG-PRODUCTIVITY-REVIEW.html#'+l+'">'+esc(c.catalog)+'</a> · <a href="/zion-app-network/CATALOG-NAVIGATION.html#resource-path-'+l+'">'+esc(c.nav)+'</a> · <a href="'+c.home+'#app-paths-home">'+esc(c.back)+'</a></p></nav><!--productivity-navigation:end-->';}
+function transform(before,l,current=''){assert(C[l],'Known locale');const base=before.replace(re,'');let after;if(current){assert(slugs.includes(current));assert(/<\/body>/i.test(base));after=base.replace(/<\/body>/i,block(l,current)+'</body>');}else{let n=0;after=base.replace(/<!--zion-network-home:start-->[\s\S]*?<!--zion-network-home:end-->/g,s=>{n++;const p=s.lastIndexOf('</section>');assert(p>=0);return s.slice(0,p)+block(l)+s.slice(p);});assert.equal(n,1,'Exactly one existing homepage network section');}assert.equal(after.replace(re,''),base,'Only owned navigation changes');assert.deepEqual(protectedParts(after),protectedParts(before),'Forms/scripts preserved');assert.equal((after.match(/data-productivity-navigation=/g)||[]).length,1);return after;}
+function run(out='out'){const homes=[],pages=[];for(const l of Object.keys(C)){for(const s of ['',...slugs]){const u=s?route(l,s):C[l].home,f=disk(out,u);assert(fs.existsSync(f),'Missing maintained route '+u);const before=fs.readFileSync(f,'utf8'),after=transform(before,l,s);assert.equal(transform(after,l,s),after,'Byte-idempotence '+u);fs.writeFileSync(f,after);(s?pages:homes).push({locale:C[l].lang,path:u,catalog:'/zion-app-network/CATALOG-PRODUCTIVITY-REVIEW.html#'+l,nav:'/zion-app-network/CATALOG-NAVIGATION.html#resource-path-'+l});}}const manifest={release:RELEASE,homes,pages,scope:'Five existing homepage navigation additions and 30 reciprocal six-resource navigation blocks. Existing cards, forms, scripts and all bytes outside owned additions preserved.',fullNetworkComplete:false};const f=path.join(out,'apps/productivity-navigation-publication.json');fs.mkdirSync(path.dirname(f),{recursive:true});fs.writeFileSync(f,JSON.stringify(manifest,null,2)+'\n');console.log('PASS '+RELEASE+': five homepage blocks, 30 reciprocal resource blocks, protected forms/scripts and byte-idempotence.');return manifest;}
+module.exports={run,transform,block,C,slugs,route,RELEASE};if(require.main===module)run(process.argv[2]||'out');

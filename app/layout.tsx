@@ -26,7 +26,7 @@ import './globals.css';
 
 export const siteUrl = 'https://ziontechgroup.com';
 
-export const metadata: Metadata = {
+export const metadata = {
   metadataBase: new URL(siteConfig.url),
   title: { default: siteConfig.name, template: `%s | ${siteConfig.name}` },
   description: siteConfig.description,
