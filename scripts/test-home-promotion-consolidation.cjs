@@ -20,3 +20,20 @@ test('missing archive fails closed',()=>assert.throws(()=>transform('<html><sect
 test('unbalanced section fails closed',()=>assert.throws(()=>transform('<section id="app-paths-home">'),/Unclosed section/));
 test('missing details fails closed',()=>assert.throws(()=>transform('<section id="app-paths-home"></section>'),/details required/));
 test('missing summary fails closed',()=>assert.throws(()=>transform('<section id="app-paths-home"><details></details></section>'),/summary required/));
+
+for(const [name,archive] of [
+ ['unmatched closing details','<summary>archive</summary></details>'],
+ ['missing closing details','<details><summary>archive</summary>'],
+ ['summary outside details','<summary>archive</summary><details></details>'],
+ ['duplicate outer details','<details><summary>A</summary></details><details><summary>B</summary></details>'],
+ ['unclosed summary','<details><summary>archive</details>']
+])test('malformed archive rejected: '+name,()=>assert.throws(()=>transform('<section id="app-paths-home">'+archive+'</section><section id="registry-explorer-path"><a href="/resource/">resource</a></section>')));
+test('duplicate archive owner rejected',()=>assert.throws(()=>transform('<section id="app-paths-home"><details><summary>A</summary></details></section><section id="app-paths-home"><details><summary>B</summary></details></section>')));
+test('late locale failure does not write earlier locales',()=>{
+ const fs=require('node:fs'),os=require('node:os'),path=require('node:path'),{render}=require('./consolidate-home-promotions.cjs');
+ const root=fs.mkdtempSync(path.join(os.tmpdir(),'zion-archive-'));
+ try{const files=[];for(const [locale,url] of Object.entries(LOCALES)){const file=path.join(root,url.slice(1),'index.html');fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,fixture(locale));files.push(file);}
+ fs.writeFileSync(files.at(-1),'<section id="app-paths-home"><summary>broken</summary></details></section>');
+ const before=files.map(f=>fs.readFileSync(f));assert.throws(()=>render(root));files.forEach((f,i)=>assert.deepEqual(fs.readFileSync(f),before[i]));
+ }finally{fs.rmSync(root,{recursive:true,force:true});}
+});
