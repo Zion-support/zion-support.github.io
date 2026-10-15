@@ -12,6 +12,8 @@ on:
       - 'scripts/harden-ai-evidence-review.cjs'
       - 'scripts/render-ai-evidence-locales.cjs'
       - 'scripts/render-ai-evidence-review.cjs'
+      - 'scripts/render-ai-evidence-accessibility.cjs'
+      - 'scripts/test-ai-evidence-accessibility.cjs'
       - '.github/workflows/ai-evidence-satellites-contract.yml'
   workflow_dispatch:
 
@@ -30,4 +32,4 @@ jobs:
         with:
           node-version: '22'
       - name: Validate original, multilingual and edited-input contracts
-        run: node --test scripts/test-ai-evidence-satellites.cjs scripts/test-ai-evidence-locales.cjs scripts/test-ai-evidence-review-hardening.cjs
+        run: node --test scripts/test-ai-evidence-satellites.cjs scripts/test-ai-evidence-locales.cjs scripts/test-ai-evidence-review-hardening.cjs scripts/test-ai-evidence-accessibility.cjs
