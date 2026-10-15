@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FinTech AI Risk Register Template — AML, KYC, Fraud Detection, Compliance | Zion Tech Group</title>
+  <meta name="description" content="Template de risk register para IA em fintechs: AML, KYC, fraud detection, regulação e compliance. Checklist prático para implementar agentes de IA em instituições financeiras.">
+  <meta name="robots" content="index, follow">
+  <meta name="keywords" content="risk register, fintech, AML, KYC, fraud detection, compliance, regulação, AI agents, IA financeira, Banco Central">
+  <link rel="canonical" href="https://ziontechgroup.com/blog/fintech-ai-risk-register-template/">
+  <link rel="icon" href="/favicon.svg">
+  <meta property="og:title" content="FinTech AI Risk Register Template — AML, KYC, Fraud Detection, Compliance — Zion Tech Group">
+  <meta property="og:description" content="Template de risk register para IA em fintechs: AML, KYC, fraud detection, regulação e compliance. Checklist prático.">
+  <meta property="og:url" content="https://ziontechgroup.com/blog/fintech-ai-risk-register-template/">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="https://ziontechgroup.com/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="FinTech AI Risk Register Template — AML, KYC, Fraud Detection, Compliance">
+  <meta name="twitter:description" content="Template de risk register para IA em fintechs: AML, KYC, fraud detection, compliance e regulação.">
+  <link rel="alternate" hreflang="pt-BR" href="https://ziontechgroup.com/blog/fintech-ai-risk-register-template/">
+  <link rel="alternate" hreflang="en" href="https://ziontechgroup.com/en/blog/fintech-ai-risk-register-template/">
+  <link rel="alternate" hreflang="x-default" href="https://ziontechgroup.com/blog/fintech-ai-risk-register-template/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://ziontechgroup.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://ziontechgroup.com/blog/"},{"@type":"ListItem","position":3,"name":"FinTech AI Risk Register Template","item":"https://ziontechgroup.com/blog/fintech-ai-risk-register-template/"}]}</script>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0b0f1a; color: #e5e7eb; line-height: 1.7; max-width: 880px; margin: 0 auto; padding: 40px 24px 80px; }
+    h1 { font-size: 2.4rem; margin-bottom: 1.2rem; background: linear-gradient(135deg, #6366f1, #06b6d4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    h2 { font-size: 1.6rem; margin: 2rem 0 1rem; color: #e0e0ff; }
+    h3 { font-size: 1.2rem; margin: 1.5rem 0 0.6rem; color: #cbd5e1; }
+    p { margin-bottom: 1rem; color: #cbd5e1; }
+    .subhead { font-size: 1.3rem; margin-bottom: 1.5rem; color: #94a3b8; font-style: italic; }
+    .byline { font-size: 0.85rem; color: #64748b; margin-bottom: 2rem; }
+    a { color: #60a5fa; text-decoration: none; border-bottom: 1px solid rgba(96,165,250,0.3); }
+    a:hover { border-color: transparent; }
+    code { background: #1e293b; color: #f8fafc; padding: 2px 6px; border-radius: 4px; font-size: 0.9em; }
+    .card { background: #111827; border: 1px solid #1e293b; border-radius: 12px; padding: 24px; margin: 1.5rem 0; }
+    .card h3 { margin-bottom: 0.8rem; color: #a78bfa; }
+    .card p { color: #94a3b8; font-size: 0.95rem; }
+    .callout { background: rgba(96,165,250,0.1); border-left: 4px solid #60a5fa; padding: 1rem 1.5rem; margin: 1.5rem 0; border-radius: 0 8px 8px 0; }
+    .callout strong { color: #e0e7ff; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin: 1.5rem 0; }
+    .pill { display: inline-block; background: rgba(239,68,68,0.15); color: #f87171; padding: 2px 10px; border-radius: 9999px; font-size: 0.75rem; font-weight: 700; }
+    .table-wrap { overflow-x: auto; margin: 1.5rem 0; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+    th, td { padding: 8px 12px; border: 1px solid #1e293b; text-align: left; }
+    th { background: #1e293b; color: #e0e0ff; }
+    tr:nth-child(even) { background: #111827; }
+    footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid #1e293b; font-size: 0.85rem; color: #64748b; text-align: center; }
+  </style>
+</head>
+<body>
+  <p class="byline">Publicado em 15 de setembro de 2026 · Por Zion Tech Group · <a href="/contact/">Fale com a Zion</a></p>
+
+  <h1>FinTech AI Risk Register Template</h1>
+  <p class="subhead">AML, KYC, fraud detection e compliance — o template de registro de riscos para instituições financeiras que implantam agentes de IA.</p>
+
+  <p>Instituições de tecnologia financeira (fintechs) e bancos digitais que implantam agentes de IA enfrentam um regime regulatório únamente complexo: o risco de uma decisão de IA ser incorreta e gerar uma violação de AML, uma falsa positiva de KYC, ou um ataque de fraude não detectado é tão grave quanto um vazamento de dados. E a diferença está em segundos — enquanto um agente de IA decide se uma transação é limpa ou bloqueada, ele pode estar expondo a instituição a sanções do Banco Central, multas da CVM, ou perdas de reputação irreparáveis.</p>
+
+  <p>Este <strong>risk register template</strong> foi validado com fintechs registradas no Banco Central e corresididas pela equipe de <a href="/finops-consulting/">FinOps Consulting</a> da Zion. Ele mapeia os 12 riscos críticos de AI agents em fintechs, com probabilidade, impacto, tratamento e indicadores de monitoramento.</p>
+
+  <div class="grid">
+    <div class="card"><h3><span class="pill">RISK</span> AML / Anti-Laundering</h3><p>Missão de detecção de lavagem de dinheiro — falsos negativos em transações suspeitas.</p></div>
+    <div class="card"><h3><span class="pill">RISK</span> KYC / Customer Onboarding</h3><p>Verificação de identidade — falsos positivos que rejeitam clientes legítimos.</p></div>
+    <div class="card"><h3><span class="pill">RISK</span> Fraud Detection</h3><div><p>Transações fraudulentas não detectadas devido a drift de modelo.</p></div>
+    <div class="card"><h3><span class="pill">RISK</span> Model Drift</h3><p>Degradação silenciosa da performance do modelo ao longo do tempo.</p></div>
+    <div class="card"><h3><span class="pill">RISK</span> Regulação</h3><p>Non-compliance com Lei 14.478/2022, Resolução 4.658/2022, e regulamentações do Banco Central.</p></div>
+  </div>
+
+  <h2>1. Introdução — Por que AI Agents são diferentes em Fintechs</h2>
+
+  <p>Em fintechs, agentes de IA não são apenas "chatbots de atendimento". Eles são operadores críticos que:</p>
+
+  <ul>
+    <li><strong>Decidem se uma transação é limpa ou bloqueada</strong> (AML, fraud detection)</li>
+    <li><strong>Aprovam ou rejeitam cadastro de novos clientes</strong> (KYC, onboarding)</li>
+    <li><strong>Roteiam investimentos e operações</strong> (wealth management agents)</li>
+    <li><strong>Gerenciam relacionamento com o cliente</strong> (CX agents, chatbot de WhatsApp)</li>
+  </ul>
+
+  <p>Ao contrário de um algoritmo de machine learning estático, um <strong>agente de IA é autônomo, iterativo e conversacional</strong>. Ele pode mudar de curso dentro de uma conversa, tomar decisões baseadas em contexto, e chamar ferramentas externas para validar informações. Por isso, tratar risco de AI agents em fintechs exige uma <em>risk register</em> diferente — não apenas de "modelo", mas de "agente atuando em tempo real".</p>
+
+  <div class="callout">
+    <strong>Contexto regulatório:</strong> A <strong>Lei 14.478/2022</strong> (Inteligência Artificial) e a <strong>Resolução 4.658/2022</strong> do Banco Central exigem que instituições financeiras documentem riscos de IA, incluindo riscos de viés, transparência e explicabilidade. Agentes de IA em AML/KYC caem diretamente neste escopo.
+  </div>
+
+  <h2>2. Risk Register — Os 12 Riscos Críticos</h2>
+
+  <p>Abaixo está o template de risk register para AI agents em fintechs. Cada risco inclui: definição, probabilidade, impacto, tratamento recomendado, e KPI de monitoramento.</p>
+
+  <table class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Risco</th>
+          <th>Categoria</th>
+          <th>Probabilidade</th>
+          <th>Impacto</th>
+          <th>Tratamento</th>
+          <th>KPI de Monitoramento</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>AI-01</td>
+          <td>Falsa negativa AML (transação fraudulenta não detectada)</td>
+          <td>Risco de fraude / regulação</td>
+          <td>Média</td>
+          <td>Crítico (multa + perda de clientes)</td>
+          <td>Modelo ensemble + agente de revisão humana + threshold dinâmico</td>
+          <td>Detection rate > 99.5% — alertas de drift > 2% em 7 dias</td>
+        </tr>
+        <tr>
+          <td>AI-02</td>
+          <td>Falso positivo KYC (cliente legítimo rejeitado)</td>
+          <td>Risco de experiência / compliance</td>
+          <td>Alta</td>
+          <td>Médio (perda de conversão)</td>
+          <td>Fallback para validação humana em threshold < 80% de confiança</td>
+          <td>Manual review rate < 5% — KYC false positive < 0.5%</td>
+        </tr>
+        <tr>
+          <td>AI-03</td>
+          <td>Model drift silencioso</td>
+          <td>Risco de performance</td>
+          <td>Alta</td>
+          <td>Crítico (degradação contínua)</td>
+          <td>ML monitoring: feature drift, data drift, performance degradation</td>
+          <td>PSI < 0.1 por feature — accuracy drift < 3% em 30 dias</td>
+        </tr>
+        <tr>
+          <td>AI-04</td>
+          <td>Viés algorítmico (discriminação por perfil)</td>
+          <td>Risco de regulação / reputação</td>
+          <td>Média</td>
+          <td>Crítico (multa regulatória + processo)</td>
+          <td>Fairness testing: disparate impact analysis, demographic parity</td>
+          <td>Disparate impact ratio > 0.8 — fairlearn audit trimestral</td>
+        </tr>
+      </tbody>
+    </table>
+
+  <h3>Risco AI-01: Falsa negativa AML (fraude não detectada)</h3>
+  <p>Este é o risco mais grave em fintechs. Um agente de IA que falha em detectar uma transação fraudulenta pode resultar em:</p>
+  <ul>
+    <li>Multas do Banco Central (Resolução 4.658/2022 exige detecção de operações de lavagem de dinheiro)</li>
+    <li>Perda de clientes reais que tiveram fundos roubados</li>
+    <li>Sanções por não conformidade com o Regime Especial de Conhecimento do Cliente (RECC)</li>
+    <li>Impacto na seguros de responsabilidade civil</li>
+  </ul>
+
+  <p><strong>Tratamento recomendado:</strong> Use ensemble de modelos — um modelo especializado em padrões de lavagem de dinheiro (estruturais, comportamentais) + um agente de revisão que analisa transações borderline. Implemente <strong>threshold dinâmico</strong> que ajusta sensibilidade baseado em padrões de ataque recentes.</p>
+
+  <h3>Risco AI-02: Falso positivo KYC (cliente legítimo rejeitado)</h3>
+  <p>Finais de semana e picos de traffico geram mais falsos positivos KYC. Cada falso positivo tem um custo direto: perda de conversão no funnel de onboarding.</p>
+  <p><strong>Tratamento recomendado:</strong> Agente de KYC deve retornar uma <strong>confiança numérica</strong> (0-100%). Acima de 80%: auto-aprovação. Abaixo: escala para humano com contexto completo (quais documentos, quais validações falharam).</p>
+
+  <h3>Risco AI-03: Model drift silencioso</h3>
+  <p>Agentes de AML e fraud detection são treinados com dados históricos. Quando padrões de ataque mudam (ex: nova técnica de money mule), o modelo pode degradar silenciosamente — mantendo alta acurácia em dados de teste mas falhando em produção.</p>
+  <p><strong>Tratamento recomendado:</strong> Implemente ML monitoring (Evidently, Arize, ou custom OTel). Monitore PSI (Population Stability Index) para cada feature. Qualquer PSI > 0.1 em 30 dias = alerta de drift.</p>
+
+  <h3>Risco AI-04: Viés algorítmico</h3>
+  <p>Modelos de KYC e avaliação de crédito podem desenvolver viés contra grupos demográficos. Isso vira violação da Lei 14.478/2022 e sanções da Procon + Banco Central.</p>
+  <p><strong>Tratamento recomendado:</strong> Execute fairness testing pré-deployment (fairlearn, AIF360). Monitore disparate impact ratio em produção — se cair abaixo de 0.8, o modelo precisa retraining.</p>
+
+  <table class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Risco</th>
+          <th>Categoria</th>
+          <th>Probabilidade</th>
+          <th>Impacto</th>
+          <th>Tratamento</th>
+          <th>KPI de Monitoramento</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>AI-05</td>
+          <td>Exposição de dados sensíveis em logs</td>
+          <td>Risco de segurança / privacidade</td>
+          <td>Média</td>
+          <td>Crítico (leak de dados)</td>
+          <td>PII filter em logs + redação automática de dados sensíveis</td>
+          <td>0 eventos de PII exposta em logs — revisão semanal de log sanitização</td>
+        </tr>
+        <tr>
+          <td>AI-06</td>
+          <td>Decisão do agente não explicável (black box)</td>
+          <td>Risco de regulação</td>
+          <td>Alta</td>
+          <td>Médio (não conformidade Reg. 4.658)</td>
+          <td>Chain-of-thought logging + explicabilidade via SHAP/LIME</td>
+          <td>100% de decisões com explicação — auditoria trimestral de transparência</td>
+        </tr>
+        <tr>
+          <td>AI-07</td>
+          <td>Custo de API explosivo (token explosion)</td>
+          <td>Risco de negócio / FinOps</td>
+          <td>Alta</td>
+          <td>Médio (surpresa financeira)</td>
+          <td>Token budget por inquilino + alertas de spending threshold</td>
+          <td>Spend envelope alert at 80% — retry storm detection (calls > 5x baseline)</td>
+        </tr>
+        <tr>
+          <td>AI-08</td>
+          <td>Prompt injection / adversarial attack</td>
+          <td>Risco de segurança</td>
+          <td>Baixa-Média</td>
+          <td>Crítico (ação não autorizada)</td>
+          <td>Input sanitization + prompt guardrails + agent sandboxing</td>
+          <td>0 ações não autorizadas — alerting de prompts bloqueados</td>
+        </tr>
+      </tbody>
+    </table>
+
+  <table class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Risco</th>
+          <th>Categoria</th>
+          <th>Probabilidade</th>
+          <th>Impacto</th>
+          <th>Tratamento</th>
+          <th>KPI de Monitoramento</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>AI-09</td>
+          <td>Dependência de provedor único (vendor lock-in)</td>
+          <td>Risco estratégico / regulação</td>
+          <td>Média</td>
+          <td>Médio (interrupção de serviço)</td>
+          <td>Multi-provider strategy + model router abstraindo APIs</td>
+          <td>RTO < 4h para failover — 0 single points of failure documentados</td>
+        </tr>
+        <tr>
+          <td>AI-10</td>
+          <td>Atualização de modelo sem validação</td>
+          <td>Risco de qualidade / compliance</td>
+          <td>Média</td>
+          <td>Médio (degradação de decisão)</td>
+          <td>Canary deploy + A/B testing de modelos + rollback automático</td>
+          <td>Canary analysis window 2h — rollback trigger accuracy drop > 5%</td>
+        </tr>
+        <tr>
+          <td>AI-11</td>
+          <td>Ausência de human-in-the-loop (HITL) crítico</td>
+          <td>Risco de compliance</td>
+          <td>Alta</td>
+          <td>Crítico (decisão sem supervisão)</td>
+          <td>Mandatory human review para threshold de risco acima de 80%</td>
+          <td>100% de high-risk actions with HITL — escalation time < 5 min</td>
+        </tr>
+        <tr>
+          <td>AI-12</td>
+          <td>Conflito de interesse entre agentes múltiplos</td>
+          <td>Risco de compliance / segurança</td>
+          <td>Baixa</td>
+          <td>Médio (decisão conflitante)</td>
+          <td>Agent arbitration + conflict resolution protocol</td>
+          <td>0 conflitos não resolvidos — audit trail de decisões conflitantes</td>
+        </tr>
+      </tbody>
+    </table>
+
+  <h2>3. Framework de Monitoramento Contínuo</h2>
+
+  <p>Um risk register não é um documento que se cria e esquece. Ele precisa de <strong>ciclo de revisão contínua</strong>. Este framework cobre o que monitorar, com que frequência, e como responder:</p>
+
+  <div class="grid">
+    <div class="card"><h3>1. Model Performance</h3><p>Monitorado: Daily (PSI, accuracy, recall, precision). Alertas: drift > 2% em 7 dias. Owner: ML Engineering Team.</p></div>
+    <div class="card"><h3>2. Fraud/AML Effectiveness</h3><p>Monitorado: Real-time (detection rate, false positive rate). Alertas: detection drop > 1% em 24h. Owner: Risk & Compliance Team.</p></div>
+    <div class="card"><h3>3. Cost Control</h3><p>Monitorado: Hourly (token usage, API spend, retry rate). Alertas: spend > 80% budget. Owner: <a href="/finops-consulting/">FinOps Team</a>.</p></div>
+    <div class="card"><h3>4. Regulatory Compliance</h4>Monitorado: Trimestral (fairness, explicabilidade, RECC compliance). Alertas: disparate impact < 0.8. Owner: Legal & Compliance Team.</p></div>
+  </div>
+
+  <h3>3.1 Exemplo de dashboard de risco (OpenTelemetry + Grafana)</h3>
+  <pre><code># Exemplo de dashboard para AI-01 (AML false negative)
+Panel 1: Detection Rate (line chart) — target > 99.5%
+Panel 2: False Positive Rate (line chart) — target < 1%
+Panel 3: High-Risk Transactions (bar chart) — count per hora
+Panel 4: Model Drift (heatmap) — PSI por feature
+Panel 5: Manual Reviews (gauge) — % de transações escalated
+
+Alert: If detection rate drops below 99% for 2 consecutive hours → page ML engineer + freeze model updates.</code></pre>
+
+  <h3>3.2 Incident response para AI agents em fintech</h3>
+  <p>Quando um risco se materializa (ex: detecção de AML cai para 98%), o plano de resposta é:</p>
+  <ol style="margin-left: 1.5rem; margin-bottom: 1.5rem;">
+    <li><strong>Detecção:</strong> Alerta automático no Grafana/Slack</li>
+    <li><strong>Triage:</strong> ML engineer + risk analyst investigam cause root</li>
+    <li><strong>Mitigação:</strong> Rollback do modelo ou threshold adjustment em 30 min</li>
+    <li><strong>Comunicação:</strong> Notificação ao Banco Central se impacto > 24h</li>
+    <li><strong>Post-mortem:</strong> Análise em 72h com atualização do risk register</li>
+  </ol>
+
+  <h2>4. Checklist de Implementação — 12 Pontos</h2>
+
+  <ol style="margin-left: 1.5rem; margin-bottom: 1.5rem;">
+    <li><strong>AI-01 a AI-12 documentados</strong> — Todos os riscos mapeados com probabilidade, impacto e KPI</li>
+    <li><strong>BAA/Contrato de serviço atualizado</strong> — Clause de responsabilidade por decisões de IA</li>
+    <li><strong>PII filter ativo</strong> — De-identificação automática em prompts, logs e saídas</li>
+    <li><strong>ML monitoring configurado</strong> — Evidently/Arize para drift, accuracy, fairness</li>
+    <li><strong>Threshold dinâmico de AML</strong> — Ajusta sensibilidade baseado em padrões de ataque</li>
+    <li><strong>Ensemble de modelos</strong> — Múltiplos modelos para decisões críticas (não single model)</li>
+    <li><strong>Canary deploy pipeline</strong> — Novos modelos testados em 5% antes de rollout total</li>
+    <li><strong>HITL mandatory para high-risk</strong> — Actions com risco > 80% sempre escalated</li>
+    <li><strong>Token budget por inquilino</strong> — Spending limits + alertas de explosão de custo</li>
+    <li><strong>Fairness audit trimestral</strong> — Disparate impact analysis com fairlearn</li>
+    <li><strong>Chain-of-thought logging</strong> — Todo raciocínio do agente registrado para explicabilidade</li>
+    <li><strong>Regulatory compliance check</strong> — Lei 14.478/2022 + Resolução 4.658/2022 validados</li>
+  </ol>
+
+  <h2>5. Relação com FinOps Consulting</h2>
+
+  <p>Este risk register template é parte integrante do serviço de <a href="/finops-consulting/">FinOps Consulting</a> da Zion. Para fintechs, a governança de AI agents não é apenas compliance — é <strong>FinOps aplicado a operações de IA</strong>:</p>
+
+  <ul>
+    <li><strong>Cost visibility:</strong> Cada agente de IA tem budget mensal de tokens, monitorado em tempo real</li>
+    <li><strong>Risk-adjusted ROI:</strong> ROI de agentes considera probabilidade de falsos positivos/negativos e custo de compliance</li>
+    <li><strong>Incident cost:</strong> Cada falha de AML/KYC tem custo financeiro documentado (multas, perda de clientes)</li>
+    <li><strong>Regulatory readiness:</strong> Tudo documentado para auditoria do Banco Central e CVM</li>
+  </ul>
+
+  <p>Para fintechs que implantam <a href="/autonomous-ai-agents/">autonomous AI agents</a>, o risk register incluído no pacote de <a href="/finops-consulting/">FinOps Consulting</a> cobre:</p>
+  <ul>
+    <li>Template editável de risk register (12 riscos, KPIs, tratamento)</li>
+    <li>Dashboard de monitoramento pré-configurado (Grafana + OTel)</li>
+    <li>Runbook de incident response com comunicação regulatória</li>
+    <li>Checklist de compliance trimestral (Lei 14.478 + Resolução 4.658)</li>
+  </ul>
+
+  <h2>Conclusão: Governança de AI Agents é Compliance, Não Projeto Único</h2>
+
+  <p>Em fintechs, risco de IA não é uma fase do projeto — é uma <strong>função contínua</strong>. Todo agente de IA que toca dados de clientes, transações ou decisões reguladas precisa de risk register ativo, monitoramento contínuo e revisão trimestral.</p>
+
+  <p>Este template cobre os 12 riscos críticos validados com fintechs no Brasil. Adaptá-lo para sua realidade não é apenas compliance — é <strong>proteção contra sanções, multas e perda de confiança do cliente</strong>.</p>
+
+  <p><strong>Próximos passos:</strong> Comece com o <a href="/discovery/">Discovery gratuito</a> da Zion Tech Group. Ele inclui avaliação de risco de AI agents e roadmap de compliance para sua fintech.</p>
+
+  <footer>
+    <p>Artigos relacionados: <a href="/blog/msp-ai-agent-governance-framework/">Framework de Governança para MSPs</a> · <a href="/blog/hipaa-ai-agent-deployment-checklist/">Checklist HIPAA</a> · <a href="/blog/cloud-migration-ai-playbook/">Cloud Migration Playbook</a> · <a href="/finops-consulting/">FinOps Consulting</a></p>
+    <p><a href="/blog/">← Voltar ao blog</a> · <a href="/contact/">Fale com a Zion</a></p>
+  </footer>
+</body>
+</html>

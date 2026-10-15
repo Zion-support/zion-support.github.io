@@ -2,6 +2,9 @@ permissions:
   contents: read
 name: OpenAPI Contract Drift Detector
 "on":
+  push:
+    branches:
+    - main
   pull_request:
     branches:
     - main
