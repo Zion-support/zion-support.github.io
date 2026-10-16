@@ -1,0 +1,49 @@
+name: Satellite Suite - Five Language Contract
+
+on:
+  pull_request:
+    paths:
+      - 'public/mcp-trust-boundary-studio/**'
+      - 'public/agent-canary-release-lab/**'
+      - 'public/field-spares-custody-kit/**'
+      - 'content/satellite-suite-locales.json'
+      - 'scripts/render-satellite-suite.py'
+      - 'tests/satellite-suite*'
+      - '.github/workflows/satellite-suite-locales-contract.yml'
+      - '.github/workflows/static-deploy.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: satellite-suite-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  contract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout bounded source and test inputs
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        with:
+          persist-credentials: false
+          sparse-checkout: |
+            /public/mcp-trust-boundary-studio/
+            /public/agent-canary-release-lab/
+            /public/field-spares-custody-kit/
+            /content/satellite-suite-locales.json
+            /scripts/render-satellite-suite.py
+            /tests/satellite-suite.test.py
+            /tests/satellite-suite-runtime.test.cjs
+          sparse-checkout-cone-mode: false
+      - name: Test locale completeness and isolated artifact
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 --version
+          node --version
+          python3 tests/satellite-suite.test.py
+          python3 scripts/render-satellite-suite.py --source public --out "$RUNNER_TEMP/satellite-suite" --without-homepages
+          SATELLITE_PREVIEW="$RUNNER_TEMP/satellite-suite" node --test tests/satellite-suite-runtime.test.cjs
