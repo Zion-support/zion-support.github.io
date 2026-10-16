@@ -67,7 +67,13 @@ class Tests(unittest.TestCase):
             source,out=self.fixture(Path(td));bad=Path(td)/'source.html'
             bad.write_text(source.read_text(encoding='utf-8').replace('href="/ai-smart-hands-scheduler/"','href="/ai-smart-hands-scheduler/#absent"'),encoding='utf-8')
             before=self.snapshot(out)
-            with self.assertRaisesRegex(ValueError,'missing target fragment'):mod.finalize(bad,out)
+            # Supply reviewed fixture-only label copy so this test reaches the
+            # fragment validator rather than failing first at label coverage.
+            from unittest.mock import patch
+            fixture_labels = dict(mod.link_copy.LABELS)
+            fixture_labels['/ai-smart-hands-scheduler/#absent'] = fixture_labels.pop('/ai-smart-hands-scheduler/')
+            with patch.dict(mod.link_copy.LABELS, fixture_labels, clear=True):
+                with self.assertRaisesRegex(ValueError,'missing target fragment'):mod.finalize(bad,out)
             self.assertEqual(before,self.snapshot(out))
     def test_unsafe_path_and_symlink_rejected(self):
         with tempfile.TemporaryDirectory() as td:

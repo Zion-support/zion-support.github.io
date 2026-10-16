@@ -72,7 +72,7 @@ def build(source, output):
         links[key] = [(html.unescape(u),html.unescape(re.sub('<[^>]+>','',label))) for u,label in re.findall(r'<a href="([^"]+)">(.*?)</a>',body,re.S)]
         if len(links[key]) != 4 or any(not u.startswith('/') or u.startswith('//') for u,_ in links[key]):
             raise ValueError('Expected four safe source links per category')
-    source_urls = sorted(set(html.unescape(u) for u in re.findall(r'href="([^"]+)"',raw) if not u.startswith('#')))
+    source_urls = sorted(set(html.unescape(u) for u in re.findall(r'<a\b[^>]*\bhref="([^"]+)"',raw,re.I) if not u.startswith('#')))
     if any(not u.startswith('/') and not u.startswith('https://ziontechgroup.com/') for u in source_urls):
         raise ValueError('Unexpected source navigation origin')
     e = lambda s: html.escape(str(s),quote=True)
