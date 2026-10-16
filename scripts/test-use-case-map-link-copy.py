@@ -131,4 +131,37 @@ class TranslationTests(unittest.TestCase):
         with self.assertRaises(ValueError):mod.localize_pages(pages,mod.LANGS)
 
 
+
+class ComparisonTests(unittest.TestCase):
+    def test_five_locales_have_one_comparison_section_and_three_steps(self):
+        pages=fixtures()
+        localized=mod.localize_pages(pages,mod.LANGS)
+        for locale in mod.LOCALES:
+            name=('' if locale=='en' else locale+'/')+'apps/app-network-use-case-map.html'
+            text=localized[name]
+            self.assertEqual(text.count('id="resource-comparison-title"'),1)
+            self.assertIn(html.escape(mod.COMPARISON[locale]['title'],quote=True),text)
+            section=text.split('<section class="resource-comparison"',1)[1].split('</section>',1)[0]
+            self.assertEqual(section.count('<li>'),3)
+            self.assertEqual(mod.Links(pages[name]).hrefs,mod.Links(text).hrefs)
+
+    def test_missing_and_empty_comparison_copy_are_rejected(self):
+        for locale in mod.LOCALES:
+            original=mod.COMPARISON[locale]
+            try:
+                for broken in ({},dict(original,steps=['one']),dict(original,intro=' ')):
+                    mod.COMPARISON[locale]=broken
+                    with self.assertRaises(ValueError):mod.localize_pages(fixtures(),mod.LANGS)
+            finally:mod.COMPARISON[locale]=original
+
+    def test_comparison_text_is_escaped(self):
+        original=mod.COMPARISON['en']['title']
+        try:
+            mod.COMPARISON['en']['title']='<script>x</script>'
+            text=mod.localize_pages(fixtures(),mod.LANGS)['apps/app-network-use-case-map.html']
+            self.assertIn('&lt;script&gt;x&lt;/script&gt;',text)
+            self.assertNotIn('<script>x</script>',text)
+        finally:mod.COMPARISON['en']['title']=original
+
 if __name__=='__main__':unittest.main()
+

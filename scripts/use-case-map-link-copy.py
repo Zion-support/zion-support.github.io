@@ -95,6 +95,19 @@ NOTES = dict(zip(LOCALES, (
 )))
 STYLE = '.category-context{color:#475569}.grid .card ul{padding-left:1.2rem}.grid .card li a{display:block;padding:.45rem .2rem;text-underline-offset:.2em}.grid .card li a:hover{background:#e7f8f4}.resource-index ul{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,18rem),1fr));gap:.25rem 1.5rem;padding-left:1.2rem}.resource-index a{display:inline-block;padding:.35rem 0}'
 
+COMPARISON = {'en': {'title': 'Compare resources before choosing a pilot', 'intro': 'Use the same short review for every resource so that a promising description becomes a testable decision.', 'steps': ['Define the input and expected output. Check whether the destination is a guide, a calculator, a prototype or an implemented application.', 'Try a synthetic example and compare the result with a known answer. Record missing integrations, language gaps and accessibility barriers.', 'Name a reviewer and an acceptance criterion. Choose a limited next step only after reviewing the evidence; keep real data and production changes out of the initial test.']}, 'pt': {'title': 'Compare os recursos antes de escolher um piloto', 'intro': 'Use a mesma revisão breve para cada recurso e transforme uma descrição promissora em uma decisão que possa ser testada.', 'steps': ['Defina a entrada e a saída esperada. Confira se o destino é um guia, uma calculadora, um protótipo ou uma aplicação implementada.', 'Teste um exemplo sintético e compare o resultado com uma resposta conhecida. Registre integrações ausentes, lacunas de idioma e barreiras de acessibilidade.', 'Indique um revisor e um critério de aceitação. Escolha um próximo passo limitado somente após revisar as evidências; não use dados reais nem faça alterações em produção no teste inicial.']}, 'es': {'title': 'Compara los recursos antes de elegir un piloto', 'intro': 'Aplica la misma revisión breve a cada recurso para convertir una descripción prometedora en una decisión que puedas poner a prueba.', 'steps': ['Define la entrada y la salida esperada. Comprueba si el destino es una guía, una calculadora, un prototipo o una aplicación implementada.', 'Prueba un ejemplo sintético y compara el resultado con una respuesta conocida. Registra las integraciones ausentes, las carencias de idioma y las barreras de accesibilidad.', 'Designa un revisor y un criterio de aceptación. Elige un siguiente paso limitado solo después de revisar las evidencias; no uses datos reales ni hagas cambios en producción en la prueba inicial.']}, 'fr': {'title': 'Comparez les ressources avant de choisir un projet pilote', 'intro': 'Appliquez le même examen rapide à chaque ressource pour transformer une description prometteuse en une décision que vous pourrez tester.', 'steps': ['Définissez les données d’entrée et le résultat attendu. Vérifiez si la destination est un guide, un calculateur, un prototype ou une application implémentée.', 'Essayez un exemple fictif et comparez le résultat à une réponse connue. Notez les intégrations manquantes, les lacunes linguistiques et les obstacles d’accessibilité.', 'Désignez un réviseur et un critère d’acceptation. Ne choisissez une prochaine étape limitée qu’après examen des preuves ; excluez les données réelles et les changements en production du test initial.']}, 'de': {'title': 'Vergleichen Sie Ressourcen vor der Auswahl eines Pilotprojekts', 'intro': 'Prüfen Sie jede Ressource nach demselben kurzen Schema, damit aus einer vielversprechenden Beschreibung eine überprüfbare Entscheidung wird.', 'steps': ['Definieren Sie Eingabe und erwartete Ausgabe. Prüfen Sie, ob das Ziel ein Leitfaden, ein Rechner, ein Prototyp oder eine implementierte Anwendung ist.', 'Testen Sie ein synthetisches Beispiel und vergleichen Sie das Ergebnis mit einer bekannten Antwort. Halten Sie fehlende Integrationen, Sprachlücken und Barrieren bei der Zugänglichkeit fest.', 'Benennen Sie eine prüfende Person und ein Abnahmekriterium. Wählen Sie erst nach Prüfung der Nachweise einen begrenzten nächsten Schritt; verwenden Sie im ersten Test keine Echtdaten und ändern Sie keine Produktivsysteme.']}}
+
+def comparison_section(locale):
+    copy = COMPARISON.get(locale, {})
+    if set(copy) != {"title", "intro", "steps"} or not isinstance(copy["steps"], list) or len(copy["steps"]) != 3:
+        raise ValueError("Incomplete comparison copy: " + locale)
+    values = [copy["title"], copy["intro"], *copy["steps"]]
+    if any(not isinstance(v, str) or not v.strip() for v in values):
+        raise ValueError("Empty comparison copy: " + locale)
+    escape = lambda value: html.escape(value, quote=True)
+    return ('<section class="resource-comparison" aria-labelledby="resource-comparison-title"><h2 id="resource-comparison-title">' + escape(copy["title"]) + "</h2><p>" + escape(copy["intro"]) + "</p><ol>" + "".join("<li>" + escape(step) + "</li>" for step in copy["steps"]) + "</ol></section>")
+
+
 class Links(HTMLParser):
     def __init__(self, text):
         super().__init__(convert_charrefs=True)
@@ -121,6 +134,7 @@ def localize_pages(pages, languages):
     lacks copy. This runs inside the finalizer's temporary staging directory.
     """
     validate_copy()
+    comparison_sections = {locale: comparison_section(locale) for locale in LOCALES}
     if languages != LANGS or len(pages) != len(LOCALES):
         raise ValueError('Expected exactly EN/PT-BR/ES/FR/DE maps')
     result = {}
@@ -158,9 +172,13 @@ def localize_pages(pages, languages):
         after = after.replace('<main id="main">', '<main id="main" data-use-case-link-copy="' + RELEASE + '">', 1)
         after = after.replace('</style>', STYLE + '</style>', 1)
         after = after.replace('</aside><section>', '</aside><section class="resource-index">', 1)
+        if after.count('</section></main>') != 1:
+            raise ValueError("Unexpected final resource section shape")
+        after = after.replace('</section></main>', '</section>' + comparison_sections[locale] + '</main>', 1)
         if Links(before).hrefs != Links(after).hrefs:
             raise ValueError('A navigation destination or its order changed')
         if re.findall(r'<(?:form|script)\b[\s\S]*?</(?:form|script)>', before, re.I) != re.findall(r'<(?:form|script)\b[\s\S]*?</(?:form|script)>', after, re.I):
             raise ValueError('Protected form/script changed')
         result[name] = after
     return result
+
