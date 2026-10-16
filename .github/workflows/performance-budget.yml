@@ -27,6 +27,8 @@ jobs:
       # npm ci on the 90k+ file tree can OOM/fail; fall back to npm install, never fail the job
       continue-on-error: true
       run: npm ci --include=dev || npm install --no-audit --no-fund || echo "::warning::dependency install failed; continuing without full install"
+    - name: Validate performance metric semantics
+      run: node tests/test-performance-metrics.cjs automation/performance-budget-enforcer.cjs
     - name: Build site
       env:
         NODE_OPTIONS: --max-old-space-size=12288 --max-semi-space-size=64
