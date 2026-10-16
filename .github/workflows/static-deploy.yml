@@ -41,6 +41,11 @@ jobs:
 
       - name: Prepare pages
         run: bash scripts/prepare-pages-out.sh
+      - name: Build and verify five-language satellite suite
+        run: |
+          python3 tests/satellite-suite.test.py
+          python3 scripts/render-satellite-suite.py --source public --out out
+          SATELLITE_PREVIEW="$PWD/out" node --test tests/satellite-suite-runtime.test.cjs
       - uses: actions/upload-pages-artifact@v3
         with:
           path: out

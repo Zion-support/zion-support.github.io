@@ -1,0 +1,58 @@
+{
+  "schema": "zion-satellite-release-integration-v1",
+  "reviewOnly": true,
+  "homepageBeforeGitBlob": "1bb383349847ed8b34aeed45e8499ef6b12ec6fa",
+  "files": [
+    {
+      "target": "public/discovery/index.html",
+      "gitBlob": "80bcbe22f053b1e879c4111b8e235c7962da5615",
+      "sourcePR": 71595,
+      "sourceCommit": "9a76a060b9e7f3b7863b7530825e9fb9d544668b",
+      "allowedBeforeGitBlobs": [
+        "6e4762ce6b861010694b59323d90ad846028dd50",
+        "80bcbe22f053b1e879c4111b8e235c7962da5615"
+      ]
+    },
+    {
+      "target": "public/managed-it-services/index.html",
+      "gitBlob": "1def732e6310ebcef271f081a03acd527a80c0ff",
+      "sourcePR": 71582,
+      "sourceCommit": "e2c9ef95acf57879af953bcdc9d5b8138a5bc06e",
+      "allowedBeforeGitBlobs": [
+        "eeb8fc6a3798e889c4506eef4f25ba937f20cbf6",
+        "1def732e6310ebcef271f081a03acd527a80c0ff"
+      ]
+    },
+    {
+      "target": "scripts/prepare-pages-out.sh",
+      "gitBlob": "1bd598857cbf00120a11026ce1931b9080bf7662",
+      "sourcePR": 71582,
+      "sourceCommit": "e2c9ef95acf57879af953bcdc9d5b8138a5bc06e",
+      "allowedBeforeGitBlobs": [
+        "430356121a216909c23beaa70f035a39af383e21",
+        "1bd598857cbf00120a11026ce1931b9080bf7662"
+      ]
+    },
+    {
+      "target": "public/assets/js/discovery-delivery.js",
+      "gitBlob": "b032e4e9ba8ea645f1dcc8ff5084db27f3fda7d5",
+      "sourcePR": 71562,
+      "sourceCommit": "918a103fb44496c5f54c8f78b049edd6fda41349",
+      "allowedBeforeGitBlobs": [
+        "1cdebde7398cae58367bcfa11d4b0ecf5fde89c5",
+        "b032e4e9ba8ea645f1dcc8ff5084db27f3fda7d5"
+      ]
+    },
+    {
+      "target": "scripts/test-discovery-delivery-contract.cjs",
+      "gitBlob": "9028823ea3e7fbce4d3b99597d33c967d7c337d8",
+      "sourcePR": 71562,
+      "sourceCommit": "918a103fb44496c5f54c8f78b049edd6fda41349",
+      "allowedBeforeGitBlobs": [
+        "c45f2d32648715392c2870ea77f2e285b3645682",
+        "9028823ea3e7fbce4d3b99597d33c967d7c337d8"
+      ]
+    }
+  ],
+  "homepageCandidateGitBlob": "0fc732f96ccfeeacc032b17c5640782e1cc37d16"
+}
