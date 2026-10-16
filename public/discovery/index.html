@@ -15,6 +15,8 @@
  if (!form || !fields || !errors) return;
  form.addEventListener('submit', function (event) {
   event.preventDefault();
+  // A pending application request already owns the status; keep native submit blocked.
+  if (form.getAttribute('aria-busy') === 'true') return;
   errors.textContent = 'The report application is not ready. No native form submission was made. Reload the page or use the free written Discovery email link above.';
   errors.hidden = false;
  });
