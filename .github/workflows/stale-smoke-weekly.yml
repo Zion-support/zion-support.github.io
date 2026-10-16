@@ -15,7 +15,7 @@ jobs:
     timeout-minutes: 2
     steps:
       - name: Checkout
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        uses: actions/checkout@v4
       - name: stale.yml anchors
         run: |
           set -euo pipefail
@@ -25,7 +25,7 @@ jobs:
           grep -Fq 'name: Stale Issues & PRs' "$f"
           grep -Fq "cron: '0 3 * * *'" "$f"
           grep -Fq 'group: stale' "$f"
-          grep -Fq 'actions/stale@1e223db275d687790206a7acac4d1a11bd6fe629' "$f"
+          grep -Fq 'actions/stale@b5d41d4e1d5dceea10e7104786b73624c18a190f' "$f"
           grep -Fq 'days-before-stale: 30' "$f"
           grep -Fq 'exempt-issue-labels: pinned,security,bug' "$f"
           echo "ok: $f"
