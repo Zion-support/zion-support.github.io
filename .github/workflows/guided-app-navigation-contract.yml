@@ -46,10 +46,11 @@ jobs:
       - name: Run guided app navigation contract
         run: node scripts/test-guided-app-navigation.cjs
       - name: Validate Python source syntax
-        run: python3 -m py_compile scripts/render-use-case-map-locales.py scripts/finalize-use-case-map-artifact.py scripts/test-use-case-map-locales.py scripts/test-use-case-map-workflow.py scripts/test-use-case-map-artifact.py scripts/test-use-case-map-artifact-paths.py
+        run: python3 -m py_compile scripts/render-use-case-map-locales.py scripts/finalize-use-case-map-artifact.py scripts/use-case-map-link-copy.py scripts/test-use-case-map-link-copy.py scripts/test-use-case-map-locales.py scripts/test-use-case-map-workflow.py scripts/test-use-case-map-artifact.py scripts/test-use-case-map-artifact-paths.py
       - name: Run translated map and artifact contract tests
         run: |
           python3 scripts/test-use-case-map-locales.py
+          python3 scripts/test-use-case-map-link-copy.py
           python3 scripts/test-use-case-map-workflow.py
           python3 scripts/test-use-case-map-artifact.py
           python3 scripts/test-use-case-map-artifact-paths.py
