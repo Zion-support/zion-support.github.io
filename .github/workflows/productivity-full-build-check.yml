@@ -1,0 +1,40 @@
+name: Productivity exact-head artifact validation
+on:
+  pull_request:
+    paths: ['public/**', 'scripts/**', '.github/workflows/**']
+permissions:
+  contents: read
+concurrency:
+  group: productivity-full-build-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+jobs:
+  full-static-artifact:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: 1
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Current publisher preparation including existing money-path guards
+        run: bash scripts/prepare-pages-out.sh
+      - name: Shared reviewed multilingual sequence (no deployment)
+        run: node scripts/render-productivity-release.cjs out
+      - name: Fetch catalog source (bytes checked before staging)
+        run: curl --fail --silent --show-error --location --max-time 30 https://raw.githubusercontent.com/Zion-support/zion-app-network/main/CATALOG-PRODUCTIVITY-REVIEW.md -o _productivity-catalog.md
+      - name: Test scoped artifact staging
+        run: node scripts/test-productivity-qa.cjs _productivity-catalog.md
+      - name: Validate final exact-head artifact
+        env:
+          GITHUB_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: node scripts/prepare-productivity-qa.cjs out productivity-qa _productivity-catalog.md
+      - uses: actions/upload-artifact@v4
+        with:
+          name: productivity-qa-${{ github.event.pull_request.head.sha }}
+          path: productivity-qa
+          retention-days: 7
+          if-no-files-found: error
