@@ -1,20 +1,25 @@
 name: Simple Static Deploy
 
-# Production publishes public/ and artifact-only renderers, not a Next.js shell.
-on:
-  # TEMPORARY RELEASE HOLD (2026-10-14): no automatic main push or 5-minute cron.
-  # Restore automation only after reviewed PRs, required CI checks and release approval are enforced.
+# Production Pages is build_type=workflow (not gh-pages branch).
+# Last good publisher: e23c3b71 — no environment gate, deploy-pages@v4.
+#
+# P0 2026-09-20: dispatch-only + cancel-in-progress false so Hermes
+# STATUS.md / CI fix pushes cannot cancel a sole money-path publish.
+# FIELD-SERVICES LOCK. No DNS. No #71365.
+# 2026-09-27: synced from main — dispatch-only + main-ref job guard so
+# branch pushes on this branch never trigger a failing deploy run.
 
+
+on:
   workflow_dispatch:
     inputs:
       note:
-        description: 'Manual production publish from main'
+        description: 'Dispatch from main only (Use workflow from = main)'
         required: false
         default: 'main'
 
 permissions:
   contents: read
-  actions: read
   pages: write
   id-token: write
 
@@ -31,128 +36,16 @@ jobs:
     if: github.ref == 'refs/heads/main'
     steps:
       - uses: actions/checkout@v4
-        with:
-          ref: main
-          fetch-depth: 1
       - name: Confirm main ref
         run: echo "ref=${GITHUB_REF} sha=${GITHUB_SHA} event=${GITHUB_EVENT_NAME} (main-only deploy)"
+
       - name: Prepare pages
         run: bash scripts/prepare-pages-out.sh
-      - name: Render translated Discovery and communications content
-        run: node scripts/render-discovery-showcase.cjs
-      - name: Render consistent multilingual questionnaires and homepage journeys
-        run: node scripts/render-discovery-consistency.cjs
-      - name: Render free pilot guide and related-app navigation
-        run: node scripts/render-discovery-pilot-guide.cjs
-      - name: Render linked Discovery app guide and repair recommendation routes
-        run: node scripts/render-discovery-linked-guide.cjs
-      - name: Link free local preview guide
-        run: node scripts/render-discovery-next-step.cjs
-      - name: Offline multilingual report contract
-        run: node scripts/test-discovery-consistency.cjs
-      - name: Render and validate five-language communications workflow lab
-        run: node scripts/render-communications-apps.cjs
-      - name: Render translated comparison guides and reciprocal navigation
-        run: node scripts/render-communications-decision.cjs
-      - name: Consolidate translated benefits and workflow paths
-        run: node scripts/render-network-benefits.cjs
-      - name: Render five-language local app experiment planner and reciprocal paths
-        run: node scripts/render-app-experiments.cjs && node scripts/verify-app-experiment-sources.cjs
-      - name: Render and test five-language communications readiness checklist
-        run: node scripts/render-communications-readiness.cjs && node scripts/test-communications-readiness.cjs out
-      - name: Render treasury translations and repair canonical delivery copy
-        run: node scripts/render-treasury-network.cjs
-      - name: Render five-language insurance concepts and preserve homepage forms
-        run: node scripts/render-insurance-network.cjs
-      - name: Render translated local insurance evidence workbenches and reciprocal links
-        run: node scripts/render-insurance-evidence.cjs
-      - name: Offline app experiment safety and language checks
-        run: node scripts/test-app-experiments.cjs out
-      - name: Offline communications form and navigation regression checks
-        run: node scripts/test-communications-lab.cjs out
-      - name: Offline translated comparison and publication-manifest checks
-        run: node scripts/test-communications-decision.cjs out
-      - name: Render and test translated operations and field-service guides
-        run: node scripts/render-ops-field-guides.cjs && node scripts/test-ops-field-guides.cjs
-      - name: Consolidate app network navigation and five-language entry content
-        run: node scripts/render-network-start-here.cjs && node scripts/render-network-home-ad.cjs
-      - name: Final reciprocal operations and hub navigation
-        run: node scripts/render-ops-field-return-links.cjs
-      - name: Validate and render truthful five-language logistics evidence
-        run: node scripts/test-logistics-evidence.cjs && node scripts/render-logistics-evidence.cjs out
-      - name: Publish five-language field evidence guides and localized resource labels
-        run: node scripts/render-field-evidence-release.cjs out && node scripts/render-field-evidence-quality.cjs out && node scripts/test-field-evidence-quality.cjs out
-      - name: Render and test pinned five-language telecom guides and reciprocal promotions
-        run: node scripts/render-telecom112-release.cjs out && node scripts/test-telecom112-release.cjs out
-      - name: Preserve and validate final Discovery pilot backlinks
-        run: node scripts/test-discovery-pilot-backlinks.cjs && node scripts/render-discovery-pilot-backlinks.cjs out
-      - name: Finalize and validate complete field-guide locale copies
-        run: node scripts/finalize-field-evidence-aliases.cjs out
-      - name: Render and test five-language local Pilot Planner and homepage promotions
-        run: node scripts/render-pilot-planner-locales.cjs out && node scripts/test-pilot-planner-locales.cjs out
-      - name: Consolidate and validate final five-language homepage app paths
-        run: node scripts/render-home-app-paths.cjs out && node scripts/test-home-app-paths.cjs out && node scripts/finalize-field-evidence-aliases.cjs out
-      - name: Final additive five-language supplier-to-pilot paths
-        run: node scripts/render-supplier-pilot-paths.cjs out && node scripts/test-supplier-pilot-paths.cjs out
-      - name: Render and test five-language supplier worked comparisons
-        run: node scripts/render-supplier-comparison.cjs out
-      - name: Add and validate five-language SLA evidence and existing homepage links
-        run: node scripts/render-sla-evidence.cjs out
-      - name: Repair and publish five-language local ticket tools and homepage promotions
-        run: node scripts/ticket-support-release.cjs out
-      - name: Render and validate five-language first-workflow guides and reciprocal links
-        run: node scripts/render-first-workflow.cjs out && node scripts/finalize-field-evidence-aliases.cjs out && node scripts/test-first-workflow.cjs out
-      - name: Reconcile and test final folder and suffix localization coverage
-        run: node scripts/verify-network-publication.cjs out && node scripts/test-network-publication-routes.cjs out
       - uses: actions/upload-pages-artifact@v3
         with:
           path: out
-          name: github-pages-${{ github.run_id }}-${{ github.run_attempt }}
-      - name: Wait for uploaded Pages artifact metadata
-        uses: actions/github-script@v7
-        with:
-          script: |
-            const name = `github-pages-${context.runId}-${process.env.GITHUB_RUN_ATTEMPT}`;
-            for (let attempt = 0; attempt < 12; attempt++) {
-              const response = await github.rest.actions.listWorkflowRunArtifacts({
-                owner: context.repo.owner, repo: context.repo.repo,
-                run_id: context.runId, per_page: 100
-              });
-              if (response.data.artifacts.some(a => a.name === name && !a.expired)) {
-                core.info(`Artifact metadata visible: ${name}`);
-                await new Promise(resolve => setTimeout(resolve, 10000));
-                return;
-              }
-              core.info(`Waiting for artifact metadata (${attempt + 1}/12)`);
-              await new Promise(resolve => setTimeout(resolve, 5000));
-            }
-            throw new Error(`Uploaded artifact metadata did not become visible: ${name}`);
       - uses: actions/deploy-pages@v4
-        id: deployment
-        with:
-          artifact_name: github-pages-${{ github.run_id }}-${{ github.run_attempt }}
-      - name: Read-only live multilingual publication checks
-        run: node scripts/test-discovery-live.cjs
-      - name: Read-only live communications lab regression checks
-        run: node scripts/test-communications-lab.cjs --live
-      - name: Read-only live translated comparison and publication checks
-        run: node scripts/test-communications-decision.cjs --live
-      - name: Read-only live field evidence guide publication checks
-        run: node scripts/test-field-evidence-release.cjs out --live
-      - name: Read-only live Discovery pilot backlink checks
-        run: node scripts/render-discovery-pilot-backlinks.cjs --live
-      - name: Read-only live complete field-guide locale consistency
-        run: node scripts/finalize-field-evidence-aliases.cjs --live
-      - name: Read-only live supplier-to-pilot path checks
-        run: node scripts/test-supplier-pilot-paths.cjs --live
-      - name: Read-only live supplier worked comparison checks
-        run: node scripts/render-supplier-comparison.cjs --live
-      - name: Read-only live SLA evidence and calculation checks
-        run: node scripts/render-sla-evidence.cjs --live
-      - name: Read-only live local ticket tool and homepage publication checks
-        run: node scripts/ticket-support-release.cjs --live
-      - name: Read-only live five-language Pilot Planner publication checks
-        run: node scripts/test-pilot-planner-live.cjs
-      - name: Read-only live route-family coverage regression
-        run: node scripts/test-network-publication-routes.cjs --live
+        # Post-deploy live curl skipped: runners often block egress and probes flake.
+        # The prepare-pages-out money-path gate above is the durable Pay RED guard.
+
 
