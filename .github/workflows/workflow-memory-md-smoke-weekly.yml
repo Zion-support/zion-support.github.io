@@ -27,7 +27,7 @@ jobs:
           set -euo pipefail
           test -f MEMORY.md
           test -s MEMORY.md
-          grep -Fq '- [System]' MEMORY.md
+          grep -Fq -- '- [System]' MEMORY.md
           grep -Fq 'SOUL/HEARTBEAT/MEMORY' MEMORY.md
           grep -Fq '`USER.md`' MEMORY.md
           grep -Fq '`AGENTS.md`' MEMORY.md

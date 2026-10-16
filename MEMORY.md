@@ -7289,3 +7289,9 @@ Workspace service account (domain-wide delegation):
 - [EmailInteraction] 2026-07-08 05:47:28 | === Email Interaction Agent Started ===
 - [EmailInteraction] 2026-07-08 05:47:58 | fetch_unread exception: Command '['gog', 'mail', 'search', 'is:unread', '--account', 'kleber@ziontechgroup.com', '--no-input', '--max', '20']' timed out after 30 seconds
 - [EmailInteraction] 2026-07-08 05:47:58 | === Email Interaction Agent Completed ===
+
+
+## Continuity cross-links
+
+- [`USER.md`](USER.md): owner context.
+- [`AGENTS.md`](AGENTS.md): workspace operating reference.
