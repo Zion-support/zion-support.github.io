@@ -32,11 +32,18 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 8
     steps:
-      - name: Checkout reviewed branch
-        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
-        with:
-          persist-credentials: false
-          fetch-depth: 1
+      # This repo inherits eight gitlinks without .gitmodules URLs. actions/checkout
+      # runs "git submodule foreach" even when submodules=false and fails after
+      # checkout. Explicit Git never initializes submodules or stores credentials.
+      - name: Materialize exact reviewed source without submodule hooks
+        shell: bash
+        run: |
+          set -euo pipefail
+          git init
+          git remote add origin https://github.com/Zion-support/zion-support.github.io.git
+          git -c protocol.version=2 fetch --no-tags --depth=1 --no-recurse-submodules origin "$GITHUB_REF"
+          git -c advice.detachedHead=false -c submodule.recurse=false checkout --detach --force FETCH_HEAD
+          test "$(git rev-parse HEAD)" = "$GITHUB_SHA"
       - name: Install Node 22
         uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
         with:
