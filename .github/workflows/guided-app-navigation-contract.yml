@@ -1,0 +1,63 @@
+name: Guided App Navigation - Offline Contract
+
+# Branch/review validation only. No production publishing or external write.
+on:
+  pull_request:
+    paths:
+      - 'public/apps/start-here.html'
+      - 'public/apps/app-network-use-case-map.html'
+      - 'scripts/test-guided-app-navigation.cjs'
+      - 'scripts/*use-case-map*.py'
+      - '.github/workflows/guided-app-navigation-contract.yml'
+  push:
+    branches:
+      - 'content/guided-app-pathways-20261014'
+    paths:
+      - 'public/apps/start-here.html'
+      - 'public/apps/app-network-use-case-map.html'
+      - 'scripts/test-guided-app-navigation.cjs'
+      - 'scripts/*use-case-map*.py'
+      - '.github/workflows/guided-app-navigation-contract.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: guided-nav-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  offline-contract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      # This repo inherits eight gitlinks without .gitmodules URLs. actions/checkout
+      # runs "git submodule foreach" even when submodules=false and fails after
+      # checkout. Explicit Git never initializes submodules or stores credentials.
+      - name: Materialize exact reviewed source without submodule hooks
+        shell: bash
+        run: |
+          set -euo pipefail
+          git init
+          git remote add origin https://github.com/Zion-support/zion-support.github.io.git
+          git -c protocol.version=2 fetch --no-tags --depth=1 --no-recurse-submodules origin "$GITHUB_REF"
+          git -c advice.detachedHead=false -c submodule.recurse=false checkout --detach --force FETCH_HEAD
+          test "$(git rev-parse HEAD)" = "$GITHUB_SHA"
+      - name: Install Node 22
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: '22'
+      - name: Validate JavaScript syntax
+        run: node --check scripts/test-guided-app-navigation.cjs
+      - name: Run guided app navigation contract
+        run: node scripts/test-guided-app-navigation.cjs
+      - name: Validate Python source syntax
+        run: python3 -m py_compile scripts/render-use-case-map-locales.py scripts/finalize-use-case-map-artifact.py scripts/use-case-map-link-copy.py scripts/test-use-case-map-link-copy.py scripts/test-use-case-map-locales.py scripts/test-use-case-map-workflow.py scripts/test-use-case-map-artifact.py scripts/test-use-case-map-artifact-paths.py
+      - name: Run translated map and artifact contract tests
+        run: |
+          python3 scripts/test-use-case-map-locales.py
+          python3 scripts/test-use-case-map-link-copy.py
+          python3 scripts/test-use-case-map-workflow.py
+          python3 scripts/test-use-case-map-artifact.py
+          python3 scripts/test-use-case-map-artifact-paths.py

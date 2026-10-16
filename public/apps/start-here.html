@@ -9,7 +9,23 @@
 <meta name="robots" content="index,follow">
 <style>
 body{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;margin:0;background:#0b1220;color:#e8eef8;line-height:1.65}
-main{max-width:980px;margin:auto;padding:40px 20px 72px}a{color:#7dd3fc;text-decoration:none}
+main{max-width:1050px;margin:auto;padding:32px 20px 64px}a{color:#7dd3fc;text-decoration:underline;text-underline-offset:3px}
+*,*::before,*::after{box-sizing:border-box}
+a:hover{color:#bae6fd}a:focus-visible{outline:3px solid #fde68a;outline-offset:4px;border-radius:3px}
+.skip-link{position:absolute;left:-9999px;top:8px;background:#fde68a;color:#172033;padding:8px 14px;z-index:10}
+.skip-link:focus{left:12px}
+.site-nav,.jump,.languages{display:flex;flex-wrap:wrap;align-items:center;gap:10px}
+.site-nav{padding:10px 0 20px;border-bottom:1px solid #334155;margin-bottom:26px}
+.jump a{display:inline-block;border:1px solid #475569;padding:7px 12px;border-radius:8px;background:#18253b}
+.panel{background:#101c31;border:1px solid #334155;border-radius:14px;padding:20px;margin:24px 0}
+.path-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.path-grid article{scroll-margin-top:20px}
+.path-grid h3{margin:0 0 8px;color:#fff;font-size:1.25rem}
+.path-grid p{margin:8px 0}.path-grid p:last-child{margin-bottom:0}
+.path-grid .task{font-weight:700;color:#a5f3fc}
+.btn:focus-visible{outline-color:#fde68a}
+h2{line-height:1.25}h3{line-height:1.3}footer{border-top:1px solid #334155;margin-top:32px;padding-top:18px;color:#cbd5e1}
+@media(max-width:520px){main{padding:20px 16px 48px}.card,.panel{padding:16px}.jump a{width:100%}}
 .badge{display:inline-block;background:#0a7d4f;padding:5px 12px;border-radius:999px;font-weight:800}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
 .card{background:#121a2b;border:1px solid #243049;border-radius:14px;padding:18px}
@@ -17,12 +33,28 @@ main{max-width:980px;margin:auto;padding:40px 20px 72px}a{color:#7dd3fc;text-dec
 .muted{color:#a8b4c8}h1{font-size:clamp(2.2rem,6vw,3.6rem);line-height:1.05}
 </style>
 </head>
-<body>
-<main>
-<p><a href="/">Zion Tech Group</a> · <a href="/apps/">Apps</a> · <a href="/apps/network.html">Network map</a> · <a href="/apps/content-hub.html">Content Hub</a></p>
+<body id="top">
+<a class="skip-link" href="#main">Skip to content</a>
+<main id="main">
+<nav class="site-nav" aria-label="Main navigation"><a href="/">Zion Tech Group</a><a href="/apps/">App catalog</a><a href="/apps/app-network-use-case-map.html">Use-case map</a><a href="/apps/network.html">Network</a><a href="/apps/content-hub.html">Guides</a><a href="/discovery/">Free Discovery</a></nav>
 <span class="badge">Always free · online 24/7</span>
 <h1>Start here: Discovery → evidence → app → pilot</h1>
 <p class="muted">You do not need to browse the whole network. Start with one operational problem, get a free Discovery result, then follow the shortest evidence-backed path.</p>
+
+<section class="panel" aria-labelledby="choose-title">
+<h2 id="choose-title">Find a useful path in two steps</h2>
+<p>Choose the outcome you need, open one guide or tool and check its evidence before any implementation. These paths are editorial starting points—not proof that a listed app connects to your live systems.</p>
+<nav class="jump" aria-label="Jump to a business goal">
+<a href="#field">Qualify a field visit</a>
+<a href="#procurement">Compare supplier quotes</a>
+<a href="#operations">Triage IT incidents</a>
+<a href="#finops">Review costs and ROI</a>
+<a href="#pilot">Plan an AI pilot</a>
+<a href="#communications">Improve communications</a>
+</nav>
+<p>Already know the problem? Open the <a href="/apps/app-network-use-case-map.html">ten-category use-case map</a>. Know the tool name? Use the <a href="/apps/content-hub.html">content hub</a> or the <a href="/apps/registry-explorer.html">app registry explorer</a>.</p>
+</section>
+
 
 <div class="grid">
 <section class="card"><h2>1. Free Discovery</h2><p>Answer the questionnaire in about five minutes. Your report appears immediately and is submitted for delivery to the email you entered and to <strong>commercial@ziontechgroup.com</strong>.</p><a class="btn" href="/discovery/">Start Discovery</a></section>
@@ -32,6 +64,19 @@ main{max-width:980px;margin:auto;padding:40px 20px 72px}a{color:#7dd3fc;text-dec
 <section class="card"><h2>5. Network map</h2><p>Explore flagship apps, micro-apps, batches, repos and related tools from one map.</p><a class="btn" href="/apps/network.html">Open Network</a></section>
 <section class="card"><h2>6. Content Hub</h2><p>Use guides, spotlights and batch pages to compare related apps by problem and industry.</p><a class="btn" href="/apps/content-hub.html">Open Content Hub</a></section>
 </div>
+<section aria-labelledby="paths-heading">
+<h2 id="paths-heading">Six short journeys, with the next step linked</h2>
+<p class="muted">Each journey moves from a question to a practical checklist. Begin with example or authorized data; keep human review in the loop.</p>
+<div class="path-grid">
+<article class="card" id="field"><h3>1. Field service readiness</h3><p class="task">Can someone safely perform a specific on-site visit?</p><p>Record each address, local time window, ticket, rack or device model, required tools, site access and contact. Obtain named technicians with written availability and relevant experience.</p><p><a href="/apps/field-service-evidence-guide.html">Read the field-service evidence guide</a> → <a href="/sla-calculator/">check SLA assumptions</a> → <a href="/apps/service-readiness-paths.html">prepare a service brief</a>.</p><p class="muted">No technician booking or dispatch without written client approval, applicable PO and separate Zion authorization.</p></article>
+<article class="card" id="procurement"><h3>2. Supplier quotes and procurement</h3><p class="task">Which offer is genuinely comparable?</p><p>Verify labor, equipment, travel, freight, taxes, import duties, overtime, cancellation and exclusions. Ask for written validity and payment terms before comparing offers.</p><p><a href="/apps/supplier-quote-evidence-workbench.html">Open the quote evidence workbench</a> → <a href="/apps/field-service-sourcing-control.html">review sourcing controls</a> → <a href="/apps/discovery-decision-kit.html">record the decision</a>.</p><p class="muted">Estimates are not supplier bids, purchasing approval or a final client quote.</p></article>
+<article class="card" id="operations"><h3>3. IT operations and service desk</h3><p class="task">Which ticket or incident should the team handle first?</p><p>Choose a sample queue, document severity and escalation ownership, then test a response runbook with a human reviewer and a rollback path.</p><p><a href="/support-ticket-triager/">Explore ticket triage</a> → <a href="/ops-runbook-ai/">review a runbook</a> → <a href="/ai-governance-checklist/">check permissions</a>.</p><p class="muted">Tool pages are not proof of a connected service desk or measured production SLA.</p></article>
+<article class="card" id="finops"><h3>4. FinOps and value assumptions</h3><p class="task">Where should cost analysis start?</p><p>Define a measured baseline and period first. Separate cloud bills, forecast assumptions and one-time implementation costs from realized savings.</p><p><a href="/finops-estimator/">Try the FinOps estimator</a> → <a href="/roi-calc/">compare ROI scenarios</a> → <a href="/apps/discovery-report-workbench.html">document assumptions</a>.</p><p class="muted">Calculator outputs are illustrative, not audited outcomes or guaranteed savings.</p></article>
+<article class="card" id="pilot"><h3>5. AI discovery and a reversible pilot</h3><p class="task">What is the smallest useful test?</p><p>Start with a free, online Discovery report. Identify one process owner, one baseline, an objective, authorized or synthetic test data and a stop rule.</p><p><a href="/discovery/">Start free Discovery</a> → <a href="/apps/discovery-written-pilot-brief.html">write the pilot brief</a> → <a href="/automation-pilot-planner/">plan a limited test</a>.</p><p class="muted">The report appears in the browser; email-provider acceptance does not prove inbox delivery.</p></article>
+<article class="card" id="communications"><h3>6. Communications workflows</h3><p class="task">Where do calls, messages and meeting actions get lost?</p><p>Map a single handoff and measure missed routing, follow-up ownership or meeting-action completion. Check privacy, recording consent and retention first.</p><p><a href="/apps/communications-discovery-guide.html">Read the communications guide</a> → <a href="/apps/network-learning-paths.html">compare related apps</a> → <a href="/apps/pilot-evidence-checklist.html">check pilot evidence</a>.</p><p class="muted">These are planning paths; do not infer telephony, CRM or email integrations are live.</p></article>
+</div>
+<p><a href="#choose-title">Back to goals</a> · <a href="/apps/app-network-use-case-map.html">Browse all ten problem categories</a></p>
+</section>
 
 <h2>Recommended free sequence</h2>
 <p><a href="/discovery/">Discovery</a> → <a href="/ai-opportunity-mapper/">Opportunity Mapper</a> → <a href="/roi-calc/">ROI Calculator</a> → <a href="/ai-governance-checklist/">Governance Checklist</a> → <a href="/automation-brief-builder/">Automation Brief Builder</a> → <a href="/automation-pilot-planner/">30-day Pilot Planner</a>.</p>
@@ -39,10 +84,17 @@ main{max-width:980px;margin:auto;padding:40px 20px 72px}a{color:#7dd3fc;text-dec
 <h2>Browse by current collections</h2>
 <p><a href="/apps/october-2026-batch6.html">Telecom &amp; Connectivity</a> · <a href="/apps/october-2026-batch7.html">Insurance &amp; Risk</a> · <a href="/apps/october-2026-batch8.html">Nonprofit &amp; Social Impact</a> · <a href="/apps/october-2026-batch9.html">HR &amp; People</a> · <a href="/apps/network-batch93.html">Manufacturing &amp; Industrial</a> · <a href="/apps/network-batch94.html">Legal &amp; Compliance</a>.</p>
 
+<section class="panel" aria-labelledby="languages-title">
+<h2 id="languages-title">Guided app paths in five languages</h2>
+<p>For translated learning paths, use the maintained guide in your language. Individual linked tools may still have English-only interfaces.</p>
+<nav class="languages" aria-label="Translated app-learning guides"><a lang="en" href="/apps/network-learning-paths.html">English</a><a lang="pt-BR" href="/pt/apps/network-learning-paths.html">Português</a><a lang="es" href="/es/apps/network-learning-paths.html">Español</a><a lang="fr" href="/fr/apps/network-learning-paths.html">Français</a><a lang="de" href="/de/apps/network-learning-paths.html">Deutsch</a></nav>
+</section>
+
 <h2>Commercial follow-up remains optional</h2>
 <p>The Discovery itself stays free. Zion's commercial team receives the same submitted evidence so follow-up can reference the process, assumptions and recommended apps rather than restart qualification from zero.</p>
 
 <p><a class="btn" href="/discovery/">Start free Discovery</a><a class="btn" href="/apps/">Browse all apps</a><a class="btn" href="/">Back to homepage</a></p>
+<footer><p>Free Discovery has no payment or mandatory meeting. A submitted email-delivery request does not guarantee arrival in either inbox; keep the on-page report using copy, download or manual email fallback. Paid services require a separate agreement.</p><p><a href="/apps/content-hub.html">Guides</a> · <a href="/apps/network.html">Network map</a> · <a href="/apps/app-network-use-case-map.html">Use-case map</a> · <a href="#top">Back to top</a></p></footer>
 </main>
 </body>
 </html>
