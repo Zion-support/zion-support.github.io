@@ -1,0 +1,45 @@
+name: Satellite Release - Dependency Integration Review
+
+on:
+  pull_request:
+    paths:
+      - 'public/**'
+      - 'scripts/check-satellite-release-integration.py'
+      - 'scripts/render-satellite-suite.py'
+      - 'tests/satellite-release-integration.test.py'
+      - 'tests/fixtures/satellite-release-dependencies/**'
+      - 'content/satellite*'
+      - '.github/workflows/satellite-release-integration.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: satellite-integration-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  integration:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout reviewed source only
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        with:
+          persist-credentials: false
+      - name: Validate isolated staging logic
+        run: python3 tests/satellite-release-integration.test.py
+      - name: Assemble and test existing Discovery dependencies with app suite
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 scripts/check-satellite-release-integration.py --source "$GITHUB_WORKSPACE" --evidence "$RUNNER_TEMP/zion-release-integration"
+      - name: Retain review evidence even when a dependency blocks
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: satellite-release-integration-${{ github.run_id }}
+          path: ${{ runner.temp }}/zion-release-integration/
+          if-no-files-found: warn
+          retention-days: 3
