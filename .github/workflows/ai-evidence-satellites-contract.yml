@@ -13,6 +13,8 @@ on:
       - 'scripts/render-ai-evidence-locales.cjs'
       - 'scripts/render-ai-evidence-review.cjs'
       - 'scripts/append-ai-evidence-pathways.cjs'
+      - 'scripts/complete-ai-evidence-section-nav.cjs'
+      - 'scripts/test-ai-evidence-section-nav.cjs'
       - 'scripts/test-ai-evidence-pathways.cjs'
       - 'scripts/complete-ai-evidence-fallbacks.cjs'
       - 'scripts/finalize-ai-evidence-accessibility.cjs'
