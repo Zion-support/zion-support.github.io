@@ -1,15 +1,25 @@
 # Resource comparison content — 16 October 2026
 
-Draft-source update in existing PR71571 only. Not merged, deployed or live.
+Implemented in existing draft PR71571 only. Not merged, deployed or live.
 
-Based on inspected head 5a554d8ba40e156128c62d540a3441db717b7b37. Adds one resource-comparison section to each generated EN/PT-BR/ES/FR/DE map: localized heading, introductory paragraph and three evaluation steps. No added links or new promotional section. Original href sequence, protected forms and scripts preserved by existing checks. No pricing, payment, recipient or publisher edits.
+Base inspected immediately before this batch: 5a554d8ba40e156128c62d540a3441db717b7b37, branch content/guided-app-pathways-20261014. User confirmed the three-file review batch, Notion status update and Supermemory checkpoint. No production release or pricing change is included.
 
-Files: scripts/use-case-map-link-copy.py; scripts/test-use-case-map-link-copy.py; docs/releases/resource-comparison-2026-10-16.md. Existing PR71571 only. Preserve concurrent changes and draft status.
+## Content
 
-Evidence before commit: four original input blobs independently Git-SHA verified. Original localization suite 14/14 PASS. Expanded offline suite 17/17 PASS, including actual source renderer, all five locales, incomplete copy rejection and escaping. Five real-source previews rendered, all original href sequences retained. Command: python scripts/test-use-case-map-link-copy.py.
+Adds one resource-comparison section to each generated EN/PT-BR/ES/FR/DE use-case map: a localized heading, introductory paragraph and three evaluation steps. Readers identify input/output and resource type, test a synthetic example, then name a reviewer and acceptance criterion. Original destination URLs and order remain unchanged. No new promotion, form, script, pricing, payment, recipient or publisher modification.
 
-Limitations: not full production artifact build, remote CI success, native-language review, browser/mobile/accessibility audit, live destination or app functionality verification. No new content online.
+## Verification
 
-Release blocker: main public/discovery/index.html blob 6e4762ce6b861010694b59323d90ad846028dd50 retains $99 Offer/Stripe CTAs while hub source promotes Free Discovery. Do not change pricing or expand that promotion without canonical-owner reconciliation. Main publisher invokes scripts/prepare-pages-out.sh; inspect that script before assuming which renderers production executes.
+Four original source blobs independently Git-SHA verified at the immutable base. Existing exact-source localization suite: 14/14 PASS before edits. Expanded offline suite: 17/17 PASS after edits, including actual source renderer, five locales, missing/empty comparison copy rejection and escaping. Five real-source previews generated with original href sequences preserved. Existing protected form/script checks retained.
 
-Continuation: recovered Supermemory/Mem0 and Notion CEO Dashboard 3e8b94b0-eaf7-811b-9e58-fcd12dd736fd. User confirmed the three-file draft batch, existing Notion dashboard progress update and Supermemory checkpoint. Main writes, merges, production deployment, pricing and payment changes are outside this batch.
+Command: python scripts/test-use-case-map-link-copy.py
+
+Offline review ZIP: https://backend.composio.dev/api/v3/sl/yRnNcJfseh
+
+These are local checks, not full production-artifact, remote-CI, native-language, browser/mobile/accessibility or live app-functionality certification. All-network translation remains incomplete. Generated content requires canonical-pipeline integration, complete artifact QA, scoped release approval and fresh public verification before it can be called live.
+
+## Release blocker and continuation
+
+Inspected main public/discovery/index.html blob 6e4762ce6b861010694b59323d90ad846028dd50 retains $99 Offer/Stripe CTAs while hub source promotes Free Discovery. Proposed owner: website/Discovery maintainer. Reconcile the canonical offer and source/public behavior before expanding promotion; this batch changes neither policy nor checkout.
+
+Current main publisher invokes scripts/prepare-pages-out.sh. Inspect that script and current PR head before assuming which renderers production executes. Preserve concurrent branch work, manual-only publishing and existing release/privacy gates. No force push, main update, merge or deployment in this batch. Next: verify committed file readback, current-head checks and full artifact compatibility, then complete editorial/accessibility review before a separately scoped publication proposal.
