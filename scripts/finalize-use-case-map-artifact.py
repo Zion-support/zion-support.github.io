@@ -14,6 +14,9 @@ from urllib.parse import unquote, urljoin, urlsplit
 SPEC = importlib.util.spec_from_file_location('use_case_maps',Path(__file__).with_name('render-use-case-map-locales.py'))
 maps = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(maps)
+COPY_SPEC = importlib.util.spec_from_file_location('map_link_copy',Path(__file__).with_name('use-case-map-link-copy.py'))
+link_copy = importlib.util.module_from_spec(COPY_SPEC)
+COPY_SPEC.loader.exec_module(link_copy)
 RELEASE = 'use-case-map-home-links-2026-10-14-v1'
 # Reviewed current-main homepage bodies; unknown layouts must fail closed.
 CURRENT_HOME_SHA256 = {'pt': '947892ad2ca6496e48f500dfed7ec912b299c30c75f2aa8c8728ec901d2f7b7b', 'en': '95d4081d11c6d809185a0f54ce44320440b9939789b4c0c7f745c7ff0d3c2d7c', 'es': '95d20fc8e1f52608287977e92402575e2b3e540766520e97e89cdb9f8d0cf82f', 'fr': '15e3ec096955b56c0e305cb6aa7926df19247446c764e20b04f2ee94d92bf293', 'de': '01ef57629888ec7ed6b5fff59c2e51110268577637aaff50d42448cd2bed972c'}
@@ -121,7 +124,7 @@ def finalize(source,root):
     if not root.is_dir():raise ValueError('Artifact directory does not exist')
     with tempfile.TemporaryDirectory() as td:
         stage=Path(td)
-        pages=maps.build(source,stage)
+        pages=link_copy.localize_pages(maps.build(source,stage),maps.LANGS)
         candidates=dict(pages)
         for locale in maps.LANGS:
             name=relative_file(home(locale));path=safe_path(root,name)
@@ -130,6 +133,7 @@ def finalize(source,root):
         validate_links(root,candidates,list(pages))
         manifest=json.loads((stage/'apps/use-case-map-locales.json').read_text(encoding='utf-8'))
         manifest.update({'status':'OFFLINE_ARTIFACT_VALIDATED_NOT_LIVE','homepage_links':{k:home(k) for k in maps.LANGS},'release':RELEASE,'scope':'Five maps and five existing homepage contextual links; local target existence only, not app functionality or live HTTP certification','map_sha256':{name:hashlib.sha256(text.encode()).hexdigest() for name,text in pages.items()}})
+        manifest.update({'link_copy_release':link_copy.RELEASE,'localized_link_labels_per_language':len(link_copy.LABELS),'category_contexts_per_language':len(link_copy.CONTEXT)})
         candidates['apps/use-case-map-locales.json']=json.dumps(manifest,ensure_ascii=False,indent=2)+'\n'
         for name in candidates:
             target=safe_path(root,name)
