@@ -1,5 +1,5 @@
 # AI Content Max Velocity Deploy
-# 5x daily: ideation + audit ideas + front page expansion + content burst → build → commit + deploy.
+# 5x daily: ideation + audit ideas + front page expansion + content burst -> build -> commit + deploy.
 # Maximizes content velocity with guaranteed deploy; uses content-commit concurrency.
 
 name: AI Content Max Velocity Deploy
@@ -102,13 +102,26 @@ jobs:
           MAX_ADD: ${{ github.event.inputs.max_add || '6' }}
         run: node automation/ai-content-ideas-to-deploy-pipeline.cjs
 
+      - name: Detect generated changes
+        id: changes
+        run: |
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No generated changes; skipping full build and commit."
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            git status --short
+          fi
+
       - name: Validate build (before commit)
+        if: steps.changes.outputs.changed == 'true'
         run: |
           set -euo pipefail
           npm run rsc:guard
           npm run build
 
       - name: Commit, push, and deploy
+        if: steps.changes.outputs.changed == 'true'
         env:
           TRIGGER_DEPLOY: ${{ github.event.inputs.trigger_deploy != 'false' && '1' || '' }}
         run: |
