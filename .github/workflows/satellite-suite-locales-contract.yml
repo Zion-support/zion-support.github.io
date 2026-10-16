@@ -7,8 +7,10 @@ on:
       - 'public/agent-canary-release-lab/**'
       - 'public/field-spares-custody-kit/**'
       - 'content/satellite-suite-locales.json'
+      - 'content/satellite-manual-gates-locales.json'
       - 'scripts/render-satellite-suite.py'
       - 'tests/satellite-suite*'
+      - 'tests/satellite-manual-gates.test.cjs'
       - '.github/workflows/satellite-suite-locales-contract.yml'
       - '.github/workflows/static-deploy.yml'
   workflow_dispatch:
@@ -34,9 +36,11 @@ jobs:
             /public/agent-canary-release-lab/
             /public/field-spares-custody-kit/
             /content/satellite-suite-locales.json
+            /content/satellite-manual-gates-locales.json
             /scripts/render-satellite-suite.py
             /tests/satellite-suite.test.py
             /tests/satellite-suite-runtime.test.cjs
+            /tests/satellite-manual-gates.test.cjs
           sparse-checkout-cone-mode: false
       - name: Test locale completeness and isolated artifact
         shell: bash
@@ -46,4 +50,4 @@ jobs:
           node --version
           python3 tests/satellite-suite.test.py
           python3 scripts/render-satellite-suite.py --source public --out "$RUNNER_TEMP/satellite-suite" --without-homepages
-          SATELLITE_PREVIEW="$RUNNER_TEMP/satellite-suite" node --test tests/satellite-suite-runtime.test.cjs
+          SATELLITE_PREVIEW="$RUNNER_TEMP/satellite-suite" node --test tests/satellite-suite-runtime.test.cjs tests/satellite-manual-gates.test.cjs

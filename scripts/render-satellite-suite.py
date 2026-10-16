@@ -20,7 +20,7 @@ LANGS = {'en': 'en', 'pt': 'pt-BR', 'es': 'es', 'fr': 'fr', 'de': 'de'}
 NATIVE = {'en': 'English', 'pt': 'Portugu\u00eas', 'es': 'Espa\u00f1ol', 'fr': 'Fran\u00e7ais', 'de': 'Deutsch'}
 SLUGS = ['mcp-trust-boundary-studio', 'agent-canary-release-lab', 'field-spares-custody-kit']
 TITLES = ['MCP Trust Boundary Studio', 'Agent Canary Release Lab', 'Field Spares Custody Kit']
-PINNED = ['ea2d7688629e71a77ec850294c7734a9d8f39bc7', '730e534757351aa9b7f182b41083c60c4cc3e611', '34deac379e2c2f9cd11d51141c9d4c59920444ec']
+PINNED = ['5bf371e1c38007fcc52e57c1b30422efefae13ef', '2b1b8943c472fb392f2757f235a7833101106465', '34deac379e2c2f9cd11d51141c9d4c59920444ec']
 DESCRIPTIONS = ['Map agent access before connecting business systems.', 'Plan a reversible model or agent release.', 'Trace parts and verify evidence before field work.']
 EVIDENCE = ['Collect authorization metadata, tool scopes, approval records and tenant-isolation tests. Use synthetic tokens only.', 'Record the baseline, representative test cases, cohort owner, stop thresholds and a tested rollback path. No production change is executed.', 'Reconcile old and replacement serials, custody receipts, written all-in costs, customer PO and a separate Zion release. Never infer approval from a score.']
 PRIVACY = 'Inputs stay in this browser session. No live AI, telemetry, email, payment or dispatch service is connected.'
@@ -62,6 +62,22 @@ def load_copy(path: Path) -> dict[str, dict[str, str]]:
     for lang, copy in data.items():
         if set(copy) != keys or any(not isinstance(v, str) or not v or re.search(r'[\x00-\x08\x0b\x0c\x0e-\x1f]', v) for v in copy.values()):
             raise ValueError('Missing or invalid translation: ' + lang)
+    # Supplemental strings belong to the same reviewed source tree, never user input.
+    overlay_path = Path(__file__).resolve().parents[1] / 'content/satellite-manual-gates-locales.json'
+    overlay = json.loads(overlay_path.read_text('utf-8'))
+    if set(overlay) != {'schema', 'languages', 'entries'} or overlay['schema'] != 'parallel-copy-v1' or overlay['languages'] != ['pt', 'es', 'fr', 'de']:
+        raise ValueError('Invalid manual-gate translation schema')
+    if not isinstance(overlay['entries'], dict) or not overlay['entries']:
+        raise ValueError('Missing manual-gate translations')
+    for key, values in overlay['entries'].items():
+        if not isinstance(key, str) or not key or not isinstance(values, list) or len(values) != 4:
+            raise ValueError('Invalid manual-gate translation entry')
+        for locale, value in zip(LANGS, [key, *values]):
+            if not isinstance(value, str) or not value or re.search(r'[\x00-\x08\x0b\x0c\x0e-\x1f]', value):
+                raise ValueError('Invalid manual-gate translation value')
+            if key in data[locale] and data[locale][key] != value:
+                raise ValueError('Conflicting manual-gate translation: ' + locale)
+            data[locale][key] = value
     return data
 
 
@@ -88,6 +104,7 @@ def compile_runtime(source: str, locale: str, copy: dict[str, str]) -> str:
     # Report keys and arithmetic stay stable; locale-specific strings are human text.
     # Decimal input parsing is unchanged. Only displayed decimal numbers are formatted.
     translated = translated.replace('.toFixed(2)', '.toLocaleString(' + json.dumps(LANGS[locale]) + ',{minimumFractionDigits:2,maximumFractionDigits:2})')
+    translated = translated.replace('.toLocaleString("en")', '.toLocaleString(' + json.dumps(LANGS[locale]) + ')')
     prefix = '/* ' + RELEASE + ' | ' + locale + ' | source logic preserved */\n'
     return prefix + translated
 

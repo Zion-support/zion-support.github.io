@@ -1,1 +1,110 @@
-"use strict";(()=>{const slug="mcp-trust-boundary-studio",names=[["tls","TLS verified for remote resources"],["aud","Access token audience validated"],["pkce","OAuth PKCE and redirect URI validation"],["scope","Per-tool least privilege scopes"],["tenant","Tenant isolation tested"],["approve","Human approval on high-impact writes"],["audit","Immutable authorization decision audit"],["secret","No tokens in prompts, logs or URLs"]],spec={"opts":[["transport","MCP transport",["Remote HTTP","Local stdio"]],["risk","Tool access",["Read only","Writes / external actions","Privileged admin"]]],"checks":[["tls","TLS verified for remote resources"],["aud","Access token audience validated"],["pkce","OAuth PKCE and redirect URI validation"],["scope","Per-tool least privilege scopes"],["tenant","Tenant isolation tested"],["approve","Human approval on high-impact writes"],["audit","Immutable authorization decision audit"],["secret","No tokens in prompts, logs or URLs"]],"notes":"This local checklist does not connect to an MCP server or inspect real credentials."};const $=id=>document.getElementById(id),form=$("lab");const safe=v=>String(v??"").slice(0,120);function assess(){const ok=names.filter(([id])=>$(id).checked),failed=names.filter(([id])=>!$(id).checked),score=Math.round(ok.length/names.length*100);let blockers=slug==="field-spares-custody-kit"?["client","po","zion"]:slug==="agent-canary-release-lab"?["owner","rollback","hold"]:["aud","scope","approve"];let blocked=blockers.some(id=>!$(id).checked);if(slug==="mcp-trust-boundary-studio"&&$("transport").value==="1")blocked=["scope","approve"].some(id=>!$(id).checked);let status=blocked?"HOLD — critical controls missing":score<100?"REVIEW — evidence incomplete":"Checklist complete — verify independently";$("score").textContent=score+" / 100";$("status").textContent=status;$("status").className=blocked?"hold":score===100?"ready":"";$("findings").replaceChildren();for(const [id,label] of failed){let li=document.createElement("li");li.textContent="Evidence required: "+label;$("findings").append(li);}if(!failed.length){let li=document.createElement("li");li.textContent="All manually selected controls checked; no external assurance performed.";$("findings").append(li);}const data={app:slug,score,status,checked:ok.map(a=>a[0]),missing:failed.map(a=>a[0]),scenario:{}};for(const [id] of spec.opts||[])data.scenario[id]=$(id).selectedOptions[0].textContent;for(const [id] of spec.text||[])data.scenario[id]=safe($(id).value);for(const [id] of spec.nums||[])data.scenario[id]=Math.max(0,Number($(id).value)||0);if(slug==="agent-canary-release-lab"){let n=data.scenario.users;let cohorts=[1,5,25].map(p=>p+"% ≈ "+Math.ceil(n*p/100)+" users");$("extra").textContent="Example gated rollout: "+cohorts.join(" → ")+". Halt on adverse safety signals or ≥"+data.scenario.threshold+"% error increase; thresholds require owner validation.";}if(slug==="field-spares-custody-kit"){let vals=["base","travel","freight","tax"].map(id=>data.scenario[id]),all=vals.reduce((a,b)=>a+b,0);const present=["base","travel","freight","tax"].every(id=>$(id).value.trim()!=="");const floor=Math.ceil(all*1.4*100)/100;$("extra").textContent=present?"Assumed all-in "+all.toFixed(2)+"; indicative minimum sell "+floor.toFixed(2)+" in the same currency. Not a customer quotation.":"Enter every cost component including zero to calculate a conditional ≥40% markup floor.";data.financial=present?{allIn:all,minimumSell:floor,markup:1.4,assumptionsUnverified:true}:null;}return data;}form.addEventListener("input",assess);form.addEventListener("change",assess);form.addEventListener("reset",()=>setTimeout(assess,0));$("copy").addEventListener("click",async()=>{const d=assess();const value=d.app+" | "+d.score+"/100 | "+d.status+" | missing: "+d.missing.join(", ");try{await navigator.clipboard.writeText(value);$("notice").textContent="Summary copied.";}catch{$("notice").textContent="Clipboard blocked by browser. Use Download JSON."}});$("export").addEventListener("click",()=>{const data=JSON.stringify(assess(),null,2);const u=URL.createObjectURL(new Blob([data],{type:"application/json"}));const a=document.createElement("a");a.href=u;a.download=slug+"-assessment.json";a.click();setTimeout(()=>URL.revokeObjectURL(u),1000);$("notice").textContent="Downloaded locally; no information was sent to Zion."});assess();})();
+"use strict";(()=>{const slug="mcp-trust-boundary-studio",names=[["tls","TLS verified for remote resources"],["aud","Access token audience validated"],["pkce","OAuth PKCE and redirect URI validation"],["scope","Per-tool least privilege scopes"],["tenant","Tenant isolation tested"],["approve","Human approval on high-impact writes"],["audit","Immutable authorization decision audit"],["secret","No tokens in prompts, logs or URLs"]],spec={"opts":[["transport","MCP transport",["Remote HTTP","Local stdio"]],["risk","Tool access",["Read only","Writes / external actions","Privileged admin"]]],"checks":[["tls","TLS verified for remote resources"],["aud","Access token audience validated"],["pkce","OAuth PKCE and redirect URI validation"],["scope","Per-tool least privilege scopes"],["tenant","Tenant isolation tested"],["approve","Human approval on high-impact writes"],["audit","Immutable authorization decision audit"],["secret","No tokens in prompts, logs or URLs"]],"notes":"This local checklist does not connect to an MCP server or inspect real credentials."};const $=id=>typeof document !== "undefined" ? document.getElementById(id) : null;
+// Manual evidence only. No checklist result grants authority to operate a system.
+function evaluate(input = {}) {
+  const raw = input && typeof input === "object" ? input : {};
+  const errors = [], scenario = {}, validChoices = {};
+  for (const [id, label, options] of spec.opts) {
+    const value = raw[id];
+    const valid = typeof value === "string" && /^[0-9]$/.test(value) && Number(value) < options.length;
+    scenario[id] = valid ? options[Number(value)] : null;
+    validChoices[id] = valid;
+    if (!valid) errors.push({id, message: label + ": " + "Choose a valid option."});
+  }
+  const isMcp = slug === "mcp-trust-boundary-studio";
+  const notApplicable = [];
+  if (isMcp && validChoices.transport && raw.transport === "1") notApplicable.push("tls", "aud", "pkce");
+  if (isMcp && validChoices.risk && raw.risk === "0") notApplicable.push("approve");
+  const active = names.filter(([id]) => !notApplicable.includes(id));
+  const checked = active.filter(([id]) => raw[id] === true).map(([id]) => id);
+  const missingControls = active.filter(([id]) => raw[id] !== true).map(([id]) => id);
+  let validInputs = Object.values(validChoices).filter(Boolean).length;
+  for (const [id, label] of spec.nums || []) {
+    const text = typeof raw[id] === "string" ? raw[id].trim() : "";
+    const value = Number(text);
+    const valid = id === "users"
+      ? /^\d{1,9}$/.test(text) && Number.isSafeInteger(value) && value >= 1 && value <= 100000000
+      : /^(?:\d{1,3}(?:\.\d)?|\.\d)$/.test(text) && Number.isFinite(value) && value >= 0.1 && value <= 100;
+    scenario[id] = valid ? value : null;
+    if (valid) validInputs++;
+    else errors.push({id, message: label + ": " + (id === "users"
+      ? "Enter a whole number from 1 to 100000000."
+      : "Enter a percentage from 0.1 to 100 with at most one decimal.")});
+  }
+  const denominator = active.length + spec.opts.length + (spec.nums || []).length;
+  const score = Math.floor((checked.length + validInputs) * 100 / denominator);
+  const reviewReady = errors.length === 0 && missingControls.length === 0;
+  const cohorts = !isMcp && errors.length === 0
+    ? [1, 5, 25].map(percent => ({percent, users: Math.ceil(scenario.users * percent / 100)})) : null;
+  return {
+    app: slug, schemaVersion: 2, score, reviewReady, authorized: false,
+    verification: "SELF_REPORTED_NOT_INDEPENDENTLY_VERIFIED",
+    status: reviewReady ? "READY FOR OWNER REVIEW - no action authorized" : "HOLD - incomplete or invalid evidence",
+    checked, applicable: active.map(([id]) => id), notApplicable,
+    missing: [...new Set([...missingControls, ...errors.map(e => e.id)])], errors, scenario, cohorts
+  };
+}
+function mount(doc) {
+  const node = id => doc.getElementById(id);
+  const ids = ["lab", "score", "status", "findings", "extra", "notice", "copy", "export",
+    ...names.map(([id]) => id), ...spec.opts.map(([id]) => id), ...(spec.nums || []).map(([id]) => id)];
+  if (ids.some(id => !node(id))) throw new Error("Incomplete application markup.");
+  const form = node("lab");
+  function render() {
+    const raw = {};
+    for (const [id] of names) raw[id] = node(id).checked;
+    for (const [id] of [...spec.opts, ...(spec.nums || [])]) raw[id] = node(id).value;
+    const result = evaluate(raw);
+    node("score").textContent = result.score + " / 100 input completeness (not authorization)";
+    node("status").textContent = result.status;
+    node("status").className = result.reviewReady ? "review" : "hold";
+    node("findings").replaceChildren();
+    const lines = result.errors.map(e => e.message);
+    for (const id of result.missing.filter(id => names.some(([key]) => key === id))) lines.push("Evidence required: " + names.find(([key]) => key === id)[1]);
+    for (const id of result.notApplicable) lines.push("Not applicable to this configuration: " + names.find(([key]) => key === id)[1]);
+    if (result.reviewReady) lines.push("All manually selected controls checked; no external assurance performed.");
+    for (const text of lines) { const li = doc.createElement("li"); li.textContent = text; node("findings").append(li); }
+    for (const [id] of [...spec.opts, ...(spec.nums || [])]) {
+      const error = result.errors.find(e => e.id === id);
+      node(id).setAttribute("aria-invalid", error ? "true" : "false");
+      if (typeof node(id).setCustomValidity === "function") node(id).setCustomValidity(error ? error.message : "");
+    }
+    for (const [id] of names) {
+      const inactive = result.notApplicable.includes(id);
+      node(id).disabled = inactive;
+      node(id).setAttribute("aria-disabled", String(inactive));
+    }
+    if (slug === "agent-canary-release-lab") {
+      node("extra").textContent = result.cohorts
+        ? "Example gated rollout: " + result.cohorts.map(c => c.percent + "% \u2248 " + c.users.toLocaleString("en") + " users").join(" \u2192 ") + ". Halt on adverse safety signals or \u2265" + result.scenario.threshold.toLocaleString("en") + "% error increase; thresholds require owner validation."
+        : "No rollout plan: correct the invalid inputs first.";
+    } else {
+      node("extra").textContent = "Transport and access level determine applicable checks. Local process security still requires owner review.";
+    }
+    return result;
+  }
+  form.addEventListener("input", render);
+  form.addEventListener("change", render);
+  form.addEventListener("submit", event => { event.preventDefault(); render(); });
+  form.addEventListener("reset", () => setTimeout(render, 0));
+  node("copy").addEventListener("click", async () => {
+    const result = render();
+    const text = result.app + " | " + result.status + " | " + result.score + "/100 | " + "Missing evidence: " + result.missing.join(", ");
+    try { await navigator.clipboard.writeText(text); node("notice").textContent = "Summary copied. No authorization is granted."; }
+    catch { node("notice").textContent = "Clipboard unavailable. Use Download JSON."; }
+  });
+  node("export").addEventListener("click", () => {
+    let url;
+    try {
+      url = URL.createObjectURL(new Blob([JSON.stringify(render(), null, 2)], {type: "application/json"}));
+      const a = doc.createElement("a"); a.href = url; a.download = slug + "-assessment.json";
+      doc.body.append(a); a.click(); a.remove();
+      node("notice").textContent = "Assessment downloaded locally; nothing sent to Zion. Unknown values remain null.";
+    } catch { node("notice").textContent = "Download failed. Use Copy summary."; }
+    finally { if (url) setTimeout(() => URL.revokeObjectURL(url), 1000); }
+  });
+  render();
+  return {render};
+}
+if (typeof module !== "undefined" && module.exports) module.exports = {evaluate, mount};
+if (typeof document !== "undefined") mount(document);
+})();

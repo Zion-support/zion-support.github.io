@@ -1,0 +1,65 @@
+{
+  "schema": "parallel-copy-v1",
+  "languages": [
+    "pt",
+    "es",
+    "fr",
+    "de"
+  ],
+  "entries": {
+    "Choose a valid option.": [
+      "Escolha uma opção válida.",
+      "Elija una opción válida.",
+      "Choisissez une option valide.",
+      "Wählen Sie eine gültige Option."
+    ],
+    "Enter a whole number from 1 to 100000000.": [
+      "Informe um número inteiro de 1 a 100000000.",
+      "Introduzca un número entero entre 1 y 100000000.",
+      "Saisissez un nombre entier entre 1 et 100000000.",
+      "Geben Sie eine ganze Zahl von 1 bis 100000000 ein."
+    ],
+    "Enter a percentage from 0.1 to 100 with at most one decimal.": [
+      "Informe um percentual de 0.1 a 100, com no máximo uma casa decimal.",
+      "Introduzca un porcentaje de 0.1 a 100 con un decimal como máximo.",
+      "Saisissez un pourcentage de 0.1 à 100 avec une décimale au maximum.",
+      "Geben Sie einen Prozentsatz von 0.1 bis 100 mit höchstens einer Dezimalstelle ein."
+    ],
+    "READY FOR OWNER REVIEW - no action authorized": [
+      "PRONTO PARA REVISÃO DO RESPONSÁVEL - nenhuma ação autorizada",
+      "LISTO PARA REVISIÓN DEL RESPONSABLE - ninguna acción autorizada",
+      "PRÊT POUR EXAMEN DU RESPONSABLE - aucune action autorisée",
+      "BEREIT ZUR PRÜFUNG DURCH VERANTWORTLICHE - keine Aktion autorisiert"
+    ],
+    "Incomplete application markup.": [
+      "Estrutura do aplicativo incompleta.",
+      "Estructura de la aplicación incompleta.",
+      "Structure de l’application incomplète.",
+      "Unvollständige Anwendungsstruktur."
+    ],
+    "Not applicable to this configuration: ": [
+      "Não se aplica a esta configuração: ",
+      "No se aplica a esta configuración: ",
+      "Sans objet pour cette configuration : ",
+      "Für diese Konfiguration nicht zutreffend: "
+    ],
+    "No rollout plan: correct the invalid inputs first.": [
+      "Sem plano de implantação: corrija primeiro os dados inválidos.",
+      "Sin plan de despliegue: corrija primero los datos no válidos.",
+      "Aucun plan de déploiement : corrigez d’abord les données non valides.",
+      "Kein Einführungsplan: Korrigieren Sie zuerst die ungültigen Eingaben."
+    ],
+    "Transport and access level determine applicable checks. Local process security still requires owner review.": [
+      "O transporte e o nível de acesso determinam as verificações aplicáveis. A segurança do processo local ainda exige revisão do responsável.",
+      "El transporte y el nivel de acceso determinan las comprobaciones aplicables. La seguridad del proceso local sigue requiriendo revisión del responsable.",
+      "Le transport et le niveau d’accès déterminent les contrôles applicables. La sécurité du processus local reste à examiner par le responsable.",
+      "Transport und Zugriffsebene bestimmen die erforderlichen Prüfungen. Die Sicherheit lokaler Prozesse muss weiterhin verantwortlich geprüft werden."
+    ],
+    "Missing evidence: ": [
+      "Evidências ausentes: ",
+      "Evidencias pendientes: ",
+      "Justificatifs manquants : ",
+      "Fehlende Nachweise: "
+    ]
+  }
+}
