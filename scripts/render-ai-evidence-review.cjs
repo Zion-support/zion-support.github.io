@@ -17,7 +17,12 @@ function render(source,out){
   html=require('./harden-ai-evidence-review.cjs').harden(html,slug,i);
   html=require('./complete-ai-evidence-fallbacks.cjs').complete(html,slug,i);
   html=require('./finalize-ai-evidence-accessibility.cjs').finalize(html);
+  html=require('./append-ai-evidence-pathways.cjs').append(html,slug,i);
   fs.writeFileSync(p,html);
+ }
+ for(let i=0;i<5;i++){
+  const p=path.join(out,'review-promotions',['en','pt','es','fr','de'][i]+'.html');
+  fs.writeFileSync(p,require('./append-ai-evidence-pathways.cjs').promote(fs.readFileSync(p,'utf8'),i));
  }
 }
 module.exports={render,errors,traceLabels,graphLabels};
