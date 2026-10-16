@@ -70,6 +70,7 @@ def read_manifest(repo: Path) -> dict:
  rows = m.get('files', [])
  if {r.get('target') for r in rows} != TARGETS or len(rows) != len(TARGETS): raise ValueError('Unexpected dependency scope')
  if not re.fullmatch('[0-9a-f]{40}', m.get('homepageBeforeGitBlob','')): raise ValueError('Missing homepage lease')
+ if not re.fullmatch('[0-9a-f]{40}', m.get('homepageCandidateGitBlob','')): raise ValueError('Missing homepage candidate hash')
  for row in rows:
   if not re.fullmatch('[0-9a-f]{40}',row.get('gitBlob','')): raise ValueError('Invalid dependency hash')
   if not re.fullmatch('[0-9a-f]{40}',row.get('sourceCommit','')): raise ValueError('Missing source provenance')
@@ -86,12 +87,18 @@ def preflight(repo: Path, m: dict) -> list[dict]:
   before = git_blob(target.read_bytes()) if target.is_file() else None
   if before not in row['allowedBeforeGitBlobs']: raise ValueError('Concurrent source changed: '+row['target'])
   receipt.append({'target':row['target'],'before':before,'candidate':row['gitBlob'],'sourcePR':row['sourcePR'],'sourceCommit':row['sourceCommit']})
- if git_blob(checked_path(repo,'public/index.html').read_bytes()) != m['homepageBeforeGitBlob']:
+ home_sha = git_blob(checked_path(repo,'public/index.html').read_bytes())
+ if home_sha not in {m['homepageBeforeGitBlob'], m['homepageCandidateGitBlob']}:
   raise ValueError('Concurrent homepage changed; reconcile the existing PR first')
  return receipt
 
 
-def reconcile_home(data: bytes) -> bytes:
+def reconcile_home(data: bytes, m: dict) -> bytes:
+ current = git_blob(data)
+ if current == m['homepageCandidateGitBlob']:
+  return data
+ if current != m['homepageBeforeGitBlob']:
+  raise ValueError('Homepage is neither the leased source nor integrated candidate')
  text = data.decode('utf-8')
  for old,new in HOME_EDITS:
   if text.count(old) != 1: raise ValueError('Privacy patch no longer has one exact source match')
@@ -99,7 +106,10 @@ def reconcile_home(data: bytes) -> bytes:
  if text.count(OBSOLETE_COMMENT) != 1: raise ValueError('Paid comment removal needs exactly one reviewed match')
  # Remove the obsolete comment only, not visible commercial copy or form behavior.
  text = text.replace(OBSOLETE_COMMENT,'',1)
- return text.encode('utf-8')
+ result = text.encode('utf-8')
+ if git_blob(result) != m['homepageCandidateGitBlob']:
+  raise ValueError('Homepage candidate hash differs from the reviewed integration')
+ return result
 
 
 def copy_inputs(repo: Path, stage: Path) -> int:
@@ -121,7 +131,7 @@ def stage_dependencies(repo: Path, stage: Path, m: dict) -> None:
  for row in m['files']:
   dst=stage/row['target']; dst.parent.mkdir(parents=True,exist_ok=True)
   dst.write_bytes(checked_path(repo,DEPENDENCIES+'/'+row['target']).read_bytes())
- home=stage/'public/index.html'; home.write_bytes(reconcile_home(home.read_bytes()))
+ home=stage/'public/index.html'; home.write_bytes(reconcile_home(home.read_bytes(), m))
 
 
 def run_step(name: str, cmd: list[str], stage: Path, evidence: Path, env: dict) -> dict:

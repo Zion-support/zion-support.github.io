@@ -30,3 +30,9 @@ Container direct GitHub download was unavailable (DNS resolution failure). No co
 ## Release status
 
 DRAFT / UNMERGED / NO PRODUCTION CHANGE. Existing PR71584 runtime, translation and source code are untouched. Existing Discovery source, privacy guards and delivery PRs are not modified or marked accepted. This commit adds review validation only. Read the exact-head integration outcome before proposing any release.
+
+## Source-candidate integration
+
+After the hosted staging pass, the exact five dependency blobs and reviewed homepage patch may be applied to the same draft branch. The harness is intentionally idempotent: its leases accept either the original source blobs or the identical pinned candidate blobs, and the homepage accepts only the pre-reviewed source hash or the exact reviewed candidate hash `0fc732f96ccfeeacc032b17c5640782e1cc37d16`. Any third state fails. This allows the workflow to validate the actual review branch after integration without weakening concurrency detection or rewriting the upstream fixes.
+
+The integrated source still remains DRAFT / UNMERGED. The upstream PR numbers and commit provenance stay in the manifest for traceability. Applying the exact candidate does not close, supersede or silently modify those owners' PR branches.
