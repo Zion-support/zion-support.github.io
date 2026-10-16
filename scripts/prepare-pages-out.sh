@@ -110,6 +110,38 @@ assert_money_path services/ai-automation/index.html
 assert_money_path plans/index.html
 assert_money_path discovery/index.html
 
+# The canonical Discovery is a free questionnaire, not merely a money-path page.
+# Check the assembled artifact, retaining all existing privacy/payment guards.
+# These static checks do not certify runtime behavior or email inbox delivery.
+assert_free_discovery() {
+  local f="out/discovery/index.html"
+  local markup marker asset
+  markup=$(tr '\n\r' '  ' < "$f")
+  for marker in \
+    "<form[[:space:]][^>]*[[:space:]]id=['\"]dform['\"]|<form[[:space:]]id=['\"]dform['\"]" \
+    "<section[[:space:]][^>]*[[:space:]]id=['\"]result['\"]|<section[[:space:]]id=['\"]result['\"]" \
+    "src=['\"]/assets/js/discovery-delivery[.]js(['\"]|[?])" \
+    "href=['\"]/assets/css/discovery[.]css(['\"]|[?])" \
+    "Discovery is always free"; do
+    if ! grep -Eiq "$marker" <<< "$markup"; then
+      echo "ERROR: out/discovery/index.html lacks free questionnaire marker: $marker" >&2
+      exit 1
+    fi
+  done
+  if grep -Eiq 'Discovery[[:space:]]+(R\$|\$|USD|BRL)[[:space:]]*[0-9]' <<< "$markup"; then
+    echo "ERROR: out/discovery/index.html contains obsolete paid Discovery pricing" >&2
+    exit 1
+  fi
+  for asset in assets/js/discovery-delivery.js assets/css/discovery.css; do
+    if [ ! -s "out/$asset" ]; then
+      echo "ERROR: free Discovery dependency missing or empty: out/$asset" >&2
+      exit 1
+    fi
+  done
+  echo "OK canonical free Discovery static contract (inbox delivery unverified)"
+}
+assert_free_discovery
+
 # P0 2026-09-21: reject the broken Next.js homepage shell and require sealed
 # commercial markers before any Pages publish. Does not touch field-services.
 assert_family_a_home() {
