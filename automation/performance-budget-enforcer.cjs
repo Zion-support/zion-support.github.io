@@ -52,14 +52,14 @@ function runLighthouse(targetUrl, outDir) {
 function parseReport(reportPath) {
   const report = JSON.parse(fs.readFileSync(reportPath, "utf8"));
   const audits = report.audits;
-  const getMetric = (id) => {
-    const audit = audits[id];
-    return audit ? audit.numericValue / 1000 : null;
+  const getMetric = (id, scale = 1000) => {
+    const value = audits[id]?.numericValue;
+    return typeof value === "number" && Number.isFinite(value) && value >= 0 ? value / scale : null;
   };
   return {
     lcp: getMetric("largest-contentful-paint"),
     fid: getMetric("first-input-delay"),
-    cls: getMetric("cumulative-layout-shift"),
+    cls: getMetric("cumulative-layout-shift", 1),
     fcp: getMetric("first-contentful-paint"),
     ttfb: getMetric("time-to-first-byte"),
     performance: (report.categories && report.categories.performance) ? report.categories.performance.score * 100 : null,
@@ -89,13 +89,14 @@ function saveBaseline(dir, metrics) {
 function compare(metrics, baseline) {
   if (!baseline) return { ok: true, reason: "No baseline available; using hard limits only" };
   const drops = {};
-  for (const key of ["lcp", "fid", "cls", "fcp", "ttfb", "overall"]) {
-    const cur = key === "overall" ? metrics.performance : metrics[key];
-    const base = (baseline.metrics && baseline.metrics[key]) || null;
-    if (cur == null || base == null || base === 0) continue;
-    const relativeDrop = (base - cur) / base;
+  for (const key of ["lcp", "fid", "cls", "fcp", "ttfb", "performance"]) {
+    const cur = metrics[key];
+    const base = baseline.metrics?.[key] ?? (key === "performance" ? baseline.metrics?.overall : null);
+    if (typeof cur !== "number" || typeof base !== "number" || !Number.isFinite(cur) || !Number.isFinite(base) || cur < 0 || base < 0) continue;
+    const worse = key === "performance" ? base - cur : cur - base;
+    const relativeDrop = base === 0 ? (worse > 0 ? Infinity : 0) : worse / base;
     if (relativeDrop > REGRESSION_THRESHOLD) {
-      drops[key] = { base, cur, dropPct: relativeDrop * 100 };
+      drops[key] = { base, cur, dropPct: Number.isFinite(relativeDrop) ? relativeDrop * 100 : null };
     }
   }
   return { ok: Object.keys(drops).length === 0, drops };
@@ -166,7 +167,7 @@ async function main() {
   if (!regression.ok) {
     console.error("❌ Regression detected vs baseline:");
     for (const [key, info] of Object.entries(regression.drops || {})) {
-      console.error(`   - ${key.toUpperCase()}: ${info.base.toFixed(2)} → ${info.cur.toFixed(2)} (${info.dropPct.toFixed(1)}% worse)`);
+      console.error(`   - ${key.toUpperCase()}: ${info.base.toFixed(2)} → ${info.cur.toFixed(2)} (${info.dropPct === null ? "new non-zero latency over zero baseline" : `${info.dropPct.toFixed(1)}% worse`})`);
     }
     process.exit(1);
   } else {
