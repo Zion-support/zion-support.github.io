@@ -75,9 +75,10 @@ Review your highest-friction workflow, contact Zion Tech Group for a scoped pilo
 
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={__html: JSON.stringify(jsonLd)}
+          dangerouslySetInnerHTML={{__html: JSON.stringify(jsonLd)}}
         />
       </article>
     </div>
   );
 }
+
