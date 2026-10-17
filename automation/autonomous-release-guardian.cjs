@@ -9,6 +9,12 @@ const mdPath = path.join(outDir, 'autonomous-release-guardian-latest.md');
 const timeoutMs = Number(process.env.RELEASE_GUARDIAN_TIMEOUT_MS || 10000);
 const maxRoutes = Number(process.env.RELEASE_GUARDIAN_MAX_ROUTES || 60);
 
+if (!Number.isSafeInteger(maxRoutes) || maxRoutes <= 0 ||
+    !Number.isSafeInteger(timeoutMs) || timeoutMs <= 0) {
+  console.error('release guardian: MAX_ROUTES and TIMEOUT_MS must be positive safe integers');
+  process.exit(2);
+}
+
 if (!fs.existsSync(routesFile)) {
   console.error('release guardian: missing config/smoke-routes.txt');
   process.exit(2);
@@ -19,6 +25,11 @@ const routes = fs.readFileSync(routesFile, 'utf8')
   .map(v => v.trim())
   .filter(v => v && !v.startsWith('#'))
   .slice(0, maxRoutes);
+
+if (routes.length === 0) {
+  console.error('release guardian: no routes configured; refusing an empty health check');
+  process.exit(2);
+}
 
 async function check(route) {
   const url = baseUrl + (route.startsWith('/') ? route : '/' + route);
@@ -68,6 +79,12 @@ async function check(route) {
   ];
   fs.writeFileSync(mdPath, lines.join('\n') + '\n');
   console.log(`release guardian: ${report.healthyCount}/${report.checkedCount} healthy; severity=${severity}`);
+  // Reports are written above; upload and escalation use `if: always()` in Actions.
+  // Degraded site health must never produce a green release-gate status.
+  if (severity !== 'ok') {
+    console.error(`::error::Release Guardian: ${report.unhealthyCount}/${report.checkedCount} unhealthy routes (severity=${severity})`);
+    process.exitCode = 1;
+  }
 })().catch(error => {
   console.error(error);
   process.exit(2);
