@@ -36,7 +36,51 @@ jobs:
         run: npm ci --prefer-offline --no-audit --fund=false
 
       - name: Run quality drift sentinel
-        run: npm run autonomy:quality-drift
+        id: quality_drift
+        run: |
+          set -euo pipefail
+          # A checked-in report must never stand in for this run's evidence.
+          rm -f automation/reports/autonomous-quality-drift-latest.json automation/reports/autonomous-quality-drift-latest.md
+          echo "started=true" >> "$GITHUB_OUTPUT"
+          node --input-type=commonjs <<'NODE'
+          const fs = require('node:fs');
+          const command = JSON.parse(fs.readFileSync('package.json', 'utf8')).scripts?.['autonomy:quality-drift'];
+          if (typeof command !== 'string' || !command.trim() || /\b(stub|placeholder)\b/i.test(command) || /^\s*(echo|printf)\b/.test(command)) {
+            console.error('::error::Quality drift command is missing or a placeholder; restore real checks before treating this guard as healthy.');
+            process.exit(1);
+          }
+          NODE
+          npm run autonomy:quality-drift
+
+      - name: Validate measured quality drift report
+        id: quality_report
+        if: always() && steps.quality_drift.outputs.started == 'true'
+        run: |
+          node --input-type=commonjs <<'NODE'
+          const fs = require('node:fs');
+          const file = 'automation/reports/autonomous-quality-drift-latest.json';
+          if (!fs.existsSync(file)) {
+            console.error('::error::Quality drift command produced no report.');
+            process.exit(1);
+          }
+          const report = JSON.parse(fs.readFileSync(file, 'utf8'));
+          const checks = report.checks;
+          if (!Array.isArray(checks) || checks.length === 0 || checks.some(c => !c || typeof c.id !== 'string' || !c.id.trim() || typeof c.passed !== 'boolean')) {
+            console.error('::error::Quality drift report must contain explicit, non-empty measured checks.');
+            process.exit(1);
+          }
+          const failures = checks.filter(c => !c.passed).length;
+          if (!Number.isInteger(report.failedCount) || report.failedCount !== failures || typeof report.severity !== 'string' || !report.severity.trim() || (report.severity === 'ok') !== (failures === 0)) {
+            console.error('::error::Quality drift report summary does not match its checks.');
+            process.exit(1);
+          }
+          if (process.env.GITHUB_OUTPUT) fs.appendFileSync(process.env.GITHUB_OUTPUT, 'validated=true\n');
+          if (failures > 0) {
+            console.error(`::error::Quality drift detected ${failures} failing checks.`);
+            process.exit(1);
+          }
+          console.log(`Validated ${checks.length} measured quality checks.`);
+          NODE
 
       - name: Upload quality drift artifacts
         if: always()
@@ -51,7 +95,7 @@ jobs:
           retention-days: 30
 
       - name: Escalate quality drift incident
-        if: always()
+        if: always() && steps.quality_report.outputs.validated == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
