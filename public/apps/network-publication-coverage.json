@@ -1,0 +1,81 @@
+{
+  "groups": [
+    {
+      "path": "agent-brief/index.html",
+      "available": [
+        "en"
+      ],
+      "missing": [
+        "pt",
+        "es",
+        "fr",
+        "de"
+      ]
+    },
+    {
+      "path": "admissions-essay-reviewer/index.html",
+      "available": [
+        "en"
+      ],
+      "missing": [
+        "pt",
+        "es",
+        "fr",
+        "de"
+      ]
+    },
+    {
+      "path": "ai-access-reviewer/index.html",
+      "available": [
+        "en"
+      ],
+      "missing": [
+        "pt",
+        "es",
+        "fr",
+        "de"
+      ]
+    },
+    {
+      "path": "ai-email-drafter/index.html",
+      "available": [
+        "en"
+      ],
+      "missing": [
+        "pt",
+        "es",
+        "fr",
+        "de"
+      ]
+    },
+    {
+      "path": "ai-meeting-notes-copilot/index.html",
+      "available": [
+        "en"
+      ],
+      "missing": [
+        "pt",
+        "es",
+        "fr",
+        "de"
+      ]
+    },
+    {
+      "path": "ai-incident-response/index.html",
+      "available": [
+        "en"
+      ],
+      "missing": [
+        "pt",
+        "es",
+        "fr",
+        "de"
+      ]
+    }
+  ],
+  "steps": [
+    "apply-locales",
+    "render-navigation",
+    "write-guides"
+  ]
+}
