@@ -128,10 +128,9 @@ assert_family_a_home() {
     echo "ERROR: out/index.html contains /_next/ (broken Next shell)" >&2
     exit 1
   fi
-  if ! grep -Fq 'Discovery $99' "$f"; then
-    echo "ERROR: out/index.html missing Family A marker Discovery \$99" >&2
-    exit 1
-  fi
+  # Approved policy reconciliation: Discovery remains free; all other guards stay.
+  python3 scripts/test-free-discovery-home.py
+  python3 scripts/assert-free-discovery-home.py "$f"
   if ! grep -Fq '/assets/css/site.css' "$f"; then
     echo "ERROR: out/index.html missing /assets/css/site.css" >&2
     exit 1
@@ -172,5 +171,10 @@ assert_aaa_official_ladder() {
 assert_family_a_home
 assert_mit_fgv
 assert_aaa_official_ladder
+
+# Approved scoped app-evaluation publication; preserve all safety guards above.
+node scripts/test-network-evaluation.cjs
+node scripts/bootstrap-network-evaluation.cjs out
+node scripts/verify-network-evaluation-artifact.cjs out
 
 echo "Prepared out ($(find out -type f | wc -l) files)"
