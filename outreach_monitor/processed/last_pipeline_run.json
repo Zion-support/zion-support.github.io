@@ -2,5 +2,11 @@
   "pages_generated": 45,
   "pages_skipped": 5,
   "progress_before": 39470,
-  "progress_after": 39520
+  "progress_after": 39520,
+  "deploy": {
+    "commit": "7b384d4b9f0a",
+    "workflow": "static-deploy.yml",
+    "workflow_run_id": "39309547600",
+    "status": "in_progress"
+  }
 }
