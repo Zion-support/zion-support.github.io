@@ -1,1 +1,5 @@
 {"mode": "auth_failure", "error": "URLError(gaierror(8, 'nodename nor servname provided, or not known'))", "ts": 1790709862}
+{"mode": "auth_failure", "error": "URLError(gaierror(8, 'nodename nor servname provided, or not known'))", "ts": 1792356716}
+{"mode": "auth_failure", "error": "URLError(gaierror(8, 'nodename nor servname provided, or not known'))", "ts": 1792371356}
+{"mode": "auth_failure", "error": "URLError(gaierror(8, 'nodename nor servname provided, or not known'))", "ts": 1792388877}
+{"mode": "auth_failure", "error": "URLError(gaierror(8, 'nodename nor servname provided, or not known'))", "ts": 1792402721}
