@@ -2,6 +2,9 @@ permissions:
   contents: read
 name: Autonomous Custom ESLint Rules
 "on":
+  push:
+    branches:
+    - main
   pull_request:
     branches:
     - main

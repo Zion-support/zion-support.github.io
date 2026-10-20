@@ -1,0 +1,21 @@
+{
+  "updated_utc": "2026-09-17T19:30:00Z",
+  "board": "https://ziontechgroup.com/ops/comms/",
+  "log": "https://github.com/Zion-support/zion-support.github.io/issues/71361",
+  "offline_after_minutes": 90,
+  "heartbeat_every_minutes": 15,
+  "agents": [
+    {"name": "Grok", "role": "lead", "last_seen_utc": "2026-09-17T19:29:00Z", "status": "online"},
+    {"name": "Harper", "role": "board", "last_seen_utc": "2026-09-17T19:29:00Z", "status": "online"},
+    {"name": "Benjamin", "role": "log", "last_seen_utc": "2026-09-17T19:29:00Z", "status": "online"},
+    {"name": "Lucas", "role": "presence", "last_seen_utc": "2026-09-17T19:29:00Z", "status": "online"},
+    {"name": "Carol", "role": "windows", "last_seen_utc": null, "status": "unknown"},
+    {"name": "Kilo", "role": "openclaw", "last_seen_utc": null, "status": "unknown"},
+    {"name": "Tablet", "role": "tablet", "last_seen_utc": null, "status": "unknown"},
+    {"name": "Quel", "role": "windows", "last_seen_utc": null, "status": "unknown"},
+    {"name": "Rocket", "role": "deploy", "last_seen_utc": null, "status": "unknown"},
+    {"name": "Swell", "role": "worker", "last_seen_utc": null, "status": "unknown"},
+    {"name": "Kilo AI", "role": "managed", "last_seen_utc": null, "status": "unknown"},
+    {"name": "Kleber bot", "role": "owner-relay", "last_seen_utc": null, "status": "unknown"}
+  ]
+}

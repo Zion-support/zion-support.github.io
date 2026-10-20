@@ -58,3 +58,6 @@ require('./render-mining-catalog.cjs');
 
 // Approved five-language app selection and matching-locale registry promotion.
 require('./render-app-selection.cjs');
+
+// Scoped editorial checklist; no additional promotional card or workflow changes.
+require('./render-network-evaluation.cjs').render(out);
