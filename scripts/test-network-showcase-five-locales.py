@@ -26,6 +26,8 @@ with tempfile.TemporaryDirectory() as td:
  for locale,(lang,home,disc) in locales.items():
   prefix='/' if locale=='en' else '/'+locale+'/'
   html=file(prefix+'apps/network.html').read_text()
+  expected_headings={"en":"Choose a starting question","pt":"Escolha uma pergunta inicial","es":"Elige una pregunta para empezar","fr":"Choisissez une première question","de":"Wählen Sie eine Ausgangsfrage"}
+  assert expected_headings[locale] in html,'Translated journey heading missing '+locale
   assert '<html lang="'+lang+'">' in html
   assert len(re.findall('rel="alternate"',html))==6
   assert '<link rel="canonical" href="https://ziontechgroup.com'+prefix+'apps/network.html">' in html
@@ -38,6 +40,11 @@ with tempfile.TemporaryDirectory() as td:
    assert 'href="'+route+'"' in html
   homepage=file(home).read_text(); assert protected in homepage
   assert homepage.count('data-showcase-promotion=')==1
+  assert html.count('data-journey-card=')==3,'Exactly three translated workflow questions per showcase'
+  for slug in ['roi-calc','sla-calculator','ai-governance-checklist']:
+   route=prefix+slug+'/'
+   assert 'href="'+route+'"' in html,'Showcase tool interlink missing '+route
+   assert 'href="'+route+'"' in homepage,'Homepage tool interlink missing '+route
   assert 'href="'+prefix+'apps/network.html"' in homepage
   assert html.count('href="'+disc+'"')>=4,'Every navigation and main CTA must target the free questionnaire'
   assert 'href="/discovery/">Free Discovery</a>' not in html,'Paid English Discovery misadvertised as free'
