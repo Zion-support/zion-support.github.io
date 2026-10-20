@@ -1,0 +1,11 @@
+{
+  "release": "field-network-2026-10-10-locale-pairs",
+  "purpose": "Match evidence-guide navigation to existing Smart Hands playbook translations and add corresponding return links.",
+  "languages": ["en", "pt-BR", "es", "fr", "de"],
+  "renderer": "scripts/render-field-network-promotion.cjs",
+  "publicationManifest": "/apps/field-network-publication.json",
+  "scope": "Selected field-guide and playbook navigation only. Linked tools retain their published language.",
+  "verification": "Check production manifest and live links; this source definition is not independent deployment evidence.",
+  "formsAndDelivery": "Unchanged",
+  "source": "https://github.com/Zion-support/zion-support.github.io/blob/main/scripts/render-field-network-promotion.cjs"
+}

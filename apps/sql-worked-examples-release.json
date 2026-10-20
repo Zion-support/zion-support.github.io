@@ -1,0 +1,10 @@
+{
+  "release": "sql-worked-examples-2026-10-14-v1",
+  "rendererCommit": "187780066a45843adbd671105b18ba96fbd588c4",
+  "sourceCommit": "d2bb5b4da696b459cff2c4f7d12c45eacc780388",
+  "locales": ["en", "pt-BR", "es", "fr", "de"],
+  "scope": "Three fictional SQL examples with localized interpretation limits and links inside existing resource promotions; standalone source accessibility and maintained navigation.",
+  "capability": "Local keyword-pattern tool, not a SQL parser, database connection, query execution or AI inference.",
+  "publicationIntent": true,
+  "verification": "Release intent only. Verify successful production deployment and rendered data-sql-examples markers independently; this metadata is not proof of publication or whole-network readiness."
+}

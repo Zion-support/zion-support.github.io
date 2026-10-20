@@ -1,0 +1,92 @@
+{
+  "groups": [
+    {
+      "path": "agent-brief/index.html",
+      "available": [
+        "en",
+        "pt",
+        "es",
+        "fr",
+        "de"
+      ],
+      "missing": []
+    },
+    {
+      "path": "admissions-essay-reviewer/index.html",
+      "available": [
+        "en",
+        "pt",
+        "es",
+        "fr",
+        "de"
+      ],
+      "missing": []
+    },
+    {
+      "path": "ai-access-reviewer/index.html",
+      "available": [
+        "en",
+        "pt",
+        "es",
+        "fr",
+        "de"
+      ],
+      "missing": []
+    },
+    {
+      "path": "ai-email-drafter/index.html",
+      "available": [
+        "en",
+        "pt",
+        "es",
+        "fr",
+        "de"
+      ],
+      "missing": []
+    },
+    {
+      "path": "ai-meeting-notes-copilot/index.html",
+      "available": [
+        "en",
+        "pt",
+        "es",
+        "fr",
+        "de"
+      ],
+      "missing": []
+    },
+    {
+      "path": "ai-incident-response/index.html",
+      "available": [
+        "en",
+        "pt",
+        "es",
+        "fr",
+        "de"
+      ],
+      "missing": []
+    },
+    {
+      "path": "apps/app-verification-guide.html",
+      "available": [
+        "en",
+        "pt",
+        "es",
+        "fr",
+        "de"
+      ],
+      "missing": []
+    }
+  ],
+  "steps": [
+    "apply-locales",
+    "render-navigation",
+    "write-guides"
+  ],
+  "fiveLanguageGroups": 7,
+  "translationGapGroups": 0,
+  "legacyThreeLocalesRelease": "legacy-three-locales-2026-10-11-v1",
+  "legacyThreeLocalesScope": "Four scoped inventory rows reconciled after generating 15 pages; existing aggregate HTML/navigation counts originate from the earlier inventory pass, not a fresh full-artifact recount. Semantic/native-speaker quality and separately hosted repositories not certified.",
+  "productivityIncidentRelease": "productivity-incident-locales-2026-10-11-v1",
+  "productivityIncidentScope": "Three scoped rows reconciled, 15 generated page editions; prior aggregate file counts are historical, not a fresh full-network census. Native-speaker, browser and separately hosted app audits remain open."
+}

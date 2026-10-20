@@ -1,0 +1,219 @@
+{
+  "release": "productivity-navigation-2026-10-14-v1",
+  "homes": [
+    {
+      "locale": "en",
+      "path": "/en/",
+      "catalog": "/zion-app-network/CATALOG-PRODUCTIVITY-REVIEW.html#en",
+      "nav": "/zion-app-network/CATALOG-NAVIGATION.html#resource-path-en"
+    },
+    {
+      "locale": "pt-BR",
+      "path": "/",
+      "catalog": "/zion-app-network/CATALOG-PRODUCTIVITY-REVIEW.html#pt",
+      "nav": "/zion-app-network/CATALOG-NAVIGATION.html#resource-path-pt"
+    },
+    {
+      "locale": "es",
+      "path": "/es/",
+      "catalog": "/zion-app-network/CATALOG-PRODUCTIVITY-REVIEW.html#es",
+      "nav": "/zion-app-network/CATALOG-NAVIGATION.html#resource-path-es"
+    },
+    {
+      "locale": "fr",
+      "path": "/fr/",
+      "catalog": "/zion-app-network/CATALOG-PRODUCTIVITY-REVIEW.html#fr",
+      "nav": "/zion-app-network/CATALOG-NAVIGATION.html#resource-path-fr"
+    },
+    {
+      "locale": "de",
+      "path": "/de/",
+      "catalog": "/zion-app-network/CATALOG-PRODUCTIVITY-REVIEW.html#de",
+      "nav": "/zion-app-network/CATALOG-NAVIGATION.html#resource-path-de"
+    }
+  ],
+  "pages": [
+    {
+      "locale": "en",
+      "path": "/agent-brief/",
+      "catalog": "/zion-app-network/CATALOG-PRODUCTIVITY-REVIEW.html#en",
+      "nav": "/zion-app-network/CATALOG-NAVIGATION.html#resource-path-en"
+    },
+    {
+      "locale": "en",
+      "path": "/admissions-essay-reviewer/",
+      "catalog": "/zion-app-network/CATALOG-PRODUCTIVITY-REVIEW.html#en",
+      "nav": "/zion-app-network/CATALOG-NAVIGATION.html#resource-path-en"
+    },
+    {
+      "locale": "en",
+      "path": "/ai-access-reviewer/",
+      "catalog": "/zion-app-network/CATALOG-PRODUCTIVITY-REVIEW.html#en",
+      "nav": "/zion-app-network/CATALOG-NAVIGATION.html#resource-path-en"
+    },
+    {
+      "locale": "en",
+      "path": "/ai-email-drafter/",
+      "catalog": "/zion-app-network/CATALOG-PRODUCTIVITY-REVIEW.html#en",
+      "nav": "/zion-app-network/CATALOG-NAVIGATION.html#resource-path-en"
+    },
+    {
+      "locale": "en",
+      "path": "/ai-meeting-notes-copilot/",
+      "catalog": "/zion-app-network/CATALOG-PRODUCTIVITY-REVIEW.html#en",
+      "nav": "/zion-app-network/CATALOG-NAVIGATION.html#resource-path-en"
+    },
+    {
+      "locale": "en",
+      "path": "/ai-incident-response/",
+      "catalog": "/zion-app-network/CATALOG-PRODUCTIVITY-REVIEW.html#en",
+      "nav": "/zion-app-network/CATALOG-NAVIGATION.html#resource-path-en"
+    },
+    {
+      "locale": "pt-BR",
+      "path": "/pt/agent-brief/",
+      "catalog": "/zion-app-network/CATALOG-PRODUCTIVITY-REVIEW.html#pt",
+      "nav": "/zion-app-network/CATALOG-NAVIGATION.html#resource-path-pt"
+    },
+    {
+      "locale": "pt-BR",
+      "path": "/pt/admissions-essay-reviewer/",
+      "catalog": "/zion-app-network/CATALOG-PRODUCTIVITY-REVIEW.html#pt",
+      "nav": "/zion-app-network/CATALOG-NAVIGATION.html#resource-path-pt"
+    },
+    {
+      "locale": "pt-BR",
+      "path": "/pt/ai-access-reviewer/",
+      "catalog": "/zion-app-network/CATALOG-PRODUCTIVITY-REVIEW.html#pt",
+      "nav": "/zion-app-network/CATALOG-NAVIGATION.html#resource-path-pt"
+    },
+    {
+      "locale": "pt-BR",
+      "path": "/pt/ai-email-drafter/",
+      "catalog": "/zion-app-network/CATALOG-PRODUCTIVITY-REVIEW.html#pt",
+      "nav": "/zion-app-network/CATALOG-NAVIGATION.html#resource-path-pt"
+    },
+    {
+      "locale": "pt-BR",
+      "path": "/pt/ai-meeting-notes-copilot/",
+      "catalog": "/zion-app-network/CATALOG-PRODUCTIVITY-REVIEW.html#pt",
+      "nav": "/zion-app-network/CATALOG-NAVIGATION.html#resource-path-pt"
+    },
+    {
+      "locale": "pt-BR",
+      "path": "/pt/ai-incident-response/",
+      "catalog": "/zion-app-network/CATALOG-PRODUCTIVITY-REVIEW.html#pt",
+      "nav": "/zion-app-network/CATALOG-NAVIGATION.html#resource-path-pt"
+    },
+    {
+      "locale": "es",
+      "path": "/es/agent-brief/",
+      "catalog": "/zion-app-network/CATALOG-PRODUCTIVITY-REVIEW.html#es",
+      "nav": "/zion-app-network/CATALOG-NAVIGATION.html#resource-path-es"
+    },
+    {
+      "locale": "es",
+      "path": "/es/admissions-essay-reviewer/",
+      "catalog": "/zion-app-network/CATALOG-PRODUCTIVITY-REVIEW.html#es",
+      "nav": "/zion-app-network/CATALOG-NAVIGATION.html#resource-path-es"
+    },
+    {
+      "locale": "es",
+      "path": "/es/ai-access-reviewer/",
+      "catalog": "/zion-app-network/CATALOG-PRODUCTIVITY-REVIEW.html#es",
+      "nav": "/zion-app-network/CATALOG-NAVIGATION.html#resource-path-es"
+    },
+    {
+      "locale": "es",
+      "path": "/es/ai-email-drafter/",
+      "catalog": "/zion-app-network/CATALOG-PRODUCTIVITY-REVIEW.html#es",
+      "nav": "/zion-app-network/CATALOG-NAVIGATION.html#resource-path-es"
+    },
+    {
+      "locale": "es",
+      "path": "/es/ai-meeting-notes-copilot/",
+      "catalog": "/zion-app-network/CATALOG-PRODUCTIVITY-REVIEW.html#es",
+      "nav": "/zion-app-network/CATALOG-NAVIGATION.html#resource-path-es"
+    },
+    {
+      "locale": "es",
+      "path": "/es/ai-incident-response/",
+      "catalog": "/zion-app-network/CATALOG-PRODUCTIVITY-REVIEW.html#es",
+      "nav": "/zion-app-network/CATALOG-NAVIGATION.html#resource-path-es"
+    },
+    {
+      "locale": "fr",
+      "path": "/fr/agent-brief/",
+      "catalog": "/zion-app-network/CATALOG-PRODUCTIVITY-REVIEW.html#fr",
+      "nav": "/zion-app-network/CATALOG-NAVIGATION.html#resource-path-fr"
+    },
+    {
+      "locale": "fr",
+      "path": "/fr/admissions-essay-reviewer/",
+      "catalog": "/zion-app-network/CATALOG-PRODUCTIVITY-REVIEW.html#fr",
+      "nav": "/zion-app-network/CATALOG-NAVIGATION.html#resource-path-fr"
+    },
+    {
+      "locale": "fr",
+      "path": "/fr/ai-access-reviewer/",
+      "catalog": "/zion-app-network/CATALOG-PRODUCTIVITY-REVIEW.html#fr",
+      "nav": "/zion-app-network/CATALOG-NAVIGATION.html#resource-path-fr"
+    },
+    {
+      "locale": "fr",
+      "path": "/fr/ai-email-drafter/",
+      "catalog": "/zion-app-network/CATALOG-PRODUCTIVITY-REVIEW.html#fr",
+      "nav": "/zion-app-network/CATALOG-NAVIGATION.html#resource-path-fr"
+    },
+    {
+      "locale": "fr",
+      "path": "/fr/ai-meeting-notes-copilot/",
+      "catalog": "/zion-app-network/CATALOG-PRODUCTIVITY-REVIEW.html#fr",
+      "nav": "/zion-app-network/CATALOG-NAVIGATION.html#resource-path-fr"
+    },
+    {
+      "locale": "fr",
+      "path": "/fr/ai-incident-response/",
+      "catalog": "/zion-app-network/CATALOG-PRODUCTIVITY-REVIEW.html#fr",
+      "nav": "/zion-app-network/CATALOG-NAVIGATION.html#resource-path-fr"
+    },
+    {
+      "locale": "de",
+      "path": "/de/agent-brief/",
+      "catalog": "/zion-app-network/CATALOG-PRODUCTIVITY-REVIEW.html#de",
+      "nav": "/zion-app-network/CATALOG-NAVIGATION.html#resource-path-de"
+    },
+    {
+      "locale": "de",
+      "path": "/de/admissions-essay-reviewer/",
+      "catalog": "/zion-app-network/CATALOG-PRODUCTIVITY-REVIEW.html#de",
+      "nav": "/zion-app-network/CATALOG-NAVIGATION.html#resource-path-de"
+    },
+    {
+      "locale": "de",
+      "path": "/de/ai-access-reviewer/",
+      "catalog": "/zion-app-network/CATALOG-PRODUCTIVITY-REVIEW.html#de",
+      "nav": "/zion-app-network/CATALOG-NAVIGATION.html#resource-path-de"
+    },
+    {
+      "locale": "de",
+      "path": "/de/ai-email-drafter/",
+      "catalog": "/zion-app-network/CATALOG-PRODUCTIVITY-REVIEW.html#de",
+      "nav": "/zion-app-network/CATALOG-NAVIGATION.html#resource-path-de"
+    },
+    {
+      "locale": "de",
+      "path": "/de/ai-meeting-notes-copilot/",
+      "catalog": "/zion-app-network/CATALOG-PRODUCTIVITY-REVIEW.html#de",
+      "nav": "/zion-app-network/CATALOG-NAVIGATION.html#resource-path-de"
+    },
+    {
+      "locale": "de",
+      "path": "/de/ai-incident-response/",
+      "catalog": "/zion-app-network/CATALOG-PRODUCTIVITY-REVIEW.html#de",
+      "nav": "/zion-app-network/CATALOG-NAVIGATION.html#resource-path-de"
+    }
+  ],
+  "scope": "Five existing homepage navigation additions and 30 reciprocal six-resource navigation blocks. Existing cards, forms, scripts and all bytes outside owned additions preserved.",
+  "fullNetworkComplete": false
+}

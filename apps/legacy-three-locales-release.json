@@ -1,0 +1,141 @@
+{
+  "release": "legacy-three-locales-2026-10-11-v1",
+  "pages": [
+    {
+      "locale": "en",
+      "path": "/agent-brief/",
+      "kind": "local-text-composer",
+      "sha256": "d1bcecb66e7b3d371f284105e349bd663f578fb5c3ddceeb68827407b7e1ef24"
+    },
+    {
+      "locale": "en",
+      "path": "/admissions-essay-reviewer/",
+      "kind": "editorial-concept",
+      "sha256": "374c812d200019a749122361208d3a16f25b1c7212a2ea71f4b4e0cae838c5b4"
+    },
+    {
+      "locale": "en",
+      "path": "/ai-access-reviewer/",
+      "kind": "editorial-concept",
+      "sha256": "9fbe9e571a9f01845a1f1e2990a52556be0bacd22bfd5d70e148133acdcacf39"
+    },
+    {
+      "locale": "pt-BR",
+      "path": "/pt/agent-brief/",
+      "kind": "local-text-composer",
+      "sha256": "8a285737d61dc8bf1e1be4e1c117beb4b19114e1c03bae30d1e2375efccec5bf"
+    },
+    {
+      "locale": "pt-BR",
+      "path": "/pt/admissions-essay-reviewer/",
+      "kind": "editorial-concept",
+      "sha256": "4eb02bc8f305c4df79a9cae5a0628c50e0c5d73430ff66c029e65e88fa9515f7"
+    },
+    {
+      "locale": "pt-BR",
+      "path": "/pt/ai-access-reviewer/",
+      "kind": "editorial-concept",
+      "sha256": "08f973978f3c3fa5c8b11306c24d85bc4c3831c7744c340bc4e1c7ff32059dba"
+    },
+    {
+      "locale": "es",
+      "path": "/es/agent-brief/",
+      "kind": "local-text-composer",
+      "sha256": "56fc6fa34318a5448811533f7385f0bc7c9e154719ced9eafaf62d02c860f4d4"
+    },
+    {
+      "locale": "es",
+      "path": "/es/admissions-essay-reviewer/",
+      "kind": "editorial-concept",
+      "sha256": "77e18356eca57f8d0e2afc16a00de3fccfe59a7082ba7f79509371deaaf08729"
+    },
+    {
+      "locale": "es",
+      "path": "/es/ai-access-reviewer/",
+      "kind": "editorial-concept",
+      "sha256": "e2be9b353caa9da802def79f10adc0feb58f776160450f4ad830a49fd3d99f8e"
+    },
+    {
+      "locale": "fr",
+      "path": "/fr/agent-brief/",
+      "kind": "local-text-composer",
+      "sha256": "3499863ae9a7a81c7204ade3eaefca4a84e6292a13b2cac0fd27a56167bdbc77"
+    },
+    {
+      "locale": "fr",
+      "path": "/fr/admissions-essay-reviewer/",
+      "kind": "editorial-concept",
+      "sha256": "e20caa73e43b5242c5f0a4c5da2664c656c6b8bfd7e25c83c7ffdf58d9e0b5e1"
+    },
+    {
+      "locale": "fr",
+      "path": "/fr/ai-access-reviewer/",
+      "kind": "editorial-concept",
+      "sha256": "7c5f7aef004cfb06c5deebff679306d90864968a7e8ce26923f68f76763addec"
+    },
+    {
+      "locale": "de",
+      "path": "/de/agent-brief/",
+      "kind": "local-text-composer",
+      "sha256": "f87da329215f45f46a8ae92b258104f3df190f74877653189371d7860cb0a7ca"
+    },
+    {
+      "locale": "de",
+      "path": "/de/admissions-essay-reviewer/",
+      "kind": "editorial-concept",
+      "sha256": "b6b66ff5b562a7c23fe6b627486153bf8fef4d0a11a948f3f6b2ec4a7f73a6fb"
+    },
+    {
+      "locale": "de",
+      "path": "/de/ai-access-reviewer/",
+      "kind": "editorial-concept",
+      "sha256": "3f5df7252c02867b33c44432d6d7ca6837d99694154324778a6b4011218ac4c0"
+    }
+  ],
+  "homes": [
+    {
+      "locale": "en",
+      "path": "/en/"
+    },
+    {
+      "locale": "pt-BR",
+      "path": "/"
+    },
+    {
+      "locale": "es",
+      "path": "/es/"
+    },
+    {
+      "locale": "fr",
+      "path": "/fr/"
+    },
+    {
+      "locale": "de",
+      "path": "/de/"
+    }
+  ],
+  "guides": [
+    {
+      "locale": "en",
+      "path": "/apps/app-verification-guide.html"
+    },
+    {
+      "locale": "pt-BR",
+      "path": "/pt/apps/app-verification-guide.html"
+    },
+    {
+      "locale": "es",
+      "path": "/es/apps/app-verification-guide.html"
+    },
+    {
+      "locale": "fr",
+      "path": "/fr/apps/app-verification-guide.html"
+    },
+    {
+      "locale": "de",
+      "path": "/de/apps/app-verification-guide.html"
+    }
+  ],
+  "scope": "15 translated pages, five insertions inside existing homepage promotions, five verification-guide return blocks, four corrected inventory rows. Local composer plus two editorial concepts; not full-network readiness.",
+  "emailInboxVerified": false
+}

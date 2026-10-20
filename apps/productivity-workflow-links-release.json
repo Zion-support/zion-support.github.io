@@ -1,0 +1,38 @@
+{
+  "release": "productivity-workflow-2026-10-12-v1",
+  "navigationRelease": "productivity-navigation-2026-10-14-v1",
+  "homes": [
+    {
+      "locale": "en",
+      "path": "/en/",
+      "target": "/zion-app-network/CATALOG-PRODUCTIVITY-REVIEW.html#workflow-en",
+      "blockSha256": "21bd09e90fba6cb834a819bebf118a843b05be2b527f515ed558159436463525"
+    },
+    {
+      "locale": "pt-BR",
+      "path": "/",
+      "target": "/zion-app-network/CATALOG-PRODUCTIVITY-REVIEW.html#workflow-pt",
+      "blockSha256": "6c3c97ed1304fcc492e92413baef07394c226b7638a4127581f541f4851c8482"
+    },
+    {
+      "locale": "es",
+      "path": "/es/",
+      "target": "/zion-app-network/CATALOG-PRODUCTIVITY-REVIEW.html#workflow-es",
+      "blockSha256": "687c40aee463f5c9d0e212246baf238f9e4d2b650379bbe934c950d425b4fbd1"
+    },
+    {
+      "locale": "fr",
+      "path": "/fr/",
+      "target": "/zion-app-network/CATALOG-PRODUCTIVITY-REVIEW.html#workflow-fr",
+      "blockSha256": "eaf06d1da52d2bdf24cebbed956db5936ee0a6d37be09fe6c7b6edb7b0514987"
+    },
+    {
+      "locale": "de",
+      "path": "/de/",
+      "target": "/zion-app-network/CATALOG-PRODUCTIVITY-REVIEW.html#workflow-de",
+      "blockSha256": "57228e14dd559346eaf101f6ed57b08409d5a90a800344dd022c903ecb060dc6"
+    }
+  ],
+  "scope": "Five localized catalog links inside existing homepage network sections. Manual worked workflow in one five-language catalog; no app runtime, forms, prices or recipients changed.",
+  "fullNetworkComplete": false
+}

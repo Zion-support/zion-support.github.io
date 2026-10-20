@@ -11,17 +11,17 @@
 
 ## Book and pay
 
-- Book Discovery ($99, 30 min Google Meet): https://ziontechgroup.com/book/
+- Book Discovery (free, 30 min Google Meet): https://ziontechgroup.com/book/
 - Calendly (only active event): https://calendly.com/kleber-ziontechgroup/zion-tech-group-ai-it-discovery-1
 - Plans: https://ziontechgroup.com/plans/
-- Discovery $99: https://buy.stripe.com/3cIdRa6FO5dt0D53hm4ZG05
+- Free Discovery: https://buy.stripe.com/3cIdRa6FO5dt0D53hm4ZG05
 - Consulting $499: https://buy.stripe.com/4gM14ofck0Xd1H94lq4ZG08
 - Starter $2,500: https://buy.stripe.com/7sY00k7JScFV99Bf044ZG06
 - Growth $8,000/mo: https://buy.stripe.com/aFa5kEd4c21h3PhdW04ZG07
 
-There is no free consultation. Older `/consultation` and `calendly.com/ziontechgroup/30min` links are inactive. Public 2026 AI-consulting writeups price discovery in the thousands; Zion's live Discovery is $99.
+There is no free consultation. Older `/consultation` and `calendly.com/ziontechgroup/30min` links are inactive. Public 2026 AI-consulting writeups price discovery in the thousands; Zion's live Discovery is free.
 
-Leftover `/services/*`, `/ai-services/*`, and `/solutions/*` industry URLs (for example `/services/ai-legal-discovery-platform/`, `/solutions/construction-engineering/`, or `/ai-services/process-automation/`) are honest closers, not products. Leftover top-level SKU stubs such as `/5g-solutions/`, `/ai-chatbot-builder/`, `/ai-claims-automation/` are noindex closers (not a catalog). Leftover story URLs such as `/from-start-up-to-success-the-journey-of-zion-tech-group-in-it-services/` are not the homepage and do not mean Discovery was cancelled. They are not a $99 SKU and not a packaged RPA or cloud-migration catalog. The only $99 offer is the AI/IT Discovery at `/book/`.
+Leftover `/services/*`, `/ai-services/*`, and `/solutions/*` industry URLs (for example `/services/ai-legal-discovery-platform/`, `/solutions/construction-engineering/`, or `/ai-services/process-automation/`) are honest closers, not products. Leftover top-level SKU stubs such as `/5g-solutions/`, `/ai-chatbot-builder/`, `/ai-claims-automation/` are noindex closers (not a catalog). Leftover story URLs such as `/from-start-up-to-success-the-journey-of-zion-tech-group-in-it-services/` are not the homepage and do not mean Discovery was cancelled. They are not a free SKU and not a packaged RPA or cloud-migration catalog. The only free offer is the AI/IT Discovery at `/discovery/`.
 
 GitHub check `Workers Builds: ziontechgroup` is a Cloudflare hook on this repo, not the site build. Live Pages source is `legacy` / `gh-pages` / `/`. Do not treat that check as a site outage.
 
@@ -32,12 +32,12 @@ GitHub check `Workers Builds: ziontechgroup` is a Cloudflare hook on this repo, 
 - Hunter searches/verifications are exhausted (Free plan). Firecrawl has no credits. OpenRouter usage exceeds remaining credits. SerpAPI needs a `query` field and is often 429.
 - There is no public affiliate commission program.
 - Heritage videos (2009–2019 hardware / green IT): https://ziontechgroup.com/heritage/. Leftover `.com.br` / `ztg.com.br` descriptions remain on `BQdat3RgpfM`, `ZOQ9q_qcisY`, `GGUXiUG9HLM`. Composio YouTube OAuth is leftover Surf Family `@surffamily-y6l`, not `@ziontechgroup` — `YOUTUBE_UPDATE_VIDEO` stays 403 until kleber@ reconnects the Zion channel.
-- Resend template `zion-discovery-99` (id `a64cc246-2dc5-4acd-b084-a7cfd9e4f496`) is published from `noreply@ziontechgroup.com`. Audience `Zion Discovery $99 buyers`. Do not email leftover Zion Outreach contacts. Webhooks still 0.
+- Resend template `zion-discovery-99` (id `a64cc246-2dc5-4acd-b084-a7cfd9e4f496`) is published from `noreply@ziontechgroup.com`. Audience `Zion Free Discovery buyers`. Do not email leftover Zion Outreach contacts. Webhooks still 0.
 - Status: https://ziontechgroup.com/status/
 - Privacy: https://ziontechgroup.com/privacy/
 - Terms: https://ziontechgroup.com/terms/
 - Legal hub: https://ziontechgroup.com/legal/
-- Instagram messenger ice breakers now point at Book $99 / live prices (website field still ziontechgroup.com.br — no Graph tool to change it).
+- Instagram messenger ice breakers now point at Free Discovery / live prices (website field still ziontechgroup.com.br — no Graph tool to change it).
 - Sentry project `ziontechgroup-com` exists on org zion-holdings. Leftover `javascript-nextjs` is unused.
 - Linear leftover outreach and Gmail-deploy noise ZIO-198–279 is archived except ZIO-225 (Composio Optimization Sprint). Do not email leftover Zion Outreach contacts.
 - Not ziontech.biz, not ziontechnologies.org, not the Instagram website field (still ziontechgroup.com.br).

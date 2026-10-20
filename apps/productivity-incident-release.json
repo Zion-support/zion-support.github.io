@@ -1,0 +1,141 @@
+{
+  "release": "productivity-incident-locales-2026-10-11-v1",
+  "pages": [
+    {
+      "locale": "en",
+      "path": "/ai-email-drafter/",
+      "sha256": "a7371b4fe94668ff052d71e1c7da723bed98e1d1519aeb8ee00886866e0c8db9",
+      "capability": "local-template-tool"
+    },
+    {
+      "locale": "en",
+      "path": "/ai-meeting-notes-copilot/",
+      "sha256": "80a4dfae1a7b28215ad751867140769d399cd2e9c11176c24b1ff82797adbadf",
+      "capability": "local-keyword-tool"
+    },
+    {
+      "locale": "en",
+      "path": "/ai-incident-response/",
+      "sha256": "ae19ce0c07f345b7ed00c515ba6c05904702fd77ccc0f3a5dfbbd65e16c54a30",
+      "capability": "service-planning-guide"
+    },
+    {
+      "locale": "pt-BR",
+      "path": "/pt/ai-email-drafter/",
+      "sha256": "0ed3c8102e7c3fb2906a540bca7a740ed67915740129b683abb7ec52049c1397",
+      "capability": "local-template-tool"
+    },
+    {
+      "locale": "pt-BR",
+      "path": "/pt/ai-meeting-notes-copilot/",
+      "sha256": "6dc54b50e73e8c550e8674f06c3261897c1670e4d0357ebc7549e67025ddbfe4",
+      "capability": "local-keyword-tool"
+    },
+    {
+      "locale": "pt-BR",
+      "path": "/pt/ai-incident-response/",
+      "sha256": "a2eb25516e35c8a329ea482d70fee7d1974286b53db4599e3d21c23e094fb2b4",
+      "capability": "service-planning-guide"
+    },
+    {
+      "locale": "es",
+      "path": "/es/ai-email-drafter/",
+      "sha256": "0887e99d9974485c8fff7e309c5386268dd1c3fd331529010f059630ad5b33c6",
+      "capability": "local-template-tool"
+    },
+    {
+      "locale": "es",
+      "path": "/es/ai-meeting-notes-copilot/",
+      "sha256": "47c26b9e43b25315c302465ba8a65848f022923c4fe2dce315484830c7cc53a7",
+      "capability": "local-keyword-tool"
+    },
+    {
+      "locale": "es",
+      "path": "/es/ai-incident-response/",
+      "sha256": "97dfef0123c2f421cd349d474847373fa55605dc43fd2e9f277287139788970f",
+      "capability": "service-planning-guide"
+    },
+    {
+      "locale": "fr",
+      "path": "/fr/ai-email-drafter/",
+      "sha256": "09110c66b1e4bc8635b19d47e7f073fe9a0bd08532ebd79cc123bbde81465584",
+      "capability": "local-template-tool"
+    },
+    {
+      "locale": "fr",
+      "path": "/fr/ai-meeting-notes-copilot/",
+      "sha256": "5f698baf1e3ef5e36e0d3cc6dfd27efd87bb53a892544a7e00eea24666b7208b",
+      "capability": "local-keyword-tool"
+    },
+    {
+      "locale": "fr",
+      "path": "/fr/ai-incident-response/",
+      "sha256": "afb27d792b85a59116de9278afc412691576ae5989067244d60d3728acf5bf44",
+      "capability": "service-planning-guide"
+    },
+    {
+      "locale": "de",
+      "path": "/de/ai-email-drafter/",
+      "sha256": "45d4389be3037dce1d60678bfa1d64d0e63932804f5f7dbdabef004d5d1e971f",
+      "capability": "local-template-tool"
+    },
+    {
+      "locale": "de",
+      "path": "/de/ai-meeting-notes-copilot/",
+      "sha256": "4364e0374715e863f05b33637fa10480f9a3e9cf6741129967ad1b89a2369be7",
+      "capability": "local-keyword-tool"
+    },
+    {
+      "locale": "de",
+      "path": "/de/ai-incident-response/",
+      "sha256": "1b0574d6a62835a94c1dbb61884a9f71b13ad8b08e4d218a8152e57649356087",
+      "capability": "service-planning-guide"
+    }
+  ],
+  "homes": [
+    {
+      "locale": "en",
+      "path": "/en/"
+    },
+    {
+      "locale": "pt-BR",
+      "path": "/"
+    },
+    {
+      "locale": "es",
+      "path": "/es/"
+    },
+    {
+      "locale": "fr",
+      "path": "/fr/"
+    },
+    {
+      "locale": "de",
+      "path": "/de/"
+    }
+  ],
+  "guides": [
+    {
+      "locale": "en",
+      "path": "/apps/app-verification-guide.html"
+    },
+    {
+      "locale": "pt-BR",
+      "path": "/pt/apps/app-verification-guide.html"
+    },
+    {
+      "locale": "es",
+      "path": "/es/apps/app-verification-guide.html"
+    },
+    {
+      "locale": "fr",
+      "path": "/fr/apps/app-verification-guide.html"
+    },
+    {
+      "locale": "de",
+      "path": "/de/apps/app-verification-guide.html"
+    }
+  ],
+  "scope": "Two local browser tools and one planning guide; 15 editions, five existing-homepage insertions, five reciprocal guide blocks, three coverage rows. No email/form submitted.",
+  "fullNetworkComplete": false
+}

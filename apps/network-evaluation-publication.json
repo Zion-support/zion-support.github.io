@@ -1,0 +1,45 @@
+{
+  "release": "network-evaluation-2026-10-15-v1",
+  "pages": [
+    {
+      "path": "/en/index.html",
+      "sha256": "c898d82dcad6f7a9579b23018bfcdc7d75a0b852435bf2a7fdbb00356c8c62d7"
+    },
+    {
+      "path": "/apps/network-start-here.html",
+      "sha256": "f78ec96e41b03b97dab773cb74f5a11f6be2c4bcf9d1698247b43f5e1ce841f0"
+    },
+    {
+      "path": "/index.html",
+      "sha256": "f1be98153c0971494c612e83078a62426ba0de5194fc5edbe5389486d97aeb61"
+    },
+    {
+      "path": "/pt/apps/network-start-here.html",
+      "sha256": "66f74623d2b5db6aff36d3e568cf3d7d714f8d0fc554be7a0720f76c017fed32"
+    },
+    {
+      "path": "/es/index.html",
+      "sha256": "fd5438a754aa6a229f6037ad708b0bbebea8fcf76f003c133d7b481944c25077"
+    },
+    {
+      "path": "/es/apps/network-start-here.html",
+      "sha256": "3f58e1cc12129f96dc5ae046a907099139cf89315f49e92b4366cdeb1058564a"
+    },
+    {
+      "path": "/fr/index.html",
+      "sha256": "fc2f5d706a8a9ba3da87d63429976406d0da6afe7912ab5da5eef3b747cc87c2"
+    },
+    {
+      "path": "/fr/apps/network-start-here.html",
+      "sha256": "46d914f40adaacadb870802e4049143fa5103be85224c9032c4260c03d3e81fc"
+    },
+    {
+      "path": "/de/index.html",
+      "sha256": "b4300852bdf16d584a3e75339575c173efb7d6d61c426e63d77c4d966685c6bb"
+    },
+    {
+      "path": "/de/apps/network-start-here.html",
+      "sha256": "d6c58e2b8552c1957dcd5e2ad00a1db40a3a32c38b3df5a31b3db0ecc45afc7e"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "release": "field-evidence-faq-2026-10-10",
+  "scope": "Four tool-selection and evidence FAQs in five existing field-service guides and four locale aliases",
+  "languages": ["en", "pt-BR", "es", "fr", "de"],
+  "renderer": "scripts/render-field-evidence-faq.cjs",
+  "integration": "Pre-alias hook in render-field-evidence-route-aliases.cjs, invoked by existing quality renderer",
+  "verification": "Offline syntax, nine page fixtures, six alternate entries, read-only behavior and exact repeat-render idempotence passed before commit; live publication must be verified independently",
+  "forms": "unchanged",
+  "delivery": "unchanged",
+  "scope_limit": "Not whole-network translation or app functionality certification"
+}
