@@ -12,6 +12,10 @@ with tempfile.TemporaryDirectory() as td:
   for url in targets:
    f=file(url); f.parent.mkdir(parents=True,exist_ok=True)
    f.write_text('<html lang="'+lang+'"><body>'+protected+'<main></main><!--zion-network-home:start--><section><div></div></section><!--zion-network-home:end--></body></html>')
+  # The English destination is a standalone HTML file, not a directory route.
+  if locale=='en':
+   free=file(disc)
+   free.write_text('<html lang="en"><body><h1>Free Discovery</h1><form id="discovery"><input name="email"></form></body></html>')
  css=file('/assets/css/site.css');css.parent.mkdir(parents=True);css.write_text('body{max-width:100%}')
  def run(): return subprocess.run(['node',str(root/'scripts/render-network-showcase-release.cjs'),str(out)],cwd=work,text=True,capture_output=True)
  r=run();assert r.returncode==0,r.stderr
