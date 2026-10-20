@@ -8,10 +8,15 @@ with tempfile.TemporaryDirectory() as td:
  protected='<form action="/unchanged"><input name="sentinel"></form><script>window.sentinel="unchanged";</script>'
  for locale,(lang,home,disc) in locales.items():
   prefix='/' if locale=='en' else '/'+locale+'/'
-  targets=[home,disc,prefix+'apps/network-start-here.html',prefix+'apps/network-learning-paths.html']+[prefix+t+'/' for t in ['roi-calc','sla-calculator','ai-governance-checklist']]
+  targets=[home,disc,prefix+'apps/network-learning-paths.html']+[prefix+t+'/' for t in ['roi-calc','sla-calculator','ai-governance-checklist']]
   for url in targets:
    f=file(url); f.parent.mkdir(parents=True,exist_ok=True)
-   f.write_text('<html lang="'+lang+'"><body>'+protected+'<main></main><!--zion-network-home:start--><section><div></div></section><!--zion-network-home:end--></body></html>')
+   body='<html lang="'+lang+'"><body>'+protected+'<main id="app-paths-home"></main><!--zion-network-home:start--><section><div></div></section><!--zion-network-home:end--></body></html>'
+   if url==home and locale=='pt':
+    body='<html lang="'+lang+'"><body><div id="app-paths-home">'+protected+'<section><p>Content remains</p></section><footer>Footer remains</footer></div></body></html>'
+   elif url==home and locale in ('es','fr'):
+    body='<html lang="'+lang+'"><body><main id="app-paths-home">'+protected+'<section><p>Content remains</p></section></main><footer>Footer remains</footer></body></html>'
+   f.write_text(body)
   # The English destination is a standalone HTML file, not a directory route.
   if locale=='en':
    free=file(disc)
@@ -46,6 +51,9 @@ with tempfile.TemporaryDirectory() as td:
    assert 'href="'+route+'"' in html,'Showcase tool interlink missing '+route
    assert 'href="'+route+'"' in homepage,'Homepage tool interlink missing '+route
   assert 'href="'+prefix+'apps/network.html"' in homepage
+  assert 'network-start-here.html' not in html,'Missing start-here route must not be used'
+  assert 'href="'+prefix+'apps/network-learning-paths.html"' in html,'Link to existing learning paths'
+  assert homepage.count('data-showcase-promotion=')==1,'Exactly one owned promotion'
   assert html.count('href="'+disc+'"')>=4,'Every navigation and main CTA must target the free questionnaire'
   assert 'href="/discovery/">Free Discovery</a>' not in html,'Paid English Discovery misadvertised as free'
  print('PASS five locales: complete candidate rendering, six alternates, canonical, switches, source links, read-only showcase, homepage form/script preservation and two-run idempotence.')
@@ -59,6 +67,10 @@ with tempfile.TemporaryDirectory() as td:
  free.write_text(originalFree)
  assert run().returncode==0,'restored free questionnaire must pass'
  print('PASS negative Discovery CTA controls: paid checkout, missing form, wrong locale.')
+ home=file('/es/');originalHome=home.read_text()
+ home.write_text(originalHome.replace('<main id="app-paths-home">','<main id="app-paths-home"><!--zion-network-home:start-->',1))
+ bad=run();assert bad.returncode!=0 and 'Unbalanced existing network home markers' in bad.stderr,'unbalanced marker should fail closed'
+ home.write_text(originalHome)
  missing=file('/fr/roi-calc/');missing.unlink()
  assert run().returncode!=0,'missing locale target must fail'
  print('PASS negative control: missing localized tool rejected.')
