@@ -1,5 +1,5 @@
 "use strict";
-// Approved EN/PT editorial release. Only writes staged HTML; no runtime submissions.
+// Five-language review candidate. Only writes staged HTML; no runtime submissions.
 const fs=require("node:fs"),path=require("node:path"),assert=require("node:assert/strict");
 const out=process.argv[2]||"out",release="2026-10-14-showcase-five-languages-v1";
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
@@ -14,7 +14,7 @@ const copy={
     "lang": "en",
     "route": "/apps/network.html",
     "home": "/en/",
-    "disc": "/discovery/",
+    "disc": "/app-network-discovery.html",
     "title": "Zion App Network — choose, inspect, test",
     "intro": "Start with a workflow, compare related tools and inspect the source before planning a small, reversible pilot. A published page is not evidence of a working AI model or production readiness.",
     "nav": "Network navigation",
@@ -239,6 +239,12 @@ const copy={
 const items=[["roi-calc","ROI Calculator","roi","ptInterface"],["sla-calculator","SLA Calculator","sla","enInterface"],["ai-governance-checklist","AI Governance Checklist","gov","enInterface"]];
 const snapshots=[];
 for(const [locale,c] of Object.entries(copy)){
+ // A "free" CTA must lead to a real same-language questionnaire, not the paid checkout.
+ const questionnaire=read(c.disc);
+ assert(/<form\b/i.test(questionnaire),"Missing free Discovery questionnaire "+c.disc);
+ assert(!/(?:buy\.stripe\.com|Discovery\s*\$99|R\$99|Pay\s*\$99)/i.test(questionnaire),"Paid Discovery cannot be labeled free "+c.disc);
+ const questionnaireLang=(questionnaire.match(/<html[^>]*\blang=["']([^"']+)/i)||[])[1];
+ assert(questionnaireLang===c.lang,"Discovery locale mismatch "+c.disc);
  const p=locale==="en"?"/":"/"+locale+"/",nav=`<nav aria-label="${esc(c.nav)}"><a href="${c.home}">${esc(c.homeLabel)}</a> · <a href="/zion-app-network/">${esc(c.hub)}</a> · <a href="${c.disc}">${esc(c.discovery)}</a> · ${Object.entries(copy).map(([key,target])=>`<a href="${target.route}" lang="${target.lang}"${key===locale?' aria-current="page"':""}>${esc(({en:"English",pt:"Português",es:"Español",fr:"Français",de:"Deutsch"})[key])}</a>`).join(" · ")}</nav>`;
  const cards=items.map(([slug,title,desc],index)=>{const toolRoute=p+slug+"/";assert(fs.existsSync(file(toolRoute)),"Missing localized tool "+toolRoute);const toolHTML=read(toolRoute),toolLang=(toolHTML.match(/<html[^>]*lang=["']([^"']+)/i)||[])[1];assert(toolLang===c.lang,"Tool locale mismatch "+toolRoute);const interfaceKey=toolLang.startsWith("pt")?"ptInterface":"enInterface";return `<article class="card"><h3>${esc(c.toolTitles[index])}</h3><p>${esc(c[desc])}</p><p class="muted">${esc(c.interfaceNote)}</p><div class="actions"><a class="btn" href="${toolRoute}">${esc(c.open)}</a><a href="https://github.com/Zion-support/zion-support.github.io/blob/main/scripts/render-operational-tools.cjs">${esc(c.source)}</a></div></article>`;}).join("");
  const repoLinks=projects.map(u=>`<li><a href="${esc(u)}">${esc(u.split("/").pop().replaceAll("-"," "))}</a></li>`).join("");
@@ -262,4 +268,4 @@ for(const [locale,c] of Object.entries(copy)){
  snapshots.push({locale:c.lang,route:c.route,homepage:c.home,formCount:forms.length,sourceProjects:projects.length});
 }
 put("/apps/network-showcase-release.json",JSON.stringify({release,scope:"Five-language showcase and existing homepage promotion; not whole-network certification",generatedChecks:snapshots},null,2)+"\n");
-console.log("PASS "+release+": EN/PT showcase, reciprocal homepage links, preserved forms/scripts and existing source links.");
+console.log("PASS "+release+": five-language showcase, free questionnaire routes, reciprocal homepage links, preserved forms/scripts and source links.");
