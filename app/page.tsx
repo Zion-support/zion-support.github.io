@@ -1281,10 +1281,10 @@ export default function HomePage() {
               <h2 className="text-2xl font-bold text-white mb-2">Free apps &amp; calculators — interlinked</h2>
               <p className="text-sm text-slate-400">
                 Path tools on this domain and product apps from the GitHub constellation. Every card links to the app
-                and back into the <Link href="/apps-network/" className="text-purple-300 hover:text-pink-300">network hub</Link>.
+                and back into the <Link href="/zion-app-network/" className="text-purple-300 hover:text-pink-300">network hub</Link>.
               </p>
             </div>
-            <Link href="/apps-network/" className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-purple-600 text-white text-sm font-medium hover:bg-purple-500 transition-colors">
+            <Link href="/zion-app-network/" className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-purple-600 text-white text-sm font-medium hover:bg-purple-500 transition-colors">
               View all apps <span>→</span>
             </Link>
           </div>
@@ -1445,7 +1445,7 @@ export default function HomePage() {
           </div>
 
           <div className="text-center py-8">
-            <Link href="/apps-network/" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-purple-600 text-white font-medium hover:bg-purple-500 transition-colors text-lg">
+            <Link href="/zion-app-network/" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-purple-600 text-white font-medium hover:bg-purple-500 transition-colors text-lg">
               Explore the Full Apps Network →
             </Link>
             <p className="text-sm text-slate-500 mt-3">35,000+ services | 60+ interlinked apps | 500+ GitHub repositories</p>
@@ -1462,7 +1462,7 @@ export default function HomePage() {
             <p className="text-slate-400 max-w-2xl mx-auto text-sm">
               Explore our service catalog, calculate ROI, compare solutions, and route your needs — directly from
               our <strong className="text-white">{services.length}+</strong> services across <strong className="text-white">{CATEGORIES.length}</strong> categories.
-              {' '}Also see the <Link href="/apps-network/" className="text-purple-300 hover:text-pink-300">Apps Network hub</Link>.
+              {' '}Also see the <Link href="/zion-app-network/" className="text-purple-300 hover:text-pink-300">Apps Network hub</Link>.
             </p>
           </div>
           <div className="max-w-5xl mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
