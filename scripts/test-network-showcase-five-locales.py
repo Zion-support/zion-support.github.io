@@ -3,7 +3,7 @@ root=pathlib.Path(__file__).resolve().parents[1]
 with tempfile.TemporaryDirectory() as td:
  work=pathlib.Path(td); out=work/'out'; (work/'public/apps').mkdir(parents=True)
  (work/'public/apps/network.html').write_text('<html><body><a href="https://github.com/Zion-support/zion-claims-triage-ai">Claims</a><a href="/apps/field-service-evidence-guide.html">Guide</a></body></html>')
- locales={'en':('en','/en/','/discovery/'),'pt':('pt-BR','/','/pt/discovery/'),'es':('es','/es/','/es/discovery/'),'fr':('fr','/fr/','/fr/discovery/'),'de':('de','/de/','/de/discovery/')}
+ locales={'en':('en','/en/','/app-network-discovery.html'),'pt':('pt-BR','/','/pt/discovery/'),'es':('es','/es/','/es/discovery/'),'fr':('fr','/fr/','/fr/discovery/'),'de':('de','/de/','/de/discovery/')}
  def file(url): return out/(url.lstrip('/')+('index.html' if url.endswith('/') else ''))
  protected='<form action="/unchanged"><input name="sentinel"></form><script>window.sentinel="unchanged";</script>'
  for locale,(lang,home,disc) in locales.items():
@@ -35,7 +35,19 @@ with tempfile.TemporaryDirectory() as td:
   homepage=file(home).read_text(); assert protected in homepage
   assert homepage.count('data-showcase-promotion=')==1
   assert 'href="'+prefix+'apps/network.html"' in homepage
+  assert html.count('href="'+disc+'"')>=4,'Every navigation and main CTA must target the free questionnaire'
+  assert 'href="/discovery/">Free Discovery</a>' not in html,'Paid English Discovery misadvertised as free'
  print('PASS five locales: complete candidate rendering, six alternates, canonical, switches, source links, read-only showcase, homepage form/script preservation and two-run idempotence.')
+ free=file('/app-network-discovery.html');originalFree=free.read_text()
+ free.write_text(originalFree.replace('</body>','<a href="https://buy.stripe.com/unsafe">Pay $99</a></body>'))
+ bad=run();assert bad.returncode!=0 and 'Paid Discovery cannot be labeled free' in bad.stderr,'checkout CTA must fail closed'
+ free.write_text(re.sub('<form.*?</form>','',originalFree,flags=re.I|re.S))
+ bad=run();assert bad.returncode!=0 and 'Missing free Discovery questionnaire' in bad.stderr,'missing form must fail closed'
+ free.write_text(originalFree.replace('<html lang="en">','<html lang="de">',1))
+ bad=run();assert bad.returncode!=0 and 'Discovery locale mismatch' in bad.stderr,'wrong language must fail closed'
+ free.write_text(originalFree)
+ assert run().returncode==0,'restored free questionnaire must pass'
+ print('PASS negative Discovery CTA controls: paid checkout, missing form, wrong locale.')
  missing=file('/fr/roi-calc/');missing.unlink()
  assert run().returncode!=0,'missing locale target must fail'
  print('PASS negative control: missing localized tool rejected.')
