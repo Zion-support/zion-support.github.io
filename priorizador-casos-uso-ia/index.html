@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Priorizador de casos de uso de IA — grátis · Zion Tech Group</title>
+<meta name="description" content="Ferramenta grátis para pontuar e ranquear casos de uso de IA por valor, frequência, dados disponíveis, risco e esforço — com pesos ajustáveis e classificação em quick wins, estratégicos, testar depois e evitar.">
+<link rel="canonical" href="https://ziontechgroup.com/priorizador-casos-uso-ia/">
+<meta property="og:title" content="Priorizador de casos de uso de IA — Zion Tech Group"><meta property="og:description" content="Ferramenta grátis para pontuar e ranquear casos de uso de IA por valor, frequência, dados disponíveis, risco e esforço — com pesos ajustáveis e classificação em quick wins, estratégicos, testar depois e evitar."><meta property="og:url" content="https://ziontechgroup.com/priorizador-casos-uso-ia/"><meta property="og:type" content="website">
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Priorizador de casos de uso de IA", "applicationCategory": "BusinessApplication", "operatingSystem": "Web browser", "inLanguage": "pt-BR", "url": "https://ziontechgroup.com/priorizador-casos-uso-ia/", "description": "Ferramenta grátis para pontuar e ranquear casos de uso de IA por valor, frequência, dados disponíveis, risco e esforço — com pesos ajustáveis e classificação em quick wins, estratégicos, testar depois e evitar.", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "Zion Tech Group", "url": "https://ziontechgroup.com"}}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Os exemplos já preenchidos são recomendações?", "acceptedAnswer": {"@type": "Answer", "text": "Não. São só exemplos para mostrar o funcionamento — apague e use os seus."}}, {"@type": "Question", "name": "Posso mudar os pesos?", "acceptedAnswer": {"@type": "Answer", "text": "Sim. Ajuste conforme a prioridade da sua empresa; o ranking é recalculado ao clicar em “Ranquear”."}}, {"@type": "Question", "name": "E depois de escolher o caso de uso?", "acceptedAnswer": {"@type": "Answer", "text": "No Discovery grátis mapeamos um processo escolhido e devolvemos um readout escrito com o próximo passo."}}]}]</script>
+<style>body{font-family:ui-sans-serif,system-ui,sans-serif;margin:0;background:#0b1220;color:#e8eef8;line-height:1.55}
+.w{max-width:920px;margin:0 auto;padding:40px 20px 30px}a{color:#7dd3fc;text-decoration:none}a:hover{text-decoration:underline}
+.card{background:#121a2b;border:1px solid #243049;border-radius:14px;padding:20px;margin:14px 0}
+.btn{display:inline-block;background:#7dd3fc;color:#042033;padding:10px 16px;border-radius:999px;font-weight:700;margin-top:10px;border:0;cursor:pointer;font-size:15px}
+.btn.alt{background:#1e293b;color:#e8eef8;border:1px solid #334155}.muted{color:#9aa8bd}
+label{display:block;margin:8px 0}input,select,textarea{background:#0b1220;color:#e8eef8;border:1px solid #334155;border-radius:8px;padding:8px;font:inherit;max-width:100%}
+textarea{width:100%;box-sizing:border-box}pre.out{white-space:pre-wrap;background:#0b1220;padding:12px;border-radius:8px;border:1px solid #243049}
+table{border-collapse:collapse;width:100%;margin-top:8px;font-size:14px}th,td{border:1px solid #243049;padding:6px;text-align:left;vertical-align:top}td input,td select{width:100%;box-sizing:border-box}
+.badge{display:inline-block;background:#0a7d4f;color:#fff;border-radius:999px;padding:3px 12px;font-size:13px;font-weight:600}.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px}
+.tag{display:inline-block;border-radius:999px;padding:1px 9px;font-size:12px;font-weight:700}.t-ok{background:#0a7d4f}.t-warn{background:#9a6b00}.t-bad{background:#9b1c1c}</style></head><body><div class="w">
+<nav class="muted"><a href="/">Zion Tech Group</a> › <a href="/apps/">Apps</a> › <a href="/apps/content-hub.html">Content Hub</a></nav>
+<p><span class="badge">Grátis · roda no seu navegador · nada é enviado</span></p>
+<h1>Priorizador de casos de uso de IA</h1>
+<p class="muted">Toda empresa tem uma lista de ideias de IA. O difícil é escolher a primeira. Liste os casos de uso, dê notas de 1 a 5 e ajuste os pesos — o ranking mostra por onde começar e o que deixar para depois.</p>
+<div class="card"><h2>Pesos</h2><div class="grid2" id="wts"></div></div>
+<div class="card"><h2>Casos de uso</h2>
+<table id="tb"><thead><tr><th>Caso de uso</th><th>Valor</th><th>Frequência</th><th>Dados prontos</th><th>Risco</th><th>Esforço</th><th></th></tr></thead><tbody></tbody></table>
+<p class="muted">Notas de 1 (baixo) a 5 (alto). Risco e esforço altos <em>reduzem</em> a pontuação.</p>
+<button class="btn alt" onclick="add()">+ Caso de uso</button> <button class="btn" onclick="calc()">Ranquear</button>
+<div id="res"></div></div>
+<script>
+var K=[['val','Valor para o negócio',3],['freq','Frequência da tarefa',2],['data','Dados prontos',2],['risk','Risco (invertido)',2],['eff','Esforço (invertido)',1]];
+document.getElementById('wts').innerHTML=K.map(function(k){return '<label>'+k[1]+' <input type="number" min="0" max="5" id="w_'+k[0]+'" value="'+k[2]+'"></label>'}).join('');
+function sel(v){return '<select>'+[1,2,3,4,5].map(function(n){return '<option'+(n==v?' selected':'')+'>'+n+'</option>'}).join('')+'</select>'}
+function add(n,a){a=a||[3,3,3,3,3];var tr=document.createElement('tr');tr.innerHTML='<td><input value="'+(n||'')+'" placeholder="Ex.: triagem de tickets"></td>'+a.map(sel).map(function(s){return '<td>'+s+'</td>'}).join('')+'<td><button class="btn alt" onclick="this.closest(\'tr\').remove()">×</button></td>';document.querySelector('#tb tbody').appendChild(tr)}
+function calc(){var w={};K.forEach(function(k){w[k[0]]=parseFloat(document.getElementById('w_'+k[0]).value)||0});var sw=K.reduce(function(a,k){return a+w[k[0]]},0)||1;
+var R=[].slice.call(document.querySelectorAll('#tb tbody tr')).map(function(tr){var f=tr.querySelectorAll('input,select'),s={name:f[0].value||'(sem nome)',val:+f[1].value,freq:+f[2].value,data:+f[3].value,risk:+f[4].value,eff:+f[5].value};
+s.score=(w.val*s.val+w.freq*s.freq+w.data*s.data+w.risk*(6-s.risk)+w.eff*(6-s.eff))/sw;var impact=(s.val+s.freq)/2,ease=(s.data+(6-s.risk)+(6-s.eff))/3;
+s.q=impact>=3.5&&ease>=3.5?['Quick win','t-ok']:impact>=3.5?['Estratégico (preparar dados/riscos)','t-warn']:ease>=3.5?['Testar depois','t-warn']:['Evitar por enquanto','t-bad'];return s}).sort(function(a,b){return b.score-a.score});
+var h='<table><tr><th>#</th><th>Caso de uso</th><th>Pontuação (1–5)</th><th>Classificação</th></tr>';R.forEach(function(s,i){h+='<tr><td>'+(i+1)+'</td><td>'+s.name.replace(/</g,'&lt;')+'</td><td>'+s.score.toFixed(2)+'</td><td><span class="tag '+s.q[1]+'">'+s.q[0]+'</span></td></tr>'});
+h+='</table><p class="muted">Classificação: impacto = média de valor e frequência; facilidade = média de dados prontos, risco invertido e esforço invertido; corte em 3,5.</p>';document.getElementById('res').innerHTML=h}
+add('Triagem de tickets de suporte',[4,5,4,2,2]);add('Resumo de reuniões comerciais',[3,4,4,2,1]);add('Previsão de churn',[5,3,2,3,4]);
+</script>
+<div class="card"><h2>Como dar notas sem se enganar</h2><ul>
+<li><strong>Valor:</strong> o que muda se funcionar? Horas devolvidas, receita protegida, erro evitado. Se ninguém sabe dizer, a nota é baixa.</li>
+<li><strong>Frequência:</strong> tarefas diárias pagam o esforço muito mais rápido do que tarefas trimestrais.</li>
+<li><strong>Dados prontos:</strong> os dados existem, são acessíveis e alguém confia neles? Esse é o motivo mais comum de piloto travado.</li>
+<li><strong>Risco:</strong> o que acontece se a IA errar? Respostas para cliente, decisões financeiras e dados pessoais pedem aprovação humana.</li>
+<li><strong>Esforço:</strong> integrações, mudança de processo e treinamento — não só o modelo.</li></ul>
+<p class="muted">Antes do piloto, rode o <a href="/ai-readiness-assessment/">AI Readiness Assessment</a> e o <a href="/ai-governance-checklist/">AI Governance Checklist</a>; depois, acompanhe resultado com o <a href="/ai-roi-tracker/">AI ROI Tracker</a>.</p></div>
+<div class="card"><h2>Apps relacionados (grátis)</h2><p><a href="/ai-readiness-assessment/">AI Readiness Assessment</a> · <a href="/ai-governance-checklist/">AI Governance Checklist</a> · <a href="/ai-roi-tracker/">AI ROI Tracker</a> · <a href="/prompt-library/">AI Prompt Library</a> · <a href="/llm-cost-calculator/">LLM Cost Calculator</a> · <a href="/roi-calc/">ROI Calculator</a></p></div>
+<div class="card"><h2>Perguntas frequentes</h2><details><summary><strong>Os exemplos já preenchidos são recomendações?</strong></summary><p>Não. São só exemplos para mostrar o funcionamento — apague e use os seus.</p></details><details><summary><strong>Posso mudar os pesos?</strong></summary><p>Sim. Ajuste conforme a prioridade da sua empresa; o ranking é recalculado ao clicar em “Ranquear”.</p></details><details><summary><strong>E depois de escolher o caso de uso?</strong></summary><p>No Discovery grátis mapeamos um processo escolhido e devolvemos um readout escrito com o próximo passo.</p></details></div>
+<div class="card"><h2>Quer isso aplicado ao seu caso?</h2><p>O <strong>Discovery é grátis</strong>: você responde um questionário curto, nossa equipe comercial recebe uma cópia na hora e você recebe um readout escrito com o próximo passo recomendado. Sem compromisso.</p>
+<p><a class="btn" href="/discovery/">Começar o Discovery grátis →</a> <a class="btn alt" href="/apps/">Todos os apps</a></p></div>
+<footer class="muted"><small>© 2026 Zion Tech Group · <a href="mailto:commercial@ziontechgroup.com">commercial@ziontechgroup.com</a> · <a href="/plans/">Planos</a> · <a href="/privacy/">Privacidade</a></small></footer>
+</div></body></html>

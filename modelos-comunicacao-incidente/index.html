@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gerador de comunicação de incidentes — grátis · Zion Tech Group</title>
+<meta name="description" content="Gere em segundos as mensagens de incidente — abertura, atualização e resolução — com severidade, impacto, workaround e horário da próxima atualização. Grátis, no navegador.">
+<link rel="canonical" href="https://ziontechgroup.com/modelos-comunicacao-incidente/">
+<meta property="og:title" content="Gerador de comunicação de incidentes — Zion Tech Group"><meta property="og:description" content="Gere em segundos as mensagens de incidente — abertura, atualização e resolução — com severidade, impacto, workaround e horário da próxima atualização. Grátis, no navegador."><meta property="og:url" content="https://ziontechgroup.com/modelos-comunicacao-incidente/"><meta property="og:type" content="website">
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Gerador de comunicação de incidentes", "applicationCategory": "BusinessApplication", "operatingSystem": "Web browser", "inLanguage": "pt-BR", "url": "https://ziontechgroup.com/modelos-comunicacao-incidente/", "description": "Gere em segundos as mensagens de incidente — abertura, atualização e resolução — com severidade, impacto, workaround e horário da próxima atualização. Grátis, no navegador.", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "Zion Tech Group", "url": "https://ziontechgroup.com"}}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "As mensagens são enviadas automaticamente?", "acceptedAnswer": {"@type": "Answer", "text": "Não. A ferramenta só gera o texto; você copia e publica no seu canal."}}, {"@type": "Question", "name": "Funciona em inglês?", "acceptedAnswer": {"@type": "Answer", "text": "Sim. Escolha English no campo Idioma."}}, {"@type": "Question", "name": "A Zion pode automatizar isso no nosso status page?", "acceptedAnswer": {"@type": "Answer", "text": "Sim. Descreva seu fluxo de incidentes no Discovery grátis e respondemos com uma proposta de automação."}}]}]</script>
+<style>body{font-family:ui-sans-serif,system-ui,sans-serif;margin:0;background:#0b1220;color:#e8eef8;line-height:1.55}
+.w{max-width:920px;margin:0 auto;padding:40px 20px 30px}a{color:#7dd3fc;text-decoration:none}a:hover{text-decoration:underline}
+.card{background:#121a2b;border:1px solid #243049;border-radius:14px;padding:20px;margin:14px 0}
+.btn{display:inline-block;background:#7dd3fc;color:#042033;padding:10px 16px;border-radius:999px;font-weight:700;margin-top:10px;border:0;cursor:pointer;font-size:15px}
+.btn.alt{background:#1e293b;color:#e8eef8;border:1px solid #334155}.muted{color:#9aa8bd}
+label{display:block;margin:8px 0}input,select,textarea{background:#0b1220;color:#e8eef8;border:1px solid #334155;border-radius:8px;padding:8px;font:inherit;max-width:100%}
+textarea{width:100%;box-sizing:border-box}pre.out{white-space:pre-wrap;background:#0b1220;padding:12px;border-radius:8px;border:1px solid #243049}
+table{border-collapse:collapse;width:100%;margin-top:8px;font-size:14px}th,td{border:1px solid #243049;padding:6px;text-align:left;vertical-align:top}td input,td select{width:100%;box-sizing:border-box}
+.badge{display:inline-block;background:#0a7d4f;color:#fff;border-radius:999px;padding:3px 12px;font-size:13px;font-weight:600}.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px}
+.tag{display:inline-block;border-radius:999px;padding:1px 9px;font-size:12px;font-weight:700}.t-ok{background:#0a7d4f}.t-warn{background:#9a6b00}.t-bad{background:#9b1c1c}</style></head><body><div class="w">
+<nav class="muted"><a href="/">Zion Tech Group</a> › <a href="/apps/">Apps</a> › <a href="/apps/content-hub.html">Content Hub</a></nav>
+<p><span class="badge">Grátis · roda no seu navegador · nada é enviado</span></p>
+<h1>Gerador de comunicação de incidentes</h1>
+<p class="muted">Durante um incidente, escrever bem é a última coisa em que a equipe consegue pensar. Preencha os campos uma vez e gere as três mensagens que seus clientes e stakeholders precisam ver: abertura, atualização e resolução.</p>
+<div class="card"><h2>Dados do incidente</h2><div class="grid2">
+<label>Serviço afetado<input id="svc" placeholder="Ex.: Portal do cliente"></label>
+<label>Severidade<select id="sev"><option>SEV1 — indisponível para todos</option><option>SEV2 — degradação grave</option><option>SEV3 — impacto parcial</option><option>SEV4 — impacto mínimo</option></select></label>
+<label>Início (horário local)<input id="st" type="datetime-local"></label>
+<label>Próxima atualização em (min)<input id="nx" type="number" value="30" min="5"></label>
+<label>Idioma<select id="lg"><option value="pt">Português</option><option value="en">English</option></select></label>
+<label>Canal<select id="ch"><option>Status page / e-mail</option><option>Chat interno</option></select></label></div>
+<label>Impacto para o usuário<textarea id="imp" rows="2" placeholder="Ex.: usuários não conseguem fazer login no portal."></textarea></label>
+<label>Workaround (se houver)<textarea id="wa" rows="2" placeholder="Ex.: pedidos urgentes podem ser feitos pelo e-mail de suporte."></textarea></label>
+<label>Causa / correção (para a mensagem de resolução)<textarea id="fx" rows="2" placeholder="Ex.: certificado expirado no balanceador; renovado e monitorado."></textarea></label>
+<button class="btn" onclick="gen()">Gerar mensagens</button></div>
+<div class="card"><h3>1. Abertura</h3><pre class="out" id="m1"></pre><h3>2. Atualização</h3><pre class="out" id="m2"></pre><h3>3. Resolução</h3><pre class="out" id="m3"></pre></div>
+<script>
+function v(i){return (document.getElementById(i).value||'').trim()}
+function t(d){return d?d.toLocaleString(v('lg')=='en'?'en-US':'pt-BR',{dateStyle:'short',timeStyle:'short'}):''}
+function gen(){var s=v('st')?new Date(v('st')):new Date(),n=new Date(Date.now()+60000*(parseInt(v('nx'))||30)),svc=v('svc')||'(serviço)',sev=v('sev').split(' — ')[0],en=v('lg')=='en';
+var imp=v('imp')||(en?'(describe user impact)':'(descreva o impacto)'),wa=v('wa'),fx=v('fx');
+if(en){
+document.getElementById('m1').textContent='['+sev+'] Investigating — '+svc+'\n\nSince '+t(s)+' we are seeing an issue affecting '+svc+'.\nImpact: '+imp+(wa?'\nWorkaround: '+wa:'')+'\n\nOur team is investigating. Next update by '+t(n)+'.';
+document.getElementById('m2').textContent='['+sev+'] Update — '+svc+'\n\nWe have identified the likely cause and are working on a fix.\nImpact: '+imp+(wa?'\nWorkaround: '+wa:'')+'\n\nNext update by '+t(new Date(n.getTime()+60000*(parseInt(v('nx'))||30)))+'.';
+document.getElementById('m3').textContent='[Resolved] '+svc+'\n\nThe issue that started at '+t(s)+' has been resolved.'+(fx?'\nCause and fix: '+fx:'')+'\n\nWe will publish a post-incident review. Thank you for your patience.';}
+else{
+document.getElementById('m1').textContent='['+sev+'] Investigando — '+svc+'\n\nDesde '+t(s)+' identificamos um problema que afeta '+svc+'.\nImpacto: '+imp+(wa?'\nAlternativa: '+wa:'')+'\n\nNossa equipe está investigando. Próxima atualização até '+t(n)+'.';
+document.getElementById('m2').textContent='['+sev+'] Atualização — '+svc+'\n\nIdentificamos a causa provável e estamos aplicando a correção.\nImpacto: '+imp+(wa?'\nAlternativa: '+wa:'')+'\n\nPróxima atualização até '+t(new Date(n.getTime()+60000*(parseInt(v('nx'))||30)))+'.';
+document.getElementById('m3').textContent='[Resolvido] '+svc+'\n\nO problema iniciado em '+t(s)+' foi resolvido.'+(fx?'\nCausa e correção: '+fx:'')+'\n\nVamos publicar uma análise pós-incidente. Obrigado pela paciência.';}}
+gen();
+</script>
+<div class="card"><h2>Regras que deixam a comunicação confiável</h2><ol>
+<li><strong>Publique cedo.</strong> “Estamos investigando” em poucos minutos vale mais do que um diagnóstico perfeito uma hora depois.</li>
+<li><strong>Fale de impacto, não de infraestrutura.</strong> O cliente quer saber o que não funciona para ele e se há alternativa.</li>
+<li><strong>Sempre diga quando será a próxima atualização</strong> — e cumpra, mesmo que seja “sem novidades”.</li>
+<li><strong>Não prometa horário de resolução</strong> sem ter certeza. Prometa o horário da próxima atualização.</li>
+<li><strong>Feche com aprendizado.</strong> Uma análise pós-incidente sem culpados mostra o que muda para não acontecer de novo.</li></ol>
+<p class="muted">Depois do incidente: reconstrua a linha do tempo com o <a href="/incident-timeline-reconstructor/">Incident Timeline Reconstructor</a>, escreva o postmortem com o <a href="/incident-postmortem-writer/">Incident Postmortem Writer</a> e calcule o custo com o <a href="/incident-cost/">Incident Cost</a>.</p></div>
+<div class="card"><h2>Apps relacionados (grátis)</h2><p><a href="/incident-timeline-reconstructor/">Incident Timeline Reconstructor</a> · <a href="/incident-postmortem-writer/">Incident Postmortem Writer</a> · <a href="/incident-cost/">Incident Cost</a> · <a href="/site-uptime-watchdog/">Site Uptime Watchdog</a> · <a href="/sla-calculator/">SLA Calculator</a> · <a href="/patch-window-planner/">Patch Window Planner</a></p></div>
+<div class="card"><h2>Perguntas frequentes</h2><details><summary><strong>As mensagens são enviadas automaticamente?</strong></summary><p>Não. A ferramenta só gera o texto; você copia e publica no seu canal.</p></details><details><summary><strong>Funciona em inglês?</strong></summary><p>Sim. Escolha English no campo Idioma.</p></details><details><summary><strong>A Zion pode automatizar isso no nosso status page?</strong></summary><p>Sim. Descreva seu fluxo de incidentes no Discovery grátis e respondemos com uma proposta de automação.</p></details></div>
+<div class="card"><h2>Quer isso aplicado ao seu caso?</h2><p>O <strong>Discovery é grátis</strong>: você responde um questionário curto, nossa equipe comercial recebe uma cópia na hora e você recebe um readout escrito com o próximo passo recomendado. Sem compromisso.</p>
+<p><a class="btn" href="/discovery/">Começar o Discovery grátis →</a> <a class="btn alt" href="/apps/">Todos os apps</a></p></div>
+<footer class="muted"><small>© 2026 Zion Tech Group · <a href="mailto:commercial@ziontechgroup.com">commercial@ziontechgroup.com</a> · <a href="/plans/">Planos</a> · <a href="/privacy/">Privacidade</a></small></footer>
+</div></body></html>
