@@ -1,80 +1,16 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Free AI Discovery — Zion Tech Group</title>
-<meta name="description" content="Free AI Discovery questionnaire: 8 questions, 2 minutes, personalized picks from 780+ AI apps. Results emailed instantly to you and our commercial team. Always online, always free.">
-<style>body{font-family:system-ui;background:linear-gradient(135deg,#0b1020,#1e3a8a);color:#fff;padding:2rem 1rem;max-width:760px;margin:auto}a{color:#22d3ee}.card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:1.25rem;margin:1rem 0}.btn{display:inline-block;background:#22d3ee;color:#082f49;padding:.8rem 1.6rem;border-radius:999px;font-weight:700;text-decoration:none;border:0;cursor:pointer;font-size:1rem}label{display:block;margin:.4rem 0;padding:.6rem .8rem;background:rgba(255,255,255,.05);border-radius:10px;cursor:pointer}input[type=text],input[type=email]{width:100%;padding:.7rem;border-radius:10px;border:1px solid rgba(255,255,255,.25);background:rgba(0,0,0,.25);color:#fff;margin:.3rem 0}h1{margin-bottom:.2rem}.muted{opacity:.85}</style></head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Free AI Discovery | Zion Tech Group</title>
+<meta name="description" content="Free online AI Discovery from Zion Tech Group.">
+<link rel="canonical" href="https://ziontechgroup.com/discovery/">
+<meta http-equiv="refresh" content="0;url=/discovery/">
+<script>location.replace('/discovery/');</script>
+</head>
 <body>
-<h1>🔎 Free AI Discovery</h1><p><a href="/en/discovery/">EN</a> · <a href="/pt-br/discovery/">PT</a> · <a href="/es/discovery/">ES</a> · <a href="/fr/discovery/">FR</a> · <a href="/de/discovery/">DE</a></p>
-<p><strong>Always online. Always free. Instant results.</strong></p>
-<div class="card"><strong>Why take the Discovery?</strong><ul>
-<li>8 questions, ~2 minutes</li>
-<li>Personalized picks from <strong>780+ AI apps</strong> in the Zion App Network</li>
-<li>Results emailed <strong>instantly</strong> to you and our commercial team</li>
-<li>No signup, no credit card, no cost — ever</li>
-</ul></div>
-<form id="dq">
-<div class="card"><h3>1. What is your industry?</h3>
-<label><input type="radio" name="industry" value="field-service"> Field Service / MSP</label>
-<label><input type="radio" name="industry" value="healthcare"> Healthcare</label>
-<label><input type="radio" name="industry" value="finance"> Finance / FinOps</label>
-<label><input type="radio" name="industry" value="energy"> Energy / Sustainability</label>
-<label><input type="radio" name="industry" value="retail"> Retail / E-commerce</label>
-<label><input type="radio" name="industry" value="other"> Other</label></div>
-<div class="card"><h3>2. What is your biggest challenge?</h3>
-<label><input type="radio" name="challenge" value="support"> Customer support overload</label>
-<label><input type="radio" name="challenge" value="sla"> SLA breaches / reliability</label>
-<label><input type="radio" name="challenge" value="costs"> Cloud &amp; operating costs</label>
-<label><input type="radio" name="challenge" value="sales"> Sales &amp; lead generation</label>
-<label><input type="radio" name="challenge" value="data"> Data &amp; reporting</label></div>
-<div class="card"><h3>3. Company size?</h3>
-<label><input type="radio" name="size" value="1-10"> 1–10</label>
-<label><input type="radio" name="size" value="11-100"> 11–100</label>
-<label><input type="radio" name="size" value="101-1000"> 101–1,000</label>
-<label><input type="radio" name="size" value="1000+"> 1,000+</label></div>
-<div class="card"><h3>4. How fast do you want results?</h3>
-<label><input type="radio" name="speed" value="days"> Days</label>
-<label><input type="radio" name="speed" value="weeks"> Weeks</label>
-<label><input type="radio" name="speed" value="quarter"> This quarter</label></div>
-<div class="card"><h3>5. Do you already use AI tools?</h3>
-<label><input type="radio" name="aiuse" value="none"> Not yet</label>
-<label><input type="radio" name="aiuse" value="some"> A few</label>
-<label><input type="radio" name="aiuse" value="many"> Many</label></div>
-<div class="card"><h3>6. Priority outcome?</h3>
-<label><input type="radio" name="outcome" value="save-time"> Save time</label>
-<label><input type="radio" name="outcome" value="cut-costs"> Cut costs</label>
-<label><input type="radio" name="outcome" value="grow-revenue"> Grow revenue</label>
-<label><input type="radio" name="outcome" value="reduce-risk"> Reduce risk</label></div>
-<div class="card"><h3>7. Deployment preference?</h3>
-<label><input type="radio" name="deploy" value="saas"> SaaS (fastest)</label>
-<label><input type="radio" name="deploy" value="cloud"> Our cloud</label>
-<label><input type="radio" name="deploy" value="onprem"> On-prem / hybrid</label></div>
-<div class="card"><h3>8. Where should we send your personalized results?</h3>
-<input type="text" name="name" placeholder="Your name" required>
-<input type="email" name="email" placeholder="Your work email" required>
-<p class="muted">Your results are emailed instantly to you and our commercial team (commercial@ziontechgroup.com).</p></div>
-<p><button class="btn" type="submit">Get my free Discovery results →</button></p>
-</form>
-<div id="results" style="display:none"></div>
-<p>Questions? <a href="mailto:commercial@ziontechgroup.com">commercial@ziontechgroup.com</a> · <a href="https://ziontechgroup.com/zion-app-network/">Browse the App Network</a> · <a href="https://github.com/Zion-support/zion-app-network">GitHub hub</a></p>
-<script>
-const MAP={
- 'support':['Support Ticket Triager|https://ziontechgroup.com/support-ticket-triager/','SLA Breach Predictor|https://ziontechgroup.com/sla-breach-predictor/'],
- 'sla':['SLA Breach Predictor|https://ziontechgroup.com/sla-breach-predictor/','AI Backup Integrity|https://ziontechgroup.com/ai-backup-integrity/'],
- 'costs':['FinOps Autopilot|https://ziontechgroup.com/finops-autopilot/','AI Cloud Optimizer|https://ziontechgroup.com/ai-cloud-optimizer/'],
- 'sales':['Lead Scoring AI|https://ziontechgroup.com/tools/','Sales Intelligence|https://ziontechgroup.com/tools/'],
- 'data':['RAG Eval Kit|https://ziontechgroup.com/zion-rag-eval-kit/','AI Report Builder|https://ziontechgroup.com/tools/'],
- 'field-service':['Site Survey Planner|https://ziontechgroup.com/site-survey-planner/','Field Service AI Suite|https://ziontechgroup.com/zion-app-network/app/network-field-service-showcase.html'],
- 'healthcare':['Clinical Documentation AI|https://ziontechgroup.com/zion-app-network/app-network-batch69-oct01.html'],
- 'finance':['FinOps Autopilot|https://ziontechgroup.com/finops-autopilot/'],
- 'energy':['Carbon Footprint Tracker|https://ziontechgroup.com/zion-app-network/app-network-batch72-oct03.html'],
- 'retail':['Content Commerce AI|https://ziontechgroup.com/zion-app-network/'],
- 'other':['Zion AI App Network|https://ziontechgroup.com/zion-app-network/'] };
-document.getElementById('dq').addEventListener('submit',async e=>{e.preventDefault();
-const f=new FormData(e.target);const a=Object.fromEntries(f.entries());
-const picks=[...(MAP[a.challenge]||[]),...(MAP[a.industry]||[])].slice(0,4);
-const lines=picks.map(p=>{const[n,u]=p.split('|');return `- ${n}: ${u}`}).join('\n');
-const summary=`NEW DISCOVERY SUBMISSION\nName: ${a.name}\nEmail: ${a.email}\nIndustry: ${a.industry}\nChallenge: ${a.challenge}\nSize: ${a.size}\nSpeed: ${a.speed}\nAI usage: ${a.aiuse}\nOutcome: ${a.outcome}\nDeploy: ${a.deploy}\n\nRecommended apps:\n${lines}`;
-document.getElementById('results').style.display='block';
-document.getElementById('results').innerHTML='<div class="card"><h2>🎉 Your personalized picks</h2><ul>'+picks.map(p=>{const[n,u]=p.split('|');return `<li><a href="${u}">${n}</a></li>`}).join('')+'</ul><p>📧 Emailing your full results now — you and our commercial team will receive them within a minute.</p></div>';
-try{await fetch('https://formsubmit.co/ajax/commercial@ziontechgroup.com',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({name:a.name,email:a.email,_cc:a.email,_subject:'New Free AI Discovery — '+a.name,_template:'box',results:summary})})}catch(err){}
-window.scrollTo(0,document.getElementById('results').offsetTop);});
-</script></body></html>
+<p>Free AI Discovery moved to <a href="/discovery/">/discovery/</a>.</p>
+<p>Languages: <a href="/en/discovery/">EN</a> · <a href="/pt-br/discovery/">PT</a> · <a href="/es/discovery/">ES</a> · <a href="/fr/discovery/">FR</a> · <a href="/de/discovery/">DE</a></p>
+</body>
+</html>
