@@ -253,7 +253,6 @@ export const appsNetworkCatalog: AppsNetworkApp[] = [
     group: 'field',
     related: ['warranty-lens', 'field-dispatch', 'zion-ai-spare-parts-matcher'],
   },
-];
 
 
   // ── New apps added 2026-09-25 ──
@@ -317,7 +316,7 @@ export const appsNetworkCatalog: AppsNetworkApp[] = [
     slug: "pricing-calculator",
     name: "Pricing Calculator",
     href: "/pricing-calculator/",
-    description: "Calculate service pricing with 30% Zion markup, Stripe integration, and tier comparison.",
+    description: "Calculate service pricing with at least 40% Zion markup, Stripe integration, and tier comparison.",
     group: "money",
     related: ["roi-calc", "token-cost", "service-comparison", "finops-estimator"],
   },
@@ -731,6 +730,47 @@ export const appsNetworkCatalog: AppsNetworkApp[] = [
   },
 
 
+  {
+    slug: "ai-smart-hands-scheduler",
+    name: "AI Smart Hands Scheduler",
+    href: "/ai-smart-hands-scheduler/",
+    description: "SLA-aware scheduling for Smart Hands and field-engineer dispatch.",
+    group: "field",
+    related: ["field-dispatch", "ai-field-service-automation", "sla-calculator", "warranty-lens"],
+  },
+  {
+    slug: "ai-field-service-automation",
+    name: "AI Field Service Automation",
+    href: "/ai-field-service-automation/",
+    description: "Dispatch, scheduling, parts and customer communication for frontline teams.",
+    group: "field",
+    related: ["ai-smart-hands-scheduler", "field-dispatch", "ai-remote-it-support", "zion-ai-rma-tracker"],
+  },
+  {
+    slug: "ai-remote-it-support",
+    name: "AI Remote IT Support",
+    href: "/ai-remote-it-support/",
+    description: "Triage, self-service resolution and agent handoff for distributed endpoints.",
+    group: "ops",
+    related: ["ai-field-service-automation", "zion-ai-incident-commander", "ops-runbook-ai", "sla-calculator"],
+  },
+  {
+    slug: "incident-postmortem-writer",
+    name: "Incident Postmortem Writer",
+    href: "/incident-postmortem-writer/",
+    description: "Blameless incident timeline, root cause and corrective-action drafting.",
+    group: "ops",
+    related: ["zion-ai-incident-commander", "ops-runbook-ai", "sla-calculator", "patch-window-planner"],
+  },
+  {
+    slug: "patch-window-planner",
+    name: "Patch Window Planner",
+    href: "/patch-window-planner/",
+    description: "Plan maintenance windows against SLA targets, freezes and operational constraints.",
+    group: "ops",
+    related: ["change-risk", "sla-calculator", "incident-postmortem-writer", "stack-audit"],
+  },
+];
 
 export const appsNetworkBySlug = Object.fromEntries(
   appsNetworkCatalog.map((app) => [app.slug, app])
@@ -750,6 +790,9 @@ export function relatedApps(slug: string, limit = 4): AppsNetworkApp[] {
 }
 
 export const homepageFeaturedApps = [
+  'ai-smart-hands-scheduler',
+  'incident-postmortem-writer',
+  'patch-window-planner',
   'llm-gateway',
   'prompt-shield',
   'finops-autopilot',
