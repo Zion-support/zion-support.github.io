@@ -57,3 +57,11 @@ test('no interaction is performed other than a GET of the public contact route',
  assert.equal(report.result,'healthy');
  assert.equal(called,1);
 });
+test('email appearing only in hidden scripts, head or comments does not fake health',async()=>{
+ const hidden='<html><head><meta content="kleber@ziontechgroup.com"></head><body>'+
+  '<!-- kleber@ziontechgroup.com --><script>const contact="kleber@ziontechgroup.com"</script>'+
+  '<style>.contact::after{content:"kleber@ziontechgroup.com"}</style><h1>Contact</h1></body></html>';
+ const result=await probeContact(good,ok(hidden));
+ assert.equal(result.result,'failed');
+ assert.equal(result.reason,'missing-contact');
+});
