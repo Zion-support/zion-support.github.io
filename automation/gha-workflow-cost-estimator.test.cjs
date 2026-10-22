@@ -1,6 +1,7 @@
 'use strict';
 const test=require('node:test'),assert=require('node:assert/strict');
-const {schedules,scheduleDetails,field,estimate,minUtcScheduledGap,overlapCandidate}=require('./gha-workflow-cost-estimator.cjs');
+const {schedules,scheduleDetails,field,estimate,minUtcScheduledGap,overlapCandidate,inventory}=require('./gha-workflow-cost-estimator.cjs');
+const fs=require('node:fs'),os=require('node:os'),path=require('node:path');
 const monday=new Date('2026-10-19T15:00:00Z');
 test('only on.schedule crons, including timezone and inline comments',()=>{
  const yaml='name: Example\n"on":\n  schedule:\n    - cron: \'0 8 * * 1-5\' # weekdays\n      timezone: "America/Sao_Paulo"\n    - cron: "0 9 * * *"\n  workflow_dispatch:\njobs:\n  run:\n    steps:\n      - run: echo cron';
@@ -51,4 +52,26 @@ test('multiple scheduled hours are considered without claiming observed overlap'
 test('unknown or timezone-specific schedules avoid unsupported overlap claims',()=>{
  const yaml='name: timezone\n"on":\n  schedule:\n    - cron: "*/5 * * * *"\n      timezone: "America/Sao_Paulo"\njobs:\n  job:\n    timeout-minutes: 25\n';
  assert.equal(overlapCandidate(yaml,monday),null);
+});
+
+test('weekly report counts only real PR triggers and preserves scheduled cron evidence',()=>{
+ const dir=fs.mkdtempSync(path.join(os.tmpdir(),'zion-pr-pressure-'));
+ try {
+  fs.writeFileSync(path.join(dir,'broad.yml'),
+    "name: broad\non:\n  pull_request:\n    types: [opened]\n");
+  fs.writeFileSync(path.join(dir,'scoped.yml'),
+    "name: scoped\n'on':\n  pull_request:\n    paths:\n      - 'automation/**'\n");
+  fs.writeFileSync(path.join(dir,'excluded.yml'),
+    "name: excluded\n\"on\":\n  pull_request:\n    paths-ignore:\n      - 'docs/**'\n");
+  fs.writeFileSync(path.join(dir,'scheduled.yml'),
+    "name: scheduled\non:\n  schedule:\n    - cron: '0 7 * * *'\n");
+  const report=inventory(dir,monday);
+  assert.equal(report.workflowsScanned,4);
+  assert.equal(report.scheduledWorkflows,1);
+  assert.equal(report.scheduledOpportunities30d,30);
+  assert.deepEqual(report.pullRequestFanout.triggers.pull_request,
+    {allFiles:1,excludeOnly:1,includePaths:1});
+  assert.deepEqual(report.pullRequestFanout.broadPullRequestExamples.map(x=>x.file),
+    ['broad.yml','excluded.yml']);
+ } finally { fs.rmSync(dir,{recursive:true,force:true}); }
 });
