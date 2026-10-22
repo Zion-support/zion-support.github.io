@@ -74,6 +74,11 @@ jobs:
             'public/es/discovery/index.html',
             'public/fr/discovery/index.html',
             'public/de/discovery/index.html',
+            'public/apps/discovery-showcase.html',
+            'public/apps/discovery-showcase-pt.html',
+            'public/apps/discovery-showcase-es.html',
+            'public/apps/discovery-showcase-fr.html',
+            'public/apps/discovery-showcase-de.html',
             'public/apps/operations-reliability-ai-2026.html',
             'public/apps/operations-reliability-ai-2026-pt.html',
             'public/apps/operations-reliability-ai-2026-es.html',
@@ -129,6 +134,11 @@ jobs:
               '/es/discovery/':'public/es/discovery/index.html',
               '/fr/discovery/':'public/fr/discovery/index.html',
               '/de/discovery/':'public/de/discovery/index.html',
+              '/apps/discovery-showcase.html':'public/apps/discovery-showcase.html',
+              '/apps/discovery-showcase-pt.html':'public/apps/discovery-showcase-pt.html',
+              '/apps/discovery-showcase-es.html':'public/apps/discovery-showcase-es.html',
+              '/apps/discovery-showcase-fr.html':'public/apps/discovery-showcase-fr.html',
+              '/apps/discovery-showcase-de.html':'public/apps/discovery-showcase-de.html',
             },
           }
           out=Path('automation/reports/apps-release-evidence.json')
