@@ -5,7 +5,7 @@ permissions:
   issues: write
 
 concurrency:
-  group: pages-watchdog-${{ github.event_name }}-${{ github.ref }}
+  group: pages-watchdog-${{ github.event_name == 'pull_request' && 'contract' || 'production' }}
   cancel-in-progress: true
 
 "on":
@@ -67,10 +67,10 @@ jobs:
               return;
             }
             const report = JSON.parse(fs.readFileSync(file, 'utf8'));
-            const {isVerifiedRegression, decideIncident, buildIssueBody, INCIDENT_TITLE} =
+            const {isFreshVerifiedRegression, decideIncident, buildIssueBody, INCIDENT_TITLE} =
               require(process.env.GITHUB_WORKSPACE + '/scripts/automation/pages-watchdog-incident.cjs');
-            if (!isVerifiedRegression(report)) {
-              core.warning('Probe failure is not a verified >=2-route regression; no outage issue created.');
+            if (!isFreshVerifiedRegression(report)) {
+              core.warning('Probe failure does not have a fresh verified >=2-route regression; no outage issue created.');
               return;
             }
             const openIssues = await github.paginate(github.rest.issues.listForRepo, {
