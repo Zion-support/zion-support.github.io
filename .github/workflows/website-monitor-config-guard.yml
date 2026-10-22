@@ -20,6 +20,7 @@ on:
       - '.github/workflows/apps-release-evidence-manifest.yml'
       - '.github/workflows/apps-production-content-canary.yml'
       - '.github/workflows/apps-i18n-release-contract.yml'
+      - '.github/workflows/apps-deployed-source-drift.yml'
   workflow_dispatch:
 
 permissions:
@@ -53,6 +54,7 @@ jobs:
             .github/workflows/apps-release-evidence-manifest.yml
             .github/workflows/apps-production-content-canary.yml
             .github/workflows/apps-i18n-release-contract.yml
+            .github/workflows/apps-deployed-source-drift.yml
           ]
           failures = []
           files.each do |file|
