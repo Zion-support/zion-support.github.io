@@ -75,3 +75,13 @@ test('weekly report counts only real PR triggers and preserves scheduled cron ev
     ['broad.yml','excluded.yml']);
  } finally { fs.rmSync(dir,{recursive:true,force:true}); }
 });
+
+
+test('PR CI runs cannot supersede the weekly production schedule inventory',()=>{
+ const workflow=fs.readFileSync(path.join(__dirname,'..','.github/workflows/ai-gha-cost-estimate-weekly.yml'),'utf8');
+ assert.ok(workflow.includes("format('pr-{0}', github.event.pull_request.number)"));
+ assert.ok(workflow.includes("|| 'production'"));
+ assert.match(workflow,/cancel-in-progress:\s*false/);
+ assert.match(workflow,/persist-credentials:\s*false/);
+ assert.match(workflow,/cron:\s*'12 15 \* \* 0'/);
+});
