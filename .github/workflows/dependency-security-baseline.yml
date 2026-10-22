@@ -32,10 +32,17 @@ jobs:
             echo "::error::package-lock.json is required for a reproducible dependency audit"
             exit 1
           fi
+          audit_status=0
           npm audit --omit=dev --audit-level=high --json > audit-results.json || audit_status=$?
+          if [[ ! -s audit-results.json ]]; then
+            echo '::error::npm audit returned no JSON output'
+            exit 1
+          fi
           node --input-type=module -e '
             import fs from "node:fs";
-            const a = JSON.parse(fs.readFileSync("audit-results.json","utf8"));
+            let a;
+            try { a = JSON.parse(fs.readFileSync("audit-results.json","utf8")); }
+            catch (e) { console.error("npm audit JSON could not be parsed:",e.message); process.exit(2); }
             const v = a.metadata?.vulnerabilities ?? {};
             const high = Number(v.high ?? 0), critical = Number(v.critical ?? 0);
             console.log(`Production dependency audit: high=${high}, critical=${critical}`);
