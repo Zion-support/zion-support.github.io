@@ -88,3 +88,12 @@ test('SHA-pinned workflow with explicit permissions is accepted',()=>{
   assert.equal(report.counts.totalFindings,0);
  }finally{fs.rmSync(dir,{recursive:true,force:true});}
 });
+
+test('PR auditor tests cannot supersede the scheduled integrity report',()=>{
+ const yaml=fs.readFileSync(path.resolve(__dirname,'../.github/workflows/ai-github-workflow-integrity-audit-daily.yml'),'utf8');
+ assert.ok(yaml.includes("format('pr-{0}', github.event.pull_request.number)"));
+ assert.ok(yaml.includes("|| 'production'"));
+ assert.match(yaml,/cancel-in-progress:\s*false/);
+ assert.match(yaml,/persist-credentials:\s*false/);
+ assert.match(yaml,/cron:\s*'17 13 \* \* \*'/);
+});
