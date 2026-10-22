@@ -74,6 +74,10 @@ for f in assets/css/site.css assets/js/zion-shell.js css/site.css; do
   fi
 done
 
+# Scoped coverage guide: build-local language/navigation evidence, not live certification.
+node scripts/render-network-coverage-guide.cjs out
+node scripts/test-network-coverage-guide.cjs
+
 touch out/.nojekyll
 
 # DURABLE GUARD: reject stub / placeholder money paths before Pages publish.
