@@ -108,7 +108,53 @@ assert_money_path() {
 
 assert_money_path services/ai-automation/index.html
 assert_money_path plans/index.html
-assert_money_path discovery/index.html
+# Free Discovery is a self-serve questionnaire, not a paid Starter SKU.
+# Keep paid money-path checks above for other routes, and enforce an
+# explicit fail-closed questionnaire/legacy-alias safety contract here.
+assert_free_discovery_path() {
+  local f="out/discovery/index.html"
+  local alias="out/app-network-discovery.html"
+  if [ ! -f "$f" ]; then
+    echo "ERROR: missing canonical free Discovery $f" >&2
+    exit 1
+  fi
+  local sz
+  sz=$(wc -c < "$f" | tr -d ' ')
+  if [ "$sz" -lt 5120 ]; then
+    echo "ERROR: canonical free Discovery is stub-sized ($sz B)" >&2
+    exit 1
+  fi
+  for required in '<html lang="en"' 'rel="canonical" href="https://ziontechgroup.com/discovery/"' 'src="/assets/js/discovery-delivery.js"' 'id="dform"' 'id="result"'; do
+    if ! grep -Fq "$required" "$f"; then
+      echo "ERROR: canonical free Discovery lacks required marker: $required" >&2
+      exit 1
+    fi
+  done
+  if grep -Fiq 'carlos@ziontechgroup.com' "$f" \
+    || grep -Fiq 'Discovery $99' "$f" \
+    || grep -Fiq 'http-equiv="refresh"' "$f"; then
+    echo "ERROR: canonical free Discovery has extra recipient, paid gate or self-redirect" >&2
+    exit 1
+  fi
+  if [ ! -f "$alias" ]; then
+    echo "ERROR: missing legacy Discovery alias redirect $alias" >&2
+    exit 1
+  fi
+  if ! grep -Fq 'rel="canonical" href="https://ziontechgroup.com/discovery/"' "$alias" \
+    || ! grep -Fq 'http-equiv="refresh"' "$alias" \
+    || ! grep -Fq 'url=/discovery/' "$alias"; then
+    echo "ERROR: legacy Discovery alias does not redirect to canonical free Discovery" >&2
+    exit 1
+  fi
+  if grep -Eiq '<form([[:space:]>])' "$alias" \
+    || grep -Fiq 'formsubmit' "$alias" \
+    || grep -Fiq 'carlos@ziontechgroup.com' "$alias"; then
+    echo "ERROR: legacy Discovery alias contains a live duplicate form or unapproved recipient" >&2
+    exit 1
+  fi
+  echo "OK canonical free Discovery and form-free legacy redirect ($sz B)"
+}
+assert_free_discovery_path
 
 # P0 2026-09-21: reject the broken Next.js homepage shell and require sealed
 # commercial markers before any Pages publish. Does not touch field-services.
