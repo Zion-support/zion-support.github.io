@@ -4,7 +4,12 @@ on:
   push:
     branches: [main]
     paths:
-      - '.github/workflows/**'
+      - '.github/workflows/public-*.yml'
+      - '.github/workflows/dependency-security-baseline.yml'
+      - '.github/workflows/website-monitor-*.yml'
+      - '.github/workflows/monitor-run-summary.yml'
+      - '.github/workflows/apps-*.yml'
+      - '.github/workflows/actions-queue-pressure.yml'
   pull_request:
     paths:
       - '.github/workflows/public-site-smoke-check.yml'
