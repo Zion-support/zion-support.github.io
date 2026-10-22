@@ -1,13 +1,38 @@
 name: Discovery publication smoke
+
+# HTTP GET-only validation. Never submit forms or send email.
+# Separate from Discovery 10K cadence and counters.
 on:
   workflow_dispatch:
+  schedule:
+    - cron: '37 11 * * 2'
+  pull_request:
+    paths:
+      - 'scripts/test-discovery-live.cjs'
+      - 'scripts/test-discovery-recommendation-routes.cjs'
+      - 'scripts/test-mining-catalog.cjs'
+      - 'content/communications-playbook.json'
+      - '.github/workflows/discovery-publication-smoke.yml'
+
 permissions:
   contents: read
+
+concurrency:
+  group: discovery-publication-smoke-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   verify:
     runs-on: ubuntu-latest
     timeout-minutes: 8
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          persist-credentials: false
+      - name: Setup Node
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
+        with:
+          node-version-file: '.nvmrc'
       - name: Read-only live multilingual publication checks
         run: node scripts/test-discovery-live.cjs
