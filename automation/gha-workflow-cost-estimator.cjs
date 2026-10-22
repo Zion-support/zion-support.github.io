@@ -5,7 +5,7 @@ const path = require('node:path');
 const ROOT = path.resolve(__dirname, '..');
 const MONTHS = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
 const WEEKDAYS = ['SUN','MON','TUE','WED','THU','FRI','SAT'];
-const BOUNDS = [[0,59],[0,23],[1,31],[1,12],[0,6]];
+const BOUNDS = [[0,59],[0,23],[1,31],[1,12],[0,7]];
 
 function scalar(raw) {
   const s = raw.trim();
@@ -68,6 +68,7 @@ function parseCron(expression) {
   const parts = expression.trim().split(/\s+/);
   if (parts.length !== 5) throw Error('expected five cron fields');
   const values = parts.map((part,i) => field(part, ...BOUNDS[i], i === 3 ? MONTHS : i === 4 ? WEEKDAYS : []));
+  if (values[4].delete(7)) values[4].add(0); // GitHub cron: both 0 and 7 represent Sunday.
   return {values, domRestricted: parts[2] !== '*', dowRestricted: parts[4] !== '*'};
 }
 function matchesDay(parsed, dom, dow) {
