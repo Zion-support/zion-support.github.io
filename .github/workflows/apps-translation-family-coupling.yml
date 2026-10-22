@@ -1,0 +1,106 @@
+name: Apps translation family coupling
+
+"on":
+  pull_request:
+    paths:
+      - 'public/apps/index.html'
+      - 'public/pt/apps/index.html'
+      - 'public/es/apps/index.html'
+      - 'public/fr/apps/index.html'
+      - 'public/de/apps/index.html'
+      - 'public/apps/operations-reliability-ai-2026*.html'
+      - '.github/workflows/apps-translation-family-coupling.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'public/apps/index.html'
+      - 'public/pt/apps/index.html'
+      - 'public/es/apps/index.html'
+      - 'public/fr/apps/index.html'
+      - 'public/de/apps/index.html'
+      - 'public/apps/operations-reliability-ai-2026*.html'
+      - '.github/workflows/apps-translation-family-coupling.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: apps-translation-family-coupling-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  coupling:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          fetch-depth: 2
+
+      - name: Require locale families to move together
+        shell: bash
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          BEFORE_SHA: ${{ github.event.before }}
+          CURRENT_SHA: ${{ github.sha }}
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import os, subprocess, sys
+
+          event=os.environ.get('EVENT_NAME','')
+          if event=='workflow_dispatch':
+              print('Manual run: source family structure only; no change-coupling decision required.')
+              raise SystemExit(0)
+
+          if event=='pull_request':
+              base=os.environ.get('BASE_SHA','')
+          else:
+              base=os.environ.get('BEFORE_SHA','')
+          head=os.environ.get('CURRENT_SHA','HEAD')
+          if not base or set(base)=={'0'}:
+              base='HEAD^'
+
+          changed=set(subprocess.check_output(
+              ['git','diff','--name-only',base,head],text=True
+          ).splitlines())
+          print('Changed files:')
+          for p in sorted(changed):
+              print(' -',p)
+
+          families={
+            'apps-hub':{
+              'public/apps/index.html',
+              'public/pt/apps/index.html',
+              'public/es/apps/index.html',
+              'public/fr/apps/index.html',
+              'public/de/apps/index.html',
+            },
+            'operations-reliability':{
+              'public/apps/operations-reliability-ai-2026.html',
+              'public/apps/operations-reliability-ai-2026-pt.html',
+              'public/apps/operations-reliability-ai-2026-es.html',
+              'public/apps/operations-reliability-ai-2026-fr.html',
+              'public/apps/operations-reliability-ai-2026-de.html',
+            },
+          }
+          errors=[]
+          for name,files in families.items():
+              touched=files & changed
+              if touched and touched != files:
+                  missing=sorted(files-touched)
+                  errors.append(
+                      f'{name}: translation family changed partially; '
+                      f'touched={sorted(touched)} missing review={missing}'
+                  )
+
+          if errors:
+              for e in errors:
+                  print('::error::'+e)
+              raise SystemExit(1)
+
+          print('Translation family coupling: PASS')
+          PY
