@@ -47,7 +47,7 @@ jobs:
               print('Unexpected workflow; ignoring.')
               raise SystemExit(0)
           summary=Path(os.environ['GITHUB_STEP_SUMMARY'])
-          summary.write_text(f'## Zion monitor result\\n\\n| Field | Value |\\n|---|---|\\n| Workflow | {name} |\\n| Run | {number} |\\n| Conclusion | {conclusion} |\\n| Evidence | {url} |\\n')
+          summary.write_text('## Zion monitor result\n\n' + '\n'.join(['| Field | Value |','|---|---|',f'| Workflow | {name} |',f'| Run | {number} |',f'| Conclusion | {conclusion} |',f'| Evidence | {url} |']) + '\n')
           print(f'{name}: {conclusion} ({url})')
           if conclusion not in {'success','skipped'}:
               print(f'::error title=Zion monitor needs attention::{name} concluded {conclusion}. Inspect {url}')
