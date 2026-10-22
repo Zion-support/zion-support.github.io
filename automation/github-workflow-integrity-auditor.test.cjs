@@ -13,6 +13,23 @@ test('static audit produces real bounded findings without network',()=>{
   assert.ok(report.findings.some(x=>x.type==='high-frequency'));
  } finally {fs.rmSync(dir,{recursive:true,force:true});}
 });
+test('weekly schedule with a shell grep for ten-minute cron is not high frequency',()=>{
+ const dir=fs.mkdtempSync(path.join(os.tmpdir(),'zion-integrity-'));
+ try {
+  fs.writeFileSync(path.join(dir,'weekly.yml'), "name: smoke\n"+
+   "\\\"on\\\":\n  schedule:\n    - cron: '15 12 * * 3'\n"+
+   "permissions:\n  contents: read\njobs:\n  check:\n    steps:\n      - run: grep -Fq \\\"cron: '*/10 * * * *'\\\" workflow.yml\n");
+  const result=audit(dir);
+  assert.equal(result.findings.filter(x=>x.type==='high-frequency').length,0);
+ } finally {fs.rmSync(dir,{recursive:true,force:true});}
+});
+test('two actual triggers in the same hour are flagged',()=>{
+ const dir=fs.mkdtempSync(path.join(os.tmpdir(),'zion-integrity-'));
+ try {
+  fs.writeFileSync(path.join(dir,'twice.yml'),"name: twice\n'on':\n  schedule:\n    - cron: '0,30 * * * *'\npermissions:\n  contents: read\n");
+  assert.equal(audit(dir).findings.filter(x=>x.type==='high-frequency').length,1);
+ } finally {fs.rmSync(dir,{recursive:true,force:true});}
+});
 test('SHA-pinned workflow with explicit permissions is accepted',()=>{
  const dir=fs.mkdtempSync(path.join(os.tmpdir(),'zion-integrity-'));
  try{
