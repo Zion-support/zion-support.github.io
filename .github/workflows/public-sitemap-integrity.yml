@@ -19,46 +19,60 @@ jobs:
     steps:
       - name: Validate sitemap XML and sampled URLs
         shell: bash
-        env:
-          BASE_URL: https://ziontechgroup.com
         run: |
           set -euo pipefail
           python3 - <<'PY'
-          import os, sys, urllib.request, urllib.parse, xml.etree.ElementTree as ET
+          import sys, urllib.request, urllib.parse, xml.etree.ElementTree as ET
           from concurrent.futures import ThreadPoolExecutor
-          base=os.environ['BASE_URL'].rstrip('/')
-          origin=urllib.parse.urlsplit(base).netloc
-          ua={'User-Agent':'Zion-Public-Sitemap-Integrity/1.0'}
-          def get(url,method='GET'):
-              req=urllib.request.Request(url,headers=ua,method=method)
-              with urllib.request.urlopen(req,timeout=18) as response:
-                  return response.status,response.read(4_000_000) if method=='GET' else b''
-          try:
-              status,body=get(base+'/sitemap.xml')
+          base='https://ziontechgroup.com'
+          host=urllib.parse.urlsplit(base).netloc
+          headers={'User-Agent':'Zion-Public-Sitemap-Integrity/1.1'}
+          def get(url):
+              with urllib.request.urlopen(urllib.request.Request(url,headers=headers),timeout=18) as response:
+                  return response.status,response.read(4000000)
+          def valid(url):
+              p=urllib.parse.urlsplit(url)
+              return p.scheme=='https' and p.netloc==host
+          def parse(body):
               root=ET.fromstring(body)
-              ns={'sm':'http://www.sitemaps.org/schemas/sitemap/0.9'}
-              urls=[n.text.strip() for n in root.findall('.//sm:url/sm:loc') if n.text]
-              if not urls:
-                  raise ValueError('No URL entries found (sitemap index format requires separate handling)')
-              invalid=[u for u in urls if urllib.parse.urlsplit(u).scheme!='https' or urllib.parse.urlsplit(u).netloc!=origin]
-              if invalid:
-                  raise ValueError('Found '+str(len(invalid))+' non-HTTPS or off-domain sitemap entries')
-              sample=urls[:15]
-              def check(u):
+              kind=root.tag.split('}')[-1]
+              locs=[n.text.strip() for n in root.iter() if n.tag.split('}')[-1]=='loc' and n.text]
+              return kind,locs
+          try:
+              _,body=get(base+'/sitemap.xml')
+              kind,locs=parse(body)
+              if kind=='sitemapindex':
+                  indexes=locs[:10]
+                  if not indexes or not all(valid(x) for x in indexes):
+                      raise ValueError('Invalid sitemap index entries')
+                  urls=[]
+                  for url in indexes:
+                      _,part=get(url)
+                      child_kind,child_locs=parse(part)
+                      if child_kind!='urlset': raise ValueError('Nested or unexpected sitemap index')
+                      urls.extend(child_locs)
+              elif kind=='urlset':
+                  urls=locs
+              else:
+                  raise ValueError('Unsupported sitemap root '+kind)
+              if not urls: raise ValueError('No sitemap URLs')
+              if not all(valid(x) for x in urls):
+                  raise ValueError('Sitemap contains off-domain or non-HTTPS URLs')
+              sample=list(dict.fromkeys(urls))[:15]
+              def check(url):
                   try:
-                      status,_=get(u,'HEAD')
-                      return (u,status,None)
-                  except Exception as e:
-                      return (u,None,str(e))
+                      status,_=get(url)
+                      return (url,status,'')
+                  except Exception as exc:
+                      return (url,0,str(exc))
               with ThreadPoolExecutor(max_workers=4) as pool:
                   results=list(pool.map(check,sample))
-              bad=[r for r in results if r[1] is None or r[1]>=400]
-              print(f'Sitemap entries: {len(urls)}; sampled: {len(sample)}; failures: {len(bad)}')
-              for u,status,error in bad:
-                  print(f'::error title=Sitemap URL failure::{u} status={status} error={error}')
-              if bad:
-                  sys.exit(1)
-          except Exception as e:
-              print('::error title=Sitemap validation failed::'+str(e))
+              failures=[r for r in results if r[1]<200 or r[1]>=400]
+              print(f'Sitemap URLs: {len(urls)}; checked: {len(sample)}; failures: {len(failures)}')
+              for url,status,error in failures:
+                  print(f'::error title=Sitemap URL unavailable::{url} status={status} {error}')
+              if failures: sys.exit(1)
+          except Exception as exc:
+              print(f'::error title=Sitemap integrity failure::{exc}')
               sys.exit(1)
           PY
