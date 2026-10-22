@@ -14,6 +14,7 @@ test('hourly and ten-minute schedules reflect 30-day pressure',()=>{
 });
 test('weekday, named fields, DOM/DOW OR and field bounds',()=>{
  assert.equal(estimate('0 8 1 * MON',monday),6);
+ assert.equal(estimate('0 8 * * 7',monday),4); // Sunday may be 0 or 7.
  assert.deepEqual([...field('10-20/5',0,59)],[10,15,20]);
  assert.equal(estimate('30 9 * JAN MON',new Date('2026-01-01T00:00:00Z')),4);
  assert.throws(()=>estimate('61 * * * *',monday));
