@@ -11,6 +11,8 @@ permissions:
     paths:
       - 'automation/gha-workflow-cost-estimator.cjs'
       - 'automation/gha-workflow-cost-estimator.test.cjs'
+      - 'automation/workflow-pr-fanout-analyzer.cjs'
+      - 'automation/workflow-pr-fanout-analyzer.test.cjs'
       - '.github/workflows/ai-gha-cost-estimate-weekly.yml'
 
 concurrency:
@@ -33,9 +35,10 @@ jobs:
           node-version-file: '.nvmrc'
 
       - name: Test schedule estimator (offline, no credentials)
-        run: node --test automation/gha-workflow-cost-estimator.test.cjs
+        run: node --test automation/gha-workflow-cost-estimator.test.cjs automation/workflow-pr-fanout-analyzer.test.cjs
 
-      - name: Estimate scheduled triggers (not billed minutes)
+      - name: Inventory scheduled trigger and pull request fan-out pressure
+        # Observational only: never mutate workflows or raise duplicate incidents.
         run: node automation/gha-workflow-cost-estimator.cjs
 
       - name: Upload report
