@@ -11,6 +11,9 @@ name: Simple Static Deploy
 
 
 on:
+  push:
+    branches:
+      - main
   workflow_dispatch:
     inputs:
       note:
