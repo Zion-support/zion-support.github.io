@@ -1,6 +1,10 @@
 name: Apps rollback readiness
 
 "on":
+  workflow_run:
+    workflows:
+      - AI Post Push Route Verify
+    types: [completed]
   schedule:
     - cron: '17 14 * * *'
   workflow_dispatch:
@@ -19,6 +23,7 @@ concurrency:
 
 jobs:
   readiness:
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     timeout-minutes: 8
     env:
