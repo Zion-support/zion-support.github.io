@@ -12,6 +12,7 @@ name: Apps i18n release contract
       - 'public/sitemap.xml'
       - 'public/apps/apps-sitemap.xml'
       - 'public/robots.txt'
+      - '.github/workflows/apps-i18n-release-contract.yml'
   push:
     branches: [main]
     paths:
@@ -24,6 +25,7 @@ name: Apps i18n release contract
       - 'public/sitemap.xml'
       - 'public/apps/apps-sitemap.xml'
       - 'public/robots.txt'
+      - '.github/workflows/apps-i18n-release-contract.yml'
   schedule:
     - cron: '23 10 * * 2'
   workflow_dispatch:
