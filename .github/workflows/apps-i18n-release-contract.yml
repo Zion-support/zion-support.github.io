@@ -8,6 +8,11 @@ name: Apps i18n release contract
       - 'public/es/apps/**'
       - 'public/fr/apps/**'
       - 'public/de/apps/**'
+      - 'public/discovery/**'
+      - 'public/pt/discovery/**'
+      - 'public/es/discovery/**'
+      - 'public/fr/discovery/**'
+      - 'public/de/discovery/**'
       - 'apps/operations-reliability-ai-2026*.html'
       - 'public/sitemap.xml'
       - 'public/apps/apps-sitemap.xml'
@@ -21,6 +26,11 @@ name: Apps i18n release contract
       - 'public/es/apps/**'
       - 'public/fr/apps/**'
       - 'public/de/apps/**'
+      - 'public/discovery/**'
+      - 'public/pt/discovery/**'
+      - 'public/es/discovery/**'
+      - 'public/fr/discovery/**'
+      - 'public/de/discovery/**'
       - 'apps/operations-reliability-ai-2026*.html'
       - 'public/sitemap.xml'
       - 'public/apps/apps-sitemap.xml'
@@ -84,6 +94,35 @@ jobs:
               errors.append(f'{path}: missing x-default Apps hreflang')
             if 'discovery' not in text.lower():
               errors.append(f'{path}: missing Discovery navigation')
+
+          discovery_pages={
+            'en':('public/discovery/index.html','https://ziontechgroup.com/discovery/'),
+            'pt-BR':('public/pt/discovery/index.html','https://ziontechgroup.com/pt/discovery/'),
+            'es':('public/es/discovery/index.html','https://ziontechgroup.com/es/discovery/'),
+            'fr':('public/fr/discovery/index.html','https://ziontechgroup.com/fr/discovery/'),
+            'de':('public/de/discovery/index.html','https://ziontechgroup.com/de/discovery/'),
+          }
+          expected_discovery={
+            'en':'https://ziontechgroup.com/discovery/',
+            'pt-BR':'https://ziontechgroup.com/pt/discovery/',
+            'es':'https://ziontechgroup.com/es/discovery/',
+            'fr':'https://ziontechgroup.com/fr/discovery/',
+            'de':'https://ziontechgroup.com/de/discovery/',
+          }
+          for locale,(path_s,canonical) in discovery_pages.items():
+            path=Path(path_s)
+            if not path.is_file():
+              errors.append(f'missing localized Discovery page: {path}')
+              continue
+            text=path.read_text(encoding='utf-8')
+            if f'<link rel="canonical" href="{canonical}"' not in text:
+              errors.append(f'{path}: canonical mismatch, expected {canonical}')
+            for lang,url in expected_discovery.items():
+              token=f'hreflang="{lang}" href="{url}"'
+              if token not in text:
+                errors.append(f'{path}: missing reciprocal Discovery {token}')
+            if 'hreflang="x-default" href="https://ziontechgroup.com/discovery/"' not in text:
+              errors.append(f'{path}: missing Discovery x-default hreflang')
 
           variants=['','-pt','-es','-fr','-de']
           for suffix in variants:
