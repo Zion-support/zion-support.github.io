@@ -4,10 +4,10 @@ const APPMAP={
  'Customer support / ticket triage':[['AI Ticket Triage','/ai-ticket-triage/'],['AI Powered Customer Support','/ai-powered-customer-support/']],
  'Manual data entry / document processing':[['AI Process Mining','/ai-process-mining/'],['AI Data Warehouse','/ai-data-warehouse/']],
  'Reporting & analytics':[['ROI Calculator','/roi-calc/'],['Discovery Report Workbench','/apps/discovery-report-workbench.html']],
- 'IT operations / incident response':[['AI Incident Response','/ai-incident-response/'],['Ops Runbook AI','/ops-runbook-ai/'],['Site Uptime Watchdog','/site-uptime-watchdog/']],
+ 'IT operations / incident response':[['Incident Postmortem Writer','/incident-postmortem-writer/'],['Patch Window Planner','/patch-window-planner/'],['Operations & Reliability AI','/apps/operations-reliability-ai-2026.html']],
  'Sales & proposal generation':[['Proposal Builder AI','/proposal-builder-ai/'],['Sales Call Analyzer','/sales-call-analyzer/']],
  'Finance ops / cost control (FinOps)':[['ROI Calculator','/roi-calc/'],['Automation Pilot Planner','/automation-pilot-planner/']],
- 'Scheduling / dispatch':[['AI Smart Hands Scheduler','/ai-smart-hands-scheduler/'],['Route Optimization AI','/route-optimization-ai/'],['SLA Calculator','/sla-calculator/']],
+ 'Scheduling / dispatch':[['AI Smart Hands Scheduler','/ai-smart-hands-scheduler/'],['AI Field Service Automation','/ai-field-service-automation/'],['SLA Calculator','/sla-calculator/']],
  'Supply chain / logistics':[['Route Optimization AI','/route-optimization-ai/'],['Supplier Risk Radar','/supplier-risk-radar/'],['Demand Sensing Forecaster','/demand-sensing-forecaster/']],
  'Compliance & audit evidence':[['AI Compliance Auditor','/ai-compliance-auditor/'],['AI Governance Checklist','/ai-governance-checklist/']],
  'Other':[['AI Readiness Assessment','/ai-readiness-assessment/'],['Apps Network','/apps/'],['Network Map','/apps/network.html']]

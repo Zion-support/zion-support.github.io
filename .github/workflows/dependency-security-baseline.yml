@@ -1,0 +1,56 @@
+name: Dependency Security Baseline
+
+on:
+  schedule:
+    - cron: '41 9 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: dependency-security-baseline
+  cancel-in-progress: false
+
+jobs:
+  dependency-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - name: Check lockfile and audit production dependencies
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [[ ! -f package-lock.json ]]; then
+            echo "::error::package-lock.json is required for a reproducible dependency audit"
+            exit 1
+          fi
+          npm audit --omit=dev --audit-level=high --json > audit-results.json || audit_status=$?
+          node --input-type=module -e '
+            import fs from "node:fs";
+            const a = JSON.parse(fs.readFileSync("audit-results.json","utf8"));
+            const v = a.metadata?.vulnerabilities ?? {};
+            const high = Number(v.high ?? 0), critical = Number(v.critical ?? 0);
+            console.log(`Production dependency audit: high=${high}, critical=${critical}`);
+            if (a.error) { console.error("npm audit error:", a.error.code ?? "unknown"); process.exit(2); }
+            if (high + critical > 0) process.exit(1);
+          '
+          if [[ "${audit_status:-0}" != "0" ]]; then
+            echo "::error::npm audit returned status ${audit_status}"
+            exit 1
+          fi
+      - name: Upload audit JSON
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: production-dependency-audit
+          path: audit-results.json
+          if-no-files-found: ignore
+          retention-days: 7

@@ -79,10 +79,16 @@ export default function AppsNetworkPage() {
               </Link>
             ))}
             <Link
+              href="/apps/operations-reliability-ai-2026.html"
+              className="rounded-full border border-cyan-400/40 bg-cyan-400/10 px-4 py-2 text-sm font-medium text-cyan-200 hover:bg-cyan-400/20 transition-colors"
+            >
+              Operations & Reliability
+            </Link>
+            <Link
               href="/discovery/"
               className="rounded-full bg-gradient-to-r from-purple-600 to-pink-500 px-4 py-2 text-sm font-semibold text-white"
             >
-              Discovery $99
+              Free Discovery
             </Link>
           </div>
         </div>
@@ -133,12 +139,11 @@ export default function AppsNetworkPage() {
           <div className="mt-10 rounded-xl border border-purple-500/30 bg-gradient-to-br from-purple-950/40 to-slate-900 p-6">
             <h3 className="text-xl font-semibold text-white">Need these capabilities in production?</h3>
             <p className="text-slate-400 text-sm mt-2 max-w-2xl">
-              Start with a $99 Discovery — one process, one report, one 30-minute session — then
-              Consulting, Starter, or Growth.
+              Start with the free online Discovery to map one process and identify the right apps. Consulting, Starter, and Growth remain optional paid delivery paths.
             </p>
             <div className="mt-4 flex flex-wrap gap-3">
               <Link href="/discovery/" className="text-purple-300 font-semibold hover:text-pink-300">
-                Book Discovery →
+                Start free Discovery →
               </Link>
               <Link href="/en/plans/" className="text-slate-400 hover:text-white">
                 Official plans
