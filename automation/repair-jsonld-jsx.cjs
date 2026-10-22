@@ -45,13 +45,23 @@ function main(argv=process.argv.slice(2)) {
   const write=argv.includes('--write'),inputs=argv.filter(x=>x!=='--write');
   if(!inputs.length) {console.error('Usage: node automation/repair-jsonld-jsx.cjs [--write] app/services/<slug>/page.tsx ...');process.exitCode=2;return;}
   let total=0,skipped=0;
+  const pending=[],seen=new Set();
   try{
+    // Validate and prepare the entire input set before the first write.
+    // A bad later path must never cause partial edits of earlier files.
     for(const file of inputs){
       const absolute=validateLocalSourceFile(file);
+      if(seen.has(absolute))throw Error('Duplicate source path');
+      seen.add(absolute);
       const original=fs.readFileSync(absolute,'utf8');
       const repaired=repairSource(original);
       total+=repaired.changed;skipped+=repaired.skipped;
-      if(write&&repaired.changed)fs.writeFileSync(absolute,repaired.content,'utf8');
+      pending.push({absolute,repaired});
+    }
+    if(write){
+      for(const {absolute,repaired} of pending){
+        if(repaired.changed)fs.writeFileSync(absolute,repaired.content,'utf8');
+      }
     }
   }catch(error){console.error('Refused unsafe path, missing file, or I/O failure.');process.exitCode=2;return;}
   console.log(JSON.stringify({mode:write?'write':'dry-run',files:inputs.length,replacements:total,unmodifiedCandidateLines:skipped}));
