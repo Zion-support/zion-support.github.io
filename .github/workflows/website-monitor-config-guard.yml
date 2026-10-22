@@ -15,6 +15,7 @@ on:
       - '.github/workflows/public-tls-certificate-expiry.yml'
       - '.github/workflows/monitor-run-summary.yml'
       - '.github/workflows/website-monitor-freshness.yml'
+      - '.github/workflows/apps-change-impact-report.yml'
       - '.github/workflows/apps-rollback-readiness.yml'
       - '.github/workflows/apps-release-evidence-manifest.yml'
       - '.github/workflows/apps-production-content-canary.yml'
@@ -47,6 +48,7 @@ jobs:
             .github/workflows/public-tls-certificate-expiry.yml
             .github/workflows/monitor-run-summary.yml
             .github/workflows/website-monitor-freshness.yml
+            .github/workflows/apps-change-impact-report.yml
             .github/workflows/apps-rollback-readiness.yml
             .github/workflows/apps-release-evidence-manifest.yml
             .github/workflows/apps-production-content-canary.yml
