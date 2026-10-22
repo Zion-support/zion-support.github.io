@@ -14,6 +14,11 @@ function buildConfig(env=process.env) {
 function decodeEmail(html) {
   return html.toLowerCase().replace(/&#(?:0*64|x0*40);?/g,'@').replace(/%40/gi,'@');
 }
+function visibleContactContent(html) {
+  return decodeEmail(html
+    .replace(/<!--[\s\S]*?-->/g,'')
+    .replace(/<(script|style|template|head)\b[^>]*>[\s\S]*?<\/\1\s*>/gi,''));
+}
 async function probeContact(config,fetchFn=globalThis.fetch) {
   const status={result:'failed',path:PATH,httpStatus:null,emailVisible:false,mailtoPresent:false,reason:'unknown'};
   const abort=new AbortController();
@@ -32,7 +37,7 @@ async function probeContact(config,fetchFn=globalThis.fetch) {
     }
     const raw=await response.text();
     if(Buffer.byteLength(raw,'utf8')>1048576){status.reason='oversized-page';return status;}
-    const html=decodeEmail(raw);
+    const html=visibleContactContent(raw);
     status.emailVisible=html.includes(config.email);
     status.mailtoPresent=html.includes('mailto:'+config.email);
     if(!status.emailVisible){status.reason='missing-contact';return status;}
@@ -50,5 +55,5 @@ async function main(){
   console.log(JSON.stringify(outcome));
   if(outcome.result!=='healthy') process.exitCode=1;
 }
-module.exports={buildConfig,decodeEmail,probeContact,main};
+module.exports={buildConfig,decodeEmail,visibleContactContent,probeContact,main};
 if(require.main===module)main();
