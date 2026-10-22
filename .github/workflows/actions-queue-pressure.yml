@@ -138,7 +138,7 @@ jobs:
             const {data:issues}=await github.rest.issues.listForRepo({...context.repo,state:'open',per_page:100});
             const existing=issues.find(i=>i.title===title || (i.body||'').includes(marker));
             const body=marker+'\nRepository-wide Actions queue pressure crossed the configured threshold. Avoid unnecessary retry pushes; inspect queued runs and GitHub Status before changing source.\n\nRun: '+context.serverUrl+'/'+context.repo.owner+'/'+context.repo.repo+'/actions/runs/'+context.runId;
-            if(existing) await github.rest.issues.createComment({...context.repo,issue_number:existing.number,body});
+            if(existing) await github.rest.issues.update({...context.repo,issue_number:existing.number,body});
             else await github.rest.issues.create({...context.repo,title,body});
 
       - name: Close prior queue incident on recovery
