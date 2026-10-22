@@ -1,0 +1,140 @@
+name: Apps i18n release contract
+
+"on":
+  pull_request:
+    paths:
+      - 'public/apps/**'
+      - 'public/pt/apps/**'
+      - 'public/es/apps/**'
+      - 'public/fr/apps/**'
+      - 'public/de/apps/**'
+      - 'apps/operations-reliability-ai-2026*.html'
+      - 'public/sitemap.xml'
+      - 'public/apps/apps-sitemap.xml'
+      - 'public/robots.txt'
+      - '.github/workflows/apps-i18n-release-contract.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'public/apps/**'
+      - 'public/pt/apps/**'
+      - 'public/es/apps/**'
+      - 'public/fr/apps/**'
+      - 'public/de/apps/**'
+      - 'apps/operations-reliability-ai-2026*.html'
+      - 'public/sitemap.xml'
+      - 'public/apps/apps-sitemap.xml'
+      - 'public/robots.txt'
+      - '.github/workflows/apps-i18n-release-contract.yml'
+  schedule:
+    - cron: '23 10 * * 2'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: apps-i18n-release-contract-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  contract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+
+      - name: Verify localized Apps contract and mirror parity
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+          import sys
+
+          root=Path('.')
+          errors=[]
+
+          locale_hubs={
+            'en': Path('public/apps/index.html'),
+            'pt-BR': Path('public/pt/apps/index.html'),
+            'es': Path('public/es/apps/index.html'),
+            'fr': Path('public/fr/apps/index.html'),
+            'de': Path('public/de/apps/index.html'),
+          }
+          expected_hreflang={
+            'en':'https://ziontechgroup.com/apps/',
+            'pt-BR':'https://ziontechgroup.com/pt/apps/',
+            'es':'https://ziontechgroup.com/es/apps/',
+            'fr':'https://ziontechgroup.com/fr/apps/',
+            'de':'https://ziontechgroup.com/de/apps/',
+          }
+
+          for locale,path in locale_hubs.items():
+            if not path.is_file():
+              errors.append(f'missing localized Apps hub: {path}')
+              continue
+            text=path.read_text(encoding='utf-8')
+            for lang,url in expected_hreflang.items():
+              token=f'hreflang="{lang}" href="{url}"'
+              if token not in text:
+                errors.append(f'{path}: missing reciprocal {token}')
+            if 'hreflang="x-default" href="https://ziontechgroup.com/apps/"' not in text:
+              errors.append(f'{path}: missing x-default Apps hreflang')
+            if 'discovery' not in text.lower():
+              errors.append(f'{path}: missing Discovery navigation')
+
+          variants=['','-pt','-es','-fr','-de']
+          for suffix in variants:
+            src=Path(f'apps/operations-reliability-ai-2026{suffix}.html')
+            pub=Path(f'public/apps/operations-reliability-ai-2026{suffix}.html')
+            if not src.is_file() or not pub.is_file():
+              errors.append(f'missing Operations mirror pair: {src} / {pub}')
+              continue
+            if src.read_bytes()!=pub.read_bytes():
+              errors.append(f'Operations source/public mirror drift: {src} != {pub}')
+
+          sitemap=Path('public/apps/apps-sitemap.xml')
+          if not sitemap.is_file():
+            errors.append('missing public/apps/apps-sitemap.xml')
+          else:
+            text=sitemap.read_text(encoding='utf-8')
+            required=[
+              '/apps/','/pt/apps/','/es/apps/','/fr/apps/','/de/apps/',
+              '/discovery/','/pt/discovery/','/es/discovery/','/fr/discovery/','/de/discovery/',
+              '/apps/operations-reliability-ai-2026.html',
+              '/apps/operations-reliability-ai-2026-pt.html',
+              '/apps/operations-reliability-ai-2026-es.html',
+              '/apps/operations-reliability-ai-2026-fr.html',
+              '/apps/operations-reliability-ai-2026-de.html',
+              '/zion-app-network/app-network-operations-evidence-checklist-2026.html',
+            ]
+            for route in required:
+              if f'https://ziontechgroup.com{route}' not in text:
+                errors.append(f'apps sitemap missing {route}')
+
+          index=Path('public/sitemap.xml')
+          if not index.is_file() or index.stat().st_size < 100:
+            errors.append('public/sitemap.xml missing or unexpectedly empty')
+          else:
+            text=index.read_text(encoding='utf-8')
+            for child in ['https://ziontechgroup.com/sitemap-0.xml','https://ziontechgroup.com/apps/apps-sitemap.xml']:
+              if child not in text:
+                errors.append(f'sitemap index missing {child}')
+
+          robots=Path('public/robots.txt')
+          if not robots.is_file():
+            errors.append('public/robots.txt missing')
+          else:
+            text=robots.read_text(encoding='utf-8')
+            for child in ['Sitemap: https://ziontechgroup.com/sitemap.xml','Sitemap: https://ziontechgroup.com/apps/apps-sitemap.xml']:
+              if child not in text:
+                errors.append(f'robots.txt missing {child}')
+
+          if errors:
+            for e in errors:
+              print(f'::error::{e}')
+            sys.exit(1)
+          print('Apps i18n release contract: PASS')
+          PY
