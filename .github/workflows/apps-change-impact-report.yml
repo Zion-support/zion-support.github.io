@@ -1,0 +1,129 @@
+name: Apps change impact report
+
+"on":
+  pull_request:
+    paths:
+      - 'public/apps/**'
+      - 'public/pt/apps/**'
+      - 'public/es/apps/**'
+      - 'public/fr/apps/**'
+      - 'public/de/apps/**'
+      - 'public/discovery/**'
+      - 'public/pt/discovery/**'
+      - 'public/es/discovery/**'
+      - 'public/fr/discovery/**'
+      - 'public/de/discovery/**'
+      - 'public/sitemap*.xml'
+      - 'public/robots.txt'
+      - '.github/workflows/apps-*.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pull-requests: read
+
+concurrency:
+  group: apps-change-impact-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  impact:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Build Apps change impact report
+        shell: bash
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.sha }}
+        run: |
+          set -euo pipefail
+          mkdir -p automation/reports
+          python3 - <<'PY'
+          import json, os, subprocess
+          from pathlib import Path
+
+          event=os.environ.get('EVENT_NAME','')
+          base=os.environ.get('BASE_SHA','') if event=='pull_request' else ''
+          head=os.environ.get('HEAD_SHA','HEAD')
+          if not base:
+              base='HEAD^'
+
+          changed=subprocess.check_output(['git','diff','--name-only',base,head],text=True).splitlines()
+          locales={'en':False,'pt-BR':False,'es':False,'fr':False,'de':False}
+          route_groups=set()
+          needs_sitemap=False
+          needs_live_canary=False
+          needs_mirror_check=False
+
+          for p in changed:
+              if p.startswith('public/apps/'):
+                  locales['en']=True
+                  route_groups.add('apps')
+                  needs_live_canary=True
+                  if 'operations-reliability-ai-2026' in p:
+                      needs_mirror_check=True
+              if p.startswith('public/pt/apps/') or p.startswith('public/pt/discovery/'):
+                  locales['pt-BR']=True
+                  needs_live_canary=True
+              if p.startswith('public/es/apps/') or p.startswith('public/es/discovery/'):
+                  locales['es']=True
+                  needs_live_canary=True
+              if p.startswith('public/fr/apps/') or p.startswith('public/fr/discovery/'):
+                  locales['fr']=True
+                  needs_live_canary=True
+              if p.startswith('public/de/apps/') or p.startswith('public/de/discovery/'):
+                  locales['de']=True
+                  needs_live_canary=True
+              if '/discovery/' in p or p.startswith('public/discovery/'):
+                  route_groups.add('discovery')
+              if 'operations-reliability' in p:
+                  route_groups.add('operations-reliability')
+              if p.endswith('sitemap.xml') or 'sitemap-' in p or p.endswith('robots.txt'):
+                  needs_sitemap=True
+                  route_groups.add('seo-discovery')
+
+          report={
+            'schema':'zion.apps.change-impact.v1',
+            'base_sha':base,
+            'head_sha':head,
+            'changed_files':changed,
+            'locales_touched':[k for k,v in locales.items() if v],
+            'route_groups':sorted(route_groups),
+            'recommended_checks':{
+              'apps_i18n_release_contract': bool(any(locales.values()) or needs_sitemap),
+              'apps_production_content_canary_after_deploy': needs_live_canary,
+              'apps_release_evidence_manifest': bool(any(locales.values()) or needs_sitemap),
+              'sitemap_integrity': needs_sitemap,
+              'source_public_mirror_parity': needs_mirror_check,
+            },
+          }
+          out=Path('automation/reports/apps-change-impact.json')
+          out.write_text(json.dumps(report,indent=2,sort_keys=True)+'\n',encoding='utf-8')
+
+          summary=Path(os.environ.get('GITHUB_STEP_SUMMARY','/tmp/apps-impact-summary.md'))
+          with summary.open('a',encoding='utf-8') as f:
+              f.write('## Apps change impact\n\n')
+              f.write(f"- Changed files: **{len(changed)}**\n")
+              f.write(f"- Locales touched: **{', '.join(report['locales_touched']) or 'none'}**\n")
+              f.write(f"- Route groups: **{', '.join(report['route_groups']) or 'none'}**\n\n")
+              f.write('### Recommended checks\n')
+              for name,needed in report['recommended_checks'].items():
+                  f.write(f"- {'✅' if needed else '➖'} {name}\n")
+          print(json.dumps(report,indent=2))
+          PY
+
+      - name: Upload change impact report
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: apps-change-impact-${{ github.run_id }}
+          path: automation/reports/apps-change-impact.json
+          if-no-files-found: error
+          retention-days: 14
