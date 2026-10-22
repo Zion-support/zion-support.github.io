@@ -1,0 +1,127 @@
+name: Apps release evidence manifest
+
+"on":
+  push:
+    branches: [main]
+    paths:
+      - 'public/apps/**'
+      - 'public/pt/apps/**'
+      - 'public/es/apps/**'
+      - 'public/fr/apps/**'
+      - 'public/de/apps/**'
+      - 'public/discovery/**'
+      - 'public/pt/discovery/**'
+      - 'public/es/discovery/**'
+      - 'public/fr/discovery/**'
+      - 'public/de/discovery/**'
+      - 'public/sitemap.xml'
+      - 'public/sitemap-0.xml'
+      - 'public/apps/apps-sitemap.xml'
+      - '.github/workflows/apps-release-evidence-manifest.yml'
+  pull_request:
+    paths:
+      - 'public/apps/**'
+      - 'public/pt/apps/**'
+      - 'public/es/apps/**'
+      - 'public/fr/apps/**'
+      - 'public/de/apps/**'
+      - 'public/discovery/**'
+      - 'public/pt/discovery/**'
+      - 'public/es/discovery/**'
+      - 'public/fr/discovery/**'
+      - 'public/de/discovery/**'
+      - 'public/sitemap.xml'
+      - 'public/sitemap-0.xml'
+      - 'public/apps/apps-sitemap.xml'
+      - '.github/workflows/apps-release-evidence-manifest.yml'
+  schedule:
+    - cron: '11 13 * * 3'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: apps-release-evidence-manifest-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  manifest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+
+      - name: Build release evidence manifest
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+          import hashlib, json, os, subprocess
+          from datetime import datetime, timezone
+
+          required=[
+            'public/index.html',
+            'public/apps/index.html',
+            'public/pt/apps/index.html',
+            'public/es/apps/index.html',
+            'public/fr/apps/index.html',
+            'public/de/apps/index.html',
+            'public/discovery/index.html',
+            'public/pt/discovery/index.html',
+            'public/es/discovery/index.html',
+            'public/fr/discovery/index.html',
+            'public/de/discovery/index.html',
+            'public/apps/operations-reliability-ai-2026.html',
+            'public/apps/operations-reliability-ai-2026-pt.html',
+            'public/apps/operations-reliability-ai-2026-es.html',
+            'public/apps/operations-reliability-ai-2026-fr.html',
+            'public/apps/operations-reliability-ai-2026-de.html',
+            'public/sitemap.xml',
+            'public/sitemap-0.xml',
+            'public/apps/apps-sitemap.xml',
+            'public/robots.txt',
+          ]
+          files=[]
+          missing=[]
+          for name in required:
+            p=Path(name)
+            if not p.is_file():
+              missing.append(name)
+              continue
+            raw=p.read_bytes()
+            files.append({
+              'path':name,
+              'bytes':len(raw),
+              'sha256':hashlib.sha256(raw).hexdigest(),
+            })
+          if missing:
+            for name in missing:
+              print(f'::error::required release file missing: {name}')
+            raise SystemExit(1)
+
+          git_sha=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip()
+          manifest={
+            'schema':'zion.apps.release-evidence.v1',
+            'generated_at_utc':datetime.now(timezone.utc).isoformat(),
+            'git_sha':git_sha,
+            'event':os.environ.get('GITHUB_EVENT_NAME',''),
+            'ref':os.environ.get('GITHUB_REF',''),
+            'repository':os.environ.get('GITHUB_REPOSITORY',''),
+            'files':files,
+          }
+          out=Path('automation/reports/apps-release-evidence.json')
+          out.parent.mkdir(parents=True,exist_ok=True)
+          out.write_text(json.dumps(manifest,indent=2,sort_keys=True)+'\n',encoding='utf-8')
+          print(f'Wrote {out} with {len(files)} hashed release files for {git_sha}')
+          PY
+
+      - name: Upload release evidence
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: apps-release-evidence-${{ github.run_id }}
+          path: automation/reports/apps-release-evidence.json
+          if-no-files-found: error
+          retention-days: 30
