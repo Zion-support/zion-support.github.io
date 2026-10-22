@@ -8,6 +8,9 @@ on:
       - '.github/workflows/public-sitemap-integrity.yml'
       - '.github/workflows/public-navigation-link-audit.yml'
       - '.github/workflows/website-monitor-config-guard.yml'
+      - '.github/workflows/public-tls-certificate-expiry.yml'
+      - '.github/workflows/monitor-run-summary.yml'
+      - '.github/workflows/website-monitor-freshness.yml'
   workflow_dispatch:
 
 permissions:
@@ -33,6 +36,9 @@ jobs:
             .github/workflows/public-sitemap-integrity.yml
             .github/workflows/public-navigation-link-audit.yml
             .github/workflows/website-monitor-config-guard.yml
+            .github/workflows/public-tls-certificate-expiry.yml
+            .github/workflows/monitor-run-summary.yml
+            .github/workflows/website-monitor-freshness.yml
           ]
           failures = []
           files.each do |file|
