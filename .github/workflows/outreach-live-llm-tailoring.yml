@@ -4,6 +4,10 @@ name: outreach-live-llm-tailoring
   workflow_dispatch:
   schedule:
     - cron: "*/5 * * * *"
+  pull_request:
+    paths:
+      - '.github/workflows/outreach-live-llm-tailoring.yml'
+      - 'scripts/automation/outreach-workflow-privacy.test.cjs'
 
 permissions:
   contents: read
@@ -11,11 +15,24 @@ permissions:
 # A five-minute schedule must never run multiple LLM/outreach workers simultaneously.
 # GitHub retains at most one active and one pending run per concurrency group.
 concurrency:
-  group: outreach-live-llm-tailoring
+  group: outreach-live-llm-tailoring-${{ github.event_name == 'pull_request' && 'contract' || 'worker' }}
   cancel-in-progress: false
 
 jobs:
+  privacy-contract:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Checkout (read-only)
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - name: Test workflow privacy contract (offline; never runs worker)
+        run: node --test scripts/automation/outreach-workflow-privacy.test.cjs
+
   outreach:
+    if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
     timeout-minutes: 25
     env:
@@ -42,58 +59,70 @@ jobs:
           python -m pip install --upgrade pip
           pip install google-api-python-client google-auth google-auth-httplib2 google-auth-oauthlib requests beautifulsoup4
 
-      - name: Run outreach worker
+      - name: Run outreach worker (suppress private stdout and stderr)
         id: outreach-worker
-        run: |
-          echo "[trace] start outreach_worker_automation.py"
-          python scripts/outreach/outreach_worker_automation.py | tee outreach_run.log
-          echo "[trace] outreach exit=$?"
         continue-on-error: true
-
-      - name: Discover outreach blockers
-        if: always()
-        id: outreach-blockers
+        shell: bash
         run: |
-          echo "[trace] start outreach blocker discovery"
-          set -euo pipefail
+          set +e
+          # The Python worker prints contacts, subjects and errors. Never stream them to Actions logs.
+          python scripts/outreach/outreach_worker_automation.py > /dev/null 2>&1
+          exit_code=$?
+          if [ "$exit_code" -eq 0 ]; then
+            echo "Outreach worker finished; no private output published."
+          else
+            echo "::error::Outreach worker failed (details intentionally redacted)."
+          fi
+          exit "$exit_code"
+
+      - name: Write safe outreach health summary
+        if: always()
+        env:
+          WORKER_STEP_OUTCOME: ${{ steps.outreach-worker.outcome }}
+        run: |
           python - <<'PY'
           import json, os
+          from datetime import datetime, timezone
           from pathlib import Path
           base = Path('outreach_monitor/processed')
-          report = {
-            'timestamp': int(__import__('time').time()),
-            'cwd': str(Path.cwd()),
-            'files': sorted([p.name for p in base.glob('*')]),
-            'llm_readiness': {},
-            'auth_failed': False,
+          readiness_file = base / 'llm_tailoring_readiness.json'
+          output = {
+              'checked_at': datetime.now(timezone.utc).isoformat(),
+              'worker_step_outcome': os.getenv('WORKER_STEP_OUTCOME', 'unknown'),
+              'readiness_report_present': readiness_file.is_file(),
+              'sent_ledger_present': (base / 'sent_ledger.jsonl').is_file(),
+              'dry_run_ledger_present': (base / 'dry_run_report.jsonl').is_file(),
+              'gmail_token_present': None,
+              'gmail_auth_error_present': None,
+              'readiness_parse_ok': False,
+              'methodology': 'Boolean health signals only; no contact, message, token, subject or raw worker output',
           }
-          for name in ['llm_tailoring_readiness.json','hot_followup_reply_ledger.jsonl','sent_ledger.jsonl','dry_run_report.jsonl']:
-              p = base / name
-              report[name] = p.exists()
-              if p.exists():
-                  try:
-                      report[name+'_head'] = p.read_text(encoding='utf-8', errors='ignore').splitlines()[:3]
-                  except Exception as e:
-                      report[name+'_head'] = f'ERR:{e}'
-          try:
-              r = json.loads((base/'llm_tailoring_readiness.json').read_text(encoding='utf-8'))
-              report['llm_readiness'] = r
-              report['auth_failed'] = not bool(r.get('local_gmail_modules', {}).get('token_exists')) or bool(r.get('local_gmail_modules', {}).get('auth_error'))
-          except Exception as e:
-              report['auth_failed'] = True
-              report['llm_readiness_error'] = repr(e)
-          print(json.dumps(report, ensure_ascii=False))
+          if readiness_file.is_file():
+              try:
+                  parsed = json.loads(readiness_file.read_text(encoding='utf-8'))
+                  gmail = parsed.get('local_gmail_modules', {})
+                  if not isinstance(gmail, dict):
+                      gmail = {}
+                  output['gmail_token_present'] = bool(gmail.get('token_exists'))
+                  output['gmail_auth_error_present'] = bool(gmail.get('auth_error'))
+                  output['readiness_parse_ok'] = True
+              except (OSError, ValueError, TypeError):
+                  pass
+          Path('outreach-health-summary.json').write_text(json.dumps(output, indent=2) + '\n', encoding='utf-8')
+          print('Outreach health summary generated: status and boolean signals only.')
           PY
 
-      - name: Upload outreach reports and trace logs
+      - name: Upload redacted health summary only
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         with:
-          name: outreach-reports-${{ github.run_id }}
-          path: |
-            outreach_run.log
-            outreach_monitor/processed/sent_ledger.jsonl
-            outreach_monitor/processed/hot_followup_reply_ledger.jsonl
-            outreach_monitor/processed/dry_run_report.jsonl
-            outreach_monitor/processed/llm_tailoring_readiness.json
+          name: outreach-health-${{ github.run_id }}
+          path: outreach-health-summary.json
+          if-no-files-found: error
           retention-days: 7
+
+      - name: Propagate outreach worker failure without exposing contacts
+        if: steps.outreach-worker.outcome == 'failure'
+        run: |
+          echo "::error::Outreach worker failed; private output has not been uploaded."
+          exit 1
