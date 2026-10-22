@@ -13,6 +13,8 @@ const PAGE=/^app\/services\/(?:[a-zA-Z0-9_.-]+\/)+page\.tsx$/;
 // dangerouslySetInnerHTML tags and valid {JSON.stringify(...)} are untouched.
 const JSON_LD=/<script\b(?=[^>]*\btype\s*=\s*["']application\/ld\+json["'])[^>]*[^\/]>([\s\S]*?)<\/script\s*>/gi;
 const RAW_OBJECT=/^\s*\{\s*"[^"\r\n]+"\s*:/;
+// Exact line-start git conflict markers are invalid TSX, even when nested.
+const CONFLICT_MARKER=/^(?:<<<<<<<(?:[ \t][^\r\n]*)?|=======[ \t]*|>>>>>>>(?:[ \t][^\r\n]*)?)\r?$/gm;
 
 function inspectPage(source){
   const findings=[];
@@ -23,6 +25,12 @@ function inspectPage(source){
     const line=source.slice(0,match.index).split('\n').length;
     findings.push({line,rule:'raw-json-ld-jsx-object'});
   }
+  CONFLICT_MARKER.lastIndex=0;
+  while((match=CONFLICT_MARKER.exec(source))!==null) {
+    const line=source.slice(0,match.index).split('\n').length;
+    findings.push({line,rule:'unresolved-merge-conflict-marker'});
+  }
+  findings.sort((a,b)=>a.line-b.line || a.rule.localeCompare(b.rule));
   return findings;
 }
 function changedFiles(base,head,repo=ROOT,exec=execFileSync){
