@@ -83,6 +83,12 @@ jobs:
             'public/sitemap-0.xml',
             'public/apps/apps-sitemap.xml',
             'public/robots.txt',
+            'scripts/prepare-pages-out.sh',
+            '.github/workflows/ai-post-push-route-verify.yml',
+            '.github/workflows/apps-i18n-release-contract.yml',
+            '.github/workflows/apps-production-content-canary.yml',
+            '.github/workflows/apps-deployed-source-drift.yml',
+            '.github/workflows/apps-rollback-readiness.yml',
           ]
           files=[]
           missing=[]
@@ -111,17 +117,48 @@ jobs:
             'ref':os.environ.get('GITHUB_REF',''),
             'repository':os.environ.get('GITHUB_REPOSITORY',''),
             'files':files,
+            'route_source_map':{
+              '/':'public/index.html',
+              '/apps/':'public/apps/index.html',
+              '/pt/apps/':'public/pt/apps/index.html',
+              '/es/apps/':'public/es/apps/index.html',
+              '/fr/apps/':'public/fr/apps/index.html',
+              '/de/apps/':'public/de/apps/index.html',
+              '/discovery/':'public/discovery/index.html',
+              '/pt/discovery/':'public/pt/discovery/index.html',
+              '/es/discovery/':'public/es/discovery/index.html',
+              '/fr/discovery/':'public/fr/discovery/index.html',
+              '/de/discovery/':'public/de/discovery/index.html',
+            },
           }
           out=Path('automation/reports/apps-release-evidence.json')
           out.parent.mkdir(parents=True,exist_ok=True)
           out.write_text(json.dumps(manifest,indent=2,sort_keys=True)+'\n',encoding='utf-8')
-          print(f'Wrote {out} with {len(files)} hashed release files for {git_sha}')
+          digest=hashlib.sha256(out.read_bytes()).hexdigest()
+          checksum=Path('automation/reports/apps-release-evidence.sha256')
+          checksum.write_text(f'{digest}  apps-release-evidence.json\n',encoding='utf-8')
+          with Path(os.environ['GITHUB_STEP_SUMMARY']).open('a',encoding='utf-8') as summary:
+            summary.write('## Apps release evidence\n\n')
+            summary.write(f'- Commit: `{git_sha}`\n')
+            summary.write(f'- Critical files: **{len(files)}**\n')
+            summary.write(f'- Manifest SHA-256: `{digest}`\n')
+            summary.write('- Artifact is audit evidence only; live health remains covered by the HTTP canary and route gate.\n')
+          print(f'Wrote {out} with {len(files)} hashed release files for {git_sha}; manifest_sha256={digest}')
           PY
+
+      - name: Verify manifest checksum
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd automation/reports
+          sha256sum -c apps-release-evidence.sha256
 
       - name: Upload release evidence
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         with:
           name: apps-release-evidence-${{ github.run_id }}
-          path: automation/reports/apps-release-evidence.json
+          path: |
+            automation/reports/apps-release-evidence.json
+            automation/reports/apps-release-evidence.sha256
           if-no-files-found: error
-          retention-days: 30
+          retention-days: 90
