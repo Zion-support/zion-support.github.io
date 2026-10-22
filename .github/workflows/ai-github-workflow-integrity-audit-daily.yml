@@ -14,7 +14,7 @@ permissions:
       - '.github/workflows/ai-github-workflow-integrity-audit-daily.yml'
 
 concurrency:
-  group: ai-github-workflow-integrity-audit-daily
+  group: ai-github-integrity-${{ github.event_name == 'pull_request' && format('pr-{0}', github.event.pull_request.number) || 'production' }}
   cancel-in-progress: false
 
 jobs:
@@ -24,6 +24,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          persist-credentials: false
 
       - name: Test auditor (offline)
         run: node --test automation/github-workflow-integrity-auditor.test.cjs
