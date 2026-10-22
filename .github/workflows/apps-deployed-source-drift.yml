@@ -1,6 +1,10 @@
 name: Apps deployed-source drift guard
 
 "on":
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/apps-deployed-source-drift.yml'
   workflow_run:
     workflows:
       - Continuous Pages Deploy
