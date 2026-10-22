@@ -3,6 +3,7 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const ROOT = path.resolve(__dirname, '..');
+const {pullRequestTriggers,fanoutReport} = require('./workflow-pr-fanout-analyzer.cjs');
 const MONTHS = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
 const WEEKDAYS = ['SUN','MON','TUE','WED','THU','FRI','SAT'];
 const BOUNDS = [[0,59],[0,23],[1,31],[1,12],[0,7]];
@@ -138,9 +139,11 @@ function overlapCandidate(yaml, now = new Date()) {
 }
 function inventory(directory = path.join(ROOT,'.github/workflows'), now = new Date()) {
   const files = fs.readdirSync(directory).filter(x => /\.ya?ml$/i.test(x)).sort();
-  const items = [], invalid = [], concurrencyCandidates = [];
+  const items = [], invalid = [], concurrencyCandidates = [], pullRequestRecords = [];
   for (const file of files) {
     const yaml=fs.readFileSync(path.join(directory,file),'utf8');
+    const prEvents=pullRequestTriggers(yaml);
+    if (prEvents.length) pullRequestRecords.push({file,events:prEvents});
     const details=scheduleDetails(yaml);
     if (!details.length) continue;
     try {
@@ -165,6 +168,7 @@ function inventory(directory = path.join(ROOT,'.github/workflows'), now = new Da
     highFrequency:items.filter(x=>x.opportunities30d>720),invalid,top25:items.slice(0,25),
     scheduleOverlapCandidates:concurrencyCandidates.sort((a,b)=>a.minScheduledGapMinutes-b.minScheduledGapMinutes).slice(0,50),
     totalScheduleOverlapCandidates:concurrencyCandidates.length,
+    pullRequestFanout:fanoutReport(pullRequestRecords),
   };
 }
 function main() {
@@ -172,7 +176,7 @@ function main() {
   const dest = process.env.ZION_GHA_REPORT_PATH || path.join(ROOT,'automation/reports/gha-workflow-cost-estimate-latest.json');
   fs.mkdirSync(path.dirname(dest),{recursive:true});
   fs.writeFileSync(dest,JSON.stringify(output,null,2)+'\n');
-  console.log(JSON.stringify({workflowsScanned:output.workflowsScanned,scheduledWorkflows:output.scheduledWorkflows,scheduledOpportunities30d:output.scheduledOpportunities30d,highFrequency:output.highFrequency.length,overlapCandidates:output.totalScheduleOverlapCandidates,invalid:output.invalid.length}));
+  console.log(JSON.stringify({workflowsScanned:output.workflowsScanned,scheduledWorkflows:output.scheduledWorkflows,scheduledOpportunities30d:output.scheduledOpportunities30d,highFrequency:output.highFrequency.length,overlapCandidates:output.totalScheduleOverlapCandidates,unfilteredPullRequests:output.pullRequestFanout.triggers.pull_request.allFiles,excludeOnlyPullRequests:output.pullRequestFanout.triggers.pull_request.excludeOnly,invalid:output.invalid.length}));
   if (output.invalid.length) process.exitCode=1;
 }
 module.exports = {scalar,scheduleDetails,schedules,field,parseCron,estimate,minUtcScheduledGap,overlapCandidate,inventory,main};
