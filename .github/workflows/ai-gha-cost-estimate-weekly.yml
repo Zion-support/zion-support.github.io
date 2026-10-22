@@ -29,9 +29,6 @@ jobs:
           cache: npm
           cache-dependency-path: package-lock.json
 
-      - name: Install dependencies
-        run: npm ci --prefer-offline --no-audit --fund=false
-
       - name: Test schedule estimator (offline, no credentials)
         run: node --test automation/gha-workflow-cost-estimator.test.cjs
 
