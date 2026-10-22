@@ -48,7 +48,20 @@ jobs:
             '/fr/discovery/': ['Discovery'],
             '/de/discovery/': ['Discovery'],
             '/apps/operations-reliability-ai-2026.html': ['Operations','Reliability'],
+            '/apps/operations-reliability-ai-2026-pt.html': ['Operações','Confiabilidade'],
+            '/apps/operations-reliability-ai-2026-es.html': ['Operaciones'],
+            '/apps/operations-reliability-ai-2026-fr.html': ['Opérations'],
+            '/apps/operations-reliability-ai-2026-de.html': ['Operations','Reliability'],
+            '/zion-app-network/app-network-operations-reliability-2026.html': ['Operations','Reliability'],
+            '/zion-app-network/app-network-operations-reliability-2026-pt-br.html': ['Operações','Confiabilidade'],
+            '/zion-app-network/app-network-operations-reliability-2026-es.html': ['Operaciones'],
+            '/zion-app-network/app-network-operations-reliability-2026-fr.html': ['Opérations'],
+            '/zion-app-network/app-network-operations-reliability-2026-de.html': ['Operations'],
             '/zion-app-network/app-network-operations-evidence-checklist-2026.html': ['Operations Evidence Checklist 2026'],
+            '/zion-app-network/app-network-operations-evidence-checklist-2026-pt-br.html': ['Checklist de Evidências Operacionais 2026'],
+            '/zion-app-network/app-network-operations-evidence-checklist-2026-es.html': ['Checklist de Evidencia Operativa 2026'],
+            '/zion-app-network/app-network-operations-evidence-checklist-2026-fr.html': ['Checklist de Preuves Opérationnelles 2026'],
+            '/zion-app-network/app-network-operations-evidence-checklist-2026-de.html': ['Operations-Evidenz-Checkliste 2026'],
             '/sitemap.xml': ['sitemapindex','apps/apps-sitemap.xml'],
             '/apps/apps-sitemap.xml': ['operations-reliability-ai-2026','/pt/apps/'],
           }
@@ -74,10 +87,18 @@ jobs:
           if failures:
             for item in failures:
               print(f'::error::{item}')
-            Path=None
             open('apps-canary-failures.txt','w',encoding='utf-8').write('\n'.join(failures)+'\n')
             sys.exit(1)
           PY
+
+      - name: Upload canary failure evidence
+        if: failure()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: apps-production-canary-failure-${{ github.run_id }}
+          path: apps-canary-failures.txt
+          if-no-files-found: warn
+          retention-days: 30
 
       - name: Open deduped issue on canary failure
         if: failure()
