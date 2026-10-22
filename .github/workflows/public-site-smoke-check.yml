@@ -24,7 +24,7 @@ jobs:
         run: |
           set -euo pipefail
           failures=0
-          for path in / /apps/ /discovery/; do
+          for path in / /about /contact /services; do
             url="${BASE_URL}${path}"
             echo "::group::Checking ${url}"
             status="$(curl --location --silent --show-error --output /dev/null --write-out '%{http_code}' --connect-timeout 10 --max-time 25 --retry 2 --retry-delay 2 "${url}")" || status="000"
