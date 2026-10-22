@@ -1,7 +1,7 @@
 'use strict';
 const test=require('node:test');
 const assert=require('node:assert/strict');
-const {repairSource,validateRelativePath,validateLocalSourceFile}=require('./repair-jsonld-jsx.cjs');
+const {repairSource,validateRelativePath,validateLocalSourceFile,main}=require('./repair-jsonld-jsx.cjs');
 const fs=require('node:fs'),os=require('node:os'),path=require('node:path');
 const data='{"@context":"https://schema.org","@type":"Service","serviceType":"AI/IT","name":"Zion Service"}';
 const line='<script type="application/ld+json">'+data+'</script>';
@@ -88,5 +88,29 @@ test('optional write mode refuses symlinks escaping generated service directory'
  } finally {
   fs.rmSync(dir,{recursive:true,force:true});
   fs.rmSync(outsideDir,{recursive:true,force:true});
+ }
+});
+
+test('write mode preflights all requested files before any first write',()=>{
+ const serviceRoot=path.resolve(__dirname,'../app/services');
+ const dir=fs.mkdtempSync(path.join(serviceRoot,'jsonld-preflight-'));
+ const original='  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Service"}</script>\n';
+ const relative='app/services/'+path.basename(dir)+'/page.tsx';
+ const file=path.join(dir,'page.tsx');
+ const formerExit=process.exitCode,formerError=console.error;
+ try{
+  fs.writeFileSync(file,original);
+  console.error=()=>{};
+  main(['--write',relative,'app/services/../private.txt']);
+  assert.equal(process.exitCode,2);
+  assert.equal(fs.readFileSync(file,'utf8'),original);
+  process.exitCode=formerExit;
+  main(['--write',relative,relative]);
+  assert.equal(process.exitCode,2);
+  assert.equal(fs.readFileSync(file,'utf8'),original);
+ }finally{
+  process.exitCode=formerExit;
+  console.error=formerError;
+  fs.rmSync(dir,{recursive:true,force:true});
  }
 });
