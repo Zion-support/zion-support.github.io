@@ -13,11 +13,20 @@ const APPMAP={
  'Other':[['AI Readiness Assessment','/ai-readiness-assessment/'],['Apps Network','/apps/'],['Network Map','/apps/network.html']]
 };
 const HOURVAL={'Under 20':15,'20–80':50,'80–200':140,'200+':260};
+const RECOMMENDATION_KINDS={
+ en:['Interactive planning tool','Interactive calculator','Documentation / concept','Service page'],
+ pt:['Ferramenta de planejamento interativa','Calculadora interativa','Documentação / conceito','Página de serviço'],
+ es:['Herramienta de planificación interactiva','Calculadora interactiva','Documentación / concepto','Página de servicio'],
+ fr:['Outil de planification interactif','Calculateur interactif','Documentation / concept','Page de service'],
+ de:['Interaktives Planungstool','Interaktiver Rechner','Dokumentation / Konzept','Dienstleistungsseite']
+};
 function recommendationKind(path){
- if(['/automation-pilot-planner/','/apps/discovery-report-workbench.html'].includes(path)) return 'Interactive planning tool';
- if(['/sla-calculator/','/roi-calc/','/finops-estimator/'].includes(path)) return 'Interactive calculator';
- if(path==='/apps/'||path==='/apps/network.html'||path.includes('checklist')||path.includes('assessment')) return 'Documentation / concept';
- return 'Service page';
+ const language=(document.documentElement?.lang||'en').slice(0,2);
+ const kinds=RECOMMENDATION_KINDS[language]||RECOMMENDATION_KINDS.en;
+ if(['/automation-pilot-planner/','/apps/discovery-report-workbench.html'].includes(path)) return kinds[0];
+ if(['/sla-calculator/','/roi-calc/','/finops-estimator/'].includes(path)) return kinds[1];
+ if(path==='/apps/'||path==='/apps/network.html'||path.includes('checklist')||path.includes('assessment')) return kinds[2];
+ return kinds[3];
 }
 const COPY={
  en:{invalid:'Please enter your name, one valid email address, a process and an hours band.',ready:'Report ready. Submitting the same result for email delivery to you and Commercial...',duplicate:'This report was already accepted in this page session. No duplicate was submitted.',accepted:'Accepted by the email service for delivery to you and Commercial. Inbox delivery is not yet confirmed. Check your inbox and spam folder.',failed:'Email acceptance was not confirmed. Copy or download your report or use the manual email fallback. No automatic retry was made.',timeout:'Email confirmation timed out. The request may already have been accepted; check your inbox before submitting again.',offline:'Email confirmation is unavailable. Your report remains available below.',copy:'Copy report',copied:'Copied',copyFail:'Select the report above or download .txt',fallback:'Open email with my report (manual fallback)',summary:'Illustrative monthly capacity value',assumptions:'Assumptions: selected hours band represented by {hours} hours/month; 40% potentially automatable; US$45/hour. Not measured savings, a quote or approval to implement.',next:'Confirm the process owner, baseline and data permissions. Select one low-risk pilot with human review and a stop rule.',free:'Discovery is free. No purchase, meeting or paid engagement is created by this report.',title:'FREE DISCOVERY RESULT',fields:['Name','Email','Company','Industry','Process','Hours/month band','Systems','90-day goal','Timeline','Indicative readiness score'],heuristic:'Self-assessment heuristic, not a technical audit.',apps:'Recommended apps'},
@@ -30,6 +39,14 @@ const locale=(document.documentElement?.lang||'en').slice(0,2);
 const t=COPY[locale]||COPY.en;
 let discoveryPending=false;
 const acceptedReports=new Set();
+const uncertainReports=new Set();
+const uncertainDeliveryCopy={
+ en:'Previous delivery is unconfirmed. To prevent duplicates, this report will not be resubmitted on this page. Check your inbox or contact Commercial before trying again.',
+ pt:'A entrega anterior não foi confirmada. Para evitar duplicatas, este relatório não será reenviado nesta página. Verifique sua caixa ou contate Commercial antes de tentar novamente.',
+ es:'La entrega anterior no está confirmada. Para evitar duplicados, este informe no se reenviará en esta página. Revise su correo o contacte al equipo comercial antes de volver a intentarlo.',
+ fr:'La livraison précédente n’est pas confirmée. Pour éviter les doublons, ce rapport ne sera pas renvoyé sur cette page. Vérifiez votre boîte mail ou contactez notre équipe commerciale avant de réessayer.',
+ de:'Die vorherige Zustellung ist unbestätigt. Um Duplikate zu vermeiden, wird dieser Bericht auf dieser Seite nicht erneut gesendet. Prüfen Sie Ihr Postfach oder kontaktieren Sie unser Vertriebsteam.'
+};
 function cleanAnswer(value,limit){return String(value||'').replace(/[\u0000-\u001f\u007f]/g,' ').trim().slice(0,limit);}
 function publicPageUrl(value,originOnly=false){try{const u=new URL(value);return /^https?:$/.test(u.protocol)?u.origin+(originOnly?'':u.pathname):'';}catch{return '';}}
 document.getElementById('dform').addEventListener('submit',async function(e){
@@ -63,14 +80,15 @@ document.getElementById('dform').addEventListener('submit',async function(e){
  document.getElementById('result').style.display='block';document.getElementById('result').scrollIntoView({behavior:'smooth'});document.getElementById('copy-report').textContent=t.copy;
  const status=document.getElementById('rsent'),fingerprint=JSON.stringify(f);
  if(acceptedReports.has(fingerprint)){status.textContent=t.duplicate;return;}
+ if(uncertainReports.has(fingerprint)){status.textContent=uncertainDeliveryCopy[locale]||uncertainDeliveryCopy.en;return;}
  status.textContent=t.ready;discoveryPending=true;
  const button=document.getElementById('submit-report');button.disabled=true;form.setAttribute('aria-busy','true');
  const controller=new AbortController(),timeout=setTimeout(()=>controller.abort(),15000);
  try{
   const r=await fetch('https://formsubmit.co/ajax/commercial@ziontechgroup.com',{method:'POST',signal:controller.signal,headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({_subject:'Free Discovery result — '+f.name,_cc:cc,_replyto:f.email,_captcha:'false',_template:'box',name:f.name,email:f.email,company:f.company||'—',industry:f.industry,score,...attribution,event:'discovery_submit',report_version:'2026-10-08-client-commercial',language:locale,message:summary})});
-  const j=await r.json().catch(()=>({}));
-  if(r.ok&&(j.success===true||j.success==='true')){acceptedReports.add(fingerprint);status.textContent=t.accepted;}else status.textContent=t.failed;
- }catch(err){status.textContent=err.name==='AbortError'?t.timeout:t.offline;}
+  let j;try{j=await r.json();}catch(err){if(err.name!=='SyntaxError')throw err;uncertainReports.add(fingerprint);status.textContent=t.failed;return;}
+  if(r.ok&&(j.success===true||j.success==='true')){acceptedReports.add(fingerprint);status.textContent=t.accepted;}else{if(r.ok&&j.success!==false&&j.success!=='false')uncertainReports.add(fingerprint);status.textContent=t.failed;}
+ }catch(err){uncertainReports.add(fingerprint);status.textContent=err.name==='AbortError'?t.timeout:t.offline;}
  finally{clearTimeout(timeout);discoveryPending=false;button.disabled=false;form.setAttribute('aria-busy','false');}
 });
 document.getElementById('copy-report').addEventListener('click',async function(){const txt=window.__zionDiscoveryReport||'';if(!txt)return;try{await navigator.clipboard.writeText(txt);this.textContent=t.copied;}catch{this.textContent=t.copyFail;}});
