@@ -11,7 +11,7 @@ const SHA=/^[a-fA-F0-9]{40}$/;
 const PAGE=/^app\/services\/(?:[a-zA-Z0-9_.-]+\/)+page\.tsx$/;
 // React JSX cannot embed a bare JSON object in a <script> child. Proper
 // dangerouslySetInnerHTML tags and valid {JSON.stringify(...)} are untouched.
-const JSON_LD=/<script\b(?=[^>]*\btype\s*=\s*["']application\/ld\+json["'])[^>]*>([\s\S]*?)<\/script\s*>/gi;
+const JSON_LD=/<script\b(?=[^>]*\btype\s*=\s*["']application\/ld\+json["'])[^>]*[^\/]>([\s\S]*?)<\/script\s*>/gi;
 const RAW_OBJECT=/^\s*\{\s*"[^"\r\n]+"\s*:/;
 
 function inspectPage(source){
