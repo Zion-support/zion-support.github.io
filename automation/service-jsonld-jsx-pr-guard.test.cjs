@@ -68,3 +68,37 @@ test('safe service file and empty PR diff produce clean decisions',()=>{
   assert.equal(inspectFiles([],temp).pagesScanned,0);
  }finally{fs.rmSync(temp,{recursive:true,force:true});}
 });
+
+
+test('property order cannot bypass raw JSON-LD detection',()=>{
+ const html='<script type="application/ld+json">{"name":"Broken","@type":"Service","@context":"https://schema.org"}</script>';
+ assert.deepEqual(inspectPage(html),[{line:1,rule:'raw-json-ld-jsx-object'}]);
+});
+test('a previously fixed self-closing script cannot hide a following invalid script',()=>{
+ const html='<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"name":"Safe"}) }} />\n'+
+   '<script type="application/ld+json">{"name":"Broken"}</script>';
+ assert.deepEqual(inspectPage(html),[{line:2,rule:'raw-json-ld-jsx-object'}]);
+});
+test('a link to an outside-root file cannot make the guard inspect private data',()=>{
+ const temp=fs.mkdtempSync(path.join(os.tmpdir(),'zion-jsonld-link-'));
+ const outside=fs.mkdtempSync(path.join(os.tmpdir(),'zion-jsonld-private-'));
+ try{
+  const dir=path.join(temp,'app/services/example');
+  fs.mkdirSync(dir,{recursive:true});
+  const secret=path.join(outside,'secret.tsx');
+  fs.writeFileSync(secret,raw);
+  fs.symlinkSync(secret,path.join(dir,'page.tsx'));
+  assert.throws(()=>inspectFiles(['app/services/example/page.tsx'],temp));
+ }finally{fs.rmSync(temp,{recursive:true,force:true});fs.rmSync(outside,{recursive:true,force:true});}
+});
+test('PR workflow only scans changed service pages and has no schedule or write permissions',()=>{
+ const yaml=fs.readFileSync(path.join(__dirname,'../.github/workflows/service-jsonld-jsx-pr-guard.yml'),'utf8');
+ assert.match(yaml,/pull_request:\s*\n\s*paths:/);
+ assert.match(yaml,/app\/services\/\*\*\/page\.tsx/);
+ assert.match(yaml,/permissions:\s*\n\s*contents:\s*read/);
+ assert.match(yaml,/persist-credentials:\s*false/);
+ assert.match(yaml,/PR_BASE_SHA:/);
+ assert.match(yaml,/PR_HEAD_SHA:/);
+ assert.doesNotMatch(yaml,/\n\s*schedule:/);
+ assert.doesNotMatch(yaml,/\n\s*issues:\s*write/);
+});
