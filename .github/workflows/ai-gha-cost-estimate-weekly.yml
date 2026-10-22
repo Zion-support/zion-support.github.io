@@ -7,6 +7,11 @@ permissions:
   schedule:
     - cron: '12 15 * * 0'
   workflow_dispatch:
+  pull_request:
+    paths:
+      - 'automation/gha-workflow-cost-estimator.cjs'
+      - 'automation/gha-workflow-cost-estimator.test.cjs'
+      - '.github/workflows/ai-gha-cost-estimate-weekly.yml'
 
 concurrency:
   group: ai-gha-cost-estimate
@@ -26,8 +31,6 @@ jobs:
         uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
         with:
           node-version-file: '.nvmrc'
-          cache: npm
-          cache-dependency-path: package-lock.json
 
       - name: Test schedule estimator (offline, no credentials)
         run: node --test automation/gha-workflow-cost-estimator.test.cjs
@@ -40,5 +43,5 @@ jobs:
         with:
           name: gha-workflow-cost-${{ github.run_id }}
           path: automation/reports/gha-workflow-cost-estimate-latest.json
-          if-no-files-found: ignore
+          if-no-files-found: error
           retention-days: 90
