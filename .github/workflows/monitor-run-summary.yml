@@ -7,6 +7,7 @@ on:
       - Dependency Security Baseline
       - Public Sitemap Integrity
       - Public Navigation Link Audit
+      - Public TLS Certificate Expiry Watch
     types: [completed]
   workflow_dispatch:
 
@@ -42,7 +43,7 @@ jobs:
           conclusion=str(run.get('conclusion','unknown'))
           url=str(run.get('html_url',''))
           number=run.get('run_number','unknown')
-          allowed={'Public Site Smoke Check','Dependency Security Baseline','Public Sitemap Integrity','Public Navigation Link Audit'}
+          allowed={'Public Site Smoke Check','Dependency Security Baseline','Public Sitemap Integrity','Public Navigation Link Audit','Public TLS Certificate Expiry Watch'}
           if name not in allowed:
               print('Unexpected workflow; ignoring.')
               raise SystemExit(0)
