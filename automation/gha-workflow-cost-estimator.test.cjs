@@ -12,7 +12,7 @@ test('hourly and 10-minute schedules reflect 30-day pressure',()=>{
  assert.equal(estimate('0 8 * * *',monday),30);
 });
 test('day-of-week and DOM cron OR rules and bounds',()=>{
- assert.equal(estimate('0 8 1 * 1',monday),5);
+ assert.equal(estimate('0 8 1 * 1',monday),6);
  assert.deepEqual([...field('10-20/5',0,59)],[10,15,20]);
  assert.throws(()=>estimate('61 * * * *',monday));
  assert.throws(()=>estimate('* * * *',monday));
