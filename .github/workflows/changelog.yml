@@ -6,6 +6,10 @@ name: Autonomous Changelog Generator
     branches:
     - main
   workflow_dispatch: null
+concurrency:
+  group: autonomous-changelog-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   changelog:
     name: Generate Changelog

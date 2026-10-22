@@ -9,6 +9,10 @@ permissions:
     branches: [main]
   workflow_dispatch:
 
+concurrency:
+  group: ai-post-push-route-verify-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   verify-routes:
     runs-on: ubuntu-latest

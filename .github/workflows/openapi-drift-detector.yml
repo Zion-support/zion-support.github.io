@@ -11,6 +11,10 @@ name: OpenAPI Contract Drift Detector
   schedule:
   - cron: 0 12 * * *
   workflow_dispatch: null
+concurrency:
+  group: openapi-drift-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   openapi-drift:
     name: Detect OpenAPI Drift
