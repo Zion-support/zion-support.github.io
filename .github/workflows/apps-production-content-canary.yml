@@ -1,6 +1,13 @@
 name: Apps production content canary
 
 "on":
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/apps-production-content-canary.yml'
+  pull_request:
+    paths:
+      - '.github/workflows/apps-production-content-canary.yml'
   schedule:
     - cron: '41 12 * * *'
   workflow_dispatch:
