@@ -96,12 +96,59 @@ function estimate(expression, now = new Date(), timezone = 'UTC') {
   }
   return count;
 }
+// Find the smallest theoretical interval between UTC cron triggers over 30 days.
+// Does not infer billed minutes or assume a job actually occupied its full timeout.
+function minUtcScheduledGap(crons, start = new Date()) {
+  const timestamps = new Set();
+  const beginning=Date.UTC(start.getUTCFullYear(),start.getUTCMonth(),start.getUTCDate());
+  for (const item of crons) {
+    if (!['UTC','Etc/UTC'].includes(item.timezone)) continue;
+    const parsed=parseCron(item.cron);
+    const hours=[...parsed.values[1]].sort((a,b)=>a-b);
+    const minutes=[...parsed.values[0]].sort((a,b)=>a-b);
+    for (let day=0;day<30;day++) {
+      const date=new Date(beginning+day*86400000);
+      if (!parsed.values[3].has(date.getUTCMonth()+1) ||
+          !matchesDay(parsed,date.getUTCDate(),date.getUTCDay())) continue;
+      for (const hour of hours) for (const minute of minutes)
+        timestamps.add(beginning+day*86400000+hour*3600000+minute*60000);
+    }
+  }
+  const schedule=[...timestamps].sort((a,b)=>a-b);
+  if (schedule.length < 2) return null;
+  let min=Number.POSITIVE_INFINITY;
+  for (let i=1;i<schedule.length;i++)
+    min=Math.min(min,(schedule[i]-schedule[i-1])/60000);
+  return Number.isFinite(min) ? min : null;
+}
+function overlapCandidate(yaml, now = new Date()) {
+  const crons=scheduleDetails(yaml);
+  if (!crons.length || crons.some(c=>!['UTC','Etc/UTC'].includes(c.timezone))) return null;
+  // Conservative static heuristic: top-level or job-level concurrency declaration
+  // counts as protected. This can miss per-job exposure; report is never an attestation.
+  if (/^\s*concurrency\s*:/m.test(yaml)) return null;
+  const declared=[...yaml.matchAll(/^\s*timeout-minutes:\s*(\d+)\b/gm)].map(m=>Number(m[1]));
+  const maxTimeout=Math.max(0,...declared);
+  if (maxTimeout < 1) return null;
+  const gap=minUtcScheduledGap(crons,now);
+  if (gap === null || maxTimeout <= gap) return null;
+  return {minScheduledGapMinutes:gap,maxDeclaredTimeoutMinutes:maxTimeout,
+    risk:'possible-overlapping-runs-without-declared-concurrency',
+    limits:'Static schedule+timeout upper-bound; no observed job durations or actual concurrent work'};
+}
 function inventory(directory = path.join(ROOT,'.github/workflows'), now = new Date()) {
   const files = fs.readdirSync(directory).filter(x => /\.ya?ml$/i.test(x)).sort();
-  const items = [], invalid = [];
+  const items = [], invalid = [], concurrencyCandidates = [];
   for (const file of files) {
-    const details = scheduleDetails(fs.readFileSync(path.join(directory,file),'utf8'));
+    const yaml=fs.readFileSync(path.join(directory,file),'utf8');
+    const details=scheduleDetails(yaml);
     if (!details.length) continue;
+    try {
+      const candidate=overlapCandidate(yaml,now);
+      if (candidate) concurrencyCandidates.push({file,...candidate});
+    } catch (error) {
+      invalid.push({file,reason:'concurrency-heuristic-failed',message:error.message});
+    }
     const crons = [];
     for (const detail of details) {
       try {crons.push({...detail, opportunities30d:estimate(detail.cron,now,detail.timezone)});}
@@ -116,6 +163,8 @@ function inventory(directory = path.join(ROOT,'.github/workflows'), now = new Da
     workflowsScanned:files.length,scheduledWorkflows:items.length,
     scheduledOpportunities30d:items.reduce((n,x)=>n+x.opportunities30d,0),
     highFrequency:items.filter(x=>x.opportunities30d>720),invalid,top25:items.slice(0,25),
+    scheduleOverlapCandidates:concurrencyCandidates.sort((a,b)=>a.minScheduledGapMinutes-b.minScheduledGapMinutes).slice(0,50),
+    totalScheduleOverlapCandidates:concurrencyCandidates.length,
   };
 }
 function main() {
@@ -123,8 +172,8 @@ function main() {
   const dest = process.env.ZION_GHA_REPORT_PATH || path.join(ROOT,'automation/reports/gha-workflow-cost-estimate-latest.json');
   fs.mkdirSync(path.dirname(dest),{recursive:true});
   fs.writeFileSync(dest,JSON.stringify(output,null,2)+'\n');
-  console.log(JSON.stringify({workflowsScanned:output.workflowsScanned,scheduledWorkflows:output.scheduledWorkflows,scheduledOpportunities30d:output.scheduledOpportunities30d,highFrequency:output.highFrequency.length,invalid:output.invalid.length}));
+  console.log(JSON.stringify({workflowsScanned:output.workflowsScanned,scheduledWorkflows:output.scheduledWorkflows,scheduledOpportunities30d:output.scheduledOpportunities30d,highFrequency:output.highFrequency.length,overlapCandidates:output.totalScheduleOverlapCandidates,invalid:output.invalid.length}));
   if (output.invalid.length) process.exitCode=1;
 }
-module.exports = {scalar,scheduleDetails,schedules,field,parseCron,estimate,inventory,main};
+module.exports = {scalar,scheduleDetails,schedules,field,parseCron,estimate,minUtcScheduledGap,overlapCandidate,inventory,main};
 if(require.main === module) main();
