@@ -368,6 +368,15 @@ export default function HomePage() {
 
             {/* ── Secondary CTAs — extra discovery links ── */}
             <div className="flex flex-wrap justify-center gap-3 mt-2">
+              <Link href="/apps-network/" className="px-4 py-2 rounded-full bg-cyan-500/20 border border-cyan-500/40 text-cyan-200 text-sm hover:bg-cyan-500/30 hover:text-white transition-all font-medium">
+                🧩 Apps Network
+              </Link>
+              <Link href="/discovery/" className="px-4 py-2 rounded-full bg-emerald-500/20 border border-emerald-500/40 text-emerald-200 text-sm hover:bg-emerald-500/30 hover:text-white transition-all font-medium">
+                🎯 Free Discovery
+              </Link>
+              <Link href="/apps/operations-reliability-ai-2026.html" className="px-4 py-2 rounded-full bg-sky-500/20 border border-sky-500/40 text-sky-200 text-sm hover:bg-sky-500/30 hover:text-white transition-all font-medium">
+                🛠 Operations & Reliability
+              </Link>
               <Link href="/dashboard" className="px-4 py-2 rounded-full bg-purple-500/20 border border-purple-500/40 text-purple-300 text-sm hover:bg-purple-500/30 hover:text-white transition-all font-medium">
                 ⚡ Agent Dashboard
               </Link>
