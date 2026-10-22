@@ -108,7 +108,36 @@ assert_money_path() {
 
 assert_money_path services/ai-automation/index.html
 assert_money_path plans/index.html
-assert_money_path discovery/index.html
+
+# Discovery is the canonical free entry point. Guard it as a substantial
+# static page with the approved free/no-card contract, not as a paid money path.
+assert_free_discovery_path() {
+  local f="out/discovery/index.html"
+  if [ ! -f "$f" ]; then
+    echo "ERROR: missing free Discovery path out/discovery/index.html" >&2
+    exit 1
+  fi
+  local sz
+  sz=$(wc -c < "$f" | tr -d ' ')
+  if [ "$sz" -lt 5120 ]; then
+    echo "ERROR: out/discovery/index.html is stub-sized (${sz}B < 5KB)" >&2
+    exit 1
+  fi
+  if ! grep -Fq 'Free AI & Automation Discovery' "$f" \
+    || ! grep -Fq 'No payment or meeting is required.' "$f" \
+    || ! grep -Fq 'Discovery remains free.' "$f"; then
+    echo "ERROR: out/discovery/index.html missing approved Free Discovery contract" >&2
+    exit 1
+  fi
+  if grep -Fi 'http-equiv="refresh"' "$f" >/dev/null \
+    || grep -Fi "http-equiv='refresh'" "$f" >/dev/null \
+    || grep -Fq 'PLACEHOLDER' "$f"; then
+    echo "ERROR: out/discovery/index.html looks like a meta-refresh / PLACEHOLDER stub redirect" >&2
+    exit 1
+  fi
+  echo "OK free Discovery path (${sz}B)"
+}
+assert_free_discovery_path
 
 # P0 2026-09-21: reject the broken Next.js homepage shell and require sealed
 # commercial markers before any Pages publish. Does not touch field-services.
@@ -128,10 +157,9 @@ assert_family_a_home() {
     echo "ERROR: out/index.html contains /_next/ (broken Next shell)" >&2
     exit 1
   fi
-  if ! grep -Fq 'Discovery $99' "$f"; then
-    echo "ERROR: out/index.html missing Family A marker Discovery \$99" >&2
-    exit 1
-  fi
+  # Approved policy reconciliation: Discovery remains free; all other guards stay.
+  python3 scripts/test-free-discovery-home.py
+  python3 scripts/assert-free-discovery-home.py "$f"
   if ! grep -Fq '/assets/css/site.css' "$f"; then
     echo "ERROR: out/index.html missing /assets/css/site.css" >&2
     exit 1
@@ -172,5 +200,10 @@ assert_aaa_official_ladder() {
 assert_family_a_home
 assert_mit_fgv
 assert_aaa_official_ladder
+
+# Approved scoped app-evaluation publication; preserve all safety guards above.
+node scripts/test-network-evaluation.cjs
+node scripts/bootstrap-network-evaluation.cjs out
+node scripts/verify-network-evaluation-artifact.cjs out
 
 echo "Prepared out ($(find out -type f | wc -l) files)"
