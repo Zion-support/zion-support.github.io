@@ -102,3 +102,49 @@ test('PR workflow only scans changed service pages and has no schedule or write 
  assert.doesNotMatch(yaml,/\n\s*schedule:/);
  assert.doesNotMatch(yaml,/\n\s*issues:\s*write/);
 });
+
+
+test('nested merge-conflict markers on service pages are rejected with line-only evidence',()=>{
+ const page=[
+  '<<<<<<< HEAD','<<<<<<< HEAD',
+  'import type { Metadata } from "next";',
+  '=======','>>>>>>> a37db',
+  '=======','>>>>>>> 39bf07ce',
+  ''
+ ].join('\n');
+ assert.deepEqual(inspectPage(page),[1,2,4,5,6,7].map(line=>({
+  line,rule:'unresolved-merge-conflict-marker'
+ })));
+ assert.ok(!JSON.stringify(inspectPage(page)).includes('39bf07ce'));
+});
+test('merge-looking strings and comments cannot trigger a false conflict finding',()=>{
+ const page=[
+  "const text = '<<<<<<< HEAD';",
+  '// >>>>>>> explanatory example',
+  "const separator = '=======';",
+  '  // =======',
+  ''
+ ].join('\n');
+ assert.deepEqual(inspectPage(page),[]);
+});
+test('raw JSON-LD and conflict marker errors have stable line order',()=>{
+ const page='<<<<<<< HEAD\n'+raw+'\n=======\n>>>>>>> abcdef';
+ const found=inspectPage(page);
+ assert.deepEqual(found.map(x=>x.line),[1,3,5,6]);
+ assert.deepEqual(found.map(x=>x.rule),[
+  'unresolved-merge-conflict-marker','raw-json-ld-jsx-object',
+  'unresolved-merge-conflict-marker','unresolved-merge-conflict-marker'
+ ]);
+});
+test('changed service page with only conflict markers blocks the guard',()=>{
+ const temp=fs.mkdtempSync(path.join(os.tmpdir(),'zion-conflict-'));
+ try {
+  const page=path.join(temp,'app/services/example/page.tsx');
+  fs.mkdirSync(path.dirname(page),{recursive:true});
+  fs.writeFileSync(page,'<<<<<<< HEAD\nexport default function Page() {}\n=======\n>>>>>>> other\n');
+  const result=inspectFiles(['app/services/example/page.tsx'],temp);
+  assert.equal(result.status,'blocked');
+  assert.equal(result.issuesFound,3);
+  assert.ok(result.findings.every(x=>x.rule==='unresolved-merge-conflict-marker'));
+ } finally {fs.rmSync(temp,{recursive:true,force:true});}
+});
