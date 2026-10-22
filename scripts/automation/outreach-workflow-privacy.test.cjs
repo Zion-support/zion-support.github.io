@@ -3,6 +3,8 @@ const test = require('node:test');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
+const os = require('node:os');
+const { spawnSync } = require('node:child_process');
 
 const workflowPath = path.resolve(__dirname, '../../.github/workflows/outreach-live-llm-tailoring.yml');
 const workflow = fs.readFileSync(workflowPath, 'utf8');
@@ -67,4 +69,42 @@ test('health-report JSON contains only fixed Boolean/status fields', () => {
   assert.match(workflow, /'gmail_token_present':\s*None/);
   assert.match(workflow, /'gmail_auth_error_present':\s*None/);
   assert.doesNotMatch(workflow, /'llm_readiness':\s*r/);
+});
+
+test('live health-summary Python produces only redacted fixed-schema output on sensitive fixture', () => {
+  const lines = workflow.split(/\r?\n/);
+  const start = lines.findIndex(line => line.trim() === "python - <<'PY'");
+  const end = lines.findIndex((line, i) => i > start && line.trim() === 'PY');
+  assert.ok(start >= 0 && end > start, 'inline Python script must exist');
+  const python = lines.slice(start + 1, end).map(line => line.replace(/^ {10}/, '')).join('\n');
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'zion-outreach-redaction-'));
+  try {
+    const processed = path.join(dir, 'outreach_monitor', 'processed');
+    fs.mkdirSync(processed, { recursive: true });
+    fs.writeFileSync(path.join(processed, 'llm_tailoring_readiness.json'),
+      JSON.stringify({ local_gmail_modules: { token_exists: true,
+        auth_error: 'SECRET_TOKEN_email@private.example' }, customer_email: 'private@customer.example' }));
+    fs.writeFileSync(path.join(processed, 'sent_ledger.jsonl'),
+      JSON.stringify({ to: 'private@customer.example', subject: 'PRIVATE_SUBJECT', access_token: 'SECRET_TOKEN' }));
+    const result = spawnSync('python3', ['-c', python],
+      { cwd: dir, encoding: 'utf8', env: { ...process.env, WORKER_STEP_OUTCOME: 'failure' } });
+    assert.equal(result.status, 0, result.stderr);
+    const reportText = fs.readFileSync(path.join(dir, 'outreach-health-summary.json'), 'utf8');
+    const report = JSON.parse(reportText);
+    assert.equal(report.worker_step_outcome, 'failure');
+    assert.equal(report.sent_ledger_present, true);
+    assert.equal(report.readiness_parse_ok, true);
+    assert.equal(report.gmail_auth_error_present, true);
+    const observed = reportText + result.stdout + result.stderr;
+    for (const secret of ['SECRET_TOKEN', 'private@customer.example', 'email@private.example', 'PRIVATE_SUBJECT']) {
+      assert.ok(!observed.includes(secret), 'private fixture content leaked: ' + secret);
+    }
+    assert.deepEqual(Object.keys(report).sort(), [
+      'checked_at', 'dry_run_ledger_present', 'gmail_auth_error_present',
+      'gmail_token_present', 'methodology', 'readiness_parse_ok',
+      'readiness_report_present', 'sent_ledger_present', 'worker_step_outcome',
+    ].sort());
+  } finally {
+    fs.rmSync(dir, { recursive: true, force: true });
+  }
 });
