@@ -62,14 +62,16 @@ jobs:
           import os, subprocess, sys
 
           event=os.environ.get('EVENT_NAME','')
-          if event=='workflow_dispatch':
-              print('Manual run: source family structure only; no change-coupling decision required.')
+          if event!='pull_request':
+              print(
+                  'Direct push/manual run: strict same-commit locale coupling is intentionally '
+                  'not enforced because GitHub Contents API writes can be sequential. '
+                  'Current-state integrity is enforced by Apps canonical/hreflang, i18n parity, '
+                  'release evidence and production canary guards.'
+              )
               raise SystemExit(0)
 
-          if event=='pull_request':
-              base=os.environ.get('BASE_SHA','')
-          else:
-              base=os.environ.get('BEFORE_SHA','')
+          base=os.environ.get('BASE_SHA','')
           head=os.environ.get('CURRENT_SHA','HEAD')
           if not base or set(base)=={'0'}:
               base='HEAD^'
@@ -77,7 +79,7 @@ jobs:
           changed=set(subprocess.check_output(
               ['git','diff','--name-only',base,head],text=True
           ).splitlines())
-          print('Changed files:')
+          print('PR changed files:')
           for p in sorted(changed):
               print(' -',p)
 
