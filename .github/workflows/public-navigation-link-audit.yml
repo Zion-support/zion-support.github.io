@@ -25,7 +25,7 @@ jobs:
           import html.parser, urllib.request, urllib.parse, urllib.error, sys
           from concurrent.futures import ThreadPoolExecutor
           base='https://ziontechgroup.com'
-          seeds=['/','/apps/','/discovery/']
+          seeds=['/','/about','/services']
           headers={'User-Agent':'Zion-Public-Link-Audit/1.0'}
           class Links(html.parser.HTMLParser):
               def __init__(self):
@@ -36,7 +36,7 @@ jobs:
                   if value: self.links.append(value)
           def fetch(url):
               request=urllib.request.Request(url,headers=headers)
-              with urllib.request.urlopen(request,timeout=18) as response:
+              with urllib.request.urlopen(request,timeout=12) as response:
                   return response.status,response.read(2_000_000).decode('utf-8','replace')
           discovered=set()
           for path in seeds:
@@ -47,14 +47,14 @@ jobs:
                   for href in parser.links:
                       target=urllib.parse.urljoin(url,href)
                       parts=urllib.parse.urlsplit(target)
-                      if parts.scheme=='https' and parts.netloc=='ziontechgroup.com':
+                      if parts.scheme=='https' and parts.netloc=='ziontechgroup.com' and not parts.query:
                           clean=urllib.parse.urlunsplit((parts.scheme,parts.netloc,parts.path,parts.query,''))
                           discovered.add(clean)
                   print(f'{path}: HTTP {status}, internal links collected')
               except Exception as exc:
                   print(f'::error title=Navigation source unavailable::{path}: {exc}')
                   sys.exit(1)
-          candidates=sorted(discovered)[:35]
+          candidates=sorted(discovered)[:25]
           if not candidates:
               print('::error::No internal navigation links discovered')
               sys.exit(1)
