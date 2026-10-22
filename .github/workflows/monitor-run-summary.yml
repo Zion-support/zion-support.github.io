@@ -1,0 +1,55 @@
+name: Monitor Run Summary
+
+on:
+  workflow_run:
+    workflows:
+      - Public Site Smoke Check
+      - Dependency Security Baseline
+      - Public Sitemap Integrity
+      - Public Navigation Link Audit
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: monitor-run-summary
+  cancel-in-progress: false
+
+jobs:
+  summarize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Summarize completed monitoring run
+        env:
+          EVENT_PATH: ${{ github.event_path }}
+          EVENT_NAME: ${{ github.event_name }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json,os
+          from pathlib import Path
+          event=json.loads(Path(os.environ['EVENT_PATH']).read_text())
+          run=event.get('workflow_run',{})
+          if not run:
+              print('Manual dispatch: no upstream workflow_run to summarize.')
+              raise SystemExit(0)
+          name=str(run.get('name','unknown'))
+          conclusion=str(run.get('conclusion','unknown'))
+          url=str(run.get('html_url',''))
+          number=run.get('run_number','unknown')
+          allowed={'Public Site Smoke Check','Dependency Security Baseline','Public Sitemap Integrity','Public Navigation Link Audit'}
+          if name not in allowed:
+              print('Unexpected workflow; ignoring.')
+              raise SystemExit(0)
+          summary=Path(os.environ['GITHUB_STEP_SUMMARY'])
+          summary.write_text('## Zion monitor result\n\n' + '\n'.join(['| Field | Value |','|---|---|',f'| Workflow | {name} |',f'| Run | {number} |',f'| Conclusion | {conclusion} |',f'| Evidence | {url} |']) + '\n')
+          print(f'{name}: {conclusion} ({url})')
+          if conclusion not in {'success','skipped'}:
+              print(f'::error title=Zion monitor needs attention::{name} concluded {conclusion}. Inspect {url}')
+              raise SystemExit(1)
+          PY

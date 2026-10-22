@@ -1,0 +1,78 @@
+name: Public Sitemap Integrity
+
+on:
+  schedule:
+    - cron: '17 11 * * 3'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: public-sitemap-integrity
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Validate sitemap XML and sampled URLs
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import sys, urllib.request, urllib.parse, xml.etree.ElementTree as ET
+          from concurrent.futures import ThreadPoolExecutor
+          base='https://ziontechgroup.com'
+          host=urllib.parse.urlsplit(base).netloc
+          headers={'User-Agent':'Zion-Public-Sitemap-Integrity/1.1'}
+          def get(url):
+              with urllib.request.urlopen(urllib.request.Request(url,headers=headers),timeout=18) as response:
+                  return response.status,response.read(4000000)
+          def valid(url):
+              p=urllib.parse.urlsplit(url)
+              return p.scheme=='https' and p.netloc==host
+          def parse(body):
+              root=ET.fromstring(body)
+              kind=root.tag.split('}')[-1]
+              locs=[n.text.strip() for n in root.iter() if n.tag.split('}')[-1]=='loc' and n.text]
+              return kind,locs
+          try:
+              _,body=get(base+'/sitemap.xml')
+              kind,locs=parse(body)
+              if kind=='sitemapindex':
+                  indexes=locs[:10]
+                  if not indexes or not all(valid(x) for x in indexes):
+                      raise ValueError('Invalid sitemap index entries')
+                  urls=[]
+                  for url in indexes:
+                      _,part=get(url)
+                      child_kind,child_locs=parse(part)
+                      if child_kind!='urlset': raise ValueError('Nested or unexpected sitemap index')
+                      urls.extend(child_locs)
+              elif kind=='urlset':
+                  urls=locs
+              else:
+                  raise ValueError('Unsupported sitemap root '+kind)
+              if not urls: raise ValueError('No sitemap URLs')
+              if not all(valid(x) for x in urls):
+                  raise ValueError('Sitemap contains off-domain or non-HTTPS URLs')
+              sample=list(dict.fromkeys(urls))[:15]
+              def check(url):
+                  try:
+                      status,_=get(url)
+                      return (url,status,'')
+                  except Exception as exc:
+                      return (url,0,str(exc))
+              with ThreadPoolExecutor(max_workers=4) as pool:
+                  results=list(pool.map(check,sample))
+              failures=[r for r in results if r[1]<200 or r[1]>=400]
+              print(f'Sitemap URLs: {len(urls)}; checked: {len(sample)}; failures: {len(failures)}')
+              for url,status,error in failures:
+                  print(f'::error title=Sitemap URL unavailable::{url} status={status} {error}')
+              if failures: sys.exit(1)
+          except Exception as exc:
+              print(f'::error title=Sitemap integrity failure::{exc}')
+              sys.exit(1)
+          PY
