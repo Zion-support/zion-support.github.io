@@ -26,7 +26,7 @@ jobs:
           now=datetime.datetime.now(datetime.timezone.utc)
           repo=os.environ['GH_REPOSITORY']
           token=os.environ['GH_TOKEN']
-          workflows={'public-site-smoke-check.yml':3,'dependency-security-baseline.yml':10,'public-sitemap-integrity.yml':10,'public-navigation-link-audit.yml':10,'public-tls-certificate-expiry.yml':7,'apps-production-content-canary.yml':3,'apps-rollback-readiness.yml':3,'apps-i18n-release-contract.yml':10,'apps-release-evidence-manifest.yml':10,'apps-deployed-source-drift.yml':3}
+          workflows={'public-site-smoke-check.yml':3,'dependency-security-baseline.yml':10,'public-sitemap-integrity.yml':10,'public-navigation-link-audit.yml':10,'public-tls-certificate-expiry.yml':7,'apps-production-content-canary.yml':3,'apps-rollback-readiness.yml':3,'apps-i18n-release-contract.yml':10,'apps-release-evidence-manifest.yml':10,'apps-deployed-source-drift.yml':3,'actions-queue-pressure.yml':2}
           failures=[]
           rows=['## Zion monitor freshness','','| Workflow | Latest completed run | Age | Status |','|---|---|---|---|']
           for filename,max_days in workflows.items():
