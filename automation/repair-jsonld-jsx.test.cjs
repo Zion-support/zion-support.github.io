@@ -1,7 +1,8 @@
 'use strict';
 const test=require('node:test');
 const assert=require('node:assert/strict');
-const {repairSource,validateRelativePath}=require('./repair-jsonld-jsx.cjs');
+const {repairSource,validateRelativePath,validateLocalSourceFile}=require('./repair-jsonld-jsx.cjs');
+const fs=require('node:fs'),os=require('node:os'),path=require('node:path');
 const data='{"@context":"https://schema.org","@type":"Service","serviceType":"AI/IT","name":"Zion Service"}';
 const line='<script type="application/ld+json">'+data+'</script>';
 test('only raw valid Service JSON-LD JSX is transformed',()=>{
@@ -52,5 +53,40 @@ test('JSON-LD with a different context or top-level array cannot be repaired',()
  for(const data of invalid){
   const content='<script type="application/ld+json">'+data+'</script>';
   assert.equal(repairSource(content).changed,0);
+ }
+});
+
+
+test('unsafe raw HTML closers in JSON values are refused',()=>{
+ for(const sample of ['</script><img src=x onerror=alert(1)>','<script>alert(1)</script>']){
+  const json=JSON.stringify({'@context':'https://schema.org','@type':'Service',description:sample});
+  const input='<script type="application/ld+json">'+json+'</script>';
+  const result=repairSource(input);
+  assert.equal(result.changed,0);
+  assert.equal(result.content,input);
+ }
+ const encoded=JSON.stringify({'@context':'https://schema.org','@type':'Service',description:'<script'})
+   .replace(/</g,'\\u003c');
+ const input='<script type="application/ld+json">'+encoded+'</script>';
+ assert.equal(repairSource(input).changed,0);
+});
+test('optional write mode refuses symlinks escaping generated service directory',()=>{
+ const serviceBase=path.resolve(__dirname,'../app/services');
+ const dir=fs.mkdtempSync(path.join(serviceBase,'jsonld-safe-fixture-'));
+ const outsideDir=fs.mkdtempSync(path.join(os.tmpdir(),'jsonld-outside-'));
+ const name=path.basename(dir);
+ const rel='app/services/'+name+'/page.tsx';
+ try {
+  const target=path.join(dir,'page.tsx');
+  fs.writeFileSync(target,'fixture text');
+  assert.equal(validateLocalSourceFile(rel),target);
+  fs.unlinkSync(target);
+  const secret=path.join(outsideDir,'outside.txt');
+  fs.writeFileSync(secret,'private fixture data');
+  fs.symlinkSync(secret,target);
+  assert.throws(()=>validateLocalSourceFile(rel));
+ } finally {
+  fs.rmSync(dir,{recursive:true,force:true});
+  fs.rmSync(outsideDir,{recursive:true,force:true});
  }
 });
