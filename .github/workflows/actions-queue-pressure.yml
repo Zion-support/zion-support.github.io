@@ -1,0 +1,154 @@
+name: GitHub Actions queue pressure
+
+"on":
+  schedule:
+    - cron: '9 * * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/actions-queue-pressure.yml'
+
+permissions:
+  contents: read
+  actions: read
+  issues: write
+
+concurrency:
+  group: actions-queue-pressure
+  cancel-in-progress: true
+
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Measure repository Actions backlog
+        id: pressure
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPOSITORY: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import datetime,json,os,sys,urllib.request
+          from pathlib import Path
+
+          repo=os.environ['GH_REPOSITORY']
+          token=os.environ['GH_TOKEN']
+          now=datetime.datetime.now(datetime.timezone.utc)
+          headers={
+            'Authorization':'Bearer '+token,
+            'Accept':'application/vnd.github+json',
+            'X-GitHub-Api-Version':'2022-11-28',
+            'User-Agent':'Zion-Actions-Queue-Pressure/1.0',
+          }
+
+          def api(path):
+            req=urllib.request.Request('https://api.github.com'+path,headers=headers)
+            with urllib.request.urlopen(req,timeout=20) as resp:
+              return json.load(resp)
+
+          runs=[]
+          for page in range(1,4):
+            data=api(f'/repos/{repo}/actions/runs?branch=main&per_page=100&page={page}')
+            batch=data.get('workflow_runs',[])
+            runs.extend(batch)
+            if len(batch)<100: break
+
+          active=[r for r in runs if r.get('status') in {'queued','pending','in_progress','waiting','requested'}]
+          queued=[r for r in active if r.get('status') in {'queued','pending','waiting','requested'}]
+          in_progress=[r for r in active if r.get('status')=='in_progress']
+
+          def age_minutes(run):
+            raw=run.get('created_at') or run.get('run_started_at')
+            if not raw: return 0.0
+            dt=datetime.datetime.fromisoformat(raw.replace('Z','+00:00'))
+            return max(0.0,(now-dt).total_seconds()/60)
+
+          oldest=max((age_minutes(r) for r in queued),default=0.0)
+          queue_count=len(queued)
+          active_count=len(active)
+
+          # Alert only for material repository-wide congestion.
+          # A small busy queue is normal in this repo.
+          severity='ok'
+          if queue_count>=35 or oldest>=45:
+            severity='critical'
+          elif queue_count>=20 or oldest>=25:
+            severity='warning'
+
+          report={
+            'schema':'zion.actions.queue-pressure.v1',
+            'generated_at_utc':now.isoformat(),
+            'branch':'main',
+            'sampled_runs':len(runs),
+            'queue_count':queue_count,
+            'in_progress_count':len(in_progress),
+            'active_count':active_count,
+            'oldest_queued_minutes':round(oldest,1),
+            'severity':severity,
+            'oldest_queued':[
+              {
+                'id':r.get('id'),
+                'name':r.get('name'),
+                'status':r.get('status'),
+                'created_at':r.get('created_at'),
+                'html_url':r.get('html_url'),
+                'age_minutes':round(age_minutes(r),1),
+              }
+              for r in sorted(queued,key=age_minutes,reverse=True)[:15]
+            ],
+          }
+
+          out=Path('actions-queue-pressure.json')
+          out.write_text(json.dumps(report,indent=2,sort_keys=True)+'\n',encoding='utf-8')
+
+          summary=Path(os.environ['GITHUB_STEP_SUMMARY'])
+          summary.write_text(
+            '## GitHub Actions queue pressure\n\n'
+            f"- Severity: **{severity}**\n"
+            f"- Queued/pending: **{queue_count}**\n"
+            f"- In progress: **{len(in_progress)}**\n"
+            f"- Oldest queued: **{oldest:.1f} min**\n"
+          )
+          print(json.dumps(report,indent=2))
+          if severity!='ok':
+            print(f'::error title=Actions queue pressure::{severity}: queued={queue_count}, oldest={oldest:.1f}m')
+            sys.exit(1)
+          PY
+
+      - name: Upload queue evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: actions-queue-pressure-${{ github.run_id }}
+          path: actions-queue-pressure.json
+          if-no-files-found: error
+          retention-days: 14
+
+      - name: Open or update queue incident
+        if: failure()
+        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8.0.0
+        with:
+          script: |
+            const title='GitHub Actions queue pressure elevated';
+            const marker='<!-- actions-queue-pressure -->';
+            const {data:issues}=await github.rest.issues.listForRepo({...context.repo,state:'open',per_page:100});
+            const existing=issues.find(i=>i.title===title || (i.body||'').includes(marker));
+            const body=marker+'\nRepository-wide Actions queue pressure crossed the configured threshold. Avoid unnecessary retry pushes; inspect queued runs and GitHub Status before changing source.\n\nRun: '+context.serverUrl+'/'+context.repo.owner+'/'+context.repo.repo+'/actions/runs/'+context.runId;
+            if(existing) await github.rest.issues.createComment({...context.repo,issue_number:existing.number,body});
+            else await github.rest.issues.create({...context.repo,title,body});
+
+      - name: Close prior queue incident on recovery
+        if: success()
+        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8.0.0
+        with:
+          script: |
+            const title='GitHub Actions queue pressure elevated';
+            const {data:issues}=await github.rest.issues.listForRepo({...context.repo,state:'open',per_page:100});
+            for(const issue of issues.filter(i=>i.title===title)){
+              await github.rest.issues.createComment({...context.repo,issue_number:issue.number,body:'Recovered: queue pressure is back within threshold on run '+context.runId+'.'});
+              await github.rest.issues.update({...context.repo,issue_number:issue.number,state:'closed'});
+            }
