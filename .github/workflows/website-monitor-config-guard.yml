@@ -15,6 +15,9 @@ on:
       - '.github/workflows/public-tls-certificate-expiry.yml'
       - '.github/workflows/monitor-run-summary.yml'
       - '.github/workflows/website-monitor-freshness.yml'
+      - '.github/workflows/apps-release-evidence-manifest.yml'
+      - '.github/workflows/apps-production-content-canary.yml'
+      - '.github/workflows/apps-i18n-release-contract.yml'
   workflow_dispatch:
 
 permissions:
@@ -25,7 +28,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
           persist-credentials: false
       - name: Validate monitor workflow YAML and required safeguards
@@ -43,6 +46,9 @@ jobs:
             .github/workflows/public-tls-certificate-expiry.yml
             .github/workflows/monitor-run-summary.yml
             .github/workflows/website-monitor-freshness.yml
+            .github/workflows/apps-release-evidence-manifest.yml
+            .github/workflows/apps-production-content-canary.yml
+            .github/workflows/apps-i18n-release-contract.yml
           ]
           failures = []
           files.each do |file|
