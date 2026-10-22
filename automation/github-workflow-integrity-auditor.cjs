@@ -43,6 +43,23 @@ function scheduledMinutesPerHour(expression) {
   }
   return minutes.size;
 }
+function identifyNoopScript(scriptText) {
+  // A tightly scoped signal: known stub that explicitly succeeds.
+  if (scriptText.length > 3000) return false;
+  return /\b(?:stub|not implemented)\b/i.test(scriptText) &&
+    /(?:process\.exitCode\s*=\s*0\b|process\.exit\s*\(\s*0\s*\))/m.test(scriptText);
+}
+function workflowScriptDependencies(yaml) {
+  const scripts = new Set();
+  for (const line of yaml.split(/\r?\n/)) {
+    const cleaned = line.trim();
+    if (!cleaned || cleaned.startsWith('#')) continue;
+    // Match an actual shell command, including a block scalar under "run: |".
+    const m = cleaned.match(/^(?:(?:-\s*)?run:\s*)?node\s+(scripts\/automation\/[A-Za-z0-9_./-]+\.cjs)(?:\s|$)/);
+    if (m && !m[1].includes('..')) scripts.add(m[1]);
+  }
+  return [...scripts];
+}
 function audit(dir=path.join(ROOT,'.github/workflows')){
   const files=fs.readdirSync(dir).filter(f=>/\.ya?ml$/i.test(f)).sort();
   const findings=[];
@@ -62,6 +79,16 @@ function audit(dir=path.join(ROOT,'.github/workflows')){
     if(!/^permissions\s*:/m.test(content))findings.push({severity:'warning',type:'implicit-permissions',file,detail:'Explicit permissions not found'});
     if(scheduledCrons(content).some(cron=>scheduledMinutesPerHour(cron)>1))
       findings.push({severity:'warning',type:'high-frequency',file,detail:'on.schedule has multiple triggers per eligible hour'});
+    const root=path.resolve(dir,'..','..');
+    for (const script of workflowScriptDependencies(content)) {
+      const full=path.resolve(root,script);
+      if (!full.startsWith(root + path.sep) || !fs.existsSync(full)) continue;
+      const stat=fs.statSync(full);
+      if (!stat.isFile() || stat.size>3000) continue;
+      if (identifyNoopScript(fs.readFileSync(full,'utf8')))
+        findings.push({severity:'warning',type:'workflow-calls-successful-noop',file,
+          script,detail:'Workflow invokes stub implementation that reports exit success; expected alert/recovery effect is not evidenced'});
+    }
   }
   return {generatedAt:new Date().toISOString(),status:findings.length?'needs_review':'healthy',workflowCount:files.length,counts:{totalFindings:findings.length},findings:findings.slice(0,100),truncatedFindings:Math.max(0,findings.length-100),methodology:'Bounded static text checks only; no YAML semantic proof, no runtime assurance, no personal data'};
 }
@@ -70,5 +97,5 @@ function main(){
  fs.mkdirSync(path.dirname(dest),{recursive:true});fs.writeFileSync(dest,JSON.stringify(report,null,2)+'\n');
  console.log(JSON.stringify({status:report.status,workflows:report.workflowCount,findings:report.counts.totalFindings}));
 }
-module.exports={audit,main,scheduledCrons,scheduledMinutesPerHour};
+module.exports={audit,main,scheduledCrons,scheduledMinutesPerHour,identifyNoopScript,workflowScriptDependencies};
 if(require.main===module)main();
