@@ -1,0 +1,231 @@
+name: Apps link graph orphan guard
+
+"on":
+  pull_request:
+    paths:
+      - 'public/**/*.html'
+      - 'public/apps/apps-sitemap.xml'
+      - '.github/workflows/apps-link-graph-orphan-guard.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'public/**/*.html'
+      - 'public/apps/apps-sitemap.xml'
+      - '.github/workflows/apps-link-graph-orphan-guard.yml'
+  schedule:
+    - cron: '37 9 * * 4'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: apps-link-graph-orphan-guard-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  graph:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+
+      - name: Build Apps navigation graph
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p automation/reports
+          python3 - <<'PY'
+          from pathlib import Path
+          from html.parser import HTMLParser
+          from urllib.parse import urljoin, urlsplit
+          import json, sys, xml.etree.ElementTree as ET
+
+          BASE='https://ziontechgroup.com'
+          PUBLIC=Path('public')
+
+          class Links(HTMLParser):
+              def __init__(self):
+                  super().__init__()
+                  self.hrefs=[]
+              def handle_starttag(self,tag,attrs):
+                  if tag.lower()!='a':
+                      return
+                  href=dict(attrs).get('href')
+                  if href:
+                      self.hrefs.append(href)
+
+          def source_route(path: Path) -> str:
+              rel=path.relative_to(PUBLIC).as_posix()
+              if rel=='index.html':
+                  return '/'
+              if rel.endswith('/index.html'):
+                  return '/'+rel[:-10]
+              return '/'+rel
+
+          files={}
+          for path in PUBLIC.rglob('*.html'):
+              route=source_route(path)
+              files[route]=path
+
+          edges={}
+          inbound={route:set() for route in files}
+          for route,path in files.items():
+              parser=Links()
+              try:
+                  parser.feed(path.read_text(encoding='utf-8',errors='replace'))
+              except Exception as exc:
+                  print(f'::error::{path}: HTML parse failed: {exc}')
+                  raise SystemExit(1)
+              targets=set()
+              base_url=BASE+route
+              for href in parser.hrefs:
+                  if href.startswith(('mailto:','tel:','javascript:','#')):
+                      continue
+                  absolute=urljoin(base_url,href)
+                  p=urlsplit(absolute)
+                  if p.scheme not in {'http','https'} or p.netloc!='ziontechgroup.com':
+                      continue
+                  target=p.path or '/'
+                  if target.endswith('/index.html'):
+                      target=target[:-10]
+                  targets.add(target)
+                  if target in inbound:
+                      inbound[target].add(route)
+              edges[route]=sorted(targets)
+
+          critical=[
+              '/apps/',
+              '/pt/apps/',
+              '/es/apps/',
+              '/fr/apps/',
+              '/de/apps/',
+              '/discovery/',
+              '/pt/discovery/',
+              '/es/discovery/',
+              '/fr/discovery/',
+              '/de/discovery/',
+              '/apps/content-hub.html',
+              '/apps/operations-reliability-ai-2026.html',
+              '/apps/operations-reliability-ai-2026-pt.html',
+              '/apps/operations-reliability-ai-2026-es.html',
+              '/apps/operations-reliability-ai-2026-fr.html',
+              '/apps/operations-reliability-ai-2026-de.html',
+          ]
+
+          errors=[]
+          for route in critical:
+              if route not in files:
+                  errors.append(f'critical route has no public source: {route}')
+              elif len(inbound.get(route,set()))==0:
+                  errors.append(f'critical route is orphaned (zero inbound internal links): {route}')
+
+          locale_contract={
+              '/apps/':('/discovery/','/apps/operations-reliability-ai-2026.html'),
+              '/pt/apps/':('/pt/discovery/','/apps/operations-reliability-ai-2026-pt.html'),
+              '/es/apps/':('/es/discovery/','/apps/operations-reliability-ai-2026-es.html'),
+              '/fr/apps/':('/fr/discovery/','/apps/operations-reliability-ai-2026-fr.html'),
+              '/de/apps/':('/de/discovery/','/apps/operations-reliability-ai-2026-de.html'),
+          }
+          for hub,(discovery,ops) in locale_contract.items():
+              links=set(edges.get(hub,[]))
+              for target in (discovery,ops):
+                  if target not in links:
+                      errors.append(f'{hub} missing required navigation to {target}')
+              if hub!='/apps/' and '/apps/' not in links:
+                  errors.append(f'{hub} missing EN/x-default Apps link /apps/')
+
+          reverse_ops={
+              '/apps/operations-reliability-ai-2026.html':'/apps/',
+              '/apps/operations-reliability-ai-2026-pt.html':'/pt/apps/',
+              '/apps/operations-reliability-ai-2026-es.html':'/es/apps/',
+              '/apps/operations-reliability-ai-2026-fr.html':'/fr/apps/',
+              '/apps/operations-reliability-ai-2026-de.html':'/de/apps/',
+          }
+          for ops,hub in reverse_ops.items():
+              if hub not in set(edges.get(ops,[])):
+                  errors.append(f'{ops} missing backlink to locale hub {hub}')
+
+          sitemap=Path('public/apps/apps-sitemap.xml')
+          sitemap_routes=[]
+          if not sitemap.is_file():
+              errors.append('missing public/apps/apps-sitemap.xml')
+          else:
+              root=ET.parse(sitemap).getroot()
+              for el in root.iter():
+                  if el.tag.split('}')[-1]!='loc' or not el.text:
+                      continue
+                  p=urlsplit(el.text.strip())
+                  if p.netloc=='ziontechgroup.com':
+                      sitemap_routes.append(p.path or '/')
+              for route in critical:
+                  if route not in sitemap_routes:
+                      errors.append(f'critical route missing from Apps sitemap: {route}')
+
+          report={
+              'schema':'zion.apps.link-graph.v1',
+              'source_html_count':len(files),
+              'edge_count':sum(len(v) for v in edges.values()),
+              'critical_routes':[
+                  {
+                      'route':route,
+                      'source':str(files.get(route,'')),
+                      'inbound_count':len(inbound.get(route,set())),
+                      'inbound_from':sorted(inbound.get(route,set()))[:25],
+                  }
+                  for route in critical
+              ],
+              'errors':errors,
+          }
+          Path('automation/reports/apps-link-graph.json').write_text(
+              json.dumps(report,indent=2,sort_keys=True)+'\n',
+              encoding='utf-8'
+          )
+
+          for row in report['critical_routes']:
+              print(f"{row['route']}: inbound={row['inbound_count']} source={row['source']}")
+          if errors:
+              for error in errors:
+                  print('::error::'+error)
+              raise SystemExit(1)
+          print('Apps link graph orphan guard: PASS')
+          PY
+
+      - name: Upload graph evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: apps-link-graph-${{ github.run_id }}
+          path: automation/reports/apps-link-graph.json
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Open or update orphan-route issue
+        if: failure()
+        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8.0.0
+        with:
+          script: |
+            const title='Apps navigation graph regression';
+            const marker='<!-- apps-link-graph-orphan-guard -->';
+            const {data:issues}=await github.rest.issues.listForRepo({...context.repo,state:'open',per_page:100});
+            const existing=issues.find(i=>i.title===title || (i.body||'').includes(marker));
+            const body=marker+'\nA critical Apps/Discovery/Operations route is orphaned, missing its locale navigation contract, or absent from the Apps sitemap. Review the graph artifact before editing links.\n\nRun: '+context.serverUrl+'/'+context.repo.owner+'/'+context.repo.repo+'/actions/runs/'+context.runId;
+            if(existing){
+              await github.rest.issues.createComment({...context.repo,issue_number:existing.number,body});
+            } else {
+              await github.rest.issues.create({...context.repo,title,body,labels:['automation']});
+            }
+
+      - name: Close prior orphan-route issue on recovery
+        if: success()
+        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8.0.0
+        with:
+          script: |
+            const title='Apps navigation graph regression';
+            const {data:issues}=await github.rest.issues.listForRepo({...context.repo,state:'open',per_page:100});
+            for(const issue of issues.filter(i=>i.title===title)){
+              await github.rest.issues.createComment({...context.repo,issue_number:issue.number,body:'Recovered: Apps navigation graph is healthy on run '+context.runId+'.'});
+              await github.rest.issues.update({...context.repo,issue_number:issue.number,state:'closed'});
+            }
