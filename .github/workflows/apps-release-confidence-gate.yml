@@ -37,7 +37,6 @@ jobs:
             const owner = context.repo.owner;
             const repo = context.repo.repo;
             const now = Date.now();
-            const graceMs = 20 * 60 * 1000;
             const advisoryFreshMs = 7 * 24 * 60 * 60 * 1000;
 
             async function runsFor(workflow_id, per_page=30) {
@@ -46,6 +45,14 @@ jobs:
               });
               return data.workflow_runs || [];
             }
+
+            const {data:repoRunsData} = await github.rest.actions.listWorkflowRunsForRepo({
+              owner, repo, per_page:100
+            });
+            const repoRuns = repoRunsData.workflow_runs || [];
+            const queueCount = repoRuns.filter(r => ['queued','pending','waiting','requested'].includes(r.status)).length;
+            const graceMinutes = queueCount >= 35 ? 180 : (queueCount >= 20 ? 120 : 20);
+            const graceMs = graceMinutes * 60 * 1000;
 
             const deploys = (await runsFor('gh-pages.yml', 30))
               .filter(r => r.status === 'completed' && r.conclusion === 'success');
@@ -73,17 +80,41 @@ jobs:
             for (const [key, def] of Object.entries(defs)) {
               const runs = await runsFor(def.file, 40);
               const completed = runs.filter(r => r.status === 'completed');
+              const active = runs.filter(r => ['queued','pending','in_progress','waiting','requested'].includes(r.status));
               let chosen = null;
 
               if (def.afterDeploy) {
                 chosen = completed.find(r => Date.parse(r.updated_at || r.created_at) >= deployAt - 60000) || null;
                 if (!chosen) {
-                  if (ageMs < graceMs) {
-                    signals[key] = {state:'PENDING', reason:'no completed run after latest deploy within grace window'};
+                  const activeAfterDeploy = active.find(r => Date.parse(r.updated_at || r.created_at) >= deployAt - 60000) || null;
+                  if (activeAfterDeploy) {
+                    signals[key] = {
+                      state:'PENDING',
+                      reason:'post-deploy signal is still active in Actions',
+                      run_id:activeAfterDeploy.id,
+                      status:activeAfterDeploy.status,
+                      head_sha:activeAfterDeploy.head_sha,
+                      html_url:activeAfterDeploy.html_url
+                    };
                     pending = true;
                     continue;
                   }
-                  signals[key] = {state:'MISSING', reason:'no completed run after latest deploy'};
+                  if (ageMs < graceMs) {
+                    signals[key] = {
+                      state:'PENDING',
+                      reason:'no completed run after latest deploy within adaptive grace window',
+                      queue_count:queueCount,
+                      grace_minutes:graceMinutes
+                    };
+                    pending = true;
+                    continue;
+                  }
+                  signals[key] = {
+                    state:'MISSING',
+                    reason:'no completed or active run after latest deploy beyond adaptive grace window',
+                    queue_count:queueCount,
+                    grace_minutes:graceMinutes
+                  };
                   hardFail = true;
                   continue;
                 }
@@ -131,7 +162,8 @@ jobs:
               schema:'zion.apps.release-confidence.v1',
               generated_at_utc:new Date().toISOString(),
               status,
-              grace_minutes:20,
+              grace_minutes:graceMinutes,
+              actions_queue_count:queueCount,
               latest_successful_deploy:{
                 run_id:deploy.id,
                 head_sha:deploy.head_sha,
@@ -161,6 +193,7 @@ jobs:
                 ...Object.entries(signals).map(([k,v]) => [k,v.state,String(v.run_id || '-')])
               ])
               .addRaw('\n**Overall:** '+status+'\n')
+              .addRaw('**Actions queued/pending:** '+queueCount+' · adaptive grace: '+graceMinutes+' min\n')
               .write();
 
             core.setOutput('status', status);
