@@ -71,6 +71,7 @@ jobs:
           sparse-checkout: |
             scripts/automation/validate-coalescer-staging.cjs
             scripts/automation/validate-coalescer-staging.test.cjs
+          sparse-checkout-cone-mode: false
 
       - name: Fetch pinned staging commit without checkout
         env:
@@ -102,6 +103,9 @@ jobs:
           FILE_COUNT: ${{ steps.validate.outputs.file_count }}
           ADDED: ${{ steps.validate.outputs.added }}
           DELETED: ${{ steps.validate.outputs.deleted }}
+          REVIEW_TIER: ${{ steps.validate.outputs.review_tier }}
+          REVIEW_REASONS: ${{ steps.validate.outputs.review_reasons }}
+          STAGED_BYTES: ${{ steps.validate.outputs.staged_bytes }}
         run: |
           set -euo pipefail
           # Avoid a time-of-check/time-of-use branch movement before PR creation.
@@ -125,6 +129,9 @@ jobs:
             echo "- Validated head: \`$VALIDATED_HEAD\`"
             echo "- Changed files: **$FILE_COUNT**"
             echo "- Diff: **+$ADDED / -$DELETED**"
+            echo "- Staged blob bytes: **$STAGED_BYTES**"
+            echo "- Advisory review tier: **$REVIEW_TIER**"
+            echo "- Review signals: $REVIEW_REASONS"
             if [ -n "$SOURCE_RUN_URL" ]; then echo "- Source run: $SOURCE_RUN_URL"; fi
             echo
             echo "### Safety"
