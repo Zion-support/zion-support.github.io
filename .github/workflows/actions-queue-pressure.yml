@@ -70,6 +70,15 @@ jobs:
           oldest=max((age_minutes(r) for r in queued),default=0.0)
           queue_count=len(queued)
           active_count=len(active)
+          by_workflow={}
+          for run in queued:
+            name=run.get('name') or 'unknown'
+            entry=by_workflow.setdefault(name,{'workflow':name,'queued':0,'oldest_minutes':0.0})
+            entry['queued']+=1
+            entry['oldest_minutes']=max(entry['oldest_minutes'],age_minutes(run))
+          top_workflows=sorted(by_workflow.values(),key=lambda x:(-x['queued'],-x['oldest_minutes'],x['workflow']))[:10]
+          for entry in top_workflows:
+            entry['oldest_minutes']=round(entry['oldest_minutes'],1)
 
           # Alert only for material repository-wide congestion.
           # A small busy queue is normal in this repo.
@@ -85,6 +94,7 @@ jobs:
             'branch':'all',
             'sampled_runs':len(runs),
             'queue_count':queue_count,
+            'top_queued_workflows':top_workflows,
             'in_progress_count':len(in_progress),
             'active_count':active_count,
             'oldest_queued_minutes':round(oldest,1),
