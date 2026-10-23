@@ -20,6 +20,7 @@ function fail(message, details = {}) {
 const branch = process.env.STAGING_BRANCH || '';
 const group = process.env.POLICY_GROUP || '';
 const base = process.env.BASE_REF || 'origin/main';
+const stagingRef = process.env.STAGING_REF || 'refs/remotes/origin/coalescer-target';
 
 if (!branch.startsWith('automation/staging/') || !/^automation\/staging\/[a-z0-9][a-z0-9._-]{1,62}$/.test(branch)) {
   fail('staging_branch must match automation/staging/<safe-slug>', { branch });
@@ -51,13 +52,21 @@ const deny = [
   /^automation\/(?!reports\/)/,
 ];
 
-const head = git(['rev-parse', 'HEAD']);
-const mergeBase = git(['merge-base', base, 'HEAD']);
-const names = git(['diff', '--name-only', '--diff-filter=ACMRT', mergeBase, 'HEAD']);
+// This script is sourced from trusted main, never from the staging checkout.
+// Resolve the pinned staging ref fetched by the trusted workflow, not HEAD.
+const head = git(['rev-parse', '--verify', `${stagingRef}^{commit}`]);
+const mergeBase = git(['merge-base', base, head]);
+// --no-renames exposes BOTH ends of a rename; include deletions so deleting a
+// guard/workflow cannot be hidden by a separate allowed addition.
+const names = git(['diff', '--no-renames', '--name-only', '--diff-filter=ACDMRT', mergeBase, head]);
 const files = names ? names.split('\n').filter(Boolean) : [];
 
 if (!files.length) fail('No staged changes found relative to main.', { branch, head, mergeBase });
 if (files.length > 200) fail('Too many changed files for one coalesced PR.', { count: files.length });
+// Newlines/tabs/nonstandard Git path quoting can evade line-oriented diff parsing.
+// Fail closed for coalescer candidates; these paths can use the normal reviewed PR route.
+const unsafeNames = files.filter((file) => !/^[A-Za-z0-9._/-]+$/.test(file));
+if (unsafeNames.length) fail('Unusual or unsafe file paths require an ordinary reviewed PR.', { unsafeNames });
 
 const denied = files.filter((file) => deny.some((rule) => rule.test(file)));
 if (denied.length) fail('Protected paths detected.', { denied });
@@ -65,13 +74,24 @@ if (denied.length) fail('Protected paths detected.', { denied });
 const outside = files.filter((file) => !policies[group].some((rule) => rule.test(file)));
 if (outside.length) fail('Files outside the selected policy group.', { group, outside });
 
-const numstat = git(['diff', '--numstat', mergeBase, 'HEAD']);
+// Reject executable bits, symlinks and submodules even inside an allowed folder.
+// They can cross review boundaries or execute after a later workflow change.
+const changedTree = git(['ls-tree', '-r', head, '--', ...files]);
+const unusualModes = changedTree.split('\n').filter(Boolean).filter((line) =>
+  !/^100644 blob [0-9a-f]{40}\t/.test(line)
+);
+if (unusualModes.length) fail('Executables, symlinks or submodules require an ordinary reviewed PR.');
+
+const numstat = git(['diff', '--no-renames', '--numstat', mergeBase, head]);
 let added = 0;
 let deleted = 0;
 for (const line of numstat.split('\n').filter(Boolean)) {
   const [a, d] = line.split('\t');
-  if (a !== '-') added += Number(a || 0);
-  if (d !== '-') deleted += Number(d || 0);
+  if (!/^\d+$/.test(a) || !/^\d+$/.test(d)) {
+    fail('Binary or unparseable changes are not eligible for automated coalescing.');
+  }
+  added += Number(a);
+  deleted += Number(d);
 }
 if (added + deleted > 12000) fail('Diff exceeds the 12,000-line coalescing safety budget.', { added, deleted });
 
