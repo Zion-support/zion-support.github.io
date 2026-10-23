@@ -3,13 +3,41 @@ name: Apps link graph orphan guard
 "on":
   pull_request:
     paths:
-      - 'public/**/*.html'
+      - 'public/index.html'
+      - 'public/en/index.html'
+      - 'public/es/index.html'
+      - 'public/fr/index.html'
+      - 'public/de/index.html'
+      - 'public/apps/**'
+      - 'public/pt/apps/**'
+      - 'public/es/apps/**'
+      - 'public/fr/apps/**'
+      - 'public/de/apps/**'
+      - 'public/discovery/**'
+      - 'public/pt/discovery/**'
+      - 'public/es/discovery/**'
+      - 'public/fr/discovery/**'
+      - 'public/de/discovery/**'
       - 'public/apps/apps-sitemap.xml'
       - '.github/workflows/apps-link-graph-orphan-guard.yml'
   push:
     branches: [main]
     paths:
-      - 'public/**/*.html'
+      - 'public/index.html'
+      - 'public/en/index.html'
+      - 'public/es/index.html'
+      - 'public/fr/index.html'
+      - 'public/de/index.html'
+      - 'public/apps/**'
+      - 'public/pt/apps/**'
+      - 'public/es/apps/**'
+      - 'public/fr/apps/**'
+      - 'public/de/apps/**'
+      - 'public/discovery/**'
+      - 'public/pt/discovery/**'
+      - 'public/es/discovery/**'
+      - 'public/fr/discovery/**'
+      - 'public/de/discovery/**'
       - 'public/apps/apps-sitemap.xml'
       - '.github/workflows/apps-link-graph-orphan-guard.yml'
   schedule:
