@@ -61,6 +61,20 @@ jobs:
           queued=[r for r in active if r.get('status') in {'queued','pending','waiting','requested'}]
           in_progress=[r for r in active if r.get('status')=='in_progress']
 
+          recent_window=now-datetime.timedelta(minutes=60)
+          def completed_at(run):
+            raw=run.get('updated_at') or run.get('run_started_at') or run.get('created_at')
+            if not raw: return datetime.datetime.min.replace(tzinfo=datetime.timezone.utc)
+            return datetime.datetime.fromisoformat(raw.replace('Z','+00:00'))
+          recent=[r for r in runs if completed_at(r)>=recent_window]
+          cancelled=[r for r in recent if r.get('conclusion')=='cancelled']
+          failed=[r for r in recent if r.get('conclusion')=='failure']
+          cancel_by_name={}
+          for r in cancelled:
+            name=r.get('name') or 'unknown'
+            cancel_by_name[name]=cancel_by_name.get(name,0)+1
+          top_cancelled=sorted(cancel_by_name.items(),key=lambda kv:(-kv[1],kv[0]))[:10]
+
           def age_minutes(run):
             raw=run.get('created_at') or run.get('run_started_at')
             if not raw: return 0.0
@@ -74,9 +88,9 @@ jobs:
           # Alert only for material repository-wide congestion.
           # A small busy queue is normal in this repo.
           severity='ok'
-          if queue_count>=35 or oldest>=45:
+          if queue_count>=35 or oldest>=45 or len(cancelled)>=25:
             severity='critical'
-          elif queue_count>=20 or oldest>=25:
+          elif queue_count>=20 or oldest>=25 or len(cancelled)>=12:
             severity='warning'
 
           report={
@@ -89,6 +103,10 @@ jobs:
             'active_count':active_count,
             'oldest_queued_minutes':round(oldest,1),
             'severity':severity,
+            'recent_window_minutes':60,
+            'recent_cancelled_count':len(cancelled),
+            'recent_failed_count':len(failed),
+            'top_cancelled_workflows':[{'name':name,'count':count} for name,count in top_cancelled],
             'oldest_queued':[
               {
                 'id':r.get('id'),
@@ -112,10 +130,13 @@ jobs:
             f"- Queued/pending: **{queue_count}**\n"
             f"- In progress: **{len(in_progress)}**\n"
             f"- Oldest queued: **{oldest:.1f} min**\n"
+            f"- Cancelled in last 60 min: **{len(cancelled)}**\n"
+            f"- Failed in last 60 min: **{len(failed)}**\n"
+            + ("- Top cancellations: " + ", ".join(f"{name} ({count})" for name,count in top_cancelled) + "\n" if top_cancelled else "")
           )
           print(json.dumps(report,indent=2))
           if severity!='ok':
-            print(f'::error title=Actions queue pressure::{severity}: queued={queue_count}, oldest={oldest:.1f}m')
+            print(f'::error title=Actions queue pressure::{severity}: queued={queue_count}, oldest={oldest:.1f}m, cancelled60m={len(cancelled)}')
             sys.exit(1)
           PY
 
@@ -137,7 +158,7 @@ jobs:
             const marker='<!-- actions-queue-pressure -->';
             const {data:issues}=await github.rest.issues.listForRepo({...context.repo,state:'open',per_page:100});
             const existing=issues.find(i=>i.title===title || (i.body||'').includes(marker));
-            const body=marker+'\nRepository-wide Actions queue pressure crossed the configured threshold. Avoid unnecessary retry pushes; inspect queued runs and GitHub Status before changing source.\n\nRun: '+context.serverUrl+'/'+context.repo.owner+'/'+context.repo.repo+'/actions/runs/'+context.runId;
+            const body=marker+'\nRepository-wide Actions pressure crossed the configured threshold (queue age/count or cancellation storm). Avoid unnecessary retry pushes; inspect the JSON artifact for top cancelled workflows and GitHub Status before changing source.\n\nRun: '+context.serverUrl+'/'+context.repo.owner+'/'+context.repo.repo+'/actions/runs/'+context.runId;
             if(existing) await github.rest.issues.update({...context.repo,issue_number:existing.number,body});
             else await github.rest.issues.create({...context.repo,title,body});
 

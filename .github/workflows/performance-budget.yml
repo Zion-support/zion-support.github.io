@@ -1,6 +1,10 @@
 permissions:
   contents: read
 name: Autonomous Performance Budget Enforcer with CI Gate
+concurrency:
+  group: performance-budget-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
 "on":
   pull_request:
     branches:
@@ -12,29 +16,40 @@ jobs:
   performance-budget:
     name: Performance Budget Check
     runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      NEXT_TELEMETRY_DISABLED: "1"
     permissions:
       contents: write
       pull-requests: write
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v6.0.2
+      uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
     - name: Setup Node.js
-      uses: actions/setup-node@v6.3.0
+      uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
       with:
         node-version: '22'
         cache: npm
     - name: Install dependencies
-      run: npm ci --include=dev
+      run: npm ci --include=dev --prefer-offline --no-audit --fund=false
     - name: Build site
       env:
         NODE_OPTIONS: --max-old-space-size=12288 --max-semi-space-size=64
         NEXT_BUILD_WORKER_COUNT: "1"
       run: |
         set -euo pipefail
-        if npm run build; then
+        set +e
+        timeout --signal=TERM --kill-after=30s 8m npm run build
+        build_code=$?
+        set -e
+        if [ "$build_code" -eq 0 ]; then
           echo "Next.js build succeeded"
         else
-          echo "::warning::Next.js build failed (heap OOM on 90k+ file tree); falling back to serving the static repository root."
+          if [ "$build_code" -eq 124 ] || [ "$build_code" -eq 137 ]; then
+            echo "::warning title=Build time budget reached::Next.js build exceeded the 8 minute CI budget; using the static repository root for this performance check."
+          else
+            echo "::warning title=Build unavailable::Next.js build exited with code $build_code; using the static repository root for this performance check."
+          fi
           rm -rf out
         fi
     - name: Start local server (background)
@@ -53,11 +68,15 @@ jobs:
       id: perf
       continue-on-error: true
       run: |
-        node automation/performance-budget-enforcer.cjs > /tmp/perf-output.txt || true
-        echo "exit_code=$?" >> $GITHUB_OUTPUT
+        set +e
+        node automation/performance-budget-enforcer.cjs > /tmp/perf-output.txt 2>&1
+        code=$?
+        set -e
+        echo "exit_code=$code" >> "$GITHUB_OUTPUT"
+        cat /tmp/perf-output.txt
     - name: Upload performance artifacts
       if: always()
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
       with:
         name: performance-budget-state
         path: |
@@ -68,6 +87,11 @@ jobs:
       if: github.event_name == 'pull_request' && steps.perf.outputs.exit_code != '0'
       run: |
         echo "Comment posted by enforcer script."
+    - name: Enforce performance budget result
+      if: steps.perf.outputs.exit_code != '0'
+      run: |
+        echo "::error title=Performance budget exceeded::Enforcer exited with code ${{ steps.perf.outputs.exit_code }}"
+        exit 1
     - name: Notify Telegram on failure
       if: failure()
       run: node automation/notify-telegram.js "⚠️ Performance budget check failed. See CI logs."
@@ -76,4 +100,3 @@ jobs:
       if: success()
       run: node automation/notify-telegram.js "⚡ Performance budget check passed."
       continue-on-error: true
-    timeout-minutes: 20
