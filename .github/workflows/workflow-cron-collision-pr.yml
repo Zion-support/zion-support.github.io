@@ -1,55 +1,38 @@
 name: Workflow cron collision report (PR / main)
 
-permissions:
-  contents: read
-
 "on":
   pull_request:
     paths:
       - '.github/workflows/**'
       - 'automation/ai-cron-collision-tuner.cjs'
-  push:
-    branches: [main]
-    paths:
-      - '.github/workflows/**'
-      - 'automation/ai-cron-collision-tuner.cjs'
+      - 'automation/ai-cron-collision-tuner.test.cjs'
   workflow_dispatch:
 
+permissions:
+  contents: read
+
+# PR runs do not cancel the existing weekly main-branch evidence.
 concurrency:
-  group: workflow-cron-collision-pr-${{ github.ref }}
+  group: cron-collision-pr-${{ github.event_name == 'pull_request' && format('pr-{0}', github.event.pull_request.number) || 'manual' }}
   cancel-in-progress: true
 
 jobs:
   collision-report:
     runs-on: ubuntu-latest
     timeout-minutes: 5
-    env:
-      NEXT_TELEMETRY_DISABLED: "1"
     steps:
-      - name: Checkout
+      - name: Checkout (no persisted token)
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
-
-      - name: Setup Node.js
-        if: hashFiles('automation/ai-cron-collision-tuner.cjs') != ''
-        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
         with:
-          node-version-file: '.nvmrc'
-          cache: npm
-          cache-dependency-path: package-lock.json
+          persist-credentials: false
 
-      - name: Install dependencies
-        if: hashFiles('automation/ai-cron-collision-tuner.cjs') != ''
-        run: npm ci --prefer-offline --no-audit --fund=false
+      - name: Offline cron model tests
+        run: node --test automation/ai-cron-collision-tuner.test.cjs
 
-      - name: Generate cron collision report
-        run: |
-          if [ -f automation/ai-cron-collision-tuner.cjs ]; then
-            node automation/ai-cron-collision-tuner.cjs
-          else
-            echo "automation/ai-cron-collision-tuner.cjs is not on this branch; skipping"
-          fi
+      - name: Analyze theoretical cron collisions (read-only)
+        run: node automation/ai-cron-collision-tuner.cjs
 
-      - name: Upload cron collision report
+      - name: Upload sanitized cron evidence
         if: always()
         uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
         with:
@@ -57,5 +40,5 @@ jobs:
           path: |
             automation/reports/cron-collision-latest.json
             automation/reports/cron-collision-latest.md
-          if-no-files-found: ignore
+          if-no-files-found: error
           retention-days: 14
