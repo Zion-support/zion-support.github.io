@@ -1,6 +1,6 @@
 # AI Content Burst Ultra
 # Manual fallback burst (no LLM) retained for deliberate use when scheduled writers are unavailable.
-# Commit + push + deploy. Concurrency: content-commit.
+# Manual fallback only. All autonomous writers share one concurrency group.
 
 name: AI Content Burst Ultra
 

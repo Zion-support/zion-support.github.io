@@ -1,7 +1,7 @@
 # AI Content Burst High Frequency
 # Template + industry content at four queue-aware daily windows without extra LLM cost.
 # Runs content burst (template blog, case studies, industry pages, services advertiser, optional product pages).
-# Commit + push to main + deploy. Concurrency: content-commit.
+# Commit/push behavior is unchanged. All autonomous writers share one concurrency group.
 
 name: AI Content Burst High Frequency
 
@@ -85,8 +85,20 @@ jobs:
                   "User-Agent":"zion-scheduled-content-pressure-gate",
               },
           )
-          with urllib.request.urlopen(req, timeout=20) as response:
-              payload=json.load(response)
+          try:
+              with urllib.request.urlopen(req, timeout=20) as response:
+                  payload=json.load(response)
+          except Exception as exc:
+              reason=f"api-unavailable: {type(exc).__name__}"
+              with open(os.environ["GITHUB_OUTPUT"],"a",encoding="utf-8") as f:
+                  f.write("proceed=false\n")
+                  f.write(f"reason={reason}\n")
+              with open(os.environ["GITHUB_STEP_SUMMARY"],"a",encoding="utf-8") as f:
+                  f.write("## Scheduled content pressure gate\n\n")
+                  f.write(f"- Decision: **skip scheduled content** ({reason})\n")
+                  f.write("- The gate fails closed without converting an optional content run into a repository failure.\n")
+              print(reason)
+              raise SystemExit(0)
 
           now=datetime.datetime.now(datetime.timezone.utc)
           active_status={"queued","pending","in_progress","waiting","requested"}
