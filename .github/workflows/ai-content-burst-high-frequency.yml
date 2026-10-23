@@ -60,7 +60,8 @@ jobs:
       NEXT_BUILD_WORKER_COUNT: 1
     steps:
       - name: Record pressure decision
-        run: echo "Queue gate: ${{ needs.pressure-gate.outputs.reason }}" >> "$GITHUB_STEP_SUMMARY"
+        run: |
+          echo "Queue gate: ${{ needs.pressure-gate.outputs.reason }}" >> "$GITHUB_STEP_SUMMARY"
 
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
