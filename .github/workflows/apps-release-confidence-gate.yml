@@ -138,6 +138,12 @@ jobs:
                 updated_at:deploy.updated_at,
                 html_url:deploy.html_url
               },
+              rollback_review:{
+                candidate_sha:deploy.head_sha,
+                automatic_rollback_allowed:false,
+                compare_url:context.serverUrl+'/'+owner+'/'+repo+'/compare/'+deploy.head_sha+'...main',
+                operator_note:'Review current incident evidence and changed commits before any revert; never auto-merge or auto-rollback.'
+              },
               signals
             };
 
@@ -184,7 +190,18 @@ jobs:
               ...context.repo,state:'open',per_page:100
             });
             const existing=issues.find(i=>i.title===title || (i.body||'').includes(marker));
-            const body=marker+'\nA critical post-deploy signal is failed or missing beyond the grace period. Inspect the confidence artifact before changing source or attempting rollback.\n\nRun: '+context.serverUrl+'/'+context.repo.owner+'/'+context.repo.repo+'/actions/runs/'+context.runId;
+            const runs = await github.rest.actions.listWorkflowRuns({
+              ...context.repo, workflow_id:'gh-pages.yml', branch:'main', status:'success', per_page:10
+            });
+            const deploy=(runs.data.workflow_runs || [])[0];
+            const candidate=deploy ? deploy.head_sha : null;
+            const compare=candidate
+              ? context.serverUrl+'/'+context.repo.owner+'/'+context.repo.repo+'/compare/'+candidate+'...main'
+              : null;
+            const rollback = candidate
+              ? '\n\n**Rollback review candidate:** `'+candidate+'`\n**Compare candidate → main:** '+compare+'\nAutomatic rollback is **not allowed**. Review the diff and incident evidence before preparing any revert.'
+              : '\n\nNo successful deploy candidate could be resolved automatically; inspect deploy history manually.';
+            const body=marker+'\nA critical post-deploy signal is failed or missing beyond the grace period. Inspect the confidence artifact before changing source or attempting rollback.'+rollback+'\n\nRun: '+context.serverUrl+'/'+context.repo.owner+'/'+context.repo.repo+'/actions/runs/'+context.runId;
             if(existing){
               await github.rest.issues.createComment({...context.repo,issue_number:existing.number,body});
             }else{
