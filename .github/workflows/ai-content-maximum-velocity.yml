@@ -46,90 +46,10 @@ permissions:
 
 jobs:
   pressure-gate:
-    name: Queue pressure preflight
-    runs-on: ubuntu-latest
-    timeout-minutes: 3
-    permissions:
-      actions: read
-      contents: read
-    outputs:
-      proceed: ${{ steps.gate.outputs.proceed }}
-      reason: ${{ steps.gate.outputs.reason }}
-    steps:
-      - name: Skip noncritical scheduled content during Actions pressure
-        id: gate
-        env:
-          GH_TOKEN: ${{ github.token }}
-          EVENT_NAME: ${{ github.event_name }}
-          REPOSITORY: ${{ github.repository }}
-          RUN_ID: ${{ github.run_id }}
-        run: |
-          set -euo pipefail
-          if [ "$EVENT_NAME" = "workflow_dispatch" ]; then
-            echo "proceed=true" >> "$GITHUB_OUTPUT"
-            echo "reason=manual-dispatch" >> "$GITHUB_OUTPUT"
-            echo "Manual dispatch bypasses the scheduled-pressure gate." >> "$GITHUB_STEP_SUMMARY"
-            exit 0
-          fi
-          python3 - <<'PY'
-          import datetime, json, os, urllib.request
+    uses: ./.github/workflows/queue-pressure-gate.yml
+    with:
+      bypass: ${{ github.event_name == 'workflow_dispatch' }}
 
-          token=os.environ["GH_TOKEN"]
-          repo=os.environ["REPOSITORY"]
-          current=int(os.environ.get("RUN_ID") or 0)
-          req=urllib.request.Request(
-              f"https://api.github.com/repos/{repo}/actions/runs?per_page=100",
-              headers={
-                  "Accept":"application/vnd.github+json",
-                  "Authorization":f"Bearer {token}",
-                  "X-GitHub-Api-Version":"2022-11-28",
-                  "User-Agent":"zion-scheduled-content-pressure-gate",
-              },
-          )
-          try:
-              with urllib.request.urlopen(req, timeout=20) as response:
-                  payload=json.load(response)
-          except Exception as exc:
-              reason=f"api-unavailable: {type(exc).__name__}"
-              with open(os.environ["GITHUB_OUTPUT"],"a",encoding="utf-8") as f:
-                  f.write("proceed=false\n")
-                  f.write(f"reason={reason}\n")
-              with open(os.environ["GITHUB_STEP_SUMMARY"],"a",encoding="utf-8") as f:
-                  f.write("## Scheduled content pressure gate\n\n")
-                  f.write(f"- Decision: **skip scheduled content** ({reason})\n")
-                  f.write("- The gate fails closed without converting an optional content run into a repository failure.\n")
-              print(reason)
-              raise SystemExit(0)
-
-          now=datetime.datetime.now(datetime.timezone.utc)
-          active_status={"queued","pending","in_progress","waiting","requested"}
-          runs=[r for r in payload.get("workflow_runs",[]) if int(r.get("id") or 0)!=current]
-          active=[r for r in runs if r.get("status") in active_status]
-
-          def dt(value):
-              return datetime.datetime.fromisoformat(value.replace("Z","+00:00")) if value else now
-
-          oldest=max(((now-dt(r.get("created_at"))).total_seconds()/60 for r in active), default=0.0)
-          recent=[r for r in runs if (now-dt(r.get("updated_at") or r.get("created_at"))).total_seconds() <= 3600]
-          cancelled=[r for r in recent if r.get("conclusion")=="cancelled"]
-          critical=len(active)>=35 or oldest>=45 or len(cancelled)>=25
-          reason=f"active={len(active)}, oldest={oldest:.1f}m, cancelled60m={len(cancelled)}"
-          proceed="false" if critical else "true"
-
-          out=os.environ["GITHUB_OUTPUT"]
-          with open(out,"a",encoding="utf-8") as f:
-              f.write(f"proceed={proceed}\n")
-              f.write(f"reason={reason}\n")
-          summary=os.environ["GITHUB_STEP_SUMMARY"]
-          with open(summary,"a",encoding="utf-8") as f:
-              f.write("## Scheduled content pressure gate\n\n")
-              f.write(f"- {reason}\n")
-              f.write(f"- Decision: **{'skip scheduled content' if critical else 'proceed'}**\n")
-              f.write("- Thresholds mirror the critical queue policy: active>=35, oldest>=45m, cancellations60m>=25.\n")
-          print(reason)
-          if critical:
-              print("Queue pressure is critical; skipping this noncritical scheduled content run before checkout/install/build.")
-          PY
   maximum-velocity:
     needs: pressure-gate
     if: needs.pressure-gate.outputs.proceed == 'true'
