@@ -22,7 +22,7 @@ jobs:
         run: |
           set -euo pipefail
           python3 - <<'PY'
-          import datetime,json,os,urllib.request,sys
+          import datetime,json,os,urllib.request,urllib.error,sys
           now=datetime.datetime.now(datetime.timezone.utc)
           repo=os.environ['GH_REPOSITORY']
           token=os.environ['GH_TOKEN']
@@ -54,6 +54,29 @@ jobs:
                   status='OK' if age<=max_days else 'STALE'
                   rows.append('| '+filename+' | [run]('+latest['html_url']+') | '+format(age,'.1f')+' days | '+status+' |')
                   if age>max_days: failures.append(filename+' stale for '+format(age,'.1f')+' days')
+              except urllib.error.HTTPError as exc:
+                  if exc.code==404:
+                      history_url='https://api.github.com/repos/'+repo+'/commits?path=.github/workflows/'+filename+'&per_page=100'
+                      hreq=urllib.request.Request(history_url,headers={'Authorization':'Bearer '+token,'Accept':'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28','User-Agent':'Zion-Monitor-Freshness-Guard'})
+                      try:
+                          with urllib.request.urlopen(hreq,timeout=20) as hresponse:
+                              history=json.load(hresponse)
+                          dates=[c.get('commit',{}).get('committer',{}).get('date') for c in history]
+                          dates=[d for d in dates if d]
+                          if dates:
+                              oldest=min(datetime.datetime.fromisoformat(d.replace('Z','+00:00')) for d in dates)
+                              age_days=(now-oldest).total_seconds()/86400
+                              if age_days<=max_days:
+                                  rows.append('| '+filename+' | file exists; awaiting Actions registration | '+format(age_days,'.1f')+' days | GRACE |')
+                                  continue
+                          rows.append('| '+filename+' | unregistered | n/a | ERROR |')
+                          failures.append(filename+': workflow file exists but is not registered with GitHub Actions')
+                      except Exception as history_exc:
+                          rows.append('| '+filename+' | unavailable | n/a | ERROR |')
+                          failures.append(filename+': 404 plus history lookup failed: '+str(history_exc))
+                  else:
+                      rows.append('| '+filename+' | unavailable | n/a | ERROR |')
+                      failures.append(filename+': HTTP '+str(exc.code))
               except Exception as exc:
                   rows.append('| '+filename+' | unavailable | n/a | ERROR |')
                   failures.append(filename+': '+str(exc))
