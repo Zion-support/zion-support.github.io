@@ -1,5 +1,7 @@
 name: Queue Pressure Gate
 
+# Read-only reusable decision for OPTIONAL scheduled content publishing.
+# Deliberate manual bypass remains available, but never bypasses release checks.
 permissions:
   actions: read
   contents: read
@@ -67,62 +69,162 @@ jobs:
           fi
 
           python3 - <<'PY'
-          import datetime, json, os, urllib.request
-
-          token=os.environ["GH_TOKEN"]
-          repo=os.environ["REPOSITORY"]
-          current=int(os.environ.get("RUN_ID") or 0)
-          active_limit=int(os.environ["ACTIVE_THRESHOLD"])
-          oldest_limit=float(os.environ["OLDEST_THRESHOLD"])
-          cancel_limit=int(os.environ["CANCELLED_THRESHOLD"])
-
-          try:
-              req=urllib.request.Request(
-                  f"https://api.github.com/repos/{repo}/actions/runs?per_page=100",
-                  headers={
-                      "Accept":"application/vnd.github+json",
-                      "Authorization":f"Bearer {token}",
-                      "X-GitHub-Api-Version":"2022-11-28",
-                      "User-Agent":"zion-queue-pressure-gate",
-                  },
-              )
-              with urllib.request.urlopen(req, timeout=20) as response:
-                  payload=json.load(response)
-          except Exception as exc:
-              reason=f"api-unavailable:{type(exc).__name__}"
-              with open(os.environ["GITHUB_OUTPUT"],"a",encoding="utf-8") as f:
-                  f.write("proceed=false\n")
-                  f.write(f"reason={reason}\n")
-              with open(os.environ["GITHUB_STEP_SUMMARY"],"a",encoding="utf-8") as f:
-                  f.write("## Queue pressure gate\n\n")
-                  f.write(f"- Decision: **skip optional work** ({reason}).\n")
-                  f.write("- Telemetry failure is fail-closed but does not fail the workflow.\n")
-              print(reason)
-              raise SystemExit(0)
-
-          now=datetime.datetime.now(datetime.timezone.utc)
-          active_status={"queued","pending","in_progress","waiting","requested"}
-          runs=[r for r in payload.get("workflow_runs",[]) if int(r.get("id") or 0)!=current]
-          active=[r for r in runs if r.get("status") in active_status]
-
-          def dt(value):
-              return datetime.datetime.fromisoformat(value.replace("Z","+00:00")) if value else now
-
-          oldest=max(((now-dt(r.get("created_at"))).total_seconds()/60 for r in active), default=0.0)
-          recent=[r for r in runs if (now-dt(r.get("updated_at") or r.get("created_at"))).total_seconds() <= 3600]
-          cancelled=[r for r in recent if r.get("conclusion")=="cancelled"]
-          critical=len(active)>=active_limit or oldest>=oldest_limit or len(cancelled)>=cancel_limit
-          reason=f"active={len(active)},oldest={oldest:.1f}m,cancelled60m={len(cancelled)}"
-          proceed="false" if critical else "true"
-
-          with open(os.environ["GITHUB_OUTPUT"],"a",encoding="utf-8") as f:
-              f.write(f"proceed={proceed}\n")
-              f.write(f"reason={reason}\n")
-          with open(os.environ["GITHUB_STEP_SUMMARY"],"a",encoding="utf-8") as f:
-              f.write("## Queue pressure gate\n\n")
-              f.write(f"- Active: **{len(active)}** / critical >= {active_limit}\n")
-              f.write(f"- Oldest active: **{oldest:.1f}m** / critical >= {oldest_limit:.0f}m\n")
-              f.write(f"- Cancelled in 60m: **{len(cancelled)}** / critical >= {cancel_limit}\n")
-              f.write(f"- Decision: **{'skip optional work' if critical else 'proceed'}**\n")
-          print(reason)
+          """Read-only, fail-closed GitHub Actions congestion gate.
+          
+          Only used for optional content generation. Never bypasses release/security checks.
+          """
+          from datetime import datetime, timedelta, timezone
+          
+          ACTIVE = ('queued', 'pending', 'in_progress', 'waiting', 'requested')
+          
+          class GateError(ValueError):
+              pass
+          
+          
+          def _utc(value):
+              if not isinstance(value, str) or not value:
+                  raise GateError('missing-timestamp')
+              try:
+                  instant = datetime.fromisoformat(value.replace('Z', '+00:00'))
+              except ValueError:
+                  raise GateError('invalid-timestamp') from None
+              if instant.tzinfo is None:
+                  raise GateError('naive-timestamp')
+              return instant.astimezone(timezone.utc)
+          
+          
+          def _parse(response, expected_status=None):
+              if not isinstance(response, dict):
+                  raise GateError('invalid-response')
+              count = response.get('total_count')
+              runs = response.get('workflow_runs')
+              if type(count) is not int or count < 0 or not isinstance(runs, list):
+                  raise GateError('invalid-schema')
+              for run in runs:
+                  if not isinstance(run, dict) or not isinstance(run.get('id'), int):
+                      raise GateError('invalid-run')
+              return count, runs
+          
+          
+          def assess(fetch, now, current_run=0, active_limit=35, oldest_limit=45,
+                     cancellation_limit=25):
+              """fetch(status, per_page) returns decoded GET /actions/runs payload.
+          
+              Use status-filtered COUNT results first: newest-100 may miss old active runs.
+              Only inspect full active samples when total active is safely below limit.
+              """
+              if now.tzinfo is None:
+                  raise GateError('naive-clock')
+              for limit in (active_limit, oldest_limit, cancellation_limit):
+                  if not isinstance(limit, (int, float)) or limit <= 0:
+                      raise GateError('invalid-threshold')
+              counts = {}
+              for status in ACTIVE:
+                  count, _ = _parse(fetch(status, 1), status)
+                  counts[status] = count
+              active_count = sum(counts.values())
+              if active_count >= active_limit:
+                  return {'proceed': False, 'reason': f'active={active_count},status-count-pressure',
+                          'active_count': active_count, 'oldest_minutes': None,
+                          'cancelled_60m': None, 'counts': counts}
+          
+              # If the count fits below the limit, the complete active set fits in one
+              # API page per status. Refuse any incomplete/malformed response.
+              by_id = {}
+              for status in ACTIVE:
+                  if counts[status] == 0:
+                      continue
+                  if counts[status] > 100:
+                      raise GateError('active-sample-truncated')
+                  total, runs = _parse(fetch(status, 100), status)
+                  if total > 100 or len(runs) < counts[status] or len(runs) < total:
+                      raise GateError('active-sample-incomplete')
+                  for run in runs:
+                      if run['id'] != current_run:
+                          by_id[run['id']] = run
+              if len(by_id) >= active_limit:
+                  return {'proceed': False, 'reason': 'active-count-changed',
+                          'active_count': len(by_id), 'oldest_minutes': None,
+                          'cancelled_60m': None, 'counts': counts}
+          
+              oldest = 0.0
+              for run in by_id.values():
+                  age = (now - _utc(run.get('created_at'))).total_seconds() / 60
+                  oldest = max(oldest, age)
+              oldest = max(0.0, oldest)
+              # Read cancellations independently instead of relying on the newest-100
+              # runs across ALL statuses, which can contain only skipped/queued runs.
+              _, cancellations = _parse(fetch('cancelled', 100), 'cancelled')
+              cancelled_60m = 0
+              for run in cancellations:
+                  cancel_time = _utc(run.get('updated_at') or run.get('created_at'))
+                  if timedelta(0) <= now-cancel_time <= timedelta(minutes=60):
+                      cancelled_60m += 1
+              critical = oldest >= oldest_limit or cancelled_60m >= cancellation_limit
+              reason = f'active={len(by_id)},oldest={oldest:.1f}m,cancelled60m={cancelled_60m}'
+              return {'proceed': not critical, 'reason': reason,
+                      'active_count': len(by_id), 'oldest_minutes': round(oldest, 1),
+                      'cancelled_60m': cancelled_60m, 'counts': counts}
+          
+          
+          def run_gate_from_environment():
+              """Operational adapter; failures skip optional work with normal job success."""
+              import json
+              import os
+              import urllib.parse
+              import urllib.request
+          
+              reason = 'telemetry-error'
+              report = None
+              try:
+                  token = os.environ['GH_TOKEN']
+                  repository = os.environ['REPOSITORY']
+                  if not repository or '/' not in repository:
+                      raise GateError('invalid-repository')
+                  current = int(os.environ.get('RUN_ID') or 0)
+                  active_limit = int(os.environ['ACTIVE_THRESHOLD'])
+                  oldest_limit = float(os.environ['OLDEST_THRESHOLD'])
+                  cancel_limit = int(os.environ['CANCELLED_THRESHOLD'])
+                  now = datetime.now(timezone.utc)
+                  def fetch(status, per_page):
+                      query = {'per_page': per_page}
+                      if status is not None:
+                          query['status'] = status
+                      url = ('https://api.github.com/repos/' + repository + '/actions/runs?' +
+                             urllib.parse.urlencode(query))
+                      request = urllib.request.Request(url, headers={
+                          'Accept': 'application/vnd.github+json',
+                          'Authorization': 'Bearer ' + token,
+                          'X-GitHub-Api-Version': '2022-11-28',
+                          'User-Agent': 'zion-queue-pressure-gate',
+                      })
+                      with urllib.request.urlopen(request, timeout=10) as response:
+                          return json.load(response)
+                  report = assess(fetch, now, current_run=current,
+                                  active_limit=active_limit, oldest_limit=oldest_limit,
+                                  cancellation_limit=cancel_limit)
+                  reason = report['reason']
+              except Exception as e:
+                  report = {'proceed': False, 'reason': 'telemetry-error:' + type(e).__name__,
+                            'active_count': None, 'oldest_minutes': None,
+                            'cancelled_60m': None, 'counts': {}}
+                  reason = report['reason']
+              proceed = 'true' if report['proceed'] else 'false'
+              output = os.environ['GITHUB_OUTPUT']
+              summary = os.environ['GITHUB_STEP_SUMMARY']
+              with open(output, 'a', encoding='utf8') as f:
+                  f.write(f'proceed={proceed}\nreason={reason}\n')
+              with open(summary, 'a', encoding='utf8') as f:
+                  f.write('## Queue pressure gate\n\n')
+                  f.write('- Decision: **' + ('proceed' if report['proceed'] else 'skip optional work') + '**\n')
+                  f.write('- Evidence: ' + reason + '\n')
+                  f.write('- Counts: ' + json.dumps(report['counts'],sort_keys=True) + '\n')
+                  f.write('- Status-filtered totals protect against newest-100 truncation.\n')
+                  if reason.startswith('telemetry-error'):
+                      f.write('- API/telemetry uncertainty is fail-closed.\n')
+              print('queue gate: ' + proceed + ', ' + reason)
+          
+          
+          if __name__ == '__main__':
+              run_gate_from_environment()
           PY
