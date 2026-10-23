@@ -9,6 +9,8 @@ on:
   pull_request:
     paths:
       - 'scripts/test-discovery-live.cjs'
+      - 'apps/discovery-showcase*.html'
+      - 'public/apps/discovery-showcase*.html'
       - 'scripts/test-discovery-recommendation-routes.cjs'
       - 'scripts/test-mining-catalog.cjs'
       - 'content/communications-playbook.json'
@@ -37,11 +39,64 @@ jobs:
             /scripts/test-mining-catalog.cjs
             /content/communications-playbook.json
             /public/assets/js/discovery-delivery.js
+            /apps/discovery-showcase*.html
+            /public/apps/discovery-showcase*.html
           sparse-checkout-cone-mode: false
       - name: Setup Node
         uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
         with:
           node-version-file: '.nvmrc'
           package-manager-cache: false
+      - name: Pre-publication PR source and guard contract
+        if: github.event_name == 'pull_request'
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --check scripts/test-discovery-live.cjs
+          node --check scripts/test-discovery-recommendation-routes.cjs
+          node --check scripts/test-mining-catalog.cjs
+          node --check public/assets/js/discovery-delivery.js
+          node <<'NODE'
+          'use strict';
+          const assert=require('node:assert/strict'),fs=require('node:fs');
+          const langs=['en','pt','es','fr','de'];
+          const variants=['','-pt','-es','-fr','-de'];
+          const playbook=JSON.parse(fs.readFileSync('content/communications-playbook.json','utf8'));
+          const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+          for(const lang of langs){
+            const locale=playbook[lang];
+            assert(locale && locale.languages && locale.checklistTitle,lang+': missing playbook');
+            assert(Array.isArray(locale.descriptions) && locale.descriptions.length===4,lang+': incomplete workflows');
+          }
+          const module=fs.readFileSync('public/assets/js/discovery-delivery.js','utf8');
+          assert(module.includes('formsubmit.co/ajax/commercial@ziontechgroup.com'),'Shared commercial endpoint missing');
+          assert(!module.includes('carlos@ziontechgroup.com'),'Unexpected shared-module recipient');
+          const liveScript=fs.readFileSync('scripts/test-discovery-live.cjs','utf8');
+          assert(!/method\s*:\s*['"`]POST/i.test(liveScript),'Live smoke must not POST');
+          const files=variants.flatMap(suffix=>['apps/discovery-showcase'+suffix+'.html','public/apps/discovery-showcase'+suffix+'.html']);
+          const present=files.filter(file=>fs.existsSync(file));
+          if(present.length){
+            assert.equal(present.length,files.length,'Partial staged showcase publication; all source/public locale mirrors required');
+            for(let i=0;i<langs.length;i++){
+              const lang=langs[i], suffix=variants[i];
+              const source='apps/discovery-showcase'+suffix+'.html';
+              const mirror='public/apps/discovery-showcase'+suffix+'.html';
+              const html=fs.readFileSync(source,'utf8');
+              assert.equal(html,fs.readFileSync(mirror,'utf8'),source+': source/public mismatch');
+              assert(html.includes('lang="'+(lang==='pt'?'pt-BR':lang)+'"'),source+': locale missing');
+              assert(html.includes('data-discovery-release="2026-10-08"'),source+': missing release marker');
+              assert(html.includes('rel="canonical" href="https://ziontechgroup.com/'+source+'"'),source+': canonical missing');
+              assert(html.includes('href="#main"'),source+': skip-link missing');
+              assert(html.includes(esc(playbook[lang].checklistTitle)),source+': untranslated checklist');
+              assert(html.includes('commercial@ziontechgroup.com'),source+': commercial disclosure missing');
+              for(const l of langs) assert(html.includes('hreflang="'+(l==='pt'?'pt-BR':l)+'"'),source+': missing '+l+' alternate');
+            }
+            console.log('PASS: 5 staged Discovery locales, source/public mirrors and release contracts');
+          } else {
+            console.log('Source showcase pages are not staged in this branch; publication is an independent release prerequisite.');
+          }
+          console.log('PR source preflight: PASS. No live publication or inbox delivery is certified.');
+          NODE
       - name: Read-only live multilingual publication checks
+        if: github.event_name != 'pull_request'
         run: node scripts/test-discovery-live.cjs
