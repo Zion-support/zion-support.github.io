@@ -6,11 +6,18 @@ permissions:
 
 concurrency:
   group: ai-github-workflow-integrity-audit-daily
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 "on":
   schedule:
-    - cron: '*/10 * * * *'
+    - cron: '37 7 * * *'
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/**'
+      - 'automation/github-workflow-integrity-auditor.cjs'
+      - 'automation/workflow-trust-score.cjs'
+      - 'scripts/automation/**'
   workflow_dispatch:
 
 jobs:
