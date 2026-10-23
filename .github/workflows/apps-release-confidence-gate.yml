@@ -5,6 +5,7 @@ name: Apps release confidence gate
     workflows:
       - Apps production content canary
       - Apps deployed-source drift guard
+      - Apps link graph orphan guard
     types: [completed]
   schedule:
     - cron: '29 16 * * *'
@@ -70,6 +71,7 @@ jobs:
               route: {file:'ai-post-push-route-verify.yml', critical:false, afterDeploy:false},
               i18n: {file:'apps-i18n-release-contract.yml', critical:false, afterDeploy:false},
               manifest: {file:'apps-release-evidence-manifest.yml', critical:false, afterDeploy:false},
+              graph: {file:'apps-link-graph-orphan-guard.yml', critical:false, afterDeploy:false},
             };
 
             const signals = {};
