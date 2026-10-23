@@ -12,7 +12,7 @@ function git(cwd, ...args) {
   assert.equal(p.status, 0, p.stderr);
   return p.stdout.trim();
 }
-function fixture(changes, group='docs', baseFiles={}) {
+function fixture(changes, group='docs', baseFiles={}, extraEnv={}) {
   const cwd = fs.mkdtempSync(path.join(os.tmpdir(), 'coalescer-'));
   git(cwd, 'init', '-q');
   git(cwd, 'config', 'user.email', 'test@example.invalid');
@@ -45,7 +45,8 @@ function fixture(changes, group='docs', baseFiles={}) {
       BASE_REF: 'refs/remotes/origin/main',
       STAGING_REF: 'refs/remotes/origin/coalescer-target',
       GITHUB_OUTPUT: '',
-      GITHUB_STEP_SUMMARY: ''
+      GITHUB_STEP_SUMMARY: '',
+      ...extraEnv
     }
   });
   fs.rmSync(cwd, {recursive:true, force:true});
@@ -100,7 +101,7 @@ test('rejects YAML pretending to be docs-only content', () => assert.notEqual(fi
 test('rejects binary blob with safe JSON extension', () => {
   const r = fixture({'docs/data.json': Buffer.from([0,1,2,3,4])});
   assert.notEqual(r.status, 0);
-  assert.match(r.stderr, /Binary or unparseable changes/);
+  assert.match(r.stderr, /NUL or inconsistent staged content|Binary or unparseable changes/);
 });
 test('rejects oversized minified JSON blob despite tiny line count', () => {
   const r = fixture({'docs/blob.json': 'A'.repeat(2*1024*1024+1)});
@@ -131,4 +132,57 @@ test('keeps small docs addition at standard review', () => {
 test('rejects unsafe shell file inside public content folder', () => {
   const r=fixture({'public/apps/publish.sh':'echo test\n'}, 'content');
   assert.notEqual(r.status, 0);
+});
+
+
+test('blocks a potential GitHub credential without echoing it', () => {
+  const secret = ['ghp', 'B'.repeat(40)].join('_');
+  const r = fixture({'docs/private.md': 'Token: ' + secret + '\n'});
+  assert.notEqual(r.status, 0);
+  assert.match(r.stderr, /github-access-token/);
+  assert.doesNotMatch(r.stderr, new RegExp(secret));
+});
+test('blocks fine-grained GitHub tokens', () => {
+  const secret = 'github_pat_' + 'D'.repeat(36);
+  const r = fixture({'docs/private.md': 'Token: ' + secret + '\n'});
+  assert.notEqual(r.status, 0);
+  assert.match(r.stderr, /github-fine-grained-token/);
+});
+test('blocks a private key boundary', () => {
+  const key = ['-----BEGIN', 'OPENSSH', 'PRIVATE', 'KEY-----'].join(' ');
+  const r = fixture({'docs/keys.md': key + '\n'});
+  assert.notEqual(r.status, 0);
+  assert.match(r.stderr, /private-key-material/);
+});
+test('blocks an AWS key inside an allowed document', () => {
+  const key = ['AKIA', 'A'.repeat(16)].join('');
+  const r = fixture({'docs/ops.md': key + '\n'});
+  assert.notEqual(r.status, 0);
+  assert.match(r.stderr, /aws-access-key/);
+});
+test('rejects active scripts in public static HTML', () => {
+  const r = fixture({'public/apps/landing.html': '<main>Welcome</main><script>console.log(1)</script>\n'}, 'content');
+  assert.notEqual(r.status, 0);
+  assert.match(r.stderr, /Active HTML/);
+});
+test('rejects javascript scheme hidden inside public Markdown links', () => {
+  const r = fixture({'content/guide.md': '[view](javascript:alert(1))\n'}, 'content');
+  assert.notEqual(r.status, 0);
+  assert.match(r.stderr, /Active HTML/);
+});
+test('allows safe public HTML but keeps enhanced review', () => {
+  const r = fixture({'public/apps/landing.html': '<main><h1>Welcome</h1></main>\n'}, 'content');
+  assert.equal(r.status, 0, r.stderr);
+  const data=JSON.parse(r.stdout);
+  assert.equal(data.review_tier,'enhanced');
+});
+test('rejects a file with invalid UTF-8 bytes', () => {
+  const r = fixture({'docs/invalid.md': Buffer.from([0xc3, 0x28, 0x0a])});
+  assert.notEqual(r.status, 0);
+  assert.match(r.stderr, /Non-UTF-8 content/);
+});
+test('fails closed when a bounded-history merge base is unavailable', () => {
+  const r = fixture({'docs/good.md': 'safe\n'}, 'docs', {}, { BASE_REF:'refs/remotes/origin/does-not-exist' });
+  assert.notEqual(r.status, 0);
+  assert.match(r.stderr, /Unable to establish common/);
 });

@@ -55,7 +55,14 @@ const deny = [
 // This script is sourced from trusted main, never from the staging checkout.
 // Resolve the pinned staging ref fetched by the trusted workflow, not HEAD.
 const head = git(['rev-parse', '--verify', `${stagingRef}^{commit}`]);
-const mergeBase = git(['merge-base', base, head]);
+let mergeBase;
+try {
+  mergeBase = git(['merge-base', base, head]);
+} catch {
+  // A bounded shallow fetch may not contain the common ancestor. This is a
+  // rejection, never an excuse to compare against an incomplete baseline.
+  fail('Unable to establish common main/staging history. Rebase staging on current main and retry.');
+}
 // --no-renames exposes BOTH ends of a rename; include deletions so deleting a
 // guard/workflow cannot be hidden by a separate allowed addition.
 const names = git(['diff', '--no-renames', '--name-only', '--diff-filter=ACDMRT', mergeBase, head]);
@@ -96,6 +103,16 @@ if (unusualModes.length) fail('Executables, symlinks or submodules require an or
 const MAX_FILE_BYTES = 2 * 1024 * 1024;
 const MAX_TOTAL_BYTES = 8 * 1024 * 1024;
 let totalBytes = 0;
+const sensitivePatterns = [
+  ['private-key-material', /-----BEGIN (?:RSA |EC |OPENSSH |DSA )?PRIVATE KEY-----/],
+  ['github-access-token', /\b(?:ghp|gho|ghu|ghs|ghr)_[a-zA-Z0-9_]{20,}\b/],
+  ['github-fine-grained-token', /\bgithub_pat_[a-zA-Z0-9_]{20,}\b/],
+  ['aws-access-key', /\b(?:AKIA|ASIA)[A-Z0-9]{16}\b/],
+  ['openai-api-key', /\bsk-(?:proj-|svcacct-)?[a-zA-Z0-9_-]{20,}\b/],
+  ['stripe-secret-key', /\b(?:sk|rk)_(?:live|test)_[a-zA-Z0-9]{16,}\b/],
+  ['slack-credential', /\bxox[baprs]-[a-zA-Z0-9-]{24,}\b/],
+];
+const activeContentPattern = /<\s*(?:script|iframe|object|embed)\b|\bjavascript\s*:|\bon(?:load|error|click)\s*=/i;
 for (const line of changedEntries) {
   const sha = /^100644 blob ([0-9a-f]{40})\t/.exec(line)[1];
   const size = Number(git(['cat-file', '-s', sha]));
@@ -103,6 +120,26 @@ for (const line of changedEntries) {
   if (size > MAX_FILE_BYTES) fail('Staged file exceeds 2 MiB safety budget.');
   totalBytes += size;
   if (totalBytes > MAX_TOTAL_BYTES) fail('Staged files exceed 8 MiB total safety budget.');
+
+  // Read only the bounded blob from the Git object store. Do not print source
+  // excerpts, tokens or patterns in logs, reports, PR bodies or annotations.
+  const file = line.slice(line.indexOf('\t') + 1);
+  const blob = execFileSync('git', ['cat-file', 'blob', sha], {
+    maxBuffer: MAX_FILE_BYTES + 8192,
+  });
+  if (blob.length !== size || blob.includes(0)) fail('NUL or inconsistent staged content is not eligible.');
+  let content;
+  try {
+    content = new TextDecoder('utf-8', { fatal: true }).decode(blob);
+  } catch {
+    fail('Non-UTF-8 content is not eligible for automatic coalescing.');
+  }
+  for (const [rule, pattern] of sensitivePatterns) {
+    if (pattern.test(content)) fail('Potential credential or private key in staged content; use secure remediation instead.', { rule });
+  }
+  if (group === 'content' && activeContentPattern.test(content)) {
+    fail('Active HTML/JavaScript content requires an ordinary reviewed PR.', { path: file });
+  }
 }
 
 const numstat = git(['diff', '--no-renames', '--numstat', mergeBase, head]);

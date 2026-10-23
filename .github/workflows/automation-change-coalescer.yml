@@ -33,7 +33,7 @@ permissions:
         type: string
 
 concurrency:
-  group: automation-change-coalescer-${{ inputs.policy_group }}
+  group: automation-change-coalescer-${{ inputs.staging_branch }}
   cancel-in-progress: false
 
 jobs:
@@ -51,6 +51,7 @@ jobs:
         env:
           STAGING_BRANCH: ${{ inputs.staging_branch }}
           SOURCE_RUN_URL: ${{ inputs.source_run_url }}
+          REPOSITORY: ${{ github.repository }}
         run: |
           set -euo pipefail
           if [[ ! "$STAGING_BRANCH" =~ ^automation/staging/[a-z0-9][a-z0-9._-]{1,62}$ ]]; then
@@ -61,12 +62,19 @@ jobs:
             echo "::error title=Invalid provenance::Expected a canonical GitHub Actions run URL"
             exit 1
           fi
+          # A source run link is advisory provenance, not an arbitrary URL.
+          if [ -n "$SOURCE_RUN_URL" ] && [[ "$SOURCE_RUN_URL" != "https://github.com/${REPOSITORY}/actions/runs/"* ]]; then
+            echo "::error title=Invalid provenance::Source run must belong to this repository"
+            exit 1
+          fi
 
       # Always load executable validator code from trusted main, never staging.
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
           ref: main
-          fetch-depth: 0
+          # Bound history; an old staging branch must rebase rather than
+          # silently accept a missing merge base or fetch unbounded history.
+          fetch-depth: 1
           persist-credentials: false
           sparse-checkout: |
             scripts/automation/validate-coalescer-staging.cjs
@@ -78,8 +86,10 @@ jobs:
           STAGING_BRANCH: ${{ inputs.staging_branch }}
         run: |
           set -euo pipefail
-          git fetch --no-tags origin main:refs/remotes/origin/main
-          git fetch --no-tags origin "refs/heads/${STAGING_BRANCH}:refs/remotes/origin/coalescer-target"
+          # Fetch only a bounded recent ancestry and tree metadata. Individual
+          # changed blobs are downloaded on demand by the validator, not npm.
+          git fetch --no-tags --filter=blob:none --depth=200 origin main:refs/remotes/origin/main
+          git fetch --no-tags --filter=blob:none --depth=200 origin "refs/heads/${STAGING_BRANCH}:refs/remotes/origin/coalescer-target"
 
       - name: Regression-test trusted policy verifier
         run: node --test scripts/automation/validate-coalescer-staging.test.cjs
@@ -142,12 +152,23 @@ jobs:
           } > "$body_file"
 
           if [ -z "$existing" ]; then
-            gh pr create --draft --base main --head "$STAGING_BRANCH" \
+            pr_locator="$(gh pr create --draft --base main --head "$STAGING_BRANCH" \
               --title "chore(automation): coalesced $POLICY_GROUP updates" \
-              --body-file "$body_file"
+              --body-file "$body_file")"
           else
-            gh pr edit "$existing" --body-file "$body_file"
-            echo "Updated existing draft PR #$existing"
+            pr_locator="$existing"
+            current_body="$(gh pr view "$existing" --json body --jq '.body')"
+            if [ "$current_body" != "$(cat "$body_file")" ]; then
+              gh pr edit "$existing" --body-file "$body_file"
+            else
+              echo "Existing draft body unchanged; no unnecessary PR edit"
+            fi
           fi
-          # Branch motion after this check is still possible; required PR-head
-          # checks and human review must use the final exact head.
+          # A branch can move after the early check. Validate the exact PR's
+          # observed head too; downstream exact-head CI remains the release gate.
+          observed_head="$(gh pr view "$pr_locator" --json headRefOid --jq '.headRefOid')"
+          if [ "$observed_head" != "$VALIDATED_HEAD" ]; then
+            echo "::error title=Staging changed::Draft PR head differs from validated commit"
+            exit 1
+          fi
+          echo "- Draft PR verified at staging head \`$VALIDATED_HEAD\`. No merge performed." >> "$GITHUB_STEP_SUMMARY"
