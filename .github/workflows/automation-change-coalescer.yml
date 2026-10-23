@@ -1,0 +1,114 @@
+name: Automation Change Coalescer
+
+permissions:
+  contents: read
+  pull-requests: write
+
+"on":
+  workflow_dispatch:
+    inputs:
+      staging_branch:
+        description: "Existing safe staging branch: automation/staging/<slug>"
+        required: true
+        type: string
+      policy_group:
+        description: "Allowed path policy for staged changes."
+        required: true
+        type: choice
+        options: [content, reports, docs]
+      source_run_url:
+        description: "Optional source workflow/run provenance URL."
+        required: false
+        type: string
+  workflow_call:
+    inputs:
+      staging_branch:
+        required: true
+        type: string
+      policy_group:
+        required: true
+        type: string
+      source_run_url:
+        required: false
+        type: string
+
+concurrency:
+  group: automation-change-coalescer-${{ inputs.policy_group }}
+  cancel-in-progress: false
+
+jobs:
+  coalesce:
+    name: Validate staging and upsert one draft PR
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - name: Validate staging branch name before checkout
+        env:
+          STAGING_BRANCH: ${{ inputs.staging_branch }}
+        run: |
+          set -euo pipefail
+          if [[ ! "$STAGING_BRANCH" =~ ^automation/staging/[a-z0-9][a-z0-9._-]{1,62}$ ]]; then
+            echo "::error title=Invalid staging branch::Expected automation/staging/<safe-slug>"
+            exit 1
+          fi
+
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          ref: ${{ inputs.staging_branch }}
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Fetch canonical main
+        run: git fetch --no-tags origin main:refs/remotes/origin/main
+
+      - name: Validate coalescing policy
+        id: validate
+        env:
+          STAGING_BRANCH: ${{ inputs.staging_branch }}
+          POLICY_GROUP: ${{ inputs.policy_group }}
+          BASE_REF: origin/main
+        run: node scripts/automation/validate-coalescer-staging.cjs
+
+      - name: Upsert one draft PR for this staging branch
+        env:
+          GH_TOKEN: ${{ github.token }}
+          STAGING_BRANCH: ${{ inputs.staging_branch }}
+          POLICY_GROUP: ${{ inputs.policy_group }}
+          SOURCE_RUN_URL: ${{ inputs.source_run_url }}
+          VALIDATED_HEAD: ${{ steps.validate.outputs.head }}
+          FILE_COUNT: ${{ steps.validate.outputs.file_count }}
+          ADDED: ${{ steps.validate.outputs.added }}
+          DELETED: ${{ steps.validate.outputs.deleted }}
+        run: |
+          set -euo pipefail
+          existing="$(gh pr list --state open --base main --head "$STAGING_BRANCH" --json number --jq '.[0].number // empty')"
+          body_file="$(mktemp)"
+          {
+            echo "## Automation change coalescer"
+            echo
+            echo "- Policy group: \`$POLICY_GROUP\`"
+            echo "- Staging branch: \`$STAGING_BRANCH\`"
+            echo "- Validated head: \`$VALIDATED_HEAD\`"
+            echo "- Changed files: **$FILE_COUNT**"
+            echo "- Diff: **+$ADDED / -$DELETED**"
+            if [ -n "$SOURCE_RUN_URL" ]; then echo "- Source run: $SOURCE_RUN_URL"; fi
+            echo
+            echo "### Safety"
+            echo "- Draft only; no automatic merge."
+            echo "- Protected paths are rejected by the validator."
+            echo "- Existing repository CI remains the approval gate."
+            echo "- This workflow never pushes to \`main\`."
+          } > "$body_file"
+
+          if [ -z "$existing" ]; then
+            gh pr create --draft --base main --head "$STAGING_BRANCH" \
+              --title "chore(automation): coalesced $POLICY_GROUP updates" \
+              --body-file "$body_file"
+          else
+            gh pr edit "$existing" --body-file "$body_file"
+            gh pr comment "$existing" --body "Coalescer revalidated head \`$VALIDATED_HEAD\` from source: ${SOURCE_RUN_URL:-manual dispatch}. No automatic merge was performed."
+            echo "Updated existing PR #$existing"
+          fi
