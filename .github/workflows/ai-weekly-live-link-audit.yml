@@ -14,6 +14,17 @@ concurrency:
   cancel-in-progress: false
 
 "on":
+  push:
+    branches: [main]
+    paths:
+      - 'automation/ai-site-link-audit-automation.cjs'
+      - 'package.json'
+      - '.github/workflows/ai-weekly-live-link-audit.yml'
+  pull_request:
+    paths:
+      - 'automation/ai-site-link-audit-automation.cjs'
+      - 'package.json'
+      - '.github/workflows/ai-weekly-live-link-audit.yml'
   schedule:
     - cron: '0 9 * * 4'
   workflow_dispatch:
