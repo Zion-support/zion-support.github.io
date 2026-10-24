@@ -5,9 +5,11 @@ permissions:
   pull-requests: write
   issues: write
 
+# Different PRs and mainline PM2 checks must not block each other's queue.
+# Only superseded checks on the SAME PR may be cancelled; main/dispatch run to completion.
 concurrency:
-  group: ai-pm2-static-checks
-  cancel-in-progress: false
+  group: ai-pm2-static-checks-${{ github.event_name == 'pull_request' && format('pr-{0}', github.event.pull_request.number) || 'production' }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 "on":
   pull_request:
@@ -59,6 +61,9 @@ jobs:
 
       - name: Install dependencies
         run: npm ci --prefer-offline --no-audit --fund=false
+
+      - name: Verify CI concurrency and preserve PM2 static validation
+        run: node --test automation/pm2-ci-concurrency.test.cjs
 
       - name: PM2 config drift guard (no PM2 daemon required)
         run: npm run pm2:drift-guard:once
