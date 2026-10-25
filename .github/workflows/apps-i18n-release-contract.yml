@@ -14,6 +14,7 @@ name: Apps i18n release contract
       - 'public/fr/discovery/**'
       - 'public/de/discovery/**'
       - 'apps/operations-reliability-ai-2026*.html'
+      - 'apps/discovery-showcase*.html'
       - 'public/sitemap.xml'
       - 'public/apps/apps-sitemap.xml'
       - 'public/robots.txt'
@@ -32,6 +33,7 @@ name: Apps i18n release contract
       - 'public/fr/discovery/**'
       - 'public/de/discovery/**'
       - 'apps/operations-reliability-ai-2026*.html'
+      - 'apps/discovery-showcase*.html'
       - 'public/sitemap.xml'
       - 'public/apps/apps-sitemap.xml'
       - 'public/robots.txt'
@@ -134,6 +136,19 @@ jobs:
             if src.read_bytes()!=pub.read_bytes():
               errors.append(f'Operations source/public mirror drift: {src} != {pub}')
 
+          showcase_variants=['','-pt','-es','-fr','-de']
+          for suffix in showcase_variants:
+            src=Path(f'apps/discovery-showcase{suffix}.html')
+            pub=Path(f'public/apps/discovery-showcase{suffix}.html')
+            if not src.is_file() or not pub.is_file():
+              errors.append(f'missing Discovery Showcase mirror pair: {src} / {pub}')
+              continue
+            if src.read_bytes()!=pub.read_bytes():
+              errors.append(f'Discovery Showcase source/public mirror drift: {src} != {pub}')
+            text=src.read_text(encoding='utf-8')
+            if 'hreflang="x-default" href="https://ziontechgroup.com/apps/discovery-showcase.html"' not in text:
+              errors.append(f'{src}: missing showcase x-default hreflang')
+
           sitemap=Path('public/apps/apps-sitemap.xml')
           if not sitemap.is_file():
             errors.append('missing public/apps/apps-sitemap.xml')
@@ -147,6 +162,11 @@ jobs:
               '/apps/operations-reliability-ai-2026-es.html',
               '/apps/operations-reliability-ai-2026-fr.html',
               '/apps/operations-reliability-ai-2026-de.html',
+              '/apps/discovery-showcase.html',
+              '/apps/discovery-showcase-pt.html',
+              '/apps/discovery-showcase-es.html',
+              '/apps/discovery-showcase-fr.html',
+              '/apps/discovery-showcase-de.html',
               '/zion-app-network/app-network-operations-evidence-checklist-2026.html',
             ]
             for route in required:
