@@ -25,16 +25,18 @@ jobs:
         cache: npm
     - name: Install dependencies
       run: npm ci --include=dev
+    - name: Validate performance metric semantics
+      run: node tests/test-performance-metrics.cjs automation/performance-budget-enforcer.cjs
     - name: Build site
       env:
         NODE_OPTIONS: --max-old-space-size=12288 --max-semi-space-size=64
         NEXT_BUILD_WORKER_COUNT: "1"
       run: |
         set -euo pipefail
-        if npm run build; then
+        if timeout --signal=TERM --kill-after=30s 300s npm run build; then
           echo "Next.js build succeeded"
         else
-          echo "::warning::Next.js build failed (heap OOM on 90k+ file tree); falling back to serving the static repository root."
+          echo "::warning::Next.js build failed or exceeded the five-minute limit; falling back to serving the static repository root."
           rm -rf out
         fi
     - name: Start local server (background)
@@ -51,10 +53,14 @@ jobs:
         done
     - name: Run Performance Budget Enforcer
       id: perf
-      continue-on-error: true
       run: |
-        node automation/performance-budget-enforcer.cjs > /tmp/perf-output.txt || true
-        echo "exit_code=$?" >> $GITHUB_OUTPUT
+        set +e
+        node automation/performance-budget-enforcer.cjs --url http://localhost:3000 > /tmp/perf-output.txt 2>&1
+        status=$?
+        set -e
+        cat /tmp/perf-output.txt
+        echo "exit_code=$status" >> "$GITHUB_OUTPUT"
+        exit "$status"
     - name: Upload performance artifacts
       if: always()
       uses: actions/upload-artifact@v4
