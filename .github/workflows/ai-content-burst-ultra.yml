@@ -1,22 +1,17 @@
 # AI Content Burst Ultra
-# Extra burst-only runs (no LLM) at 0, 5, 11, 17 UTC for maximum template content velocity.
-# Commit + push + deploy. Concurrency: content-commit.
+# Manual fallback burst (no LLM) retained for deliberate use when scheduled writers are unavailable.
+# Manual fallback only. All autonomous writers share one concurrency group.
 
 name: AI Content Burst Ultra
 
 concurrency:
-  group: content-commit
+  group: autonomous-main-writer
   cancel-in-progress: false
 
 permissions:
   contents: write
 
 "on":
-  schedule:
-    - cron: '0 0 * * *'
-    - cron: '0 5 * * *'
-    - cron: '0 11 * * *'
-    - cron: '0 17 * * *'
   workflow_dispatch:
     inputs:
       max_template_blog:
