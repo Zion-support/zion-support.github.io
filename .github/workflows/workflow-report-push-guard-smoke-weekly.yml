@@ -1,4 +1,4 @@
-# Ensures workflow-report-push-guard.yml keeps PR path triggers + --push grep subset (grep-only).
+# Ensures workflow-report-push-guard.yml keeps path triggers + --push grep subset (grep-only).
 name: workflow report push guard smoke (weekly)
 permissions:
   contents: read
@@ -24,6 +24,7 @@ jobs:
           test -s "$f"
           grep -Fq 'name: Workflow report push guard' "$f"
           grep -Fq 'pull_request:' "$f"
+          grep -Fq 'branches: [main]' "$f"
           grep -Fq '.github/workflows/**/*.yml' "$f"
           grep -Fq 'run-workflow-grep-guards.sh --push' "$f"
           echo "ok: $f"

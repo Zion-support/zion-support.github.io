@@ -2,12 +2,19 @@ permissions:
   contents: read
 name: TypeScript Type Coverage & Dead Code Check
 "on":
+  push:
+    branches:
+    - main
   pull_request:
     branches:
     - main
   schedule:
   - cron: 0 15 * * 1
   workflow_dispatch: null
+concurrency:
+  group: type-coverage-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   type-coverage:
     name: Type Coverage & Dead Code

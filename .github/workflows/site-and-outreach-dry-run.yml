@@ -6,7 +6,7 @@ name: site-and-outreach-dry-run
   workflow_dispatch:
 
 concurrency:
-  group: site-outreach-dry-run-${{ github.ref }}
+  group: site-and-outreach-dry-run-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:

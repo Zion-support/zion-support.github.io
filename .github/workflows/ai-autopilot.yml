@@ -1,0 +1,51 @@
+name: AI Services Autopilot
+
+# Manual only. Daily cron disabled 15 Sep 2026: this job rewrites
+# public/index.html and would re-publish client prices / confidential copy.
+# Run via workflow_dispatch if Kleber wants a trends refresh.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: ai-autopilot
+  cancel-in-progress: true
+
+jobs:
+  autopilot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run AI research autopilot
+        run: python3 scripts/ai_autopilot.py
+
+      - name: Commit homepage updates
+        run: |
+          git config user.name "zion-ai-autopilot"
+          git config user.email "kleber@ziontechgroup.com"
+          git add public/index.html cron_output/ai_autopilot.log
+          if git diff --cached --quiet; then
+            echo "No homepage changes - skipping commit"
+          else
+            git commit -m "chore(autopilot): refresh AI services trends $(date -u +%Y-%m-%d)"
+            git push
+          fi
+
+      - name: Prepare pages
+        run: bash scripts/prepare-pages-out.sh
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: out
+
+      - uses: actions/deploy-pages@v4

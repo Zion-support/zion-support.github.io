@@ -15,7 +15,7 @@ jobs:
     timeout-minutes: 2
     steps:
       - name: Checkout
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        uses: actions/checkout@v4
       - name: production-smoke-test.yml anchors
         run: |
           set -euo pipefail
@@ -24,7 +24,7 @@ jobs:
           test -s "$f"
           grep -Fq 'name: Production Smoke Test' "$f"
           grep -Fq 'workflow_run:' "$f"
-          grep -Fq 'Deploy to GitHub Pages' "$f"
+          grep -Fq 'Deploy on Push' "$f"
           grep -Fq 'group: production-smoke-test' "$f"
           grep -Fq 'npm run routes:promotions:check' "$f"
           grep -Fq 'config/smoke-routes.txt' "$f"

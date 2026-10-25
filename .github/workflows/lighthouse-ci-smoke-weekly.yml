@@ -1,4 +1,4 @@
-# Ensures lighthouse-ci.yml keeps PR/schedule triggers, static Pages preparation, and Lighthouse audit anchors (grep-only).
+# Ensures lighthouse-ci.yml keeps PR/schedule triggers, build, and Lighthouse audit anchors (grep-only).
 name: lighthouse ci workflow smoke (weekly)
 permissions:
   contents: read
@@ -29,7 +29,7 @@ jobs:
           grep -Fq "cron: '0 6 * * 1'" "$f"
           grep -Fq 'name: Performance Audit' "$f"
           grep -Fq 'npm ci --prefer-offline --no-audit --fund=false' "$f"
-          grep -Fq 'bash scripts/prepare-pages-out.sh' "$f"
+          grep -Fq 'npm run build' "$f"
           grep -Fq 'npx lighthouse http://localhost:3000' "$f"
           grep -Fq 'only-categories=performance,accessibility,best-practices,seo' "$f"
           grep -Fq 'actions/github-script@' "$f"

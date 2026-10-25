@@ -2,7 +2,14 @@ permissions:
   contents: read
 name: Autonomous Changelog Generator
 "on":
+  push:
+    branches:
+    - main
   workflow_dispatch: null
+concurrency:
+  group: autonomous-changelog-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   changelog:
     name: Generate Changelog

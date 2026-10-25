@@ -3,23 +3,19 @@ name: Test Coverage Guard
   push:
     branches:
     - main
-    paths-ignore:
-    - 'public/**'
-    - 'docs/**'
-    - '**/*.md'
   pull_request:
     branches:
     - main
   schedule:
   - cron: 0 10 * * *
-concurrency:
-  group: test-coverage-${{ github.ref }}
-  cancel-in-progress: true
-
 permissions:
   contents: read
   issues: write
   pull-requests: write
+concurrency:
+  group: test-coverage-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   test-coverage:
     runs-on: ubuntu-latest

@@ -1,4 +1,4 @@
-# Ensures workflow-action-pin-guard.yml keeps PR path triggers + --pin grep subset (grep-only).
+# Ensures workflow-action-pin-guard.yml keeps path triggers + --pin grep subset (grep-only).
 name: workflow action pin guard smoke (weekly)
 permissions:
   contents: read
@@ -24,6 +24,6 @@ jobs:
           test -s "$f"
           grep -Fq 'name: Workflow action pin guard' "$f"
           grep -Fq 'pull_request:' "$f"
-          grep -Fq 'paths:' "$f"
+          grep -Fq 'branches: [main]' "$f"
           grep -Fq 'run-workflow-grep-guards.sh --pin' "$f"
           echo "ok: $f"

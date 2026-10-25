@@ -2,12 +2,19 @@ permissions:
   contents: read
 name: Autonomous Bundle Split Analyzer
 "on":
+  push:
+    branches:
+    - main
   pull_request:
     branches:
     - main
   schedule:
   - cron: 0 17 * * 2
   workflow_dispatch: null
+concurrency:
+  group: bundle-split-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   bundle-split:
     name: Bundle Split Analyzer

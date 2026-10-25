@@ -1,4 +1,4 @@
-# Ensures ci-cd.yml remains an explicit no-op and does not resurrect the retired Next.js production pipeline.
+# Ensures ci-cd.yml keeps main/develop triggers + core CI steps (grep-only).
 name: CI/CD pipeline smoke (weekly)
 permissions:
   contents: read
@@ -23,12 +23,12 @@ jobs:
           test -f "$f"
           test -s "$f"
           grep -Fq 'name: CI/CD Pipeline' "$f"
+          grep -Fq 'branches: [main, develop]' "$f"
+          grep -Fq 'pull_request:' "$f"
           grep -Fq 'workflow_dispatch:' "$f"
-          grep -Fq 'CI/CD Pipeline is retired.' "$f"
-          grep -Fq 'Production: Simple Static Deploy on main (actions/deploy-pages).' "$f"
-          grep -Fq 'Do not re-enable Next.js build on this branch.' "$f"
-          if grep -Fq 'pull_request:' "$f" || grep -Fq 'push:' "$f"; then
-            echo "ERROR: retired CI/CD pipeline must not auto-trigger" >&2
-            exit 1
-          fi
+          grep -Fq 'github.workflow' "$f"
+          grep -Fq 'npm ci --prefer-offline --no-audit --fund=false' "$f"
+          grep -Fq 'npm run automation:preflight' "$f"
+          grep -Fq 'npm run type-check' "$f"
+          grep -Fq 'npm run test:ci' "$f"
           echo "ok: $f"

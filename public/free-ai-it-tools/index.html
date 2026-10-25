@@ -1,47 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Free AI IT Tools — Zion Tech Group</title>
-  <meta name="description" content="Free AI and IT tools from Zion Tech Group: cost checks, agent prompts, Discovery intake, Telegram origin-chat agents. No SKU invented." />
-  <link rel="canonical" href="https://ziontechgroup.com/free-ai-it-tools/" />
-  <style>
-    * { margin:0; padding:0; box-sizing:border-box; }
-    body { font-family: system-ui, sans-serif; background:#0b1220; color:#e6f0ff; min-height:100vh; }
-    .wrap { max-width:900px; margin:0 auto; padding:48px 24px; }
-    a { color:#a78bfa; }
-    h1 { font-size:2rem; margin:16px 0; }
-    p { color:#94a3b8; line-height:1.6; margin-bottom:16px; }
-    .card { background:rgba(15,23,42,.6); border:1px solid rgba(124,58,237,.25); border-radius:12px; padding:20px; margin:16px 0; }
-    .price { color:#34d399; font-weight:700; }
-  </style>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Free AI &amp; IT Tools | Zion Tech Group</title>
+<meta name="description" content="Free developer tools from Zion Tech Group: JSON formatter, JWT decoder, regex tester, QR generator, and more."/>
+<link rel="canonical" href="https://ziontechgroup.com/free-ai-it-tools/"/>
+<meta property="og:title" content="Free AI &amp; IT Tools | Zion Tech Group"/>
+<meta property="og:description" content="Utilities for JSON, JWT, regex, UUID, QR, and text processing."/>
+<meta property="og:url" content="https://ziontechgroup.com/free-ai-it-tools/"/>
+<meta property="og:type" content="website"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Free AI &amp; IT Tools | Zion Tech Group"/>
+<meta name="twitter:description" content="Utilities for JSON, JWT, regex, UUID, QR, and text processing."/>
+<style>
+  body{font-family:system-ui,-apple-system,sans-serif;background:#0f172a;color:#e2e8f0;min-height:100vh;margin:0}
+  .container{max-width:1200px;margin:0 auto;padding:0 24px}
+  header{border-bottom:1px solid #1e293b;background:#0f172a}
+  nav{display:flex;align-items:center;justify-content:space-between;max-width:1200px;margin:0 auto;padding:16px 24px;flex-wrap:wrap;gap:12px}
+  .brand{font-size:1.5rem;font-weight:800;background:linear-gradient(135deg,#a855f7,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-decoration:none}
+  nav a{color:#94a3b8;text-decoration:none;font-size:0.875rem;padding:6px 12px;border-radius:6px;transition:color .15s,background .15s}
+  nav a:hover{color:#fff;background:#1e293b}
+  nav a.cta{background:linear-gradient(135deg,#7c3aed,#a855f7);color:#fff;font-weight:600;padding:8px 16px}
+  nav a.cta:hover{background:linear-gradient(135deg,#6d28d9,#9333ea)}
+  .hero{text-align:center;padding:80px 24px 40px}
+  .hero h1{font-size:clamp(2rem,5vw,3.5rem);font-weight:800;margin:0 0 16px;background:linear-gradient(135deg,#c084fc,#f472b6);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+  .hero p{font-size:1.25rem;color:#94a3b8;max-width:600px;margin:0 auto 32px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px;max-width:900px;margin:0 auto}
+  .card{background:#1e293b;border:1px solid #334155;border-radius:12px;padding:24px;text-decoration:none;color:inherit;transition:border-color .15s,transform .15s}
+  .card:hover{border-color:#a855f7;transform:translateY(-2px)}
+  .card h3{font-size:1.125rem;font-weight:600;margin:0 0 8px;color:#fff}
+  .card p{font-size:0.875rem;color:#64748b;margin:0}
+  .cta-section{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;margin:48px 0;padding:32px 0;border-top:1px solid #1e293b}
+  .btn{padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:600;font-size:0.9375rem;transition:transform .15s}
+  .btn-primary{background:linear-gradient(135deg,#7c3aed,#a855f7);color:#fff}
+  .btn-primary:hover{background:linear-gradient(135deg,#6d28d9,#9333ea);transform:translateY(-1px)}
+  .btn-secondary{background:#1e293b;color:#e2e8f0;border:1px solid #334155}
+  .btn-secondary:hover{background:#334155;border-color:#475569}
+  footer{border-top:1px solid #1e293b;background:#0f172a;padding:32px 24px;margin-top:48px}
+  .footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:32px;max-width:1200px;margin:0 auto}
+  .footer-grid h4{font-size:0.75rem;text-transform:uppercase;letter-spacing:0.05em;color:#64748b;margin:0 0 12px}
+  .footer-grid ul{list-style:none;padding:0;margin:0}
+  .footer-grid li{margin-bottom:8px}
+  .footer-grid a{color:#94a3b8;text-decoration:none;font-size:0.875rem}
+  .footer-grid a:hover{color:#a855f7}
+  .copyright{text-align:center;color:#64748b;font-size:0.8125rem;margin-top:24px;padding-top:16px;border-top:1px solid #1e293b}
+  .status-badge{position:fixed;bottom:16px;right:16px;background:#0f172a;border:1px solid #a855f7;border-radius:24px;padding:8px 14px;display:flex;align-items:center;gap:8px;font-size:0.8125rem;color:#e2e8f0;box-shadow:0 4px 12px rgba(168,85,247,.15)}
+  .dot{width:8px;height:8px;border-radius:50%;background:#22c55e;animation:pulse 2s infinite}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+  .breadcrumb{display:flex;flex-wrap:wrap;gap:4px;font-size:0.8125rem;color:#64748b;margin-bottom:24px}
+  .breadcrumb a{color:#a78bfa;text-decoration:none}
+  .breadcrumb a:hover{color:#c084fc}
+  .breadcrumb span{color:#475569}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://ziontechgroup.com/"}, {"@type": "ListItem", "position": 2, "name": "Free AI &amp; IT Tools | Zion Tech Group", "item": "https://ziontechgroup.com/free-ai-it-tools/"}]}</script>
 </head>
 <body>
-  <div class="wrap">
-    <p><a href="/">← Home</a> · <a href="/tools/">/tools/</a> · <a href="/blog/">Blog</a> · <a href="/telegram/">Telegram</a></p>
-    <h1>Free AI IT tools</h1>
-    <p>Start without a retainer. These are public entry points — not packaged SKUs. Live commercial path stays Free Discovery → Consulting $499 → Starter $2.500 → Growth $8.000.</p>
-    <div class="card">
-      <h2>Telegram origin-chat agent</h2>
-      <p>Worker + listener reply only in the originating chat. Open the Telegram page and ask about agents, FinOps, CPA, or booking.</p>
-      <p><a href="/telegram/">Open /telegram/ →</a></p>
+<header>
+  <nav>
+    <a class="brand" href="/">Zion Tech Group</a>
+    <div style="display:flex;flex-wrap:wrap;gap:4px;align-items:center">
+      <a href="/services/">Services</a>
+      <a href="/solutions/">Solutions</a>
+      <a href="/tools/">Tools</a>
+      <a href="/industries/">Industries</a>
+      <a href="/blog/">Blog</a>
+      <a href="/pricing/">Pricing</a>
+      <a href="/contact/">Contact</a>
+      <a href="/agents-monitoring/" style="background:#1e293b;border:1px solid #a855f7;color:#e2e8f0;padding:6px 14px;border-radius:20px;font-size:0.8125rem;font-weight:500">AI Agents</a>
+      <a href="/contact/" class="cta">Get Free Consultation</a>
     </div>
-    <div class="card">
-      <h2>Discovery intake</h2>
-      <p class="price">Free</p>
-      <p>Map one process, systems, and the KPI before you buy automation.</p>
-      <p><a href="/discovery/">Start Discovery →</a> · <a href="/booking/">Booking</a> · <a href="/book/">Book</a></p>
-    </div>
-    <div class="card">
-      <h2>Status + plans</h2>
-      <p>Operator surfaces and the catalog of record.</p>
-      <p><a href="/status-page/">Status page</a> · <a href="/plans/">Plans</a> · <a href="/plans/">Plans</a></p>
+  </nav>
+</header>
+
+<main class="container">
+  <div class="breadcrumb">
+    <a href="/">Home</a><span>/</span>
+    <a href="/tools/">Tools</a><span>/</span>
+    <span>Free AI &amp; IT Tools</span>
+  </div>
+
+  <div class="hero">
+    <h1>Free AI &amp; IT Tools</h1>
+    <p>Developer utilities built by Zion. No sign-up required.</p>
+    <div class="cta-section">
+      <a href="/services/" class="btn btn-primary">Browse Services</a>
+      <a href="/contact/" class="btn btn-secondary">Contact Us</a>
     </div>
   </div>
-<!-- ZION-APPS-NET:START -->
-<section id="zion-apps-network" style="max-width:1000px;margin:40px auto 20px;padding:20px 22px;border:1px solid #cbd5e1;border-radius:14px;background:#f8fafc;color:#0f172a;font:15px/1.6 system-ui,sans-serif"><h2 style="margin:0 0 8px;font-size:20px;color:#0f172a">Zion Apps Network — every app, interlinked</h2><p style="margin:0 0 10px">Hubs: <a href="/apps/" style="color:#1d4ed8">Apps Network</a> · <a href="/apps/content-hub.html" style="color:#1d4ed8">Apps Content Hub (all batches &amp; spotlights)</a> · <a href="/apps/network.html" style="color:#1d4ed8">Network map</a> · <a href="/apps/finops-governance-suite.html" style="color:#1d4ed8">FinOps &amp; Governance Suite</a> · <a href="/zion-app-network/" style="color:#1d4ed8">GitHub app-network hub</a> · <a href="https://github.com/Zion-support" style="color:#1d4ed8">GitHub @Zion-support</a></p><div style="font-size:14px"><p><b>FinOps &amp; AI cost:</b> <a style="color:#1d4ed8" href="/ai-roi-tracker/">AI ROI Tracker</a> · <a style="color:#1d4ed8" href="/finops-estimator/">FinOps Estimator</a> · <a style="color:#1d4ed8" href="/llm-cost-calculator/">LLM Cost Calculator</a> · <a style="color:#1d4ed8" href="/roi-calc/">ROI Calculator</a> · <a style="color:#1d4ed8" href="/token-cost/">Token Cost Estimator</a></p><p><b>IT Ops &amp; DevOps:</b> <a style="color:#1d4ed8" href="/ai-smart-hands-scheduler/">AI Smart Hands Scheduler</a> · <a style="color:#1d4ed8" href="/incident-cost/">Incident Cost Calculator</a> · <a style="color:#1d4ed8" href="/incident-postmortem-writer/">Incident Postmortem Writer</a> · <a style="color:#1d4ed8" href="/incident-timeline-reconstructor/">Incident Timeline Reconstructor</a> · <a style="color:#1d4ed8" href="/kubernetes-linter/">Kubernetes Manifest Linter</a> · <a style="color:#1d4ed8" href="/patch-window-planner/">Patch Window Planner</a> · <a style="color:#1d4ed8" href="/sla-calculator/">SLA Calculator</a> · <a style="color:#1d4ed8" href="/site-uptime-watchdog/">Site Uptime Watchdog</a> · <a style="color:#1d4ed8" href="/stack-audit/">Stack Audit</a></p><p><b>Service desk &amp; support:</b> <a style="color:#1d4ed8" href="/ai-ticket-sentinel/">AI Ticket Sentinel — SLA breach watch</a> · <a style="color:#1d4ed8" href="/ai-ticket-triage/">AI Ticket Triage</a> · <a style="color:#1d4ed8" href="/maintenance-ticket-triage/">Maintenance Ticket Triage</a> · <a style="color:#1d4ed8" href="/support-ticket-triager/">Support Ticket Triager (bulk)</a></p><p><b>Security &amp; governance:</b> <a style="color:#1d4ed8" href="/ai-access-reviewer/">AI Access Reviewer</a> · <a style="color:#1d4ed8" href="/ai-governance-checklist/">AI Governance Checklist</a> · <a style="color:#1d4ed8" href="/ai-phishing-shield/">AI Phishing Shield</a> · <a style="color:#1d4ed8" href="/data-loss-sentinel/">Data Loss Sentinel</a> · <a style="color:#1d4ed8" href="/soc-analyst-copilot/">SOC Analyst Copilot</a> · <a style="color:#1d4ed8" href="/secrets-leak-scanner/">Secrets Leak Scanner</a> · <a style="color:#1d4ed8" href="/vendor-risk-assessor/">Vendor Risk Assessor</a></p><p><b>Sales &amp; partnerships:</b> <a style="color:#1d4ed8" href="/ai-lead-generation/">AI Lead Generation</a> · <a style="color:#1d4ed8" href="/churn-prediction-ai/">Churn Prediction AI</a> · <a style="color:#1d4ed8" href="/deal-coach-ai/">Deal Coach AI</a> · <a style="color:#1d4ed8" href="/edital-desk/">Edital Desk</a> · <a style="color:#1d4ed8" href="/lead-score-copilot/">Lead Score Copilot</a> · <a style="color:#1d4ed8" href="/outbound-sequencer-ai/">Outbound Sequencer AI</a> · <a style="color:#1d4ed8" href="/partner-referral-tracker/">Partner Referral Tracker</a> · <a style="color:#1d4ed8" href="/pricing-signal-radar/">Pricing Signal Radar</a> · <a style="color:#1d4ed8" href="/renewal-upsell-radar/">Renewal &amp; Upsell Radar</a> · <a style="color:#1d4ed8" href="/sales-call-analyzer/">Sales Call Analyzer</a> · <a style="color:#1d4ed8" href="/sales-forecast-ai/">Sales Forecast AI</a></p><p><b>Data &amp; analytics:</b> <a style="color:#1d4ed8" href="/ai-data-warehouse/">AI Data Warehouse Sizer</a> · <a style="color:#1d4ed8" href="/ai-readiness-assessment/">AI Readiness Assessment</a></p><p><b>Productivity:</b> <a style="color:#1d4ed8" href="/ai-meeting-notes-copilot/">AI Meeting Notes Copilot</a> · <a style="color:#1d4ed8" href="/prompt-library/">AI Prompt Library for IT Ops</a> · <a style="color:#1d4ed8" href="/agent-brief/">Agent Brief</a> · <a style="color:#1d4ed8" href="/free-ai-it-tools/">Free AI IT Tools</a></p><p><b>Batches &amp; spotlights:</b> <a style="color:#1d4ed8" href="/apps/content-hub.html">Apps Content Hub — all Zion apps, batches &amp; spotlights</a> · <a style="color:#1d4ed8" href="/apps/discovery-benefits.html">Free AI Discovery — Benefits</a> · <a style="color:#1d4ed8" href="/apps/field-service-data-sept-2026.html">Field Service Data Spotlight — September 2026</a> · <a style="color:#1d4ed8" href="/apps/finops-governance-suite.html">FinOps &amp; Governance Suite — free apps</a> · <a style="color:#1d4ed8" href="/apps/network.html">Zion AI App Network — Showcase</a> · <a style="color:#1d4ed8" href="/apps/october-2026-batch1.html">October 2026 Batch 1 — Security &amp; Trust AI</a> · <a style="color:#1d4ed8" href="/apps/october-2026-batch2.html">October 2026 Batch 2 — Growth &amp; Intelligence AI</a> · <a style="color:#1d4ed8" href="/apps/october-2026-batch3.html">October 2026 Batch 3 — Customer Experience &amp; Marketing AI</a> · <a style="color:#1d4ed8" href="/apps/october-2026-batch4.html">October 2026 App Showcase — Sales, HR, ITOps &amp; Energy AI</a> · <a style="color:#1d4ed8" href="/apps/october-2026-batch69.html">Apps Spotlight — October 2026 Batch 69</a> · <a style="color:#1d4ed8" href="/apps/october-2026-energy-sustainability.html">Energy &amp; Sustainability AI — October 2026</a> · <a style="color:#1d4ed8" href="/apps/september-2026-batch4.html">Apps Spotlight — September 2026 Batch 4</a> · <a style="color:#1d4ed8" href="/apps/spotlight-2026-10-03.html">Batch 65 Spotlight — Meeting &amp; Productivity AI</a> · <a style="color:#1d4ed8" href="/apps/spotlight-2026-10-03b.html">Batch 68 Spotlight — IT Ops Reliability AI</a> · <a style="color:#1d4ed8" href="/apps/spotlight-2026-10-04-discovery.html">Spotlight: Free AI Discovery — Oct 4, 2026</a> · <a style="color:#1d4ed8" href="/apps/spotlight-2026-10-04-network.html">October 2026 Spotlight</a> · <a style="color:#1d4ed8" href="/apps/spotlight-2026-10-04b.html">Apps Spotlight — Revenue &amp; Growth AI (Oct 2026)</a> · <a style="color:#1d4ed8" href="/apps/spotlight-2026-10-04c.html">Spotlight Oct 4, 2026 — Space Ops, Infrastructure, HR &amp; Energy AI</a> · <a style="color:#1d4ed8" href="/APP_NETWORK_SPOTLIGHT_OCT04_ENERGY_UTILITIES.html">Spotlight — Energy &amp; Utilities AI (Oct 4)</a> · <a style="color:#1d4ed8" href="/APP_NETWORK_SPOTLIGHT_OCT4_DEVSECOPS.html">Spotlight — DevSecOps &amp; AI Code Quality (Oct 4)</a> · <a style="color:#1d4ed8" href="/APP_NETWORK_SPOTLIGHT_OCT4_SPACE.html">Spotlight — Space &amp; Satellite Ops AI (Oct 4)</a> · <a style="color:#1d4ed8" href="/APP_NETWORK_SPOTLIGHT_SEP27_HEALTHCARE.html">Spotlight — Healthcare AI (Sep 27)</a> · <a style="color:#1d4ed8" href="/app-network-batch72-oct04.html">Batch 72 — Energy, HR &amp; ITOps AI</a> · <a style="color:#1d4ed8" href="/app-network-spotlight.html">App Network overview</a> · <a style="color:#1d4ed8" href="/app-network-spotlights.html">Spotlights &amp; Suites</a> · <a style="color:#1d4ed8" href="/app-network-spotlight-oct-2026.html">Spotlight — IT Ops Reliability AI (Oct 3)</a> · <a style="color:#1d4ed8" href="/APP_NETWORK_SPOTLIGHT_OCT4_HEALTHCARE.html">Spotlight — Healthcare &amp; Life Sciences AI (Oct 4)</a></p></div><p style="margin:12px 0 0"><a href="/discovery/" style="display:inline-block;background:#0a7d4f;color:#fff;padding:9px 16px;border-radius:999px;font-weight:700;text-decoration:none">🎯 Free AI Discovery — online, always free, results emailed instantly →</a></p></section>
-<!-- ZION-APPS-NET:END -->
+
+  <p style="text-align:center;color:#94a3b8;font-size:1.0625rem;max-width:600px;margin:0 auto 40px">
+    Use these utilities to inspect, transform, and validate common formats without installing extra software.
+  </p>
+
+  <div class="grid">
+    <a href="/tools/json-formatter/" class="card">
+      <h3>JSON Formatter</h3>
+      <p>Format, minify, and validate JSON quickly.</p>
+    </a>
+    <a href="/tools/jwt-decoder/" class="card">
+      <h3>JWT Decoder</h3>
+      <p>Inspect header and payload without sending data anywhere.</p>
+    </a>
+    <a href="/tools/regex-tester/" class="card">
+      <h3>Regex Tester</h3>
+      <p>Test patterns and matches in real time.</p>
+    </a>
+    <a href="/tools/qr-code-generator/" class="card">
+      <h3>QR Code Generator</h3>
+      <p>Generate QR codes for URLs and text.</p>
+    </a>
+    <a href="/tools/word-counter/" class="card">
+      <h3>Word Counter</h3>
+      <p>Count words, characters, and sentences.</p>
+    </a>
+    <a href="/tools/uuid-generator/" class="card">
+      <h3>UUID Generator</h3>
+      <p>Generate UUIDs v4 instantly.</p>
+    </a>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Services &amp; Tech</h4>
+        <ul>
+          <li><a href="/services/">Services</a></li>
+          <li><a href="/ai-services/">AI Services</a></li>
+          <li><a href="/products/">Products</a></li>
+          <li><a href="/solutions/">Solutions</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Free Tools</h4>
+        <ul>
+          <li><a href="/tools/">Tools</a></li>
+          <li><a href="/agents-monitoring/">AI Agent Dashboard</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company &amp; Trust</h4>
+        <ul>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/use-cases/">Use Cases</a></li>
+          <li><a href="/testimonials/">Testimonials</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Legal &amp; Resources</h4>
+        <ul>
+          <li><a href="/faq/">FAQ</a></li>
+          <li><a href="/privacy/">Privacy</a></li>
+          <li><a href="/terms/">Terms</a></li>
+          <li><a href="/sla/">SLA</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      &copy; 2026 Zion Tech Group. All rights reserved.
+      <a href="/sitemap.xml" style="margin-left:16px;color:#64748b">Sitemap</a>
+    </div>
+  </div>
+</footer>
+
+<div class="status-badge">
+  <span class="dot"></span>
+  <span>10 Agents Active</span>
+</div>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"Zion Tech Group","url":"https://ziontechgroup.com","sameAs":["https://linkedin.com/company/ziontechgroup","https://x.com/ziontechgroup","https://github.com/Zion-support"]}
+</script>
 </body>
 </html>
-

@@ -1,4 +1,4 @@
-# Ensures eslint.config.mjs exists, parses as ESM, and retains its core imports/export.
+# Ensures eslint.config.mjs exists and loads as ESM (lint pipeline depends on it).
 
 name: eslint.config.mjs smoke (weekly)
 
@@ -27,13 +27,15 @@ jobs:
         with:
           node-version-file: '.nvmrc'
 
-      - name: eslint.config.mjs exists and parses as ESM
+      - name: eslint.config.mjs exists and ESM-imports
         run: |
           set -euo pipefail
           test -f eslint.config.mjs
           test -s eslint.config.mjs
-          node --check eslint.config.mjs
-          grep -Fq "import js from '@eslint/js';" eslint.config.mjs
-          grep -Fq "import typescript from '@typescript-eslint/eslint-plugin';" eslint.config.mjs
-          grep -Fq 'export default [' eslint.config.mjs
-          echo 'ok: eslint.config.mjs syntax and anchors'
+          node --input-type=module -e "
+            const m = await import('./eslint.config.mjs');
+            const d = m.default;
+            if (d == null) process.exit(1);
+            if (typeof d !== 'object' && typeof d !== 'function') process.exit(1);
+            console.log('ok: eslint.config.mjs default export');
+          "

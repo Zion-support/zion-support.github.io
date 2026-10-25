@@ -9,6 +9,13 @@ concurrency:
   cancel-in-progress: true
 
 "on":
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/production-health-monitor.yml'
+  pull_request:
+    paths:
+      - '.github/workflows/production-health-monitor.yml'
   schedule:
     - cron: '0 */6 * * *'
   workflow_dispatch:
@@ -38,6 +45,8 @@ jobs:
             "/partners/"
             "/careers/"
             "/tools/"
+            "/apps/"
+            "/discovery/"
             "/ai-services/"
             "/privacy/"
             "/terms/"
@@ -145,7 +154,7 @@ jobs:
 
       - name: Create issue on failure
         if: always() && steps.health.outputs.failures != '0'
-        uses: actions/github-script@v8
+        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8.0.0
         env:
           FAILURES: ${{ steps.health.outputs.failures }}
           FAILED_PAGES: ${{ steps.health.outputs.failed_pages }}
@@ -173,5 +182,29 @@ jobs:
                 title: `🔴 Production Health Check Failed - ${new Date().toISOString().split('T')[0]}`,
                 body: `## Production Health Alert\n\n${failures} endpoint(s) returned errors during the scheduled health check: ${failedPages}\n\nCheck the [workflow run](${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}) for details.`,
                 labels: ['production-incident', 'bug'],
+              });
+            }
+
+      - name: Close prior production health incident on recovery
+        if: always() && steps.health.outputs.failures == '0'
+        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8.0.0
+        with:
+          script: |
+            const { data: issues } = await github.rest.issues.listForRepo({
+              ...context.repo,
+              state: 'open',
+              labels: 'production-incident',
+              per_page: 100,
+            });
+            for (const issue of issues.filter(i => i.title.includes('Production Health Check Failed'))) {
+              await github.rest.issues.createComment({
+                ...context.repo,
+                issue_number: issue.number,
+                body: 'Recovered: production endpoint health is green again on run '+context.runId+'.',
+              });
+              await github.rest.issues.update({
+                ...context.repo,
+                issue_number: issue.number,
+                state: 'closed',
               });
             }
