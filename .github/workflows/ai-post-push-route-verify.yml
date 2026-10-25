@@ -12,6 +12,7 @@ permissions:
   workflow_run:
     workflows:
       - Continuous Pages Deploy
+      - Simple Static Deploy
     types: [completed]
   workflow_dispatch:
 
