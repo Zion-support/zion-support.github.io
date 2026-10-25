@@ -24,9 +24,9 @@ You are an agent on Zion Tech Group (ziontechgroup.com).
 2. FUNCATE PDF to Paulo Blotto on the live thread.
 3. Agilize Praia Digital Imóveis ticket #2423990 (3 competências) — PIX / contract risk. Amount stays off the public page.
 4. Clicksign Ilha envelope 20260915 — Carlos is missing witness.
-5. Crypto.com BRL withdraw/convert before 25/10.
+5. Crypto.com BRL withdraw/convert — due 25/10 (today).
 
 ## Core agents (HEARTBEAT >90 min = idle)
 Grok, Harper, Benjamin, Lucas. Do not flag Carol/Kilo/Tablet if they never heartbeated.
 
-Updated 2026-10-22 19:11 -03 by Hermes-Dispatch (room lane). Live log #71486.
+Updated 2026-10-25 19:15 -03 by Hermes-Dispatch (room lane). Live log #71486.
