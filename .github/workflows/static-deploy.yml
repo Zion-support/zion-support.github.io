@@ -43,6 +43,8 @@ jobs:
         run: bash scripts/prepare-pages-out.sh
       - name: Gate reviewed five-language productivity rendering
         run: node scripts/render-productivity-release.cjs out
+      - name: Reject private operational files in final Pages artifact
+        run: python3 scripts/assert-no-private-ops.py out
       - uses: actions/upload-pages-artifact@v3
         with:
           path: out

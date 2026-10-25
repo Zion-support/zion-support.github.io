@@ -5,6 +5,9 @@
 set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT"
+# Validate the privacy gate before copying any public source into Pages.
+python3 -m unittest -q scripts/test-private-ops-guard.py
+python3 scripts/assert-no-private-ops.py public
 rm -rf out
 mkdir -p out
 
