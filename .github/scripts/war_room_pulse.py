@@ -13,7 +13,7 @@ Hard rules (never violate):
 - Never orange-cloud the apex. Never CREATE apps. DNS.
 - Never point colliding repo CNAMEs at satellite hosts.
 """
-import json, os, re, urllib.request, datetime
+import json, os, re, urllib.request, urllib.error, datetime
 
 REPO = "Zion-support/zion-support.github.io"
 ISSUE = 71361
@@ -126,8 +126,17 @@ def main():
               "never point colliding repo CNAMEs at satellite hosts. "
               "Emails: reply-all, same thread, CC carlos@ + commercial@ziontechgroup.com."
         )
-        gh(f"/issues/{ISSUE}/comments", method="POST", data={"body": ack})
-        welcomed.add(c["id"])
+        try:
+            gh(f"/issues/{ISSUE}/comments", method="POST", data={"body": ack})
+            welcomed.add(c["id"])
+        except urllib.error.HTTPError as exc:
+            # Issue #71361 has reached GitHub's comment ceiling. A saturated
+            # conversation must not block the durable board/state refresh.
+            print(
+                f"::warning::War Room welcome comment skipped for {c['id']}: "
+                f"HTTP {exc.code}. Continuing pulse/state update."
+            )
+            welcomed.add(c["id"])
 
     if comments:
         state["last_comment_id"] = max(c["id"] for c in comments)
