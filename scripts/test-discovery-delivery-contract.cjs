@@ -56,3 +56,7 @@ for(const lang of ['en','pt-BR','es','fr','de'])for(const mode of ['malformed-js
 });
 for(const mode of ['failure','false-success'])test('explicit failure remains retryable '+mode,async()=>{const h=harness(mode);await h.submit();await h.submit();assert.equal(h.requests.length,2);});
 test('changed report remains eligible after uncertainty',async()=>{const h=harness('network-error');await h.submit();h.fields.goal='Changed bounded test';await h.submit();assert.equal(h.requests.length,2);});
+
+// Current-main route preservation regressions; no production requests.
+test('preserve current main incident-response recommendations',async()=>{const h=harness('success',{process:'IT operations / incident response'});await h.submit();assert.deepEqual(Array.from(h.nodes.rapps.children,item=>item.children[0].href),['/incident-postmortem-writer/','/patch-window-planner/','/apps/operations-reliability-ai-2026.html']);});
+test('preserve current main dispatch recommendations',async()=>{const h=harness('success',{process:'Scheduling / dispatch'});await h.submit();assert.deepEqual(Array.from(h.nodes.rapps.children,item=>item.children[0].href),['/ai-smart-hands-scheduler/','/ai-field-service-automation/','/sla-calculator/']);});
