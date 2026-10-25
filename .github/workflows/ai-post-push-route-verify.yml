@@ -7,19 +7,36 @@ permissions:
 "on":
   push:
     branches: [main]
+  # Provenance for rollback readiness must be collected AFTER Pages publishes.
+  # No extra cron; existing push/manual checks remain available.
+  workflow_run:
+    workflows:
+      - Continuous Pages Deploy
+    types: [completed]
   workflow_dispatch:
 
 concurrency:
-  group: ai-post-push-route-verify-${{ github.ref }}
+  # Do not let a quick push probe cancel an independent post-deploy verifier.
+  group: ai-post-push-route-verify-${{ github.event_name }}-${{ github.event.workflow_run.id || github.ref }}
   cancel-in-progress: true
 
 jobs:
   verify-routes:
+    # A workflow_run event from another branch, repository, or failed deploy
+    # cannot certify production readiness or create a route-failure issue.
+    if: >-
+      ${{ github.event_name != 'workflow_run' ||
+          (github.event.workflow_run.conclusion == 'success' &&
+           github.event.workflow_run.head_branch == 'main' &&
+           github.event.workflow_run.repository.full_name == github.repository) }}
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
-      - name: Checkout
+      - name: Checkout the deployed commit
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          ref: ${{ github.event_name == 'workflow_run' && github.event.workflow_run.head_sha || github.sha }}
+          persist-credentials: false
 
       - name: Setup Node.js
         uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
