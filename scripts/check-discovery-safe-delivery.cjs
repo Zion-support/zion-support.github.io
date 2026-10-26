@@ -3,9 +3,12 @@
 // Offline tests only. DOM, clipboard and fetch are mocked; no email is sent.
 const fs = require('node:fs');
 const vm = require('node:vm');
+const path = require('node:path');
 const assert = require('node:assert/strict');
 const input = fs.readFileSync(process.argv[2] || 'public/discovery/index.html', 'utf8');
-const source = input.includes('<script>') ? [...input.matchAll(/<script>([\s\S]*?)<\/script>/g)].map(x=>x[1]).join('\n') : input;
+const inline = [...input.matchAll(/<script\b[^>]*>([\s\S]*?)<\/script>/gi)].map(x=>x[1]).find(s=>s.includes('discoveryPending'));
+const sharedScript = /src=["']\/assets\/js\/discovery-delivery\.js["']/i.test(input);
+const source = input.includes('discoveryPending') ? input : inline || (sharedScript ? fs.readFileSync(path.resolve(__dirname, '../public/assets/js/discovery-delivery.js'), 'utf8') : '');
 assert(source.includes('discoveryPending'), 'Expected Discovery implementation was not found');
 let count = 0;
 function fixture(fetchImpl, overrides = {}) {
@@ -34,10 +37,10 @@ function fixture(fetchImpl, overrides = {}) {
 const ok=async()=>({ok:true,json:async()=>({success:true})});
 async function test(name,fn){await fn();count++;console.log('PASS '+name);}
 (async()=>{
- await test('same local report payload targets Commercial with client and Carlos copied',async()=>{
+ await test('same local report payload targets Commercial with only the validated client copied',async()=>{
   const x=fixture(ok);await x.submit();const p=x.requests[0].payload;
   assert.equal(x.requests.length,1);assert.equal(x.requests[0].url,'https://formsubmit.co/ajax/commercial@ziontechgroup.com');
-  assert.equal(p._cc,'qa@example.com,carlos@ziontechgroup.com');assert.equal(p._replyto,'qa@example.com');assert(!('_autoresponse' in p));
+  assert.equal(p._cc,'qa@example.com');assert.equal(JSON.stringify(p).includes('carlos@'),false);assert.equal(p._replyto,'qa@example.com');assert(!('_autoresponse' in p));
   assert.equal(p.message,x.context.window.__zionDiscoveryReport);assert.equal(p.message,x.get('report-text').textContent);
  });
  await test('success means acceptance, not confirmed inbox delivery',async()=>{
@@ -61,7 +64,7 @@ async function test(name,fn){await fn();count++;console.log('PASS '+name);}
   await test(name+' preserves local result and clears pending state',async()=>{const x=fixture(async()=>{const e=Error('mock network error');e.name=name;throw e;});await x.submit();assert(x.get('report-text').textContent);assert.equal(x.get('submit-report').disabled,false);assert.equal(x.form.attrs['aria-busy'],'false');assert.equal(x.requests.length,1);if(name==='AbortError')assert.match(x.get('rsent').textContent,/may already have been accepted/);});
  }
  await test('invalid and multiple-recipient email input is blocked',async()=>{for(const email of ['a@example.com,b@example.com','a@example.com;evil@example.com','a@example.com\r\nBcc: evil@example.com','not-an-email']){const x=fixture(ok,{email});await x.submit();assert.equal(x.requests.length,0);assert.equal(x.get('form-errors').hidden,false);}});
- await test('all ten process choices generate three safe internal app links',async()=>{const base=fixture(ok);const choices=vm.runInContext('Object.keys(APPMAP)',base.context);assert.equal(choices.length,10);for(const process of choices){const x=fixture(ok,{process});await x.submit();assert.equal(x.get('rapps').children.length,3);for(const item of x.get('rapps').children){assert(item.children[0].href.startsWith('/'));assert(item.children[0].textContent);}}});
+ await test('all ten process choices render their configured safe internal app links',async()=>{const base=fixture(ok);const choices=vm.runInContext('Object.keys(APPMAP)',base.context);assert.equal(choices.length,10);for(const process of choices){const x=fixture(ok,{process});await x.submit();const expected=vm.runInContext('APPMAP['+JSON.stringify(process)+']',x.context);assert.ok(expected.length>=2&&expected.length<=3);assert.equal(x.get('rapps').children.length,expected.length);x.get('rapps').children.forEach((item,i)=>{assert.match(item.children[0].href,/^\/(?!\/)/);assert.equal(item.children[0].href,expected[i][1]);assert.equal(item.children[0].textContent,expected[i][0]);});}});
  await test('unknown model choices cannot access inherited object properties',async()=>{for(const data of [{process:'__proto__'},{hours:'constructor'}]){const x=fixture(ok,data);await x.submit();assert.equal(x.requests.length,0);}});
  console.log('TOTAL '+count+' passed; isolated mock DOM/network, no real delivery or browser layout tested.');
 })().catch(e=>{console.error(e);process.exitCode=1;});
