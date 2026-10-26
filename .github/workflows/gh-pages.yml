@@ -71,3 +71,30 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+      - name: Verify custom-domain deployment
+        shell: bash
+        run: |
+          set -euo pipefail
+          base="https://ziontechgroup.com"
+          fetch_until() {
+            local url="$1"
+            local marker="$2"
+            local tries=12
+            local i
+            for i in $(seq 1 "$tries"); do
+              body="$(curl -fsSL --max-time 20 -H 'Cache-Control: no-cache' "${url}?deploy_sha=${GITHUB_SHA}" || true)"
+              if printf '%s' "$body" | grep -Fq "$marker"; then
+                echo "OK ${url} marker=${marker}"
+                return 0
+              fi
+              echo "waiting for ${url} (${i}/${tries})"
+              sleep 10
+            done
+            echo "::error::${url} did not expose marker '${marker}' after deploy sha ${GITHUB_SHA}"
+            return 1
+          }
+
+          fetch_until "${base}/" "~5 minutos"
+          fetch_until "${base}/apps/network-batch75.html" "Logistics &amp; Supply Chain AI Suite"
+          fetch_until "${base}/supplier-risk-radar/" "Supplier Risk Radar"
