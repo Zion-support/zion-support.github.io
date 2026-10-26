@@ -51,7 +51,7 @@ permissions:
 jobs:
   burst:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 35
     env:
       NEXT_TELEMETRY_DISABLED: "1"
       NODE_OPTIONS: '--max-old-space-size=12288'
@@ -81,14 +81,26 @@ jobs:
           MAX_ADD: "8"
         run: node automation/ai-content-burst-agent.cjs
 
+      - name: Detect generated changes
+        id: changes
+        run: |
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No generated changes; skipping full build and commit."
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            git status --short
+          fi
 
       - name: Validate build (catch content errors before push)
+        if: steps.changes.outputs.changed == 'true'
         run: |
           set -euo pipefail
           npm run rsc:guard
           npm run build
 
       - name: Commit, push, and deploy
+        if: steps.changes.outputs.changed == 'true'
         env:
           TRIGGER_DEPLOY: ${{ github.event.inputs.trigger_deploy != 'false' && '1' || '' }}
 #           NETLIFY_BUILD_HOOK removed (Netlify decommissioned → GitHub Pages)
