@@ -1,0 +1,44 @@
+name: Family A Visual QA
+
+on:
+  pull_request:
+    paths:
+      - 'public/**'
+      - 'scripts/prepare-pages-out.sh'
+      - 'scripts/apply-family-a-chrome.cjs'
+      - 'scripts/family-a-visual-qa.cjs'
+      - '.github/workflows/family-a-visual-qa.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  visual-qa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - name: Assemble Pages artifact
+        run: bash scripts/prepare-pages-out.sh
+      - name: Serve artifact
+        run: |
+          python3 -m http.server 4173 -d out > /tmp/family-a-http.log 2>&1 &
+          echo $! > /tmp/family-a-http.pid
+          sleep 2
+      - name: Visual + responsive QA
+        run: node scripts/family-a-visual-qa.cjs
+      - name: Upload screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: family-a-visual-screenshots
+          path: automation/reports/family-a-visual
+          if-no-files-found: error
+          retention-days: 14
