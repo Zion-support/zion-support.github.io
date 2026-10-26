@@ -22,7 +22,7 @@ jobs:
   analyze:
     name: Analyze
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 60
 
 
     strategy:
@@ -45,6 +45,7 @@ jobs:
 
 
       - name: Perform CodeQL Analysis
+        id: codeql_analysis
         uses: github/codeql-action/analyze@c10b8064de6f491fea524254123dbe5e09572f13 # v4.35.1
         with:
           category: "/language:${{ matrix.language }}"
@@ -55,5 +56,5 @@ jobs:
           echo "## CodeQL Security Analysis" >> "$GITHUB_STEP_SUMMARY"
           echo "" >> "$GITHUB_STEP_SUMMARY"
           echo "- **Language:** ${{ matrix.language }}" >> "$GITHUB_STEP_SUMMARY"
-          echo "- **Status:** Completed" >> "$GITHUB_STEP_SUMMARY"
+          echo "- **Analysis outcome:** ${{ steps.codeql_analysis.outcome }}" >> "$GITHUB_STEP_SUMMARY"
           echo "- **Queries:** security-and-quality" >> "$GITHUB_STEP_SUMMARY"
