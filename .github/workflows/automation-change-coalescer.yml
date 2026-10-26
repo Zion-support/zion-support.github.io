@@ -1,0 +1,174 @@
+name: Automation Change Coalescer
+
+permissions:
+  contents: read
+  pull-requests: write
+
+"on":
+  workflow_dispatch:
+    inputs:
+      staging_branch:
+        description: "Existing safe staging branch: automation/staging/<slug>"
+        required: true
+        type: string
+      policy_group:
+        description: "Allowed path policy for staged changes."
+        required: true
+        type: choice
+        options: [content, reports, docs]
+      source_run_url:
+        description: "Optional GitHub Actions run provenance URL."
+        required: false
+        type: string
+  workflow_call:
+    inputs:
+      staging_branch:
+        required: true
+        type: string
+      policy_group:
+        required: true
+        type: string
+      source_run_url:
+        required: false
+        type: string
+
+concurrency:
+  group: automation-change-coalescer-${{ inputs.staging_branch }}
+  cancel-in-progress: false
+
+jobs:
+  coalesce:
+    name: Validate staging and upsert one draft PR
+    # Only trusted default-branch callers may produce a PR write token.
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - name: Validate staging branch name before checkout
+        env:
+          STAGING_BRANCH: ${{ inputs.staging_branch }}
+          SOURCE_RUN_URL: ${{ inputs.source_run_url }}
+          REPOSITORY: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          if [[ ! "$STAGING_BRANCH" =~ ^automation/staging/[a-z0-9][a-z0-9._-]{1,62}$ ]]; then
+            echo "::error title=Invalid staging branch::Expected automation/staging/<safe-slug>"
+            exit 1
+          fi
+          if [ -n "$SOURCE_RUN_URL" ] && [[ ! "$SOURCE_RUN_URL" =~ ^https://github.com/[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+/actions/runs/[0-9]+$ ]]; then
+            echo "::error title=Invalid provenance::Expected a canonical GitHub Actions run URL"
+            exit 1
+          fi
+          # A source run link is advisory provenance, not an arbitrary URL.
+          if [ -n "$SOURCE_RUN_URL" ] && [[ "$SOURCE_RUN_URL" != "https://github.com/${REPOSITORY}/actions/runs/"* ]]; then
+            echo "::error title=Invalid provenance::Source run must belong to this repository"
+            exit 1
+          fi
+
+      # Always load executable validator code from trusted main, never staging.
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          ref: main
+          # Bound history; an old staging branch must rebase rather than
+          # silently accept a missing merge base or fetch unbounded history.
+          fetch-depth: 1
+          persist-credentials: false
+          sparse-checkout: |
+            scripts/automation/validate-coalescer-staging.cjs
+            scripts/automation/validate-coalescer-staging.test.cjs
+          sparse-checkout-cone-mode: false
+
+      - name: Fetch pinned staging commit without checkout
+        env:
+          STAGING_BRANCH: ${{ inputs.staging_branch }}
+        run: |
+          set -euo pipefail
+          # Fetch only a bounded recent ancestry and tree metadata. Individual
+          # changed blobs are downloaded on demand by the validator, not npm.
+          git fetch --no-tags --filter=blob:none --depth=200 origin main:refs/remotes/origin/main
+          git fetch --no-tags --filter=blob:none --depth=200 origin "refs/heads/${STAGING_BRANCH}:refs/remotes/origin/coalescer-target"
+
+      - name: Regression-test trusted policy verifier
+        run: node --test scripts/automation/validate-coalescer-staging.test.cjs
+
+      - name: Validate coalescing policy
+        id: validate
+        env:
+          STAGING_BRANCH: ${{ inputs.staging_branch }}
+          POLICY_GROUP: ${{ inputs.policy_group }}
+          BASE_REF: origin/main
+          STAGING_REF: refs/remotes/origin/coalescer-target
+        run: node scripts/automation/validate-coalescer-staging.cjs
+
+      - name: Upsert one draft PR for this staging branch
+        env:
+          GH_TOKEN: ${{ github.token }}
+          STAGING_BRANCH: ${{ inputs.staging_branch }}
+          POLICY_GROUP: ${{ inputs.policy_group }}
+          SOURCE_RUN_URL: ${{ inputs.source_run_url }}
+          VALIDATED_HEAD: ${{ steps.validate.outputs.head }}
+          FILE_COUNT: ${{ steps.validate.outputs.file_count }}
+          ADDED: ${{ steps.validate.outputs.added }}
+          DELETED: ${{ steps.validate.outputs.deleted }}
+          REVIEW_TIER: ${{ steps.validate.outputs.review_tier }}
+          REVIEW_REASONS: ${{ steps.validate.outputs.review_reasons }}
+          STAGED_BYTES: ${{ steps.validate.outputs.staged_bytes }}
+        run: |
+          set -euo pipefail
+          # Avoid a time-of-check/time-of-use branch movement before PR creation.
+          remote_head="$(git ls-remote --exit-code origin "refs/heads/$STAGING_BRANCH" | cut -f1)"
+          if [ "$remote_head" != "$VALIDATED_HEAD" ]; then
+            echo "::error title=Staging changed::Ref moved after validation; rerun with a fresh snapshot"
+            exit 1
+          fi
+
+          existing="$(gh pr list --state open --base main --head "$STAGING_BRANCH" --json number --jq '.[0].number // empty')"
+          if [ -n "$existing" ] && [ "$(gh pr view "$existing" --json isDraft --jq '.isDraft')" != "true" ]; then
+            echo "::error title=PR not draft::Refuse to update a ready-for-review PR"
+            exit 1
+          fi
+          body_file="$(mktemp)"
+          {
+            echo "## Automation change coalescer"
+            echo
+            echo "- Policy group: \`$POLICY_GROUP\`"
+            echo "- Staging branch: \`$STAGING_BRANCH\`"
+            echo "- Validated head: \`$VALIDATED_HEAD\`"
+            echo "- Changed files: **$FILE_COUNT**"
+            echo "- Diff: **+$ADDED / -$DELETED**"
+            echo "- Staged blob bytes: **$STAGED_BYTES**"
+            echo "- Advisory review tier: **$REVIEW_TIER**"
+            echo "- Review signals: $REVIEW_REASONS"
+            if [ -n "$SOURCE_RUN_URL" ]; then echo "- Source run: $SOURCE_RUN_URL"; fi
+            echo
+            echo "### Safety"
+            echo "- Draft only; no automatic merge."
+            echo "- Trusted main-only validator checks protected paths and staged content."
+            echo "- Existing exact-head repository CI remains the approval gate."
+            echo "- This workflow never pushes to \`main\`."
+          } > "$body_file"
+
+          if [ -z "$existing" ]; then
+            pr_locator="$(gh pr create --draft --base main --head "$STAGING_BRANCH" \
+              --title "chore(automation): coalesced $POLICY_GROUP updates" \
+              --body-file "$body_file")"
+          else
+            pr_locator="$existing"
+            current_body="$(gh pr view "$existing" --json body --jq '.body')"
+            if [ "$current_body" != "$(cat "$body_file")" ]; then
+              gh pr edit "$existing" --body-file "$body_file"
+            else
+              echo "Existing draft body unchanged; no unnecessary PR edit"
+            fi
+          fi
+          # A branch can move after the early check. Validate the exact PR's
+          # observed head too; downstream exact-head CI remains the release gate.
+          observed_head="$(gh pr view "$pr_locator" --json headRefOid --jq '.headRefOid')"
+          if [ "$observed_head" != "$VALIDATED_HEAD" ]; then
+            echo "::error title=Staging changed::Draft PR head differs from validated commit"
+            exit 1
+          fi
+          echo "- Draft PR verified at staging head \`$VALIDATED_HEAD\`. No merge performed." >> "$GITHUB_STEP_SUMMARY"
