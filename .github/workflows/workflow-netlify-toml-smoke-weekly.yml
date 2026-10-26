@@ -25,11 +25,25 @@ jobs:
       - name: Smoke check (was netlify.toml)
         run: |
           set -euo pipefail
-          test -f netlify.toml
-          test -s netlify.toml
-          grep -Fq '[build]' netlify.toml
-          grep -Fq 'publish = "out"' netlify.toml
-          grep -Fq 'command = "npm run build"' netlify.toml
-          grep -Fq 'NODE_VERSION = "20"' netlify.toml
-          grep -Fq 'NETLIFY_NEXT_PLUGIN_SKIP = "true"' netlify.toml
-          echo 'ok: netlify.toml'
+          if test -f netlify.toml; then
+            test -s netlify.toml
+            grep -Fq '[build]' netlify.toml
+            grep -Fq 'publish = "out"' netlify.toml
+            grep -Fq 'command = "npm run build"' netlify.toml
+            grep -Fq 'NODE_VERSION = "20"' netlify.toml
+            grep -Fq 'NETLIFY_NEXT_PLUGIN_SKIP = "true"' netlify.toml
+            echo 'ok: netlify.toml'
+          else
+            # This repository publishes via GitHub Pages when Netlify is not configured.
+            # Never treat a missing config as healthy without an explicit Pages contract.
+            test -f .github/workflows/static-deploy.yml
+            test -s .github/workflows/static-deploy.yml
+            test -f scripts/prepare-pages-out.sh
+            test -s scripts/prepare-pages-out.sh
+            grep -Fq 'name: Simple Static Deploy' .github/workflows/static-deploy.yml
+            grep -Fq 'name: github-pages' .github/workflows/static-deploy.yml
+            grep -Fq 'pages: write' .github/workflows/static-deploy.yml
+            grep -Fq 'id-token: write' .github/workflows/static-deploy.yml
+            grep -Fq 'run: bash scripts/prepare-pages-out.sh' .github/workflows/static-deploy.yml
+            echo 'ok: no Netlify config; GitHub Pages publishing contract present'
+          fi
