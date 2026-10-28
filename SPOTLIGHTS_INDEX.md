@@ -2,6 +2,20 @@
 
 One page linking every spotlight, suite doc and news page for the [Zion App Network](https://ziontechgroup.com/zion-app-network/) ([master directory](https://github.com/Zion-support/zion-app-network)). 700+ interlinked AI apps, tools and field playbooks by [Zion Tech Group](https://ziontechgroup.com).
 
+## Live verified — Consolidated 2026-10-23 (session shop, ~23:15 UTC)
+
+Only URLs returning HTTP 200 in this session are listed as live. Same consolidated design/layout/navigation and EN / PT-BR / ES / FR / DE translations:
+
+- EN — Hub: https://ziontechgroup.com/zion-app-network/app-network-consolidated-2026-10-23.html · Homepage: https://ziontechgroup.com/apps/showcase-2026-10-23-consolidated.html · Discovery: https://ziontechgroup.com/discovery/
+- PT-BR — Hub: https://ziontechgroup.com/zion-app-network/app-network-consolidated-2026-10-23-pt-br.html · Homepage: https://ziontechgroup.com/apps/showcase-2026-10-23-consolidated-pt.html · Discovery: https://ziontechgroup.com/pt-br/discovery/
+- ES — Hub: https://ziontechgroup.com/zion-app-network/app-network-consolidated-2026-10-23-es.html · Homepage: https://ziontechgroup.com/apps/showcase-2026-10-23-consolidated-es.html · Discovery: https://ziontechgroup.com/es/discovery/
+- FR — Hub: https://ziontechgroup.com/zion-app-network/app-network-consolidated-2026-10-23-fr.html · Homepage: https://ziontechgroup.com/apps/showcase-2026-10-23-consolidated-fr.html · Discovery: https://ziontechgroup.com/fr/discovery/
+- DE — Hub: https://ziontechgroup.com/zion-app-network/app-network-consolidated-2026-10-23-de.html · Homepage: https://ziontechgroup.com/apps/showcase-2026-10-23-consolidated-de.html · Discovery: https://ziontechgroup.com/de/discovery/
+
+Apps hubs also live: https://ziontechgroup.com/apps/ · https://ziontechgroup.com/pt/apps/ · https://ziontechgroup.com/es/apps/ · https://ziontechgroup.com/fr/apps/ · https://ziontechgroup.com/de/apps/ · https://ziontechgroup.com/apps/content-hub.html
+
+Not live yet (draft PRs, 404 expected): Discovery Showcase PR71665, Start Here PR71684, Field Service AI PR71685, Homepage Spotlight PR71686, Operations Spotlight PR71683.
+
 ## Homepage spotlight pages (this repo)
 - [APP_NETWORK_SPOTLIGHT_OCT04_BATCH74_SUPPORT.md](APP_NETWORK_SPOTLIGHT_OCT04_BATCH74_SUPPORT.md) — NEW Batch 74b (2026-10-04): Support & Reliability AI — ticket triage, SLA breach prediction, tech debt radar, site survey planning
 - [app-network-discovery.html](app-network-discovery.html) — UPGRADED (2026-10-04): full Free AI Discovery questionnaire — 8 questions, personalized picks from 770+ apps, results emailed instantly to you + commercial@ziontechgroup.com
@@ -33,8 +47,8 @@ One page linking every spotlight, suite doc and news page for the [Zion App Netw
 - [Full repository catalog — CATALOG.md](https://github.com/Zion-support/zion-app-network/blob/main/CATALOG.md)
 
 ## Explore
-- 🧰 All tools: https://ziontechgroup.com/tools/ · 💎 Plans & pricing: https://ziontechgroup.com/en/plans/ · 🔎 Free Discovery: https://ziontechgroup.com/app-network-discovery.html
-- ✉️ commercial@ziontechgroup.com
+- All tools: https://ziontechgroup.com/tools/ · Plans & pricing: https://ziontechgroup.com/en/plans/ · Free Discovery: https://ziontechgroup.com/app-network-discovery.html
+- commercial@ziontechgroup.com
 
 ---
 © 2026 Zion Tech Group · https://ziontechgroup.com
