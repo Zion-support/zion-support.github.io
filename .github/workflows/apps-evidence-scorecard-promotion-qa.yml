@@ -1,0 +1,25 @@
+name: Apps Evidence Scorecard Promotion QA
+on:
+  pull_request:
+    paths:
+      - 'public/index.html'
+      - 'public/en/index.html'
+      - 'public/es/index.html'
+      - 'public/fr/index.html'
+      - 'public/de/index.html'
+      - 'public/apps/index.html'
+      - 'scripts/test_app_selection_promotion.py'
+      - '.github/workflows/apps-evidence-scorecard-promotion-qa.yml'
+permissions:
+  contents: read
+jobs:
+  offline-contract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout read-only code
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - name: Check five localized homepage promos and Apps directory link contract
+        run: python3 -m unittest discover -s scripts -p 'test_app_selection_promotion.py' -v
