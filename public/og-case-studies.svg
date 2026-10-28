@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#1e1b4b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <g opacity="0.5" stroke="#a855f7" stroke-width="1.5" fill="none">
+    <circle cx="180" cy="120" r="90"/><circle cx="180" cy="120" r="140"/>
+    <circle cx="1040" cy="520" r="120"/><circle cx="1040" cy="520" r="180"/>
+  </g>
+  <rect x="90" y="90" width="66" height="14" rx="7" fill="#a855f7"/>
+  <text x="90" y="190" fill="#e6edf7" font-size="64" font-weight="800">Zion Tech Group</text>
+  <text x="90" y="270" fill="#f5f5f5" font-size="46" font-weight="700">Cases: primeiro win, depois escala</text>
+  <text x="90" y="330" fill="#94a3b8" font-size="30">Sem ROI inventado · resultados direcionais por ordem de grandeza</text>
+  <g transform="translate(90,470)">
+    <rect x="0" y="0" width="220" height="80" rx="12" fill="#0f172a" stroke="#1f2937"/>
+    <text x="20" y="40" fill="#10b981" font-size="22" font-weight="700">Managed IT</text>
+    <text x="20" y="64" fill="#94a3b8" font-size="16">continuidade &amp; renovação</text>
+    <rect x="250" y="0" width="220" height="80" rx="12" fill="#0f172a" stroke="#1f2937"/>
+    <text x="270" y="40" fill="#3b82f6" font-size="22" font-weight="700">Resposta a incidentes</text>
+    <text x="270" y="64" fill="#94a3b8" font-size="16">fila com dono &amp; registro</text>
+    <rect x="500" y="0" width="220" height="80" rx="12" fill="#0f172a" stroke="#1f2937"/>
+    <text x="520" y="40" fill="#a855f7" font-size="22" font-weight="700">FinOps</text>
+    <text x="520" y="64" fill="#94a3b8" font-size="16">visibilidade antes de cortar</text>
+  </g>
+  <text x="90" y="600" fill="#64748b" font-size="20">ziontechgroup.com/case-studies</text>
+</svg>
