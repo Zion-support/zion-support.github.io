@@ -71,11 +71,17 @@ jobs:
               )
               raise SystemExit(0)
 
-          base=os.environ.get('BASE_SHA','')
-          head=os.environ.get('CURRENT_SHA','HEAD')
-          if not base or set(base)=={'0'}:
-              base='HEAD^'
-
+          # On pull_request checkout@v6 checks out the synthetic merge commit.
+          # HEAD^1 is the matching base for that *same* merge candidate.
+          # github.event.pull_request.base.sha may be older after main advances;
+          # with fetch-depth: 2 that old object is absent (fatal: bad object).
+          # Never skip family validation: fail if the merge-parent is unavailable.
+          base='HEAD^1'
+          head='HEAD'
+          subprocess.check_call(
+              ['git','rev-parse','--verify',base],
+              stdout=subprocess.DEVNULL
+          )
           changed=set(subprocess.check_output(
               ['git','diff','--name-only',base,head],text=True
           ).splitlines())
