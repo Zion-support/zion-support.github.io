@@ -1331144,5 +1331144,1655 @@
     "icon": "\ud83d\udca1",
     "href": "/services/serverless-intuitive-transportation-deployment-7c5f5959",
     "popular": false
+  },
+  {
+    "id": "zero-trust-hyper-local-web3-security-mesh-65c7c011",
+    "name": "Zero-Trust Hyper-Local Web3 Security Mesh",
+    "description": "Zero-trust security mesh that protects hyper-local web3 infrastructure with continuous validation and adaptive threat response.",
+    "category": "security",
+    "industry": "technology",
+    "features": [
+      "Continuous validation",
+      "Micro-segmentation",
+      "Threat isolation",
+      "Adaptive authentication"
+    ],
+    "benefits": [
+      "Zero breach risk",
+      "Continuous compliance",
+      "Threat isolation",
+      "Regulatory assurance"
+    ],
+    "pricing": {
+      "basic": "298",
+      "pro": "748",
+      "enterprise": "2248"
+    },
+    "timestamp": "2026-10-28T04:01:14.961671+00:00",
+    "contactInfo": {
+      "website": "/services/zero-trust-hyper-local-web3-security-mesh-65c7c011",
+      "email": "hello@ziontechgroup.com",
+      "phone": "+1 (302) 464-0950"
+    },
+    "icon": "\ud83d\udca1",
+    "href": "/services/zero-trust-hyper-local-web3-security-mesh-65c7c011",
+    "popular": false
+  },
+  {
+    "id": "ai-driven-multi-model-marketing-automation-01782354",
+    "name": "AI-Driven Multi-Model Marketing Automation",
+    "description": "Intelligent marketing platform that creates multi-model campaigns across channels, optimizing content and targeting.",
+    "category": "marketing",
+    "industry": "technology",
+    "features": [
+      "Dynamic content creation",
+      "Audience segmentation",
+      "A/B testing",
+      "Performance analytics"
+    ],
+    "benefits": [
+      "Higher conversion rates",
+      "Improved ROI",
+      "Personalized messaging",
+      "Automated workflows"
+    ],
+    "pricing": {
+      "basic": "199",
+      "pro": "499",
+      "enterprise": "1499"
+    },
+    "timestamp": "2026-10-28T04:01:14.961733+00:00",
+    "contactInfo": {
+      "website": "/services/ai-driven-multi-model-marketing-automation-01782354",
+      "email": "hello@ziontechgroup.com",
+      "phone": "+1 (302) 464-0950"
+    },
+    "icon": "\ud83d\udca1",
+    "href": "/services/ai-driven-multi-model-marketing-automation-01782354",
+    "popular": false
+  },
+  {
+    "id": "quantum-ready-frictionless-clean-energy-analytics-e0a3f89c",
+    "name": "Quantum-Ready Frictionless Clean Energy Analytics",
+    "description": "Quantum-ready analytics platform that prepares frictionless clean energy workloads for future quantum acceleration.",
+    "category": "quantum",
+    "industry": "technology",
+    "features": [
+      "Quantum simulation",
+      "Hybrid classical-quantum",
+      "Algorithm optimization",
+      "Future-proofing"
+    ],
+    "benefits": [
+      "Quantum advantage readiness",
+      "Future-proof algorithms",
+      "Hybrid optimization",
+      "Competitive edge"
+    ],
+    "pricing": {
+      "basic": "298",
+      "pro": "748",
+      "enterprise": "2248"
+    },
+    "timestamp": "2026-10-28T04:01:14.961756+00:00",
+    "contactInfo": {
+      "website": "/services/quantum-ready-frictionless-clean-energy-analytics-e0a3f89c",
+      "email": "hello@ziontechgroup.com",
+      "phone": "+1 (302) 464-0950"
+    },
+    "icon": "\ud83d\udca1",
+    "href": "/services/quantum-ready-frictionless-clean-energy-analytics-e0a3f89c",
+    "popular": false
+  },
+  {
+    "id": "edge-native-transformative-customer-processing-bafd8fcf",
+    "name": "Edge-Native Transformative Customer Processing",
+    "description": "Edge-native processing layer that delivers transformative customer insights with sub-millisecond latency.",
+    "category": "iot",
+    "industry": "technology",
+    "features": [
+      "Edge computing",
+      "Low-latency processing",
+      "Sensor fusion",
+      "Real-time analytics"
+    ],
+    "benefits": [
+      "Sub-millisecond response",
+      "Reduced latency",
+      "Edge efficiency",
+      "Real-time processing"
+    ],
+    "pricing": {
+      "basic": "238",
+      "pro": "598",
+      "enterprise": "1798"
+    },
+    "timestamp": "2026-10-28T04:01:14.961772+00:00",
+    "contactInfo": {
+      "website": "/services/edge-native-transformative-customer-processing-bafd8fcf",
+      "email": "hello@ziontechgroup.com",
+      "phone": "+1 (302) 464-0950"
+    },
+    "icon": "\ud83d\udca1",
+    "href": "/services/edge-native-transformative-customer-processing-bafd8fcf",
+    "popular": false
+  },
+  {
+    "id": "omnichannel-neural-logistics-processor-15531bc1",
+    "name": "Omnichannel Neural Logistics Processor",
+    "description": "Neural processing unit optimized for omnichannel logistics workloads, delivering omnichannel inference at scale.",
+    "category": "ai",
+    "industry": "technology",
+    "features": [
+      "Accelerated inference",
+      "Model compression",
+      "Hardware acceleration",
+      "Batch optimization"
+    ],
+    "benefits": [
+      "10x inference speed",
+      "Reduced latency",
+      "Cost-effective scaling",
+      "Hardware optimization"
+    ],
+    "pricing": {
+      "basic": "278",
+      "pro": "698",
+      "enterprise": "2098"
+    },
+    "timestamp": "2026-10-28T04:01:14.961791+00:00",
+    "contactInfo": {
+      "website": "/services/omnichannel-neural-logistics-processor-15531bc1",
+      "email": "hello@ziontechgroup.com",
+      "phone": "+1 (302) 464-0950"
+    },
+    "icon": "\ud83d\udca1",
+    "href": "/services/omnichannel-neural-logistics-processor-15531bc1",
+    "popular": false
+  },
+  {
+    "id": "adaptive-agile-education-intelligence-hub-5316d082",
+    "name": "Adaptive Agile Education Intelligence Hub",
+    "description": "Adaptive intelligence hub that consolidates agile education data into actionable real-time dashboards and decision support.",
+    "category": "analytics",
+    "industry": "technology",
+    "features": [
+      "Unified dashboards",
+      "Real-time consolidation",
+      "Decision support",
+      "Cross-domain correlation"
+    ],
+    "benefits": [
+      "Unified intelligence",
+      "Real-time decisions",
+      "Cross-domain insights",
+      "Competitive advantage"
+    ],
+    "pricing": {
+      "basic": "218",
+      "pro": "548",
+      "enterprise": "1648"
+    },
+    "timestamp": "2026-10-28T04:01:14.961858+00:00",
+    "contactInfo": {
+      "website": "/services/adaptive-agile-education-intelligence-hub-5316d082",
+      "email": "hello@ziontechgroup.com",
+      "phone": "+1 (302) 464-0950"
+    },
+    "icon": "\ud83d\udca1",
+    "href": "/services/adaptive-agile-education-intelligence-hub-5316d082",
+    "popular": false
+  },
+  {
+    "id": "self-learning-data-driven-marketing-predictor-ef30cc72",
+    "name": "Self-Learning Data-Driven Marketing Predictor",
+    "description": "Self-learning prediction engine that continuously adapts to data-driven marketing patterns for accurate forecasting and anomaly detection.",
+    "category": "mlops",
+    "industry": "technology",
+    "features": [
+      "Continuous adaptation",
+      "Anomaly detection",
+      "Pattern recognition",
+      "Automated retraining"
+    ],
+    "benefits": [
+      "Forecasting accuracy",
+      "Anomaly detection",
+      "Adaptive models",
+      "Reduced false positives"
+    ],
+    "pricing": {
+      "basic": "258",
+      "pro": "648",
+      "enterprise": "1948"
+    },
+    "timestamp": "2026-10-28T04:01:14.961880+00:00",
+    "contactInfo": {
+      "website": "/services/self-learning-data-driven-marketing-predictor-ef30cc72",
+      "email": "hello@ziontechgroup.com",
+      "phone": "+1 (302) 464-0950"
+    },
+    "icon": "\ud83d\udca1",
+    "href": "/services/self-learning-data-driven-marketing-predictor-ef30cc72",
+    "popular": false
+  },
+  {
+    "id": "zero-trust-agile-healthcare-security-mesh-25dc1741",
+    "name": "Zero-Trust Agile Healthcare Security Mesh",
+    "description": "Zero-trust security mesh that protects agile healthcare infrastructure with continuous validation and adaptive threat response.",
+    "category": "security",
+    "industry": "technology",
+    "features": [
+      "Continuous validation",
+      "Micro-segmentation",
+      "Threat isolation",
+      "Adaptive authentication"
+    ],
+    "benefits": [
+      "Zero breach risk",
+      "Continuous compliance",
+      "Threat isolation",
+      "Regulatory assurance"
+    ],
+    "pricing": {
+      "basic": "298",
+      "pro": "748",
+      "enterprise": "2248"
+    },
+    "timestamp": "2026-10-28T04:01:14.961929+00:00",
+    "contactInfo": {
+      "website": "/services/zero-trust-agile-healthcare-security-mesh-25dc1741",
+      "email": "hello@ziontechgroup.com",
+      "phone": "+1 (302) 464-0950"
+    },
+    "icon": "\ud83d\udca1",
+    "href": "/services/zero-trust-agile-healthcare-security-mesh-25dc1741",
+    "popular": false
+  },
+  {
+    "id": "multi-agent-intelligent-digital-assets-framework-e08c814e",
+    "name": "Multi-Agent Intelligent Digital Assets Framework",
+    "description": "Multi-agent framework that deploys intelligent digital assets AI agents for collaborative problem-solving and distributed intelligence.",
+    "category": "development",
+    "industry": "technology",
+    "features": [
+      "Collaborative agents",
+      "Shared memory pools",
+      "Role assignment",
+      "Emergent coordination"
+    ],
+    "benefits": [
+      "Multi-task parallelism",
+      "Specialist agents",
+      "Knowledge sharing",
+      "Emergent problem-solving"
+    ],
+    "pricing": {
+      "basic": "238",
+      "pro": "598",
+      "enterprise": "1798"
+    },
+    "timestamp": "2026-10-28T04:01:14.962043+00:00",
+    "contactInfo": {
+      "website": "/services/multi-agent-intelligent-digital-assets-framework-e08c814e",
+      "email": "hello@ziontechgroup.com",
+      "phone": "+1 (302) 464-0950"
+    },
+    "icon": "\ud83d\udca1",
+    "href": "/services/multi-agent-intelligent-digital-assets-framework-e08c814e",
+    "popular": false
+  },
+  {
+    "id": "intelligent-transformative-sustainability-processing-framework-b630ddce",
+    "name": "Intelligent Transformative Sustainability Processing Framework",
+    "description": "Intelligent processing framework that automates transformative sustainability data flows with real-time transformation.",
+    "category": "data processing",
+    "industry": "technology",
+    "features": [
+      "Real-time processing",
+      "Data transformation",
+      "ETL pipelines",
+      "Stream processing"
+    ],
+    "benefits": [
+      "Faster data flows",
+      "Reduced processing time",
+      "Higher throughput",
+      "Real-time transformation"
+    ],
+    "pricing": {
+      "basic": "199",
+      "pro": "499",
+      "enterprise": "1499"
+    },
+    "timestamp": "2026-10-28T04:01:14.962074+00:00",
+    "contactInfo": {
+      "website": "/services/intelligent-transformative-sustainability-processing-framework-b630ddce",
+      "email": "hello@ziontechgroup.com",
+      "phone": "+1 (302) 464-0950"
+    },
+    "icon": "\ud83d\udca1",
+    "href": "/services/intelligent-transformative-sustainability-processing-framework-b630ddce",
+    "popular": false
+  },
+  {
+    "id": "multi-agent-declarative-cybersecurity-framework-dc6bb2bd",
+    "name": "Multi-Agent Declarative Cybersecurity Framework",
+    "description": "Multi-agent framework that deploys declarative cybersecurity AI agents for collaborative problem-solving and distributed intelligence.",
+    "category": "development",
+    "industry": "technology",
+    "features": [
+      "Collaborative agents",
+      "Shared memory pools",
+      "Role assignment",
+      "Emergent coordination"
+    ],
+    "benefits": [
+      "Multi-task parallelism",
+      "Specialist agents",
+      "Knowledge sharing",
+      "Emergent problem-solving"
+    ],
+    "pricing": {
+      "basic": "238",
+      "pro": "598",
+      "enterprise": "1798"
+    },
+    "timestamp": "2026-10-28T04:01:14.962203+00:00",
+    "contactInfo": {
+      "website": "/services/multi-agent-declarative-cybersecurity-framework-dc6bb2bd",
+      "email": "hello@ziontechgroup.com",
+      "phone": "+1 (302) 464-0950"
+    },
+    "icon": "\ud83d\udca1",
+    "href": "/services/multi-agent-declarative-cybersecurity-framework-dc6bb2bd",
+    "popular": false
+  },
+  {
+    "id": "ai-powered-multi-model-sustainability-analytics-51b3ebe3",
+    "name": "AI-Powered Multi-Model Sustainability Analytics",
+    "description": "AI-driven analytics platform that delivers multi-model insights into sustainability operations, providing real-time monitoring, predictive modeling, and automated reporting capabilities.",
+    "category": "analytics",
+    "industry": "technology",
+    "features": [
+      "Real-time monitoring",
+      "Predictive modeling",
+      "Automated reporting",
+      "Custom dashboards"
+    ],
+    "benefits": [
+      "Data-driven decision making",
+      "Improved operational efficiency",
+      "Proactive issue detection",
+      "Enhanced KPI tracking"
+    ],
+    "pricing": {
+      "basic": "199",
+      "pro": "499",
+      "enterprise": "1499"
+    },
+    "timestamp": "2026-10-28T04:01:14.962241+00:00",
+    "contactInfo": {
+      "website": "/services/ai-powered-multi-model-sustainability-analytics-51b3ebe3",
+      "email": "hello@ziontechgroup.com",
+      "phone": "+1 (302) 464-0950"
+    },
+    "icon": "\ud83d\udca1",
+    "href": "/services/ai-powered-multi-model-sustainability-analytics-51b3ebe3",
+    "popular": false
+  },
+  {
+    "id": "adaptive-self-learning-aviation-intelligence-hub-0b7123ff",
+    "name": "Adaptive Self-Learning Aviation Intelligence Hub",
+    "description": "Adaptive intelligence hub that consolidates self-learning aviation data into actionable real-time dashboards and decision support.",
+    "category": "analytics",
+    "industry": "technology",
+    "features": [
+      "Unified dashboards",
+      "Real-time consolidation",
+      "Decision support",
+      "Cross-domain correlation"
+    ],
+    "benefits": [
+      "Unified intelligence",
+      "Real-time decisions",
+      "Cross-domain insights",
+      "Competitive advantage"
+    ],
+    "pricing": {
+      "basic": "218",
+      "pro": "548",
+      "enterprise": "1648"
+    },
+    "timestamp": "2026-10-28T04:01:14.962256+00:00",
+    "contactInfo": {
+      "website": "/services/adaptive-self-learning-aviation-intelligence-hub-0b7123ff",
+      "email": "hello@ziontechgroup.com",
+      "phone": "+1 (302) 464-0950"
+    },
+    "icon": "\ud83d\udca1",
+    "href": "/services/adaptive-self-learning-aviation-intelligence-hub-0b7123ff",
+    "popular": false
+  },
+  {
+    "id": "serverless-transformative-edtech-deployment-3b22778a",
+    "name": "Serverless Transformative Edtech Deployment",
+    "description": "Serverless deployment platform that auto-scales transformative edtech workloads without infrastructure management.",
+    "category": "cloud",
+    "industry": "technology",
+    "features": [
+      "Function-as-a-Service",
+      "Event-driven architecture",
+      "Stateless scaling",
+      "Cold start optimization"
+    ],
+    "benefits": [
+      "Zero infrastructure management",
+      "Pay-per-execution",
+      "Automatic scaling",
+      "Reduced DevOps overhead"
+    ],
+    "pricing": {
+      "basic": "218",
+      "pro": "548",
+      "enterprise": "1648"
+    },
+    "timestamp": "2026-10-28T04:01:14.962279+00:00",
+    "contactInfo": {
+      "website": "/services/serverless-transformative-edtech-deployment-3b22778a",
+      "email": "hello@ziontechgroup.com",
+      "phone": "+1 (302) 464-0950"
+    },
+    "icon": "\ud83d\udca1",
+    "href": "/services/serverless-transformative-edtech-deployment-3b22778a",
+    "popular": false
+  },
+  {
+    "id": "multi-model-vision-ai-for-public-sector-6326c7bd",
+    "name": "Multi-Model Vision AI for Public Sector",
+    "description": "Vision AI system powered by multi-model computer vision models for public sector analysis and automated visual inspection.",
+    "category": "computer vision",
+    "industry": "technology",
+    "features": [
+      "Real-time object detection",
+      "Image classification",
+      "Anomaly detection",
+      "Visual inspection"
+    ],
+    "benefits": [
+      "Automated quality control",
+      "Reduced inspection costs",
+      "Defect detection",
+      "Visual search"
+    ],
+    "pricing": {
+      "basic": "258",
+      "pro": "648",
+      "enterprise": "1948"
+    },
+    "timestamp": "2026-10-28T04:01:14.962301+00:00",
+    "contactInfo": {
+      "website": "/services/multi-model-vision-ai-for-public-sector-6326c7bd",
+      "email": "hello@ziontechgroup.com",
+      "phone": "+1 (302) 464-0950"
+    },
+    "icon": "\ud83d\udca1",
+    "href": "/services/multi-model-vision-ai-for-public-sector-6326c7bd",
+    "popular": false
+  },
+  {
+    "id": "omnichannel-neural-government-processor-83981c13",
+    "name": "Omnichannel Neural Government Processor",
+    "description": "Neural processing unit optimized for omnichannel government workloads, delivering omnichannel inference at scale.",
+    "category": "ai",
+    "industry": "technology",
+    "features": [
+      "Accelerated inference",
+      "Model compression",
+      "Hardware acceleration",
+      "Batch optimization"
+    ],
+    "benefits": [
+      "10x inference speed",
+      "Reduced latency",
+      "Cost-effective scaling",
+      "Hardware optimization"
+    ],
+    "pricing": {
+      "basic": "278",
+      "pro": "698",
+      "enterprise": "2098"
+    },
+    "timestamp": "2026-10-28T04:01:14.962331+00:00",
+    "contactInfo": {
+      "website": "/services/omnichannel-neural-government-processor-83981c13",
+      "email": "hello@ziontechgroup.com",
+      "phone": "+1 (302) 464-0950"
+    },
+    "icon": "\ud83d\udca1",
+    "href": "/services/omnichannel-neural-government-processor-83981c13",
+    "popular": false
+  },
+  {
+    "id": "ai-powered-intuitive-aerospace-analytics-e643c5e2",
+    "name": "AI-Powered Intuitive Aerospace Analytics",
+    "description": "AI-driven analytics platform that delivers intuitive insights into aerospace operations, providing real-time monitoring, predictive modeling, and automated reporting capabilities.",
+    "category": "analytics",
+    "industry": "technology",
+    "features": [
+      "Real-time monitoring",
+      "Predictive modeling",
+      "Automated reporting",
+      "Custom dashboards"
+    ],
+    "benefits": [
+      "Data-driven decision making",
+      "Improved operational efficiency",
+      "Proactive issue detection",
+      "Enhanced KPI tracking"
+    ],
+    "pricing": {
+      "basic": "199",
+      "pro": "499",
+      "enterprise": "1499"
+    },
+    "timestamp": "2026-10-28T04:01:14.962344+00:00",
+    "contactInfo": {
+      "website": "/services/ai-powered-intuitive-aerospace-analytics-e643c5e2",
+      "email": "hello@ziontechgroup.com",
+      "phone": "+1 (302) 464-0950"
+    },
+    "icon": "\ud83d\udca1",
+    "href": "/services/ai-powered-intuitive-aerospace-analytics-e643c5e2",
+    "popular": false
+  },
+  {
+    "id": "agentic-declarative-digital-twins-assistant-61a9e8fa",
+    "name": "Agentic Declarative Digital Twins Assistant",
+    "description": "Agentic AI assistant that autonomously manages declarative digital twins workflows with self-directed task execution and adaptive learning.",
+    "category": "ai",
+    "industry": "technology",
+    "features": [
+      "Agentic task execution",
+      "Adaptive learning",
+      "Multi-tool integration",
+      "Self-improvement loops"
+    ],
+    "benefits": [
+      "Autonomous task completion",
+      "Reduced manual intervention",
+      "Self-improving workflows",
+      "Higher throughput"
+    ],
+    "pricing": {
+      "basic": "258",
+      "pro": "648",
+      "enterprise": "1948"
+    },
+    "timestamp": "2026-10-28T04:01:14.962386+00:00",
+    "contactInfo": {
+      "website": "/services/agentic-declarative-digital-twins-assistant-61a9e8fa",
+      "email": "hello@ziontechgroup.com",
+      "phone": "+1 (302) 464-0950"
+    },
+    "icon": "\ud83d\udca1",
+    "href": "/services/agentic-declarative-digital-twins-assistant-61a9e8fa",
+    "popular": false
+  },
+  {
+    "id": "intelligent-agentic-sales-processing-framework-58b8434d",
+    "name": "Intelligent Agentic Sales Processing Framework",
+    "description": "Intelligent processing framework that automates agentic sales data flows with real-time transformation.",
+    "category": "data processing",
+    "industry": "technology",
+    "features": [
+      "Real-time processing",
+      "Data transformation",
+      "ETL pipelines",
+      "Stream processing"
+    ],
+    "benefits": [
+      "Faster data flows",
+      "Reduced processing time",
+      "Higher throughput",
+      "Real-time transformation"
+    ],
+    "pricing": {
+      "basic": "199",
+      "pro": "499",
+      "enterprise": "1499"
+    },
+    "timestamp": "2026-10-28T04:01:14.962408+00:00",
+    "contactInfo": {
+      "website": "/services/intelligent-agentic-sales-processing-framework-58b8434d",
+      "email": "hello@ziontechgroup.com",
+      "phone": "+1 (302) 464-0950"
+    },
+    "icon": "\ud83d\udca1",
+    "href": "/services/intelligent-agentic-sales-processing-framework-58b8434d",
+    "popular": false
+  },
+  {
+    "id": "real-time-adaptive-fintech-stream-engine-59d567cb",
+    "name": "Real-Time Adaptive Fintech Stream Engine",
+    "description": "Real-time stream processing engine that handles adaptive fintech data flows with microsecond latency and automated scaling.",
+    "category": "data processing",
+    "industry": "technology",
+    "features": [
+      "Microsecond latency",
+      "Auto-scaling streams",
+      "Backpressure handling",
+      "Fault tolerance"
+    ],
+    "benefits": [
+      "Microsecond processing",
+      "Zero data loss",
+      "Infinite scalability",
+      "Fault-tolerant architecture"
+    ],
+    "pricing": {
+      "basic": "238",
+      "pro": "598",
+      "enterprise": "1798"
+    },
+    "timestamp": "2026-10-28T04:01:14.962473+00:00",
+    "contactInfo": {
+      "website": "/services/real-time-adaptive-fintech-stream-engine-59d567cb",
+      "email": "hello@ziontechgroup.com",
+      "phone": "+1 (302) 464-0950"
+    },
+    "icon": "\ud83d\udca1",
+    "href": "/services/real-time-adaptive-fintech-stream-engine-59d567cb",
+    "popular": false
+  },
+  {
+    "id": "edge-native-proactive-smart-cities-processing-57326a21",
+    "name": "Edge-Native Proactive Smart Cities Processing",
+    "description": "Edge-native processing layer that delivers proactive smart cities insights with sub-millisecond latency.",
+    "category": "iot",
+    "industry": "technology",
+    "features": [
+      "Edge computing",
+      "Low-latency processing",
+      "Sensor fusion",
+      "Real-time analytics"
+    ],
+    "benefits": [
+      "Sub-millisecond response",
+      "Reduced latency",
+      "Edge efficiency",
+      "Real-time processing"
+    ],
+    "pricing": {
+      "basic": "238",
+      "pro": "598",
+      "enterprise": "1798"
+    },
+    "timestamp": "2026-10-28T04:01:14.962556+00:00",
+    "contactInfo": {
+      "website": "/services/edge-native-proactive-smart-cities-processing-57326a21",
+      "email": "hello@ziontechgroup.com",
+      "phone": "+1 (302) 464-0950"
+    },
+    "icon": "\ud83d\udca1",
+    "href": "/services/edge-native-proactive-smart-cities-processing-57326a21",
+    "popular": false
+  },
+  {
+    "id": "adaptive-few-shot-autonomous-vehicles-intelligence-hub-612e035b",
+    "name": "Adaptive Few-Shot Autonomous Vehicles Intelligence Hub",
+    "description": "Adaptive intelligence hub that consolidates few-shot autonomous vehicles data into actionable real-time dashboards and decision support.",
+    "category": "analytics",
+    "industry": "technology",
+    "features": [
+      "Unified dashboards",
+      "Real-time consolidation",
+      "Decision support",
+      "Cross-domain correlation"
+    ],
+    "benefits": [
+      "Unified intelligence",
+      "Real-time decisions",
+      "Cross-domain insights",
+      "Competitive advantage"
+    ],
+    "pricing": {
+      "basic": "218",
+      "pro": "548",
+      "enterprise": "1648"
+    },
+    "timestamp": "2026-10-28T04:01:14.962572+00:00",
+    "contactInfo": {
+      "website": "/services/adaptive-few-shot-autonomous-vehicles-intelligence-hub-612e035b",
+      "email": "hello@ziontechgroup.com",
+      "phone": "+1 (302) 464-0950"
+    },
+    "icon": "\ud83d\udca1",
+    "href": "/services/adaptive-few-shot-autonomous-vehicles-intelligence-hub-612e035b",
+    "popular": false
+  },
+  {
+    "id": "enterprise-synthetic-retail-analytics-suite-6ee3d826",
+    "name": "Enterprise Synthetic Retail Analytics Suite",
+    "description": "Enterprise analytics suite that delivers synthetic retail insights with unified dashboards and reporting.",
+    "category": "analytics",
+    "industry": "technology",
+    "features": [
+      "Data visualization",
+      "Custom dashboards",
+      "Report generation",
+      "KPI tracking"
+    ],
+    "benefits": [
+      "Unified data view",
+      "Faster insights",
+      "Customizable reports",
+      "Cross-functional collaboration"
+    ],
+    "pricing": {
+      "basic": "238",
+      "pro": "598",
+      "enterprise": "1798"
+    },
+    "timestamp": "2026-10-28T04:01:14.962640+00:00",
+    "contactInfo": {
+      "website": "/services/enterprise-synthetic-retail-analytics-suite-6ee3d826",
+      "email": "hello@ziontechgroup.com",
+      "phone": "+1 (302) 464-0950"
+    },
+    "icon": "\ud83d\udca1",
+    "href": "/services/enterprise-synthetic-retail-analytics-suite-6ee3d826",
+    "popular": false
+  },
+  {
+    "id": "robust-neural-manufacturing-processor-2cded5ee",
+    "name": "Robust Neural Manufacturing Processor",
+    "description": "Neural processing unit optimized for robust manufacturing workloads, delivering robust inference at scale.",
+    "category": "ai",
+    "industry": "technology",
+    "features": [
+      "Accelerated inference",
+      "Model compression",
+      "Hardware acceleration",
+      "Batch optimization"
+    ],
+    "benefits": [
+      "10x inference speed",
+      "Reduced latency",
+      "Cost-effective scaling",
+      "Hardware optimization"
+    ],
+    "pricing": {
+      "basic": "278",
+      "pro": "698",
+      "enterprise": "2098"
+    },
+    "timestamp": "2026-10-28T04:01:14.962662+00:00",
+    "contactInfo": {
+      "website": "/services/robust-neural-manufacturing-processor-2cded5ee",
+      "email": "hello@ziontechgroup.com",
+      "phone": "+1 (302) 464-0950"
+    },
+    "icon": "\ud83d\udca1",
+    "href": "/services/robust-neural-manufacturing-processor-2cded5ee",
+    "popular": false
+  },
+  {
+    "id": "intelligent-autonomous-digital-assets-processing-framework-fa4c5556",
+    "name": "Intelligent Autonomous Digital Assets Processing Framework",
+    "description": "Intelligent processing framework that automates autonomous digital assets data flows with real-time transformation.",
+    "category": "data processing",
+    "industry": "technology",
+    "features": [
+      "Real-time processing",
+      "Data transformation",
+      "ETL pipelines",
+      "Stream processing"
+    ],
+    "benefits": [
+      "Faster data flows",
+      "Reduced processing time",
+      "Higher throughput",
+      "Real-time transformation"
+    ],
+    "pricing": {
+      "basic": "199",
+      "pro": "499",
+      "enterprise": "1499"
+    },
+    "timestamp": "2026-10-28T04:01:14.962676+00:00",
+    "contactInfo": {
+      "website": "/services/intelligent-autonomous-digital-assets-processing-framework-fa4c5556",
+      "email": "hello@ziontechgroup.com",
+      "phone": "+1 (302) 464-0950"
+    },
+    "icon": "\ud83d\udca1",
+    "href": "/services/intelligent-autonomous-digital-assets-processing-framework-fa4c5556",
+    "popular": false
+  },
+  {
+    "id": "ai-powered-insightful-digital-twins-optimization-engine-cbfdd4e7",
+    "name": "AI-Powered Insightful Digital Twins Optimization Engine",
+    "description": "AI-powered optimization engine that continuously improves insightful digital twins performance through self-tuning algorithms.",
+    "category": "optimization",
+    "industry": "technology",
+    "features": [
+      "Self-tuning algorithms",
+      "Performance optimization",
+      "Cost reduction",
+      "Auto-scaling"
+    ],
+    "benefits": [
+      "Continuous performance gains",
+      "Reduced operational cost",
+      "Auto-scaling efficiency",
+      "Self-improving ROI"
+    ],
+    "pricing": {
+      "basic": "258",
+      "pro": "648",
+      "enterprise": "1948"
+    },
+    "timestamp": "2026-10-28T04:01:14.962717+00:00",
+    "contactInfo": {
+      "website": "/services/ai-powered-insightful-digital-twins-optimization-engine-cbfdd4e7",
+      "email": "hello@ziontechgroup.com",
+      "phone": "+1 (302) 464-0950"
+    },
+    "icon": "\ud83d\udca1",
+    "href": "/services/ai-powered-insightful-digital-twins-optimization-engine-cbfdd4e7",
+    "popular": false
+  },
+  {
+    "id": "quantum-ready-reinforcement-web3-analytics-f4ccc2fb",
+    "name": "Quantum-Ready Reinforcement Web3 Analytics",
+    "description": "Quantum-ready analytics platform that prepares reinforcement web3 workloads for future quantum acceleration.",
+    "category": "quantum",
+    "industry": "technology",
+    "features": [
+      "Quantum simulation",
+      "Hybrid classical-quantum",
+      "Algorithm optimization",
+      "Future-proofing"
+    ],
+    "benefits": [
+      "Quantum advantage readiness",
+      "Future-proof algorithms",
+      "Hybrid optimization",
+      "Competitive edge"
+    ],
+    "pricing": {
+      "basic": "298",
+      "pro": "748",
+      "enterprise": "2248"
+    },
+    "timestamp": "2026-10-28T04:01:14.962733+00:00",
+    "contactInfo": {
+      "website": "/services/quantum-ready-reinforcement-web3-analytics-f4ccc2fb",
+      "email": "hello@ziontechgroup.com",
+      "phone": "+1 (302) 464-0950"
+    },
+    "icon": "\ud83d\udca1",
+    "href": "/services/quantum-ready-reinforcement-web3-analytics-f4ccc2fb",
+    "popular": false
+  },
+  {
+    "id": "autonomous-intelligent-blockchain-orchestrator-44f21bf0",
+    "name": "Autonomous Intelligent Blockchain Orchestrator",
+    "description": "Autonomous orchestrator that coordinates intelligent blockchain processes across distributed systems with self-healing capabilities.",
+    "category": "orchestration",
+    "industry": "technology",
+    "features": [
+      "Cross-system coordination",
+      "Self-healing workflows",
+      "Dependency mapping",
+      "Failure recovery"
+    ],
+    "benefits": [
+      "Self-healing systems",
+      "Reduced downtime",
+      "Automatic recovery",
+      "Lower operational overhead"
+    ],
+    "pricing": {
+      "basic": "258",
+      "pro": "648",
+      "enterprise": "1948"
+    },
+    "timestamp": "2026-10-28T04:01:14.962782+00:00",
+    "contactInfo": {
+      "website": "/services/autonomous-intelligent-blockchain-orchestrator-44f21bf0",
+      "email": "hello@ziontechgroup.com",
+      "phone": "+1 (302) 464-0950"
+    },
+    "icon": "\ud83d\udca1",
+    "href": "/services/autonomous-intelligent-blockchain-orchestrator-44f21bf0",
+    "popular": false
+  },
+  {
+    "id": "zero-trust-agentic-clean-energy-security-mesh-37b087f4",
+    "name": "Zero-Trust Agentic Clean Energy Security Mesh",
+    "description": "Zero-trust security mesh that protects agentic clean energy infrastructure with continuous validation and adaptive threat response.",
+    "category": "security",
+    "industry": "technology",
+    "features": [
+      "Continuous validation",
+      "Micro-segmentation",
+      "Threat isolation",
+      "Adaptive authentication"
+    ],
+    "benefits": [
+      "Zero breach risk",
+      "Continuous compliance",
+      "Threat isolation",
+      "Regulatory assurance"
+    ],
+    "pricing": {
+      "basic": "298",
+      "pro": "748",
+      "enterprise": "2248"
+    },
+    "timestamp": "2026-10-28T04:01:14.962822+00:00",
+    "contactInfo": {
+      "website": "/services/zero-trust-agentic-clean-energy-security-mesh-37b087f4",
+      "email": "hello@ziontechgroup.com",
+      "phone": "+1 (302) 464-0950"
+    },
+    "icon": "\ud83d\udca1",
+    "href": "/services/zero-trust-agentic-clean-energy-security-mesh-37b087f4",
+    "popular": false
+  },
+  {
+    "id": "zero-trust-industry-specific-cryptocurrency-security-mesh-a369253c",
+    "name": "Zero-Trust Industry-Specific Cryptocurrency Security Mesh",
+    "description": "Zero-trust security mesh that protects industry-specific cryptocurrency infrastructure with continuous validation and adaptive threat response.",
+    "category": "security",
+    "industry": "technology",
+    "features": [
+      "Continuous validation",
+      "Micro-segmentation",
+      "Threat isolation",
+      "Adaptive authentication"
+    ],
+    "benefits": [
+      "Zero breach risk",
+      "Continuous compliance",
+      "Threat isolation",
+      "Regulatory assurance"
+    ],
+    "pricing": {
+      "basic": "298",
+      "pro": "748",
+      "enterprise": "2248"
+    },
+    "timestamp": "2026-10-28T04:01:14.962879+00:00",
+    "contactInfo": {
+      "website": "/services/zero-trust-industry-specific-cryptocurrency-security-mesh-a369253c",
+      "email": "hello@ziontechgroup.com",
+      "phone": "+1 (302) 464-0950"
+    },
+    "icon": "\ud83d\udca1",
+    "href": "/services/zero-trust-industry-specific-cryptocurrency-security-mesh-a369253c",
+    "popular": false
+  },
+  {
+    "id": "real-time-distributed-sales-stream-engine-23c5ca08",
+    "name": "Real-Time Distributed Sales Stream Engine",
+    "description": "Real-time stream processing engine that handles distributed sales data flows with microsecond latency and automated scaling.",
+    "category": "data processing",
+    "industry": "technology",
+    "features": [
+      "Microsecond latency",
+      "Auto-scaling streams",
+      "Backpressure handling",
+      "Fault tolerance"
+    ],
+    "benefits": [
+      "Microsecond processing",
+      "Zero data loss",
+      "Infinite scalability",
+      "Fault-tolerant architecture"
+    ],
+    "pricing": {
+      "basic": "238",
+      "pro": "598",
+      "enterprise": "1798"
+    },
+    "timestamp": "2026-10-28T04:01:14.963041+00:00",
+    "contactInfo": {
+      "website": "/services/real-time-distributed-sales-stream-engine-23c5ca08",
+      "email": "hello@ziontechgroup.com",
+      "phone": "+1 (302) 464-0950"
+    },
+    "icon": "\ud83d\udca1",
+    "href": "/services/real-time-distributed-sales-stream-engine-23c5ca08",
+    "popular": false
+  },
+  {
+    "id": "serverless-few-shot-education-deployment-fa0aac2f",
+    "name": "Serverless Few-Shot Education Deployment",
+    "description": "Serverless deployment platform that auto-scales few-shot education workloads without infrastructure management.",
+    "category": "cloud",
+    "industry": "technology",
+    "features": [
+      "Function-as-a-Service",
+      "Event-driven architecture",
+      "Stateless scaling",
+      "Cold start optimization"
+    ],
+    "benefits": [
+      "Zero infrastructure management",
+      "Pay-per-execution",
+      "Automatic scaling",
+      "Reduced DevOps overhead"
+    ],
+    "pricing": {
+      "basic": "218",
+      "pro": "548",
+      "enterprise": "1648"
+    },
+    "timestamp": "2026-10-28T04:01:14.963120+00:00",
+    "contactInfo": {
+      "website": "/services/serverless-few-shot-education-deployment-fa0aac2f",
+      "email": "hello@ziontechgroup.com",
+      "phone": "+1 (302) 464-0950"
+    },
+    "icon": "\ud83d\udca1",
+    "href": "/services/serverless-few-shot-education-deployment-fa0aac2f",
+    "popular": false
+  },
+  {
+    "id": "ai-powered-precision-green-tech-analytics-2b58962a",
+    "name": "AI-Powered Precision Green Tech Analytics",
+    "description": "AI-driven analytics platform that delivers precision insights into green tech operations, providing real-time monitoring, predictive modeling, and automated reporting capabilities.",
+    "category": "analytics",
+    "industry": "technology",
+    "features": [
+      "Real-time monitoring",
+      "Predictive modeling",
+      "Automated reporting",
+      "Custom dashboards"
+    ],
+    "benefits": [
+      "Data-driven decision making",
+      "Improved operational efficiency",
+      "Proactive issue detection",
+      "Enhanced KPI tracking"
+    ],
+    "pricing": {
+      "basic": "199",
+      "pro": "499",
+      "enterprise": "1499"
+    },
+    "timestamp": "2026-10-28T04:01:14.963143+00:00",
+    "contactInfo": {
+      "website": "/services/ai-powered-precision-green-tech-analytics-2b58962a",
+      "email": "hello@ziontechgroup.com",
+      "phone": "+1 (302) 464-0950"
+    },
+    "icon": "\ud83d\udca1",
+    "href": "/services/ai-powered-precision-green-tech-analytics-2b58962a",
+    "popular": false
+  },
+  {
+    "id": "self-learning-adaptive-clean-energy-predictor-1f5f9e51",
+    "name": "Self-Learning Adaptive Clean Energy Predictor",
+    "description": "Self-learning prediction engine that continuously adapts to adaptive clean energy patterns for accurate forecasting and anomaly detection.",
+    "category": "mlops",
+    "industry": "technology",
+    "features": [
+      "Continuous adaptation",
+      "Anomaly detection",
+      "Pattern recognition",
+      "Automated retraining"
+    ],
+    "benefits": [
+      "Forecasting accuracy",
+      "Anomaly detection",
+      "Adaptive models",
+      "Reduced false positives"
+    ],
+    "pricing": {
+      "basic": "258",
+      "pro": "648",
+      "enterprise": "1948"
+    },
+    "timestamp": "2026-10-28T04:01:14.963169+00:00",
+    "contactInfo": {
+      "website": "/services/self-learning-adaptive-clean-energy-predictor-1f5f9e51",
+      "email": "hello@ziontechgroup.com",
+      "phone": "+1 (302) 464-0950"
+    },
+    "icon": "\ud83d\udca1",
+    "href": "/services/self-learning-adaptive-clean-energy-predictor-1f5f9e51",
+    "popular": false
+  },
+  {
+    "id": "adaptive-adaptive-aviation-intelligence-hub-071a7920",
+    "name": "Adaptive Adaptive Aviation Intelligence Hub",
+    "description": "Adaptive intelligence hub that consolidates adaptive aviation data into actionable real-time dashboards and decision support.",
+    "category": "analytics",
+    "industry": "technology",
+    "features": [
+      "Unified dashboards",
+      "Real-time consolidation",
+      "Decision support",
+      "Cross-domain correlation"
+    ],
+    "benefits": [
+      "Unified intelligence",
+      "Real-time decisions",
+      "Cross-domain insights",
+      "Competitive advantage"
+    ],
+    "pricing": {
+      "basic": "218",
+      "pro": "548",
+      "enterprise": "1648"
+    },
+    "timestamp": "2026-10-28T04:01:14.963184+00:00",
+    "contactInfo": {
+      "website": "/services/adaptive-adaptive-aviation-intelligence-hub-071a7920",
+      "email": "hello@ziontechgroup.com",
+      "phone": "+1 (302) 464-0950"
+    },
+    "icon": "\ud83d\udca1",
+    "href": "/services/adaptive-adaptive-aviation-intelligence-hub-071a7920",
+    "popular": false
+  },
+  {
+    "id": "edge-native-hybrid-sustainability-processing-179df1d5",
+    "name": "Edge-Native Hybrid Sustainability Processing",
+    "description": "Edge-native processing layer that delivers hybrid sustainability insights with sub-millisecond latency.",
+    "category": "iot",
+    "industry": "technology",
+    "features": [
+      "Edge computing",
+      "Low-latency processing",
+      "Sensor fusion",
+      "Real-time analytics"
+    ],
+    "benefits": [
+      "Sub-millisecond response",
+      "Reduced latency",
+      "Edge efficiency",
+      "Real-time processing"
+    ],
+    "pricing": {
+      "basic": "238",
+      "pro": "598",
+      "enterprise": "1798"
+    },
+    "timestamp": "2026-10-28T04:01:14.963199+00:00",
+    "contactInfo": {
+      "website": "/services/edge-native-hybrid-sustainability-processing-179df1d5",
+      "email": "hello@ziontechgroup.com",
+      "phone": "+1 (302) 464-0950"
+    },
+    "icon": "\ud83d\udca1",
+    "href": "/services/edge-native-hybrid-sustainability-processing-179df1d5",
+    "popular": false
+  },
+  {
+    "id": "ai-powered-serverless-cybersecurity-optimization-engine-aca1c67d",
+    "name": "AI-Powered Serverless Cybersecurity Optimization Engine",
+    "description": "AI-powered optimization engine that continuously improves serverless cybersecurity performance through self-tuning algorithms.",
+    "category": "optimization",
+    "industry": "technology",
+    "features": [
+      "Self-tuning algorithms",
+      "Performance optimization",
+      "Cost reduction",
+      "Auto-scaling"
+    ],
+    "benefits": [
+      "Continuous performance gains",
+      "Reduced operational cost",
+      "Auto-scaling efficiency",
+      "Self-improving ROI"
+    ],
+    "pricing": {
+      "basic": "258",
+      "pro": "648",
+      "enterprise": "1948"
+    },
+    "timestamp": "2026-10-28T04:01:14.963236+00:00",
+    "contactInfo": {
+      "website": "/services/ai-powered-serverless-cybersecurity-optimization-engine-aca1c67d",
+      "email": "hello@ziontechgroup.com",
+      "phone": "+1 (302) 464-0950"
+    },
+    "icon": "\ud83d\udca1",
+    "href": "/services/ai-powered-serverless-cybersecurity-optimization-engine-aca1c67d",
+    "popular": false
+  },
+  {
+    "id": "self-learning-edge-native-customer-predictor-24a5ad39",
+    "name": "Self-Learning Edge-Native Customer Predictor",
+    "description": "Self-learning prediction engine that continuously adapts to edge-native customer patterns for accurate forecasting and anomaly detection.",
+    "category": "mlops",
+    "industry": "technology",
+    "features": [
+      "Continuous adaptation",
+      "Anomaly detection",
+      "Pattern recognition",
+      "Automated retraining"
+    ],
+    "benefits": [
+      "Forecasting accuracy",
+      "Anomaly detection",
+      "Adaptive models",
+      "Reduced false positives"
+    ],
+    "pricing": {
+      "basic": "258",
+      "pro": "648",
+      "enterprise": "1948"
+    },
+    "timestamp": "2026-10-28T04:01:14.963267+00:00",
+    "contactInfo": {
+      "website": "/services/self-learning-edge-native-customer-predictor-24a5ad39",
+      "email": "hello@ziontechgroup.com",
+      "phone": "+1 (302) 464-0950"
+    },
+    "icon": "\ud83d\udca1",
+    "href": "/services/self-learning-edge-native-customer-predictor-24a5ad39",
+    "popular": false
+  },
+  {
+    "id": "real-time-streamlined-marketing-stream-engine-ffb76df6",
+    "name": "Real-Time Streamlined Marketing Stream Engine",
+    "description": "Real-time stream processing engine that handles streamlined marketing data flows with microsecond latency and automated scaling.",
+    "category": "data processing",
+    "industry": "technology",
+    "features": [
+      "Microsecond latency",
+      "Auto-scaling streams",
+      "Backpressure handling",
+      "Fault tolerance"
+    ],
+    "benefits": [
+      "Microsecond processing",
+      "Zero data loss",
+      "Infinite scalability",
+      "Fault-tolerant architecture"
+    ],
+    "pricing": {
+      "basic": "238",
+      "pro": "598",
+      "enterprise": "1798"
+    },
+    "timestamp": "2026-10-28T04:01:14.963289+00:00",
+    "contactInfo": {
+      "website": "/services/real-time-streamlined-marketing-stream-engine-ffb76df6",
+      "email": "hello@ziontechgroup.com",
+      "phone": "+1 (302) 464-0950"
+    },
+    "icon": "\ud83d\udca1",
+    "href": "/services/real-time-streamlined-marketing-stream-engine-ffb76df6",
+    "popular": false
+  },
+  {
+    "id": "precision-vision-ai-for-aerospace-e4d9874b",
+    "name": "Precision Vision AI for Aerospace",
+    "description": "Vision AI system powered by precision computer vision models for aerospace analysis and automated visual inspection.",
+    "category": "computer vision",
+    "industry": "technology",
+    "features": [
+      "Real-time object detection",
+      "Image classification",
+      "Anomaly detection",
+      "Visual inspection"
+    ],
+    "benefits": [
+      "Automated quality control",
+      "Reduced inspection costs",
+      "Defect detection",
+      "Visual search"
+    ],
+    "pricing": {
+      "basic": "258",
+      "pro": "648",
+      "enterprise": "1948"
+    },
+    "timestamp": "2026-10-28T04:01:14.963318+00:00",
+    "contactInfo": {
+      "website": "/services/precision-vision-ai-for-aerospace-e4d9874b",
+      "email": "hello@ziontechgroup.com",
+      "phone": "+1 (302) 464-0950"
+    },
+    "icon": "\ud83d\udca1",
+    "href": "/services/precision-vision-ai-for-aerospace-e4d9874b",
+    "popular": false
+  },
+  {
+    "id": "adaptive-proactive-marketing-intelligence-hub-ae658731",
+    "name": "Adaptive Proactive Marketing Intelligence Hub",
+    "description": "Adaptive intelligence hub that consolidates proactive marketing data into actionable real-time dashboards and decision support.",
+    "category": "analytics",
+    "industry": "technology",
+    "features": [
+      "Unified dashboards",
+      "Real-time consolidation",
+      "Decision support",
+      "Cross-domain correlation"
+    ],
+    "benefits": [
+      "Unified intelligence",
+      "Real-time decisions",
+      "Cross-domain insights",
+      "Competitive advantage"
+    ],
+    "pricing": {
+      "basic": "218",
+      "pro": "548",
+      "enterprise": "1648"
+    },
+    "timestamp": "2026-10-28T04:01:14.963419+00:00",
+    "contactInfo": {
+      "website": "/services/adaptive-proactive-marketing-intelligence-hub-ae658731",
+      "email": "hello@ziontechgroup.com",
+      "phone": "+1 (302) 464-0950"
+    },
+    "icon": "\ud83d\udca1",
+    "href": "/services/adaptive-proactive-marketing-intelligence-hub-ae658731",
+    "popular": false
+  },
+  {
+    "id": "autonomous-industry-specific-real-estate-orchestrator-9647ac6c",
+    "name": "Autonomous Industry-Specific Real Estate Orchestrator",
+    "description": "Autonomous orchestrator that coordinates industry-specific real estate processes across distributed systems with self-healing capabilities.",
+    "category": "orchestration",
+    "industry": "technology",
+    "features": [
+      "Cross-system coordination",
+      "Self-healing workflows",
+      "Dependency mapping",
+      "Failure recovery"
+    ],
+    "benefits": [
+      "Self-healing systems",
+      "Reduced downtime",
+      "Automatic recovery",
+      "Lower operational overhead"
+    ],
+    "pricing": {
+      "basic": "258",
+      "pro": "648",
+      "enterprise": "1948"
+    },
+    "timestamp": "2026-10-28T04:01:14.963443+00:00",
+    "contactInfo": {
+      "website": "/services/autonomous-industry-specific-real-estate-orchestrator-9647ac6c",
+      "email": "hello@ziontechgroup.com",
+      "phone": "+1 (302) 464-0950"
+    },
+    "icon": "\ud83d\udca1",
+    "href": "/services/autonomous-industry-specific-real-estate-orchestrator-9647ac6c",
+    "popular": false
+  },
+  {
+    "id": "edge-native-integrated-green-tech-processing-a006ef6f",
+    "name": "Edge-Native Integrated Green Tech Processing",
+    "description": "Edge-native processing layer that delivers integrated green tech insights with sub-millisecond latency.",
+    "category": "iot",
+    "industry": "technology",
+    "features": [
+      "Edge computing",
+      "Low-latency processing",
+      "Sensor fusion",
+      "Real-time analytics"
+    ],
+    "benefits": [
+      "Sub-millisecond response",
+      "Reduced latency",
+      "Edge efficiency",
+      "Real-time processing"
+    ],
+    "pricing": {
+      "basic": "238",
+      "pro": "598",
+      "enterprise": "1798"
+    },
+    "timestamp": "2026-10-28T04:01:14.963467+00:00",
+    "contactInfo": {
+      "website": "/services/edge-native-integrated-green-tech-processing-a006ef6f",
+      "email": "hello@ziontechgroup.com",
+      "phone": "+1 (302) 464-0950"
+    },
+    "icon": "\ud83d\udca1",
+    "href": "/services/edge-native-integrated-green-tech-processing-a006ef6f",
+    "popular": false
+  },
+  {
+    "id": "agentic-intelligent-government-assistant-b4b64049",
+    "name": "Agentic Intelligent Government Assistant",
+    "description": "Agentic AI assistant that autonomously manages intelligent government workflows with self-directed task execution and adaptive learning.",
+    "category": "ai",
+    "industry": "technology",
+    "features": [
+      "Agentic task execution",
+      "Adaptive learning",
+      "Multi-tool integration",
+      "Self-improvement loops"
+    ],
+    "benefits": [
+      "Autonomous task completion",
+      "Reduced manual intervention",
+      "Self-improving workflows",
+      "Higher throughput"
+    ],
+    "pricing": {
+      "basic": "258",
+      "pro": "648",
+      "enterprise": "1948"
+    },
+    "timestamp": "2026-10-28T04:01:14.963513+00:00",
+    "contactInfo": {
+      "website": "/services/agentic-intelligent-government-assistant-b4b64049",
+      "email": "hello@ziontechgroup.com",
+      "phone": "+1 (302) 464-0950"
+    },
+    "icon": "\ud83d\udca1",
+    "href": "/services/agentic-intelligent-government-assistant-b4b64049",
+    "popular": false
+  },
+  {
+    "id": "zero-trust-scalable-insurtech-security-mesh-86a1b10a",
+    "name": "Zero-Trust Scalable Insurtech Security Mesh",
+    "description": "Zero-trust security mesh that protects scalable insurtech infrastructure with continuous validation and adaptive threat response.",
+    "category": "security",
+    "industry": "technology",
+    "features": [
+      "Continuous validation",
+      "Micro-segmentation",
+      "Threat isolation",
+      "Adaptive authentication"
+    ],
+    "benefits": [
+      "Zero breach risk",
+      "Continuous compliance",
+      "Threat isolation",
+      "Regulatory assurance"
+    ],
+    "pricing": {
+      "basic": "298",
+      "pro": "748",
+      "enterprise": "2248"
+    },
+    "timestamp": "2026-10-28T04:01:14.963536+00:00",
+    "contactInfo": {
+      "website": "/services/zero-trust-scalable-insurtech-security-mesh-86a1b10a",
+      "email": "hello@ziontechgroup.com",
+      "phone": "+1 (302) 464-0950"
+    },
+    "icon": "\ud83d\udca1",
+    "href": "/services/zero-trust-scalable-insurtech-security-mesh-86a1b10a",
+    "popular": false
+  },
+  {
+    "id": "enterprise-smart-green-tech-analytics-suite-52db3e04",
+    "name": "Enterprise Smart Green Tech Analytics Suite",
+    "description": "Enterprise analytics suite that delivers smart green tech insights with unified dashboards and reporting.",
+    "category": "analytics",
+    "industry": "technology",
+    "features": [
+      "Data visualization",
+      "Custom dashboards",
+      "Report generation",
+      "KPI tracking"
+    ],
+    "benefits": [
+      "Unified data view",
+      "Faster insights",
+      "Customizable reports",
+      "Cross-functional collaboration"
+    ],
+    "pricing": {
+      "basic": "238",
+      "pro": "598",
+      "enterprise": "1798"
+    },
+    "timestamp": "2026-10-28T04:01:14.963615+00:00",
+    "contactInfo": {
+      "website": "/services/enterprise-smart-green-tech-analytics-suite-52db3e04",
+      "email": "hello@ziontechgroup.com",
+      "phone": "+1 (302) 464-0950"
+    },
+    "icon": "\ud83d\udca1",
+    "href": "/services/enterprise-smart-green-tech-analytics-suite-52db3e04",
+    "popular": false
+  },
+  {
+    "id": "agentic-intelligent-clean-energy-assistant-0e030fc1",
+    "name": "Agentic Intelligent Clean Energy Assistant",
+    "description": "Agentic AI assistant that autonomously manages intelligent clean energy workflows with self-directed task execution and adaptive learning.",
+    "category": "ai",
+    "industry": "technology",
+    "features": [
+      "Agentic task execution",
+      "Adaptive learning",
+      "Multi-tool integration",
+      "Self-improvement loops"
+    ],
+    "benefits": [
+      "Autonomous task completion",
+      "Reduced manual intervention",
+      "Self-improving workflows",
+      "Higher throughput"
+    ],
+    "pricing": {
+      "basic": "258",
+      "pro": "648",
+      "enterprise": "1948"
+    },
+    "timestamp": "2026-10-28T04:01:14.963655+00:00",
+    "contactInfo": {
+      "website": "/services/agentic-intelligent-clean-energy-assistant-0e030fc1",
+      "email": "hello@ziontechgroup.com",
+      "phone": "+1 (302) 464-0950"
+    },
+    "icon": "\ud83d\udca1",
+    "href": "/services/agentic-intelligent-clean-energy-assistant-0e030fc1",
+    "popular": false
+  },
+  {
+    "id": "enterprise-multi-model-gaming-analytics-suite-e90fe080",
+    "name": "Enterprise Multi-Model Gaming Analytics Suite",
+    "description": "Enterprise analytics suite that delivers multi-model gaming insights with unified dashboards and reporting.",
+    "category": "analytics",
+    "industry": "technology",
+    "features": [
+      "Data visualization",
+      "Custom dashboards",
+      "Report generation",
+      "KPI tracking"
+    ],
+    "benefits": [
+      "Unified data view",
+      "Faster insights",
+      "Customizable reports",
+      "Cross-functional collaboration"
+    ],
+    "pricing": {
+      "basic": "238",
+      "pro": "598",
+      "enterprise": "1798"
+    },
+    "timestamp": "2026-10-28T04:01:14.963670+00:00",
+    "contactInfo": {
+      "website": "/services/enterprise-multi-model-gaming-analytics-suite-e90fe080",
+      "email": "hello@ziontechgroup.com",
+      "phone": "+1 (302) 464-0950"
+    },
+    "icon": "\ud83d\udca1",
+    "href": "/services/enterprise-multi-model-gaming-analytics-suite-e90fe080",
+    "popular": false
+  },
+  {
+    "id": "predictive-neural-education-processor-9b6aa757",
+    "name": "Predictive Neural Education Processor",
+    "description": "Neural processing unit optimized for predictive education workloads, delivering predictive inference at scale.",
+    "category": "ai",
+    "industry": "technology",
+    "features": [
+      "Accelerated inference",
+      "Model compression",
+      "Hardware acceleration",
+      "Batch optimization"
+    ],
+    "benefits": [
+      "10x inference speed",
+      "Reduced latency",
+      "Cost-effective scaling",
+      "Hardware optimization"
+    ],
+    "pricing": {
+      "basic": "278",
+      "pro": "698",
+      "enterprise": "2098"
+    },
+    "timestamp": "2026-10-28T04:01:14.963685+00:00",
+    "contactInfo": {
+      "website": "/services/predictive-neural-education-processor-9b6aa757",
+      "email": "hello@ziontechgroup.com",
+      "phone": "+1 (302) 464-0950"
+    },
+    "icon": "\ud83d\udca1",
+    "href": "/services/predictive-neural-education-processor-9b6aa757",
+    "popular": false
+  },
+  {
+    "id": "agentic-agile-logistics-assistant-a94bb88d",
+    "name": "Agentic Agile Logistics Assistant",
+    "description": "Agentic AI assistant that autonomously manages agile logistics workflows with self-directed task execution and adaptive learning.",
+    "category": "ai",
+    "industry": "technology",
+    "features": [
+      "Agentic task execution",
+      "Adaptive learning",
+      "Multi-tool integration",
+      "Self-improvement loops"
+    ],
+    "benefits": [
+      "Autonomous task completion",
+      "Reduced manual intervention",
+      "Self-improving workflows",
+      "Higher throughput"
+    ],
+    "pricing": {
+      "basic": "258",
+      "pro": "648",
+      "enterprise": "1948"
+    },
+    "timestamp": "2026-10-28T04:01:14.963717+00:00",
+    "contactInfo": {
+      "website": "/services/agentic-agile-logistics-assistant-a94bb88d",
+      "email": "hello@ziontechgroup.com",
+      "phone": "+1 (302) 464-0950"
+    },
+    "icon": "\ud83d\udca1",
+    "href": "/services/agentic-agile-logistics-assistant-a94bb88d",
+    "popular": false
   }
 ]
