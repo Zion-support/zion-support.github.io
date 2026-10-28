@@ -67,8 +67,9 @@ jobs:
             '/zion-app-network/app-network-operations-evidence-checklist-2026-es.html': ['Checklist de Evidencia Operativa 2026'],
             '/zion-app-network/app-network-operations-evidence-checklist-2026-fr.html': ['Checklist de Preuves Opérationnelles 2026'],
             '/zion-app-network/app-network-operations-evidence-checklist-2026-de.html': ['Operations-Evidenz-Checkliste 2026'],
-            '/sitemap.xml': ['sitemapindex','apps/apps-sitemap.xml'],
+            '/sitemap.xml': [],
             '/apps/apps-sitemap.xml': ['operations-reliability-ai-2026','/pt/apps/'],
+            '/robots.txt': ['Sitemap: https://ziontechgroup.com/sitemap.xml','Sitemap: https://ziontechgroup.com/apps/apps-sitemap.xml'],
           }
           headers={'User-Agent':'Zion-Apps-Production-Canary/1.0'}
           failures=[]
@@ -82,6 +83,18 @@ jobs:
               if status!=200:
                 failures.append(f'{path}: HTTP {status}')
                 continue
+              # Both valid sitemap root formats are supported: direct URL sets
+              # and indexes of shards. In URL-set mode robots.txt independently
+              # advertises the Apps sitemap, which is checked as a separate URL.
+              if path=='/sitemap.xml':
+                if '<sitemapindex' in body:
+                  markers=['https://ziontechgroup.com/sitemap-0.xml',
+                           'https://ziontechgroup.com/apps/apps-sitemap.xml']
+                elif '<urlset' in body:
+                  markers=['<url>', '<loc>https://ziontechgroup.com/</loc>']
+                else:
+                  failures.append('/sitemap.xml: missing valid urlset or sitemapindex XML root')
+                  continue
               missing=[m for m in markers if m not in body]
               if missing:
                 failures.append(f'{path}: missing markers {missing}')
