@@ -153,14 +153,34 @@ jobs:
               if f'https://ziontechgroup.com{route}' not in text:
                 errors.append(f'apps sitemap missing {route}')
 
+          # The canonical sitemap may be a valid URL set (growth generator)
+          # or a sitemap index (sharded publisher). Both are standards-compliant.
+          # robots.txt separately advertises the Apps sitemap in either case.
           index=Path('public/sitemap.xml')
           if not index.is_file() or index.stat().st_size < 100:
             errors.append('public/sitemap.xml missing or unexpectedly empty')
           else:
-            text=index.read_text(encoding='utf-8')
-            for child in ['https://ziontechgroup.com/sitemap-0.xml','https://ziontechgroup.com/apps/apps-sitemap.xml']:
-              if child not in text:
-                errors.append(f'sitemap index missing {child}')
+            import xml.etree.ElementTree as ET
+            ns='{http://www.sitemaps.org/schemas/sitemap/0.9}'
+            try:
+              root_node=ET.parse(index).getroot()
+              if root_node.tag==ns+'sitemapindex':
+                children={str(el.text or '').strip() for el in root_node.findall(ns+'sitemap/'+ns+'loc')}
+                for child in ['https://ziontechgroup.com/sitemap-0.xml','https://ziontechgroup.com/apps/apps-sitemap.xml']:
+                  if child not in children:
+                    errors.append(f'sitemap index missing {child}')
+              elif root_node.tag==ns+'urlset':
+                urls=[str(el.text or '').strip() for el in root_node.findall(ns+'url/'+ns+'loc')]
+                if 'https://ziontechgroup.com/' not in urls:
+                  errors.append('sitemap URL set missing canonical homepage')
+                if not urls:
+                  errors.append('sitemap URL set contains no URLs')
+                if len(urls)>50000 or index.stat().st_size>50_000_000:
+                  errors.append('sitemap URL set exceeds 50k URLs or 50MB; shard before release')
+              else:
+                errors.append(f'unsupported sitemap XML root: {root_node.tag}')
+            except ET.ParseError as exc:
+              errors.append(f'invalid sitemap XML: {exc}')
 
           robots=Path('public/robots.txt')
           if not robots.is_file():
