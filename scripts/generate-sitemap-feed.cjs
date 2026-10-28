@@ -290,9 +290,10 @@ function main() {
   const smPath = path.join(outDir, 'sitemap.xml');
   fs.writeFileSync(smPath, sitemap);
   console.log(`sitemap.xml: ${pages.length} urls`);
-  // Also update public/sitemap.xml for direct GitHub Pages serving
-  const publicSm = path.join(process.cwd(), 'public', 'sitemap.xml');
-  fs.writeFileSync(publicSm, sitemap);
+  // Do not write public/sitemap.xml here.
+  // Production Pages treats public/sitemap.xml as a sitemap index owned by
+  // generate-commercial-sitemap.cjs. Writing the dynamic urlset there causes
+  // the i18n contract, production canary and deployed/source drift guard to fail.
 
   // Write feed
   const feedContent = buildFeed(allServices, blogEntries);
