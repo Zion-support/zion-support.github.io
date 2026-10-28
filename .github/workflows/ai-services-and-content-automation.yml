@@ -113,6 +113,7 @@ jobs:
         if: github.event_name == 'schedule' || github.event.inputs.trigger_deploy != 'false'
         env:
           REQUIRED_SECRETS: OPENROUTER_API_KEY
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
 #           NETLIFY_BUILD_HOOK removed (Netlify decommissioned → GitHub Pages)
         run: npm run secrets:preflight
 
