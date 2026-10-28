@@ -61,6 +61,26 @@ jobs:
           import hashlib,json,os,sys,time,urllib.request
           from datetime import datetime,timezone
 
+          def read_complete_response(resp, max_bytes=52_428_800):
+            # Read to EOF; never hash a silently truncated prefix.
+            chunks=[]
+            received=0
+            declared=resp.headers.get('Content-Length')
+            expected=int(declared) if declared is not None else None
+            if expected is not None and (expected < 0 or expected > max_bytes):
+              raise ValueError('response_size_limit_or_invalid_length')
+            while True:
+              chunk=resp.read(min(65_536, max_bytes-received+1))
+              if not chunk:
+                break
+              received+=len(chunk)
+              if received > max_bytes:
+                raise ValueError('response_size_limit_exceeded')
+              chunks.append(chunk)
+            if expected is not None and received != expected:
+              raise ValueError('response_incomplete_content_length')
+            return b''.join(chunks)
+
           base='https://ziontechgroup.com'
           pairs={
             '/':'public/index.html',
@@ -102,9 +122,12 @@ jobs:
                 req=urllib.request.Request(base+route+'?zion_drift='+os.environ.get('GITHUB_RUN_ID','manual')+f'-{attempt}',headers=headers)
                 with urllib.request.urlopen(req,timeout=20) as resp:
                   status=resp.status
-                  live=resp.read(4_000_000)
+                  live=read_complete_response(resp)
+                error=None
                 if status==200: break
               except Exception as exc:
+                live=None
+                status=0
                 error=str(exc)
                 time.sleep(2)
             live_sha=hashlib.sha256(live).hexdigest() if live is not None else None
@@ -125,7 +148,7 @@ jobs:
             rows.append(row)
             if not match:
               failures.append(row)
-              print(f'::error::{route} drift/status mismatch mode={mode} source={source_sha} live={live_sha} status={status} missing={missing}')
+              print(f'::error::{route} drift/status mismatch mode={mode} source={source_sha} live={live_sha} status={status} missing={missing} error={error}')
             elif mode=='semantic':
               print(f'OK {route} semantic contract HTTP 200 markers={len(markers)}')
             else:
