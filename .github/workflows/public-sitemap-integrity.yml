@@ -1,6 +1,9 @@
 name: Public Sitemap Integrity
 
 on:
+  pull_request:
+    paths:
+      - '.github/workflows/public-sitemap-integrity.yml'
   schedule:
     - cron: '17 11 * * 3'
   workflow_dispatch:
@@ -27,9 +30,20 @@ jobs:
           base='https://ziontechgroup.com'
           host=urllib.parse.urlsplit(base).netloc
           headers={'User-Agent':'Zion-Public-Sitemap-Integrity/1.1'}
-          def get(url):
+          def get(url, read_body=True):
               with urllib.request.urlopen(urllib.request.Request(url,headers=headers),timeout=18) as response:
-                  return response.status,response.read(4000000)
+                  if not read_body:
+                      return response.status,b''
+                  # Do not parse a truncated 4MB fragment of a valid ~10MB URL set.
+                  # Read the complete uncompressed response, fail closed above 50MB.
+                  limit=50_000_000
+                  body=response.read(limit+1)
+                  if len(body)>limit:
+                      raise ValueError('Sitemap XML exceeds the 50MB uncompressed limit')
+                  declared=response.headers.get('Content-Length')
+                  if declared and int(declared)!=len(body):
+                      raise ValueError('Sitemap XML response truncated (Content-Length mismatch)')
+                  return response.status,body
           def valid(url):
               p=urllib.parse.urlsplit(url)
               return p.scheme=='https' and p.netloc==host
@@ -61,7 +75,7 @@ jobs:
               sample=list(dict.fromkeys(urls))[:15]
               def check(url):
                   try:
-                      status,_=get(url)
+                      status,_=get(url,read_body=False)
                       return (url,status,'')
                   except Exception as exc:
                       return (url,0,str(exc))
