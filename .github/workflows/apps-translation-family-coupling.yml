@@ -53,9 +53,6 @@ jobs:
         shell: bash
         env:
           EVENT_NAME: ${{ github.event_name }}
-          BASE_SHA: ${{ github.event.pull_request.base.sha }}
-          BEFORE_SHA: ${{ github.event.before }}
-          CURRENT_SHA: ${{ github.sha }}
         run: |
           set -euo pipefail
           python3 - <<'PY'
@@ -71,13 +68,12 @@ jobs:
               )
               raise SystemExit(0)
 
-          base=os.environ.get('BASE_SHA','')
-          head=os.environ.get('CURRENT_SHA','HEAD')
-          if not base or set(base)=={'0'}:
-              base='HEAD^'
-
+          # actions/checkout checks out GitHub's synthetic PR merge ref.
+          # With fetch-depth: 2, HEAD^1 is the exact base tip used to build
+          # that merge and HEAD is the merged PR tree. This avoids stale
+          # pull_request.base.sha values after main advances.
           changed=set(subprocess.check_output(
-              ['git','diff','--name-only',base,head],text=True
+              ['git','diff','--name-only','HEAD^1','HEAD'],text=True
           ).splitlines())
           print('PR changed files:')
           for p in sorted(changed):
