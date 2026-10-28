@@ -52,6 +52,28 @@ class SitePromotionTests(unittest.TestCase):
                     found = [(href,hreflang) for href,hreflang in parsed.links if href==BASE+SCORE+alt_suffix+".html" and hreflang==alt_lang]
                     self.assertTrue(found,alt_lang)
                 self.assertNotIn("data:text/html",raw)
+    def test_all_four_localized_apps_hubs_complete_promotion_family(self):
+        for folder,lang,suffix in [
+            ("pt","pt-BR","-pt-br"),
+            ("es","es","-es"),
+            ("fr","fr","-fr"),
+            ("de","de","-de"),
+        ]:
+            path = "public/" + folder + "/apps/index.html"
+            with self.subTest(path=path):
+                raw=(ROOT/path).read_text(encoding="utf-8")
+                page=Parsed(raw)
+                self.assertEqual(page.lang,lang)
+                self.assertEqual(page.main,1)
+                self.assertEqual(page.ids.count("zion-evidence-scorecard-2026"),1)
+                self.assertEqual(raw.count('data-app-network-promotion="evidence-scorecard-i18n-20261028"'),1)
+                self.assertIn(BASE+SCORE+suffix+".html",[u for u,_ in page.links])
+                self.assertIn(BASE+FIELD+suffix+".html",[u for u,_ in page.links])
+                self.assertIn("/"+folder+"/discovery/",[u for u,_ in page.links])
+                for _,other_lang,other_suffix,_ in DATA[:5]:
+                    target=BASE+SCORE+other_suffix+".html"
+                    self.assertIn((target,other_lang),page.links)
+
     def test_all_translated_ctas_distinct(self):
         labels=[]
         for path,_,_,_ in DATA[:5]:
