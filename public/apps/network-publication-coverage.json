@@ -1,7 +1,7 @@
 {
   "groups": [
     {
-      "path": "admissions-essay-reviewer/index.html",
+      "path": "agent-brief/index.html",
       "available": [
         "en"
       ],
@@ -13,7 +13,7 @@
       ]
     },
     {
-      "path": "agent-brief/index.html",
+      "path": "admissions-essay-reviewer/index.html",
       "available": [
         "en"
       ],
@@ -49,18 +49,6 @@
       ]
     },
     {
-      "path": "ai-incident-response/index.html",
-      "available": [
-        "en"
-      ],
-      "missing": [
-        "pt",
-        "es",
-        "fr",
-        "de"
-      ]
-    },
-    {
       "path": "ai-meeting-notes-copilot/index.html",
       "available": [
         "en"
@@ -73,34 +61,21 @@
       ]
     },
     {
-      "path": "apps/finops-pilot-guide.html",
+      "path": "ai-incident-response/index.html",
       "available": [
-        "en",
+        "en"
+      ],
+      "missing": [
         "pt",
         "es",
         "fr",
         "de"
-      ],
-      "missing": []
-    },
-    {
-      "path": "apps/finops-scenario-estimator.html",
-      "available": [
-        "en",
-        "pt",
-        "es",
-        "fr",
-        "de"
-      ],
-      "missing": []
+      ]
     }
   ],
   "steps": [
     "apply-locales",
     "render-navigation",
     "write-guides"
-  ],
-  "fiveLanguageGroups": 2,
-  "translationGapGroups": 6,
-  "finopsScenarioRelease": "2026-10-09-finops-scenario-v1"
+  ]
 }

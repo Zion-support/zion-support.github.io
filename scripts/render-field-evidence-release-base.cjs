@@ -44,14 +44,12 @@ for(const [l,c] of Object.entries(returns)){
  let html=fs.readFileSync(file,'utf8');
  const forms=[...html.matchAll(/<form\b[\s\S]*?<\/form>/gi)].map(m=>m[0]);
  const owned=/<!--zion-field-return:start-->[\s\S]*?<!--zion-field-return:end-->/g;
- const existing=[...html.matchAll(owned)];
- const deAnchor=html.includes('</main>')?'</main>':'</body>';
- assert(deAnchor,'Discovery insertion anchor missing '+l);
+ assert.equal([...html.matchAll(owned)].length,1,'Expected one owned field-return block '+l);
  const guide='/apps/field-service-evidence-guide'+(l==='en'?'':'.'+(l==='pt'?'pt-br':l))+'.html';
  const discovery=l==='en'?'/discovery/':'/'+l+'/discovery/';
  const lang=l==='pt'?'pt-BR':l;
  const block='<!--zion-field-return:start--><aside class="card" data-field-evidence-return="2026-10-09-v2" lang="'+lang+'"><h2>'+escape(c[0])+'</h2><p><a href="'+guide+'">'+escape(c[1])+'</a> · <a href="'+discovery+'">'+escape(c[2])+'</a> · <a href="/apps/network.html">'+escape(c[3])+'</a></p><p>'+escape(c[4])+'</p></aside><!--zion-field-return:end-->';
- if(existing.length===0)html=html.replace(deAnchor,block+deAnchor);else html=html.replace(owned,()=>block);
+ html=html.replace(owned,()=>block);
  assert.deepEqual([...html.matchAll(/<form\b[\s\S]*?<\/form>/gi)].map(m=>m[0]),forms,'Discovery forms changed '+l);
  fs.writeFileSync(file,html);
 }
