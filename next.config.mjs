@@ -5,7 +5,11 @@ const nextConfig = {
   output: 'export',
   // Next.js 16 defaults to Turbopack; empty config silences the webpack-only error
   turbopack: {},
-  outputFileTracingRoot: process.cwd(),
+  experimental: {
+    // Reduce webpack memory footprint (fixes OOM on GH-hosted runners, 125k+ file tree)
+    webpackMemoryOptimizations: true,
+  },
+  outputFileTracingRoot: path.join(process.cwd(), 'app'),
   basePath: '',
   trailingSlash: true,
   compress: true,

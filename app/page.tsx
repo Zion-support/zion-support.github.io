@@ -368,15 +368,6 @@ export default function HomePage() {
 
             {/* ── Secondary CTAs — extra discovery links ── */}
             <div className="flex flex-wrap justify-center gap-3 mt-2">
-              <Link href="/apps-network/" className="px-4 py-2 rounded-full bg-cyan-500/20 border border-cyan-500/40 text-cyan-200 text-sm hover:bg-cyan-500/30 hover:text-white transition-all font-medium">
-                🧩 Apps Network
-              </Link>
-              <Link href="/discovery/" className="px-4 py-2 rounded-full bg-emerald-500/20 border border-emerald-500/40 text-emerald-200 text-sm hover:bg-emerald-500/30 hover:text-white transition-all font-medium">
-                🎯 Free Discovery
-              </Link>
-              <Link href="/apps/operations-reliability-ai-2026.html" className="px-4 py-2 rounded-full bg-sky-500/20 border border-sky-500/40 text-sky-200 text-sm hover:bg-sky-500/30 hover:text-white transition-all font-medium">
-                🛠 Operations & Reliability
-              </Link>
               <Link href="/dashboard" className="px-4 py-2 rounded-full bg-purple-500/20 border border-purple-500/40 text-purple-300 text-sm hover:bg-purple-500/30 hover:text-white transition-all font-medium">
                 ⚡ Agent Dashboard
               </Link>
@@ -472,6 +463,144 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── Quick Access — Find What You Need ── */}
+      <section className="py-14 bg-slate-900/30 border-y border-slate-800/60">
+        <div className="container-page">
+          <div className="flex items-center gap-3 mb-8">
+            <span className="text-2xl">⚡</span>
+            <div>
+              <h2 className="text-2xl font-bold text-white">Quick Access</h2>
+              <p className="text-slate-400 text-sm">Find what you need — fast</p>
+            </div>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
+            {[
+              { name: 'AI Lab', href: '/ai', emoji: '🧪', color: 'from-purple-500/20 to-indigo-500/20' },
+              { name: 'Services', href: '/services', emoji: '⚙️', color: 'from-blue-500/20 to-cyan-500/20' },
+              { name: 'Tools', href: '/tools/service-comparison', emoji: '🔧', color: 'from-emerald-500/20 to-teal-500/20' },
+              { name: 'Blog', href: '/blog', emoji: '📝', color: 'from-sky-500/20 to-indigo-500/20' },
+              { name: 'Industries', href: '/industries', emoji: '🏭', color: 'from-amber-500/20 to-orange-500/20' },
+              { name: 'Solutions', href: '/solutions', emoji: '🎯', color: 'from-pink-500/20 to-rose-500/20' },
+              { name: 'Contact', href: '/contact', emoji: '📞', color: 'from-red-500/20 to-orange-500/20' },
+              { name: 'Discovery $99', href: '/discovery', emoji: '🔍', color: 'from-green-500/20 to-emerald-500/20' },
+              { name: 'Pricing', href: '/pricing', emoji: '💰', color: 'from-amber-500/20 to-yellow-500/20' },
+              { name: 'FAQ', href: '/faq', emoji: '❓', color: 'from-slate-500/20 to-gray-500/20' },
+              { name: 'About', href: '/about', emoji: 'ℹ️', color: 'from-violet-500/20 to-purple-500/20' },
+              { name: 'Partners', href: '/partners', emoji: '🤝', color: 'from-cyan-500/20 to-blue-500/20' },
+            ].map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="group relative overflow-hidden rounded-xl border border-slate-800/80 bg-slate-900/60 p-4 text-slate-300 hover:text-white hover:border-purple-500/40 transition-all hover:scale-[1.02] hover:shadow-lg"
+              >
+                <div className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none`}
+                  style={{ background: `linear-gradient(135deg, rgba(139,92,246,0.08), transparent 60%)` }}
+                />
+                <div className="relative text-center">
+                  <span className="text-3xl block mb-2">{item.emoji}</span>
+                  <span className="text-sm font-medium text-white group-hover:text-purple-300 transition-colors block">{item.name}</span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Browse by Business Goal ── */}
+      <section className="py-14">
+        <div className="container-page">
+          <div className="flex items-center gap-3 mb-8">
+            <span className="text-2xl">🎯</span>
+            <div>
+              <h2 className="text-2xl font-bold text-white">Browse by Business Goal</h2>
+              <p className="text-slate-400 text-sm">What are you trying to achieve?</p>
+            </div>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {[
+              { name: 'Reduce Costs', href: '/services/?category=cloud', emoji: '💰', desc: 'Cloud cost optimization, FinOps, automated operations, infrastructure efficiency', cats: ['Cloud', 'FinOps', 'Automation'], color: 'from-emerald-500/20 to-teal-500/20' },
+              { name: 'Increase Revenue', href: '/services/?category=ai', emoji: '📈', desc: 'AI-driven sales, personalization, pricing intelligence, customer acquisition', cats: ['AI', 'Data', 'Marketing'], color: 'from-green-500/20 to-emerald-500/20' },
+              { name: 'Improve Security', href: '/services/?category=security', emoji: '🔐', desc: 'Threat detection, compliance automation, identity management, zero trust', cats: ['Security', 'Compliance', 'Identity'], color: 'from-red-500/20 to-orange-500/20' },
+              { name: 'Scale Operations', href: '/services/?category=devops', emoji: '⚙️', desc: 'DevOps automation, cloud infrastructure, IT managed services, monitoring', cats: ['DevOps', 'Cloud', 'IT'], color: 'from-cyan-500/20 to-blue-500/20' },
+              { name: 'Automate Workflows', href: '/services/?category=automation', emoji: '🤖', desc: 'RPA, AI workflow automation, document processing, business process automation', cats: ['Automation', 'RPA', 'AI'], color: 'from-pink-500/20 to-rose-500/20' },
+              { name: 'Enhance CX', href: '/services/?category=ai', emoji: '😊', desc: 'Chatbots, voice agents, personalization, omnichannel support, customer analytics', cats: ['AI', 'Data', 'CX'], color: 'from-purple-500/20 to-pink-500/20' },
+            ].map((goal) => (
+              <Link
+                key={goal.href}
+                href={goal.href}
+                className="group relative overflow-hidden rounded-2xl border border-slate-800/80 bg-slate-900/60 p-6 text-slate-300 hover:text-white hover:border-purple-500/40 transition-all hover:scale-[1.01] hover:shadow-lg hover:shadow-purple-500/5"
+              >
+                <div className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none`}
+                  style={{ background: `linear-gradient(135deg, rgba(139,92,246,0.08), transparent 60%)` }}
+                />
+                <div className="relative">
+                  <div className="flex items-start gap-4">
+                    <span className={`text-3xl shrink-0 inline-block w-12 h-12 rounded-xl bg-gradient-to-br ${goal.color} flex items-center justify-center`}>
+                      {goal.emoji}
+                    </span>
+                    <div className="min-w-0">
+                      <h3 className="text-lg font-semibold text-white mb-1 group-hover:text-purple-300 transition-colors">{goal.name}</h3>
+                      <p className="text-slate-400 text-sm leading-relaxed mb-3">{goal.desc}</p>
+                      <div className="flex flex-wrap gap-1.5">
+                        {goal.cats.map((c) => (
+                          <span key={c} className="px-2 py-0.5 rounded-full bg-slate-800 text-slate-400 text-xs">{c}</span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Popular Free Tools ── */}
+      <section className="py-14 bg-slate-900/30 border-y border-slate-800/60">
+        <div className="container-page">
+          <div className="flex items-center gap-3 mb-8">
+            <span className="text-2xl">🛠️</span>
+            <div>
+              <h2 className="text-2xl font-bold text-white">Popular Free Tools</h2>
+              <p className="text-slate-400 text-sm">Try before you buy — no login required</p>
+            </div>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { name: 'ROI Calculator', href: '/tools/roi-calculator', emoji: '💰', desc: 'Estimate payback and TCO of AI and IT projects' },
+              { name: 'AI Service Router', href: '/tools/ai-service-router', emoji: '🧠', desc: 'Smart model routing, caching & failover' },
+              { name: 'SSL Checker', href: '/tools/ssl-checker', emoji: '🔒', desc: 'Verify SSL certificate configuration and expiration' },
+              { name: 'Port Scanner', href: '/tools/port-scanner', emoji: '🔌', desc: 'Scan open ports on your servers and networks' },
+              { name: 'JSON Formatter', href: '/tools/json-formatter', emoji: '📋', desc: 'Format, validate, and beautify JSON data' },
+              { name: 'Health Check', href: '/tools/health-check', emoji: '❤️', desc: 'Check the health and performance of your services' },
+            ].map((tool) => (
+              <Link
+                key={tool.href}
+                href={tool.href}
+                className="group relative overflow-hidden rounded-xl border border-slate-800/80 bg-slate-900/60 p-5 text-slate-300 hover:text-white hover:border-emerald-500/40 transition-all hover:scale-[1.01] hover:shadow-lg hover:shadow-emerald-500/5"
+              >
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" style={{ background: 'linear-gradient(135deg, rgba(16,185,129,0.08), transparent 60%)' }} />
+                <div className="relative">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-2xl">{tool.emoji}</span>
+                    <span className="text-xs px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-300">Free</span>
+                  </div>
+                  <h3 className="text-base font-semibold text-white mb-1 group-hover:text-emerald-300 transition-colors">{tool.name}</h3>
+                  <p className="text-slate-400 text-sm leading-relaxed">{tool.desc}</p>
+                  <div className="mt-3 flex items-center gap-1 text-emerald-400 text-sm font-medium group-hover:gap-2 transition-all">
+                    Open tool →
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+          <div className="mt-6 text-center">
+            <Link href="/tools-hub" className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl border border-slate-700 hover:border-emerald-500/40 text-slate-300 hover:text-white text-sm transition-all">
+              View all tools in Tools Hub →
+            </Link>
+          </div>
+        </div>
+      </section>
 
       {/* ── AI Agent Monitoring — Live Fleet Banner (Priority) ── */}
       <AgentsMonitoring />
@@ -1285,24 +1414,21 @@ export default function HomePage() {
       {/* ── Zion Apps Network — product apps + path calculators ── */}
       <section id="apps-network" className="py-16 border-t border-slate-800 bg-gradient-to-b from-slate-950 via-purple-950/10 to-slate-950">
         <div className="container-page">
-          <div className="flex items-center justify-between mb-8">
-            <div>
-              <h2 className="text-2xl font-bold text-white mb-2">Free apps &amp; calculators — interlinked</h2>
-              <p className="text-sm text-slate-400">
-                Path tools on this domain and product apps from the GitHub constellation. Every card links to the app
-                and back into the <Link href="/zion-app-network/" className="text-purple-300 hover:text-pink-300">network hub</Link>.
-              </p>
-            </div>
-            <Link href="/zion-app-network/" className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-purple-600 text-white text-sm font-medium hover:bg-purple-500 transition-colors">
-              View all apps <span>→</span>
-            </Link>
+          <div className="text-center mb-10">
+            <p className="text-xs font-semibold uppercase tracking-widest text-purple-400 mb-2">Zion Apps Network</p>
+            <h2 className="text-2xl font-bold text-white mb-3">Free apps &amp; calculators — interlinked</h2>
+            <p className="text-slate-400 max-w-2xl mx-auto text-sm">
+              Path tools on this domain and product apps from the GitHub constellation. Every card links to the app
+              and back into the <Link href="/apps-network/" className="text-purple-300 hover:text-pink-300">network hub</Link>.
+            </p>
           </div>
-
-          {/* Featured apps grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+          <div className="max-w-5xl mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {homepageFeaturedApps.map((app) => (
-              <Link key={app.slug} href={app.href} className="block rounded-xl border border-slate-800 bg-slate-900/50 p-5 hover:border-purple-500/40 transition-colors">
-
+              <Link
+                key={app.slug}
+                href={app.href}
+                className="group block rounded-xl border border-slate-800 bg-slate-900/50 hover:bg-slate-800/80 hover:border-purple-500/30 p-5 transition-all"
+              >
                 <p className="text-[10px] uppercase tracking-wider text-purple-300/80 font-semibold mb-2">{app.group}</p>
                 <h3 className="text-base font-semibold text-white group-hover:text-purple-300 transition-colors">{app.name}</h3>
                 <p className="text-xs text-slate-500 mt-1 leading-relaxed line-clamp-2">{app.description}</p>
@@ -1310,158 +1436,16 @@ export default function HomePage() {
               </Link>
             ))}
           </div>
-
-          {/* Category groups */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
-            <div className="rounded-xl border border-slate-800 bg-slate-900/30 p-6">
-              <h3 className="text-lg font-bold text-white mb-4">🧠 AI Product Apps</h3>
-              <div className="flex flex-wrap gap-2">
-                {[
-                  { name: 'AI Agent Swarm', href: '/zion-ai-agent-swarm/' },
-                  { name: 'Multi-Agent Orchestrator', href: '/multi-agent-orchestrator/' },
-                  { name: 'AI Service Router', href: '/ai-service-router/' },
-                  { name: 'AI Content Strategy', href: '/ai-content-strategy-engine/' },
-                  { name: 'AI SEO Generator', href: '/ai-seo-content-generator/' },
-                  { name: 'AI Lead Generator', href: '/zion-ai-lead-generator/' },
-                  { name: 'AI Fraud Detection', href: '/ai-fraud-detection/' },
-                  { name: 'AI Recommendation Engine', href: '/ai-recommendation-engine/' },
-                ].map((app) => (
-                  <Link key={app.href} href={app.href} className="px-3 py-1.5 rounded-lg bg-purple-600/20 text-purple-300 text-xs hover:bg-purple-600/30 transition-colors">
-                    {app.name}
-                  </Link>
-                ))}
-              </div>
-            </div>
-            <div className="rounded-xl border border-slate-800 bg-slate-900/30 p-6">
-              <h3 className="text-lg font-bold text-white mb-4">💰 Money &amp; FinOps</h3>
-              <div className="flex flex-wrap gap-2">
-                {[
-                  { name: 'ROI Calculator', href: '/roi-calc/' },
-                  { name: 'Token Cost', href: '/token-cost/' },
-                  { name: 'FinOps Autopilot', href: '/finops-autopilot/' },
-                  { name: 'Cloud Waste', href: '/cloud-waste/' },
-                  { name: 'Pricing Calculator', href: '/pricing-calculator/' },
-                  { name: 'FinOps Estimator', href: '/finops-estimator/' },
-                  { name: 'AI Cloud Cost Opt.', href: '/ai-first-cloud-cost-optimization/' },
-                ].map((app) => (
-                  <Link key={app.href} href={app.href} className="px-3 py-1.5 rounded-lg bg-green-600/20 text-green-300 text-xs hover:bg-green-600/30 transition-colors">
-                    {app.name}
-                  </Link>
-                ))}
-              </div>
-            </div>
-            <div className="rounded-xl border border-slate-800 bg-slate-900/30 p-6">
-              <h3 className="text-lg font-bold text-white mb-4">🔧 Ops &amp; Incidents</h3>
-              <div className="flex flex-wrap gap-2">
-                {[
-                  { name: 'Incident Cost', href: '/incident-cost/' },
-                  { name: 'AI Incident Commander', href: '/zion-ai-incident-commander/' },
-                  { name: 'Change Risk', href: '/change-risk/' },
-                  { name: 'Ops Runbook AI', href: '/ops-runbook-ai/' },
-                  { name: 'Agents Monitoring', href: '/agents-monitoring/' },
-                  { name: 'SLA Calculator', href: '/sla-calculator/' },
-                ].map((app) => (
-                  <Link key={app.href} href={app.href} className="px-3 py-1.5 rounded-lg bg-red-600/20 text-red-300 text-xs hover:bg-red-600/30 transition-colors">
-                    {app.name}
-                  </Link>
-                ))}
-              </div>
-            </div>
-            <div className="rounded-xl border border-slate-800 bg-slate-900/30 p-6">
-              <h3 className="text-lg font-bold text-white mb-4">🛡️ Governance &amp; Security</h3>
-              <div className="flex flex-wrap gap-2">
-                {[
-                  { name: 'AI Governance Checklist', href: '/ai-governance-checklist/' },
-                  { name: 'AI Compliance Auditor', href: '/zion-ai-compliance-auditor/' },
-                  { name: 'Security Scanning', href: '/security-scanning/' },
-                  { name: 'Identity Management', href: '/identity-management/' },
-                  { name: 'Prompt Shield', href: '/prompt-shield/' },
-                  { name: 'Secret Notes', href: '/secret-notes/' },
-                  { name: 'AI Tender Scout', href: '/ai-tender-scout/' },
-                ].map((app) => (
-                  <Link key={app.href} href={app.href} className="px-3 py-1.5 rounded-lg bg-amber-600/20 text-amber-300 text-xs hover:bg-amber-600/30 transition-colors">
-                    {app.name}
-                  </Link>
-                ))}
-              </div>
-            </div>
-            <div className="rounded-xl border border-slate-800 bg-slate-900/30 p-6">
-              <h3 className="text-lg font-bold text-white mb-4">📡 Field &amp; Support</h3>
-              <div className="flex flex-wrap gap-2">
-                {[
-                  { name: 'Field Dispatch', href: '/field-dispatch/' },
-                  { name: 'Parts Desk', href: '/parts-desk/' },
-                  { name: 'Warranty Lens', href: '/warranty-lens/' },
-                  { name: 'AI Lead Generator', href: '/zion-ai-lead-generator/' },
-                  { name: 'Rapid Outreach', href: '/rapid-outreach/' },
-                  { name: 'Sales Lead Gen Suite', href: '/sales-leadgen-suite/' },
-                  { name: 'Customer Success', href: '/customer-success/' },
-                  { name: 'AI CRM Integration', href: '/zion-ai-crm-integration/' },
-                ].map((app) => (
-                  <Link key={app.href} href={app.href} className="px-3 py-1.5 rounded-lg bg-blue-600/20 text-blue-300 text-xs hover:bg-blue-600/30 transition-colors">
-                    {app.name}
-                  </Link>
-                ))}
-              </div>
-            </div>
-            <div className="rounded-xl border border-slate-800 bg-slate-900/30 p-6">
-              <h3 className="text-lg font-bold text-white mb-4">📋 Governance &amp; Bids</h3>
-              <div className="flex flex-wrap gap-2">
-                {[
-                  { name: 'Licitação Radar', href: '/licitacao-radar/' },
-                  { name: 'RFP Readiness', href: '/rfp-readiness/' },
-                  { name: 'Edital Desk', href: '/edital-desk/' },
-                  { name: 'AI Tender Scout', href: '/ai-tender-scout/' },
-                ].map((app) => (
-                  <Link key={app.href} href={app.href} className="px-3 py-1.5 rounded-lg bg-cyan-600/20 text-cyan-300 text-xs hover:bg-cyan-600/30 transition-colors">
-                    {app.name}
-                  </Link>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* Interlink map */}
-          <div className="rounded-xl border border-slate-800 bg-slate-900/30 p-6 mb-8">
-            <h3 className="text-lg font-bold text-white mb-4">🔗 Interlink Map — All Apps Connected</h3>
-            <p className="text-sm text-slate-400 mb-4">Every app in the Zion Apps Network is interlinked. Click any app to see its related apps.</p>
-            <div className="flex flex-wrap gap-2">
-              {[
-                'AI Agent Swarm', 'Multi-Agent Orchestrator', 'AI Service Router', 'AI Content Strategy',
-                'AI SEO Generator', 'AI Lead Generator', 'ROI Calculator', 'Token Cost',
-                'FinOps Autopilot', 'Cloud Waste', 'Pricing Calculator', 'Incident Cost',
-                'AI Incident Commander', 'Change Risk', 'Ops Runbook AI', 'Agents Monitoring',
-                'AI Governance Checklist', 'AI Compliance Auditor', 'Security Scanning',
-                'Identity Management', 'Prompt Shield', 'Field Dispatch', 'Parts Desk',
-                'Warranty Lens', 'Licitação Radar', 'RFP Readiness', 'Edital Desk',
-                'AI Tender Scout', 'Rapid Outreach', 'Sales Lead Gen Suite',
-                'Customer Success', 'AI CRM Integration', 'Zion App Network',
-                'Service Discovery', 'Service Comparison', 'AI Workflow Automation',
-                'Process Automation', 'Blog Automation', 'Zion Tech Blog',
-                'Free AI Tools', 'AI Email Intelligence', 'Email Automation',
-                'Data Analytics Suite', 'AI Predictive Analytics', 'AI Fraud Detection',
-                'AI Recommendation Engine', 'Data Services', 'LLM Gateway',
-                'Model Observatory', 'FinOps Estimator', 'AI Cloud Cost Opt.',
-                'AI DevSecOps 2026', 'AI Cloud Migration 2026', 'AI Low-Code Workflow',
-                'AI Agent Services', 'AI Consulting Services', 'Zion Apps Hub',
-                'Secret Notes', 'Churn Notes', 'Zion AI Field Dispatch',
-              ].map((name) => (
-                <span key={name} className="inline-flex items-center gap-1 px-2 py-1 rounded text-xs bg-slate-800 text-slate-300">
-                  <span className="text-purple-400">↔</span> {name}
-                </span>
-              ))}
-            </div>
-          </div>
-
-          <div className="text-center py-8">
-            <Link href="/zion-app-network/" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-purple-600 text-white font-medium hover:bg-purple-500 transition-colors text-lg">
-              Explore the Full Apps Network →
-            </Link>
-            <p className="text-sm text-slate-500 mt-3">35,000+ services | 60+ interlinked apps | 500+ GitHub repositories</p>
+          <div className="mt-8 flex flex-wrap justify-center gap-3 text-sm">
+            {APPS_NETWORK_HUB.hubs.map((h) => (
+              <Link key={h.href} href={h.href} className="text-slate-400 hover:text-purple-300 underline-offset-2 hover:underline">
+                {h.name}
+              </Link>
+            ))}
+            <Link href="/discovery/" className="text-purple-300 font-semibold hover:text-pink-300">Discovery $99 →</Link>
           </div>
         </div>
       </section>
-
 
       {/* ── Free Tools & Interactive Utilities — {serviceCount}+-service catalog ── */}
       <section id="free-tools" className="py-16 border-t border-slate-800">
@@ -1471,7 +1455,7 @@ export default function HomePage() {
             <p className="text-slate-400 max-w-2xl mx-auto text-sm">
               Explore our service catalog, calculate ROI, compare solutions, and route your needs — directly from
               our <strong className="text-white">{services.length}+</strong> services across <strong className="text-white">{CATEGORIES.length}</strong> categories.
-              {' '}Also see the <Link href="/zion-app-network/" className="text-purple-300 hover:text-pink-300">Apps Network hub</Link>.
+              {' '}Also see the <Link href="/apps-network/" className="text-purple-300 hover:text-pink-300">Apps Network hub</Link>.
             </p>
           </div>
           <div className="max-w-5xl mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-5">

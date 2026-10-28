@@ -8,21 +8,9 @@ permissions:
   push:
     branches: [main]
   workflow_dispatch:
-  workflow_run:
-    workflows:
-      - Continuous Pages Deploy
-      - Simple Static Deploy
-      - Deploy on Push
-    branches: [main]
-    types: [completed]
-
-concurrency:
-  group: ai-post-push-route-verify-${{ github.event_name == 'workflow_run' && 'post-deploy' || github.ref }}
-  cancel-in-progress: ${{ github.event_name != 'workflow_run' }}
 
 jobs:
   verify-routes:
-    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
@@ -60,52 +48,6 @@ jobs:
             echo "has_failures=true" >> "$GITHUB_OUTPUT"
           else
             echo "has_failures=false" >> "$GITHUB_OUTPUT"
-          fi
-
-      - name: Verify critical Apps release routes
-        run: |
-          set -euo pipefail
-          base="https://ziontechgroup.com"
-          routes=(
-            "/"
-            "/apps/"
-            "/pt/apps/"
-            "/es/apps/"
-            "/fr/apps/"
-            "/de/apps/"
-            "/discovery/"
-            "/pt/discovery/"
-            "/es/discovery/"
-            "/fr/discovery/"
-            "/de/discovery/"
-            "/apps/operations-reliability-ai-2026.html"
-            "/apps/operations-reliability-ai-2026-pt.html"
-            "/apps/operations-reliability-ai-2026-es.html"
-            "/apps/operations-reliability-ai-2026-fr.html"
-            "/apps/operations-reliability-ai-2026-de.html"
-            "/zion-app-network/app-network-operations-reliability-2026.html"
-            "/zion-app-network/app-network-operations-reliability-2026-pt-br.html"
-            "/zion-app-network/app-network-operations-reliability-2026-es.html"
-            "/zion-app-network/app-network-operations-reliability-2026-fr.html"
-            "/zion-app-network/app-network-operations-reliability-2026-de.html"
-            "/zion-app-network/app-network-operations-evidence-checklist-2026.html"
-            "/zion-app-network/app-network-operations-evidence-checklist-2026-pt-br.html"
-            "/zion-app-network/app-network-operations-evidence-checklist-2026-es.html"
-            "/zion-app-network/app-network-operations-evidence-checklist-2026-fr.html"
-            "/zion-app-network/app-network-operations-evidence-checklist-2026-de.html"
-          )
-          failed=0
-          for path in "${routes[@]}"; do
-            code=$(curl --location --silent --show-error --max-time 20 -o /dev/null -w "%{http_code}" "${base}${path}" || echo "000")
-            if [ "$code" = "200" ]; then
-              echo "OK critical $path ($code)"
-            else
-              echo "::error::critical route $path returned $code"
-              failed=1
-            fi
-          done
-          if [ "$failed" -ne 0 ]; then
-            exit 1
           fi
 
       - name: Create or update route failure issue

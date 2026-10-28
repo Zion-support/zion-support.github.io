@@ -1,3 +1,1 @@
-// append-workflow-trust-history.cjs - placeholder (Zion Agent 2026-09-20): stop module-not-found failures. No-op.
-console.log('append-workflow-trust-history.cjs placeholder: nothing to do.');process.exit(0);
-
+console.log("stub: automation/append-workflow-trust-history.cjs no-op - automation paused post-P0");

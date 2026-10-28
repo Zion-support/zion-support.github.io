@@ -43,7 +43,7 @@ jobs:
     timeout-minutes: 22
     env:
       NEXT_TELEMETRY_DISABLED: "1"
-      NODE_OPTIONS: '--max-old-space-size=16384'
+      NODE_OPTIONS: '--max-old-space-size=4096'
 
       NEXT_BUILD_WORKER_COUNT: 1
     steps:
@@ -61,6 +61,8 @@ jobs:
         run: npm ci --prefer-offline --no-audit --fund=false
 
       - name: Lint and type-check content changes
+        env:
+          NODE_OPTIONS: '--max-old-space-size=20480'
         run: |
           npm run lint:check
           npm run type-check

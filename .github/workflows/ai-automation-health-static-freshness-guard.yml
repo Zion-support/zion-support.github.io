@@ -9,6 +9,8 @@ permissions:
     - cron: '12 */6 * * *'
   workflow_dispatch:
 
+env:
+  NODE_OPTIONS: '--max-old-space-size=6144'
 
 jobs:
   guard:
@@ -39,7 +41,7 @@ jobs:
         run: node scripts/automation/check-automation-health-static-freshness.cjs
 
       - name: Escalate stale static health snapshot
-        if: failure() && !cancelled() && steps.freshness.outcome == 'failure' && steps.freshness.outputs.static_health_fresh == 'false'
+        if: steps.freshness.outputs.static_health_fresh != 'true'
         env:
           GH_TOKEN: ${{ github.token }}
           ISSUE_FINGERPRINT: automation-health-static-freshness

@@ -23,8 +23,7 @@ jobs:
           test -f "$f"
           test -s "$f"
           grep -Fq 'name: Workflow grep guards (script file)' "$f"
-          # Preserve the literal GitHub expression; Actions expands expressions before Bash.
-          grep -Fq 'workflow-grep-guards-fast-$''{{ github.ref }}' "$f"
+          grep -Fq 'workflow-grep-guards-fast-${{ github.ref }}' "$f"
           grep -Fq 'pull_request:' "$f"
           grep -Fq 'branches: [main]' "$f"
           grep -Fq 'run-workflow-grep-guards.sh' "$f"

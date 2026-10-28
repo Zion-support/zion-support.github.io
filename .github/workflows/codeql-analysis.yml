@@ -16,14 +16,13 @@ permissions:
 
 concurrency:
   group: codeql-${{ github.ref }}
-  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+  cancel-in-progress: true
 
 jobs:
   analyze:
     name: Analyze
     runs-on: ubuntu-latest
-    timeout-minutes: 45
-
+    timeout-minutes: 60
 
     strategy:
       fail-fast: false
@@ -31,35 +30,6 @@ jobs:
         language: ['javascript-typescript']
 
     steps:
-      - name: Reserve disk space for JavaScript/TypeScript analysis
-        if: ${{ runner.environment == 'github-hosted' && runner.os == 'Linux' && matrix.language == 'javascript-typescript' }}
-        shell: bash
-        run: |
-          set -euo pipefail
-          echo "Disk space before removing unused SDKs"
-          df -h /
-          df -i /
-
-          # This interpreted-language job does not build Android or .NET code.
-          # Keep the CodeQL/Node/Java toolcache, .NET runtimes, runner and workspace.
-          # Only these preinstalled SDK directories on the ephemeral VM may go.
-          for sdk_dir in /usr/local/lib/android/sdk /usr/share/dotnet/sdk; do
-            if [[ ! -e "$sdk_dir" && ! -L "$sdk_dir" ]]; then
-              echo "SDK directory is not installed: $sdk_dir"
-              continue
-            fi
-            if [[ ! -d "$sdk_dir" || -L "$sdk_dir" || "$(realpath -- "$sdk_dir")" != "$sdk_dir" ]]; then
-              echo "::error::Refusing unexpected SDK path: $sdk_dir"
-              exit 1
-            fi
-            sudo du -sh -- "$sdk_dir"
-            sudo rm -rf --one-file-system -- "$sdk_dir"
-          done
-
-          echo "Disk space after removing unused SDKs"
-          df -h /
-          df -i /
-
       - name: Checkout
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
 
@@ -67,11 +37,9 @@ jobs:
         uses: github/codeql-action/init@c10b8064de6f491fea524254123dbe5e09572f13 # v4.35.1
         with:
           languages: ${{ matrix.language }}
-          queries: security-and-quality
-
-      - name: Autobuild
-        uses: github/codeql-action/autobuild@c10b8064de6f491fea524254123dbe5e09572f13 # v4.35.1
-
+          queries: security-extended
+          build-mode: none
+          config-file: ./.github/codeql/codeql-config.yml
 
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@c10b8064de6f491fea524254123dbe5e09572f13 # v4.35.1
@@ -85,4 +53,4 @@ jobs:
           echo "" >> "$GITHUB_STEP_SUMMARY"
           echo "- **Language:** ${{ matrix.language }}" >> "$GITHUB_STEP_SUMMARY"
           echo "- **Status:** Completed" >> "$GITHUB_STEP_SUMMARY"
-          echo "- **Queries:** security-and-quality" >> "$GITHUB_STEP_SUMMARY"
+          echo "- **Queries:** security-extended" >> "$GITHUB_STEP_SUMMARY"

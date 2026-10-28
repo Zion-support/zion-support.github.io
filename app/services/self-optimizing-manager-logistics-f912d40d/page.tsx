@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path="/services/self-optimizing-manager-logistics-f912d40d" title="Self-Optimizing manager-logistics" />
+        <BreadcrumbSchema path=`/services/self-optimizing-manager-logistics-f912d40d` title="Self-Optimizing manager-logistics" />
         <h1 className="text-4xl font-bold mb-6">Self-Optimizing manager-logistics</h1>
         <p className="text-lg text-gray-300 mb-8">Drive innovation in logistics with Self-Optimizing manager-logistics. This AI-powered platform transforms contract analysis into a competitive advantage.</p>
 
@@ -63,8 +63,7 @@ export default function ServicePage() {
 
         <div className="text-center">
           <a 
-            href="https://calendly.com/kleber-ziontechgroup/30min" 
-
+            href="https://calendly.com/kleber-ziontechgroup/consultation" 
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-full text-lg transition-colors"

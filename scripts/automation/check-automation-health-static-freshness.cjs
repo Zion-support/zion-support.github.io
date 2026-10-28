@@ -1,9 +1,7 @@
-const { readFileSync, existsSync, mkdirSync, writeFileSync, appendFileSync } = require('fs');
+const { readFileSync, existsSync } = require('fs');
 const { join } = require('path');
 
 const healthPath = join('public', 'api', 'automation-health.json');
-const maxHoursEnv = process.env.AUTOMATION_HEALTH_STATIC_MAX_HOURS;
-const maxHours = maxHoursEnv ? Number(maxHoursEnv) : 24;
 
 let staticHealthFresh = 'false';
 let staticHealthAgeHours = null;
@@ -21,6 +19,8 @@ try {
   if (!staticHealthTimestamp) throw new Error('Missing timestamp in ' + healthPath);
   staticHealthValid = true;
 
+  const maxHoursEnv = process.env.AUTOMATION_HEALTH_STATIC_MAX_HOURS;
+  const maxHours = maxHoursEnv ? Number(maxHoursEnv) : 24;
   const ts = new Date(staticHealthTimestamp);
   const now = new Date();
   staticHealthAgeHours = (now - ts) / 36e5;
@@ -41,20 +41,10 @@ const report = {
   staticHealthAgeHours,
   staticHealthTimestamp,
   staticHealthPath: healthPath,
-  maxHoursAllowed: maxHours,
+  maxHoursAllowed: Number.isFinite(Number(process.env.AUTOMATION_HEALTH_STATIC_MAX_HOURS)) ? Number(process.env.AUTOMATION_HEALTH_STATIC_MAX_HOURS) : 24,
 };
 
-const serializedReport = JSON.stringify(report, null, 2);
-console.log(serializedReport);
-// Match the workflow's existing artifact/output interface without changing the
-// source-age decision, source snapshot, or nonzero stale diagnostic.
-const reportDirectory = join('automation', 'reports');
-mkdirSync(reportDirectory, { recursive: true });
-writeFileSync(join(reportDirectory, 'automation-health-static-freshness-latest.json'), serializedReport + '\n');
-if (process.env.GITHUB_OUTPUT) {
-  // Only this controlled boolean enters the Actions output channel.
-  appendFileSync(process.env.GITHUB_OUTPUT, 'static_health_fresh=' + staticHealthFresh + '\n');
-}
+console.log(JSON.stringify(report, null, 2));
 
 if (staticHealthFresh !== 'true') {
   process.exitCode = 1;
