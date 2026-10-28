@@ -2,6 +2,7 @@ name: Codemod — fix generated page syntax
 on:
   workflow_dispatch:
   push:
+    branches: [main]
     paths: ['.github/workflows/codemod-fix-syntax.yml']
 
 permissions:
@@ -31,9 +32,25 @@ jobs:
           sed -i 's/params: Promise<{ key: string }> }})/params: Promise<{ key: string }> })/' 'app/industries/[key]/page.tsx' || true
           # 6. search page: merge sibling spans into one
           perl -0777 -pi -e 's/\{service\.industry && \(\s*<span className="text-slate-500">•<\/span>\s*<span className="text-slate-500">\{service\.industry\}<\/span>\s*\)\}/{service.industry \&\& (<span className="text-slate-500">• {service.industry}<\/span>)}/s' app/search/page.tsx || true
-          # 7. appsNetwork.ts: catalog array closed before new-app objects — move the closing bracket
-          perl -0777 -pi -e 's/\];\n\n\n  // ── New apps added 2026-09-25 ──/\n\n  // ── New apps added 2026-09-25 ──/s' app/data/appsNetwork.ts
-          perl -0777 -pi -e 's/\},\n\n\n\nexport const appsNetworkBySlug/},\n];\n\nexport const appsNetworkBySlug/s' app/data/appsNetwork.ts
+          # 7. appsNetwork.ts: catalog array closed before new-app objects; use Python so Unicode comments are safe.
+          python3 - <<'PY'
+          from pathlib import Path
+          path = Path("app/data/appsNetwork.ts")
+          if path.exists():
+              text = path.read_text(encoding="utf-8")
+              marker = "New apps added 2026-09-25"
+              pos = text.find(marker)
+              if pos >= 0:
+                  before = text[:pos]
+                  after = text[pos:]
+                  before = before.replace("];\n\n\n  // ", "\n\n  // ", 1)
+                  text = before + after
+              export_marker = "export const appsNetworkBySlug"
+              pos = text.find(export_marker)
+              if pos >= 0 and "];\n\n" not in text[max(0, pos-8):pos]:
+                  text = text[:pos].rstrip() + "\n];\n\n" + text[pos:]
+              path.write_text(text, encoding="utf-8")
+          PY
           # 8. ServiceDiscoveryHub: missing return close at EOF
           if ! tail -3 app/components/ServiceDiscoveryHub.tsx | grep -q '}'; then printf '\n  );\n}\n' >> app/components/ServiceDiscoveryHub.tsx; fi
           # 9. dead duplicate files in app/ root (not valid routes, broken JSX)
