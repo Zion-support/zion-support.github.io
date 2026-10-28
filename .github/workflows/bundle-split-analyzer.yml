@@ -11,6 +11,10 @@ name: Autonomous Bundle Split Analyzer
   schedule:
   - cron: 0 17 * * 2
   workflow_dispatch: null
+concurrency:
+  group: bundle-split-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   bundle-split:
     name: Bundle Split Analyzer

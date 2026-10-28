@@ -1,0 +1,116 @@
+name: Apps rollback readiness
+
+"on":
+  workflow_run:
+    workflows:
+      - AI Post Push Route Verify
+    types: [completed]
+  schedule:
+    - cron: '17 14 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/apps-rollback-readiness.yml'
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: apps-rollback-readiness
+  cancel-in-progress: true
+
+jobs:
+  readiness:
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - name: Resolve last known good release evidence
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p automation/reports
+          gh api "repos/${GITHUB_REPOSITORY}/actions/workflows/gh-pages.yml/runs?branch=main&status=success&per_page=20" > /tmp/deploys.json
+          gh api "repos/${GITHUB_REPOSITORY}/actions/workflows/ai-post-push-route-verify.yml/runs?branch=main&status=success&per_page=50" > /tmp/verifiers.json
+          gh api "repos/${GITHUB_REPOSITORY}/commits/main" > /tmp/main.json
+
+          python3 - <<'PY'
+          import json, os, sys, urllib.request
+          from datetime import datetime, timezone
+          from pathlib import Path
+
+          repo=os.environ['GITHUB_REPOSITORY']
+          deploys=json.load(open('/tmp/deploys.json',encoding='utf-8')).get('workflow_runs',[])
+          verifies=json.load(open('/tmp/verifiers.json',encoding='utf-8')).get('workflow_runs',[])
+          main=json.load(open('/tmp/main.json',encoding='utf-8'))
+          if not deploys:
+              print('::error::No successful Continuous Pages Deploy run found')
+              sys.exit(1)
+
+          deploy=deploys[0]
+          deploy_done=deploy.get('updated_at') or deploy.get('created_at')
+          candidates=[v for v in verifies if (v.get('updated_at') or v.get('created_at')) >= deploy_done]
+          verifier=candidates[0] if candidates else None
+          if verifier is None:
+              print('::error::No successful post-deploy route verification found after latest successful deploy')
+              sys.exit(1)
+
+          deployed_sha=deploy['head_sha']
+          main_sha=main['sha']
+          compare_url=f"https://api.github.com/repos/{repo}/compare/{deployed_sha}...{main_sha}"
+          req=urllib.request.Request(compare_url,headers={
+              'Accept':'application/vnd.github+json',
+              'Authorization':f"Bearer {os.environ['GH_TOKEN']}",
+              'X-GitHub-Api-Version':'2022-11-28',
+              'User-Agent':'Zion-Apps-Rollback-Readiness/1.0',
+          })
+          with urllib.request.urlopen(req,timeout=20) as resp:
+              compare=json.load(resp)
+
+          report={
+              'schema':'zion.apps.rollback-readiness.v1',
+              'generated_at_utc':datetime.now(timezone.utc).isoformat(),
+              'repository':repo,
+              'main_sha':main_sha,
+              'last_successful_deploy':{
+                  'run_id':deploy['id'],
+                  'head_sha':deployed_sha,
+                  'created_at':deploy.get('created_at'),
+                  'updated_at':deploy.get('updated_at'),
+                  'html_url':deploy.get('html_url'),
+              },
+              'post_deploy_verifier':{
+                  'run_id':verifier['id'],
+                  'head_sha':verifier['head_sha'],
+                  'created_at':verifier.get('created_at'),
+                  'updated_at':verifier.get('updated_at'),
+                  'html_url':verifier.get('html_url'),
+              },
+              'drift_from_deployed_to_main':{
+                  'status':compare.get('status'),
+                  'ahead_by':compare.get('ahead_by'),
+                  'behind_by':compare.get('behind_by'),
+                  'total_commits':compare.get('total_commits'),
+              },
+              'rollback_candidate_sha':deployed_sha,
+              'automatic_rollback_allowed':False,
+              'operator_note':'Use this SHA only as evidence for incident review; require human approval and current incident evidence before any revert.',
+          }
+          out=Path('automation/reports/apps-rollback-readiness.json')
+          out.write_text(json.dumps(report,indent=2,sort_keys=True)+'\n',encoding='utf-8')
+          print(f"Last known good deploy: {deploy['id']} @ {deployed_sha}")
+          print(f"Post-deploy verifier: {verifier['id']} @ {verifier['head_sha']}")
+          print(f"Main drift: ahead_by={compare.get('ahead_by')} status={compare.get('status')}")
+          PY
+
+      - name: Upload rollback readiness ledger
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: apps-rollback-readiness-${{ github.run_id }}
+          path: automation/reports/apps-rollback-readiness.json
+          if-no-files-found: error
+          retention-days: 30

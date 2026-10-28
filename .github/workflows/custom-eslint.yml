@@ -11,6 +11,10 @@ name: Autonomous Custom ESLint Rules
   schedule:
   - cron: 0 16 * * 1
   workflow_dispatch: null
+concurrency:
+  group: autonomous-custom-eslint-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   custom-eslint:
     name: Custom ESLint Rules
