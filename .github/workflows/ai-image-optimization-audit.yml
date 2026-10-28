@@ -17,6 +17,7 @@ concurrency:
       - 'public/**'
       - 'app/**/*.tsx'
       - 'app/**/*.ts'
+      - '.github/workflows/ai-image-optimization-audit.yml'
   workflow_dispatch:
 
 jobs:
@@ -34,11 +35,10 @@ jobs:
         uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
         with:
           node-version-file: '.nvmrc'
-          cache: npm
-          cache-dependency-path: package-lock.json
 
-      - name: Install dependencies
-        run: npm ci --prefer-offline --no-audit --fund=false
+      # No npm install: this read-only audit uses Node.js core APIs only.
+      # The monorepo has unrelated Storybook 8/10 peer conflicts; requiring npm ci
+      # for an image-file scan caused ERESOLVE and prevented all audit evidence.
 
       - name: Scan images in public directory
         id: scan
@@ -48,10 +48,11 @@ jobs:
           node -e "
           const fs = require('fs');
           const path = require('path');
-          const glob = require('glob');
-
+          // Recursive readdir is built into Node 20+ and needs no npm dependency.
           const imageExts = ['.png', '.jpg', '.jpeg', '.gif', '.svg', '.webp', '.avif', '.ico', '.bmp'];
-          const allFiles = glob.sync('public/**/*', { nodir: true });
+          const allFiles = fs.readdirSync('public', { recursive: true })
+            .map(name => path.join('public', name))
+            .filter(name => fs.lstatSync(name).isFile());
           const images = allFiles.filter(f => imageExts.includes(path.extname(f).toLowerCase()));
 
           const report = {
@@ -111,9 +112,12 @@ jobs:
         run: |
           node -e "
           const fs = require('fs');
-          const glob = require('glob');
+          const path = require('path');
 
-          const tsxFiles = glob.sync('app/**/*.tsx', { ignore: ['node_modules/**'] });
+          const tsxFiles = fs.readdirSync('app', { recursive: true })
+            .filter(name => name.endsWith('.tsx') && !name.includes('node_modules/'))
+            .map(name => path.join('app', name))
+            .filter(name => fs.lstatSync(name).isFile());
           const issues = [];
 
           for (const file of tsxFiles) {
