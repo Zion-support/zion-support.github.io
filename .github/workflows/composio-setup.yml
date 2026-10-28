@@ -7,36 +7,48 @@ on:
     branches:
       - main
 
+permissions:
+  contents: read
+
 jobs:
   setup:
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     env:
       COMPOSIO_API_KEY: ${{ secrets.COMPOSIO_API_KEY }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-
-      - name: Install current Composio CLI
+      - name: Validate Composio API key and list active account count
+        shell: bash
         run: |
-          curl -fsSL https://composio.dev/install | COMPOSIO_INSTALL_PLUGINS=0 COMPOSIO_INSTALL_SHELL=none sh
-          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
-
-      - name: Verify Composio CLI
-        run: |
-          composio --version
-          command -v composio
-
-      - name: Composio Whoami
-        run: composio whoami
-
-      - name: List Connected Accounts
-        run: composio dev connected-accounts list
+          set -euo pipefail
+          if [ -z "${COMPOSIO_API_KEY:-}" ]; then
+            echo "::error::COMPOSIO_API_KEY secret is not set."
+            exit 1
+          fi
+          code=$(curl --silent --show-error --output /tmp/composio-accounts.json --write-out "%{http_code}"             --header "X-API-Key: ${COMPOSIO_API_KEY}"             "https://backend.composio.dev/api/v3/connected_accounts?statuses=ACTIVE&limit=100")
+          echo "Composio connected_accounts HTTP status: $code"
+          case "$code" in
+            2*) ;;
+            401|403)
+              echo "::error::Composio credential is invalid, expired or unauthorized (HTTP $code)."
+              exit 1
+              ;;
+            *)
+              echo "::error::Composio API returned unexpected HTTP $code."
+              head -c 500 /tmp/composio-accounts.json || true
+              exit 1
+              ;;
+          esac
+          python3 - <<'PY'
+          import json
+          with open('/tmp/composio-accounts.json', encoding='utf-8') as fh:
+              data=json.load(fh)
+          items=data.get('items') or data.get('connected_accounts') or data.get('connectedAccounts') or []
+          print(f"Active connected accounts: {len(items)}")
+          PY
 
       - name: Summary
-        run: |
-          echo "Composio setup workflow completed at $(date -u)"
+        run: echo "Composio account validation completed at $(date -u)"
