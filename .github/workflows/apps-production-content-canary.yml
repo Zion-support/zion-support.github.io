@@ -21,8 +21,7 @@ permissions:
   issues: write
 
 concurrency:
-  group: apps-production-content-canary
-  cancel-in-progress: true
+  group: apps-production-content-canary-${{ github.run_id }}
 
 jobs:
   canary:
