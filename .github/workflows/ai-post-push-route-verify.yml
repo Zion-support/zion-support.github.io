@@ -5,8 +5,10 @@ permissions:
   issues: write
 
 "on":
-  push:
-    branches: [main]
+  workflow_run:
+    workflows:
+      - Simple Static Deploy
+    types: [completed]
   workflow_dispatch:
 
 concurrency:
