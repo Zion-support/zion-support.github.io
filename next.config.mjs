@@ -9,7 +9,7 @@ const nextConfig = {
     // Reduce webpack memory footprint (fixes OOM on GH-hosted runners, 125k+ file tree)
     webpackMemoryOptimizations: true,
   },
-  outputFileTracingRoot: process.cwd(),
+  outputFileTracingRoot: path.join(process.cwd(), 'app'),
   basePath: '',
   trailingSlash: true,
   compress: true,
