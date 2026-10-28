@@ -7,7 +7,7 @@ name: Apps deployed-source drift guard
       - '.github/workflows/apps-deployed-source-drift.yml'
   workflow_run:
     workflows:
-      - Continuous Pages Deploy
+      - Simple Static Deploy
     types: [completed]
   schedule:
     - cron: '7 15 * * *'
