@@ -21,14 +21,21 @@ jobs:
         with:
           node-version: 20
 
-      - name: Install Composio
-        run: npm install -g composio
+      - name: Install current Composio CLI
+        run: |
+          curl -fsSL https://composio.dev/install | COMPOSIO_INSTALL_PLUGINS=0 COMPOSIO_INSTALL_SHELL=none sh
+          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+
+      - name: Verify Composio CLI
+        run: |
+          composio --version
+          command -v composio
 
       - name: Composio Whoami
         run: composio whoami
 
       - name: List Connected Accounts
-        run: composio connections list
+        run: composio dev connected-accounts list
 
       - name: Summary
         run: |
