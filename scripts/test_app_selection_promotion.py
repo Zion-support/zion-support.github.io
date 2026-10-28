@@ -74,6 +74,19 @@ class SitePromotionTests(unittest.TestCase):
                     target=BASE+SCORE+other_suffix+".html"
                     self.assertIn((target,other_lang),page.links)
 
+    def test_apps_sitemap_exposes_all_ten_verified_tool_locales(self):
+        import xml.etree.ElementTree as ET
+        path=ROOT/"public/apps/apps-sitemap.xml"
+        tree=ET.parse(path)
+        ns="{http://www.sitemaps.org/schemas/sitemap/0.9}"
+        self.assertEqual(tree.getroot().tag, ns+"urlset")
+        urls=[u.text for u in tree.getroot().findall(ns+"url/"+ns+"loc")]
+        self.assertEqual(len(urls), len(set(urls)))
+        for _,_,suffix,_ in DATA[:5]:
+            for tool in (SCORE,FIELD):
+                target="https://ziontechgroup.com"+BASE+tool+suffix+".html"
+                self.assertEqual(urls.count(target),1,target)
+
     def test_all_translated_ctas_distinct(self):
         labels=[]
         for path,_,_,_ in DATA[:5]:
