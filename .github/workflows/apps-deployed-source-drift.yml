@@ -18,8 +18,7 @@ permissions:
   issues: write
 
 concurrency:
-  group: apps-deployed-source-drift
-  cancel-in-progress: true
+  group: apps-deployed-source-drift-${{ github.run_id }}
 
 jobs:
   compare:
