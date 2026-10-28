@@ -1,0 +1,90 @@
+<!DOCTYPE html><html lang="pt-BR"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Revisão de custo de nuvem antes de cortar — Zion Tech Group</title>
+<meta name="description" content="Recorte típico · FinOps. Atribuir custo a ambientes e equipes, achar recursos órfãos e subaproveitados, e propor um piloto reversível de 30 dias — não um corte cego. Direcional por ordem de grandeza, sem ROI inventado.">
+<link rel="canonical" href="https://ziontechgroup.com/case-studies/cloud-cost-review/">
+<meta name="robots" content="index,follow">
+<meta property="og:title" content="Revisão de custo de nuvem antes de cortar — Zion Tech Group">
+<meta property="og:description" content="Recorte típico · FinOps. Atribuir custo a ambientes e equipes, achar recursos órfãos e subaproveitados, e propor um piloto reversível de 30 dias — não um corte cego. Direcional por ordem de grandeza, sem ROI inventado.">
+<meta property="og:url" content="https://ziontechgroup.com/case-studies/cloud-cost-review/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://ziontechgroup.com/og-case-studies.svg">
+<meta property="og:locale" content="pt_BR">
+<link rel="alternate" hreflang="pt-BR" href="https://ziontechgroup.com/case-studies/cloud-cost-review/">
+<link rel="alternate" hreflang="x-default" href="https://ziontechgroup.com/case-studies/cloud-cost-review/">
+<link rel="icon" href="/favicon.svg">
+<style>
+:root{--bg:#0b1220;--card:#0f172a;--line:#1f2937;--txt:#e6edf7;--muted:#94a3b8;--accent:#a855f7}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--txt);font:16px/1.65 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+a{color:#c4b5fd;text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+nav.top{background:#0f172a;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
+nav.top .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.brand{font-weight:800;color:#f5f5f5;font-size:1.05rem}
+.links{display:flex;gap:18px;flex-wrap:wrap;align-items:center}
+.links a{color:#cbd5e1;font-size:.94rem}
+.cta{background:var(--accent)!important;color:#fff!important;padding:9px 18px!important;border-radius:9999px;font-weight:700}
+.cta:hover{text-decoration:none;filter:brightness(1.08)}
+.hero{padding:56px 0 32px;border-bottom:1px solid var(--line)}
+.eyebrow{color:var(--accent);font-weight:700;letter-spacing:.04em;text-transform:uppercase;font-size:.8rem}
+h1{font-size:clamp(1.8rem,4vw,2.7rem);font-weight:800;margin:.4rem 0 1rem;letter-spacing:-.01em}
+.lead{color:var(--muted);font-size:1.15rem;max-width:62ch}
+section.block{padding:44px 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px;margin-bottom:20px}
+.card h2{margin:.1rem 0 .5rem;font-size:1.35rem}
+.badge{display:inline-block;font-weight:700;font-size:.8rem;border-radius:9999px;padding:3px 12px;margin-bottom:10px}
+.steps{margin:14px 0 6px;padding-left:20px}
+.steps li{margin:5px 0;color:#cdd7e3}
+.outcome{margin-top:14px;padding-top:14px;border-top:1px dashed var(--line);color:#cdd7e3}
+.dot{color:var(--accent);font-weight:800}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:18px}
+.mini{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px}
+.mini h3{margin:.1rem 0 .5rem;font-size:1.05rem}
+.mini p{color:var(--muted);margin:0}
+.disclaimer{background:#111c2e;border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:10px;padding:18px 20px;color:#cdd7e3;font-size:.95rem}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin:22px 0 4px}
+.btn{display:inline-block;padding:12px 24px;border-radius:10px;background:var(--accent);color:#fff;font-weight:700}
+.btn.alt{background:transparent;border:1px solid #334155;color:#e6edf7}
+.btn:hover{text-decoration:none;filter:brightness(1.08)}
+footer{border-top:1px solid var(--line);padding:32px 0;color:var(--muted);margin-top:40px}
+.foot{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px}
+.foot h4{color:#e6edf7;margin:0 0 8px;font-size:.95rem}
+.foot a{color:var(--muted);display:block;padding:3px 0;font-size:.9rem}
+@media(max-width:640px){.links{display:none}}
+</style></head><body><nav class="top"><div class="wrap">
+<a class="brand" href="/">Zion Tech Group</a>
+<div class="links">
+<a href="/services/">Serviços</a>
+<a href="/managed-it-services/">Managed IT</a>
+<a href="/apps/">Apps</a>
+<a href="/blog/">Blog</a>
+<a href="/case-studies/">Cases</a>
+<a href="/contact/">Contato</a>
+<a class="cta" href="/discovery/">Discovery $99</a>
+</div></div></nav><main><section class="hero"><div class="wrap">
+<p class="eyebrow">Recorte típico · FinOps</p>
+<h1>Revisão de custo de nuvem antes de cortar</h1>
+<p class="lead">Uma equipe tinha fatura de nuvem crescendo sem visibilidade de quanto cada ambiente custava, sob pressão para cortar custos sem saber o que era seguro remover.</p>
+</div></section>
+<section class="block"><div class="wrap" style="max-width:820px">
+<article class="card">
+<span class="dot">Primeiro win.</span>
+<h2 style="font-size:1.4rem">Atribuir custo a ambientes e equipes, achar recursos órfãos e subaproveitados, e propor um piloto reversível de 30 dias — não um corte cego.</h2>
+<ol class="steps"><li>Atribuição de custo por ambiente/equipe (showback).</li>
+<li>Identificação de recursos órfãos e subaproveitados.</li>
+<li>Piloto reversível de 30 dias com aprovação humana antes de qualquer baixa.</li></ol>
+<div class="outcome"><span class="dot">Resultado.</span> O primeiro win é a visibilidade — saber onde o dinheiro vai antes de decidir. Economia potencial na ordem de grandeza de um dígito a baixo dois dígitos da fatura, dependendo do ambiente. A Zion não garante valor e só atua após confirmação escrita do cliente.</div>
+</article>
+<div class="actions"><a class="btn" href="/discovery/">Mapear um processo parecido · $99</a><a class="btn alt" href="/managed-it-services/">Managed IT</a></div>
+<p style="margin-top:18px"><a href="/case-studies/">← Voltar aos cases</a></p>
+</div></section>
+<section class="block" style="background:#0d1626"><div class="wrap">
+<div class="disclaimer">Resultados são direcionais e por ordem de grandeza, não garantidos. Cada engajamento começa com um Discovery que define linha de base e o único número que importa. A Zion não inventa ROI de catálogo nem atua sobre sistemas sem aprovação humana e confirmação escrita.</div>
+</div></section></main><footer><div class="wrap foot">
+<div><h4>Empresa</h4><a href="/about/">Sobre</a><a href="/contact/">Contato</a><a href="/ops/comms/">War Room</a></div>
+<div><h4>Oferta</h4><a href="/discovery/">Discovery $99</a><a href="/plans/">Planos</a><a href="/en/plans/">Plans (EN)</a></div>
+<div><h4>Recursos</h4><a href="/apps/">Apps Network</a><a href="/case-studies/">Cases</a><a href="/blog/">Blog</a></div>
+<div><h4>Contato comercial</h4><a href="mailto:commercial@ziontechgroup.com?cc=commercial@ziontechgroup.com;carlos@ziontechgroup.com">commercial@ziontechgroup.com</a><a href="mailto:carlos@ziontechgroup.com">carlos@ziontechgroup.com</a></div>
+</div><div class="wrap" style="margin-top:18px;font-size:.85rem">© 2026 Zion Tech Group · Sem ROI inventado. Resultados direcionais por ordem de grandeza.</div></footer></body></html>
