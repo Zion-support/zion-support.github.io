@@ -48,7 +48,7 @@ class SitePromotionTests(unittest.TestCase):
                 self.assertIn(BASE + SCORE + suffix + ".html",[link for link,_ in parsed.links])
                 self.assertIn(BASE + FIELD + suffix + ".html",[link for link,_ in parsed.links])
                 self.assertEqual(raw.count('data-app-network-promotion="evidence-scorecard-i18n-20261028"'),1)
-                for alt_lang, _, alt_suffix, _ in DATA[:5]:
+                for _, alt_lang, alt_suffix, _ in DATA[:5]:
                     found = [(href,hreflang) for href,hreflang in parsed.links if href==BASE+SCORE+alt_suffix+".html" and hreflang==alt_lang]
                     self.assertTrue(found,alt_lang)
                 self.assertNotIn("data:text/html",raw)
