@@ -48,7 +48,16 @@ jobs:
           ref: ${{ steps.release.outputs.sha }}
           persist-credentials: false
 
-      - name: Compare production bodies with deployed source
+      - name: Rebuild exact Pages artifact used by production deploy
+        shell: bash
+        run: |
+          set -euo pipefail
+          bash scripts/prepare-pages-out.sh
+          node scripts/render-productivity-release.cjs out
+          node scripts/render-field-evidence-release.cjs out
+          python3 scripts/assert-no-private-ops.py out
+
+      - name: Compare production bodies with deployed artifact
         id: drift
         shell: bash
         env:
@@ -83,26 +92,26 @@ jobs:
 
           base='https://ziontechgroup.com'
           pairs={
-            '/':'public/index.html',
-            '/apps/':'public/apps/index.html',
-            '/pt/apps/':'public/pt/apps/index.html',
-            '/es/apps/':'public/es/apps/index.html',
-            '/fr/apps/':'public/fr/apps/index.html',
-            '/de/apps/':'public/de/apps/index.html',
-            '/discovery/':'public/discovery/index.html',
-            '/pt/discovery/':'public/pt/discovery/index.html',
-            '/es/discovery/':'public/es/discovery/index.html',
-            '/fr/discovery/':'public/fr/discovery/index.html',
-            '/de/discovery/':'public/de/discovery/index.html',
-            '/apps/operations-reliability-ai-2026.html':'public/apps/operations-reliability-ai-2026.html',
-            '/apps/operations-reliability-ai-2026-pt.html':'public/apps/operations-reliability-ai-2026-pt.html',
-            '/apps/operations-reliability-ai-2026-es.html':'public/apps/operations-reliability-ai-2026-es.html',
-            '/apps/operations-reliability-ai-2026-fr.html':'public/apps/operations-reliability-ai-2026-fr.html',
-            '/apps/operations-reliability-ai-2026-de.html':'public/apps/operations-reliability-ai-2026-de.html',
-            '/sitemap.xml':'public/sitemap.xml',
-            '/sitemap-0.xml':'public/sitemap-0.xml',
-            '/apps/apps-sitemap.xml':'public/apps/apps-sitemap.xml',
-            '/robots.txt':'public/robots.txt',
+            '/':'out/index.html',
+            '/apps/':'out/apps/index.html',
+            '/pt/apps/':'out/pt/apps/index.html',
+            '/es/apps/':'out/es/apps/index.html',
+            '/fr/apps/':'out/fr/apps/index.html',
+            '/de/apps/':'out/de/apps/index.html',
+            '/discovery/':'out/discovery/index.html',
+            '/pt/discovery/':'out/pt/discovery/index.html',
+            '/es/discovery/':'out/es/discovery/index.html',
+            '/fr/discovery/':'out/fr/discovery/index.html',
+            '/de/discovery/':'out/de/discovery/index.html',
+            '/apps/operations-reliability-ai-2026.html':'out/apps/operations-reliability-ai-2026.html',
+            '/apps/operations-reliability-ai-2026-pt.html':'out/apps/operations-reliability-ai-2026-pt.html',
+            '/apps/operations-reliability-ai-2026-es.html':'out/apps/operations-reliability-ai-2026-es.html',
+            '/apps/operations-reliability-ai-2026-fr.html':'out/apps/operations-reliability-ai-2026-fr.html',
+            '/apps/operations-reliability-ai-2026-de.html':'out/apps/operations-reliability-ai-2026-de.html',
+            '/sitemap.xml':'out/sitemap.xml',
+            '/sitemap-0.xml':'out/sitemap-0.xml',
+            '/apps/apps-sitemap.xml':'out/apps/apps-sitemap.xml',
+            '/robots.txt':'out/robots.txt',
           }
           headers={'User-Agent':'Zion-Apps-Deployed-Source-Drift/1.0','Cache-Control':'no-cache'}
           rows=[]
