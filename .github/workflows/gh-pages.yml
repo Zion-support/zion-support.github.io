@@ -21,6 +21,8 @@ on:
       - 'index.html'
       - '_redirects'
       - 'scripts/prepare-pages-out.sh'
+      - 'scripts/render-productivity-release.cjs'
+      - 'scripts/render-field-evidence-release.cjs'
       - 'docs/**'
       - 'assets/**'
       - '.github/workflows/gh-pages.yml'
@@ -32,12 +34,10 @@ permissions:
   id-token: write
 
 concurrency:
-  # Keep this group name so a merged commercial run can preempt the in-flight
-  # Next.js Continuous Pages Deploy (same group). STATUS/Hermes never join
-  # because they are filtered out of on.push paths above.
-  # cancel-in-progress: latest commercial push wins (prepare is ~1m, not 60m).
-  group: continuous-pages-deploy-${{ github.ref }}
-  cancel-in-progress: true
+  # Shared serialization with Simple Static Deploy prevents competing Pages artifacts
+  # from publishing different bytes for one release SHA. Keep both publishers active.
+  group: zion-production-pages-${{ github.ref }}
+  cancel-in-progress: false
 
 jobs:
   deploy:
@@ -62,6 +62,12 @@ jobs:
 
       - name: Prepare pages from public/
         run: bash scripts/prepare-pages-out.sh
+
+      - name: Gate reviewed five-language productivity rendering
+        run: node scripts/render-productivity-release.cjs out
+
+      - name: Render field evidence release (adds data-field-evidence-release markers)
+        run: node scripts/render-field-evidence-release.cjs out
 
       - name: Reject private operational files in final Pages artifact
         run: python3 scripts/assert-no-private-ops.py out
