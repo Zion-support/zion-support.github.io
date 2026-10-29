@@ -1,0 +1,27 @@
+name: Free Discovery plans contract guard
+on:
+  pull_request:
+    paths:
+      - 'public/**/plans/index.html'
+      - 'public/plans/index.html'
+      - 'scripts/checks/free-discovery-plans-contract.cjs'
+      - '.github/workflows/free-discovery-plans-contract.yml'
+  workflow_dispatch:
+  schedule:
+    - cron: '17 8 * * 1'
+permissions:
+  contents: read
+concurrency:
+  group: discovery-plans-guard-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  content-contract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate five locale plans
+        run: node scripts/checks/free-discovery-plans-contract.cjs
