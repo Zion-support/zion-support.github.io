@@ -177,5 +177,95 @@ class ArtifactPublicationTests(unittest.TestCase):
         self.assertTrue((self.root / "published").exists())
 
 
+class CheckoutScopeTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.source = WORKFLOW.read_text()
+
+    def checkout(self, name):
+        block = re.search(r"(?ms)^    - name: Checkout\n(.*?)(?=^    - |\Z)", job(self.source, name))
+        self.assertIsNotNone(block, name)
+        return block.group(1)
+
+    def test_exact_refs_and_complete_tree_settings_are_preserved(self):
+        refs = {
+            "build": "${{ github.event_name == 'workflow_run' && github.event.workflow_run.head_sha || github.sha }}",
+            "smoke-tests": "${{ needs.build.outputs.sha }}",
+        }
+        for name, ref in refs.items():
+            with self.subTest(job=name):
+                block = self.checkout(name)
+                self.assertRegex(block, r"(?m)^      uses: actions/checkout@v4$")
+                self.assertRegex(block, r"(?m)^        fetch-depth: 1$")
+                self.assertIn("        ref: " + ref + "\n", block)
+                self.assertNotRegex(block, r"(?m)^        (sparse-checkout|filter):")
+        self.assertIn("      sha: ${{ steps.resolve-sha.outputs.sha }}", job(self.source, "build"))
+        self.assertIn('echo "sha=$sha" >> "$GITHUB_OUTPUT"', job(self.source, "build"))
+
+    def test_all_checkout_contexts_keep_exact_sha_full_tree_and_one_commit(self):
+        def git(cwd, *args):
+            result = subprocess.run(["git", *args], cwd=cwd, capture_output=True, text=True)
+            self.assertEqual(result.returncode, 0, result.stderr)
+            return result.stdout.strip()
+
+        with tempfile.TemporaryDirectory(prefix="zion-checkout-depth-") as td:
+            root = Path(td)
+            origin = root / "origin"
+            origin.mkdir()
+            git(origin, "init", "-b", "main")
+            git(origin, "config", "user.name", "Synthetic Checkout Fixture")
+            git(origin, "config", "user.email", "fixture@example.invalid")
+            git(origin, "config", "commit.gpgsign", "false")
+            for path in ("public/index.html", "public/old.txt", "scripts/render.cjs", ".github/workflows/example.yml"):
+                target = origin / path
+                target.parent.mkdir(parents=True, exist_ok=True)
+                target.write_text("synthetic first revision: " + path)
+            git(origin, "add", ".")
+            git(origin, "commit", "-m", "fixture ancestor")
+            ancestor = git(origin, "rev-parse", "HEAD")
+            git(origin, "tag", "unrelated-release", ancestor)
+            git(origin, "branch", "unrelated-history", ancestor)
+            (origin / "public/old.txt").rename(origin / "public/renamed.txt")
+            (origin / "public/index.html").write_text("synthetic workflow-run revision")
+            git(origin, "add", "-A")
+            git(origin, "commit", "-m", "fixture workflow-run head")
+            earlier_sha = git(origin, "rev-parse", "HEAD")
+            (origin / "public/renamed.txt").unlink()
+            (origin / "public/new.txt").write_text("synthetic later main revision")
+            git(origin, "add", "-A")
+            git(origin, "commit", "-m", "fixture advanced main")
+            main_sha = git(origin, "rev-parse", "HEAD")
+            cases = (
+                ("push", "build", main_sha, main_sha),
+                ("workflow_dispatch", "build", "refs/heads/main", main_sha),
+                ("workflow_run", "build", earlier_sha, earlier_sha),
+                ("smoke-tests", "smoke-tests", earlier_sha, earlier_sha),
+            )
+            for event, name, ref, expected_sha in cases:
+                with self.subTest(context=event):
+                    destination = root / event
+                    destination.mkdir()
+                    git(destination, "init")
+                    git(destination, "remote", "add", "origin", origin.as_uri())
+                    depth = re.search(r"(?m)^        fetch-depth: (\d+)$", self.checkout(name)).group(1)
+                    git(destination, "fetch", "--no-tags", "--depth=" + depth, "origin", ref)
+                    git(destination, "checkout", "--detach", "FETCH_HEAD")
+                    self.assertEqual(git(destination, "rev-parse", "HEAD"), expected_sha)
+                    self.assertEqual(git(destination, "rev-list", "--count", "HEAD"), "1")
+                    self.assertEqual(git(destination, "ls-tree", "-r", "HEAD"), git(origin, "ls-tree", "-r", expected_sha))
+                    self.assertEqual(git(destination, "tag", "--list"), "")
+                    for path in git(origin, "ls-tree", "-r", "--name-only", expected_sha).splitlines():
+                        self.assertEqual((destination / path).read_text(), git(origin, "show", expected_sha + ":" + path))
+            # Full-history negative control has the same tree but three commits.
+            full = root / "full-history"
+            full.mkdir()
+            git(full, "init")
+            git(full, "remote", "add", "origin", origin.as_uri())
+            git(full, "fetch", "--no-tags", "origin", "refs/heads/main")
+            git(full, "checkout", "--detach", "FETCH_HEAD")
+            self.assertEqual(git(full, "rev-list", "--count", "HEAD"), "3")
+            self.assertEqual(git(full, "ls-tree", "-r", "HEAD"), git(origin, "ls-tree", "-r", main_sha))
+
+
 if __name__ == "__main__":
     unittest.main()
