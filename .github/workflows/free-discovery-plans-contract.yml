@@ -23,5 +23,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Verify detection with deterministic self-tests
+        run: node scripts/checks/free-discovery-plans-contract.cjs --self-test
       - name: Validate five locale plans
         run: node scripts/checks/free-discovery-plans-contract.cjs
