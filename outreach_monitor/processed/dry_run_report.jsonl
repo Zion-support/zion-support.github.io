@@ -3,3 +3,8 @@
 {"mode": "auth_failure", "error": "URLError(gaierror(8, 'nodename nor servname provided, or not known'))", "ts": 1792371356}
 {"mode": "auth_failure", "error": "URLError(gaierror(8, 'nodename nor servname provided, or not known'))", "ts": 1792388877}
 {"mode": "auth_failure", "error": "URLError(gaierror(8, 'nodename nor servname provided, or not known'))", "ts": 1792402721}
+{"mode": "auth_failure", "error": "URLError(gaierror(8, 'nodename nor servname provided, or not known'))", "ts": 1792735311}
+{"mode": "auth_failure", "error": "URLError(gaierror(8, 'nodename nor servname provided, or not known'))", "ts": 1792747103}
+{"mode": "auth_failure", "error": "URLError(gaierror(8, 'nodename nor servname provided, or not known'))", "ts": 1792761139}
+{"mode": "auth_failure", "error": "URLError(gaierror(8, 'nodename nor servname provided, or not known'))", "ts": 1793106718}
+{"mode": "auth_failure", "error": "URLError(gaierror(8, 'nodename nor servname provided, or not known'))", "ts": 1793133647}
