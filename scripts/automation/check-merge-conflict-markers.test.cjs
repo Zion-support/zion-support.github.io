@@ -87,3 +87,16 @@ test('all affected paths remain listed when sample markers are capped',()=>{
     assert.equal(r.affectedPathsTruncated,false);
   }finally{cleanup(dir);}
 });
+
+test('conflict monetary tokens are classified without values in evidence',()=>{
+  const dir=fixture({'app/a.tsx': ['<<<<<<< HEAD','Basic $299','=======','Basic $199','>>>>>>> ref',''].join('\n')});
+  try {
+    const r=evaluate(dir);
+    assert.equal(r.status,'FAIL');
+    assert.equal(r.commercialReviewFiles,1);
+    assert.deepEqual(r.commercialReviewPaths,['app/a.tsx']);
+    const evidence=JSON.stringify(r);
+    assert.equal(evidence.includes('$299'),false);
+    assert.equal(evidence.includes('$199'),false);
+  } finally { cleanup(dir); }
+});
