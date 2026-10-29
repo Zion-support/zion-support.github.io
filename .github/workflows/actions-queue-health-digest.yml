@@ -1,0 +1,41 @@
+name: Actions queue health digest (read-only)
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 8 * * *'
+
+permissions:
+  actions: read
+  contents: read
+
+concurrency:
+  group: actions-queue-health-digest
+  cancel-in-progress: true
+
+jobs:
+  summarize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+    steps:
+      - name: Summarize queued and failing workflow runs
+        shell: bash
+        run: |
+          set -euo pipefail
+          json="$(gh api "repos/$GH_REPO/actions/runs?per_page=100" --jq '{workflow_runs: [.workflow_runs[] | {id, name, status, conclusion, html_url, created_at}] }')"
+          echo "## Actions queue health (latest 100 runs)" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          echo "| State | Count |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| --- | ---: |" >> "$GITHUB_STEP_SUMMARY"
+          for state in queued in_progress pending failure success cancelled; do
+            count="$(jq --arg s "$state" '[.workflow_runs[] | select(.status == $s or .conclusion == $s)] | length' <<< "$json")"
+            printf '| %s | %s |\n' "$state" "$count" >> "$GITHUB_STEP_SUMMARY"
+          done
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          echo "### Queued / pending runs" >> "$GITHUB_STEP_SUMMARY"
+          jq -r '.workflow_runs[] | select(.status == "queued" or .status == "pending") | "- [\\(.name) (#\\(.id))](\\(.html_url)) created \\(.created_at)"' <<< "$json" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          echo "Read-only diagnostic: no reruns, code writes, emails, or incident closures." >> "$GITHUB_STEP_SUMMARY"
