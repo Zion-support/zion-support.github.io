@@ -12,8 +12,31 @@ const pages = Object.freeze([
   'public/fr/plans/index.html',
   'public/de/plans/index.html',
 ]);
+const expectedLocales = Object.freeze({
+  'public/plans/index.html': { lang: 'pt-BR', canonical: 'https://ziontechgroup.com/plans/' },
+  'public/en/plans/index.html': { lang: 'en', canonical: 'https://ziontechgroup.com/en/plans/' },
+  'public/es/plans/index.html': { lang: 'es', canonical: 'https://ziontechgroup.com/es/plans/' },
+  'public/fr/plans/index.html': { lang: 'fr', canonical: 'https://ziontechgroup.com/fr/plans/' },
+  'public/de/plans/index.html': { lang: 'de', canonical: 'https://ziontechgroup.com/de/plans/' }
+});
+
 function problems(html, page) {
   const errors = [];
+  const spec = expectedLocales[page];
+  if (spec) {
+    const actualLang = html.match(/<html\\b[^>]*\\blang=["']([^"']+)["']/i)?.[1];
+    if (actualLang !== spec.lang) errors.push('document language mismatch');
+    const canonical = html.match(/<link\\b[^>]*rel=["']canonical["'][^>]*href=["']([^"']+)["']/i)?.[1];
+    if (canonical !== spec.canonical) errors.push('canonical mismatch');
+    const languages = [
+      ['pt-BR', '/plans/'], ['en', '/en/plans/'], ['es', '/es/plans/'],
+      ['fr', '/fr/plans/'], ['de', '/de/plans/'], ['x-default', '/plans/']
+    ];
+    for (const [code, url] of languages) {
+      const tag = '<link rel="alternate" hreflang="' + code + '" href="https://ziontechgroup.com' + url + '">';
+      if (html.split(tag).length !== 2) errors.push('missing or duplicate hreflang ' + code);
+    }
+  }
   if (!/href=["'][^"']*discovery\//i.test(html)) errors.push('missing Discovery CTA');
   if (!/discovery/i.test(html)) errors.push('missing Discovery mention');
   if (/Discovery:\s*ZG0[9b]/i.test(html)) errors.push('legacy paid Discovery SKU');
@@ -38,7 +61,16 @@ function selfTest() {
   for (const [html,reason] of badCases) {
     assert(problems(html,'test').includes(reason),'Expected error: '+reason);
   }
-  console.log('PASS 7 Free Discovery contract self-test cases');
+  const locale='public/en/plans/index.html';
+  const links=[
+    ['pt-BR','/plans/'],['en','/en/plans/'],['es','/es/plans/'],
+    ['fr','/fr/plans/'],['de','/de/plans/'],['x-default','/plans/']
+  ].map(([c,u])=>'<link rel="alternate" hreflang="'+c+'" href="https://ziontechgroup.com'+u+'">').join('');
+  const valid = '<html lang="en"><head><link rel="canonical" href="https://ziontechgroup.com/en/plans/">'+links+'</head><body>'+clean+'</body></html>';
+  assert.deepEqual(problems(valid,locale),[]);
+  const bad = valid.replace('<link rel="alternate" hreflang="fr" href="https://ziontechgroup.com/fr/plans/">','');
+  assert(problems(bad,locale).includes('missing or duplicate hreflang fr'));
+  console.log('PASS 9 Free Discovery + locale SEO self-test cases');
 }
 if (process.argv.includes('--self-test')) {
   selfTest();
