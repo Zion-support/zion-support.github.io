@@ -6,8 +6,10 @@ name: Apps deployed-source drift guard
     paths:
       - '.github/workflows/apps-deployed-source-drift.yml'
   workflow_run:
+    # Both publishers can update the same live site. Audit every successful publish.
     workflows:
       - Continuous Pages Deploy
+      - Simple Static Deploy
     types: [completed]
   schedule:
     - cron: '7 15 * * *'
