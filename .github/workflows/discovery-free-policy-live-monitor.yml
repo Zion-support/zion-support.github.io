@@ -64,7 +64,7 @@ jobs:
                   text = ' '.join(visible.parts).lower()
                   if path == '/managed-it-services/':
                       old_price = bool(re.search(
-                          r'(?:discovery[^<]{0,100}\\$\\s*99|\\$\\s*99[^<]{0,100}discovery)', text))
+                          r'(?:discovery.{0,100}[$][ ]*99|[$][ ]*99.{0,100}discovery)', text))
                       result['checks'] = {
                           'free_discovery_link': '/discovery/' in html and
                               ('free discovery' in text or 'discovery grátis' in text),
