@@ -36,7 +36,7 @@ jobs:
         run: |
           set -euo pipefail
           python3 - <<'PY'
-          import sys, urllib.request
+          import sys, urllib.request, xml.etree.ElementTree as ET
           from urllib.error import HTTPError, URLError
 
           base='https://ziontechgroup.com'
@@ -79,22 +79,48 @@ jobs:
               req=urllib.request.Request(url,headers=headers)
               with urllib.request.urlopen(req,timeout=20) as resp:
                 status=resp.status
-                body=resp.read(2_000_000).decode('utf-8','replace')
+                if path=='/sitemap.xml':
+                  payload=resp.read(50_000_001)
+                  if len(payload)>50_000_000:
+                    failures.append('/sitemap.xml: exceeds 50MB uncompressed limit')
+                    continue
+                  declared=resp.headers.get('Content-Length')
+                  if declared and int(declared)!=len(payload):
+                    failures.append('/sitemap.xml: response Content-Length mismatch')
+                    continue
+                else:
+                  payload=resp.read(2_000_000)
+                body=payload.decode('utf-8','replace')
               if status!=200:
                 failures.append(f'{path}: HTTP {status}')
                 continue
-              # Both valid sitemap root formats are supported: direct URL sets
-              # and indexes of shards. In URL-set mode robots.txt independently
-              # advertises the Apps sitemap, which is checked as a separate URL.
+              # Sitemap XML may be a direct URL set or a numbered-shard index.
+              # robots.txt independently advertises the Apps sitemap.
               if path=='/sitemap.xml':
-                if '<sitemapindex' in body:
-                  markers=['https://ziontechgroup.com/sitemap-0.xml',
-                           'https://ziontechgroup.com/apps/apps-sitemap.xml']
-                elif '<urlset' in body:
-                  markers=['<url>', '<loc>https://ziontechgroup.com/</loc>']
-                else:
-                  failures.append('/sitemap.xml: missing valid urlset or sitemapindex XML root')
+                try:
+                  root=ET.fromstring(payload)
+                except ET.ParseError as exc:
+                  failures.append(f'/sitemap.xml: invalid XML: {exc}')
                   continue
+                locs=[str(e.text or '').strip() for e in root.iter()
+                      if e.tag.split('}')[-1]=='loc']
+                kind=root.tag.split('}')[-1]
+                if kind=='sitemapindex':
+                  if (not locs or len(locs)>100 or
+                      any(not (u.startswith(base+'/sitemap-') and
+                               u.endswith('.xml') and u.rsplit('/',1)[-1][8:-4].isdigit())
+                          for u in locs)):
+                    failures.append('/sitemap.xml: missing or invalid numbered sitemap shards')
+                    continue
+                elif kind=='urlset':
+                  if not locs or len(locs)>50_000 or base+'/' not in locs:
+                    failures.append('/sitemap.xml: invalid URL set or homepage missing')
+                    continue
+                else:
+                  failures.append('/sitemap.xml: unsupported XML root '+kind)
+                  continue
+                print(f'OK /sitemap.xml HTTP 200 {kind} children/URLs={len(locs)}')
+                continue
               missing=[m for m in markers if m not in body]
               if missing:
                 failures.append(f'{path}: missing markers {missing}')
