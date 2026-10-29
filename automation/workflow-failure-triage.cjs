@@ -51,8 +51,8 @@ function buildReport(recent, failures, now = new Date()) {
   }
   const topFailures = [...counts].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
     .slice(0, 12).map(([workflow, count]) => ({ workflow, count }));
-  const cancelledSample = recent.filter(r => r.conclusion === 'cancelled').length;
-  const skippedSample = recent.filter(r => r.conclusion === 'skipped').length;
+  const cancelledSample = recent.filter(r => validRun(r) && r.conclusion === 'cancelled').length;
+  const skippedSample = recent.filter(r => validRun(r) && r.conclusion === 'skipped').length;
   const criticalQueue = staleQueued >= 20 || oldestQueueMinutes >= 90;
   const warningQueue = staleQueued >= 5 || oldestQueueMinutes >= 45;
   const severity = criticalQueue || completedFailures.length >= 12 ? 'critical' :
