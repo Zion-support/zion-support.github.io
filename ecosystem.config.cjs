@@ -169,7 +169,7 @@ module.exports = {
       env: {
         NODE_ENV: 'production'
       }
-    }
+    },
 
     {
       name: 'ai-content-organizer',
@@ -319,7 +319,7 @@ module.exports = {
       name: 'openclaw-autonomous-guardian',
       script: 'missing-pm2-stubs/openclaw-autonomous-guardian.cjs',
       instances: 1, autorestart: true, max_memory_restart: '512M',
-      env: { NODE_ENV: 'production' 
+      env: { NODE_ENV: 'production' }
     },
     {
       name: 'ai-content-organizer',
@@ -473,4 +473,5 @@ module.exports = {
     },
 
   ]
-};,
+};
+
