@@ -24,9 +24,9 @@ function problems(html, page) {
   const errors = [];
   const spec = expectedLocales[page];
   if (spec) {
-    const actualLang = html.match(/<html\\b[^>]*\\blang=["']([^"']+)["']/i)?.[1];
+    const actualLang = html.match(/<html\b[^>]*\blang=["']([^"']+)["']/i)?.[1];
     if (actualLang !== spec.lang) errors.push('document language mismatch');
-    const canonical = html.match(/<link\\b[^>]*rel=["']canonical["'][^>]*href=["']([^"']+)["']/i)?.[1];
+    const canonical = html.match(/<link\b[^>]*rel=["']canonical["'][^>]*href=["']([^"']+)["']/i)?.[1];
     if (canonical !== spec.canonical) errors.push('canonical mismatch');
     const languages = [
       ['pt-BR', '/plans/'], ['en', '/en/plans/'], ['es', '/es/plans/'],
