@@ -36,6 +36,6 @@ jobs:
           done
           echo "" >> "$GITHUB_STEP_SUMMARY"
           echo "### Queued / pending runs" >> "$GITHUB_STEP_SUMMARY"
-          jq -r '.workflow_runs[] | select(.status == "queued" or .status == "pending") | "- [\\(.name) (#\\(.id))](\\(.html_url)) created \\(.created_at)"' <<< "$json" >> "$GITHUB_STEP_SUMMARY"
+          jq -r '.workflow_runs[] | select(.status == "queued" or .status == "pending") | "- [\(.name) (#\(.id))](\(.html_url)) created \(.created_at)"' <<< "$json" >> "$GITHUB_STEP_SUMMARY"
           echo "" >> "$GITHUB_STEP_SUMMARY"
           echo "Read-only diagnostic: no reruns, code writes, emails, or incident closures." >> "$GITHUB_STEP_SUMMARY"
