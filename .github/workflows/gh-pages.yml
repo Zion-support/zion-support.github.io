@@ -34,10 +34,11 @@ permissions:
   id-token: write
 
 concurrency:
-  # Shared serialization with Simple Static Deploy prevents competing Pages artifacts
-  # from publishing different bytes for one release SHA. Keep both publishers active.
+  # All production Pages publishers share this queue. Retain pending releases;
+  # a late stale event must not replace the pending current-head publication.
   group: zion-production-pages-${{ github.ref }}
   cancel-in-progress: false
+  queue: max
 
 jobs:
   deploy:
@@ -46,12 +47,48 @@ jobs:
     timeout-minutes: 15
 
     steps:
+      - name: Check automatic Pages source
+        id: release-source
+        uses: actions/github-script@v7
+        env:
+          PAGES_CANDIDATE_SHA: ${{ github.sha }}
+        with:
+          script: |
+            const candidate = process.env.PAGES_CANDIDATE_SHA;
+            if (!/^[0-9a-f]{40}$/.test(candidate || '')) {
+              throw new Error('Missing or invalid Pages source commit');
+            }
+            if (context.eventName === 'workflow_dispatch') {
+              core.setOutput('publish', 'true');
+              core.setOutput('state', 'manual');
+              core.notice(`Preserving explicitly dispatched Pages source ${candidate}`);
+              return;
+            }
+            if (!['push', 'workflow_run'].includes(context.eventName)) {
+              throw new Error(`Unsupported automatic Pages event: ${context.eventName}`);
+            }
+            const {data} = await github.rest.git.getRef({...context.repo, ref: 'heads/main'});
+            const current = data.object?.sha;
+            if (!/^[0-9a-f]{40}$/.test(current || '')) {
+              throw new Error('Could not verify the current main commit');
+            }
+            const publish = candidate === current;
+            core.setOutput('publish', String(publish));
+            core.setOutput('state', publish ? 'current' : 'superseded');
+            const message = publish
+              ? `Current Pages source: ${candidate}`
+              : `Superseded Pages source ${candidate}; current main is ${current}. Publication skipped.`;
+            core.notice(message);
+            await core.summary.addHeading('Pages source freshness').addRaw(message).write();
+
       - name: Checkout
+        if: steps.release-source.outputs.publish == 'true'
         uses: actions/checkout@v4
         with:
           fetch-depth: 1
 
       - name: Guard main ref
+        if: steps.release-source.outputs.publish == 'true'
         run: |
           set -euo pipefail
           echo "ref=${GITHUB_REF} sha=${GITHUB_SHA} event=${GITHUB_EVENT_NAME}"
@@ -61,22 +98,63 @@ jobs:
           fi
 
       - name: Prepare pages from public/
+        if: steps.release-source.outputs.publish == 'true'
         run: bash scripts/prepare-pages-out.sh
 
       - name: Gate reviewed five-language productivity rendering
+        if: steps.release-source.outputs.publish == 'true'
         run: node scripts/render-productivity-release.cjs out
 
       - name: Render field evidence release (adds data-field-evidence-release markers)
+        if: steps.release-source.outputs.publish == 'true'
         run: node scripts/render-field-evidence-release.cjs out
 
       - name: Reject private operational files in final Pages artifact
+        if: steps.release-source.outputs.publish == 'true'
         run: python3 scripts/assert-no-private-ops.py out
 
       - name: Upload Pages artifact
+        if: steps.release-source.outputs.publish == 'true'
         uses: actions/upload-pages-artifact@v3
         with:
           path: out
 
+      - name: Recheck source immediately before deployment
+        id: deploy-source
+        if: steps.release-source.outputs.publish == 'true'
+        uses: actions/github-script@v7
+        env:
+          PAGES_CANDIDATE_SHA: ${{ github.sha }}
+        with:
+          script: |
+            const candidate = process.env.PAGES_CANDIDATE_SHA;
+            if (!/^[0-9a-f]{40}$/.test(candidate || '')) {
+              throw new Error('Missing or invalid Pages source commit');
+            }
+            if (context.eventName === 'workflow_dispatch') {
+              core.setOutput('publish', 'true');
+              core.setOutput('state', 'manual');
+              core.notice(`Preserving explicitly dispatched Pages source ${candidate}`);
+              return;
+            }
+            if (!['push', 'workflow_run'].includes(context.eventName)) {
+              throw new Error(`Unsupported automatic Pages event: ${context.eventName}`);
+            }
+            const {data} = await github.rest.git.getRef({...context.repo, ref: 'heads/main'});
+            const current = data.object?.sha;
+            if (!/^[0-9a-f]{40}$/.test(current || '')) {
+              throw new Error('Could not verify the current main commit');
+            }
+            const publish = candidate === current;
+            core.setOutput('publish', String(publish));
+            core.setOutput('state', publish ? 'current' : 'superseded');
+            const message = publish
+              ? `Current Pages source: ${candidate}`
+              : `Superseded Pages source ${candidate}; current main is ${current}. Publication skipped.`;
+            core.notice(message);
+            await core.summary.addHeading('Pages source freshness').addRaw(message).write();
+
       - name: Deploy to GitHub Pages
+        if: steps.deploy-source.outputs.publish == 'true'
         id: deployment
         uses: actions/deploy-pages@v4

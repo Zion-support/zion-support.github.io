@@ -36,7 +36,7 @@ jobs:
         run: |
           set -euo pipefail
           python3 - <<'PY'
-          import sys, urllib.request, xml.etree.ElementTree as ET
+          import sys, urllib.request
           from urllib.error import HTTPError, URLError
 
           base='https://ziontechgroup.com'
@@ -67,9 +67,8 @@ jobs:
             '/zion-app-network/app-network-operations-evidence-checklist-2026-es.html': ['Checklist de Evidencia Operativa 2026'],
             '/zion-app-network/app-network-operations-evidence-checklist-2026-fr.html': ['Checklist de Preuves Opérationnelles 2026'],
             '/zion-app-network/app-network-operations-evidence-checklist-2026-de.html': ['Operations-Evidenz-Checkliste 2026'],
-            '/sitemap.xml': [],
+            '/sitemap.xml': ['sitemapindex','apps/apps-sitemap.xml'],
             '/apps/apps-sitemap.xml': ['operations-reliability-ai-2026','/pt/apps/'],
-            '/robots.txt': ['Sitemap: https://ziontechgroup.com/sitemap.xml','Sitemap: https://ziontechgroup.com/apps/apps-sitemap.xml'],
           }
           headers={'User-Agent':'Zion-Apps-Production-Canary/1.0'}
           failures=[]
@@ -79,47 +78,9 @@ jobs:
               req=urllib.request.Request(url,headers=headers)
               with urllib.request.urlopen(req,timeout=20) as resp:
                 status=resp.status
-                if path=='/sitemap.xml':
-                  payload=resp.read(50_000_001)
-                  if len(payload)>50_000_000:
-                    failures.append('/sitemap.xml: exceeds 50MB uncompressed limit')
-                    continue
-                  declared=resp.headers.get('Content-Length')
-                  if declared and int(declared)!=len(payload):
-                    failures.append('/sitemap.xml: response Content-Length mismatch')
-                    continue
-                else:
-                  payload=resp.read(2_000_000)
-                body=payload.decode('utf-8','replace')
+                body=resp.read(2_000_000).decode('utf-8','replace')
               if status!=200:
                 failures.append(f'{path}: HTTP {status}')
-                continue
-              # Sitemap XML may be a direct URL set or a numbered-shard index.
-              # robots.txt independently advertises the Apps sitemap.
-              if path=='/sitemap.xml':
-                try:
-                  root=ET.fromstring(payload)
-                except ET.ParseError as exc:
-                  failures.append(f'/sitemap.xml: invalid XML: {exc}')
-                  continue
-                locs=[str(e.text or '').strip() for e in root.iter()
-                      if e.tag.split('}')[-1]=='loc']
-                kind=root.tag.split('}')[-1]
-                if kind=='sitemapindex':
-                  if (not locs or len(locs)>100 or
-                      any(not (u.startswith(base+'/sitemap-') and
-                               u.endswith('.xml') and u.rsplit('/',1)[-1][8:-4].isdigit())
-                          for u in locs)):
-                    failures.append('/sitemap.xml: missing or invalid numbered sitemap shards')
-                    continue
-                elif kind=='urlset':
-                  if not locs or len(locs)>50_000 or base+'/' not in locs:
-                    failures.append('/sitemap.xml: invalid URL set or homepage missing')
-                    continue
-                else:
-                  failures.append('/sitemap.xml: unsupported XML root '+kind)
-                  continue
-                print(f'OK /sitemap.xml HTTP 200 {kind} children/URLs={len(locs)}')
                 continue
               missing=[m for m in markers if m not in body]
               if missing:

@@ -20,7 +20,48 @@ permissions:
     - '**/STATUS.md'
   workflow_dispatch: null
 jobs:
+  source-gate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    outputs:
+      publish: ${{ steps.release-source.outputs.publish }}
+    steps:
+    - name: Check automatic Pages source
+      id: release-source
+      uses: actions/github-script@v7
+      env:
+        PAGES_CANDIDATE_SHA: ${{ github.event_name == 'workflow_run' && github.event.workflow_run.head_sha || github.sha }}
+      with:
+        script: |
+          const candidate = process.env.PAGES_CANDIDATE_SHA;
+          if (!/^[0-9a-f]{40}$/.test(candidate || '')) {
+            throw new Error('Missing or invalid Pages source commit');
+          }
+          if (context.eventName === 'workflow_dispatch') {
+            core.setOutput('publish', 'true');
+            core.setOutput('state', 'manual');
+            core.notice(`Preserving explicitly dispatched Pages source ${candidate}`);
+            return;
+          }
+          if (!['push', 'workflow_run'].includes(context.eventName)) {
+            throw new Error(`Unsupported automatic Pages event: ${context.eventName}`);
+          }
+          const {data} = await github.rest.git.getRef({...context.repo, ref: 'heads/main'});
+          const current = data.object?.sha;
+          if (!/^[0-9a-f]{40}$/.test(current || '')) {
+            throw new Error('Could not verify the current main commit');
+          }
+          const publish = candidate === current;
+          core.setOutput('publish', String(publish));
+          core.setOutput('state', publish ? 'current' : 'superseded');
+          const message = publish
+            ? `Current Pages source: ${candidate}`
+            : `Superseded Pages source ${candidate}; current main is ${current}. Publication skipped.`;
+          core.notice(message);
+          await core.summary.addHeading('Pages source freshness').addRaw(message).write();
   build:
+    needs: source-gate
+    if: needs.source-gate.outputs.publish == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 20
     env:
@@ -34,20 +75,22 @@ jobs:
       with:
         token: ${{ github.token }}
         ref: ${{ github.event_name == 'workflow_run' && github.event.workflow_run.head_sha || github.sha }}
-        fetch-depth: 0
+        fetch-depth: 1
     - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
         node-version-file: .nvmrc
         cache: npm
         cache-dependency-path: package-lock.json
+    - name: Verify static artifact publication regressions
+      run: |
+        python3 tests/ci/test_deploy_on_push_artifact.py
+        python3 tests/ci/test_pages_publisher_freshness.py
     - name: Install dependencies
       run: npm ci --prefer-offline --no-audit --fund=false
-    - name: Static site build
-      # Best-effort: the Pages artifact is assembled from public/ (source of truth)
-      # by prepare-pages-out.sh below, which rm -rf's out/ and rebuilds it from
-      # static content. The Next.js build OOMs on this 90k+ file tree (exit 134)
-      # and must not block the deploy.
+    - name: Next.js diagnostic build (Pages uses public/)
+      # Preserve the Next.js result as diagnostic evidence. Pages is assembled
+      # independently from public/ and must pass every static artifact gate below.
       continue-on-error: true
       env:
         NODE_OPTIONS: '--max-old-space-size=12288 --max-semi-space-size=64'
@@ -55,6 +98,12 @@ jobs:
       run: npm run build
     - name: Overlay docs pages onto out/
       run: bash scripts/prepare-pages-out.sh
+    - name: Gate reviewed five-language productivity rendering
+      run: node scripts/render-productivity-release.cjs out
+    - name: Render field evidence release (adds data-field-evidence-release markers)
+      run: node scripts/render-field-evidence-release.cjs out
+    - name: Reject private operational files in final Pages artifact
+      run: python3 scripts/assert-no-private-ops.py out
     - name: Upload Pages artifact
       uses: actions/upload-pages-artifact@v4
       with:
@@ -97,17 +146,60 @@ jobs:
         bash scripts/automation/commit-and-push-main.sh "chore(reports): sync deploy-status state after deploy-on-push"
   deploy:
     needs: build
+    concurrency:
+      # Share the production lock only at publication, not during diagnostics.
+      # Match the main-only publishers even for an intentional manual branch ref.
+      group: zion-production-pages-refs/heads/main
+      cancel-in-progress: false
+      queue: max
+    outputs:
+      published: ${{ steps.deployment.outcome == 'success' }}
     runs-on: ubuntu-latest
     timeout-minutes: 15
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
+    - name: Recheck source immediately before deployment
+      id: deploy-source
+      uses: actions/github-script@v7
+      env:
+        PAGES_CANDIDATE_SHA: ${{ needs.build.outputs.sha }}
+      with:
+        script: |
+          const candidate = process.env.PAGES_CANDIDATE_SHA;
+          if (!/^[0-9a-f]{40}$/.test(candidate || '')) {
+            throw new Error('Missing or invalid Pages source commit');
+          }
+          if (context.eventName === 'workflow_dispatch') {
+            core.setOutput('publish', 'true');
+            core.setOutput('state', 'manual');
+            core.notice(`Preserving explicitly dispatched Pages source ${candidate}`);
+            return;
+          }
+          if (!['push', 'workflow_run'].includes(context.eventName)) {
+            throw new Error(`Unsupported automatic Pages event: ${context.eventName}`);
+          }
+          const {data} = await github.rest.git.getRef({...context.repo, ref: 'heads/main'});
+          const current = data.object?.sha;
+          if (!/^[0-9a-f]{40}$/.test(current || '')) {
+            throw new Error('Could not verify the current main commit');
+          }
+          const publish = candidate === current;
+          core.setOutput('publish', String(publish));
+          core.setOutput('state', publish ? 'current' : 'superseded');
+          const message = publish
+            ? `Current Pages source: ${candidate}`
+            : `Superseded Pages source ${candidate}; current main is ${current}. Publication skipped.`;
+          core.notice(message);
+          await core.summary.addHeading('Pages source freshness').addRaw(message).write();
     - name: Deploy to GitHub Pages
+      if: steps.deploy-source.outputs.publish == 'true'
       id: deployment
       uses: actions/deploy-pages@v4
   smoke-tests:
     needs: [build, deploy]
+    if: needs.deploy.outputs.published == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 20
     env:
@@ -118,7 +210,7 @@ jobs:
       uses: actions/checkout@v4
       with:
         ref: ${{ needs.build.outputs.sha }}
-        fetch-depth: 0
+        fetch-depth: 1
     - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
@@ -202,3 +294,4 @@ jobs:
       if: always()
       continue-on-error: true
       run: node scripts/automation/generate-automation-health-snapshot.cjs
+
