@@ -2,8 +2,6 @@ name: Actions queue health digest (read-only)
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '17 8 * * *'
 
 permissions:
   actions: read
