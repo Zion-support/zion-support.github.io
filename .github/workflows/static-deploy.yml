@@ -26,8 +26,11 @@ permissions:
   id-token: write
 
 concurrency:
-  group: pages-deploy
+  # Manual releases use the same queue as both automatic publishers.
+  # Preserve their explicitly selected main commit and do not cancel queued runs.
+  group: zion-production-pages-${{ github.ref }}
   cancel-in-progress: false
+  queue: max
 
 jobs:
   deploy:
