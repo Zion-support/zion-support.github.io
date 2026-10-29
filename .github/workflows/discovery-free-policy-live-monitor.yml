@@ -8,6 +8,11 @@ on:
     paths:
       - '.github/workflows/discovery-free-policy-live-monitor.yml'
       - 'public/managed-it-services/index.html'
+      - 'public/discovery/**'
+      - 'public/pt/discovery/**'
+      - 'public/es/discovery/**'
+      - 'public/fr/discovery/**'
+      - 'public/de/discovery/**'
       - 'public/assets/js/discovery-delivery.js'
 
 permissions:
@@ -22,9 +27,16 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 7
     steps:
-      - name: Check production free policy and multilingual discovery
+      - name: Checkout PR candidate for read-only source validation
+        if: github.event_name == 'pull_request'
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          persist-credentials: false
+
+      - name: Check PR candidate or deployed production
         env:
           ZION_BASE: https://ziontechgroup.com
+          ZION_CHECK_MODE: ${{ github.event_name == 'pull_request' && 'source' || 'production' }}
         run: |
           python3 - <<'PY'
           import json, os, re, sys, urllib.request, urllib.error
@@ -46,19 +58,29 @@ jobs:
                       self.parts.append(data)
 
           base = os.environ['ZION_BASE'].rstrip('/')
+          mode = os.environ.get('ZION_CHECK_MODE', '')
+          if mode not in ('source', 'production'):
+              sys.exit('Invalid discovery check mode')
           paths = ['/discovery/', '/pt/discovery/', '/es/discovery/',
                    '/fr/discovery/', '/de/discovery/', '/managed-it-services/']
           report = []
           for path in paths:
               result = {'path': path, 'ok': False}
               try:
-                  request = urllib.request.Request(
-                      base + path, headers={'User-Agent': 'Zion-Discovery-ReadOnly-Monitor/1.0',
-                                           'Accept': 'text/html'})
-                  with urllib.request.urlopen(request, timeout=18) as response:
-                      html = response.read(1200000).decode('utf-8', 'replace')
-                      result['http_status'] = response.status
-                      result['content_type'] = response.headers.get('Content-Type', '')
+                  if mode == 'source':
+                      path_on_disk = os.path.join('public', path.lstrip('/'), 'index.html')
+                      with open(path_on_disk, encoding='utf-8') as source:
+                          html = source.read()
+                      result['http_status'] = 200
+                      result['content_type'] = 'text/html (source candidate)'
+                  else:
+                      request = urllib.request.Request(
+                          base + path, headers={'User-Agent': 'Zion-Discovery-ReadOnly-Monitor/1.0',
+                                               'Accept': 'text/html'})
+                      with urllib.request.urlopen(request, timeout=18) as response:
+                          html = response.read(1200000).decode('utf-8', 'replace')
+                          result['http_status'] = response.status
+                          result['content_type'] = response.headers.get('Content-Type', '')
                   visible = Visible()
                   visible.feed(html)
                   text = ' '.join(visible.parts).lower()
@@ -80,23 +102,24 @@ jobs:
                           'no_checkout': 'stripe.com/checkout' not in html.lower()
                       }
                   result['ok'] = result['http_status'] == 200 and all(result['checks'].values())
-              except (urllib.error.URLError, TimeoutError, ValueError) as error:
+              except (OSError, TimeoutError, ValueError) as error:
                   result['error_class'] = type(error).__name__
               report.append(result)
           os.makedirs('artifacts', exist_ok=True)
           with open('artifacts/discovery-live-monitor.json', 'w', encoding='utf-8') as output:
-              json.dump({'kind': 'read_only_source_monitor',
+              json.dump({'kind': 'read_only_discovery_policy_monitor',
+                         'mode': mode,
                          'not_email_delivery_proof': True,
                          'checks': report}, output, indent=2)
           with open(os.environ['GITHUB_STEP_SUMMARY'], 'a', encoding='utf-8') as summary:
-              summary.write('## Discovery free-policy live monitor (GET only)\n\n')
-              summary.write('This check does not submit forms or prove email delivery.\n\n')
+              summary.write('## Discovery free-policy monitor: ' + mode + '\n\n')
+              summary.write('PR = source contract; schedule/manual = live GET. No form submissions or inbox delivery proof.\n\n')
               summary.write('| Route | Result |\n|---|---|\n')
               for item in report:
-                  summary.write(f"| \`{item['path']}\` | {'PASS' if item['ok'] else 'FAIL'} |\n")
+                  summary.write('| ' + chr(96) + item['path'] + chr(96) + ' | ' + ('PASS' if item['ok'] else 'FAIL') + ' |\n')
           print(json.dumps(report, indent=2))
           if not all(item['ok'] for item in report):
-              sys.exit('Discovery public content policy or availability check failed')
+              sys.exit('Discovery ' + mode + ' content policy or availability check failed')
           PY
 
       - name: Preserve read-only evidence
