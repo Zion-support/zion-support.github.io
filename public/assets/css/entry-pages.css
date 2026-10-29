@@ -1,0 +1,70 @@
+/* Scoped static entry-page refinements, not a replacement for Family A chrome. */
+[data-entry-page] { --entry-border:#334155; }
+[data-entry-page] .entry-skip { position:absolute;left:-10000px;top:8px;z-index:50;padding:12px;background:#fff;color:#172033; }
+[data-entry-page] .entry-skip:focus { left:12px; }
+[data-entry-page] :focus-visible { outline:3px solid #fbbf24;outline-offset:4px; }
+[data-entry-page] a { text-underline-offset:.2em; }
+[data-entry-page="home"]:not(:has(header.nav)) nav.top { display:flex!important;flex-wrap:wrap;align-items:center;gap:8px 16px;padding:20px 0;border-bottom:1px solid var(--line);margin-bottom:28px; }
+[data-entry-page="home"] nav.top a { min-height:44px;display:inline-flex;align-items:center;color:#c5d0e8; }
+[data-entry-page="home"] nav.top .brand { color:#e2e8f0;background:none;margin-right:auto;font-size:1.15rem; }
+[data-entry-page="home"] .entry-more { position:relative; }
+[data-entry-page="home"] .entry-more summary { cursor:pointer;padding:10px 0; }
+[data-entry-page="home"] .entry-more div { position:absolute;right:0;z-index:10;min-width:240px;max-width:calc(100vw - 48px);padding:12px;background:#0e1628;border:1px solid #334155;border-radius:12px;box-shadow:0 12px 30px #0006; }
+[data-entry-page="home"] .entry-more div a { display:flex; }
+[data-entry-page="home"] section { margin-block:40px; }
+[data-entry-page="home"] section[aria-labelledby="path-h"] .grid { grid-template-columns:repeat(4,minmax(0,1fr)); }
+[data-entry-page="home"] section[aria-labelledby="free-discovery-h"] .grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+[data-entry-page="home"] .entry-discovery-detail { background:#0e1628;color:#f4f7ff;border:1px solid #334155;border-radius:16px;padding:20px;margin-block:24px; }
+[data-entry-page="home"] .entry-discovery-detail h2 { display:inline;font-size:1.1rem;color:#f4f7ff; }
+[data-entry-page="home"] .entry-discovery-detail summary { cursor:pointer;min-height:32px; }
+[data-entry-page="home"] .entry-discovery-detail a:not(.btn) { text-decoration:underline;color:#67e8f9; }
+[data-entry-page="home"] .btn:not(.alt) { background:#1d4ed8;color:#fff!important; }
+[data-entry-page="home"] .lead { max-width:68ch; }
+[data-entry-page="services"] header { flex-wrap:wrap;gap:12px;margin-bottom:20px; }
+[data-entry-page="services"] header nav { display:flex;flex-wrap:wrap;gap:8px 20px; }
+[data-entry-page="services"] header nav a { margin:0;min-height:44px;display:inline-flex;align-items:center;color:#cbd5e1; }
+[data-entry-page="services"] .hero { padding:24px 0; }
+[data-entry-page="services"] .hero .entry-help { margin-top:20px; }
+[data-entry-page="services"] .entry-categories { display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 28px; }
+[data-entry-page="services"] .entry-category-menu summary { cursor:pointer;padding:10px 0;color:#cbd5e1; }
+[data-entry-page="services"] .entry-categories a { margin:0;padding:8px 12px;border:1px solid #334155;border-radius:8px;color:#cbd5e1; }
+[data-entry-page="services"] .entry-service-group { margin-block:28px;scroll-margin-top:16px; }
+[data-entry-page="services"] .entry-service-group h2 { font-size:1.4rem;color:#fff; }
+[data-entry-page="services"] .grid { grid-template-columns:repeat(3,minmax(0,1fr));margin-top:16px; }
+[data-entry-page="services"] .card .link { opacity:1;color:#93c5fd; }
+[data-entry-page="services"] .card p { color:#b8c5d9; }
+[data-entry-page="contact"] .entry-header { max-width:1100px;margin:auto;padding:24px;display:flex;align-items:center;justify-content:space-between;gap:20px;border-bottom:1px solid #334155; }
+[data-entry-page="contact"] .entry-brand { font-weight:750;font-size:1.25rem;color:#e2e8f0;text-decoration:none; }
+[data-entry-page="contact"] nav { display:flex;flex-wrap:wrap;gap:16px; }
+[data-entry-page="contact"] nav a { min-height:44px;display:inline-flex;align-items:center; }
+[data-entry-page="contact"] a { color:#93c5fd; }
+[data-entry-page="contact"] .entry-eyebrow { color:#93c5fd;font-size:.85rem;letter-spacing:.04em; }
+[data-entry-page="contact"] h1 { margin:8px 0 12px; }
+[data-entry-page="contact"] .entry-address { margin-top:24px;overflow-wrap:anywhere; }
+[data-entry-page="contact"] .entry-note { color:#cbd5e1;line-height:1.6;max-width:65ch; }
+[data-entry-page="contact"] .entry-contact-next { margin-top:32px;padding:24px;border:1px solid #334155;border-radius:16px;background:#111827;max-width:720px;line-height:1.6; }
+[data-entry-page="contact"] .entry-contact-next h2 { margin-top:0;font-size:1.3rem; }
+[data-entry-page="discovery"] #questionnaire { scroll-margin-top:24px; }
+[data-entry-page="discovery"] .entry-benefits .card { margin:0;padding:16px; }
+[data-entry-page="discovery"] .entry-benefits h2 { margin:0 0 8px;font-size:1.1rem; }
+[data-entry-page="discovery"] .entry-benefits p { margin:0;font-size:.95rem; }
+[data-entry-page="discovery"] .entry-benefits { margin:24px 0; }
+@media(max-width:860px) {
+ [data-entry-page="home"] section[aria-labelledby="path-h"] .grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+ [data-entry-page="services"] .grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
+@media(max-width:600px) {
+ [data-entry-page="home"]:not(:has(header.nav)) nav.top { gap:4px 14px;padding:12px 0;margin-bottom:20px; }
+ [data-entry-page="home"] nav.top .brand { flex-basis:100%; }
+ [data-entry-page="home"] .lead { font-size:1rem;line-height:1.6; }
+ [data-entry-page="home"] section[aria-labelledby="path-h"] .grid,[data-entry-page="home"] section[aria-labelledby="free-discovery-h"] .grid,[data-entry-page="services"] .grid { grid-template-columns:1fr; }
+ [data-entry-page="services"] .container { padding:16px; }
+ [data-entry-page="services"] .hero { padding:12px 0; }
+ [data-entry-page="services"] .hero h1 { font-size:2rem; }
+ [data-entry-page="contact"] .entry-header { padding:16px 24px;flex-direction:column;align-items:flex-start;gap:8px; }
+ [data-entry-page="contact"] main > section { padding-top:24px!important; }
+ [data-entry-page="discovery"] .entry-benefits { gap:8px; }
+ [data-entry-page="discovery"] .entry-benefits .card { padding:12px;margin:0; }
+ [data-entry-page="discovery"] .entry-benefits h2 { font-size:1rem; }
+}
+@media(prefers-reduced-motion:reduce) { [data-entry-page] { scroll-behavior:auto; } [data-entry-page] * { transition:none!important;scroll-behavior:auto!important; } }
