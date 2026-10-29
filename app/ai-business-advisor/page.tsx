@@ -3,11 +3,11 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'AI Business Advisor | Zion Tech Group',
-  description: 'Get strategic AI recommendations with Zion's AI Business Advisor. ROI analysis, roadmap planning, and implementation strategies.',
+  description: 'Get strategic AI recommendations with Zion\'s AI Business Advisor. ROI analysis, roadmap planning, and implementation strategies.',
   keywords: 'ai business advisor, AI strategy, AI ROI, business AI advisory',
   openGraph: {
     title: 'AI Business Advisor | Zion Tech Group',
-    description: 'Get strategic AI recommendations with Zion's AI Business Advisor. ROI analysis, roadmap planning, and implementation strategies.',
+    description: 'Get strategic AI recommendations with Zion\'s AI Business Advisor. ROI analysis, roadmap planning, and implementation strategies.',
     url: 'https://ziontechgroup.com/ai-business-advisor',
     siteName: 'Zion Tech Group',
     type: 'website',
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'AI Business Advisor | Zion Tech Group',
-    description: 'Get strategic AI recommendations with Zion's AI Business Advisor. ROI analysis, roadmap planning, and implementation strategies.',
+    description: 'Get strategic AI recommendations with Zion\'s AI Business Advisor. ROI analysis, roadmap planning, and implementation strategies.',
   },
   alternates: {
     canonical: 'https://ziontechgroup.com/ai-business-advisor',
