@@ -41,13 +41,13 @@ jobs:
         node-version-file: .nvmrc
         cache: npm
         cache-dependency-path: package-lock.json
+    - name: Verify static artifact publication regressions
+      run: python3 tests/ci/test_deploy_on_push_artifact.py
     - name: Install dependencies
       run: npm ci --prefer-offline --no-audit --fund=false
-    - name: Static site build
-      # Best-effort: the Pages artifact is assembled from public/ (source of truth)
-      # by prepare-pages-out.sh below, which rm -rf's out/ and rebuilds it from
-      # static content. The Next.js build OOMs on this 90k+ file tree (exit 134)
-      # and must not block the deploy.
+    - name: Next.js diagnostic build (Pages uses public/)
+      # Preserve the Next.js result as diagnostic evidence. Pages is assembled
+      # independently from public/ and must pass every static artifact gate below.
       continue-on-error: true
       env:
         NODE_OPTIONS: '--max-old-space-size=12288 --max-semi-space-size=64'
@@ -55,6 +55,12 @@ jobs:
       run: npm run build
     - name: Overlay docs pages onto out/
       run: bash scripts/prepare-pages-out.sh
+    - name: Gate reviewed five-language productivity rendering
+      run: node scripts/render-productivity-release.cjs out
+    - name: Render field evidence release (adds data-field-evidence-release markers)
+      run: node scripts/render-field-evidence-release.cjs out
+    - name: Reject private operational files in final Pages artifact
+      run: python3 scripts/assert-no-private-ops.py out
     - name: Upload Pages artifact
       uses: actions/upload-pages-artifact@v4
       with:
@@ -202,3 +208,4 @@ jobs:
       if: always()
       continue-on-error: true
       run: node scripts/automation/generate-automation-health-snapshot.cjs
+
