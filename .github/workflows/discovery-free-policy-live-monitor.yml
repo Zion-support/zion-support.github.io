@@ -161,9 +161,9 @@ jobs:
               json.dump(result, out, indent=2)
           print(json.dumps(result, indent=2))
           with open(os.environ['GITHUB_STEP_SUMMARY'], 'a', encoding='utf-8') as out:
-              out.write('\\n### Informational CORS preflight (OPTIONS only)\\n')
-              out.write('This does not submit forms or verify inbox delivery.\\n')
-              out.write('Status: ' + str(result.get('http_status', result.get('error_class','unknown'))) + '\\n')
+              out.write('\n### Informational CORS preflight (OPTIONS only)\n')
+              out.write('This does not submit forms or verify inbox delivery.\n')
+              out.write('Status: ' + str(result.get('http_status', result.get('error_class','unknown'))) + '\n')
           PY
 
       - name: Preserve read-only evidence
