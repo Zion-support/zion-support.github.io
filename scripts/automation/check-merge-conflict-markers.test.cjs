@@ -100,3 +100,24 @@ test('conflict monetary tokens are classified without values in evidence',()=>{
     assert.equal(evidence.includes('$199'),false);
   } finally { cleanup(dir); }
 });
+
+test('booking links are reported as review flags without storing URLs',()=>{
+  const dir=fixture({'app/a.tsx': ['<<<<<<< HEAD','https://calendly.com/example','=======','different CTA','>>>>>>> ref',''].join('\n')});
+  try {
+    const r=evaluate(dir);
+    assert.equal(r.bookingReviewFiles,1);
+    assert.deepEqual(r.bookingReviewPaths,['app/a.tsx']);
+    assert.equal(r.commercialReviewFiles,0);
+    const artifact=writeEvidence(r,dir);
+    assert.equal(fs.readFileSync(artifact.file,'utf8').includes('calendly.com'),false);
+  } finally { cleanup(dir); }
+});
+test('classification reads staged source, never untracked working-tree edits',()=>{
+  const dir=fixture({'app/a.tsx': ['<<<<<<< HEAD','const a=1','=======','const a=2','>>>>>>> ref',''].join('\n')});
+  try {
+    fs.writeFileSync(path.join(dir,'app/a.tsx'),'<<<<<<< HEAD\n$9999\n=======\n>>>>>>> ref\n');
+    const r=evaluate(dir);
+    assert.equal(r.commercialReviewFiles,0);
+    assert.equal(r.affectedFiles,1);
+  } finally { cleanup(dir); }
+});
