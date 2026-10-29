@@ -1,0 +1,49 @@
+name: Actions queue diagnostics (manual, read-only)
+
+on:
+  workflow_dispatch:
+    inputs:
+      max_runs:
+        description: 'Number of recent runs to inspect (1-100)'
+        required: false
+        default: '60'
+        type: choice
+        options: ['20', '60', '100']
+
+permissions:
+  actions: read
+  contents: read
+
+concurrency:
+  group: manual-actions-queue-diagnostics
+  cancel-in-progress: false
+
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Inspect recent workflow run states
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          MAX_RUNS: ${{ inputs.max_runs }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          case "$MAX_RUNS" in 20|60|100) ;; *) echo "Invalid max_runs"; exit 2 ;; esac
+          gh api "repos/$GH_REPO/actions/runs?per_page=$MAX_RUNS" --jq '
+            .workflow_runs
+            | group_by(.status)
+            | map({status: .[0].status, count: length})
+          ' > queue-states.json
+          {
+            echo '## Recent GitHub Actions run states'
+            echo
+            echo 'This is a read-only snapshot of recent runs, not proof of runner capacity or CI success.'
+            echo
+            echo '~~~json'
+            cat queue-states.json
+            echo '~~~'
+          } >> "$GITHUB_STEP_SUMMARY"
+          cat queue-states.json
