@@ -192,7 +192,7 @@ export async function generateMetadata({ params }: { params: Promise<{ key: stri
   };
 }
 
-export default async function IndustryPage({ params }: { params: Promise<{ key: string }> }}) {
+export default async function IndustryPage({ params }: { params: Promise<{ key: string }> }) {
   const { key } = await params;
   const config = INDUSTRY_CONFIG[key] || INDUSTRY_CONFIG.healthcare;
   
