@@ -21,6 +21,11 @@ const GREP_ARGS = [
 ];
 const MAX_BYTES = 32 * 1024 * 1024;
 const MAX_EVIDENCE = 100;
+const MAX_CLASSIFIED_PATHS = 250;
+const MAX_SOURCE_SIZE = 512 * 1024;
+// Advisory only: these patterns flag review; never extract or publish actual values.
+const CURRENCY_TOKEN = /(?:\b(?:USD|BRL|EUR|GBP)\s*\d|R\$\s*\d|\$\s*\d|€\s*\d|£\s*\d)/i;
+const CHECKOUT_OR_BOOKING = /\b(?:stripe|checkout|calendly|payment[- ]?link)\b/i;
 
 function git(root, args) {
   return spawnSync('git', args, {
@@ -43,6 +48,9 @@ function evaluate(root) {
     commitSha: process.env.GITHUB_SHA || null,
     status: 'ERROR', scannedTrackedSourceFiles: 0,
     markerCount: 0, affectedFiles: 0, affectedSourcePaths: [], affectedPathsTruncated: false,
+    commercialReviewFiles: 0, commercialReviewPaths: [], bookingReviewFiles: 0,
+    bookingReviewPaths: [], unclassifiedFiles: 0, unclassifiedPaths: [],
+    commercialClassificationIsAdvisory: true,
     samples: [], truncated: false,
     problem: null,
     scope: 'Tracked source/config extensions only; no documents, binary files or untracked local files',
@@ -92,8 +100,29 @@ function evaluate(root) {
     return result;
   }
   result.affectedFiles = affected.size;
-  result.affectedSourcePaths = [...affected].sort().slice(0, 250).map(sanitized);
-  result.affectedPathsTruncated = affected.size > 250;
+  const orderedPaths = [...affected].sort();
+  result.affectedSourcePaths = orderedPaths.slice(0, MAX_CLASSIFIED_PATHS).map(sanitized);
+  result.affectedPathsTruncated = affected.size > MAX_CLASSIFIED_PATHS;
+  // Only read already-conflicted Git-index source: do not run the files, change them,
+  // or write any prices, emails, credentials, source snippets or URLs into evidence.
+  for (const file of orderedPaths.slice(0, MAX_CLASSIFIED_PATHS)) {
+    const indexed = git(root, ['show', ':' + file]);
+    if (indexed.error || indexed.signal || indexed.status !== 0 ||
+        indexed.stdout.length > MAX_SOURCE_SIZE) {
+      result.unclassifiedFiles++;
+      result.unclassifiedPaths.push(sanitized(file));
+      continue;
+    }
+    if (CURRENCY_TOKEN.test(indexed.stdout)) {
+      result.commercialReviewFiles++;
+      result.commercialReviewPaths.push(sanitized(file));
+    }
+    if (CHECKOUT_OR_BOOKING.test(indexed.stdout)) {
+      result.bookingReviewFiles++;
+      result.bookingReviewPaths.push(sanitized(file));
+    }
+  }
+  result.unclassifiedFiles += Math.max(0, orderedPaths.length - MAX_CLASSIFIED_PATHS);
   result.truncated = result.markerCount > MAX_EVIDENCE;
   result.status = 'FAIL';
   return result;
@@ -109,7 +138,11 @@ function writeEvidence(result, root, out = 'automation/reports/merge-conflict-ma
     `- Tracked source files scanned: ${result.scannedTrackedSourceFiles}`,
     `- Marker lines: ${result.markerCount}`,
     `- Affected source files: ${result.affectedFiles}`,
-    '- Only file paths and line numbers are saved; no source contents.',
+    `- Files requiring Commercial review for currency tokens: ${result.commercialReviewFiles}`,
+    `- Files mentioning booking/checkout: ${result.bookingReviewFiles}`,
+    `- Files not classified (manual review required): ${result.unclassifiedFiles}`,
+    '- Commercial flags are advisory. No prices, customer details or source contents are stored.',
+    '- Conflicting service content must not be published without technical and Commercial approval.',
     '',
     ...result.samples.slice(0, 20).map(x => `- \`${x.path}:${x.line}\` (${x.marker})`),
     result.truncated ? '- Additional findings omitted from summary; inspect JSON artifact.' : ''
