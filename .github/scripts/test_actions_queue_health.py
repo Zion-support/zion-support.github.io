@@ -7,6 +7,7 @@ spec = importlib.util.spec_from_file_location("health", Path(__file__).with_name
 health = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(health)
 NOW = datetime(2026, 10, 29, 16, tzinfo=timezone.utc)
+SHA = "a" * 40
 
 
 def run(number=1, status="queued", **kwargs):
@@ -107,6 +108,51 @@ class HealthTests(unittest.TestCase):
         self.assertNotIn("<script>",text)
         self.assertNotIn("https://evil.invalid",text)
         self.assertIn("https://github.com/owner/repo/actions/runs/1",text)
+
+    def test_cancelled_neutral_and_skipped_are_visible_not_success(self):
+        for outcome in ["cancelled", "neutral", "skipped", None]:
+            with self.subTest(outcome=outcome):
+                a = run(status="completed", conclusion=outcome, head_sha=SHA)
+                report = health.analyze([], [a], coverage(), NOW)
+                key = outcome or "unknown"
+                self.assertEqual(report["recent_outcomes"][key], 1)
+                self.assertEqual(report["recent_unverified"][0]["outcome"], key)
+                evidence = health.commit_evidence([a], {"complete":True}, SHA)
+                self.assertNotEqual(evidence["assessment"], "observed_success")
+
+    def test_no_checks_incomplete_and_pending_never_approve(self):
+        cases = [([], True, "no_evidence"), ([run(head_sha=SHA)], True, "pending"),
+                 ([run(status="completed", conclusion="success", head_sha=SHA)], False, "incomplete")]
+        for runs, complete, expected in cases:
+            self.assertEqual(health.commit_evidence(runs, {"complete":complete}, SHA)["assessment"], expected)
+
+    def test_diagnostic_cannot_supply_its_own_success(self):
+        a = run(status="completed", conclusion="success", head_sha=SHA)
+        result = health.commit_evidence([a], {"complete":True}, SHA, own_run_id="1")
+        self.assertEqual(result["assessment"], "no_evidence")
+        self.assertEqual(result["self_excluded"], 1)
+
+    def test_wrong_revision_fails_closed(self):
+        with self.assertRaises(ValueError):
+            health.commit_evidence([run(head_sha="b"*40)], {"complete":True}, SHA)
+
+    def test_failure_preserved_even_with_incomplete_commit_coverage(self):
+        a = run(status="completed", conclusion="failure", head_sha=SHA)
+        self.assertEqual(health.commit_evidence([a], {"complete":False}, SHA)["assessment"], "attention_required")
+
+    def test_green_observations_still_require_external_policy_review(self):
+        a = run(status="completed", conclusion="success", head_sha=SHA)
+        result = health.commit_evidence([a], {"complete":True}, SHA)
+        self.assertEqual(result["assessment"], "observed_success")
+        self.assertIn("not merge approval", result["policy"])
+
+    def test_commit_filter_is_in_every_request(self):
+        seen = []
+        def fetch(q):
+            seen.append(q)
+            return {"total_count":0, "workflow_runs":[]}
+        health.collect(fetch, head_sha=SHA)
+        self.assertEqual(seen[0]["head_sha"], SHA)
 
 
 if __name__ == "__main__":

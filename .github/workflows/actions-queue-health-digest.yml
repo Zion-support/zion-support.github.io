@@ -2,6 +2,12 @@ name: Actions queue health digest (read-only)
 
 on:
   workflow_dispatch:
+    inputs:
+      head_sha:
+        description: Optional full commit SHA to inspect (not a merge approval)
+        required: false
+        type: string
+        default: ''
   pull_request:
     paths:
       - '.github/workflows/actions-queue-health-digest.yml'
@@ -41,5 +47,6 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}
+          TARGET_HEAD_SHA: ${{ github.event.pull_request.head.sha || inputs.head_sha }}
         shell: bash
-        run: python3 "$RUNNER_TEMP/queue-health/actions_queue_health.py" --output "$RUNNER_TEMP/queue-health/report.json"
+        run: python3 "$RUNNER_TEMP/queue-health/actions_queue_health.py" --head-sha "$TARGET_HEAD_SHA" --output "$RUNNER_TEMP/queue-health/report.json"
