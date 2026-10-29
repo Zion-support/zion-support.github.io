@@ -26,7 +26,9 @@ permissions:
   id-token: write
 
 concurrency:
-  group: pages-deploy
+  # Use the same production Pages queue as Continuous Pages Deploy.
+  # Both publishers now build identical rendered content and serialize releases.
+  group: zion-production-pages-${{ github.ref }}
   cancel-in-progress: false
 
 jobs:
