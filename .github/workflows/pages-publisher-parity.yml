@@ -7,8 +7,6 @@ on:
       - 'scripts/checks/pages-publisher-parity.cjs'
       - '.github/workflows/pages-publisher-parity.yml'
   workflow_dispatch:
-  schedule:
-    - cron: '43 8 * * 2'
 permissions:
   contents: read
 concurrency:
