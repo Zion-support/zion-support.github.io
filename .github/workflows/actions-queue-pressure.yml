@@ -61,6 +61,19 @@ jobs:
           queued=[r for r in active if r.get('status') in {'queued','pending','waiting','requested'}]
           in_progress=[r for r in active if r.get('status')=='in_progress']
 
+          recent_cutoff=now-datetime.timedelta(minutes=15)
+          def created_dt(run):
+            raw=run.get('created_at')
+            if not raw: return None
+            try:
+              return datetime.datetime.fromisoformat(raw.replace('Z','+00:00'))
+            except Exception:
+              return None
+          recent=[r for r in runs if (created_dt(r) and created_dt(r)>=recent_cutoff)]
+          recent_push=[r for r in recent if r.get('event')=='push']
+          recent_cancelled=[r for r in recent if r.get('conclusion')=='cancelled']
+          recent_cancelled_push=[r for r in recent_push if r.get('conclusion')=='cancelled']
+
           def age_minutes(run):
             raw=run.get('created_at') or run.get('run_started_at')
             if not raw: return 0.0
@@ -120,9 +133,11 @@ jobs:
           # Alert only for material repository-wide congestion.
           # A small busy queue is normal in this repo.
           severity='ok'
-          if queue_count>=35 or oldest>=45:
+          cancel_storm=len(recent_cancelled_push)
+          push_density=len(recent_push)
+          if queue_count>=35 or oldest>=45 or cancel_storm>=20:
             severity='critical'
-          elif queue_count>=20 or oldest>=25:
+          elif queue_count>=20 or oldest>=25 or cancel_storm>=10 or push_density>=60:
             severity='warning'
 
           report={
@@ -131,12 +146,19 @@ jobs:
             'branch':'all',
             'sampled_runs':len(runs),
             'queue_count':queue_count,
+            'recent_window_minutes':15,
+            'recent_run_count':len(recent),
+            'recent_push_run_count':len(recent_push),
+            'recent_cancelled_run_count':len(recent_cancelled),
+            'recent_cancelled_push_run_count':len(recent_cancelled_push),
             'top_queued_workflows':top_workflows,
             'missing_concurrency_candidates':missing_concurrency,
             'recommendations':[
               'Avoid retry pushes while severity is warning/critical.',
               'Review workflows with multiple queued runs and no top-level concurrency first.',
+              'If cancelled push runs spike, inspect commit-producing cron loops and overlapping push triggers before adding retries.',
               'Prefer cancel-in-progress only for read-only analysis or superseded same-ref work; do not change deploy semantics automatically.',
+              'Do not auto-disable security, deployment, release-confidence or data-integrity gates.',
             ],
             'in_progress_count':len(in_progress),
             'active_count':active_count,
@@ -166,6 +188,8 @@ jobs:
             f'- Queued/pending: **{queue_count}**',
             f'- In progress: **{len(in_progress)}**',
             f'- Oldest queued: **{oldest:.1f} min**',
+            f'- Push runs in last 15m: **{len(recent_push)}**',
+            f'- Cancelled push runs in last 15m: **{len(recent_cancelled_push)}**',
             '',
             '### Top queued workflows',
           ]
@@ -217,6 +241,8 @@ jobs:
               '\n\n**Severity:** '+(evidence.severity||'unknown')+
               '\n**Queued/pending:** '+(evidence.queue_count??'unknown')+
               '\n**Oldest queued:** '+(evidence.oldest_queued_minutes??'unknown')+' min'+
+              '\n**Push runs / 15m:** '+(evidence.recent_push_run_count??'unknown')+
+              '\n**Cancelled push runs / 15m:** '+(evidence.recent_cancelled_push_run_count??'unknown')+
               (top?'\n\n### Top queued workflows\n'+top:'')+
               (candidates?'\n\n### Review candidates: repeated queue without concurrency\n'+candidates:'')+
               '\n\nNo automatic workflow edits are performed by this monitor.'+
