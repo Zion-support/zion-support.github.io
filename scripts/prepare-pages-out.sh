@@ -5,6 +5,8 @@
 set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT"
+python3 -m unittest -q scripts/test-private-ops-guard.py
+python3 scripts/assert-no-private-ops.py public
 rm -rf out
 mkdir -p out
 
@@ -108,39 +110,36 @@ assert_money_path() {
 
 assert_money_path services/ai-automation/index.html
 assert_money_path plans/index.html
-assert_money_path discovery/index.html
 
-# The canonical Discovery is a free questionnaire, not merely a money-path page.
-# Check the assembled artifact, retaining all existing privacy/payment guards.
-# These static checks do not certify runtime behavior or email inbox delivery.
-assert_free_discovery() {
+# Discovery is the canonical free entry point. Guard it as a substantial
+# static page with the approved free/no-card contract, not as a paid money path.
+assert_free_discovery_path() {
   local f="out/discovery/index.html"
-  local markup marker asset
-  markup=$(tr '\n\r' '  ' < "$f")
-  for marker in \
-    "<form[[:space:]][^>]*[[:space:]]id=['\"]dform['\"]|<form[[:space:]]id=['\"]dform['\"]" \
-    "<section[[:space:]][^>]*[[:space:]]id=['\"]result['\"]|<section[[:space:]]id=['\"]result['\"]" \
-    "src=['\"]/assets/js/discovery-delivery[.]js(['\"]|[?])" \
-    "href=['\"]/assets/css/discovery[.]css(['\"]|[?])" \
-    "Discovery is always free"; do
-    if ! grep -Eiq "$marker" <<< "$markup"; then
-      echo "ERROR: out/discovery/index.html lacks free questionnaire marker: $marker" >&2
-      exit 1
-    fi
-  done
-  if grep -Eiq 'Discovery[[:space:]]+(R\$|\$|USD|BRL)[[:space:]]*[0-9]' <<< "$markup"; then
-    echo "ERROR: out/discovery/index.html contains obsolete paid Discovery pricing" >&2
+  if [ ! -f "$f" ]; then
+    echo "ERROR: missing free Discovery path out/discovery/index.html" >&2
     exit 1
   fi
-  for asset in assets/js/discovery-delivery.js assets/css/discovery.css; do
-    if [ ! -s "out/$asset" ]; then
-      echo "ERROR: free Discovery dependency missing or empty: out/$asset" >&2
-      exit 1
-    fi
-  done
-  echo "OK canonical free Discovery static contract (inbox delivery unverified)"
+  local sz
+  sz=$(wc -c < "$f" | tr -d ' ')
+  if [ "$sz" -lt 5120 ]; then
+    echo "ERROR: out/discovery/index.html is stub-sized (${sz}B < 5KB)" >&2
+    exit 1
+  fi
+  if ! grep -Fq 'Free AI & Automation Discovery' "$f" \
+    || ! grep -Fq 'No payment or meeting is required.' "$f" \
+    || ! grep -Fq 'Discovery remains free.' "$f"; then
+    echo "ERROR: out/discovery/index.html missing approved Free Discovery contract" >&2
+    exit 1
+  fi
+  if grep -Fi 'http-equiv="refresh"' "$f" >/dev/null \
+    || grep -Fi "http-equiv='refresh'" "$f" >/dev/null \
+    || grep -Fq 'PLACEHOLDER' "$f"; then
+    echo "ERROR: out/discovery/index.html looks like a meta-refresh / PLACEHOLDER stub redirect" >&2
+    exit 1
+  fi
+  echo "OK free Discovery path (${sz}B)"
 }
-assert_free_discovery
+assert_free_discovery_path
 
 # P0 2026-09-21: reject the broken Next.js homepage shell and require sealed
 # commercial markers before any Pages publish. Does not touch field-services.
@@ -160,14 +159,9 @@ assert_family_a_home() {
     echo "ERROR: out/index.html contains /_next/ (broken Next shell)" >&2
     exit 1
   fi
-  if ! grep -Fq 'Discovery grátis' "$f"; then
-    echo "ERROR: out/index.html missing truthful free Discovery marker" >&2
-    exit 1
-  fi
-  if grep -Eq 'FGV|SDCOMPRASTIC-6963|Discovery \$99' "$f"; then
-    echo "ERROR: out/index.html contains client identifiers or obsolete paid Discovery" >&2
-    exit 1
-  fi
+  # Approved policy reconciliation: Discovery remains free; all other guards stay.
+  python3 scripts/test-free-discovery-home.py
+  python3 scripts/assert-free-discovery-home.py "$f"
   if ! grep -Fq '/assets/css/site.css' "$f"; then
     echo "ERROR: out/index.html missing /assets/css/site.css" >&2
     exit 1
@@ -178,19 +172,168 @@ assert_family_a_home() {
 assert_managed_it_public() {
   local f="out/managed-it-services/index.html"
   if [ ! -s "$f" ]; then
-    echo "ERROR: missing or empty managed IT page out/managed-it-services/index.html" >&2
+    echo "ERROR: missing or empty managed IT page" >&2
     exit 1
   fi
-  if ! grep -Fq 'Free Discovery' "$f"; then
-    echo "ERROR: managed IT page missing truthful free Discovery" >&2
-    exit 1
-  fi
-  if grep -Eq 'FGV|SDCOMPRASTIC-6963|Discovery \$99' "$f"; then
-    echo "ERROR: managed IT page exposes client identifiers or obsolete paid Discovery" >&2
-    exit 1
-  fi
-  echo "OK managed IT anonymous/free Discovery"
+  python3 scripts/assert-free-discovery-home.py "$f"
+  echo "OK managed IT free Discovery entry point"
 }
+
+# Inspect the three public entry pages after assembly. This is a scoped
+# content/structure guard, not a general PII scanner or proof of email delivery.
+# Use synthetic examples in its tests; never copy customer records into fixtures.
+assert_public_entry_content() {
+  python3 - <<'PY_PUBLIC_ENTRY'
+from collections import Counter
+from decimal import Decimal, InvalidOperation
+from html import unescape
+from html.parser import HTMLParser
+from pathlib import Path
+import json
+import re
+import runpy
+from urllib.parse import urlsplit
+
+policy = runpy.run_path('scripts/assert-free-discovery-home.py')
+currency = re.compile(policy['CURRENCY'], re.I)
+procurement = re.compile(
+    r'\b(?:PO|RFQ|RFP|purchase[ -]+order|pedido de compra|contract (?:id|number|reference))'
+    r'\s*(?:[:#-]\s*)?(?:[A-Z][A-Z0-9]*[-/])?\d[A-Z0-9/-]*\b'
+    r'|\b[A-Z]*COMPR[A-Z]*[-/]\d+\b', re.I)
+named_record = re.compile(
+    r'\b(?:client|customer|cliente|institution|institui[çc][aã]o)\s*:\s*'
+    r'(?!anonym|anonim|confidential|confidencial|not disclosed|n[aã]o divulgado)[A-Z]', re.I)
+anonymous = re.compile(r'\banonymi[sz]|\banonimi[sz]', re.I)
+case_claim = re.compile(r'\b(?:renewed|renewal|renovou|renova[çc][aã]o)\b', re.I)
+
+def nonzero(amount):
+    return any(c in '123456789' for c in amount)
+
+class Entry(HTMLParser):
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.ids = Counter()
+        self.text, self.metadata, self.scripts, self.styles = [], [], [], []
+        self.links, self.anchor, self.json_blocks, self.json_open = [], None, [], None
+        self.form_open, self.controls = False, set()
+        self.rows, self.row, self.cell = [], None, None
+        self.section_depth, self.proofs, self.proof_open = 0, [], []
+
+    def handle_starttag(self, tag, attrs):
+        a = dict(attrs)
+        if a.get('id'):
+            self.ids[(tag, a['id'])] += 1
+            if a['id'].startswith('proof-'):
+                assert a['id'] in {'proof-h', 'proof-anonymized', 'proof-managed-it', 'proof-maintenance'}, 'Customer-specific proof anchor'
+        if tag == 'meta':
+            self.metadata.append(a.get('content', ''))
+        if tag == 'script':
+            self.scripts.append(urlsplit(a.get('src', '')).path)
+            if a.get('type', '').lower() == 'application/ld+json':
+                assert self.json_open is None, 'Nested structured data'
+                self.json_open = []
+        if tag == 'link' and 'stylesheet' in a.get('rel', '').lower().split():
+            self.styles.append(urlsplit(a.get('href', '')).path)
+        if tag == 'form' and a.get('id') == 'dform':
+            assert not self.form_open, 'Nested Discovery form'
+            self.form_open = True
+        if self.form_open and tag in {'input', 'select', 'textarea'}:
+            self.controls.add(a.get('name', ''))
+        if tag == 'a':
+            assert self.anchor is None, 'Nested anchor'
+            self.anchor = [a.get('href', ''), []]
+        if tag == 'tr':
+            self.row = []
+        if tag in {'td', 'th'} and self.row is not None:
+            self.cell = []
+        if tag == 'section':
+            self.section_depth += 1
+            if a.get('id', '').startswith('proof-') or 'proof-h' in a.get('aria-labelledby', '').split():
+                self.proofs.append([])
+                self.proof_open.append((self.section_depth, len(self.proofs) - 1))
+
+    def handle_endtag(self, tag):
+        if tag == 'script' and self.json_open is not None:
+            self.json_blocks.append(''.join(self.json_open))
+            self.json_open = None
+        if tag == 'form':
+            self.form_open = False
+        if tag == 'a' and self.anchor is not None:
+            self.links.append((self.anchor[0], ' '.join(self.anchor[1])))
+            self.anchor = None
+        if tag in {'td', 'th'} and self.cell is not None:
+            self.row.append(' '.join(self.cell))
+            self.cell = None
+        if tag == 'tr' and self.row is not None:
+            self.rows.append(self.row)
+            self.row = None
+        if tag == 'section':
+            self.proof_open = [x for x in self.proof_open if x[0] != self.section_depth]
+            self.section_depth -= 1
+
+    def handle_data(self, data):
+        if self.json_open is not None:
+            self.json_open.append(data)
+        else:
+            self.text.append(data)
+        if self.anchor is not None:
+            self.anchor[1].append(data)
+        if self.cell is not None:
+            self.cell.append(data)
+        for _, i in self.proof_open:
+            self.proofs[i].append(data)
+
+def check_offer(value, discovery=False):
+    if isinstance(value, dict):
+        discovery = discovery or bool(re.search(r'\bdiscovery\b', str(value.get('name', '')), re.I))
+        if discovery and 'price' in value:
+            assert Decimal(str(value['price'])) == 0, 'Nonzero structured Discovery price'
+        for child in value.values():
+            check_offer(child, discovery)
+    elif isinstance(value, list):
+        for child in value:
+            check_offer(child, discovery)
+
+for rel in ['index.html', 'managed-it-services/index.html', 'discovery/index.html']:
+    try:
+        raw = (Path('out') / rel).read_text(encoding='utf-8')
+        p = Entry()
+        p.feed(raw)
+        p.close()
+        assert not p.form_open and p.anchor is None and p.json_open is None and not p.proof_open, 'Unclosed form, link, structured data or proof section'
+        text = re.sub(r'\s+', ' ', ' '.join(p.text + p.metadata))
+        assert not policy['NEGATED'].search(text), 'Negated free Discovery claim'
+        for match in policy['PAID'].finditer(text):
+            assert not any(nonzero(x) for x in match.groups() if x), 'Paid Discovery claim'
+        assert not procurement.search(unescape(raw)), 'Customer-specific procurement reference'
+        assert not named_record.search(text), 'Named customer record'
+        for proof in p.proofs:
+            claim = ' '.join(proof)
+            assert not case_claim.search(claim) or anonymous.search(claim), 'Named renewal proof requires anonymization'
+        for href, label in p.links:
+            u = urlsplit(href)
+            if u.path.rstrip('/') == '/discovery' and u.netloc in {'', 'ziontechgroup.com'}:
+                assert not any(nonzero(m.group(1)) for m in currency.finditer(label)), 'Priced Discovery CTA'
+        for row in p.rows:
+            if len(row) > 1 and re.search(r'\bdiscovery\b', row[0], re.I):
+                assert not nonzero(row[1]), 'Nonzero Discovery table price'
+        for block in p.json_blocks:
+            data = json.loads(block)
+            check_offer(data)
+            for match in policy['PAID'].finditer(json.dumps(data, ensure_ascii=False)):
+                assert not any(nonzero(x) for x in match.groups() if x), 'Paid Discovery structured copy'
+        if rel == 'discovery/index.html':
+            assert p.ids[('form', 'dform')] == 1 and p.ids[('section', 'result')] == 1, 'Missing or duplicate questionnaire/report container'
+            assert {'name', 'email', 'process', 'hours'} <= p.controls, 'Incomplete Discovery questionnaire'
+            assert '/assets/js/discovery-delivery.js' in p.scripts and '/assets/css/discovery.css' in p.styles, 'Missing canonical Discovery dependencies'
+            for asset in ['assets/js/discovery-delivery.js', 'assets/css/discovery.css']:
+                assert (Path('out') / asset).is_file() and (Path('out') / asset).stat().st_size > 0, 'Missing or empty Discovery dependency'
+        print('OK public entry content: ' + rel)
+    except (AssertionError, OSError, ValueError, InvalidOperation) as exc:
+        raise SystemExit('ERROR public entry content (' + rel + '): ' + str(exc))
+PY_PUBLIC_ENTRY
+}
+
 assert_aaa_official_ladder() {
   local f="out/autonomous-ai-agents/index.html"
   if [ ! -f "$f" ]; then
@@ -207,5 +350,13 @@ assert_aaa_official_ladder() {
 assert_family_a_home
 assert_managed_it_public
 assert_aaa_official_ladder
+
+# Approved scoped app-evaluation publication; preserve all safety guards above.
+node scripts/test-network-evaluation.cjs
+node scripts/bootstrap-network-evaluation.cjs out
+node scripts/verify-network-evaluation-artifact.cjs out
+
+python3 scripts/test-free-discovery-guard.py
+assert_public_entry_content
 
 echo "Prepared out ($(find out -type f | wc -l) files)"

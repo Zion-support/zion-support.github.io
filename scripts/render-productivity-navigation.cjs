@@ -14,8 +14,44 @@ const esc=s=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;')
 const route=(l,s)=>(l==='en'?'/':'/'+l+'/')+s+'/';
 const disk=(out,u)=>path.join(out,u.replace(/^\//,'')+'index.html');
 const re=/<!--productivity-navigation:start-->[\s\S]*?<!--productivity-navigation:end-->/g;
-const protectedParts=h=>h.match(/<(?:form|script)\b[\s\S]*?<\/(?:form|script)>/gi)||[];
+const protectedParts=h=>h.match(/<(form|script)\b[\s\S]*?<\/\1\s*>/gi)||[];
 function block(l,current=''){const c=C[l];return '<!--productivity-navigation:start--><nav data-productivity-navigation="'+RELEASE+'" lang="'+c.lang+'" aria-label="'+esc(c.title)+'" style="clear:both;max-width:1120px;margin:1rem auto;padding:1rem;overflow-wrap:anywhere"><h3>'+esc(c.title)+'</h3><p>'+esc(c.note)+'</p><ul>'+slugs.map((s,i)=>'<li><a href="'+route(l,s)+'"'+(s===current?' aria-current="page"':'')+'>'+esc(c.names[i])+'</a></li>').join('')+'</ul><p><a href="/zion-app-network/CATALOG-PRODUCTIVITY-REVIEW.html#'+l+'">'+esc(c.catalog)+'</a> · <a href="/zion-app-network/CATALOG-NAVIGATION.html#resource-path-'+l+'">'+esc(c.nav)+'</a> · <a href="'+c.home+'#app-paths-home">'+esc(c.back)+'</a></p></nav><!--productivity-navigation:end-->';}
-function transform(before,l,current=''){assert(C[l],'Known locale');const base=before.replace(re,'');let after;if(current){assert(slugs.includes(current));assert(/<\/body>/i.test(base));after=base.replace(/<\/body>/i,block(l,current)+'</body>');}else{let n=0;after=base.replace(/<!--zion-network-home:start-->[\s\S]*?<!--zion-network-home:end-->/g,s=>{n++;const p=s.lastIndexOf('</section>');assert(p>=0);return s.slice(0,p)+block(l)+s.slice(p);});assert.equal(n,1,'Exactly one existing homepage network section');}assert.equal(after.replace(re,''),base,'Only owned navigation changes');assert.deepEqual(protectedParts(after),protectedParts(before),'Forms/scripts preserved');assert.equal((after.match(/data-productivity-navigation=/g)||[]).length,1);return after;}
-function run(out='out'){const homes=[],pages=[];for(const l of Object.keys(C)){for(const s of ['',...slugs]){const u=s?route(l,s):C[l].home,f=disk(out,u);assert(fs.existsSync(f),'Missing maintained route '+u);const before=fs.readFileSync(f,'utf8'),after=transform(before,l,s);assert.equal(transform(after,l,s),after,'Byte-idempotence '+u);fs.writeFileSync(f,after);(s?pages:homes).push({locale:C[l].lang,path:u,catalog:'/zion-app-network/CATALOG-PRODUCTIVITY-REVIEW.html#'+l,nav:'/zion-app-network/CATALOG-NAVIGATION.html#resource-path-'+l});}}const manifest={release:RELEASE,homes,pages,scope:'Five existing homepage navigation additions and 30 reciprocal six-resource navigation blocks. Existing cards, forms, scripts and all bytes outside owned additions preserved.',fullNetworkComplete:false};const f=path.join(out,'apps/productivity-navigation-publication.json');fs.mkdirSync(path.dirname(f),{recursive:true});fs.writeFileSync(f,JSON.stringify(manifest,null,2)+'\n');console.log('PASS '+RELEASE+': five homepage blocks, 30 reciprocal resource blocks, protected forms/scripts and byte-idempotence.');return manifest;}
-module.exports={run,transform,block,C,slugs,route,RELEASE};if(require.main===module)run(process.argv[2]||'out');
+function transform(before,l,current=''){
+ assert(C[l],'Known locale');
+ assert.equal((before.match(/<html\b[^>]*\blang=["']([^"']+)["']/i)||[])[1],C[l].lang,'Document locale');
+ const blocks=before.match(re)||[];
+ assert.equal((before.match(/<!--productivity-navigation:start-->/g)||[]).length,blocks.length,'Unpaired owned start marker');
+ assert.equal((before.match(/<!--productivity-navigation:end-->/g)||[]).length,blocks.length,'Unpaired owned end marker');
+ assert(blocks.length<=1,'Duplicate owned navigation blocks');
+ const base=before.replace(re,'');
+ assert(!/\bdata-productivity-navigation\s*=/i.test(base),'Unowned navigation collision');let after;if(current){assert(slugs.includes(current));assert(/<\/body>/i.test(base));after=base.replace(/<\/body>/i,block(l,current)+'</body>');}else{let n=0;after=base.replace(/<!--zion-network-home:start-->[\s\S]*?<!--zion-network-home:end-->/g,s=>{n++;const p=s.lastIndexOf('</section>');assert(p>=0);return s.slice(0,p)+block(l)+s.slice(p);});assert.equal(n,1,'Exactly one existing homepage network section');}assert.equal(after.replace(re,''),base,'Only owned navigation changes');assert.deepEqual(protectedParts(after),protectedParts(before),'Forms/scripts preserved');assert.equal((after.match(/data-productivity-navigation=/g)||[]).length,1);return after;}
+// Validate the whole batch before any writes; this is not a filesystem transaction.
+function plan(out='out'){
+ const homes=[],pages=[],changes=[],base=fs.realpathSync(out);
+ for(const l of Object.keys(C))for(const slug of ['',...slugs]){
+  const u=slug?route(l,slug):C[l].home,f=disk(out,u);
+  assert(fs.existsSync(f),'Missing maintained route '+u);
+  const real=fs.realpathSync(f);
+  assert(real.startsWith(base+path.sep),'Maintained route escapes output '+u);
+  assert(fs.statSync(f).isFile(),'Maintained route must be a file '+u);
+  const before=fs.readFileSync(f,'utf8'),after=transform(before,l,slug);
+  assert.equal(transform(after,l,slug),after,'Byte-idempotence '+u);
+  changes.push({file:f,real,before,after});
+  (slug?pages:homes).push({locale:C[l].lang,path:u,catalog:'/zion-app-network/CATALOG-PRODUCTIVITY-REVIEW.html#'+l,nav:'/zion-app-network/CATALOG-NAVIGATION.html#resource-path-'+l});
+ }
+ const manifestFile=path.join(out,'apps/productivity-navigation-publication.json');
+ const parent=path.dirname(manifestFile);
+ if(fs.existsSync(parent))assert(fs.realpathSync(parent).startsWith(base+path.sep),'Manifest directory escapes output');
+ if(fs.existsSync(manifestFile)){assert(!fs.lstatSync(manifestFile).isSymbolicLink(),'Manifest must not be a symlink');assert(fs.statSync(manifestFile).isFile(),'Manifest must be a file');}
+ const manifest={release:RELEASE,homes,pages,scope:'Five existing homepage navigation additions and 30 reciprocal six-resource navigation blocks. Existing cards, forms, scripts and all bytes outside owned additions preserved.',fullNetworkComplete:false};
+ return {changes,manifestFile,manifest};
+}
+function apply(prepared){
+ for(const p of prepared.changes){assert.equal(fs.realpathSync(p.file),p.real,'Route changed after preflight');assert.equal(fs.readFileSync(p.file,'utf8'),p.before,'Input changed after preflight');}
+ for(const p of prepared.changes)fs.writeFileSync(p.file,p.after);
+ fs.mkdirSync(path.dirname(prepared.manifestFile),{recursive:true});
+ fs.writeFileSync(prepared.manifestFile,JSON.stringify(prepared.manifest,null,2)+'\n');
+ return prepared.manifest;
+}
+function run(out='out'){const manifest=apply(plan(out));console.log('PASS '+RELEASE+': five homepage blocks, 30 reciprocal resource blocks, full-batch preflight, protected forms/scripts and byte-idempotence.');return manifest;}
+module.exports={run,plan,apply,transform,block,C,slugs,route,RELEASE};if(require.main===module)run(process.argv[2]||'out');

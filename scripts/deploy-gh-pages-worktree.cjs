@@ -11,7 +11,7 @@ const message = process.argv[3] || `deploy: static export ${new Date().toISOStri
 
 function run(cmd, opts = {}) {
   try {
-    return execSync(cmd, { cwd: repoRoot, encoding: 'utf8', stdio: 'pipe', ...opts }).trim();
+    return execSync(cmd, { cwd: repoRoot, encoding: 'utf8', stdio: 'pipe', maxBuffer: Infinity, ...opts }).trim();
   } catch (e) {
     const out = (e.stdout && e.stdout.toString()) || '';
     throw new Error(`${cmd} failed: ${e.message}\n${out}`);

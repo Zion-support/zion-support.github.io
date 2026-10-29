@@ -63,6 +63,9 @@ jobs:
       - name: Prepare pages from public/
         run: bash scripts/prepare-pages-out.sh
 
+      - name: Reject private operational files in final Pages artifact
+        run: python3 scripts/assert-no-private-ops.py out
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
