@@ -165,10 +165,44 @@ jobs:
             try:
               root_node=ET.parse(index).getroot()
               if root_node.tag==ns+'sitemapindex':
-                children={str(el.text or '').strip() for el in root_node.findall(ns+'sitemap/'+ns+'loc')}
-                for child in ['https://ziontechgroup.com/sitemap-0.xml','https://ziontechgroup.com/apps/apps-sitemap.xml']:
-                  if child not in children:
-                    errors.append(f'sitemap index missing {child}')
+                # The generator emits numbered shards above 50k URLs.
+                # Apps sitemap is separately advertised by robots.txt.
+                from urllib.parse import urlsplit
+                children=[str(el.text or '').strip() for el in root_node.findall(ns+'sitemap/'+ns+'loc')]
+                if not children:
+                  errors.append('sitemap index contains no child sitemaps')
+                seen=set()
+                found_home=False
+                for child in children:
+                  uri=urlsplit(child)
+                  name=uri.path.removeprefix('/')
+                  if (uri.scheme!='https' or uri.netloc!='ziontechgroup.com' or
+                      uri.query or uri.fragment or not name.startswith('sitemap-') or
+                      not name.endswith('.xml') or not name[8:-4].isdigit()):
+                    errors.append(f'invalid sitemap child URL {child}')
+                    continue
+                  if child in seen:
+                    errors.append(f'duplicate sitemap child {child}')
+                    continue
+                  seen.add(child)
+                  file=Path('public')/name
+                  if not file.is_file() or file.stat().st_size>50_000_000:
+                    errors.append(f'missing or oversized sitemap child {name}')
+                    continue
+                  try:
+                    child_root=ET.parse(file).getroot()
+                    if child_root.tag!=ns+'urlset':
+                      errors.append(f'sitemap child is not URL set: {name}')
+                      continue
+                    locs=[str(e.text or '').strip() for e in child_root.findall(ns+'url/'+ns+'loc')]
+                    if not locs or len(locs)>50_000:
+                      errors.append(f'sitemap child has invalid URL count: {name}')
+                    if 'https://ziontechgroup.com/' in locs:
+                      found_home=True
+                  except ET.ParseError as exc:
+                    errors.append(f'invalid child sitemap XML {name}: {exc}')
+                if not found_home:
+                  errors.append('indexed sitemaps missing canonical homepage')
               elif root_node.tag==ns+'urlset':
                 urls=[str(el.text or '').strip() for el in root_node.findall(ns+'url/'+ns+'loc')]
                 if 'https://ziontechgroup.com/' not in urls:
