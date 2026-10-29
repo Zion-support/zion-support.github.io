@@ -1,0 +1,176 @@
+name: Discovery free policy live monitor
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 7 * * *'
+  pull_request:
+    paths:
+      - '.github/workflows/discovery-free-policy-live-monitor.yml'
+      - 'public/managed-it-services/index.html'
+      - 'public/discovery/**'
+      - 'public/pt/discovery/**'
+      - 'public/es/discovery/**'
+      - 'public/fr/discovery/**'
+      - 'public/de/discovery/**'
+      - 'public/assets/js/discovery-delivery.js'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: discovery-free-policy-live-monitor-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 7
+    steps:
+      - name: Checkout PR candidate for read-only source validation
+        if: github.event_name == 'pull_request'
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          persist-credentials: false
+
+      - name: Check PR candidate or deployed production
+        env:
+          ZION_BASE: https://ziontechgroup.com
+          ZION_CHECK_MODE: ${{ github.event_name == 'pull_request' && 'source' || 'production' }}
+        run: |
+          python3 - <<'PY'
+          import json, os, re, sys, urllib.request, urllib.error
+          from html.parser import HTMLParser
+
+          class Visible(HTMLParser):
+              def __init__(self):
+                  super().__init__()
+                  self.hidden = 0
+                  self.parts = []
+              def handle_starttag(self, tag, attrs):
+                  if tag in ('script', 'style', 'template', 'noscript'):
+                      self.hidden += 1
+              def handle_endtag(self, tag):
+                  if tag in ('script', 'style', 'template', 'noscript'):
+                      self.hidden = max(0, self.hidden - 1)
+              def handle_data(self, data):
+                  if not self.hidden:
+                      self.parts.append(data)
+
+          base = os.environ['ZION_BASE'].rstrip('/')
+          mode = os.environ.get('ZION_CHECK_MODE', '')
+          if mode not in ('source', 'production'):
+              sys.exit('Invalid discovery check mode')
+          paths = ['/discovery/', '/pt/discovery/', '/es/discovery/',
+                   '/fr/discovery/', '/de/discovery/', '/managed-it-services/']
+          report = []
+          for path in paths:
+              result = {'path': path, 'ok': False}
+              try:
+                  if mode == 'source':
+                      path_on_disk = os.path.join('public', path.lstrip('/'), 'index.html')
+                      with open(path_on_disk, encoding='utf-8') as source:
+                          html = source.read()
+                      result['http_status'] = 200
+                      result['content_type'] = 'text/html (source candidate)'
+                  else:
+                      request = urllib.request.Request(
+                          base + path, headers={'User-Agent': 'Zion-Discovery-ReadOnly-Monitor/1.0',
+                                               'Accept': 'text/html'})
+                      with urllib.request.urlopen(request, timeout=18) as response:
+                          html = response.read(1200000).decode('utf-8', 'replace')
+                          result['http_status'] = response.status
+                          result['content_type'] = response.headers.get('Content-Type', '')
+                  visible = Visible()
+                  visible.feed(html)
+                  text = ' '.join(visible.parts).lower()
+                  if path == '/managed-it-services/':
+                      old_price = bool(re.search(
+                          r'(?:discovery.{0,100}[$][ ]*99|[$][ ]*99.{0,100}discovery)', text))
+                      result['checks'] = {
+                          'free_discovery_link': '/discovery/' in html and
+                              ('free discovery' in text or 'discovery grátis' in text),
+                          'no_paid_discovery': not old_price,
+                          'non_stub': len(html) > 5120
+                      }
+                  else:
+                      result['checks'] = {
+                          'non_stub': len(html) > 2000,
+                          'has_form': '<form' in html.lower(),
+                          'free_copy': any(w in text for w in
+                              ('free', 'gratuito', 'grátis', 'gratis', 'gratuit', 'kostenlos')),
+                          'no_checkout': 'stripe.com/checkout' not in html.lower()
+                      }
+                  result['ok'] = result['http_status'] == 200 and all(result['checks'].values())
+              except (OSError, TimeoutError, ValueError) as error:
+                  result['error_class'] = type(error).__name__
+              report.append(result)
+          os.makedirs('artifacts', exist_ok=True)
+          with open('artifacts/discovery-live-monitor.json', 'w', encoding='utf-8') as output:
+              json.dump({'kind': 'read_only_discovery_policy_monitor',
+                         'mode': mode,
+                         'not_email_delivery_proof': True,
+                         'checks': report}, output, indent=2)
+          with open(os.environ['GITHUB_STEP_SUMMARY'], 'a', encoding='utf-8') as summary:
+              summary.write('## Discovery free-policy monitor: ' + mode + '\n\n')
+              summary.write('PR = source contract; schedule/manual = live GET. No form submissions or inbox delivery proof.\n\n')
+              summary.write('| Route | Result |\n|---|---|\n')
+              for item in report:
+                  summary.write('| ' + chr(96) + item['path'] + chr(96) + ' | ' + ('PASS' if item['ok'] else 'FAIL') + ' |\n')
+          print(json.dumps(report, indent=2))
+          if not all(item['ok'] for item in report):
+              sys.exit('Discovery ' + mode + ' content policy or availability check failed')
+          PY
+
+      - name: Observe external form preflight (informational; never POST)
+        if: ${{ always() && github.event_name != 'pull_request' }}
+        continue-on-error: true
+        run: |
+          python3 - <<'PY'
+          import json, os, urllib.error, urllib.request
+          origin = 'https://ziontechgroup.com'
+          request = urllib.request.Request(
+              'https://formsubmit.co/ajax/commercial@ziontechgroup.com',
+              method='OPTIONS',
+              headers={'Origin': origin,
+                       'Access-Control-Request-Method': 'POST',
+                       'Access-Control-Request-Headers': 'content-type',
+                       'User-Agent': 'ZionDiscoveryReadOnly/1.0'})
+          result = {'method':'OPTIONS', 'read_only':True,
+                    'not_email_acceptance_or_delivery_proof':True}
+          headers = {}
+          try:
+              with urllib.request.urlopen(request, timeout=15) as response:
+                  result['http_status'] = response.status
+                  headers = response.headers
+          except urllib.error.HTTPError as exc:
+              result['http_status'] = exc.code
+              headers = exc.headers
+          except (OSError, TimeoutError) as exc:
+              result['error_class'] = type(exc).__name__
+          allow_origin = headers.get('Access-Control-Allow-Origin', '')
+          allow_methods = headers.get('Access-Control-Allow-Methods', '')
+          allow_headers = headers.get('Access-Control-Allow-Headers', '')
+          result['cors_observation'] = {
+              'origin_allowed': allow_origin in (origin, '*'),
+              'post_listed': 'POST' in allow_methods.upper(),
+              'json_header_allowed': ('content-type' in allow_headers.lower()
+                                      or allow_headers.strip() == '*')}
+          os.makedirs('artifacts', exist_ok=True)
+          with open('artifacts/discovery-transport.json', 'w', encoding='utf-8') as out:
+              json.dump(result, out, indent=2)
+          print(json.dumps(result, indent=2))
+          with open(os.environ['GITHUB_STEP_SUMMARY'], 'a', encoding='utf-8') as out:
+              out.write('\n### Informational CORS preflight (OPTIONS only)\n')
+              out.write('This does not submit forms or verify inbox delivery.\n')
+              out.write('Status: ' + str(result.get('http_status', result.get('error_class','unknown'))) + '\n')
+          PY
+
+      - name: Preserve read-only evidence
+        if: always()
+        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
+        with:
+          name: discovery-live-monitor-${{ github.run_id }}
+          path: artifacts/discovery-*.json
+          if-no-files-found: warn
+          retention-days: 14

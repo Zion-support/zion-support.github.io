@@ -169,21 +169,51 @@ assert_family_a_home() {
   echo "OK Family A homepage (${sz}B)"
 }
 
-assert_mit_fgv() {
+assert_mit_free_discovery() {
   local f="out/managed-it-services/index.html"
   if [ ! -f "$f" ]; then
     echo "ERROR: missing out/managed-it-services/index.html" >&2
     exit 1
   fi
-  if ! grep -Fq 'proof-fgv' "$f"; then
-    echo "ERROR: out/managed-it-services/index.html missing #proof-fgv" >&2
+  local sz
+  sz=$(wc -c < "$f" | tr -d ' ')
+  if [ "$sz" -lt 5120 ]; then
+    echo "ERROR: out/managed-it-services/index.html is stub-sized ($sz B)" >&2
     exit 1
   fi
-  if ! grep -Fq 'SDCOMPRASTIC-6963' "$f"; then
-    echo "ERROR: out/managed-it-services/index.html missing SDCOMPRASTIC-6963" >&2
+  # Anonymous proof only. Never require customer identities, order IDs or
+  # private procurement markers as a condition of deployment.
+  if grep -Eiq '<!--[[:space:]]*proof-[^>]*-->' "$f" \
+     || grep -Eq '<!--[[:space:]]*[A-Z][A-Z0-9]{5,}-[0-9]{3,}[^>]*-->' "$f"; then
+    echo "ERROR: Managed IT contains a non-public proof or procurement marker" >&2
     exit 1
   fi
-  echo "OK MIT FGV proof"
+  # The public self-assessment is free. A separately scoped paid service
+  # may remain in the existing paid catalog; do not call that Discovery.
+  if grep -Fq '$99' "$f" \
+     || grep -Eiq '"price"[[:space:]]*:[[:space:]]*"?99([.]0+)?"?' "$f" \
+     || grep -Fiq '30-min readout' "$f"; then
+    echo "ERROR: Managed IT reintroduces a paid or assisted Discovery promise" >&2
+    exit 1
+  fi
+  python3 scripts/assert-free-discovery-home.py "$f"
+  if ! grep -Fq '"name":"Discovery"' "$f" \
+     || ! grep -Fq '"price":"0"' "$f" \
+     || ! grep -Fq '"url":"https://ziontechgroup.com/discovery/"' "$f"; then
+    echo "ERROR: Managed IT JSON-LD must describe canonical free Discovery" >&2
+    exit 1
+  fi
+  for approved_tier in '$499' '$2,500' '$8,000'; do
+    if ! grep -Fq "$approved_tier" "$f"; then
+      echo "ERROR: Managed IT is missing an established paid tier" >&2
+      exit 1
+    fi
+  done
+  if ! grep -Fq '/assets/css/site.css' "$f"; then
+    echo "ERROR: Managed IT is missing shared site styling" >&2
+    exit 1
+  fi
+  echo "OK Managed IT anonymous Free Discovery, paid tiers and stylesheet ($sz B)"
 }
 
 assert_aaa_official_ladder() {
@@ -200,7 +230,7 @@ assert_aaa_official_ladder() {
 }
 
 assert_family_a_home
-assert_mit_fgv
+assert_mit_free_discovery
 assert_aaa_official_ladder
 
 # Approved scoped app-evaluation publication; preserve all safety guards above.
