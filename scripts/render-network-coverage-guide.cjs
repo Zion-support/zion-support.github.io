@@ -1,0 +1,42 @@
+'use strict';
+const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
+const R=require('./network-publication-routes.cjs'),C=require('./network-coverage-copy.json');
+const RELEASE='network-coverage-guide-2026-10-15-v1',ORIGIN='https://ziontechgroup.com';
+const slug='apps/network-coverage-guide.html',start='<!--zion-coverage-guide:start-->',end='<!--zion-coverage-guide:end-->';
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const guide=l=>'/'+(l==='en'?'':l+'/')+slug,home=l=>l==='pt'?'/':'/'+l+'/';
+function attrs(tag){const a={};for(const m of tag.matchAll(/([\w:-]+)\s*=\s*(?:"([^"]*)"|'([^']*)')/g))a[m[1].toLowerCase()]=m[2]??m[3];return a;}
+function target(href,rel){if(typeof href!=='string'||!href.trim())return null;try{const u=new URL(href,ORIGIN+R.url(rel));if(u.origin!==ORIGIN)return null;let p=decodeURIComponent(u.pathname).slice(1);if(!p||p.endsWith('/'))p+='index.html';else if(!path.posix.extname(p))p+='/index.html';if(!p.endsWith('.html'))return null;return p;}catch{return null;}}
+function audit(out){const I=R.inventory(out),rows=[],links=new Map(),documents=new Map(),heads=new Map();
+ for(const [rel,p] of I.pages){const s=fs.readFileSync(path.join(out,rel),'utf8');documents.set(rel,s);heads.set(rel,[...s.matchAll(/<link\b[^>]*>/gi)].map(m=>attrs(m[0])));links.set(rel,[...new Set([...s.matchAll(/<a\b[^>]*>/gi)].map(m=>target(attrs(m[0]).href,rel)).filter(Boolean))]);}
+ for(const [rel,p] of I.pages){const s=documents.get(rel),issues=[];const tags=heads.get(rel);const cs=tags.filter(a=>(a.rel||'').toLowerCase()==='canonical');if(cs.length!==1)issues.push('canonical-count:'+cs.length);else if(!p.canonical)issues.push('canonical-invalid');else if(!I.pages.has(p.canonical))issues.push('canonical-unresolved');else if(I.pages.get(p.canonical).lang!==p.lang)issues.push('canonical-language');
+  const group=I.byPath.get(I.keyFor(rel));
+  const alternatives=tags.filter(a=>(a.rel||'').toLowerCase()==='alternate'&&a.hreflang),seen=new Set();
+  for(const a of alternatives){const l=a.hreflang.toLowerCase().split('-')[0],t=target(a.href,rel);if(seen.has(a.hreflang.toLowerCase()))issues.push('alternate-duplicate:'+a.hreflang);seen.add(a.hreflang.toLowerCase());if(!t||!I.pages.has(t))issues.push('alternate-unresolved:'+a.hreflang);else if(l!=='x'&&I.pages.get(t).lang!==l)issues.push('alternate-language:'+a.hreflang);else {const back=heads.get(t).some(b=>(b.rel||'').toLowerCase()==='alternate'&&target(b.href,t)===(p.canonical||rel));if(!back)issues.push('alternate-return:'+a.hreflang);}}
+  for(const l of group.available)if(!alternatives.some(a=>a.hreflang.toLowerCase()===R.tags[l].toLowerCase()))issues.push('alternate-missing:'+R.tags[l]);if(!seen.has('x-default'))issues.push('alternate-missing:x-default');
+  const known=links.get(rel).filter(t=>I.pages.has(t)&&t!==rel),unresolved=links.get(rel).filter(t=>!I.pages.has(t)),returns=known.filter(t=>links.get(t).includes(rel)||links.get(t).includes(p.canonical));
+  rows.push({path:rel,language:p.lang,canonical:p.canonical,alternateCount:alternatives.length,issues:[...new Set(issues)].sort(),knownLinks:known.length,reciprocalLinks:returns.length,nonreciprocal:known.filter(t=>!returns.includes(t)),unresolved});
+ }
+ return {release:RELEASE,schema:'artifact-language-navigation-v1',scope:'Current build artifact only; static quoted HTML attributes. Not live HTTP, semantic translation, app functionality, external Pages, or inbox-delivery certification.',groups:I.groups,pages:rows.sort((a,b)=>a.path.localeCompare(b.path))};
+}
+function page(l,I){const c=C[l],alts=R.locales.map(k=>'<link rel="alternate" hreflang="'+R.tags[k]+'" href="'+ORIGIN+guide(k)+'">').join('')+'<link rel="alternate" hreflang="x-default" href="'+ORIGIN+guide('en')+'">';
+ const editions=R.locales.map(k=>'<a lang="'+R.tags[k]+'" href="'+guide(k)+'"'+(k===l?' aria-current="page"':'')+'>'+R.names[k]+'</a>').join(' · ');
+ const table=I.groups.filter(g=>g.path.startsWith('apps/')&&g.path!==slug).slice(0,60).map(g=>'<tr><th scope="row">'+esc('/'+g.path)+'</th><td>'+R.links(g)+'</td></tr>').join('');
+ return '<!doctype html><html lang="'+R.tags[l]+'"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>'+esc(c[0])+' | Zion Tech Group</title><meta name="description" content="'+esc(c[1])+'"><link rel="canonical" href="'+ORIGIN+guide(l)+'">'+alts+'<link rel="stylesheet" href="/assets/css/site.css"><style>.coverage{max-width:72rem;margin:auto;padding:1rem;overflow-wrap:anywhere}.coverage a:focus-visible{outline:3px solid #2563eb;outline-offset:3px}.coverage table{width:100%;border-collapse:collapse}.coverage th,.coverage td{padding:.7rem;text-align:left;border-bottom:1px solid #9ca3af}.coverage td a{display:inline-block;padding:.25rem}.coverage .skip{display:block} @media(max-width:40rem){.coverage th,.coverage td{display:block}}</style></head><body><div class="coverage"><a class="skip" href="#content">'+esc(c[14])+'</a><header><nav aria-label="'+esc(c[2])+'">'+editions+'</nav><p><a href="'+home(l)+'#network-language-coverage">'+esc(c[3])+'</a> · <a href="/zion-app-network/" lang="en">'+esc(c[4])+'</a></p></header><main id="content"><h1>'+esc(c[0])+'</h1><p>'+esc(c[1])+'</p><section aria-labelledby="limits"><h2 id="limits">'+esc(c[7])+'</h2><p>'+esc(c[8])+'</p><p>'+esc(c[9])+'</p><p>'+esc(c[10])+'</p></section><h2>'+esc(c[5])+'</h2><table><caption>'+esc(c[11])+'</caption><thead><tr><th scope="col">'+esc(c[12])+'</th><th scope="col">'+esc(c[13])+'</th></tr></thead><tbody>'+table+'</tbody></table><p><a href="/apps/network-coverage-audit.json">'+esc(c[6])+'</a></p></main><footer><small>'+RELEASE+'</small></footer></div></body></html>\n';
+}
+function repair(s,rel,I){const g=I.byPath.get(I.keyFor(rel));if(!g)return s;return s.replace(/<!--zion-network-nav:start-->[\s\S]*?<!--zion-network-nav:end-->/g,nav=>{assert(!/<(?:form|script)\b/i.test(nav),'Unsafe owned navigation '+rel);return nav.replace(/<p>([^<]*: )[\s\S]*?<\/p>/,(_,label)=>'<p>'+label+R.links(g)+'</p>');});}
+function render(out){const I=R.inventory(out),writes=[];for(const l of R.locales){assert(Array.isArray(C[l])&&C[l].length===15,'Incomplete copy '+l);const rel=l==='pt'?'index.html':l+'/index.html',f=path.join(out,rel),s=fs.readFileSync(f,'utf8');assert(R.language(s)===l&&!R.redirect(s),'Homepage language '+rel);assert((s.match(/<\/body>/gi)||[]).length===1,'Homepage body '+rel);assert((s.split(start).length-1)===(s.split(end).length-1),'Incomplete owned block '+rel);assert(s.split(start).length<=2,'Duplicate owned block '+rel);
+ const fixed=repair(s,rel,I);
+ const link='<span id="network-language-coverage"> · <a href="'+guide(l)+'">'+esc(C[l][11])+'</a></span>';
+ const clean=fixed.replace(/<!--zion-coverage-guide:start-->[\s\S]*?<!--zion-coverage-guide:end-->/g,'');
+ const anchors=[...clean.matchAll(/<p\b[^>]*class="[^"]*see-also[^"]*"[^>]*>[\s\S]*?<\/p>/g)];
+ let next;if(anchors.length){const a=anchors[anchors.length-1],patched=a[0].replace(/<\/p>$/,start+link+end+'</p>');next=clean.slice(0,a.index)+patched+clean.slice(a.index+a[0].length);}else{const a=clean.match(/<section\b[^>]*class="[^"]*section-soft[^"]*"[^>]*>[\s\S]*?<\/section>/);assert(a,'Missing existing navigation anchor '+rel);const patched=a[0].replace(/<\/section>$/,start+'<p class="see-also">'+link+'</p>'+end+'</section>');next=clean.slice(0,a.index)+patched+clean.slice(a.index+a[0].length);}
+ writes.push([f,next]);writes.push([path.join(out,guide(l).slice(1)),page(l,I)]);
+ }
+ const planned=new Set(writes.map(([f])=>f));for(const [rel] of I.pages){if(planned.has(path.join(out,rel)))continue;const f=path.join(out,rel),s=fs.readFileSync(f,'utf8'),next=repair(s,rel,I);if(next!==s)writes.push([f,next]);}
+ // Preflight every homepage before writing any candidate output. Only owned additions change.
+ for(const [f,s] of writes){fs.mkdirSync(path.dirname(f),{recursive:true});fs.writeFileSync(f,s);}
+ const report=audit(out);fs.mkdirSync(path.join(out,'apps'),{recursive:true});fs.writeFileSync(path.join(out,'apps/network-coverage-audit.json'),JSON.stringify(report,null,2)+'\n');return {release:RELEASE,pages:report.pages.length,groups:report.groups.length};
+}
+if(require.main===module)console.log(JSON.stringify(render(process.argv[2]||'out')));
+module.exports={render,audit,repair,page,target,attrs,RELEASE,guide,home,start,end};
