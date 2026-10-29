@@ -65,3 +65,41 @@ test('missing Git checkout fails closed and generates an error report', () => {
     fs.rmSync(cwd, { recursive: true, force: true });
   }
 });
+
+const FIXTURE_PATH = 'go/pkg/mod/github.com/subosito/gotenv@v1.6.0/.env.invalid';
+const FIXTURE_OID = '016d5e0cea7ca6e81b046f18ef12bd14c76d66f0';
+test('verified public fixture requires exact path and upstream object ID', () => {
+  assert.equal(classifyPath(FIXTURE_PATH, FIXTURE_OID), 'verified-fixture');
+  const report = scanPaths([FIXTURE_PATH], 100, new Map([[FIXTURE_PATH, FIXTURE_OID]]));
+  assert.equal(report.verifiedFixtureCount, 1);
+  assert.equal(report.highRiskCount, 0);
+});
+test('missing or changed fixture metadata and copied paths remain high risk', () => {
+  assert.equal(classifyPath(FIXTURE_PATH), 'high');
+  assert.equal(classifyPath(FIXTURE_PATH, '1'.repeat(40)), 'high');
+  assert.equal(classifyPath('other/.env.invalid', FIXTURE_OID), 'high');
+  assert.equal(classifyPath(FIXTURE_PATH.replace('v1.6.0', 'v1.6.1'), FIXTURE_OID), 'high');
+});
+test('fixture decision uses index metadata even when blob and working file do not exist', () => {
+  const cwd = fs.mkdtempSync(path.join(os.tmpdir(), 'zion-fixture-metadata-'));
+  try {
+    const git = (...args) => {
+      const r = spawnSync('git', args, { cwd, encoding: 'utf8' });
+      assert.equal(r.status, 0, args.join(' ') + ': ' + r.stderr);
+    };
+    git('init', '-q');
+    git('update-index', '--add', '--cacheinfo', `100644,${FIXTURE_OID},${FIXTURE_PATH}`);
+    assert.equal(fs.existsSync(path.join(cwd, FIXTURE_PATH)), false);
+    assert.equal(run(cwd, 'out/report.json'), 0);
+    const verified = JSON.parse(fs.readFileSync(path.join(cwd, 'out/report.json'), 'utf8'));
+    assert.equal(verified.verifiedFixtureCount, 1);
+    assert.equal(verified.highRiskCount, 0);
+    git('update-index', '--cacheinfo', `100644,${'1'.repeat(40)},${FIXTURE_PATH}`);
+    assert.equal(run(cwd, 'out/report.json'), 1);
+    const changed = JSON.parse(fs.readFileSync(path.join(cwd, 'out/report.json'), 'utf8'));
+    assert.equal(changed.verifiedFixtureCount, 0);
+    assert.equal(changed.highRiskCount, 1);
+  } finally {
+    fs.rmSync(cwd, { recursive: true, force: true });
+  }
+});

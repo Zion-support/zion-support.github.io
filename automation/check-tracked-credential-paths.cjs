@@ -7,8 +7,17 @@ const { spawnSync } = require('node:child_process');
 
 const REPORT_PATH = 'automation/reports/tracked-credential-paths-latest.json';
 const MAX_REPORTED_PATHS = 100;
+// Public gotenv v1.6.0 invalid-parser fixture, verified against upstream metadata:
+// https://github.com/subosito/gotenv/tree/v1.6.0
+// Both the exact path and Git blob ID must match. No fixture bytes are read.
+const VERIFIED_UPSTREAM_FIXTURES = Object.freeze({
+  'go/pkg/mod/github.com/subosito/gotenv@v1.6.0/.env.invalid':
+    '016d5e0cea7ca6e81b046f18ef12bd14c76d66f0',
+});
 
-function classifyPath(name) {
+function classifyPath(name, objectId) {
+  if (Object.hasOwn(VERIFIED_UPSTREAM_FIXTURES, name) &&
+      VERIFIED_UPSTREAM_FIXTURES[name] === objectId) return 'verified-fixture';
   const p = String(name).replace(/\\/g, '/').replace(/^\.\/+/, '').toLowerCase();
   const basename = p.split('/').at(-1);
   if (!p || !basename) return null;
@@ -32,11 +41,13 @@ function classifyPath(name) {
   return null;
 }
 
-function scanPaths(paths, maxReported = MAX_REPORTED_PATHS) {
+function scanPaths(paths, maxReported = MAX_REPORTED_PATHS, indexObjects = new Map()) {
   const high = [];
   const review = [];
+  let verifiedFixtureCount = 0;
   for (const name of paths) {
-    const risk = classifyPath(name);
+    const risk = classifyPath(name, indexObjects.get(name));
+    if (risk === 'verified-fixture') verifiedFixtureCount += 1;
     if (risk === 'high') high.push(name);
     else if (risk === 'review') review.push(name);
   }
@@ -44,6 +55,7 @@ function scanPaths(paths, maxReported = MAX_REPORTED_PATHS) {
     trackedFiles: paths.length,
     highRiskCount: high.length,
     reviewCount: review.length,
+    verifiedFixtureCount,
     highRiskPaths: high.slice(0, maxReported),
     reviewPaths: review.slice(0, maxReported),
     truncated: high.length > maxReported || review.length > maxReported,
@@ -62,6 +74,22 @@ function listTrackedPaths(cwd = process.cwd()) {
   return paths;
 }
 
+function listFixtureObjectIds(cwd = process.cwd()) {
+  const result = new Map();
+  const r = spawnSync('git', [
+    'ls-files', '--stage', '-z', '--', ...Object.keys(VERIFIED_UPSTREAM_FIXTURES),
+  ], { cwd, encoding: 'buffer', maxBuffer: 64 * 1024 });
+  // Missing or invalid metadata must not exempt any path.
+  if (r.error || r.status !== 0 || !Buffer.isBuffer(r.stdout)) return result;
+  for (const entry of r.stdout.toString('utf8').split('\0').filter(Boolean)) {
+    const match = /^100644 ([0-9a-f]{40}) 0\t([^\0]+)$/.exec(entry);
+    if (match && Object.hasOwn(VERIFIED_UPSTREAM_FIXTURES, match[2])) {
+      result.set(match[2], match[1]);
+    }
+  }
+  return result;
+}
+
 function safeAppend(file, value) {
   if (!file) return;
   fs.appendFileSync(file, value, { encoding: 'utf8' });
@@ -70,19 +98,19 @@ function safeAppend(file, value) {
 function run(cwd = process.cwd(), reportPath = process.env.CREDENTIAL_PATH_REPORT || REPORT_PATH) {
   let result;
   try {
-    result = scanPaths(listTrackedPaths(cwd));
+    result = scanPaths(listTrackedPaths(cwd), MAX_REPORTED_PATHS, listFixtureObjectIds(cwd));
     result.status = result.highRiskCount > 0 ? 'blocked' : 'pass';
   } catch (_error) {
     result = {
       status: 'error', trackedFiles: 0, highRiskCount: 0,
-      reviewCount: 0, highRiskPaths: [], reviewPaths: [],
+      reviewCount: 0, verifiedFixtureCount: 0, highRiskPaths: [], reviewPaths: [],
       truncated: false, error: 'Git tracked-path inventory unavailable',
     };
   }
   const report = {
     schemaVersion: 1,
     checkedAt: new Date().toISOString(),
-    inspection: 'tracked-filenames-only; no file contents read',
+    inspection: 'tracked-filenames-and-Git-object-ids-only; no file contents read',
     ...result,
   };
   const dest = path.resolve(cwd, reportPath);
