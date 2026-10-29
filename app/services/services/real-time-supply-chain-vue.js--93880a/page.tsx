@@ -2,9 +2,7 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Real-Time Supply Chain Vue.js (Ai)',
-  description: 'Real-Time Supply Chain Vue.js (Ai) is an AI-powered ai solution that transforms how businesses operate through intelligent automation and real-time analytics.
-
-',
+  description: "Real-Time Supply Chain Vue.js (Ai) is an AI-powered ai solution that transforms how businesses operate through intelligent automation and real-time analytics.\n\n",
   alternates: {
     canonical: 'https://ziontechgroup.com/services/real-time-supply-chain-vue.js--93880a',
   },
