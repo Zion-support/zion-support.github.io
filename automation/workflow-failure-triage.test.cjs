@@ -92,3 +92,14 @@ test('workflow is read-only, keeps one existing cron and has no dependency insta
   assert.equal((y.match(/cron:/g) || []).length, 1);
   for (const x of y.matchAll(/uses:\s*([^\s#]+)/g)) assert.match(x[1], /@[a-f0-9]{40}$/i);
 });
+
+test('malformed rows cannot crash cancelled and skipped counters', () => {
+  // GitHub API and gh CLI arrays should be treated as untrusted data.
+  const recent = [null, undefined, [], false,
+    run(901, { conclusion: 'cancelled' }),
+    run(902, { conclusion: 'skipped' })];
+  const report = buildReport(recent, [], NOW);
+  assert.equal(report.cancelledInRecentSample, 1);
+  assert.equal(report.skippedInRecentSample, 1);
+  assert.equal(report.completedFailuresIn24Hours, 0);
+});
