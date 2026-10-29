@@ -42,7 +42,8 @@ function evaluate(root) {
     generatedAtUtc: new Date().toISOString(),
     commitSha: process.env.GITHUB_SHA || null,
     status: 'ERROR', scannedTrackedSourceFiles: 0,
-    markerCount: 0, affectedFiles: 0, samples: [], truncated: false,
+    markerCount: 0, affectedFiles: 0, affectedSourcePaths: [], affectedPathsTruncated: false,
+    samples: [], truncated: false,
     problem: null,
     scope: 'Tracked source/config extensions only; no documents, binary files or untracked local files',
     sourceSnippetStored: false
@@ -91,6 +92,8 @@ function evaluate(root) {
     return result;
   }
   result.affectedFiles = affected.size;
+  result.affectedSourcePaths = [...affected].sort().slice(0, 250).map(sanitized);
+  result.affectedPathsTruncated = affected.size > 250;
   result.truncated = result.markerCount > MAX_EVIDENCE;
   result.status = 'FAIL';
   return result;
