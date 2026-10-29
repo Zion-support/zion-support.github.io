@@ -155,5 +155,93 @@ class HealthTests(unittest.TestCase):
         self.assertEqual(seen[0]["head_sha"], SHA)
 
 
+class JobEvidenceTests(unittest.TestCase):
+    def sample(self, outcome="cancelled", steps=None):
+        run_data = run(status="completed", conclusion=outcome, head_sha=SHA, run_attempt=2)
+        job = dict(id=10, run_id=1, name="Build", status="completed", conclusion=outcome,
+                   steps=[] if steps is None else steps)
+        return run_data, {"total_count":1, "jobs":[job]}
+
+    def test_checkout_cancellation_survives_successful_cleanup(self):
+        a, data = self.sample(steps=[
+            dict(number=1, name="Checkout", conclusion="cancelled"),
+            dict(number=2, name="Test", conclusion="skipped"),
+            dict(number=3, name="Complete job", conclusion="success")])
+        seen = []
+        def fetch(run_id, attempt):
+            seen.append((run_id, attempt)); return data
+        result = health.job_evidence([a], fetch)
+        job = result["runs"][0]["jobs"][0]
+        self.assertEqual(seen, [(1,2)])
+        self.assertEqual(job["first_problem_step"]["name"], "Checkout")
+        self.assertEqual(job["skipped_steps"], 1)
+
+    def test_first_problem_uses_step_order_not_response_order(self):
+        a, data = self.sample("failure", steps=[
+            dict(number=8, name="Upload", conclusion="failure"),
+            dict(number=4, name="Tests", conclusion="failure"),
+            dict(number=1, name="Checkout", conclusion="success")])
+        result = health.job_evidence([a], lambda *_:data)
+        self.assertEqual(result["runs"][0]["jobs"][0]["first_problem_step"]["name"], "Tests")
+
+    def test_no_steps_does_not_invent_a_cause(self):
+        a, data = self.sample()
+        result = health.job_evidence([a], lambda *_:data)
+        self.assertIsNone(result["runs"][0]["jobs"][0]["first_problem_step"])
+
+    def test_run_cap_and_self_exclusion_are_explicit(self):
+        runs = [run(i,"completed",conclusion="cancelled",run_attempt=1) for i in range(10)]
+        calls = []
+        def fetch(run_id, attempt):
+            calls.append(run_id); return {"total_count":0,"jobs":[]}
+        result = health.job_evidence(runs, fetch, own_run_id="9")
+        self.assertEqual(result["eligible_runs"], 9)
+        self.assertEqual(len(calls), 8)
+        self.assertNotIn(9, calls)
+        self.assertFalse(result["complete"])
+
+    def test_successful_pending_and_skipped_runs_do_not_add_api_calls(self):
+        def unexpected(*_): self.fail("Unexpected jobs request")
+        samples = [run(), run(2,"completed",conclusion="success"), run(3,"completed",conclusion="skipped")]
+        self.assertEqual(health.job_evidence(samples, unexpected)["inspected_runs"], 0)
+
+    def test_jobs_page_cap_and_duplicates_do_not_claim_complete(self):
+        a, data = self.sample()
+        data["total_count"] = 101
+        data["jobs"] *= 2
+        result = health.job_evidence([a], lambda *_:data)
+        self.assertFalse(result["complete"])
+        self.assertEqual(result["runs"][0]["observed_jobs"], 1)
+
+    def test_wrong_run_malformed_jobs_and_steps_fail_closed(self):
+        a, data = self.sample()
+        bad_job = dict(data["jobs"][0],run_id=99)
+        bad_steps = dict(data["jobs"][0],steps=["bad"])
+        for response in [None, {}, {"total_count":1,"jobs":[bad_job]},
+                         {"total_count":1,"jobs":[bad_steps]}]:
+            with self.subTest(response=response), self.assertRaises(ValueError):
+                health.job_evidence([a], lambda *_:response)
+
+    def test_missing_attempt_does_not_fall_back_to_latest(self):
+        a, data = self.sample()
+        a.pop("run_attempt")
+        with self.assertRaises(ValueError): health.job_evidence([a], lambda *_:data)
+
+    def test_job_step_markdown_is_escaped_and_urls_constructed(self):
+        a, data = self.sample(steps=[dict(number=1, name="<img>[x](evil)|", conclusion="failure")])
+        data["jobs"][0]["html_url"] = "https://evil.invalid"
+        report = health.analyze([], [], coverage(), NOW)
+        report["job_evidence"] = health.job_evidence([a], lambda *_:data)
+        rendered = health.markdown(report,"owner/repo")
+        self.assertNotIn("<img>", rendered)
+        self.assertNotIn("https://evil.invalid", rendered)
+        self.assertIn("actions/runs/1/job/10", rendered)
+
+    def test_jobs_api_error_is_not_silently_complete(self):
+        a, _ = self.sample()
+        def broken(*_): raise OSError("unavailable")
+        with self.assertRaises(OSError): health.job_evidence([a], broken)
+
+
 if __name__ == "__main__":
     unittest.main()

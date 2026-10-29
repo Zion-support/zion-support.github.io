@@ -78,6 +78,62 @@ def commit_evidence(runs, coverage, head_sha, own_run_id=None):
             "policy": "Actions runs only; required checks, external statuses, reviews, branch rules and deployment are not verified. This is not merge approval."}
 
 
+def job_evidence(runs, fetch_jobs, own_run_id=None, max_runs=8):
+    """Inspect a bounded set of problematic runs at their observed attempt.
+
+    Step conclusions locate observed trouble; they do not establish its cause.
+    No log downloads, retries, cancellations or remediation are performed.
+    """
+    candidates = [r for r in runs if r.get("status") == "completed"
+                  and r.get("conclusion") in FAILURES | {"cancelled"}
+                  and str(r["id"]) != str(own_run_id)]
+    candidates.sort(key=lambda r: r["id"], reverse=True)
+    results = []
+    for run in candidates[:max_runs]:
+        attempt = run.get("run_attempt")
+        if type(attempt) is not int or attempt < 1:
+            raise ValueError("Missing observed run attempt")
+        data = fetch_jobs(run["id"], attempt)
+        if not isinstance(data, dict):
+            raise ValueError("Malformed jobs response")
+        jobs, total = data.get("jobs"), data.get("total_count")
+        if not isinstance(jobs, list) or type(total) is not int or total < 0:
+            raise ValueError("Malformed jobs response")
+        details, seen = [], set()
+        for job in jobs:
+            if (not isinstance(job, dict) or type(job.get("id")) is not int
+                    or job.get("run_id") != run["id"]):
+                raise ValueError("Jobs response does not match selected run")
+            if job["id"] in seen:
+                continue
+            seen.add(job["id"])
+            steps = job.get("steps", [])
+            if not isinstance(steps, list) or any(not isinstance(s, dict) or
+                    type(s.get("number")) is not int for s in steps):
+                raise ValueError("Malformed job steps")
+            problems = sorted((s for s in steps if s.get("conclusion") in FAILURES | {"cancelled"}),
+                              key=lambda s: s["number"])
+            if job.get("conclusion") == "success" and not problems:
+                continue
+            first = problems[0] if problems else None
+            details.append({"id":job["id"], "name":job.get("name", "unknown"),
+                            "outcome":conclusion_key(job),
+                            "first_problem_step": None if first is None else {
+                                "name":first.get("name", "unknown"),
+                                "outcome":first.get("conclusion")},
+                            "skipped_steps":sum(s.get("conclusion") == "skipped" for s in steps)})
+        results.append({"run_id":run["id"], "run_attempt":attempt,
+                        "name":run.get("name", "unknown"),
+                        "observed_jobs":len(seen), "reported_jobs":total,
+                        "complete":len(seen) == total, "jobs":details[:15],
+                        "problem_job_count":len(details)})
+    return {"eligible_runs":len(candidates), "inspected_runs":len(results),
+            "complete":len(results) == len(candidates) and all(r["complete"] for r in results),
+            "runs":results,
+            "policy":"At most 8 runs and 100 jobs per run, pinned to the observed attempt. "
+                      "Step outcomes are evidence of where execution stopped, not its root cause or merge approval."}
+
+
 def age_minutes(value, now):
     try:
         dt = datetime.fromisoformat(value.replace("Z", "+00:00"))
@@ -198,6 +254,22 @@ def markdown(report, repo):
         for item in evidence["review"]:
             lines.append(f"- {safe_text(item['name'])}: {safe_text(item['outcome'])}; [run {item['id']}](https://github.com/{repo}/actions/runs/{item['id']})")
         lines += ["", f"Showing up to 15 of {evidence['review_count']} completed outcomes needing review.", evidence["policy"]]
+    if "job_evidence" in report:
+        evidence = report["job_evidence"]
+        lines += ["", "### Problematic job steps", "",
+                  f"Inspected {evidence['inspected_runs']} of {evidence['eligible_runs']} eligible runs; "
+                  f"complete jobs coverage: **{evidence['complete']}**.", evidence["policy"], ""]
+        for run in evidence["runs"]:
+            lines.append(f"- {safe_text(run['name'])}, attempt {run['run_attempt']}: "
+                         f"{run['observed_jobs']}/{run['reported_jobs']} jobs observed; "
+                         f"showing {len(run['jobs'])}/{run['problem_job_count']} jobs needing review.")
+            for job in run["jobs"]:
+                step = job["first_problem_step"]
+                detail = (f"{safe_text(step['name'])} ({safe_text(step['outcome'])})" if step
+                          else "no failed/cancelled step reported; inspect run evidence")
+                lines.append(f"  - {safe_text(job['name'])}: {safe_text(job['outcome'])}; "
+                             f"first problematic step: {detail}; skipped steps: {job['skipped_steps']}; "
+                             f"[job {job['id']}](https://github.com/{repo}/actions/runs/{run['run_id']}/job/{job['id']})")
     lines += ["", "### Next action", ""]
     if report["queue_assessment"] in {"warning", "critical"}:
         lines.append("Inspect the oldest runs and existing queue-pressure incident before adding retries or schedules.")
@@ -231,13 +303,19 @@ def main():
             return snapshot[f"{scope}:{query['page']}"]
     else:
         token = os.environ["GH_TOKEN"]
-        def fetch(query):
-            url = f"https://api.github.com/repos/{repo}/actions/runs?{urllib.parse.urlencode(query)}"
+        def request_api(path, query):
+            url = f"https://api.github.com/repos/{repo}/{path}?{urllib.parse.urlencode(query)}"
             request = urllib.request.Request(url, headers={"Authorization": "Bearer " + token,
                 "Accept": "application/vnd.github+json", "X-GitHub-Api-Version": "2022-11-28",
                 "User-Agent": "Zion-Actions-Queue-Health/2.0"})
             with urllib.request.urlopen(request, timeout=10) as response:
                 return json.load(response)
+        def fetch(query):
+            return request_api("actions/runs", query)
+    def fetch_jobs(run_id, attempt):
+        if args.snapshot:
+            return snapshot[f"jobs:{run_id}:{attempt}"]
+        return request_api(f"actions/runs/{run_id}/attempts/{attempt}/jobs", {"per_page":100, "page":1})
     active, coverage = [], {}
     for state in ACTIVE:
         items, coverage[state] = collect(fetch, state)
@@ -247,6 +325,7 @@ def main():
     if head_sha:
         commits, commit_coverage = collect(fetch, head_sha=head_sha)
         report["commit_evidence"] = commit_evidence(commits, commit_coverage, head_sha, os.environ.get("GITHUB_RUN_ID"))
+        report["job_evidence"] = job_evidence(commits, fetch_jobs, os.environ.get("GITHUB_RUN_ID"))
     args.output.write_text(json.dumps(report, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     summary = os.environ.get("GITHUB_STEP_SUMMARY")
     if summary:
@@ -255,6 +334,8 @@ def main():
     print(f"Diagnostic complete: queue={report['queue_assessment']}; observed queued={report['queue_count']}")
     if head_sha:
         print(f"Commit observation: {head_sha}; assessment={report['commit_evidence']['assessment']}; not merge approval")
+        evidence = report["job_evidence"]
+        print(f"Job inspection: {evidence['inspected_runs']}/{evidence['eligible_runs']} problematic runs; complete={evidence['complete']}")
     # This reports diagnostic execution, not the success of monitored workflows.
     return 0
 
