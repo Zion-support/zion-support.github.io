@@ -122,11 +122,55 @@ jobs:
               sys.exit('Discovery ' + mode + ' content policy or availability check failed')
           PY
 
+      - name: Observe external form preflight (informational; never POST)
+        if: ${{ always() && github.event_name != 'pull_request' }}
+        continue-on-error: true
+        run: |
+          python3 - <<'PY'
+          import json, os, urllib.error, urllib.request
+          origin = 'https://ziontechgroup.com'
+          request = urllib.request.Request(
+              'https://formsubmit.co/ajax/commercial@ziontechgroup.com',
+              method='OPTIONS',
+              headers={'Origin': origin,
+                       'Access-Control-Request-Method': 'POST',
+                       'Access-Control-Request-Headers': 'content-type',
+                       'User-Agent': 'ZionDiscoveryReadOnly/1.0'})
+          result = {'method':'OPTIONS', 'read_only':True,
+                    'not_email_acceptance_or_delivery_proof':True}
+          headers = {}
+          try:
+              with urllib.request.urlopen(request, timeout=15) as response:
+                  result['http_status'] = response.status
+                  headers = response.headers
+          except urllib.error.HTTPError as exc:
+              result['http_status'] = exc.code
+              headers = exc.headers
+          except (OSError, TimeoutError) as exc:
+              result['error_class'] = type(exc).__name__
+          allow_origin = headers.get('Access-Control-Allow-Origin', '')
+          allow_methods = headers.get('Access-Control-Allow-Methods', '')
+          allow_headers = headers.get('Access-Control-Allow-Headers', '')
+          result['cors_observation'] = {
+              'origin_allowed': allow_origin in (origin, '*'),
+              'post_listed': 'POST' in allow_methods.upper(),
+              'json_header_allowed': ('content-type' in allow_headers.lower()
+                                      or allow_headers.strip() == '*')}
+          os.makedirs('artifacts', exist_ok=True)
+          with open('artifacts/discovery-transport.json', 'w', encoding='utf-8') as out:
+              json.dump(result, out, indent=2)
+          print(json.dumps(result, indent=2))
+          with open(os.environ['GITHUB_STEP_SUMMARY'], 'a', encoding='utf-8') as out:
+              out.write('\\n### Informational CORS preflight (OPTIONS only)\\n')
+              out.write('This does not submit forms or verify inbox delivery.\\n')
+              out.write('Status: ' + str(result.get('http_status', result.get('error_class','unknown'))) + '\\n')
+          PY
+
       - name: Preserve read-only evidence
         if: always()
         uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
         with:
           name: discovery-live-monitor-${{ github.run_id }}
-          path: artifacts/discovery-live-monitor.json
+          path: artifacts/discovery-*.json
           if-no-files-found: warn
           retention-days: 14
