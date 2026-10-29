@@ -7,8 +7,6 @@ on:
       - 'scripts/checks/free-discovery-plans-contract.cjs'
       - '.github/workflows/free-discovery-plans-contract.yml'
   workflow_dispatch:
-  schedule:
-    - cron: '17 8 * * 1'
 permissions:
   contents: read
 concurrency:
