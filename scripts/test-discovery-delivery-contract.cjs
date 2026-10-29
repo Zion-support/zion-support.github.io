@@ -50,7 +50,7 @@ for(const lang of ['en','pt-BR','es','fr','de','zz'])test('all four recommendati
   assert.equal(g.requests[0].payload.message,g.context.window.__zionDiscoveryReport);
  }
 });
-for(const lang of ['en','pt-BR','es','fr','de'])for(const mode of ['malformed-json','missing-success','numeric-success','network-error','pending'])test('uncertain retry remains blocked '+lang+' '+mode,async()=>{
+for(const lang of ['en','pt-BR','es','fr','de'])for(const mode of ['malformed-json','missing-success','numeric-success','http-error-success','network-error','pending'])test('uncertain retry remains blocked '+lang+' '+mode,async()=>{
  const h=harness(mode,{},lang);const work=h.submit();if(mode==='pending')h.timeout();await work;
  await h.submit();assert.equal(h.requests.length,1);assert.ok(h.context.window.__zionDiscoveryReport);assert.equal(h.nodes['submit-report'].disabled,false);assert.equal(h.nodes.dform.attrs['aria-busy'],'false');
 });

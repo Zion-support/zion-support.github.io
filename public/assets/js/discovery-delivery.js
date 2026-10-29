@@ -87,7 +87,7 @@ document.getElementById('dform').addEventListener('submit',async function(e){
  try{
   const r=await fetch('https://formsubmit.co/ajax/commercial@ziontechgroup.com',{method:'POST',signal:controller.signal,headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({_subject:'Free Discovery result — '+f.name,_cc:cc,_replyto:f.email,_captcha:'false',_template:'box',name:f.name,email:f.email,company:f.company||'—',industry:f.industry,score,...attribution,event:'discovery_submit',report_version:'2026-10-08-client-commercial',language:locale,message:summary})});
   let j;try{j=await r.json();}catch(err){if(err.name!=='SyntaxError')throw err;uncertainReports.add(fingerprint);status.textContent=t.failed;return;}
-  if(r.ok&&(j.success===true||j.success==='true')){acceptedReports.add(fingerprint);status.textContent=t.accepted;}else{if(r.ok&&j.success!==false&&j.success!=='false')uncertainReports.add(fingerprint);status.textContent=t.failed;}
+  if(r.ok&&(j.success===true||j.success==='true')){acceptedReports.add(fingerprint);status.textContent=t.accepted;}else{if(j.success!==false&&j.success!=='false')uncertainReports.add(fingerprint);status.textContent=t.failed;}
  }catch(err){uncertainReports.add(fingerprint);status.textContent=err.name==='AbortError'?t.timeout:t.offline;}
  finally{clearTimeout(timeout);discoveryPending=false;button.disabled=false;form.setAttribute('aria-busy','false');}
 });
