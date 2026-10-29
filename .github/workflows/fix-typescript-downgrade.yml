@@ -1,42 +1,119 @@
-name: One-shot — downgrade TypeScript 7 to 5.9.x
+name: TypeScript migration preview (manual, read-only)
 
-permissions:
-  contents: write
-
+# Preserve the original one-shot recovery capability as a reviewable patch.
+# Never push directly to main, accept secrets, or trigger an automatic release.
 "on":
   workflow_dispatch:
 
+permissions:
+  contents: read
+
+concurrency:
+  group: typescript-migration-preview-${{ github.run_id }}
+  cancel-in-progress: false
+
 jobs:
-  fix:
+  preview:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 10
     steps:
-      - name: Checkout
+      - name: Checkout without write credentials
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
-          token: ${{ github.token }}
-          ref: main
+          persist-credentials: false
 
-      - name: Setup Node.js
+      - name: Set up Node.js
         uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
         with:
           node-version-file: '.nvmrc'
 
-      - name: Downgrade typescript and regenerate lockfile
+      - name: Detect current TypeScript and stage migration only if required
+        id: baseline
+        shell: bash
         run: |
           set -euo pipefail
-          sed -i 's/"typescript": "7.0.2"/"typescript": "^5.9.3"/' package.json
-          npm install --package-lock-only --legacy-peer-deps --no-audit --fund=false
-          node -e "const l=require('./package-lock.json');console.log('lock ts:', l.packages['node_modules/typescript'].version)"
+          mkdir -p automation/reports/typescript-migration
+          node --input-type=commonjs <<'NODE'
+          const fs = require('node:fs');
+          const pkgPath = 'package.json';
+          const raw = fs.readFileSync(pkgPath, 'utf8');
+          const pkg = JSON.parse(raw);
+          const current = pkg.devDependencies?.typescript || pkg.dependencies?.typescript;
+          if (current === '^5.9.3') {
+            fs.appendFileSync(process.env.GITHUB_OUTPUT, 'migration_required=false\n');
+            console.log('TypeScript dependency already declares ^5.9.3; no mutation required.');
+          } else if (current === '7.0.2') {
+            const pattern = /("typescript"\s*:\s*)"7\.0\.2"/g;
+            const matches = [...raw.matchAll(pattern)];
+            if (matches.length !== 1) throw new Error('Ambiguous TypeScript entries; manual review required');
+            fs.writeFileSync(pkgPath, raw.replace(pattern, '$1"^5.9.3"'));
+            fs.appendFileSync(process.env.GITHUB_OUTPUT, 'migration_required=true\n');
+            console.log('Prepared an uncommitted TypeScript 5.9.x dependency preview.');
+          } else {
+            throw new Error('Unexpected TypeScript baseline; no automatic rewrite performed');
+          }
+          NODE
 
-      - name: Commit and push
+      - name: Regenerate candidate lockfile without running install scripts
+        if: steps.baseline.outputs.migration_required == 'true'
+        shell: bash
         run: |
           set -euo pipefail
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add package.json package-lock.json
-          if git diff --staged --quiet; then
-            echo "No changes"; exit 0
+          npm install --package-lock-only --ignore-scripts --legacy-peer-deps --no-audit --fund=false
+
+      - name: Verify versions and write review-only evidence
+        shell: bash
+        env:
+          MIGRATION_REQUIRED: ${{ steps.baseline.outputs.migration_required }}
+        run: |
+          set -euo pipefail
+          node --input-type=commonjs <<'NODE'
+          const fs = require('node:fs');
+          const pkg = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+          const lock = JSON.parse(fs.readFileSync('package-lock.json', 'utf8'));
+          const spec = pkg.devDependencies?.typescript || pkg.dependencies?.typescript;
+          const lockSpec = lock.packages?.['']?.devDependencies?.typescript || lock.packages?.['']?.dependencies?.typescript;
+          const resolved = lock.packages?.['node_modules/typescript']?.version;
+          if (spec !== '^5.9.3' || lockSpec !== '^5.9.3' || !/^5\.9\.\d+$/.test(resolved || '')) {
+            throw new Error('TypeScript manifest/lockfile mismatch; no migration artifact approved');
+          }
+          const changed = process.env.MIGRATION_REQUIRED === 'true';
+          const report = {
+            schema: 'zion.ci.typescript-migration-preview.v1',
+            status: changed ? 'REVIEW_PATCH_ONLY' : 'ALREADY_COMPLIANT',
+            desiredSpec: '^5.9.3',
+            resolvedVersion: resolved,
+            sourceCommit: process.env.GITHUB_SHA || null,
+            changesPushed: false,
+            requiresReview: changed,
+            scope: ['package.json', 'package-lock.json'],
+          };
+          fs.writeFileSync('automation/reports/typescript-migration/evidence.json', JSON.stringify(report, null, 2) + '\n');
+          console.log(report.status + ': TypeScript ' + resolved + '; no commit or push attempted');
+          if (process.env.GITHUB_STEP_SUMMARY) {
+            fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY,
+              '## TypeScript version preflight\n- Status: ' + report.status +
+              '\n- Lockfile: ' + resolved +
+              '\n- No repository write or deployment\n');
+          }
+          NODE
+          git diff --check
+          if [ "$MIGRATION_REQUIRED" = 'true' ]; then
+            git diff --binary -- package.json package-lock.json > automation/reports/typescript-migration/preview.patch
+            test -s automation/reports/typescript-migration/preview.patch
+            echo 'Patch is for a reviewed PR only; it is not automatically applied.'
+          else
+            if ! git diff --quiet -- package.json package-lock.json; then
+              echo '::error::Unexpected package/lockfile drift in already-compliant state'
+              exit 1
+            fi
           fi
-          git commit -m "fix(deps): downgrade typescript 7.0.2 -> ^5.9.3 (typescript-estree crash 'Cjs' in lint:check / AI Content Burst Ultra)"
-          git push origin main
+
+      - name: Upload bounded review evidence
+        if: always()
+        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
+        with:
+          name: typescript-migration-preview-${{ github.run_id }}
+          path: automation/reports/typescript-migration/
+          if-no-files-found: error
+          retention-days: 7
