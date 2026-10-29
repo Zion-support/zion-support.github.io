@@ -10,6 +10,7 @@ import tempfile
 import textwrap
 import unittest
 from unittest.mock import patch
+from urllib.error import HTTPError
 
 ROOT = Path(__file__).resolve().parents[2]
 WORKFLOW = ROOT / ".github/workflows/apps-deployed-source-drift.yml"
@@ -32,10 +33,10 @@ PAIRS = ast.literal_eval(PAIR_NODE)
 
 
 class Response(io.BytesIO):
-    def __init__(self, data, length=None):
+    def __init__(self, data, length=None, status=200):
         super().__init__(data)
         self.headers = {} if length is None else {"Content-Length": str(length)}
-        self.status = 200
+        self.status = status
 
 
 class ReaderTests(unittest.TestCase):
@@ -76,9 +77,22 @@ class ReaderTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             read_response(Response(b"x", "invalid"))
 
+    def test_body_longer_than_declared_fails(self):
+        with self.assertRaisesRegex(ValueError, "incomplete"):
+            read_response(Response(b"1234", 3))
+
+    def test_empty_response_with_zero_length(self):
+        self.assertEqual(read_response(Response(b"", 0)), b"")
+
+    def test_read_failure_propagates(self):
+        response = Response(b"1234", 4)
+        with patch.object(response, "read", side_effect=OSError("synthetic read failure")):
+            with self.assertRaisesRegex(OSError, "synthetic read failure"):
+                read_response(response)
+
 
 class WorkflowTests(unittest.TestCase):
-    def run_guard(self, scenario):
+    def run_guard(self, scenario, target="/apps/"):
         # Execute the actual embedded workflow, replacing only network and sleep.
         # Every route has synthetic content; no company/customer data is loaded.
         with tempfile.TemporaryDirectory() as directory:
@@ -97,11 +111,25 @@ class WorkflowTests(unittest.TestCase):
                 if route not in PAIRS:
                     raise AssertionError("Unexpected network target")
                 calls[route] = calls.get(route, 0) + 1
-                if route == "/apps/" and scenario == "recover" and calls[route] == 1:
+                if route == target and scenario == "timeout_recover" and calls[route] == 1:
+                    raise TimeoutError("synthetic timeout")
+                if route == target and scenario == "http_error":
+                    raise HTTPError(request.full_url, 503, "synthetic unavailable", {}, None)
+                if route == target and scenario == "non_200":
+                    return Response(body, len(body), status=503)
+                if route == target and scenario == "non_200_then_timeout":
+                    if calls[route] == 1:
+                        return Response(body, len(body), status=503)
+                    raise TimeoutError("synthetic timeout")
+                if route == target and scenario == "semantic_transform":
+                    return Response(b"<html>Zion Tech Group <nav>Apps</nav> Discovery</html>")
+                if route == target and scenario == "missing_marker":
+                    return Response(b"Zion Tech Group Apps")
+                if route == target and scenario == "recover" and calls[route] == 1:
                     return Response(body[:-1], len(body))
-                if route == "/apps/" and scenario == "truncated":
+                if route == target and scenario == "truncated":
                     return Response(body[:-1], len(body))
-                if route == "/apps/" and scenario == "different":
+                if route == target and scenario == "different":
                     return Response(body + b" changed")
                 return Response(body, len(body))
 
@@ -118,7 +146,7 @@ class WorkflowTests(unittest.TestCase):
             finally:
                 os.chdir(previous)
             report = json.loads((root / "automation/reports/apps-deployed-source-drift.json").read_text())
-            row = next(item for item in report["checks"] if item["route"] == "/apps/")
+            row = next(item for item in report["checks"] if item["route"] == target)
             return exit_code, report, row, calls
 
     def test_retry_recovery_clears_error(self):
@@ -145,6 +173,66 @@ class WorkflowTests(unittest.TestCase):
         self.assertFalse(row["match"])
         self.assertEqual(row["http_status"], 200)
 
+    def test_timeout_recovery_clears_error(self):
+        code, report, row, calls = self.run_guard("timeout_recover")
+        self.assertEqual(code, 0)
+        self.assertEqual(report["failure_count"], 0)
+        self.assertEqual(calls["/apps/"], 2)
+        self.assertIsNone(row["error"])
+        self.assertTrue(row["match"])
+
+    def test_repeated_http_error_fails_closed(self):
+        code, report, row, calls = self.run_guard("http_error")
+        self.assertEqual(code, 1)
+        self.assertEqual(report["failure_count"], 1)
+        self.assertEqual(calls["/apps/"], 3)
+        self.assertIsNone(row["live_sha256"])
+        self.assertFalse(row["match"])
+        self.assertIn("503", row["error"])
+
+    def test_non_200_matching_body_still_fails(self):
+        code, report, row, calls = self.run_guard("non_200")
+        self.assertEqual(code, 1)
+        self.assertEqual(report["failure_count"], 1)
+        self.assertEqual(calls["/apps/"], 3)
+        self.assertEqual(row["live_sha256"], row["source_sha256"])
+        self.assertEqual(row["http_status"], 503)
+        self.assertFalse(row["match"])
+
+    def test_timeout_discards_previous_non_200_body(self):
+        code, report, row, calls = self.run_guard("non_200_then_timeout")
+        self.assertEqual(code, 1)
+        self.assertEqual(report["failure_count"], 1)
+        self.assertEqual(calls["/apps/"], 3)
+        self.assertIsNone(row["live_sha256"])
+        self.assertFalse(row["match"])
+        self.assertIn("synthetic timeout", row["error"])
+
+    def test_homepage_semantic_contract_accepts_transformed_body(self):
+        code, report, row, _ = self.run_guard("semantic_transform", target="/")
+        self.assertEqual(code, 0)
+        self.assertEqual(report["failure_count"], 0)
+        self.assertEqual(row["mode"], "semantic")
+        self.assertNotEqual(row["live_sha256"], row["source_sha256"])
+        self.assertTrue(row["match"])
+
+    def test_homepage_semantic_contract_rejects_missing_marker(self):
+        code, report, row, _ = self.run_guard("missing_marker", target="/")
+        self.assertEqual(code, 1)
+        self.assertEqual(report["failure_count"], 1)
+        self.assertEqual(row["http_status"], 200)
+        self.assertIn("Discovery", row["missing_markers"])
+        self.assertFalse(row["match"])
+
+    def test_homepage_semantic_contract_requires_http_200(self):
+        code, report, row, _ = self.run_guard("non_200", target="/")
+        self.assertEqual(code, 1)
+        self.assertEqual(report["failure_count"], 1)
+        self.assertEqual(row["missing_markers"], [])
+        self.assertEqual(row["http_status"], 503)
+        self.assertFalse(row["match"])
+
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)
+
