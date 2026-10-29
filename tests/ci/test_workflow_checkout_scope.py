@@ -72,6 +72,7 @@ class CheckoutScopeTests(unittest.TestCase):
         commit("public/apps/rename-me.html", "rename content\n")
         for i in range(8):
             commit("base-history.txt", f"base {i}\n")
+        cls.original_base = git(cls.source, "rev-parse", "HEAD")
         git(cls.source, "checkout", "-b", "feature")
         for i in range(12):
             commit(f"public/pt/apps/feature-{i}.html", f"feature {i}\n")
@@ -162,9 +163,36 @@ class CheckoutScopeTests(unittest.TestCase):
                 self.assertNotEqual(result.returncode, 0)
                 self.assertIsNone(report)
 
-    def test_depth_one_would_lose_the_pr_base(self):
+    def test_stale_pr_event_base_is_fetched_without_narrowing_the_diff(self):
+        target = self.checkout(self.merge, depth(IMPACT))
+        # Reproduce GitHub rebuilding a merge against newer main while the event
+        # still carries an older base that is outside the shallow checkout.
+        before = command(target, "git", "diff", "--name-only", self.original_base,
+                         self.merge, check=False)
+        self.assertNotEqual(before.returncode, 0)
+        result, actual = self.report(target, "pull_request", self.original_base, self.merge)
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertEqual(actual["base_sha"], self.original_base)
+        expected = git(self.source, "diff", "--name-only", self.original_base, self.merge).splitlines()
+        self.assertEqual(actual["changed_files"], expected)
+        self.assertIn("public/apps/base-only.html", expected)
+        self.assertIn("public/pt/apps/feature-0.html", expected)
+        self.assertLessEqual(int(git(target, "rev-list", "--count", "--all", self.original_base)), 4)
+        self.assertEqual(git(target, "tag", "--list"), "")
+        self.assertNotIn("unrelated", git(target, "for-each-ref", "--format=%(refname)"))
+
+    def test_malformed_pr_base_fails_without_changing_refs(self):
+        target = self.checkout(self.merge, depth(IMPACT))
+        refs = git(target, "for-each-ref", "--format=%(refname):%(objectname)")
+        result, report = self.report(target, "pull_request", "--all", self.merge)
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn("full 40-character commit SHA", result.stderr)
+        self.assertIsNone(report)
+        self.assertEqual(git(target, "for-each-ref", "--format=%(refname):%(objectname)"), refs)
+
+    def test_depth_one_cannot_support_manual_first_parent_comparison(self):
         target = self.checkout(self.merge, 1)
-        result, report = self.report(target, "pull_request", self.base, self.merge)
+        result, report = self.report(target, "workflow_dispatch", "ignored", self.merge)
         self.assertNotEqual(result.returncode, 0)
         self.assertIsNone(report)
 
