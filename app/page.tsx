@@ -1317,14 +1317,14 @@ export default function HomePage() {
               <h3 className="text-lg font-bold text-white mb-4">🧠 AI Product Apps</h3>
               <div className="flex flex-wrap gap-2">
                 {[
-                  {{ name: 'AI Agent Swarm', href: '/zion-ai-agent-swarm/' }},
-                  {{ name: 'Multi-Agent Orchestrator', href: '/multi-agent-orchestrator/' }},
-                  {{ name: 'AI Service Router', href: '/ai-service-router/' }},
-                  {{ name: 'AI Content Strategy', href: '/ai-content-strategy-engine/' }},
-                  {{ name: 'AI SEO Generator', href: '/ai-seo-content-generator/' }},
-                  {{ name: 'AI Lead Generator', href: '/zion-ai-lead-generator/' }},
-                  {{ name: 'AI Fraud Detection', href: '/ai-fraud-detection/' }},
-                  {{ name: 'AI Recommendation Engine', href: '/ai-recommendation-engine/' }},
+                  { name: 'AI Agent Swarm', href: '/zion-ai-agent-swarm/' },
+                  { name: 'Multi-Agent Orchestrator', href: '/multi-agent-orchestrator/' },
+                  { name: 'AI Service Router', href: '/ai-service-router/' },
+                  { name: 'AI Content Strategy', href: '/ai-content-strategy-engine/' },
+                  { name: 'AI SEO Generator', href: '/ai-seo-content-generator/' },
+                  { name: 'AI Lead Generator', href: '/zion-ai-lead-generator/' },
+                  { name: 'AI Fraud Detection', href: '/ai-fraud-detection/' },
+                  { name: 'AI Recommendation Engine', href: '/ai-recommendation-engine/' },
                 ].map((app) => (
                   <Link key={app.href} href={app.href} className="px-3 py-1.5 rounded-lg bg-purple-600/20 text-purple-300 text-xs hover:bg-purple-600/30 transition-colors">
                     {app.name}
@@ -1336,13 +1336,13 @@ export default function HomePage() {
               <h3 className="text-lg font-bold text-white mb-4">💰 Money &amp; FinOps</h3>
               <div className="flex flex-wrap gap-2">
                 {[
-                  {{ name: 'ROI Calculator', href: '/roi-calc/' }},
-                  {{ name: 'Token Cost', href: '/token-cost/' }},
-                  {{ name: 'FinOps Autopilot', href: '/finops-autopilot/' }},
-                  {{ name: 'Cloud Waste', href: '/cloud-waste/' }},
-                  {{ name: 'Pricing Calculator', href: '/pricing-calculator/' }},
-                  {{ name: 'FinOps Estimator', href: '/finops-estimator/' }},
-                  {{ name: 'AI Cloud Cost Opt.', href: '/ai-first-cloud-cost-optimization/' }},
+                  { name: 'ROI Calculator', href: '/roi-calc/' },
+                  { name: 'Token Cost', href: '/token-cost/' },
+                  { name: 'FinOps Autopilot', href: '/finops-autopilot/' },
+                  { name: 'Cloud Waste', href: '/cloud-waste/' },
+                  { name: 'Pricing Calculator', href: '/pricing-calculator/' },
+                  { name: 'FinOps Estimator', href: '/finops-estimator/' },
+                  { name: 'AI Cloud Cost Opt.', href: '/ai-first-cloud-cost-optimization/' },
                 ].map((app) => (
                   <Link key={app.href} href={app.href} className="px-3 py-1.5 rounded-lg bg-green-600/20 text-green-300 text-xs hover:bg-green-600/30 transition-colors">
                     {app.name}
@@ -1354,12 +1354,12 @@ export default function HomePage() {
               <h3 className="text-lg font-bold text-white mb-4">🔧 Ops &amp; Incidents</h3>
               <div className="flex flex-wrap gap-2">
                 {[
-                  {{ name: 'Incident Cost', href: '/incident-cost/' }},
-                  {{ name: 'AI Incident Commander', href: '/zion-ai-incident-commander/' }},
-                  {{ name: 'Change Risk', href: '/change-risk/' }},
-                  {{ name: 'Ops Runbook AI', href: '/ops-runbook-ai/' }},
-                  {{ name: 'Agents Monitoring', href: '/agents-monitoring/' }},
-                  {{ name: 'SLA Calculator', href: '/sla-calculator/' }},
+                  { name: 'Incident Cost', href: '/incident-cost/' },
+                  { name: 'AI Incident Commander', href: '/zion-ai-incident-commander/' },
+                  { name: 'Change Risk', href: '/change-risk/' },
+                  { name: 'Ops Runbook AI', href: '/ops-runbook-ai/' },
+                  { name: 'Agents Monitoring', href: '/agents-monitoring/' },
+                  { name: 'SLA Calculator', href: '/sla-calculator/' },
                 ].map((app) => (
                   <Link key={app.href} href={app.href} className="px-3 py-1.5 rounded-lg bg-red-600/20 text-red-300 text-xs hover:bg-red-600/30 transition-colors">
                     {app.name}
@@ -1371,13 +1371,13 @@ export default function HomePage() {
               <h3 className="text-lg font-bold text-white mb-4">🛡️ Governance &amp; Security</h3>
               <div className="flex flex-wrap gap-2">
                 {[
-                  {{ name: 'AI Governance Checklist', href: '/ai-governance-checklist/' }},
-                  {{ name: 'AI Compliance Auditor', href: '/zion-ai-compliance-auditor/' }},
-                  {{ name: 'Security Scanning', href: '/security-scanning/' }},
-                  {{ name: 'Identity Management', href: '/identity-management/' }},
-                  {{ name: 'Prompt Shield', href: '/prompt-shield/' }},
-                  {{ name: 'Secret Notes', href: '/secret-notes/' }},
-                  {{ name: 'AI Tender Scout', href: '/ai-tender-scout/' }},
+                  { name: 'AI Governance Checklist', href: '/ai-governance-checklist/' },
+                  { name: 'AI Compliance Auditor', href: '/zion-ai-compliance-auditor/' },
+                  { name: 'Security Scanning', href: '/security-scanning/' },
+                  { name: 'Identity Management', href: '/identity-management/' },
+                  { name: 'Prompt Shield', href: '/prompt-shield/' },
+                  { name: 'Secret Notes', href: '/secret-notes/' },
+                  { name: 'AI Tender Scout', href: '/ai-tender-scout/' },
                 ].map((app) => (
                   <Link key={app.href} href={app.href} className="px-3 py-1.5 rounded-lg bg-amber-600/20 text-amber-300 text-xs hover:bg-amber-600/30 transition-colors">
                     {app.name}
@@ -1389,14 +1389,14 @@ export default function HomePage() {
               <h3 className="text-lg font-bold text-white mb-4">📡 Field &amp; Support</h3>
               <div className="flex flex-wrap gap-2">
                 {[
-                  {{ name: 'Field Dispatch', href: '/field-dispatch/' }},
-                  {{ name: 'Parts Desk', href: '/parts-desk/' }},
-                  {{ name: 'Warranty Lens', href: '/warranty-lens/' }},
-                  {{ name: 'AI Lead Generator', href: '/zion-ai-lead-generator/' }},
-                  {{ name: 'Rapid Outreach', href: '/rapid-outreach/' }},
-                  {{ name: 'Sales Lead Gen Suite', href: '/sales-leadgen-suite/' }},
-                  {{ name: 'Customer Success', href: '/customer-success/' }},
-                  {{ name: 'AI CRM Integration', href: '/zion-ai-crm-integration/' }},
+                  { name: 'Field Dispatch', href: '/field-dispatch/' },
+                  { name: 'Parts Desk', href: '/parts-desk/' },
+                  { name: 'Warranty Lens', href: '/warranty-lens/' },
+                  { name: 'AI Lead Generator', href: '/zion-ai-lead-generator/' },
+                  { name: 'Rapid Outreach', href: '/rapid-outreach/' },
+                  { name: 'Sales Lead Gen Suite', href: '/sales-leadgen-suite/' },
+                  { name: 'Customer Success', href: '/customer-success/' },
+                  { name: 'AI CRM Integration', href: '/zion-ai-crm-integration/' },
                 ].map((app) => (
                   <Link key={app.href} href={app.href} className="px-3 py-1.5 rounded-lg bg-blue-600/20 text-blue-300 text-xs hover:bg-blue-600/30 transition-colors">
                     {app.name}
@@ -1408,10 +1408,10 @@ export default function HomePage() {
               <h3 className="text-lg font-bold text-white mb-4">📋 Governance &amp; Bids</h3>
               <div className="flex flex-wrap gap-2">
                 {[
-                  {{ name: 'Licitação Radar', href: '/licitacao-radar/' }},
-                  {{ name: 'RFP Readiness', href: '/rfp-readiness/' }},
-                  {{ name: 'Edital Desk', href: '/edital-desk/' }},
-                  {{ name: 'AI Tender Scout', href: '/ai-tender-scout/' }},
+                  { name: 'Licitação Radar', href: '/licitacao-radar/' },
+                  { name: 'RFP Readiness', href: '/rfp-readiness/' },
+                  { name: 'Edital Desk', href: '/edital-desk/' },
+                  { name: 'AI Tender Scout', href: '/ai-tender-scout/' },
                 ].map((app) => (
                   <Link key={app.href} href={app.href} className="px-3 py-1.5 rounded-lg bg-cyan-600/20 text-cyan-300 text-xs hover:bg-cyan-600/30 transition-colors">
                     {app.name}
@@ -1460,7 +1460,7 @@ export default function HomePage() {
             <p className="text-sm text-slate-500 mt-3">35,000+ services | 60+ interlinked apps | 500+ GitHub repositories</p>
           </div>
         </div>
-      </section></section>
+      </section>
 
 
       {/* ── Free Tools & Interactive Utilities — {serviceCount}+-service catalog ── */}
