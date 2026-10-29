@@ -75,3 +75,15 @@ test('untrusted Git filenames are safe in Markdown step summaries',()=>{
     assert.match(out.summary,/a__bad_\.tsx/);
   }finally{cleanup(dir);}
 });
+
+test('all affected paths remain listed when sample markers are capped',()=>{
+  const dir=fixture({
+    'app/a.tsx':Array(110).fill('<<<<<<< HEAD').join('\n')+'\n',
+    'app/b.tsx':'>>>>>>> branch\n',
+  });
+  try {const r=evaluate(dir);
+    assert.equal(r.markerCount,111);assert.equal(r.samples.length,100);
+    assert.deepEqual(r.affectedSourcePaths,['app/a.tsx','app/b.tsx']);
+    assert.equal(r.affectedPathsTruncated,false);
+  }finally{cleanup(dir);}
+});
