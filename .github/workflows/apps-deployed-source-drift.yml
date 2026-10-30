@@ -20,7 +20,8 @@ permissions:
   issues: write
 
 concurrency:
-  group: apps-deployed-source-drift
+  # An ignored publisher completion must not cancel a pending production comparison.
+  group: apps-deployed-source-drift-${{ github.event_name == 'workflow_run' && github.event.workflow_run.conclusion != 'success' && github.run_id || 'eligible' }}
   cancel-in-progress: true
 
 jobs:

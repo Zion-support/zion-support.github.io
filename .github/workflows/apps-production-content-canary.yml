@@ -4,6 +4,7 @@ name: Apps production content canary
   workflow_run:
     workflows:
       - Continuous Pages Deploy
+      - Simple Static Deploy
     types: [completed]
   push:
     branches: [main]

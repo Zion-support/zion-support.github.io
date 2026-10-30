@@ -31,7 +31,7 @@ jobs:
           grep -Fq "cron: '0 3 * * *'" "$f"
           grep -Fq "cron: '0 11 * * *'" "$f"
           grep -Fq "cron: '0 19 * * *'" "$f"
-          grep -Fq 'token: ${{ github.token }}' "$f"
+          grep -Fq 'token: $''{{ github.token }}' "$f"
           grep -Fq 'OPENROUTER_API_KEY' "$f"
           grep -Fq 'GitHub Pages' "$f"
           grep -Fq 'SKIP_ADVANCED_AI' "$f"
