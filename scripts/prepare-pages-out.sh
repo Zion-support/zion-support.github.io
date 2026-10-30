@@ -27,6 +27,10 @@ node scripts/render-app-verification-guides.cjs out
 node scripts/test-app-verification-guides.cjs out
 node scripts/render-agent-risk-guides.cjs out
 node scripts/render-finops-scenario.cjs out --pages-only
+node scripts/render-roi-baseline.cjs out
+node scripts/test-roi-baseline.cjs
+node scripts/render-finops-scenario.cjs out --home-only
+node scripts/render-apps-directory.cjs out
 # Override public/_redirects (may be a stale 37MB next-build auto-gen monster
 # with 550K+ service-slug rules and NO entries for canonical doc routes) with the
 # curated root _redirects that has explicit 200 rules for all money-path doc pages.
@@ -379,3 +383,4 @@ python3 scripts/test-free-discovery-guard.py
 assert_public_entry_content
 
 echo "Prepared out ($(find out -type f | wc -l) files)"
+

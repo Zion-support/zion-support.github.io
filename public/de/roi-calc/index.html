@@ -1,1 +1,55 @@
-<!doctype html><html lang="de"><head><meta charset="utf-8"><title>Werkzeuge — Zion Tech Group</title></head><body><main id="main"><h1>Werkzeuge</h1><p>Demnächst verfügbar.</p><!--finops-scenario:start--><aside class="card finops-promotion" data-finops-promotion="2026-10-09-finops-scenario-v1"><h2>Cloud-Kostenpiloten mit transparenten Annahmen bewerten</h2><p>Vergleichen Sie ein Cloud-Kostenszenario vor einer Zusage. Geben Sie eigene USD-Annahmen ein; dieser lokale Rechner greift nicht auf Cloud-Konten zu.</p><p><a href="/de/apps/finops-scenario-estimator.html">FinOps-Szenario-Rechner</a> · <a href="/de/apps/finops-pilot-guide.html">Einen messbaren FinOps-Piloten planen</a></p></aside><!--finops-scenario:end--></main></body></html>
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rechner für manuelle Arbeitskosten — Zion Tech Group</title>
+<meta name="description" content="Schätzen Sie die monatlichen und jährlichen Kosten eines manuellen Prozesses, bevor Sie Automatisierungsoptionen vergleichen. Geben Sie Ihre Stunden und die Vollkosten pro Stunde ein, um eine Ausgangsbasis zu erstellen.">
+<link rel="canonical" href="https://ziontechgroup.com/de/roi-calc/">
+<link rel="alternate" hreflang="en" href="https://ziontechgroup.com/roi-calc/">
+<link rel="alternate" hreflang="pt-BR" href="https://ziontechgroup.com/pt/roi-calc/">
+<link rel="alternate" hreflang="es" href="https://ziontechgroup.com/es/roi-calc/">
+<link rel="alternate" hreflang="fr" href="https://ziontechgroup.com/fr/roi-calc/">
+<link rel="alternate" hreflang="de" href="https://ziontechgroup.com/de/roi-calc/">
+<link rel="alternate" hreflang="x-default" href="https://ziontechgroup.com/roi-calc/">
+<link rel="stylesheet" href="/assets/css/discovery.css">
+<style>
+.roi-hero{padding:12px 0 8px}.roi-eyebrow{font-weight:700;color:#334e72}
+.roi-hero h1{font-size:clamp(1.9rem,5vw,3rem);line-height:1.15;max-width:24ch}
+.roi-intro{font-size:1.12rem;max-width:70ch}.roi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:20px;align-items:start}
+.roi-grid>*{min-width:0}.roi-grid form,.roi-grid>.card{margin-top:0}.roi-grid h2{margin-top:0}
+.roi-note{font-size:.95rem;color:#40516a}.roi-page{overflow-wrap:anywhere}
+#ops-result{min-height:92px}#ops-result dt{font-weight:600;color:#40516a}#ops-result dd{font-size:clamp(1.3rem,4vw,1.9rem);font-weight:750;margin:4px 0 16px;color:#172033}
+.roi-error:empty{display:none}.roi-error{color:#9b1c20;font-weight:650;margin-top:14px}
+.roi-links .card{margin:0}.roi-links h3{margin-top:0}.roi-formula{font-weight:650}
+@media print{.roi-links{display:none}.roi-grid{display:block}#ops-result{min-height:0}}
+</style>
+</head>
+<body class="roi-page" data-roi-baseline="roi-baseline-2026-10-30-v1">
+<a class="skip" href="#main">Zum Inhalt springen</a>
+<header><nav aria-label="App-Netzwerk"><a href="/de/">Startseite</a><a href="/de/apps/">App-Netzwerk</a><a href="/de/discovery/">Kostenloses Discovery</a></nav><nav aria-label="Sprache des Rechners"><a lang="en" hreflang="en" href="/roi-calc/">English</a><a lang="pt-BR" hreflang="pt-BR" href="/pt/roi-calc/">Português</a><a lang="es" hreflang="es" href="/es/roi-calc/">Español</a><a lang="fr" hreflang="fr" href="/fr/roi-calc/">Français</a><a lang="de" hreflang="de" href="/de/roi-calc/" aria-current="page">Deutsch</a></nav></header>
+<main id="main">
+<section class="roi-hero"><p class="roi-eyebrow">ROI-Planung · Lokales Werkzeug</p><h1>Rechner für manuelle Arbeitskosten</h1><p class="roi-intro">Schätzen Sie die monatlichen und jährlichen Kosten eines manuellen Prozesses, bevor Sie Automatisierungsoptionen vergleichen. Geben Sie Ihre Stunden und die Vollkosten pro Stunde ein, um eine Ausgangsbasis zu erstellen.</p></section>
+<div class="roi-grid">
+<form id="ops-form" data-kind="roi" novalidate aria-labelledby="roi-input-title">
+<h2 id="roi-input-title">1. Legen Sie Ihre Ausgangsbasis fest</h2><p class="roi-note">Die Anfangswerte sind ein Beispiel. Ersetzen Sie sie durch Angaben zum selben Prozess und Team. Alle Geldbeträge sind in USD; es erfolgt keine Währungsumrechnung.</p>
+<label for="hours">Manuelle Arbeitsstunden pro Monat</label><input id="hours" type="number" value="40" min="0" max="1000000" step="any" required aria-describedby="roi-field-hint ops-error">
+<label for="rate">Vollkosten pro Stunde (USD)</label><input id="rate" type="number" value="45" min="0" max="1000000" step="any" required aria-describedby="roi-field-hint ops-error">
+<p class="roi-note" id="roi-field-hint">Jeder Wert muss zwischen 0 und 1.000.000 liegen. Dezimalwerte sind zulässig.</p>
+<button id="roi-calculate" type="submit" disabled>Arbeitskosten berechnen</button>
+<p id="ops-error" class="roi-error" role="alert"></p>
+</form>
+<section class="card" aria-labelledby="roi-result-title"><h2 id="roi-result-title">2. Geschätzte manuelle Arbeitskosten</h2><div id="ops-result" role="status" aria-live="polite" aria-atomic="true"></div><p class="roi-note">Die Berechnung erfolgt in diesem Browser-Tab. Dieses Werkzeug überträgt und speichert keine Eingaben, verbindet keine Konten, erstellt keine Bestellungen und versendet keine E-Mails.</p></section>
+</div>
+<section class="card"><h2>So wird die Schätzung berechnet</h2><p class="roi-formula">Monatliche manuelle Kosten = monatliche Stunden × Vollkosten pro Stunde.</p><p class="roi-formula">Jährliche manuelle Kosten = monatliche manuelle Kosten × 12, bei gleichbleibendem Arbeitsvolumen in jedem Monat.</p><h3>Ein einfaches Beispiel</h3><p>Bei 40 manuellen Arbeitsstunden pro Monat und 45,00 $ pro Stunde beträgt die Ausgangsbasis 1.800,00 $ pro Monat und 21.600,00 $ pro Jahr.</p><p>Dies ist der geschätzte Wert der aktuellen Arbeit, keine gemessene Einsparung oder Kapitalrendite. Eine Renditeberechnung erfordert zusätzlich die tatsächlich frei werdende Zeit, Einführungs- und Betriebskosten sowie einen Vergleichszeitraum. Frei werdende Zeit senkt nicht automatisch die Personalkosten und führt nicht automatisch zu zahlungswirksamen Einsparungen.</p></section>
+<section><h2>Erstellen Sie eine überprüfbare Ausgangsbasis</h2><ol><li>Verwenden Sie aktuelle Zeitaufzeichnungen oder eine kleine gemessene Stichprobe; halten Sie fest, welche Aufgaben und Personen einbezogen werden.</li><li>Verwenden Sie Vollkosten pro Stunde, die alle zu vergleichenden Kosten enthalten. Behalten Sie denselben Umfang und dieselbe Währung bei.</li><li>Dokumentieren Sie diese Annahmen, erproben Sie eine kleine Änderung und vergleichen Sie anschließend den tatsächlichen Arbeitsaufwand.</li></ol></section>
+<section class="roi-links"><h2>Mit einem verbundenen Planungswerkzeug fortfahren</h2><div class="roi-grid"><article class="card"><h3><a href="/de/apps/finops-scenario-estimator.html">FinOps-Szenariorechner</a></h3><p>Vergleichen Sie ein Cloud-Kostenszenario mit eigenen Annahmen zu Reduzierung, Betrieb und Einführung.</p></article>
+<article class="card"><h3><a href="/de/apps/finops-pilot-guide.html">Einen messbaren FinOps-Piloten planen</a></h3><p>Legen Sie Ausgangsbasis, Nachweise und Prüfkriterien fest, bevor Sie einen Piloten erweitern.</p></article>
+<article class="card"><h3><a href="/de/apps/network.html">Karte des App-Netzwerks</a></h3><p>Wählen Sie einen praktischen Weg für Automatisierung, Außendienst, Kosten oder Betrieb.</p></article>
+<article class="card"><h3><a href="/de/apps/app-verification-guide.html">Ein Werkzeug vor dem Piloten prüfen</a></h3><p>Prüfen Sie anhand eines kleinen Beispiels ohne sensible Daten, was eine Ressource leistet.</p></article></div></section>
+<noscript><p class="card">Aktivieren Sie JavaScript für die Berechnung. Sie können auch die monatlichen Stunden mit den Stundenkosten und das Ergebnis anschließend mit 12 multiplizieren.</p></noscript>
+</main>
+<footer><nav aria-label="App-Netzwerk"><a href="/de/">Startseite</a><a href="/de/apps/">App-Netzwerk</a><a href="/de/discovery/">Kostenloses Discovery</a></nav><p><a href="https://github.com/Zion-support/zion-support.github.io/blob/main/scripts/render-roi-baseline.cjs">Quellcode</a> · Zion Tech Group</p></footer>
+<script id="ops-copy" type="application/json">{"locale":"de-DE","labels":["Manuelle Arbeitsstunden pro Monat","Vollkosten pro Stunde (USD)"],"outputs":["Monatliche manuelle Kosten (USD)","Jährliche manuelle Kosten (USD)"],"error":"Geben Sie in beiden Feldern eine Zahl zwischen 0 und 1.000.000 ein. Leere Felder sowie negative oder nicht endliche Werte können nicht berechnet werden.","pending":"Die Annahmen wurden geändert. Berechnen Sie erneut, um das Ergebnis zu aktualisieren."}</script>
+<script src="/assets/js/operational-tools.js" defer></script>
+</body>
+</html>

@@ -1,5 +1,5 @@
 {
-  "release": "apps-directory-2026-10-30-v5",
+  "release": "apps-directory-2026-10-30-v6",
   "categories": [
     "plan",
     "productivity",
@@ -78,6 +78,7 @@
           "From a cost question to a test",
           "Compare your assumptions, plan a measurement window and record what must be verified.",
           [
+            "manual-cost",
             "finops",
             "finops-guide",
             "verification"
@@ -165,6 +166,7 @@
           "Da dúvida sobre custos ao teste",
           "Compare premissas, planeje o período de medição e registre o que precisa ser verificado.",
           [
+            "manual-cost",
             "finops",
             "finops-guide",
             "verification"
@@ -252,6 +254,7 @@
           "De una pregunta de costes a una prueba",
           "Compare supuestos, planifique el periodo de medición y registre lo que debe verificarse.",
           [
+            "manual-cost",
             "finops",
             "finops-guide",
             "verification"
@@ -339,6 +342,7 @@
           "D’une question de coûts à un test",
           "Comparez les hypothèses, planifiez la période de mesure et consignez les vérifications nécessaires.",
           [
+            "manual-cost",
             "finops",
             "finops-guide",
             "verification"
@@ -426,6 +430,7 @@
           "Von der Kostenfrage zum Test",
           "Vergleichen Sie Annahmen, planen Sie den Messzeitraum und halten Sie offene Prüfpunkte fest.",
           [
+            "manual-cost",
             "finops",
             "finops-guide",
             "verification"
@@ -623,6 +628,36 @@
         "de": {
           "title": "E-Mail-Entwurf",
           "description": "Erstellen Sie einen vorlagenbasierten Entwurf mit Ihrem Kontext, prüfen Sie ihn und versenden Sie ihn selbst."
+        }
+      }
+    },
+    {
+      "id": "manual-cost",
+      "category": "costs",
+      "kind": "tool",
+      "location": "site",
+      "slug": "roi-calc/",
+      "related": "finops",
+      "text": {
+        "en": {
+          "title": "Manual-work cost calculator",
+          "description": "Estimate the monthly and annual cost of a manual process from hours and hourly cost; use it as a baseline before a measured pilot."
+        },
+        "pt": {
+          "title": "Calculadora de custo do trabalho manual",
+          "description": "Estime o custo mensal e anual de um processo manual com horas e custo por hora; use essa referência antes de um piloto mensurável."
+        },
+        "es": {
+          "title": "Calculadora de coste del trabajo manual",
+          "description": "Estime el coste mensual y anual de un proceso manual a partir de las horas y su coste; úselo como referencia antes de un piloto medible."
+        },
+        "fr": {
+          "title": "Calculateur du coût du travail manuel",
+          "description": "Estimez le coût mensuel et annuel d’un processus manuel à partir des heures et du coût horaire, avant de mesurer les résultats d’un pilote."
+        },
+        "de": {
+          "title": "Rechner für manuelle Arbeitskosten",
+          "description": "Schätzen Sie die monatlichen und jährlichen Kosten eines manuellen Prozesses anhand von Stunden und Stundensatz als Ausgangswert für einen messbaren Piloten."
         }
       }
     },

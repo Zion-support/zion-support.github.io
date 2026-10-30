@@ -1,1 +1,55 @@
-<!doctype html><html lang="fr"><head><meta charset="utf-8"><title>Outils — Zion Tech Group</title></head><body><main id="main"><h1>Outils</h1><p>Bientôt disponible.</p><!--finops-scenario:start--><aside class="card finops-promotion" data-finops-promotion="2026-10-09-finops-scenario-v1"><h2>Estimez un pilote de coûts cloud avec des hypothèses transparentes</h2><p>Comparez un scénario de coûts cloud avant de vous engager. Saisissez vos hypothèses en USD ; ce calculateur local ne consulte aucun compte cloud.</p><p><a href="/fr/apps/finops-scenario-estimator.html">Estimateur de scénarios FinOps</a> · <a href="/fr/apps/finops-pilot-guide.html">Préparer un pilote FinOps mesurable</a></p></aside><!--finops-scenario:end--></main></body></html>
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Calculateur du coût du travail manuel — Zion Tech Group</title>
+<meta name="description" content="Estimez le coût mensuel et annuel d’un processus manuel avant de comparer des options d’automatisation. Indiquez vos heures et le coût horaire total pour établir une référence.">
+<link rel="canonical" href="https://ziontechgroup.com/fr/roi-calc/">
+<link rel="alternate" hreflang="en" href="https://ziontechgroup.com/roi-calc/">
+<link rel="alternate" hreflang="pt-BR" href="https://ziontechgroup.com/pt/roi-calc/">
+<link rel="alternate" hreflang="es" href="https://ziontechgroup.com/es/roi-calc/">
+<link rel="alternate" hreflang="fr" href="https://ziontechgroup.com/fr/roi-calc/">
+<link rel="alternate" hreflang="de" href="https://ziontechgroup.com/de/roi-calc/">
+<link rel="alternate" hreflang="x-default" href="https://ziontechgroup.com/roi-calc/">
+<link rel="stylesheet" href="/assets/css/discovery.css">
+<style>
+.roi-hero{padding:12px 0 8px}.roi-eyebrow{font-weight:700;color:#334e72}
+.roi-hero h1{font-size:clamp(1.9rem,5vw,3rem);line-height:1.15;max-width:24ch}
+.roi-intro{font-size:1.12rem;max-width:70ch}.roi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:20px;align-items:start}
+.roi-grid>*{min-width:0}.roi-grid form,.roi-grid>.card{margin-top:0}.roi-grid h2{margin-top:0}
+.roi-note{font-size:.95rem;color:#40516a}.roi-page{overflow-wrap:anywhere}
+#ops-result{min-height:92px}#ops-result dt{font-weight:600;color:#40516a}#ops-result dd{font-size:clamp(1.3rem,4vw,1.9rem);font-weight:750;margin:4px 0 16px;color:#172033}
+.roi-error:empty{display:none}.roi-error{color:#9b1c20;font-weight:650;margin-top:14px}
+.roi-links .card{margin:0}.roi-links h3{margin-top:0}.roi-formula{font-weight:650}
+@media print{.roi-links{display:none}.roi-grid{display:block}#ops-result{min-height:0}}
+</style>
+</head>
+<body class="roi-page" data-roi-baseline="roi-baseline-2026-10-30-v1">
+<a class="skip" href="#main">Aller au contenu</a>
+<header><nav aria-label="Réseau d’apps"><a href="/fr/">Accueil</a><a href="/fr/apps/">Réseau d’apps</a><a href="/fr/discovery/">Discovery gratuit</a></nav><nav aria-label="Langue du calculateur"><a lang="en" hreflang="en" href="/roi-calc/">English</a><a lang="pt-BR" hreflang="pt-BR" href="/pt/roi-calc/">Português</a><a lang="es" hreflang="es" href="/es/roi-calc/">Español</a><a lang="fr" hreflang="fr" href="/fr/roi-calc/" aria-current="page">Français</a><a lang="de" hreflang="de" href="/de/roi-calc/">Deutsch</a></nav></header>
+<main id="main">
+<section class="roi-hero"><p class="roi-eyebrow">Préparation du ROI · Outil local</p><h1>Calculateur du coût du travail manuel</h1><p class="roi-intro">Estimez le coût mensuel et annuel d’un processus manuel avant de comparer des options d’automatisation. Indiquez vos heures et le coût horaire total pour établir une référence.</p></section>
+<div class="roi-grid">
+<form id="ops-form" data-kind="roi" novalidate aria-labelledby="roi-input-title">
+<h2 id="roi-input-title">1. Définissez votre référence</h2><p class="roi-note">Les valeurs initiales sont un exemple. Remplacez-les par des données portant sur le même processus et la même équipe. Tous les montants sont en USD ; aucune conversion de devise n’est effectuée.</p>
+<label for="hours">Heures de travail manuel par mois</label><input id="hours" type="number" value="40" min="0" max="1000000" step="any" required aria-describedby="roi-field-hint ops-error">
+<label for="rate">Coût horaire total (USD)</label><input id="rate" type="number" value="45" min="0" max="1000000" step="any" required aria-describedby="roi-field-hint ops-error">
+<p class="roi-note" id="roi-field-hint">Chaque valeur doit être comprise entre 0 et 1 000 000. Les décimales sont acceptées.</p>
+<button id="roi-calculate" type="submit" disabled>Calculer le coût du travail</button>
+<p id="ops-error" class="roi-error" role="alert"></p>
+</form>
+<section class="card" aria-labelledby="roi-result-title"><h2 id="roi-result-title">2. Coût estimé du travail manuel</h2><div id="ops-result" role="status" aria-live="polite" aria-atomic="true"></div><p class="roi-note">Le calcul s’exécute dans cet onglet du navigateur. Cet outil ne transmet ni ne stocke les données saisies, ne connecte aucun compte, ne crée aucune commande et n’envoie aucun e-mail.</p></section>
+</div>
+<section class="card"><h2>Comment l’estimation est calculée</h2><p class="roi-formula">Coût manuel mensuel = heures mensuelles × coût horaire total.</p><p class="roi-formula">Coût manuel annuel = coût manuel mensuel × 12, en supposant le même volume de travail chaque mois.</p><h3>Un exemple simple</h3><p>Pour 40 heures de travail manuel par mois à 45,00 $US de l’heure, la référence est de 1 800,00 $US par mois et de 21 600,00 $US par an.</p><p>Il s’agit de la valeur estimée du travail actuel, et non d’économies mesurées ou d’un retour sur investissement. Un calcul de rendement nécessite aussi le temps réellement libéré, les coûts de mise en œuvre et d’exploitation, ainsi qu’une période de comparaison. Le temps libéré ne réduit pas automatiquement la masse salariale et ne crée pas nécessairement d’économies de trésorerie.</p></section>
+<section><h2>Préparez une référence vérifiable</h2><ol><li>Utilisez des relevés de temps récents ou un petit échantillon mesuré ; notez les tâches et les personnes incluses.</li><li>Utilisez un coût horaire total comprenant les coûts que vous souhaitez comparer. Conservez le même périmètre et la même devise.</li><li>Consignez ces hypothèses, testez un petit changement, puis comparez le travail réellement effectué.</li></ol></section>
+<section class="roi-links"><h2>Poursuivez avec un outil de planification associé</h2><div class="roi-grid"><article class="card"><h3><a href="/fr/apps/finops-scenario-estimator.html">Estimateur de scénarios FinOps</a></h3><p>Comparez un scénario de coûts cloud avec vos propres hypothèses de réduction, d’exploitation et de mise en œuvre.</p></article>
+<article class="card"><h3><a href="/fr/apps/finops-pilot-guide.html">Planifiez un pilote FinOps mesurable</a></h3><p>Définissez une référence, les preuves et les critères de revue avant d’étendre un pilote.</p></article>
+<article class="card"><h3><a href="/fr/apps/network.html">Carte du réseau d’apps</a></h3><p>Choisissez un parcours pratique pour l’automatisation, les interventions, les coûts ou les opérations.</p></article>
+<article class="card"><h3><a href="/fr/apps/app-verification-guide.html">Vérifiez un outil avant le pilote</a></h3><p>Vérifiez ce que fait une ressource avec un petit exemple sans données sensibles.</p></article></div></section>
+<noscript><p class="card">Activez JavaScript pour calculer. Vous pouvez aussi multiplier les heures mensuelles par le coût horaire, puis multiplier le résultat par 12.</p></noscript>
+</main>
+<footer><nav aria-label="Réseau d’apps"><a href="/fr/">Accueil</a><a href="/fr/apps/">Réseau d’apps</a><a href="/fr/discovery/">Discovery gratuit</a></nav><p><a href="https://github.com/Zion-support/zion-support.github.io/blob/main/scripts/render-roi-baseline.cjs">Code source</a> · Zion Tech Group</p></footer>
+<script id="ops-copy" type="application/json">{"locale":"fr-FR","labels":["Heures de travail manuel par mois","Coût horaire total (USD)"],"outputs":["Coût manuel mensuel (USD)","Coût manuel annuel (USD)"],"error":"Saisissez un nombre compris entre 0 et 1 000 000 dans chaque champ. Les champs vides et les valeurs négatives ou non finies ne peuvent pas être calculés.","pending":"Les hypothèses ont changé. Relancez le calcul pour actualiser le résultat."}</script>
+<script src="/assets/js/operational-tools.js" defer></script>
+</body>
+</html>

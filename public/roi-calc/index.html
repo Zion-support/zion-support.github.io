@@ -1,60 +1,55 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<!doctype html>
+<html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>ROI Calc · Zion Tech Group</title>
-<meta name="description" content="Compare horas manuais contra os planos oficiais Zion: Free Discovery, Consulting $499, Starter $2.500."/>
-<link rel="canonical" href="https://ziontechgroup.com/roi-calc/"/>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Manual workload cost calculator — Zion Tech Group</title>
+<meta name="description" content="Estimate the monthly and annual cost of a manual process before comparing automation options. Enter your own hours and loaded hourly cost to establish a baseline.">
+<link rel="canonical" href="https://ziontechgroup.com/roi-calc/">
+<link rel="alternate" hreflang="en" href="https://ziontechgroup.com/roi-calc/">
+<link rel="alternate" hreflang="pt-BR" href="https://ziontechgroup.com/pt/roi-calc/">
+<link rel="alternate" hreflang="es" href="https://ziontechgroup.com/es/roi-calc/">
+<link rel="alternate" hreflang="fr" href="https://ziontechgroup.com/fr/roi-calc/">
+<link rel="alternate" hreflang="de" href="https://ziontechgroup.com/de/roi-calc/">
+<link rel="alternate" hreflang="x-default" href="https://ziontechgroup.com/roi-calc/">
+<link rel="stylesheet" href="/assets/css/discovery.css">
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:system-ui,sans-serif;background:#0b1220;color:#e6f0ff;line-height:1.5}
-.wrap{max-width:880px;margin:0 auto;padding:32px 20px}
-nav a,footer a{color:#c4b5fd;margin-right:12px;text-decoration:none}
-h1{font-size:2rem;background:linear-gradient(135deg,#a78bfa,#f472b6);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin:16px 0}
-label{display:block;margin:12px 0 4px;color:#94a3b8}
-input{width:100%;padding:10px;border-radius:8px;border:1px solid #334155;background:#0f172a;color:#fff}
-button,.buy{display:inline-block;margin-top:16px;padding:12px 20px;border:0;border-radius:10px;background:linear-gradient(135deg,#7c3aed,#db2777);color:#fff;font-weight:700;cursor:pointer;text-decoration:none}
-.out{margin-top:24px;padding:20px;border:1px solid rgba(124,58,237,.3);border-radius:12px;background:#0f172a}
-.ok{color:#34d399}
+.roi-hero{padding:12px 0 8px}.roi-eyebrow{font-weight:700;color:#334e72}
+.roi-hero h1{font-size:clamp(1.9rem,5vw,3rem);line-height:1.15;max-width:24ch}
+.roi-intro{font-size:1.12rem;max-width:70ch}.roi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:20px;align-items:start}
+.roi-grid>*{min-width:0}.roi-grid form,.roi-grid>.card{margin-top:0}.roi-grid h2{margin-top:0}
+.roi-note{font-size:.95rem;color:#40516a}.roi-page{overflow-wrap:anywhere}
+#ops-result{min-height:92px}#ops-result dt{font-weight:600;color:#40516a}#ops-result dd{font-size:clamp(1.3rem,4vw,1.9rem);font-weight:750;margin:4px 0 16px;color:#172033}
+.roi-error:empty{display:none}.roi-error{color:#9b1c20;font-weight:650;margin-top:14px}
+.roi-links .card{margin:0}.roi-links h3{margin-top:0}.roi-formula{font-weight:650}
+@media print{.roi-links{display:none}.roi-grid{display:block}#ops-result{min-height:0}}
 </style>
 </head>
-<body>
-<div class="wrap">
-<nav><a href="/">Home</a><a href="/apps/">Apps</a><a href="/plans/">Plans</a><a href="/discovery/">Discovery</a><a href="/stack-audit/">Stack audit</a><a href="/agent-brief/">Agent brief</a></nav>
-<h1>ROI Calc</h1>
-<p>Quantas horas por mês o processo consome, e o que os planos oficiais Zion cobrem. Sem inventar preço de hardware.</p>
-<label>Horas manuais / mês</label>
-<input id="hours" type="number" value="20" min="1">
-<label>Custo carregado por hora (USD)</label>
-<input id="rate" type="number" value="45" min="1">
-<button type="button" onclick="run()">Calcular</button>
-<div class="out" id="out"></div>
-<p style="margin-top:24px"><a class="buy" href="/discovery/">Discovery grátis</a>
-<a class="buy" href="/plans/">Ver planos</a></p>
+<body class="roi-page" data-roi-baseline="roi-baseline-2026-10-30-v1">
+<a class="skip" href="#main">Skip to content</a>
+<header><nav aria-label="App network"><a href="/en/">Home</a><a href="/apps/">App network</a><a href="/discovery/">Free Discovery</a></nav><nav aria-label="Calculator language"><a lang="en" hreflang="en" href="/roi-calc/" aria-current="page">English</a><a lang="pt-BR" hreflang="pt-BR" href="/pt/roi-calc/">Português</a><a lang="es" hreflang="es" href="/es/roi-calc/">Español</a><a lang="fr" hreflang="fr" href="/fr/roi-calc/">Français</a><a lang="de" hreflang="de" href="/de/roi-calc/">Deutsch</a></nav></header>
+<main id="main">
+<section class="roi-hero"><p class="roi-eyebrow">ROI planning · Local tool</p><h1>Manual workload cost calculator</h1><p class="roi-intro">Estimate the monthly and annual cost of a manual process before comparing automation options. Enter your own hours and loaded hourly cost to establish a baseline.</p></section>
+<div class="roi-grid">
+<form id="ops-form" data-kind="roi" novalidate aria-labelledby="roi-input-title">
+<h2 id="roi-input-title">1. Define your baseline</h2><p class="roi-note">The starting values are an example. Replace them with figures for the same process and team. All amounts are in USD; no currency conversion is performed.</p>
+<label for="hours">Manual hours per month</label><input id="hours" type="number" value="40" min="0" max="1000000" step="any" required aria-describedby="roi-field-hint ops-error">
+<label for="rate">Loaded hourly cost (USD)</label><input id="rate" type="number" value="45" min="0" max="1000000" step="any" required aria-describedby="roi-field-hint ops-error">
+<p class="roi-note" id="roi-field-hint">Each value must be between 0 and 1,000,000. Decimals are accepted.</p>
+<button id="roi-calculate" type="submit" disabled>Calculate workload cost</button>
+<p id="ops-error" class="roi-error" role="alert"></p>
+</form>
+<section class="card" aria-labelledby="roi-result-title"><h2 id="roi-result-title">2. Estimated workload cost</h2><div id="ops-result" role="status" aria-live="polite" aria-atomic="true"></div><p class="roi-note">The calculation runs in this browser tab. This tool does not send or store inputs, connect accounts, create an order, or send email.</p></section>
 </div>
-<footer style="text-align:center;padding:24px"><a href="/contact/">Contato</a> · kleber@ziontechgroup.com</footer>
-<script>
-function run(){
-  var h=+document.getElementById('hours').value||0;
-  var r=+document.getElementById('rate').value||0;
-  var monthly=h*r;
-  var yearly=monthly*12;
-  var rec='Free Discovery — mapear o processo primeiro.';
-  if(monthly>=2500) rec='Starter $2.500 (uma automação) ou Growth $8.000/mês.';
-  else if(monthly>=499) rec='Consulting $499 para roadmap, depois Starter.';
-  document.getElementById('out').innerHTML='<p>Custo manual: <b class="ok">$'+monthly.toLocaleString()+'/mês</b> · $'+yearly.toLocaleString()+'/ano</p><p>'+rec+'</p><p>Official menu only: Free Discovery · Consulting $499 · Starter $2,500 · Growth $8,000/mo.</p>';
-}
-run();
-</script>
-<!-- ZION-APPS-NET:START -->
-
-<nav aria-label="Field Evidence Guide languages">
-  <a href="/apps/field-service-evidence-guide.html">EN</a>
-  <a href="/apps/field-service-evidence-guide.pt-br.html">PT-BR</a>
-  <a href="/apps/field-service-evidence-guide.es.html">ES</a>
-  <a href="/apps/field-service-evidence-guide.fr.html">FR</a>
-  <a href="/apps/field-service-evidence-guide.de.html">DE</a>
-</nav><section id="zion-apps-network" style="max-width:1000px;margin:40px auto 20px;padding:20px 22px;border:1px solid #cbd5e1;border-radius:14px;background:#f8fafc;color:#0f172a;font:15px/1.6 system-ui,sans-serif"><h2 style="margin:0 0 8px;font-size:20px;color:#0f172a">Zion Apps Network — every app, interlinked</h2><p style="margin:0 0 10px">Hubs: <a href="/apps/" style="color:#1d4ed8">Apps Network</a> · <a href="/apps/content-hub.html" style="color:#1d4ed8">Apps Content Hub (all batches &amp; spotlights)</a> · <a href="/apps/network.html" style="color:#1d4ed8">Network map</a> · <a href="/apps/finops-governance-suite.html" style="color:#1d4ed8">FinOps &amp; Governance Suite</a> · <a href="/zion-app-network/" style="color:#1d4ed8">GitHub app-network hub</a> · <a href="https://github.com/Zion-support" style="color:#1d4ed8">GitHub @Zion-support</a></p><div style="font-size:14px"><p><b>FinOps &amp; AI cost:</b> <a style="color:#1d4ed8" href="/ai-roi-tracker/">AI ROI Tracker</a> · <a style="color:#1d4ed8" href="/finops-estimator/">FinOps Estimator</a> · <a style="color:#1d4ed8" href="/llm-cost-calculator/">LLM Cost Calculator</a> · <a style="color:#1d4ed8" href="/roi-calc/">ROI Calculator</a> · <a style="color:#1d4ed8" href="/token-cost/">Token Cost Estimator</a></p><p><b>IT Ops &amp; DevOps:</b> <a style="color:#1d4ed8" href="/ai-smart-hands-scheduler/">AI Smart Hands Scheduler</a> · <a style="color:#1d4ed8" href="/incident-cost/">Incident Cost Calculator</a> · <a style="color:#1d4ed8" href="/incident-postmortem-writer/">Incident Postmortem Writer</a> · <a style="color:#1d4ed8" href="/incident-timeline-reconstructor/">Incident Timeline Reconstructor</a> · <a style="color:#1d4ed8" href="/kubernetes-linter/">Kubernetes Manifest Linter</a> · <a style="color:#1d4ed8" href="/patch-window-planner/">Patch Window Planner</a> · <a style="color:#1d4ed8" href="/sla-calculator/">SLA Calculator</a> · <a style="color:#1d4ed8" href="/site-uptime-watchdog/">Site Uptime Watchdog</a> · <a style="color:#1d4ed8" href="/stack-audit/">Stack Audit</a></p><p><b>Service desk &amp; support:</b> <a style="color:#1d4ed8" href="/ai-ticket-sentinel/">AI Ticket Sentinel — SLA breach watch</a> · <a style="color:#1d4ed8" href="/ai-ticket-triage/">AI Ticket Triage</a> · <a style="color:#1d4ed8" href="/maintenance-ticket-triage/">Maintenance Ticket Triage</a> · <a style="color:#1d4ed8" href="/support-ticket-triager/">Support Ticket Triager (bulk)</a></p><p><b>Security &amp; governance:</b> <a style="color:#1d4ed8" href="/ai-access-reviewer/">AI Access Reviewer</a> · <a style="color:#1d4ed8" href="/ai-governance-checklist/">AI Governance Checklist</a> · <a style="color:#1d4ed8" href="/ai-phishing-shield/">AI Phishing Shield</a> · <a style="color:#1d4ed8" href="/data-loss-sentinel/">Data Loss Sentinel</a> · <a style="color:#1d4ed8" href="/soc-analyst-copilot/">SOC Analyst Copilot</a> · <a style="color:#1d4ed8" href="/secrets-leak-scanner/">Secrets Leak Scanner</a> · <a style="color:#1d4ed8" href="/vendor-risk-assessor/">Vendor Risk Assessor</a></p><p><b>Sales &amp; partnerships:</b> <a style="color:#1d4ed8" href="/ai-lead-generation/">AI Lead Generation</a> · <a style="color:#1d4ed8" href="/churn-prediction-ai/">Churn Prediction AI</a> · <a style="color:#1d4ed8" href="/deal-coach-ai/">Deal Coach AI</a> · <a style="color:#1d4ed8" href="/edital-desk/">Edital Desk</a> · <a style="color:#1d4ed8" href="/lead-score-copilot/">Lead Score Copilot</a> · <a style="color:#1d4ed8" href="/outbound-sequencer-ai/">Outbound Sequencer AI</a> · <a style="color:#1d4ed8" href="/partner-referral-tracker/">Partner Referral Tracker</a> · <a style="color:#1d4ed8" href="/pricing-signal-radar/">Pricing Signal Radar</a> · <a style="color:#1d4ed8" href="/renewal-upsell-radar/">Renewal &amp; Upsell Radar</a> · <a style="color:#1d4ed8" href="/sales-call-analyzer/">Sales Call Analyzer</a> · <a style="color:#1d4ed8" href="/sales-forecast-ai/">Sales Forecast AI</a></p><p><b>Data &amp; analytics:</b> <a style="color:#1d4ed8" href="/ai-data-warehouse/">AI Data Warehouse Sizer</a> · <a style="color:#1d4ed8" href="/ai-readiness-assessment/">AI Readiness Assessment</a></p><p><b>Productivity:</b> <a style="color:#1d4ed8" href="/ai-meeting-notes-copilot/">AI Meeting Notes Copilot</a> · <a style="color:#1d4ed8" href="/prompt-library/">AI Prompt Library for IT Ops</a> · <a style="color:#1d4ed8" href="/agent-brief/">Agent Brief</a> · <a style="color:#1d4ed8" href="/free-ai-it-tools/">Free AI IT Tools</a></p><p><b>Batches &amp; spotlights:</b> <a style="color:#1d4ed8" href="/apps/content-hub.html">Apps Content Hub — all Zion apps, batches &amp; spotlights</a> · <a style="color:#1d4ed8" href="/apps/discovery-benefits.html">Free AI Discovery — Benefits</a> · <a style="color:#1d4ed8" href="/apps/field-service-data-sept-2026.html">Field Service Data Spotlight — September 2026</a> · <a style="color:#1d4ed8" href="/apps/finops-governance-suite.html">FinOps &amp; Governance Suite — free apps</a> · <a style="color:#1d4ed8" href="/apps/network.html">Zion AI App Network — Showcase</a> · <a style="color:#1d4ed8" href="/apps/october-2026-batch1.html">October 2026 Batch 1 — Security &amp; Trust AI</a> · <a style="color:#1d4ed8" href="/apps/october-2026-batch2.html">October 2026 Batch 2 — Growth &amp; Intelligence AI</a> · <a style="color:#1d4ed8" href="/apps/october-2026-batch3.html">October 2026 Batch 3 — Customer Experience &amp; Marketing AI</a> · <a style="color:#1d4ed8" href="/apps/october-2026-batch4.html">October 2026 App Showcase — Sales, HR, ITOps &amp; Energy AI</a> · <a style="color:#1d4ed8" href="/apps/october-2026-batch69.html">Apps Spotlight — October 2026 Batch 69</a> · <a style="color:#1d4ed8" href="/apps/october-2026-energy-sustainability.html">Energy &amp; Sustainability AI — October 2026</a> · <a style="color:#1d4ed8" href="/apps/september-2026-batch4.html">Apps Spotlight — September 2026 Batch 4</a> · <a style="color:#1d4ed8" href="/apps/spotlight-2026-10-03.html">Batch 65 Spotlight — Meeting &amp; Productivity AI</a> · <a style="color:#1d4ed8" href="/apps/spotlight-2026-10-03b.html">Batch 68 Spotlight — IT Ops Reliability AI</a> · <a style="color:#1d4ed8" href="/apps/spotlight-2026-10-04-discovery.html">Spotlight: Free AI Discovery — Oct 4, 2026</a> · <a style="color:#1d4ed8" href="/apps/spotlight-2026-10-04-network.html">October 2026 Spotlight</a> · <a style="color:#1d4ed8" href="/apps/spotlight-2026-10-04b.html">Apps Spotlight — Revenue &amp; Growth AI (Oct 2026)</a> · <a style="color:#1d4ed8" href="/apps/spotlight-2026-10-04c.html">Spotlight Oct 4, 2026 — Space Ops, Infrastructure, HR &amp; Energy AI</a> · <a style="color:#1d4ed8" href="/APP_NETWORK_SPOTLIGHT_OCT04_ENERGY_UTILITIES.html">Spotlight — Energy &amp; Utilities AI (Oct 4)</a> · <a style="color:#1d4ed8" href="/APP_NETWORK_SPOTLIGHT_OCT4_DEVSECOPS.html">Spotlight — DevSecOps &amp; AI Code Quality (Oct 4)</a> · <a style="color:#1d4ed8" href="/APP_NETWORK_SPOTLIGHT_OCT4_SPACE.html">Spotlight — Space &amp; Satellite Ops AI (Oct 4)</a> · <a style="color:#1d4ed8" href="/APP_NETWORK_SPOTLIGHT_SEP27_HEALTHCARE.html">Spotlight — Healthcare AI (Sep 27)</a> · <a style="color:#1d4ed8" href="/app-network-batch72-oct04.html">Batch 72 — Energy, HR &amp; ITOps AI</a> · <a style="color:#1d4ed8" href="/app-network-spotlight.html">App Network overview</a> · <a style="color:#1d4ed8" href="/app-network-spotlights.html">Spotlights &amp; Suites</a> · <a style="color:#1d4ed8" href="/app-network-spotlight-oct-2026.html">Spotlight — IT Ops Reliability AI (Oct 3)</a> · <a style="color:#1d4ed8" href="/APP_NETWORK_SPOTLIGHT_OCT4_HEALTHCARE.html">Spotlight — Healthcare &amp; Life Sciences AI (Oct 4)</a></p></div><p style="margin:12px 0 0"><a href="/discovery/" style="display:inline-block;background:#0a7d4f;color:#fff;padding:9px 16px;border-radius:999px;font-weight:700;text-decoration:none">🎯 Free AI Discovery — online, always free, results emailed instantly →</a></p></section>
-<!-- ZION-APPS-NET:END -->
-<!--finops-scenario:start--><aside class="card finops-promotion" data-finops-promotion="2026-10-09-finops-scenario-v1"><h2>Estimate a cloud-cost pilot with transparent assumptions</h2><p>Compare a cloud-cost scenario before committing. Enter your own USD assumptions; this local calculator does not inspect cloud accounts.</p><p><a href="/apps/finops-scenario-estimator.html">FinOps scenario estimator</a> · <a href="/apps/finops-pilot-guide.html">Plan a measurable FinOps pilot</a></p></aside><!--finops-scenario:end--></body></html>
+<section class="card"><h2>How the estimate is calculated</h2><p class="roi-formula">Monthly manual cost = monthly hours × loaded hourly cost.</p><p class="roi-formula">Annual manual cost = monthly manual cost × 12, assuming the same workload every month.</p><h3>A small example</h3><p>At 40 manual hours per month and $45.00 per hour, the baseline is $1,800.00 per month and $21,600.00 per year.</p><p>This is the estimated value of the current workload, not measured savings or a return on investment. A return calculation also needs the time actually released, implementation and ongoing costs, and a comparison period. Released time does not automatically reduce payroll or create cash savings.</p></section>
+<section><h2>Build a baseline you can review</h2><ol><li>Use recent time records or a small measured sample; record which tasks and team members are included.</li><li>Use a loaded hourly cost that includes the costs you intend to compare. Keep the scope and currency consistent.</li><li>Record these assumptions, test a small change and compare the actual workload afterward.</li></ol></section>
+<section class="roi-links"><h2>Continue with a connected planning tool</h2><div class="roi-grid"><article class="card"><h3><a href="/apps/finops-scenario-estimator.html">FinOps scenario estimator</a></h3><p>Compare a cloud-cost scenario using your own reduction, operating and implementation assumptions.</p></article>
+<article class="card"><h3><a href="/apps/finops-pilot-guide.html">Plan a measurable FinOps pilot</a></h3><p>Define a baseline, evidence and review criteria before expanding a pilot.</p></article>
+<article class="card"><h3><a href="/apps/network.html">App network map</a></h3><p>Choose a practical path for automation, field services, costs or operations.</p></article>
+<article class="card"><h3><a href="/apps/app-verification-guide.html">Verify a tool before a pilot</a></h3><p>Check what a resource does with a small, non-sensitive example.</p></article></div></section>
+<noscript><p class="card">Enable JavaScript to calculate. You can also multiply monthly hours by hourly cost, then multiply the result by 12.</p></noscript>
+</main>
+<footer><nav aria-label="App network"><a href="/en/">Home</a><a href="/apps/">App network</a><a href="/discovery/">Free Discovery</a></nav><p><a href="https://github.com/Zion-support/zion-support.github.io/blob/main/scripts/render-roi-baseline.cjs">Source code</a> · Zion Tech Group</p></footer>
+<script id="ops-copy" type="application/json">{"locale":"en-US","labels":["Manual hours per month","Loaded hourly cost (USD)"],"outputs":["Monthly manual cost (USD)","Annual manual cost (USD)"],"error":"Enter a number from 0 to 1,000,000 in both fields. Empty, negative and non-finite values cannot be calculated.","pending":"Assumptions changed. Calculate again to update the result."}</script>
+<script src="/assets/js/operational-tools.js" defer></script>
+</body>
+</html>
