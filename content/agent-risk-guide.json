@@ -1,0 +1,867 @@
+{
+  "en": {
+    "lang": "en",
+    "title": "AI agent risk checklist: prepare a pilot you can review",
+    "description": "Define data access, permitted actions, cost assumptions and review evidence before running an AI agent pilot. Explore the related Zion tools and guides.",
+    "eyebrow": "Zion app network · Pilot planning guide",
+    "intro": "Turn an AI idea into one bounded experiment. Use this checklist to describe the job, gather evidence and decide whether the next step is ready. Keep unresolved questions visible throughout the trial.",
+    "nav": {
+      "home": "Home",
+      "catalog": "App catalog",
+      "map": "Network map",
+      "discovery": "Free Discovery",
+      "skip": "Skip to content",
+      "language": "Choose language",
+      "source": "Guide source"
+    },
+    "primaryCta": "Start free Discovery",
+    "secondaryCta": "Explore the app catalog",
+    "sections": [
+      {
+        "id": "define-pilot",
+        "title": "Start with a job you can observe",
+        "intro": "Choose a small workflow with a clear input and an output someone can check.",
+        "items": [
+          {
+            "title": "Describe the output",
+            "text": "For example: produce a ticket summary containing the issue, existing owner and stated deadline. Specify how missing information should appear."
+          },
+          {
+            "title": "Set the comparison",
+            "text": "Record the current process and a measurable success criterion. Compare the trial with that baseline using the same kind of example."
+          },
+          {
+            "title": "Name the owner",
+            "text": "Identify who reviews the output, handles exceptions and can stop the trial. Record the version and date so the result remains traceable."
+          }
+        ]
+      },
+      {
+        "id": "action-boundaries",
+        "title": "Separate preparation from execution",
+        "paragraphs": [
+          "Reading, drafting, sending and changing a record are separate actions. List the tools involved and the authorization each action requires under your organization’s rules. Test only the actions included in the agreed pilot.",
+          "Check the actual connection and permissions before relying on an integration. A published page, repository or draft output does not establish that a connected action works. Keep the tested scope explicit."
+        ]
+      },
+      {
+        "id": "review-decision",
+        "title": "Make the next decision from evidence",
+        "items": [
+          {
+            "title": "Continue within the tested scope",
+            "text": "Record the observed result and the reviewer’s decision. Extend the trial only when the new scope and applicable authorization are established."
+          },
+          {
+            "title": "Resolve an open question",
+            "text": "Assign an owner and next check to missing evidence. An unchecked item remains unverified; a count of completed checks does not approve the pilot."
+          },
+          {
+            "title": "Stop and recover",
+            "text": "Use the agreed stop condition, preserve the relevant evidence and follow the recovery plan. Record what must change before another attempt."
+          }
+        ]
+      }
+    ],
+    "checklist": {
+      "title": "Six checks before the trial",
+      "intro": "For each area, keep the evidence reference, result, owner and next action in your approved workspace.",
+      "columns": [
+        "Area",
+        "Evidence to collect",
+        "Pause when"
+      ],
+      "rows": [
+        {
+          "area": "Data access",
+          "evidence": "Named sources, permitted records and retention rules; a fictional or authorized sanitized test input.",
+          "stop": "The source, permission or handling of the input is unclear."
+        },
+        {
+          "area": "Actions",
+          "evidence": "Each tool action, its scope, required authorization and the person responsible for exceptions.",
+          "stop": "The workflow requests an action outside the agreed scope."
+        },
+        {
+          "area": "Output quality",
+          "evidence": "Expected results, observed outputs and examples with missing, invalid or conflicting information.",
+          "stop": "The output invents a fact or fails the agreed acceptance check."
+        },
+        {
+          "area": "Spend",
+          "evidence": "Volume and unit-cost assumptions, retry limits, an agreed budget and a budget owner.",
+          "stop": "Usage exceeds the agreed limit or cannot be attributed."
+        },
+        {
+          "area": "Audit and recovery",
+          "evidence": "A record of inputs, actions and decisions, plus a tested way to stop and recover.",
+          "stop": "A material action cannot be reconstructed or safely stopped."
+        },
+        {
+          "area": "Ownership",
+          "evidence": "A reviewer, an exception route and the recorded decision for the next step.",
+          "stop": "No responsible person can resolve the open issue."
+        }
+      ]
+    },
+    "example": {
+      "title": "Worked example: a ticket summary",
+      "input": "Fictional input: Ticket DEMO-104 reports an intermittent printer connection. Maya owns the investigation. No deadline is stated.",
+      "expected": "Expected output: preserve the issue and Maya’s ownership, identify the deadline as unknown, and suggest a question for the reviewer.",
+      "missing": "A useful result says “Deadline: not provided.” An invented date fails this check even if the summary otherwise reads well.",
+      "decision": "Record the actual output and reviewer decision. Creating a summary or email draft does not send a message or update the ticket."
+    },
+    "resources": {
+      "title": "Connect the checklist to your next step",
+      "intro": "Choose the resource that matches the question you still need to answer. Transfer and review outputs yourself.",
+      "cards": [
+        {
+          "key": "discovery",
+          "title": "Clarify the starting point",
+          "text": "Use free Discovery to organize the process and identify a useful next step.",
+          "cta": "Open free Discovery"
+        },
+        {
+          "key": "verification",
+          "title": "Inspect the resource",
+          "text": "Check what the tool actually does and reproduce an outcome with a small example.",
+          "cta": "Read the verification guide"
+        },
+        {
+          "key": "scorecard",
+          "title": "Compare the evidence",
+          "text": "Organize what you verified and the questions still open before choosing an app.",
+          "cta": "Open the app scorecard"
+        },
+        {
+          "key": "pilot",
+          "title": "Prepare the pilot",
+          "text": "Bring the task, owner, measures and limits into a reviewable pilot plan.",
+          "cta": "Open the pilot planner"
+        },
+        {
+          "key": "finops",
+          "title": "Compare cost assumptions",
+          "text": "Explore a cost scenario, then validate its assumptions against measured usage.",
+          "cta": "Open the FinOps estimator"
+        },
+        {
+          "key": "evidence",
+          "title": "Record operational evidence",
+          "text": "Collect prerequisites, success criteria and results for the next operational review.",
+          "cta": "Open the evidence checklist"
+        }
+      ]
+    },
+    "faq": {
+      "title": "Common questions",
+      "items": [
+        {
+          "question": "Is Discovery free?",
+          "answer": "Yes. Discovery is a free online questionnaire with eight questions, taking about five minutes. The report appears on screen. Any later paid service has its own scope and commercial agreement."
+        },
+        {
+          "question": "How does the Discovery report reach my team?",
+          "answer": "Email delivery can be requested to the participant and Zion Commercial. Provider acceptance is not confirmation of inbox delivery. Keep the on-screen report and use the available copy or download option."
+        },
+        {
+          "question": "Does completing this guide approve a production deployment?",
+          "answer": "No. This is a static planning guide with no submission form or connected actions. Your organization’s responsible people decide using the evidence, tested scope and applicable authorization."
+        }
+      ]
+    },
+    "footer": "Choose one task, record what you tested and keep the next decision with its responsible owner."
+  },
+  "pt": {
+    "lang": "pt-BR",
+    "title": "Checklist de riscos de agentes de IA: prepare um piloto para avaliação",
+    "description": "Defina acesso a dados, ações permitidas, premissas de custo e evidências de revisão antes de executar um piloto com agentes de IA. Explore os recursos relacionados da Zion.",
+    "eyebrow": "Rede de apps Zion · Guia de planejamento de piloto",
+    "intro": "Transforme uma ideia de IA em um experimento com escopo delimitado. Use este checklist para descrever a tarefa, reunir evidências e decidir se o próximo passo está pronto. Mantenha as questões pendentes visíveis durante todo o teste.",
+    "nav": {
+      "home": "Início",
+      "catalog": "Catálogo de apps",
+      "map": "Mapa da rede",
+      "discovery": "Discovery gratuito",
+      "skip": "Pular para o conteúdo",
+      "language": "Escolher idioma",
+      "source": "Fonte do guia"
+    },
+    "primaryCta": "Iniciar Discovery gratuito",
+    "secondaryCta": "Explorar o catálogo de apps",
+    "sections": [
+      {
+        "id": "define-pilot",
+        "title": "Comece com uma tarefa que possa ser observada",
+        "intro": "Escolha um fluxo pequeno, com uma entrada clara e um resultado que alguém possa conferir.",
+        "items": [
+          {
+            "title": "Descreva o resultado",
+            "text": "Por exemplo: produzir um resumo de chamado com o problema, o responsável já indicado e o prazo informado. Especifique como as informações ausentes devem aparecer."
+          },
+          {
+            "title": "Defina a comparação",
+            "text": "Registre o processo atual e um critério de sucesso mensurável. Compare o teste com essa referência usando o mesmo tipo de exemplo."
+          },
+          {
+            "title": "Nomeie o responsável",
+            "text": "Identifique quem revisa o resultado, trata exceções e pode interromper o teste. Registre a versão e a data para manter a rastreabilidade do resultado."
+          }
+        ]
+      },
+      {
+        "id": "action-boundaries",
+        "title": "Separe a preparação da execução",
+        "paragraphs": [
+          "Ler, redigir, enviar e alterar um registro são ações distintas. Liste as ferramentas envolvidas e a autorização exigida para cada ação pelas regras da sua organização. Teste apenas as ações incluídas no piloto acordado.",
+          "Confira a conexão real e as permissões antes de depender de uma integração. Uma página publicada, um repositório ou um rascunho não comprova que uma ação conectada funciona. Mantenha explícito o escopo testado."
+        ]
+      },
+      {
+        "id": "review-decision",
+        "title": "Tome a próxima decisão com base em evidências",
+        "items": [
+          {
+            "title": "Continue dentro do escopo testado",
+            "text": "Registre o resultado observado e a decisão de quem revisou. Amplie o teste somente quando o novo escopo e a autorização aplicável estiverem estabelecidos."
+          },
+          {
+            "title": "Resolva uma questão pendente",
+            "text": "Atribua um responsável e uma próxima verificação às evidências que faltam. Um item não conferido permanece sem comprovação; a contagem de verificações concluídas não aprova o piloto."
+          },
+          {
+            "title": "Interrompa e recupere",
+            "text": "Aplique a condição de interrupção acordada, preserve as evidências relevantes e siga o plano de recuperação. Registre o que precisa mudar antes de uma nova tentativa."
+          }
+        ]
+      }
+    ],
+    "checklist": {
+      "title": "Seis verificações antes do teste",
+      "intro": "Para cada área, mantenha a referência da evidência, o resultado, o responsável e a próxima ação no ambiente de trabalho aprovado pela organização.",
+      "columns": [
+        "Área",
+        "Evidências a reunir",
+        "Quando pausar"
+      ],
+      "rows": [
+        {
+          "area": "Acesso a dados",
+          "evidence": "Fontes identificadas, registros permitidos e regras de retenção; uma entrada de teste fictícia ou autorizada e sanitizada.",
+          "stop": "A fonte, a permissão ou o tratamento da entrada não estiver claro."
+        },
+        {
+          "area": "Ações",
+          "evidence": "Cada ação de ferramenta, seu escopo, a autorização exigida e a pessoa responsável pelas exceções.",
+          "stop": "O fluxo solicitar uma ação fora do escopo acordado."
+        },
+        {
+          "area": "Qualidade do resultado",
+          "evidence": "Resultados esperados, saídas observadas e exemplos com informações ausentes, inválidas ou conflitantes.",
+          "stop": "O resultado inventar um fato ou não passar na verificação de aceite acordada."
+        },
+        {
+          "area": "Gastos",
+          "evidence": "Premissas de volume e custo unitário, limites de novas tentativas, orçamento acordado e responsável pelo orçamento.",
+          "stop": "O uso ultrapassar o limite acordado ou não puder ser atribuído a um responsável."
+        },
+        {
+          "area": "Auditoria e recuperação",
+          "evidence": "Registro de entradas, ações e decisões, além de uma forma testada de interromper e recuperar a operação.",
+          "stop": "Uma ação relevante não puder ser reconstruída ou interrompida com segurança."
+        },
+        {
+          "area": "Responsabilidade",
+          "evidence": "Uma pessoa responsável pela revisão, um caminho para tratar exceções e a decisão registrada sobre o próximo passo.",
+          "stop": "Não houver uma pessoa responsável capaz de resolver a questão pendente."
+        }
+      ]
+    },
+    "example": {
+      "title": "Exemplo aplicado: resumo de um chamado",
+      "input": "Entrada fictícia: o chamado DEMO-104 relata uma conexão intermitente com a impressora. Maya é responsável pela investigação. Nenhum prazo foi informado.",
+      "expected": "Resultado esperado: preservar o problema e a responsabilidade de Maya, identificar o prazo como desconhecido e sugerir uma pergunta para quem fará a revisão.",
+      "missing": "Um resultado útil informa “Prazo: não informado”. Uma data inventada reprova esta verificação, mesmo que o restante do resumo esteja bem escrito.",
+      "decision": "Registre o resultado real e a decisão de quem revisou. Criar um resumo ou rascunho de e-mail não envia uma mensagem nem atualiza o chamado."
+    },
+    "resources": {
+      "title": "Conecte o checklist ao próximo passo",
+      "intro": "Escolha o recurso que corresponde à pergunta que ainda precisa responder. Transfira e revise os resultados por conta própria.",
+      "cards": [
+        {
+          "key": "discovery",
+          "title": "Esclareça o ponto de partida",
+          "text": "Use o Discovery gratuito para organizar o processo e identificar um próximo passo útil.",
+          "cta": "Abrir Discovery gratuito"
+        },
+        {
+          "key": "verification",
+          "title": "Examine o recurso",
+          "text": "Confira o que a ferramenta realmente faz e reproduza um resultado com um exemplo pequeno.",
+          "cta": "Ler o guia de verificação"
+        },
+        {
+          "key": "scorecard",
+          "title": "Compare as evidências",
+          "text": "Organize o que foi verificado e as questões ainda pendentes antes de escolher um app.",
+          "cta": "Abrir a matriz de evidências para apps"
+        },
+        {
+          "key": "pilot",
+          "title": "Prepare o piloto",
+          "text": "Reúna tarefa, responsável, medidas e limites em um plano de piloto que possa ser revisado.",
+          "cta": "Abrir o planejador de piloto"
+        },
+        {
+          "key": "finops",
+          "title": "Compare as premissas de custo",
+          "text": "Explore um cenário de custos e depois valide suas premissas com o uso medido.",
+          "cta": "Abrir o estimador FinOps"
+        },
+        {
+          "key": "evidence",
+          "title": "Registre evidências operacionais",
+          "text": "Reúna pré-requisitos, critérios de sucesso e resultados para a próxima revisão operacional.",
+          "cta": "Abrir o checklist de evidências"
+        }
+      ]
+    },
+    "faq": {
+      "title": "Perguntas frequentes",
+      "items": [
+        {
+          "question": "O Discovery é gratuito?",
+          "answer": "Sim. O Discovery é um questionário online gratuito com oito perguntas, que leva cerca de cinco minutos. O relatório aparece na tela. Qualquer serviço pago posterior tem escopo e acordo comercial próprios."
+        },
+        {
+          "question": "Como o relatório do Discovery chega à minha equipe?",
+          "answer": "É possível solicitar o envio por e-mail ao participante e à área Comercial da Zion. A aceitação pelo provedor não confirma a entrega na caixa de entrada. Guarde o relatório exibido na tela e use a opção disponível para copiar ou baixar."
+        },
+        {
+          "question": "Concluir este guia aprova uma implantação em produção?",
+          "answer": "Não. Este é um guia estático de planejamento, sem formulário de envio ou ações conectadas. As pessoas responsáveis na sua organização decidem com base nas evidências, no escopo testado e na autorização aplicável."
+        }
+      ]
+    },
+    "footer": "Escolha uma tarefa, registre o que foi testado e mantenha a próxima decisão com seu responsável."
+  },
+  "es": {
+    "lang": "es",
+    "title": "Lista de verificación de riesgos de agentes de IA: prepare un piloto para revisión",
+    "description": "Defina el acceso a datos, las acciones permitidas, los supuestos de coste y las evidencias de revisión antes de ejecutar un piloto con agentes de IA. Explore los recursos relacionados de Zion.",
+    "eyebrow": "Red de apps Zion · Guía de planificación de pilotos",
+    "intro": "Convierta una idea de IA en un experimento con un alcance delimitado. Use esta lista para describir la tarea, reunir evidencias y decidir si el siguiente paso está preparado. Mantenga visibles las preguntas pendientes durante toda la prueba.",
+    "nav": {
+      "home": "Inicio",
+      "catalog": "Catálogo de apps",
+      "map": "Mapa de la red",
+      "discovery": "Discovery gratuito",
+      "skip": "Saltar al contenido",
+      "language": "Elegir idioma",
+      "source": "Fuente de la guía"
+    },
+    "primaryCta": "Iniciar Discovery gratuito",
+    "secondaryCta": "Explorar el catálogo de apps",
+    "sections": [
+      {
+        "id": "define-pilot",
+        "title": "Empiece con una tarea que pueda observar",
+        "intro": "Elija un flujo pequeño, con una entrada clara y un resultado que alguien pueda comprobar.",
+        "items": [
+          {
+            "title": "Describa el resultado",
+            "text": "Por ejemplo: elaborar un resumen de un ticket con el problema, la persona responsable ya asignada y el plazo indicado. Especifique cómo debe mostrarse la información que falta."
+          },
+          {
+            "title": "Establezca la comparación",
+            "text": "Registre el proceso actual y un criterio de éxito medible. Compare la prueba con esa referencia usando el mismo tipo de ejemplo."
+          },
+          {
+            "title": "Nombre a la persona responsable",
+            "text": "Identifique quién revisa el resultado, gestiona las excepciones y puede detener la prueba. Registre la versión y la fecha para mantener la trazabilidad del resultado."
+          }
+        ]
+      },
+      {
+        "id": "action-boundaries",
+        "title": "Separe la preparación de la ejecución",
+        "paragraphs": [
+          "Leer, redactar, enviar y modificar un registro son acciones distintas. Enumere las herramientas utilizadas y la autorización que exige cada acción según las normas de su organización. Pruebe únicamente las acciones incluidas en el piloto acordado.",
+          "Compruebe la conexión real y los permisos antes de depender de una integración. Una página publicada, un repositorio o un borrador no demuestra que una acción conectada funcione. Mantenga explícito el alcance probado."
+        ]
+      },
+      {
+        "id": "review-decision",
+        "title": "Tome la siguiente decisión basándose en evidencias",
+        "items": [
+          {
+            "title": "Continúe dentro del alcance probado",
+            "text": "Registre el resultado observado y la decisión de quien lo revisó. Amplíe la prueba solo cuando se hayan establecido el nuevo alcance y la autorización aplicable."
+          },
+          {
+            "title": "Resuelva una pregunta pendiente",
+            "text": "Asigne una persona responsable y una próxima comprobación a las evidencias que faltan. Un punto sin comprobar sigue sin verificarse; contar las comprobaciones completadas no aprueba el piloto."
+          },
+          {
+            "title": "Detenga la prueba y recupere la operación",
+            "text": "Aplique la condición de parada acordada, conserve las evidencias relevantes y siga el plan de recuperación. Registre qué debe cambiar antes de otro intento."
+          }
+        ]
+      }
+    ],
+    "checklist": {
+      "title": "Seis comprobaciones antes de la prueba",
+      "intro": "Para cada área, conserve la referencia de la evidencia, el resultado, la persona responsable y la siguiente acción en el espacio de trabajo aprobado por su organización.",
+      "columns": [
+        "Área",
+        "Evidencias que debe reunir",
+        "Cuándo pausar"
+      ],
+      "rows": [
+        {
+          "area": "Acceso a datos",
+          "evidence": "Fuentes identificadas, registros permitidos y reglas de conservación; una entrada de prueba ficticia o autorizada y depurada de información sensible.",
+          "stop": "La fuente, el permiso o el tratamiento de la entrada no están claros."
+        },
+        {
+          "area": "Acciones",
+          "evidence": "Cada acción de herramienta, su alcance, la autorización requerida y la persona responsable de las excepciones.",
+          "stop": "El flujo solicita una acción fuera del alcance acordado."
+        },
+        {
+          "area": "Calidad del resultado",
+          "evidence": "Resultados esperados, salidas observadas y ejemplos con información ausente, no válida o contradictoria.",
+          "stop": "El resultado inventa un dato o no supera la comprobación de aceptación acordada."
+        },
+        {
+          "area": "Gasto",
+          "evidence": "Supuestos de volumen y coste unitario, límites de reintentos, un presupuesto acordado y una persona responsable del presupuesto.",
+          "stop": "El uso supera el límite acordado o no puede atribuirse a un responsable."
+        },
+        {
+          "area": "Auditoría y recuperación",
+          "evidence": "Un registro de entradas, acciones y decisiones, además de una forma probada de detener y recuperar la operación.",
+          "stop": "Una acción relevante no puede reconstruirse o detenerse de forma segura."
+        },
+        {
+          "area": "Responsabilidad",
+          "evidence": "Una persona encargada de la revisión, una vía para gestionar excepciones y la decisión registrada sobre el siguiente paso.",
+          "stop": "No hay una persona responsable que pueda resolver el problema pendiente."
+        }
+      ]
+    },
+    "example": {
+      "title": "Ejemplo práctico: resumen de un ticket",
+      "input": "Entrada ficticia: el ticket DEMO-104 informa de una conexión intermitente con la impresora. Maya es responsable de la investigación. No se indica ningún plazo.",
+      "expected": "Resultado esperado: conservar el problema y la responsabilidad de Maya, identificar el plazo como desconocido y sugerir una pregunta para quien revise el resultado.",
+      "missing": "Un resultado útil indica «Plazo: no indicado». Una fecha inventada no supera esta comprobación, aunque el resto del resumen esté bien redactado.",
+      "decision": "Registre el resultado real y la decisión de quien lo revisó. Crear un resumen o un borrador de correo no envía un mensaje ni actualiza el ticket."
+    },
+    "resources": {
+      "title": "Conecte la lista con su siguiente paso",
+      "intro": "Elija el recurso que corresponda a la pregunta que aún necesita responder. Transfiera y revise los resultados por su cuenta.",
+      "cards": [
+        {
+          "key": "discovery",
+          "title": "Aclare el punto de partida",
+          "text": "Use Discovery gratuito para organizar el proceso e identificar un siguiente paso útil.",
+          "cta": "Abrir Discovery gratuito"
+        },
+        {
+          "key": "verification",
+          "title": "Examine el recurso",
+          "text": "Compruebe qué hace realmente la herramienta y reproduzca un resultado con un ejemplo pequeño.",
+          "cta": "Leer la guía de verificación"
+        },
+        {
+          "key": "scorecard",
+          "title": "Compare las evidencias",
+          "text": "Organice lo que ha verificado y las preguntas pendientes antes de elegir una app.",
+          "cta": "Abrir la matriz de evidencias de apps"
+        },
+        {
+          "key": "pilot",
+          "title": "Prepare el piloto",
+          "text": "Reúna la tarea, la persona responsable, las medidas y los límites en un plan de piloto que pueda revisarse.",
+          "cta": "Abrir el planificador de pilotos"
+        },
+        {
+          "key": "finops",
+          "title": "Compare los supuestos de coste",
+          "text": "Explore un escenario de costes y después valide sus supuestos con el uso medido.",
+          "cta": "Abrir el estimador FinOps"
+        },
+        {
+          "key": "evidence",
+          "title": "Registre evidencias operativas",
+          "text": "Reúna los requisitos previos, los criterios de éxito y los resultados para la próxima revisión operativa.",
+          "cta": "Abrir la lista de evidencias"
+        }
+      ]
+    },
+    "faq": {
+      "title": "Preguntas frecuentes",
+      "items": [
+        {
+          "question": "¿Discovery es gratuito?",
+          "answer": "Sí. Discovery es un cuestionario gratuito en línea con ocho preguntas, que lleva unos cinco minutos. El informe aparece en pantalla. Cualquier servicio de pago posterior tiene su propio alcance y acuerdo comercial."
+        },
+        {
+          "question": "¿Cómo llega el informe de Discovery a mi equipo?",
+          "answer": "Se puede solicitar el envío por correo al participante y al área Comercial de Zion. La aceptación por parte del proveedor no confirma la entrega en la bandeja de entrada. Conserve el informe que aparece en pantalla y use la opción disponible para copiarlo o descargarlo."
+        },
+        {
+          "question": "¿Completar esta guía aprueba una implantación en producción?",
+          "answer": "No. Esta es una guía estática de planificación, sin formulario de envío ni acciones conectadas. Las personas responsables de su organización deciden basándose en las evidencias, el alcance probado y la autorización aplicable."
+        }
+      ]
+    },
+    "footer": "Elija una tarea, registre lo que ha probado y deje la siguiente decisión en manos de su responsable."
+  },
+  "fr": {
+    "lang": "fr",
+    "title": "Risques liés aux agents d’IA : préparer un pilote vérifiable",
+    "description": "Définissez les accès aux données, les actions permises, les hypothèses de coût et les éléments à vérifier avant un pilote d’agent d’IA. Découvrez les outils et guides Zion associés.",
+    "eyebrow": "Réseau d’applications Zion · Guide de préparation d’un pilote",
+    "intro": "Transformez une idée d’IA en une expérimentation au périmètre précis. Utilisez cette liste de contrôle pour décrire la tâche, réunir les éléments de preuve et décider si vous pouvez passer à l’étape suivante. Gardez les questions non résolues visibles pendant tout l’essai.",
+    "nav": {
+      "home": "Accueil",
+      "catalog": "Catalogue d’applications",
+      "map": "Carte du réseau",
+      "discovery": "Discovery gratuit",
+      "skip": "Aller au contenu",
+      "language": "Choisir la langue",
+      "source": "Source du guide"
+    },
+    "primaryCta": "Commencer Discovery gratuitement",
+    "secondaryCta": "Explorer le catalogue d’applications",
+    "sections": [
+      {
+        "id": "define-pilot",
+        "title": "Commencez par une tâche observable",
+        "intro": "Choisissez un processus simple, avec une entrée clairement définie et un résultat qu’une personne peut vérifier.",
+        "items": [
+          {
+            "title": "Décrivez le résultat attendu",
+            "text": "Par exemple : produire un résumé de ticket indiquant le problème, le responsable déjà désigné et l’échéance mentionnée. Précisez comment signaler les informations manquantes."
+          },
+          {
+            "title": "Définissez la comparaison",
+            "text": "Documentez le processus actuel et un critère de réussite mesurable. Comparez l’essai à cette référence avec le même type d’exemple."
+          },
+          {
+            "title": "Désignez le responsable",
+            "text": "Identifiez la personne qui vérifie le résultat, traite les exceptions et peut arrêter l’essai. Notez la version et la date pour assurer la traçabilité du résultat."
+          }
+        ]
+      },
+      {
+        "id": "action-boundaries",
+        "title": "Distinguez la préparation de l’exécution",
+        "paragraphs": [
+          "Lire, rédiger un brouillon, envoyer et modifier un enregistrement sont des actions distinctes. Listez les outils concernés et l’autorisation requise pour chaque action selon les règles de votre organisation. Testez uniquement les actions comprises dans le pilote convenu.",
+          "Vérifiez la connexion réelle et les permissions avant de vous appuyer sur une intégration. Une page publiée, un dépôt de code ou un brouillon ne prouve pas qu’une action connectée fonctionne. Précisez toujours le périmètre testé."
+        ]
+      },
+      {
+        "id": "review-decision",
+        "title": "Fondez la prochaine décision sur les éléments vérifiés",
+        "items": [
+          {
+            "title": "Poursuivez dans le périmètre testé",
+            "text": "Consignez le résultat observé et la décision de la personne chargée de la vérification. Élargissez l’essai seulement une fois le nouveau périmètre et les autorisations applicables établis."
+          },
+          {
+            "title": "Résolvez une question ouverte",
+            "text": "Pour chaque preuve manquante, désignez un responsable et la prochaine vérification. Un point non vérifié reste à confirmer ; le nombre de contrôles effectués ne vaut pas approbation du pilote."
+          },
+          {
+            "title": "Arrêtez et rétablissez le fonctionnement",
+            "text": "Appliquez la condition d’arrêt convenue, conservez les éléments utiles et suivez le plan de rétablissement. Consignez ce qui doit changer avant une nouvelle tentative."
+          }
+        ]
+      }
+    ],
+    "checklist": {
+      "title": "Six contrôles avant l’essai",
+      "intro": "Pour chaque domaine, conservez la référence de la preuve, le résultat, le responsable et la prochaine action dans l’espace de travail approuvé par votre organisation.",
+      "columns": [
+        "Domaine",
+        "Éléments de preuve à réunir",
+        "Suspendre lorsque"
+      ],
+      "rows": [
+        {
+          "area": "Accès aux données",
+          "evidence": "Sources identifiées, enregistrements autorisés et règles de conservation ; une entrée de test fictive ou une entrée nettoyée dont l’utilisation est autorisée.",
+          "stop": "La source, l’autorisation ou le traitement de l’entrée n’est pas clairement défini."
+        },
+        {
+          "area": "Actions",
+          "evidence": "Chaque action d’un outil, son périmètre, l’autorisation requise et la personne responsable des exceptions.",
+          "stop": "Le processus demande une action hors du périmètre convenu."
+        },
+        {
+          "area": "Qualité des résultats",
+          "evidence": "Résultats attendus, sorties observées et exemples comportant des informations manquantes, invalides ou contradictoires.",
+          "stop": "Le résultat invente un fait ou échoue au contrôle d’acceptation convenu."
+        },
+        {
+          "area": "Dépenses",
+          "evidence": "Hypothèses de volume et de coût unitaire, limites de nouvelles tentatives, budget convenu et responsable du budget.",
+          "stop": "La consommation dépasse la limite convenue ou ne peut pas être attribuée."
+        },
+        {
+          "area": "Audit et rétablissement",
+          "evidence": "Un historique des entrées, actions et décisions, ainsi qu’une procédure d’arrêt et de rétablissement testée.",
+          "stop": "Une action importante ne peut pas être reconstituée ou arrêtée en toute sécurité."
+        },
+        {
+          "area": "Responsabilités",
+          "evidence": "Une personne chargée de la vérification, un circuit de traitement des exceptions et la décision consignée pour l’étape suivante.",
+          "stop": "Aucune personne responsable ne peut résoudre le problème en suspens."
+        }
+      ]
+    },
+    "example": {
+      "title": "Exemple concret : un résumé de ticket",
+      "input": "Entrée fictive : le ticket DEMO-104 signale une connexion intermittente à une imprimante. Maya est responsable de l’investigation. Aucune échéance n’est indiquée.",
+      "expected": "Résultat attendu : conserver le problème et la responsabilité de Maya, signaler que l’échéance est inconnue et proposer une question à la personne chargée de la vérification.",
+      "missing": "Un résultat utile indique « Échéance : non précisée ». Une date inventée fait échouer ce contrôle, même si le reste du résumé est bien rédigé.",
+      "decision": "Consignez le résultat réel et la décision de vérification. Créer un résumé ou un brouillon d’e-mail n’envoie aucun message et ne met pas le ticket à jour."
+    },
+    "resources": {
+      "title": "Reliez la liste de contrôle à votre prochaine étape",
+      "intro": "Choisissez la ressource qui correspond à la question encore ouverte. Transférez et vérifiez vous-même les résultats.",
+      "cards": [
+        {
+          "key": "discovery",
+          "title": "Clarifiez le point de départ",
+          "text": "Utilisez Discovery gratuit pour structurer le processus et identifier une prochaine étape utile.",
+          "cta": "Ouvrir Discovery gratuit"
+        },
+        {
+          "key": "verification",
+          "title": "Examinez la ressource",
+          "text": "Vérifiez ce que l’outil fait réellement et reproduisez un résultat avec un exemple simple.",
+          "cta": "Lire le guide de vérification"
+        },
+        {
+          "key": "scorecard",
+          "title": "Comparez les éléments de preuve",
+          "text": "Organisez ce que vous avez vérifié et les questions encore ouvertes avant de choisir une application.",
+          "cta": "Ouvrir la grille d’évaluation des applications"
+        },
+        {
+          "key": "pilot",
+          "title": "Préparez le pilote",
+          "text": "Rassemblez la tâche, le responsable, les mesures et les limites dans un plan de pilote à examiner.",
+          "cta": "Ouvrir le planificateur de pilote"
+        },
+        {
+          "key": "finops",
+          "title": "Comparez les hypothèses de coût",
+          "text": "Explorez un scénario de coût, puis confrontez ses hypothèses à la consommation mesurée.",
+          "cta": "Ouvrir l’estimateur FinOps"
+        },
+        {
+          "key": "evidence",
+          "title": "Consignez les preuves opérationnelles",
+          "text": "Réunissez les prérequis, les critères de réussite et les résultats pour la prochaine revue opérationnelle.",
+          "cta": "Ouvrir la liste de contrôle des preuves"
+        }
+      ]
+    },
+    "faq": {
+      "title": "Questions fréquentes",
+      "items": [
+        {
+          "question": "Discovery est-il gratuit ?",
+          "answer": "Oui. Discovery est un questionnaire gratuit en ligne de huit questions, qui prend environ cinq minutes. Le rapport s’affiche à l’écran. Toute prestation payante ultérieure fait l’objet de son propre périmètre et de son propre accord commercial."
+        },
+        {
+          "question": "Comment mon équipe reçoit-elle le rapport Discovery ?",
+          "answer": "Un envoi par e-mail au participant et à l’équipe commerciale de Zion peut être demandé. L’acceptation par le prestataire ne confirme pas la réception dans la boîte de messagerie. Conservez le rapport affiché à l’écran et utilisez l’option de copie ou de téléchargement disponible."
+        },
+        {
+          "question": "Remplir ce guide autorise-t-il un déploiement en production ?",
+          "answer": "Non. Il s’agit d’un guide de préparation statique, sans formulaire d’envoi ni actions connectées. Les responsables de votre organisation décident à partir des éléments de preuve, du périmètre testé et des autorisations applicables."
+        }
+      ]
+    },
+    "footer": "Choisissez une tâche, consignez ce que vous avez testé et confiez la prochaine décision au responsable désigné."
+  },
+  "de": {
+    "lang": "de",
+    "title": "Risikocheckliste für KI-Agenten: einen überprüfbaren Pilotversuch vorbereiten",
+    "description": "Legen Sie Datenzugriffe, erlaubte Aktionen, Kostenannahmen und Prüfnachweise fest, bevor Sie einen KI-Agenten im Pilotversuch einsetzen. Entdecken Sie passende Zion-Werkzeuge und Leitfäden.",
+    "eyebrow": "Zion-App-Netzwerk · Leitfaden zur Pilotplanung",
+    "intro": "Machen Sie aus einer KI-Idee einen klar begrenzten Versuch. Beschreiben Sie mit dieser Checkliste die Aufgabe, sammeln Sie Nachweise und entscheiden Sie, ob der nächste Schritt vorbereitet ist. Halten Sie offene Fragen während des gesamten Versuchs sichtbar.",
+    "nav": {
+      "home": "Startseite",
+      "catalog": "App-Katalog",
+      "map": "Netzwerkübersicht",
+      "discovery": "Kostenloses Discovery",
+      "skip": "Zum Inhalt springen",
+      "language": "Sprache wählen",
+      "source": "Quelldatei des Leitfadens"
+    },
+    "primaryCta": "Kostenloses Discovery starten",
+    "secondaryCta": "App-Katalog erkunden",
+    "sections": [
+      {
+        "id": "define-pilot",
+        "title": "Beginnen Sie mit einer beobachtbaren Aufgabe",
+        "intro": "Wählen Sie einen kleinen Arbeitsablauf mit klarer Eingabe und einem Ergebnis, das jemand überprüfen kann.",
+        "items": [
+          {
+            "title": "Beschreiben Sie das Ergebnis",
+            "text": "Zum Beispiel: eine Ticketzusammenfassung mit dem Problem, der bereits zuständigen Person und der angegebenen Frist erstellen. Legen Sie fest, wie fehlende Informationen dargestellt werden sollen."
+          },
+          {
+            "title": "Legen Sie den Vergleich fest",
+            "text": "Dokumentieren Sie den bisherigen Prozess und ein messbares Erfolgskriterium. Vergleichen Sie den Versuch anhand gleichartiger Beispiele mit dieser Ausgangsbasis."
+          },
+          {
+            "title": "Benennen Sie die zuständige Person",
+            "text": "Legen Sie fest, wer das Ergebnis prüft, Ausnahmen bearbeitet und den Versuch stoppen kann. Halten Sie Version und Datum fest, damit das Ergebnis nachvollziehbar bleibt."
+          }
+        ]
+      },
+      {
+        "id": "action-boundaries",
+        "title": "Trennen Sie Vorbereitung und Ausführung",
+        "paragraphs": [
+          "Lesen, Entwerfen, Senden und Ändern eines Datensatzes sind eigenständige Aktionen. Listen Sie die beteiligten Werkzeuge und die nach den Regeln Ihrer Organisation erforderliche Berechtigung für jede Aktion auf. Testen Sie nur die Aktionen, die zum vereinbarten Pilotversuch gehören.",
+          "Prüfen Sie die tatsächliche Verbindung und die Berechtigungen, bevor Sie sich auf eine Integration verlassen. Eine veröffentlichte Seite, ein Repository oder ein Entwurf belegt nicht, dass eine angebundene Aktion funktioniert. Halten Sie ausdrücklich fest, welchen Umfang Sie getestet haben."
+        ]
+      },
+      {
+        "id": "review-decision",
+        "title": "Treffen Sie die nächste Entscheidung anhand von Nachweisen",
+        "items": [
+          {
+            "title": "Setzen Sie den Versuch im getesteten Umfang fort",
+            "text": "Dokumentieren Sie das beobachtete Ergebnis und die Entscheidung der prüfenden Person. Erweitern Sie den Versuch erst, wenn der neue Umfang und die dafür erforderliche Berechtigung feststehen."
+          },
+          {
+            "title": "Klären Sie eine offene Frage",
+            "text": "Benennen Sie für fehlende Nachweise eine zuständige Person und den nächsten Prüfschritt. Ein ungeprüfter Punkt bleibt unbestätigt; die Zahl abgeschlossener Prüfungen ist keine Freigabe des Pilotversuchs."
+          },
+          {
+            "title": "Stoppen Sie und stellen Sie den Betrieb wieder her",
+            "text": "Wenden Sie die vereinbarte Abbruchbedingung an, sichern Sie die relevanten Nachweise und folgen Sie dem Wiederherstellungsplan. Dokumentieren Sie, was sich vor einem weiteren Versuch ändern muss."
+          }
+        ]
+      }
+    ],
+    "checklist": {
+      "title": "Sechs Prüfungen vor dem Versuch",
+      "intro": "Halten Sie für jeden Bereich die Nachweisreferenz, das Ergebnis, die zuständige Person und die nächste Aktion in Ihrem freigegebenen Arbeitsbereich fest.",
+      "columns": [
+        "Bereich",
+        "Zu sammelnde Nachweise",
+        "Unterbrechen, wenn"
+      ],
+      "rows": [
+        {
+          "area": "Datenzugriff",
+          "evidence": "Benannte Quellen, erlaubte Datensätze und Aufbewahrungsregeln; eine fiktive Testeingabe oder eine bereinigte Testeingabe, deren Nutzung genehmigt ist.",
+          "stop": "Quelle, Berechtigung oder Umgang mit der Eingabe unklar sind."
+        },
+        {
+          "area": "Aktionen",
+          "evidence": "Jede Werkzeugaktion, ihr Umfang, die erforderliche Berechtigung und die für Ausnahmen zuständige Person.",
+          "stop": "Der Arbeitsablauf eine Aktion außerhalb des vereinbarten Umfangs anfordert."
+        },
+        {
+          "area": "Ergebnisqualität",
+          "evidence": "Erwartete Ergebnisse, beobachtete Ausgaben und Beispiele mit fehlenden, ungültigen oder widersprüchlichen Informationen.",
+          "stop": "Die Ausgabe eine Tatsache erfindet oder die vereinbarte Abnahmeprüfung nicht besteht."
+        },
+        {
+          "area": "Ausgaben",
+          "evidence": "Annahmen zu Volumen und Stückkosten, Grenzen für Wiederholungsversuche, ein vereinbartes Budget und eine dafür zuständige Person.",
+          "stop": "Die Nutzung die vereinbarte Grenze überschreitet oder nicht zugeordnet werden kann."
+        },
+        {
+          "area": "Audit und Wiederherstellung",
+          "evidence": "Eine Aufzeichnung der Eingaben, Aktionen und Entscheidungen sowie ein getestetes Verfahren zum Stoppen und Wiederherstellen.",
+          "stop": "Eine wesentliche Aktion nicht rekonstruiert oder sicher gestoppt werden kann."
+        },
+        {
+          "area": "Verantwortung",
+          "evidence": "Eine prüfende Person, ein festgelegter Weg für Ausnahmen und die dokumentierte Entscheidung zum nächsten Schritt.",
+          "stop": "Keine zuständige Person das offene Problem lösen kann."
+        }
+      ]
+    },
+    "example": {
+      "title": "Praxisbeispiel: eine Ticketzusammenfassung",
+      "input": "Fiktive Eingabe: Ticket DEMO-104 meldet eine zeitweise unterbrochene Druckerverbindung. Maya ist für die Untersuchung zuständig. Eine Frist ist nicht angegeben.",
+      "expected": "Erwartetes Ergebnis: das Problem und Mayas Zuständigkeit beibehalten, die Frist als unbekannt kennzeichnen und eine Frage für die prüfende Person vorschlagen.",
+      "missing": "Ein hilfreiches Ergebnis lautet: „Frist: nicht angegeben.“ Ein erfundenes Datum lässt diese Prüfung scheitern, auch wenn die Zusammenfassung ansonsten gut formuliert ist.",
+      "decision": "Dokumentieren Sie die tatsächliche Ausgabe und die Prüfentscheidung. Das Erstellen einer Zusammenfassung oder eines E-Mail-Entwurfs versendet keine Nachricht und aktualisiert das Ticket nicht."
+    },
+    "resources": {
+      "title": "Verbinden Sie die Checkliste mit Ihrem nächsten Schritt",
+      "intro": "Wählen Sie die Ressource, die zu Ihrer noch offenen Frage passt. Übertragen und prüfen Sie die Ergebnisse selbst.",
+      "cards": [
+        {
+          "key": "discovery",
+          "title": "Klären Sie den Ausgangspunkt",
+          "text": "Nutzen Sie das kostenlose Discovery, um den Prozess zu ordnen und einen sinnvollen nächsten Schritt zu bestimmen.",
+          "cta": "Kostenloses Discovery öffnen"
+        },
+        {
+          "key": "verification",
+          "title": "Prüfen Sie die Ressource",
+          "text": "Überprüfen Sie, was das Werkzeug tatsächlich leistet, und reproduzieren Sie ein Ergebnis mit einem kleinen Beispiel.",
+          "cta": "Prüfleitfaden lesen"
+        },
+        {
+          "key": "scorecard",
+          "title": "Vergleichen Sie die Nachweise",
+          "text": "Ordnen Sie die überprüften Punkte und die noch offenen Fragen, bevor Sie eine App auswählen.",
+          "cta": "App-Bewertungsmatrix öffnen"
+        },
+        {
+          "key": "pilot",
+          "title": "Bereiten Sie den Pilotversuch vor",
+          "text": "Führen Sie Aufgabe, Zuständigkeit, Messgrößen und Grenzen in einem überprüfbaren Pilotplan zusammen.",
+          "cta": "Pilotplaner öffnen"
+        },
+        {
+          "key": "finops",
+          "title": "Vergleichen Sie Kostenannahmen",
+          "text": "Untersuchen Sie ein Kostenszenario und überprüfen Sie anschließend dessen Annahmen anhand der gemessenen Nutzung.",
+          "cta": "FinOps-Schätzrechner öffnen"
+        },
+        {
+          "key": "evidence",
+          "title": "Dokumentieren Sie betriebliche Nachweise",
+          "text": "Sammeln Sie Voraussetzungen, Erfolgskriterien und Ergebnisse für die nächste betriebliche Prüfung.",
+          "cta": "Nachweischeckliste öffnen"
+        }
+      ]
+    },
+    "faq": {
+      "title": "Häufige Fragen",
+      "items": [
+        {
+          "question": "Ist Discovery kostenlos?",
+          "answer": "Ja. Discovery ist ein kostenloser Online-Fragebogen mit acht Fragen und dauert etwa fünf Minuten. Der Bericht erscheint auf dem Bildschirm. Für jede spätere kostenpflichtige Dienstleistung gelten ein eigener Leistungsumfang und eine eigene geschäftliche Vereinbarung."
+        },
+        {
+          "question": "Wie erhält mein Team den Discovery-Bericht?",
+          "answer": "Der E-Mail-Versand an die teilnehmende Person und den Zion-Vertrieb kann angefordert werden. Die Annahme durch den Versanddienstleister bestätigt nicht den Eingang im Postfach. Bewahren Sie den angezeigten Bericht auf und nutzen Sie die verfügbare Kopier- oder Downloadfunktion."
+        },
+        {
+          "question": "Gibt das Ausfüllen dieses Leitfadens eine Produktivsetzung frei?",
+          "answer": "Nein. Dies ist ein statischer Planungsleitfaden ohne Übermittlungsformular oder angebundene Aktionen. Die zuständigen Personen Ihrer Organisation entscheiden anhand der Nachweise, des getesteten Umfangs und der erforderlichen Berechtigungen."
+        }
+      ]
+    },
+    "footer": "Wählen Sie eine Aufgabe, dokumentieren Sie die Prüfung und belassen Sie die nächste Entscheidung bei der zuständigen Person."
+  }
+}

@@ -25,6 +25,7 @@ python3 scripts/ensure-pages-sitemap-index.py out
 # Later productivity rendering appends the existing resource blocks.
 node scripts/render-app-verification-guides.cjs out
 node scripts/test-app-verification-guides.cjs out
+node scripts/render-agent-risk-guides.cjs out
 node scripts/render-finops-scenario.cjs out --pages-only
 # Override public/_redirects (may be a stale 37MB next-build auto-gen monster
 # with 550K+ service-slug rules and NO entries for canonical doc routes) with the
