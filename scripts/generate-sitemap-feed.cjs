@@ -290,9 +290,9 @@ function main() {
   const smPath = path.join(outDir, 'sitemap.xml');
   fs.writeFileSync(smPath, sitemap);
   console.log(`sitemap.xml: ${pages.length} urls`);
-  // Also update public/sitemap.xml for direct GitHub Pages serving
-  const publicSm = path.join(process.cwd(), 'public', 'sitemap.xml');
-  fs.writeFileSync(publicSm, sitemap);
+  // Keep the dynamic sitemap inside the build artifact only.
+  // public/sitemap.xml is the production sitemap index owned by
+  // generate-commercial-sitemap.cjs and must not be overwritten here.
 
   // Write feed
   const feedContent = buildFeed(allServices, blogEntries);
