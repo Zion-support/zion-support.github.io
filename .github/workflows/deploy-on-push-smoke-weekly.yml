@@ -1,4 +1,4 @@
-# Ensures deploy-on-push.yml keeps workflow_run wiring + Netlify + push-helper (grep-only).
+# Ensures Deploy on Push keeps its wiring and the shared production publication lock.
 name: deploy on push smoke (weekly)
 permissions:
   contents: read
@@ -25,7 +25,10 @@ jobs:
           grep -Fq 'name: Deploy on Push' "$f"
           grep -Fq 'workflow_run:' "$f"
           grep -Fq 'CI/CD Pipeline' "$f"
-          grep -Fq 'group: deploy-on-push-main' "$f"
+          grep -Fxq '      group: zion-production-pages-refs/heads/main' "$f"
+          python3 tests/ci/test_pages_publisher_freshness.py \
+            PublisherFreshnessTests.test_all_three_share_production_group_and_keep_pending_current_run \
+            PublisherFreshnessTests.test_diagnostic_build_and_smoke_do_not_hold_production_lock
           grep -Fq 'cancel-in-progress: false' "$f"
           grep -Fq 'github.token' "$f"
           grep -Fq 'GitHub Pages' "$f"
