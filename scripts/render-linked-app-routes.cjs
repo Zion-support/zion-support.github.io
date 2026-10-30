@@ -16,6 +16,8 @@ const routes = locales.flatMap(locale => {
     {locale, path: 'apps/discovery-showcase' + (locale === 'en' ? '' : '-' + locale) + '.html'},
     {locale, path: prefix + 'apps/field-ticket-types.html'},
     {locale, path: prefix + 'apps/discovery-first-win-guide.html'},
+    {locale, path: prefix + 'apps/field-services-smart-hands-playbook.html'},
+    {locale, path: prefix + 'apps/ai-it-ops-command-center.html'},
   ];
 });
 
@@ -24,7 +26,7 @@ function run(output = 'out') {
   assert(fs.statSync(out).isDirectory(), 'Missing assembled Pages directory');
   const staged = fs.mkdtempSync(path.join(os.tmpdir(), 'zion-linked-app-routes-'));
   try {
-    for (const script of ['render-discovery-showcase.cjs', 'render-first-win-release.cjs']) {
+    for (const script of ['render-discovery-showcase.cjs', 'render-first-win-release.cjs', 'render-ops-field-guides.cjs']) {
       execFileSync(process.execPath, [path.join(__dirname, script), staged, '--pages-only'], {
         cwd: path.resolve(__dirname, '..'), stdio: 'pipe',
       });

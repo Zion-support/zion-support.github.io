@@ -25,9 +25,12 @@ function fixture(t) {
     put(out, guard.catalogs[i], '<html><body><main data-apps-directory="keep">' + links + '<a href="/zion-app-network/missing-sibling.html">Sibling repository</a><a href="/agent-brief/">Sibling app</a><a href="https://example.org/apps/external.html">External</a></main></body></html>');
     put(out, (locale === 'en' ? '' : locale + '/') + 'apps/network.html', 'Existing network map ' + locale);
   }
-  // The committed English guide predates the localized renderer and has a
-  // different layout. Preserve it rather than replacing it with generated copy.
-  put(out, 'apps/discovery-first-win-guide.html', fs.readFileSync(path.join(__dirname, '../public/apps/discovery-first-win-guide.html')));
+  // The committed English guides predate their localized renderers. Preserve
+  // their existing layouts rather than replacing them with generated copy.
+  for (const slug of ['discovery-first-win-guide', 'field-services-smart-hands-playbook', 'ai-it-ops-command-center']) {
+    const rel = 'apps/' + slug + '.html';
+    put(out, rel, fs.readFileSync(path.join(__dirname, '../public', rel)));
+  }
   return out;
 }
 
@@ -62,18 +65,18 @@ function actualCatalogFixture(t) {
   return out;
 }
 
-test('restores the fourteen absent routes and preserves every existing byte', t => {
+test('restores the twenty-two absent routes and preserves every existing byte', t => {
   const out = fixture(t), before = snapshot(out);
   assert.throws(() => guard.verify(out), /Missing catalog app routes/);
   const result = staging.run(out), after = snapshot(out);
-  assert.equal(result.created.length, 14);
-  assert.deepEqual(result.preserved, ['apps/discovery-first-win-guide.html']);
+  assert.equal(result.created.length, 22);
+  assert.deepEqual(result.preserved, ['apps/discovery-first-win-guide.html', 'apps/field-services-smart-hands-playbook.html', 'apps/ai-it-ops-command-center.html']);
   for (const [file, bytes] of Object.entries(before)) assert.equal(after[file], bytes, file);
   assert.deepEqual(Object.keys(after).filter(file => !(file in before)).sort(), result.created.slice().sort());
-  assert.deepEqual(guard.verify(out), {catalogs: 5, routes: 15});
+  assert.deepEqual(guard.verify(out), {catalogs: 5, routes: 25});
   const repeated = staging.run(out);
   assert.equal(repeated.created.length, 0);
-  assert.equal(repeated.preserved.length, 15);
+  assert.equal(repeated.preserved.length, 25);
   assert.deepEqual(snapshot(out), after, 'Repeated staging must be byte-idempotent');
 });
 
@@ -87,13 +90,13 @@ test('final artifact guard catches a route removed or emptied after staging', t 
   assert.throws(() => guard.verify(out), /fr\/apps\/discovery-first-win-guide\.html/);
 });
 
-test('actual catalogs cannot hide the original fourteen missing family routes', t => {
+test('actual catalogs cannot hide missing family routes or their linked playbooks', t => {
   const out = actualCatalogFixture(t);
   const missing = staging.routes.filter(route => !fs.existsSync(path.join(out, route.path)));
-  assert.equal(missing.length, 14, 'Reproduce the published artifact omission');
+  assert.equal(missing.length, 22, 'Reproduce the published artifact and linked companion omissions');
   assert.throws(() => guard.verify(out), error => missing.every(route => error.message.includes('/' + route.path)));
   const before = snapshot(out), result = staging.run(out);
-  assert.equal(result.created.length, 14);
+  assert.equal(result.created.length, 22);
   guard.verify(out);
   for (const [file, bytes] of Object.entries(before)) assert.equal(snapshot(out)[file], bytes, file);
   for (const locale of staging.locales) {
@@ -111,13 +114,49 @@ test('actual catalogs cannot hide the original fourteen missing family routes', 
   assert.throws(() => guard.verify(out), new RegExp(removed.replace(/\./g, '\\.')));
 });
 
+test('localized field and operations companions retain working navigation and cumulative approvals', t => {
+  const out = actualCatalogFixture(t);
+  staging.run(out);
+  const gates = {
+    pt: ['confirmação formal escrita do cliente', 'pedido de compra correspondente (PO)', 'liberação operacional específica e separada da Zion', 'Os três requisitos são obrigatórios.'],
+    es: ['confirmación formal por escrito del cliente', 'orden de compra correspondiente (PO)', 'autorización operativa específica y separada de Zion', 'Los tres requisitos son obligatorios.'],
+    fr: ['confirmation formelle écrite du client', 'bon de commande correspondant (PO)', 'autorisation opérationnelle spécifique et distincte de Zion', 'Les trois exigences sont obligatoires.'],
+    de: ['formelle schriftliche Kundenbestätigung', 'zugehörige Bestellung (PO)', 'separate, konkrete betriebliche Freigabe von Zion', 'Alle drei Voraussetzungen sind verbindlich.'],
+  };
+  const slugs = ['field-services-smart-hands-playbook', 'ai-it-ops-command-center'];
+  for (const [locale, fragments] of Object.entries(gates)) {
+    for (const slug of slugs) {
+      const rel = locale + '/apps/' + slug + '.html';
+      const file = path.join(out, rel), html = fs.readFileSync(file, 'utf8');
+      const companion = slugs.find(other => other !== slug);
+      assert(html.includes('href="/' + locale + '/apps/' + companion + '.html"'));
+      assert(fs.existsSync(path.join(out, locale, 'apps', companion + '.html')));
+      for (const destination of ['apps/', 'apps/network.html', 'apps/network-start-here.html']) {
+        assert(html.includes('href="/' + locale + '/' + destination + '"'));
+      }
+      assert(html.includes('href="' + (locale === 'pt' ? '/' : '/' + locale + '/') + '"'));
+      if (slug === 'ai-it-ops-command-center') {
+        assert(html.includes('href="/automation-pilot-planner/' + (locale === 'pt' ? '' : locale + '/') + '"'));
+        assert(html.includes('href="/ai-opportunity-mapper/"'), 'Preserve the existing resource destination');
+      }
+      assert(!html.includes('hreflang="en" href="/'), 'Do not invent destination-language metadata');
+      for (const fragment of fragments) assert(html.includes(fragment), locale + ': ' + fragment);
+      assert(!html.includes('aria-label="Language"'), 'Translate language navigation');
+      fs.rmSync(file);
+      assert.throws(() => guard.verify(out), error => error.message.includes('/' + rel));
+      fs.writeFileSync(file, html);
+    }
+  }
+  guard.verify(out);
+});
+
 test('guard follows actual same-host app links, including future routes and directory URLs', t => {
   const out = fixture(t);
   staging.run(out);
   put(out, 'fr/apps/future-guide.html', '<h1>Future guide</h1>');
   put(out, 'pt/apps/future-guide/index.html', '<h1>Directory guide</h1>');
   fs.appendFileSync(path.join(out, 'fr/apps/index.html'), '<a href="future-guide.html?source=a&amp;medium=b#details">Relative</a><a href="//ziontechgroup.com/pt/apps/future-guide/">Directory</a><a href="mailto:commercial@ziontechgroup.com">Email</a>');
-  assert.deepEqual(guard.verify(out), {catalogs: 5, routes: 17});
+  assert.deepEqual(guard.verify(out), {catalogs: 5, routes: 27});
   fs.rmSync(path.join(out, 'fr/apps/future-guide.html'));
   assert.throws(() => guard.verify(out), /fr\/apps\/future-guide\.html/);
 });
