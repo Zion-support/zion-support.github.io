@@ -1,5 +1,5 @@
 {
-  "release": "apps-directory-2026-10-30-v2",
+  "release": "apps-directory-2026-10-30-v3",
   "categories": [
     "plan",
     "productivity",
@@ -773,6 +773,36 @@
         "de": {
           "title": "Leitfaden zur Incident Response",
           "description": "Definieren Sie Kontext, Zuständigkeiten und Nachweise für einen Reaktionsplan."
+        }
+      }
+    },
+    {
+      "id": "field-service",
+      "category": "operations",
+      "kind": "guide",
+      "location": "network",
+      "slug": "app/network-field-service-showcase",
+      "related": "evidence",
+      "text": {
+        "en": {
+          "title": "Field service: from scope to documented completion",
+          "description": "Prepare a field visit with evidence, a local handoff checklist and a completion template. Connect existing resources to a clear, reviewed service workflow."
+        },
+        "pt": {
+          "title": "Serviços de campo: do escopo à conclusão documentada",
+          "description": "Prepare uma visita técnica com evidências, checklist local de passagem e modelo de conclusão. Conecte recursos existentes a um fluxo de serviço revisado."
+        },
+        "es": {
+          "title": "Servicios de campo: del alcance al cierre documentado",
+          "description": "Prepare una visita técnica con pruebas, una lista local de traspaso y una plantilla de cierre. Conecte recursos existentes con un proceso de servicio revisado."
+        },
+        "fr": {
+          "title": "Intervention sur site : du périmètre à la clôture documentée",
+          "description": "Préparez une intervention avec des preuves, une liste locale de préparation et un modèle de clôture. Reliez les ressources existantes à un processus de service vérifié."
+        },
+        "de": {
+          "title": "Vor-Ort-Service: vom Leistungsumfang zum dokumentierten Abschluss",
+          "description": "Bereiten Sie einen Einsatz mit Nachweisen, lokaler Übergabecheckliste und Abschlussvorlage vor. Verbinden Sie bestehende Ressourcen zu einem geprüften Serviceablauf."
         }
       }
     },
