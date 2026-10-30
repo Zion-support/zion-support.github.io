@@ -1,0 +1,839 @@
+{
+  "release": "apps-directory-2026-10-30-v1",
+  "categories": [
+    "plan",
+    "productivity",
+    "costs",
+    "operations",
+    "governance"
+  ],
+  "locales": {
+    "en": {
+      "lang": "en",
+      "name": "English",
+      "title": "Find the right tool for your next step.",
+      "description": "Explore Zion tools and practical guides for automation, productivity, IT operations, governance and FinOps in five languages.",
+      "eyebrow": "Zion Apps Network",
+      "intro": "Start with a task. Choose a local tool or a practical guide, understand its capabilities and connect the next step.",
+      "home": "Home",
+      "discovery": "Free Discovery",
+      "network": "Network directory",
+      "catalog": "Apps catalog",
+      "languages": "Language",
+      "skip": "Skip to resources",
+      "browse": "Browse resources",
+      "start": "Help me choose",
+      "search": "Search resources",
+      "placeholder": "Try meeting, costs or access",
+      "all": "All resources",
+      "count": "{count} of {total} resources",
+      "empty": "No resources match. Try another term or clear the filters.",
+      "clear": "Clear filters",
+      "open": "Open resource",
+      "related": "Next step",
+      "noscript": "All resources are shown below. Search and filters become available when JavaScript is enabled.",
+      "workflowTitle": "Three practical ways to connect these resources",
+      "workflowIntro": "Move the output between tools yourself and review it at each step.",
+      "capabilityTitle": "Know what you are opening",
+      "capabilityText": "Local tools work in your browser. Guides help you plan or review a task. Check each resource’s scope before entering data or relying on its output.",
+      "assessment": "Self-assessment",
+      "tool": "Local browser tool",
+      "guide": "Practical guide",
+      "archive": "Explore more collections",
+      "archiveText": "Older collections and the extended catalog remain available. Some destination pages use a different language; a listing does not establish an operational AI integration.",
+      "fullCatalog": "Extended catalog",
+      "networkMap": "Network map",
+      "operationsGuide": "Operations & Reliability guide",
+      "source": "Source repositories",
+      "footer": "Choose a resource, review its output and decide the next step with your team.",
+      "categories": [
+        "Plan a pilot",
+        "Productivity",
+        "FinOps & costs",
+        "IT operations",
+        "Governance & review"
+      ],
+      "workflows": [
+        [
+          "From a meeting to a follow-up",
+          "Organize notes, turn the decision into a brief, then prepare a message for review.",
+          [
+            "meeting",
+            "brief",
+            "email"
+          ]
+        ],
+        [
+          "From an idea to a pilot",
+          "Map the process, assess the evidence and define a bounded experiment.",
+          [
+            "discovery",
+            "scorecard",
+            "pilot"
+          ]
+        ],
+        [
+          "From a cost question to a test",
+          "Compare your assumptions, plan a measurement window and record what must be verified.",
+          [
+            "finops",
+            "finops-guide",
+            "verification"
+          ]
+        ]
+      ]
+    },
+    "pt": {
+      "lang": "pt-BR",
+      "name": "Português",
+      "title": "Encontre o recurso certo para o próximo passo.",
+      "description": "Explore ferramentas e guias práticos da Zion para automação, produtividade, operações de TI, governança e FinOps em cinco idiomas.",
+      "eyebrow": "Rede de Apps Zion",
+      "intro": "Comece pela tarefa. Escolha uma ferramenta local ou um guia prático, entenda suas capacidades e conecte o próximo passo.",
+      "home": "Início",
+      "discovery": "Discovery gratuito",
+      "network": "Diretório da rede",
+      "catalog": "Catálogo de apps",
+      "languages": "Idioma",
+      "skip": "Ir para os recursos",
+      "browse": "Explorar recursos",
+      "start": "Ajude-me a escolher",
+      "search": "Buscar recursos",
+      "placeholder": "Busque reunião, custos ou acessos",
+      "all": "Todos os recursos",
+      "count": "{count} de {total} recursos",
+      "empty": "Nenhum recurso encontrado. Tente outro termo ou limpe os filtros.",
+      "clear": "Limpar filtros",
+      "open": "Abrir recurso",
+      "related": "Próximo passo",
+      "noscript": "Todos os recursos estão disponíveis abaixo. Ative o JavaScript para usar busca e filtros.",
+      "workflowTitle": "Três formas práticas de conectar os recursos",
+      "workflowIntro": "Transfira os resultados entre as ferramentas e revise cada etapa.",
+      "capabilityTitle": "Entenda o recurso antes de começar",
+      "capabilityText": "As ferramentas locais funcionam no navegador. Os guias ajudam a planejar ou revisar uma tarefa. Confira o escopo antes de inserir dados ou utilizar os resultados.",
+      "assessment": "Autoavaliação",
+      "tool": "Ferramenta local",
+      "guide": "Guia prático",
+      "archive": "Explore outras coleções",
+      "archiveText": "As coleções anteriores e o catálogo ampliado continuam disponíveis. Algumas páginas de destino usam outro idioma; estar no catálogo não comprova uma integração de IA em operação.",
+      "fullCatalog": "Catálogo ampliado",
+      "networkMap": "Mapa da rede",
+      "operationsGuide": "Guia de operações e confiabilidade",
+      "source": "Repositórios de código",
+      "footer": "Escolha um recurso, revise o resultado e decida o próximo passo com sua equipe.",
+      "categories": [
+        "Planejar um piloto",
+        "Produtividade",
+        "FinOps e custos",
+        "Operações de TI",
+        "Governança e revisão"
+      ],
+      "workflows": [
+        [
+          "Da reunião ao próximo contato",
+          "Organize as notas, transforme a decisão em briefing e prepare uma mensagem para revisão.",
+          [
+            "meeting",
+            "brief",
+            "email"
+          ]
+        ],
+        [
+          "Da ideia ao piloto",
+          "Mapeie o processo, avalie as evidências e defina um experimento com escopo limitado.",
+          [
+            "discovery",
+            "scorecard",
+            "pilot"
+          ]
+        ],
+        [
+          "Da dúvida sobre custos ao teste",
+          "Compare premissas, planeje o período de medição e registre o que precisa ser verificado.",
+          [
+            "finops",
+            "finops-guide",
+            "verification"
+          ]
+        ]
+      ]
+    },
+    "es": {
+      "lang": "es",
+      "name": "Español",
+      "title": "Encuentre el recurso adecuado para el próximo paso.",
+      "description": "Explore herramientas y guías de Zion para automatización, productividad, operaciones de TI, gobernanza y FinOps en cinco idiomas.",
+      "eyebrow": "Red de Apps Zion",
+      "intro": "Empiece por la tarea. Elija una herramienta local o una guía práctica, conozca sus capacidades y conecte el siguiente paso.",
+      "home": "Inicio",
+      "discovery": "Discovery gratuito",
+      "network": "Directorio de la red",
+      "catalog": "Catálogo de apps",
+      "languages": "Idioma",
+      "skip": "Ir a los recursos",
+      "browse": "Explorar recursos",
+      "start": "Ayúdeme a elegir",
+      "search": "Buscar recursos",
+      "placeholder": "Busque reunión, costes o accesos",
+      "all": "Todos los recursos",
+      "count": "{count} de {total} recursos",
+      "empty": "No se encontraron recursos. Pruebe otro término o borre los filtros.",
+      "clear": "Borrar filtros",
+      "open": "Abrir recurso",
+      "related": "Siguiente paso",
+      "noscript": "Todos los recursos aparecen abajo. Active JavaScript para usar la búsqueda y los filtros.",
+      "workflowTitle": "Tres formas prácticas de conectar los recursos",
+      "workflowIntro": "Transfiera los resultados entre herramientas y revise cada paso.",
+      "capabilityTitle": "Conozca el recurso antes de empezar",
+      "capabilityText": "Las herramientas locales funcionan en el navegador. Las guías ayudan a planificar o revisar una tarea. Compruebe el alcance antes de introducir datos o utilizar los resultados.",
+      "assessment": "Autoevaluación",
+      "tool": "Herramienta local",
+      "guide": "Guía práctica",
+      "archive": "Explore otras colecciones",
+      "archiveText": "Las colecciones anteriores y el catálogo ampliado siguen disponibles. Algunas páginas de destino usan otro idioma; figurar en el catálogo no demuestra una integración de IA en funcionamiento.",
+      "fullCatalog": "Catálogo ampliado",
+      "networkMap": "Mapa de la red",
+      "operationsGuide": "Guía de operaciones y fiabilidad",
+      "source": "Repositorios de código",
+      "footer": "Elija un recurso, revise el resultado y decida el siguiente paso con su equipo.",
+      "categories": [
+        "Planificar un piloto",
+        "Productividad",
+        "FinOps y costes",
+        "Operaciones de TI",
+        "Gobernanza y revisión"
+      ],
+      "workflows": [
+        [
+          "De la reunión al próximo contacto",
+          "Organice las notas, convierta la decisión en un brief y prepare un mensaje para revisar.",
+          [
+            "meeting",
+            "brief",
+            "email"
+          ]
+        ],
+        [
+          "De la idea al piloto",
+          "Describa el proceso, evalúe las evidencias y defina un experimento acotado.",
+          [
+            "discovery",
+            "scorecard",
+            "pilot"
+          ]
+        ],
+        [
+          "De una pregunta de costes a una prueba",
+          "Compare supuestos, planifique el periodo de medición y registre lo que debe verificarse.",
+          [
+            "finops",
+            "finops-guide",
+            "verification"
+          ]
+        ]
+      ]
+    },
+    "fr": {
+      "lang": "fr",
+      "name": "Français",
+      "title": "Trouvez la bonne ressource pour la prochaine étape.",
+      "description": "Explorez les outils et guides Zion pour l’automatisation, la productivité, les opérations IT, la gouvernance et le FinOps en cinq langues.",
+      "eyebrow": "Réseau d’apps Zion",
+      "intro": "Partez d’une tâche. Choisissez un outil local ou un guide pratique, comprenez ses capacités et préparez l’étape suivante.",
+      "home": "Accueil",
+      "discovery": "Discovery gratuit",
+      "network": "Annuaire du réseau",
+      "catalog": "Catalogue d’apps",
+      "languages": "Langue",
+      "skip": "Aller aux ressources",
+      "browse": "Explorer les ressources",
+      "start": "Aidez-moi à choisir",
+      "search": "Rechercher une ressource",
+      "placeholder": "Essayez réunion, coûts ou accès",
+      "all": "Toutes les ressources",
+      "count": "{count} ressources sur {total}",
+      "empty": "Aucune ressource trouvée. Essayez un autre terme ou effacez les filtres.",
+      "clear": "Effacer les filtres",
+      "open": "Ouvrir la ressource",
+      "related": "Étape suivante",
+      "noscript": "Toutes les ressources figurent ci-dessous. Activez JavaScript pour utiliser la recherche et les filtres.",
+      "workflowTitle": "Trois parcours pratiques entre ces ressources",
+      "workflowIntro": "Transférez les résultats entre les outils et relisez chaque étape.",
+      "capabilityTitle": "Comprenez la ressource avant de commencer",
+      "capabilityText": "Les outils locaux fonctionnent dans le navigateur. Les guides aident à préparer ou à revoir une tâche. Vérifiez le périmètre avant de saisir des données ou d’utiliser les résultats.",
+      "assessment": "Autoévaluation",
+      "tool": "Outil local",
+      "guide": "Guide pratique",
+      "archive": "Explorez d’autres collections",
+      "archiveText": "Les anciennes collections et le catalogue étendu restent accessibles. Certaines pages de destination utilisent une autre langue ; une fiche ne prouve pas qu’une intégration IA est opérationnelle.",
+      "fullCatalog": "Catalogue étendu",
+      "networkMap": "Carte du réseau",
+      "operationsGuide": "Guide des opérations et de la fiabilité",
+      "source": "Dépôts de code",
+      "footer": "Choisissez une ressource, relisez le résultat et décidez de la suite avec votre équipe.",
+      "categories": [
+        "Préparer un pilote",
+        "Productivité",
+        "FinOps et coûts",
+        "Opérations IT",
+        "Gouvernance et revue"
+      ],
+      "workflows": [
+        [
+          "De la réunion au suivi",
+          "Classez les notes, transformez la décision en brief et préparez un message à relire.",
+          [
+            "meeting",
+            "brief",
+            "email"
+          ]
+        ],
+        [
+          "De l’idée au pilote",
+          "Décrivez le processus, évaluez les preuves et définissez une expérimentation limitée.",
+          [
+            "discovery",
+            "scorecard",
+            "pilot"
+          ]
+        ],
+        [
+          "D’une question de coûts à un test",
+          "Comparez les hypothèses, planifiez la période de mesure et consignez les vérifications nécessaires.",
+          [
+            "finops",
+            "finops-guide",
+            "verification"
+          ]
+        ]
+      ]
+    },
+    "de": {
+      "lang": "de",
+      "name": "Deutsch",
+      "title": "Finden Sie die passende Ressource für den nächsten Schritt.",
+      "description": "Entdecken Sie Zion-Werkzeuge und Leitfäden für Automatisierung, Produktivität, IT-Betrieb, Governance und FinOps in fünf Sprachen.",
+      "eyebrow": "Zion Apps Network",
+      "intro": "Beginnen Sie mit einer Aufgabe. Wählen Sie ein lokales Werkzeug oder einen Leitfaden, prüfen Sie die Funktionen und planen Sie den nächsten Schritt.",
+      "home": "Startseite",
+      "discovery": "Kostenloser Discovery-Check",
+      "network": "Netzwerkverzeichnis",
+      "catalog": "App-Katalog",
+      "languages": "Sprache",
+      "skip": "Zu den Ressourcen",
+      "browse": "Ressourcen entdecken",
+      "start": "Hilfe bei der Auswahl",
+      "search": "Ressourcen suchen",
+      "placeholder": "Zum Beispiel Besprechung, Kosten oder Zugriff",
+      "all": "Alle Ressourcen",
+      "count": "{count} von {total} Ressourcen",
+      "empty": "Keine passenden Ressourcen. Versuchen Sie einen anderen Begriff oder setzen Sie die Filter zurück.",
+      "clear": "Filter zurücksetzen",
+      "open": "Ressource öffnen",
+      "related": "Nächster Schritt",
+      "noscript": "Alle Ressourcen stehen unten. Aktivieren Sie JavaScript für Suche und Filter.",
+      "workflowTitle": "Drei praktische Wege durch diese Ressourcen",
+      "workflowIntro": "Übertragen Sie Ergebnisse selbst zwischen den Werkzeugen und prüfen Sie jeden Schritt.",
+      "capabilityTitle": "Verstehen Sie die Ressource vor dem Start",
+      "capabilityText": "Lokale Werkzeuge laufen im Browser. Leitfäden helfen bei Planung und Prüfung. Prüfen Sie den Umfang, bevor Sie Daten eingeben oder Ergebnisse verwenden.",
+      "assessment": "Selbsteinschätzung",
+      "tool": "Lokales Werkzeug",
+      "guide": "Praxisleitfaden",
+      "archive": "Weitere Sammlungen entdecken",
+      "archiveText": "Frühere Sammlungen und der erweiterte Katalog bleiben verfügbar. Manche Zielseiten nutzen eine andere Sprache; ein Eintrag belegt keine betriebsfähige KI-Integration.",
+      "fullCatalog": "Erweiterter Katalog",
+      "networkMap": "Netzwerkübersicht",
+      "operationsGuide": "Operations: Leitfaden für Betrieb und Zuverlässigkeit",
+      "source": "Quellcode-Repositories",
+      "footer": "Wählen Sie eine Ressource, prüfen Sie das Ergebnis und entscheiden Sie im Team über den nächsten Schritt.",
+      "categories": [
+        "Piloten planen",
+        "Produktivität",
+        "FinOps und Kosten",
+        "IT-Betrieb",
+        "Governance und Prüfung"
+      ],
+      "workflows": [
+        [
+          "Von der Besprechung zur Nachbereitung",
+          "Ordnen Sie Notizen, erstellen Sie daraus ein Briefing und bereiten Sie eine Nachricht zur Prüfung vor.",
+          [
+            "meeting",
+            "brief",
+            "email"
+          ]
+        ],
+        [
+          "Von der Idee zum Piloten",
+          "Beschreiben Sie den Prozess, bewerten Sie Nachweise und planen Sie einen begrenzten Versuch.",
+          [
+            "discovery",
+            "scorecard",
+            "pilot"
+          ]
+        ],
+        [
+          "Von der Kostenfrage zum Test",
+          "Vergleichen Sie Annahmen, planen Sie den Messzeitraum und halten Sie offene Prüfpunkte fest.",
+          [
+            "finops",
+            "finops-guide",
+            "verification"
+          ]
+        ]
+      ]
+    }
+  },
+  "resources": [
+    {
+      "id": "discovery",
+      "category": "plan",
+      "kind": "assessment",
+      "location": "site",
+      "slug": "discovery/",
+      "related": "pilot",
+      "text": {
+        "en": {
+          "title": "Free Discovery",
+          "description": "Map one process and receive an immediate readiness report with suggested next steps."
+        },
+        "pt": {
+          "title": "Discovery gratuito",
+          "description": "Mapeie um processo e receba na página um relatório de prontidão com próximos passos sugeridos."
+        },
+        "es": {
+          "title": "Discovery gratuito",
+          "description": "Describa un proceso y reciba un informe inmediato de preparación con próximos pasos sugeridos."
+        },
+        "fr": {
+          "title": "Discovery gratuit",
+          "description": "Décrivez un processus et obtenez un rapport immédiat de préparation avec des étapes proposées."
+        },
+        "de": {
+          "title": "Kostenloser Discovery-Check",
+          "description": "Beschreiben Sie einen Prozess und erhalten Sie sofort einen Bereitschaftsbericht mit nächsten Schritten."
+        }
+      }
+    },
+    {
+      "id": "pilot",
+      "category": "plan",
+      "kind": "tool",
+      "location": "site",
+      "slug": "automation-pilot-planner/",
+      "related": "scorecard",
+      "text": {
+        "en": {
+          "title": "Automation Pilot Planner",
+          "description": "Build a bounded pilot brief with an owner, a baseline, review steps and a stop rule."
+        },
+        "pt": {
+          "title": "Planejador de piloto de automação",
+          "description": "Prepare um piloto com responsável, situação inicial, etapas de revisão e critério de interrupção."
+        },
+        "es": {
+          "title": "Planificador de piloto de automatización",
+          "description": "Prepare un piloto con responsable, punto de partida, revisiones y criterio de parada."
+        },
+        "fr": {
+          "title": "Planificateur de pilote d’automatisation",
+          "description": "Préparez un pilote avec un responsable, une référence initiale, des revues et un critère d’arrêt."
+        },
+        "de": {
+          "title": "Planer für Automatisierungspiloten",
+          "description": "Planen Sie einen Pilotversuch mit Verantwortlichen, Ausgangswerten, Prüfschritten und Abbruchkriterium."
+        }
+      }
+    },
+    {
+      "id": "scorecard",
+      "category": "plan",
+      "kind": "tool",
+      "location": "network",
+      "slug": "app-selection-evidence-scorecard-2026",
+      "related": "verification",
+      "text": {
+        "en": {
+          "title": "App Selection Scorecard",
+          "description": "Compare the evidence behind a resource and identify what still needs validation."
+        },
+        "pt": {
+          "title": "Avaliação de apps por evidências",
+          "description": "Compare as evidências de um recurso e identifique o que ainda precisa ser validado."
+        },
+        "es": {
+          "title": "Evaluación de apps por evidencias",
+          "description": "Compare las evidencias de un recurso e identifique qué necesita validación."
+        },
+        "fr": {
+          "title": "Évaluation des apps par les preuves",
+          "description": "Comparez les preuves disponibles pour une ressource et repérez les points à valider."
+        },
+        "de": {
+          "title": "App-Bewertung anhand von Nachweisen",
+          "description": "Vergleichen Sie die Nachweise zu einer Ressource und erkennen Sie offene Prüfpunkte."
+        }
+      }
+    },
+    {
+      "id": "brief",
+      "category": "productivity",
+      "kind": "tool",
+      "location": "site",
+      "slug": "agent-brief/",
+      "related": "email",
+      "text": {
+        "en": {
+          "title": "Agent Brief",
+          "description": "Turn a process, systems, owner and success measure into a structured working brief."
+        },
+        "pt": {
+          "title": "Briefing de agente",
+          "description": "Organize processo, sistemas, responsável e medida de sucesso em um briefing de trabalho."
+        },
+        "es": {
+          "title": "Brief de agente",
+          "description": "Organice el proceso, los sistemas, el responsable y la medida de éxito en un documento de trabajo."
+        },
+        "fr": {
+          "title": "Brief d’agent",
+          "description": "Organisez processus, systèmes, responsable et mesure de réussite dans un brief de travail."
+        },
+        "de": {
+          "title": "Agentenbriefing",
+          "description": "Strukturieren Sie Prozess, Systeme, Verantwortliche und Erfolgsmaß in einem Arbeitsbriefing."
+        }
+      }
+    },
+    {
+      "id": "meeting",
+      "category": "productivity",
+      "kind": "tool",
+      "location": "site",
+      "slug": "ai-meeting-notes-copilot/",
+      "related": "brief",
+      "text": {
+        "en": {
+          "title": "Meeting Notes Copilot",
+          "description": "Organize pasted notes into decisions, actions and open questions using local rules."
+        },
+        "pt": {
+          "title": "Copiloto de atas de reunião",
+          "description": "Organize suas anotações em decisões, ações e perguntas usando regras locais."
+        },
+        "es": {
+          "title": "Copiloto de notas de reunión",
+          "description": "Organice sus notas en decisiones, acciones y preguntas mediante reglas locales."
+        },
+        "fr": {
+          "title": "Copilote de notes de réunion",
+          "description": "Classez vos notes en décisions, actions et questions à l’aide de règles locales."
+        },
+        "de": {
+          "title": "Assistent für Besprechungsnotizen",
+          "description": "Ordnen Sie Ihre Notizen mithilfe lokaler Regeln in Entscheidungen, Aufgaben und offene Fragen."
+        }
+      }
+    },
+    {
+      "id": "email",
+      "category": "productivity",
+      "kind": "tool",
+      "location": "site",
+      "slug": "ai-email-drafter/",
+      "related": "meeting",
+      "text": {
+        "en": {
+          "title": "Email Drafter",
+          "description": "Create a template-based draft from your context, then review and send it yourself."
+        },
+        "pt": {
+          "title": "Redator de e-mails",
+          "description": "Crie um rascunho baseado em modelos e no seu contexto; revise e faça o envio por conta própria."
+        },
+        "es": {
+          "title": "Redactor de correos",
+          "description": "Cree un borrador a partir de plantillas y su contexto; revíselo y envíelo usted mismo."
+        },
+        "fr": {
+          "title": "Rédacteur de courriels",
+          "description": "Créez un brouillon à partir de modèles et de votre contexte, puis relisez-le et envoyez-le vous-même."
+        },
+        "de": {
+          "title": "E-Mail-Entwurf",
+          "description": "Erstellen Sie einen vorlagenbasierten Entwurf mit Ihrem Kontext, prüfen Sie ihn und versenden Sie ihn selbst."
+        }
+      }
+    },
+    {
+      "id": "finops",
+      "category": "costs",
+      "kind": "tool",
+      "location": "site",
+      "slug": "apps/finops-scenario-estimator.html",
+      "related": "finops-guide",
+      "text": {
+        "en": {
+          "title": "FinOps Scenario Estimator",
+          "description": "Compare cloud-cost assumptions in USD with a transparent, local calculation."
+        },
+        "pt": {
+          "title": "Estimador de cenários FinOps",
+          "description": "Compare premissas de custos de nuvem em USD com um cálculo local e transparente."
+        },
+        "es": {
+          "title": "Estimador de escenarios FinOps",
+          "description": "Compare supuestos de costes de nube en USD con un cálculo local y transparente."
+        },
+        "fr": {
+          "title": "Estimateur de scénarios FinOps",
+          "description": "Comparez des hypothèses de coûts cloud en USD avec un calcul local et transparent."
+        },
+        "de": {
+          "title": "FinOps-Szenariorechner",
+          "description": "Vergleichen Sie Annahmen zu Cloud-Kosten in USD mit einer transparenten lokalen Berechnung."
+        }
+      }
+    },
+    {
+      "id": "finops-guide",
+      "category": "costs",
+      "kind": "guide",
+      "location": "site",
+      "slug": "apps/finops-pilot-guide.html",
+      "related": "pilot",
+      "text": {
+        "en": {
+          "title": "FinOps Pilot Guide",
+          "description": "Choose a cost baseline, a measurable target and a review window for a small pilot."
+        },
+        "pt": {
+          "title": "Guia de piloto FinOps",
+          "description": "Defina custos de referência, uma meta mensurável e um período de revisão para um piloto pequeno."
+        },
+        "es": {
+          "title": "Guía de piloto FinOps",
+          "description": "Defina costes de referencia, una meta medible y un periodo de revisión para un piloto pequeño."
+        },
+        "fr": {
+          "title": "Guide de pilote FinOps",
+          "description": "Définissez des coûts de référence, un objectif mesurable et une période de revue pour un petit pilote."
+        },
+        "de": {
+          "title": "Leitfaden für FinOps-Piloten",
+          "description": "Legen Sie Ausgangskosten, ein messbares Ziel und einen Prüfzeitraum für einen kleinen Piloten fest."
+        }
+      }
+    },
+    {
+      "id": "access",
+      "category": "governance",
+      "kind": "guide",
+      "location": "site",
+      "slug": "ai-access-reviewer/",
+      "related": "verification",
+      "text": {
+        "en": {
+          "title": "Access Review Guide",
+          "description": "Prepare an access review with clear ownership, evidence and human approval."
+        },
+        "pt": {
+          "title": "Guia de revisão de acessos",
+          "description": "Prepare uma revisão de acessos com responsáveis, evidências e aprovação humana."
+        },
+        "es": {
+          "title": "Guía de revisión de accesos",
+          "description": "Prepare una revisión de accesos con responsables, evidencias y aprobación humana."
+        },
+        "fr": {
+          "title": "Guide de revue des accès",
+          "description": "Préparez une revue des accès avec responsables, preuves et validation humaine."
+        },
+        "de": {
+          "title": "Leitfaden zur Zugriffsprüfung",
+          "description": "Bereiten Sie eine Zugriffsprüfung mit Verantwortlichen, Nachweisen und menschlicher Freigabe vor."
+        }
+      }
+    },
+    {
+      "id": "essay",
+      "category": "productivity",
+      "kind": "guide",
+      "location": "site",
+      "slug": "admissions-essay-reviewer/",
+      "related": "brief",
+      "text": {
+        "en": {
+          "title": "Admissions Essay Review Guide",
+          "description": "Structure a manual review of clarity, evidence and voice before revising a draft."
+        },
+        "pt": {
+          "title": "Guia de revisão de redações",
+          "description": "Estruture uma revisão manual de clareza, evidências e voz antes de editar uma redação."
+        },
+        "es": {
+          "title": "Guía de revisión de ensayos",
+          "description": "Estructure una revisión manual de claridad, evidencias y voz antes de editar un ensayo."
+        },
+        "fr": {
+          "title": "Guide de relecture de candidatures",
+          "description": "Structurez une relecture manuelle de la clarté, des preuves et du style avant de réviser un texte."
+        },
+        "de": {
+          "title": "Leitfaden zur Prüfung von Bewerbungstexten",
+          "description": "Prüfen Sie Klarheit, Belege und Ausdruck manuell, bevor Sie einen Text überarbeiten."
+        }
+      }
+    },
+    {
+      "id": "incident",
+      "category": "operations",
+      "kind": "guide",
+      "location": "site",
+      "slug": "ai-incident-response/",
+      "related": "evidence",
+      "text": {
+        "en": {
+          "title": "Incident Response Guide",
+          "description": "Define the incident context, responsibilities and evidence needed for a response plan."
+        },
+        "pt": {
+          "title": "Guia de resposta a incidentes",
+          "description": "Defina o contexto, as responsabilidades e as evidências necessárias para planejar a resposta."
+        },
+        "es": {
+          "title": "Guía de respuesta a incidentes",
+          "description": "Defina contexto, responsabilidades y evidencias para preparar un plan de respuesta."
+        },
+        "fr": {
+          "title": "Guide de réponse aux incidents",
+          "description": "Définissez le contexte, les responsabilités et les preuves nécessaires au plan de réponse."
+        },
+        "de": {
+          "title": "Leitfaden zur Incident Response",
+          "description": "Definieren Sie Kontext, Zuständigkeiten und Nachweise für einen Reaktionsplan."
+        }
+      }
+    },
+    {
+      "id": "evidence",
+      "category": "operations",
+      "kind": "guide",
+      "location": "network",
+      "slug": "app-network-operations-evidence-checklist-2026",
+      "related": "handoff",
+      "text": {
+        "en": {
+          "title": "Operations Evidence Checklist",
+          "description": "Collect the scope, prerequisites, success criteria and operational evidence for a task."
+        },
+        "pt": {
+          "title": "Checklist de evidências operacionais",
+          "description": "Reúna escopo, pré-requisitos, critérios de sucesso e evidências operacionais de uma tarefa."
+        },
+        "es": {
+          "title": "Lista de evidencias operativas",
+          "description": "Reúna alcance, requisitos previos, criterios de éxito y evidencias de una tarea."
+        },
+        "fr": {
+          "title": "Liste des preuves opérationnelles",
+          "description": "Rassemblez le périmètre, les prérequis, les critères de réussite et les preuves d’une tâche."
+        },
+        "de": {
+          "title": "Checkliste für Betriebsnachweise",
+          "description": "Erfassen Sie Umfang, Voraussetzungen, Erfolgskriterien und Nachweise einer Aufgabe."
+        }
+      }
+    },
+    {
+      "id": "handoff",
+      "category": "operations",
+      "kind": "guide",
+      "location": "network",
+      "slug": "field-visit-handoff-2026",
+      "related": "completion",
+      "text": {
+        "en": {
+          "title": "Field Visit Handoff",
+          "description": "Prepare site access, work scope, contacts and evidence for a clear technician handoff."
+        },
+        "pt": {
+          "title": "Passagem de visita técnica",
+          "description": "Prepare acesso ao local, escopo, contatos e evidências para orientar o técnico."
+        },
+        "es": {
+          "title": "Traspaso de visita técnica",
+          "description": "Prepare acceso al sitio, alcance, contactos y evidencias para orientar al técnico."
+        },
+        "fr": {
+          "title": "Transmission d’une visite technique",
+          "description": "Préparez les accès au site, le périmètre, les contacts et les preuves pour le technicien."
+        },
+        "de": {
+          "title": "Übergabe eines Technikereinsatzes",
+          "description": "Bereiten Sie Standortzugang, Arbeitsumfang, Kontakte und Nachweise für den Techniker vor."
+        }
+      }
+    },
+    {
+      "id": "completion",
+      "category": "operations",
+      "kind": "guide",
+      "location": "network",
+      "slug": "field-service-completion-pack-2026",
+      "related": "evidence",
+      "text": {
+        "en": {
+          "title": "Service Completion Pack",
+          "description": "Organize work performed, exceptions and acceptance evidence before closing a service visit."
+        },
+        "pt": {
+          "title": "Registro de conclusão de serviço",
+          "description": "Organize atividades realizadas, exceções e evidências de aceite antes de encerrar uma visita."
+        },
+        "es": {
+          "title": "Registro de cierre del servicio",
+          "description": "Organice el trabajo realizado, las excepciones y las evidencias de aceptación antes del cierre."
+        },
+        "fr": {
+          "title": "Dossier de clôture de service",
+          "description": "Organisez les travaux réalisés, les exceptions et les preuves d’acceptation avant la clôture."
+        },
+        "de": {
+          "title": "Dokumentation des Serviceabschlusses",
+          "description": "Ordnen Sie ausgeführte Arbeiten, Ausnahmen und Abnahmenachweise vor dem Abschluss."
+        }
+      }
+    },
+    {
+      "id": "verification",
+      "category": "governance",
+      "kind": "guide",
+      "location": "site",
+      "slug": "apps/app-verification-guide.html",
+      "related": "scorecard",
+      "text": {
+        "en": {
+          "title": "App Verification Guide",
+          "description": "Check what a resource actually does, what data it uses and how to evaluate its output."
+        },
+        "pt": {
+          "title": "Guia de verificação de apps",
+          "description": "Confira o que um recurso faz, quais dados utiliza e como avaliar seus resultados."
+        },
+        "es": {
+          "title": "Guía de verificación de apps",
+          "description": "Compruebe qué hace un recurso, qué datos utiliza y cómo evaluar sus resultados."
+        },
+        "fr": {
+          "title": "Guide de vérification des apps",
+          "description": "Vérifiez les fonctions d’une ressource, les données utilisées et la façon d’évaluer ses résultats."
+        },
+        "de": {
+          "title": "Leitfaden zur App-Prüfung",
+          "description": "Prüfen Sie Funktionen, verwendete Daten und die Bewertung der Ergebnisse einer Ressource."
+        }
+      }
+    }
+  ]
+}
