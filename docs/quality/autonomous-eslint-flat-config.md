@@ -2,7 +2,9 @@
 
 The Custom ESLint workflow continues to load `.eslintrc-autonomous.cjs` with its
 existing `-c` argument and zero-warning threshold. The file now exports a flat
-configuration array, as required by the installed ESLint 10. No workflow,
+configuration array, as required by the installed ESLint 10. The workflow runs
+`node --test tests/ci/test_autonomous_eslint.cjs` after `npm ci` and before the
+repository lint scan; a failing regression prevents a successful job. No
 dependency, warning threshold, or failure-reporting step is changed.
 
 ## What the repair preserves
