@@ -2,9 +2,7 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Smart Data Analytics AWS (Ai)',
-  description: 'Smart Data Analytics AWS (Ai) is an AI-powered ai solution that transforms how businesses operate through intelligent automation and real-time analytics.
-
-## Ke',
+  description: "Smart Data Analytics AWS (Ai) is an AI-powered ai solution that transforms how businesses operate through intelligent automation and real-time analytics.\n\n## Ke",
   alternates: {
     canonical: 'https://ziontechgroup.com/services/smart-data-analytics-aws-(ai)-6bf063',
   },

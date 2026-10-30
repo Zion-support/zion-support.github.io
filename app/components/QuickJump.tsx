@@ -62,7 +62,6 @@ export default function QuickJump({ contentRef, className = '' }: QuickJumpProps
     }
   }, [extractHeadings]);
 
-  const activeId = typeof document !== 'undefined' ? document.querySelector('.opacity-100'); /* simplified */
   const [activeHeading, setActiveHeading] = useState<string>('');
 
   useEffect(() => {
@@ -231,3 +230,4 @@ export function PageJump() {
     </div>
   );
 }
+
