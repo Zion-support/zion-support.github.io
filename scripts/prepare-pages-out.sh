@@ -18,6 +18,9 @@ if [ -d public ]; then
   cp -a public/. out/
 fi
 
+# Preserve required index references after external sitemap regeneration.
+python3 scripts/ensure-pages-sitemap-index.py out
+
 # Keep the five reviewed guide editions in sync with their localized source.
 # Later productivity rendering appends the existing resource blocks.
 node scripts/render-app-verification-guides.cjs out
@@ -29,7 +32,7 @@ node scripts/render-finops-scenario.cjs out --pages-only
 if [ -f _redirects ]; then
   cp _redirects out/_redirects
 fi
-# public/sitemap-0.xml + sitemap.xml (index → sitemap-0) + robots.txt ship as-is.
+# Sitemap payloads and robots.txt ship as-is; required index refs are ensured above.
 
 # Dual-path gap-fill (public wins). Hubs only — never copy country leaves.
 for d in field-services field-services-brazil plans discovery enterprise about solutions blog managed-it-services ai-consulting-services finops-consulting autonomous-ai-agents healthcare-it-hipaa fintech-it-ai; do
