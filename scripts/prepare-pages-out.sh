@@ -7,6 +7,10 @@ ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT"
 python3 -m unittest -q scripts/test-private-ops-guard.py
 python3 scripts/assert-no-private-ops.py public
+if [ ! -s public/sitemap.xml ]; then
+  echo "ERROR: missing or empty public/sitemap.xml; refusing to assemble Pages artifact" >&2
+  exit 1
+fi
 rm -rf out
 mkdir -p out
 
