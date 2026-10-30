@@ -24,3 +24,9 @@ test('the Portuguese search example finds the actual meeting resource without ac
   const meeting=data.resources.find(r=>r.id==='meeting');
   assert(matches(meeting.text.pt.title+' '+meeting.text.pt.description,'reuniao','productivity','all'));
 });
+test('existing operations and reliability navigation remains available in all five languages',()=>{
+  const expected={en:'/apps/operations-reliability-ai-2026.html',pt:'/apps/operations-reliability-ai-2026-pt.html',es:'/apps/operations-reliability-ai-2026-es.html',fr:'/apps/operations-reliability-ai-2026-fr.html',de:'/apps/operations-reliability-ai-2026-de.html'};
+  for(const l of locales){assert(render(l).includes(`href="${expected[l]}"`));assert(data.locales[l].operationsGuide.length>10);}
+  assert(render('en').includes('Operations &amp; Reliability'));
+  assert(render('de').includes('Operations'));
+});

@@ -43,6 +43,7 @@
       "archiveText": "Older collections and the extended catalog remain available. Some destination pages use a different language; a listing does not establish an operational AI integration.",
       "fullCatalog": "Extended catalog",
       "networkMap": "Network map",
+      "operationsGuide": "Operations & Reliability guide",
       "source": "Source repositories",
       "footer": "Choose a resource, review its output and decide the next step with your team.",
       "categories": [
@@ -117,6 +118,7 @@
       "archiveText": "As coleções anteriores e o catálogo ampliado continuam disponíveis. Algumas páginas de destino usam outro idioma; estar no catálogo não comprova uma integração de IA em operação.",
       "fullCatalog": "Catálogo ampliado",
       "networkMap": "Mapa da rede",
+      "operationsGuide": "Guia de operações e confiabilidade",
       "source": "Repositórios de código",
       "footer": "Escolha um recurso, revise o resultado e decida o próximo passo com sua equipe.",
       "categories": [
@@ -191,6 +193,7 @@
       "archiveText": "Las colecciones anteriores y el catálogo ampliado siguen disponibles. Algunas páginas de destino usan otro idioma; figurar en el catálogo no demuestra una integración de IA en funcionamiento.",
       "fullCatalog": "Catálogo ampliado",
       "networkMap": "Mapa de la red",
+      "operationsGuide": "Guía de operaciones y fiabilidad",
       "source": "Repositorios de código",
       "footer": "Elija un recurso, revise el resultado y decida el siguiente paso con su equipo.",
       "categories": [
@@ -265,6 +268,7 @@
       "archiveText": "Les anciennes collections et le catalogue étendu restent accessibles. Certaines pages de destination utilisent une autre langue ; une fiche ne prouve pas qu’une intégration IA est opérationnelle.",
       "fullCatalog": "Catalogue étendu",
       "networkMap": "Carte du réseau",
+      "operationsGuide": "Guide des opérations et de la fiabilité",
       "source": "Dépôts de code",
       "footer": "Choisissez une ressource, relisez le résultat et décidez de la suite avec votre équipe.",
       "categories": [
@@ -339,6 +343,7 @@
       "archiveText": "Frühere Sammlungen und der erweiterte Katalog bleiben verfügbar. Manche Zielseiten nutzen eine andere Sprache; ein Eintrag belegt keine betriebsfähige KI-Integration.",
       "fullCatalog": "Erweiterter Katalog",
       "networkMap": "Netzwerkübersicht",
+      "operationsGuide": "Operations: Leitfaden für Betrieb und Zuverlässigkeit",
       "source": "Quellcode-Repositories",
       "footer": "Wählen Sie eine Ressource, prüfen Sie das Ergebnis und entscheiden Sie im Team über den nächsten Schritt.",
       "categories": [
