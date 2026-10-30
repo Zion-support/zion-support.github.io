@@ -368,6 +368,15 @@ export default function HomePage() {
 
             {/* ── Secondary CTAs — extra discovery links ── */}
             <div className="flex flex-wrap justify-center gap-3 mt-2">
+              <Link href="/apps-network/" className="px-4 py-2 rounded-full bg-cyan-500/20 border border-cyan-500/40 text-cyan-200 text-sm hover:bg-cyan-500/30 hover:text-white transition-all font-medium">
+                🧩 Apps Network
+              </Link>
+              <Link href="/discovery/" className="px-4 py-2 rounded-full bg-emerald-500/20 border border-emerald-500/40 text-emerald-200 text-sm hover:bg-emerald-500/30 hover:text-white transition-all font-medium">
+                🎯 Free Discovery
+              </Link>
+              <Link href="/apps/operations-reliability-ai-2026.html" className="px-4 py-2 rounded-full bg-sky-500/20 border border-sky-500/40 text-sky-200 text-sm hover:bg-sky-500/30 hover:text-white transition-all font-medium">
+                🛠 Operations & Reliability
+              </Link>
               <Link href="/dashboard" className="px-4 py-2 rounded-full bg-purple-500/20 border border-purple-500/40 text-purple-300 text-sm hover:bg-purple-500/30 hover:text-white transition-all font-medium">
                 ⚡ Agent Dashboard
               </Link>
@@ -1281,10 +1290,10 @@ export default function HomePage() {
               <h2 className="text-2xl font-bold text-white mb-2">Free apps &amp; calculators — interlinked</h2>
               <p className="text-sm text-slate-400">
                 Path tools on this domain and product apps from the GitHub constellation. Every card links to the app
-                and back into the <Link href="/apps-network/" className="text-purple-300 hover:text-pink-300">network hub</Link>.
+                and back into the <Link href="/zion-app-network/" className="text-purple-300 hover:text-pink-300">network hub</Link>.
               </p>
             </div>
-            <Link href="/apps-network/" className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-purple-600 text-white text-sm font-medium hover:bg-purple-500 transition-colors">
+            <Link href="/zion-app-network/" className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-purple-600 text-white text-sm font-medium hover:bg-purple-500 transition-colors">
               View all apps <span>→</span>
             </Link>
           </div>
@@ -1308,14 +1317,14 @@ export default function HomePage() {
               <h3 className="text-lg font-bold text-white mb-4">🧠 AI Product Apps</h3>
               <div className="flex flex-wrap gap-2">
                 {[
-                  {{ name: 'AI Agent Swarm', href: '/zion-ai-agent-swarm/' }},
-                  {{ name: 'Multi-Agent Orchestrator', href: '/multi-agent-orchestrator/' }},
-                  {{ name: 'AI Service Router', href: '/ai-service-router/' }},
-                  {{ name: 'AI Content Strategy', href: '/ai-content-strategy-engine/' }},
-                  {{ name: 'AI SEO Generator', href: '/ai-seo-content-generator/' }},
-                  {{ name: 'AI Lead Generator', href: '/zion-ai-lead-generator/' }},
-                  {{ name: 'AI Fraud Detection', href: '/ai-fraud-detection/' }},
-                  {{ name: 'AI Recommendation Engine', href: '/ai-recommendation-engine/' }},
+                  { name: 'AI Agent Swarm', href: '/zion-ai-agent-swarm/' },
+                  { name: 'Multi-Agent Orchestrator', href: '/multi-agent-orchestrator/' },
+                  { name: 'AI Service Router', href: '/ai-service-router/' },
+                  { name: 'AI Content Strategy', href: '/ai-content-strategy-engine/' },
+                  { name: 'AI SEO Generator', href: '/ai-seo-content-generator/' },
+                  { name: 'AI Lead Generator', href: '/zion-ai-lead-generator/' },
+                  { name: 'AI Fraud Detection', href: '/ai-fraud-detection/' },
+                  { name: 'AI Recommendation Engine', href: '/ai-recommendation-engine/' },
                 ].map((app) => (
                   <Link key={app.href} href={app.href} className="px-3 py-1.5 rounded-lg bg-purple-600/20 text-purple-300 text-xs hover:bg-purple-600/30 transition-colors">
                     {app.name}
@@ -1327,13 +1336,13 @@ export default function HomePage() {
               <h3 className="text-lg font-bold text-white mb-4">💰 Money &amp; FinOps</h3>
               <div className="flex flex-wrap gap-2">
                 {[
-                  {{ name: 'ROI Calculator', href: '/roi-calc/' }},
-                  {{ name: 'Token Cost', href: '/token-cost/' }},
-                  {{ name: 'FinOps Autopilot', href: '/finops-autopilot/' }},
-                  {{ name: 'Cloud Waste', href: '/cloud-waste/' }},
-                  {{ name: 'Pricing Calculator', href: '/pricing-calculator/' }},
-                  {{ name: 'FinOps Estimator', href: '/finops-estimator/' }},
-                  {{ name: 'AI Cloud Cost Opt.', href: '/ai-first-cloud-cost-optimization/' }},
+                  { name: 'ROI Calculator', href: '/roi-calc/' },
+                  { name: 'Token Cost', href: '/token-cost/' },
+                  { name: 'FinOps Autopilot', href: '/finops-autopilot/' },
+                  { name: 'Cloud Waste', href: '/cloud-waste/' },
+                  { name: 'Pricing Calculator', href: '/pricing-calculator/' },
+                  { name: 'FinOps Estimator', href: '/finops-estimator/' },
+                  { name: 'AI Cloud Cost Opt.', href: '/ai-first-cloud-cost-optimization/' },
                 ].map((app) => (
                   <Link key={app.href} href={app.href} className="px-3 py-1.5 rounded-lg bg-green-600/20 text-green-300 text-xs hover:bg-green-600/30 transition-colors">
                     {app.name}
@@ -1345,12 +1354,12 @@ export default function HomePage() {
               <h3 className="text-lg font-bold text-white mb-4">🔧 Ops &amp; Incidents</h3>
               <div className="flex flex-wrap gap-2">
                 {[
-                  {{ name: 'Incident Cost', href: '/incident-cost/' }},
-                  {{ name: 'AI Incident Commander', href: '/zion-ai-incident-commander/' }},
-                  {{ name: 'Change Risk', href: '/change-risk/' }},
-                  {{ name: 'Ops Runbook AI', href: '/ops-runbook-ai/' }},
-                  {{ name: 'Agents Monitoring', href: '/agents-monitoring/' }},
-                  {{ name: 'SLA Calculator', href: '/sla-calculator/' }},
+                  { name: 'Incident Cost', href: '/incident-cost/' },
+                  { name: 'AI Incident Commander', href: '/zion-ai-incident-commander/' },
+                  { name: 'Change Risk', href: '/change-risk/' },
+                  { name: 'Ops Runbook AI', href: '/ops-runbook-ai/' },
+                  { name: 'Agents Monitoring', href: '/agents-monitoring/' },
+                  { name: 'SLA Calculator', href: '/sla-calculator/' },
                 ].map((app) => (
                   <Link key={app.href} href={app.href} className="px-3 py-1.5 rounded-lg bg-red-600/20 text-red-300 text-xs hover:bg-red-600/30 transition-colors">
                     {app.name}
@@ -1362,13 +1371,13 @@ export default function HomePage() {
               <h3 className="text-lg font-bold text-white mb-4">🛡️ Governance &amp; Security</h3>
               <div className="flex flex-wrap gap-2">
                 {[
-                  {{ name: 'AI Governance Checklist', href: '/ai-governance-checklist/' }},
-                  {{ name: 'AI Compliance Auditor', href: '/zion-ai-compliance-auditor/' }},
-                  {{ name: 'Security Scanning', href: '/security-scanning/' }},
-                  {{ name: 'Identity Management', href: '/identity-management/' }},
-                  {{ name: 'Prompt Shield', href: '/prompt-shield/' }},
-                  {{ name: 'Secret Notes', href: '/secret-notes/' }},
-                  {{ name: 'AI Tender Scout', href: '/ai-tender-scout/' }},
+                  { name: 'AI Governance Checklist', href: '/ai-governance-checklist/' },
+                  { name: 'AI Compliance Auditor', href: '/zion-ai-compliance-auditor/' },
+                  { name: 'Security Scanning', href: '/security-scanning/' },
+                  { name: 'Identity Management', href: '/identity-management/' },
+                  { name: 'Prompt Shield', href: '/prompt-shield/' },
+                  { name: 'Secret Notes', href: '/secret-notes/' },
+                  { name: 'AI Tender Scout', href: '/ai-tender-scout/' },
                 ].map((app) => (
                   <Link key={app.href} href={app.href} className="px-3 py-1.5 rounded-lg bg-amber-600/20 text-amber-300 text-xs hover:bg-amber-600/30 transition-colors">
                     {app.name}
@@ -1380,14 +1389,14 @@ export default function HomePage() {
               <h3 className="text-lg font-bold text-white mb-4">📡 Field &amp; Support</h3>
               <div className="flex flex-wrap gap-2">
                 {[
-                  {{ name: 'Field Dispatch', href: '/field-dispatch/' }},
-                  {{ name: 'Parts Desk', href: '/parts-desk/' }},
-                  {{ name: 'Warranty Lens', href: '/warranty-lens/' }},
-                  {{ name: 'AI Lead Generator', href: '/zion-ai-lead-generator/' }},
-                  {{ name: 'Rapid Outreach', href: '/rapid-outreach/' }},
-                  {{ name: 'Sales Lead Gen Suite', href: '/sales-leadgen-suite/' }},
-                  {{ name: 'Customer Success', href: '/customer-success/' }},
-                  {{ name: 'AI CRM Integration', href: '/zion-ai-crm-integration/' }},
+                  { name: 'Field Dispatch', href: '/field-dispatch/' },
+                  { name: 'Parts Desk', href: '/parts-desk/' },
+                  { name: 'Warranty Lens', href: '/warranty-lens/' },
+                  { name: 'AI Lead Generator', href: '/zion-ai-lead-generator/' },
+                  { name: 'Rapid Outreach', href: '/rapid-outreach/' },
+                  { name: 'Sales Lead Gen Suite', href: '/sales-leadgen-suite/' },
+                  { name: 'Customer Success', href: '/customer-success/' },
+                  { name: 'AI CRM Integration', href: '/zion-ai-crm-integration/' },
                 ].map((app) => (
                   <Link key={app.href} href={app.href} className="px-3 py-1.5 rounded-lg bg-blue-600/20 text-blue-300 text-xs hover:bg-blue-600/30 transition-colors">
                     {app.name}
@@ -1399,10 +1408,10 @@ export default function HomePage() {
               <h3 className="text-lg font-bold text-white mb-4">📋 Governance &amp; Bids</h3>
               <div className="flex flex-wrap gap-2">
                 {[
-                  {{ name: 'Licitação Radar', href: '/licitacao-radar/' }},
-                  {{ name: 'RFP Readiness', href: '/rfp-readiness/' }},
-                  {{ name: 'Edital Desk', href: '/edital-desk/' }},
-                  {{ name: 'AI Tender Scout', href: '/ai-tender-scout/' }},
+                  { name: 'Licitação Radar', href: '/licitacao-radar/' },
+                  { name: 'RFP Readiness', href: '/rfp-readiness/' },
+                  { name: 'Edital Desk', href: '/edital-desk/' },
+                  { name: 'AI Tender Scout', href: '/ai-tender-scout/' },
                 ].map((app) => (
                   <Link key={app.href} href={app.href} className="px-3 py-1.5 rounded-lg bg-cyan-600/20 text-cyan-300 text-xs hover:bg-cyan-600/30 transition-colors">
                     {app.name}
@@ -1445,13 +1454,13 @@ export default function HomePage() {
           </div>
 
           <div className="text-center py-8">
-            <Link href="/apps-network/" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-purple-600 text-white font-medium hover:bg-purple-500 transition-colors text-lg">
+            <Link href="/zion-app-network/" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-purple-600 text-white font-medium hover:bg-purple-500 transition-colors text-lg">
               Explore the Full Apps Network →
             </Link>
             <p className="text-sm text-slate-500 mt-3">35,000+ services | 60+ interlinked apps | 500+ GitHub repositories</p>
           </div>
         </div>
-      </section></section>
+      </section>
 
 
       {/* ── Free Tools & Interactive Utilities — {serviceCount}+-service catalog ── */}
@@ -1462,7 +1471,7 @@ export default function HomePage() {
             <p className="text-slate-400 max-w-2xl mx-auto text-sm">
               Explore our service catalog, calculate ROI, compare solutions, and route your needs — directly from
               our <strong className="text-white">{services.length}+</strong> services across <strong className="text-white">{CATEGORIES.length}</strong> categories.
-              {' '}Also see the <Link href="/apps-network/" className="text-purple-300 hover:text-pink-300">Apps Network hub</Link>.
+              {' '}Also see the <Link href="/zion-app-network/" className="text-purple-300 hover:text-pink-300">Apps Network hub</Link>.
             </p>
           </div>
           <div className="max-w-5xl mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-5">

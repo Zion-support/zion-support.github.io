@@ -286,8 +286,10 @@ export default function SearchPage() {
                     <div className="flex items-center gap-2 text-xs">
                       <span className="text-slate-500">{service.category}</span>
                       {service.industry && (
-                        <span className="text-slate-500">•</span>
-                        <span className="text-slate-500">{service.industry}</span>
+                        <>
+                          <span className="text-slate-500">•</span>
+                          <span className="text-slate-500">{service.industry}</span>
+                        </>
                       )}
                     </div>
                   </Link>

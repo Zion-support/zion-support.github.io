@@ -1,0 +1,127 @@
+name: Workflow push fanout delta guard
+
+"on":
+  pull_request:
+    paths:
+      - '.github/workflows/**'
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/workflow-push-fanout-delta.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: workflow-push-fanout-delta-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  fanout:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Prevent unbounded main-push fanout growth
+        shell: bash
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.sha }}
+        run: |
+          set -euo pipefail
+          ruby <<'RUBY'
+          require 'yaml'
+          require 'open3'
+
+          event=ENV.fetch('EVENT_NAME','')
+          head=ENV.fetch('HEAD_SHA','HEAD')
+          base=(event=='pull_request' ? ENV.fetch('BASE_SHA','') : '')
+          base='HEAD^' if base.nil? || base.empty?
+
+          def workflow_files(ref)
+            out,status=Open3.capture2('git','ls-tree','-r','--name-only',ref,'.github/workflows')
+            raise "cannot list workflows at #{ref}" unless status.success?
+            out.lines.map(&:strip).select { |p| p.end_with?('.yml','.yaml') }
+          end
+
+          def load_yaml(ref,path)
+            raw,status=Open3.capture2('git','show',"#{ref}:#{path}")
+            return nil unless status.success?
+            YAML.safe_load(raw, permitted_classes: [], aliases: false)
+          rescue
+            nil
+          end
+
+          def metrics(ref)
+            total_push=0
+            main_push=0
+            unbounded_main=[]
+            workflow_files(ref).each do |path|
+              doc=load_yaml(ref,path)
+              next unless doc.is_a?(Hash)
+              triggers=doc['on'] || doc[true]
+              push = if triggers.is_a?(String)
+                triggers=='push' ? {} : nil
+              elsif triggers.is_a?(Array)
+                triggers.include?('push') ? {} : nil
+              elsif triggers.is_a?(Hash)
+                triggers['push']
+              end
+              next if push.nil?
+              total_push += 1
+              cfg=push.is_a?(Hash) ? push : {}
+              branches=Array(cfg['branches'])
+              branch_main=branches.empty? || branches.include?('main')
+              next unless branch_main
+              main_push += 1
+              paths=Array(cfg['paths'])
+              ignores=Array(cfg['paths-ignore'])
+              unbounded_main << path if paths.empty? && ignores.empty?
+            end
+            {total_push:total_push,main_push:main_push,unbounded_main:unbounded_main.sort}
+          end
+
+          before=metrics(base)
+          after=metrics(head)
+          added_unbounded=after[:unbounded_main]-before[:unbounded_main]
+
+          summary=ENV['GITHUB_STEP_SUMMARY']
+          File.open(summary,'a') do |f|
+            f.puts "## Workflow push fan-out delta"
+            f.puts
+            f.puts "| Metric | Base | Head | Delta |"
+            f.puts "|---|---:|---:|---:|"
+            f.puts "| Push workflows | #{before[:total_push]} | #{after[:total_push]} | #{after[:total_push]-before[:total_push]} |"
+            f.puts "| Main-push workflows | #{before[:main_push]} | #{after[:main_push]} | #{after[:main_push]-before[:main_push]} |"
+            f.puts "| Unbounded main-push | #{before[:unbounded_main].length} | #{after[:unbounded_main].length} | #{after[:unbounded_main].length-before[:unbounded_main].length} |"
+            unless added_unbounded.empty?
+              f.puts
+              f.puts "### New unbounded main-push workflows"
+              added_unbounded.each { |p| f.puts "- `#{p}`" }
+            end
+          end
+
+          puts "base=#{before}"
+          puts "head=#{after}"
+
+          unless added_unbounded.empty?
+            added_unbounded.each { |p| warn "::error::new unbounded push:main workflow: #{p}" }
+            warn "::error::Use paths/paths-ignore, schedule, workflow_run, or workflow_dispatch to avoid repository-wide push fan-out."
+            exit 1
+          end
+
+          total_delta=after[:main_push]-before[:main_push]
+          if total_delta > 3
+            warn "::error::main-push workflow fan-out increased by #{total_delta} in one change (limit 3)"
+            exit 1
+          end
+
+          puts 'Workflow push fan-out delta: PASS'
+          RUBY

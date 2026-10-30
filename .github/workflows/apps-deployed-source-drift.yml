@@ -1,0 +1,222 @@
+name: Apps deployed-source drift guard
+
+"on":
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/apps-deployed-source-drift.yml'
+  workflow_run:
+    # Both publishers can update the same live site. Audit every successful publish.
+    workflows:
+      - Continuous Pages Deploy
+      - Simple Static Deploy
+    types: [completed]
+  schedule:
+    - cron: '7 15 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: apps-deployed-source-drift
+  cancel-in-progress: true
+
+jobs:
+  compare:
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Resolve release SHA
+        id: release
+        shell: bash
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          DEPLOYED_SHA: ${{ github.event.workflow_run.head_sha }}
+          CURRENT_SHA: ${{ github.sha }}
+        run: |
+          set -euo pipefail
+          if [ "$EVENT_NAME" = "workflow_run" ] && [ -n "${DEPLOYED_SHA:-}" ]; then
+            echo "sha=$DEPLOYED_SHA" >> "$GITHUB_OUTPUT"
+          else
+            echo "sha=$CURRENT_SHA" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Checkout release source
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          ref: ${{ steps.release.outputs.sha }}
+          persist-credentials: false
+
+      - name: Rebuild exact Pages artifact used by production deploy
+        shell: bash
+        run: |
+          set -euo pipefail
+          bash scripts/prepare-pages-out.sh
+          node scripts/render-productivity-release.cjs out
+          node scripts/render-field-evidence-release.cjs out
+          python3 scripts/assert-no-private-ops.py out
+
+      - name: Compare production bodies with deployed artifact
+        id: drift
+        shell: bash
+        env:
+          RELEASE_SHA: ${{ steps.release.outputs.sha }}
+        run: |
+          set -euo pipefail
+          mkdir -p automation/reports
+          python3 - <<'PY'
+          from pathlib import Path
+          import hashlib,json,os,sys,time,urllib.request
+          from datetime import datetime,timezone
+
+          def read_complete_response(resp, max_bytes=52_428_800):
+            # Read to EOF; never hash a silently truncated prefix.
+            chunks=[]
+            received=0
+            declared=resp.headers.get('Content-Length')
+            expected=int(declared) if declared is not None else None
+            if expected is not None and (expected < 0 or expected > max_bytes):
+              raise ValueError('response_size_limit_or_invalid_length')
+            while True:
+              chunk=resp.read(min(65_536, max_bytes-received+1))
+              if not chunk:
+                break
+              received+=len(chunk)
+              if received > max_bytes:
+                raise ValueError('response_size_limit_exceeded')
+              chunks.append(chunk)
+            if expected is not None and received != expected:
+              raise ValueError('response_incomplete_content_length')
+            return b''.join(chunks)
+
+          base='https://ziontechgroup.com'
+          pairs={
+            '/':'out/index.html',
+            '/apps/':'out/apps/index.html',
+            '/pt/apps/':'out/pt/apps/index.html',
+            '/es/apps/':'out/es/apps/index.html',
+            '/fr/apps/':'out/fr/apps/index.html',
+            '/de/apps/':'out/de/apps/index.html',
+            '/discovery/':'out/discovery/index.html',
+            '/pt/discovery/':'out/pt/discovery/index.html',
+            '/es/discovery/':'out/es/discovery/index.html',
+            '/fr/discovery/':'out/fr/discovery/index.html',
+            '/de/discovery/':'out/de/discovery/index.html',
+            '/apps/operations-reliability-ai-2026.html':'out/apps/operations-reliability-ai-2026.html',
+            '/apps/operations-reliability-ai-2026-pt.html':'out/apps/operations-reliability-ai-2026-pt.html',
+            '/apps/operations-reliability-ai-2026-es.html':'out/apps/operations-reliability-ai-2026-es.html',
+            '/apps/operations-reliability-ai-2026-fr.html':'out/apps/operations-reliability-ai-2026-fr.html',
+            '/apps/operations-reliability-ai-2026-de.html':'out/apps/operations-reliability-ai-2026-de.html',
+            '/sitemap.xml':'out/sitemap.xml',
+            '/sitemap-0.xml':'out/sitemap-0.xml',
+            '/apps/apps-sitemap.xml':'out/apps/apps-sitemap.xml',
+            '/robots.txt':'out/robots.txt',
+          }
+          headers={'User-Agent':'Zion-Apps-Deployed-Source-Drift/1.0','Cache-Control':'no-cache'}
+          rows=[]
+          failures=[]
+          for route,path in pairs.items():
+            p=Path(path)
+            if not p.is_file():
+              failures.append({'route':route,'path':path,'reason':'source_missing'})
+              continue
+            source=p.read_bytes()
+            source_sha=hashlib.sha256(source).hexdigest()
+            live=None
+            error=None
+            status=0
+            for attempt in range(3):
+              try:
+                req=urllib.request.Request(base+route+'?zion_drift='+os.environ.get('GITHUB_RUN_ID','manual')+f'-{attempt}',headers=headers)
+                with urllib.request.urlopen(req,timeout=20) as resp:
+                  status=resp.status
+                  live=read_complete_response(resp)
+                error=None
+                if status==200: break
+              except Exception as exc:
+                live=None
+                status=0
+                error=str(exc)
+                time.sleep(2)
+            live_sha=hashlib.sha256(live).hexdigest() if live is not None else None
+            if route=='/':
+              # The root homepage can be transformed by the production edge while
+              # preserving the approved content contract. Avoid a false positive
+              # on byte drift, but still require the semantic release markers.
+              body=(live or b'').decode('utf-8','replace')
+              markers=['Zion Tech Group','Apps','Discovery']
+              missing=[m for m in markers if m not in body]
+              match=status==200 and not missing
+              mode='semantic'
+            else:
+              missing=[]
+              match=status==200 and live_sha==source_sha
+              mode='exact'
+            row={'route':route,'source_path':path,'http_status':status,'source_sha256':source_sha,'live_sha256':live_sha,'match':match,'mode':mode,'missing_markers':missing,'error':error}
+            rows.append(row)
+            if not match:
+              failures.append(row)
+              print(f'::error::{route} drift/status mismatch mode={mode} source={source_sha} live={live_sha} status={status} missing={missing} error={error}')
+            elif mode=='semantic':
+              print(f'OK {route} semantic contract HTTP 200 markers={len(markers)}')
+            else:
+              print(f'OK {route} exact body match {source_sha[:12]}')
+
+          report={
+            'schema':'zion.apps.deployed-source-drift.v1',
+            'generated_at_utc':datetime.now(timezone.utc).isoformat(),
+            'release_sha':os.environ.get('RELEASE_SHA',''),
+            'checks':rows,
+            'failure_count':len(failures),
+          }
+          out=Path('automation/reports/apps-deployed-source-drift.json')
+          out.write_text(json.dumps(report,indent=2,sort_keys=True)+'\n',encoding='utf-8')
+          if failures:
+            Path('automation/reports/apps-deployed-source-drift-failures.txt').write_text(
+              '\n'.join(f"{x.get('route')} status={x.get('http_status')} reason={x.get('reason','hash_mismatch')}" for x in failures)+'\n',
+              encoding='utf-8'
+            )
+            sys.exit(1)
+          PY
+
+      - name: Upload drift evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: apps-deployed-source-drift-${{ github.run_id }}
+          path: |
+            automation/reports/apps-deployed-source-drift.json
+            automation/reports/apps-deployed-source-drift-failures.txt
+          if-no-files-found: warn
+          retention-days: 30
+
+      - name: Open or update deduped drift issue
+        if: failure()
+        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8.0.0
+        with:
+          script: |
+            const title='Apps deployed/source drift detected';
+            const marker='<!-- apps-deployed-source-drift -->';
+            const {data:issues}=await github.rest.issues.listForRepo({...context.repo,state:'open',per_page:100});
+            const existing=issues.find(i=>i.title===title || (i.body||'').includes(marker));
+            const body=marker+'\nProduction content differs from the static source checked out for this release, or a critical route was unavailable. Do not auto-revert; inspect the drift artifact and latest successful deploy first.\n\nRun: '+context.serverUrl+'/'+context.repo.owner+'/'+context.repo.repo+'/actions/runs/'+context.runId;
+            if(existing){
+              await github.rest.issues.createComment({...context.repo,issue_number:existing.number,body});
+            } else {
+              await github.rest.issues.create({...context.repo,title,body});
+            }
+
+      - name: Close prior drift issue on recovery
+        if: success()
+        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8.0.0
+        with:
+          script: |
+            const title='Apps deployed/source drift detected';
+            const {data:issues}=await github.rest.issues.listForRepo({...context.repo,state:'open',per_page:100});
+            for(const issue of issues.filter(i=>i.title===title)){
+              await github.rest.issues.createComment({...context.repo,issue_number:issue.number,body:'Recovered: deployed/source drift guard is green on run '+context.runId+'.'});
+              await github.rest.issues.update({...context.repo,issue_number:issue.number,state:'closed'});
+            }

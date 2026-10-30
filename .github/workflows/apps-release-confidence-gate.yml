@@ -1,0 +1,261 @@
+name: Apps release confidence gate
+
+"on":
+  workflow_run:
+    workflows:
+      - Apps production content canary
+      - Apps deployed-source drift guard
+      - Apps link graph orphan guard
+    types: [completed]
+  schedule:
+    - cron: '29 16 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/apps-release-confidence-gate.yml'
+
+permissions:
+  contents: read
+  actions: read
+  issues: write
+
+concurrency:
+  group: apps-release-confidence-gate
+  cancel-in-progress: true
+
+jobs:
+  confidence:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Correlate release evidence
+        id: gate
+        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8.0.0
+        with:
+          script: |
+            const fs = require('fs');
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const now = Date.now();
+            const advisoryFreshMs = 7 * 24 * 60 * 60 * 1000;
+
+            async function runsFor(workflow_id, per_page=30) {
+              const {data} = await github.rest.actions.listWorkflowRuns({
+                owner, repo, workflow_id, branch: 'main', per_page
+              });
+              return data.workflow_runs || [];
+            }
+
+            const {data:repoRunsData} = await github.rest.actions.listWorkflowRunsForRepo({
+              owner, repo, per_page:100
+            });
+            const repoRuns = repoRunsData.workflow_runs || [];
+            const queueCount = repoRuns.filter(r => ['queued','pending','waiting','requested'].includes(r.status)).length;
+            const graceMinutes = queueCount >= 35 ? 180 : (queueCount >= 20 ? 120 : 20);
+            const graceMs = graceMinutes * 60 * 1000;
+
+            const deploys = (await runsFor('gh-pages.yml', 30))
+              .filter(r => r.status === 'completed' && r.conclusion === 'success');
+            if (!deploys.length) {
+              core.setFailed('No successful Continuous Pages Deploy found');
+              return;
+            }
+            const deploy = deploys[0];
+            const deployAt = Date.parse(deploy.updated_at || deploy.created_at);
+            const ageMs = now - deployAt;
+
+            const defs = {
+              canary: {file:'apps-production-content-canary.yml', critical:true, afterDeploy:true},
+              drift: {file:'apps-deployed-source-drift.yml', critical:true, afterDeploy:true},
+              route: {file:'ai-post-push-route-verify.yml', critical:false, afterDeploy:false},
+              i18n: {file:'apps-i18n-release-contract.yml', critical:false, afterDeploy:false},
+              manifest: {file:'apps-release-evidence-manifest.yml', critical:false, afterDeploy:false},
+              graph: {file:'apps-link-graph-orphan-guard.yml', critical:false, afterDeploy:false},
+            };
+
+            const signals = {};
+            let hardFail = false;
+            let pending = false;
+            let degraded = false;
+
+            for (const [key, def] of Object.entries(defs)) {
+              const runs = await runsFor(def.file, 40);
+              const completed = runs.filter(r => r.status === 'completed');
+              const active = runs.filter(r => ['queued','pending','in_progress','waiting','requested'].includes(r.status));
+              let chosen = null;
+
+              if (def.afterDeploy) {
+                chosen = completed.find(r => Date.parse(r.updated_at || r.created_at) >= deployAt - 60000) || null;
+                if (!chosen) {
+                  const activeAfterDeploy = active.find(r => Date.parse(r.updated_at || r.created_at) >= deployAt - 60000) || null;
+                  if (activeAfterDeploy) {
+                    signals[key] = {
+                      state:'PENDING',
+                      reason:'post-deploy signal is still active in Actions',
+                      run_id:activeAfterDeploy.id,
+                      status:activeAfterDeploy.status,
+                      head_sha:activeAfterDeploy.head_sha,
+                      html_url:activeAfterDeploy.html_url
+                    };
+                    pending = true;
+                    continue;
+                  }
+                  if (ageMs < graceMs) {
+                    signals[key] = {
+                      state:'PENDING',
+                      reason:'no completed run after latest deploy within adaptive grace window',
+                      queue_count:queueCount,
+                      grace_minutes:graceMinutes
+                    };
+                    pending = true;
+                    continue;
+                  }
+                  signals[key] = {
+                    state:'MISSING',
+                    reason:'no completed or active run after latest deploy beyond adaptive grace window',
+                    queue_count:queueCount,
+                    grace_minutes:graceMinutes
+                  };
+                  hardFail = true;
+                  continue;
+                }
+              } else {
+                chosen = completed[0] || null;
+                if (!chosen) {
+                  signals[key] = {state:'MISSING', reason:'no completed run recorded'};
+                  degraded = true;
+                  continue;
+                }
+                const t = Date.parse(chosen.updated_at || chosen.created_at);
+                if (now - t > advisoryFreshMs) {
+                  signals[key] = {
+                    state:'STALE',
+                    run_id:chosen.id,
+                    conclusion:chosen.conclusion,
+                    head_sha:chosen.head_sha,
+                    html_url:chosen.html_url,
+                    updated_at:chosen.updated_at
+                  };
+                  degraded = true;
+                  continue;
+                }
+              }
+
+              const ok = chosen.conclusion === 'success';
+              signals[key] = {
+                state: ok ? 'PASS' : 'FAIL',
+                run_id: chosen.id,
+                conclusion: chosen.conclusion,
+                head_sha: chosen.head_sha,
+                html_url: chosen.html_url,
+                updated_at: chosen.updated_at
+              };
+              if (!ok && def.critical) hardFail = true;
+              if (!ok && !def.critical) degraded = true;
+            }
+
+            let status = 'PASS';
+            if (hardFail) status = 'FAIL';
+            else if (pending) status = 'PENDING';
+            else if (degraded) status = 'DEGRADED';
+
+            const report = {
+              schema:'zion.apps.release-confidence.v1',
+              generated_at_utc:new Date().toISOString(),
+              status,
+              grace_minutes:graceMinutes,
+              actions_queue_count:queueCount,
+              latest_successful_deploy:{
+                run_id:deploy.id,
+                head_sha:deploy.head_sha,
+                updated_at:deploy.updated_at,
+                html_url:deploy.html_url
+              },
+              rollback_review:{
+                candidate_sha:deploy.head_sha,
+                automatic_rollback_allowed:false,
+                compare_url:context.serverUrl+'/'+owner+'/'+repo+'/compare/'+deploy.head_sha+'...main',
+                operator_note:'Review current incident evidence and changed commits before any revert; never auto-merge or auto-rollback.'
+              },
+              signals
+            };
+
+            fs.mkdirSync('automation/reports', {recursive:true});
+            fs.writeFileSync(
+              'automation/reports/apps-release-confidence.json',
+              JSON.stringify(report,null,2)+'\n'
+            );
+
+            await core.summary
+              .addHeading('Apps release confidence')
+              .addTable([
+                [{data:'Signal',header:true},{data:'State',header:true},{data:'Run',header:true}],
+                ['Deploy','PASS',String(deploy.id)],
+                ...Object.entries(signals).map(([k,v]) => [k,v.state,String(v.run_id || '-')])
+              ])
+              .addRaw('\n**Overall:** '+status+'\n')
+              .addRaw('**Actions queued/pending:** '+queueCount+' · adaptive grace: '+graceMinutes+' min\n')
+              .write();
+
+            core.setOutput('status', status);
+            core.setOutput('report', JSON.stringify(report));
+
+            if (status === 'FAIL') {
+              core.setFailed('Critical Apps release evidence failed or is missing beyond grace window');
+            }
+
+      - name: Upload confidence report
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: apps-release-confidence-${{ github.run_id }}
+          path: automation/reports/apps-release-confidence.json
+          if-no-files-found: warn
+          retention-days: 30
+
+      - name: Open or update release confidence incident
+        if: failure()
+        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8.0.0
+        with:
+          script: |
+            const title='Apps release confidence gate failed';
+            const marker='<!-- apps-release-confidence-gate -->';
+            const {data:issues}=await github.rest.issues.listForRepo({
+              ...context.repo,state:'open',per_page:100
+            });
+            const existing=issues.find(i=>i.title===title || (i.body||'').includes(marker));
+            const runs = await github.rest.actions.listWorkflowRuns({
+              ...context.repo, workflow_id:'gh-pages.yml', branch:'main', status:'success', per_page:10
+            });
+            const deploy=(runs.data.workflow_runs || [])[0];
+            const candidate=deploy ? deploy.head_sha : null;
+            const compare=candidate
+              ? context.serverUrl+'/'+context.repo.owner+'/'+context.repo.repo+'/compare/'+candidate+'...main'
+              : null;
+            const rollback = candidate
+              ? '\n\n**Rollback review candidate:** `'+candidate+'`\n**Compare candidate → main:** '+compare+'\nAutomatic rollback is **not allowed**. Review the diff and incident evidence before preparing any revert.'
+              : '\n\nNo successful deploy candidate could be resolved automatically; inspect deploy history manually.';
+            const body=marker+'\nA critical post-deploy signal is failed or missing beyond the grace period. Inspect the confidence artifact before changing source or attempting rollback.'+rollback+'\n\nRun: '+context.serverUrl+'/'+context.repo.owner+'/'+context.repo.repo+'/actions/runs/'+context.runId;
+            if(existing){
+              await github.rest.issues.createComment({...context.repo,issue_number:existing.number,body});
+            }else{
+              await github.rest.issues.create({...context.repo,title,body,labels:['automation','bug']});
+            }
+
+      - name: Close prior confidence incident on recovery
+        if: success() && steps.gate.outputs.status == 'PASS'
+        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8.0.0
+        with:
+          script: |
+            const title='Apps release confidence gate failed';
+            const {data:issues}=await github.rest.issues.listForRepo({
+              ...context.repo,state:'open',per_page:100
+            });
+            for(const issue of issues.filter(i=>i.title===title)){
+              await github.rest.issues.createComment({
+                ...context.repo,issue_number:issue.number,
+                body:'Recovered: Apps release confidence is PASS on run '+context.runId+'.'
+              });
+              await github.rest.issues.update({...context.repo,issue_number:issue.number,state:'closed'});
+            }

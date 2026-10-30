@@ -1,0 +1,51 @@
+{
+  "status": "DRAFT_REVIEW_ONLY_NOT_PUBLISHED",
+  "source_pr": 71573,
+  "reviewed_head": "b45983ca017a64d29a54a22673f0db49a55dc368",
+  "source_snapshot": "d613a30e13f79b85fdfd3b6391dc18b872d9a10b",
+  "source_snapshot_note": "Review links intentionally point to original English source; current five-language editions are staged by existing renderers, not verified live.",
+  "integration": "Editorial input only; not production-loaded. Review against existing fragments; do not append duplicate promotion sections.",
+  "apps": [
+    {"name":"Agent Trace Evidence Lab","slug":"agent-trace-evidence-lab","review_url":"https://github.com/Zion-support/zion-support.github.io/blob/d613a30e13f79b85fdfd3b6391dc18b872d9a10b/public/agent-trace-evidence-lab/index.html"},
+    {"name":"Field SLA Acceptance Matrix","slug":"field-sla-acceptance-matrix","review_url":"https://github.com/Zion-support/zion-support.github.io/blob/d613a30e13f79b85fdfd3b6391dc18b872d9a10b/public/field-sla-acceptance-matrix/index.html"},
+    {"name":"AI Dependency Blast-Radius Canvas","slug":"ai-dependency-blast-radius","review_url":"https://github.com/Zion-support/zion-support.github.io/blob/d613a30e13f79b85fdfd3b6391dc18b872d9a10b/public/ai-dependency-blast-radius/index.html"}
+  ],
+  "card_order": ["agent-trace-evidence-lab","field-sla-acceptance-matrix","ai-dependency-blast-radius"],
+  "locales": {
+    "en": {
+      "title":"Make the next operational decision with better evidence",
+      "intro":"Explore three local browser prototypes for trace review, field-service readiness and dependency analysis. Choose a focused assessment before planning a production integration.",
+      "cta":"Review prototype source",
+      "limit":"Review-only prototypes; five-language preview editions are staged, not verified live. Local rules and calculations—not hosted AI, compliance certification, a binding quote or authorization to dispatch. Use anonymized examples; never paste production secrets. Review links show original English source.",
+      "cards":["Review supplied trace JSON for latency, token signals and simple sensitive-attribute patterns. Flags guide manual review; they do not prove privacy or correctness.","Check documented scope, supplier evidence, client confirmation, PO reference and separate Zion authorization. Cost arithmetic is internal guidance, not an accepted customer price.","Explore which declared components depend transitively on a failed component. A graph scenario is not a prediction of outage probability or a verified model of your live infrastructure."]
+    },
+    "pt-BR": {
+      "title":"Tome a próxima decisão operacional com melhores evidências",
+      "intro":"Explore três protótipos locais no navegador para revisar rastros, avaliar a prontidão de serviços de campo e analisar dependências. Escolha uma avaliação específica antes de planejar uma integração em produção.",
+      "cta":"Revisar código do protótipo",
+      "limit":"Protótipos apenas para revisão; prévias em cinco idiomas estão preparadas, mas a publicação online não foi verificada. Regras e cálculos locais — não são IA hospedada, certificação de conformidade, proposta vinculante ou autorização de mobilização. Use exemplos anonimizados; nunca cole segredos de produção. Os links de revisão mostram o código original em inglês.",
+      "cards":["Revise rastros JSON fornecidos para identificar latência, sinais de uso de tokens e padrões simples de atributos sensíveis. Os alertas orientam a revisão manual; não comprovam privacidade ou correção.","Confira escopo documentado, evidências do fornecedor, confirmação do cliente, referência de PO e autorização Zion separada. Os cálculos de custo são orientação interna, não preço aceito pelo cliente.","Explore quais componentes declarados dependem transitivamente de um componente que falhou. O cenário do grafo não prevê a probabilidade de indisponibilidade nem representa um modelo verificado da infraestrutura real."]
+    },
+    "es": {
+      "title":"Tome la próxima decisión operativa con mejores evidencias",
+      "intro":"Explore tres prototipos locales en el navegador para revisar trazas, evaluar la preparación de servicios de campo y analizar dependencias. Elija una evaluación concreta antes de planificar una integración en producción.",
+      "cta":"Revisar código del prototipo",
+      "limit":"Prototipos solo para revisión; hay vistas previas en cinco idiomas, sin publicación en línea verificada. Reglas y cálculos locales: no son IA alojada, certificación de cumplimiento, oferta vinculante ni autorización de desplazamiento. Use ejemplos anonimizados; nunca pegue secretos de producción. Los enlaces de revisión muestran el código original en inglés.",
+      "cards":["Revise trazas JSON proporcionadas para identificar latencia, señales de uso de tokens y patrones simples de atributos sensibles. Las alertas orientan la revisión manual; no demuestran privacidad ni corrección.","Compruebe el alcance documentado, las evidencias del proveedor, la confirmación del cliente, la referencia de PO y la autorización separada de Zion. Los cálculos de costes son orientación interna, no un precio aceptado por el cliente.","Explore qué componentes declarados dependen transitivamente de un componente que ha fallado. El escenario del grafo no predice la probabilidad de interrupción ni constituye un modelo verificado de la infraestructura real."]
+    },
+    "fr": {
+      "title":"Prenez votre prochaine décision opérationnelle avec de meilleures preuves",
+      "intro":"Explorez trois prototypes locaux dans le navigateur pour examiner les traces, évaluer la préparation des interventions et analyser les dépendances. Choisissez une évaluation ciblée avant de planifier une intégration en production.",
+      "cta":"Examiner le code du prototype",
+      "limit":"Prototypes réservés à la revue ; des aperçus en cinq langues sont préparés, sans publication en ligne vérifiée. Règles et calculs locaux : ni IA hébergée, ni certification de conformité, ni devis engageant, ni autorisation de mobilisation. Utilisez des exemples anonymisés ; ne collez jamais de secrets de production. Les liens de revue montrent le code original en anglais.",
+      "cards":["Examinez les traces JSON fournies pour repérer la latence, les indicateurs de consommation de jetons et des motifs simples dans les attributs sensibles. Les alertes orientent une revue manuelle ; elles ne prouvent ni la confidentialité ni la justesse.","Vérifiez le périmètre documenté, les preuves du fournisseur, la confirmation du client, la référence du bon de commande et une autorisation distincte de Zion. Les calculs de coûts sont indicatifs et internes, pas un prix accepté par le client.","Explorez quels composants déclarés dépendent transitivement d’un composant défaillant. Le scénario du graphe ne prédit pas une probabilité de panne et ne constitue pas un modèle vérifié de votre infrastructure réelle."]
+    },
+    "de": {
+      "title":"Treffen Sie die nächste operative Entscheidung mit besseren Nachweisen",
+      "intro":"Erkunden Sie drei lokale Browser-Prototypen zur Trace-Prüfung, Bewertung der Einsatzbereitschaft und Abhängigkeitsanalyse. Wählen Sie eine gezielte Bewertung, bevor Sie eine Produktionsintegration planen.",
+      "cta":"Quellcode des Prototyps prüfen",
+      "limit":"Prototypen nur zur Prüfung; Vorschauen in fünf Sprachen sind vorbereitet, aber nicht live verifiziert. Lokale Regeln und Berechnungen – keine gehostete KI, Konformitätszertifizierung, verbindliches Angebot oder Einsatzfreigabe. Verwenden Sie anonymisierte Beispiele; fügen Sie niemals Produktionsgeheimnisse ein. Prüf-Links zeigen den ursprünglichen englischen Quellcode.",
+      "cards":["Prüfen Sie bereitgestellte JSON-Traces auf Latenz, Token-Signale und einfache Muster sensibler Attribute. Hinweise unterstützen die manuelle Prüfung; sie beweisen weder Datenschutz noch Korrektheit.","Prüfen Sie dokumentierten Umfang, Lieferantennachweise, Kundenbestätigung, Bestellreferenz und eine separate Zion-Freigabe. Kostenberechnungen dienen intern zur Orientierung und sind kein vom Kunden akzeptierter Preis.","Erkunden Sie, welche angegebenen Komponenten transitiv von einer ausgefallenen Komponente abhängen. Das Graph-Szenario sagt keine Ausfallwahrscheinlichkeit voraus und ist kein verifiziertes Modell Ihrer tatsächlichen Infrastruktur."]
+    }
+  }
+}
