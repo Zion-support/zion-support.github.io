@@ -81,7 +81,8 @@
             "verification"
           ]
         ]
-      ]
+      ],
+      "energyGuide": "Energy & utilities pilot guide"
     },
     "pt": {
       "lang": "pt-BR",
@@ -156,7 +157,8 @@
             "verification"
           ]
         ]
-      ]
+      ],
+      "energyGuide": "Guia de piloto para energia e utilities"
     },
     "es": {
       "lang": "es",
@@ -231,7 +233,8 @@
             "verification"
           ]
         ]
-      ]
+      ],
+      "energyGuide": "Guía de piloto para energía y utilities"
     },
     "fr": {
       "lang": "fr",
@@ -306,7 +309,8 @@
             "verification"
           ]
         ]
-      ]
+      ],
+      "energyGuide": "Guide de pilote pour l’énergie"
     },
     "de": {
       "lang": "de",
@@ -381,7 +385,8 @@
             "verification"
           ]
         ]
-      ]
+      ],
+      "energyGuide": "Pilotleitfaden für Energie und Versorgung"
     }
   },
   "resources": [
