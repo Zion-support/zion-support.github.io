@@ -192,7 +192,7 @@ export async function generateMetadata({ params }: { params: Promise<{ key: stri
   };
 }
 
-export default async function IndustryPage({ params }: { params: Promise<{ key: string }> }}) {
+export default async function IndustryPage({ params }: { params: Promise<{ key: string }> }) {
   const { key } = await params;
   const config = INDUSTRY_CONFIG[key] || INDUSTRY_CONFIG.healthcare;
   
@@ -244,7 +244,7 @@ export default async function IndustryPage({ params }: { params: Promise<{ key: 
               <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
                 <span className="gradient-text">{config.emoji}</span>{' '}
                 <span className="text-white">{config.title.split(' AI')[0]}</span>
-                </br />
+                <br />
                 <span className="text-slate-300">{config.description}</span>
               </h1>
               
