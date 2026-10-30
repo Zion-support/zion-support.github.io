@@ -60,3 +60,92 @@ test('changed report remains eligible after uncertainty',async()=>{const h=harne
 // Current-main route preservation regressions; no production requests.
 test('preserve current main incident-response recommendations',async()=>{const h=harness('success',{process:'IT operations / incident response'});await h.submit();assert.deepEqual(Array.from(h.nodes.rapps.children,item=>item.children[0].href),['/incident-postmortem-writer/','/patch-window-planner/','/apps/operations-reliability-ai-2026.html']);});
 test('preserve current main dispatch recommendations',async()=>{const h=harness('success',{process:'Scheduling / dispatch'});await h.submit();assert.deepEqual(Array.from(h.nodes.rapps.children,item=>item.children[0].href),['/ai-smart-hands-scheduler/','/ai-field-service-automation/','/sla-calculator/']);});
+
+// Published locale destinations: DOM links, downloadable report and email payload agree.
+// All requests remain mocked; these tests do not submit the live questionnaire.
+const routeLocaleCases=[
+ [
+  "Other",
+  1,
+  [
+   "/apps/",
+   "/pt/apps/",
+   "/es/apps/",
+   "/fr/apps/",
+   "/de/apps/"
+  ]
+ ],
+ [
+  "Other",
+  2,
+  [
+   "/apps/network.html",
+   "/pt/apps/network.html",
+   "/es/apps/network.html",
+   "/fr/apps/network.html",
+   "/de/apps/network.html"
+  ]
+ ],
+ [
+  "Reporting & analytics",
+  1,
+  [
+   "/apps/discovery-report-workbench.html",
+   "/pt/apps/discovery-report-workbench.html",
+   "/es/apps/discovery-report-workbench.html",
+   "/fr/apps/discovery-report-workbench.html",
+   "/de/apps/discovery-report-workbench.html"
+  ]
+ ],
+ [
+  "IT operations / incident response",
+  2,
+  [
+   "/apps/operations-reliability-ai-2026.html",
+   "/apps/operations-reliability-ai-2026-pt.html",
+   "/apps/operations-reliability-ai-2026-es.html",
+   "/apps/operations-reliability-ai-2026-fr.html",
+   "/apps/operations-reliability-ai-2026-de.html"
+  ]
+ ],
+ [
+  "Finance ops / cost control (FinOps)",
+  1,
+  [
+   "/automation-pilot-planner/en/",
+   "/automation-pilot-planner/",
+   "/automation-pilot-planner/es/",
+   "/automation-pilot-planner/fr/",
+   "/automation-pilot-planner/de/"
+  ]
+ ],
+ [
+  "Sales & proposal generation",
+  1,
+  [
+   "/sales-call-analyzer/",
+   "/sales-call-analyzer/pt/",
+   "/sales-call-analyzer/es/",
+   "/sales-call-analyzer/fr/",
+   "/sales-call-analyzer/de/"
+  ]
+ ]
+];
+for(const [localeIndex,lang] of ['en','pt-BR','es','fr','de'].entries())for(const [process,index,paths] of routeLocaleCases)test('same-language recommendation and report: '+lang+' '+process+' '+index,async()=>{
+ const h=harness('success',{process},lang);await h.submit();
+ const expected=paths[localeIndex];
+ assert.equal(h.nodes.rapps.children[index].children[0].href,expected);
+ assert.ok(h.context.window.__zionDiscoveryReport.includes('https://ziontechgroup.com'+expected));
+ assert.equal(h.requests[0].payload.message,h.context.window.__zionDiscoveryReport);
+ assert.equal(new URL(h.nodes['email-fallback'].children[0].href).searchParams.get('body'),h.context.window.__zionDiscoveryReport);
+ const workbench=localeIndex===0?'/apps/discovery-report-workbench.html':'/'+lang.slice(0,2)+'/apps/discovery-report-workbench.html';
+ assert.ok(h.context.window.__zionDiscoveryReport.includes('https://ziontechgroup.com'+workbench));
+});
+for(const [process,index,paths] of routeLocaleCases)test('unknown language keeps published English destination: '+process+' '+index,async()=>{
+ const h=harness('success',{process},'zz');await h.submit();
+ assert.equal(h.nodes.rapps.children[index].children[0].href,paths[0]);
+});
+test('unmapped recommendation routes remain unchanged in Portuguese',async()=>{
+ const h=harness('success',{process:'Scheduling / dispatch'},'pt-BR');await h.submit();
+ assert.deepEqual(Array.from(h.nodes.rapps.children,item=>item.children[0].href),['/ai-smart-hands-scheduler/','/ai-field-service-automation/','/sla-calculator/']);
+});
