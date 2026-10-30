@@ -27,8 +27,7 @@ node scripts/render-app-verification-guides.cjs out
 node scripts/test-app-verification-guides.cjs out
 node scripts/render-agent-risk-guides.cjs out
 node scripts/render-finops-scenario.cjs out --pages-only
-node scripts/render-roi-baseline.cjs out
-node scripts/test-roi-baseline.cjs
+# Refresh the existing cost journey and the five curated app catalogs.
 node scripts/render-finops-scenario.cjs out --home-only
 node scripts/render-apps-directory.cjs out
 # Override public/_redirects (may be a stale 37MB next-build auto-gen monster
@@ -379,8 +378,15 @@ node scripts/verify-network-evaluation-artifact.cjs out
 node scripts/test-linked-app-routes.cjs
 node scripts/render-linked-app-routes.cjs out
 
+# Replace historical tool placeholders with the reviewed five-language tools.
+# Verify the assembled pages, not only an isolated renderer fixture.
+node scripts/render-operational-tools.cjs out
+node scripts/test-roi-baseline.cjs
+node scripts/test-operational-tools.cjs
+node scripts/test-operational-tools.cjs out --artifact-only
+node scripts/render-contact-pages.cjs out
+
 python3 scripts/test-free-discovery-guard.py
 assert_public_entry_content
 
 echo "Prepared out ($(find out -type f | wc -l) files)"
-

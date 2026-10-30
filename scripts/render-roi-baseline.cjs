@@ -40,7 +40,8 @@ function nav(locale) {
   return '<nav aria-label="' + escape(c.network) + '">' +
     '<a href="' + home(locale) + '">' + escape(c.home) + '</a>' +
     '<a href="' + prefix(locale) + 'apps/">' + escape(c.network) + '</a>' +
-    '<a href="' + prefix(locale) + 'discovery/">' + escape(c.discovery) + '</a></nav>';
+    '<a href="' + prefix(locale) + 'discovery/">' + escape(c.discovery) + '</a>' +
+    '<a href="' + prefix(locale) + 'apps/operational-planning-tools.html">' + escape(c.guide) + '</a></nav>';
 }
 
 function page(locale) {
@@ -74,7 +75,7 @@ ${alternates}
 <body class="roi-page" data-roi-baseline="${version}">
 <a class="skip" href="#main">${escape(n.skip)}</a>
 <header>${nav(locale)}<nav aria-label="${escape(c.languageNav)}">${languages}</nav></header>
-<main id="main">
+<main id="main" tabindex="-1">
 <section class="roi-hero"><p class="roi-eyebrow">${escape(c.eyebrow)}</p><h1>${escape(c.title)}</h1><p class="roi-intro">${escape(c.intro)}</p></section>
 <div class="roi-grid">
 <form id="ops-form" data-kind="roi" novalidate aria-labelledby="roi-input-title">

@@ -143,7 +143,7 @@ try {
       assert(html.includes('href="' + renderer.route(other) + '"' + (other === locale ? ' aria-current="page"' : '') + '>'));
     }
     const prefix = locale === 'en' ? '/' : '/' + locale + '/';
-    for (const target of ['apps/', 'discovery/', 'apps/finops-scenario-estimator.html', 'apps/finops-pilot-guide.html', 'apps/network.html', 'apps/app-verification-guide.html']) {
+    for (const target of ['apps/', 'discovery/', 'apps/operational-planning-tools.html', 'apps/finops-scenario-estimator.html', 'apps/finops-pilot-guide.html', 'apps/network.html', 'apps/app-verification-guide.html']) {
       assert(html.includes('href="' + prefix + target + '"'), 'Same-language destination: ' + locale + target);
     }
     assert(html.includes('id="ops-error" class="roi-error" role="alert"'));

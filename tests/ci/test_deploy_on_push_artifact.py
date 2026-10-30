@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Offline publication-boundary regressions; no GitHub or website requests.
 
-Execute the workflow's actual artifact commands with synthetic preparation and
-renderer fixtures, then the unchanged real privacy guard. A local marker stands
-in for upload. Default-success step/job conditions are checked separately so a
+Execute the workflow's actual artifact commands with synthetic preparation,
+renderer, and operational guard fixtures, then the unchanged real privacy guard.
+A local marker stands in for upload. Default-success conditions are checked so a
 future continue-on-error/always override cannot invalidate that fail-closed model.
 This does not certify full renderer output or a live Pages deployment.
 """
@@ -24,6 +24,7 @@ EXPECTED = [
     "bash scripts/prepare-pages-out.sh",
     "node scripts/render-productivity-release.cjs out",
     "node scripts/render-field-evidence-release.cjs out",
+    "node scripts/test-operational-tools.cjs out --artifact-only",
     "python3 scripts/assert-no-private-ops.py out",
 ]
 
@@ -92,6 +93,17 @@ class ArtifactPublicationTests(unittest.TestCase):
                 "}\n"
                 "if (stage === 'field' && process.env.REMOVE_OUT === '1') fs.rmSync(out, {recursive:true});\n"
             )
+        # Model the operational guard's command and rejection boundary without
+        # replacing the real privacy guard or duplicating content validation.
+        (self.root / "scripts/test-operational-tools.cjs").write_text(
+            "const fs = require('node:fs');\n"
+            "if (JSON.stringify(process.argv.slice(2)) !== JSON.stringify(['out', '--artifact-only'])) process.exit(43);\n"
+            "fs.appendFileSync('trace', 'operational-gate\\n');\n"
+            "if (process.env.FAIL_STAGE === 'operational-gate') {\n"
+            "  console.error('synthetic operational artifact rejected');\n"
+            "  process.exit(42);\n"
+            "}\n"
+        )
 
     def run_artifact(self, source=None, **extra_env):
         commands = [command(block) for _, block in artifact_steps(source or self.source)]
@@ -117,7 +129,7 @@ class ArtifactPublicationTests(unittest.TestCase):
         result = self.run_artifact()
         self.assertEqual(result.returncode, 0, result.stderr)
         self.assertEqual((self.root / "published").read_text(), "uploaded out\n")
-        self.assertEqual((self.root / "trace").read_text(), "prepare\nproductivity\nfield\n")
+        self.assertEqual((self.root / "trace").read_text(), "prepare\nproductivity\nfield\noperational-gate\n")
         self.assertFalse((self.root / "out/next-diagnostic-output.txt").exists())
         self.assertEqual((self.root / "out/index.html").read_text(), "synthetic static homepage")
         for stage in ("productivity", "field"):
@@ -130,6 +142,14 @@ class ArtifactPublicationTests(unittest.TestCase):
                 result = self.run_artifact(FAIL_STAGE=stage)
                 self.assertEqual(result.returncode, 42, result.stderr)
                 self.assertFalse((self.root / "published").exists())
+
+    def test_operational_artifact_rejection_stops_before_privacy_scan_and_upload(self):
+        result = self.run_artifact(FAIL_STAGE="operational-gate")
+        self.assertEqual(result.returncode, 42, result.stderr)
+        self.assertEqual((self.root / "trace").read_text(), "prepare\nproductivity\nfield\noperational-gate\n")
+        self.assertIn("synthetic operational artifact rejected", result.stderr)
+        self.assertNotIn("OK: public ops/comms", result.stdout)
+        self.assertFalse((self.root / "published").exists())
 
     def test_private_file_added_after_source_preparation_blocks_upload(self):
         result = self.run_artifact(INJECT_PRIVATE="1")

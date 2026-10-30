@@ -1,7 +1,7 @@
 name: Productivity exact-head artifact validation
 on:
   pull_request:
-    paths: ['public/**', 'scripts/**', '.github/workflows/**']
+    paths: ['public/**', 'scripts/**', 'content/roi-baseline.json', '.github/workflows/**']
 permissions:
   contents: read
 concurrency:
@@ -20,6 +20,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
+      - name: Verify publisher integration and source freshness contracts
+        run: |
+          python3 tests/ci/test_deploy_on_push_artifact.py
+          python3 tests/ci/test_pages_publisher_freshness.py
       - name: Current publisher preparation including existing money-path guards
         run: bash scripts/prepare-pages-out.sh
       - name: Shared reviewed multilingual sequence (no deployment)
