@@ -81,7 +81,10 @@ jobs:
 
             for (const [key, def] of Object.entries(defs)) {
               const runs = await runsFor(def.file, 40);
-              const completed = runs.filter(r => r.status === 'completed');
+              // A skipped run has no executed health evidence (for example, an
+              // ignored deploy completion). Keep cancelled runs conservative:
+              // cancellation can coexist with a failed job.
+              const completed = runs.filter(r => r.status === 'completed' && r.conclusion !== 'skipped');
               const active = runs.filter(r => ['queued','pending','in_progress','waiting','requested'].includes(r.status));
               let chosen = null;
 
