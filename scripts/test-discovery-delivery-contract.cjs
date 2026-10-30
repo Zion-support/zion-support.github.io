@@ -41,10 +41,10 @@ const reconciliationKinds={"en": ["Interactive planning tool", "Interactive calc
 for(const lang of ['en','pt-BR','es','fr','de','zz'])test('all four recommendation categories preserved/localized: '+lang,async()=>{
  const kinds=reconciliationKinds[lang.slice(0,2)]||reconciliationKinds.en;
  const h=harness('success',{},lang);
- for(const [path,index] of [['/automation-pilot-planner/',0],['/apps/discovery-report-workbench.html',0],['/roi-calc/',1],['/sla-calculator/',1],['/finops-estimator/',1],['/apps/network.html',2],['/ai-readiness-assessment/',2],['/ai-ticket-triage/',3]]){
+ for(const [path,index] of [['/automation-pilot-planner/',0],['/apps/discovery-report-workbench.html',2],['/roi-calc/',1],['/sla-calculator/',1],['/finops-estimator/',1],['/apps/network.html',2],['/ai-readiness-assessment/',2],['/ai-ticket-triage/',3]]){
   assert.equal(vm.runInContext('recommendationKind('+JSON.stringify(path)+')',h.context),kinds[index]);
  }
- for(const [process,indexes] of [['Reporting & analytics',[1,0]],['Other',[2]],['IT operations / incident response',[3]]]){
+ for(const [process,indexes] of [['Reporting & analytics',[1,2]],['Other',[2]],['IT operations / incident response',[3]]]){
   const g=harness('success',{process},lang);await g.submit();
   for(const index of indexes){assert.ok(g.context.window.__zionDiscoveryReport.includes(kinds[index]));assert.ok(g.nodes.rapps.children.some(item=>item.children[1].textContent===' — '+kinds[index]));}
   assert.equal(g.requests[0].payload.message,g.context.window.__zionDiscoveryReport);

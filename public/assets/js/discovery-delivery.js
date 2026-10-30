@@ -75,9 +75,9 @@ const RECOMMENDATION_KINDS={
 function recommendationKind(path){
  const language=(document.documentElement?.lang||'en').slice(0,2);
  const kinds=RECOMMENDATION_KINDS[language]||RECOMMENDATION_KINDS.en;
- if(['/automation-pilot-planner/','/apps/discovery-report-workbench.html'].includes(path)) return kinds[0];
+ if(path==='/automation-pilot-planner/') return kinds[0];
  if(['/sla-calculator/','/roi-calc/','/finops-estimator/'].includes(path)) return kinds[1];
- if(path==='/apps/'||path==='/apps/network.html'||path.includes('checklist')||path.includes('assessment')) return kinds[2];
+ if(path==='/apps/discovery-report-workbench.html'||path==='/apps/'||path==='/apps/network.html'||path.includes('checklist')||path.includes('assessment')) return kinds[2];
  return kinds[3];
 }
 const COPY={
