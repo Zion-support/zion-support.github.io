@@ -274,3 +274,5 @@ export default function ServiceDiscoveryHub() {
         </button>
       </div>
     </div>
+  );
+}
