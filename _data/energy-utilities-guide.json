@@ -79,12 +79,12 @@
       "nextIntro": "Use the same language across the catalog, Discovery and the planning resources below.",
       "verification": "App verification guide",
       "pilot": "Automation pilot planner",
-      "legacy": "Earlier related collections",
+      "legacy": "Earlier network collections",
       "legacyText": "The following older collections remain available in their original language.",
       "legacyLinks": [
-        "Field services collection",
-        "Gaming and esports collection",
-        "Discovery and energy spotlight"
+        "Manufacturing and Industry 4.0 collection",
+        "Marketing and growth collection",
+        "Discovery spotlight"
       ],
       "footer": "Zion Tech Group · Define the scope, evaluate the evidence and review the next step with your team.",
       "catalogLabel": "Energy & utilities pilot guide"
@@ -159,12 +159,12 @@
       "nextIntro": "Mantenha o mesmo idioma no catálogo, no Discovery e nos recursos de planejamento abaixo.",
       "verification": "Guia de verificação de apps",
       "pilot": "Planejador de piloto de automação",
-      "legacy": "Coleções anteriores relacionadas",
+      "legacy": "Coleções anteriores da rede",
       "legacyText": "As coleções anteriores abaixo continuam disponíveis no idioma original.",
       "legacyLinks": [
-        "Coleção de serviços de campo",
-        "Coleção de jogos e esports",
-        "Destaque de Discovery e energia"
+        "Coleção de manufatura e Indústria 4.0",
+        "Coleção de marketing e crescimento",
+        "Destaque de Discovery"
       ],
       "footer": "Zion Tech Group · Defina o escopo, avalie as evidências e revise o próximo passo com sua equipe.",
       "catalogLabel": "Guia de piloto para energia e utilities"
@@ -239,12 +239,12 @@
       "nextIntro": "Mantenga el mismo idioma en el catálogo, Discovery y los recursos de planificación siguientes.",
       "verification": "Guía de verificación de apps",
       "pilot": "Planificador de piloto de automatización",
-      "legacy": "Colecciones anteriores relacionadas",
+      "legacy": "Colecciones anteriores de la red",
       "legacyText": "Las siguientes colecciones anteriores siguen disponibles en su idioma original.",
       "legacyLinks": [
-        "Colección de servicios de campo",
-        "Colección de videojuegos y esports",
-        "Selección de Discovery y energía"
+        "Colección de fabricación e Industria 4.0",
+        "Colección de marketing y crecimiento",
+        "Selección de Discovery"
       ],
       "footer": "Zion Tech Group · Defina el alcance, evalúe las evidencias y revise el siguiente paso con su equipo.",
       "catalogLabel": "Guía de piloto para energía y utilities"
@@ -319,12 +319,12 @@
       "nextIntro": "Conservez la même langue dans le catalogue, le Discovery et les ressources de planification ci-dessous.",
       "verification": "Guide de vérification des apps",
       "pilot": "Planificateur de pilote d’automatisation",
-      "legacy": "Collections antérieures associées",
+      "legacy": "Collections antérieures du réseau",
       "legacyText": "Les collections antérieures ci-dessous restent disponibles dans leur langue d’origine.",
       "legacyLinks": [
-        "Collection de services sur site",
-        "Collection de jeux vidéo et d’esport",
-        "Sélection Discovery et énergie"
+        "Collection industrie et Industrie 4.0",
+        "Collection marketing et croissance",
+        "Présentation du Discovery"
       ],
       "footer": "Zion Tech Group · Définissez le périmètre, évaluez les preuves et examinez la prochaine étape avec votre équipe.",
       "catalogLabel": "Guide de pilote pour l’énergie"
@@ -399,12 +399,12 @@
       "nextIntro": "Nutzen Sie dieselbe Sprache im Katalog, im Discovery-Check und in den folgenden Planungsressourcen.",
       "verification": "Leitfaden zur App-Prüfung",
       "pilot": "Planer für Automatisierungspiloten",
-      "legacy": "Frühere verwandte Sammlungen",
+      "legacy": "Frühere Netzwerksammlungen",
       "legacyText": "Die folgenden älteren Sammlungen bleiben in ihrer ursprünglichen Sprache verfügbar.",
       "legacyLinks": [
-        "Sammlung zu Vor-Ort-Services",
-        "Sammlung zu Gaming und E-Sport",
-        "Discovery- und Energie-Überblick"
+        "Sammlung zu Fertigung und Industrie 4.0",
+        "Sammlung zu Marketing und Wachstum",
+        "Discovery-Überblick"
       ],
       "footer": "Zion Tech Group · Legen Sie den Umfang fest, bewerten Sie Nachweise und prüfen Sie den nächsten Schritt mit Ihrem Team.",
       "catalogLabel": "Pilotleitfaden für Energie und Versorgung"
