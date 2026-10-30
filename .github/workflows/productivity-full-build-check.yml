@@ -20,6 +20,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
+      - name: Test read-only live publication contracts without network
+        run: node scripts/test-finops-scenario-live.cjs --self-test
       - name: Verify publisher integration and source freshness contracts
         run: |
           python3 tests/ci/test_deploy_on_push_artifact.py
@@ -30,6 +32,8 @@ jobs:
         run: node scripts/render-productivity-release.cjs out
       - name: Final field rendering and required app-route gate (no deployment)
         run: node scripts/render-field-evidence-release.cjs out
+      - name: Verify operational tools after every publication renderer
+        run: node scripts/test-operational-tools.cjs out --artifact-only
       - name: Fetch catalog source (bytes checked before staging)
         run: curl --fail --silent --show-error --location --max-time 30 https://raw.githubusercontent.com/Zion-support/zion-app-network/main/CATALOG-PRODUCTIVITY-REVIEW.md -o _productivity-catalog.md
       - name: Test scoped artifact staging

@@ -1,7 +1,7 @@
 name: FinOps Scenario Read-only Publication QA
 on:
   workflow_run:
-    workflows: ['Simple Static Deploy']
+    workflows: ['Simple Static Deploy', 'Continuous Pages Deploy']
     types: [completed]
     branches: [main]
   workflow_dispatch:
@@ -16,14 +16,32 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - uses: actions/checkout@v4
+      - name: Resolve current publication source
+        id: source
+        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8.0.0
         with:
-          ref: main
+          script: |
+            const {data: ref} = await github.rest.git.getRef({...context.repo, ref: 'heads/main'});
+            const current = ref.object.sha;
+            const source = context.eventName === 'workflow_run' ? context.payload.workflow_run.head_sha : current;
+            const eligible = context.eventName === 'workflow_dispatch' || source === current;
+            core.setOutput('eligible', String(eligible));
+            core.setOutput('sha', source);
+            if (!eligible) core.notice('Skip live QA: this publisher source has been superseded on main.');
+      - uses: actions/checkout@v4
+        if: steps.source.outputs.eligible == 'true'
+        with:
+          ref: ${{ steps.source.outputs.sha }}
           sparse-checkout: |
             scripts/test-finops-scenario-live.cjs
           sparse-checkout-cone-mode: false
       - uses: actions/setup-node@v4
+        if: steps.source.outputs.eligible == 'true'
         with:
           node-version: '20'
+      - name: Verify FinOps journey contract fixtures
+        if: steps.source.outputs.eligible == 'true'
+        run: node scripts/test-finops-scenario-live.cjs --self-test
       - name: Read-only live publication checks
+        if: steps.source.outputs.eligible == 'true'
         run: node scripts/test-finops-scenario-live.cjs
