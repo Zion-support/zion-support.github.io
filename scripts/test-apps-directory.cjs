@@ -41,3 +41,9 @@ test('the field workflow preserves evidence, handoff and completion order with a
   assert.equal(data.resources.find(r=>r.id==='handoff').kind,'tool');
   for(const l of locales){assert.equal(data.locales[l].workflows.length,4);assert.deepEqual(data.locales[l].workflows[3][2],['evidence','handoff','completion']);}
 });
+test('the concurrent energy pilot guide remains linked in every catalog language',()=>{
+  const expected={en:'/apps/october-2026-batch102-energy-ai.html',pt:'/pt/apps/october-2026-batch102-energy-ai.html',es:'/es/apps/october-2026-batch102-energy-ai.html',fr:'/fr/apps/october-2026-batch102-energy-ai.html',de:'/de/apps/october-2026-batch102-energy-ai.html'};
+  for(const l of locales){assert(render(l).includes(`href="${expected[l]}"`));assert(data.locales[l].energyGuide.length>10);}
+  assert.equal(new Set(locales.map(l=>data.locales[l].energyGuide)).size,5);
+  assert(render('en').includes('Energy &amp; utilities pilot guide'));
+});

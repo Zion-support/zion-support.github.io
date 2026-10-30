@@ -93,7 +93,8 @@
           ]
         ]
       ],
-      "collections": "Explore the guide collections"
+      "collections": "Explore the guide collections",
+      "energyGuide": "Energy & utilities pilot guide"
     },
     "pt": {
       "lang": "pt-BR",
@@ -179,7 +180,8 @@
           ]
         ]
       ],
-      "collections": "Explore as coleções de guias"
+      "collections": "Explore as coleções de guias",
+      "energyGuide": "Guia de piloto para energia e utilities"
     },
     "es": {
       "lang": "es",
@@ -265,7 +267,8 @@
           ]
         ]
       ],
-      "collections": "Explore las colecciones de guías"
+      "collections": "Explore las colecciones de guías",
+      "energyGuide": "Guía de piloto para energía y utilities"
     },
     "fr": {
       "lang": "fr",
@@ -351,7 +354,8 @@
           ]
         ]
       ],
-      "collections": "Découvrez les collections de guides"
+      "collections": "Découvrez les collections de guides",
+      "energyGuide": "Guide de pilote pour l’énergie"
     },
     "de": {
       "lang": "de",
@@ -437,7 +441,8 @@
           ]
         ]
       ],
-      "collections": "Leitfadensammlungen entdecken"
+      "collections": "Leitfadensammlungen entdecken",
+      "energyGuide": "Pilotleitfaden für Energie und Versorgung"
     }
   },
   "resources": [
