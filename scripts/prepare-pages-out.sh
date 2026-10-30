@@ -25,6 +25,7 @@ python3 scripts/ensure-pages-sitemap-index.py out
 # Later productivity rendering appends the existing resource blocks.
 node scripts/render-app-verification-guides.cjs out
 node scripts/test-app-verification-guides.cjs out
+node scripts/render-agent-risk-guides.cjs out
 node scripts/render-finops-scenario.cjs out --pages-only
 # Override public/_redirects (may be a stale 37MB next-build auto-gen monster
 # with 550K+ service-slug rules and NO entries for canonical doc routes) with the
@@ -373,6 +374,12 @@ node scripts/verify-network-evaluation-artifact.cjs out
 # renderer fills missing files only; it never replays old homepage promotions.
 node scripts/test-linked-app-routes.cjs
 node scripts/render-linked-app-routes.cjs out
+
+# Replace historical tool placeholders with the reviewed five-language tools.
+# Verify the assembled pages, not only an isolated renderer fixture.
+node scripts/render-operational-tools.cjs out
+node scripts/test-operational-tools.cjs out --artifact-only
+node scripts/render-contact-pages.cjs out
 
 python3 scripts/test-free-discovery-guard.py
 assert_public_entry_content
