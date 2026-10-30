@@ -1,5 +1,5 @@
 {
-  "release": "apps-directory-2026-10-30-v3",
+  "release": "apps-directory-2026-10-30-v4",
   "categories": [
     "plan",
     "productivity",
@@ -773,6 +773,36 @@
         "de": {
           "title": "Leitfaden zur Incident Response",
           "description": "Definieren Sie Kontext, Zuständigkeiten und Nachweise für einen Reaktionsplan."
+        }
+      }
+    },
+    {
+      "id": "service-request",
+      "category": "operations",
+      "kind": "guide",
+      "location": "network",
+      "slug": "datacenter-service-request-guide-2026",
+      "related": "field-service",
+      "text": {
+        "en": {
+          "title": "Prepare a clear datacenter service request",
+          "description": "Turn a datacenter need into a reviewable service brief: task, equipment, access, maintenance window, quote assumptions and completion evidence."
+        },
+        "pt": {
+          "title": "Prepare uma solicitação clara de serviço em datacenter",
+          "description": "Transforme uma necessidade do datacenter em um escopo revisável: tarefa, equipamentos, acesso, janela de manutenção, premissas da cotação e evidências de conclusão."
+        },
+        "es": {
+          "title": "Prepare una solicitud clara de servicio de centro de datos",
+          "description": "Convierta una necesidad del centro de datos en un alcance revisable: tarea, equipos, acceso, ventana de mantenimiento, supuestos del presupuesto y evidencias de finalización."
+        },
+        "fr": {
+          "title": "Préparez une demande claire de service en datacenter",
+          "description": "Transformez un besoin du datacenter en demande vérifiable : tâche, équipements, accès, créneau de maintenance, hypothèses du devis et preuves de réalisation."
+        },
+        "de": {
+          "title": "Bereiten Sie eine klare Serviceanfrage für das Rechenzentrum vor",
+          "description": "Formulieren Sie den Bedarf im Rechenzentrum als prüfbare Serviceanfrage: Aufgabe, Geräte, Zugang, Wartungsfenster, Angebotsannahmen und Abschlussnachweise."
         }
       }
     },
