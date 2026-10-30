@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'AI-Powered Network Monitoring | Zion Tech Group',
+  title: 'AI-Powered Network Monitoring',
   description:
     'Discuss network monitoring, anomaly detection and alerting requirements with Zion Tech Group.',
   alternates: {
@@ -12,12 +12,12 @@ export const metadata: Metadata = {
 
 export default function ServicePage() {
   return (
-    <main className="min-h-screen bg-slate-950 px-6 py-16 text-white">
+    <article aria-labelledby="service-title" className="min-h-screen bg-slate-950 px-6 py-16 text-white">
       <div className="mx-auto max-w-4xl">
         <p className="mb-4 text-sm font-semibold text-purple-300">
           IT Operations
         </p>
-        <h1 className="mb-6 text-4xl font-bold md:text-5xl">
+        <h1 id="service-title" className="mb-6 text-4xl font-bold md:text-5xl">
           AI-Powered Network Monitoring
         </h1>
         <p className="mb-10 text-xl text-gray-300">
@@ -49,6 +49,11 @@ export default function ServicePage() {
             timeframe by email. Zion will confirm the scope, availability and
             commercial terms in writing before any service is ordered.
           </p>
+          <p className="mt-4 text-gray-300">
+            Any purchase, booking or dispatch requires formal written client
+            confirmation, the corresponding purchase order and Zion&apos;s
+            specific release.
+          </p>
         </section>
 
         <section aria-labelledby="contact-heading" className="rounded-xl bg-slate-900 p-6">
@@ -67,6 +72,6 @@ export default function ServicePage() {
           </a>
         </section>
       </div>
-    </main>
+    </article>
   );
 }
