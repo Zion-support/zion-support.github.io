@@ -49,8 +49,9 @@ for(const [l,c] of Object.entries(returns)){
  assert(deAnchor,'Discovery insertion anchor missing '+l);
  const guide='/apps/field-service-evidence-guide'+(l==='en'?'':'.'+(l==='pt'?'pt-br':l))+'.html';
  const discovery=l==='en'?'/discovery/':'/'+l+'/discovery/';
+ const network=l==='pt'?'/pt/apps/network.html':'/apps/network.html';
  const lang=l==='pt'?'pt-BR':l;
- const block='<!--zion-field-return:start--><aside class="card" data-field-evidence-return="2026-10-09-v2" lang="'+lang+'"><h2>'+escape(c[0])+'</h2><p><a href="'+guide+'">'+escape(c[1])+'</a> · <a href="'+discovery+'">'+escape(c[2])+'</a> · <a href="/apps/network.html">'+escape(c[3])+'</a></p><p>'+escape(c[4])+'</p></aside><!--zion-field-return:end-->';
+ const block='<!--zion-field-return:start--><aside class="card" data-field-evidence-return="2026-10-09-v2" lang="'+lang+'"><h2>'+escape(c[0])+'</h2><p><a href="'+guide+'">'+escape(c[1])+'</a> · <a href="'+discovery+'">'+escape(c[2])+'</a> · <a href="'+network+'">'+escape(c[3])+'</a></p><p>'+escape(c[4])+'</p></aside><!--zion-field-return:end-->';
  if(existing.length===0)html=html.replace(deAnchor,block+deAnchor);else html=html.replace(owned,()=>block);
  assert.deepEqual([...html.matchAll(/<form\b[\s\S]*?<\/form>/gi)].map(m=>m[0]),forms,'Discovery forms changed '+l);
  fs.writeFileSync(file,html);
