@@ -9,6 +9,7 @@ const L = ['en', 'pt', 'es', 'fr', 'de'];
 const names = {en:'English', pt:'Português', es:'Español', fr:'Français', de:'Deutsch'};
 const prefix = l => l === 'en' ? '/' : '/' + l + '/';
 const route = l => prefix(l) + 'apps/app-verification-guide.html';
+const riskRoute = l => prefix(l) + 'blog/enterprise-ai-agent-risk-checklist/';
 const home = l => l === 'pt' ? '/' : '/' + l + '/';
 const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;'}[c]));
 const link = (url, label, attrs = '') => '<a href="' + url + '"' + attrs + '>' + esc(label) + '</a>';
@@ -50,7 +51,7 @@ ${alternates}
 <section class="catalog-section" aria-labelledby="checks-title"><h2 id="checks-title">${esc(c.checksTitle)}</h2><ol class="review-steps">${c.checks.map(([t,d])=>`<li><h3>${esc(t)}</h3><p>${esc(d)}</p></li>`).join('')}</ol></section>
 <section class="catalog-section" aria-labelledby="record-title"><h2 id="record-title">${esc(c.recordTitle)}</h2><p>${esc(c.recordIntro)}</p><dl class="evidence-record">${c.record.map(([t,d])=>`<dt>${esc(t)}</dt><dd>${esc(d)}</dd>`).join('')}</dl></section>
 <section class="catalog-capability" aria-labelledby="example-title"><h2 id="example-title">${esc(c.exampleTitle)}</h2><p>${esc(c.example)}</p></section>
-<section class="catalog-section" aria-labelledby="resources-title"><h2 id="resources-title">${esc(c.resourcesTitle)}</h2><p>${esc(c.resourcesIntro)}</p><nav class="catalog-actions" aria-label="${esc(c.resourcesTitle)}">${link(p+'apps/finops-scenario-estimator.html',c.related[0],' class="catalog-button secondary"')}${link(p+'apps/finops-pilot-guide.html',c.related[1],' class="catalog-button secondary"')}</nav></section>
+<section class="catalog-section" aria-labelledby="resources-title"><h2 id="resources-title">${esc(c.resourcesTitle)}</h2><p>${esc(c.resourcesIntro)}</p><nav class="catalog-actions" aria-label="${esc(c.resourcesTitle)}">${link(p+'apps/finops-scenario-estimator.html',c.related[0],' class="catalog-button secondary"')}${link(p+'apps/finops-pilot-guide.html',c.related[1],' class="catalog-button secondary"')}${link(riskRoute(l),c.riskGuideTitle,' class="catalog-button secondary"')}</nav></section>
 ${extensions}
 </main>
 <footer class="catalog-footer"><div class="catalog-wrap"><p>${esc(c.footer)}</p><nav aria-label="${esc(c.nav[1])}">${primary}${link('https://github.com/Zion-support/zion-support.github.io/blob/main/content/app-verification-guide.json',c.source)}</nav></div></footer>
@@ -62,7 +63,7 @@ function promoteHome(before,l) {
   const clean=before.replace(homeMarker,'');
   assert.equal((clean.match(/<!--zion-network-map-home:end-->/g)||[]).length,1,'Existing map promotion');
   assert(!clean.includes('data-verification-guide-home='),'Unknown promotion ownership');
-  const block='<!--verification-guide-home:start--><p class="network-map-home-link" data-verification-guide-home="'+RELEASE+'">'+esc(C[l].homePromotion)+' '+link(route(l),C[l].title)+'.</p><!--verification-guide-home:end-->';
+  const block='<!--verification-guide-home:start--><p class="network-map-home-link" data-verification-guide-home="'+RELEASE+'">'+esc(C[l].homePromotion)+' '+link(route(l),C[l].title)+'. '+link(riskRoute(l),C[l].riskGuideTitle)+'.</p><!--verification-guide-home:end-->';
   const after=clean.replace('<!--zion-network-map-home:end-->','<!--zion-network-map-home:end-->'+block);
   assert.equal(after.replace(homeMarker,''),clean,'Only the owned homepage paragraph changes');
   assert.deepEqual(protectedParts(after),protectedParts(before),'Homepage form/script preservation');

@@ -1,5 +1,5 @@
 {
-  "release": "apps-directory-2026-10-30-v4",
+  "release": "apps-directory-2026-10-30-v5",
   "categories": [
     "plan",
     "productivity",
@@ -953,6 +953,36 @@
         "de": {
           "title": "Leitfaden zur App-Prüfung",
           "description": "Prüfen Sie Funktionen, verwendete Daten und die Bewertung der Ergebnisse einer Ressource."
+        }
+      }
+    },
+    {
+      "id": "agent-risk",
+      "category": "governance",
+      "kind": "guide",
+      "location": "site",
+      "slug": "blog/enterprise-ai-agent-risk-checklist/",
+      "related": "verification",
+      "text": {
+        "en": {
+          "title": "AI Agent Pilot Checklist",
+          "description": "Define data access, permitted actions, cost assumptions and review evidence before running an AI agent pilot. Explore the related Zion tools and guides."
+        },
+        "pt": {
+          "title": "Checklist de piloto com agentes de IA",
+          "description": "Defina acesso a dados, ações permitidas, premissas de custo e evidências de revisão antes de executar um piloto com agentes de IA. Explore os recursos relacionados da Zion."
+        },
+        "es": {
+          "title": "Lista de verificación de un piloto con agentes de IA",
+          "description": "Defina el acceso a datos, las acciones permitidas, los supuestos de coste y las evidencias de revisión antes de ejecutar un piloto con agentes de IA. Explore los recursos relacionados de Zion."
+        },
+        "fr": {
+          "title": "Liste de contrôle d’un pilote d’agents d’IA",
+          "description": "Définissez les accès aux données, les actions permises, les hypothèses de coût et les éléments à vérifier avant un pilote d’agent d’IA. Découvrez les outils et guides Zion associés."
+        },
+        "de": {
+          "title": "Checkliste für einen KI-Agenten-Piloten",
+          "description": "Legen Sie Datenzugriffe, erlaubte Aktionen, Kostenannahmen und Prüfnachweise fest, bevor Sie einen KI-Agenten im Pilotversuch einsetzen. Entdecken Sie passende Zion-Werkzeuge und Leitfäden."
         }
       }
     },
