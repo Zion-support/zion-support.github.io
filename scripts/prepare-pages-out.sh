@@ -360,6 +360,11 @@ node scripts/test-network-evaluation.cjs
 node scripts/bootstrap-network-evaluation.cjs out
 node scripts/verify-network-evaluation-artifact.cjs out
 
+# Restore reviewed guide routes omitted by public-only assembly. The staging
+# renderer fills missing files only; it never replays old homepage promotions.
+node scripts/test-linked-app-routes.cjs
+node scripts/render-linked-app-routes.cjs out
+
 python3 scripts/test-free-discovery-guard.py
 assert_public_entry_content
 

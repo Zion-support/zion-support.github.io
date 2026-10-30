@@ -19,3 +19,8 @@ for(const [locale,suffix] of [['pt','pt-br'],['es','es'],['fr','fr'],['de','de']
 }
 console.log('PASS final field guide aliases: four locale URLs match the completed canonical pages.');
 
+// All publishers share this final renderer. Fail before upload if a catalog
+// points at a main-site app route that the completed artifact does not contain.
+const catalogRoutes=require('./verify-catalog-app-routes.cjs').verify(output);
+console.log('PASS final catalog app routes and required guides: '+catalogRoutes.routes+' destinations; '+catalogRoutes.catalogs+' catalogs.');
+
