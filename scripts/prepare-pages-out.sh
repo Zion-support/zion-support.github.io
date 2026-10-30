@@ -17,6 +17,12 @@ mkdir -p out
 if [ -d public ]; then
   cp -a public/. out/
 fi
+
+# Keep the five reviewed guide editions in sync with their localized source.
+# Later productivity rendering appends the existing resource blocks.
+node scripts/render-app-verification-guides.cjs out
+node scripts/test-app-verification-guides.cjs out
+node scripts/render-finops-scenario.cjs out --pages-only
 # Override public/_redirects (may be a stale 37MB next-build auto-gen monster
 # with 550K+ service-slug rules and NO entries for canonical doc routes) with the
 # curated root _redirects that has explicit 200 rules for all money-path doc pages.

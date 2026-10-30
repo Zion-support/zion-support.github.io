@@ -1,0 +1,167 @@
+{
+  "en": {
+    "lang": "en",
+    "title": "Choose an app and verify what it does",
+    "description": "A practical guide to compare Zion resources, test a small workflow and record evidence before using real business data.",
+    "intro": "Start with one task. Review the resource, try a fictional example and keep a short evidence record before deciding on a pilot.",
+    "eyebrow": "Zion app network · Practical guide",
+    "nav": ["Home", "App catalog", "Network map", "Free Discovery", "Skip to content", "Choose language"],
+    "levelsTitle": "Identify the kind of resource",
+    "levels": [
+      ["Local browser tool", "A calculator, text composer or checklist can run in the browser. Reproduce its stated output and check its limits; the presence of AI in a name does not establish a model connection."],
+      ["Manual guide or prototype", "A guide helps a person plan or review work. A prototype may have unfinished features. Check which actions are implemented and which still require a person."],
+      ["Connected integration", "Confirm the actual service connection, data flow, permissions and tested version. A published page or source repository alone does not establish that an integration works."]
+    ],
+    "checksTitle": "Five checks for a useful pilot",
+    "checks": [
+      ["Define the task", "Name the process owner, the current baseline and one measurable success criterion. Keep the first trial small and reversible."],
+      ["Inspect the inputs", "Start with fictional or authorized, sanitized examples. Check data handling and dependencies before entering business records; keep credentials and private customer data out of public tools."],
+      ["Reproduce an outcome", "Compare the output with an expected result. Try empty or invalid input, review error messages and check what happens when an assumption changes."],
+      ["Review the human decision", "Identify who reviews the output and who may approve, stop or reverse the trial. A draft, scenario or checklist does not authorize sending, purchasing or dispatch."],
+      ["Record the evidence", "Save the exact URL or version, the example used, the observed result, the limits and the review decision. Record untested features as untested."]
+    ],
+    "recordTitle": "A short evidence record",
+    "recordIntro": "Keep this record in your approved internal workspace. This page is a reading guide and has no submission form.",
+    "record": [["Resource and version", "URL, source reference and date of the test"], ["Example and expectation", "Fictional input and the outcome you expected"], ["Observed behavior", "Actual output, errors and recovery behavior"], ["Limits and dependencies", "What was not tested and what relies on another service"], ["Owner and decision", "Reviewer, next small step and stop condition"]],
+    "exampleTitle": "Worked review: meeting notes",
+    "example": "Use fictional notes containing one decision, one owner and one deadline. Compare the draft with those three facts, then repeat with the deadline omitted. A useful result should keep the missing deadline visible instead of inventing one. A person reviews the final text before sharing it.",
+    "resourcesTitle": "Explore the related resources",
+    "resourcesIntro": "The resources below include three local browser tools and three manual review or planning guides. Their pages explain the specific capabilities and limits.",
+    "related": ["Compare a FinOps scenario", "Prepare a FinOps pilot", "Return to the app catalog"],
+    "footer": "Use the catalog to choose one resource, the map to compare paths and this guide to record what you actually verified.",
+    "source": "Guide source",
+    "homePromotion": "Before expanding a pilot, compare the resource type, test a fictional example and record the result."
+  },
+  "pt": {
+    "lang": "pt-BR",
+    "title": "Escolha um app e verifique o que ele faz",
+    "description": "Guia prático para comparar recursos da Zion, testar um processo pequeno e registrar evidências antes de usar dados reais de negócio.",
+    "intro": "Comece por uma tarefa. Confira o recurso, experimente um exemplo fictício e mantenha um registro curto de evidências antes de decidir por um piloto.",
+    "eyebrow": "Rede de apps Zion · Guia prático",
+    "nav": ["Início", "Catálogo de apps", "Mapa da rede", "Discovery gratuito", "Pular para o conteúdo", "Escolher idioma"],
+    "levelsTitle": "Identifique o tipo de recurso",
+    "levels": [
+      ["Ferramenta local no navegador", "Uma calculadora, um gerador de texto por regras ou uma lista de verificação pode funcionar no navegador. Reproduza o resultado declarado e confira os limites; a presença de IA no nome não comprova conexão com um modelo."],
+      ["Guia manual ou protótipo", "Um guia ajuda uma pessoa a planejar ou revisar o trabalho. Um protótipo pode ter funções incompletas. Confira quais ações estão implementadas e quais dependem de uma pessoa."],
+      ["Integração conectada", "Confirme a conexão real com o serviço, o fluxo de dados, as permissões e a versão testada. Uma página publicada ou um repositório, por si só, não comprova que a integração funciona."]
+    ],
+    "checksTitle": "Cinco verificações para um piloto útil",
+    "checks": [
+      ["Defina a tarefa", "Identifique o responsável pelo processo, a situação inicial e um critério mensurável de sucesso. Mantenha o primeiro teste pequeno e reversível."],
+      ["Confira as entradas", "Comece com exemplos fictícios ou dados tratados e autorizados. Confira o tratamento de dados e as dependências antes de inserir registros de negócio; mantenha credenciais e dados privados de clientes fora das ferramentas públicas."],
+      ["Reproduza um resultado", "Compare a saída com o resultado esperado. Teste entradas vazias ou inválidas, revise as mensagens de erro e confira o comportamento após mudar uma premissa."],
+      ["Revise a decisão humana", "Identifique quem revisa a saída e quem pode aprovar, interromper ou reverter o teste. Um rascunho, cenário ou checklist não autoriza envio, compra ou despacho."],
+      ["Registre as evidências", "Guarde a URL ou versão exata, o exemplo usado, o resultado observado, os limites e a decisão da revisão. Registre como não testadas as funções que não foram verificadas."]
+    ],
+    "recordTitle": "Um registro curto de evidências",
+    "recordIntro": "Mantenha este registro no ambiente interno aprovado. Esta página é um guia de leitura e não possui formulário de envio.",
+    "record": [["Recurso e versão", "URL, referência do código e data do teste"], ["Exemplo e expectativa", "Entrada fictícia e resultado esperado"], ["Comportamento observado", "Saída real, erros e comportamento de recuperação"], ["Limites e dependências", "O que não foi testado e o que depende de outro serviço"], ["Responsável e decisão", "Revisor, próximo passo pequeno e condição de parada"]],
+    "exampleTitle": "Exemplo de revisão: notas de reunião",
+    "example": "Use notas fictícias com uma decisão, um responsável e um prazo. Compare o rascunho com esses três fatos e repita o teste sem informar o prazo. Um resultado útil deve deixar a ausência do prazo explícita, sem inventar um. Uma pessoa revisa o texto final antes de compartilhá-lo.",
+    "resourcesTitle": "Explore os recursos relacionados",
+    "resourcesIntro": "Os recursos abaixo incluem três ferramentas locais no navegador e três guias de revisão manual ou planejamento. Cada página explica suas capacidades e seus limites.",
+    "related": ["Compare um cenário FinOps", "Prepare um piloto FinOps", "Voltar ao catálogo de apps"],
+    "footer": "Use o catálogo para escolher um recurso, o mapa para comparar caminhos e este guia para registrar o que você realmente verificou.",
+    "source": "Código do guia",
+    "homePromotion": "Antes de ampliar um piloto, compare o tipo de recurso, teste um exemplo fictício e registre o resultado."
+  },
+  "es": {
+    "lang": "es",
+    "title": "Elija una app y compruebe qué hace",
+    "description": "Guía práctica para comparar recursos de Zion, probar un proceso pequeño y registrar evidencias antes de usar datos reales del negocio.",
+    "intro": "Empiece con una tarea. Revise el recurso, pruebe un ejemplo ficticio y conserve un breve registro de evidencias antes de decidir un piloto.",
+    "eyebrow": "Red de apps Zion · Guía práctica",
+    "nav": ["Inicio", "Catálogo de apps", "Mapa de la red", "Discovery gratuito", "Saltar al contenido", "Elegir idioma"],
+    "levelsTitle": "Identifique el tipo de recurso",
+    "levels": [
+      ["Herramienta local del navegador", "Una calculadora, un generador de texto por reglas o una lista de comprobación puede funcionar en el navegador. Reproduzca el resultado anunciado y revise sus límites; IA en el nombre no demuestra una conexión con un modelo."],
+      ["Guía manual o prototipo", "Una guía ayuda a una persona a planificar o revisar el trabajo. Un prototipo puede tener funciones incompletas. Compruebe qué acciones están implementadas y cuáles requieren una persona."],
+      ["Integración conectada", "Confirme la conexión real al servicio, el flujo de datos, los permisos y la versión probada. Una página publicada o un repositorio por sí solos no demuestran que la integración funcione."]
+    ],
+    "checksTitle": "Cinco comprobaciones para un piloto útil",
+    "checks": [
+      ["Defina la tarea", "Identifique al responsable del proceso, la situación inicial y un criterio de éxito medible. Mantenga la primera prueba pequeña y reversible."],
+      ["Revise las entradas", "Empiece con ejemplos ficticios o datos tratados y autorizados. Revise el tratamiento de datos y las dependencias antes de introducir registros del negocio; no use credenciales ni datos privados de clientes en herramientas públicas."],
+      ["Reproduzca un resultado", "Compare la salida con el resultado esperado. Pruebe entradas vacías o inválidas, revise los mensajes de error y compruebe qué ocurre al cambiar un supuesto."],
+      ["Revise la decisión humana", "Identifique quién revisa la salida y quién puede aprobar, detener o revertir la prueba. Un borrador, escenario o lista no autoriza envíos, compras ni intervenciones."],
+      ["Registre las evidencias", "Conserve la URL o versión exacta, el ejemplo, el resultado observado, los límites y la decisión de revisión. Marque como no probadas las funciones que no se verificaron."]
+    ],
+    "recordTitle": "Un breve registro de evidencias",
+    "recordIntro": "Mantenga este registro en el entorno interno aprobado. Esta página es una guía de lectura y no incluye un formulario de envío.",
+    "record": [["Recurso y versión", "URL, referencia del código y fecha de la prueba"], ["Ejemplo y expectativa", "Entrada ficticia y resultado esperado"], ["Comportamiento observado", "Salida real, errores y recuperación"], ["Límites y dependencias", "Qué no se probó y qué depende de otro servicio"], ["Responsable y decisión", "Revisor, siguiente paso pequeño y condición de parada"]],
+    "exampleTitle": "Ejemplo de revisión: notas de reunión",
+    "example": "Use notas ficticias con una decisión, un responsable y un plazo. Compare el borrador con esos tres hechos y repita la prueba sin indicar el plazo. Un resultado útil debe señalar que falta el plazo, sin inventarlo. Una persona revisa el texto final antes de compartirlo.",
+    "resourcesTitle": "Explore los recursos relacionados",
+    "resourcesIntro": "Los recursos siguientes incluyen tres herramientas locales del navegador y tres guías de revisión manual o planificación. Cada página explica sus capacidades y límites.",
+    "related": ["Compare un escenario FinOps", "Prepare un piloto FinOps", "Volver al catálogo de apps"],
+    "footer": "Use el catálogo para elegir un recurso, el mapa para comparar rutas y esta guía para registrar lo que realmente verificó.",
+    "source": "Código de la guía",
+    "homePromotion": "Antes de ampliar un piloto, compare el tipo de recurso, pruebe un ejemplo ficticio y registre el resultado."
+  },
+  "fr": {
+    "lang": "fr",
+    "title": "Choisissez une app et vérifiez son fonctionnement",
+    "description": "Guide pratique pour comparer les ressources Zion, tester un processus limité et consigner des preuves avant d’utiliser des données métier réelles.",
+    "intro": "Commencez par une tâche. Examinez la ressource, essayez un exemple fictif et conservez un bref relevé de preuves avant de décider d’un pilote.",
+    "eyebrow": "Réseau d’apps Zion · Guide pratique",
+    "nav": ["Accueil", "Catalogue d’apps", "Carte du réseau", "Discovery gratuit", "Aller au contenu", "Choisir la langue"],
+    "levelsTitle": "Identifiez le type de ressource",
+    "levels": [
+      ["Outil local dans le navigateur", "Un calculateur, un générateur de texte par règles ou une liste de contrôle peut fonctionner dans le navigateur. Reproduisez le résultat annoncé et vérifiez les limites ; IA dans le nom ne prouve pas une connexion à un modèle."],
+      ["Guide manuel ou prototype", "Un guide aide une personne à préparer ou relire un travail. Un prototype peut comporter des fonctions inachevées. Vérifiez quelles actions sont implémentées et lesquelles nécessitent une personne."],
+      ["Intégration connectée", "Confirmez la connexion réelle au service, le flux de données, les autorisations et la version testée. Une page publiée ou un dépôt de code ne prouve pas à lui seul que l’intégration fonctionne."]
+    ],
+    "checksTitle": "Cinq vérifications pour un pilote utile",
+    "checks": [
+      ["Définissez la tâche", "Identifiez le responsable du processus, la situation initiale et un critère de réussite mesurable. Gardez le premier essai limité et réversible."],
+      ["Examinez les données d’entrée", "Commencez par des exemples fictifs ou des données traitées et autorisées. Examinez le traitement des données et les dépendances avant de saisir des dossiers métier ; excluez identifiants et données clients privées des outils publics."],
+      ["Reproduisez un résultat", "Comparez la sortie au résultat attendu. Testez des entrées vides ou invalides, examinez les messages d’erreur et vérifiez le comportement lorsqu’une hypothèse change."],
+      ["Vérifiez la décision humaine", "Identifiez qui examine la sortie et qui peut approuver, arrêter ou annuler l’essai. Un brouillon, un scénario ou une liste de contrôle n’autorise ni envoi, ni achat, ni intervention."],
+      ["Consignez les preuves", "Conservez l’URL ou la version exacte, l’exemple, le résultat observé, les limites et la décision de revue. Signalez comme non testées les fonctions qui n’ont pas été vérifiées."]
+    ],
+    "recordTitle": "Un bref relevé de preuves",
+    "recordIntro": "Conservez ce relevé dans l’espace interne approuvé. Cette page est un guide de lecture sans formulaire d’envoi.",
+    "record": [["Ressource et version", "URL, référence du code et date du test"], ["Exemple et attente", "Entrée fictive et résultat attendu"], ["Comportement observé", "Sortie réelle, erreurs et reprise"], ["Limites et dépendances", "Éléments non testés et dépendances à un autre service"], ["Responsable et décision", "Personne chargée de la revue, prochaine étape limitée et condition d’arrêt"]],
+    "exampleTitle": "Exemple de revue : notes de réunion",
+    "example": "Utilisez des notes fictives contenant une décision, un responsable et une échéance. Comparez le brouillon à ces trois faits, puis recommencez sans préciser l’échéance. Un résultat utile doit signaler cette absence, sans inventer de date. Une personne relit le texte final avant de le partager.",
+    "resourcesTitle": "Explorez les ressources associées",
+    "resourcesIntro": "Les ressources ci-dessous comprennent trois outils locaux dans le navigateur et trois guides de relecture manuelle ou de préparation. Chaque page explique ses capacités et ses limites.",
+    "related": ["Comparez un scénario FinOps", "Préparez un pilote FinOps", "Retour au catalogue d’apps"],
+    "footer": "Utilisez le catalogue pour choisir une ressource, la carte pour comparer les parcours et ce guide pour consigner ce que vous avez réellement vérifié.",
+    "source": "Code du guide",
+    "homePromotion": "Avant d’élargir un pilote, comparez le type de ressource, testez un exemple fictif et consignez le résultat."
+  },
+  "de": {
+    "lang": "de",
+    "title": "Eine App auswählen und ihre Funktion prüfen",
+    "description": "Praktischer Leitfaden zum Vergleich von Zion-Ressourcen, zum Testen eines kleinen Prozesses und zum Erfassen von Nachweisen vor der Nutzung echter Geschäftsdaten.",
+    "intro": "Beginnen Sie mit einer Aufgabe. Prüfen Sie die Ressource, testen Sie ein erfundenes Beispiel und halten Sie die Nachweise kurz fest, bevor Sie einen Pilotversuch beschließen.",
+    "eyebrow": "Zion-App-Netzwerk · Praxisleitfaden",
+    "nav": ["Startseite", "App-Katalog", "Netzwerkkarte", "Kostenloses Discovery", "Zum Inhalt springen", "Sprache wählen"],
+    "levelsTitle": "Bestimmen Sie die Art der Ressource",
+    "levels": [
+      ["Lokales Browserwerkzeug", "Ein Rechner, regelbasierter Textgenerator oder eine Checkliste kann im Browser funktionieren. Reproduzieren Sie das angegebene Ergebnis und prüfen Sie die Grenzen; KI im Namen beweist keine Modellanbindung."],
+      ["Manueller Leitfaden oder Prototyp", "Ein Leitfaden unterstützt eine Person beim Planen oder Prüfen. Ein Prototyp kann unfertige Funktionen enthalten. Prüfen Sie, welche Aktionen implementiert sind und welche eine Person erfordern."],
+      ["Angebundene Integration", "Bestätigen Sie die tatsächliche Dienstanbindung, den Datenfluss, die Berechtigungen und die getestete Version. Eine veröffentlichte Seite oder ein Code-Repository allein beweist keine funktionierende Integration."]
+    ],
+    "checksTitle": "Fünf Prüfungen für einen nützlichen Pilotversuch",
+    "checks": [
+      ["Aufgabe festlegen", "Benennen Sie die Prozessverantwortlichen, den Ausgangswert und ein messbares Erfolgskriterium. Halten Sie den ersten Versuch klein und umkehrbar."],
+      ["Eingaben prüfen", "Beginnen Sie mit erfundenen Beispielen oder bereinigten und freigegebenen Daten. Prüfen Sie Datenverarbeitung und Abhängigkeiten vor der Eingabe von Geschäftsunterlagen; verwenden Sie keine Zugangsdaten oder privaten Kundendaten in öffentlichen Werkzeugen."],
+      ["Ergebnis reproduzieren", "Vergleichen Sie die Ausgabe mit dem erwarteten Ergebnis. Testen Sie leere oder ungültige Eingaben, prüfen Sie Fehlermeldungen und das Verhalten nach einer Änderung von Annahmen."],
+      ["Menschliche Entscheidung prüfen", "Bestimmen Sie, wer die Ausgabe prüft und wer den Versuch genehmigen, stoppen oder rückgängig machen darf. Ein Entwurf, Szenario oder eine Checkliste erlaubt weder Versand noch Kauf oder Einsatz."],
+      ["Nachweise festhalten", "Dokumentieren Sie die genaue URL oder Version, das Beispiel, das beobachtete Ergebnis, die Grenzen und die Prüfentscheidung. Kennzeichnen Sie ungeprüfte Funktionen ausdrücklich als nicht getestet."]
+    ],
+    "recordTitle": "Ein kurzer Nachweisbericht",
+    "recordIntro": "Bewahren Sie diesen Bericht im freigegebenen internen Arbeitsbereich auf. Diese Seite ist ein Lesefaden ohne Übermittlungsformular.",
+    "record": [["Ressource und Version", "URL, Code-Referenz und Testdatum"], ["Beispiel und Erwartung", "Erfundene Eingabe und erwartetes Ergebnis"], ["Beobachtetes Verhalten", "Tatsächliche Ausgabe, Fehler und Wiederherstellung"], ["Grenzen und Abhängigkeiten", "Ungeprüfte Bereiche und Abhängigkeiten von anderen Diensten"], ["Verantwortung und Entscheidung", "Prüfende Person, nächster kleiner Schritt und Abbruchbedingung"]],
+    "exampleTitle": "Prüfbeispiel: Besprechungsnotizen",
+    "example": "Verwenden Sie erfundene Notizen mit einer Entscheidung, einer verantwortlichen Person und einer Frist. Vergleichen Sie den Entwurf mit diesen drei Angaben und wiederholen Sie den Test ohne Frist. Ein nützliches Ergebnis muss die fehlende Frist sichtbar machen, statt eine zu erfinden. Eine Person prüft den fertigen Text vor der Weitergabe.",
+    "resourcesTitle": "Verwandte Ressourcen erkunden",
+    "resourcesIntro": "Die folgenden Ressourcen umfassen drei lokale Browserwerkzeuge und drei Leitfäden zur manuellen Prüfung oder Planung. Jede Seite erläutert ihre Funktionen und Grenzen.",
+    "related": ["FinOps-Szenario vergleichen", "FinOps-Pilotversuch vorbereiten", "Zurück zum App-Katalog"],
+    "footer": "Wählen Sie im Katalog eine Ressource, vergleichen Sie auf der Karte mögliche Wege und dokumentieren Sie mit diesem Leitfaden, was Sie tatsächlich geprüft haben.",
+    "source": "Quellcode des Leitfadens",
+    "homePromotion": "Vergleichen Sie vor einer Piloterweiterung die Art der Ressource, testen Sie ein erfundenes Beispiel und dokumentieren Sie das Ergebnis."
+  }
+}
