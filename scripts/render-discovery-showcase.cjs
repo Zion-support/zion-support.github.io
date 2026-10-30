@@ -4,6 +4,9 @@ const path = require('node:path');
 const assert = require('node:assert/strict');
 const root = process.cwd();
 const out = path.resolve(root, process.argv[2] || 'out');
+// The shared Pages assembler uses this mode to restore guide routes without
+// replaying historical homepage promotions or the unrelated risk renderers.
+const pagesOnly = process.argv.includes('--pages-only');
 const content = JSON.parse(fs.readFileSync(path.join(root, 'content/discovery-showcase.json'), 'utf8'));
 const playbook = JSON.parse(fs.readFileSync(path.join(root, 'content/communications-playbook.json'), 'utf8'));
 const locales = ['en','pt','es','fr','de'];
@@ -24,20 +27,23 @@ for (const l of locales) {
  assert(c && c.benefits.length===6 && c.descriptions.length===4, `Incomplete ${l} Discovery translation`);
  assert(p && p.descriptions.length===4 && p.checklist.length===3, `Incomplete ${l} communications translation`);
  for (const key of ['title','intro','checklistTitle','next','planner','catalog','languages','disclosure']) assert(typeof p[key]==='string' && p[key].trim(), `Missing ${l}.${key}`);
- const input=path.join(out,l==='pt'?'index.html':l+'/index.html');
- const old=fs.readFileSync(input,'utf8');
- assert(old.includes('</main>'), `No main closing tag in ${input}`);
- assert(!old.includes('id="discovery-communications"'), `Duplicate section in ${input}`);
- pages.push([input,old.replace('</main>',section(l)+'\n</main>')]);
+ if (!pagesOnly) {
+  const input=path.join(out,l==='pt'?'index.html':l+'/index.html');
+  const old=fs.readFileSync(input,'utf8');
+  assert(old.includes('</main>'), `No main closing tag in ${input}`);
+  assert(!old.includes('id="discovery-communications"'), `Duplicate section in ${input}`);
+  pages.push([input,old.replace('</main>',section(l)+'\n</main>')]);
+ }
  const alternates=locales.map(k=>`<link rel="alternate" hreflang="${content[k].lang}" href="https://ziontechgroup.com${route(k)}">`).join('');
- const html=`<!doctype html><html lang="${c.lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(c.title)} | Zion Tech Group</title><meta name="description" content="${esc(c.intro)}"><link rel="canonical" href="https://ziontechgroup.com${route(l)}">${alternates}<link rel="alternate" hreflang="x-default" href="https://ziontechgroup.com${route('en')}"><link rel="stylesheet" href="/assets/css/site.css"><style>nav{display:flex;flex-wrap:wrap;gap:1rem}.showcase{max-width:1100px;margin:auto;padding:1.25rem}.grid-4{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:1rem}a:focus-visible{outline:3px solid #ea580c;outline-offset:3px}</style></head><body><a class="skip" href="#main">${esc(c.skip)}</a><header class="showcase"><nav><a href="${homepage(l)}">${esc(c.home)}</a><a href="/zion-app-network/">${esc(c.network)}</a><a href="https://github.com/Zion-support/zion-app-network/blob/main/CATALOG-COMMUNICATIONS.md">${esc(p.catalog)}</a></nav><nav aria-label="${esc(p.languages)}">${nav(l)}</nav></header><main id="main"><div class="showcase"><h1>${esc(c.title)}</h1></div>${section(l)}<section class="section"><div class="wrap"><h2>${esc(c.safetyTitle)}</h2><p>${esc(c.safety)}</p><p>${esc(c.privacy)}</p></div></section></main><footer class="showcase">© 2026 Zion Tech Group · <a href="mailto:commercial@ziontechgroup.com">commercial@ziontechgroup.com</a></footer></body></html>`;
+ const html=`<!doctype html><html lang="${c.lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(c.title)} | Zion Tech Group</title><meta name="description" content="${esc(c.intro)}"><link rel="canonical" href="https://ziontechgroup.com${route(l)}">${alternates}<link rel="alternate" hreflang="x-default" href="https://ziontechgroup.com${route('en')}"><link rel="stylesheet" href="/assets/css/site.css"><style>nav{display:flex;flex-wrap:wrap;gap:1rem}.showcase{max-width:1100px;margin:auto;padding:1.25rem}.grid-4{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:1rem}a:focus-visible{outline:3px solid #ea580c;outline-offset:3px}</style></head><body><a class="skip" href="#main">${esc(c.skip)}</a><header class="showcase"><nav><a href="${homepage(l)}">${esc(c.home)}</a><a href="/zion-app-network/directory-${l}.html">${esc(c.network)}</a><a href="https://github.com/Zion-support/zion-app-network/blob/main/CATALOG-COMMUNICATIONS.md">${esc(p.catalog)}</a></nav><nav aria-label="${esc(p.languages)}">${nav(l)}</nav></header><main id="main"><div class="showcase"><h1>${esc(c.title)}</h1></div>${section(l)}<section class="section"><div class="wrap"><h2>${esc(c.safetyTitle)}</h2><p>${esc(c.safety)}</p><p>${esc(c.privacy)}</p></div></section></main><footer class="showcase">© 2026 Zion Tech Group · <a href="mailto:commercial@ziontechgroup.com">commercial@ziontechgroup.com</a></footer></body></html>`;
  pages.push([path.join(out,route(l).slice(1)),html]);
 }
 for (const [file,html] of pages) {
  assert(!html.includes('DRAFT — not published'));
  fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,html);
 }
-console.log(`Discovery publication: ${locales.length} translated pages + ${locales.length} homepage sections, with four communications workflows and a three-step validation checklist; no email sent.`);
+console.log(`Discovery publication: ${locales.length} translated pages${pagesOnly ? ' only' : ` + ${locales.length} homepage sections`}, with four communications workflows and a three-step validation checklist; no email sent.`);
+if (!pagesOnly) {
 require('./render-discovery-risk-benefits.cjs');
 require('./render-risk-app-translations.cjs');
 
@@ -54,3 +60,4 @@ if(!pilotHtml.includes('id="discovery-to-pilot"')){
 }
 assert((pilotHtml.match(/id="discovery-to-pilot"/g)||[]).length===1,'Duplicate pilot section');
 console.log('Approved PT Discovery-to-pilot homepage section rendered; no email sent.');
+}
