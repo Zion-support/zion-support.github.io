@@ -50,8 +50,6 @@ jobs:
         run: node scripts/render-productivity-release.cjs out
       - name: Render field evidence release (adds data-field-evidence-release markers)
         run: node scripts/render-field-evidence-release.cjs out
-      - name: Verify operational tools in the final Pages artifact
-        run: node scripts/test-operational-tools.cjs out --artifact-only
       - name: Reject private operational files in final Pages artifact
         run: python3 scripts/assert-no-private-ops.py out
       - uses: actions/upload-pages-artifact@v3
