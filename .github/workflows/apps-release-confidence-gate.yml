@@ -55,14 +55,80 @@ jobs:
             const graceMinutes = queueCount >= 35 ? 180 : (queueCount >= 20 ? 120 : 20);
             const graceMs = graceMinutes * 60 * 1000;
 
-            const deploys = (await runsFor('gh-pages.yml', 30))
-              .filter(r => r.status === 'completed' && r.conclusion === 'success');
+            // These are the two publishers observed by the deployed-source drift
+            // guard. A successful source-freshness gate can skip publication, so
+            // require the publisher's actual deployment step to have succeeded.
+            const publishers = [
+              {file:'gh-pages.yml', step:'Deploy to GitHub Pages'},
+              {file:'static-deploy.yml', step:'Run actions/deploy-pages@v4'},
+            ];
+            const deploys = [];
+            for (const publisher of publishers) {
+              const runs = (await runsFor(publisher.file, 30))
+                .filter(r => r.status === 'completed' && r.conclusion === 'success');
+              for (const run of runs) {
+                // Do not recover from a jobs API error using an older candidate:
+                // without these jobs, the latest publication is unverified.
+                const jobs = await github.paginate(github.rest.actions.listJobsForWorkflowRun, {
+                  owner, repo, run_id:run.id, filter:'latest', per_page:100
+                });
+                const deployJobs = jobs.filter(job => job.name === 'deploy');
+                if (!deployJobs.length) {
+                  throw new Error('Missing deployment job evidence for successful run '+run.id);
+                }
+                for (const job of deployJobs) {
+                  // Only an explicit completed skip proves this job did not
+                  // publish. Unknown metadata must not expose an older PASS.
+                  if (job.status === 'completed' && job.conclusion === 'skipped') continue;
+                  if (job.status !== 'completed' || job.conclusion !== 'success') {
+                    throw new Error('Unverified deployment job outcome for successful run '+run.id);
+                  }
+                  if (!Array.isArray(job.steps)) {
+                    throw new Error('Missing deployment step evidence for successful run '+run.id);
+                  }
+                  const deploymentSteps = job.steps.filter(s => s.name === publisher.step);
+                  if (deploymentSteps.length !== 1) {
+                    throw new Error('Missing or ambiguous expected deployment step for successful run '+run.id);
+                  }
+                  const step = deploymentSteps[0];
+                  if (step.status === 'completed' && step.conclusion === 'skipped') continue;
+                  if (step.status !== 'completed' || step.conclusion !== 'success') {
+                    throw new Error('Unverified deployment step outcome for successful run '+run.id);
+                  }
+                  if (!Number.isFinite(Date.parse(step.completed_at))) {
+                    throw new Error('Missing deployment completion time for run '+run.id);
+                  }
+                  // Both publishers check out the event SHA with checkout@v4's
+                  // default ref/commit contract; neither overrides ref with main.
+                  if (!/^[0-9a-f]{40}$/.test(run.head_sha || '') || job.head_sha !== run.head_sha) {
+                    throw new Error('Unverified deployment source commit for run '+run.id);
+                  }
+                  deploys.push({run, evidence:{
+                    run_id:run.id,
+                    run_attempt:run.run_attempt,
+                    head_sha:run.head_sha,
+                    workflow_id:run.workflow_id,
+                    workflow_path:run.path || '.github/workflows/'+publisher.file,
+                    job_id:job.id,
+                    job_name:job.name,
+                    job_url:job.html_url,
+                    step_name:step.name,
+                    completed_at:step.completed_at,
+                    updated_at:run.updated_at,
+                    html_url:run.html_url
+                  }});
+                }
+              }
+            }
             if (!deploys.length) {
-              core.setFailed('No successful Continuous Pages Deploy found');
+              core.setOutput('status', 'FAIL');
+              core.setFailed('No successful executed Pages deployment found in the two publisher histories');
               return;
             }
-            const deploy = deploys[0];
-            const deployAt = Date.parse(deploy.updated_at || deploy.created_at);
+            deploys.sort((a,b) => Date.parse(b.evidence.completed_at) - Date.parse(a.evidence.completed_at));
+            const {run:deploy, evidence:deploymentEvidence} = deploys[0];
+            core.setOutput('deployment_evidence', JSON.stringify(deploymentEvidence));
+            const deployAt = Date.parse(deploymentEvidence.completed_at);
             const ageMs = now - deployAt;
 
             const defs = {
@@ -169,12 +235,7 @@ jobs:
               status,
               grace_minutes:graceMinutes,
               actions_queue_count:queueCount,
-              latest_successful_deploy:{
-                run_id:deploy.id,
-                head_sha:deploy.head_sha,
-                updated_at:deploy.updated_at,
-                html_url:deploy.html_url
-              },
+              latest_successful_deploy:deploymentEvidence,
               rollback_review:{
                 candidate_sha:deploy.head_sha,
                 automatic_rollback_allowed:false,
@@ -220,6 +281,8 @@ jobs:
       - name: Open or update release confidence incident
         if: failure()
         uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8.0.0
+        env:
+          DEPLOYMENT_EVIDENCE: ${{ steps.gate.outputs.deployment_evidence }}
         with:
           script: |
             const title='Apps release confidence gate failed';
@@ -228,18 +291,19 @@ jobs:
               ...context.repo,state:'open',per_page:100
             });
             const existing=issues.find(i=>i.title===title || (i.body||'').includes(marker));
-            const runs = await github.rest.actions.listWorkflowRuns({
-              ...context.repo, workflow_id:'gh-pages.yml', branch:'main', status:'success', per_page:10
-            });
-            const deploy=(runs.data.workflow_runs || [])[0];
+            // Reuse only the deployment validated above; a second run-level
+            // success lookup could turn a source-gate-only run into a rollback SHA.
+            const deploy=process.env.DEPLOYMENT_EVIDENCE
+              ? JSON.parse(process.env.DEPLOYMENT_EVIDENCE)
+              : null;
             const candidate=deploy ? deploy.head_sha : null;
             const compare=candidate
               ? context.serverUrl+'/'+context.repo.owner+'/'+context.repo.repo+'/compare/'+candidate+'...main'
               : null;
             const rollback = candidate
               ? '\n\n**Rollback review candidate:** `'+candidate+'`\n**Compare candidate → main:** '+compare+'\nAutomatic rollback is **not allowed**. Review the diff and incident evidence before preparing any revert.'
-              : '\n\nNo successful deploy candidate could be resolved automatically; inspect deploy history manually.';
-            const body=marker+'\nA critical post-deploy signal is failed or missing beyond the grace period. Inspect the confidence artifact before changing source or attempting rollback.'+rollback+'\n\nRun: '+context.serverUrl+'/'+context.repo.owner+'/'+context.repo.repo+'/actions/runs/'+context.runId;
+              : '\n\nNo successful executed deploy candidate could be verified; inspect deploy history manually.';
+            const body=marker+'\nDeployment evidence or a critical post-deploy signal is failed or missing. Inspect this confidence run and any report artifact before changing source or attempting rollback.'+rollback+'\n\nRun: '+context.serverUrl+'/'+context.repo.owner+'/'+context.repo.repo+'/actions/runs/'+context.runId;
             if(existing){
               await github.rest.issues.createComment({...context.repo,issue_number:existing.number,body});
             }else{
