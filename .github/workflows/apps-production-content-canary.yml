@@ -4,6 +4,7 @@ name: Apps production content canary
   workflow_run:
     workflows:
       - Continuous Pages Deploy
+      - Simple Static Deploy
     types: [completed]
   push:
     branches: [main]
@@ -21,7 +22,9 @@ permissions:
   issues: write
 
 concurrency:
-  group: apps-production-content-canary
+  # Ignored deployment completions must not replace pending production checks.
+  # Workflow concurrency is evaluated before the canary job's success filter.
+  group: apps-production-content-canary-${{ github.event_name == 'workflow_run' && github.event.workflow_run.conclusion != 'success' && github.run_id || 'eligible' }}
   cancel-in-progress: true
 
 jobs:

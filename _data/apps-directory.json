@@ -1,11 +1,12 @@
 {
-  "release": "apps-directory-2026-10-30-v1",
+  "release": "apps-directory-2026-10-30-v4",
   "categories": [
     "plan",
     "productivity",
     "costs",
     "operations",
-    "governance"
+    "governance",
+    "collections"
   ],
   "locales": {
     "en": {
@@ -32,7 +33,7 @@
       "open": "Open resource",
       "related": "Next step",
       "noscript": "All resources are shown below. Search and filters become available when JavaScript is enabled.",
-      "workflowTitle": "Three practical ways to connect these resources",
+      "workflowTitle": "Four practical ways to connect these resources",
       "workflowIntro": "Move the output between tools yourself and review it at each step.",
       "capabilityTitle": "Know what you are opening",
       "capabilityText": "Local tools work in your browser. Guides help you plan or review a task. Check each resource’s scope before entering data or relying on its output.",
@@ -51,7 +52,8 @@
         "Productivity",
         "FinOps & costs",
         "IT operations",
-        "Governance & review"
+        "Governance & review",
+        "Industry guides"
       ],
       "workflows": [
         [
@@ -80,8 +82,19 @@
             "finops-guide",
             "verification"
           ]
+        ],
+        [
+          "From a field visit to verified completion",
+          "Prepare the evidence, confirm the visit handoff and document results for customer review.",
+          [
+            "evidence",
+            "handoff",
+            "completion"
+          ]
         ]
-      ]
+      ],
+      "collections": "Explore the guide collections",
+      "energyGuide": "Energy & utilities pilot guide"
     },
     "pt": {
       "lang": "pt-BR",
@@ -107,7 +120,7 @@
       "open": "Abrir recurso",
       "related": "Próximo passo",
       "noscript": "Todos os recursos estão disponíveis abaixo. Ative o JavaScript para usar busca e filtros.",
-      "workflowTitle": "Três formas práticas de conectar os recursos",
+      "workflowTitle": "Quatro percursos práticos para conectar os recursos",
       "workflowIntro": "Transfira os resultados entre as ferramentas e revise cada etapa.",
       "capabilityTitle": "Entenda o recurso antes de começar",
       "capabilityText": "As ferramentas locais funcionam no navegador. Os guias ajudam a planejar ou revisar uma tarefa. Confira o escopo antes de inserir dados ou utilizar os resultados.",
@@ -126,7 +139,8 @@
         "Produtividade",
         "FinOps e custos",
         "Operações de TI",
-        "Governança e revisão"
+        "Governança e revisão",
+        "Guias por setor"
       ],
       "workflows": [
         [
@@ -155,8 +169,19 @@
             "finops-guide",
             "verification"
           ]
+        ],
+        [
+          "Da visita de campo ao encerramento verificado",
+          "Prepare as evidências, confira a passagem da visita e documente os resultados para revisão do cliente.",
+          [
+            "evidence",
+            "handoff",
+            "completion"
+          ]
         ]
-      ]
+      ],
+      "collections": "Explore as coleções de guias",
+      "energyGuide": "Guia de piloto para energia e utilities"
     },
     "es": {
       "lang": "es",
@@ -182,7 +207,7 @@
       "open": "Abrir recurso",
       "related": "Siguiente paso",
       "noscript": "Todos los recursos aparecen abajo. Active JavaScript para usar la búsqueda y los filtros.",
-      "workflowTitle": "Tres formas prácticas de conectar los recursos",
+      "workflowTitle": "Cuatro recorridos prácticos para conectar los recursos",
       "workflowIntro": "Transfiera los resultados entre herramientas y revise cada paso.",
       "capabilityTitle": "Conozca el recurso antes de empezar",
       "capabilityText": "Las herramientas locales funcionan en el navegador. Las guías ayudan a planificar o revisar una tarea. Compruebe el alcance antes de introducir datos o utilizar los resultados.",
@@ -201,7 +226,8 @@
         "Productividad",
         "FinOps y costes",
         "Operaciones de TI",
-        "Gobernanza y revisión"
+        "Gobernanza y revisión",
+        "Guías por sector"
       ],
       "workflows": [
         [
@@ -230,8 +256,19 @@
             "finops-guide",
             "verification"
           ]
+        ],
+        [
+          "De la visita de campo al cierre verificado",
+          "Prepare las evidencias, revise el traspaso de la visita y documente los resultados para la revisión del cliente.",
+          [
+            "evidence",
+            "handoff",
+            "completion"
+          ]
         ]
-      ]
+      ],
+      "collections": "Explore las colecciones de guías",
+      "energyGuide": "Guía de piloto para energía y utilities"
     },
     "fr": {
       "lang": "fr",
@@ -257,7 +294,7 @@
       "open": "Ouvrir la ressource",
       "related": "Étape suivante",
       "noscript": "Toutes les ressources figurent ci-dessous. Activez JavaScript pour utiliser la recherche et les filtres.",
-      "workflowTitle": "Trois parcours pratiques entre ces ressources",
+      "workflowTitle": "Quatre parcours pratiques pour relier les ressources",
       "workflowIntro": "Transférez les résultats entre les outils et relisez chaque étape.",
       "capabilityTitle": "Comprenez la ressource avant de commencer",
       "capabilityText": "Les outils locaux fonctionnent dans le navigateur. Les guides aident à préparer ou à revoir une tâche. Vérifiez le périmètre avant de saisir des données ou d’utiliser les résultats.",
@@ -276,7 +313,8 @@
         "Productivité",
         "FinOps et coûts",
         "Opérations IT",
-        "Gouvernance et revue"
+        "Gouvernance et revue",
+        "Guides sectoriels"
       ],
       "workflows": [
         [
@@ -305,8 +343,19 @@
             "finops-guide",
             "verification"
           ]
+        ],
+        [
+          "De la visite sur site à la clôture vérifiée",
+          "Préparez les preuves, vérifiez la passation de la visite et documentez les résultats pour la revue du client.",
+          [
+            "evidence",
+            "handoff",
+            "completion"
+          ]
         ]
-      ]
+      ],
+      "collections": "Découvrez les collections de guides",
+      "energyGuide": "Guide de pilote pour l’énergie"
     },
     "de": {
       "lang": "de",
@@ -332,7 +381,7 @@
       "open": "Ressource öffnen",
       "related": "Nächster Schritt",
       "noscript": "Alle Ressourcen stehen unten. Aktivieren Sie JavaScript für Suche und Filter.",
-      "workflowTitle": "Drei praktische Wege durch diese Ressourcen",
+      "workflowTitle": "Vier praktische Wege, die Ressourcen zu verbinden",
       "workflowIntro": "Übertragen Sie Ergebnisse selbst zwischen den Werkzeugen und prüfen Sie jeden Schritt.",
       "capabilityTitle": "Verstehen Sie die Ressource vor dem Start",
       "capabilityText": "Lokale Werkzeuge laufen im Browser. Leitfäden helfen bei Planung und Prüfung. Prüfen Sie den Umfang, bevor Sie Daten eingeben oder Ergebnisse verwenden.",
@@ -351,7 +400,8 @@
         "Produktivität",
         "FinOps und Kosten",
         "IT-Betrieb",
-        "Governance und Prüfung"
+        "Governance und Prüfung",
+        "Branchenleitfäden"
       ],
       "workflows": [
         [
@@ -380,8 +430,19 @@
             "finops-guide",
             "verification"
           ]
+        ],
+        [
+          "Vom Vor-Ort-Besuch zum geprüften Abschluss",
+          "Bereiten Sie Nachweise vor, prüfen Sie die Einsatzübergabe und dokumentieren Sie Ergebnisse für die Kundenprüfung.",
+          [
+            "evidence",
+            "handoff",
+            "completion"
+          ]
         ]
-      ]
+      ],
+      "collections": "Leitfadensammlungen entdecken",
+      "energyGuide": "Pilotleitfaden für Energie und Versorgung"
     }
   },
   "resources": [
@@ -716,6 +777,66 @@
       }
     },
     {
+      "id": "service-request",
+      "category": "operations",
+      "kind": "guide",
+      "location": "network",
+      "slug": "datacenter-service-request-guide-2026",
+      "related": "field-service",
+      "text": {
+        "en": {
+          "title": "Prepare a clear datacenter service request",
+          "description": "Turn a datacenter need into a reviewable service brief: task, equipment, access, maintenance window, quote assumptions and completion evidence."
+        },
+        "pt": {
+          "title": "Prepare uma solicitação clara de serviço em datacenter",
+          "description": "Transforme uma necessidade do datacenter em um escopo revisável: tarefa, equipamentos, acesso, janela de manutenção, premissas da cotação e evidências de conclusão."
+        },
+        "es": {
+          "title": "Prepare una solicitud clara de servicio de centro de datos",
+          "description": "Convierta una necesidad del centro de datos en un alcance revisable: tarea, equipos, acceso, ventana de mantenimiento, supuestos del presupuesto y evidencias de finalización."
+        },
+        "fr": {
+          "title": "Préparez une demande claire de service en datacenter",
+          "description": "Transformez un besoin du datacenter en demande vérifiable : tâche, équipements, accès, créneau de maintenance, hypothèses du devis et preuves de réalisation."
+        },
+        "de": {
+          "title": "Bereiten Sie eine klare Serviceanfrage für das Rechenzentrum vor",
+          "description": "Formulieren Sie den Bedarf im Rechenzentrum als prüfbare Serviceanfrage: Aufgabe, Geräte, Zugang, Wartungsfenster, Angebotsannahmen und Abschlussnachweise."
+        }
+      }
+    },
+    {
+      "id": "field-service",
+      "category": "operations",
+      "kind": "guide",
+      "location": "network",
+      "slug": "app/network-field-service-showcase",
+      "related": "evidence",
+      "text": {
+        "en": {
+          "title": "Field service: from scope to documented completion",
+          "description": "Prepare a field visit with evidence, a local handoff checklist and a completion template. Connect existing resources to a clear, reviewed service workflow."
+        },
+        "pt": {
+          "title": "Serviços de campo: do escopo à conclusão documentada",
+          "description": "Prepare uma visita técnica com evidências, checklist local de passagem e modelo de conclusão. Conecte recursos existentes a um fluxo de serviço revisado."
+        },
+        "es": {
+          "title": "Servicios de campo: del alcance al cierre documentado",
+          "description": "Prepare una visita técnica con pruebas, una lista local de traspaso y una plantilla de cierre. Conecte recursos existentes con un proceso de servicio revisado."
+        },
+        "fr": {
+          "title": "Intervention sur site : du périmètre à la clôture documentée",
+          "description": "Préparez une intervention avec des preuves, une liste locale de préparation et un modèle de clôture. Reliez les ressources existantes à un processus de service vérifié."
+        },
+        "de": {
+          "title": "Vor-Ort-Service: vom Leistungsumfang zum dokumentierten Abschluss",
+          "description": "Bereiten Sie einen Einsatz mit Nachweisen, lokaler Übergabecheckliste und Abschlussvorlage vor. Verbinden Sie bestehende Ressourcen zu einem geprüften Serviceablauf."
+        }
+      }
+    },
+    {
       "id": "evidence",
       "category": "operations",
       "kind": "guide",
@@ -748,7 +869,7 @@
     {
       "id": "handoff",
       "category": "operations",
-      "kind": "guide",
+      "kind": "tool",
       "location": "network",
       "slug": "field-visit-handoff-2026",
       "related": "completion",
@@ -832,6 +953,126 @@
         "de": {
           "title": "Leitfaden zur App-Prüfung",
           "description": "Prüfen Sie Funktionen, verwendete Daten und die Bewertung der Ergebnisse einer Ressource."
+        }
+      }
+    },
+    {
+      "id": "green-education",
+      "category": "collections",
+      "kind": "guide",
+      "location": "network",
+      "slug": "app/network-green-energy-education-showcase",
+      "related": "infrastructure",
+      "text": {
+        "en": {
+          "title": "Energy and education: plan a measurable pilot",
+          "description": "Explore ten Zion energy and education resources, define useful inputs and compare a small pilot against a clear baseline."
+        },
+        "pt": {
+          "title": "Energia e educação: planeje um piloto mensurável",
+          "description": "Explore dez recursos Zion de energia e educação, defina os dados necessários e compare um pequeno piloto com uma referência clara."
+        },
+        "es": {
+          "title": "Energía y educación: planifique un piloto medible",
+          "description": "Explore diez recursos Zion de energía y educación, defina los datos necesarios y compare un pequeño piloto con una referencia clara."
+        },
+        "fr": {
+          "title": "Énergie et éducation : préparer un pilote mesurable",
+          "description": "Explorez dix ressources Zion sur l’énergie et l’éducation, définissez les données utiles et comparez un pilote limité à une référence claire."
+        },
+        "de": {
+          "title": "Energie und Bildung: einen messbaren Pilotversuch planen",
+          "description": "Entdecken Sie zehn Zion-Ressourcen zu Energie und Bildung, bestimmen Sie geeignete Eingaben und vergleichen Sie einen begrenzten Pilotversuch mit einer klaren Ausgangsbasis."
+        }
+      }
+    },
+    {
+      "id": "infrastructure",
+      "category": "collections",
+      "kind": "guide",
+      "location": "network",
+      "slug": "app-network-batch77-oct04",
+      "related": "evidence",
+      "text": {
+        "en": {
+          "title": "Infrastructure and space operations: assess the evidence",
+          "description": "Compare eight Zion infrastructure and space-operation resources, distinguish local demonstrations from reference pages and prepare a reviewable pilot."
+        },
+        "pt": {
+          "title": "Infraestrutura e operações espaciais: avalie as evidências",
+          "description": "Compare oito recursos Zion de infraestrutura e operações espaciais, diferencie demonstrações locais de páginas de referência e prepare um piloto revisável."
+        },
+        "es": {
+          "title": "Infraestructura y operaciones espaciales: evalúe las pruebas",
+          "description": "Compare ocho recursos Zion de infraestructura y operaciones espaciales, distinga demostraciones locales de páginas de referencia y prepare un piloto revisable."
+        },
+        "fr": {
+          "title": "Infrastructure et opérations spatiales : examiner les preuves",
+          "description": "Comparez huit ressources Zion d’infrastructure et d’opérations spatiales, distinguez démonstrations locales et références, puis préparez un pilote vérifiable."
+        },
+        "de": {
+          "title": "Infrastruktur und Raumfahrtbetrieb: Nachweise prüfen",
+          "description": "Vergleichen Sie acht Zion-Ressourcen für Infrastruktur und Raumfahrtbetrieb, unterscheiden Sie lokale Demos von Referenzseiten und planen Sie einen überprüfbaren Piloten."
+        }
+      }
+    },
+    {
+      "id": "govtech",
+      "category": "collections",
+      "kind": "guide",
+      "location": "network",
+      "slug": "app-network-batch79-oct05",
+      "related": "legal-ops",
+      "text": {
+        "en": {
+          "title": "GovTech and public-service planning",
+          "description": "Explore eight public-service reference pages, prepare a small review sample, and define the evidence and human decisions needed before a pilot."
+        },
+        "pt": {
+          "title": "GovTech e planejamento de serviços públicos",
+          "description": "Explore oito páginas de referência para serviços públicos, prepare uma amostra de revisão e defina as evidências e decisões humanas necessárias antes de um piloto."
+        },
+        "es": {
+          "title": "GovTech y planificación de servicios públicos",
+          "description": "Explore ocho páginas de referencia de servicios públicos, prepare una muestra de revisión y defina las pruebas y decisiones humanas necesarias antes de un piloto."
+        },
+        "fr": {
+          "title": "GovTech et préparation des services publics",
+          "description": "Explorez huit pages de référence sur les services publics, préparez un échantillon de contrôle et définissez les preuves et décisions humaines nécessaires avant un pilote."
+        },
+        "de": {
+          "title": "GovTech und Planung öffentlicher Dienstleistungen",
+          "description": "Prüfen Sie acht Referenzseiten zu öffentlichen Dienstleistungen und legen Sie Stichprobe, Nachweise und menschliche Entscheidungen vor einem Pilotprojekt fest."
+        }
+      }
+    },
+    {
+      "id": "legal-ops",
+      "category": "collections",
+      "kind": "guide",
+      "location": "network",
+      "slug": "app-network-batch80-oct05",
+      "related": "verification",
+      "text": {
+        "en": {
+          "title": "Legal operations: documents, review and signature evidence",
+          "description": "Use four legal-operations references to organize document versions, source clauses, review decisions and verified signature status."
+        },
+        "pt": {
+          "title": "Operações jurídicas: documentos, revisão e evidências de assinatura",
+          "description": "Use quatro referências de operações jurídicas para organizar versões de documentos, cláusulas de origem, decisões de revisão e status de assinatura comprovado."
+        },
+        "es": {
+          "title": "Operaciones jurídicas: documentos, revisión y pruebas de firma",
+          "description": "Use cuatro referencias de operaciones jurídicas para organizar versiones documentales, cláusulas de origen, decisiones de revisión y estados de firma comprobados."
+        },
+        "fr": {
+          "title": "Opérations juridiques : documents, revue et preuves de signature",
+          "description": "Utilisez quatre références pour organiser les versions documentaires, les clauses sources, les décisions de revue et les statuts de signature vérifiés."
+        },
+        "de": {
+          "title": "Rechtsabteilung: Dokumente, Prüfung und Signaturnachweise",
+          "description": "Nutzen Sie vier Referenzen für Dokumentenfassungen, Quellenklauseln, Prüfentscheidungen und belegte Signaturstatus."
         }
       }
     }

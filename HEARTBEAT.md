@@ -1,4 +1,13 @@
-# zion.app — Workspace Status
+# HEARTBEAT.md
+
+### Operating Mandate
+
+Use the current user request to define the task and its authorized scope.
+Follow the applicable instructions in [AGENTS.md](AGENTS.md).
+Consult [USER.md](USER.md) and [SOUL.md](SOUL.md) for relevant continuity; prior notes do not expand the current request.
+Never commit secrets.
+
+## zion.app — Workspace Status
 CI/CD, V32, Partners, Gmail, ghcli
 
 - V32 RESPONDER — COMPLETE

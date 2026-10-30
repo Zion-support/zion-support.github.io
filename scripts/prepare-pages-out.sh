@@ -17,13 +17,22 @@ mkdir -p out
 if [ -d public ]; then
   cp -a public/. out/
 fi
+
+# Preserve required index references after external sitemap regeneration.
+python3 scripts/ensure-pages-sitemap-index.py out
+
+# Keep the five reviewed guide editions in sync with their localized source.
+# Later productivity rendering appends the existing resource blocks.
+node scripts/render-app-verification-guides.cjs out
+node scripts/test-app-verification-guides.cjs out
+node scripts/render-finops-scenario.cjs out --pages-only
 # Override public/_redirects (may be a stale 37MB next-build auto-gen monster
 # with 550K+ service-slug rules and NO entries for canonical doc routes) with the
 # curated root _redirects that has explicit 200 rules for all money-path doc pages.
 if [ -f _redirects ]; then
   cp _redirects out/_redirects
 fi
-# public/sitemap-0.xml + sitemap.xml (index → sitemap-0) + robots.txt ship as-is.
+# Sitemap payloads and robots.txt ship as-is; required index refs are ensured above.
 
 # Dual-path gap-fill (public wins). Hubs only — never copy country leaves.
 for d in field-services field-services-brazil plans discovery enterprise about solutions blog managed-it-services ai-consulting-services finops-consulting autonomous-ai-agents healthcare-it-hipaa fintech-it-ai; do
@@ -359,6 +368,11 @@ assert_aaa_official_ladder
 node scripts/test-network-evaluation.cjs
 node scripts/bootstrap-network-evaluation.cjs out
 node scripts/verify-network-evaluation-artifact.cjs out
+
+# Restore reviewed guide routes omitted by public-only assembly. The staging
+# renderer fills missing files only; it never replays old homepage promotions.
+node scripts/test-linked-app-routes.cjs
+node scripts/render-linked-app-routes.cjs out
 
 python3 scripts/test-free-discovery-guard.py
 assert_public_entry_content
