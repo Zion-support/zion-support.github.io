@@ -1,4 +1,4 @@
-# Ensures workflow-validate-light-weekly.yml keeps reusable CI wiring + weekly schedule (grep-only).
+# Ensures weekly reusable CI wiring, schedule, and the validation job's timeout.
 name: workflow validate light weekly smoke (weekly)
 permissions:
   contents: read
@@ -25,6 +25,15 @@ jobs:
           grep -Fq 'name: Workflow validate light (weekly)' "$f"
           grep -Fq "cron: '35 11 * * 3'" "$f"
           grep -Fq 'group: workflow-validate-light-weekly' "$f"
-          grep -Fq 'reusable-workflow-ci.yml' "$f"
-          grep -Fq 'timeout-minutes: 16' "$f"
+          grep -Fxq '    uses: ./.github/workflows/reusable-workflow-ci.yml' "$f"
+          if grep -Eq '^    timeout-minutes:' "$f"; then
+            echo '::error::Reusable-workflow caller must not set timeout-minutes'
+            exit 1
+          fi
+          reusable=.github/workflows/reusable-workflow-ci.yml
+          test -s "$reusable"
+          grep -Fxq '  workflow_call:' "$reusable"
+          validate_job=$(awk '/^  validate:$/ {in_job=1; next} in_job && /^  [^ ]/ {exit} in_job {print}' "$reusable")
+          grep -Fxq '    timeout-minutes: 14' <<< "$validate_job"
+          grep -Fxq '        run: npm run automation:preflight' <<< "$validate_job"
           echo "ok: $f"
