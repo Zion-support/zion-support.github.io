@@ -47,6 +47,21 @@ jobs:
               return data.workflow_runs || [];
             }
 
+            async function jobsFor(run_id) {
+              // Retry only this idempotent jobs read on HTTP 502. Exhausted or
+              // other errors must still fail deployment evidence validation.
+              for (let attempt=0; ; attempt++) {
+                try {
+                  return await github.paginate(github.rest.actions.listJobsForWorkflowRun, {
+                    owner, repo, run_id, filter:'latest', per_page:100
+                  });
+                } catch (error) {
+                  if (error?.status !== 502 || attempt >= 2) throw error;
+                  await new Promise(resolve => setTimeout(resolve, (attempt + 1) * 1000));
+                }
+              }
+            }
+
             const {data:repoRunsData} = await github.rest.actions.listWorkflowRunsForRepo({
               owner, repo, per_page:100
             });
@@ -69,9 +84,7 @@ jobs:
               for (const run of runs) {
                 // Do not recover from a jobs API error using an older candidate:
                 // without these jobs, the latest publication is unverified.
-                const jobs = await github.paginate(github.rest.actions.listJobsForWorkflowRun, {
-                  owner, repo, run_id:run.id, filter:'latest', per_page:100
-                });
+                const jobs = await jobsFor(run.id);
                 const deployJobs = jobs.filter(job => job.name === 'deploy');
                 if (!deployJobs.length) {
                   throw new Error('Missing deployment job evidence for successful run '+run.id);
