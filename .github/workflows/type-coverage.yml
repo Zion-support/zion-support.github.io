@@ -41,8 +41,8 @@ jobs:
     - name: Run TypeScript Check
       id: type-check
       env:
-        # The compiler exhausted its default 4 GiB heap on this 16 GiB runner.
-        NODE_OPTIONS: --max-old-space-size=8192
+        # The full-tree compiler exhausted 8 GiB; retain headroom on the 16 GB public runner.
+        NODE_OPTIONS: --max-old-space-size=12288
       run: |
         check_status=0
         npm run type-check || check_status=$?
