@@ -61,6 +61,8 @@ jobs:
         run: npm ci --prefer-offline --no-audit --fund=false
 
       - name: Lint and type-check content changes
+        env:
+          NODE_OPTIONS: '--max-old-space-size=20480'
         run: |
           npm run lint:check
           npm run type-check

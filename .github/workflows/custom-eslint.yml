@@ -34,7 +34,7 @@ jobs:
     - name: Setup Node.js
       uses: actions/setup-node@v6.3.0
       with:
-        node-version: '20'
+        node-version: '22'
         cache: npm
     - name: Verify ESLint report script fixtures
       run: node tests/ci/test_eslint_report_scripts.cjs

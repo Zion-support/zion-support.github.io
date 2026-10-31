@@ -32,7 +32,7 @@ jobs:
     - name: Setup Node.js
       uses: actions/setup-node@v6.3.0
       with:
-        node-version: '20'
+        node-version: '22'
         cache: npm
     - name: Test workflow reliability regressions
       run: node tests/ci/test_type_coverage_workflow.cjs
@@ -42,7 +42,7 @@ jobs:
       id: type-check
       env:
         # The compiler exhausted its default 4 GiB heap on this 16 GiB runner.
-        NODE_OPTIONS: --max-old-space-size=8192
+        NODE_OPTIONS: '--max-old-space-size=20480'
       run: |
         check_status=0
         npm run type-check || check_status=$?
@@ -50,6 +50,8 @@ jobs:
         exit "$check_status"
     - name: Run ESLint Check
       id: lint-check
+      env:
+        NODE_OPTIONS: '--max-old-space-size=20480'
       run: |
         check_status=0
         npm run lint:check || check_status=$?
