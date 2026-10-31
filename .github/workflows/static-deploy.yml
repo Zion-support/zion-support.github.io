@@ -57,6 +57,9 @@ jobs:
       - uses: actions/upload-pages-artifact@v3
         with:
           path: out
+          name: github-pages-${{ github.run_id }}-${{ github.run_attempt }}
       - uses: actions/deploy-pages@v4
+        with:
+          artifact_name: github-pages-${{ github.run_id }}-${{ github.run_attempt }}
       # Post-deploy live curl skipped: runners often block egress and probes flake.
       # The prepare-pages-out money-path gate above is the durable Pay RED guard.
