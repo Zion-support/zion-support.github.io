@@ -31,6 +31,8 @@ The unsupported ignoreRestParams/ignoreRestArrays options are replaced by the
 installed rule's supported `ignoreRestArgs: false`. CommonJS files are parsed as
 CommonJS; their require calls remain valid module syntax.
 
+Fixed ESLint plugin and rule identifiers have line-scoped naming-convention suppressions explaining their API contract. Source naming checks remain unchanged. The complexity limit remains 20.
+
 The configured naming selectors do not filter by inferred types. These checks
 therefore do not require `parserOptions.project`, which would construct the full
 generated TypeScript program and reject files excluded from that program.
@@ -56,6 +58,8 @@ calls, and calls to locally declared async functions. Returning a promise
 transfers handling to the caller. A synchronous try or a void expression does
 not handle an unawaited promise rejection.
 
+Evidently non-callable rejection handlers, including object, array and binary expressions, do not count as rejection handling.
+
 These are syntax checks, not whole-program promise analysis. Indirect aliases,
 stored promises, arbitrary imported function return types, dynamic HTML sinks,
 and handler implementations need additional review or a separately provisioned
@@ -69,6 +73,8 @@ The suite contains positive and negative behavior cases plus production-config
 checks for rule registration, actual errors, unused imports/variables, and test
 exceptions. It uses the installed ESLint and TypeScript parser, with no permissive
 parser stubs and no network or email calls.
+
+The suite also lints this configuration and its own source with zero errors and warnings. Its asynchronous tests return their ESLint promise chains to `node:test`, so rejected operations and failed assertions fail the test.
 
 A passing regression suite proves the configuration and these documented checks
 work. It does not mean all repository source files meet the policy. The unchanged

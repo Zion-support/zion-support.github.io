@@ -35,7 +35,9 @@ function caughtInThisFunction(node) {
 
 function hasHandler(node) {
   node = unwrap(node);
-  return Boolean(node && !(node.type === 'Literal')
+  // These expression forms always evaluate to non-callable values.
+  return Boolean(node
+    && !['Literal', 'ObjectExpression', 'ArrayExpression', 'BinaryExpression'].includes(node.type)
     && !(node.type === 'Identifier' && node.name === 'undefined')
     && !(node.type === 'UnaryExpression' && node.operator === 'void'));
 }
