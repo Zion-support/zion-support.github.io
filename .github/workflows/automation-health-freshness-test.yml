@@ -1,0 +1,39 @@
+name: Automation health freshness regression
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/automation/check-automation-health-static-freshness.cjs'
+      - 'tests/ci/test_automation_health_freshness.py'
+      - '.github/workflows/automation-health-freshness-test.yml'
+  push:
+    branches: [main, hero-carousel]
+    paths:
+      - 'scripts/automation/check-automation-health-static-freshness.cjs'
+      - 'tests/ci/test_automation_health_freshness.py'
+      - '.github/workflows/automation-health-freshness-test.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: automation-health-freshness-test-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  regression:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f
+        with:
+          node-version-file: '.nvmrc'
+      - name: Check script syntax
+        run: node --check scripts/automation/check-automation-health-static-freshness.cjs
+      - name: Test freshness decisions and reports in isolated fixtures
+        run: python3 -m unittest discover -s tests/ci -p 'test_automation_health_freshness.py' -v
