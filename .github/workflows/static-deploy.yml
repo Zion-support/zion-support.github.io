@@ -22,6 +22,7 @@ on:
 
 permissions:
   contents: read
+  actions: read
   pages: write
   id-token: write
 
@@ -44,6 +45,17 @@ jobs:
       - name: Confirm main ref
         run: echo "ref=${GITHUB_REF} sha=${GITHUB_SHA} event=${GITHUB_EVENT_NAME} (main-only deploy)"
 
+      - name: Setup Node.js for health collection
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
+        with:
+          node-version: '22'
+          package-manager-cache: false
+      - name: Collect observed automation health before assembly
+        id: automation-health
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: node scripts/automation/pages-automation-health-artifact.cjs collect
       - name: Prepare pages
         run: bash scripts/prepare-pages-out.sh
       - name: Gate reviewed five-language productivity rendering
@@ -54,6 +66,10 @@ jobs:
         run: node scripts/test-operational-tools.cjs out --artifact-only
       - name: Reject private operational files in final Pages artifact
         run: python3 scripts/assert-no-private-ops.py out
+      - name: Validate collected automation health in final Pages artifact
+        env:
+          AUTOMATION_HEALTH_ARTIFACT_SHA256: ${{ steps.automation-health.outputs.snapshot_sha256 }}
+        run: node scripts/automation/pages-automation-health-artifact.cjs verify
       - uses: actions/upload-pages-artifact@v3
         with:
           path: out

@@ -23,6 +23,9 @@ on:
       - 'scripts/prepare-pages-out.sh'
       - 'scripts/render-productivity-release.cjs'
       - 'scripts/render-field-evidence-release.cjs'
+      - 'scripts/render-field-evidence-release-base.cjs'
+      - 'scripts/automation/generate-automation-health-snapshot.cjs'
+      - 'scripts/automation/pages-automation-health-artifact.cjs'
       - 'scripts/render-operational-tools.cjs'
       - 'scripts/render-roi-baseline.cjs'
       - 'scripts/test-roi-baseline.cjs'
@@ -115,11 +118,12 @@ jobs:
           package-manager-cache: false
 
       - name: Collect observed automation health before assembly
+        id: automation-health
         if: steps.release-source.outputs.publish == 'true'
         continue-on-error: true
         env:
           GITHUB_TOKEN: ${{ github.token }}
-        run: node scripts/automation/generate-automation-health-snapshot.cjs
+        run: node scripts/automation/pages-automation-health-artifact.cjs collect
 
       - name: Prepare pages from public/
         if: steps.release-source.outputs.publish == 'true'
@@ -140,6 +144,12 @@ jobs:
       - name: Reject private operational files in final Pages artifact
         if: steps.release-source.outputs.publish == 'true'
         run: python3 scripts/assert-no-private-ops.py out
+
+      - name: Validate collected automation health in final Pages artifact
+        if: steps.release-source.outputs.publish == 'true'
+        env:
+          AUTOMATION_HEALTH_ARTIFACT_SHA256: ${{ steps.automation-health.outputs.snapshot_sha256 }}
+        run: node scripts/automation/pages-automation-health-artifact.cjs verify
 
       - name: Upload Pages artifact
         if: steps.release-source.outputs.publish == 'true'
