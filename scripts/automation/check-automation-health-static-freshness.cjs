@@ -1,4 +1,4 @@
-const { readFileSync, existsSync } = require('fs');
+const { readFileSync, existsSync, mkdirSync, writeFileSync, appendFileSync } = require('fs');
 const { join } = require('path');
 
 const healthPath = join('public', 'api', 'automation-health.json');
@@ -44,7 +44,17 @@ const report = {
   maxHoursAllowed: maxHours,
 };
 
-console.log(JSON.stringify(report, null, 2));
+const serializedReport = JSON.stringify(report, null, 2);
+console.log(serializedReport);
+// Match the workflow's existing artifact/output interface without changing the
+// source-age decision, source snapshot, or nonzero stale diagnostic.
+const reportDirectory = join('automation', 'reports');
+mkdirSync(reportDirectory, { recursive: true });
+writeFileSync(join(reportDirectory, 'automation-health-static-freshness-latest.json'), serializedReport + '\n');
+if (process.env.GITHUB_OUTPUT) {
+  // Only this controlled boolean enters the Actions output channel.
+  appendFileSync(process.env.GITHUB_OUTPUT, 'static_health_fresh=' + staticHealthFresh + '\n');
+}
 
 if (staticHealthFresh !== 'true') {
   process.exitCode = 1;
