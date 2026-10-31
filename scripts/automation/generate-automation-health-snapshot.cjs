@@ -6,6 +6,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 
 const API = 'https://api.github.com';
+const MAX_RUNS_PER_WORKFLOW = 5;
 const INTERNAL_PATH = 'automation/reports/automation-health-latest.json';
 const PUBLIC_PATH = 'public/api/automation-health.json';
 const COMMON_GATES = [
@@ -191,7 +192,10 @@ async function collectHealth({ env = process.env, fetchImpl = globalThis.fetch, 
       deploy: point('unknown', 'not_collected'),
       pages: point('unknown', 'not_collected'),
     },
-    collection: { complete: false, maxRunAgeHours: maxAgeHours, sources: [], errors: [] },
+    collection: {
+      complete: false, maxRunAgeHours: maxAgeHours,
+      maxRunsPerWorkflow: MAX_RUNS_PER_WORKFLOW, excludedRuns: [], sources: [], errors: [],
+    },
     publisher: null,
     publicSnapshotUpdated: false,
   };
@@ -231,13 +235,15 @@ async function collectHealth({ env = process.env, fetchImpl = globalThis.fetch, 
   const workflows = Object.keys(PUBLISHERS);
   const results = await Promise.all([
     ...workflows.map((workflow) => requestJson(repoPath + '/actions/workflows/' + workflow +
-      '/runs?branch=' + encodeURIComponent(branch) + '&exclude_pull_requests=true&per_page=1', options)),
+      '/runs?branch=' + encodeURIComponent(branch) + '&exclude_pull_requests=true&per_page=' + MAX_RUNS_PER_WORKFLOW, options)),
     requestJson(repoPath + '/pages', options),
   ]);
   // A source records only metadata; raw API bodies never enter either snapshot.
   report.collection.sources = results.map((result) => result.source);
   report.details.pages = evaluatePages(results[3], repository);
   const candidates = [];
+  const remainingByWorkflow = new Map();
+  const historyHasMore = new Set();
   let canChooseLatest = true;
   for (let index = 0; index < workflows.length; index += 1) {
     const result = results[index];
@@ -248,12 +254,16 @@ async function collectHealth({ env = process.env, fetchImpl = globalThis.fetch, 
       continue;
     }
     if (!data || !Number.isSafeInteger(data.total_count) || data.total_count < 0 ||
-        !Array.isArray(data.workflow_runs) || data.total_count < data.workflow_runs.length || (data.total_count > 0 && data.workflow_runs.length === 0) ||
+        !Array.isArray(data.workflow_runs) ||
+        data.workflow_runs.length !== Math.min(data.total_count, MAX_RUNS_PER_WORKFLOW) ||
+        new Set(data.workflow_runs.map((run) => run?.id)).size !== data.workflow_runs.length ||
         !data.workflow_runs.every((run) => validRun(run, workflows[index], repository, branch, nowMs))) {
       canChooseLatest = false;
       report.collection.errors.push(workflows[index] + ':invalid_run_list');
       continue;
     }
+    remainingByWorkflow.set(workflows[index], data.workflow_runs.length);
+    if (data.total_count > data.workflow_runs.length) historyHasMore.add(workflows[index]);
     candidates.push(...data.workflow_runs.map((run) => ({ run, workflow: workflows[index] })));
   }
   if (!canChooseLatest || candidates.length === 0) {
@@ -264,40 +274,66 @@ async function collectHealth({ env = process.env, fetchImpl = globalThis.fetch, 
     return finish();
   }
   candidates.sort((a, b) => Date.parse(b.run.created_at) - Date.parse(a.run.created_at) || b.run.id - a.run.id);
-  const { run, workflow } = candidates[0];
-  report.publisher = {
-    workflow, workflowId: run.workflow_id, runId: run.id, runAttempt: run.run_attempt,
-    headSha: run.head_sha, branch: run.head_branch, status: run.status, conclusion: run.conclusion,
-    createdAt: run.created_at, updatedAt: run.updated_at,
-    runUrl: 'https://github.com/' + repository + '/actions/runs/' + run.id,
-  };
-  if (ageHours(run.updated_at, nowMs) > maxAgeHours) {
-    report.details.build = point('stale', 'workflow_run_stale');
-    report.details.deploy = point('stale', 'workflow_run_stale');
+  for (const { run, workflow } of candidates) {
+    report.publisher = {
+      workflow, workflowId: run.workflow_id, runId: run.id, runAttempt: run.run_attempt,
+      headSha: run.head_sha, branch: run.head_branch, status: run.status, conclusion: run.conclusion,
+      createdAt: run.created_at, updatedAt: run.updated_at,
+      runUrl: 'https://github.com/' + repository + '/actions/runs/' + run.id,
+    };
+    if (ageHours(run.updated_at, nowMs) > maxAgeHours) {
+      report.details.build = point('stale', 'workflow_run_stale');
+      report.details.deploy = point('stale', 'workflow_run_stale');
+      return finish();
+    }
+    const jobsResult = await requestJson(repoPath + '/actions/runs/' + run.id + '/jobs?filter=latest&per_page=100', options);
+    report.collection.sources.push(jobsResult.source);
+    if (!jobsResult.ok) {
+      report.details.build = point('unavailable', jobsResult.source.errorCode);
+      report.details.deploy = point('unavailable', jobsResult.source.errorCode);
+      return finish();
+    }
+    const jobs = jobsResult.data;
+    // These reviewed publishers have at most a few jobs. Refuse partial/matrix results
+    // instead of silently accepting the first page or a previous rerun's green jobs.
+    if (!jobs || !Number.isSafeInteger(jobs.total_count) || !Array.isArray(jobs.jobs) ||
+        jobs.total_count !== jobs.jobs.length || jobs.jobs.length > 100 ||
+        !jobs.jobs.every((job) => isId(job.id) && job.run_id === run.id &&
+          job.run_attempt === run.run_attempt && job.head_sha === run.head_sha && job.head_branch === branch &&
+          validState(job.status, job.conclusion))) {
+      report.details.build = point('unavailable', 'incomplete_or_mismatched_job_evidence');
+      report.details.deploy = point('unavailable', 'incomplete_or_mismatched_job_evidence');
+      return finish();
+    }
+    // Only a first attempt with a complete zero-job response proves no execution.
+    // A rerun may have earlier execution hidden by filter=latest; keep it visible.
+    if (run.status === 'completed' && run.conclusion === 'cancelled' &&
+        run.run_attempt === 1 && jobs.total_count === 0) {
+      report.collection.excludedRuns.push({
+        workflow, runId: run.id, runAttempt: run.run_attempt, headSha: run.head_sha,
+        createdAt: run.created_at, updatedAt: run.updated_at,
+        reason: 'cancelled_without_jobs', jobCount: 0, sourceUrl: jobsResult.source.url,
+      });
+      report.publisher = null;
+      const remaining = remainingByWorkflow.get(workflow) - 1;
+      remainingByWorkflow.set(workflow, remaining);
+      if (remaining === 0 && historyHasMore.has(workflow)) {
+        // An omitted run could outrank every remaining candidate from another
+        // workflow. Refuse to borrow an older success across that unknown frontier.
+        report.collection.errors.push(workflow + ':publisher_history_limit_reached');
+        report.details.build = point('unknown', 'publisher_history_limit_reached');
+        report.details.deploy = point('unknown', 'publisher_history_limit_reached');
+        return finish();
+      }
+      continue;
+    }
+    const contract = PUBLISHERS[workflow];
+    report.details.build = evaluateSteps(jobs.jobs, contract.buildJob, contract.buildSteps, run, nowMs, maxAgeHours);
+    report.details.deploy = evaluateSteps(jobs.jobs, contract.deployJob, [contract.deployStep], run, nowMs, maxAgeHours);
     return finish();
   }
-  const jobsResult = await requestJson(repoPath + '/actions/runs/' + run.id + '/jobs?filter=latest&per_page=100', options);
-  report.collection.sources.push(jobsResult.source);
-  if (!jobsResult.ok) {
-    report.details.build = point('unavailable', jobsResult.source.errorCode);
-    report.details.deploy = point('unavailable', jobsResult.source.errorCode);
-    return finish();
-  }
-  const jobs = jobsResult.data;
-  // These reviewed publishers have at most a few jobs. Refuse partial/matrix results
-  // instead of silently accepting the first page or a previous rerun's green jobs.
-  if (!jobs || !Number.isSafeInteger(jobs.total_count) || !Array.isArray(jobs.jobs) ||
-      jobs.total_count !== jobs.jobs.length || jobs.jobs.length > 100 ||
-      !jobs.jobs.every((job) => isId(job.id) && job.run_id === run.id &&
-        job.run_attempt === run.run_attempt && job.head_sha === run.head_sha && job.head_branch === branch &&
-        validState(job.status, job.conclusion))) {
-    report.details.build = point('unavailable', 'incomplete_or_mismatched_job_evidence');
-    report.details.deploy = point('unavailable', 'incomplete_or_mismatched_job_evidence');
-    return finish();
-  }
-  const contract = PUBLISHERS[workflow];
-  report.details.build = evaluateSteps(jobs.jobs, contract.buildJob, contract.buildSteps, run, nowMs, maxAgeHours);
-  report.details.deploy = evaluateSteps(jobs.jobs, contract.deployJob, [contract.deployStep], run, nowMs, maxAgeHours);
+  report.details.build = point('unknown', 'no_publisher_after_unstarted_cancellations');
+  report.details.deploy = point('unknown', 'no_publisher_after_unstarted_cancellations');
   return finish();
 }
 
