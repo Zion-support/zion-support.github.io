@@ -7,12 +7,12 @@ const promotion=require('./render-service-request-promotion.cjs');
 const runtime={exports:{}};
 require('node:vm').runInNewContext(fs.readFileSync(path.join(__dirname,'../public/assets/js/apps-directory.js'),'utf8'),{module:runtime},{filename:'apps-directory.js'});
 const {normalize,matches}=runtime.exports;
-test('all twenty-four resources have five real translations and valid related destinations',()=>{
-  assert.equal(data.resources.length,24);const ids=new Set(data.resources.map(r=>r.id));assert.equal(ids.size,24);
+test('all twenty-eight resources have five real translations and valid related destinations',()=>{
+  assert.equal(data.resources.length,28);const ids=new Set(data.resources.map(r=>r.id));assert.equal(ids.size,28);
   for(const r of data.resources){assert(ids.has(r.related));assert.notEqual(r.related,r.id);assert(data.categories.includes(r.category));assert(['tool','guide','assessment'].includes(r.kind));assert.deepEqual(Object.keys(r.text),locales);for(const l of locales){assert(r.text[l].title.length>5);assert(r.text[l].description.length>40);assert(route(l,r).startsWith('/'));if(l!=='en')assert.notEqual(r.text[l].description,r.text.en.description);}}
 });
 test('existing five entry routes are deterministic and metadata/card/link parity is complete',()=>{
-  for(const l of locales){const html=render(l),file=path.join(__dirname,'../public',catalog(l).slice(1),'index.html');assert.equal(fs.readFileSync(file,'utf8'),html,'Run renderer before committing');assert(html.includes(`<html lang="${data.locales[l].lang}">`));assert.equal((html.match(/rel="alternate"/g)||[]).length,6);assert.equal((html.match(/data-resource="/g)||[]).length,24);assert.equal((html.match(/<h1\b/g)||[]).length,1);assert(html.includes(`href="${l==='en'?'/':'/'+l+'/'}apps/network.html"`),'Map link must preserve catalog locale');assert(html.includes(`rel="canonical" href="https://ziontechgroup.com${catalog(l)}"`));for(const r of data.resources)assert(html.includes(`href="${route(l,r)}"`));for(const w of data.locales[l].workflows)for(const id of w[2])assert(data.resources.some(r=>r.id===id));assert(!/40%|instant dual email|700\+|<form\b|<iframe\b/.test(html));const json=html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1];assert.equal(JSON.parse(json).mainEntity.itemListElement.length,24);}
+  for(const l of locales){const html=render(l),file=path.join(__dirname,'../public',catalog(l).slice(1),'index.html');assert.equal(fs.readFileSync(file,'utf8'),html,'Run renderer before committing');assert(html.includes(`<html lang="${data.locales[l].lang}">`));assert.equal((html.match(/rel="alternate"/g)||[]).length,6);assert.equal((html.match(/data-resource="/g)||[]).length,28);assert.equal((html.match(/<h1\b/g)||[]).length,1);assert(html.includes(`href="${l==='en'?'/':'/'+l+'/'}apps/network.html"`),'Map link must preserve catalog locale');assert(html.includes(`rel="canonical" href="https://ziontechgroup.com${catalog(l)}"`));for(const r of data.resources)assert(html.includes(`href="${route(l,r)}"`));for(const w of data.locales[l].workflows)for(const id of w[2])assert(data.resources.some(r=>r.id===id));assert(!/40%|instant dual email|700\+|<form\b|<iframe\b/.test(html));const json=html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1];assert.equal(JSON.parse(json).mainEntity.itemListElement.length,28);}
 });
 test('search is accent-insensitive, multi-term and category-aware, including empty/no-match cases',()=>{
   assert.equal(normalize('  Reunião  '),'reuniao');assert(matches('Reunião: decisões e ações','reuniao acoes','productivity','all'));assert(matches('Kosten und Prüfung','kosten','costs','costs'));assert(!matches('Kosten und Prüfung','kosten','costs','operations'));assert(matches('Cloud costs','   ','costs','all'));assert(!matches('Cloud costs','cloud unavailable','costs','all'));assert(!matches('A resource','<script>','plan','all'));
@@ -31,11 +31,11 @@ test('existing operations and reliability navigation remains available in all fi
   assert(render('en').includes('Operations &amp; Reliability'));
   assert(render('de').includes('Operations'));
 });
-test('four translated industry guides extend the original resources and have a dedicated filter',()=>{
+test('five translated industry guides extend the original resources and have a dedicated filter',()=>{
   const original=['discovery','pilot','scorecard','brief','meeting','email','finops','finops-guide','access','essay','incident','evidence','handoff','completion','verification'];
   for(const id of original)assert(data.resources.some(r=>r.id===id),'Original resource missing: '+id);
   const collections=data.resources.filter(r=>r.category==='collections');
-  assert.deepEqual(collections.map(r=>r.id),['green-education','infrastructure','govtech','legal-ops']);
+  assert.deepEqual(collections.map(r=>r.id),['green-education','infrastructure','govtech','legal-ops','agriculture']);
   for(const l of locales){assert.equal(data.locales[l].categories.length,data.categories.length);assert(render(l).includes('data-filter="collections"'));assert(render(l).includes('/zion-app-network/catalog-navigation'+(l==='en'?'':l==='pt'?'-pt-br':'-'+l)+'.html'));}
 });
 test('the field-service guide is discoverable in every locale without changing the four workflows',()=>{
@@ -82,7 +82,7 @@ function assertPlannerCatalog(html,l){
   const collection=schemas.find(s=>s['@type']==='CollectionPage');
   assert(collection,'Missing catalog structured data: '+l);
   const entries=collection.mainEntity.itemListElement;
-  assert.equal(entries.length,24);
+  assert.equal(entries.length,28);
   assert.equal(entries.find(e=>e.name===planner.text[l].title).url,'https://ziontechgroup.com'+plannerRoutes[l]);
 }
 function assertPlannerHomepage(html,l){
@@ -122,7 +122,7 @@ if(process.argv[2])test('the final Pages artifact retains all five planner cards
   const root=path.resolve(process.argv[2]);
   for(const l of locales){
     const catalogHtml=fs.readFileSync(path.join(root,catalog(l).slice(1),'index.html'),'utf8');
-    assert.equal((catalogHtml.match(/data-resource="/g)||[]).length,24);
+    assert.equal((catalogHtml.match(/data-resource="/g)||[]).length,28);
     assertPlannerCatalog(catalogHtml,l);
     assertPlannerHomepage(fs.readFileSync(path.join(root,homePath(l)),'utf8'),l);
   }
