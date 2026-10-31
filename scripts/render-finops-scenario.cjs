@@ -76,12 +76,18 @@ function promote(u,l,isHome=false){
  const before=fs.readFileSync(file(u),'utf8'),protectedParts=s=>s.match(/<(form|script)\b[\s\S]*?<\/\1>/gi)||[];
  const owned=/<!--finops-scenario:start-->[\s\S]*?<!--finops-scenario:end-->/g;
  const matches=[...before.matchAll(owned)];assert(matches.length<=1,'Duplicate FinOps promotion '+u);
+ const isTool=!isHome&&peers.some(slug=>u===prefix(l)+slug+'/'),target=route(l);
+ const destinations=html=>[...html.matchAll(/<a\b[^>]*\shref="([^"]*)"[^>]*>/g)].map(m=>m[1]).filter(href=>href===target);
+ const existing=isTool?destinations(before.replace(owned,'')).length:0;
+ if(isTool)assert(existing<=1,'Duplicate native FinOps destination '+u);
  const c=copy[l],p=isHome?c.homePromotion:null;
  if(isHome)assert(p&&p.title&&p.intro&&p.baseline,'Missing homepage translation '+l);
  const baseline=p?'<a href="'+prefix(l)+'roi-calc/">'+esc(p.baseline)+'</a> · ':'';
- const block='<!--finops-scenario:start--><aside class="card finops-promotion" data-finops-promotion="'+version+'"'+(p?' data-cost-journey="2026-10-30-v1"':'')+'><h2>'+esc(p?p.title:c.promotion)+'</h2><p>'+esc(p?p.intro:c.intro)+'</p><p>'+baseline+'<a href="'+route(l)+'">'+esc(c.title)+'</a> · <a href="'+route(l,true)+'">'+esc(c.guide)+'</a></p></aside><!--finops-scenario:end-->';
+ const estimator=existing?esc(c.title):'<a href="'+target+'">'+esc(c.title)+'</a>';
+ const block='<!--finops-scenario:start--><aside class="card finops-promotion" data-finops-promotion="'+version+'"'+(p?' data-cost-journey="2026-10-30-v1"':'')+'><h2>'+esc(p?p.title:c.promotion)+'</h2><p>'+esc(p?p.intro:c.intro)+'</p><p>'+baseline+estimator+' · <a href="'+route(l,true)+'">'+esc(c.guide)+'</a></p></aside><!--finops-scenario:end-->';
  assert(/<\/main>|<\/body>/i.test(before),'Missing insertion anchor '+u);
  const after=matches.length?before.replace(owned,()=>block):before.replace(/<\/main>|<\/body>/i,x=>block+x);
+ if(isTool)assert.equal(destinations(after).length,1,'Unique local FinOps destination '+u);
  assert.deepEqual(protectedParts(after),protectedParts(before),'Existing forms/scripts changed '+u);
  write(u,after);(isHome?manifest.homepages:manifest.reciprocalPages).push(u);
 }
