@@ -36,7 +36,10 @@ function validateSnapshot(report, { env = process.env, now = Date.now } = {}) {
   const nowMs = now();
   const date = (value) => {
     const parsed = typeof value === 'string' ? Date.parse(value) : NaN;
-    if (!Number.isFinite(parsed) || new Date(parsed).toISOString() !== value) fail('invalid observation timestamp');
+    if (!Number.isFinite(parsed)) fail('invalid observation timestamp');
+    const iso = new Date(parsed).toISOString();
+    // GitHub run timestamps use UTC seconds; collector timestamps include millis.
+    if (iso !== value && iso.replace('.000Z', 'Z') !== value) fail('invalid observation timestamp');
     return parsed;
   };
   const generated = date(report.generatedAt);

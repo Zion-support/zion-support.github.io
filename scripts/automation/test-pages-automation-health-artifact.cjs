@@ -23,7 +23,8 @@ const common = [
   'Verify operational tools in the final Pages artifact',
   'Reject private operational files in final Pages artifact',
 ];
-const date = (minutes) => new Date(NOW - minutes * 60000).toISOString();
+// GitHub's real run/step API dates have second precision, unlike collector dates.
+const date = (minutes) => new Date(NOW - minutes * 60000).toISOString().replace('.000Z', 'Z');
 const hash = (bytes) => createHash('sha256').update(bytes).digest('hex');
 
 function fixture(t, state = 'ok') {
@@ -101,6 +102,25 @@ for (const state of ['ok', 'pending', 'degraded']) {
     assert.ok(!fs.readFileSync(path.join(f.cwd, PUBLIC_PATH), 'utf8').includes(TOKEN));
   });
 }
+
+test('accepted run 41209390879 GitHub UTC-second timestamps pass without rewriting evidence', async (t) => {
+  const f = fixture(t, 'pending');
+  const result = await collectForPages(f);
+  const report = structuredClone(result.report);
+  report.publisher.runId = 41209390879;
+  report.publisher.runUrl = 'https://github.com/' + REPOSITORY + '/actions/runs/41209390879';
+  report.publisher.headSha = '357d5f64411525629b9e86b0987e946b9ec3d0a6';
+  report.publisher.createdAt = '2026-10-31T14:16:51Z';
+  report.publisher.updatedAt = '2026-10-31T14:23:46Z';
+  report.generatedAt = report.timestamp = '2026-10-31T14:23:46.820Z';
+  for (const source of report.collection.sources) source.checkedAt = report.timestamp;
+  const bytes = Buffer.from(JSON.stringify(report));
+  write(f, ARTIFACT_PATH, bytes);
+  const accepted = verify(f, hash(bytes));
+  assert.equal(accepted.publisher.createdAt, '2026-10-31T14:16:51Z');
+  assert.equal(accepted.timestamp, '2026-10-31T14:23:46.820Z');
+  assert.deepEqual(fs.readFileSync(path.join(f.cwd, ARTIFACT_PATH)), bytes);
+});
 
 test('a newer observed publisher on another SHA is allowed; receipt belongs to this collection', async (t) => {
   const f = fixture(t, 'pending');
