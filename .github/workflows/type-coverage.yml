@@ -42,7 +42,7 @@ jobs:
       id: type-check
       env:
         # The full-tree compiler exhausted 8 GiB; retain headroom on the 16 GB public runner.
-        NODE_OPTIONS: --max-old-space-size=12288
+        NODE_OPTIONS: --max-old-space-size=12288 --max-semi-space-size=64
       run: |
         check_status=0
         npm run type-check || check_status=$?
