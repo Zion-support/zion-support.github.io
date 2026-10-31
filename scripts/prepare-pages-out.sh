@@ -374,6 +374,11 @@ node scripts/verify-network-evaluation-artifact.cjs out
 node scripts/test-linked-app-routes.cjs
 node scripts/render-linked-app-routes.cjs out
 
+# Replace historical tool placeholders with the reviewed five-language tools.
+# Verify the assembled pages, not only an isolated renderer fixture.
+node scripts/render-operational-tools.cjs out
+node scripts/test-operational-tools.cjs out --artifact-only
+
 python3 scripts/test-free-discovery-guard.py
 assert_public_entry_content
 
