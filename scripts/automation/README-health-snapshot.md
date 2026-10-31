@@ -5,10 +5,23 @@ issues or closes incidents. Its only writes are local JSON files.
 
 ## Scope
 
-It compares the newest-created run on the configured production branch for
+It reads up to five newest-created runs on the configured production branch for
 `gh-pages.yml`, `static-deploy.yml` and `deploy-on-push.yml`. Creation time and
-run ID determine order, not update time or a success-only filter. It then reads
-the selected run's latest-attempt jobs and the GitHub Pages configuration.
+run ID determine order, not update time or a success-only filter. Candidates
+are evaluated newest first using their latest-attempt jobs and the Pages API.
+
+Only a completed cancelled **first attempt** with a successful, complete jobs
+response containing zero jobs is excluded. Its workflow, run/attempt/SHA,
+timestamps, zero-job source and reason are recorded in
+`collection.excludedRuns`. Any job, an earlier attempt, failed API request,
+partial response, real failure, active attempt or skipped/unknown outcome
+prevents that exclusion. A job with no steps still counts as a job.
+
+`collection.maxRunsPerWorkflow` records the fixed five-run bound. If a workflow's
+fetched history is exhausted by these exclusions while older runs are omitted,
+selection fails closed: an omitted run might outrank an older candidate from
+another workflow. A newer candidate already proven before that frontier can
+still be selected. No success-only search or unbounded history scan is used.
 
 - `checks.build`: the reviewed static preparation, rendering, verification and
   artifact-upload steps. The retired CI/CD Pipeline and optional Next.js
@@ -63,8 +76,10 @@ the token or pass it as a command-line argument.
 `AUTOMATION_HEALTH_BRANCH` defaults to `main`.
 `AUTOMATION_HEALTH_MAX_RUN_AGE_HOURS` defaults to 24; an explicit invalid,
 nonpositive value fails closed. Requests use an eight-second timeout, no retry
-and a fixed GitHub API origin. Four independent reads precede at most one jobs
-read. Unexpected job pagination is unavailable, not silently truncated.
+and a fixed GitHub API origin. Four independent reads precede at most fifteen
+jobs reads (five candidates for each of three workflows), with no retries.
+Unexpected job pagination or incomplete history pages are unavailable, not
+silently truncated. An unresolved history bound preserves the public snapshot.
 
 Run:
 
