@@ -2,6 +2,8 @@ const { readFileSync, existsSync } = require('fs');
 const { join } = require('path');
 
 const healthPath = join('public', 'api', 'automation-health.json');
+const maxHoursEnv = process.env.AUTOMATION_HEALTH_STATIC_MAX_HOURS;
+const maxHours = maxHoursEnv ? Number(maxHoursEnv) : 24;
 
 let staticHealthFresh = 'false';
 let staticHealthAgeHours = null;
@@ -19,8 +21,6 @@ try {
   if (!staticHealthTimestamp) throw new Error('Missing timestamp in ' + healthPath);
   staticHealthValid = true;
 
-  const maxHoursEnv = process.env.AUTOMATION_HEALTH_STATIC_MAX_HOURS;
-  const maxHours = maxHoursEnv ? Number(maxHoursEnv) : 24;
   const ts = new Date(staticHealthTimestamp);
   const now = new Date();
   staticHealthAgeHours = (now - ts) / 36e5;
@@ -41,7 +41,7 @@ const report = {
   staticHealthAgeHours,
   staticHealthTimestamp,
   staticHealthPath: healthPath,
-  maxHoursAllowed: Number.isFinite(Number(process.env.AUTOMATION_HEALTH_STATIC_MAX_HOURS)) ? Number(process.env.AUTOMATION_HEALTH_STATIC_MAX_HOURS) : 24,
+  maxHoursAllowed: maxHours,
 };
 
 console.log(JSON.stringify(report, null, 2));
