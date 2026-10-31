@@ -8,6 +8,9 @@ const cp = require('node:child_process');
 const vm = require('node:vm');
 
 const copy = JSON.parse(fs.readFileSync('content/operational-tools.json', 'utf8'));
+const baselineCopy = JSON.parse(fs.readFileSync('content/roi-baseline.json', 'utf8'));
+const baselineRenderer = require('./render-roi-baseline.cjs');
+const baselineVersion = baselineRenderer.version;
 const locales = ['en', 'pt', 'es', 'fr', 'de'];
 const slugs = ['roi-calc', 'sla-calculator', 'ai-governance-checklist'];
 const version = '2026-10-30-operational-tools-v2';
@@ -35,9 +38,11 @@ function verifyArtifact(out) {
       assert(html.includes('data-operational-tools="' + version + '"'), 'Release marker: ' + route);
       assert(html.includes('rel="canonical" href="https://ziontechgroup.com' + route + '"'), 'Canonical: ' + route);
       assert.equal((html.match(/rel="alternate"/g) || []).length, 6, 'Alternates: ' + route);
+      const languageAnchors = [...html.matchAll(/<a\b[^>]*>/g)].map(([tag]) =>
+        Object.fromEntries([...tag.matchAll(/\s([\w:-]+)="([^"]*)"/g)].map(([, name, value]) => [name, value])));
       for (const alternative of locales) {
         assert(html.includes('hreflang="' + copy[alternative].lang + '" href="https://ziontechgroup.com' + prefix(alternative) + slug + '"'), 'Same-topic language target: ' + route);
-        assert(html.includes('lang="' + copy[alternative].lang + '" href="' + prefix(alternative) + slug + '"'), 'Language switch: ' + route);
+        assert(languageAnchors.some(anchor => anchor.lang === copy[alternative].lang && anchor.href === prefix(alternative) + slug), 'Language switch: ' + route);
       }
       assert(html.includes('href="' + prefix(locale) + 'apps/"'), 'Local catalog: ' + route);
       assert(html.includes('href="' + prefix(locale) + 'apps/finops-scenario-estimator.html"'), 'Local FinOps: ' + route);
@@ -45,7 +50,42 @@ function verifyArtifact(out) {
       if (slug.endsWith('/')) {
         const embedded = html.match(/<script id="ops-copy" type="application\/json">([\s\S]*?)<\/script>/);
         assert(embedded, 'Localized runtime copy: ' + route);
-        assert.deepEqual(JSON.parse(embedded[1]), copy[locale], 'Complete locale copy: ' + route);
+        const expectedCopy = slug === 'roi-calc/' ? {
+          locale: copy[locale].locale, labels: baselineCopy[locale].labels,
+          outputs: baselineCopy[locale].outputs, error: baselineCopy[locale].error,
+          pending: baselineCopy[locale].pending
+        } : copy[locale];
+        assert.deepEqual(JSON.parse(embedded[1]), expectedCopy, 'Complete locale copy: ' + route);
+        if (slug === 'roi-calc/') {
+          assert(html.includes('data-roi-baseline="' + baselineVersion + '"'), 'Baseline release marker: ' + route);
+          assert(html.includes('<button id="roi-calculate" type="submit" disabled>'), 'Baseline button remains disabled before runtime initialization: ' + route);
+          for (const input of html.match(/<input\b[^>]*>/g) || []) {
+            assert(!/\bname\s*=/i.test(input), 'Baseline controls cannot transmit through native form submission: ' + route);
+          }
+          const reviewed = baselineRenderer.page(locale);
+          assert.equal((html.match(/\bid="ops-form"/g) || []).length, 1, 'Unique baseline form: ' + route);
+          assert.equal((html.match(/\bid="ops-copy"/g) || []).length, 1, 'Unique baseline runtime copy: ' + route);
+          assert.equal((html.match(/<h1\b/g) || []).length, 1, 'Unique baseline heading: ' + route);
+          const fragments = [
+            ['form', /<form\b[^>]*\sid="ops-form"(?:\s|>)[\s\S]*?<\/form>/],
+            ['runtime copy', /<script id="ops-copy" type="application\/json">[\s\S]*?<\/script>/],
+            ['runtime loader', /<script src="\/assets\/js\/operational-tools\.js"[^>]*>[\s\S]*?<\/script>/],
+            ['heading and introduction', /<section class="roi-hero">[\s\S]*?<\/section>/],
+            ['method and example', /<section class="card"><h2>[\s\S]*?<\/section>/],
+            ['result region', /<section class="card" aria-labelledby="roi-result-title">[\s\S]*?<\/section>/],
+            ['JavaScript fallback', /<noscript>[\s\S]*?<\/noscript>/]
+          ];
+          for (const [name, pattern] of fragments) {
+            const expected = reviewed.match(pattern);
+            const served = html.match(new RegExp(pattern.source, 'g')) || [];
+            assert(expected, 'Reviewed baseline fragment exists: ' + name);
+            assert.equal(served.length, 1, 'Unique served baseline fragment: ' + name + ' ' + route);
+            assert.equal(served[0], expected[0], 'Reviewed baseline ' + name + ': ' + route);
+          }
+          for (const [, href] of reviewed.matchAll(/href="(\/[^"]*)"/g)) {
+            assert(html.includes('href="' + href + '"'), 'Baseline navigation preserved: ' + route + ' -> ' + href);
+          }
+        }
         assert(html.includes('id="ops-form"'), 'Interactive form: ' + route);
         assert(html.includes('src="/assets/js/operational-tools.js"'), 'Runtime dependency: ' + route);
         const expectedControls = slug === 'roi-calc/' ? 2 : slug === 'sla-calculator/' ? 5 : 10;
@@ -169,11 +209,13 @@ for (const locale of locales) {
 const root = fs.mkdtempSync(path.join(os.tmpdir(), 'zion-ops-'));
 const out = path.join(root, 'out');
 const renderer = path.resolve('scripts/render-operational-tools.cjs');
+const finopsRenderer = path.resolve('scripts/render-finops-scenario.cjs');
 const write = (file, text) => { fs.mkdirSync(path.dirname(file), {recursive: true}); fs.writeFileSync(file, text); };
 const original = '<form id="preserved"><input name="existing"></form>';
 const finopsPromotion = locale => '<!--finops-scenario:start--><aside data-finops-promotion="2026-10-09-finops-scenario-v1"><h2>Reviewed promotion ' + locale + ' $& $$</h2><a href="' + prefix(locale) + 'apps/finops-scenario-estimator.html">Estimate</a></aside><!--finops-scenario:end-->';
 try {
   write(path.join(root, 'content/operational-tools.json'), JSON.stringify(copy));
+  write(path.join(root, 'content/finops-scenario.json'), fs.readFileSync('content/finops-scenario.json'));
   write(path.join(root, 'public/assets/js/operational-tools.js'), script);
   write(path.join(out, 'assets/css/discovery.css'), fs.readFileSync('public/assets/css/discovery.css'));
   const unrelatedCoverage = {path: 'apps/unrelated.html', available: ['en'], missing: ['pt'], review: {owner: 'fixture-owner'}};
@@ -200,6 +242,34 @@ try {
   assert.throws(() => verifyArtifact(out), /One FinOps promotion/);
   assert.throws(() => cp.execFileSync(process.execPath, [renderer, out], {cwd: root, stdio: 'pipe', timeout: 20000}), /Ambiguous FinOps promotion/);
   write(promotionFile, promotedHtml);
+  // Real source replacement can remove the old promotion entirely. The narrow
+  // repair pass must recover all fifteen links without rebuilding tool forms,
+  // unrelated FinOps pages or homepages, and must stay byte-stable on repeat.
+  const protectedParts = html => html.match(/<(form|script)\b[\s\S]*?<\/\1>/gi) || [];
+  const repairedTools = new Map();
+  const savedHomes = new Map(locales.map(locale => [home(locale), fs.readFileSync(disk(out, home(locale)), 'utf8')]));
+  const unrelatedFinops = '/apps/finops-scenario-estimator.html';
+  write(disk(out, unrelatedFinops), '<main>Preserve this independent calculator.</main><script>const sentinel = true;</script>');
+  const untouchedFinops = fs.readFileSync(disk(out, unrelatedFinops), 'utf8');
+  for (const locale of locales) for (const slug of slugs) {
+    const route = prefix(locale) + slug + '/';
+    const html = fs.readFileSync(disk(out, route), 'utf8').replace(finopsPromotion(locale), '');
+    write(disk(out, route), html);
+    repairedTools.set(route, {protected: protectedParts(html)});
+  }
+  assert.throws(() => verifyArtifact(out), /One FinOps promotion/);
+  for (let run = 0; run < 2; run++) {
+    cp.execFileSync(process.execPath, [finopsRenderer, out, '--tool-promotions-only'], {cwd: root, stdio: 'pipe', timeout: 20000});
+    verifyArtifact(out);
+    for (const [route, before] of repairedTools) {
+      const html = fs.readFileSync(disk(out, route), 'utf8');
+      assert.deepEqual(protectedParts(html), before.protected, 'Tool forms and scripts preserved during crosslink repair');
+      if (run) assert.equal(html, before.repaired, 'Repeated promotion repair is byte-stable');
+      else before.repaired = html;
+    }
+    for (const [route, html] of savedHomes) assert.equal(fs.readFileSync(disk(out, route), 'utf8'), html, 'Tool-only repair preserves homepages');
+    assert.equal(fs.readFileSync(disk(out, unrelatedFinops), 'utf8'), untouchedFinops, 'Tool-only repair preserves independent calculator');
+  }
   for (const locale of locales) assert(fs.readFileSync(disk(out, home(locale)), 'utf8').includes(original), 'Existing homepage form preserved');
   const coverage = JSON.parse(fs.readFileSync(path.join(out, 'apps/network-publication-coverage.json'), 'utf8'));
   assert.equal(coverage.groups.length, 5, 'Four generated page families plus the untouched unrelated row');
@@ -213,6 +283,19 @@ try {
   assert.throws(() => verifyArtifact(out), /Coverage locales/);
   costCoverage.available = [...locales];
   write(path.join(out, 'apps/network-publication-coverage.json'), JSON.stringify(coverage));
+  // Corrupt published baseline controls while preserving all language/release markers.
+  const baselineFile = disk(out, '/pt/roi-calc/');
+  const reviewedBaseline = fs.readFileSync(baselineFile, 'utf8');
+  write(baselineFile, reviewedBaseline.replace('<button id="roi-calculate" type="submit" disabled>', '<button id="roi-calculate" type="submit">'));
+  assert.throws(() => verifyArtifact(out), /Baseline button remains disabled/);
+  write(baselineFile, reviewedBaseline.replace('id="hours"', 'id="hours" name="hours"'));
+  assert.throws(() => verifyArtifact(out), /Baseline controls cannot transmit/);
+  write(baselineFile, reviewedBaseline.replace('value="40"', 'value="400"'));
+  assert.throws(() => verifyArtifact(out), /Reviewed baseline form/);
+  const methodSection = baselineRenderer.page('pt').match(/<section class="card">[\s\S]*?<\/section>/)[0];
+  write(baselineFile, reviewedBaseline.replace(methodSection, ''));
+  assert.throws(() => verifyArtifact(out), /baseline .*method/);
+  write(baselineFile, reviewedBaseline);
   // Corrupt the served output after a successful render: verification must reject
   // the exact placeholder regression even if the renderer itself is still healthy.
   write(disk(out, '/pt/roi-calc/'), '<h1>Ferramentas</h1><p>Em breve.</p>');
