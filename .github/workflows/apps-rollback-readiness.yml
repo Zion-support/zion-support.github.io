@@ -72,16 +72,30 @@ jobs:
               runs=api(f'repos/{repo}/actions/workflows/{workflow}/runs?branch=main&status=success&per_page=20').get('workflow_runs',[])
               for run in runs:
                   if run.get('head_branch') != 'main' or run.get('status') != 'completed' or run.get('conclusion') != 'success':
-                      continue
-                  for job in jobs_for(run):
-                      if job.get('name') != 'deploy' or job.get('status') != 'completed' or job.get('conclusion') != 'success':
+                      raise RuntimeError(f"Inconsistent successful publisher run {run.get('id')}")
+                  deploy_jobs=[job for job in jobs_for(run) if job.get('name') == 'deploy']
+                  if not deploy_jobs:
+                      raise RuntimeError(f"Missing deploy job evidence for run {run['id']}")
+                  for job in deploy_jobs:
+                      if job.get('status') == 'completed' and job.get('conclusion') == 'skipped':
                           continue
-                      for step in job.get('steps',[]):
-                          name=step.get('name','')
-                          is_publish=name == 'Deploy to GitHub Pages' or name.startswith('Run actions/deploy-pages@')
-                          completed=utc_time(step.get('completed_at'))
-                          if is_publish and step.get('status') == 'completed' and step.get('conclusion') == 'success' and completed is not None:
-                              published.append((completed,run,job,step))
+                      if job.get('status') != 'completed' or job.get('conclusion') != 'success':
+                          raise RuntimeError(f"Incomplete or unsuccessful deploy job {job.get('id')} for run {run['id']}")
+                      steps=job.get('steps')
+                      if not isinstance(steps,list):
+                          raise RuntimeError(f"Missing deployment steps for job {job.get('id')}")
+                      publish_steps=[step for step in steps
+                                     if step.get('name') == 'Deploy to GitHub Pages'
+                                     or (isinstance(step.get('name'),str) and step['name'].startswith('Run actions/deploy-pages@'))]
+                      if len(publish_steps) != 1:
+                          raise RuntimeError(f"Expected one Pages deployment step for job {job.get('id')}")
+                      step=publish_steps[0]
+                      if step.get('status') == 'completed' and step.get('conclusion') == 'skipped':
+                          continue
+                      completed=utc_time(step.get('completed_at'))
+                      if step.get('status') != 'completed' or step.get('conclusion') != 'success' or completed is None:
+                          raise RuntimeError(f"Incomplete or invalid deployment step for job {job.get('id')}")
+                      published.append((completed,run,job,step))
 
           if not published:
               print('::error::No executed successful Pages deployment found in the latest successful publisher runs')
