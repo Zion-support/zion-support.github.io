@@ -1,114 +1,224 @@
+name: TypeScript Performance Diagnostic
+run-name: TypeScript diagnostic 180s — d3c73060
+
+"on":
+  workflow_dispatch:
+
 permissions:
   contents: read
-name: TypeScript Type Coverage & Dead Code Check
-"on":
-  push:
-    branches:
-    - main
-  pull_request:
-    branches:
-    - main
-  schedule:
-  - cron: 0 15 * * 1
-  workflow_dispatch: null
+
 concurrency:
-  group: type-coverage-${{ github.ref }}
-  cancel-in-progress: true
+  group: typescript-performance-diagnostic-${{ github.ref }}
+  cancel-in-progress: false
 
 jobs:
-  type-coverage:
-    name: Type Coverage & Dead Code
+  bounded-typescript-diagnostic:
+    name: TypeScript performance diagnostic (180s)
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      issues: write
-      pull-requests: write
+    timeout-minutes: 8
+    env:
+      PROFILE_DIR: ${{ runner.temp }}/typescript-diagnostic
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v6.0.2
-      with:
-        # These checks read the complete current tree; no Git history is required.
-        fetch-depth: 1
-    - name: Setup Node.js
-      uses: actions/setup-node@v6.3.0
-      with:
-        node-version: '20'
-        cache: npm
-    - name: Test workflow reliability regressions
-      run: node tests/ci/test_type_coverage_workflow.cjs
-    - name: Install dependencies
-      run: npm ci
-    - name: Run TypeScript Check
-      id: type-check
-      env:
-        # The full-tree compiler exhausted 8 GiB; retain headroom on the 16 GB public runner.
-        NODE_OPTIONS: --max-old-space-size=12288
-      run: |
-        check_status=0
-        npm run type-check || check_status=$?
-        echo "exit_code=$check_status" >> "$GITHUB_OUTPUT"
-        exit "$check_status"
-    - name: Run ESLint Check
-      id: lint-check
-      run: |
-        check_status=0
-        npm run lint:check || check_status=$?
-        echo "exit_code=$check_status" >> "$GITHUB_OUTPUT"
-        exit "$check_status"
-    - name: Comment on PR if failed
-      if: github.event_name == 'pull_request' && failure()
-      uses: actions/github-script@v7
-      with:
-        script: |
-          const body = '🚨 **Type Coverage & Dead Code Workflow Failed**\n\n' +
-            'Check the workflow logs for the failed setup, TypeScript, or ESLint step. ' +
-            'A workflow failure does not by itself identify source-code errors.\n\n' +
-            'After installing dependencies, reproduce the checks locally:\n' +
-            '```sh\n' +
-            'npm run type-check\n' +
-            'npm run lint:check\n' +
-            '```\n';
-          await github.rest.issues.createComment({
-            owner: context.repo.owner,
-            repo: context.repo.repo,
-            issue_number: context.issue.number,
-            body
-          });
-    - name: Open issue on main branch regression
-      if: github.event_name == 'push' && failure() && github.ref == 'refs/heads/main'
-      uses: actions/github-script@v7
-      with:
-        script: |
-          // Keep the existing title so open regression issues remain deduplicated.
-          const title = '🚨 TypeScript Check Regression on Main';
-          const body = '**Type Coverage & Dead Code workflow failed on `main`.**\n\n' +
-            'Check the workflow logs for the failed setup, TypeScript, or ESLint step.\n\n' +
-            'After installing dependencies, run `npm run type-check` and ' +
-            '`npm run lint:check` locally to reproduce.\n\n' +
-            `*Commit: ${context.sha?.slice(0, 7) || 'N/A'}*\n`;
-
-          const existing = await github.rest.issues.listForRepo({
-            owner: context.repo.owner,
-            repo: context.repo.repo,
-            labels: ['type-coverage', 'autonomous'],
-            state: 'open'
-          });
-          const already = existing.data.find((issue) => issue.title === title);
-          if (!already) {
-            await github.rest.issues.create({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              title,
-              body,
-              labels: ['type-coverage', 'autonomous', 'code-quality']
-            });
-          }
-    - name: Notify Telegram on failure
-      if: failure()
-      run: |
-        node automation/notify-telegram.js "🚨 TypeScript / ESLint workflow failed — review the failed workflow step." || true
-    - name: Notify Telegram on success (weekly digest)
-      if: success() && github.event_name == 'schedule'
-      run: |
-        node automation/notify-telegram.js "✅ Weekly TypeScript / ESLint Check — all clear." || true
-    timeout-minutes: 20
+      - name: Checkout immutable source target
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          ref: d3c73060d57fd984861123ee0bf784a33ae57a2c
+          fetch-depth: 1
+          persist-credentials: false
+      - name: Initialize incomplete diagnostic record
+        run: |
+          mkdir -p "$PROFILE_DIR"
+          printf '%s\n' '{"complete":false,"counts_as_required_gate":false,"status":"setup"}' > "$PROFILE_DIR/summary.json"
+      - name: Setup Node.js
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
+        with:
+          node-version: '20'
+          cache: npm
+      - name: Install exact dependencies
+        run: npm ci
+      - name: Capture bounded compiler diagnostic
+        env:
+          NODE_OPTIONS: --max-old-space-size=12288
+        run: |
+          python3 - <<'PY'
+          import collections
+          import json
+          import os
+          from pathlib import Path
+          import signal
+          import subprocess
+          import time
+          
+          TARGET = "d3c73060d57fd984861123ee0bf784a33ae57a2c"
+          TARGET_TREE = "900ee823a411b6fe813f26db6104b5cab6d85d00"
+          
+          def write_json(path, value):
+              path.write_text(json.dumps(value, indent=2) + "\n")
+          
+          def observe(command, out, limit_seconds=180, grace_seconds=10):
+              out.mkdir(parents=True, exist_ok=True)
+              started = time.monotonic()
+              summary = {
+                  "complete": False,
+                  "counts_as_required_gate": False,
+                  "status": "running",
+                  "limit_seconds": limit_seconds,
+                  "grace_seconds": grace_seconds,
+              }
+              write_json(out / "summary.json", summary)
+              clock_ticks = os.sysconf("SC_CLK_TCK")
+              cutoff = False
+              killed = False
+              with (out / "compiler.log").open("w") as log, (out / "resources.jsonl").open("w") as samples:
+                  child = subprocess.Popen(command, stdout=log, stderr=subprocess.STDOUT, start_new_session=True)
+                  try:
+                      while True:
+                          finished_pid, status, usage = os.wait4(child.pid, os.WNOHANG)
+                          if finished_pid:
+                              child.returncode = os.waitstatus_to_exitcode(status)
+                              break
+                          elapsed = time.monotonic() - started
+                          try:
+                              stat = Path(f"/proc/{child.pid}/stat").read_text()
+                              fields = stat[stat.rfind(")") + 2:].split()
+                              memory = {}
+                              for line in Path(f"/proc/{child.pid}/status").read_text().splitlines():
+                                  if line.startswith(("VmRSS:", "VmHWM:")):
+                                      key, value, _unit = line.split()
+                                      memory[key.rstrip(":") + "_kib"] = int(value)
+                              sample = {
+                                  "elapsed_seconds": elapsed,
+                                  "user_cpu_seconds": int(fields[11]) / clock_ticks,
+                                  "system_cpu_seconds": int(fields[12]) / clock_ticks,
+                                  **memory,
+                              }
+                              samples.write(json.dumps(sample) + "\n")
+                              samples.flush()
+                          except (FileNotFoundError, ProcessLookupError):
+                              pass
+                          if not cutoff and elapsed >= limit_seconds:
+                              cutoff = True
+                              try:
+                                  os.killpg(child.pid, signal.SIGINT)
+                              except ProcessLookupError:
+                                  pass
+                          elif cutoff and not killed and elapsed >= limit_seconds + grace_seconds:
+                              killed = True
+                              try:
+                                  os.killpg(child.pid, signal.SIGKILL)
+                              except ProcessLookupError:
+                                  pass
+                          time.sleep(min(1, max(0.01, limit_seconds - elapsed)) if not cutoff else 0.1)
+                  except BaseException:
+                      try:
+                          os.killpg(child.pid, signal.SIGKILL)
+                      except ProcessLookupError:
+                          pass
+                      _pid, status, _usage = os.wait4(child.pid, 0)
+                      child.returncode = os.waitstatus_to_exitcode(status)
+                      summary["status"] = "controller_interrupted"
+                      write_json(out / "summary.json", summary)
+                      raise
+              raw_exit = child.returncode
+              effective_exit = 124 if cutoff else (128 - raw_exit if raw_exit < 0 else raw_exit)
+              trace = out / "trace" / "trace.json"
+              trace_closed = False
+              events = collections.Counter()
+              last_events = collections.deque(maxlen=20)
+              if trace.exists():
+                  with trace.open("rb") as source:
+                      source.seek(max(0, trace.stat().st_size - 64))
+                      trace_closed = source.read().rstrip().endswith(b"]")
+                  with trace.open(errors="replace") as source:
+                      for line in source:
+                          try:
+                              event = json.loads(line.strip().strip(","))
+                          except (ValueError, TypeError):
+                              continue
+                          if isinstance(event, dict) and event.get("cat"):
+                              events[event["cat"]] += 1
+                              last_events.append({key: event[key] for key in ("cat", "name", "ph", "ts", "dur", "args") if key in event})
+              total_time_reported = False
+              with (out / "compiler.log").open(errors="replace") as source:
+                  total_time_reported = any(line.startswith("Total time:") for line in source)
+              complete = not cutoff and raw_exit in (0, 1, 2) and trace_closed and total_time_reported
+              if effective_exit == 0 and not complete:
+                  effective_exit = 1
+              summary.update({
+                  "complete": complete,
+                  "status": "cutoff" if cutoff else ("finished" if complete else "terminated_without_complete_trace"),
+                  "elapsed_seconds": time.monotonic() - started,
+                  "compiler_exit_code": raw_exit,
+                  "exit_code": effective_exit,
+                  "cutoff_reached": cutoff,
+                  "forced_kill_after_grace": killed,
+                  "user_cpu_seconds": usage.ru_utime,
+                  "system_cpu_seconds": usage.ru_stime,
+                  "maximum_rss_kib": usage.ru_maxrss,
+                  "trace_closed": trace_closed,
+                  "extended_diagnostics_total_time_reported": total_time_reported,
+                  "trace_event_counts": dict(events),
+                  "last_trace_events": list(last_events),
+                  "trace_warning": "Raw trace may be incomplete after termination; no missing events or durations are synthesized.",
+              })
+              write_json(out / "summary.json", summary)
+              return summary, effective_exit
+          
+          def output(args):
+              return subprocess.check_output(args, text=True).strip()
+          
+          def main():
+              out = Path(os.environ["PROFILE_DIR"])
+              head = output(["git", "rev-parse", "HEAD"])
+              tree = output(["git", "rev-parse", "HEAD^{tree}"])
+              if head != TARGET or tree != TARGET_TREE:
+                  raise SystemExit("Checkout does not match the immutable diagnostic target")
+              package = json.loads(Path("package.json").read_text())
+              version = output(["node", "-p", "require('typescript/package.json').version"])
+              if package["scripts"]["type-check"] != "tsc --noEmit" or version != "5.9.3":
+                  raise SystemExit("Compiler contract differs from the measured CI run")
+              subprocess.run(["git", "diff", "--exit-code", "--", "package.json", "package-lock.json", "tsconfig.json"], check=True)
+              metadata = {
+                  "source_commit": head,
+                  "source_tree": tree,
+                  "workflow_commit": os.environ["GITHUB_SHA"],
+                  "node_version": output(["node", "--version"]),
+                  "npm_version": output(["npm", "--version"]),
+                  "typescript_version": version,
+                  "type_check_script": package["scripts"]["type-check"],
+                  "node_options": os.environ["NODE_OPTIONS"],
+                  "input_blobs": {path: output(["git", "hash-object", path]) for path in ("package.json", "package-lock.json", "tsconfig.json")},
+                  "counts_as_required_gate": False,
+              }
+              write_json(out / "metadata.json", metadata)
+              command = [
+                  "node", "--trace-gc", "node_modules/typescript/bin/tsc",
+                  "--noEmit", "--extendedDiagnostics", "--generateTrace", str(out / "trace"),
+              ]
+              summary, status = observe(command, out)
+              with Path(os.environ["GITHUB_STEP_SUMMARY"]).open("a") as report:
+                  report.write("## TypeScript performance diagnostic\n\n")
+                  report.write("This run is not the required TypeScript validation.\n\n")
+                  report.write(f"- Source commit: {head}\n- Complete: {str(summary['complete']).lower()}\n")
+                  report.write(f"- Exit code: {status}\n- Elapsed seconds: {summary['elapsed_seconds']:.1f}\n")
+                  report.write(f"- Maximum RSS (KiB): {summary['maximum_rss_kib']}\n")
+              raise SystemExit(status)
+          
+          if __name__ == "__main__":
+              main()
+          
+          PY
+      - name: Upload diagnostic evidence
+        if: always()
+        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
+        with:
+          name: typescript-diagnostic-d3c73060-${{ github.run_id }}
+          path: |
+            ${{ runner.temp }}/typescript-diagnostic/metadata.json
+            ${{ runner.temp }}/typescript-diagnostic/summary.json
+            ${{ runner.temp }}/typescript-diagnostic/resources.jsonl
+            ${{ runner.temp }}/typescript-diagnostic/compiler.log
+            ${{ runner.temp }}/typescript-diagnostic/trace/trace.json
+          if-no-files-found: error
+          retention-days: 7
+          compression-level: 1
