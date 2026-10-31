@@ -1,5 +1,5 @@
 {
-  "release": "apps-directory-2026-10-31-v7",
+  "release": "apps-directory-2026-10-31-v8",
   "categories": [
     "plan",
     "productivity",
@@ -1175,6 +1175,133 @@
         "de": {
           "title": "Rechtsabteilung: Dokumente, Prüfung und Signaturnachweise",
           "description": "Nutzen Sie vier Referenzen für Dokumentenfassungen, Quellenklauseln, Prüfentscheidungen und belegte Signaturstatus."
+        }
+      }
+    },
+    {
+      "id": "sla",
+      "category": "operations",
+      "kind": "tool",
+      "location": "site",
+      "slug": "sla-calculator/",
+      "related": "operational-tools",
+      "text": {
+        "en": {
+          "title": "SLA downtime and credits",
+          "description": "Compare permitted downtime with an outage scenario and calculate illustrative credits. Uses a simple linear model; contractual caps, tiers and exclusions require separate review."
+        },
+        "pt": {
+          "title": "Indisponibilidade e créditos de SLA",
+          "description": "Compare a indisponibilidade permitida com um cenário de interrupção e calcule créditos ilustrativos. O modelo é linear; limites, faixas e exclusões do contrato precisam de revisão separada."
+        },
+        "es": {
+          "title": "Inactividad y créditos de SLA",
+          "description": "Compare la inactividad permitida con un escenario de interrupción y calcule créditos ilustrativos. El modelo es lineal; los límites, tramos y exclusiones del contrato requieren revisión por separado."
+        },
+        "fr": {
+          "title": "Indisponibilité et crédits SLA",
+          "description": "Comparez l’indisponibilité autorisée à un scénario de panne et calculez des crédits indicatifs. Le modèle est linéaire ; les plafonds, paliers et exclusions du contrat demandent un examen distinct."
+        },
+        "de": {
+          "title": "Ausfallzeiten und SLA-Gutschriften",
+          "description": "Vergleichen Sie zulässige Ausfallzeiten mit einem Störungsszenario und berechnen Sie beispielhafte Gutschriften. Das Modell ist linear; Vertragsobergrenzen, Staffelungen und Ausschlüsse müssen gesondert geprüft werden."
+        }
+      }
+    },
+    {
+      "id": "governance",
+      "category": "governance",
+      "kind": "assessment",
+      "location": "site",
+      "slug": "ai-governance-checklist/",
+      "related": "scorecard",
+      "text": {
+        "en": {
+          "title": "AI governance self-assessment",
+          "description": "Review ten controls and identify which ones still need evidence before an AI pilot. Your answers are a planning aid, not an audit, certification or deployment approval."
+        },
+        "pt": {
+          "title": "Autoavaliação de governança de IA",
+          "description": "Revise dez controles e identifique quais ainda precisam de evidências antes de um piloto de IA. Suas respostas apoiam o planejamento; não equivalem a auditoria, certificação ou aprovação para implementar."
+        },
+        "es": {
+          "title": "Autoevaluación de gobernanza de IA",
+          "description": "Revise diez controles e identifique cuáles necesitan evidencias antes de un piloto de IA. Sus respuestas apoyan la planificación; no equivalen a una auditoría, certificación o autorización de implementación."
+        },
+        "fr": {
+          "title": "Autoévaluation de gouvernance IA",
+          "description": "Examinez dix contrôles et repérez ceux qui nécessitent encore des preuves avant un pilote IA. Vos réponses facilitent la préparation ; elles ne constituent ni un audit, ni une certification, ni une autorisation de déploiement."
+        },
+        "de": {
+          "title": "Selbsteinschätzung zur KI-Governance",
+          "description": "Prüfen Sie zehn Kontrollen und erkennen Sie, wo vor einem KI-Pilotprojekt noch Nachweise fehlen. Ihre Angaben unterstützen die Planung; sie ersetzen weder Audit noch Zertifizierung oder Freigabe zur Umsetzung."
+        }
+      }
+    },
+    {
+      "id": "operational-tools",
+      "category": "operations",
+      "kind": "guide",
+      "location": "site",
+      "slug": "apps/operational-planning-tools.html",
+      "related": "manual-cost",
+      "text": {
+        "en": {
+          "title": "Operational planning tools",
+          "description": "Bring manual workload costs, SLA scenarios and AI governance checks into one planning path. The three tools work in your browser without uploading your inputs; their outputs support estimates and self-assessment."
+        },
+        "pt": {
+          "title": "Ferramentas de planejamento operacional",
+          "description": "Reúna custos do trabalho manual, cenários de SLA e controles de governança de IA em um percurso de planejamento. As três ferramentas funcionam no navegador sem enviar suas entradas; os resultados apoiam estimativas e autoavaliação."
+        },
+        "es": {
+          "title": "Herramientas de planificación operativa",
+          "description": "Reúna costes del trabajo manual, escenarios de SLA y controles de gobernanza de IA en una ruta de planificación. Las tres herramientas funcionan en el navegador sin enviar sus datos; los resultados apoyan estimaciones y autoevaluación."
+        },
+        "fr": {
+          "title": "Outils de planification opérationnelle",
+          "description": "Réunissez coûts du travail manuel, scénarios SLA et contrôles de gouvernance IA dans un même parcours. Les trois outils fonctionnent dans le navigateur sans transmettre vos saisies ; les résultats servent à l’estimation et à l’autoévaluation."
+        },
+        "de": {
+          "title": "Werkzeuge für die operative Planung",
+          "description": "Verbinden Sie manuelle Arbeitskosten, SLA-Szenarien und KI-Governance-Kontrollen in einem Planungsablauf. Die drei Werkzeuge laufen im Browser, ohne Ihre Eingaben zu übertragen; die Ergebnisse dienen Schätzungen und der Selbsteinschätzung."
+        }
+      }
+    },
+    {
+      "id": "agriculture",
+      "category": "collections",
+      "kind": "guide",
+      "location": "standalone",
+      "slug": "apps/october-2026-batch111-agriculture.html",
+      "related": "governance",
+      "routes": {
+        "en": "/apps/october-2026-batch111-agriculture.html",
+        "pt": "/apps/october-2026-batch111-agriculture.pt-br.html",
+        "es": "/apps/october-2026-batch111-agriculture.es.html",
+        "fr": "/apps/october-2026-batch111-agriculture.fr.html",
+        "de": "/apps/october-2026-batch111-agriculture.de.html"
+      },
+      "text": {
+        "en": {
+          "title": "Agriculture and FoodTech concepts",
+          "description": "Explore six documented ideas covering crops, livestock, irrigation, food safety, markets and waste. Compare the evidence each would need before a pilot; these are concepts, not verified working AI tools."
+        },
+        "pt": {
+          "title": "Conceitos de agricultura e FoodTech",
+          "description": "Explore seis ideias documentadas sobre lavouras, animais, irrigação, segurança dos alimentos, mercados e desperdício. Compare as evidências necessárias antes de um piloto; são conceitos, não ferramentas de IA com funcionamento verificado."
+        },
+        "es": {
+          "title": "Conceptos de agricultura y FoodTech",
+          "description": "Explore seis ideas documentadas sobre cultivos, ganado, riego, seguridad alimentaria, mercados y desperdicio. Compare las evidencias necesarias antes de un piloto; son conceptos, no herramientas de IA cuyo funcionamiento se haya verificado."
+        },
+        "fr": {
+          "title": "Concepts pour l’agriculture et la FoodTech",
+          "description": "Explorez six idées documentées sur les cultures, l’élevage, l’irrigation, la sécurité alimentaire, les marchés et le gaspillage. Comparez les preuves nécessaires avant un pilote ; il s’agit de concepts, pas d’outils d’IA au fonctionnement vérifié."
+        },
+        "de": {
+          "title": "Konzepte für Landwirtschaft und FoodTech",
+          "description": "Entdecken Sie sechs dokumentierte Ideen zu Pflanzenbau, Tierhaltung, Bewässerung, Lebensmittelsicherheit, Märkten und Abfällen. Vergleichen Sie die benötigten Nachweise vor einem Pilotprojekt; die Konzepte sind keine nachweislich funktionsfähigen KI-Werkzeuge."
         }
       }
     }
