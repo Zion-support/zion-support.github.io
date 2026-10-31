@@ -1,6 +1,6 @@
-# Manual performance diagnosis on an immutable source tree; never a replacement for the required TypeScript gate.
-name: TypeScript Late Phase Diagnostic
-run-name: TypeScript diagnostic 900s — c286a4a3
+# Manual paired performance diagnosis on the same immutable source tree; never the required TypeScript gate.
+name: TypeScript Paired Diagnostic
+run-name: TypeScript paired diagnostic 900s without generateTrace - c286a4a3
 'on':
   workflow_dispatch: null
 permissions:
@@ -10,7 +10,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   bounded-typescript-diagnostic:
-    name: TypeScript performance diagnostic (900s, semi64)
+    name: TypeScript paired diagnostic (900s, semi64, trace off)
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
@@ -33,12 +33,12 @@ jobs:
         cache: npm
     - name: Install exact dependencies
       run: npm ci
-    - name: Capture compiler diagnostic (up to 900 seconds)
+    - name: Capture compiler diagnostic without generateTrace (up to 900 seconds)
       env:
         NODE_OPTIONS: --max-old-space-size=12288 --max-semi-space-size=64
       run: |
         python3 - <<'PY'
-        import collections
+        import re
         import json
         import os
         from pathlib import Path
@@ -118,32 +118,21 @@ jobs:
                     raise
             raw_exit = child.returncode
             effective_exit = 124 if cutoff else (128 - raw_exit if raw_exit < 0 else raw_exit)
-            trace = out / "trace" / "trace.json"
-            trace_closed = False
-            events = collections.Counter()
-            last_events = collections.deque(maxlen=20)
-            if trace.exists():
-                with trace.open("rb") as source:
-                    source.seek(max(0, trace.stat().st_size - 64))
-                    trace_closed = source.read().rstrip().endswith(b"]")
-                with trace.open(errors="replace") as source:
-                    for line in source:
-                        try:
-                            event = json.loads(line.strip().strip(","))
-                        except (ValueError, TypeError):
-                            continue
-                        if isinstance(event, dict) and event.get("cat"):
-                            events[event["cat"]] += 1
-                            last_events.append({key: event[key] for key in ("cat", "name", "ph", "ts", "dur", "args") if key in event})
-            total_time_reported = False
+            trace_file_present = (out / "trace" / "trace.json").exists()
+            total_time_values = []
+            total_time_pattern = re.compile(r"^Total time:\s+([0-9]+(?:\.[0-9]+)?)s\s*$")
             with (out / "compiler.log").open(errors="replace") as source:
-                total_time_reported = any(line.startswith("Total time:") for line in source)
-            complete = not cutoff and raw_exit in (0, 1, 2) and trace_closed and total_time_reported
+                for line in source:
+                    match = total_time_pattern.fullmatch(line.strip())
+                    if match:
+                        total_time_values.append(float(match[1]))
+            total_time_reported = bool(total_time_values)
+            complete = not cutoff and raw_exit in (0, 1, 2) and total_time_reported
             if effective_exit == 0 and not complete:
                 effective_exit = 1
             summary.update({
                 "complete": complete,
-                "status": "cutoff" if cutoff else ("finished" if complete else "terminated_without_complete_trace"),
+                "status": "cutoff" if cutoff else ("finished" if complete else "terminated_without_final_diagnostics"),
                 "elapsed_seconds": time.monotonic() - started,
                 "compiler_exit_code": raw_exit,
                 "exit_code": effective_exit,
@@ -152,11 +141,13 @@ jobs:
                 "user_cpu_seconds": usage.ru_utime,
                 "system_cpu_seconds": usage.ru_stime,
                 "maximum_rss_kib": usage.ru_maxrss,
-                "trace_closed": trace_closed,
+                "trace_requested": False,
+                "trace_file_present": trace_file_present,
+                "compiler_succeeded": complete and raw_exit == 0,
                 "extended_diagnostics_total_time_reported": total_time_reported,
-                "trace_event_counts": dict(events),
-                "last_trace_events": list(last_events),
-                "trace_warning": "Raw trace may be incomplete after termination; no missing events or durations are synthesized.",
+                "extended_diagnostics_total_time_seconds": total_time_values[-1] if total_time_values else None,
+                "extended_diagnostics_total_time_reports": len(total_time_values),
+                "trace_warning": "generateTrace intentionally disabled; no file progress, phase timing, or open spans are available.",
             })
             write_json(out / "summary.json", summary)
             return summary, effective_exit
@@ -185,6 +176,10 @@ jobs:
             input_blobs = {path: output(["git", "hash-object", path]) for path in expected_inputs}
             if input_blobs != expected_inputs:
                 raise SystemExit("Compiler input blobs differ from the immutable target")
+            command = [
+                "node", "--trace-gc", "node_modules/typescript/bin/tsc",
+                "--noEmit", "--extendedDiagnostics",
+            ]
             metadata = {
                 "source_commit": head,
                 "source_tree": tree,
@@ -195,16 +190,14 @@ jobs:
                 "type_check_script": package["scripts"]["type-check"],
                 "node_options": os.environ["NODE_OPTIONS"],
                 "input_blobs": input_blobs,
+                "command": command,
+                "trace_requested": False,
                 "counts_as_required_gate": False,
             }
             write_json(out / "metadata.json", metadata)
-            command = [
-                "node", "--trace-gc", "node_modules/typescript/bin/tsc",
-                "--noEmit", "--extendedDiagnostics", "--generateTrace", str(out / "trace"),
-            ]
             summary, status = observe(command, out, limit_seconds=900, grace_seconds=10)
             with Path(os.environ["GITHUB_STEP_SUMMARY"]).open("a") as report:
-                report.write("## TypeScript performance diagnostic\n\n")
+                report.write("## Paired TypeScript performance diagnostic without generateTrace\n\n")
                 report.write("This run is not the required TypeScript validation.\n\n")
                 report.write(f"- Source commit: {head}\n- Complete: {str(summary['complete']).lower()}\n")
                 report.write(f"- Exit code: {status}\n- Elapsed seconds: {summary['elapsed_seconds']:.1f}\n")
@@ -213,23 +206,34 @@ jobs:
 
         if __name__ == "__main__":
             main()
-
         PY
-    - name: Analyze bounded capture locally inside GitHub
+    - name: Analyze paired capture locally inside GitHub
       if: always()
       run: |
         python3 - <<'PY'
-        import bisect, collections, hashlib, json, math, os, re
+        import collections
+        from decimal import Decimal
+        import hashlib
+        import json
+        import math
+        import os
         from pathlib import Path
+        import re
 
         SOURCE = "c286a4a3e46ba53f55d8fc2583ab475be5e2a157"
         TREE = "dc138bc3906076edbf658daff2fa26853dda9b47"
         OPTIONS = "--max-old-space-size=12288 --max-semi-space-size=64"
         INPUTS = {"package.json": "8f572286b94f517a07f83fbddeba350653ded85e", "package-lock.json": "e79ec8d8bf85ad622306cf39714ec3fbd56c9530", "tsconfig.json": "c128011dc8f2ddb69da4f11dd57b09abe501dacb"}
+        COMMAND = ["node", "--trace-gc", "node_modules/typescript/bin/tsc", "--noEmit", "--extendedDiagnostics"]
         CHECKPOINTS = (180, 360, 600, 900)
-        PHASES = ("program", "parse", "bind", "check", "checkTypes")
-        FILES = {"metadata.json", "summary.json", "resources.jsonl", "compiler.log", "trace/trace.json"}
-        GC_PATTERN = re.compile(r"([0-9.]+) ms: (Scavenge|Mark-Compact|Mark-sweep|Minor Mark-Compact).*?([0-9.]+) \(([0-9.]+)\) -> ([0-9.]+) \(([0-9.]+)\) MB, (?:pooled: [0-9.]+ MB, )?([0-9.]+) / ([0-9.]+) ms")
+        FILES = {"metadata.json", "summary.json", "resources.jsonl", "compiler.log"}
+        NUMBER = r"[0-9]+(?:\.[0-9]+)?"
+        GC_KINDS = r"Minor Mark-Compact|Mark-Compact|Mark-sweep|Scavenge"
+        GC_LINE = re.compile(r"(?P<timestamp>" + NUMBER + r")\s+ms:\s+(?P<payload>(?:" + GC_KINDS + r").*)$")
+        GC_HEADER = re.compile(r"^\s*\[(?P<pid>[0-9]+):(?P<isolate>0x[0-9a-fA-F]+)\]\s+(?P<timestamp>" + NUMBER + r")\s+ms:\s+")
+        GC_PAYLOAD = re.compile(r"^(?P<kind>" + GC_KINDS + r").*?(?P<before>" + NUMBER + r")\s+\((?P<capacity_before>" + NUMBER + r")\)\s+->\s+(?P<after>" + NUMBER + r")\s+\((?P<capacity_after>" + NUMBER + r")\)\s+MB,\s+(?:pooled:\s+" + NUMBER + r"\s+MB,\s+)?(?P<pause>" + NUMBER + r")\s+/\s+(?P<other_pause>" + NUMBER + r")\s+ms")
+        GC_LIKE = re.compile(r"ms:\s+(?:" + GC_KINDS + r")")
+        KEY_SCHEMA = ["pid", "isolate_lowercase", "timestamp_ms_decimal", "complete_payload_with_collapsed_whitespace"]
 
         class LocalCapture:
             def __init__(self, directory):
@@ -241,488 +245,278 @@ jobs:
                 assert name in FILES
                 return (self.directory / name).open("rb")
 
-        def relative(path, workspace):
-            prefix = workspace.rstrip("/") + "/"
-            if not isinstance(path, str) or not path.startswith(prefix):
-                return None
-            value = path[len(prefix):]
-            if not value or any(ord(c) < 32 or ord(c) == 127 for c in value):
-                return None
-            if value.startswith("/") or "\\" in value or ":" in value or ".." in value.split("/"):
-                return None
-            return value
+        def stable_hash(value):
+            return hashlib.sha256(json.dumps(value, ensure_ascii=False, separators=(",", ":")).encode()).hexdigest()
 
-        def add_interval(values, start, end):
-            assert math.isfinite(start) and math.isfinite(end) and 0 <= start <= end
-            i = bisect.bisect_left(values, (start, float("-inf")))
-            if i and values[i-1][1] >= start:
-                i -= 1
-            j = i
-            while j < len(values) and values[j][0] <= end:
-                start = min(start, values[j][0])
-                end = max(end, values[j][1])
-                j += 1
-            values[i:j] = [(start, end)]
-
-        def trace_stats(reader, workspace):
-            stacks = collections.defaultdict(list)
-            unions = collections.defaultdict(list)
-            interval_counts = collections.Counter()
-            parsed = set()
-            completed_first = {}
-            completed_events = []
-            source_intervals = []
-            per_file = {}
-            malformed = unmatched = mismatched = invalid_times = 0
-            latest_stamp = 0.0
-            first_check = None
-
-            def close_interval(phase, name, path, start, end):
-                add_interval(unions[phase], start, end)
-                interval_counts[phase] += 1
-                if phase == "check" and name == "checkSourceFile":
-                    completed_events.append(end)
-                    if path is not None:
-                        completed_first[path] = min(end, completed_first.get(path, end))
-                        source_intervals.append({"path": path, "start_seconds": start, "end_seconds": end})
-                        item = per_file.setdefault(path, {"intervals": [], "events": 0, "maximum_seconds": 0.0, "first_start": start, "last_end": end})
-                        add_interval(item["intervals"], start, end)
-                        item["events"] += 1
-                        item["maximum_seconds"] = max(item["maximum_seconds"], end-start)
-                        item["first_start"] = min(item["first_start"], start)
-                        item["last_end"] = max(item["last_end"], end)
-
-            with reader.open("trace/trace.json") as stream:
-                for raw in stream:
-                    line = raw.decode(errors="replace").strip().strip(",")
-                    if not line or line in ("[", "]"):
-                        continue
-                    try:
-                        event = json.loads(line)
-                    except ValueError:
-                        malformed += 1
-                        continue
-                    if not isinstance(event, dict) or event.get("cat") not in PHASES:
-                        continue
-                    phase, kind, stamp = event["cat"], event.get("ph"), event.get("ts")
-                    if not isinstance(stamp, (int, float)) or not math.isfinite(stamp) or stamp < 0:
-                        invalid_times += 1
-                        continue
-                    stamp /= 1e6
-                    latest_stamp = max(latest_stamp, stamp)
-                    name = event.get("name")
-                    if not isinstance(name, str) or not re.fullmatch(r"[A-Za-z][A-Za-z0-9_]{0,100}", name):
-                        name = "unrecognized_event"
-                    path = relative((event.get("args") or {}).get("path"), workspace)
-                    if phase == "parse" and path is not None:
-                        parsed.add(path)
-                    key = (event.get("pid"), event.get("tid"), phase)
-                    if kind == "B":
-                        stacks[key].append({"phase": phase, "name": name, "start_seconds": stamp, "path": path})
-                        if phase == "check" and name == "checkSourceFile":
-                            first_check = stamp if first_check is None else min(first_check, stamp)
-                    elif kind == "E":
-                        if not stacks[key]:
-                            unmatched += 1
-                            continue
-                        begin = stacks[key][-1]
-                        if begin["name"] != name:
-                            mismatched += 1
-                            continue
-                        if stamp < begin["start_seconds"]:
-                            invalid_times += 1
-                            continue
-                        stacks[key].pop()
-                        close_interval(phase, name, begin["path"], begin["start_seconds"], stamp)
-                    elif kind == "X" and isinstance(event.get("dur"), (int, float)):
-                        duration = event["dur"] / 1e6
-                        if not math.isfinite(duration) or duration < 0:
-                            invalid_times += 1
-                            continue
-                        latest_stamp = max(latest_stamp, stamp + duration)
-                        close_interval(phase, name, path, stamp, stamp + duration)
-                        if phase == "check" and name == "checkSourceFile":
-                            first_check = stamp if first_check is None else min(first_check, stamp)
-
-            open_spans = [item for stack in stacks.values() for item in stack]
-            open_spans.sort(key=lambda x: x["start_seconds"])
-            for item in open_spans:
-                if item["phase"] == "check" and item["name"] == "checkSourceFile" and item["path"] is not None:
-                    source_intervals.append({"path": item["path"], "start_seconds": item["start_seconds"], "end_seconds": None})
-            slowest = [{"path": path, "completed_check_intervals": item["events"], "completed_union_seconds": sum(b-a for a,b in item["intervals"]), "longest_completed_interval_seconds": item["maximum_seconds"], "first_start_seconds": item["first_start"], "last_end_seconds": item["last_end"]} for path,item in per_file.items()]
-            slowest.sort(key=lambda x: (-x["completed_union_seconds"], x["path"]))
-            phases = {phase: {"completed_intervals": interval_counts[phase], "observed_union_seconds": sum(b-a for a,b in unions[phase]), "last_completed_end_seconds": unions[phase][-1][1] if unions[phase] else None} for phase in PHASES}
-            result = {
-                "observed_parsed_source_count": len(parsed),
-                "observed_parsed_source_set_sha256": hashlib.sha256("\n".join(sorted(parsed)).encode()).hexdigest(),
-                "observed_json_source_count": sum(path.endswith(".json") for path in parsed),
-                "checkSourceFile_completed_events": len(completed_events),
-                "checkSourceFile_completed_unique": len(completed_first),
-                "checkSourceFile_first_start_seconds": first_check,
-                "last_observed_trace_timestamp_seconds": latest_stamp,
-                "phase_intervals": phases,
-                "open_span_count": len(open_spans),
-                "open_spans": open_spans[:20],
-                "slowest_completed_source_files": slowest[:20],
-                "malformed_trace_lines": malformed,
-                "unmatched_end_events": unmatched,
-                "mismatched_end_events": mismatched,
-                "invalid_timestamps": invalid_times,
-            }
-            return result, completed_first, completed_events, source_intervals
+        def decimal_token(value):
+            return format(Decimal(value).normalize(), "f")
 
         def gc_stats(reader):
-            events = []
-            unparsed = 0
+            records, unparsed = [], []
             markers = collections.Counter()
+            history_block = 0
+            in_history = False
+            fatal_seen = False
+            total_lines = 0
             with reader.open("compiler.log") as stream:
-                for raw in stream:
-                    line = raw.decode(errors="replace")
-                    match = GC_PATTERN.search(line)
-                    if match:
-                        events.append({"elapsed_seconds": float(match[1])/1000, "kind": match[2], "used_before_mb": float(match[3]), "used_after_mb": float(match[5]), "capacity_after_mb": float(match[6]), "reported_pause_ms": float(match[7])})
-                    elif re.search(r"ms: (Scavenge|Mark-Compact|Mark-sweep|Minor Mark-Compact)", line):
-                        unparsed += 1
+                for line_number, raw in enumerate(stream, 1):
+                    total_lines = line_number
+                    line = raw.decode(errors="replace").rstrip("\r\n")
+                    if "<--- Last few GCs --->" in line:
+                        history_block += 1
+                        in_history = True
+                    if "<--- JS stacktrace --->" in line or "FATAL ERROR" in line:
+                        in_history = False
+                    if "FATAL ERROR" in line:
+                        fatal_seen = True
                     for label, pattern in {"typescript_errors": r"error TS[0-9]+", "fatal_errors": "FATAL ERROR", "heap_oom": "heap out of memory"}.items():
                         if re.search(pattern, line):
                             markers[label] += 1
-            return events, unparsed, dict(markers)
+                    match = GC_LINE.search(line)
+                    payload_match = GC_PAYLOAD.match(match["payload"]) if match else None
+                    if not match or not payload_match:
+                        if GC_LIKE.search(line):
+                            unparsed.append({"record_type": "unparsed_gc_line", "line_number": line_number, "raw_line_sha256": hashlib.sha256(raw).hexdigest(), "reason": "GC-like line did not match the complete supported timestamp/memory/pause format"})
+                        continue
+                    header = GC_HEADER.match(line)
+                    timestamp = decimal_token(match["timestamp"])
+                    payload = " ".join(match["payload"].split())
+                    key = None
+                    if header and decimal_token(header["timestamp"]) == timestamp:
+                        key = [str(int(header["pid"])), header["isolate"].lower(), timestamp, payload]
+                    section = "fatal_gc_history" if in_history else ("after_fatal_error" if fatal_seen else "regular")
+                    values = {name: float(payload_match[name]) for name in ("before", "capacity_before", "after", "capacity_after", "pause", "other_pause")}
+                    assert all(math.isfinite(value) and value >= 0 for value in values.values())
+                    records.append({
+                        "record_type": "parsed_gc_line", "line_number": line_number,
+                        "raw_line_sha256": hashlib.sha256(raw).hexdigest(),
+                        "section": section, "fatal_history_block": history_block if in_history else None,
+                        "timestamp_token": match["timestamp"], "timestamp_ms_decimal": timestamp,
+                        "elapsed_seconds": float(Decimal(timestamp) / Decimal(1000)),
+                        "kind": payload_match["kind"],
+                        "used_before_mb": values["before"], "capacity_before_mb": values["capacity_before"],
+                        "used_after_mb": values["after"], "capacity_after_mb": values["capacity_after"],
+                        "reported_pause_ms": values["pause"], "reported_second_pause_ms": values["other_pause"],
+                        "exact_key": key, "exact_key_sha256": stable_hash(key) if key else None,
+                        "identity_complete": key is not None,
+                    })
+            return records, unparsed, dict(markers), {"compiler_log_lines": total_lines, "fatal_history_blocks": history_block}
 
-        def summarize_gc(events):
-            counts = collections.Counter()
-            pauses = collections.Counter()
-            for event in events:
-                counts[event["kind"]] += 1
-                pauses[event["kind"]] += event["reported_pause_ms"]
+        def short_record(record):
+            return {key: record[key] for key in ("line_number", "section", "timestamp_ms_decimal", "elapsed_seconds", "kind", "reported_pause_ms", "used_after_mb", "capacity_after_mb", "exact_key_sha256")}
+
+        def summarize_gc(records):
+            counts, pauses = collections.Counter(), collections.Counter()
+            for record in records:
+                counts[record["kind"]] += 1
+                pauses[record["kind"]] += record["reported_pause_ms"]
             return {
-                "counts": dict(counts),
-                "reported_pause_ms": dict(pauses),
-                "maximum_used_after_mb": max((x["used_after_mb"] for x in events), default=None),
-                "maximum_capacity_after_mb": max((x["capacity_after_mb"] for x in events), default=None),
-                "last_events": events[-5:],
+                "observations": len(records), "counts": dict(counts), "reported_pause_ms": dict(pauses),
+                "maximum_used_after_mb": max((row["used_after_mb"] for row in records), default=None),
+                "maximum_capacity_after_mb": max((row["capacity_after_mb"] for row in records), default=None),
+                "last_records": [short_record(row) for row in records[-5:]],
             }
+
+        def gc_accounting(records):
+            groups = collections.OrderedDict()
+            timestamp_groups = collections.defaultdict(list)
+            for record in records:
+                # Missing identity is never deduplicated, even if the remaining text agrees.
+                key = record["exact_key_sha256"] or ("identity-incomplete-line-" + str(record["line_number"]))
+                groups.setdefault(key, []).append(record)
+                if record["exact_key"] is not None:
+                    timestamp_groups[tuple(record["exact_key"][:3])].append(record)
+            unique_signatures, candidates, repeated, ambiguous = [], [], [], []
+            confirmed_reprints = []
+            for key, occurrences in groups.items():
+                unique_signatures.append(occurrences[0])
+                earlier_regular = []
+                removed = []
+                for occurrence in occurrences:
+                    if occurrence["section"] == "fatal_gc_history" and earlier_regular:
+                        removed.append(occurrence)
+                        confirmed_reprints.append(occurrence)
+                    else:
+                        candidates.append(occurrence)
+                    if occurrence["section"] == "regular":
+                        earlier_regular.append(occurrence)
+                if len(occurrences) > 1:
+                    outside_history = [row for row in occurrences if row["section"] != "fatal_gc_history"]
+                    uncertain = len(outside_history) > 1 or len(removed) != len(occurrences) - 1
+                    detail = {
+                        "exact_key": occurrences[0]["exact_key"], "exact_key_sha256": occurrences[0]["exact_key_sha256"],
+                        "occurrences": [{"line_number": row["line_number"], "section": row["section"], "fatal_history_block": row["fatal_history_block"], "raw_line_sha256": row["raw_line_sha256"]} for row in occurrences],
+                        "confirmed_fatal_reprint_lines": [row["line_number"] for row in removed],
+                        "ambiguous": uncertain,
+                        "reason": "Repeated exact signature outside a proven fatal reprint; distinct rounded-time events cannot be excluded" if uncertain else "Exact signature reprinted inside fatal GC history after a matching regular trace line",
+                    }
+                    repeated.append(detail)
+                    if uncertain:
+                        ambiguous.append(detail)
+            collisions = []
+            for identity, occurrences in timestamp_groups.items():
+                signatures = collections.OrderedDict()
+                for row in occurrences:
+                    signatures.setdefault(row["exact_key_sha256"], row["exact_key"][3])
+                if len(signatures) > 1:
+                    collisions.append({
+                        "pid_isolate_timestamp": list(identity),
+                        "signatures": [{"exact_key_sha256": key, "complete_normalized_payload": payload} for key, payload in signatures.items()],
+                        "line_numbers": [row["line_number"] for row in occurrences],
+                        "reason": "Same reported timestamp with different complete payloads; retained as different signatures, not deduplicated",
+                    })
+            candidates.sort(key=lambda row: row["line_number"])
+            unique_signatures.sort(key=lambda row: row["line_number"])
+            return {
+                "key_schema": KEY_SCHEMA,
+                "key_serialization": "SHA256 of UTF-8 JSON array, ensure_ascii=false, separators comma/colon; timestamp normalized with Decimal, full payload whitespace collapsed",
+                "log_lines": summarize_gc(records),
+                "unique_signatures": summarize_gc(unique_signatures),
+                "event_candidates_after_confirmed_fatal_reprints": summarize_gc(candidates),
+                "confirmed_fatal_reprint_lines": [row["line_number"] for row in confirmed_reprints],
+                "repeated_signature_groups": repeated,
+                "ambiguous_repeated_signature_groups": ambiguous,
+                "same_timestamp_different_payload_groups": collisions,
+                "identity_incomplete_lines": [row["line_number"] for row in records if not row["identity_complete"]],
+                "known_identity_or_timestamp_ambiguities_present": bool(ambiguous or collisions or any(not row["identity_complete"] for row in records)),
+                "interpretation": "Unique signatures are distinct reported keys, not proof of globally unique GC events. Only exact matches in fatal history with an earlier regular occurrence are removed from event candidates. Other repeats, timestamp collisions, missing identities, and unparsed lines remain explicit.",
+                "largest_candidate_reported_pauses": [short_record(row) for row in sorted(candidates, key=lambda row: -row["reported_pause_ms"])[:10]],
+            }
+
+        def compact_accounting(detail):
+            value = dict(detail)
+            for key in ("repeated_signature_groups", "ambiguous_repeated_signature_groups", "same_timestamp_different_payload_groups"):
+                groups = detail[key]
+                value[key] = {"total": len(groups), "preview": groups[:20], "preview_truncated": len(groups) > 20, "complete_details_file": "gc-deduplication.json"}
+            for key in ("confirmed_fatal_reprint_lines", "identity_incomplete_lines"):
+                lines = detail[key]
+                value[key] = {"total": len(lines), "preview": lines[:100], "preview_truncated": len(lines) > 100, "complete_details_file": "gc-deduplication.json"}
+            return value
 
         def resource_window(resources, start, end):
             rows = [row for row in resources if start <= row["elapsed_seconds"] <= end]
             if not rows:
                 return {"samples": 0, "observed_sample_interval": None}
             first, last = rows[0], rows[-1]
-            duration = last["elapsed_seconds"]-first["elapsed_seconds"]
-            user = last["user_cpu_seconds"]-first["user_cpu_seconds"]
-            system = last["system_cpu_seconds"]-first["system_cpu_seconds"]
+            duration = last["elapsed_seconds"] - first["elapsed_seconds"]
+            user = last["user_cpu_seconds"] - first["user_cpu_seconds"]
+            system = last["system_cpu_seconds"] - first["system_cpu_seconds"]
             return {
-                "samples": len(rows),
-                "observed_sample_interval": [first["elapsed_seconds"], last["elapsed_seconds"]],
-                "user_cpu_delta_seconds": user,
-                "system_cpu_delta_seconds": system,
-                "cpu_seconds_per_observed_wall_second": (user+system)/duration if duration > 0 else None,
-                "first_sampled_rss_kib": first.get("VmRSS_kib"),
-                "last_sampled_rss_kib": last.get("VmRSS_kib"),
+                "samples": len(rows), "observed_sample_interval": [first["elapsed_seconds"], last["elapsed_seconds"]],
+                "user_cpu_delta_seconds": user, "system_cpu_delta_seconds": system,
+                "cpu_seconds_per_observed_wall_second": (user + system) / duration if duration > 0 else None,
+                "first_sampled_rss_kib": first.get("VmRSS_kib"), "last_sampled_rss_kib": last.get("VmRSS_kib"),
                 "peak_sampled_rss_kib": max((row.get("VmRSS_kib", 0) for row in rows), default=0),
                 "peak_reported_process_hwm_kib": max((row.get("VmHWM_kib", 0) for row in rows), default=0),
             }
 
-        def checkpoint_windows(summary, completed_first, completed_events, source_intervals, resources, gc_events):
+        def checkpoint_windows(summary, resources, gc_records):
             elapsed = summary["elapsed_seconds"]
             result = []
             start = 0
             for checkpoint in CHECKPOINTS:
-                reached = elapsed >= checkpoint
                 observed_end = min(checkpoint, elapsed)
-                observed_seconds = max(0, observed_end-start)
                 valid_window = observed_end >= start
-                completed_before = sum(end <= start for end in completed_first.values())
-                completed_at_end = sum(end <= observed_end for end in completed_first.values()) if valid_window else None
-                delta = completed_at_end-completed_before if valid_window else None
-                active = [x for x in source_intervals if x["start_seconds"] <= observed_end and (x["end_seconds"] is None or observed_end < x["end_seconds"])] if valid_window else []
-                gc_rows = [x for x in gc_events if (start < x["elapsed_seconds"] <= observed_end or start == 0 and x["elapsed_seconds"] == 0)] if valid_window else []
+                rows = [row for row in gc_records if start < row["elapsed_seconds"] <= observed_end or start == 0 and row["elapsed_seconds"] == 0] if valid_window else []
                 result.append({
-                    "requested_checkpoint_seconds": checkpoint,
-                    "capture_reached_checkpoint": reached,
+                    "requested_checkpoint_seconds": checkpoint, "capture_reached_checkpoint": elapsed >= checkpoint,
                     "nominal_window_seconds": [start, checkpoint],
                     "observed_window_end_seconds": observed_end if valid_window else None,
-                    "completed_unique_at_checkpoint": sum(end <= checkpoint for end in completed_first.values()) if reached else None,
-                    "completed_events_at_checkpoint": sum(end <= checkpoint for end in completed_events) if reached else None,
-                    "observed_completed_unique_at_window_end": completed_at_end,
-                    "newly_completed_unique_in_window": delta,
-                    "completed_unique_per_observed_window_second": delta/observed_seconds if observed_seconds > 0 else None,
-                    "active_source_span_count_at_observed_window_end": len(active),
-                    "active_source_spans_at_observed_window_end": [{"path": x["path"], "start_seconds": x["start_seconds"]} for x in active[:10]],
                     "resources": resource_window(resources, start, observed_end) if valid_window else {"samples": 0, "observed_sample_interval": None},
-                    "gc_by_reported_timestamp": summarize_gc(gc_rows),
+                    "gc_by_reported_timestamp": compact_accounting(gc_accounting(rows)),
                 })
                 start = checkpoint
             return result
 
-        def analyze(reader, workflow_head, workspace):
+        def analyze(reader, workflow_head):
             metadata = json.loads(reader.read("metadata.json"))
             summary = json.loads(reader.read("summary.json"))
             assert metadata["source_commit"] == SOURCE and metadata["source_tree"] == TREE, "Source target mismatch"
             assert metadata["workflow_commit"] == workflow_head, "Workflow provenance mismatch"
             assert metadata["node_version"] == "v20.20.2" and metadata["npm_version"] == "10.8.2" and metadata["typescript_version"] == "5.9.3", "Runtime mismatch"
             assert metadata["input_blobs"] == INPUTS and metadata["type_check_script"] == "tsc --noEmit", "Compiler input mismatch"
-            assert metadata["node_options"] == OPTIONS, "Unexpected compiler flags"
+            assert metadata["node_options"] == OPTIONS and metadata["command"] == COMMAND, "Unexpected compiler command or flags"
+            assert metadata["trace_requested"] is False and summary["trace_requested"] is False, "This paired capture must not request generateTrace"
             assert metadata["counts_as_required_gate"] is False and summary["counts_as_required_gate"] is False
             assert summary["limit_seconds"] == 900 and summary["grace_seconds"] == 10, "Capture limits changed"
-            if summary["cutoff_reached"]:
-                assert summary["complete"] is False and summary["exit_code"] == 124, "Cutoff must stay incomplete and failed"
-            if summary["complete"]:
-                assert summary["exit_code"] in (0, 1, 2) and not summary["cutoff_reached"]
-                assert summary["trace_closed"] and summary["extended_diagnostics_total_time_reported"]
-            assert summary["exit_code"] != 0 or summary["complete"] is True
+            raw_exit = summary["compiler_exit_code"]
+            expected_complete = not summary["cutoff_reached"] and raw_exit in (0, 1, 2) and summary["extended_diagnostics_total_time_reported"]
+            assert summary["complete"] is expected_complete, "Completeness must depend on compiler termination, no cutoff, and final extended diagnostics"
+            expected_exit = 124 if summary["cutoff_reached"] else (128 - raw_exit if raw_exit < 0 else raw_exit)
+            if expected_exit == 0 and not expected_complete:
+                expected_exit = 1
+            assert summary["exit_code"] == expected_exit, "Compiler/cutoff exit propagation changed"
+            assert summary["compiler_succeeded"] is (expected_complete and raw_exit == 0)
             resources = [json.loads(line) for line in reader.read("resources.jsonl").splitlines() if line]
             resources.sort(key=lambda row: row["elapsed_seconds"])
-            trace, completed_first, completed_events, source_intervals = trace_stats(reader, workspace)
-            gc_events, gc_unparsed, markers = gc_stats(reader)
-            fields = ("complete", "counts_as_required_gate", "status", "limit_seconds", "grace_seconds", "elapsed_seconds", "compiler_exit_code", "exit_code", "cutoff_reached", "forced_kill_after_grace", "user_cpu_seconds", "system_cpu_seconds", "maximum_rss_kib", "trace_closed", "extended_diagnostics_total_time_reported")
-            return {
-                "analysis_only": True,
-                "counts_as_required_gate": False,
+            gc_records, unparsed, markers, log_info = gc_stats(reader)
+            gc_detail = gc_accounting(gc_records)
+            gc_detail["unparsed_gc_lines"] = unparsed
+            if unparsed:
+                gc_detail["known_identity_or_timestamp_ambiguities_present"] = True
+            fields = ("complete", "counts_as_required_gate", "status", "limit_seconds", "grace_seconds", "elapsed_seconds", "compiler_exit_code", "exit_code", "cutoff_reached", "forced_kill_after_grace", "user_cpu_seconds", "system_cpu_seconds", "maximum_rss_kib", "trace_requested", "trace_file_present", "extended_diagnostics_total_time_reported", "extended_diagnostics_total_time_seconds", "extended_diagnostics_total_time_reports", "compiler_succeeded")
+            report = {
+                "analysis_only": True, "counts_as_required_gate": False,
                 "source_commit": SOURCE, "source_tree": TREE, "workflow_commit": workflow_head,
                 "runtime": {key: metadata[key] for key in ("node_version", "npm_version", "typescript_version")},
-                "node_options": OPTIONS, "input_blobs_verified": True,
+                "node_options": OPTIONS, "input_blobs_verified": True, "compiler_command": COMMAND,
                 "summary": {key: summary.get(key) for key in fields},
-                "trace": trace,
-                "checkpoints": checkpoint_windows(summary, completed_first, completed_events, source_intervals, resources, gc_events),
+                "trace": {"requested": False, "absence_expected": True, "file_present": summary.get("trace_file_present", False), "per_file_progress_available": False, "phase_timing_available": False},
+                "checkpoints": checkpoint_windows(summary, resources, gc_records),
                 "resources": {"samples": len(resources), "peak_sampled_rss_kib": max((row.get("VmRSS_kib", 0) for row in resources), default=0), "sample_resolution_seconds": 1},
-                "gc": {**summarize_gc(gc_events), "unparsed_lines": gc_unparsed, "largest_reported_pauses": sorted(gc_events, key=lambda x: -x["reported_pause_ms"])[:10]},
+                "gc": {**compact_accounting(gc_detail), "unparsed_gc_lines": {"total": len(unparsed), "preview": unparsed[:20], "preview_truncated": len(unparsed) > 20, "complete_details_file": "gc-deduplication.json"}, **log_info},
                 "compiler_marker_counts": markers,
                 "limitations": [
-                    "This is a bounded diagnostic, never the required TypeScript gate.",
-                    "Observed completed checkSourceFile events and distinct file counts are separate; deferred and relation events are not counted as files.",
-                    "Open or mismatched spans have no synthesized duration and are excluded from completed-file timing.",
-                    "Phase categories can overlap; their union times must not be summed as total wall time.",
-                    "Trace, V8 GC and controller resource clocks have slightly different startup origins; resources are sampled about once per second.",
-                    "GC windows group each complete reported pause by the timestamp printed by V8; sums omit background GC cost.",
-                    "CPU deltas cover the displayed sample interval only, without interpolation across missing samples; wait4 retains whole-process totals.",
-                    "A partial trace can lose tail events after SIGINT/SIGKILL; no absent events or progress are inferred.",
-                    "The slowest completed files exclude the file still open at cutoff; an open span alone does not prove that file is pathological.",
+                    "This bounded paired diagnostic never replaces the required TypeScript gate, including when complete and exit 0.",
+                    "generateTrace is intentionally absent. No file counts, file progress, phase durations, or open spans are inferred.",
+                    "Complete means an exit of 0/1/2, no cutoff, and a valid final extended-diagnostics Total time line. Compiler errors still retain exit 1/2.",
+                    "GC unique-signature summaries are not asserted to be unique physical events when repeated keys, rounded timestamp collisions, missing identities, or unparsed lines are ambiguous.",
+                    "Original compiler.log, the ordered GC ledger, and complete deduplication details retain all evidence; console previews explicitly declare truncation.",
+                    "GC windows use the timestamp printed by V8, including fatal-history reprints; full reported pauses are assigned to that timestamp, and background GC cost is not included.",
+                    "GC and controller clocks have slightly different startup origins. CPU deltas cover only the shown sampled intervals; wait4 retains whole-process totals.",
+                    "RSS is sampled about once per second. elapsed_seconds retains the original controller definition, including its final summary-file inspection.",
+                    "Removal of generateTrace changes instrumentation overhead; this experiment alone is not a pass of the required uninstrumented gate.",
                 ],
             }
+            ledger = sorted(gc_records + unparsed, key=lambda row: row["line_number"])
+            return report, ledger, gc_detail
 
         def main():
             directory = Path(os.environ["PROFILE_DIR"])
-            report = analyze(LocalCapture(directory), os.environ["GITHUB_SHA"], os.environ["GITHUB_WORKSPACE"])
-            (directory / "late-analysis.json").write_text(json.dumps(report, indent=2) + "\n")
-            print("TYPESCRIPT_LATE_DIAGNOSTIC " + json.dumps(report, separators=(",", ":")))
+            report, ledger, gc_detail = analyze(LocalCapture(directory), os.environ["GITHUB_SHA"])
+            (directory / "paired-analysis.json").write_text(json.dumps(report, indent=2) + "\n")
+            (directory / "gc-deduplication.json").write_text(json.dumps(gc_detail, indent=2) + "\n")
+            with (directory / "gc-records.jsonl").open("w") as output:
+                for record in ledger:
+                    output.write(json.dumps(record, separators=(",", ":")) + "\n")
+            print("TYPESCRIPT_PAIRED_DIAGNOSTIC " + json.dumps(report, separators=(",", ":")))
             with Path(os.environ["GITHUB_STEP_SUMMARY"]).open("a") as summary:
-                summary.write("\n## Bounded late-phase TypeScript diagnostic\n\n")
-                summary.write("This analysis does not replace the required TypeScript gate. A successful analysis does not change the compiler step's exit status.\n\n")
-                summary.write(f"- Complete: {report['summary']['complete']}; compiler step exit: {report['summary']['exit_code']}\n")
-                summary.write(f"- Observed completed distinct source files: {report['trace']['checkSourceFile_completed_unique']}\n")
+                summary.write("\n## Paired TypeScript diagnostic without generateTrace\n\n")
+                summary.write("This analysis does not replace the required TypeScript gate and does not change the compiler step's exit status.\n\n")
+                summary.write(f"- Complete capture: {report['summary']['complete']}; compiler step exit: {report['summary']['exit_code']}\n")
+                summary.write("- File progress and phase timing are unavailable because generateTrace was intentionally disabled.\n")
                 for row in report["checkpoints"]:
-                    summary.write(f"- At {row['requested_checkpoint_seconds']}s: reached={row['capture_reached_checkpoint']}, completed distinct files={row['completed_unique_at_checkpoint']}\n")
+                    summary.write(f"- At {row['requested_checkpoint_seconds']}s: reached={row['capture_reached_checkpoint']}; resource samples={row['resources']['samples']}\n")
+                summary.write(f"- Parsed GC log lines: {gc_detail['log_lines']['observations']}; distinct signatures: {gc_detail['unique_signatures']['observations']}; confirmed fatal reprint lines: {len(gc_detail['confirmed_fatal_reprint_lines'])}\n")
+                summary.write(f"- Ambiguous repeated signatures: {len(gc_detail['ambiguous_repeated_signature_groups'])}; timestamp/payload collision groups: {len(gc_detail['same_timestamp_different_payload_groups'])}; incomplete identities: {len(gc_detail['identity_incomplete_lines'])}; unparsed GC-like lines: {len(gc_detail['unparsed_gc_lines'])}\n")
 
         if __name__ == "__main__":
             main()
-
-        PY
-    - name: Audit exact orphan references in immutable sitemap
-      if: always()
-      run: |
-        python3 - <<'PY'
-        import collections, hashlib, json, os, re, subprocess
-        from pathlib import Path
-        from urllib.parse import unquote, urlsplit
-        import xml.etree.ElementTree as ET
-
-        SOURCE = "c286a4a3e46ba53f55d8fc2583ab475be5e2a157"
-        TREE = "dc138bc3906076edbf658daff2fa26853dda9b47"
-        SITEMAP = "public/sitemap-1.xml"
-        SITEMAP_BLOB = "fe85c1bb740415526bdd5d37e416369f36d6cc4d"
-        ORPHAN_PATHS = [
-          "app/services/services/ai-financial-planning--analysis-5e52b3a4/page.tsx",
-          "app/services/services/ai-meeting-assistant-pro-65a2e338/page.tsx",
-          "app/services/services/ai-meeting-assistant-pro-6b633988/page.tsx",
-          "app/services/services/ai-powered-batch-processing-0682b4cf/page.tsx",
-          "app/services/services/ai-powered-batch-processing-41cbbdf4/page.tsx",
-          "app/services/services/ai-powered-batch-processing-45a8d119/page.tsx",
-          "app/services/services/ai-powered-blockchain-analytics-d9b77db5/page.tsx",
-          "app/services/services/ai-powered-chatbot-builder-46e866f3/page.tsx",
-          "app/services/services/ai-powered-chatbot-builder-90bc2070/page.tsx",
-          "app/services/services/ai-powered-chatbot-builder-98728e44/page.tsx",
-          "app/services/services/ai-powered-chatbot-builder-d7d3347d/page.tsx",
-          "app/services/services/ai-powered-container-orchestration-5c3e7405/page.tsx",
-          "app/services/services/ai-powered-content-generation-platform-d804cd27/page.tsx",
-          "app/services/services/ai-powered-contract-analysis-288f1532/page.tsx",
-          "app/services/services/ai-powered-contract-analysis-8ef71dd6/page.tsx",
-          "app/services/services/ai-powered-customer-churn-prevention-72920af2/page.tsx",
-          "app/services/services/ai-powered-customer-journey-mapping-1961867c/page.tsx",
-          "app/services/services/ai-powered-customer-journey-mapping-4f2b8912/page.tsx",
-          "app/services/services/ai-powered-customer-journey-mapping-a34583a6/page.tsx",
-          "app/services/services/ai-powered-customer-journey-mapping-b20507ca/page.tsx",
-          "app/services/services/ai-powered-customer-journey-mapping-d8e34df4/page.tsx",
-          "app/services/services/ai-powered-data-governance-8ea9ccf1/page.tsx",
-          "app/services/services/ai-powered-data-integration-e2d5ab0e/page.tsx",
-          "app/services/services/ai-powered-data-lineage-0cba5166/page.tsx",
-          "app/services/services/ai-powered-data-migration-757fc3df/page.tsx",
-          "app/services/services/ai-powered-data-migration-781b67ae/page.tsx",
-          "app/services/services/ai-powered-data-migration-91664e09/page.tsx",
-          "app/services/services/ai-powered-data-migration-e21c028d/page.tsx",
-          "app/services/services/ai-powered-data-privacy-55541ae6/page.tsx",
-          "app/services/services/ai-powered-data-privacy-6c9ee0c4/page.tsx",
-          "app/services/services/ai-powered-data-privacy-6cb29f51/page.tsx",
-          "app/services/services/ai-powered-data-visualization-c73ed4a2/page.tsx",
-          "app/services/services/ai-powered-data-visualization-d5702131/page.tsx",
-          "app/services/services/ai-powered-data-warehouse-optimization-438c1dd3/page.tsx",
-          "app/services/services/ai-powered-demand-forecasting-c2d835a2/page.tsx",
-          "app/services/services/ai-powered-disaster-recovery-d73dd9a9/page.tsx",
-          "app/services/services/ai-powered-edge-ai-platform-aece8935/page.tsx",
-          "app/services/services/ai-powered-email-marketing-automation-bba5e7d7/page.tsx",
-          "app/services/services/ai-powered-email-personalization-690a0829/page.tsx",
-          "app/services/services/ai-powered-email-personalization-bbfb7393/page.tsx",
-          "app/services/services/ai-powered-email-personalization-cae2ec94/page.tsx",
-          "app/services/services/ai-powered-etl-pipeline-optimization-52241409/page.tsx",
-          "app/services/services/ai-powered-hr-analytics-296a501d/page.tsx",
-          "app/services/services/ai-powered-hr-analytics-efbbf076/page.tsx",
-          "app/services/services/ai-powered-inventory-optimization-41c98f20/page.tsx",
-          "app/services/services/ai-powered-lead-scoring--routing-590fbfde/page.tsx",
-          "app/services/services/ai-powered-lead-scoring--routing-fd4a9f9c/page.tsx",
-          "app/services/services/ai-powered-log-analysis-2b4f5108/page.tsx",
-          "app/services/services/ai-powered-master-data-management-ee3ba39e/page.tsx",
-          "app/services/services/ai-powered-master-data-sync-bff0122f/page.tsx",
-          "app/services/services/ai-powered-microservices-management-033faf77/page.tsx",
-          "app/services/services/ai-powered-microservices-management-d3103689/page.tsx",
-          "app/services/services/ai-powered-microservices-management-fa122b8b/page.tsx",
-          "app/services/services/ai-powered-network-monitoring-d7958190/page.tsx",
-          "app/services/services/ai-powered-performance-testing-0234cabb/page.tsx",
-          "app/services/services/ai-powered-predictive-analytics-suite-06fac1f6/page.tsx",
-          "app/services/services/ai-powered-predictive-analytics-suite-1c816865/page.tsx",
-          "app/services/services/ai-powered-predictive-analytics-suite-a89d464c/page.tsx",
-          "app/services/services/ai-powered-predictive-analytics-suite-f6787f6b/page.tsx",
-          "app/services/services/ai-powered-pricing-optimization-f5fa301d/page.tsx",
-          "app/services/services/ai-powered-pricing-optimization-f7409ef1/page.tsx"
-        ]
-
-        def route_map(paths):
-            assert len(paths) == 61 and len(set(paths)) == 61, "Expected exactly 61 audited paths"
-            result = {}
-            for source in paths:
-                assert re.fullmatch(r"app/services/services/[a-z0-9-]+/page\.tsx", source), "Unexpected orphan path shape"
-                nested = source.removeprefix("app/").removesuffix("/page.tsx")
-                canonical = nested.replace("services/services/", "services/", 1)
-                # Check the exact nested route and its separately retired canonical route.
-                # Both are derived only from the fixed audited path; no substring matching.
-                for route, kind in ((nested, "nested_orphan_route"), (canonical, "retired_canonical_route")):
-                    assert route not in result
-                    result[route] = {"orphan_path": source, "route_kind": kind}
-            return result
-
-        def normalize_loc(value):
-            if not isinstance(value, str) or not value.strip():
-                raise ValueError("empty_loc")
-            raw = value.strip().replace("\\", "/")
-            parsed = urlsplit(raw)
-            if parsed.scheme and parsed.scheme.lower() not in ("http", "https"):
-                raise ValueError("unsupported_scheme")
-            path = parsed.path
-            if re.search(r"%(?![0-9A-Fa-f]{2})", path):
-                raise ValueError("malformed_percent_encoding")
-            # Decode percent-encoded UTF-8 up to three passes, conservatively including
-            # multiply encoded separators. No path text is ever printed unless it
-            # exactly matches one of the fixed audited routes.
-            for attempt in range(3):
-                decoded = unquote(path, encoding="utf-8", errors="strict")
-                if decoded == path:
-                    break
-                path = decoded
-                if not re.search(r"%[0-9A-Fa-f]{2}", path):
-                    break
-                if re.search(r"%(?![0-9A-Fa-f]{2})", path):
-                    raise ValueError("ambiguous_repeated_percent_encoding")
-            else:
-                if re.search(r"%[0-9A-Fa-f]{2}", path):
-                    raise ValueError("percent_encoding_depth_exceeded")
-            path = path.replace("\\", "/")
-            if any(ord(c) < 32 or ord(c) == 127 for c in path):
-                raise ValueError("control_character_in_path")
-            # Collapse repeated/trailing slashes and resolve dot segments at the root.
-            # Path case is preserved. The query and fragment were removed by urlsplit.
-            parts = []
-            for segment in path.split("/"):
-                if segment in ("", "."):
-                    continue
-                if segment == "..":
-                    if parts:
-                        parts.pop()
-                else:
-                    parts.append(segment)
-            return "/".join(parts)
-
-        def audit_xml(file, paths):
-            routes = route_map(paths)
-            total = normalized = invalid = 0
-            matches = collections.Counter()
-            parse_error = False
-            try:
-                for _event, element in ET.iterparse(file, events=("end",)):
-                    if element.tag.rsplit("}", 1)[-1] == "loc":
-                        total += 1
-                        try:
-                            route = normalize_loc(element.text)
-                        except (ValueError, UnicodeError):
-                            invalid += 1
-                        else:
-                            normalized += 1
-                            if route in routes:
-                                matches[route] += 1
-                    element.clear()
-            except ET.ParseError:
-                parse_error = True
-            complete = not parse_error and invalid == 0 and total > 0
-            return {
-                "analysis_only": True,
-                "counts_as_required_gate": False,
-                "audited_orphan_paths": len(paths),
-                "orphan_path_set_sha256": hashlib.sha256("\n".join(sorted(paths)).encode()).hexdigest(),
-                "checked_route_aliases": len(routes),
-                "locs_total": total,
-                "normalized_locs": normalized,
-                "unresolved_locs": invalid,
-                "xml_parse_error": parse_error,
-                "audit_complete": complete,
-                "references_count": sum(matches.values()),
-                "matched_relative_paths": [{"path": route, "orphan_path": routes[route]["orphan_path"], "route_kind": routes[route]["route_kind"], "references": matches[route]} for route in sorted(matches)],
-                "normalization": "URL path only; query/fragment ignored; UTF-8 percent-decoding up to 3 passes; backslashes, repeated/trailing slashes and dot segments normalized; path case preserved; exact derived routes only.",
-            }
-
-        def main():
-            assert subprocess.check_output(["git", "rev-parse", "HEAD"], text=True).strip() == SOURCE, "Sitemap checkout commit mismatch"
-            assert subprocess.check_output(["git", "rev-parse", "HEAD^{tree}"], text=True).strip() == TREE, "Sitemap checkout tree mismatch"
-            blob = subprocess.check_output(["git", "hash-object", SITEMAP], text=True).strip()
-            assert blob == SITEMAP_BLOB, "Sitemap body no longer matches the immutable source blob"
-            report = audit_xml(Path(SITEMAP), ORPHAN_PATHS)
-            report.update({"source_identity_verified": True, "sitemap_blob_verified": True, "present_orphan_source_paths": [path for path in ORPHAN_PATHS if Path(path).exists()]})
-            report["counterevidence"] = report["references_count"] > 0 or bool(report["present_orphan_source_paths"])
-            report["status"] = "counterevidence_found" if report["counterevidence"] else ("no_audited_references" if report["audit_complete"] else "audit_incomplete")
-            out = Path(os.environ["PROFILE_DIR"])
-            (out / "sitemap-orphan-audit.json").write_text(json.dumps(report, indent=2) + "\n")
-            print("SITEMAP_ORPHAN_REFERENCE_AUDIT " + json.dumps(report, separators=(",", ":")))
-            with Path(os.environ["GITHUB_STEP_SUMMARY"]).open("a") as summary:
-                summary.write("\n## Immutable sitemap reference audit\n\n")
-                summary.write(f"- Locs inspected: {report['locs_total']}; audited references: {report['references_count']}; complete: {report['audit_complete']}\n")
-                summary.write(f"- Status: {report['status']}. Any reference is counterevidence and keeps integration blocked.\n")
-            if report["counterevidence"] or not report["audit_complete"]:
-                raise SystemExit(1)
-
-        if __name__ == "__main__":
-            main()
-
         PY
     - name: Upload diagnostic evidence
       id: sample-evidence
       if: always()
       uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f
       with:
-        name: typescript-late-diagnostic-c286a4a3-${{ github.run_id }}
+        name: typescript-paired-no-trace-c286a4a3-${{ github.run_id }}
         path: |
           ${{ runner.temp }}/typescript-diagnostic/metadata.json
           ${{ runner.temp }}/typescript-diagnostic/summary.json
           ${{ runner.temp }}/typescript-diagnostic/resources.jsonl
           ${{ runner.temp }}/typescript-diagnostic/compiler.log
-          ${{ runner.temp }}/typescript-diagnostic/trace/trace.json
-          ${{ runner.temp }}/typescript-diagnostic/late-analysis.json
-          ${{ runner.temp }}/typescript-diagnostic/sitemap-orphan-audit.json
+          ${{ runner.temp }}/typescript-diagnostic/paired-analysis.json
+          ${{ runner.temp }}/typescript-diagnostic/gc-deduplication.json
+          ${{ runner.temp }}/typescript-diagnostic/gc-records.jsonl
         if-no-files-found: error
         retention-days: 7
         compression-level: 1
