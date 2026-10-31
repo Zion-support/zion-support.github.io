@@ -170,4 +170,5 @@ jobs:
       if: success() && github.event_name == 'schedule'
       run: "node automation/notify-telegram.js \"\u2705 Weekly ESLint hygiene scan\
         \ passed \u2014 no violations found.\"\n"
-    timeout-minutes: 10
+    # GitHub check 124518079601 hit the previous 10-minute job limit.
+    timeout-minutes: 20
