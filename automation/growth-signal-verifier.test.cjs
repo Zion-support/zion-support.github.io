@@ -10,12 +10,12 @@ const GOOD = {
   '/': HOME,
   '/apps/': '<html><h1>Zion Apps Network</h1><p>Free Discovery available and many apps available across the entire free IT and AI tooling network for operators.</p></html>',
   '/app-network-discovery.html': '<html><h1>Free AI Discovery</h1><p>8 questions with instant results, recommendations and a fully free public questionnaire.</p></html>',
-  '/discovery/': '<html><h1>Free AI &amp; Automation Discovery</h1><p>Questionnaire with eight questions and an immediate report. No payment or meeting is required.</p></html>',
+  '/discovery/': '<html><h1>Free AI &amp; Automation Discovery</h1><p>Questionnaire with eight questions and an immediate report. No payment or meeting is required.</p><form><input name="company"></form></html>',
   '/contact/': '<html><h1>Contact Zion Tech Group</h1><p>hello@ziontechgroup.com and engineering team for IT on demand support and detailed consultations.</p></html>',
 };
 function probeFor(overrides = {}) {
   const responses = { ...GOOD, ...overrides };
-  return async (url) => ({ status: 200, type: 'text/html; charset=utf-8', body: responses[new URL(url).pathname] });
+  return async (url) => ({ status: 200, finalUrl: url, type: 'text/html; charset=utf-8', body: responses[new URL(url).pathname] });
 }
 
 test('on-origin HTTPS guard rejects unsafe origins and non-HTTPS URLs', () => {
@@ -40,6 +40,35 @@ test('a paid replacement at canonical Discovery fails the free content contract'
   const result = await audit({ probe: probeFor({ '/discovery/': paid }) });
   assert.equal(result.severity, 'critical');
   assert.equal(result.unhealthy_routes, 1);
+  assert.equal(result.routes.find(x => x.route === '/discovery/').reason, 'discovery-paywall');
+});
+test('free wording cannot hide a priced Discovery checkout', async () => {
+  const mixed = GOOD['/discovery/'].replace('</html>', '<a href="https://buy.stripe.com/mock">Pay $149</a></html>');
+  const result = await audit({ probe: probeFor({ '/discovery/': mixed }) });
+  assert.equal(result.severity, 'critical');
+  assert.equal(result.free_paid_label_conflicts, 1);
+  assert.equal(result.routes.find(x => x.route === '/discovery/').reason, 'discovery-paywall');
+});
+test('a separately named optional paid Consulting offer does not replace free Discovery', async () => {
+  const optional = GOOD['/discovery/'].replace('</html>', '<h2>Optional Consulting $99</h2><a href="https://buy.stripe.com/mock">Consulting $99</a></html>');
+  const result = await audit({ probe: probeFor({ '/discovery/': optional }) });
+  assert.equal(result.severity, 'ok');
+  assert.equal(result.free_paid_label_conflicts, 0);
+});
+test('a canonical Discovery redirect to another route or absent final URL is inconclusive and critical', async () => {
+  for (const finalUrl of ['https://ziontechgroup.com/consulting/', undefined]) {
+    const result = await audit({ probe: async url => {
+      const response = await probeFor()(url);
+      return new URL(url).pathname === '/discovery/' ? { ...response, finalUrl } : response;
+    } });
+    assert.equal(result.severity, 'critical');
+    assert.equal(result.routes.find(x => x.route === '/discovery/').reason, 'unexpected-discovery-route');
+  }
+});
+test('free promotional copy without the actual questionnaire form is critical', async () => {
+  const brochure = GOOD['/discovery/'].replace(/<form>[\s\S]*?<\/form>/, '');
+  const result = await audit({ probe: probeFor({ '/discovery/': brochure }) });
+  assert.equal(result.severity, 'critical');
   assert.equal(result.routes.find(x => x.route === '/discovery/').reason, 'expected-content-missing');
 });
 test('explicit paid evidence behind a free CTA still produces a conflict signal', () => {

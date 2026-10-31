@@ -16,7 +16,7 @@ const ROUTES = Object.freeze([
   { name: 'home', pathname: '/', markers: [/zion tech group/i, /discovery/i] },
   { name: 'apps', pathname: '/apps/', markers: [/apps network/i, /discovery/i] },
   { name: 'free_discovery', pathname: '/app-network-discovery.html', markers: [/free ai discovery/i, /question|questions|perguntas/i] },
-  { name: 'canonical_discovery', pathname: '/discovery/', markers: [/free ai(?:\s*&(?:amp;)?\s*automation)?\s+discovery/i, /question|questions|perguntas/i] },
+  { name: 'canonical_discovery', pathname: '/discovery/', markers: [/free ai(?:\s*&(?:amp;)?\s*automation)?\s+discovery/i, /question|questions|perguntas/i, /<form\b/i, /<(?:input|select|textarea)\b/i] },
   { name: 'contact', pathname: '/contact/', markers: [/ziontechgroup\.com/i, /contact|contato|engineering/i] },
 ]);
 const MAX_BYTES = 512 * 1024;
@@ -61,6 +61,7 @@ function fetchHtml(url, redirectCount = 0) {
       });
       res.on('end', () => resolve({
         status,
+        finalUrl: target.toString(),
         type: String(res.headers['content-type'] || ''),
         body: Buffer.concat(chunks).toString('utf8'),
       }));
@@ -83,9 +84,20 @@ function anchorItems(html) {
   return found;
 }
 
+function hasDiscoveryPaywall(html) {
+  // Require explicit checkout and priced Discovery/payment copy. An optional
+  // separately named Consulting offer is not itself a Discovery paywall.
+  const price = /(?:R\$|US\$|\$|USD|BRL|EUR|€|£)\s*\d+(?:[.,]\d{2})?/i;
+  const checkout = /https?:\/\/(?:buy|checkout)\.stripe\.com(?:\/|$)/i;
+  const checkoutLinks = anchorItems(html).filter(({ href }) => checkout.test(href));
+  if (!checkoutLinks.length) return false;
+  if (checkoutLinks.some(({ text }) => price.test(text) && /\b(?:pay|pagar|discovery)\b/i.test(text))) return true;
+  return Array.from(html.matchAll(/<h[1-6]\b[^>]*>([\s\S]*?)<\/h[1-6]\s*>/gi))
+    .some(match => /\bdiscovery\b/i.test(match[1]) && price.test(match[1]));
+}
+
 function freeToPaidConflicts(homeHtml, discoveryHtml) {
-  // Flag clear payment evidence only; the canonical Discovery route is free.
-  if (!/(?:\$|R\$)\s*99\b/i.test(discoveryHtml) || !/buy\.stripe\.com|pay\s*\$?99/i.test(discoveryHtml)) return 0;
+  if (!hasDiscoveryPaywall(discoveryHtml)) return 0;
   return anchorItems(homeHtml).filter(({ href, text }) => {
     if (!/(?:free|gr[aá]tis|gratuito)/i.test(text) || !/(?:discovery|diagn[oó]stico)/i.test(text)) return false;
     try { return normalizeTarget(new URL(href, ORIGIN)).pathname.replace(/\/+$/, '/') === '/discovery/'; }
@@ -103,9 +115,14 @@ async function audit({ probe = fetchHtml, now = () => new Date().toISOString() }
       const type = String(response.type || '');
       const html = String(response.body || '');
       const missingMarkers = r.markers.filter(p => !p.test(html)).length;
-      const ok = status === 200 && /^text\/html\b/i.test(type) && html.length > 100 && missingMarkers === 0;
-      if (ok) bodies[r.name] = html;
-      results.push({ route: r.pathname, status, ok, reason: status !== 200 ? 'http-not-200' : !/^text\/html\b/i.test(type) ? 'not-html' : html.length <= 100 ? 'empty-html' : missingMarkers ? 'expected-content-missing' : 'ok' });
+      const receivedHtml = status === 200 && /^text\/html\b/i.test(type) && html.length > 100;
+      const canonical = r.name === 'canonical_discovery';
+      const finalPath = canonical && response.finalUrl ? normalizeTarget(response.finalUrl).pathname : null;
+      const unexpectedRoute = canonical && !['/discovery/', '/discovery/index.html'].includes(finalPath);
+      const paywall = canonical && hasDiscoveryPaywall(html);
+      if (receivedHtml) bodies[r.name] = html;
+      const reason = status !== 200 ? 'http-not-200' : !/^text\/html\b/i.test(type) ? 'not-html' : html.length <= 100 ? 'empty-html' : unexpectedRoute ? 'unexpected-discovery-route' : paywall ? 'discovery-paywall' : missingMarkers ? 'expected-content-missing' : 'ok';
+      results.push({ route: r.pathname, status, ok: reason === 'ok', reason });
     } catch (error) {
       const allowed = new Set(['off-origin-target', 'redirect-limit', 'unsafe-redirect', 'redirect-location-missing', 'response-too-large', 'request-timeout']);
       const reason = allowed.has(error && error.message) ? error.message : 'network-error';
