@@ -69,7 +69,11 @@ jobs:
           # Require the actual deployment step in the latest attempt of either publisher.
           published=[]
           for workflow in ('gh-pages.yml','static-deploy.yml'):
-              runs=api(f'repos/{repo}/actions/workflows/{workflow}/runs?branch=main&status=success&per_page=20').get('workflow_runs',[])
+              result=api(f'repos/{repo}/actions/workflows/{workflow}/runs?branch=main&status=success&per_page=20')
+              runs=result.get('workflow_runs') if isinstance(result,dict) else None
+              total=result.get('total_count') if isinstance(result,dict) else None
+              if not isinstance(runs,list) or type(total) is not int or total < 0 or len(runs) != min(total,20):
+                  raise RuntimeError(f"Incomplete or invalid publisher run listing for {workflow}")
               for run in runs:
                   if run.get('head_branch') != 'main' or run.get('status') != 'completed' or run.get('conclusion') != 'success':
                       raise RuntimeError(f"Inconsistent successful publisher run {run.get('id')}")
