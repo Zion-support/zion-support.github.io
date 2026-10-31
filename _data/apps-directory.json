@@ -1,5 +1,5 @@
 {
-  "release": "apps-directory-2026-10-30-v6",
+  "release": "apps-directory-2026-10-31-v7",
   "categories": [
     "plan",
     "productivity",
@@ -658,6 +658,43 @@
         "de": {
           "title": "Rechner für manuelle Arbeitskosten",
           "description": "Schätzen Sie die monatlichen und jährlichen Kosten eines manuellen Prozesses anhand von Stunden und Stundensatz als Ausgangswert für einen messbaren Piloten."
+        }
+      }
+    },
+    {
+      "id": "service-cost-planner",
+      "category": "costs",
+      "kind": "tool",
+      "location": "standalone",
+      "slug": "quote-builder-ai/",
+      "routes": {
+        "en": "/quote-builder-ai/",
+        "pt": "/quote-builder-ai/pt/",
+        "es": "/quote-builder-ai/es/",
+        "fr": "/quote-builder-ai/fr/",
+        "de": "/quote-builder-ai/de/"
+      },
+      "related": "service-request",
+      "text": {
+        "en": {
+          "title": "Service cost planner",
+          "description": "Prepare a planning draft in your browser from itemized supplier, labor, equipment, tax, travel, freight, import and other documented costs. Review the cost evidence before requesting a formal quote."
+        },
+        "pt": {
+          "title": "Planejador de custos de serviço",
+          "description": "Prepare um cenário preliminar no navegador com custos discriminados de fornecedor, mão de obra, equipamentos, tributos, viagens, frete, importação e outros custos documentados. Revise as evidências dos custos antes de solicitar uma cotação formal."
+        },
+        "es": {
+          "title": "Planificador de costes de servicio",
+          "description": "Prepare un escenario preliminar en su navegador con costes desglosados de proveedor, mano de obra, equipos, impuestos, desplazamientos, transporte de mercancías, importación y otros costes documentados. Revise la documentación de los costes antes de solicitar una oferta formal."
+        },
+        "fr": {
+          "title": "Planificateur de coûts de service",
+          "description": "Préparez un scénario provisoire dans votre navigateur en détaillant les prestations du fournisseur, la main-d’œuvre, le matériel, les taxes, les déplacements, le fret, l’importation et les autres coûts documentés. Vérifiez les justificatifs de coûts avant de demander un devis formel."
+        },
+        "de": {
+          "title": "Planer für Servicekosten",
+          "description": "Erstellen Sie im Browser einen Planungsentwurf mit einzeln ausgewiesenen Lieferanten-, Arbeits-, Geräte-, Steuer-, Reise-, Fracht- und Einfuhrkosten sowie weiteren belegten Kosten. Prüfen Sie die Kostennachweise, bevor Sie ein schriftliches Angebot anfordern."
         }
       }
     },

@@ -30,6 +30,7 @@ node scripts/render-finops-scenario.cjs out --pages-only
 # Refresh the existing cost journey and the five curated app catalogs.
 node scripts/render-finops-scenario.cjs out --home-only
 node scripts/render-apps-directory.cjs out
+node scripts/render-service-request-promotion.cjs out
 # Override public/_redirects (may be a stale 37MB next-build auto-gen monster
 # with 550K+ service-slug rules and NO entries for canonical doc routes) with the
 # curated root _redirects that has explicit 200 rules for all money-path doc pages.
