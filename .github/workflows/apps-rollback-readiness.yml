@@ -66,9 +66,9 @@ jobs:
           main=json.load(open('/tmp/main.json',encoding='utf-8'))
 
           # A successful source-gate-only run did not publish a Pages artifact.
-          # Require the actual deployment step in the latest attempt of either publisher.
+          # Require the actual deployment step in the latest attempt of each configured publisher.
           published=[]
-          for workflow in ('gh-pages.yml','static-deploy.yml'):
+          for workflow in ('gh-pages.yml','static-deploy.yml','deploy-on-push.yml'):
               result=api(f'repos/{repo}/actions/workflows/{workflow}/runs?branch=main&status=success&per_page=20')
               runs=result.get('workflow_runs') if isinstance(result,dict) else None
               total=result.get('total_count') if isinstance(result,dict) else None
