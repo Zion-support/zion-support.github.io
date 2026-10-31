@@ -11,6 +11,7 @@ const typescriptParser = require('@typescript-eslint/parser');
 const nextPlugin = require('@next/eslint-plugin-next');
 const globals = require('globals');
 const autonomous = require('./eslint-rules/autonomous.cjs');
+const complexityLimit = 20;
 
 module.exports = [
   {
@@ -31,8 +32,11 @@ module.exports = [
       globals: { ...globals.browser, ...globals.node, ...globals.es2022 },
     },
     plugins: {
+      // eslint-disable-next-line @typescript-eslint/naming-convention -- ESLint plugin and rule IDs are fixed API keys.
       '@typescript-eslint': typescript,
+      // eslint-disable-next-line @typescript-eslint/naming-convention -- ESLint plugin and rule IDs are fixed API keys.
       '@next/next': nextPlugin,
+      // eslint-disable-next-line @typescript-eslint/naming-convention -- ESLint plugin and rule IDs are fixed API keys.
       'zion-autonomous': autonomous,
     },
     settings: { next: { rootDir: __dirname } },
@@ -41,21 +45,32 @@ module.exports = [
       ...nextPlugin.configs['core-web-vitals'].rules,
       // Preserve the established eslint.config.mjs policy for this static site.
       // The upstream route rule also throws on literal '(' in generated slugs.
+      // eslint-disable-next-line @typescript-eslint/naming-convention -- ESLint plugin and rule IDs are fixed API keys.
       '@next/next/no-html-link-for-pages': 'off',
+      // eslint-disable-next-line @typescript-eslint/naming-convention -- ESLint plugin and rule IDs are fixed API keys.
       'no-eval': 'error',
+      // eslint-disable-next-line @typescript-eslint/naming-convention -- ESLint plugin and rule IDs are fixed API keys.
       'no-new-func': 'error',
+      // eslint-disable-next-line @typescript-eslint/naming-convention -- ESLint plugin and rule IDs are fixed API keys.
       'zion-autonomous/no-inner-html': 'error',
+      // eslint-disable-next-line @typescript-eslint/naming-convention -- ESLint plugin and rule IDs are fixed API keys.
       'zion-autonomous/require-async-try-catch': 'error',
+      // eslint-disable-next-line @typescript-eslint/naming-convention -- ESLint plugin and rule IDs are fixed API keys.
       'no-console': ['warn', { allow: ['warn', 'error'] }],
+      // eslint-disable-next-line @typescript-eslint/naming-convention -- ESLint plugin and rule IDs are fixed API keys.
       '@typescript-eslint/no-explicit-any': ['error', { fixToUnknown: false, ignoreRestArgs: false }],
+      // eslint-disable-next-line @typescript-eslint/naming-convention -- ESLint plugin and rule IDs are fixed API keys.
       'require-await': 'warn',
       // This maintained TS rule reports both unused imports and variables.
       // No undeclared unused-imports dependency or duplicate diagnostics.
+      // eslint-disable-next-line @typescript-eslint/naming-convention -- ESLint plugin and rule IDs are fixed API keys.
       'no-unused-vars': 'off',
+      // eslint-disable-next-line @typescript-eslint/naming-convention -- ESLint plugin and rule IDs are fixed API keys.
       '@typescript-eslint/no-unused-vars': ['warn', {
         vars: 'all', args: 'after-used', argsIgnorePattern: '^_',
       }],
       camelcase: ['error', { properties: 'always' }],
+      // eslint-disable-next-line @typescript-eslint/naming-convention -- ESLint plugin and rule IDs are fixed API keys.
       '@typescript-eslint/naming-convention': [
         'error',
         { selector: 'variable', format: ['camelCase', 'UPPER_CASE'], leadingUnderscore: 'allow' },
@@ -65,8 +80,9 @@ module.exports = [
         { selector: 'memberLike', format: ['camelCase'] },
         { selector: 'typeLike', format: ['PascalCase'] },
       ],
-      complexity: ['warn', 20],
+      complexity: ['warn', complexityLimit],
       curly: ['error', 'all'],
+      // eslint-disable-next-line @typescript-eslint/naming-convention -- ESLint plugin and rule IDs are fixed API keys.
       'no-magic-numbers': ['warn', {
         ignoreArrayIndexes: true,
         ignore: [-1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 24, 48, 60, 100, 1024, 86400],
@@ -76,10 +92,12 @@ module.exports = [
   {
     files: ['**/*.cjs'],
     languageOptions: { sourceType: 'commonjs' },
+    // eslint-disable-next-line @typescript-eslint/naming-convention -- ESLint plugin and rule IDs are fixed API keys.
     rules: { '@typescript-eslint/no-require-imports': 'off' },
   },
   {
     files: ['test/**/*.ts', '**/*.test.ts', '**/*.spec.ts'],
+    // eslint-disable-next-line @typescript-eslint/naming-convention -- ESLint plugin and rule IDs are fixed API keys.
     rules: { 'no-console': 'off', '@typescript-eslint/no-explicit-any': 'off' },
   },
 ];
