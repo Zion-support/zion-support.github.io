@@ -38,6 +38,7 @@ on:
 
 permissions:
   contents: read
+  actions: read
   pages: write
   id-token: write
 
@@ -104,6 +105,20 @@ jobs:
             echo "::error::Continuous Pages Deploy is pinned to main only (got ${GITHUB_REF})."
             exit 1
           fi
+
+      - name: Setup Node.js for health collection
+        if: steps.release-source.outputs.publish == 'true'
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
+        with:
+          node-version: '22'
+          package-manager-cache: false
+
+      - name: Collect observed automation health before assembly
+        if: steps.release-source.outputs.publish == 'true'
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: node scripts/automation/generate-automation-health-snapshot.cjs
 
       - name: Prepare pages from public/
         if: steps.release-source.outputs.publish == 'true'
