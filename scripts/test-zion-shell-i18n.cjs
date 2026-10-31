@@ -113,6 +113,18 @@ test('an existing footer still allows only the missing header to be added', () =
   assert.ok(page.html().includes('Menü öffnen'));
 });
 
+test('the injected header retains its original destinations even with a page-owned footer', () => {
+  for (const [lang, , , discovery] of locales) {
+    const html = render(lang, { footer: true }).html();
+    for (const href of [
+      '/services/', '/plans/', '/autonomous-ai-agents/', '/field-services/',
+      '/offers/', '/cases/', '/contact/', '/blog/', discovery,
+    ]) {
+      assert.ok(html.includes('href="' + href + '"'), lang + ' header retains ' + href);
+    }
+  }
+});
+
 test('repeated script execution does not duplicate chrome or styles', () => {
   const page = render('es');
   vm.runInContext(source, page.context);

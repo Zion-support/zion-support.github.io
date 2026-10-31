@@ -97,7 +97,10 @@
       'var open=menu.classList.toggle(\'open\');this.setAttribute(\'aria-expanded\',String(open))">☰</button>' +
       '<nav id="zion-shell-links" class="links" aria-label="' + text.primary + '">' +
       link(text.prefix + '/apps/', text.apps) +
-      link('/services/', text.services) + link('/field-services/', text.field) +
+      link('/services/', text.services) + link('/plans/', text.plans) +
+      link('/autonomous-ai-agents/', text.agents) + link('/field-services/', text.field) +
+      link('/offers/', text.offers) + link('/cases/', text.cases) +
+      link('/contact/', text.contact) + link('/blog/', text.blog) +
       link(text.prefix + '/discovery/', text.free, ' class="cta"') +
       languageLinks(code, text) + '</nav></div></header>';
   }
