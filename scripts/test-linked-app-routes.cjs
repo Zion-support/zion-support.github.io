@@ -5,8 +5,11 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 const os = require('node:os');
+const crypto = require('node:crypto');
+const {execFileSync} = require('node:child_process');
 const staging = require('./render-linked-app-routes.cjs');
 const guard = require('./verify-catalog-app-routes.cjs');
+const agriculture = require('./render-agriculture111.cjs');
 
 function put(out, rel, text) {
   const file = path.join(out, rel);
@@ -49,6 +52,31 @@ function snapshot(out) {
 
 function actualCatalogFixture(t) {
   const out = fixture(t), publicRoot = path.join(__dirname, '../public');
+  // Publisher-generated guides have no committed public/ source. Materialize
+  // their real output before testing coverage of every catalog destination.
+  execFileSync(process.execPath, [path.join(__dirname, 'render-operational-tools.cjs'), out], {
+    cwd: path.join(__dirname, '..'),
+  });
+  const generatedPages = new Set(JSON.parse(fs.readFileSync(
+    path.join(out, 'apps/operational-tools-publication.json'), 'utf8'
+  )).pages);
+  // Use the publisher's immutable Agriculture source offline. Existing public
+  // pages keep their bytes; only absent, validated translations are generated.
+  const agricultureSource = fs.readFileSync(path.join(__dirname, '../tests/fixtures/agriculture111-516efdb.json'));
+  assert.equal(agriculture.pin, '516efdb16f0bfbeb0897b1b2e98d1ef105ab5c5e', 'Refresh the pinned Agriculture fixture when its source changes');
+  const agricultureHash = crypto.createHash('sha1')
+    .update('blob ' + agricultureSource.length + '\0').update(agricultureSource).digest('hex');
+  assert.equal(agricultureHash, '287d03185cebc9da7b602adf003dafa59add3299', 'Pinned Agriculture fixture integrity');
+  const agricultureData = JSON.parse(agricultureSource.toString('utf8'));
+  agriculture.qa(agricultureData);
+  for (const locale of agricultureData.locales) {
+    const rel = locale.web.replace(/^\//, '');
+    if (fs.existsSync(path.join(publicRoot, rel))) continue;
+    const page = agriculture.html(agricultureData, locale);
+    agriculture.check(page, agricultureData, locale);
+    put(out, rel, page);
+    generatedPages.add(locale.web);
+  }
   for (const catalog of guard.catalogs) {
     const html = fs.readFileSync(path.join(publicRoot, catalog), 'utf8');
     put(out, catalog, html);
@@ -59,6 +87,11 @@ function actualCatalogFixture(t) {
       let rel = decodeURIComponent(url.pathname).replace(/^\//, '');
       const source = path.join(publicRoot, rel);
       if (url.pathname.endsWith('/') || (fs.existsSync(source) && fs.statSync(source).isDirectory())) rel = path.join(rel, 'index.html');
+      if (generatedPages.has(url.pathname)) {
+        const rendered = fs.statSync(path.join(out, rel));
+        assert(rendered.isFile() && rendered.size > 0, 'Missing generated catalog destination: ' + rel);
+        continue;
+      }
       put(out, rel, fs.readFileSync(path.join(publicRoot, rel)));
     }
   }
@@ -109,9 +142,16 @@ test('actual catalogs cannot hide missing family routes or their linked playbook
     assert(guide.includes('href="/automation-pilot-planner/' + (locale === 'pt' ? '' : locale + '/') + '"'));
     assert(guide.includes('href="/apps/content-hub.html" hreflang="en"'));
   }
-  const removed = 'es/apps/field-ticket-types.html';
-  fs.rmSync(path.join(out, removed));
-  assert.throws(() => guard.verify(out), new RegExp(removed.replace(/\./g, '\\.')));
+  for (const removed of ['es/apps/field-ticket-types.html', 'pt/apps/operational-planning-tools.html', 'apps/october-2026-batch111-agriculture.pt-br.html']) {
+    const file = path.join(out, removed), bytes = fs.readFileSync(file);
+    const expected = new RegExp(removed.replace(/\./g, '\\.'));
+    fs.rmSync(file);
+    assert.throws(() => guard.verify(out), expected);
+    fs.writeFileSync(file, '');
+    assert.throws(() => guard.verify(out), expected);
+    fs.writeFileSync(file, bytes);
+    guard.verify(out);
+  }
 });
 
 test('localized field and operations companions retain working navigation and cumulative approvals', t => {
