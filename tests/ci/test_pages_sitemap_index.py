@@ -1,4 +1,4 @@
-"""Focused regressions for preserving the published sitemap index bytes."""
+"""Focused regressions for preserving both published sitemap index files."""
 
 import codecs
 import hashlib
@@ -45,6 +45,8 @@ class PagesSitemapIndexTests(unittest.TestCase):
         (self.output / "apps").mkdir(parents=True)
         self.index = self.output / "sitemap.xml"
         self.index.write_bytes(INDEX_886)
+        self.secondary = self.output / "sitemap-index.xml"
+        self.secondary.write_bytes(RESTORED_7F)
         self.targets = [self.output / "sitemap-0.xml", self.output / "apps/apps-sitemap.xml"]
         for target in self.targets:
             target.write_bytes(PAYLOAD)
@@ -182,17 +184,116 @@ class PagesSitemapIndexTests(unittest.TestCase):
         self.assertTrue(self.index.is_symlink())
         self.assertEqual(outside.read_bytes(), INDEX_886)
 
+    def test_both_indexes_preserve_their_own_entries_and_encodings(self):
+        primary_prefix = INDEX_886[:-len(b'</sitemapindex>\n')] + (
+            b'<!-- primary only -->\n'
+            b'<sitemap id="primary"><loc>https://ziontechgroup.com/primary-only.xml</loc>'
+            b'<lastmod>2026-01-02</lastmod></sitemap>\n'
+        )
+        primary_suffix = b'</sitemapindex>\n'
+        secondary_prefix = (
+            '<?xml version="1.0" encoding="UTF-16"?>\r\n'
+            '<sm:sitemapindex xmlns:sm="http://www.sitemaps.org/schemas/sitemap/0.9" data-keep="secondary">\r\n'
+            '<!-- secondary only; keep formatting -->\r\n'
+            '<sm:sitemap id="secondary"><sm:loc>https://ziontechgroup.com/secondary-only.xml</sm:loc>'
+            '<sm:lastmod>2025-02-03</sm:lastmod></sm:sitemap>\r\n'
+        )
+        secondary_suffix = '  </sm:sitemapindex>\r\n<?keep secondary?>\r\n'
+        secondary_added = (
+            '<sm:sitemap><sm:loc>https://ziontechgroup.com/sitemap-0.xml</sm:loc></sm:sitemap>\r\n'
+            '<sm:sitemap><sm:loc>https://ziontechgroup.com/apps/apps-sitemap.xml</sm:loc></sm:sitemap>\r\n'
+        )
+        self.index.write_bytes(primary_prefix + primary_suffix)
+        self.secondary.write_bytes(
+            codecs.BOM_UTF16_BE + (secondary_prefix + secondary_suffix).encode("utf-16-be"))
+        self.assertEqual(ensure_index(self.output), 4)
+        self.assertEqual(self.index.read_bytes(), primary_prefix + ZERO + APPS + primary_suffix)
+        self.assertEqual(self.secondary.read_bytes(), codecs.BOM_UTF16_BE + (
+            secondary_prefix + secondary_added + secondary_suffix).encode("utf-16-be"))
+
+    def test_both_indexes_are_idempotent_without_rewriting(self):
+        for index in [self.index, self.secondary]:
+            index.write_bytes(INDEX_886)
+            index.chmod(0o640)
+        self.assertEqual(ensure_index(self.output), 4)
+        before = {}
+        for index in [self.index, self.secondary]:
+            self.assertEqual(index.read_bytes(), RESTORED_7F)
+            self.assertEqual(index.stat().st_mode & 0o777, 0o640)
+            os.utime(index, ns=(123456789, 123456789))
+            stat = index.stat()
+            before[index] = (stat.st_ino, stat.st_mtime_ns, stat.st_mode)
+        self.assertEqual(ensure_index(self.output), 0)
+        for index in [self.index, self.secondary]:
+            stat = index.stat()
+            self.assertEqual((stat.st_ino, stat.st_mtime_ns, stat.st_mode), before[index])
+            self.assertEqual(index.read_bytes(), RESTORED_7F)
+        self.assertEqual(list(self.output.glob(".sitemap-index-*")), [])
+
+    def test_complete_primary_is_not_rewritten_when_secondary_needs_one_reference(self):
+        self.index.write_bytes(RESTORED_7F)
+        os.utime(self.index, ns=(123456789, 123456789))
+        before = self.index.stat()
+        prefix = INDEX_886[:-len(b'</sitemapindex>\n')]
+        self.secondary.write_bytes(prefix + ZERO + b'</sitemapindex>\n')
+        self.assertEqual(ensure_index(self.output), 1)
+        self.assertEqual(self.secondary.read_bytes(), RESTORED_7F)
+        after = self.index.stat()
+        self.assertEqual((after.st_ino, after.st_mtime_ns, after.st_mode),
+                         (before.st_ino, before.st_mtime_ns, before.st_mode))
+        self.assertEqual(self.index.read_bytes(), RESTORED_7F)
+
+    def test_invalid_secondary_is_rejected_before_either_index_is_replaced(self):
+        cases = [
+            b'<sitemapindex><broken>',
+            b'<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"></urlset>',
+            b'<sitemapindex xmlns="urn:wrong"></sitemapindex>',
+            b'<sitemapindex></sitemapindex>',
+            b'<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"/>',
+            b'',
+        ]
+        for raw in cases:
+            with self.subTest(raw=raw):
+                self.secondary.write_bytes(raw)
+                with self.assertRaisesRegex(ValueError, "sitemap-index.xml"):
+                    ensure_index(self.output)
+                self.assertEqual(self.index.read_bytes(), INDEX_886)
+                self.assertEqual(self.secondary.read_bytes(), raw)
+                self.assertEqual(list(self.output.glob(".sitemap-index-*")), [])
+
+    def test_missing_secondary_is_not_created_or_copied_from_primary(self):
+        self.secondary.unlink()
+        with self.assertRaisesRegex(ValueError, "sitemap-index.xml"):
+            ensure_index(self.output)
+        self.assertFalse(self.secondary.exists())
+        self.assertEqual(self.index.read_bytes(), INDEX_886)
+
+    def test_symlink_secondary_is_rejected_before_primary_is_replaced(self):
+        outside = Path(self.temporary.name) / "outside-secondary.xml"
+        outside.write_bytes(INDEX_886)
+        self.secondary.unlink()
+        self.secondary.symlink_to(outside)
+        with self.assertRaisesRegex(ValueError, "sitemap-index.xml"):
+            ensure_index(self.output)
+        self.assertTrue(self.secondary.is_symlink())
+        self.assertEqual(outside.read_bytes(), INDEX_886)
+        self.assertEqual(self.index.read_bytes(), INDEX_886)
+
     def test_cli_success_and_nonzero_exit_for_a_missing_target(self):
+        self.secondary.write_bytes(INDEX_886)
         result = subprocess.run([sys.executable, "-B", str(HELPER), str(self.output)],
                                 capture_output=True, text=True)
         self.assertEqual(result.returncode, 0, result.stderr)
-        self.assertIn("2 required reference(s) added", result.stdout)
+        self.assertIn("4 required reference(s) added", result.stdout)
+        self.assertEqual(self.index.read_bytes(), RESTORED_7F)
+        self.assertEqual(self.secondary.read_bytes(), RESTORED_7F)
         self.targets[1].unlink()
         result = subprocess.run([sys.executable, "-B", str(HELPER), str(self.output)],
                                 capture_output=True, text=True)
         self.assertNotEqual(result.returncode, 0)
         self.assertIn("required sitemap", result.stderr)
         self.assertEqual(self.index.read_bytes(), RESTORED_7F)
+        self.assertEqual(self.secondary.read_bytes(), RESTORED_7F)
 
 
 if __name__ == "__main__":
