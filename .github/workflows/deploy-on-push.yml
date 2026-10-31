@@ -1,6 +1,7 @@
 name: Deploy on Push
 permissions:
   contents: read
+  actions: read
   pages: write
   id-token: write
 "on":
@@ -97,6 +98,12 @@ jobs:
         NODE_OPTIONS: '--max-old-space-size=12288 --max-semi-space-size=64'
         NEXT_BUILD_WORKER_COUNT: '1'
       run: npm run build
+    - name: Collect observed automation health before assembly
+      id: automation-health
+      continue-on-error: true
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
+      run: node scripts/automation/pages-automation-health-artifact.cjs collect
     - name: Overlay docs pages onto out/
       run: bash scripts/prepare-pages-out.sh
     - name: Gate reviewed five-language productivity rendering
@@ -107,6 +114,10 @@ jobs:
       run: node scripts/test-operational-tools.cjs out --artifact-only
     - name: Reject private operational files in final Pages artifact
       run: python3 scripts/assert-no-private-ops.py out
+    - name: Validate collected automation health in final Pages artifact
+      env:
+        AUTOMATION_HEALTH_ARTIFACT_SHA256: ${{ steps.automation-health.outputs.snapshot_sha256 }}
+      run: node scripts/automation/pages-automation-health-artifact.cjs verify
     - name: Upload Pages artifact
       uses: actions/upload-pages-artifact@v4
       with:
@@ -127,10 +138,6 @@ jobs:
         name: deploy-status
         path: automation/reports/deploy-status-latest.json
         if-no-files-found: error
-    - name: Refresh automation health snapshot (build phase)
-      if: always()
-      continue-on-error: true
-      run: node scripts/automation/generate-automation-health-snapshot.cjs
     - name: Commit deploy-status snapshot for suppression registry
       if: always()
       continue-on-error: true

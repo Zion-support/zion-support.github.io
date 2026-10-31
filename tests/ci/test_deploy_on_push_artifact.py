@@ -8,6 +8,9 @@ future continue-on-error/always override cannot invalidate that fail-closed mode
 This does not certify full renderer output or a live Pages deployment.
 """
 from pathlib import Path
+from datetime import datetime, timezone, timedelta
+import hashlib
+import json
 import os
 import re
 import shutil
@@ -26,6 +29,7 @@ EXPECTED = [
     "node scripts/render-field-evidence-release.cjs out",
     "node scripts/test-operational-tools.cjs out --artifact-only",
     "python3 scripts/assert-no-private-ops.py out",
+    "node scripts/automation/pages-automation-health-artifact.cjs verify",
 ]
 
 
@@ -64,7 +68,35 @@ class ArtifactPublicationTests(unittest.TestCase):
         self.tmp = tempfile.TemporaryDirectory(prefix="zion-pages-gate-")
         self.addCleanup(self.tmp.cleanup)
         self.root = Path(self.tmp.name)
-        (self.root / "scripts").mkdir()
+        (self.root / "scripts/automation").mkdir(parents=True)
+        shutil.copyfile(ROOT / "scripts/automation/pages-automation-health-artifact.cjs",
+                        self.root / "scripts/automation/pages-automation-health-artifact.cjs")
+        stamp = (datetime.now(timezone.utc) - timedelta(seconds=1)).isoformat(timespec="milliseconds").replace("+00:00", "Z")
+        repository = "Zion-support/zion-support.github.io"
+        report = {
+            "schemaVersion": 2, "scope": "latest_production_pages_publisher_and_github_pages_configuration",
+            "repository": repository, "branch": "main", "status": "ok", "severity": "nominal",
+            "timestamp": stamp, "generatedAt": stamp, "publicSnapshotUpdated": True,
+            "collection": {"complete": True, "errors": [], "maxRunAgeHours": 24, "sources": [
+                {"url": "https://api.github.com/repos/" + repository + endpoint,
+                 "httpStatus": 200, "checkedAt": stamp}
+                for endpoint in ("/actions/workflows/gh-pages.yml/runs",
+                                 "/actions/workflows/static-deploy.yml/runs",
+                                 "/actions/workflows/deploy-on-push.yml/runs",
+                                 "/pages", "/actions/runs/300/jobs")]},
+            "publisher": {"workflow": "gh-pages.yml", "workflowId": 400, "runId": 300, "runAttempt": 1,
+                          "headSha": "a" * 40, "branch": "main", "status": "completed", "conclusion": "success",
+                          "createdAt": stamp, "updatedAt": stamp,
+                          "runUrl": "https://github.com/" + repository + "/actions/runs/300"},
+            "checks": {name: True for name in ("build", "deploy", "pages")},
+            "details": {name: {"state": "passed", "healthy": True} for name in ("build", "deploy", "pages")},
+        }
+        # Assembly fixtures model a completed collection; the separate Node
+        # controls execute the real collector and prove failure cannot issue a receipt.
+        health = json.dumps(report).encode()
+        self.receipt = hashlib.sha256(health).hexdigest()
+        (self.root / "public/api").mkdir(parents=True)
+        (self.root / "public/api/automation-health.json").write_bytes(health)
         (self.root / "public/ops/comms").mkdir(parents=True)
         (self.root / "public/index.html").write_text("synthetic static homepage")
         (self.root / "public/ops/comms/index.html").write_text("synthetic approved public index")
@@ -108,7 +140,10 @@ class ArtifactPublicationTests(unittest.TestCase):
     def run_artifact(self, source=None, **extra_env):
         commands = [command(block) for _, block in artifact_steps(source or self.source)]
         script = "\n".join(commands + ["test -d out", "printf 'uploaded out\\n' > published"])
-        env = dict(os.environ, **extra_env)
+        env = dict(os.environ, GITHUB_REPOSITORY="Zion-support/zion-support.github.io",
+                   AUTOMATION_HEALTH_ARTIFACT_SHA256=self.receipt,
+                   AUTOMATION_HEALTH_MAX_RUN_AGE_HOURS="24")
+        env.update(extra_env)
         return subprocess.run(["bash", "-e", "-o", "pipefail", "-c", script],
                               cwd=self.root, env=env, capture_output=True, text=True)
 
@@ -173,6 +208,31 @@ class ArtifactPublicationTests(unittest.TestCase):
         self.assertEqual(result.returncode, 0, result.stderr)
         self.assertTrue((self.root / "published").exists())
         self.assertTrue((self.root / "out/pt/OPS/COMMS/synthetic-private.txt").is_file())
+
+    def test_missing_health_receipt_blocks_upload_even_with_fresh_fixture(self):
+        result = self.run_artifact(AUTOMATION_HEALTH_ARTIFACT_SHA256="")
+        self.assertEqual(result.returncode, 1, result.stderr)
+        self.assertIn("missing receipt", result.stderr)
+        self.assertFalse((self.root / "published").exists())
+
+    def test_source_replaced_after_collection_cannot_reach_upload(self):
+        (self.root / "public/api/automation-health.json").write_text('{"timestamp":"2026-07-07T23:06:26.830Z"}')
+        result = self.run_artifact()
+        self.assertEqual(result.returncode, 1, result.stderr)
+        self.assertIn("final artifact differs", result.stderr)
+        self.assertFalse((self.root / "published").exists())
+
+    def test_negative_control_without_health_gate_publishes_old_source(self):
+        without_gate = self.source.replace(
+            "    - name: Validate collected automation health in final Pages artifact\n"
+            "      env:\n"
+            "        AUTOMATION_HEALTH_ARTIFACT_SHA256: ${{ steps.automation-health.outputs.snapshot_sha256 }}\n"
+            "      run: node scripts/automation/pages-automation-health-artifact.cjs verify\n", "")
+        self.assertNotEqual(without_gate, self.source)
+        (self.root / "public/api/automation-health.json").write_text('{"timestamp":"2026-07-07T23:06:26.830Z"}')
+        result = self.run_artifact(without_gate)
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertTrue((self.root / "published").exists())
 
     def test_next_diagnostic_failure_is_visible_but_static_gate_is_independent(self):
         next_step = [(name, block) for name, block in build_steps(self.source)
@@ -285,6 +345,14 @@ class CheckoutScopeTests(unittest.TestCase):
             git(full, "checkout", "--detach", "FETCH_HEAD")
             self.assertEqual(git(full, "rev-list", "--count", "HEAD"), "3")
             self.assertEqual(git(full, "ls-tree", "-r", "HEAD"), git(origin, "ls-tree", "-r", main_sha))
+
+
+class HealthReceiptContractTests(unittest.TestCase):
+    def test_real_collector_receipts_and_all_publisher_boundaries(self):
+        result = subprocess.run(
+            ["node", "--test", "scripts/automation/test-pages-automation-health-artifact.cjs"],
+            cwd=ROOT, capture_output=True, text=True)
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
 
 
 if __name__ == "__main__":
