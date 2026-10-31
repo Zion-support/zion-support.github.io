@@ -16,6 +16,10 @@ const complexityLimit = 20;
 module.exports = [
   {
     ignores: [
+      // Preserve legacy dotfile ignores before the explicit project exclusions.
+      '**/.*', '!**/.eslintrc.*',
+      // Keep this active custom configuration covered by its self-lint regression.
+      '!.eslintrc-autonomous.cjs',
       '**/node_modules/**', '**/.next/**', '**/out/**', '**/dist/**', '**/build/**',
       '**/coverage/**', '**/.hermes/**', 'automation/reports/**',
       '**/*.config.js', '**/*.config.cjs', 'scripts/automation/**',

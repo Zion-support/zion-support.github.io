@@ -174,6 +174,29 @@ test('existing TypeScript test exception is retained', () => {
   });
 });
 
+test('legacy dotfile ignores preserve application and active configuration coverage', () => {
+  const cases = [
+    ['.tmp-read-check.cjs', true],
+    ['nested/.scope-fixture.ts', true],
+    ['.scope-fixtures/source.js', true],
+    ['nested/.scope-fixtures/source.ts', true],
+    ['.scope-fixtures/.eslintrc.cjs', true],
+    ['.eslintrc.cjs', false],
+    ['nested/.eslintrc.cjs', false],
+    ['.eslintrc-autonomous.cjs', false],
+    ['app/scope-fixture.tsx', false],
+    ['_next/static/chunks/scope-fixture.js', false],
+    ['automation/.eslintrc.cjs', true],
+    ['eslint-rules/.eslintrc.cjs', true],
+    ['.next/.eslintrc.cjs', true],
+  ];
+  return Promise.all(cases.map(([fileName, expected]) => {
+    return eslint.isPathIgnored(path.join(root, fileName)).then((ignored) => {
+      assert.equal(ignored, expected, fileName);
+    });
+  }));
+});
+
 // Keep fixed ESLint API keys documented locally while source naming checks stay enabled.
 test('new lint configuration and regression suite obey their own enabled policy', () => {
   return eslint.lintFiles([

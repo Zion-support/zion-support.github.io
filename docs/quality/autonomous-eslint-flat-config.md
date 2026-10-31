@@ -38,6 +38,15 @@ therefore do not require `parserOptions.project`, which would construct the full
 generated TypeScript program and reject files excluded from that program.
 Type-checking remains a separate compiler gate.
 
+To preserve legacy eslintrc scope, global ignores exclude dotfiles and dot
+folders while retaining the conventional `.eslintrc.*` exception. The active
+`.eslintrc-autonomous.cjs` is explicitly included for self-lint. These
+compatibility patterns precede the existing explicit ignores, so directory and
+automation exclusions keep their precedence. Regression cases verify hidden
+paths, application source and active configuration paths. See the
+[ESLint ignore migration guidance](https://eslint.org/docs/latest/use/configure/migration-guide#ignore-files)
+and [legacy default ignore rules](https://eslint.org/docs/latest/use/migrating-to-7.0.0#default-ignore-patterns-have-changed).
+
 ## Local guards
 
 `eslint-rules/autonomous.cjs` registers the previously missing guards under the
