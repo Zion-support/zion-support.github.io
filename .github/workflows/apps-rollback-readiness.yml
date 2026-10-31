@@ -18,7 +18,7 @@ permissions:
   actions: read
 
 concurrency:
-  group: apps-rollback-readiness
+  group: ${{ github.ref == 'refs/heads/main' && 'apps-rollback-readiness' || format('apps-rollback-readiness-{0}', github.ref) }}
   cancel-in-progress: true
 
 jobs:
