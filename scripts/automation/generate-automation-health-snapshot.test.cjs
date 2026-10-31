@@ -79,7 +79,13 @@ function api(f, override) {
       if (response) return response;
     }
     const workflow = Object.keys(f.lists).find((file) => url.includes('/workflows/' + file + '/runs?'));
-    const value = workflow ? f.lists[workflow] : url.includes('/jobs?') ? f.jobs : f.pages;
+    const runId = /\/runs\/(\d+)\/jobs\?/.exec(url)?.[1];
+    let value = workflow ? f.lists[workflow] :
+      url.includes('/jobs?') ? (f.jobsByRun?.[runId] || f.jobs) : f.pages;
+    if (workflow && Array.isArray(value?.workflow_runs)) {
+      const limit = Number(new URL(url).searchParams.get('per_page'));
+      value = { ...value, workflow_runs: value.workflow_runs.slice(0, limit) };
+    }
     return { ok: true, status: 200, json: async () => structuredClone(value) };
   };
   return { fetchImpl, calls };
@@ -384,4 +390,195 @@ test('a cancelled publisher is not called healthy even when all named steps succ
   const { report } = await collect(f);
   assert.equal(report.status, 'unknown');
   assert.equal(report.collection.complete, false);
+});
+
+
+function cancelledHistory(count = 1) {
+  const f = fixture('gh-pages.yml');
+  const cancellations = Array.from({ length: count }, (_, index) => ({
+    ...f.run, id: 9000 + index, conclusion: 'cancelled',
+    created_at: date(index + 1), updated_at: date(index + 0.5),
+  }));
+  f.lists[f.workflow] = { total_count: count + 1, workflow_runs: [...cancellations, f.run] };
+  f.jobsByRun = Object.fromEntries(cancellations.map((run) => [run.id, { total_count: 0, jobs: [] }]));
+  return { f, cancellations };
+}
+
+test('COORD9: unstarted cancellation 41207304002 cannot mask active publisher 41207302461', async () => {
+  const { f, cancellations: [cancelled] } = cancelledHistory();
+  const observedAt = Date.parse('2026-10-31T13:52:55.537Z');
+  const sha = 'f4987c40876173333114a4722cf5a6f9ffd7b0bd';
+  Object.assign(f.run, {
+    id: 41207302461, workflow_id: 254611010, head_sha: sha,
+    status: 'in_progress', conclusion: null,
+    created_at: '2026-10-31T13:49:28Z', updated_at: '2026-10-31T13:52:00Z',
+  });
+  Object.assign(cancelled, {
+    id: 41207304002, workflow_id: 254611010, head_sha: sha,
+    created_at: '2026-10-31T13:49:29Z', updated_at: '2026-10-31T13:50:27Z',
+  });
+  f.jobsByRun = { [cancelled.id]: { total_count: 0, jobs: [] } };
+  Object.assign(f.jobs.jobs[0], {
+    id: 124554974655, run_id: f.run.id, head_sha: sha,
+    status: 'in_progress', conclusion: null,
+  });
+  f.jobs.jobs[0].steps.forEach((step) => Object.assign(step, {
+    status: 'pending', conclusion: null, started_at: null, completed_at: null,
+  }));
+  const cwd = mkdtempSync(join(tmpdir(), 'zion-health-coord9-'));
+  try {
+    mkdirSync(join(cwd, 'public/api'), { recursive: true });
+    writeFileSync(join(cwd, PUBLIC_PATH), '{"timestamp":"2026-07-07T23:06:26.830Z"}\n');
+    const mock = api(f);
+    const { report, exitCode } = await runCollector({
+      cwd, env, now: () => observedAt, fetchImpl: mock.fetchImpl,
+    });
+    assert.equal(report.publisher.runId, 41207302461);
+    assert.equal(report.publisher.headSha, sha);
+    assert.equal(report.status, 'pending');
+    assert.equal(exitCode, 1);
+    assert.equal(report.collection.complete, true);
+    assert.equal(report.collection.maxRunsPerWorkflow, 5);
+    assert.deepEqual(report.collection.excludedRuns.map(({ runId, reason, jobCount }) =>
+      ({ runId, reason, jobCount })), [
+      { runId: 41207304002, reason: 'cancelled_without_jobs', jobCount: 0 },
+    ]);
+    assert.deepEqual(report.checks, { build: null, deploy: null, pages: true });
+    const saved = JSON.parse(readFileSync(join(cwd, PUBLIC_PATH), 'utf8'));
+    assert.equal(saved.publicSnapshotUpdated, true);
+    assert.equal(saved.timestamp, new Date(observedAt).toISOString());
+    assert.equal(saved.publisher.runId, 41207302461);
+    assert.ok(!JSON.stringify(saved).includes(TOKEN));
+  } finally {
+    rmSync(cwd, { recursive: true, force: true });
+  }
+});
+
+test('excluding an unstarted duplicate still selects the newest real failure', async () => {
+  const { f } = cancelledHistory();
+  f.run.conclusion = 'failure';
+  f.jobs.jobs[0].steps.at(-1).conclusion = 'failure';
+  const { report } = await collect(f);
+  assert.equal(report.publisher.runId, f.run.id);
+  assert.equal(report.status, 'degraded');
+  assert.equal(report.checks.deploy, false);
+  assert.equal(report.collection.complete, true);
+  assert.equal(report.collection.excludedRuns.length, 1);
+});
+
+test('cancelled execution with a started failing job remains visible', async () => {
+  const { f, cancellations: [cancelled] } = cancelledHistory();
+  const jobs = structuredClone(f.jobs);
+  Object.assign(jobs.jobs[0], { run_id: cancelled.id, conclusion: 'cancelled' });
+  jobs.jobs[0].steps[0].conclusion = 'failure';
+  f.jobsByRun[cancelled.id] = jobs;
+  const { report } = await collect(f);
+  assert.equal(report.publisher.runId, cancelled.id);
+  assert.equal(report.status, 'degraded');
+  assert.equal(report.collection.complete, false);
+  assert.deepEqual(report.collection.excludedRuns, []);
+});
+
+test('an empty latest rerun is not proof that earlier attempts never executed', async () => {
+  const { f, cancellations: [cancelled] } = cancelledHistory();
+  cancelled.run_attempt = 2;
+  const { report } = await collect(f);
+  assert.equal(report.publisher.runId, cancelled.id);
+  assert.equal(report.status, 'unknown');
+  assert.equal(report.collection.complete, false);
+  assert.deepEqual(report.collection.excludedRuns, []);
+});
+
+for (const evidence of ['http_denied', 'partial_jobs', 'invalid_zero_count']) {
+  test('does not exclude a cancellation without complete zero-job proof: ' + evidence, async () => {
+    const { f, cancellations: [cancelled] } = cancelledHistory();
+    if (evidence === 'partial_jobs') f.jobsByRun[cancelled.id] = { total_count: 1, jobs: [] };
+    if (evidence === 'invalid_zero_count') f.jobsByRun[cancelled.id] = { total_count: 0, jobs: [{}] };
+    let bodyRead = false;
+    const { report, calls } = await collect(f, async (url) =>
+      evidence === 'http_denied' && url.includes('/runs/' + cancelled.id + '/jobs?') ? {
+        ok: false, status: 403, json: async () => { bodyRead = true; return { secret: TOKEN }; },
+      } : null);
+    assert.equal(report.status, 'unavailable');
+    assert.equal(report.collection.complete, false);
+    assert.deepEqual(report.collection.excludedRuns, []);
+    assert.equal(bodyRead, false);
+    assert.ok(!calls.some(({ url }) => url.includes('/runs/' + f.run.id + '/jobs?')));
+    assert.ok(!JSON.stringify(report).includes(TOKEN));
+  });
+}
+
+test('unresolved history frontier preserves public bytes instead of borrowing older cross-workflow success', async () => {
+  const { f } = cancelledHistory(5);
+  const older = f.lists['static-deploy.yml'].workflow_runs[0];
+  older.updated_at = date(5);
+  const olderJobs = fixture('static-deploy.yml').jobs;
+  olderJobs.jobs.forEach((job) => { job.run_id = older.id; });
+  f.jobsByRun[older.id] = olderJobs;
+  const cwd = mkdtempSync(join(tmpdir(), 'zion-health-history-bound-'));
+  try {
+    mkdirSync(join(cwd, 'public/api'), { recursive: true });
+    const original = '{"timestamp":"2026-07-07T23:06:26.830Z"}\n';
+    writeFileSync(join(cwd, PUBLIC_PATH), original);
+    const mock = api(f);
+    const { report, exitCode } = await runCollector({ cwd, env, now: () => NOW, fetchImpl: mock.fetchImpl });
+    assert.equal(report.status, 'unknown');
+    assert.equal(exitCode, 1);
+    assert.equal(report.collection.complete, false);
+    assert.equal(report.publicSnapshotUpdated, false);
+    assert.equal(report.publisher, null);
+    assert.equal(report.collection.excludedRuns.length, 5);
+    assert.ok(report.collection.errors.includes('gh-pages.yml:publisher_history_limit_reached'));
+    assert.equal(readFileSync(join(cwd, PUBLIC_PATH), 'utf8'), original);
+    assert.ok(!mock.calls.some(({ url }) => url.includes('/runs/' + older.id + '/jobs?')));
+    assert.equal(mock.calls.filter(({ url }) => url.includes('/jobs?')).length, 5);
+  } finally {
+    rmSync(cwd, { recursive: true, force: true });
+  }
+});
+
+test('a newer proven candidate is selectable before an older truncated-history frontier', async () => {
+  const f = fixture('static-deploy.yml');
+  const old = f.lists['gh-pages.yml'].workflow_runs[0];
+  f.lists['gh-pages.yml'] = {
+    total_count: 6,
+    workflow_runs: Array.from({ length: 5 }, (_, index) => ({
+      ...old, id: 9000 + index, conclusion: 'cancelled',
+      created_at: date(30 + index), updated_at: date(20),
+    })),
+  };
+  const { report, calls } = await collect(f);
+  assert.equal(report.publisher.runId, f.run.id);
+  assert.equal(report.status, 'ok');
+  assert.equal(report.collection.complete, true);
+  assert.deepEqual(report.collection.excludedRuns, []);
+  assert.equal(calls.filter(({ url }) => url.includes('/jobs?')).length, 1);
+});
+
+for (const evidence of ['short_page', 'duplicate_run']) {
+  test('rejects incomplete or duplicate bounded history: ' + evidence, async () => {
+    const f = fixture();
+    const list = f.lists['gh-pages.yml'];
+    list.total_count = 2;
+    if (evidence === 'duplicate_run') list.workflow_runs.push(structuredClone(list.workflow_runs[0]));
+    const { report, calls } = await collect(f);
+    assert.equal(report.status, 'unavailable');
+    assert.equal(report.collection.complete, false);
+    assert.deepEqual(report.collection.excludedRuns, []);
+    assert.equal(calls.filter(({ url }) => url.includes('/jobs?')).length, 0);
+  });
+}
+
+test('fully exhausted unstarted cancellations do not fabricate an eligible publisher', async () => {
+  const { f, cancellations } = cancelledHistory();
+  f.lists['gh-pages.yml'] = { total_count: 1, workflow_runs: cancellations };
+  for (const workflow of ['static-deploy.yml', 'deploy-on-push.yml']) {
+    f.lists[workflow] = { total_count: 0, workflow_runs: [] };
+  }
+  const { report } = await collect(f);
+  assert.equal(report.publisher, null);
+  assert.equal(report.status, 'unknown');
+  assert.equal(report.collection.complete, false);
+  assert.equal(report.timestamp, null);
+  assert.equal(report.collection.excludedRuns.length, 1);
 });
