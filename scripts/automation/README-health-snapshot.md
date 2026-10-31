@@ -42,6 +42,9 @@ The internal attempt report at
 `automation/reports/automation-health-latest.json` is always written.
 `public/api/automation-health.json` changes only when collection is complete;
 a complete degraded or pending observation can be published, but is not healthy.
+A partial degraded result (an observed failure together with any unknown,
+unavailable or stale check) remains internal: the public snapshot is still
+preserved. A detected failure alone does not prove complete current evidence.
 Incomplete collection keeps the public file byte-for-byte unchanged and leaves
 the existing freshness guard meaningful. A nonzero exit means the result is not
 healthy, even when a measured degraded/pending report was written.
