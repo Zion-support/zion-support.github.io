@@ -47,10 +47,11 @@ jobs:
           need_restore=0
           check() {
             local f="$1"
+            local require_payment="${2:-true}"
             if [ ! -f "$f" ]; then echo "MISSING $f"; need_restore=1; return; fi
             local sz; sz=$(wc -c < "$f" | tr -d ' ')
             if [ "$sz" -lt "$MIN" ]; then echo "STUB $f (${sz}B)"; need_restore=1; return; fi
-            if ! grep -Fq "$PLINK" "$f"; then echo "NO_PLINK $f"; need_restore=1; return; fi
+            if [ "$require_payment" = true ] && ! grep -Fq "$PLINK" "$f"; then echo "NO_PLINK $f"; need_restore=1; return; fi
             if grep -Fi 'http-equiv="refresh"' "$f" >/dev/null || grep -Fq 'PLACEHOLDER' "$f"; then
               echo "REDIRECT_STUB $f"; need_restore=1; return
             fi
@@ -59,8 +60,12 @@ jobs:
 
           check public/services/ai-automation/index.html
           check services/ai-automation/index.html
-          for f in public/plans/index.html plans/index.html public/discovery/index.html discovery/index.html; do
+          for f in public/plans/index.html plans/index.html; do
             if [ -f "$f" ]; then check "$f"; fi
+          done
+          # Discovery is a free questionnaire; retain content integrity checks without a payment link.
+          for f in public/discovery/index.html discovery/index.html; do
+            if [ -f "$f" ]; then check "$f" false; fi
           done
 
           # Always block Hermes Agent money-path commits that look like service sync
