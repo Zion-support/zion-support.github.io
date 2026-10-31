@@ -35,3 +35,117 @@ test('newline recipient injection is rejected before any request',async()=>{cons
 test('manual fallback preserves exact report and participant CC',async()=>{const h=harness('failure');await h.submit();const fallback=new URL(h.nodes['email-fallback'].children[0].href);assert.equal(fallback.pathname,'commercial@ziontechgroup.com');assert.equal(fallback.searchParams.get('cc'),'qa@example.test');assert.equal(fallback.searchParams.get('body'),h.context.window.__zionDiscoveryReport);assert.equal(fallback.href.includes('carlos%40'),false);});
 
 for(const mode of ['malformed-json','missing-success','false-success','numeric-success','http-error-success'])test('provider acknowledgement must be explicit: '+mode,async()=>{const h=harness(mode);await h.submit();assert.equal(h.requests.length,1);assert.equal(h.nodes.rsent.textContent,'Email acceptance was not confirmed. Copy or download your report or use the manual email fallback. No automatic retry was made.');assert.ok(h.context.window.__zionDiscoveryReport);assert.equal(h.nodes.result.style.display,'block');assert.equal(h.nodes['submit-report'].disabled,false);assert.equal(h.nodes.dform.attrs['aria-busy'],'false');const fallback=new URL(h.nodes['email-fallback'].children[0].href);assert.equal(fallback.searchParams.get('body'),h.context.window.__zionDiscoveryReport);});
+
+// Review-only reconciliation regression tests; all requests remain mocked.
+const reconciliationKinds={"en": ["Interactive planning tool", "Interactive calculator", "Documentation / concept", "Service page"], "pt": ["Ferramenta de planejamento interativa", "Calculadora interativa", "Documentação / conceito", "Página de serviço"], "es": ["Herramienta de planificación interactiva", "Calculadora interactiva", "Documentación / concepto", "Página de servicio"], "fr": ["Outil de planification interactif", "Calculateur interactif", "Documentation / concept", "Page de service"], "de": ["Interaktives Planungstool", "Interaktiver Rechner", "Dokumentation / Konzept", "Dienstleistungsseite"]};
+for(const lang of ['en','pt-BR','es','fr','de','zz'])test('all four recommendation categories preserved/localized: '+lang,async()=>{
+ const kinds=reconciliationKinds[lang.slice(0,2)]||reconciliationKinds.en;
+ const h=harness('success',{},lang);
+ for(const [path,index] of [['/automation-pilot-planner/',0],['/apps/discovery-report-workbench.html',2],['/roi-calc/',1],['/sla-calculator/',1],['/finops-estimator/',1],['/apps/network.html',2],['/ai-readiness-assessment/',2],['/ai-ticket-triage/',3]]){
+  assert.equal(vm.runInContext('recommendationKind('+JSON.stringify(path)+')',h.context),kinds[index]);
+ }
+ for(const [process,indexes] of [['Reporting & analytics',[1,2]],['Other',[2]],['IT operations / incident response',[3]]]){
+  const g=harness('success',{process},lang);await g.submit();
+  for(const index of indexes){assert.ok(g.context.window.__zionDiscoveryReport.includes(kinds[index]));assert.ok(g.nodes.rapps.children.some(item=>item.children[1].textContent===' — '+kinds[index]));}
+  assert.equal(g.requests[0].payload.message,g.context.window.__zionDiscoveryReport);
+ }
+});
+for(const lang of ['en','pt-BR','es','fr','de'])for(const mode of ['malformed-json','missing-success','numeric-success','http-error-success','network-error','pending'])test('uncertain retry remains blocked '+lang+' '+mode,async()=>{
+ const h=harness(mode,{},lang);const work=h.submit();if(mode==='pending')h.timeout();await work;
+ await h.submit();assert.equal(h.requests.length,1);assert.ok(h.context.window.__zionDiscoveryReport);assert.equal(h.nodes['submit-report'].disabled,false);assert.equal(h.nodes.dform.attrs['aria-busy'],'false');
+});
+for(const mode of ['failure','false-success'])test('explicit failure remains retryable '+mode,async()=>{const h=harness(mode);await h.submit();await h.submit();assert.equal(h.requests.length,2);});
+test('changed report remains eligible after uncertainty',async()=>{const h=harness('network-error');await h.submit();h.fields.goal='Changed bounded test';await h.submit();assert.equal(h.requests.length,2);});
+
+// Current-main route preservation regressions; no production requests.
+test('preserve current main incident-response recommendations',async()=>{const h=harness('success',{process:'IT operations / incident response'});await h.submit();assert.deepEqual(Array.from(h.nodes.rapps.children,item=>item.children[0].href),['/incident-postmortem-writer/','/patch-window-planner/','/apps/operations-reliability-ai-2026.html']);});
+test('preserve current main dispatch recommendations',async()=>{const h=harness('success',{process:'Scheduling / dispatch'});await h.submit();assert.deepEqual(Array.from(h.nodes.rapps.children,item=>item.children[0].href),['/ai-smart-hands-scheduler/','/ai-field-service-automation/','/sla-calculator/']);});
+
+// Published locale destinations: DOM links, downloadable report and email payload agree.
+// All requests remain mocked; these tests do not submit the live questionnaire.
+const routeLocaleCases=[
+ [
+  "Other",
+  1,
+  [
+   "/apps/",
+   "/pt/apps/",
+   "/es/apps/",
+   "/fr/apps/",
+   "/de/apps/"
+  ]
+ ],
+ [
+  "Other",
+  2,
+  [
+   "/apps/network.html",
+   "/pt/apps/network.html",
+   "/es/apps/network.html",
+   "/fr/apps/network.html",
+   "/de/apps/network.html"
+  ]
+ ],
+ [
+  "Reporting & analytics",
+  1,
+  [
+   "/apps/discovery-report-workbench.html",
+   "/pt/apps/discovery-report-workbench.html",
+   "/es/apps/discovery-report-workbench.html",
+   "/fr/apps/discovery-report-workbench.html",
+   "/de/apps/discovery-report-workbench.html"
+  ]
+ ],
+ [
+  "IT operations / incident response",
+  2,
+  [
+   "/apps/operations-reliability-ai-2026.html",
+   "/apps/operations-reliability-ai-2026-pt.html",
+   "/apps/operations-reliability-ai-2026-es.html",
+   "/apps/operations-reliability-ai-2026-fr.html",
+   "/apps/operations-reliability-ai-2026-de.html"
+  ]
+ ],
+ [
+  "Finance ops / cost control (FinOps)",
+  1,
+  [
+   "/automation-pilot-planner/en/",
+   "/automation-pilot-planner/",
+   "/automation-pilot-planner/es/",
+   "/automation-pilot-planner/fr/",
+   "/automation-pilot-planner/de/"
+  ]
+ ],
+ [
+  "Sales & proposal generation",
+  1,
+  [
+   "/sales-call-analyzer/",
+   "/sales-call-analyzer/pt/",
+   "/sales-call-analyzer/es/",
+   "/sales-call-analyzer/fr/",
+   "/sales-call-analyzer/de/"
+  ]
+ ]
+];
+for(const [localeIndex,lang] of ['en','pt-BR','es','fr','de'].entries())for(const [process,index,paths] of routeLocaleCases)test('same-language recommendation and report: '+lang+' '+process+' '+index,async()=>{
+ const h=harness('success',{process},lang);await h.submit();
+ const expected=paths[localeIndex];
+ assert.equal(h.nodes.rapps.children[index].children[0].href,expected);
+ assert.ok(h.context.window.__zionDiscoveryReport.includes('https://ziontechgroup.com'+expected));
+ assert.equal(h.requests[0].payload.message,h.context.window.__zionDiscoveryReport);
+ assert.equal(new URL(h.nodes['email-fallback'].children[0].href).searchParams.get('body'),h.context.window.__zionDiscoveryReport);
+ const workbench=localeIndex===0?'/apps/discovery-report-workbench.html':'/'+lang.slice(0,2)+'/apps/discovery-report-workbench.html';
+ assert.ok(h.context.window.__zionDiscoveryReport.includes('https://ziontechgroup.com'+workbench));
+});
+for(const [process,index,paths] of routeLocaleCases)test('unknown language keeps published English destination: '+process+' '+index,async()=>{
+ const h=harness('success',{process},'zz');await h.submit();
+ assert.equal(h.nodes.rapps.children[index].children[0].href,paths[0]);
+});
+test('unmapped recommendation routes remain unchanged in Portuguese',async()=>{
+ const h=harness('success',{process:'Scheduling / dispatch'},'pt-BR');await h.submit();
+ assert.deepEqual(Array.from(h.nodes.rapps.children,item=>item.children[0].href),['/ai-smart-hands-scheduler/','/ai-field-service-automation/','/sla-calculator/']);
+});

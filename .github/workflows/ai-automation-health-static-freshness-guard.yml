@@ -39,7 +39,7 @@ jobs:
         run: node scripts/automation/check-automation-health-static-freshness.cjs
 
       - name: Escalate stale static health snapshot
-        if: steps.freshness.outputs.static_health_fresh != 'true'
+        if: failure() && !cancelled() && steps.freshness.outcome == 'failure' && steps.freshness.outputs.static_health_fresh == 'false'
         env:
           GH_TOKEN: ${{ github.token }}
           ISSUE_FINGERPRINT: automation-health-static-freshness

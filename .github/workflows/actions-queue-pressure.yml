@@ -52,7 +52,7 @@ jobs:
 
           runs=[]
           for page in range(1,4):
-            data=api(f'/repos/{repo}/actions/runs?branch=main&per_page=100&page={page}')
+            data=api(f'/repos/{repo}/actions/runs?per_page=100&page={page}')
             batch=data.get('workflow_runs',[])
             runs.extend(batch)
             if len(batch)<100: break
@@ -70,6 +70,52 @@ jobs:
           oldest=max((age_minutes(r) for r in queued),default=0.0)
           queue_count=len(queued)
           active_count=len(active)
+          by_workflow={}
+          for run in queued:
+            name=run.get('name') or 'unknown'
+            path=run.get('path') or ''
+            event=run.get('event') or 'unknown'
+            head_branch=run.get('head_branch') or ''
+            key=(name,path)
+            entry=by_workflow.setdefault(key,{
+              'workflow':name,
+              'path':path,
+              'queued':0,
+              'oldest_minutes':0.0,
+              'events':{},
+              'branches':{},
+            })
+            entry['queued']+=1
+            entry['oldest_minutes']=max(entry['oldest_minutes'],age_minutes(run))
+            entry['events'][event]=entry['events'].get(event,0)+1
+            if head_branch:
+              entry['branches'][head_branch]=entry['branches'].get(head_branch,0)+1
+          top_workflows=sorted(by_workflow.values(),key=lambda x:(-x['queued'],-x['oldest_minutes'],x['workflow']))[:10]
+          for entry in top_workflows:
+            entry['oldest_minutes']=round(entry['oldest_minutes'],1)
+
+          def workflow_text(path):
+            if not path or not path.startswith('.github/workflows/'):
+              return ''
+            try:
+              data=api(f'/repos/{repo}/contents/{path}?ref=main')
+              import base64
+              return base64.b64decode(data.get('content','')).decode('utf-8','replace')
+            except Exception:
+              return ''
+
+          missing_concurrency=[]
+          for entry in top_workflows:
+            text=workflow_text(entry.get('path',''))
+            entry['has_concurrency']=bool(text and 'concurrency:' in text)
+            if entry['queued'] >= 2 and text and not entry['has_concurrency']:
+              missing_concurrency.append({
+                'workflow':entry['workflow'],
+                'path':entry['path'],
+                'queued':entry['queued'],
+                'oldest_minutes':entry['oldest_minutes'],
+                'events':entry['events'],
+              })
 
           # Alert only for material repository-wide congestion.
           # A small busy queue is normal in this repo.
@@ -82,9 +128,16 @@ jobs:
           report={
             'schema':'zion.actions.queue-pressure.v1',
             'generated_at_utc':now.isoformat(),
-            'branch':'main',
+            'branch':'all',
             'sampled_runs':len(runs),
             'queue_count':queue_count,
+            'top_queued_workflows':top_workflows,
+            'missing_concurrency_candidates':missing_concurrency,
+            'recommendations':[
+              'Avoid retry pushes while severity is warning/critical.',
+              'Review workflows with multiple queued runs and no top-level concurrency first.',
+              'Prefer cancel-in-progress only for read-only analysis or superseded same-ref work; do not change deploy semantics automatically.',
+            ],
             'in_progress_count':len(in_progress),
             'active_count':active_count,
             'oldest_queued_minutes':round(oldest,1),
@@ -106,13 +159,26 @@ jobs:
           out.write_text(json.dumps(report,indent=2,sort_keys=True)+'\n',encoding='utf-8')
 
           summary=Path(os.environ['GITHUB_STEP_SUMMARY'])
-          summary.write_text(
-            '## GitHub Actions queue pressure\n\n'
-            f"- Severity: **{severity}**\n"
-            f"- Queued/pending: **{queue_count}**\n"
-            f"- In progress: **{len(in_progress)}**\n"
-            f"- Oldest queued: **{oldest:.1f} min**\n"
-          )
+          lines=[
+            '## GitHub Actions queue pressure',
+            '',
+            f'- Severity: **{severity}**',
+            f'- Queued/pending: **{queue_count}**',
+            f'- In progress: **{len(in_progress)}**',
+            f'- Oldest queued: **{oldest:.1f} min**',
+            '',
+            '### Top queued workflows',
+          ]
+          for entry in top_workflows[:8]:
+            lines.append(
+              f"- **{entry['workflow']}** — {entry['queued']} queued, "
+              f"oldest {entry['oldest_minutes']}m, concurrency={'yes' if entry['has_concurrency'] else 'no/unknown'}"
+            )
+          if missing_concurrency:
+            lines += ['', '### Review candidates: repeated queue without concurrency']
+            for entry in missing_concurrency[:8]:
+              lines.append(f"- `{entry['path']}` — {entry['queued']} queued")
+          summary.write_text('\n'.join(lines)+'\n')
           print(json.dumps(report,indent=2))
           if severity!='ok':
             print(f'::error title=Actions queue pressure::{severity}: queued={queue_count}, oldest={oldest:.1f}m')
@@ -137,7 +203,24 @@ jobs:
             const marker='<!-- actions-queue-pressure -->';
             const {data:issues}=await github.rest.issues.listForRepo({...context.repo,state:'open',per_page:100});
             const existing=issues.find(i=>i.title===title || (i.body||'').includes(marker));
-            const body=marker+'\nRepository-wide Actions queue pressure crossed the configured threshold. Avoid unnecessary retry pushes; inspect queued runs and GitHub Status before changing source.\n\nRun: '+context.serverUrl+'/'+context.repo.owner+'/'+context.repo.repo+'/actions/runs/'+context.runId;
+            const fs=require('fs');
+            let evidence={};
+            try { evidence=JSON.parse(fs.readFileSync('actions-queue-pressure.json','utf8')); } catch {}
+            const top=(evidence.top_queued_workflows||[]).slice(0,8)
+              .map(x=>'- **'+x.workflow+'** — '+x.queued+' queued; oldest '+x.oldest_minutes+'m; concurrency='+(x.has_concurrency?'yes':'no/unknown'))
+              .join('\n');
+            const candidates=(evidence.missing_concurrency_candidates||[]).slice(0,8)
+              .map(x=>'- `'+x.path+'` — '+x.queued+' queued')
+              .join('\n');
+            const body=marker+
+              '\nRepository-wide Actions queue pressure crossed the configured threshold. Avoid unnecessary retry pushes; inspect queued runs and GitHub Status before changing source.'+
+              '\n\n**Severity:** '+(evidence.severity||'unknown')+
+              '\n**Queued/pending:** '+(evidence.queue_count??'unknown')+
+              '\n**Oldest queued:** '+(evidence.oldest_queued_minutes??'unknown')+' min'+
+              (top?'\n\n### Top queued workflows\n'+top:'')+
+              (candidates?'\n\n### Review candidates: repeated queue without concurrency\n'+candidates:'')+
+              '\n\nNo automatic workflow edits are performed by this monitor.'+
+              '\n\nRun: '+context.serverUrl+'/'+context.repo.owner+'/'+context.repo.repo+'/actions/runs/'+context.runId;
             if(existing) await github.rest.issues.update({...context.repo,issue_number:existing.number,body});
             else await github.rest.issues.create({...context.repo,title,body});
 

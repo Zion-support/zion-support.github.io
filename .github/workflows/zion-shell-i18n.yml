@@ -1,0 +1,37 @@
+name: Shared chrome locale tests
+
+"on":
+  pull_request:
+    paths:
+      - 'public/assets/js/zion-shell.js'
+      - 'scripts/test-zion-shell-i18n.cjs'
+      - '.github/workflows/zion-shell-i18n.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: zion-shell-i18n-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  locale-regressions:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /.nvmrc
+            /public/assets/js/zion-shell.js
+            /scripts/test-zion-shell-i18n.cjs
+      - uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
+        with:
+          node-version-file: '.nvmrc'
+      - name: Check shared chrome syntax
+        run: node --check public/assets/js/zion-shell.js
+      - name: Test localized navigation and injection behavior
+        run: node scripts/test-zion-shell-i18n.cjs

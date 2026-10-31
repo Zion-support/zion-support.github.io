@@ -8,7 +8,9 @@ name: Simple Static Deploy
 # FIELD-SERVICES LOCK. No DNS. No #71365.
 # 2026-09-27: synced from main — dispatch-only + main-ref job guard so
 # branch pushes on this branch never trigger a failing deploy run.
-
+# 2026-10-28: added field evidence release rendering so the
+# data-field-evidence-release marker is present on live pages, fixing
+# the Field Evidence Read-only QA workflow.
 
 on:
   workflow_dispatch:
@@ -20,12 +22,16 @@ on:
 
 permissions:
   contents: read
+  actions: read
   pages: write
   id-token: write
 
 concurrency:
-  group: pages-deploy
+  # Manual releases use the same queue as both automatic publishers.
+  # Preserve their explicitly selected main commit and do not cancel queued runs.
+  group: zion-production-pages-${{ github.ref }}
   cancel-in-progress: false
+  queue: max
 
 jobs:
   deploy:
@@ -39,15 +45,37 @@ jobs:
       - name: Confirm main ref
         run: echo "ref=${GITHUB_REF} sha=${GITHUB_SHA} event=${GITHUB_EVENT_NAME} (main-only deploy)"
 
+      - name: Setup Node.js for health collection
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
+        with:
+          node-version: '22'
+          package-manager-cache: false
+      - name: Collect observed automation health before assembly
+        id: automation-health
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: node scripts/automation/pages-automation-health-artifact.cjs collect
       - name: Prepare pages
         run: bash scripts/prepare-pages-out.sh
       - name: Gate reviewed five-language productivity rendering
         run: node scripts/render-productivity-release.cjs out
+      - name: Render field evidence release (adds data-field-evidence-release markers)
+        run: node scripts/render-field-evidence-release.cjs out
+      - name: Verify operational tools in the final Pages artifact
+        run: node scripts/test-operational-tools.cjs out --artifact-only
+      - name: Reject private operational files in final Pages artifact
+        run: python3 scripts/assert-no-private-ops.py out
+      - name: Validate collected automation health in final Pages artifact
+        env:
+          AUTOMATION_HEALTH_ARTIFACT_SHA256: ${{ steps.automation-health.outputs.snapshot_sha256 }}
+        run: node scripts/automation/pages-automation-health-artifact.cjs verify
       - uses: actions/upload-pages-artifact@v3
         with:
           path: out
+          name: github-pages-${{ github.run_id }}-${{ github.run_attempt }}
       - uses: actions/deploy-pages@v4
-        # Post-deploy live curl skipped: runners often block egress and probes flake.
-        # The prepare-pages-out money-path gate above is the durable Pay RED guard.
-
-
+        with:
+          artifact_name: github-pages-${{ github.run_id }}-${{ github.run_attempt }}
+      # Post-deploy live curl skipped: runners often block egress and probes flake.
+      # The prepare-pages-out money-path gate above is the durable Pay RED guard.

@@ -16,13 +16,13 @@ permissions:
 
 concurrency:
   group: codeql-${{ github.ref }}
-  cancel-in-progress: true
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
   analyze:
     name: Analyze
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 45
 
 
     strategy:
@@ -31,6 +31,35 @@ jobs:
         language: ['javascript-typescript']
 
     steps:
+      - name: Reserve disk space for JavaScript/TypeScript analysis
+        if: ${{ runner.environment == 'github-hosted' && runner.os == 'Linux' && matrix.language == 'javascript-typescript' }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          echo "Disk space before removing unused SDKs"
+          df -h /
+          df -i /
+
+          # This interpreted-language job does not build Android or .NET code.
+          # Keep the CodeQL/Node/Java toolcache, .NET runtimes, runner and workspace.
+          # Only these preinstalled SDK directories on the ephemeral VM may go.
+          for sdk_dir in /usr/local/lib/android/sdk /usr/share/dotnet/sdk; do
+            if [[ ! -e "$sdk_dir" && ! -L "$sdk_dir" ]]; then
+              echo "SDK directory is not installed: $sdk_dir"
+              continue
+            fi
+            if [[ ! -d "$sdk_dir" || -L "$sdk_dir" || "$(realpath -- "$sdk_dir")" != "$sdk_dir" ]]; then
+              echo "::error::Refusing unexpected SDK path: $sdk_dir"
+              exit 1
+            fi
+            sudo du -sh -- "$sdk_dir"
+            sudo rm -rf --one-file-system -- "$sdk_dir"
+          done
+
+          echo "Disk space after removing unused SDKs"
+          df -h /
+          df -i /
+
       - name: Checkout
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
 

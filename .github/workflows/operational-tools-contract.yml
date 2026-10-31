@@ -4,15 +4,25 @@ on:
     branches: [main]
     paths:
       - 'scripts/render-operational-tools.cjs'
+      - 'scripts/render-roi-baseline.cjs'
+      - 'scripts/test-roi-baseline.cjs'
+      - 'content/roi-baseline.json'
       - 'scripts/test-operational-tools.cjs'
+      - 'scripts/prepare-pages-out.sh'
       - 'content/operational-tools.json'
+      - 'content/operational-examples.json'
       - 'public/assets/js/operational-tools.js'
       - '.github/workflows/operational-tools-contract.yml'
   pull_request:
     paths:
       - 'scripts/render-operational-tools.cjs'
+      - 'scripts/render-roi-baseline.cjs'
+      - 'scripts/test-roi-baseline.cjs'
+      - 'content/roi-baseline.json'
       - 'scripts/test-operational-tools.cjs'
+      - 'scripts/prepare-pages-out.sh'
       - 'content/operational-tools.json'
+      - 'content/operational-examples.json'
       - 'public/assets/js/operational-tools.js'
       - '.github/workflows/operational-tools-contract.yml'
   workflow_dispatch:
@@ -26,4 +36,5 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
+      - run: node scripts/test-roi-baseline.cjs
       - run: node scripts/test-operational-tools.cjs

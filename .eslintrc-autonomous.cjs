@@ -1,141 +1,103 @@
+'use strict';
+
 /**
- * Autonomous ESLint Rules — Custom Linter
- *
- * This config extends the project's base ESLint rules and adds
- * autonomous guards for patterns that default rules miss.
- *
- * Used exclusively by automation/type-coverage-enforcer.cjs and
- * .github/workflows/custom-eslint.yml for CI gate.
+ * Flat configuration for the existing Custom ESLint workflow (-c path).
+ * The filename stays stable; ESLint 10 requires a flat array even for .cjs.
+ * All enabled checks are syntax based, so a TypeScript project is unnecessary.
+ * This avoids constructing the entire generated project merely to lint a file.
  */
+const typescript = require('@typescript-eslint/eslint-plugin');
+const typescriptParser = require('@typescript-eslint/parser');
+const nextPlugin = require('@next/eslint-plugin-next');
+const globals = require('globals');
+const autonomous = require('./eslint-rules/autonomous.cjs');
+const complexityLimit = 20;
 
-const path = require('path');
-
-module.exports = {
-  root: true,
-  extends: [
-    'next/core-web-vitals',
-    'plugin:@typescript-eslint/recommended'
-  ],
-  parser: '@typescript-eslint/parser',
-  parserOptions: {
-    ecmaVersion: 2022,
-    sourceType: 'module',
-    project: './tsconfig.json'
-  },
-  plugins: [
-    '@typescript-eslint',
-    'unused-imports'
-  ],
-  rules: {
-    // ---- Autonomous guard rules ----
-
-    // Forbidden APIs — no eval or Function constructor
-    'no-eval': 'error',
-    'no-new-func': 'error',
-
-    // innerHTML requires explicit sanitization (hard to enforce; at least flag)
-    'no-inner-html': 'error',
-
-    // Async error handling — ensure promises are catch-handled or try/catch
-    'require-async-try-catch': 'error',
-
-    // Console statements in production code
-    'no-console': ['warn', { allow: ['warn', 'error'] }],
-
-    // Enforce explicit any prohibition
-    '@typescript-eslint/no-explicit-any': ['error', {
-      fixToUnknown: false,
-      ignoreRestParams: false,
-      ignoreRestArrays: false
-    }],
-
-    // Ensure await on promise calls (simple heuristic)
-    'require-await': 'warn',
-
-    // Unused variables/imports
-    '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
-    'unused-imports/no-unused-imports': 'warn',
-    'unused-imports/no-unused-vars': [
-      'warn',
-      { vars: 'all', varsIgnorePattern: '^_', args: 'after-used', argsIgnorePattern: '^_' }
+module.exports = [
+  {
+    ignores: [
+      '**/node_modules/**', '**/.next/**', '**/out/**', '**/dist/**', '**/build/**',
+      '**/coverage/**', '**/.hermes/**', 'automation/reports/**',
+      '**/*.config.js', '**/*.config.cjs', 'scripts/automation/**',
+      'automation/**/*.cjs', 'eslint-rules/**',
     ],
-
-    // Naming conventions
-    camelcase: ['error', { properties: 'always' }],
-    '@typescript-eslint/naming-convention': [
-      'error',
-      {
-        selector: 'variable',
-        format: ['camelCase', 'UPPER_CASE'],
-        leadingUnderscore: 'allow'
-      },
-      {
-        selector: 'function',
-        format: ['camelCase']
-      },
-      {
-        selector: 'parameter',
-        format: ['camelCase']
-      },
-      {
-        selector: 'property',
-        format: ['camelCase', 'snake_case', 'UPPER_CASE']
-      },
-      {
-        selector: 'memberLike',
-        format: ['camelCase']
-      },
-      {
-        selector: 'typeLike',
-        format: ['PascalCase']
-      }
-    ],
-
-    // Require explicit return types on exported functions (future enhancement)
-    // '@typescript-eslint/explicit-function-return-type': ['error', {
-    //   allowExpressions: true,
-    //   allowHigherOrderFunctions: true,
-    //   allowTypedFunctionExpressions: true
-    // }],
-
-    // Complexity guard
-    'complexity': ['warn', 20],
-
-    // Enforce braces on conditionals
-    curly: ['error', 'all'],
-
-    // No magic numbers (with allowlist)
-    'no-magic-numbers': ['warn', {
-      ignore: [0, 1, -1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 100, 1000, 1024, 60, 3600, 86400],
-      ignoreArrayIndexes: true,
-      ignore: [
-        -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10,  // small integers ok
-        12, 24, 48, 60, 100, 1024, 86400     // common constants ok
-      ]
-    }]
   },
-  overrides: [
-    {
-      files: ['test/**/*.ts', '**/*.test.ts', '**/*.spec.ts'],
-      rules: {
-        'no-console': 'off',
-        '@typescript-eslint/no-explicit-any': 'off' // tests may use any liberally
-      }
-    }
-  ],
-  ignorePatterns: [
-    'node_modules/',
-    '.next/',
-    'out/',
-    'dist/',
-    'build/',
-    'coverage/',
-    '.hermes/',
-    'automation/reports/',
-    '**/*.config.js',
-    '**/*.config.cjs',
-    'scripts/automation/**',
-    'automation/**/*.cjs', // allow automation scripts to be less strict
-    'eslint-rules/**' // custom plugin dir itself excluded
-  ]
-};
+  {
+    files: ['**/*.{js,jsx,mjs,cjs,ts,tsx}'],
+    languageOptions: {
+      parser: typescriptParser,
+      ecmaVersion: 'latest',
+      sourceType: 'module',
+      parserOptions: { ecmaFeatures: { jsx: true } },
+      globals: { ...globals.browser, ...globals.node, ...globals.es2022 },
+    },
+    plugins: {
+      // eslint-disable-next-line @typescript-eslint/naming-convention -- ESLint plugin and rule IDs are fixed API keys.
+      '@typescript-eslint': typescript,
+      // eslint-disable-next-line @typescript-eslint/naming-convention -- ESLint plugin and rule IDs are fixed API keys.
+      '@next/next': nextPlugin,
+      // eslint-disable-next-line @typescript-eslint/naming-convention -- ESLint plugin and rule IDs are fixed API keys.
+      'zion-autonomous': autonomous,
+    },
+    settings: { next: { rootDir: __dirname } },
+    rules: {
+      ...typescript.configs.recommended.rules,
+      ...nextPlugin.configs['core-web-vitals'].rules,
+      // Preserve the established eslint.config.mjs policy for this static site.
+      // The upstream route rule also throws on literal '(' in generated slugs.
+      // eslint-disable-next-line @typescript-eslint/naming-convention -- ESLint plugin and rule IDs are fixed API keys.
+      '@next/next/no-html-link-for-pages': 'off',
+      // eslint-disable-next-line @typescript-eslint/naming-convention -- ESLint plugin and rule IDs are fixed API keys.
+      'no-eval': 'error',
+      // eslint-disable-next-line @typescript-eslint/naming-convention -- ESLint plugin and rule IDs are fixed API keys.
+      'no-new-func': 'error',
+      // eslint-disable-next-line @typescript-eslint/naming-convention -- ESLint plugin and rule IDs are fixed API keys.
+      'zion-autonomous/no-inner-html': 'error',
+      // eslint-disable-next-line @typescript-eslint/naming-convention -- ESLint plugin and rule IDs are fixed API keys.
+      'zion-autonomous/require-async-try-catch': 'error',
+      // eslint-disable-next-line @typescript-eslint/naming-convention -- ESLint plugin and rule IDs are fixed API keys.
+      'no-console': ['warn', { allow: ['warn', 'error'] }],
+      // eslint-disable-next-line @typescript-eslint/naming-convention -- ESLint plugin and rule IDs are fixed API keys.
+      '@typescript-eslint/no-explicit-any': ['error', { fixToUnknown: false, ignoreRestArgs: false }],
+      // eslint-disable-next-line @typescript-eslint/naming-convention -- ESLint plugin and rule IDs are fixed API keys.
+      'require-await': 'warn',
+      // This maintained TS rule reports both unused imports and variables.
+      // No undeclared unused-imports dependency or duplicate diagnostics.
+      // eslint-disable-next-line @typescript-eslint/naming-convention -- ESLint plugin and rule IDs are fixed API keys.
+      'no-unused-vars': 'off',
+      // eslint-disable-next-line @typescript-eslint/naming-convention -- ESLint plugin and rule IDs are fixed API keys.
+      '@typescript-eslint/no-unused-vars': ['warn', {
+        vars: 'all', args: 'after-used', argsIgnorePattern: '^_',
+      }],
+      camelcase: ['error', { properties: 'always' }],
+      // eslint-disable-next-line @typescript-eslint/naming-convention -- ESLint plugin and rule IDs are fixed API keys.
+      '@typescript-eslint/naming-convention': [
+        'error',
+        { selector: 'variable', format: ['camelCase', 'UPPER_CASE'], leadingUnderscore: 'allow' },
+        { selector: 'function', format: ['camelCase'] },
+        { selector: 'parameter', format: ['camelCase'] },
+        { selector: 'property', format: ['camelCase', 'snake_case', 'UPPER_CASE'] },
+        { selector: 'memberLike', format: ['camelCase'] },
+        { selector: 'typeLike', format: ['PascalCase'] },
+      ],
+      complexity: ['warn', complexityLimit],
+      curly: ['error', 'all'],
+      // eslint-disable-next-line @typescript-eslint/naming-convention -- ESLint plugin and rule IDs are fixed API keys.
+      'no-magic-numbers': ['warn', {
+        ignoreArrayIndexes: true,
+        ignore: [-1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 24, 48, 60, 100, 1024, 86400],
+      }],
+    },
+  },
+  {
+    files: ['**/*.cjs'],
+    languageOptions: { sourceType: 'commonjs' },
+    // eslint-disable-next-line @typescript-eslint/naming-convention -- ESLint plugin and rule IDs are fixed API keys.
+    rules: { '@typescript-eslint/no-require-imports': 'off' },
+  },
+  {
+    files: ['test/**/*.ts', '**/*.test.ts', '**/*.spec.ts'],
+    // eslint-disable-next-line @typescript-eslint/naming-convention -- ESLint plugin and rule IDs are fixed API keys.
+    rules: { 'no-console': 'off', '@typescript-eslint/no-explicit-any': 'off' },
+  },
+];

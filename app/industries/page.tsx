@@ -185,7 +185,7 @@ export default function IndustriesPage() {
             </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
               <span className="gradient-text">Industry-Specific AI Solutions</span>
-              </br />
+              <br />
               <span className="text-white">Built for Real Business Impact</span>
             </h1>
             <p className="text-xl text-slate-300 mb-10 max-w-3xl mx-auto leading-relaxed">

@@ -1,3 +1,10 @@
+import Link from 'next/link';
+
+export default function AgritechServicesPage() {
+  return (
+    <main>
+      <div>
+        <div>
         <div className='group hover:translate-y-2 transition-transform rounded-xl bg-slate-800 border border-purple-500/50 p-4'>
           <Link href='/services/agritech-irrigation-optimization' className='block h-white text-white text-sm'>
             <h3 className='font-medium mb-2 line-clamp-2'>agritech-irrigation-optimization</h3>

@@ -106,3 +106,26 @@ __pycache__/
 *.pyc
 
 .netrc
+
+# Security: exclude newly-created local credentials and private signing material.
+# Ignore rules do NOT untrack previously committed files or erase Git history.
+# Affected credentials must still be revoked/rotated by SecOps.
+.ssh/
+id_rsa
+id_dsa
+id_ecdsa
+id_ed25519
+id_xmss
+**/.aws/credentials
+**/.kube/config
+.pypirc
+.npmrc
+.env.*
+!.env.example
+!.env.sample
+!.env.template
+!.env.dist
+*.p12
+*.pfx
+*.tfstate
+*.tfstate.*

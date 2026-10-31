@@ -16,6 +16,9 @@ on:
       - GitHub Actions queue pressure
     types: [completed]
   workflow_dispatch:
+  pull_request:
+    paths:
+      - '.github/workflows/monitor-run-summary.yml'
 
 permissions:
   contents: read
@@ -32,7 +35,6 @@ jobs:
     steps:
       - name: Summarize completed monitoring run
         env:
-          EVENT_PATH: ${{ github.event_path }}
           EVENT_NAME: ${{ github.event_name }}
         shell: bash
         run: |
@@ -40,13 +42,34 @@ jobs:
           python3 - <<'PY'
           import json,os
           from pathlib import Path
-          event=json.loads(Path(os.environ['EVENT_PATH']).read_text())
+          event=json.loads(Path(os.environ['GITHUB_EVENT_PATH']).read_text(encoding='utf-8'))
+          def classify(conclusion, trigger):
+              # PR cancellations are not production incidents; the native PR run stays cancelled.
+              if conclusion in {'success','skipped'}:
+                  return 'ok'
+              if conclusion == 'cancelled' and trigger == 'pull_request':
+                  return 'advisory'
+              return 'failure'
+          if os.environ.get('EVENT_NAME') == 'pull_request':
+              cases = [
+                  ('cancelled','pull_request','advisory'),
+                  ('failure','pull_request','failure'),
+                  ('cancelled','push','failure'),
+                  ('failure','push','failure'),
+                  ('success','push','ok'),
+                  ('skipped','schedule','ok'),
+              ]
+              for conclusion, trigger, expected in cases:
+                  assert classify(conclusion, trigger) == expected, (conclusion, trigger)
+              print('Monitor classifier verified: PR cancellation advisory; main failures stay red.')
+              raise SystemExit(0)
           run=event.get('workflow_run',{})
           if not run:
               print('Manual dispatch: no upstream workflow_run to summarize.')
               raise SystemExit(0)
           name=str(run.get('name','unknown'))
           conclusion=str(run.get('conclusion','unknown'))
+          trigger=str(run.get('event','unknown'))
           url=str(run.get('html_url',''))
           number=run.get('run_number','unknown')
           allowed={'Public Site Smoke Check','Dependency Security Baseline','Public Sitemap Integrity','Public Navigation Link Audit','Public TLS Certificate Expiry Watch','Apps i18n release contract','Apps production content canary','Apps release evidence manifest','Apps rollback readiness','Apps deployed-source drift guard','GitHub Actions queue pressure'}
@@ -54,9 +77,12 @@ jobs:
               print('Unexpected workflow; ignoring.')
               raise SystemExit(0)
           summary=Path(os.environ['GITHUB_STEP_SUMMARY'])
-          summary.write_text('## Zion monitor result\n\n' + '\n'.join(['| Field | Value |','|---|---|',f'| Workflow | {name} |',f'| Run | {number} |',f'| Conclusion | {conclusion} |',f'| Evidence | {url} |']) + '\n')
+          summary.write_text('## Zion monitor result\n\n' + '\n'.join(['| Field | Value |','|---|---|',f'| Workflow | {name} |',f'| Run | {number} |',f'| Conclusion | {conclusion} |',f'| Trigger | {trigger} |',f'| Evidence | {url} |']) + '\n')
           print(f'{name}: {conclusion} ({url})')
-          if conclusion not in {'success','skipped'}:
+          status=classify(conclusion,trigger)
+          if status=='advisory':
+              print('Advisory only: a PR run was cancelled; the original GitHub check remains cancelled and must be reviewed on its own PR.')
+          elif status=='failure':
               print(f'::error title=Zion monitor needs attention::{name} concluded {conclusion}. Inspect {url}')
               raise SystemExit(1)
           PY

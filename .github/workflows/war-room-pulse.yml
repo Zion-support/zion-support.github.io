@@ -1,17 +1,12 @@
 name: War Room Pulse
-# Real-time: runs on every new comment on the war room issue.
-# Backup: scheduled pulse every 5 minutes.
+# Retired to stop publishing private ops data and eliminate 288 scheduled jobs/day.
+# Operations live in the internal Notion War Room, not public issue comments.
 on:
-  issue_comment:
-    types: [created]
-  schedule:
-    - cron: '*/5 * * * *'
   workflow_dispatch:
 
 
 permissions:
-  contents: write
-  issues: write
+  contents: read
 
 concurrency:
   group: war-room-pulse
@@ -19,8 +14,8 @@ concurrency:
 
 jobs:
   pulse:
-    # On issue_comment events only run for the war room issue; schedule/dispatch always run.
-    if: github.event_name != 'issue_comment' || github.event.issue.number == 71361
+    # This job is intentionally disabled; preserve history for migration review.
+    if: ${{ false }} # Retired: manual dispatch cannot write public ops content
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
