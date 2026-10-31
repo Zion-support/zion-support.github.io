@@ -11,8 +11,16 @@ const catalog = l => `${prefix(l)}apps/`;
 const home = l => l === 'pt' ? '/' : `/${l}/`;
 const operationsGuide = l => '/apps/operations-reliability-ai-2026'+(l==='en'?'':'-'+l)+'.html';
 const network = (l,slug) => `/zion-app-network/${slug}${l === 'en' ? '' : l === 'pt' ? '-pt-br' : '-'+l}.html`;
-// The existing Pilot Planner uses a Portuguese root and nested locale paths.
-const route = (l,r) => r.id === 'pilot' ? '/automation-pilot-planner/'+(l==='pt'?'':l+'/') : r.location === 'network' ? network(l,r.slug) : prefix(l)+r.slug;
+// Standalone apps may keep translations under their own published app path.
+const route = (l,r) => {
+  if (r.location === 'standalone') {
+    const target = r.routes && r.routes[l];
+    if (typeof target !== 'string' || !/^\/(?!\/)/.test(target)) throw new Error('Missing internal standalone route: '+r.id+' / '+l);
+    return target;
+  }
+  // The existing Pilot Planner uses a Portuguese root and nested locale paths.
+  return r.id === 'pilot' ? '/automation-pilot-planner/'+(l==='pt'?'':l+'/') : r.location === 'network' ? network(l,r.slug) : prefix(l)+r.slug;
+};
 const byId = id => data.resources.find(r => r.id === id);
 const link = (href,label,attrs='') => `<a href="${escape(href)}"${attrs}>${escape(label)}</a>`;
 function render(l) {

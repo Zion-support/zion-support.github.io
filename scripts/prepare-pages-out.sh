@@ -27,6 +27,10 @@ node scripts/render-app-verification-guides.cjs out
 node scripts/test-app-verification-guides.cjs out
 node scripts/render-agent-risk-guides.cjs out
 node scripts/render-finops-scenario.cjs out --pages-only
+# Refresh the existing cost journey and the five curated app catalogs.
+node scripts/render-finops-scenario.cjs out --home-only
+node scripts/render-apps-directory.cjs out
+node scripts/render-service-request-promotion.cjs out
 # Override public/_redirects (may be a stale 37MB next-build auto-gen monster
 # with 550K+ service-slug rules and NO entries for canonical doc routes) with the
 # curated root _redirects that has explicit 200 rules for all money-path doc pages.
@@ -378,6 +382,11 @@ node scripts/render-linked-app-routes.cjs out
 # Replace historical tool placeholders with the reviewed five-language tools.
 # Verify the assembled pages, not only an isolated renderer fixture.
 node scripts/render-operational-tools.cjs out
+# A newly generated baseline has no prior promotion to preserve. Restore only
+# the tool crosslinks before checking the completed operational pages.
+node scripts/render-finops-scenario.cjs out --tool-promotions-only
+node scripts/test-roi-baseline.cjs
+node scripts/test-operational-tools.cjs
 node scripts/test-operational-tools.cjs out --artifact-only
 node scripts/render-contact-pages.cjs out
 

@@ -1,7 +1,7 @@
 'use strict';
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
 const out=process.argv[2]||'out',version='2026-10-09-finops-scenario-v1',base='https://ziontechgroup.com';
-const localeRelease='finops-locales-2026-10-30-v2',pagesOnly=process.argv.includes('--pages-only');
+const localeRelease='finops-locales-2026-10-30-v2',pagesOnly=process.argv.includes('--pages-only'),homeOnly=process.argv.includes('--home-only'),toolPromotionsOnly=process.argv.includes('--tool-promotions-only');
 const copy=JSON.parse(fs.readFileSync('content/finops-scenario.json','utf8')),common=JSON.parse(fs.readFileSync('content/operational-tools.json','utf8')),L=['en','pt','es','fr','de'];
 const prefix=l=>l==='en'?'/':'/'+l+'/',home=l=>l==='pt'?'/':'/'+l+'/',route=(l,guide=false)=>prefix(l)+'apps/finops-'+(guide?'pilot-guide':'scenario-estimator')+'.html';
 const file=u=>path.join(out,u.slice(1)+(u.endsWith('/')?'index.html':'')),exists=u=>fs.existsSync(file(u)),write=(u,s)=>{fs.mkdirSync(path.dirname(file(u)),{recursive:true});fs.writeFileSync(file(u),s);};
@@ -71,8 +71,27 @@ function page(l,guide){const c=copy[l],n=common[l],u=route(l,guide),title=guide?
  const body=guide?'<ol>'+c.steps.map(s=>'<li>'+esc(s)+'</li>').join('')+'</ol><p><a href="'+route(l)+'">'+esc(c.calculate)+'</a></p>':'<form id="finops-scenario-form"><div class="finops-grid">'+inputs.map(s=>'<div>'+s+'</div>').join('')+'</div><button type="submit">'+esc(c.calculate)+'</button></form><div class="card" id="finops-scenario-result" aria-live="polite"></div><script type="application/json" id="finops-scenario-copy">'+JSON.stringify(runtimeCopy).replace(/</g,'\\u003c')+'</script><script src="/assets/js/finops-scenario.js" defer></script>';
  return '<!doctype html><html lang="'+c.lang+'"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>'+esc(title)+' — Zion Tech Group</title><meta name="description" content="'+esc(intro)+'"><link rel="canonical" href="'+base+u+'">'+alts+'<link rel="stylesheet" href="/assets/css/discovery.css"><style>'+css+'</style></head><body data-finops-scenario="'+version+'"><div class="finops-shell"><a href="#main">'+esc(n.skip)+'</a>'+nav(l)+'<nav aria-label="'+esc(n.network)+'">'+languages+'</nav><main id="main"><h1>'+esc(title)+'</h1><p>'+esc(intro)+'</p>'+body+(guide?pilotBody(l):'')+'<section class="card"><p>'+esc(c.limits)+'</p><p>'+esc(c.method)+'</p></section><section>'+c.faq.map(([q,a])=>'<h2>'+esc(q)+'</h2><p>'+esc(a)+'</p>').join('')+'</section><section class="card"><nav>'+peers.map((s,i)=>'<a href="'+prefix(l)+s+'/">'+esc(n.titles[i])+'</a>').join('')+'</nav><a href="'+prefix(l)+'apps/network-learning-paths.html">'+esc(n.network)+'</a></section>'+peerLinks(l)+'</main><footer>'+nav(l)+'<a href="https://github.com/Zion-support/zion-support.github.io/blob/main/scripts/render-finops-scenario.cjs">'+esc(n.source)+'</a></footer></div></body></html>';
 }
-function promote(u,l,isHome=false){assert(exists(u),'Missing reciprocal page '+u);let h=fs.readFileSync(file(u),'utf8'),forms=[...h.matchAll(/<form\b[\s\S]*?<\/form>/gi)].map(m=>m[0]);h=h.replace(/<!--finops-scenario:start-->[\s\S]*?<!--finops-scenario:end-->/g,'');const c=copy[l],block='<!--finops-scenario:start--><aside class="card finops-promotion" data-finops-promotion="'+version+'"><h2>'+esc(c.promotion)+'</h2><p>'+esc(c.intro)+'</p><p><a href="'+route(l)+'">'+esc(c.title)+'</a> · <a href="'+route(l,true)+'">'+esc(c.guide)+'</a></p></aside><!--finops-scenario:end-->';assert(/<\/main>|<\/body>/i.test(h));h=h.replace(/<\/main>|<\/body>/i,x=>block+x);assert.deepEqual([...h.matchAll(/<form\b[\s\S]*?<\/form>/gi)].map(m=>m[0]),forms,'Existing forms changed '+u);write(u,h);(isHome?manifest.homepages:manifest.reciprocalPages).push(u);}
-if(pagesOnly){
+function promote(u,l,isHome=false){
+ assert(exists(u),'Missing reciprocal page '+u);
+ const before=fs.readFileSync(file(u),'utf8'),protectedParts=s=>s.match(/<(form|script)\b[\s\S]*?<\/\1>/gi)||[];
+ const owned=/<!--finops-scenario:start-->[\s\S]*?<!--finops-scenario:end-->/g;
+ const matches=[...before.matchAll(owned)];assert(matches.length<=1,'Duplicate FinOps promotion '+u);
+ const c=copy[l],p=isHome?c.homePromotion:null;
+ if(isHome)assert(p&&p.title&&p.intro&&p.baseline,'Missing homepage translation '+l);
+ const baseline=p?'<a href="'+prefix(l)+'roi-calc/">'+esc(p.baseline)+'</a> · ':'';
+ const block='<!--finops-scenario:start--><aside class="card finops-promotion" data-finops-promotion="'+version+'"'+(p?' data-cost-journey="2026-10-30-v1"':'')+'><h2>'+esc(p?p.title:c.promotion)+'</h2><p>'+esc(p?p.intro:c.intro)+'</p><p>'+baseline+'<a href="'+route(l)+'">'+esc(c.title)+'</a> · <a href="'+route(l,true)+'">'+esc(c.guide)+'</a></p></aside><!--finops-scenario:end-->';
+ assert(/<\/main>|<\/body>/i.test(before),'Missing insertion anchor '+u);
+ const after=matches.length?before.replace(owned,()=>block):before.replace(/<\/main>|<\/body>/i,x=>block+x);
+ assert.deepEqual(protectedParts(after),protectedParts(before),'Existing forms/scripts changed '+u);
+ write(u,after);(isHome?manifest.homepages:manifest.reciprocalPages).push(u);
+}
+if(toolPromotionsOnly){
+ for(const l of L)for(const slug of peers)promote(prefix(l)+slug+'/',l);
+ console.log('PASS fifteen localized FinOps tool promotions; existing forms/scripts and other pages preserved.');
+}else if(homeOnly){
+ for(const l of L)promote(home(l),l,true);
+ console.log('PASS five existing cost-journey homepage promotions; forms/scripts and placement preserved.');
+}else if(pagesOnly){
  console.log('PASS '+localeRelease+': '+refreshPages()+' pages, localized catalog/map/verification links, guide examples and unchanged form/script bytes.');
  require('./test-finops-scenario.cjs');
 }else{

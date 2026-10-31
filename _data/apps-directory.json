@@ -1,5 +1,5 @@
 {
-  "release": "apps-directory-2026-10-30-v5",
+  "release": "apps-directory-2026-10-31-v7",
   "categories": [
     "plan",
     "productivity",
@@ -78,6 +78,7 @@
           "From a cost question to a test",
           "Compare your assumptions, plan a measurement window and record what must be verified.",
           [
+            "manual-cost",
             "finops",
             "finops-guide",
             "verification"
@@ -165,6 +166,7 @@
           "Da dúvida sobre custos ao teste",
           "Compare premissas, planeje o período de medição e registre o que precisa ser verificado.",
           [
+            "manual-cost",
             "finops",
             "finops-guide",
             "verification"
@@ -252,6 +254,7 @@
           "De una pregunta de costes a una prueba",
           "Compare supuestos, planifique el periodo de medición y registre lo que debe verificarse.",
           [
+            "manual-cost",
             "finops",
             "finops-guide",
             "verification"
@@ -339,6 +342,7 @@
           "D’une question de coûts à un test",
           "Comparez les hypothèses, planifiez la période de mesure et consignez les vérifications nécessaires.",
           [
+            "manual-cost",
             "finops",
             "finops-guide",
             "verification"
@@ -426,6 +430,7 @@
           "Von der Kostenfrage zum Test",
           "Vergleichen Sie Annahmen, planen Sie den Messzeitraum und halten Sie offene Prüfpunkte fest.",
           [
+            "manual-cost",
             "finops",
             "finops-guide",
             "verification"
@@ -623,6 +628,73 @@
         "de": {
           "title": "E-Mail-Entwurf",
           "description": "Erstellen Sie einen vorlagenbasierten Entwurf mit Ihrem Kontext, prüfen Sie ihn und versenden Sie ihn selbst."
+        }
+      }
+    },
+    {
+      "id": "manual-cost",
+      "category": "costs",
+      "kind": "tool",
+      "location": "site",
+      "slug": "roi-calc/",
+      "related": "finops",
+      "text": {
+        "en": {
+          "title": "Manual-work cost calculator",
+          "description": "Estimate the monthly and annual cost of a manual process from hours and hourly cost; use it as a baseline before a measured pilot."
+        },
+        "pt": {
+          "title": "Calculadora de custo do trabalho manual",
+          "description": "Estime o custo mensal e anual de um processo manual com horas e custo por hora; use essa referência antes de um piloto mensurável."
+        },
+        "es": {
+          "title": "Calculadora de coste del trabajo manual",
+          "description": "Estime el coste mensual y anual de un proceso manual a partir de las horas y su coste; úselo como referencia antes de un piloto medible."
+        },
+        "fr": {
+          "title": "Calculateur du coût du travail manuel",
+          "description": "Estimez le coût mensuel et annuel d’un processus manuel à partir des heures et du coût horaire, avant de mesurer les résultats d’un pilote."
+        },
+        "de": {
+          "title": "Rechner für manuelle Arbeitskosten",
+          "description": "Schätzen Sie die monatlichen und jährlichen Kosten eines manuellen Prozesses anhand von Stunden und Stundensatz als Ausgangswert für einen messbaren Piloten."
+        }
+      }
+    },
+    {
+      "id": "service-cost-planner",
+      "category": "costs",
+      "kind": "tool",
+      "location": "standalone",
+      "slug": "quote-builder-ai/",
+      "routes": {
+        "en": "/quote-builder-ai/",
+        "pt": "/quote-builder-ai/pt/",
+        "es": "/quote-builder-ai/es/",
+        "fr": "/quote-builder-ai/fr/",
+        "de": "/quote-builder-ai/de/"
+      },
+      "related": "service-request",
+      "text": {
+        "en": {
+          "title": "Service cost planner",
+          "description": "Prepare a planning draft in your browser from itemized supplier, labor, equipment, tax, travel, freight, import and other documented costs. Review the cost evidence before requesting a formal quote."
+        },
+        "pt": {
+          "title": "Planejador de custos de serviço",
+          "description": "Prepare um cenário preliminar no navegador com custos discriminados de fornecedor, mão de obra, equipamentos, tributos, viagens, frete, importação e outros custos documentados. Revise as evidências dos custos antes de solicitar uma cotação formal."
+        },
+        "es": {
+          "title": "Planificador de costes de servicio",
+          "description": "Prepare un escenario preliminar en su navegador con costes desglosados de proveedor, mano de obra, equipos, impuestos, desplazamientos, transporte de mercancías, importación y otros costes documentados. Revise la documentación de los costes antes de solicitar una oferta formal."
+        },
+        "fr": {
+          "title": "Planificateur de coûts de service",
+          "description": "Préparez un scénario provisoire dans votre navigateur en détaillant les prestations du fournisseur, la main-d’œuvre, le matériel, les taxes, les déplacements, le fret, l’importation et les autres coûts documentés. Vérifiez les justificatifs de coûts avant de demander un devis formel."
+        },
+        "de": {
+          "title": "Planer für Servicekosten",
+          "description": "Erstellen Sie im Browser einen Planungsentwurf mit einzeln ausgewiesenen Lieferanten-, Arbeits-, Geräte-, Steuer-, Reise-, Fracht- und Einfuhrkosten sowie weiteren belegten Kosten. Prüfen Sie die Kostennachweise, bevor Sie ein schriftliches Angebot anfordern."
         }
       }
     },
