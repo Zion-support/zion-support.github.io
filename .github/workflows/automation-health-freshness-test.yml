@@ -5,12 +5,14 @@ on:
     paths:
       - 'scripts/automation/check-automation-health-static-freshness.cjs'
       - 'tests/ci/test_automation_health_freshness.py'
+      - '.github/workflows/ai-automation-health-static-freshness-guard.yml'
       - '.github/workflows/automation-health-freshness-test.yml'
   push:
     branches: [main, hero-carousel]
     paths:
       - 'scripts/automation/check-automation-health-static-freshness.cjs'
       - 'tests/ci/test_automation_health_freshness.py'
+      - '.github/workflows/ai-automation-health-static-freshness-guard.yml'
       - '.github/workflows/automation-health-freshness-test.yml'
   workflow_dispatch:
 
