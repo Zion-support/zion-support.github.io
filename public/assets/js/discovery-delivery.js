@@ -12,6 +12,58 @@ const APPMAP={
  'Compliance & audit evidence':[['AI Compliance Auditor','/ai-compliance-auditor/'],['AI Governance Checklist','/ai-governance-checklist/']],
  'Other':[['AI Readiness Assessment','/ai-readiness-assessment/'],['Apps Network','/apps/'],['Network Map','/apps/network.html']]
 };
+
+// Published language alternatives verified against page hreflang and HTML language.
+// Keep unmapped destinations unchanged; do not invent translated routes.
+const RECOMMENDATION_PATHS={
+ "/apps/": {
+  "en": "/apps/",
+  "pt": "/pt/apps/",
+  "es": "/es/apps/",
+  "fr": "/fr/apps/",
+  "de": "/de/apps/"
+ },
+ "/apps/discovery-report-workbench.html": {
+  "en": "/apps/discovery-report-workbench.html",
+  "pt": "/pt/apps/discovery-report-workbench.html",
+  "es": "/es/apps/discovery-report-workbench.html",
+  "fr": "/fr/apps/discovery-report-workbench.html",
+  "de": "/de/apps/discovery-report-workbench.html"
+ },
+ "/apps/network.html": {
+  "en": "/apps/network.html",
+  "pt": "/pt/apps/network.html",
+  "es": "/es/apps/network.html",
+  "fr": "/fr/apps/network.html",
+  "de": "/de/apps/network.html"
+ },
+ "/apps/operations-reliability-ai-2026.html": {
+  "en": "/apps/operations-reliability-ai-2026.html",
+  "pt": "/apps/operations-reliability-ai-2026-pt.html",
+  "es": "/apps/operations-reliability-ai-2026-es.html",
+  "fr": "/apps/operations-reliability-ai-2026-fr.html",
+  "de": "/apps/operations-reliability-ai-2026-de.html"
+ },
+ "/automation-pilot-planner/": {
+  "pt": "/automation-pilot-planner/",
+  "en": "/automation-pilot-planner/en/",
+  "es": "/automation-pilot-planner/es/",
+  "fr": "/automation-pilot-planner/fr/",
+  "de": "/automation-pilot-planner/de/"
+ },
+ "/sales-call-analyzer/": {
+  "en": "/sales-call-analyzer/",
+  "pt": "/sales-call-analyzer/pt/",
+  "es": "/sales-call-analyzer/es/",
+  "fr": "/sales-call-analyzer/fr/",
+  "de": "/sales-call-analyzer/de/"
+ }
+};
+function recommendationPath(path){
+ const language=(document.documentElement?.lang||'en').slice(0,2).toLowerCase();
+ const variants=RECOMMENDATION_PATHS[path];
+ return variants ? (variants[language]||variants.en) : path;
+}
 const HOURVAL={'Under 20':15,'20–80':50,'80–200':140,'200+':260};
 const RECOMMENDATION_KINDS={
  en:['Interactive planning tool','Interactive calculator','Documentation / concept','Service page'],
@@ -23,9 +75,9 @@ const RECOMMENDATION_KINDS={
 function recommendationKind(path){
  const language=(document.documentElement?.lang||'en').slice(0,2);
  const kinds=RECOMMENDATION_KINDS[language]||RECOMMENDATION_KINDS.en;
- if(['/automation-pilot-planner/','/apps/discovery-report-workbench.html'].includes(path)) return kinds[0];
+ if(path==='/automation-pilot-planner/') return kinds[0];
  if(['/sla-calculator/','/roi-calc/','/finops-estimator/'].includes(path)) return kinds[1];
- if(path==='/apps/'||path==='/apps/network.html'||path.includes('checklist')||path.includes('assessment')) return kinds[2];
+ if(path==='/apps/discovery-report-workbench.html'||path==='/apps/'||path==='/apps/network.html'||path.includes('checklist')||path.includes('assessment')) return kinds[2];
  return kinds[3];
 }
 const COPY={
@@ -66,12 +118,12 @@ document.getElementById('dform').addEventListener('submit',async function(e){
  // The display text of selected options is translated; canonical values stay stable.
  const selectedText=name=>{const el=document.querySelector?.('[name="'+name+'"]');return el?.selectedOptions?.[0]?.textContent||f[name]||'—';};
  const values=[f.name,f.email,f.company||'—',selectedText('industry'),selectedText('process'),selectedText('hours'),f.systems||'—',f.goal||'—',selectedText('timeline'),score+'/100'];
- const summary=t.title+'\n'+t.fields.map((label,i)=>label+': '+values[i]).join('\n')+'\n'+t.heuristic+'\n'+t.summary+': '+savings+'\n'+assumptions+'\n'+t.next+'\n'+t.apps+':\n'+apps.map(a=>a[0]+' — '+recommendationKind(a[1])+' https://ziontechgroup.com'+a[1]).join('\n')+'\nhttps://ziontechgroup.com/apps/discovery-report-workbench.html\nhttps://ziontechgroup.com/apps/free-discovery-to-pilot-guide.html\n'+t.free+'\nAttribution: '+JSON.stringify(attribution);
+ const summary=t.title+'\n'+t.fields.map((label,i)=>label+': '+values[i]).join('\n')+'\n'+t.heuristic+'\n'+t.summary+': '+savings+'\n'+assumptions+'\n'+t.next+'\n'+t.apps+':\n'+apps.map(a=>a[0]+' — '+recommendationKind(a[1])+' https://ziontechgroup.com'+recommendationPath(a[1])).join('\n')+'\nhttps://ziontechgroup.com'+recommendationPath('/apps/discovery-report-workbench.html')+'\nhttps://ziontechgroup.com/apps/free-discovery-to-pilot-guide.html\n'+t.free+'\nAttribution: '+JSON.stringify(attribution);
  window.__zionDiscoveryReport=summary;
  document.getElementById('rscore').textContent=score;document.getElementById('rbar').style.width=score+'%';
  document.getElementById('rsummary').textContent=f.company+' — '+selectedText('process')+'. '+t.summary+': '+savings+'. '+assumptions;
  const list=document.getElementById('rapps');list.replaceChildren();
- for(const [name,path] of apps){const item=document.createElement('li'),link=document.createElement('a'),kind=document.createElement('span');link.href=path;link.textContent=name;kind.className='recommendation-kind';kind.textContent=' — '+recommendationKind(path);item.appendChild(link);item.appendChild(kind);list.appendChild(item);}
+ for(const [name,path] of apps){const item=document.createElement('li'),link=document.createElement('a'),kind=document.createElement('span');link.href=recommendationPath(path);link.textContent=name;kind.className='recommendation-kind';kind.textContent=' — '+recommendationKind(path);item.appendChild(link);item.appendChild(kind);list.appendChild(item);}
  document.getElementById('rnext').textContent=t.next;
  document.getElementById('report-text').textContent=summary;
  const cc=f.email.toLowerCase()==='commercial@ziontechgroup.com'?'':f.email;
