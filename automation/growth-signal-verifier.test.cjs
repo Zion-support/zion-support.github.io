@@ -10,7 +10,7 @@ const GOOD = {
   '/': HOME,
   '/apps/': '<html><h1>Zion Apps Network</h1><p>Free Discovery available and many apps available across the entire free IT and AI tooling network for operators.</p></html>',
   '/app-network-discovery.html': '<html><h1>Free AI Discovery</h1><p>8 questions with instant results, recommendations and a fully free public questionnaire.</p></html>',
-  '/discovery/': '<html><h1>Discovery $99 for Consulting</h1><a href="https://buy.stripe.com/mock">Pay $99</a><p>Executive process map and consulting session included in paid Discovery.</p></html>',
+  '/discovery/': '<html><h1>Free AI &amp; Automation Discovery</h1><p>Questionnaire with eight questions and an immediate report. No payment or meeting is required.</p></html>',
   '/contact/': '<html><h1>Contact Zion Tech Group</h1><p>hello@ziontechgroup.com and engineering team for IT on demand support and detailed consultations.</p></html>',
 };
 function probeFor(overrides = {}) {
@@ -27,19 +27,25 @@ test('on-origin HTTPS guard rejects unsafe origins and non-HTTPS URLs', () => {
 test('extract href and label, ignoring other markup', () => {
   assert.deepEqual(anchorItems('<a class="hero" href="/discovery/"><strong>Free</strong> Discovery</a>'), [{ href: '/discovery/', text: 'Free Discovery' }]);
 });
-test('a free CTA into a paid Discovery page is a real warning, not a checkout failure', async () => {
+test('the canonical free Discovery and legacy route are both healthy', async () => {
   const result = await audit({ probe: probeFor(), now: () => '2026-10-22T00:00:00Z' });
-  assert.equal(result.severity, 'warning');
+  assert.equal(result.severity, 'ok');
   assert.equal(result.healthy_routes, 5);
   assert.equal(result.unhealthy_routes, 0);
-  assert.equal(result.free_paid_label_conflicts, 1);
+  assert.equal(result.free_paid_label_conflicts, 0);
   assert.equal(result.generated_at_utc, '2026-10-22T00:00:00Z');
 });
-test('a free CTA to the free page, or a paid CTA to the paid page, is healthy', async () => {
-  const html = HOME.replace('<a href="/discovery/">Free Discovery</a>', '<a href="/discovery/">Consulting Discovery $99</a>');
-  const result = await audit({ probe: probeFor({ '/': html }) });
-  assert.equal(result.severity, 'ok');
-  assert.equal(result.free_paid_label_conflicts, 0);
+test('a paid replacement at canonical Discovery fails the free content contract', async () => {
+  const paid = '<html><h1>Discovery $99 for Consulting</h1><a href="https://buy.stripe.com/mock">Pay $99</a><p>A paid consulting session with no questionnaire report.</p></html>';
+  const result = await audit({ probe: probeFor({ '/discovery/': paid }) });
+  assert.equal(result.severity, 'critical');
+  assert.equal(result.unhealthy_routes, 1);
+  assert.equal(result.routes.find(x => x.route === '/discovery/').reason, 'expected-content-missing');
+});
+test('explicit paid evidence behind a free CTA still produces a conflict signal', () => {
+  const paid = '<h1>Discovery $99</h1><a href="https://buy.stripe.com/mock">Pay $99</a>';
+  assert.equal(freeToPaidConflicts(HOME, paid), 1);
+  assert.equal(freeToPaidConflicts(HOME.replace('>Free Discovery</a>', '>Consulting Discovery</a>'), paid), 0);
 });
 test('does not claim a conflict when the destination is no longer a paid page', () => {
   assert.equal(freeToPaidConflicts(HOME, '<h1>Free Discovery</h1>'), 0);
@@ -65,7 +71,7 @@ test('saveReport writes bounded machine and human evidence, without source page 
     const files = saveReport(report, dir);
     const json = JSON.parse(fs.readFileSync(files.json, 'utf8'));
     const md = fs.readFileSync(files.markdown, 'utf8');
-    assert.equal(json.severity, 'warning');
+    assert.equal(json.severity, 'ok');
     assert.match(md, /Working routes/);
     assert.doesNotMatch(JSON.stringify(json), /buy\.stripe\.com\/mock/);
     assert.doesNotMatch(md, /hello@ziontechgroup\.com/);

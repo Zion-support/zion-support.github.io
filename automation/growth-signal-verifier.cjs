@@ -16,7 +16,7 @@ const ROUTES = Object.freeze([
   { name: 'home', pathname: '/', markers: [/zion tech group/i, /discovery/i] },
   { name: 'apps', pathname: '/apps/', markers: [/apps network/i, /discovery/i] },
   { name: 'free_discovery', pathname: '/app-network-discovery.html', markers: [/free ai discovery/i, /question|questions|perguntas/i] },
-  { name: 'paid_discovery', pathname: '/discovery/', markers: [/discovery/i, /consulting|consultoria|processo/i] },
+  { name: 'canonical_discovery', pathname: '/discovery/', markers: [/free ai(?:\s*&(?:amp;)?\s*automation)?\s+discovery/i, /question|questions|perguntas/i] },
   { name: 'contact', pathname: '/contact/', markers: [/ziontechgroup\.com/i, /contact|contato|engineering/i] },
 ]);
 const MAX_BYTES = 512 * 1024;
@@ -83,9 +83,9 @@ function anchorItems(html) {
   return found;
 }
 
-function freeToPaidConflicts(homeHtml, paidHtml) {
-  // Require clear paid evidence in destination; free and paid Discovery are distinct offers.
-  if (!/(?:\$|R\$)\s*99\b/i.test(paidHtml) || !/buy\.stripe\.com|pay\s*\$?99/i.test(paidHtml)) return 0;
+function freeToPaidConflicts(homeHtml, discoveryHtml) {
+  // Flag clear payment evidence only; the canonical Discovery route is free.
+  if (!/(?:\$|R\$)\s*99\b/i.test(discoveryHtml) || !/buy\.stripe\.com|pay\s*\$?99/i.test(discoveryHtml)) return 0;
   return anchorItems(homeHtml).filter(({ href, text }) => {
     if (!/(?:free|gr[aá]tis|gratuito)/i.test(text) || !/(?:discovery|diagn[oó]stico)/i.test(text)) return false;
     try { return normalizeTarget(new URL(href, ORIGIN)).pathname.replace(/\/+$/, '/') === '/discovery/'; }
@@ -113,7 +113,7 @@ async function audit({ probe = fetchHtml, now = () => new Date().toISOString() }
     }
   }
   const missing = results.filter(r => !r.ok);
-  const conflictingLabels = bodies.home && bodies.paid_discovery ? freeToPaidConflicts(bodies.home, bodies.paid_discovery) : 0;
+  const conflictingLabels = bodies.home && bodies.canonical_discovery ? freeToPaidConflicts(bodies.home, bodies.canonical_discovery) : 0;
   const severity = missing.length ? 'critical' : conflictingLabels ? 'warning' : 'ok';
   return {
     schema: 'zion.growth-signal.readonly.v1', generated_at_utc: now(),
