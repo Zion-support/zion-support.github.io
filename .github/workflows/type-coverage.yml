@@ -16,8 +16,6 @@ jobs:
     name: TypeScript performance diagnostic (180s)
     runs-on: ubuntu-latest
     timeout-minutes: 8
-    env:
-      PROFILE_DIR: ${{ runner.temp }}/typescript-diagnostic
     steps:
       - name: Checkout immutable source target
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
@@ -27,6 +25,8 @@ jobs:
           persist-credentials: false
       - name: Initialize incomplete diagnostic record
         run: |
+          PROFILE_DIR="$RUNNER_TEMP/typescript-diagnostic"
+          echo "PROFILE_DIR=$PROFILE_DIR" >> "$GITHUB_ENV"
           mkdir -p "$PROFILE_DIR"
           printf '%s\n' '{"complete":false,"counts_as_required_gate":false,"status":"setup"}' > "$PROFILE_DIR/summary.json"
       - name: Setup Node.js
