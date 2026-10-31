@@ -5,6 +5,7 @@ const out=process.argv[2]||'out',origin='https://ziontechgroup.com';
 const locales={en:'en',pt:'pt-BR',es:'es',fr:'fr',de:'de'};
 const route=l=>'/apps/field-service-evidence-guide'+(l==='en'?'':'.'+(l==='pt'?'pt-br':l))+'.html';
 const roiRoute=l=>(l==='en'?'/':'/'+l+'/')+'roi-calc/';
+const networkRoute=l=>(l==='en'?'/':'/'+l+'/')+'apps/network.html';
 function verify(html,l){
  assert(html.includes('<html lang="'+locales[l]+'"'),'wrong language '+l);
  assert(html.includes('data-field-evidence-release="2026-10-09"'),'missing release '+l);
@@ -23,6 +24,8 @@ function verifyDiscovery(html,l){
  assert.equal(owned.length,1,'Discovery return block '+l);
  assert(owned[0].includes('lang="'+locales[l]+'"'),'Discovery return language '+l);
  assert(owned[0].includes('href="'+route(l)+'"'),'Discovery localized guide '+l);
+ assert(owned[0].includes('href="'+networkRoute(l)+'"'),'Discovery localized network map '+l);
+ for(const other of Object.keys(locales))if(other!==l)assert(!owned[0].includes('href="'+networkRoute(other)+'"'),'wrong-language Discovery network map '+l+' → '+other);
  assert(owned[0].includes('data-field-evidence-return="2026-10-09-v2"'),'Discovery return version '+l);
  assert(/<form\b/i.test(html),'Discovery form missing '+l);
 }
@@ -80,7 +83,11 @@ if(process.argv.includes('--live')){
  }
  for(const l of Object.keys(locales)){
   const rel=l==='en'?'discovery/index.html':l+'/discovery/index.html';
-  verifyDiscovery(fs.readFileSync(path.join(out,rel),'utf8'),l);
+  const html=fs.readFileSync(path.join(out,rel),'utf8');verifyDiscovery(html,l);
+  // Reject an extra wrong-language map even when the correct map is retained.
+  const wrong=networkRoute(l==='en'?'pt':'en');
+  const bad=html.replace('<!--zion-field-return:end-->','<a href="'+wrong+'">wrong-language test fixture</a><!--zion-field-return:end-->');
+  assert.throws(()=>verifyDiscovery(bad,l),/wrong-language Discovery network map/,'reject extra wrong-language map '+l);
  }
  const js=fs.readFileSync(path.join(out,'assets/js/discovery-delivery.js'),'utf8');
  assert(js.includes('function recommendationKind('),'classifications missing');
