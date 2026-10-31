@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Restore required Pages sitemap references using byte insertions only."""
+"""Restore required references in both Pages sitemap indexes by byte insertion."""
 
 import argparse
 import codecs
@@ -10,6 +10,7 @@ import xml.etree.ElementTree as ET
 from xml.parsers import expat
 
 NAMESPACE = "http://www.sitemaps.org/schemas/sitemap/0.9"
+INDEXES = ("sitemap.xml", "sitemap-index.xml")
 REQUIRED = (
     ("sitemap-0.xml", "https://ziontechgroup.com/sitemap-0.xml"),
     ("apps/apps-sitemap.xml", "https://ziontechgroup.com/apps/apps-sitemap.xml"),
@@ -79,17 +80,14 @@ def insertion_point(raw):
     return close, prefix, encoding, newline
 
 
-def ensure_index(output):
-    index = output / "sitemap.xml"
+def prepare_index(index):
     require_nonempty_file(index)
     original = index.read_bytes()
     root = parse_index(original)
-    for relative, _url in REQUIRED:
-        require_nonempty_file(output / relative)
     present = locations(root)
     missing = [url for _relative, url in REQUIRED if url not in present]
     if not missing:
-        return 0
+        return None, 0
 
     offset, prefix, encoding, newline = insertion_point(original)
     inserted = "".join(
@@ -101,14 +99,36 @@ def ensure_index(output):
     if not {url for _relative, url in REQUIRED} <= locations(verified):
         raise ValueError("required references are not in the sitemap XML namespace")
 
-    # Validate everything before replacing the index. A write failure leaves
-    # the existing index intact; no sitemap payload is ever created here.
-    with tempfile.TemporaryDirectory(prefix=".sitemap-index-", dir=index.parent) as temporary:
-        staged = Path(temporary) / "sitemap.xml"
-        staged.write_bytes(proposed)
-        staged.chmod(index.stat().st_mode & 0o777)
-        os.replace(staged, index)
-    return len(missing)
+    return proposed, len(missing)
+
+
+def ensure_index(output):
+    for relative, _url in REQUIRED:
+        require_nonempty_file(output / relative)
+    updates = []
+    for name in INDEXES:
+        index = output / name
+        try:
+            proposed, added = prepare_index(index)
+        except (ValueError, ET.ParseError, expat.ExpatError, LookupError) as error:
+            raise ValueError(f"{name}: {error}") from error
+        if proposed is not None:
+            updates.append((index, proposed, added))
+    if not updates:
+        return 0
+
+    # Validate both indexes and stage all changes before replacing either.
+    # Replacements are atomic per file; no sitemap payload is created here.
+    with tempfile.TemporaryDirectory(prefix=".sitemap-index-", dir=output) as temporary:
+        staged_indexes = []
+        for index, proposed, _added in updates:
+            staged = Path(temporary) / index.name
+            staged.write_bytes(proposed)
+            staged.chmod(index.stat().st_mode & 0o777)
+            staged_indexes.append((staged, index))
+        for staged, index in staged_indexes:
+            os.replace(staged, index)
+    return sum(added for _index, _proposed, added in updates)
 
 
 def main():
@@ -119,7 +139,7 @@ def main():
         added = ensure_index(arguments.output)
     except (OSError, ValueError, ET.ParseError, expat.ExpatError, LookupError) as error:
         raise SystemExit(f"ERROR sitemap index: {error}") from error
-    print(f"OK sitemap index: {added} required reference(s) added")
+    print(f"OK sitemap indexes: {added} required reference(s) added")
 
 
 if __name__ == "__main__":
