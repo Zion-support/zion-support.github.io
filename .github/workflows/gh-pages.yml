@@ -29,6 +29,7 @@ on:
       - 'content/roi-baseline.json'
       - 'scripts/test-operational-tools.cjs'
       - 'content/operational-tools.json'
+      - 'content/operational-examples.json'
       - 'scripts/render-contact-pages.cjs'
       - 'content/contact-pages.json'
       - 'docs/**'
