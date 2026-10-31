@@ -57,6 +57,16 @@ function verifyArtifact(out) {
     assert.equal((html.match(/<!--operational-tools:start-->/g) || []).length, 1, 'One homepage promotion: ' + locale);
     assert(html.includes('data-operational-promotion="' + version + '"'), 'Current homepage promotion: ' + locale);
   }
+  // The operational renderer shares these routes with the FinOps release.
+  // A valid calculator still fails publication if it loses its reciprocal promotion.
+  for (const locale of locales) {
+    for (const slug of slugs) {
+      const route = prefix(locale) + slug + '/';
+      const html = fs.readFileSync(disk(out, route), 'utf8');
+      assert.equal((html.match(/<!--finops-scenario:start-->/g) || []).length, 1, 'One FinOps promotion: ' + route);
+      assert.equal((html.match(/data-finops-promotion="2026-10-09-finops-scenario-v1"/g) || []).length, 1, 'Current FinOps promotion: ' + route);
+    }
+  }
   assert.equal(fs.readFileSync(path.join(out, 'assets/js/operational-tools.js'), 'utf8'), script, 'Published runtime matches the reviewed source');
   assert(fs.statSync(path.join(out, 'assets/css/discovery.css')).size > 0, 'Published stylesheet');
   const coverage = JSON.parse(fs.readFileSync(path.join(out, 'apps/network-publication-coverage.json'), 'utf8'));
@@ -161,6 +171,7 @@ const out = path.join(root, 'out');
 const renderer = path.resolve('scripts/render-operational-tools.cjs');
 const write = (file, text) => { fs.mkdirSync(path.dirname(file), {recursive: true}); fs.writeFileSync(file, text); };
 const original = '<form id="preserved"><input name="existing"></form>';
+const finopsPromotion = locale => '<!--finops-scenario:start--><aside data-finops-promotion="2026-10-09-finops-scenario-v1"><h2>Reviewed promotion ' + locale + ' $& $$</h2><a href="' + prefix(locale) + 'apps/finops-scenario-estimator.html">Estimate</a></aside><!--finops-scenario:end-->';
 try {
   write(path.join(root, 'content/operational-tools.json'), JSON.stringify(copy));
   write(path.join(root, 'public/assets/js/operational-tools.js'), script);
@@ -170,12 +181,25 @@ try {
   write(path.join(out, 'apps/network-publication-coverage.json'), JSON.stringify({source: 'fixture-sentinel', groups: [unrelatedCoverage, existingCoverage]}));
   for (const locale of locales) {
     write(disk(out, home(locale)), '<html><body><main>' + original + '</main></body></html>');
-    for (const slug of slugs) write(disk(out, prefix(locale) + slug + '/'), '<h1>Tools</h1><p>Coming soon.</p>');
+    for (const slug of slugs) write(disk(out, prefix(locale) + slug + '/'), '<h1>Tools</h1><p>Coming soon.</p>' + finopsPromotion(locale));
   }
   for (let run = 0; run < 2; run++) {
     cp.execFileSync(process.execPath, [renderer, out], {cwd: root, stdio: 'pipe', timeout: 20000});
     verifyArtifact(out);
+    for (const locale of locales) {
+      for (const slug of slugs) assert(fs.readFileSync(disk(out, prefix(locale) + slug + '/'), 'utf8').includes(finopsPromotion(locale)), 'Reviewed FinOps fragment preserved byte-for-byte');
+    }
   }
+  // A calculator retaining all operational controls must still fail if the
+  // assembled page loses the FinOps promotion or contains it more than once.
+  const promotionFile = disk(out, '/roi-calc/');
+  const promotedHtml = fs.readFileSync(promotionFile, 'utf8');
+  write(promotionFile, promotedHtml.replace(finopsPromotion('en'), ''));
+  assert.throws(() => verifyArtifact(out), /One FinOps promotion/);
+  write(promotionFile, promotedHtml.replace('</main>', finopsPromotion('en') + '</main>'));
+  assert.throws(() => verifyArtifact(out), /One FinOps promotion/);
+  assert.throws(() => cp.execFileSync(process.execPath, [renderer, out], {cwd: root, stdio: 'pipe', timeout: 20000}), /Ambiguous FinOps promotion/);
+  write(promotionFile, promotedHtml);
   for (const locale of locales) assert(fs.readFileSync(disk(out, home(locale)), 'utf8').includes(original), 'Existing homepage form preserved');
   const coverage = JSON.parse(fs.readFileSync(path.join(out, 'apps/network-publication-coverage.json'), 'utf8'));
   assert.equal(coverage.groups.length, 5, 'Four generated page families plus the untouched unrelated row');
