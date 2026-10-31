@@ -18,6 +18,134 @@ fr:{title:'Guide des preuves pour les services sur site',intro:'Du Discovery à 
 de:{title:'Evidenzleitfaden für Vor-Ort-Service',intro:'Von Discovery zu einem überprüfbaren Vor-Ort-Einsatz. Beschreiben Sie den Prozess, vergleichen Sie schriftliche Nachweise und trennen Sie Freigaben. Ein Planungswerkzeug bestätigt weder Techniker noch Angebot, Bestellung oder Einsatzfreigabe.',nav:['Startseite','Apps','App-Netzwerk','Kostenloses Discovery','Zum Inhalt'],stepsTitle:'Ein praktischer Weg in fünf Schritten',steps:['Entdecken: Wählen Sie einen Prozess im kostenlosen Discovery, speichern Sie den sofortigen Bericht und prüfen Sie seine Annahmen.','Beschreiben: Die verantwortliche Person dokumentiert Umfang, lokale Zeitzone, getrennte Besuchsfenster, Zugangs- und Begleitregeln sowie Erfolgskriterien im autorisierten Kanal. Eine gemeinsame Adresse bedeutet nicht einen einzigen Einsatz.','Qualifizieren: Fordern Sie Technikernamen, schriftliche Verfügbarkeit, einschlägige Erfahrung, Werkzeuge sowie Versicherungs- und Compliance-Nachweise an. Vergleichen Sie vollständigen Umfang und schriftliche Geschäftsbedingungen.','Freigeben: Vereinbaren Sie den Kundenpreis und weisen Sie Steuern, Reise-, Fracht- und sonstige anwendbare Kosten gesondert aus. Vor jedem Kauf, jeder Reservierung oder Entsendung sind die formelle schriftliche Kundenbestätigung, die zugehörige Bestellung (PO) und die spezifische operative Freigabe durch Zion erforderlich. Alle drei Voraussetzungen müssen erfüllt sein.','Mit Nachweisen abschließen: Dokumentieren Sie Arbeiten, Tests, Ausnahmen, Kundenabnahme sowie tatsächliche Zeit und Kosten. Bewahren Sie den schriftlichen Verlauf; erfinden Sie keine Ergebnisse.'],toolsTitle:'Vier verknüpfte Werkzeuge erkunden',tools:['Vergleichen Sie Kostenannahmen und fehlende Nachweise anhand schriftlicher Angebote, nicht anhand von Marktmitteln als vermeintlicher Lieferantenzusage. Keine Bestellung oder Entsendung wird ausgelöst.','Prüfen Sie Verfügbarkeits- und Vertragsstrafenszenarien. Kontrollieren Sie Vertrag, Servicezeiten und Ausschlüsse vor Nutzung.','Präzisieren Sie Stunden- und Kapazitätsannahmen anhand Ihrer eigenen Ausgangswerte. Schätzungen sind keine gemessenen Einsparungen, Garantien oder Angebote.','Definieren Sie Verantwortliche, Ausgangswerte, menschliche Prüfung und Abbruchregel für einen reversiblen Test. Planung erlaubt keine Produktionsänderung.'],open:'Öffnen',source:'Quellcode ansehen',checksTitle:'Vor der Partnerauswahl',checks:['Physische Wartung gewährt nicht automatisch Rechte an Firmware, Software, Lizenzen oder Herstellersupport; prüfen Sie diese Rechte gesondert.','Vergleichen Sie gleichwertigen Umfang, Qualifikation und Verfügbarkeit. Unterscheiden Sie Reaktionszeit, Wiederherstellungszeit und endgültige Behebung.','Bestätigen Sie Mindeststunden, Überstunden, Stornierung, Zahlung, Gültigkeit, Reise, Parken und steuerliche Behandlung.','Kennzeichnen Sie Schätzungen; versprechen Sie keine unbestätigten Bestände oder Technikerverfügbarkeit.','Behalten Sie eine verantwortliche Person. Antworten Sie im bestehenden Verlauf und vermeiden Sie doppelte unbeantwortete Nachfassmails.','Nur die verantwortliche Person darf Kundenidentitäten, genaue Adressen, Seriennummern oder echte Protokolle im autorisierten Kanal und nur bei zwingendem Bedarf erfassen. Dieser öffentliche Leitfaden fordert diese Daten nicht an. Prüfen Sie Protokolle und entfernen Sie Geheimnisse und unnötige Daten vor dem Teilen.'],freeTitle:'Discovery kostenlos und online',free:'Keine Kreditkarte, kein Kauf und kein verpflichtender Vertriebstermin. Der Bericht erscheint sofort im Browser; dasselbe Ergebnis wird dem E-Mail-Dienst für die validierte Teilnehmeradresse und commercial@ziontechgroup.com übergeben. Annahme durch den Dienst beweist keinen Eingang im Postfach. Kopieren oder laden Sie den Bericht herunter oder nutzen Sie bei Bedarf den manuellen Ersatzweg.',guard:'Kostenpflichtige Leistungen sind optional und getrennt. Dieser Leitfaden erfasst keine Informationen und löst keine Reservierung, Bestellung oder Entsendung aus.',report:'Bericht bearbeiten',footer:'Leitfäden, Netzwerk und Einsatzbereitschaft',types:['Dienstleistungsseite','Dokumentation / Konzept','Rechner: Annahmen prüfen','Ungeprüftes Ziel']}
 };
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+// Same-language routes for the existing preparation, evidence and closeout resources.
+const visitJourneyCopy={
+  "en": {
+    "title": "Prepare the visit and document the outcome",
+    "intro": "Move from an agreed scope to a reviewable service record with these three resources, in the same language as this guide.",
+    "stages": [
+      [
+        "Before the visit",
+        "Check access, the named technician, written availability and the approved scope. Review the client confirmation, purchase order and separate Zion release before any supplier commitment.",
+        "Review the visit handoff"
+      ],
+      [
+        "During the work",
+        "For each agreed check, record the expected result, observed result, time and evidence reference. Mark a check that was not performed as pending and assign its next action.",
+        "Review operational evidence"
+      ],
+      [
+        "At completion",
+        "Use the report template to record completed work, exceptions, open actions and the next update. Request written acceptance from the authorized client contact in the existing service thread.",
+        "Prepare the completion report"
+      ]
+    ],
+    "note": "Keep technician completion and client acceptance as separate statuses. An unresolved check needs an owner and a next update; it must not be recorded as passed."
+  },
+  "pt": {
+    "title": "Prepare a visita e documente o resultado",
+    "intro": "Passe do escopo acordado a um registro de serviço que possa ser revisado com estes três recursos, no mesmo idioma deste guia.",
+    "stages": [
+      [
+        "Antes da visita",
+        "Confira acesso, técnico identificado, disponibilidade escrita e escopo aprovado. Revise a confirmação do cliente, a PO e a liberação separada da Zion antes de qualquer compromisso com o fornecedor.",
+        "Revisar a passagem da visita"
+      ],
+      [
+        "Durante o trabalho",
+        "Para cada verificação acordada, registre resultado esperado, resultado observado, horário e referência da evidência. Marque uma verificação não realizada como pendente e atribua a próxima ação.",
+        "Revisar as evidências operacionais"
+      ],
+      [
+        "Na conclusão",
+        "Use o modelo de relatório para registrar trabalho concluído, exceções, ações pendentes e a próxima atualização. Solicite aceite escrito ao contato autorizado do cliente na conversa existente sobre o serviço.",
+        "Preparar o relatório de conclusão"
+      ]
+    ],
+    "note": "Mantenha a conclusão do técnico e o aceite do cliente como estados separados. Uma verificação pendente precisa de responsável e próxima atualização; ela não deve ser registrada como aprovada."
+  },
+  "es": {
+    "title": "Prepare la visita y documente el resultado",
+    "intro": "Pase del alcance acordado a un registro de servicio que pueda revisarse con estos tres recursos, en el mismo idioma que esta guía.",
+    "stages": [
+      [
+        "Antes de la visita",
+        "Compruebe el acceso, el técnico identificado, la disponibilidad escrita y el alcance aprobado. Revise la confirmación del cliente, la orden de compra y la autorización separada de Zion antes de asumir un compromiso con el proveedor.",
+        "Revisar la preparación de la visita"
+      ],
+      [
+        "Durante el trabajo",
+        "Para cada comprobación acordada, registre el resultado esperado, el observado, la hora y la referencia de la evidencia. Marque una comprobación no realizada como pendiente y asigne la siguiente acción.",
+        "Revisar las evidencias operativas"
+      ],
+      [
+        "Al finalizar",
+        "Use la plantilla del informe para registrar el trabajo terminado, las excepciones, las acciones pendientes y la próxima actualización. Solicite la aceptación escrita del contacto autorizado del cliente en la conversación existente sobre el servicio.",
+        "Preparar el informe de finalización"
+      ]
+    ],
+    "note": "Mantenga la finalización del técnico y la aceptación del cliente como estados separados. Una comprobación pendiente necesita responsable y próxima actualización; no debe registrarse como superada."
+  },
+  "fr": {
+    "title": "Préparez la visite et documentez le résultat",
+    "intro": "Passez du périmètre convenu à un dossier de service vérifiable grâce à ces trois ressources, dans la même langue que ce guide.",
+    "stages": [
+      [
+        "Avant la visite",
+        "Vérifiez l’accès, le technicien identifié, sa disponibilité écrite et le périmètre approuvé. Contrôlez la confirmation du client, le bon de commande et l’autorisation distincte de Zion avant tout engagement envers le fournisseur.",
+        "Vérifier la préparation de la visite"
+      ],
+      [
+        "Pendant les travaux",
+        "Pour chaque vérification convenue, consignez le résultat attendu, le résultat observé, l’heure et la référence de la preuve. Marquez une vérification non effectuée comme en attente et attribuez l’action suivante.",
+        "Vérifier les preuves opérationnelles"
+      ],
+      [
+        "À la fin de l’intervention",
+        "Utilisez le modèle de rapport pour consigner les travaux terminés, les exceptions, les actions restantes et la prochaine mise à jour. Demandez l’acceptation écrite du contact autorisé du client dans la conversation existante sur le service.",
+        "Préparer le rapport de fin d’intervention"
+      ]
+    ],
+    "note": "Conservez des statuts distincts pour la fin des travaux du technicien et l’acceptation du client. Une vérification en attente exige un responsable et une prochaine mise à jour ; elle ne doit pas être indiquée comme réussie."
+  },
+  "de": {
+    "title": "Den Einsatz vorbereiten und das Ergebnis dokumentieren",
+    "intro": "Erstellen Sie aus dem vereinbarten Leistungsumfang einen überprüfbaren Servicebericht. Diese drei Ressourcen verwenden dieselbe Sprache wie dieser Leitfaden.",
+    "stages": [
+      [
+        "Vor dem Einsatz",
+        "Prüfen Sie Zugang, benannten Techniker, schriftliche Verfügbarkeit und genehmigten Leistungsumfang. Prüfen Sie Kundenbestätigung, Bestellung und die separate Freigabe von Zion, bevor Sie eine Verpflichtung gegenüber dem Lieferanten eingehen.",
+        "Einsatzvorbereitung prüfen"
+      ],
+      [
+        "Während der Arbeiten",
+        "Erfassen Sie für jede vereinbarte Prüfung das erwartete und beobachtete Ergebnis, die Uhrzeit und den Nachweisverweis. Kennzeichnen Sie eine nicht durchgeführte Prüfung als offen und weisen Sie die nächste Aufgabe zu.",
+        "Betriebliche Nachweise prüfen"
+      ],
+      [
+        "Zum Abschluss",
+        "Dokumentieren Sie erledigte Arbeiten, Ausnahmen, offene Aufgaben und die nächste Rückmeldung mit der Berichtsvorlage. Fordern Sie die schriftliche Abnahme beim autorisierten Kundenkontakt im bestehenden Serviceverlauf an.",
+        "Abschlussbericht vorbereiten"
+      ]
+    ],
+    "note": "Führen Sie den Abschluss durch den Techniker und die Kundenabnahme als getrennte Statusangaben. Eine offene Prüfung braucht einen Verantwortlichen und die nächste Rückmeldung; sie darf nicht als bestanden vermerkt werden."
+  }
+};
+const visitJourneySlugs=['field-visit-handoff-2026','app-network-operations-evidence-checklist-2026','field-service-completion-pack-2026'];
+function withVisitJourney(html,locale){
+ const c=visitJourneyCopy[locale];
+ assert(c,'Unknown field-visit locale '+locale);
+ const clean=html.replace(/<!--field-visit-journey:start-->[\s\S]*?<!--field-visit-journey:end-->/g,'');
+ assert(!clean.includes('data-field-visit-journey'),'Unrecognized field-visit journey block '+locale);
+ const anchor=locale==='en'?'<section aria-labelledby="tools">':'<section><h2 id="tools">';
+ assert(clean.includes(anchor),'Field-visit journey insertion anchor changed '+locale);
+ const suffix=locale==='en'?'':'-'+(locale==='pt'?'pt-br':locale);
+ const cards=c.stages.map((item,i)=>'<article class="card"><h3>'+esc(item[0])+'</h3><p>'+esc(item[1])+'</p><a href="/zion-app-network/'+visitJourneySlugs[i]+suffix+'.html">'+esc(item[2])+'</a></article>').join('');
+ const block='<!--field-visit-journey:start--><section data-field-visit-journey="2026-10-31" aria-labelledby="field-visit-journey-title"><h2 id="field-visit-journey-title">'+esc(c.title)+'</h2><p>'+esc(c.intro)+'</p><div class="grid">'+cards+'</div><p>'+esc(c.note)+'</p></section><!--field-visit-journey:end-->';
+ return clean.replace(anchor,block+anchor);
+}
+
 const forms=s=>s.match(/<form\b[\s\S]*?<\/form>/gi)||[];
 const types={en:['Service page','Documentation / concept','Calculator: validate assumptions','Unverified destination']};for(const [l,c] of Object.entries(copy))types[l]=c.types;
 const languageNav=l=>'<nav data-field-evidence-languages aria-label="'+localizedUI[l].language+'">'+Object.keys(names).map(k=>'<a lang="'+(k==='pt'?'pt-BR':k)+'" hreflang="'+(k==='pt'?'pt-BR':k)+'" href="'+route(k)+'">'+names[k]+'</a>').join(' · ')+'</nav>';
@@ -28,12 +156,13 @@ const englishFile=path.join(out,route('en').slice(1));assert(fs.existsSync(engli
 // Source pages can already carry hreflang metadata; keep exactly one reciprocal set.
 en=en.replace(/<link\b(?=[^>]*\brel=["']alternate["'])[^>]*>/gi,'').replace('</head>',alternates+'</head>');
 if(!en.includes('data-field-evidence-languages'))en=en.replace('<main id="main">','<main id="main">'+languageNav('en'));
+en=withVisitJourney(en,'en');
 assert.equal((en.match(/rel="alternate"/g)||[]).length,6);fs.writeFileSync(englishFile,en);
 for(const [l,c] of Object.entries(copy)){
  const lang=l==='pt'?'pt-BR':l,p='/'+l+'/',home=l==='pt'?'/':p,ui=localizedUI[l];
  const cards=c.tools.map((body,i)=>'<article class="card"><h3>'+esc(ui.tools[i])+'</h3><p>'+esc(body)+'</p><a href="'+toolPaths[i]+'">'+esc(c.open)+'</a> · <a href="https://github.com/Zion-support/zion-support.github.io/blob/main/'+toolSources[i]+'">'+esc(c.source)+'</a></article>').join('');
  const html='<!DOCTYPE html><html lang="'+lang+'"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>'+esc(c.title)+' | Zion</title><meta name="description" content="'+esc(c.intro)+'"><link rel="canonical" href="'+origin+route(l)+'">'+alternates+'<link rel="stylesheet" href="/assets/css/apps-pattern.css"><style>body{margin:0;background:#0b1220;color:#e8eef8;font:16px/1.65 system-ui,sans-serif}.wrap{max-width:1100px;margin:auto;padding:24px}a{color:#7dd3fc;overflow-wrap:anywhere}a:focus-visible{outline:3px solid #fde047;outline-offset:3px}nav{display:flex;flex-wrap:wrap;gap:12px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:18px}.card{background:#121a2b;border:1px solid #334155;border-radius:12px;padding:20px;margin:16px 0}</style></head><body data-field-evidence-release="2026-10-09"><a href="#main">'+esc(c.nav[4])+'</a><div class="wrap"><nav><a href="'+home+'">'+esc(c.nav[0])+'</a><a href="'+p+'apps/">'+esc(c.nav[1])+'</a><a href="'+p+'apps/network.html">'+esc(c.nav[2])+'</a><a href="'+p+'discovery/">'+esc(c.nav[3])+'</a><a href="https://github.com/Zion-support/zion-app-network">GitHub</a></nav>'+languageNav(l)+'<main id="main"><h1>'+esc(c.title)+'</h1><p>'+esc(c.intro)+'</p><section><h2>'+esc(c.stepsTitle)+'</h2><ol>'+c.steps.map(s=>'<li>'+esc(s)+'</li>').join('')+'</ol></section><section><h2 id="tools">'+esc(c.toolsTitle)+'</h2><div class="grid">'+cards+'</div></section><section class="card"><h2>'+esc(c.checksTitle)+'</h2><ul>'+c.checks.map(s=>'<li>'+esc(s)+'</li>').join('')+'</ul></section><section class="card"><h2>'+esc(c.freeTitle)+'</h2><p>'+esc(c.free)+'</p><p>'+esc(c.guard)+'</p><a href="'+p+'discovery/">'+esc(c.nav[3])+'</a> · <a href="/apps/discovery-report-workbench.html">'+esc(c.report)+'</a></section></main><footer><h2>'+esc(c.footer)+'</h2><a href="/apps/content-hub.html">'+esc(c.nav[1])+'</a> · <a href="'+p+'apps/network.html">'+esc(c.nav[2])+'</a> · <a href="/global-fe-dispatch/">'+esc(ui.readiness)+'</a> · <a href="https://github.com/Zion-support/zion-support.github.io/blob/main/scripts/render-field-evidence-locales.cjs">GitHub</a><p>© 2026 Zion Tech Group</p></footer></div></body></html>';
- assert.equal((html.match(/rel="alternate"/g)||[]).length,6);assert(!/<form\b|<script\b/i.test(html));const f=path.join(out,route(l).slice(1));if(fs.existsSync(f))assert.equal(forms(fs.readFileSync(f,'utf8')).length,0);fs.writeFileSync(f,html);
+ assert.equal((html.match(/rel="alternate"/g)||[]).length,6);assert(!/<form\b|<script\b/i.test(html));const f=path.join(out,route(l).slice(1));if(fs.existsSync(f))assert.equal(forms(fs.readFileSync(f,'utf8')).length,0);fs.writeFileSync(f,withVisitJourney(html,l));
 }
 // Localized additive promotions. Redirect entrypoints remain byte-for-byte unchanged.
 for(const l of Object.keys(names)){
