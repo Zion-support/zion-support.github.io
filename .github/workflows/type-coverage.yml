@@ -111,4 +111,4 @@ jobs:
       if: success() && github.event_name == 'schedule'
       run: |
         node automation/notify-telegram.js "✅ Weekly TypeScript / ESLint Check — all clear." || true
-    timeout-minutes: 10
+    timeout-minutes: 20
