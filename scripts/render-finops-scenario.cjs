@@ -1,7 +1,7 @@
 'use strict';
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
 const out=process.argv[2]||'out',version='2026-10-09-finops-scenario-v1',base='https://ziontechgroup.com';
-const localeRelease='finops-locales-2026-10-30-v2',pagesOnly=process.argv.includes('--pages-only'),homeOnly=process.argv.includes('--home-only');
+const localeRelease='finops-locales-2026-10-30-v2',pagesOnly=process.argv.includes('--pages-only'),homeOnly=process.argv.includes('--home-only'),toolPromotionsOnly=process.argv.includes('--tool-promotions-only');
 const copy=JSON.parse(fs.readFileSync('content/finops-scenario.json','utf8')),common=JSON.parse(fs.readFileSync('content/operational-tools.json','utf8')),L=['en','pt','es','fr','de'];
 const prefix=l=>l==='en'?'/':'/'+l+'/',home=l=>l==='pt'?'/':'/'+l+'/',route=(l,guide=false)=>prefix(l)+'apps/finops-'+(guide?'pilot-guide':'scenario-estimator')+'.html';
 const file=u=>path.join(out,u.slice(1)+(u.endsWith('/')?'index.html':'')),exists=u=>fs.existsSync(file(u)),write=(u,s)=>{fs.mkdirSync(path.dirname(file(u)),{recursive:true});fs.writeFileSync(file(u),s);};
@@ -85,7 +85,10 @@ function promote(u,l,isHome=false){
  assert.deepEqual(protectedParts(after),protectedParts(before),'Existing forms/scripts changed '+u);
  write(u,after);(isHome?manifest.homepages:manifest.reciprocalPages).push(u);
 }
-if(homeOnly){
+if(toolPromotionsOnly){
+ for(const l of L)for(const slug of peers)promote(prefix(l)+slug+'/',l);
+ console.log('PASS fifteen localized FinOps tool promotions; existing forms/scripts and other pages preserved.');
+}else if(homeOnly){
  for(const l of L)promote(home(l),l,true);
  console.log('PASS five existing cost-journey homepage promotions; forms/scripts and placement preserved.');
 }else if(pagesOnly){
@@ -100,4 +103,3 @@ require('./test-finops-scenario.cjs');
 console.log('PASS '+version+': 10 translated pages, 5 homepage promotions and 20 reciprocal links; legacy redirect preserved.');
 
 }
-

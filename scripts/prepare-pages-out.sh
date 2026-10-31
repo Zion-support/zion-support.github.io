@@ -381,6 +381,9 @@ node scripts/render-linked-app-routes.cjs out
 # Replace historical tool placeholders with the reviewed five-language tools.
 # Verify the assembled pages, not only an isolated renderer fixture.
 node scripts/render-operational-tools.cjs out
+# A newly generated baseline has no prior promotion to preserve. Restore only
+# the tool crosslinks before checking the completed operational pages.
+node scripts/render-finops-scenario.cjs out --tool-promotions-only
 node scripts/test-roi-baseline.cjs
 node scripts/test-operational-tools.cjs
 node scripts/test-operational-tools.cjs out --artifact-only

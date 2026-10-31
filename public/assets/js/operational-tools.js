@@ -23,4 +23,3 @@ calculate();
 // Enable the baseline form only after its local submit handler is installed.
 if(isBaseline){const button=document.getElementById('roi-calculate');if(button)button.disabled=false;}
 })(typeof globalThis!=='undefined'?globalThis:this);
-

@@ -67,4 +67,3 @@ test('the concurrent energy pilot guide remains linked in every catalog language
   assert.equal(new Set(locales.map(l=>data.locales[l].energyGuide)).size,5);
   assert(render('en').includes('Energy &amp; utilities pilot guide'));
 });
-

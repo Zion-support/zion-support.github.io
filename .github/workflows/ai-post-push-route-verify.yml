@@ -8,13 +8,21 @@ permissions:
   push:
     branches: [main]
   workflow_dispatch:
+  workflow_run:
+    workflows:
+      - Continuous Pages Deploy
+      - Simple Static Deploy
+      - Deploy on Push
+    branches: [main]
+    types: [completed]
 
 concurrency:
-  group: ai-post-push-route-verify-${{ github.ref }}
-  cancel-in-progress: true
+  group: ai-post-push-route-verify-${{ github.event_name == 'workflow_run' && 'post-deploy' || github.ref }}
+  cancel-in-progress: ${{ github.event_name != 'workflow_run' }}
 
 jobs:
   verify-routes:
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
