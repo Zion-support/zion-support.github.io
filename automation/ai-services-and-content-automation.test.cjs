@@ -60,7 +60,7 @@ test('explicit draft mode writes five drafts and a truthful manifest only', t =>
   const result = run(['--draft'], root);
   assert.equal(result.published, false);
   assert.equal(result.writtenFiles.length, 6);
- const dir = path.join(root, ...OUTPUT_PARTS);
+  const dir = path.join(root, ...OUTPUT_PARTS);
   assert.equal(fs.readdirSync(dir).length, 6);
   assert.equal(JSON.parse(fs.readFileSync(path.join(dir, 'manifest.json'), 'utf8')).published, false);
 });
