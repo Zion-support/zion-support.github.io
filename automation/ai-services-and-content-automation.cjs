@@ -85,44 +85,102 @@ function buildBundle() {
   return { drafts, manifest };
 }
 
-function ensureOutputDirectory(root) {
-  let current = path.resolve(root);
-  const rootStat = fs.lstatSync(current);
-  if (rootStat.isSymbolicLink() || !rootStat.isDirectory()) throw new Error('Unsafe draft workspace.');
-  for (const part of OUTPUT_PARTS) {
-    current = path.join(current, part);
-    if (fs.existsSync(current)) {
-      const stat = fs.lstatSync(current);
-      if (stat.isSymbolicLink() || !stat.isDirectory()) throw new Error('Unsafe draft output directory.');
-    } else {
-      fs.mkdirSync(current, { mode: 0o700 });
-    }
+function safetyFlags() {
+  // This review workflow targets Ubuntu. Never silently drop no-follow protection.
+  if (process.platform !== 'linux' || !fs.constants.O_NOFOLLOW || !fs.constants.O_DIRECTORY || !fs.constants.O_NONBLOCK) {
+    throw new Error('Safe draft output requires Linux directory handles and no-follow support.');
   }
-  return current;
+  return {
+    directory: fs.constants.O_RDONLY | fs.constants.O_DIRECTORY | fs.constants.O_NOFOLLOW,
+    existingFile: fs.constants.O_RDONLY | fs.constants.O_NOFOLLOW | fs.constants.O_NONBLOCK
+  };
+}
+
+function openDraftDirectory(root, flags) {
+  let fd;
+  try { fd = fs.openSync(path.resolve(root), flags.directory); }
+  catch { throw new Error('Unsafe draft workspace.'); }
+  try {
+    for (const part of OUTPUT_PARTS) {
+      // Kernel-backed descriptor paths pin each parent even if its name is replaced.
+      const child = `/proc/self/fd/${fd}/${part}`;
+      try { fs.mkdirSync(child, { mode: 0o700 }); }
+      catch (error) { if (error.code !== 'EEXIST') throw error; }
+      let next;
+      try { next = fs.openSync(child, flags.directory); }
+      catch { throw new Error('Unsafe draft output directory.'); }
+      fs.closeSync(fd);
+      fd = next;
+    }
+    return fd;
+  } catch (error) {
+    fs.closeSync(fd);
+    throw error;
+  }
+}
+
+function verifyExistingDraft(target, expected, flags, allowMissing) {
+  let fd;
+  try { fd = fs.openSync(target, flags.existingFile); }
+  catch (error) {
+    if (allowMissing && error.code === 'ENOENT') return;
+    throw new Error('Unsafe draft output file.');
+  }
+  try {
+    const stat = fs.fstatSync(fd);
+    if (!stat.isFile() || stat.size !== Buffer.byteLength(expected, 'utf8')) {
+      throw new Error('Existing draft differs; refusing to overwrite.');
+    }
+    if (fs.readFileSync(fd, 'utf8') !== expected) {
+      throw new Error('Existing draft differs; refusing to overwrite.');
+    }
+  } finally { fs.closeSync(fd); }
+}
+
+function verifyDirectoryBinding(outputDir, directoryFd, flags) {
+  let verificationFd;
+  try { verificationFd = fs.openSync(outputDir, flags.directory); }
+  catch { throw new Error('Draft output directory binding changed.'); }
+  try {
+    const pinned = fs.fstatSync(directoryFd);
+    const named = fs.fstatSync(verificationFd);
+    if (pinned.dev !== named.dev || pinned.ino !== named.ino) {
+      throw new Error('Draft output directory binding changed.');
+    }
+  } finally { fs.closeSync(verificationFd); }
 }
 
 function writeBundle(root = process.cwd()) {
+  const flags = safetyFlags();
   const { drafts, manifest } = buildBundle();
-  const outputDir = ensureOutputDirectory(root);
+  const outputDir = path.join(path.resolve(root), ...OUTPUT_PARTS);
+  const directoryFd = openDraftDirectory(root, flags);
   const files = [...drafts, { name: 'manifest.json', content: `${JSON.stringify(manifest, null, 2)}\n` }];
-  // Preflight all fixed destinations before writing any draft content.
-  for (const { name } of files) {
-    const target = path.join(outputDir, name);
-    if (fs.existsSync(target) || (() => { try { return fs.lstatSync(target).isSymbolicLink(); } catch { return false; } })()) {
-      const stat = fs.lstatSync(target);
-      if (stat.isSymbolicLink() || !stat.isFile()) throw new Error('Unsafe draft output file.');
-    }
-  }
   const written = [];
-  for (const { name, content } of files) {
-    const target = path.join(outputDir, name);
-    if (fs.existsSync(target) && fs.readFileSync(target, 'utf8') === content) continue;
-    const flags = fs.constants.O_WRONLY | fs.constants.O_CREAT | fs.constants.O_TRUNC | (fs.constants.O_NOFOLLOW || 0);
-    const fd = fs.openSync(target, flags, 0o600);
-    try { fs.writeFileSync(fd, content, 'utf8'); } finally { fs.closeSync(fd); }
-    written.push(name);
-  }
-  return { mode: 'draft-only', published: false, localeCount: drafts.length, outputDir, writtenFiles: written };
+  try {
+    for (const { name, content } of files) {
+      verifyExistingDraft(`/proc/self/fd/${directoryFd}/${name}`, content, flags, true);
+    }
+    for (const { name, content } of files) {
+      const target = `/proc/self/fd/${directoryFd}/${name}`;
+      let fd;
+      // Exclusive creation is atomic: existing paths, including links, are never truncated.
+      try { fd = fs.openSync(target, 'wx', 0o600); }
+      catch (error) {
+        if (error.code !== 'EEXIST') throw error;
+        verifyExistingDraft(target, content, flags, false);
+        continue;
+      }
+      try { fs.writeFileSync(fd, content, 'utf8'); }
+      finally { fs.closeSync(fd); }
+      written.push(name);
+    }
+    for (const { name, content } of files) {
+      verifyExistingDraft(`/proc/self/fd/${directoryFd}/${name}`, content, flags, false);
+    }
+    verifyDirectoryBinding(outputDir, directoryFd, flags);
+    return { mode: 'draft-only', published: false, localeCount: drafts.length, outputDir, writtenFiles: written };
+  } finally { fs.closeSync(directoryFd); }
 }
 
 function run(argv, root = process.cwd()) {

@@ -94,7 +94,7 @@ test('all output-file symlinks are rejected before any draft is written', t => {
   const root = workspace(t); const dir = path.join(root, ...OUTPUT_PARTS); fs.mkdirSync(dir, { recursive: true });
   const target = path.join(root, 'sentinel'); fs.writeFileSync(target, 'PRESERVE');
   fs.symlinkSync(target, path.join(dir, 'manifest.json'));
-  assert.throws(() => run(['--draft'], root), /Unsafe draft output file/);
+  assert.throws(() => run(['--draft'], root), /Unsafe draft output file|Existing draft differs/);
   assert.equal(fs.readFileSync(target, 'utf8'), 'PRESERVE');
   assert.deepEqual(fs.readdirSync(dir), ['manifest.json']);
 });
@@ -105,4 +105,61 @@ test('the proposed workflow is manual, read-only and does not invoke release or 
   assert.match(workflow, /persist-credentials: false/);
   assert.doesNotMatch(workflow, /\bschedule:|\bpush:|\bpull_request:|secrets\.|safe-release|AUTO_COMMIT|git push/);
   assert.match(workflow, /if-no-files-found: error/);
+});
+
+function withOpenHook(hook, action) {
+  const original = fs.openSync;
+  fs.openSync = function (target, flags, ...rest) {
+    hook(String(target), flags);
+    return original.call(fs, target, flags, ...rest);
+  };
+  try { return action(); } finally { fs.openSync = original; }
+}
+
+test('a symlink inserted after preflight cannot redirect an exclusive write', t => {
+  const root = workspace(t);
+  const bait = path.join(root, 'private-sentinel'); fs.writeFileSync(bait, 'PRESERVE');
+  let raced = false;
+  withOpenHook((target, flags) => {
+    if (!raced && flags === 'wx' && target.endsWith('/field-support-request.pt-BR.md')) {
+      raced = true; fs.symlinkSync(bait, target);
+    }
+  }, () => assert.throws(() => run(['--draft'], root), /Unsafe draft output file/));
+  assert.equal(raced, true);
+  assert.equal(fs.readFileSync(bait, 'utf8'), 'PRESERVE');
+});
+
+test('an existing file swapped after preflight is not truncated or followed', t => {
+  const root = workspace(t); run(['--draft'], root);
+  const bait = path.join(root, 'private-sentinel'); fs.writeFileSync(bait, 'PRESERVE');
+  let raced = false;
+  withOpenHook((target, flags) => {
+    if (!raced && flags === 'wx' && target.endsWith('/field-support-request.pt-BR.md')) {
+      raced = true; fs.unlinkSync(target); fs.symlinkSync(bait, target);
+    }
+  }, () => assert.throws(() => run(['--draft'], root), /Unsafe draft output file/));
+  assert.equal(raced, true);
+  assert.equal(fs.readFileSync(bait, 'utf8'), 'PRESERVE');
+});
+
+test('pinned parents prevent a directory swap from redirecting draft writes', t => {
+  const root = workspace(t); const outside = workspace(t);
+  const output = path.join(root, ...OUTPUT_PARTS); const moved = path.join(root, 'original-output');
+  let raced = false;
+  withOpenHook((target, flags) => {
+    if (!raced && flags === 'wx' && target.endsWith('/field-support-request.pt-BR.md')) {
+      raced = true; fs.renameSync(output, moved); fs.symlinkSync(outside, output, 'dir');
+    }
+  }, () => assert.throws(() => run(['--draft'], root), /directory binding changed/));
+  assert.equal(raced, true);
+  assert.deepEqual(fs.readdirSync(outside), []);
+  assert.ok(fs.readdirSync(moved).includes('manifest.json'));
+});
+
+test('non-identical existing drafts fail closed without overwriting artifacts', t => {
+  const root = workspace(t); run(['--draft'], root);
+  const target = path.join(root, ...OUTPUT_PARTS, 'field-support-request.en.md');
+  fs.writeFileSync(target, 'EDITORIAL-SENTINEL');
+  assert.throws(() => run(['--draft'], root), /Existing draft differs; refusing to overwrite/);
+  assert.equal(fs.readFileSync(target, 'utf8'), 'EDITORIAL-SENTINEL');
 });
