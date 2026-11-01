@@ -21,7 +21,16 @@ const script = fs.readFileSync('public/assets/js/operational-tools.js', 'utf8');
 
 // This mode checks the actual publication directory, including stale files
 // copied from public/. The isolated renderer test below cannot establish this.
+
+function verifyPlanningGuides(out){
+ const data=JSON.parse(fs.readFileSync(path.join(__dirname,'..','content/operational-examples.json'),'utf8')).finopsPlanningGuide;
+ const manifest=JSON.parse(fs.readFileSync(path.join(out,'apps/finops-planning-guide-publication.json'),'utf8'));
+ assert.equal(manifest.pages.length,5);assert.equal(manifest.homepages.length,5);assert.equal(manifest.catalogs.length,5);
+ for(const l of locales){const t=data.locales[copy[l].lang],route=prefix(l)+'apps/finops-planning-checklist.html',html=fs.readFileSync(disk(out,route),'utf8');assert(html.includes('data-finops-planning-guide-page="'+data.version+'"'));assert(html.includes('<h1>'+t.title.replace(/[&<>"']/g,x=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[x]))+'</h1>'));assert.equal((html.match(/rel="alternate"/g)||[]).length,6);assert(!/<form\b/.test(html));assert(!/noindex|local-unpublished|notion\.com/.test(html));for(const k of locales)assert(html.includes('hreflang="'+copy[k].lang+'" href="https://ziontechgroup.com'+prefix(k)+'apps/finops-planning-checklist.html"'));for(const surface of [home(l),prefix(l)+'apps/']){const text=fs.readFileSync(disk(out,surface),'utf8');assert.equal((text.match(/<!--finops-planning-guide:start-->/g)||[]).length,1,'Single FinOps planning promotion '+surface);assert(text.includes('href="'+route+'"'),'Local FinOps planning guide link '+surface);}}
+}
+
 function verifyArtifact(out) {
+  verifyPlanningGuides(out);
   const manifest = JSON.parse(fs.readFileSync(path.join(out, 'apps/operational-tools-publication.json'), 'utf8'));
   const expected = locales.flatMap(locale => [
     prefix(locale) + 'apps/operational-planning-tools.html',
@@ -223,6 +232,7 @@ try {
   write(path.join(out, 'apps/network-publication-coverage.json'), JSON.stringify({source: 'fixture-sentinel', groups: [unrelatedCoverage, existingCoverage]}));
   for (const locale of locales) {
     write(disk(out, home(locale)), '<html><body><main>' + original + '</main></body></html>');
+    write(disk(out, prefix(locale) + 'apps/'), '<html><body><main><p>Catalog fixture.</p></main></body></html>');
     for (const slug of slugs) write(disk(out, prefix(locale) + slug + '/'), '<h1>Tools</h1><p>Coming soon.</p>' + finopsPromotion(locale));
   }
   for (let run = 0; run < 2; run++) {
