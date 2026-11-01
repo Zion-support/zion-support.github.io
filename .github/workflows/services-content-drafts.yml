@@ -1,0 +1,36 @@
+name: Services Content Draft Review
+
+"on":
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: services-content-draft-review-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  draft-review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout without persisted write credentials
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          persist-credentials: false
+      - name: Use the repository Node target
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
+        with:
+          node-version-file: .nvmrc
+      - name: Validate draft-only behavior
+        run: node --test automation/ai-services-and-content-automation.test.cjs
+      - name: Generate review drafts only
+        run: node automation/ai-services-and-content-automation.cjs --draft
+      - name: Upload review artifact, not website content
+        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f
+        with:
+          name: services-content-drafts-${{ github.run_id }}-${{ github.run_attempt }}
+          path: automation/reports/services-content-drafts/
+          if-no-files-found: error
+          retention-days: 7
