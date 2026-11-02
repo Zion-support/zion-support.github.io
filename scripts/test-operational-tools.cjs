@@ -335,8 +335,10 @@ try {
  const t={promo_title:'Fixture',promo_desc:'ação $& $$',open:'Open'};
  fs.writeFileSync(target,original);apply('/surface','en',t);const first=fs.readFileSync(target,'utf8');assert.equal(first.replace(marker,''),original,'Unowned bytes retained');apply('/surface','en',t);assert.equal(fs.readFileSync(target,'utf8'),first,'Descriptor update idempotent');assert.equal(opened,closed,'Successful descriptors closed');
  fs.writeFileSync(target,original);swap=true;assert.throws(()=>apply('/surface','en',t),/surface replaced during update/);assert.equal(fs.readFileSync(target,'utf8'),'replacement-sentinel','Path replacement is not overwritten');assert.equal(opened,closed,'Replacement failure closes descriptor');swap=false;
- fs.unlinkSync(target);assert.throws(()=>apply('/surface','en',t),/ENOENT/);assert(!fs.existsSync(target),'Missing surface is not created');
+ fs.unlinkSync(target);assert.throws(()=>apply('/surface','en',t),/ENOENT/);
+ // Exclusive creation atomically proves the missing-surface failure did not create a file.
+ fs.closeSync(fs.openSync(target,'wx',0o600));fs.unlinkSync(target);
  fs.writeFileSync(victim,'victim-sentinel');fs.symlinkSync(victim,target);assert.throws(()=>apply('/surface','en',t),/ELOOP/);assert.equal(fs.readFileSync(victim,'utf8'),'victim-sentinel','Symlink target is unchanged');fs.unlinkSync(target);
- fs.writeFileSync(target,'<main><!--finops-planning-guide:start-->a<!--finops-planning-guide:end--><!--finops-planning-guide:start-->b<!--finops-planning-guide:end--></main>');const ambiguous=fs.readFileSync(target,'utf8');assert.throws(()=>apply('/surface','en',t),/Ambiguous/);assert.equal(fs.readFileSync(target,'utf8'),ambiguous);assert.equal(opened,closed,'Validation failure closes descriptor');
+ fs.writeFileSync(target,'<main><!--finops-planning-guide:start-->a<!--finops-planning-guide:end--><!--finops-planning-guide:start-->b<!--finops-planning-guide:end--></main>',{flag:'wx',mode:0o600});const ambiguous=fs.readFileSync(target,'utf8');assert.throws(()=>apply('/surface','en',t),/Ambiguous/);assert.equal(fs.readFileSync(target,'utf8'),ambiguous);assert.equal(opened,closed,'Validation failure closes descriptor');
  console.log('PASS planning security regressions: script-data round trip, single-handle writes, unowned-byte preservation, idempotence, missing/symlink rejection, replacement detection and handle cleanup.');
 } finally { fs.rmSync(securityRoot,{recursive:true,force:true}); }
