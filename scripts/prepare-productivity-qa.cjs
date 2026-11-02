@@ -21,7 +21,31 @@ function prepare(out='out',dest='productivity-qa',catalogFile='_productivity-cat
   if(/\.(m?js)$/i.test(file))for(const m of text.matchAll(/(?:\bfrom\s*|\bimport\s*(?:\(\s*)?)["'](\.{1,2}\/[^"']+)["']/g))refs.push(m[1]);
   const base=origin+'/'+rel.replace(/\\/g,'/');for(const ref of refs){if(/^(data:|blob:|#)/i.test(ref))continue;const u=new URL(ref,base);if(u.origin!==origin){external.add(u.href);continue;}collect(disk(out,u.href));}
  }
- for(const p of plan.pages)collect(p.file);const manifest={schema:1,scope:'30 resource editions + 5 homepages and discovered static dependencies; NOT deployment/browser/native-editorial certification',head:process.env.GITHUB_HEAD_SHA||null,catalogBlob:plan.catalogBlob,catalogEvidence:'Pinned authored Markdown anchors and matching-language source routes; NOT rendered/live catalog HTML proof',ownedLinksChecked:plan.links,pages:plan.pages.map(({locale,url})=>({locale,url})),externalDependencies:[...external].sort(),files:[...files].map(([file,b])=>({file,sha256:digest(b),bytes:b.length})).sort((a,b)=>a.file.localeCompare(b.file))};
+ for(const p of plan.pages)collect(p.file);
+ const supplementalPages=[],locales=Object.keys(nav.C),guide=l=>'/'+(l==='en'?'':l+'/')+'apps/finops-planning-checklist.html',catalog=l=>'/'+(l==='en'?'':l+'/')+'apps/';
+ const bytes=url=>files.get(path.relative(path.resolve(out),disk(out,url)));
+ const homes=locales.map(l=>bytes(nav.home(l)).toString('utf8')),promoted=homes.map(h=>h.includes('data-finops-planning-promotion='));
+ if(promoted.some(Boolean)){
+  assert(promoted.every(Boolean),'FinOps review promotions must cover all five homepages');
+  collect(disk(out,'/apps/finops-planning-guide-publication.json'));
+  const publication=JSON.parse(bytes('/apps/finops-planning-guide-publication.json').toString('utf8'));
+  assert(typeof publication.version==='string'&&publication.version,'FinOps review version');
+  assert.deepEqual(publication.pages,locales.map(guide),'FinOps review guide routes');assert.deepEqual(publication.homepages,locales.map(nav.home),'FinOps review homepage routes');assert.deepEqual(publication.catalogs,locales.map(catalog),'FinOps review catalog routes');
+  for(const [i,l] of locales.entries()){
+   assert(homes[i].includes('href="'+guide(l)+'"'),'Localized FinOps homepage review link '+l);
+   for(const [kind,url] of [['finops-planning-guide',guide(l)],['apps-catalog',catalog(l)]]){
+    collect(disk(out,url));const html=bytes(url).toString('utf8');assert.equal((html.match(/<html\b[^>]*\blang=["']([^"']+)["']/i)||[])[1],nav.C[l].lang,'FinOps review document locale '+url);
+    assert(html.includes('rel="canonical" href="'+origin+url+'"'),'FinOps review canonical '+url);
+    if(kind==='finops-planning-guide'){
+     assert(html.includes('data-finops-planning-guide-page="'+publication.version+'"'),'FinOps review guide version '+url);assert.equal((html.match(/rel="alternate"/g)||[]).length,6,'FinOps review alternates '+url);
+     for(const k of locales)assert(html.includes('hreflang="'+nav.C[k].lang+'" href="'+origin+guide(k)+'"'),'FinOps review same-topic alternate '+url);
+     const ld=html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/);assert(ld,'FinOps review JSON-LD '+url);const article=JSON.parse(ld[1]);assert.equal(article['@type'],'Article');assert.equal(article.inLanguage,nav.C[l].lang);assert.equal(article.url,origin+url);
+    }else assert(html.includes('data-finops-planning-promotion=')&&html.includes('href="'+guide(l)+'"'),'FinOps review catalog promotion '+url);
+    supplementalPages.push({locale:nav.C[l].lang,url,kind});
+   }
+  }
+ }
+ const manifest={schema:1,scope:'30 resource editions + 5 homepages, advertised FinOps guide/catalog review pages and discovered static dependencies; NOT deployment/browser/native-editorial certification',head:process.env.GITHUB_HEAD_SHA||null,catalogBlob:plan.catalogBlob,catalogEvidence:'Pinned authored Markdown anchors and matching-language source routes; NOT rendered/live catalog HTML proof',ownedLinksChecked:plan.links,supplementalPages,pages:plan.pages.map(({locale,url})=>({locale,url})),externalDependencies:[...external].sort(),files:[...files].map(([file,b])=>({file,sha256:digest(b),bytes:b.length})).sort((a,b)=>a.file.localeCompare(b.file))};
  // Only stage after every page, owned link and discovered static dependency validates.
  fs.mkdirSync(dest,{recursive:true});for(const [file,b]of files){const f=path.join(dest,file);fs.mkdirSync(path.dirname(f),{recursive:true});fs.writeFileSync(f,b);}fs.writeFileSync(path.join(dest,'CATALOG-PRODUCTIVITY-REVIEW.md'),fs.readFileSync(catalogFile));fs.writeFileSync(path.join(dest,'qa-manifest.json'),JSON.stringify(manifest,null,2)+'\n');console.log('PASS productivity QA:'+plan.pages.length+' pages,'+plan.links+' owned links,5 pinned catalog source anchors,'+files.size+' retained files. Not live catalog/browser certification.');return manifest;
 }

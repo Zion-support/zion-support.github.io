@@ -21,7 +21,16 @@ const script = fs.readFileSync('public/assets/js/operational-tools.js', 'utf8');
 
 // This mode checks the actual publication directory, including stale files
 // copied from public/. The isolated renderer test below cannot establish this.
+
+function verifyPlanningGuides(out){
+ const data=JSON.parse(fs.readFileSync(path.join(__dirname,'..','content/operational-examples.json'),'utf8')).finopsPlanningGuide;
+ const manifest=JSON.parse(fs.readFileSync(path.join(out,'apps/finops-planning-guide-publication.json'),'utf8'));
+ assert.equal(manifest.pages.length,5);assert.equal(manifest.homepages.length,5);assert.equal(manifest.catalogs.length,5);
+ for(const l of locales){const t=data.locales[copy[l].lang],route=prefix(l)+'apps/finops-planning-checklist.html',html=fs.readFileSync(disk(out,route),'utf8');assert(html.includes('data-finops-planning-guide-page="'+data.version+'"'));assert(html.includes('<h1>'+t.title.replace(/[&<>"']/g,x=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[x]))+'</h1>'));assert.equal((html.match(/rel="alternate"/g)||[]).length,6);assert(!/<form\b/.test(html));assert(!/noindex|local-unpublished|notion\.com/.test(html));for(const k of locales)assert(html.includes('hreflang="'+copy[k].lang+'" href="https://ziontechgroup.com'+prefix(k)+'apps/finops-planning-checklist.html"'));for(const surface of [home(l),prefix(l)+'apps/']){const text=fs.readFileSync(disk(out,surface),'utf8');assert.equal((text.match(/<!--finops-planning-guide:start-->/g)||[]).length,1,'Single FinOps planning promotion '+surface);assert(text.includes('href="'+route+'"'),'Local FinOps planning guide link '+surface);}}
+}
+
 function verifyArtifact(out) {
+  verifyPlanningGuides(out);
   const manifest = JSON.parse(fs.readFileSync(path.join(out, 'apps/operational-tools-publication.json'), 'utf8'));
   const expected = locales.flatMap(locale => [
     prefix(locale) + 'apps/operational-planning-tools.html',
@@ -223,6 +232,7 @@ try {
   write(path.join(out, 'apps/network-publication-coverage.json'), JSON.stringify({source: 'fixture-sentinel', groups: [unrelatedCoverage, existingCoverage]}));
   for (const locale of locales) {
     write(disk(out, home(locale)), '<html><body><main>' + original + '</main></body></html>');
+    write(disk(out, prefix(locale) + 'apps/'), '<html><body><main><p>Catalog fixture.</p></main></body></html>');
     for (const slug of slugs) write(disk(out, prefix(locale) + slug + '/'), '<h1>Tools</h1><p>Coming soon.</p>' + finopsPromotion(locale));
   }
   for (let run = 0; run < 2; run++) {
@@ -304,3 +314,31 @@ try {
 } finally {
   fs.rmSync(root, {recursive: true, force: true});
 }
+
+// Exercise the actual renderer helpers; never resolve or dismiss scanner alerts.
+const planningRendererSource=fs.readFileSync(path.join(__dirname,'render-operational-tools.cjs'),'utf8');
+const scriptJsonSource=planningRendererSource.match(/function planningScriptJson\(value\) \{[\s\S]*?\n\}/);
+assert(scriptJsonSource,'Dedicated script-data serializer is present');
+const planningJson=vm.runInNewContext('('+scriptJsonSource[0]+')');
+for(const value of [{headline:'</script><script>fixture()</script><!--'}, {headline:'ação < teste & Grüße'}, ['<','</ScRiPt>']]){
+ const text=planningJson(value);assert(!text.includes('<'),'Script-data serialization removes literal less-than');assert.deepEqual(JSON.parse(text),value,'Script-data JSON round trip');
+}
+const promotionSource=planningRendererSource.match(/function planningPromotion\(route,l,t\)\{[\s\S]*?\n\}/);assert(promotionSource);
+const securityRoot=fs.mkdtempSync(path.join(os.tmpdir(),'zion-planning-security-'));
+try {
+ const target=path.join(securityRoot,'surface.html'),backup=path.join(securityRoot,'opened.html'),victim=path.join(securityRoot,'victim.html');
+ const original='<main><form>preserve</form><script>preserve()</script><a href="https://example.invalid/checkout">preserve</a>ação</main>';
+ let swap=false,swapped=false,opened=0,closed=0;
+ const traced={...fs,openSync(...args){const fd=fs.openSync(...args);opened++;return fd;},closeSync(fd){closed++;return fs.closeSync(fd);},readFileSync(...args){const data=fs.readFileSync(...args);if(swap&&!swapped&&typeof args[0]==='number'){fs.renameSync(target,backup);fs.writeFileSync(target,'replacement-sentinel');swapped=true;}return data;}};
+ const marker=/<!--finops-planning-guide:start-->[\s\S]*?<!--finops-planning-guide:end-->/g;
+ const apply=vm.runInNewContext('('+promotionSource[0]+')',{fs:traced,Buffer,assert,file:()=>target,copy:{en:{lang:'en'}},planningMarker:marker,planningVersion:'fixture',planningRoute:()=>'/apps/finops-planning-checklist.html',esc:value=>String(value)});
+ const t={promo_title:'Fixture',promo_desc:'ação $& $$',open:'Open'};
+ fs.writeFileSync(target,original);apply('/surface','en',t);const first=fs.readFileSync(target,'utf8');assert.equal(first.replace(marker,''),original,'Unowned bytes retained');apply('/surface','en',t);assert.equal(fs.readFileSync(target,'utf8'),first,'Descriptor update idempotent');assert.equal(opened,closed,'Successful descriptors closed');
+ fs.writeFileSync(target,original);swap=true;assert.throws(()=>apply('/surface','en',t),/surface replaced during update/);assert.equal(fs.readFileSync(target,'utf8'),'replacement-sentinel','Path replacement is not overwritten');assert.equal(opened,closed,'Replacement failure closes descriptor');swap=false;
+ fs.unlinkSync(target);assert.throws(()=>apply('/surface','en',t),/ENOENT/);
+ // Exclusive creation atomically proves the missing-surface failure did not create a file.
+ fs.closeSync(fs.openSync(target,'wx',0o600));fs.unlinkSync(target);
+ fs.writeFileSync(victim,'victim-sentinel');fs.symlinkSync(victim,target);assert.throws(()=>apply('/surface','en',t),/ELOOP/);assert.equal(fs.readFileSync(victim,'utf8'),'victim-sentinel','Symlink target is unchanged');fs.unlinkSync(target);
+ fs.writeFileSync(target,'<main><!--finops-planning-guide:start-->a<!--finops-planning-guide:end--><!--finops-planning-guide:start-->b<!--finops-planning-guide:end--></main>',{flag:'wx',mode:0o600});const ambiguous=fs.readFileSync(target,'utf8');assert.throws(()=>apply('/surface','en',t),/Ambiguous/);assert.equal(fs.readFileSync(target,'utf8'),ambiguous);assert.equal(opened,closed,'Validation failure closes descriptor');
+ console.log('PASS planning security regressions: script-data round trip, single-handle writes, unowned-byte preservation, idempotence, missing/symlink rejection, replacement detection and handle cleanup.');
+} finally { fs.rmSync(securityRoot,{recursive:true,force:true}); }

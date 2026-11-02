@@ -9,7 +9,9 @@
         {
           "title": "1. Establish the manual-work baseline",
           "assumptions": "Assume 40 hours of manual work per month and a cost of USD 100 per hour.",
-          "formulas": ["40 hours/month × USD 100/hour = USD 4,000/month."],
+          "formulas": [
+            "40 hours/month × USD 100/hour = USD 4,000/month."
+          ],
           "interpretation": "This is the current workload cost, not savings. Before claiming an improvement, measure the pilot's actual effort, implementation cost and quality against this baseline.",
           "linkLabel": "Check the manual-cost calculation"
         },
@@ -28,7 +30,9 @@
         {
           "title": "3. Turn unchecked controls into evidence questions",
           "assumptions": "Assume six of ten governance controls are self-reported as present. The four unchecked controls become four evidence gaps to review.",
-          "formulas": ["10 controls − 6 self-reported controls = 4 evidence gaps."],
+          "formulas": [
+            "10 controls − 6 self-reported controls = 4 evidence gaps."
+          ],
           "interpretation": "Six checked boxes do not prove compliance or authorize a rollout. Assign owners to the four gaps and verify evidence for all ten controls, including those already checked.",
           "linkLabel": "Review the ten governance controls"
         }
@@ -38,9 +42,21 @@
       "evidenceLabel": "Evidence and next action",
       "dateLabel": "Example review date",
       "actions": [
-        {"owner": "Process owner — assign a name", "evidence": "Attach the month's time records and the hourly-cost basis; agree on the baseline and the measurement window after the change.", "date": "3 Nov 2026, 09:00 BRT (UTC−03:00)"},
-        {"owner": "Service owner — assign a name", "evidence": "Attach the agreement clauses and incident timestamps; check the reporting period, exclusions and applicable credit rule.", "date": "3 Nov 2026, 10:00 BRT (UTC−03:00)"},
-        {"owner": "AI pilot owner — assign a name", "evidence": "List the four gaps, link evidence for each control and assign a reviewer; document the decision before expanding scope.", "date": "3 Nov 2026, 11:00 BRT (UTC−03:00)"}
+        {
+          "owner": "Process owner — assign a name",
+          "evidence": "Attach the month's time records and the hourly-cost basis; agree on the baseline and the measurement window after the change.",
+          "date": "3 Nov 2026, 09:00 BRT (UTC−03:00)"
+        },
+        {
+          "owner": "Service owner — assign a name",
+          "evidence": "Attach the agreement clauses and incident timestamps; check the reporting period, exclusions and applicable credit rule.",
+          "date": "3 Nov 2026, 10:00 BRT (UTC−03:00)"
+        },
+        {
+          "owner": "AI pilot owner — assign a name",
+          "evidence": "List the four gaps, link evidence for each control and assign a reviewer; document the decision before expanding scope.",
+          "date": "3 Nov 2026, 11:00 BRT (UTC−03:00)"
+        }
       ]
     },
     "pt": {
@@ -51,7 +67,9 @@
         {
           "title": "1. Defina a referência do trabalho manual",
           "assumptions": "Considere 40 horas de trabalho manual por mês e um custo de USD 100 por hora.",
-          "formulas": ["40 horas/mês × USD 100/hora = USD 4.000/mês."],
+          "formulas": [
+            "40 horas/mês × USD 100/hora = USD 4.000/mês."
+          ],
           "interpretation": "Este é o custo atual do trabalho, não uma economia. Antes de afirmar uma melhoria, compare o esforço real, o custo de implementação e a qualidade do piloto com essa referência.",
           "linkLabel": "Conferir o cálculo de custo manual"
         },
@@ -70,7 +88,9 @@
         {
           "title": "3. Transforme controles não marcados em perguntas de evidência",
           "assumptions": "Considere seis de dez controles de governança declarados como presentes. Os quatro controles não marcados se tornam quatro lacunas de evidência para revisar.",
-          "formulas": ["10 controles − 6 controles declarados = 4 lacunas de evidência."],
+          "formulas": [
+            "10 controles − 6 controles declarados = 4 lacunas de evidência."
+          ],
           "interpretation": "Seis marcações não comprovam conformidade nem autorizam a implementação. Atribua responsáveis às quatro lacunas e verifique evidências para os dez controles, inclusive os já marcados.",
           "linkLabel": "Revisar os dez controles de governança"
         }
@@ -80,9 +100,21 @@
       "evidenceLabel": "Evidência e próxima ação",
       "dateLabel": "Data ilustrativa da revisão",
       "actions": [
-        {"owner": "Responsável pelo processo — definir nome", "evidence": "Anexar os registros de horas do mês e a base do custo por hora; acordar a referência e o período de medição após a mudança.", "date": "3 nov. 2026, 09:00 BRT (UTC−03:00)"},
-        {"owner": "Responsável pelo serviço — definir nome", "evidence": "Anexar as cláusulas contratuais e os horários do incidente; conferir período de apuração, exclusões e regra de crédito aplicável.", "date": "3 nov. 2026, 10:00 BRT (UTC−03:00)"},
-        {"owner": "Responsável pelo piloto de IA — definir nome", "evidence": "Listar as quatro lacunas, vincular evidências a cada controle e designar um revisor; registrar a decisão antes de ampliar o escopo.", "date": "3 nov. 2026, 11:00 BRT (UTC−03:00)"}
+        {
+          "owner": "Responsável pelo processo — definir nome",
+          "evidence": "Anexar os registros de horas do mês e a base do custo por hora; acordar a referência e o período de medição após a mudança.",
+          "date": "3 nov. 2026, 09:00 BRT (UTC−03:00)"
+        },
+        {
+          "owner": "Responsável pelo serviço — definir nome",
+          "evidence": "Anexar as cláusulas contratuais e os horários do incidente; conferir período de apuração, exclusões e regra de crédito aplicável.",
+          "date": "3 nov. 2026, 10:00 BRT (UTC−03:00)"
+        },
+        {
+          "owner": "Responsável pelo piloto de IA — definir nome",
+          "evidence": "Listar as quatro lacunas, vincular evidências a cada controle e designar um revisor; registrar a decisão antes de ampliar o escopo.",
+          "date": "3 nov. 2026, 11:00 BRT (UTC−03:00)"
+        }
       ]
     },
     "es": {
@@ -93,7 +125,9 @@
         {
           "title": "1. Establezca la referencia del trabajo manual",
           "assumptions": "Suponga 40 horas de trabajo manual al mes y un coste de USD 100 por hora.",
-          "formulas": ["40 horas/mes × USD 100/hora = USD 4.000/mes."],
+          "formulas": [
+            "40 horas/mes × USD 100/hora = USD 4.000/mes."
+          ],
           "interpretation": "Es el coste actual del trabajo, no un ahorro. Antes de afirmar una mejora, compare el esfuerzo real, el coste de implementación y la calidad del piloto con esta referencia.",
           "linkLabel": "Comprobar el cálculo del coste manual"
         },
@@ -112,7 +146,9 @@
         {
           "title": "3. Convierta los controles pendientes en preguntas sobre evidencias",
           "assumptions": "Suponga que se declaran presentes seis de diez controles de gobernanza. Los cuatro controles sin marcar se convierten en cuatro carencias de evidencia que revisar.",
-          "formulas": ["10 controles − 6 controles declarados = 4 carencias de evidencia."],
+          "formulas": [
+            "10 controles − 6 controles declarados = 4 carencias de evidencia."
+          ],
           "interpretation": "Seis casillas marcadas no demuestran cumplimiento ni autorizan la implementación. Asigne responsables a las cuatro carencias y verifique evidencias para los diez controles, incluidos los ya marcados.",
           "linkLabel": "Revisar los diez controles de gobernanza"
         }
@@ -122,9 +158,21 @@
       "evidenceLabel": "Evidencia y próxima acción",
       "dateLabel": "Fecha ilustrativa de revisión",
       "actions": [
-        {"owner": "Responsable del proceso — asignar nombre", "evidence": "Adjuntar los registros horarios del mes y la base del coste por hora; acordar la referencia y el período de medición posterior al cambio.", "date": "3 nov. 2026, 09:00 BRT (UTC−03:00)"},
-        {"owner": "Responsable del servicio — asignar nombre", "evidence": "Adjuntar las cláusulas del contrato y las horas del incidente; comprobar el período de cálculo, las exclusiones y la regla de crédito aplicable.", "date": "3 nov. 2026, 10:00 BRT (UTC−03:00)"},
-        {"owner": "Responsable del piloto de IA — asignar nombre", "evidence": "Enumerar las cuatro carencias, vincular evidencias a cada control y designar un revisor; documentar la decisión antes de ampliar el alcance.", "date": "3 nov. 2026, 11:00 BRT (UTC−03:00)"}
+        {
+          "owner": "Responsable del proceso — asignar nombre",
+          "evidence": "Adjuntar los registros horarios del mes y la base del coste por hora; acordar la referencia y el período de medición posterior al cambio.",
+          "date": "3 nov. 2026, 09:00 BRT (UTC−03:00)"
+        },
+        {
+          "owner": "Responsable del servicio — asignar nombre",
+          "evidence": "Adjuntar las cláusulas del contrato y las horas del incidente; comprobar el período de cálculo, las exclusiones y la regla de crédito aplicable.",
+          "date": "3 nov. 2026, 10:00 BRT (UTC−03:00)"
+        },
+        {
+          "owner": "Responsable del piloto de IA — asignar nombre",
+          "evidence": "Enumerar las cuatro carencias, vincular evidencias a cada control y designar un revisor; documentar la decisión antes de ampliar el alcance.",
+          "date": "3 nov. 2026, 11:00 BRT (UTC−03:00)"
+        }
       ]
     },
     "fr": {
@@ -135,7 +183,9 @@
         {
           "title": "1. Établissez la référence du travail manuel",
           "assumptions": "Supposez 40 heures de travail manuel par mois, à un coût de 100 USD par heure.",
-          "formulas": ["40 heures/mois × 100 USD/heure = 4 000 USD/mois."],
+          "formulas": [
+            "40 heures/mois × 100 USD/heure = 4 000 USD/mois."
+          ],
           "interpretation": "Il s’agit du coût actuel du travail, pas d’une économie. Avant d’annoncer une amélioration, comparez l’effort réel, le coût de mise en œuvre et la qualité du pilote à cette référence.",
           "linkLabel": "Vérifier le calcul du coût manuel"
         },
@@ -154,7 +204,9 @@
         {
           "title": "3. Transformez les contrôles non cochés en demandes de preuves",
           "assumptions": "Supposez que six des dix contrôles de gouvernance sont déclarés en place. Les quatre contrôles non cochés deviennent quatre points sans preuve à examiner.",
-          "formulas": ["10 contrôles − 6 contrôles déclarés = 4 points sans preuve."],
+          "formulas": [
+            "10 contrôles − 6 contrôles déclarés = 4 points sans preuve."
+          ],
           "interpretation": "Six cases cochées ne prouvent pas la conformité et n’autorisent pas un déploiement. Attribuez les quatre points à des responsables et vérifiez les preuves des dix contrôles, y compris ceux déjà cochés.",
           "linkLabel": "Examiner les dix contrôles de gouvernance"
         }
@@ -164,9 +216,21 @@
       "evidenceLabel": "Preuves et prochaine action",
       "dateLabel": "Date de revue indicative",
       "actions": [
-        {"owner": "Responsable du processus — désigner une personne", "evidence": "Joindre les relevés de temps du mois et la base du coût horaire ; convenir de la référence et de la période de mesure après le changement.", "date": "3 nov. 2026, 09:00 BRT (UTC−03:00)"},
-        {"owner": "Responsable du service — désigner une personne", "evidence": "Joindre les clauses contractuelles et les horodatages de l’incident ; vérifier la période de calcul, les exclusions et la règle de crédit applicable.", "date": "3 nov. 2026, 10:00 BRT (UTC−03:00)"},
-        {"owner": "Responsable du pilote IA — désigner une personne", "evidence": "Lister les quatre points ouverts, relier les preuves à chaque contrôle et désigner un réviseur ; documenter la décision avant d’élargir le périmètre.", "date": "3 nov. 2026, 11:00 BRT (UTC−03:00)"}
+        {
+          "owner": "Responsable du processus — désigner une personne",
+          "evidence": "Joindre les relevés de temps du mois et la base du coût horaire ; convenir de la référence et de la période de mesure après le changement.",
+          "date": "3 nov. 2026, 09:00 BRT (UTC−03:00)"
+        },
+        {
+          "owner": "Responsable du service — désigner une personne",
+          "evidence": "Joindre les clauses contractuelles et les horodatages de l’incident ; vérifier la période de calcul, les exclusions et la règle de crédit applicable.",
+          "date": "3 nov. 2026, 10:00 BRT (UTC−03:00)"
+        },
+        {
+          "owner": "Responsable du pilote IA — désigner une personne",
+          "evidence": "Lister les quatre points ouverts, relier les preuves à chaque contrôle et désigner un réviseur ; documenter la décision avant d’élargir le périmètre.",
+          "date": "3 nov. 2026, 11:00 BRT (UTC−03:00)"
+        }
       ]
     },
     "de": {
@@ -177,7 +241,9 @@
         {
           "title": "1. Bestimmen Sie die Ausgangskosten manueller Arbeit",
           "assumptions": "Nehmen Sie 40 Stunden manuelle Arbeit pro Monat und Kosten von 100 USD je Stunde an.",
-          "formulas": ["40 Stunden/Monat × 100 USD/Stunde = 4.000 USD/Monat."],
+          "formulas": [
+            "40 Stunden/Monat × 100 USD/Stunde = 4.000 USD/Monat."
+          ],
           "interpretation": "Das sind aktuelle Arbeitskosten, keine Einsparungen. Vergleichen Sie den tatsächlichen Aufwand, die Umsetzungskosten und die Qualität des Pilotprojekts mit dieser Ausgangslage, bevor Sie Verbesserungen behaupten.",
           "linkLabel": "Berechnung der manuellen Kosten prüfen"
         },
@@ -196,7 +262,9 @@
         {
           "title": "3. Machen Sie aus offenen Kontrollen konkrete Nachweisfragen",
           "assumptions": "Nehmen Sie an, dass sechs von zehn Governance-Kontrollen als vorhanden angegeben werden. Die vier nicht markierten Kontrollen ergeben vier zu prüfende Nachweislücken.",
-          "formulas": ["10 Kontrollen − 6 selbst gemeldete Kontrollen = 4 Nachweislücken."],
+          "formulas": [
+            "10 Kontrollen − 6 selbst gemeldete Kontrollen = 4 Nachweislücken."
+          ],
           "interpretation": "Sechs Häkchen belegen keine Konformität und geben keine Umsetzung frei. Benennen Sie Verantwortliche für die vier Lücken und prüfen Sie die Nachweise aller zehn Kontrollen, auch der bereits markierten.",
           "linkLabel": "Die zehn Governance-Kontrollen prüfen"
         }
@@ -206,10 +274,237 @@
       "evidenceLabel": "Nachweise und nächste Aktion",
       "dateLabel": "Beispielhafter Prüftermin",
       "actions": [
-        {"owner": "Prozessverantwortung — Person benennen", "evidence": "Monatliche Zeitaufzeichnungen und Grundlage der Stundenkosten beifügen; Ausgangswert und Messzeitraum nach der Änderung abstimmen.", "date": "3. Nov. 2026, 09:00 BRT (UTC−03:00)"},
-        {"owner": "Serviceverantwortung — Person benennen", "evidence": "Vertragsklauseln und Zeitstempel der Störung beifügen; Abrechnungszeitraum, Ausschlüsse und geltende Gutschriftregel prüfen.", "date": "3. Nov. 2026, 10:00 BRT (UTC−03:00)"},
-        {"owner": "Verantwortung für den KI-Piloten — Person benennen", "evidence": "Die vier Lücken auflisten, Nachweise je Kontrolle verknüpfen und eine prüfende Person benennen; die Entscheidung vor der Erweiterung dokumentieren.", "date": "3. Nov. 2026, 11:00 BRT (UTC−03:00)"}
+        {
+          "owner": "Prozessverantwortung — Person benennen",
+          "evidence": "Monatliche Zeitaufzeichnungen und Grundlage der Stundenkosten beifügen; Ausgangswert und Messzeitraum nach der Änderung abstimmen.",
+          "date": "3. Nov. 2026, 09:00 BRT (UTC−03:00)"
+        },
+        {
+          "owner": "Serviceverantwortung — Person benennen",
+          "evidence": "Vertragsklauseln und Zeitstempel der Störung beifügen; Abrechnungszeitraum, Ausschlüsse und geltende Gutschriftregel prüfen.",
+          "date": "3. Nov. 2026, 10:00 BRT (UTC−03:00)"
+        },
+        {
+          "owner": "Verantwortung für den KI-Piloten — Person benennen",
+          "evidence": "Die vier Lücken auflisten, Nachweise je Kontrolle verknüpfen und eine prüfende Person benennen; die Entscheidung vor der Erweiterung dokumentieren.",
+          "date": "3. Nov. 2026, 11:00 BRT (UTC−03:00)"
+        }
       ]
+    }
+  },
+  "finopsPlanningGuide": {
+    "version": "2026-11-01-v1",
+    "locales": {
+      "en": {
+        "title": "A practical checklist before your FinOps review",
+        "desc": "Connect cost, ownership and reliability before choosing a cloud-cost intervention.",
+        "intro": "Start with one decision, not another dashboard. This educational guide connects the public planning tools; it does not inspect cloud accounts, audit invoices or guarantee savings.",
+        "steps_title": "Four decisions to write down",
+        "steps": [
+          [
+            "Name one owner",
+            "Record the person who can approve a change, the workload in scope and who can stop or reverse the pilot. A tool cannot supply missing authority."
+          ],
+          [
+            "Establish a comparable baseline",
+            "Use the same period, workload and definition of completion. Record spending and completed work separately. Without a baseline, do not invent a savings percentage."
+          ],
+          [
+            "Check reliability and governance together",
+            "Use the SLA calculator for scenarios and the governance self-assessment to expose unanswered controls. Scenario credits are not a contract; a self-assessment is not certification."
+          ],
+          [
+            "Choose a small next step",
+            "Free Discovery is eight online questions and an immediate self-assessment report, with no payment, card or mandatory meeting. Any later paid review or implementation is optional and separately scoped."
+          ]
+        ],
+        "measure": "Keep the denominator honest",
+        "formula": "Cost per completed workflow = period spending ÷ completed workflows",
+        "zero": "If no workflows completed, do not divide by zero: record the spending and the missing outcome separately.",
+        "resources": "Continue with the existing resources",
+        "labels": [
+          "Operational planning tools",
+          "SLA downtime and credits",
+          "AI governance self-assessment"
+        ],
+        "privacy": "Do not paste cloud credentials or personal customer data into a calculator or questionnaire. Agree evidence and access boundaries before any later review.",
+        "cta": "Start Free Discovery",
+        "home": "Home",
+        "catalog": "Apps catalog",
+        "nav": "Primary navigation",
+        "languages": "Languages",
+        "open": "Open resource",
+        "promo_title": "Plan cloud-cost decisions before choosing a tool",
+        "promo_desc": "Connect owners, a comparable baseline, reliability and governance with a practical four-step checklist."
+      },
+      "pt-BR": {
+        "title": "Uma lista prática antes da sua análise FinOps",
+        "desc": "Conecte custos, responsáveis e confiabilidade antes de escolher uma intervenção nos gastos com nuvem.",
+        "intro": "Comece com uma decisão, não com mais um painel. Este guia educativo conecta as ferramentas públicas de planejamento; não inspeciona contas de nuvem, não audita faturas e não garante economia.",
+        "steps_title": "Quatro decisões para registrar",
+        "steps": [
+          [
+            "Defina um responsável",
+            "Registre quem pode aprovar a mudança, a carga de trabalho incluída e quem pode interromper ou reverter o piloto. Uma ferramenta não substitui a autoridade necessária."
+          ],
+          [
+            "Estabeleça uma linha de base comparável",
+            "Use o mesmo período, a mesma carga de trabalho e a mesma definição de conclusão. Registre gastos e trabalho concluído separadamente. Sem uma linha de base, não invente um percentual de economia."
+          ],
+          [
+            "Avalie confiabilidade e governança juntas",
+            "Use a calculadora de SLA para cenários e a autoavaliação de governança para identificar controles sem resposta. Créditos simulados não são um contrato; uma autoavaliação não é certificação."
+          ],
+          [
+            "Escolha um próximo passo pequeno",
+            "O Discovery gratuito tem oito perguntas online e um relatório imediato de autoavaliação, sem pagamento, cartão ou reunião obrigatória. Qualquer análise ou implementação paga posterior é opcional e tem escopo definido separadamente."
+          ]
+        ],
+        "measure": "Mantenha o denominador coerente",
+        "formula": "Custo por fluxo de trabalho concluído = gasto do período ÷ fluxos de trabalho concluídos",
+        "zero": "Se nenhum fluxo foi concluído, não divida por zero: registre separadamente o gasto e a ausência de resultado.",
+        "resources": "Continue com os recursos existentes",
+        "labels": [
+          "Ferramentas de planejamento operacional",
+          "Indisponibilidade e créditos de SLA",
+          "Autoavaliação de governança de IA"
+        ],
+        "privacy": "Não cole credenciais de nuvem nem dados pessoais de clientes em calculadoras ou questionários. Combine os limites de evidência e de acesso antes de qualquer análise posterior.",
+        "cta": "Começar o Discovery gratuito",
+        "home": "Início",
+        "catalog": "Catálogo de apps",
+        "nav": "Navegação principal",
+        "languages": "Idiomas",
+        "open": "Abrir recurso",
+        "promo_title": "Planeje decisões sobre custos de nuvem antes de escolher uma ferramenta",
+        "promo_desc": "Conecte responsáveis, uma linha de base comparável, confiabilidade e governança com uma lista prática de quatro etapas."
+      },
+      "es": {
+        "title": "Una lista práctica antes de tu revisión FinOps",
+        "desc": "Conecta costes, responsables y fiabilidad antes de elegir una intervención en el gasto de nube.",
+        "intro": "Empieza con una decisión, no con otro panel. Esta guía educativa conecta las herramientas públicas de planificación; no inspecciona cuentas de nube, no audita facturas ni garantiza ahorros.",
+        "steps_title": "Cuatro decisiones que conviene documentar",
+        "steps": [
+          [
+            "Define una persona responsable",
+            "Registra quién puede aprobar el cambio, qué carga de trabajo se incluye y quién puede detener o revertir el piloto. Una herramienta no sustituye la autoridad necesaria."
+          ],
+          [
+            "Establece una referencia comparable",
+            "Usa el mismo período, la misma carga de trabajo y la misma definición de finalización. Registra por separado el gasto y el trabajo completado. Sin una referencia, no inventes un porcentaje de ahorro."
+          ],
+          [
+            "Evalúa fiabilidad y gobernanza juntas",
+            "Usa la calculadora de SLA para escenarios y la autoevaluación de gobernanza para identificar controles sin respuesta. Los créditos simulados no son un contrato; una autoevaluación no es una certificación."
+          ],
+          [
+            "Elige un siguiente paso pequeño",
+            "El Discovery gratuito ofrece ocho preguntas online y un informe inmediato de autoevaluación, sin pago, tarjeta ni reunión obligatoria. Cualquier revisión o implementación de pago posterior es opcional y tiene un alcance acordado por separado."
+          ]
+        ],
+        "measure": "Mantén un denominador coherente",
+        "formula": "Coste por flujo de trabajo completado = gasto del período ÷ flujos de trabajo completados",
+        "zero": "Si no se completó ningún flujo, no dividas por cero: registra por separado el gasto y la falta de resultado.",
+        "resources": "Continúa con los recursos existentes",
+        "labels": [
+          "Herramientas de planificación operativa",
+          "Indisponibilidad y créditos de SLA",
+          "Autoevaluación de gobernanza de IA"
+        ],
+        "privacy": "No pegues credenciales de nube ni datos personales de clientes en calculadoras o cuestionarios. Acuerda los límites de evidencia y acceso antes de cualquier revisión posterior.",
+        "cta": "Empezar el Discovery gratuito",
+        "home": "Inicio",
+        "catalog": "Catálogo de apps",
+        "nav": "Navegación principal",
+        "languages": "Idiomas",
+        "open": "Abrir recurso",
+        "promo_title": "Planifica las decisiones de coste de nube antes de elegir una herramienta",
+        "promo_desc": "Conecta responsables, una referencia comparable, fiabilidad y gobernanza con una lista práctica de cuatro pasos."
+      },
+      "fr": {
+        "title": "Une liste pratique avant votre analyse FinOps",
+        "desc": "Reliez coûts, responsables et fiabilité avant de choisir une intervention sur les dépenses cloud.",
+        "intro": "Commencez par une décision, pas par un tableau de bord supplémentaire. Ce guide pédagogique relie les outils publics de planification ; il n’inspecte pas les comptes cloud, n’audite pas les factures et ne garantit pas d’économies.",
+        "steps_title": "Quatre décisions à consigner",
+        "steps": [
+          [
+            "Désignez un responsable",
+            "Notez qui peut approuver le changement, la charge de travail concernée et qui peut arrêter ou annuler le pilote. Un outil ne remplace pas l’autorité nécessaire."
+          ],
+          [
+            "Établissez une référence comparable",
+            "Utilisez la même période, la même charge de travail et la même définition de réalisation. Consignez séparément les dépenses et le travail terminé. Sans référence, n’inventez pas de pourcentage d’économie."
+          ],
+          [
+            "Examinez ensemble fiabilité et gouvernance",
+            "Utilisez le calculateur de SLA pour des scénarios et l’autoévaluation de gouvernance pour repérer les contrôles sans réponse. Des crédits simulés ne constituent pas un contrat ; une autoévaluation n’est pas une certification."
+          ],
+          [
+            "Choisissez une petite prochaine étape",
+            "Le Discovery gratuit propose huit questions en ligne et un rapport immédiat d’autoévaluation, sans paiement, carte ni rendez-vous obligatoire. Toute analyse ou mise en œuvre payante ultérieure est facultative et fait l’objet d’un périmètre défini séparément."
+          ]
+        ],
+        "measure": "Gardez un dénominateur cohérent",
+        "formula": "Coût par processus terminé = dépenses de la période ÷ processus terminés",
+        "zero": "Si aucun processus n’a été terminé, ne divisez pas par zéro : consignez séparément les dépenses et l’absence de résultat.",
+        "resources": "Continuez avec les ressources existantes",
+        "labels": [
+          "Outils de planification opérationnelle",
+          "Indisponibilité et crédits de SLA",
+          "Autoévaluation de gouvernance de l’IA"
+        ],
+        "privacy": "Ne collez pas d’identifiants cloud ni de données personnelles de clients dans un calculateur ou un questionnaire. Convenez des limites des preuves et des accès avant toute analyse ultérieure.",
+        "cta": "Commencer le Discovery gratuit",
+        "home": "Accueil",
+        "catalog": "Catalogue d’apps",
+        "nav": "Navigation principale",
+        "languages": "Langues",
+        "open": "Ouvrir la ressource",
+        "promo_title": "Planifiez les décisions de coût cloud avant de choisir un outil",
+        "promo_desc": "Reliez responsables, référence comparable, fiabilité et gouvernance avec une liste pratique en quatre étapes."
+      },
+      "de": {
+        "title": "Eine praktische Checkliste vor Ihrer FinOps-Prüfung",
+        "desc": "Verbinden Sie Kosten, Verantwortlichkeit und Zuverlässigkeit, bevor Sie Cloud-Kostenmaßnahmen auswählen.",
+        "intro": "Beginnen Sie mit einer Entscheidung, nicht mit einem weiteren Dashboard. Dieser Leitfaden verknüpft die öffentlichen Planungshilfen; er prüft keine Cloud-Konten oder Rechnungen und garantiert keine Einsparungen.",
+        "steps_title": "Vier Entscheidungen zum Festhalten",
+        "steps": [
+          [
+            "Benennen Sie eine verantwortliche Person",
+            "Halten Sie fest, wer eine Änderung genehmigen darf, welcher Arbeitsablauf dazugehört und wer den Pilotversuch stoppen oder rückgängig machen kann. Ein Werkzeug ersetzt keine erforderliche Befugnis."
+          ],
+          [
+            "Schaffen Sie eine vergleichbare Ausgangsbasis",
+            "Verwenden Sie denselben Zeitraum, Arbeitsablauf und Abschlussbegriff. Erfassen Sie Ausgaben und abgeschlossene Arbeit getrennt. Erfinden Sie ohne Ausgangsbasis keinen Einsparungsprozentsatz."
+          ],
+          [
+            "Prüfen Sie Zuverlässigkeit und Governance gemeinsam",
+            "Nutzen Sie den SLA-Rechner für Szenarien und die Governance-Selbsteinschätzung für offene Kontrollfragen. Simulierte Gutschriften sind kein Vertrag; eine Selbsteinschätzung ist keine Zertifizierung."
+          ],
+          [
+            "Wählen Sie einen kleinen nächsten Schritt",
+            "Das kostenlose Discovery umfasst acht Online-Fragen und einen sofortigen Bericht zur Selbsteinschätzung, ohne Zahlung, Karte oder verpflichtenden Termin. Eine spätere kostenpflichtige Prüfung oder Umsetzung ist optional und wird gesondert abgegrenzt."
+          ]
+        ],
+        "measure": "Verwenden Sie einen einheitlichen Nenner",
+        "formula": "Kosten pro abgeschlossenem Arbeitsablauf = Ausgaben im Zeitraum ÷ abgeschlossene Arbeitsabläufe",
+        "zero": "Wurde kein Arbeitsablauf abgeschlossen, teilen Sie nicht durch null: Erfassen Sie die Ausgaben und das fehlende Ergebnis getrennt.",
+        "resources": "Nutzen Sie die vorhandenen Ressourcen weiter",
+        "labels": [
+          "Werkzeuge zur operativen Planung",
+          "SLA-Ausfallzeiten und Gutschriften",
+          "KI-Governance-Selbsteinschätzung"
+        ],
+        "privacy": "Fügen Sie keine Cloud-Zugangsdaten oder personenbezogenen Kundendaten in Rechner oder Fragebögen ein. Vereinbaren Sie Nachweis- und Zugriffsgrenzen vor einer späteren Prüfung.",
+        "cta": "Kostenloses Discovery starten",
+        "home": "Startseite",
+        "catalog": "App-Katalog",
+        "nav": "Hauptnavigation",
+        "languages": "Sprachen",
+        "open": "Ressource öffnen",
+        "promo_title": "Planen Sie Cloud-Kostenentscheidungen, bevor Sie ein Werkzeug wählen",
+        "promo_desc": "Verbinden Sie Verantwortliche, vergleichbare Ausgangsbasis, Zuverlässigkeit und Governance mit einer praktischen Checkliste aus vier Schritten."
+      }
     }
   }
 }
