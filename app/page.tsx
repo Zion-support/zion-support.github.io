@@ -1442,6 +1442,7 @@ export default function HomePage() {
                 {h.name}
               </Link>
             ))}
+            <Link href="/discovery" className="text-purple-300 font-semibold hover:text-pink-300">Free Discovery →</Link>
             <Link href="/discovery/" className="text-purple-300 font-semibold hover:text-pink-300">Discovery $99 →</Link>
           </div>
         </div>
