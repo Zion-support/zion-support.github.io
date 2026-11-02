@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Reconcile only reviewed app routes, after artifact rendering.
 
-Preserve first occurrence and existing metadata across advertised children. New
+Preserve Apps sitemap ownership, then first occurrence and existing metadata. New
 entries omit lastmod: a build timestamp is not a content modification date.
 """
 from pathlib import Path
@@ -49,6 +49,8 @@ def reconcile(output):
     appmap = output / 'apps/apps-sitemap.xml'
     if appmap not in files:
         raise ValueError('Apps sitemap must already be advertised')
+    # Existing app contracts require these URLs in this specialized child.
+    files = [appmap] + [file for file in files if file != appmap]
     seen, changes, removed = set(), {}, 0
     for file in files:
         text = file.read_text()
