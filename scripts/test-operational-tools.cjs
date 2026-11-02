@@ -314,3 +314,29 @@ try {
 } finally {
   fs.rmSync(root, {recursive: true, force: true});
 }
+
+// Exercise the actual renderer helpers; never resolve or dismiss scanner alerts.
+const planningRendererSource=fs.readFileSync(path.join(__dirname,'render-operational-tools.cjs'),'utf8');
+const scriptJsonSource=planningRendererSource.match(/function planningScriptJson\(value\) \{[\s\S]*?\n\}/);
+assert(scriptJsonSource,'Dedicated script-data serializer is present');
+const planningJson=vm.runInNewContext('('+scriptJsonSource[0]+')');
+for(const value of [{headline:'</script><script>fixture()</script><!--'}, {headline:'ação < teste & Grüße'}, ['<','</ScRiPt>']]){
+ const text=planningJson(value);assert(!text.includes('<'),'Script-data serialization removes literal less-than');assert.deepEqual(JSON.parse(text),value,'Script-data JSON round trip');
+}
+const promotionSource=planningRendererSource.match(/function planningPromotion\(route,l,t\)\{[\s\S]*?\n\}/);assert(promotionSource);
+const securityRoot=fs.mkdtempSync(path.join(os.tmpdir(),'zion-planning-security-'));
+try {
+ const target=path.join(securityRoot,'surface.html'),backup=path.join(securityRoot,'opened.html'),victim=path.join(securityRoot,'victim.html');
+ const original='<main><form>preserve</form><script>preserve()</script><a href="https://example.invalid/checkout">preserve</a>ação</main>';
+ let swap=false,swapped=false,opened=0,closed=0;
+ const traced={...fs,openSync(...args){const fd=fs.openSync(...args);opened++;return fd;},closeSync(fd){closed++;return fs.closeSync(fd);},readFileSync(...args){const data=fs.readFileSync(...args);if(swap&&!swapped&&typeof args[0]==='number'){fs.renameSync(target,backup);fs.writeFileSync(target,'replacement-sentinel');swapped=true;}return data;}};
+ const marker=/<!--finops-planning-guide:start-->[\s\S]*?<!--finops-planning-guide:end-->/g;
+ const apply=vm.runInNewContext('('+promotionSource[0]+')',{fs:traced,Buffer,assert,file:()=>target,copy:{en:{lang:'en'}},planningMarker:marker,planningVersion:'fixture',planningRoute:()=>'/apps/finops-planning-checklist.html',esc:value=>String(value)});
+ const t={promo_title:'Fixture',promo_desc:'ação $& $$',open:'Open'};
+ fs.writeFileSync(target,original);apply('/surface','en',t);const first=fs.readFileSync(target,'utf8');assert.equal(first.replace(marker,''),original,'Unowned bytes retained');apply('/surface','en',t);assert.equal(fs.readFileSync(target,'utf8'),first,'Descriptor update idempotent');assert.equal(opened,closed,'Successful descriptors closed');
+ fs.writeFileSync(target,original);swap=true;assert.throws(()=>apply('/surface','en',t),/surface replaced during update/);assert.equal(fs.readFileSync(target,'utf8'),'replacement-sentinel','Path replacement is not overwritten');assert.equal(opened,closed,'Replacement failure closes descriptor');swap=false;
+ fs.unlinkSync(target);assert.throws(()=>apply('/surface','en',t),/ENOENT/);assert(!fs.existsSync(target),'Missing surface is not created');
+ fs.writeFileSync(victim,'victim-sentinel');fs.symlinkSync(victim,target);assert.throws(()=>apply('/surface','en',t),/ELOOP/);assert.equal(fs.readFileSync(victim,'utf8'),'victim-sentinel','Symlink target is unchanged');fs.unlinkSync(target);
+ fs.writeFileSync(target,'<main><!--finops-planning-guide:start-->a<!--finops-planning-guide:end--><!--finops-planning-guide:start-->b<!--finops-planning-guide:end--></main>');const ambiguous=fs.readFileSync(target,'utf8');assert.throws(()=>apply('/surface','en',t),/Ambiguous/);assert.equal(fs.readFileSync(target,'utf8'),ambiguous);assert.equal(opened,closed,'Validation failure closes descriptor');
+ console.log('PASS planning security regressions: script-data round trip, single-handle writes, unowned-byte preservation, idempotence, missing/symlink rejection, replacement detection and handle cleanup.');
+} finally { fs.rmSync(securityRoot,{recursive:true,force:true}); }

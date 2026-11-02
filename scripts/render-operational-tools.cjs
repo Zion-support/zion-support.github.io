@@ -48,12 +48,24 @@ const planningRoute=l=>prefix(l)+'apps/finops-planning-checklist.html';
 for(const l of L){const t=planning.locales[copy[l].lang];assert(t&&t.steps.length===4&&t.labels.length===3,'Complete FinOps guide locale '+l);for(const k of ['title','desc','intro','steps_title','measure','formula','zero','resources','privacy','cta','promo_title','promo_desc','open'])assert(typeof t[k]==='string'&&t[k].trim(),'Missing FinOps guide copy '+l+' '+k);}
 const planningManifest={version:planningVersion,pages:[],homepages:[],catalogs:[],kind:'Educational planning guide, not a cloud-account audit or savings guarantee'};
 const planningMarker=/<!--finops-planning-guide:start-->[\s\S]*?<!--finops-planning-guide:end-->/g;
+function planningScriptJson(value) {
+ return JSON.stringify(value).replace(/</g, '\\u003c');
+}
 function planningPromotion(route,l,t){
- const target=file(route);assert(fs.existsSync(target),'Missing FinOps promotion surface '+route);
- const before=fs.readFileSync(target,'utf8');assert((before.match(planningMarker)||[]).length<=1,'Ambiguous FinOps planning promotion '+route);
- const clean=before.replace(planningMarker,'');assert(clean.includes('</main>'),'Missing FinOps promotion anchor '+route);
- const block='<!--finops-planning-guide:start--><aside class="card" lang="'+copy[l].lang+'" data-finops-planning-promotion="'+planningVersion+'"><h2>'+esc(t.promo_title)+'</h2><p>'+esc(t.promo_desc)+'</p><a href="'+planningRoute(l)+'">'+esc(t.open)+'</a></aside><!--finops-planning-guide:end-->';
- const after=clean.replace('</main>',()=>block+'</main>');assert.equal(after.replace(planningMarker,''),clean,'Only owned FinOps promotion may change '+route);fs.writeFileSync(target,after);
+ const target=file(route);
+ assert(Number.isInteger(fs.constants.O_NOFOLLOW),'No-follow file opens are required');
+ const fd=fs.openSync(target,fs.constants.O_RDWR|fs.constants.O_NOFOLLOW);
+ try {
+  const opened=fs.fstatSync(fd);assert(opened.isFile(),'FinOps promotion surface must be a regular file '+route);
+  const before=fs.readFileSync(fd,'utf8');assert((before.match(planningMarker)||[]).length<=1,'Ambiguous FinOps planning promotion '+route);
+  const clean=before.replace(planningMarker,'');assert(clean.includes('</main>'),'Missing FinOps promotion anchor '+route);
+  const block='<!--finops-planning-guide:start--><aside class="card" lang="'+copy[l].lang+'" data-finops-planning-promotion="'+planningVersion+'"><h2>'+esc(t.promo_title)+'</h2><p>'+esc(t.promo_desc)+'</p><a href="'+planningRoute(l)+'">'+esc(t.open)+'</a></aside><!--finops-planning-guide:end-->';
+  const after=clean.replace('</main>',()=>block+'</main>');assert.equal(after.replace(planningMarker,''),clean,'Only owned FinOps promotion may change '+route);
+  const bytes=Buffer.from(after,'utf8');let offset=0;
+  while(offset<bytes.length){const written=fs.writeSync(fd,bytes,offset,bytes.length-offset,offset);assert(written>0,'FinOps promotion write made no progress');offset+=written;}
+  fs.ftruncateSync(fd,bytes.length);
+  const current=fs.lstatSync(target);assert(current.isFile()&&current.dev===opened.dev&&current.ino===opened.ino,'FinOps promotion surface replaced during update '+route);
+ } finally { fs.closeSync(fd); }
 }
 for(const l of L){
  const c=copy[l],t=planning.locales[c.lang],route=planningRoute(l),target=file(route);
@@ -65,7 +77,7 @@ for(const l of L){
  const steps=t.steps.map(([h,b])=>'<li><h3>'+esc(h)+'</h3><p>'+esc(b)+'</p></li>').join('');
  const ld={'@context':'https://schema.org','@type':'Article',headline:t.title,description:t.desc,inLanguage:c.lang,url:base+route,isAccessibleForFree:true,publisher:{'@type':'Organization',name:'Zion Tech Group',url:base+'/'}};
  const styles=page(l,null).match(/<style>[\s\S]*?<\/style>/)[0];
- write(route,'<!doctype html><html lang="'+c.lang+'"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>'+esc(t.title)+' | Zion Tech Group</title><meta name="description" content="'+esc(t.desc)+'"><link rel="canonical" href="'+base+route+'">'+alternates+'<link rel="stylesheet" href="/assets/css/discovery.css">'+styles+'<script type="application/ld+json">'+JSON.stringify(ld).replace(/</g,'\u003c')+'</script></head><body data-finops-planning-guide-page="'+planningVersion+'"><a class="skip" href="#main">'+esc(c.skip)+'</a><header class="ops-shell"><nav>'+nav+'</nav><p>'+langs+'</p></header><main id="main" tabindex="-1" class="ops-shell"><h1>'+esc(t.title)+'</h1><p>'+esc(t.intro)+'</p><h2>'+esc(t.steps_title)+'</h2><ol>'+steps+'</ol><section><h2>'+esc(t.measure)+'</h2><p class="card">'+esc(t.formula)+'</p><p>'+esc(t.zero)+'</p></section><section><h2>'+esc(t.resources)+'</h2><div class="ops-grid">'+cards+'</div></section><p>'+esc(t.privacy)+'</p><p><a href="'+prefix(l)+'discovery/">'+esc(t.cta)+'</a></p></main><footer class="ops-shell">'+nav+'<p>© 2026 Zion Tech Group</p></footer></body></html>');
+ write(route,'<!doctype html><html lang="'+c.lang+'"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>'+esc(t.title)+' | Zion Tech Group</title><meta name="description" content="'+esc(t.desc)+'"><link rel="canonical" href="'+base+route+'">'+alternates+'<link rel="stylesheet" href="/assets/css/discovery.css">'+styles+'<script type="application/ld+json">'+planningScriptJson(ld)+'</script></head><body data-finops-planning-guide-page="'+planningVersion+'"><a class="skip" href="#main">'+esc(c.skip)+'</a><header class="ops-shell"><nav>'+nav+'</nav><p>'+langs+'</p></header><main id="main" tabindex="-1" class="ops-shell"><h1>'+esc(t.title)+'</h1><p>'+esc(t.intro)+'</p><h2>'+esc(t.steps_title)+'</h2><ol>'+steps+'</ol><section><h2>'+esc(t.measure)+'</h2><p class="card">'+esc(t.formula)+'</p><p>'+esc(t.zero)+'</p></section><section><h2>'+esc(t.resources)+'</h2><div class="ops-grid">'+cards+'</div></section><p>'+esc(t.privacy)+'</p><p><a href="'+prefix(l)+'discovery/">'+esc(t.cta)+'</a></p></main><footer class="ops-shell">'+nav+'<p>© 2026 Zion Tech Group</p></footer></body></html>');
  planningPromotion(home(l),l,t);planningPromotion(catalog(l),l,t);planningManifest.pages.push(route);planningManifest.homepages.push(home(l));planningManifest.catalogs.push(catalog(l));
 }
 write('/apps/finops-planning-guide-publication.json',JSON.stringify(planningManifest,null,2)+'\n');
