@@ -698,6 +698,9 @@ export default function ServicesHubPage() {
                 <Link href="/contact/" className="btn-primary text-lg px-10 py-4">
                   ⚡ Get Your Custom Proposal →
                 </Link>
+                <Link href="/discovery" className="btn-secondary text-lg px-10 py-4">
+                  🎯 Free AI Discovery
+                </Link>
                 <a
                   href="mailto:kleber@ziontechgroup.com"
                   className="btn-secondary text-lg px-10 py-4"
@@ -745,6 +748,9 @@ export default function ServicesHubPage() {
             </Link>
             <Link href="/contact/" className="text-slate-400 hover:text-purple-300 transition-colors">
               📞 Contact Us
+            </Link>
+            <Link href="/discovery" className="text-slate-400 hover:text-purple-300 transition-colors">
+              🎯 Free Discovery
             </Link>
             <Link href="/blog/" className="text-slate-400 hover:text-purple-300 transition-colors">
               📝 Blog
