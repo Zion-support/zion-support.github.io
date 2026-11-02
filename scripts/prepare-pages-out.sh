@@ -393,4 +393,6 @@ node scripts/render-contact-pages.cjs out
 python3 scripts/test-free-discovery-guard.py
 assert_public_entry_content
 
+python3 scripts/reconcile-reviewed-app-sitemaps.py out
+
 echo "Prepared out ($(find out -type f | wc -l) files)"

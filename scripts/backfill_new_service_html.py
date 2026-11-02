@@ -31,7 +31,8 @@ def parse_page_tsx(filepath):
     canonical = canonical_match.group(1) if canonical_match else ""
 
     # Extract slug from canonical URL
-    slug = canonical.split('/services/')[-1] if '/services/' in canonical else filepath.parent.name
+    slug = canonical.split('/services/')[-1].rstrip('/') if '/services/' in canonical else filepath.parent.name
+    canonical = re.sub(r'^(https://ziontechgroup\.com/services/[^/?#]+)/*$', r'\1/', canonical)
 
     # Extract h1 text
     h1_match = re.search(r'<h1[^>]*>(.*?)</h1>', content, re.DOTALL)
