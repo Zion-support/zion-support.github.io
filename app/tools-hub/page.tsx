@@ -81,6 +81,19 @@ const TOOLS_BY_CATEGORY = [
     ],
   },
   {
+    name: 'Discovery',
+    icon: '🔍',
+    tools: [
+      {
+        id: 'free-discovery',
+        title: 'Free AI Discovery',
+        desc: 'Free online discovery to map your AI opportunity — no commitment, fast results, tailored recommendations delivered to you and commercial@ziontechgroup.com.',
+        href: '/discovery',
+        icon: '🎯',
+      },
+    ],
+  },
+  {
     name: 'Comparison Tools',
     icon: '⚖️',
     tools: [

@@ -126,6 +126,14 @@ export const appsNetworkCatalog: AppsNetworkApp[] = [
     related: ['prompt-library', 'stack-audit', 'llm-gateway'],
   },
   {
+    slug: 'discovery',
+    name: 'Free AI Discovery',
+    href: '/discovery/',
+    description: 'Free online discovery to map your AI opportunity. No commitment.',
+    group: 'work',
+    related: ['agent-brief', 'stack-audit', 'rfp-readiness'],
+  },
+  {
     slug: 'llm-gateway',
     name: 'LLM Gateway',
     href: '/llm-gateway/',
@@ -585,6 +593,7 @@ export const homepageFeaturedApps = [
   'zion-ai-warranty-tracker',
   'zion-ai-site-survey-planner',
   'zion-chatbot-builder',
+  'discovery',
 ]
   .map((s) => appsNetworkBySlug[s])
   .filter(Boolean) as AppsNetworkApp[];
