@@ -118,6 +118,7 @@ def parse_tsx(slug):
     r['description'] = m.group(1) if m else ''
     m = re.search(r'canonical:\s*`([^`]+)`', content)
     r['canonical'] = m.group(1) if m else 'https://ziontechgroup.com/services/' + slug
+    r['canonical'] = re.sub(r'^(https://ziontechgroup\.com/services/[^/?#]+)/*$', r'\1/', r['canonical'])
     m = re.search(r'<h1[^>]*>([^<]+)</h1>', content)
     r['h1'] = html.unescape(m.group(1).strip()) if m else r['title']
     m = re.search(r'</h1>\s*<p[^>]*>([^<]+)</p>', content)

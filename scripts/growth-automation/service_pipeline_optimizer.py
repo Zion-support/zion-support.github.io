@@ -149,7 +149,7 @@ export const metadata = {{
   title: "{safe_name} - Zion Tech Group",
   description: "{safe_desc}",
   alternates: {{
-    canonical: `https://ziontechgroup.com/services/{service_id}`
+    canonical: `https://ziontechgroup.com/services/{service_id}/`
   }}
 }};
 

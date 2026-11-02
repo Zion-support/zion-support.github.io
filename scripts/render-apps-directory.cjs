@@ -21,6 +21,13 @@ const route = (l,r) => {
   // The existing Pilot Planner uses a Portuguese root and nested locale paths.
   return r.id === 'pilot' ? '/automation-pilot-planner/'+(l==='pt'?'':l+'/') : r.location === 'network' ? network(l,r.slug) : prefix(l)+r.slug;
 };
+const vendorGuide = {
+  en: ['Vendor assessment planning', 'Automation vendor risk workflow: evidence, approval gates and pilot scope'],
+  pt: ['Planejamento da avaliação de fornecedores', 'Fluxo de risco de fornecedores de automação: evidências, aprovações e piloto (guia em inglês)'],
+  es: ['Planificación de la evaluación de proveedores', 'Flujo de riesgo de proveedores de automatización: evidencias, aprobaciones y piloto (guía en inglés)'],
+  fr: ['Préparer une évaluation des fournisseurs', 'Risques des fournisseurs d’automatisation : preuves, validations et pilote (guide en anglais)'],
+  de: ['Lieferantenbewertung planen', 'Risiken bei Automatisierungsanbietern: Nachweise, Freigaben und Pilotumfang (Leitfaden auf Englisch)'],
+};
 const byId = id => data.resources.find(r => r.id === id);
 const link = (href,label,attrs='') => `<a href="${escape(href)}"${attrs}>${escape(label)}</a>`;
 function render(l) {
@@ -58,6 +65,7 @@ ${alternatives}
 <noscript><p class="catalog-note">${escape(c.noscript)}</p></noscript>
 <p class="catalog-empty" id="catalog-empty" hidden>${escape(c.empty)}</p><div class="catalog-grid" id="catalog-grid">${cards}</div></section>
 <section class="catalog-section" aria-labelledby="workflows-title"><h2 id="workflows-title">${escape(c.workflowTitle)}</h2><p class="catalog-intro">${escape(c.workflowIntro)}</p><div class="catalog-workflows">${workflows}</div></section>
+<section class="catalog-section"><h2>${escape(vendorGuide[l][0])}</h2><p>${link('/en/services/automation-vendor-risk-workflow/',vendorGuide[l][1],' hreflang="en"')}</p></section>
 <aside class="catalog-capability" aria-labelledby="capability-title"><h2 id="capability-title">${escape(c.capabilityTitle)}</h2><p>${escape(c.capabilityText)}</p>${link(route(l,byId('verification')),byId('verification').text[l].title)}</aside>
 <section class="catalog-section catalog-archive" aria-labelledby="archive-title"><h2 id="archive-title">${escape(c.archive)}</h2><p>${escape(c.archiveText)}</p><div class="catalog-actions">${link(network(l,'catalog-navigation'),c.collections,' class="catalog-button secondary"')}${link('/apps/content-hub.html',c.fullCatalog,' class="catalog-button secondary"')}${link(prefix(l)+'apps/network.html',c.networkMap,' class="catalog-button secondary" data-network-map-entry')}${link(operationsGuide(l),c.operationsGuide,' class="catalog-button secondary"')}${link(prefix(l)+'apps/october-2026-batch102-energy-ai.html',c.energyGuide,' class="catalog-button secondary"')}${link('https://github.com/Zion-support',c.source,' class="catalog-button secondary"')}</div></section>
 </main><footer class="catalog-footer"><div class="catalog-wrap"><p>${escape(c.footer)}</p><nav aria-label="${escape(c.catalog)}">${link(catalog(l),c.catalog)}${link('/zion-app-network/directory-'+l+'.html',c.network)}${link(home(l),c.home)}</nav><p>Zion Tech Group</p></div></footer></body></html>\n`;
