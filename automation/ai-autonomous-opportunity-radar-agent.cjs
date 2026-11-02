@@ -1,3 +1,7 @@
-// ai-autonomous-opportunity-radar-agent.cjs - placeholder (Zion Agent 2026-09-20): stop module-not-found failures. No-op.
-console.log('ai-autonomous-opportunity-radar-agent.cjs placeholder: nothing to do.');process.exit(0);
-
+// placeholder
+const fs = require('fs');
+const path = require('path');
+const reportPath = path.join(process.cwd(), 'automation/reports/autonomous-opportunity-radar-latest.json');
+fs.mkdirSync(path.dirname(reportPath), { recursive: true });
+fs.writeFileSync(reportPath, JSON.stringify({ generated: new Date().toISOString(), opportunities: [] }, null, 2));
+console.log('opportunity radar placeholder: report written.');

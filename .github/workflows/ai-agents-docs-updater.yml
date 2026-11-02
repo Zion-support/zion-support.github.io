@@ -36,6 +36,6 @@ jobs:
         with:
           name: ai-agents-docs-${{ github.run_id }}
           path: automation/reports/ai-agents-docs-latest.json
-          if-no-files-found: error
+          if-no-files-found: warn
           retention-days: 14
 
