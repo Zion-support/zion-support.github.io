@@ -1,0 +1,74 @@
+{
+  "scope": "operational-tools-only",
+  "groups": [
+    {
+      "path": "ai-governance-checklist/index.html",
+      "available": [
+        "en",
+        "pt",
+        "es",
+        "fr",
+        "de"
+      ],
+      "missing": []
+    },
+    {
+      "path": "apps/finops-pilot-guide.html",
+      "available": [
+        "en",
+        "pt",
+        "es",
+        "fr",
+        "de"
+      ],
+      "missing": []
+    },
+    {
+      "path": "apps/finops-scenario-estimator.html",
+      "available": [
+        "en",
+        "pt",
+        "es",
+        "fr",
+        "de"
+      ],
+      "missing": []
+    },
+    {
+      "path": "apps/operational-planning-tools.html",
+      "available": [
+        "en",
+        "pt",
+        "es",
+        "fr",
+        "de"
+      ],
+      "missing": []
+    },
+    {
+      "path": "roi-calc/index.html",
+      "available": [
+        "en",
+        "pt",
+        "es",
+        "fr",
+        "de"
+      ],
+      "missing": []
+    },
+    {
+      "path": "sla-calculator/index.html",
+      "available": [
+        "en",
+        "pt",
+        "es",
+        "fr",
+        "de"
+      ],
+      "missing": []
+    }
+  ],
+  "fiveLanguageGroups": 6,
+  "translationGapGroups": 0,
+  "finopsScenarioRelease": "2026-10-09-finops-scenario-v1"
+}

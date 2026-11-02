@@ -1,0 +1,45 @@
+{
+  "version": "2026-10-09-finops-scenario-v1",
+  "scope": "Five local calculators and five guides; no provider integrations or full-network completeness claim.",
+  "pages": [
+    "/apps/finops-scenario-estimator.html",
+    "/apps/finops-pilot-guide.html",
+    "/pt/apps/finops-scenario-estimator.html",
+    "/pt/apps/finops-pilot-guide.html",
+    "/es/apps/finops-scenario-estimator.html",
+    "/es/apps/finops-pilot-guide.html",
+    "/fr/apps/finops-scenario-estimator.html",
+    "/fr/apps/finops-pilot-guide.html",
+    "/de/apps/finops-scenario-estimator.html",
+    "/de/apps/finops-pilot-guide.html"
+  ],
+  "homepages": [
+    "/en/",
+    "/",
+    "/es/",
+    "/fr/",
+    "/de/"
+  ],
+  "reciprocalPages": [
+    "/roi-calc/",
+    "/sla-calculator/",
+    "/ai-governance-checklist/",
+    "/apps/network-learning-paths.html",
+    "/pt/roi-calc/",
+    "/pt/sla-calculator/",
+    "/pt/ai-governance-checklist/",
+    "/pt/apps/network-learning-paths.html",
+    "/es/roi-calc/",
+    "/es/sla-calculator/",
+    "/es/ai-governance-checklist/",
+    "/es/apps/network-learning-paths.html",
+    "/fr/roi-calc/",
+    "/fr/sla-calculator/",
+    "/fr/ai-governance-checklist/",
+    "/fr/apps/network-learning-paths.html",
+    "/de/roi-calc/",
+    "/de/sla-calculator/",
+    "/de/ai-governance-checklist/",
+    "/de/apps/network-learning-paths.html"
+  ]
+}

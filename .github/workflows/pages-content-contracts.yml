@@ -1,0 +1,33 @@
+name: Pages Content Contracts
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'scripts/**'
+      - 'content/**'
+      - 'public/**'
+      - 'tests/ci/**'
+      - '.github/workflows/type-coverage.yml'
+      - '.github/workflows/pages-content-contracts.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  assembled-content:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6.0.2
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-node@v6.3.0
+        with:
+          node-version-file: '.nvmrc'
+      - name: Verify workflow failure propagation
+        run: node tests/ci/test_type_coverage_workflow.cjs
+      - name: Verify operational and ROI calculations
+        run: |
+          node scripts/test-operational-tools.cjs
+          node scripts/test-roi-baseline.cjs
+      - name: Assemble and validate the actual Pages artifact
+        run: bash scripts/prepare-pages-out.sh

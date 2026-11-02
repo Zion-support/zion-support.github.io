@@ -1,0 +1,33 @@
+{
+  "version": "2026-10-30-operational-tools-v2",
+  "pages": [
+    "/apps/operational-planning-tools.html",
+    "/roi-calc/",
+    "/sla-calculator/",
+    "/ai-governance-checklist/",
+    "/pt/apps/operational-planning-tools.html",
+    "/pt/roi-calc/",
+    "/pt/sla-calculator/",
+    "/pt/ai-governance-checklist/",
+    "/es/apps/operational-planning-tools.html",
+    "/es/roi-calc/",
+    "/es/sla-calculator/",
+    "/es/ai-governance-checklist/",
+    "/fr/apps/operational-planning-tools.html",
+    "/fr/roi-calc/",
+    "/fr/sla-calculator/",
+    "/fr/ai-governance-checklist/",
+    "/de/apps/operational-planning-tools.html",
+    "/de/roi-calc/",
+    "/de/sla-calculator/",
+    "/de/ai-governance-checklist/"
+  ],
+  "homepages": [
+    "/en/",
+    "/",
+    "/es/",
+    "/fr/",
+    "/de/"
+  ],
+  "source": "Local numeric calculators and self-reported controls; no model inference or external submission"
+}
