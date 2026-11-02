@@ -594,6 +594,19 @@ export const homepageFeaturedApps = [
   'zion-ai-site-survey-planner',
   'zion-chatbot-builder',
   'discovery',
+  'roi-calc',
+  'sla-calculator',
+  'patch-window',
+  'ai-governance',
+  'stack-audit',
+  'prompt-library',
+  'agent-brief',
+  'cloud-cost-estimator',
+  'zion-ai-warranty-lifecycle',
+  'zion-ai-site-survey-brief',
+  'zion-ai-sla-breach-sentinel',
+  'zion-ai-trade-compliance-checker',
+  'zion-edge-ai-platform',
 ]
   .map((s) => appsNetworkBySlug[s])
   .filter(Boolean) as AppsNetworkApp[];

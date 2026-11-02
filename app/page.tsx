@@ -463,6 +463,49 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── Free Discovery — always online, no commitment ── */}
+      <section className="py-14 bg-gradient-to-b from-slate-950 via-emerald-950/20 to-slate-950 border-y border-emerald-500/20">
+        <div className="container-page">
+          <div className="text-center max-w-4xl mx-auto">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-300 text-sm mb-6">
+              <span className="text-green-400">●</span> Always Free · Online · No Commitment
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+              Free AI Discovery — Map Your Opportunity in Minutes
+            </h2>
+            <p className="text-slate-300 text-lg mb-8 max-w-3xl mx-auto leading-relaxed">
+              Answer a short questionnaire and get an instant, personalized report with AI/IT recommendations,
+              app suggestions, and a rollout plan — completely free. No credit card, no sales call required.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4 mb-8">
+              <Link href="/discovery/" className="btn-primary text-lg px-10 py-4">
+                🚀 Start Free Discovery Now →
+              </Link>
+              <Link href="/discovery" className="btn-secondary text-lg px-10 py-4">
+                📄 Discovery $99 (Deep Dive)
+              </Link>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-left">
+              <div className="bg-slate-900/60 rounded-xl p-5 border border-emerald-500/20">
+                <div className="text-2xl mb-2">⚡</div>
+                <h3 className="text-white font-semibold mb-1">Instant Report</h3>
+                <p className="text-slate-400 text-sm">Get your AI opportunity map immediately after completing the questionnaire.</p>
+              </div>
+              <div className="bg-slate-900/60 rounded-xl p-5 border border-emerald-500/20">
+                <div className="text-2xl mb-2">🔒</div>
+                <h3 className="text-white font-semibold mb-1">No Commitment</h3>
+                <p className="text-slate-400 text-sm">Free discovery with no obligation. Your data stays in your browser.</p>
+              </div>
+              <div className="bg-slate-900/60 rounded-xl p-5 border border-emerald-500/20">
+                <div className="text-2xl mb-2">📋</div>
+                <h3 className="text-white font-semibold mb-1">Actionable Plan</h3>
+                <p className="text-slate-400 text-sm">Receive app recommendations, ROI estimates, and a step-by-step pilot plan.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── Quick Access — Find What You Need ── */}
       <section className="py-14 bg-slate-900/30 border-y border-slate-800/60">
         <div className="container-page">
@@ -482,7 +525,7 @@ export default function HomePage() {
               { name: 'Industries', href: '/industries', emoji: '🏭', color: 'from-amber-500/20 to-orange-500/20' },
               { name: 'Solutions', href: '/solutions', emoji: '🎯', color: 'from-pink-500/20 to-rose-500/20' },
               { name: 'Contact', href: '/contact', emoji: '📞', color: 'from-red-500/20 to-orange-500/20' },
-              { name: 'Discovery $99', href: '/discovery', emoji: '🔍', color: 'from-green-500/20 to-emerald-500/20' },
+              { name: 'Free Discovery', href: '/discovery/', emoji: '🔍', color: 'from-green-500/20 to-emerald-500/20' },
               { name: 'Pricing', href: '/pricing', emoji: '💰', color: 'from-amber-500/20 to-yellow-500/20' },
               { name: 'FAQ', href: '/faq', emoji: '❓', color: 'from-slate-500/20 to-gray-500/20' },
               { name: 'About', href: '/about', emoji: 'ℹ️', color: 'from-violet-500/20 to-purple-500/20' },
@@ -1422,7 +1465,7 @@ export default function HomePage() {
               and back into the <Link href="/apps-network/" className="text-purple-300 hover:text-pink-300">network hub</Link>.
             </p>
           </div>
-          <div className="max-w-5xl mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="max-w-6xl mx-auto grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {homepageFeaturedApps.map((app) => (
               <Link
                 key={app.slug}
