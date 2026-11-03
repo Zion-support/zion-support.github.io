@@ -1,0 +1,11 @@
+# Pages regression repair — 2026-11-02
+
+SEO PR 71884 and FinOps PR 71883 remain separate. Main's consolidation deleted the real FinOps test and substantive reciprocal content; later commits supplied a comment-only test and placeholder learning pages. This repair restores reviewed implementations from a713aaa12 and workflow failure propagation. Mutation checks prove incorrect calculations and missing canonical metadata fail.
+
+The original catalogs, maps, guides and localized Discovery destinations linked from the 35 repaired pages are restored, along with original generators for experiment planners, network evaluation guides and communications worksheets. Temporary generator homepage scaffolds are never published; the owner's current homepages are preserved. Coverage inventory is explicitly partial.
+
+Local verification: the complete Pages preparation passes with 21,764 files. All 1,040 internal page/asset references from the 35 repaired pages resolve. Genuine FinOps math/DOM/metadata checks, mutation tests, operational/ROI tests and eight workflow regression tests pass. This bounded link check does not certify all catalog entries across the entire site.
+
+Concurrent main commit 0d69a36b2 removed the nonexistent Storybook addon version and is incorporated here. Deploy on Push run 41477005774 at 2588f49ed6 failed with ETARGET for @storybook/addon-essentials@^10.3.6, independently confirmed by the npm registry. npm 10.9.8 regenerated package-lock.json from the unchanged reconciled manifest; npm ci --ignore-scripts --no-audit --no-fund installed 1,074 packages under the inherited local legacy-peer-deps=true setting; that is not strict CI acceptance. An explicit repeat with --legacy-peer-deps=false reproduces CI ERESOLVE: next-bundle-analyzer@0.6.8 supports Next 10–14 while the existing manifest requires Next 16.4.1 or newer. Strict dependency installation remains blocked pending an owner-approved compatible analyzer decision. No arbitrary manifest upgrades or peer-check bypasses were made.
+
+Global TypeScript heap exhaustion and repository-wide lint violations are independent investigations; compiler repair PR 71821 retains that scope. Hosted checks must be evaluated at the final head before publication. No check bypasses, permission changes, approval, merge or deployment are part of this repair.

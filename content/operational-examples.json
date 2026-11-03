@@ -1,0 +1,215 @@
+{
+  "version": "2026-10-31-v1",
+  "locales": {
+    "en": {
+      "title": "Worked example: from assumptions to a review plan",
+      "intro": "This fictional scenario uses a 30-day month and USD for every monetary amount, with no currency conversion. It illustrates planning arithmetic, not customer results or a service commitment.",
+      "openExample": "See the worked example",
+      "steps": [
+        {
+          "title": "1. Establish the manual-work baseline",
+          "assumptions": "Assume 40 hours of manual work per month and a cost of USD 100 per hour.",
+          "formulas": ["40 hours/month × USD 100/hour = USD 4,000/month."],
+          "interpretation": "This is the current workload cost, not savings. Before claiming an improvement, measure the pilot's actual effort, implementation cost and quality against this baseline.",
+          "linkLabel": "Check the manual-cost calculation"
+        },
+        {
+          "title": "2. Separate downtime from illustrative credits",
+          "assumptions": "Assume a 99.9% availability target over 30 days (720 hours), one hour of downtime, a USD 1,000 period fee and a linear credit of 5% of that fee per excess hour.",
+          "formulas": [
+            "Allowed downtime = 720 × (1 − 99.9/100) = 0.72 hours.",
+            "Excess downtime = max(0, 1 − 0.72) = 0.28 hours.",
+            "Credit per excess hour = USD 1,000 × 5/100 = USD 50/hour.",
+            "Illustrative total = 0.28 hours × USD 50/hour = USD 14."
+          ],
+          "interpretation": "The illustration applies no contractual caps, tiers or exclusions. Check the agreement and incident evidence before determining whether any credit is owed.",
+          "linkLabel": "Check the SLA scenario"
+        },
+        {
+          "title": "3. Turn unchecked controls into evidence questions",
+          "assumptions": "Assume six of ten governance controls are self-reported as present. The four unchecked controls become four evidence gaps to review.",
+          "formulas": ["10 controls − 6 self-reported controls = 4 evidence gaps."],
+          "interpretation": "Six checked boxes do not prove compliance or authorize a rollout. Assign owners to the four gaps and verify evidence for all ten controls, including those already checked.",
+          "linkLabel": "Review the ten governance controls"
+        }
+      ],
+      "reviewTitle": "Record the next review before expanding the pilot",
+      "reviewIntro": "The roles and dates below are examples, not scheduled appointments. Replace them with named owners, evidence references and agreed review times.",
+      "evidenceLabel": "Evidence and next action",
+      "dateLabel": "Example review date",
+      "actions": [
+        {"owner": "Process owner — assign a name", "evidence": "Attach the month's time records and the hourly-cost basis; agree on the baseline and the measurement window after the change.", "date": "3 Nov 2026, 09:00 BRT (UTC−03:00)"},
+        {"owner": "Service owner — assign a name", "evidence": "Attach the agreement clauses and incident timestamps; check the reporting period, exclusions and applicable credit rule.", "date": "3 Nov 2026, 10:00 BRT (UTC−03:00)"},
+        {"owner": "AI pilot owner — assign a name", "evidence": "List the four gaps, link evidence for each control and assign a reviewer; document the decision before expanding scope.", "date": "3 Nov 2026, 11:00 BRT (UTC−03:00)"}
+      ]
+    },
+    "pt": {
+      "title": "Exemplo calculado: das premissas ao plano de revisão",
+      "intro": "Este cenário fictício usa um mês de 30 dias e USD em todos os valores monetários, sem conversão cambial. Ilustra cálculos de planejamento, não resultados de clientes nem compromisso de serviço.",
+      "openExample": "Ver o exemplo calculado",
+      "steps": [
+        {
+          "title": "1. Defina a referência do trabalho manual",
+          "assumptions": "Considere 40 horas de trabalho manual por mês e um custo de USD 100 por hora.",
+          "formulas": ["40 horas/mês × USD 100/hora = USD 4.000/mês."],
+          "interpretation": "Este é o custo atual do trabalho, não uma economia. Antes de afirmar uma melhoria, compare o esforço real, o custo de implementação e a qualidade do piloto com essa referência.",
+          "linkLabel": "Conferir o cálculo de custo manual"
+        },
+        {
+          "title": "2. Separe indisponibilidade de créditos ilustrativos",
+          "assumptions": "Considere uma meta de disponibilidade de 99,9% em 30 dias (720 horas), uma hora de indisponibilidade, valor do período de USD 1.000 e crédito linear de 5% desse valor por hora excedente.",
+          "formulas": [
+            "Indisponibilidade permitida = 720 × (1 − 99,9/100) = 0,72 hora.",
+            "Indisponibilidade excedente = max(0; 1 − 0,72) = 0,28 hora.",
+            "Crédito por hora excedente = USD 1.000 × 5/100 = USD 50/hora.",
+            "Total ilustrativo = 0,28 hora × USD 50/hora = USD 14."
+          ],
+          "interpretation": "O exemplo não aplica limites, faixas ou exclusões contratuais. Confira o contrato e as evidências do incidente antes de determinar se algum crédito é devido.",
+          "linkLabel": "Conferir o cenário de SLA"
+        },
+        {
+          "title": "3. Transforme controles não marcados em perguntas de evidência",
+          "assumptions": "Considere seis de dez controles de governança declarados como presentes. Os quatro controles não marcados se tornam quatro lacunas de evidência para revisar.",
+          "formulas": ["10 controles − 6 controles declarados = 4 lacunas de evidência."],
+          "interpretation": "Seis marcações não comprovam conformidade nem autorizam a implementação. Atribua responsáveis às quatro lacunas e verifique evidências para os dez controles, inclusive os já marcados.",
+          "linkLabel": "Revisar os dez controles de governança"
+        }
+      ],
+      "reviewTitle": "Registre a próxima revisão antes de ampliar o piloto",
+      "reviewIntro": "Os papéis e as datas abaixo são exemplos, não compromissos agendados. Substitua-os por responsáveis identificados, referências de evidências e horários de revisão acordados.",
+      "evidenceLabel": "Evidência e próxima ação",
+      "dateLabel": "Data ilustrativa da revisão",
+      "actions": [
+        {"owner": "Responsável pelo processo — definir nome", "evidence": "Anexar os registros de horas do mês e a base do custo por hora; acordar a referência e o período de medição após a mudança.", "date": "3 nov. 2026, 09:00 BRT (UTC−03:00)"},
+        {"owner": "Responsável pelo serviço — definir nome", "evidence": "Anexar as cláusulas contratuais e os horários do incidente; conferir período de apuração, exclusões e regra de crédito aplicável.", "date": "3 nov. 2026, 10:00 BRT (UTC−03:00)"},
+        {"owner": "Responsável pelo piloto de IA — definir nome", "evidence": "Listar as quatro lacunas, vincular evidências a cada controle e designar um revisor; registrar a decisão antes de ampliar o escopo.", "date": "3 nov. 2026, 11:00 BRT (UTC−03:00)"}
+      ]
+    },
+    "es": {
+      "title": "Ejemplo calculado: de los supuestos al plan de revisión",
+      "intro": "Este escenario ficticio utiliza un mes de 30 días y USD para todos los importes, sin conversión de divisas. Ilustra cálculos de planificación, no resultados de clientes ni un compromiso de servicio.",
+      "openExample": "Ver el ejemplo calculado",
+      "steps": [
+        {
+          "title": "1. Establezca la referencia del trabajo manual",
+          "assumptions": "Suponga 40 horas de trabajo manual al mes y un coste de USD 100 por hora.",
+          "formulas": ["40 horas/mes × USD 100/hora = USD 4.000/mes."],
+          "interpretation": "Es el coste actual del trabajo, no un ahorro. Antes de afirmar una mejora, compare el esfuerzo real, el coste de implementación y la calidad del piloto con esta referencia.",
+          "linkLabel": "Comprobar el cálculo del coste manual"
+        },
+        {
+          "title": "2. Separe la inactividad de los créditos ilustrativos",
+          "assumptions": "Suponga un objetivo de disponibilidad del 99,9% durante 30 días (720 horas), una hora de inactividad, una tarifa del período de USD 1.000 y un crédito lineal del 5% de esa tarifa por hora excedida.",
+          "formulas": [
+            "Inactividad permitida = 720 × (1 − 99,9/100) = 0,72 horas.",
+            "Inactividad excedida = max(0; 1 − 0,72) = 0,28 horas.",
+            "Crédito por hora excedida = USD 1.000 × 5/100 = USD 50/hora.",
+            "Total ilustrativo = 0,28 horas × USD 50/hora = USD 14."
+          ],
+          "interpretation": "El ejemplo no aplica límites, tramos ni exclusiones contractuales. Revise el contrato y las evidencias del incidente antes de determinar si corresponde algún crédito.",
+          "linkLabel": "Comprobar el escenario de SLA"
+        },
+        {
+          "title": "3. Convierta los controles pendientes en preguntas sobre evidencias",
+          "assumptions": "Suponga que se declaran presentes seis de diez controles de gobernanza. Los cuatro controles sin marcar se convierten en cuatro carencias de evidencia que revisar.",
+          "formulas": ["10 controles − 6 controles declarados = 4 carencias de evidencia."],
+          "interpretation": "Seis casillas marcadas no demuestran cumplimiento ni autorizan la implementación. Asigne responsables a las cuatro carencias y verifique evidencias para los diez controles, incluidos los ya marcados.",
+          "linkLabel": "Revisar los diez controles de gobernanza"
+        }
+      ],
+      "reviewTitle": "Registre la próxima revisión antes de ampliar el piloto",
+      "reviewIntro": "Los roles y las fechas siguientes son ejemplos, no citas programadas. Sustitúyalos por responsables identificados, referencias de evidencias y horarios de revisión acordados.",
+      "evidenceLabel": "Evidencia y próxima acción",
+      "dateLabel": "Fecha ilustrativa de revisión",
+      "actions": [
+        {"owner": "Responsable del proceso — asignar nombre", "evidence": "Adjuntar los registros horarios del mes y la base del coste por hora; acordar la referencia y el período de medición posterior al cambio.", "date": "3 nov. 2026, 09:00 BRT (UTC−03:00)"},
+        {"owner": "Responsable del servicio — asignar nombre", "evidence": "Adjuntar las cláusulas del contrato y las horas del incidente; comprobar el período de cálculo, las exclusiones y la regla de crédito aplicable.", "date": "3 nov. 2026, 10:00 BRT (UTC−03:00)"},
+        {"owner": "Responsable del piloto de IA — asignar nombre", "evidence": "Enumerar las cuatro carencias, vincular evidencias a cada control y designar un revisor; documentar la decisión antes de ampliar el alcance.", "date": "3 nov. 2026, 11:00 BRT (UTC−03:00)"}
+      ]
+    },
+    "fr": {
+      "title": "Exemple chiffré : des hypothèses au plan de revue",
+      "intro": "Ce scénario fictif utilise un mois de 30 jours et des montants en USD, sans conversion de devises. Il illustre des calculs de planification, pas des résultats clients ni un engagement de service.",
+      "openExample": "Voir l’exemple chiffré",
+      "steps": [
+        {
+          "title": "1. Établissez la référence du travail manuel",
+          "assumptions": "Supposez 40 heures de travail manuel par mois, à un coût de 100 USD par heure.",
+          "formulas": ["40 heures/mois × 100 USD/heure = 4 000 USD/mois."],
+          "interpretation": "Il s’agit du coût actuel du travail, pas d’une économie. Avant d’annoncer une amélioration, comparez l’effort réel, le coût de mise en œuvre et la qualité du pilote à cette référence.",
+          "linkLabel": "Vérifier le calcul du coût manuel"
+        },
+        {
+          "title": "2. Distinguez indisponibilité et crédits indicatifs",
+          "assumptions": "Supposez un objectif de disponibilité de 99,9 % sur 30 jours (720 heures), une heure d’indisponibilité, un montant de période de 1 000 USD et un crédit linéaire de 5 % de ce montant par heure de dépassement.",
+          "formulas": [
+            "Indisponibilité autorisée = 720 × (1 − 99,9/100) = 0,72 heure.",
+            "Dépassement = max(0 ; 1 − 0,72) = 0,28 heure.",
+            "Crédit par heure de dépassement = 1 000 USD × 5/100 = 50 USD/heure.",
+            "Total indicatif = 0,28 heure × 50 USD/heure = 14 USD."
+          ],
+          "interpretation": "L’exemple n’applique aucun plafond, palier ou exclusion contractuels. Vérifiez le contrat et les preuves de l’incident avant de déterminer si un crédit est dû.",
+          "linkLabel": "Vérifier le scénario SLA"
+        },
+        {
+          "title": "3. Transformez les contrôles non cochés en demandes de preuves",
+          "assumptions": "Supposez que six des dix contrôles de gouvernance sont déclarés en place. Les quatre contrôles non cochés deviennent quatre points sans preuve à examiner.",
+          "formulas": ["10 contrôles − 6 contrôles déclarés = 4 points sans preuve."],
+          "interpretation": "Six cases cochées ne prouvent pas la conformité et n’autorisent pas un déploiement. Attribuez les quatre points à des responsables et vérifiez les preuves des dix contrôles, y compris ceux déjà cochés.",
+          "linkLabel": "Examiner les dix contrôles de gouvernance"
+        }
+      ],
+      "reviewTitle": "Consignez la prochaine revue avant d’élargir le pilote",
+      "reviewIntro": "Les rôles et dates ci-dessous sont des exemples, pas des rendez-vous programmés. Remplacez-les par des responsables nommés, des références de preuves et des horaires de revue convenus.",
+      "evidenceLabel": "Preuves et prochaine action",
+      "dateLabel": "Date de revue indicative",
+      "actions": [
+        {"owner": "Responsable du processus — désigner une personne", "evidence": "Joindre les relevés de temps du mois et la base du coût horaire ; convenir de la référence et de la période de mesure après le changement.", "date": "3 nov. 2026, 09:00 BRT (UTC−03:00)"},
+        {"owner": "Responsable du service — désigner une personne", "evidence": "Joindre les clauses contractuelles et les horodatages de l’incident ; vérifier la période de calcul, les exclusions et la règle de crédit applicable.", "date": "3 nov. 2026, 10:00 BRT (UTC−03:00)"},
+        {"owner": "Responsable du pilote IA — désigner une personne", "evidence": "Lister les quatre points ouverts, relier les preuves à chaque contrôle et désigner un réviseur ; documenter la décision avant d’élargir le périmètre.", "date": "3 nov. 2026, 11:00 BRT (UTC−03:00)"}
+      ]
+    },
+    "de": {
+      "title": "Rechenbeispiel: von Annahmen zum Prüfplan",
+      "intro": "Dieses fiktive Szenario verwendet einen Monat mit 30 Tagen und USD für alle Geldbeträge, ohne Währungsumrechnung. Es veranschaulicht Planungsrechnungen, keine Kundenergebnisse oder Leistungszusage.",
+      "openExample": "Rechenbeispiel ansehen",
+      "steps": [
+        {
+          "title": "1. Bestimmen Sie die Ausgangskosten manueller Arbeit",
+          "assumptions": "Nehmen Sie 40 Stunden manuelle Arbeit pro Monat und Kosten von 100 USD je Stunde an.",
+          "formulas": ["40 Stunden/Monat × 100 USD/Stunde = 4.000 USD/Monat."],
+          "interpretation": "Das sind aktuelle Arbeitskosten, keine Einsparungen. Vergleichen Sie den tatsächlichen Aufwand, die Umsetzungskosten und die Qualität des Pilotprojekts mit dieser Ausgangslage, bevor Sie Verbesserungen behaupten.",
+          "linkLabel": "Berechnung der manuellen Kosten prüfen"
+        },
+        {
+          "title": "2. Trennen Sie Ausfallzeit und beispielhafte Gutschriften",
+          "assumptions": "Nehmen Sie ein Verfügbarkeitsziel von 99,9 % über 30 Tage (720 Stunden), eine Stunde Ausfallzeit, eine Periodengebühr von 1.000 USD und eine lineare Gutschrift von 5 % dieser Gebühr je Überschreitungsstunde an.",
+          "formulas": [
+            "Zulässige Ausfallzeit = 720 × (1 − 99,9/100) = 0,72 Stunden.",
+            "Überschrittene Ausfallzeit = max(0; 1 − 0,72) = 0,28 Stunden.",
+            "Gutschrift je Überschreitungsstunde = 1.000 USD × 5/100 = 50 USD/Stunde.",
+            "Beispielhafter Gesamtbetrag = 0,28 Stunden × 50 USD/Stunde = 14 USD."
+          ],
+          "interpretation": "Das Beispiel berücksichtigt keine vertraglichen Obergrenzen, Staffelungen oder Ausschlüsse. Prüfen Sie den Vertrag und die Störungsnachweise, bevor Sie einen möglichen Gutschriftanspruch bestimmen.",
+          "linkLabel": "SLA-Szenario prüfen"
+        },
+        {
+          "title": "3. Machen Sie aus offenen Kontrollen konkrete Nachweisfragen",
+          "assumptions": "Nehmen Sie an, dass sechs von zehn Governance-Kontrollen als vorhanden angegeben werden. Die vier nicht markierten Kontrollen ergeben vier zu prüfende Nachweislücken.",
+          "formulas": ["10 Kontrollen − 6 selbst gemeldete Kontrollen = 4 Nachweislücken."],
+          "interpretation": "Sechs Häkchen belegen keine Konformität und geben keine Umsetzung frei. Benennen Sie Verantwortliche für die vier Lücken und prüfen Sie die Nachweise aller zehn Kontrollen, auch der bereits markierten.",
+          "linkLabel": "Die zehn Governance-Kontrollen prüfen"
+        }
+      ],
+      "reviewTitle": "Halten Sie die nächste Prüfung vor einer Piloterweiterung fest",
+      "reviewIntro": "Die folgenden Rollen und Termine sind Beispiele, keine vereinbarten Termine. Ersetzen Sie sie durch benannte Verantwortliche, Nachweisverweise und abgestimmte Prüfzeiten.",
+      "evidenceLabel": "Nachweise und nächste Aktion",
+      "dateLabel": "Beispielhafter Prüftermin",
+      "actions": [
+        {"owner": "Prozessverantwortung — Person benennen", "evidence": "Monatliche Zeitaufzeichnungen und Grundlage der Stundenkosten beifügen; Ausgangswert und Messzeitraum nach der Änderung abstimmen.", "date": "3. Nov. 2026, 09:00 BRT (UTC−03:00)"},
+        {"owner": "Serviceverantwortung — Person benennen", "evidence": "Vertragsklauseln und Zeitstempel der Störung beifügen; Abrechnungszeitraum, Ausschlüsse und geltende Gutschriftregel prüfen.", "date": "3. Nov. 2026, 10:00 BRT (UTC−03:00)"},
+        {"owner": "Verantwortung für den KI-Piloten — Person benennen", "evidence": "Die vier Lücken auflisten, Nachweise je Kontrolle verknüpfen und eine prüfende Person benennen; die Entscheidung vor der Erweiterung dokumentieren.", "date": "3. Nov. 2026, 11:00 BRT (UTC−03:00)"}
+      ]
+    }
+  }
+}
