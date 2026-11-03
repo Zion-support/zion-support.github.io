@@ -339,6 +339,22 @@ try {
  // Exclusive creation atomically proves the missing-surface failure did not create a file.
  fs.closeSync(fs.openSync(target,'wx',0o600));fs.unlinkSync(target);
  fs.writeFileSync(victim,'victim-sentinel');fs.symlinkSync(victim,target);assert.throws(()=>apply('/surface','en',t),/ELOOP/);assert.equal(fs.readFileSync(victim,'utf8'),'victim-sentinel','Symlink target is unchanged');fs.unlinkSync(target);
- fs.writeFileSync(target,'<main><!--finops-planning-guide:start-->a<!--finops-planning-guide:end--><!--finops-planning-guide:start-->b<!--finops-planning-guide:end--></main>',{flag:'wx',mode:0o600});const ambiguous=fs.readFileSync(target,'utf8');assert.throws(()=>apply('/surface','en',t),/Ambiguous/);assert.equal(fs.readFileSync(target,'utf8'),ambiguous);assert.equal(opened,closed,'Validation failure closes descriptor');
+ // Keep the ambiguous case on an independent pathname and one held descriptor.
+ const ambiguousPath=path.join(securityRoot,'ambiguous-surface.html');
+ const ambiguous=Buffer.from('<main><!--finops-planning-guide:start-->a<!--finops-planning-guide:end--><!--finops-planning-guide:start-->b<!--finops-planning-guide:end--></main>','utf8');
+ const fixtureFd=fs.openSync(ambiguousPath,'wx+',0o600);
+ try {
+  fs.writeFileSync(fixtureFd,ambiguous);
+  const readAmbiguous=()=>{const bytes=Buffer.alloc(ambiguous.length);assert.equal(fs.readSync(fixtureFd,bytes,0,bytes.length,0),bytes.length,'Complete ambiguous fixture read');return bytes;};
+  assert.deepEqual(readAmbiguous(),ambiguous,'Ambiguous fixture setup');
+  const ambiguousApply=vm.runInNewContext('('+promotionSource[0]+')',{fs:traced,Buffer,assert,file:()=>ambiguousPath,copy:{en:{lang:'en'}},planningMarker:marker,planningVersion:'fixture',planningRoute:()=>'/apps/finops-planning-checklist.html',esc:value=>String(value)});
+  assert.throws(()=>ambiguousApply('/ambiguous','en',t),/Ambiguous/);
+  assert.deepEqual(readAmbiguous(),ambiguous,'Ambiguous validation preserves held fixture bytes');
+  const held=fs.fstatSync(fixtureFd),named=fs.lstatSync(ambiguousPath);
+  assert.equal(held.size,ambiguous.length,'Ambiguous validation preserves file length');
+  assert.equal(named.dev,held.dev,'Ambiguous fixture pathname retains device');
+  assert.equal(named.ino,held.ino,'Ambiguous fixture pathname retains inode');
+  assert.equal(opened,closed,'Validation failure closes renderer descriptor');
+ } finally { fs.closeSync(fixtureFd); }
  console.log('PASS planning security regressions: script-data round trip, single-handle writes, unowned-byte preservation, idempotence, missing/symlink rejection, replacement detection and handle cleanup.');
 } finally { fs.rmSync(securityRoot,{recursive:true,force:true}); }
