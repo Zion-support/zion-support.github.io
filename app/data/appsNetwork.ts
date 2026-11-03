@@ -10,9 +10,9 @@ export type AppsNetworkApp = {
 
 export const APPS_NETWORK_HUB = {
   title: 'Zion Apps Network',
-  canonical: 'https://ziontechgroup.com/apps-network/',
+  canonical: 'https://ziontechgroup.com/zion-app-network/',
   hubs: [
-    { name: 'Apps Network hub', href: '/apps-network/' },
+    { name: 'Apps Network hub', href: '/zion-app-network/' },
     { name: 'Live catalog', href: '/apps/' },
     { name: 'Full directory', href: '/zion-app-network/' },
     { name: 'Playbook', href: '/apps/playbook/' },
