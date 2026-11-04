@@ -84,6 +84,8 @@ assert_money_path() {
 
 assert_money_path services/ai-automation/index.html
 assert_money_path plans/index.html
-assert_money_path discovery/index.html
+# Discovery is free: validate the questionnaire and honest delivery contract,
+# rather than requiring a paid Starter checkout link on this entry point.
+node scripts/test-discovery-release-contract.cjs out
 
 echo "Prepared out ($(find out -type f | wc -l) files)"
