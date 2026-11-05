@@ -27,8 +27,8 @@ jobs:
           set -euo pipefail
           test -f app/globals.css
           test -s app/globals.css
-          grep -Fq '@tailwind base;' app/globals.css
-          grep -Fq '@tailwind components;' app/globals.css
-          grep -Fq '@tailwind utilities;' app/globals.css
           grep -Fq '@import "tailwindcss";' app/globals.css
-          echo 'ok: app/globals.css'
+          grep -Fq '@theme {' app/globals.css
+          grep -Fq '@layer base {' app/globals.css
+          grep -Fq '@layer components {' app/globals.css
+          echo 'ok: app/globals.css Tailwind v4 entry and design-system layers'
