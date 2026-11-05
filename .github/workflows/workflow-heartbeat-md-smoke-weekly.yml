@@ -27,10 +27,11 @@ jobs:
           set -euo pipefail
           test -f HEARTBEAT.md
           test -s HEARTBEAT.md
-          grep -Fq '# HEARTBEAT.md' HEARTBEAT.md
-          grep -Fq '### Operating Mandate' HEARTBEAT.md
-          grep -Fq 'USER.md' HEARTBEAT.md
-          grep -Fq 'AGENTS' HEARTBEAT.md
-          grep -Fq 'SOUL' HEARTBEAT.md
-          grep -Fq 'Never commit secrets' HEARTBEAT.md
-          echo 'ok: HEARTBEAT.md'
+          # HEARTBEAT.md is a legacy status snapshot, not the private Notion War Room.
+          # Validate durable section structure rather than obsolete mandate text.
+          grep -Eq '^# [^[:space:]]' HEARTBEAT.md
+          grep -Fq 'GITHUB ACTIONS' HEARTBEAT.md
+          grep -Fq 'GMAIL / CALENDAR' HEARTBEAT.md
+          grep -Fq 'NPM BUILD' HEARTBEAT.md
+          grep -Fq 'FLEET STATUS' HEARTBEAT.md
+          echo 'ok: HEARTBEAT.md structure'
