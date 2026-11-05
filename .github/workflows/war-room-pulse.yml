@@ -1,24 +1,16 @@
 name: War Room Pulse
-# Atualiza o board do War Room (STATUS.md) na main branch
-# Dispara via: gh workflow run war-room-pulse ou comentário em issue
+# Retired: preserve the private War Room direction merged in PR #71743.
+# Keep this public writer disabled, including manual dispatch.
 on:
   workflow_dispatch:
-    inputs:
-      reason:
-        description: 'Motivo do pulso'
-        required: false
-        default: 'Check-in agente'
-  issue_comment:
-    types: [created, updated]
 
 permissions:
-  contents: write
-  issues: write
+  contents: read
 
 jobs:
   pulse:
     runs-on: ubuntu-latest
-    if: github.event_name == 'workflow_dispatch' || (github.event_name == 'issue_comment' && contains(github.event.comment.body, 'war room'))
+    if: ${{ false }} # Retired: manual dispatch cannot write public ops content
     steps:
       - name: Checkout
         uses: actions/checkout@v4
