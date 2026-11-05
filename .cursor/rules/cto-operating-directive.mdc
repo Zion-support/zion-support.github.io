@@ -1,0 +1,28 @@
+---
+description: CTO operating directive for Zion agents — philosophy pointers and contact routing
+alwaysApply: true
+---
+
+# CTO operating directive (Zion)
+
+## Purpose
+
+This rule keeps agents aligned with Zion Tech Group CTO operating norms and
+canonical contact routing. It is the grep contract for
+`.github/workflows/workflow-cto-directive-rule-mdc-smoke-weekly.yml`.
+
+## Philosophy and owner context
+
+- Read and follow `docs/CTO-OPERATING-PHILOSOPHY.md` (standing mandate: implement → validate → ship safely).
+- Read `USER.md` for owner preferences, standing mandate, and escalation norms.
+- Mirror continuity across `AGENTS.md`, `SOUL.md`, `HEARTBEAT.md`, `MEMORY.md`, and `.cursor/rules/`.
+
+## Contact routing
+
+- Canonical public contact email lives in `seoConstants.ts` as `CONTACT_INFO.email`.
+- Prefer that constant for site/contact copy and agent-facing contact routing; do not invent alternate addresses.
+
+## Hard safety
+
+- **never commit secrets**, credentials, API keys, or tokens. Use GitHub Actions secrets and environment variables.
+- Prefer small, reversible commits. Do not disable smoke checks to make CI green — fix the underlying cause.
