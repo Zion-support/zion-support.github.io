@@ -574,14 +574,6 @@ export const appsNetworkCatalog: AppsNetworkApp[] = [
     related: ['ai-customer-support-pro', 'ai-ticket-triage', 'ai-ticket-sentinel', 'sla-calculator'],
   },
   {
-    slug: 'ai-ticket-triage',
-    name: 'AI Ticket Triage',
-    href: '/ai-ticket-triage/',
-    description: 'Automated ticket classification, prioritization, and routing.',
-    group: 'ops',
-    related: ['ai-customer-support-pro', 'zion-ai-help-desk', 'ai-ticket-sentinel', 'ai-rag-knowledge-platform'],
-  },
-  {
     slug: 'ai-ticket-sentinel',
     name: 'AI Ticket Sentinel',
     href: '/ai-ticket-sentinel/',
