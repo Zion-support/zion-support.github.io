@@ -161,8 +161,8 @@ function renderToOut(u,l,isHome=false){
     const commentedOutsideHead=(h.slice(bodyStart).match(/<!--[\s\S]*?rel="alternate"[\s\S]*?-->/g)||[]).length;
     check('no commented alternates outside head '+u, commentedOutsideHead===0, 'commented='+commentedOutsideHead);
   }
-  // Cleanup out/
-  if(fs.existsSync(path.join(repo,'out'))) fs.rmSync(path.join(repo,'out'),{recursive:true,force:true});
+  // Cleanup out/ (SKIP: callers assemble out/ for Pages publish and need the app pages kept)
+  // if(fs.existsSync(path.join(repo,'out'))) fs.rmSync(path.join(repo,'out'),{recursive:true,force:true});
   console.log('\nSUMMARY: PASS='+pass+' FAIL='+fail);
   process.exit(fail>0?1:0);
 })();
