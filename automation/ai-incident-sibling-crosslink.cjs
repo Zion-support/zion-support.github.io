@@ -1,3 +1,1 @@
-// ai-incident-sibling-crosslink.cjs - placeholder (Zion Agent 2026-09-20): stop module-not-found failures. No-op.
-console.log('ai-incident-sibling-crosslink.cjs placeholder: nothing to do.');process.exit(0);
-
+console.log("stub: automation/ai-incident-sibling-crosslink.cjs no-op - automation paused post-P0");

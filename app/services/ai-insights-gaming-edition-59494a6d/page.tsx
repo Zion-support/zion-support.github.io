@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path="/services/ai-insights-gaming-edition-59494a6d" title="AI Insights - Gaming Edition" />
+        <BreadcrumbSchema path=`/services/ai-insights-gaming-edition-59494a6d` title="AI Insights - Gaming Edition" />
         <h1 className="text-4xl font-bold mb-6">AI Insights - Gaming Edition</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation gaming solution: AI Insights - Gaming Edition. Combines invoice processing with adaptive intelligence for optimal results.</p>
 
@@ -63,8 +63,7 @@ export default function ServicePage() {
 
         <div className="text-center">
           <a 
-            href="https://calendly.com/kleber-ziontechgroup/30min" 
-
+            href="https://calendly.com/kleber-ziontechgroup/consultation" 
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-full text-lg transition-colors"

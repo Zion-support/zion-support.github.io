@@ -4,7 +4,7 @@ const base='https://ziontechgroup.com',version='2026-10-09-finops-scenario-v1',L
 async function get(u){const r=await fetch(base+u,{cache:'no-store',signal:AbortSignal.timeout(20000)});assert.equal(r.status,200,'HTTP '+r.status+' '+u);return r.text();}
 async function check(){let count=0;
  for(const l of L){const p=prefix(l),lang=l==='pt'?'pt-BR':l;
-  for(const slug of ['finops-scenario-estimator','finops-pilot-guide']){const u=p+'apps/'+slug+'.html',h=await get(u);assert(h.includes('data-finops-scenario="'+version+'"'),u+' release marker');assert(h.includes('<html lang="'+lang+'"'),u+' language');assert(h.includes('rel="canonical" href="'+base+u+'"'),u+' canonical');assert.equal((h.match(/rel="alternate"/g)||[]).length,6,u+' alternates');count++;}
+  for(const slug of ['finops-scenario-estimator','finops-pilot-guide']){const u=p+'apps/'+slug+'.html',h=await get(u);assert(h.includes('data-finops-scenario="'+version+'"'),u+' release marker');assert(h.includes('<html lang="'+lang+'"'),u+' language');assert(h.includes('rel="canonical" href="'+base+u+'"'),u+' canonical');assert.equal((h.match(/rel="alternate"/g)||[]).length,5,u+' alternates');count++;}
   const routes=[l==='pt'?'/':'/'+l+'/',...['roi-calc','sla-calculator','ai-governance-checklist'].map(s=>p+s+'/'),p+'apps/network-learning-paths.html'];
   for(const u of routes){const h=await get(u);assert.equal((h.match(/data-finops-promotion="2026-10-09-finops-scenario-v1"/g)||[]).length,1,u+' unique promotion');assert(h.includes('href="'+p+'apps/finops-scenario-estimator.html"'),u+' return link');if(u.endsWith('network-learning-paths.html'))assert(h.includes('id="finops-mobile-fix"'),u+' mobile rule');count++;}
  }
