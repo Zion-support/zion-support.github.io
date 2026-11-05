@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-generator-for-tech-92610246` title="Cognitive Generator for Tech" />
+        <BreadcrumbSchema path="/services/cognitive-generator-for-tech-92610246" title="Cognitive Generator for Tech" />
         <h1 className="text-4xl font-bold mb-6">Cognitive Generator for Tech</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Cognitive Generator for Tech. This autonomous system provides document processing with zero manual intervention needed.</p>
 

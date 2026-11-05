@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/smart-system-media-6b488271` title="Smart system-media" />
+        <BreadcrumbSchema path="/services/smart-system-media-6b488271" title="Smart system-media" />
         <h1 className="text-4xl font-bold mb-6">Smart system-media</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your media operations with our Smart system-media. This AI-driven solution automates inventory management with unprecedented accuracy and efficiency.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/management-neural---sports-bdc2d9c0` title="Management Neural - Sports" />
+        <BreadcrumbSchema path="/services/management-neural---sports-bdc2d9c0" title="Management Neural - Sports" />
         <h1 className="text-4xl font-bold mb-6">Management Neural - Sports</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your sports operations with our Management Neural - Sports. This AI-driven solution automates inventory management with unprecedented accuracy and eff</p>
 

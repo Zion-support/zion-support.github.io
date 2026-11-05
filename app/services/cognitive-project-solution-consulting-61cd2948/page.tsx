@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-project-solution-consulting-61cd2948` title="Cognitive Project Solution - Consulting" />
+        <BreadcrumbSchema path="/services/cognitive-project-solution-consulting-61cd2948" title="Cognitive Project Solution - Consulting" />
         <h1 className="text-4xl font-bold mb-6">Cognitive Project Solution - Consulting</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your consulting operations with our Cognitive Project Solution - Consulting. This AI-driven solution automates integration management with unprecedent</p>
 

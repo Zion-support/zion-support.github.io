@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-decision-real-estate-1549a5ae` title="Intelligent Decision Real Estate" />
+        <BreadcrumbSchema path="/services/intelligent-decision-real-estate-1549a5ae" title="Intelligent Decision Real Estate" />
         <h1 className="text-4xl font-bold mb-6">Intelligent Decision Real Estate</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize Logistics through intelligent automation. Our Intelligent Decision Real Estate leverages advanced machine learning to deliver data processing at s</p>
 

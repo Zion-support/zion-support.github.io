@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/serverless-industry-specific-legal-deployment-f17fef72` title="Serverless Industry-Specific Legal Deployment" />
+        <BreadcrumbSchema path="/services/serverless-industry-specific-legal-deployment-f17fef72" title="Serverless Industry-Specific Legal Deployment" />
         <h1 className="text-4xl font-bold mb-6">Serverless Industry-Specific Legal Deployment</h1>
         <p className="text-lg text-gray-300 mb-8">Serverless deployment platform that auto-scales industry-specific legal workloads without infrastructure management.</p>
 

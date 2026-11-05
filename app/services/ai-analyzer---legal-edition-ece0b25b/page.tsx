@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-analyzer---legal-edition-ece0b25b` title="AI Analyzer - Legal Edition" />
+        <BreadcrumbSchema path="/services/ai-analyzer---legal-edition-ece0b25b" title="AI Analyzer - Legal Edition" />
         <h1 className="text-4xl font-bold mb-6">AI Analyzer - Legal Edition</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize legal through intelligent automation. Our AI Analyzer - Legal Edition leverages advanced machine learning to deliver performance monitoring at sca</p>
 

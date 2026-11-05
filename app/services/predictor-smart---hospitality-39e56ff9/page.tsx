@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictor-smart---hospitality-39e56ff9` title="Predictor Smart - Hospitality" />
+        <BreadcrumbSchema path="/services/predictor-smart---hospitality-39e56ff9" title="Predictor Smart - Hospitality" />
         <h1 className="text-4xl font-bold mb-6">Predictor Smart - Hospitality</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation hospitality solution: Predictor Smart - Hospitality. Combines security monitoring with adaptive intelligence for optimal results.</p>
 

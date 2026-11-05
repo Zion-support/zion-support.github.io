@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/neural-engine-automotive-1-30e02e35` title="Neural engine-automotive #1" />
+        <BreadcrumbSchema path="/services/neural-engine-automotive-1-30e02e35" title="Neural engine-automotive #1" />
         <h1 className="text-4xl font-bold mb-6">Neural engine-automotive #1</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your automotive operations with our Neural engine-automotive #1. This AI-driven solution automates data processing with unprecedented accuracy and eff</p>
 

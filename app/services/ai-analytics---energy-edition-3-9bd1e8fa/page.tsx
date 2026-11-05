@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-analytics---energy-edition-3-9bd1e8fa` title="AI Analytics - Energy Edition #3" />
+        <BreadcrumbSchema path="/services/ai-analytics---energy-edition-3-9bd1e8fa" title="AI Analytics - Energy Edition #3" />
         <h1 className="text-4xl font-bold mb-6">AI Analytics - Energy Edition #3</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your energy operations with our AI Analytics - Energy Edition #3. This AI-driven solution automates supply chain with unprecedented accuracy and effic</p>
 

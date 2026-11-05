@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/automated-analyzer-legal-a42de59a` title="Automated analyzer-legal" />
+        <BreadcrumbSchema path="/services/automated-analyzer-legal-a42de59a" title="Automated analyzer-legal" />
         <h1 className="text-4xl font-bold mb-6">Automated analyzer-legal</h1>
         <p className="text-lg text-gray-300 mb-8">The future of legal is here with Automated analyzer-legal. Powered by cutting-edge AI, this platform delivers risk assessment like never before.</p>
 

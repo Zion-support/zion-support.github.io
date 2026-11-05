@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/processor-ai---transportation-94b584cc` title="Processor AI - Transportation" />
+        <BreadcrumbSchema path="/services/processor-ai---transportation-94b584cc" title="Processor AI - Transportation" />
         <h1 className="text-4xl font-bold mb-6">Processor AI - Transportation</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize transportation through intelligent automation. Our Processor AI - Transportation leverages advanced machine learning to deliver predictive analyti</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligence-smart---real-estate-32b0c1b5` title="Intelligence Smart - Real-Estate" />
+        <BreadcrumbSchema path="/services/intelligence-smart---real-estate-32b0c1b5" title="Intelligence Smart - Real-Estate" />
         <h1 className="text-4xl font-bold mb-6">Intelligence Smart - Real-Estate</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Intelligence Smart - Real-Estate. This autonomous system provides document processing with zero manual intervention needed.</p>
 

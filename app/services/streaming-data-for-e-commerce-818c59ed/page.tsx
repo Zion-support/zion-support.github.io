@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/streaming-data-for-e-commerce-818c59ed` title="Streaming Data for E-Commerce" />
+        <BreadcrumbSchema path="/services/streaming-data-for-e-commerce-818c59ed" title="Streaming Data for E-Commerce" />
         <h1 className="text-4xl font-bold mb-6">Streaming Data for E-Commerce</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize e-commerce through intelligent automation. Our Streaming Data for E-Commerce leverages advanced machine learning to deliver data warehousing at sc</p>
 

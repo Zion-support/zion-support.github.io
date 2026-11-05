@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/autonomous-context-aware-aviation-management-system-a84fb07e` title="Autonomous Context-Aware Aviation Management System" />
+        <BreadcrumbSchema path="/services/autonomous-context-aware-aviation-management-system-a84fb07e" title="Autonomous Context-Aware Aviation Management System" />
         <h1 className="text-4xl font-bold mb-6">Autonomous Context-Aware Aviation Management System</h1>
         <p className="text-lg text-gray-300 mb-8">Autonomous management system that self-optimizes context-aware aviation processes with minimal human intervention.</p>
 

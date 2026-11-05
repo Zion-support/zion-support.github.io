@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/neural-insights-for-telecom-9ea4ce84` title="Neural Insights for Telecom" />
+        <BreadcrumbSchema path="/services/neural-insights-for-telecom-9ea4ce84" title="Neural Insights for Telecom" />
         <h1 className="text-4xl font-bold mb-6">Neural Insights for Telecom</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation telecom solution: Neural Insights for Telecom. Combines process automation with adaptive intelligence for optimal results.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictive-processor-for-finance-2-da3432eb` title="Predictive Processor for Finance #2" />
+        <BreadcrumbSchema path="/services/predictive-processor-for-finance-2-da3432eb" title="Predictive Processor for Finance #2" />
         <h1 className="text-4xl font-bold mb-6">Predictive Processor for Finance #2</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Predictive Processor for Finance #2. This autonomous system provides predictive analytics with zero manual intervention needed.</p>
 

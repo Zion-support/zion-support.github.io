@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-engine-telecom-822f9091` title="Intelligent engine-telecom" />
+        <BreadcrumbSchema path="/services/intelligent-engine-telecom-822f9091" title="Intelligent engine-telecom" />
         <h1 className="text-4xl font-bold mb-6">Intelligent engine-telecom</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation telecom solution: Intelligent engine-telecom. Combines fraud prevention with adaptive intelligence for optimal results.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/smart-market-generator-24a39ec6` title="Smart Market Generator" />
+        <BreadcrumbSchema path="/services/smart-market-generator-24a39ec6" title="Smart Market Generator" />
         <h1 className="text-4xl font-bold mb-6">Smart Market Generator</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your media operations with our Smart Market Generator. This AI-driven solution automates market intelligence with unprecedented accuracy and efficienc</p>
 

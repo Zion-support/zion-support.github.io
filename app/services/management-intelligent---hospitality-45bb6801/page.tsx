@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/management-intelligent---hospitality-45bb6801` title="Management Intelligent - Hospitality" />
+        <BreadcrumbSchema path="/services/management-intelligent---hospitality-45bb6801" title="Management Intelligent - Hospitality" />
         <h1 className="text-4xl font-bold mb-6">Management Intelligent - Hospitality</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your hospitality operations with our Management Intelligent - Hospitality. This AI-driven solution automates customer insights with unprecedented accu</p>
 

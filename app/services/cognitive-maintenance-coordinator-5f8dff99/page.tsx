@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-maintenance-coordinator-5f8dff99` title="Cognitive Maintenance Coordinator" />
+        <BreadcrumbSchema path="/services/cognitive-maintenance-coordinator-5f8dff99" title="Cognitive Maintenance Coordinator" />
         <h1 className="text-4xl font-bold mb-6">Cognitive Maintenance Coordinator</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation media solution: Cognitive Maintenance Coordinator. Combines network optimization with adaptive intelligence for optimal results.</p>
 

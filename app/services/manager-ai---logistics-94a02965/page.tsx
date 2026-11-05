@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/manager-ai---logistics-94a02965` title="Manager AI - Logistics" />
+        <BreadcrumbSchema path="/services/manager-ai---logistics-94a02965" title="Manager AI - Logistics" />
         <h1 className="text-4xl font-bold mb-6">Manager AI - Logistics</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Manager AI - Logistics. This autonomous system provides document processing with zero manual intervention needed.</p>
 

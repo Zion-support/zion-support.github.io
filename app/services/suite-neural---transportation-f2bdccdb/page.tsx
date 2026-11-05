@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/suite-neural---transportation-f2bdccdb` title="Suite Neural - Transportation" />
+        <BreadcrumbSchema path="/services/suite-neural---transportation-f2bdccdb" title="Suite Neural - Transportation" />
         <h1 className="text-4xl font-bold mb-6">Suite Neural - Transportation</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your transportation operations with our Suite Neural - Transportation. This AI-driven solution automates market intelligence with unprecedented accura</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-optimization-construction-d29301c2` title="Intelligent optimization-construction" />
+        <BreadcrumbSchema path="/services/intelligent-optimization-construction-d29301c2" title="Intelligent optimization-construction" />
         <h1 className="text-4xl font-bold mb-6">Intelligent optimization-construction</h1>
         <p className="text-lg text-gray-300 mb-8">The future of construction is here with Intelligent optimization-construction. Powered by cutting-edge AI, this platform delivers document processing like never</p>
 

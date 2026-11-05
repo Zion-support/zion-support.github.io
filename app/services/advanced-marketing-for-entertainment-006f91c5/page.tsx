@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/advanced-marketing-for-entertainment-006f91c5` title="Advanced Marketing for Entertainment" />
+        <BreadcrumbSchema path="/services/advanced-marketing-for-entertainment-006f91c5" title="Advanced Marketing for Entertainment" />
         <h1 className="text-4xl font-bold mb-6">Advanced Marketing for Entertainment</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize entertainment through intelligent automation. Our Advanced Marketing for Entertainment leverages advanced machine learning to deliver audio analys</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/monitoring-predictive---retail-99989911` title="Monitoring Predictive - Retail" />
+        <BreadcrumbSchema path="/services/monitoring-predictive---retail-99989911" title="Monitoring Predictive - Retail" />
         <h1 className="text-4xl font-bold mb-6">Monitoring Predictive - Retail</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation Retail solution: Monitoring Predictive - Retail. Combines financial planning with adaptive intelligence for optimal results.</p>
 

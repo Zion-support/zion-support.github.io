@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/neural-intelligence-gaming-1f95e8dc` title="Neural intelligence-gaming" />
+        <BreadcrumbSchema path="/services/neural-intelligence-gaming-1f95e8dc" title="Neural intelligence-gaming" />
         <h1 className="text-4xl font-bold mb-6">Neural intelligence-gaming</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize gaming through intelligent automation. Our Neural intelligence-gaming leverages advanced machine learning to deliver predictive analytics at scale</p>
 

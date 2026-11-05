@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/automated-compliance-system-e0ee6f78` title="Automated Compliance System" />
+        <BreadcrumbSchema path="/services/automated-compliance-system-e0ee6f78" title="Automated Compliance System" />
         <h1 className="text-4xl font-bold mb-6">Automated Compliance System</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your healthcare operations with our Automated Compliance System. This AI-driven solution automates compliance monitoring with unprecedented accuracy a</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/communication-ab-for-marketing-9b0f7ba9` title="Communication A/B for Marketing" />
+        <BreadcrumbSchema path="/services/communication-ab-for-marketing-9b0f7ba9" title="Communication A/B for Marketing" />
         <h1 className="text-4xl font-bold mb-6">Communication A/B for Marketing</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your marketing operations with our Communication A/B for Marketing. This AI-driven solution automates a/b testing with unprecedented accuracy and effi</p>
 

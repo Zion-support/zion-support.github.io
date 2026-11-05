@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/neural-user-optimizer-88c9dd30` title="Neural User Optimizer" />
+        <BreadcrumbSchema path="/services/neural-user-optimizer-88c9dd30" title="Neural User Optimizer" />
         <h1 className="text-4xl font-bold mb-6">Neural User Optimizer</h1>
         <p className="text-lg text-gray-300 mb-8">The future of media is here with Neural User Optimizer. Powered by cutting-edge AI, this platform delivers energy management like never before.</p>
 

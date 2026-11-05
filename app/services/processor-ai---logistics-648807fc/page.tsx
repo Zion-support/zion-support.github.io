@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/processor-ai---logistics-648807fc` title="Processor AI - Logistics" />
+        <BreadcrumbSchema path="/services/processor-ai---logistics-648807fc" title="Processor AI - Logistics" />
         <h1 className="text-4xl font-bold mb-6">Processor AI - Logistics</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize logistics through intelligent automation. Our Processor AI - Logistics leverages advanced machine learning to deliver security monitoring at scale</p>
 

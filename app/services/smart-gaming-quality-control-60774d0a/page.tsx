@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/smart-gaming-quality-control-60774d0a` title="Smart Gaming Quality Control" />
+        <BreadcrumbSchema path="/services/smart-gaming-quality-control-60774d0a" title="Smart Gaming Quality Control" />
         <h1 className="text-4xl font-bold mb-6">Smart Gaming Quality Control</h1>
         <p className="text-lg text-gray-300 mb-8">Computer vision system that provides scalable automated inspection, defect detection, and quality assurance for manufacturing production lines.</p>
 

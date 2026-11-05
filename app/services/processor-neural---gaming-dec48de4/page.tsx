@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/processor-neural---gaming-dec48de4` title="Processor Neural - Gaming" />
+        <BreadcrumbSchema path="/services/processor-neural---gaming-dec48de4" title="Processor Neural - Gaming" />
         <h1 className="text-4xl font-bold mb-6">Processor Neural - Gaming</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize gaming through intelligent automation. Our Processor Neural - Gaming leverages advanced machine learning to deliver data processing at scale.</p>
 

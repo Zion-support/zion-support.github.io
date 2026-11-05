@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-generator---telecom-edition-2-0dc64aa6` title="AI Generator - Telecom Edition #2" />
+        <BreadcrumbSchema path="/services/ai-generator---telecom-edition-2-0dc64aa6" title="AI Generator - Telecom Edition #2" />
         <h1 className="text-4xl font-bold mb-6">AI Generator - Telecom Edition #2</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your Telecom operations with our AI Generator - Telecom Edition #2. This AI-driven solution automates document processing with unprecedented accuracy </p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/automated-resource-generator-5d9b702a` title="Automated Resource Generator" />
+        <BreadcrumbSchema path="/services/automated-resource-generator-5d9b702a" title="Automated Resource Generator" />
         <h1 className="text-4xl font-bold mb-6">Automated Resource Generator</h1>
         <p className="text-lg text-gray-300 mb-8">The future of energy is here with Automated Resource Generator. Powered by cutting-edge AI, this platform delivers resource optimization like never before.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictive-sharing-engine-remote-work-89b6df62` title="Predictive Sharing Engine - Remote-Work" />
+        <BreadcrumbSchema path="/services/predictive-sharing-engine-remote-work-89b6df62" title="Predictive Sharing Engine - Remote-Work" />
         <h1 className="text-4xl font-bold mb-6">Predictive Sharing Engine - Remote-Work</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize remote-work through intelligent automation. Our Predictive Sharing Engine - Remote-Work leverages advanced machine learning to deliver meeting int</p>
 

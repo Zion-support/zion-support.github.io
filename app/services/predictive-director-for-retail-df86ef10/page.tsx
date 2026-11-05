@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictive-director-for-retail-df86ef10` title="Predictive Director for Retail" />
+        <BreadcrumbSchema path="/services/predictive-director-for-retail-df86ef10" title="Predictive Director for Retail" />
         <h1 className="text-4xl font-bold mb-6">Predictive Director for Retail</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your retail operations with our Predictive Director for Retail. This AI-driven solution automates fraud prevention with unprecedented accuracy and eff</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-manager-telecom-3fa0f17a` title="Cognitive manager-telecom" />
+        <BreadcrumbSchema path="/services/cognitive-manager-telecom-3fa0f17a" title="Cognitive manager-telecom" />
         <h1 className="text-4xl font-bold mb-6">Cognitive manager-telecom</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize telecom through intelligent automation. Our Cognitive manager-telecom leverages advanced machine learning to deliver network optimization at scale</p>
 

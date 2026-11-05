@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/autonomous-generator-manufacturing-3a945d3d` title="Autonomous generator-manufacturing" />
+        <BreadcrumbSchema path="/services/autonomous-generator-manufacturing-3a945d3d" title="Autonomous generator-manufacturing" />
         <h1 className="text-4xl font-bold mb-6">Autonomous generator-manufacturing</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your manufacturing operations with our Autonomous generator-manufacturing. This AI-driven solution automates network optimization with unprecedented a</p>
 

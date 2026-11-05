@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/adaptive-engine-for-logistics-33153c20` title="Adaptive Engine for Logistics" />
+        <BreadcrumbSchema path="/services/adaptive-engine-for-logistics-33153c20" title="Adaptive Engine for Logistics" />
         <h1 className="text-4xl font-bold mb-6">Adaptive Engine for Logistics</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize Logistics through intelligent automation. Our Adaptive Engine for Logistics leverages advanced machine learning to deliver sentiment analysis at s</p>
 

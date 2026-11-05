@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/adaptive-predictive-platform-ff1790b9` title="Adaptive Predictive Platform" />
+        <BreadcrumbSchema path="/services/adaptive-predictive-platform-ff1790b9" title="Adaptive Predictive Platform" />
         <h1 className="text-4xl font-bold mb-6">Adaptive Predictive Platform</h1>
         <p className="text-lg text-gray-300 mb-8">The future of technology is here with Adaptive Predictive Platform. Powered by cutting-edge AI, this platform delivers code optimization like never before.</p>
 

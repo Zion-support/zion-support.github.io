@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/smart-automation-hospitality-2d607dbb` title="Smart automation-hospitality" />
+        <BreadcrumbSchema path="/services/smart-automation-hospitality-2d607dbb" title="Smart automation-hospitality" />
         <h1 className="text-4xl font-bold mb-6">Smart automation-hospitality</h1>
         <p className="text-lg text-gray-300 mb-8">The future of hospitality is here with Smart automation-hospitality. Powered by cutting-edge AI, this platform delivers supply chain like never before.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-driven-fintech-optimization-suite-4f046f35` title="AI-Driven Fintech Optimization Suite" />
+        <BreadcrumbSchema path="/services/ai-driven-fintech-optimization-suite-4f046f35" title="AI-Driven Fintech Optimization Suite" />
         <h1 className="text-4xl font-bold mb-6">AI-Driven Fintech Optimization Suite</h1>
         <p className="text-lg text-gray-300 mb-8">Industry-specific AI solution that optimizes fintech operations and decision-making processes.</p>
 

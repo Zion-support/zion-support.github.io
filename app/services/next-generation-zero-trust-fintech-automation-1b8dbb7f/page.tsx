@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/next-generation-zero-trust-fintech-automation-1b8dbb7f` title="Next-Generation Zero-Trust Fintech Automation" />
+        <BreadcrumbSchema path="/services/next-generation-zero-trust-fintech-automation-1b8dbb7f" title="Next-Generation Zero-Trust Fintech Automation" />
         <h1 className="text-4xl font-bold mb-6">Next-Generation Zero-Trust Fintech Automation</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation automation suite that streamlines zero-trust fintech workflows with intelligent orchestration.</p>
 

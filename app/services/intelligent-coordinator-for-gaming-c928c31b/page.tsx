@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-coordinator-for-gaming-c928c31b` title="Intelligent Coordinator for Gaming" />
+        <BreadcrumbSchema path="/services/intelligent-coordinator-for-gaming-c928c31b" title="Intelligent Coordinator for Gaming" />
         <h1 className="text-4xl font-bold mb-6">Intelligent Coordinator for Gaming</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation gaming solution: Intelligent Coordinator for Gaming. Combines financial planning with adaptive intelligence for optimal results.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/generator-smart---education-4e035959` title="Generator Smart - Education" />
+        <BreadcrumbSchema path="/services/generator-smart---education-4e035959" title="Generator Smart - Education" />
         <h1 className="text-4xl font-bold mb-6">Generator Smart - Education</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation education solution: Generator Smart - Education. Combines quality control with adaptive intelligence for optimal results.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-powered-code-data-0a647fd1` title="AI-Powered Code Data" />
+        <BreadcrumbSchema path="/services/ai-powered-code-data-0a647fd1" title="AI-Powered Code Data" />
         <h1 className="text-4xl font-bold mb-6">AI-Powered Code Data</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with AI-Powered Code Data. This autonomous system provides master data management with zero manual intervention needed.</p>
 

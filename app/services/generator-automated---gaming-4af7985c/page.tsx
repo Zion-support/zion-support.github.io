@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/generator-automated---gaming-4af7985c` title="Generator Automated - Gaming" />
+        <BreadcrumbSchema path="/services/generator-automated---gaming-4af7985c" title="Generator Automated - Gaming" />
         <h1 className="text-4xl font-bold mb-6">Generator Automated - Gaming</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize gaming through intelligent automation. Our Generator Automated - Gaming leverages advanced machine learning to deliver sales forecasting at scale.</p>
 

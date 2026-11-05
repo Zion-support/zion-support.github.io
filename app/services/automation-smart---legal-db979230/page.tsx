@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/automation-smart---legal-db979230` title="Automation Smart - Legal" />
+        <BreadcrumbSchema path="/services/automation-smart---legal-db979230" title="Automation Smart - Legal" />
         <h1 className="text-4xl font-bold mb-6">Automation Smart - Legal</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Automation Smart - Legal. This autonomous system provides predictive analytics with zero manual intervention needed.</p>
 

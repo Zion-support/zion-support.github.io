@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/deployment-release-tech-2f866f93` title="Deployment Release - Tech" />
+        <BreadcrumbSchema path="/services/deployment-release-tech-2f866f93" title="Deployment Release - Tech" />
         <h1 className="text-4xl font-bold mb-6">Deployment Release - Tech</h1>
         <p className="text-lg text-gray-300 mb-8">Drive innovation in technology with Deployment Release - Tech. This AI-powered platform transforms release management into a competitive advantage.</p>
 

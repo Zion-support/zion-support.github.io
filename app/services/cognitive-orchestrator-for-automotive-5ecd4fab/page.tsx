@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-orchestrator-for-automotive-5ecd4fab` title="Cognitive Orchestrator for Automotive" />
+        <BreadcrumbSchema path="/services/cognitive-orchestrator-for-automotive-5ecd4fab" title="Cognitive Orchestrator for Automotive" />
         <h1 className="text-4xl font-bold mb-6">Cognitive Orchestrator for Automotive</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Cognitive Orchestrator for Automotive. This autonomous system provides predictive analytics with zero manual intervention neede</p>
 

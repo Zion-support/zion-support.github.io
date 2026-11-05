@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/adaptive-system-for-media-41d4bb83` title="Adaptive System for Media" />
+        <BreadcrumbSchema path="/services/adaptive-system-for-media-41d4bb83" title="Adaptive System for Media" />
         <h1 className="text-4xl font-bold mb-6">Adaptive System for Media</h1>
         <p className="text-lg text-gray-300 mb-8">The future of media is here with Adaptive System for Media. Powered by cutting-edge AI, this platform delivers customer insights like never before.</p>
 

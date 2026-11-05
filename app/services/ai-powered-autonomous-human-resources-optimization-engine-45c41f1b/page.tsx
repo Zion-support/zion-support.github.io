@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-powered-autonomous-human-resources-optimization-engine-45c41f1b` title="AI-Powered Autonomous Human Resources Optimization Engine" />
+        <BreadcrumbSchema path="/services/ai-powered-autonomous-human-resources-optimization-engine-45c41f1b" title="AI-Powered Autonomous Human Resources Optimization Engine" />
         <h1 className="text-4xl font-bold mb-6">AI-Powered Autonomous Human Resources Optimization Engine</h1>
         <p className="text-lg text-gray-300 mb-8">AI-powered optimization engine that continuously improves autonomous human resources performance through self-tuning algorithms.</p>
 

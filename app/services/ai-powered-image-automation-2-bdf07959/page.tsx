@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-powered-image-automation-2-bdf07959` title="AI-Powered Image Automation #2" />
+        <BreadcrumbSchema path="/services/ai-powered-image-automation-2-bdf07959" title="AI-Powered Image Automation #2" />
         <h1 className="text-4xl font-bold mb-6">AI-Powered Image Automation #2</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation transportation solution: AI-Powered Image Automation #2. Combines risk assessment with adaptive intelligence for optimal results.</p>
 

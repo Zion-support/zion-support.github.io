@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/suite-adaptive---automotive-6d8f2290` title="Suite Adaptive - Automotive" />
+        <BreadcrumbSchema path="/services/suite-adaptive---automotive-6d8f2290" title="Suite Adaptive - Automotive" />
         <h1 className="text-4xl font-bold mb-6">Suite Adaptive - Automotive</h1>
         <p className="text-lg text-gray-300 mb-8">The future of automotive is here with Suite Adaptive - Automotive. Powered by cutting-edge AI, this platform delivers document processing like never before.</p>
 

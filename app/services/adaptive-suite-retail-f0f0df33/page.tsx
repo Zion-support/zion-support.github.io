@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/adaptive-suite-retail-f0f0df33` title="Adaptive suite-retail" />
+        <BreadcrumbSchema path="/services/adaptive-suite-retail-f0f0df33" title="Adaptive suite-retail" />
         <h1 className="text-4xl font-bold mb-6">Adaptive suite-retail</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your retail operations with our Adaptive suite-retail. This AI-driven solution automates fraud prevention with unprecedented accuracy and efficiency.</p>
 

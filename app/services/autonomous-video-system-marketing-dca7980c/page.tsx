@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/autonomous-video-system-marketing-dca7980c` title="Autonomous Video System - Marketing" />
+        <BreadcrumbSchema path="/services/autonomous-video-system-marketing-dca7980c" title="Autonomous Video System - Marketing" />
         <h1 className="text-4xl font-bold mb-6">Autonomous Video System - Marketing</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize marketing through intelligent automation. Our Autonomous Video System - Marketing leverages advanced machine learning to deliver graphics generati</p>
 

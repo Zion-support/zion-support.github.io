@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/self-optimizing-document-automation-6c16911d` title="Self-Optimizing Document Automation" />
+        <BreadcrumbSchema path="/services/self-optimizing-document-automation-6c16911d" title="Self-Optimizing Document Automation" />
         <h1 className="text-4xl font-bold mb-6">Self-Optimizing Document Automation</h1>
         <p className="text-lg text-gray-300 mb-8">The future of Gaming is here with Self-Optimizing Document Automation. Powered by cutting-edge AI, this platform delivers executive dashboards like never before</p>
 

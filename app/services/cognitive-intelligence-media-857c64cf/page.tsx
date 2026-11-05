@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-intelligence-media-857c64cf` title="Cognitive intelligence-media" />
+        <BreadcrumbSchema path="/services/cognitive-intelligence-media-857c64cf" title="Cognitive intelligence-media" />
         <h1 className="text-4xl font-bold mb-6">Cognitive intelligence-media</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your media operations with our Cognitive intelligence-media. This AI-driven solution automates risk assessment with unprecedented accuracy and efficie</p>
 

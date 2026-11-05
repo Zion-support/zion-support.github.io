@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/serverless-smart-fitness-deployment-499661ae` title="Serverless Smart Fitness Deployment" />
+        <BreadcrumbSchema path="/services/serverless-smart-fitness-deployment-499661ae" title="Serverless Smart Fitness Deployment" />
         <h1 className="text-4xl font-bold mb-6">Serverless Smart Fitness Deployment</h1>
         <p className="text-lg text-gray-300 mb-8">Serverless deployment platform that auto-scales smart fitness workloads without infrastructure management.</p>
 

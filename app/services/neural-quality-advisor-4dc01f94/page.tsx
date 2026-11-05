@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/neural-quality-advisor-4dc01f94` title="Neural Quality Advisor" />
+        <BreadcrumbSchema path="/services/neural-quality-advisor-4dc01f94" title="Neural Quality Advisor" />
         <h1 className="text-4xl font-bold mb-6">Neural Quality Advisor</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your hospitality operations with our Neural Quality Advisor. This AI-driven solution automates resource optimization with unprecedented accuracy and e</p>
 

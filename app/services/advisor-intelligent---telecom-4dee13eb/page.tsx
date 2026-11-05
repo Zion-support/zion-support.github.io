@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/advisor-intelligent---telecom-4dee13eb` title="Advisor Intelligent - Telecom" />
+        <BreadcrumbSchema path="/services/advisor-intelligent---telecom-4dee13eb" title="Advisor Intelligent - Telecom" />
         <h1 className="text-4xl font-bold mb-6">Advisor Intelligent - Telecom</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your telecom operations with our Advisor Intelligent - Telecom. This AI-driven solution automates workflow management with unprecedented accuracy and </p>
 

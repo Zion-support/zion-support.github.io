@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/insights-neural---insurance-1-a94d99db` title="Insights Neural - Insurance #1" />
+        <BreadcrumbSchema path="/services/insights-neural---insurance-1-a94d99db" title="Insights Neural - Insurance #1" />
         <h1 className="text-4xl font-bold mb-6">Insights Neural - Insurance #1</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation insurance solution: Insights Neural - Insurance #1. Combines energy management with adaptive intelligence for optimal results.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictive-data-driven-freight-analytics-e96eb1d8` title="Predictive Data-Driven Freight Analytics" />
+        <BreadcrumbSchema path="/services/predictive-data-driven-freight-analytics-e96eb1d8" title="Predictive Data-Driven Freight Analytics" />
         <h1 className="text-4xl font-bold mb-6">Predictive Data-Driven Freight Analytics</h1>
         <p className="text-lg text-gray-300 mb-8">Freight intelligence platform that provides data-driven rate forecasting, capacity planning, and carrier performance analytics for logistics optimization.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-predictor-for-transportation-2-de4ed04e` title="Cognitive Predictor for Transportation #2" />
+        <BreadcrumbSchema path="/services/cognitive-predictor-for-transportation-2-de4ed04e" title="Cognitive Predictor for Transportation #2" />
         <h1 className="text-4xl font-bold mb-6">Cognitive Predictor for Transportation #2</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize transportation through intelligent automation. Our Cognitive Predictor for Transportation #2 leverages advanced machine learning to deliver invent</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/platform-smart---media-b96c7a08` title="Platform Smart - Media" />
+        <BreadcrumbSchema path="/services/platform-smart---media-b96c7a08" title="Platform Smart - Media" />
         <h1 className="text-4xl font-bold mb-6">Platform Smart - Media</h1>
         <p className="text-lg text-gray-300 mb-8">The future of media is here with Platform Smart - Media. Powered by cutting-edge AI, this platform delivers process automation like never before.</p>
 

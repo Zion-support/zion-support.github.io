@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictive-analytics-real-estate-261b444f` title="Predictive analytics-real-estate" />
+        <BreadcrumbSchema path="/services/predictive-analytics-real-estate-261b444f" title="Predictive analytics-real-estate" />
         <h1 className="text-4xl font-bold mb-6">Predictive analytics-real-estate</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Predictive analytics-real-estate. This autonomous system provides compliance monitoring with zero manual intervention needed.</p>
 

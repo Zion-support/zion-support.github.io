@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/manager-smart---finance-3a6f72e9` title="Manager Smart - Finance" />
+        <BreadcrumbSchema path="/services/manager-smart---finance-3a6f72e9" title="Manager Smart - Finance" />
         <h1 className="text-4xl font-bold mb-6">Manager Smart - Finance</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize finance through intelligent automation. Our Manager Smart - Finance leverages advanced machine learning to deliver resource optimization at scale.</p>
 

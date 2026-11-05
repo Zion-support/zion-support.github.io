@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/adaptive-compliance-system-9bdae974` title="Adaptive Compliance System" />
+        <BreadcrumbSchema path="/services/adaptive-compliance-system-9bdae974" title="Adaptive Compliance System" />
         <h1 className="text-4xl font-bold mb-6">Adaptive Compliance System</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Adaptive Compliance System. This autonomous system provides process automation with zero manual intervention needed.</p>
 

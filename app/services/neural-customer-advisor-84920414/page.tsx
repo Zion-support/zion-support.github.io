@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/neural-customer-advisor-84920414` title="Neural Customer Advisor" />
+        <BreadcrumbSchema path="/services/neural-customer-advisor-84920414" title="Neural Customer Advisor" />
         <h1 className="text-4xl font-bold mb-6">Neural Customer Advisor</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your legal operations with our Neural Customer Advisor. This AI-driven solution automates predictive analytics with unprecedented accuracy and efficie</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/engine-smart---legal-77def522` title="Engine Smart - Legal" />
+        <BreadcrumbSchema path="/services/engine-smart---legal-77def522" title="Engine Smart - Legal" />
         <h1 className="text-4xl font-bold mb-6">Engine Smart - Legal</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize legal through intelligent automation. Our Engine Smart - Legal leverages advanced machine learning to deliver workflow management at scale.</p>
 

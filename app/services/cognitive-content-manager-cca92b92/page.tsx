@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-content-manager-cca92b92` title="Cognitive Content Manager" />
+        <BreadcrumbSchema path="/services/cognitive-content-manager-cca92b92" title="Cognitive Content Manager" />
         <h1 className="text-4xl font-bold mb-6">Cognitive Content Manager</h1>
         <p className="text-lg text-gray-300 mb-8">The future of healthcare is here with Cognitive Content Manager. Powered by cutting-edge AI, this platform delivers energy management like never before.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/autonomous-process-intelligence-f52243db` title="Autonomous Process Intelligence" />
+        <BreadcrumbSchema path="/services/autonomous-process-intelligence-f52243db" title="Autonomous Process Intelligence" />
         <h1 className="text-4xl font-bold mb-6">Autonomous Process Intelligence</h1>
         <p className="text-lg text-gray-300 mb-8">The future of technology is here with Autonomous Process Intelligence. Powered by cutting-edge AI, this platform delivers threat detection like never before.</p>
 

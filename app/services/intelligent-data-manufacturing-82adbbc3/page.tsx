@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-data-manufacturing-82adbbc3` title="Intelligent Data Manufacturing" />
+        <BreadcrumbSchema path="/services/intelligent-data-manufacturing-82adbbc3" title="Intelligent Data Manufacturing" />
         <h1 className="text-4xl font-bold mb-6">Intelligent Data Manufacturing</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your Gaming operations with our Intelligent Data Manufacturing. This AI-driven solution automates predictive modeling with unprecedented accuracy and </p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/neural-maintenance-orchestrator-1-d7eb52d6` title="Neural Maintenance Orchestrator #1" />
+        <BreadcrumbSchema path="/services/neural-maintenance-orchestrator-1-d7eb52d6" title="Neural Maintenance Orchestrator #1" />
         <h1 className="text-4xl font-bold mb-6">Neural Maintenance Orchestrator #1</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your real-estate operations with our Neural Maintenance Orchestrator #1. This AI-driven solution automates security monitoring with unprecedented accu</p>
 

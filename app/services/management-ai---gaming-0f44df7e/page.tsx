@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/management-ai---gaming-0f44df7e` title="Management AI - Gaming" />
+        <BreadcrumbSchema path="/services/management-ai---gaming-0f44df7e" title="Management AI - Gaming" />
         <h1 className="text-4xl font-bold mb-6">Management AI - Gaming</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Management AI - Gaming. This autonomous system provides fraud prevention with zero manual intervention needed.</p>
 

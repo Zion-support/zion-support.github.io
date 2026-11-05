@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/coordinator-smart---agriculture-1-8e12a7db` title="Coordinator Smart - Agriculture #1" />
+        <BreadcrumbSchema path="/services/coordinator-smart---agriculture-1-8e12a7db" title="Coordinator Smart - Agriculture #1" />
         <h1 className="text-4xl font-bold mb-6">Coordinator Smart - Agriculture #1</h1>
         <p className="text-lg text-gray-300 mb-8">The future of agriculture is here with Coordinator Smart - Agriculture #1. Powered by cutting-edge AI, this platform delivers decision support like never before</p>
 

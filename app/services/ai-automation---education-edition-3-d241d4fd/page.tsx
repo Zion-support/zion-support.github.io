@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-automation---education-edition-3-d241d4fd` title="AI Automation - Education Edition #3" />
+        <BreadcrumbSchema path="/services/ai-automation---education-edition-3-d241d4fd" title="AI Automation - Education Edition #3" />
         <h1 className="text-4xl font-bold mb-6">AI Automation - Education Edition #3</h1>
         <p className="text-lg text-gray-300 mb-8">The future of education is here with AI Automation - Education Edition #3. Powered by cutting-edge AI, this platform delivers compliance monitoring like never b</p>
 

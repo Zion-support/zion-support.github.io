@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-powered-coordinator-for-retail-0c261695` title="AI-Powered Coordinator for Retail" />
+        <BreadcrumbSchema path="/services/ai-powered-coordinator-for-retail-0c261695" title="AI-Powered Coordinator for Retail" />
         <h1 className="text-4xl font-bold mb-6">AI-Powered Coordinator for Retail</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with AI-Powered Coordinator for Retail. This autonomous system provides healthcare data analytics with zero manual intervention need</p>
 

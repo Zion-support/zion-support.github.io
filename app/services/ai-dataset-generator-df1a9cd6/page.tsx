@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-dataset-generator-df1a9cd6` title="AI Dataset Generator" />
+        <BreadcrumbSchema path="/services/ai-dataset-generator-df1a9cd6" title="AI Dataset Generator" />
         <h1 className="text-4xl font-bold mb-6">AI Dataset Generator</h1>
         <p className="text-lg text-gray-300 mb-8">Generate synthetic training datasets for ML models with realistic distributions.</p>
 

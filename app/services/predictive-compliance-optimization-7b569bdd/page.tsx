@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictive-compliance-optimization-7b569bdd` title="Predictive Compliance Optimization" />
+        <BreadcrumbSchema path="/services/predictive-compliance-optimization-7b569bdd" title="Predictive Compliance Optimization" />
         <h1 className="text-4xl font-bold mb-6">Predictive Compliance Optimization</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation transportation solution: Predictive Compliance Optimization. Combines inventory management with adaptive intelligence for optimal results.</p>
 

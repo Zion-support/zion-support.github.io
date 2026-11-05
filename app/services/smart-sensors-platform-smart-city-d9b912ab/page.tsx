@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/smart-sensors-platform-smart-city-d9b912ab` title="Smart Sensors Platform - Smart-City" />
+        <BreadcrumbSchema path="/services/smart-sensors-platform-smart-city-d9b912ab" title="Smart Sensors Platform - Smart-City" />
         <h1 className="text-4xl font-bold mb-6">Smart Sensors Platform - Smart-City</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation smart-city solution: Smart Sensors Platform - Smart-City. Combines automation control with adaptive intelligence for optimal results.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/optimizer-adaptive---construction-f57ccb72` title="Optimizer Adaptive - Construction" />
+        <BreadcrumbSchema path="/services/optimizer-adaptive---construction-f57ccb72" title="Optimizer Adaptive - Construction" />
         <h1 className="text-4xl font-bold mb-6">Optimizer Adaptive - Construction</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Optimizer Adaptive - Construction. This autonomous system provides inventory management with zero manual intervention needed.</p>
 

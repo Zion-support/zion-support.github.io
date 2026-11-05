@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-inventory-suite-cf7841d0` title="Intelligent Inventory Suite" />
+        <BreadcrumbSchema path="/services/intelligent-inventory-suite-cf7841d0" title="Intelligent Inventory Suite" />
         <h1 className="text-4xl font-bold mb-6">Intelligent Inventory Suite</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize energy through intelligent automation. Our Intelligent Inventory Suite leverages advanced machine learning to deliver sales forecasting at scale.</p>
 

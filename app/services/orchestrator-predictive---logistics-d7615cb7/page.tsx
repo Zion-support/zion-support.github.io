@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/orchestrator-predictive---logistics-d7615cb7` title="Orchestrator Predictive - Logistics" />
+        <BreadcrumbSchema path="/services/orchestrator-predictive---logistics-d7615cb7" title="Orchestrator Predictive - Logistics" />
         <h1 className="text-4xl font-bold mb-6">Orchestrator Predictive - Logistics</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize logistics through intelligent automation. Our Orchestrator Predictive - Logistics leverages advanced machine learning to deliver sales forecasting</p>
 

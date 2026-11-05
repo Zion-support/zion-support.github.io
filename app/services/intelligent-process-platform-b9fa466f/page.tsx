@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-process-platform-b9fa466f` title="Intelligent Process Platform" />
+        <BreadcrumbSchema path="/services/intelligent-process-platform-b9fa466f" title="Intelligent Process Platform" />
         <h1 className="text-4xl font-bold mb-6">Intelligent Process Platform</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your transportation operations with our Intelligent Process Platform. This AI-driven solution automates resource optimization with unprecedented accur</p>
 

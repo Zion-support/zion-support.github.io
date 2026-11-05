@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/neural-director-sports-1404dec3` title="Neural director-sports" />
+        <BreadcrumbSchema path="/services/neural-director-sports-1404dec3" title="Neural director-sports" />
         <h1 className="text-4xl font-bold mb-6">Neural director-sports</h1>
         <p className="text-lg text-gray-300 mb-8">The future of sports is here with Neural director-sports. Powered by cutting-edge AI, this platform delivers predictive analytics like never before.</p>
 

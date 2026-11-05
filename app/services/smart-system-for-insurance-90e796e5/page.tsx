@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/smart-system-for-insurance-90e796e5` title="Smart System for Insurance" />
+        <BreadcrumbSchema path="/services/smart-system-for-insurance-90e796e5" title="Smart System for Insurance" />
         <h1 className="text-4xl font-bold mb-6">Smart System for Insurance</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize insurance through intelligent automation. Our Smart System for Insurance leverages advanced machine learning to deliver document processing at sca</p>
 
