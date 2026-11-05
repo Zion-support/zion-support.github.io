@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-document-platform-b41da82b` title="Cognitive Document Platform" />
+        <BreadcrumbSchema path="/services/cognitive-document-platform-b41da82b" title="Cognitive Document Platform" />
         <h1 className="text-4xl font-bold mb-6">Cognitive Document Platform</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your media operations with our Cognitive Document Platform. This AI-driven solution automates decision support with unprecedented accuracy and efficie</p>
 

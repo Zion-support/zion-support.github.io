@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-analytics-for-ecommerce-f4538cb7` title="Intelligent Analytics for Ecommerce" />
+        <BreadcrumbSchema path="/services/intelligent-analytics-for-ecommerce-f4538cb7" title="Intelligent Analytics for Ecommerce" />
         <h1 className="text-4xl font-bold mb-6">Intelligent Analytics for Ecommerce</h1>
         <p className="text-lg text-gray-300 mb-8">The future of ecommerce is here with Intelligent Analytics for Ecommerce. Powered by cutting-edge AI, this platform delivers performance insights like never bef</p>
 

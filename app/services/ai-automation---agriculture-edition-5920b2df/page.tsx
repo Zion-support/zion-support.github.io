@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-automation---agriculture-edition-5920b2df` title="AI Automation - Agriculture Edition" />
+        <BreadcrumbSchema path="/services/ai-automation---agriculture-edition-5920b2df" title="AI Automation - Agriculture Edition" />
         <h1 className="text-4xl font-bold mb-6">AI Automation - Agriculture Edition</h1>
         <p className="text-lg text-gray-300 mb-8">The future of agriculture is here with AI Automation - Agriculture Edition. Powered by cutting-edge AI, this platform delivers document processing like never be</p>
 

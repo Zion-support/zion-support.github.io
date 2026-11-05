@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/automated-orchestrator-for-legal-87e1e6bf` title="Automated Orchestrator for Legal" />
+        <BreadcrumbSchema path="/services/automated-orchestrator-for-legal-87e1e6bf" title="Automated Orchestrator for Legal" />
         <h1 className="text-4xl font-bold mb-6">Automated Orchestrator for Legal</h1>
         <p className="text-lg text-gray-300 mb-8">The future of legal is here with Automated Orchestrator for Legal. Powered by cutting-edge AI, this platform delivers resource optimization like never before.</p>
 

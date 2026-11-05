@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-manager-transportation-f785e513` title="Intelligent manager-transportation" />
+        <BreadcrumbSchema path="/services/intelligent-manager-transportation-f785e513" title="Intelligent manager-transportation" />
         <h1 className="text-4xl font-bold mb-6">Intelligent manager-transportation</h1>
         <p className="text-lg text-gray-300 mb-8">The future of transportation is here with Intelligent manager-transportation. Powered by cutting-edge AI, this platform delivers threat detection like never bef</p>
 

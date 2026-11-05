@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-decision-support-system-e-commerce-intelligent-decision-support-system-for-e-commerce` title="Intelligent Decision Support System for E-commerce" />
+        <BreadcrumbSchema path="/services/intelligent-decision-support-system-e-commerce-intelligent-decision-support-system-for-e-commerce" title="Intelligent Decision Support System for E-commerce" />
         <h1 className="text-4xl font-bold mb-6">Intelligent Decision Support System for E-commerce</h1>
         <p className="text-lg text-gray-300 mb-8">AI-driven decision support system for e-commerce. Delivers data-backed recommendations for Personalized recommendations, inventory optimization, customer behavi</p>
 

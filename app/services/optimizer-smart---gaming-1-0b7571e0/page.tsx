@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/optimizer-smart---gaming-1-0b7571e0` title="Optimizer Smart - Gaming #1" />
+        <BreadcrumbSchema path="/services/optimizer-smart---gaming-1-0b7571e0" title="Optimizer Smart - Gaming #1" />
         <h1 className="text-4xl font-bold mb-6">Optimizer Smart - Gaming #1</h1>
         <p className="text-lg text-gray-300 mb-8">The future of Gaming is here with Optimizer Smart - Gaming #1. Powered by cutting-edge AI, this platform delivers process automation like never before.</p>
 

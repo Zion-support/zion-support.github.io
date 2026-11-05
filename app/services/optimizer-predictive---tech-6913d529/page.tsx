@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/optimizer-predictive---tech-6913d529` title="Optimizer Predictive - Tech" />
+        <BreadcrumbSchema path="/services/optimizer-predictive---tech-6913d529" title="Optimizer Predictive - Tech" />
         <h1 className="text-4xl font-bold mb-6">Optimizer Predictive - Tech</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Optimizer Predictive - Tech. This autonomous system provides risk assessment with zero manual intervention needed.</p>
 

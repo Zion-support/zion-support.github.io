@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/advisor-autonomous---logistics-798f9f1d` title="Advisor Autonomous - Logistics" />
+        <BreadcrumbSchema path="/services/advisor-autonomous---logistics-798f9f1d" title="Advisor Autonomous - Logistics" />
         <h1 className="text-4xl font-bold mb-6">Advisor Autonomous - Logistics</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize logistics through intelligent automation. Our Advisor Autonomous - Logistics leverages advanced machine learning to deliver language processing at</p>
 

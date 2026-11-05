@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/adaptive-inventory-predictor-94d996c6` title="Adaptive Inventory Predictor" />
+        <BreadcrumbSchema path="/services/adaptive-inventory-predictor-94d996c6" title="Adaptive Inventory Predictor" />
         <h1 className="text-4xl font-bold mb-6">Adaptive Inventory Predictor</h1>
         <p className="text-lg text-gray-300 mb-8">The future of Real Estate is here with Adaptive Inventory Predictor. Powered by cutting-edge AI, this platform delivers customer service automation like never b</p>
 

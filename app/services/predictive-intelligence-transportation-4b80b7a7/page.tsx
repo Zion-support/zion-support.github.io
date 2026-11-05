@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictive-intelligence-transportation-4b80b7a7` title="Predictive intelligence-transportation" />
+        <BreadcrumbSchema path="/services/predictive-intelligence-transportation-4b80b7a7" title="Predictive intelligence-transportation" />
         <h1 className="text-4xl font-bold mb-6">Predictive intelligence-transportation</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your transportation operations with our Predictive intelligence-transportation. This AI-driven solution automates threat detection with unprecedented </p>
 

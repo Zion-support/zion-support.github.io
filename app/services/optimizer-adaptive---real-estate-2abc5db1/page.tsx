@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/optimizer-adaptive---real-estate-2abc5db1` title="Optimizer Adaptive - Real-Estate" />
+        <BreadcrumbSchema path="/services/optimizer-adaptive---real-estate-2abc5db1" title="Optimizer Adaptive - Real-Estate" />
         <h1 className="text-4xl font-bold mb-6">Optimizer Adaptive - Real-Estate</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Optimizer Adaptive - Real-Estate. This autonomous system provides compliance monitoring with zero manual intervention needed.</p>
 

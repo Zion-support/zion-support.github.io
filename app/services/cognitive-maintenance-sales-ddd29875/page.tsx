@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-maintenance-sales-ddd29875` title="Cognitive Maintenance Sales" />
+        <BreadcrumbSchema path="/services/cognitive-maintenance-sales-ddd29875" title="Cognitive Maintenance Sales" />
         <h1 className="text-4xl font-bold mb-6">Cognitive Maintenance Sales</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize Telecom through intelligent automation. Our Cognitive Maintenance Sales leverages advanced machine learning to deliver data governance at scale.</p>
 

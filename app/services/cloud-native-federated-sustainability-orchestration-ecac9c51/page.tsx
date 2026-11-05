@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cloud-native-federated-sustainability-orchestration-ecac9c51` title="Cloud-Native Federated Sustainability Orchestration" />
+        <BreadcrumbSchema path="/services/cloud-native-federated-sustainability-orchestration-ecac9c51" title="Cloud-Native Federated Sustainability Orchestration" />
         <h1 className="text-4xl font-bold mb-6">Cloud-Native Federated Sustainability Orchestration</h1>
         <p className="text-lg text-gray-300 mb-8">Cloud-native orchestration platform that manages federated sustainability resources with auto-scaling and cost control.</p>
 

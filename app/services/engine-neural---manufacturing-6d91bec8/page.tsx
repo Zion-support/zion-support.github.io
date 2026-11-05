@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/engine-neural---manufacturing-6d91bec8` title="Engine Neural - Manufacturing" />
+        <BreadcrumbSchema path="/services/engine-neural---manufacturing-6d91bec8" title="Engine Neural - Manufacturing" />
         <h1 className="text-4xl font-bold mb-6">Engine Neural - Manufacturing</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation manufacturing solution: Engine Neural - Manufacturing. Combines fraud prevention with adaptive intelligence for optimal results.</p>
 

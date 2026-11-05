@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/smart-suite-for-tech-adcf93b0` title="Smart Suite for Tech" />
+        <BreadcrumbSchema path="/services/smart-suite-for-tech-adcf93b0" title="Smart Suite for Tech" />
         <h1 className="text-4xl font-bold mb-6">Smart Suite for Tech</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize technology through intelligent automation. Our Smart Suite for Tech leverages advanced machine learning to deliver performance monitoring at scale</p>
 

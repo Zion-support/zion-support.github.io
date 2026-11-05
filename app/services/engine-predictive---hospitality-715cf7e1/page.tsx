@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/engine-predictive---hospitality-715cf7e1` title="Engine Predictive - Hospitality" />
+        <BreadcrumbSchema path="/services/engine-predictive---hospitality-715cf7e1" title="Engine Predictive - Hospitality" />
         <h1 className="text-4xl font-bold mb-6">Engine Predictive - Hospitality</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Engine Predictive - Hospitality. This autonomous system provides inventory management with zero manual intervention needed.</p>
 

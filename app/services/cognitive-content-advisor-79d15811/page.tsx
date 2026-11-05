@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-content-advisor-79d15811` title="Cognitive Content Advisor" />
+        <BreadcrumbSchema path="/services/cognitive-content-advisor-79d15811" title="Cognitive Content Advisor" />
         <h1 className="text-4xl font-bold mb-6">Cognitive Content Advisor</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize education through intelligent automation. Our Cognitive Content Advisor leverages advanced machine learning to deliver inventory management at sca</p>
 

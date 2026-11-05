@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictive-integrated-gaming-risk-scoring-ef106ad1` title="Predictive Integrated Gaming Risk Scoring" />
+        <BreadcrumbSchema path="/services/predictive-integrated-gaming-risk-scoring-ef106ad1" title="Predictive Integrated Gaming Risk Scoring" />
         <h1 className="text-4xl font-bold mb-6">Predictive Integrated Gaming Risk Scoring</h1>
         <p className="text-lg text-gray-300 mb-8">Predictive risk scoring engine that assesses integrated gaming vulnerabilities with machine learning.</p>
 

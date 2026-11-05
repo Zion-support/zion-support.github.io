@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/self-optimizing-inventory-engine-d1f31f3a` title="Self-Optimizing Inventory Engine" />
+        <BreadcrumbSchema path="/services/self-optimizing-inventory-engine-d1f31f3a" title="Self-Optimizing Inventory Engine" />
         <h1 className="text-4xl font-bold mb-6">Self-Optimizing Inventory Engine</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize agriculture through intelligent automation. Our Self-Optimizing Inventory Engine leverages advanced machine learning to deliver quality control at</p>
 

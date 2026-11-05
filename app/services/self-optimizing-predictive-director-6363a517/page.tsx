@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/self-optimizing-predictive-director-6363a517` title="Self-Optimizing Predictive Director" />
+        <BreadcrumbSchema path="/services/self-optimizing-predictive-director-6363a517" title="Self-Optimizing Predictive Director" />
         <h1 className="text-4xl font-bold mb-6">Self-Optimizing Predictive Director</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation finance solution: Self-Optimizing Predictive Director. Combines predictive analytics with adaptive intelligence for optimal results.</p>
 

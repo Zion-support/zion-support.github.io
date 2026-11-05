@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/01-ai-18799938` title="01.AI" />
+        <BreadcrumbSchema path="/services/01-ai-18799938" title="01.AI" />
         <h1 className="text-4xl font-bold mb-6">01.AI</h1>
         <p className="text-lg text-gray-300 mb-8">01.AI (Chinese: 零一万物; pinyin: Língyī Wànwù) is an artificial intelligence (AI) company based in Beijing, China. It focuses on developing open source products. I</p>
 

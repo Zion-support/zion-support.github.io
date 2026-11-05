@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-seamless-pharmaceuticals-processing-framework-cc32920a` title="Intelligent Seamless Pharmaceuticals Processing Framework" />
+        <BreadcrumbSchema path="/services/intelligent-seamless-pharmaceuticals-processing-framework-cc32920a" title="Intelligent Seamless Pharmaceuticals Processing Framework" />
         <h1 className="text-4xl font-bold mb-6">Intelligent Seamless Pharmaceuticals Processing Framework</h1>
         <p className="text-lg text-gray-300 mb-8">Intelligent processing framework that automates seamless pharmaceuticals data flows with real-time transformation.</p>
 

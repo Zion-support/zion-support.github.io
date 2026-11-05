@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/autonomous-insights-system-construction-2b8dda26` title="Autonomous Insights System - Construction" />
+        <BreadcrumbSchema path="/services/autonomous-insights-system-construction-2b8dda26" title="Autonomous Insights System - Construction" />
         <h1 className="text-4xl font-bold mb-6">Autonomous Insights System - Construction</h1>
         <p className="text-lg text-gray-300 mb-8">Enhance your construction business with Autonomous Insights System - Construction. Our solution provides reputation management with enterprise-grade reliability</p>
 

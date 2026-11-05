@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/automated-engine-for-gaming-1-1c5ba011` title="Automated Engine for Gaming #1" />
+        <BreadcrumbSchema path="/services/automated-engine-for-gaming-1-1c5ba011" title="Automated Engine for Gaming #1" />
         <h1 className="text-4xl font-bold mb-6">Automated Engine for Gaming #1</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize gaming through intelligent automation. Our Automated Engine for Gaming #1 leverages advanced machine learning to deliver data processing at scale.</p>
 

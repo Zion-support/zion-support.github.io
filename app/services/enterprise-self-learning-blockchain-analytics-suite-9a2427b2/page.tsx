@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/enterprise-self-learning-blockchain-analytics-suite-9a2427b2` title="Enterprise Self-Learning Blockchain Analytics Suite" />
+        <BreadcrumbSchema path="/services/enterprise-self-learning-blockchain-analytics-suite-9a2427b2" title="Enterprise Self-Learning Blockchain Analytics Suite" />
         <h1 className="text-4xl font-bold mb-6">Enterprise Self-Learning Blockchain Analytics Suite</h1>
         <p className="text-lg text-gray-300 mb-8">Enterprise analytics suite that delivers self-learning blockchain insights with unified dashboards and reporting.</p>
 

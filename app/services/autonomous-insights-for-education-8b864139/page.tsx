@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/autonomous-insights-for-education-8b864139` title="Autonomous Insights for Education" />
+        <BreadcrumbSchema path="/services/autonomous-insights-for-education-8b864139" title="Autonomous Insights for Education" />
         <h1 className="text-4xl font-bold mb-6">Autonomous Insights for Education</h1>
         <p className="text-lg text-gray-300 mb-8">The future of education is here with Autonomous Insights for Education. Powered by cutting-edge AI, this platform delivers market intelligence like never before</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/system-predictive---legal-1-939def63` title="System Predictive - Legal #1" />
+        <BreadcrumbSchema path="/services/system-predictive---legal-1-939def63" title="System Predictive - Legal #1" />
         <h1 className="text-4xl font-bold mb-6">System Predictive - Legal #1</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation legal solution: System Predictive - Legal #1. Combines data processing with adaptive intelligence for optimal results.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-optimizer-energy-63b6e222` title="Cognitive optimizer-energy" />
+        <BreadcrumbSchema path="/services/cognitive-optimizer-energy-63b6e222" title="Cognitive optimizer-energy" />
         <h1 className="text-4xl font-bold mb-6">Cognitive optimizer-energy</h1>
         <p className="text-lg text-gray-300 mb-8">The future of energy is here with Cognitive optimizer-energy. Powered by cutting-edge AI, this platform delivers performance monitoring like never before.</p>
 

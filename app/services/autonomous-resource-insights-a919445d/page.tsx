@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/autonomous-resource-insights-a919445d` title="Autonomous Resource Insights" />
+        <BreadcrumbSchema path="/services/autonomous-resource-insights-a919445d" title="Autonomous Resource Insights" />
         <h1 className="text-4xl font-bold mb-6">Autonomous Resource Insights</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize finance through intelligent automation. Our Autonomous Resource Insights leverages advanced machine learning to deliver sales forecasting at scale</p>
 

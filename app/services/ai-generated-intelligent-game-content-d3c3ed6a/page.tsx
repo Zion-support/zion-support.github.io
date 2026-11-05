@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-generated-intelligent-game-content-d3c3ed6a` title="AI-Generated Intelligent Game Content" />
+        <BreadcrumbSchema path="/services/ai-generated-intelligent-game-content-d3c3ed6a" title="AI-Generated Intelligent Game Content" />
         <h1 className="text-4xl font-bold mb-6">AI-Generated Intelligent Game Content</h1>
         <p className="text-lg text-gray-300 mb-8">Procedural content generation platform that creates intelligent game assets, levels, narratives, and quests using generative AI, reducing development time and c</p>
 

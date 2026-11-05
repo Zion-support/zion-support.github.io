@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictive-generator-for-construction-ab01a133` title="Predictive Generator for Construction" />
+        <BreadcrumbSchema path="/services/predictive-generator-for-construction-ab01a133" title="Predictive Generator for Construction" />
         <h1 className="text-4xl font-bold mb-6">Predictive Generator for Construction</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize construction through intelligent automation. Our Predictive Generator for Construction leverages advanced machine learning to deliver code optimiz</p>
 

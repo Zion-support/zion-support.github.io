@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-director---legal-edition-2-de059d5b` title="AI Director - Legal Edition #2" />
+        <BreadcrumbSchema path="/services/ai-director---legal-edition-2-de059d5b" title="AI Director - Legal Edition #2" />
         <h1 className="text-4xl font-bold mb-6">AI Director - Legal Edition #2</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation legal solution: AI Director - Legal Edition #2. Combines inventory management with adaptive intelligence for optimal results.</p>
 

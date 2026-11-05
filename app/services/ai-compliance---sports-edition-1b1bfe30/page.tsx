@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-compliance---sports-edition-1b1bfe30` title="AI Compliance - Sports Edition" />
+        <BreadcrumbSchema path="/services/ai-compliance---sports-edition-1b1bfe30" title="AI Compliance - Sports Edition" />
         <h1 className="text-4xl font-bold mb-6">AI Compliance - Sports Edition</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation Sports solution: AI Compliance - Sports Edition. Combines automation opportunity with adaptive intelligence for optimal results.</p>
 

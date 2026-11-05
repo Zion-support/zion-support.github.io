@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/optimizer-predictive---healthcare-6d6bc5c6` title="Optimizer Predictive - Healthcare" />
+        <BreadcrumbSchema path="/services/optimizer-predictive---healthcare-6d6bc5c6" title="Optimizer Predictive - Healthcare" />
         <h1 className="text-4xl font-bold mb-6">Optimizer Predictive - Healthcare</h1>
         <p className="text-lg text-gray-300 mb-8">The future of Healthcare is here with Optimizer Predictive - Healthcare. Powered by cutting-edge AI, this platform delivers supply chain like never before.</p>
 

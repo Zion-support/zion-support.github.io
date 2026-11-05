@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/serverless-event-driven-agriculture-deployment-6c88bc3b` title="Serverless Event-Driven Agriculture Deployment" />
+        <BreadcrumbSchema path="/services/serverless-event-driven-agriculture-deployment-6c88bc3b" title="Serverless Event-Driven Agriculture Deployment" />
         <h1 className="text-4xl font-bold mb-6">Serverless Event-Driven Agriculture Deployment</h1>
         <p className="text-lg text-gray-300 mb-8">Serverless deployment platform that auto-scales event-driven agriculture workloads without infrastructure management.</p>
 

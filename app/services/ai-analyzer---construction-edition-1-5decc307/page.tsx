@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-analyzer---construction-edition-1-5decc307` title="AI Analyzer - Construction Edition #1" />
+        <BreadcrumbSchema path="/services/ai-analyzer---construction-edition-1-5decc307" title="AI Analyzer - Construction Edition #1" />
         <h1 className="text-4xl font-bold mb-6">AI Analyzer - Construction Edition #1</h1>
         <p className="text-lg text-gray-300 mb-8">The future of construction is here with AI Analyzer - Construction Edition #1. Powered by cutting-edge AI, this platform delivers decision support like never be</p>
 

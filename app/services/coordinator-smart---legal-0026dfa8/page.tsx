@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/coordinator-smart---legal-0026dfa8` title="Coordinator Smart - Legal" />
+        <BreadcrumbSchema path="/services/coordinator-smart---legal-0026dfa8" title="Coordinator Smart - Legal" />
         <h1 className="text-4xl font-bold mb-6">Coordinator Smart - Legal</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation legal solution: Coordinator Smart - Legal. Combines financial planning with adaptive intelligence for optimal results.</p>
 

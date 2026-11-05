@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/automated-predictor-for-agriculture-b4d26b6f` title="Automated Predictor for Agriculture" />
+        <BreadcrumbSchema path="/services/automated-predictor-for-agriculture-b4d26b6f" title="Automated Predictor for Agriculture" />
         <h1 className="text-4xl font-bold mb-6">Automated Predictor for Agriculture</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation agriculture solution: Automated Predictor for Agriculture. Combines sales forecasting with adaptive intelligence for optimal results.</p>
 

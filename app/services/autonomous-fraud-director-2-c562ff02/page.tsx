@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/autonomous-fraud-director-2-c562ff02` title="Autonomous Fraud Director #2" />
+        <BreadcrumbSchema path="/services/autonomous-fraud-director-2-c562ff02" title="Autonomous Fraud Director #2" />
         <h1 className="text-4xl font-bold mb-6">Autonomous Fraud Director #2</h1>
         <p className="text-lg text-gray-300 mb-8">The future of retail is here with Autonomous Fraud Director #2. Powered by cutting-edge AI, this platform delivers market intelligence like never before.</p>
 

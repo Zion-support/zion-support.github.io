@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-powered-analyzer-for-telecom-2-07f1902b` title="AI-Powered Analyzer for Telecom #2" />
+        <BreadcrumbSchema path="/services/ai-powered-analyzer-for-telecom-2-07f1902b" title="AI-Powered Analyzer for Telecom #2" />
         <h1 className="text-4xl font-bold mb-6">AI-Powered Analyzer for Telecom #2</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation Telecom solution: AI-Powered Analyzer for Telecom #2. Combines executive dashboards with adaptive intelligence for optimal results.</p>
 

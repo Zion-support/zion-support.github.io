@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/smart-security-coordinator-3e0830a3` title="Smart Security Coordinator" />
+        <BreadcrumbSchema path="/services/smart-security-coordinator-3e0830a3" title="Smart Security Coordinator" />
         <h1 className="text-4xl font-bold mb-6">Smart Security Coordinator</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize energy through intelligent automation. Our Smart Security Coordinator leverages advanced machine learning to deliver image recognition at scale.</p>
 

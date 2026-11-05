@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-feedback-solution-education-e170afb4` title="Cognitive Feedback Solution - Education" />
+        <BreadcrumbSchema path="/services/cognitive-feedback-solution-education-e170afb4" title="Cognitive Feedback Solution - Education" />
         <h1 className="text-4xl font-bold mb-6">Cognitive Feedback Solution - Education</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize education through intelligent automation. Our Cognitive Feedback Solution - Education leverages advanced machine learning to deliver project manag</p>
 

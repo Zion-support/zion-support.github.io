@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-network-predictor-55d92d31` title="Cognitive Network Predictor" />
+        <BreadcrumbSchema path="/services/cognitive-network-predictor-55d92d31" title="Cognitive Network Predictor" />
         <h1 className="text-4xl font-bold mb-6">Cognitive Network Predictor</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation retail solution: Cognitive Network Predictor. Combines maintenance scheduling with adaptive intelligence for optimal results.</p>
 

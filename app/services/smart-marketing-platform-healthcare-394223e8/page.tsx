@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/smart-marketing-platform-healthcare-394223e8` title="Smart Marketing Platform - Healthcare" />
+        <BreadcrumbSchema path="/services/smart-marketing-platform-healthcare-394223e8" title="Smart Marketing Platform - Healthcare" />
         <h1 className="text-4xl font-bold mb-6">Smart Marketing Platform - Healthcare</h1>
         <p className="text-lg text-gray-300 mb-8">Drive innovation in healthcare with Smart Marketing Platform - Healthcare. This AI-powered platform transforms employee engagement into a competitive advantage.</p>
 

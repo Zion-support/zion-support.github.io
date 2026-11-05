@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictive-insights-for-automotive-dbeb2ecb` title="Predictive Insights for Automotive" />
+        <BreadcrumbSchema path="/services/predictive-insights-for-automotive-dbeb2ecb" title="Predictive Insights for Automotive" />
         <h1 className="text-4xl font-bold mb-6">Predictive Insights for Automotive</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation automotive solution: Predictive Insights for Automotive. Combines market intelligence with adaptive intelligence for optimal results.</p>
 

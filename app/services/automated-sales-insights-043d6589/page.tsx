@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/automated-sales-insights-043d6589` title="Automated Sales Insights" />
+        <BreadcrumbSchema path="/services/automated-sales-insights-043d6589" title="Automated Sales Insights" />
         <h1 className="text-4xl font-bold mb-6">Automated Sales Insights</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Automated Sales Insights. This autonomous system provides compliance monitoring with zero manual intervention needed.</p>
 

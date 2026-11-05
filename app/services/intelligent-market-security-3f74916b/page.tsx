@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-market-security-3f74916b` title="Intelligent Market Security" />
+        <BreadcrumbSchema path="/services/intelligent-market-security-3f74916b" title="Intelligent Market Security" />
         <h1 className="text-4xl font-bold mb-6">Intelligent Market Security</h1>
         <p className="text-lg text-gray-300 mb-8">The future of Construction is here with Intelligent Market Security. Powered by cutting-edge AI, this platform delivers business intelligence like never before.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-powered-engine-telecom-bb339f8c` title="AI-Powered engine-telecom" />
+        <BreadcrumbSchema path="/services/ai-powered-engine-telecom-bb339f8c" title="AI-Powered engine-telecom" />
         <h1 className="text-4xl font-bold mb-6">AI-Powered engine-telecom</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation telecom solution: AI-Powered engine-telecom. Combines performance monitoring with adaptive intelligence for optimal results.</p>
 

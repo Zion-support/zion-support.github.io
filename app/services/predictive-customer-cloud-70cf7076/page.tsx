@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictive-customer-cloud-70cf7076` title="Predictive Customer Cloud" />
+        <BreadcrumbSchema path="/services/predictive-customer-cloud-70cf7076" title="Predictive Customer Cloud" />
         <h1 className="text-4xl font-bold mb-6">Predictive Customer Cloud</h1>
         <p className="text-lg text-gray-300 mb-8">The future of Retail is here with Predictive Customer Cloud. Powered by cutting-edge AI, this platform delivers predictive analytics like never before.</p>
 

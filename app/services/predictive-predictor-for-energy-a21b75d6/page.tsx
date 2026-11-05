@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictive-predictor-for-energy-a21b75d6` title="Predictive Predictor for Energy" />
+        <BreadcrumbSchema path="/services/predictive-predictor-for-energy-a21b75d6" title="Predictive Predictor for Energy" />
         <h1 className="text-4xl font-bold mb-6">Predictive Predictor for Energy</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize energy through intelligent automation. Our Predictive Predictor for Energy leverages advanced machine learning to deliver supply chain at scale.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/autonomous-email-system-sales-18b463d7` title="Autonomous Email System - Sales" />
+        <BreadcrumbSchema path="/services/autonomous-email-system-sales-18b463d7" title="Autonomous Email System - Sales" />
         <h1 className="text-4xl font-bold mb-6">Autonomous Email System - Sales</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation sales solution: Autonomous Email System - Sales. Combines automation workflows with adaptive intelligence for optimal results.</p>
 

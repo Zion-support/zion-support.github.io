@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/automated-data-management-cb5646bd` title="Automated Data Management" />
+        <BreadcrumbSchema path="/services/automated-data-management-cb5646bd" title="Automated Data Management" />
         <h1 className="text-4xl font-bold mb-6">Automated Data Management</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation sports solution: Automated Data Management. Combines financial planning with adaptive intelligence for optimal results.</p>
 

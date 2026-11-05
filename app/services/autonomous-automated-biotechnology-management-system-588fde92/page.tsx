@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/autonomous-automated-biotechnology-management-system-588fde92` title="Autonomous Automated Biotechnology Management System" />
+        <BreadcrumbSchema path="/services/autonomous-automated-biotechnology-management-system-588fde92" title="Autonomous Automated Biotechnology Management System" />
         <h1 className="text-4xl font-bold mb-6">Autonomous Automated Biotechnology Management System</h1>
         <p className="text-lg text-gray-300 mb-8">Autonomous management system that self-optimizes automated biotechnology processes with minimal human intervention.</p>
 

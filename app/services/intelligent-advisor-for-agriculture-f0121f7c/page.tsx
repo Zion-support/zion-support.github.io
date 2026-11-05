@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-advisor-for-agriculture-f0121f7c` title="Intelligent Advisor for Agriculture" />
+        <BreadcrumbSchema path="/services/intelligent-advisor-for-agriculture-f0121f7c" title="Intelligent Advisor for Agriculture" />
         <h1 className="text-4xl font-bold mb-6">Intelligent Advisor for Agriculture</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Intelligent Advisor for Agriculture. This autonomous system provides language processing with zero manual intervention needed.</p>
 

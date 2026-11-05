@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/autonomous-content-marketing-0bc05b32` title="Autonomous Content Marketing" />
+        <BreadcrumbSchema path="/services/autonomous-content-marketing-0bc05b32" title="Autonomous Content Marketing" />
         <h1 className="text-4xl font-bold mb-6">Autonomous Content Marketing</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Autonomous Content Marketing. This autonomous system provides cost reduction with zero manual intervention needed.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-decision-support-system-government-intelligent-decision-support-system-for-government` title="Intelligent Decision Support System for Government" />
+        <BreadcrumbSchema path="/services/intelligent-decision-support-system-government-intelligent-decision-support-system-for-government" title="Intelligent Decision Support System for Government" />
         <h1 className="text-4xl font-bold mb-6">Intelligent Decision Support System for Government</h1>
         <p className="text-lg text-gray-300 mb-8">AI-driven decision support system for government. Delivers data-backed recommendations for Citizen services automation, policy analysis, resource allocation wit</p>
 

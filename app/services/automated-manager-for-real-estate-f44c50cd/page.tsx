@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/automated-manager-for-real-estate-f44c50cd` title="Automated Manager for Real-Estate" />
+        <BreadcrumbSchema path="/services/automated-manager-for-real-estate-f44c50cd" title="Automated Manager for Real-Estate" />
         <h1 className="text-4xl font-bold mb-6">Automated Manager for Real-Estate</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation real-estate solution: Automated Manager for Real-Estate. Combines financial planning with adaptive intelligence for optimal results.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-automation-for-retail-abb37c67` title="Intelligent Automation for Retail" />
+        <BreadcrumbSchema path="/services/intelligent-automation-for-retail-abb37c67" title="Intelligent Automation for Retail" />
         <h1 className="text-4xl font-bold mb-6">Intelligent Automation for Retail</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize retail through intelligent automation. Our Intelligent Automation for Retail leverages advanced machine learning to deliver financial planning at </p>
 

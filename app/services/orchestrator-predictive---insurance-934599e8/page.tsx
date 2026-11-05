@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/orchestrator-predictive---insurance-934599e8` title="Orchestrator Predictive - Insurance" />
+        <BreadcrumbSchema path="/services/orchestrator-predictive---insurance-934599e8" title="Orchestrator Predictive - Insurance" />
         <h1 className="text-4xl font-bold mb-6">Orchestrator Predictive - Insurance</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your insurance operations with our Orchestrator Predictive - Insurance. This AI-driven solution automates threat detection with unprecedented accuracy</p>
 

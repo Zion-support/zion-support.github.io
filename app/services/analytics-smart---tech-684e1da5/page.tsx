@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/analytics-smart---tech-684e1da5` title="Analytics Smart - Tech" />
+        <BreadcrumbSchema path="/services/analytics-smart---tech-684e1da5" title="Analytics Smart - Tech" />
         <h1 className="text-4xl font-bold mb-6">Analytics Smart - Tech</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation technology solution: Analytics Smart - Tech. Combines predictive analytics with adaptive intelligence for optimal results.</p>
 

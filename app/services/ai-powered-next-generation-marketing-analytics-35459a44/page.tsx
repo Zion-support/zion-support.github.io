@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-powered-next-generation-marketing-analytics-35459a44` title="AI-Powered Next-Generation Marketing Analytics" />
+        <BreadcrumbSchema path="/services/ai-powered-next-generation-marketing-analytics-35459a44" title="AI-Powered Next-Generation Marketing Analytics" />
         <h1 className="text-4xl font-bold mb-6">AI-Powered Next-Generation Marketing Analytics</h1>
         <p className="text-lg text-gray-300 mb-8">AI-driven analytics platform that delivers next-generation insights into marketing operations, providing real-time monitoring, predictive modeling, and automate</p>
 

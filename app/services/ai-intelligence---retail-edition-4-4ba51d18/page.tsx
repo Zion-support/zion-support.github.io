@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-intelligence---retail-edition-4-4ba51d18` title="AI Intelligence - Retail Edition #4" />
+        <BreadcrumbSchema path="/services/ai-intelligence---retail-edition-4-4ba51d18" title="AI Intelligence - Retail Edition #4" />
         <h1 className="text-4xl font-bold mb-6">AI Intelligence - Retail Edition #4</h1>
         <p className="text-lg text-gray-300 mb-8">The future of retail is here with AI Intelligence - Retail Edition #4. Powered by cutting-edge AI, this platform delivers risk assessment like never before.</p>
 

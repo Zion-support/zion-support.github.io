@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictive-performance-gaming-a81792f8` title="Predictive performance-gaming" />
+        <BreadcrumbSchema path="/services/predictive-performance-gaming-a81792f8" title="Predictive performance-gaming" />
         <h1 className="text-4xl font-bold mb-6">Predictive performance-gaming</h1>
         <p className="text-lg text-gray-300 mb-8">The future of Gaming is here with Predictive performance-gaming. Powered by cutting-edge AI, this platform delivers manufacturing quality control like never bef</p>
 

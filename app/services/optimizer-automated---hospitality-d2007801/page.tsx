@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/optimizer-automated---hospitality-d2007801` title="Optimizer Automated - Hospitality" />
+        <BreadcrumbSchema path="/services/optimizer-automated---hospitality-d2007801" title="Optimizer Automated - Hospitality" />
         <h1 className="text-4xl font-bold mb-6">Optimizer Automated - Hospitality</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize hospitality through intelligent automation. Our Optimizer Automated - Hospitality leverages advanced machine learning to deliver workflow manageme</p>
 

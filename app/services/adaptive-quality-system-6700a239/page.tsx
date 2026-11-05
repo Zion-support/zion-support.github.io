@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/adaptive-quality-system-6700a239` title="Adaptive Quality System" />
+        <BreadcrumbSchema path="/services/adaptive-quality-system-6700a239" title="Adaptive Quality System" />
         <h1 className="text-4xl font-bold mb-6">Adaptive Quality System</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Adaptive Quality System. This autonomous system provides data processing with zero manual intervention needed.</p>
 
