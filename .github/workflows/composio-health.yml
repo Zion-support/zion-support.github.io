@@ -18,33 +18,61 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # 2026-10-02 fix: npm package `composio` no longer ships a CLI binary
-      # (whoami exited 127). Use the REST API directly for health checks.
-      - name: Verify API key (connected accounts probe)
+      # 2026-11-05 fix: the v1 REST endpoint (/api/v1/connectedAccounts) now
+      # returns HTTP 410 "upgrade to v3 APIs". Use the Composio CLI v3 instead,
+      # matching composio-setup.yml.
+      - name: Install Composio CLI (v3)
+        run: |
+          curl -fsSL https://composio.dev/install | sh
+          echo "$HOME/.local/bin" >> $GITHUB_PATH
+
+      - name: Verify API key and login
         run: |
           set -euo pipefail
           if [ -z "${COMPOSIO_API_KEY:-}" ]; then
             echo "COMPOSIO_API_KEY secret is NOT set"; exit 1
           fi
-          code=$(curl -sS -o /tmp/ca.json -w "%{http_code}" \
-            -H "X-API-Key: ${COMPOSIO_API_KEY}" \
-            "https://backend.composio.dev/api/v1/connectedAccounts?showActiveOnly=true")
-          echo "connectedAccounts HTTP $code"
-          case "$code" in
-            2*) echo "API key OK" ;;
-            401|403) echo "API key INVALID/EXPIRED"; exit 1 ;;
-            *) echo "Unexpected status"; head -c 500 /tmp/ca.json; exit 1 ;;
-          esac
+          composio login --user-api-key "$COMPOSIO_API_KEY" --yes --no-skill-install
 
       - name: Count active connected accounts
         run: |
-          python3 - <<'PY' || true
+          set -euo pipefail
+          composio connections list > /tmp/composio-connections.json
+          python3 - <<'PY'
           import json
-          d=json.load(open('/tmp/ca.json'))
-          items=d.get('items') or d.get('connectedAccounts') or []
-          print(f"Active connected accounts: {len(items)}")
-          for a in items[:50]:
-              print('-', a.get('appName') or a.get('toolkit',{}).get('slug'), a.get('status'))
+          d = json.load(open('/tmp/composio-connections.json'))
+          total = 0
+          active = 0
+          lines = []
+          for toolkit, accounts in sorted(d.items()):
+              n = len(accounts) if isinstance(accounts, list) else 0
+              a = sum(1 for x in accounts if isinstance(x, dict) and str(x.get('status','')).upper() == 'ACTIVE') if isinstance(accounts, list) else 0
+              total += n
+              active += a
+              lines.append(f"- {toolkit}: {a} active / {n} total")
+          print(f"Active connected accounts: {active} (total {total})")
+          print("\n".join(lines))
+          PY
+
+      - name: Report accounts needing attention
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json
+          d = json.load(open('/tmp/composio-connections.json'))
+          problems = []
+          for toolkit, accounts in sorted(d.items()):
+              if not isinstance(accounts, list):
+                  continue
+              for a in accounts:
+                  status = str(a.get('status','')).upper()
+                  if status in ('EXPIRED','FAILED','REVOKED'):
+                      problems.append(f"- {toolkit}: {a.get('display_name') or a.get('word_id') or a.get('id')} -> {status}")
+          if problems:
+              print("Accounts needing attention:")
+              print("\n".join(problems))
+          else:
+              print("No expired/failed/revoked accounts.")
           PY
 
       - name: Summary

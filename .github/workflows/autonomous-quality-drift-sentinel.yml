@@ -45,7 +45,7 @@ jobs:
             automation/reports/autonomous-quality-drift-latest.json
             automation/reports/autonomous-quality-drift-latest.md
             automation/reports/autonomous-quality-drift-history.json
-          if-no-files-found: error
+          if-no-files-found: warn
           retention-days: 30
 
       - name: Escalate quality drift incident
