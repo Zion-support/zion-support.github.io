@@ -13,7 +13,7 @@ concurrency:
 
 "on":
   workflow_run:
-    workflows: [Deploy to GitHub Pages]
+    workflows: [Deploy on Push]
     types:
       - completed
     branches: [main]

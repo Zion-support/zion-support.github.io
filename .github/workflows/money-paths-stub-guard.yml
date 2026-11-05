@@ -15,6 +15,16 @@ on:
       - 'discovery/index.html'
       - '.github/workflows/money-paths-stub-guard.yml'
       - 'scripts/prepare-pages-out.sh'
+      - 'public/pt/discovery/**'
+      - 'public/es/discovery/**'
+      - 'public/fr/discovery/**'
+      - 'public/de/discovery/**'
+      - 'public/assets/js/discovery-delivery.js'
+      - 'public/assets/css/discovery.css'
+      - 'public/assets/js/zion-shell.js'
+      - 'public/contact/index.html'
+      - 'scripts/test-discovery-*.cjs'
+      - '.github/workflows/hermes-money-path-lock.yml'
   pull_request:
     paths:
       - 'public/services/ai-automation/index.html'
@@ -25,6 +35,16 @@ on:
       - 'discovery/index.html'
       - '.github/workflows/money-paths-stub-guard.yml'
       - 'scripts/prepare-pages-out.sh'
+      - 'public/pt/discovery/**'
+      - 'public/es/discovery/**'
+      - 'public/fr/discovery/**'
+      - 'public/de/discovery/**'
+      - 'public/assets/js/discovery-delivery.js'
+      - 'public/assets/css/discovery.css'
+      - 'public/assets/js/zion-shell.js'
+      - 'public/contact/index.html'
+      - 'scripts/test-discovery-*.cjs'
+      - '.github/workflows/hermes-money-path-lock.yml'
   workflow_dispatch:
 
 permissions:
@@ -63,3 +83,8 @@ jobs:
               echo "OK $f (${sz}B)"
             fi
           done
+      - name: Validate free Discovery and money-path isolation
+        run: |
+          node scripts/test-discovery-release-contract.cjs
+          node scripts/test-discovery-runtime.cjs
+          node scripts/test-discovery-money-lock.cjs

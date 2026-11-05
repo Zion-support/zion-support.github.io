@@ -42,7 +42,7 @@ jobs:
           path: |
             automation/reports/pm2-slo-latest.json
             automation/reports/pm2-slo-history.json
-          if-no-files-found: error
+          if-no-files-found: warn
           retention-days: 30
 
       - name: GitHub issues for PM2 SLO (critical vs warning)
