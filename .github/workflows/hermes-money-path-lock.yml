@@ -59,7 +59,7 @@ jobs:
 
           check public/services/ai-automation/index.html
           check services/ai-automation/index.html
-          for f in public/plans/index.html plans/index.html public/discovery/index.html discovery/index.html; do
+          for f in public/plans/index.html plans/index.html; do
             if [ -f "$f" ]; then check "$f"; fi
           done
 
@@ -97,3 +97,7 @@ jobs:
           fi
           git commit -m "lock(money): restore ai-automation pay HTML after Hermes stub (blob ${GOOD_BLOB:0:7})"
           git push origin HEAD:main
+      - name: Validate free Discovery
+        # Validate even if paid recovery fails, without preventing that recovery.
+        if: always()
+        run: node scripts/test-discovery-release-contract.cjs public
