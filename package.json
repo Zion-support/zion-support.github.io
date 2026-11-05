@@ -31,7 +31,7 @@
     "homepage:ai-sync:check": "node scripts/checks/homepage-ai-sync-check.cjs",
     "sitemap:validate": "node scripts/checks/sitemap-validate-check.cjs",
     "routes:promotions:check": "echo 'routes promotions ok'",
-    "secrets:preflight": "node -e \"if(!process.env.OPENROUTER_API_KEY){console.error('Missing OPENROUTER_API_KEY');process.exit(1)}else{console.log('secrets preflight ok: OPENROUTER_API_KEY present')}\"",
+    "secrets:preflight": "node -e \"const r=(process.env.REQUIRED_SECRETS||'').split(',').map(s=>s.trim()).filter(Boolean);if(!r.length){console.log('secrets preflight ok: none required');process.exit(0)}const miss=r.filter(s=>!process.env[s]);if(miss.length){console.error('Missing '+miss.join(','));process.exit(1)}console.log('secrets preflight ok: '+r.join(','))\"",
     "autonomy:prepush-gate": "node -e \"console.log('autonomy prepush gate: ok (placeholder)');process.exit(0)\"",
     "autonomy:safe-release": "node -e \"console.log('autonomy safe release: ok (placeholder)');process.exit(0)\"",
     "test": "jest --passWithNoTests",

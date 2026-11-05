@@ -60,7 +60,23 @@ assert_money_path() {
   local rel="$1"
   local f="out/$rel"
   if [ ! -f "$f" ]; then
+    # Reconcile once from source of truth (public/) or repo root before failing.
+    # public/ is the source of truth for Pages; a transient copy gap must not
+    # publish a Pay RED, but a genuinely absent page must still fail closed.
+    if [ -f "public/$rel" ]; then
+      mkdir -p "out/$(dirname "$rel")"
+      cp -a "public/$rel" "$f"
+      echo "RECOVERED out/$rel from public/$rel" >&2
+    elif [ -f "$rel" ]; then
+      mkdir -p "out/$(dirname "$rel")"
+      cp -a "$rel" "$f"
+      echo "RECOVERED out/$rel from $rel" >&2
+    fi
+  fi
+  if [ ! -f "$f" ]; then
     echo "ERROR: missing money path out/$rel" >&2
+    echo "ERROR: source public/$rel present=$([ -f "public/$rel" ] && echo yes || echo no)" >&2
+    echo "ERROR: out/$(dirname "$rel") listing: $(ls "out/$(dirname "$rel")" 2>/dev/null | head -8 | tr '\n' ' ')" >&2
     exit 1
   fi
   local sz
