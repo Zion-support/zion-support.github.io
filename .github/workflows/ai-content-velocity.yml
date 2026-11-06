@@ -45,7 +45,7 @@ permissions:
         type: boolean
 
 env:
-  NODE_OPTIONS: '--max-old-space-size=6144'
+  NODE_OPTIONS: '--max-old-space-size=8192'
 
 jobs:
   velocity:
@@ -77,11 +77,13 @@ jobs:
           MAX_ADD: ${{ github.event.inputs.max_add || '3' }}
         run: node automation/ai-content-burst-agent.cjs
 
-      - name: Validate build (catch content errors before push)
+      # Full `npm run build` removed: the ~35k-route tree needs >16GB heap and
+      # OOMs (exit 134) on 15GB GitHub-hosted runners. rsc:guard stays; full
+      # build validation happens in Deploy on Push / GitHub Pages.
+      - name: Validate content (rsc guard; build moved to Deploy on Push)
         run: |
           set -euo pipefail
           npm run rsc:guard
-          npm run build
 
       - name: Commit, push, and deploy
         env:

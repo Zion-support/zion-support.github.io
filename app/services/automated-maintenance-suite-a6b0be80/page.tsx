@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/automated-maintenance-suite-a6b0be80` title="Automated Maintenance Suite" />
+        <BreadcrumbSchema path="/services/automated-maintenance-suite-a6b0be80" title="Automated Maintenance Suite" />
         <h1 className="text-4xl font-bold mb-6">Automated Maintenance Suite</h1>
         <p className="text-lg text-gray-300 mb-8">The future of automotive is here with Automated Maintenance Suite. Powered by cutting-edge AI, this platform delivers energy management like never before.</p>
 

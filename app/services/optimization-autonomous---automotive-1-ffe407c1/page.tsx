@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/optimization-autonomous---automotive-1-ffe407c1` title="Optimization Autonomous - Automotive #1" />
+        <BreadcrumbSchema path="/services/optimization-autonomous---automotive-1-ffe407c1" title="Optimization Autonomous - Automotive #1" />
         <h1 className="text-4xl font-bold mb-6">Optimization Autonomous - Automotive #1</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize Automotive through intelligent automation. Our Optimization Autonomous - Automotive #1 leverages advanced machine learning to deliver brand monito</p>
 

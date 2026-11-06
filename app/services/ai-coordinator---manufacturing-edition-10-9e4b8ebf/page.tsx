@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-coordinator---manufacturing-edition-10-9e4b8ebf` title="AI Coordinator - Manufacturing Edition #10" />
+        <BreadcrumbSchema path="/services/ai-coordinator---manufacturing-edition-10-9e4b8ebf" title="AI Coordinator - Manufacturing Edition #10" />
         <h1 className="text-4xl font-bold mb-6">AI Coordinator - Manufacturing Edition #10</h1>
         <p className="text-lg text-gray-300 mb-8">The future of manufacturing is here with AI Coordinator - Manufacturing Edition #10. Powered by cutting-edge AI, this platform delivers customer insights like n</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/smart-inventory-engine-af199a16` title="Smart Inventory Engine" />
+        <BreadcrumbSchema path="/services/smart-inventory-engine-af199a16" title="Smart Inventory Engine" />
         <h1 className="text-4xl font-bold mb-6">Smart Inventory Engine</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation transportation solution: Smart Inventory Engine. Combines sales forecasting with adaptive intelligence for optimal results.</p>
 

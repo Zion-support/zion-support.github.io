@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/aleph-alpha-37fd3f12` title="Aleph Alpha" />
+        <BreadcrumbSchema path="/services/aleph-alpha-37fd3f12" title="Aleph Alpha" />
         <h1 className="text-4xl font-bold mb-6">Aleph Alpha</h1>
         <p className="text-lg text-gray-300 mb-8">Aleph Alpha GmbH is a German artificial intelligence (AI) startup developing large language models (LLMs). It emphasizes transparency of the sources used to gen</p>
 

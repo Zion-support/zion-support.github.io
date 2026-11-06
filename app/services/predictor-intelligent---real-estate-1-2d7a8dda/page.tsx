@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictor-intelligent---real-estate-1-2d7a8dda` title="Predictor Intelligent - Real-Estate #1" />
+        <BreadcrumbSchema path="/services/predictor-intelligent---real-estate-1-2d7a8dda" title="Predictor Intelligent - Real-Estate #1" />
         <h1 className="text-4xl font-bold mb-6">Predictor Intelligent - Real-Estate #1</h1>
         <p className="text-lg text-gray-300 mb-8">The future of real-estate is here with Predictor Intelligent - Real-Estate #1. Powered by cutting-edge AI, this platform delivers network optimization like neve</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/advisor-predictive---transportation-8fa0b7b1` title="Advisor Predictive - Transportation" />
+        <BreadcrumbSchema path="/services/advisor-predictive---transportation-8fa0b7b1" title="Advisor Predictive - Transportation" />
         <h1 className="text-4xl font-bold mb-6">Advisor Predictive - Transportation</h1>
         <p className="text-lg text-gray-300 mb-8">The future of transportation is here with Advisor Predictive - Transportation. Powered by cutting-edge AI, this platform delivers inventory management like neve</p>
 

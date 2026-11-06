@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-powered-intelligent-predictive-maintenance-0f5183e3` title="AI-Powered Intelligent Predictive Maintenance" />
+        <BreadcrumbSchema path="/services/ai-powered-intelligent-predictive-maintenance-0f5183e3" title="AI-Powered Intelligent Predictive Maintenance" />
         <h1 className="text-4xl font-bold mb-6">AI-Powered Intelligent Predictive Maintenance</h1>
         <p className="text-lg text-gray-300 mb-8">Industrial IoT platform that uses intelligent sensor analytics and ML to predict equipment failures, optimize maintenance schedules, and maximize uptime.</p>
 

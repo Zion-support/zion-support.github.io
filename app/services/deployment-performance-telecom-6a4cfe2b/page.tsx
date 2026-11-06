@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/deployment-performance-telecom-6a4cfe2b` title="Deployment Performance - Telecom" />
+        <BreadcrumbSchema path="/services/deployment-performance-telecom-6a4cfe2b" title="Deployment Performance - Telecom" />
         <h1 className="text-4xl font-bold mb-6">Deployment Performance - Telecom</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize telecom through intelligent automation. Our Deployment Performance - Telecom leverages advanced machine learning to deliver performance optimizati</p>
 

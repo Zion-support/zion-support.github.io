@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/system-ai---media-dbf68468` title="System AI - Media" />
+        <BreadcrumbSchema path="/services/system-ai---media-dbf68468" title="System AI - Media" />
         <h1 className="text-4xl font-bold mb-6">System AI - Media</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize media through intelligent automation. Our System AI - Media leverages advanced machine learning to deliver customer insights at scale.</p>
 

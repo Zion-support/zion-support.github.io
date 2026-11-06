@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/system-predictive---healthcare-5d4b50b3` title="System Predictive - Healthcare" />
+        <BreadcrumbSchema path="/services/system-predictive---healthcare-5d4b50b3" title="System Predictive - Healthcare" />
         <h1 className="text-4xl font-bold mb-6">System Predictive - Healthcare</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize healthcare through intelligent automation. Our System Predictive - Healthcare leverages advanced machine learning to deliver energy management at </p>
 

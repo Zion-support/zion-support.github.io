@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/next-gen-graphics-advertising-platform-783afe9c` title="Next-Gen Graphics Advertising Platform" />
+        <BreadcrumbSchema path="/services/next-gen-graphics-advertising-platform-783afe9c" title="Next-Gen Graphics Advertising Platform" />
         <h1 className="text-4xl font-bold mb-6">Next-Gen Graphics Advertising Platform</h1>
         <p className="text-lg text-gray-300 mb-8">Enhance your advertising business with Next-Gen Graphics Advertising Platform. Our solution provides audience insights with enterprise-grade reliability and sec</p>
 

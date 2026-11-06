@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-insights---logistics-edition-2353c6a7` title="AI Insights - Logistics Edition" />
+        <BreadcrumbSchema path="/services/ai-insights---logistics-edition-2353c6a7" title="AI Insights - Logistics Edition" />
         <h1 className="text-4xl font-bold mb-6">AI Insights - Logistics Edition</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize logistics through intelligent automation. Our AI Insights - Logistics Edition leverages advanced machine learning to deliver market intelligence a</p>
 

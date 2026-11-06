@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/compliance-self-optimizing---media-a5025f7c` title="Compliance Self-Optimizing - Media" />
+        <BreadcrumbSchema path="/services/compliance-self-optimizing---media-a5025f7c" title="Compliance Self-Optimizing - Media" />
         <h1 className="text-4xl font-bold mb-6">Compliance Self-Optimizing - Media</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your Media operations with our Compliance Self-Optimizing - Media. This AI-driven solution automates data governance with unprecedented accuracy and e</p>
 

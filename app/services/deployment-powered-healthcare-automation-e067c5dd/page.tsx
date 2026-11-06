@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/deployment-powered-healthcare-automation-e067c5dd` title="Deployment-Powered Healthcare Automation" />
+        <BreadcrumbSchema path="/services/deployment-powered-healthcare-automation-e067c5dd" title="Deployment-Powered Healthcare Automation" />
         <h1 className="text-4xl font-bold mb-6">Deployment-Powered Healthcare Automation</h1>
         <p className="text-lg text-gray-300 mb-8">The future of healthcare is here with Deployment-Powered Healthcare Automation. Powered by cutting-edge AI, this platform delivers continuous integration like n</p>
 

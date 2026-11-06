@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/autonomous-intelligence-education-1-9da9ca14` title="Autonomous intelligence-education #1" />
+        <BreadcrumbSchema path="/services/autonomous-intelligence-education-1-9da9ca14" title="Autonomous intelligence-education #1" />
         <h1 className="text-4xl font-bold mb-6">Autonomous intelligence-education #1</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your education operations with our Autonomous intelligence-education #1. This AI-driven solution automates image recognition with unprecedented accura</p>
 

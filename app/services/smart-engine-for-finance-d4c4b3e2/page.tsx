@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/smart-engine-for-finance-d4c4b3e2` title="Smart Engine for Finance" />
+        <BreadcrumbSchema path="/services/smart-engine-for-finance-d4c4b3e2" title="Smart Engine for Finance" />
         <h1 className="text-4xl font-bold mb-6">Smart Engine for Finance</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize finance through intelligent automation. Our Smart Engine for Finance leverages advanced machine learning to deliver threat detection at scale.</p>
 

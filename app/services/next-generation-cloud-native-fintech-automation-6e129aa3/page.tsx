@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/next-generation-cloud-native-fintech-automation-6e129aa3` title="Next-Generation Cloud-Native Fintech Automation" />
+        <BreadcrumbSchema path="/services/next-generation-cloud-native-fintech-automation-6e129aa3" title="Next-Generation Cloud-Native Fintech Automation" />
         <h1 className="text-4xl font-bold mb-6">Next-Generation Cloud-Native Fintech Automation</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation automation suite that streamlines cloud-native fintech workflows with intelligent orchestration.</p>
 

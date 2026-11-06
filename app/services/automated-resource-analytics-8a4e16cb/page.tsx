@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/automated-resource-analytics-8a4e16cb` title="Automated Resource Analytics" />
+        <BreadcrumbSchema path="/services/automated-resource-analytics-8a4e16cb" title="Automated Resource Analytics" />
         <h1 className="text-4xl font-bold mb-6">Automated Resource Analytics</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation automotive solution: Automated Resource Analytics. Combines disaster recovery with adaptive intelligence for optimal results.</p>
 

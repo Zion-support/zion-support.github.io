@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-fraud-processor-1-f2761063` title="Intelligent Fraud Processor #1" />
+        <BreadcrumbSchema path="/services/intelligent-fraud-processor-1-f2761063" title="Intelligent Fraud Processor #1" />
         <h1 className="text-4xl font-bold mb-6">Intelligent Fraud Processor #1</h1>
         <p className="text-lg text-gray-300 mb-8">The future of hospitality is here with Intelligent Fraud Processor #1. Powered by cutting-edge AI, this platform delivers predictive analytics like never before</p>
 

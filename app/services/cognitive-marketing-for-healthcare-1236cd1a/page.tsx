@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-marketing-for-healthcare-1236cd1a` title="Cognitive Marketing for Healthcare" />
+        <BreadcrumbSchema path="/services/cognitive-marketing-for-healthcare-1236cd1a" title="Cognitive Marketing for Healthcare" />
         <h1 className="text-4xl font-bold mb-6">Cognitive Marketing for Healthcare</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Cognitive Marketing for Healthcare. This autonomous system provides threat detection with zero manual intervention needed.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cloud-native-hyper-local-aviation-orchestration-873c9d5a` title="Cloud-Native Hyper-Local Aviation Orchestration" />
+        <BreadcrumbSchema path="/services/cloud-native-hyper-local-aviation-orchestration-873c9d5a" title="Cloud-Native Hyper-Local Aviation Orchestration" />
         <h1 className="text-4xl font-bold mb-6">Cloud-Native Hyper-Local Aviation Orchestration</h1>
         <p className="text-lg text-gray-300 mb-8">Cloud-native orchestration platform that manages hyper-local aviation resources with auto-scaling and cost control.</p>
 

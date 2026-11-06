@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-optimizer---hospitality-edition-8-cf070753` title="AI Optimizer - Hospitality Edition #8" />
+        <BreadcrumbSchema path="/services/ai-optimizer---hospitality-edition-8-cf070753" title="AI Optimizer - Hospitality Edition #8" />
         <h1 className="text-4xl font-bold mb-6">AI Optimizer - Hospitality Edition #8</h1>
         <p className="text-lg text-gray-300 mb-8">The future of hospitality is here with AI Optimizer - Hospitality Edition #8. Powered by cutting-edge AI, this platform delivers risk assessment like never befo</p>
 

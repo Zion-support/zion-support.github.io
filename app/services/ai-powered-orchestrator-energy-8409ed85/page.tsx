@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-powered-orchestrator-energy-8409ed85` title="AI-Powered orchestrator-energy" />
+        <BreadcrumbSchema path="/services/ai-powered-orchestrator-energy-8409ed85" title="AI-Powered orchestrator-energy" />
         <h1 className="text-4xl font-bold mb-6">AI-Powered orchestrator-energy</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize energy through intelligent automation. Our AI-Powered orchestrator-energy leverages advanced machine learning to deliver compliance monitoring at </p>
 

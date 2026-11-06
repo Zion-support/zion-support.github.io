@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-sales-optimizer-caed8ba4` title="Cognitive Sales Optimizer" />
+        <BreadcrumbSchema path="/services/cognitive-sales-optimizer-caed8ba4" title="Cognitive Sales Optimizer" />
         <h1 className="text-4xl font-bold mb-6">Cognitive Sales Optimizer</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Cognitive Sales Optimizer. This autonomous system provides quality control with zero manual intervention needed.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/self-optimizing-suite-for-legal-1ceb22c4` title="Self-Optimizing Suite for Legal" />
+        <BreadcrumbSchema path="/services/self-optimizing-suite-for-legal-1ceb22c4" title="Self-Optimizing Suite for Legal" />
         <h1 className="text-4xl font-bold mb-6">Self-Optimizing Suite for Legal</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your Legal operations with our Self-Optimizing Suite for Legal. This AI-driven solution automates market analysis with unprecedented accuracy and effi</p>
 

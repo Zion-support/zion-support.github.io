@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/automated-code-management-945810ed` title="Automated Code Management" />
+        <BreadcrumbSchema path="/services/automated-code-management-945810ed" title="Automated Code Management" />
         <h1 className="text-4xl font-bold mb-6">Automated Code Management</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize automotive through intelligent automation. Our Automated Code Management leverages advanced machine learning to deliver quality control at scale.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictive-processor-education-47f70f55` title="Predictive processor-education" />
+        <BreadcrumbSchema path="/services/predictive-processor-education-47f70f55" title="Predictive processor-education" />
         <h1 className="text-4xl font-bold mb-6">Predictive processor-education</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize education through intelligent automation. Our Predictive processor-education leverages advanced machine learning to deliver code optimization at s</p>
 

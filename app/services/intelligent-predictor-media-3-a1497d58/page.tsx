@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-predictor-media-3-a1497d58` title="Intelligent predictor-media #3" />
+        <BreadcrumbSchema path="/services/intelligent-predictor-media-3-a1497d58" title="Intelligent predictor-media #3" />
         <h1 className="text-4xl font-bold mb-6">Intelligent predictor-media #3</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize media through intelligent automation. Our Intelligent predictor-media #3 leverages advanced machine learning to deliver performance monitoring at </p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-powered-hyper-local-government-optimization-engine-5a1192ad` title="AI-Powered Hyper-Local Government Optimization Engine" />
+        <BreadcrumbSchema path="/services/ai-powered-hyper-local-government-optimization-engine-5a1192ad" title="AI-Powered Hyper-Local Government Optimization Engine" />
         <h1 className="text-4xl font-bold mb-6">AI-Powered Hyper-Local Government Optimization Engine</h1>
         <p className="text-lg text-gray-300 mb-8">AI-powered optimization engine that continuously improves hyper-local government performance through self-tuning algorithms.</p>
 

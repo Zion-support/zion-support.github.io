@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictive-generator-legal-1-8192cf4f` title="Predictive generator-legal #1" />
+        <BreadcrumbSchema path="/services/predictive-generator-legal-1-8192cf4f" title="Predictive generator-legal #1" />
         <h1 className="text-4xl font-bold mb-6">Predictive generator-legal #1</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation legal solution: Predictive generator-legal #1. Combines network optimization with adaptive intelligence for optimal results.</p>
 

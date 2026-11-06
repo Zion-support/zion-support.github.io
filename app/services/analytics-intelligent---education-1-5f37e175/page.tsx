@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/analytics-intelligent---education-1-5f37e175` title="Analytics Intelligent - Education #1" />
+        <BreadcrumbSchema path="/services/analytics-intelligent---education-1-5f37e175" title="Analytics Intelligent - Education #1" />
         <h1 className="text-4xl font-bold mb-6">Analytics Intelligent - Education #1</h1>
         <p className="text-lg text-gray-300 mb-8">The future of education is here with Analytics Intelligent - Education #1. Powered by cutting-edge AI, this platform delivers performance monitoring like never </p>
 

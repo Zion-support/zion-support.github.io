@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/healthcare-ai---telecom-4d67576e` title="Healthcare AI - Telecom" />
+        <BreadcrumbSchema path="/services/healthcare-ai---telecom-4d67576e" title="Healthcare AI - Telecom" />
         <h1 className="text-4xl font-bold mb-6">Healthcare AI - Telecom</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation Telecom solution: Healthcare AI - Telecom. Combines threat detection with adaptive intelligence for optimal results.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictive-market-advisor-019182e5` title="Predictive Market Advisor" />
+        <BreadcrumbSchema path="/services/predictive-market-advisor-019182e5" title="Predictive Market Advisor" />
         <h1 className="text-4xl font-bold mb-6">Predictive Market Advisor</h1>
         <p className="text-lg text-gray-300 mb-8">The future of healthcare is here with Predictive Market Advisor. Powered by cutting-edge AI, this platform delivers inventory management like never before.</p>
 

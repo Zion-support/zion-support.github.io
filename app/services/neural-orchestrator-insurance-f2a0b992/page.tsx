@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/neural-orchestrator-insurance-f2a0b992` title="Neural orchestrator-insurance" />
+        <BreadcrumbSchema path="/services/neural-orchestrator-insurance-f2a0b992" title="Neural orchestrator-insurance" />
         <h1 className="text-4xl font-bold mb-6">Neural orchestrator-insurance</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize insurance through intelligent automation. Our Neural orchestrator-insurance leverages advanced machine learning to deliver financial planning at s</p>
 

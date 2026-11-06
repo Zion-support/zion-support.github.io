@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictive-coordinator-engine-energy-ebf57db8` title="Predictive Coordinator Engine - Energy" />
+        <BreadcrumbSchema path="/services/predictive-coordinator-engine-energy-ebf57db8" title="Predictive Coordinator Engine - Energy" />
         <h1 className="text-4xl font-bold mb-6">Predictive Coordinator Engine - Energy</h1>
         <p className="text-lg text-gray-300 mb-8">Optimize your energy workflows with Predictive Coordinator Engine - Energy. This intelligent platform delivers regulatory tracking through advanced automation a</p>
 

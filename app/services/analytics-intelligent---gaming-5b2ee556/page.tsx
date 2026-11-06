@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/analytics-intelligent---gaming-5b2ee556` title="Analytics Intelligent - Gaming" />
+        <BreadcrumbSchema path="/services/analytics-intelligent---gaming-5b2ee556" title="Analytics Intelligent - Gaming" />
         <h1 className="text-4xl font-bold mb-6">Analytics Intelligent - Gaming</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize gaming through intelligent automation. Our Analytics Intelligent - Gaming leverages advanced machine learning to deliver network optimization at s</p>
 

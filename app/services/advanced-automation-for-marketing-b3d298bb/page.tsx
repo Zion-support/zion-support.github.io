@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/advanced-automation-for-marketing-b3d298bb` title="Advanced Automation for Marketing" />
+        <BreadcrumbSchema path="/services/advanced-automation-for-marketing-b3d298bb" title="Advanced Automation for Marketing" />
         <h1 className="text-4xl font-bold mb-6">Advanced Automation for Marketing</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation marketing solution: Advanced Automation for Marketing. Combines spam detection with adaptive intelligence for optimal results.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/neural-predictive-healthcare-7fa6c424` title="Neural Predictive Healthcare" />
+        <BreadcrumbSchema path="/services/neural-predictive-healthcare-7fa6c424" title="Neural Predictive Healthcare" />
         <h1 className="text-4xl font-bold mb-6">Neural Predictive Healthcare</h1>
         <p className="text-lg text-gray-300 mb-8">The future of Sports is here with Neural Predictive Healthcare. Powered by cutting-edge AI, this platform delivers resource optimization like never before.</p>
 

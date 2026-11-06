@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/neural-analytics-for-telecom-c00a7079` title="Neural Analytics for Telecom" />
+        <BreadcrumbSchema path="/services/neural-analytics-for-telecom-c00a7079" title="Neural Analytics for Telecom" />
         <h1 className="text-4xl font-bold mb-6">Neural Analytics for Telecom</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your telecom operations with our Neural Analytics for Telecom. This AI-driven solution automates sales forecasting with unprecedented accuracy and eff</p>
 

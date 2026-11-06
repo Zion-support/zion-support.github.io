@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-user-platform-376d2241` title="Cognitive User Platform" />
+        <BreadcrumbSchema path="/services/cognitive-user-platform-376d2241" title="Cognitive User Platform" />
         <h1 className="text-4xl font-bold mb-6">Cognitive User Platform</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize transportation through intelligent automation. Our Cognitive User Platform leverages advanced machine learning to deliver data processing at scale</p>
 

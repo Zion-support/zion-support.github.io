@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/smart-image-experience-62c375de` title="Smart Image Experience" />
+        <BreadcrumbSchema path="/services/smart-image-experience-62c375de" title="Smart Image Experience" />
         <h1 className="text-4xl font-bold mb-6">Smart Image Experience</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your Real Estate operations with our Smart Image Experience. This AI-driven solution automates budget optimization with unprecedented accuracy and eff</p>
 

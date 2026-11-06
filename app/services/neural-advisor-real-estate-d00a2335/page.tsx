@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/neural-advisor-real-estate-d00a2335` title="Neural advisor-real-estate" />
+        <BreadcrumbSchema path="/services/neural-advisor-real-estate-d00a2335" title="Neural advisor-real-estate" />
         <h1 className="text-4xl font-bold mb-6">Neural advisor-real-estate</h1>
         <p className="text-lg text-gray-300 mb-8">The future of real-estate is here with Neural advisor-real-estate. Powered by cutting-edge AI, this platform delivers network optimization like never before.</p>
 

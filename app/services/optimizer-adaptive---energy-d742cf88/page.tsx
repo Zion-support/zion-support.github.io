@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/optimizer-adaptive---energy-d742cf88` title="Optimizer Adaptive - Energy" />
+        <BreadcrumbSchema path="/services/optimizer-adaptive---energy-d742cf88" title="Optimizer Adaptive - Energy" />
         <h1 className="text-4xl font-bold mb-6">Optimizer Adaptive - Energy</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your energy operations with our Optimizer Adaptive - Energy. This AI-driven solution automates threat detection with unprecedented accuracy and effici</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/automated-data-advisor-4e108664` title="Automated Data Advisor" />
+        <BreadcrumbSchema path="/services/automated-data-advisor-4e108664" title="Automated Data Advisor" />
         <h1 className="text-4xl font-bold mb-6">Automated Data Advisor</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Automated Data Advisor. This autonomous system provides image recognition with zero manual intervention needed.</p>
 

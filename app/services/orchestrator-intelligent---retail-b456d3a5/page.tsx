@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/orchestrator-intelligent---retail-b456d3a5` title="Orchestrator Intelligent - Retail" />
+        <BreadcrumbSchema path="/services/orchestrator-intelligent---retail-b456d3a5" title="Orchestrator Intelligent - Retail" />
         <h1 className="text-4xl font-bold mb-6">Orchestrator Intelligent - Retail</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize retail through intelligent automation. Our Orchestrator Intelligent - Retail leverages advanced machine learning to deliver maintenance scheduling</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-next-generation-fitness-processing-framework-182e30e8` title="Intelligent Next-Generation Fitness Processing Framework" />
+        <BreadcrumbSchema path="/services/intelligent-next-generation-fitness-processing-framework-182e30e8" title="Intelligent Next-Generation Fitness Processing Framework" />
         <h1 className="text-4xl font-bold mb-6">Intelligent Next-Generation Fitness Processing Framework</h1>
         <p className="text-lg text-gray-300 mb-8">Intelligent processing framework that automates next-generation fitness data flows with real-time transformation.</p>
 

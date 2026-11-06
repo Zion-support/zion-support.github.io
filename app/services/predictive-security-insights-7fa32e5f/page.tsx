@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictive-security-insights-7fa32e5f` title="Predictive Security Insights" />
+        <BreadcrumbSchema path="/services/predictive-security-insights-7fa32e5f" title="Predictive Security Insights" />
         <h1 className="text-4xl font-bold mb-6">Predictive Security Insights</h1>
         <p className="text-lg text-gray-300 mb-8">The future of telecom is here with Predictive Security Insights. Powered by cutting-edge AI, this platform delivers fraud prevention like never before.</p>
 

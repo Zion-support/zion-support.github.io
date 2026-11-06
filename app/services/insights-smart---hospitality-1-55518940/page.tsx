@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/insights-smart---hospitality-1-55518940` title="Insights Smart - Hospitality #1" />
+        <BreadcrumbSchema path="/services/insights-smart---hospitality-1-55518940" title="Insights Smart - Hospitality #1" />
         <h1 className="text-4xl font-bold mb-6">Insights Smart - Hospitality #1</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your hospitality operations with our Insights Smart - Hospitality #1. This AI-driven solution automates decision support with unprecedented accuracy a</p>
 

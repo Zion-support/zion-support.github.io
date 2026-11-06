@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/management-automated---agriculture-04141257` title="Management Automated - Agriculture" />
+        <BreadcrumbSchema path="/services/management-automated---agriculture-04141257" title="Management Automated - Agriculture" />
         <h1 className="text-4xl font-bold mb-6">Management Automated - Agriculture</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your agriculture operations with our Management Automated - Agriculture. This AI-driven solution automates decision support with unprecedented accurac</p>
 

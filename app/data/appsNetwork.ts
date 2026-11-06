@@ -620,6 +620,7 @@ export const appsNetworkCatalog: AppsNetworkApp[] = [
     description: 'Managed IT support and help desk services.',
     group: 'ops',
     related: ['zion-ai-help-desk', 'ai-customer-support-pro', 'ai-ticket-triage', 'ai-ticket-sentinel'],
+  },
   {
     slug: 'zion-ai-sales-campaign-orbiter',
     name: 'Zion AI Sales Campaign Orbiter',

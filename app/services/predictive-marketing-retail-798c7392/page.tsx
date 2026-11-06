@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictive-marketing-retail-798c7392` title="Predictive marketing-retail" />
+        <BreadcrumbSchema path="/services/predictive-marketing-retail-798c7392" title="Predictive marketing-retail" />
         <h1 className="text-4xl font-bold mb-6">Predictive marketing-retail</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your Retail operations with our Predictive marketing-retail. This AI-driven solution automates sales forecasting with unprecedented accuracy and effic</p>
 

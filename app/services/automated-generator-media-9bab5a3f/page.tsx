@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/automated-generator-media-9bab5a3f` title="Automated generator-media" />
+        <BreadcrumbSchema path="/services/automated-generator-media-9bab5a3f" title="Automated generator-media" />
         <h1 className="text-4xl font-bold mb-6">Automated generator-media</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation media solution: Automated generator-media. Combines workflow management with adaptive intelligence for optimal results.</p>
 

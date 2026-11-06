@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/smart-system-for-automotive-2-b2f818df` title="Smart System for Automotive #2" />
+        <BreadcrumbSchema path="/services/smart-system-for-automotive-2-b2f818df" title="Smart System for Automotive #2" />
         <h1 className="text-4xl font-bold mb-6">Smart System for Automotive #2</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your automotive operations with our Smart System for Automotive #2. This AI-driven solution automates image recognition with unprecedented accuracy an</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/automated-language-analytics-83487fb4` title="Automated Language Analytics" />
+        <BreadcrumbSchema path="/services/automated-language-analytics-83487fb4" title="Automated Language Analytics" />
         <h1 className="text-4xl font-bold mb-6">Automated Language Analytics</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Automated Language Analytics. This autonomous system provides fraud prevention with zero manual intervention needed.</p>
 

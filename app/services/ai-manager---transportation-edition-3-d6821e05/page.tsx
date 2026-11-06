@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-manager---transportation-edition-3-d6821e05` title="AI Manager - Transportation Edition #3" />
+        <BreadcrumbSchema path="/services/ai-manager---transportation-edition-3-d6821e05" title="AI Manager - Transportation Edition #3" />
         <h1 className="text-4xl font-bold mb-6">AI Manager - Transportation Edition #3</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize transportation through intelligent automation. Our AI Manager - Transportation Edition #3 leverages advanced machine learning to deliver decision </p>
 

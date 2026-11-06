@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/management-ai---insurance-aee7ad37` title="Management AI - Insurance" />
+        <BreadcrumbSchema path="/services/management-ai---insurance-aee7ad37" title="Management AI - Insurance" />
         <h1 className="text-4xl font-bold mb-6">Management AI - Insurance</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation insurance solution: Management AI - Insurance. Combines process automation with adaptive intelligence for optimal results.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-code-processor-23c86043` title="Intelligent Code Processor" />
+        <BreadcrumbSchema path="/services/intelligent-code-processor-23c86043" title="Intelligent Code Processor" />
         <h1 className="text-4xl font-bold mb-6">Intelligent Code Processor</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your construction operations with our Intelligent Code Processor. This AI-driven solution automates resource optimization with unprecedented accuracy </p>
 

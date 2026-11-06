@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/automated-analytics-hospitality-43fe6891` title="Automated analytics-hospitality" />
+        <BreadcrumbSchema path="/services/automated-analytics-hospitality-43fe6891" title="Automated analytics-hospitality" />
         <h1 className="text-4xl font-bold mb-6">Automated analytics-hospitality</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize hospitality through intelligent automation. Our Automated analytics-hospitality leverages advanced machine learning to deliver financial planning </p>
 

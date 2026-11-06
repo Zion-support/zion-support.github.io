@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-sales-intelligence-65721f00` title="Intelligent Sales Intelligence" />
+        <BreadcrumbSchema path="/services/intelligent-sales-intelligence-65721f00" title="Intelligent Sales Intelligence" />
         <h1 className="text-4xl font-bold mb-6">Intelligent Sales Intelligence</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your healthcare operations with our Intelligent Sales Intelligence. This AI-driven solution automates supply chain with unprecedented accuracy and eff</p>
 

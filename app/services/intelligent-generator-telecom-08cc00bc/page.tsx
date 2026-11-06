@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-generator-telecom-08cc00bc` title="Intelligent generator-telecom" />
+        <BreadcrumbSchema path="/services/intelligent-generator-telecom-08cc00bc" title="Intelligent generator-telecom" />
         <h1 className="text-4xl font-bold mb-6">Intelligent generator-telecom</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation telecom solution: Intelligent generator-telecom. Combines threat detection with adaptive intelligence for optimal results.</p>
 

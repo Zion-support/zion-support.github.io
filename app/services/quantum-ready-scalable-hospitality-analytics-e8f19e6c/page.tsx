@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/quantum-ready-scalable-hospitality-analytics-e8f19e6c` title="Quantum-Ready Scalable Hospitality Analytics" />
+        <BreadcrumbSchema path="/services/quantum-ready-scalable-hospitality-analytics-e8f19e6c" title="Quantum-Ready Scalable Hospitality Analytics" />
         <h1 className="text-4xl font-bold mb-6">Quantum-Ready Scalable Hospitality Analytics</h1>
         <p className="text-lg text-gray-300 mb-8">Quantum-ready analytics platform that prepares scalable hospitality workloads for future quantum acceleration.</p>
 

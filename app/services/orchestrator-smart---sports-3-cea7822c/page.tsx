@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/orchestrator-smart---sports-3-cea7822c` title="Orchestrator Smart - Sports #3" />
+        <BreadcrumbSchema path="/services/orchestrator-smart---sports-3-cea7822c" title="Orchestrator Smart - Sports #3" />
         <h1 className="text-4xl font-bold mb-6">Orchestrator Smart - Sports #3</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation sports solution: Orchestrator Smart - Sports #3. Combines network optimization with adaptive intelligence for optimal results.</p>
 

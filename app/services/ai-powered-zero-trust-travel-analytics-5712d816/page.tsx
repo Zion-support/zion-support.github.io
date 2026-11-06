@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-powered-zero-trust-travel-analytics-5712d816` title="AI-Powered Zero-Trust Travel Analytics" />
+        <BreadcrumbSchema path="/services/ai-powered-zero-trust-travel-analytics-5712d816" title="AI-Powered Zero-Trust Travel Analytics" />
         <h1 className="text-4xl font-bold mb-6">AI-Powered Zero-Trust Travel Analytics</h1>
         <p className="text-lg text-gray-300 mb-8">AI-driven analytics platform that delivers zero-trust insights into travel operations, providing real-time monitoring, predictive modeling, and automated report</p>
 

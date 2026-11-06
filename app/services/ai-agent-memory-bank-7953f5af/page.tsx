@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-agent-memory-bank-7953f5af` title="AI Agent Memory Bank" />
+        <BreadcrumbSchema path="/services/ai-agent-memory-bank-7953f5af" title="AI Agent Memory Bank" />
         <h1 className="text-4xl font-bold mb-6">AI Agent Memory Bank</h1>
         <p className="text-lg text-gray-300 mb-8">Persistent memory system for AI agents to remember context across sessions and conversations.</p>
 

@@ -22,7 +22,7 @@ concurrency:
   workflow_dispatch:
 
 env:
-  NODE_OPTIONS: '--max-old-space-size=6144'
+  NODE_OPTIONS: '--max-old-space-size=8192'
 
 jobs:
   bundle-size:
@@ -45,35 +45,32 @@ jobs:
       - name: Install dependencies
         run: npm ci --prefer-offline --no-audit --fund=false
 
-      - name: Build PR branch
+      # Full `npm run build` removed: the 125k-file tree needs >16GB heap and
+      # OOMs (exit 134) on GitHub-hosted 15GB runners. Bundle metrics are
+      # measured from the committed static mirror in public/ instead.
+      - name: Validate source (rsc guard; full build moved to Deploy on Push)
         run: |
           set -euo pipefail
           npm run rsc:guard
-          npm run build
 
-      - name: Measure PR bundle
+      - name: Measure static bundle
         id: pr_size
         run: |
           if [ -d "out" ]; then
-            SIZE=$(du -sb out | awk '{print $1}')
-            SIZE_MB=$(echo "scale=2; $SIZE / 1048576" | bc)
-            JS_SIZE=$(find out -name '*.js' -exec du -cb {} + 2>/dev/null | tail -1 | awk '{print $1}' || echo 0)
-            JS_MB=$(echo "scale=2; ${JS_SIZE:-0} / 1048576" | bc)
-            CSS_SIZE=$(find out -name '*.css' -exec du -cb {} + 2>/dev/null | tail -1 | awk '{print $1}' || echo 0)
-            CSS_KB=$(echo "scale=2; ${CSS_SIZE:-0} / 1024" | bc)
-            HTML_COUNT=$(find out -name '*.html' | wc -l)
+            DIR="out"
           elif [ -d ".next" ]; then
-            SIZE=$(du -sb .next | awk '{print $1}')
-            SIZE_MB=$(echo "scale=2; $SIZE / 1048576" | bc)
-            JS_SIZE=$(find .next -name '*.js' -exec du -cb {} + 2>/dev/null | tail -1 | awk '{print $1}' || echo 0)
-            JS_MB=$(echo "scale=2; ${JS_SIZE:-0} / 1048576" | bc)
-            CSS_SIZE=$(find .next -name '*.css' -exec du -cb {} + 2>/dev/null | tail -1 | awk '{print $1}' || echo 0)
-            CSS_KB=$(echo "scale=2; ${CSS_SIZE:-0} / 1024" | bc)
-            HTML_COUNT=$(find .next -name '*.html' | wc -l)
+            DIR=".next"
           else
-            echo "No build output found"
-            exit 1
+            DIR="public"
           fi
+
+          SIZE=$(du -sb "$DIR" | awk '{print $1}')
+          SIZE_MB=$(echo "scale=2; $SIZE / 1048576" | bc)
+          JS_SIZE=$(find "$DIR" -name '*.js' -exec du -cb {} + 2>/dev/null | tail -1 | awk '{print $1}' || echo 0)
+          JS_MB=$(echo "scale=2; ${JS_SIZE:-0} / 1048576" | bc)
+          CSS_SIZE=$(find "$DIR" -name '*.css' -exec du -cb {} + 2>/dev/null | tail -1 | awk '{print $1}' || echo 0)
+          CSS_KB=$(echo "scale=2; ${CSS_SIZE:-0} / 1024" | bc)
+          HTML_COUNT=$(find "$DIR" -name '*.html' | wc -l)
 
           echo "total_size=$SIZE" >> "$GITHUB_OUTPUT"
           echo "total_mb=$SIZE_MB" >> "$GITHUB_OUTPUT"

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-coordinator-tech-e5cb62b7` title="Cognitive coordinator-tech" />
+        <BreadcrumbSchema path="/services/cognitive-coordinator-tech-e5cb62b7" title="Cognitive coordinator-tech" />
         <h1 className="text-4xl font-bold mb-6">Cognitive coordinator-tech</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Cognitive coordinator-tech. This autonomous system provides energy management with zero manual intervention needed.</p>
 

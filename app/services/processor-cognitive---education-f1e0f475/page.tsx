@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/processor-cognitive---education-f1e0f475` title="Processor Cognitive - Education" />
+        <BreadcrumbSchema path="/services/processor-cognitive---education-f1e0f475" title="Processor Cognitive - Education" />
         <h1 className="text-4xl font-bold mb-6">Processor Cognitive - Education</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation education solution: Processor Cognitive - Education. Combines data processing with adaptive intelligence for optimal results.</p>
 

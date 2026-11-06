@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/automated-predictive-orchestrator-ae1885bc` title="Automated Predictive Orchestrator" />
+        <BreadcrumbSchema path="/services/automated-predictive-orchestrator-ae1885bc" title="Automated Predictive Orchestrator" />
         <h1 className="text-4xl font-bold mb-6">Automated Predictive Orchestrator</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize logistics through intelligent automation. Our Automated Predictive Orchestrator leverages advanced machine learning to deliver compliance monitori</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/neural-analytics-manufacturing-545efa0a` title="Neural analytics-manufacturing" />
+        <BreadcrumbSchema path="/services/neural-analytics-manufacturing-545efa0a" title="Neural analytics-manufacturing" />
         <h1 className="text-4xl font-bold mb-6">Neural analytics-manufacturing</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your Manufacturing operations with our Neural analytics-manufacturing. This AI-driven solution automates financial risk management with unprecedented </p>
 

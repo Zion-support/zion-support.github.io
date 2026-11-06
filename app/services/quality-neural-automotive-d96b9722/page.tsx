@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/quality-neural-automotive-d96b9722` title="Quality Neural - Automotive" />
+        <BreadcrumbSchema path="/services/quality-neural-automotive-d96b9722" title="Quality Neural - Automotive" />
         <h1 className="text-4xl font-bold mb-6">Quality Neural - Automotive</h1>
         <p className="text-lg text-gray-300 mb-8">Drive innovation in automotive with Quality Neural - Automotive. This AI-powered platform transforms financial risk management into a competitive advantage.</p>
 
