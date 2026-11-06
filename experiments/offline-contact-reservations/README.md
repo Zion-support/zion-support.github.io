@@ -75,9 +75,12 @@ services or provider integrations are added. A dedicated pull-request workflow,
 Offline Contact Reservation Tests, runs this Python suite with verbose output
 when this directory or that workflow changes. Other repository checks (including
 Jest coverage) are not evidence of these Python tests running.
-The dedicated job uses read-only repository permission, a SHA-pinned sparse
-checkout without persisted credentials, and the Ubuntu runner's Python. It
-installs no dependencies and receives no application secrets or production access.
+The dedicated job has permissions: {} and uses no external actions or tokens.
+It downloads only reservations.py and test_reservations.py from public GitHub
+at the exact PR merge commit SHA, then uses the Ubuntu runner's Python. This
+avoids checkout auth cleanup failing on unrelated, unmapped repository gitlinks.
+It installs no dependencies and receives no application secrets or production access.
 Tests use only temporary local fixtures; no provider or network sending exists.
-Checkout itself still requires GitHub network access; this is not a network sandbox.
+The initial source download requires GitHub network access; this is not a network sandbox.
+If the repository becomes private, the unauthenticated download fails closed.
 Do not connect this prototype to live senders without a separate design review.
