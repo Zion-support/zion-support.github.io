@@ -18,12 +18,28 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      - name: Checkout
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
-        with:
-          persist-credentials: false
-          sparse-checkout: |
-            .github/workflows
-            scripts/automation
+      # Public acquisition uses no token or inherited Git/auth configuration.
+      # Avoid checkout's submodule credential cleanup on unrelated orphan gitlinks.
+      - name: Acquire exact public revision without credentials
+        env:
+          EXPECTED_SHA: ${{ github.sha }}
+        shell: bash
+        run: |
+          env -i PATH="$PATH" HOME="$RUNNER_TEMP" EXPECTED_SHA="$EXPECTED_SHA" \
+            GIT_CONFIG_NOSYSTEM=1 GIT_CONFIG_GLOBAL=/dev/null \
+            GIT_TERMINAL_PROMPT=0 GIT_ASKPASS=/bin/false SSH_ASKPASS=/bin/false \
+            bash --noprofile --norc <<'ACQUIRE'
+          set -euo pipefail
+          test "${#EXPECTED_SHA}" -eq 40
+          [[ "$EXPECTED_SHA" =~ ^[0-9a-f]{40}$ ]]
+          test ! -e .git
+          git init
+          git remote add origin https://github.com/Zion-support/zion-support.github.io.git
+          git sparse-checkout set --no-cone '/.github/workflows/' '/scripts/automation/test-agent-presence-retirement.rb'
+          git -c credential.helper= fetch --depth=1 --filter=blob:none --no-tags --no-recurse-submodules origin "$EXPECTED_SHA"
+          test "$(git rev-parse FETCH_HEAD)" = "$EXPECTED_SHA"
+          git -c credential.helper= checkout --detach FETCH_HEAD
+          test "$(git rev-parse HEAD)" = "$EXPECTED_SHA"
+          ACQUIRE
       - name: Verify retired public writer stays absent (offline)
         run: ruby scripts/automation/test-agent-presence-retirement.rb
