@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-user-generator-69ed627c` title="Intelligent User Generator" />
+        <BreadcrumbSchema path="/services/intelligent-user-generator-69ed627c" title="Intelligent User Generator" />
         <h1 className="text-4xl font-bold mb-6">Intelligent User Generator</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize finance through intelligent automation. Our Intelligent User Generator leverages advanced machine learning to deliver threat detection at scale.</p>
 

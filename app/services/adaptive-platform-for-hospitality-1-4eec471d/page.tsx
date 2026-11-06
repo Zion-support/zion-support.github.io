@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/adaptive-platform-for-hospitality-1-4eec471d` title="Adaptive Platform for Hospitality #1" />
+        <BreadcrumbSchema path="/services/adaptive-platform-for-hospitality-1-4eec471d" title="Adaptive Platform for Hospitality #1" />
         <h1 className="text-4xl font-bold mb-6">Adaptive Platform for Hospitality #1</h1>
         <p className="text-lg text-gray-300 mb-8">The future of hospitality is here with Adaptive Platform for Hospitality #1. Powered by cutting-edge AI, this platform delivers maintenance scheduling like neve</p>
 

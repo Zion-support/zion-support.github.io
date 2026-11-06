@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/adaptive-insights-insurance-b3dc916a` title="Adaptive insights-insurance" />
+        <BreadcrumbSchema path="/services/adaptive-insights-insurance-b3dc916a" title="Adaptive insights-insurance" />
         <h1 className="text-4xl font-bold mb-6">Adaptive insights-insurance</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation insurance solution: Adaptive insights-insurance. Combines quality control with adaptive intelligence for optimal results.</p>
 

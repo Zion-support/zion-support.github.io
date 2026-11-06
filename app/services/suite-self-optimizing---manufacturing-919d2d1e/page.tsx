@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/suite-self-optimizing---manufacturing-919d2d1e` title="Suite Self-Optimizing - Manufacturing" />
+        <BreadcrumbSchema path="/services/suite-self-optimizing---manufacturing-919d2d1e" title="Suite Self-Optimizing - Manufacturing" />
         <h1 className="text-4xl font-bold mb-6">Suite Self-Optimizing - Manufacturing</h1>
         <p className="text-lg text-gray-300 mb-8">The future of manufacturing is here with Suite Self-Optimizing - Manufacturing. Powered by cutting-edge AI, this platform delivers inventory management like nev</p>
 

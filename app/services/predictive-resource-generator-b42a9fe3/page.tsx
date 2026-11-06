@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictive-resource-generator-b42a9fe3` title="Predictive Resource Generator" />
+        <BreadcrumbSchema path="/services/predictive-resource-generator-b42a9fe3" title="Predictive Resource Generator" />
         <h1 className="text-4xl font-bold mb-6">Predictive Resource Generator</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation healthcare solution: Predictive Resource Generator. Combines quality control with adaptive intelligence for optimal results.</p>
 

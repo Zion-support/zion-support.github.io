@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/autonomous-image-system-1c548b09` title="Autonomous Image System" />
+        <BreadcrumbSchema path="/services/autonomous-image-system-1c548b09" title="Autonomous Image System" />
         <h1 className="text-4xl font-bold mb-6">Autonomous Image System</h1>
         <p className="text-lg text-gray-300 mb-8">The future of agriculture is here with Autonomous Image System. Powered by cutting-edge AI, this platform delivers user experience like never before.</p>
 

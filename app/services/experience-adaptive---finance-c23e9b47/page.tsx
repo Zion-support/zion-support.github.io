@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/experience-adaptive---finance-c23e9b47` title="Experience Adaptive - Finance" />
+        <BreadcrumbSchema path="/services/experience-adaptive---finance-c23e9b47" title="Experience Adaptive - Finance" />
         <h1 className="text-4xl font-bold mb-6">Experience Adaptive - Finance</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize Finance through intelligent automation. Our Experience Adaptive - Finance leverages advanced machine learning to deliver customer insights at scal</p>
 

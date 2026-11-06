@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/quantum-ready-frictionless-non-profit-analytics-825ad541` title="Quantum-Ready Frictionless Non-Profit Analytics" />
+        <BreadcrumbSchema path="/services/quantum-ready-frictionless-non-profit-analytics-825ad541" title="Quantum-Ready Frictionless Non-Profit Analytics" />
         <h1 className="text-4xl font-bold mb-6">Quantum-Ready Frictionless Non-Profit Analytics</h1>
         <p className="text-lg text-gray-300 mb-8">Quantum-ready analytics platform that prepares frictionless non-profit workloads for future quantum acceleration.</p>
 

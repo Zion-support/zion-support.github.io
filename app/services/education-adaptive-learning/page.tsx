@@ -2,7 +2,7 @@ import { } from 'next/navigation';
 
 export const metadata = {
   title: "Adaptive Learning Platform - Zion Tech Group",
-  description: "AI-powered personalized learning that adapts to each student\'s pace, style, and level. Content recommendations, progress tracking, and automated assessment.",
+  description: "AI-powered personalized learning that adapts to each student's pace, style, and level. Content recommendations, progress tracking, and automated assessment.",
   alternates: {
     canonical: `https://ziontechgroup.com/services/education-adaptive-learning`
   }

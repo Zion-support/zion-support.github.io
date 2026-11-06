@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/adaptive-analyzer-for-logistics-6d19dee3` title="Adaptive Analyzer for Logistics" />
+        <BreadcrumbSchema path="/services/adaptive-analyzer-for-logistics-6d19dee3" title="Adaptive Analyzer for Logistics" />
         <h1 className="text-4xl font-bold mb-6">Adaptive Analyzer for Logistics</h1>
         <p className="text-lg text-gray-300 mb-8">The future of logistics is here with Adaptive Analyzer for Logistics. Powered by cutting-edge AI, this platform delivers risk assessment like never before.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-cicd-pipeline-automation-1ea0be32` title="Intelligent CI/CD Pipeline Automation" />
+        <BreadcrumbSchema path="/services/intelligent-cicd-pipeline-automation-1ea0be32" title="Intelligent CI/CD Pipeline Automation" />
         <h1 className="text-4xl font-bold mb-6">Intelligent CI/CD Pipeline Automation</h1>
         <p className="text-lg text-gray-300 mb-8">Machine learning-driven continuous integration and deployment system with intelligent rollback capabilities.</p>
 

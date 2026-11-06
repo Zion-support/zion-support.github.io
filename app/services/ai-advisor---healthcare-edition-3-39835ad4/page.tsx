@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-advisor---healthcare-edition-3-39835ad4` title="AI Advisor - Healthcare Edition #3" />
+        <BreadcrumbSchema path="/services/ai-advisor---healthcare-edition-3-39835ad4" title="AI Advisor - Healthcare Edition #3" />
         <h1 className="text-4xl font-bold mb-6">AI Advisor - Healthcare Edition #3</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your healthcare operations with our AI Advisor - Healthcare Edition #3. This AI-driven solution automates image recognition with unprecedented accurac</p>
 

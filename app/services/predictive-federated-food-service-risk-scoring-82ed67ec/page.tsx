@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictive-federated-food-service-risk-scoring-82ed67ec` title="Predictive Federated Food Service Risk Scoring" />
+        <BreadcrumbSchema path="/services/predictive-federated-food-service-risk-scoring-82ed67ec" title="Predictive Federated Food Service Risk Scoring" />
         <h1 className="text-4xl font-bold mb-6">Predictive Federated Food Service Risk Scoring</h1>
         <p className="text-lg text-gray-300 mb-8">Predictive risk scoring engine that assesses federated food service vulnerabilities with machine learning.</p>
 

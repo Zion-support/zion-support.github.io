@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-powered-enterprise-grade-risk-assessment-c806faa4` title="AI-Powered Enterprise-Grade Risk Assessment" />
+        <BreadcrumbSchema path="/services/ai-powered-enterprise-grade-risk-assessment-c806faa4" title="AI-Powered Enterprise-Grade Risk Assessment" />
         <h1 className="text-4xl font-bold mb-6">AI-Powered Enterprise-Grade Risk Assessment</h1>
         <p className="text-lg text-gray-300 mb-8">Advanced risk analytics platform that provides enterprise-grade credit scoring, fraud detection, and portfolio risk analysis using machine learning and alternat</p>
 

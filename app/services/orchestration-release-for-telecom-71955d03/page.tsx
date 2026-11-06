@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/orchestration-release-for-telecom-71955d03` title="Orchestration Release for Telecom" />
+        <BreadcrumbSchema path="/services/orchestration-release-for-telecom-71955d03" title="Orchestration Release for Telecom" />
         <h1 className="text-4xl font-bold mb-6">Orchestration Release for Telecom</h1>
         <p className="text-lg text-gray-300 mb-8">Optimize your telecom workflows with Orchestration Release for Telecom. This intelligent platform delivers release management through advanced automation and AI</p>
 

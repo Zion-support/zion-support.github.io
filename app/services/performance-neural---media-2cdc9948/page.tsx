@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/performance-neural---media-2cdc9948` title="Performance Neural - Media" />
+        <BreadcrumbSchema path="/services/performance-neural---media-2cdc9948" title="Performance Neural - Media" />
         <h1 className="text-4xl font-bold mb-6">Performance Neural - Media</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize Media through intelligent automation. Our Performance Neural - Media leverages advanced machine learning to deliver network optimization at scale.</p>
 

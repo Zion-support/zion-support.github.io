@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-hyper-local-legal-decision-engine-5c1dccca` title="Cognitive Hyper-Local Legal Decision Engine" />
+        <BreadcrumbSchema path="/services/cognitive-hyper-local-legal-decision-engine-5c1dccca" title="Cognitive Hyper-Local Legal Decision Engine" />
         <h1 className="text-4xl font-bold mb-6">Cognitive Hyper-Local Legal Decision Engine</h1>
         <p className="text-lg text-gray-300 mb-8">Cognitive decision engine that processes hyper-local signals to drive legal strategy with deep learning.</p>
 

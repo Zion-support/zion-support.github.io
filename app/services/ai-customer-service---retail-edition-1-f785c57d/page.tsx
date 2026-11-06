@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-customer-service---retail-edition-1-f785c57d` title="AI Customer Service - Retail Edition #1" />
+        <BreadcrumbSchema path="/services/ai-customer-service---retail-edition-1-f785c57d" title="AI Customer Service - Retail Edition #1" />
         <h1 className="text-4xl font-bold mb-6">AI Customer Service - Retail Edition #1</h1>
         <p className="text-lg text-gray-300 mb-8">The future of Retail is here with AI Customer Service - Retail Edition #1. Powered by cutting-edge AI, this platform delivers maintenance scheduling like never </p>
 

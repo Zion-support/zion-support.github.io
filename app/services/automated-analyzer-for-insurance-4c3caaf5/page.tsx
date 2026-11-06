@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/automated-analyzer-for-insurance-4c3caaf5` title="Automated Analyzer for Insurance" />
+        <BreadcrumbSchema path="/services/automated-analyzer-for-insurance-4c3caaf5" title="Automated Analyzer for Insurance" />
         <h1 className="text-4xl font-bold mb-6">Automated Analyzer for Insurance</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation insurance solution: Automated Analyzer for Insurance. Combines sales forecasting with adaptive intelligence for optimal results.</p>
 

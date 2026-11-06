@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/release-automated-finance-f84e67fc` title="Release Automated - Finance" />
+        <BreadcrumbSchema path="/services/release-automated-finance-f84e67fc" title="Release Automated - Finance" />
         <h1 className="text-4xl font-bold mb-6">Release Automated - Finance</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your finance operations with our Release Automated - Finance. This AI-driven solution automates automated testing with unprecedented accuracy and effi</p>
 

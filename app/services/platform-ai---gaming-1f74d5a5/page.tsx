@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/platform-ai---gaming-1f74d5a5` title="Platform AI - Gaming" />
+        <BreadcrumbSchema path="/services/platform-ai---gaming-1f74d5a5" title="Platform AI - Gaming" />
         <h1 className="text-4xl font-bold mb-6">Platform AI - Gaming</h1>
         <p className="text-lg text-gray-300 mb-8">The future of gaming is here with Platform AI - Gaming. Powered by cutting-edge AI, this platform delivers resource optimization like never before.</p>
 

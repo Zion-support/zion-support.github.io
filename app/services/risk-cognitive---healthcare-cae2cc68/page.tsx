@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/risk-cognitive---healthcare-cae2cc68` title="Risk Cognitive - Healthcare" />
+        <BreadcrumbSchema path="/services/risk-cognitive---healthcare-cae2cc68" title="Risk Cognitive - Healthcare" />
         <h1 className="text-4xl font-bold mb-6">Risk Cognitive - Healthcare</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize Healthcare through intelligent automation. Our Risk Cognitive - Healthcare leverages advanced machine learning to deliver document processing at s</p>
 

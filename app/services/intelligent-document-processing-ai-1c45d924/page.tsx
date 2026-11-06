@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-document-processing-ai-1c45d924` title="Intelligent Document Processing AI" />
+        <BreadcrumbSchema path="/services/intelligent-document-processing-ai-1c45d924" title="Intelligent Document Processing AI" />
         <h1 className="text-4xl font-bold mb-6">Intelligent Document Processing AI</h1>
         <p className="text-lg text-gray-300 mb-8">Machine learning-powered document automation that extracts, categorizes, and processes documents at scale. Handles invoices, contracts, reports, and other busin</p>
 

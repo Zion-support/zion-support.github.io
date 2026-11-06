@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/optimizer-smart---legal-b4720dfe` title="Optimizer Smart - Legal" />
+        <BreadcrumbSchema path="/services/optimizer-smart---legal-b4720dfe" title="Optimizer Smart - Legal" />
         <h1 className="text-4xl font-bold mb-6">Optimizer Smart - Legal</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your legal operations with our Optimizer Smart - Legal. This AI-driven solution automates market intelligence with unprecedented accuracy and efficien</p>
 

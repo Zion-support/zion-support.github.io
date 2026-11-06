@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/conversable-3e683ed5` title="Conversable" />
+        <BreadcrumbSchema path="/services/conversable-3e683ed5" title="Conversable" />
         <h1 className="text-4xl font-bold mb-6">Conversable</h1>
         <p className="text-lg text-gray-300 mb-8">Conversable is an artificial intelligence and automation technology company.</p>
 

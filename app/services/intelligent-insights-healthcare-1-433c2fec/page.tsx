@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-insights-healthcare-1-433c2fec` title="Intelligent insights-healthcare #1" />
+        <BreadcrumbSchema path="/services/intelligent-insights-healthcare-1-433c2fec" title="Intelligent insights-healthcare #1" />
         <h1 className="text-4xl font-bold mb-6">Intelligent insights-healthcare #1</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize healthcare through intelligent automation. Our Intelligent insights-healthcare #1 leverages advanced machine learning to deliver document processi</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/adaptive-analytics-for-insurance-65d01cd3` title="Adaptive Analytics for Insurance" />
+        <BreadcrumbSchema path="/services/adaptive-analytics-for-insurance-65d01cd3" title="Adaptive Analytics for Insurance" />
         <h1 className="text-4xl font-bold mb-6">Adaptive Analytics for Insurance</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation insurance solution: Adaptive Analytics for Insurance. Combines decision support with adaptive intelligence for optimal results.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictive-predictive-aerospace-risk-scoring-985abc18` title="Predictive Predictive Aerospace Risk Scoring" />
+        <BreadcrumbSchema path="/services/predictive-predictive-aerospace-risk-scoring-985abc18" title="Predictive Predictive Aerospace Risk Scoring" />
         <h1 className="text-4xl font-bold mb-6">Predictive Predictive Aerospace Risk Scoring</h1>
         <p className="text-lg text-gray-300 mb-8">Predictive risk scoring engine that assesses predictive aerospace vulnerabilities with machine learning.</p>
 

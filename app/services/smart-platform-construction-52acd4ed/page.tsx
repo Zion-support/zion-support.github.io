@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/smart-platform-construction-52acd4ed` title="Smart platform-construction" />
+        <BreadcrumbSchema path="/services/smart-platform-construction-52acd4ed" title="Smart platform-construction" />
         <h1 className="text-4xl font-bold mb-6">Smart platform-construction</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize construction through intelligent automation. Our Smart platform-construction leverages advanced machine learning to deliver workflow management at</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/autonomous-inventory-processor-38dd7ce0` title="Autonomous Inventory Processor" />
+        <BreadcrumbSchema path="/services/autonomous-inventory-processor-38dd7ce0" title="Autonomous Inventory Processor" />
         <h1 className="text-4xl font-bold mb-6">Autonomous Inventory Processor</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your education operations with our Autonomous Inventory Processor. This AI-driven solution automates resource optimization with unprecedented accuracy</p>
 

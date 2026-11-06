@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/engine-cognitive---transportation-efce360d` title="Engine Cognitive - Transportation" />
+        <BreadcrumbSchema path="/services/engine-cognitive---transportation-efce360d" title="Engine Cognitive - Transportation" />
         <h1 className="text-4xl font-bold mb-6">Engine Cognitive - Transportation</h1>
         <p className="text-lg text-gray-300 mb-8">The future of transportation is here with Engine Cognitive - Transportation. Powered by cutting-edge AI, this platform delivers language processing like never b</p>
 

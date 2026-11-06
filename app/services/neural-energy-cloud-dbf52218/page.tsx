@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/neural-energy-cloud-dbf52218` title="Neural Energy Cloud" />
+        <BreadcrumbSchema path="/services/neural-energy-cloud-dbf52218" title="Neural Energy Cloud" />
         <h1 className="text-4xl font-bold mb-6">Neural Energy Cloud</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your Telecom operations with our Neural Energy Cloud. This AI-driven solution automates maintenance scheduling with unprecedented accuracy and efficie</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/management-automated---tech-dafe5b1e` title="Management Automated - Tech" />
+        <BreadcrumbSchema path="/services/management-automated---tech-dafe5b1e" title="Management Automated - Tech" />
         <h1 className="text-4xl font-bold mb-6">Management Automated - Tech</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Management Automated - Tech. This autonomous system provides network optimization with zero manual intervention needed.</p>
 

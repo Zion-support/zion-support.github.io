@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/processor-smart---hospitality-1-b31a8096` title="Processor Smart - Hospitality #1" />
+        <BreadcrumbSchema path="/services/processor-smart---hospitality-1-b31a8096" title="Processor Smart - Hospitality #1" />
         <h1 className="text-4xl font-bold mb-6">Processor Smart - Hospitality #1</h1>
         <p className="text-lg text-gray-300 mb-8">The future of hospitality is here with Processor Smart - Hospitality #1. Powered by cutting-edge AI, this platform delivers network optimization like never befo</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictive-executive-engine-6be8722f` title="Predictive Executive Engine" />
+        <BreadcrumbSchema path="/services/predictive-executive-engine-6be8722f" title="Predictive Executive Engine" />
         <h1 className="text-4xl font-bold mb-6">Predictive Executive Engine</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize Sports through intelligent automation. Our Predictive Executive Engine leverages advanced machine learning to deliver network optimization at scal</p>
 

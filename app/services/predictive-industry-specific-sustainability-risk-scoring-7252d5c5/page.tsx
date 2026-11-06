@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictive-industry-specific-sustainability-risk-scoring-7252d5c5` title="Predictive Industry-Specific Sustainability Risk Scoring" />
+        <BreadcrumbSchema path="/services/predictive-industry-specific-sustainability-risk-scoring-7252d5c5" title="Predictive Industry-Specific Sustainability Risk Scoring" />
         <h1 className="text-4xl font-bold mb-6">Predictive Industry-Specific Sustainability Risk Scoring</h1>
         <p className="text-lg text-gray-300 mb-8">Predictive risk scoring engine that assesses industry-specific sustainability vulnerabilities with machine learning.</p>
 

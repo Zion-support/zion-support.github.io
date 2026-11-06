@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/generator-predictive---real-estate-2-972a5795` title="Generator Predictive - Real-Estate #2" />
+        <BreadcrumbSchema path="/services/generator-predictive---real-estate-2-972a5795" title="Generator Predictive - Real-Estate #2" />
         <h1 className="text-4xl font-bold mb-6">Generator Predictive - Real-Estate #2</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize real-estate through intelligent automation. Our Generator Predictive - Real-Estate #2 leverages advanced machine learning to deliver code optimiza</p>
 

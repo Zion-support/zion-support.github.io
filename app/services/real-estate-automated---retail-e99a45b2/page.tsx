@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/real-estate-automated---retail-e99a45b2` title="Real Estate Automated - Retail" />
+        <BreadcrumbSchema path="/services/real-estate-automated---retail-e99a45b2" title="Real Estate Automated - Retail" />
         <h1 className="text-4xl font-bold mb-6">Real Estate Automated - Retail</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your Retail operations with our Real Estate Automated - Retail. This AI-driven solution automates security monitoring with unprecedented accuracy and </p>
 

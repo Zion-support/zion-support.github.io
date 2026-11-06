@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/coordinator-intelligent---logistics-f19da07f` title="Coordinator Intelligent - Logistics" />
+        <BreadcrumbSchema path="/services/coordinator-intelligent---logistics-f19da07f" title="Coordinator Intelligent - Logistics" />
         <h1 className="text-4xl font-bold mb-6">Coordinator Intelligent - Logistics</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize logistics through intelligent automation. Our Coordinator Intelligent - Logistics leverages advanced machine learning to deliver process automatio</p>
 

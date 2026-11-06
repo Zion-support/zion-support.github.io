@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/neural-director-for-energy-3dfade89` title="Neural Director for Energy" />
+        <BreadcrumbSchema path="/services/neural-director-for-energy-3dfade89" title="Neural Director for Energy" />
         <h1 className="text-4xl font-bold mb-6">Neural Director for Energy</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation energy solution: Neural Director for Energy. Combines code optimization with adaptive intelligence for optimal results.</p>
 

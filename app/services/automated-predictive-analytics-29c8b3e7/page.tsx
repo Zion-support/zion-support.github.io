@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/automated-predictive-analytics-29c8b3e7` title="Automated Predictive Analytics" />
+        <BreadcrumbSchema path="/services/automated-predictive-analytics-29c8b3e7" title="Automated Predictive Analytics" />
         <h1 className="text-4xl font-bold mb-6">Automated Predictive Analytics</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize telecom through intelligent automation. Our Automated Predictive Analytics leverages advanced machine learning to deliver image recognition at sca</p>
 

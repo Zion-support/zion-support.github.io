@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/adaptive-quality-platform-e75bf3f8` title="Adaptive Quality Platform" />
+        <BreadcrumbSchema path="/services/adaptive-quality-platform-e75bf3f8" title="Adaptive Quality Platform" />
         <h1 className="text-4xl font-bold mb-6">Adaptive Quality Platform</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation finance solution: Adaptive Quality Platform. Combines decision support with adaptive intelligence for optimal results.</p>
 

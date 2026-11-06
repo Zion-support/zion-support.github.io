@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-optimization---sports-edition-6-55ac9d5a` title="AI Optimization - Sports Edition #6" />
+        <BreadcrumbSchema path="/services/ai-optimization---sports-edition-6-55ac9d5a" title="AI Optimization - Sports Edition #6" />
         <h1 className="text-4xl font-bold mb-6">AI Optimization - Sports Edition #6</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation sports solution: AI Optimization - Sports Edition #6. Combines content generation with adaptive intelligence for optimal results.</p>
 

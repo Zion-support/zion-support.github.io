@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictive-advisor-for-agriculture-db5800f7` title="Predictive Advisor for Agriculture" />
+        <BreadcrumbSchema path="/services/predictive-advisor-for-agriculture-db5800f7" title="Predictive Advisor for Agriculture" />
         <h1 className="text-4xl font-bold mb-6">Predictive Advisor for Agriculture</h1>
         <p className="text-lg text-gray-300 mb-8">The future of agriculture is here with Predictive Advisor for Agriculture. Powered by cutting-edge AI, this platform delivers security monitoring like never bef</p>
 

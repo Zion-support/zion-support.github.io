@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/system-neural---manufacturing-2-7fdcd6a2` title="System Neural - Manufacturing #2" />
+        <BreadcrumbSchema path="/services/system-neural---manufacturing-2-7fdcd6a2" title="System Neural - Manufacturing #2" />
         <h1 className="text-4xl font-bold mb-6">System Neural - Manufacturing #2</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize manufacturing through intelligent automation. Our System Neural - Manufacturing #2 leverages advanced machine learning to deliver resource optimiz</p>
 

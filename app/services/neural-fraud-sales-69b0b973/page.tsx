@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/neural-fraud-sales-69b0b973` title="Neural Fraud Sales" />
+        <BreadcrumbSchema path="/services/neural-fraud-sales-69b0b973" title="Neural Fraud Sales" />
         <h1 className="text-4xl font-bold mb-6">Neural Fraud Sales</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation Real Estate solution: Neural Fraud Sales. Combines network optimization with adaptive intelligence for optimal results.</p>
 

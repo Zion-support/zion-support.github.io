@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/automated-master-manager-25c54ee1` title="Automated Master Manager" />
+        <BreadcrumbSchema path="/services/automated-master-manager-25c54ee1" title="Automated Master Manager" />
         <h1 className="text-4xl font-bold mb-6">Automated Master Manager</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your Logistics operations with our Automated Master Manager. This AI-driven solution automates data governance with unprecedented accuracy and efficie</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligence-automated---energy-8cf0094b` title="Intelligence Automated - Energy" />
+        <BreadcrumbSchema path="/services/intelligence-automated---energy-8cf0094b" title="Intelligence Automated - Energy" />
         <h1 className="text-4xl font-bold mb-6">Intelligence Automated - Energy</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize energy through intelligent automation. Our Intelligence Automated - Energy leverages advanced machine learning to deliver predictive analytics at </p>
 

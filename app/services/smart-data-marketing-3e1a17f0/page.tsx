@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/smart-data-marketing-3e1a17f0` title="Smart Data Marketing" />
+        <BreadcrumbSchema path="/services/smart-data-marketing-3e1a17f0" title="Smart Data Marketing" />
         <h1 className="text-4xl font-bold mb-6">Smart Data Marketing</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Smart Data Marketing. This autonomous system provides network optimization with zero manual intervention needed.</p>
 

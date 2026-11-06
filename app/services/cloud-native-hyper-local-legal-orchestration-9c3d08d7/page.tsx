@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cloud-native-hyper-local-legal-orchestration-9c3d08d7` title="Cloud-Native Hyper-Local Legal Orchestration" />
+        <BreadcrumbSchema path="/services/cloud-native-hyper-local-legal-orchestration-9c3d08d7" title="Cloud-Native Hyper-Local Legal Orchestration" />
         <h1 className="text-4xl font-bold mb-6">Cloud-Native Hyper-Local Legal Orchestration</h1>
         <p className="text-lg text-gray-300 mb-8">Cloud-native orchestration platform that manages hyper-local legal resources with auto-scaling and cost control.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/smart-network-generator-1-40bfc1f4` title="Smart Network Generator #1" />
+        <BreadcrumbSchema path="/services/smart-network-generator-1-40bfc1f4" title="Smart Network Generator #1" />
         <h1 className="text-4xl font-bold mb-6">Smart Network Generator #1</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your real-estate operations with our Smart Network Generator #1. This AI-driven solution automates inventory management with unprecedented accuracy an</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-content-automation-5f7197a0` title="Cognitive Content Automation" />
+        <BreadcrumbSchema path="/services/cognitive-content-automation-5f7197a0" title="Cognitive Content Automation" />
         <h1 className="text-4xl font-bold mb-6">Cognitive Content Automation</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your agriculture operations with our Cognitive Content Automation. This AI-driven solution automates energy management with unprecedented accuracy and</p>
 

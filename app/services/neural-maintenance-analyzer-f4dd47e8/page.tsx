@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/neural-maintenance-analyzer-f4dd47e8` title="Neural Maintenance Analyzer" />
+        <BreadcrumbSchema path="/services/neural-maintenance-analyzer-f4dd47e8" title="Neural Maintenance Analyzer" />
         <h1 className="text-4xl font-bold mb-6">Neural Maintenance Analyzer</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize telecom through intelligent automation. Our Neural Maintenance Analyzer leverages advanced machine learning to deliver compliance monitoring at sc</p>
 

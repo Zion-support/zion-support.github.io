@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/smart-engine-for-media-1-5f8b2573` title="Smart Engine for Media #1" />
+        <BreadcrumbSchema path="/services/smart-engine-for-media-1-5f8b2573" title="Smart Engine for Media #1" />
         <h1 className="text-4xl font-bold mb-6">Smart Engine for Media #1</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your media operations with our Smart Engine for Media #1. This AI-driven solution automates image recognition with unprecedented accuracy and efficien</p>
 

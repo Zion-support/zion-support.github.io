@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/smart-workflow-director-6d5ca7fd` title="Smart Workflow Director" />
+        <BreadcrumbSchema path="/services/smart-workflow-director-6d5ca7fd" title="Smart Workflow Director" />
         <h1 className="text-4xl font-bold mb-6">Smart Workflow Director</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation real-estate solution: Smart Workflow Director. Combines content generation with adaptive intelligence for optimal results.</p>
 

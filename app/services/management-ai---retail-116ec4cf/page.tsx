@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/management-ai---retail-116ec4cf` title="Management AI - Retail" />
+        <BreadcrumbSchema path="/services/management-ai---retail-116ec4cf" title="Management AI - Retail" />
         <h1 className="text-4xl font-bold mb-6">Management AI - Retail</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your retail operations with our Management AI - Retail. This AI-driven solution automates compliance monitoring with unprecedented accuracy and effici</p>
 

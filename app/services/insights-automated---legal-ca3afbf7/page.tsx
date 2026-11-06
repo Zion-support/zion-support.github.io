@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/insights-automated---legal-ca3afbf7` title="Insights Automated - Legal" />
+        <BreadcrumbSchema path="/services/insights-automated---legal-ca3afbf7" title="Insights Automated - Legal" />
         <h1 className="text-4xl font-bold mb-6">Insights Automated - Legal</h1>
         <p className="text-lg text-gray-300 mb-8">The future of legal is here with Insights Automated - Legal. Powered by cutting-edge AI, this platform delivers language processing like never before.</p>
 

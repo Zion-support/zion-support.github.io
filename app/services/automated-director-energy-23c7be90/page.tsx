@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/automated-director-energy-23c7be90` title="Automated director-energy" />
+        <BreadcrumbSchema path="/services/automated-director-energy-23c7be90" title="Automated director-energy" />
         <h1 className="text-4xl font-bold mb-6">Automated director-energy</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Automated director-energy. This autonomous system provides threat detection with zero manual intervention needed.</p>
 

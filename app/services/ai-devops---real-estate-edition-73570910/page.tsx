@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-devops---real-estate-edition-73570910` title="AI DevOps - Real Estate Edition" />
+        <BreadcrumbSchema path="/services/ai-devops---real-estate-edition-73570910" title="AI DevOps - Real Estate Edition" />
         <h1 className="text-4xl font-bold mb-6">AI DevOps - Real Estate Edition</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation Real Estate solution: AI DevOps - Real Estate Edition. Combines business intelligence with adaptive intelligence for optimal results.</p>
 

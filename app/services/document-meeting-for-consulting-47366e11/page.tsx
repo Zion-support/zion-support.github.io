@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/document-meeting-for-consulting-47366e11` title="Document Meeting for Consulting" />
+        <BreadcrumbSchema path="/services/document-meeting-for-consulting-47366e11" title="Document Meeting for Consulting" />
         <h1 className="text-4xl font-bold mb-6">Document Meeting for Consulting</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Document Meeting for Consulting. This autonomous system provides meeting intelligence with zero manual intervention needed.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/monitoring-smart---manufacturing-a74b336e` title="Monitoring Smart - Manufacturing" />
+        <BreadcrumbSchema path="/services/monitoring-smart---manufacturing-a74b336e" title="Monitoring Smart - Manufacturing" />
         <h1 className="text-4xl font-bold mb-6">Monitoring Smart - Manufacturing</h1>
         <p className="text-lg text-gray-300 mb-8">The future of Manufacturing is here with Monitoring Smart - Manufacturing. Powered by cutting-edge AI, this platform delivers sales forecasting like never befor</p>
 

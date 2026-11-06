@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-orchestrator-telecom-e914a0ed` title="Cognitive orchestrator-telecom" />
+        <BreadcrumbSchema path="/services/cognitive-orchestrator-telecom-e914a0ed" title="Cognitive orchestrator-telecom" />
         <h1 className="text-4xl font-bold mb-6">Cognitive orchestrator-telecom</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your telecom operations with our Cognitive orchestrator-telecom. This AI-driven solution automates compliance monitoring with unprecedented accuracy a</p>
 

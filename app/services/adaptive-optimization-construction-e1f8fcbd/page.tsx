@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/adaptive-optimization-construction-e1f8fcbd` title="Adaptive optimization-construction" />
+        <BreadcrumbSchema path="/services/adaptive-optimization-construction-e1f8fcbd" title="Adaptive optimization-construction" />
         <h1 className="text-4xl font-bold mb-6">Adaptive optimization-construction</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Adaptive optimization-construction. This autonomous system provides resource optimization with zero manual intervention needed.</p>
 

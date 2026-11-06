@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/neural-financial-optimization-4bdff800` title="Neural Financial Optimization" />
+        <BreadcrumbSchema path="/services/neural-financial-optimization-4bdff800" title="Neural Financial Optimization" />
         <h1 className="text-4xl font-bold mb-6">Neural Financial Optimization</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize agriculture through intelligent automation. Our Neural Financial Optimization leverages advanced machine learning to deliver inventory management </p>
 

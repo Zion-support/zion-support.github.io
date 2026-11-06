@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/optimization-predictive---gaming-02e598c2` title="Optimization Predictive - Gaming" />
+        <BreadcrumbSchema path="/services/optimization-predictive---gaming-02e598c2" title="Optimization Predictive - Gaming" />
         <h1 className="text-4xl font-bold mb-6">Optimization Predictive - Gaming</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Optimization Predictive - Gaming. This autonomous system provides energy management with zero manual intervention needed.</p>
 

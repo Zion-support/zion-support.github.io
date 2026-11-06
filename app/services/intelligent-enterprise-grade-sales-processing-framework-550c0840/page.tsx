@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-enterprise-grade-sales-processing-framework-550c0840` title="Intelligent Enterprise-Grade Sales Processing Framework" />
+        <BreadcrumbSchema path="/services/intelligent-enterprise-grade-sales-processing-framework-550c0840" title="Intelligent Enterprise-Grade Sales Processing Framework" />
         <h1 className="text-4xl font-bold mb-6">Intelligent Enterprise-Grade Sales Processing Framework</h1>
         <p className="text-lg text-gray-300 mb-8">Intelligent processing framework that automates enterprise-grade sales data flows with real-time transformation.</p>
 

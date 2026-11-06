@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/edge-native-precision-food-service-processing-eb1942df` title="Edge-Native Precision Food Service Processing" />
+        <BreadcrumbSchema path="/services/edge-native-precision-food-service-processing-eb1942df" title="Edge-Native Precision Food Service Processing" />
         <h1 className="text-4xl font-bold mb-6">Edge-Native Precision Food Service Processing</h1>
         <p className="text-lg text-gray-300 mb-8">Edge-native processing layer that delivers precision food service insights with sub-millisecond latency.</p>
 

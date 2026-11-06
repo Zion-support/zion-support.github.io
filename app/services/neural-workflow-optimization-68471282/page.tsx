@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/neural-workflow-optimization-68471282` title="Neural Workflow Optimization" />
+        <BreadcrumbSchema path="/services/neural-workflow-optimization-68471282" title="Neural Workflow Optimization" />
         <h1 className="text-4xl font-bold mb-6">Neural Workflow Optimization</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize technology through intelligent automation. Our Neural Workflow Optimization leverages advanced machine learning to deliver workflow management at </p>
 

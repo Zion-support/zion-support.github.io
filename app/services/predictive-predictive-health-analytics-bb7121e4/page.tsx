@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictive-predictive-health-analytics-bb7121e4` title="Predictive Predictive Health Analytics" />
+        <BreadcrumbSchema path="/services/predictive-predictive-health-analytics-bb7121e4" title="Predictive Predictive Health Analytics" />
         <h1 className="text-4xl font-bold mb-6">Predictive Predictive Health Analytics</h1>
         <p className="text-lg text-gray-300 mb-8">Population health analytics platform that uses predictive predictive modeling to identify at-risk patients, optimize resource allocation, and improve care quali</p>
 

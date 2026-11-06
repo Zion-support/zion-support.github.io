@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/smart-property-management-platform-ef28374d` title="Smart Property Management Platform" />
+        <BreadcrumbSchema path="/services/smart-property-management-platform-ef28374d" title="Smart Property Management Platform" />
         <h1 className="text-4xl font-bold mb-6">Smart Property Management Platform</h1>
         <p className="text-lg text-gray-300 mb-8">End-to-end property management automation with AI-powered tenant screening, maintenance prediction, and rent optimization. Maximizes ROI for property owners and</p>
 

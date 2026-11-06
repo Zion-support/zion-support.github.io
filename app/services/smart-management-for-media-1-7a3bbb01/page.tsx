@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/smart-management-for-media-1-7a3bbb01` title="Smart Management for Media #1" />
+        <BreadcrumbSchema path="/services/smart-management-for-media-1-7a3bbb01" title="Smart Management for Media #1" />
         <h1 className="text-4xl font-bold mb-6">Smart Management for Media #1</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your media operations with our Smart Management for Media #1. This AI-driven solution automates language processing with unprecedented accuracy and ef</p>
 

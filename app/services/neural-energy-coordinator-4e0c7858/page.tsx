@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/neural-energy-coordinator-4e0c7858` title="Neural Energy Coordinator" />
+        <BreadcrumbSchema path="/services/neural-energy-coordinator-4e0c7858" title="Neural Energy Coordinator" />
         <h1 className="text-4xl font-bold mb-6">Neural Energy Coordinator</h1>
         <p className="text-lg text-gray-300 mb-8">The future of media is here with Neural Energy Coordinator. Powered by cutting-edge AI, this platform delivers risk assessment like never before.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-coordinator---real-estate-edition-90e92759` title="AI Coordinator - Real-Estate Edition" />
+        <BreadcrumbSchema path="/services/ai-coordinator---real-estate-edition-90e92759" title="AI Coordinator - Real-Estate Edition" />
         <h1 className="text-4xl font-bold mb-6">AI Coordinator - Real-Estate Edition</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your real-estate operations with our AI Coordinator - Real-Estate Edition. This AI-driven solution automates quality control with unprecedented accura</p>
 

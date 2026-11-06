@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/automated-orchestrator-for-education-b0a59861` title="Automated Orchestrator for Education" />
+        <BreadcrumbSchema path="/services/automated-orchestrator-for-education-b0a59861" title="Automated Orchestrator for Education" />
         <h1 className="text-4xl font-bold mb-6">Automated Orchestrator for Education</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your education operations with our Automated Orchestrator for Education. This AI-driven solution automates workflow management with unprecedented accu</p>
 

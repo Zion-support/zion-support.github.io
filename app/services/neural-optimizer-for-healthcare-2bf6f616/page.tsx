@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/neural-optimizer-for-healthcare-2bf6f616` title="Neural Optimizer for Healthcare" />
+        <BreadcrumbSchema path="/services/neural-optimizer-for-healthcare-2bf6f616" title="Neural Optimizer for Healthcare" />
         <h1 className="text-4xl font-bold mb-6">Neural Optimizer for Healthcare</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize healthcare through intelligent automation. Our Neural Optimizer for Healthcare leverages advanced machine learning to deliver image recognition at</p>
 

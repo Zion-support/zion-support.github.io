@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/neural-maintenance-optimizer-1fa9ccd0` title="Neural Maintenance Optimizer" />
+        <BreadcrumbSchema path="/services/neural-maintenance-optimizer-1fa9ccd0" title="Neural Maintenance Optimizer" />
         <h1 className="text-4xl font-bold mb-6">Neural Maintenance Optimizer</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your construction operations with our Neural Maintenance Optimizer. This AI-driven solution automates predictive analytics with unprecedented accuracy</p>
 

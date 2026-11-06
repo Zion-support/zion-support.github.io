@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-powered-digital-twin-q7r8s9t0` title="AI-Powered Digital Twin" />
+        <BreadcrumbSchema path="/services/ai-powered-digital-twin-q7r8s9t0" title="AI-Powered Digital Twin" />
         <h1 className="text-4xl font-bold mb-6">AI-Powered Digital Twin</h1>
         <p className="text-lg text-gray-300 mb-8">Create intelligent digital twins of physical assets, systems, or processes using AI and IoT data for predictive analytics and optimization.</p>
 

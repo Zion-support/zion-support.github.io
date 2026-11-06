@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/automated-analytics-construction-9959af89` title="Automated analytics-construction" />
+        <BreadcrumbSchema path="/services/automated-analytics-construction-9959af89" title="Automated analytics-construction" />
         <h1 className="text-4xl font-bold mb-6">Automated analytics-construction</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Automated analytics-construction. This autonomous system provides workflow management with zero manual intervention needed.</p>
 

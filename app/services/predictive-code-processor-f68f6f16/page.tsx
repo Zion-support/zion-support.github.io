@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictive-code-processor-f68f6f16` title="Predictive Code Processor" />
+        <BreadcrumbSchema path="/services/predictive-code-processor-f68f6f16" title="Predictive Code Processor" />
         <h1 className="text-4xl font-bold mb-6">Predictive Code Processor</h1>
         <p className="text-lg text-gray-300 mb-8">The future of technology is here with Predictive Code Processor. Powered by cutting-edge AI, this platform delivers threat detection like never before.</p>
 

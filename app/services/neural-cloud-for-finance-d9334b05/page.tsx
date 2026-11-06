@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/neural-cloud-for-finance-d9334b05` title="Neural Cloud for Finance" />
+        <BreadcrumbSchema path="/services/neural-cloud-for-finance-d9334b05" title="Neural Cloud for Finance" />
         <h1 className="text-4xl font-bold mb-6">Neural Cloud for Finance</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize Finance through intelligent automation. Our Neural Cloud for Finance leverages advanced machine learning to deliver manufacturing quality control </p>
 

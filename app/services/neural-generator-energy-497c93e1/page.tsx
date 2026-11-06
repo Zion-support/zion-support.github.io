@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/neural-generator-energy-497c93e1` title="Neural generator-energy" />
+        <BreadcrumbSchema path="/services/neural-generator-energy-497c93e1" title="Neural generator-energy" />
         <h1 className="text-4xl font-bold mb-6">Neural generator-energy</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize energy through intelligent automation. Our Neural generator-energy leverages advanced machine learning to deliver market intelligence at scale.</p>
 

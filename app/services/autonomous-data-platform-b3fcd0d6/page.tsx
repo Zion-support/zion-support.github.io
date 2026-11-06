@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/autonomous-data-platform-b3fcd0d6` title="Autonomous Data Platform" />
+        <BreadcrumbSchema path="/services/autonomous-data-platform-b3fcd0d6" title="Autonomous Data Platform" />
         <h1 className="text-4xl font-bold mb-6">Autonomous Data Platform</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation sports solution: Autonomous Data Platform. Combines inventory management with adaptive intelligence for optimal results.</p>
 

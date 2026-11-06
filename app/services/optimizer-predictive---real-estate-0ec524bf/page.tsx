@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/optimizer-predictive---real-estate-0ec524bf` title="Optimizer Predictive - Real Estate" />
+        <BreadcrumbSchema path="/services/optimizer-predictive---real-estate-0ec524bf" title="Optimizer Predictive - Real Estate" />
         <h1 className="text-4xl font-bold mb-6">Optimizer Predictive - Real Estate</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your Real Estate operations with our Optimizer Predictive - Real Estate. This AI-driven solution automates language processing with unprecedented accu</p>
 
