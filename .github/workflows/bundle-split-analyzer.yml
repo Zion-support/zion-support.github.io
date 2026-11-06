@@ -23,7 +23,9 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v6.0.2
       with:
-        fetch-depth: 0
+        # Shallow clone: the analyzer is a paused no-op stub and the repo
+        # history is ~1.1GB, which made fetch-depth: 0 exceed the job timeout.
+        fetch-depth: 1
     - name: Setup Node.js
       uses: actions/setup-node@v6.3.0
       with:
