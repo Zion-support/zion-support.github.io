@@ -132,6 +132,8 @@ class RetryAccountingTests(unittest.TestCase):
 
     def test_http_error_is_not_retried__requests_backend(self):
         """requests returns the 500 once; urllib must not even be called."""
+        if not REQUESTS_AVAILABLE:
+            self.skipTest("requests is not importable; covered by the requests-installed job")
         calls = {"requests": 0, "urllib": 0}
         original_requests = hsc._fetch_requests
         original_urllib = hsc._fetch_urllib
@@ -140,14 +142,16 @@ class RetryAccountingTests(unittest.TestCase):
             calls["requests"] += 1
             return original_requests(url, timeout)
 
-        def fail_if_called(url, timeout=10):
+        def unexpected_urllib(url, timeout=10):
+            # Record the call instead of raising: fetch_with_retries catches
+            # Exception, so a raised assertion would be swallowed and retried.
             calls["urllib"] += 1
-            raise AssertionError("urllib must not be reached when requests succeeds")
+            return original_urllib(url, timeout)
 
         server, url = _start_server(status=500, body="boom", content_type="text/html")
         try:
             hsc._fetch_requests = counting_requests
-            hsc._fetch_urllib = fail_if_called
+            hsc._fetch_urllib = unexpected_urllib
             try:
                 status, _ct, body, error = hsc.fetch_with_retries(url)
             finally:
