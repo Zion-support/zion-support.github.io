@@ -3,14 +3,9 @@ name: Private operations publication boundary
   pull_request:
     paths:
       - '.github/workflows/**'
-      - 'scripts/assert-no-private-ops.py'
-      - 'scripts/export-public-pages.py'
-      - 'scripts/test-private-ops-guard.py'
-      - 'scripts/test-deploy-publication-head.py'
-      - 'scripts/test-public-pages-export.py'
-      - 'scripts/test-publisher-checkout.py'
-      - 'scripts/assert-publication-main.sh'
-      - 'scripts/prepare-pages-out.sh'
+      - 'scripts/**'
+      - 'content/**'
+      - 'public/**'
 permissions:
   contents: read
 jobs:
@@ -34,7 +29,8 @@ jobs:
               'scripts/assert-no-private-ops.py', 'scripts/export-public-pages.py',
               'scripts/test-private-ops-guard.py', 'scripts/test-deploy-publication-head.py',
               'scripts/test-public-pages-export.py', 'scripts/test-publisher-checkout.py', 'scripts/assert-publication-main.sh',
-              'scripts/prepare-pages-out.sh', '.github/workflows/deploy-on-push.yml',
+              'scripts/prepare-pages-out.sh', 'scripts/test-finops-scenario.cjs',
+              'scripts/test-roi-boundary-reconciliation.py', '.github/workflows/deploy-on-push.yml',
               '.github/workflows/static-deploy.yml', '.github/workflows/gh-pages.yml', '.github/workflows/private-ops-boundary-test.yml',
           ]
           for path in paths:
@@ -53,7 +49,7 @@ jobs:
               target.write_bytes(content)
           PY
       - name: Test publication boundary with synthetic fixtures
-        run: python3 -m unittest -v scripts/test-private-ops-guard.py scripts/test-deploy-publication-head.py scripts/test-public-pages-export.py scripts/test-publisher-checkout.py
+        run: python3 -m unittest -v scripts/test-private-ops-guard.py scripts/test-deploy-publication-head.py scripts/test-public-pages-export.py scripts/test-publisher-checkout.py scripts/test-roi-boundary-reconciliation.py
       - name: Check shell syntax
         run: bash -n scripts/prepare-pages-out.sh && bash -n scripts/assert-publication-main.sh
 
@@ -96,27 +92,37 @@ jobs:
             echo "::error::Checked out revision differs from publication candidate."
             exit 1
           fi
+      - name: Read candidate Node version
+        id: candidate-node
+        run: |
+          set -euo pipefail
+          version="$(cat "$BUILD_ROOT/source/.nvmrc")"
+          if [[ ! "$version" =~ ^[0-9]+(\.[0-9]+){0,2}$ ]]; then
+            echo "::error::Invalid candidate Node version."
+            exit 1
+          fi
+          printf 'version=%s\n' "$version" >> "$GITHUB_OUTPUT"
+      - name: Use repository Node version
+        uses: actions/setup-node@v6.3.0
+        with:
+          node-version: ${{ steps.candidate-node.outputs.version }}
+          package-manager-cache: false
       - name: Prepare actual Pages site
         run: |
           set -euo pipefail
           cd "$BUILD_ROOT/source"
-          # The existing renderer test creates fixed /tmp/neg-*.html fixtures.
-          # Reserve each fixture exclusively; never overwrite a preexisting file.
+          # Reviewed restored test is read-only; mutations use private mkdtemp directories.
+          # Keep this pin fail-closed if its fixture behavior changes again.
           python3 - <<'PY'
-          import os, hashlib
+          import hashlib
           from pathlib import Path
           test = Path('scripts/test-finops-scenario.cjs').read_bytes()
           blob = hashlib.sha1(b'blob ' + str(len(test)).encode() + b'\0' + test).hexdigest()
-          if blob != '9f9af1c80d82b216efc14aba51af20a59f467795':
+          if blob != '48f2a657a8c963ccd5911e1c8795b964ce4b360f':
               raise SystemExit('Fixture test changed; review required before build.')
-          labels = ['none', 'legacy attr', 'old block', 'both', 'double block', 'double attr', 'attr in body', 'block in body', 'comment only', 'whitespace attr', 'newline attr', 'multiple tags', 'block after close', 'attr on div', 'nested block', 'malformed block']
-          try:
-              for label in labels:
-                  fd = os.open('/tmp/neg-' + label + '.html', os.O_CREAT | os.O_EXCL | os.O_WRONLY, 0o600)
-                  os.close(fd)
-          except Exception:
-              raise SystemExit('Temporary fixture reservation failed; build not run.')
           PY
+          node scripts/test-operational-tools.cjs
+          node scripts/test-roi-baseline.cjs
           bash scripts/prepare-pages-out.sh
           python3 scripts/assert-no-private-ops.py out
       - name: Inspect and pack local artifact without uploading

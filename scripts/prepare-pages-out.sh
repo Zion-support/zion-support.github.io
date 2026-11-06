@@ -7,8 +7,14 @@ ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT"
 rm -rf out
 python3 scripts/export-public-pages.py public out
+node scripts/restore-reviewed-guide-dependencies.cjs out
+# Restore reciprocal operational content before FinOps validates its links.
+node scripts/render-operational-tools.cjs out/
 # Generate FinOps scenario pages and promotion blocks into out/
 node scripts/render-finops-scenario.cjs out/
+node scripts/test-finops-validation-gate.cjs out
+node scripts/test-operational-tools.cjs out --artifact-only
+node scripts/test-pages-repair-links.cjs out
 # public/sitemap-0.xml + sitemap.xml (index → sitemap-0) + robots.txt ship as-is.
 
 # Dual-path gap-fill (public wins). Hubs only — never copy country leaves.
