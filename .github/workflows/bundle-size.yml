@@ -45,6 +45,9 @@ jobs:
       - name: Install dependencies
         run: npm ci --prefer-offline --no-audit --fund=false
 
+      - name: Limit pinned Next app-entry preparation concurrency
+        run: node scripts/ci/limit-next-app-entry-concurrency.cjs
+
       - name: Select bounded build heap
         id: build_memory
         shell: bash
