@@ -48,11 +48,27 @@ def _fetch_requests(url, timeout=10):
 
 
 def _fetch_urllib(url, timeout=10):
+    """urllib fallback with requests-equivalent behaviour.
+
+    urllib raises HTTPError on any non-2xx response, so it must be caught and
+    converted into a (status, content_type, body, None) tuple — otherwise a 404
+    or 500 would be misreported as a network failure and retried pointlessly.
+    """
     req = urllib.request.Request(url, headers={"User-Agent": "zion-homepage-sanity-check/2.0"})
-    with urllib.request.urlopen(req, timeout=timeout) as response:
-        body = response.read().decode("utf-8", errors="replace")
-        content_type = response.headers.get("Content-Type", "") or response.headers.get("content-type", "")
-        return response.getcode(), content_type, body, None
+    try:
+        with urllib.request.urlopen(req, timeout=timeout) as response:
+            body = response.read().decode("utf-8", errors="replace")
+            content_type = response.headers.get("Content-Type", "") or response.headers.get("content-type", "")
+            return response.getcode(), content_type, body, None
+    except urllib.error.HTTPError as exc:
+        try:
+            body = exc.read().decode("utf-8", errors="replace")
+        except Exception:  # noqa: BLE001 - body may be unavailable on a broken response
+            body = ""
+        content_type = ""
+        if exc.headers:
+            content_type = exc.headers.get("Content-Type", "") or exc.headers.get("content-type", "")
+        return exc.code, content_type, body, None
 
 
 def fetch_with_retries(url):
