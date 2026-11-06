@@ -112,6 +112,110 @@
   </ol>
 </section>
 
+<section id="questionario">
+  <h2>Questionário Discovery — 7 perguntas, ~2 minutos</h2>
+  <p class="lead">Veja recomendações na tela e receba a solicitação no seu e-mail e em commercial@ziontechgroup.com.</p>
+  <style>
+    #dq .q{border:1px solid rgba(148,163,184,.25);border-radius:14px;padding:1rem 1.1rem;margin:1rem 0;background:rgba(15,23,42,.5)}
+    #dq .q h3{margin:0 0 .6rem;font-size:1.05rem}
+    #dq label{display:block;padding:.35rem 0;cursor:pointer}
+    #dq input[type=text],#dq input[type=email]{width:100%;padding:.65rem;border-radius:10px;border:1px solid rgba(148,163,184,.35);background:rgba(2,6,23,.5);color:#e2e8f0;margin:.3rem 0}
+    #dq-results{border:1px solid rgba(52,211,153,.4);border-radius:14px;padding:1rem 1.1rem;margin:1rem 0;background:rgba(6,78,59,.25)}
+    #dq-results ul{margin:.5rem 0 0;padding-left:1.2rem}
+  </style>
+  <form id="dq">
+    <div class="q"><h3>1. Qual é o seu setor?</h3>
+      <label><input type="radio" name="industry" value="field-service" required> Field Service / MSP</label>
+      <label><input type="radio" name="industry" value="healthcare"> Saúde</label>
+      <label><input type="radio" name="industry" value="finance"> Finanças / FinOps</label>
+      <label><input type="radio" name="industry" value="energy"> Energia</label>
+      <label><input type="radio" name="industry" value="retail"> Varejo / E-commerce</label>
+      <label><input type="radio" name="industry" value="other"> Outro</label>
+    </div>
+    <div class="q"><h3>2. Qual é o maior desafio agora?</h3>
+      <label><input type="radio" name="challenge" value="support" required> Sobrecarga de suporte</label>
+      <label><input type="radio" name="challenge" value="sla"> SLA / confiabilidade</label>
+      <label><input type="radio" name="challenge" value="costs"> Custos de cloud e operação</label>
+      <label><input type="radio" name="challenge" value="sales"> Vendas e geração de leads</label>
+      <label><input type="radio" name="challenge" value="data"> Dados e relatórios</label>
+    </div>
+    <div class="q"><h3>3. Tamanho da empresa?</h3>
+      <label><input type="radio" name="size" value="1-10" required> 1–10</label>
+      <label><input type="radio" name="size" value="11-100"> 11–100</label>
+      <label><input type="radio" name="size" value="101-1000"> 101–1.000</label>
+      <label><input type="radio" name="size" value="1000+"> 1.000+</label>
+    </div>
+    <div class="q"><h3>4. Em quanto tempo você quer resultados?</h3>
+      <label><input type="radio" name="speed" value="days" required> Dias</label>
+      <label><input type="radio" name="speed" value="weeks"> Semanas</label>
+      <label><input type="radio" name="speed" value="quarter"> Neste trimestre</label>
+    </div>
+    <div class="q"><h3>5. Você já usa ferramentas de IA?</h3>
+      <label><input type="radio" name="aiuse" value="none" required> Ainda não</label>
+      <label><input type="radio" name="aiuse" value="some"> Algumas</label>
+      <label><input type="radio" name="aiuse" value="many"> Muitas</label>
+    </div>
+    <div class="q"><h3>6. Resultado prioritário?</h3>
+      <label><input type="radio" name="outcome" value="save-time" required> Economizar tempo</label>
+      <label><input type="radio" name="outcome" value="cut-costs"> Reduzir custos</label>
+      <label><input type="radio" name="outcome" value="grow-revenue"> Aumentar receita</label>
+      <label><input type="radio" name="outcome" value="reduce-risk"> Reduzir risco</label>
+    </div>
+    <div class="q"><h3>7. Preferência de implantação?</h3>
+      <label><input type="radio" name="deploy" value="saas" required> SaaS</label>
+      <label><input type="radio" name="deploy" value="cloud"> Nossa cloud</label>
+      <label><input type="radio" name="deploy" value="onprem"> On-prem / híbrido</label>
+    </div>
+    <div class="q"><h3>8. Onde devemos enviar seus resultados?</h3>
+      <input type="text" name="name" placeholder="Seu nome" required>
+      <input type="email" name="email" placeholder="voce@empresa.com" required>
+      <p class="lead" style="margin:.4rem 0 0">A mesma solicitação é enviada para o seu endereço e para commercial@ziontechgroup.com.</p>
+    </div>
+    <p><button class="btn" type="submit">Receber meu Discovery gratuito →</button></p>
+  </form>
+  <div id="dq-results" hidden></div>
+  <script>
+  (function(){
+    var MAP={
+      'field-service':[['AI Smart Hands Scheduler','/ai-smart-hands-scheduler/'],['AI Field Service Automation','/ai-field-service-automation/']],
+      'healthcare':[['Healthcare AI Suite','/apps/healthcare-life-sciences-ai-suite.html'],['AI Readiness Assessment','/ai-readiness-assessment/']],
+      'finance':[['FinOps Consulting','/finops-consulting/'],['ROI Calculator','/roi-calc/']],
+      'energy':[['Energy AI','/apps/network-october-2026-latest.html'],['Cloud Cost Optimizer','/apps/cloud-cost-optimizer.html']],
+      'retail':[['AI Pricing Optimizer','/ai-pricing-optimizer/'],['AI Lead Generation','/ai-lead-generation/']],
+      'other':[['Zion Apps Network','/zion-app-network/'],['Full Service Catalog','/services/']],
+      'support':[['Support Ticket Triager','/support-ticket-triager/'],['SLA Calculator','/sla-calculator/']],
+      'sla':[['SLA Calculator','/sla-calculator/'],['Incident Postmortem Writer','/incident-postmortem-writer/']],
+      'costs':[['FinOps Consulting','/finops-consulting/'],['Cloud Cost Optimizer','/apps/cloud-cost-optimizer.html']],
+      'sales':[['AI Lead Generation','/ai-lead-generation/'],['Lead Score Copilot','/lead-score-copilot/']],
+      'data':[['AI Readiness Assessment','/ai-readiness-assessment/'],['Stack Audit','/stack-audit/']]
+    };
+    var form=document.getElementById('dq');
+    if(!form)return;
+    form.addEventListener('submit',function(e){
+      e.preventDefault();
+      var a=Object.fromEntries(new FormData(form).entries());
+      var picks=(MAP[a.challenge]||[]).concat(MAP[a.industry]||[]).slice(0,4);
+      var lines=picks.map(function(p){return '- '+p[0]+': https://ziontechgroup.com'+p[1];}).join('\n');
+      var summary='FREE AI DISCOVERY\nName: '+a.name+'\nEmail: '+a.email+'\nIndustry: '+a.industry+'\nChallenge: '+a.challenge+'\nSize: '+a.size+'\nSpeed: '+a.speed+'\nAI usage: '+a.aiuse+'\nOutcome: '+a.outcome+'\nDeploy: '+a.deploy+'\n\nRecommended apps:\n'+lines;
+      var box=document.getElementById('dq-results');
+      box.hidden=false;
+      box.innerHTML='<h3>Suas recomendações personalizadas</h3><ul>'+picks.map(function(p){return '<li><a href="'+p[1]+'">'+p[0]+'</a></li>';}).join('')+'</ul><p id="dq-mail-status">Enviando a solicitação de e-mail…</p><p id="dq-fallback"></p>';
+      box.scrollIntoView({behavior:'smooth'});
+      fetch('https://formsubmit.co/ajax/comercial@ziontechgroup.com',{
+        method:'POST',
+        headers:{'Content-Type':'application/json','Accept':'application/json'},
+        body:JSON.stringify({name:a.name,email:a.email,_cc:a.email,_replyto:a.email,_subject:'Free AI Discovery — '+a.name,results:summary})
+      }).then(function(r){ if(!r.ok) throw new Error('not-accepted'); document.getElementById('dq-mail-status').textContent='Solicitação aceita. Verifique sua caixa de entrada e spam.'; })
+      .catch(function(){
+        document.getElementById('dq-mail-status').textContent='Não foi possível confirmar o envio automático. Use o envio manual abaixo.';
+        var href='mailto:'+encodeURIComponent(a.email)+'?cc=commercial@ziontechgroup.com&subject='+encodeURIComponent('Free AI Discovery results')+'&body='+encodeURIComponent(summary);
+        document.getElementById('dq-fallback').innerHTML='<a class="btn alt" href="'+href+'">Enviar estes resultados manualmente</a>';
+      });
+    });
+  })();
+  </script>
+</section>
+
 <section>
   <h2>Por que grátis</h2>
   <p>Barreira baixa para um recorte escrito. Você compra clareza antes de Consulting $499, Starter $2.500 ou Growth $8.000/mês. O preço do Discovery é o único oferecido como Offer neste hub — os demais planos estão em <a href="/plans/">/plans/</a> e <a href="/pricing/">/pricing/</a>.</p>
