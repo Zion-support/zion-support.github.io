@@ -1,0 +1,29 @@
+name: Agent presence retirement test
+
+"on":
+  pull_request:
+    paths:
+      - '.github/workflows/**'
+      - 'scripts/automation/test-agent-presence-retirement.rb'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: agent-presence-retirement-test-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  retirement:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          persist-credentials: false
+          sparse-checkout: |
+            .github/workflows
+            scripts/automation
+      - name: Verify retired public writer stays absent (offline)
+        run: ruby scripts/automation/test-agent-presence-retirement.rb
