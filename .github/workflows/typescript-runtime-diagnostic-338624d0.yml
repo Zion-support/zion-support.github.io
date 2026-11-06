@@ -1,0 +1,155 @@
+name: "One-time diagnostic: Node20/22 snapshot338624d0"
+"on":
+  push:
+    branches: [fix/actions-orphan-conflicts-20261030-audit]
+    paths:
+      - .github/workflows/typescript-runtime-diagnostic-338624d0.yml
+      - scripts/diagnostics/typescript-runtime-338624d0/**
+permissions:
+  contents: read
+jobs:
+  snapshot-runtime-diagnostic:
+    name: "Diagnostic only, not PR-head validation: snapshot338624d0"
+    if: >-
+      github.repository == 'Zion-support/zion-support.github.io' &&
+      github.ref == 'refs/heads/fix/actions-orphan-conflicts-20261030-audit'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    permissions:
+      contents: read
+    steps:
+      - name: Verify host policy and fetch immutable snapshot plus pinned helpers
+        id: bootstrap
+        timeout-minutes: 5
+        env:
+          HELPER_SHA: ${{ github.sha }}
+        run: |
+          python3 - <<'PY'
+          import hashlib, json, os, re, resource, signal, subprocess, tempfile
+          from pathlib import Path
+
+          SOURCE = "338624d0d9f95488afafc4dcf0a730aa5bbb2fa5"
+          TREE = "41af3370283d048f2f3cf75648ac8cddc51b3651"
+          HELPERS = {'ci_probe.py': 'e141a6a2ea6f8cca1626e888c1da9008370524b7ba05842a40b525d73ba5b953', 'observe_aggregate.py': '325cdcfbcc7f0adfa6dd9ac854b20ba606a80adb9f0a6329bba1869908b08141', 'runtime_inventory.cjs': 'da97a7d3ccebab14aaba2ffe8821f81be14b118f4959617ec9235967b9a3f5e3'}
+          def bounded_capture(command, cwd, env, timeout):
+              child = None
+              survivors = False
+              try:
+                  previous = signal.pthread_sigmask(signal.SIG_BLOCK, {signal.SIGINT, signal.SIGTERM})
+                  try:
+                      child = subprocess.Popen(command, cwd=cwd, env=env,
+                                               stdout=subprocess.PIPE, stderr=subprocess.DEVNULL,
+                                               start_new_session=True,
+                                               preexec_fn=lambda: signal.pthread_sigmask(signal.SIG_SETMASK, previous))
+                  finally:
+                      signal.pthread_sigmask(signal.SIG_SETMASK, previous)
+                  output, _ = child.communicate(timeout=timeout)
+              finally:
+                  if child is not None:
+                      try:
+                          os.killpg(child.pid, signal.SIGKILL)
+                          survivors = child.returncode is not None
+                      except ProcessLookupError:
+                          pass
+                      if child.returncode is None:
+                          child.wait(timeout=5)
+                      if child.stdout:
+                          child.stdout.close()
+              if survivors or child.returncode:
+                  raise RuntimeError('bootstrap_command_failed')
+              return output
+
+          def cancel_bootstrap(signum, _frame):
+              raise KeyboardInterrupt()
+
+          for sig in (signal.SIGTERM, signal.SIGINT):
+              signal.signal(sig, cancel_bootstrap)
+
+          try:
+              resource.setrlimit(resource.RLIMIT_CORE, (0, 0))
+              pattern = Path("/proc/sys/kernel/core_pattern").read_text()
+              if not pattern.strip() or pattern.lstrip().startswith("|"):
+                  print(json.dumps({"phase": "blocked", "failure_code": "host_core_collector_not_approved", "counts_as_required_gate": False}))
+                  raise SystemExit(1)
+              head = os.environ["HELPER_SHA"]
+              if not re.fullmatch(r"[0-9a-f]{40}", head):
+                  raise ValueError("invalid helper revision")
+              root = Path(tempfile.mkdtemp(prefix="ts-runtime-338624d0-", dir=os.environ["RUNNER_TEMP"]))
+              source = root / "source"; source.mkdir()
+              helper_dir = root / "helpers"; helper_dir.mkdir()
+              home = root / "empty-home"; home.mkdir()
+              env = {"PATH": os.defpath, "HOME": str(home), "LANG": "C.UTF-8", "TZ": "UTC",
+                     "GIT_TERMINAL_PROMPT": "0", "GIT_CONFIG_NOSYSTEM": "1",
+                     "GIT_CONFIG_GLOBAL": "/dev/null", "GIT_CONFIG_SYSTEM": "/dev/null",
+                     "GIT_LFS_SKIP_SMUDGE": "1"}
+              def git(*args):
+                  return bounded_capture(["git", "-c", "credential.helper=", "-c", "core.hooksPath=/dev/null", *args], source, env, 120)
+              git("init", "--quiet", "--template=")
+              git("remote", "add", "origin", "https://github.com/Zion-support/zion-support.github.io.git")
+              git("fetch", "--no-tags", "--depth=1", "origin", SOURCE)
+              git("checkout", "--detach", "FETCH_HEAD")
+              if git("rev-parse", "HEAD").decode().strip() != SOURCE or git("rev-parse", "HEAD^{tree}").decode().strip() != TREE:
+                  raise ValueError("source identity mismatch")
+              # Fetch helper commit without checking it out; the source tree stays SOURCE.
+              git("fetch", "--no-tags", "--depth=1", "origin", head)
+              for filename, expected in HELPERS.items():
+                  body = git("show", head + ":scripts/diagnostics/typescript-runtime-338624d0/" + filename)
+                  if hashlib.sha256(body).hexdigest() != expected:
+                      raise ValueError("helper integrity mismatch")
+                  (helper_dir / filename).write_bytes(body)
+              with open(os.environ["GITHUB_OUTPUT"], "a") as output:
+                  output.write("source=" + str(source) + "\nhelpers=" + str(helper_dir) + "\nscratch=" + str(root) + "\n")
+              print(json.dumps({"phase": "bootstrap", "counts_as_required_gate": False,
+                                "source_commit": SOURCE, "source_tree": TREE,
+                                "helper_commit": head, "helpers_verified": len(HELPERS)}))
+          except SystemExit:
+              raise
+          except BaseException:
+              print(json.dumps({"phase": "blocked", "failure_code": "bootstrap_failed", "counts_as_required_gate": False}))
+              raise SystemExit(1)
+          PY
+      - name: Install official Node20.20.2
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f
+        with:
+          node-version: '20.20.2'
+          check-latest: false
+          package-manager-cache: false
+          token: ''
+      - name: Record Node20 binary
+        id: node20
+        run: |
+          python3 - <<'PY'
+          import os, subprocess
+          node = subprocess.check_output(["node", "-p", "process.execPath"], env={"PATH": os.environ["PATH"]}, text=True).strip()
+          with open(os.environ["GITHUB_OUTPUT"], "a") as output:
+              output.write("node=" + node + "\n")
+          PY
+      - name: Install official Node22.23.4
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f
+        with:
+          node-version: '22.23.4'
+          check-latest: false
+          package-manager-cache: false
+          token: ''
+      - name: Record Node22 binary
+        id: node22
+        run: |
+          python3 - <<'PY'
+          import os, subprocess
+          node = subprocess.check_output(["node", "-p", "process.execPath"], env={"PATH": os.environ["PATH"]}, text=True).strip()
+          with open(os.environ["GITHUB_OUTPUT"], "a") as output:
+              output.write("node=" + node + "\n")
+          PY
+      - name: Aggregate-only serial comparison on snapshot338624d0
+        timeout-minutes: 12
+        env:
+          PROBE_SOURCE: ${{ steps.bootstrap.outputs.source }}
+          PROBE_HELPERS: ${{ steps.bootstrap.outputs.helpers }}
+          PROBE_SCRATCH: ${{ steps.bootstrap.outputs.scratch }}
+          NODE20: ${{ steps.node20.outputs.node }}
+          NODE22: ${{ steps.node22.outputs.node }}
+        run: |
+          set -euo pipefail
+          python3 "$PROBE_HELPERS/ci_probe.py" \
+            --source "$PROBE_SOURCE" --scratch "$PROBE_SCRATCH" \
+            --node20 "$NODE20" --node22 "$NODE22"
