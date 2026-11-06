@@ -32,12 +32,8 @@ permissions:
   id-token: write
 
 concurrency:
-  # Keep this group name so a merged commercial run can preempt the in-flight
-  # Next.js Continuous Pages Deploy (same group). STATUS/Hermes never join
-  # because they are filtered out of on.push paths above.
-  # cancel-in-progress: latest commercial push wins (prepare is ~1m, not 60m).
-  group: continuous-pages-deploy-${{ github.ref }}
-  cancel-in-progress: true
+  group: pages-deploy
+  cancel-in-progress: false
 
 jobs:
   deploy:
@@ -65,11 +61,24 @@ jobs:
       - name: Prepare pages from public/
         run: bash scripts/prepare-pages-out.sh
 
+      - name: Verify current main publication candidate
+        env:
+          CANDIDATE_SHA: ${{ github.sha }}
+          GIT_TERMINAL_PROMPT: '0'
+        run: bash scripts/assert-publication-main.sh
+      - name: Reject private operational files in final Pages artifact
+        run: python3 scripts/assert-no-private-ops.py out
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: out
 
+      - name: Verify current main publication candidate
+        env:
+          CANDIDATE_SHA: ${{ github.sha }}
+          GIT_TERMINAL_PROMPT: '0'
+        run: bash scripts/assert-publication-main.sh
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

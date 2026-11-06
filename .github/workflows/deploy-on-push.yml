@@ -19,6 +19,9 @@ permissions:
     paths-ignore:
     - '**/STATUS.md'
   workflow_dispatch: null
+concurrency:
+  group: pages-deploy
+  cancel-in-progress: false
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -55,6 +58,27 @@ jobs:
       run: npm run build
     - name: Overlay docs pages onto out/
       run: bash scripts/prepare-pages-out.sh
+    - name: Guard candidate main before artifact upload
+      env:
+        CANDIDATE_SHA: ${{ github.event_name == 'workflow_run' && github.event.workflow_run.head_sha || github.sha }}
+        GIT_TERMINAL_PROMPT: '0'
+      run: |
+        set -euo pipefail
+        if [[ ! "$CANDIDATE_SHA" =~ ^[0-9a-f]{40}$ ]]; then
+          echo "::error::Invalid publication candidate SHA."
+          exit 1
+        fi
+        remote="$(timeout 30s git ls-remote --exit-code https://github.com/Zion-support/zion-support.github.io.git refs/heads/main)"
+        if [[ "$remote" != "$CANDIDATE_SHA"$'\trefs/heads/main' ]]; then
+          echo "::error::Publication candidate is no longer main. Start a fresh run."
+          exit 1
+        fi
+        if [[ "$(git rev-parse HEAD)" != "$CANDIDATE_SHA" ]]; then
+          echo "::error::Checked out revision differs from publication candidate."
+          exit 1
+        fi
+    - name: Reject private operational files in final Pages artifact
+      run: python3 scripts/assert-no-private-ops.py out
     - name: Upload Pages artifact
       uses: actions/upload-pages-artifact@v4
       with:
@@ -103,6 +127,21 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
+    - name: Guard candidate main immediately before deployment
+      env:
+        CANDIDATE_SHA: ${{ needs.build.outputs.sha }}
+        GIT_TERMINAL_PROMPT: '0'
+      run: |
+        set -euo pipefail
+        if [[ ! "$CANDIDATE_SHA" =~ ^[0-9a-f]{40}$ ]]; then
+          echo "::error::Invalid publication candidate SHA."
+          exit 1
+        fi
+        remote="$(timeout 30s git ls-remote --exit-code https://github.com/Zion-support/zion-support.github.io.git refs/heads/main)"
+        if [[ "$remote" != "$CANDIDATE_SHA"$'\trefs/heads/main' ]]; then
+          echo "::error::Publication candidate is no longer main. Start a fresh run."
+          exit 1
+        fi
     - name: Deploy to GitHub Pages
       id: deployment
       uses: actions/deploy-pages@v4

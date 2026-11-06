@@ -1,0 +1,57 @@
+name: Private operations publication boundary
+'on':
+  pull_request:
+    paths:
+      - '.github/workflows/**'
+      - 'scripts/assert-no-private-ops.py'
+      - 'scripts/export-public-pages.py'
+      - 'scripts/test-private-ops-guard.py'
+      - 'scripts/test-deploy-publication-head.py'
+      - 'scripts/test-public-pages-export.py'
+      - 'scripts/assert-publication-main.sh'
+      - 'scripts/prepare-pages-out.sh'
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Load only test inputs at the candidate revision
+        env:
+          GH_TOKEN: ${{ github.token }}
+          CANDIDATE_SHA: ${{ github.event.pull_request.head.sha }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import base64, hashlib, json, os, pathlib, re, urllib.request
+          sha = os.environ['CANDIDATE_SHA']
+          if not re.fullmatch(r'[0-9a-f]{40}', sha):
+              raise SystemExit('Invalid candidate revision')
+          paths = [
+              'scripts/assert-no-private-ops.py', 'scripts/export-public-pages.py',
+              'scripts/test-private-ops-guard.py', 'scripts/test-deploy-publication-head.py',
+              'scripts/test-public-pages-export.py', 'scripts/assert-publication-main.sh',
+              'scripts/prepare-pages-out.sh', '.github/workflows/deploy-on-push.yml',
+              '.github/workflows/static-deploy.yml', '.github/workflows/gh-pages.yml',
+          ]
+          for path in paths:
+              url = 'https://api.github.com/repos/Zion-support/zion-support.github.io/contents/' + path + '?ref=' + sha
+              request = urllib.request.Request(url, headers={'Authorization': 'Bearer ' + os.environ['GH_TOKEN'], 'Accept': 'application/vnd.github+json'})
+              with urllib.request.urlopen(request, timeout=60) as response:
+                  item = json.load(response)
+              if item['type'] != 'file' or item['encoding'] != 'base64':
+                  raise SystemExit('Unexpected test input')
+              content = base64.b64decode(item['content'])
+              actual = hashlib.sha1(b'blob ' + str(len(content)).encode() + b'\0' + content).hexdigest()
+              if actual != item['sha']:
+                  raise SystemExit('Test input integrity mismatch')
+              target = pathlib.Path(path)
+              target.parent.mkdir(parents=True, exist_ok=True)
+              target.write_bytes(content)
+          PY
+      - name: Test publication boundary with synthetic fixtures
+        run: python3 -m unittest -v scripts/test-private-ops-guard.py scripts/test-deploy-publication-head.py scripts/test-public-pages-export.py
+      - name: Check shell syntax
+        run: bash -n scripts/prepare-pages-out.sh && bash -n scripts/assert-publication-main.sh

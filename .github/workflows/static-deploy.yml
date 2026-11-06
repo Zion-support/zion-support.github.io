@@ -42,9 +42,21 @@ jobs:
           fi
       - name: Prepare pages
         run: bash scripts/prepare-pages-out.sh
+      - name: Verify current main publication candidate
+        env:
+          CANDIDATE_SHA: ${{ github.sha }}
+          GIT_TERMINAL_PROMPT: '0'
+        run: bash scripts/assert-publication-main.sh
+      - name: Reject private operational files in final Pages artifact
+        run: python3 scripts/assert-no-private-ops.py out
       - uses: actions/upload-pages-artifact@v3
         with:
           path: out
+      - name: Verify current main publication candidate
+        env:
+          CANDIDATE_SHA: ${{ github.sha }}
+          GIT_TERMINAL_PROMPT: '0'
+        run: bash scripts/assert-publication-main.sh
       - uses: actions/deploy-pages@v4
       # Post-deploy live curl skipped: runners often block egress and probes flake.
       # The prepare-pages-out money-path gate above is the durable Pay RED guard.

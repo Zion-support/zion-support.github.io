@@ -6,11 +6,7 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT"
 rm -rf out
-mkdir -p out
-
-if [ -d public ]; then
-  cp -a public/. out/
-fi
+python3 scripts/export-public-pages.py public out
 # Generate FinOps scenario pages and promotion blocks into out/
 node scripts/render-finops-scenario.cjs out/
 # public/sitemap-0.xml + sitemap.xml (index → sitemap-0) + robots.txt ship as-is.
@@ -101,5 +97,7 @@ assert_money_path() {
 assert_money_path services/ai-automation/index.html
 assert_money_path plans/index.html
 assert_money_path discovery/index.html
+
+python3 scripts/assert-no-private-ops.py out
 
 echo "Prepared out ($(find out -type f | wc -l) files)"
