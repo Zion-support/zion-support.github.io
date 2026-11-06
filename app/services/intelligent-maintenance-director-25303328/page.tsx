@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-maintenance-director-25303328` title="Intelligent Maintenance Director" />
+        <BreadcrumbSchema path="/services/intelligent-maintenance-director-25303328" title="Intelligent Maintenance Director" />
         <h1 className="text-4xl font-bold mb-6">Intelligent Maintenance Director</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation construction solution: Intelligent Maintenance Director. Combines content generation with adaptive intelligence for optimal results.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/adaptive-optimizer-for-hospitality-2c730be3` title="Adaptive Optimizer for Hospitality" />
+        <BreadcrumbSchema path="/services/adaptive-optimizer-for-hospitality-2c730be3" title="Adaptive Optimizer for Hospitality" />
         <h1 className="text-4xl font-bold mb-6">Adaptive Optimizer for Hospitality</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Adaptive Optimizer for Hospitality. This autonomous system provides threat detection with zero manual intervention needed.</p>
 

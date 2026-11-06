@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictive-document-orchestrator-6ed64d19` title="Predictive Document Orchestrator" />
+        <BreadcrumbSchema path="/services/predictive-document-orchestrator-6ed64d19" title="Predictive Document Orchestrator" />
         <h1 className="text-4xl font-bold mb-6">Predictive Document Orchestrator</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize energy through intelligent automation. Our Predictive Document Orchestrator leverages advanced machine learning to deliver content generation at s</p>
 

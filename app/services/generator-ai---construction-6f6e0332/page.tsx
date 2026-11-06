@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/generator-ai---construction-6f6e0332` title="Generator AI - Construction" />
+        <BreadcrumbSchema path="/services/generator-ai---construction-6f6e0332" title="Generator AI - Construction" />
         <h1 className="text-4xl font-bold mb-6">Generator AI - Construction</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your construction operations with our Generator AI - Construction. This AI-driven solution automates language processing with unprecedented accuracy a</p>
 

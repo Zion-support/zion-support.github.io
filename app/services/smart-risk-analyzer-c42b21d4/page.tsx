@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/smart-risk-analyzer-c42b21d4` title="Smart Risk Analyzer" />
+        <BreadcrumbSchema path="/services/smart-risk-analyzer-c42b21d4" title="Smart Risk Analyzer" />
         <h1 className="text-4xl font-bold mb-6">Smart Risk Analyzer</h1>
         <p className="text-lg text-gray-300 mb-8">The future of transportation is here with Smart Risk Analyzer. Powered by cutting-edge AI, this platform delivers performance monitoring like never before.</p>
 

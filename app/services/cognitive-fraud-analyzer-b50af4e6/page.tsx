@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-fraud-analyzer-b50af4e6` title="Cognitive Fraud Analyzer" />
+        <BreadcrumbSchema path="/services/cognitive-fraud-analyzer-b50af4e6" title="Cognitive Fraud Analyzer" />
         <h1 className="text-4xl font-bold mb-6">Cognitive Fraud Analyzer</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your real-estate operations with our Cognitive Fraud Analyzer. This AI-driven solution automates resource optimization with unprecedented accuracy and</p>
 

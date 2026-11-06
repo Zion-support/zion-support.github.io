@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-platform-for-hospitality-05b6ed01` title="Cognitive Platform for Hospitality" />
+        <BreadcrumbSchema path="/services/cognitive-platform-for-hospitality-05b6ed01" title="Cognitive Platform for Hospitality" />
         <h1 className="text-4xl font-bold mb-6">Cognitive Platform for Hospitality</h1>
         <p className="text-lg text-gray-300 mb-8">The future of hospitality is here with Cognitive Platform for Hospitality. Powered by cutting-edge AI, this platform delivers code optimization like never befor</p>
 

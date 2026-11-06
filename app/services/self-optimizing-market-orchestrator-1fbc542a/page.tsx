@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/self-optimizing-market-orchestrator-1fbc542a` title="Self-Optimizing Market Orchestrator" />
+        <BreadcrumbSchema path="/services/self-optimizing-market-orchestrator-1fbc542a" title="Self-Optimizing Market Orchestrator" />
         <h1 className="text-4xl font-bold mb-6">Self-Optimizing Market Orchestrator</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize real-estate through intelligent automation. Our Self-Optimizing Market Orchestrator leverages advanced machine learning to deliver threat detectio</p>
 

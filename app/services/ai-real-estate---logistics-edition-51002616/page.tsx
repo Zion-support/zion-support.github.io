@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-real-estate---logistics-edition-51002616` title="AI Real Estate - Logistics Edition" />
+        <BreadcrumbSchema path="/services/ai-real-estate---logistics-edition-51002616" title="AI Real Estate - Logistics Edition" />
         <h1 className="text-4xl font-bold mb-6">AI Real Estate - Logistics Edition</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your Logistics operations with our AI Real Estate - Logistics Edition. This AI-driven solution automates data governance with unprecedented accuracy a</p>
 

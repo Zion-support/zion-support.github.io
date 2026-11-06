@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/orchestrator-adaptive---gaming-4371de55` title="Orchestrator Adaptive - Gaming" />
+        <BreadcrumbSchema path="/services/orchestrator-adaptive---gaming-4371de55" title="Orchestrator Adaptive - Gaming" />
         <h1 className="text-4xl font-bold mb-6">Orchestrator Adaptive - Gaming</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation gaming solution: Orchestrator Adaptive - Gaming. Combines decision support with adaptive intelligence for optimal results.</p>
 

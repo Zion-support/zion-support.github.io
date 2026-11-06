@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-migration-for-finance-13aa6fa0` title="Intelligent Migration for Finance" />
+        <BreadcrumbSchema path="/services/intelligent-migration-for-finance-13aa6fa0" title="Intelligent Migration for Finance" />
         <h1 className="text-4xl font-bold mb-6">Intelligent Migration for Finance</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your finance operations with our Intelligent Migration for Finance. This AI-driven solution automates data modeling with unprecedented accuracy and ef</p>
 

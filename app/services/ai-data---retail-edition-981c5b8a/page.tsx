@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-data---retail-edition-981c5b8a` title="AI Data - Retail Edition" />
+        <BreadcrumbSchema path="/services/ai-data---retail-edition-981c5b8a" title="AI Data - Retail Edition" />
         <h1 className="text-4xl font-bold mb-6">AI Data - Retail Edition</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your Retail operations with our AI Data - Retail Edition. This AI-driven solution automates inventory management with unprecedented accuracy and effic</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/autonomous-inventory-optimizer-c0c8bb3d` title="Autonomous Inventory Optimizer" />
+        <BreadcrumbSchema path="/services/autonomous-inventory-optimizer-c0c8bb3d" title="Autonomous Inventory Optimizer" />
         <h1 className="text-4xl font-bold mb-6">Autonomous Inventory Optimizer</h1>
         <p className="text-lg text-gray-300 mb-8">The future of insurance is here with Autonomous Inventory Optimizer. Powered by cutting-edge AI, this platform delivers code optimization like never before.</p>
 

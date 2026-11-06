@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictive-language-coordinator-2-bf3d5193` title="Predictive Language Coordinator #2" />
+        <BreadcrumbSchema path="/services/predictive-language-coordinator-2-bf3d5193" title="Predictive Language Coordinator #2" />
         <h1 className="text-4xl font-bold mb-6">Predictive Language Coordinator #2</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your logistics operations with our Predictive Language Coordinator #2. This AI-driven solution automates sales forecasting with unprecedented accuracy</p>
 

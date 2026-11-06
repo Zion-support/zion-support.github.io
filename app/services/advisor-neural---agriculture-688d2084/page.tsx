@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/advisor-neural---agriculture-688d2084` title="Advisor Neural - Agriculture" />
+        <BreadcrumbSchema path="/services/advisor-neural---agriculture-688d2084" title="Advisor Neural - Agriculture" />
         <h1 className="text-4xl font-bold mb-6">Advisor Neural - Agriculture</h1>
         <p className="text-lg text-gray-300 mb-8">The future of agriculture is here with Advisor Neural - Agriculture. Powered by cutting-edge AI, this platform delivers risk assessment like never before.</p>
 

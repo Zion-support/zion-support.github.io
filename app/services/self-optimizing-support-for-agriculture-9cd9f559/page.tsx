@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/self-optimizing-support-for-agriculture-9cd9f559` title="Self-Optimizing Support for Agriculture" />
+        <BreadcrumbSchema path="/services/self-optimizing-support-for-agriculture-9cd9f559" title="Self-Optimizing Support for Agriculture" />
         <h1 className="text-4xl font-bold mb-6">Self-Optimizing Support for Agriculture</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation Agriculture solution: Self-Optimizing Support for Agriculture. Combines predictive modeling with adaptive intelligence for optimal results.</p>
 

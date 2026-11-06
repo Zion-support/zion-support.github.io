@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligence-autonomous---sports-2-9823eab8` title="Intelligence Autonomous - Sports #2" />
+        <BreadcrumbSchema path="/services/intelligence-autonomous---sports-2-9823eab8" title="Intelligence Autonomous - Sports #2" />
         <h1 className="text-4xl font-bold mb-6">Intelligence Autonomous - Sports #2</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your sports operations with our Intelligence Autonomous - Sports #2. This AI-driven solution automates network optimization with unprecedented accurac</p>
 

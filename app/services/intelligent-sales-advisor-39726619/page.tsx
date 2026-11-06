@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-sales-advisor-39726619` title="Intelligent Sales Advisor" />
+        <BreadcrumbSchema path="/services/intelligent-sales-advisor-39726619" title="Intelligent Sales Advisor" />
         <h1 className="text-4xl font-bold mb-6">Intelligent Sales Advisor</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation hospitality solution: Intelligent Sales Advisor. Combines predictive analytics with adaptive intelligence for optimal results.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictive-generator-telecom-21a4e72c` title="Predictive generator-telecom" />
+        <BreadcrumbSchema path="/services/predictive-generator-telecom-21a4e72c" title="Predictive generator-telecom" />
         <h1 className="text-4xl font-bold mb-6">Predictive generator-telecom</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize telecom through intelligent automation. Our Predictive generator-telecom leverages advanced machine learning to deliver market intelligence at sca</p>
 

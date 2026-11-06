@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/system-intelligent---media-b1f2b932` title="System Intelligent - Media" />
+        <BreadcrumbSchema path="/services/system-intelligent---media-b1f2b932" title="System Intelligent - Media" />
         <h1 className="text-4xl font-bold mb-6">System Intelligent - Media</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation media solution: System Intelligent - Media. Combines performance monitoring with adaptive intelligence for optimal results.</p>
 

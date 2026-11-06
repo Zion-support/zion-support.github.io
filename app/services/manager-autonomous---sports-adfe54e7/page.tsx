@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/manager-autonomous---sports-adfe54e7` title="Manager Autonomous - Sports" />
+        <BreadcrumbSchema path="/services/manager-autonomous---sports-adfe54e7" title="Manager Autonomous - Sports" />
         <h1 className="text-4xl font-bold mb-6">Manager Autonomous - Sports</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your sports operations with our Manager Autonomous - Sports. This AI-driven solution automates risk assessment with unprecedented accuracy and efficie</p>
 

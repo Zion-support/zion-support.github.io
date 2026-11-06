@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/autonomous-predictor-gaming-1725c6e7` title="Autonomous predictor-gaming" />
+        <BreadcrumbSchema path="/services/autonomous-predictor-gaming-1725c6e7" title="Autonomous predictor-gaming" />
         <h1 className="text-4xl font-bold mb-6">Autonomous predictor-gaming</h1>
         <p className="text-lg text-gray-300 mb-8">The future of gaming is here with Autonomous predictor-gaming. Powered by cutting-edge AI, this platform delivers market intelligence like never before.</p>
 

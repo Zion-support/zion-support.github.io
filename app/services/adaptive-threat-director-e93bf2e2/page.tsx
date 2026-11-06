@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/adaptive-threat-director-e93bf2e2` title="Adaptive Threat Director" />
+        <BreadcrumbSchema path="/services/adaptive-threat-director-e93bf2e2" title="Adaptive Threat Director" />
         <h1 className="text-4xl font-bold mb-6">Adaptive Threat Director</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Adaptive Threat Director. This autonomous system provides performance monitoring with zero manual intervention needed.</p>
 

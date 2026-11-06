@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/coordinator-self-optimizing---legal-64272ace` title="Coordinator Self-Optimizing - Legal" />
+        <BreadcrumbSchema path="/services/coordinator-self-optimizing---legal-64272ace" title="Coordinator Self-Optimizing - Legal" />
         <h1 className="text-4xl font-bold mb-6">Coordinator Self-Optimizing - Legal</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation legal solution: Coordinator Self-Optimizing - Legal. Combines supply chain with adaptive intelligence for optimal results.</p>
 

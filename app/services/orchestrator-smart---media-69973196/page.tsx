@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/orchestrator-smart---media-69973196` title="Orchestrator Smart - Media" />
+        <BreadcrumbSchema path="/services/orchestrator-smart---media-69973196" title="Orchestrator Smart - Media" />
         <h1 className="text-4xl font-bold mb-6">Orchestrator Smart - Media</h1>
         <p className="text-lg text-gray-300 mb-8">The future of media is here with Orchestrator Smart - Media. Powered by cutting-edge AI, this platform delivers maintenance scheduling like never before.</p>
 

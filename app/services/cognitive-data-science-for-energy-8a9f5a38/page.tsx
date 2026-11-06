@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-data-science-for-energy-8a9f5a38` title="Cognitive Data Science for Energy" />
+        <BreadcrumbSchema path="/services/cognitive-data-science-for-energy-8a9f5a38" title="Cognitive Data Science for Energy" />
         <h1 className="text-4xl font-bold mb-6">Cognitive Data Science for Energy</h1>
         <p className="text-lg text-gray-300 mb-8">Drive innovation in energy with Cognitive Data Science for Energy. This AI-powered platform transforms data governance into a competitive advantage.</p>
 

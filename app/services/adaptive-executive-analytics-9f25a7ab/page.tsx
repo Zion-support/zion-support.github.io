@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/adaptive-executive-analytics-9f25a7ab` title="Adaptive Executive Analytics" />
+        <BreadcrumbSchema path="/services/adaptive-executive-analytics-9f25a7ab" title="Adaptive Executive Analytics" />
         <h1 className="text-4xl font-bold mb-6">Adaptive Executive Analytics</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your Real Estate operations with our Adaptive Executive Analytics. This AI-driven solution automates network optimization with unprecedented accuracy </p>
 

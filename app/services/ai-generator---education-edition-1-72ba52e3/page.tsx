@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-generator---education-edition-1-72ba52e3` title="AI Generator - Education Edition #1" />
+        <BreadcrumbSchema path="/services/ai-generator---education-edition-1-72ba52e3" title="AI Generator - Education Edition #1" />
         <h1 className="text-4xl font-bold mb-6">AI Generator - Education Edition #1</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your education operations with our AI Generator - Education Edition #1. This AI-driven solution automates energy management with unprecedented accurac</p>
 

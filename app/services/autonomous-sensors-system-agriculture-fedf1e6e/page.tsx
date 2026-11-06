@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/autonomous-sensors-system-agriculture-fedf1e6e` title="Autonomous Sensors System - Agriculture" />
+        <BreadcrumbSchema path="/services/autonomous-sensors-system-agriculture-fedf1e6e" title="Autonomous Sensors System - Agriculture" />
         <h1 className="text-4xl font-bold mb-6">Autonomous Sensors System - Agriculture</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your agriculture operations with our Autonomous Sensors System - Agriculture. This AI-driven solution automates automation control with unprecedented </p>
 

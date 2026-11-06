@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-generator---hospitality-edition-0f98d97d` title="AI Generator - Hospitality Edition" />
+        <BreadcrumbSchema path="/services/ai-generator---hospitality-edition-0f98d97d" title="AI Generator - Hospitality Edition" />
         <h1 className="text-4xl font-bold mb-6">AI Generator - Hospitality Edition</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize hospitality through intelligent automation. Our AI Generator - Hospitality Edition leverages advanced machine learning to deliver language process</p>
 

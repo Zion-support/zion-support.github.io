@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/9-ai-powered-customer-experience-intelligence-platform` title="AI-Powered Customer Experience Intelligence Platform" />
+        <BreadcrumbSchema path="/services/9-ai-powered-customer-experience-intelligence-platform" title="AI-Powered Customer Experience Intelligence Platform" />
         <h1 className="text-4xl font-bold mb-6">AI-Powered Customer Experience Intelligence Platform</h1>
         <p className="text-lg text-gray-300 mb-8">Elevate customer experiences with artificial intelligence that analyzes behavior, predicts needs, and personalizes interactions across all touchpoints.</p>
 

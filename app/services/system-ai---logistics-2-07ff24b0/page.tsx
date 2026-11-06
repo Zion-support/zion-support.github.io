@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/system-ai---logistics-2-07ff24b0` title="System AI - Logistics #2" />
+        <BreadcrumbSchema path="/services/system-ai---logistics-2-07ff24b0" title="System AI - Logistics #2" />
         <h1 className="text-4xl font-bold mb-6">System AI - Logistics #2</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation logistics solution: System AI - Logistics #2. Combines network optimization with adaptive intelligence for optimal results.</p>
 

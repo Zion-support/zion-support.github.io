@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictive-processor-for-gaming-1-2f59bc34` title="Predictive Processor for Gaming #1" />
+        <BreadcrumbSchema path="/services/predictive-processor-for-gaming-1-2f59bc34" title="Predictive Processor for Gaming #1" />
         <h1 className="text-4xl font-bold mb-6">Predictive Processor for Gaming #1</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your Gaming operations with our Predictive Processor for Gaming #1. This AI-driven solution automates market analysis with unprecedented accuracy and </p>
 

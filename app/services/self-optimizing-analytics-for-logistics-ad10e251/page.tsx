@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/self-optimizing-analytics-for-logistics-ad10e251` title="Self-Optimizing Analytics for Logistics" />
+        <BreadcrumbSchema path="/services/self-optimizing-analytics-for-logistics-ad10e251" title="Self-Optimizing Analytics for Logistics" />
         <h1 className="text-4xl font-bold mb-6">Self-Optimizing Analytics for Logistics</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize logistics through intelligent automation. Our Self-Optimizing Analytics for Logistics leverages advanced machine learning to deliver inventory man</p>
 

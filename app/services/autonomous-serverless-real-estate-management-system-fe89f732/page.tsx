@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/autonomous-serverless-real-estate-management-system-fe89f732` title="Autonomous Serverless Real Estate Management System" />
+        <BreadcrumbSchema path="/services/autonomous-serverless-real-estate-management-system-fe89f732" title="Autonomous Serverless Real Estate Management System" />
         <h1 className="text-4xl font-bold mb-6">Autonomous Serverless Real Estate Management System</h1>
         <p className="text-lg text-gray-300 mb-8">Autonomous management system that self-optimizes serverless real estate processes with minimal human intervention.</p>
 

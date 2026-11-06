@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-orchestrator-sports-6a0ef89d` title="Cognitive orchestrator-sports" />
+        <BreadcrumbSchema path="/services/cognitive-orchestrator-sports-6a0ef89d" title="Cognitive orchestrator-sports" />
         <h1 className="text-4xl font-bold mb-6">Cognitive orchestrator-sports</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Cognitive orchestrator-sports. This autonomous system provides compliance monitoring with zero manual intervention needed.</p>
 

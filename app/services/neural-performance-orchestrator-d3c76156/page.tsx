@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/neural-performance-orchestrator-d3c76156` title="Neural Performance Orchestrator" />
+        <BreadcrumbSchema path="/services/neural-performance-orchestrator-d3c76156" title="Neural Performance Orchestrator" />
         <h1 className="text-4xl font-bold mb-6">Neural Performance Orchestrator</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your logistics operations with our Neural Performance Orchestrator. This AI-driven solution automates predictive analytics with unprecedented accuracy</p>
 

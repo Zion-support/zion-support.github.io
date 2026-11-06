@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/advisor-self-optimizing---healthcare-1-a5c78eb7` title="Advisor Self-Optimizing - Healthcare #1" />
+        <BreadcrumbSchema path="/services/advisor-self-optimizing---healthcare-1-a5c78eb7" title="Advisor Self-Optimizing - Healthcare #1" />
         <h1 className="text-4xl font-bold mb-6">Advisor Self-Optimizing - Healthcare #1</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation healthcare solution: Advisor Self-Optimizing - Healthcare #1. Combines security monitoring with adaptive intelligence for optimal results.</p>
 

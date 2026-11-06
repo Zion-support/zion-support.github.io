@@ -2,7 +2,7 @@ import { } from 'next/navigation';
 
 export const metadata = {
   title: "EdTech Adaptive Learning Engine - Zion Tech Group",
-  description: "AI-driven personalized learning that adapts curricula, pacing, and assessment difficulty in real time. Knowledge graph models each learner\'s mastery, while spac",
+  description: "AI-driven personalized learning that adapts curricula, pacing, and assessment difficulty in real time. Knowledge graph models each learner's mastery, while spac",
   alternates: {
     canonical: `https://ziontechgroup.com/services/wave127-edtech-adaptive-learning`
   }

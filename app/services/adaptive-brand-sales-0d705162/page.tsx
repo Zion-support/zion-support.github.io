@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/adaptive-brand-sales-0d705162` title="Adaptive Brand Sales" />
+        <BreadcrumbSchema path="/services/adaptive-brand-sales-0d705162" title="Adaptive Brand Sales" />
         <h1 className="text-4xl font-bold mb-6">Adaptive Brand Sales</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize Real Estate through intelligent automation. Our Adaptive Brand Sales leverages advanced machine learning to deliver customer service automation at</p>
 

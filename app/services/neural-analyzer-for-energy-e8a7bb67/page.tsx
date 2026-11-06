@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/neural-analyzer-for-energy-e8a7bb67` title="Neural Analyzer for Energy" />
+        <BreadcrumbSchema path="/services/neural-analyzer-for-energy-e8a7bb67" title="Neural Analyzer for Energy" />
         <h1 className="text-4xl font-bold mb-6">Neural Analyzer for Energy</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your Energy operations with our Neural Analyzer for Energy. This AI-driven solution automates predictive modeling with unprecedented accuracy and effi</p>
 

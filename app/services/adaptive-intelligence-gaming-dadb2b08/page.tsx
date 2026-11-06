@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/adaptive-intelligence-gaming-dadb2b08` title="Adaptive intelligence-gaming" />
+        <BreadcrumbSchema path="/services/adaptive-intelligence-gaming-dadb2b08" title="Adaptive intelligence-gaming" />
         <h1 className="text-4xl font-bold mb-6">Adaptive intelligence-gaming</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation gaming solution: Adaptive intelligence-gaming. Combines process automation with adaptive intelligence for optimal results.</p>
 

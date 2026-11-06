@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/neural-risk-processor-e060b210` title="Neural Risk Processor" />
+        <BreadcrumbSchema path="/services/neural-risk-processor-e060b210" title="Neural Risk Processor" />
         <h1 className="text-4xl font-bold mb-6">Neural Risk Processor</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation media solution: Neural Risk Processor. Combines customer insights with adaptive intelligence for optimal results.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/autonomous-analytics-system-finance-08f9cc25` title="Autonomous Analytics System - Finance" />
+        <BreadcrumbSchema path="/services/autonomous-analytics-system-finance-08f9cc25" title="Autonomous Analytics System - Finance" />
         <h1 className="text-4xl font-bold mb-6">Autonomous Analytics System - Finance</h1>
         <p className="text-lg text-gray-300 mb-8">Drive innovation in finance with Autonomous Analytics System - Finance. This AI-powered platform transforms replication management into a competitive advantage.</p>
 

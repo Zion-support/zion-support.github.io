@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/adaptive-business-manufacturing-f39bbf50` title="Adaptive Business Manufacturing" />
+        <BreadcrumbSchema path="/services/adaptive-business-manufacturing-f39bbf50" title="Adaptive Business Manufacturing" />
         <h1 className="text-4xl font-bold mb-6">Adaptive Business Manufacturing</h1>
         <p className="text-lg text-gray-300 mb-8">The future of Retail is here with Adaptive Business Manufacturing. Powered by cutting-edge AI, this platform delivers predictive modeling like never before.</p>
 

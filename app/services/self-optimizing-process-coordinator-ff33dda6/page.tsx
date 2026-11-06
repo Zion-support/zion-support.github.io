@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/self-optimizing-process-coordinator-ff33dda6` title="Self-Optimizing Process Coordinator" />
+        <BreadcrumbSchema path="/services/self-optimizing-process-coordinator-ff33dda6" title="Self-Optimizing Process Coordinator" />
         <h1 className="text-4xl font-bold mb-6">Self-Optimizing Process Coordinator</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your Manufacturing operations with our Self-Optimizing Process Coordinator. This AI-driven solution automates master data management with unprecedente</p>
 

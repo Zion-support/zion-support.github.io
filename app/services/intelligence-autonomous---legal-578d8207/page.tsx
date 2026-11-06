@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligence-autonomous---legal-578d8207` title="Intelligence Autonomous - Legal" />
+        <BreadcrumbSchema path="/services/intelligence-autonomous---legal-578d8207" title="Intelligence Autonomous - Legal" />
         <h1 className="text-4xl font-bold mb-6">Intelligence Autonomous - Legal</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your legal operations with our Intelligence Autonomous - Legal. This AI-driven solution automates data processing with unprecedented accuracy and effi</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/conversational-ai-for-non-profit-3c1c3b95` title="Conversational AI for Non-Profit" />
+        <BreadcrumbSchema path="/services/conversational-ai-for-non-profit-3c1c3b95" title="Conversational AI for Non-Profit" />
         <h1 className="text-4xl font-bold mb-6">Conversational AI for Non-Profit</h1>
         <p className="text-lg text-gray-300 mb-8">Natural language processing system that handles non-profit inquiries through intelligent chatbots.</p>
 

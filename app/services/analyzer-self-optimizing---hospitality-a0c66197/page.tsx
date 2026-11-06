@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/analyzer-self-optimizing---hospitality-a0c66197` title="Analyzer Self-Optimizing - Hospitality" />
+        <BreadcrumbSchema path="/services/analyzer-self-optimizing---hospitality-a0c66197" title="Analyzer Self-Optimizing - Hospitality" />
         <h1 className="text-4xl font-bold mb-6">Analyzer Self-Optimizing - Hospitality</h1>
         <p className="text-lg text-gray-300 mb-8">The future of hospitality is here with Analyzer Self-Optimizing - Hospitality. Powered by cutting-edge AI, this platform delivers compliance monitoring like nev</p>
 

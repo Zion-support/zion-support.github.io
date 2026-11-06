@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/analyzer-adaptive---real-estate-1-303a199f` title="Analyzer Adaptive - Real-Estate #1" />
+        <BreadcrumbSchema path="/services/analyzer-adaptive---real-estate-1-303a199f" title="Analyzer Adaptive - Real-Estate #1" />
         <h1 className="text-4xl font-bold mb-6">Analyzer Adaptive - Real-Estate #1</h1>
         <p className="text-lg text-gray-300 mb-8">The future of real-estate is here with Analyzer Adaptive - Real-Estate #1. Powered by cutting-edge AI, this platform delivers energy management like never befor</p>
 

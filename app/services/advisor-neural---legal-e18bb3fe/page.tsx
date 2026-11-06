@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/advisor-neural---legal-e18bb3fe` title="Advisor Neural - Legal" />
+        <BreadcrumbSchema path="/services/advisor-neural---legal-e18bb3fe" title="Advisor Neural - Legal" />
         <h1 className="text-4xl font-bold mb-6">Advisor Neural - Legal</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your legal operations with our Advisor Neural - Legal. This AI-driven solution automates user experience with unprecedented accuracy and efficiency.</p>
 

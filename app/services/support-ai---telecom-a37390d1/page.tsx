@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/support-ai---telecom-a37390d1` title="Support AI - Telecom" />
+        <BreadcrumbSchema path="/services/support-ai---telecom-a37390d1" title="Support AI - Telecom" />
         <h1 className="text-4xl font-bold mb-6">Support AI - Telecom</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize Telecom through intelligent automation. Our Support AI - Telecom leverages advanced machine learning to deliver revenue forecasting at scale.</p>
 

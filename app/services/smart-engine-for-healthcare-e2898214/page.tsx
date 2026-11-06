@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/smart-engine-for-healthcare-e2898214` title="Smart Engine for Healthcare" />
+        <BreadcrumbSchema path="/services/smart-engine-for-healthcare-e2898214" title="Smart Engine for Healthcare" />
         <h1 className="text-4xl font-bold mb-6">Smart Engine for Healthcare</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your healthcare operations with our Smart Engine for Healthcare. This AI-driven solution automates inventory management with unprecedented accuracy an</p>
 

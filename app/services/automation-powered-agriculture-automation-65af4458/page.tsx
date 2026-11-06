@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/automation-powered-agriculture-automation-65af4458` title="Automation-Powered Agriculture Automation" />
+        <BreadcrumbSchema path="/services/automation-powered-agriculture-automation-65af4458" title="Automation-Powered Agriculture Automation" />
         <h1 className="text-4xl font-bold mb-6">Automation-Powered Agriculture Automation</h1>
         <p className="text-lg text-gray-300 mb-8">The future of agriculture is here with Automation-Powered Agriculture Automation. Powered by cutting-edge AI, this platform delivers device management like neve</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-manager-for-tech-28dbdf3a` title="Intelligent Manager for Tech" />
+        <BreadcrumbSchema path="/services/intelligent-manager-for-tech-28dbdf3a" title="Intelligent Manager for Tech" />
         <h1 className="text-4xl font-bold mb-6">Intelligent Manager for Tech</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your technology operations with our Intelligent Manager for Tech. This AI-driven solution automates inventory management with unprecedented accuracy a</p>
 

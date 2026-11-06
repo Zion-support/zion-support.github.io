@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-driven-edge-native-marketing-automation-97a24db3` title="AI-Driven Edge-Native Marketing Automation" />
+        <BreadcrumbSchema path="/services/ai-driven-edge-native-marketing-automation-97a24db3" title="AI-Driven Edge-Native Marketing Automation" />
         <h1 className="text-4xl font-bold mb-6">AI-Driven Edge-Native Marketing Automation</h1>
         <p className="text-lg text-gray-300 mb-8">Intelligent marketing platform that creates edge-native campaigns across channels, optimizing content and targeting.</p>
 

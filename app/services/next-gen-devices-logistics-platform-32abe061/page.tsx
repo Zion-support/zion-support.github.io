@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/next-gen-devices-logistics-platform-32abe061` title="Next-Gen Devices Logistics Platform" />
+        <BreadcrumbSchema path="/services/next-gen-devices-logistics-platform-32abe061" title="Next-Gen Devices Logistics Platform" />
         <h1 className="text-4xl font-bold mb-6">Next-Gen Devices Logistics Platform</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your logistics operations with our Next-Gen Devices Logistics Platform. This AI-driven solution automates smart grid management with unprecedented acc</p>
 

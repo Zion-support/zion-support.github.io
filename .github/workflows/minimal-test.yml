@@ -5,7 +5,7 @@ jobs:
   minimal:
     runs-on: ubuntu-latest
     env:
-      NODE_OPTIONS: '--max-old-space-size=6144'
+      NODE_OPTIONS: '--max-old-space-size=8192'
       NEXT_TELEMETRY_DISABLED: '1'
     steps:
     - uses: actions/checkout@v6.0.2

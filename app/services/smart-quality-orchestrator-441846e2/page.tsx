@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/smart-quality-orchestrator-441846e2` title="Smart Quality Orchestrator" />
+        <BreadcrumbSchema path="/services/smart-quality-orchestrator-441846e2" title="Smart Quality Orchestrator" />
         <h1 className="text-4xl font-bold mb-6">Smart Quality Orchestrator</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your healthcare operations with our Smart Quality Orchestrator. This AI-driven solution automates predictive analytics with unprecedented accuracy and</p>
 

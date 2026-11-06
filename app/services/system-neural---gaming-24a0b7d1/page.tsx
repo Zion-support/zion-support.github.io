@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/system-neural---gaming-24a0b7d1` title="System Neural - Gaming" />
+        <BreadcrumbSchema path="/services/system-neural---gaming-24a0b7d1" title="System Neural - Gaming" />
         <h1 className="text-4xl font-bold mb-6">System Neural - Gaming</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation Gaming solution: System Neural - Gaming. Combines risk assessment with adaptive intelligence for optimal results.</p>
 

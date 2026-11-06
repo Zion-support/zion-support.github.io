@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/engine-ai---tech-bd192937` title="Engine AI - Tech" />
+        <BreadcrumbSchema path="/services/engine-ai---tech-bd192937" title="Engine AI - Tech" />
         <h1 className="text-4xl font-bold mb-6">Engine AI - Tech</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize technology through intelligent automation. Our Engine AI - Tech leverages advanced machine learning to deliver document processing at scale.</p>
 

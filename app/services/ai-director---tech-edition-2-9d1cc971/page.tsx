@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-director---tech-edition-2-9d1cc971` title="AI Director - Tech Edition #2" />
+        <BreadcrumbSchema path="/services/ai-director---tech-edition-2-9d1cc971" title="AI Director - Tech Edition #2" />
         <h1 className="text-4xl font-bold mb-6">AI Director - Tech Edition #2</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your technology operations with our AI Director - Tech Edition #2. This AI-driven solution automates security monitoring with unprecedented accuracy a</p>
 

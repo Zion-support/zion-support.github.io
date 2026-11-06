@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/sql-powered-finance-automation-8f52c6d5` title="SQL-Powered Finance Automation" />
+        <BreadcrumbSchema path="/services/sql-powered-finance-automation-8f52c6d5" title="SQL-Powered Finance Automation" />
         <h1 className="text-4xl font-bold mb-6">SQL-Powered Finance Automation</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your finance operations with our SQL-Powered Finance Automation. This AI-driven solution automates performance tuning with unprecedented accuracy and </p>
 

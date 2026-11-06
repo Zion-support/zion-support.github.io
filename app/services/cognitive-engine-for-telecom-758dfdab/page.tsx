@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-engine-for-telecom-758dfdab` title="Cognitive Engine for Telecom" />
+        <BreadcrumbSchema path="/services/cognitive-engine-for-telecom-758dfdab" title="Cognitive Engine for Telecom" />
         <h1 className="text-4xl font-bold mb-6">Cognitive Engine for Telecom</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Cognitive Engine for Telecom. This autonomous system provides image recognition with zero manual intervention needed.</p>
 

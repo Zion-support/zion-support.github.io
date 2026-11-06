@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/next-gen-analytics-e-commerce-platform-fac06fd4` title="Next-Gen Analytics E-Commerce Platform" />
+        <BreadcrumbSchema path="/services/next-gen-analytics-e-commerce-platform-fac06fd4" title="Next-Gen Analytics E-Commerce Platform" />
         <h1 className="text-4xl font-bold mb-6">Next-Gen Analytics E-Commerce Platform</h1>
         <p className="text-lg text-gray-300 mb-8">Enhance your e-commerce business with Next-Gen Analytics E-Commerce Platform. Our solution provides performance tuning with enterprise-grade reliability and sec</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/neural-security-for-telecom-e8e2aa04` title="Neural Security for Telecom" />
+        <BreadcrumbSchema path="/services/neural-security-for-telecom-e8e2aa04" title="Neural Security for Telecom" />
         <h1 className="text-4xl font-bold mb-6">Neural Security for Telecom</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize Telecom through intelligent automation. Our Neural Security for Telecom leverages advanced machine learning to deliver compliance monitoring at sc</p>
 

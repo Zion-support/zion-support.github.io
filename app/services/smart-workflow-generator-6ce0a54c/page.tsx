@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/smart-workflow-generator-6ce0a54c` title="Smart Workflow Generator" />
+        <BreadcrumbSchema path="/services/smart-workflow-generator-6ce0a54c" title="Smart Workflow Generator" />
         <h1 className="text-4xl font-bold mb-6">Smart Workflow Generator</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your transportation operations with our Smart Workflow Generator. This AI-driven solution automates code optimization with unprecedented accuracy and </p>
 

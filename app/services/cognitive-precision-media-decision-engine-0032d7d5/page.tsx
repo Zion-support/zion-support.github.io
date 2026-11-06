@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-precision-media-decision-engine-0032d7d5` title="Cognitive Precision Media Decision Engine" />
+        <BreadcrumbSchema path="/services/cognitive-precision-media-decision-engine-0032d7d5" title="Cognitive Precision Media Decision Engine" />
         <h1 className="text-4xl font-bold mb-6">Cognitive Precision Media Decision Engine</h1>
         <p className="text-lg text-gray-300 mb-8">Cognitive decision engine that processes precision signals to drive media strategy with deep learning.</p>
 

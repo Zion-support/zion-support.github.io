@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/engine-self-optimizing---insurance-280154c9` title="Engine Self-Optimizing - Insurance" />
+        <BreadcrumbSchema path="/services/engine-self-optimizing---insurance-280154c9" title="Engine Self-Optimizing - Insurance" />
         <h1 className="text-4xl font-bold mb-6">Engine Self-Optimizing - Insurance</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Engine Self-Optimizing - Insurance. This autonomous system provides decision support with zero manual intervention needed.</p>
 

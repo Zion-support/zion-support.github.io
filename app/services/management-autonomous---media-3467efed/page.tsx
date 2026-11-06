@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/management-autonomous---media-3467efed` title="Management Autonomous - Media" />
+        <BreadcrumbSchema path="/services/management-autonomous---media-3467efed" title="Management Autonomous - Media" />
         <h1 className="text-4xl font-bold mb-6">Management Autonomous - Media</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize media through intelligent automation. Our Management Autonomous - Media leverages advanced machine learning to deliver quality control at scale.</p>
 
