@@ -44,6 +44,45 @@ const nextConfig = {
     }
     // Limit parallelism in webpack
     config.parallelism = 1;
+    if (process.env.ZION_BUILD_PROFILE === '1') {
+      console.log('[zion-build-memory] enabled');
+      config.plugins = [...(config.plugins || []), {
+        apply(compiler) {
+          const label = 'ZionBuildMemory';
+          const name = compiler.options?.name;
+          const kind = ['client', 'server', 'edge-server'].includes(name)
+            ? name : (isServer ? 'server' : 'client');
+          let started = 0;
+          let completed = 0;
+          const count = value => Number.isFinite(value?.size) ? value.size : null;
+          const emit = (phase, modules = null, chunks = null) => {
+            const memory = process.memoryUsage();
+            const mib = value => Math.round(value / 1048576);
+            console.log('[zion-build-memory] ' + JSON.stringify({
+              compiler: kind, phase, started, completed, modules, chunks,
+              rssMiB: mib(memory.rss), heapUsedMiB: mib(memory.heapUsed),
+              heapTotalMiB: mib(memory.heapTotal), externalMiB: mib(memory.external),
+              arrayBuffersMiB: mib(memory.arrayBuffers),
+            }));
+          };
+          emit('apply');
+          compiler.hooks.beforeCompile.tap(label, () => emit('beforeCompile'));
+          compiler.hooks.thisCompilation.tap(label, compilation => {
+            compilation.hooks.buildModule.tap(label, () => {
+              started += 1;
+              if (started % 1000 === 0) emit('building', count(compilation.modules));
+            });
+            compilation.hooks.succeedModule.tap(label, () => { completed += 1; });
+            compilation.hooks.finishModules.tap(label, modules => emit('finishModules', count(modules)));
+            compilation.hooks.optimizeChunks.tap(label, chunks => emit('optimizeChunks', count(compilation.modules), count(chunks)));
+            compilation.hooks.afterOptimizeChunks.tap(label, chunks => emit('afterOptimizeChunks', count(compilation.modules), count(chunks)));
+            compilation.hooks.afterSeal.tap(label, () => emit('afterSeal', count(compilation.modules), count(compilation.chunks)));
+          });
+          compiler.hooks.done.tap(label, stats => emit('done', count(stats.compilation?.modules), count(stats.compilation?.chunks)));
+          compiler.hooks.failed.tap(label, () => emit('failed'));
+        },
+      }];
+    }
     return config;
   },
   generateBuildId: async () => 'zion-tech-group-v1',

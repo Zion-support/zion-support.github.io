@@ -68,6 +68,7 @@ jobs:
       - name: Build PR branch
         env:
           NODE_OPTIONS: --max-old-space-size=${{ steps.build_memory.outputs.heap_mib }}
+          ZION_BUILD_PROFILE: "1"
         run: |
           set -euo pipefail
           npm run rsc:guard
