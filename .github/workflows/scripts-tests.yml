@@ -1,0 +1,73 @@
+name: Scripts Tests
+
+# Dedicated CI for the Python/Bash guard scripts. Runs the same suite twice:
+# once without `requests` (urllib-only path) and once with `requests` installed,
+# because fetch_with_retries returns on the first backend that does not raise —
+# a single environment cannot exercise both backends.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/homepage_sanity_check.py'
+      - 'scripts/tests/**'
+      - 'package.json'
+      - '.github/workflows/scripts-tests.yml'
+  pull_request:
+    paths:
+      - 'scripts/homepage_sanity_check.py'
+      - 'scripts/tests/**'
+      - 'package.json'
+      - '.github/workflows/scripts-tests.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: scripts-tests
+  cancel-in-progress: false
+
+jobs:
+  homepage-sanity-without-requests:
+    name: homepage sanity (urllib only)
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run suite without requests
+        run: |
+          set -euo pipefail
+          python3 -m unittest scripts.tests.test_homepage_sanity_check -v
+
+  homepage-sanity-with-requests:
+    name: homepage sanity (requests + urllib parity)
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install requests
+        run: python -m pip install --quiet requests
+
+      - name: Run suite with requests
+        run: |
+          set -euo pipefail
+          python -m unittest scripts.tests.test_homepage_sanity_check -v
+
+  secrets-preflight:
+    name: secret preflight paths
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run preflight path tests
+        run: |
+          set -euo pipefail
+          bash scripts/tests/test_secrets_preflight.sh
