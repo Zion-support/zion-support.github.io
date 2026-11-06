@@ -191,6 +191,7 @@
     };
     var form=document.getElementById('dq');
     if(!form)return;
+    function esc(s){return String(s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
     form.addEventListener('submit',function(e){
       e.preventDefault();
       var a=Object.fromEntries(new FormData(form).entries());
@@ -199,7 +200,7 @@
       var summary='FREE AI DISCOVERY\nName: '+a.name+'\nEmail: '+a.email+'\nIndustry: '+a.industry+'\nChallenge: '+a.challenge+'\nSize: '+a.size+'\nSpeed: '+a.speed+'\nAI usage: '+a.aiuse+'\nOutcome: '+a.outcome+'\nDeploy: '+a.deploy+'\n\nRecommended apps:\n'+lines;
       var box=document.getElementById('dq-results');
       box.hidden=false;
-      box.innerHTML='<h3>Suas recomendações personalizadas</h3><ul>'+picks.map(function(p){return '<li><a href="'+p[1]+'">'+p[0]+'</a></li>';}).join('')+'</ul><p id="dq-mail-status">Enviando a solicitação de e-mail…</p><p id="dq-fallback"></p>';
+      box.innerHTML='<h3>Suas recomendações personalizadas</h3><ul>'+picks.map(function(p){return '<li><a href="'+esc(p[1])+'">'+esc(p[0])+'</a></li>';}).join('')+'</ul><p id="dq-mail-status">Enviando a solicitação de e-mail…</p><p id="dq-fallback"></p>';
       box.scrollIntoView({behavior:'smooth'});
       fetch('https://formsubmit.co/ajax/comercial@ziontechgroup.com',{
         method:'POST',
@@ -209,7 +210,7 @@
       .catch(function(){
         document.getElementById('dq-mail-status').textContent='Não foi possível confirmar o envio automático. Use o envio manual abaixo.';
         var href='mailto:'+encodeURIComponent(a.email)+'?cc=commercial@ziontechgroup.com&subject='+encodeURIComponent('Free AI Discovery results')+'&body='+encodeURIComponent(summary);
-        document.getElementById('dq-fallback').innerHTML='<a class="btn alt" href="'+href+'">Enviar estes resultados manualmente</a>';
+        document.getElementById('dq-fallback').innerHTML='<a class="btn alt" href="'+esc(href)+'">Enviar estes resultados manualmente</a>';
       });
     });
   })();
