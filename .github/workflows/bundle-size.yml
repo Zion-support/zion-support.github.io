@@ -45,7 +45,33 @@ jobs:
       - name: Install dependencies
         run: npm ci --prefer-offline --no-audit --fund=false
 
+      - name: Limit pinned Next app-entry preparation concurrency
+        run: node scripts/ci/limit-next-app-entry-concurrency.cjs
+
+      - name: Select bounded build heap
+        id: build_memory
+        shell: bash
+        run: |
+          set -euo pipefail
+          available_kib=$(awk '$1 == "MemAvailable:" {print $2}' /proc/meminfo)
+          if [[ ! "$available_kib" =~ ^[0-9]+$ ]]; then
+            echo "::error::Cannot determine available runner memory."
+            exit 1
+          fi
+          available_mib=$((available_kib / 1024))
+          heap_mib=$((available_mib - 4096))
+          if (( heap_mib < 6144 )); then
+            echo "::error::Insufficient available memory for a 6 GiB heap plus 4 GiB headroom."
+            exit 1
+          fi
+          if (( heap_mib > 10240 )); then heap_mib=10240; fi
+          printf 'heap_mib=%s\n' "$heap_mib" >> "$GITHUB_OUTPUT"
+          printf 'Build budget: available=%s MiB; V8 heap=%s MiB; remaining capacity=%s MiB\n' "$available_mib" "$heap_mib" "$((available_mib - heap_mib))"
+
       - name: Build PR branch
+        env:
+          NODE_OPTIONS: --max-old-space-size=${{ steps.build_memory.outputs.heap_mib }}
+          ZION_BUILD_PROFILE: "1"
         run: |
           set -euo pipefail
           npm run rsc:guard
