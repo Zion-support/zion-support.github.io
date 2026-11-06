@@ -70,7 +70,14 @@ a hypothetical external request. No test claims the nonexistent transport observ
 opt-out instantly. Wall-clock forward jumps remain a trusted-clock limitation.
 
 No claim of global deduplication, guaranteed delivery or production readiness.
-This directory is an unintegrated experiment. No package scripts, workflows,
-crons, services or provider integrations are added. Repository CI may still run
-on a pull request; it is not evidence of these Python tests running.
+This directory is an unintegrated experiment. No package scripts, crons,
+services or provider integrations are added. A dedicated pull-request workflow,
+Offline Contact Reservation Tests, runs this Python suite with verbose output
+when this directory or that workflow changes. Other repository checks (including
+Jest coverage) are not evidence of these Python tests running.
+The dedicated job uses read-only repository permission, a SHA-pinned sparse
+checkout without persisted credentials, and the Ubuntu runner's Python. It
+installs no dependencies and receives no application secrets or production access.
+Tests use only temporary local fixtures; no provider or network sending exists.
+Checkout itself still requires GitHub network access; this is not a network sandbox.
 Do not connect this prototype to live senders without a separate design review.
