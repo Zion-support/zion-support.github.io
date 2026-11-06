@@ -18,7 +18,7 @@ def violations(root):
         rel = item.relative_to(root)
         # Artifact upload dereferences links. Reject every link, including file
         # aliases outside ops/comms, rather than infer whether its target is public.
-        if item.is_symlink():
+        if item.is_symlink() or not (item.is_dir() or item.is_file()):
             hits.append(str(rel))
             continue
         parts = [part.casefold() for part in rel.parts]

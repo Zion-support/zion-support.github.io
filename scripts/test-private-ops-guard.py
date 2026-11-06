@@ -98,7 +98,16 @@ class GuardTests(unittest.TestCase):
             self.assertEqual(result.returncode, 0)
             self.assertNotIn('SYNTHETIC_PRIVATE_FIXTURE', result.stdout + result.stderr)
             self.assertFalse((root / 'out/ops/comms/state.json').exists())
+            node.write_text('#!/bin/sh\nmkfifo "$2/fifo"\n')
+            result = run()
+            self.assertNotEqual(result.returncode, 0)
+            self.assertNotIn('SYNTHETIC_PRIVATE_FIXTURE', result.stdout + result.stderr)
 
+
+    def test_special_files_rejected_anywhere_in_artifact(self):
+        with tempfile.TemporaryDirectory() as td:
+            os.mkfifo(Path(td) / 'fifo')
+            self.assertIn('fifo', g.violations(td))
 
     def test_directory_symlink_ancestors_rejected(self):
         for alias, hidden in (("ops", "comms/state.json"),
