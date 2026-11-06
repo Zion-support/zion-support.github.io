@@ -1,0 +1,76 @@
+name: Republish verified Pages artifact
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+  deployments: read
+concurrency:
+  group: pages-deploy
+  cancel-in-progress: false
+jobs:
+  sanitize:
+    if: github.repository == 'Zion-support/zion-support.github.io' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        with:
+          persist-credentials: false
+          sparse-checkout: scripts/pages-recovery
+      - name: Check source and paused publishers
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 scripts/pages-recovery/preflight.py
+      - name: Download and sanitize verified archive
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          umask 077
+          mkdir -p "$RUNNER_TEMP/pages-source" "$RUNNER_TEMP/pages-clean"
+          curl --fail --silent --show-error --location --proto '=https' --proto-redir '=https' \
+            -H "Authorization: Bearer $GH_TOKEN" \
+            -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/Zion-support/zion-support.github.io/actions/artifacts/13539903299/zip" \
+            -o "$RUNNER_TEMP/pages-source/original.zip"
+          python3 scripts/pages-recovery/run-clean.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: github-pages
+          path: ${{ runner.temp }}/pages-clean/artifact.tar
+          if-no-files-found: error
+          retention-days: 1
+          compression-level: 0
+      - name: Remove runner source copy
+        if: always()
+        run: rm -rf "$RUNNER_TEMP/pages-source"
+  deploy:
+    needs: sanitize
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    permissions:
+      contents: read
+      actions: read
+      deployments: read
+      pages: write
+      id-token: write
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        with:
+          persist-credentials: false
+          sparse-checkout: scripts/pages-recovery
+      - name: Recheck immediately before publication
+        env:
+          ALLOW_OWN_DEPLOYMENT: '1'
+          GH_TOKEN: ${{ github.token }}
+        run: python3 scripts/pages-recovery/preflight.py
+      - name: Deploy sanitized artifact
+        id: deployment
+        uses: actions/deploy-pages@v4
+        with:
+          artifact_name: github-pages
