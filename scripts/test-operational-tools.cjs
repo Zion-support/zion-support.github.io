@@ -300,7 +300,52 @@ try {
   // the exact placeholder regression even if the renderer itself is still healthy.
   write(disk(out, '/pt/roi-calc/'), '<h1>Ferramentas</h1><p>Em breve.</p>');
   assert.throws(() => verifyArtifact(out), /Page language/);
-  console.log('PASS: formula boundaries, five-locale result invalidation, scoped governance controls, stale-placeholder replacement, 20-page artifact acceptance, accurate locale inventory with preserved metadata, preserved homepage forms, idempotency and no network/storage.');
+  // Exercise the current owner's five actual homepage bytes, including body-only
+  // language pages. Read their sources; all renderer writes remain in staging.
+  write(baselineFile, reviewedBaseline);
+  const homepageSources = new Map(locales.map(locale => {
+    const source = path.resolve('public' + home(locale) + 'index.html');
+    return [locale, {source, html: fs.readFileSync(source, 'utf8')}];
+  }));
+  const owned = /<!--operational-tools:start-->[\s\S]*?<!--operational-tools:end-->/g;
+  const protectedHomepage = html => html.match(/<(form|script)\b[\s\S]*?<\/\1\s*>/gi) || [];
+  const firstHomepageRender = new Map();
+  for (const [locale, fixture] of homepageSources) write(disk(out, home(locale)), fixture.html);
+  for (let run = 0; run < 2; run++) {
+    cp.execFileSync(process.execPath, [renderer, out], {cwd: root, stdio: 'pipe', timeout: 20000});
+    verifyArtifact(out);
+    for (const [locale, fixture] of homepageSources) {
+      const html = fs.readFileSync(disk(out, home(locale)), 'utf8');
+      assert.equal((html.match(owned) || []).length, 1, 'One promotion on real homepage ' + locale);
+      assert.equal(html.replace(owned, ''), fixture.html.replace(owned, ''), 'Every unrelated homepage byte preserved ' + locale);
+      assert.deepEqual(protectedHomepage(html), protectedHomepage(fixture.html), 'Real homepage forms/scripts preserved ' + locale);
+      assert.equal(fs.readFileSync(fixture.source, 'utf8'), fixture.html, 'Homepage source is read-only ' + locale);
+      const closing = /<\/main\s*>/i.test(fixture.html) ? /<\/main\s*>/i : /<\/body\s*>/i;
+      assert(closing.test(fixture.html), 'Real fixture has a content container ' + locale);
+      assert(new RegExp('<!--operational-tools:end-->' + closing.source, 'i').test(html), 'Promotion is inside the existing container ' + locale);
+      if (run) assert.equal(html, firstHomepageRender.get(locale), 'Real homepage render is byte-stable ' + locale);
+      else firstHomepageRender.set(locale, html);
+    }
+  }
+  // Support normal HTML case/whitespace variants without weakening the gate.
+  const homeFile = disk(out, home('en'));
+  const protectedFixture = '<FORM id="keep"><input value="$&"></FORM><SCRIPT>const value = "$$";</SCRIPT>';
+  for (const html of [
+    '<HTML><BODY><MAIN>' + protectedFixture + '</MAIN ></BODY></HTML>',
+    '<HTML><BODY>' + protectedFixture + '</BODY ></HTML>'
+  ]) {
+    write(homeFile, html);
+    cp.execFileSync(process.execPath, [renderer, out], {cwd: root, stdio: 'pipe', timeout: 20000});
+    const rendered = fs.readFileSync(homeFile, 'utf8');
+    assert.equal(rendered.replace(owned, ''), html);
+    assert.deepEqual(protectedHomepage(rendered), protectedHomepage(html));
+  }
+  const malformed = '<html><head></head><body>' + original;
+  write(homeFile, malformed);
+  assert.throws(() => cp.execFileSync(process.execPath, [renderer, out], {cwd: root, stdio: 'pipe', timeout: 20000}), /Missing homepage content container en/);
+  assert.equal(fs.readFileSync(homeFile, 'utf8'), malformed, 'Missing-container failure leaves that homepage untouched');
+  for (const fixture of homepageSources.values()) assert.equal(fs.readFileSync(fixture.source, 'utf8'), fixture.html);
+  console.log('PASS: formula boundaries, five-locale result invalidation, scoped governance controls, stale-placeholder replacement, 20-page artifact acceptance, accurate locale inventory, actual five-homepage preservation and idempotency, body-only/uppercase containers, missing-container rejection and no network/storage.');
 } finally {
   fs.rmSync(root, {recursive: true, force: true});
 }
