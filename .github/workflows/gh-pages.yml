@@ -44,11 +44,32 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 1
-
+      - name: Checkout public candidate without stored credentials
+        env:
+          CANDIDATE_SHA: ${{ github.sha }}
+          GIT_TERMINAL_PROMPT: '0'
+        run: |
+          set -euo pipefail
+          if [[ ! "$CANDIDATE_SHA" =~ ^[0-9a-f]{40}$ ]]; then
+            echo "::error::Invalid checkout candidate SHA."
+            exit 1
+          fi
+          if [[ -n "$(find . -mindepth 1 -maxdepth 1 -print -quit)" ]]; then
+            echo "::error::Checkout requires an empty workspace; existing files were not changed."
+            exit 1
+          fi
+          git init --quiet
+          git remote add origin https://github.com/Zion-support/zion-support.github.io.git
+          case "${FETCH_DEPTH:-1}" in
+            0) git -c credential.helper= fetch --no-tags origin "$CANDIDATE_SHA" ;;
+            1) git -c credential.helper= fetch --no-tags --depth=1 origin "$CANDIDATE_SHA" ;;
+            *) echo "::error::Invalid checkout depth."; exit 1 ;;
+          esac
+          git checkout --detach FETCH_HEAD
+          if [[ "$(git rev-parse HEAD)" != "$CANDIDATE_SHA" ]]; then
+            echo "::error::Checked out revision differs from publication candidate."
+            exit 1
+          fi
       - name: Guard main ref
         run: |
           set -euo pipefail

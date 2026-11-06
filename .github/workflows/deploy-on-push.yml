@@ -24,6 +24,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   build:
+    if: github.ref == 'refs/heads/main' && (github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success')
     runs-on: ubuntu-latest
     timeout-minutes: 20
     env:
@@ -32,12 +33,33 @@ jobs:
     outputs:
       sha: ${{ steps.resolve-sha.outputs.sha }}
     steps:
-    - name: Checkout
-      uses: actions/checkout@v4
-      with:
-        token: ${{ github.token }}
-        ref: ${{ github.event_name == 'workflow_run' && github.event.workflow_run.head_sha || github.sha }}
-        fetch-depth: 0
+    - name: Checkout public candidate without stored credentials
+      env:
+        CANDIDATE_SHA: ${{ github.event_name == 'workflow_run' && github.event.workflow_run.head_sha || github.sha }}
+        FETCH_DEPTH: '0'
+        GIT_TERMINAL_PROMPT: '0'
+      run: |
+        set -euo pipefail
+        if [[ ! "$CANDIDATE_SHA" =~ ^[0-9a-f]{40}$ ]]; then
+          echo "::error::Invalid checkout candidate SHA."
+          exit 1
+        fi
+        if [[ -n "$(find . -mindepth 1 -maxdepth 1 -print -quit)" ]]; then
+          echo "::error::Checkout requires an empty workspace; existing files were not changed."
+          exit 1
+        fi
+        git init --quiet
+        git remote add origin https://github.com/Zion-support/zion-support.github.io.git
+        case "${FETCH_DEPTH:-1}" in
+          0) git -c credential.helper= fetch --no-tags origin "$CANDIDATE_SHA" ;;
+          1) git -c credential.helper= fetch --no-tags --depth=1 origin "$CANDIDATE_SHA" ;;
+          *) echo "::error::Invalid checkout depth."; exit 1 ;;
+        esac
+        git checkout --detach FETCH_HEAD
+        if [[ "$(git rev-parse HEAD)" != "$CANDIDATE_SHA" ]]; then
+          echo "::error::Checked out revision differs from publication candidate."
+          exit 1
+        fi
     - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
@@ -153,11 +175,33 @@ jobs:
       NEXT_TELEMETRY_DISABLED: '1'
       BASE_URL: https://ziontechgroup.com
     steps:
-    - name: Checkout
-      uses: actions/checkout@v4
-      with:
-        ref: ${{ needs.build.outputs.sha }}
-        fetch-depth: 0
+    - name: Checkout public candidate without stored credentials
+      env:
+        CANDIDATE_SHA: ${{ needs.build.outputs.sha }}
+        FETCH_DEPTH: '0'
+        GIT_TERMINAL_PROMPT: '0'
+      run: |
+        set -euo pipefail
+        if [[ ! "$CANDIDATE_SHA" =~ ^[0-9a-f]{40}$ ]]; then
+          echo "::error::Invalid checkout candidate SHA."
+          exit 1
+        fi
+        if [[ -n "$(find . -mindepth 1 -maxdepth 1 -print -quit)" ]]; then
+          echo "::error::Checkout requires an empty workspace; existing files were not changed."
+          exit 1
+        fi
+        git init --quiet
+        git remote add origin https://github.com/Zion-support/zion-support.github.io.git
+        case "${FETCH_DEPTH:-1}" in
+          0) git -c credential.helper= fetch --no-tags origin "$CANDIDATE_SHA" ;;
+          1) git -c credential.helper= fetch --no-tags --depth=1 origin "$CANDIDATE_SHA" ;;
+          *) echo "::error::Invalid checkout depth."; exit 1 ;;
+        esac
+        git checkout --detach FETCH_HEAD
+        if [[ "$(git rev-parse HEAD)" != "$CANDIDATE_SHA" ]]; then
+          echo "::error::Checked out revision differs from publication candidate."
+          exit 1
+        fi
     - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
