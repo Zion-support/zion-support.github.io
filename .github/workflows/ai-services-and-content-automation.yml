@@ -112,7 +112,11 @@ jobs:
       - name: Secret preflight (deploy only)
         if: github.event_name == 'schedule' || github.event.inputs.trigger_deploy != 'false'
         env:
+          # REQUIRED_SECRETS lists the secrets this workflow must fail on when absent.
+          # The value is injected here so the preflight can verify presence without
+          # printing any secret value.
           REQUIRED_SECRETS: ${{ secrets.OPENROUTER_API_KEY != '' && 'OPENROUTER_API_KEY' || '' }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
         run: npm run secrets:preflight
 
       - name: Autonomous quality gate
