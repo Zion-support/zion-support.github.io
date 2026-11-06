@@ -20,12 +20,13 @@ Model:
   exists; this transition models the durable pre-dispatch boundary only.
 - Receipt -> sent + cooldown in the same transaction; no receipt -> unknown.
 - Expiration/crash recovery never enables automatic resend; uncertain rows keep
-  the unique contact slot. Late/stale completion is rejected for reconciliation.
+  the unique contact slot. Completion after recovery changes the row to unknown is rejected; see the
+  explicit expiry/receipt ordering below.
 - Suppression prevents reserved work from beginning. After dispatch begins it
   cannot recall an external action; later receipts are retained and suppression
   remains in force. No exactly-once external delivery claim is made.
 
-Validation after critical review: 24 tests pass, including 100 competing connections (one reservation),
+Validation after critical review: 31 tests pass, including 100 competing connections (one reservation),
 20 requests from independent processes (one reservation), 30 concurrent dispatch
 transitions (one success), exact 168h boundary, suppression before/after dispatch,
 replay/conflicting identity, crash/expiry/unknown state, restart, stale tokens,
@@ -52,6 +53,7 @@ Known boundaries:
 - recover_uncertain now holds only expired reservations/dispatches; it does not
   revoke an unexpired dispatch. Expired dispatch may still be in flight, so it is
   held as unknown and its later completion rejected pending reconciliation.
+  Merely passing expires does NOT reject a receipt while the row remains dispatching.
   Real recovery requires owner-death/fencing evidence and
   receipt reconciliation; it must never revoke a claim and permit another sender.
 - Same-contact coordination requires EVERY actual emitter to use the one central
@@ -84,3 +86,36 @@ Tests use only temporary local fixtures; no provider or network sending exists.
 The initial source download requires GitHub network access; this is not a network sandbox.
 If the repository becomes private, the unauthenticated download fails closed.
 Do not connect this prototype to live senders without a separate design review.
+
+
+Expiry, recovery and commit acknowledgement semantics
+----------------------------------------------------
+`expires` bounds beginning a dispatch; it is not a completion deadline. For an
+already-dispatching intent, `complete()` accepts a receipt after expiry if
+`recover_uncertain()` has not yet changed its state. The receipt observation
+time starts the 168-hour cooldown. Recovery never changes a completed sent row.
+If recovery commits first, the expired dispatch becomes unknown; completion is
+rejected, its late receipt is not stored, and the contact stays held indefinitely.
+The recovery/completion race is serialized by SQLite BEGIN IMMEDIATE. Either
+sent plus receipt plus cooldown wins, or unknown without receipt wins. This is
+order-dependent retention of evidence, not a reconciliation solution. A real
+service needs a separate authenticated late-receipt reconciliation design.
+
+A simulated acknowledgement loss after a successful begin_dispatch commit leaves
+dispatching durable and the token consumed. The caller must not infer permission
+to retry a provider action. After a successful complete commit with lost
+acknowledgement, sent, receipt and cooldown remain durable; repeating complete is
+rejected, not idempotently acknowledged. These are injected SQLite commit wrapper
+failures, not real network/provider acknowledgement-loss tests.
+
+Seven added tests cover both explicit expiry/recovery orders, acknowledgement
+loss in begin_dispatch and complete, a barrier-aligned recovery/completion race,
+and two actual disposable-process deaths via SIGKILL. The race test accepts only
+the two serial outcomes; it does not claim every run exercises both orderings.
+The ordered tests independently exercise each outcome. The process tests use a
+spawned child and a readiness pipe, then kill only that child: one after durable
+dispatch commit, one after completion writes but before commit. Reopening checks
+that dispatch remains held and uncommitted receipt/cooldown changes roll back.
+These tests cover local process death on the test filesystem, not host power
+loss, disk corruption, cross-host coordination or any real provider send. No
+transport is imported or called, and fixture databases remain temporary.
