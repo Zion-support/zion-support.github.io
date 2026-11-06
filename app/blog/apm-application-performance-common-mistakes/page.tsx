@@ -81,4 +81,3 @@ Leading indicators for apm application performance: common mistakes: workflow co
     </div>
   );
 }
-

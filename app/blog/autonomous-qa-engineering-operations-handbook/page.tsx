@@ -81,4 +81,3 @@ Leading indicators for autonomous qa engineering: operations handbook: workflow 
     </div>
   );
 }
-

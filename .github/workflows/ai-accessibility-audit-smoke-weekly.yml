@@ -1,4 +1,4 @@
-# Ensures ai-accessibility-audit.yml keeps schedule, build/axe anchors, and PR comment hook (grep-only).
+# Ensures ai-accessibility-audit.yml keeps schedule, static-serve/axe anchors, and PR comment hook (grep-only).
 name: ai accessibility audit workflow smoke (weekly)
 permissions:
   contents: read
@@ -26,8 +26,8 @@ jobs:
           grep -Fq 'group: ai-a11y-audit-' "$f"
           grep -Fq 'cancel-in-progress: true' "$f"
           grep -Fq "cron: '0 8 * * 2'" "$f"
-          grep -Fq 'npm run build' "$f"
-          grep -Fq 'npx @axe-core/cli' "$f"
+          grep -Fq 'npx serve public' "$f"
+          grep -Fq 'a11y-static-audit.cjs' "$f"
           grep -Fq 'actions/github-script@' "$f"
           grep -Fq '### ' "$f"
           echo "ok: $f"

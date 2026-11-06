@@ -4,8 +4,7 @@ The Custom ESLint workflow continues to load `.eslintrc-autonomous.cjs` with its
 existing `-c` argument and zero-warning threshold. The file now exports a flat
 configuration array, as required by the installed ESLint 10. The workflow runs
 `node --test tests/ci/test_autonomous_eslint.cjs` after `npm ci` and before the
-repository lint scan; a failing regression prevents a successful job. No
-dependency, warning threshold, or failure-reporting step is changed.
+repository lint scan; a failing regression prevents a successful job. No dependency or warning threshold is changed.
 
 ## What the repair preserves
 
@@ -93,3 +92,8 @@ changing its warning threshold or replacing commands with success placeholders.
 References: [ESLint migration guide](https://eslint.org/docs/latest/use/configure/migration-guide),
 [custom-rule API](https://eslint.org/docs/latest/extend/custom-rules), and
 [TypeScript unused-variable rule](https://typescript-eslint.io/rules/no-unused-vars/).
+
+
+## Reconciliation with current CI
+
+The verified shallow event-SHA checkout and honest exit gate from #71960 are retained. Notification handlers now read ESLint file results and nested messages with valid JavaScript. Public summaries contain only aggregate error/warning counts and a workflow link, never source, file paths or diagnostic text. Missing/invalid reports and execution failures are distinguished from lint findings; no passing result is inferred from an empty failed report. The five reporting fixtures run alongside the existing 68 configuration tests. No publisher, branch protection, compiler options or application files are changed.
