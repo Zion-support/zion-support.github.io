@@ -55,3 +55,112 @@ jobs:
         run: python3 -m unittest -v scripts/test-private-ops-guard.py scripts/test-deploy-publication-head.py scripts/test-public-pages-export.py
       - name: Check shell syntax
         run: bash -n scripts/prepare-pages-out.sh && bash -n scripts/assert-publication-main.sh
+
+  candidate-site-build:
+    # Isolated one-time validation of the reviewed candidate, not a publisher.
+    # No checkout, install, artifact upload, Pages permission or deployment.
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      SOURCE_REVISION: '3817e8b25473e07ae49f7a1d83c2ca98a625fe05'
+    steps:
+      - name: Allocate isolated build directory
+        run: |
+          set -euo pipefail
+          umask 077
+          root="$(mktemp -d "$RUNNER_TEMP/pages-validation.XXXXXXXX")"
+          echo "BUILD_ROOT=$root" >> "$GITHUB_ENV"
+      - name: Fetch reviewed source archive
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          curl --fail --silent --show-error --location --proto '=https' --proto-redir '=https' \
+            -H "Authorization: Bearer $GH_TOKEN" -H 'Accept: application/vnd.github+json' \
+            "https://api.github.com/repos/Zion-support/zion-support.github.io/tarball/$SOURCE_REVISION" \
+            -o "$BUILD_ROOT/source.tgz"
+      - name: Validate and extract source without links
+        run: |
+          python3 - <<'PY'
+          """Inspect and extract an official source archive into a new private directory."""
+          from pathlib import Path, PurePosixPath
+          import hashlib, os, tarfile
+          
+          def extract(archive, destination):
+              destination=Path(destination)
+              if destination.exists() or destination.is_symlink(): raise ValueError('Destination already exists')
+              with tarfile.open(archive,mode='r:gz') as source:
+                  members=source.getmembers()
+                  roots=set(); names=set(); size=0
+                  for member in members:
+                      path=PurePosixPath(member.name)
+                      if path.is_absolute() or '..' in path.parts or not path.parts: raise ValueError('Unsafe archive path')
+                      if member.name in names: raise ValueError('Duplicate archive member')
+                      names.add(member.name); roots.add(path.parts[0]); size+=member.size
+                      if not (member.isdir() or member.isfile()): raise ValueError('Archive links or special members rejected')
+                  if len(roots)!=1 or size>2_000_000_000 or len(members)>300000: raise ValueError('Unexpected archive shape')
+                  destination.mkdir(mode=0o700)
+                  for member in members:
+                      parts=PurePosixPath(member.name).parts[1:]
+                      if not parts: continue
+                      target=destination.joinpath(*parts)
+                      if member.isdir(): target.mkdir(parents=True,exist_ok=True,mode=0o700)
+                      else:
+                          target.parent.mkdir(parents=True,exist_ok=True,mode=0o700)
+                          with target.open('xb') as output, source.extractfile(member) as input_file:
+                              while chunk:=input_file.read(1024*1024): output.write(chunk)
+                  return len(members)
+          
+          
+          root=Path(os.environ['BUILD_ROOT'])
+          try:
+              count=extract(root/'source.tgz',root/'source')
+              expected={'scripts/assert-no-private-ops.py': '6646ae78dee1f0edc3061b7970e6803144d5dd0293e4ffaa4b06a4cbb4889114', 'scripts/export-public-pages.py': 'b715b005868b617362ffebd0a2c9cd98c1f3df19c53aabe04196d38e3248a809', 'scripts/prepare-pages-out.sh': 'ef36873dd7eee27c15a81db06efb402cf5a515e39594543926da48748e1dfc25'}
+              for name,digest in expected.items():
+                  if hashlib.sha256((root/'source'/name).read_bytes()).hexdigest()!=digest:
+                      raise ValueError('Reviewed build script mismatch')
+              test = (root/'source/scripts/test-finops-scenario.cjs').read_bytes()
+              blob = hashlib.sha1(b'blob ' + str(len(test)).encode() + b'\0' + test).hexdigest()
+              if blob != '9f9af1c80d82b216efc14aba51af20a59f467795':
+                  raise ValueError('Reviewed fixture test mismatch')
+          except Exception:
+              raise SystemExit('Source integrity check failed; build not run.')
+          print('Validated source archive entries:',count)
+          PY
+      - name: Prepare actual Pages site
+        run: |
+          set -euo pipefail
+          cd "$BUILD_ROOT/source"
+          # The existing renderer test creates fixed /tmp/neg-*.html fixtures.
+          # Reserve each fixture exclusively; never overwrite a preexisting file.
+          python3 - <<'PY'
+          import os
+          labels = ['none', 'legacy attr', 'old block', 'both', 'double block', 'double attr', 'attr in body', 'block in body', 'comment only', 'whitespace attr', 'newline attr', 'multiple tags', 'block after close', 'attr on div', 'nested block', 'malformed block']
+          try:
+              for label in labels:
+                  fd = os.open('/tmp/neg-' + label + '.html', os.O_CREAT | os.O_EXCL | os.O_WRONLY, 0o600)
+                  os.close(fd)
+          except Exception:
+              raise SystemExit('Temporary fixture reservation failed; build not run.')
+          PY
+          bash scripts/prepare-pages-out.sh
+          python3 scripts/assert-no-private-ops.py out
+      - name: Inspect and pack local artifact without uploading
+        run: |
+          set -euo pipefail
+          cd "$BUILD_ROOT/source"
+          python3 - <<'PY'
+          from pathlib import Path
+          import hashlib, tarfile, os
+          root=Path('out')
+          before={str(p.relative_to(root)):hashlib.sha256(p.read_bytes()).hexdigest() for p in root.rglob('*') if p.is_file()}
+          artifact=Path(os.environ['BUILD_ROOT'])/'validated-artifact.tar'
+          with tarfile.open(artifact,'w') as archive:
+              archive.add(root,arcname='.')
+          with tarfile.open(artifact,'r') as archive:
+              after={str(Path(m.name)):hashlib.sha256(archive.extractfile(m).read()).hexdigest() for m in archive.getmembers() if m.isfile()}
+          if before!=after:
+              raise SystemExit('Artifact contents differ from validated output')
+          print('Verified artifact files:',len(after))
+          print('Artifact SHA256:',hashlib.sha256(artifact.read_bytes()).hexdigest())
+          PY
