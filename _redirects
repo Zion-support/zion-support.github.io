@@ -59,7 +59,6 @@
 /whatsapp-business-automation/ /whatsapp-business-automation/index.html 200
 /privacy-policy/ /privacy-policy/index.html 200
 
-
 # Integrity fixes: legacy routes that 404
 /agents/ /solutions/ 301
 /explore/ /use-cases/ 301
