@@ -1,0 +1,43 @@
+name: Quality checkout and exit regression
+'on':
+  pull_request:
+    paths:
+      - '.github/workflows/openapi-drift-detector.yml'
+      - '.github/workflows/custom-eslint.yml'
+      - '.github/workflows/type-coverage.yml'
+      - '.github/workflows/quality-checkout-regression.yml'
+      - 'scripts/test-quality-workflow-exits.py'
+permissions:
+  contents: read
+jobs:
+  regression:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Load fixed test inputs at candidate revision
+        env:
+          GH_TOKEN: ${{ github.token }}
+          CANDIDATE_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          python3 - <<'PY'
+          import base64, hashlib, json, os, pathlib, re, urllib.request
+          sha = os.environ['CANDIDATE_SHA']
+          if not re.fullmatch(r'[0-9a-f]{40}', sha):
+              raise SystemExit('Invalid candidate revision')
+          paths = ['.github/workflows/openapi-drift-detector.yml', '.github/workflows/custom-eslint.yml', '.github/workflows/type-coverage.yml', 'scripts/test-quality-workflow-exits.py']
+          for path in paths:
+              request = urllib.request.Request('https://api.github.com/repos/Zion-support/zion-support.github.io/contents/' + path + '?ref=' + sha, headers={'Authorization': 'Bearer ' + os.environ['GH_TOKEN'], 'Accept': 'application/vnd.github+json'})
+              with urllib.request.urlopen(request, timeout=60) as response:
+                  item = json.load(response)
+              if item['type'] != 'file' or item['encoding'] != 'base64':
+                  raise SystemExit('Unexpected test input')
+              content = base64.b64decode(item['content'])
+              if hashlib.sha1(b'blob ' + str(len(content)).encode() + b'\0' + content).hexdigest() != item['sha']:
+                  raise SystemExit('Test input integrity mismatch')
+              target = pathlib.Path(path)
+              target.parent.mkdir(parents=True, exist_ok=True)
+              with target.open('xb') as output:
+                  output.write(content)
+          PY
+      - name: Test real checkout and exit propagation
+        run: python3 scripts/test-quality-workflow-exits.py
