@@ -1,0 +1,42 @@
+name: Agents alias contract
+
+on:
+  pull_request:
+    paths:
+      - 'public/agents/**'
+      - 'public/autonomous-ai-agents/**'
+      - 'scripts/check-agents-alias.py'
+      - 'scripts/tests/test_agents_alias.py'
+      - 'scripts/prepare-pages-out.sh'
+      - '.github/workflows/agents-alias-contract.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'public/agents/**'
+      - 'public/autonomous-ai-agents/**'
+      - 'scripts/check-agents-alias.py'
+      - 'scripts/tests/test_agents_alias.py'
+      - 'scripts/prepare-pages-out.sh'
+      - '.github/workflows/agents-alias-contract.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  alias-contract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f
+        with:
+          node-version-file: '.nvmrc'
+      - name: Test alias contract offline
+        run: python3 scripts/tests/test_agents_alias.py
+      - name: Assemble the real Pages artifact
+        run: bash scripts/prepare-pages-out.sh
+      - name: Check alias in assembled artifact
+        run: python3 scripts/check-agents-alias.py out
