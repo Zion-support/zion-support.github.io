@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 const METADATA = {
   title: 'AI Applications Directory | Zion Tech Group',
-  description: 'Browse 100+ AI applications and tools from Zion Tech Group. Document AI, customer service AI, analytics AI, automation AI, security AI, developer AI, and more.',
+  description: 'Browse 100+ AI applications and tools from Zion Tech Group. Document AI, customer service AI, analytics AI, automation AI, security AI, developer AI, and more. Free online discovery available.',
 };
 
 type Category = 'all' | 'document' | 'customer' | 'analytics' | 'automation' | 'security' | 'developer' | 'business' | 'industry';
@@ -146,15 +146,25 @@ export default function AiAppsDirectory() {
         <div className="relative container-page py-16 lg:py-20">
           <div className="max-w-3xl">
             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-300 text-xs font-medium mb-4">
+              🚀 Free online discovery — no commitment
+            </span>
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-300 text-xs font-medium mb-4 ml-2">
               🤖 {AI_TOOLS.length} AI tools and counting
             </span>
             <h1 className="text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
-              AI Applications <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Directory</span>
+              Start with <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">free discovery</span>, then scale
             </h1>
             <p className="text-slate-400 text-lg leading-relaxed mb-8">
-              Every AI application and tool from Zion Tech Group. Browse by category,
-              find the right tool for your use case, and launch it instantly.
+              Free online discovery to map your AI opportunity — then browse 100+ AI applications and tools from Zion Tech Group. Document AI, customer service AI, analytics AI, automation AI, security AI, developer AI, and more.
             </p>
+            <div className="flex flex-wrap gap-3">
+              <Link href="/discovery" className="px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-sm font-medium transition-all shadow-lg shadow-emerald-500/20">
+                Start free discovery →
+              </Link>
+              <Link href="/contact" className="px-5 py-2.5 rounded-xl border border-slate-700 hover:border-purple-500/40 text-slate-300 hover:text-white text-sm transition-all">
+                Talk to an engineer
+              </Link>
+            </div>
           </div>
         </div>
       </section>

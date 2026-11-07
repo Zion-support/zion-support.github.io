@@ -9,6 +9,8 @@ permissions:
     - cron: '12 */6 * * *'
   workflow_dispatch:
 
+env:
+  NODE_OPTIONS: '--max-old-space-size=8192'
 
 jobs:
   guard:

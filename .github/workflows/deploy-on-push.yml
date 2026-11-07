@@ -25,7 +25,7 @@ jobs:
     timeout-minutes: 20
     env:
       NEXT_TELEMETRY_DISABLED: '1'
-      NODE_OPTIONS: '--max-old-space-size=6144'
+      NODE_OPTIONS: '--max-old-space-size=8192'
     outputs:
       sha: ${{ steps.resolve-sha.outputs.sha }}
     steps:
@@ -50,7 +50,7 @@ jobs:
       # and must not block the deploy.
       continue-on-error: true
       env:
-        NODE_OPTIONS: '--max-old-space-size=12288 --max-semi-space-size=64'
+        NODE_OPTIONS: '--max-old-space-size=4096 --max-semi-space-size=64'
         NEXT_BUILD_WORKER_COUNT: '1'
       run: npm run build
     - name: Overlay docs pages onto out/

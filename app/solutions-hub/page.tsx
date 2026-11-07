@@ -1,10 +1,10 @@
 // app/solutions-hub/page.tsx — Solutions Hub: Browse by business outcome
-'use client';
 
 import Link from 'next/link';
 
 export const metadata = {
   title: 'Solutions Hub | Zion Tech Group',
+  alternates: { canonical: '/solutions-hub/' },
   description: 'Browse Zion Tech Group solutions by industry, business goal, or technology. AI services, IT solutions, cloud, security, automation, and more — organized by outcome.',
 };
 
