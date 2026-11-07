@@ -1,8 +1,8 @@
-// Zion Catálogo vivo — interactive helpers (Free Discovery entry, Agentes Telegram, Estimador FinOps)
+// Zion Catálogo vivo — interactive helpers (Discovery $99 entry, Agentes Telegram, Estimador FinOps)
 (function () {
   "use strict";
   var CATALOG = [
-    { name: "Free Discovery", href: "/discovery/", tag: "Entrada" },
+    { name: "Discovery $99", href: "/discovery/", tag: "Entrada" },
     { name: "Consulting $499", href: "/plans/", tag: "Estratégia" },
     { name: "Agentes Telegram", href: "/telegram/", tag: "Automação" },
     { name: "Estimador FinOps", href: "/finops-consulting/", tag: "FinOps" }
@@ -17,7 +17,7 @@
       var out = document.getElementById("finops-result");
       if (out) {
         out.textContent = spend > 0
-          ? "Estimativa: até US$ " + saving.toLocaleString("pt-BR") + "/mês de economia potencial. Fale conosco no Free Discovery."
+          ? "Estimativa: até US$ " + saving.toLocaleString("pt-BR") + "/mês de economia potencial. Fale conosco no Discovery $99."
           : "Informe o gasto mensal para estimar.";
       }
     });
