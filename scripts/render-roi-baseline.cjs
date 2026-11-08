@@ -14,9 +14,11 @@ const names = { en: 'English', pt: 'Português', es: 'Español', fr: 'Français'
 const prefix = locale => locale === 'en' ? '/' : '/' + locale + '/';
 const route = locale => prefix(locale) + 'roi-calc/';
 const home = locale => locale === 'pt' ? '/' : '/' + locale + '/';
-const escape = text => String(text).replace(/[&<>"']/g, value => ({
-  '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
-})[value]);
+const htmlEntities = new Map([
+  ['&', '&amp;'], ['<', '&lt;'], ['>', '&gt;'], ['"', '&quot;'], ["'", '&#39;']
+]);
+const escape = text => String(text).replace(/[&<>"']/g, value => htmlEntities.get(value));
+const defaultHours = 40, defaultRate = 45, exampleMonthly = 1800, exampleYearly = 21600;
 const relatedPaths = [
   'apps/finops-scenario-estimator.html',
   'apps/finops-pilot-guide.html',
@@ -51,14 +53,14 @@ function page(locale) {
   assert.equal(c.outputs.length, 2);
   assert.equal(c.related.length, relatedPaths.length);
   const money = value => new Intl.NumberFormat(n.locale, { style: 'currency', currency: 'USD' }).format(value);
-  const example = c.example.replace('{rate}', money(45)).replace('{monthly}', money(1800)).replace('{yearly}', money(21600));
+  const example = c.example.replace('{rate}', money(defaultRate)).replace('{monthly}', money(exampleMonthly)).replace('{yearly}', money(exampleYearly));
   const runtimeCopy = { locale: n.locale, labels: c.labels, outputs: c.outputs, error: c.error, pending: c.pending };
   const alternates = locales.map(other => '<link rel="alternate" hreflang="' + common[other].lang + '" href="' + origin + route(other) + '">').join('\n') +
     '\n<link rel="alternate" hreflang="x-default" href="' + origin + route('en') + '">';
   const languages = locales.map(other => '<a lang="' + common[other].lang + '" hreflang="' + common[other].lang + '" href="' + route(other) + '"' +
     (other === locale ? ' aria-current="page"' : '') + '>' + names[other] + '</a>').join('');
   const inputs = ['hours', 'rate'].map((id, i) => '<label for="' + id + '">' + escape(c.labels[i]) + '</label>' +
-    '<input id="' + id + '" type="number" value="' + [40, 45][i] + '" min="0" max="1000000" step="any" required aria-describedby="roi-field-hint ops-error">').join('\n');
+    '<input id="' + id + '" type="number" value="' + [defaultHours, defaultRate][i] + '" min="0" max="1000000" step="any" required aria-describedby="roi-field-hint ops-error">').join('\n');
   const related = c.related.map(([title, description], i) => '<article class="card"><h3><a href="' + prefix(locale) + relatedPaths[i] + '">' +
     escape(title) + '</a></h3><p>' + escape(description) + '</p></article>').join('\n');
   return `<!doctype html>
@@ -118,5 +120,5 @@ function run(output = 'out') {
 module.exports = { run, page, locales, route, version };
 if (require.main === module) {
   const result = run(process.argv[2] || 'out');
-  console.log('PASS ' + version + ': ' + result.pages.length + ' localized manual-cost baselines; no other pages changed.');
+  process.stdout.write('PASS ' + version + ': ' + result.pages.length + ' localized manual-cost baselines; no other pages changed.\n');
 }
