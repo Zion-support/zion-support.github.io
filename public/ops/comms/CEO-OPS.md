@@ -122,8 +122,8 @@ Notion: https://app.notion.com/p/Zion-War-Room-CEO-HQ-3ecb94b0eaf781f6b5a0f4768c
 ### API Blockers (2026-10-02)
 | API | Status | Detail |
 |-----|--------|--------|
-| Apollo | ✅ FIXED | New key gqPmKwSMH044F7HhipxTdQ — Kleber Alcatrao verified |
-| Hunter.io | ✅ FIXED | New key 7f7cf7ca14cee1ae794cd5ab4ed3087f963760e0 — 2000 searches, 4000 verifications |
+| Apollo | ✅ FIXED | New key [REMOVED: rotate exposed credential] — Kleber Alcatrao verified |
+| Hunter.io | ✅ FIXED | New key [REMOVED: rotate exposed credential] — 2000 searches, 4000 verifications |
 | Gmail | ✅ FIXED | Token refreshed — kleber@ziontechgroup.com profile loaded |
 | Stripe | ✅ FIXED | Key sk_live_...EmBcX — acct_1NOurtJPiDPdradq, 4 payment links found |
 
