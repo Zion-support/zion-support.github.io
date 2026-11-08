@@ -8,6 +8,7 @@ const assert = require('node:assert/strict');
 const {execFileSync} = require('node:child_process');
 const output = path.resolve(process.argv[2] || 'out');
 const stage = fs.mkdtempSync(path.join(os.tmpdir(), 'zion-guide-dependencies-'));
+const minimumPageLength = 3000;
 const locales = ['en', 'pt', 'es', 'fr', 'de'];
 try {
   for (const locale of locales) {
@@ -32,15 +33,15 @@ try {
     const from = path.join(stage, route), to = path.join(output, route);
     const html = fs.readFileSync(from, 'utf8');
     assert(html.includes('rel="canonical"'), route);
-    assert(html.length > 3000 && /<h1\b/.test(html), 'Substantive generated page: ' + route);
-    if (fs.existsSync(to)) continue;
+    assert(html.length > minimumPageLength && /<h1\b/.test(html), 'Substantive generated page: ' + route);
+    if (fs.existsSync(to)) {continue;}
     fs.mkdirSync(path.dirname(to), {recursive: true});
     fs.copyFileSync(from, to, fs.constants.COPYFILE_EXCL);
     created++;
   }
   fs.mkdirSync(path.join(output, 'assets/js'), {recursive: true});
   fs.copyFileSync(path.join('public', asset), path.join(output, asset));
-  console.log('PASS historical guide dependencies: ' + created + ' pages restored; existing content preserved.');
+  process.stdout.write('PASS historical guide dependencies: ' + created + ' pages restored; existing content preserved.\n');
 } finally {
   fs.rmSync(stage, {recursive: true, force: true});
 }
