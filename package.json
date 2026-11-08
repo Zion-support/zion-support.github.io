@@ -124,7 +124,8 @@
     "smoke:netlify:playwright": "echo 'smoke:netlify:playwright: OK (stub - automation paused post-P0)'",
     "smoke:production:sample": "echo 'smoke:production:sample: OK (stub - automation paused post-P0)'",
     "workflows:contracts:weekly": "echo 'workflows:contracts:weekly: OK (stub - automation paused post-P0)'",
-    "workflows:validate:light": "echo 'workflows:validate:light: OK (stub - automation paused post-P0)'"
+    "workflows:validate:light": "echo 'workflows:validate:light: OK (stub - automation paused post-P0)'",
+    "test:dependency-security": "node --test scripts/tests/dependency-security-lock.test.cjs scripts/tests/follow-redirects-security.test.cjs"
   },
   "dependencies": {
     "@sendgrid/mail": "^8.1.6",
@@ -140,9 +141,9 @@
     "@axe-core/playwright": "^4.11.3",
     "@eslint/js": "^10.0.1",
     "@next/eslint-plugin-next": "^16.2.9",
-    "@storybook/addon-links": "^10.3.6",
-    "@storybook/cli": "^10.3.6",
-    "@storybook/react-vite": "^10.3.6",
+    "@storybook/addon-links": "10.6.2",
+    "@storybook/cli": "10.6.2",
+    "@storybook/react-vite": "10.6.2",
     "@storybook/test-runner": "^0.24.3",
     "@storybook/testing-library": "^0.2.2",
     "@tailwindcss/postcss": "^4.3.2",
@@ -162,6 +163,7 @@
     "pixelmatch": "^7.2.0",
     "playwright": "^1.61.1",
     "puppeteer": "^25.3.0",
+    "storybook": "10.6.2",
     "tailwindcss": "^4.3.0",
     "typescript": "^5.9.3",
     "web-vitals": "^5.2.0",

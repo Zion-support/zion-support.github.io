@@ -22,6 +22,8 @@ jobs:
         node-version-file: '.nvmrc'
         cache: npm
     - run: npm ci
+    - name: Verify dependency security regressions
+      run: npm run test:dependency-security
     - name: Run tests with coverage
       run: 'mkdir -p coverage || true
 
