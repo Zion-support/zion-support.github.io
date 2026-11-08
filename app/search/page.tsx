@@ -72,9 +72,8 @@ export default function SearchPage() {
       {/* JSON-LD Structured Data */}
       <script
         type="application/ld+json"
-        suppressHydrationWarning
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
+      >
+        {JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'CollectionPage',
             'name': 'AI & IT Services Search - Zion Tech Group',
@@ -90,9 +89,8 @@ export default function SearchPage() {
                 'query-input': 'required name=search_term_string'
               }
             }
-          })
-        }}
-      />
+          }).replace(/</g, '\\u003c')}
+      </script>
 
       {/* Hero Section */}
       <section className="relative overflow-hidden pt-32 pb-24">

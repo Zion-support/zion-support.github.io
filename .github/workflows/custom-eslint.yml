@@ -50,7 +50,7 @@ jobs:
     - name: Install dependencies
       run: npm ci
     - name: Test autonomous lint configuration and reporting
-      run: node --test tests/ci/test_autonomous_eslint.cjs tests/ci/test_eslint_report_summary.cjs tests/ci/test_apps_directory.cjs tests/ci/test_communications_planner.cjs tests/ci/test_guide_restorer.cjs tests/ci/test_scoped_page_parser.cjs
+      run: node --test tests/ci/test_autonomous_eslint.cjs tests/ci/test_eslint_report_summary.cjs tests/ci/test_apps_directory.cjs tests/ci/test_communications_planner.cjs tests/ci/test_guide_restorer.cjs tests/ci/test_scoped_page_parser.cjs tests/ci/test_search_jsonld.cjs
     - name: Run Autonomous ESLint
       id: eslint
       continue-on-error: true
