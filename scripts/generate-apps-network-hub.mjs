@@ -76,18 +76,46 @@ for (const app of appsNetworkCatalog) {
   }
 }
 
-/** A slug is linkable only when its page actually ships in public/. */
-const linkable = (slug) => {
-  const app = BY_SLUG.get(slug);
-  if (!app) return false;
+/** A slug ships in public/ (the Pages source of truth). */
+const inPublic = (app) => {
   const rel = app.href.replace(/^\//, '').replace(/\/$/, '');
   return fs.existsSync(path.join(PUBLIC, rel, 'index.html')) || fs.existsSync(path.join(PUBLIC, rel));
 };
 
-const apps = [...BY_SLUG.values()].filter((a) => linkable(a.slug));
-const unpublished = [...BY_SLUG.values()].filter((a) => !linkable(a.slug));
+/**
+ * Some catalog apps are served from a layer that is not public/ but is
+ * demonstrably live (they survived a clean Pages rebuild). Verify rather than
+ * assume: a slug is linkable only when the live URL returns 200 on our own
+ * domain. Redirects off-domain (subdomain apps) do not count.
+ */
+const LIVE_NOT_IN_PUBLIC = new Set();
+async function verifyLive(app) {
+  const url = `${SITE}${app.href}`;
+  try {
+    const res = await fetch(url, { method: 'GET', redirect: 'follow' });
+    const sameHost = new URL(res.url).host === new URL(SITE).host;
+    if (res.status === 200 && sameHost) {
+      LIVE_NOT_IN_PUBLIC.add(app.slug);
+      return true;
+    }
+  } catch {
+    /* unreachable — treat as not linkable */
+  }
+  return false;
+}
+
+const appsAll = [...BY_SLUG.values()].filter((a) => a.slug && a.name && a.href);
+await Promise.all(appsAll.filter((a) => !inPublic(a)).map(verifyLive));
+const apps = appsAll.filter((a) => inPublic(a) || LIVE_NOT_IN_PUBLIC.has(a.slug));
+const unpublished = appsAll.filter((a) => !inPublic(a) && !LIVE_NOT_IN_PUBLIC.has(a.slug));
 
 const GROUP_ORDER = ['money', 'ops', 'govern', 'work', 'ai', 'field', 'hub'];
+
+const linkable = (slug) => {
+  const app = BY_SLUG.get(slug);
+  if (!app) return false;
+  return inPublic(app) || LIVE_NOT_IN_PUBLIC.has(slug);
+};
 
 function relatedOf(app, limit = 4) {
   const out = [];
@@ -184,9 +212,9 @@ ${LANGS.map((l) => `  <link rel="alternate" hreflang="${l.code}" href="${l.prefi
 ${groups}
     <section id="note">
       <h2>Also in the network</h2>
-      <p class="note">${unpublished.length} further catalog entries are documented but do not have a live page yet: ${unpublished
+      <p class="note">${unpublished.length} catalog entries have no live page on this domain and are omitted rather than linked to a dead route: ${unpublished
         .map((a) => esc(a.name))
-        .join(', ')}. They are omitted here rather than linked to a dead route.</p>
+        .join(', ')}.</p>
     </section>
     <section id="cta">
       <h2>Need these capabilities in production?</h2>
