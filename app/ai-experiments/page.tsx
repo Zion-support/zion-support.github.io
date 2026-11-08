@@ -3,11 +3,11 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'AI Experiments | Zion Tech Group',
-  description: 'Live AI experiments and A/B tests run by Zion's autonomous lab. Discover emerging AI use cases and their outcomes.',
+  description: 'Live AI experiments and A/B tests run by Zion\'s autonomous lab. Discover emerging AI use cases and their outcomes.',
   keywords: 'ai experiments, A/B testing AI, ai research, ai lab experiments',
   openGraph: {
     title: 'AI Experiments | Zion Tech Group',
-    description: 'Live AI experiments and A/B tests run by Zion's autonomous lab. Discover emerging AI use cases and their outcomes.',
+    description: 'Live AI experiments and A/B tests run by Zion\'s autonomous lab. Discover emerging AI use cases and their outcomes.',
     url: 'https://ziontechgroup.com/ai-experimen',
     siteName: 'Zion Tech Group',
     type: 'website',
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'AI Experiments | Zion Tech Group',
-    description: 'Live AI experiments and A/B tests run by Zion's autonomous lab. Discover emerging AI use cases and their outcomes.',
+    description: 'Live AI experiments and A/B tests run by Zion\'s autonomous lab. Discover emerging AI use cases and their outcomes.',
   },
   alternates: {
     canonical: 'https://ziontechgroup.com/ai-experimen',
