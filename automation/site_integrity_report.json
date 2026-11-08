@@ -1,12 +1,24 @@
 {
   "total_crawled": 300,
-  "http_200": 288,
-  "broken_count": 12,
+  "http_200": 236,
+  "broken_count": 64,
   "broken": [
     {
-      "url": "https://ziontechgroup.com/llm-cost-calculator/",
+      "url": "https://ziontechgroup.com/agents/",
       "status": 404,
-      "final": "https://ziontechgroup.com/llm-cost-calculator/",
+      "final": "https://ziontechgroup.com/agents/",
+      "type": "missing page"
+    },
+    {
+      "url": "https://ziontechgroup.com/explore/",
+      "status": 404,
+      "final": "https://ziontechgroup.com/explore/",
+      "type": "missing page"
+    },
+    {
+      "url": "https://ziontechgroup.com/roteiros/",
+      "status": 404,
+      "final": "https://ziontechgroup.com/roteiros/",
       "type": "missing page"
     },
     {
@@ -22,12 +34,6 @@
       "type": "missing page"
     },
     {
-      "url": "https://ziontechgroup.com/incident-cost/",
-      "status": 404,
-      "final": "https://ziontechgroup.com/incident-cost/",
-      "type": "missing page"
-    },
-    {
       "url": "https://ziontechgroup.com/ai-ticket-triage/",
       "status": 404,
       "final": "https://ziontechgroup.com/ai-ticket-triage/",
@@ -37,12 +43,6 @@
       "url": "https://ziontechgroup.com/maintenance-ticket-triage/",
       "status": 404,
       "final": "https://ziontechgroup.com/maintenance-ticket-triage/",
-      "type": "missing page"
-    },
-    {
-      "url": "https://ziontechgroup.com/ai-ticket-sentinel/",
-      "status": 404,
-      "final": "https://ziontechgroup.com/ai-ticket-sentinel/",
       "type": "missing page"
     },
     {
@@ -58,9 +58,333 @@
       "type": "missing page"
     },
     {
-      "url": "https://ziontechgroup.com/token-cost/",
+      "url": "https://ziontechgroup.com/llm-cost-calculator/",
       "status": 404,
-      "final": "https://ziontechgroup.com/token-cost/",
+      "final": "https://ziontechgroup.com/llm-cost-calculator/",
+      "type": "missing page"
+    },
+    {
+      "url": "https://ziontechgroup.com/kubernetes-linter/",
+      "status": 404,
+      "final": "https://ziontechgroup.com/kubernetes-linter/",
+      "type": "missing page"
+    },
+    {
+      "url": "https://ziontechgroup.com/network/",
+      "status": 404,
+      "final": "https://ziontechgroup.com/network/",
+      "type": "missing page"
+    },
+    {
+      "url": "https://ziontechgroup.com/partner-referral-tracker/",
+      "status": 404,
+      "final": "https://ziontechgroup.com/partner-referral-tracker/",
+      "type": "missing page"
+    },
+    {
+      "url": "https://ziontechgroup.com/finops-scenario-estimator/",
+      "status": 404,
+      "final": "https://ziontechgroup.com/finops-scenario-estimator/",
+      "type": "missing page"
+    },
+    {
+      "url": "https://ziontechgroup.com/undefined/",
+      "status": 404,
+      "final": "https://ziontechgroup.com/undefined/",
+      "type": "missing page"
+    },
+    {
+      "url": "https://ziontechgroup.com/pt/undefined/",
+      "status": 404,
+      "final": "https://ziontechgroup.com/pt/undefined/",
+      "type": "missing page"
+    },
+    {
+      "url": "https://ziontechgroup.com/es/undefined/",
+      "status": 404,
+      "final": "https://ziontechgroup.com/es/undefined/",
+      "type": "missing page"
+    },
+    {
+      "url": "https://ziontechgroup.com/fr/undefined/",
+      "status": 404,
+      "final": "https://ziontechgroup.com/fr/undefined/",
+      "type": "missing page"
+    },
+    {
+      "url": "https://ziontechgroup.com/de/undefined/",
+      "status": 404,
+      "final": "https://ziontechgroup.com/de/undefined/",
+      "type": "missing page"
+    },
+    {
+      "url": "https://ziontechgroup.com/apps-network/",
+      "status": 503,
+      "final": "https://ziontechgroup.com/apps-network/",
+      "type": "missing page"
+    },
+    {
+      "url": "https://ziontechgroup.com/pt/apps/",
+      "status": 404,
+      "final": "https://ziontechgroup.com/pt/apps/",
+      "type": "missing page"
+    },
+    {
+      "url": "https://ziontechgroup.com/pt/apps-network/pt/token-cost/",
+      "status": 404,
+      "final": "https://ziontechgroup.com/pt/apps-network/pt/token-cost/",
+      "type": "missing page"
+    },
+    {
+      "url": "https://ziontechgroup.com/pt/apps-network/pt/roi-calc/",
+      "status": 404,
+      "final": "https://ziontechgroup.com/pt/apps-network/pt/roi-calc/",
+      "type": "missing page"
+    },
+    {
+      "url": "https://ziontechgroup.com/pt/apps-network/pt/cloud-waste/",
+      "status": 404,
+      "final": "https://ziontechgroup.com/pt/apps-network/pt/cloud-waste/",
+      "type": "missing page"
+    },
+    {
+      "url": "https://ziontechgroup.com/pt/apps-network/pt/incident-cost/",
+      "status": 404,
+      "final": "https://ziontechgroup.com/pt/apps-network/pt/incident-cost/",
+      "type": "missing page"
+    },
+    {
+      "url": "https://ziontechgroup.com/pt/apps-network/pt/sla-calculator/",
+      "status": 404,
+      "final": "https://ziontechgroup.com/pt/apps-network/pt/sla-calculator/",
+      "type": "missing page"
+    },
+    {
+      "url": "https://ziontechgroup.com/pt/apps-network/pt/change-risk/",
+      "status": 404,
+      "final": "https://ziontechgroup.com/pt/apps-network/pt/change-risk/",
+      "type": "missing page"
+    },
+    {
+      "url": "https://ziontechgroup.com/pt/apps-network/pt/patch-window/",
+      "status": 404,
+      "final": "https://ziontechgroup.com/pt/apps-network/pt/patch-window/",
+      "type": "missing page"
+    },
+    {
+      "url": "https://ziontechgroup.com/pt/apps-network/pt/ai-ticket-sentinel/",
+      "status": 404,
+      "final": "https://ziontechgroup.com/pt/apps-network/pt/ai-ticket-sentinel/",
+      "type": "missing page"
+    },
+    {
+      "url": "https://ziontechgroup.com/pt/apps-network/pt/edital-desk/",
+      "status": 404,
+      "final": "https://ziontechgroup.com/pt/apps-network/pt/edital-desk/",
+      "type": "missing page"
+    },
+    {
+      "url": "https://ziontechgroup.com/pt/apps-network/pt/rfp-readiness/",
+      "status": 404,
+      "final": "https://ziontechgroup.com/pt/apps-network/pt/rfp-readiness/",
+      "type": "missing page"
+    },
+    {
+      "url": "https://ziontechgroup.com/pt/apps-network/pt/prompt-library/",
+      "status": 404,
+      "final": "https://ziontechgroup.com/pt/apps-network/pt/prompt-library/",
+      "type": "missing page"
+    },
+    {
+      "url": "https://ziontechgroup.com/pt/apps-network/pt/zion-ai-billing-harmonizer/",
+      "status": 404,
+      "final": "https://ziontechgroup.com/pt/apps-network/pt/zion-ai-billing-harmonizer/",
+      "type": "missing page"
+    },
+    {
+      "url": "https://ziontechgroup.com/pt/apps-network/pt/zion-ai-payroll-cleaner/",
+      "status": 404,
+      "final": "https://ziontechgroup.com/pt/apps-network/pt/zion-ai-payroll-cleaner/",
+      "type": "missing page"
+    },
+    {
+      "url": "https://ziontechgroup.com/pt/apps-network/pt/zion-ai-hours-tracker/",
+      "status": 503,
+      "final": "https://ziontechgroup.com/pt/apps-network/pt/zion-ai-hours-tracker/",
+      "type": "missing page"
+    },
+    {
+      "url": "https://ziontechgroup.com/pt/apps-network/pt/zion-ai-workforce-optimizer/",
+      "status": 404,
+      "final": "https://ziontechgroup.com/pt/apps-network/pt/zion-ai-workforce-optimizer/",
+      "type": "missing page"
+    },
+    {
+      "url": "https://ziontechgroup.com/pt/apps-network/pt/zion-ai-sales-campaign-orbiter/",
+      "status": 404,
+      "final": "https://ziontechgroup.com/pt/apps-network/pt/zion-ai-sales-campaign-orbiter/",
+      "type": "missing page"
+    },
+    {
+      "url": "https://ziontechgroup.com/pt/apps-network/pt/it-support-services/",
+      "status": 404,
+      "final": "https://ziontechgroup.com/pt/apps-network/pt/it-support-services/",
+      "type": "missing page"
+    },
+    {
+      "url": "https://ziontechgroup.com/es/apps/",
+      "status": 404,
+      "final": "https://ziontechgroup.com/es/apps/",
+      "type": "missing page"
+    },
+    {
+      "url": "https://ziontechgroup.com/es/apps-network/es/token-cost/",
+      "status": 404,
+      "final": "https://ziontechgroup.com/es/apps-network/es/token-cost/",
+      "type": "missing page"
+    },
+    {
+      "url": "https://ziontechgroup.com/es/apps-network/es/roi-calc/",
+      "status": 404,
+      "final": "https://ziontechgroup.com/es/apps-network/es/roi-calc/",
+      "type": "missing page"
+    },
+    {
+      "url": "https://ziontechgroup.com/es/apps-network/es/cloud-waste/",
+      "status": 404,
+      "final": "https://ziontechgroup.com/es/apps-network/es/cloud-waste/",
+      "type": "missing page"
+    },
+    {
+      "url": "https://ziontechgroup.com/es/apps-network/es/incident-cost/",
+      "status": 404,
+      "final": "https://ziontechgroup.com/es/apps-network/es/incident-cost/",
+      "type": "missing page"
+    },
+    {
+      "url": "https://ziontechgroup.com/es/apps-network/es/sla-calculator/",
+      "status": 404,
+      "final": "https://ziontechgroup.com/es/apps-network/es/sla-calculator/",
+      "type": "missing page"
+    },
+    {
+      "url": "https://ziontechgroup.com/es/apps-network/es/change-risk/",
+      "status": 404,
+      "final": "https://ziontechgroup.com/es/apps-network/es/change-risk/",
+      "type": "missing page"
+    },
+    {
+      "url": "https://ziontechgroup.com/es/apps-network/es/patch-window/",
+      "status": 404,
+      "final": "https://ziontechgroup.com/es/apps-network/es/patch-window/",
+      "type": "missing page"
+    },
+    {
+      "url": "https://ziontechgroup.com/es/apps-network/es/ai-ticket-sentinel/",
+      "status": 404,
+      "final": "https://ziontechgroup.com/es/apps-network/es/ai-ticket-sentinel/",
+      "type": "missing page"
+    },
+    {
+      "url": "https://ziontechgroup.com/es/apps-network/es/edital-desk/",
+      "status": 404,
+      "final": "https://ziontechgroup.com/es/apps-network/es/edital-desk/",
+      "type": "missing page"
+    },
+    {
+      "url": "https://ziontechgroup.com/es/apps-network/es/rfp-readiness/",
+      "status": 404,
+      "final": "https://ziontechgroup.com/es/apps-network/es/rfp-readiness/",
+      "type": "missing page"
+    },
+    {
+      "url": "https://ziontechgroup.com/es/apps-network/es/prompt-library/",
+      "status": 404,
+      "final": "https://ziontechgroup.com/es/apps-network/es/prompt-library/",
+      "type": "missing page"
+    },
+    {
+      "url": "https://ziontechgroup.com/es/apps-network/es/zion-ai-billing-harmonizer/",
+      "status": 404,
+      "final": "https://ziontechgroup.com/es/apps-network/es/zion-ai-billing-harmonizer/",
+      "type": "missing page"
+    },
+    {
+      "url": "https://ziontechgroup.com/es/apps-network/es/zion-ai-payroll-cleaner/",
+      "status": 404,
+      "final": "https://ziontechgroup.com/es/apps-network/es/zion-ai-payroll-cleaner/",
+      "type": "missing page"
+    },
+    {
+      "url": "https://ziontechgroup.com/es/apps-network/es/zion-ai-hours-tracker/",
+      "status": 404,
+      "final": "https://ziontechgroup.com/es/apps-network/es/zion-ai-hours-tracker/",
+      "type": "missing page"
+    },
+    {
+      "url": "https://ziontechgroup.com/es/apps-network/es/zion-ai-workforce-optimizer/",
+      "status": 404,
+      "final": "https://ziontechgroup.com/es/apps-network/es/zion-ai-workforce-optimizer/",
+      "type": "missing page"
+    },
+    {
+      "url": "https://ziontechgroup.com/es/apps-network/es/zion-ai-sales-campaign-orbiter/",
+      "status": 404,
+      "final": "https://ziontechgroup.com/es/apps-network/es/zion-ai-sales-campaign-orbiter/",
+      "type": "missing page"
+    },
+    {
+      "url": "https://ziontechgroup.com/es/apps-network/es/it-support-services/",
+      "status": 404,
+      "final": "https://ziontechgroup.com/es/apps-network/es/it-support-services/",
+      "type": "missing page"
+    },
+    {
+      "url": "https://ziontechgroup.com/fr/apps/",
+      "status": 404,
+      "final": "https://ziontechgroup.com/fr/apps/",
+      "type": "missing page"
+    },
+    {
+      "url": "https://ziontechgroup.com/fr/apps-network/fr/token-cost/",
+      "status": 404,
+      "final": "https://ziontechgroup.com/fr/apps-network/fr/token-cost/",
+      "type": "missing page"
+    },
+    {
+      "url": "https://ziontechgroup.com/fr/apps-network/fr/roi-calc/",
+      "status": 404,
+      "final": "https://ziontechgroup.com/fr/apps-network/fr/roi-calc/",
+      "type": "missing page"
+    },
+    {
+      "url": "https://ziontechgroup.com/fr/apps-network/fr/cloud-waste/",
+      "status": 404,
+      "final": "https://ziontechgroup.com/fr/apps-network/fr/cloud-waste/",
+      "type": "missing page"
+    },
+    {
+      "url": "https://ziontechgroup.com/fr/apps-network/fr/incident-cost/",
+      "status": 404,
+      "final": "https://ziontechgroup.com/fr/apps-network/fr/incident-cost/",
+      "type": "missing page"
+    },
+    {
+      "url": "https://ziontechgroup.com/fr/apps-network/fr/sla-calculator/",
+      "status": 404,
+      "final": "https://ziontechgroup.com/fr/apps-network/fr/sla-calculator/",
+      "type": "missing page"
+    },
+    {
+      "url": "https://ziontechgroup.com/fr/apps-network/fr/change-risk/",
+      "status": 404,
+      "final": "https://ziontechgroup.com/fr/apps-network/fr/change-risk/",
+      "type": "missing page"
+    },
+    {
+      "url": "https://ziontechgroup.com/fr/apps-network/fr/patch-window/",
+      "status": 404,
+      "final": "https://ziontechgroup.com/fr/apps-network/fr/patch-window/",
       "type": "missing page"
     }
   ]
