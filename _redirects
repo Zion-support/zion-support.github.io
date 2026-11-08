@@ -22,13 +22,11 @@
 /blog/hermes-agent-introducao/	/blog/hermes-agent-introducao/index.html	200
 /blog/zephyr-solar-esclarecimento/	/blog/zephyr-solar-esclarecimento/index.html	200
 
-<<<<<<< HEAD
 # pt-BR canonical redirect (fixes 404)
 /pt-BR/*	/pt-BR/:splat	200
 
 /blog/how-much-does-ai-consultant-cost-2026/  /blog/how-much-does-ai-consultant-cost-2026/index.html  200
 /blog/how-much-does-ai-consultant-cost-2026 /blog/how-much-does-ai-consultant-cost-2026/index.html 200
-=======
 /case-studies/    /contact/    301
 /industries/financial-services/ /industries/financial-services/index.html 200
 /industries/financial-services /industries/financial-services/index.html 200
@@ -90,4 +88,6 @@
 /explore/ /use-cases/ 301
 /roteiros/ /blog/ 301
 /prompt-library/ /tools/ 301
->>>>>>> 2bcf22352ba (fix(redirects): restore legacy alias route rules (agents, explore, roteiros, prompt-library))
+# GitHub Pages does not apply Netlify _redirects. Real HTML aliases live in public/:
+/tools/favicon-generator/  /tools/favicon-generator/index.html  200
+/sitemap.xml  /sitemap-0.xml  301
