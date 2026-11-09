@@ -59,3 +59,11 @@ test('gates and failure conditions stay enabled', () => {
   assert.doesNotMatch(block('Notify Telegram on failure'), /type errors detected/);
   assert.match(source, /timeout-minutes: 10/);
 });
+
+test('setup uses the checked-out repository Node version', () => {
+  const setup = block('Setup Node.js');
+  assert.match(setup, /node-version-file: ['"]\.nvmrc['"]/);
+  assert.doesNotMatch(setup, /^\s+node-version:/m);
+  const version = fs.readFileSync(path.join(__dirname, '../../.nvmrc'), 'utf8').trim();
+  assert.match(version, /^\d+(?:\.\d+){0,2}$/);
+});
