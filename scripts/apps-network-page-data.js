@@ -12,7 +12,6 @@
  *
  * Idempotent: re-running rewrites the same files. No network access.
  */
-import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 

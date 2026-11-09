@@ -12,11 +12,11 @@
  */
 import fs from 'node:fs';
 import path from 'node:path';
-import { fileURLToPath } from 'node:url';
 import { appsNetworkCatalog } from '../app/data/appsNetwork.ts';
-import { LANGS, GROUP_LABEL, T, PUBLIC, ROOT } from './apps-network-page-data.js';
+import { LANGS, GROUP_LABEL, T, PUBLIC } from './apps-network-page-data.js';
 
 const SITE = 'https://ziontechgroup.com';
+const HTTP_OK = 200;
 const OUT = path.join(PUBLIC, 'apps-network', 'index.html');
 
 const css = `
@@ -67,7 +67,7 @@ const esc = (s) =>
 /** Dedupe by slug, merging related lists. */
 const BY_SLUG = new Map();
 for (const app of appsNetworkCatalog) {
-  if (!app || !app.slug || !app.name || !app.href) continue;
+  if (!app || !app.slug || !app.name || !app.href) {continue;}
   const prev = BY_SLUG.get(app.slug);
   if (!prev) {
     BY_SLUG.set(app.slug, { ...app, related: [...(app.related || [])] });
@@ -94,7 +94,7 @@ async function verifyLive(app) {
   try {
     const res = await fetch(url, { method: 'GET', redirect: 'follow' });
     const sameHost = new URL(res.url).host === new URL(SITE).host;
-    if (res.status === 200 && sameHost) {
+    if (res.status === HTTP_OK && sameHost) {
       LIVE_NOT_IN_PUBLIC.add(app.slug);
       return true;
     }
@@ -113,18 +113,18 @@ const GROUP_ORDER = ['money', 'ops', 'govern', 'work', 'ai', 'field', 'hub'];
 
 const linkable = (slug) => {
   const app = BY_SLUG.get(slug);
-  if (!app) return false;
+  if (!app) {return false;}
   return inPublic(app) || LIVE_NOT_IN_PUBLIC.has(slug);
 };
 
 function relatedOf(app, limit = 4) {
   const out = [];
   for (const slug of app.related) {
-    if (out.length >= limit) break;
-    if (slug === app.slug || !linkable(slug)) continue;
+    if (out.length >= limit) {break;}
+    if (slug === app.slug || !linkable(slug)) {continue;}
     const target = BY_SLUG.get(slug);
-    if (!target) continue;
-    if (out.some((r) => r.slug === slug)) continue;
+    if (!target) {continue;}
+    if (out.some((r) => r.slug === slug)) {continue;}
     out.push({ slug, name: target.name, href: target.href });
   }
   return out;
@@ -132,7 +132,7 @@ function relatedOf(app, limit = 4) {
 
 function renderGroup(group, label, t) {
   const items = apps.filter((a) => a.group === group);
-  if (!items.length) return '';
+  if (!items.length) {return '';}
   const cards = items
     .map((app) => {
       const rel = relatedOf(app)
@@ -238,4 +238,4 @@ ${groups}
 
 fs.mkdirSync(path.dirname(OUT), { recursive: true });
 fs.writeFileSync(OUT, html, 'utf8');
-console.log(`Hub written: ${apps.length} apps, ${totalRelated} interlinks, ${unpublished.length} unpublished omitted.`);
+process.stdout.write(`Hub written: ${apps.length} apps, ${totalRelated} interlinks, ${unpublished.length} unpublished omitted.\n`);
