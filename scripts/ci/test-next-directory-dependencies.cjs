@@ -50,8 +50,9 @@ async function semantics(){
    for(const flags of [{},{explicitParallelRouteChildren:true},{strictRouteMatching:true,isFinalRouteMatcher:true},{explicitParallelRouteChildren:true,strictRouteMatching:true,isFinalRouteMatcher:true},{strictRouteMatching:true,isFinalRouteMatcher:false},{explicitParallelRouteChildren:true,strictRouteMatching:true,isFinalRouteMatcher:false}])await compare(c,flags);
   }
   const simple={page:'/static/page',appPaths:['/static/page']};
-  for(const flags of [{isDev:true},{isDev:undefined},{nextConfigOutput:undefined},{pageExtensions:['js','../escape']},{pageExtensions:[]},{pageExtensions:'js'}])await compare(simple,flags,{},true);
+  for(const flags of [{isDev:true},{isDev:null},{isDev:'false'},{isDev:''},{nextConfigOutput:undefined},{pageExtensions:['js','../escape']},{pageExtensions:[]},{pageExtensions:'js'}])await compare(simple,flags,{},true);
   for(const overrides of [{_compilation:undefined},{_compiler:undefined},{_compiler:{options:{mode:'development',plugins:[]}}},{_compiler:{options:{mode:'production',plugins:[new(class DeferredEntriesPlugin{})]}}},{_compiler:{options:{mode:'production'}}}])await compare(simple,{},overrides,true);
+  const implicitProduction=await compare(simple,{isDev:undefined});assert(implicitProduction.after.missing.size<implicitProduction.before.missing.size);
   const normal=await compare(simple);assert(normal.after.missing.size<normal.before.missing.size);assert(normal.after.missing.has(path.join(appDir,'layout.js')),'keep existing candidates');
   await fsp.symlink(path.join(root,'external.js'),path.join(appDir,'static/icon.js'));
   const dangling=await compare(simple);for(const p of dangling.before.missing)if(path.dirname(p)===path.join(appDir,'static'))assert(dangling.after.missing.has(p),'dangling link fallback');

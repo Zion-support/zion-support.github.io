@@ -12,7 +12,7 @@ This establishes one avoidable metadata/snapshot scaling term. It does not quant
 
 ## Eligibility and correctness
 
-The change is restricted to known static app paths, normal production Webpack compilation, static export, known page extensions, and no DeferredEntriesPlugin. Development, dynamic/encoded/unknown paths, missing compilation metadata, and unsupported configurations use the original per-file registrations.
+The change is restricted to known static app paths, normal production Webpack compilation, static export, known page extensions, and no DeferredEntriesPlugin. Next production entry queries omit isDev; undefined is allowed only with the other production/compiler/export guards. True, string, null, and other values retain the original behavior. Development, dynamic/encoded/unknown paths, missing compilation metadata, and unsupported configurations use the original per-file registrations.
 
 Existing file candidates always retain their original missing dependency. Absent candidates are held only for the loader invocation. A compilation-scoped cache shares directory-scan promises, not dependency registrations. Directory and ancestor fingerprints use bigint stat fields and reject symlinks, special entries, unavailable fingerprint data, and filesystem errors. Directory scans reject every symlink entry, including dangling links. Before loader completion, each assessment is revalidated. An unchanged ordinary directory receives a context dependency, covering additions and removals. Otherwise every skipped original missing dependency is restored. Late calls after finalization also use the original registration. Loader success, error, and early-return paths finalize through finally.
 
@@ -20,14 +20,18 @@ Directory contexts alone are insufficient for external file-symlink target delet
 
 The fingerprint guard is appropriate for a stable production checkout. It is not an atomic filesystem snapshot, does not defend against adversarial concurrent writers or inaccurate timestamp semantics, and does not repair Next's pre-existing compilation-scoped file-list cache. No directory eligibility is reused across compilations. A broader directory dependency may cause extra rebuilds, never intentionally fewer required rebuilds.
 
+## Hosted activation check
+
+The initial trial 2c9798f1 passed its tests but its strict explicit-false isDev guard did not match Next's omitted production option. It remained on the original dependency path and timed out at 300 seconds. The query-based activation assertion now covers that contract. With the existing memory-observer environment enabled, the loader emits the fixed NEXT_DIRECTORY_CONTEXT_ACTIVE marker once per compilation after an actual successful conversion. It contains no paths, sources, or identifiers. Absence of that marker must not be interpreted as optimization evidence.
+
 ## Validation
 
 Run before installation, after applying the adjacent-slot patch:
 
-- test-next-directory-dependencies.cjs: exact-hash installer safety plus 116 actual-loader output/error/guard comparisons, dependency coverage, existing candidates, and symlink fallback.
+- test-next-directory-dependencies.cjs: exact-hash installer safety plus 119 actual-loader output/error/guard comparisons, dependency coverage, existing candidates, and symlink fallback.
 - test-next-directory-eligibility.cjs: 16 eligibility/cache/failure cases, including 128 concurrent consumers without repeated scans.
 - test-next-directory-tokens.cjs: 9 batching/finalization cases, including restoring all 1,163 skipped paths after a mutation and preserving an original loader error.
 - test-next-directory-snapshots.cjs: 48 actual Webpack snapshot comparisons across timestamp, hash, and combined modes. Every baseline invalidation must also invalidate the candidate.
-- test-next-directory-cache.cjs: 12 sequential real-loader memory-cache rebuilds for each variant. Unchanged builds reuse modules; layout extension precedence, metadata, symlink-target deletion/recreation, and link removal match baseline. The dangling-link case preserves the existing Next build error and subsequent recovery.
+- test-next-directory-cache.cjs: uses the actual getAppEntry query serialization with omitted production isDev and asserts more than 90% missing-path reduction, then 12 sequential real-loader memory-cache rebuilds for each variant. Unchanged builds reuse modules; layout extension precedence, metadata, symlink-target deletion/recreation, and link removal match baseline. The dangling-link case preserves the existing Next build error and subsequent recovery.
 
 The tests externalize application imports and do not prove disk-cache persistence or full application compilation. Existing entry, adjacent-slot, observer, metric, and workflow contract tests remain required. The actual CI build retains the unchanged 300-second deadline and must produce a nonempty export before server startup and audit.

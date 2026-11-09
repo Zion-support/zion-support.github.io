@@ -2,7 +2,7 @@
 const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto'),vm=require('node:vm');
 const VERSION='16.4.5';
 const ORIGINAL='1350401612d99bd26861546a1e4a0dd144053c6d06e72c3adcd733118fb25289';
-const PATCHED='cb9dc123fdf2f32f57f5964a455b413d303428bf62e4b4141b431a9f7f7692a4';
+const PATCHED='133ea8b4b00ff0994fec9358533636cf7cc55b072ad4afe6e75715fc4ae52600';
 const digest=value=>crypto.createHash('sha256').update(value).digest('hex');
 function fail(code){throw new Error(code);}
 function createDirectoryEligibility(io = fs.promises) {
@@ -64,7 +64,7 @@ function createDirectoryEligibility(io = fs.promises) {
 // dependency-registration sites; it starts at most one assessment per directory.
 // Await finalize() in the loader's finally block, after all resolver work ends.
 // Holding the originals until final validation allows fail-closed restoration.
-function createDependencyTracker(context, eligibility) {
+function createDependencyTracker(context, eligibility, onOptimized) {
   const directories = new Map();
   let closed = false;
   function register(directory, candidate, exists) {
@@ -86,7 +86,10 @@ function createDependencyTracker(context, eligibility) {
       const token = await entry.token;
       let valid = false;
       try { valid = !!token && await eligibility.validate(token); } catch {}
-      if (valid) context.addContextDependency(directory);
+      if (valid) {
+      context.addContextDependency(directory);
+      try { if (onOptimized) onOptimized(); } catch {}
+    }
       else for (const candidate of entry.skipped) context.addMissingDependency(candidate);
     }
     directories.clear();
@@ -96,8 +99,14 @@ function createDependencyTracker(context, eligibility) {
 
 function transformSource(source) {
   const anchor = 'const filesInDirMapMap = new WeakMap();';
-  const guard = `function supportsDirectoryDependencies(context, options) {
-    if (options.isDev !== false || options.nextConfigOutput !== 'export' || !context._compilation || typeof context.addContextDependency !== 'function') return false;
+  const guard = `const directoryOptimizationObserved = new WeakSet();
+function noteDirectoryOptimization(compilation) {
+    if (process.env.ZION_NEXT_MEMORY_OBSERVER !== '1' || directoryOptimizationObserved.has(compilation)) return;
+    directoryOptimizationObserved.add(compilation);
+    try { _fs.writeSync(2, 'NEXT_DIRECTORY_CONTEXT_ACTIVE\\n'); } catch {}
+}
+function supportsDirectoryDependencies(context, options) {
+    if ((options.isDev !== undefined && options.isDev !== false) || options.nextConfigOutput !== 'export' || !context._compilation || typeof context.addContextDependency !== 'function') return false;
     const staticPath = (value) => typeof value === 'string' && value.length > 0 && !/\\[|%(?:25)*5b/i.test(value);
     if (!staticPath(options.page) || !staticPath(options.pagePath)) return false;
     if (typeof options.appPaths === 'string') { if (!staticPath(options.appPaths)) return false; }
@@ -111,7 +120,7 @@ function transformSource(source) {
 `;
   const optionsAnchor = '    const loaderOptions = this.getOptions();';
   const tracking = `
-    directoryTracker = supportsDirectoryDependencies(this, loaderOptions) ? makeDirectoryDependencyTracker(this, directoryDependencyEligibility(this._compilation)) : undefined;
+    directoryTracker = supportsDirectoryDependencies(this, loaderOptions) ? makeDirectoryDependencyTracker(this, directoryDependencyEligibility(this._compilation), () => noteDirectoryOptimization(this._compilation)) : undefined;
     const registerCandidateDependency = (directory, candidate, exists) => {
         if (directoryTracker) directoryTracker.register(directory, candidate, exists);
         else this.addMissingDependency(candidate);

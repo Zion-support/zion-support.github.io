@@ -17,5 +17,6 @@ const {createDirectoryEligibility,createDependencyTracker}=require('./install-ne
  const original=Error('original');const broken=mk(e);await assert.rejects(async()=>{try{broken.tracker.register(dir,dir+'/layout.tsx',false);throw original}finally{await broken.tracker.finalize()}},x=>x===original);assert.equal(broken.missing.length,1);checks++;
  broken.tracker.register(dir,dir+'/late.tsx',false);assert.equal(broken.missing.length,2);checks++;
  await broken.tracker.finalize();assert.equal(broken.missing.length,2);checks++;
+ let notified=0;const notify=createDependencyTracker({addMissingDependency(){},addContextDependency(){}},{assess:async()=>({}),validate:async()=>true},()=>{notified++;throw Error('observer')});notify.register(dir,dir+'/new.tsx',false);await notify.finalize();assert.equal(notified,1);checks++;
  console.log('NEXT_DIRECTORY_TOKENS_PASS '+checks);fs.rmSync(root,{recursive:true,force:true});
 })().catch(e=>{console.error(e);process.exitCode=1});
