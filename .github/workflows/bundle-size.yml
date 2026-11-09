@@ -19,6 +19,9 @@ concurrency:
       - 'package-lock.json'
       - 'next.config.*'
       - 'tsconfig.json'
+      - '.github/workflows/bundle-size.yml'
+      - 'scripts/ci/install-next-static-entry-guard.cjs'
+      - 'scripts/ci/test-next-static-entry-*.cjs'
   workflow_dispatch:
 
 env:
@@ -45,8 +48,19 @@ jobs:
       - name: Install dependencies
         run: npm ci --prefer-offline --no-audit --fund=false
 
+      - name: Validate pinned Next static-entry guard
+        env:
+          NODE_OPTIONS: --max-old-space-size=512
+        run: |
+          node scripts/ci/test-next-static-entry-helper.cjs
+          node scripts/ci/test-next-static-entry-loader.cjs
+          node scripts/ci/test-next-static-entry-scale.cjs
+
       - name: Limit pinned Next app-entry preparation concurrency
         run: node scripts/ci/limit-next-app-entry-concurrency.cjs
+
+      - name: Remove redundant pinned Next static-entry metadata
+        run: node scripts/ci/install-next-static-entry-guard.cjs
 
       - name: Select bounded build heap
         id: build_memory
