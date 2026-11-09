@@ -42,6 +42,19 @@ jobs:
       run: |
         node scripts/ci/install-next-adjacent-slot-cache.cjs
         node scripts/ci/test-next-static-entry-loader.cjs
+    - name: Validate directory snapshot coverage
+      env:
+        NODE_OPTIONS: --max-old-space-size=512
+      run: |
+        node scripts/ci/test-next-directory-dependencies.cjs
+        node scripts/ci/test-next-directory-eligibility.cjs
+        node scripts/ci/test-next-directory-tokens.cjs
+        node scripts/ci/test-next-directory-snapshots.cjs
+        node scripts/ci/test-next-directory-cache.cjs
+    - name: Collapse redundant missing-file snapshots
+      run: |
+        node scripts/ci/install-next-directory-dependencies.cjs
+        node scripts/ci/test-next-static-entry-loader.cjs
     - name: Validate bounded Next build observer
       env:
         NODE_OPTIONS: --max-old-space-size=512

@@ -1,0 +1,21 @@
+'use strict';
+const fs=require('node:fs'),assert=require('node:assert/strict');
+const {createDirectoryEligibility,createDependencyTracker}=require('./install-next-directory-dependencies.cjs');
+(async()=>{
+ const root=fs.mkdtempSync('/tmp/token-review-');let stats=0,scans=0,checks=0;
+ const io={...fs.promises,lstat:async(...a)=>{stats++;return fs.promises.lstat(...a)},readdir:async(...a)=>{scans++;return fs.promises.readdir(...a)}};
+ const factory=createDirectoryEligibility(io),comp={},e=factory(comp);
+ const dir=root+'/app';fs.mkdirSync(dir);
+ const t=await e.assess(dir);assert.ok(t);assert.equal(await e.validate(t),true);assert.equal(await factory({}).validate(t),false);assert.equal(await e.validate({}),false);checks++;
+ fs.symlinkSync(root+'/absent',dir+'/layout.tsx');assert.equal(await e.validate(t),false);checks++;
+ fs.unlinkSync(dir+'/layout.tsx');
+ const mk=eligibility=>{const missing=[],contexts=[];return {missing,contexts,tracker:createDependencyTracker({addMissingDependency:p=>missing.push(p),addContextDependency:p=>contexts.push(p)},eligibility)}};
+ const bulk=mk(e);const before=stats;for(let i=0;i<1163;i++)bulk.tracker.register(dir,dir+'/absent'+i,false);bulk.tracker.register(dir,dir+'/page.tsx',true);await bulk.tracker.finalize();assert.equal(bulk.missing.length,1);assert.equal(bulk.contexts.length,1);assert.ok(stats-before<100);checks++;
+ let assessed;const done=new Promise(r=>assessed=r);const changing=mk({assess:async d=>{const token=await e.assess(d);assessed();return token},validate:e.validate});for(let i=0;i<1163;i++)changing.tracker.register(dir,dir+'/missing'+i,false);await done;fs.symlinkSync(root+'/absent',dir+'/layout.tsx');await changing.tracker.finalize();assert.equal(changing.missing.length,1163);assert.equal(changing.contexts.length,0);checks++;
+ const failing=mk({assess:async()=>{throw Error('read')},validate:async()=>true});failing.tracker.register(dir,dir+'/layout.tsx',false);await failing.tracker.finalize();assert.equal(failing.missing.length,1);checks++;
+ const badValidate=mk({assess:async()=>({}),validate:async()=>{throw Error('stat')}});badValidate.tracker.register(dir,dir+'/layout.tsx',false);await badValidate.tracker.finalize();assert.equal(badValidate.missing.length,1);checks++;
+ const original=Error('original');const broken=mk(e);await assert.rejects(async()=>{try{broken.tracker.register(dir,dir+'/layout.tsx',false);throw original}finally{await broken.tracker.finalize()}},x=>x===original);assert.equal(broken.missing.length,1);checks++;
+ broken.tracker.register(dir,dir+'/late.tsx',false);assert.equal(broken.missing.length,2);checks++;
+ await broken.tracker.finalize();assert.equal(broken.missing.length,2);checks++;
+ console.log('NEXT_DIRECTORY_TOKENS_PASS '+checks);fs.rmSync(root,{recursive:true,force:true});
+})().catch(e=>{console.error(e);process.exitCode=1});
