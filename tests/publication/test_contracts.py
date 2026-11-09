@@ -97,7 +97,7 @@ class PublicationContracts(unittest.TestCase):
         self.assertIn("queue: max", c)
         self.assertIn("cancel-in-progress: false", c)
         self.assertIn('test "$sha" = "$GITHUB_SHA"', c)
-        self.assertIn("ref: ${{ github.sha }}", c)
+        self.assertIn("CANDIDATE_SHA: ${{ github.sha }}", c)
         self.assertEqual(c.count("canonical-pages-${{ github.run_id }}-${{ github.run_attempt }}"), 2)
         self.assertNotIn("download-artifact", c)
         self.assertNotIn("npm ", c)
@@ -129,7 +129,7 @@ class PublicationContracts(unittest.TestCase):
         self.assertNotIn("workflow_run:", c)
         self.assertIn("workflow_call:", c)
         self.assertIn("inputs.source_sha == github.sha", c)
-        self.assertIn("ref: ${{ github.sha }}", c)
+        self.assertIn("CANDIDATE_SHA: ${{ github.sha }}", c)
         self.assertIn("name: AI Production Deploy Validation", c)
         self.assertIn("  validate:", c)
         self.assertIn("Live observations are not proof", c)
@@ -142,9 +142,9 @@ class PublicationContracts(unittest.TestCase):
         self.assertFalse(admitted_validation("refs/heads/main", "success", "old", "A"))
         self.assertTrue(admitted_validation("refs/heads/main", "success", "A", "A"))
 
-    def checkout_shell(self):
-        block = source("publication-contract-tests.yml").split("        run: |\n", 1)[1].split("      - name: Inert", 1)[0]
-        return textwrap.dedent(block)
+    def checkout_shell(self, name="publication-contract-tests.yml"):
+        step = source(name).split("      - name: Checkout public event without stored credentials\n", 1)[1].split("      - name:", 1)[0]
+        return textwrap.dedent(step.split("        run: |\n", 1)[1])
 
     def test_checkout_broken_gitlink_and_merge_event(self):
         with tempfile.TemporaryDirectory() as td:
@@ -167,21 +167,74 @@ class PublicationContracts(unittest.TestCase):
             head = git("rev-parse", "HEAD")
             # A real two-parent synthetic merge commit, matching pull_request event semantics.
             merge = git("commit-tree", git("rev-parse", "HEAD^{tree}"), "-p", base, "-p", head, "-m", "merge fixture")
-            code = self.checkout_shell().replace("https://github.com/Zion-support/zion-support.github.io.git", str(repo))
-            env = dict(os.environ, CANDIDATE_SHA=merge, GIT_TERMINAL_PROMPT="0")
-            run = subprocess.run(["bash", "-c", code], cwd=work, env=env, capture_output=True, text=True)
-            self.assertEqual(run.returncode, 0, run.stderr)
-            actual = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=work, text=True).strip()
-            self.assertEqual(actual, merge)
-            self.assertNotEqual(actual, head)
-            # Reproduce the auth-cleanup mechanism that broke actions/checkout, without credentials.
-            cleanup = subprocess.run(["git", "submodule", "foreach", "--recursive", "true"], cwd=work, capture_output=True, text=True)
-            self.assertNotEqual(cleanup.returncode, 0)
-            self.assertIn("No url found for submodule path '.pageploy'", cleanup.stderr)
-            self.assertNotIn("submodule", self.checkout_shell())
-            cfg = (work / ".git/config").read_text()
-            self.assertNotIn("extraheader", cfg.lower())
-            self.assertNotIn("credential", cfg.lower())
+            for name in ["publication-contract-tests.yml", "canonical-pages.yml", "ai-production-deploy-validation.yml"]:
+                with self.subTest(workflow=name):
+                    target = work / name
+                    target.mkdir()
+                    code = self.checkout_shell(name).replace("https://github.com/Zion-support/zion-support.github.io.git", str(repo))
+                    env = dict(os.environ, CANDIDATE_SHA=merge, GIT_TERMINAL_PROMPT="0")
+                    run = subprocess.run(["bash", "-c", code], cwd=target, env=env, capture_output=True, text=True)
+                    self.assertEqual(run.returncode, 0, run.stderr)
+                    actual = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=target, text=True).strip()
+                    self.assertEqual(actual, merge)
+                    self.assertNotEqual(actual, head)
+                    cleanup = subprocess.run(["git", "submodule", "foreach", "--recursive", "true"], cwd=target, capture_output=True, text=True)
+                    self.assertNotEqual(cleanup.returncode, 0)
+                    self.assertIn("No url found for submodule path '.pageploy'", cleanup.stderr)
+                    self.assertNotIn("submodule", self.checkout_shell(name))
+                    cfg = (target / ".git/config").read_text()
+                    self.assertNotIn("extraheader", cfg.lower())
+                    self.assertNotIn("credential", cfg.lower())
+
+    def test_all_transport_paths_identical_and_permissions_preserved(self):
+        expected = self.checkout_shell()
+        for name in ["canonical-pages.yml", "ai-production-deploy-validation.yml"]:
+            self.assertEqual(self.checkout_shell(name), expected)
+            self.assertNotIn("actions/checkout@", source(name))
+            self.assertIn("CANDIDATE_SHA: ${{ github.sha }}", source(name))
+        self.assertIn("permissions:\n  contents: read\n  pages: write\n  id-token: write", source("canonical-pages.yml"))
+        self.assertIn("permissions:\n  contents: read\n", source("ai-production-deploy-validation.yml"))
+        self.assertNotIn("pages: write", source("ai-production-deploy-validation.yml"))
+
+    def test_shallow_real_guards_need_trees_not_history(self):
+        workflow = source("canonical-pages.yml")
+        guards = []
+        for marker in ["Reject obsolete event inputs before assembly", "Reject changed publication inputs before deploy"]:
+            step = workflow.split("      - name: " + marker + "\n", 1)[1].split("      - name:", 1)[0]
+            guards.append(textwrap.dedent(step.split("        run: |\n", 1)[1]))
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            repo = root / "repo"
+            work = root / "work"
+            repo.mkdir()
+            work.mkdir()
+            def git(*args):
+                return subprocess.check_output(["git", "-C", str(repo), *args], stderr=subprocess.DEVNULL, text=True).strip()
+            git("init", "-q", "-b", "main")
+            git("config", "user.name", "Fixture")
+            git("config", "user.email", "fixture@example.invalid")
+            (repo / "public").mkdir()
+            (repo / "public/index.html").write_text("original")
+            git("add", ".")
+            git("commit", "-qm", "original")
+            sha = git("rev-parse", "HEAD")
+            code = self.checkout_shell("canonical-pages.yml").replace("https://github.com/Zion-support/zion-support.github.io.git", str(repo))
+            env = dict(os.environ, CANDIDATE_SHA=sha, SOURCE_SHA=sha, RUNNER_TEMP=str(root))
+            subprocess.run(["bash", "-c", code], cwd=work, env=env, capture_output=True, check=True)
+            for mode in ["same", "metadata", "public"]:
+                if mode != "same":
+                    path = repo / ("ops/comms/STATUS.md" if mode == "metadata" else "public/STATUS.md")
+                    path.parent.mkdir(parents=True, exist_ok=True)
+                    path.write_text(mode)
+                    git("add", ".")
+                    git("commit", "-qm", mode)
+                for guard in guards:
+                    run = subprocess.run(["bash", "-c", guard], cwd=work, env=env, capture_output=True, text=True)
+                    self.assertEqual(run.returncode == 0, mode != "public", run.stderr)
+                actual = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=work, text=True).strip()
+                self.assertEqual(actual, sha)
+            # Source and latest snapshots are both shallow roots; no merge-base/history required.
+            self.assertTrue((work / ".git/shallow").exists())
 
     def test_checkout_invalid_sha_and_existing_files(self):
         for sha, existing in [("invalid", False), ("a" * 40, True)]:

@@ -31,11 +31,28 @@ jobs:
         run: |
           set -euo pipefail
           test "$GITHUB_REF" = refs/heads/main
-      - name: Checkout immutable event source
-        uses: actions/checkout@v4
-        with:
-          ref: ${{ github.sha }}
-          fetch-depth: 1
+      - name: Checkout public event without stored credentials
+        env:
+          CANDIDATE_SHA: ${{ github.sha }}
+          GIT_TERMINAL_PROMPT: '0'
+        run: |
+          set -euo pipefail
+          if [[ ! "$CANDIDATE_SHA" =~ ^[0-9a-f]{40}$ ]]; then
+            echo "::error::Invalid checkout candidate SHA."
+            exit 1
+          fi
+          if [[ -n "$(find . -mindepth 1 -maxdepth 1 -print -quit)" ]]; then
+            echo "::error::Checkout requires an empty workspace; existing files were not changed."
+            exit 1
+          fi
+          git init --quiet
+          git remote add origin https://github.com/Zion-support/zion-support.github.io.git
+          git -c credential.helper= fetch --no-tags --depth=1 origin "$CANDIDATE_SHA"
+          git checkout --detach FETCH_HEAD
+          if [[ "$(git rev-parse HEAD)" != "$CANDIDATE_SHA" ]]; then
+            echo "::error::Checked out revision differs from publication candidate."
+            exit 1
+          fi
       - name: Record immutable source
         id: source
         run: |
