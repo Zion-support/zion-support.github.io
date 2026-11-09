@@ -1,0 +1,21 @@
+name: Publication Contract Tests
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/**'
+      - 'tests/publication/**'
+
+permissions:
+  contents: read
+
+jobs:
+  publication-contracts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Inert publication contract tests
+        run: python3 -I -m unittest discover -s tests/publication -p 'test_*.py' -v

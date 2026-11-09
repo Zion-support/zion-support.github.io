@@ -1,7 +1,8 @@
 # AI Production Deploy Validation
 # Runs after deploy: sitemap validation, SEO meta audit, quick production link check.
 # Ensures deployed site meets quality gates without blocking deploy.
-# Runs: After Deploy on Push completes, or workflow_dispatch
+# Called only after canonical publication succeeds, or manually for live diagnostics.
+# Live observations are not proof that a CDN still serves this exact source SHA.
 
 name: AI Production Deploy Validation
 
@@ -13,16 +14,17 @@ concurrency:
   cancel-in-progress: true
 
 "on":
-  workflow_run:
-    workflows: [Deploy on Push]
-    types:
-      - completed
-    branches: [main]
+  workflow_call:
+    inputs:
+      source_sha:
+        description: 'Native event SHA returned by a successful canonical publisher'
+        required: true
+        type: string
   workflow_dispatch:
 
 jobs:
   validate:
-    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+    if: ${{ github.ref == 'refs/heads/main' && (github.event_name == 'workflow_dispatch' || inputs.source_sha == github.sha) }}
     runs-on: ubuntu-latest
     timeout-minutes: 20
     env:
@@ -30,6 +32,18 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+
+      - name: Record diagnostic source
+        env:
+          EXPECTED_SHA: ${{ github.sha }}
+        run: |
+          set -euo pipefail
+          test "$(git rev-parse HEAD)" = "$EXPECTED_SHA"
+          echo "Diagnostics source: $EXPECTED_SHA. Live responses may reflect a later release." >> "$GITHUB_STEP_SUMMARY"
 
       - name: Setup Node.js
         uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
@@ -123,3 +137,4 @@ jobs:
             sitemap-output.txt
           if-no-files-found: ignore
           retention-days: 14
+

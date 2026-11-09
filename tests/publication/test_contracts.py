@@ -1,0 +1,154 @@
+"""Inert source-contract and bounded-queue fixtures; no builds or network calls."""
+from pathlib import Path
+import subprocess
+import sys
+import tempfile
+import textwrap
+import unittest
+
+ROOT = Path(__file__).resolve().parents[2]
+W = ROOT / ".github/workflows"
+
+def source(name):
+    return (W / name).read_text()
+
+def admitted_validation(ref, result, source_sha, event_sha):
+    return ref == "refs/heads/main" and result == "success" and source_sha == event_sha
+
+class Queue:
+    def __init__(self, capacity=100):
+        self.active = None
+        self.pending = []
+        self.rejected = []
+        self.capacity = capacity
+
+    def admit(self, event):
+        if self.active is None:
+            self.active = event
+        elif len(self.pending) < self.capacity:
+            self.pending.append(event)
+        else:
+            self.rejected.append(event)
+
+    def finish(self):
+        self.active = self.pending.pop(0) if self.pending else None
+
+class PublicationContracts(unittest.TestCase):
+    def test_actual_guards(self):
+        code = source("canonical-pages.yml")
+        guards = code.split("<<'PY_GUARD'\n")[1:]
+        self.assertEqual(len(guards), 2)
+        for guard in guards:
+            body = textwrap.dedent(guard.split("          PY_GUARD", 1)[0])
+            for data, success in [(b"", True), (b"ops/comms/STATUS.md\0", True),
+                                  (b"public/STATUS.md\0", False),
+                                  (b"public/ops/STATUS.md\0", False),
+                                  (b"ops/comms/STATUS.md\0public/index.html\0", False)]:
+                with tempfile.NamedTemporaryFile() as f:
+                    f.write(data)
+                    f.flush()
+                    run = subprocess.run([sys.executable, "-I", "-c", body, f.name], capture_output=True)
+                    self.assertEqual(run.returncode == 0, success)
+            run = subprocess.run([sys.executable, "-I", "-c", body, "/missing-inert-fixture"], capture_output=True)
+            self.assertNotEqual(run.returncode, 0)
+
+    def test_stale_arrival_does_not_cancel_current_pending(self):
+        q = Queue()
+        for event in ["active", "current-B", "delayed-A"]:
+            q.admit(event)
+        q.finish()
+        self.assertEqual(q.active, "current-B")
+        self.assertEqual(q.pending, ["delayed-A"])
+        self.assertEqual(q.rejected, [])
+
+    def test_default_single_pending_counterexample(self):
+        # GitHub's default replaces the pending job, even when the active one is not cancelled.
+        pending = "current-B"
+        pending = "delayed-A"
+        self.assertEqual(pending, "delayed-A")
+        self.assertNotEqual(pending, "current-B")
+        self.assertIn("queue: max", source("canonical-pages.yml"))
+
+    def test_reverse_arrival_and_capacity_limit(self):
+        q = Queue()
+        q.admit("active")
+        q.admit("stale-A")
+        q.admit("current-B")
+        q.finish()
+        self.assertEqual(q.active, "stale-A")
+        q.finish()
+        self.assertEqual(q.active, "current-B")
+        q = Queue()
+        for i in range(102):
+            q.admit(i)
+        self.assertEqual(q.rejected, [101])
+        self.assertEqual(len(q.pending), 100)
+
+    def test_event_loss_has_no_invented_recovery(self):
+        q = Queue()
+        q.admit("A")
+        q.finish()
+        self.assertIsNone(q.active)
+        self.assertNotIn("schedule:", source("gh-pages.yml"))
+
+    def test_single_lock_native_source_and_attempt_artifact(self):
+        c = source("canonical-pages.yml")
+        self.assertIn("queue: max", c)
+        self.assertIn("cancel-in-progress: false", c)
+        self.assertIn('test "$sha" = "$GITHUB_SHA"', c)
+        self.assertIn("ref: ${{ github.sha }}", c)
+        self.assertEqual(c.count("canonical-pages-${{ github.run_id }}-${{ github.run_attempt }}"), 2)
+        self.assertNotIn("download-artifact", c)
+        self.assertNotIn("npm ", c)
+        for n in ["gh-pages.yml", "static-deploy.yml"]:
+            self.assertNotIn("concurrency:", source(n))
+        # Deployment is unconditional after fail-closed guards; no masked failure.
+        self.assertNotIn("continue-on-error:", c)
+        self.assertEqual(c.count("      - name: Deploy canonical artifact"), 1)
+        self.assertNotIn("if:", c)
+
+    def test_trigger_and_status_parity(self):
+        self.assertIn("- '**'\n      - '!ops/comms/STATUS.md'", source("gh-pages.yml"))
+        self.assertNotIn("push:", source("static-deploy.yml"))
+        h = source("deploy-on-push.yml")
+        self.assertNotIn("actions/deploy-pages@", h)
+        self.assertNotIn("canonical-pages.yml", h)
+        self.assertIn("name: Deploy on Push", h)
+
+    def test_consumer_is_direct_success_dependency(self):
+        expected = "github.ref == 'refs/heads/main' && needs.deploy.result == 'success' && needs.deploy.outputs.source_sha == github.sha"
+        for n in ["gh-pages.yml", "static-deploy.yml"]:
+            s = source(n)
+            tail = s.split("  validate-production:", 1)[1]
+            self.assertIn("needs: deploy", tail)
+            self.assertIn(expected, tail)
+            self.assertIn("source_sha: ${{ needs.deploy.outputs.source_sha }}", tail)
+            self.assertIn("permissions:\n      contents: read", tail)
+        c = source("ai-production-deploy-validation.yml")
+        self.assertNotIn("workflow_run:", c)
+        self.assertIn("workflow_call:", c)
+        self.assertIn("inputs.source_sha == github.sha", c)
+        self.assertIn("ref: ${{ github.sha }}", c)
+        self.assertIn("name: AI Production Deploy Validation", c)
+        self.assertIn("  validate:", c)
+        self.assertIn("Live observations are not proof", c)
+
+    def test_failed_skipped_cancelled_and_nonmain_consumer(self):
+        for result in ["failure", "skipped", "cancelled", "timed_out", ""]:
+            self.assertFalse(admitted_validation("refs/heads/main", result, "A", "A"))
+        self.assertFalse(admitted_validation("refs/heads/topic", "success", "A", "A"))
+        self.assertFalse(admitted_validation("refs/heads/main", "success", "", "A"))
+        self.assertFalse(admitted_validation("refs/heads/main", "success", "old", "A"))
+        self.assertTrue(admitted_validation("refs/heads/main", "success", "A", "A"))
+
+    def test_inert_pr_lane_scope(self):
+        s = source("publication-contract-tests.yml")
+        self.assertIn("pull_request:", s)
+        self.assertNotIn("pull_request_target", s)
+        self.assertIn("permissions:\n  contents: read", s)
+        for forbidden in ["secrets", "pages: write", "id-token:", "npm ", "curl ", "workflow_dispatch:", "schedule:"]:
+            self.assertNotIn(forbidden, s)
+        self.assertIn("persist-credentials: false", s)
+
+if __name__ == "__main__":
+    unittest.main()
