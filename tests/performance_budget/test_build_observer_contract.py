@@ -32,7 +32,8 @@ class BuildObserverContracts(unittest.TestCase):
     def test_observer_is_validated_before_build(self):
         validation = step("Validate bounded Next build observer")
         self.assertIn("NODE_OPTIONS: --max-old-space-size=512", validation)
-        self.assertIn("run: node scripts/ci/test-next-build-memory-observer.cjs", validation)
+        self.assertIn("node scripts/ci/test-next-build-memory-observer.cjs", validation)
+        self.assertIn("node scripts/ci/test-webpack-aggregates.cjs", validation)
         self.assertNotIn("continue-on-error", validation)
         self.assertLess(WORKFLOW.index("name: Validate bounded Next build observer"), WORKFLOW.index("name: Build site"))
 

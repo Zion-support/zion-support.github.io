@@ -9,6 +9,9 @@ const HASHES = Object.freeze({
   'dist/trace/trace.js': '04c46dd2d1f10d40bfe8a9a01d706447559c965bc66262576aed356cf1095a39',
   'dist/bin/next': '760b5b8059d08cc2120112344dd80570fa022e09ef0d993452172d0ac469a48b',
   'dist/build/webpack-build/impl.js': '421731ea3b8122fb42321462bb8b0556b635976a14f163860449e4ce0f729f72',
+  'dist/compiled/webpack/webpack.js': '7ae3a1cb9950f7174a1bfc3c31d95be4687d9e90d1724d5ad28cc0f36f6c4bf6',
+  'dist/compiled/webpack/bundle5.js': '1a8627c55931e3486fc71af9cf2d7de1f0ccf34d6011607fe05ed5404f3b77b9',
+  'dist/compiled/webpack-sources3/index.js': '0e58179d50c353d64d7a424323b1324303490a6f07b79f3a7da7d966fc8fa424',
 });
 function verify(root) {
   try {
@@ -33,7 +36,7 @@ function startSampler({ runtime=process, every=setInterval, write=writeRecord, n
   return timer;
 }
 const PHASES = new Set(['create-entrypoints','create-deferred-entrypoints','generate-webpack-config','run-webpack-compiler','webpack-compilation','make','seal','emit','webpack-close']);
-function installSpanObserver(Span, emit=writeRecord, runtime=process) {
+function installSpanObserver(Span, emit=writeRecord, runtime=process, onPhase=()=>{}) {
   const proto=Span && Span.prototype;
   const childDescriptor=proto && Object.getOwnPropertyDescriptor(proto,'traceChild');
   const stopDescriptor=proto && Object.getOwnPropertyDescriptor(proto,'stop');
@@ -51,6 +54,7 @@ function installSpanObserver(Span, emit=writeRecord, runtime=process) {
       if(typeof name!=='string')return span;
       if(name==='build-module'||name.startsWith('build-module-')){tracked.set(span,{module:true});modulesStarted++;return span;}
       if(!PHASES.has(name))return span;
+      try { onPhase(name); } catch {}
       let compiler;
       if(name==='webpack-compilation'){
         const candidate=args[1] && args[1].name;
@@ -82,12 +86,24 @@ function activate() {
     root=path.resolve(path.dirname(cli),'../..');
     if (cli !== path.join(root,'dist/bin/next') || process.argv[2]!=='build') return;
   } catch { return; }
-  if (process.env.DEBUG !== NAMESPACE || !verify(root)) {
+  if (process.env.DEBUG !== NAMESPACE || process.env.NEXT_PRIVATE_LOCAL_WEBPACK || process.env.NEXT_RSPACK || !verify(root)) {
     try { fs.writeSync(2,'NEXT_MEMORY_OBSERVER_REJECTED\n'); } catch {}
     return;
   }
   let observer;
-  try {observer=installSpanObserver(require(path.join(root,'dist/trace/trace.js')).Span);}catch{}
+  let aggregateAttempted=false;
+  function onPhase(name) {
+    if(name!=='run-webpack-compiler'||aggregateAttempted)return;
+    aggregateAttempted=true;
+    try {
+      // Next's compiler imports Webpack before this span. Do not load it early
+      // or replace module resolution; inspect only the already-loaded export.
+      const loaded=require.cache[path.join(root,'dist/compiled/webpack/webpack.js')];
+      const webpack=loaded && loaded.exports.webpack;
+      if(!webpack || !require('./observe-webpack-aggregates.cjs').installCompilerObserver(webpack))throw new Error();
+    } catch {try {fs.writeSync(2,'NEXT_AGGREGATE_OBSERVER_REJECTED\n');}catch{}}
+  }
+  try {observer=installSpanObserver(require(path.join(root,'dist/trace/trace.js')).Span,writeRecord,process,onPhase);}catch{}
   if(!observer){try{fs.writeSync(2,'NEXT_MEMORY_OBSERVER_REJECTED\n');}catch{}return;}
   try {startSampler({counters:observer.counters});} catch {
     try {observer.restore();} catch {}

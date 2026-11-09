@@ -30,8 +30,9 @@ async function main(){
  const next=process.env.NEXT_TEST_DIR?path.resolve(process.env.NEXT_TEST_DIR):path.dirname(require.resolve('next/package.json'));
  assert(observer.verify(next));
  const observerPath=path.join(__dirname,'observe-next-build-memory.cjs');
- function activationProbe(cli){return cp.spawnSync(process.execPath,['-e',`process.argv=[process.execPath,${JSON.stringify(cli)},'build'];require(${JSON.stringify(observerPath)});`],{timeout:2000,encoding:'utf8',env:{...process.env,ZION_NEXT_MEMORY_OBSERVER:'1',DEBUG:observer.NAMESPACE}});}
+ function activationProbe(cli,flags={}){return cp.spawnSync(process.execPath,['-e',`process.argv=[process.execPath,${JSON.stringify(cli)},'build'];require(${JSON.stringify(observerPath)});`],{timeout:2000,encoding:'utf8',env:{...process.env,ZION_NEXT_MEMORY_OBSERVER:'1',DEBUG:observer.NAMESPACE,...flags}});}
  const activated=activationProbe(path.join(next,'dist/bin/next'));assert.equal(activated.status,0);assert.equal((activated.stderr.match(/\[next-memory\]/g)||[]).length,1);assert(!activated.stderr.includes('NEXT_MEMORY_OBSERVER_REJECTED'));
+ for(const key of ['NEXT_PRIVATE_LOCAL_WEBPACK','NEXT_RSPACK']){const rejected=activationProbe(path.join(next,'dist/bin/next'),{[key]:'1'});assert.equal(rejected.status,0);assert(rejected.stderr.includes('NEXT_MEMORY_OBSERVER_REJECTED'));assert(!rejected.stderr.includes('[next-memory]'));}
 
  const RealSpan=require(path.join(next,'dist/trace/trace.js')).Span;const asyncFn=RealSpan.prototype.traceAsyncFn,traceFn=RealSpan.prototype.traceFn;const realEvents=[];const realObserver=observer.installSpanObserver(RealSpan,e=>realEvents.push(e),runtime);assert(realObserver);assert.equal(RealSpan.prototype.traceAsyncFn,asyncFn);assert.equal(RealSpan.prototype.traceFn,traceFn);
  const reporter=require(path.join(next,'dist/trace/report')).reporter;const report=reporter.report;reporter.report=()=>{};

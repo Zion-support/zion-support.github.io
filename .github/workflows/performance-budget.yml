@@ -45,7 +45,9 @@ jobs:
     - name: Validate bounded Next build observer
       env:
         NODE_OPTIONS: --max-old-space-size=512
-      run: node scripts/ci/test-next-build-memory-observer.cjs
+      run: |
+        node scripts/ci/test-next-build-memory-observer.cjs
+        node scripts/ci/test-webpack-aggregates.cjs
     - name: Validate performance metric semantics
       run: node tests/test-performance-metrics.cjs automation/performance-budget-enforcer.cjs
     - name: Build site
