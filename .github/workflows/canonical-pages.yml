@@ -78,6 +78,8 @@ jobs:
           PY_GUARD
       - name: Prepare canonical pages from public
         run: bash scripts/prepare-pages-out.sh
+      - name: Validate final publication boundary
+        run: python3 scripts/assert-no-private-ops.py out
       - name: Upload canonical Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
