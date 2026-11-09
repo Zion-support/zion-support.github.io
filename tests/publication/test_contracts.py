@@ -1,5 +1,6 @@
 """Inert source-contract and bounded-queue fixtures; no builds or network calls."""
 from pathlib import Path
+import os
 import subprocess
 import sys
 import tempfile
@@ -141,6 +142,73 @@ class PublicationContracts(unittest.TestCase):
         self.assertFalse(admitted_validation("refs/heads/main", "success", "old", "A"))
         self.assertTrue(admitted_validation("refs/heads/main", "success", "A", "A"))
 
+    def checkout_shell(self):
+        block = source("publication-contract-tests.yml").split("        run: |\n", 1)[1].split("      - name: Inert", 1)[0]
+        return textwrap.dedent(block)
+
+    def test_checkout_broken_gitlink_and_merge_event(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            repo = root / "repo"
+            work = root / "work"
+            repo.mkdir()
+            work.mkdir()
+            def git(*args):
+                return subprocess.check_output(["git", "-C", str(repo), *args], stderr=subprocess.DEVNULL, text=True).strip()
+            git("init", "-q")
+            git("config", "user.name", "Fixture")
+            git("config", "user.email", "fixture@example.invalid")
+            (repo / "file").write_text("base")
+            git("add", ".")
+            git("commit", "-qm", "base")
+            base = git("rev-parse", "HEAD")
+            git("update-index", "--add", "--cacheinfo", "160000," + base + ",.pageploy")
+            git("commit", "-qm", "broken gitlink")
+            head = git("rev-parse", "HEAD")
+            # A real two-parent synthetic merge commit, matching pull_request event semantics.
+            merge = git("commit-tree", git("rev-parse", "HEAD^{tree}"), "-p", base, "-p", head, "-m", "merge fixture")
+            code = self.checkout_shell().replace("https://github.com/Zion-support/zion-support.github.io.git", str(repo))
+            env = dict(os.environ, CANDIDATE_SHA=merge, GIT_TERMINAL_PROMPT="0")
+            run = subprocess.run(["bash", "-c", code], cwd=work, env=env, capture_output=True, text=True)
+            self.assertEqual(run.returncode, 0, run.stderr)
+            actual = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=work, text=True).strip()
+            self.assertEqual(actual, merge)
+            self.assertNotEqual(actual, head)
+            # Reproduce the auth-cleanup mechanism that broke actions/checkout, without credentials.
+            cleanup = subprocess.run(["git", "submodule", "foreach", "--recursive", "true"], cwd=work, capture_output=True, text=True)
+            self.assertNotEqual(cleanup.returncode, 0)
+            self.assertIn("No url found for submodule path '.pageploy'", cleanup.stderr)
+            self.assertNotIn("submodule", self.checkout_shell())
+            cfg = (work / ".git/config").read_text()
+            self.assertNotIn("extraheader", cfg.lower())
+            self.assertNotIn("credential", cfg.lower())
+
+    def test_checkout_invalid_sha_and_existing_files(self):
+        for sha, existing in [("invalid", False), ("a" * 40, True)]:
+            with tempfile.TemporaryDirectory() as td:
+                p = Path(td)
+                if existing:
+                    (p / "keep").write_text("preserve")
+                run = subprocess.run(["bash", "-c", self.checkout_shell()], cwd=p,
+                                     env=dict(os.environ, CANDIDATE_SHA=sha), capture_output=True)
+                self.assertNotEqual(run.returncode, 0)
+                self.assertFalse((p / ".git").exists())
+                if existing:
+                    self.assertEqual((p / "keep").read_text(), "preserve")
+
+    def test_checkout_wrong_revision_assertion(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            binary = root / "git"
+            binary.write_text('#!/bin/sh\nif [ "$1" = rev-parse ]; then printf "%040d\\n" 0; fi\n')
+            binary.chmod(0o755)
+            work = root / "work"
+            work.mkdir()
+            run = subprocess.run(["bash", "-c", self.checkout_shell()], cwd=work,
+                                 env=dict(os.environ, CANDIDATE_SHA="a" * 40, PATH=str(root) + os.pathsep + os.environ["PATH"]), capture_output=True)
+            self.assertNotEqual(run.returncode, 0)
+            self.assertIn(b"Checked out revision differs", run.stdout)
+
     def test_inert_pr_lane_scope(self):
         s = source("publication-contract-tests.yml")
         self.assertIn("pull_request:", s)
@@ -148,7 +216,9 @@ class PublicationContracts(unittest.TestCase):
         self.assertIn("permissions:\n  contents: read", s)
         for forbidden in ["secrets", "pages: write", "id-token:", "npm ", "curl ", "workflow_dispatch:", "schedule:"]:
             self.assertNotIn(forbidden, s)
-        self.assertIn("persist-credentials: false", s)
+        self.assertNotIn("actions/checkout@", s)
+        self.assertIn("CANDIDATE_SHA: ${{ github.sha }}", s)
+        self.assertIn("git -c credential.helper= fetch --no-tags --depth=1", s)
 
 if __name__ == "__main__":
     unittest.main()

@@ -14,8 +14,28 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      - uses: actions/checkout@v4
-        with:
-          persist-credentials: false
+      # Reuse the reviewed exact-SHA transport from PR #71960; do not initialize gitlinks.
+      - name: Checkout public event without stored credentials
+        env:
+          CANDIDATE_SHA: ${{ github.sha }}
+          GIT_TERMINAL_PROMPT: '0'
+        run: |
+          set -euo pipefail
+          if [[ ! "$CANDIDATE_SHA" =~ ^[0-9a-f]{40}$ ]]; then
+            echo "::error::Invalid checkout candidate SHA."
+            exit 1
+          fi
+          if [[ -n "$(find . -mindepth 1 -maxdepth 1 -print -quit)" ]]; then
+            echo "::error::Checkout requires an empty workspace; existing files were not changed."
+            exit 1
+          fi
+          git init --quiet
+          git remote add origin https://github.com/Zion-support/zion-support.github.io.git
+          git -c credential.helper= fetch --no-tags --depth=1 origin "$CANDIDATE_SHA"
+          git checkout --detach FETCH_HEAD
+          if [[ "$(git rev-parse HEAD)" != "$CANDIDATE_SHA" ]]; then
+            echo "::error::Checked out revision differs from publication candidate."
+            exit 1
+          fi
       - name: Inert publication contract tests
         run: python3 -I -m unittest discover -s tests/publication -p 'test_*.py' -v
