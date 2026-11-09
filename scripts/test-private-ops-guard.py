@@ -45,6 +45,48 @@ class GuardTests(unittest.TestCase):
     def test_irrelevant_files_allowed(self):
         self.fixture("apps/example.html", False)
 
+    def test_directory_alias_ancestors_blocked(self):
+        for alias, suffix in (("ops", "comms/CEO-OPS.md"),
+                              ("pt/OPS", "COMMS/CEO-OPS.md"),
+                              ("pt", "ops/comms/CEO-OPS.md"),
+                              ("ops/comms", "CEO-OPS.md")):
+            with self.subTest(alias=alias), tempfile.TemporaryDirectory() as td:
+                root = Path(td) / "public"
+                root.mkdir()
+                target = Path(td) / "synthetic-target"
+                secret = target / suffix
+                secret.parent.mkdir(parents=True)
+                secret.write_text("synthetic fixture")
+                link = root / alias
+                link.parent.mkdir(parents=True, exist_ok=True)
+                link.symlink_to(target, target_is_directory=True)
+                self.assertEqual(g.violations(root), [alias])
+
+    def test_dangling_directory_alias_blocked(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td) / "public"
+            root.mkdir()
+            (root / "ops").symlink_to(Path(td) / "missing", target_is_directory=True)
+            self.assertEqual(g.violations(root), ["ops"])
+
+    def test_publication_root_alias_blocked(self):
+        with tempfile.TemporaryDirectory() as td:
+            target = Path(td) / "target"
+            target.mkdir()
+            root = Path(td) / "public"
+            root.symlink_to(target, target_is_directory=True)
+            self.assertEqual(g.violations(root), ["symlink publication tree"])
+
+    def test_unrelated_regular_file_alias_preserved(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td) / "public"
+            root.mkdir()
+            target = Path(td) / "synthetic.txt"
+            target.write_text("synthetic fixture")
+            (root / "asset.txt").symlink_to(target)
+            self.assertEqual(g.violations(root), [])
+
 
 if __name__ == "__main__":
     unittest.main()
+

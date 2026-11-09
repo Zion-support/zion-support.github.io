@@ -11,11 +11,19 @@ PUBLIC_OPS_FILES = {"index.html"}
 
 def violations(root):
     root = Path(root)
+    if root.is_symlink():
+        return ["symlink publication tree"]
     if not root.is_dir():
         return ["missing publication tree"]
     hits = []
     for item in root.rglob("*"):
         rel = item.relative_to(root)
+        # rglob does not traverse directory symlinks. Such an alias can hide
+        # ops/comms at any depth; reject it rather than inspect its target.
+        # Dangling aliases must also fail closed if their target appears later.
+        if item.is_symlink() and (item.is_dir() or not item.exists()):
+            hits.append(str(rel))
+            continue
         parts = [part.casefold() for part in rel.parts]
         for pos in range(len(parts) - 1):
             if parts[pos:pos + 2] != ["ops", "comms"]:
@@ -43,3 +51,4 @@ if __name__ == "__main__":
             print(path, file=sys.stderr)
         sys.exit(1)
     print("OK: public ops/comms contains only approved index.html")
+
