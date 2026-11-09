@@ -10,7 +10,8 @@ const react = require('react');
 const { renderToStaticMarkup } = require('react-dom/server');
 const root = path.resolve(__dirname, '../..');
 const pages = ['app/ai-business-advisor/page.tsx', 'app/ai-experiences/page.tsx', 'app/ai-experiments/page.tsx',
-  'app/search/page.tsx', 'app/search/layout.tsx', 'app/services-agritech-page.tsx', 'app/services-ai-page.tsx'];
+  'app/search/page.tsx', 'app/search/layout.tsx', 'app/services-agritech-page.tsx', 'app/services-ai-page.tsx',
+  'app/zion-ai-email-marketing-pro/page.tsx'];
 function source(file) {
   return ts.createSourceFile(file, fs.readFileSync(path.join(root, file), 'utf8'), ts.ScriptTarget.Latest, true, ts.ScriptKind.TSX);
 }
@@ -36,7 +37,7 @@ function compile(text, file) {
 function load(file) { return compile(fs.readFileSync(path.join(root, file), 'utf8'), file); }
 for (const file of pages) {
   test(file + ' parses and transpiles without recovery', () => {
-    assert.deepEqual(source(file).parseDiagnostics, []);
+    assert.deepEqual(source(file).parseDiagnostics.map(diagnostic => diagnostic.code), []);
     const result = ts.transpileModule(fs.readFileSync(path.join(root, file), 'utf8'), { fileName: file, reportDiagnostics: true,
       compilerOptions: { jsx: ts.JsxEmit.ReactJSX, module: ts.ModuleKind.CommonJS } });
     assert.deepEqual(result.diagnostics, []);
