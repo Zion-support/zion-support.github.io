@@ -34,6 +34,14 @@ jobs:
         node scripts/ci/test-next-static-entry-scale.cjs
     - name: Remove redundant pinned Next static-entry metadata
       run: node scripts/ci/install-next-static-entry-guard.cjs
+    - name: Validate adjacent slot cache
+      env:
+        NODE_OPTIONS: --max-old-space-size=512
+      run: node scripts/ci/test-next-adjacent-slot-cache.cjs
+    - name: Cache unchanged adjacent slot names
+      run: |
+        node scripts/ci/install-next-adjacent-slot-cache.cjs
+        node scripts/ci/test-next-static-entry-loader.cjs
     - name: Validate bounded Next build observer
       env:
         NODE_OPTIONS: --max-old-space-size=512
