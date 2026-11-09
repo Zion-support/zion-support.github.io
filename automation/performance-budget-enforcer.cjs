@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 "use strict";
-const { execSync } = require("child_process");
+const { execFileSync } = require("child_process");
 const fs = require("fs");
 const path = require("path");
 
@@ -30,7 +30,6 @@ const HARD_LIMITS = {
   TTFB: 2.0,
 };
 const REGRESSION_THRESHOLD = 0.10;
-const MIN_BASELINE_DAYS = 7;
 
 function log(msg) { console.log(`[${new Date().toISOString()}] ${msg}`); }
 function jsonStatus(key, value) {
@@ -40,9 +39,12 @@ function jsonStatus(key, value) {
 function runLighthouse(targetUrl, outDir) {
   fs.mkdirSync(outDir, { recursive: true });
   const outPath = path.join(outDir, "lighthouse-report.json");
-  const cmd = `npx --yes lighthouse ${targetUrl} --output=json --output-path=${outPath} --chrome-flags="--headless --no-sandbox --disable-gpu" --puppeteer --quiet`;
   try {
-    execSync(cmd, { stdio: "pipe", timeout: 600000, env: { ...process.env, CI: "true" } });
+    execFileSync("npx", [
+      "--no-install", "lighthouse", targetUrl, "--output=json",
+      `--output-path=${outPath}`,
+      "--chrome-flags=--headless --no-sandbox --disable-gpu", "--quiet",
+    ], { stdio: "pipe", timeout: 600000, env: { ...process.env, CI: "true" } });
     return outPath;
   } catch (e) {
     throw new Error(`Lighthouse execution failed for ${targetUrl}: ${e.message}`);
@@ -51,24 +53,57 @@ function runLighthouse(targetUrl, outDir) {
 
 function parseReport(reportPath) {
   const report = JSON.parse(fs.readFileSync(reportPath, "utf8"));
-  const audits = report.audits;
-  const getMetric = (id, scale = 1000) => {
-    const value = audits[id]?.numericValue;
-    return typeof value === "number" && Number.isFinite(value) && value >= 0 ? value / scale : null;
+  if (report.runtimeError) throw new Error(`Lighthouse runtime error: ${report.runtimeError.message || report.runtimeError.code}`);
+  const audits = report.audits || {};
+  const getMetric = (id, divisor = 1000) => {
+    const audit = audits[id];
+    if (!audit || audit.scoreDisplayMode === "error" ||
+        !Number.isFinite(audit.numericValue) || audit.numericValue < 0) {
+      throw new Error(`Required audit ${id} is missing or invalid; performance coverage is incomplete. FID requires a compatible measurement source; do not silently omit or substitute it.`);
+    }
+    return audit.numericValue / divisor;
   };
+  const score = report.categories?.performance?.score;
+  if (!Number.isFinite(score) || score < 0 || score > 1) throw new Error("Missing or invalid performance score");
   return {
     lcp: getMetric("largest-contentful-paint"),
     fid: getMetric("first-input-delay"),
     cls: getMetric("cumulative-layout-shift", 1),
     fcp: getMetric("first-contentful-paint"),
     ttfb: getMetric("time-to-first-byte"),
-    performance: (report.categories && report.categories.performance) ? report.categories.performance.score * 100 : null,
+    performance: score * 100,
   };
 }
 
+function validateMetrics(metrics, label) {
+  for (const key of ["lcp", "fid", "cls", "fcp", "ttfb", "performance"]) {
+    const value = metrics?.[key];
+    if (!Number.isFinite(value) || value < 0 || (key === "performance" && value > 100)) {
+      throw new Error(`Invalid ${label} metric: ${key}`);
+    }
+  }
+}
+
+function normalizeBaseline(baseline) {
+  const metrics = { ...baseline?.metrics };
+  // Legacy baselines named the performance score "overall". Accept that alias
+  // only when the canonical field is absent; never hide an invalid current field.
+  if (!Object.prototype.hasOwnProperty.call(metrics, "performance") &&
+      Object.prototype.hasOwnProperty.call(metrics, "overall")) {
+    metrics.performance = metrics.overall;
+  }
+  validateMetrics(metrics, "baseline");
+  if (Object.prototype.hasOwnProperty.call(metrics, "overall") &&
+      metrics.overall !== metrics.performance) {
+    throw new Error("Conflicting baseline performance and overall scores");
+  }
+  return { ...baseline, metrics };
+}
+
 function loadBaseline() {
-  if (!baselineFile || !fs.existsSync(baselineFile)) return null;
-  try { return JSON.parse(fs.readFileSync(baselineFile, "utf8")); } catch { return null; }
+  if (!baselineFile) return null;
+  // An explicitly requested baseline must never silently become a hard-limits-only run.
+  return normalizeBaseline(JSON.parse(fs.readFileSync(baselineFile, "utf8")));
 }
 
 function saveBaseline(dir, metrics) {
@@ -87,22 +122,25 @@ function saveBaseline(dir, metrics) {
 }
 
 function compare(metrics, baseline) {
+  validateMetrics(metrics, "current");
   if (!baseline) return { ok: true, reason: "No baseline available; using hard limits only" };
+  baseline = normalizeBaseline(baseline);
   const drops = {};
   for (const key of ["lcp", "fid", "cls", "fcp", "ttfb", "performance"]) {
     const cur = metrics[key];
-    const base = baseline.metrics?.[key] ?? (key === "performance" ? baseline.metrics?.overall : null);
-    if (typeof cur !== "number" || typeof base !== "number" || !Number.isFinite(cur) || !Number.isFinite(base) || cur < 0 || base < 0) continue;
-    const worse = key === "performance" ? base - cur : cur - base;
-    const relativeDrop = base === 0 ? (worse > 0 ? Infinity : 0) : worse / base;
+    const base = baseline.metrics[key];
+    // Lower timing/CLS is better; a lower performance score is worse.
+    const worsening = key === "performance" ? base - cur : cur - base;
+    const relativeDrop = base === 0 ? (worsening > 0 ? Infinity : 0) : worsening / base;
     if (relativeDrop > REGRESSION_THRESHOLD) {
-      drops[key] = { base, cur, dropPct: Number.isFinite(relativeDrop) ? relativeDrop * 100 : null };
+      drops[key] = { base, cur, dropPct: relativeDrop * 100 };
     }
   }
   return { ok: Object.keys(drops).length === 0, drops };
 }
 
 function checkHardLimits(metrics) {
+  validateMetrics(metrics, "current");
   const violations = [];
   if (metrics.lcp != null && metrics.lcp > HARD_LIMITS.LCP) violations.push(`LCP ${metrics.lcp.toFixed(2)}s > ${HARD_LIMITS.LCP}s`);
   if (metrics.fid != null && metrics.fid > HARD_LIMITS.FID) violations.push(`FID ${metrics.fid.toFixed(2)}s > ${HARD_LIMITS.FID}s`);
@@ -149,32 +187,31 @@ async function main() {
     }
   }
 
-  const reportMetrics = liveMetrics || primaryMetrics;
-  if (!reportMetrics) {
-    console.error("❌ Performance budget check failed: no metrics available");
+  // Every requested target must be measured and pass. Live success cannot mask a
+  // broken or regressed PR build.
+  if ((url && !primaryOk) || (liveUrl && !liveOk)) {
+    console.error("❌ Performance budget check failed: a requested target has no valid metrics");
     process.exit(1);
   }
 
-  const hardViolations = checkHardLimits(reportMetrics);
-  if (hardViolations.length > 0) {
-    console.error("❌ Hard limit violations:\n  - " + hardViolations.join("\n  - "));
-    process.exit(1);
-  } else {
-    console.log("✅ Hard limits passed");
-  }
-
-  const regression = compare(reportMetrics, baseline);
-  if (!regression.ok) {
-    console.error("❌ Regression detected vs baseline:");
-    for (const [key, info] of Object.entries(regression.drops || {})) {
-      console.error(`   - ${key.toUpperCase()}: ${info.base.toFixed(2)} → ${info.cur.toFixed(2)} (${info.dropPct === null ? "new non-zero latency over zero baseline" : `${info.dropPct.toFixed(1)}% worse`})`);
+  const results = [
+    ...(url ? [{ target: "local", metrics: primaryMetrics }] : []),
+    ...(liveUrl ? [{ target: "live", metrics: liveMetrics }] : []),
+  ];
+  for (const result of results) {
+    result.hardViolations = checkHardLimits(result.metrics);
+    result.regression = compare(result.metrics, baseline);
+    if (result.hardViolations.length || !result.regression.ok) {
+      console.error(`❌ ${result.target} performance budget failed: ${JSON.stringify(result)}`);
+      process.exit(1);
     }
-    process.exit(1);
-  } else {
-    console.log("✅ No regression vs baseline");
   }
+  const reportMetrics = primaryMetrics || liveMetrics;
+  const { hardViolations, regression } = results[0];
+  console.log("✅ All requested targets passed hard limits and baseline checks");
+  if (!baseline) log("No baseline configured; only hard limits were evaluated.");
 
-  const targetOutPath = liveOutPath || primaryOutPath;
+  const targetOutPath = primaryOutPath || liveOutPath;
   if (targetOutPath && fs.existsSync(targetOutPath)) {
     try {
       fs.copyFileSync(targetOutPath, path.join(outputDir, "latest-report.json"));
