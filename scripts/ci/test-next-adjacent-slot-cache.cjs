@@ -74,6 +74,53 @@ function installer(){
   const write=fs.writeFileSync;
   try{fs.writeFileSync=(name,...args)=>{if(String(name).includes('.adjacent-slot-cache-'))throw Error('synthetic');return write(name,...args);};assert.throws(()=>helper.install(root));}finally{fs.writeFileSync=write;}assert.equal(fs.readFileSync(target,'utf8'),source);
   try{fs.writeFileSync=(name,...args)=>{const result=write(name,...args);if(String(name).includes('.adjacent-slot-cache-'))write(target,source+'\n');return result;};assert.throws(()=>helper.install(root));}finally{fs.writeFileSync=write;}assert.equal(fs.readFileSync(target,'utf8'),source+'\n');assert.equal(fs.readdirSync(path.dirname(target)).length,1);
+
+// Exercise descriptor-bound reads and replacements using this private fixture only.
+{
+ const open=fs.openSync,close=fs.closeSync,read=fs.readFileSync,write=fs.writeFileSync;
+ const opened=new Set();let inspected=0;
+ fs.writeFileSync(target,source);
+ try {
+  fs.openSync=(name,flags,...args)=>{const fd=open(name,flags,...args);if(name===target){assert.equal(flags & fs.constants.O_NOFOLLOW,fs.constants.O_NOFOLLOW);opened.add(fd);inspected++;}return fd;};
+  fs.closeSync=fd=>{opened.delete(fd);return close(fd);};
+  fs.readFileSync=(name,...args)=>{assert.notEqual(name,target,'never reopen the validated target by path');return read(name,...args);};
+  assert.equal(helper.install(root),true);assert.equal(inspected,2);assert.equal(opened.size,0);
+ } finally {fs.openSync=open;fs.closeSync=close;fs.readFileSync=read;}
+ assert.equal(fs.readFileSync(target,'utf8'),helper.transform(source,'16.4.5').source);
+ // Swap to a symlink immediately before open: O_NOFOLLOW must reject it.
+ fs.writeFileSync(target,source);let swapped=false;
+ try {
+  fs.openSync=(name,...args)=>{if(name===target&&!swapped){swapped=true;fs.unlinkSync(target);fs.symlinkSync(referent,target);}return open(name,...args);};
+  assert.throws(()=>helper.install(root),/NEXT_ADJACENT_TARGET_REJECTED/);
+ } finally {fs.openSync=open;}
+ assert.equal(fs.readFileSync(referent,'utf8'),source);fs.unlinkSync(target);fs.writeFileSync(target,source);
+ // Swap after opening: reads remain bound to the opened file, final recheck rejects the new path.
+ const moved=path.join(root,'opened-target.js');swapped=false;
+ try {
+  fs.openSync=(name,...args)=>{const fd=open(name,...args);if(name===target&&!swapped){swapped=true;fs.renameSync(target,moved);fs.symlinkSync(referent,target);}return fd;};
+  assert.throws(()=>helper.install(root),/NEXT_ADJACENT_CONCURRENT_CHANGE/);
+ } finally {fs.openSync=open;}
+ assert.equal(fs.readFileSync(referent,'utf8'),source);assert.equal(fs.readFileSync(moved,'utf8'),source);fs.unlinkSync(target);fs.writeFileSync(target,source);fs.unlinkSync(moved);
+ // Same-content replacement still changes identity and must not be overwritten.
+ const replacement=path.join(root,'replacement.js');fs.writeFileSync(replacement,source);
+ try {
+  fs.writeFileSync=(name,...args)=>{const result=write(name,...args);if(String(name).includes('.adjacent-slot-cache-'))fs.renameSync(replacement,target);return result;};
+  assert.throws(()=>helper.install(root),/NEXT_ADJACENT_CONCURRENT_CHANGE/);
+ } finally {fs.writeFileSync=write;}
+ assert.equal(fs.readFileSync(target,'utf8'),source);
+ // A read failure closes the descriptor and cannot create a temporary output.
+ opened.clear();
+ try {
+  fs.openSync=(name,...args)=>{const fd=open(name,...args);if(name===target)opened.add(fd);return fd;};
+  fs.closeSync=fd=>{opened.delete(fd);return close(fd);};
+  fs.readFileSync=(name,...args)=>{if(opened.has(name))throw Error('synthetic read');return read(name,...args);};
+  assert.throws(()=>helper.install(root));assert.equal(opened.size,0);
+ } finally {fs.openSync=open;fs.closeSync=close;fs.readFileSync=read;}
+ assert.equal(fs.readFileSync(target,'utf8'),source);assert.equal(fs.readdirSync(path.dirname(target)).length,1);
+ // Directories are rejected through fstat, not followed or read as regular files.
+ fs.unlinkSync(target);fs.mkdirSync(target);assert.throws(()=>helper.install(root),/NEXT_ADJACENT_TARGET_REJECTED/);fs.rmdirSync(target);fs.writeFileSync(target,source);
+ console.log('NEXT_ADJACENT_DESCRIPTOR_SAFETY_PASS 6');
+}
   console.log('ADJACENT_SLOT_INSTALLER_PASS');
  }finally{fs.rmSync(root,{recursive:true,force:true});}
 }

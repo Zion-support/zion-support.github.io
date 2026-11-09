@@ -56,7 +56,7 @@ assert.equal(helper.install(isolated),true);assert.equal(fs.readFileSync(target,
 count+=4;
 // Reject a symlink before any target or temporary-file write.
 const referent=path.join(isolated,'referent.js');fs.writeFileSync(referent,original);fs.unlinkSync(target);fs.symlinkSync(referent,target);
-assert.throws(()=>helper.install(isolated),/NEXT_ENTRY_TARGET_REJECTED/);assert.equal(fs.readFileSync(referent,'utf8'),original);assert(fs.lstatSync(target).isSymbolicLink());fs.unlinkSync(target);fs.writeFileSync(target,original);count++;
+assert.throws(()=>helper.install(isolated),/NEXT_ENTRY_TARGET_REJECTED/);assert.equal(fs.readFileSync(referent,'utf8'),original);assert.equal(fs.readlinkSync(target),referent);fs.unlinkSync(target);fs.writeFileSync(target,original);count++;
 // Inject a write failure without changing host permissions or shared files.
 const write=fs.writeFileSync;
 try { fs.writeFileSync=(name,...args)=>{if(String(name).includes('.static-entry-guard-'))throw new Error('synthetic');return write(name,...args);};assert.throws(()=>helper.install(isolated),/NEXT_ENTRY_WRITE_FAILED/); }
@@ -66,6 +66,53 @@ assert.equal(fs.readFileSync(target,'utf8'),original);assert.equal(fs.readdirSyn
 try { fs.writeFileSync=(name,...args)=>{const r=write(name,...args);if(String(name).includes('.static-entry-guard-'))write(target,original+'\n');return r;};assert.throws(()=>helper.install(isolated),/NEXT_ENTRY_CONCURRENT_CHANGE/); }
 finally {fs.writeFileSync=write;}
 assert.equal(fs.readFileSync(target,'utf8'),original+'\n');assert.equal(fs.readdirSync(path.dirname(target)).length,1);count++;
+
+// Exercise descriptor-bound reads and replacements using this private fixture only.
+{
+ const open=fs.openSync,close=fs.closeSync,read=fs.readFileSync,write=fs.writeFileSync;
+ const opened=new Set();let inspected=0;
+ fs.writeFileSync(target,original);
+ try {
+  fs.openSync=(name,flags,...args)=>{const fd=open(name,flags,...args);if(name===target){assert.equal(flags & fs.constants.O_NOFOLLOW,fs.constants.O_NOFOLLOW);opened.add(fd);inspected++;}return fd;};
+  fs.closeSync=fd=>{opened.delete(fd);return close(fd);};
+  fs.readFileSync=(name,...args)=>{assert.notEqual(name,target,'never reopen the validated target by path');return read(name,...args);};
+  assert.equal(helper.install(isolated),true);assert.equal(inspected,2);assert.equal(opened.size,0);
+ } finally {fs.openSync=open;fs.closeSync=close;fs.readFileSync=read;}
+ assert.equal(fs.readFileSync(target,'utf8'),helper.transform(original,'16.4.5').source);
+ // Swap to a symlink immediately before open: O_NOFOLLOW must reject it.
+ fs.writeFileSync(target,original);let swapped=false;
+ try {
+  fs.openSync=(name,...args)=>{if(name===target&&!swapped){swapped=true;fs.unlinkSync(target);fs.symlinkSync(referent,target);}return open(name,...args);};
+  assert.throws(()=>helper.install(isolated),/NEXT_ENTRY_TARGET_REJECTED/);
+ } finally {fs.openSync=open;}
+ assert.equal(fs.readFileSync(referent,'utf8'),original);fs.unlinkSync(target);fs.writeFileSync(target,original);
+ // Swap after opening: reads remain bound to the opened file, final recheck rejects the new path.
+ const moved=path.join(isolated,'opened-target.js');swapped=false;
+ try {
+  fs.openSync=(name,...args)=>{const fd=open(name,...args);if(name===target&&!swapped){swapped=true;fs.renameSync(target,moved);fs.symlinkSync(referent,target);}return fd;};
+  assert.throws(()=>helper.install(isolated),/NEXT_ENTRY_CONCURRENT_CHANGE/);
+ } finally {fs.openSync=open;}
+ assert.equal(fs.readFileSync(referent,'utf8'),original);assert.equal(fs.readFileSync(moved,'utf8'),original);fs.unlinkSync(target);fs.writeFileSync(target,original);fs.unlinkSync(moved);
+ // Same-content replacement still changes identity and must not be overwritten.
+ const replacement=path.join(isolated,'replacement.js');fs.writeFileSync(replacement,original);
+ try {
+  fs.writeFileSync=(name,...args)=>{const result=write(name,...args);if(String(name).includes('.static-entry-guard-'))fs.renameSync(replacement,target);return result;};
+  assert.throws(()=>helper.install(isolated),/NEXT_ENTRY_CONCURRENT_CHANGE/);
+ } finally {fs.writeFileSync=write;}
+ assert.equal(fs.readFileSync(target,'utf8'),original);
+ // A read failure closes the descriptor and cannot create a temporary output.
+ opened.clear();
+ try {
+  fs.openSync=(name,...args)=>{const fd=open(name,...args);if(name===target)opened.add(fd);return fd;};
+  fs.closeSync=fd=>{opened.delete(fd);return close(fd);};
+  fs.readFileSync=(name,...args)=>{if(opened.has(name))throw Error('synthetic read');return read(name,...args);};
+  assert.throws(()=>helper.install(isolated));assert.equal(opened.size,0);
+ } finally {fs.openSync=open;fs.closeSync=close;fs.readFileSync=read;}
+ assert.equal(fs.readFileSync(target,'utf8'),original);assert.equal(fs.readdirSync(path.dirname(target)).length,1);
+ // Directories are rejected through fstat, not followed or read as regular files.
+ fs.unlinkSync(target);fs.mkdirSync(target);assert.throws(()=>helper.install(isolated),/NEXT_ENTRY_TARGET_REJECTED/);fs.rmdirSync(target);fs.writeFileSync(target,original);
+ console.log('NEXT_ENTRY_DESCRIPTOR_SAFETY_PASS 6');
+}
 console.log('NEXT_ENTRY_HELPER_TESTS_PASS '+count);
 } finally { fs.rmSync(isolated,{recursive:true,force:true}); }
 

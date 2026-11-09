@@ -39,24 +39,36 @@ function transform(source, version) {
   if (!PATCHED.has(digest(output))) fail('NEXT_ENTRY_PATCH_INTEGRITY');
   return { source: output, changed: true };
 }
+// Inspect and read the same opened object; a path check must not authorize a later path read.
+function readTarget(file) {
+  if (!Number.isInteger(fs.constants.O_NOFOLLOW) || fs.constants.O_NOFOLLOW === 0) fail('NEXT_ENTRY_TARGET_REJECTED');
+  let fd;
+  try { fd = fs.openSync(file, fs.constants.O_RDONLY | fs.constants.O_NOFOLLOW | fs.constants.O_NONBLOCK); }
+  catch { fail('NEXT_ENTRY_TARGET_REJECTED'); }
+  try {
+    const stat = fs.fstatSync(fd);
+    if (!stat.isFile()) fail('NEXT_ENTRY_TARGET_REJECTED');
+    return { stat, source: fs.readFileSync(fd, 'utf8') };
+  } finally { fs.closeSync(fd); }
+}
 function install(nextDir) {
   const file = path.join(nextDir, 'dist/build/entries.js');
-  try { if (!fs.lstatSync(file).isFile() || fs.lstatSync(file).isSymbolicLink()) fail('NEXT_ENTRY_SYMLINK_REJECTED'); } catch { fail('NEXT_ENTRY_TARGET_REJECTED'); }
-  let version, input;
-  try { version = JSON.parse(fs.readFileSync(path.join(nextDir,'package.json'),'utf8')).version; input = fs.readFileSync(file,'utf8'); }
+  const initial = readTarget(file);
+  let version;
+  try { version = JSON.parse(fs.readFileSync(path.join(nextDir, 'package.json'), 'utf8')).version; }
   catch { fail('NEXT_ENTRY_READ_FAILED'); }
-  const result = transform(input, version);
+  const result = transform(initial.source, version);
   if (!result.changed) return false;
-  // All validation is complete before creating a temporary file. Rename publishes atomically.
+  // Serial CI installation in a trusted dependency directory. Rename publishes atomically,
+  // but is not a compare-and-swap against an adversarial writer after the final recheck.
   const tmp = file + '.static-entry-guard-' + crypto.randomUUID() + '.tmp';
   try {
-    const initialStat = fs.lstatSync(file);
-    if (!initialStat.isFile() || initialStat.isSymbolicLink()) fail('NEXT_ENTRY_TARGET_REJECTED');
-    fs.writeFileSync(tmp,result.source,{flag:'wx',mode:initialStat.mode});
-    const currentStat = fs.lstatSync(file);
-    if (!currentStat.isFile() || currentStat.isSymbolicLink() || currentStat.ino !== initialStat.ino || currentStat.dev !== initialStat.dev || fs.readFileSync(file,'utf8') !== input) fail('NEXT_ENTRY_CONCURRENT_CHANGE');
-    fs.renameSync(tmp,file);
-  } catch(error) {
+    fs.writeFileSync(tmp, result.source, { flag: 'wx', mode: initial.stat.mode });
+    let current;
+    try { current = readTarget(file); } catch { fail('NEXT_ENTRY_CONCURRENT_CHANGE'); }
+    if (current.stat.ino !== initial.stat.ino || current.stat.dev !== initial.stat.dev || current.source !== initial.source) fail('NEXT_ENTRY_CONCURRENT_CHANGE');
+    fs.renameSync(tmp, file);
+  } catch (error) {
     try { fs.unlinkSync(tmp); } catch {}
     if (error.message === 'NEXT_ENTRY_CONCURRENT_CHANGE') throw error;
     fail('NEXT_ENTRY_WRITE_FAILED');
