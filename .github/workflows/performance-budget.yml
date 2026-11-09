@@ -34,11 +34,17 @@ jobs:
         node scripts/ci/test-next-static-entry-scale.cjs
     - name: Remove redundant pinned Next static-entry metadata
       run: node scripts/ci/install-next-static-entry-guard.cjs
+    - name: Validate bounded Next build observer
+      env:
+        NODE_OPTIONS: --max-old-space-size=512
+      run: node scripts/ci/test-next-build-memory-observer.cjs
     - name: Validate performance metric semantics
       run: node tests/test-performance-metrics.cjs automation/performance-budget-enforcer.cjs
     - name: Build site
       env:
-        NODE_OPTIONS: --max-old-space-size=12288 --max-semi-space-size=64
+        NODE_OPTIONS: --max-old-space-size=12288 --max-semi-space-size=64 --require=./scripts/ci/observe-next-build-memory.cjs
+        DEBUG: next:build:webpack-build
+        ZION_NEXT_MEMORY_OBSERVER: "1"
         NEXT_BUILD_WORKER_COUNT: "1"
       run: |
         set -euo pipefail
