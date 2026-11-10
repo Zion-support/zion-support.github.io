@@ -4,7 +4,7 @@
 // Use it as the source pattern for all `app/<slug>/page.tsx` files.
 import Link from 'next/link';
 import type { ReactNode } from 'react';
-import { appsNetworkCatalog, relatedApps } from '@/app/data/appsNetwork';
+import { appsNetworkCatalog, relatedApps } from '../data/appsNetwork';
 
 export interface AppPageProps {
   app: AppsNetworkApp;
