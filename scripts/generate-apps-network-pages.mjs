@@ -360,7 +360,7 @@ for (const app of APPS) {
   }
 }
 for (const lang of LANGS) {
-  sitemapUrls.push(`  <url><loc>${lang.prefix ? `${SITE}/${lang.prefix}` : SITE}/apps-network/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>`);
+  sitemapUrls.push(`  <url><loc>${pageUrl(lang, 'apps-network')}</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>`);
 }
 write(
   path.join(PUBLIC, 'apps-network-sitemap.xml'),
