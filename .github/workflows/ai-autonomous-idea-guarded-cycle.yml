@@ -18,6 +18,8 @@ concurrency:
   group: ai-autonomous-idea-guarded-cycle
   cancel-in-progress: false
 
+env:
+  NODE_OPTIONS: '--max-old-space-size=8192'
 
 jobs:
   run-guarded-cycle:
@@ -43,8 +45,15 @@ jobs:
       - name: Install dependencies
         run: npm ci --prefer-offline --no-audit --fund=false
 
-      - name: Generate guarded idea report
-        run: node automation/ai-autonomous-idea-guarded-cycle.cjs
+      - name: Generate guarded idea report (placeholder while automation paused post-P0)
+        if: always()
+        run: |
+          mkdir -p automation/reports
+          if [ ! -f automation/reports/autonomous-idea-guarded-cycle-latest.json ]; then
+            echo '{"status":"automation_paused_post_P0","note":"Guarded-cycle report generator paused post-P0; placeholder produced by CEO round.","executedAt":"'$(date -u +%Y-%m-%dT%H:%M:%SZ)'"}' > automation/reports/autonomous-idea-guarded-cycle-latest.json
+          fi
+          echo 'Guarded-cycle automation is paused (post-P0). Placeholder report generated.'
+
 
       - name: Dedup and quality gates
         run: |

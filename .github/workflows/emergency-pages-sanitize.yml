@@ -1,0 +1,118 @@
+name: Republish verified Pages artifact
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+  deployments: read
+concurrency:
+  group: pages-deploy
+  cancel-in-progress: false
+jobs:
+  sanitize:
+    if: github.repository == 'Zion-support/zion-support.github.io' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Load verified recovery scripts
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          umask 077
+          python3 - <<'PY'
+          import base64, hashlib, json, os, pathlib, urllib.parse, urllib.request
+          expected = {'preflight.py': 'b29f330979a3c256c7dfa327a73b86edb2404d815e6ca9a245ed0876c15008d7', 'sanitize-artifact.py': 'a370e7b0dff2dfae785dc432c4465baeaa07169738f83750f552021dbfb6a09d', 'run-clean.py': 'e3b34bd25fd3d688ad41dce194b5098f637493dc2d4e7819406fdeb3272b7caf'}
+          root = pathlib.Path('scripts/pages-recovery')
+          root.mkdir(parents=True, exist_ok=False)
+          for name, digest in expected.items():
+              url = 'https://api.github.com/repos/Zion-support/zion-support.github.io/contents/scripts/pages-recovery/' + name + '?ref=' + urllib.parse.quote(os.environ['GITHUB_SHA'], safe='')
+              req = urllib.request.Request(url, headers={'Authorization': 'Bearer ' + os.environ['GH_TOKEN'], 'Accept': 'application/vnd.github+json'})
+              with urllib.request.urlopen(req, timeout=60) as response:
+                  item = json.load(response)
+              if item['type'] != 'file' or item['encoding'] != 'base64':
+                  raise SystemExit('Invalid recovery script response')
+              content = base64.b64decode(item['content'])
+              if hashlib.sha256(content).hexdigest() != digest:
+                  raise SystemExit('Recovery script digest mismatch')
+              with (root / name).open('xb') as output:
+                  output.write(content)
+          PY
+      - name: Check source and paused publishers
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 scripts/pages-recovery/preflight.py
+      - name: Download and sanitize verified archive
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          umask 077
+          mkdir -p "$RUNNER_TEMP/pages-source" "$RUNNER_TEMP/pages-clean"
+          curl --fail --silent --show-error --location --proto '=https' --proto-redir '=https' \
+            -H "Authorization: Bearer $GH_TOKEN" \
+            -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/Zion-support/zion-support.github.io/actions/artifacts/13539903299/zip" \
+            -o "$RUNNER_TEMP/pages-source/original.zip"
+          python3 scripts/pages-recovery/run-clean.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: github-pages
+          path: ${{ runner.temp }}/pages-clean/artifact.tar
+          if-no-files-found: error
+          retention-days: 1
+          compression-level: 0
+      - name: Remove runner source copy
+        if: always()
+        run: rm -rf "$RUNNER_TEMP/pages-source"
+  deploy:
+    needs: sanitize
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    permissions:
+      contents: read
+      actions: read
+      deployments: read
+      pages: write
+      id-token: write
+    steps:
+      - name: Load verified recovery scripts
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          umask 077
+          python3 - <<'PY'
+          import base64, hashlib, json, os, pathlib, urllib.parse, urllib.request
+          expected = {'preflight.py': 'b29f330979a3c256c7dfa327a73b86edb2404d815e6ca9a245ed0876c15008d7', 'sanitize-artifact.py': 'a370e7b0dff2dfae785dc432c4465baeaa07169738f83750f552021dbfb6a09d', 'run-clean.py': 'e3b34bd25fd3d688ad41dce194b5098f637493dc2d4e7819406fdeb3272b7caf'}
+          root = pathlib.Path('scripts/pages-recovery')
+          root.mkdir(parents=True, exist_ok=False)
+          for name, digest in expected.items():
+              url = 'https://api.github.com/repos/Zion-support/zion-support.github.io/contents/scripts/pages-recovery/' + name + '?ref=' + urllib.parse.quote(os.environ['GITHUB_SHA'], safe='')
+              req = urllib.request.Request(url, headers={'Authorization': 'Bearer ' + os.environ['GH_TOKEN'], 'Accept': 'application/vnd.github+json'})
+              with urllib.request.urlopen(req, timeout=60) as response:
+                  item = json.load(response)
+              if item['type'] != 'file' or item['encoding'] != 'base64':
+                  raise SystemExit('Invalid recovery script response')
+              content = base64.b64decode(item['content'])
+              if hashlib.sha256(content).hexdigest() != digest:
+                  raise SystemExit('Recovery script digest mismatch')
+              with (root / name).open('xb') as output:
+                  output.write(content)
+          PY
+      - name: Recheck immediately before publication
+        env:
+          ALLOW_OWN_DEPLOYMENT: '1'
+          GH_TOKEN: ${{ github.token }}
+        run: python3 scripts/pages-recovery/preflight.py
+      - name: Deploy sanitized artifact
+        id: deployment
+        uses: actions/deploy-pages@v4
+        with:
+          artifact_name: github-pages
