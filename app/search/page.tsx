@@ -31,13 +31,6 @@ const INDUSTRIES = [
   { key: 'real-estate', label: 'Real Estate & Property', emoji: '🏢', color: 'from-emerald-500 to-teal-500' },
 ];
 
-export const metadata = {
-  title: 'Search AI & IT Services | Zion Tech Group',
-  description: 'Search and discover 15,000+ AI, IT, cloud, security, data, automation, and micro-SaaS services. Find tailored solutions for your industry with advanced filtering and AI-powered recommendations.',
-  keywords: 'search AI services, find IT solutions, AI catalog search, cloud services directory, cybersecurity solutions, data analytics tools, automation services, micro-SaaS products, industry solutions',
-  alternates: { canonical: '/search/' },
-};
-
 export default function SearchPage() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
@@ -79,9 +72,8 @@ export default function SearchPage() {
       {/* JSON-LD Structured Data */}
       <script
         type="application/ld+json"
-        suppressHydrationWarning
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
+      >
+        {JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'CollectionPage',
             'name': 'AI & IT Services Search - Zion Tech Group',
@@ -97,9 +89,8 @@ export default function SearchPage() {
                 'query-input': 'required name=search_term_string'
               }
             }
-          })
-        }}
-      />
+          }).replace(/</g, '\\u003c')}
+      </script>
 
       {/* Hero Section */}
       <section className="relative overflow-hidden pt-32 pb-24">
@@ -286,8 +277,10 @@ export default function SearchPage() {
                     <div className="flex items-center gap-2 text-xs">
                       <span className="text-slate-500">{service.category}</span>
                       {service.industry && (
-                        <span className="text-slate-500">•</span>
-                        <span className="text-slate-500">{service.industry}</span>
+                        <>
+                          <span className="text-slate-500">•</span>
+                          <span className="text-slate-500">{service.industry}</span>
+                        </>
                       )}
                     </div>
                   </Link>

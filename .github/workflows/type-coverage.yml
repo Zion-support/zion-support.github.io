@@ -20,59 +20,79 @@ jobs:
       issues: write
       pull-requests: write
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v6.0.2
-      with:
-        fetch-depth: 0
+    - name: Checkout public candidate without stored credentials
+      env:
+        CANDIDATE_SHA: ${{ github.sha }}
+        GIT_TERMINAL_PROMPT: '0'
+      run: |
+        set -euo pipefail
+        if [[ ! "$CANDIDATE_SHA" =~ ^[0-9a-f]{40}$ ]]; then
+          echo "::error::Invalid checkout candidate SHA."
+          exit 1
+        fi
+        if [[ -n "$(find . -mindepth 1 -maxdepth 1 -print -quit)" ]]; then
+          echo "::error::Checkout requires an empty workspace; existing files were not changed."
+          exit 1
+        fi
+        git init --quiet
+        git remote add origin https://github.com/Zion-support/zion-support.github.io.git
+        git -c credential.helper= fetch --no-tags --depth=1 origin "$CANDIDATE_SHA"
+        git checkout --detach FETCH_HEAD
+        if [[ "$(git rev-parse HEAD)" != "$CANDIDATE_SHA" ]]; then
+          echo "::error::Checked out revision differs from publication candidate."
+          exit 1
+        fi
     - name: Setup Node.js
       uses: actions/setup-node@v6.3.0
       with:
-        node-version: '20'
+        node-version-file: '.nvmrc'
         cache: npm
+    - name: Verify type workflow reporting
+      run: node --test tests/ci/test_type_workflow_reporting.cjs
     - name: Install dependencies
       run: npm ci
     - name: Run TypeScript Check
       id: type-check
-      run: 'npm run type-check
-
-        echo "exit_code=$?" >> $GITHUB_OUTPUT
-
-        '
+      run: npm run type-check
     - name: Run ESLint Check
       id: lint-check
-      run: 'npm run lint:check || true
-
-        echo "exit_code=$?" >> $GITHUB_OUTPUT
-
-        '
+      run: npm run lint:check
     - name: Comment on PR if failed
       if: github.event_name == 'pull_request' && failure()
       uses: actions/github-script@v7
+      env:
+        TYPE_OUTCOME: ${{ steps.type-check.outcome }}
+        LINT_OUTCOME: ${{ steps.lint-check.outcome }}
       with:
-        script: "const body = '\U0001F6A8 **TypeScript Type Check Failed**\\n\\n'\
-          \ +\n  'The TypeScript `tsc --noEmit` check found type errors. ' +\n  'Fix\
-          \ typing issues before merging.\\n\\n' +\n  'To reproduce locally:\\n' +\n\
-          \  '```\\n' +\n  'npm run type-check\\n' +\n  '```\\n';\ngithub.rest.issues.createComment({\n\
-          \  owner: context.repo.owner,\n  repo: context.repo.repo,\n  issue_number:\
-          \ context.issue.number,\n  body\n});\n"
+        script: |
+          const typeOutcome = process.env.TYPE_OUTCOME;
+          const lintOutcome = process.env.LINT_OUTCOME;
+          const stage = typeOutcome === 'failure' ? 'TypeScript check' : lintOutcome === 'failure' ? 'ESLint check' : 'Workflow preparation or another step';
+          const runUrl = `https://github.com/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
+          const body = `${stage} failed. This result alone does not establish type errors; runtime or resource failures are also possible. Review the failed step in the workflow logs before merging.\n\nWorkflow: ${runUrl}`;
+          await github.rest.issues.createComment({ owner: context.repo.owner, repo: context.repo.repo, issue_number: context.issue.number, body });
     - name: Open issue on main branch regression
       if: github.event_name == 'push' && failure() && github.ref == 'refs/heads/main'
       uses: actions/github-script@v7
+      env:
+        TYPE_OUTCOME: ${{ steps.type-check.outcome }}
+        LINT_OUTCOME: ${{ steps.lint-check.outcome }}
       with:
-        script: "const title = '\U0001F6A8 TypeScript Check Regression on Main';\n\
-          const body = '**TypeScript check failed on `main`.**\\n\\n' +\n  'Run `npm\
-          \ run type-check` locally to reproduce.\\n\\n' +\n  `*Commit: ${context.payload.headCommit?.id?.slice(0,\
-          \ 7) || 'N/A'}*\\n`;\n\nconst existing = await github.rest.issues.listForRepo({\n\
-          \  owner: context.repo.owner,\n  repo: context.repo.repo,\n  labels: ['type-coverage',\
-          \ 'autonomous'],\n  state: 'open'\n});\nconst already = existing.data.find((i:\
-          \ any) => i.title === title);\nif (!already) {\n  await github.rest.issues.create({\n\
-          \    owner: context.repo.owner,\n    repo: context.repo.repo,\n    title,\n\
-          \    body,\n    labels: ['type-coverage', 'autonomous', 'code-quality']\n\
-          \  });\n}\n"
+        script: |
+          const typeOutcome = process.env.TYPE_OUTCOME;
+          const lintOutcome = process.env.LINT_OUTCOME;
+          const stage = typeOutcome === 'failure' ? 'TypeScript check' : lintOutcome === 'failure' ? 'ESLint check' : 'Workflow preparation or another step';
+          const runUrl = `https://github.com/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
+          const body = `${stage} failed. This result alone does not establish type errors; runtime or resource failures are also possible. Review the failed step in the workflow logs before merging.\n\nWorkflow: ${runUrl}`;
+          const title = '🚨 Type Coverage Workflow Failure on Main';
+          const legacyTitle = '🚨 TypeScript Check Regression on Main';
+          const existing = await github.rest.issues.listForRepo({ owner: context.repo.owner, repo: context.repo.repo, labels: ['type-coverage', 'autonomous'], state: 'open' });
+          if (!existing.data.some(item => item.title === title || item.title === legacyTitle)) {
+            await github.rest.issues.create({ owner: context.repo.owner, repo: context.repo.repo, title, body, labels: ['type-coverage', 'autonomous', 'code-quality'] });
+          }
     - name: Notify Telegram on failure
       if: failure()
-      run: "node automation/notify-telegram.js \"\U0001F6A8 TypeScript check failed\
-        \ \u2014 type errors detected. Review GitHub issues.\" || true\n"
+      run: node automation/notify-telegram.js "Type coverage workflow failed. Review the failed step in workflow logs; type errors are not established by failure alone." || true
     - name: Notify Telegram on success (weekly digest)
       if: success() && github.event_name == 'schedule'
       run: "node automation/notify-telegram.js \"\u2705 Weekly TypeScript Check \u2014\

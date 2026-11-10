@@ -1,0 +1,146 @@
+name: Private operations publication boundary
+'on':
+  pull_request:
+    paths:
+      - '.github/workflows/**'
+      - 'scripts/**'
+      - 'content/**'
+      - 'public/**'
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Load only test inputs at the candidate revision
+        env:
+          GH_TOKEN: ${{ github.token }}
+          CANDIDATE_SHA: ${{ github.event.pull_request.head.sha }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import base64, hashlib, json, os, pathlib, re, urllib.request
+          sha = os.environ['CANDIDATE_SHA']
+          if not re.fullmatch(r'[0-9a-f]{40}', sha):
+              raise SystemExit('Invalid candidate revision')
+          paths = [
+              'scripts/assert-no-private-ops.py', 'scripts/export-public-pages.py',
+              'scripts/test-private-ops-guard.py', 'scripts/test-deploy-publication-head.py',
+              'scripts/test-public-pages-export.py', 'scripts/test-publisher-checkout.py', 'scripts/assert-publication-main.sh',
+              'scripts/prepare-pages-out.sh', 'scripts/test-finops-scenario.cjs',
+              'scripts/test-roi-boundary-reconciliation.py', '.github/workflows/deploy-on-push.yml',
+              '.github/workflows/static-deploy.yml', '.github/workflows/gh-pages.yml', '.github/workflows/private-ops-boundary-test.yml',
+          ]
+          for path in paths:
+              url = 'https://api.github.com/repos/Zion-support/zion-support.github.io/contents/' + path + '?ref=' + sha
+              request = urllib.request.Request(url, headers={'Authorization': 'Bearer ' + os.environ['GH_TOKEN'], 'Accept': 'application/vnd.github+json'})
+              with urllib.request.urlopen(request, timeout=60) as response:
+                  item = json.load(response)
+              if item['type'] != 'file' or item['encoding'] != 'base64':
+                  raise SystemExit('Unexpected test input')
+              content = base64.b64decode(item['content'])
+              actual = hashlib.sha1(b'blob ' + str(len(content)).encode() + b'\0' + content).hexdigest()
+              if actual != item['sha']:
+                  raise SystemExit('Test input integrity mismatch')
+              target = pathlib.Path(path)
+              target.parent.mkdir(parents=True, exist_ok=True)
+              target.write_bytes(content)
+          PY
+      - name: Test publication boundary with synthetic fixtures
+        run: python3 -m unittest -v scripts/test-private-ops-guard.py scripts/test-deploy-publication-head.py scripts/test-public-pages-export.py scripts/test-publisher-checkout.py scripts/test-roi-boundary-reconciliation.py
+      - name: Check shell syntax
+        run: bash -n scripts/prepare-pages-out.sh && bash -n scripts/assert-publication-main.sh
+
+  candidate-site-build:
+    # Build current PR candidate in a fresh VM without credentials, upload or deploy.
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Allocate isolated build directory
+        run: |
+          set -euo pipefail
+          umask 077
+          root="$(mktemp -d "$RUNNER_TEMP/pages-validation.XXXXXXXX")"
+          mkdir "$root/source"
+          echo "BUILD_ROOT=$root" >> "$GITHUB_ENV"
+      - name: Checkout public candidate without stored credentials
+        working-directory: ${{ env.BUILD_ROOT }}/source
+        env:
+          CANDIDATE_SHA: ${{ github.event.pull_request.head.sha }}
+          GIT_TERMINAL_PROMPT: '0'
+        run: |
+          set -euo pipefail
+          if [[ ! "$CANDIDATE_SHA" =~ ^[0-9a-f]{40}$ ]]; then
+            echo "::error::Invalid checkout candidate SHA."
+            exit 1
+          fi
+          if [[ -n "$(find . -mindepth 1 -maxdepth 1 -print -quit)" ]]; then
+            echo "::error::Checkout requires an empty workspace; existing files were not changed."
+            exit 1
+          fi
+          git init --quiet
+          git remote add origin https://github.com/Zion-support/zion-support.github.io.git
+          case "${FETCH_DEPTH:-1}" in
+            0) git -c credential.helper= fetch --no-tags origin "$CANDIDATE_SHA" ;;
+            1) git -c credential.helper= fetch --no-tags --depth=1 origin "$CANDIDATE_SHA" ;;
+            *) echo "::error::Invalid checkout depth."; exit 1 ;;
+          esac
+          git checkout --detach FETCH_HEAD
+          if [[ "$(git rev-parse HEAD)" != "$CANDIDATE_SHA" ]]; then
+            echo "::error::Checked out revision differs from publication candidate."
+            exit 1
+          fi
+      - name: Read candidate Node version
+        id: candidate-node
+        run: |
+          set -euo pipefail
+          version="$(cat "$BUILD_ROOT/source/.nvmrc")"
+          if [[ ! "$version" =~ ^[0-9]+(\.[0-9]+){0,2}$ ]]; then
+            echo "::error::Invalid candidate Node version."
+            exit 1
+          fi
+          printf 'version=%s\n' "$version" >> "$GITHUB_OUTPUT"
+      - name: Use repository Node version
+        uses: actions/setup-node@v6.3.0
+        with:
+          node-version: ${{ steps.candidate-node.outputs.version }}
+          package-manager-cache: false
+      - name: Prepare actual Pages site
+        run: |
+          set -euo pipefail
+          cd "$BUILD_ROOT/source"
+          # Reviewed restored test is read-only; mutations use private mkdtemp directories.
+          # Keep this pin fail-closed if its fixture behavior changes again.
+          python3 - <<'PY'
+          import hashlib
+          from pathlib import Path
+          test = Path('scripts/test-finops-scenario.cjs').read_bytes()
+          blob = hashlib.sha1(b'blob ' + str(len(test)).encode() + b'\0' + test).hexdigest()
+          if blob != '48f2a657a8c963ccd5911e1c8795b964ce4b360f':
+              raise SystemExit('Fixture test changed; review required before build.')
+          PY
+          node scripts/test-operational-tools.cjs
+          node scripts/test-roi-baseline.cjs
+          bash scripts/prepare-pages-out.sh
+          python3 scripts/assert-no-private-ops.py out
+      - name: Inspect and pack local artifact without uploading
+        run: |
+          set -euo pipefail
+          cd "$BUILD_ROOT/source"
+          python3 - <<'PY'
+          from pathlib import Path
+          import hashlib, tarfile, os
+          root=Path('out')
+          before={str(p.relative_to(root)):hashlib.sha256(p.read_bytes()).hexdigest() for p in root.rglob('*') if p.is_file()}
+          artifact=Path(os.environ['BUILD_ROOT'])/'validated-artifact.tar'
+          with tarfile.open(artifact,'w') as archive:
+              archive.add(root,arcname='.')
+          with tarfile.open(artifact,'r') as archive:
+              after={str(Path(m.name)):hashlib.sha256(archive.extractfile(m).read()).hexdigest() for m in archive.getmembers() if m.isfile()}
+          if before!=after:
+              raise SystemExit('Artifact contents differ from validated output')
+          print('Verified artifact files:',len(after))
+          print('Artifact SHA256:',hashlib.sha256(artifact.read_bytes()).hexdigest())
+          PY
