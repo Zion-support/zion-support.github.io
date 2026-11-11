@@ -85,7 +85,7 @@ export default function ServiceBrowser() {
   }, [services]);
 
   const toggle = (key: string) =>
-    setExpanded(prev => ({ ...prev, [key]: !prev[key] }));
+    setExpanded(prev => ({ ...prev, [key]: prev[key] === false }));
 
   const VISIBLE = 9;
 
