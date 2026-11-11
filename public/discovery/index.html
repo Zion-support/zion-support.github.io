@@ -206,6 +206,7 @@
     recoveryTitle.textContent = 'Cópia recuperável das respostas e recomendações';
     recoveryNote.textContent = 'Esta cópia fica nesta aba durante a sessão e pode ser recuperada ao recarregar. Copie o texto antes de fechar a aba. Este navegador guarda um registro para reduzir envios repetidos entre abas. Limpar os dados do site remove essa proteção. Esse registro não confirma a entrega do e-mail.';
     var recoveryHelp = recoveryNote.textContent;
+    var recoveryWarning = 'Parte dos relatórios pode não estar salva. Todas as cópias disponíveis continuam abaixo nesta página. Copie o texto antes de recarregar ou fechar a aba; os relatórios anteriores não foram descartados automaticamente.';
     recoveryText.style.whiteSpace = 'pre-wrap';
     recoveryText.style.overflowWrap = 'anywhere';
     clearDraft.type = 'button';
@@ -222,7 +223,7 @@
         recoveryNote.textContent = recoveryHelp;
         recovery.hidden = true;
       } catch (error) {
-        recoveryNote.textContent = 'Não foi possível apagar a cópia armazenada. O texto continua disponível abaixo.';
+        recoveryNote.textContent = 'Não foi possível confirmar a exclusão da cópia armazenada. ' + recoveryWarning;
       }
     });
     try {
@@ -263,7 +264,7 @@
         if (sessionStorage.getItem(draftKey) !== value) throw new Error('draft-not-persisted');
         recoveryNote.textContent = recoveryHelp;
       } catch (error) {
-        recoveryNote.textContent = 'Parte dos relatórios pode não estar salva. Todas as cópias disponíveis continuam abaixo nesta página. Copie o texto antes de recarregar ou fechar a aba; os relatórios anteriores não foram descartados automaticamente.';
+        recoveryNote.textContent = recoveryWarning;
         throw error;
       }
     }

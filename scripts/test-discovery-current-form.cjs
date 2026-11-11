@@ -322,6 +322,27 @@ async function run() {
     scenarios++;
   }
 
+
+  // Failed deletion must not hide the warning that unsaved RAM is lost on reload.
+  for(const mode of ['remove','get','silent']) {
+    const f=fixture('accepted');f.session.fail='set';
+    await f.submit();f.answers.challenge='support';await f.submit();
+    const report=f.recovery().children[2].textContent;
+    assert.match(f.recovery().children[1].textContent,/antes de recarregar ou fechar/);
+    f.session.fail=mode==='silent'?null:mode;
+    f.session.silent=mode==='silent';
+    // Make silent deletion observably fail rather than removing an absent entry.
+    if(mode==='silent')f.session.data.set('zion.discovery.reports.v1',JSON.stringify({version:1,reports:['Stored report']}));
+    f.recovery().children[3].handlers.click();
+    assert.match(f.recovery().children[1].textContent,/Parte dos relatórios pode não estar salva/);
+    assert.match(f.recovery().children[1].textContent,/Não foi possível confirmar a exclusão/);
+    assert.match(f.recovery().children[1].textContent,/Copie o texto antes de recarregar ou fechar a aba/);
+    assert.equal(f.recovery().children[2].textContent,report);
+    assert.equal(f.recovery().hidden,false);
+    assert.equal(f.calls.length,0);
+    scenarios++;
+  }
+
   console.log('Current Discovery: '+scenarios+' synthetic runtime scenarios passed; all fetches mocked.');
 }
 let completed=false;
