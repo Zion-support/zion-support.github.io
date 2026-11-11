@@ -19,8 +19,8 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(REPO))
 
-os.environ.setdefault('OUTREACH_REQUIRES_APPROVAL', '0')
-os.environ.setdefault('OUTREACH_DRY_RUN', '0')
+os.environ.setdefault('OUTREACH_REQUIRES_APPROVAL', '1')
+os.environ.setdefault('OUTREACH_DRY_RUN', '1')
 
 import outreach_worker_automation as ow
 from commands.google_workspace import gog_headers  # noqa: E402
@@ -57,6 +57,8 @@ def make_references(msg_id: str, headers: dict) -> str:
 
 
 def send_via_helper(to_addr: str, subject: str, body: str, references_message_id: str) -> dict:
+    from followup_safety import require_live_clearance
+    require_live_clearance()
     # Build headers mapping without a live messages.get call.
     # We still pass through gmail_send_reply_fixed so threading uses threadId inline.
     from commands.google_workspace import gmail_send_reply_fixed  # noqa
@@ -73,6 +75,8 @@ def send_via_helper(to_addr: str, subject: str, body: str, references_message_id
 
 
 def main():
+    from followup_safety import require_live_clearance
+    require_live_clearance()
     candidates = [
         'next_ceo_reply_hemmersbach.json',
         'next_ceo_reply_heygen.json',
