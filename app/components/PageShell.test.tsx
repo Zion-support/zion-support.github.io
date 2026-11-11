@@ -51,4 +51,33 @@ describe('PageShell restoration', () => {
     expect(html).toContain('Continue by email.');
     expect(html).not.toContain('Ready to get started?');
   });
+  const hostileValues = [
+    '</script><script>alert("xss")</script>',
+    '</ScRiPt><img src=x onerror=alert(1)>',
+    '<!--<script>nested</script>-->',
+    'Less < greater > ampersand & quotes " and literal \\u003c',
+  ];
+  const hostileCases = hostileValues.flatMap((value) => {
+    const object = {
+      '@type': 'Service',
+      name: value,
+      nested: { [value]: value },
+    };
+    return [
+      { shape: 'object', data: object },
+      { shape: 'array', data: [object, { '@type': 'Organization', name: value }] },
+    ];
+  });
+
+  it.each(hostileCases)('keeps hostile $shape JSON-LD inside one script', ({ data }) => {
+    const html = renderToStaticMarkup(<PageShell title="Support" jsonLd={data} />);
+    const scripts = [...html.matchAll(/<script\b[^>]*>([\s\S]*?)<\/script\s*>/gi)];
+    expect(scripts).toHaveLength(1);
+    const payload = scripts[0][1];
+    expect(payload).not.toContain('<');
+    expect(payload).toContain('\\u003c');
+    expect(JSON.parse(payload)).toEqual(data);
+    expect(html).not.toMatch(/<img\b/i);
+  });
+
 });
