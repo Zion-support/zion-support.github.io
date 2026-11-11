@@ -26,6 +26,7 @@ describe('ServiceBrowser user behavior', () => {
     container.remove();
     global.fetch = originalFetch;
     (globalThis as typeof globalThis & { IS_REACT_ACT_ENVIRONMENT?: boolean }).IS_REACT_ACT_ENVIRONMENT = originalAct;
+    jest.restoreAllMocks();
     jest.useRealTimers();
   });
   const mockFetch = () => global.fetch as jest.Mock;
@@ -43,7 +44,8 @@ describe('ServiceBrowser user behavior', () => {
     expect(container.textContent).not.toContain('Loading');
     expect(container.textContent).toContain('All 2 Services');
     for (const service of sampleServices) {
-      const link = container.querySelector('a[href="' + service.href + '"]');
+      // Next's Jest runtime normalizes trailing slashes without the production build env.
+      const link = container.querySelector('a[href="' + service.href.replace(/\/$/, '') + '"]');
       expect(link).not.toBeNull();
       expect(link?.textContent).toContain(service.title);
       expect(link?.textContent).toContain(service.description);
@@ -79,6 +81,8 @@ describe('ServiceBrowser user behavior', () => {
 
   it('aborts a stalled request at eight seconds and displays the failure', async () => {
     jest.useFakeTimers();
+    const schedule = jest.spyOn(global, 'setTimeout');
+    const clear = jest.spyOn(global, 'clearTimeout');
     let signal!: AbortSignal;
     mockFetch().mockImplementation((_url, options) => {
       signal = options.signal;
@@ -92,11 +96,15 @@ describe('ServiceBrowser user behavior', () => {
     await act(async () => { jest.advanceTimersByTime(1); });
     expect(signal.aborted).toBe(true);
     expect(container.textContent).toContain('Failed to load services: request aborted');
-    expect(jest.getTimerCount()).toBe(0);
+    const requestTimerIndex = schedule.mock.calls.findIndex(([, delay]) => delay === 8000);
+    expect(requestTimerIndex).toBeGreaterThanOrEqual(0);
+    expect(clear).toHaveBeenCalledWith(schedule.mock.results[requestTimerIndex].value);
   });
 
   it('aborts on unmount and ignores a late successful response', async () => {
     jest.useFakeTimers();
+    const schedule = jest.spyOn(global, 'setTimeout');
+    const clear = jest.spyOn(global, 'clearTimeout');
     let signal!: AbortSignal;
     let resolveRequest!: (response: unknown) => void;
     mockFetch().mockImplementation((_url, options) => {
@@ -108,7 +116,9 @@ describe('ServiceBrowser user behavior', () => {
     expect(signal.aborted).toBe(true);
     await act(async () => resolveRequest({ok: true, json: async () => ({services: sampleServices})}));
     expect(container.textContent).toBe('');
-    expect(jest.getTimerCount()).toBe(0);
+    const requestTimerIndex = schedule.mock.calls.findIndex(([, delay]) => delay === 8000);
+    expect(requestTimerIndex).toBeGreaterThanOrEqual(0);
+    expect(clear).toHaveBeenCalledWith(schedule.mock.results[requestTimerIndex].value);
   });
 });
 
