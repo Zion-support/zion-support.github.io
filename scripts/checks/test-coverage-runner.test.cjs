@@ -19,6 +19,7 @@ echo test-diagnostic >&2
 mkdir -p coverage/lcov-report
 echo 'available report' > coverage/lcov-report/index.html
 echo 'TN:' > coverage/lcov.info
+echo '{"total":{"lines":{"total":1,"covered":1}}}' > coverage/coverage-summary.json
 exit ${status}
 `, { mode: 0o755 });
       const result = spawnSync('bash', [runner], { cwd: dir, encoding: 'utf8' });
@@ -47,3 +48,22 @@ test('missing Jest executable stays a failure and produces diagnostics', () => {
     assert.match(fs.readFileSync(path.join(dir, 'coverage/process-status.txt'), 'utf8'), /jest_exit=127/);
   } finally { fs.rmSync(dir, { recursive: true, force: true }); }
 });
+
+for (const status of [0, 42]) {
+  test(`status-file write failure preserves Jest ${status} and reports both outcomes`, () => {
+    const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'coverage-status-write-'));
+    try {
+      fs.mkdirSync(path.join(dir, 'node_modules/.bin'), {recursive: true});
+      fs.mkdirSync(path.join(dir, 'coverage/process-status.txt'), {recursive: true});
+      fs.writeFileSync(path.join(dir, 'node_modules/.bin/jest'), `#!/bin/bash
+echo original-diagnostic >&2
+exit ${status}
+`, {mode: 0o755});
+      const result = spawnSync('bash', [runner], {cwd: dir, encoding: 'utf8'});
+      assert.equal(result.status, status || 1);
+      assert.match(result.stderr, /status_write_exit=1/);
+      assert.match(result.stderr, new RegExp('jest_exit=' + status + ' log_exit=0'));
+      assert.match(fs.readFileSync(path.join(dir, 'coverage/jest.log'), 'utf8'), /original-diagnostic/);
+    } finally { fs.rmSync(dir, {recursive: true, force: true}); }
+  });
+}

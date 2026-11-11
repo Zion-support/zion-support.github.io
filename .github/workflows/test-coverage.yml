@@ -36,6 +36,8 @@ jobs:
         run: node --test scripts/checks/test-coverage-summary.test.cjs scripts/checks/test-coverage-runner.test.cjs
       - name: Install locked dependencies
         run: npm ci --prefer-offline --no-audit --fund=false
+      - name: Verify real Jest coverage failure handling
+        run: node --test scripts/checks/test-coverage-real-jest.test.cjs
       - name: Run Jest; no tests and test failures must fail
         env:
           # Leave memory for the runner and report generation; do not narrow coverage scope.
