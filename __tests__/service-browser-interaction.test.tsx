@@ -26,9 +26,10 @@ describe('ServiceBrowser category interaction', () => {
     global.fetch = originalFetch;
     env.IS_REACT_ACT_ENVIRONMENT = originalAct;
   });
-  const header = (label: string) => Array.from(container.querySelectorAll<HTMLElement>('[role="button"]'))
-    .find(element => element.querySelector('h3')?.textContent === label)!;
-  const cards = (element: HTMLElement) => element.parentElement!.querySelectorAll('a');
+  const header = (label: string) => Array.from(container.querySelectorAll<HTMLElement>('h3 > button'))
+    .find(element => element.textContent?.includes(label))!;
+  const category = (element: HTMLElement) => element.parentElement!.parentElement!;
+  const cards = (element: HTMLElement) => category(element).querySelectorAll('a');
 
   it('collapses on the first click and restores all cards through Show more', async () => {
     const cloud = header('Cloud & DevOps');
@@ -41,12 +42,12 @@ describe('ServiceBrowser category interaction', () => {
     expect(cards(cloud)).toHaveLength(9);
     expect(cards(security)).toHaveLength(10);
     expect(security.getAttribute('aria-expanded')).toBe('true');
-    const more = cloud.parentElement!.querySelector('button')!;
+    const more = category(cloud).querySelector<HTMLButtonElement>(':scope > button')!;
     expect(more.textContent).toContain('+1 more Cloud & DevOps services');
     await act(async () => more.click());
     expect(cloud.getAttribute('aria-expanded')).toBe('true');
     expect(cards(cloud)).toHaveLength(10);
-    expect(cloud.parentElement!.querySelector('button')).toBeNull();
+    expect(category(cloud).querySelector<HTMLButtonElement>(':scope > button')).toBeNull();
   });
 
   it('toggles each category independently on successive header clicks', async () => {
