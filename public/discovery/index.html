@@ -192,26 +192,79 @@
     var form=document.getElementById('dq');
     if(!form)return;
     function esc(s){return String(s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
-    form.addEventListener('submit',function(e){
+    // Page-session deduplication: uncertain requests must never retry automatically.
+    var submissions = new Map();
+    var pending = false;
+    var button = form.querySelector('button[type="submit"]');
+    form.addEventListener('submit', async function(e){
       e.preventDefault();
+      if (pending) return;
+      if (!form.reportValidity()) return;
       var a=Object.fromEntries(new FormData(form).entries());
+      a.email = String(a.email || '').trim();
+      if (!/^[^\s@,;<>]+@[^\s@,;<>]+\.[^\s@,;<>]+$/.test(a.email)) return;
       var picks=(MAP[a.challenge]||[]).concat(MAP[a.industry]||[]).slice(0,4);
       var lines=picks.map(function(p){return '- '+p[0]+': https://ziontechgroup.com'+p[1];}).join('\n');
       var summary='FREE AI DISCOVERY\nName: '+a.name+'\nEmail: '+a.email+'\nIndustry: '+a.industry+'\nChallenge: '+a.challenge+'\nSize: '+a.size+'\nSpeed: '+a.speed+'\nAI usage: '+a.aiuse+'\nOutcome: '+a.outcome+'\nDeploy: '+a.deploy+'\n\nRecommended apps:\n'+lines;
       var box=document.getElementById('dq-results');
       box.hidden=false;
-      box.innerHTML='<h3>Suas recomendações personalizadas</h3><ul>'+picks.map(function(p){return '<li><a href="'+esc(p[1])+'">'+esc(p[0])+'</a></li>';}).join('')+'</ul><p id="dq-mail-status">Enviando a solicitação de e-mail…</p><p id="dq-fallback"></p>';
+      box.innerHTML='<h3>Suas recomendações personalizadas</h3><ul>'+picks.map(function(p){return '<li><a href="'+esc(p[1])+'">'+esc(p[0])+'</a></li>';}).join('')+'</ul><p id="dq-mail-status" role="status" aria-live="polite"></p><p id="dq-fallback"></p>';
       box.scrollIntoView({behavior:'smooth'});
-      fetch('https://formsubmit.co/ajax/commercial@ziontechgroup.com', {
-        method:'POST',
-        headers:{'Content-Type':'application/json','Accept':'application/json'},
-        body:JSON.stringify({name:a.name,email:a.email,_cc:a.email,_replyto:a.email,_subject:'Free AI Discovery — '+a.name,results:summary})
-      }).then(function(r){ if(!r.ok) throw new Error('not-accepted'); document.getElementById('dq-mail-status').textContent='Solicitação aceita. Verifique sua caixa de entrada e spam.'; })
-      .catch(function(){
-        document.getElementById('dq-mail-status').textContent='Não foi possível confirmar o envio automático. Use o envio manual abaixo.';
+      var status = document.getElementById('dq-mail-status');
+      var fallback = document.getElementById('dq-fallback');
+      var key = summary;
+      function manual(){
         var href='mailto:'+encodeURIComponent(a.email)+'?cc=commercial@ziontechgroup.com&subject='+encodeURIComponent('Free AI Discovery results')+'&body='+encodeURIComponent(summary);
-        document.getElementById('dq-fallback').innerHTML='<a class="btn alt" href="'+esc(href)+'">Enviar estes resultados manualmente</a>';
-      });
+        fallback.innerHTML='<a class="btn alt" href="'+esc(href)+'">Enviar estes resultados manualmente</a>';
+      }
+      if (submissions.has(key)) {
+        status.textContent = submissions.get(key) + ' Reenvio automático bloqueado nesta página.';
+        manual();
+        return;
+      }
+      var uncertain = 'Não foi possível confirmar a aceitação. A solicitação pode ter sido recebida; nenhum reenvio automático será feito. Confira seu e-mail antes de usar o envio manual.';
+      pending = true;
+      button.disabled = true;
+      form.setAttribute('aria-busy', 'true');
+      submissions.set(key, uncertain);
+      status.textContent = 'Enviando a solicitação de e-mail…';
+      var controller = new AbortController();
+      var timer;
+      try {
+        var response = await Promise.race([
+          (async function(){
+            var r = await fetch('https://formsubmit.co/ajax/commercial@ziontechgroup.com', {
+              method:'POST',
+              signal:controller.signal,
+              headers:{'Content-Type':'application/json','Accept':'application/json'},
+              body:JSON.stringify({name:a.name,email:a.email,_cc:a.email.toLowerCase() === 'commercial@ziontechgroup.com' ? '' : a.email,_replyto:a.email,_subject:'Free AI Discovery — '+a.name,results:summary})
+            });
+            if (!r.ok) throw new Error('uncertain-http');
+            return r.json();
+          })(),
+          new Promise(function(resolve, reject){
+            timer = setTimeout(function(){ controller.abort(); reject(new Error('timeout')); }, 15000);
+          })
+        ]);
+        if (response && (response.success === true || response.success === 'true')) {
+          status.textContent = 'Solicitação aceita pelo serviço de e-mail. A entrega nas caixas do cliente e do Commercial ainda não foi confirmada.';
+          submissions.set(key, status.textContent);
+        } else if (response && (response.success === false || response.success === 'false')) {
+          status.textContent = 'O serviço recusou a solicitação. Você pode tentar novamente ou usar o envio manual.';
+          submissions.delete(key);
+          manual();
+        } else {
+          throw new Error('uncertain-response');
+        }
+      } catch (error) {
+        status.textContent = uncertain;
+        manual();
+      } finally {
+        clearTimeout(timer);
+        pending = false;
+        button.disabled = false;
+        form.setAttribute('aria-busy', 'false');
+      }
     });
   })();
   </script>
