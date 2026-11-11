@@ -192,10 +192,94 @@
     var form=document.getElementById('dq');
     if(!form)return;
     function esc(s){return String(s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
-    // Page-session deduplication: uncertain requests must never retry automatically.
-    var submissions = new Map();
+    // Same-origin browser coordination, not server-side idempotency.
     var pending = false;
     var button = form.querySelector('button[type="submit"]');
+    var draftKey = 'zion.discovery.reports.v1';
+    // Includes unsaved reports: storage failures must not replace the only copy.
+    var retainedReports = [];
+    var recovery = document.createElement('details');
+    var recoveryTitle = document.createElement('summary');
+    var recoveryNote = document.createElement('p');
+    var recoveryText = document.createElement('pre');
+    var clearDraft = document.createElement('button');
+    recoveryTitle.textContent = 'Cópia recuperável das respostas e recomendações';
+    recoveryNote.textContent = 'Esta cópia fica nesta aba durante a sessão e pode ser recuperada ao recarregar. Copie o texto antes de fechar a aba. Este navegador guarda um registro para reduzir envios repetidos entre abas. Limpar os dados do site remove essa proteção. Esse registro não confirma a entrega do e-mail.';
+    var recoveryHelp = recoveryNote.textContent;
+    var recoveryWarning = 'Parte dos relatórios pode não estar salva. Todas as cópias disponíveis continuam abaixo nesta página. Copie o texto antes de recarregar ou fechar a aba; os relatórios anteriores não foram descartados automaticamente.';
+    recoveryText.style.whiteSpace = 'pre-wrap';
+    recoveryText.style.overflowWrap = 'anywhere';
+    clearDraft.type = 'button';
+    clearDraft.textContent = 'Apagar cópia desta aba';
+    recovery.hidden = true;
+    recovery.append(recoveryTitle, recoveryNote, recoveryText, clearDraft);
+    form.insertAdjacentElement('afterend', recovery);
+    clearDraft.addEventListener('click', function(){
+      try {
+        sessionStorage.removeItem(draftKey);
+        if (sessionStorage.getItem(draftKey) !== null) throw new Error('draft-not-removed');
+        retainedReports = [];
+        recoveryText.textContent = '';
+        recoveryNote.textContent = recoveryHelp;
+        recovery.hidden = true;
+      } catch (error) {
+        recoveryNote.textContent = 'Não foi possível confirmar a exclusão da cópia armazenada. ' + recoveryWarning;
+      }
+    });
+    try {
+      var saved = sessionStorage.getItem(draftKey);
+      if (saved !== null) {
+        var draft = JSON.parse(saved);
+        validateDraft(draft);
+        retainedReports = draft.reports.slice();
+        recoveryText.textContent = retainedReports.join('\n\n---\n\n');
+        recovery.hidden = false;
+        recovery.open = true;
+      }
+    } catch (error) {
+      // Never discard an unreadable draft or send anything on initialization.
+      recoveryNote.textContent = 'Não foi possível recuperar a cópia anterior. Nenhum dado armazenado foi apagado e nenhum envio foi realizado.';
+      recovery.hidden = false;
+    }
+    function validateDraft(draft) {
+      if (!draft || draft.version !== 1 || !Array.isArray(draft.reports) || draft.reports.length > 20 ||
+          !draft.reports.every(function(report){ return typeof report === 'string' && report.length <= 20000; })) throw new Error('invalid-draft');
+    }
+    function retainReport(report) {
+      // Retain before any fallible storage operation, including reads.
+      if (!retainedReports.includes(report)) retainedReports.push(report);
+      recoveryText.textContent = retainedReports.join('\n\n---\n\n');
+      recovery.hidden = false;
+      recovery.open = true;
+      try {
+        var saved = sessionStorage.getItem(draftKey);
+        var draft = saved === null ? {version:1,reports:[]} : JSON.parse(saved);
+        validateDraft(draft);
+        // Merge stored reports with every in-memory report; never silently evict either.
+        retainedReports = Array.from(new Set(draft.reports.concat(retainedReports)));
+        recoveryText.textContent = retainedReports.join('\n\n---\n\n');
+        if (retainedReports.length > 20 || retainedReports.some(function(text){ return text.length > 20000; })) throw new Error('draft-capacity');
+        var value = JSON.stringify({version:1,reports:retainedReports});
+        sessionStorage.setItem(draftKey, value);
+        if (sessionStorage.getItem(draftKey) !== value) throw new Error('draft-not-persisted');
+        recoveryNote.textContent = recoveryHelp;
+      } catch (error) {
+        recoveryNote.textContent = recoveryWarning;
+        throw error;
+      }
+    }
+    function readReceipt(key) {
+      var value = localStorage.getItem(key);
+      if (value === null) return null;
+      var receipt = JSON.parse(value);
+      if (!receipt || receipt.version !== 1 || !['uncertain','accepted'].includes(receipt.state)) throw new Error('invalid-receipt');
+      return receipt;
+    }
+    function writeReceipt(key, state) {
+      var value = JSON.stringify({version:1,state:state});
+      localStorage.setItem(key, value);
+      if (localStorage.getItem(key) !== value) throw new Error('receipt-not-persisted');
+    }
     form.addEventListener('submit', async function(e){
       e.preventDefault();
       if (pending) return;
@@ -212,52 +296,76 @@
       box.scrollIntoView({behavior:'smooth'});
       var status = document.getElementById('dq-mail-status');
       var fallback = document.getElementById('dq-fallback');
-      var key = summary;
       function manual(){
         var href='mailto:'+encodeURIComponent(a.email)+'?cc=commercial@ziontechgroup.com&subject='+encodeURIComponent('Free AI Discovery results')+'&body='+encodeURIComponent(summary);
         fallback.innerHTML='<a class="btn alt" href="'+esc(href)+'">Enviar estes resultados manualmente</a>';
       }
-      if (submissions.has(key)) {
-        status.textContent = submissions.get(key) + ' Reenvio automático bloqueado nesta página.';
-        manual();
-        return;
-      }
       var uncertain = 'Não foi possível confirmar a aceitação. A solicitação pode ter sido recebida; nenhum reenvio automático será feito. Confira seu e-mail antes de usar o envio manual.';
+      var accepted = 'Solicitação aceita pelo serviço de e-mail. A entrega nas caixas do cliente e do Commercial ainda não foi confirmada.';
       pending = true;
       button.disabled = true;
       form.setAttribute('aria-busy', 'true');
-      submissions.set(key, uncertain);
-      status.textContent = 'Enviando a solicitação de e-mail…';
-      var controller = new AbortController();
       var timer;
+      var attempted = false;
       try {
-        var response = await Promise.race([
-          (async function(){
-            var r = await fetch('https://formsubmit.co/ajax/commercial@ziontechgroup.com', {
-              method:'POST',
-              signal:controller.signal,
-              headers:{'Content-Type':'application/json','Accept':'application/json'},
-              body:JSON.stringify({name:a.name,email:a.email,_cc:a.email.toLowerCase() === 'commercial@ziontechgroup.com' ? '' : a.email,_replyto:a.email,_subject:'Free AI Discovery — '+a.name,results:summary})
-            });
-            if (!r.ok) throw new Error('uncertain-http');
-            return r.json();
-          })(),
-          new Promise(function(resolve, reject){
-            timer = setTimeout(function(){ controller.abort(); reject(new Error('timeout')); }, 15000);
-          })
-        ]);
-        if (response && (response.success === true || response.success === 'true')) {
-          status.textContent = 'Solicitação aceita pelo serviço de e-mail. A entrega nas caixas do cliente e do Commercial ainda não foi confirmada.';
-          submissions.set(key, status.textContent);
-        } else if (response && (response.success === false || response.success === 'false')) {
-          status.textContent = 'O serviço recusou a solicitação. Você pode tentar novamente ou usar o envio manual.';
-          submissions.delete(key);
-          manual();
-        } else {
-          throw new Error('uncertain-response');
-        }
+        retainReport(summary);
+        if (!navigator.locks || !crypto.subtle) throw new Error('coordination-unavailable');
+        var bytes = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(summary));
+        var fingerprint = Array.from(new Uint8Array(bytes), function(b){ return b.toString(16).padStart(2,'0'); }).join('');
+        var receiptKey = 'zion.discovery.receipt.v1.' + fingerprint;
+        await navigator.locks.request(receiptKey, {ifAvailable:true}, async function(lock){
+          if (!lock) {
+            status.textContent = 'Outra aba está processando estas respostas. Nenhum novo envio foi feito. Confira a outra aba e a cópia recuperável.';
+            manual();
+            return;
+          }
+          var receipt = readReceipt(receiptKey);
+          if (receipt) {
+            status.textContent = (receipt.state === 'accepted' ? accepted : uncertain) + ' Reenvio automático bloqueado neste navegador.';
+
+            manual();
+            return;
+          }
+          // Persist uncertainty before fetch. A closing tab must not erase this barrier.
+          // No time-based expiry: an old uncertain request is still uncertain.
+          writeReceipt(receiptKey, 'uncertain');
+
+          status.textContent = 'Enviando a solicitação de e-mail…';
+          var controller = new AbortController();
+          attempted = true;
+          var response = await Promise.race([
+            (async function(){
+              var r = await fetch('https://formsubmit.co/ajax/commercial@ziontechgroup.com', {
+                method:'POST',
+                signal:controller.signal,
+                headers:{'Content-Type':'application/json','Accept':'application/json'},
+                body:JSON.stringify({name:a.name,email:a.email,_cc:a.email.toLowerCase() === 'commercial@ziontechgroup.com' ? '' : a.email,_replyto:a.email,_subject:'Free AI Discovery — '+a.name,results:summary})
+              });
+              if (!r.ok) throw new Error('uncertain-http');
+              return r.json();
+            })(),
+            new Promise(function(resolve, reject){
+              timer = setTimeout(function(){ controller.abort(); reject(new Error('timeout')); }, 15000);
+            })
+          ]);
+          if (response && (response.success === true || response.success === 'true')) {
+            status.textContent = accepted;
+
+            // If this update fails, the pre-send uncertain receipt still blocks duplicates.
+            try { writeReceipt(receiptKey, 'accepted'); } catch (error) {}
+          } else if (response && (response.success === false || response.success === 'false')) {
+            // Only explicit rejection releases the persistent barrier.
+            localStorage.removeItem(receiptKey);
+            if (localStorage.getItem(receiptKey) !== null) throw new Error('receipt-not-removed');
+            status.textContent = 'O serviço recusou a solicitação. Você pode tentar novamente ou usar o envio manual.';
+
+            manual();
+          } else {
+            throw new Error('uncertain-response');
+          }
+        });
       } catch (error) {
-        status.textContent = uncertain;
+        status.textContent = attempted ? uncertain : 'O envio automático foi bloqueado porque não foi possível confirmar a proteção contra duplicidade e a recuperação das respostas. Copie o relatório abaixo ou use o envio manual.';
         manual();
       } finally {
         clearTimeout(timer);
