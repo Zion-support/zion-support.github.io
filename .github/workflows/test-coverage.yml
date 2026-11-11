@@ -1,23 +1,17 @@
 name: Test Coverage Guard
-
-# Real Jest coverage evidence, not a green placeholder. The former workflow
-# swallowed Jest failures and treated missing HTML coverage as success.
 "on":
   push:
-    branches: [main]
+    branches:
+    - main
   pull_request:
-    branches: [main]
+    branches:
+    - main
   schedule:
-    - cron: '22 9 * * 0'
-  workflow_dispatch:
-
+  - cron: 0 10 * * *
 permissions:
   contents: read
-
-concurrency:
-  group: test-coverage-${{ github.event_name }}-${{ github.event.pull_request.number || github.ref }}
-  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
-
+  issues: write
+  pull-requests: write
 jobs:
   test-coverage:
     runs-on: ubuntu-latest
@@ -33,7 +27,7 @@ jobs:
           node-version-file: '.nvmrc'
           cache: npm
       - name: Validate line-coverage contract without dependencies
-        run: node --test scripts/checks/test-coverage-summary.test.cjs scripts/checks/test-coverage-runner.test.cjs
+        run: node --test scripts/checks/test-coverage-summary.test.cjs scripts/checks/test-coverage-runner.test.cjs scripts/checks/patch-jest-coverage-errors.test.cjs
       - name: Install locked dependencies
         run: npm ci --prefer-offline --no-audit --fund=false
       - name: Verify real Jest coverage failure handling

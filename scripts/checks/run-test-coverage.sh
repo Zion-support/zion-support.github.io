@@ -3,6 +3,8 @@
 set -euo pipefail
 ulimit -c 0
 mkdir -p coverage
+# Fail closed before running Jest if the exact reporter patch cannot be verified.
+node "$(dirname "${BASH_SOURCE[0]}")/patch-jest-coverage-errors.cjs"
 set +e
 ./node_modules/.bin/jest --ci --runInBand --watchAll=false \
   --coverage --coverageProvider=v8 \
@@ -24,22 +26,6 @@ fi
 if [ "$status_write" -ne 0 ]; then
   exit "$status_write"
 fi
-# Jest can catch these reporter/collection errors and still exit zero.
-set +e
-grep -E 'Failed to collect coverage from|Failed to write coverage reports' coverage/jest.log > /dev/null
-diagnostic_status=$?
-set -e
-case "$diagnostic_status" in
-  0)
-    echo '::error::Jest reported incomplete coverage collection or report generation.'
-    exit 1
-    ;;
-  1) ;; # No diagnostic matched; only this result permits report validation.
-  *)
-    echo "::error::Could not inspect Jest diagnostics (grep_exit=$diagnostic_status)." >&2
-    exit "$diagnostic_status"
-    ;;
-esac
 # A successful process alone is not evidence that all requested reports exist.
 for report in coverage/coverage-summary.json coverage/lcov.info coverage/lcov-report/index.html; do
   if [ ! -s "$report" ] || [ ! -f "$report" ]; then

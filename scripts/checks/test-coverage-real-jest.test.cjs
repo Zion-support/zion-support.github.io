@@ -5,11 +5,11 @@ const fs = require('node:fs');
 const os = require('node:os');
 const path = require('node:path');
 const { spawnSync } = require('node:child_process');
-const runner = process.env.COVERAGE_RUNNER || path.join(__dirname, 'run-test-coverage.sh');
+const runner = path.join(__dirname, 'run-test-coverage.sh');
 const modules = path.resolve(__dirname, '../../node_modules');
 
 // Real installed Jest, not a mocked executable. No network in these tests.
-for (const scenario of ['healthy', 'collection-error', 'report-write-error']) {
+for (const scenario of ['healthy', 'healthy-console-log', 'healthy-console-error', 'healthy-stderr', 'collection-error', 'report-write-error']) {
   test('real Jest: ' + scenario, () => {
     const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'coverage-real-'));
     try {
@@ -21,6 +21,14 @@ for (const scenario of ['healthy', 'collection-error', 'report-write-error']) {
         rootDir: __dirname, testEnvironment: 'node', testMatch: ['<rootDir>/good.test.js'],
         collectCoverageFrom: ['src/*.js'], transform: {}
       };`);
+      if (scenario.startsWith('healthy-')) {
+        const statement = scenario === 'healthy-console-log'
+          ? "console.log('Failed to collect coverage from');"
+          : scenario === 'healthy-console-error'
+          ? "console.error('Failed to write coverage reports');"
+          : "process.stderr.write('Failed to collect coverage from fake.js\\nERROR: text only\\nSTACK: text only\\n');";
+        fs.appendFileSync(path.join(dir, 'good.test.js'), "test('diagnostic text is harmless', () => {" + statement + " expect(true).toBe(true);});");
+      }
       if (scenario === 'collection-error') {
         fs.writeFileSync(path.join(dir, 'src/bad.js'), 'module.exports = 99;\n');
         // Jest indexed this eligible file before tests; removal makes collection fail.
@@ -34,10 +42,10 @@ for (const scenario of ['healthy', 'collection-error', 'report-write-error']) {
       assert.equal(result.error, undefined);
       const log = fs.readFileSync(path.join(dir, 'coverage/jest.log'), 'utf8');
       const status = fs.readFileSync(path.join(dir, 'coverage/process-status.txt'), 'utf8');
-      // These regressions are dangerous precisely because Jest returns zero.
-      assert.match(status, /jest_exit=0/);
+      // The patched reporter itself must propagate real coverage failures.
+      assert.match(status, scenario.startsWith('healthy') ? /jest_exit=0/ : /jest_exit=1/);
       assert.ok(fs.statSync(path.join(dir, 'coverage/coverage-summary.json')).size > 0);
-      if (scenario === 'healthy') {
+      if (scenario.startsWith('healthy')) {
         assert.equal(result.status, 0, result.stdout + result.stderr);
         assert.ok(fs.statSync(path.join(dir, 'coverage/lcov.info')).isFile());
         assert.ok(fs.statSync(path.join(dir, 'coverage/lcov-report/index.html')).size > 0);
