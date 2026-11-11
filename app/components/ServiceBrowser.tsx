@@ -1,7 +1,7 @@
 // components/ServiceBrowser.tsx — live service browser from /data/services.json
 'use client';
 
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect, useMemo, useId } from 'react';
 import Link from 'next/link';
 
 interface ServiceItem {
@@ -43,6 +43,7 @@ const CATEGORY_COLORS: Record<string, string> = {
 };
 
 export default function ServiceBrowser() {
+  const browserId = useId();
   const [services, setServices] = useState<ServiceItem[]>([]);
   const [loading, setLoading] = useState(true);
   const [err, setErr] = useState<string | null>(null);
@@ -138,25 +139,30 @@ export default function ServiceBrowser() {
 
             return (
               <div key={cat.key} className="glass-card p-6">
-                <div
-                  className="flex items-center justify-between mb-5 cursor-pointer select-none"
-                  onClick={() => toggle(cat.key)}
-                  role="button"
-                  aria-expanded={isOpen}
-                >
-                  <div className="flex items-center gap-3">
-                    <span className="text-3xl">{cat.emoji}</span>
-                    <div>
-                      <h3 className="text-lg font-semibold text-white">{cat.label}</h3>
-                      <p className="text-xs text-slate-500">{list.length} services</p>
-                    </div>
-                  </div>
-                  <span className="text-sm text-slate-400 hover:text-white transition-colors">
-                    {isOpen ? '▲ Collapse' : `▼ Show all (${list.length})`}
-                  </span>
-                </div>
+                <h3 className="mb-5">
+                  <button
+                    type="button"
+                    className="flex w-full items-center justify-between rounded text-left cursor-pointer select-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
+                    onClick={() => toggle(cat.key)}
+                    aria-expanded={isOpen}
+                    aria-controls={`${browserId}-${cat.key}-services`}
+                    aria-labelledby={`${browserId}-${cat.key}-label`}
+                    aria-describedby={`${browserId}-${cat.key}-count`}
+                  >
+                    <span className="flex items-center gap-3">
+                      <span className="text-3xl" aria-hidden="true">{cat.emoji}</span>
+                      <span>
+                        <span id={`${browserId}-${cat.key}-label`} className="block text-lg font-semibold text-white">{cat.label}</span>
+                        <span id={`${browserId}-${cat.key}-count`} className="block text-xs text-slate-500">{list.length} services</span>
+                      </span>
+                    </span>
+                    <span aria-hidden="true" className="text-sm text-slate-400 hover:text-white transition-colors">
+                      {isOpen ? '▲ Collapse' : `▼ Show all (${list.length})`}
+                    </span>
+                  </button>
+                </h3>
 
-                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                <div id={`${browserId}-${cat.key}-services`} className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
                   {shown.map(svc => (
                     <Link
                       key={svc.id}
@@ -183,6 +189,7 @@ export default function ServiceBrowser() {
 
                 {hasMore && !isOpen && (
                   <button
+                    type="button"
                     onClick={() => toggle(cat.key)}
                     className="mt-3 w-full py-2 text-xs text-slate-500 hover:text-purple-400 border border-slate-700 hover:border-purple-500/30 rounded-lg transition"
                   >
