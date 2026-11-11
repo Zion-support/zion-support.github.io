@@ -8,20 +8,44 @@ const html = fs.readFileSync(process.argv[2] || path.join(__dirname, '../public/
 const source = [...html.matchAll(/<script>([\s\S]*?)<\/script>/g)].map(m => m[1]).find(s => s.includes("var MAP="));
 assert.ok(source, 'Questionnaire script exists');
 let scenarios = 0;
-function fixture(mode = 'accepted') {
+function storage(initial) {
+  const data = initial || new Map();
+  const api = {data, fail:null, silent:false,
+    getItem(k){if(api.fail === 'get')throw new Error('blocked read'); return data.has(k)?data.get(k):null;},
+    setItem(k,v){if(api.fail === 'set')throw new Error('quota');if(!api.silent)data.set(k,String(v));},
+    removeItem(k){if(api.fail === 'remove')throw new Error('blocked remove');if(!api.silent)data.delete(k);}
+  };
+  return api;
+}
+function world() {
+  const local = storage(), held = new Set();
+  return {local,held,locks:{async request(key,options,fn){
+    assert.equal(options.ifAvailable,true);
+    if(held.has(key))return fn(null);
+    held.add(key);
+    try{return await fn({name:key});}finally{held.delete(key);}
+  }}};
+}
+function fixture(mode = 'accepted', config = {}) {
+  const shared=config.world || world(), session=config.session || storage();
+  const created=[];
+
   const nodes = new Map(), calls = [], timers = new Map();
   const answers = {name:'Synthetic Visitor',email:'client@example.test',industry:'finance',challenge:'costs',size:'1-10',speed:'days',aiuse:'none',outcome:'save-time',deploy:'saas'};
   let valid = true, handler, release, serial = 0;
   const button = {disabled:false};
-  function get(id) {
-    if (!nodes.has(id)) nodes.set(id, {hidden:true,innerHTML:'',textContent:'',attrs:{},
-      scrollIntoView(){}, addEventListener(type, fn){handler=fn;},
+  function element(id){return {id,hidden:true,innerHTML:'',textContent:'',attrs:{},style:{},children:[],handlers:{},
+      append(...children){this.children.push(...children);},
+      insertAdjacentElement(position,node){this.adjacent=node;},
+      scrollIntoView(){}, addEventListener(type, fn){if(id==='dq' && type==='submit')handler=fn;this.handlers[type]=fn;},
       reportValidity(){return valid;}, querySelector(){return button;},
-      setAttribute(k,v){this.attrs[k]=v;}});
-    return nodes.get(id);
-  }
+      setAttribute(k,v){this.attrs[k]=v;}};}
+  function get(id){if(!nodes.has(id))nodes.set(id,element(id));return nodes.get(id);}
   const context = {
-    document:{getElementById:get},
+    document:{getElementById:get,createElement(tag){const el=element(tag);created.push(el);return el;}},
+    localStorage:shared.local, sessionStorage:session,
+    navigator:config.noLocks?{}:{locks:shared.locks},
+    crypto:{subtle:config.noCrypto?null:{digest:async(algorithm,bytes)=>{assert.equal(algorithm,'SHA-256');return Uint8Array.from(require('node:crypto').createHash('sha256').update(bytes).digest()).buffer;}}},TextEncoder,
     FormData:class{entries(){return Object.entries(answers);}},
     AbortController, console,
     setTimeout(fn){timers.set(++serial,fn);return serial;},
@@ -39,7 +63,7 @@ function fixture(mode = 'accepted') {
     }
   };
   vm.runInNewContext(source,context);
-  return {answers,calls,get,button,submit:()=>handler({preventDefault(){}}),
+  return {answers,calls,get,button,shared,session,created,recovery:()=>get('dq').adjacent,submit:()=>handler({preventDefault(){}}),
     setValid(v){valid=v;},expire(){for(const fn of [...timers.values()])fn();},
     release(v){release(v);},timers};
 }
@@ -71,11 +95,11 @@ async function run() {
     scenarios++;
   }
   {
-    const f=fixture('pending'), p=f.submit();await f.submit();
+    const f=fixture('pending'), p=f.submit();await flush();await f.submit();
     assert.equal(f.calls.length,1);assert.equal(f.button.disabled,true);
     f.answers.industry='healthcare';await f.submit();assert.equal(f.calls.length,1);
     f.release();await p;assert.equal(f.button.disabled,false);
-    const second=f.submit();assert.equal(f.calls.length,2); // changed answers allowed
+    const second=f.submit();await flush();assert.equal(f.calls.length,2); // changed answers allowed
     f.release(); await second;
     scenarios++;
   }
@@ -110,6 +134,140 @@ async function run() {
     assert.doesNotMatch(f.get('dq-results').innerHTML,/<img/);
     assert.doesNotMatch(f.get('dq-fallback').innerHTML,/<img/);scenarios++;
   }
+
+  // Separate runtimes share origin-local receipts/locks, but have per-tab recovery.
+  for(const mode of ['accepted','network','invalid-json','http-error']) {
+    const shared=world(),a=fixture(mode,{world:shared});await a.submit();
+    const b=fixture('accepted',{world:shared});await b.submit();
+    assert.equal(a.calls.length+b.calls.length,1,mode+' cross-tab duplicate');
+    assert.match(b.get('dq-mail-status').textContent,/bloqueado neste navegador/);
+    const reload=fixture('accepted',{world:shared,session:a.session});
+    assert.match(reload.recovery().children[2].textContent,/Synthetic Visitor/);
+    assert.equal(reload.calls.length,0,'reload does not submit');
+    await reload.submit();assert.equal(reload.calls.length,0,'reload blocks duplicate');
+    assert.equal(shared.held.size,0);
+    const ledger=JSON.stringify([...shared.local.data]);
+    assert.doesNotMatch(ledger,/Synthetic Visitor|client@example|finance|costs/,'no raw answers in cross-tab ledger');
+    assert([...shared.local.data.keys()].every(k=>/^zion\.discovery\.receipt\.v1\.[a-f0-9]{64}$/.test(k)));
+    scenarios++;
+  }
+  {
+    const shared=world(),a=fixture('pending',{world:shared}),b=fixture('accepted',{world:shared});
+    const pending=a.submit();await flush();await b.submit();
+    assert.equal(a.calls.length,1);assert.equal(b.calls.length,0);
+    assert.match(b.get('dq-mail-status').textContent,/Outra aba/);
+    assert.equal(JSON.parse([...shared.local.data.values()][0]).state,'uncertain','receipt persisted before response');
+    assert.match(a.recovery().children[2].textContent,/Recommended apps/);
+    a.release();await pending;await b.submit();assert.equal(b.calls.length,0);
+    scenarios++;
+  }
+  {
+    const shared=world(),a=fixture('pending',{world:shared});const pending=a.submit();await flush();
+    const receipt=[...shared.local.data];
+    // Model closed tab: lock is released by the browser, durable receipt survives.
+    shared.held.clear();
+    const b=fixture('accepted',{world:shared,session:a.session});await b.submit();
+    assert.equal(b.calls.length,0);assert.deepEqual([...shared.local.data],receipt);
+    a.expire();await pending;scenarios++;
+  }
+  {
+    const shared=world(),a=fixture('pending',{world:shared}),b=fixture('pending',{world:shared});
+    b.answers.challenge='support';
+    const pa=a.submit(),pb=b.submit();await flush();
+    assert.equal(a.calls.length+b.calls.length,2,'different reports do not block one another');
+    a.release();b.release();await Promise.all([pa,pb]);scenarios++;
+  }
+  {
+    const shared=world(),a=fixture('rejected',{world:shared});await a.submit();
+    assert.equal(shared.local.data.size,0);
+    const b=fixture('accepted',{world:shared});await b.submit();assert.equal(b.calls.length,1);
+    scenarios++;
+  }
+  for(const config of [{noLocks:true},{noCrypto:true}]) {
+    const f=fixture('accepted',config);await f.submit();assert.equal(f.calls.length,0);
+    assert.match(f.recovery().children[2].textContent,/Synthetic Visitor/);
+    assert.match(f.get('dq-mail-status').textContent,/foi bloqueado/);scenarios++;
+  }
+  for(const target of ['local','session'])for(const fail of ['get','set']) {
+    const shared=world(),session=storage();(target==='local'?shared.local:session).fail=fail;
+    const f=fixture('accepted',{world:shared,session});await f.submit();
+    assert.equal(f.calls.length,0);assert.equal(f.button.disabled,false);
+    assert.match(f.recovery().children[2].textContent,/Synthetic Visitor/);
+    scenarios++;
+  }
+  for(const target of ['local','session']) {
+    const shared=world(),session=storage();(target==='local'?shared.local:session).silent=true;
+    const f=fixture('accepted',{world:shared,session});await f.submit();assert.equal(f.calls.length,0);scenarios++;
+  }
+  for(const bad of ['{','null','{"version":2,"state":"accepted"}','{"version":1,"state":"expired"}']) {
+    const shared=world(),a=fixture('network',{world:shared});await a.submit();
+    const key=[...shared.local.data.keys()][0];shared.local.data.set(key,bad);
+    const b=fixture('accepted',{world:shared});await b.submit();assert.equal(b.calls.length,0);
+    assert.equal(shared.local.data.get(key),bad,'malformed receipt preserved');scenarios++;
+  }
+  for(const bad of ['{','null','{"version":1,"reports":[3]}']) {
+    const session=storage(new Map([['zion.discovery.reports.v1',bad]])),f=fixture('accepted',{session});
+    await f.submit();assert.equal(f.calls.length,0);
+    assert.equal(session.data.get('zion.discovery.reports.v1'),bad,'malformed recovery data preserved');scenarios++;
+  }
+  {
+    const f=fixture('network');await f.submit();const first=f.calls[0].data.results;
+    f.answers.challenge='support';await f.submit();
+    const reports=JSON.parse(f.session.getItem('zion.discovery.reports.v1')).reports;
+    assert.equal(reports.length,2);assert.equal(reports[0],first,'uncertain earlier report not evicted');
+    const reload=fixture('accepted',{world:f.shared,session:f.session});
+    assert.equal(reload.calls.length,0);assert.match(reload.recovery().children[2].textContent,/Challenge: costs/);
+    assert.match(reload.recovery().children[2].textContent,/Challenge: support/);scenarios++;
+  }
+  {
+    const session=storage(new Map([['zion.discovery.reports.v1',JSON.stringify({version:1,reports:Array.from({length:20},(_,i)=>'Prior uncertain report '+i)})]]));
+    const before=session.getItem('zion.discovery.reports.v1'),f=fixture('accepted',{session});
+    await f.submit();assert.equal(f.calls.length,0);assert.equal(session.getItem('zion.discovery.reports.v1'),before);
+    assert.match(f.recovery().children[2].textContent,/Synthetic Visitor/);scenarios++;
+  }
+  {
+    const f=fixture('network');await f.submit();const prior=[...f.shared.local.data];
+    f.recovery().children[3].handlers.click();
+    assert.equal(f.session.getItem('zion.discovery.reports.v1'),null);
+    assert.deepEqual([...f.shared.local.data],prior,'clear recovery does not clear dedupe');
+    await f.submit();assert.equal(f.calls.length,1);scenarios++;
+  }
+  {
+    const f=fixture('network');await f.submit();const text=f.recovery().children[2].textContent;
+    f.session.fail='remove';f.recovery().children[3].handlers.click();
+    assert.equal(f.recovery().children[2].textContent,text);assert.equal(f.recovery().hidden,false);scenarios++;
+  }
+  {
+    const shared=world(),a=fixture('pending',{world:shared});const p=a.submit();await flush();
+    shared.local.fail='set';a.release();await p;
+    assert.match(a.get('dq-mail-status').textContent,/aceita pelo serviço/);
+    assert.equal(JSON.parse([...shared.local.data.values()][0]).state,'uncertain');
+    shared.local.fail=null;const b=fixture('accepted',{world:shared});await b.submit();assert.equal(b.calls.length,0);scenarios++;
+  }
+  {
+    const shared=world();shared.local.fail='remove';const a=fixture('rejected',{world:shared});await a.submit();
+    shared.local.fail=null;const b=fixture('accepted',{world:shared});await b.submit();assert.equal(b.calls.length,0);scenarios++;
+  }
+
+
+  {
+    const f=fixture('network');await f.submit();const text=f.recovery().children[2].textContent;
+    f.session.silent=true;f.recovery().children[3].handlers.click();
+    assert.equal(f.recovery().children[2].textContent,text,'silent deletion failure retains recovery display');
+    assert.equal(f.recovery().hidden,false);scenarios++;
+  }
+  {
+    const shared=world();shared.locks.request=async()=>{throw new Error('lock denied');};
+    const f=fixture('accepted',{world:shared});await f.submit();assert.equal(f.calls.length,0);
+    assert.match(f.recovery().children[2].textContent,/Synthetic Visitor/);scenarios++;
+  }
+  {
+    const f=fixture('network');f.answers.name='<img src=x onerror=alert(1)>';await f.submit();
+    const reload=fixture('accepted',{session:f.session,world:f.shared});
+    assert.match(reload.recovery().children[2].textContent,/<img/);
+    assert.equal(reload.recovery().children[2].innerHTML,'','recovered data never parsed as HTML');scenarios++;
+  }
+
   console.log('Current Discovery: '+scenarios+' synthetic runtime scenarios passed; all fetches mocked.');
 }
 let completed=false;
