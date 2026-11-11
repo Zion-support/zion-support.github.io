@@ -6,6 +6,9 @@ name: Private operations publication boundary
       - 'scripts/**'
       - 'content/**'
       - 'public/**'
+      - 'app/services-agritech-page.tsx'
+      - 'app/services-ai-page.tsx'
+      - 'tests/ci/test_scoped_page_parser.cjs'
 permissions:
   contents: read
 jobs:
@@ -144,3 +147,51 @@ jobs:
           print('Verified artifact files:',len(after))
           print('Artifact SHA256:',hashlib.sha256(artifact.read_bytes()).hexdigest())
           PY
+
+      # Focused, read-only acceptance for the stacked ROI restoration lane.
+      # This isolated dependency subset is not a full repository npm-ci check.
+      - name: Install locked direct dependencies for focused ROI acceptance
+        if: github.event.pull_request.base.ref == 'fix/restore-private-ops-boundary-20261106'
+        run: |
+          set -euo pipefail
+          cd "$BUILD_ROOT/source"
+          export ROI_TEST_ROOT
+          ROI_TEST_ROOT="$(mktemp -d "$RUNNER_TEMP/roi-test-deps.XXXXXXXX")"
+          echo "ROI_TEST_ROOT=$ROI_TEST_ROOT" >> "$GITHUB_ENV"
+          node - <<'JS'
+          const fs = require('node:fs');
+          const path = require('node:path');
+          const lock = JSON.parse(fs.readFileSync('package-lock.json', 'utf8'));
+          const names = ['typescript', 'react', 'react-dom', 'next', '@types/react', '@types/react-dom', '@types/node', 'playwright'];
+          const dependencies = {};
+          for (const name of names) {
+            const version = lock.packages['node_modules/' + name]?.version;
+            if (!/^\d+\.\d+\.\d+(?:-[0-9A-Za-z.-]+)?$/.test(version || '')) throw new Error('Missing locked dependency: ' + name);
+            dependencies[name] = version;
+          }
+          fs.writeFileSync(path.join(process.env.ROI_TEST_ROOT, 'package.json'), JSON.stringify({ private: true, dependencies }, null, 2));
+          console.log('Focused direct dependency versions:', dependencies);
+          JS
+          npm install --prefix "$ROI_TEST_ROOT" --ignore-scripts --no-audit --no-fund
+          test ! -e node_modules
+          ln -s "$ROI_TEST_ROOT/node_modules" node_modules
+      - name: Validate real component rendering and scoped semantic types
+        if: github.event.pull_request.base.ref == 'fix/restore-private-ops-boundary-20261106'
+        run: |
+          set -euo pipefail
+          cd "$BUILD_ROOT/source"
+          node --test tests/ci/test_scoped_page_parser.cjs
+          node node_modules/typescript/bin/tsc --noEmit --strict --skipLibCheck --jsx react-jsx --module commonjs --moduleResolution node --target ES2022 --esModuleInterop app/services-agritech-page.tsx app/services-ai-page.tsx
+      - name: Install isolated Chromium for local-only acceptance
+        if: github.event.pull_request.base.ref == 'fix/restore-private-ops-boundary-20261106'
+        env:
+          PLAYWRIGHT_BROWSERS_PATH: ${{ runner.temp }}/roi-playwright
+        run: node "$ROI_TEST_ROOT/node_modules/playwright/cli.js" install --with-deps chromium
+      - name: Exercise rendered ROI pages in Chromium
+        if: github.event.pull_request.base.ref == 'fix/restore-private-ops-boundary-20261106'
+        env:
+          PLAYWRIGHT_BROWSERS_PATH: ${{ runner.temp }}/roi-playwright
+        run: |
+          set -euo pipefail
+          cd "$BUILD_ROOT/source"
+          node scripts/test-roi-browser.cjs out
