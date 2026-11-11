@@ -33,11 +33,14 @@ jobs:
           node-version-file: '.nvmrc'
           cache: npm
       - name: Validate line-coverage contract without dependencies
-        run: node --test scripts/checks/test-coverage-summary.test.cjs
+        run: node --test scripts/checks/test-coverage-summary.test.cjs scripts/checks/test-coverage-runner.test.cjs
       - name: Install locked dependencies
         run: npm ci --prefer-offline --no-audit --fund=false
       - name: Run Jest; no tests and test failures must fail
-        run: ./node_modules/.bin/jest --ci --runInBand --watchAll=false --coverage --coverageReporters=json-summary --coverageDirectory=coverage
+        env:
+          # Leave memory for the runner and report generation; do not narrow coverage scope.
+          NODE_OPTIONS: --max-old-space-size=6144
+        run: bash scripts/checks/run-test-coverage.sh
       - name: Enforce 60 percent line coverage from machine-readable counts
         run: node scripts/checks/test-coverage-summary.cjs coverage/coverage-summary.json 60
       - name: Save actual coverage evidence
@@ -45,6 +48,6 @@ jobs:
         uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
         with:
           name: verified-jest-coverage-${{ github.run_id }}
-          path: coverage/coverage-summary.json
-          if-no-files-found: ignore
+          path: coverage/
+          if-no-files-found: warn
           retention-days: 7
