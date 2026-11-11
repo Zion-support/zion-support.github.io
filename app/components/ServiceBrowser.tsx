@@ -142,7 +142,7 @@ export default function ServiceBrowser() {
                 <h3 className="mb-5">
                   <button
                     type="button"
-                    className="flex w-full items-center justify-between rounded text-left cursor-pointer select-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
+                    className="flex w-full items-center justify-between rounded text-left cursor-pointer select-none focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
                     onClick={() => toggle(cat.key)}
                     aria-expanded={isOpen}
                     aria-controls={`${browserId}-${cat.key}-services`}
