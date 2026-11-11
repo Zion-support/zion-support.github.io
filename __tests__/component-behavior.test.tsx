@@ -120,6 +120,34 @@ describe('ServiceBrowser user behavior', () => {
     expect(requestTimerIndex).toBeGreaterThanOrEqual(0);
     expect(clear).toHaveBeenCalledWith(schedule.mock.results[requestTimerIndex].value);
   });
+  it.each(['success', 'error'] as const)('StrictMode ignores a stale %s after the active request succeeds', async outcome => {
+    const requests: Array<{ signal: AbortSignal; resolve: (response: unknown) => void; reject: (reason: Error) => void }> = [];
+    mockFetch().mockImplementation((_url, options) => new Promise((resolve, reject) => {
+      requests.push({signal: options.signal, resolve, reject});
+    }));
+    await act(async () => root.render(<React.StrictMode><ServiceBrowser /></React.StrictMode>));
+    expect(requests).toHaveLength(2);
+    expect(requests[0].signal.aborted).toBe(true);
+    expect(requests[1].signal.aborted).toBe(false);
+    await act(async () => requests[1].resolve({ok: true, json: async () => ({services: sampleServices})}));
+    expect(container.textContent).toContain('All 2 Services');
+    expect(container.textContent).toContain('Cloud resilience');
+    // The aborted transport may already have a response queued. Exercise both
+    // callbacks while the replayed effect still owns a mounted component.
+    await act(async () => {
+      if (outcome === 'success') {
+        requests[0].resolve({ok: true, json: async () => ({services: [{...sampleServices[0], title: 'Obsolete catalog'}]})});
+      } else {
+        requests[0].reject(new Error('obsolete request failed'));
+      }
+    });
+    expect(container.textContent).toContain('All 2 Services');
+    expect(container.textContent).toContain('Cloud resilience');
+    expect(container.textContent).toContain('Security assessment');
+    expect(container.textContent).not.toContain('Obsolete catalog');
+    expect(container.textContent).not.toContain('Failed to load');
+  });
+
 });
 
 describe('GlobalErrorBoundary recovery', () => {
