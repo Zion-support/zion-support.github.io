@@ -6,6 +6,7 @@ from concurrent.futures import ProcessPoolExecutor
 from pathlib import Path
 import sys
 import unittest
+from unittest.mock import Mock
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'scripts/outreach'))
@@ -90,7 +91,7 @@ class SafetyTests(unittest.TestCase):
         with ProcessPoolExecutor(max_workers=4) as pool:
             self.assertEqual(list(pool.map(attempt, range(12))), ['blocked']*12)
 
-    def test_all_known_send_entrypoints_block_before_dependencies(self):
+    def test_contained_followup_entrypoints_block_before_dependencies(self):
         targets = [('outreach_worker_automation.py', 'send_ceo_reply', ('t','a','s','b','m')),
                    ('send_hot_followup_ceo.py','send_via_helper',('a','s','b','m')),
                    ('send_hot_followup_ceo.py','main',())]
@@ -103,6 +104,47 @@ class SafetyTests(unittest.TestCase):
             exec(compile(module, filename, 'exec'), scope)
             with self.assertRaises(FollowupBlocked):
                 scope[name](*args)
+
+
+    def worker_send_scope(self, error):
+        source = (ROOT/'scripts/outreach/outreach_worker_automation.py').read_text()
+        fn = next(n for n in ast.parse(source).body if isinstance(n, ast.FunctionDef)
+                  and n.name == 'run_high_frequency_outreach')
+        block = next(n for n in ast.walk(fn) if isinstance(n, ast.Try)
+                     and any(isinstance(c, ast.Call) and isinstance(c.func, ast.Name)
+                             and c.func.id == 'send_ceo_reply' for c in ast.walk(n)))
+        # Execute only the real contact-send try/except inside a synthetic loop.
+        # No operational module initialization, Gmail, filesystem state or network.
+        loop = ast.For(target=ast.Name(id='_contact', ctx=ast.Store()),
+                       iter=ast.List(elts=[ast.Constant(None)], ctx=ast.Load()),
+                       body=[block], orelse=[])
+        scope = dict(FollowupBlocked=FollowupBlocked, DRY_RUN=False,
+                     REQUIRES_APPROVAL=False, email='buyer@example.test',
+                     thread_id='thread-test', contact_key='contact-test',
+                     lead=dict(body='Test', subject='Test', msg_id='message-test'),
+                     sent_count=0, skipped=0, sanitize_outreach_body=lambda body: body,
+                     send_ceo_reply=Mock(side_effect=error), record_send=Mock(),
+                     mark_seen_message_id=Mock(), record_bounce=Mock(), print=Mock())
+        exec(compile(ast.fix_missing_locations(ast.Module(body=[loop], type_ignores=[])),
+                     '<isolated-worker-send-block>', 'exec'), scope)
+        return scope
+
+    def test_policy_hold_is_skipped_without_bounce_or_sent_state(self):
+        scope = self.worker_send_scope(FollowupBlocked('outreach_live_hold'))
+        self.assertEqual(scope['skipped'], 1)
+        self.assertEqual(scope['sent_count'], 0)
+        for name in ['record_bounce', 'record_send', 'mark_seen_message_id']:
+            scope[name].assert_not_called()
+        scope['print'].assert_called_once_with('CONTACT_END', 'buyer@example.test',
+                                              'policy_hold', flush=True)
+
+    def test_non_policy_error_keeps_existing_error_route(self):
+        # Existing generic bounce classification is a separate known limitation.
+        scope = self.worker_send_scope(RuntimeError('synthetic error'))
+        scope['record_bounce'].assert_called_once()
+        self.assertEqual(scope['sent_count'], 0)
+        scope['record_send'].assert_not_called()
+        scope['mark_seen_message_id'].assert_not_called()
 
 if __name__ == '__main__':
     unittest.main()
