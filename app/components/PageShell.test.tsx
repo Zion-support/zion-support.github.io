@@ -13,8 +13,9 @@ describe('PageShell restoration', () => {
     expect(html).toContain('Field services');
     expect(html).toContain('On-site support');
     expect(html).toContain('Service details');
-    expect(html).toContain('href="/contact/"');
-    expect(html).toContain('href="/services/"');
+    // Next Link normalizes trailing slashes differently in Jest and built output.
+    expect(html).toMatch(/href="\/contact\/?"/);
+    expect(html).toMatch(/href="\/services\/?"/);
     expect(html).not.toContain('<main');
   });
 
