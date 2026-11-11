@@ -38,6 +38,7 @@ const CORE = [
 // Already-present public/ pages (live 200). Not country leaves. Not invented.
 // /pricing/ omitted on purpose.
 const EXTRA = [
+  '/ai-services/ai-agents-autonomous-workflows/',
   '/field-services/brazil/',
   '/field-services-brazil/',
   '/free-consultation/',
