@@ -35,14 +35,77 @@ function readJsonSafe(p) {
   try {
     return JSON.parse(fs.readFileSync(p, 'utf8'));
   } catch (error) {
-    if (error.code === 'ENOENT') return null;
+    if (error.code === 'ENOENT') return undefined;
     throw error; // Do not replace corrupted state with a fresh empty snapshot.
   }
 }
 
+
+function requireObject(value, label) {
+  if (!value || typeof value !== 'object' || Array.isArray(value)) {
+    throw new Error(`Invalid ${label}; registry unchanged.`);
+  }
+}
+function requireNumber(value, label, min = 0, max = Number.MAX_SAFE_INTEGER, integer = false) {
+  if (typeof value !== 'number' || !Number.isFinite(value) ||
+      value < min || value > max || (integer && !Number.isSafeInteger(value))) {
+    throw new Error(`Invalid ${label}; registry unchanged.`);
+  }
+}
+function requireCount(value, label) {
+  requireNumber(value, label, 0, Number.MAX_SAFE_INTEGER, true);
+}
+function validatePrevious(prev) {
+  requireObject(prev, 'previous registry');
+  if (prev.version !== 3) throw new Error('Unsupported previous registry schema.');
+  requireObject(prev.domains, 'domains');
+  for (const name of ['pm2Slo', 'pm2Restart', 'openclawIncident', 'openclawSla']) {
+    requireObject(prev.domains[name], name);
+    requireCount(prev.domains[name].breachStreak, name + '.breachStreak');
+    requireCount(prev.domains[name].openIssueCount, name + '.openIssueCount');
+  }
+  requireObject(prev.noise, 'noise');
+  requireNumber(prev.noise.emaOpenIncidents, 'emaOpenIncidents');
+  requireNumber(prev.noise.emaAlpha, 'emaAlpha', Number.MIN_VALUE, 1);
+  requireCount(prev.noise.rawOpenTotal, 'rawOpenTotal');
+  requireObject(prev.openIssueCounts, 'openIssueCounts');
+  for (const name of ['openclaw', 'pm2', 'sla']) requireCount(prev.openIssueCounts[name], name);
+  requireCount(prev.totalOpenIncidents, 'totalOpenIncidents');
+  const total = Object.values(prev.openIssueCounts).reduce((sum, n) => sum + n, 0);
+  if (total !== prev.totalOpenIncidents || total !== prev.noise.rawOpenTotal) {
+    throw new Error('Inconsistent previous incident totals.');
+  }
+  for (const name of ['recommendedCooldownHours', 'cooldownHours',
+    'openclawCooldownHours', 'slaCooldownHours']) {
+    requireNumber(prev[name], name, 4, 24);
+  }
+}
+const telemetryCache = new Map();
+function readTelemetry(name, counters, timestamp = false) {
+  if (telemetryCache.has(name)) return telemetryCache.get(name);
+  const value = readJsonSafe(path.join(__dirname, 'reports', name));
+  // Only an absent file is unknown. Present-but-invalid data must preserve the snapshot.
+  if (value !== undefined) {
+    requireObject(value, name);
+    for (const counter of counters) requireCount(value[counter], name + '.' + counter);
+    if (timestamp && (typeof value.updatedAt !== 'string' ||
+        !Number.isFinite(Date.parse(value.updatedAt)) || Date.parse(value.updatedAt) > Date.now())) {
+      throw new Error('Invalid telemetry timestamp.');
+    }
+  }
+  telemetryCache.set(name, value);
+  return value;
+}
+function readOpenclaw() {
+  return readTelemetry('openclaw-autonomous-app-improver-latest.json',
+    ['contractFailures', 'lowValueCycles', 'parseFailures', 'failures', 'successes'], true);
+}
+
 function readDeployStatus() {
   const p = path.join(__dirname, 'reports', 'deploy-status-latest.json');
-  return readJsonSafe(p);
+  const value = readJsonSafe(p);
+  if (value !== undefined) requireObject(value, 'deploy status');
+  return value;
 }
 
 function buildCorrelation(prev) {
@@ -77,35 +140,31 @@ function buildCorrelation(prev) {
 }
 
 function pm2SloUnhealthy() {
-  const p = path.join(__dirname, 'reports', 'pm2-slo-latest.json');
-  const j = readJsonSafe(p);
+  const j = readTelemetry('pm2-slo-latest.json', ['unhealthyCount', 'criticalCount']);
   if (!j) return true; // Missing telemetry is unknown, not healthy.
-  return Number(j.unhealthyCount || 0) > 0 || Number(j.criticalCount || 0) > 0;
+  return j.unhealthyCount > 0 || j.criticalCount > 0;
 }
 
 function pm2RestartUnhealthy() {
-  const p = path.join(__dirname, 'reports', 'pm2-restart-guardian-latest.json');
-  const j = readJsonSafe(p);
+  const j = readTelemetry('pm2-restart-guardian-latest.json', ['unhealthyCount']);
   if (!j) return true; // Missing telemetry is unknown, not healthy.
-  return Number(j.unhealthyCount || 0) > 0;
+  return j.unhealthyCount > 0;
 }
 
 function openclawUnhealthy() {
-  const p = path.join(__dirname, 'reports', 'openclaw-autonomous-app-improver-latest.json');
-  const j = readJsonSafe(p);
+  const j = readOpenclaw();
   if (!j) return true; // Missing telemetry is unknown, not healthy.
   const checks = [
-    Number(j.contractFailures || 0) >= 1,
-    Number(j.lowValueCycles || 0) >= 8,
-    Number(j.parseFailures || 0) >= 8,
-    Number(j.failures || 0) > Number(j.successes || 0) + 8,
+    j.contractFailures >= 1,
+    j.lowValueCycles >= 8,
+    j.parseFailures >= 8,
+    j.failures > j.successes + 8,
   ];
   return checks.some(Boolean);
 }
 
 function openclawSlaBreached() {
-  const p = path.join(__dirname, 'reports', 'openclaw-autonomous-app-improver-latest.json');
-  const j = readJsonSafe(p);
+  const j = readOpenclaw();
   if (!j) {
     return true;
   }
@@ -114,15 +173,16 @@ function openclawSlaBreached() {
     return true;
   }
   const ageSeconds = Math.floor((Date.now() - ts) / 1000);
-  const failures = Number(j.failures || 0);
-  const successes = Number(j.successes || 0);
+  const failures = j.failures;
+  const successes = j.successes;
   const failureOk = failures <= successes + 5;
   return !(ageSeconds <= 5400 && failureOk);
 }
 
 function streak(prev, unhealthy) {
-  const n = Number(prev || 0);
+  const n = prev ?? 0;
   if (unhealthy) {
+    requireCount(n + 1, 'next breach streak');
     return n + 1;
   }
   return 0;
@@ -134,10 +194,8 @@ function clamp(n, lo, hi) {
 
 function main() {
   const existing = readJsonSafe(OUT);
-  if (existing !== null && (typeof existing !== 'object' || Array.isArray(existing))) {
-    throw new Error('Invalid previous registry; unchanged.');
-  }
-  const prev = existing || {};
+  if (existing !== undefined) validatePrevious(existing);
+  const prev = existing ?? {};
   const prevDomains = prev.domains || {};
 
   const openIssueCounts = {
@@ -178,9 +236,9 @@ function main() {
 
   const prevEma = prev.noise?.emaOpenIncidents;
   const emaOpen =
-    prevEma == null || !Number.isFinite(Number(prevEma))
+    prevEma === undefined
       ? totalOpen
-      : EMA_ALPHA * totalOpen + (1 - EMA_ALPHA) * Number(prevEma);
+      : EMA_ALPHA * totalOpen + (1 - EMA_ALPHA) * prevEma;
 
   let fromEma = 4 + Math.round(emaOpen * 1.35);
   fromEma = clamp(fromEma, 4, 22);
@@ -191,14 +249,11 @@ function main() {
     fromEma = Math.min(24, fromEma + 2);
   }
 
-  const prevRec = Number(prev.recommendedCooldownHours || prev.cooldownHours || 24);
-  const safePrev = Number.isFinite(prevRec) && prevRec > 0 ? prevRec : 24;
+  const safePrev = prev.recommendedCooldownHours ?? 24;
   let recommended = clamp(Math.round(0.42 * fromEma + 0.58 * safePrev), 4, 24);
 
   // Never ease cooldowns while a required health snapshot is missing.
-  const missingTelemetry = ['pm2-slo-latest.json', 'pm2-restart-guardian-latest.json',
-    'openclaw-autonomous-app-improver-latest.json'].some(name =>
-      !fs.existsSync(path.join(__dirname, 'reports', name)));
+  const missingTelemetry = [...telemetryCache.values()].some(value => value === undefined);
   if (!existing || missingTelemetry) recommended = Math.max(recommended, clamp(safePrev, 4, 24));
 
   const noiseLevel =
@@ -247,6 +302,7 @@ function main() {
       'v3: EMA-smoothed cooldowns, workflow/deploy correlation, Netlify fields via deploy-status-latest.json when present.',
   };
 
+  validatePrevious(next); // Reject invalid arithmetic before touching the snapshot.
   fs.mkdirSync(path.dirname(OUT), { recursive: true });
   const temporary = `${OUT}.${process.pid}.tmp`;
   try {
