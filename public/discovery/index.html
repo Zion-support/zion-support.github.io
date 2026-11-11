@@ -196,6 +196,8 @@
     var pending = false;
     var button = form.querySelector('button[type="submit"]');
     var draftKey = 'zion.discovery.reports.v1';
+    // Includes unsaved reports: storage failures must not replace the only copy.
+    var retainedReports = [];
     var recovery = document.createElement('details');
     var recoveryTitle = document.createElement('summary');
     var recoveryNote = document.createElement('p');
@@ -203,6 +205,7 @@
     var clearDraft = document.createElement('button');
     recoveryTitle.textContent = 'Cópia recuperável das respostas e recomendações';
     recoveryNote.textContent = 'Esta cópia fica nesta aba durante a sessão e pode ser recuperada ao recarregar. Copie o texto antes de fechar a aba. Este navegador guarda um registro para reduzir envios repetidos entre abas. Limpar os dados do site remove essa proteção. Esse registro não confirma a entrega do e-mail.';
+    var recoveryHelp = recoveryNote.textContent;
     recoveryText.style.whiteSpace = 'pre-wrap';
     recoveryText.style.overflowWrap = 'anywhere';
     clearDraft.type = 'button';
@@ -214,7 +217,9 @@
       try {
         sessionStorage.removeItem(draftKey);
         if (sessionStorage.getItem(draftKey) !== null) throw new Error('draft-not-removed');
+        retainedReports = [];
         recoveryText.textContent = '';
+        recoveryNote.textContent = recoveryHelp;
         recovery.hidden = true;
       } catch (error) {
         recoveryNote.textContent = 'Não foi possível apagar a cópia armazenada. O texto continua disponível abaixo.';
@@ -225,7 +230,8 @@
       if (saved !== null) {
         var draft = JSON.parse(saved);
         validateDraft(draft);
-        recoveryText.textContent = draft.reports.join('\n\n---\n\n');
+        retainedReports = draft.reports.slice();
+        recoveryText.textContent = retainedReports.join('\n\n---\n\n');
         recovery.hidden = false;
         recovery.open = true;
       }
@@ -239,21 +245,27 @@
           !draft.reports.every(function(report){ return typeof report === 'string' && report.length <= 20000; })) throw new Error('invalid-draft');
     }
     function retainReport(report) {
-      // Keep prior reports, including uncertain submissions. Never evict them silently.
-      recoveryText.textContent = report;
+      // Retain before any fallible storage operation, including reads.
+      if (!retainedReports.includes(report)) retainedReports.push(report);
+      recoveryText.textContent = retainedReports.join('\n\n---\n\n');
       recovery.hidden = false;
       recovery.open = true;
-      var saved = sessionStorage.getItem(draftKey);
-      var draft = saved === null ? {version:1,reports:[]} : JSON.parse(saved);
-      validateDraft(draft);
-      if (!draft.reports.includes(report)) {
-        if (draft.reports.length >= 20 || report.length > 20000) throw new Error('draft-capacity');
-        draft.reports.push(report);
+      try {
+        var saved = sessionStorage.getItem(draftKey);
+        var draft = saved === null ? {version:1,reports:[]} : JSON.parse(saved);
+        validateDraft(draft);
+        // Merge stored reports with every in-memory report; never silently evict either.
+        retainedReports = Array.from(new Set(draft.reports.concat(retainedReports)));
+        recoveryText.textContent = retainedReports.join('\n\n---\n\n');
+        if (retainedReports.length > 20 || retainedReports.some(function(text){ return text.length > 20000; })) throw new Error('draft-capacity');
+        var value = JSON.stringify({version:1,reports:retainedReports});
+        sessionStorage.setItem(draftKey, value);
+        if (sessionStorage.getItem(draftKey) !== value) throw new Error('draft-not-persisted');
+        recoveryNote.textContent = recoveryHelp;
+      } catch (error) {
+        recoveryNote.textContent = 'Parte dos relatórios pode não estar salva. Todas as cópias disponíveis continuam abaixo nesta página. Copie o texto antes de recarregar ou fechar a aba; os relatórios anteriores não foram descartados automaticamente.';
+        throw error;
       }
-      recoveryText.textContent = draft.reports.join('\n\n---\n\n');
-      var value = JSON.stringify(draft);
-      sessionStorage.setItem(draftKey, value);
-      if (sessionStorage.getItem(draftKey) !== value) throw new Error('draft-not-persisted');
     }
     function readReceipt(key) {
       var value = localStorage.getItem(key);

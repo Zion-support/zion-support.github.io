@@ -268,6 +268,60 @@ async function run() {
     assert.equal(reload.recovery().children[2].innerHTML,'','recovered data never parsed as HTML');scenarios++;
   }
 
+
+  // Regression: a second unsaved report must not replace the first one on screen.
+  for(const fail of ['get','set']) {
+    const session=storage(),f=fixture('network',{session});
+    await f.submit();const persisted=session.getItem('zion.discovery.reports.v1');
+    const oldReport=f.calls[0].data.results;
+    session.fail=fail;
+    f.answers.challenge='support';await f.submit();
+    const firstUnsaved=f.recovery().children[2].textContent;
+    assert.match(firstUnsaved,/Challenge: support/);
+    f.answers.industry='healthcare';await f.submit();
+    const recovered=f.recovery().children[2].textContent;
+    assert.ok(recovered.includes(firstUnsaved),fail+': prior visible reports retained');
+    assert.ok(recovered.includes(oldReport),fail+': prior persisted report retained in memory');
+    assert.match(recovered,/Industry: healthcare/);
+    assert.match(f.recovery().children[1].textContent,/antes de recarregar/);
+    assert.equal(session.data.get('zion.discovery.reports.v1'),persisted,fail+': persisted bytes untouched');
+    assert.equal(f.calls.length,1,'storage failure cannot send');
+    session.fail=null;await f.submit();
+    const saved=JSON.parse(session.getItem('zion.discovery.reports.v1'));
+    assert.equal(saved.reports.length,3,'save recovered archive after storage becomes usable');
+    const reload=fixture('accepted',{session,world:f.shared});
+    assert.ok(reload.recovery().children[2].textContent.includes(firstUnsaved));
+    assert.equal(reload.calls.length,0);scenarios++;
+  }
+  {
+    const existing=Array.from({length:20},(_,i)=>'Persisted uncertain report '+i);
+    const session=storage(new Map([['zion.discovery.reports.v1',JSON.stringify({version:1,reports:existing})]]));
+    const persisted=session.getItem('zion.discovery.reports.v1'),f=fixture('accepted',{session});
+    await f.submit();const firstUnsaved=f.recovery().children[2].textContent;
+    assert.match(firstUnsaved,/Challenge: costs/);
+    f.answers.challenge='support';await f.submit();
+    const visible=f.recovery().children[2].textContent;
+    assert.ok(visible.includes(firstUnsaved),'capacity: first unsaved report retained');
+    assert.match(visible,/Challenge: support/);
+    for(const text of existing)assert.ok(visible.includes(text));
+    assert.equal(session.getItem('zion.discovery.reports.v1'),persisted,'capacity preserves stored bytes');
+    assert.equal(f.calls.length,0);assert.equal(f.button.disabled,false);
+    assert.match(f.recovery().children[1].textContent,/antes de recarregar/);
+    scenarios++;
+  }
+
+
+  {
+    const f=fixture('accepted');f.session.fail='set';
+    await f.submit();f.answers.challenge='support';await f.submit();
+    f.session.fail=null;f.recovery().children[3].handlers.click();
+    f.answers.challenge='data';await f.submit();
+    const saved=JSON.parse(f.session.getItem('zion.discovery.reports.v1')).reports;
+    assert.equal(saved.length,1,'explicit clear also clears unsaved memory copies');
+    assert.match(saved[0],/Challenge: data/);
+    scenarios++;
+  }
+
   console.log('Current Discovery: '+scenarios+' synthetic runtime scenarios passed; all fetches mocked.');
 }
 let completed=false;
