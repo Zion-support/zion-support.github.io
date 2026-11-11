@@ -56,7 +56,9 @@ for (const [slug, href] of [['agritech', '/services/agritech-irrigation-optimiza
   test(slug + ' fragment renders both retained cards with real Link', () => {
     const page = load('app/services-' + slug + '-page.tsx');
     const html = renderToStaticMarkup(react.createElement(page.default));
-    assert(html.startsWith('<main><div><div>'));
+    assert(html.startsWith('<div class="group '), 'Retain main branch fragment layout');
+    assert.equal((html.match(/<div\b/g) || []).length, 2, 'Render exactly the two original cards');
+    assert(!html.includes('<main'), 'Do not reintroduce a nested main landmark');
     assert.equal(html.split('href="' + href + '"').length, 3);
     assert.equal(html.split('Short description pending').length, 3);
   });
