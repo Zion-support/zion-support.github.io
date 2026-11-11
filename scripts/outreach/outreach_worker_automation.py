@@ -1382,6 +1382,8 @@ def _load_excluded() -> set:
         return set()
 
 def send_ceo_reply(thread_id, to_addr, subject, body, references_message_id):
+    from followup_safety import require_live_clearance
+    require_live_clearance()
     to_key = (to_addr or '').lower()
     if to_key and to_key in _load_excluded():
         return {'error': 'excluded', 'to': to_addr}
