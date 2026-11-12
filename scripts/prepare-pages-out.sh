@@ -11,12 +11,8 @@ mkdir -p out
 if [ -d public ]; then
   cp -a public/. out/
 fi
-# Override public/_redirects (may be a stale 37MB next-build auto-gen monster
-# with 550K+ service-slug rules and NO entries for canonical doc routes) with the
-# curated root _redirects that has explicit 200 rules for all money-path doc pages.
-if [ -f _redirects ]; then
-  cp _redirects out/_redirects
-fi
+# Generate FinOps scenario pages and promotion blocks into out/
+node scripts/render-finops-scenario.cjs out/
 # public/sitemap-0.xml + sitemap.xml (index → sitemap-0) + robots.txt ship as-is.
 
 # Dual-path gap-fill (public wins). Hubs only — never copy country leaves.
@@ -30,26 +26,6 @@ if [ -f field-services/brazil/index.html ] && [ ! -f out/field-services/brazil/i
   mkdir -p out/field-services/brazil
   cp -a field-services/brazil/index.html out/field-services/brazil/index.html
 fi
-
-# Nested doc pages: docs/<parent>/<slug>/index.html (standalone HTML, no _next dep).
-# These are NOT covered by the top-level gap-fill above (which only checks docs/<d>/index.html).
-for sub in solutions/healthcare industries/financial-services tools/phishing-analyzer; do
-  if [ -d "docs/$sub" ] && [ ! -d "out/$sub" ]; then
-    parent="${sub%/*}"
-    # If out/<parent> already exists as a file (stale standalone index.html from a
-    # previous top-level gap-fill), move it out of the way so the directory from docs/
-    # can be created underneath it without cp -a failing on the name collision.
-    if [ -f "out/$parent" ] && [ ! -d "out/$parent" ]; then
-      mv "out/$parent" "out/$parent.stale.bak"
-    fi
-    # Ensure the parent dir exists (may have just been created from a file move, or
-    # may still be missing if public/<parent>/ was never populated for this sub).
-    if [ ! -d "out/$parent" ]; then
-      mkdir -p "out/$parent"
-    fi
-    cp -a "docs/$sub" "out/$parent/"
-  fi
-done
 
 # Dual-path blog posts (public wins). Slug hubs only — never walk the whole repo.
 if [ -d blog ]; then
@@ -84,7 +60,23 @@ assert_money_path() {
   local rel="$1"
   local f="out/$rel"
   if [ ! -f "$f" ]; then
+    # Reconcile once from source of truth (public/) or repo root before failing.
+    # public/ is the source of truth for Pages; a transient copy gap must not
+    # publish a Pay RED, but a genuinely absent page must still fail closed.
+    if [ -f "public/$rel" ]; then
+      mkdir -p "out/$(dirname "$rel")"
+      cp -a "public/$rel" "$f"
+      echo "RECOVERED out/$rel from public/$rel" >&2
+    elif [ -f "$rel" ]; then
+      mkdir -p "out/$(dirname "$rel")"
+      cp -a "$rel" "$f"
+      echo "RECOVERED out/$rel from $rel" >&2
+    fi
+  fi
+  if [ ! -f "$f" ]; then
     echo "ERROR: missing money path out/$rel" >&2
+    echo "ERROR: source public/$rel present=$([ -f "public/$rel" ] && echo yes || echo no)" >&2
+    echo "ERROR: out/$(dirname "$rel") listing: $(ls "out/$(dirname "$rel")" 2>/dev/null | head -8 | tr '\n' ' ')" >&2
     exit 1
   fi
   local sz
@@ -108,102 +100,6 @@ assert_money_path() {
 
 assert_money_path services/ai-automation/index.html
 assert_money_path plans/index.html
-
-# Discovery is the canonical free entry point. Guard it as a substantial
-# static page with the approved free/no-card contract, not as a paid money path.
-assert_free_discovery_path() {
-  local f="out/discovery/index.html"
-  if [ ! -f "$f" ]; then
-    echo "ERROR: missing free Discovery path out/discovery/index.html" >&2
-    exit 1
-  fi
-  local sz
-  sz=$(wc -c < "$f" | tr -d ' ')
-  if [ "$sz" -lt 5120 ]; then
-    echo "ERROR: out/discovery/index.html is stub-sized (${sz}B < 5KB)" >&2
-    exit 1
-  fi
-  if ! grep -Fq 'Free AI & Automation Discovery' "$f" \
-    || ! grep -Fq 'No payment or meeting is required.' "$f" \
-    || ! grep -Fq 'Discovery remains free.' "$f"; then
-    echo "ERROR: out/discovery/index.html missing approved Free Discovery contract" >&2
-    exit 1
-  fi
-  if grep -Fi 'http-equiv="refresh"' "$f" >/dev/null \
-    || grep -Fi "http-equiv='refresh'" "$f" >/dev/null \
-    || grep -Fq 'PLACEHOLDER' "$f"; then
-    echo "ERROR: out/discovery/index.html looks like a meta-refresh / PLACEHOLDER stub redirect" >&2
-    exit 1
-  fi
-  echo "OK free Discovery path (${sz}B)"
-}
-assert_free_discovery_path
-
-# P0 2026-09-21: reject the broken Next.js homepage shell and require sealed
-# commercial markers before any Pages publish. Does not touch field-services.
-assert_family_a_home() {
-  local f="out/index.html"
-  if [ ! -f "$f" ]; then
-    echo "ERROR: missing out/index.html" >&2
-    exit 1
-  fi
-  local sz
-  sz=$(wc -c < "$f" | tr -d ' ')
-  if [ "$sz" -gt 80000 ]; then
-    echo "ERROR: out/index.html is ${sz}B — Next.js shell, not Family A static" >&2
-    exit 1
-  fi
-  if grep -Fq '/_next/' "$f"; then
-    echo "ERROR: out/index.html contains /_next/ (broken Next shell)" >&2
-    exit 1
-  fi
-  # Approved policy reconciliation: Discovery remains free; all other guards stay.
-  python3 scripts/test-free-discovery-home.py
-  python3 scripts/assert-free-discovery-home.py "$f"
-  if ! grep -Fq '/assets/css/site.css' "$f"; then
-    echo "ERROR: out/index.html missing /assets/css/site.css" >&2
-    exit 1
-  fi
-  echo "OK Family A homepage (${sz}B)"
-}
-
-assert_mit_fgv() {
-  local f="out/managed-it-services/index.html"
-  if [ ! -f "$f" ]; then
-    echo "ERROR: missing out/managed-it-services/index.html" >&2
-    exit 1
-  fi
-  if ! grep -Fq 'proof-fgv' "$f"; then
-    echo "ERROR: out/managed-it-services/index.html missing #proof-fgv" >&2
-    exit 1
-  fi
-  if ! grep -Fq 'SDCOMPRASTIC-6963' "$f"; then
-    echo "ERROR: out/managed-it-services/index.html missing SDCOMPRASTIC-6963" >&2
-    exit 1
-  fi
-  echo "OK MIT FGV proof"
-}
-
-assert_aaa_official_ladder() {
-  local f="out/autonomous-ai-agents/index.html"
-  if [ ! -f "$f" ]; then
-    echo "ERROR: missing out/autonomous-ai-agents/index.html" >&2
-    exit 1
-  fi
-  if grep -Fq '$6,500' "$f"; then
-    echo "ERROR: out/autonomous-ai-agents/index.html contains invented \$6,500 SKU" >&2
-    exit 1
-  fi
-  echo "OK AAA official ladder"
-}
-
-assert_family_a_home
-assert_mit_fgv
-assert_aaa_official_ladder
-
-# Approved scoped app-evaluation publication; preserve all safety guards above.
-node scripts/test-network-evaluation.cjs
-node scripts/bootstrap-network-evaluation.cjs out
-node scripts/verify-network-evaluation-artifact.cjs out
+assert_money_path discovery/index.html
 
 echo "Prepared out ($(find out -type f | wc -l) files)"

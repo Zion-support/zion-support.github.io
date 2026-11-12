@@ -27,11 +27,35 @@ jobs:
         with:
           persist-credentials: false
 
+      - name: Set up Node.js
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
+        with:
+          node-version-file: '.nvmrc'
+
       - name: Test auditor (offline)
         run: node --test automation/github-workflow-integrity-auditor.test.cjs
 
       - name: Audit local GitHub Actions workflows
         run: node automation/github-workflow-integrity-auditor.cjs
+
+      - name: Summarize audit evidence
+        run: |
+          node <<'NODE'
+          const fs = require('node:fs');
+          const report = JSON.parse(fs.readFileSync('automation/reports/github-workflow-integrity-audit-latest.json', 'utf8'));
+          const summary = [
+            '## Workflow integrity evidence',
+            '',
+            `Status: **${report.status}**`,
+            `Workflows inspected: ${report.workflowCount}`,
+            `Static findings: ${report.counts.totalFindings}`,
+            `Findings omitted from the bounded report: ${report.truncatedFindings}`,
+            '',
+            'Download the JSON artifact for details. Findings require review; this static audit does not attest runtime health.',
+            ''
+          ].join('\n');
+          fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, summary);
+          NODE
 
       - name: Upload static report
         if: always()

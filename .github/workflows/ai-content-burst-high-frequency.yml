@@ -72,6 +72,7 @@ jobs:
         env:
           AUTO_COMMIT: "1"
           TRIGGER_DEPLOY: ${{ github.event.inputs.trigger_deploy != 'false' && '1' || '' }}
+#           NETLIFY_BUILD_HOOK removed (Netlify decommissioned → GitHub Pages)
           MAX_TEMPLATE_BLOG: ${{ github.event.inputs.max_template_blog || '4' }}
           MAX_TEMPLATE_CASE_STUDIES: ${{ github.event.inputs.max_template_case_studies || '4' }}
           MAX_INDUSTRY_PAGES: ${{ github.event.inputs.max_industry_pages || '2' }}
@@ -84,6 +85,9 @@ jobs:
 
       - name: Commit and push if burst did not commit
         if: success()
+        env:
+          TRIGGER_DEPLOY: ${{ github.event.inputs.trigger_deploy != 'false' && '1' || '' }}
+#           NETLIFY_BUILD_HOOK removed (Netlify decommissioned → GitHub Pages)
         run: |
           git add -A
           if ! git diff --staged --quiet; then

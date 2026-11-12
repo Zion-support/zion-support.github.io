@@ -23,7 +23,9 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v6.0.2
       with:
-        fetch-depth: 0
+        # Shallow clone: the analyzer is a paused no-op stub and the repo
+        # history is ~1.1GB, which made fetch-depth: 0 exceed the job timeout.
+        fetch-depth: 1
     - name: Setup Node.js
       uses: actions/setup-node@v6.3.0
       with:
@@ -31,8 +33,11 @@ jobs:
         cache: npm
     - name: Install dependencies
       run: npm ci
-    - name: Build site (generate stats)
-      run: npm run build
+    # Full `npm run build` removed: the 125k-file tree needs >16GB heap and
+    # OOMs (exit 134) on GitHub-hosted 15GB runners. The analyzer is a no-op
+    # stub while automation is paused, so no build stats are required.
+    - name: Validate source (rsc guard; full build moved to Deploy on Push)
+      run: npm run rsc:guard
     - name: Run Bundle Split Analyzer
       id: analyzer
       continue-on-error: true
