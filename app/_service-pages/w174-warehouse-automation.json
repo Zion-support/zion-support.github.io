@@ -1,0 +1,29 @@
+{
+  "title": "Warehouse & Logistics Automation",
+  "description": "Smart warehouse management: pick-path optimization, inventory tracking, shipment automation, and dock scheduling. IoT integration with WMS and TMS systems.",
+  "basic": "$499/mo/month",
+  "pro": "$1,499/mo/month",
+  "enterprise": "$4,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Warehouse & Logistics Automation - Zion Tech Group",
+    "description": "Smart warehouse management: pick-path optimization, inventory tracking, shipment automation, and dock scheduling. IoT integration with WMS and TMS systems.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w174-warehouse-automation"
+    }
+  },
+  "features": [
+    "Pick-path optimization (reduce travel time 40%)",
+    "Real-time inventory tracking (RFID, barcode, IoT)",
+    "Automated shipment labeling and documentation",
+    "Dock scheduling and yard management",
+    "Returns processing automation"
+  ],
+  "benefits": [
+    "Pick-path optimization reduces labor 40%",
+    "Real-time tracking eliminates inventory discrepancies",
+    "Automated shipping reduces errors",
+    "Dock scheduling increases throughput"
+  ]
+}

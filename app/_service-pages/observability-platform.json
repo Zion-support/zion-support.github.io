@@ -1,0 +1,29 @@
+{
+  "title": "Full-Stack Observability Platform",
+  "description": "Unified logs, metrics, traces, and distributed tracing with AI-powered anomaly detection and automated root-cause analysis for microservices.",
+  "basic": "$199/mo/month",
+  "pro": "$599/mo/month",
+  "enterprise": "$1,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Full-Stack Observability Platform - Zion Tech Group",
+    "description": "Unified logs, metrics, traces, and distributed tracing with AI-powered anomaly detection and automated root-cause analysis for microservices.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/observability-platform"
+    }
+  },
+  "features": [
+    "Log aggregation & full-text search (ELK-compatible)",
+    "Metrics collection & dashboards (Prometheus/Grafana)",
+    "Distributed tracing (OpenTelemetry)",
+    "AI-driven anomaly detection & alerting",
+    "SLO/SLI tracking & error budget burn rate"
+  ],
+  "benefits": [
+    "Reduce costs with full-stack observability platform",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "title": "CI/CD Security Gate-as-a-Service",
+  "description": "Shift-left CI/CD security: SAST/DAST/SCA/containers per PR/push branch gate with auto-fix PRs for vulnerabilities, SBOM generation, false-positive suppression.",
+  "basic": "$399/mo/month",
+  "pro": "$999/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "CI/CD Security Gate-as-a-Service - Zion Tech Group",
+    "description": "Shift-left CI/CD security: SAST/DAST/SCA/containers per PR/push branch gate with auto-fix PRs for vulnerabilities, SBOM generation, false-positive suppression.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-cicd-security-gate-as-service"
+    }
+  },
+  "features": [
+    "SAST/DAST/SCA/container scanning per PR with 5-minute deadline",
+    "Vulnerability classification: CWE+CVSS+remotely-exploitable/reachable",
+    "Auto-fix PR against approved fix forms — merge approved change",
+    "Verified SBOM generated per build with SPDX+cyclonedx exports"
+  ],
+  "benefits": [
+    "Reduce costs with ci/cd security gate-as-a-service",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

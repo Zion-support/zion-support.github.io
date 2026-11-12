@@ -1,0 +1,28 @@
+{
+  "title": "AI Immigration Case Prediction & Filing Assistant",
+  "description": "Predict visa/green card approval odds, auto-fill forms (I-130, I-485, N-400), detect missing documents, and track case status. Trained on 10M+ USCIS decisions.",
+  "basic": "$49/case/month",
+  "pro": "$149/case/month",
+  "enterprise": "$499/case/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Immigration Case Prediction & Filing Assistant - Zion Tech Group",
+    "description": "Predict visa/green card approval odds, auto-fill forms (I-130, I-485, N-400), detect missing documents, and track case status. Trained on 10M+ USCIS decisions.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-immigration-case-predictor"
+    }
+  },
+  "features": [
+    "Approval probability scoring",
+    "Auto-form filling (USCIS forms)",
+    "Missing document detection",
+    "Case status auto-tracking",
+    "RFE (Request for Evidence) prediction"
+  ],
+  "benefits": [
+    "Know approval odds before filing",
+    "Auto-complete forms error-free",
+    "Reduce RFEs by 50%"
+  ]
+}

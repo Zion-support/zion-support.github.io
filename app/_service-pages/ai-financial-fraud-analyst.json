@@ -1,0 +1,28 @@
+{
+  "title": "AI Financial Fraud Detection & Prevention",
+  "description": "Real-time fraud detection for financial services with AI that analyzes transactions, identifies patterns, and prevents losses. Includes SAR filing, regulatory reporting, and case management.",
+  "basic": "$N/A/month",
+  "pro": "$N/A/month",
+  "enterprise": "$5999/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Financial Fraud Detection & Prevention - Zion Tech Group",
+    "description": "Real-time fraud detection for financial services with AI that analyzes transactions, identifies patterns, and prevents losses. Includes SAR filing, regulatory r",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-financial-fraud-analyst"
+    }
+  },
+  "features": [
+    "Real-time detection",
+    "Pattern analysis",
+    "SAR filing",
+    "Regulatory reporting",
+    "Case management"
+  ],
+  "benefits": [
+    "95% fraud detection rate",
+    "80% false positive reduction",
+    "Automated compliance"
+  ]
+}

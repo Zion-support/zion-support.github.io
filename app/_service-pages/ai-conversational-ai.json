@@ -1,0 +1,29 @@
+{
+  "title": "AI Conversational AI & Voice Agent Platform",
+  "description": "Build and deploy AI conversational agents for chat and voice. Handle customer service, sales, and internal support with natural language understanding.",
+  "basic": "$999/mo/month",
+  "pro": "$2,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Conversational AI & Voice Agent Platform - Zion Tech Group",
+    "description": "Build and deploy AI conversational agents for chat and voice. Handle customer service, sales, and internal support with natural language understanding.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-conversational-ai"
+    }
+  },
+  "features": [
+    "No-code conversational AI builder",
+    "Natural language understanding (NLU)",
+    "Voice agent with text-to-speech",
+    "Integration with CRM, knowledge base, ticketing",
+    "Multi-language support (50+ languages)"
+  ],
+  "benefits": [
+    "Handle 70% of inquiries without humans",
+    "24/7 availability in 50+ languages",
+    "Reduce support costs by 50%",
+    "Improve CSAT with instant responses"
+  ]
+}

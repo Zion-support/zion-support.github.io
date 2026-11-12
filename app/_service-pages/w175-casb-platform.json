@@ -1,0 +1,29 @@
+{
+  "title": "Cloud Access Security Broker (CASB)",
+  "description": "CASB for SaaS security: shadow IT discovery, DLP, access control, and threat detection across M365, Google Workspace, Salesforce, and 1000+ SaaS apps.",
+  "basic": "$599/mo/month",
+  "pro": "$1,799/mo/month",
+  "enterprise": "$5,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Cloud Access Security Broker (CASB) - Zion Tech Group",
+    "description": "CASB for SaaS security: shadow IT discovery, DLP, access control, and threat detection across M365, Google Workspace, Salesforce, and 1000+ SaaS apps.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w175-casb-platform"
+    }
+  },
+  "features": [
+    "Shadow IT discovery and risk scoring",
+    "SaaS DLP and data exposure detection",
+    "Inline and API-based access control",
+    "Threat detection and anomaly alerts",
+    "Session control and activity monitoring"
+  ],
+  "benefits": [
+    "Discover shadow IT before it causes breaches",
+    "DLP prevents sensitive data in SaaS apps",
+    "Access control enforces least privilege",
+    "Threat detection catches compromised accounts"
+  ]
+}

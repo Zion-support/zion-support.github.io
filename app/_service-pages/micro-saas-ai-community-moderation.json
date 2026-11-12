@@ -1,0 +1,29 @@
+{
+  "title": "AI Community Moderation & Engagement Platform",
+  "description": "AI-powered community moderation that detects toxicity, spam, and policy violations while boosting healthy engagement. For forums, Discord, Slack, and social.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Community Moderation & Engagement Platform - Zion Tech Group",
+    "description": "AI-powered community moderation that detects toxicity, spam, and policy violations while boosting healthy engagement. For forums, Discord, Slack, and social.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-ai-community-moderation"
+    }
+  },
+  "features": [
+    "Real-time toxicity and hate speech detection",
+    "Spam and bot detection",
+    "Policy violation flagging with context",
+    "Engagement scoring and trending content ID",
+    "Integration with Discord, Slack, Discourse, Reddit"
+  ],
+  "benefits": [
+    "Moderate communities 24/7 without human moderators",
+    "Detect toxic content with 98% accuracy",
+    "Boost healthy engagement by 40%",
+    "Scale community management as you grow"
+  ]
+}

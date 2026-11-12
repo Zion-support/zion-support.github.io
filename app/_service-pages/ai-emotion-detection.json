@@ -1,0 +1,29 @@
+{
+  "title": "AI Emotion Detection & Customer Experience Analytics",
+  "description": "AI that detects customer emotions in real-time across voice, chat, and video. Improve customer experience by understanding how customers feel at every interaction.",
+  "basic": "$799/mo/month",
+  "pro": "$2,499/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Emotion Detection & Customer Experience Analytics - Zion Tech Group",
+    "description": "AI that detects customer emotions in real-time across voice, chat, and video. Improve customer experience by understanding how customers feel at every interacti",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-emotion-detection"
+    }
+  },
+  "features": [
+    "Real-time emotion detection from voice (calls)",
+    "Text emotion analysis (chat, email, social)",
+    "Video emotion analysis (facial expressions)",
+    "Agent guidance based on detected emotions",
+    "Integration with contact center platforms"
+  ],
+  "benefits": [
+    "Understand customer emotions at every touchpoint",
+    "Improve CSAT by 20% with emotion-aware service",
+    "Train agents with real emotion data",
+    "Deliver empathetic customer experiences at scale"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "RBAC as a Service",
+  "description": "Role-based access control platform with granular permissions, audit trails, and SSO integration.",
+  "basic": "$249/mo/month",
+  "pro": "$799/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "RBAC as a Service - Zion Tech Group",
+    "description": "Role-based access control platform with granular permissions, audit trails, and SSO integration.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-rbac-service"
+    }
+  },
+  "features": [
+    "Granular permissions",
+    "Role hierarchies",
+    "Audit trails",
+    "SSO integration",
+    "Policy engine"
+  ],
+  "benefits": [
+    "Enterprise security",
+    "Drop-in integration",
+    "Compliance ready",
+    "Reduced dev time"
+  ]
+}

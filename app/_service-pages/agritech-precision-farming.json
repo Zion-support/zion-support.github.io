@@ -1,0 +1,29 @@
+{
+  "title": "Precision Agriculture Platform",
+  "description": "AI-powered precision farming with satellite imagery, soil analysis, crop health monitoring, yield prediction, and automated irrigation scheduling.",
+  "basic": "$N/A/month",
+  "pro": "$N/A/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Precision Agriculture Platform - Zion Tech Group",
+    "description": "AI-powered precision farming with satellite imagery, soil analysis, crop health monitoring, yield prediction, and automated irrigation scheduling.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/agritech-precision-farming"
+    }
+  },
+  "features": [
+    "Satellite imagery",
+    "Soil analysis",
+    "Crop health",
+    "Yield prediction",
+    "Irrigation scheduling"
+  ],
+  "benefits": [
+    "20% higher yields",
+    "30% less water",
+    "Pest early warning",
+    "Cost optimization"
+  ]
+}

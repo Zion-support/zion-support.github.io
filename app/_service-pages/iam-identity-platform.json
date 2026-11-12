@@ -1,0 +1,29 @@
+{
+  "title": "IAM & Identity Platform",
+  "description": "Cloud-native identity and access management with SSO, MFA, SCIM provisioning, and compliance reporting for enterprise.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "IAM & Identity Platform - Zion Tech Group",
+    "description": "Cloud-native identity and access management with SSO, MFA, SCIM provisioning, and compliance reporting for enterprise.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/iam-identity-platform"
+    }
+  },
+  "features": [
+    "SSO / SAML / OIDC",
+    "MFA / TOTP / WebAuthn",
+    "SCIM auto-provisioning",
+    "RBAC + ABAC policies",
+    "Audit & compliance logs"
+  ],
+  "benefits": [
+    "Reduce costs with iam & identity platform",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

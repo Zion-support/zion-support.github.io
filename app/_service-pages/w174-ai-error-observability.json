@@ -1,0 +1,29 @@
+{
+  "title": "AI Error & Observability Intelligence",
+  "description": "AI-powered error grouping, root cause analysis, and anomaly detection for production systems. Correlates errors across services, suggests fixes, and auto-creates incidents.",
+  "basic": "$399/mo/month",
+  "pro": "$1,199/mo/month",
+  "enterprise": "$3,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Error & Observability Intelligence - Zion Tech Group",
+    "description": "AI-powered error grouping, root cause analysis, and anomaly detection for production systems. Correlates errors across services, suggests fixes, and auto-create",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w174-ai-error-observability"
+    }
+  },
+  "features": [
+    "Smart error grouping (deduplication, fingerprinting)",
+    "AI root cause analysis across services",
+    "Anomaly detection on metrics and traces",
+    "Auto-incident creation with severity scoring",
+    "Fix suggestions from similar past incidents"
+  ],
+  "benefits": [
+    "Find root cause in minutes, not hours",
+    "AI suggests fixes from past incident patterns",
+    "Reduce alert noise by 90% with smart grouping",
+    "Auto-incident creation speeds response"
+  ]
+}

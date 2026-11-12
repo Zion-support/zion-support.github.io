@@ -1,0 +1,28 @@
+{
+  "title": "Multi-Channel Campaign Manager",
+  "description": "Orchestrate campaigns across email, SMS, social, push, and ads from one campaign studio: audience-segmentation engine, content-Calendar view, A/B-n testing, real-time ROI dashboard, attribution across 10 channels.",
+  "basic": "$99/mo/month",
+  "pro": "$299/mo/month",
+  "enterprise": "$999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Multi-Channel Campaign Manager - Zion Tech Group",
+    "description": "Orchestrate campaigns across email, SMS, social, push, and ads from one campaign studio: audience-segmentation engine, content-Calendar view, A/B-n testing, rea",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automation-multi-channel-campaign-manager"
+    }
+  },
+  "features": [
+    "Multi-channel campaign builder works across email, SMS, social, push, and ads",
+    "Audience segmentation engine — behavioural and demographic criteria enriched per user",
+    "Content calendaring view visualises live campaigns across every channel",
+    "Real-time ROI dashboard with cross-channel attribution across up to 10 touchpoints"
+  ],
+  "benefits": [
+    "Reduce costs with multi-channel campaign manager",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

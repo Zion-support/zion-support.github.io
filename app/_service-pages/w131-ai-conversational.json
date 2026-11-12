@@ -1,0 +1,30 @@
+{
+  "title": "Conversational AI Platform",
+  "description": "Build and deploy AI chatbots and voice assistants. Multi-channel support (web, mobile, WhatsApp, Slack) with NLU, dialogue management, and analytics.",
+  "basic": "$N/A/month",
+  "pro": "$3497/month",
+  "enterprise": "$8997/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Conversational AI Platform - Zion Tech Group",
+    "description": "Build and deploy AI chatbots and voice assistants. Multi-channel support (web, mobile, WhatsApp, Slack) with NLU, dialogue management, and analytics.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w131-ai-conversational"
+    }
+  },
+  "features": [
+    "Natural language understanding",
+    "Multi-channel deployment",
+    "Dialogue management",
+    "Voice assistant support",
+    "Analytics dashboard"
+  ],
+  "benefits": [
+    "Deploy in days, not months",
+    "80% query resolution",
+    "24/7 availability",
+    "Multi-language support",
+    "Seamless human handoff"
+  ]
+}

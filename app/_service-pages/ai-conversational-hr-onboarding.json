@@ -1,0 +1,29 @@
+{
+  "title": "AI Conversational HR & Employee Onboarding",
+  "description": "HR chatbot that handles new-employee paperwork, benefits enrollment, IT provisioning, I-9 verification, PTO requests, and policy questions — reducing HR admin workload by 90% and improving new-hire experience.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Conversational HR & Employee Onboarding - Zion Tech Group",
+    "description": "HR chatbot that handles new-employee paperwork, benefits enrollment, IT provisioning, I-9 verification, PTO requests, and policy questions — reducing HR admin w",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-conversational-hr-onboarding"
+    }
+  },
+  "features": [
+    "New-hire document collection & I-9",
+    "Benefits enrollment guided flow",
+    "IT provisioning (Okta, Slack, GitHub access)",
+    "Policy Q&A (handbook, PTO, leave)",
+    "People analytics dashboard for HR"
+  ],
+  "benefits": [
+    "Reduce costs with ai conversational hr & employee onboarding",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

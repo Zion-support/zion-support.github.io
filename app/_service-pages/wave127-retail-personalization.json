@@ -1,0 +1,29 @@
+{
+  "title": "Smart Retail Personalization Platform",
+  "description": "Omnichannel personalization engine powering real-time product recommendations, dynamic pricing, and demand-driven inventory optimization. Contextual bandits adapt to shopper behavior in-session, lifting conversion 15-30% and reducing overstock by 20%.",
+  "basic": "$N/A/month",
+  "pro": "$14997/month",
+  "enterprise": "$32997/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Smart Retail Personalization Platform - Zion Tech Group",
+    "description": "Omnichannel personalization engine powering real-time product recommendations, dynamic pricing, and demand-driven inventory optimization. Contextual bandits ada",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/wave127-retail-personalization"
+    }
+  },
+  "features": [
+    "Real-time product recommendations (contextual bandits)",
+    "Dynamic pricing & promo optimization",
+    "Demand forecasting & inventory balancing",
+    "Omnichannel session stitching (web, app, in-store)",
+    "Customer segmentation & cohort analytics"
+  ],
+  "benefits": [
+    "15-30% uplift in conversion rates",
+    "20% reduction in overstock & markdowns",
+    "Unified experience across every channel",
+    "GDPR/CCPA compliant personalization"
+  ]
+}

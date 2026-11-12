@@ -1,0 +1,28 @@
+{
+  "title": "AI Voice Cloning for Marketing",
+  "description": "Clone your brand spokesperson\\",
+  "basic": "$199/mo/month",
+  "pro": "$499/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Voice Cloning for Marketing - Zion Tech Group",
+    "description": "Clone your brand spokesperson\\",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-voice-cloning-marketing"
+    }
+  },
+  "features": [
+    "Voice clone with 5 min sample",
+    "Emotion & tone control",
+    "30+ language output",
+    "Bulk video rendering API"
+  ],
+  "benefits": [
+    "Reduce costs with ai voice cloning for marketing",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

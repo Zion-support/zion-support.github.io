@@ -1,0 +1,27 @@
+{
+  "title": "API Development & Integration",
+  "description": "Design, build, and manage high-performance APIs that connect systems, enable automation, and power digital products at enterprise scale.",
+  "basic": "$2,999/mo/month",
+  "pro": "$Custom/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "API Development & Integration - Zion Tech Group",
+    "description": "Design, build, and manage high-performance APIs that connect systems, enable automation, and power digital products at enterprise scale.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/api-development"
+    }
+  },
+  "features": [
+    "Enterprise-grade implementation",
+    "24/7 monitoring",
+    "Compliance-ready"
+  ],
+  "benefits": [
+    "Reduce costs with api development & integration",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

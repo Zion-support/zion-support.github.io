@@ -1,0 +1,28 @@
+{
+  "title": "Intelligent Blob Storage Tiering",
+  "description": "Auto lifecycle tiering hot→cool→archive; S3-compatible API; point-in-time restore; cross-region replication; cost dashboard.",
+  "basic": "$99/mo/month",
+  "pro": "$349/mo/month",
+  "enterprise": "$1,299/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Intelligent Blob Storage Tiering - Zion Tech Group",
+    "description": "Auto lifecycle tiering hot→cool→archive; S3-compatible API; point-in-time restore; cross-region replication; cost dashboard.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cloud-blob-intelligent-tiering"
+    }
+  },
+  "features": [
+    "S3-compatible API (v4 signature)",
+    "Hot→Cool→Archive auto-tier policy",
+    "Point-in-time restore (last 90 days)",
+    "Cross-region async replication + failover"
+  ],
+  "benefits": [
+    "Reduce costs with intelligent blob storage tiering",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

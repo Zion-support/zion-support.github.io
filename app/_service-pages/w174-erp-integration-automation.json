@@ -1,0 +1,29 @@
+{
+  "title": "ERP Integration & Automation",
+  "description": "Automate ERP workflows and integrations: SAP, Oracle, NetSuite, and Dynamics. Data sync, workflow automation, and custom module development.",
+  "basic": "$999/mo/month",
+  "pro": "$2,999/mo/month",
+  "enterprise": "$9,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "ERP Integration & Automation - Zion Tech Group",
+    "description": "Automate ERP workflows and integrations: SAP, Oracle, NetSuite, and Dynamics. Data sync, workflow automation, and custom module development.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w174-erp-integration-automation"
+    }
+  },
+  "features": [
+    "SAP, Oracle, NetSuite, Dynamics integration",
+    "Bidirectional data synchronization",
+    "Business workflow automation (AP, AR, PO)",
+    "Custom module and extension development",
+    "Legacy ERP modernization and API enablement"
+  ],
+  "benefits": [
+    "Integrate ERP with modern cloud apps",
+    "Automate manual ERP workflows",
+    "Real-time sync eliminates batch delays",
+    "Legacy ERP API enablement for digital transformation"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "Cloud Data Lake Platform",
+  "description": "Managed data lake solution on AWS S3, Azure Data Lake, or GCP Cloud Storage. Schema-on-read, data catalog, governance, and integration with analytics engines.",
+  "basic": "$999/mo/month",
+  "pro": "$2,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Cloud Data Lake Platform - Zion Tech Group",
+    "description": "Managed data lake solution on AWS S3, Azure Data Lake, or GCP Cloud Storage. Schema-on-read, data catalog, governance, and integration with analytics engines.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cloud-data-lake-platform"
+    }
+  },
+  "features": [
+    "Multi-cloud data lake deployment",
+    "Schema-on-read support",
+    "Automated data catalog",
+    "Data governance and lineage",
+    "Integration with Spark, Presto, Athena"
+  ],
+  "benefits": [
+    "Centralize all data in one place",
+    "Reduce data lake management overhead",
+    "Enable self-service analytics",
+    "Ensure data governance"
+  ]
+}

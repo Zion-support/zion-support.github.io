@@ -1,0 +1,29 @@
+{
+  "title": "Cloud-Native Storage Optimizer",
+  "description": "Automated storage tiering, snapshot management, and cost optimization for AWS S3, EBS, Azure Blob, GCP Cloud Storage.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Cloud-Native Storage Optimizer - Zion Tech Group",
+    "description": "Automated storage tiering, snapshot management, and cost optimization for AWS S3, EBS, Azure Blob, GCP Cloud Storage.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-cloud-native-storage"
+    }
+  },
+  "features": [
+    "Lifecycle policy automation",
+    "Intelligent tiering (Intelligent-Tiering, Glacier)",
+    "Snapshot retention policies",
+    "Cost anomaly detection",
+    "Capacity forecasting"
+  ],
+  "benefits": [
+    "Reduce costs with cloud-native storage optimizer",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

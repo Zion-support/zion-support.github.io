@@ -1,0 +1,29 @@
+{
+  "title": "Conversational Enterprise Search",
+  "description": "AI-powered search that understands natural language questions. Searches across documents, databases, emails, and apps to find and synthesize answers.",
+  "basic": "$N/A/month",
+  "pro": "$N/A/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Conversational Enterprise Search - Zion Tech Group",
+    "description": "AI-powered search that understands natural language questions. Searches across documents, databases, emails, and apps to find and synthesize answers.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-conversational-search"
+    }
+  },
+  "features": [
+    "Natural language search",
+    "Multi-source search",
+    "Answer synthesis",
+    "Source citations",
+    "Personalized results"
+  ],
+  "benefits": [
+    "100x faster information finding",
+    "Find anything instantly",
+    "Answer synthesis",
+    "Full source citations"
+  ]
+}

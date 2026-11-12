@@ -1,0 +1,29 @@
+{
+  "title": "AI Legal Contract NLP Analyzer & Risk Detector",
+  "description": "AI-powered contract analysis that extracts clauses, identifies risks, compares against templates, and flags non-standard language.",
+  "basic": "$299/mo/month",
+  "pro": "$799/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Legal Contract NLP Analyzer & Risk Detector - Zion Tech Group",
+    "description": "AI-powered contract analysis that extracts clauses, identifies risks, compares against templates, and flags non-standard language.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-legal-contract-nlp-analyzer"
+    }
+  },
+  "features": [
+    "Automated clause extraction and classification",
+    "Risk scoring for each contract section",
+    "Template comparison and deviation detection",
+    "Obligation and deadline extraction",
+    "Multi-language contract support"
+  ],
+  "benefits": [
+    "Reduce contract review time by 80%",
+    "Catch risky clauses before signing",
+    "Standardize contract language",
+    "Ensure regulatory compliance"
+  ]
+}

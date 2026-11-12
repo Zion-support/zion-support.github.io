@@ -1,0 +1,29 @@
+{
+  "title": "Edge Computing Platform",
+  "description": "Deploy microservices at the network edge for sub-10ms latency, offline operation, and data sovereignty compliance.",
+  "basic": "$99/mo/month",
+  "pro": "$349/mo/month",
+  "enterprise": "$1,299/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Edge Computing Platform - Zion Tech Group",
+    "description": "Deploy microservices at the network edge for sub-10ms latency, offline operation, and data sovereignty compliance.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/edge-computing-platform"
+    }
+  },
+  "features": [
+    "Global edge network",
+    "Container-based deploys",
+    "Offline-first sync",
+    "Data residency controls",
+    "Edge ML inference"
+  ],
+  "benefits": [
+    "Reduce costs with edge computing platform",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

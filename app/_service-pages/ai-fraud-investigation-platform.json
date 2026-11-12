@@ -1,0 +1,29 @@
+{
+  "title": "AI Fraud Investigation Platform",
+  "description": "Automate fraud investigation with AI. Link analysis, pattern detection, evidence compilation, and case management for financial institutions and insurance companies.",
+  "basic": "$2,499/mo/month",
+  "pro": "$7,499/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Fraud Investigation Platform - Zion Tech Group",
+    "description": "Automate fraud investigation with AI. Link analysis, pattern detection, evidence compilation, and case management for financial institutions and insurance compa",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-fraud-investigation-platform"
+    }
+  },
+  "features": [
+    "Link analysis and network visualization",
+    "Transaction pattern detection",
+    "Evidence auto-compilation",
+    "Case management workflow",
+    "SAR/STR report generation"
+  ],
+  "benefits": [
+    "Reduce investigation time by 70%",
+    "Detect complex fraud schemes",
+    "Automate regulatory reporting",
+    "Improve fraud detection rates"
+  ]
+}

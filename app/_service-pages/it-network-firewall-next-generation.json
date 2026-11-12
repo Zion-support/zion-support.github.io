@@ -1,0 +1,28 @@
+{
+  "title": "Next-Generation Firewall",
+  "description": "Layer-7 NGFW with IDS/IPS, deep packet inspection, SSL decryption, geo-IP block, zero-day threat feed, and cloud-firewall auto-sync.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Next-Generation Firewall - Zion Tech Group",
+    "description": "Layer-7 NGFW with IDS/IPS, deep packet inspection, SSL decryption, geo-IP block, zero-day threat feed, and cloud-firewall auto-sync.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-network-firewall-next-generation"
+    }
+  },
+  "features": [
+    "Layer-7 IDS/IPS with Suricata rules",
+    "Deep packet inspection + SSL/TLS decryption",
+    "Threat intelligence feed (10K+ IOC feed)",
+    "Cloud firewall auto-sync (AWS/Azure/GCP)"
+  ],
+  "benefits": [
+    "Reduce costs with next-generation firewall",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

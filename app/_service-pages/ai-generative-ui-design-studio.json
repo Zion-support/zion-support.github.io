@@ -1,0 +1,29 @@
+{
+  "title": "AI Generative UI Design Studio",
+  "description": "Generate production-ready UI components and full page layouts from natural language descriptions. Supports React, Vue, and Angular output with Tailwind CSS styling. Integrates with Figma for seamless designer-developer handoff.",
+  "basic": "$149/mo/month",
+  "pro": "$499/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Generative UI Design Studio - Zion Tech Group",
+    "description": "Generate production-ready UI components and full page layouts from natural language descriptions. Supports React, Vue, and Angular output with Tailwind CSS styl",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-generative-ui-design-studio"
+    }
+  },
+  "features": [
+    "Natural language to UI component generation",
+    "Multi-framework support (React, Vue, Angular)",
+    "Tailwind CSS output with custom themes",
+    "Figma plugin for bidirectional sync",
+    "Design system consistency enforcement"
+  ],
+  "benefits": [
+    "10x faster UI prototyping",
+    "Consistent design system adherence",
+    "Reduced designer-developer handoff time",
+    "Auto-accessible components"
+  ]
+}

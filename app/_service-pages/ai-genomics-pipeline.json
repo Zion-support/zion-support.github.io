@@ -1,0 +1,28 @@
+{
+  "title": "AI Genomics Analysis & Precision Medicine Platform",
+  "description": "Process genomic data at scale: variant calling, pharmacogenomics, disease risk scoring, and treatment recommendations. HIPAA-compliant, FDA guidance-aligned pipeline.",
+  "basic": "$499/month",
+  "pro": "$1499/month",
+  "enterprise": "$4999/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Genomics Analysis & Precision Medicine Platform - Zion Tech Group",
+    "description": "Process genomic data at scale: variant calling, pharmacogenomics, disease risk scoring, and treatment recommendations. HIPAA-compliant, FDA guidance-aligned pip",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-genomics-pipeline"
+    }
+  },
+  "features": [
+    "Whole genome sequencing analysis",
+    "Pharmacogenomics scoring",
+    "Polygenic disease risk scoring",
+    "Treatment response prediction",
+    "HIPAA-compliant cloud pipeline"
+  ],
+  "benefits": [
+    "Process genomes in hours",
+    "Personalize treatment plans",
+    "Identify disease risk early"
+  ]
+}

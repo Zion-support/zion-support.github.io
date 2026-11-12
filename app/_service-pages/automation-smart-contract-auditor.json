@@ -1,0 +1,29 @@
+{
+  "title": "Smart Contract Security Auditor",
+  "description": "AI-powered smart contract security analysis. Detect vulnerabilities, gas optimizations, and compliance issues across Solidity, Rust, and Move.",
+  "basic": "$399/mo/month",
+  "pro": "$1,199/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Smart Contract Security Auditor - Zion Tech Group",
+    "description": "AI-powered smart contract security analysis. Detect vulnerabilities, gas optimizations, and compliance issues across Solidity, Rust, and Move.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automation-smart-contract-auditor"
+    }
+  },
+  "features": [
+    "Vulnerability detection (reentrancy, overflow, access control)",
+    "Gas optimization suggestions",
+    "Compliance checking (ERC standards)",
+    "Integration with Hardhat, Foundry",
+    "CI/CD pipeline integration"
+  ],
+  "benefits": [
+    "Prevent costly exploits",
+    "Optimize gas costs",
+    "Ensure compliance",
+    "Automate security reviews"
+  ]
+}

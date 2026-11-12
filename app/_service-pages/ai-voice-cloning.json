@@ -1,0 +1,29 @@
+{
+  "title": "AI Voice Cloning & Synthesis",
+  "description": "Clone any voice with 30 seconds of audio for voiceovers, podcasts, audiobooks, and interactive voice applications.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Voice Cloning & Synthesis - Zion Tech Group",
+    "description": "Clone any voice with 30 seconds of audio for voiceovers, podcasts, audiobooks, and interactive voice applications.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-voice-cloning"
+    }
+  },
+  "features": [
+    "Voice cloning from 30s audio sample",
+    "Emotion and tone control — adjust pitch, rate, emphasis",
+    "Real-time audio streaming for voice assistants",
+    "Multi-speaker conversation generation",
+    "Studio-quality audio with noise reduction"
+  ],
+  "benefits": [
+    "Reduce costs with ai voice cloning & synthesis",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "Meeting AI Assistant (Record, Transcribe, Summarize)",
+  "description": "Automatic meeting assistant that records, transcribes with speaker ID, generates action items, decisions, and summaries; integrates with Zoom, Teams, Google Meet.",
+  "basic": "$99/mo/month",
+  "pro": "$299/mo/month",
+  "enterprise": "$999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Meeting AI Assistant (Record, Transcribe, Summarize) - Zion Tech Group",
+    "description": "Automatic meeting assistant that records, transcribes with speaker ID, generates action items, decisions, and summaries; integrates with Zoom, Teams, Google Mee",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/meeting-ai-assistant"
+    }
+  },
+  "features": [
+    "Cloud recording & real-time transcription",
+    "Speaker identification & diarization",
+    "Action item extraction with assignees",
+    "Decision log & key quote highlights",
+    "Sync to Notion/Confluence/ClickUp"
+  ],
+  "benefits": [
+    "Reduce costs with meeting ai assistant (record, transcribe, summarize)",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

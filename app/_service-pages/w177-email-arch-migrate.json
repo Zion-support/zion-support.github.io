@@ -1,0 +1,29 @@
+{
+  "title": "Email Archive and Migration",
+  "description": "Email archive and migration: PST import, journal archive, cross-platform migration, compliance retention.",
+  "basic": "$2,999/month",
+  "pro": "$9,999/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Email Archive and Migration - Zion Tech Group",
+    "description": "Email archive and migration: PST import, journal archive, cross-platform migration, compliance retention.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w177-email-arch-migrate"
+    }
+  },
+  "features": [
+    "PST import and export",
+    "Journal archive migration",
+    "Cross-platform migration (Exchange",
+    "Google",
+    "Zoho)"
+  ],
+  "benefits": [
+    "Migrate email without data loss",
+    "Compliance retention enforced automatically",
+    "eDiscovery search for legal holds",
+    "Deduplication reduces storage costs"
+  ]
+}

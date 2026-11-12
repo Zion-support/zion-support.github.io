@@ -1,0 +1,29 @@
+{
+  "title": "AI Security Awareness Training Platform",
+  "description": "AI-powered cybersecurity awareness training with personalized learning paths, phishing simulations, and behavior analytics. Reduce human-related security incidents by 70%.",
+  "basic": "$199/mo/month",
+  "pro": "$599/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Security Awareness Training Platform - Zion Tech Group",
+    "description": "AI-powered cybersecurity awareness training with personalized learning paths, phishing simulations, and behavior analytics. Reduce human-related security incide",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cybersecurity-security-awareness-training"
+    }
+  },
+  "features": [
+    "Personalized training paths",
+    "AI-generated phishing simulations",
+    "Behavior analytics and risk scoring",
+    "Gamification and leaderboards",
+    "Integration with HRIS and email"
+  ],
+  "benefits": [
+    "Reduce phishing click rates by 70%",
+    "Personalized training for each employee",
+    "Automate compliance tracking",
+    "Measure security culture improvement"
+  ]
+}

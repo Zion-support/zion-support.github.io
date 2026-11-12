@@ -1,0 +1,29 @@
+{
+  "title": "AI Content Generation",
+  "description": "Generate high-quality blog posts, social media content, ad copy, product descriptions, and email campaigns powered by advanced LLMs.",
+  "basic": "$49/mo/month",
+  "pro": "$149/mo/month",
+  "enterprise": "$499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Content Generation - Zion Tech Group",
+    "description": "Generate high-quality blog posts, social media content, ad copy, product descriptions, and email campaigns powered by advanced LLMs.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-content-generation"
+    }
+  },
+  "features": [
+    "Blog post & article generation",
+    "Social media content creation",
+    "SEO-optimized copywriting",
+    "Ad copy & landing page text",
+    "Brand voice customization"
+  ],
+  "benefits": [
+    "Reduce costs with ai content generation",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

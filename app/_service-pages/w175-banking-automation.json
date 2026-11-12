@@ -1,0 +1,29 @@
+{
+  "title": "Banking Process Automation",
+  "description": "Automate banking operations: loan origination, KYC/AML, account opening, transaction monitoring, and regulatory reporting. SOX and OCC compliant.",
+  "basic": "$999/mo/month",
+  "pro": "$2,999/mo/month",
+  "enterprise": "$9,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Banking Process Automation - Zion Tech Group",
+    "description": "Automate banking operations: loan origination, KYC/AML, account opening, transaction monitoring, and regulatory reporting. SOX and OCC compliant.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w175-banking-automation"
+    }
+  },
+  "features": [
+    "Loan origination workflow automation",
+    "KYC/AML screening and monitoring",
+    "Account opening and onboarding",
+    "Transaction monitoring and flagging",
+    "Regulatory reporting automation"
+  ],
+  "benefits": [
+    "Reduce loan origination time by 50%",
+    "KYC/AML automation ensures compliance",
+    "Transaction monitoring catches suspicious activity",
+    "Regulatory reporting on time, every time"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "StockPulse — Market Intelligence",
+  "description": "Real-time market intelligence for investors and analysts: price alerts, pattern detection, earnings analysis, and portfolio tracking with AI insights.",
+  "basic": "$19/mo/month",
+  "pro": "$59/mo/month",
+  "enterprise": "$199/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "StockPulse — Market Intelligence - Zion Tech Group",
+    "description": "Real-time market intelligence for investors and analysts: price alerts, pattern detection, earnings analysis, and portfolio tracking with AI insights.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w176-stockpulse"
+    }
+  },
+  "features": [
+    "Real-time price alerts and triggers",
+    "Technical pattern detection (AI-powered)",
+    "Earnings analysis and surprise tracking",
+    "Portfolio tracking with AI commentary",
+    "Sector and market trend analysis"
+  ],
+  "benefits": [
+    "AI patterns catch opportunities humans miss",
+    "Earnings analysis saves research time",
+    "News sentiment explains price moves",
+    "Portfolio AI commentary for decision support"
+  ]
+}

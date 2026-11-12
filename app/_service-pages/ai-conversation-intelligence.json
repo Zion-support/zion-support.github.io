@@ -1,0 +1,29 @@
+{
+  "title": "Conversation Intelligence & Call Coach",
+  "description": "Call transcript analysis: talk-listen ratio, sentiment, intent signals, competitor mentions, pricing cues, action item extraction, CRM autofill, team leaderboard coaching.",
+  "basic": "$199/mo/month",
+  "pro": "$599/mo/month",
+  "enterprise": "$1,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Conversation Intelligence & Call Coach - Zion Tech Group",
+    "description": "Call transcript analysis: talk-listen ratio, sentiment, intent signals, competitor mentions, pricing cues, action item extraction, CRM autofill, team leaderboar",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-conversation-intelligence"
+    }
+  },
+  "features": [
+    "Per-call sentiment + intent heatmap",
+    "Talk-listen ratio scoring",
+    "CRM auto-logging + deal stage update",
+    "Competitor mention + pricing cue detection",
+    "Personalized rep coaching tip per call"
+  ],
+  "benefits": [
+    "Reduce costs with conversation intelligence & call coach",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

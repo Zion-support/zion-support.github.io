@@ -1,0 +1,28 @@
+{
+  "title": "AI Fashion Trend Forecasting Platform",
+  "description": "Predict fashion trends 12-18 months ahead: social media analysis, runway data, color palette prediction, and demand forecasting per SKU. Used by 200+ brands.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1799/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Fashion Trend Forecasting Platform - Zion Tech Group",
+    "description": "Predict fashion trends 12-18 months ahead: social media analysis, runway data, color palette prediction, and demand forecasting per SKU. Used by 200+ brands.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-fashion-trend-forecaster"
+    }
+  },
+  "features": [
+    "Social media trend detection",
+    "Runway & street style analysis",
+    "Color palette prediction",
+    "SKU-level demand forecasting",
+    "Regional trend mapping"
+  ],
+  "benefits": [
+    "Predict trends 12 months ahead",
+    "Reduce unsold inventory by 35%",
+    "Stay ahead of competitors"
+  ]
+}

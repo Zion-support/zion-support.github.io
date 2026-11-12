@@ -1,0 +1,28 @@
+{
+  "title": "Rx Prior-Auth Automation",
+  "description": "Automated prior authorization: eligibility check formulary check code auto-populate payer portal submission clinical note attach outcome tracking denial tracking remittance per payer analytics.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Rx Prior-Auth Automation - Zion Tech Group",
+    "description": "Automated prior authorization: eligibility check formulary check code auto-populate payer portal submission clinical note attach outcome tracking denial trackin",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-rx-prior-auth"
+    }
+  },
+  "features": [
+    "Eligibility + formulary real-time check",
+    "Payer portal auto-submit clinical note attach",
+    "Denial tracking + rework automation",
+    "Analytics per payer approval time + rate"
+  ],
+  "benefits": [
+    "Reduce costs with rx prior-auth automation",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "Zero Trust Network Architecture",
+  "description": "Design and implement a zero trust security model tailored to your infrastructure. Identity-based access controls, microsegmentation, continuous verification, and encrypted service meshes — eliminating implicit trust and reducing blast radius by 95%.",
+  "basic": "$N/A/month",
+  "pro": "$24997/month",
+  "enterprise": "$49997/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Zero Trust Network Architecture - Zion Tech Group",
+    "description": "Design and implement a zero trust security model tailored to your infrastructure. Identity-based access controls, microsegmentation, continuous verification, an",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/wave126-zero-trust-architecture"
+    }
+  },
+  "features": [
+    "Identity-based access control implementation",
+    "Network microsegmentation design & deployment",
+    "Continuous device posture verification",
+    "Encrypted service mesh (Istio / Linkerd)",
+    "Least-privilege access policy automation"
+  ],
+  "benefits": [
+    "95% reduction in breach blast radius",
+    "Eliminate implicit trust — verify everything, always",
+    "Enable secure remote work without VPN complexity",
+    "Meet federal zero trust mandates (CISA, OMB M-22-09)"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "Supply Chain Management Platform",
+  "description": "End-to-end supply chain orchestration with AI demand forecasting, multi-modal route optimization, supplier risk scoring, and real-time disruption response.",
+  "basic": "$99/mo/month",
+  "pro": "$299/mo/month",
+  "enterprise": "$999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Supply Chain Management Platform - Zion Tech Group",
+    "description": "End-to-end supply chain orchestration with AI demand forecasting, multi-modal route optimization, supplier risk scoring, and real-time disruption response.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/supply-chain-management-service"
+    }
+  },
+  "features": [
+    "AI-driven demand forecasting",
+    "Multi-modal route optimization",
+    "Supplier risk intelligence & monitoring",
+    "Automated disruption response playbooks",
+    "Warehouse operations AI optimization"
+  ],
+  "benefits": [
+    "Reduce costs with supply chain management platform",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

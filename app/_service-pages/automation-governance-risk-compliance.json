@@ -1,0 +1,29 @@
+{
+  "title": "GRC Automation Platform",
+  "description": "Automate governance, risk, and compliance. Policy management, risk assessment, control testing, and regulatory reporting in a single platform.",
+  "basic": "$999/mo/month",
+  "pro": "$2,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "GRC Automation Platform - Zion Tech Group",
+    "description": "Automate governance, risk, and compliance. Policy management, risk assessment, control testing, and regulatory reporting in a single platform.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automation-governance-risk-compliance"
+    }
+  },
+  "features": [
+    "Policy management and distribution",
+    "Risk assessment automation",
+    "Control testing and evidence collection",
+    "Regulatory reporting (SOX, GDPR, HIPAA)",
+    "Integration with ServiceNow, SAP"
+  ],
+  "benefits": [
+    "Reduce compliance costs by 50%",
+    "Automate audit preparation",
+    "Real-time risk visibility",
+    "Meet regulatory deadlines"
+  ]
+}

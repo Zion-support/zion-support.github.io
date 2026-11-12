@@ -1,0 +1,29 @@
+{
+  "title": "Ai Bug To Issue Router",
+  "description": "AI Bug To Issue Router — enterprise-grade solution with AI-powered automation, real-time analytics, and seamless integration. Built for scale with security-first architecture.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Ai Bug To Issue Router - Zion Tech Group",
+    "description": "AI Bug To Issue Router — enterprise-grade solution with AI-powered automation, real-time analytics, and seamless integration. Built for scale with security-firs",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-bug-to-issue-router"
+    }
+  },
+  "features": [
+    "AI-powered bug to issue router automation",
+    "Real-time analytics and monitoring",
+    "Enterprise-grade security (SOC2, HIPAA ready)",
+    "REST API and webhooks for integrations",
+    "Multi-tenant SaaS architecture"
+  ],
+  "benefits": [
+    "Reduce manual effort in bug to issue router by 80%",
+    "Make data-driven decisions in real-time",
+    "Scale without adding headcount",
+    "Enterprise security out of the box"
+  ]
+}

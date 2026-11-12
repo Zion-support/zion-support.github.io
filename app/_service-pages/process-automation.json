@@ -1,0 +1,28 @@
+{
+  "title": "Process Automation & BPA Suite",
+  "description": "Business process automation platform: map, model, and automate end-to-end workflows. BPMN modelling, RPA bots, approval gates, audit trails, and real-time KPI dashboards.",
+  "basic": "$99/mo/month",
+  "pro": "$299/mo/month",
+  "enterprise": "$999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Process Automation & BPA Suite - Zion Tech Group",
+    "description": "Business process automation platform: map, model, and automate end-to-end workflows. BPMN modelling, RPA bots, approval gates, audit trails, and real-time KPI d",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/process-automation"
+    }
+  },
+  "features": [
+    "Drag-and-drop BPMN process designer",
+    "RPA bots for legacy app interactions",
+    "Approval routing + SLA tracking",
+    "Complete audit trail + compliance logs"
+  ],
+  "benefits": [
+    "Reduce costs with process automation & bpa suite",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

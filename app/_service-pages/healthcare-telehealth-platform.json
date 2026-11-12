@@ -1,0 +1,28 @@
+{
+  "title": "Healthcare Telehealth Platform",
+  "description": "HIPAA-compliant telehealth platform with HD video consultations, EHR integration, remote patient monitoring, and automated appointment scheduling.",
+  "basic": "$399/mo/month",
+  "pro": "$999/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Healthcare Telehealth Platform - Zion Tech Group",
+    "description": "HIPAA-compliant telehealth platform with HD video consultations, EHR integration, remote patient monitoring, and automated appointment scheduling.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/healthcare-telehealth-platform"
+    }
+  },
+  "features": [
+    "HD video consultations",
+    "EHR/EMR integration (Epic, Cerner)",
+    "Remote patient monitoring",
+    "Automated scheduling & reminders",
+    "HIPAA-compliant messaging"
+  ],
+  "benefits": [
+    "Increase patient reach by 300%",
+    "Reduce no-shows by 45%",
+    "Full HIPAA compliance"
+  ]
+}

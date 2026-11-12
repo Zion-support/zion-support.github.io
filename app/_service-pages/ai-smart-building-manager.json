@@ -1,0 +1,28 @@
+{
+  "title": "AI Smart Building Management System",
+  "description": "Optimize commercial building operations: HVAC scheduling, lighting control, occupancy tracking, air quality monitoring, energy management. Reduces costs by 25%.",
+  "basic": "$199/per building/month",
+  "pro": "$499/per building/month",
+  "enterprise": "$1499/per building/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Smart Building Management System - Zion Tech Group",
+    "description": "Optimize commercial building operations: HVAC scheduling, lighting control, occupancy tracking, air quality monitoring, energy management. Reduces costs by 25%.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-smart-building-manager"
+    }
+  },
+  "features": [
+    "AI HVAC optimization",
+    "Occupancy-based lighting control",
+    "Indoor air quality monitoring",
+    "Predictive elevator maintenance",
+    "Tenant comfort scoring"
+  ],
+  "benefits": [
+    "Reduce operating costs by 25%",
+    "Improve tenant satisfaction by 30%",
+    "Carbon footprint tracking"
+  ]
+}

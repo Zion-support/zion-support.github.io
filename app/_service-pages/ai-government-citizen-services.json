@@ -1,0 +1,29 @@
+{
+  "title": "AI Citizen Services Platform",
+  "description": "AI-powered citizen services for government agencies. Chatbots, form processing, case management, and automated eligibility determination.",
+  "basic": "$2,999/mo/month",
+  "pro": "$8,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Citizen Services Platform - Zion Tech Group",
+    "description": "AI-powered citizen services for government agencies. Chatbots, form processing, case management, and automated eligibility determination.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-government-citizen-services"
+    }
+  },
+  "features": [
+    "Citizen service chatbots",
+    "Form processing automation",
+    "Case management",
+    "Eligibility determination",
+    "Multi-language support"
+  ],
+  "benefits": [
+    "Improve citizen experience",
+    "Reduce processing times by 70%",
+    "Increase accessibility",
+    "Reduce operational costs"
+  ]
+}

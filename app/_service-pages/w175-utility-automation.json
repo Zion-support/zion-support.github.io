@@ -1,0 +1,29 @@
+{
+  "title": "Utility & Energy Operations Automation",
+  "description": "Smart grid and utility automation: meter data management, outage detection, billing, and demand response coordination. AMI/SCADA integration.",
+  "basic": "$799/mo/month",
+  "pro": "$2,499/mo/month",
+  "enterprise": "$7,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Utility & Energy Operations Automation - Zion Tech Group",
+    "description": "Smart grid and utility automation: meter data management, outage detection, billing, and demand response coordination. AMI/SCADA integration.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w175-utility-automation"
+    }
+  },
+  "features": [
+    "AMI meter data collection and management",
+    "Outage detection and restoration tracking",
+    "Billing and rate calculation automation",
+    "Demand response event coordination",
+    "Energy theft detection"
+  ],
+  "benefits": [
+    "Meter data automated from AMI systems",
+    "Outage detection in seconds, not hours",
+    "Billing accuracy with automated rate calculations",
+    "Demand response reduces peak load costs"
+  ]
+}

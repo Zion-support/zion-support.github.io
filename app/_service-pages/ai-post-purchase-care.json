@@ -1,0 +1,29 @@
+{
+  "title": "AI Post-Purchase Customer Care Agent",
+  "description": "Proactive post-purchase support agent that monitors order status, delivery delays, and product issues — resolving 80% of cases before human escalation.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Post-Purchase Customer Care Agent - Zion Tech Group",
+    "description": "Proactive post-purchase support agent that monitors order status, delivery delays, and product issues — resolving 80% of cases before human escalation.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-post-purchase-care"
+    }
+  },
+  "features": [
+    "Order and shipment tracking",
+    "Proactive outreach on delays",
+    "RMA and return automation",
+    "Self-service resolution portal",
+    "SLA monitoring and alerting"
+  ],
+  "benefits": [
+    "Reduce costs with ai post-purchase customer care agent",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

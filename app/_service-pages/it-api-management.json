@@ -1,0 +1,29 @@
+{
+  "title": "API Management Platform & Developer Portal",
+  "description": "Comprehensive API management - gateway, developer portal, monetization, analytics, and lifecycle management for enterprise API programs.",
+  "basic": "$99/mo/month",
+  "pro": "$349/mo/month",
+  "enterprise": "$1,299/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "API Management Platform & Developer Portal - Zion Tech Group",
+    "description": "Comprehensive API management - gateway, developer portal, monetization, analytics, and lifecycle management for enterprise API programs.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-api-management"
+    }
+  },
+  "features": [
+    "API gateway with rate limiting",
+    "Developer portal with docs and SDKs",
+    "Lifecycle management",
+    "Monetization",
+    "Real-time analytics"
+  ],
+  "benefits": [
+    "Reduce costs with api management platform & developer portal",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

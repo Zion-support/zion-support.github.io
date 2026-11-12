@@ -1,0 +1,29 @@
+{
+  "title": "Feature Flag & Rollout Platform",
+  "description": "Manage feature flags, gradual rollouts, and A/B tests with environment management and audit logs.",
+  "basic": "$199/mo/month",
+  "pro": "$699/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Feature Flag & Rollout Platform - Zion Tech Group",
+    "description": "Manage feature flags, gradual rollouts, and A/B tests with environment management and audit logs.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-feature-flag-platform"
+    }
+  },
+  "features": [
+    "Feature flags",
+    "Gradual rollouts",
+    "A/B testing",
+    "Environment management",
+    "Audit logs"
+  ],
+  "benefits": [
+    "Safer deployments",
+    "Instant rollback",
+    "Data-driven rollouts",
+    "Cross-platform SDKs"
+  ]
+}

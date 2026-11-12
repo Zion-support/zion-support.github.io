@@ -1,0 +1,29 @@
+{
+  "title": "AI Sign Language Translation & Accessibility",
+  "description": "Real-time AI sign language translation for video calls, websites, and public spaces. Supports ASL, BSL, and 20+ sign languages. Make your content accessible to the Deaf community.",
+  "basic": "$299/mo/month",
+  "pro": "$799/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Sign Language Translation & Accessibility - Zion Tech Group",
+    "description": "Real-time AI sign language translation for video calls, websites, and public spaces. Supports ASL, BSL, and 20+ sign languages. Make your content accessible to ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-ai-sign-language"
+    }
+  },
+  "features": [
+    "Real-time sign language recognition",
+    "Text/gesture to sign language avatar",
+    "Video call sign language interpretation",
+    "Website accessibility overlay",
+    "Support for 20+ sign languages"
+  ],
+  "benefits": [
+    "Make content accessible to 70M+ Deaf worldwide",
+    "Real-time translation for video calls",
+    "Comply with ADA accessibility requirements",
+    "Support 20+ sign languages globally"
+  ]
+}

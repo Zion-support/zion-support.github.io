@@ -1,0 +1,30 @@
+{
+  "title": "Manufacturing Digital Twin Platform",
+  "description": "Create digital twins of manufacturing processes. Real-time simulation, predictive maintenance, quality optimization, and production planning with AI-driven insights.",
+  "basic": "$N/A/month",
+  "pro": "$N/A/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Manufacturing Digital Twin Platform - Zion Tech Group",
+    "description": "Create digital twins of manufacturing processes. Real-time simulation, predictive maintenance, quality optimization, and production planning with AI-driven insi",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/manufacturing-digital-twin"
+    }
+  },
+  "features": [
+    "Real-time simulation",
+    "Predictive maintenance",
+    "Quality optimization",
+    "Production planning",
+    "Energy optimization"
+  ],
+  "benefits": [
+    "30% less unplanned downtime",
+    "15% quality improvement",
+    "Energy optimization",
+    "Faster production planning",
+    "Risk-free testing"
+  ]
+}

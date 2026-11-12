@@ -1,0 +1,29 @@
+{
+  "title": "Development Environment Automation",
+  "description": "Automate dev environment setup: one-command bootstrapping, dependency management, consistent configs, and cloud dev environments.",
+  "basic": "$15/dev/mo/month",
+  "pro": "$35/dev/mo/month",
+  "enterprise": "$75/dev/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Development Environment Automation - Zion Tech Group",
+    "description": "Automate dev environment setup: one-command bootstrapping, dependency management, consistent configs, and cloud dev environments.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w176-dev-env-automation"
+    }
+  },
+  "features": [
+    "One-command project bootstrapping",
+    "Dependency version management (asdf, nvm, pyenv)",
+    "Dotfile and configuration management",
+    "Cloud dev environments (GitHub Codespaces, Gitpod)",
+    "Pre-commit hooks and linting setup"
+  ],
+  "benefits": [
+    "New developers productive on day one",
+    "Consistent environments across the team",
+    "Cloud dev environments for instant access",
+    "Zero \"works on my machine\" issues"
+  ]
+}

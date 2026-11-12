@@ -1,0 +1,29 @@
+{
+  "title": "AI Talent Marketplace & Internal Mobility Platform",
+  "description": "AI-powered internal talent marketplace that matches employees to projects, mentors, and gigs based on skills, interests, and career goals. Increase internal mobility by 300%.",
+  "basic": "$19/employee/mo/month",
+  "pro": "$39/employee/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Talent Marketplace & Internal Mobility Platform - Zion Tech Group",
+    "description": "AI-powered internal talent marketplace that matches employees to projects, mentors, and gigs based on skills, interests, and career goals. Increase internal mob",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-ai-talent-marketplace"
+    }
+  },
+  "features": [
+    "AI skills inference from work history",
+    "Project and gig matching algorithm",
+    "Mentor-mentee matching",
+    "Career path recommendations",
+    "Learning recommendations matched to goals"
+  ],
+  "benefits": [
+    "300% increase in internal mobility",
+    "Reduce external hiring costs by 40%",
+    "Improve retention by matching growth opportunities",
+    "Build skills-based organization"
+  ]
+}

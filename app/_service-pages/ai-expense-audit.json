@@ -1,0 +1,29 @@
+{
+  "title": "AI Expense Categorisation & Audit",
+  "description": "ML engine auto-categorises business expenses by GL code, flags policy violations, and generates audit-ready reports for your finance team.",
+  "basic": "$299/mo/month",
+  "pro": "$799/mo/month",
+  "enterprise": "$2,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Expense Categorisation & Audit - Zion Tech Group",
+    "description": "ML engine auto-categorises business expenses by GL code, flags policy violations, and generates audit-ready reports for your finance team.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-expense-audit"
+    }
+  },
+  "features": [
+    "Auto-categorisation by GL code",
+    "Policy violation alerting",
+    "Audit trail with full export",
+    "QuickBooks, Xero, NetSuite integrations",
+    "Custom rules engine per organisation"
+  ],
+  "benefits": [
+    "Reduce costs with ai expense categorisation & audit",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

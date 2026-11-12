@@ -1,0 +1,27 @@
+{
+  "title": "Managed SOC & Security Operations",
+  "description": "24/7 Security Operations Center services with AI-powered threat detection, incident response, and continuous monitoring for your entire infrastruct...",
+  "basic": "$99/mo/month",
+  "pro": "$349/mo/month",
+  "enterprise": "$1,299/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Managed SOC & Security Operations - Zion Tech Group",
+    "description": "24/7 Security Operations Center services with AI-powered threat detection, incident response, and continuous monitoring for your entire infrastruct...",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/managed-soc-security"
+    }
+  },
+  "features": [
+    "Enterprise-grade implementation",
+    "24/7 monitoring",
+    "Compliance-ready"
+  ],
+  "benefits": [
+    "Reduce costs with managed soc & security operations",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

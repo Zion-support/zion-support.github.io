@@ -1,0 +1,29 @@
+{
+  "title": "IT Microsoft 365 Deployment & Management",
+  "description": "Complete Microsoft 365 deployment, migration, and management. Exchange, SharePoint, Teams, OneDrive, and security configuration.",
+  "basic": "$8/user/mo/month",
+  "pro": "$15/user/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "IT Microsoft 365 Deployment & Management - Zion Tech Group",
+    "description": "Complete Microsoft 365 deployment, migration, and management. Exchange, SharePoint, Teams, OneDrive, and security configuration.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-microsoft-365"
+    }
+  },
+  "features": [
+    "M365 licensing optimization and procurement",
+    "Email migration from legacy systems",
+    "SharePoint and OneDrive deployment",
+    "Teams configuration and governance",
+    "M365 security and compliance setup"
+  ],
+  "benefits": [
+    "Optimize M365 licensing costs by 30%",
+    "Migrate without business disruption",
+    "Secure M365 with best-practice configuration",
+    "Drive user adoption with training"
+  ]
+}

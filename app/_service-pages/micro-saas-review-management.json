@@ -1,0 +1,29 @@
+{
+  "title": "AI Review Management & Reputation Platform",
+  "description": "Aggregate, analyze, and respond to reviews across Google, Yelp, Amazon, and 50+ platforms. AI-generated responses, sentiment analysis, and competitive benchmarking.",
+  "basic": "$N/A/month",
+  "pro": "$N/A/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Review Management & Reputation Platform - Zion Tech Group",
+    "description": "Aggregate, analyze, and respond to reviews across Google, Yelp, Amazon, and 50+ platforms. AI-generated responses, sentiment analysis, and competitive benchmark",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-review-management"
+    }
+  },
+  "features": [
+    "50+ review platforms",
+    "AI response generation",
+    "Sentiment analysis",
+    "Competitive benchmarking",
+    "Review request automation"
+  ],
+  "benefits": [
+    "40% more positive responses",
+    "Unified dashboard",
+    "Time savings",
+    "Reputation insights"
+  ]
+}

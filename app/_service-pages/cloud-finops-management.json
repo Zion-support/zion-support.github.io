@@ -1,0 +1,29 @@
+{
+  "title": "Cloud FinOps Management Platform",
+  "description": "Financial operations for cloud spend. Multi-cloud cost allocation, showback/chargeback, budget management, and optimization recommendations with FinOps best practices.",
+  "basic": "$499/mo/month",
+  "pro": "$1,499/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Cloud FinOps Management Platform - Zion Tech Group",
+    "description": "Financial operations for cloud spend. Multi-cloud cost allocation, showback/chargeback, budget management, and optimization recommendations with FinOps best pra",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cloud-finops-management"
+    }
+  },
+  "features": [
+    "Multi-cloud cost allocation",
+    "Showback and chargeback",
+    "Budget management and alerts",
+    "Savings recommendations",
+    "Reserved instance planning"
+  ],
+  "benefits": [
+    "Reduce cloud waste by 35%",
+    "Transparent cost allocation",
+    "Optimize reserved capacity",
+    "FinOps team enablement"
+  ]
+}

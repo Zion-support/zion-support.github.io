@@ -1,0 +1,29 @@
+{
+  "title": "AI Marketing Automation Suite",
+  "description": "Full-stack marketing automation: email, SMS, ads, social, and web personalization. AI-driven segmentation, content generation, and journey optimization.",
+  "basic": "$199/mo/month",
+  "pro": "$599/mo/month",
+  "enterprise": "$1,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Marketing Automation Suite - Zion Tech Group",
+    "description": "Full-stack marketing automation: email, SMS, ads, social, and web personalization. AI-driven segmentation, content generation, and journey optimization.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w174-marketing-automation-ai"
+    }
+  },
+  "features": [
+    "AI audience segmentation and scoring",
+    "Multi-channel campaign orchestration",
+    "AI content generation (email, ad, social copy)",
+    "Journey builder with AI optimization",
+    "Lead scoring and lifecycle management"
+  ],
+  "benefits": [
+    "AI segmentation finds high-value audiences",
+    "Multi-channel from a single platform",
+    "AI content generates on-brand copy at scale",
+    "Attribution proves marketing ROI"
+  ]
+}

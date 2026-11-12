@@ -1,0 +1,29 @@
+{
+  "title": "AI Student Success Platform",
+  "description": "Predict and prevent student dropout with AI. Analyze engagement, performance, and behavioral data to identify at-risk students and recommend interventions.",
+  "basic": "$499/mo/month",
+  "pro": "$1,499/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Student Success Platform - Zion Tech Group",
+    "description": "Predict and prevent student dropout with AI. Analyze engagement, performance, and behavioral data to identify at-risk students and recommend interventions.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/edtech-student-success-platform"
+    }
+  },
+  "features": [
+    "Early warning system for at-risk students",
+    "Engagement tracking across platforms",
+    "Predictive analytics for retention",
+    "Automated intervention recommendations",
+    "Advisor dashboard"
+  ],
+  "benefits": [
+    "Improve retention rates by 20%",
+    "Identify at-risk students early",
+    "Data-driven intervention strategies",
+    "Improve graduation rates"
+  ]
+}

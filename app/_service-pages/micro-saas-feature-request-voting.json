@@ -1,0 +1,29 @@
+{
+  "title": "FeatureVote — Feature Request Voting Board",
+  "description": "Public feature request board with voting, status tracking, and roadmap publishing. Help product teams prioritize based on real customer demand.",
+  "basic": "$29/mo/month",
+  "pro": "$99/mo/month",
+  "enterprise": "$299/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "FeatureVote — Feature Request Voting Board - Zion Tech Group",
+    "description": "Public feature request board with voting, status tracking, and roadmap publishing. Help product teams prioritize based on real customer demand.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-feature-request-voting"
+    }
+  },
+  "features": [
+    "Public voting board",
+    "Duplicate detection and merging",
+    "Status tracking (planned, in-progress, done)",
+    "Public roadmap publishing",
+    "Integration with Intercom, Slack, Zendesk"
+  ],
+  "benefits": [
+    "Build what customers actually want",
+    "Reduce support ticket volume",
+    "Transparent product roadmap",
+    "Increase customer engagement"
+  ]
+}

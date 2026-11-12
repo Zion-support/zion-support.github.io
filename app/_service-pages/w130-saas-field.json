@@ -1,0 +1,30 @@
+{
+  "title": "AI Field Service Management",
+  "description": "Optimize field operations with AI scheduling, route optimization, and predictive maintenance. Mobile-first platform for technicians and dispatchers.",
+  "basic": "$N/A/month",
+  "pro": "$2497/month",
+  "enterprise": "$5997/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Field Service Management - Zion Tech Group",
+    "description": "Optimize field operations with AI scheduling, route optimization, and predictive maintenance. Mobile-first platform for technicians and dispatchers.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w130-saas-field"
+    }
+  },
+  "features": [
+    "AI scheduling & dispatch",
+    "Route optimization",
+    "Predictive maintenance alerts",
+    "Mobile technician app",
+    "Parts inventory management"
+  ],
+  "benefits": [
+    "35% more jobs per day",
+    "25% fuel cost reduction",
+    "92% SLA compliance",
+    "Faster first-time fix rate",
+    "Improved customer satisfaction"
+  ]
+}

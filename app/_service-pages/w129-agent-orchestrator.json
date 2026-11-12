@@ -1,0 +1,29 @@
+{
+  "title": "AI Agent Orchestrator",
+  "description": "Manage, monitor, and scale autonomous AI agents. Provides guardrails, task routing, and performance analytics for agent fleets.",
+  "basic": "$N/A/month",
+  "pro": "$14997/month",
+  "enterprise": "$34997/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Agent Orchestrator - Zion Tech Group",
+    "description": "Manage, monitor, and scale autonomous AI agents. Provides guardrails, task routing, and performance analytics for agent fleets.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w129-agent-orchestrator"
+    }
+  },
+  "features": [
+    "Agent lifecycle management",
+    "Task routing",
+    "Performance analytics",
+    "Guardrail enforcement",
+    "Multi-agent coordination"
+  ],
+  "benefits": [
+    "Scale AI safely",
+    "Monitor agent behavior",
+    "Prevent runaway agents",
+    "Optimize agent costs"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "Cloud Security Posture Management (CSPM)",
+  "description": "Continuous cloud posture: IAM overprivilege, misconfigured S3, exposed RDS, public subnets. Drift detection + auto-remediation via Terraform per AWS/GCP/Azure.",
+  "basic": "$99/mo/month",
+  "pro": "$349/mo/month",
+  "enterprise": "$1,299/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Cloud Security Posture Management (CSPM) - Zion Tech Group",
+    "description": "Continuous cloud posture: IAM overprivilege, misconfigured S3, exposed RDS, public subnets. Drift detection + auto-remediation via Terraform per AWS/GCP/Azure.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cspm-cloud-posture"
+    }
+  },
+  "features": [
+    "Multi-cloud IAM + resource posture scanner",
+    "Misconfiguration auto-remediation (Terraform)",
+    "Drift detection from desired baseline",
+    "Compliance report (SOC 2/ISO 27001/PCI DSS)",
+    "Risk scoring per resource + alert on threshold"
+  ],
+  "benefits": [
+    "Reduce costs with cloud security posture management (cspm)",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "Property Tech & Facility Automation",
+  "description": "Smart building and facility management: HVAC optimization, space booking, maintenance scheduling, and energy management. IoT-driven efficiency for commercial real estate.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Property Tech & Facility Automation - Zion Tech Group",
+    "description": "Smart building and facility management: HVAC optimization, space booking, maintenance scheduling, and energy management. IoT-driven efficiency for commercial re",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w174-property-tech-automation"
+    }
+  },
+  "features": [
+    "HVAC and lighting optimization (IoT-driven)",
+    "Space and room booking with utilization analytics",
+    "Preventive maintenance scheduling",
+    "Energy monitoring and optimization",
+    "Visitor management and access control"
+  ],
+  "benefits": [
+    "Reduce energy costs by 20-35%",
+    "Space utilization analytics optimize real estate",
+    "Preventive maintenance extends asset life",
+    "Smart HVAC improves occupant comfort"
+  ]
+}

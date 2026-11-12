@@ -1,0 +1,29 @@
+{
+  "title": "IT Integration Platform & API Management",
+  "description": "Connect all your systems with an integration platform. API management, data synchronization, and workflow automation across cloud and on-premises applications.",
+  "basic": "$2,000/mo/month",
+  "pro": "$5,000/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "IT Integration Platform & API Management - Zion Tech Group",
+    "description": "Connect all your systems with an integration platform. API management, data synchronization, and workflow automation across cloud and on-premises applications.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-integration-platform"
+    }
+  },
+  "features": [
+    "Integration platform selection and setup",
+    "API design, development, and management",
+    "Data synchronization across systems",
+    "Event-driven architecture implementation",
+    "Integration with 500+ SaaS applications"
+  ],
+  "benefits": [
+    "Connect all systems without custom code",
+    "Automate data flow between applications",
+    "Reduce integration costs by 60%",
+    "Enable real-time data across the organization"
+  ]
+}

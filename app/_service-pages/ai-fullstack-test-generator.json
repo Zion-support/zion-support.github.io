@@ -1,0 +1,28 @@
+{
+  "title": "AI Full-Stack Test Generator",
+  "description": "Reads source code + OpenAPI + DB schema produces unit + integration + E2E tests: React/Vue component API endpoint DB constraint auth flow 90%+ coverage.",
+  "basic": "$49/mo/month",
+  "pro": "$149/mo/month",
+  "enterprise": "$499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Full-Stack Test Generator - Zion Tech Group",
+    "description": "Reads source code + OpenAPI + DB schema produces unit + integration + E2E tests: React/Vue component API endpoint DB constraint auth flow 90%+ coverage.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-fullstack-test-generator"
+    }
+  },
+  "features": [
+    "Source + schema + OpenAPI ingestion",
+    "Unit + integration + E2E auto-gen",
+    "90%+ line coverage without manual writing",
+    "CI/CD pipeline + flaky test auto-retry"
+  ],
+  "benefits": [
+    "Reduce costs with ai full-stack test generator",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

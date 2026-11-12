@@ -1,0 +1,29 @@
+{
+  "title": "Integrated Commerce Automation",
+  "description": "End-to-end e-commerce automation: product sync per multi-marketplace including Amazon, Shopify, eBay, and Etsy; inventory sync; order and workflow routing; auto-generated review request post-delivery; shipping and delivery auto-tracking; refund and return auto-processing.",
+  "basic": "$99/mo/month",
+  "pro": "$299/mo/month",
+  "enterprise": "$999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Integrated Commerce Automation - Zion Tech Group",
+    "description": "End-to-end e-commerce automation: product sync per multi-marketplace including Amazon, Shopify, eBay, and Etsy; inventory sync; order and workflow routing; auto",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automation-integrated-commerce-automation"
+    }
+  },
+  "features": [
+    "Multi-channel product sync for Amazon, Shopify, eBay, Etsy — bidirectional per SKU",
+    "Inventory sync across channels — stock depletion reflected across every marketplace in 60 seconds",
+    "Dropship workflow — auto-route orders to supplier per stock-level threshold",
+    "Auto-review generator sends per-buyer review request post-delivery with personalised template",
+    "Return and refund auto-process — auto-compute refund amount and inventory return per policy"
+  ],
+  "benefits": [
+    "Reduce costs with integrated commerce automation",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

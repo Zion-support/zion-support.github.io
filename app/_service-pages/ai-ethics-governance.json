@@ -1,0 +1,29 @@
+{
+  "title": "AI Ethics, Safety & Governance Framework",
+  "description": "Comprehensive AI governance framework with bias detection, model explainability, audit trails, and regulatory compliance for responsible AI deployment.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Ethics, Safety & Governance Framework - Zion Tech Group",
+    "description": "Comprehensive AI governance framework with bias detection, model explainability, audit trails, and regulatory compliance for responsible AI deployment.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-ethics-governance"
+    }
+  },
+  "features": [
+    "Automated bias detection across training data and model outputs",
+    "Model interpretability and explainability (SHAP/LIME integration)",
+    "AI ethics board policy generation and compliance tracking",
+    "Regulatory compliance automation (EU AI Act, NIST AI RMF)",
+    "Continuous monitoring and audit log generation"
+  ],
+  "benefits": [
+    "Reduce costs with ai ethics, safety & governance framework",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

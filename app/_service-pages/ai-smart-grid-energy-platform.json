@@ -1,0 +1,29 @@
+{
+  "title": "AI Smart Grid & Energy Optimization Platform",
+  "description": "Optimize energy distribution and consumption across smart grids using AI. Predict demand, balance loads, and integrate renewable sources.",
+  "basic": "$5,000/mo/month",
+  "pro": "$15,000/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Smart Grid & Energy Optimization Platform - Zion Tech Group",
+    "description": "Optimize energy distribution and consumption across smart grids using AI. Predict demand, balance loads, and integrate renewable sources.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-smart-grid-energy-platform"
+    }
+  },
+  "features": [
+    "AI demand forecasting with weather integration",
+    "Real-time load balancing",
+    "Renewable energy optimization",
+    "Predictive maintenance for grid infrastructure",
+    "Dynamic pricing and demand response"
+  ],
+  "benefits": [
+    "Reduce energy costs by 20-35%",
+    "Increase renewable utilization by 40%",
+    "Prevent grid failures",
+    "Meet carbon reduction targets"
+  ]
+}

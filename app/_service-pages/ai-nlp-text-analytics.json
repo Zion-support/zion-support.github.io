@@ -1,0 +1,29 @@
+{
+  "title": "AI NLP & Text Analytics Platform",
+  "description": "AI-powered natural language processing for text classification, entity extraction, sentiment analysis, and summarization. Process millions of documents in minutes.",
+  "basic": "$399/mo/month",
+  "pro": "$1,199/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI NLP & Text Analytics Platform - Zion Tech Group",
+    "description": "AI-powered natural language processing for text classification, entity extraction, sentiment analysis, and summarization. Process millions of documents in minut",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-nlp-text-analytics"
+    }
+  },
+  "features": [
+    "Text classification and categorization",
+    "Named entity extraction",
+    "Sentiment and emotion analysis",
+    "Document summarization",
+    "Topic modeling and trend detection"
+  ],
+  "benefits": [
+    "Process millions of documents in minutes",
+    "Extract insights from unstructured text",
+    "Support 100+ languages out of the box",
+    "Train custom models for your domain"
+  ]
+}

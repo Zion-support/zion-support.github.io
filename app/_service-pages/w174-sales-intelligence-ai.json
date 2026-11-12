@@ -1,0 +1,29 @@
+{
+  "title": "AI Sales Intelligence & Automation",
+  "description": "AI-powered sales: lead prioritization, call coaching, deal intelligence, and automated CRM updates. Increase win rates by 20% with AI-guided selling.",
+  "basic": "$199/mo/month",
+  "pro": "$599/mo/month",
+  "enterprise": "$1,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Sales Intelligence & Automation - Zion Tech Group",
+    "description": "AI-powered sales: lead prioritization, call coaching, deal intelligence, and automated CRM updates. Increase win rates by 20% with AI-guided selling.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w174-sales-intelligence-ai"
+    }
+  },
+  "features": [
+    "AI lead scoring and prioritization",
+    "Call coaching with real-time suggestions",
+    "Deal intelligence and risk assessment",
+    "Automated CRM data entry and updates",
+    "Competitive intelligence for deals"
+  ],
+  "benefits": [
+    "Increase win rates by 20% with AI guidance",
+    "Lead scoring focuses reps on best opportunities",
+    "Automated CRM updates reduce admin by 50%",
+    "Deal intelligence catches at-risk deals early"
+  ]
+}

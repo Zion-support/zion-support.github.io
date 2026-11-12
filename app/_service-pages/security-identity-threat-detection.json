@@ -1,0 +1,29 @@
+{
+  "title": "Security Identity Threat Detection & Response (ITDR)",
+  "description": "Protect identities from compromise with AI-powered threat detection. Detect credential theft, privilege escalation, anomalous authentication, and lateral movement across cloud and on-premises.",
+  "basic": "$999/mo/month",
+  "pro": "$2,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Security Identity Threat Detection & Response (ITDR) - Zion Tech Group",
+    "description": "Protect identities from compromise with AI-powered threat detection. Detect credential theft, privilege escalation, anomalous authentication, and lateral moveme",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/security-identity-threat-detection"
+    }
+  },
+  "features": [
+    "Credential theft detection",
+    "Anomalous authentication analysis",
+    "Privilege escalation alerts",
+    "Session hijacking detection",
+    "Lateral movement tracking"
+  ],
+  "benefits": [
+    "Prevent identity-based attacks",
+    "Detect compromised credentials in minutes",
+    "Automated threat response",
+    "Meet zero-trust requirements"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "Nonprofit Operations Automation",
+  "description": "Automate nonprofit operations: donor management, fundraising campaigns, grant tracking, volunteer scheduling, and compliance reporting.",
+  "basic": "$99/mo/month",
+  "pro": "$299/mo/month",
+  "enterprise": "$999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Nonprofit Operations Automation - Zion Tech Group",
+    "description": "Automate nonprofit operations: donor management, fundraising campaigns, grant tracking, volunteer scheduling, and compliance reporting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w176-nonprofit-automation"
+    }
+  },
+  "features": [
+    "Donor management and segmentation",
+    "Fundraising campaign automation",
+    "Grant application and tracking",
+    "Volunteer scheduling and communication",
+    "Donation receipt and acknowledgment"
+  ],
+  "benefits": [
+    "Donor segmentation drives targeted campaigns",
+    "Fundraising automation increases revenue",
+    "Grant tracking prevents missed deadlines",
+    "Compliance reporting for transparency"
+  ]
+}

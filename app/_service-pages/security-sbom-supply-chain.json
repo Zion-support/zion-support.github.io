@@ -1,0 +1,28 @@
+{
+  "title": "SBOM & Supply Chain Security",
+  "description": "Supply chain security platform: SBOM & VEX generation (every build/build event), CVE SLSA provenance score, dependency-graph diff for every PR, SLSA Level 3 attestation, reproducible-build verification.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "SBOM & Supply Chain Security - Zion Tech Group",
+    "description": "Supply chain security platform: SBOM & VEX generation (every build/build event), CVE SLSA provenance score, dependency-graph diff for every PR, SLSA Level 3 att",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/security-sbom-supply-chain"
+    }
+  },
+  "features": [
+    "SBOM + VEX generated per build with CycloneDX + SPDX dual-format",
+    "CVE + SLSA provenance score every build — compare across time and distributors",
+    "Dependency-graph diff per PR — highlight transitive dependency changes before merge",
+    "SSL SA L3 attestation with reproducible-build verification per environment"
+  ],
+  "benefits": [
+    "Reduce costs with sbom & supply chain security",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

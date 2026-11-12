@@ -1,0 +1,29 @@
+{
+  "title": "AI-Powered UI Generator (Text-to-UI)",
+  "description": "Turn natural language descriptions into production-ready React/Next.js components with Tailwind styling; customize variants, states, and accessibility attributes via chat.",
+  "basic": "$49/mo/month",
+  "pro": "$149/mo/month",
+  "enterprise": "$499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI-Powered UI Generator (Text-to-UI) - Zion Tech Group",
+    "description": "Turn natural language descriptions into production-ready React/Next.js components with Tailwind styling; customize variants, states, and accessibility attribute",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-ui-generator"
+    }
+  },
+  "features": [
+    "Natural language to JSX/TSX component generation",
+    "Tailwind CSS class application",
+    "Responsive breakpoint handling",
+    "A11y attributes (aria-* roles & labels)",
+    "Export to Figma/Storybook format"
+  ],
+  "benefits": [
+    "Reduce costs with ai-powered ui generator (text-to-ui)",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

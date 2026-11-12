@@ -1,0 +1,28 @@
+{
+  "title": "Reinforcement Learning Optimiser",
+  "description": "RL-based continuous optimisation for resource scheduling, pricing, content delivery, manufacturing control, and inventory replenishment policies.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Reinforcement Learning Optimiser - Zion Tech Group",
+    "description": "RL-based continuous optimisation for resource scheduling, pricing, content delivery, manufacturing control, and inventory replenishment policies.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-reinforcement-learning-optimiser"
+    }
+  },
+  "features": [
+    "PPO/SAC RL fine-tune on your KPI objective",
+    "Simulation environment without touching production",
+    "Policy deployment via feature-flag rollout",
+    "Online drift detector + retrain trigger"
+  ],
+  "benefits": [
+    "Reduce costs with reinforcement learning optimiser",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

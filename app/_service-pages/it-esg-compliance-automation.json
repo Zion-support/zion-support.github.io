@@ -1,0 +1,28 @@
+{
+  "title": "ESG Compliance Automation",
+  "description": "Automates ESG data collection from 100+ systems (cloud, HR, facilities) and generates SEC, EU CSRD, and SFDR reports.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "ESG Compliance Automation - Zion Tech Group",
+    "description": "Automates ESG data collection from 100+ systems (cloud, HR, facilities) and generates SEC, EU CSRD, and SFDR reports.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-esg-compliance-automation"
+    }
+  },
+  "features": [
+    "Carbon footprint calculation engine",
+    "Diversity metrics dashboard",
+    "Governance policy tracker",
+    "Report generation (XBRL support)"
+  ],
+  "benefits": [
+    "Reduce costs with esg compliance automation",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

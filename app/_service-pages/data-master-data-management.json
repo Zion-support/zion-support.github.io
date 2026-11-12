@@ -1,0 +1,29 @@
+{
+  "title": "Master Data Management (MDM) Platform",
+  "description": "Centralized master data management for customers, products, suppliers, and more. Data quality, matching, merging, and governance across all enterprise systems.",
+  "basic": "$1,999/mo/month",
+  "pro": "$5,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Master Data Management (MDM) Platform - Zion Tech Group",
+    "description": "Centralized master data management for customers, products, suppliers, and more. Data quality, matching, merging, and governance across all enterprise systems.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/data-master-data-management"
+    }
+  },
+  "features": [
+    "Golden record creation",
+    "Data matching and merging",
+    "Data quality scoring",
+    "Hierarchy management",
+    "Workflow-based stewardship"
+  ],
+  "benefits": [
+    "Single source of truth for master data",
+    "Improve data quality by 80%",
+    "Reduce data duplication",
+    "Enable 360-degree customer view"
+  ]
+}

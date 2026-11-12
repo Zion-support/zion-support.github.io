@@ -1,0 +1,30 @@
+{
+  "title": "Subscription Billing & Revenue Platform",
+  "description": "Recurring billing engine with dunning management, revenue recognition, tax automation, and churn prediction. Supports subscription, usage-based, and hybrid pricing models.",
+  "basic": "$199/mo/month",
+  "pro": "$699/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Subscription Billing & Revenue Platform - Zion Tech Group",
+    "description": "Recurring billing engine with dunning management, revenue recognition, tax automation, and churn prediction. Supports subscription, usage-based, and hybrid pric",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-subscription-billing-engine"
+    }
+  },
+  "features": [
+    "Recurring billing automation",
+    "Dunning management",
+    "Revenue recognition (ASC 606)",
+    "Tax automation (Avalara integration)",
+    "Churn prediction AI"
+  ],
+  "benefits": [
+    "30% reduction in involuntary churn",
+    "Automated revenue recognition",
+    "Global tax compliance",
+    "Flexible pricing models",
+    "Real-time revenue analytics"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "PortalPro — Customer Portal Micro-SaaS",
+  "description": "Branded customer portal for SaaS companies. Ticket management, knowledge base, billing, and account settings in one customizable portal.",
+  "basic": "$49/mo/month",
+  "pro": "$149/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "PortalPro — Customer Portal Micro-SaaS - Zion Tech Group",
+    "description": "Branded customer portal for SaaS companies. Ticket management, knowledge base, billing, and account settings in one customizable portal.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-customer-portal"
+    }
+  },
+  "features": [
+    "Branded customer portal",
+    "Ticket management",
+    "Knowledge base integration",
+    "Billing and subscription management",
+    "Account settings"
+  ],
+  "benefits": [
+    "Reduce support tickets by 30%",
+    "Improve customer self-service",
+    "Branded customer experience",
+    "Unified customer view"
+  ]
+}

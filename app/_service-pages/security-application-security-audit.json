@@ -1,0 +1,28 @@
+{
+  "title": "Application Security Audit",
+  "description": "In-depth application security assessment covering OWASP Top 10, API security, authentication flows, and data protection.",
+  "basic": "$3,000/project/month",
+  "pro": "$8,000/project/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Application Security Audit - Zion Tech Group",
+    "description": "In-depth application security assessment covering OWASP Top 10, API security, authentication flows, and data protection.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/security-application-security-audit"
+    }
+  },
+  "features": [
+    "OWASP Top 10 Analysis",
+    "API Security Testing",
+    "Manual Pentest",
+    "Automated Scanning",
+    "Remediation Roadmap"
+  ],
+  "benefits": [
+    "Identify vulnerabilities",
+    "Protect customer data",
+    "Achieve compliance"
+  ]
+}

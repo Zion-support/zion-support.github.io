@@ -1,0 +1,28 @@
+{
+  "title": "AI International Trade Compliance Checker",
+  "description": "Screen every transaction for sanctions, export controls, and denied-party lists (OFAC, EU, UN). Real-time screening, false-positive reduction, and audit-ready reporting.",
+  "basic": "$299/month",
+  "pro": "$799/month",
+  "enterprise": "$2999/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI International Trade Compliance Checker - Zion Tech Group",
+    "description": "Screen every transaction for sanctions, export controls, and denied-party lists (OFAC, EU, UN). Real-time screening, false-positive reduction, and audit-ready r",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-trade-compliance-checker"
+    }
+  },
+  "features": [
+    "Real-time sanctions screening (OFAC, EU, UN)",
+    "Export control classification (ECCN)",
+    "Denied-party list screening",
+    "False-positive reduction (AI)",
+    "Audit-ready screening records"
+  ],
+  "benefits": [
+    "Screen transactions instantly",
+    "Reduce false positives by 80%",
+    "Full audit trail"
+  ]
+}

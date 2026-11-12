@@ -1,0 +1,29 @@
+{
+  "title": "SLA Management & Reporting",
+  "description": "Define, track, and report on SLAs across all IT services. Real-time dashboards, breach alerting, and business hour awareness for accurate measurements.",
+  "basic": "$199/mo/month",
+  "pro": "$599/mo/month",
+  "enterprise": "$1,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "SLA Management & Reporting - Zion Tech Group",
+    "description": "Define, track, and report on SLAs across all IT services. Real-time dashboards, breach alerting, and business hour awareness for accurate measurements.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w175-slaintegration"
+    }
+  },
+  "features": [
+    "SLA definition with business hour awareness",
+    "Real-time SLA tracking dashboards",
+    "Breach alerting and escalation",
+    "Service catalog integration",
+    "Monthly and quarterly SLA reports"
+  ],
+  "benefits": [
+    "Real-time visibility into SLA compliance",
+    "Business hour awareness prevents false breaches",
+    "Customer portals build trust",
+    "Reports for contract governance"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "title": "AI Meeting Assistant & Summarizer",
+  "description": "Automatically join, transcribe, and summarize meetings from Zoom, Teams, and Google Meet. Generates action items, decisions, and follow-up tasks. Share searchable meeting notes with attendees instantly.",
+  "basic": "$N/A/month",
+  "pro": "$N/A/month",
+  "enterprise": "$149/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Meeting Assistant & Summarizer - Zion Tech Group",
+    "description": "Automatically join, transcribe, and summarize meetings from Zoom, Teams, and Google Meet. Generates action items, decisions, and follow-up tasks. Share searchab",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-meeting-assistant"
+    }
+  },
+  "features": [
+    "Automatic transcription",
+    "Meeting summarization",
+    "Action item extraction",
+    "Decision tracking",
+    "Searchable archive"
+  ],
+  "benefits": [
+    "95% accurate transcripts",
+    "Save 3 hours/week on meeting notes",
+    "Never miss an action item"
+  ]
+}

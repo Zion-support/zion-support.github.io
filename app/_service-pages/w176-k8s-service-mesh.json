@@ -1,0 +1,29 @@
+{
+  "title": "Kubernetes Service Mesh",
+  "description": "Service mesh implementation: Istio or Linkerd with traffic management, observability, security (mTLS), and canary deployments for K8s microservices.",
+  "basic": "$499/mo/month",
+  "pro": "$1,499/mo/month",
+  "enterprise": "$4,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Kubernetes Service Mesh - Zion Tech Group",
+    "description": "Service mesh implementation: Istio or Linkerd with traffic management, observability, security (mTLS), and canary deployments for K8s microservices.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w176-k8s-service-mesh"
+    }
+  },
+  "features": [
+    "Istio or Linkerd deployment and management",
+    "Traffic management (routing, canary, A/B)",
+    "Distributed tracing and observability",
+    "Service-to-service mTLS",
+    "Circuit breaking and retry policies"
+  ],
+  "benefits": [
+    "mTLS secures all service communication",
+    "Canary deployments limit risk on releases",
+    "Observability into every service interaction",
+    "Circuit breakers prevent cascade failures"
+  ]
+}

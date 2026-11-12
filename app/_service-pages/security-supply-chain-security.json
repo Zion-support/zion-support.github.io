@@ -1,0 +1,29 @@
+{
+  "title": "Supply Chain Security Platform",
+  "description": "End-to-end software supply chain security with SBOM generation, vulnerability scanning, dependency analysis, and compliance reporting. Protect against dependency confusion, typosquatting, and malicious packages.",
+  "basic": "$999/mo/month",
+  "pro": "$2,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Supply Chain Security Platform - Zion Tech Group",
+    "description": "End-to-end software supply chain security with SBOM generation, vulnerability scanning, dependency analysis, and compliance reporting. Protect against dependenc",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/security-supply-chain-security"
+    }
+  },
+  "features": [
+    "Automated SBOM generation",
+    "Dependency vulnerability scanning",
+    "Malicious package detection",
+    "License compliance checking",
+    "Dependency confusion prevention"
+  ],
+  "benefits": [
+    "Prevent supply chain attacks",
+    "Automate compliance reporting",
+    "Reduce vulnerability exposure",
+    "Meet federal security requirements"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "title": "API Security Testing",
+  "description": "Automated security scans for REST, GraphQL, and gRPC APIs. Detects OWASP API Top 10 vulnerabilities and provides remediation code snippets.",
+  "basic": "$49/mo/month",
+  "pro": "$199/mo/month",
+  "enterprise": "$699/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "API Security Testing - Zion Tech Group",
+    "description": "Automated security scans for REST, GraphQL, and gRPC APIs. Detects OWASP API Top 10 vulnerabilities and provides remediation code snippets.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-apisec-testing"
+    }
+  },
+  "features": [
+    "DAST + SCA for APIs",
+    "Authentication flaw detection",
+    "Rate-limiting & throttling tests",
+    "CI/CD pipeline integration"
+  ],
+  "benefits": [
+    "Reduce costs with api security testing",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

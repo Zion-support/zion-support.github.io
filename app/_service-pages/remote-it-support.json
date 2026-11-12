@@ -1,0 +1,29 @@
+{
+  "title": "Remote IT Support & Helpdesk Outsourcing",
+  "description": "24/7 outsourced IT helpdesk and desktop support for distributed workforces: remote troubleshooting, incident management, and user onboarding.",
+  "basic": "$99/mo/month",
+  "pro": "$299/mo/month",
+  "enterprise": "$999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Remote IT Support & Helpdesk Outsourcing - Zion Tech Group",
+    "description": "24/7 outsourced IT helpdesk and desktop support for distributed workforces: remote troubleshooting, incident management, and user onboarding.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/remote-it-support"
+    }
+  },
+  "features": [
+    "24/7/365 Tier-1/2 support (phone, chat, email)",
+    "Remote desktop access & fix (TeamViewer, AnyDesk)",
+    "Onboarding/offboarding automation",
+    "Incident ticketing & SLA management",
+    "Knowledge base & self-service portal"
+  ],
+  "benefits": [
+    "Reduce costs with remote it support & helpdesk outsourcing",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

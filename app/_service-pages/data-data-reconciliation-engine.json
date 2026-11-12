@@ -1,0 +1,28 @@
+{
+  "title": "Data Reconciliation Engine",
+  "description": "Automated record matching across source-of-truth systems with fuzzy/phonetic/ML matching and a reconciliation dispute UI.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Data Reconciliation Engine - Zion Tech Group",
+    "description": "Automated record matching across source-of-truth systems with fuzzy/phonetic/ML matching and a reconciliation dispute UI.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/data-data-reconciliation-engine"
+    }
+  },
+  "features": [
+    "Deterministic + fuzzy + phonetic matching",
+    "Embedding model for compound record matching",
+    "Bulk-match upload + reason-code dispute UI",
+    "Reconciliation history + export report"
+  ],
+  "benefits": [
+    "Reduce costs with data reconciliation engine",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

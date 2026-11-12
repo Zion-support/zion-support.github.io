@@ -1,0 +1,29 @@
+{
+  "title": "Synthetic Data Platform for AI Training",
+  "description": "Generate realistic synthetic data for AI/ML training while preserving privacy. Supports tabular, text, image, and time-series data with statistical fidelity guarantees.",
+  "basic": "$499/mo/month",
+  "pro": "$1,499/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Synthetic Data Platform for AI Training - Zion Tech Group",
+    "description": "Generate realistic synthetic data for AI/ML training while preserving privacy. Supports tabular, text, image, and time-series data with statistical fidelity gua",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/data-synthetic-data-platform"
+    }
+  },
+  "features": [
+    "Tabular synthetic data generation",
+    "Text data synthesis",
+    "Image synthesis (GANs)",
+    "Time-series generation",
+    "Statistical fidelity validation"
+  ],
+  "benefits": [
+    "Unlimited training data without privacy risk",
+    "Balance underrepresented classes",
+    "Accelerate ML development",
+    "GDPR/HIPAA compliant data"
+  ]
+}

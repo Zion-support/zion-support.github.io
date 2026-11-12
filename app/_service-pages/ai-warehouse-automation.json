@@ -1,0 +1,29 @@
+{
+  "title": "AI Warehouse Automation & Robotics Platform",
+  "description": "AI-powered warehouse management with robotic picking, inventory optimization, and predictive logistics for e-commerce and retail fulfillment.",
+  "basic": "$2,999/mo/month",
+  "pro": "$7,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Warehouse Automation & Robotics Platform - Zion Tech Group",
+    "description": "AI-powered warehouse management with robotic picking, inventory optimization, and predictive logistics for e-commerce and retail fulfillment.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-warehouse-automation"
+    }
+  },
+  "features": [
+    "Autonomous mobile robot (AMR) orchestration",
+    "AI-powered pick path optimization",
+    "Real-time inventory tracking",
+    "Demand forecasting for stock placement",
+    "Integration with WMS and ERP systems"
+  ],
+  "benefits": [
+    "Increase fulfillment speed by 3x",
+    "Reduce labor costs by 40%",
+    "Improve inventory accuracy to 99.9%",
+    "Scale operations without adding headcount"
+  ]
+}

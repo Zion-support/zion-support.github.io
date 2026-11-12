@@ -1,0 +1,28 @@
+{
+  "title": "Security Awareness Training Platform",
+  "description": "Phishing simulation, training modules per role, compliance quiz tracking, gamified leaderboard, and risk scoring per employee/team.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Security Awareness Training Platform - Zion Tech Group",
+    "description": "Phishing simulation, training modules per role, compliance quiz tracking, gamified leaderboard, and risk scoring per employee/team.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/security-security-awareness-training"
+    }
+  },
+  "features": [
+    "Phishing simulation (template library 200+)",
+    "Role-based security training modules",
+    "Compliance quiz tracking + certificate",
+    "Gamified leaderboard per team/department"
+  ],
+  "benefits": [
+    "Reduce costs with security awareness training platform",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

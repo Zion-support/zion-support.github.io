@@ -1,0 +1,29 @@
+{
+  "title": "Change Management Platform",
+  "description": "IT change management: change requests, risk assessment, approval workflows, rollback plans, and change calendar. Reduce unauthorized changes by 95%.",
+  "basic": "$199/mo/month",
+  "pro": "$599/mo/month",
+  "enterprise": "$1,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Change Management Platform - Zion Tech Group",
+    "description": "IT change management: change requests, risk assessment, approval workflows, rollback plans, and change calendar. Reduce unauthorized changes by 95%.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w176-change-mgmt-platform"
+    }
+  },
+  "features": [
+    "Change request and classification",
+    "Automated risk assessment scoring",
+    "Multi-level approval workflows",
+    "Rollback planning and documentation",
+    "Change calendar and conflict detection"
+  ],
+  "benefits": [
+    "95% reduction in unauthorized changes",
+    "Risk scoring prioritizes review effort",
+    "Conflict detection prevents change collisions",
+    "Verification ensures change success"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "AI Mental Wellness Coach",
+  "description": "AI-powered mental wellness and resilience coaching for employees. Personalized coping strategies, mood tracking, and crisis support with human escalation paths.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Mental Wellness Coach - Zion Tech Group",
+    "description": "AI-powered mental wellness and resilience coaching for employees. Personalized coping strategies, mood tracking, and crisis support with human escalation paths.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-mental-wellness-coach"
+    }
+  },
+  "features": [
+    "Personalized wellness plans",
+    "Mood tracking and journaling",
+    "CBT-based coping strategies",
+    "Stress level monitoring",
+    "Sleep quality insights"
+  ],
+  "benefits": [
+    "Reduce employee burnout by 30%",
+    "Improve mental health support",
+    "Confidential 24/7 support",
+    "Reduce absenteeism"
+  ]
+}

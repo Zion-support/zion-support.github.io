@@ -1,0 +1,28 @@
+{
+  "title": "Real-Time Personalisation Engine",
+  "description": "Session-based recommendation: collaborative-filtering + LLM cold-start description; auto A/B homepage variant; JSON recommendation API.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Real-Time Personalisation Engine - Zion Tech Group",
+    "description": "Session-based recommendation: collaborative-filtering + LLM cold-start description; auto A/B homepage variant; JSON recommendation API.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-personalisation-engine-realtime"
+    }
+  },
+  "features": [
+    "Session-based collaborative-filtering per user",
+    "LLM cold-start description for new/no-history users",
+    "Auto A/B variant per homepage/checkout/product",
+    "JSON recommendation API (endpoint per user/context)"
+  ],
+  "benefits": [
+    "Reduce costs with real-time personalisation engine",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

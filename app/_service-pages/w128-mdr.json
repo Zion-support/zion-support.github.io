@@ -1,0 +1,29 @@
+{
+  "title": "Managed Detection & Response (MDR)",
+  "description": "24/7 threat monitoring, detection, and response. SOC-as-a-service with AI-powered threat hunting and incident response.",
+  "basic": "$N/A/month",
+  "pro": "$14997/month",
+  "enterprise": "$29997/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Managed Detection & Response (MDR) - Zion Tech Group",
+    "description": "24/7 threat monitoring, detection, and response. SOC-as-a-service with AI-powered threat hunting and incident response.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w128-mdr"
+    }
+  },
+  "features": [
+    "24/7 SOC monitoring",
+    "AI threat hunting",
+    "Incident response",
+    "Threat intelligence",
+    "Digital forensics"
+  ],
+  "benefits": [
+    "Reduce breach risk by 75%",
+    "24/7 expert monitoring",
+    "Faster incident response",
+    "Compliance-ready"
+  ]
+}

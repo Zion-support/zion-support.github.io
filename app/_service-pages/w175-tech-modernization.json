@@ -1,0 +1,29 @@
+{
+  "title": "Technology Modernization Strategy",
+  "description": "Modernize legacy technology: mainframe to cloud, monolith to microservices, on-prem to SaaS. Assessment, roadmap, and execution with risk-managed approach.",
+  "basic": "$9,999/month",
+  "pro": "$29,999/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Technology Modernization Strategy - Zion Tech Group",
+    "description": "Modernize legacy technology: mainframe to cloud, monolith to microservices, on-prem to SaaS. Assessment, roadmap, and execution with risk-managed approach.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w175-tech-modernization"
+    }
+  },
+  "features": [
+    "Legacy technology assessment",
+    "Modernization pattern selection (rehost, refactor, rebuild)",
+    "Microservices decomposition strategy",
+    "Mainframe and COBOL modernization",
+    "Data migration strategy"
+  ],
+  "benefits": [
+    "Modernize with a plan, not a big bang",
+    "Pattern selection optimizes cost and risk",
+    "Phased execution limits business disruption",
+    "ROI model secures executive buy-in"
+  ]
+}

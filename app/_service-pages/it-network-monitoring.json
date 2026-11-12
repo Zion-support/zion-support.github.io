@@ -1,0 +1,29 @@
+{
+  "title": "IT Network Monitoring & Performance Management",
+  "description": "24/7 network monitoring with AI-powered anomaly detection, automated alerting, and performance optimization. Monitor on-prem, cloud, and hybrid networks.",
+  "basic": "$1,500/mo/month",
+  "pro": "$4,000/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "IT Network Monitoring & Performance Management - Zion Tech Group",
+    "description": "24/7 network monitoring with AI-powered anomaly detection, automated alerting, and performance optimization. Monitor on-prem, cloud, and hybrid networks.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-network-monitoring"
+    }
+  },
+  "features": [
+    "Real-time network topology mapping",
+    "AI anomaly detection and root cause analysis",
+    "Bandwidth utilization monitoring and optimization",
+    "SNMP, NetFlow, sFlow, and packet capture support",
+    "Automated alerting via email, SMS, Slack, PagerDuty"
+  ],
+  "benefits": [
+    "Detect network issues before users notice",
+    "Reduce mean time to resolution by 70%",
+    "Optimize bandwidth and reduce costs",
+    "Plan capacity with data-driven insights"
+  ]
+}

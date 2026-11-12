@@ -1,0 +1,28 @@
+{
+  "title": "Zero Trust Access Platform",
+  "description": "Identity-first zero trust: device posture check, per-session access policy, micro-VPN per-app access, continuous auth risk scoring.",
+  "basic": "$99/mo/month",
+  "pro": "$349/mo/month",
+  "enterprise": "$1,299/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Zero Trust Access Platform - Zion Tech Group",
+    "description": "Identity-first zero trust: device posture check, per-session access policy, micro-VPN per-app access, continuous auth risk scoring.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cloud-zero-trust-access-platform"
+    }
+  },
+  "features": [
+    "Identity-verified per-session auth (OIDC/SAML)",
+    "Device posture check before granting access",
+    "Per-app micro-segmented VPN access",
+    "Continuous risk score per session (anomaly detector)"
+  ],
+  "benefits": [
+    "Reduce costs with zero trust access platform",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

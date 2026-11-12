@@ -1,0 +1,29 @@
+{
+  "title": "Cloud Disaster Recovery as a Service",
+  "description": "Automated cloud disaster recovery. Continuous replication, automated failover, and regular DR testing with RPO/RTO guarantees.",
+  "basic": "$999/mo/month",
+  "pro": "$2,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Cloud Disaster Recovery as a Service - Zion Tech Group",
+    "description": "Automated cloud disaster recovery. Continuous replication, automated failover, and regular DR testing with RPO/RTO guarantees.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cloud-disaster-recovery"
+    }
+  },
+  "features": [
+    "Continuous data replication",
+    "Automated failover and failback",
+    "Regular DR testing",
+    "RPO/RTO guarantees",
+    "Integration with AWS, Azure, GCP"
+  ],
+  "benefits": [
+    "Meet business continuity requirements",
+    "Automate DR testing",
+    "Reduce RTO to minutes",
+    "Pay only for what you use"
+  ]
+}

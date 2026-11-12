@@ -1,0 +1,29 @@
+{
+  "title": "Edge Computing & Edge AI Deployment",
+  "description": "Deploy distributed edge workloads: CDN edge functions, edge ML inference, IoT pipelines, regional failover with 10-50ms p99 latency and per-edge-node observability.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Edge Computing & Edge AI Deployment - Zion Tech Group",
+    "description": "Deploy distributed edge workloads: CDN edge functions, edge ML inference, IoT pipelines, regional failover with 10-50ms p99 latency and per-edge-node observabil",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/edge-computing-deploy"
+    }
+  },
+  "features": [
+    "Multi-edge provider: Cloudflare/Fastly/Akamai",
+    "Edge function CI/CD",
+    "Edge ML inference (TFLite/ONNX Runtime)",
+    "Regional failover + sticky routing",
+    "Per-node observability + alert threshold"
+  ],
+  "benefits": [
+    "Reduce costs with edge computing & edge ai deployment",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

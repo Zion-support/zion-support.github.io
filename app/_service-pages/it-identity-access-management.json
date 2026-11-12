@@ -1,0 +1,29 @@
+{
+  "title": "Identity & Access Management (IAM) Platform",
+  "description": "Enterprise IAM with SSO, MFA, PAM, and automated access provisioning across cloud and on-premise systems — Zero Trust-ready identity governance.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Identity & Access Management (IAM) Platform - Zion Tech Group",
+    "description": "Enterprise IAM with SSO, MFA, PAM, and automated access provisioning across cloud and on-premise systems — Zero Trust-ready identity governance.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-identity-access-management"
+    }
+  },
+  "features": [
+    "Single sign-on (SSO) with 5000+ app integrations",
+    "Adaptive multi-factor authentication with risk scoring",
+    "Privileged access management (PAM) with session recording",
+    "Automated access provisioning and de-provisioning",
+    "Identity governance with access certification workflows"
+  ],
+  "benefits": [
+    "Reduce costs with identity & access management (iam) platform",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

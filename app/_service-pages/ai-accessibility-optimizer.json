@@ -1,0 +1,28 @@
+{
+  "title": "AI Accessibility Content Optimizer",
+  "description": "Suggests alt-text for images, transcript generation for videos, and semantic HTML improvements to boost accessibility and SEO simultaneously.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Accessibility Content Optimizer - Zion Tech Group",
+    "description": "Suggests alt-text for images, transcript generation for videos, and semantic HTML improvements to boost accessibility and SEO simultaneously.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-accessibility-optimizer"
+    }
+  },
+  "features": [
+    "Auto-alt-text for images",
+    "Video transcript with speaker IDs",
+    "Readability scoring",
+    "WCAG 2.1 AA gap analysis"
+  ],
+  "benefits": [
+    "Reduce costs with ai accessibility content optimizer",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

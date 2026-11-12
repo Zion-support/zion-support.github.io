@@ -1,0 +1,29 @@
+{
+  "title": "Field Service Management",
+  "description": "Manage field service: scheduling, dispatch, mobile work orders, customer communication. Optimize technician utilization.",
+  "basic": "$49/tech/mo/month",
+  "pro": "$99/tech/mo/month",
+  "enterprise": "$199/tech/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Field Service Management - Zion Tech Group",
+    "description": "Manage field service: scheduling, dispatch, mobile work orders, customer communication. Optimize technician utilization.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w177-field-service"
+    }
+  },
+  "features": [
+    "Intelligent scheduling and dispatch",
+    "Mobile work orders and checklists",
+    "Parts and inventory management",
+    "Customer communication and ETA",
+    "Technician tracking and route optimization"
+  ],
+  "benefits": [
+    "Optimize technician utilization",
+    "Mobile work orders eliminate paper",
+    "Customer ETA improves satisfaction",
+    "Route optimization reduces drive time"
+  ]
+}

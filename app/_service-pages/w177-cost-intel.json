@@ -1,0 +1,29 @@
+{
+  "title": "Cloud Cost Intelligence Dashboard",
+  "description": "Real-time cloud cost intelligence: anomaly detection, forecast vs actual, unit economics, optimization actions.",
+  "basic": "$199/mo/month",
+  "pro": "$599/mo/month",
+  "enterprise": "$1,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Cloud Cost Intelligence Dashboard - Zion Tech Group",
+    "description": "Real-time cloud cost intelligence: anomaly detection, forecast vs actual, unit economics, optimization actions.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w177-cost-intel"
+    }
+  },
+  "features": [
+    "Real-time cost dashboard across providers",
+    "Anomaly detection on spend spikes",
+    "Forecast vs actual with variance alerts",
+    "Unit economics (cost per customer",
+    "transaction)"
+  ],
+  "benefits": [
+    "See cloud costs in real-time not monthly",
+    "Anomaly detection catches spend spikes instantly",
+    "Unit economics drives cost accountability",
+    "Tag-based chargeback for internal billing"
+  ]
+}

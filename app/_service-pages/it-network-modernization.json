@@ -1,0 +1,29 @@
+{
+  "title": "IT Network Modernization & SD-WAN",
+  "description": "Modernize your network with SD-WAN, SASE, and intent-based networking. Reduce costs by 40% while improving performance, security, and reliability.",
+  "basic": "$3,000/mo/month",
+  "pro": "$8,000/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "IT Network Modernization & SD-WAN - Zion Tech Group",
+    "description": "Modernize your network with SD-WAN, SASE, and intent-based networking. Reduce costs by 40% while improving performance, security, and reliability.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-network-modernization"
+    }
+  },
+  "features": [
+    "SD-WAN design and deployment",
+    "SASE (Secure Access Service Edge)",
+    "Intent-based networking",
+    "Network automation and orchestration",
+    "Zero-trust network access (ZTNA)"
+  ],
+  "benefits": [
+    "Reduce network costs by 40%",
+    "Improve application performance by 60%",
+    "Secure branch offices without backhauling",
+    "Automate network operations with zero-touch"
+  ]
+}

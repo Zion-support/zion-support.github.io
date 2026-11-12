@@ -1,0 +1,29 @@
+{
+  "title": "DevOps & CI/CD Automation",
+  "description": "End-to-end CI/CD pipelines, container orchestration, GitOps workflows, and site reliability engineering.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "DevOps & CI/CD Automation - Zion Tech Group",
+    "description": "End-to-end CI/CD pipelines, container orchestration, GitOps workflows, and site reliability engineering.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/devops-cicd"
+    }
+  },
+  "features": [
+    "Automated CI/CD pipeline setup (GitHub Actions, GitLab CI)",
+    "Kubernetes orchestration & management",
+    "Infrastructure as Code (Terraform, Ansible)",
+    "24/7 site reliability monitoring",
+    "Blue-green & canary deployments"
+  ],
+  "benefits": [
+    "Reduce costs with devops & ci/cd automation",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

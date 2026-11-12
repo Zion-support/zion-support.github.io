@@ -1,0 +1,29 @@
+{
+  "title": "AI Governance & Trust",
+  "description": "Enterprise AI governance, compliance, and risk management. Policy enforcement, bias detection, audit trails, and responsible AI frameworks for regu...",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Governance & Trust - Zion Tech Group",
+    "description": "Enterprise AI governance, compliance, and risk management. Policy enforcement, bias detection, audit trails, and responsible AI frameworks for regu...",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-governance-trust"
+    }
+  },
+  "features": [
+    "Policy & Guardrail Enforcement",
+    "Bias & Fairness Monitoring",
+    "Audit Trails & Traceability",
+    "Model Risk Management",
+    "Regulatory Compliance"
+  ],
+  "benefits": [
+    "Reduce costs with ai governance & trust",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

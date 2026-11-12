@@ -1,0 +1,28 @@
+{
+  "title": "Omnichannel Neural Smart Cities Processor",
+  "description": "Neural processing unit optimized for omnichannel smart cities workloads, delivering omnichannel inference at scale.",
+  "basic": "$278/month",
+  "pro": "$698/month",
+  "enterprise": "$2098/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Omnichannel Neural Smart Cities Processor - Zion Tech Group",
+    "description": "Neural processing unit optimized for omnichannel smart cities workloads, delivering omnichannel inference at scale.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/omnichannel-neural-smart-cities-processor-36a32832"
+    }
+  },
+  "features": [
+    "Accelerated inference",
+    "Model compression",
+    "Hardware acceleration",
+    "Batch optimization"
+  ],
+  "benefits": [
+    "10x inference speed",
+    "Reduced latency",
+    "Cost-effective scaling",
+    "Hardware optimization"
+  ]
+}

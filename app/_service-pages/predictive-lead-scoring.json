@@ -1,0 +1,28 @@
+{
+  "title": "Predictive Lead Scoring Model",
+  "description": "ML lead scoring: technographics intent signals website pages email engagement ABM data produces rank-ordered lead score with explanation per scoring dimension per lead toward target ICP.",
+  "basic": "$199/mo/month",
+  "pro": "$499/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Predictive Lead Scoring Model - Zion Tech Group",
+    "description": "ML lead scoring: technographics intent signals website pages email engagement ABM data produces rank-ordered lead score with explanation per scoring dimension p",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/predictive-lead-scoring"
+    }
+  },
+  "features": [
+    "Technographics + intent signal + web engagement",
+    "ML model per ICP scoring dimension",
+    "ABM target list auto-generated per score tier",
+    "CRM sync Salesforce HubSpot Pipedrive"
+  ],
+  "benefits": [
+    "Reduce costs with predictive lead scoring model",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

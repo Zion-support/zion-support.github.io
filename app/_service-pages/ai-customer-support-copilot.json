@@ -1,0 +1,29 @@
+{
+  "title": "AI Customer Support Copilot",
+  "description": "AI copilot for support agents that suggests responses, auto-summarizes tickets, and routes inquiries to the right team. Reduces average handle time by 40% while improving CSAT.",
+  "basic": "$49/agent/mo/month",
+  "pro": "$99/agent/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Customer Support Copilot - Zion Tech Group",
+    "description": "AI copilot for support agents that suggests responses, auto-summarizes tickets, and routes inquiries to the right team. Reduces average handle time by 40% while",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-customer-support-copilot"
+    }
+  },
+  "features": [
+    "Real-time response suggestions based on knowledge base",
+    "Automatic ticket summarization and categorization",
+    "Smart routing to best-qualified agent",
+    "Sentiment-aware tone adjustment",
+    "Multi-language support (50+ languages)"
+  ],
+  "benefits": [
+    "Reduce handle time by 40%",
+    "Improve first-contact resolution by 25%",
+    "Consistent quality across all agents",
+    "Scale support without adding headcount"
+  ]
+}

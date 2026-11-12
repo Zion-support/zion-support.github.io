@@ -1,0 +1,29 @@
+{
+  "title": "Virtual Lab Platform for STEM Education",
+  "description": "Cloud-based virtual laboratory platform for science, technology, engineering, and math education. Simulate physics, chemistry, biology, and engineering experiments.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Virtual Lab Platform for STEM Education - Zion Tech Group",
+    "description": "Cloud-based virtual laboratory platform for science, technology, engineering, and math education. Simulate physics, chemistry, biology, and engineering experime",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/edtech-virtual-lab-platform"
+    }
+  },
+  "features": [
+    "Physics simulations",
+    "Chemistry lab simulations",
+    "Biology virtual dissections",
+    "Engineering design tools",
+    "Collaborative experiments"
+  ],
+  "benefits": [
+    "Enable remote STEM education",
+    "Reduce lab costs by 70%",
+    "Safe experimentation environment",
+    "Unlimited experiment repetitions"
+  ]
+}

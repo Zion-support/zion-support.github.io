@@ -1,0 +1,29 @@
+{
+  "title": "Education & LMS Automation",
+  "description": "Automate education operations: enrollment, grading, content delivery, plagiarism checking, and student communication. Canvas, Moodle, Blackboard.",
+  "basic": "$199/mo/month",
+  "pro": "$599/mo/month",
+  "enterprise": "$1,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Education & LMS Automation - Zion Tech Group",
+    "description": "Automate education operations: enrollment, grading, content delivery, plagiarism checking, and student communication. Canvas, Moodle, Blackboard.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w176-education-automation"
+    }
+  },
+  "features": [
+    "Enrollment and registration automation",
+    "AI-assisted grading and rubrics",
+    "Content delivery and adaptive paths",
+    "Plagiarism detection and originality",
+    "Student communication and reminders"
+  ],
+  "benefits": [
+    "AI grading saves faculty hours",
+    "Plagiarism detection ensures integrity",
+    "At-risk detection enables early intervention",
+    "Learning analytics improve outcomes"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "IT Cloud-Native Transformation Service",
+  "description": "End-to-end cloud-native transformation: containerization, microservices decomposition, CI/CD pipeline setup, and Kubernetes adoption. From legacy monolith to cloud-native architecture.",
+  "basic": "$4,999/mo/month",
+  "pro": "$14,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "IT Cloud-Native Transformation Service - Zion Tech Group",
+    "description": "End-to-end cloud-native transformation: containerization, microservices decomposition, CI/CD pipeline setup, and Kubernetes adoption. From legacy monolith to cl",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-cloud-native-transformation"
+    }
+  },
+  "features": [
+    "Monolith decomposition consulting",
+    "Containerization (Docker)",
+    "Kubernetes deployment",
+    "CI/CD pipeline setup",
+    "Infrastructure as Code (Terraform)"
+  ],
+  "benefits": [
+    "Modernize legacy applications at scale",
+    "Improve deployment frequency 10x",
+    "Reduce infrastructure costs",
+    "Enable team autonomy"
+  ]
+}

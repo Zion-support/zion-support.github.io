@@ -1,0 +1,29 @@
+{
+  "title": "Edge AI Deployment Platform",
+  "description": "One-click edge AI model deployment to 50k+ global edge points-of-presence: ONNX/TensorRT/GGUF model package, auto-scaling inference, A/B model rollout, cold-warm-cache tiering, and robust offline-first sync for disconnected sites.",
+  "basic": "$99/mo/month",
+  "pro": "$349/mo/month",
+  "enterprise": "$1,299/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Edge AI Deployment Platform - Zion Tech Group",
+    "description": "One-click edge AI model deployment to 50k+ global edge points-of-presence: ONNX/TensorRT/GGUF model package, auto-scaling inference, A/B model rollout, cold-war",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cloud-edge-ai-deployment-platform"
+    }
+  },
+  "features": [
+    "One-click deploy ONNX/TensorRT/GGUF model to global edge PoPs",
+    "Cold-warm model cache tiers reduce first-inference latency by 80%+",
+    "A/B model rollout: blue-green promotion of new model versions with traffic splitting",
+    "Offline-first sync buffer: 24 h message queue for disconnected branch-store sites",
+    "Hardware-accelerated inference: works on Jetson, Coral TPU, RK3588 edge hardware"
+  ],
+  "benefits": [
+    "Reduce costs with edge ai deployment platform",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

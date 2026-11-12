@@ -1,0 +1,28 @@
+{
+  "title": "Intelligent Document Processing v2",
+  "description": "Intelligent document processing: layout-aware OCR, handwriting recognition, table extraction, and form auto-fill. Handles invoices, contracts, medical records, and tax forms at 1000 pages per hour via REST.",
+  "basic": "$199/mo/month",
+  "pro": "$599/mo/month",
+  "enterprise": "$1,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Intelligent Document Processing v2 - Zion Tech Group",
+    "description": "Intelligent document processing: layout-aware OCR, handwriting recognition, table extraction, and form auto-fill. Handles invoices, contracts, medical records, ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/doc-intelligence-v2"
+    }
+  },
+  "features": [
+    "Intelligent automation and orchestration",
+    "Enterprise-grade integration",
+    "Real-time monitoring and alerts",
+    "Scalable multi-tenant architecture"
+  ],
+  "benefits": [
+    "Reduce costs with intelligent document processing v2",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

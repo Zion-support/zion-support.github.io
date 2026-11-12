@@ -1,0 +1,29 @@
+{
+  "title": "Customer Feedback Analyzer",
+  "description": "Unified NLP-powered analysis across reviews, surveys, support tickets, and social mentions. Surfaces sentiment trends, emerging issues, and feature requests — turning unstructured feedback into strategic product intelligence.",
+  "basic": "$N/A/month",
+  "pro": "$997/month",
+  "enterprise": "$2497/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Customer Feedback Analyzer - Zion Tech Group",
+    "description": "Unified NLP-powered analysis across reviews, surveys, support tickets, and social mentions. Surfaces sentiment trends, emerging issues, and feature requests — t",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/wave126-customer-feedback-analyzer"
+    }
+  },
+  "features": [
+    "Multi-source ingestion (reviews, NPS, Zendesk, social)",
+    "Sentiment analysis with emotion detection",
+    "Topic modeling & theme clustering",
+    "Feature request extraction & prioritization",
+    "Competitor benchmarking from public reviews"
+  ],
+  "benefits": [
+    "Understand customers at scale without reading every ticket",
+    "Spot churn risks early from sentiment shifts",
+    "Prioritize product roadmap with real data, not guesses",
+    "Benchmark against competitors automatically"
+  ]
+}

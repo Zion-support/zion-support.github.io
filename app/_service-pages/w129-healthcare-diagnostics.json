@@ -1,0 +1,29 @@
+{
+  "title": "Healthcare AI Diagnostics Assistant",
+  "description": "Medical imaging analysis, clinical decision support, and patient risk stratification. FDA-cleared AI models for radiology, pathology, and cardiology.",
+  "basic": "$N/A/month",
+  "pro": "$34997/month",
+  "enterprise": "$69997/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Healthcare AI Diagnostics Assistant - Zion Tech Group",
+    "description": "Medical imaging analysis, clinical decision support, and patient risk stratification. FDA-cleared AI models for radiology, pathology, and cardiology.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w129-healthcare-diagnostics"
+    }
+  },
+  "features": [
+    "Medical imaging AI",
+    "Clinical decision support",
+    "Risk stratification",
+    "EHR integration",
+    "HIPAA compliance"
+  ],
+  "benefits": [
+    "94% diagnostic accuracy",
+    "Faster patient care",
+    "Reduced physician burnout",
+    "Better outcomes"
+  ]
+}

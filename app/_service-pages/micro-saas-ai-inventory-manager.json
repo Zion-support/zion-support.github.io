@@ -1,0 +1,29 @@
+{
+  "title": "AI Inventory & Supply Chain Manager",
+  "description": "AI-powered inventory management that predicts demand, optimizes stock levels, and automates reordering. Reduces carrying costs by 30% while preventing stockouts.",
+  "basic": "$199/mo/month",
+  "pro": "$549/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Inventory & Supply Chain Manager - Zion Tech Group",
+    "description": "AI-powered inventory management that predicts demand, optimizes stock levels, and automates reordering. Reduces carrying costs by 30% while preventing stockouts",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-ai-inventory-manager"
+    }
+  },
+  "features": [
+    "AI demand forecasting with seasonality",
+    "Automatic reorder point calculation",
+    "Multi-warehouse inventory optimization",
+    "Supplier lead time tracking and alerts",
+    "Dead stock identification and liquidation"
+  ],
+  "benefits": [
+    "Reduce inventory costs by 30%",
+    "Eliminate stockouts with AI predictions",
+    "Automate reordering and save 10+ hours/week",
+    "Optimize warehouse space utilization"
+  ]
+}

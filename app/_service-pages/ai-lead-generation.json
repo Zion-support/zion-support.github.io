@@ -1,0 +1,29 @@
+{
+  "title": "AI Lead Generation & Enrichment",
+  "description": "Automatically discover, qualify, and enrich B2B leads with web scraping, firmographic scoring, and intent signal detection.",
+  "basic": "$199/mo/month",
+  "pro": "$499/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Lead Generation & Enrichment - Zion Tech Group",
+    "description": "Automatically discover, qualify, and enrich B2B leads with web scraping, firmographic scoring, and intent signal detection.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-lead-generation"
+    }
+  },
+  "features": [
+    "Automated lead discovery from public sources",
+    "Firmographic enrichment — revenue, tech stack, contacts",
+    "Intent signal — hiring, mentions, website visits",
+    "CRM auto-sync to Salesforce, HubSpot, Pipedrive",
+    "Personalized outreach — email, LinkedIn, sequences"
+  ],
+  "benefits": [
+    "Reduce costs with ai lead generation & enrichment",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

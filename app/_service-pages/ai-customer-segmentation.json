@@ -1,0 +1,29 @@
+{
+  "title": "AI Customer Segmentation & Lifetime Value Prediction",
+  "description": "AI-powered customer segmentation that goes beyond demographics. Behavioral clustering, lifetime value prediction, and next-best-action for each segment.",
+  "basic": "$799/mo/month",
+  "pro": "$2,499/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Customer Segmentation & Lifetime Value Prediction - Zion Tech Group",
+    "description": "AI-powered customer segmentation that goes beyond demographics. Behavioral clustering, lifetime value prediction, and next-best-action for each segment.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-customer-segmentation"
+    }
+  },
+  "features": [
+    "AI behavioral clustering and segmentation",
+    "Customer lifetime value (LTV) prediction",
+    "Churn risk scoring per segment",
+    "Next-best-action recommendations",
+    "Integration with CRM, CDP, and marketing automation"
+  ],
+  "benefits": [
+    "Increase marketing ROI by 40%",
+    "Predict LTV with 90%+ accuracy",
+    "Reduce churn with targeted retention",
+    "Personalize at scale with AI segments"
+  ]
+}

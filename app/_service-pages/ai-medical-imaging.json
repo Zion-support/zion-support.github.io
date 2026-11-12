@@ -1,0 +1,29 @@
+{
+  "title": "AI Medical Imaging & Diagnostics",
+  "description": "FDA-ready AI diagnostic support for radiology, pathology, and dermatology — detect anomalies, prioritize cases, and assist radiologists with second-opinion AI.",
+  "basic": "$499/mo/month",
+  "pro": "$1,299/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Medical Imaging & Diagnostics - Zion Tech Group",
+    "description": "FDA-ready AI diagnostic support for radiology, pathology, and dermatology — detect anomalies, prioritize cases, and assist radiologists with second-opinion AI.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-medical-imaging"
+    }
+  },
+  "features": [
+    "Deep learning anomaly detection in X-rays, CT, MRI",
+    "Pathology slide analysis and classification",
+    "Dermatological lesion assessment",
+    "Triage and workload prioritization",
+    "HIPAA-compliant deployment with audit trails"
+  ],
+  "benefits": [
+    "Reduce costs with ai medical imaging & diagnostics",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

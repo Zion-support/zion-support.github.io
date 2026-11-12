@@ -1,0 +1,28 @@
+{
+  "title": "Enterprise API Gateway",
+  "description": "Unified API gateway: JWT/OAuth2 auth, rate-limit, circuit-breaker, request/response transform, analytics, multi-tenant API key mgmt.",
+  "basic": "$99/mo/month",
+  "pro": "$349/mo/month",
+  "enterprise": "$1,299/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Enterprise API Gateway - Zion Tech Group",
+    "description": "Unified API gateway: JWT/OAuth2 auth, rate-limit, circuit-breaker, request/response transform, analytics, multi-tenant API key mgmt.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cloud-api-gateway-enterprise"
+    }
+  },
+  "features": [
+    "JWT/OAuth2/API-Key auth per route",
+    "Rate-limit (token-bucket) + circuit-breaker",
+    "Request/response transform + header injection",
+    "Multi-tenant API key management + analytics"
+  ],
+  "benefits": [
+    "Reduce costs with enterprise api gateway",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

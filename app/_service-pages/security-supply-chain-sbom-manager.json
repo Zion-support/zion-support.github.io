@@ -1,0 +1,28 @@
+{
+  "title": "Software Bill-of-Materials Manager",
+  "description": "Full SBOM lifecycle management: auto-generate SPDX and Cyclone-DX per build, license-compliance check, vulnerability and CVE matching per component, attestation signing, and SBOM consumer portal per vendor release.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Software Bill-of-Materials Manager - Zion Tech Group",
+    "description": "Full SBOM lifecycle management: auto-generate SPDX and Cyclone-DX per build, license-compliance check, vulnerability and CVE matching per component, attestation",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/security-supply-chain-sbom-manager"
+    }
+  },
+  "features": [
+    "Auto-generate SBOM per build in SPDX and Cyclone-DX formats",
+    "License compliance matrix covering GPL, Apache, MIT, and commercial licenses",
+    "CVE matching per SBOM component auto-updated daily from NVD and vendor feeds",
+    "Attestation signing and SBOM consumer portal per vendor per OS release"
+  ],
+  "benefits": [
+    "Reduce costs with software bill-of-materials manager",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

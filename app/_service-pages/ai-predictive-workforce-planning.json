@@ -1,0 +1,29 @@
+{
+  "title": "AI Predictive Workforce Planning",
+  "description": "Forecast hiring needs, optimize team composition, and predict attrition risk with AI-powered HR analytics and workforce modeling.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Predictive Workforce Planning - Zion Tech Group",
+    "description": "Forecast hiring needs, optimize team composition, and predict attrition risk with AI-powered HR analytics and workforce modeling.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-predictive-workforce-planning"
+    }
+  },
+  "features": [
+    "Attrition risk prediction",
+    "Skills gap analysis",
+    "Optimal team composition",
+    "Seasonal demand forecasting",
+    "Succession planning guidance"
+  ],
+  "benefits": [
+    "Reduce costs with ai predictive workforce planning",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

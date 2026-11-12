@@ -1,0 +1,28 @@
+{
+  "title": "Product Analytics & AI Insights",
+  "description": "Auto-insights engine: conversion funnel anomaly, feature-adoption cohort, retention waterfall, session replay auto-clip per insight.",
+  "basic": "$199/mo/month",
+  "pro": "$599/mo/month",
+  "enterprise": "$1,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Product Analytics & AI Insights - Zion Tech Group",
+    "description": "Auto-insights engine: conversion funnel anomaly, feature-adoption cohort, retention waterfall, session replay auto-clip per insight.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-product-analytics-insights"
+    }
+  },
+  "features": [
+    "Conversion funnel anomaly per step",
+    "Feature-adoption cohort heatmap",
+    "Retention waterfall (D1/D7/D30/D90)",
+    "Session replay auto-clip per anomaly insight"
+  ],
+  "benefits": [
+    "Reduce costs with product analytics & ai insights",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

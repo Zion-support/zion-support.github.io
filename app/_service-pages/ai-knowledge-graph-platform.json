@@ -1,0 +1,30 @@
+{
+  "title": "Knowledge Graph & Entity Resolution Platform",
+  "description": "Build and query enterprise knowledge graphs. Entity resolution, relationship discovery, semantic search, and graph analytics for connected data intelligence.",
+  "basic": "$N/A/month",
+  "pro": "$N/A/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Knowledge Graph & Entity Resolution Platform - Zion Tech Group",
+    "description": "Build and query enterprise knowledge graphs. Entity resolution, relationship discovery, semantic search, and graph analytics for connected data intelligence.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-knowledge-graph-platform"
+    }
+  },
+  "features": [
+    "Entity resolution",
+    "Relationship discovery",
+    "Semantic search",
+    "Graph analytics",
+    "Ontology management"
+  ],
+  "benefits": [
+    "Connected data insights",
+    "Entity disambiguation",
+    "Relationship discovery",
+    "Semantic search",
+    "Graph analytics"
+  ]
+}

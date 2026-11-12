@@ -1,0 +1,28 @@
+{
+  "title": "Computer Vision Quality Inspection",
+  "description": "Manufacturing/production line defect detection via camera feed YOLO/RT-DETR inference, real-time alarms, and SPC (Statistical Process Control) shift reports.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Computer Vision Quality Inspection - Zion Tech Group",
+    "description": "Manufacturing/production line defect detection via camera feed YOLO/RT-DETR inference, real-time alarms, and SPC (Statistical Process Control) shift reports.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-vision-quality-inspection"
+    }
+  },
+  "features": [
+    "YOLOv8/RT-DETR model fine-tune on your SKU",
+    "Inference on edge device <30ms per frame",
+    "Real-time alarm + MES work-order auto-create",
+    "SPC chart + shift defect trend report"
+  ],
+  "benefits": [
+    "Reduce costs with computer vision quality inspection",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

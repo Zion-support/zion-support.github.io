@@ -1,0 +1,29 @@
+{
+  "title": "Endpoint Management & Security (UEM)",
+  "description": "Unified endpoint management: device enrollment, policy enforcement, remote wipe, compliance, and threat detection across Windows, Mac, iOS, Android.",
+  "basic": "$6/device/mo/month",
+  "pro": "$12/device/mo/month",
+  "enterprise": "$25/device/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Endpoint Management & Security (UEM) - Zion Tech Group",
+    "description": "Unified endpoint management: device enrollment, policy enforcement, remote wipe, compliance, and threat detection across Windows, Mac, iOS, Android.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w174-endpoint-mgmt"
+    }
+  },
+  "features": [
+    "Device enrollment (BYOD and corporate)",
+    "Policy enforcement and configuration",
+    "Remote lock, wipe, and troubleshooting",
+    "Compliance monitoring and reporting",
+    "Integrated threat detection (EDR)"
+  ],
+  "benefits": [
+    "Manage all platforms from one console",
+    "Compliance enforcement automated",
+    "Remote wipe protects lost/stolen devices",
+    "Integrated EDR for endpoint security"
+  ]
+}

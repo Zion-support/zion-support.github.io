@@ -1,0 +1,29 @@
+{
+  "title": "IT Asset Management Platform",
+  "description": "Comprehensive IT asset lifecycle management. Hardware and software tracking, license compliance, procurement workflows, and disposal management.",
+  "basic": "$199/mo/month",
+  "pro": "$599/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "IT Asset Management Platform - Zion Tech Group",
+    "description": "Comprehensive IT asset lifecycle management. Hardware and software tracking, license compliance, procurement workflows, and disposal management.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-services-asset-management"
+    }
+  },
+  "features": [
+    "Hardware asset tracking",
+    "Software license management",
+    "Procurement workflows",
+    "Auto-discovery of network assets",
+    "Compliance and audit reports"
+  ],
+  "benefits": [
+    "Eliminate license violations",
+    "Reduce IT spend by 20%",
+    "Full asset visibility",
+    "Automated compliance reporting"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "Real-Time Fraud Detection",
+  "description": "ML models trained on transaction data to detect anomalies in milliseconds. Adaptive learning reduces false positives over time.",
+  "basic": "$399/mo/month",
+  "pro": "$999/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Real-Time Fraud Detection - Zion Tech Group",
+    "description": "ML models trained on transaction data to detect anomalies in milliseconds. Adaptive learning reduces false positives over time.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-fraud-detection-real-time"
+    }
+  },
+  "features": [
+    "Real-time scoring (<50ms)",
+    "Adaptive thresholds",
+    "Case management dashboard",
+    "Investigation tools",
+    "PCI DSS compliant"
+  ],
+  "benefits": [
+    "Reduce costs with real-time fraud detection",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

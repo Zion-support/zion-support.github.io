@@ -1,0 +1,29 @@
+{
+  "title": "IT Hybrid Cloud Networking & SD-WAN",
+  "description": "Design and implement hybrid cloud networking with SD-WAN, SASE, and zero-trust principles. Connect on-prem, cloud, and remote workers with enterprise-grade security.",
+  "basic": "$10,000 setup/month",
+  "pro": "$25,000 setup/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "IT Hybrid Cloud Networking & SD-WAN - Zion Tech Group",
+    "description": "Design and implement hybrid cloud networking with SD-WAN, SASE, and zero-trust principles. Connect on-prem, cloud, and remote workers with enterprise-grade secu",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-hybrid-cloud-networking"
+    }
+  },
+  "features": [
+    "SD-WAN design and deployment",
+    "SASE architecture (SD-WAN + SSE + ZTNA)",
+    "Multi-cloud network connectivity",
+    "Network segmentation and micro-segmentation",
+    "Performance monitoring and optimization"
+  ],
+  "benefits": [
+    "Reduce WAN costs by 50% with SD-WAN",
+    "Secure remote work with zero-trust access",
+    "Sub-100ms latency for cloud applications",
+    "Automated failover for business continuity"
+  ]
+}

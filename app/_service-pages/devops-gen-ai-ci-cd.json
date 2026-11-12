@@ -1,0 +1,29 @@
+{
+  "title": "Generative AI for DevOps & CI/CD",
+  "description": "AI-powered DevOps: auto-generate CI/CD pipelines, infrastructure-as-code, deployment scripts, and incident runbooks from natural language specifications.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Generative AI for DevOps & CI/CD - Zion Tech Group",
+    "description": "AI-powered DevOps: auto-generate CI/CD pipelines, infrastructure-as-code, deployment scripts, and incident runbooks from natural language specifications.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/devops-gen-ai-ci-cd"
+    }
+  },
+  "features": [
+    "Natural language to pipeline generation",
+    "IaC template creation (Terraform, CloudFormation)",
+    "Automated incident runbook drafting",
+    "Self-healing deployment rollbacks",
+    "Performance anomaly detection & tuning"
+  ],
+  "benefits": [
+    "Reduce costs with generative ai for devops & ci/cd",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "Payment Compliance Gateway",
+  "description": "PCI-DSS Level 1 certified payment gateway adapter with tokenization, 3D Secure 2, fraud scoring, and settlement reconciliation.",
+  "basic": "$499/mo/month",
+  "pro": "$1,499/mo/month",
+  "enterprise": "$4,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Payment Compliance Gateway - Zion Tech Group",
+    "description": "PCI-DSS Level 1 certified payment gateway adapter with tokenization, 3D Secure 2, fraud scoring, and settlement reconciliation.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/payment-compliance-gateway"
+    }
+  },
+  "features": [
+    "PCI-DSS L1 certified",
+    "Tokenization & vaulting",
+    "3D Secure 2 support",
+    "Adaptive fraud scoring",
+    "Multi-currency settlement"
+  ],
+  "benefits": [
+    "Reduce costs with payment compliance gateway",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

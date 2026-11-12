@@ -1,0 +1,29 @@
+{
+  "title": "Cloud Migration & Modernization",
+  "description": "Seamless migration to AWS, Azure, or GCP with zero downtime, cost optimization, and infrastructure-as-code automation.",
+  "basic": "$99/mo/month",
+  "pro": "$349/mo/month",
+  "enterprise": "$1,299/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Cloud Migration & Modernization - Zion Tech Group",
+    "description": "Seamless migration to AWS, Azure, or GCP with zero downtime, cost optimization, and infrastructure-as-code automation.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cloud-migration"
+    }
+  },
+  "features": [
+    "Multi-cloud migration planning",
+    "Zero-downtime migration execution",
+    "Cost optimization & right-sizing",
+    "Infrastructure-as-Code (Terraform/Pulumi)",
+    "Post-migration performance tuning"
+  ],
+  "benefits": [
+    "Reduce costs with cloud migration & modernization",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

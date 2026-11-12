@@ -1,0 +1,30 @@
+{
+  "title": "Algorithmic Trading Platform",
+  "description": "AI-powered algorithmic trading with backtesting, strategy optimization, real-time execution, and risk management. Equities, forex, crypto, and derivatives.",
+  "basic": "$N/A/month",
+  "pro": "$N/A/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Algorithmic Trading Platform - Zion Tech Group",
+    "description": "AI-powered algorithmic trading with backtesting, strategy optimization, real-time execution, and risk management. Equities, forex, crypto, and derivatives.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/financial-algo-trading-platform"
+    }
+  },
+  "features": [
+    "Strategy backtesting",
+    "ML strategy optimization",
+    "Real-time execution",
+    "Risk management",
+    "Portfolio optimization"
+  ],
+  "benefits": [
+    "Emotion-free trading",
+    "Backtested strategies",
+    "Execution speed",
+    "Risk controls",
+    "Multi-asset support"
+  ]
+}

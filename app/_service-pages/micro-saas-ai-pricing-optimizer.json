@@ -1,0 +1,29 @@
+{
+  "title": "Micro-SaaS AI Dynamic Pricing Optimizer",
+  "description": "AI-powered pricing optimization for e-commerce and SaaS. Analyzes competitor pricing, demand elasticity, and customer segments to recommend optimal prices that maximize revenue.",
+  "basic": "$99/mo/month",
+  "pro": "$299/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Micro-SaaS AI Dynamic Pricing Optimizer - Zion Tech Group",
+    "description": "AI-powered pricing optimization for e-commerce and SaaS. Analyzes competitor pricing, demand elasticity, and customer segments to recommend optimal prices that ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-ai-pricing-optimizer"
+    }
+  },
+  "features": [
+    "Competitor price monitoring across 50+ sources",
+    "Demand elasticity modeling per product",
+    "A/B testing framework for price experiments",
+    "Customer segment-based pricing recommendations",
+    "Revenue impact simulation before changes"
+  ],
+  "benefits": [
+    "Increase revenue 5-15% with optimized pricing",
+    "React to market changes in real-time",
+    "Data-driven pricing decisions not guesswork",
+    "Test prices before committing"
+  ]
+}

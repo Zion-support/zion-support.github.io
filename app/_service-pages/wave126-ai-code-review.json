@@ -1,0 +1,29 @@
+{
+  "title": "AI-Powered Code Review Platform",
+  "description": "Automated pull request reviews powered by deep code understanding. Scans for security vulnerabilities, enforces style guides, detects anti-patterns, and provides actionable suggestions — reducing review time by 80% and catching issues before they reach production.",
+  "basic": "$N/A/month",
+  "pro": "$797/month",
+  "enterprise": "$1997/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI-Powered Code Review Platform - Zion Tech Group",
+    "description": "Automated pull request reviews powered by deep code understanding. Scans for security vulnerabilities, enforces style guides, detects anti-patterns, and provide",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/wave126-ai-code-review"
+    }
+  },
+  "features": [
+    "Automated PR review with contextual AI analysis",
+    "Security vulnerability scanning (OWASP Top 10, SAST)",
+    "Style guide enforcement & linting integration",
+    "Anti-pattern & code smell detection",
+    "Architecture compliance checks"
+  ],
+  "benefits": [
+    "80% faster code review cycles",
+    "Ship with confidence — catch bugs before production",
+    "Consistent code quality across every team",
+    "Onboard new developers 3× faster with AI-guided reviews"
+  ]
+}

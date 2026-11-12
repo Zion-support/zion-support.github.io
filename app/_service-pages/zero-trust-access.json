@@ -1,0 +1,29 @@
+{
+  "title": "Zero Trust Access Gateway",
+  "description": "Replace traditional VPN with continuous identity-verified access — least-privilege, device-aware, audit-logged connections to every app for hybrid and remote-first enterprises.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Zero Trust Access Gateway - Zion Tech Group",
+    "description": "Replace traditional VPN with continuous identity-verified access — least-privilege, device-aware, audit-logged connections to every app for hybrid and remote-fi",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/zero-trust-access"
+    }
+  },
+  "features": [
+    "Identity-verified every request",
+    "Continuous risk evaluation",
+    "Least-privilege micro-perimeters",
+    "Device posture checking",
+    "Full access audit log"
+  ],
+  "benefits": [
+    "Reduce costs with zero trust access gateway",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

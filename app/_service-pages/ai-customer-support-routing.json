@@ -1,0 +1,28 @@
+{
+  "title": "AI Smart Support Ticket Routing",
+  "description": "Intelligently route support tickets to the right agent based on content analysis, agent skills, workload, and priority. Reduces resolution time by 40% with automatic categorization, sentiment-based prioritization, and smart assignment.",
+  "basic": "$N/A/month",
+  "pro": "$N/A/month",
+  "enterprise": "$899/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Smart Support Ticket Routing - Zion Tech Group",
+    "description": "Intelligently route support tickets to the right agent based on content analysis, agent skills, workload, and priority. Reduces resolution time by 40% with auto",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-customer-support-routing"
+    }
+  },
+  "features": [
+    "Content-based routing",
+    "Skill matching",
+    "Sentiment prioritization",
+    "Workload balancing",
+    "Auto-categorization"
+  ],
+  "benefits": [
+    "40% faster resolution",
+    "95% routing accuracy",
+    "Improved agent satisfaction"
+  ]
+}

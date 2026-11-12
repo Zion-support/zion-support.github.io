@@ -1,0 +1,29 @@
+{
+  "title": "AI BOM & Procurement Optimiser",
+  "description": "Multi-tier bill-of-materials analyser. Optimises part sourcing, predicts shortages, recommends alternative components, and benchmarks against global market pricing for manufacturing.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI BOM & Procurement Optimiser - Zion Tech Group",
+    "description": "Multi-tier bill-of-materials analyser. Optimises part sourcing, predicts shortages, recommends alternative components, and benchmarks against global market pric",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-bom-procurement"
+    }
+  },
+  "features": [
+    "Multi-tier BOM parsing",
+    "Supplier intelligence and scoring",
+    "Alternative component finder",
+    "Global price benchmarking",
+    "Lead-time and supply-risk prediction"
+  ],
+  "benefits": [
+    "Reduce costs with ai bom & procurement optimiser",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

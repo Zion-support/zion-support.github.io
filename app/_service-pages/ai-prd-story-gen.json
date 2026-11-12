@@ -1,0 +1,29 @@
+{
+  "title": "AI PRD & User Story Generator",
+  "description": "Transform vague feature requests into comprehensive Product Requirements Documents with acceptance criteria, user flows, and ready-for-engineering technical specs.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI PRD & User Story Generator - Zion Tech Group",
+    "description": "Transform vague feature requests into comprehensive Product Requirements Documents with acceptance criteria, user flows, and ready-for-engineering technical spe",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-prd-story-gen"
+    }
+  },
+  "features": [
+    "Auto-PRD first-draft generator",
+    "User story with acceptance criteria boilerplate",
+    "Mermaid user-flow diagrams",
+    "Development effort estimation",
+    "Notion and Linear one-click sync"
+  ],
+  "benefits": [
+    "Reduce costs with ai prd & user story generator",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

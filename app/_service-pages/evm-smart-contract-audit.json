@@ -1,0 +1,29 @@
+{
+  "title": "EVM Smart Contract Audit",
+  "description": "Comprehensive audit: static analysis (Slither), manual line-by-line review, fuzz testing (Foundry), formal verification for critical invariants, post-audit re-audit.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "EVM Smart Contract Audit - Zion Tech Group",
+    "description": "Comprehensive audit: static analysis (Slither), manual line-by-line review, fuzz testing (Foundry), formal verification for critical invariants, post-audit re-a",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/evm-smart-contract-audit"
+    }
+  },
+  "features": [
+    "Static analysis + re-entrancy + overflow checks",
+    "Manual line-by-line expert review",
+    "Fuzz + invariant testing (Foundry)",
+    "Formal verification for critical invariants",
+    "Post-fix re-audit within 72 hours"
+  ],
+  "benefits": [
+    "Reduce costs with evm smart contract audit",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

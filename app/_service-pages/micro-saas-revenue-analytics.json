@@ -1,0 +1,29 @@
+{
+  "title": "SaaS Revenue Analytics & Metrics",
+  "description": "Comprehensive SaaS metrics dashboard with MRR/ARR tracking, cohort analysis, churn prediction, LTV calculation, and investor-ready reporting.",
+  "basic": "$N/A/month",
+  "pro": "$N/A/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "SaaS Revenue Analytics & Metrics - Zion Tech Group",
+    "description": "Comprehensive SaaS metrics dashboard with MRR/ARR tracking, cohort analysis, churn prediction, LTV calculation, and investor-ready reporting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-revenue-analytics"
+    }
+  },
+  "features": [
+    "MRR/ARR tracking",
+    "Cohort analysis",
+    "Churn prediction",
+    "LTV calculation",
+    "Revenue forecasting"
+  ],
+  "benefits": [
+    "Investor-ready reports",
+    "Predict churn 6 months ahead",
+    "LTV optimization",
+    "Benchmark comparisons"
+  ]
+}

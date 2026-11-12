@@ -1,0 +1,29 @@
+{
+  "title": "Ai Threat Intelligence",
+  "description": "AI Threat Intelligence — enterprise-grade solution with AI-powered automation, real-time analytics, and seamless integration. Built for scale with security-first architecture.",
+  "basic": "$199/mo/month",
+  "pro": "$599/mo/month",
+  "enterprise": "$1,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Ai Threat Intelligence - Zion Tech Group",
+    "description": "AI Threat Intelligence — enterprise-grade solution with AI-powered automation, real-time analytics, and seamless integration. Built for scale with security-firs",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-threat-intelligence"
+    }
+  },
+  "features": [
+    "AI-powered threat intelligence automation",
+    "Real-time analytics and monitoring",
+    "Enterprise-grade security (SOC2, HIPAA ready)",
+    "REST API and webhooks for integrations",
+    "Multi-tenant SaaS architecture"
+  ],
+  "benefits": [
+    "Reduce manual effort in threat intelligence by 80%",
+    "Make data-driven decisions in real-time",
+    "Scale without adding headcount",
+    "Enterprise security out of the box"
+  ]
+}

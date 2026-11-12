@@ -1,0 +1,30 @@
+{
+  "title": "The Offer Engine",
+  "description": "AI-powered offer management: dynamically generate, test, and optimize personalized offers, discounts, and promotions across channels. Real-time A/B testing, conversion lift forecasting, and margin-safe pricing recommendations.",
+  "basic": "$499/mo/month",
+  "pro": "$1,499/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "The Offer Engine - Zion Tech Group",
+    "description": "AI-powered offer management: dynamically generate, test, and optimize personalized offers, discounts, and promotions across channels. Real-time A/B testing, con",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/offer-engine"
+    }
+  },
+  "features": [
+    "AI-powered offer generation from product catalog + audience segments",
+    "Multi-armed bandit + lift simulation for conversion uplift estimates",
+    "Margin-safe pricing recommendations with floor/ceiling guardrails",
+    "Real-time A/B testing with automatic winner promotion",
+    "Audience-personalized offers by cohort/segment/behavior"
+  ],
+  "benefits": [
+    "Increase promo conversion rate by 40-80% vs static discounts",
+    "Preserve margin by capping discounts to optimal % per segment",
+    "Eliminate offer sprawl — auto-prune underperforming variants",
+    "Shorten test cycles from weeks to hours with real-time bandits",
+    "Marketing team self-serve via offer dashboard"
+  ]
+}

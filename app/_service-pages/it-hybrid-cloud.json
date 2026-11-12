@@ -1,0 +1,29 @@
+{
+  "title": "IT Hybrid Cloud Architecture & Management",
+  "description": "Design and manage hybrid cloud environments that seamlessly connect on-premises infrastructure with public and private clouds. Optimize workloads for cost and performance.",
+  "basic": "$5,000/mo/month",
+  "pro": "$12,000/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "IT Hybrid Cloud Architecture & Management - Zion Tech Group",
+    "description": "Design and manage hybrid cloud environments that seamlessly connect on-premises infrastructure with public and private clouds. Optimize workloads for cost and p",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-hybrid-cloud"
+    }
+  },
+  "features": [
+    "Hybrid cloud architecture design",
+    "Workload placement optimization",
+    "Multi-cloud networking and security",
+    "Kubernetes across on-prem and cloud",
+    "Cost optimization and FinOps"
+  ],
+  "benefits": [
+    "Optimize workload costs by 35%",
+    "Seamlessly burst to cloud during peak demand",
+    "Maintain data sovereignty with hybrid architecture",
+    "Unified management across all environments"
+  ]
+}

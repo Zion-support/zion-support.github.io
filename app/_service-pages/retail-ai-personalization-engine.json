@@ -1,0 +1,30 @@
+{
+  "title": "Retail AI Personalization Engine",
+  "description": "Real-time product recommendations, personalized search, dynamic pricing, and customer segmentation for e-commerce and retail. Increase conversion and AOV with AI.",
+  "basic": "$N/A/month",
+  "pro": "$N/A/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Retail AI Personalization Engine - Zion Tech Group",
+    "description": "Real-time product recommendations, personalized search, dynamic pricing, and customer segmentation for e-commerce and retail. Increase conversion and AOV with A",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/retail-ai-personalization-engine"
+    }
+  },
+  "features": [
+    "Product recommendations",
+    "Personalized search",
+    "Dynamic pricing",
+    "Customer segmentation",
+    "Abandoned cart recovery"
+  ],
+  "benefits": [
+    "20-35% conversion lift",
+    "15% higher AOV",
+    "Reduced cart abandonment",
+    "Better customer experience",
+    "Inventory optimization"
+  ]
+}

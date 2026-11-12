@@ -1,0 +1,29 @@
+{
+  "title": "Autonomous Growth Intelligence",
+  "description": "Design AI-powered acquisition, conversion, retention, and expansion loops with measurable impact models and deployment-safe execution plans.",
+  "basic": "$199/mo/month",
+  "pro": "$599/mo/month",
+  "enterprise": "$1,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Autonomous Growth Intelligence - Zion Tech Group",
+    "description": "Design AI-powered acquisition, conversion, retention, and expansion loops with measurable impact models and deployment-safe execution plans.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-growth-intelligence"
+    }
+  },
+  "features": [
+    "Growth Opportunity Mapping",
+    "Conversion System Design",
+    "Retention & Expansion Playbooks",
+    "Autonomous Experimentation",
+    "Growth Data Foundation"
+  ],
+  "benefits": [
+    "Reduce costs with autonomous growth intelligence",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

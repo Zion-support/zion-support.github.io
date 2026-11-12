@@ -1,0 +1,29 @@
+{
+  "title": "AI Meeting Notes & Summary Platform",
+  "description": "Auto-record, transcribe, and summarise every meeting with action items, decisions, and speaker attribution. Integrates with Zoom, Teams, Google Meet, and Slack.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Meeting Notes & Summary Platform - Zion Tech Group",
+    "description": "Auto-record, transcribe, and summarise every meeting with action items, decisions, and speaker attribution. Integrates with Zoom, Teams, Google Meet, and Slack.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-meeting-notes-summary"
+    }
+  },
+  "features": [
+    "Real-time transcription with speaker diarisation",
+    "Action item and decision extraction",
+    "Multi-platform calendar sync",
+    "Shareable branded summary packs",
+    "Slack and email distribution"
+  ],
+  "benefits": [
+    "Reduce costs with ai meeting notes & summary platform",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

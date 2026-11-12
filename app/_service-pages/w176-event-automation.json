@@ -1,0 +1,29 @@
+{
+  "title": "Event Management Automation",
+  "description": "Automate event operations: registration, ticketing, email sequences, virtual event tech, and post-event analytics. From webinars to conferences.",
+  "basic": "$99/mo/month",
+  "pro": "$299/mo/month",
+  "enterprise": "$999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Event Management Automation - Zion Tech Group",
+    "description": "Automate event operations: registration, ticketing, email sequences, virtual event tech, and post-event analytics. From webinars to conferences.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w176-event-automation"
+    }
+  },
+  "features": [
+    "Registration and ticketing automation",
+    "Attendee communication sequences",
+    "Virtual event integration (Zoom, Teams, Hopin)",
+    "Session and speaker management",
+    "Sponsor and exhibitor workflows"
+  ],
+  "benefits": [
+    "Registration and ticketing on autopilot",
+    "Automated sequences keep attendees engaged",
+    "Virtual event support built in",
+    "Post-event analytics prove ROI"
+  ]
+}

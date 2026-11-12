@@ -1,0 +1,29 @@
+{
+  "title": "IT Security Operations Center as a Service (SOCaaS)",
+  "description": "24/7 managed security operations center without the $2M+ price tag. Full SIEM, threat detection, incident response, and compliance monitoring delivered as a service.",
+  "basic": "$3,500/mo/month",
+  "pro": "$7,500/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "IT Security Operations Center as a Service (SOCaaS) - Zion Tech Group",
+    "description": "24/7 managed security operations center without the $2M+ price tag. Full SIEM, threat detection, incident response, and compliance monitoring delivered as a ser",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-soc-as-a-service"
+    }
+  },
+  "features": [
+    "24/7/365 monitoring by certified security analysts",
+    "SIEM deployment and management (Splunk, Sentinel, Elastic)",
+    "Threat detection with custom correlation rules",
+    "Incident response with 15-min critical alert SLA",
+    "Vulnerability management and patch prioritization"
+  ],
+  "benefits": [
+    "Enterprise SOC at 1/5 the cost of building in-house",
+    "Detect and respond to threats in under 15 minutes",
+    "Meet compliance requirements without dedicated staff",
+    "Scale security as you grow"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "API Integration Platform (iPaaS)",
+  "description": "Integration Platform as a Service for connecting applications, data, and APIs. 500+ pre-built connectors, visual workflow builder, and real-time data synchronization.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "API Integration Platform (iPaaS) - Zion Tech Group",
+    "description": "Integration Platform as a Service for connecting applications, data, and APIs. 500+ pre-built connectors, visual workflow builder, and real-time data synchroniz",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automation-api-integration-platform"
+    }
+  },
+  "features": [
+    "500+ pre-built connectors",
+    "Visual integration builder",
+    "Real-time and batch sync",
+    "Data transformation engine",
+    "Error handling and retry"
+  ],
+  "benefits": [
+    "Connect any application without code",
+    "Reduce integration time by 70%",
+    "Real-time data synchronization",
+    "Enterprise-grade reliability"
+  ]
+}

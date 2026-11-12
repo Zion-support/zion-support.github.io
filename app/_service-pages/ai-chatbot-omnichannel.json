@@ -1,0 +1,29 @@
+{
+  "title": "AI Omnichannel Chatbot",
+  "description": "Unified AI assistant across website chat, Messenger, WhatsApp, SMS, and voice. Context-aware conversations with seamless human handoff.",
+  "basic": "$99/mo/month",
+  "pro": "$299/mo/month",
+  "enterprise": "$999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Omnichannel Chatbot - Zion Tech Group",
+    "description": "Unified AI assistant across website chat, Messenger, WhatsApp, SMS, and voice. Context-aware conversations with seamless human handoff.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-chatbot-omnichannel"
+    }
+  },
+  "features": [
+    "Multichannel conversation orchestration",
+    "Context memory across channels",
+    "Fallback to live agents with full context",
+    "Built-in analytics & conversation flows",
+    "CRM & helpdesk integration"
+  ],
+  "benefits": [
+    "Reduce costs with ai omnichannel chatbot",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

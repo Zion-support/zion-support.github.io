@@ -1,0 +1,29 @@
+{
+  "title": "Semantic Search & Knowledge API",
+  "description": "Semantic search over your documents and data: vector search, hybrid ranking, entity search, and NL queries. Power internal search, customer support, and product discovery.",
+  "basic": "$99/mo/month",
+  "pro": "$299/mo/month",
+  "enterprise": "$999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Semantic Search & Knowledge API - Zion Tech Group",
+    "description": "Semantic search over your documents and data: vector search, hybrid ranking, entity search, and NL queries. Power internal search, customer support, and product",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w175-semantic-search"
+    }
+  },
+  "features": [
+    "Semantic vector search",
+    "Hybrid keyword + vector ranking",
+    "Entity and faceted search",
+    "Natural language query understanding",
+    "Search analytics and feedback loops"
+  ],
+  "benefits": [
+    "Users find answers with natural language",
+    "Hybrid ranking outperforms keyword-only",
+    "Search analytics reveal what users want",
+    "Embeddable search UI for any application"
+  ]
+}

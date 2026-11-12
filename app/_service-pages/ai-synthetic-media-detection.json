@@ -1,0 +1,29 @@
+{
+  "title": "AI Synthetic Media Detection Suite",
+  "description": "Detect AI-generated text, images, video, and audio. Protect against deepfakes, AI-written content fraud, and synthetic identity attacks.",
+  "basic": "$399/mo/month",
+  "pro": "$1,199/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Synthetic Media Detection Suite - Zion Tech Group",
+    "description": "Detect AI-generated text, images, video, and audio. Protect against deepfakes, AI-written content fraud, and synthetic identity attacks.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-synthetic-media-detection"
+    }
+  },
+  "features": [
+    "AI text detection (GPT, Claude, Gemini)",
+    "Image provenance analysis",
+    "Video deepfake detection",
+    "Audio voice clone detection",
+    "API for real-time scanning"
+  ],
+  "benefits": [
+    "Protect against AI fraud",
+    "Verify content authenticity",
+    "Meet regulatory requirements",
+    "Brand and reputation protection"
+  ]
+}

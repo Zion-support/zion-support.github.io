@@ -1,0 +1,29 @@
+{
+  "title": "AI Debt Collection & Accounts Receivable Platform",
+  "description": "AI-powered debt collection that personalizes outreach, optimizes contact timing, and automates follow-ups. Increase collection rates by 40% while maintaining compliance.",
+  "basic": "$199/mo/month",
+  "pro": "$499/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Debt Collection & Accounts Receivable Platform - Zion Tech Group",
+    "description": "AI-powered debt collection that personalizes outreach, optimizes contact timing, and automates follow-ups. Increase collection rates by 40% while maintaining co",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-ai-debt-collector"
+    }
+  },
+  "features": [
+    "AI contact timing optimization",
+    "Personalized outreach by debtor profile",
+    "Automated multi-channel follow-up (email, SMS, call)",
+    "Payment plan negotiation AI",
+    "Compliance monitoring (FDCPA, state laws)"
+  ],
+  "benefits": [
+    "Increase collection rates by 40%",
+    "Reduce cost per collection by 60%",
+    "Maintain 100% regulatory compliance",
+    "Scale collections without adding staff"
+  ]
+}

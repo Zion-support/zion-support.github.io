@@ -1,0 +1,29 @@
+{
+  "title": "TimeZone — Global Scheduling",
+  "description": "Schedule across time zones without the math. Smart availability, conflict detection, round-robin booking, and calendar sync for distributed teams.",
+  "basic": "$8/mo/month",
+  "pro": "$24/mo/month",
+  "enterprise": "$79/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "TimeZone — Global Scheduling - Zion Tech Group",
+    "description": "Schedule across time zones without the math. Smart availability, conflict detection, round-robin booking, and calendar sync for distributed teams.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w176-timezone"
+    }
+  },
+  "features": [
+    "Multi-timezone availability display",
+    "Smart conflict detection across zones",
+    "Round-robin and weighted assignment",
+    "Buffer time and max-meeting limits",
+    "Custom booking pages with branding"
+  ],
+  "benefits": [
+    "No more timezone math mistakes",
+    "Round-robin distributes meetings fairly",
+    "Buffer time protects deep work",
+    "Custom pages look professional"
+  ]
+}

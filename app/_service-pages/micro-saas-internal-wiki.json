@@ -1,0 +1,29 @@
+{
+  "title": "WikiBase — Internal Knowledge Wiki",
+  "description": "Modern internal wiki with AI-powered search, auto-documentation, and team collaboration. Replace Confluence with a faster, smarter knowledge base.",
+  "basic": "$19/mo/month",
+  "pro": "$59/mo/month",
+  "enterprise": "$199/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "WikiBase — Internal Knowledge Wiki - Zion Tech Group",
+    "description": "Modern internal wiki with AI-powered search, auto-documentation, and team collaboration. Replace Confluence with a faster, smarter knowledge base.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-internal-wiki"
+    }
+  },
+  "features": [
+    "AI-powered search and answers",
+    "Auto-documentation from code",
+    "Real-time collaboration",
+    "Version history and rollback",
+    "Integration with Slack, GitHub, Jira"
+  ],
+  "benefits": [
+    "Find answers 5x faster",
+    "Reduce onboarding time",
+    "Keep documentation alive",
+    "Single source of truth"
+  ]
+}

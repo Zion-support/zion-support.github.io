@@ -1,0 +1,29 @@
+{
+  "title": "AI Returns & Reverse Logistics Platform",
+  "description": "AI-powered returns management that automates approval decisions, optimizes disposition, and recovers maximum value from returned products.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Returns & Reverse Logistics Platform - Zion Tech Group",
+    "description": "AI-powered returns management that automates approval decisions, optimizes disposition, and recovers maximum value from returned products.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-ai-returns-manager"
+    }
+  },
+  "features": [
+    "AI return approval based on policy and history",
+    "Automated disposition routing (restock, refurbish, liquidate)",
+    "Fraud detection for return abuse",
+    "Integration with Shopify, Amazon, WooCommerce",
+    "Customer self-service return portal"
+  ],
+  "benefits": [
+    "Reduce return processing costs by 60%",
+    "Detect and prevent return fraud",
+    "Recover 30% more value from returns",
+    "Improve customer satisfaction with instant refunds"
+  ]
+}

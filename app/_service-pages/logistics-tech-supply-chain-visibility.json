@@ -1,0 +1,29 @@
+{
+  "title": "End-to-End Supply Chain Visibility",
+  "description": "Real-time supply chain tracking and optimization. IoT integration, predictive analytics, route optimization, and supplier risk management.",
+  "basic": "$599/mo/month",
+  "pro": "$1,799/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "End-to-End Supply Chain Visibility - Zion Tech Group",
+    "description": "Real-time supply chain tracking and optimization. IoT integration, predictive analytics, route optimization, and supplier risk management.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/logistics-tech-supply-chain-visibility"
+    }
+  },
+  "features": [
+    "Real-time shipment tracking",
+    "Predictive ETA",
+    "Route optimization",
+    "Supplier risk scoring",
+    "Inventory optimization"
+  ],
+  "benefits": [
+    "Reduce logistics costs 25%",
+    "Improve delivery times",
+    "Mitigate supply risk",
+    "End-to-end visibility"
+  ]
+}

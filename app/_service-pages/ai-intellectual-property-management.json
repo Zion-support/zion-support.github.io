@@ -1,0 +1,29 @@
+{
+  "title": "AI Intellectual Property Management",
+  "description": "AI-powered IP management for patents, trademarks, and copyrights. Prior art search, infringement detection, portfolio analysis, and renewal management.",
+  "basic": "$999/mo/month",
+  "pro": "$2,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Intellectual Property Management - Zion Tech Group",
+    "description": "AI-powered IP management for patents, trademarks, and copyrights. Prior art search, infringement detection, portfolio analysis, and renewal management.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-intellectual-property-management"
+    }
+  },
+  "features": [
+    "Prior art search (global patent databases)",
+    "Infringement detection and monitoring",
+    "Patent portfolio analysis",
+    "Trademark watch and enforcement",
+    "Renewal and maintenance tracking"
+  ],
+  "benefits": [
+    "Reduce IP search time by 80%",
+    "Identify infringement early",
+    "Optimize IP portfolio value",
+    "Automate renewal management"
+  ]
+}

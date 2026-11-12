@@ -1,0 +1,29 @@
+{
+  "title": "Data Loss Prevention (DLP)",
+  "description": "Comprehensive DLP across endpoints, cloud, email, and network. AI-powered classification and policy enforcement.",
+  "basic": "$N/A/month",
+  "pro": "$10997/month",
+  "enterprise": "$22997/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Data Loss Prevention (DLP) - Zion Tech Group",
+    "description": "Comprehensive DLP across endpoints, cloud, email, and network. AI-powered classification and policy enforcement.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w128-dlp"
+    }
+  },
+  "features": [
+    "Endpoint DLP",
+    "Cloud DLP",
+    "Email DLP",
+    "Network DLP",
+    "AI data classification"
+  ],
+  "benefits": [
+    "Prevent data exfiltration",
+    "Regulatory compliance",
+    "Insider threat protection",
+    "Automated classification"
+  ]
+}

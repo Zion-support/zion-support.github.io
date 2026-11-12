@@ -1,0 +1,29 @@
+{
+  "title": "IT Disaster Recovery as a Service (DRaaS)",
+  "description": "Enterprise disaster recovery solution with automated failover, continuous data replication, and sub-minute RTO/RPO. Includes runbook automation, regular DR testing, and compliance documentation.",
+  "basic": "$3,000/mo/month",
+  "pro": "$8,000/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "IT Disaster Recovery as a Service (DRaaS) - Zion Tech Group",
+    "description": "Enterprise disaster recovery solution with automated failover, continuous data replication, and sub-minute RTO/RPO. Includes runbook automation, regular DR test",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-disaster-recovery-as-a-service"
+    }
+  },
+  "features": [
+    "Continuous data replication with sub-minute RPO",
+    "Automated failover and failback orchestration",
+    "DR runbook automation with one-click execution",
+    "Regular DR testing without production impact",
+    "Multi-region and multi-cloud DR topologies"
+  ],
+  "benefits": [
+    "Achieve sub-minute RTO for critical applications",
+    "Eliminate manual DR testing with automated runs",
+    "Meet compliance requirements with documented DR",
+    "Reduce DR costs by 60% vs. traditional hot sites"
+  ]
+}

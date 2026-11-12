@@ -1,0 +1,28 @@
+{
+  "title": "API Gateway + OpenAPI Management",
+  "description": "Enterprise API gateway: OpenAPI 3.1 lifecycle, rate-limit/quota per key, threat-protection WAF rules, schema registry, live API analytics, developer portal with interactive docs and sandbox.",
+  "basic": "$49/mo/month",
+  "pro": "$199/mo/month",
+  "enterprise": "$699/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "API Gateway + OpenAPI Management - Zion Tech Group",
+    "description": "Enterprise API gateway: OpenAPI 3.1 lifecycle, rate-limit/quota per key, threat-protection WAF rules, schema registry, live API analytics, developer portal with",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-api-gateway-openapi"
+    }
+  },
+  "features": [
+    "OpenAPI 3.1 spec lifecycle — versioning, deprecation, staging",
+    "Rate-limit + quota per consumer key with brotten alerting",
+    "Managed threat-protection WAF rule set for API endpoints",
+    "Schema registry + mocking + developer portal with embedded sandbox"
+  ],
+  "benefits": [
+    "Reduce costs with api gateway + openapi management",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

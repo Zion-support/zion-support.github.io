@@ -1,0 +1,29 @@
+{
+  "title": "AI Workflow Automation — Enterprise Scale",
+  "description": "Enterprise-grade workflow orchestration: unlimited workflows, role-based access, SSO, custom AI model integration, multi-region deployment, and 24/7 dedicated support.",
+  "basic": "$2,499/mo/month",
+  "pro": "$4,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Workflow Automation — Enterprise Scale - Zion Tech Group",
+    "description": "Enterprise-grade workflow orchestration: unlimited workflows, role-based access, SSO, custom AI model integration, multi-region deployment, and 24/7 dedicated s",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-workflow-automation-enterprise"
+    }
+  },
+  "features": [
+    "Unlimited workflows + executions",
+    "SSO + RBAC + full audit log",
+    "Custom LLM / model bring-your-own",
+    "Multi-region deploy + disaster recovery",
+    "24/7 dedicated support + CSM"
+  ],
+  "benefits": [
+    "Reduce costs with ai workflow automation — enterprise scale",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

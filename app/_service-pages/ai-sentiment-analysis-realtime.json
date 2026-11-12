@@ -1,0 +1,29 @@
+{
+  "title": "AI Real-Time Sentiment Analysis Platform",
+  "description": "Monitor brand sentiment across social media, news, reviews, and support channels in real-time. AI-powered emotion detection, trend analysis, and automated alerting for reputation management.",
+  "basic": "$399/mo/month",
+  "pro": "$999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Real-Time Sentiment Analysis Platform - Zion Tech Group",
+    "description": "Monitor brand sentiment across social media, news, reviews, and support channels in real-time. AI-powered emotion detection, trend analysis, and automated alert",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-sentiment-analysis-realtime"
+    }
+  },
+  "features": [
+    "Real-time sentiment monitoring across 50+ sources",
+    "Emotion detection (joy, anger, fear, surprise, etc.)",
+    "Trend analysis with anomaly detection",
+    "Competitor sentiment benchmarking",
+    "Automated crisis alerts for negative sentiment spikes"
+  ],
+  "benefits": [
+    "Detect PR crises before they go viral",
+    "Track campaign effectiveness in real-time",
+    "Benchmark sentiment against competitors",
+    "Respond to customer issues 10x faster"
+  ]
+}

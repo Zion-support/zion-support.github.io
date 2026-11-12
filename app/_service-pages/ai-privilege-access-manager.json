@@ -1,0 +1,29 @@
+{
+  "title": "Ai Privilege Access Manager",
+  "description": "AI Privilege Access Manager — enterprise-grade solution with AI-powered automation, real-time analytics, and seamless integration. Built for scale with security-first architecture.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Ai Privilege Access Manager - Zion Tech Group",
+    "description": "AI Privilege Access Manager — enterprise-grade solution with AI-powered automation, real-time analytics, and seamless integration. Built for scale with security",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-privilege-access-manager"
+    }
+  },
+  "features": [
+    "AI-powered privilege access manager automation",
+    "Real-time analytics and monitoring",
+    "Enterprise-grade security (SOC2, HIPAA ready)",
+    "REST API and webhooks for integrations",
+    "Multi-tenant SaaS architecture"
+  ],
+  "benefits": [
+    "Reduce manual effort in privilege access manager by 80%",
+    "Make data-driven decisions in real-time",
+    "Scale without adding headcount",
+    "Enterprise security out of the box"
+  ]
+}

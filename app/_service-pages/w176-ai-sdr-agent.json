@@ -1,0 +1,29 @@
+{
+  "title": "AI SDR & Prospecting Agent",
+  "description": "AI sales development rep: research prospects, write personalized outreach, manage sequences, and book meetings. Replaces 3 SDRs for a fraction of the cost.",
+  "basic": "$499/mo/month",
+  "pro": "$1,499/mo/month",
+  "enterprise": "$4,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI SDR & Prospecting Agent - Zion Tech Group",
+    "description": "AI sales development rep: research prospects, write personalized outreach, manage sequences, and book meetings. Replaces 3 SDRs for a fraction of the cost.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w176-ai-sdr-agent"
+    }
+  },
+  "features": [
+    "AI prospect research and qualification",
+    "Personalized email and LinkedIn outreach",
+    "Multi-step sequence management",
+    "Meeting booking with calendar integration",
+    "Response classification and routing"
+  ],
+  "benefits": [
+    "AI SDR operates 24/7 without burnout",
+    "Personalized at scale, not template spam",
+    "Response routing to right rep instantly",
+    "Fraction of an SDR cost with more output"
+  ]
+}

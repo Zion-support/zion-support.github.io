@@ -1,0 +1,29 @@
+{
+  "title": "Cloud Event-Driven Architecture",
+  "description": "Design and implement event-driven architectures with event buses, schema registries, and choreography. Decouple services for scale and resilience.",
+  "basic": "$499/mo/month",
+  "pro": "$1,499/mo/month",
+  "enterprise": "$4,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Cloud Event-Driven Architecture - Zion Tech Group",
+    "description": "Design and implement event-driven architectures with event buses, schema registries, and choreography. Decouple services for scale and resilience.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w174-cloud-events-platform"
+    }
+  },
+  "features": [
+    "Event bus design (EventBridge, Pub/Sub, Event Grid)",
+    "Event schema registry and evolution",
+    "Choreography vs orchestration patterns",
+    "Dead letter queue and error handling",
+    "Event sourcing and CQRS patterns"
+  ],
+  "benefits": [
+    "Decoupled services scale independently",
+    "Event-driven architecture is more resilient",
+    "Schema registry prevents breaking changes",
+    "CQRS optimizes read and write paths"
+  ]
+}

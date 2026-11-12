@@ -1,0 +1,28 @@
+{
+  "title": "AI Resume Optimizer",
+  "description": "AI reads your resume vs JD: scores ATS compatibility rewrites bullet points quantifies achievements fills keyword gaps produces one-click export + cover letter draft.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Resume Optimizer - Zion Tech Group",
+    "description": "AI reads your resume vs JD: scores ATS compatibility rewrites bullet points quantifies achievements fills keyword gaps produces one-click export + cover letter ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-resume-optimizer"
+    }
+  },
+  "features": [
+    "ATS keyword scoring (JD vs resume)",
+    "Bullet-point rewrite per role",
+    "Achievement quantification suggestions",
+    "One-click PDF + cover letter export"
+  ],
+  "benefits": [
+    "Reduce costs with ai resume optimizer",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

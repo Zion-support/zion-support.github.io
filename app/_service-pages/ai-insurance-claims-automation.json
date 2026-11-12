@@ -1,0 +1,29 @@
+{
+  "title": "AI Insurance Claims Automation",
+  "description": "End-to-end insurance claims processing with AI. Document extraction, fraud detection, damage assessment via photos, and automated adjudication for faster payouts.",
+  "basic": "$2,999/mo/month",
+  "pro": "$8,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Insurance Claims Automation - Zion Tech Group",
+    "description": "End-to-end insurance claims processing with AI. Document extraction, fraud detection, damage assessment via photos, and automated adjudication for faster payout",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-insurance-claims-automation"
+    }
+  },
+  "features": [
+    "OCR document extraction",
+    "Photo-based damage assessment",
+    "Fraud scoring engine",
+    "Automated adjudication rules",
+    "Policy coverage matching"
+  ],
+  "benefits": [
+    "Reduce claims processing time by 70%",
+    "Lower fraud losses",
+    "Improve customer satisfaction",
+    "Cut operational costs"
+  ]
+}

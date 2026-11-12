@@ -1,0 +1,29 @@
+{
+  "title": "API Gateway Management",
+  "description": "Enterprise API gateway: rate limiting, API key management, OAuth2 + mTLS, usage analytics, developer portal, request/response transforms, and dead-letter queue handling across cloud and on-prem APIs.",
+  "basic": "$49/mo/month",
+  "pro": "$199/mo/month",
+  "enterprise": "$699/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "API Gateway Management - Zion Tech Group",
+    "description": "Enterprise API gateway: rate limiting, API key management, OAuth2 + mTLS, usage analytics, developer portal, request/response transforms, and dead-letter queue ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-api-gateway-management"
+    }
+  },
+  "features": [
+    "Centralised rate limiting, throttling, protocol transforms",
+    "OAuth2, mTLS, API-key auth with role-based scopes",
+    "Developer self-service portal + SDK generation",
+    "Built-in developer portal: docs, try-it console, usage analytics",
+    "Dead-letter queue + retry logic with configurable backoff"
+  ],
+  "benefits": [
+    "Reduce costs with api gateway management",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "AI-Driven Customer Segmentation & Persona Engine",
+  "description": "Cluster your customer base into meaningful personas using behavioral data, purchase history, and engagement patterns; deliver personalized marketing automatically.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI-Driven Customer Segmentation & Persona Engine - Zion Tech Group",
+    "description": "Cluster your customer base into meaningful personas using behavioral data, purchase history, and engagement patterns; deliver personalized marketing automatical",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-driven-customer-segmentation"
+    }
+  },
+  "features": [
+    "K-means + hierarchical clustering models",
+    "Dynamic segment recalculation (daily/weekly)",
+    "Persona profiles with predictive scores",
+    "Export to CRM/CDP (Segment, HubSpot)",
+    "Campaign performance tracking per segment"
+  ],
+  "benefits": [
+    "Reduce costs with ai-driven customer segmentation & persona engine",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

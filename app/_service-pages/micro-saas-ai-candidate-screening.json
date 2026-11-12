@@ -1,0 +1,29 @@
+{
+  "title": "AI Candidate Screening & Interview Platform",
+  "description": "AI-powered candidate screening that analyzes resumes, conducts video interviews, and ranks candidates based on job requirements. Reduce screening time by 90%.",
+  "basic": "$199/mo/month",
+  "pro": "$499/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Candidate Screening & Interview Platform - Zion Tech Group",
+    "description": "AI-powered candidate screening that analyzes resumes, conducts video interviews, and ranks candidates based on job requirements. Reduce screening time by 90%.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-ai-candidate-screening"
+    }
+  },
+  "features": [
+    "AI resume parsing and ranking",
+    "AI video interview analysis",
+    "Skills assessment and testing",
+    "Bias detection and mitigation",
+    "Integration with Greenhouse, Lever, Workday"
+  ],
+  "benefits": [
+    "Screen candidates 90% faster",
+    "Reduce unconscious bias in hiring",
+    "Improve quality of hire with AI matching",
+    "Deliver better candidate experience"
+  ]
+}

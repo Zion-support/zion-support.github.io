@@ -1,0 +1,28 @@
+{
+  "title": "ProjectHub - Project Management",
+  "description": "Intuitive project management platform with Kanban boards, Gantt charts, time tracking, and team collaboration features. Built for small to mid-size teams.",
+  "basic": "$19/mo/month",
+  "pro": "$49/mo/month",
+  "enterprise": "$99/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "ProjectHub - Project Management - Zion Tech Group",
+    "description": "Intuitive project management platform with Kanban boards, Gantt charts, time tracking, and team collaboration features. Built for small to mid-size teams.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/microsaas-project-management"
+    }
+  },
+  "features": [
+    "Kanban Boards",
+    "Gantt Charts",
+    "Time Tracking",
+    "Team Collaboration",
+    "Custom Workflows"
+  ],
+  "benefits": [
+    "Improve team productivity",
+    "Visualize project progress",
+    "Streamline collaboration"
+  ]
+}

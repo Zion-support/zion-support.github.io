@@ -1,0 +1,29 @@
+{
+  "title": "AI Content Generation Engine",
+  "description": "AI content engine for marketing: blog posts, social media, email sequences, ad copy, and whitepapers. Brand-consistent, SEO-optimized, at scale.",
+  "basic": "$99/mo/month",
+  "pro": "$299/mo/month",
+  "enterprise": "$999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Content Generation Engine - Zion Tech Group",
+    "description": "AI content engine for marketing: blog posts, social media, email sequences, ad copy, and whitepapers. Brand-consistent, SEO-optimized, at scale.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w176-ai-content-engine"
+    }
+  },
+  "features": [
+    "Blog post generation with SEO optimization",
+    "Social media post creation (LinkedIn, X, Instagram)",
+    "Email sequence drafting and personalization",
+    "Ad copy for Google, Meta, LinkedIn",
+    "Whitepaper and eBook chapter generation"
+  ],
+  "benefits": [
+    "Generate months of content in days",
+    "SEO-optimized content ranks faster",
+    "Brand voice consistent across all content",
+    "Multi-format from single brief"
+  ]
+}

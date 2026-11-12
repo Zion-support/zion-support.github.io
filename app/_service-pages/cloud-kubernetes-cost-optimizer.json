@@ -1,0 +1,28 @@
+{
+  "title": "Kubernetes Cost Optimizer",
+  "description": "K8s cluster cost engine: per-container CPU and RAM right-sizing via VPA plus workload profiling, spot-compatible scheduling for bursty workloads, cost attribution per team or namespace, idle resource crawler, and budget alerts.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Kubernetes Cost Optimizer - Zion Tech Group",
+    "description": "K8s cluster cost engine: per-container CPU and RAM right-sizing via VPA plus workload profiling, spot-compatible scheduling for bursty workloads, cost attributi",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cloud-kubernetes-cost-optimizer"
+    }
+  },
+  "features": [
+    "Per-container right-sizing via VPA and workload profiling with safe-in-place patch",
+    "Spot-compatible scheduling for bursty workloads onto sporadically preemptible instances",
+    "Cost allocation per workload to the owning team or namespace by codebase tag",
+    "Idle resource crawler — auto-suspend or delete untouched workloads after 7 idle days"
+  ],
+  "benefits": [
+    "Reduce costs with kubernetes cost optimizer",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

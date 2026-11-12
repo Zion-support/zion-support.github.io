@@ -1,0 +1,29 @@
+{
+  "title": "Ransomware Protection & Recovery Suite",
+  "description": "Multi-layer ransomware defense: prevention, detection, containment, and recovery. Immutable backups, deception tech, and guaranteed recovery runbooks.",
+  "basic": "$499/mo/month",
+  "pro": "$1,499/mo/month",
+  "enterprise": "$4,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Ransomware Protection & Recovery Suite - Zion Tech Group",
+    "description": "Multi-layer ransomware defense: prevention, detection, containment, and recovery. Immutable backups, deception tech, and guaranteed recovery runbooks.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w174-ransomware-protection"
+    }
+  },
+  "features": [
+    "Behavioral ransomware detection",
+    "Deception technology (canary files, honeypots)",
+    "Automated containment and isolation",
+    "Immutable and air-gapped backup",
+    "Guaranteed recovery runbooks and testing"
+  ],
+  "benefits": [
+    "Multi-layer defense stops most ransomware",
+    "Deception technology catches early-stage attacks",
+    "Immutable backups guarantee recovery",
+    "Tested runbooks ensure business continuity"
+  ]
+}

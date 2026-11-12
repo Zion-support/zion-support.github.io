@@ -1,0 +1,29 @@
+{
+  "title": "AI Contract Manager",
+  "description": "End-to-end contract lifecycle management: AI-powered drafting, review, clause library, obligation tracking, and renewal alerts.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Contract Manager - Zion Tech Group",
+    "description": "End-to-end contract lifecycle management: AI-powered drafting, review, clause library, obligation tracking, and renewal alerts.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-contract-manager"
+    }
+  },
+  "features": [
+    "Smart clause library & assembly",
+    "Obligation & deadline tracking",
+    "Risk scoring & non-standard clause flagging",
+    "Automated renewal & expiration alerts",
+    "Integration with DocuSign & Adobe Sign"
+  ],
+  "benefits": [
+    "Reduce costs with ai contract manager",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

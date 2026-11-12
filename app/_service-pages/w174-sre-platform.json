@@ -1,0 +1,29 @@
+{
+  "title": "SRE Platform & Reliability Engineering",
+  "description": "Site Reliability Engineering platform: SLO definition, error budgets, incident management, chaos engineering, and reliability dashboards. Ship features without sacrificing stability.",
+  "basic": "$599/mo/month",
+  "pro": "$1,799/mo/month",
+  "enterprise": "$5,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "SRE Platform & Reliability Engineering - Zion Tech Group",
+    "description": "Site Reliability Engineering platform: SLO definition, error budgets, incident management, chaos engineering, and reliability dashboards. Ship features without ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w174-sre-platform"
+    }
+  },
+  "features": [
+    "SLO/SLI definition and tracking",
+    "Error budget dashboards and policies",
+    "Incident management and escalation",
+    "Chaos engineering integration (Gremlin, Litmus)",
+    "Release readiness scoring"
+  ],
+  "benefits": [
+    "Ship features faster with error budget insight",
+    "Chaos engineering finds weaknesses before users do",
+    "Release readiness score prevents bad deployments",
+    "SLOs align engineering with business goals"
+  ]
+}

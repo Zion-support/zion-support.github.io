@@ -1,0 +1,29 @@
+{
+  "title": "LaunchList — Waitlist Management Micro-SaaS",
+  "description": "Beautiful waitlist pages with referral tracking, position management, and email campaigns. Perfect for product launches, beta access, and exclusive memberships.",
+  "basic": "$29/mo/month",
+  "pro": "$89/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "LaunchList — Waitlist Management Micro-SaaS - Zion Tech Group",
+    "description": "Beautiful waitlist pages with referral tracking, position management, and email campaigns. Perfect for product launches, beta access, and exclusive memberships.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-waitlist-manager"
+    }
+  },
+  "features": [
+    "Custom waitlist landing pages",
+    "Referral tracking and rewards",
+    "Position management",
+    "Email drip campaigns",
+    "Analytics and conversion tracking"
+  ],
+  "benefits": [
+    "Build pre-launch buzz",
+    "Grow waitlist through referrals",
+    "Convert waitlist to customers",
+    "Professional launch experience"
+  ]
+}

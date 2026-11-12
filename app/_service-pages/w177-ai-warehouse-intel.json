@@ -1,0 +1,29 @@
+{
+  "title": "AI Warehouse Intelligence",
+  "description": "AI warehouse operations: inventory accuracy, worker productivity, slotting optimization, demand-driven replenishment.",
+  "basic": "$499/mo/month",
+  "pro": "$1,499/mo/month",
+  "enterprise": "$4,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Warehouse Intelligence - Zion Tech Group",
+    "description": "AI warehouse operations: inventory accuracy, worker productivity, slotting optimization, demand-driven replenishment.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w177-ai-warehouse-intel"
+    }
+  },
+  "features": [
+    "Inventory accuracy monitoring",
+    "Worker productivity analysis",
+    "Slotting and pick-path optimization",
+    "Demand-driven replenishment",
+    "Dock door and yard optimization"
+  ],
+  "benefits": [
+    "Inventory accuracy to 99.9%",
+    "Slotting optimization reduces pick time 25%",
+    "Safety prediction prevents incidents",
+    "Replenishment driven by demand not rules"
+  ]
+}

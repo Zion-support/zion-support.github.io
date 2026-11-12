@@ -1,0 +1,28 @@
+{
+  "title": "AI Telemedicine Triage & Pre-Visit Assistant",
+  "description": "Patient intake AI: symptom collection, urgency triage, pre-visit summary generation, and specialist routing. Integrates with Epic, Cerner, Allscripts. Reduces admin time by 60%.",
+  "basic": "$299/month",
+  "pro": "$799/month",
+  "enterprise": "$2499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Telemedicine Triage & Pre-Visit Assistant - Zion Tech Group",
+    "description": "Patient intake AI: symptom collection, urgency triage, pre-visit summary generation, and specialist routing. Integrates with Epic, Cerner, Allscripts. Reduces a",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-telemedicine-triage-bot"
+    }
+  },
+  "features": [
+    "Conversational symptom collection",
+    "Emergency triage (ESI scoring)",
+    "Pre-visit summary generation",
+    "Specialist auto-referral",
+    "EHR integration (Epic, Cerner)"
+  ],
+  "benefits": [
+    "Reduce admin time by 60%",
+    "Ensure proper triage",
+    "Seamless EHR documentation"
+  ]
+}

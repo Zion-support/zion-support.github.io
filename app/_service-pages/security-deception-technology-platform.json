@@ -1,0 +1,29 @@
+{
+  "title": "Security Deception Technology Platform",
+  "description": "Deploy decoys, honeypots, and deception grids across your network to detect intruders early. Real-time alerts when attackers interact with decoys. Forensic capture of attack techniques and tools.",
+  "basic": "$1,999/mo/month",
+  "pro": "$5,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Security Deception Technology Platform - Zion Tech Group",
+    "description": "Deploy decoys, honeypots, and deception grids across your network to detect intruders early. Real-time alerts when attackers interact with decoys. Forensic capt",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/security-deception-technology-platform"
+    }
+  },
+  "features": [
+    "Automated decoy deployment",
+    "Honeypots for common services (SSH, HTTP, DB)",
+    "Deception tokens (fake credentials, files)",
+    "Real-time attack alerts",
+    "Forensic session capture"
+  ],
+  "benefits": [
+    "Detect threats weeks earlier",
+    "Zero false positives",
+    "Understand attacker TTPs",
+    "Validate detection capabilities"
+  ]
+}

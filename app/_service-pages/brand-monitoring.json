@@ -1,0 +1,28 @@
+{
+  "title": "Brand Monitoring & Fake Domain Detection",
+  "description": "Scans global DNS+WHOIS+SSL cert feeds 24/7 for lookalike typosquatting phishing domains targeting your brand. Auto-generates registrar takedown request sent to DNS provider.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Brand Monitoring & Fake Domain Detection - Zion Tech Group",
+    "description": "Scans global DNS+WHOIS+SSL cert feeds 24/7 for lookalike typosquatting phishing domains targeting your brand. Auto-generates registrar takedown request sent to ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/brand-monitoring"
+    }
+  },
+  "features": [
+    "Global scan DNS+WHOIS+SSL 24/7",
+    "Typosquat + lookalike domain detection",
+    "Auto-takedown to registrars + DNS",
+    "Alert + dashboard per new domain registered"
+  ],
+  "benefits": [
+    "Reduce costs with brand monitoring & fake domain detection",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "title": "Global Edge Computing Network",
+  "description": "Low-latency edge compute with Cloudflare Workers, KV storage, D1 SQL, R2 object store, and edge-geo routing across 300+ cities.",
+  "basic": "$99/mo/month",
+  "pro": "$349/mo/month",
+  "enterprise": "$1,299/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Global Edge Computing Network - Zion Tech Group",
+    "description": "Low-latency edge compute with Cloudflare Workers, KV storage, D1 SQL, R2 object store, and edge-geo routing across 300+ cities.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cloud-edge-computing-global"
+    }
+  },
+  "features": [
+    "Edge compute in 300+ cities (Cloudflare Workers)",
+    "Edge KV/D1/R2 storage region-local",
+    "Geo-based routing + smart fallback",
+    "Edge cache purge Webhook/API"
+  ],
+  "benefits": [
+    "Reduce costs with global edge computing network",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

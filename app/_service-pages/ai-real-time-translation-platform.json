@@ -1,0 +1,29 @@
+{
+  "title": "AI Real-Time Translation & Subtitle Platform",
+  "description": "Real-time speech-to-text translation: live event captioning, multilingual Zoom/Teams captions, video subtitle generation in 100+ languages, and AI voice dubbing that preserves emotion and tone.",
+  "basic": "$2,499/mo/month",
+  "pro": "$4,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Real-Time Translation & Subtitle Platform - Zion Tech Group",
+    "description": "Real-time speech-to-text translation: live event captioning, multilingual Zoom/Teams captions, video subtitle generation in 100+ languages, and AI voice dubbing",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-real-time-translation-platform"
+    }
+  },
+  "features": [
+    "100+ language speech-to-text live captions",
+    "Real-time translation (bidi, 50+ language pairs)",
+    "Video subtitle SRT/VTT generation",
+    "AI voice dubbing preserves tone/emotion",
+    "Zoom, Teams, YouTube, Twitch integrations"
+  ],
+  "benefits": [
+    "Reduce costs with ai real-time translation & subtitle platform",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

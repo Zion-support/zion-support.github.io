@@ -1,0 +1,29 @@
+{
+  "title": "Network Assessment and Optimization",
+  "description": "Comprehensive network assessment: topology mapping, bottleneck identification, security analysis, optimization roadmap.",
+  "basic": "$4,999/month",
+  "pro": "$14,999/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Network Assessment and Optimization - Zion Tech Group",
+    "description": "Comprehensive network assessment: topology mapping, bottleneck identification, security analysis, optimization roadmap.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w177-network-assess"
+    }
+  },
+  "features": [
+    "Network topology discovery and mapping",
+    "Bandwidth and latency analysis",
+    "Security vulnerability assessment",
+    "Wireless site survey and optimization",
+    "QoS policy review and recommendations"
+  ],
+  "benefits": [
+    "Identify bottlenecks before users complain",
+    "Security assessment finds vulnerabilities",
+    "Wireless optimization improves coverage",
+    "Capacity planning prevents shortages"
+  ]
+}

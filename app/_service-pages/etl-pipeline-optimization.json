@@ -1,0 +1,29 @@
+{
+  "title": "ETL Pipeline Optimization & Modernization",
+  "description": "Accelerate and stabilize data pipelines (batch & streaming): refactor legacy ETL, migrate to Airflow/DBT, add observability, and reduce cost.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "ETL Pipeline Optimization & Modernization - Zion Tech Group",
+    "description": "Accelerate and stabilize data pipelines (batch & streaming): refactor legacy ETL, migrate to Airflow/DBT, add observability, and reduce cost.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/etl-pipeline-optimization"
+    }
+  },
+  "features": [
+    "Pipeline bottleneck analysis & profiling",
+    "Code refactoring & parallelization",
+    "Migration to cloud-native (Glue, Dataflow, Flink)",
+    "Data quality checks & anomaly detection",
+    "Cost optimization (spot instances, auto-scaling)"
+  ],
+  "benefits": [
+    "Reduce costs with etl pipeline optimization & modernization",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

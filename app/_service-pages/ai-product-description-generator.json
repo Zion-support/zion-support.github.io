@@ -1,0 +1,29 @@
+{
+  "title": "AI Product Description Generator",
+  "description": "Generate compelling, SEO-optimized product descriptions for e-commerce. Maintain brand voice, optimize for conversions, and scale content creation.",
+  "basic": "$99/mo/month",
+  "pro": "$299/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Product Description Generator - Zion Tech Group",
+    "description": "Generate compelling, SEO-optimized product descriptions for e-commerce. Maintain brand voice, optimize for conversions, and scale content creation.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-product-description-generator"
+    }
+  },
+  "features": [
+    "SEO-optimized descriptions",
+    "Brand voice customization",
+    "Bulk generation (SKU-level)",
+    "A/B testing suggestions",
+    "Multi-language output"
+  ],
+  "benefits": [
+    "10x faster product listing",
+    "Improve SEO rankings",
+    "Maintain brand consistency",
+    "Scale catalog content"
+  ]
+}

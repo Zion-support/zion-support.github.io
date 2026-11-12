@@ -1,0 +1,29 @@
+{
+  "title": "AI Event Planning & Management Platform",
+  "description": "Plan and manage events with AI assistance. From venue selection to attendee engagement, automate logistics, budgeting, and marketing for conferences, webinars, and meetups.",
+  "basic": "$199/mo/month",
+  "pro": "$599/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Event Planning & Management Platform - Zion Tech Group",
+    "description": "Plan and manage events with AI assistance. From venue selection to attendee engagement, automate logistics, budgeting, and marketing for conferences, webinars, ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-ai-event-planner"
+    }
+  },
+  "features": [
+    "AI venue recommendation based on budget and requirements",
+    "Automated budget tracking and vendor payments",
+    "Event marketing with AI-generated content",
+    "Registration and ticketing with dynamic pricing",
+    "Attendee matchmaking and networking suggestions"
+  ],
+  "benefits": [
+    "Plan events 5x faster with AI assistance",
+    "Increase attendance with smart marketing",
+    "Reduce event costs by 30% with vendor optimization",
+    "Measure event ROI with comprehensive analytics"
+  ]
+}

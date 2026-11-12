@@ -1,0 +1,29 @@
+{
+  "title": "IT Email Security, Compliance & Archiving",
+  "description": "Comprehensive email security, compliance, and archiving solution. Protect against phishing, BEC, and data loss while meeting legal and regulatory requirements.",
+  "basic": "$5/user/mo/month",
+  "pro": "$12/user/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "IT Email Security, Compliance & Archiving - Zion Tech Group",
+    "description": "Comprehensive email security, compliance, and archiving solution. Protect against phishing, BEC, and data loss while meeting legal and regulatory requirements.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-email-security"
+    }
+  },
+  "features": [
+    "AI-powered phishing and BEC detection",
+    "Email encryption and DLP",
+    "Automated email archiving with legal hold",
+    "eDiscovery and compliance reporting",
+    "Integration with Microsoft 365 and Google Workspace"
+  ],
+  "benefits": [
+    "Block 99.9% of email threats",
+    "Meet SEC, FINRA, HIPAA, GDPR requirements",
+    "Recover emails instantly with granular search",
+    "Maintain email continuity even during outages"
+  ]
+}

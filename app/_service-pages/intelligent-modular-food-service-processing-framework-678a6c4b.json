@@ -1,0 +1,28 @@
+{
+  "title": "Intelligent Modular Food Service Processing Framework",
+  "description": "Intelligent processing framework that automates modular food service data flows with real-time transformation.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Intelligent Modular Food Service Processing Framework - Zion Tech Group",
+    "description": "Intelligent processing framework that automates modular food service data flows with real-time transformation.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-modular-food-service-processing-framework-678a6c4b"
+    }
+  },
+  "features": [
+    "Real-time processing",
+    "Data transformation",
+    "ETL pipelines",
+    "Stream processing"
+  ],
+  "benefits": [
+    "Faster data flows",
+    "Reduced processing time",
+    "Higher throughput",
+    "Real-time transformation"
+  ]
+}

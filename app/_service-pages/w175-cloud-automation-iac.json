@@ -1,0 +1,29 @@
+{
+  "title": "Cloud Automation & IaC Factory",
+  "description": "Infrastructure automation factory: reusable Terraform modules, CI/CD pipelines, drift detection, and policy-as-code. Ship infrastructure like application code.",
+  "basic": "$599/mo/month",
+  "pro": "$1,799/mo/month",
+  "enterprise": "$5,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Cloud Automation & IaC Factory - Zion Tech Group",
+    "description": "Infrastructure automation factory: reusable Terraform modules, CI/CD pipelines, drift detection, and policy-as-code. Ship infrastructure like application code.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w175-cloud-automation-iac"
+    }
+  },
+  "features": [
+    "Reusable Terraform and Pulumi modules",
+    "CI/CD pipelines for infrastructure",
+    "Drift detection and auto-remediation",
+    "Policy-as-code (OPA/Sentinel/Checkov)",
+    "Cost estimation in PR (Infracost)"
+  ],
+  "benefits": [
+    "Ship infrastructure with the same rigor as code",
+    "Drift detection prevents configuration rot",
+    "Policy-as-code ensures compliance",
+    "Cost estimation before infrastructure changes"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "IT Identity & Access Management (IAM) Modernization",
+  "description": "Modernize identity and access management with SSO, MFA, privileged access, and zero-trust policies. Reduce security risk while improving user experience.",
+  "basic": "$3,000/mo/month",
+  "pro": "$7,500/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "IT Identity & Access Management (IAM) Modernization - Zion Tech Group",
+    "description": "Modernize identity and access management with SSO, MFA, privileged access, and zero-trust policies. Reduce security risk while improving user experience.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-identity-access"
+    }
+  },
+  "features": [
+    "Single sign-on (SSO) for all applications",
+    "Adaptive multi-factor authentication",
+    "Privileged access management (PAM)",
+    "Identity governance and access reviews",
+    "Zero-trust policy enforcement"
+  ],
+  "benefits": [
+    "Reduce password-related tickets by 80%",
+    "Enforce least-privilege access automatically",
+    "Meet compliance requirements for access control",
+    "Enable secure access from anywhere"
+  ]
+}

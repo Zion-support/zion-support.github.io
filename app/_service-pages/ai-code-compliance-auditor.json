@@ -1,0 +1,28 @@
+{
+  "title": "AI Code Compliance & License Auditor",
+  "description": "Scan codebases for license compliance, security vulnerabilities, and quality issues. Supports 50+ languages, 200+ license types. Integrates with GitHub, GitLab, Bitbucket.",
+  "basic": "$49/repo/month",
+  "pro": "$149/repo/month",
+  "enterprise": "$499/repo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Code Compliance & License Auditor - Zion Tech Group",
+    "description": "Scan codebases for license compliance, security vulnerabilities, and quality issues. Supports 50+ languages, 200+ license types. Integrates with GitHub, GitLab,",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-code-compliance-auditor"
+    }
+  },
+  "features": [
+    "Multi-language code analysis (50+)",
+    "License compliance scanning (200+ licenses)",
+    "Security vulnerability detection",
+    "Code quality scoring",
+    "CI/CD pipeline integration"
+  ],
+  "benefits": [
+    "Avoid license lawsuits",
+    "Find vulnerabilities early",
+    "Automate compliance"
+  ]
+}

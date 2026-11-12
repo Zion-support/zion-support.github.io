@@ -1,0 +1,29 @@
+{
+  "title": "IT Print Management & Managed Print Services",
+  "description": "Managed print services that reduce printing costs by 40%. Fleet management, secure printing, and sustainability tracking for organizations of all sizes.",
+  "basic": "$500/mo/month",
+  "pro": "$1,200/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "IT Print Management & Managed Print Services - Zion Tech Group",
+    "description": "Managed print services that reduce printing costs by 40%. Fleet management, secure printing, and sustainability tracking for organizations of all sizes.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-print-management"
+    }
+  },
+  "features": [
+    "Print fleet assessment and optimization",
+    "Managed print fleet (supplies, maintenance)",
+    "Secure print release and authentication",
+    "Print policy enforcement and rules",
+    "Cost allocation by department/project"
+  ],
+  "benefits": [
+    "Reduce print costs by 40%",
+    "Eliminate wasted prints with secure release",
+    "Track and reduce environmental impact",
+    "Free IT staff from printer management"
+  ]
+}

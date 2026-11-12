@@ -1,0 +1,29 @@
+{
+  "title": "AI Resume & Cover Letter Builder",
+  "description": "AI-powered resume and cover letter builder with ATS optimization, industry-specific templates, and real-time scoring. Analyzes job descriptions to tailor applications automatically.",
+  "basic": "$49/mo/month",
+  "pro": "$149/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Resume & Cover Letter Builder - Zion Tech Group",
+    "description": "AI-powered resume and cover letter builder with ATS optimization, industry-specific templates, and real-time scoring. Analyzes job descriptions to tailor applic",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-ai-resume-builder"
+    }
+  },
+  "features": [
+    "ATS optimization scoring",
+    "Job description analysis",
+    "Industry-specific templates",
+    "Cover letter generation",
+    "Skills gap analysis"
+  ],
+  "benefits": [
+    "3x more interview callbacks",
+    "ATS pass-through rate 95%+",
+    "Personalized for each application",
+    "50+ industry templates"
+  ]
+}

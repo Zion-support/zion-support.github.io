@@ -1,0 +1,28 @@
+{
+  "title": "AI Wildfire Risk Prediction & Prevention",
+  "description": "Predict wildfire risk 72 hours ahead: satellite thermal imaging, weather pattern analysis, vegetation dryness indexing, and evacuation route optimization. Used by 30+ fire departments.",
+  "basic": "$499/month",
+  "pro": "$1499/month",
+  "enterprise": "$4999/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Wildfire Risk Prediction & Prevention - Zion Tech Group",
+    "description": "Predict wildfire risk 72 hours ahead: satellite thermal imaging, weather pattern analysis, vegetation dryness indexing, and evacuation route optimization. Used ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-wildfire-risk-predictor"
+    }
+  },
+  "features": [
+    "72-hour fire risk prediction",
+    "Satellite thermal hotspot detection",
+    "Vegetation dryness indexing",
+    "Evacuation route optimization",
+    "Real-time firefighter dispatch"
+  ],
+  "benefits": [
+    "72-hour advance warning",
+    "Reduce response time by 50%",
+    "Save lives with smart evacuation"
+  ]
+}

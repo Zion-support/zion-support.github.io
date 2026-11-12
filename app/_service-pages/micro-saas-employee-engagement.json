@@ -1,0 +1,29 @@
+{
+  "title": "Employee Engagement & Pulse Survey Platform",
+  "description": "Real-time employee sentiment tracking, pulse surveys, eNPS scoring, action planning, and AI-driven insights. Integrates with Slack, Teams, and HRIS systems.",
+  "basic": "$N/A/month",
+  "pro": "$N/A/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Employee Engagement & Pulse Survey Platform - Zion Tech Group",
+    "description": "Real-time employee sentiment tracking, pulse surveys, eNPS scoring, action planning, and AI-driven insights. Integrates with Slack, Teams, and HRIS systems.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-employee-engagement"
+    }
+  },
+  "features": [
+    "Pulse surveys",
+    "eNPS scoring",
+    "AI sentiment analysis",
+    "Action planning",
+    "Slack/Teams integration"
+  ],
+  "benefits": [
+    "25% lower turnover",
+    "Real-time sentiment",
+    "AI-powered insights",
+    "Manager action plans"
+  ]
+}

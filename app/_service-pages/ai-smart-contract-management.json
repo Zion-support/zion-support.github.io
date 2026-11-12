@@ -1,0 +1,29 @@
+{
+  "title": "AI Smart Contract Lifecycle Management",
+  "description": "AI-powered contract management with automated drafting, clause extraction, risk analysis, and renewal tracking. Manage the entire contract lifecycle in one platform.",
+  "basic": "$499/mo/month",
+  "pro": "$1,299/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Smart Contract Lifecycle Management - Zion Tech Group",
+    "description": "AI-powered contract management with automated drafting, clause extraction, risk analysis, and renewal tracking. Manage the entire contract lifecycle in one plat",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-smart-contract-management"
+    }
+  },
+  "features": [
+    "AI contract drafting from templates",
+    "Clause extraction and risk analysis",
+    "Obligation tracking and alerts",
+    "Renewal and expiration management",
+    "Contract comparison (original vs amended)"
+  ],
+  "benefits": [
+    "Draft contracts 10x faster",
+    "Catch risky clauses automatically",
+    "Never miss a renewal deadline",
+    "Reduce contract management costs by 60%"
+  ]
+}

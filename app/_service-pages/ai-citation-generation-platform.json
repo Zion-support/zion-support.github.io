@@ -1,0 +1,29 @@
+{
+  "title": "AI Citation Generation Platform",
+  "description": "Automatic citation generation and management for academic and professional writing. Supports APA, MLA, Chicago, Harvard, and Vancouver styles. Reference management with duplicate detection.",
+  "basic": "$19/mo/month",
+  "pro": "$59/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Citation Generation Platform - Zion Tech Group",
+    "description": "Automatic citation generation and management for academic and professional writing. Supports APA, MLA, Chicago, Harvard, and Vancouver styles. Reference managem",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-citation-generation-platform"
+    }
+  },
+  "features": [
+    "Auto-generate citations from URLs, DOIs, ISBNs",
+    "9 citation styles (APA, MLA, Chicago, etc.)",
+    "Reference library management",
+    "Duplicate detection",
+    "Browser extension for one-click capture"
+  ],
+  "benefits": [
+    "Save hours on citation formatting",
+    "Never miss a citation requirement",
+    "Consistent formatting guarantee",
+    "Collaborative research support"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "AI Smart Document Workflow Automation",
+  "description": "End-to-end document workflow automation with AI classification, extraction, routing, and approval. Processes invoices, contracts, forms, and custom documents at scale.",
+  "basic": "$999/mo/month",
+  "pro": "$2,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Smart Document Workflow Automation - Zion Tech Group",
+    "description": "End-to-end document workflow automation with AI classification, extraction, routing, and approval. Processes invoices, contracts, forms, and custom documents at",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-smart-document-workflow"
+    }
+  },
+  "features": [
+    "AI document classification and routing",
+    "Multi-format data extraction (PDF, scan, photo)",
+    "Automated approval workflows",
+    "Exception handling with human-in-the-loop",
+    "Integration with ERP, CRM, and ECM systems"
+  ],
+  "benefits": [
+    "Process documents 20x faster",
+    "Reduce processing costs by 75%",
+    "Eliminate manual data entry errors",
+    "Scale document operations without adding staff"
+  ]
+}

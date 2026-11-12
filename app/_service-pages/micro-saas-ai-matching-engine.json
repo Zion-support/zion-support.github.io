@@ -1,0 +1,29 @@
+{
+  "title": "Micro-SaaS AI Matching & Recommendation Engine",
+  "description": "White-label matching engine for any two-sided marketplace. AI-powered compatibility scoring, recommendation algorithms, and fraud detection for marketplace platforms.",
+  "basic": "$199/mo/month",
+  "pro": "$499/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Micro-SaaS AI Matching & Recommendation Engine - Zion Tech Group",
+    "description": "White-label matching engine for any two-sided marketplace. AI-powered compatibility scoring, recommendation algorithms, and fraud detection for marketplace plat",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-ai-matching-engine"
+    }
+  },
+  "features": [
+    "AI compatibility scoring between any entities",
+    "Real-time recommendation engine",
+    "Fraud detection for marketplace abuse",
+    "A/B testing for matching algorithms",
+    "API-first with SDKs for all languages"
+  ],
+  "benefits": [
+    "Increase match quality by 35%",
+    "Reduce marketplace fraud by 80%",
+    "Improve user engagement and retention",
+    "Launch marketplace features in days"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "IT Network Penetration Testing & Red Team",
+  "description": "Comprehensive penetration testing and red team exercises to identify vulnerabilities before attackers do. Includes network, web app, social engineering, and physical security testing.",
+  "basic": "$5,000/test/month",
+  "pro": "$15,000/test/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "IT Network Penetration Testing & Red Team - Zion Tech Group",
+    "description": "Comprehensive penetration testing and red team exercises to identify vulnerabilities before attackers do. Includes network, web app, social engineering, and phy",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-network-penetration-testing"
+    }
+  },
+  "features": [
+    "Network penetration testing",
+    "Web application security testing",
+    "Social engineering campaigns",
+    "Physical security assessment",
+    "Detailed remediation roadmap"
+  ],
+  "benefits": [
+    "Find vulnerabilities before attackers",
+    "Meet compliance requirements (PCI, SOC 2)",
+    "Prioritize remediation by risk",
+    "Reduce breach likelihood by 80%"
+  ]
+}

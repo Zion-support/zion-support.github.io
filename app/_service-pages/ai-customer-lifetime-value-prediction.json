@@ -1,0 +1,28 @@
+{
+  "title": "Customer Lifetime Value Prediction",
+  "description": "ML-powered CLV prediction engine that forecasts customer revenue potential using behavioral data, purchase history, and engagement metrics.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Customer Lifetime Value Prediction - Zion Tech Group",
+    "description": "ML-powered CLV prediction engine that forecasts customer revenue potential using behavioral data, purchase history, and engagement metrics.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-customer-lifetime-value-prediction"
+    }
+  },
+  "features": [
+    "CLV Forecasting",
+    "Behavioral Segmentation",
+    "Churn Risk Scoring",
+    "Retention Recommendations",
+    "Revenue Attribution"
+  ],
+  "benefits": [
+    "Increase retention 25%",
+    "Optimize marketing spend",
+    "Identify high-value segments"
+  ]
+}

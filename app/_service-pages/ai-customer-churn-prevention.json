@@ -1,0 +1,29 @@
+{
+  "title": "AI Customer Churn Prevention Platform",
+  "description": "Predict and prevent customer churn with AI. Behavioral analysis, early warning alerts, automated retention campaigns, and win-back workflows.",
+  "basic": "$599/mo/month",
+  "pro": "$1,799/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Customer Churn Prevention Platform - Zion Tech Group",
+    "description": "Predict and prevent customer churn with AI. Behavioral analysis, early warning alerts, automated retention campaigns, and win-back workflows.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-customer-churn-prevention"
+    }
+  },
+  "features": [
+    "Churn risk scoring",
+    "Behavioral anomaly detection",
+    "Automated retention campaigns",
+    "Win-back workflow builder",
+    "Revenue impact forecasting"
+  ],
+  "benefits": [
+    "Reduce churn by 25%",
+    "Identify at-risk accounts early",
+    "Automate retention efforts",
+    "Protect revenue"
+  ]
+}

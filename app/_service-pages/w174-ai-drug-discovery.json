@@ -1,0 +1,29 @@
+{
+  "title": "AI Drug Discovery Assistant",
+  "description": "AI-accelerated drug discovery: molecular property prediction, virtual screening, de novo molecule design, and ADMET optimization. Reduce early-stage discovery time by 60%.",
+  "basic": "$4,999/mo/month",
+  "pro": "$14,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Drug Discovery Assistant - Zion Tech Group",
+    "description": "AI-accelerated drug discovery: molecular property prediction, virtual screening, de novo molecule design, and ADMET optimization. Reduce early-stage discovery t",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w174-ai-drug-discovery"
+    }
+  },
+  "features": [
+    "Molecular property prediction (binding, toxicity, solubility)",
+    "Virtual screening of compound libraries",
+    "De novo molecule generation with constraints",
+    "ADMET optimization and prediction",
+    "Protein-ligand interaction analysis"
+  ],
+  "benefits": [
+    "Reduce discovery phase by 60%",
+    "Screen millions of compounds virtually",
+    "Novel molecule generation with target constraints",
+    "ADMET prediction reduces late-stage failures"
+  ]
+}

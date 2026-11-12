@@ -1,0 +1,27 @@
+{
+  "title": "IT Service Desk & Help Desk",
+  "description": "Multi-channel IT support with AI-powered ticket triage, self-service portals, SLA management, and automated resolution for 60%+ of common issues.",
+  "basic": "$99/mo/month",
+  "pro": "$349/mo/month",
+  "enterprise": "$1,299/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "IT Service Desk & Help Desk - Zion Tech Group",
+    "description": "Multi-channel IT support with AI-powered ticket triage, self-service portals, SLA management, and automated resolution for 60%+ of common issues.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-service-desk"
+    }
+  },
+  "features": [
+    "Enterprise-grade implementation",
+    "24/7 monitoring",
+    "Compliance-ready"
+  ],
+  "benefits": [
+    "Reduce costs with it service desk & help desk",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

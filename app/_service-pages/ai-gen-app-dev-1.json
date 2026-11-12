@@ -1,0 +1,29 @@
+{
+  "title": "AI-Powered Application Development",
+  "description": "End-to-end development service for building production-ready AI applications — from LLM-powered chatbots and RAG systems to multi-agent workflows and AI-native products.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI-Powered Application Development - Zion Tech Group",
+    "description": "End-to-end development service for building production-ready AI applications — from LLM-powered chatbots and RAG systems to multi-agent workflows and AI-native ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-gen-app-dev-1"
+    }
+  },
+  "features": [
+    "LLM application architecture and design",
+    "RAG (Retrieval-Augmented Generation) implementation",
+    "Multi-agent system design and orchestration (LangChain, LangGraph, CrewAI)",
+    "Vector database selection and optimization (Pinecone, Weaviate, Qdrant)",
+    "Prompt engineering and fine-tuning workflows"
+  ],
+  "benefits": [
+    "Reduce costs with ai-powered application development",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "AI-Powered Test Suite Generator",
+  "description": "Automatically generate comprehensive unit, integration, and E2E tests from code, requirements, or user stories with high coverage and maintainability.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI-Powered Test Suite Generator - Zion Tech Group",
+    "description": "Automatically generate comprehensive unit, integration, and E2E tests from code, requirements, or user stories with high coverage and maintainability.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-test-generation"
+    }
+  },
+  "features": [
+    "White-box test generation from source code",
+    "Black-box tests from BDD/Gherkin specs",
+    "E2E test generation via Puppeteer/Playwright",
+    "Coverage gap analysis & prioritizing",
+    "Test flake detection & stabilization"
+  ],
+  "benefits": [
+    "Reduce costs with ai-powered test suite generator",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

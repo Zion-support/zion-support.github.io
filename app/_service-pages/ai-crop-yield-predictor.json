@@ -1,0 +1,29 @@
+{
+  "title": "AI Crop Yield Prediction & Precision Agriculture",
+  "description": "AI-powered precision agriculture with crop yield prediction, soil analysis, and irrigation optimization. Increase yields by 20% while reducing water and fertilizer use.",
+  "basic": "$499/mo/month",
+  "pro": "$1,499/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Crop Yield Prediction & Precision Agriculture - Zion Tech Group",
+    "description": "AI-powered precision agriculture with crop yield prediction, soil analysis, and irrigation optimization. Increase yields by 20% while reducing water and fertili",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-crop-yield-predictor"
+    }
+  },
+  "features": [
+    "Satellite and drone imagery analysis",
+    "Crop yield prediction with weather integration",
+    "Soil health monitoring and recommendations",
+    "Irrigation optimization and scheduling",
+    "Pest and disease early detection"
+  ],
+  "benefits": [
+    "Increase crop yields by 20%",
+    "Reduce water usage by 30%",
+    "Detect pests and disease 2 weeks early",
+    "Optimize fertilizer application with AI"
+  ]
+}

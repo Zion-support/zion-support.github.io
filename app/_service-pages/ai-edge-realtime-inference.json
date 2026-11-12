@@ -1,0 +1,29 @@
+{
+  "title": "AI Edge & Real-Time Inference",
+  "description": "Deploy AI at the edge and in real time. Low-latency inference, on-device models, and streaming pipelines for mission-critical applications.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Edge & Real-Time Inference - Zion Tech Group",
+    "description": "Deploy AI at the edge and in real time. Low-latency inference, on-device models, and streaming pipelines for mission-critical applications.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-edge-realtime-inference"
+    }
+  },
+  "features": [
+    "Edge-Deployed Models",
+    "Real-Time Streaming Pipelines",
+    "Hybrid Cloud-Edge Orchestration",
+    "Model Optimization & Quantization",
+    "Low-Latency APIs"
+  ],
+  "benefits": [
+    "Reduce costs with ai edge & real-time inference",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

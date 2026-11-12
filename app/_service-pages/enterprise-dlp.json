@@ -1,0 +1,29 @@
+{
+  "title": "Enterprise Data Loss Prevention (DLP)",
+  "description": "Prevent data exfiltration at rest, in transit, in-use: endpoint DLP, network DLP, cloud DLP (S3/GDrive/SharePoint/Box). Content inspection + policy enforcement + remediation.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Enterprise Data Loss Prevention (DLP) - Zion Tech Group",
+    "description": "Prevent data exfiltration at rest, in transit, in-use: endpoint DLP, network DLP, cloud DLP (S3/GDrive/SharePoint/Box). Content inspection + policy enforcement ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/enterprise-dlp"
+    }
+  },
+  "features": [
+    "Endpoint + Network + Cloud DLP unified",
+    "Content inspection by PII/PHI/PCI/confidential",
+    "Policy: block/quarantine/alert per class",
+    "Cloud DLP: S3/GDrive/SharePoint/Box/OneDrive",
+    "Incident remediation workflow, one-click"
+  ],
+  "benefits": [
+    "Reduce costs with enterprise data loss prevention (dlp)",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

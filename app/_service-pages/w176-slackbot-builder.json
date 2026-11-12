@@ -1,0 +1,29 @@
+{
+  "title": "SlackBot Builder — No-Code Slack Apps",
+  "description": "Build custom Slack bots and workflows without code: slash commands, interactive messages, workflow steps, and AI-powered responses.",
+  "basic": "$19/mo/month",
+  "pro": "$49/mo/month",
+  "enterprise": "$149/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "SlackBot Builder — No-Code Slack Apps - Zion Tech Group",
+    "description": "Build custom Slack bots and workflows without code: slash commands, interactive messages, workflow steps, and AI-powered responses.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w176-slackbot-builder"
+    }
+  },
+  "features": [
+    "No-code Slack app builder",
+    "Slash command creation",
+    "Interactive message buttons and menus",
+    "Workflow step builder for Slack workflows",
+    "AI-integrations for smart responses"
+  ],
+  "benefits": [
+    "Custom Slack bots without engineering",
+    "Workflow steps automate processes in Slack",
+    "AI integrations add intelligence",
+    "Deploy in minutes, not sprints"
+  ]
+}

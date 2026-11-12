@@ -1,0 +1,29 @@
+{
+  "title": "Graph Analytics & Network Intelligence",
+  "description": "Graph database and analytics: Neo4j/Neptune, social network analysis, fraud ring detection, recommendation graphs, and path optimization.",
+  "basic": "$399/mo/month",
+  "pro": "$1,199/mo/month",
+  "enterprise": "$3,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Graph Analytics & Network Intelligence - Zion Tech Group",
+    "description": "Graph database and analytics: Neo4j/Neptune, social network analysis, fraud ring detection, recommendation graphs, and path optimization.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w175-graph-analytics"
+    }
+  },
+  "features": [
+    "Graph database management (Neo4j, Neptune)",
+    "Social network and influence analysis",
+    "Fraud ring and collusion detection",
+    "Recommendation and similarity graphs",
+    "Path optimization and shortest route"
+  ],
+  "benefits": [
+    "Detect fraud rings invisible to SQL",
+    "Social network analysis for marketing",
+    "Graph recommendations outperform collaborative filtering",
+    "Path optimization for logistics and routing"
+  ]
+}

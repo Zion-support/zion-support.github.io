@@ -1,0 +1,29 @@
+{
+  "title": "Micro-SaaS AI Smart Form Builder & Data Collector",
+  "description": "AI-powered form builder that creates optimized forms from natural language descriptions. Includes conditional logic, data validation, and automatic analysis of responses.",
+  "basic": "$29/mo/month",
+  "pro": "$79/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Micro-SaaS AI Smart Form Builder & Data Collector - Zion Tech Group",
+    "description": "AI-powered form builder that creates optimized forms from natural language descriptions. Includes conditional logic, data validation, and automatic analysis of ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-ai-form-builder"
+    }
+  },
+  "features": [
+    "AI form generation from text descriptions",
+    "Smart conditional logic builder",
+    "Real-time response analytics",
+    "Spam detection and prevention",
+    "Integration with 100+ tools via Zapier"
+  ],
+  "benefits": [
+    "Create forms in seconds not hours",
+    "Increase completion rates by 40%",
+    "Auto-analyze open-ended responses",
+    "Ensure compliance automatically"
+  ]
+}

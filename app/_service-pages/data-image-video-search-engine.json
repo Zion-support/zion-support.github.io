@@ -1,0 +1,28 @@
+{
+  "title": "Image and Video Search Engine",
+  "description": "Visual search engine for media libraries: CLIP-compatible index built from images and video frames up to 60 frames per second; multi-modal query with text or image; auto-cluster same-scene per video clip; people, location, and label auto-tags per frame.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Image and Video Search Engine - Zion Tech Group",
+    "description": "Visual search engine for media libraries: CLIP-compatible index built from images and video frames up to 60 frames per second; multi-modal query with text or im",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/data-image-video-search-engine"
+    }
+  },
+  "features": [
+    "CLIP-compatible embedding index from any image or video frame up to 60 frames per second",
+    "Multi-modal retrieval — text-to-image, image-to-image, and image-to-video query supported",
+    "Parent-album auto-cluster — same-scene and same-people clips auto-grouped per video",
+    "Auto-detected people, location, and label tags per frame with searchable metadata"
+  ],
+  "benefits": [
+    "Reduce costs with image and video search engine",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

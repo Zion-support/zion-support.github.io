@@ -1,0 +1,29 @@
+{
+  "title": "AI Revenue Operations (RevOps)",
+  "description": "Unify sales, marketing, and customer success data with AI-driven attribution, forecasting, and go-to-market (GTM) optimization.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Revenue Operations (RevOps) - Zion Tech Group",
+    "description": "Unify sales, marketing, and customer success data with AI-driven attribution, forecasting, and go-to-market (GTM) optimization.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-revenue-ops"
+    }
+  },
+  "features": [
+    "Cross-channel attribution modeling",
+    "Pipeline health scoring & prediction",
+    "Customer churn prediction",
+    "GTM motion analysis & recommendation",
+    "Integration with Salesforce, HubSpot, Marketo"
+  ],
+  "benefits": [
+    "Reduce costs with ai revenue operations (revops)",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

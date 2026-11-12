@@ -1,0 +1,29 @@
+{
+  "title": "Security Operations Maturity Assessment",
+  "description": "Assess and roadmap your security operations maturity. Gap analysis against NIST CSF, CMMC, and CIS Controls. Build vs buy recommendations with 3-year TCO.",
+  "basic": "$4,999/month",
+  "pro": "$14,999/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Security Operations Maturity Assessment - Zion Tech Group",
+    "description": "Assess and roadmap your security operations maturity. Gap analysis against NIST CSF, CMMC, and CIS Controls. Build vs buy recommendations with 3-year TCO.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w174-security-operations"
+    }
+  },
+  "features": [
+    "NIST CSF maturity assessment",
+    "CMMC and CIS Controls gap analysis",
+    "Current state evaluation (people, process, tech)",
+    "Risk-prioritized roadmap",
+    "Build vs buy analysis with TCO"
+  ],
+  "benefits": [
+    "Know where you stand vs industry frameworks",
+    "Prioritized roadmap maximizes risk reduction per dollar",
+    "Build vs buy saves 30-50% vs wrong choices",
+    "Quick wins deliver value immediately"
+  ]
+}

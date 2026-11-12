@@ -1,0 +1,29 @@
+{
+  "title": "Serverless API Gateway",
+  "description": "Fully managed API gateway with rate limiting, auth, caching, and transformation. Pay-per-request pricing, auto-scaling to millions of RPS.",
+  "basic": "$49/mo/month",
+  "pro": "$199/mo/month",
+  "enterprise": "$699/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Serverless API Gateway - Zion Tech Group",
+    "description": "Fully managed API gateway with rate limiting, auth, caching, and transformation. Pay-per-request pricing, auto-scaling to millions of RPS.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-serverless-api-gateway"
+    }
+  },
+  "features": [
+    "JWT/OAuth validation",
+    "Request/response transformation",
+    "Response caching (Redis)",
+    "Rate limiting & quotas",
+    "WebSocket support"
+  ],
+  "benefits": [
+    "Reduce costs with serverless api gateway",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

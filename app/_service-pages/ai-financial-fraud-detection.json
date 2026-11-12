@@ -1,0 +1,29 @@
+{
+  "title": "AI Financial Fraud Detection & Prevention",
+  "description": "Real-time transaction monitoring with deep learning anomaly detection, customer behavior profiling, and automated case management for banking and fintech.",
+  "basic": "$399/mo/month",
+  "pro": "$999/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Financial Fraud Detection & Prevention - Zion Tech Group",
+    "description": "Real-time transaction monitoring with deep learning anomaly detection, customer behavior profiling, and automated case management for banking and fintech.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-financial-fraud-detection"
+    }
+  },
+  "features": [
+    "Real-time transaction scoring & blocking",
+    "Deep learning behavioral anomaly detection",
+    "Customer risk profiling with dynamic baselines",
+    "Automated case management with evidence bundling",
+    "False positive reduction with adaptive learning"
+  ],
+  "benefits": [
+    "Reduce costs with ai financial fraud detection & prevention",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

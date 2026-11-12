@@ -1,0 +1,29 @@
+{
+  "title": "AI Content Localization & Cultural Adaptation",
+  "description": "Enterprise-grade content localization with context-aware translation, cultural nuance adaptation, brand voice preservation, and multi-market compliance.",
+  "basic": "$49/mo/month",
+  "pro": "$149/mo/month",
+  "enterprise": "$499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Content Localization & Cultural Adaptation - Zion Tech Group",
+    "description": "Enterprise-grade content localization with context-aware translation, cultural nuance adaptation, brand voice preservation, and multi-market compliance.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-content-localization"
+    }
+  },
+  "features": [
+    "Context-aware Neural Machine Translation (100+ languages)",
+    "Cultural adaptation and localization QA",
+    "Brand voice consistency across markets",
+    "Automated regulatory compliance checking",
+    "CMS and marketing platform integrations"
+  ],
+  "benefits": [
+    "Reduce costs with ai content localization & cultural adaptation",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

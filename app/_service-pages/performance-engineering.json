@@ -1,0 +1,29 @@
+{
+  "title": "Performance Engineering as a Service",
+  "description": "Proactive performance: synthetic monitoring (Playwright), load testing (k6/Gatling), flame-graph CI gate, production profiling, quarterly roadmap review.",
+  "basic": "$2,999/mo/month",
+  "pro": "$Custom/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Performance Engineering as a Service - Zion Tech Group",
+    "description": "Proactive performance: synthetic monitoring (Playwright), load testing (k6/Gatling), flame-graph CI gate, production profiling, quarterly roadmap review.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/performance-engineering"
+    }
+  },
+  "features": [
+    "Synthetic browser + API monitoring (Playwright)",
+    "Continuous load testing in CI pipeline",
+    "Flame-graph regression gate per PR",
+    "Production profiling (pyroscope/parca)",
+    "Quarterly performance roadmap per architecture"
+  ],
+  "benefits": [
+    "Reduce costs with performance engineering as a service",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

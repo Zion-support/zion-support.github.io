@@ -1,0 +1,29 @@
+{
+  "title": "AI Expense Audit & Compliance",
+  "description": "Automated expense report auditing with AI. Detect policy violations, duplicate submissions, suspicious patterns, and non-compliant receipts.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Expense Audit & Compliance - Zion Tech Group",
+    "description": "Automated expense report auditing with AI. Detect policy violations, duplicate submissions, suspicious patterns, and non-compliant receipts.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-expense-auditor"
+    }
+  },
+  "features": [
+    "Receipt OCR and validation",
+    "Policy violation detection",
+    "Duplicate expense detection",
+    "Suspicious pattern analysis",
+    "Per diem and mileage calculation"
+  ],
+  "benefits": [
+    "Reduce expense fraud by 60%",
+    "Cut audit time by 90%",
+    "Ensure policy compliance",
+    "Reclaim overpayments"
+  ]
+}

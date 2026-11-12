@@ -1,0 +1,29 @@
+{
+  "title": "Micro-SAAS AI Customer Onboarding Platform",
+  "description": "Automated customer onboarding workflows with AI-guided product tours, personalized checklists, and progress tracking.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Micro-SAAS AI Customer Onboarding Platform - Zion Tech Group",
+    "description": "Automated customer onboarding workflows with AI-guided product tours, personalized checklists, and progress tracking.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-ai-customer-onboarding"
+    }
+  },
+  "features": [
+    "AI-guided product tours",
+    "Personalized onboarding paths",
+    "Progress analytics",
+    "Automated email sequences",
+    "In-app guidance"
+  ],
+  "benefits": [
+    "60% faster time-to-value",
+    "Higher activation rates",
+    "Reduced support tickets",
+    "Scalable onboarding"
+  ]
+}

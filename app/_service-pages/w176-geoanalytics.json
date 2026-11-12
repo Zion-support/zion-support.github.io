@@ -1,0 +1,29 @@
+{
+  "title": "GeoAnalytics — Location Intelligence",
+  "description": "Location analytics: geocoding, heatmaps, trade area analysis, drive-time rings, and demographic enrichment. Turn addresses into insights.",
+  "basic": "$49/mo/month",
+  "pro": "$149/mo/month",
+  "enterprise": "$499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "GeoAnalytics — Location Intelligence - Zion Tech Group",
+    "description": "Location analytics: geocoding, heatmaps, trade area analysis, drive-time rings, and demographic enrichment. Turn addresses into insights.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w176-geoanalytics"
+    }
+  },
+  "features": [
+    "Batch geocoding and reverse geocoding",
+    "Heatmap and density visualization",
+    "Trade area and drive-time analysis",
+    "Demographic data enrichment (Census)",
+    "Distance and routing calculations"
+  ],
+  "benefits": [
+    "Turn addresses into actionable intelligence",
+    "Demographic enrichment for site selection",
+    "Drive-time analysis for coverage",
+    "Heatmaps reveal geographic patterns"
+  ]
+}

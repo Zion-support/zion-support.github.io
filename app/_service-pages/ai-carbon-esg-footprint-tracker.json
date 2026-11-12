@@ -1,0 +1,29 @@
+{
+  "title": "AI Carbon Footprint Tracker & ESG Reporting",
+  "description": "Automatically track, analyze, and report organizational carbon emissions across Scope 1, 2, and 3. AI identifies reduction opportunities and generates compliance reports.",
+  "basic": "$199/mo/month",
+  "pro": "$599/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Carbon Footprint Tracker & ESG Reporting - Zion Tech Group",
+    "description": "Automatically track, analyze, and report organizational carbon emissions across Scope 1, 2, and 3. AI identifies reduction opportunities and generates complianc",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-carbon-esg-footprint-tracker"
+    }
+  },
+  "features": [
+    "Automated Scope 1,2,3 emissions calculation",
+    "AI-powered reduction opportunity identification",
+    "Real-time carbon dashboard",
+    "GRI, CDP, TCFD, SEC templates",
+    "Supply chain emissions tracking"
+  ],
+  "benefits": [
+    "Achieve carbon neutrality",
+    "Reduce ESG reporting time by 70%",
+    "Avoid greenwashing",
+    "Meet regulatory compliance"
+  ]
+}

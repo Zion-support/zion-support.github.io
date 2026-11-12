@@ -1,0 +1,29 @@
+{
+  "title": "Log Aggregation & Search",
+  "description": "Centralized log collection, structured indexing, and full-text search across all servers, containers, and services with retention policies and alerting.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Log Aggregation & Search - Zion Tech Group",
+    "description": "Centralized log collection, structured indexing, and full-text search across all servers, containers, and services with retention policies and alerting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/log-aggregation-platform"
+    }
+  },
+  "features": [
+    "Structured + unstructured logs",
+    "Full-text search with filters",
+    "Retention policy tiers",
+    "Log-based alerting",
+    "OpenTelemetry compatible"
+  ],
+  "benefits": [
+    "Reduce costs with log aggregation & search",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

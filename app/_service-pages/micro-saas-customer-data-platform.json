@@ -1,0 +1,30 @@
+{
+  "title": "Customer Data Platform (CDP)",
+  "description": "Unify customer data from all touchpoints into a single profile. Identity resolution, segmentation, activation, and privacy compliance — all in one platform.",
+  "basic": "$499/mo/month",
+  "pro": "$1,499/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Customer Data Platform (CDP) - Zion Tech Group",
+    "description": "Unify customer data from all touchpoints into a single profile. Identity resolution, segmentation, activation, and privacy compliance — all in one platform.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-customer-data-platform"
+    }
+  },
+  "features": [
+    "Identity resolution",
+    "Unified customer profiles",
+    "Real-time segmentation",
+    "Activation across channels",
+    "Privacy compliance (GDPR/CCPA)"
+  ],
+  "benefits": [
+    "360-degree customer view",
+    "20% higher campaign ROI",
+    "Privacy compliance built-in",
+    "Real-time audience updates",
+    "Reduced data silos"
+  ]
+}

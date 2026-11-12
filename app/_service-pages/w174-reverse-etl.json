@@ -1,0 +1,29 @@
+{
+  "title": "Reverse ETL & Data Activation",
+  "description": "Push data from warehouse to operational systems (CRM, ad platforms, support tools). Activate warehouse data in tools your teams already use.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Reverse ETL & Data Activation - Zion Tech Group",
+    "description": "Push data from warehouse to operational systems (CRM, ad platforms, support tools). Activate warehouse data in tools your teams already use.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w174-reverse-etl"
+    }
+  },
+  "features": [
+    "Push data from Snowflake/BigQuery to SaaS tools",
+    "Sync to Salesforce, HubSpot, Braze, Zendesk",
+    "Column mapping and transformation",
+    "Scheduled and event-triggered syncs",
+    "Sync monitoring and error alerting"
+  ],
+  "benefits": [
+    "Activate warehouse data in business tools",
+    "CRM, ad, and support teams use fresh data",
+    "No more CSV exports and manual imports",
+    "Monitor sync health and catch issues fast"
+  ]
+}

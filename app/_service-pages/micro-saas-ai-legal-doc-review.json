@@ -1,0 +1,29 @@
+{
+  "title": "AI Legal Document Review & Due Diligence",
+  "description": "AI-powered legal document review for M&A due diligence, contract analysis, and compliance review. Reduces review time by 90% while improving accuracy.",
+  "basic": "$499/mo/month",
+  "pro": "$1,499/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Legal Document Review & Due Diligence - Zion Tech Group",
+    "description": "AI-powered legal document review for M&A due diligence, contract analysis, and compliance review. Reduces review time by 90% while improving accuracy.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-ai-legal-doc-review"
+    }
+  },
+  "features": [
+    "Bulk document upload and AI classification",
+    "Key clause extraction and risk flagging",
+    "Redline comparison between document versions",
+    "M&A due diligence checklist automation",
+    "Regulatory compliance gap analysis"
+  ],
+  "benefits": [
+    "Reduce document review time by 90%",
+    "Catch risky clauses human reviewers miss",
+    "Accelerate M&A due diligence timelines",
+    "Lower legal review costs by 60%"
+  ]
+}

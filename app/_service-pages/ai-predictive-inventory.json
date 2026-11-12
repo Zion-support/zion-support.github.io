@@ -1,0 +1,29 @@
+{
+  "title": "AI Predictive Inventory & Demand Sensing",
+  "description": "AI demand sensing that predicts what customers will buy before they order. Reduce stockouts by 80% and inventory costs by 25% with real-time demand signals.",
+  "basic": "$1,499/mo/month",
+  "pro": "$3,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Predictive Inventory & Demand Sensing - Zion Tech Group",
+    "description": "AI demand sensing that predicts what customers will buy before they order. Reduce stockouts by 80% and inventory costs by 25% with real-time demand signals.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-predictive-inventory"
+    }
+  },
+  "features": [
+    "Real-time demand sensing from multiple signals",
+    "AI forecasting with weather, events, social trends",
+    "Automatic replenishment recommendations",
+    "Multi-echelon inventory optimization",
+    "Integration with ERP, WMS, and e-commerce platforms"
+  ],
+  "benefits": [
+    "Reduce stockouts by 80%",
+    "Cut inventory costs by 25%",
+    "Sense demand changes in real-time",
+    "Automate replenishment decisions"
+  ]
+}

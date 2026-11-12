@@ -1,0 +1,29 @@
+{
+  "title": "Manufacturing Digital Twin Platform",
+  "description": "High-fidelity digital replicas of production lines, facilities, and supply chains. Run what-if scenarios, optimize throughput, simulate disruptions, and validate changes before touching the physical plant — compressing commissioning time by 60%.",
+  "basic": "$N/A/month",
+  "pro": "$39997/month",
+  "enterprise": "$89997/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Manufacturing Digital Twin Platform - Zion Tech Group",
+    "description": "High-fidelity digital replicas of production lines, facilities, and supply chains. Run what-if scenarios, optimize throughput, simulate disruptions, and validat",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/wave127-manufacturing-digital-twin"
+    }
+  },
+  "features": [
+    "High-fidelity process simulation & 3D visualization",
+    "What-if scenario engine with constraint solving",
+    "Real-time IoT data synchronization with twin",
+    "Throughput optimization & bottleneck analysis",
+    "Supply chain disruption simulation"
+  ],
+  "benefits": [
+    "60% faster plant commissioning and changeovers",
+    "Optimize throughput without disrupting production",
+    "Simulate before you build — avoid costly mistakes",
+    "Reduce energy costs 10-20% with consumption modeling"
+  ]
+}

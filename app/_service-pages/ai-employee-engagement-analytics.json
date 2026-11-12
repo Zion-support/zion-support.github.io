@@ -1,0 +1,28 @@
+{
+  "title": "Employee Engagement Analytics",
+  "description": "AI-powered employee engagement platform that analyzes survey data, communication patterns, and productivity metrics to predict turnover and recommend interventions.",
+  "basic": "$179/mo/month",
+  "pro": "$499/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Employee Engagement Analytics - Zion Tech Group",
+    "description": "AI-powered employee engagement platform that analyzes survey data, communication patterns, and productivity metrics to predict turnover and recommend interventi",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-employee-engagement-analytics"
+    }
+  },
+  "features": [
+    "Sentiment Analysis",
+    "Turnover Prediction",
+    "Engagement Scoring",
+    "Action Recommendations",
+    "Anonymous Feedback"
+  ],
+  "benefits": [
+    "Reduce turnover 30%",
+    "Improve satisfaction",
+    "Data-driven HR decisions"
+  ]
+}

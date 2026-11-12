@@ -1,0 +1,29 @@
+{
+  "title": "LLM Evaluation & Benchmark Platform",
+  "description": "Evaluate, compare, and benchmark LLMs: accuracy, latency, cost, safety, and fairness. A/B test models in production with automated evaluation pipelines.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "LLM Evaluation & Benchmark Platform - Zion Tech Group",
+    "description": "Evaluate, compare, and benchmark LLMs: accuracy, latency, cost, safety, and fairness. A/B test models in production with automated evaluation pipelines.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w174-llm-eval-benchmark"
+    }
+  },
+  "features": [
+    "Multi-model evaluation (OpenAI, Anthropic, Gemini, local)",
+    "Accuracy, latency, cost benchmarking",
+    "Safety and toxicity evaluation",
+    "Fairness and bias testing",
+    "A/B testing in production with routing"
+  ],
+  "benefits": [
+    "Choose the best model with data, not guessing",
+    "Safety evaluation before production deployment",
+    "Cost benchmarking optimizes spend",
+    "A/B testing proves model upgrade value"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "VDI Performance Optimization",
+  "description": "Optimize virtual desktop infrastructure: user experience tuning, image management, protocol optimization, cost reduction.",
+  "basic": "$3,999/month",
+  "pro": "$12,999/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "VDI Performance Optimization - Zion Tech Group",
+    "description": "Optimize virtual desktop infrastructure: user experience tuning, image management, protocol optimization, cost reduction.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w177-vdi-optimize"
+    }
+  },
+  "features": [
+    "User experience assessment and tuning",
+    "Golden image management and layering",
+    "Protocol optimization (PCoIP",
+    "Blast",
+    "RDP)"
+  ],
+  "benefits": [
+    "Improve VDI user experience",
+    "Image management reduces storage",
+    "Protocol optimization reduces bandwidth",
+    "Cost optimization saves 30%"
+  ]
+}

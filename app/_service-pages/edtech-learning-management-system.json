@@ -1,0 +1,29 @@
+{
+  "title": "AI-Powered Learning Management System",
+  "description": "Next-generation LMS with AI-powered content recommendations, automated grading, learning analytics, and adaptive learning paths. For K-12, higher education, and corporate training.",
+  "basic": "$399/mo/month",
+  "pro": "$1,299/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI-Powered Learning Management System - Zion Tech Group",
+    "description": "Next-generation LMS with AI-powered content recommendations, automated grading, learning analytics, and adaptive learning paths. For K-12, higher education, and",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/edtech-learning-management-system"
+    }
+  },
+  "features": [
+    "Adaptive learning paths",
+    "AI content recommendations",
+    "Automated grading and feedback",
+    "Learning analytics dashboard",
+    "Video lecture with AI summaries"
+  ],
+  "benefits": [
+    "Improve learning outcomes by 30%",
+    "Reduce instructor workload",
+    "Personalized learning at scale",
+    "Data-driven education decisions"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "title": "Marketing Automation",
+  "description": "Marketing Automation empowers marketing and revenue teams with AI-driven campaign optimization, lead intelligence, and personalized outreach automa...",
+  "basic": "$199/mo/month",
+  "pro": "$499/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Marketing Automation - Zion Tech Group",
+    "description": "Marketing Automation empowers marketing and revenue teams with AI-driven campaign optimization, lead intelligence, and personalized outreach automa...",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/marketing-automation"
+    }
+  },
+  "features": [
+    "AI-powered automation",
+    "Enterprise integration",
+    "Real-time analytics"
+  ],
+  "benefits": [
+    "Reduce costs with marketing automation",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

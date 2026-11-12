@@ -1,0 +1,29 @@
+{
+  "title": "AI Compliance Document Generator",
+  "description": "Auto-generate compliance documents for GDPR, HIPAA, SOC2, PCI-DSS, and industry-specific regulations. Keep policies current with regulatory change tracking.",
+  "basic": "$799/mo/month",
+  "pro": "$2,499/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Compliance Document Generator - Zion Tech Group",
+    "description": "Auto-generate compliance documents for GDPR, HIPAA, SOC2, PCI-DSS, and industry-specific regulations. Keep policies current with regulatory change tracking.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-compliance-document-generator"
+    }
+  },
+  "features": [
+    "Auto-generate policies and procedures",
+    "Regulatory change tracking",
+    "Multi-framework support",
+    "Approval workflows",
+    "Version control and audit trail"
+  ],
+  "benefits": [
+    "Reduce compliance document creation time by 90%",
+    "Stay current with regulatory changes",
+    "Ensure consistent policy language",
+    "Automate compliance workflows"
+  ]
+}

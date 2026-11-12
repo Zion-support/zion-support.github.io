@@ -1,0 +1,29 @@
+{
+  "title": "Neuromorphic Computing Platform",
+  "description": "Leverage neuromorphic hardware for ultra-low-power AI inference. Spiking neural networks, edge AI, and brain-inspired computing for IoT and robotics.",
+  "basic": "$Custom/month",
+  "pro": "$Custom/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Neuromorphic Computing Platform - Zion Tech Group",
+    "description": "Leverage neuromorphic hardware for ultra-low-power AI inference. Spiking neural networks, edge AI, and brain-inspired computing for IoT and robotics.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-neuromorphic-computing"
+    }
+  },
+  "features": [
+    "Spiking neural network development",
+    "Neuromorphic hardware integration",
+    "Ultra-low-power inference",
+    "Edge AI deployment",
+    "Integration with Intel Loihi, IBM TrueNorth"
+  ],
+  "benefits": [
+    "100x lower power consumption",
+    "Real-time edge inference",
+    "Brain-inspired computing",
+    "Next-gen AI hardware"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "AI Code Reviewer Pro",
+  "description": "Automated code review that catches bugs, security issues, performance problems, and style violations before production.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Code Reviewer Pro - Zion Tech Group",
+    "description": "Automated code review that catches bugs, security issues, performance problems, and style violations before production.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-code-reviewer-pro"
+    }
+  },
+  "features": [
+    "Deep code analysis across 50+ languages",
+    "OWASP Top 10 vulnerability scanning",
+    "Performance suggestions with benchmarks",
+    "Team coding standards enforcement",
+    "PR integration — GitHub, GitLab, Bitbucket"
+  ],
+  "benefits": [
+    "Reduce costs with ai code reviewer pro",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

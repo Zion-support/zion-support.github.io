@@ -1,0 +1,29 @@
+{
+  "title": "AI Document Understanding & Data Extraction",
+  "description": "AI that reads and understands any document — invoices, contracts, forms, handwritten notes. Extract structured data with 99% accuracy and learn from corrections.",
+  "basic": "$499/mo/month",
+  "pro": "$1,499/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Document Understanding & Data Extraction - Zion Tech Group",
+    "description": "AI that reads and understands any document — invoices, contracts, forms, handwritten notes. Extract structured data with 99% accuracy and learn from corrections",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-document-understanding"
+    }
+  },
+  "features": [
+    "Multi-format document ingestion (PDF, scan, photo)",
+    "AI classification by document type",
+    "Structured data extraction with confidence scores",
+    "Human-in-the-loop validation",
+    "Continuous learning from corrections"
+  ],
+  "benefits": [
+    "Process documents 20x faster than manual",
+    "Achieve 99%+ extraction accuracy",
+    "Reduce processing costs by 80%",
+    "Scale without adding headcount"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "title": "AI Mental Health Companion",
+  "description": "Empathetic, HIPAA-compliant chatbot providing CBT-based support, mood tracking, and crisis escalation to licensed professionals.",
+  "basic": "$99/mo/month",
+  "pro": "$299/mo/month",
+  "enterprise": "$999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Mental Health Companion - Zion Tech Group",
+    "description": "Empathetic, HIPAA-compliant chatbot providing CBT-based support, mood tracking, and crisis escalation to licensed professionals.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-mental-health-chatbot"
+    }
+  },
+  "features": [
+    "Mood journal with trends",
+    "Personalized coping strategies",
+    "Crisis keyword detection to human handoff",
+    "Weekly mental health reports"
+  ],
+  "benefits": [
+    "Reduce costs with ai mental health companion",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

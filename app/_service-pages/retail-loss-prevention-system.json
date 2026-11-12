@@ -1,0 +1,29 @@
+{
+  "title": "AI Retail Loss Prevention System",
+  "description": "Computer vision and AI-powered loss prevention for retail. Detect shoplifting, employee theft, and inventory shrinkage in real-time using existing CCTV cameras.",
+  "basic": "$999/mo/month",
+  "pro": "$2,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Retail Loss Prevention System - Zion Tech Group",
+    "description": "Computer vision and AI-powered loss prevention for retail. Detect shoplifting, employee theft, and inventory shrinkage in real-time using existing CCTV cameras.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/retail-loss-prevention-system"
+    }
+  },
+  "features": [
+    "Real-time video analytics",
+    "Shoplifting detection",
+    "Employee theft detection",
+    "Self-checkout monitoring",
+    "POS exception detection"
+  ],
+  "benefits": [
+    "Reduce shrinkage by 35%",
+    "Real-time theft alerts",
+    "Improve store safety",
+    "Data-driven loss prevention"
+  ]
+}

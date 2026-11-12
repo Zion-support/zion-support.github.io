@@ -1,0 +1,29 @@
+{
+  "title": "AI Meeting Intelligence Platform",
+  "description": "AI that joins every meeting: real-time transcription, action item extraction, decision logging, and follow-up automation. Works with Zoom, Teams, Google Meet, and Webex.",
+  "basic": "$29/mo/month",
+  "pro": "$79/mo/month",
+  "enterprise": "$249/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Meeting Intelligence Platform - Zion Tech Group",
+    "description": "AI that joins every meeting: real-time transcription, action item extraction, decision logging, and follow-up automation. Works with Zoom, Teams, Google Meet, a",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w174-ai-meeting-intelligence"
+    }
+  },
+  "features": [
+    "Real-time transcription with speaker IDs",
+    "Action item extraction and assignment",
+    "Decision and key takeaway logging",
+    "Automated follow-up email drafting",
+    "Searchable meeting knowledge base"
+  ],
+  "benefits": [
+    "Never lose a meeting decision again",
+    "Action items captured and assigned automatically",
+    "Searchable archive of all organizational knowledge",
+    "Meeting effectiveness data drives improvement"
+  ]
+}

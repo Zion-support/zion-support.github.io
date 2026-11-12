@@ -1,0 +1,29 @@
+{
+  "title": "Cloud Cost Anomaly Detector — ML-Powered",
+  "description": "ML-powered cloud cost monitoring: automatically detect anomalous spend spikes, forecast monthly costs with confidence intervals, receive root-cause attribution (service + region + tag), and set auto-throttling alerts.",
+  "basic": "$99/mo/month",
+  "pro": "$349/mo/month",
+  "enterprise": "$1,299/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Cloud Cost Anomaly Detector — ML-Powered - Zion Tech Group",
+    "description": "ML-powered cloud cost monitoring: automatically detect anomalous spend spikes, forecast monthly costs with confidence intervals, receive root-cause attribution ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cloud-cost-anomaly-detector-ml"
+    }
+  },
+  "features": [
+    "ML anomaly detection per service/resource group",
+    "30-day cost forecast with confidence bands",
+    "Root-cause attribution (service, tag, region)",
+    "Alert routing (Slack, PagerDuty, email)",
+    "AWS, GCP, Azure multi-cloud support"
+  ],
+  "benefits": [
+    "Reduce costs with cloud cost anomaly detector — ml-powered",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "AI Real-Time Fraud Detection Engine",
+  "description": "Machine learning fraud detection system that analyzes transactions in real-time with sub-100ms latency. Detects payment fraud, account takeover, identity theft, and money laundering patterns.",
+  "basic": "$2,499/mo/month",
+  "pro": "$5,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Real-Time Fraud Detection Engine - Zion Tech Group",
+    "description": "Machine learning fraud detection system that analyzes transactions in real-time with sub-100ms latency. Detects payment fraud, account takeover, identity theft,",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-fraud-detection-realtime"
+    }
+  },
+  "features": [
+    "Real-time transaction scoring (< 100ms latency)",
+    "Behavioral biometrics for account takeover detection",
+    "Graph analytics for fraud ring identification",
+    "Adaptive ML models that learn from new fraud patterns",
+    "Case management dashboard for fraud analysts"
+  ],
+  "benefits": [
+    "Detect fraud in real-time with 99.5% accuracy",
+    "Reduce false positives by 60% vs. rule-only systems",
+    "Prevent account takeover before damage occurs",
+    "Automate regulatory compliance reporting"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "Managed SIEM & Log Analytics",
+  "description": "24/7 security monitoring with AI threat detection, log correlation, and compliance reporting.",
+  "basic": "$1,999/mo/month",
+  "pro": "$5,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Managed SIEM & Log Analytics - Zion Tech Group",
+    "description": "24/7 security monitoring with AI threat detection, log correlation, and compliance reporting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-siem-service"
+    }
+  },
+  "features": [
+    "Log collection",
+    "AI threat detection",
+    "Compliance reporting",
+    "Incident triage",
+    "Dashboard creation"
+  ],
+  "benefits": [
+    "24/7 monitoring",
+    "AI detection",
+    "Compliance ready",
+    "Expert analysts"
+  ]
+}

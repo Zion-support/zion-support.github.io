@@ -1,0 +1,29 @@
+{
+  "title": "AI Customer Sentiment Analytics",
+  "description": "Real-time sentiment analysis across reviews, surveys, social media, and support interactions to drive proactive customer experience improvements.",
+  "basic": "$199/mo/month",
+  "pro": "$599/mo/month",
+  "enterprise": "$1,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Customer Sentiment Analytics - Zion Tech Group",
+    "description": "Real-time sentiment analysis across reviews, surveys, social media, and support interactions to drive proactive customer experience improvements.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-customer-sentiment-analytics"
+    }
+  },
+  "features": [
+    "Multi-channel sentiment tracking",
+    "Emotion intensity scoring",
+    "Trend detection and alerting",
+    "Competitor sentiment benchmarking",
+    "Actionable insight generation"
+  ],
+  "benefits": [
+    "Reduce costs with ai customer sentiment analytics",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "AI Synthetic Data Generator",
+  "description": "Generate privacy-safe, statistically faithful synthetic datasets for ML model training and testing. Preserves multivariate distributions and relational integrity — fully GDPR- and HIPAA-compliant so you can innovate without exposing real PII.",
+  "basic": "$N/A/month",
+  "pro": "$2997/month",
+  "enterprise": "$6997/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Synthetic Data Generator - Zion Tech Group",
+    "description": "Generate privacy-safe, statistically faithful synthetic datasets for ML model training and testing. Preserves multivariate distributions and relational integrit",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/wave127-ai-synthetic-data-generator"
+    }
+  },
+  "features": [
+    "Statistically faithful synthetic data generation",
+    "GDPR & HIPAA compliance by design",
+    "Multivariate distribution preservation",
+    "Relational integrity across linked tables",
+    "Differential privacy guarantees"
+  ],
+  "benefits": [
+    "Train ML models without real data risk",
+    "Share datasets across teams and borders freely",
+    "Accelerate development with unlimited test data",
+    "Pass privacy audits with mathematical guarantees"
+  ]
+}

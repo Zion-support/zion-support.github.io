@@ -1,0 +1,30 @@
+{
+  "title": "Healthcare Clinical NLP",
+  "description": "Extract insights from clinical notes, medical records, and research papers. Medical entity recognition, phenotype extraction, clinical coding, and HIPAA-compliant processing.",
+  "basic": "$N/A/month",
+  "pro": "$N/A/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Healthcare Clinical NLP - Zion Tech Group",
+    "description": "Extract insights from clinical notes, medical records, and research papers. Medical entity recognition, phenotype extraction, clinical coding, and HIPAA-complia",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/healthcare-clinical-nlp"
+    }
+  },
+  "features": [
+    "Medical entity recognition",
+    "Phenotype extraction",
+    "Clinical coding (ICD-10, CPT)",
+    "De-identification",
+    "Clinical trial matching"
+  ],
+  "benefits": [
+    "80% faster chart review",
+    "Improved coding accuracy",
+    "Research acceleration",
+    "HIPAA compliant",
+    "Clinical trial matching"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "AI Quality Assurance Platform",
+  "description": "Automated QA with test generation and intelligent bug prediction.",
+  "basic": "$499/mo/month",
+  "pro": "$1,499/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Quality Assurance Platform - Zion Tech Group",
+    "description": "Automated QA with test generation and intelligent bug prediction.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-quality-assurance-automation"
+    }
+  },
+  "features": [
+    "Test generation",
+    "Visual regression",
+    "Performance testing",
+    "Bug prediction",
+    "CI/CD integration"
+  ],
+  "benefits": [
+    "5x faster testing",
+    "99% coverage",
+    "Bug prediction",
+    "CI/CD ready"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "title": "AI Quantum Circuit Optimization Platform",
+  "description": "Optimize quantum circuits for NISQ and fault-tolerant hardware: gate decomposition, noise-aware mapping, and error mitigation. Supports IBM, Google, IonQ backends.",
+  "basic": "$399/month",
+  "pro": "$1199/month",
+  "enterprise": "$4999/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Quantum Circuit Optimization Platform - Zion Tech Group",
+    "description": "Optimize quantum circuits for NISQ and fault-tolerant hardware: gate decomposition, noise-aware mapping, and error mitigation. Supports IBM, Google, IonQ backen",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-quantum-circuit-optimizer"
+    }
+  },
+  "features": [
+    "Circuit depth reduction (avg 40%)",
+    "Noise-aware qubit mapping",
+    "Error mitigation (ZNE, PEC, DD)",
+    "Hardware-specific transpilation",
+    "Hybrid classical-quantum workflow"
+  ],
+  "benefits": [
+    "40% shallower circuits",
+    "Higher fidelity results",
+    "Hardware-agnostic code"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "AI BIM Collaboration Platform",
+  "description": "AI-enhanced Building Information Modeling platform. Clash detection, design optimization, cost estimation, and 4D/5D BIM with real-time collaboration.",
+  "basic": "$799/mo/month",
+  "pro": "$2,499/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI BIM Collaboration Platform - Zion Tech Group",
+    "description": "AI-enhanced Building Information Modeling platform. Clash detection, design optimization, cost estimation, and 4D/5D BIM with real-time collaboration.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/construction-bim-platform"
+    }
+  },
+  "features": [
+    "Automated clash detection",
+    "Design optimization AI",
+    "Cost estimation from BIM models",
+    "4D/5D BIM visualization",
+    "Real-time multi-user collaboration"
+  ],
+  "benefits": [
+    "Reduce design conflicts by 80%",
+    "Accurate cost estimation",
+    "Faster design iterations",
+    "Improved collaboration"
+  ]
+}

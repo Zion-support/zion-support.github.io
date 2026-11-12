@@ -1,0 +1,29 @@
+{
+  "title": "AI Ethics Audit & Bias Assessment",
+  "description": "Independent AI ethics audits examining your AI systems for bias, fairness, transparency, and regulatory compliance. Includes algorithmic impact assessments, bias testing across protected classes, and governance framework design.",
+  "basic": "$299/mo/month",
+  "pro": "$799/mo/month",
+  "enterprise": "$2,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Ethics Audit & Bias Assessment - Zion Tech Group",
+    "description": "Independent AI ethics audits examining your AI systems for bias, fairness, transparency, and regulatory compliance. Includes algorithmic impact assessments, bia",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-ethics-audit-1"
+    }
+  },
+  "features": [
+    "Algorithmic bias detection across race, gender, age, and geography",
+    "Model interpretability and explainability analysis (XAI)",
+    "EU AI Act compliance assessment and readiness",
+    "AI impact assessment for high-risk applications",
+    "Fairness metrics evaluation (demographic parity, equalized odds)"
+  ],
+  "benefits": [
+    "Reduce costs with ai ethics audit & bias assessment",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

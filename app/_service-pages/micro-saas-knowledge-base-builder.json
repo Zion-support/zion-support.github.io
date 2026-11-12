@@ -1,0 +1,29 @@
+{
+  "title": "AI Knowledge Base Builder",
+  "description": "Create intelligent knowledge bases with AI content generation and smart search.",
+  "basic": "$199/mo/month",
+  "pro": "$599/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Knowledge Base Builder - Zion Tech Group",
+    "description": "Create intelligent knowledge bases with AI content generation and smart search.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-knowledge-base-builder"
+    }
+  },
+  "features": [
+    "AI content generation",
+    "Smart search",
+    "Analytics",
+    "Slack/Teams integration",
+    "Help desk sync"
+  ],
+  "benefits": [
+    "70% faster KB creation",
+    "Self-service deflection",
+    "Continuous improvement",
+    "Multi-language"
+  ]
+}

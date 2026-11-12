@@ -1,0 +1,28 @@
+{
+  "title": "Reinforcement Vision AI for Financial",
+  "description": "Vision AI system powered by reinforcement computer vision models for financial analysis and automated visual inspection.",
+  "basic": "$258/month",
+  "pro": "$648/month",
+  "enterprise": "$1948/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Reinforcement Vision AI for Financial - Zion Tech Group",
+    "description": "Vision AI system powered by reinforcement computer vision models for financial analysis and automated visual inspection.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/reinforcement-vision-ai-for-financial-d0b90512"
+    }
+  },
+  "features": [
+    "Real-time object detection",
+    "Image classification",
+    "Anomaly detection",
+    "Visual inspection"
+  ],
+  "benefits": [
+    "Automated quality control",
+    "Reduced inspection costs",
+    "Defect detection",
+    "Visual search"
+  ]
+}

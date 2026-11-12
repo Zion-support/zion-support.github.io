@@ -1,0 +1,29 @@
+{
+  "title": "AI Document Summarizer & Analyzer",
+  "description": "Summarize and analyze long documents: research papers, legal filings, financial reports, and technical docs. Multi-level summaries, key insight extraction, and comparative analysis.",
+  "basic": "$29/mo/month",
+  "pro": "$89/mo/month",
+  "enterprise": "$299/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Document Summarizer & Analyzer - Zion Tech Group",
+    "description": "Summarize and analyze long documents: research papers, legal filings, financial reports, and technical docs. Multi-level summaries, key insight extraction, and ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w175-ai-document-summarizer"
+    }
+  },
+  "features": [
+    "Multi-level summarization (brief, standard, detailed)",
+    "Key insight and finding extraction",
+    "Cross-document comparative analysis",
+    "Custom summary templates by domain",
+    "Entity and relationship extraction"
+  ],
+  "benefits": [
+    "Summarize 100-page docs in seconds",
+    "Multi-level detail for different audiences",
+    "Comparative analysis across documents",
+    "Custom templates for your domain"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "AI Agentic Coding Assistant",
+  "description": "Autonomous AI coding agent that plans, writes, tests, and debugs entire features. Reads codebase context, follows project conventions, opens PRs with passing tests. Like Cursor/Copilot but fully autonomous.",
+  "basic": "$99/mo/month",
+  "pro": "$299/mo/month",
+  "enterprise": "$999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Agentic Coding Assistant - Zion Tech Group",
+    "description": "Autonomous AI coding agent that plans, writes, tests, and debugs entire features. Reads codebase context, follows project conventions, opens PRs with passing te",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w174-ai-agentic-coding"
+    }
+  },
+  "features": [
+    "Autonomous feature implementation end-to-end",
+    "Codebase context understanding (AST, imports, types)",
+    "Automatic test generation with coverage targets",
+    "PR creation with description and review notes",
+    "Follows project lint, style, and convention rules"
+  ],
+  "benefits": [
+    "Ship features 10x faster with AI doing the coding",
+    "Tests written automatically alongside code",
+    "Follows your conventions, not generic patterns",
+    "Human review maintains quality control"
+  ]
+}

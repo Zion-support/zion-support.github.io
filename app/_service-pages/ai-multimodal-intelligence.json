@@ -1,0 +1,29 @@
+{
+  "title": "AI Multimodal Intelligence",
+  "description": "Enterprise multimodal AI for text, video, images, and audio. Unified understanding across data types for document analysis, video insights, and int...",
+  "basic": "$199/mo/month",
+  "pro": "$599/mo/month",
+  "enterprise": "$1,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Multimodal Intelligence - Zion Tech Group",
+    "description": "Enterprise multimodal AI for text, video, images, and audio. Unified understanding across data types for document analysis, video insights, and int...",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-multimodal-intelligence"
+    }
+  },
+  "features": [
+    "Unified Multimodal Understanding",
+    "Video Intelligence",
+    "Image & Visual Analysis",
+    "Document-to-Insight Pipelines",
+    "Real-Time & Batch Processing"
+  ],
+  "benefits": [
+    "Reduce costs with ai multimodal intelligence",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

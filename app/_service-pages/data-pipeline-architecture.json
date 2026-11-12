@@ -1,0 +1,27 @@
+{
+  "title": "Data Pipeline Architecture & Engineering",
+  "description": "Build robust data pipelines with Kafka, Spark, Airflow for real-time and batch processing at enterprise scale.",
+  "basic": "$99/mo/month",
+  "pro": "$349/mo/month",
+  "enterprise": "$1,299/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Data Pipeline Architecture & Engineering - Zion Tech Group",
+    "description": "Build robust data pipelines with Kafka, Spark, Airflow for real-time and batch processing at enterprise scale.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/data-pipeline-architecture"
+    }
+  },
+  "features": [
+    "Enterprise-grade implementation",
+    "24/7 monitoring",
+    "Compliance-ready"
+  ],
+  "benefits": [
+    "Reduce costs with data pipeline architecture & engineering",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

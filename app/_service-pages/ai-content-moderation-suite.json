@@ -1,0 +1,29 @@
+{
+  "title": "AI Content Moderation Suite",
+  "description": "Platform-agnostic content moderation: real-time text/image/video classification, multi-language support, custom policy rules, human-in-the-loop review queues, and automated takedown workflows for platforms, marketplaces, and social apps.",
+  "basic": "$49/mo/month",
+  "pro": "$149/mo/month",
+  "enterprise": "$499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Content Moderation Suite - Zion Tech Group",
+    "description": "Platform-agnostic content moderation: real-time text/image/video classification, multi-language support, custom policy rules, human-in-the-loop review queues, a",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-content-moderation-suite"
+    }
+  },
+  "features": [
+    "Real-time text, image & video classification",
+    "Multi-language + multi-script support",
+    "Custom policy rule engine per platform",
+    "Human-in-the-loop review queue",
+    "Audit log + takedown SFTP/webhook export"
+  ],
+  "benefits": [
+    "Reduce costs with ai content moderation suite",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

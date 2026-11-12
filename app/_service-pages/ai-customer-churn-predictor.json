@@ -1,0 +1,29 @@
+{
+  "title": "AI Customer Churn Prediction & Retention Platform",
+  "description": "ML platform that predicts customer churn risk, identifies retention opportunities, and automates personalized win-back campaigns.",
+  "basic": "$399/mo/month",
+  "pro": "$1,199/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Customer Churn Prediction & Retention Platform - Zion Tech Group",
+    "description": "ML platform that predicts customer churn risk, identifies retention opportunities, and automates personalized win-back campaigns.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-customer-churn-predictor"
+    }
+  },
+  "features": [
+    "Real-time churn risk scoring",
+    "Behavioral pattern analysis",
+    "Automated retention campaign triggers",
+    "Customer lifetime value prediction",
+    "Segmentation by churn risk level"
+  ],
+  "benefits": [
+    "Reduce churn by 25-40%",
+    "Increase customer lifetime value",
+    "Automate retention efforts",
+    "Protect revenue proactively"
+  ]
+}

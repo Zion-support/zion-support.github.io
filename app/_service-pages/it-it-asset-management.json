@@ -1,0 +1,29 @@
+{
+  "title": "IT Asset Management & Discovery",
+  "description": "Automated IT asset discovery, inventory, lifecycle management, and software license optimization. CMDB, compliance tracking, and cost optimization.",
+  "basic": "$N/A/month",
+  "pro": "$N/A/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "IT Asset Management & Discovery - Zion Tech Group",
+    "description": "Automated IT asset discovery, inventory, lifecycle management, and software license optimization. CMDB, compliance tracking, and cost optimization.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-it-asset-management"
+    }
+  },
+  "features": [
+    "Auto-discovery",
+    "CMDB",
+    "License optimization",
+    "Lifecycle management",
+    "Compliance tracking"
+  ],
+  "benefits": [
+    "30% license cost savings",
+    "Full asset visibility",
+    "Compliance automation",
+    "Lifecycle optimization"
+  ]
+}

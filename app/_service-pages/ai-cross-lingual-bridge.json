@@ -1,0 +1,29 @@
+{
+  "title": "AI Cross-Lingual Bridge",
+  "description": "Enterprise-grade cross-language content and support platform: semantic translation, accent-normalised speech, multilingual chatbot/knowledge base build, automatic locale detection, and compliance-checked glossary management across 80+ language pairs.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Cross-Lingual Bridge - Zion Tech Group",
+    "description": "Enterprise-grade cross-language content and support platform: semantic translation, accent-normalised speech, multilingual chatbot/knowledge base build, automat",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-cross-lingual-bridge"
+    }
+  },
+  "features": [
+    "Semantic translation engine (80+ language pairs, trains on in-domain corpus)",
+    "Accent-normalised speech-to-text and TTS per locale",
+    "Auto language/region detection with confidence scoring",
+    "Webhook-ready multilingual chatbot builder",
+    "CSV/XLIFF glossary import + compliance glossary lock"
+  ],
+  "benefits": [
+    "Reduce costs with ai cross-lingual bridge",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

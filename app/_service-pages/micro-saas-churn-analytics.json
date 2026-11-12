@@ -1,0 +1,29 @@
+{
+  "title": "Churnlytics — Churn Analytics Micro-SaaS",
+  "description": "Predict and prevent SaaS churn with AI. Connect Stripe/Braintree, get churn risk scores, automated retention campaigns, and revenue impact forecasting.",
+  "basic": "$49/mo/month",
+  "pro": "$149/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Churnlytics — Churn Analytics Micro-SaaS - Zion Tech Group",
+    "description": "Predict and prevent SaaS churn with AI. Connect Stripe/Braintree, get churn risk scores, automated retention campaigns, and revenue impact forecasting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-churn-analytics"
+    }
+  },
+  "features": [
+    "Stripe/Braintree integration",
+    "Per-customer churn risk scoring",
+    "Automated retention campaigns",
+    "Win-back workflows",
+    "Revenue impact forecasting"
+  ],
+  "benefits": [
+    "Reduce churn by 25%",
+    "Identify at-risk accounts early",
+    "Automate retention efforts",
+    "Forecast revenue impact"
+  ]
+}

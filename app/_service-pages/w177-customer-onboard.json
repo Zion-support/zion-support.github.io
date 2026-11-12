@@ -1,0 +1,29 @@
+{
+  "title": "Customer Onboarding Automation",
+  "description": "Automate customer onboarding: welcome sequences, setup wizards, training, success milestones. Reduce time-to-value 50%.",
+  "basic": "$199/mo/month",
+  "pro": "$599/mo/month",
+  "enterprise": "$1,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Customer Onboarding Automation - Zion Tech Group",
+    "description": "Automate customer onboarding: welcome sequences, setup wizards, training, success milestones. Reduce time-to-value 50%.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w177-customer-onboard"
+    }
+  },
+  "features": [
+    "Welcome email and in-app sequences",
+    "Setup wizard and configuration",
+    "Training content delivery",
+    "Success milestone tracking",
+    "Health scoring and alerts"
+  ],
+  "benefits": [
+    "Reduce time-to-value by 50%",
+    "Automated sequences keep customers engaged",
+    "Milestone tracking measures progress",
+    "Health scoring identifies at-risk customers"
+  ]
+}

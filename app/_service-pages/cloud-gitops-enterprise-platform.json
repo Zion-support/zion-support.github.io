@@ -1,0 +1,29 @@
+{
+  "title": "GitOps Enterprise Platform",
+  "description": "Full GitOps on Kubernetes: ArgoCD + Argo Rollouts (canary/blue-green), Terraform provisioning, Kyverno admission policy, automated drift remediation.",
+  "basic": "$99/mo/month",
+  "pro": "$349/mo/month",
+  "enterprise": "$1,299/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "GitOps Enterprise Platform - Zion Tech Group",
+    "description": "Full GitOps on Kubernetes: ArgoCD + Argo Rollouts (canary/blue-green), Terraform provisioning, Kyverno admission policy, automated drift remediation.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cloud-gitops-enterprise-platform"
+    }
+  },
+  "features": [
+    "ArgoCD GitOps synced per environment",
+    "Argo Rollouts progressive delivery (canary/blue-green)",
+    "Terraform EKS/GKE/AKS provisioning",
+    "Kyverno admission policies + OPA-Gatekeeper",
+    "Drift auto-remediation reconciler"
+  ],
+  "benefits": [
+    "Reduce costs with gitops enterprise platform",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

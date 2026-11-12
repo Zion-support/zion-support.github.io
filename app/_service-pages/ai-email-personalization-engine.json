@@ -1,0 +1,29 @@
+{
+  "title": "AI Email Personalization Engine",
+  "description": "Hyper-personalize marketing emails with AI. Dynamic content, subject line optimization, send-time optimization, and automated A/B testing for higher open and conversion rates.",
+  "basic": "$199/mo/month",
+  "pro": "$599/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Email Personalization Engine - Zion Tech Group",
+    "description": "Hyper-personalize marketing emails with AI. Dynamic content, subject line optimization, send-time optimization, and automated A/B testing for higher open and co",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-email-personalization-engine"
+    }
+  },
+  "features": [
+    "Dynamic content insertion",
+    "AI subject line optimization",
+    "Send-time optimization",
+    "Automated A/B testing",
+    "Audience segmentation AI"
+  ],
+  "benefits": [
+    "Increase open rates by 35%",
+    "Improve click-through rates",
+    "Automate email optimization",
+    "Scale personalization"
+  ]
+}

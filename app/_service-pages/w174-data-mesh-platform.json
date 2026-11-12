@@ -1,0 +1,29 @@
+{
+  "title": "Data Mesh Platform",
+  "description": "Implement data mesh architecture: domain-owned data products, federated governance, self-service infrastructure, and automated discoverability. Decentralize data ownership.",
+  "basic": "$999/mo/month",
+  "pro": "$2,999/mo/month",
+  "enterprise": "$9,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Data Mesh Platform - Zion Tech Group",
+    "description": "Implement data mesh architecture: domain-owned data products, federated governance, self-service infrastructure, and automated discoverability. Decentralize dat",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w174-data-mesh-platform"
+    }
+  },
+  "features": [
+    "Domain data product definition and ownership",
+    "Federated governance with global policies",
+    "Self-service data infrastructure",
+    "Automated discoverability and cataloging",
+    "Data product contracts and SLAs"
+  ],
+  "benefits": [
+    "Domain teams own their data, not central team",
+    "Self-serve infrastructure eliminates bottlenecks",
+    "Contracts ensure data quality between domains",
+    "Discoverability makes data products findable"
+  ]
+}

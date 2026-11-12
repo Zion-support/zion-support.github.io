@@ -1,0 +1,28 @@
+{
+  "title": "Cross-Lingual Meeting Bridge",
+  "description": "Multi-language meeting platform: real-time simultaneous interpretation across 40+ languages and dialects, live bilingual captions, cultural-adaptation annotations, silent-watch spectator mode, executive summary auto-generation.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Cross-Lingual Meeting Bridge - Zion Tech Group",
+    "description": "Multi-language meeting platform: real-time simultaneous interpretation across 40+ languages and dialects, live bilingual captions, cultural-adaptation annotatio",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-cross-lingual-meeting-bridge"
+    }
+  },
+  "features": [
+    "Simultaneous interpretation across 40+ languages and dialects per meeting",
+    "Live bilingual captions with per-speaker timestamped transcript",
+    "Cultural-adaptation annotations including politeness norms and idiom equivalents",
+    "Silent-watch spectator mode and executive summary auto-generated after each call"
+  ],
+  "benefits": [
+    "Reduce costs with cross-lingual meeting bridge",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

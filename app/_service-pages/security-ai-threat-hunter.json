@@ -1,0 +1,29 @@
+{
+  "title": "AI Threat Hunter",
+  "description": "Autonomous AI-powered threat hunting: continuous behavioural anomaly detection, novel attack chain reconstruction, MITRE ATT&CK mapping, custom hunt queries, natural-language investigation interface, and auto-generated incident reports.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Threat Hunter - Zion Tech Group",
+    "description": "Autonomous AI-powered threat hunting: continuous behavioural anomaly detection, novel attack chain reconstruction, MITRE ATT&CK mapping, custom hunt queries, na",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/security-ai-threat-hunter"
+    }
+  },
+  "features": [
+    "Continuous behavioural anomaly detection across endpoint, network, and cloud telemetry",
+    "Autonomous attack chain reconstruction with MITRE ATT&CK matrix alignment",
+    "Natural-language hunt query builder for analysts without scripting skills",
+    "Auto-generated incident reports with timeline, evidence, and recommended mitigations",
+    "Low-false-positive ML scoring tuned to each environment via supervised feedback"
+  ],
+  "benefits": [
+    "Reduce costs with ai threat hunter",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

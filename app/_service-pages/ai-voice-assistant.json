@@ -1,0 +1,29 @@
+{
+  "title": "AI Voice Assistant",
+  "description": "Enterprise-grade voice AI with natural language understanding, multi-language support, and seamless CRM integration.",
+  "basic": "$99/mo/month",
+  "pro": "$299/mo/month",
+  "enterprise": "$999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Voice Assistant - Zion Tech Group",
+    "description": "Enterprise-grade voice AI with natural language understanding, multi-language support, and seamless CRM integration.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-voice-assistant"
+    }
+  },
+  "features": [
+    "Natural language voice processing",
+    "Multi-language support (50+ languages)",
+    "CRM & ERP integration",
+    "Real-time transcription & analytics",
+    "Custom wake words & voice branding"
+  ],
+  "benefits": [
+    "Reduce costs with ai voice assistant",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

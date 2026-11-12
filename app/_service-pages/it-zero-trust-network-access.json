@@ -1,0 +1,29 @@
+{
+  "title": "IT Zero Trust Network Access (ZTNA)",
+  "description": "Implement zero trust security architecture with identity-aware micro-segmentation, continuous device trust verification, and least-privilege access controls. Replace VPN with secure, granular access.",
+  "basic": "$5,000 setup + $2,000/mo/month",
+  "pro": "$Custom/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "IT Zero Trust Network Access (ZTNA) - Zion Tech Group",
+    "description": "Implement zero trust security architecture with identity-aware micro-segmentation, continuous device trust verification, and least-privilege access controls. Re",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-zero-trust-network-access"
+    }
+  },
+  "features": [
+    "Identity-aware proxy for application access",
+    "Device trust verification (MDM, EDR integration)",
+    "Micro-segmentation with software-defined perimeters",
+    "Continuous authentication and session monitoring",
+    "Least-privilege access with just-in-time provisioning"
+  ],
+  "benefits": [
+    "Eliminate VPN bottlenecks and security gaps",
+    "Reduce attack surface by 90% with micro-segmentation",
+    "Enable secure remote work without compromising security",
+    "Meet zero trust compliance requirements (NIST 800-207)"
+  ]
+}

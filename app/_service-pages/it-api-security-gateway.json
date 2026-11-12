@@ -1,0 +1,29 @@
+{
+  "title": "IT API Security Gateway & Management",
+  "description": "Enterprise API security platform with threat detection, rate limiting, and governance for all internal and external APIs.",
+  "basic": "$399/mo/month",
+  "pro": "$1,199/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "IT API Security Gateway & Management - Zion Tech Group",
+    "description": "Enterprise API security platform with threat detection, rate limiting, and governance for all internal and external APIs.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-api-security-gateway"
+    }
+  },
+  "features": [
+    "API discovery and inventory",
+    "OWASP API Top 10 protection",
+    "Bot detection and prevention",
+    "Rate limiting and throttling",
+    "API versioning and lifecycle management"
+  ],
+  "benefits": [
+    "Protect APIs from attacks",
+    "Ensure API availability",
+    "Govern API usage",
+    "Accelerate API development"
+  ]
+}

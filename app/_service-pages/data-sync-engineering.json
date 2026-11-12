@@ -1,0 +1,29 @@
+{
+  "title": "Data Sync & Change Capture",
+  "description": "Change data capture (CDC) sync engine that replicates real-time changes from Postgres, MySQL, MongoDB, and Snowflake to any destination with schema evolution.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Data Sync & Change Capture - Zion Tech Group",
+    "description": "Change data capture (CDC) sync engine that replicates real-time changes from Postgres, MySQL, MongoDB, and Snowflake to any destination with schema evolution.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/data-sync-engineering"
+    }
+  },
+  "features": [
+    "CDC from 10+ databases",
+    "Schema evolution handled",
+    "Exactly-once delivery",
+    "Conflict resolution config",
+    "Backfill historical data"
+  ],
+  "benefits": [
+    "Reduce costs with data sync & change capture",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

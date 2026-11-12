@@ -1,0 +1,28 @@
+{
+  "title": "Cloud Serverless Migration & Optimization",
+  "description": "Migrate from VMs/serverful to serverless (AWS Lambda, Cloud Functions, Azure Functions). Auto-assess refactoring needs, rewrite code, and optimize cold starts. Zero downtime migration.",
+  "basic": "$2499/project/month",
+  "pro": "$4999/project/month",
+  "enterprise": "$14999/project/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Cloud Serverless Migration & Optimization - Zion Tech Group",
+    "description": "Migrate from VMs/serverful to serverless (AWS Lambda, Cloud Functions, Azure Functions). Auto-assess refactoring needs, rewrite code, and optimize cold starts. ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cloud-serverless-migration-service"
+    }
+  },
+  "features": [
+    "Auto-assessment of serverless fit",
+    "Code rewriting for serverless",
+    "Cold start optimization",
+    "Cost migration analysis (before/after)",
+    "Zero-downtime cutover"
+  ],
+  "benefits": [
+    "Cut cloud costs by 60%",
+    "Zero operational overhead",
+    "Auto-scale from 0 to millions"
+  ]
+}

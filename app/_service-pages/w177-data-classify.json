@@ -1,0 +1,30 @@
+{
+  "title": "Data Classification and Discovery",
+  "description": "Automatically discover and classify sensitive data: PII, PHI, PCI, IP. Across cloud, on-prem, and SaaS.",
+  "basic": "$499/mo/month",
+  "pro": "$1,499/mo/month",
+  "enterprise": "$4,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Data Classification and Discovery - Zion Tech Group",
+    "description": "Automatically discover and classify sensitive data: PII, PHI, PCI, IP. Across cloud, on-prem, and SaaS.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w177-data-classify"
+    }
+  },
+  "features": [
+    "Automated data discovery across sources",
+    "PII",
+    "PHI",
+    "PCI",
+    "IP classification"
+  ],
+  "benefits": [
+    "Discover sensitive data you did not know existed",
+    "Classification for compliance (GDPR",
+    "HIPAA",
+    "PCI)",
+    "Data flow mapping for risk assessment"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "Digital Rights Management",
+  "description": "Protect digital assets with AES-256 encryption, watermarking, usage restrictions, and access revocation for IP-sensitive document sharing.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Digital Rights Management - Zion Tech Group",
+    "description": "Protect digital assets with AES-256 encryption, watermarking, usage restrictions, and access revocation for IP-sensitive document sharing.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/digital-rights-management"
+    }
+  },
+  "features": [
+    "AES-256 at-rest encryption",
+    "Dynamic watermarking",
+    "Usage restrictions (view/print)",
+    "Access revocation",
+    "Audit trail"
+  ],
+  "benefits": [
+    "Reduce costs with digital rights management",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

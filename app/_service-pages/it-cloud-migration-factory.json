@@ -1,0 +1,29 @@
+{
+  "title": "IT Cloud Migration Factory",
+  "description": "Systematic cloud migration service with assessment, planning, migration, and optimization. Proven methodology for lifting and shifting or re-architecting to cloud-native.",
+  "basic": "$25,000 project/month",
+  "pro": "$75,000 project/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "IT Cloud Migration Factory - Zion Tech Group",
+    "description": "Systematic cloud migration service with assessment, planning, migration, and optimization. Proven methodology for lifting and shifting or re-architecting to clo",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-cloud-migration-factory"
+    }
+  },
+  "features": [
+    "Application portfolio assessment",
+    "Migration strategy (rehost, refactor, rearchitect)",
+    "Automated migration tooling",
+    "Data migration with zero downtime",
+    "Post-migration optimization"
+  ],
+  "benefits": [
+    "Migrate 10x faster with automation",
+    "Reduce cloud costs by 40% post-migration",
+    "Zero-downtime migrations for critical apps",
+    "De-risk migration with proven methodology"
+  ]
+}

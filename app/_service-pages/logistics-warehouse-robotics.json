@@ -1,0 +1,29 @@
+{
+  "title": "AI Warehouse Robotics Platform",
+  "description": "Orchestrate autonomous mobile robots (AMRs) for warehouse operations. Pick-and-place, inventory counting, and goods-to-person fulfillment optimization.",
+  "basic": "$2,999/mo/month",
+  "pro": "$8,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Warehouse Robotics Platform - Zion Tech Group",
+    "description": "Orchestrate autonomous mobile robots (AMRs) for warehouse operations. Pick-and-place, inventory counting, and goods-to-person fulfillment optimization.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/logistics-warehouse-robotics"
+    }
+  },
+  "features": [
+    "AMR fleet orchestration",
+    "Pick path optimization",
+    "Inventory counting robots",
+    "Goods-to-person fulfillment",
+    "Integration with WMS (Manhattan, Blue Yonder)"
+  ],
+  "benefits": [
+    "Increase picking efficiency by 3x",
+    "Reduce labor costs by 40%",
+    "Improve inventory accuracy to 99.9%",
+    "Scale operations without hiring"
+  ]
+}

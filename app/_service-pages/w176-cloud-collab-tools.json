@@ -1,0 +1,29 @@
+{
+  "title": "Cloud Collaboration & Productivity",
+  "description": "Managed cloud productivity suite: M365 or Google Workspace deployment, migration, security configuration, and adoption optimization.",
+  "basic": "$2,999/month",
+  "pro": "$9,999/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Cloud Collaboration & Productivity - Zion Tech Group",
+    "description": "Managed cloud productivity suite: M365 or Google Workspace deployment, migration, security configuration, and adoption optimization.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w176-cloud-collab-tools"
+    }
+  },
+  "features": [
+    "M365 or Google Workspace design and deployment",
+    "Email and file migration",
+    "Security and DLP configuration",
+    "Teams/Meet collaboration setup",
+    "Adoption tracking and training"
+  ],
+  "benefits": [
+    "Expert deployment avoids common pitfalls",
+    "Migration with zero data loss",
+    "Security configured to best practices",
+    "Adoption tracking ensures ROI"
+  ]
+}

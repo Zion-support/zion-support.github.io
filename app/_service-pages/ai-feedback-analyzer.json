@@ -1,0 +1,30 @@
+{
+  "title": "AI-Powered Customer Feedback Analyzer",
+  "description": "Transform customer feedback into actionable business intelligence with our AI-powered feedback analyzer. Process reviews, surveys, social media comments, and support tickets to uncover trends, sentiment patterns, and improvement opportunities—all automatically and in real-time.",
+  "basic": "$49/month",
+  "pro": "$N/A/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI-Powered Customer Feedback Analyzer - Zion Tech Group",
+    "description": "Transform customer feedback into actionable business intelligence with our AI-powered feedback analyzer. Process reviews, surveys, social media comments, and su",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-feedback-analyzer"
+    }
+  },
+  "features": [
+    "Multi-Source Integration",
+    "Advanced Sentiment Analysis",
+    "Topic Clustering",
+    "Real-Time Alerts",
+    "Competitive Benchmarking"
+  ],
+  "benefits": [
+    "Improvement in customer satisfaction scores",
+    "Reduction in response time to critical issues",
+    "Increase in actionable insights from feedback data",
+    "Decrease in manual feedback processing time",
+    "Boost in customer retention and loyalty"
+  ]
+}

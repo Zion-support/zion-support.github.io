@@ -1,0 +1,29 @@
+{
+  "title": "AI PDF Intelligence Platform",
+  "description": "Deep understanding of PDFs: table extraction, form field parsing, cross-document Q&A, and comparison. Process legal briefs, financial reports, and research papers with 99% accuracy.",
+  "basic": "$99/mo/month",
+  "pro": "$299/mo/month",
+  "enterprise": "$999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI PDF Intelligence Platform - Zion Tech Group",
+    "description": "Deep understanding of PDFs: table extraction, form field parsing, cross-document Q&A, and comparison. Process legal briefs, financial reports, and research pape",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w175-ai-pdf-intelligence"
+    }
+  },
+  "features": [
+    "Table and chart extraction from PDF",
+    "Form field and checkbox parsing",
+    "Cross-document Q&A (ask across 1000s of PDFs)",
+    "Document comparison and redline generation",
+    "Handwriting recognition in scanned PDFs"
+  ],
+  "benefits": [
+    "Extract structured data from any PDF format",
+    "Ask questions across your entire document library",
+    "Compare contract versions automatically",
+    "Replace hours of manual PDF review"
+  ]
+}

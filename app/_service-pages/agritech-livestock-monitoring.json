@@ -1,0 +1,29 @@
+{
+  "title": "AI Livestock Health Monitoring",
+  "description": "IoT and AI-powered livestock health monitoring. Track animal behavior, detect illness early, monitor feeding patterns, and optimize breeding programs.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Livestock Health Monitoring - Zion Tech Group",
+    "description": "IoT and AI-powered livestock health monitoring. Track animal behavior, detect illness early, monitor feeding patterns, and optimize breeding programs.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/agritech-livestock-monitoring"
+    }
+  },
+  "features": [
+    "Behavioral anomaly detection",
+    "Illness early warning",
+    "Feeding pattern analysis",
+    "Breeding optimization",
+    "GPS tracking and geofencing"
+  ],
+  "benefits": [
+    "Reduce livestock mortality by 25%",
+    "Early disease detection",
+    "Optimize feed costs",
+    "Improve breeding outcomes"
+  ]
+}

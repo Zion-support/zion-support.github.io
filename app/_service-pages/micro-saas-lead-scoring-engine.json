@@ -1,0 +1,29 @@
+{
+  "title": "LeadForge — Lead Scoring Micro-SaaS",
+  "description": "AI-powered lead scoring for sales teams. Analyze website activity, email engagement, firmographics, and social signals to rank leads by conversion probability. Integrates with HubSpot, Salesforce, and Pipedrive.",
+  "basic": "$79/mo/month",
+  "pro": "$249/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "LeadForge — Lead Scoring Micro-SaaS - Zion Tech Group",
+    "description": "AI-powered lead scoring for sales teams. Analyze website activity, email engagement, firmographics, and social signals to rank leads by conversion probability. ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-lead-scoring-engine"
+    }
+  },
+  "features": [
+    "Multi-signal lead scoring",
+    "Website visit tracking",
+    "Email engagement analytics",
+    "Firmographic enrichment",
+    "CRM integration (HubSpot, Salesforce, Pipedrive)"
+  ],
+  "benefits": [
+    "Increase conversion rates by 35%",
+    "Prioritize high-value leads",
+    "Reduce sales cycle time",
+    "Data-driven lead qualification"
+  ]
+}

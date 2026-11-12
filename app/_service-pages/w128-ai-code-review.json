@@ -1,0 +1,29 @@
+{
+  "title": "AI Code Review Platform",
+  "description": "Automated pull request reviews with security scanning, style enforcement, and intelligent suggestions. Integrates with GitHub, GitLab, and Azure DevOps.",
+  "basic": "$N/A/month",
+  "pro": "$997/month",
+  "enterprise": "$1997/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Code Review Platform - Zion Tech Group",
+    "description": "Automated pull request reviews with security scanning, style enforcement, and intelligent suggestions. Integrates with GitHub, GitLab, and Azure DevOps.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w128-ai-code-review"
+    }
+  },
+  "features": [
+    "Automated PR reviews",
+    "Security vulnerability detection",
+    "Style enforcement",
+    "Intelligent code suggestions",
+    "Multi-language support (Python, JS, Go, Rust, Java)"
+  ],
+  "benefits": [
+    "80% faster code reviews",
+    "Catch bugs before production",
+    "Consistent code quality",
+    "Reduce tech debt"
+  ]
+}

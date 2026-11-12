@@ -1,0 +1,29 @@
+{
+  "title": "AI Content Localization Engine",
+  "description": "Go beyond translation — adapt content for local markets with AI. Cultural nuance detection, imagery adaptation, and brand voice consistency across 50+ languages.",
+  "basic": "$599/mo/month",
+  "pro": "$1,799/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Content Localization Engine - Zion Tech Group",
+    "description": "Go beyond translation — adapt content for local markets with AI. Cultural nuance detection, imagery adaptation, and brand voice consistency across 50+ languages",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-localization-engine"
+    }
+  },
+  "features": [
+    "Cultural nuance detection",
+    "Image and icon adaptation",
+    "Brand voice preservation",
+    "Glossary and style guide support",
+    "Integration with CMS (Contentful, Strapi)"
+  ],
+  "benefits": [
+    "Launch in new markets 3x faster",
+    "Avoid cultural missteps",
+    "Consistent brand voice globally",
+    "Reduce localization costs by 50%"
+  ]
+}

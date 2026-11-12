@@ -1,0 +1,29 @@
+{
+  "title": "AI Video Generation & Editing",
+  "description": "Create professional videos from text prompts with voiceover, B-roll, transitions, and brand styling — produce enterprise-grade content in minutes.",
+  "basic": "$79/mo/month",
+  "pro": "$249/mo/month",
+  "enterprise": "$799/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Video Generation & Editing - Zion Tech Group",
+    "description": "Create professional videos from text prompts with voiceover, B-roll, transitions, and brand styling — produce enterprise-grade content in minutes.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-video-generation"
+    }
+  },
+  "features": [
+    "Text-to-video AI engine with scene generation",
+    "AI voiceover in 50+ languages with subtitles",
+    "Brand kit — colors, logos, auto-applied",
+    "Video editing timeline with AI-assisted cuts",
+    "Multi-platform export — YouTube, TikTok, Reels"
+  ],
+  "benefits": [
+    "Reduce costs with ai video generation & editing",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

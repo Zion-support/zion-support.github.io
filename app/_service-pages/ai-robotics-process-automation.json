@@ -1,0 +1,29 @@
+{
+  "title": "AI Hyperautomation & Intelligent Process Automation",
+  "description": "End-to-end hyperautomation combining RPA, AI, and process mining. Discover, automate, and optimize business processes with intelligent automation.",
+  "basic": "$2,999/mo/month",
+  "pro": "$7,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Hyperautomation & Intelligent Process Automation - Zion Tech Group",
+    "description": "End-to-end hyperautomation combining RPA, AI, and process mining. Discover, automate, and optimize business processes with intelligent automation.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-robotics-process-automation"
+    }
+  },
+  "features": [
+    "Process mining and discovery",
+    "AI-powered bot development",
+    "Document understanding and extraction",
+    "Natural language processing for unstructured data",
+    "Integration with UiPath, Automation Anywhere, Blue Prism"
+  ],
+  "benefits": [
+    "Automate 80% of repetitive tasks",
+    "Reduce process costs by 60%",
+    "Discover automation opportunities with AI",
+    "Scale automation with citizen developers"
+  ]
+}

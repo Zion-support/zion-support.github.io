@@ -1,0 +1,29 @@
+{
+  "title": "BIM Management Platform for Construction",
+  "description": "Building Information Modeling management for construction teams. 3D model collaboration, clash detection, version control, and field-to-office synchronization.",
+  "basic": "$499/mo/month",
+  "pro": "$1,499/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "BIM Management Platform for Construction - Zion Tech Group",
+    "description": "Building Information Modeling management for construction teams. 3D model collaboration, clash detection, version control, and field-to-office synchronization.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/construction-tech-bim-management"
+    }
+  },
+  "features": [
+    "3D BIM model collaboration",
+    "Automated clash detection",
+    "Version control and audit trail",
+    "Field-to-office sync",
+    "Progress tracking with 4D simulation"
+  ],
+  "benefits": [
+    "Reduce rework by 30%",
+    "Detect clashes before construction",
+    "Real-time field progress",
+    "Single source of truth for all teams"
+  ]
+}

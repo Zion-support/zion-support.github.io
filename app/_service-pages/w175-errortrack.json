@@ -1,0 +1,29 @@
+{
+  "title": "ErrorTrack — Smart Error Tracking",
+  "description": "Intelligent error tracking with AI grouping, root cause hints, and affected user detection. Smarter than Sentry/Bugsnag with AI-powered triage.",
+  "basic": "$26/mo/month",
+  "pro": "$78/mo/month",
+  "enterprise": "$26/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "ErrorTrack — Smart Error Tracking - Zion Tech Group",
+    "description": "Intelligent error tracking with AI grouping, root cause hints, and affected user detection. Smarter than Sentry/Bugsnag with AI-powered triage.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w175-errortrack"
+    }
+  },
+  "features": [
+    "AI-powered error grouping and deduplication",
+    "Root cause hints from code context",
+    "Affected user and session tracking",
+    "Release and deploy correlation",
+    "Breadcrumbs and stack frame context"
+  ],
+  "benefits": [
+    "AI grouping reduces alert noise by 90%",
+    "Root cause hints speed debugging",
+    "Know exactly which users are affected",
+    "Deploy correlation links errors to releases"
+  ]
+}

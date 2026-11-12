@@ -1,0 +1,29 @@
+{
+  "title": "Business Process Management Platform",
+  "description": "Enterprise BPM: process modeling, execution, monitoring, and optimization. BPMN 2.0 compliant with human tasks, system integration, and SLA tracking.",
+  "basic": "$499/mo/month",
+  "pro": "$1,499/mo/month",
+  "enterprise": "$4,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Business Process Management Platform - Zion Tech Group",
+    "description": "Enterprise BPM: process modeling, execution, monitoring, and optimization. BPMN 2.0 compliant with human tasks, system integration, and SLA tracking.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w175-bpm-platform"
+    }
+  },
+  "features": [
+    "BPMN 2.0 process modeling",
+    "Process execution engine",
+    "Human task management and routing",
+    "System integration with 200+ connectors",
+    "SLA tracking and escalation"
+  ],
+  "benefits": [
+    "Model and execute complex business processes",
+    "Human tasks route to the right person",
+    "SLA tracking ensures timely completion",
+    "Analytics drive continuous optimization"
+  ]
+}

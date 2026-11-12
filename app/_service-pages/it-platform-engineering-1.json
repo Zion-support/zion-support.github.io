@@ -1,0 +1,29 @@
+{
+  "title": "Internal Developer Platform (IDP) Engineering",
+  "description": "Design and build an Internal Developer Platform (IDP) that provides self-service capabilities for developers — spinning up environments, deploying applications, and managing infrastructure through golden paths.",
+  "basic": "$2,999/mo/month",
+  "pro": "$Custom/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Internal Developer Platform (IDP) Engineering - Zion Tech Group",
+    "description": "Design and build an Internal Developer Platform (IDP) that provides self-service capabilities for developers — spinning up environments, deploying applications,",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-platform-engineering-1"
+    }
+  },
+  "features": [
+    "Self-service environment provisioning (Backstage, Port, or custom)",
+    "Golden path templates for common architectures",
+    "Internal API marketplace and service catalog",
+    "Automated deployment pipelines per service type",
+    "Developer portal with documentation and onboarding"
+  ],
+  "benefits": [
+    "Reduce costs with internal developer platform (idp) engineering",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

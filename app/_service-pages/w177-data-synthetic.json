@@ -1,0 +1,29 @@
+{
+  "title": "Synthetic Data Generation",
+  "description": "Generate privacy-safe synthetic data: statistical fidelity, referential integrity, privacy guarantees. Train models without PII.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Synthetic Data Generation - Zion Tech Group",
+    "description": "Generate privacy-safe synthetic data: statistical fidelity, referential integrity, privacy guarantees. Train models without PII.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w177-data-synthetic"
+    }
+  },
+  "features": [
+    "Statistical fidelity preservation",
+    "Referential integrity across tables",
+    "Differential privacy guarantees",
+    "Synthetic data quality validation",
+    "Support for tabular"
+  ],
+  "benefits": [
+    "Train models without privacy risk",
+    "Statistical fidelity preserves analytical value",
+    "Referential integrity across tables",
+    "Differential privacy provides guarantees"
+  ]
+}

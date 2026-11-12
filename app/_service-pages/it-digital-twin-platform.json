@@ -1,0 +1,29 @@
+{
+  "title": "Digital Twin & IoT Platform Development",
+  "description": "Build real-time digital replicas of physical systems — factory floors, supply chains, and smart cities with predictive simulation and optimization capabilities.",
+  "basic": "$99/mo/month",
+  "pro": "$299/mo/month",
+  "enterprise": "$999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Digital Twin & IoT Platform Development - Zion Tech Group",
+    "description": "Build real-time digital replicas of physical systems — factory floors, supply chains, and smart cities with predictive simulation and optimization capabilities.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-digital-twin-platform"
+    }
+  },
+  "features": [
+    "3D digital twin modeling and visualization",
+    "Real-time IoT sensor data ingestion and mapping",
+    "Predictive simulation and what-if scenario analysis",
+    "Integration with CAD, BIM, and ERP systems",
+    "Automated alerts and anomaly detection"
+  ],
+  "benefits": [
+    "Reduce costs with digital twin & iot platform development",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

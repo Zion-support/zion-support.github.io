@@ -1,0 +1,29 @@
+{
+  "title": "AI Grant & Funding Opportunity Matcher",
+  "description": "AI scans 50,000+ government, foundation, and corporate grant opportunities. Matches your organisation profile and auto-drafts tailored proposals in minutes.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Grant & Funding Opportunity Matcher - Zion Tech Group",
+    "description": "AI scans 50,000+ government, foundation, and corporate grant opportunities. Matches your organisation profile and auto-drafts tailored proposals in minutes.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-grant-matcher"
+    }
+  },
+  "features": [
+    "50,000+ opportunity database",
+    "Auto-draft tailored proposals",
+    "Deadline and eligibility tracker",
+    "Submission pipeline dashboard",
+    "Grant success analytics"
+  ],
+  "benefits": [
+    "Reduce costs with ai grant & funding opportunity matcher",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

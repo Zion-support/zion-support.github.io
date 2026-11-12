@@ -1,0 +1,28 @@
+{
+  "title": "Legal Document AI Summarizer",
+  "description": "AI-powered legal document analysis and summarization tool. Extracts key clauses, obligations, and risks from contracts, briefs, and compliance documents.",
+  "basic": "$199/mo/month",
+  "pro": "$599/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Legal Document AI Summarizer - Zion Tech Group",
+    "description": "AI-powered legal document analysis and summarization tool. Extracts key clauses, obligations, and risks from contracts, briefs, and compliance documents.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-legal-document-summarizer"
+    }
+  },
+  "features": [
+    "Clause Extraction",
+    "Risk Identification",
+    "Obligation Tracking",
+    "Multi-format Support",
+    "Citation Analysis"
+  ],
+  "benefits": [
+    "Reduce review time 80%",
+    "Minimize legal risk",
+    "Standardize analysis"
+  ]
+}

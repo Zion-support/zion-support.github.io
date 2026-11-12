@@ -1,0 +1,29 @@
+{
+  "title": "AI Content Calendar Planner",
+  "description": "AI-powered content marketing: strategy generation, editorial calendar, content briefs, and performance prediction. Plan a quarter of content in an hour.",
+  "basic": "$49/mo/month",
+  "pro": "$149/mo/month",
+  "enterprise": "$499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Content Calendar Planner - Zion Tech Group",
+    "description": "AI-powered content marketing: strategy generation, editorial calendar, content briefs, and performance prediction. Plan a quarter of content in an hour.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w176-ai-content-calendar"
+    }
+  },
+  "features": [
+    "Content strategy generation from goals",
+    "Auto-populated editorial calendar",
+    "Content brief generation with SEO keywords",
+    "Performance prediction scoring",
+    "Channel-specific formatting"
+  ],
+  "benefits": [
+    "Plan quarterly content in one hour",
+    "Performance prediction prioritizes topics",
+    "SEO-optimized briefs rank faster",
+    "Gap analysis finds underserved topics"
+  ]
+}

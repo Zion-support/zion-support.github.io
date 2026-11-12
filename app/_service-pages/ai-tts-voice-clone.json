@@ -1,0 +1,28 @@
+{
+  "title": "AI Voice Clone + Text-to-Speech Engine",
+  "description": "Zero-shot voice clone (30 sec sample) prosody matching across 80+ languages: reads any script with brand tone for narration audiobooks courses voice at scale.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Voice Clone + Text-to-Speech Engine - Zion Tech Group",
+    "description": "Zero-shot voice clone (30 sec sample) prosody matching across 80+ languages: reads any script with brand tone for narration audiobooks courses voice at scale.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-tts-voice-clone"
+    }
+  },
+  "features": [
+    "Zero-shot voice clone (30 sec sample)",
+    "80+ language prosody matching",
+    "Emotion + pacing per brand voice",
+    "Batch production for script libraries"
+  ],
+  "benefits": [
+    "Reduce costs with ai voice clone + text-to-speech engine",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

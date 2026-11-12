@@ -1,0 +1,29 @@
+{
+  "title": "AI Contract Analyzer & Negotiator",
+  "description": "AI-powered contract analysis: clause extraction, risk scoring, comparison against playbooks, and red-line suggestions. Reduce legal review time by 80%.",
+  "basic": "$399/mo/month",
+  "pro": "$1,199/mo/month",
+  "enterprise": "$3,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Contract Analyzer & Negotiator - Zion Tech Group",
+    "description": "AI-powered contract analysis: clause extraction, risk scoring, comparison against playbooks, and red-line suggestions. Reduce legal review time by 80%.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w174-ai-contract-analyzer"
+    }
+  },
+  "features": [
+    "Clause extraction and classification",
+    "Risk scoring per clause and overall",
+    "Playbook comparison and deviation flagging",
+    "Red-line and alternative clause suggestions",
+    "Obligation extraction and tracking"
+  ],
+  "benefits": [
+    "Reduce contract review time by 80%",
+    "Consistent playbook enforcement",
+    "Risk scoring prioritizes negotiation items",
+    "Obligation tracking prevents missed commitments"
+  ]
+}

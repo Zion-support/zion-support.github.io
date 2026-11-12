@@ -1,0 +1,28 @@
+{
+  "title": "AI Insurance Claims Processing Platform",
+  "description": "End-to-end claims automation: damage assessment from photos, fraud detection, policy verification, payout calculation. Processes claims 80% faster.",
+  "basic": "$299/month",
+  "pro": "$899/month",
+  "enterprise": "$3499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Insurance Claims Processing Platform - Zion Tech Group",
+    "description": "End-to-end claims automation: damage assessment from photos, fraud detection, policy verification, payout calculation. Processes claims 80% faster.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-insurance-claims-processor"
+    }
+  },
+  "features": [
+    "Photo-based damage assessment (auto, home, health)",
+    "Fraud pattern detection (97% accuracy)",
+    "Policy coverage auto-verification",
+    "Payout calculation with approval workflow",
+    "Regulatory compliance docs"
+  ],
+  "benefits": [
+    "Process claims 80% faster",
+    "Reduce fraud by 60%",
+    "40% fewer processing errors"
+  ]
+}

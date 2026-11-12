@@ -1,0 +1,29 @@
+{
+  "title": "Cloud Resilience Engineering",
+  "description": "Build resilient cloud systems: multi-region, chaos engineering, circuit breakers, retry policies, and graceful degradation. 99.99% availability design.",
+  "basic": "$999/mo/month",
+  "pro": "$2,999/mo/month",
+  "enterprise": "$9,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Cloud Resilience Engineering - Zion Tech Group",
+    "description": "Build resilient cloud systems: multi-region, chaos engineering, circuit breakers, retry policies, and graceful degradation. 99.99% availability design.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w175-cloud-resilience"
+    }
+  },
+  "features": [
+    "Multi-region architecture design",
+    "Chaos engineering setup and execution",
+    "Circuit breaker and bulkhead patterns",
+    "Retry and timeout policy design",
+    "Graceful degradation and feature flags"
+  ],
+  "benefits": [
+    "99.99% availability by design",
+    "Chaos engineering proves resilience",
+    "Self-healing reduces manual intervention",
+    "Error budgets balance reliability and velocity"
+  ]
+}

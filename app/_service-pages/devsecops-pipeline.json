@@ -1,0 +1,28 @@
+{
+  "title": "DevSecOps Pipeline Automation",
+  "description": "Security-baked CI/CD pipeline: SAST, DAST, secrets scanning, container image signing, SBOM generation, and penetration-test gates. Enforces policy as code before every production deployment.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "DevSecOps Pipeline Automation - Zion Tech Group",
+    "description": "Security-baked CI/CD pipeline: SAST, DAST, secrets scanning, container image signing, SBOM generation, and penetration-test gates. Enforces policy as code befor",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/devsecops-pipeline"
+    }
+  },
+  "features": [
+    "Intelligent automation and orchestration",
+    "Enterprise-grade integration",
+    "Real-time monitoring and alerts",
+    "Scalable multi-tenant architecture"
+  ],
+  "benefits": [
+    "Reduce costs with devsecops pipeline automation",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

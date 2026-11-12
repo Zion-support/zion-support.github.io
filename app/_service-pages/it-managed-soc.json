@@ -1,0 +1,28 @@
+{
+  "title": "Managed SOC + Threat Intelligence as a Service",
+  "description": "24x7 managed SOC: SIEM event correlation threat hunting from 50+ feeds incident response managed alert triage monthly executive cyber risk report compliance evidence B2B enterprise.",
+  "basic": "$999/mo/month",
+  "pro": "$2,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Managed SOC + Threat Intelligence as a Service - Zion Tech Group",
+    "description": "24x7 managed SOC: SIEM event correlation threat hunting from 50+ feeds incident response managed alert triage monthly executive cyber risk report compliance evi",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-managed-soc"
+    }
+  },
+  "features": [
+    "24x7 SIEM + correlation + threat hunting",
+    "50+ threat-intel feeds + IOC auto-block",
+    "Incident response + managed alert triage",
+    "Monthly exec cyber risk report + trend dashboard"
+  ],
+  "benefits": [
+    "Reduce costs with managed soc + threat intelligence as a service",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

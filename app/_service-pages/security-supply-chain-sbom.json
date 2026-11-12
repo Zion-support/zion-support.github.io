@@ -1,0 +1,29 @@
+{
+  "title": "Supply Chain SBOM & Vulnerability Intelligence",
+  "description": "Automated SBOM generation, dependency attestation, real-time CVE/SSVC scoring, exploitability prediction, automated PR patch suggestions, and SLSA provenance verification — closing the software supply-chain attack window at build time.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Supply Chain SBOM & Vulnerability Intelligence - Zion Tech Group",
+    "description": "Automated SBOM generation, dependency attestation, real-time CVE/SSVC scoring, exploitability prediction, automated PR patch suggestions, and SLSA provenance ve",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/security-supply-chain-sbom"
+    }
+  },
+  "features": [
+    "Automated SBOM generation per-commit, per-PR, and per-release — CycloneDX + SPDX both supported",
+    "SSVC scoring maps CVE severity against exploitability + patch availability in real-time",
+    "Automated security PRs: patch suggestion AI opens PR per vulnerable dependency",
+    "SLSA provenance: build time + identity verification signed and traceable per artefact",
+    "Bill of Materials attestation built into container image and artifact metadata"
+  ],
+  "benefits": [
+    "Reduce costs with supply chain sbom & vulnerability intelligence",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

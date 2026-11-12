@@ -1,0 +1,29 @@
+{
+  "title": "ESG Reporting & Compliance Platform",
+  "description": "Environmental, Social, and Governance reporting with AI data collection and carbon accounting.",
+  "basic": "$1,499/mo/month",
+  "pro": "$4,499/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "ESG Reporting & Compliance Platform - Zion Tech Group",
+    "description": "Environmental, Social, and Governance reporting with AI data collection and carbon accounting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/esg-reporting-platform"
+    }
+  },
+  "features": [
+    "Data collection",
+    "Carbon accounting",
+    "Compliance reporting",
+    "Stakeholder dashboards",
+    "Benchmarking"
+  ],
+  "benefits": [
+    "Regulatory compliance",
+    "Stakeholder transparency",
+    "Benchmarking",
+    "Audit readiness"
+  ]
+}

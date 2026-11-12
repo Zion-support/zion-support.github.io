@@ -1,0 +1,29 @@
+{
+  "title": "AI Training Data Platform",
+  "description": "End-to-end data labeling, annotation, versioning, and quality validation platform for computer vision, NLP, and LLM fine-tuning datasets at any scale.",
+  "basic": "$2,499/mo/month",
+  "pro": "$4,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Training Data Platform - Zion Tech Group",
+    "description": "End-to-end data labeling, annotation, versioning, and quality validation platform for computer vision, NLP, and LLM fine-tuning datasets at any scale.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-training-data-platform"
+    }
+  },
+  "features": [
+    "Labeling workforce + tools",
+    "Active learning loop",
+    "Dataset versioning",
+    "Consensus / quality scoring",
+    "Synthetic data generation"
+  ],
+  "benefits": [
+    "Reduce costs with ai training data platform",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

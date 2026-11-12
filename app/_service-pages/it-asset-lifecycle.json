@@ -1,0 +1,29 @@
+{
+  "title": "IT Asset Lifecycle Manager",
+  "description": "Track hardware and software assets from procurement to disposal. Auto-discovery, compliance tracking, depreciation schedules, and end-of-life automation in one dashboard.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "IT Asset Lifecycle Manager - Zion Tech Group",
+    "description": "Track hardware and software assets from procurement to disposal. Auto-discovery, compliance tracking, depreciation schedules, and end-of-life automation in one ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-asset-lifecycle"
+    }
+  },
+  "features": [
+    "Auto-discovery of network assets",
+    "Compliance and licence tracking",
+    "Depreciation schedule engine",
+    "End-of-life automation",
+    "Audit-ready reporting"
+  ],
+  "benefits": [
+    "Reduce costs with it asset lifecycle manager",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

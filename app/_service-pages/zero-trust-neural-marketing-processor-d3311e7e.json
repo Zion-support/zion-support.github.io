@@ -1,0 +1,28 @@
+{
+  "title": "Zero-Trust Neural Marketing Processor",
+  "description": "Neural processing unit optimized for zero-trust marketing workloads, delivering zero-trust inference at scale.",
+  "basic": "$278/month",
+  "pro": "$698/month",
+  "enterprise": "$2098/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Zero-Trust Neural Marketing Processor - Zion Tech Group",
+    "description": "Neural processing unit optimized for zero-trust marketing workloads, delivering zero-trust inference at scale.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/zero-trust-neural-marketing-processor-d3311e7e"
+    }
+  },
+  "features": [
+    "Accelerated inference",
+    "Model compression",
+    "Hardware acceleration",
+    "Batch optimization"
+  ],
+  "benefits": [
+    "10x inference speed",
+    "Reduced latency",
+    "Cost-effective scaling",
+    "Hardware optimization"
+  ]
+}

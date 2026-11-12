@@ -1,0 +1,29 @@
+{
+  "title": "Data Consent Management Platform",
+  "description": "Enterprise consent and preference management for GDPR, CCPA, and LGPD compliance. Unified consent collection, audit trails, and real-time enforcement.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Data Consent Management Platform - Zion Tech Group",
+    "description": "Enterprise consent and preference management for GDPR, CCPA, and LGPD compliance. Unified consent collection, audit trails, and real-time enforcement.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/data-consent-management-platform"
+    }
+  },
+  "features": [
+    "Consent collection banners",
+    "Preference center for users",
+    "Consent audit trails",
+    "Cross-domain consent syncing",
+    "Real-time enforcement APIs"
+  ],
+  "benefits": [
+    "Achieve regulatory compliance",
+    "Avoid fines up to 4% of revenue",
+    "Build customer trust",
+    "Automate DSAR workflows"
+  ]
+}

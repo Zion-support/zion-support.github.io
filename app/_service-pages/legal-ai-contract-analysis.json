@@ -1,0 +1,30 @@
+{
+  "title": "Legal AI Contract Analysis",
+  "description": "AI-powered contract review, analysis, and management. Clause extraction, risk assessment, obligation tracking, and deviation analysis for legal teams.",
+  "basic": "$399/mo/month",
+  "pro": "$1,299/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Legal AI Contract Analysis - Zion Tech Group",
+    "description": "AI-powered contract review, analysis, and management. Clause extraction, risk assessment, obligation tracking, and deviation analysis for legal teams.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/legal-ai-contract-analysis"
+    }
+  },
+  "features": [
+    "Clause extraction",
+    "Risk assessment",
+    "Obligation tracking",
+    "Deviation analysis",
+    "Contract summarization"
+  ],
+  "benefits": [
+    "80% faster contract review",
+    "Risk identification",
+    "Obligation tracking",
+    "Compliance monitoring",
+    "Legal team efficiency"
+  ]
+}

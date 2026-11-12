@@ -1,0 +1,29 @@
+{
+  "title": "Cloud Storage Tiering Intelligence",
+  "description": "AI-driven storage tiering engine that automatically moves infrequently accessed data to cheaper tiers with SLA-monitored cold retrieval performance.",
+  "basic": "$99/mo/month",
+  "pro": "$349/mo/month",
+  "enterprise": "$1,299/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Cloud Storage Tiering Intelligence - Zion Tech Group",
+    "description": "AI-driven storage tiering engine that automatically moves infrequently accessed data to cheaper tiers with SLA-monitored cold retrieval performance.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cloud-storage-tiering"
+    }
+  },
+  "features": [
+    "Automatic hot-to-cold tiering",
+    "SLA-monitored cold retrieval",
+    "Multi-cloud S3, GCS, Azure Blob",
+    "Per-team cost attribution",
+    "Tiering policy dashboard"
+  ],
+  "benefits": [
+    "Reduce costs with cloud storage tiering intelligence",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "AI DDoS Protection & Mitigation Platform",
+  "description": "Edge-based DDoS mitigation tuned by ML: absorbs multi-Tbps volumetric attacks, distinguishes legitimate traffic spikes from attacks, and auto-scales scrubbing capacity — all with sub-millisecond routing overhead.",
+  "basic": "$99/mo/month",
+  "pro": "$349/mo/month",
+  "enterprise": "$1,299/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI DDoS Protection & Mitigation Platform - Zion Tech Group",
+    "description": "Edge-based DDoS mitigation tuned by ML: absorbs multi-Tbps volumetric attacks, distinguishes legitimate traffic spikes from attacks, and auto-scales scrubbing c",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-ddos-protection-platform"
+    }
+  },
+  "features": [
+    "Multi-Tbps scrubbing capacity (anycast edge)",
+    "ML traffic classification (attack vs legitimate)",
+    "HTTP/3 + QUIC + TCP SYN flood protection",
+    "Auto-scaling scrubbing clusters",
+    "Attack forensics + IoC export to SIEM"
+  ],
+  "benefits": [
+    "Reduce costs with ai ddos protection & mitigation platform",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

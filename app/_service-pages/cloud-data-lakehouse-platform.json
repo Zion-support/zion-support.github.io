@@ -1,0 +1,28 @@
+{
+  "title": "Data Lakehouse Platform",
+  "description": "Unified data lakehouse: ingest CSV, JSON, Parquet, and streams; implement ACID semantics with open-table format Delta Lake or Iceberg engine; SQL query with cardinality optimizer; built-in BI tool connectors; schema enforcement at write time.",
+  "basic": "$99/mo/month",
+  "pro": "$349/mo/month",
+  "enterprise": "$1,299/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Data Lakehouse Platform - Zion Tech Group",
+    "description": "Unified data lakehouse: ingest CSV, JSON, Parquet, and streams; implement ACID semantics with open-table format Delta Lake or Iceberg engine; SQL query with car",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cloud-data-lakehouse-platform"
+    }
+  },
+  "features": [
+    "Open-table format ACID engine with Delta Lake or Apache Iceberg",
+    "SQL front-end with mesh cardinality optimizer — large multi-table joins run fast",
+    "Schema enforcement at write path — no orphan columns enter production tables",
+    "BI connectors for Looker, Grafana, Metabase, and Tableau ODBC — no ETL layer needed"
+  ],
+  "benefits": [
+    "Reduce costs with data lakehouse platform",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

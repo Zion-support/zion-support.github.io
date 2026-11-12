@@ -1,0 +1,29 @@
+{
+  "title": "Object Detection Surveillance",
+  "description": "Real-time AI video analytics for security cameras: person/vehicle detection, loitering alerts, license plate recognition, and behavior anomaly flagging.",
+  "basic": "$399/mo/month",
+  "pro": "$999/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Object Detection Surveillance - Zion Tech Group",
+    "description": "Real-time AI video analytics for security cameras: person/vehicle detection, loitering alerts, license plate recognition, and behavior anomaly flagging.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/object-detection-surveillance"
+    }
+  },
+  "features": [
+    "Person/vehicle/package detect",
+    "Loitering & perimeter alerts",
+    "License plate recognition",
+    "Behavior anomaly flagging",
+    "Privacy blur option"
+  ],
+  "benefits": [
+    "Reduce costs with object detection surveillance",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "title": "Privacy Enhancing Technologies",
+  "description": "Privacy Enhancing Technologies consulting and implementation: differential privacy budget tracking, homomorphic encryption proof-of-concept, zero-knowledge proof circuits, TEE enclave design, synthetic data generation, and compliance audit-readiness report.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Privacy Enhancing Technologies - Zion Tech Group",
+    "description": "Privacy Enhancing Technologies consulting and implementation: differential privacy budget tracking, homomorphic encryption proof-of-concept, zero-knowledge proo",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/security-privacy-enhancing-technologies"
+    }
+  },
+  "features": [
+    "Differential privacy budget tracker with dataset privacy score per column",
+    "Zero-knowledge proof circuit design and deployment audit for selected use cases",
+    "TEE Trusted Execution Environment enclave architecture review and threat model",
+    "Synthetic data generator — privacy-preserving by construction with attribute correlation learned"
+  ],
+  "benefits": [
+    "Reduce costs with privacy enhancing technologies",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

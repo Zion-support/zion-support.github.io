@@ -1,0 +1,29 @@
+{
+  "title": "Managed SIEM Service",
+  "description": "Managed SIEM deployment, tuning, and monitoring. Log collection, correlation rules, alert triage, and threat hunting by certified analysts. Reduce SIEM operational burden.",
+  "basic": "$1,999/mo/month",
+  "pro": "$4,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Managed SIEM Service - Zion Tech Group",
+    "description": "Managed SIEM deployment, tuning, and monitoring. Log collection, correlation rules, alert triage, and threat hunting by certified analysts. Reduce SIEM operatio",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w174-siem-managed"
+    }
+  },
+  "features": [
+    "SIEM deployment and configuration",
+    "Log source onboarding and normalization",
+    "Correlation rule development and tuning",
+    "Alert triage and false positive reduction",
+    "Threat hunting by certified analysts"
+  ],
+  "benefits": [
+    "Expert SIEM management without hiring",
+    "Tuned rules reduce false positives by 90%",
+    "Threat hunting finds what automated rules miss",
+    "Compliance reports from your SIEM data"
+  ]
+}

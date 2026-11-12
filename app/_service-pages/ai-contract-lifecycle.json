@@ -1,0 +1,29 @@
+{
+  "title": "AI Contract Lifecycle Management",
+  "description": "End-to-end contract management with AI drafting, review, approval workflows, and risk analysis.",
+  "basic": "$799/mo/month",
+  "pro": "$2,499/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Contract Lifecycle Management - Zion Tech Group",
+    "description": "End-to-end contract management with AI drafting, review, approval workflows, and risk analysis.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-contract-lifecycle"
+    }
+  },
+  "features": [
+    "AI contract drafting",
+    "Clause extraction",
+    "Approval workflows",
+    "Obligation tracking",
+    "Renewal management"
+  ],
+  "benefits": [
+    "80% faster review",
+    "Risk visibility",
+    "Obligation compliance",
+    "Cost control"
+  ]
+}

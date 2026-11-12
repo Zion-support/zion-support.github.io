@@ -1,0 +1,29 @@
+{
+  "title": "AI Predictive Quality Assurance",
+  "description": "Predict manufacturing defects before they happen using sensor data and ML models. Integrate with IoT platforms and MES for real-time quality control.",
+  "basic": "$1,499/mo/month",
+  "pro": "$4,499/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Predictive Quality Assurance - Zion Tech Group",
+    "description": "Predict manufacturing defects before they happen using sensor data and ML models. Integrate with IoT platforms and MES for real-time quality control.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-predictive-quality-assurance"
+    }
+  },
+  "features": [
+    "Sensor data anomaly detection",
+    "Defect prediction models",
+    "Root cause analysis",
+    "Integration with Siemens MindSphere, AWS IoT",
+    "Real-time quality dashboards"
+  ],
+  "benefits": [
+    "Reduce defect rates by 40%",
+    "Minimize scrap and rework",
+    "Ensure consistent product quality",
+    "Compliance-ready reporting"
+  ]
+}

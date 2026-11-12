@@ -1,0 +1,28 @@
+{
+  "title": "Digital Process Automation Platform",
+  "description": "Low-code digital process automation platform for transforming paper-based and manual workflows into streamlined digital processes.",
+  "basic": "$199/mo/month",
+  "pro": "$599/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Digital Process Automation Platform - Zion Tech Group",
+    "description": "Low-code digital process automation platform for transforming paper-based and manual workflows into streamlined digital processes.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automation-digital-process-automation"
+    }
+  },
+  "features": [
+    "Low-code Designer",
+    "Form Builder",
+    "Workflow Automation",
+    "E-signatures",
+    "Analytics"
+  ],
+  "benefits": [
+    "Eliminate manual work",
+    "Reduce errors",
+    "Speed up approvals"
+  ]
+}

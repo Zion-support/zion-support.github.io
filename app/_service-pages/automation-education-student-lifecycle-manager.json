@@ -1,0 +1,29 @@
+{
+  "title": "Education Student Lifecycle Manager",
+  "description": "Full-cycle student lifecycle automation for higher ed and EdTech: inquiry-to-enrolment funnel, personalised nurture sequences, academic-risk detection, parents-and-alumni engagement, and LMS grade-imported at-risk alerts.",
+  "basic": "$99/mo/month",
+  "pro": "$299/mo/month",
+  "enterprise": "$999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Education Student Lifecycle Manager - Zion Tech Group",
+    "description": "Full-cycle student lifecycle automation for higher ed and EdTech: inquiry-to-enrolment funnel, personalised nurture sequences, academic-risk detection, parents-",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automation-education-student-lifecycle-manager"
+    }
+  },
+  "features": [
+    "Inquiry funnel: form → enriched CRM record → personalised nurture sequence per channel",
+    "Academic-risk detection via LMS grade-imported pattern scoring",
+    "Parent engagement portal with auto-summarised academic progress reports",
+    "Alumni lifecycle: graduation anniversary give, re-enrolment incentive, charitable giving prompts",
+    "FERPA-compliant data handling with role-based student record access"
+  ],
+  "benefits": [
+    "Reduce costs with education student lifecycle manager",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

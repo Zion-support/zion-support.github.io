@@ -1,0 +1,29 @@
+{
+  "title": "API Gateway & Management",
+  "description": "Secure, scale, and monitor your APIs with enterprise-grade gateway management, rate limiting, and developer portal.",
+  "basic": "$49/mo/month",
+  "pro": "$199/mo/month",
+  "enterprise": "$699/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "API Gateway & Management - Zion Tech Group",
+    "description": "Secure, scale, and monitor your APIs with enterprise-grade gateway management, rate limiting, and developer portal.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/api-gateway-management"
+    }
+  },
+  "features": [
+    "Unified API gateway",
+    "Rate limiting & quotas",
+    "API key management",
+    "Developer portal",
+    "Analytics & tracing"
+  ],
+  "benefits": [
+    "Reduce costs with api gateway & management",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "title": "Caption & Subtitle Generator",
+  "description": "Multi-language ASR translation, caption formatting, SRT/VTT/WebVTT export with lip-sync timing alignment for video.",
+  "basic": "$49/mo/month",
+  "pro": "$149/mo/month",
+  "enterprise": "$499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Caption & Subtitle Generator - Zion Tech Group",
+    "description": "Multi-language ASR translation, caption formatting, SRT/VTT/WebVTT export with lip-sync timing alignment for video.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-caption-subtitle-generator"
+    }
+  },
+  "features": [
+    "Multi-language ASR transcription (50+ languages)",
+    "LLM translation + cultural localisation",
+    "SRT/VTT/WebVTT + lip-sync time-align",
+    "Auto-highlight key quote phrases per transcript"
+  ],
+  "benefits": [
+    "Reduce costs with caption & subtitle generator",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

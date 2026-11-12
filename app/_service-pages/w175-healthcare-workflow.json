@@ -1,0 +1,29 @@
+{
+  "title": "Healthcare Workflow Automation",
+  "description": "Healthcare process automation: prior authorization, claims, clinical documentation, patient communication, and care coordination. HIPAA-compliant.",
+  "basic": "$599/mo/month",
+  "pro": "$1,799/mo/month",
+  "enterprise": "$5,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Healthcare Workflow Automation - Zion Tech Group",
+    "description": "Healthcare process automation: prior authorization, claims, clinical documentation, patient communication, and care coordination. HIPAA-compliant.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w175-healthcare-workflow"
+    }
+  },
+  "features": [
+    "Prior authorization automation",
+    "Claims submission and status tracking",
+    "Clinical documentation improvement (CDI)",
+    "Patient communication (appointment, reminder, portal)",
+    "Care coordination and referral management"
+  ],
+  "benefits": [
+    "Reduce prior auth turnaround by 80%",
+    "CDI improves documentation accuracy and revenue",
+    "Patient communication reduces no-shows",
+    "Care coordination improves outcomes"
+  ]
+}

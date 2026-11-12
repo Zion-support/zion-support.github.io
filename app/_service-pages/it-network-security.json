@@ -1,0 +1,29 @@
+{
+  "title": "IT Network Security & Firewall Management",
+  "description": "Comprehensive network security with next-gen firewall management, intrusion detection/prevention, and network access control. 24/7 monitoring and management.",
+  "basic": "$2,000/mo/month",
+  "pro": "$5,000/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "IT Network Security & Firewall Management - Zion Tech Group",
+    "description": "Comprehensive network security with next-gen firewall management, intrusion detection/prevention, and network access control. 24/7 monitoring and management.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-network-security"
+    }
+  },
+  "features": [
+    "Next-gen firewall deployment and management",
+    "IDS/IPS configuration and tuning",
+    "Network access control (NAC)",
+    "DNS security and content filtering",
+    "VPN and remote access management"
+  ],
+  "benefits": [
+    "Block advanced threats with AI-powered firewalls",
+    "Detect intrusions in real-time",
+    "Secure remote access for all employees",
+    "Reduce network security costs with managed services"
+  ]
+}

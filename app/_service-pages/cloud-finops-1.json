@@ -1,0 +1,29 @@
+{
+  "title": "Cloud FinOps & Cost Intelligence",
+  "description": "Comprehensive cloud cost management service combining automated tooling, reserved instance optimization, anomaly detection, and organizational FinOps culture to reduce cloud spend by 30-40% without performance impact.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Cloud FinOps & Cost Intelligence - Zion Tech Group",
+    "description": "Comprehensive cloud cost management service combining automated tooling, reserved instance optimization, anomaly detection, and organizational FinOps culture to",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cloud-finops-1"
+    }
+  },
+  "features": [
+    "Multi-cloud cost visibility and chargeback/showback",
+    "AI-driven rightsizing recommendations",
+    "Automated reserved instance and savings plan optimization",
+    "Real-time cost anomaly detection and budget alerts",
+    "Kubernetes cost optimization (HPA, node optimization)"
+  ],
+  "benefits": [
+    "Reduce costs with cloud finops & cost intelligence",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

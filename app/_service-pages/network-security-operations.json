@@ -1,0 +1,27 @@
+{
+  "title": "Network Security Operations Center",
+  "description": "24/7 network security monitoring, threat detection, incident response, and vulnerability management.",
+  "basic": "$99/mo/month",
+  "pro": "$349/mo/month",
+  "enterprise": "$1,299/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Network Security Operations Center - Zion Tech Group",
+    "description": "24/7 network security monitoring, threat detection, incident response, and vulnerability management.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/network-security-operations"
+    }
+  },
+  "features": [
+    "Enterprise-grade implementation",
+    "24/7 monitoring",
+    "Compliance-ready"
+  ],
+  "benefits": [
+    "Reduce costs with network security operations center",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

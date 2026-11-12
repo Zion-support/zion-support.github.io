@@ -1,0 +1,29 @@
+{
+  "title": "Cloud Disaster Recovery-as-a-Service (DRaaS)",
+  "description": "Automated disaster recovery for cloud and hybrid environments. Continuous replication, automated failover, and regular DR testing. RPO under 15 minutes, RTO under 1 hour.",
+  "basic": "$1,499/mo/month",
+  "pro": "$4,499/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Cloud Disaster Recovery-as-a-Service (DRaaS) - Zion Tech Group",
+    "description": "Automated disaster recovery for cloud and hybrid environments. Continuous replication, automated failover, and regular DR testing. RPO under 15 minutes, RTO und",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cloud-disaster-recovery-service"
+    }
+  },
+  "features": [
+    "Continuous data replication",
+    "Automated failover and failback",
+    "Regular DR testing (non-disruptive)",
+    "Multi-region deployment",
+    "RPO < 15 min, RTO < 1 hour"
+  ],
+  "benefits": [
+    "Meet business continuity requirements",
+    "Automated DR testing",
+    "Minimize data loss and downtime",
+    "Reduce DR infrastructure costs"
+  ]
+}

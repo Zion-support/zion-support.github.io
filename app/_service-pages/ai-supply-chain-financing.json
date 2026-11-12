@@ -1,0 +1,28 @@
+{
+  "title": "AI Supply Chain Financing & Risk Platform",
+  "description": "Automated supply chain finance: invoice verification, buyer risk scoring, dynamic discounting, and fraud detection. Processes $1B+ in receivables with 99.5% accuracy.",
+  "basic": "$499/month",
+  "pro": "$1499/month",
+  "enterprise": "$4999/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Supply Chain Financing & Risk Platform - Zion Tech Group",
+    "description": "Automated supply chain finance: invoice verification, buyer risk scoring, dynamic discounting, and fraud detection. Processes $1B+ in receivables with 99.5% acc",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-supply-chain-financing"
+    }
+  },
+  "features": [
+    "Automated invoice verification",
+    "Buyer credit risk scoring",
+    "Dynamic discounting engine",
+    "Fraud detection (99.5% accuracy)",
+    "Multi-bank integration"
+  ],
+  "benefits": [
+    "Process $1B+ in receivables",
+    "Reduce fraud by 95%",
+    "Instant funding decisions"
+  ]
+}

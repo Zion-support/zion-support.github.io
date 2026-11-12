@@ -1,0 +1,29 @@
+{
+  "title": "AI Multimodal Search Engine",
+  "description": "Search across text, images, video, and audio with a single query. CLIP-based embeddings, natural language understanding, and real-time indexing for enterprise content.",
+  "basic": "$499/mo/month",
+  "pro": "$1,499/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Multimodal Search Engine - Zion Tech Group",
+    "description": "Search across text, images, video, and audio with a single query. CLIP-based embeddings, natural language understanding, and real-time indexing for enterprise c",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-multimodal-search-engine"
+    }
+  },
+  "features": [
+    "Cross-modal search (text, image, video, audio)",
+    "CLIP and custom embeddings",
+    "Real-time indexing",
+    "Natural language queries",
+    "Integration with Elasticsearch, Pinecone, Weaviate"
+  ],
+  "benefits": [
+    "Find content across all media types",
+    "Reduce search time by 70%",
+    "Unified search experience",
+    "Enterprise-grade security"
+  ]
+}

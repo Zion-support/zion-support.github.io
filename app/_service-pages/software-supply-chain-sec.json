@@ -1,0 +1,29 @@
+{
+  "title": "Software Supply Chain Security",
+  "description": "End-to-end supply chain: SBOM generation+attestation, dependency verification, code-signing (SLSA L3+), vulnerability patch management, artifact provenance tracking.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Software Supply Chain Security - Zion Tech Group",
+    "description": "End-to-end supply chain: SBOM generation+attestation, dependency verification, code-signing (SLSA L3+), vulnerability patch management, artifact provenance trac",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/software-supply-chain-sec"
+    }
+  },
+  "features": [
+    "SBOM + provenance per build (SPDX/CycloneDX)",
+    "SLSA Level 3+ attestation per release",
+    "Dependency verification + vuln patch automation",
+    "Code-signing pipeline integrity verification",
+    "Supply chain dashboard per upstream risk"
+  ],
+  "benefits": [
+    "Reduce costs with software supply chain security",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

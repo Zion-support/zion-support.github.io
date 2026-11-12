@@ -1,0 +1,29 @@
+{
+  "title": "AI Agentic Workflow Automation",
+  "description": "Autonomous AI agents that plan, execute, and monitor multi-step business workflows — from data gathering to decision execution with human-in-the-loop oversight.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Agentic Workflow Automation - Zion Tech Group",
+    "description": "Autonomous AI agents that plan, execute, and monitor multi-step business workflows — from data gathering to decision execution with human-in-the-loop oversight.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-agentic-workflows"
+    }
+  },
+  "features": [
+    "Multi-agent orchestration with role specialization",
+    "Natural language workflow design",
+    "Human-in-the-loop approval gates",
+    "Self-healing workflows with error recovery",
+    "Real-time monitoring dashboards"
+  ],
+  "benefits": [
+    "Reduce costs with ai agentic workflow automation",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

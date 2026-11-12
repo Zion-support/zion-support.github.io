@@ -1,0 +1,29 @@
+{
+  "title": "Micro-SAAS AI Smart Data Backup",
+  "description": "Intelligent backup solution with AI-powered deduplication, anomaly detection, and automatic recovery testing.",
+  "basic": "$29/month",
+  "pro": "$79/month",
+  "enterprise": "$249/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Micro-SAAS AI Smart Data Backup - Zion Tech Group",
+    "description": "Intelligent backup solution with AI-powered deduplication, anomaly detection, and automatic recovery testing.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-ai-data-backup"
+    }
+  },
+  "features": [
+    "AI deduplication",
+    "Anomaly detection",
+    "Auto recovery testing",
+    "Cross-platform support",
+    "Encryption at rest and in transit"
+  ],
+  "benefits": [
+    "50% storage savings",
+    "Detect backup anomalies",
+    "Verified recoveries",
+    "Ransomware-proof"
+  ]
+}

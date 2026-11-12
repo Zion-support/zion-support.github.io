@@ -1,0 +1,29 @@
+{
+  "title": "AI Audio Enhancement Studio",
+  "description": "AI audio processing: noise removal, speaker separation, podcast editing, and speech enhancement. Studio quality from any recording.",
+  "basic": "$29/mo/month",
+  "pro": "$79/mo/month",
+  "enterprise": "$249/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Audio Enhancement Studio - Zion Tech Group",
+    "description": "AI audio processing: noise removal, speaker separation, podcast editing, and speech enhancement. Studio quality from any recording.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w176-ai-audio-enhance"
+    }
+  },
+  "features": [
+    "AI noise and background removal",
+    "Speaker diarization and separation",
+    "Podcast auto-editing (um, ah, silence removal)",
+    "Speech enhancement and loudness normalization",
+    "Music and jingle insertion"
+  ],
+  "benefits": [
+    "Studio quality from any recording",
+    "Auto-editing saves hours per podcast",
+    "Speaker separation for multi-participant content",
+    "Batch processing scales production"
+  ]
+}

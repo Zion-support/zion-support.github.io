@@ -1,0 +1,29 @@
+{
+  "title": "Real-Time Data Streaming Platform",
+  "description": "Managed Apache Kafka/Pulsar platform for real-time data streaming. Event sourcing, stream processing, and real-time analytics with sub-second latency.",
+  "basic": "$799/mo/month",
+  "pro": "$2,499/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Real-Time Data Streaming Platform - Zion Tech Group",
+    "description": "Managed Apache Kafka/Pulsar platform for real-time data streaming. Event sourcing, stream processing, and real-time analytics with sub-second latency.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/data-real-time-streaming-platform"
+    }
+  },
+  "features": [
+    "Managed Kafka/Pulsar clusters",
+    "Schema registry",
+    "Stream processing (Kafka Streams, Flink)",
+    "Real-time dashboards",
+    "Exactly-once delivery"
+  ],
+  "benefits": [
+    "Real-time data processing at scale",
+    "Reduce streaming infrastructure complexity",
+    "Event-driven architecture enablement",
+    "Sub-second latency analytics"
+  ]
+}

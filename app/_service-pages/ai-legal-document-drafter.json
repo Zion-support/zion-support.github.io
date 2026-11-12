@@ -1,0 +1,29 @@
+{
+  "title": "AI Legal Document Drafting & Automation",
+  "description": "AI-powered legal document drafting that generates contracts, NDAs, and legal letters from templates and natural language descriptions. Reduce drafting time by 90%.",
+  "basic": "$349/mo/month",
+  "pro": "$999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Legal Document Drafting & Automation - Zion Tech Group",
+    "description": "AI-powered legal document drafting that generates contracts, NDAs, and legal letters from templates and natural language descriptions. Reduce drafting time by 9",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-legal-document-drafter"
+    }
+  },
+  "features": [
+    "AI document generation from templates",
+    "Natural language to contract conversion",
+    "Clause library with 1000+ pre-approved clauses",
+    "Redline and comparison tools",
+    "Integration with DocuSign and CLM systems"
+  ],
+  "benefits": [
+    "Draft legal documents 90% faster",
+    "Reduce legal drafting costs by 70%",
+    "Ensure consistency with approved clauses",
+    "Scale legal operations without adding attorneys"
+  ]
+}

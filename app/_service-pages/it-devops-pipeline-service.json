@@ -1,0 +1,29 @@
+{
+  "title": "IT DevOps Pipeline as a Service",
+  "description": "Fully managed CI/CD pipeline with automated testing, security scanning, and deployment orchestration for any language or framework.",
+  "basic": "$199/mo/month",
+  "pro": "$599/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "IT DevOps Pipeline as a Service - Zion Tech Group",
+    "description": "Fully managed CI/CD pipeline with automated testing, security scanning, and deployment orchestration for any language or framework.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-devops-pipeline-service"
+    }
+  },
+  "features": [
+    "Visual pipeline builder",
+    "Automated testing integration",
+    "Security scanning (SAST, DAST, SCA)",
+    "Multi-environment deployment",
+    "Rollback and canary releases"
+  ],
+  "benefits": [
+    "Deploy 10x faster",
+    "Catch vulnerabilities early",
+    "Reduce deployment failures",
+    "Meet compliance automatically"
+  ]
+}

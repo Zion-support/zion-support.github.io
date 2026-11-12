@@ -1,0 +1,29 @@
+{
+  "title": "Micro-SaaS AI Inventory Forecaster",
+  "description": "AI inventory forecasting for e-commerce and retail. Predicts demand, optimizes reorder points, and prevents stockouts while minimizing carrying costs.",
+  "basic": "$79/mo/month",
+  "pro": "$199/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Micro-SaaS AI Inventory Forecaster - Zion Tech Group",
+    "description": "AI inventory forecasting for e-commerce and retail. Predicts demand, optimizes reorder points, and prevents stockouts while minimizing carrying costs.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-ai-inventory-forecaster"
+    }
+  },
+  "features": [
+    "ML demand forecasting per SKU",
+    "Automated reorder point calculation",
+    "Seasonal trend detection",
+    "Supplier lead time tracking",
+    "Multi-location inventory optimization"
+  ],
+  "benefits": [
+    "Reduce stockouts by 70%",
+    "Lower carrying costs by 25%",
+    "Optimize cash flow tied up in inventory",
+    "Scale inventory without adding planners"
+  ]
+}

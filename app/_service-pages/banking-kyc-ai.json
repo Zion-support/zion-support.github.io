@@ -1,0 +1,29 @@
+{
+  "title": "Banking KYC and Onboarding AI",
+  "description": "AI-powered KYC with document verification and biometric matching.",
+  "basic": "$2/check/month",
+  "pro": "$N/A/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Banking KYC and Onboarding AI - Zion Tech Group",
+    "description": "AI-powered KYC with document verification and biometric matching.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/banking-kyc-ai"
+    }
+  },
+  "features": [
+    "Document verification",
+    "Biometric matching",
+    "Risk scoring",
+    "PEP screening",
+    "Sanctions check"
+  ],
+  "benefits": [
+    "80% faster onboarding",
+    "95% auto-approval",
+    "Regulatory compliance",
+    "Fraud prevention"
+  ]
+}

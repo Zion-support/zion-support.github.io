@@ -1,0 +1,28 @@
+{
+  "title": "Digital Workplace Platform",
+  "description": "Unified intranet, collaboration, and employee apps (Microsoft 365 + Google Workspace + Slack) with streamlined onboarding and automated license management.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Digital Workplace Platform - Zion Tech Group",
+    "description": "Unified intranet, collaboration, and employee apps (Microsoft 365 + Google Workspace + Slack) with streamlined onboarding and automated license management.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-digital-workplace-platform"
+    }
+  },
+  "features": [
+    "Self-service IT catalog",
+    "Automated employee lifecycle (joiner/mover/leaver)",
+    "License optimization engine",
+    "Employee sentiment surveys"
+  ],
+  "benefits": [
+    "Reduce costs with digital workplace platform",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

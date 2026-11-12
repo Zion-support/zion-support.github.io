@@ -1,0 +1,29 @@
+{
+  "title": "AI Revenue Optimization & Pricing Intelligence",
+  "description": "Dynamic pricing engine powered by machine learning — analyze competitor pricing, demand elasticity, customer segments, and market conditions to maximize revenue in real time.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Revenue Optimization & Pricing Intelligence - Zion Tech Group",
+    "description": "Dynamic pricing engine powered by machine learning — analyze competitor pricing, demand elasticity, customer segments, and market conditions to maximize revenue",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-revenue-optimization"
+    }
+  },
+  "features": [
+    "ML-driven dynamic pricing models",
+    "Competitor price monitoring & alerts",
+    "Customer segment willingness-to-pay analysis",
+    "Demand forecasting & inventory alignment",
+    "A/B price testing & revenue attribution"
+  ],
+  "benefits": [
+    "Reduce costs with ai revenue optimization & pricing intelligence",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

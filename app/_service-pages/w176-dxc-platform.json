@@ -1,0 +1,29 @@
+{
+  "title": "Developer Experience (DX) Platform",
+  "description": "Measure and improve developer experience: survey platform, metrics dashboard, bottleneck identification, and tooling recommendations.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Developer Experience (DX) Platform - Zion Tech Group",
+    "description": "Measure and improve developer experience: survey platform, metrics dashboard, bottleneck identification, and tooling recommendations.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w176-dxc-platform"
+    }
+  },
+  "features": [
+    "Developer satisfaction surveys (SPACE framework)",
+    "Metrics dashboard (lead time, deploy freq, MTTR)",
+    "Bottleneck identification and recommendations",
+    "Tool satisfaction and switching analysis",
+    "On-call burden tracking"
+  ],
+  "benefits": [
+    "Data-driven DX improvement",
+    "SPACE framework for scientific measurement",
+    "Bottleneck identification focuses investment",
+    "Leadership reports secure DX budget"
+  ]
+}

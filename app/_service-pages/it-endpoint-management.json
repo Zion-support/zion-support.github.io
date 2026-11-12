@@ -1,0 +1,29 @@
+{
+  "title": "Unified Endpoint Management",
+  "description": "Manage all endpoints from one platform with patch management and security.",
+  "basic": "$4/device/mo/month",
+  "pro": "$N/A/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Unified Endpoint Management - Zion Tech Group",
+    "description": "Manage all endpoints from one platform with patch management and security.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-endpoint-management"
+    }
+  },
+  "features": [
+    "Unified management",
+    "Patch management",
+    "Security policies",
+    "Remote support",
+    "Compliance"
+  ],
+  "benefits": [
+    "80% faster patching",
+    "Unified visibility",
+    "Reduced risk",
+    "Compliance"
+  ]
+}

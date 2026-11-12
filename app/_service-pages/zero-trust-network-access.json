@@ -1,0 +1,29 @@
+{
+  "title": "Zero-Trust Network Access (ZTNA)",
+  "description": "Zero-trust identity-aware proxy: every connection authenticated per user/device/context. Granular per-app policies, micro-segmentation, session recording.",
+  "basic": "$99/mo/month",
+  "pro": "$349/mo/month",
+  "enterprise": "$1,299/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Zero-Trust Network Access (ZTNA) - Zion Tech Group",
+    "description": "Zero-trust identity-aware proxy: every connection authenticated per user/device/context. Granular per-app policies, micro-segmentation, session recording.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/zero-trust-network-access"
+    }
+  },
+  "features": [
+    "Identity-aware proxy (IAM to ZTNA gateway)",
+    "Per-user + per-device + per-context access policy",
+    "Micro-segmentation per app/resource sensitivity",
+    "Session recording + threat analytics",
+    "Continuous trust evaluation re-auth on risk"
+  ],
+  "benefits": [
+    "Reduce costs with zero-trust network access (ztna)",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

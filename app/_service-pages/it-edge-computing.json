@@ -1,0 +1,29 @@
+{
+  "title": "IT Edge Computing & IoT Infrastructure",
+  "description": "Design and deploy edge computing infrastructure for low-latency applications. From IoT gateways to edge data centers, with centralized management and security.",
+  "basic": "$4,000/mo/month",
+  "pro": "$10,000/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "IT Edge Computing & IoT Infrastructure - Zion Tech Group",
+    "description": "Design and deploy edge computing infrastructure for low-latency applications. From IoT gateways to edge data centers, with centralized management and security.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-edge-computing"
+    }
+  },
+  "features": [
+    "Edge architecture design and deployment",
+    "IoT device management and monitoring",
+    "Edge-to-cloud data synchronization",
+    "Low-latency application hosting",
+    "Edge security and access control"
+  ],
+  "benefits": [
+    "Reduce latency to under 10ms",
+    "Process data locally for real-time decisions",
+    "Reduce cloud bandwidth costs by 60%",
+    "Enable offline operation for critical systems"
+  ]
+}

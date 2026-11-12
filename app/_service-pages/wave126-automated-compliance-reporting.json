@@ -1,0 +1,29 @@
+{
+  "title": "Automated Compliance Reporting",
+  "description": "Continuous compliance automation for SOC 2, HIPAA, GDPR, PCI-DSS, and ISO 27001. Auto-collects evidence, maps controls, generates audit-ready reports, and tracks remediation — compressing audit prep from months to days.",
+  "basic": "$N/A/month",
+  "pro": "$3997/month",
+  "enterprise": "$9997/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Automated Compliance Reporting - Zion Tech Group",
+    "description": "Continuous compliance automation for SOC 2, HIPAA, GDPR, PCI-DSS, and ISO 27001. Auto-collects evidence, maps controls, generates audit-ready reports, and track",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/wave126-automated-compliance-reporting"
+    }
+  },
+  "features": [
+    "Automated evidence collection from 100+ integrations",
+    "SOC 2, HIPAA, GDPR, PCI-DSS, ISO 27001 frameworks",
+    "Control mapping & gap analysis",
+    "Audit-ready report generation",
+    "Remediation tracking with SLA enforcement"
+  ],
+  "benefits": [
+    "Reduce audit prep from months to days",
+    "Continuous compliance — not point-in-time",
+    "Eliminate spreadsheet-driven compliance chaos",
+    "Pass audits on the first attempt"
+  ]
+}

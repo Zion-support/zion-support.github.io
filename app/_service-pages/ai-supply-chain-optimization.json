@@ -1,0 +1,29 @@
+{
+  "title": "AI Supply Chain Optimization & Demand Planning",
+  "description": "End-to-end supply chain optimization with demand forecasting, inventory optimization, and logistics route planning using advanced ML.",
+  "basic": "$1,999/mo/month",
+  "pro": "$4,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Supply Chain Optimization & Demand Planning - Zion Tech Group",
+    "description": "End-to-end supply chain optimization with demand forecasting, inventory optimization, and logistics route planning using advanced ML.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-supply-chain-optimization"
+    }
+  },
+  "features": [
+    "AI demand forecasting with 95% accuracy",
+    "Multi-echelon inventory optimization",
+    "Supplier risk scoring",
+    "Logistics route optimization",
+    "Warehouse automation planning"
+  ],
+  "benefits": [
+    "Reduce inventory costs by 25%",
+    "Improve forecast accuracy by 40%",
+    "Optimize logistics costs",
+    "Mitigate supply chain risks"
+  ]
+}

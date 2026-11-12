@@ -1,0 +1,29 @@
+{
+  "title": "Data Virtualization Layer",
+  "description": "Virtual data layer that integrates across databases, APIs, and files without moving data. Query any source through a unified SQL interface.",
+  "basic": "$799/mo/month",
+  "pro": "$2,499/mo/month",
+  "enterprise": "$7,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Data Virtualization Layer - Zion Tech Group",
+    "description": "Virtual data layer that integrates across databases, APIs, and files without moving data. Query any source through a unified SQL interface.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w176-data-virtualization"
+    }
+  },
+  "features": [
+    "Unified SQL over heterogeneous sources",
+    "No data movement or replication",
+    "Source integration (SQL, NoSQL, REST, files)",
+    "Caching and query optimization",
+    "Row-level security and governance"
+  ],
+  "benefits": [
+    "Query any data source without ETL",
+    "Real-time integration, no batch delay",
+    "Caching delivers query performance",
+    "Governance applies to virtual views"
+  ]
+}

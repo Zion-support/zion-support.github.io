@@ -1,0 +1,29 @@
+{
+  "title": "IT SIEM & Security Information Event Management",
+  "description": "SIEM deployment, management, and tuning. Collect, correlate, and analyze security events from across your infrastructure. 24/7 monitoring with threat detection.",
+  "basic": "$3,000/mo/month",
+  "pro": "$7,500/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "IT SIEM & Security Information Event Management - Zion Tech Group",
+    "description": "SIEM deployment, management, and tuning. Collect, correlate, and analyze security events from across your infrastructure. 24/7 monitoring with threat detection.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-siem-security"
+    }
+  },
+  "features": [
+    "SIEM platform selection and deployment",
+    "Log collection from all infrastructure sources",
+    "Custom correlation rules and dashboards",
+    "Threat detection and alert tuning",
+    "Integration with firewalls, EDR, cloud platforms"
+  ],
+  "benefits": [
+    "Detect threats across all infrastructure",
+    "Reduce false positives by 70% with tuning",
+    "Meet compliance log management requirements",
+    "24/7 expert monitoring and response"
+  ]
+}

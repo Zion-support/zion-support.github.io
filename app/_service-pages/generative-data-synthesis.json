@@ -1,0 +1,29 @@
+{
+  "title": "Generative Data Synthesis for Model Training",
+  "description": "Create synthetic tabular, image, or text datasets to augment training data, balance classes, or simulate rare scenarios while preserving statistical fidelity.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Generative Data Synthesis for Model Training - Zion Tech Group",
+    "description": "Create synthetic tabular, image, or text datasets to augment training data, balance classes, or simulate rare scenarios while preserving statistical fidelity.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/generative-data-synthesis"
+    }
+  },
+  "features": [
+    "Tabular data synthesis (CTGAN, TVAE)",
+    "Image synthesis with diffusion models",
+    "Privacy-preserving synthetic data (DP-SGD)",
+    "Data augmentation pipelines",
+    "Quality metrics (KSTest, coverage)"
+  ],
+  "benefits": [
+    "Reduce costs with generative data synthesis for model training",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

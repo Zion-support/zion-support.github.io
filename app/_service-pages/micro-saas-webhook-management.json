@@ -1,0 +1,29 @@
+{
+  "title": "Webhook Management Platform",
+  "description": "Centralized webhook delivery with retry logic, failure alerting, payload transformation, and analytics.",
+  "basic": "$149/mo/month",
+  "pro": "$499/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Webhook Management Platform - Zion Tech Group",
+    "description": "Centralized webhook delivery with retry logic, failure alerting, payload transformation, and analytics.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-webhook-management"
+    }
+  },
+  "features": [
+    "Webhook routing",
+    "Retry logic",
+    "Failure alerting",
+    "Payload transformation",
+    "Delivery analytics"
+  ],
+  "benefits": [
+    "Reliable delivery",
+    "Failure visibility",
+    "Easy integration",
+    "Scalable infrastructure"
+  ]
+}

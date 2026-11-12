@@ -1,0 +1,29 @@
+{
+  "title": "IT Observability-as-a-Service (OaaS)",
+  "description": "Full-stack observability platform covering metrics, logs, traces, and user experience. AI-powered anomaly detection, root cause analysis, and automated remediation. Unified dashboard for infrastructure, applications, and business metrics.",
+  "basic": "$399/mo/month",
+  "pro": "$1,299/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "IT Observability-as-a-Service (OaaS) - Zion Tech Group",
+    "description": "Full-stack observability platform covering metrics, logs, traces, and user experience. AI-powered anomaly detection, root cause analysis, and automated remediat",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-observability-as-a-service"
+    }
+  },
+  "features": [
+    "Unified metrics, logs, and traces",
+    "AI-powered anomaly detection",
+    "Automated root cause analysis",
+    "Real user monitoring (RUM)",
+    "Synthetic monitoring"
+  ],
+  "benefits": [
+    "Reduce MTTR by 80%",
+    "Proactive issue detection",
+    "Unified visibility across stacks",
+    "Optimize cloud spending"
+  ]
+}

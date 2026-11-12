@@ -1,0 +1,28 @@
+{
+  "title": "AI Supply Chain Predictor",
+  "description": "Predicts supply chain disruptions 14–30 days in advance using multi-source data: weather, geopolitical events, shipping delays, and supplier health scores.",
+  "basic": "$199/mo/month",
+  "pro": "$599/mo/month",
+  "enterprise": "$1,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Supply Chain Predictor - Zion Tech Group",
+    "description": "Predicts supply chain disruptions 14–30 days in advance using multi-source data: weather, geopolitical events, shipping delays, and supplier health scores.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-supply-chain-predictor"
+    }
+  },
+  "features": [
+    "Demand forecasting with 94% accuracy",
+    "Alternative routing suggestions",
+    "Supplier risk scoring",
+    "Real-time anomaly alerts"
+  ],
+  "benefits": [
+    "Reduce costs with ai supply chain predictor",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

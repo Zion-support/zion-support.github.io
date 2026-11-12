@@ -1,0 +1,28 @@
+{
+  "title": "Document Intelligence + Vector Search",
+  "description": "Chunk embed store in vector DB; hybrid BM25 + dense retrieval; semantic reranking; per-tenant document isolation.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Document Intelligence + Vector Search - Zion Tech Group",
+    "description": "Chunk embed store in vector DB; hybrid BM25 + dense retrieval; semantic reranking; per-tenant document isolation.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/data-document-vector-search"
+    }
+  },
+  "features": [
+    "Multi-format ingest (PDF/DOCX/PPTX/EML)",
+    "Parse + semantic chunk + sentence embed",
+    "Hybrid BM25+DPR retrieval + cross-encoder rerank",
+    "Per-tenant namespace ACL in vector DB"
+  ],
+  "benefits": [
+    "Reduce costs with document intelligence + vector search",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

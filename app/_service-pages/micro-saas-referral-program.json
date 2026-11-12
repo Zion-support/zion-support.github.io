@@ -1,0 +1,29 @@
+{
+  "title": "ReferralHub — Referral Program Platform",
+  "description": "Launch and manage referral programs for SaaS. Track referrals, automate rewards, and measure ROI with built-in analytics.",
+  "basic": "$29/mo/month",
+  "pro": "$99/mo/month",
+  "enterprise": "$299/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "ReferralHub — Referral Program Platform - Zion Tech Group",
+    "description": "Launch and manage referral programs for SaaS. Track referrals, automate rewards, and measure ROI with built-in analytics.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-referral-program"
+    }
+  },
+  "features": [
+    "Referral link generation",
+    "Automated reward fulfillment",
+    "Fraud detection",
+    "Integration with Stripe, PayPal",
+    "Custom branding"
+  ],
+  "benefits": [
+    "Acquire customers at 5x lower cost",
+    "Automate referral tracking",
+    "Increase word-of-mouth",
+    "Measure referral ROI"
+  ]
+}

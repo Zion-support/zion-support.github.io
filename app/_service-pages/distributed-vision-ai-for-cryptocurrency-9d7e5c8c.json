@@ -1,0 +1,28 @@
+{
+  "title": "Distributed Vision AI for Cryptocurrency",
+  "description": "Vision AI system powered by distributed computer vision models for cryptocurrency analysis and automated visual inspection.",
+  "basic": "$258/month",
+  "pro": "$648/month",
+  "enterprise": "$1948/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Distributed Vision AI for Cryptocurrency - Zion Tech Group",
+    "description": "Vision AI system powered by distributed computer vision models for cryptocurrency analysis and automated visual inspection.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/distributed-vision-ai-for-cryptocurrency-9d7e5c8c"
+    }
+  },
+  "features": [
+    "Real-time object detection",
+    "Image classification",
+    "Anomaly detection",
+    "Visual inspection"
+  ],
+  "benefits": [
+    "Automated quality control",
+    "Reduced inspection costs",
+    "Defect detection",
+    "Visual search"
+  ]
+}

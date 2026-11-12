@@ -1,0 +1,29 @@
+{
+  "title": "Government Digital Services Platform",
+  "description": "Modern digital services for government with case management and Section 508 accessibility.",
+  "basic": "$15,000/month",
+  "pro": "$5,000/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Government Digital Services Platform - Zion Tech Group",
+    "description": "Modern digital services for government with case management and Section 508 accessibility.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/gov-digital-services"
+    }
+  },
+  "features": [
+    "Citizen portal",
+    "Case management",
+    "Form automation",
+    "Document processing",
+    "Compliance tracking"
+  ],
+  "benefits": [
+    "50% faster processing",
+    "Citizen satisfaction",
+    "Cost reduction",
+    "Accessibility compliance"
+  ]
+}

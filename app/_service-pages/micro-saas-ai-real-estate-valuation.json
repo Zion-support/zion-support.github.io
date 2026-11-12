@@ -1,0 +1,29 @@
+{
+  "title": "AI Real Estate Valuation & Investment Analyzer",
+  "description": "AI-powered property valuation and investment analysis. Instant appraisals, rental yield prediction, and market trend analysis for investors and agents.",
+  "basic": "$199/mo/month",
+  "pro": "$599/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Real Estate Valuation & Investment Analyzer - Zion Tech Group",
+    "description": "AI-powered property valuation and investment analysis. Instant appraisals, rental yield prediction, and market trend analysis for investors and agents.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-ai-real-estate-valuation"
+    }
+  },
+  "features": [
+    "AI property valuation (AVM) with 95% accuracy",
+    "Rental yield prediction and cash flow modeling",
+    "Market trend analysis and forecasting",
+    "Comparable sales analysis",
+    "Integration with MLS, Zillow, Redfin"
+  ],
+  "benefits": [
+    "Value properties instantly with AI",
+    "Identify undervalued investment opportunities",
+    "Predict rental income with 90% accuracy",
+    "Track portfolio performance in real-time"
+  ]
+}

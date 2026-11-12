@@ -1,0 +1,29 @@
+{
+  "title": "Container Security Platform",
+  "description": "End-to-end security for containerized workloads. Image scanning, runtime protection, network policy enforcement, and compliance monitoring for Kubernetes.",
+  "basic": "$799/mo/month",
+  "pro": "$2,499/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Container Security Platform - Zion Tech Group",
+    "description": "End-to-end security for containerized workloads. Image scanning, runtime protection, network policy enforcement, and compliance monitoring for Kubernetes.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cloud-container-security-platform"
+    }
+  },
+  "features": [
+    "Container image scanning",
+    "Runtime threat detection",
+    "Network policy enforcement",
+    "Secrets management",
+    "CIS benchmark compliance"
+  ],
+  "benefits": [
+    "Shift security left",
+    "Protect containers at runtime",
+    "Meet compliance requirements",
+    "Reduce vulnerability exposure"
+  ]
+}

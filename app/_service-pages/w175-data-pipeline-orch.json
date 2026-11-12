@@ -1,0 +1,29 @@
+{
+  "title": "Data Pipeline Orchestration",
+  "description": "Managed data pipeline orchestration: Airflow, Dagster, or Prefect with monitoring, alerting, and backfill support. Schedule, monitor, and troubleshoot pipelines.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Data Pipeline Orchestration - Zion Tech Group",
+    "description": "Managed data pipeline orchestration: Airflow, Dagster, or Prefect with monitoring, alerting, and backfill support. Schedule, monitor, and troubleshoot pipelines",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w175-data-pipeline-orch"
+    }
+  },
+  "features": [
+    "Managed Airflow, Dagster, or Prefect",
+    "Pipeline monitoring and SLA tracking",
+    "Error alerting and retry logic",
+    "Backfill and catchup management",
+    "Pipeline dependency visualization"
+  ],
+  "benefits": [
+    "Managed orchestration without operational burden",
+    "SLA tracking keeps pipelines on schedule",
+    "Backfill handles data reprocessing",
+    "Dependency visualization for impact analysis"
+  ]
+}

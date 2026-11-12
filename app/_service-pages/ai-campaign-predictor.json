@@ -1,0 +1,29 @@
+{
+  "title": "AI Campaign Performance Predictor",
+  "description": "Predict campaign outcomes before launch. Forecast CTR, conversion rate, and ROAS using historical targeting data and creative asset features.",
+  "basic": "$199/mo/month",
+  "pro": "$599/mo/month",
+  "enterprise": "$1,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Campaign Performance Predictor - Zion Tech Group",
+    "description": "Predict campaign outcomes before launch. Forecast CTR, conversion rate, and ROAS using historical targeting data and creative asset features.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-campaign-predictor"
+    }
+  },
+  "features": [
+    "ROAS and CTR forecasting",
+    "A/B test simulation engine",
+    "Audience segment scoring",
+    "Creative asset feature extractor",
+    "Multi-touch attribution model"
+  ],
+  "benefits": [
+    "Reduce costs with ai campaign performance predictor",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

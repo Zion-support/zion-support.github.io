@@ -1,0 +1,29 @@
+{
+  "title": "AI Video Summarization & Knowledge Extraction Platform",
+  "description": "Automatically transcribe, summarize, and extract key insights from video content. Generate chapters, highlight reels, and searchable transcripts.",
+  "basic": "$39/mo/month",
+  "pro": "$149/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Video Summarization & Knowledge Extraction Platform - Zion Tech Group",
+    "description": "Automatically transcribe, summarize, and extract key insights from video content. Generate chapters, highlight reels, and searchable transcripts.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-video-knowledge-summarization"
+    }
+  },
+  "features": [
+    "Automatic transcription in 50+ languages",
+    "AI-generated video summaries and chapters",
+    "Key moment and highlight detection",
+    "Searchable video knowledge base",
+    "Action item and decision extraction"
+  ],
+  "benefits": [
+    "Turn hours of video into minutes of insights",
+    "Make all video content searchable",
+    "Never miss important decisions",
+    "Increase video content ROI by 5x"
+  ]
+}

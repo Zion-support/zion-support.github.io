@@ -1,0 +1,29 @@
+{
+  "title": "AI Drug Discovery & Molecular Design Assistant",
+  "description": "AI platform for early drug discovery: molecular generation, target binding affinity prediction, ADMET forecasting, patent landscape analysis, and pre-clinical trial candidate ranking powered by graph neural networks.",
+  "basic": "$99/mo/month",
+  "pro": "$299/mo/month",
+  "enterprise": "$999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Drug Discovery & Molecular Design Assistant - Zion Tech Group",
+    "description": "AI platform for early drug discovery: molecular generation, target binding affinity prediction, ADMET forecasting, patent landscape analysis, and pre-clinical t",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-drug-discovery-assistant"
+    }
+  },
+  "features": [
+    "De novo molecular generation with GFlowNets",
+    "Target binding affinity predictor (AlphaFold + GNN)",
+    "ADMET property forecasting",
+    "Patent landscape FTO analysis",
+    "Lead candidate ranking with explainability"
+  ],
+  "benefits": [
+    "Reduce costs with ai drug discovery & molecular design assistant",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

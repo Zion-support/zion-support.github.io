@@ -1,0 +1,29 @@
+{
+  "title": "AI Construction Project Management",
+  "description": "AI-powered construction project management with schedule optimization, resource allocation, risk prediction, and progress tracking using drone and camera imagery.",
+  "basic": "$999/mo/month",
+  "pro": "$2,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Construction Project Management - Zion Tech Group",
+    "description": "AI-powered construction project management with schedule optimization, resource allocation, risk prediction, and progress tracking using drone and camera imager",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/construction-project-management-ai"
+    }
+  },
+  "features": [
+    "Schedule optimization (CPM/PERT)",
+    "Resource allocation AI",
+    "Risk prediction and mitigation",
+    "Drone progress tracking",
+    "Safety violation detection"
+  ],
+  "benefits": [
+    "Reduce project delays by 30%",
+    "Improve safety compliance",
+    "Optimize resource utilization",
+    "Real-time progress visibility"
+  ]
+}

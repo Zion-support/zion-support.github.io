@@ -1,0 +1,29 @@
+{
+  "title": "Robotic Process Automation (RPA) Platform",
+  "description": "Enterprise RPA platform for automating repetitive tasks. No-code bot builder, AI-powered screen understanding, and orchestration across desktop and web applications.",
+  "basic": "$799/mo/month",
+  "pro": "$2,499/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Robotic Process Automation (RPA) Platform - Zion Tech Group",
+    "description": "Enterprise RPA platform for automating repetitive tasks. No-code bot builder, AI-powered screen understanding, and orchestration across desktop and web applicat",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automation-robotic-process-automation"
+    }
+  },
+  "features": [
+    "No-code bot builder",
+    "AI screen understanding",
+    "Desktop and web automation",
+    "Centralized bot orchestration",
+    "Exception handling workflows"
+  ],
+  "benefits": [
+    "Automate 80% of repetitive tasks",
+    "Reduce operational costs by 40%",
+    "Improve accuracy to 99.9%",
+    "Scale automation without coding"
+  ]
+}

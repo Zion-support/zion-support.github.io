@@ -1,0 +1,29 @@
+{
+  "title": "IT Database Optimization & Performance Tuning",
+  "description": "Expert database optimization for PostgreSQL, MySQL, MongoDB, SQL Server, and Oracle. Improve query performance by 10x, reduce costs, and ensure high availability.",
+  "basic": "$2,500/mo/month",
+  "pro": "$5,000/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "IT Database Optimization & Performance Tuning - Zion Tech Group",
+    "description": "Expert database optimization for PostgreSQL, MySQL, MongoDB, SQL Server, and Oracle. Improve query performance by 10x, reduce costs, and ensure high availabilit",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-database-optimization"
+    }
+  },
+  "features": [
+    "Query performance analysis and optimization",
+    "Index strategy review and implementation",
+    "Schema optimization and normalization",
+    "Replication and high availability setup",
+    "Migration planning and execution"
+  ],
+  "benefits": [
+    "10x faster query performance",
+    "Reduce database costs by 40%",
+    "Eliminate downtime with HA setup",
+    "Scale databases without re-architecture"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "AI Wildlife Monitoring & Conservation Platform",
+  "description": "AI-powered wildlife monitoring using camera traps, drone imagery, and acoustic sensors. Species identification, population tracking, and poaching detection for conservation.",
+  "basic": "$499/mo/month",
+  "pro": "$1,499/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Wildlife Monitoring & Conservation Platform - Zion Tech Group",
+    "description": "AI-powered wildlife monitoring using camera traps, drone imagery, and acoustic sensors. Species identification, population tracking, and poaching detection for ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-ai-wildlife-monitoring"
+    }
+  },
+  "features": [
+    "AI species identification from camera traps",
+    "Drone imagery analysis for population surveys",
+    "Acoustic monitoring for bird and marine species",
+    "Poaching detection and ranger alerting",
+    "Integration with GPS collars and satellite tags"
+  ],
+  "benefits": [
+    "Identify species with 98% accuracy",
+    "Monitor wildlife 24/7 without human presence",
+    "Detect poaching in real-time",
+    "Track population trends with AI forecasting"
+  ]
+}

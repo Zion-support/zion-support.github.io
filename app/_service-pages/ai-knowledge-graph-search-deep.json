@@ -1,0 +1,29 @@
+{
+  "title": "AI Knowledge Graph Search Engine",
+  "description": "Deep semantic search across structured + unstructured corporate knowledge: auto-builds a navigable knowledge graph from Confluence, Slack, Drive, Jira, and CRM; facet navigation, path-finding between related entities, and answer synthesis with cited sources.",
+  "basic": "$149/mo/month",
+  "pro": "$399/mo/month",
+  "enterprise": "$1,299/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Knowledge Graph Search Engine - Zion Tech Group",
+    "description": "Deep semantic search across structured + unstructured corporate knowledge: auto-builds a navigable knowledge graph from Confluence, Slack, Drive, Jira, and CRM;",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-knowledge-graph-search-deep"
+    }
+  },
+  "features": [
+    "Auto-ingest: Confluence, Slack, Drive, Jira, Notion, SharePoint",
+    "Auto-built navigable knowledge graph with entity recognition",
+    "Faceted navigation + path finder (A→B shortest path through relations)",
+    "Answer synthesis with inline citations + source confidence scores",
+    "On-prem AIR-gapped deployment option for public-sector / PHI"
+  ],
+  "benefits": [
+    "Reduce costs with ai knowledge graph search engine",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

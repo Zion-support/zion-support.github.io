@@ -1,0 +1,29 @@
+{
+  "title": "Data Retention and Lifecycle Management",
+  "description": "Automate data retention: policy enforcement, archival, deletion, compliance. Reduce storage costs and legal risk.",
+  "basic": "$199/mo/month",
+  "pro": "$599/mo/month",
+  "enterprise": "$1,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Data Retention and Lifecycle Management - Zion Tech Group",
+    "description": "Automate data retention: policy enforcement, archival, deletion, compliance. Reduce storage costs and legal risk.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w177-data-retention"
+    }
+  },
+  "features": [
+    "Retention policy definition and enforcement",
+    "Automated archival to cheap storage",
+    "Secure deletion with verification",
+    "Legal hold management",
+    "Compliance reporting (GDPR right to deletion)"
+  ],
+  "benefits": [
+    "Automated retention reduces legal risk",
+    "Archival to cheap storage reduces costs",
+    "Secure deletion for GDPR compliance",
+    "Legal hold management for litigation"
+  ]
+}

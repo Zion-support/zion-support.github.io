@@ -1,0 +1,29 @@
+{
+  "title": "AI Insurance Claims Processing Platform",
+  "description": "AI-powered insurance claims processing that automates document review, fraud detection, and payout calculation. Reduce claims processing time from days to hours.",
+  "basic": "$999/mo/month",
+  "pro": "$2,499/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Insurance Claims Processing Platform - Zion Tech Group",
+    "description": "AI-powered insurance claims processing that automates document review, fraud detection, and payout calculation. Reduce claims processing time from days to hours",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-ai-insurance-claims"
+    }
+  },
+  "features": [
+    "AI document intake and extraction",
+    "Automated claims triage and routing",
+    "Fraud detection with anomaly modeling",
+    "Payout calculation and approval workflows",
+    "Integration with policy admin systems"
+  ],
+  "benefits": [
+    "Process claims in hours instead of days",
+    "Detect fraud with 95% accuracy",
+    "Reduce claims processing costs by 60%",
+    "Improve customer satisfaction with faster payouts"
+  ]
+}

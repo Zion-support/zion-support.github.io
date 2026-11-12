@@ -1,0 +1,28 @@
+{
+  "title": "Digital Business Card & Networking Platform",
+  "description": "Replace paper cards with smart digital business cards. NFC-enabled, analytics-tracked, with CRM sync and lead capture. Includes team management, custom designs, and integration with LinkedIn and major CRMs.",
+  "basic": "$N/A/month",
+  "pro": "$N/A/month",
+  "enterprise": "$49/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Digital Business Card & Networking Platform - Zion Tech Group",
+    "description": "Replace paper cards with smart digital business cards. NFC-enabled, analytics-tracked, with CRM sync and lead capture. Includes team management, custom designs,",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/digital-business-card-platform"
+    }
+  },
+  "features": [
+    "NFC-enabled cards",
+    "Analytics dashboard",
+    "CRM sync",
+    "Lead capture forms",
+    "Team management"
+  ],
+  "benefits": [
+    "100% more leads from networking",
+    "Zero paper waste",
+    "Real-time contact analytics"
+  ]
+}

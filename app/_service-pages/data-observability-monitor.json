@@ -1,0 +1,29 @@
+{
+  "title": "Data Observability & Quality Monitor",
+  "description": "Column-level freshness, volume, distribution drift, and schema-change detection across every pipeline and warehouse table with auto-generated lineage.",
+  "basic": "$99/mo/month",
+  "pro": "$299/mo/month",
+  "enterprise": "$999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Data Observability & Quality Monitor - Zion Tech Group",
+    "description": "Column-level freshness, volume, distribution drift, and schema-change detection across every pipeline and warehouse table with auto-generated lineage.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/data-observability-monitor"
+    }
+  },
+  "features": [
+    "Column freshness and volume checks",
+    "Distribution drift detection",
+    "Schema-change alerting",
+    "End-to-end lineage viewer",
+    "Quality SLA dashboards"
+  ],
+  "benefits": [
+    "Reduce costs with data observability & quality monitor",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

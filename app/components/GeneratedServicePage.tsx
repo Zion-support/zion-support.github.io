@@ -3,8 +3,6 @@ import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 
 export type ServicePageData = {
   metadata: { title: string; description: string; alternates: { canonical: string } };
-  breadcrumbPath: string;
-  breadcrumbTitle: string;
   title: string;
   description: string;
   features: string[];
@@ -13,13 +11,13 @@ export type ServicePageData = {
   pro: string;
   enterprise: string;
   consultationHref: string;
-};
+} & ({ layout: 'simple' } | { layout?: 'linked'; breadcrumbPath: string; breadcrumbTitle: string });
 
 export default function GeneratedServicePage({ data }: { data: ServicePageData }) {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path={data.breadcrumbPath} title={data.breadcrumbTitle} />
+        {data.layout !== 'simple' && <BreadcrumbSchema path={data.breadcrumbPath} title={data.breadcrumbTitle} />}
         <h1 className="text-4xl font-bold mb-6">{data.title}</h1>
         <p className="text-lg text-gray-300 mb-8">{data.description}</p>
 
@@ -54,10 +52,10 @@ export default function GeneratedServicePage({ data }: { data: ServicePageData }
             </div>
           </div>
         </div>
-        <div className="border-t border-slate-800 mt-8 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm">
+        {data.layout !== 'simple' && <div className="border-t border-slate-800 mt-8 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm">
           <Link href="/services/" className="text-purple-300 hover:text-purple-200">← Back to All Services</Link>
           <Link href="/tools/" className="text-slate-400 hover:text-slate-300">Try our free tools →</Link>
-        </div>
+        </div>}
 
         <div className="text-center">
           <a 

@@ -1,0 +1,29 @@
+{
+  "title": "AI Employee Experience Platform",
+  "description": "End-to-end employee lifecycle automation from AI-powered onboarding to performance management, engagement tracking, and retention prediction.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Employee Experience Platform - Zion Tech Group",
+    "description": "End-to-end employee lifecycle automation from AI-powered onboarding to performance management, engagement tracking, and retention prediction.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-employee-experience"
+    }
+  },
+  "features": [
+    "Automated onboarding workflow orchestration",
+    "Personalized training & development paths",
+    "Sentiment & engagement tracking",
+    "AI-powered retention risk prediction",
+    "Buddy & mentor matching algorithms"
+  ],
+  "benefits": [
+    "Reduce costs with ai employee experience platform",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

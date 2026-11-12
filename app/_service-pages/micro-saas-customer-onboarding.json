@@ -1,0 +1,29 @@
+{
+  "title": "Onboardly — Customer Onboarding Micro-SaaS",
+  "description": "Interactive customer onboarding platform with guided tours, checklists, and progress tracking. Reduce time-to-value and improve activation rates with automated onboarding flows.",
+  "basic": "$59/mo/month",
+  "pro": "$179/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Onboardly — Customer Onboarding Micro-SaaS - Zion Tech Group",
+    "description": "Interactive customer onboarding platform with guided tours, checklists, and progress tracking. Reduce time-to-value and improve activation rates with automated ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-customer-onboarding"
+    }
+  },
+  "features": [
+    "Interactive product tours",
+    "Onboarding checklists",
+    "Progress tracking dashboard",
+    "Email drip campaigns",
+    "In-app messaging"
+  ],
+  "benefits": [
+    "Improve activation rates by 40%",
+    "Reduce onboarding time",
+    "Increase customer satisfaction",
+    "Automate onboarding workflows"
+  ]
+}

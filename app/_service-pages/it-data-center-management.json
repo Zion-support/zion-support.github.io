@@ -1,0 +1,29 @@
+{
+  "title": "AI Data Center Management Platform",
+  "description": "AI-powered data center management with capacity planning, energy optimization, and predictive maintenance for data center infrastructure.",
+  "basic": "$2,999/mo/month",
+  "pro": "$8,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Data Center Management Platform - Zion Tech Group",
+    "description": "AI-powered data center management with capacity planning, energy optimization, and predictive maintenance for data center infrastructure.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-data-center-management"
+    }
+  },
+  "features": [
+    "Capacity planning AI",
+    "Energy optimization (PUE reduction)",
+    "Predictive maintenance for cooling/power",
+    "Asset lifecycle management",
+    "Integration with DCIM tools"
+  ],
+  "benefits": [
+    "Reduce energy costs by 20%",
+    "Optimize capacity utilization",
+    "Prevent infrastructure failures",
+    "Meet sustainability goals"
+  ]
+}

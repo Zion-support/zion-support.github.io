@@ -1,0 +1,29 @@
+{
+  "title": "AI Supply Chain Optimization",
+  "description": "Predictive demand forecasting, inventory optimization, and supplier risk management powered by machine learning.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Supply Chain Optimization - Zion Tech Group",
+    "description": "Predictive demand forecasting, inventory optimization, and supplier risk management powered by machine learning.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-supply-chain"
+    }
+  },
+  "features": [
+    "Demand forecasting (ARIMA + ML)",
+    "Inventory optimization & reorder points",
+    "Supplier risk scoring & monitoring",
+    "Logistics route optimization",
+    "Real-time shipment tracking"
+  ],
+  "benefits": [
+    "Reduce costs with ai supply chain optimization",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

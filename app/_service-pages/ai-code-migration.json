@@ -1,0 +1,29 @@
+{
+  "title": "AI Code Migration & Legacy Modernization",
+  "description": "AI-powered legacy code analysis, automated migration planning, and assisted code transformation from COBOL, mainframe, and legacy frameworks to modern cloud-native stacks.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Code Migration & Legacy Modernization - Zion Tech Group",
+    "description": "AI-powered legacy code analysis, automated migration planning, and assisted code transformation from COBOL, mainframe, and legacy frameworks to modern cloud-nat",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-code-migration"
+    }
+  },
+  "features": [
+    "Legacy code analysis and dependency mapping",
+    "Automated migration plan generation",
+    "AI-assisted code transformation and refactoring",
+    "Test case generation for migrated systems",
+    "Risk assessment and rollback planning"
+  ],
+  "benefits": [
+    "Reduce costs with ai code migration & legacy modernization",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

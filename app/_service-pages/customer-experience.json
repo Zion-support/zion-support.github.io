@@ -1,0 +1,27 @@
+{
+  "title": "Customer Experience",
+  "description": "Customer Experience elevates customer interactions with AI-driven support, intelligent routing, and personalized engagement across every touchpoint...",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Customer Experience - Zion Tech Group",
+    "description": "Customer Experience elevates customer interactions with AI-driven support, intelligent routing, and personalized engagement across every touchpoint...",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/customer-experience"
+    }
+  },
+  "features": [
+    "AI-powered automation",
+    "Enterprise integration",
+    "Real-time analytics"
+  ],
+  "benefits": [
+    "Reduce costs with customer experience",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

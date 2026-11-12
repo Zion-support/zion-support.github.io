@@ -1,0 +1,29 @@
+{
+  "title": "AI Cyber Threat Hunting & Incident Response",
+  "description": "Proactive threat detection using advanced AI behavioral analysis, anomaly detection, and automated incident response orchestration for enterprises under constant attack.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Cyber Threat Hunting & Incident Response - Zion Tech Group",
+    "description": "Proactive threat detection using advanced AI behavioral analysis, anomaly detection, and automated incident response orchestration for enterprises under constan",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-cyber-threat-hunting"
+    }
+  },
+  "features": [
+    "24/7 AI-powered threat hunting across network endpoints",
+    "Behavioral anomaly detection & zero-day identification",
+    "Automated incident response playbooks",
+    "Threat intelligence correlation & enrichment",
+    "Forensic analysis & root-cause reconstruction"
+  ],
+  "benefits": [
+    "Reduce costs with ai cyber threat hunting & incident response",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

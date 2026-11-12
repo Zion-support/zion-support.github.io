@@ -1,0 +1,29 @@
+{
+  "title": "IncidentComms — Status & Comms",
+  "description": "Professional incident communication: status page, stakeholder updates, templates, and timeline. Keep customers and leadership informed during outages.",
+  "basic": "$29/mo/month",
+  "pro": "$79/mo/month",
+  "enterprise": "$249/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "IncidentComms — Status & Comms - Zion Tech Group",
+    "description": "Professional incident communication: status page, stakeholder updates, templates, and timeline. Keep customers and leadership informed during outages.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w176-incident-comms"
+    }
+  },
+  "features": [
+    "Branded status page with custom domain",
+    "Stakeholder email and Slack updates",
+    "Incident timeline and post-mortem",
+    "Template library for common incidents",
+    "Scheduled maintenance windows"
+  ],
+  "benefits": [
+    "Professional communication during incidents",
+    "Templates ensure consistent messaging",
+    "Status page builds customer trust",
+    "Timeline documents the full response"
+  ]
+}

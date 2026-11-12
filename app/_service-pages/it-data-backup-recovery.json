@@ -1,0 +1,29 @@
+{
+  "title": "IT Data Backup & Recovery Service",
+  "description": "Comprehensive backup and recovery solution with automated backups, point-in-time recovery, and disaster recovery testing. Protect against ransomware, human error, and hardware failure.",
+  "basic": "$500/mo/month",
+  "pro": "$1,500/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "IT Data Backup & Recovery Service - Zion Tech Group",
+    "description": "Comprehensive backup and recovery solution with automated backups, point-in-time recovery, and disaster recovery testing. Protect against ransomware, human erro",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-data-backup-recovery"
+    }
+  },
+  "features": [
+    "Automated backup scheduling (hourly to daily)",
+    "Point-in-time recovery for databases",
+    "Immutable backups for ransomware protection",
+    "Automated DR testing without production impact",
+    "Cross-region replication"
+  ],
+  "benefits": [
+    "Recover from ransomware in hours not days",
+    "Meet RPO/RTO requirements",
+    "Automated DR testing ensures readiness",
+    "Protect against accidental deletion"
+  ]
+}

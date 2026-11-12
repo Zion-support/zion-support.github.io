@@ -1,0 +1,29 @@
+{
+  "title": "PostPilot — Social Media Scheduler Micro-SaaS",
+  "description": "Multi-platform social media scheduling with AI content suggestions, optimal posting times, and analytics. Supports Instagram, Twitter/X, LinkedIn, Facebook, and TikTok.",
+  "basic": "$49/mo/month",
+  "pro": "$149/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "PostPilot — Social Media Scheduler Micro-SaaS - Zion Tech Group",
+    "description": "Multi-platform social media scheduling with AI content suggestions, optimal posting times, and analytics. Supports Instagram, Twitter/X, LinkedIn, Facebook, and",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-social-media-scheduler"
+    }
+  },
+  "features": [
+    "Multi-platform scheduling (6 platforms)",
+    "AI content suggestions",
+    "Optimal posting time detection",
+    "Hashtag recommendations",
+    "Analytics and engagement tracking"
+  ],
+  "benefits": [
+    "Save 10+ hours/week on social media",
+    "Increase engagement with optimal timing",
+    "AI-powered content ideas",
+    "Unified social media management"
+  ]
+}

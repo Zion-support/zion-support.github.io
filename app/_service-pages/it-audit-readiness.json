@@ -1,0 +1,29 @@
+{
+  "title": "Audit Readiness as a Service",
+  "description": "Continuous audit readiness with automated evidence collection.",
+  "basic": "$3,000/mo/month",
+  "pro": "$N/A/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Audit Readiness as a Service - Zion Tech Group",
+    "description": "Continuous audit readiness with automated evidence collection.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-audit-readiness"
+    }
+  },
+  "features": [
+    "Automated evidence",
+    "Gap analysis",
+    "Policy templates",
+    "Auditor portal",
+    "Continuous monitoring"
+  ],
+  "benefits": [
+    "Always audit-ready",
+    "80% less prep time",
+    "Fewer findings",
+    "Faster audits"
+  ]
+}

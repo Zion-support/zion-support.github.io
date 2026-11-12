@@ -1,0 +1,29 @@
+{
+  "title": "IT Data Migration & Database Consolidation",
+  "description": "End-to-end data migration services — from legacy databases to modern platforms. Zero-downtime migration with automated validation and rollback.",
+  "basic": "$5,000/mo/month",
+  "pro": "$12,000/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "IT Data Migration & Database Consolidation - Zion Tech Group",
+    "description": "End-to-end data migration services — from legacy databases to modern platforms. Zero-downtime migration with automated validation and rollback.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-data-migration"
+    }
+  },
+  "features": [
+    "Source system assessment and mapping",
+    "ETL pipeline development and testing",
+    "Zero-downtime migration execution",
+    "Automated data validation and reconciliation",
+    "Rollback planning and testing"
+  ],
+  "benefits": [
+    "Migrate with zero downtime",
+    "Ensure 100% data accuracy with automated validation",
+    "Reduce database costs by 40%",
+    "Modernize without business disruption"
+  ]
+}

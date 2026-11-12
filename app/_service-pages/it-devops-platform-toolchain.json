@@ -1,0 +1,28 @@
+{
+  "title": "DevOps Platform & Unified Toolchain",
+  "description": "One DevOps portal: CI/CD, artifact repo, Terraform Cloud, GitOps ops config, artifact SBOM, and full audit log per pipeline.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "DevOps Platform & Unified Toolchain - Zion Tech Group",
+    "description": "One DevOps portal: CI/CD, artifact repo, Terraform Cloud, GitOps ops config, artifact SBOM, and full audit log per pipeline.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-devops-platform-toolchain"
+    }
+  },
+  "features": [
+    "CI/CD pipelines per repo/branch",
+    "Artifact registry + SBOM auto-generated",
+    "Terraform Cloud/Enterprise workspace sync",
+    "Unified ops audit log per pipeline build"
+  ],
+  "benefits": [
+    "Reduce costs with devops platform & unified toolchain",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

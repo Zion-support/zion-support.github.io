@@ -1,0 +1,29 @@
+{
+  "title": "AI SEO Content Optimizer",
+  "description": "Real-time SEO analysis and content optimization: keyword suggestions, meta tag generation, readability scoring, and content gap analysis.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI SEO Content Optimizer - Zion Tech Group",
+    "description": "Real-time SEO analysis and content optimization: keyword suggestions, meta tag generation, readability scoring, and content gap analysis.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-seo-optimizer"
+    }
+  },
+  "features": [
+    "On-page SEO audit & recommendations",
+    "Automated meta title & description generation",
+    "Readability & grammar improvement",
+    "Competitor content gap analysis",
+    "Internal linking suggestions"
+  ],
+  "benefits": [
+    "Reduce costs with ai seo content optimizer",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

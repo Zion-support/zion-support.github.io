@@ -1,0 +1,28 @@
+{
+  "title": "Enterprise Omnichannel Proptech Analytics Suite",
+  "description": "Enterprise analytics suite that delivers omnichannel proptech insights with unified dashboards and reporting.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Enterprise Omnichannel Proptech Analytics Suite - Zion Tech Group",
+    "description": "Enterprise analytics suite that delivers omnichannel proptech insights with unified dashboards and reporting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/enterprise-omnichannel-proptech-analytics-suite-7f1a03b0"
+    }
+  },
+  "features": [
+    "Data visualization",
+    "Custom dashboards",
+    "Report generation",
+    "KPI tracking"
+  ],
+  "benefits": [
+    "Unified data view",
+    "Faster insights",
+    "Customizable reports",
+    "Cross-functional collaboration"
+  ]
+}

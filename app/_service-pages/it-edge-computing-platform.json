@@ -1,0 +1,29 @@
+{
+  "title": "IT Edge Computing Platform",
+  "description": "Deploy and manage applications at the edge with low-latency processing. Container orchestration, serverless functions, and data synchronization across edge locations. Ideal for IoT, retail, and real-time applications.",
+  "basic": "$799/mo/month",
+  "pro": "$2,499/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "IT Edge Computing Platform - Zion Tech Group",
+    "description": "Deploy and manage applications at the edge with low-latency processing. Container orchestration, serverless functions, and data synchronization across edge loca",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-edge-computing-platform"
+    }
+  },
+  "features": [
+    "Kubernetes-based edge orchestration",
+    "Serverless edge functions",
+    "Automatic data synchronization",
+    "Edge-to-cloud tiered storage",
+    "Zero-touch device provisioning"
+  ],
+  "benefits": [
+    "Sub-10ms latency for critical apps",
+    "Reduced bandwidth costs",
+    "Improved reliability with offline capability",
+    "Consistent deployment across edge locations"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "APIDocs — Interactive API Documentation",
+  "description": "Beautiful, interactive API documentation with try-it-out consoles, code samples in 10+ languages, and auto-generated from OpenAPI/GraphQL schemas.",
+  "basic": "$19/mo/month",
+  "pro": "$59/mo/month",
+  "enterprise": "$199/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "APIDocs — Interactive API Documentation - Zion Tech Group",
+    "description": "Beautiful, interactive API documentation with try-it-out consoles, code samples in 10+ languages, and auto-generated from OpenAPI/GraphQL schemas.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w174-apidocs"
+    }
+  },
+  "features": [
+    "Auto-generated from OpenAPI 3.x specs",
+    "Interactive try-it-out console",
+    "Code samples in 10+ languages",
+    "GraphQL schema documentation",
+    "Versioning and changelog"
+  ],
+  "benefits": [
+    "Interactive docs reduce API support tickets by 50%",
+    "Code samples in every language accelerate integration",
+    "Auto-generated stays in sync with your API",
+    "Custom branding for developer portals"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "Cloud Developer Sandboxes",
+  "description": "Self-service cloud sandboxes for developers: pre-configured environments, auto-cleanup, cost caps, and production-like data. Dev without breaking prod.",
+  "basic": "$49/dev/mo/month",
+  "pro": "$99/dev/mo/month",
+  "enterprise": "$199/dev/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Cloud Developer Sandboxes - Zion Tech Group",
+    "description": "Self-service cloud sandboxes for developers: pre-configured environments, auto-cleanup, cost caps, and production-like data. Dev without breaking prod.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w175-cloud-dev-sandbox"
+    }
+  },
+  "features": [
+    "Self-service environment provisioning",
+    "Pre-configured with your stack",
+    "Production-like test data (anonymized)",
+    "Auto-cleanup and TTL management",
+    "Per-developer cost caps"
+  ],
+  "benefits": [
+    "Developers get environments in seconds",
+    "Auto-cleanup prevents cloud sprawl",
+    "Cost caps prevent runaway spend",
+    "Production-like data improves testing"
+  ]
+}

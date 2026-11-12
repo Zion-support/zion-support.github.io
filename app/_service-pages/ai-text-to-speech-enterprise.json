@@ -1,0 +1,30 @@
+{
+  "title": "Enterprise Text-to-Speech Platform",
+  "description": "Natural-sounding voice synthesis with custom voice cloning, emotional control, multi-language support, and real-time streaming. Perfect for IVR, media, and accessibility.",
+  "basic": "$N/A/month",
+  "pro": "$N/A/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Enterprise Text-to-Speech Platform - Zion Tech Group",
+    "description": "Natural-sounding voice synthesis with custom voice cloning, emotional control, multi-language support, and real-time streaming. Perfect for IVR, media, and acce",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-text-to-speech-enterprise"
+    }
+  },
+  "features": [
+    "Custom voice cloning",
+    "Emotional control",
+    "Multi-language (40+)",
+    "Real-time streaming",
+    "SSML support"
+  ],
+  "benefits": [
+    "Natural-sounding voices",
+    "Custom brand voices",
+    "Low-latency streaming",
+    "40+ languages",
+    "Scalable infrastructure"
+  ]
+}

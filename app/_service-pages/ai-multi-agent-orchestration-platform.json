@@ -1,0 +1,29 @@
+{
+  "title": "AI Multi-Agent Orchestration Platform",
+  "description": "Deploy, manage, and monitor fleets of autonomous AI agents that collaborate on complex tasks. Features agent-to-agent communication, task decomposition, result aggregation, and real-time observability dashboards.",
+  "basic": "$999/mo/month",
+  "pro": "$2,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Multi-Agent Orchestration Platform - Zion Tech Group",
+    "description": "Deploy, manage, and monitor fleets of autonomous AI agents that collaborate on complex tasks. Features agent-to-agent communication, task decomposition, result ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-multi-agent-orchestration-platform"
+    }
+  },
+  "features": [
+    "Visual agent workflow builder",
+    "Agent-to-agent communication protocols",
+    "Automatic task decomposition",
+    "Result aggregation and consensus",
+    "Real-time agent monitoring"
+  ],
+  "benefits": [
+    "Automate complex multi-step workflows",
+    "Reduce AI costs through intelligent routing",
+    "Scale agent fleets on demand",
+    "Full observability into agent decisions"
+  ]
+}

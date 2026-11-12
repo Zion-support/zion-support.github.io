@@ -1,0 +1,28 @@
+{
+  "title": "Cloud Zero Trust Access (ZTNA)",
+  "description": "Zero trust network access for cloud and on-prem resources: per-application least-privilege policy, device posture context, 1-click revoke per identity, 75% faster access time for legitimate users, full session recording.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Cloud Zero Trust Access (ZTNA) - Zion Tech Group",
+    "description": "Zero trust network access for cloud and on-prem resources: per-application least-privilege policy, device posture context, 1-click revoke per identity, 75% fast",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/security-cloud-zero-trust-access"
+    }
+  },
+  "features": [
+    "Per-application least-privilege access policy from identity to cookie",
+    "Device posture context — certificate validity, OS, browser assessment before granting",
+    "1-click kill/revoke per user identity across all resources",
+    "Full session recording with playable video replay per access session"
+  ],
+  "benefits": [
+    "Reduce costs with cloud zero trust access (ztna)",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

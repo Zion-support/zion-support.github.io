@@ -1,0 +1,29 @@
+{
+  "title": "AI Knowledge Base Quality & Freshness Monitor",
+  "description": "AI that monitors your knowledge base for outdated, conflicting, or gaps in content. Automatically flags articles for review and suggests updates.",
+  "basic": "$99/mo/month",
+  "pro": "$299/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Knowledge Base Quality & Freshness Monitor - Zion Tech Group",
+    "description": "AI that monitors your knowledge base for outdated, conflicting, or gaps in content. Automatically flags articles for review and suggests updates.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-ai-knowledge-quality"
+    }
+  },
+  "features": [
+    "AI content freshness scoring",
+    "Automatic conflict detection between articles",
+    "Gap analysis vs customer questions",
+    "Integration with Confluence, Notion, Zendesk",
+    "Automated article decay alerts"
+  ],
+  "benefits": [
+    "Keep 100% of KB articles up to date",
+    "Reduce support tickets from outdated content",
+    "Identify knowledge gaps before customers do",
+    "Automate content review workflows"
+  ]
+}

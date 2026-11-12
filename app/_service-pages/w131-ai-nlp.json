@@ -1,0 +1,30 @@
+{
+  "title": "Enterprise NLP Platform",
+  "description": "Natural language processing for document understanding, sentiment analysis, entity extraction, and text classification. Pre-trained models for 50+ languages.",
+  "basic": "$N/A/month",
+  "pro": "$4997/month",
+  "enterprise": "$12997/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Enterprise NLP Platform - Zion Tech Group",
+    "description": "Natural language processing for document understanding, sentiment analysis, entity extraction, and text classification. Pre-trained models for 50+ languages.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w131-ai-nlp"
+    }
+  },
+  "features": [
+    "Document understanding",
+    "Sentiment analysis",
+    "Entity extraction",
+    "Text classification",
+    "Summarization"
+  ],
+  "benefits": [
+    "Process documents 100x faster",
+    "50+ language support",
+    "Pre-trained enterprise models",
+    "Custom model training",
+    "API-first architecture"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "title": "Business Intelligence",
+  "description": "Business Intelligence transforms raw data into actionable intelligence with real-time dashboards, automated reporting, and predictive models. Make ...",
+  "basic": "$199/mo/month",
+  "pro": "$599/mo/month",
+  "enterprise": "$1,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Business Intelligence - Zion Tech Group",
+    "description": "Business Intelligence transforms raw data into actionable intelligence with real-time dashboards, automated reporting, and predictive models. Make ...",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/business-intelligence"
+    }
+  },
+  "features": [
+    "AI-powered automation",
+    "Enterprise integration",
+    "Real-time analytics"
+  ],
+  "benefits": [
+    "Reduce costs with business intelligence",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "AI Chronic Disease Progression Tracker",
+  "description": "Longitudinal patient analytics: track chronic disease progression across EHR data, lab results, and wearables. AI identifies early deterioration signals, predicts hospitalisation risk, and generates personalised care plans.",
+  "basic": "$499/mo/month",
+  "pro": "$1,299/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Chronic Disease Progression Tracker - Zion Tech Group",
+    "description": "Longitudinal patient analytics: track chronic disease progression across EHR data, lab results, and wearables. AI identifies early deterioration signals, predic",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-chronic-disease-tracker"
+    }
+  },
+  "features": [
+    "Multi-source EHR + wearable data fusion",
+    "Early-deterioration signal detection",
+    "Personalised care plan generation",
+    "Hospitalisation risk prediction",
+    "Care-team dashboards + alerts"
+  ],
+  "benefits": [
+    "Reduce costs with ai chronic disease progression tracker",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

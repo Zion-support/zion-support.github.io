@@ -1,0 +1,29 @@
+{
+  "title": "AI Sales Intelligence",
+  "description": "Boost revenue with AI-driven lead scoring, pipeline prediction, deal insights, and automated outreach sequencing.",
+  "basic": "$199/mo/month",
+  "pro": "$599/mo/month",
+  "enterprise": "$1,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Sales Intelligence - Zion Tech Group",
+    "description": "Boost revenue with AI-driven lead scoring, pipeline prediction, deal insights, and automated outreach sequencing.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-sales-intelligence"
+    }
+  },
+  "features": [
+    "Predictive lead scoring (0-100)",
+    "Sales pipeline forecasting",
+    "Deal risk detection & alerts",
+    "Automated email sequences",
+    "Competitive intelligence briefs"
+  ],
+  "benefits": [
+    "Reduce costs with ai sales intelligence",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

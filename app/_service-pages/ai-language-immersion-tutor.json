@@ -1,0 +1,28 @@
+{
+  "title": "AI Language Immersion & Conversation Tutor",
+  "description": "Personalized language learning: AI conversation partner with speech recognition, cultural context lessons, pronunciation scoring, and spaced repetition. 30+ languages.",
+  "basic": "$15/month",
+  "pro": "$29/month",
+  "enterprise": "$59/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Language Immersion & Conversation Tutor - Zion Tech Group",
+    "description": "Personalized language learning: AI conversation partner with speech recognition, cultural context lessons, pronunciation scoring, and spaced repetition. 30+ lan",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-language-immersion-tutor"
+    }
+  },
+  "features": [
+    "AI native-speaker conversation partner",
+    "Real-time pronunciation scoring",
+    "Cultural context lessons",
+    "Spaced repetition system",
+    "Speech recognition (30 languages)"
+  ],
+  "benefits": [
+    "Learn 3x faster than apps",
+    "Speak from day one",
+    "Any language, any level"
+  ]
+}

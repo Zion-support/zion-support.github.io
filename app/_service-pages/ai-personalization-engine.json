@@ -1,0 +1,29 @@
+{
+  "title": "AI Personalization & Recommendation Engine",
+  "description": "Real-time personalization for websites, apps, and e-commerce — dynamic content, product recommendations, pricing, and messaging tailored to each visitor.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Personalization & Recommendation Engine - Zion Tech Group",
+    "description": "Real-time personalization for websites, apps, and e-commerce — dynamic content, product recommendations, pricing, and messaging tailored to each visitor.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-personalization-engine"
+    }
+  },
+  "features": [
+    "Real-time visitor behavior tracking and profiling",
+    "Dynamic content serving based on user segments",
+    "Cross-channel personalized messaging",
+    "AI-powered product recommendation engine",
+    "A/B/n testing with multi-armed bandit optimization"
+  ],
+  "benefits": [
+    "Reduce costs with ai personalization & recommendation engine",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

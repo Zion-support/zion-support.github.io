@@ -1,0 +1,29 @@
+{
+  "title": "ITIL Service Management Platform",
+  "description": "ITIL-aligned ITSM: incident, problem, change, and release management with CMDB, knowledge base, and self-service portal.",
+  "basic": "$399/mo/month",
+  "pro": "$1,199/mo/month",
+  "enterprise": "$3,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "ITIL Service Management Platform - Zion Tech Group",
+    "description": "ITIL-aligned ITSM: incident, problem, change, and release management with CMDB, knowledge base, and self-service portal.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w175-itil-service-mgmt"
+    }
+  },
+  "features": [
+    "Incident and problem management",
+    "Change and release management",
+    "CMDB with auto-discovery",
+    "Knowledge base and self-service",
+    "Service catalog and request management"
+  ],
+  "benefits": [
+    "ITIL best practices out of the box",
+    "CMDB auto-discovery keeps data current",
+    "Self-service portal reduces ticket volume",
+    "SLA tracking ensures service quality"
+  ]
+}

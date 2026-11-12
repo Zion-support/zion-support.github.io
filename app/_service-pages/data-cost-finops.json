@@ -1,0 +1,29 @@
+{
+  "title": "Data Cost Governance & FinOps",
+  "description": "Track per-table, per-query cloud data spend. AI recommends materialised views, query optimisation, and warehouse right-sizing to lower your bill by 20-40%.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Data Cost Governance & FinOps - Zion Tech Group",
+    "description": "Track per-table, per-query cloud data spend. AI recommends materialised views, query optimisation, and warehouse right-sizing to lower your bill by 20-40%.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/data-cost-finops"
+    }
+  },
+  "features": [
+    "Per-query and per-table cost tracing",
+    "AI rightsizing recommendations",
+    "Materialised view recommendations",
+    "Tag-based cost governance",
+    "Chargeback and showback exports"
+  ],
+  "benefits": [
+    "Reduce costs with data cost governance & finops",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

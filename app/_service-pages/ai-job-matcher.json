@@ -1,0 +1,28 @@
+{
+  "title": "AI Job Matcher & Career Path",
+  "description": "Two-sided AI: job seeker resume vs all open roles + candidate profile vs employer requirements. Fit scores gap analysis interview prep salary benchmark.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Job Matcher & Career Path - Zion Tech Group",
+    "description": "Two-sided AI: job seeker resume vs all open roles + candidate profile vs employer requirements. Fit scores gap analysis interview prep salary benchmark.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-job-matcher"
+    }
+  },
+  "features": [
+    "Two-sided job + candidate fit scoring",
+    "Gap analysis + interview prep",
+    "Salary benchmark + offer comparison",
+    "Employer short-list with fit rankings"
+  ],
+  "benefits": [
+    "Reduce costs with ai job matcher & career path",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

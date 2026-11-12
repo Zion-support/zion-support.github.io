@@ -1,0 +1,29 @@
+{
+  "title": "FeedbackIQ — Customer Feedback Analytics",
+  "description": "Aggregate and analyze customer feedback from all channels. AI-powered sentiment analysis, trend detection, and automated action items.",
+  "basic": "$49/mo/month",
+  "pro": "$149/mo/month",
+  "enterprise": "$399/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "FeedbackIQ — Customer Feedback Analytics - Zion Tech Group",
+    "description": "Aggregate and analyze customer feedback from all channels. AI-powered sentiment analysis, trend detection, and automated action items.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-feedback-analytics"
+    }
+  },
+  "features": [
+    "Multi-channel feedback aggregation",
+    "AI sentiment analysis",
+    "Trend detection and alerting",
+    "Automated action item generation",
+    "Integration with Zendesk, Intercom, G2"
+  ],
+  "benefits": [
+    "Understand customers at scale",
+    "Catch issues before they escalate",
+    "Data-driven product decisions",
+    "Reduce churn with early warnings"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "title": "AI Port Congestion & Shipping Delay Predictor",
+  "description": "Predict port congestion 14 days ahead: vessel tracking, berth availability, customs delay prediction, and optimal routing recommendations. Used by 200+ shipping companies.",
+  "basic": "$299/month",
+  "pro": "$799/month",
+  "enterprise": "$2999/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Port Congestion & Shipping Delay Predictor - Zion Tech Group",
+    "description": "Predict port congestion 14 days ahead: vessel tracking, berth availability, customs delay prediction, and optimal routing recommendations. Used by 200+ shipping",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-port-congestion-predictor"
+    }
+  },
+  "features": [
+    "14-day port congestion prediction",
+    "Vessel tracking (AIS + satellite)",
+    "Berth availability forecasting",
+    "Customs delay prediction",
+    "Optimal port routing"
+  ],
+  "benefits": [
+    "14-day advance warning",
+    "Reduce demurrage costs by 40%",
+    "Optimize routing decisions"
+  ]
+}

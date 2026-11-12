@@ -1,0 +1,28 @@
+{
+  "title": "AI Meeting Assistant Pro",
+  "description": "Live transcription, action-item extraction, decision-log compiler, sentiment tracker, and auto-sync to Asana/Slack/Done with calendar.",
+  "basic": "$99/mo/month",
+  "pro": "$299/mo/month",
+  "enterprise": "$999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Meeting Assistant Pro - Zion Tech Group",
+    "description": "Live transcription, action-item extraction, decision-log compiler, sentiment tracker, and auto-sync to Asana/Slack/Done with calendar.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-meeting-assistant-pro"
+    }
+  },
+  "features": [
+    "Live transcription (OpenAI Whisper Real-time)",
+    "Action-item extraction + assignment",
+    "Decision-log compiler per meeting",
+    "Sentiment tracker per participant + aggregate"
+  ],
+  "benefits": [
+    "Reduce costs with ai meeting assistant pro",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

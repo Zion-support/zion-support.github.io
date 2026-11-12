@@ -1,0 +1,28 @@
+{
+  "title": "Feature Store Platform",
+  "description": "Centralised ML feature store with online (Redis) + offline (Snowflake/BigQuery) stores, point-in-time correctness, feature lineage, SDK.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Feature Store Platform - Zion Tech Group",
+    "description": "Centralised ML feature store with online (Redis) + offline (Snowflake/BigQuery) stores, point-in-time correctness, feature lineage, SDK.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/data-feature-store-platform"
+    }
+  },
+  "features": [
+    "Offline store (Snowflake/BigQuery/Parquet)",
+    "Online store (Redis low-latency <50ms)",
+    "Point-in-time correctness per feature",
+    "Feature lineage + SDK (Python/Java)"
+  ],
+  "benefits": [
+    "Reduce costs with feature store platform",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

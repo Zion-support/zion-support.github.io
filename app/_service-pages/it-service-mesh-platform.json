@@ -1,0 +1,29 @@
+{
+  "title": "IT Service Mesh Platform",
+  "description": "Enterprise service mesh for microservices communication, security, and observability. mTLS encryption, traffic management, circuit breaking, and distributed tracing across Kubernetes clusters.",
+  "basic": "$1,499/mo/month",
+  "pro": "$4,499/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "IT Service Mesh Platform - Zion Tech Group",
+    "description": "Enterprise service mesh for microservices communication, security, and observability. mTLS encryption, traffic management, circuit breaking, and distributed tra",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-service-mesh-platform"
+    }
+  },
+  "features": [
+    "Automatic mTLS encryption",
+    "Traffic routing and canary deployments",
+    "Circuit breaking and retry policies",
+    "Distributed tracing (OpenTelemetry)",
+    "Multi-cluster federation"
+  ],
+  "benefits": [
+    "Secure microservices communication",
+    "Zero-downtime deployments",
+    "Full observability across services",
+    "Simplify multi-cluster management"
+  ]
+}

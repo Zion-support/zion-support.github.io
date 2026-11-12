@@ -1,0 +1,29 @@
+{
+  "title": "AI Translation & Localization Platform",
+  "description": "AI-powered translation and localization for websites, apps, docs, and marketing. Go beyond translation with cultural adaptation, SEO optimization, and quality scoring.",
+  "basic": "$199/mo/month",
+  "pro": "$599/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Translation & Localization Platform - Zion Tech Group",
+    "description": "AI-powered translation and localization for websites, apps, docs, and marketing. Go beyond translation with cultural adaptation, SEO optimization, and quality s",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-ai-localization"
+    }
+  },
+  "features": [
+    "AI translation with domain-specific models",
+    "Cultural adaptation and localization review",
+    "SEO-optimized translation for each locale",
+    "Quality scoring with human-in-the-loop",
+    "Integration with CMS, GitHub, Figma"
+  ],
+  "benefits": [
+    "Launch in 100+ languages in weeks",
+    "Reduce translation costs by 70%",
+    "Maintain brand voice across all locales",
+    "SEO-optimized for each target market"
+  ]
+}

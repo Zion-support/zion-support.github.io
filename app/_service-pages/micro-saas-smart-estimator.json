@@ -1,0 +1,29 @@
+{
+  "title": "AI Estimator and Proposal Platform",
+  "description": "Generate accurate project estimates using AI historical data analysis.",
+  "basic": "$249/mo/month",
+  "pro": "$749/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Estimator and Proposal Platform - Zion Tech Group",
+    "description": "Generate accurate project estimates using AI historical data analysis.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-smart-estimator"
+    }
+  },
+  "features": [
+    "AI cost estimation",
+    "Scope breakdown",
+    "Proposal generator",
+    "Historical analysis",
+    "CRM integration"
+  ],
+  "benefits": [
+    "3x faster estimates",
+    "25% more wins",
+    "Professional proposals",
+    "Data-driven pricing"
+  ]
+}

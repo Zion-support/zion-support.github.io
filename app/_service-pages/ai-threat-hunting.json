@@ -1,0 +1,28 @@
+{
+  "title": "AI Threat Hunting & Investigation",
+  "description": "AI-assisted threat hunting: hypothesis-driven search across SIEM, EDR, network, and cloud logs. Auto-generates hunting queries, correlates anomalies, and produces confirmed incidents with remediation steps.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Threat Hunting & Investigation - Zion Tech Group",
+    "description": "AI-assisted threat hunting: hypothesis-driven search across SIEM, EDR, network, and cloud logs. Auto-generates hunting queries, correlates anomalies, and produc",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-threat-hunting"
+    }
+  },
+  "features": [
+    "Intelligent automation and orchestration",
+    "Enterprise-grade integration",
+    "Real-time monitoring and alerts",
+    "Scalable multi-tenant architecture"
+  ],
+  "benefits": [
+    "Reduce costs with ai threat hunting & investigation",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

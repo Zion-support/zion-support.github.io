@@ -1,0 +1,29 @@
+{
+  "title": "Intelligent Load Balancer",
+  "description": "Layer 4 and Layer 7 load balancing with health checks, sticky sessions, rate limiting, WAF included, and auto-scaling across regions.",
+  "basic": "$99/mo/month",
+  "pro": "$349/mo/month",
+  "enterprise": "$1,299/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Intelligent Load Balancer - Zion Tech Group",
+    "description": "Layer 4 and Layer 7 load balancing with health checks, sticky sessions, rate limiting, WAF included, and auto-scaling across regions.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/load-balancer-service"
+    }
+  },
+  "features": [
+    "L4 + L7 simultaneous",
+    "Health check + failover",
+    "Rate limiting + WAF built-in",
+    "Session stickiness config",
+    "Anycast global routing"
+  ],
+  "benefits": [
+    "Reduce costs with intelligent load balancer",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

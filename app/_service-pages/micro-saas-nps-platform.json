@@ -1,0 +1,29 @@
+{
+  "title": "NPS Pro — Net Promoter Score Micro-SaaS",
+  "description": "NPS survey and feedback management for customer success teams. Automated surveys, trend analysis, and closed-loop follow-up workflows.",
+  "basic": "$39/mo/month",
+  "pro": "$119/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "NPS Pro — Net Promoter Score Micro-SaaS - Zion Tech Group",
+    "description": "NPS survey and feedback management for customer success teams. Automated surveys, trend analysis, and closed-loop follow-up workflows.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-nps-platform"
+    }
+  },
+  "features": [
+    "Automated NPS surveys",
+    "Real-time score tracking",
+    "Segmented analysis",
+    "Closed-loop follow-up workflows",
+    "Integration with CRM and helpdesk"
+  ],
+  "benefits": [
+    "Track customer loyalty in real-time",
+    "Identify detractors before they churn",
+    "Close the feedback loop automatically",
+    "Benchmark against industry standards"
+  ]
+}

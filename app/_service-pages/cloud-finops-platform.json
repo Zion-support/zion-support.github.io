@@ -1,0 +1,29 @@
+{
+  "title": "Cloud FinOps Platform",
+  "description": "Comprehensive FinOps platform for cloud cost management. Showback/chargeback, reserved instance optimization, waste detection, and unit economics tracking.",
+  "basic": "$499/mo/month",
+  "pro": "$1,499/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Cloud FinOps Platform - Zion Tech Group",
+    "description": "Comprehensive FinOps platform for cloud cost management. Showback/chargeback, reserved instance optimization, waste detection, and unit economics tracking.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cloud-finops-platform"
+    }
+  },
+  "features": [
+    "Multi-cloud cost visibility",
+    "Showback and chargeback",
+    "RI and Savings Plans optimization",
+    "Waste detection and auto-remediation",
+    "Unit economics (cost per customer, per feature)"
+  ],
+  "benefits": [
+    "Reduce cloud spend by 30%",
+    "Eliminate waste automatically",
+    "Business-aligned cost decisions",
+    "Accurate forecasting"
+  ]
+}

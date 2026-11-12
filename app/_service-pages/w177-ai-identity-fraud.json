@@ -1,0 +1,29 @@
+{
+  "title": "AI Identity Fraud Detection",
+  "description": "Detect identity fraud: document verification, biometrics, device fingerprinting, behavioral analysis. Reduce fraud 60%.",
+  "basic": "$599/mo/month",
+  "pro": "$1,799/mo/month",
+  "enterprise": "$5,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Identity Fraud Detection - Zion Tech Group",
+    "description": "Detect identity fraud: document verification, biometrics, device fingerprinting, behavioral analysis. Reduce fraud 60%.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w177-ai-identity-fraud"
+    }
+  },
+  "features": [
+    "Document authenticity verification",
+    "Facial biometrics and liveness detection",
+    "Device fingerprinting and risk scoring",
+    "Behavioral pattern analysis",
+    "Synthetic identity detection"
+  ],
+  "benefits": [
+    "Reduce fraud losses by 60%",
+    "Document verification in seconds",
+    "Synthetic identity detection",
+    "Real-time API for instant decisions"
+  ]
+}

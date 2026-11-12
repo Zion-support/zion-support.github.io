@@ -1,0 +1,28 @@
+{
+  "title": "Log Analytics & SIP Platform",
+  "description": "Petabyte-scale log ingestion, structured parsing, Grafana/Loki/Tempo correlation, and retention tiered hot/warm/cold.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Log Analytics & SIP Platform - Zion Tech Group",
+    "description": "Petabyte-scale log ingestion, structured parsing, Grafana/Loki/Tempo correlation, and retention tiered hot/warm/cold.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/data-log-analytics-platform"
+    }
+  },
+  "features": [
+    "Grafana Loki index + LogQL query",
+    "Log parsing via grok/JSON/regex pipeline",
+    "Trace correlation via OpenTelemetry span ID",
+    "Hot/warm/cold tiered retention policy"
+  ],
+  "benefits": [
+    "Reduce costs with log analytics & sip platform",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

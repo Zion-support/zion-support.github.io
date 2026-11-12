@@ -1,0 +1,29 @@
+{
+  "title": "AI Voice Agent Platform",
+  "description": "Deploy conversational AI voice agents for customer service, outbound calls, appointment scheduling, and lead qualification with natural speech.",
+  "basic": "$2,499/mo/month",
+  "pro": "$4,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Voice Agent Platform - Zion Tech Group",
+    "description": "Deploy conversational AI voice agents for customer service, outbound calls, appointment scheduling, and lead qualification with natural speech.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-voice-agent-platform"
+    }
+  },
+  "features": [
+    "Natural voice synthesis",
+    "Real-time speech recognition",
+    "Multi-language support",
+    "CRM integration",
+    "Call analytics and scoring"
+  ],
+  "benefits": [
+    "Reduce costs with ai voice agent platform",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

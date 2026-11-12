@@ -1,0 +1,29 @@
+{
+  "title": "AI Warranty & Claims Management Platform",
+  "description": "AI-powered warranty management that automates claims processing, detects fraud, and predicts warranty costs. Reduce claims processing time by 80%.",
+  "basic": "$299/mo/month",
+  "pro": "$799/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Warranty & Claims Management Platform - Zion Tech Group",
+    "description": "AI-powered warranty management that automates claims processing, detects fraud, and predicts warranty costs. Reduce claims processing time by 80%.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-ai-warranty-manager"
+    }
+  },
+  "features": [
+    "Automated warranty claims processing",
+    "AI fraud detection for warranty claims",
+    "Predictive warranty cost forecasting",
+    "Customer self-service warranty portal",
+    "Integration with ERP and CRM systems"
+  ],
+  "benefits": [
+    "80% faster claims processing",
+    "Detect warranty fraud with 95% accuracy",
+    "Forecast warranty costs within 5%",
+    "Identify product quality issues early"
+  ]
+}

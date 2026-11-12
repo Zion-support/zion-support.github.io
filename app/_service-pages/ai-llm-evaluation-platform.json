@@ -1,0 +1,30 @@
+{
+  "title": "LLM Evaluation & Benchmarking Platform",
+  "description": "Comprehensive evaluation platform for large language models. Automated benchmarking, human evaluation pipelines, A/B testing, safety scoring, and regulatory compliance checks.",
+  "basic": "$N/A/month",
+  "pro": "$N/A/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "LLM Evaluation & Benchmarking Platform - Zion Tech Group",
+    "description": "Comprehensive evaluation platform for large language models. Automated benchmarking, human evaluation pipelines, A/B testing, safety scoring, and regulatory com",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-llm-evaluation-platform"
+    }
+  },
+  "features": [
+    "Automated benchmarking",
+    "Human evaluation pipelines",
+    "A/B testing framework",
+    "Safety scoring",
+    "Bias detection"
+  ],
+  "benefits": [
+    "60% faster model selection",
+    "Objective quality metrics",
+    "Safety compliance",
+    "Team collaboration",
+    "Historical tracking"
+  ]
+}

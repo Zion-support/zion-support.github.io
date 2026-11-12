@@ -1,0 +1,29 @@
+{
+  "title": "AI Energy Optimization & Sustainability",
+  "description": "AI-driven energy consumption optimization for buildings, data centers, and manufacturing — reduce costs, meet ESG targets, and automate sustainability reporting.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Energy Optimization & Sustainability - Zion Tech Group",
+    "description": "AI-driven energy consumption optimization for buildings, data centers, and manufacturing — reduce costs, meet ESG targets, and automate sustainability reporting",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-energy-optimization"
+    }
+  },
+  "features": [
+    "AI-powered energy load forecasting and optimization",
+    "HVAC, lighting, and power system automated control",
+    "Carbon emissions tracking with ESG reporting",
+    "Peer benchmarking and efficiency gap analysis",
+    "Renewable energy integration recommendations"
+  ],
+  "benefits": [
+    "Reduce costs with ai energy optimization & sustainability",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

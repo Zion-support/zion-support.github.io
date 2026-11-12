@@ -1,0 +1,29 @@
+{
+  "title": "AI Self-Healing Kubernetes Platform",
+  "description": "Kubernetes operations platform powered by AI: auto-remediation of failing pods, cluster drift detection, workload auto-scaling, cost-aware scheduling, and security policy enforcement with zero-downtime rollouts.",
+  "basic": "$2,499/mo/month",
+  "pro": "$4,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Self-Healing Kubernetes Platform - Zion Tech Group",
+    "description": "Kubernetes operations platform powered by AI: auto-remediation of failing pods, cluster drift detection, workload auto-scaling, cost-aware scheduling, and secur",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-self-healing-kubernetes-platform"
+    }
+  },
+  "features": [
+    "AI anomaly detection + auto-remediation",
+    "Cluster drift detection & drift correction",
+    "Workload-aware auto-scaling (predictive)",
+    "Security policy enforcement (OPA/Gatekeeper)",
+    "Zero-downtime canary + blue-green deploys"
+  ],
+  "benefits": [
+    "Reduce costs with ai self-healing kubernetes platform",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

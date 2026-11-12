@@ -1,0 +1,29 @@
+{
+  "title": "Technical Writing & Developer Documentation",
+  "description": "Developer-first docs: OpenAPI reference, SDK guides with runnable code snippets, architecture decision records, changelog from git, embedded Swagger UI.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Technical Writing & Developer Documentation - Zion Tech Group",
+    "description": "Developer-first docs: OpenAPI reference, SDK guides with runnable code snippets, architecture decision records, changelog from git, embedded Swagger UI.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/tech-writing-docs"
+    }
+  },
+  "features": [
+    "OpenAPI auto-generated per route with examples",
+    "SDK docs with runnable JS/Python/Go code",
+    "Architecture decision records from PR discussion",
+    "Changelog auto-generated from git tags + commits",
+    "Interactive API explorer (Swagger UI) embedded"
+  ],
+  "benefits": [
+    "Reduce costs with technical writing & developer documentation",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "AI Marine & Fisheries Sustainability Monitor",
+  "description": "Satellite + IoT ocean analytics: track fish stocks, detect illegal fishing, monitor coral reef health, and model climate impact on marine ecosystems. Supports MSC certification and UN SDG 14 reporting.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Marine & Fisheries Sustainability Monitor - Zion Tech Group",
+    "description": "Satellite + IoT ocean analytics: track fish stocks, detect illegal fishing, monitor coral reef health, and model climate impact on marine ecosystems. Supports M",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-marine-fisheries-sustainability"
+    }
+  },
+  "features": [
+    "Satellite & AIS vessel tracking",
+    "Fish stock abundance estimation",
+    "Illegal fishing detection & alerting",
+    "Coral reef health monitoring",
+    "UN SDG 14 compliance reporting"
+  ],
+  "benefits": [
+    "Reduce costs with ai marine & fisheries sustainability monitor",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

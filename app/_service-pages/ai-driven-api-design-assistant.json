@@ -1,0 +1,29 @@
+{
+  "title": "AI-Driven API Design Assistant",
+  "description": "Design, document, and validate APIs using natural language specs; auto-generate OpenAPI/Swagger definitions, SDKs, and mock servers.",
+  "basic": "$99/mo/month",
+  "pro": "$299/mo/month",
+  "enterprise": "$999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI-Driven API Design Assistant - Zion Tech Group",
+    "description": "Design, document, and validate APIs using natural language specs; auto-generate OpenAPI/Swagger definitions, SDKs, and mock servers.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-driven-api-design-assistant"
+    }
+  },
+  "features": [
+    "Natural language to OpenAPI 3.0 spec",
+    "Schema validation & best practice linting",
+    "Auto-generated client SDKs (10+ languages)",
+    "Mock server with configurable responses",
+    "Breaking change detection across versions"
+  ],
+  "benefits": [
+    "Reduce costs with ai-driven api design assistant",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

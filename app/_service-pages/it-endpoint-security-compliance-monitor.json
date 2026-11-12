@@ -1,0 +1,28 @@
+{
+  "title": "Endpoint Security & Compliance Monitor",
+  "description": "Endpoint security continuous monitoring: EDR detection + endpoint firewall + exploit prevention, CVE auto-fix via patch catalog, compliance posture for HIPAA/PCI/SOX/ISO27001 with automated audit evidence export.",
+  "basic": "$399/mo/month",
+  "pro": "$999/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Endpoint Security & Compliance Monitor - Zion Tech Group",
+    "description": "Endpoint security continuous monitoring: EDR detection + endpoint firewall + exploit prevention, CVE auto-fix via patch catalog, compliance posture for HIPAA/PC",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-endpoint-security-compliance-monitor"
+    }
+  },
+  "features": [
+    "EDR engine with behavioural analytics, endpoint firewall, exploit prevention",
+    "Patch catalog covering CVE/third-party blobs — auto-deploy fix per deployment group",
+    "Compliance posture dashboard for HIPAA/PCI/SOX/ISO27001/GDPR",
+    "Automated audit evidence export package per framework on demand"
+  ],
+  "benefits": [
+    "Reduce costs with endpoint security & compliance monitor",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

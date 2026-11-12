@@ -1,0 +1,29 @@
+{
+  "title": "Process Mining Deep Dive",
+  "description": "Deep-dive process analytics: auto-discover process maps from ERP, CRM, and BPM event logs; conformance checking per transaction; bottleneck and rework hotspot analysis with cycle-time and handover waste; RPA opportunity scoring per step; executive KPI dashboard.",
+  "basic": "$99/mo/month",
+  "pro": "$299/mo/month",
+  "enterprise": "$999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Process Mining Deep Dive - Zion Tech Group",
+    "description": "Deep-dive process analytics: auto-discover process maps from ERP, CRM, and BPM event logs; conformance checking per transaction; bottleneck and rework hotspot a",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automation-process-mining-deep-dive"
+    }
+  },
+  "features": [
+    "Auto-discover process maps from ERP, CRM, and BPM event logs including SAP, Oracle, Salesforce, Jira, and ServiceNow",
+    "Conformance checking — compare actual behaviour against the ideal process path with deviation scoring per transaction",
+    "Bottleneck, rework, and hotspot analysis — queue time, cycle time, and handover waste per step",
+    "RPA opportunity score per step — suggests which steps to auto-route with effort estimate",
+    "Executive dashboard with process KPIs, SLA drift, and cost-per-transaction trend"
+  ],
+  "benefits": [
+    "Reduce costs with process mining deep dive",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

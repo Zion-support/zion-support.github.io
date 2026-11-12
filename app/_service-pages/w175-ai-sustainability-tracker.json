@@ -1,0 +1,29 @@
+{
+  "title": "AI Sustainability & Carbon Tracker",
+  "description": "AI-powered carbon accounting, ESG metrics, and sustainability reporting. Scope 1/2/3 emissions, science-based targets, and CSRD/TCFD reporting.",
+  "basic": "$399/mo/month",
+  "pro": "$1,199/mo/month",
+  "enterprise": "$3,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Sustainability & Carbon Tracker - Zion Tech Group",
+    "description": "AI-powered carbon accounting, ESG metrics, and sustainability reporting. Scope 1/2/3 emissions, science-based targets, and CSRD/TCFD reporting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w175-ai-sustainability-tracker"
+    }
+  },
+  "features": [
+    "Scope 1/2/3 emissions calculation",
+    "Science-based target tracking (SBTi)",
+    "ESG metric collection and scoring",
+    "CSRD and TCFD report generation",
+    "Supply chain carbon mapping"
+  ],
+  "benefits": [
+    "Automated carbon accounting eliminates spreadsheets",
+    "SBTi progress tracking for net-zero goals",
+    "CSRD/TCFD reports generated automatically",
+    "Supply chain carbon visibility"
+  ]
+}

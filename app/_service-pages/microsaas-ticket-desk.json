@@ -1,0 +1,28 @@
+{
+  "title": "TicketDesk - Help Desk",
+  "description": "Lightweight help desk and ticketing system with SLA tracking, canned responses, and knowledge base integration. Perfect for small teams.",
+  "basic": "$29/mo/month",
+  "pro": "$79/mo/month",
+  "enterprise": "$149/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "TicketDesk - Help Desk - Zion Tech Group",
+    "description": "Lightweight help desk and ticketing system with SLA tracking, canned responses, and knowledge base integration. Perfect for small teams.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/microsaas-ticket-desk"
+    }
+  },
+  "features": [
+    "Ticket Management",
+    "SLA Tracking",
+    "Canned Responses",
+    "Knowledge Base",
+    "Team Collaboration"
+  ],
+  "benefits": [
+    "Improve response times",
+    "Reduce ticket backlog",
+    "Scale support easily"
+  ]
+}

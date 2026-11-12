@@ -1,0 +1,29 @@
+{
+  "title": "AI Real Estate Investment Analysis Platform",
+  "description": "AI-powered real estate investment analysis with market forecasting, property valuation, risk assessment, and portfolio optimization.",
+  "basic": "$499/mo/month",
+  "pro": "$1,499/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Real Estate Investment Analysis Platform - Zion Tech Group",
+    "description": "AI-powered real estate investment analysis with market forecasting, property valuation, risk assessment, and portfolio optimization.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-real-estate-investment-analyzer"
+    }
+  },
+  "features": [
+    "Automated property valuation (AVM)",
+    "Market trend forecasting",
+    "Rental yield optimization",
+    "Risk scoring for neighborhoods",
+    "Portfolio diversification analysis"
+  ],
+  "benefits": [
+    "Make data-driven investment decisions",
+    "Identify undervalued properties",
+    "Optimize portfolio returns",
+    "Reduce investment risk"
+  ]
+}

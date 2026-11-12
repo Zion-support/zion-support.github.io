@@ -1,0 +1,29 @@
+{
+  "title": "IT Vendor Management & Optimization",
+  "description": "Manage IT vendors and contracts: spend analysis, contract optimization, SLA tracking, and vendor risk assessment. Reduce vendor spend by 15-25%.",
+  "basic": "$499/mo/month",
+  "pro": "$1,499/mo/month",
+  "enterprise": "$4,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "IT Vendor Management & Optimization - Zion Tech Group",
+    "description": "Manage IT vendors and contracts: spend analysis, contract optimization, SLA tracking, and vendor risk assessment. Reduce vendor spend by 15-25%.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w175-it-vendor-management"
+    }
+  },
+  "features": [
+    "Vendor spend analysis and benchmarking",
+    "Contract negotiation and optimization",
+    "SLA tracking and performance monitoring",
+    "Vendor risk assessment and scoring",
+    "Renewal management and timing"
+  ],
+  "benefits": [
+    "Reduce vendor spend by 15-25%",
+    "SLA tracking holds vendors accountable",
+    "Risk scoring prevents vendor single points of failure",
+    "Consolidation reduces management overhead"
+  ]
+}

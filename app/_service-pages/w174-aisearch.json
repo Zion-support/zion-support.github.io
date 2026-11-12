@@ -1,0 +1,29 @@
+{
+  "title": "AISearch — Site Search Intelligence",
+  "description": "AI-powered site search with natural language understanding, typo tolerance, faceted filters, and merchandising rules. Replaces Algolia/Elastic with smarter search.",
+  "basic": "$29/mo/month",
+  "pro": "$99/mo/month",
+  "enterprise": "$349/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AISearch — Site Search Intelligence - Zion Tech Group",
+    "description": "AI-powered site search with natural language understanding, typo tolerance, faceted filters, and merchandising rules. Replaces Algolia/Elastic with smarter sear",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w174-aisearch"
+    }
+  },
+  "features": [
+    "Natural language query understanding",
+    "Typo tolerance and synonym expansion",
+    "Faceted filtering and sorting",
+    "Merchandising and boosting rules",
+    "Click and conversion analytics"
+  ],
+  "benefits": [
+    "Users find what they want 3x faster",
+    "NL queries reduce zero-result searches",
+    "Merchandising rules drive revenue",
+    "Search analytics reveal intent patterns"
+  ]
+}

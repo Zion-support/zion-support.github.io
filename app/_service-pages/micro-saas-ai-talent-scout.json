@@ -1,0 +1,29 @@
+{
+  "title": "AI Talent Scout Platform",
+  "description": "AI-powered recruitment with resume parsing and diversity analytics.",
+  "basic": "$399/mo/month",
+  "pro": "$1,199/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Talent Scout Platform - Zion Tech Group",
+    "description": "AI-powered recruitment with resume parsing and diversity analytics.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-ai-talent-scout"
+    }
+  },
+  "features": [
+    "Resume parsing",
+    "Candidate matching",
+    "Interview scheduling",
+    "Diversity analytics",
+    "ATS integration"
+  ],
+  "benefits": [
+    "50% faster hiring",
+    "40% better match",
+    "Diversity insights",
+    "Cost reduction"
+  ]
+}

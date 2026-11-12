@@ -1,0 +1,29 @@
+{
+  "title": "Cloud Refactoring and Modernization",
+  "description": "Refactor legacy apps for cloud: containerization, microservices decomposition, serverless conversion, data migration.",
+  "basic": "$9,999/month",
+  "pro": "$29,999/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Cloud Refactoring and Modernization - Zion Tech Group",
+    "description": "Refactor legacy apps for cloud: containerization, microservices decomposition, serverless conversion, data migration.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w177-cloud-refactor"
+    }
+  },
+  "features": [
+    "Application assessment and cloud fit",
+    "Containerization and Docker optimization",
+    "Microservices decomposition strategy",
+    "Serverless conversion assessment",
+    "Data migration and synchronization"
+  ],
+  "benefits": [
+    "Modernize legacy apps for cloud scale",
+    "Containerization improves deployment",
+    "Microservices enable independent teams",
+    "Serverless reduces operational burden"
+  ]
+}

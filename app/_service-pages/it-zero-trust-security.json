@@ -1,0 +1,30 @@
+{
+  "title": "Zero Trust Security Architecture",
+  "description": "Implement zero trust across your organization. Identity verification, micro-segmentation, least-privilege access, and continuous validation for every user, device, and application.",
+  "basic": "$N/A/month",
+  "pro": "$N/A/month",
+  "enterprise": "$N/A/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Zero Trust Security Architecture - Zion Tech Group",
+    "description": "Implement zero trust across your organization. Identity verification, micro-segmentation, least-privilege access, and continuous validation for every user, devi",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-zero-trust-security"
+    }
+  },
+  "features": [
+    "Identity verification",
+    "Micro-segmentation",
+    "Least-privilege access",
+    "Continuous validation",
+    "Device trust scoring"
+  ],
+  "benefits": [
+    "90% reduction in breach risk",
+    "Granular access control",
+    "Compliance automation",
+    "Reduced attack surface",
+    "Remote work security"
+  ]
+}

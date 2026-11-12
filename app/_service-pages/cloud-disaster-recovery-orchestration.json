@@ -1,0 +1,28 @@
+{
+  "title": "Disaster Recovery Orchestration",
+  "description": "Zero-downtime DR orchestration across regions: continuous async replication, warm-standby spin-up automation in 30 seconds, failover runbook executor with per-step human-halt, DR test runner, and RPO and RTO dashboard with graded SLA.",
+  "basic": "$99/mo/month",
+  "pro": "$349/mo/month",
+  "enterprise": "$1,299/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Disaster Recovery Orchestration - Zion Tech Group",
+    "description": "Zero-downtime DR orchestration across regions: continuous async replication, warm-standby spin-up automation in 30 seconds, failover runbook executor with per-s",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cloud-disaster-recovery-orchestration"
+    }
+  },
+  "features": [
+    "Asynchronous cross-region replication — zero-downtime writes at primary region",
+    "Warm-standby spin-up from snapshot in 30 seconds with no manual scripts",
+    "Failover runbook executor: 47-step runbook with per-step human halt available",
+    "DR test runner schedules quarterly drills and auto-reports pass or fail to management"
+  ],
+  "benefits": [
+    "Reduce costs with disaster recovery orchestration",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "AI Revenue Cycle Management Platform",
+  "description": "Automate healthcare revenue cycle from patient registration to final payment. AI-powered coding, claims submission, denial management, and payment reconciliation.",
+  "basic": "$2,499/mo/month",
+  "pro": "$7,499/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Revenue Cycle Management Platform - Zion Tech Group",
+    "description": "Automate healthcare revenue cycle from patient registration to final payment. AI-powered coding, claims submission, denial management, and payment reconciliatio",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/healthcare-revenue-cycle-management"
+    }
+  },
+  "features": [
+    "Automated medical coding (ICD-10, CPT)",
+    "Electronic claims submission",
+    "Denial prediction and prevention",
+    "Payment reconciliation",
+    "Patient cost estimation"
+  ],
+  "benefits": [
+    "Reduce claim denials by 50%",
+    "Accelerate payment cycles",
+    "Improve coding accuracy",
+    "Increase revenue capture"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "AI Retail Personalization & Recommendation Engine",
+  "description": "Real-time product recommendation and personalization engine for e-commerce using collaborative filtering, NLP, and computer vision.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Retail Personalization & Recommendation Engine - Zion Tech Group",
+    "description": "Real-time product recommendation and personalization engine for e-commerce using collaborative filtering, NLP, and computer vision.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-retail-personalization-engine"
+    }
+  },
+  "features": [
+    "Real-time product recommendations",
+    "Visual search and similarity matching",
+    "Personalized email and push campaigns",
+    "Dynamic pricing optimization",
+    "Customer segmentation and targeting"
+  ],
+  "benefits": [
+    "Increase conversion by 35%",
+    "Boost average order value by 20%",
+    "Improve customer retention",
+    "Personalize at scale"
+  ]
+}

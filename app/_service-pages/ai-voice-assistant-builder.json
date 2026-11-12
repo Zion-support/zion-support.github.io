@@ -1,0 +1,29 @@
+{
+  "title": "AI Voice Assistant Builder Platform",
+  "description": "Build custom voice assistants for call centers, smart devices, and customer service. No-code dialog builder, NLU engine, and multi-channel deployment.",
+  "basic": "$499/mo/month",
+  "pro": "$1,499/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Voice Assistant Builder Platform - Zion Tech Group",
+    "description": "Build custom voice assistants for call centers, smart devices, and customer service. No-code dialog builder, NLU engine, and multi-channel deployment.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-voice-assistant-builder"
+    }
+  },
+  "features": [
+    "No-code dialog builder",
+    "Natural language understanding",
+    "Multi-language support (30+)",
+    "Integration with telephony (Twilio, Vonage)",
+    "Analytics and call analytics"
+  ],
+  "benefits": [
+    "Build voice assistants without coding",
+    "Reduce call center costs by 50%",
+    "Deploy across channels instantly",
+    "Continuous improvement with analytics"
+  ]
+}

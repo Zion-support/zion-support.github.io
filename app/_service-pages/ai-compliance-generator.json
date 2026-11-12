@@ -1,0 +1,29 @@
+{
+  "title": "AI Privacy Policy & Compliance Generator",
+  "description": "Generate compliant privacy policies, cookie banners, and consent management frameworks for GDPR, CCPA, HIPAA, and SOC 2 with one-click multi-version export.",
+  "basic": "$49/mo/month",
+  "pro": "$149/mo/month",
+  "enterprise": "$499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Privacy Policy & Compliance Generator - Zion Tech Group",
+    "description": "Generate compliant privacy policies, cookie banners, and consent management frameworks for GDPR, CCPA, HIPAA, and SOC 2 with one-click multi-version export.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-compliance-generator"
+    }
+  },
+  "features": [
+    "Multi-jurisdiction template engine",
+    "Cookie banner and consent builder",
+    "Policy version history and diff",
+    "Consent audit log",
+    "Legal review export package"
+  ],
+  "benefits": [
+    "Reduce costs with ai privacy policy & compliance generator",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

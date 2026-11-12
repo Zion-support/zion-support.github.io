@@ -1,0 +1,29 @@
+{
+  "title": "AI Predictive HR Analytics",
+  "description": "AI-powered workforce analytics: attrition prediction, performance forecasting, diversity analysis, and workforce planning. Make HR decisions with data, not intuition.",
+  "basic": "$399/mo/month",
+  "pro": "$1,199/mo/month",
+  "enterprise": "$3,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Predictive HR Analytics - Zion Tech Group",
+    "description": "AI-powered workforce analytics: attrition prediction, performance forecasting, diversity analysis, and workforce planning. Make HR decisions with data, not intu",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w175-ai-predictive-hr"
+    }
+  },
+  "features": [
+    "Employee attrition prediction (90 day horizon)",
+    "Performance trajectory forecasting",
+    "Diversity and pay equity analysis",
+    "Workforce planning and scenario modeling",
+    "Talent market benchmarking"
+  ],
+  "benefits": [
+    "Predict who will leave before they resign",
+    "Data-driven workforce planning",
+    "Diversity equity metrics for compliance",
+    "Skill gaps identified proactively"
+  ]
+}

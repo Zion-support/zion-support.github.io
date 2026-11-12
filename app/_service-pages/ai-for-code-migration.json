@@ -1,0 +1,29 @@
+{
+  "title": "AI-Assisted Code Migration & Refactoring",
+  "description": "Automate legacy codebase modernization: convert jQuery to React, Python 2 to 3, AngularJS to modern frameworks with semantic-preserving transformations.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI-Assisted Code Migration & Refactoring - Zion Tech Group",
+    "description": "Automate legacy codebase modernization: convert jQuery to React, Python 2 to 3, AngularJS to modern frameworks with semantic-preserving transformations.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-for-code-migration"
+    }
+  },
+  "features": [
+    "Language-to-language AST-based translation",
+    "Preserve business logic & edge cases",
+    "Interactive migration playground (preview changes)",
+    "Test generation for migrated functions",
+    "Gradual cutover strategy planning"
+  ],
+  "benefits": [
+    "Reduce costs with ai-assisted code migration & refactoring",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

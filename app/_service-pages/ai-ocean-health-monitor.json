@@ -1,0 +1,28 @@
+{
+  "title": "AI Ocean Health & Marine Ecosystem Monitor",
+  "description": "Satellite + sensor analysis for ocean health: algae bloom prediction, microplastic tracking, coral reef bleaching early warning, and illegal fishing detection.",
+  "basic": "$299/month",
+  "pro": "$799/month",
+  "enterprise": "$3499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Ocean Health & Marine Ecosystem Monitor - Zion Tech Group",
+    "description": "Satellite + sensor analysis for ocean health: algae bloom prediction, microplastic tracking, coral reef bleaching early warning, and illegal fishing detection.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-ocean-health-monitor"
+    }
+  },
+  "features": [
+    "Satellite ocean color analysis",
+    "Algae bloom prediction (7-day)",
+    "Microplastic density mapping",
+    "Coral bleaching early warning",
+    "illegal fishing vessel detection"
+  ],
+  "benefits": [
+    "Predict algae blooms 7 days ahead",
+    "Track marine pollution in real-time",
+    "Protect coral reef ecosystems"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "E-Commerce Operations Automation",
+  "description": "Automate e-commerce ops: order processing, inventory sync, pricing rules, fraud screening, and marketplace listings across Shopify, Amazon, Walmart.",
+  "basic": "$99/mo/month",
+  "pro": "$299/mo/month",
+  "enterprise": "$999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "E-Commerce Operations Automation - Zion Tech Group",
+    "description": "Automate e-commerce ops: order processing, inventory sync, pricing rules, fraud screening, and marketplace listings across Shopify, Amazon, Walmart.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w174-ecommerce-automation"
+    }
+  },
+  "features": [
+    "Automated order processing and fulfilment",
+    "Multi-channel inventory synchronization",
+    "Dynamic pricing rules and competitor matching",
+    "Fraud screening and risk scoring",
+    "Marketplace listing management (Amazon, Walmart, eBay)"
+  ],
+  "benefits": [
+    "Process orders 5x faster with automation",
+    "Inventory sync prevents overselling",
+    "Dynamic pricing maximizes margin",
+    "Fraud screening reduces chargebacks"
+  ]
+}

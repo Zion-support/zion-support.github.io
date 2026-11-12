@@ -1,0 +1,29 @@
+{
+  "title": "AI Image Generation Studio",
+  "description": "Production image generation with fine-tuned models, brand consistency, style presets, and batch processing. Generate marketing assets, product images, and social content at scale.",
+  "basic": "$79/mo/month",
+  "pro": "$249/mo/month",
+  "enterprise": "$799/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Image Generation Studio - Zion Tech Group",
+    "description": "Production image generation with fine-tuned models, brand consistency, style presets, and batch processing. Generate marketing assets, product images, and socia",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w174-ai-image-gen-studio"
+    }
+  },
+  "features": [
+    "Fine-tuned models for brand consistency",
+    "Style presets and reference image control",
+    "Batch generation with variation management",
+    "Upscaling and outpainting",
+    "Background removal and replacement"
+  ],
+  "benefits": [
+    "On-brand imagery every time with fine-tuning",
+    "Generate 1000s of marketing images in minutes",
+    "No more stock photo licensing costs",
+    "Consistent brand style across all outputs"
+  ]
+}

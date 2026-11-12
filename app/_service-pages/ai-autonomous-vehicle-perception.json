@@ -1,0 +1,29 @@
+{
+  "title": "AI Autonomous Vehicle Perception System",
+  "description": "Computer vision and sensor fusion for autonomous vehicles. Object detection, lane tracking, pedestrian prediction, and real-time decision making.",
+  "basic": "$9,999/mo/month",
+  "pro": "$29,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Autonomous Vehicle Perception System - Zion Tech Group",
+    "description": "Computer vision and sensor fusion for autonomous vehicles. Object detection, lane tracking, pedestrian prediction, and real-time decision making.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-autonomous-vehicle-perception"
+    }
+  },
+  "features": [
+    "3D object detection",
+    "Lane and road boundary tracking",
+    "Pedestrian and cyclist prediction",
+    "Traffic sign and signal recognition",
+    "Sensor fusion (camera, LiDAR, radar)"
+  ],
+  "benefits": [
+    "Improve autonomous driving safety",
+    "Reduce perception latency",
+    "Handle edge cases with AI",
+    "Accelerate AV development"
+  ]
+}

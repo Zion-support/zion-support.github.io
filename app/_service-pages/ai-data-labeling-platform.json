@@ -1,0 +1,28 @@
+{
+  "title": "AI Data Labeling & Annotation Platform",
+  "description": "High-quality data labeling for ML training with AI-assisted pre-labeling, quality control, and workforce management. Supports image, text, video, and audio annotation with 99%+ accuracy.",
+  "basic": "$N/A/month",
+  "pro": "$N/A/month",
+  "enterprise": "$2499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Data Labeling & Annotation Platform - Zion Tech Group",
+    "description": "High-quality data labeling for ML training with AI-assisted pre-labeling, quality control, and workforce management. Supports image, text, video, and audio anno",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-data-labeling-platform"
+    }
+  },
+  "features": [
+    "AI pre-labeling",
+    "Image annotation",
+    "Text classification",
+    "Video labeling",
+    "Audio transcription"
+  ],
+  "benefits": [
+    "70% faster labeling",
+    "99%+ accuracy",
+    "50% cost reduction vs manual"
+  ]
+}

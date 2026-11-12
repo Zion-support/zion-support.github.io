@@ -1,0 +1,29 @@
+{
+  "title": "Serverless API Production Platform",
+  "description": "Production serverless API: API Gateway + Lambda, OpenAPI-first gateway, per-route WAF+Shield, distributed tracing, CI/CD spec-to-gateway pipeline.",
+  "basic": "$29/mo/month",
+  "pro": "$149/mo/month",
+  "enterprise": "$499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Serverless API Production Platform - Zion Tech Group",
+    "description": "Production serverless API: API Gateway + Lambda, OpenAPI-first gateway, per-route WAF+Shield, distributed tracing, CI/CD spec-to-gateway pipeline.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/serverless-api-platform"
+    }
+  },
+  "features": [
+    "API Gateway + Lambda per route",
+    "OpenAPI-first gateway from spec",
+    "Per-route WAF + Shield DDoS protection",
+    "X-Ray distributed tracing per request",
+    "CI/CD spec-driven deploy pipeline"
+  ],
+  "benefits": [
+    "Reduce costs with serverless api production platform",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

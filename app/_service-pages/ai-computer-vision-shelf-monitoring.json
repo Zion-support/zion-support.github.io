@@ -1,0 +1,28 @@
+{
+  "title": "Computer Vision Shelf Monitoring",
+  "description": "Retail shelf stock-out detection, facings count, planogram compliance, and out-of-stock alert to store manager via Slack/POS.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Computer Vision Shelf Monitoring - Zion Tech Group",
+    "description": "Retail shelf stock-out detection, facings count, planogram compliance, and out-of-stock alert to store manager via Slack/POS.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-computer-vision-shelf-monitoring"
+    }
+  },
+  "features": [
+    "YOLOv8/RT-DETR shelf item detection",
+    "Stock-out detection per SKU per camera",
+    "Facings count + planogram compliance score",
+    "Slack/POS out-of-stock alert auto-create ticket"
+  ],
+  "benefits": [
+    "Reduce costs with computer vision shelf monitoring",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

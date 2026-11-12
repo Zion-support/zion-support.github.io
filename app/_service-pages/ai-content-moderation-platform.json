@@ -1,0 +1,28 @@
+{
+  "title": "AI Content Moderation Platform",
+  "description": "Multi-modal moderation (text/image/video): NSFW, hate-speech, PII, copyright, brand-safety classifier; moderation queue + human-review.",
+  "basic": "$2,499/mo/month",
+  "pro": "$4,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Content Moderation Platform - Zion Tech Group",
+    "description": "Multi-modal moderation (text/image/video): NSFW, hate-speech, PII, copyright, brand-safety classifier; moderation queue + human-review.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-content-moderation-platform"
+    }
+  },
+  "features": [
+    "Text/image/video multi-modal classifier",
+    "NSFW + hate-speech + PII + copyright tagging",
+    "Auto-approve with confidence score threshold",
+    "Moderation queue + human-review escalations"
+  ],
+  "benefits": [
+    "Reduce costs with ai content moderation platform",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

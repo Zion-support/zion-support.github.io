@@ -1,0 +1,28 @@
+{
+  "title": "AI Child Online Safety & Parental Control Platform",
+  "description": "Protect children online: content filtering, cyberbullying detection, screen time management, location tracking, and app monitoring. Age-adaptive AI that grows with the child.",
+  "basic": "$4.99/child/month",
+  "pro": "$9.99/child/month",
+  "enterprise": "$19.99/child/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Child Online Safety & Parental Control Platform - Zion Tech Group",
+    "description": "Protect children online: content filtering, cyberbullying detection, screen time management, location tracking, and app monitoring. Age-adaptive AI that grows w",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-child-online-safety"
+    }
+  },
+  "features": [
+    "AI content filtering (text, image, video)",
+    "Cyberbullying detection",
+    "Screen time & app management",
+    "Real-time location tracking",
+    "SOS emergency button"
+  ],
+  "benefits": [
+    "Catch 95% of threats",
+    "Age-appropriate protection",
+    "Empower safe digital habits"
+  ]
+}

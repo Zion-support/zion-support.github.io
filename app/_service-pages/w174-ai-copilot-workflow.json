@@ -1,0 +1,29 @@
+{
+  "title": "AI Copilot Workflow Builder",
+  "description": "Build AI copilots that embed in your employees workflow. Context-aware assistance in Slack, Teams, email, and browser with guardrails and knowledge grounding.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Copilot Workflow Builder - Zion Tech Group",
+    "description": "Build AI copilots that embed in your employees workflow. Context-aware assistance in Slack, Teams, email, and browser with guardrails and knowledge grounding.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w174-ai-copilot-workflow"
+    }
+  },
+  "features": [
+    "Copilot design and deployment",
+    "Context-aware assistance in flow of work",
+    "Multi-channel (Slack, Teams, email, browser extension)",
+    "Knowledge grounding (RAG) with your data",
+    "Guardrails and output validation"
+  ],
+  "benefits": [
+    "AI assistance where employees already work",
+    "Knowledge-grounded answers reduce hallucination",
+    "Guardrails ensure safe, on-brand output",
+    "Usage analytics prove ROI"
+  ]
+}

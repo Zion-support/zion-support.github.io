@@ -1,0 +1,29 @@
+{
+  "title": "Privileged Access Management",
+  "description": "PAM platform: just-in-time privilege elevation, live session recording with playback, FIPS-140-2 certified credential vault, break-glass override, least-privilege policy engine per role, and quarterly access certification auto-workflow.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Privileged Access Management - Zion Tech Group",
+    "description": "PAM platform: just-in-time privilege elevation, live session recording with playback, FIPS-140-2 certified credential vault, break-glass override, least-privile",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/security-privileged-access-management"
+    }
+  },
+  "features": [
+    "Just-in-time privilege elevation for cloud services, databases, and ops tools",
+    "Live session recording with video-plus-terminal playback and audit timestamping",
+    "FIPS-140-2 certified credential vault — secrets never persisted to disk",
+    "Break-glass override with approval chain and board-level notification per use",
+    "Least-privilege policy engine auto-generates per role and per system access policies"
+  ],
+  "benefits": [
+    "Reduce costs with privileged access management",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

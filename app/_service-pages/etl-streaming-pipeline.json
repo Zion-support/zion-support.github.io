@@ -1,0 +1,29 @@
+{
+  "title": "Streaming ETL Pipeline",
+  "description": "Sub-second streaming data pipelines with exactly-once delivery, windowed aggregations, schema evolution, and native connectors for Kafka, Pulsar, and Kinesis.",
+  "basic": "$199/mo/month",
+  "pro": "$599/mo/month",
+  "enterprise": "$1,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Streaming ETL Pipeline - Zion Tech Group",
+    "description": "Sub-second streaming data pipelines with exactly-once delivery, windowed aggregations, schema evolution, and native connectors for Kafka, Pulsar, and Kinesis.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/etl-streaming-pipeline"
+    }
+  },
+  "features": [
+    "Exactly-once delivery guarantee",
+    "Windowed aggregations",
+    "Schema evolution auto-handle",
+    "Kafka / Kinesis connectors",
+    "SQL-based transformation"
+  ],
+  "benefits": [
+    "Reduce costs with streaming etl pipeline",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

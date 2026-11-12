@@ -1,0 +1,29 @@
+{
+  "title": "Real-Time Streaming ETL with Apache Flink",
+  "description": "Managed Apache Flink streaming pipelines: sub-second event processing, exactly-once semantics, windowed aggregations, joins across Kafka/Pulsar/Kinesis sources, and built-in monitoring dashboards.",
+  "basic": "$199/mo/month",
+  "pro": "$599/mo/month",
+  "enterprise": "$1,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Real-Time Streaming ETL with Apache Flink - Zion Tech Group",
+    "description": "Managed Apache Flink streaming pipelines: sub-second event processing, exactly-once semantics, windowed aggregations, joins across Kafka/Pulsar/Kinesis sources,",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/realtime-streaming-etl-flink"
+    }
+  },
+  "features": [
+    "Sub-second event processing with Flink",
+    "Exactly-once guarantees, windowed aggregations",
+    "Kafka/Pulsar/Kinesis/S3 connectors",
+    "Stateful stream processing (CEP, session windows)",
+    "Managed deployment on K8s or serverless"
+  ],
+  "benefits": [
+    "Reduce costs with real-time streaming etl with apache flink",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "Multi-Tenant CRM Platform",
+  "description": "White-label CRM with contact management, pipeline tracking, email automation, and tenant isolation.",
+  "basic": "$499/mo/month",
+  "pro": "$1,499/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Multi-Tenant CRM Platform - Zion Tech Group",
+    "description": "White-label CRM with contact management, pipeline tracking, email automation, and tenant isolation.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-multi-tenant-crm"
+    }
+  },
+  "features": [
+    "Contact management",
+    "Pipeline tracking",
+    "Email automation",
+    "Analytics",
+    "Tenant isolation"
+  ],
+  "benefits": [
+    "Faster time-to-market",
+    "Per-tenant isolation",
+    "Revenue opportunity",
+    "Complete customization"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "title": "AI Loan Underwriting & Risk Scoring Engine",
+  "description": "Automate consumer and commercial loan underwriting: alternative data scoring, income verification, fraud detection, and FICO/NMFS-compliant decisioning. Processes applications in 30 seconds.",
+  "basic": "$499/month",
+  "pro": "$1499/month",
+  "enterprise": "$4999/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Loan Underwriting & Risk Scoring Engine - Zion Tech Group",
+    "description": "Automate consumer and commercial loan underwriting: alternative data scoring, income verification, fraud detection, and FICO/NMFS-compliant decisioning. Process",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-loan-underwriting-engine"
+    }
+  },
+  "features": [
+    "Alternative data credit scoring",
+    "Automated income verification",
+    "Fraud detection (identity, income)",
+    "FICO/NMFS compliant decisioning",
+    "Adverse action letter generation"
+  ],
+  "benefits": [
+    "Process loans in 30 seconds",
+    "Reduce defaults by 25%",
+    "Ensure fair lending compliance"
+  ]
+}

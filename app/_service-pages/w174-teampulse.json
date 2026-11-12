@@ -1,0 +1,29 @@
+{
+  "title": "TeamPulse — Employee Engagement",
+  "description": "Continuous employee engagement: pulse surveys, 1-on-1 templates, OKR tracking, and burnout detection. Actionable insights, not vanity metrics.",
+  "basic": "$4/user/mo/month",
+  "pro": "$8/user/mo/month",
+  "enterprise": "$15/user/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "TeamPulse — Employee Engagement - Zion Tech Group",
+    "description": "Continuous employee engagement: pulse surveys, 1-on-1 templates, OKR tracking, and burnout detection. Actionable insights, not vanity metrics.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w174-teampulse"
+    }
+  },
+  "features": [
+    "Pulse surveys (weekly, bi-weekly, custom)",
+    "1-on-1 meeting templates and tracking",
+    "OKR/goal setting and progress tracking",
+    "Burnout and disengagement risk scoring",
+    "Anonymous feedback channels"
+  ],
+  "benefits": [
+    "Detect disengagement before attrition",
+    "Pulse surveys replace annual engagement surveys",
+    "OKR alignment across teams",
+    "Manager coaching insights, not just scores"
+  ]
+}

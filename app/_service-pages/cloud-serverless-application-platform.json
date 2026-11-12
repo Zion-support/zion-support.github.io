@@ -1,0 +1,28 @@
+{
+  "title": "Cloud Serverless Application Platform",
+  "description": "Build and deploy serverless applications with auto-scrolling, event-driven architecture, API management, and edge computing capabilities.",
+  "basic": "$49/mo/month",
+  "pro": "$199/mo/month",
+  "enterprise": "$599/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Cloud Serverless Application Platform - Zion Tech Group",
+    "description": "Build and deploy serverless applications with auto-scrolling, event-driven architecture, API management, and edge computing capabilities.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cloud-serverless-application-platform"
+    }
+  },
+  "features": [
+    "Function-as-a-Service (FaaS)",
+    "Edge computing support",
+    "API gateway with rate limiting",
+    "Event-driven triggers",
+    "Built-in observability"
+  ],
+  "benefits": [
+    "Zero infrastructure management",
+    "Pay-per-execution pricing",
+    "Auto-scrolling to millions of requests"
+  ]
+}

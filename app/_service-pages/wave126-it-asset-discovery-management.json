@@ -1,0 +1,29 @@
+{
+  "title": "IT Asset Discovery & Management",
+  "description": "Agentless auto-discovery of every asset in your environment — hardware, software, cloud, and shadow IT. Full lifecycle tracking, CMDB integration, license optimization, and vulnerability correlation for complete IT visibility.",
+  "basic": "$N/A/month",
+  "pro": "$5997/month",
+  "enterprise": "$12997/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "IT Asset Discovery & Management - Zion Tech Group",
+    "description": "Agentless auto-discovery of every asset in your environment — hardware, software, cloud, and shadow IT. Full lifecycle tracking, CMDB integration, license optim",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/wave126-it-asset-discovery-management"
+    }
+  },
+  "features": [
+    "Agentless auto-discovery across network & cloud",
+    "Hardware & software inventory management",
+    "Shadow IT detection & SaaS rationalization",
+    "CMDB integration (ServiceNow, Jira, Freshservice)",
+    "Software license optimization & compliance"
+  ],
+  "benefits": [
+    "Know exactly what you have — eliminate blind spots",
+    "Reduce software spend by 20-30% through license optimization",
+    "Shut down shadow IT before it becomes a risk",
+    "Single source of truth for audit and compliance"
+  ]
+}

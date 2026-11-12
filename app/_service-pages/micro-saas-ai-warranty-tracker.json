@@ -1,0 +1,29 @@
+{
+  "title": "Micro-SaaS AI Warranty & Asset Tracker",
+  "description": "Track warranties, service contracts, and asset maintenance schedules with AI-powered reminders and predictive maintenance alerts. Never miss a warranty claim again.",
+  "basic": "$39/mo/month",
+  "pro": "$99/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Micro-SaaS AI Warranty & Asset Tracker - Zion Tech Group",
+    "description": "Track warranties, service contracts, and asset maintenance schedules with AI-powered reminders and predictive maintenance alerts. Never miss a warranty claim ag",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-ai-warranty-tracker"
+    }
+  },
+  "features": [
+    "Warranty registration and tracking",
+    "AI predictive maintenance alerts",
+    "Service contract management",
+    "Automated warranty claim filing",
+    "Asset depreciation tracking"
+  ],
+  "benefits": [
+    "Recover 15% more warranty claims",
+    "Avoid unexpected equipment failures",
+    "Optimize maintenance schedules",
+    "Track total cost of ownership"
+  ]
+}

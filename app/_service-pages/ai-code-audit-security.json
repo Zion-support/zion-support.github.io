@@ -1,0 +1,29 @@
+{
+  "title": "AI Code Audit & Security Scanner",
+  "description": "Comprehensive static analysis powered by AI: detect vulnerabilities, code smells, license compliance issues, and security anti-patterns before they reach production.",
+  "basic": "$299/mo/month",
+  "pro": "$799/mo/month",
+  "enterprise": "$2,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Code Audit & Security Scanner - Zion Tech Group",
+    "description": "Comprehensive static analysis powered by AI: detect vulnerabilities, code smells, license compliance issues, and security anti-patterns before they reach produc",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-code-audit-security"
+    }
+  },
+  "features": [
+    "Static Application Security Testing (SAST)",
+    "Secrets & credential leakage detection",
+    "Dependency vulnerability scanning",
+    "License compliance & risk assessment",
+    "Remediation guidance with code suggestions"
+  ],
+  "benefits": [
+    "Reduce costs with ai code audit & security scanner",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "title": "Adaptive Vision AI for Government",
+  "description": "Vision AI system powered by adaptive computer vision models for government analysis and automated visual inspection.",
+  "basic": "$258/month",
+  "pro": "$648/month",
+  "enterprise": "$1948/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Adaptive Vision AI for Government - Zion Tech Group",
+    "description": "Vision AI system powered by adaptive computer vision models for government analysis and automated visual inspection.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/adaptive-vision-ai-for-government-a5b5a662"
+    }
+  },
+  "features": [
+    "Real-time object detection",
+    "Image classification",
+    "Anomaly detection",
+    "Visual inspection"
+  ],
+  "benefits": [
+    "Automated quality control",
+    "Reduced inspection costs",
+    "Defect detection",
+    "Visual search"
+  ]
+}

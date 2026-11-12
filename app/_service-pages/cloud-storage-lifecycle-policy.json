@@ -1,0 +1,28 @@
+{
+  "title": "Cloud Storage Lifecycle & Compliance",
+  "description": "S3/GCS/Azure Blob lifecycle: retention policy, litigation hold, WORM locking, legal export, and SaaS-data export automation.",
+  "basic": "$99/mo/month",
+  "pro": "$349/mo/month",
+  "enterprise": "$1,299/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Cloud Storage Lifecycle & Compliance - Zion Tech Group",
+    "description": "S3/GCS/Azure Blob lifecycle: retention policy, litigation hold, WORM locking, legal export, and SaaS-data export automation.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cloud-storage-lifecycle-policy"
+    }
+  },
+  "features": [
+    "WORM retention policy per bucket",
+    "Litigation hold (no-delete, no-overwrite)",
+    "Automated encrypted export to SaaS tools",
+    "Automated lifecycle rule change review"
+  ],
+  "benefits": [
+    "Reduce costs with cloud storage lifecycle & compliance",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

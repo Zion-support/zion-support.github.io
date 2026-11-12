@@ -1,0 +1,28 @@
+{
+  "title": "AI Teacher Assistant & Lesson Planner",
+  "description": "AI copilots for educators: auto-generate lesson plans, grade essays with rubric alignment, create personalized learning paths, student engagement analytics.",
+  "basic": "$15/teacher/month",
+  "pro": "$35/teacher/month",
+  "enterprise": "$75/teacher/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Teacher Assistant & Lesson Planner - Zion Tech Group",
+    "description": "AI copilots for educators: auto-generate lesson plans, grade essays with rubric alignment, create personalized learning paths, student engagement analytics.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-teacher-assistant"
+    }
+  },
+  "features": [
+    "Standards-aligned lesson plan generation",
+    "Essay grading with rubric matching",
+    "Personalized learning paths",
+    "Student engagement analytics",
+    "Accessibility accommodations generator"
+  ],
+  "benefits": [
+    "Save 15 hours/week on planning",
+    "Improve student outcomes by 20%",
+    "Reach every student at their level"
+  ]
+}

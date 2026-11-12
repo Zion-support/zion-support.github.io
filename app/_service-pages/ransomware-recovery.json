@@ -1,0 +1,29 @@
+{
+  "title": "Ransomware Recovery & IR for Insurers",
+  "description": "Ransomware IR + recovery: forensic analysis, containment, payment negotiation assistance, clean restore from immutable backup, SLA-backed segmentation, post-incident hardening.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Ransomware Recovery & IR for Insurers - Zion Tech Group",
+    "description": "Ransomware IR + recovery: forensic analysis, containment, payment negotiation assistance, clean restore from immutable backup, SLA-backed segmentation, post-inc",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ransomware-recovery"
+    }
+  },
+  "features": [
+    "24/7 ransomware IR hotline activation",
+    "Network segmentation + isolation within hours",
+    "Immutable backup verify + clean restore",
+    "Payment negotiation via IR firm",
+    "Post-incident hardening + preventive controls"
+  ],
+  "benefits": [
+    "Reduce costs with ransomware recovery & ir for insurers",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

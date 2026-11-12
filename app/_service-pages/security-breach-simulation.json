@@ -1,0 +1,29 @@
+{
+  "title": "Breach Simulation & Attack Surface Management",
+  "description": "Continuously simulate attacks and map your attack surface. Automated red teaming, exposure prioritization, and remediation guidance.",
+  "basic": "$1,499/mo/month",
+  "pro": "$4,499/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Breach Simulation & Attack Surface Management - Zion Tech Group",
+    "description": "Continuously simulate attacks and map your attack surface. Automated red teaming, exposure prioritization, and remediation guidance.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/security-breach-simulation"
+    }
+  },
+  "features": [
+    "Automated breach simulation",
+    "Attack surface mapping",
+    "Continuous red teaming",
+    "Exposure prioritization",
+    "Integration with CrowdStrike, SentinelOne"
+  ],
+  "benefits": [
+    "Find vulnerabilities before attackers",
+    "Prioritize remediation",
+    "Continuous security validation",
+    "Board-ready risk reports"
+  ]
+}

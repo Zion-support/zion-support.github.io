@@ -1,0 +1,29 @@
+{
+  "title": "Database-as-a-Service & Managed Data Platforms",
+  "description": "Fully managed databases - PostgreSQL, MySQL, MongoDB, Redis, Elasticsearch with automated backups, scaling, and AI-powered optimization.",
+  "basic": "$99/mo/month",
+  "pro": "$349/mo/month",
+  "enterprise": "$1,299/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Database-as-a-Service & Managed Data Platforms - Zion Tech Group",
+    "description": "Fully managed databases - PostgreSQL, MySQL, MongoDB, Redis, Elasticsearch with automated backups, scaling, and AI-powered optimization.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-database-as-a-service"
+    }
+  },
+  "features": [
+    "Multi-engine provisioning",
+    "Automated backups and PITR",
+    "AI query optimization",
+    "Auto-scaling and HA",
+    "Encryption and compliance"
+  ],
+  "benefits": [
+    "Reduce costs with database-as-a-service & managed data platforms",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

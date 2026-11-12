@@ -1,0 +1,28 @@
+{
+  "title": "Automated Incident Response (SOAR)",
+  "description": "Security Orchestration, Automation & Response platform that auto-remediates 40% of Tier-1 incidents using playbooks and AI decisioning.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Automated Incident Response (SOAR) - Zion Tech Group",
+    "description": "Security Orchestration, Automation & Response platform that auto-remediates 40% of Tier-1 incidents using playbooks and AI decisioning.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-automated-incident-response"
+    }
+  },
+  "features": [
+    "Pre-built playbooks (phishing, malware, IAM)",
+    "Integration with 200+ security tools",
+    "Case management & audit trail",
+    "AI-assisted triage suggestions"
+  ],
+  "benefits": [
+    "Reduce costs with automated incident response (soar)",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

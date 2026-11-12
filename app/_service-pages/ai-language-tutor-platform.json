@@ -1,0 +1,29 @@
+{
+  "title": "AI Language Tutor & Immersive Learning Platform",
+  "description": "Personalized AI language tutor with speech recognition, conversation practice, grammar correction, and adaptive learning paths for 30+ languages.",
+  "basic": "$19/mo/month",
+  "pro": "$49/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Language Tutor & Immersive Learning Platform - Zion Tech Group",
+    "description": "Personalized AI language tutor with speech recognition, conversation practice, grammar correction, and adaptive learning paths for 30+ languages.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-language-tutor-platform"
+    }
+  },
+  "features": [
+    "AI conversation partner with speech recognition",
+    "Personalized curriculum adaptation",
+    "Real-time pronunciation feedback",
+    "Grammar and vocabulary assessment",
+    "Cultural context lessons"
+  ],
+  "benefits": [
+    "Learn 3x faster than traditional methods",
+    "Practice speaking without judgment",
+    "Personalized to your level and goals",
+    "Learn anytime anywhere"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "title": "AI Inventory Management & Demand Planning",
+  "description": "Optimize inventory levels with AI-driven demand forecasting, automated reorder points, and supplier management. Reduces carrying costs by 30% and stockouts by 90% with machine learning models trained on your sales data.",
+  "basic": "$N/A/month",
+  "pro": "$N/A/month",
+  "enterprise": "$999/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Inventory Management & Demand Planning - Zion Tech Group",
+    "description": "Optimize inventory levels with AI-driven demand forecasting, automated reorder points, and supplier management. Reduces carrying costs by 30% and stockouts by 9",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-inventory-management"
+    }
+  },
+  "features": [
+    "Demand forecasting",
+    "Automated reorder points",
+    "Supplier management",
+    "Multi-location support",
+    "Seasonal adjustment"
+  ],
+  "benefits": [
+    "30% reduction in carrying costs",
+    "90% fewer stockouts",
+    "Optimized cash flow"
+  ]
+}

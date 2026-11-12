@@ -1,0 +1,29 @@
+{
+  "title": "AI Model Orchestration",
+  "description": "Multi-model AI orchestration, routing, and fallback. Optimize cost, latency, and quality by routing requests to the right model for each task.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Model Orchestration - Zion Tech Group",
+    "description": "Multi-model AI orchestration, routing, and fallback. Optimize cost, latency, and quality by routing requests to the right model for each task.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-model-orchestration"
+    }
+  },
+  "features": [
+    "Intelligent Model Routing",
+    "Fallback & Resilience",
+    "Cost & Latency Optimization",
+    "Unified API Layer",
+    "A/B Testing & Evaluation"
+  ],
+  "benefits": [
+    "Reduce costs with ai model orchestration",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

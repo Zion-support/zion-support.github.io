@@ -1,0 +1,28 @@
+{
+  "title": "API Security Gateway",
+  "description": "OAuth2/JWT/SAML auth, OWASP Top-10 attack detection, schema drift alert, bot detection, per-endpoint threat score card.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "API Security Gateway - Zion Tech Group",
+    "description": "OAuth2/JWT/SAML auth, OWASP Top-10 attack detection, schema drift alert, bot detection, per-endpoint threat score card.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/security-api-security-gateway"
+    }
+  },
+  "features": [
+    "OAuth2/JWT/SAML auth per route/group",
+    "OWASP Top-10 attack pattern detection",
+    "Schema drift alert + active API inventory",
+    "Bot detection + anomaly scoring per IP/UA"
+  ],
+  "benefits": [
+    "Reduce costs with api security gateway",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

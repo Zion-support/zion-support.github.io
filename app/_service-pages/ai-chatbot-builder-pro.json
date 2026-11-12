@@ -1,0 +1,29 @@
+{
+  "title": "AI Chatbot Builder Pro",
+  "description": "Build intelligent, multi-channel chatbots with RAG-powered knowledge bases, workflow automation, and seamless human handoff.",
+  "basic": "$99/mo/month",
+  "pro": "$299/mo/month",
+  "enterprise": "$999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Chatbot Builder Pro - Zion Tech Group",
+    "description": "Build intelligent, multi-channel chatbots with RAG-powered knowledge bases, workflow automation, and seamless human handoff.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-chatbot-builder-pro"
+    }
+  },
+  "features": [
+    "RAG-powered knowledge base from your docs",
+    "Multi-channel — website, WhatsApp, Slack, Teams",
+    "Visual drag-and-drop flow designer",
+    "Smart human handoff with context transfer",
+    "Analytics — resolution rates, satisfaction, trends"
+  ],
+  "benefits": [
+    "Reduce costs with ai chatbot builder pro",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

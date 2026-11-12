@@ -1,0 +1,29 @@
+{
+  "title": "Privileged Access Management",
+  "description": "Just-in-time elevated access, session recording, and credential vaulting for admin, SSH, and database accounts across cloud and on-premise.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Privileged Access Management - Zion Tech Group",
+    "description": "Just-in-time elevated access, session recording, and credential vaulting for admin, SSH, and database accounts across cloud and on-premise.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/privileged-access-management"
+    }
+  },
+  "features": [
+    "Just-in-time access grants",
+    "Session recording & auditing",
+    "Credential vaulting",
+    "Break-glass account emergency access",
+    "Cross-cloud vault sync"
+  ],
+  "benefits": [
+    "Reduce costs with privileged access management",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

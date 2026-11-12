@@ -1,0 +1,29 @@
+{
+  "title": "AI-Powered Tech Debt Quantifier",
+  "description": "Automatically identify, classify, and quantify technical debt: code complexity, duplication, outdated deps, test gaps, and architectural violations with remediation cost estimates.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI-Powered Tech Debt Quantifier - Zion Tech Group",
+    "description": "Automatically identify, classify, and quantify technical debt: code complexity, duplication, outdated deps, test gaps, and architectural violations with remedia",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-tech-debt-quantifier"
+    }
+  },
+  "features": [
+    "Static code analysis + complexity heatmaps",
+    "Dependency vulnerability & EOL detection",
+    "Duplicate code detection with CloneDR",
+    "Architecture rule validation (dependency cycles)",
+    "Remediation effort estimation (person-days)"
+  ],
+  "benefits": [
+    "Reduce costs with ai-powered tech debt quantifier",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

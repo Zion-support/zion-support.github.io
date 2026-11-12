@@ -1,0 +1,29 @@
+{
+  "title": "Micro-SaaS AI Expense Manager & Approval Workflow",
+  "description": "Smart expense management with AI receipt scanning, automatic categorization, policy enforcement, and multi-level approval workflows. Integrates with accounting systems.",
+  "basic": "$5/user/mo/month",
+  "pro": "$12/user/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Micro-SaaS AI Expense Manager & Approval Workflow - Zion Tech Group",
+    "description": "Smart expense management with AI receipt scanning, automatic categorization, policy enforcement, and multi-level approval workflows. Integrates with accounting ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-ai-expense-manager"
+    }
+  },
+  "features": [
+    "AI receipt scanning with OCR + ML",
+    "Automatic expense categorization",
+    "Policy enforcement with violation alerts",
+    "Multi-level approval workflows",
+    "Integration with QuickBooks, Xero, NetSuite"
+  ],
+  "benefits": [
+    "Process expenses 5x faster",
+    "Enforce spend policies automatically",
+    "Reduce expense fraud by 90%",
+    "Real-time visibility into company spend"
+  ]
+}

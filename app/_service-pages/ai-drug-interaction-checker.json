@@ -1,0 +1,28 @@
+{
+  "title": "AI Drug Interaction Checker",
+  "description": "Real-time 50K+ prescription/OTC interaction checker: contraindications pregnancy risk triggers prescriber alert + pharmacy workflow patient counseling sheet.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Drug Interaction Checker - Zion Tech Group",
+    "description": "Real-time 50K+ prescription/OTC interaction checker: contraindications pregnancy risk triggers prescriber alert + pharmacy workflow patient counseling sheet.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-drug-interaction-checker"
+    }
+  },
+  "features": [
+    "50K+ drug interaction database",
+    "Pregnancy weight renal dosing adj",
+    "Prescriber + pharmacy workflow alert",
+    "Printable patient counseling sheet"
+  ],
+  "benefits": [
+    "Reduce costs with ai drug interaction checker",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

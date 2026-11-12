@@ -1,0 +1,28 @@
+{
+  "title": "PII Scanner & Classifier",
+  "description": "Column-level PII detection (name/SSN/email/phone/address) across data warehouses, with automatic masking policies and compliance report.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "PII Scanner & Classifier - Zion Tech Group",
+    "description": "Column-level PII detection (name/SSN/email/phone/address) across data warehouses, with automatic masking policies and compliance report.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/data-pii-scanner-classifier"
+    }
+  },
+  "features": [
+    "Column-level regex + ML pattern detection",
+    "Auto-generate dynamic data masking policies",
+    "Compliance report (GDPR/CCPA/HIPAA)",
+    "Alert on PII touching new table/column"
+  ],
+  "benefits": [
+    "Reduce costs with pii scanner & classifier",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

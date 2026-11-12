@@ -1,0 +1,29 @@
+{
+  "title": "Database Migration Service",
+  "description": "Homogeneous and heterogeneous database migrations — on-prem to cloud, between engines (Oracle→Postgres, MySQL→CockroachDB) with zero-downtime cutovers.",
+  "basic": "$499/mo/month",
+  "pro": "$1,499/mo/month",
+  "enterprise": "$4,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Database Migration Service - Zion Tech Group",
+    "description": "Homogeneous and heterogeneous database migrations — on-prem to cloud, between engines (Oracle→Postgres, MySQL→CockroachDB) with zero-downtime cutovers.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/db-migration-service"
+    }
+  },
+  "features": [
+    "Homogeneous + heterogeneous moves",
+    "Online replication with CDC",
+    "Schema compatibility analyzer",
+    "Rollback automation",
+    "Performance validation"
+  ],
+  "benefits": [
+    "Reduce costs with database migration service",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

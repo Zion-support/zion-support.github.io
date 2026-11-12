@@ -1,0 +1,29 @@
+{
+  "title": "HR Onboarding and Offboarding",
+  "description": "Automate HR onboarding: offer letters, paperwork, equipment, training, access. Day-one productivity.",
+  "basic": "$5/employee/mo/month",
+  "pro": "$10/employee/mo/month",
+  "enterprise": "$20/employee/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "HR Onboarding and Offboarding - Zion Tech Group",
+    "description": "Automate HR onboarding: offer letters, paperwork, equipment, training, access. Day-one productivity.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w177-hr-onboarding"
+    }
+  },
+  "features": [
+    "Offer letter and paperwork automation",
+    "Equipment and access provisioning",
+    "Training plan and tracking",
+    "Manager and buddy assignments",
+    "Offboarding and access revocation"
+  ],
+  "benefits": [
+    "Day-one productivity for new hires",
+    "Paperwork automation reduces HR burden",
+    "Training tracking ensures completion",
+    "Offboarding security"
+  ]
+}

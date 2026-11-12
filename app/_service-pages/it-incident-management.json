@@ -1,0 +1,30 @@
+{
+  "title": "AI Incident Management & Response",
+  "description": "Intelligent incident management with AI-powered triage, auto-remediation, on-call management, and post-incident analysis. Integrates with PagerDuty, OpsGenie, and custom workflows.",
+  "basic": "$399/mo/month",
+  "pro": "$1,499/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Incident Management & Response - Zion Tech Group",
+    "description": "Intelligent incident management with AI-powered triage, auto-remediation, on-call management, and post-incident analysis. Integrates with PagerDuty, OpsGenie, a",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-incident-management"
+    }
+  },
+  "features": [
+    "AI incident triage",
+    "Auto-remediation",
+    "On-call management",
+    "Escalation policies",
+    "Post-incident analysis"
+  ],
+  "benefits": [
+    "50% faster resolution",
+    "Reduced alert fatigue",
+    "Automated response",
+    "Better post-mortems",
+    "On-call fairness"
+  ]
+}

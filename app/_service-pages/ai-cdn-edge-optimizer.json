@@ -1,0 +1,28 @@
+{
+  "title": "AI CDN & Edge Performance Optimizer",
+  "description": "Optimize content delivery: intelligent caching, edge compute routing, image/video optimization, and DDoS protection. Real-time performance analytics with 50+ PoP monitoring.",
+  "basic": "$99/month",
+  "pro": "$299/month",
+  "enterprise": "$999/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI CDN & Edge Performance Optimizer - Zion Tech Group",
+    "description": "Optimize content delivery: intelligent caching, edge compute routing, image/video optimization, and DDoS protection. Real-time performance analytics with 50+ Po",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-cdn-edge-optimizer"
+    }
+  },
+  "features": [
+    "Intelligent caching policies",
+    "Edge compute workload routing",
+    "Image/video auto-optimization",
+    "DDoS detection & mitigation",
+    "Real-time 50+ PoP monitoring"
+  ],
+  "benefits": [
+    "40% faster page loads",
+    "60% bandwidth savings",
+    "Always-on DDoS protection"
+  ]
+}

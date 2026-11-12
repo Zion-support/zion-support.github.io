@@ -1,0 +1,28 @@
+{
+  "title": "AI Music Composition & Production Studio",
+  "description": "AI-powered music creation: generate original compositions in any style, remix stems, auto-master tracks, and sync to video. Royalty-free output with commercial licensing.",
+  "basic": "$29/month",
+  "pro": "$79/month",
+  "enterprise": "$299/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Music Composition & Production Studio - Zion Tech Group",
+    "description": "AI-powered music creation: generate original compositions in any style, remix stems, auto-master tracks, and sync to video. Royalty-free output with commercial ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-music-composition-studio"
+    }
+  },
+  "features": [
+    "Genre-aware composition generation",
+    "AI stem separation & remixing",
+    "Auto-mastering (streaming-optimized)",
+    "Video-to-music synchronization",
+    "Royalty-free commercial license"
+  ],
+  "benefits": [
+    "Create music in minutes",
+    "100% royalty-free",
+    "Any genre, any mood"
+  ]
+}

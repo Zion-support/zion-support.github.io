@@ -1,0 +1,27 @@
+{
+  "title": "Predictive Maintenance",
+  "description": "Predictive Maintenance combines AI intelligence with practical engineering to solve real business challenges. Deploy production-ready capabilities ...",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Predictive Maintenance - Zion Tech Group",
+    "description": "Predictive Maintenance combines AI intelligence with practical engineering to solve real business challenges. Deploy production-ready capabilities ...",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/predictive-maintenance"
+    }
+  },
+  "features": [
+    "AI-powered automation",
+    "Enterprise integration",
+    "Real-time analytics"
+  ],
+  "benefits": [
+    "Reduce costs with predictive maintenance",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

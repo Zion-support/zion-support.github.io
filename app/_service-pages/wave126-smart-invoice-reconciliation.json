@@ -1,0 +1,29 @@
+{
+  "title": "Smart Invoice Reconciliation",
+  "description": "Automatically match invoices to purchase orders and payments using AI-powered pattern recognition. Flags discrepancies, detects duplicate payments, and reconciles accounts in real time — cutting month-end close time by 60%.",
+  "basic": "$N/A/month",
+  "pro": "$497/month",
+  "enterprise": "$1297/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Smart Invoice Reconciliation - Zion Tech Group",
+    "description": "Automatically match invoices to purchase orders and payments using AI-powered pattern recognition. Flags discrepancies, detects duplicate payments, and reconcil",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/wave126-smart-invoice-reconciliation"
+    }
+  },
+  "features": [
+    "AI-powered invoice-to-PO matching",
+    "Payment discrepancy flagging & resolution workflows",
+    "Duplicate payment detection & prevention",
+    "Multi-currency & multi-entity support",
+    "ERP integration (SAP, NetSuite, QuickBooks)"
+  ],
+  "benefits": [
+    "60% faster month-end close",
+    "Eliminate duplicate payments and overcharges",
+    "Full audit trail for SOX compliance",
+    "Reduce finance team overtime by 70%"
+  ]
+}

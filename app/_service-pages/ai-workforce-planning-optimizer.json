@@ -1,0 +1,29 @@
+{
+  "title": "AI Workforce Planning Optimizer",
+  "description": "AI-powered workforce planning and optimization platform. Forecast staffing needs, optimize schedules, predict attrition, and plan succession. Integrates with HRIS, ATS, and payroll systems.",
+  "basic": "$1,299/mo/month",
+  "pro": "$3,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Workforce Planning Optimizer - Zion Tech Group",
+    "description": "AI-powered workforce planning and optimization platform. Forecast staffing needs, optimize schedules, predict attrition, and plan succession. Integrates with HR",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-workforce-planning-optimizer"
+    }
+  },
+  "features": [
+    "Demand forecasting by role and location",
+    "Optimal shift scheduling",
+    "Attrition prediction with risk scores",
+    "Succession planning recommendations",
+    "Skills gap analysis"
+  ],
+  "benefits": [
+    "Reduce hiring costs by 30%",
+    "Improve employee retention",
+    "Optimize labor spend",
+    "Data-driven workforce decisions"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "AI Lead Richness Scorer & Enricher",
+  "description": "Score every inbound and outbound lead on fit, intent, and priority. Auto-enrich records with 50+ data providers including LinkedIn, Crunchbase, and Clearbit.",
+  "basic": "$199/mo/month",
+  "pro": "$499/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Lead Richness Scorer & Enricher - Zion Tech Group",
+    "description": "Score every inbound and outbound lead on fit, intent, and priority. Auto-enrich records with 50+ data providers including LinkedIn, Crunchbase, and Clearbit.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-lead-enricher"
+    }
+  },
+  "features": [
+    "Fit and intent scoring model",
+    "50+ data provider enrichment",
+    "CRM native sync Salesforce and HubSpot",
+    "Priority queue routing",
+    "Enrichment history audit trail"
+  ],
+  "benefits": [
+    "Reduce costs with ai lead richness scorer & enricher",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

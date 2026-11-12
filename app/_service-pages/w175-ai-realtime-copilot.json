@@ -1,0 +1,29 @@
+{
+  "title": "AI Real-Time Copilot for Support",
+  "description": "Real-time AI copilot for support agents: suggests answers, retrieves knowledge, drafts responses, and detects escalation signals mid-conversation. Reduce AHT by 30%.",
+  "basic": "$59/user/mo/month",
+  "pro": "$99/user/mo/month",
+  "enterprise": "$149/user/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Real-Time Copilot for Support - Zion Tech Group",
+    "description": "Real-time AI copilot for support agents: suggests answers, retrieves knowledge, drafts responses, and detects escalation signals mid-conversation. Reduce AHT by",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w175-ai-realtime-copilot"
+    }
+  },
+  "features": [
+    "Real-time response suggestions",
+    "Knowledge retrieval from KB and CRM",
+    "Auto-draft responses in agent tone",
+    "Escalation signal detection",
+    "Sentiment-guided reply adjustment"
+  ],
+  "benefits": [
+    "Reduce average handle time by 30%",
+    "New agents perform like veterans instantly",
+    "Consistent quality across all responses",
+    "Escalation detection prevents CSAT drops"
+  ]
+}

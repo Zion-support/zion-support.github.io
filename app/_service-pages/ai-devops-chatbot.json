@@ -1,0 +1,29 @@
+{
+  "title": "AI DevOps Chatbot",
+  "description": "Natural language interface to your infrastructure: ask for logs, deployments, metrics, and incidents; get instant answers and auto-remediation suggestions.",
+  "basic": "$99/mo/month",
+  "pro": "$299/mo/month",
+  "enterprise": "$999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI DevOps Chatbot - Zion Tech Group",
+    "description": "Natural language interface to your infrastructure: ask for logs, deployments, metrics, and incidents; get instant answers and auto-remediation suggestions.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-devops-chatbot"
+    }
+  },
+  "features": [
+    "Natural language queries over logs & metrics",
+    "Incident root cause summarization",
+    "Automated runbook execution (via chat)",
+    "Slack/MS Teams integration",
+    "Access control & audit logging"
+  ],
+  "benefits": [
+    "Reduce costs with ai devops chatbot",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "title": "AI Subscription Revenue Analytics & Churn Prevention",
+  "description": "MRR/ARR analytics, cohort analysis, churn prediction, expansion revenue identification, and pricing optimization. Integrates with Stripe, Chargebee, Recurly.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Subscription Revenue Analytics & Churn Prevention - Zion Tech Group",
+    "description": "MRR/ARR analytics, cohort analysis, churn prediction, expansion revenue identification, and pricing optimization. Integrates with Stripe, Chargebee, Recurly.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-subscription-revenue-analytics"
+    }
+  },
+  "features": [
+    "MRR/ARR analytics & forecasting",
+    "Cohort analysis (retention, expansion)",
+    "Churn prediction (30/60/90-day)",
+    "Expansion revenue identification",
+    "Pricing optimization engine"
+  ],
+  "benefits": [
+    "Reduce churn by 25%",
+    "Increase expansion revenue by 40%",
+    "Optimize pricing automatically"
+  ]
+}

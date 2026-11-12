@@ -1,0 +1,29 @@
+{
+  "title": "AI Foundation Models & Custom Training",
+  "description": "Train and deploy custom foundation models. Domain-specific pretraining, fine-tuning, and model adaptation for enterprise AI with full data sovereig...",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Foundation Models & Custom Training - Zion Tech Group",
+    "description": "Train and deploy custom foundation models. Domain-specific pretraining, fine-tuning, and model adaptation for enterprise AI with full data sovereig...",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-foundation-models-custom-training"
+    }
+  },
+  "features": [
+    "Domain-Specific Pretraining",
+    "Efficient Fine-Tuning & Adaptation",
+    "Alignment & Safety Training",
+    "Continuous Learning Pipelines",
+    "Model Compression & Export"
+  ],
+  "benefits": [
+    "Reduce costs with ai foundation models & custom training",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "IT Data Warehouse & Lakehouse Architecture",
+  "description": "Design and implement modern data warehouse and lakehouse solutions. From Snowflake, BigQuery, and Databricks to custom ETL pipelines and data governance.",
+  "basic": "$5,000/mo/month",
+  "pro": "$12,000/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "IT Data Warehouse & Lakehouse Architecture - Zion Tech Group",
+    "description": "Design and implement modern data warehouse and lakehouse solutions. From Snowflake, BigQuery, and Databricks to custom ETL pipelines and data governance.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-data-warehouse"
+    }
+  },
+  "features": [
+    "Data warehouse architecture design and implementation",
+    "ETL/ELT pipeline development and optimization",
+    "Data lakehouse setup (Delta Lake, Iceberg, Hudi)",
+    "Data governance and cataloging",
+    "Real-time streaming data ingestion"
+  ],
+  "benefits": [
+    "Unify all data sources in one platform",
+    "Query petabytes in seconds",
+    "Reduce data infrastructure costs by 40%",
+    "Enable self-service analytics for all teams"
+  ]
+}

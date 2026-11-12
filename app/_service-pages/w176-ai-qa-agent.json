@@ -1,0 +1,29 @@
+{
+  "title": "AI QA & Testing Agent",
+  "description": "Autonomous QA agent that tests your application: generates test plans, executes tests, reports bugs with reproduction steps, and verifies fixes.",
+  "basic": "$199/mo/month",
+  "pro": "$599/mo/month",
+  "enterprise": "$1,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI QA & Testing Agent - Zion Tech Group",
+    "description": "Autonomous QA agent that tests your application: generates test plans, executes tests, reports bugs with reproduction steps, and verifies fixes.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w176-ai-qa-agent"
+    }
+  },
+  "features": [
+    "AI test plan generation from requirements",
+    "Automated test execution (functional, regression)",
+    "Bug reports with reproduction steps and logs",
+    "Fix verification and regression testing",
+    "Exploratory testing with AI curiosity"
+  ],
+  "benefits": [
+    "Autonomous testing without writing test code",
+    "Bug reports with steps that developers can reproduce",
+    "Regression testing after every deploy",
+    "Exploratory testing finds edge cases"
+  ]
+}

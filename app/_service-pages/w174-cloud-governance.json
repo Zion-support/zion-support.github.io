@@ -1,0 +1,29 @@
+{
+  "title": "Cloud Governance & Landing Zone",
+  "description": "Design and implement cloud governance: landing zones, account structure, IAM, tagging, cost allocation, and policy-as-code. Enterprise-ready from day one.",
+  "basic": "$4,999/month",
+  "pro": "$14,999/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Cloud Governance & Landing Zone - Zion Tech Group",
+    "description": "Design and implement cloud governance: landing zones, account structure, IAM, tagging, cost allocation, and policy-as-code. Enterprise-ready from day one.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w174-cloud-governance"
+    }
+  },
+  "features": [
+    "Landing zone architecture (AWS Control Tower, Azure Landing Zone)",
+    "Account/subscription structure and vending",
+    "IAM strategy and guardrails",
+    "Tagging and naming convention enforcement",
+    "Cost allocation and chargeback design"
+  ],
+  "benefits": [
+    "Enterprise-ready cloud from day one",
+    "Governance prevents cloud sprawl",
+    "Policy-as-code enforces standards automatically",
+    "Cost allocation drives accountability"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "AI Personalized Learning Platform",
+  "description": "Adaptive learning platform that creates personalized curricula based on individual learning styles, goals, and progress. AI tutors, skill assessments, and spaced repetition for corporate training and education.",
+  "basic": "$399/mo/month",
+  "pro": "$1,299/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Personalized Learning Platform - Zion Tech Group",
+    "description": "Adaptive learning platform that creates personalized curricula based on individual learning styles, goals, and progress. AI tutors, skill assessments, and space",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-personalized-learning-platform"
+    }
+  },
+  "features": [
+    "Adaptive curriculum generation",
+    "AI tutoring with Socratic method",
+    "Skill gap analysis",
+    "Spaced repetition scheduling",
+    "Multi-modal content (video, text, interactive)"
+  ],
+  "benefits": [
+    "3x faster skill acquisition",
+    "Personalized at scale",
+    "Reduce training costs",
+    "Measurable skill improvement"
+  ]
+}

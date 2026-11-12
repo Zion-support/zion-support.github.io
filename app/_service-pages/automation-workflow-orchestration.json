@@ -1,0 +1,29 @@
+{
+  "title": "Workflow Orchestration Engine",
+  "description": "Enterprise workflow orchestration. Visual designer, SLA monitoring, error handling, and integration with 200+ systems.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Workflow Orchestration Engine - Zion Tech Group",
+    "description": "Enterprise workflow orchestration. Visual designer, SLA monitoring, error handling, and integration with 200+ systems.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automation-workflow-orchestration"
+    }
+  },
+  "features": [
+    "Visual workflow designer",
+    "SLA monitoring and alerting",
+    "Error handling and retry logic",
+    "Integration with 200+ systems",
+    "Version control"
+  ],
+  "benefits": [
+    "Automate complex workflows",
+    "Reduce manual effort",
+    "Ensure SLA compliance",
+    "Scale without code changes"
+  ]
+}

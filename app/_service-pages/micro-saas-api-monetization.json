@@ -1,0 +1,29 @@
+{
+  "title": "APIMonetize — API Monetization Platform",
+  "description": "Turn APIs into revenue streams. Usage-based billing, developer portals, rate limiting, and analytics for API-first businesses.",
+  "basic": "$99/mo/month",
+  "pro": "$299/mo/month",
+  "enterprise": "$799/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "APIMonetize — API Monetization Platform - Zion Tech Group",
+    "description": "Turn APIs into revenue streams. Usage-based billing, developer portals, rate limiting, and analytics for API-first businesses.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-api-monetization"
+    }
+  },
+  "features": [
+    "Usage-based billing and metering",
+    "Developer portal with docs",
+    "Rate limiting and quotas",
+    "API key management",
+    "Integration with Stripe, PayPal"
+  ],
+  "benefits": [
+    "Monetize existing APIs",
+    "Reduce billing complexity",
+    "Developer self-service",
+    "Real-time revenue tracking"
+  ]
+}

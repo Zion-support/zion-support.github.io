@@ -1,0 +1,29 @@
+{
+  "title": "Adaptive Learning Platform",
+  "description": "AI-powered personalized learning that adapts to each student's pace, style, and level. Content recommendations, progress tracking, and automated assessment.",
+  "basic": "$N/A/month",
+  "pro": "$N/A/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Adaptive Learning Platform - Zion Tech Group",
+    "description": "AI-powered personalized learning that adapts to each student's pace, style, and level. Content recommendations, progress tracking, and automated assessment.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/education-adaptive-learning"
+    }
+  },
+  "features": [
+    "Personalized paths",
+    "Adaptive content",
+    "Progress tracking",
+    "Auto-assessment",
+    "Content recommendation"
+  ],
+  "benefits": [
+    "3x faster learning",
+    "90%+ completion",
+    "Personalized engagement",
+    "Teacher insights"
+  ]
+}

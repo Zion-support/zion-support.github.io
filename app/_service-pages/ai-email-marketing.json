@@ -1,0 +1,29 @@
+{
+  "title": "AI Email Marketing",
+  "description": "Intelligent email campaigns with AI-powered subject lines, send-time optimization, dynamic content, and advanced segmentation.",
+  "basic": "$199/mo/month",
+  "pro": "$499/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Email Marketing - Zion Tech Group",
+    "description": "Intelligent email campaigns with AI-powered subject lines, send-time optimization, dynamic content, and advanced segmentation.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-email-marketing"
+    }
+  },
+  "features": [
+    "AI subject line & copy generator",
+    "Send-time optimization per subscriber",
+    "Dynamic content personalization",
+    "Advanced behavioral segmentation",
+    "A/B/n automated testing"
+  ],
+  "benefits": [
+    "Reduce costs with ai email marketing",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

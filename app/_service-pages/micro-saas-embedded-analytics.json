@@ -1,0 +1,30 @@
+{
+  "title": "Embedded Analytics & Reporting",
+  "description": "White-label analytics infrastructure for SaaS products. Pre-built dashboards, custom reports, data visualization, and self-service analytics your customers will love.",
+  "basic": "$349/mo/month",
+  "pro": "$1,199/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Embedded Analytics & Reporting - Zion Tech Group",
+    "description": "White-label analytics infrastructure for SaaS products. Pre-built dashboards, custom reports, data visualization, and self-service analytics your customers will",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-embedded-analytics"
+    }
+  },
+  "features": [
+    "Pre-built dashboard templates",
+    "Custom report builder",
+    "Data visualization library",
+    "White-label embedding",
+    "Self-service analytics"
+  ],
+  "benefits": [
+    "Increase product stickiness",
+    "Reduce churn by 25%",
+    "New revenue stream",
+    "Customer self-service",
+    "Developer-friendly APIs"
+  ]
+}

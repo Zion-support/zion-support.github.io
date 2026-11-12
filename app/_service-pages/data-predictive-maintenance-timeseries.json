@@ -1,0 +1,28 @@
+{
+  "title": "Predictive Maintenance (Time-Series)",
+  "description": "Sensor TS ingestion, anomaly detection (IsolationForest/Prophet), failure-prediction XGBoost, and work-order auto-creation.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Predictive Maintenance (Time-Series) - Zion Tech Group",
+    "description": "Sensor TS ingestion, anomaly detection (IsolationForest/Prophet), failure-prediction XGBoost, and work-order auto-creation.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/data-predictive-maintenance-timeseries"
+    }
+  },
+  "features": [
+    "Sensor TS ingestion + Pandas validation",
+    "Anomaly detector (IsolationForest + Prophet)",
+    "Failure risk scoring XGBoost per asset",
+    "Auto-created CMMS work-order on threshold"
+  ],
+  "benefits": [
+    "Reduce costs with predictive maintenance (time-series)",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

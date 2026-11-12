@@ -1,0 +1,29 @@
+{
+  "title": "AI Legal Document Analysis & Contract Review",
+  "description": "Automated legal document review, clause extraction, risk assessment, and contract comparison powered by advanced NLP trained on legal corpora.",
+  "basic": "$149/mo/month",
+  "pro": "$399/mo/month",
+  "enterprise": "$1,299/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Legal Document Analysis & Contract Review - Zion Tech Group",
+    "description": "Automated legal document review, clause extraction, risk assessment, and contract comparison powered by advanced NLP trained on legal corpora.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-legal-document-analysis"
+    }
+  },
+  "features": [
+    "Intelligent clause extraction and classification",
+    "Risk scoring and compliance flagging",
+    "Contract comparison and gap analysis",
+    "Legal precedent research automation",
+    "Multi-language contract processing"
+  ],
+  "benefits": [
+    "Reduce costs with ai legal document analysis & contract review",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "title": "SurveyLab - Survey Builder",
+  "description": "Professional survey and feedback collection platform with advanced logic, branching, and analytics. Perfect for market research and customer feedback.",
+  "basic": "$25/mo/month",
+  "pro": "$69/mo/month",
+  "enterprise": "$129/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "SurveyLab - Survey Builder - Zion Tech Group",
+    "description": "Professional survey and feedback collection platform with advanced logic, branching, and analytics. Perfect for market research and customer feedback.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/microsaas-survey-builder"
+    }
+  },
+  "features": [
+    "Drag-drop Builder",
+    "Conditional Logic",
+    "Multi-language",
+    "Analytics Dashboard",
+    "API Access"
+  ],
+  "benefits": [
+    "Collect better feedback",
+    "Increase response rates",
+    "Actionable insights"
+  ]
+}

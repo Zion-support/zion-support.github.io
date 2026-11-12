@@ -1,0 +1,29 @@
+{
+  "title": "AI Fraud Pattern Analyzer",
+  "description": "Deep behavioral profiling: baseline per user then alerts on anomalous patterns — login geography, transaction velocity, amount/type deviation, withdrawn account signals. Links across accounts to detect ring fraud.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Fraud Pattern Analyzer - Zion Tech Group",
+    "description": "Deep behavioral profiling: baseline per user then alerts on anomalous patterns — login geography, transaction velocity, amount/type deviation, withdrawn account",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-fraud-pattern-analyzer"
+    }
+  },
+  "features": [
+    "Per-user behavior baseline engine",
+    "Multi-signal anomaly scoring",
+    "Cross-account ring detection",
+    "Geo-velocity + device fingerprint trigger",
+    "Slack/PagerDuty webhook for SOC integration"
+  ],
+  "benefits": [
+    "Reduce costs with ai fraud pattern analyzer",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

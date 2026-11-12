@@ -1,0 +1,29 @@
+{
+  "title": "Email Campaign Generator",
+  "description": "End-to-end email marketing: Generate sequences, personalize per recipient, A/B test subject lines, optimize send times.",
+  "basic": "$49/mo/month",
+  "pro": "$149/mo/month",
+  "enterprise": "$499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Email Campaign Generator - Zion Tech Group",
+    "description": "End-to-end email marketing: Generate sequences, personalize per recipient, A/B test subject lines, optimize send times.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-email-campaign-generator"
+    }
+  },
+  "features": [
+    "Multi-email sequence generation",
+    "Personalization tokens",
+    "Subject line A/B testing",
+    "Send-time optimization",
+    "Deliverability monitoring"
+  ],
+  "benefits": [
+    "Reduce costs with email campaign generator",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

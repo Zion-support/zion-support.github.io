@@ -1,0 +1,27 @@
+{
+  "title": "Enterprise Network Infrastructure",
+  "description": "Design, deploy, and manage enterprise-grade networks with SD-WAN, wireless optimization, zero-trust architecture, and real-time performance monitor...",
+  "basic": "$199/mo/month",
+  "pro": "$699/mo/month",
+  "enterprise": "$2,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Enterprise Network Infrastructure - Zion Tech Group",
+    "description": "Design, deploy, and manage enterprise-grade networks with SD-WAN, wireless optimization, zero-trust architecture, and real-time performance monitor...",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/network-infrastructure"
+    }
+  },
+  "features": [
+    "Enterprise-grade implementation",
+    "24/7 monitoring",
+    "Compliance-ready"
+  ],
+  "benefits": [
+    "Reduce costs with enterprise network infrastructure",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

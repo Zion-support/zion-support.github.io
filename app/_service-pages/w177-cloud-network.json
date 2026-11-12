@@ -1,0 +1,29 @@
+{
+  "title": "Cloud Network Design and Implementation",
+  "description": "Design and implement cloud networking: VPC, transit gateway, private connectivity, DNS, load balancing.",
+  "basic": "$4,999/month",
+  "pro": "$14,999/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Cloud Network Design and Implementation - Zion Tech Group",
+    "description": "Design and implement cloud networking: VPC, transit gateway, private connectivity, DNS, load balancing.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w177-cloud-network"
+    }
+  },
+  "features": [
+    "VPC and subnet architecture design",
+    "Transit gateway and hub-spoke topology",
+    "Private connectivity (VPN",
+    "ExpressRoute",
+    "Direct Connect)"
+  ],
+  "benefits": [
+    "Enterprise cloud network architecture",
+    "Private connectivity for compliance",
+    "Optimized network topology for performance",
+    "Multi-cloud network connectivity"
+  ]
+}

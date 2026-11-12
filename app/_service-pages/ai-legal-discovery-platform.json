@@ -1,0 +1,28 @@
+{
+  "title": "AI Legal eDiscovery & Review Platform",
+  "description": "Automated document review for litigation: privilege detection, relevance scoring, entity extraction, chronology building. Cuts review costs by 70%.",
+  "basic": "$499/month",
+  "pro": "$1499/month",
+  "enterprise": "$5999/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Legal eDiscovery & Review Platform - Zion Tech Group",
+    "description": "Automated document review for litigation: privilege detection, relevance scoring, entity extraction, chronology building. Cuts review costs by 70%.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-legal-discovery-platform"
+    }
+  },
+  "features": [
+    "AI-powered relevance scoring",
+    "Privilege & confidence detection",
+    "Entity extraction (people, orgs, dates)",
+    "Chronology auto-building",
+    "Redaction automation"
+  ],
+  "benefits": [
+    "Cut review costs by 70%",
+    "Improve accuracy by 40%",
+    "Review 10x more docs per hour"
+  ]
+}

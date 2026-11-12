@@ -1,0 +1,29 @@
+{
+  "title": "Finance & Accounting Automation",
+  "description": "Automate financial close, AP/AR, reconciliation, expense management, and financial reporting. Reduce close time by 50%.",
+  "basic": "$399/mo/month",
+  "pro": "$1,199/mo/month",
+  "enterprise": "$3,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Finance & Accounting Automation - Zion Tech Group",
+    "description": "Automate financial close, AP/AR, reconciliation, expense management, and financial reporting. Reduce close time by 50%.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w174-finance-automation"
+    }
+  },
+  "features": [
+    "Financial close automation and scheduling",
+    "Accounts payable and receivable automation",
+    "Bank and intercompany reconciliation",
+    "Expense management and policy enforcement",
+    "Financial reporting and consolidation"
+  ],
+  "benefits": [
+    "Reduce month-end close time by 50%",
+    "AP automation eliminates manual invoice processing",
+    "Auto-reconciliation catches discrepancies",
+    "SOX-compliant audit trails"
+  ]
+}

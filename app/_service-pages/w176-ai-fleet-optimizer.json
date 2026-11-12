@@ -1,0 +1,29 @@
+{
+  "title": "AI Fleet Route Optimizer",
+  "description": "AI-powered fleet management: real-time route optimization, fuel prediction, driver behavior analysis, and maintenance scheduling. Reduce fuel costs by 20%.",
+  "basic": "$199/mo/month",
+  "pro": "$599/mo/month",
+  "enterprise": "$1,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Fleet Route Optimizer - Zion Tech Group",
+    "description": "AI-powered fleet management: real-time route optimization, fuel prediction, driver behavior analysis, and maintenance scheduling. Reduce fuel costs by 20%.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w176-ai-fleet-optimizer"
+    }
+  },
+  "features": [
+    "Real-time dynamic route optimization",
+    "Fuel consumption prediction and tracking",
+    "Driver behavior scoring and coaching",
+    "Predictive maintenance scheduling",
+    "Load and capacity optimization"
+  ],
+  "benefits": [
+    "Reduce fuel costs by 20%",
+    "Dynamic routing adapts to traffic in real-time",
+    "Driver coaching reduces incidents",
+    "Predictive maintenance prevents breakdowns"
+  ]
+}

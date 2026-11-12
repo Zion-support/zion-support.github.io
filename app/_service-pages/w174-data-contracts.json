@@ -1,0 +1,29 @@
+{
+  "title": "Data Contracts & Schema Registry",
+  "description": "Enforce data contracts between producers and consumers. Schema registry, breaking change detection, compatibility modes, and automated documentation.",
+  "basic": "$199/mo/month",
+  "pro": "$599/mo/month",
+  "enterprise": "$1,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Data Contracts & Schema Registry - Zion Tech Group",
+    "description": "Enforce data contracts between producers and consumers. Schema registry, breaking change detection, compatibility modes, and automated documentation.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w174-data-contracts"
+    }
+  },
+  "features": [
+    "Centralized schema registry (Avro, Protobuf, JSON)",
+    "Breaking change detection and prevention",
+    "Compatibility modes (backward, forward, full)",
+    "Contract testing in CI/CD",
+    "Automated schema documentation"
+  ],
+  "benefits": [
+    "Prevent breaking changes from reaching production",
+    "Contract testing in CI catches issues early",
+    "Compatibility modes enable schema evolution",
+    "Automated docs keep schema knowledge current"
+  ]
+}

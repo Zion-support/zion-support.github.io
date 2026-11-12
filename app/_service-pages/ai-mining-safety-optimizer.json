@@ -1,0 +1,28 @@
+{
+  "title": "AI Mining Safety & Operations Optimizer",
+  "description": "Computer vision + IoT for mining: equipment health monitoring, ventilation optimization, worker safety enforcement, and ore grade prediction. Reduces accidents by 50%.",
+  "basic": "$1999/month",
+  "pro": "$4999/month",
+  "enterprise": "$14999/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Mining Safety & Operations Optimizer - Zion Tech Group",
+    "description": "Computer vision + IoT for mining: equipment health monitoring, ventilation optimization, worker safety enforcement, and ore grade prediction. Reduces accidents ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-mining-safety-optimizer"
+    }
+  },
+  "features": [
+    "Equipment health prediction",
+    "Ventilation air quality optimization",
+    "Worker PPE compliance detection",
+    "Ore grade prediction from images",
+    "Slope stability analysis"
+  ],
+  "benefits": [
+    "Reduce accidents by 50%",
+    "Optimize ore extraction",
+    "Ensure safety compliance"
+  ]
+}

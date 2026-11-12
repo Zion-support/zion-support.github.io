@@ -1,0 +1,29 @@
+{
+  "title": "Hybrid Cloud Connectivity Design",
+  "description": "Design hybrid connectivity: ExpressRoute, Direct Connect, VPN, SD-WAN, and inter-cloud peering. Secure, performant networking across on-prem and cloud.",
+  "basic": "$4,999/month",
+  "pro": "$14,999/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Hybrid Cloud Connectivity Design - Zion Tech Group",
+    "description": "Design hybrid connectivity: ExpressRoute, Direct Connect, VPN, SD-WAN, and inter-cloud peering. Secure, performant networking across on-prem and cloud.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w175-hybrid-cloud-connect"
+    }
+  },
+  "features": [
+    "Hybrid connectivity architecture design",
+    "ExpressRoute and Direct Connect planning",
+    "VPN and SD-WAN integration",
+    "Inter-cloud peering and transit",
+    "DNS and identity federation"
+  ],
+  "benefits": [
+    "Enterprise hybrid cloud networking",
+    "Optimized for performance and cost",
+    "Identity federation for seamless auth",
+    "Validated end-to-end connectivity"
+  ]
+}

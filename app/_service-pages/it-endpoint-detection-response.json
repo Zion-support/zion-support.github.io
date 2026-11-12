@@ -1,0 +1,28 @@
+{
+  "title": "Managed Endpoint Detection & Response (EDR)",
+  "description": "24/7 monitored EDR service with threat hunting, ransomware rollback, and 15-minute SLA for critical alerts. Includes managed SOC.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Managed Endpoint Detection & Response (EDR) - Zion Tech Group",
+    "description": "24/7 monitored EDR service with threat hunting, ransomware rollback, and 15-minute SLA for critical alerts. Includes managed SOC.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-endpoint-detection-response"
+    }
+  },
+  "features": [
+    "Next-gen antivirus (NGAV)",
+    "Behavior-based threat detection",
+    "Incident response playbooks",
+    "Quarterly threat hunting reports"
+  ],
+  "benefits": [
+    "Reduce costs with managed endpoint detection & response (edr)",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

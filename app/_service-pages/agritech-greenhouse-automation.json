@@ -1,0 +1,29 @@
+{
+  "title": "AI Greenhouse Climate Control",
+  "description": "AI-powered greenhouse automation. Climate optimization, lighting control, CO2 management, and yield prediction for controlled environment agriculture.",
+  "basic": "$199/mo/month",
+  "pro": "$599/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Greenhouse Climate Control - Zion Tech Group",
+    "description": "AI-powered greenhouse automation. Climate optimization, lighting control, CO2 management, and yield prediction for controlled environment agriculture.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/agritech-greenhouse-automation"
+    }
+  },
+  "features": [
+    "Temperature and humidity optimization",
+    "Lighting schedule automation",
+    "CO2 level management",
+    "Yield prediction models",
+    "Energy cost optimization"
+  ],
+  "benefits": [
+    "Increase yield 25%",
+    "Reduce energy costs 30%",
+    "Optimize growing conditions 24/7",
+    "Predict harvest dates accurately"
+  ]
+}

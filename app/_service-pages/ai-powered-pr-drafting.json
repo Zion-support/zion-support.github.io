@@ -1,0 +1,29 @@
+{
+  "title": "AI-Powered PR Drafting & Description",
+  "description": "Automatically generate PR titles, descriptions, and changelog entries from commit history and diff analysis; link to JIRA tickets and update documentation.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI-Powered PR Drafting & Description - Zion Tech Group",
+    "description": "Automatically generate PR titles, descriptions, and changelog entries from commit history and diff analysis; link to JIRA tickets and update documentation.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-pr-drafting"
+    }
+  },
+  "features": [
+    "Intelligent diff summarization",
+    "JIRA/GitHub issue linking & status updates",
+    "Changelog entry drafting per semantic version",
+    "Reviewer recommendation based on ownership",
+    "Auto-update of API docs & README diffs"
+  ],
+  "benefits": [
+    "Reduce costs with ai-powered pr drafting & description",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

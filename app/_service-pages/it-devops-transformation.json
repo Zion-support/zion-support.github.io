@@ -1,0 +1,29 @@
+{
+  "title": "IT DevOps Transformation Service",
+  "description": "End-to-end DevOps transformation including CI/CD pipeline design, infrastructure as code, containerization, and SRE practices. Reduce deployment time from weeks to minutes.",
+  "basic": "$15,000 project/month",
+  "pro": "$45,000 project/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "IT DevOps Transformation Service - Zion Tech Group",
+    "description": "End-to-end DevOps transformation including CI/CD pipeline design, infrastructure as code, containerization, and SRE practices. Reduce deployment time from weeks",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-devops-transformation"
+    }
+  },
+  "features": [
+    "CI/CD pipeline design and implementation",
+    "Infrastructure as Code (Terraform, Pulumi)",
+    "Container orchestration (Kubernetes, Docker)",
+    "SRE practices and SLI/SLO definition",
+    "Monitoring and observability stack setup"
+  ],
+  "benefits": [
+    "Deploy 100x faster with automated pipelines",
+    "Reduce infrastructure costs by 40%",
+    "Improve system reliability to 99.99%",
+    "Free developers from operational burden"
+  ]
+}

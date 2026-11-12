@@ -1,0 +1,29 @@
+{
+  "title": "AI Data Quality & Enforcement Engine",
+  "description": "Continuous data quality at pipeline scale: automated profiling, statistical anomaly detection, schema drift + auto-fix. GE/Soda/DBT quality gates prevent bad data flowing to warehouse.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Data Quality & Enforcement Engine - Zion Tech Group",
+    "description": "Continuous data quality at pipeline scale: automated profiling, statistical anomaly detection, schema drift + auto-fix. GE/Soda/DBT quality gates prevent bad da",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-data-quality-engine"
+    }
+  },
+  "features": [
+    "Automated profiling + anomaly scoring per column",
+    "Schema drift detect + alert on threshold",
+    "GE/Soda/DBT quality gate integration",
+    "Auto-fix recommendation per anomaly type",
+    "Quality scorecard per data product + owner"
+  ],
+  "benefits": [
+    "Reduce costs with ai data quality & enforcement engine",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

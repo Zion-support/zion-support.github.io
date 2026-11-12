@@ -1,0 +1,29 @@
+{
+  "title": "AI Smart Contract Security Auditor",
+  "description": "AI-powered smart contract security auditing for Ethereum, Solana, and EVM chains. Detect vulnerabilities, gas optimizations, and logic errors before deployment.",
+  "basic": "$999/mo/month",
+  "pro": "$2,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Smart Contract Security Auditor - Zion Tech Group",
+    "description": "AI-powered smart contract security auditing for Ethereum, Solana, and EVM chains. Detect vulnerabilities, gas optimizations, and logic errors before deployment.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-smart-contract-auditor"
+    }
+  },
+  "features": [
+    "Automated vulnerability detection",
+    "Gas optimization recommendations",
+    "Logic error and edge case identification",
+    "DeFi protocol risk assessment",
+    "Integration with Hardhat, Foundry, Remix"
+  ],
+  "benefits": [
+    "Audit smart contracts 10x faster",
+    "Detect 95% of common vulnerabilities",
+    "Optimize gas costs by 30%",
+    "Prevent costly exploits with pre-deployment audits"
+  ]
+}

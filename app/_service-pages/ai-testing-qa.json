@@ -1,0 +1,29 @@
+{
+  "title": "AI Testing & Quality Assurance",
+  "description": "Automated test generation, visual regression testing, and AI-powered bug detection that adapts to your application code and learns from failures.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Testing & Quality Assurance - Zion Tech Group",
+    "description": "Automated test generation, visual regression testing, and AI-powered bug detection that adapts to your application code and learns from failures.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-testing-qa"
+    }
+  },
+  "features": [
+    "Auto-generated test cases from user journeys",
+    "Visual regression testing across browsers",
+    "AI bug detection with root-cause suggestions",
+    "Performance testing & bottleneck analysis",
+    "Self-healing test scripts"
+  ],
+  "benefits": [
+    "Reduce costs with ai testing & quality assurance",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

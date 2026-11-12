@@ -1,0 +1,29 @@
+{
+  "title": "IoT & OT Security Platform",
+  "description": "Security for IoT and operational technology: device profiling, anomaly detection, network segmentation, and protocol analysis. Protect what traditional IT security cannot.",
+  "basic": "$999/mo/month",
+  "pro": "$2,999/mo/month",
+  "enterprise": "$9,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "IoT & OT Security Platform - Zion Tech Group",
+    "description": "Security for IoT and operational technology: device profiling, anomaly detection, network segmentation, and protocol analysis. Protect what traditional IT secur",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w176-iot-security"
+    }
+  },
+  "features": [
+    "IoT/OT device discovery and profiling",
+    "Protocol analysis (Modbus, DNP3, BACnet, OPC-UA)",
+    "Behavioral anomaly detection",
+    "Network micro-segmentation",
+    "Vulnerability assessment for IoT firmware"
+  ],
+  "benefits": [
+    "See and secure every IoT/OT device",
+    "Protocol-aware detection for industrial systems",
+    "Micro-segmentation limits IoT blast radius",
+    "OT-specific incident response playbooks"
+  ]
+}

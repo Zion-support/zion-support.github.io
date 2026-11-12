@@ -1,0 +1,29 @@
+{
+  "title": "Healthcare Patient Engagement Platform",
+  "description": "HIPAA-compliant patient engagement platform with appointment scheduling, reminders, telehealth, patient portal, and automated follow-ups. Improve patient satisfaction and reduce no-shows by 40%.",
+  "basic": "$499/mo/month",
+  "pro": "$1,499/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Healthcare Patient Engagement Platform - Zion Tech Group",
+    "description": "HIPAA-compliant patient engagement platform with appointment scheduling, reminders, telehealth, patient portal, and automated follow-ups. Improve patient satisf",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/healthcare-patient-engagement-platform"
+    }
+  },
+  "features": [
+    "Online appointment scheduling",
+    "Automated SMS/email reminders",
+    "Telehealth integration",
+    "Patient portal with records access",
+    "Post-visit surveys"
+  ],
+  "benefits": [
+    "Reduce no-shows by 40%",
+    "Improve patient satisfaction scores",
+    "Automate administrative tasks",
+    "Increase patient retention"
+  ]
+}

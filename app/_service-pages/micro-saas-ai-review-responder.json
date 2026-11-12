@@ -1,0 +1,29 @@
+{
+  "title": "AI Review Response & Reputation Manager",
+  "description": "AI that writes personalized responses to customer reviews across Google, Yelp, TripAdvisor, and 50+ platforms. Maintains brand voice and handles negative reviews with care.",
+  "basic": "$99/mo/month",
+  "pro": "$299/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Review Response & Reputation Manager - Zion Tech Group",
+    "description": "AI that writes personalized responses to customer reviews across Google, Yelp, TripAdvisor, and 50+ platforms. Maintains brand voice and handles negative review",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-ai-review-responder"
+    }
+  },
+  "features": [
+    "AI review response generation with brand voice",
+    "Multi-platform monitoring (Google, Yelp, TripAdvisor, Amazon)",
+    "Negative review escalation alerts",
+    "Response approval workflows",
+    "Competitor review benchmarking"
+  ],
+  "benefits": [
+    "Respond to reviews 10x faster",
+    "Improve ratings with consistent responses",
+    "Catch negative reviews before they spread",
+    "Maintain brand voice across all responses"
+  ]
+}

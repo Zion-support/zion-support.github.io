@@ -1,0 +1,29 @@
+{
+  "title": "AI Predictive Safety & Workplace Risk Prevention",
+  "description": "AI-powered workplace safety that predicts accidents before they happen. Computer vision for PPE detection, behavior analysis, and risk scoring. Reduce incidents by 60%.",
+  "basic": "$1,499/mo/month",
+  "pro": "$3,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Predictive Safety & Workplace Risk Prevention - Zion Tech Group",
+    "description": "AI-powered workplace safety that predicts accidents before they happen. Computer vision for PPE detection, behavior analysis, and risk scoring. Reduce incidents",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-predictive-safety"
+    }
+  },
+  "features": [
+    "Real-time PPE detection (hard hats, vests, gloves)",
+    "Unsafe behavior identification",
+    "Near-miss detection and reporting",
+    "Risk scoring by area and time",
+    "Integration with CCTV and safety systems"
+  ],
+  "benefits": [
+    "Reduce workplace incidents by 60%",
+    "Detect PPE violations in real-time",
+    "Identify near-misses before they become incidents",
+    "Create a data-driven safety culture"
+  ]
+}

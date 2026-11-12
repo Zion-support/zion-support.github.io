@@ -1,0 +1,29 @@
+{
+  "title": "AI Video Analytics",
+  "description": "Real-time video content analysis for security, retail insights, and operational intelligence using computer vision.",
+  "basic": "$199/mo/month",
+  "pro": "$599/mo/month",
+  "enterprise": "$1,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Video Analytics - Zion Tech Group",
+    "description": "Real-time video content analysis for security, retail insights, and operational intelligence using computer vision.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-video-analytics"
+    }
+  },
+  "features": [
+    "Real-time object detection & tracking",
+    "People counting & heatmaps",
+    "License plate recognition (ANPR)",
+    "Behavioral anomaly detection",
+    "Privacy-blur compliance mode"
+  ],
+  "benefits": [
+    "Reduce costs with ai video analytics",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "Technical Debt Assessment & Remediation",
+  "description": "Comprehensive technical debt audit: code complexity, dependency health, architecture drift, and test coverage. Prioritized remediation roadmap with ROI estimates.",
+  "basic": "$2,499/month",
+  "pro": "$7,999/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Technical Debt Assessment & Remediation - Zion Tech Group",
+    "description": "Comprehensive technical debt audit: code complexity, dependency health, architecture drift, and test coverage. Prioritized remediation roadmap with ROI estimate",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w174-tech-debt-assessment"
+    }
+  },
+  "features": [
+    "Code complexity and duplication analysis",
+    "Dependency health and vulnerability audit",
+    "Architecture drift detection",
+    "Test coverage and quality assessment",
+    "Prioritized remediation roadmap"
+  ],
+  "benefits": [
+    "Quantify tech debt with hard metrics",
+    "Prioritized roadmap focuses effort",
+    "ROI estimates justify remediation investment",
+    "Track debt reduction over time"
+  ]
+}

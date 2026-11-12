@@ -1,0 +1,29 @@
+{
+  "title": "Cloud Cost Optimization Consulting",
+  "description": "FinOps-led cloud spend management that delivers guaranteed savings. Right-sizes workloads, optimizes reserved instance and savings plan coverage, eliminates waste, and implements governance — typically reducing cloud spend by 25-40%.",
+  "basic": "$N/A/month",
+  "pro": "$8997/month",
+  "enterprise": "$18997/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Cloud Cost Optimization Consulting - Zion Tech Group",
+    "description": "FinOps-led cloud spend management that delivers guaranteed savings. Right-sizes workloads, optimizes reserved instance and savings plan coverage, eliminates was",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/wave126-cloud-cost-optimization"
+    }
+  },
+  "features": [
+    "Comprehensive cloud spend audit & waste elimination",
+    "Reserved instance & savings plan optimization",
+    "Workload right-sizing recommendations",
+    "Multi-cloud support (AWS, Azure, GCP)",
+    "Tagging governance & cost allocation"
+  ],
+  "benefits": [
+    "25-40% cloud spend reduction, guaranteed",
+    "Unit economics visibility per product/team",
+    "Prevent cost anomalies before they escalate",
+    "FinOps cultural transformation, not just tools"
+  ]
+}

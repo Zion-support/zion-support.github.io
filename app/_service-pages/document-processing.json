@@ -1,0 +1,27 @@
+{
+  "title": "Document Processing",
+  "description": "Document Processing eliminates manual bottlenecks with intelligent process automation, event-driven orchestration, and cross-system integration. Re...",
+  "basic": "$149/mo/month",
+  "pro": "$399/mo/month",
+  "enterprise": "$1,299/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Document Processing - Zion Tech Group",
+    "description": "Document Processing eliminates manual bottlenecks with intelligent process automation, event-driven orchestration, and cross-system integration. Re...",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/document-processing"
+    }
+  },
+  "features": [
+    "AI-powered automation",
+    "Enterprise integration",
+    "Real-time analytics"
+  ],
+  "benefits": [
+    "Reduce costs with document processing",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

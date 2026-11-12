@@ -1,0 +1,29 @@
+{
+  "title": "AI Code Documentation Generator",
+  "description": "Automatically generate comprehensive documentation from source code. Produces API docs, inline comments, README files, architecture diagrams, and changelogs. Supports 30+ programming languages.",
+  "basic": "$199/mo/month",
+  "pro": "$599/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Code Documentation Generator - Zion Tech Group",
+    "description": "Automatically generate comprehensive documentation from source code. Produces API docs, inline comments, README files, architecture diagrams, and changelogs. Su",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-code-documentation-generator"
+    }
+  },
+  "features": [
+    "Auto-generate API documentation",
+    "Inline comment generation",
+    "Architecture diagram extraction",
+    "README and changelog generation",
+    "Multi-language support (30+)"
+  ],
+  "benefits": [
+    "Always up-to-date documentation",
+    "Reduce documentation time by 90%",
+    "Improve code onboarding",
+    "Consistent documentation style"
+  ]
+}

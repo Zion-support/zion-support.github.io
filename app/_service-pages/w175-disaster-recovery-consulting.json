@@ -1,0 +1,29 @@
+{
+  "title": "Disaster Recovery Consulting & Testing",
+  "description": "DR strategy, design, and testing: BIA, RTO/RPO analysis, runbook development, and regular DR test execution. Prove your recovery capabilities.",
+  "basic": "$4,999/month",
+  "pro": "$14,999/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Disaster Recovery Consulting & Testing - Zion Tech Group",
+    "description": "DR strategy, design, and testing: BIA, RTO/RPO analysis, runbook development, and regular DR test execution. Prove your recovery capabilities.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w175-disaster-recovery-consulting"
+    }
+  },
+  "features": [
+    "Business impact analysis (BIA)",
+    "RTO/RPO requirements mapping",
+    "DR architecture design",
+    "Runbook development and maintenance",
+    "Regular DR test execution (quarterly/annual)"
+  ],
+  "benefits": [
+    "Know your recovery capabilities, not just plans",
+    "Regular testing proves recovery works",
+    "Runbooks ensure consistent execution",
+    "BIA prioritizes what matters most"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "title": "Cloud Cost Management Platform",
+  "description": "Multi-cloud cost visibility, rightsizing recommendations, RI/SA coverage gap, budget alert, chargeback/showback per team.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Cloud Cost Management Platform - Zion Tech Group",
+    "description": "Multi-cloud cost visibility, rightsizing recommendations, RI/SA coverage gap, budget alert, chargeback/showback per team.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-cloud-cost-management-platform"
+    }
+  },
+  "features": [
+    "Multi-cloud cost break-down (EC2/RDS/Lambda etc.)",
+    "Rightsizing recommendation engine (>50% CPU idle)",
+    "RI/SA coverage gap alert + expiry tracker",
+    "Chargeback/showback per team/project"
+  ],
+  "benefits": [
+    "Reduce costs with cloud cost management platform",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

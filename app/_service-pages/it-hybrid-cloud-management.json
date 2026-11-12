@@ -1,0 +1,29 @@
+{
+  "title": "IT Hybrid Cloud Management & Orchestration Platform",
+  "description": "Unified management platform for hybrid cloud environments spanning on-premises, AWS, Azure, and GCP with automated governance.",
+  "basic": "$1,999/mo/month",
+  "pro": "$4,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "IT Hybrid Cloud Management & Orchestration Platform - Zion Tech Group",
+    "description": "Unified management platform for hybrid cloud environments spanning on-premises, AWS, Azure, and GCP with automated governance.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-hybrid-cloud-management"
+    }
+  },
+  "features": [
+    "Multi-cloud resource orchestration",
+    "Unified monitoring and alerting",
+    "Automated compliance checking",
+    "Cost optimization across clouds",
+    "Infrastructure as Code templates"
+  ],
+  "benefits": [
+    "Reduce cloud costs by 35%",
+    "Simplify multi-cloud management",
+    "Ensure compliance across environments",
+    "Accelerate deployment cycles"
+  ]
+}

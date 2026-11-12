@@ -1,0 +1,29 @@
+{
+  "title": "Enterprise Backup & Disaster Recovery",
+  "description": "Comprehensive data protection with automated backups, instant recovery, ransomware protection, and geo-redundant storage.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Enterprise Backup & Disaster Recovery - Zion Tech Group",
+    "description": "Comprehensive data protection with automated backups, instant recovery, ransomware protection, and geo-redundant storage.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/enterprise-backup-dr"
+    }
+  },
+  "features": [
+    "Automated backup scheduling",
+    "Point-in-time recovery",
+    "Ransomware detection and isolation",
+    "Geo-redundant replication",
+    "Compliance-ready retention policies"
+  ],
+  "benefits": [
+    "Reduce costs with enterprise backup & disaster recovery",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

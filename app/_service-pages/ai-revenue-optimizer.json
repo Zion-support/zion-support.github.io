@@ -1,0 +1,29 @@
+{
+  "title": "Revenue Optimization Engine",
+  "description": "AI-driven pricing, upsell recommendations, and churn prediction. Analyzes customer behavior, market trends to maximize LTV.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Revenue Optimization Engine - Zion Tech Group",
+    "description": "AI-driven pricing, upsell recommendations, and churn prediction. Analyzes customer behavior, market trends to maximize LTV.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-revenue-optimizer"
+    }
+  },
+  "features": [
+    "Dynamic pricing engine",
+    "Churn prediction (90-day)",
+    "Upsell recommendations",
+    "Cohort analysis",
+    "Revenue attribution"
+  ],
+  "benefits": [
+    "Reduce costs with revenue optimization engine",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

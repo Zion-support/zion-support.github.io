@@ -1,0 +1,29 @@
+{
+  "title": "EdTech Adaptive Learning Engine",
+  "description": "AI-driven personalized learning that adapts curricula, pacing, and assessment difficulty in real time. Knowledge graph models each learner's mastery, while spaced repetition and retrieval practice lock in retention — improving outcomes by 25-40%.",
+  "basic": "$N/A/month",
+  "pro": "$11997/month",
+  "enterprise": "$24997/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "EdTech Adaptive Learning Engine - Zion Tech Group",
+    "description": "AI-driven personalized learning that adapts curricula, pacing, and assessment difficulty in real time. Knowledge graph models each learner's mastery, while spac",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/wave127-edtech-adaptive-learning"
+    }
+  },
+  "features": [
+    "Real-time curriculum adaptation per learner",
+    "Knowledge graph mastery modeling",
+    "Spaced repetition & retrieval practice scheduling",
+    "Adaptive assessment generation & scoring",
+    "Multi-modal content delivery (video, text, interactive)"
+  ],
+  "benefits": [
+    "25-40% improvement in learning outcomes",
+    "Every student gets a personal tutor at scale",
+    "Early intervention before students fall behind",
+    "Instructor dashboards for class-level insights"
+  ]
+}
