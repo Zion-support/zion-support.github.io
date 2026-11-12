@@ -1,0 +1,100 @@
+name: Scripts Tests
+
+# Dedicated CI for the guard scripts. The homepage sanity suite is run twice in
+# genuinely different environments because fetch_with_retries returns on the
+# first backend that does not raise:
+#
+#   * a venv created WITHOUT requests, with the absence verified at runtime
+#   * a Python with requests installed
+#
+# The preflight suite is only present on the branch that carries it, so its job
+# is conditional on the file existing.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/homepage_sanity_check.py'
+      - 'scripts/tests/**'
+      - '.github/workflows/scripts-tests.yml'
+  pull_request:
+    paths:
+      - 'scripts/homepage_sanity_check.py'
+      - 'scripts/tests/**'
+      - '.github/workflows/scripts-tests.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: scripts-tests
+  cancel-in-progress: false
+
+jobs:
+  homepage-sanity-without-requests:
+    name: homepage sanity (requests-free venv)
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Create a requests-free venv and verify absence
+        run: |
+          set -euo pipefail
+          VENV="$RUNNER_TEMP/venv-no-requests"
+          python3 -m venv "$VENV"
+          env -u PYTHONPATH "$VENV/bin/python" - <<'PY'
+          import importlib.util
+          import sys
+          spec = importlib.util.find_spec("requests")
+          assert spec is None, f"requests IS importable here: {spec.origin}"
+          print(f"verified: requests NOT importable ({sys.version.split()[0]})")
+          PY
+
+      - name: Run suite in the requests-free venv
+        run: |
+          set -euo pipefail
+          env -u PYTHONPATH "$RUNNER_TEMP/venv-no-requests/bin/python" \
+            -m unittest scripts.tests.test_homepage_sanity_check -v
+
+  homepage-sanity-with-requests:
+    name: homepage sanity (requests installed)
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install requests and verify presence
+        run: |
+          set -euo pipefail
+          python -m pip install --quiet requests
+          python - <<'PY'
+          import requests
+          print("verified: requests", requests.__version__)
+          PY
+
+      - name: Run suite with requests
+        run: |
+          set -euo pipefail
+          python -m unittest scripts.tests.test_homepage_sanity_check -v
+
+  secrets-preflight:
+    name: secret preflight paths (conditional)
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run preflight path tests when present
+        run: |
+          set -euo pipefail
+          if [ -f scripts/tests/test_secrets_preflight.sh ]; then
+            bash scripts/tests/test_secrets_preflight.sh
+          else
+            echo "scripts/tests/test_secrets_preflight.sh is not on this branch; skipping."
+          fi
