@@ -1,14 +1,22 @@
-const { readFileSync, existsSync } = require('fs');
-const { join } = require('path');
+const { readFileSync, existsSync, mkdirSync, writeFileSync, appendFileSync } = require('fs');
+const { join, dirname } = require('path');
 
 const healthPath = join('public', 'api', 'automation-health.json');
+const reportPath = join('automation', 'reports', 'automation-health-static-freshness-latest.json');
+const maxHoursEnv = (process.env.AUTOMATION_HEALTH_STATIC_MAX_HOURS || '').trim();
+const maxHours = maxHoursEnv === '' ? 24 : Number(maxHoursEnv);
+const maxHoursValid = Number.isFinite(maxHours) && maxHours >= 0;
 
 let staticHealthFresh = 'false';
 let staticHealthAgeHours = null;
 let staticHealthTimestamp = null;
 let staticHealthValid = false;
+let error = null;
 
 try {
+  if (!maxHoursValid) {
+    throw new Error('AUTOMATION_HEALTH_STATIC_MAX_HOURS must be a finite non-negative number');
+  }
   if (!existsSync(healthPath)) {
     throw new Error('Missing ' + healthPath);
   }
@@ -16,18 +24,20 @@ try {
   if (!raw) throw new Error('Empty ' + healthPath);
   const data = JSON.parse(raw);
   staticHealthTimestamp = data.timestamp || data.generatedAt;
-  if (!staticHealthTimestamp) throw new Error('Missing timestamp in ' + healthPath);
+  if (typeof staticHealthTimestamp !== 'string' || !staticHealthTimestamp.trim()) {
+    throw new Error('Missing or non-string timestamp in ' + healthPath);
+  }
+  const ts = new Date(staticHealthTimestamp);
+  if (!Number.isFinite(ts.getTime())) throw new Error('Invalid timestamp in ' + healthPath);
   staticHealthValid = true;
 
-  const maxHoursEnv = process.env.AUTOMATION_HEALTH_STATIC_MAX_HOURS;
-  const maxHours = maxHoursEnv ? Number(maxHoursEnv) : 24;
-  const ts = new Date(staticHealthTimestamp);
   const now = new Date();
   staticHealthAgeHours = (now - ts) / 36e5;
   staticHealthFresh = Number.isFinite(staticHealthAgeHours) && staticHealthAgeHours >= 0 && staticHealthAgeHours <= maxHours ? 'true' : 'false';
 } catch (err) {
   staticHealthFresh = 'false';
   staticHealthValid = false;
+  error = err.message;
   console.error('Automation health static freshness check failed:', err.message);
 }
 
@@ -41,11 +51,19 @@ const report = {
   staticHealthAgeHours,
   staticHealthTimestamp,
   staticHealthPath: healthPath,
-  maxHoursAllowed: Number.isFinite(Number(process.env.AUTOMATION_HEALTH_STATIC_MAX_HOURS)) ? Number(process.env.AUTOMATION_HEALTH_STATIC_MAX_HOURS) : 24,
+  maxHoursAllowed: maxHoursValid ? maxHours : null,
+  ...(error ? { error } : {}),
 };
 
-console.log(JSON.stringify(report, null, 2));
+const reportJson = JSON.stringify(report, null, 2);
+mkdirSync(dirname(reportPath), { recursive: true });
+writeFileSync(reportPath, reportJson + '\n');
+if (process.env.GITHUB_OUTPUT) {
+  appendFileSync(process.env.GITHUB_OUTPUT, `static_health_fresh=${staticHealthFresh}\n`);
+}
+console.log(reportJson);
 
 if (staticHealthFresh !== 'true') {
   process.exitCode = 1;
 }
+
