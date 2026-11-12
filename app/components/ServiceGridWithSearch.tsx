@@ -66,7 +66,7 @@ export default function ServiceGridWithSearch() {
             🔍 Find the Right Service
           </h2>
           <p className="text-slate-400 text-sm md:text-base max-w-xl mx-auto">
-            Search {activeCount.toLocaleString()} services across {CATEGORIES.length} categories — click any result to open the full detail page.
+            Search {activeCount.toLocaleString('en-US')} services across {CATEGORIES.length} categories — click any result to open the full detail page.
           </p>
         </div>
 
@@ -183,7 +183,7 @@ export default function ServiceGridWithSearch() {
 
         {/* ── Quick stats ──────────────────────────────── */}
         <div className="mt-4 flex items-center justify-between text-xs text-slate-600">
-          <span>{activeCount.toLocaleString()} services · {CATEGORIES.length} categories</span>
+          <span>{activeCount.toLocaleString('en-US')} services · {CATEGORIES.length} categories</span>
           <span>Free search — no account required</span>
         </div>
       </div>

@@ -62,7 +62,12 @@ export default function RootLayout({
   children: ReactNode;
 }) {
   return (
-    <>
+      <html lang="en" dir="ltr">
+        <head>
+          <link rel="preconnect" href="https://www.googletagmanager.com" />
+          <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+        </head>
+        <body className="antialiased font-sans">
       {/* JSON-LD: Organization + aggregate rating + social profiles */}
       <script
         type="application/ld+json"
@@ -92,12 +97,6 @@ export default function RootLayout({
         }}
       />
       <AutoJsonLd />
-      <html lang="en" dir="ltr">
-        <head>
-          <link rel="preconnect" href="https://www.googletagmanager.com" />
-          <link rel="dns-prefetch" href="https://www.google-analytics.com" />
-        </head>
-        <body className="antialiased font-sans">
           <Analytics />
           <CtaTracking />
           <div className="flex min-h-screen flex-col bg-gradient-to-br from-slate-900 via-slate-900 to-slate-950">
@@ -122,6 +121,5 @@ export default function RootLayout({
           </div>
         </body>
       </html>
-    </>
   );
 }

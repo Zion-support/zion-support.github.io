@@ -1,31 +1,22 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { Component, type ReactNode } from 'react';
 
-export default function GlobalErrorBoundary({ children }: { children: React.ReactNode }) {
-  const [error, setError] = useState<Error | null>(null);
-  const [hasError, setHasError] = useState(false);
+// Catch errors thrown while rendering this subtree. A recoverable React hydration
+// report or unrelated rejected network promise must not replace the whole page.
+export default class GlobalErrorBoundary extends Component<
+  { children: ReactNode },
+  { error: Error | null }
+> {
+  state: { error: Error | null } = { error: null };
 
-  useEffect(() => {
-    const handler = (event: ErrorEvent) => {
-      setHasError(true);
-      setError(event.error ?? new Error(event.message));
-      event.preventDefault();
-    };
-    const unhandled = (event: PromiseRejectionEvent) => {
-      setHasError(true);
-      setError(event.reason instanceof Error ? event.reason : new Error(String(event.reason)));
-      event.preventDefault();
-    };
-    window.addEventListener('error', handler);
-    window.addEventListener('unhandledrejection', unhandled);
-    return () => {
-      window.removeEventListener('error', handler);
-      window.removeEventListener('unhandledrejection', unhandled);
-    };
-  }, []);
+  static getDerivedStateFromError(error: Error) {
+    return { error };
+  }
 
-  if (hasError) {
+  render() {
+    const { error } = this.state;
+  if (error) {
     return (
       <main className="min-h-screen bg-slate-950 text-white flex items-center justify-center px-4">
         <div className="text-center max-w-lg">
@@ -37,8 +28,7 @@ export default function GlobalErrorBoundary({ children }: { children: React.Reac
           <div className="flex gap-4 justify-center">
             <button
               onClick={() => {
-                setHasError(false);
-                setError(null);
+                this.setState({ error: null });
               }}
               className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition"
             >
@@ -62,5 +52,6 @@ export default function GlobalErrorBoundary({ children }: { children: React.Reac
     );
   }
 
-  return <>{children}</>;
+  return <>{this.props.children}</>;
+  }
 }
