@@ -1,7 +1,5 @@
 // app/page.tsx — Home / Landing Page
-'use client';
 
-import { useState, useMemo, useEffect } from 'react';
 import Link from 'next/link';
 import { allServices, type Service } from './data/servicesData';
 import AnimatedCounter from '@/components/AnimatedCounter';
@@ -10,9 +8,12 @@ import ServiceSpotlight from '@/components/ServiceSpotlight';
 import ServiceGridWithSearch from '@/components/ServiceGridWithSearch';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import ContactFunnel from '@/components/ContactFunnel';
-import ServiceCounter from '@/components/ServiceCounter';
+import ServiceCounter from '@/components/AnimatedServiceCount';
 import FloatingActionDock from '@/components/FloatingActionDock';
-import ServiceMatchQuiz from '@/components/ServiceMatchQuiz';
+import ServiceMatchQuiz from '@/components/LazyServiceMatchQuiz';
+import LiveAgentClock from '@/components/LiveAgentClock';
+import HomeReleaseNews from '@/components/HomeReleaseNews';
+import releaseSignal from '../public/data/release_notes.json';
 import AgentsMonitoring from '@/components/AgentsMonitoring';
 import NavigationQuickLinks from '@/components/NavigationQuickLinks';
 import { appsNetworkCatalog, homepageFeaturedApps, APPS_NETWORK_HUB } from './data/appsNetwork';
@@ -140,35 +141,17 @@ const INDUSTRIES = [
   { key: "healthcare-&-life-sciences", label: "Healthcare & Life Sciences", emoji: "🏥", color: "from-pink-500 to-rose-500",   count: 12,  sample: "AI Drug Discovery & Molecular Design" },
 ];
 
-function LiveAgentClock() {
-  const [time, setTime] = useState('');
-
-  // Live clock for agent banner
-  useEffect(() => {
-    const update = () => setTime(new Date().toLocaleTimeString('en-US', { timeZone: 'America/Sao_Paulo', hour12: true, hour: '2-digit', minute: '2-digit' }));
-    update();
-    const interval = setInterval(update, 1000);
-    return () => clearInterval(interval);
-  }, []);
-
-  return <>{time}</>;
-}
-
 export default function HomePage() {
   const services: Service[] = allServices as Service[];
 
   // Stage health counts — deterministic from catalog
-  const byStage = useMemo(() => {
+  const byStage = (() => {
     const acc: Record<string,number> = { published:0, beta:0, planned:0 };
     services.forEach((s: any) => { if (s.stage in acc) acc[s.stage]++; });
     return acc;
-  }, [services]);
+  })();
 
   const serviceCount = allServices.length;
-  const [quickView, setQuickView] = useState<Service | null>(null);
-  const [releaseNotes, setReleaseNotes] = useState<any[]>([]);
-  const [search, setSearch] = useState('');
-  const [catFilter, setCatFilter] = useState<string | null>(null);
   // Agent stats for banner
   const activeBots = 9;
   const totalServices = Math.max(serviceCount, 0);
@@ -182,31 +165,8 @@ export default function HomePage() {
     { value: '99.9%', label: STAT_SLA },
   ];
 
-  // Fetch release-signal dataset on mount
-  useEffect(() => {
-    const ac = new AbortController();
-    const t  = setTimeout(() => ac.abort(), 8_000);
-    fetch('/data/release_notes.json', { signal: ac.signal })
-      .then(r => r.ok ? r.json() : Promise.reject(r))
-      .then(d  => setReleaseNotes(d.entries || []))
-      .catch(() => {/* leave empty — freshFeatures fallback handles it */})
-      .finally(() => clearTimeout(t));
-  }, []);
-
-  const filteredShowcase = useMemo(() => {
-    let list = services;
-    if (catFilter) list = list.filter((s: any) => s.category === catFilter);
-    if (search.trim()) {
-      const q = search.toLowerCase();
-      list = list.filter((s: any) =>
-        s.title.toLowerCase().includes(q) || s.description.toLowerCase().includes(q)
-      );
-    }
-    return list;
-  }, [services, catFilter, search]);
-
   // Dynamic popular services — changes automatically when catalog updates
-  const popularServices = useMemo(() =>
+  const popularServices =
     services
       .filter((s: any) => s.popular == true)
       .map(s => ({
@@ -216,75 +176,18 @@ export default function HomePage() {
               + (s.description || '').length * 0.3
       }))
       .sort((a: any, b: any) => b._score - a._score)
-      .slice(0, 50),
-    [services]
-  );
+      .slice(0, 50);
 
-  const byCategory = useMemo(() => {
+  const byCategory = (() => {
     const map: Record<string, Service[]> = {};
     for (const c of CATEGORIES) map[c.key] = services.filter((s: any) => s.category === c.key);
     return map;
-  }, [services]);
+  })();
 
-  // ── Release-signal news arranger ──────────────────────────────────────
-  // Pulls featured services using data/release_notes.json scoring.
-  // Falls back to freshFeatures if dataset not loaded or empty.
-  const newsItems = useMemo(() => {
-    const toCard = (s: any) => ({
-      id: s.id,
-      title: s.title,
-      desc: s.description,
-      tag: 'New',
-      color: CATEGORIES.find((c) => c.key === s.category)?.color || 'from-purple-500 to-indigo-500',
-    });
-
-    if (!releaseNotes.length) {
-      return allServices
-        .map((s) => ({ ...toCard(s), _score: (s.features?.length || 0) * 3 + (s.benefits?.length || 0) * 2 + (s.description || '').length * 0.3 }))
-        .sort((a: any, b: any) => b._score - a._score)
-        .slice(0, 6)
-        .map(toCard);
-    }
-    const ENTRY_TAG_MAP: Record<string,string> = {
-      ai: 'AI & ML', it: 'IT & Infrastructure', cloud: 'Cloud Platform',
-      security: 'Security', data: 'Data & Analytics', automation: 'Automation'
-    };
-    const now   = Date.now();
-    const DAY   = 86_400_000;
-    const SCORE_RECENCY   = 5;
-    const SCORE_TAG       = 2;
-    const SCORE_FEATURED  = 3;
-    const SCORE_FEATURES  = 1;
-    const lookup = new Map(allServices.map(s => [s.id, s]));
-    const merged = releaseNotes
-      .filter(r => r.featured !== false)
-      .map(r => {
-        const svc = lookup.get(r.id);
-        if (!svc) return null;
-        const daysAgo = Math.max(0, Math.round((now - new Date(r.released_at).getTime()) / DAY));
-        const tagCount = (r.tags || []).filter(t => ENTRY_TAG_MAP[t]).length;
-        return {
-          id: r.id,
-          title: r.changelog_summary || r.changelog.slice(0, 80) + '...',
-          desc: r.changelog,
-          tag: ENTRY_TAG_MAP[(r.tags || [])[0]] || 'New',
-          color: CATEGORIES.find((c) => c.key === svc.category)?.color || 'from-purple-500 to-indigo-500',
-          _score: SCORE_FEATURED * (r.featured ? 1 : 0)
-                   + SCORE_TAG       * tagCount
-                   + SCORE_FEATURES  * (svc.features?.length || 0)
-                   - SCORE_RECENCY   * daysAgo,
-        };
-      })
-      .filter((r): r is NonNullable<typeof r> => r !== null)
-      .sort((a, b) => b._score - a._score)
-      .slice(0, 6);
-    if (merged.length) return merged;
-    return allServices
-      .map((s) => ({ ...toCard(s), _score: (s.features?.length || 0) * 3 + (s.benefits?.length || 0) * 2 + (s.description || '').length * 0.3 }))
-      .sort((a: any, b: any) => b._score - a._score)
-      .slice(0, 6)
-      .map(toCard);
-  }, [allServices, releaseNotes]);
+  const releaseIds = new Set(releaseSignal.entries.map(entry => entry.id));
+  const releaseServices = allServices.filter(service => releaseIds.has(service.id)).map(({ id, title, href }) => ({ id, title, href }));
+  const searchCounts: Record<string, number> = {};
+  for (const service of allServices) searchCounts[service.category] = (searchCounts[service.category] || 0) + 1;
 
   return (
     <main className="min-h-screen bg-slate-950">
@@ -348,14 +251,14 @@ export default function HomePage() {
         <div className="relative container-page pt-32 pb-24">
           <div className="text-center max-w-4xl mx-auto">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-900/30 border border-purple-500/30 text-purple-300 text-sm mb-6">
-              <span className="text-green-400">●</span> <ServiceCounter /> Services — Live Now
+              <span className="text-green-400">●</span> <ServiceCounter initialCount={serviceCount} /> Services — Live Now
             </div>
           <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
             <span className="gradient-text">AI & IT Services</span><br />
             <span className="text-white">for Your Business</span>
           </h1>
           <p className="text-xl text-slate-300 mb-10 max-w-3xl mx-auto leading-relaxed">
-            <ServiceCounter /> real-world AI, IT, cloud, security, data, automation, micro-SaaS, DevOps, blockchain, and IoT services — from machine learning to cybersecurity, CRM to 5G networks.
+            <ServiceCounter initialCount={serviceCount} /> real-world AI, IT, cloud, security, data, automation, micro-SaaS, DevOps, blockchain, and IoT services — from machine learning to cybersecurity, CRM to 5G networks.
             Get a free, custom proposal in minutes.
           </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -486,7 +389,7 @@ export default function HomePage() {
                 🚀 Start Free Discovery Now →
               </Link>
               <Link href="/discovery" className="btn-secondary text-lg px-10 py-4">
-                📄 Discovery $99 (Deep Dive)
+                📄 Open Free Discovery
               </Link>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-left">
@@ -1198,102 +1101,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      {quickView && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm"
-          onClick={() => setQuickView(null)}
-          onKeyDown={(e) => { if (e.key === 'Escape') setQuickView(null); }}
-          role="dialog"
-          aria-modal="true"
-          aria-label={`Quick view: ${quickView.title}`}
-        >
-          <div
-            className="bg-slate-900 border border-purple-500/30 rounded-2xl max-w-2xl w-full max-h-[85vh] overflow-y-auto shadow-2xl shadow-purple-900/30"
-            onClick={(e) => e.stopPropagation()}
-          >
-            {/* Header */}
-            <div className={`p-6 rounded-t-2xl bg-gradient-to-r ${(CATEGORIES.find(c => c.key === quickView.category) || CATEGORIES[0]).color} bg-opacity-10`}>
-              <div className="flex items-start justify-between">
-                <div className="flex items-center gap-4">
-                  <span className="text-4xl">{quickView.icon}</span>
-                  <div>
-                    <h3 className="text-xl font-bold text-white">{quickView.title}</h3>
-                    <span className="text-xs text-purple-300 uppercase tracking-wider">{(CATEGORIES.find(c => c.key === quickView.category) || CATEGORIES[0]).label}</span>
-                  </div>
-                </div>
-                <button
-                  onClick={() => setQuickView(null)}
-                  className="text-slate-400 hover:text-white text-2xl leading-none p-1"
-                  aria-label="Close"
-                >✕</button>
-              </div>
-              <p className="text-slate-300 text-sm mt-3 leading-relaxed">{quickView.description}</p>
-            </div>
-
-            {/* Body */}
-            <div className="p-6 space-y-6">
-              {/* Features */}
-              <div>
-                <h4 className="text-sm font-semibold text-purple-300 uppercase tracking-wider mb-3">Key Features</h4>
-                <ul className="space-y-2">
-                  {quickView.features.slice(0, 5).map((f: string, i: number) => (
-                    <li key={i} className="text-slate-300 text-sm flex items-start gap-2">
-                      <span className="text-purple-400 mt-0.5 shrink-0">✓</span>
-                      <span>{f}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* Benefits */}
-              {quickView.benefits?.length > 0 && (
-                <div>
-                  <h4 className="text-sm font-semibold text-purple-300 uppercase tracking-wider mb-3">Benefits</h4>
-                  <ul className="space-y-2">
-                    {quickView.benefits.slice(0, 4).map((b: string, i: number) => (
-                      <li key={i} className="text-slate-300 text-sm flex items-start gap-2">
-                        <span className="text-green-400 mt-0.5 shrink-0">▸</span>
-                        <span>{b}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-
-              {/* Pricing */}
-              <div>
-                <h4 className="text-sm font-semibold text-purple-300 uppercase tracking-wider mb-3">Pricing</h4>
-                <div className="grid grid-cols-3 gap-3">
-                  {Object.entries(quickView.pricing as Record<string, string>).map(([tier, price]) => (
-                    <div key={tier} className="bg-slate-800/60 rounded-xl p-4 text-center border border-slate-700/50">
-                      <div className="text-xs text-slate-400 uppercase tracking-wider mb-1">{tier}</div>
-                      <div className="text-xl font-bold text-white">${price}<span className="text-xs text-slate-400 font-normal">/mo</span></div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Contact + CTA */}
-              <div className="flex flex-wrap gap-3 pt-4 border-t border-slate-700/50">
-                <Link
-                  href={`/services/${quickView.id}`}
-                  onClick={() => setQuickView(null)}
-                  className="btn-primary px-6 py-3 text-sm"
-                >
-                  View Full Page →
-                </Link>
-                <Link href="/contact/" className="btn-secondary px-6 py-3 text-sm" onClick={() => setQuickView(null)}>
-                  ✉ Contact Engineering
-                </Link>
-                <a href="mailto:kleber@ziontechgroup.com" className="text-sm text-purple-300 hover:text-purple-200 px-4 py-3 self-center">
-                  ✉ kleber@ziontechgroup.com
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-
       {/* ── Category Grid ── */}
       <section className="py-20 bg-slate-900/30">
         <div className="container-page">
@@ -1365,52 +1172,15 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── What's New cards — top 5 latest releases ── */}
-      <section className="py-16">
-        <div className="container-page">
-          <div className="text-center mb-8">
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">🚀 What's New</h2>
-            <p className="text-slate-400 text-sm md:text-base">Freshly released and recently enhanced services, sorted by recency.</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {(() => {
-              const TAG_MAP: Record<string,string> = { ai: 'AI & ML', it: 'IT & Infrastructure', cloud: 'Cloud Platform', security: 'Security', data: 'Data & Analytics', automation: 'Automation' };
-              const lookup = new Map(allServices.map(s => [s.id, s]));
-              const items = (releaseNotes || [])
-                .slice()
-                .sort((a, b) => new Date(b.released_at).getTime() - new Date(a.released_at).getTime())
-                .slice(0, 5)
-                .map(r => ({ r, svc: lookup.get(r.id) as Service | undefined }))
-                .filter((x): x is { r: any; svc: Service } => x.svc !== undefined)
-                .map(({ r, svc }) => {
-                  const daysAgo = Math.max(0, Math.round((Date.now() - new Date(r.released_at).getTime()) / 86_400_000));
-                  const tag = (r.tags || []).map(t => TAG_MAP[t]).find(Boolean) || 'New';
-                  return { id: svc.id, title: svc.title, description: r.changelog_summary || r.changelog.slice(0, 160) + '...', tag, daysAgo, href: svc.href };
-                });
-              if (!items.length) return <p className="text-slate-500 text-sm text-center">No recent releases available yet.</p>;
-              return items.map(item => (
-                <Link key={item.id} href={item.href} className="group block rounded-2xl border border-slate-800 bg-slate-900/60 hover:bg-slate-800/80 hover:border-purple-500/40 p-5 transition-all duration-300">
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="text-[11px] font-semibold px-2.5 py-1 rounded-full bg-purple-900/30 text-purple-300 border border-purple-500/30">{item.tag}</span>
-                    <span className="text-xs text-slate-500">{item.daysAgo === 0 ? 'Today' : `${item.daysAgo}d ago`}</span>
-                  </div>
-                  <h3 className="text-base font-semibold text-white group-hover:text-purple-300 transition-colors mb-1 leading-snug">{item.title}</h3>
-                  <p className="text-xs text-slate-400 leading-relaxed line-clamp-3">{item.description}</p>
-                  <div className="mt-3 text-xs text-purple-400 group-hover:text-purple-300 font-medium">View details →</div>
-                </Link>
-              ));
-            })()}
-          </div>
-        </div>
-      </section>
+      <HomeReleaseNews initialServices={releaseServices} knownReleaseIds={[...releaseIds]} />
 
       {/* ── Service Search — find any of {serviceCount}+ services ── */}
-      <ServiceGridWithSearch />
+      <ServiceGridWithSearch totalCount={serviceCount} categoryCounts={searchCounts} />
 
       {/* ── Spotlight Carousel ── */}
       <section className="py-16">
         <div className="container-page">
-          <ServiceSpotlight services={popularServices as any} />
+          <ServiceSpotlight services={popularServices.map(({ id, title, description, category, icon, href, popular, stage }: Service) => ({ id, title, description, category, icon, href, popular, stage })) as any} />
         </div>
       </section>
       {/* ── Trust Badges — Persuasion Proof Matrix ── */}
@@ -1489,7 +1259,7 @@ export default function HomePage() {
               </Link>
             ))}
             <Link href="/discovery" className="text-purple-300 font-semibold hover:text-pink-300">Free Discovery →</Link>
-            <Link href="/discovery/" className="text-purple-300 font-semibold hover:text-pink-300">Discovery $99 →</Link>
+            <Link href="/discovery/" className="text-purple-300 font-semibold hover:text-pink-300">Free Discovery →</Link>
           </div>
         </div>
       </section>

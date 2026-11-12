@@ -2,7 +2,7 @@
 
 import { useState, useMemo, useCallback, useRef, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import { searchServices, type SearchService } from '@/data/searchServices';
+import type { SearchService } from '@/data/searchServices';
 
 const CATEGORIES = [
   { id: 'ai',       label: 'AI & Machine Learning', emoji: '🤖' },
@@ -16,7 +16,22 @@ const CATEGORIES = [
 const DEBOUNCE_MS = 250;   // quick reaction, not instant
 const MAX_RESULTS = 12;    // dropdown cap
 
-export default function ServiceGridWithSearch() {
+export default function ServiceGridWithSearch({ totalCount, categoryCounts }: { totalCount: number; categoryCounts: Record<string, number> }) {
+  const [searchServices, setSearchServices] = useState<SearchService[]>([]);
+  const [catalogReady, setCatalogReady] = useState(false);
+  const [catalogError, setCatalogError] = useState(false);
+  const loading = useRef(false);
+  const loadCatalog = useCallback(async () => {
+    if (loading.current || catalogReady) return;
+    loading.current = true;
+    setCatalogError(false);
+    try {
+      const catalog = await import('../data/searchServices');
+      setSearchServices(catalog.searchServices);
+      setCatalogReady(true);
+    } catch { setCatalogError(true); }
+    finally { loading.current = false; }
+  }, [catalogReady]);
   const router = useRouter();
   const [query, setQuery] = useState('');
   const [catFilter, setCatFilter] = useState<string | null>(null);
@@ -46,11 +61,9 @@ export default function ServiceGridWithSearch() {
       })
       .sort((a, b) => (b.popular ? 1 : 0) - (a.popular ? 1 : 0))
       .slice(0, MAX_RESULTS);
-  }, [query, catFilter]);
+  }, [query, catFilter, searchServices]);
 
-  const activeCount = searchServices.filter(s =>
-    !catFilter || s.category === catFilter
-  ).length;
+  const activeCount = catFilter ? (categoryCounts[catFilter] || 0) : totalCount;
 
   const navigateToService = useCallback((href: string) => {
     setOpen(false);
@@ -104,8 +117,8 @@ export default function ServiceGridWithSearch() {
             <input
               type="text"
               value={query}
-              onChange={e => { setQuery(e.target.value); setOpen(true); }}
-              onFocus={() => setOpen(true)}
+              onChange={e => { setQuery(e.target.value); setOpen(true); void loadCatalog(); }}
+              onFocus={() => { setOpen(true); void loadCatalog(); }}
               placeholder="Search by name, keyword, or service ID…"
               aria-label="Search services"
               aria-expanded={open}
@@ -134,7 +147,11 @@ export default function ServiceGridWithSearch() {
                          max-h-72 overflow-y-auto backdrop-blur-sm"
               style={{ backdropFilter: 'blur(8px)' }}
             >
-              {results.length === 0 ? (
+              {!catalogReady ? (
+                <div className="px-5 py-8 text-center text-slate-400 text-sm" role="status">
+                  {catalogError ? <button onClick={() => void loadCatalog()}>Could not load services. Retry</button> : 'Loading services…'}
+                </div>
+              ) : results.length === 0 ? (
                 <div className="px-5 py-8 text-center text-slate-400 text-sm">
                   No services match <strong className="text-slate-300">"{query}"</strong>
                   <br />Try a different keyword.

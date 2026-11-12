@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from 'react';
 import Link from 'next/link';
+import ServiceMatchQuizIntro from './ServiceMatchQuizIntro';
 import { allServices } from '../data/servicesData';
 
 // ── Quiz Questions ──
@@ -196,11 +197,11 @@ function calculateResults(answers: Record<string, string>): QuizResult {
   };
 }
 
-export default function ServiceMatchQuiz() {
+export default function ServiceMatchQuiz({ initialStarted = false }: { initialStarted?: boolean }) {
   const [step, setStep] = useState(0);
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const [showResults, setShowResults] = useState(false);
-  const [started, setStarted] = useState(false);
+  const [started, setStarted] = useState(initialStarted);
 
   const currentQ = QUESTIONS[step];
   const isLast = step === QUESTIONS.length - 1;
@@ -242,40 +243,7 @@ export default function ServiceMatchQuiz() {
     setStarted(true);
   };
 
-  // ── Not started ──
-  if (!started) {
-    return (
-      <section className="py-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_50%,rgba(120,50,200,0.12),transparent_60%)]" />
-        <div className="container-page relative">
-          <div className="max-w-3xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-900/30 border border-emerald-500/30 text-emerald-300 text-sm mb-6">
-              <span>✨</span> Free Interactive Tool
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Find Your Perfect Service Match
-            </h2>
-            <p className="text-lg text-slate-300 mb-8 max-w-2xl mx-auto">
-              Answer 5 quick questions and get an instant, personalized service recommendation
-              with estimated ROI — powered by our AI matching engine.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button
-                onClick={() => setStarted(true)}
-                className="btn-primary text-lg px-10 py-4 bg-gradient-to-r from-purple-600 to-emerald-600 hover:from-purple-500 hover:to-emerald-500"
-              >
-                🚀 Start the Quiz — It's Free
-              </button>
-              <Link href="/services/" className="btn-secondary text-lg px-10 py-4">
-                Browse All Services →
-              </Link>
-            </div>
-            <p className="text-slate-500 text-sm mt-4">Takes 30 seconds · No sign-up required · Instant results</p>
-          </div>
-        </div>
-      </section>
-    );
-  }
+  if (!started) return <ServiceMatchQuizIntro onStart={() => setStarted(true)} />;
 
   // ── Results ──
   if (showResults && results) {
