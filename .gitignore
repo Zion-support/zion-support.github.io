@@ -104,3 +104,6 @@ Google Drive
 .ssh/
 .netrc
 .npmrc
+
+# Local gh-pages publishing worktree, never a repository submodule
+/.pageploy/
