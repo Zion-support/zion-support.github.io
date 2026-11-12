@@ -32,3 +32,9 @@ Paused because active provider token is `exhausted` with `HTTP 429`:
 ## Outstanding Blocker
 - Need a clean-output LLM provider/model or Nous quota reset before re-enabling paused jobs.
 - Outreach LLM tailoring remains in fallback/draft mode.
+
+## Cron halt record — 2026-11-11 19:00 -03
+- Job `Reseed outreach queue from latest_outreach` (id 55973581e504) → state=paused
+- halted_at: 2026-11-11 19:00 -03. Reseed run completed: added 0 / skipped 11 / queue_size 58 / errors none.
+- Rescheduled next run: 2026-11-12 19:00 -03.
+- Partner-model growth task on hold. No sends or external outreach performed.

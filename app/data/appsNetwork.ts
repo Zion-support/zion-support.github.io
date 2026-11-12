@@ -555,7 +555,7 @@ export const appsNetworkCatalog: AppsNetworkApp[] = [
     href: '/ai-customer-support-pro/',
     description: 'AI-powered customer support automation and ticket management.',
     group: 'ai',
-    related: ['ai-ticket-triage', 'ai-chatbot-builder', 'ai-rag-knowledge-platform', 'ai-governance-checklist'],
+    related: ['ai-chatbot-builder', 'ai-governance-checklist'],
   },
   {
     slug: 'zion-ai-customer-support-pro',
@@ -563,7 +563,7 @@ export const appsNetworkCatalog: AppsNetworkApp[] = [
     href: '/zion-ai-customer-support-pro/',
     description: 'Enterprise AI customer support with triage, sentiment analysis, and CRM integration.',
     group: 'ai',
-    related: ['ai-customer-support-pro', 'ai-ticket-triage', 'ai-chatbot-builder', 'ai-rag-knowledge-platform'],
+    related: ['ai-customer-support-pro', 'ai-chatbot-builder'],
   },
   {
     slug: 'zion-ai-help-desk',
@@ -571,7 +571,7 @@ export const appsNetworkCatalog: AppsNetworkApp[] = [
     href: '/zion-ai-help-desk/',
     description: 'Automated help desk with ticket routing, SLA tracking, and knowledge base.',
     group: 'ops',
-    related: ['ai-customer-support-pro', 'ai-ticket-triage', 'ai-ticket-sentinel', 'sla-calculator'],
+    related: ['ai-customer-support-pro', 'ai-ticket-sentinel', 'sla-calculator'],
   },
   {
     slug: 'ai-ticket-sentinel',
@@ -579,7 +579,7 @@ export const appsNetworkCatalog: AppsNetworkApp[] = [
     href: '/ai-ticket-sentinel/',
     description: 'Continuous ticket monitoring and alerting for support operations.',
     group: 'ops',
-    related: ['ai-ticket-triage', 'zion-ai-help-desk', 'ai-customer-support-pro', 'agent-sla-monitor'],
+    related: ['zion-ai-help-desk', 'ai-customer-support-pro'],
   },
   {
     slug: 'ai-chatbot-builder',
@@ -595,7 +595,7 @@ export const appsNetworkCatalog: AppsNetworkApp[] = [
     href: '/zion-ai-chatbot-builder/',
     description: 'Enterprise chatbot builder with NLP, RAG, and multi-channel deployment.',
     group: 'ai',
-    related: ['ai-chatbot-builder', 'ai-customer-support-pro', 'zion-ai-chatbot-analytics', 'ai-rag-knowledge-platform'],
+    related: ['ai-chatbot-builder', 'ai-customer-support-pro', 'zion-ai-chatbot-analytics'],
   },
   {
     slug: 'zion-ai-chatbot-analytics',
@@ -603,7 +603,7 @@ export const appsNetworkCatalog: AppsNetworkApp[] = [
     href: '/zion-ai-chatbot-analytics/',
     description: 'Analytics and performance monitoring for AI chatbots.',
     group: 'ops',
-    related: ['zion-ai-chatbot-builder', 'ai-chatbot-builder', 'ai-customer-support-pro', 'agent-sla-monitor'],
+    related: ['zion-ai-chatbot-builder', 'ai-chatbot-builder', 'ai-customer-support-pro'],
   },
   {
     slug: 'zion-chatbot-builder',
@@ -619,7 +619,7 @@ export const appsNetworkCatalog: AppsNetworkApp[] = [
     href: '/it-support-services/',
     description: 'Managed IT support and help desk services.',
     group: 'ops',
-    related: ['zion-ai-help-desk', 'ai-customer-support-pro', 'ai-ticket-triage', 'ai-ticket-sentinel'],
+    related: ['zion-ai-help-desk', 'ai-customer-support-pro', 'ai-ticket-sentinel'],
   },
   {
     slug: 'zion-ai-sales-campaign-orbiter',
@@ -628,7 +628,7 @@ export const appsNetworkCatalog: AppsNetworkApp[] = [
     description: 'Automated multi-channel sales campaigns: email, WhatsApp and LinkedIn sequences with deliverability guardrails.',
     descriptionPt: 'Campanhas de vendas multicanal automatizadas: sequências de e-mail, WhatsApp e LinkedIn com guardrails de entregabilidade.',
     group: 'money',
-    related: ['zion-ai-email-marketing-pro', 'zion-ai-lead-scoring', 'zion-ai-lead-enrichment', 'zion-ai-quote-builder'],
+    related: ['roi-calc', 'token-cost', 'finops-estimator'],
   },
   {
     slug: 'zion-ai-billing-harmonizer',
@@ -637,7 +637,7 @@ export const appsNetworkCatalog: AppsNetworkApp[] = [
     description: 'Invoice & billing reconciliation: matching, dispute triage and revenue recognition checks.',
     descriptionPt: 'Reconciliação de faturas e cobranças: correspondência, triagem de disputas e verificação de reconhecimento de receita.',
     group: 'money',
-    related: ['zion-invoice-genius', 'zion-ai-report-generator', 'zion-ai-cost-optimizer', 'zion-email-automation'],
+    related: ['zion-invoice-genius'],
   },
   {
     slug: 'zion-ai-workforce-optimizer',
@@ -646,7 +646,7 @@ export const appsNetworkCatalog: AppsNetworkApp[] = [
     description: 'Optics of people, shifts and overtime across service territories.',
     descriptionPt: 'Otimização da equipe: turnos, pessoas e horas extras em todos os territórios de serviço.',
     group: 'ops',
-    related: ['field-dispatch', 'ai-ticket-triage', 'zion-ai-field-service-manager', 'zion-ai-schedule-optimizer'],
+    related: ['field-dispatch'],
   },
   {
     slug: 'zion-ai-hours-tracker',
@@ -664,7 +664,7 @@ export const appsNetworkCatalog: AppsNetworkApp[] = [
     description: 'Consolidates timesheet, expense and commission data into clean payroll inputs.',
     descriptionPt: 'Consolidação de fichas de trabalho, despesas e encargos numa entrada limpa de folha de pagamento.',
     group: 'money',
-    related: ['zion-ai-billing-harmonizer', 'zion-ai-hours-tracker', 'zion-ai-workforce-optimizer', 'zion-ai-cost-optimizer'],
+    related: ['zion-ai-billing-harmonizer', 'zion-ai-hours-tracker', 'zion-ai-workforce-optimizer'],
   },
   {
     slug: 'zion-crm-intelligence',
@@ -673,7 +673,7 @@ export const appsNetworkCatalog: AppsNetworkApp[] = [
     description: 'Single source of truth for accounts, contacts, pipeline and engagement history.',
     descriptionPt: 'Fonte única de verdade para contas, contactos, pipeline e histórico de envolvimento.',
     group: 'hub',
-    related: ['zion-ai-lead-scoring', 'zion-ai-sales-campaign-orbiter', 'zion-ai-help-desk', 'zion-ai-quote-builder'],
+    related: ['zion-ai-sales-campaign-orbiter', 'zion-ai-help-desk'],
   },
   {
     slug: 'zion-invoice-genius',
@@ -682,7 +682,7 @@ export const appsNetworkCatalog: AppsNetworkApp[] = [
     description: 'Invoice generation, smart formatting and PORTO compliance for service delivery.',
     descriptionPt: 'Geração de facturas, formatação inteligente e conformidade PORTO para a execução de serviços.',
     group: 'money',
-    related: ['zion-ai-billing-harmonizer', 'zion-ai-cost-optimizer', 'zion-ai-report-generator', 'zion-ai-contract-lifecycle'],
+    related: ['zion-ai-billing-harmonizer'],
   },
   {
     slug: 'zion-lead-magnet',
@@ -691,7 +691,7 @@ export const appsNetworkCatalog: AppsNetworkApp[] = [
     description: 'Turn a page into a qualified, tracked lead engine.',
     descriptionPt: 'Transforme uma página num motor de contactos qualificados e monitorizados.',
     group: 'hub',
-    related: ['zion-ai-lead-scoring', 'zion-ai-market-intelligence', 'zion-ai-seo-optimizer', 'zion-ai-sales-campaign-orbiter'],
+    related: ['zion-ai-sales-campaign-orbiter'],
   },
   {
     slug: 'zion-performance-monitor',
@@ -700,7 +700,7 @@ export const appsNetworkCatalog: AppsNetworkApp[] = [
     description: 'Monitor site and app performance with SLO tracking and alerts.',
     descriptionPt: 'Monitorização de performance de site e apps com SLO e alertas.',
     group: 'ops',
-    related: ['zion-ai-ssl-monitor', 'ai-api-health-monitor', 'zion-ai-cost-optimizer', 'ai-incident-timeline'],
+    related: ['sla-calculator', 'incident-cost', 'change-risk'],
   },
   {
     slug: 'zion-project-master',
@@ -709,7 +709,7 @@ export const appsNetworkCatalog: AppsNetworkApp[] = [
     description: 'Run delivery with automated reporting, capacity planning and risk scoring.',
     descriptionPt: 'Gestão de entregas com relatórios automáticos, planeamento de capacidade e escore de risco.',
     group: 'ops',
-    related: ['zion-ai-project-portfolio', 'zion-ai-workforce-optimizer', 'zion-devops-automation', 'zion-ai-resource-scheduler'],
+    related: ['zion-ai-workforce-optimizer'],
   },
   {
     slug: 'zion-security-shield',
@@ -718,7 +718,7 @@ export const appsNetworkCatalog: AppsNetworkApp[] = [
     description: 'Managed security monitoring: SIEM, threat intel and 24/7 response for SMBs and enterprises.',
     descriptionPt: 'Monitorização de segurança gerida: SIEM, Inteligência de Ameaças e resposta 24/7 para pequenas e grandes empresas.',
     group: 'govern',
-    related: ['zion-ai-ssl-monitor', 'secrets-sentinel', 'zion-security-shield'],
+    related: ['secrets-sentinel', 'zion-security-shield'],
   },
 ];
 

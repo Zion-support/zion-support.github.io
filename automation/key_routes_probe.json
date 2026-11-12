@@ -1,0 +1,54 @@
+{
+  "base": "https://ziontechgroup.com",
+  "run": "2026-11-12T10:13:08.390864Z",
+  "results": [
+    {
+      "route": "/",
+      "status": 200,
+      "final": "https://ziontechgroup.com/",
+      "ok": true
+    },
+    {
+      "route": "/public-roadmap",
+      "status": 200,
+      "final": "https://ziontechgroup.com/public-roadmap/",
+      "ok": true
+    },
+    {
+      "route": "/status-page",
+      "status": 200,
+      "final": "https://ziontechgroup.com/status-page/",
+      "ok": true
+    },
+    {
+      "route": "/use-cases",
+      "status": 200,
+      "final": "https://ziontechgroup.com/use-cases/",
+      "ok": true
+    },
+    {
+      "route": "/solutions/healthcare",
+      "status": 200,
+      "final": "https://ziontechgroup.com/solutions/healthcare/",
+      "ok": true
+    },
+    {
+      "route": "/industries/financial-services",
+      "status": 200,
+      "final": "https://ziontechgroup.com/industries/financial-services/",
+      "ok": true
+    },
+    {
+      "route": "/free-consultation",
+      "status": 200,
+      "final": "https://ziontechgroup.com/free-consultation/",
+      "ok": true
+    },
+    {
+      "route": "/tools/phishing-analyzer",
+      "status": 200,
+      "final": "https://ziontechgroup.com/tools/phishing-analyzer/",
+      "ok": true
+    }
+  ]
+}

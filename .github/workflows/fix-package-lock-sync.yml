@@ -1,0 +1,36 @@
+name: Fix package-lock sync (one-shot)
+
+permissions:
+  contents: write
+
+"on":
+  workflow_dispatch:
+
+jobs:
+  fix-lockfile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          token: ${{ github.token }}
+      - name: Setup Node.js
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
+        with:
+          node-version-file: '.nvmrc'
+
+      - name: Regenerate package-lock.json
+        run: npm install --package-lock-only --no-audit --fund=false
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add package-lock.json
+          if git diff --staged --quiet; then
+            echo "package-lock.json already in sync"
+            exit 0
+          fi
+          git commit -m "fix(deps): re-sync package-lock.json with package.json (@heroicons/react, clsx)"
+          git push origin HEAD:main

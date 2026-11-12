@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Biblioteca de Prompts · Zion Tech Group</title>
+<meta name="description" content="Un conjunto curado de prompts de producción para triaje de incidentes, revisión de cambios, razonamiento de capacidad y comunicación con las partes interesadas, cada uno con las entradas que necesita, la salida que devuelve y el modo de fallo a vigilar.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://ziontechgroup.com/es/prompt-library/">
+  <link rel="alternate" hreflang="en" href="https://ziontechgroup.com/prompt-library/">
+  <link rel="alternate" hreflang="pt" href="https://ziontechgroup.com/pt/prompt-library/">
+  <link rel="alternate" hreflang="es" href="https://ziontechgroup.com/es/prompt-library/">
+  <link rel="alternate" hreflang="fr" href="https://ziontechgroup.com/fr/prompt-library/">
+  <link rel="alternate" hreflang="de" href="https://ziontechgroup.com/de/prompt-library/">
+  <link rel="alternate" hreflang="x-default" href="https://ziontechgroup.com/prompt-library/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Biblioteca de Prompts","applicationCategory":"BusinessApplication","inLanguage":"es","url":"https://ziontechgroup.com/es/prompt-library/","description":"Un conjunto curado de prompts de producción para triaje de incidentes, revisión de cambios, razonamiento de capacidad y comunicación con las partes interesadas, cada uno con las entradas que necesita, la salida que devuelve y el modo de fallo a vigilar.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"isPartOf":{"@type":"CollectionPage","name":"Zion Apps Network","url":"https://ziontechgroup.com/apps-network/"}}</script>
+<style>
+:root{--bg:#0b1220;--card:#121a2b;--ink:#e8eef8;--muted:#9aa8bd;--line:#243049;--accent:#7dd3fc;--brand:#a78bfa}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+a{color:var(--accent);text-decoration:none}a:hover{color:#a5d7ff;text-decoration:underline}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px 72px}
+.skip{position:absolute;left:-9999px;top:0;background:var(--accent);color:#042033;padding:8px 14px;z-index:10}
+.skip:focus{left:8px;top:8px}
+header.site{border-bottom:1px solid var(--line);background:rgba(11,18,32,.92)}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:14px;padding-bottom:14px;flex-wrap:wrap}
+.brand{color:var(--ink);font-weight:700;letter-spacing:-.01em}
+.brand span{color:var(--brand)}
+.langs{display:flex;flex-wrap:wrap;gap:6px;font-size:.8rem}
+.langs a{color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:3px 10px}
+.langs a[aria-current="true"]{color:#042033;background:var(--accent);border-color:var(--accent);font-weight:700}
+.hero{padding:56px 0 40px;background:radial-gradient(ellipse at top,rgba(167,139,250,.16),transparent 60%)}
+.chip{display:inline-block;font-size:.72rem;text-transform:uppercase;letter-spacing:.14em;color:var(--brand);border:1px solid rgba(167,139,250,.4);border-radius:999px;padding:4px 12px;margin-bottom:16px}
+.hero h1{font-size:clamp(2rem,5vw,3rem);line-height:1.1;margin:0 0 14px;letter-spacing:-.02em}
+.lede{color:var(--muted);font-size:1.12rem;max-width:46rem;margin:0 0 26px}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;background:linear-gradient(90deg,#7c3aed,#ec4899);color:#fff;font-weight:700;padding:12px 20px;border-radius:10px}
+.btn.alt{background:transparent;border:1px solid var(--line);color:var(--ink)}
+section{padding:44px 0;border-top:1px solid var(--line)}
+h2{font-size:1.5rem;margin:0 0 18px;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:0 0 6px}
+p{margin:0 0 14px}
+ul.feat{list-style:none;padding:0;margin:0;display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+ul.feat li{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px}
+ul.feat li strong{display:block;color:var(--ink);margin-bottom:4px}
+ul.feat li span{color:var(--muted);font-size:.9rem}
+.grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(230px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;display:block;color:inherit}
+.card:hover{border-color:rgba(167,139,250,.5)}
+.card .g{font-size:.7rem;text-transform:uppercase;letter-spacing:.12em;color:var(--brand);margin-bottom:6px}
+.card p{color:var(--muted);font-size:.88rem;margin:0}
+.note{color:var(--muted);font-size:.9rem;max-width:46rem}
+.badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.badge{font-size:.78rem;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:5px 12px}
+footer{margin-top:12px;border-top:1px solid var(--line);padding-top:20px;color:var(--muted);font-size:.85rem}
+footer .wrap{display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;align-items:center;padding-top:18px;padding-bottom:18px}
+footer a{color:var(--muted)}
+@media(max-width:640px){.hero{padding:40px 0 28px}section{padding:32px 0}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Saltar al contenido</a>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="/es/">Zion <span>Apps Network</span></a>
+    <nav class="langs" aria-label="Idioma"><a href="https://ziontechgroup.com/undefined/" hreflang="en">EN</a><a href="https://ziontechgroup.com/pt/undefined/" hreflang="pt">PT</a><a href="https://ziontechgroup.com/es/undefined/" aria-current="true" hreflang="es">ES</a><a href="https://ziontechgroup.com/fr/undefined/" hreflang="fr">FR</a><a href="https://ziontechgroup.com/de/undefined/" hreflang="de">DE</a></nav>
+  </div>
+</header>
+<main id="main">
+  <div class="wrap">
+    <div class="hero">
+      <span class="chip">Trabajo &amp; briefs</span>
+      <h1>Biblioteca de Prompts</h1>
+      <p class="lede">Diez prompts de TI empresarial, listos para copiar y revisables.</p>
+      <div class="cta-row">
+        <a class="btn" href="/discovery/">Empezar Discovery gratuito</a>
+        <a class="btn alt" href="/pricing/">Ver precios</a>
+      </div>
+      <div class="badges">
+        <span class="badge">● Gratis</span>
+        <span class="badge">Sin tarjeta de crédito</span>
+        <span class="badge">Interconectado</span>
+      </div>
+    </div>
+
+    <section id="what">
+      <h2>Qué hace</h2>
+      <p class="note">Un conjunto curado de prompts de producción para triaje de incidentes, revisión de cambios, razonamiento de capacidad y comunicación con las partes interesadas, cada uno con las entradas que necesita, la salida que devuelve y el modo de fallo a vigilar.</p>
+    </section>
+
+    <section id="capabilities">
+      <h2>Capacidades clave</h2>
+      <ul class="feat">
+<li><strong>Diez prompts empresariales listos para copiar</strong></li>
+<li><strong>Entradas necesarias listadas por prompt</strong></li>
+<li><strong>Formato de salida esperado mostrado</strong></li>
+<li><strong>Modos de fallo conocidos señalados</strong></li>
+<li><strong>Versionados y revisables como conjunto</strong></li>
+      </ul>
+    </section>
+
+    <section id="when">
+      <h2>Cuándo usarlo</h2>
+      <ul class="feat">
+<li><strong>Estandarización de los prompts de respuesta a incidentes</strong></li>
+<li><strong>Incorporación de un nuevo equipo de operaciones</strong></li>
+<li><strong>Revisión de la calidad de los prompts antes de un despliegue</strong></li>
+      </ul>
+    </section>
+
+    <section id="related">
+      <h2>Apps relacionadas en esta red</h2>
+      <p class="note">Cada app se interconecta con sus hermanas — sin callejones sin salida en la red.</p>
+      <div class="grid">
+<a class="card" href="/agent-brief/">
+  <div class="g">Trabajo &amp; briefs</div>
+  <h3>Agent Brief</h3>
+  <p>One-pager for Discovery. Nothing stored.</p>
+</a>
+<a class="card" href="/stack-audit/">
+  <div class="g">Gobernanza &amp; licitaciones</div>
+  <h3>Stack Audit</h3>
+  <p>Ten yes/no checks that pick the next SKU.</p>
+</a>
+<a class="card" href="es/roi-calc/">
+  <div class="g">Dinero &amp; FinOps</div>
+  <h3>ROI Calculator</h3>
+  <p>Hours leaked vs Discovery / Consulting / Starter.</p>
+</a>
+<a class="card" href="/finops-estimator/">
+  <div class="g">Dinero &amp; FinOps</div>
+  <h3>FinOps Estimator</h3>
+  <p>Compute, storage, egress and model spend sketch.</p>
+</a>
+      </div>
+    </section>
+
+    <section id="cta">
+      <h2>¿Necesita esto en producción?</h2>
+      <p class="note">Empiece con un Discovery gratuito: un proceso, un informe, una sesión de 30 minutos. Luego defina un piloto con KPIs medibles.</p>
+      <div class="cta-row">
+        <a class="btn" href="/discovery/">Empezar Discovery gratuito</a>
+        <a class="btn alt" href="/es//apps-network/">Hub de Apps Network</a>
+      </div>
+    </section>
+  </div>
+</main>
+<footer>
+  <div class="wrap">
+    <div>Zion Apps Network · <a href="/es/">Zion Tech Group</a></div>
+    <div class="langs"><a href="https://ziontechgroup.com/undefined/" hreflang="en">EN</a><a href="https://ziontechgroup.com/pt/undefined/" hreflang="pt">PT</a><a href="https://ziontechgroup.com/es/undefined/" aria-current="true" hreflang="es">ES</a><a href="https://ziontechgroup.com/fr/undefined/" hreflang="fr">FR</a><a href="https://ziontechgroup.com/de/undefined/" hreflang="de">DE</a></div>
+  </div>
+</footer>
+</body>
+</html>

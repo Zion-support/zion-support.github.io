@@ -1,0 +1,3 @@
+[submodule ".pageploy"]
+	path = .pageploy
+	url = https://github.com/Zion-support/.pageploy.git
