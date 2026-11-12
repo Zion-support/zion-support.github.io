@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-coordinator---logistics-edition-9-9b031dd7",
+  "breadcrumbTitle": "AI Coordinator - Logistics Edition #9",
+  "title": "AI Coordinator - Logistics Edition #9",
+  "description": "Revolutionize logistics through intelligent automation. Our AI Coordinator - Logistics Edition #9 leverages advanced machine learning to deliver compliance moni",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Coordinator - Logistics Edition #9 - Zion Tech Group",
+    "description": "Revolutionize logistics through intelligent automation. Our AI Coordinator - Logistics Edition #9 leverages advanced machine learning to deliver compliance moni",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-coordinator---logistics-edition-9-9b031dd7"
+    }
+  },
+  "features": [
+    "Custom integrations",
+    "Container orchestration",
+    "Role-based access control",
+    "Rollback mechanisms",
+    "HIPAA ready"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "50% reduction in operational costs",
+    "Seamless integration with existing systems"
+  ]
+}

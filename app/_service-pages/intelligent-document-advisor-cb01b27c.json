@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-document-advisor-cb01b27c",
+  "breadcrumbTitle": "Intelligent Document Advisor",
+  "title": "Intelligent Document Advisor",
+  "description": "Transform your transportation operations with our Intelligent Document Advisor. This AI-driven solution automates customer insights with unprecedented accuracy ",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Document Advisor - Zion Tech Group",
+    "description": "Transform your transportation operations with our Intelligent Document Advisor. This AI-driven solution automates customer insights with unprecedented accuracy ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-document-advisor-cb01b27c"
+    }
+  },
+  "features": [
+    "GDPR compliance",
+    "Alerting system",
+    "Edge computing support",
+    "Cloud-native architecture"
+  ],
+  "benefits": [
+    "Intelligent load balancing",
+    "Self-healing infrastructure",
+    "Dynamic resource allocation",
+    "3x faster decision making"
+  ]
+}

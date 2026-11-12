@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/autonomous-suite-for-retail-1da8ca76",
+  "breadcrumbTitle": "Autonomous Suite for Retail",
+  "title": "Autonomous Suite for Retail",
+  "description": "The future of retail is here with Autonomous Suite for Retail. Powered by cutting-edge AI, this platform delivers document processing like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous Suite for Retail - Zion Tech Group",
+    "description": "The future of retail is here with Autonomous Suite for Retail. Powered by cutting-edge AI, this platform delivers document processing like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-suite-for-retail-1da8ca76"
+    }
+  },
+  "features": [
+    "Container orchestration",
+    "Zero-downtime updates",
+    "Edge computing support",
+    "Auto-scaling capabilities",
+    "Multi-language support"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "ROI in under 90 days",
+    "Performance benchmarking",
+    "Intelligent load balancing",
+    "24/7 automated operations"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/predictive-industry-specific-public-sector-risk-scoring-24a93be5",
+  "breadcrumbTitle": "Predictive Industry-Specific Public Sector Risk Scoring",
+  "title": "Predictive Industry-Specific Public Sector Risk Scoring",
+  "description": "Predictive risk scoring engine that assesses industry-specific public sector vulnerabilities with machine learning.",
+  "basic": "$278/month",
+  "pro": "$698/month",
+  "enterprise": "$2098/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Predictive Industry-Specific Public Sector Risk Scoring - Zion Tech Group",
+    "description": "Predictive risk scoring engine that assesses industry-specific public sector vulnerabilities with machine learning.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/predictive-industry-specific-public-sector-risk-scoring-24a93be5"
+    }
+  },
+  "features": [
+    "Risk assessment",
+    "Threat modeling",
+    "Compliance scoring",
+    "Mitigation planning"
+  ],
+  "benefits": [
+    "Proactive risk mitigation",
+    "Compliance assurance",
+    "Reduced exposure",
+    "Faster incident response"
+  ]
+}

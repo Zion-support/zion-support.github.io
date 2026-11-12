@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/neural-analytics-logistics-1-e62bbccd",
+  "breadcrumbTitle": "Neural analytics-logistics #1",
+  "title": "Neural analytics-logistics #1",
+  "description": "Transform your logistics operations with our Neural analytics-logistics #1. This AI-driven solution automates energy management with unprecedented accuracy and ",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Neural analytics-logistics #1 - Zion Tech Group",
+    "description": "Transform your logistics operations with our Neural analytics-logistics #1. This AI-driven solution automates energy management with unprecedented accuracy and ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/neural-analytics-logistics-1-e62bbccd"
+    }
+  },
+  "features": [
+    "SOC 2 certified",
+    "Offline capabilities",
+    "GDPR compliance",
+    "Cloud-native architecture",
+    "Auto-scaling capabilities"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "Intelligent load balancing",
+    "Predictive maintenance scheduling"
+  ]
+}

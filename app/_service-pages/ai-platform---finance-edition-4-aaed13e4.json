@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-platform---finance-edition-4-aaed13e4",
+  "breadcrumbTitle": "AI Platform - Finance Edition #4",
+  "title": "AI Platform - Finance Edition #4",
+  "description": "Next-generation finance solution: AI Platform - Finance Edition #4. Combines maintenance scheduling with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Platform - Finance Edition #4 - Zion Tech Group",
+    "description": "Next-generation finance solution: AI Platform - Finance Edition #4. Combines maintenance scheduling with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-platform---finance-edition-4-aaed13e4"
+    }
+  },
+  "features": [
+    "Edge computing support",
+    "Alerting system",
+    "Role-based access control",
+    "Offline capabilities",
+    "HIPAA ready"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Zero manual intervention required",
+    "Cost optimization recommendations"
+  ]
+}

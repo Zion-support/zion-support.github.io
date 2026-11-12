@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/ai-insights---media-edition-1-9a7f7dd4",
+  "breadcrumbTitle": "AI Insights - Media Edition #1",
+  "title": "AI Insights - Media Edition #1",
+  "description": "Unlock unprecedented growth with AI Insights - Media Edition #1. This autonomous system provides workflow management with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Insights - Media Edition #1 - Zion Tech Group",
+    "description": "Unlock unprecedented growth with AI Insights - Media Edition #1. This autonomous system provides workflow management with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-insights---media-edition-1-9a7f7dd4"
+    }
+  },
+  "features": [
+    "HIPAA ready",
+    "Custom integrations",
+    "Container orchestration",
+    "GDPR compliance"
+  ],
+  "benefits": [
+    "Automated compliance reporting",
+    "Seamless integration with existing systems",
+    "Cost optimization recommendations"
+  ]
+}

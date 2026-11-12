@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-powered-system-for-legal-065906c6",
+  "breadcrumbTitle": "AI-Powered System for Legal",
+  "title": "AI-Powered System for Legal",
+  "description": "Revolutionize legal through intelligent automation. Our AI-Powered System for Legal leverages advanced machine learning to deliver process automation at scale.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI-Powered System for Legal - Zion Tech Group",
+    "description": "Revolutionize legal through intelligent automation. Our AI-Powered System for Legal leverages advanced machine learning to deliver process automation at scale.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-system-for-legal-065906c6"
+    }
+  },
+  "features": [
+    "Real-time processing",
+    "Role-based access control",
+    "Container orchestration",
+    "Comprehensive monitoring",
+    "Mobile-responsive interface"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "Real-time insights and alerts",
+    "Cost optimization recommendations",
+    "50% reduction in operational costs"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-powered-suite-for-legal-1-077b0bf7",
+  "breadcrumbTitle": "AI-Powered Suite for Legal #1",
+  "title": "AI-Powered Suite for Legal #1",
+  "description": "Revolutionize legal through intelligent automation. Our AI-Powered Suite for Legal #1 leverages advanced machine learning to deliver decision support at scale.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI-Powered Suite for Legal #1 - Zion Tech Group",
+    "description": "Revolutionize legal through intelligent automation. Our AI-Powered Suite for Legal #1 leverages advanced machine learning to deliver decision support at scale.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-suite-for-legal-1-077b0bf7"
+    }
+  },
+  "features": [
+    "Microservices deployment",
+    "Mobile-responsive interface",
+    "Role-based access control",
+    "Custom integrations"
+  ],
+  "benefits": [
+    "Seamless integration with existing systems",
+    "Intelligent load balancing",
+    "Cost optimization recommendations",
+    "99.9% uptime guarantee",
+    "Automated compliance reporting"
+  ]
+}

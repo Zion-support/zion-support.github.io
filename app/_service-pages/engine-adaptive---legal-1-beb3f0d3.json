@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/engine-adaptive---legal-1-beb3f0d3",
+  "breadcrumbTitle": "Engine Adaptive - Legal #1",
+  "title": "Engine Adaptive - Legal #1",
+  "description": "The future of legal is here with Engine Adaptive - Legal #1. Powered by cutting-edge AI, this platform delivers user experience like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Engine Adaptive - Legal #1 - Zion Tech Group",
+    "description": "The future of legal is here with Engine Adaptive - Legal #1. Powered by cutting-edge AI, this platform delivers user experience like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/engine-adaptive---legal-1-beb3f0d3"
+    }
+  },
+  "features": [
+    "Microservices deployment",
+    "GDPR compliance",
+    "Alerting system",
+    "Mobile-responsive interface",
+    "Plugin architecture"
+  ],
+  "benefits": [
+    "Intelligent load balancing",
+    "Cost optimization recommendations",
+    "Zero manual intervention required",
+    "Enterprise-grade security",
+    "ROI in under 90 days"
+  ]
+}

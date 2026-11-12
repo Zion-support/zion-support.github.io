@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-supply-system-2992e85c",
+  "breadcrumbTitle": "Intelligent Supply System",
+  "title": "Intelligent Supply System",
+  "description": "Revolutionize hospitality through intelligent automation. Our Intelligent Supply System leverages advanced machine learning to deliver document processing at sc",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Supply System - Zion Tech Group",
+    "description": "Revolutionize hospitality through intelligent automation. Our Intelligent Supply System leverages advanced machine learning to deliver document processing at sc",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-supply-system-2992e85c"
+    }
+  },
+  "features": [
+    "Real-time processing",
+    "Plugin architecture",
+    "Performance dashboards",
+    "Rollback mechanisms",
+    "Container orchestration"
+  ],
+  "benefits": [
+    "Scalable to millions of transactions",
+    "Predictive maintenance scheduling",
+    "24/7 automated operations"
+  ]
+}

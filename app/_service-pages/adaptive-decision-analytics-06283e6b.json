@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/adaptive-decision-analytics-06283e6b",
+  "breadcrumbTitle": "Adaptive Decision Analytics",
+  "title": "Adaptive Decision Analytics",
+  "description": "Next-generation legal solution: Adaptive Decision Analytics. Combines user experience with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Adaptive Decision Analytics - Zion Tech Group",
+    "description": "Next-generation legal solution: Adaptive Decision Analytics. Combines user experience with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/adaptive-decision-analytics-06283e6b"
+    }
+  },
+  "features": [
+    "Audit trails",
+    "Serverless functions",
+    "Custom integrations",
+    "HIPAA ready"
+  ],
+  "benefits": [
+    "Dynamic resource allocation",
+    "50% reduction in operational costs",
+    "24/7 automated operations",
+    "Enterprise-grade security",
+    "Performance benchmarking"
+  ]
+}

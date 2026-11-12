@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-predictor-logistics-53dd85e1",
+  "breadcrumbTitle": "Intelligent predictor-logistics",
+  "title": "Intelligent predictor-logistics",
+  "description": "Next-generation logistics solution: Intelligent predictor-logistics. Combines financial planning with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent predictor-logistics - Zion Tech Group",
+    "description": "Next-generation logistics solution: Intelligent predictor-logistics. Combines financial planning with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-predictor-logistics-53dd85e1"
+    }
+  },
+  "features": [
+    "Container orchestration",
+    "SOC 2 certified",
+    "Role-based access control",
+    "Machine learning integration",
+    "Custom integrations"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "50% reduction in operational costs",
+    "ROI in under 90 days"
+  ]
+}

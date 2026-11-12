@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-risk-insights-64ee21cd",
+  "breadcrumbTitle": "Intelligent Risk Insights",
+  "title": "Intelligent Risk Insights",
+  "description": "Next-generation finance solution: Intelligent Risk Insights. Combines financial planning with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Risk Insights - Zion Tech Group",
+    "description": "Next-generation finance solution: Intelligent Risk Insights. Combines financial planning with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-risk-insights-64ee21cd"
+    }
+  },
+  "features": [
+    "Cloud-native architecture",
+    "Plugin architecture",
+    "Zero-downtime updates",
+    "Edge computing support",
+    "Multi-language support"
+  ],
+  "benefits": [
+    "24/7 automated operations",
+    "Seamless integration with existing systems",
+    "Dynamic resource allocation"
+  ]
+}

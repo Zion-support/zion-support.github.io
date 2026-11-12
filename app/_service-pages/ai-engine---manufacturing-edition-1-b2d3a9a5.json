@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-engine---manufacturing-edition-1-b2d3a9a5",
+  "breadcrumbTitle": "AI Engine - Manufacturing Edition #1",
+  "title": "AI Engine - Manufacturing Edition #1",
+  "description": "Revolutionize manufacturing through intelligent automation. Our AI Engine - Manufacturing Edition #1 leverages advanced machine learning to deliver resource opt",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Engine - Manufacturing Edition #1 - Zion Tech Group",
+    "description": "Revolutionize manufacturing through intelligent automation. Our AI Engine - Manufacturing Edition #1 leverages advanced machine learning to deliver resource opt",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-engine---manufacturing-edition-1-b2d3a9a5"
+    }
+  },
+  "features": [
+    "Cloud-native architecture",
+    "Mobile-responsive interface",
+    "Custom integrations",
+    "Zero-downtime updates",
+    "Data encryption"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "Performance benchmarking",
+    "ROI in under 90 days"
+  ]
+}

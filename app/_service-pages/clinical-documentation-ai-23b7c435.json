@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/clinical-documentation-ai-23b7c435",
+  "breadcrumbTitle": "Clinical Documentation AI",
+  "title": "Clinical Documentation AI",
+  "description": "Automate clinical documentation with ambient AI scribes. Generates SOAP notes, coding suggestions, and compliance checks in real-time during patient encounters.",
+  "basic": "$299/provider/mo/month",
+  "pro": "$599/provider/mo/month",
+  "enterprise": "$custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Clinical Documentation AI - Zion Tech Group",
+    "description": "Automate clinical documentation with ambient AI scribes. Generates SOAP notes, coding suggestions, and compliance checks in real-time during patient encounters.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/clinical-documentation-ai-23b7c435"
+    }
+  },
+  "features": [
+    "Ambient clinical listening",
+    "Real-time SOAP generation",
+    "ICD-10/CPT code suggestions",
+    "Compliance validation",
+    "EHR integration (Epic, Cerner)"
+  ],
+  "benefits": [
+    "Save 2 hours/day per physician",
+    "Reduce documentation errors",
+    "Improve coding accuracy",
+    "Increase patient face time",
+    "Burnout reduction"
+  ]
+}

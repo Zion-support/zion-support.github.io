@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/intelligent-cloud-healthcare-66601d26",
+  "breadcrumbTitle": "Intelligent cloud-healthcare",
+  "title": "Intelligent cloud-healthcare",
+  "description": "The future of Healthcare is here with Intelligent cloud-healthcare. Powered by cutting-edge AI, this platform delivers sales process optimization like never bef",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent cloud-healthcare - Zion Tech Group",
+    "description": "The future of Healthcare is here with Intelligent cloud-healthcare. Powered by cutting-edge AI, this platform delivers sales process optimization like never bef",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-cloud-healthcare-66601d26"
+    }
+  },
+  "features": [
+    "Data governance with policy enforcement",
+    "Business intelligence with KPI dashboards",
+    "SOC 2 certified with security controls",
+    "Data encryption at rest and in transit",
+    "Inventory prediction with demand forecasting"
+  ],
+  "benefits": [
+    "Improved customer satisfaction with faster response times",
+    "99.9% uptime guarantee with redundant architecture",
+    "3x faster decision making with real-time insights",
+    "Reduced development time with code generation",
+    "Improved sales performance with lead scoring"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/next-generation-modular-agriculture-automation-d680a7f1",
+  "breadcrumbTitle": "Next-Generation Modular Agriculture Automation",
+  "title": "Next-Generation Modular Agriculture Automation",
+  "description": "Next-generation automation suite that streamlines modular agriculture workflows with intelligent orchestration.",
+  "basic": "$218/month",
+  "pro": "$548/month",
+  "enterprise": "$1648/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Next-Generation Modular Agriculture Automation - Zion Tech Group",
+    "description": "Next-generation automation suite that streamlines modular agriculture workflows with intelligent orchestration.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/next-generation-modular-agriculture-automation-d680a7f1"
+    }
+  },
+  "features": [
+    "Smart orchestration",
+    "Process automation",
+    "Event processing",
+    "Task scheduling"
+  ],
+  "benefits": [
+    "Faster execution",
+    "Reduced manual steps",
+    "Scalable processes",
+    "Error reduction"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/autonomous-suite-for-sports-0bc913c1",
+  "breadcrumbTitle": "Autonomous Suite for Sports",
+  "title": "Autonomous Suite for Sports",
+  "description": "Unlock unprecedented growth with Autonomous Suite for Sports. This autonomous system provides financial planning with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous Suite for Sports - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Autonomous Suite for Sports. This autonomous system provides financial planning with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-suite-for-sports-0bc913c1"
+    }
+  },
+  "features": [
+    "Alerting system",
+    "SOC 2 certified",
+    "Plugin architecture",
+    "GDPR compliance",
+    "Machine learning integration"
+  ],
+  "benefits": [
+    "Seamless integration with existing systems",
+    "ROI in under 90 days",
+    "Performance benchmarking",
+    "Reduced human error by 95%"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/analyzer-ai---agriculture-2a1975e4",
+  "breadcrumbTitle": "Analyzer AI - Agriculture",
+  "title": "Analyzer AI - Agriculture",
+  "description": "Unlock unprecedented growth with Analyzer AI - Agriculture. This autonomous system provides resource optimization with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Analyzer AI - Agriculture - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Analyzer AI - Agriculture. This autonomous system provides resource optimization with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/analyzer-ai---agriculture-2a1975e4"
+    }
+  },
+  "features": [
+    "Offline capabilities",
+    "Plugin architecture",
+    "Edge computing support",
+    "Role-based access control"
+  ],
+  "benefits": [
+    "Performance benchmarking",
+    "Scalable to millions of transactions",
+    "3x faster decision making",
+    "ROI in under 90 days"
+  ]
+}

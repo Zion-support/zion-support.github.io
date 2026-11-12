@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-advanced-insurance-analytics-0abc26e6",
+  "breadcrumbTitle": "AI-Powered Advanced Insurance Analytics",
+  "title": "AI-Powered Advanced Insurance Analytics",
+  "description": "AI-driven analytics platform that delivers advanced insights into insurance operations, providing real-time monitoring, predictive modeling, and automated repor",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI-Powered Advanced Insurance Analytics - Zion Tech Group",
+    "description": "AI-driven analytics platform that delivers advanced insights into insurance operations, providing real-time monitoring, predictive modeling, and automated repor",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-advanced-insurance-analytics-0abc26e6"
+    }
+  },
+  "features": [
+    "Real-time monitoring",
+    "Predictive modeling",
+    "Automated reporting",
+    "Custom dashboards"
+  ],
+  "benefits": [
+    "Data-driven decision making",
+    "Improved operational efficiency",
+    "Proactive issue detection",
+    "Enhanced KPI tracking"
+  ]
+}

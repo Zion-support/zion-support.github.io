@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/advanced-devices-for-logistics-e6e1e275",
+  "breadcrumbTitle": "Advanced Devices for Logistics",
+  "title": "Advanced Devices for Logistics",
+  "description": "The future of logistics is here with Advanced Devices for Logistics. Powered by cutting-edge AI, this platform delivers automation control like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Advanced Devices for Logistics - Zion Tech Group",
+    "description": "The future of logistics is here with Advanced Devices for Logistics. Powered by cutting-edge AI, this platform delivers automation control like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/advanced-devices-for-logistics-e6e1e275"
+    }
+  },
+  "features": [
+    "Real-time telemetry collection and analysis",
+    "Comprehensive monitoring with custom dashboards",
+    "Edge AI for local decision making",
+    "API-first design with comprehensive REST and GraphQL endpoints",
+    "Audit trails with compliance reporting"
+  ],
+  "benefits": [
+    "50% reduction in operational costs through automation",
+    "Dynamic resource allocation based on demand patterns",
+    "3x faster decision making with real-time insights",
+    "Real-time insights and alerts for proactive management",
+    "Zero manual intervention required for routine tasks"
+  ]
+}

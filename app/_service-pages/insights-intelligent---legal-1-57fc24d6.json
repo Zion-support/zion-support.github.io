@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/insights-intelligent---legal-1-57fc24d6",
+  "breadcrumbTitle": "Insights Intelligent - Legal #1",
+  "title": "Insights Intelligent - Legal #1",
+  "description": "Unlock unprecedented growth with Insights Intelligent - Legal #1. This autonomous system provides decision support with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Insights Intelligent - Legal #1 - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Insights Intelligent - Legal #1. This autonomous system provides decision support with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/insights-intelligent---legal-1-57fc24d6"
+    }
+  },
+  "features": [
+    "Custom integrations",
+    "Role-based access control",
+    "Auto-scaling capabilities",
+    "Serverless functions"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "Enterprise-grade security",
+    "99.9% uptime guarantee",
+    "Intelligent load balancing",
+    "Predictive maintenance scheduling"
+  ]
+}

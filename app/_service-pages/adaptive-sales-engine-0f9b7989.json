@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/adaptive-sales-engine-0f9b7989",
+  "breadcrumbTitle": "Adaptive Sales Engine",
+  "title": "Adaptive Sales Engine",
+  "description": "The future of energy is here with Adaptive Sales Engine. Powered by cutting-edge AI, this platform delivers supply chain like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Adaptive Sales Engine - Zion Tech Group",
+    "description": "The future of energy is here with Adaptive Sales Engine. Powered by cutting-edge AI, this platform delivers supply chain like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/adaptive-sales-engine-0f9b7989"
+    }
+  },
+  "features": [
+    "Plugin architecture",
+    "Auto-scaling capabilities",
+    "GDPR compliance",
+    "Comprehensive monitoring"
+  ],
+  "benefits": [
+    "Seamless integration with existing systems",
+    "Enterprise-grade security",
+    "Reduced human error by 95%"
+  ]
+}

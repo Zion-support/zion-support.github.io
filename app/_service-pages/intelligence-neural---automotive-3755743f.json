@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/intelligence-neural---automotive-3755743f",
+  "breadcrumbTitle": "Intelligence Neural - Automotive",
+  "title": "Intelligence Neural - Automotive",
+  "description": "Next-generation automotive solution: Intelligence Neural - Automotive. Combines market intelligence with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligence Neural - Automotive - Zion Tech Group",
+    "description": "Next-generation automotive solution: Intelligence Neural - Automotive. Combines market intelligence with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligence-neural---automotive-3755743f"
+    }
+  },
+  "features": [
+    "Edge computing support",
+    "Microservices deployment",
+    "SOC 2 certified",
+    "Custom integrations",
+    "Real-time processing"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "ROI in under 90 days",
+    "Scalable to millions of transactions",
+    "Performance benchmarking",
+    "Seamless integration with existing systems"
+  ]
+}

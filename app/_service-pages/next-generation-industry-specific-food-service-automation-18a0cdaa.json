@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/next-generation-industry-specific-food-service-automation-18a0cdaa",
+  "breadcrumbTitle": "Next-Generation Industry-Specific Food Service Automation",
+  "title": "Next-Generation Industry-Specific Food Service Automation",
+  "description": "Next-generation automation suite that streamlines industry-specific food service workflows with intelligent orchestration.",
+  "basic": "$218/month",
+  "pro": "$548/month",
+  "enterprise": "$1648/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Next-Generation Industry-Specific Food Service Automation - Zion Tech Group",
+    "description": "Next-generation automation suite that streamlines industry-specific food service workflows with intelligent orchestration.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/next-generation-industry-specific-food-service-automation-18a0cdaa"
+    }
+  },
+  "features": [
+    "Smart orchestration",
+    "Process automation",
+    "Event processing",
+    "Task scheduling"
+  ],
+  "benefits": [
+    "Faster execution",
+    "Reduced manual steps",
+    "Scalable processes",
+    "Error reduction"
+  ]
+}

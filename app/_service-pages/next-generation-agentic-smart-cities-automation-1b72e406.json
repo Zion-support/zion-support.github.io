@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/next-generation-agentic-smart-cities-automation-1b72e406",
+  "breadcrumbTitle": "Next-Generation Agentic Smart Cities Automation",
+  "title": "Next-Generation Agentic Smart Cities Automation",
+  "description": "Next-generation automation suite that streamlines agentic smart cities workflows with intelligent orchestration.",
+  "basic": "$218/month",
+  "pro": "$548/month",
+  "enterprise": "$1648/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Next-Generation Agentic Smart Cities Automation - Zion Tech Group",
+    "description": "Next-generation automation suite that streamlines agentic smart cities workflows with intelligent orchestration.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/next-generation-agentic-smart-cities-automation-1b72e406"
+    }
+  },
+  "features": [
+    "Smart orchestration",
+    "Process automation",
+    "Event processing",
+    "Task scheduling"
+  ],
+  "benefits": [
+    "Faster execution",
+    "Reduced manual steps",
+    "Scalable processes",
+    "Error reduction"
+  ]
+}

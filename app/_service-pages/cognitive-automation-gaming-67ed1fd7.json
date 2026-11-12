@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/cognitive-automation-gaming-67ed1fd7",
+  "breadcrumbTitle": "Cognitive automation-gaming",
+  "title": "Cognitive automation-gaming",
+  "description": "Revolutionize gaming through intelligent automation. Our Cognitive automation-gaming leverages advanced machine learning to deliver decision support at scale.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Cognitive automation-gaming - Zion Tech Group",
+    "description": "Revolutionize gaming through intelligent automation. Our Cognitive automation-gaming leverages advanced machine learning to deliver decision support at scale.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cognitive-automation-gaming-67ed1fd7"
+    }
+  },
+  "features": [
+    "API-first design",
+    "Role-based access control",
+    "Open-source friendly",
+    "Plugin architecture"
+  ],
+  "benefits": [
+    "Scalable to millions of transactions",
+    "ROI in under 90 days",
+    "50% reduction in operational costs",
+    "3x faster decision making"
+  ]
+}

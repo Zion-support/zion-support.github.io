@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-engine---hospitality-edition-5-c4cb2915",
+  "breadcrumbTitle": "AI Engine - Hospitality Edition #5",
+  "title": "AI Engine - Hospitality Edition #5",
+  "description": "Unlock unprecedented growth with AI Engine - Hospitality Edition #5. This autonomous system provides inventory management with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Engine - Hospitality Edition #5 - Zion Tech Group",
+    "description": "Unlock unprecedented growth with AI Engine - Hospitality Edition #5. This autonomous system provides inventory management with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-engine---hospitality-edition-5-c4cb2915"
+    }
+  },
+  "features": [
+    "Data encryption",
+    "Microservices deployment",
+    "Multi-region deployment",
+    "Custom integrations"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "ROI in under 90 days",
+    "Seamless integration with existing systems",
+    "3x faster decision making",
+    "Real-time insights and alerts"
+  ]
+}

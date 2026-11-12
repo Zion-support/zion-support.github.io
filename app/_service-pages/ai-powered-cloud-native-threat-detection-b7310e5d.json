@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-cloud-native-threat-detection-b7310e5d",
+  "breadcrumbTitle": "AI-Powered Cloud-Native Threat Detection",
+  "title": "AI-Powered Cloud-Native Threat Detection",
+  "description": "Advanced cybersecurity platform that identifies and mitigates cloud-native threats in real-time.",
+  "basic": "$278/month",
+  "pro": "$698/month",
+  "enterprise": "$2098/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Cloud-Native Threat Detection - Zion Tech Group",
+    "description": "Advanced cybersecurity platform that identifies and mitigates cloud-native threats in real-time.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-cloud-native-threat-detection-b7310e5d"
+    }
+  },
+  "features": [
+    "Behavioral analysis",
+    "Automated response",
+    "Threat intelligence",
+    "Incident management"
+  ],
+  "benefits": [
+    "Proactive protection",
+    "Reduced breaches",
+    "Faster response",
+    "Compliance assurance"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/automated-user-generator-cdb2b7bb",
+  "breadcrumbTitle": "Automated User Generator",
+  "title": "Automated User Generator",
+  "description": "Revolutionize manufacturing through intelligent automation. Our Automated User Generator leverages advanced machine learning to deliver financial planning at sc",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated User Generator - Zion Tech Group",
+    "description": "Revolutionize manufacturing through intelligent automation. Our Automated User Generator leverages advanced machine learning to deliver financial planning at sc",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-user-generator-cdb2b7bb"
+    }
+  },
+  "features": [
+    "HIPAA ready",
+    "Audit trails",
+    "Mobile-responsive interface",
+    "Auto-scaling capabilities"
+  ],
+  "benefits": [
+    "Intelligent load balancing",
+    "3x faster decision making",
+    "99.9% uptime guarantee",
+    "Performance benchmarking"
+  ]
+}

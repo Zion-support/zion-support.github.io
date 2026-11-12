@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/analytics-automated---energy-1-648abd9b",
+  "breadcrumbTitle": "Analytics Automated - Energy #1",
+  "title": "Analytics Automated - Energy #1",
+  "description": "Next-generation energy solution: Analytics Automated - Energy #1. Combines financial planning with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Analytics Automated - Energy #1 - Zion Tech Group",
+    "description": "Next-generation energy solution: Analytics Automated - Energy #1. Combines financial planning with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/analytics-automated---energy-1-648abd9b"
+    }
+  },
+  "features": [
+    "API-first design",
+    "Audit trails",
+    "Performance dashboards",
+    "Container orchestration"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "Self-healing infrastructure",
+    "Zero manual intervention required"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-marketing-inventory-management-f08f74bb",
+  "breadcrumbTitle": "Intelligent Marketing Inventory Management",
+  "title": "Intelligent Marketing Inventory Management",
+  "description": "AI-driven inventory optimization platform that provides enterprise-grade demand forecasting, automated replenishment, and assortment planning for retail operati",
+  "basic": "$258/month",
+  "pro": "$648/month",
+  "enterprise": "$1948/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Intelligent Marketing Inventory Management - Zion Tech Group",
+    "description": "AI-driven inventory optimization platform that provides enterprise-grade demand forecasting, automated replenishment, and assortment planning for retail operati",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-marketing-inventory-management-f08f74bb"
+    }
+  },
+  "features": [
+    "Demand forecasting",
+    "Auto-replenishment",
+    "Assortment optimization",
+    "Markdown optimization"
+  ],
+  "benefits": [
+    "Reduced stockouts",
+    "Lower inventory costs",
+    "Optimized assortments",
+    "Improved margins"
+  ]
+}

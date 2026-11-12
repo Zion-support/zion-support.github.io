@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/smart-operational-workflow-automation-2e8c7b74",
+  "breadcrumbTitle": "Smart Operational Workflow Automation",
+  "title": "Smart Operational Workflow Automation",
+  "description": "Intelligent workflow automation platform that streamlines operational processes and eliminates manual tasks.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Smart Operational Workflow Automation - Zion Tech Group",
+    "description": "Intelligent workflow automation platform that streamlines operational processes and eliminates manual tasks.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-operational-workflow-automation-2e8c7b74"
+    }
+  },
+  "features": [
+    "Process mapping",
+    "Task automation",
+    "Workflow optimization",
+    "Exception handling"
+  ],
+  "benefits": [
+    "Faster operations",
+    "Reduced errors",
+    "Improved productivity",
+    "Better resource utilization"
+  ]
+}

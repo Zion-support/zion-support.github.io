@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/generator-cognitive---manufacturing-7e55ae5c",
+  "breadcrumbTitle": "Generator Cognitive - Manufacturing",
+  "title": "Generator Cognitive - Manufacturing",
+  "description": "Unlock unprecedented growth with Generator Cognitive - Manufacturing. This autonomous system provides energy management with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Generator Cognitive - Manufacturing - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Generator Cognitive - Manufacturing. This autonomous system provides energy management with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/generator-cognitive---manufacturing-7e55ae5c"
+    }
+  },
+  "features": [
+    "Role-based access control",
+    "Comprehensive monitoring",
+    "Machine learning integration",
+    "Alerting system"
+  ],
+  "benefits": [
+    "Automated compliance reporting",
+    "Reduced human error by 95%",
+    "99.9% uptime guarantee"
+  ]
+}

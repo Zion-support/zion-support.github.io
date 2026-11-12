@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/generator-intelligent---manufacturing-cbab7049",
+  "breadcrumbTitle": "Generator Intelligent - Manufacturing",
+  "title": "Generator Intelligent - Manufacturing",
+  "description": "Next-generation manufacturing solution: Generator Intelligent - Manufacturing. Combines performance monitoring with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Generator Intelligent - Manufacturing - Zion Tech Group",
+    "description": "Next-generation manufacturing solution: Generator Intelligent - Manufacturing. Combines performance monitoring with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/generator-intelligent---manufacturing-cbab7049"
+    }
+  },
+  "features": [
+    "Open-source friendly",
+    "Container orchestration",
+    "Role-based access control",
+    "API-first design",
+    "HIPAA ready"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "50% reduction in operational costs",
+    "Cost optimization recommendations"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/ai-orchestrator---agriculture-edition-7a4b2284",
+  "breadcrumbTitle": "AI Orchestrator - Agriculture Edition",
+  "title": "AI Orchestrator - Agriculture Edition",
+  "description": "Transform your agriculture operations with our AI Orchestrator - Agriculture Edition. This AI-driven solution automates threat detection with unprecedented accu",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Orchestrator - Agriculture Edition - Zion Tech Group",
+    "description": "Transform your agriculture operations with our AI Orchestrator - Agriculture Edition. This AI-driven solution automates threat detection with unprecedented accu",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-orchestrator---agriculture-edition-7a4b2284"
+    }
+  },
+  "features": [
+    "API-first design",
+    "Offline capabilities",
+    "Real-time processing",
+    "Machine learning integration",
+    "Plugin architecture"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "Dynamic resource allocation",
+    "Real-time insights and alerts",
+    "Enterprise-grade security",
+    "Automated compliance reporting"
+  ]
+}

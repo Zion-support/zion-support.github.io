@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-orchestrator---legal-edition-2-c9089e7d",
+  "breadcrumbTitle": "AI Orchestrator - Legal Edition #2",
+  "title": "AI Orchestrator - Legal Edition #2",
+  "description": "Transform your legal operations with our AI Orchestrator - Legal Edition #2. This AI-driven solution automates inventory management with unprecedented accuracy ",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Orchestrator - Legal Edition #2 - Zion Tech Group",
+    "description": "Transform your legal operations with our AI Orchestrator - Legal Edition #2. This AI-driven solution automates inventory management with unprecedented accuracy ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-orchestrator---legal-edition-2-c9089e7d"
+    }
+  },
+  "features": [
+    "Container orchestration",
+    "Alerting system",
+    "SOC 2 certified",
+    "Data encryption"
+  ],
+  "benefits": [
+    "Automated compliance reporting",
+    "Predictive maintenance scheduling",
+    "Reduced human error by 95%",
+    "Self-healing infrastructure"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/algorithmic-trading-risk-manager-dc000149",
+  "breadcrumbTitle": "Algorithmic Trading Risk Manager",
+  "title": "Algorithmic Trading Risk Manager",
+  "description": "Real-time risk management for algorithmic trading. Pre-trade checks, position monitoring, and automated kill switches with microsecond latency for HFT and quant",
+  "basic": "$9999/mo/month",
+  "pro": "$29999/mo/month",
+  "enterprise": "$custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Algorithmic Trading Risk Manager - Zion Tech Group",
+    "description": "Real-time risk management for algorithmic trading. Pre-trade checks, position monitoring, and automated kill switches with microsecond latency for HFT and quant",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/algorithmic-trading-risk-manager-dc000149"
+    }
+  },
+  "features": [
+    "Pre-trade risk checks",
+    "Real-time position monitoring",
+    "Automated kill switches",
+    "Regulatory reporting",
+    "Multi-venue support"
+  ],
+  "benefits": [
+    "Prevent catastrophic losses",
+    "MiFID II compliance",
+    "Sub-microsecond latency",
+    "Reduce operational risk",
+    "Audit-ready trails"
+  ]
+}

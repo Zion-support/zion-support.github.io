@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/intelligent-security-suite-13d599bc",
+  "breadcrumbTitle": "Intelligent Security Suite",
+  "title": "Intelligent Security Suite",
+  "description": "Unlock unprecedented growth with Intelligent Security Suite. This autonomous system provides language processing with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Security Suite - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Intelligent Security Suite. This autonomous system provides language processing with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-security-suite-13d599bc"
+    }
+  },
+  "features": [
+    "Alerting system",
+    "GDPR compliance",
+    "Edge computing support",
+    "Auto-scaling capabilities",
+    "Role-based access control"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "Dynamic resource allocation",
+    "Enterprise-grade security",
+    "Cost optimization recommendations",
+    "Seamless integration with existing systems"
+  ]
+}

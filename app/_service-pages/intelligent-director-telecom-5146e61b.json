@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-director-telecom-5146e61b",
+  "breadcrumbTitle": "Intelligent director-telecom",
+  "title": "Intelligent director-telecom",
+  "description": "The future of telecom is here with Intelligent director-telecom. Powered by cutting-edge AI, this platform delivers predictive analytics like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent director-telecom - Zion Tech Group",
+    "description": "The future of telecom is here with Intelligent director-telecom. Powered by cutting-edge AI, this platform delivers predictive analytics like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-director-telecom-5146e61b"
+    }
+  },
+  "features": [
+    "Cloud-native architecture",
+    "Zero-downtime updates",
+    "Container orchestration",
+    "Edge computing support",
+    "Role-based access control"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "24/7 automated operations",
+    "50% reduction in operational costs"
+  ]
+}

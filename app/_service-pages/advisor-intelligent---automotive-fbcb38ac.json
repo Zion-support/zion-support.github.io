@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/advisor-intelligent---automotive-fbcb38ac",
+  "breadcrumbTitle": "Advisor Intelligent - Automotive",
+  "title": "Advisor Intelligent - Automotive",
+  "description": "Next-generation automotive solution: Advisor Intelligent - Automotive. Combines resource optimization with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Advisor Intelligent - Automotive - Zion Tech Group",
+    "description": "Next-generation automotive solution: Advisor Intelligent - Automotive. Combines resource optimization with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/advisor-intelligent---automotive-fbcb38ac"
+    }
+  },
+  "features": [
+    "SOC 2 certified",
+    "Edge computing support",
+    "Real-time processing",
+    "Open-source friendly"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "50% reduction in operational costs",
+    "Reduced human error by 95%",
+    "Scalable to millions of transactions"
+  ]
+}

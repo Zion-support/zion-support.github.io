@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/neural-management-for-construction-580c16d0",
+  "breadcrumbTitle": "Neural Management for Construction",
+  "title": "Neural Management for Construction",
+  "description": "Transform your construction operations with our Neural Management for Construction. This AI-driven solution automates performance monitoring with unprecedented ",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Neural Management for Construction - Zion Tech Group",
+    "description": "Transform your construction operations with our Neural Management for Construction. This AI-driven solution automates performance monitoring with unprecedented ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/neural-management-for-construction-580c16d0"
+    }
+  },
+  "features": [
+    "SOC 2 certified",
+    "Cloud-native architecture",
+    "Custom integrations",
+    "Auto-scaling capabilities",
+    "Offline capabilities"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "99.9% uptime guarantee",
+    "24/7 automated operations",
+    "Self-healing infrastructure"
+  ]
+}

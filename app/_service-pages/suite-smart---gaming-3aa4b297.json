@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/suite-smart---gaming-3aa4b297",
+  "breadcrumbTitle": "Suite Smart - Gaming",
+  "title": "Suite Smart - Gaming",
+  "description": "Unlock unprecedented growth with Suite Smart - Gaming. This autonomous system provides content generation with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Suite Smart - Gaming - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Suite Smart - Gaming. This autonomous system provides content generation with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/suite-smart---gaming-3aa4b297"
+    }
+  },
+  "features": [
+    "GDPR compliance",
+    "Zero-downtime updates",
+    "Auto-scaling capabilities",
+    "Container orchestration",
+    "Offline capabilities"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "3x faster decision making",
+    "Automated compliance reporting"
+  ]
+}

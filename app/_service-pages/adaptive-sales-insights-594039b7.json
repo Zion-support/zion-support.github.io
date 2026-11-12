@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/adaptive-sales-insights-594039b7",
+  "breadcrumbTitle": "Adaptive Sales Insights",
+  "title": "Adaptive Sales Insights",
+  "description": "The future of finance is here with Adaptive Sales Insights. Powered by cutting-edge AI, this platform delivers maintenance scheduling like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Adaptive Sales Insights - Zion Tech Group",
+    "description": "The future of finance is here with Adaptive Sales Insights. Powered by cutting-edge AI, this platform delivers maintenance scheduling like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/adaptive-sales-insights-594039b7"
+    }
+  },
+  "features": [
+    "Data encryption",
+    "Zero-downtime updates",
+    "Microservices deployment",
+    "Container orchestration",
+    "Real-time processing"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "ROI in under 90 days",
+    "Cost optimization recommendations"
+  ]
+}

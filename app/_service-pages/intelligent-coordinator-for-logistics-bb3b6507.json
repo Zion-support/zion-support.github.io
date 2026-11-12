@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligent-coordinator-for-logistics-bb3b6507",
+  "breadcrumbTitle": "Intelligent Coordinator for Logistics",
+  "title": "Intelligent Coordinator for Logistics",
+  "description": "Next-generation logistics solution: Intelligent Coordinator for Logistics. Combines performance monitoring with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Coordinator for Logistics - Zion Tech Group",
+    "description": "Next-generation logistics solution: Intelligent Coordinator for Logistics. Combines performance monitoring with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-coordinator-for-logistics-bb3b6507"
+    }
+  },
+  "features": [
+    "SOC 2 certified",
+    "Role-based access control",
+    "Microservices deployment",
+    "Real-time processing",
+    "Audit trails"
+  ],
+  "benefits": [
+    "50% reduction in operational costs",
+    "Intelligent load balancing",
+    "Scalable to millions of transactions",
+    "Self-healing infrastructure"
+  ]
+}

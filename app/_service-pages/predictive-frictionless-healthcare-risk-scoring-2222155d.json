@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/predictive-frictionless-healthcare-risk-scoring-2222155d",
+  "breadcrumbTitle": "Predictive Frictionless Healthcare Risk Scoring",
+  "title": "Predictive Frictionless Healthcare Risk Scoring",
+  "description": "Predictive risk scoring engine that assesses frictionless healthcare vulnerabilities with machine learning.",
+  "basic": "$278/month",
+  "pro": "$698/month",
+  "enterprise": "$2098/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Predictive Frictionless Healthcare Risk Scoring - Zion Tech Group",
+    "description": "Predictive risk scoring engine that assesses frictionless healthcare vulnerabilities with machine learning.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/predictive-frictionless-healthcare-risk-scoring-2222155d"
+    }
+  },
+  "features": [
+    "Risk assessment",
+    "Threat modeling",
+    "Compliance scoring",
+    "Mitigation planning"
+  ],
+  "benefits": [
+    "Proactive risk mitigation",
+    "Compliance assurance",
+    "Reduced exposure",
+    "Faster incident response"
+  ]
+}

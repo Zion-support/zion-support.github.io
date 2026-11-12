@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/intelligent-manager-automotive-d957dbe9",
+  "breadcrumbTitle": "Intelligent manager-automotive",
+  "title": "Intelligent manager-automotive",
+  "description": "Revolutionize automotive through intelligent automation. Our Intelligent manager-automotive leverages advanced machine learning to deliver resource optimization",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent manager-automotive - Zion Tech Group",
+    "description": "Revolutionize automotive through intelligent automation. Our Intelligent manager-automotive leverages advanced machine learning to deliver resource optimization",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-manager-automotive-d957dbe9"
+    }
+  },
+  "features": [
+    "Data encryption",
+    "Alerting system",
+    "Container orchestration",
+    "Audit trails"
+  ],
+  "benefits": [
+    "Cost optimization recommendations",
+    "Predictive maintenance scheduling",
+    "Zero manual intervention required"
+  ]
+}

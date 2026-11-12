@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/adaptive-data-intelligence-1-a0df02f5",
+  "breadcrumbTitle": "Adaptive Data Intelligence #1",
+  "title": "Adaptive Data Intelligence #1",
+  "description": "Next-generation legal solution: Adaptive Data Intelligence #1. Combines maintenance scheduling with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Adaptive Data Intelligence #1 - Zion Tech Group",
+    "description": "Next-generation legal solution: Adaptive Data Intelligence #1. Combines maintenance scheduling with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/adaptive-data-intelligence-1-a0df02f5"
+    }
+  },
+  "features": [
+    "HIPAA ready",
+    "Multi-region deployment",
+    "Cloud-native architecture",
+    "Real-time processing"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "Seamless integration with existing systems",
+    "99.9% uptime guarantee",
+    "Real-time insights and alerts"
+  ]
+}

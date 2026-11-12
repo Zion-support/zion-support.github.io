@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-suite---education-edition-5-a113f933",
+  "breadcrumbTitle": "AI Suite - Education Edition #5",
+  "title": "AI Suite - Education Edition #5",
+  "description": "Revolutionize education through intelligent automation. Our AI Suite - Education Edition #5 leverages advanced machine learning to deliver performance monitorin",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Suite - Education Edition #5 - Zion Tech Group",
+    "description": "Revolutionize education through intelligent automation. Our AI Suite - Education Edition #5 leverages advanced machine learning to deliver performance monitorin",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-suite---education-edition-5-a113f933"
+    }
+  },
+  "features": [
+    "Audit trails",
+    "Real-time processing",
+    "Microservices deployment",
+    "Alerting system"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "Real-time insights and alerts",
+    "Enterprise-grade security",
+    "Scalable to millions of transactions",
+    "Reduced human error by 95%"
+  ]
+}

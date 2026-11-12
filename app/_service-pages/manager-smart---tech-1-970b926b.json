@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/manager-smart---tech-1-970b926b",
+  "breadcrumbTitle": "Manager Smart - Tech #1",
+  "title": "Manager Smart - Tech #1",
+  "description": "Next-generation technology solution: Manager Smart - Tech #1. Combines inventory management with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Manager Smart - Tech #1 - Zion Tech Group",
+    "description": "Next-generation technology solution: Manager Smart - Tech #1. Combines inventory management with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/manager-smart---tech-1-970b926b"
+    }
+  },
+  "features": [
+    "Mobile-responsive interface",
+    "Microservices deployment",
+    "Real-time processing",
+    "Data encryption",
+    "HIPAA ready"
+  ],
+  "benefits": [
+    "24/7 automated operations",
+    "Seamless integration with existing systems",
+    "Intelligent load balancing",
+    "Predictive maintenance scheduling"
+  ]
+}

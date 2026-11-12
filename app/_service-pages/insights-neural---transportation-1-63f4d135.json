@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/insights-neural---transportation-1-63f4d135",
+  "breadcrumbTitle": "Insights Neural - Transportation #1",
+  "title": "Insights Neural - Transportation #1",
+  "description": "Next-generation transportation solution: Insights Neural - Transportation #1. Combines compliance monitoring with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Insights Neural - Transportation #1 - Zion Tech Group",
+    "description": "Next-generation transportation solution: Insights Neural - Transportation #1. Combines compliance monitoring with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/insights-neural---transportation-1-63f4d135"
+    }
+  },
+  "features": [
+    "Performance dashboards",
+    "Machine learning integration",
+    "Microservices deployment",
+    "Multi-language support"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "3x faster decision making",
+    "Intelligent load balancing"
+  ]
+}

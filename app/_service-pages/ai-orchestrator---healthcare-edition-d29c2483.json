@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-orchestrator---healthcare-edition-d29c2483",
+  "breadcrumbTitle": "AI Orchestrator - Healthcare Edition",
+  "title": "AI Orchestrator - Healthcare Edition",
+  "description": "Revolutionize healthcare through intelligent automation. Our AI Orchestrator - Healthcare Edition leverages advanced machine learning to deliver risk assessment",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Orchestrator - Healthcare Edition - Zion Tech Group",
+    "description": "Revolutionize healthcare through intelligent automation. Our AI Orchestrator - Healthcare Edition leverages advanced machine learning to deliver risk assessment",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-orchestrator---healthcare-edition-d29c2483"
+    }
+  },
+  "features": [
+    "Mobile-responsive interface",
+    "Rollback mechanisms",
+    "Edge computing support",
+    "Machine learning integration"
+  ],
+  "benefits": [
+    "Dynamic resource allocation",
+    "99.9% uptime guarantee",
+    "3x faster decision making",
+    "Reduced human error by 95%",
+    "Performance benchmarking"
+  ]
+}

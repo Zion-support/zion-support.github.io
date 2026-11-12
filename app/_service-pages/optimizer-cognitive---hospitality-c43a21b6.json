@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/optimizer-cognitive---hospitality-c43a21b6",
+  "breadcrumbTitle": "Optimizer Cognitive - Hospitality",
+  "title": "Optimizer Cognitive - Hospitality",
+  "description": "Transform your hospitality operations with our Optimizer Cognitive - Hospitality. This AI-driven solution automates predictive analytics with unprecedented accu",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Optimizer Cognitive - Hospitality - Zion Tech Group",
+    "description": "Transform your hospitality operations with our Optimizer Cognitive - Hospitality. This AI-driven solution automates predictive analytics with unprecedented accu",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/optimizer-cognitive---hospitality-c43a21b6"
+    }
+  },
+  "features": [
+    "Real-time processing",
+    "Machine learning integration",
+    "Microservices deployment",
+    "Plugin architecture",
+    "Custom integrations"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "Dynamic resource allocation",
+    "Automated compliance reporting"
+  ]
+}

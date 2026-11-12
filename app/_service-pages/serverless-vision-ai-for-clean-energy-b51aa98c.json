@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/serverless-vision-ai-for-clean-energy-b51aa98c",
+  "breadcrumbTitle": "Serverless Vision AI for Clean Energy",
+  "title": "Serverless Vision AI for Clean Energy",
+  "description": "Vision AI system powered by serverless computer vision models for clean energy analysis and automated visual inspection.",
+  "basic": "$258/month",
+  "pro": "$648/month",
+  "enterprise": "$1948/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Serverless Vision AI for Clean Energy - Zion Tech Group",
+    "description": "Vision AI system powered by serverless computer vision models for clean energy analysis and automated visual inspection.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/serverless-vision-ai-for-clean-energy-b51aa98c"
+    }
+  },
+  "features": [
+    "Real-time object detection",
+    "Image classification",
+    "Anomaly detection",
+    "Visual inspection"
+  ],
+  "benefits": [
+    "Automated quality control",
+    "Reduced inspection costs",
+    "Defect detection",
+    "Visual search"
+  ]
+}

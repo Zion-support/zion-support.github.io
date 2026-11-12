@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-advisor---hospitality-edition-3-d7b839ea",
+  "breadcrumbTitle": "AI Advisor - Hospitality Edition #3",
+  "title": "AI Advisor - Hospitality Edition #3",
+  "description": "Unlock unprecedented growth with AI Advisor - Hospitality Edition #3. This autonomous system provides workflow management with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Advisor - Hospitality Edition #3 - Zion Tech Group",
+    "description": "Unlock unprecedented growth with AI Advisor - Hospitality Edition #3. This autonomous system provides workflow management with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-advisor---hospitality-edition-3-d7b839ea"
+    }
+  },
+  "features": [
+    "GDPR compliance",
+    "API-first design",
+    "Plugin architecture",
+    "Container orchestration",
+    "Mobile-responsive interface"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "Predictive maintenance scheduling",
+    "Dynamic resource allocation"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/cognitive-platform-for-sports-f9b4dcbc",
+  "breadcrumbTitle": "Cognitive Platform for Sports",
+  "title": "Cognitive Platform for Sports",
+  "description": "Next-generation sports solution: Cognitive Platform for Sports. Combines quality control with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Cognitive Platform for Sports - Zion Tech Group",
+    "description": "Next-generation sports solution: Cognitive Platform for Sports. Combines quality control with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cognitive-platform-for-sports-f9b4dcbc"
+    }
+  },
+  "features": [
+    "Plugin architecture",
+    "Cloud-native architecture",
+    "GDPR compliance",
+    "Zero-downtime updates"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "Predictive maintenance scheduling",
+    "24/7 automated operations"
+  ]
+}

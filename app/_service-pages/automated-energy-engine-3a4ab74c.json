@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/automated-energy-engine-3a4ab74c",
+  "breadcrumbTitle": "Automated Energy Engine",
+  "title": "Automated Energy Engine",
+  "description": "Next-generation retail solution: Automated Energy Engine. Combines decision support with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated Energy Engine - Zion Tech Group",
+    "description": "Next-generation retail solution: Automated Energy Engine. Combines decision support with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-energy-engine-3a4ab74c"
+    }
+  },
+  "features": [
+    "Performance dashboards",
+    "API-first design",
+    "Container orchestration",
+    "Multi-language support"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Automated compliance reporting",
+    "ROI in under 90 days"
+  ]
+}

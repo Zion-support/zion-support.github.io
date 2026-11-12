@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/suite-intelligent---retail-28ad0987",
+  "breadcrumbTitle": "Suite Intelligent - Retail",
+  "title": "Suite Intelligent - Retail",
+  "description": "Unlock unprecedented growth with Suite Intelligent - Retail. This autonomous system provides data processing with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Suite Intelligent - Retail - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Suite Intelligent - Retail. This autonomous system provides data processing with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/suite-intelligent---retail-28ad0987"
+    }
+  },
+  "features": [
+    "Mobile-responsive interface",
+    "Zero-downtime updates",
+    "Multi-region deployment",
+    "Custom integrations",
+    "Performance dashboards"
+  ],
+  "benefits": [
+    "Performance benchmarking",
+    "Cost optimization recommendations",
+    "50% reduction in operational costs",
+    "Self-healing infrastructure",
+    "Reduced human error by 95%"
+  ]
+}

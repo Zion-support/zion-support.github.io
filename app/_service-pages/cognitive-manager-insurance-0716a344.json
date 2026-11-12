@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/cognitive-manager-insurance-0716a344",
+  "breadcrumbTitle": "Cognitive manager-insurance",
+  "title": "Cognitive manager-insurance",
+  "description": "The future of insurance is here with Cognitive manager-insurance. Powered by cutting-edge AI, this platform delivers market intelligence like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Cognitive manager-insurance - Zion Tech Group",
+    "description": "The future of insurance is here with Cognitive manager-insurance. Powered by cutting-edge AI, this platform delivers market intelligence like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cognitive-manager-insurance-0716a344"
+    }
+  },
+  "features": [
+    "Plugin architecture",
+    "GDPR compliance",
+    "Edge computing support",
+    "Open-source friendly",
+    "Microservices deployment"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "Self-healing infrastructure",
+    "Cost optimization recommendations"
+  ]
+}

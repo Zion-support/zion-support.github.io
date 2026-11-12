@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/director-ai---real-estate-d254e4d4",
+  "breadcrumbTitle": "Director AI - Real-Estate",
+  "title": "Director AI - Real-Estate",
+  "description": "Next-generation real-estate solution: Director AI - Real-Estate. Combines network optimization with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Director AI - Real-Estate - Zion Tech Group",
+    "description": "Next-generation real-estate solution: Director AI - Real-Estate. Combines network optimization with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/director-ai---real-estate-d254e4d4"
+    }
+  },
+  "features": [
+    "Edge computing support",
+    "HIPAA ready",
+    "Multi-region deployment",
+    "Cloud-native architecture",
+    "Mobile-responsive interface"
+  ],
+  "benefits": [
+    "24/7 automated operations",
+    "Predictive maintenance scheduling",
+    "Zero manual intervention required",
+    "50% reduction in operational costs",
+    "Enterprise-grade security"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/adaptive-maintenance-coordinator-f8e234c7",
+  "breadcrumbTitle": "Adaptive Maintenance Coordinator",
+  "title": "Adaptive Maintenance Coordinator",
+  "description": "Transform your insurance operations with our Adaptive Maintenance Coordinator. This AI-driven solution automates image recognition with unprecedented accuracy a",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Adaptive Maintenance Coordinator - Zion Tech Group",
+    "description": "Transform your insurance operations with our Adaptive Maintenance Coordinator. This AI-driven solution automates image recognition with unprecedented accuracy a",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/adaptive-maintenance-coordinator-f8e234c7"
+    }
+  },
+  "features": [
+    "Edge computing support",
+    "Mobile-responsive interface",
+    "Container orchestration",
+    "Alerting system",
+    "Multi-language support"
+  ],
+  "benefits": [
+    "Automated compliance reporting",
+    "Scalable to millions of transactions",
+    "Real-time insights and alerts"
+  ]
+}

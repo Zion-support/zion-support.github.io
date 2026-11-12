@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/smart-sales-coordinator-2ebd918d",
+  "breadcrumbTitle": "Smart Sales Coordinator",
+  "title": "Smart Sales Coordinator",
+  "description": "The future of education is here with Smart Sales Coordinator. Powered by cutting-edge AI, this platform delivers security monitoring like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Sales Coordinator - Zion Tech Group",
+    "description": "The future of education is here with Smart Sales Coordinator. Powered by cutting-edge AI, this platform delivers security monitoring like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-sales-coordinator-2ebd918d"
+    }
+  },
+  "features": [
+    "Mobile-responsive interface",
+    "Rollback mechanisms",
+    "Zero-downtime updates",
+    "Multi-language support",
+    "Cloud-native architecture"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Automated compliance reporting",
+    "Dynamic resource allocation",
+    "Self-healing infrastructure",
+    "Predictive maintenance scheduling"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/insights-autonomous---media-2b445fa2",
+  "breadcrumbTitle": "Insights Autonomous - Media",
+  "title": "Insights Autonomous - Media",
+  "description": "Revolutionize media through intelligent automation. Our Insights Autonomous - Media leverages advanced machine learning to deliver customer insights at scale.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Insights Autonomous - Media - Zion Tech Group",
+    "description": "Revolutionize media through intelligent automation. Our Insights Autonomous - Media leverages advanced machine learning to deliver customer insights at scale.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/insights-autonomous---media-2b445fa2"
+    }
+  },
+  "features": [
+    "Serverless functions",
+    "Offline capabilities",
+    "Open-source friendly",
+    "Multi-region deployment",
+    "SOC 2 certified"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "Automated compliance reporting",
+    "Real-time insights and alerts",
+    "Seamless integration with existing systems"
+  ]
+}

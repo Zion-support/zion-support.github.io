@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/optimization-smart---healthcare-2-b508ebf4",
+  "breadcrumbTitle": "Optimization Smart - Healthcare #2",
+  "title": "Optimization Smart - Healthcare #2",
+  "description": "Next-generation healthcare solution: Optimization Smart - Healthcare #2. Combines maintenance scheduling with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Optimization Smart - Healthcare #2 - Zion Tech Group",
+    "description": "Next-generation healthcare solution: Optimization Smart - Healthcare #2. Combines maintenance scheduling with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/optimization-smart---healthcare-2-b508ebf4"
+    }
+  },
+  "features": [
+    "API-first design",
+    "Rollback mechanisms",
+    "Real-time processing",
+    "SOC 2 certified"
+  ],
+  "benefits": [
+    "Dynamic resource allocation",
+    "50% reduction in operational costs",
+    "24/7 automated operations"
+  ]
+}

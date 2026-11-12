@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/predictive-advanced-freight-analytics-0e0069e6",
+  "breadcrumbTitle": "Predictive Advanced Freight Analytics",
+  "title": "Predictive Advanced Freight Analytics",
+  "description": "Freight intelligence platform that provides advanced rate forecasting, capacity planning, and carrier performance analytics for logistics optimization.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Predictive Advanced Freight Analytics - Zion Tech Group",
+    "description": "Freight intelligence platform that provides advanced rate forecasting, capacity planning, and carrier performance analytics for logistics optimization.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/predictive-advanced-freight-analytics-0e0069e6"
+    }
+  },
+  "features": [
+    "Rate forecasting",
+    "Capacity planning",
+    "Carrier scorecards",
+    "Lane optimization"
+  ],
+  "benefits": [
+    "Cost reduction",
+    "Better capacity",
+    "Improved reliability",
+    "Strategic sourcing"
+  ]
+}

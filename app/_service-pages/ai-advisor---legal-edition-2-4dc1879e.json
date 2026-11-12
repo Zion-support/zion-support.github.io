@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/ai-advisor---legal-edition-2-4dc1879e",
+  "breadcrumbTitle": "AI Advisor - Legal Edition #2",
+  "title": "AI Advisor - Legal Edition #2",
+  "description": "Transform your legal operations with our AI Advisor - Legal Edition #2. This AI-driven solution automates energy management with unprecedented accuracy and effi",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Advisor - Legal Edition #2 - Zion Tech Group",
+    "description": "Transform your legal operations with our AI Advisor - Legal Edition #2. This AI-driven solution automates energy management with unprecedented accuracy and effi",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-advisor---legal-edition-2-4dc1879e"
+    }
+  },
+  "features": [
+    "Role-based access control",
+    "Offline capabilities",
+    "Custom integrations",
+    "Container orchestration",
+    "Zero-downtime updates"
+  ],
+  "benefits": [
+    "Intelligent load balancing",
+    "99.9% uptime guarantee",
+    "50% reduction in operational costs",
+    "Automated compliance reporting",
+    "Enterprise-grade security"
+  ]
+}

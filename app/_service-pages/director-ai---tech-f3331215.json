@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/director-ai---tech-f3331215",
+  "breadcrumbTitle": "Director AI - Tech",
+  "title": "Director AI - Tech",
+  "description": "The future of technology is here with Director AI - Tech. Powered by cutting-edge AI, this platform delivers threat detection like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Director AI - Tech - Zion Tech Group",
+    "description": "The future of technology is here with Director AI - Tech. Powered by cutting-edge AI, this platform delivers threat detection like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/director-ai---tech-f3331215"
+    }
+  },
+  "features": [
+    "Audit trails",
+    "Open-source friendly",
+    "Comprehensive monitoring",
+    "Performance dashboards",
+    "Data encryption"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "Enterprise-grade security",
+    "ROI in under 90 days",
+    "50% reduction in operational costs"
+  ]
+}

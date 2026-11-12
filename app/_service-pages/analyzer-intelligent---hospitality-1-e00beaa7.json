@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/analyzer-intelligent---hospitality-1-e00beaa7",
+  "breadcrumbTitle": "Analyzer Intelligent - Hospitality #1",
+  "title": "Analyzer Intelligent - Hospitality #1",
+  "description": "Next-generation hospitality solution: Analyzer Intelligent - Hospitality #1. Combines image recognition with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Analyzer Intelligent - Hospitality #1 - Zion Tech Group",
+    "description": "Next-generation hospitality solution: Analyzer Intelligent - Hospitality #1. Combines image recognition with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/analyzer-intelligent---hospitality-1-e00beaa7"
+    }
+  },
+  "features": [
+    "Role-based access control",
+    "Alerting system",
+    "Cloud-native architecture",
+    "Performance dashboards",
+    "Multi-region deployment"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "Cost optimization recommendations",
+    "Dynamic resource allocation",
+    "Scalable to millions of transactions",
+    "50% reduction in operational costs"
+  ]
+}

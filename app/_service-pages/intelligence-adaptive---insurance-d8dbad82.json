@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/intelligence-adaptive---insurance-d8dbad82",
+  "breadcrumbTitle": "Intelligence Adaptive - Insurance",
+  "title": "Intelligence Adaptive - Insurance",
+  "description": "Revolutionize insurance through intelligent automation. Our Intelligence Adaptive - Insurance leverages advanced machine learning to deliver workflow management",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligence Adaptive - Insurance - Zion Tech Group",
+    "description": "Revolutionize insurance through intelligent automation. Our Intelligence Adaptive - Insurance leverages advanced machine learning to deliver workflow management",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligence-adaptive---insurance-d8dbad82"
+    }
+  },
+  "features": [
+    "Offline capabilities",
+    "Microservices deployment",
+    "Plugin architecture",
+    "Multi-language support",
+    "Audit trails"
+  ],
+  "benefits": [
+    "Scalable to millions of transactions",
+    "Cost optimization recommendations",
+    "Automated compliance reporting",
+    "Zero manual intervention required",
+    "3x faster decision making"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/engine-smart---healthcare-20278aa9",
+  "breadcrumbTitle": "Engine Smart - Healthcare",
+  "title": "Engine Smart - Healthcare",
+  "description": "Revolutionize Healthcare through intelligent automation. Our Engine Smart - Healthcare leverages advanced machine learning to deliver performance monitoring at ",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Engine Smart - Healthcare - Zion Tech Group",
+    "description": "Revolutionize Healthcare through intelligent automation. Our Engine Smart - Healthcare leverages advanced machine learning to deliver performance monitoring at ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/engine-smart---healthcare-20278aa9"
+    }
+  },
+  "features": [
+    "Data encryption at rest and in transit",
+    "Alerting system with intelligent notifications",
+    "Document processing with OCR and NLP",
+    "Business intelligence with KPI dashboards",
+    "Real-time processing with streaming analytics"
+  ],
+  "benefits": [
+    "Automated compliance reporting for regulatory requirements",
+    "ROI achieved in under 90 days with cost savings",
+    "Dynamic resource allocation based on demand patterns",
+    "Performance benchmarking against industry standards"
+  ]
+}

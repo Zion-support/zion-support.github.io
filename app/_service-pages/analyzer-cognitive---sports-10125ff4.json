@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/analyzer-cognitive---sports-10125ff4",
+  "breadcrumbTitle": "Analyzer Cognitive - Sports",
+  "title": "Analyzer Cognitive - Sports",
+  "description": "Unlock unprecedented growth with Analyzer Cognitive - Sports. This autonomous system provides document processing with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Analyzer Cognitive - Sports - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Analyzer Cognitive - Sports. This autonomous system provides document processing with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/analyzer-cognitive---sports-10125ff4"
+    }
+  },
+  "features": [
+    "Plugin architecture",
+    "Offline capabilities",
+    "Custom integrations",
+    "Edge computing support",
+    "API-first design"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "Self-healing infrastructure",
+    "Real-time insights and alerts",
+    "Predictive maintenance scheduling"
+  ]
+}

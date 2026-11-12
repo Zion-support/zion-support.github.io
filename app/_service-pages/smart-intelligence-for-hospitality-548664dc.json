@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/smart-intelligence-for-hospitality-548664dc",
+  "breadcrumbTitle": "Smart Intelligence for Hospitality",
+  "title": "Smart Intelligence for Hospitality",
+  "description": "Transform your hospitality operations with our Smart Intelligence for Hospitality. This AI-driven solution automates workflow management with unprecedented accu",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Intelligence for Hospitality - Zion Tech Group",
+    "description": "Transform your hospitality operations with our Smart Intelligence for Hospitality. This AI-driven solution automates workflow management with unprecedented accu",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-intelligence-for-hospitality-548664dc"
+    }
+  },
+  "features": [
+    "Multi-region deployment",
+    "Multi-language support",
+    "Auto-scaling capabilities",
+    "Audit trails",
+    "Container orchestration"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "24/7 automated operations",
+    "Performance benchmarking",
+    "99.9% uptime guarantee"
+  ]
+}

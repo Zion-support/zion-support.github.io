@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/director-ai---hospitality-bfab6050",
+  "breadcrumbTitle": "Director AI - Hospitality",
+  "title": "Director AI - Hospitality",
+  "description": "Revolutionize hospitality through intelligent automation. Our Director AI - Hospitality leverages advanced machine learning to deliver security monitoring at sc",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Director AI - Hospitality - Zion Tech Group",
+    "description": "Revolutionize hospitality through intelligent automation. Our Director AI - Hospitality leverages advanced machine learning to deliver security monitoring at sc",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/director-ai---hospitality-bfab6050"
+    }
+  },
+  "features": [
+    "Role-based access control",
+    "GDPR compliance",
+    "Open-source friendly",
+    "Mobile-responsive interface",
+    "Auto-scaling capabilities"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "50% reduction in operational costs",
+    "Enterprise-grade security",
+    "Reduced human error by 95%"
+  ]
+}

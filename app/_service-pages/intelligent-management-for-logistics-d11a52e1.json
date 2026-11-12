@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligent-management-for-logistics-d11a52e1",
+  "breadcrumbTitle": "Intelligent Management for Logistics",
+  "title": "Intelligent Management for Logistics",
+  "description": "Next-generation logistics solution: Intelligent Management for Logistics. Combines maintenance scheduling with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Management for Logistics - Zion Tech Group",
+    "description": "Next-generation logistics solution: Intelligent Management for Logistics. Combines maintenance scheduling with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-management-for-logistics-d11a52e1"
+    }
+  },
+  "features": [
+    "SOC 2 certified",
+    "Offline capabilities",
+    "Auto-scaling capabilities",
+    "Rollback mechanisms"
+  ],
+  "benefits": [
+    "Intelligent load balancing",
+    "Real-time insights and alerts",
+    "Dynamic resource allocation",
+    "Predictive maintenance scheduling",
+    "99.9% uptime guarantee"
+  ]
+}

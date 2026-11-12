@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/automation-automated---gaming-df634e35",
+  "breadcrumbTitle": "Automation Automated - Gaming",
+  "title": "Automation Automated - Gaming",
+  "description": "The future of gaming is here with Automation Automated - Gaming. Powered by cutting-edge AI, this platform delivers customer insights like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automation Automated - Gaming - Zion Tech Group",
+    "description": "The future of gaming is here with Automation Automated - Gaming. Powered by cutting-edge AI, this platform delivers customer insights like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automation-automated---gaming-df634e35"
+    }
+  },
+  "features": [
+    "Microservices deployment",
+    "Machine learning integration",
+    "Real-time processing",
+    "Custom integrations"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "Real-time insights and alerts",
+    "Enterprise-grade security",
+    "24/7 automated operations",
+    "Performance benchmarking"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/platform-intelligent---automotive-bf101d7a",
+  "breadcrumbTitle": "Platform Intelligent - Automotive",
+  "title": "Platform Intelligent - Automotive",
+  "description": "Next-generation automotive solution: Platform Intelligent - Automotive. Combines network optimization with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Platform Intelligent - Automotive - Zion Tech Group",
+    "description": "Next-generation automotive solution: Platform Intelligent - Automotive. Combines network optimization with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/platform-intelligent---automotive-bf101d7a"
+    }
+  },
+  "features": [
+    "Role-based access control",
+    "Plugin architecture",
+    "GDPR compliance",
+    "Auto-scaling capabilities"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Scalable to millions of transactions",
+    "Automated compliance reporting",
+    "50% reduction in operational costs"
+  ]
+}

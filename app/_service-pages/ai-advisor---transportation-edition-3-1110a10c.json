@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/ai-advisor---transportation-edition-3-1110a10c",
+  "breadcrumbTitle": "AI Advisor - Transportation Edition #3",
+  "title": "AI Advisor - Transportation Edition #3",
+  "description": "Next-generation transportation solution: AI Advisor - Transportation Edition #3. Combines risk assessment with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Advisor - Transportation Edition #3 - Zion Tech Group",
+    "description": "Next-generation transportation solution: AI Advisor - Transportation Edition #3. Combines risk assessment with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-advisor---transportation-edition-3-1110a10c"
+    }
+  },
+  "features": [
+    "Alerting system",
+    "Multi-language support",
+    "Role-based access control",
+    "Mobile-responsive interface"
+  ],
+  "benefits": [
+    "24/7 automated operations",
+    "Self-healing infrastructure",
+    "99.9% uptime guarantee"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/optimization-adaptive---logistics-389c7251",
+  "breadcrumbTitle": "Optimization Adaptive - Logistics",
+  "title": "Optimization Adaptive - Logistics",
+  "description": "Next-generation logistics solution: Optimization Adaptive - Logistics. Combines data processing with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Optimization Adaptive - Logistics - Zion Tech Group",
+    "description": "Next-generation logistics solution: Optimization Adaptive - Logistics. Combines data processing with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/optimization-adaptive---logistics-389c7251"
+    }
+  },
+  "features": [
+    "Machine learning integration",
+    "Zero-downtime updates",
+    "Multi-region deployment",
+    "Offline capabilities"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "ROI in under 90 days",
+    "Self-healing infrastructure"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-sales-management-d76987cc",
+  "breadcrumbTitle": "Intelligent Sales Management",
+  "title": "Intelligent Sales Management",
+  "description": "Transform your insurance operations with our Intelligent Sales Management. This AI-driven solution automates financial planning with unprecedented accuracy and ",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Sales Management - Zion Tech Group",
+    "description": "Transform your insurance operations with our Intelligent Sales Management. This AI-driven solution automates financial planning with unprecedented accuracy and ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-sales-management-d76987cc"
+    }
+  },
+  "features": [
+    "Alerting system",
+    "Cloud-native architecture",
+    "Plugin architecture",
+    "Audit trails"
+  ],
+  "benefits": [
+    "Cost optimization recommendations",
+    "Real-time insights and alerts",
+    "Seamless integration with existing systems",
+    "Performance benchmarking"
+  ]
+}

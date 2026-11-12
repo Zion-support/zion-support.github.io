@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-frictionless-iot-intelligence-f0d8a468",
+  "breadcrumbTitle": "AI-Powered Frictionless IoT Intelligence",
+  "title": "AI-Powered Frictionless IoT Intelligence",
+  "description": "Edge AI platform that processes IoT sensor data in real-time with frictionless insights.",
+  "basic": "$258/month",
+  "pro": "$648/month",
+  "enterprise": "$1948/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Frictionless IoT Intelligence - Zion Tech Group",
+    "description": "Edge AI platform that processes IoT sensor data in real-time with frictionless insights.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-frictionless-iot-intelligence-f0d8a468"
+    }
+  },
+  "features": [
+    "Edge processing",
+    "Real-time analytics",
+    "Automated responses",
+    "Energy efficiency"
+  ],
+  "benefits": [
+    "Reduced latency",
+    "Better insights",
+    "Automated responses",
+    "Energy efficiency"
+  ]
+}

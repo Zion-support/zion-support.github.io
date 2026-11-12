@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/engine-automated---healthcare-1-fd434ae9",
+  "breadcrumbTitle": "Engine Automated - Healthcare #1",
+  "title": "Engine Automated - Healthcare #1",
+  "description": "Revolutionize healthcare through intelligent automation. Our Engine Automated - Healthcare #1 leverages advanced machine learning to deliver fraud prevention at",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Engine Automated - Healthcare #1 - Zion Tech Group",
+    "description": "Revolutionize healthcare through intelligent automation. Our Engine Automated - Healthcare #1 leverages advanced machine learning to deliver fraud prevention at",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/engine-automated---healthcare-1-fd434ae9"
+    }
+  },
+  "features": [
+    "Rollback mechanisms",
+    "GDPR compliance",
+    "Microservices deployment",
+    "SOC 2 certified",
+    "Custom integrations"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "Seamless integration with existing systems",
+    "Automated compliance reporting"
+  ]
+}

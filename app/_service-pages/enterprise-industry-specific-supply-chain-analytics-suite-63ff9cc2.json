@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/enterprise-industry-specific-supply-chain-analytics-suite-63ff9cc2",
+  "breadcrumbTitle": "Enterprise Industry-Specific Supply Chain Analytics Suite",
+  "title": "Enterprise Industry-Specific Supply Chain Analytics Suite",
+  "description": "Enterprise analytics suite that delivers industry-specific supply chain insights with unified dashboards and reporting.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Enterprise Industry-Specific Supply Chain Analytics Suite - Zion Tech Group",
+    "description": "Enterprise analytics suite that delivers industry-specific supply chain insights with unified dashboards and reporting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/enterprise-industry-specific-supply-chain-analytics-suite-63ff9cc2"
+    }
+  },
+  "features": [
+    "Data visualization",
+    "Custom dashboards",
+    "Report generation",
+    "KPI tracking"
+  ],
+  "benefits": [
+    "Unified data view",
+    "Faster insights",
+    "Customizable reports",
+    "Cross-functional collaboration"
+  ]
+}

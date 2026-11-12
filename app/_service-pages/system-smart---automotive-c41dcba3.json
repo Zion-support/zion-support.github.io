@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/system-smart---automotive-c41dcba3",
+  "breadcrumbTitle": "System Smart - Automotive",
+  "title": "System Smart - Automotive",
+  "description": "Transform your automotive operations with our System Smart - Automotive. This AI-driven solution automates workflow management with unprecedented accuracy and e",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "System Smart - Automotive - Zion Tech Group",
+    "description": "Transform your automotive operations with our System Smart - Automotive. This AI-driven solution automates workflow management with unprecedented accuracy and e",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/system-smart---automotive-c41dcba3"
+    }
+  },
+  "features": [
+    "Machine learning integration",
+    "Plugin architecture",
+    "Performance dashboards",
+    "Serverless functions",
+    "Data encryption"
+  ],
+  "benefits": [
+    "Cost optimization recommendations",
+    "50% reduction in operational costs",
+    "Real-time insights and alerts"
+  ]
+}

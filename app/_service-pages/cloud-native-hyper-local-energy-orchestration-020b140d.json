@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/cloud-native-hyper-local-energy-orchestration-020b140d",
+  "breadcrumbTitle": "Cloud-Native Hyper-Local Energy Orchestration",
+  "title": "Cloud-Native Hyper-Local Energy Orchestration",
+  "description": "Cloud-native orchestration platform that manages hyper-local energy resources with auto-scaling and cost control.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Cloud-Native Hyper-Local Energy Orchestration - Zion Tech Group",
+    "description": "Cloud-native orchestration platform that manages hyper-local energy resources with auto-scaling and cost control.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cloud-native-hyper-local-energy-orchestration-020b140d"
+    }
+  },
+  "features": [
+    "Container orchestration",
+    "Resource management",
+    "Health monitoring",
+    "Auto-healing"
+  ],
+  "benefits": [
+    "Reduced infrastructure cost",
+    "Auto-scaling",
+    "Container efficiency",
+    "Developer productivity"
+  ]
+}

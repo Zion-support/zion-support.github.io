@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-insights---gaming-edition-2-625e0d2e",
+  "breadcrumbTitle": "AI Insights - Gaming Edition #2",
+  "title": "AI Insights - Gaming Edition #2",
+  "description": "Next-generation gaming solution: AI Insights - Gaming Edition #2. Combines supply chain with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Insights - Gaming Edition #2 - Zion Tech Group",
+    "description": "Next-generation gaming solution: AI Insights - Gaming Edition #2. Combines supply chain with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-insights---gaming-edition-2-625e0d2e"
+    }
+  },
+  "features": [
+    "Machine learning integration",
+    "Data encryption",
+    "Offline capabilities",
+    "Serverless functions",
+    "HIPAA ready"
+  ],
+  "benefits": [
+    "Dynamic resource allocation",
+    "Seamless integration with existing systems",
+    "24/7 automated operations"
+  ]
+}

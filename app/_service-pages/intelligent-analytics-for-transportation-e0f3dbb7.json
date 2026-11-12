@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligent-analytics-for-transportation-e0f3dbb7",
+  "breadcrumbTitle": "Intelligent Analytics for Transportation",
+  "title": "Intelligent Analytics for Transportation",
+  "description": "Transform your transportation operations with our Intelligent Analytics for Transportation. This AI-driven solution automates fraud prevention with unprecedente",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Analytics for Transportation - Zion Tech Group",
+    "description": "Transform your transportation operations with our Intelligent Analytics for Transportation. This AI-driven solution automates fraud prevention with unprecedente",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-analytics-for-transportation-e0f3dbb7"
+    }
+  },
+  "features": [
+    "Container orchestration",
+    "HIPAA ready",
+    "Auto-scaling capabilities",
+    "Real-time processing",
+    "Data encryption"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "Automated compliance reporting",
+    "Performance benchmarking",
+    "Self-healing infrastructure"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/ai-orchestrator---gaming-edition-0a701d01",
+  "breadcrumbTitle": "AI Orchestrator - Gaming Edition",
+  "title": "AI Orchestrator - Gaming Edition",
+  "description": "Revolutionize gaming through intelligent automation. Our AI Orchestrator - Gaming Edition leverages advanced machine learning to deliver financial planning at s",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Orchestrator - Gaming Edition - Zion Tech Group",
+    "description": "Revolutionize gaming through intelligent automation. Our AI Orchestrator - Gaming Edition leverages advanced machine learning to deliver financial planning at s",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-orchestrator---gaming-edition-0a701d01"
+    }
+  },
+  "features": [
+    "Role-based access control",
+    "Container orchestration",
+    "HIPAA ready",
+    "Rollback mechanisms",
+    "Alerting system"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "Cost optimization recommendations",
+    "Enterprise-grade security",
+    "Seamless integration with existing systems",
+    "Performance benchmarking"
+  ]
+}

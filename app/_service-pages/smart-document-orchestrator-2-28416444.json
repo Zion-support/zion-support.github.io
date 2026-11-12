@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/smart-document-orchestrator-2-28416444",
+  "breadcrumbTitle": "Smart Document Orchestrator #2",
+  "title": "Smart Document Orchestrator #2",
+  "description": "Unlock unprecedented growth with Smart Document Orchestrator #2. This autonomous system provides process automation with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Document Orchestrator #2 - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Smart Document Orchestrator #2. This autonomous system provides process automation with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-document-orchestrator-2-28416444"
+    }
+  },
+  "features": [
+    "Alerting system",
+    "Plugin architecture",
+    "Mobile-responsive interface",
+    "Real-time processing",
+    "Rollback mechanisms"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "Predictive maintenance scheduling",
+    "3x faster decision making"
+  ]
+}

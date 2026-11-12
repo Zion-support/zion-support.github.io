@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/adaptive-insights-for-logistics-6cb3f4e5",
+  "breadcrumbTitle": "Adaptive Insights for Logistics",
+  "title": "Adaptive Insights for Logistics",
+  "description": "Transform your Logistics operations with our Adaptive Insights for Logistics. This AI-driven solution automates master data management with unprecedented accura",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Adaptive Insights for Logistics - Zion Tech Group",
+    "description": "Transform your Logistics operations with our Adaptive Insights for Logistics. This AI-driven solution automates master data management with unprecedented accura",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/adaptive-insights-for-logistics-6cb3f4e5"
+    }
+  },
+  "features": [
+    "Executive dashboards with drill-down capabilities",
+    "Multi-language support with localization",
+    "Cost reduction with process mining",
+    "Compliance monitoring with regulatory updates",
+    "Machine learning integration with automatic model training"
+  ],
+  "benefits": [
+    "Performance benchmarking against industry standards",
+    "Reduced development time with code generation",
+    "Improved product quality with automated testing",
+    "50% reduction in operational costs through automation"
+  ]
+}

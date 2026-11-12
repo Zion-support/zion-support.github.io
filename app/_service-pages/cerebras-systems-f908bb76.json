@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/cerebras-systems-f908bb76",
+  "breadcrumbTitle": "Cerebras Systems",
+  "title": "Cerebras Systems",
+  "description": "Cerebras Systems is an artificial intelligence and automation technology company.",
+  "basic": "$N/A/month",
+  "pro": "$N/A/month",
+  "enterprise": "$N/A/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Cerebras Systems - Zion Tech Group",
+    "description": "Cerebras Systems is an artificial intelligence and automation technology company.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cerebras-systems-f908bb76"
+    }
+  },
+  "features": [
+    "AI-driven automation",
+    "Cloud-native deployment",
+    "API-first architecture",
+    "Enterprise-grade security",
+    "Scalable infrastructure"
+  ],
+  "benefits": [
+    "Improved operational efficiency",
+    "Reduced manual processes",
+    "Data-driven decision making",
+    "Faster time-to value",
+    "Scalable performance"
+  ]
+}

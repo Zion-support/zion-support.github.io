@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/autonomous-insights-for-transportation-da4f636f",
+  "breadcrumbTitle": "Autonomous Insights for Transportation",
+  "title": "Autonomous Insights for Transportation",
+  "description": "Transform your transportation operations with our Autonomous Insights for Transportation. This AI-driven solution automates threat detection with unprecedented ",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous Insights for Transportation - Zion Tech Group",
+    "description": "Transform your transportation operations with our Autonomous Insights for Transportation. This AI-driven solution automates threat detection with unprecedented ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-insights-for-transportation-da4f636f"
+    }
+  },
+  "features": [
+    "Role-based access control",
+    "Alerting system",
+    "Audit trails",
+    "Multi-region deployment",
+    "GDPR compliance"
+  ],
+  "benefits": [
+    "Automated compliance reporting",
+    "Self-healing infrastructure",
+    "Intelligent load balancing",
+    "50% reduction in operational costs",
+    "Cost optimization recommendations"
+  ]
+}

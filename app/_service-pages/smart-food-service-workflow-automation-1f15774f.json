@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/smart-food-service-workflow-automation-1f15774f",
+  "breadcrumbTitle": "Smart Food Service Workflow Automation",
+  "title": "Smart Food Service Workflow Automation",
+  "description": "Intelligent workflow automation platform that streamlines food service processes and eliminates manual tasks.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Smart Food Service Workflow Automation - Zion Tech Group",
+    "description": "Intelligent workflow automation platform that streamlines food service processes and eliminates manual tasks.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-food-service-workflow-automation-1f15774f"
+    }
+  },
+  "features": [
+    "Process mapping",
+    "Task automation",
+    "Workflow optimization",
+    "Exception handling"
+  ],
+  "benefits": [
+    "Faster operations",
+    "Reduced errors",
+    "Improved productivity",
+    "Better resource utilization"
+  ]
+}

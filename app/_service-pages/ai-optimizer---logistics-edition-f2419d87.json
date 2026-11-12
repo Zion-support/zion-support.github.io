@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-optimizer---logistics-edition-f2419d87",
+  "breadcrumbTitle": "AI Optimizer - Logistics Edition",
+  "title": "AI Optimizer - Logistics Edition",
+  "description": "Transform your logistics operations with our AI Optimizer - Logistics Edition. This AI-driven solution automates energy management with unprecedented accuracy a",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Optimizer - Logistics Edition - Zion Tech Group",
+    "description": "Transform your logistics operations with our AI Optimizer - Logistics Edition. This AI-driven solution automates energy management with unprecedented accuracy a",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-optimizer---logistics-edition-f2419d87"
+    }
+  },
+  "features": [
+    "Zero-downtime updates",
+    "Container orchestration",
+    "Real-time processing",
+    "Offline capabilities",
+    "Custom integrations"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "Zero manual intervention required",
+    "Scalable to millions of transactions",
+    "99.9% uptime guarantee"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-optimization-for-agriculture-b968adcc",
+  "breadcrumbTitle": "Intelligent Optimization for Agriculture",
+  "title": "Intelligent Optimization for Agriculture",
+  "description": "Transform your agriculture operations with our Intelligent Optimization for Agriculture. This AI-driven solution automates quality control with unprecedented ac",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Optimization for Agriculture - Zion Tech Group",
+    "description": "Transform your agriculture operations with our Intelligent Optimization for Agriculture. This AI-driven solution automates quality control with unprecedented ac",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-optimization-for-agriculture-b968adcc"
+    }
+  },
+  "features": [
+    "SOC 2 certified",
+    "Open-source friendly",
+    "Zero-downtime updates",
+    "GDPR compliance"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "50% reduction in operational costs",
+    "Cost optimization recommendations",
+    "Scalable to millions of transactions"
+  ]
+}

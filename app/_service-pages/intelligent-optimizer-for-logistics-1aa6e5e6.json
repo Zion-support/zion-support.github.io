@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/intelligent-optimizer-for-logistics-1aa6e5e6",
+  "breadcrumbTitle": "Intelligent Optimizer for Logistics",
+  "title": "Intelligent Optimizer for Logistics",
+  "description": "Revolutionize Logistics through intelligent automation. Our Intelligent Optimizer for Logistics leverages advanced machine learning to deliver predictive analyt",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Optimizer for Logistics - Zion Tech Group",
+    "description": "Revolutionize Logistics through intelligent automation. Our Intelligent Optimizer for Logistics leverages advanced machine learning to deliver predictive analyt",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-optimizer-for-logistics-1aa6e5e6"
+    }
+  },
+  "features": [
+    "Process discovery with activity analysis",
+    "Code optimization with performance profiling",
+    "Cost reduction with process mining",
+    "Edge computing support for low-latency operations",
+    "Multi-language support with localization"
+  ],
+  "benefits": [
+    "Enhanced security posture with continuous monitoring",
+    "Performance benchmarking against industry standards",
+    "Enhanced team productivity with intelligent assistance",
+    "Reduced development time with code generation",
+    "Cost optimization recommendations with savings analysis"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/enterprise-integrated-construction-analytics-suite-89bd562f",
+  "breadcrumbTitle": "Enterprise Integrated Construction Analytics Suite",
+  "title": "Enterprise Integrated Construction Analytics Suite",
+  "description": "Enterprise analytics suite that delivers integrated construction insights with unified dashboards and reporting.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Enterprise Integrated Construction Analytics Suite - Zion Tech Group",
+    "description": "Enterprise analytics suite that delivers integrated construction insights with unified dashboards and reporting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/enterprise-integrated-construction-analytics-suite-89bd562f"
+    }
+  },
+  "features": [
+    "Data visualization",
+    "Custom dashboards",
+    "Report generation",
+    "KPI tracking"
+  ],
+  "benefits": [
+    "Unified data view",
+    "Faster insights",
+    "Customizable reports",
+    "Cross-functional collaboration"
+  ]
+}

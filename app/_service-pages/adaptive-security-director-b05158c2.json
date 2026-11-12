@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/adaptive-security-director-b05158c2",
+  "breadcrumbTitle": "Adaptive Security Director",
+  "title": "Adaptive Security Director",
+  "description": "Transform your retail operations with our Adaptive Security Director. This AI-driven solution automates customer insights with unprecedented accuracy and effici",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Adaptive Security Director - Zion Tech Group",
+    "description": "Transform your retail operations with our Adaptive Security Director. This AI-driven solution automates customer insights with unprecedented accuracy and effici",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/adaptive-security-director-b05158c2"
+    }
+  },
+  "features": [
+    "Container orchestration",
+    "Microservices deployment",
+    "Multi-language support",
+    "Performance dashboards",
+    "HIPAA ready"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "99.9% uptime guarantee",
+    "Cost optimization recommendations"
+  ]
+}

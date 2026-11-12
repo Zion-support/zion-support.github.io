@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/advisor-autonomous---telecom-84fb2e2b",
+  "breadcrumbTitle": "Advisor Autonomous - Telecom",
+  "title": "Advisor Autonomous - Telecom",
+  "description": "Transform your telecom operations with our Advisor Autonomous - Telecom. This AI-driven solution automates image recognition with unprecedented accuracy and eff",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Advisor Autonomous - Telecom - Zion Tech Group",
+    "description": "Transform your telecom operations with our Advisor Autonomous - Telecom. This AI-driven solution automates image recognition with unprecedented accuracy and eff",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/advisor-autonomous---telecom-84fb2e2b"
+    }
+  },
+  "features": [
+    "Mobile-responsive interface",
+    "Rollback mechanisms",
+    "Multi-region deployment",
+    "API-first design"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "Seamless integration with existing systems",
+    "Dynamic resource allocation"
+  ]
+}

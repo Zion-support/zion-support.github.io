@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/ai-intelligence---insurance-edition-1-fc621421",
+  "breadcrumbTitle": "AI Intelligence - Insurance Edition #1",
+  "title": "AI Intelligence - Insurance Edition #1",
+  "description": "The future of insurance is here with AI Intelligence - Insurance Edition #1. Powered by cutting-edge AI, this platform delivers content generation like never be",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Intelligence - Insurance Edition #1 - Zion Tech Group",
+    "description": "The future of insurance is here with AI Intelligence - Insurance Edition #1. Powered by cutting-edge AI, this platform delivers content generation like never be",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-intelligence---insurance-edition-1-fc621421"
+    }
+  },
+  "features": [
+    "Real-time processing",
+    "Microservices deployment",
+    "Mobile-responsive interface",
+    "Offline capabilities",
+    "Machine learning integration"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "Enterprise-grade security",
+    "Cost optimization recommendations",
+    "Dynamic resource allocation",
+    "Scalable to millions of transactions"
+  ]
+}

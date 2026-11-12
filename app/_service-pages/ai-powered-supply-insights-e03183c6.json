@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-powered-supply-insights-e03183c6",
+  "breadcrumbTitle": "AI-Powered Supply Insights",
+  "title": "AI-Powered Supply Insights",
+  "description": "Next-generation logistics solution: AI-Powered Supply Insights. Combines process automation with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Supply Insights - Zion Tech Group",
+    "description": "Next-generation logistics solution: AI-Powered Supply Insights. Combines process automation with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-supply-insights-e03183c6"
+    }
+  },
+  "features": [
+    "SOC 2 certified",
+    "Alerting system",
+    "Zero-downtime updates",
+    "Microservices deployment",
+    "HIPAA ready"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "3x faster decision making",
+    "Intelligent load balancing",
+    "ROI in under 90 days"
+  ]
+}

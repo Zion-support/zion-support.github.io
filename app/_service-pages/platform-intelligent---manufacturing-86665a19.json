@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/platform-intelligent---manufacturing-86665a19",
+  "breadcrumbTitle": "Platform Intelligent - Manufacturing",
+  "title": "Platform Intelligent - Manufacturing",
+  "description": "Revolutionize manufacturing through intelligent automation. Our Platform Intelligent - Manufacturing leverages advanced machine learning to deliver inventory ma",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Platform Intelligent - Manufacturing - Zion Tech Group",
+    "description": "Revolutionize manufacturing through intelligent automation. Our Platform Intelligent - Manufacturing leverages advanced machine learning to deliver inventory ma",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/platform-intelligent---manufacturing-86665a19"
+    }
+  },
+  "features": [
+    "Multi-region deployment",
+    "Microservices deployment",
+    "API-first design",
+    "Real-time processing",
+    "Mobile-responsive interface"
+  ],
+  "benefits": [
+    "Dynamic resource allocation",
+    "Predictive maintenance scheduling",
+    "Real-time insights and alerts",
+    "ROI in under 90 days",
+    "Seamless integration with existing systems"
+  ]
+}

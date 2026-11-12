@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-engine---hospitality-edition-db60e18e",
+  "breadcrumbTitle": "AI Engine - Hospitality Edition",
+  "title": "AI Engine - Hospitality Edition",
+  "description": "Revolutionize hospitality through intelligent automation. Our AI Engine - Hospitality Edition leverages advanced machine learning to deliver code optimization a",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Engine - Hospitality Edition - Zion Tech Group",
+    "description": "Revolutionize hospitality through intelligent automation. Our AI Engine - Hospitality Edition leverages advanced machine learning to deliver code optimization a",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-engine---hospitality-edition-db60e18e"
+    }
+  },
+  "features": [
+    "Multi-language support",
+    "Real-time processing",
+    "Machine learning integration",
+    "Rollback mechanisms"
+  ],
+  "benefits": [
+    "Scalable to millions of transactions",
+    "Performance benchmarking",
+    "Enterprise-grade security",
+    "Predictive maintenance scheduling",
+    "50% reduction in operational costs"
+  ]
+}

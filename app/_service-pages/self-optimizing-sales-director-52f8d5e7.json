@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/self-optimizing-sales-director-52f8d5e7",
+  "breadcrumbTitle": "Self-Optimizing Sales Director",
+  "title": "Self-Optimizing Sales Director",
+  "description": "The future of retail is here with Self-Optimizing Sales Director. Powered by cutting-edge AI, this platform delivers performance monitoring like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Self-Optimizing Sales Director - Zion Tech Group",
+    "description": "The future of retail is here with Self-Optimizing Sales Director. Powered by cutting-edge AI, this platform delivers performance monitoring like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/self-optimizing-sales-director-52f8d5e7"
+    }
+  },
+  "features": [
+    "Microservices deployment",
+    "Auto-scaling capabilities",
+    "Zero-downtime updates",
+    "SOC 2 certified",
+    "Offline capabilities"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "Performance benchmarking",
+    "Zero manual intervention required"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/ai-suite---sports-edition-ed676a8f",
+  "breadcrumbTitle": "AI Suite - Sports Edition",
+  "title": "AI Suite - Sports Edition",
+  "description": "Next-generation sports solution: AI Suite - Sports Edition. Combines risk assessment with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Suite - Sports Edition - Zion Tech Group",
+    "description": "Next-generation sports solution: AI Suite - Sports Edition. Combines risk assessment with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-suite---sports-edition-ed676a8f"
+    }
+  },
+  "features": [
+    "SOC 2 certified",
+    "Real-time processing",
+    "Machine learning integration",
+    "Performance dashboards"
+  ],
+  "benefits": [
+    "Dynamic resource allocation",
+    "99.9% uptime guarantee",
+    "Real-time insights and alerts"
+  ]
+}

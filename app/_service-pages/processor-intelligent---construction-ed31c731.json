@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/processor-intelligent---construction-ed31c731",
+  "breadcrumbTitle": "Processor Intelligent - Construction",
+  "title": "Processor Intelligent - Construction",
+  "description": "Next-generation construction solution: Processor Intelligent - Construction. Combines supply chain with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Processor Intelligent - Construction - Zion Tech Group",
+    "description": "Next-generation construction solution: Processor Intelligent - Construction. Combines supply chain with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/processor-intelligent---construction-ed31c731"
+    }
+  },
+  "features": [
+    "Offline capabilities",
+    "Alerting system",
+    "Container orchestration",
+    "Role-based access control",
+    "Auto-scaling capabilities"
+  ],
+  "benefits": [
+    "24/7 automated operations",
+    "Reduced human error by 95%",
+    "Predictive maintenance scheduling"
+  ]
+}

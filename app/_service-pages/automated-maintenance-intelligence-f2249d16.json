@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/automated-maintenance-intelligence-f2249d16",
+  "breadcrumbTitle": "Automated Maintenance Intelligence",
+  "title": "Automated Maintenance Intelligence",
+  "description": "Revolutionize media through intelligent automation. Our Automated Maintenance Intelligence leverages advanced machine learning to deliver content generation at ",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated Maintenance Intelligence - Zion Tech Group",
+    "description": "Revolutionize media through intelligent automation. Our Automated Maintenance Intelligence leverages advanced machine learning to deliver content generation at ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-maintenance-intelligence-f2249d16"
+    }
+  },
+  "features": [
+    "Rollback mechanisms",
+    "Role-based access control",
+    "Auto-scaling capabilities",
+    "Open-source friendly"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Scalable to millions of transactions",
+    "Seamless integration with existing systems"
+  ]
+}

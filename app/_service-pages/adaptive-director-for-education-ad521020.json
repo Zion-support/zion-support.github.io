@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/adaptive-director-for-education-ad521020",
+  "breadcrumbTitle": "Adaptive Director for Education",
+  "title": "Adaptive Director for Education",
+  "description": "Revolutionize education through intelligent automation. Our Adaptive Director for Education leverages advanced machine learning to deliver security monitoring a",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Adaptive Director for Education - Zion Tech Group",
+    "description": "Revolutionize education through intelligent automation. Our Adaptive Director for Education leverages advanced machine learning to deliver security monitoring a",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/adaptive-director-for-education-ad521020"
+    }
+  },
+  "features": [
+    "Plugin architecture",
+    "Cloud-native architecture",
+    "Role-based access control",
+    "Performance dashboards",
+    "Open-source friendly"
+  ],
+  "benefits": [
+    "24/7 automated operations",
+    "Reduced human error by 95%",
+    "Cost optimization recommendations",
+    "Performance benchmarking"
+  ]
+}

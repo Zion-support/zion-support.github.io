@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligent-management-insurance-df74f397",
+  "breadcrumbTitle": "Intelligent management-insurance",
+  "title": "Intelligent management-insurance",
+  "description": "Next-generation insurance solution: Intelligent management-insurance. Combines energy management with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent management-insurance - Zion Tech Group",
+    "description": "Next-generation insurance solution: Intelligent management-insurance. Combines energy management with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-management-insurance-df74f397"
+    }
+  },
+  "features": [
+    "Microservices deployment",
+    "Edge computing support",
+    "Machine learning integration",
+    "API-first design",
+    "Data encryption"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "Reduced human error by 95%",
+    "50% reduction in operational costs",
+    "Enterprise-grade security"
+  ]
+}

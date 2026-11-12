@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-advanced-clinical-decision-support-b68ffd77",
+  "breadcrumbTitle": "AI-Powered Advanced Clinical Decision Support",
+  "title": "AI-Powered Advanced Clinical Decision Support",
+  "description": "Clinical AI system that provides advanced diagnostic assistance, treatment recommendations, and care pathway optimization for healthcare providers.",
+  "basic": "$298/month",
+  "pro": "$748/month",
+  "enterprise": "$2248/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Advanced Clinical Decision Support - Zion Tech Group",
+    "description": "Clinical AI system that provides advanced diagnostic assistance, treatment recommendations, and care pathway optimization for healthcare providers.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-advanced-clinical-decision-support-b68ffd77"
+    }
+  },
+  "features": [
+    "Diagnostic assistance",
+    "Treatment planning",
+    "Drug interaction checking",
+    "Outcome prediction"
+  ],
+  "benefits": [
+    "Improved accuracy",
+    "Personalized care",
+    "Reduced errors",
+    "Cost optimization"
+  ]
+}

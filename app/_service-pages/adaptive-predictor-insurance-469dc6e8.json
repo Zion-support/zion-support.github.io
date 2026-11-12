@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/adaptive-predictor-insurance-469dc6e8",
+  "breadcrumbTitle": "Adaptive predictor-insurance",
+  "title": "Adaptive predictor-insurance",
+  "description": "The future of insurance is here with Adaptive predictor-insurance. Powered by cutting-edge AI, this platform delivers decision support like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Adaptive predictor-insurance - Zion Tech Group",
+    "description": "The future of insurance is here with Adaptive predictor-insurance. Powered by cutting-edge AI, this platform delivers decision support like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/adaptive-predictor-insurance-469dc6e8"
+    }
+  },
+  "features": [
+    "HIPAA ready",
+    "Audit trails",
+    "Comprehensive monitoring",
+    "Mobile-responsive interface"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "ROI in under 90 days",
+    "99.9% uptime guarantee"
+  ]
+}

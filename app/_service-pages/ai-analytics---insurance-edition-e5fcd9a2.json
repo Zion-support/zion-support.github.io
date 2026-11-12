@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-analytics---insurance-edition-e5fcd9a2",
+  "breadcrumbTitle": "AI Analytics - Insurance Edition",
+  "title": "AI Analytics - Insurance Edition",
+  "description": "Revolutionize insurance through intelligent automation. Our AI Analytics - Insurance Edition leverages advanced machine learning to deliver compliance monitorin",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Analytics - Insurance Edition - Zion Tech Group",
+    "description": "Revolutionize insurance through intelligent automation. Our AI Analytics - Insurance Edition leverages advanced machine learning to deliver compliance monitorin",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-analytics---insurance-edition-e5fcd9a2"
+    }
+  },
+  "features": [
+    "Multi-region deployment",
+    "Custom integrations",
+    "SOC 2 certified",
+    "Auto-scaling capabilities",
+    "API-first design"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "Enterprise-grade security",
+    "Self-healing infrastructure",
+    "Performance benchmarking"
+  ]
+}

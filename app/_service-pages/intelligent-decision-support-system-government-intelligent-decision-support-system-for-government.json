@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/intelligent-decision-support-system-government-intelligent-decision-support-system-for-government",
+  "breadcrumbTitle": "Intelligent Decision Support System for Government",
+  "title": "Intelligent Decision Support System for Government",
+  "description": "AI-driven decision support system for government. Delivers data-backed recommendations for Citizen services automation, policy analysis, resource allocation wit",
+  "basic": "$88/month",
+  "pro": "$353/month",
+  "enterprise": "$931/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Decision Support System for Government - Zion Tech Group",
+    "description": "AI-driven decision support system for government. Delivers data-backed recommendations for Citizen services automation, policy analysis, resource allocation wit",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-decision-support-system-government-intelligent-decision-support-system-for-government"
+    }
+  },
+  "features": [
+    "AI-powered automation",
+    "Enterprise-grade security",
+    "24/7 monitoring",
+    "API-first integration",
+    "Scalable architecture"
+  ],
+  "benefits": [
+    "64% reduction in operational costs",
+    "Process 33% faster with automation",
+    "99.9% uptime guarantee with enterprise SLAs",
+    "ROI realized in under 90 days",
+    "Zero-downtime deployment"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-automation---hospitality-edition-3-85b6080a",
+  "breadcrumbTitle": "AI Automation - Hospitality Edition #3",
+  "title": "AI Automation - Hospitality Edition #3",
+  "description": "Next-generation hospitality solution: AI Automation - Hospitality Edition #3. Combines workflow management with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Automation - Hospitality Edition #3 - Zion Tech Group",
+    "description": "Next-generation hospitality solution: AI Automation - Hospitality Edition #3. Combines workflow management with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-automation---hospitality-edition-3-85b6080a"
+    }
+  },
+  "features": [
+    "Comprehensive monitoring",
+    "API-first design",
+    "Audit trails",
+    "Mobile-responsive interface",
+    "Performance dashboards"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "Predictive maintenance scheduling",
+    "Seamless integration with existing systems"
+  ]
+}

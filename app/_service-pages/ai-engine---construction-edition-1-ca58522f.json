@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-engine---construction-edition-1-ca58522f",
+  "breadcrumbTitle": "AI Engine - Construction Edition #1",
+  "title": "AI Engine - Construction Edition #1",
+  "description": "Transform your construction operations with our AI Engine - Construction Edition #1. This AI-driven solution automates resource optimization with unprecedented ",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Engine - Construction Edition #1 - Zion Tech Group",
+    "description": "Transform your construction operations with our AI Engine - Construction Edition #1. This AI-driven solution automates resource optimization with unprecedented ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-engine---construction-edition-1-ca58522f"
+    }
+  },
+  "features": [
+    "Performance dashboards",
+    "Multi-language support",
+    "API-first design",
+    "Rollback mechanisms"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "Scalable to millions of transactions",
+    "Reduced human error by 95%",
+    "50% reduction in operational costs"
+  ]
+}

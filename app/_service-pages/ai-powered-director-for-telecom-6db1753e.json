@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-director-for-telecom-6db1753e",
+  "breadcrumbTitle": "AI-Powered Director for Telecom",
+  "title": "AI-Powered Director for Telecom",
+  "description": "Transform your telecom operations with our AI-Powered Director for Telecom. This AI-driven solution automates quality control with unprecedented accuracy and ef",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Director for Telecom - Zion Tech Group",
+    "description": "Transform your telecom operations with our AI-Powered Director for Telecom. This AI-driven solution automates quality control with unprecedented accuracy and ef",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-director-for-telecom-6db1753e"
+    }
+  },
+  "features": [
+    "Mobile-responsive interface",
+    "Serverless functions",
+    "Real-time processing",
+    "SOC 2 certified",
+    "Plugin architecture"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Reduced human error by 95%",
+    "Scalable to millions of transactions"
+  ]
+}

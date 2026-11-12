@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/self-optimizing-workflow-engine-0956ffc8",
+  "breadcrumbTitle": "Self-Optimizing Workflow Engine",
+  "title": "Self-Optimizing Workflow Engine",
+  "description": "Revolutionize retail through intelligent automation. Our Self-Optimizing Workflow Engine leverages advanced machine learning to deliver compliance monitoring at",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Self-Optimizing Workflow Engine - Zion Tech Group",
+    "description": "Revolutionize retail through intelligent automation. Our Self-Optimizing Workflow Engine leverages advanced machine learning to deliver compliance monitoring at",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/self-optimizing-workflow-engine-0956ffc8"
+    }
+  },
+  "features": [
+    "Open-source friendly",
+    "Container orchestration",
+    "Alerting system",
+    "Custom integrations"
+  ],
+  "benefits": [
+    "Intelligent load balancing",
+    "Automated compliance reporting",
+    "24/7 automated operations"
+  ]
+}

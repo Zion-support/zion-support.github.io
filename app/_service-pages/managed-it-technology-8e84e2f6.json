@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/managed-it-technology-8e84e2f6",
+  "breadcrumbTitle": "Managed IT Support for Technology",
+  "title": "Managed IT Support for Technology",
+  "description": "24/7 managed IT support for Technology businesses. We handle helpdesk, endpoint management, and proactive monitoring so you can focus on growth.",
+  "basic": "$299/month",
+  "pro": "$799/month",
+  "enterprise": "$2499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Managed IT Support for Technology - Zion Tech Group",
+    "description": "24/7 managed IT support for Technology businesses. We handle helpdesk, endpoint management, and proactive monitoring so you can focus on growth.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/managed-it-technology-8e84e2f6"
+    }
+  },
+  "features": [
+    "Helpdesk and ticketing",
+    "Endpoint management and antivirus",
+    "Network monitoring and alerts",
+    "Patch management",
+    "Cloud backup and disaster recovery"
+  ],
+  "benefits": [
+    "Reduced downtime by 40%+",
+    "Lower IT operational costs",
+    "Predictable monthly pricing",
+    "Faster issue resolution",
+    "Improved security posture"
+  ]
+}

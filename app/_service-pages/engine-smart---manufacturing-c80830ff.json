@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/engine-smart---manufacturing-c80830ff",
+  "breadcrumbTitle": "Engine Smart - Manufacturing",
+  "title": "Engine Smart - Manufacturing",
+  "description": "Next-generation manufacturing solution: Engine Smart - Manufacturing. Combines quality control with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Engine Smart - Manufacturing - Zion Tech Group",
+    "description": "Next-generation manufacturing solution: Engine Smart - Manufacturing. Combines quality control with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/engine-smart---manufacturing-c80830ff"
+    }
+  },
+  "features": [
+    "Performance dashboards",
+    "Mobile-responsive interface",
+    "API-first design",
+    "Plugin architecture",
+    "Zero-downtime updates"
+  ],
+  "benefits": [
+    "Scalable to millions of transactions",
+    "24/7 automated operations",
+    "3x faster decision making",
+    "Cost optimization recommendations"
+  ]
+}

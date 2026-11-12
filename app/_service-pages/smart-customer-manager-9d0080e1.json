@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/smart-customer-manager-9d0080e1",
+  "breadcrumbTitle": "Smart Customer Manager",
+  "title": "Smart Customer Manager",
+  "description": "Transform your manufacturing operations with our Smart Customer Manager. This AI-driven solution automates code optimization with unprecedented accuracy and eff",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Customer Manager - Zion Tech Group",
+    "description": "Transform your manufacturing operations with our Smart Customer Manager. This AI-driven solution automates code optimization with unprecedented accuracy and eff",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-customer-manager-9d0080e1"
+    }
+  },
+  "features": [
+    "Offline capabilities",
+    "Serverless functions",
+    "Performance dashboards",
+    "Container orchestration",
+    "Custom integrations"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "50% reduction in operational costs",
+    "Performance benchmarking"
+  ]
+}

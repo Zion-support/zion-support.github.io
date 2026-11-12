@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/smart-engine-for-sports-c29665ef",
+  "breadcrumbTitle": "Smart Engine for Sports",
+  "title": "Smart Engine for Sports",
+  "description": "The future of sports is here with Smart Engine for Sports. Powered by cutting-edge AI, this platform delivers customer insights like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Engine for Sports - Zion Tech Group",
+    "description": "The future of sports is here with Smart Engine for Sports. Powered by cutting-edge AI, this platform delivers customer insights like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-engine-for-sports-c29665ef"
+    }
+  },
+  "features": [
+    "Container orchestration",
+    "Zero-downtime updates",
+    "Audit trails",
+    "HIPAA ready"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "24/7 automated operations",
+    "Real-time insights and alerts",
+    "Zero manual intervention required",
+    "Scalable to millions of transactions"
+  ]
+}

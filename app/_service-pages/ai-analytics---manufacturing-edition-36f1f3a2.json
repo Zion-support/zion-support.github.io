@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-analytics---manufacturing-edition-36f1f3a2",
+  "breadcrumbTitle": "AI Analytics - Manufacturing Edition",
+  "title": "AI Analytics - Manufacturing Edition",
+  "description": "The future of manufacturing is here with AI Analytics - Manufacturing Edition. Powered by cutting-edge AI, this platform delivers document processing like never",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Analytics - Manufacturing Edition - Zion Tech Group",
+    "description": "The future of manufacturing is here with AI Analytics - Manufacturing Edition. Powered by cutting-edge AI, this platform delivers document processing like never",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-analytics---manufacturing-edition-36f1f3a2"
+    }
+  },
+  "features": [
+    "Edge computing support",
+    "SOC 2 certified",
+    "Audit trails",
+    "Role-based access control",
+    "Container orchestration"
+  ],
+  "benefits": [
+    "Scalable to millions of transactions",
+    "ROI in under 90 days",
+    "99.9% uptime guarantee"
+  ]
+}

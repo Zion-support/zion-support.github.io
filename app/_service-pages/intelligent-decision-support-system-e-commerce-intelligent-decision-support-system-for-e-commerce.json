@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/intelligent-decision-support-system-e-commerce-intelligent-decision-support-system-for-e-commerce",
+  "breadcrumbTitle": "Intelligent Decision Support System for E-commerce",
+  "title": "Intelligent Decision Support System for E-commerce",
+  "description": "AI-driven decision support system for e-commerce. Delivers data-backed recommendations for Personalized recommendations, inventory optimization, customer behavi",
+  "basic": "$100/month",
+  "pro": "$253/month",
+  "enterprise": "$563/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Decision Support System for E-commerce - Zion Tech Group",
+    "description": "AI-driven decision support system for e-commerce. Delivers data-backed recommendations for Personalized recommendations, inventory optimization, customer behavi",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-decision-support-system-e-commerce-intelligent-decision-support-system-for-e-commerce"
+    }
+  },
+  "features": [
+    "AI-powered automation",
+    "Enterprise-grade security",
+    "24/7 monitoring",
+    "API-first integration",
+    "Scalable architecture"
+  ],
+  "benefits": [
+    "44% reduction in operational costs",
+    "Process 49% faster with automation",
+    "99.9% uptime guarantee with enterprise SLAs",
+    "ROI realized in under 90 days",
+    "Zero-downtime deployment"
+  ]
+}

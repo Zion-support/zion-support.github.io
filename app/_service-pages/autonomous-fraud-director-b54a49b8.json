@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/autonomous-fraud-director-b54a49b8",
+  "breadcrumbTitle": "Autonomous Fraud Director",
+  "title": "Autonomous Fraud Director",
+  "description": "Revolutionize legal through intelligent automation. Our Autonomous Fraud Director leverages advanced machine learning to deliver image recognition at scale.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous Fraud Director - Zion Tech Group",
+    "description": "Revolutionize legal through intelligent automation. Our Autonomous Fraud Director leverages advanced machine learning to deliver image recognition at scale.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-fraud-director-b54a49b8"
+    }
+  },
+  "features": [
+    "HIPAA ready",
+    "Rollback mechanisms",
+    "Performance dashboards",
+    "Multi-region deployment"
+  ],
+  "benefits": [
+    "Performance benchmarking",
+    "Reduced human error by 95%",
+    "Real-time insights and alerts",
+    "Automated compliance reporting",
+    "ROI in under 90 days"
+  ]
+}

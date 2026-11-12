@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/autonomous-intelligence-manufacturing-5622067d",
+  "breadcrumbTitle": "Autonomous intelligence-manufacturing",
+  "title": "Autonomous intelligence-manufacturing",
+  "description": "Revolutionize manufacturing through intelligent automation. Our Autonomous intelligence-manufacturing leverages advanced machine learning to deliver financial p",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous intelligence-manufacturing - Zion Tech Group",
+    "description": "Revolutionize manufacturing through intelligent automation. Our Autonomous intelligence-manufacturing leverages advanced machine learning to deliver financial p",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-intelligence-manufacturing-5622067d"
+    }
+  },
+  "features": [
+    "Audit trails",
+    "Microservices deployment",
+    "GDPR compliance",
+    "API-first design",
+    "Open-source friendly"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Dynamic resource allocation",
+    "Zero manual intervention required",
+    "Real-time insights and alerts"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/smart-property-management-platform-ef28374d",
+  "breadcrumbTitle": "Smart Property Management Platform",
+  "title": "Smart Property Management Platform",
+  "description": "End-to-end property management automation with AI-powered tenant screening, maintenance prediction, and rent optimization. Maximizes ROI for property owners and",
+  "basic": "$199/month",
+  "pro": "$599/month",
+  "enterprise": "$1999/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Property Management Platform - Zion Tech Group",
+    "description": "End-to-end property management automation with AI-powered tenant screening, maintenance prediction, and rent optimization. Maximizes ROI for property owners and",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-property-management-platform-ef28374d"
+    }
+  },
+  "features": [
+    "AI tenant screening and scoring",
+    "Predictive maintenance scheduling",
+    "Dynamic rent optimization",
+    "Automated lease management",
+    "Financial reporting and analytics"
+  ],
+  "benefits": [
+    "Reduce vacancy rates by 30%",
+    "Cut maintenance costs 25%",
+    "Automate 80% of routine tasks",
+    "Improve tenant retention",
+    "Real-time portfolio insights"
+  ]
+}

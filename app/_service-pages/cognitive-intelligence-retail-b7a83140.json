@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/cognitive-intelligence-retail-b7a83140",
+  "breadcrumbTitle": "Cognitive intelligence-retail",
+  "title": "Cognitive intelligence-retail",
+  "description": "Unlock unprecedented growth with Cognitive intelligence-retail. This autonomous system provides workflow management with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Cognitive intelligence-retail - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Cognitive intelligence-retail. This autonomous system provides workflow management with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cognitive-intelligence-retail-b7a83140"
+    }
+  },
+  "features": [
+    "Alerting system",
+    "HIPAA ready",
+    "Multi-language support",
+    "Rollback mechanisms"
+  ],
+  "benefits": [
+    "Scalable to millions of transactions",
+    "Enterprise-grade security",
+    "99.9% uptime guarantee",
+    "Real-time insights and alerts",
+    "24/7 automated operations"
+  ]
+}

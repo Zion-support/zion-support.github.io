@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/analyzer-ai---legal-d450026a",
+  "breadcrumbTitle": "Analyzer AI - Legal",
+  "title": "Analyzer AI - Legal",
+  "description": "Unlock unprecedented growth with Analyzer AI - Legal. This autonomous system provides data processing with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Analyzer AI - Legal - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Analyzer AI - Legal. This autonomous system provides data processing with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/analyzer-ai---legal-d450026a"
+    }
+  },
+  "features": [
+    "GDPR compliance",
+    "Machine learning integration",
+    "Rollback mechanisms",
+    "Audit trails",
+    "Offline capabilities"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "Cost optimization recommendations",
+    "3x faster decision making"
+  ]
+}

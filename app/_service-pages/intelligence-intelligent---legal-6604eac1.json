@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligence-intelligent---legal-6604eac1",
+  "breadcrumbTitle": "Intelligence Intelligent - Legal",
+  "title": "Intelligence Intelligent - Legal",
+  "description": "The future of legal is here with Intelligence Intelligent - Legal. Powered by cutting-edge AI, this platform delivers performance monitoring like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligence Intelligent - Legal - Zion Tech Group",
+    "description": "The future of legal is here with Intelligence Intelligent - Legal. Powered by cutting-edge AI, this platform delivers performance monitoring like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligence-intelligent---legal-6604eac1"
+    }
+  },
+  "features": [
+    "Zero-downtime updates",
+    "Offline capabilities",
+    "GDPR compliance",
+    "Role-based access control",
+    "Auto-scaling capabilities"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Enterprise-grade security",
+    "3x faster decision making",
+    "Automated compliance reporting"
+  ]
+}

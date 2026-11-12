@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-powered-sales-platform-1-a4eec68b",
+  "breadcrumbTitle": "AI-Powered Sales Platform #1",
+  "title": "AI-Powered Sales Platform #1",
+  "description": "Revolutionize Manufacturing through intelligent automation. Our AI-Powered Sales Platform #1 leverages advanced machine learning to deliver business intelligenc",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI-Powered Sales Platform #1 - Zion Tech Group",
+    "description": "Revolutionize Manufacturing through intelligent automation. Our AI-Powered Sales Platform #1 leverages advanced machine learning to deliver business intelligenc",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-sales-platform-1-a4eec68b"
+    }
+  },
+  "features": [
+    "Logistics route optimization with traffic prediction",
+    "Image recognition with computer vision",
+    "Language processing with sentiment analysis",
+    "Manufacturing quality control with defect detection",
+    "Auto-scaling capabilities with predictive scaling"
+  ],
+  "benefits": [
+    "Improved product quality with automated testing",
+    "Better customer experience with personalization",
+    "Faster time-to-market with accelerated development",
+    "Faster content creation with AI assistance"
+  ]
+}

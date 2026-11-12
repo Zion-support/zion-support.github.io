@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/automated-advisor-for-logistics-c3dcb83c",
+  "breadcrumbTitle": "Automated Advisor for Logistics",
+  "title": "Automated Advisor for Logistics",
+  "description": "Next-generation logistics solution: Automated Advisor for Logistics. Combines market intelligence with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated Advisor for Logistics - Zion Tech Group",
+    "description": "Next-generation logistics solution: Automated Advisor for Logistics. Combines market intelligence with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-advisor-for-logistics-c3dcb83c"
+    }
+  },
+  "features": [
+    "Plugin architecture",
+    "Offline capabilities",
+    "Comprehensive monitoring",
+    "Performance dashboards",
+    "Cloud-native architecture"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Seamless integration with existing systems",
+    "Intelligent load balancing"
+  ]
+}

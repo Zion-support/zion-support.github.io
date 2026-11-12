@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/smart-customer-experience-b541e777",
+  "breadcrumbTitle": "Smart Customer Experience",
+  "title": "Smart Customer Experience",
+  "description": "The future of Manufacturing is here with Smart Customer Experience. Powered by cutting-edge AI, this platform delivers predictive analytics like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Customer Experience - Zion Tech Group",
+    "description": "The future of Manufacturing is here with Smart Customer Experience. Powered by cutting-edge AI, this platform delivers predictive analytics like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-customer-experience-b541e777"
+    }
+  },
+  "features": [
+    "Predictive modeling with ensemble methods",
+    "Serverless functions for cost-effective scaling",
+    "Process discovery with activity analysis",
+    "Inventory prediction with demand forecasting",
+    "Fraud detection with anomaly analysis"
+  ],
+  "benefits": [
+    "Reduced marketing costs with targeted campaigns",
+    "Better compliance with automated audit trails",
+    "Improved conversion rates with personalization",
+    "50% reduction in operational costs through automation",
+    "Improved sales performance with lead scoring"
+  ]
+}

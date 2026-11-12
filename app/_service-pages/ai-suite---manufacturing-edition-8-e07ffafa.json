@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-suite---manufacturing-edition-8-e07ffafa",
+  "breadcrumbTitle": "AI Suite - Manufacturing Edition #8",
+  "title": "AI Suite - Manufacturing Edition #8",
+  "description": "Next-generation manufacturing solution: AI Suite - Manufacturing Edition #8. Combines risk assessment with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Suite - Manufacturing Edition #8 - Zion Tech Group",
+    "description": "Next-generation manufacturing solution: AI Suite - Manufacturing Edition #8. Combines risk assessment with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-suite---manufacturing-edition-8-e07ffafa"
+    }
+  },
+  "features": [
+    "Mobile-responsive interface",
+    "API-first design",
+    "Data encryption",
+    "Machine learning integration",
+    "Real-time processing"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Self-healing infrastructure",
+    "50% reduction in operational costs"
+  ]
+}

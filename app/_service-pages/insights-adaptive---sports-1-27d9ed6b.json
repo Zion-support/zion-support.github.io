@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/insights-adaptive---sports-1-27d9ed6b",
+  "breadcrumbTitle": "Insights Adaptive - Sports #1",
+  "title": "Insights Adaptive - Sports #1",
+  "description": "Transform your sports operations with our Insights Adaptive - Sports #1. This AI-driven solution automates customer insights with unprecedented accuracy and eff",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Insights Adaptive - Sports #1 - Zion Tech Group",
+    "description": "Transform your sports operations with our Insights Adaptive - Sports #1. This AI-driven solution automates customer insights with unprecedented accuracy and eff",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/insights-adaptive---sports-1-27d9ed6b"
+    }
+  },
+  "features": [
+    "API-first design",
+    "Role-based access control",
+    "Microservices deployment",
+    "Container orchestration"
+  ],
+  "benefits": [
+    "Performance benchmarking",
+    "Enterprise-grade security",
+    "Self-healing infrastructure"
+  ]
+}

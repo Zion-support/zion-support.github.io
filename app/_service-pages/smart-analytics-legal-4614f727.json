@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/smart-analytics-legal-4614f727",
+  "breadcrumbTitle": "Smart analytics-legal",
+  "title": "Smart analytics-legal",
+  "description": "Revolutionize legal through intelligent automation. Our Smart analytics-legal leverages advanced machine learning to deliver user experience at scale.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart analytics-legal - Zion Tech Group",
+    "description": "Revolutionize legal through intelligent automation. Our Smart analytics-legal leverages advanced machine learning to deliver user experience at scale.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-analytics-legal-4614f727"
+    }
+  },
+  "features": [
+    "Machine learning integration",
+    "Plugin architecture",
+    "Open-source friendly",
+    "Comprehensive monitoring"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "Dynamic resource allocation",
+    "Real-time insights and alerts"
+  ]
+}

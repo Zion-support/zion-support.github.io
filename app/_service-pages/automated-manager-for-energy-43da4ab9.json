@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/automated-manager-for-energy-43da4ab9",
+  "breadcrumbTitle": "Automated Manager for Energy",
+  "title": "Automated Manager for Energy",
+  "description": "Unlock unprecedented growth with Automated Manager for Energy. This autonomous system provides quality control with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated Manager for Energy - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Automated Manager for Energy. This autonomous system provides quality control with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-manager-for-energy-43da4ab9"
+    }
+  },
+  "features": [
+    "API-first design",
+    "Cloud-native architecture",
+    "Plugin architecture",
+    "Multi-region deployment"
+  ],
+  "benefits": [
+    "Scalable to millions of transactions",
+    "Real-time insights and alerts",
+    "Cost optimization recommendations",
+    "Enterprise-grade security",
+    "24/7 automated operations"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/automation-anywhere-8a42ef60",
+  "breadcrumbTitle": "Automation Anywhere",
+  "title": "Automation Anywhere",
+  "description": "Automation Anywhere is an American global software company that develops robotic process automation (RPA) and agentic process automation software.\\nFounded in 20",
+  "basic": "$N/A/month",
+  "pro": "$N/A/month",
+  "enterprise": "$N/A/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Automation Anywhere - Zion Tech Group",
+    "description": "Automation Anywhere is an American global software company that develops robotic process automation (RPA) and agentic process automation software.\nFounded in 20",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automation-anywhere-8a42ef60"
+    }
+  },
+  "features": [
+    "AI-driven automation",
+    "Cloud-native deployment",
+    "API-first architecture",
+    "Enterprise-grade security",
+    "Scalable infrastructure"
+  ],
+  "benefits": [
+    "Improved operational efficiency",
+    "Reduced manual processes",
+    "Data-driven decision making",
+    "Faster time-to value",
+    "Scalable performance"
+  ]
+}

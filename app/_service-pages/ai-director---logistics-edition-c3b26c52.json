@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-director---logistics-edition-c3b26c52",
+  "breadcrumbTitle": "AI Director - Logistics Edition",
+  "title": "AI Director - Logistics Edition",
+  "description": "Unlock unprecedented growth with AI Director - Logistics Edition. This autonomous system provides customer insights with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Director - Logistics Edition - Zion Tech Group",
+    "description": "Unlock unprecedented growth with AI Director - Logistics Edition. This autonomous system provides customer insights with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-director---logistics-edition-c3b26c52"
+    }
+  },
+  "features": [
+    "Open-source friendly",
+    "Comprehensive monitoring",
+    "Multi-region deployment",
+    "Serverless functions"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "Scalable to millions of transactions",
+    "Self-healing infrastructure",
+    "Reduced human error by 95%"
+  ]
+}

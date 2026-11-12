@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/system-predictive---healthcare-5d4b50b3",
+  "breadcrumbTitle": "System Predictive - Healthcare",
+  "title": "System Predictive - Healthcare",
+  "description": "Revolutionize healthcare through intelligent automation. Our System Predictive - Healthcare leverages advanced machine learning to deliver energy management at ",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "System Predictive - Healthcare - Zion Tech Group",
+    "description": "Revolutionize healthcare through intelligent automation. Our System Predictive - Healthcare leverages advanced machine learning to deliver energy management at ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/system-predictive---healthcare-5d4b50b3"
+    }
+  },
+  "features": [
+    "Open-source friendly",
+    "Zero-downtime updates",
+    "Alerting system",
+    "Custom integrations",
+    "HIPAA ready"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "Seamless integration with existing systems",
+    "99.9% uptime guarantee"
+  ]
+}

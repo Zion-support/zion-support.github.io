@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-insights---real-estate-edition-238c9d9b",
+  "breadcrumbTitle": "AI Insights - Real-Estate Edition",
+  "title": "AI Insights - Real-Estate Edition",
+  "description": "The future of real-estate is here with AI Insights - Real-Estate Edition. Powered by cutting-edge AI, this platform delivers process automation like never befor",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Insights - Real-Estate Edition - Zion Tech Group",
+    "description": "The future of real-estate is here with AI Insights - Real-Estate Edition. Powered by cutting-edge AI, this platform delivers process automation like never befor",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-insights---real-estate-edition-238c9d9b"
+    }
+  },
+  "features": [
+    "Data encryption",
+    "Plugin architecture",
+    "Auto-scaling capabilities",
+    "Multi-language support",
+    "Real-time processing"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "Seamless integration with existing systems",
+    "Reduced human error by 95%"
+  ]
+}

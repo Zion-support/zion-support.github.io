@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligent-fraud-analyzer-e393540a",
+  "breadcrumbTitle": "Intelligent Fraud Analyzer",
+  "title": "Intelligent Fraud Analyzer",
+  "description": "The future of construction is here with Intelligent Fraud Analyzer. Powered by cutting-edge AI, this platform delivers resource optimization like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Fraud Analyzer - Zion Tech Group",
+    "description": "The future of construction is here with Intelligent Fraud Analyzer. Powered by cutting-edge AI, this platform delivers resource optimization like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-fraud-analyzer-e393540a"
+    }
+  },
+  "features": [
+    "Multi-region deployment",
+    "Rollback mechanisms",
+    "Performance dashboards",
+    "Role-based access control"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "Intelligent load balancing",
+    "Self-healing infrastructure",
+    "ROI in under 90 days",
+    "Seamless integration with existing systems"
+  ]
+}

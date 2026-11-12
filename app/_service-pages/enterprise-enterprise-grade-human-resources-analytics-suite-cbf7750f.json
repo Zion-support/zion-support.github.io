@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/enterprise-enterprise-grade-human-resources-analytics-suite-cbf7750f",
+  "breadcrumbTitle": "Enterprise Enterprise-Grade Human Resources Analytics Suite",
+  "title": "Enterprise Enterprise-Grade Human Resources Analytics Suite",
+  "description": "Enterprise analytics suite that delivers enterprise-grade human resources insights with unified dashboards and reporting.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Enterprise Enterprise-Grade Human Resources Analytics Suite - Zion Tech Group",
+    "description": "Enterprise analytics suite that delivers enterprise-grade human resources insights with unified dashboards and reporting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/enterprise-enterprise-grade-human-resources-analytics-suite-cbf7750f"
+    }
+  },
+  "features": [
+    "Data visualization",
+    "Custom dashboards",
+    "Report generation",
+    "KPI tracking"
+  ],
+  "benefits": [
+    "Unified data view",
+    "Faster insights",
+    "Customizable reports",
+    "Cross-functional collaboration"
+  ]
+}

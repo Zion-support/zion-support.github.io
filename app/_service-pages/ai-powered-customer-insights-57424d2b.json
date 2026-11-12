@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/ai-powered-customer-insights-57424d2b",
+  "breadcrumbTitle": "AI-Powered Customer Insights",
+  "title": "AI-Powered Customer Insights",
+  "description": "Transform your retail operations with our AI-Powered Customer Insights. This AI-driven solution automates energy management with unprecedented accuracy and effi",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Customer Insights - Zion Tech Group",
+    "description": "Transform your retail operations with our AI-Powered Customer Insights. This AI-driven solution automates energy management with unprecedented accuracy and effi",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-customer-insights-57424d2b"
+    }
+  },
+  "features": [
+    "Container orchestration",
+    "Machine learning integration",
+    "GDPR compliance",
+    "HIPAA ready"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "Intelligent load balancing",
+    "99.9% uptime guarantee"
+  ]
+}

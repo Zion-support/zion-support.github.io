@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/automated-advisor-insurance-f0d8e59d",
+  "breadcrumbTitle": "Automated advisor-insurance",
+  "title": "Automated advisor-insurance",
+  "description": "Revolutionize insurance through intelligent automation. Our Automated advisor-insurance leverages advanced machine learning to deliver decision support at scale",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated advisor-insurance - Zion Tech Group",
+    "description": "Revolutionize insurance through intelligent automation. Our Automated advisor-insurance leverages advanced machine learning to deliver decision support at scale",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-advisor-insurance-f0d8e59d"
+    }
+  },
+  "features": [
+    "Container orchestration",
+    "Comprehensive monitoring",
+    "API-first design",
+    "Alerting system"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Seamless integration with existing systems",
+    "24/7 automated operations",
+    "Self-healing infrastructure"
+  ]
+}

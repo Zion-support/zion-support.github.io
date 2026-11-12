@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/director-adaptive---energy-26a378d2",
+  "breadcrumbTitle": "Director Adaptive - Energy",
+  "title": "Director Adaptive - Energy",
+  "description": "Transform your energy operations with our Director Adaptive - Energy. This AI-driven solution automates maintenance scheduling with unprecedented accuracy and e",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Director Adaptive - Energy - Zion Tech Group",
+    "description": "Transform your energy operations with our Director Adaptive - Energy. This AI-driven solution automates maintenance scheduling with unprecedented accuracy and e",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/director-adaptive---energy-26a378d2"
+    }
+  },
+  "features": [
+    "Container orchestration",
+    "Offline capabilities",
+    "Open-source friendly",
+    "Alerting system",
+    "Edge computing support"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "Zero manual intervention required",
+    "Real-time insights and alerts"
+  ]
+}

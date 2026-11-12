@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-5g-next-generation-planning-b199d255",
+  "breadcrumbTitle": "AI-Powered 5G Next-Generation Planning",
+  "title": "AI-Powered 5G Next-Generation Planning",
+  "description": "Advanced 5G network planning platform that uses next-generation AI to optimize site placement, spectrum allocation, and capacity planning for next-generation ne",
+  "basic": "$278/month",
+  "pro": "$698/month",
+  "enterprise": "$2098/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered 5G Next-Generation Planning - Zion Tech Group",
+    "description": "Advanced 5G network planning platform that uses next-generation AI to optimize site placement, spectrum allocation, and capacity planning for next-generation ne",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-5g-next-generation-planning-b199d255"
+    }
+  },
+  "features": [
+    "Site optimization",
+    "Spectrum planning",
+    "Capacity forecasting",
+    "Interference management"
+  ],
+  "benefits": [
+    "Faster deployment",
+    "Optimal coverage",
+    "Cost reduction",
+    "Future-proof architecture"
+  ]
+}

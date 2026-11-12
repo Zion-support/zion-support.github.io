@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/predictor-autonomous---hospitality-1-d2c7e904",
+  "breadcrumbTitle": "Predictor Autonomous - Hospitality #1",
+  "title": "Predictor Autonomous - Hospitality #1",
+  "description": "The future of hospitality is here with Predictor Autonomous - Hospitality #1. Powered by cutting-edge AI, this platform delivers security monitoring like never ",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Predictor Autonomous - Hospitality #1 - Zion Tech Group",
+    "description": "The future of hospitality is here with Predictor Autonomous - Hospitality #1. Powered by cutting-edge AI, this platform delivers security monitoring like never ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/predictor-autonomous---hospitality-1-d2c7e904"
+    }
+  },
+  "features": [
+    "Offline capabilities",
+    "Performance dashboards",
+    "HIPAA ready",
+    "Cloud-native architecture",
+    "Real-time processing"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "Scalable to millions of transactions",
+    "Self-healing infrastructure",
+    "3x faster decision making"
+  ]
+}

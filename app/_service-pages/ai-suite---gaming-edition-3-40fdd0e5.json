@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/ai-suite---gaming-edition-3-40fdd0e5",
+  "breadcrumbTitle": "AI Suite - Gaming Edition #3",
+  "title": "AI Suite - Gaming Edition #3",
+  "description": "Next-generation gaming solution: AI Suite - Gaming Edition #3. Combines risk assessment with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Suite - Gaming Edition #3 - Zion Tech Group",
+    "description": "Next-generation gaming solution: AI Suite - Gaming Edition #3. Combines risk assessment with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-suite---gaming-edition-3-40fdd0e5"
+    }
+  },
+  "features": [
+    "Serverless functions",
+    "API-first design",
+    "HIPAA ready",
+    "Zero-downtime updates",
+    "Cloud-native architecture"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "ROI in under 90 days",
+    "Scalable to millions of transactions",
+    "Intelligent load balancing",
+    "Dynamic resource allocation"
+  ]
+}

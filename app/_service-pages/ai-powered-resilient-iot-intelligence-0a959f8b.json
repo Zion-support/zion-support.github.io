@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-resilient-iot-intelligence-0a959f8b",
+  "breadcrumbTitle": "AI-Powered Resilient IoT Intelligence",
+  "title": "AI-Powered Resilient IoT Intelligence",
+  "description": "Edge AI platform that processes IoT sensor data in real-time with resilient insights.",
+  "basic": "$258/month",
+  "pro": "$648/month",
+  "enterprise": "$1948/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Resilient IoT Intelligence - Zion Tech Group",
+    "description": "Edge AI platform that processes IoT sensor data in real-time with resilient insights.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-resilient-iot-intelligence-0a959f8b"
+    }
+  },
+  "features": [
+    "Edge processing",
+    "Real-time analytics",
+    "Automated responses",
+    "Energy efficiency"
+  ],
+  "benefits": [
+    "Reduced latency",
+    "Better insights",
+    "Automated responses",
+    "Energy efficiency"
+  ]
+}

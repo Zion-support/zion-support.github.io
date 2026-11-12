@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/smart-non-profit-workflow-automation-c4f886fa",
+  "breadcrumbTitle": "Smart Non-Profit Workflow Automation",
+  "title": "Smart Non-Profit Workflow Automation",
+  "description": "Intelligent workflow automation platform that streamlines non-profit processes and eliminates manual tasks.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Smart Non-Profit Workflow Automation - Zion Tech Group",
+    "description": "Intelligent workflow automation platform that streamlines non-profit processes and eliminates manual tasks.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-non-profit-workflow-automation-c4f886fa"
+    }
+  },
+  "features": [
+    "Process mapping",
+    "Task automation",
+    "Workflow optimization",
+    "Exception handling"
+  ],
+  "benefits": [
+    "Faster operations",
+    "Reduced errors",
+    "Improved productivity",
+    "Better resource utilization"
+  ]
+}

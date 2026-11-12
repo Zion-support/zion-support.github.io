@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/intelligent-director-media-1c9c5860",
+  "breadcrumbTitle": "Intelligent director-media",
+  "title": "Intelligent director-media",
+  "description": "Unlock unprecedented growth with Intelligent director-media. This autonomous system provides customer insights with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent director-media - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Intelligent director-media. This autonomous system provides customer insights with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-director-media-1c9c5860"
+    }
+  },
+  "features": [
+    "Comprehensive monitoring",
+    "Custom integrations",
+    "Microservices deployment",
+    "Auto-scaling capabilities",
+    "GDPR compliance"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "24/7 automated operations",
+    "Enterprise-grade security",
+    "Seamless integration with existing systems",
+    "99.9% uptime guarantee"
+  ]
+}

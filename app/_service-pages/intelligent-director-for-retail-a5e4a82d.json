@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/intelligent-director-for-retail-a5e4a82d",
+  "breadcrumbTitle": "Intelligent Director for Retail",
+  "title": "Intelligent Director for Retail",
+  "description": "The future of retail is here with Intelligent Director for Retail. Powered by cutting-edge AI, this platform delivers user experience like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Director for Retail - Zion Tech Group",
+    "description": "The future of retail is here with Intelligent Director for Retail. Powered by cutting-edge AI, this platform delivers user experience like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-director-for-retail-a5e4a82d"
+    }
+  },
+  "features": [
+    "Auto-scaling capabilities",
+    "Audit trails",
+    "Role-based access control",
+    "Mobile-responsive interface"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "Scalable to millions of transactions",
+    "Predictive maintenance scheduling"
+  ]
+}

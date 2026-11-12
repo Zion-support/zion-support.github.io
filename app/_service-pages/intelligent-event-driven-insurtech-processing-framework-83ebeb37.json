@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-event-driven-insurtech-processing-framework-83ebeb37",
+  "breadcrumbTitle": "Intelligent Event-Driven Insurtech Processing Framework",
+  "title": "Intelligent Event-Driven Insurtech Processing Framework",
+  "description": "Intelligent processing framework that automates event-driven insurtech data flows with real-time transformation.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Intelligent Event-Driven Insurtech Processing Framework - Zion Tech Group",
+    "description": "Intelligent processing framework that automates event-driven insurtech data flows with real-time transformation.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-event-driven-insurtech-processing-framework-83ebeb37"
+    }
+  },
+  "features": [
+    "Real-time processing",
+    "Data transformation",
+    "ETL pipelines",
+    "Stream processing"
+  ],
+  "benefits": [
+    "Faster data flows",
+    "Reduced processing time",
+    "Higher throughput",
+    "Real-time transformation"
+  ]
+}

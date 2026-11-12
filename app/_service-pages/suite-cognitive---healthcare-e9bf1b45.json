@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/suite-cognitive---healthcare-e9bf1b45",
+  "breadcrumbTitle": "Suite Cognitive - Healthcare",
+  "title": "Suite Cognitive - Healthcare",
+  "description": "Transform your healthcare operations with our Suite Cognitive - Healthcare. This AI-driven solution automates language processing with unprecedented accuracy an",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Suite Cognitive - Healthcare - Zion Tech Group",
+    "description": "Transform your healthcare operations with our Suite Cognitive - Healthcare. This AI-driven solution automates language processing with unprecedented accuracy an",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/suite-cognitive---healthcare-e9bf1b45"
+    }
+  },
+  "features": [
+    "Real-time processing",
+    "SOC 2 certified",
+    "Multi-region deployment",
+    "Multi-language support",
+    "Rollback mechanisms"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Predictive maintenance scheduling",
+    "Real-time insights and alerts",
+    "Dynamic resource allocation",
+    "Scalable to millions of transactions"
+  ]
+}

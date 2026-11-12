@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/system-intelligent---retail-1-1a5b3c36",
+  "breadcrumbTitle": "System Intelligent - Retail #1",
+  "title": "System Intelligent - Retail #1",
+  "description": "Transform your Retail operations with our System Intelligent - Retail #1. This AI-driven solution automates scenario planning with unprecedented accuracy and ef",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "System Intelligent - Retail #1 - Zion Tech Group",
+    "description": "Transform your Retail operations with our System Intelligent - Retail #1. This AI-driven solution automates scenario planning with unprecedented accuracy and ef",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/system-intelligent---retail-1-1a5b3c36"
+    }
+  },
+  "features": [
+    "Fraud detection with anomaly analysis",
+    "Automation opportunity identification",
+    "Open-source friendly with plugin architecture",
+    "Machine learning integration with automatic model training",
+    "Real-time processing with streaming analytics"
+  ],
+  "benefits": [
+    "Better supply chain visibility with tracking",
+    "Scalable to millions of transactions per second",
+    "Better risk management with predictive analytics",
+    "Reduced customer acquisition costs with optimization",
+    "Improved conversion rates with personalization"
+  ]
+}

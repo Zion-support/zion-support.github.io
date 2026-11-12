@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/advisor-autonomous---logistics-798f9f1d",
+  "breadcrumbTitle": "Advisor Autonomous - Logistics",
+  "title": "Advisor Autonomous - Logistics",
+  "description": "Revolutionize logistics through intelligent automation. Our Advisor Autonomous - Logistics leverages advanced machine learning to deliver language processing at",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Advisor Autonomous - Logistics - Zion Tech Group",
+    "description": "Revolutionize logistics through intelligent automation. Our Advisor Autonomous - Logistics leverages advanced machine learning to deliver language processing at",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/advisor-autonomous---logistics-798f9f1d"
+    }
+  },
+  "features": [
+    "Role-based access control",
+    "Machine learning integration",
+    "Alerting system",
+    "HIPAA ready",
+    "Multi-region deployment"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Seamless integration with existing systems",
+    "50% reduction in operational costs"
+  ]
+}

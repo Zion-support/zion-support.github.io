@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/cognitive-security-system-bb9bc8a7",
+  "breadcrumbTitle": "Cognitive Security System",
+  "title": "Cognitive Security System",
+  "description": "Revolutionize retail through intelligent automation. Our Cognitive Security System leverages advanced machine learning to deliver compliance monitoring at scale",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Cognitive Security System - Zion Tech Group",
+    "description": "Revolutionize retail through intelligent automation. Our Cognitive Security System leverages advanced machine learning to deliver compliance monitoring at scale",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cognitive-security-system-bb9bc8a7"
+    }
+  },
+  "features": [
+    "Plugin architecture",
+    "HIPAA ready",
+    "Data encryption",
+    "Mobile-responsive interface",
+    "API-first design"
+  ],
+  "benefits": [
+    "24/7 automated operations",
+    "Zero manual intervention required",
+    "ROI in under 90 days",
+    "Performance benchmarking"
+  ]
+}

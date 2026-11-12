@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/ai-insights---manufacturing-edition-21dc4449",
+  "breadcrumbTitle": "AI Insights - Manufacturing Edition",
+  "title": "AI Insights - Manufacturing Edition",
+  "description": "Revolutionize manufacturing through intelligent automation. Our AI Insights - Manufacturing Edition leverages advanced machine learning to deliver quality contr",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Insights - Manufacturing Edition - Zion Tech Group",
+    "description": "Revolutionize manufacturing through intelligent automation. Our AI Insights - Manufacturing Edition leverages advanced machine learning to deliver quality contr",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-insights---manufacturing-edition-21dc4449"
+    }
+  },
+  "features": [
+    "Container orchestration",
+    "Open-source friendly",
+    "Rollback mechanisms",
+    "Real-time processing",
+    "Alerting system"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "99.9% uptime guarantee",
+    "Automated compliance reporting",
+    "Predictive maintenance scheduling",
+    "ROI in under 90 days"
+  ]
+}

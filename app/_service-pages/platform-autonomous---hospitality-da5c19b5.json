@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/platform-autonomous---hospitality-da5c19b5",
+  "breadcrumbTitle": "Platform Autonomous - Hospitality",
+  "title": "Platform Autonomous - Hospitality",
+  "description": "Next-generation hospitality solution: Platform Autonomous - Hospitality. Combines risk assessment with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Platform Autonomous - Hospitality - Zion Tech Group",
+    "description": "Next-generation hospitality solution: Platform Autonomous - Hospitality. Combines risk assessment with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/platform-autonomous---hospitality-da5c19b5"
+    }
+  },
+  "features": [
+    "Microservices deployment",
+    "Machine learning integration",
+    "Custom integrations",
+    "Open-source friendly",
+    "Edge computing support"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "ROI in under 90 days",
+    "Seamless integration with existing systems"
+  ]
+}

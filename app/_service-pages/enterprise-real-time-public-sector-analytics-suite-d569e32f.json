@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/enterprise-real-time-public-sector-analytics-suite-d569e32f",
+  "breadcrumbTitle": "Enterprise Real-Time Public Sector Analytics Suite",
+  "title": "Enterprise Real-Time Public Sector Analytics Suite",
+  "description": "Enterprise analytics suite that delivers real-time public sector insights with unified dashboards and reporting.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Enterprise Real-Time Public Sector Analytics Suite - Zion Tech Group",
+    "description": "Enterprise analytics suite that delivers real-time public sector insights with unified dashboards and reporting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/enterprise-real-time-public-sector-analytics-suite-d569e32f"
+    }
+  },
+  "features": [
+    "Data visualization",
+    "Custom dashboards",
+    "Report generation",
+    "KPI tracking"
+  ],
+  "benefits": [
+    "Unified data view",
+    "Faster insights",
+    "Customizable reports",
+    "Cross-functional collaboration"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/optimization-smart---logistics-d71bfa2f",
+  "breadcrumbTitle": "Optimization Smart - Logistics",
+  "title": "Optimization Smart - Logistics",
+  "description": "Unlock unprecedented growth with Optimization Smart - Logistics. This autonomous system provides resource optimization with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Optimization Smart - Logistics - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Optimization Smart - Logistics. This autonomous system provides resource optimization with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/optimization-smart---logistics-d71bfa2f"
+    }
+  },
+  "features": [
+    "Serverless functions",
+    "Machine learning integration",
+    "Multi-region deployment",
+    "Mobile-responsive interface",
+    "Plugin architecture"
+  ],
+  "benefits": [
+    "Dynamic resource allocation",
+    "Predictive maintenance scheduling",
+    "Scalable to millions of transactions",
+    "Real-time insights and alerts",
+    "Automated compliance reporting"
+  ]
+}

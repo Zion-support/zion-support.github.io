@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/insights-automated---sports-be2f53c6",
+  "breadcrumbTitle": "Insights Automated - Sports",
+  "title": "Insights Automated - Sports",
+  "description": "Next-generation sports solution: Insights Automated - Sports. Combines energy management with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Insights Automated - Sports - Zion Tech Group",
+    "description": "Next-generation sports solution: Insights Automated - Sports. Combines energy management with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/insights-automated---sports-be2f53c6"
+    }
+  },
+  "features": [
+    "Real-time processing",
+    "Microservices deployment",
+    "Audit trails",
+    "Role-based access control",
+    "Cloud-native architecture"
+  ],
+  "benefits": [
+    "Seamless integration with existing systems",
+    "50% reduction in operational costs",
+    "Reduced human error by 95%",
+    "Zero manual intervention required",
+    "Cost optimization recommendations"
+  ]
+}

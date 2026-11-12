@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/automated-security-suite-7f2b27bf",
+  "breadcrumbTitle": "Automated Security Suite",
+  "title": "Automated Security Suite",
+  "description": "Next-generation real-estate solution: Automated Security Suite. Combines market intelligence with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated Security Suite - Zion Tech Group",
+    "description": "Next-generation real-estate solution: Automated Security Suite. Combines market intelligence with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-security-suite-7f2b27bf"
+    }
+  },
+  "features": [
+    "Performance dashboards",
+    "Audit trails",
+    "Mobile-responsive interface",
+    "Container orchestration",
+    "HIPAA ready"
+  ],
+  "benefits": [
+    "50% reduction in operational costs",
+    "Intelligent load balancing",
+    "Real-time insights and alerts",
+    "Reduced human error by 95%"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/smart-marketing-for-healthcare-ae6da5bf",
+  "breadcrumbTitle": "Smart Marketing for Healthcare",
+  "title": "Smart Marketing for Healthcare",
+  "description": "Revolutionize Healthcare through intelligent automation. Our Smart Marketing for Healthcare leverages advanced machine learning to deliver market analysis at sc",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Marketing for Healthcare - Zion Tech Group",
+    "description": "Revolutionize Healthcare through intelligent automation. Our Smart Marketing for Healthcare leverages advanced machine learning to deliver market analysis at sc",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-marketing-for-healthcare-ae6da5bf"
+    }
+  },
+  "features": [
+    "Business intelligence with KPI dashboards",
+    "Data quality with anomaly detection",
+    "Zero-downtime updates with blue-green deployment",
+    "Automation opportunity identification",
+    "Performance dashboards with real-time metrics"
+  ],
+  "benefits": [
+    "Enhanced decision making with data-driven insights",
+    "Scalable to millions of transactions per second",
+    "Reduced infrastructure costs with cloud optimization",
+    "Better supply chain visibility with tracking",
+    "Faster time-to-market with accelerated development"
+  ]
+}

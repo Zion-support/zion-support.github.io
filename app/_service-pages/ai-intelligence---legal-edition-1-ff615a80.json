@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-intelligence---legal-edition-1-ff615a80",
+  "breadcrumbTitle": "AI Intelligence - Legal Edition #1",
+  "title": "AI Intelligence - Legal Edition #1",
+  "description": "Transform your legal operations with our AI Intelligence - Legal Edition #1. This AI-driven solution automates user experience with unprecedented accuracy and e",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Intelligence - Legal Edition #1 - Zion Tech Group",
+    "description": "Transform your legal operations with our AI Intelligence - Legal Edition #1. This AI-driven solution automates user experience with unprecedented accuracy and e",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-intelligence---legal-edition-1-ff615a80"
+    }
+  },
+  "features": [
+    "Offline capabilities",
+    "Plugin architecture",
+    "Microservices deployment",
+    "Role-based access control"
+  ],
+  "benefits": [
+    "Cost optimization recommendations",
+    "Zero manual intervention required",
+    "24/7 automated operations",
+    "Automated compliance reporting"
+  ]
+}

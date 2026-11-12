@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/insights-neural---legal-8fdf55f0",
+  "breadcrumbTitle": "Insights Neural - Legal",
+  "title": "Insights Neural - Legal",
+  "description": "Revolutionize Legal through intelligent automation. Our Insights Neural - Legal leverages advanced machine learning to deliver threat detection at scale.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Insights Neural - Legal - Zion Tech Group",
+    "description": "Revolutionize Legal through intelligent automation. Our Insights Neural - Legal leverages advanced machine learning to deliver threat detection at scale.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/insights-neural---legal-8fdf55f0"
+    }
+  },
+  "features": [
+    "Open-source friendly with plugin architecture",
+    "Sales process optimization with pipeline management",
+    "Multi-region deployment with automatic failover",
+    "Energy optimization with consumption tracking",
+    "Microservices deployment with container orchestration"
+  ],
+  "benefits": [
+    "Better financial planning with predictive models",
+    "Reduced marketing costs with targeted campaigns",
+    "Predictive maintenance scheduling to prevent downtime",
+    "Faster content creation with AI assistance",
+    "Better customer experience with personalization"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/coordinator-smart---agriculture-1-8e12a7db",
+  "breadcrumbTitle": "Coordinator Smart - Agriculture #1",
+  "title": "Coordinator Smart - Agriculture #1",
+  "description": "The future of agriculture is here with Coordinator Smart - Agriculture #1. Powered by cutting-edge AI, this platform delivers decision support like never before",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Coordinator Smart - Agriculture #1 - Zion Tech Group",
+    "description": "The future of agriculture is here with Coordinator Smart - Agriculture #1. Powered by cutting-edge AI, this platform delivers decision support like never before",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/coordinator-smart---agriculture-1-8e12a7db"
+    }
+  },
+  "features": [
+    "Edge computing support",
+    "Plugin architecture",
+    "Real-time processing",
+    "SOC 2 certified",
+    "Data encryption"
+  ],
+  "benefits": [
+    "Automated compliance reporting",
+    "Intelligent load balancing",
+    "Dynamic resource allocation",
+    "Cost optimization recommendations",
+    "Performance benchmarking"
+  ]
+}

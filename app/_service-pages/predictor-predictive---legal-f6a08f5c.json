@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/predictor-predictive---legal-f6a08f5c",
+  "breadcrumbTitle": "Predictor Predictive - Legal",
+  "title": "Predictor Predictive - Legal",
+  "description": "Transform your legal operations with our Predictor Predictive - Legal. This AI-driven solution automates predictive analytics with unprecedented accuracy and ef",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Predictor Predictive - Legal - Zion Tech Group",
+    "description": "Transform your legal operations with our Predictor Predictive - Legal. This AI-driven solution automates predictive analytics with unprecedented accuracy and ef",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/predictor-predictive---legal-f6a08f5c"
+    }
+  },
+  "features": [
+    "Multi-language support",
+    "GDPR compliance",
+    "Audit trails",
+    "Role-based access control"
+  ],
+  "benefits": [
+    "Seamless integration with existing systems",
+    "50% reduction in operational costs",
+    "Dynamic resource allocation"
+  ]
+}

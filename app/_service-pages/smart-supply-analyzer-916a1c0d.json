@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/smart-supply-analyzer-916a1c0d",
+  "breadcrumbTitle": "Smart Supply Analyzer",
+  "title": "Smart Supply Analyzer",
+  "description": "Revolutionize finance through intelligent automation. Our Smart Supply Analyzer leverages advanced machine learning to deliver decision support at scale.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Supply Analyzer - Zion Tech Group",
+    "description": "Revolutionize finance through intelligent automation. Our Smart Supply Analyzer leverages advanced machine learning to deliver decision support at scale.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-supply-analyzer-916a1c0d"
+    }
+  },
+  "features": [
+    "API-first design",
+    "Custom integrations",
+    "SOC 2 certified",
+    "Serverless functions",
+    "Rollback mechanisms"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Scalable to millions of transactions",
+    "Cost optimization recommendations",
+    "24/7 automated operations",
+    "Dynamic resource allocation"
+  ]
+}

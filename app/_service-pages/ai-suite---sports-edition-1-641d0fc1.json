@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-suite---sports-edition-1-641d0fc1",
+  "breadcrumbTitle": "AI Suite - Sports Edition #1",
+  "title": "AI Suite - Sports Edition #1",
+  "description": "The future of sports is here with AI Suite - Sports Edition #1. Powered by cutting-edge AI, this platform delivers market intelligence like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Suite - Sports Edition #1 - Zion Tech Group",
+    "description": "The future of sports is here with AI Suite - Sports Edition #1. Powered by cutting-edge AI, this platform delivers market intelligence like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-suite---sports-edition-1-641d0fc1"
+    }
+  },
+  "features": [
+    "GDPR compliance",
+    "Zero-downtime updates",
+    "API-first design",
+    "Performance dashboards",
+    "HIPAA ready"
+  ],
+  "benefits": [
+    "24/7 automated operations",
+    "Self-healing infrastructure",
+    "Predictive maintenance scheduling"
+  ]
+}

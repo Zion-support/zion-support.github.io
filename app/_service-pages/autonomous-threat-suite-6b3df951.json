@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/autonomous-threat-suite-6b3df951",
+  "breadcrumbTitle": "Autonomous Threat Suite",
+  "title": "Autonomous Threat Suite",
+  "description": "Unlock unprecedented growth with Autonomous Threat Suite. This autonomous system provides image recognition with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous Threat Suite - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Autonomous Threat Suite. This autonomous system provides image recognition with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-threat-suite-6b3df951"
+    }
+  },
+  "features": [
+    "Microservices deployment",
+    "HIPAA ready",
+    "Container orchestration",
+    "Offline capabilities",
+    "Role-based access control"
+  ],
+  "benefits": [
+    "Seamless integration with existing systems",
+    "Intelligent load balancing",
+    "99.9% uptime guarantee"
+  ]
+}

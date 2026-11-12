@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/automated-process-intelligence-cfc23e8c",
+  "breadcrumbTitle": "Automated Process Intelligence",
+  "title": "Automated Process Intelligence",
+  "description": "The future of transportation is here with Automated Process Intelligence. Powered by cutting-edge AI, this platform delivers data processing like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated Process Intelligence - Zion Tech Group",
+    "description": "The future of transportation is here with Automated Process Intelligence. Powered by cutting-edge AI, this platform delivers data processing like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-process-intelligence-cfc23e8c"
+    }
+  },
+  "features": [
+    "Cloud-native architecture",
+    "GDPR compliance",
+    "Zero-downtime updates",
+    "Comprehensive monitoring",
+    "Custom integrations"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Seamless integration with existing systems",
+    "Dynamic resource allocation",
+    "Real-time insights and alerts"
+  ]
+}

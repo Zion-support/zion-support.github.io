@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/optimizer-smart---transportation-1-e67bbbbd",
+  "breadcrumbTitle": "Optimizer Smart - Transportation #1",
+  "title": "Optimizer Smart - Transportation #1",
+  "description": "Unlock unprecedented growth with Optimizer Smart - Transportation #1. This autonomous system provides document processing with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Optimizer Smart - Transportation #1 - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Optimizer Smart - Transportation #1. This autonomous system provides document processing with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/optimizer-smart---transportation-1-e67bbbbd"
+    }
+  },
+  "features": [
+    "Microservices deployment",
+    "Multi-region deployment",
+    "Role-based access control",
+    "GDPR compliance"
+  ],
+  "benefits": [
+    "Seamless integration with existing systems",
+    "99.9% uptime guarantee",
+    "24/7 automated operations",
+    "Scalable to millions of transactions",
+    "Zero manual intervention required"
+  ]
+}

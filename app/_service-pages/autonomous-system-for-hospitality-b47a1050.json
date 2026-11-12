@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/autonomous-system-for-hospitality-b47a1050",
+  "breadcrumbTitle": "Autonomous System for Hospitality",
+  "title": "Autonomous System for Hospitality",
+  "description": "The future of hospitality is here with Autonomous System for Hospitality. Powered by cutting-edge AI, this platform delivers code optimization like never before",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous System for Hospitality - Zion Tech Group",
+    "description": "The future of hospitality is here with Autonomous System for Hospitality. Powered by cutting-edge AI, this platform delivers code optimization like never before",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-system-for-hospitality-b47a1050"
+    }
+  },
+  "features": [
+    "SOC 2 certified",
+    "HIPAA ready",
+    "Comprehensive monitoring",
+    "Audit trails",
+    "Custom integrations"
+  ],
+  "benefits": [
+    "24/7 automated operations",
+    "Intelligent load balancing",
+    "Real-time insights and alerts",
+    "3x faster decision making",
+    "Automated compliance reporting"
+  ]
+}

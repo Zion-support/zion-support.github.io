@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/predictive-event-driven-hospitality-risk-scoring-2f4e48ee",
+  "breadcrumbTitle": "Predictive Event-Driven Hospitality Risk Scoring",
+  "title": "Predictive Event-Driven Hospitality Risk Scoring",
+  "description": "Predictive risk scoring engine that assesses event-driven hospitality vulnerabilities with machine learning.",
+  "basic": "$278/month",
+  "pro": "$698/month",
+  "enterprise": "$2098/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Predictive Event-Driven Hospitality Risk Scoring - Zion Tech Group",
+    "description": "Predictive risk scoring engine that assesses event-driven hospitality vulnerabilities with machine learning.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/predictive-event-driven-hospitality-risk-scoring-2f4e48ee"
+    }
+  },
+  "features": [
+    "Risk assessment",
+    "Threat modeling",
+    "Compliance scoring",
+    "Mitigation planning"
+  ],
+  "benefits": [
+    "Proactive risk mitigation",
+    "Compliance assurance",
+    "Reduced exposure",
+    "Faster incident response"
+  ]
+}

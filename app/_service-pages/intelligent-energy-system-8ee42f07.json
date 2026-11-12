@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligent-energy-system-8ee42f07",
+  "breadcrumbTitle": "Intelligent Energy System",
+  "title": "Intelligent Energy System",
+  "description": "Revolutionize sports through intelligent automation. Our Intelligent Energy System leverages advanced machine learning to deliver performance monitoring at scal",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Energy System - Zion Tech Group",
+    "description": "Revolutionize sports through intelligent automation. Our Intelligent Energy System leverages advanced machine learning to deliver performance monitoring at scal",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-energy-system-8ee42f07"
+    }
+  },
+  "features": [
+    "Data encryption",
+    "Role-based access control",
+    "Performance dashboards",
+    "Multi-region deployment",
+    "HIPAA ready"
+  ],
+  "benefits": [
+    "Seamless integration with existing systems",
+    "Intelligent load balancing",
+    "Cost optimization recommendations",
+    "3x faster decision making"
+  ]
+}

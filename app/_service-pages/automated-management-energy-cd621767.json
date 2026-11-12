@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/automated-management-energy-cd621767",
+  "breadcrumbTitle": "Automated management-energy",
+  "title": "Automated management-energy",
+  "description": "The future of energy is here with Automated management-energy. Powered by cutting-edge AI, this platform delivers customer insights like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated management-energy - Zion Tech Group",
+    "description": "The future of energy is here with Automated management-energy. Powered by cutting-edge AI, this platform delivers customer insights like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-management-energy-cd621767"
+    }
+  },
+  "features": [
+    "Open-source friendly",
+    "Comprehensive monitoring",
+    "Edge computing support",
+    "Microservices deployment",
+    "Audit trails"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "Cost optimization recommendations",
+    "Enterprise-grade security"
+  ]
+}

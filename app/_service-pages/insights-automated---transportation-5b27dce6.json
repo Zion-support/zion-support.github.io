@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/insights-automated---transportation-5b27dce6",
+  "breadcrumbTitle": "Insights Automated - Transportation",
+  "title": "Insights Automated - Transportation",
+  "description": "Next-generation transportation solution: Insights Automated - Transportation. Combines content generation with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Insights Automated - Transportation - Zion Tech Group",
+    "description": "Next-generation transportation solution: Insights Automated - Transportation. Combines content generation with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/insights-automated---transportation-5b27dce6"
+    }
+  },
+  "features": [
+    "Comprehensive monitoring",
+    "Offline capabilities",
+    "Container orchestration",
+    "Audit trails",
+    "Plugin architecture"
+  ],
+  "benefits": [
+    "Scalable to millions of transactions",
+    "Dynamic resource allocation",
+    "50% reduction in operational costs",
+    "Reduced human error by 95%"
+  ]
+}

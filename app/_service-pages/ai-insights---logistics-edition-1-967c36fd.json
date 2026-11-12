@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-insights---logistics-edition-1-967c36fd",
+  "breadcrumbTitle": "AI Insights - Logistics Edition #1",
+  "title": "AI Insights - Logistics Edition #1",
+  "description": "Next-generation logistics solution: AI Insights - Logistics Edition #1. Combines compliance monitoring with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Insights - Logistics Edition #1 - Zion Tech Group",
+    "description": "Next-generation logistics solution: AI Insights - Logistics Edition #1. Combines compliance monitoring with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-insights---logistics-edition-1-967c36fd"
+    }
+  },
+  "features": [
+    "SOC 2 certified",
+    "Machine learning integration",
+    "Cloud-native architecture",
+    "Mobile-responsive interface",
+    "Multi-language support"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "24/7 automated operations",
+    "Reduced human error by 95%"
+  ]
+}

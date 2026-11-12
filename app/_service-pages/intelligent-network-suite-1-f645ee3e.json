@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/intelligent-network-suite-1-f645ee3e",
+  "breadcrumbTitle": "Intelligent Network Suite #1",
+  "title": "Intelligent Network Suite #1",
+  "description": "Revolutionize transportation through intelligent automation. Our Intelligent Network Suite #1 leverages advanced machine learning to deliver customer insights a",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Network Suite #1 - Zion Tech Group",
+    "description": "Revolutionize transportation through intelligent automation. Our Intelligent Network Suite #1 leverages advanced machine learning to deliver customer insights a",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-network-suite-1-f645ee3e"
+    }
+  },
+  "features": [
+    "Edge computing support",
+    "Role-based access control",
+    "Data encryption",
+    "Mobile-responsive interface",
+    "Rollback mechanisms"
+  ],
+  "benefits": [
+    "Dynamic resource allocation",
+    "Intelligent load balancing",
+    "3x faster decision making",
+    "Seamless integration with existing systems",
+    "Real-time insights and alerts"
+  ]
+}

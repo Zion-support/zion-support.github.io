@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/autonomous-suite-for-insurance-dbb510c7",
+  "breadcrumbTitle": "Autonomous Suite for Insurance",
+  "title": "Autonomous Suite for Insurance",
+  "description": "Unlock unprecedented growth with Autonomous Suite for Insurance. This autonomous system provides market intelligence with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous Suite for Insurance - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Autonomous Suite for Insurance. This autonomous system provides market intelligence with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-suite-for-insurance-dbb510c7"
+    }
+  },
+  "features": [
+    "Rollback mechanisms",
+    "Comprehensive monitoring",
+    "Custom integrations",
+    "Data encryption"
+  ],
+  "benefits": [
+    "24/7 automated operations",
+    "Self-healing infrastructure",
+    "99.9% uptime guarantee",
+    "Enterprise-grade security"
+  ]
+}

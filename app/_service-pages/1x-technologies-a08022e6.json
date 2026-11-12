@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/1x-technologies-a08022e6",
+  "breadcrumbTitle": "1X Technologies",
+  "title": "1X Technologies",
+  "description": "1X Technologies is a Norwegian-American robotics and artificial intelligence company developing general-purpose humanoid robots for home environments. The compa",
+  "basic": "$N/A/month",
+  "pro": "$N/A/month",
+  "enterprise": "$N/A/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "1X Technologies - Zion Tech Group",
+    "description": "1X Technologies is a Norwegian-American robotics and artificial intelligence company developing general-purpose humanoid robots for home environments. The compa",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/1x-technologies-a08022e6"
+    }
+  },
+  "features": [
+    "AI-driven automation",
+    "Cloud-native deployment",
+    "API-first architecture",
+    "Enterprise-grade security",
+    "Scalable infrastructure"
+  ],
+  "benefits": [
+    "Improved operational efficiency",
+    "Reduced manual processes",
+    "Data-driven decision making",
+    "Faster time-to value",
+    "Scalable performance"
+  ]
+}

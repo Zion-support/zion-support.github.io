@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/intelligent-manager-for-manufacturing-3353970d",
+  "breadcrumbTitle": "Intelligent Manager for Manufacturing",
+  "title": "Intelligent Manager for Manufacturing",
+  "description": "Transform your manufacturing operations with our Intelligent Manager for Manufacturing. This AI-driven solution automates fraud prevention with unprecedented ac",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Manager for Manufacturing - Zion Tech Group",
+    "description": "Transform your manufacturing operations with our Intelligent Manager for Manufacturing. This AI-driven solution automates fraud prevention with unprecedented ac",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-manager-for-manufacturing-3353970d"
+    }
+  },
+  "features": [
+    "Zero-downtime updates",
+    "Open-source friendly",
+    "Multi-region deployment",
+    "Mobile-responsive interface",
+    "Comprehensive monitoring"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "99.9% uptime guarantee",
+    "Performance benchmarking",
+    "Zero manual intervention required",
+    "Enterprise-grade security"
+  ]
+}

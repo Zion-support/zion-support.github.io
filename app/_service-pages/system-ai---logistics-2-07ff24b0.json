@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/system-ai---logistics-2-07ff24b0",
+  "breadcrumbTitle": "System AI - Logistics #2",
+  "title": "System AI - Logistics #2",
+  "description": "Next-generation logistics solution: System AI - Logistics #2. Combines network optimization with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "System AI - Logistics #2 - Zion Tech Group",
+    "description": "Next-generation logistics solution: System AI - Logistics #2. Combines network optimization with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/system-ai---logistics-2-07ff24b0"
+    }
+  },
+  "features": [
+    "Container orchestration",
+    "Multi-language support",
+    "Custom integrations",
+    "HIPAA ready",
+    "Serverless functions"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Scalable to millions of transactions",
+    "24/7 automated operations",
+    "Zero manual intervention required",
+    "Reduced human error by 95%"
+  ]
+}

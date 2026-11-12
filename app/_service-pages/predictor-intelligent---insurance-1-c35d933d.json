@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/predictor-intelligent---insurance-1-c35d933d",
+  "breadcrumbTitle": "Predictor Intelligent - Insurance #1",
+  "title": "Predictor Intelligent - Insurance #1",
+  "description": "Revolutionize insurance through intelligent automation. Our Predictor Intelligent - Insurance #1 leverages advanced machine learning to deliver threat detection",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Predictor Intelligent - Insurance #1 - Zion Tech Group",
+    "description": "Revolutionize insurance through intelligent automation. Our Predictor Intelligent - Insurance #1 leverages advanced machine learning to deliver threat detection",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/predictor-intelligent---insurance-1-c35d933d"
+    }
+  },
+  "features": [
+    "Auto-scaling capabilities",
+    "Container orchestration",
+    "Multi-language support",
+    "SOC 2 certified"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "Seamless integration with existing systems",
+    "Enterprise-grade security",
+    "Self-healing infrastructure",
+    "3x faster decision making"
+  ]
+}

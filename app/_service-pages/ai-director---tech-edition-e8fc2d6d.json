@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-director---tech-edition-e8fc2d6d",
+  "breadcrumbTitle": "AI Director - Tech Edition",
+  "title": "AI Director - Tech Edition",
+  "description": "Transform your technology operations with our AI Director - Tech Edition. This AI-driven solution automates market intelligence with unprecedented accuracy and ",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Director - Tech Edition - Zion Tech Group",
+    "description": "Transform your technology operations with our AI Director - Tech Edition. This AI-driven solution automates market intelligence with unprecedented accuracy and ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-director---tech-edition-e8fc2d6d"
+    }
+  },
+  "features": [
+    "Alerting system",
+    "Cloud-native architecture",
+    "Multi-region deployment",
+    "API-first design",
+    "Edge computing support"
+  ],
+  "benefits": [
+    "Scalable to millions of transactions",
+    "Performance benchmarking",
+    "Automated compliance reporting",
+    "ROI in under 90 days"
+  ]
+}

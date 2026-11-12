@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/enterprise-intelligent-biotechnology-analytics-suite-0beef48c",
+  "breadcrumbTitle": "Enterprise Intelligent Biotechnology Analytics Suite",
+  "title": "Enterprise Intelligent Biotechnology Analytics Suite",
+  "description": "Enterprise analytics suite that delivers intelligent biotechnology insights with unified dashboards and reporting.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Enterprise Intelligent Biotechnology Analytics Suite - Zion Tech Group",
+    "description": "Enterprise analytics suite that delivers intelligent biotechnology insights with unified dashboards and reporting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/enterprise-intelligent-biotechnology-analytics-suite-0beef48c"
+    }
+  },
+  "features": [
+    "Data visualization",
+    "Custom dashboards",
+    "Report generation",
+    "KPI tracking"
+  ],
+  "benefits": [
+    "Unified data view",
+    "Faster insights",
+    "Customizable reports",
+    "Cross-functional collaboration"
+  ]
+}

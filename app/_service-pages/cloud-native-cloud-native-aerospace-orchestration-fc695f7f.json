@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/cloud-native-cloud-native-aerospace-orchestration-fc695f7f",
+  "breadcrumbTitle": "Cloud-Native Cloud-Native Aerospace Orchestration",
+  "title": "Cloud-Native Cloud-Native Aerospace Orchestration",
+  "description": "Cloud-native orchestration platform that manages cloud-native aerospace resources with auto-scaling and cost control.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Cloud-Native Cloud-Native Aerospace Orchestration - Zion Tech Group",
+    "description": "Cloud-native orchestration platform that manages cloud-native aerospace resources with auto-scaling and cost control.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cloud-native-cloud-native-aerospace-orchestration-fc695f7f"
+    }
+  },
+  "features": [
+    "Container orchestration",
+    "Resource management",
+    "Health monitoring",
+    "Auto-healing"
+  ],
+  "benefits": [
+    "Reduced infrastructure cost",
+    "Auto-scaling",
+    "Container efficiency",
+    "Developer productivity"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/insights-predictive---hospitality-1-beddfd2b",
+  "breadcrumbTitle": "Insights Predictive - Hospitality #1",
+  "title": "Insights Predictive - Hospitality #1",
+  "description": "Unlock unprecedented growth with Insights Predictive - Hospitality #1. This autonomous system provides user experience with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Insights Predictive - Hospitality #1 - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Insights Predictive - Hospitality #1. This autonomous system provides user experience with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/insights-predictive---hospitality-1-beddfd2b"
+    }
+  },
+  "features": [
+    "Offline capabilities",
+    "Auto-scaling capabilities",
+    "Audit trails",
+    "Custom integrations",
+    "Comprehensive monitoring"
+  ],
+  "benefits": [
+    "Dynamic resource allocation",
+    "50% reduction in operational costs",
+    "Performance benchmarking",
+    "Cost optimization recommendations",
+    "Reduced human error by 95%"
+  ]
+}

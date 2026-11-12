@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/autonomous-automation-for-agriculture-46725c22",
+  "breadcrumbTitle": "Autonomous Automation for Agriculture",
+  "title": "Autonomous Automation for Agriculture",
+  "description": "Revolutionize agriculture through intelligent automation. Our Autonomous Automation for Agriculture leverages advanced machine learning to deliver threat detect",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous Automation for Agriculture - Zion Tech Group",
+    "description": "Revolutionize agriculture through intelligent automation. Our Autonomous Automation for Agriculture leverages advanced machine learning to deliver threat detect",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-automation-for-agriculture-46725c22"
+    }
+  },
+  "features": [
+    "GDPR compliance",
+    "Machine learning integration",
+    "Alerting system",
+    "Microservices deployment",
+    "Zero-downtime updates"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "Enterprise-grade security",
+    "24/7 automated operations"
+  ]
+}

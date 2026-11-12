@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/smart-healthcare-platform-logistics-990b9cbd",
+  "breadcrumbTitle": "Smart Healthcare Platform - Logistics",
+  "title": "Smart Healthcare Platform - Logistics",
+  "description": "Drive innovation in logistics with Smart Healthcare Platform - Logistics. This AI-powered platform transforms market analysis into a competitive advantage.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Smart Healthcare Platform - Logistics - Zion Tech Group",
+    "description": "Drive innovation in logistics with Smart Healthcare Platform - Logistics. This AI-powered platform transforms market analysis into a competitive advantage.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-healthcare-platform-logistics-990b9cbd"
+    }
+  },
+  "features": [
+    "Market analysis with buyer behavior insights",
+    "High availability with clustering",
+    "Compliance automation with audit trails",
+    "Privileged access management (PAM)",
+    "Cache optimization with Redis"
+  ],
+  "benefits": [
+    "Enhanced team productivity with intelligent assistance",
+    "Reduced sales cycle length",
+    "Improved checkout conversion rates",
+    "reduced returns and exchanges",
+    "Enterprise-grade security with end-to-end encryption"
+  ]
+}

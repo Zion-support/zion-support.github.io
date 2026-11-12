@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-enterprise-grade-customer-experience-suite-f5e394dd",
+  "breadcrumbTitle": "AI-Powered Enterprise-Grade Customer Experience Suite",
+  "title": "AI-Powered Enterprise-Grade Customer Experience Suite",
+  "description": "Next-generation customer experience platform that delivers enterprise-grade service delivery across all touchpoints.",
+  "basic": "$218/month",
+  "pro": "$548/month",
+  "enterprise": "$1648/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Enterprise-Grade Customer Experience Suite - Zion Tech Group",
+    "description": "Next-generation customer experience platform that delivers enterprise-grade service delivery across all touchpoints.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-enterprise-grade-customer-experience-suite-f5e394dd"
+    }
+  },
+  "features": [
+    "Omnichannel support",
+    "Personalization engine",
+    "Sentiment analysis",
+    "Journey mapping"
+  ],
+  "benefits": [
+    "Higher customer satisfaction",
+    "Increased loyalty",
+    "Reduced churn",
+    "Improved CSAT scores"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/ai-suite---healthcare-edition-1-015c97b4",
+  "breadcrumbTitle": "AI Suite - Healthcare Edition #1",
+  "title": "AI Suite - Healthcare Edition #1",
+  "description": "Revolutionize healthcare through intelligent automation. Our AI Suite - Healthcare Edition #1 leverages advanced machine learning to deliver supply chain at sca",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Suite - Healthcare Edition #1 - Zion Tech Group",
+    "description": "Revolutionize healthcare through intelligent automation. Our AI Suite - Healthcare Edition #1 leverages advanced machine learning to deliver supply chain at sca",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-suite---healthcare-edition-1-015c97b4"
+    }
+  },
+  "features": [
+    "Serverless functions",
+    "Alerting system",
+    "Microservices deployment",
+    "SOC 2 certified",
+    "Auto-scaling capabilities"
+  ],
+  "benefits": [
+    "Dynamic resource allocation",
+    "Zero manual intervention required",
+    "Scalable to millions of transactions",
+    "Reduced human error by 95%",
+    "ROI in under 90 days"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-engine---automotive-edition-e5d1006b",
+  "breadcrumbTitle": "AI Engine - Automotive Edition",
+  "title": "AI Engine - Automotive Edition",
+  "description": "Revolutionize automotive through intelligent automation. Our AI Engine - Automotive Edition leverages advanced machine learning to deliver maintenance schedulin",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Engine - Automotive Edition - Zion Tech Group",
+    "description": "Revolutionize automotive through intelligent automation. Our AI Engine - Automotive Edition leverages advanced machine learning to deliver maintenance schedulin",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-engine---automotive-edition-e5d1006b"
+    }
+  },
+  "features": [
+    "Zero-downtime updates",
+    "Mobile-responsive interface",
+    "Custom integrations",
+    "HIPAA ready",
+    "Cloud-native architecture"
+  ],
+  "benefits": [
+    "Seamless integration with existing systems",
+    "Dynamic resource allocation",
+    "Scalable to millions of transactions"
+  ]
+}

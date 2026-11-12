@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/manager-intelligent---real-estate-23ed61d4",
+  "breadcrumbTitle": "Manager Intelligent - Real-Estate",
+  "title": "Manager Intelligent - Real-Estate",
+  "description": "The future of real-estate is here with Manager Intelligent - Real-Estate. Powered by cutting-edge AI, this platform delivers performance monitoring like never b",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Manager Intelligent - Real-Estate - Zion Tech Group",
+    "description": "The future of real-estate is here with Manager Intelligent - Real-Estate. Powered by cutting-edge AI, this platform delivers performance monitoring like never b",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/manager-intelligent---real-estate-23ed61d4"
+    }
+  },
+  "features": [
+    "Rollback mechanisms",
+    "API-first design",
+    "Auto-scaling capabilities",
+    "Serverless functions"
+  ],
+  "benefits": [
+    "24/7 automated operations",
+    "Seamless integration with existing systems",
+    "Self-healing infrastructure"
+  ]
+}

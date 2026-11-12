@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-platform---gaming-edition-6-8c905dbf",
+  "breadcrumbTitle": "AI Platform - Gaming Edition #6",
+  "title": "AI Platform - Gaming Edition #6",
+  "description": "Transform your gaming operations with our AI Platform - Gaming Edition #6. This AI-driven solution automates decision support with unprecedented accuracy and ef",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Platform - Gaming Edition #6 - Zion Tech Group",
+    "description": "Transform your gaming operations with our AI Platform - Gaming Edition #6. This AI-driven solution automates decision support with unprecedented accuracy and ef",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-platform---gaming-edition-6-8c905dbf"
+    }
+  },
+  "features": [
+    "API-first design",
+    "Comprehensive monitoring",
+    "Custom integrations",
+    "Audit trails",
+    "Plugin architecture"
+  ],
+  "benefits": [
+    "Cost optimization recommendations",
+    "24/7 automated operations",
+    "Performance benchmarking"
+  ]
+}

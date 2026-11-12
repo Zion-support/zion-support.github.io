@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/enterprise-advanced-sales-analytics-suite-045a938a",
+  "breadcrumbTitle": "Enterprise Advanced Sales Analytics Suite",
+  "title": "Enterprise Advanced Sales Analytics Suite",
+  "description": "Enterprise analytics suite that delivers advanced sales insights with unified dashboards and reporting.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Enterprise Advanced Sales Analytics Suite - Zion Tech Group",
+    "description": "Enterprise analytics suite that delivers advanced sales insights with unified dashboards and reporting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/enterprise-advanced-sales-analytics-suite-045a938a"
+    }
+  },
+  "features": [
+    "Data visualization",
+    "Custom dashboards",
+    "Report generation",
+    "KPI tracking"
+  ],
+  "benefits": [
+    "Unified data view",
+    "Faster insights",
+    "Customizable reports",
+    "Cross-functional collaboration"
+  ]
+}

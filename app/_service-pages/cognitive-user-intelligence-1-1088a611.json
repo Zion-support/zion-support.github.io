@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/cognitive-user-intelligence-1-1088a611",
+  "breadcrumbTitle": "Cognitive User Intelligence #1",
+  "title": "Cognitive User Intelligence #1",
+  "description": "Transform your manufacturing operations with our Cognitive User Intelligence #1. This AI-driven solution automates customer insights with unprecedented accuracy",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Cognitive User Intelligence #1 - Zion Tech Group",
+    "description": "Transform your manufacturing operations with our Cognitive User Intelligence #1. This AI-driven solution automates customer insights with unprecedented accuracy",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cognitive-user-intelligence-1-1088a611"
+    }
+  },
+  "features": [
+    "Performance dashboards",
+    "Cloud-native architecture",
+    "Zero-downtime updates",
+    "Comprehensive monitoring"
+  ],
+  "benefits": [
+    "Seamless integration with existing systems",
+    "50% reduction in operational costs",
+    "Scalable to millions of transactions"
+  ]
+}

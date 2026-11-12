@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-agriculture-patient-engagement-9e0956b0",
+  "breadcrumbTitle": "Intelligent Agriculture Patient Engagement",
+  "title": "Intelligent Agriculture Patient Engagement",
+  "description": "AI-driven patient engagement platform that delivers advanced personalized care journeys, remote monitoring, and adherence support through intelligent automation",
+  "basic": "$258/month",
+  "pro": "$648/month",
+  "enterprise": "$1948/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Agriculture Patient Engagement - Zion Tech Group",
+    "description": "AI-driven patient engagement platform that delivers advanced personalized care journeys, remote monitoring, and adherence support through intelligent automation",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-agriculture-patient-engagement-9e0956b0"
+    }
+  },
+  "features": [
+    "Personalized care plans",
+    "Remote monitoring",
+    "Medication adherence",
+    "Virtual consultations"
+  ],
+  "benefits": [
+    "Better outcomes",
+    "Higher satisfaction",
+    "Reduced readmissions",
+    "Lower costs"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/ai-services-media-efa08649",
+  "breadcrumbTitle": "AI Readiness & Deployment for Media",
+  "title": "AI Readiness & Deployment for Media",
+  "description": "AI readiness assessment and deployment support for Media. Identify high-ROI use cases, build prototypes, and scale responsibly.",
+  "basic": "$299/month",
+  "pro": "$799/month",
+  "enterprise": "$2499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Readiness & Deployment for Media - Zion Tech Group",
+    "description": "AI readiness assessment and deployment support for Media. Identify high-ROI use cases, build prototypes, and scale responsibly.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-services-media-efa08649"
+    }
+  },
+  "features": [
+    "AI readiness assessment",
+    "Use case prioritization",
+    "Proof-of-concept development",
+    "Data readiness review",
+    "Governance and ethics review"
+  ],
+  "benefits": [
+    "Faster AI adoption",
+    "Reduced project risk",
+    "Clear governance model",
+    "Better data quality",
+    "Measurable business outcomes"
+  ]
+}

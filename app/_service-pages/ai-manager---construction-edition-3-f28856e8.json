@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-manager---construction-edition-3-f28856e8",
+  "breadcrumbTitle": "AI Manager - Construction Edition #3",
+  "title": "AI Manager - Construction Edition #3",
+  "description": "Transform your construction operations with our AI Manager - Construction Edition #3. This AI-driven solution automates document processing with unprecedented a",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Manager - Construction Edition #3 - Zion Tech Group",
+    "description": "Transform your construction operations with our AI Manager - Construction Edition #3. This AI-driven solution automates document processing with unprecedented a",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-manager---construction-edition-3-f28856e8"
+    }
+  },
+  "features": [
+    "Multi-language support",
+    "Real-time processing",
+    "Plugin architecture",
+    "Role-based access control",
+    "Cloud-native architecture"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "Intelligent load balancing",
+    "Automated compliance reporting"
+  ]
+}

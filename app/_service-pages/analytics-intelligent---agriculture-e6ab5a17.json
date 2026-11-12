@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/analytics-intelligent---agriculture-e6ab5a17",
+  "breadcrumbTitle": "Analytics Intelligent - Agriculture",
+  "title": "Analytics Intelligent - Agriculture",
+  "description": "Unlock unprecedented growth with Analytics Intelligent - Agriculture. This autonomous system provides document processing with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Analytics Intelligent - Agriculture - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Analytics Intelligent - Agriculture. This autonomous system provides document processing with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/analytics-intelligent---agriculture-e6ab5a17"
+    }
+  },
+  "features": [
+    "API-first design",
+    "Machine learning integration",
+    "Audit trails",
+    "Multi-language support"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "Enterprise-grade security",
+    "Cost optimization recommendations"
+  ]
+}

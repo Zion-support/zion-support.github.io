@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-workflow-automation-7da8260b",
+  "breadcrumbTitle": "AI-Powered Workflow Automation",
+  "title": "AI-Powered Workflow Automation",
+  "description": "The future of hospitality is here with AI-Powered Workflow Automation. Powered by cutting-edge AI, this platform delivers performance monitoring like never befo",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI-Powered Workflow Automation - Zion Tech Group",
+    "description": "The future of hospitality is here with AI-Powered Workflow Automation. Powered by cutting-edge AI, this platform delivers performance monitoring like never befo",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-workflow-automation-7da8260b"
+    }
+  },
+  "features": [
+    "Zero-downtime updates",
+    "Custom integrations",
+    "Container orchestration",
+    "Real-time processing",
+    "Microservices deployment"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "24/7 automated operations",
+    "Self-healing infrastructure"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/automated-decision-optimizer-6189ee4d",
+  "breadcrumbTitle": "Automated Decision Optimizer",
+  "title": "Automated Decision Optimizer",
+  "description": "The future of telecom is here with Automated Decision Optimizer. Powered by cutting-edge AI, this platform delivers workflow management like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated Decision Optimizer - Zion Tech Group",
+    "description": "The future of telecom is here with Automated Decision Optimizer. Powered by cutting-edge AI, this platform delivers workflow management like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-decision-optimizer-6189ee4d"
+    }
+  },
+  "features": [
+    "Rollback mechanisms",
+    "Data encryption",
+    "Audit trails",
+    "HIPAA ready",
+    "Machine learning integration"
+  ],
+  "benefits": [
+    "Dynamic resource allocation",
+    "Cost optimization recommendations",
+    "Performance benchmarking",
+    "99.9% uptime guarantee"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/multi-agent-resilient-e-commerce-framework-d9fb28bc",
+  "breadcrumbTitle": "Multi-Agent Resilient E-Commerce Framework",
+  "title": "Multi-Agent Resilient E-Commerce Framework",
+  "description": "Multi-agent framework that deploys resilient e-commerce AI agents for collaborative problem-solving and distributed intelligence.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Multi-Agent Resilient E-Commerce Framework - Zion Tech Group",
+    "description": "Multi-agent framework that deploys resilient e-commerce AI agents for collaborative problem-solving and distributed intelligence.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/multi-agent-resilient-e-commerce-framework-d9fb28bc"
+    }
+  },
+  "features": [
+    "Collaborative agents",
+    "Shared memory pools",
+    "Role assignment",
+    "Emergent coordination"
+  ],
+  "benefits": [
+    "Multi-task parallelism",
+    "Specialist agents",
+    "Knowledge sharing",
+    "Emergent problem-solving"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "breadcrumbPath": "/services/multi-cloud-ai-deployer-9e91a1d3",
+  "breadcrumbTitle": "Multi-Cloud AI Deployer",
+  "title": "Multi-Cloud AI Deployer",
+  "description": "Deploy AI models across AWS, Azure, and GCP with automatic load balancing and failover.",
+  "basic": "$399/month",
+  "pro": "$1199/month",
+  "enterprise": "$3999/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Multi-Cloud AI Deployer - Zion Tech Group",
+    "description": "Deploy AI models across AWS, Azure, and GCP with automatic load balancing and failover.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/multi-cloud-ai-deployer-9e91a1d3"
+    }
+  },
+  "features": [
+    "No features listed"
+  ],
+  "benefits": [
+    "No benefits listed"
+  ]
+}

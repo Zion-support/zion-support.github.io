@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/neural-analytics-hospitality-a0de071a",
+  "breadcrumbTitle": "Neural analytics-hospitality",
+  "title": "Neural analytics-hospitality",
+  "description": "Transform your hospitality operations with our Neural analytics-hospitality. This AI-driven solution automates maintenance scheduling with unprecedented accurac",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Neural analytics-hospitality - Zion Tech Group",
+    "description": "Transform your hospitality operations with our Neural analytics-hospitality. This AI-driven solution automates maintenance scheduling with unprecedented accurac",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/neural-analytics-hospitality-a0de071a"
+    }
+  },
+  "features": [
+    "Container orchestration",
+    "Comprehensive monitoring",
+    "Cloud-native architecture",
+    "GDPR compliance"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "Dynamic resource allocation",
+    "Zero manual intervention required",
+    "Intelligent load balancing",
+    "Predictive maintenance scheduling"
+  ]
+}

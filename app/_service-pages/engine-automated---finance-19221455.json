@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/engine-automated---finance-19221455",
+  "breadcrumbTitle": "Engine Automated - Finance",
+  "title": "Engine Automated - Finance",
+  "description": "Next-generation finance solution: Engine Automated - Finance. Combines process automation with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Engine Automated - Finance - Zion Tech Group",
+    "description": "Next-generation finance solution: Engine Automated - Finance. Combines process automation with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/engine-automated---finance-19221455"
+    }
+  },
+  "features": [
+    "Plugin architecture",
+    "Comprehensive monitoring",
+    "Alerting system",
+    "Mobile-responsive interface",
+    "Container orchestration"
+  ],
+  "benefits": [
+    "Scalable to millions of transactions",
+    "Predictive maintenance scheduling",
+    "Cost optimization recommendations"
+  ]
+}

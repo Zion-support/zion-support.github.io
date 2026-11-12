@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/neural-energy-orchestrator-ffdadb9b",
+  "breadcrumbTitle": "Neural Energy Orchestrator",
+  "title": "Neural Energy Orchestrator",
+  "description": "Next-generation insurance solution: Neural Energy Orchestrator. Combines performance monitoring with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Neural Energy Orchestrator - Zion Tech Group",
+    "description": "Next-generation insurance solution: Neural Energy Orchestrator. Combines performance monitoring with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/neural-energy-orchestrator-ffdadb9b"
+    }
+  },
+  "features": [
+    "Edge computing support",
+    "HIPAA ready",
+    "Audit trails",
+    "Mobile-responsive interface",
+    "API-first design"
+  ],
+  "benefits": [
+    "24/7 automated operations",
+    "ROI in under 90 days",
+    "3x faster decision making"
+  ]
+}

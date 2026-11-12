@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/smart-director-for-retail-121a0688",
+  "breadcrumbTitle": "Smart Director for Retail",
+  "title": "Smart Director for Retail",
+  "description": "Revolutionize retail through intelligent automation. Our Smart Director for Retail leverages advanced machine learning to deliver user experience at scale.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Director for Retail - Zion Tech Group",
+    "description": "Revolutionize retail through intelligent automation. Our Smart Director for Retail leverages advanced machine learning to deliver user experience at scale.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-director-for-retail-121a0688"
+    }
+  },
+  "features": [
+    "Role-based access control",
+    "Machine learning integration",
+    "Edge computing support",
+    "Alerting system"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "99.9% uptime guarantee",
+    "Scalable to millions of transactions"
+  ]
+}

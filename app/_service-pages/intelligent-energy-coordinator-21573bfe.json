@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/intelligent-energy-coordinator-21573bfe",
+  "breadcrumbTitle": "Intelligent Energy Coordinator",
+  "title": "Intelligent Energy Coordinator",
+  "description": "Transform your manufacturing operations with our Intelligent Energy Coordinator. This AI-driven solution automates maintenance scheduling with unprecedented acc",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Energy Coordinator - Zion Tech Group",
+    "description": "Transform your manufacturing operations with our Intelligent Energy Coordinator. This AI-driven solution automates maintenance scheduling with unprecedented acc",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-energy-coordinator-21573bfe"
+    }
+  },
+  "features": [
+    "Open-source friendly",
+    "Data encryption",
+    "Plugin architecture",
+    "Container orchestration",
+    "Offline capabilities"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "Dynamic resource allocation",
+    "Zero manual intervention required",
+    "Reduced human error by 95%",
+    "Seamless integration with existing systems"
+  ]
+}

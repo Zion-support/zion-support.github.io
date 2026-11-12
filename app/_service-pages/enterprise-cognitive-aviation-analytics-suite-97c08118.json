@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/enterprise-cognitive-aviation-analytics-suite-97c08118",
+  "breadcrumbTitle": "Enterprise Cognitive Aviation Analytics Suite",
+  "title": "Enterprise Cognitive Aviation Analytics Suite",
+  "description": "Enterprise analytics suite that delivers cognitive aviation insights with unified dashboards and reporting.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Enterprise Cognitive Aviation Analytics Suite - Zion Tech Group",
+    "description": "Enterprise analytics suite that delivers cognitive aviation insights with unified dashboards and reporting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/enterprise-cognitive-aviation-analytics-suite-97c08118"
+    }
+  },
+  "features": [
+    "Data visualization",
+    "Custom dashboards",
+    "Report generation",
+    "KPI tracking"
+  ],
+  "benefits": [
+    "Unified data view",
+    "Faster insights",
+    "Customizable reports",
+    "Cross-functional collaboration"
+  ]
+}

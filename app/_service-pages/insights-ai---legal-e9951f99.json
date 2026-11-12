@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/insights-ai---legal-e9951f99",
+  "breadcrumbTitle": "Insights AI - Legal",
+  "title": "Insights AI - Legal",
+  "description": "The future of legal is here with Insights AI - Legal. Powered by cutting-edge AI, this platform delivers sales forecasting like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Insights AI - Legal - Zion Tech Group",
+    "description": "The future of legal is here with Insights AI - Legal. Powered by cutting-edge AI, this platform delivers sales forecasting like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/insights-ai---legal-e9951f99"
+    }
+  },
+  "features": [
+    "Container orchestration",
+    "Custom integrations",
+    "Audit trails",
+    "Multi-region deployment",
+    "Multi-language support"
+  ],
+  "benefits": [
+    "Performance benchmarking",
+    "Reduced human error by 95%",
+    "99.9% uptime guarantee"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/next-generation-self-learning-supply-chain-automation-54a86a2b",
+  "breadcrumbTitle": "Next-Generation Self-Learning Supply Chain Automation",
+  "title": "Next-Generation Self-Learning Supply Chain Automation",
+  "description": "Next-generation automation suite that streamlines self-learning supply chain workflows with intelligent orchestration.",
+  "basic": "$218/month",
+  "pro": "$548/month",
+  "enterprise": "$1648/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Next-Generation Self-Learning Supply Chain Automation - Zion Tech Group",
+    "description": "Next-generation automation suite that streamlines self-learning supply chain workflows with intelligent orchestration.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/next-generation-self-learning-supply-chain-automation-54a86a2b"
+    }
+  },
+  "features": [
+    "Smart orchestration",
+    "Process automation",
+    "Event processing",
+    "Task scheduling"
+  ],
+  "benefits": [
+    "Faster execution",
+    "Reduced manual steps",
+    "Scalable processes",
+    "Error reduction"
+  ]
+}

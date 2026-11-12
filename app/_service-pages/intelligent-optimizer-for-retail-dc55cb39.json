@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligent-optimizer-for-retail-dc55cb39",
+  "breadcrumbTitle": "Intelligent Optimizer for Retail",
+  "title": "Intelligent Optimizer for Retail",
+  "description": "Revolutionize retail through intelligent automation. Our Intelligent Optimizer for Retail leverages advanced machine learning to deliver financial planning at s",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Optimizer for Retail - Zion Tech Group",
+    "description": "Revolutionize retail through intelligent automation. Our Intelligent Optimizer for Retail leverages advanced machine learning to deliver financial planning at s",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-optimizer-for-retail-dc55cb39"
+    }
+  },
+  "features": [
+    "Performance dashboards",
+    "Alerting system",
+    "Multi-language support",
+    "Plugin architecture",
+    "Container orchestration"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Scalable to millions of transactions",
+    "ROI in under 90 days",
+    "Enterprise-grade security"
+  ]
+}

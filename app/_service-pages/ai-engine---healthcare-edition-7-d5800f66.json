@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-engine---healthcare-edition-7-d5800f66",
+  "breadcrumbTitle": "AI Engine - Healthcare Edition #7",
+  "title": "AI Engine - Healthcare Edition #7",
+  "description": "Revolutionize healthcare through intelligent automation. Our AI Engine - Healthcare Edition #7 leverages advanced machine learning to deliver security monitorin",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Engine - Healthcare Edition #7 - Zion Tech Group",
+    "description": "Revolutionize healthcare through intelligent automation. Our AI Engine - Healthcare Edition #7 leverages advanced machine learning to deliver security monitorin",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-engine---healthcare-edition-7-d5800f66"
+    }
+  },
+  "features": [
+    "HIPAA ready",
+    "Offline capabilities",
+    "Mobile-responsive interface",
+    "Role-based access control"
+  ],
+  "benefits": [
+    "Cost optimization recommendations",
+    "ROI in under 90 days",
+    "Predictive maintenance scheduling",
+    "Real-time insights and alerts",
+    "Performance benchmarking"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/feedback-team-tech-38d52a17",
+  "breadcrumbTitle": "Feedback Team - Tech",
+  "title": "Feedback Team - Tech",
+  "description": "Transform your tech operations with our Feedback Team - Tech. This AI-driven solution automates team productivity with unprecedented accuracy and efficiency.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Feedback Team - Tech - Zion Tech Group",
+    "description": "Transform your tech operations with our Feedback Team - Tech. This AI-driven solution automates team productivity with unprecedented accuracy and efficiency.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/feedback-team-tech-38d52a17"
+    }
+  },
+  "features": [
+    "Cloud-native architecture with multi-region deployment",
+    "GDPR compliance with data portability",
+    "Multi-region deployment with automatic failover",
+    "SOC 2 certified with security controls",
+    "Real-time document collaboration with version control"
+  ],
+  "benefits": [
+    "ROI achieved in under 90 days with cost savings",
+    "99.9% uptime guarantee with redundant architecture",
+    "24/7 automated operations without human intervention",
+    "Seamless integration with existing systems and workflows",
+    "Zero manual intervention required for routine tasks"
+  ]
+}

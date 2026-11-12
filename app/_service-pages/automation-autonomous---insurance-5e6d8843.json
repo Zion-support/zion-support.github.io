@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/automation-autonomous---insurance-5e6d8843",
+  "breadcrumbTitle": "Automation Autonomous - Insurance",
+  "title": "Automation Autonomous - Insurance",
+  "description": "Unlock unprecedented growth with Automation Autonomous - Insurance. This autonomous system provides predictive analytics with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automation Autonomous - Insurance - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Automation Autonomous - Insurance. This autonomous system provides predictive analytics with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automation-autonomous---insurance-5e6d8843"
+    }
+  },
+  "features": [
+    "Open-source friendly",
+    "Offline capabilities",
+    "Role-based access control",
+    "Auto-scaling capabilities",
+    "Microservices deployment"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "Dynamic resource allocation",
+    "Cost optimization recommendations"
+  ]
+}

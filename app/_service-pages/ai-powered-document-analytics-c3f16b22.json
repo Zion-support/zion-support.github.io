@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-document-analytics-c3f16b22",
+  "breadcrumbTitle": "AI-Powered Document Analytics",
+  "title": "AI-Powered Document Analytics",
+  "description": "Next-generation insurance solution: AI-Powered Document Analytics. Combines threat detection with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Document Analytics - Zion Tech Group",
+    "description": "Next-generation insurance solution: AI-Powered Document Analytics. Combines threat detection with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-document-analytics-c3f16b22"
+    }
+  },
+  "features": [
+    "GDPR compliance",
+    "Multi-region deployment",
+    "API-first design",
+    "Cloud-native architecture"
+  ],
+  "benefits": [
+    "Seamless integration with existing systems",
+    "Enterprise-grade security",
+    "Reduced human error by 95%",
+    "Zero manual intervention required"
+  ]
+}

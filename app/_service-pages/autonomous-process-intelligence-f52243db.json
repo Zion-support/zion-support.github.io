@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/autonomous-process-intelligence-f52243db",
+  "breadcrumbTitle": "Autonomous Process Intelligence",
+  "title": "Autonomous Process Intelligence",
+  "description": "The future of technology is here with Autonomous Process Intelligence. Powered by cutting-edge AI, this platform delivers threat detection like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous Process Intelligence - Zion Tech Group",
+    "description": "The future of technology is here with Autonomous Process Intelligence. Powered by cutting-edge AI, this platform delivers threat detection like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-process-intelligence-f52243db"
+    }
+  },
+  "features": [
+    "Machine learning integration",
+    "Container orchestration",
+    "Audit trails",
+    "Multi-region deployment",
+    "Real-time processing"
+  ],
+  "benefits": [
+    "Automated compliance reporting",
+    "3x faster decision making",
+    "Real-time insights and alerts",
+    "Performance benchmarking"
+  ]
+}

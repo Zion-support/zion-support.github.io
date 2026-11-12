@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/smart-platform-for-real-estate-1-f8f872e4",
+  "breadcrumbTitle": "Smart Platform for Real-Estate #1",
+  "title": "Smart Platform for Real-Estate #1",
+  "description": "Revolutionize real-estate through intelligent automation. Our Smart Platform for Real-Estate #1 leverages advanced machine learning to deliver threat detection ",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Platform for Real-Estate #1 - Zion Tech Group",
+    "description": "Revolutionize real-estate through intelligent automation. Our Smart Platform for Real-Estate #1 leverages advanced machine learning to deliver threat detection ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-platform-for-real-estate-1-f8f872e4"
+    }
+  },
+  "features": [
+    "Audit trails",
+    "Mobile-responsive interface",
+    "Alerting system",
+    "Open-source friendly",
+    "API-first design"
+  ],
+  "benefits": [
+    "Scalable to millions of transactions",
+    "Dynamic resource allocation",
+    "ROI in under 90 days"
+  ]
+}

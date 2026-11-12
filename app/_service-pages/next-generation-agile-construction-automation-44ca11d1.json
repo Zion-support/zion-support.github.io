@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/next-generation-agile-construction-automation-44ca11d1",
+  "breadcrumbTitle": "Next-Generation Agile Construction Automation",
+  "title": "Next-Generation Agile Construction Automation",
+  "description": "Next-generation automation suite that streamlines agile construction workflows with intelligent orchestration.",
+  "basic": "$218/month",
+  "pro": "$548/month",
+  "enterprise": "$1648/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Next-Generation Agile Construction Automation - Zion Tech Group",
+    "description": "Next-generation automation suite that streamlines agile construction workflows with intelligent orchestration.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/next-generation-agile-construction-automation-44ca11d1"
+    }
+  },
+  "features": [
+    "Smart orchestration",
+    "Process automation",
+    "Event processing",
+    "Task scheduling"
+  ],
+  "benefits": [
+    "Faster execution",
+    "Reduced manual steps",
+    "Scalable processes",
+    "Error reduction"
+  ]
+}

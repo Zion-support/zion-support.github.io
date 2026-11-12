@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/neural-insights-for-transportation-935da0c8",
+  "breadcrumbTitle": "Neural Insights for Transportation",
+  "title": "Neural Insights for Transportation",
+  "description": "Revolutionize transportation through intelligent automation. Our Neural Insights for Transportation leverages advanced machine learning to deliver maintenance s",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Neural Insights for Transportation - Zion Tech Group",
+    "description": "Revolutionize transportation through intelligent automation. Our Neural Insights for Transportation leverages advanced machine learning to deliver maintenance s",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/neural-insights-for-transportation-935da0c8"
+    }
+  },
+  "features": [
+    "Comprehensive monitoring",
+    "Rollback mechanisms",
+    "SOC 2 certified",
+    "Auto-scaling capabilities",
+    "HIPAA ready"
+  ],
+  "benefits": [
+    "50% reduction in operational costs",
+    "Scalable to millions of transactions",
+    "Predictive maintenance scheduling",
+    "Real-time insights and alerts",
+    "Cost optimization recommendations"
+  ]
+}

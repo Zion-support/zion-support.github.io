@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/autonomous-optimization-transportation-83a9b4fc",
+  "breadcrumbTitle": "Autonomous optimization-transportation",
+  "title": "Autonomous optimization-transportation",
+  "description": "Revolutionize transportation through intelligent automation. Our Autonomous optimization-transportation leverages advanced machine learning to deliver maintenan",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous optimization-transportation - Zion Tech Group",
+    "description": "Revolutionize transportation through intelligent automation. Our Autonomous optimization-transportation leverages advanced machine learning to deliver maintenan",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-optimization-transportation-83a9b4fc"
+    }
+  },
+  "features": [
+    "Cloud-native architecture",
+    "API-first design",
+    "Multi-region deployment",
+    "Offline capabilities",
+    "Rollback mechanisms"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "Dynamic resource allocation",
+    "Zero manual intervention required"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/neural-energy-engine-9ff4213c",
+  "breadcrumbTitle": "Neural Energy Engine",
+  "title": "Neural Energy Engine",
+  "description": "The future of construction is here with Neural Energy Engine. Powered by cutting-edge AI, this platform delivers network optimization like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Neural Energy Engine - Zion Tech Group",
+    "description": "The future of construction is here with Neural Energy Engine. Powered by cutting-edge AI, this platform delivers network optimization like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/neural-energy-engine-9ff4213c"
+    }
+  },
+  "features": [
+    "Offline capabilities",
+    "Performance dashboards",
+    "Plugin architecture",
+    "Custom integrations"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "Performance benchmarking",
+    "Zero manual intervention required",
+    "Automated compliance reporting",
+    "Self-healing infrastructure"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/enterprise-composable-sustainability-analytics-suite-62a07703",
+  "breadcrumbTitle": "Enterprise Composable Sustainability Analytics Suite",
+  "title": "Enterprise Composable Sustainability Analytics Suite",
+  "description": "Enterprise analytics suite that delivers composable sustainability insights with unified dashboards and reporting.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Enterprise Composable Sustainability Analytics Suite - Zion Tech Group",
+    "description": "Enterprise analytics suite that delivers composable sustainability insights with unified dashboards and reporting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/enterprise-composable-sustainability-analytics-suite-62a07703"
+    }
+  },
+  "features": [
+    "Data visualization",
+    "Custom dashboards",
+    "Report generation",
+    "KPI tracking"
+  ],
+  "benefits": [
+    "Unified data view",
+    "Faster insights",
+    "Customizable reports",
+    "Cross-functional collaboration"
+  ]
+}

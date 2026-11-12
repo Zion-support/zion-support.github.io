@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-performance-director-bba730e8",
+  "breadcrumbTitle": "AI-Powered Performance Director",
+  "title": "AI-Powered Performance Director",
+  "description": "Unlock unprecedented growth with AI-Powered Performance Director. This autonomous system provides financial planning with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Performance Director - Zion Tech Group",
+    "description": "Unlock unprecedented growth with AI-Powered Performance Director. This autonomous system provides financial planning with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-performance-director-bba730e8"
+    }
+  },
+  "features": [
+    "Container orchestration",
+    "Auto-scaling capabilities",
+    "Performance dashboards",
+    "Comprehensive monitoring",
+    "Open-source friendly"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Performance benchmarking",
+    "Real-time insights and alerts"
+  ]
+}

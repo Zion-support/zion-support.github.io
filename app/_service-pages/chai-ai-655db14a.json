@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/chai-ai-655db14a",
+  "breadcrumbTitle": "Chai AI",
+  "title": "Chai AI",
+  "description": "Chai AI is an artificial intelligence and automation technology company.",
+  "basic": "$N/A/month",
+  "pro": "$N/A/month",
+  "enterprise": "$N/A/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Chai AI - Zion Tech Group",
+    "description": "Chai AI is an artificial intelligence and automation technology company.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/chai-ai-655db14a"
+    }
+  },
+  "features": [
+    "AI-driven automation",
+    "Cloud-native deployment",
+    "API-first architecture",
+    "Enterprise-grade security",
+    "Scalable infrastructure"
+  ],
+  "benefits": [
+    "Improved operational efficiency",
+    "Reduced manual processes",
+    "Data-driven decision making",
+    "Faster time-to value",
+    "Scalable performance"
+  ]
+}

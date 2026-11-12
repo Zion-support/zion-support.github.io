@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/smart-intelligence-retail-abea1b3c",
+  "breadcrumbTitle": "Smart intelligence-retail",
+  "title": "Smart intelligence-retail",
+  "description": "Next-generation retail solution: Smart intelligence-retail. Combines security monitoring with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart intelligence-retail - Zion Tech Group",
+    "description": "Next-generation retail solution: Smart intelligence-retail. Combines security monitoring with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-intelligence-retail-abea1b3c"
+    }
+  },
+  "features": [
+    "Cloud-native architecture",
+    "Edge computing support",
+    "Role-based access control",
+    "Performance dashboards",
+    "GDPR compliance"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "Seamless integration with existing systems",
+    "50% reduction in operational costs",
+    "Dynamic resource allocation"
+  ]
+}

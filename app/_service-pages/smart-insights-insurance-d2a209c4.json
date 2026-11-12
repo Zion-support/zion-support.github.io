@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/smart-insights-insurance-d2a209c4",
+  "breadcrumbTitle": "Smart insights-insurance",
+  "title": "Smart insights-insurance",
+  "description": "Revolutionize insurance through intelligent automation. Our Smart insights-insurance leverages advanced machine learning to deliver quality control at scale.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart insights-insurance - Zion Tech Group",
+    "description": "Revolutionize insurance through intelligent automation. Our Smart insights-insurance leverages advanced machine learning to deliver quality control at scale.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-insights-insurance-d2a209c4"
+    }
+  },
+  "features": [
+    "Alerting system",
+    "Comprehensive monitoring",
+    "Real-time processing",
+    "Offline capabilities",
+    "Rollback mechanisms"
+  ],
+  "benefits": [
+    "Intelligent load balancing",
+    "Dynamic resource allocation",
+    "Real-time insights and alerts",
+    "24/7 automated operations"
+  ]
+}

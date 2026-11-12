@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/insights-self-optimizing---real-estate-bd5e049b",
+  "breadcrumbTitle": "Insights Self-Optimizing - Real-Estate",
+  "title": "Insights Self-Optimizing - Real-Estate",
+  "description": "Revolutionize real-estate through intelligent automation. Our Insights Self-Optimizing - Real-Estate leverages advanced machine learning to deliver user experie",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Insights Self-Optimizing - Real-Estate - Zion Tech Group",
+    "description": "Revolutionize real-estate through intelligent automation. Our Insights Self-Optimizing - Real-Estate leverages advanced machine learning to deliver user experie",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/insights-self-optimizing---real-estate-bd5e049b"
+    }
+  },
+  "features": [
+    "Serverless functions",
+    "Custom integrations",
+    "Alerting system",
+    "Multi-region deployment"
+  ],
+  "benefits": [
+    "Cost optimization recommendations",
+    "99.9% uptime guarantee",
+    "Zero manual intervention required",
+    "Real-time insights and alerts"
+  ]
+}

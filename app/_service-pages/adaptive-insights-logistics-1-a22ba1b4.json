@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/adaptive-insights-logistics-1-a22ba1b4",
+  "breadcrumbTitle": "Adaptive insights-logistics #1",
+  "title": "Adaptive insights-logistics #1",
+  "description": "Unlock unprecedented growth with Adaptive insights-logistics #1. This autonomous system provides sales forecasting with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Adaptive insights-logistics #1 - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Adaptive insights-logistics #1. This autonomous system provides sales forecasting with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/adaptive-insights-logistics-1-a22ba1b4"
+    }
+  },
+  "features": [
+    "Open-source friendly",
+    "Real-time processing",
+    "Zero-downtime updates",
+    "API-first design"
+  ],
+  "benefits": [
+    "Automated compliance reporting",
+    "Enterprise-grade security",
+    "24/7 automated operations"
+  ]
+}

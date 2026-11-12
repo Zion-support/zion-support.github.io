@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-proactive-iot-intelligence-64f38668",
+  "breadcrumbTitle": "AI-Powered Proactive IoT Intelligence",
+  "title": "AI-Powered Proactive IoT Intelligence",
+  "description": "Edge AI platform that processes IoT sensor data in real-time with proactive insights.",
+  "basic": "$258/month",
+  "pro": "$648/month",
+  "enterprise": "$1948/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Proactive IoT Intelligence - Zion Tech Group",
+    "description": "Edge AI platform that processes IoT sensor data in real-time with proactive insights.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-proactive-iot-intelligence-64f38668"
+    }
+  },
+  "features": [
+    "Edge processing",
+    "Real-time analytics",
+    "Automated responses",
+    "Energy efficiency"
+  ],
+  "benefits": [
+    "Reduced latency",
+    "Better insights",
+    "Automated responses",
+    "Energy efficiency"
+  ]
+}

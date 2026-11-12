@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/system-ai---legal-f880b70c",
+  "breadcrumbTitle": "System AI - Legal",
+  "title": "System AI - Legal",
+  "description": "Transform your legal operations with our System AI - Legal. This AI-driven solution automates sales forecasting with unprecedented accuracy and efficiency.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "System AI - Legal - Zion Tech Group",
+    "description": "Transform your legal operations with our System AI - Legal. This AI-driven solution automates sales forecasting with unprecedented accuracy and efficiency.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/system-ai---legal-f880b70c"
+    }
+  },
+  "features": [
+    "HIPAA ready",
+    "Offline capabilities",
+    "Performance dashboards",
+    "Comprehensive monitoring",
+    "Container orchestration"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "Reduced human error by 95%",
+    "Enterprise-grade security"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/quantum-ready-insightful-public-sector-analytics-cf2982c2",
+  "breadcrumbTitle": "Quantum-Ready Insightful Public Sector Analytics",
+  "title": "Quantum-Ready Insightful Public Sector Analytics",
+  "description": "Quantum-ready analytics platform that prepares insightful public sector workloads for future quantum acceleration.",
+  "basic": "$298/month",
+  "pro": "$748/month",
+  "enterprise": "$2248/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Quantum-Ready Insightful Public Sector Analytics - Zion Tech Group",
+    "description": "Quantum-ready analytics platform that prepares insightful public sector workloads for future quantum acceleration.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/quantum-ready-insightful-public-sector-analytics-cf2982c2"
+    }
+  },
+  "features": [
+    "Quantum simulation",
+    "Hybrid classical-quantum",
+    "Algorithm optimization",
+    "Future-proofing"
+  ],
+  "benefits": [
+    "Quantum advantage readiness",
+    "Future-proof algorithms",
+    "Hybrid optimization",
+    "Competitive edge"
+  ]
+}

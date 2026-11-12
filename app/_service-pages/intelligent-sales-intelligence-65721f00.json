@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/intelligent-sales-intelligence-65721f00",
+  "breadcrumbTitle": "Intelligent Sales Intelligence",
+  "title": "Intelligent Sales Intelligence",
+  "description": "Transform your healthcare operations with our Intelligent Sales Intelligence. This AI-driven solution automates supply chain with unprecedented accuracy and eff",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Sales Intelligence - Zion Tech Group",
+    "description": "Transform your healthcare operations with our Intelligent Sales Intelligence. This AI-driven solution automates supply chain with unprecedented accuracy and eff",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-sales-intelligence-65721f00"
+    }
+  },
+  "features": [
+    "SOC 2 certified",
+    "Cloud-native architecture",
+    "Rollback mechanisms",
+    "Audit trails"
+  ],
+  "benefits": [
+    "50% reduction in operational costs",
+    "Zero manual intervention required",
+    "Predictive maintenance scheduling"
+  ]
+}

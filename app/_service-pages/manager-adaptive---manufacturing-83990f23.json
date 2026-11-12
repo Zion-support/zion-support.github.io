@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/manager-adaptive---manufacturing-83990f23",
+  "breadcrumbTitle": "Manager Adaptive - Manufacturing",
+  "title": "Manager Adaptive - Manufacturing",
+  "description": "Transform your Manufacturing operations with our Manager Adaptive - Manufacturing. This AI-driven solution automates sentiment analysis with unprecedented accur",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Manager Adaptive - Manufacturing - Zion Tech Group",
+    "description": "Transform your Manufacturing operations with our Manager Adaptive - Manufacturing. This AI-driven solution automates sentiment analysis with unprecedented accur",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/manager-adaptive---manufacturing-83990f23"
+    }
+  },
+  "features": [
+    "Business intelligence with KPI dashboards",
+    "Maintenance scheduling with predictive analytics",
+    "SOC 2 certified with security controls",
+    "Logistics route optimization with traffic prediction",
+    "Role-based access control with SSO integration"
+  ],
+  "benefits": [
+    "Better financial planning with predictive models",
+    "Improved customer retention with proactive service",
+    "Better resource utilization with auto-scaling",
+    "Improved product quality with automated testing"
+  ]
+}

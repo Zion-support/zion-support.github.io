@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/automated-coordinator-for-education-63f12b24",
+  "breadcrumbTitle": "Automated Coordinator for Education",
+  "title": "Automated Coordinator for Education",
+  "description": "Transform your education operations with our Automated Coordinator for Education. This AI-driven solution automates customer insights with unprecedented accurac",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated Coordinator for Education - Zion Tech Group",
+    "description": "Transform your education operations with our Automated Coordinator for Education. This AI-driven solution automates customer insights with unprecedented accurac",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-coordinator-for-education-63f12b24"
+    }
+  },
+  "features": [
+    "Alerting system",
+    "Edge computing support",
+    "HIPAA ready",
+    "Serverless functions",
+    "Mobile-responsive interface"
+  ],
+  "benefits": [
+    "Performance benchmarking",
+    "Zero manual intervention required",
+    "Seamless integration with existing systems",
+    "Reduced human error by 95%"
+  ]
+}

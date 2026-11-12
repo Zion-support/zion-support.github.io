@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-generator---construction-edition-2acfb01c",
+  "breadcrumbTitle": "AI Generator - Construction Edition",
+  "title": "AI Generator - Construction Edition",
+  "description": "Unlock unprecedented growth with AI Generator - Construction Edition. This autonomous system provides inventory management with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Generator - Construction Edition - Zion Tech Group",
+    "description": "Unlock unprecedented growth with AI Generator - Construction Edition. This autonomous system provides inventory management with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-generator---construction-edition-2acfb01c"
+    }
+  },
+  "features": [
+    "Container orchestration",
+    "Zero-downtime updates",
+    "Custom integrations",
+    "Rollback mechanisms",
+    "API-first design"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "ROI in under 90 days",
+    "Performance benchmarking"
+  ]
+}

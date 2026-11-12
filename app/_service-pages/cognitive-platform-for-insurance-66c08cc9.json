@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/cognitive-platform-for-insurance-66c08cc9",
+  "breadcrumbTitle": "Cognitive Platform for Insurance",
+  "title": "Cognitive Platform for Insurance",
+  "description": "Unlock unprecedented growth with Cognitive Platform for Insurance. This autonomous system provides code optimization with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Cognitive Platform for Insurance - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Cognitive Platform for Insurance. This autonomous system provides code optimization with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cognitive-platform-for-insurance-66c08cc9"
+    }
+  },
+  "features": [
+    "Offline capabilities",
+    "Microservices deployment",
+    "Rollback mechanisms",
+    "Zero-downtime updates"
+  ],
+  "benefits": [
+    "Scalable to millions of transactions",
+    "Seamless integration with existing systems",
+    "ROI in under 90 days"
+  ]
+}

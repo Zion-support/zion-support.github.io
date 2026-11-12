@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/next-generation-frictionless-insurtech-automation-d2d537d6",
+  "breadcrumbTitle": "Next-Generation Frictionless Insurtech Automation",
+  "title": "Next-Generation Frictionless Insurtech Automation",
+  "description": "Next-generation automation suite that streamlines frictionless insurtech workflows with intelligent orchestration.",
+  "basic": "$218/month",
+  "pro": "$548/month",
+  "enterprise": "$1648/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Next-Generation Frictionless Insurtech Automation - Zion Tech Group",
+    "description": "Next-generation automation suite that streamlines frictionless insurtech workflows with intelligent orchestration.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/next-generation-frictionless-insurtech-automation-d2d537d6"
+    }
+  },
+  "features": [
+    "Smart orchestration",
+    "Process automation",
+    "Event processing",
+    "Task scheduling"
+  ],
+  "benefits": [
+    "Faster execution",
+    "Reduced manual steps",
+    "Scalable processes",
+    "Error reduction"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/smart-director-for-finance-7f119b26",
+  "breadcrumbTitle": "Smart Director for Finance",
+  "title": "Smart Director for Finance",
+  "description": "Unlock unprecedented growth with Smart Director for Finance. This autonomous system provides language processing with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Director for Finance - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Smart Director for Finance. This autonomous system provides language processing with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-director-for-finance-7f119b26"
+    }
+  },
+  "features": [
+    "Alerting system",
+    "GDPR compliance",
+    "Role-based access control",
+    "Container orchestration",
+    "Offline capabilities"
+  ],
+  "benefits": [
+    "Performance benchmarking",
+    "50% reduction in operational costs",
+    "ROI in under 90 days",
+    "Scalable to millions of transactions",
+    "99.9% uptime guarantee"
+  ]
+}

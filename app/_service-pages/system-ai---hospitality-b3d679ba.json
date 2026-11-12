@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/system-ai---hospitality-b3d679ba",
+  "breadcrumbTitle": "System AI - Hospitality",
+  "title": "System AI - Hospitality",
+  "description": "Unlock unprecedented growth with System AI - Hospitality. This autonomous system provides compliance monitoring with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "System AI - Hospitality - Zion Tech Group",
+    "description": "Unlock unprecedented growth with System AI - Hospitality. This autonomous system provides compliance monitoring with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/system-ai---hospitality-b3d679ba"
+    }
+  },
+  "features": [
+    "GDPR compliance",
+    "Multi-region deployment",
+    "Role-based access control",
+    "Offline capabilities",
+    "Open-source friendly"
+  ],
+  "benefits": [
+    "Automated compliance reporting",
+    "Reduced human error by 95%",
+    "24/7 automated operations"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-system---logistics-edition-e8fa14ff",
+  "breadcrumbTitle": "AI System - Logistics Edition",
+  "title": "AI System - Logistics Edition",
+  "description": "Revolutionize logistics through intelligent automation. Our AI System - Logistics Edition leverages advanced machine learning to deliver data processing at scal",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI System - Logistics Edition - Zion Tech Group",
+    "description": "Revolutionize logistics through intelligent automation. Our AI System - Logistics Edition leverages advanced machine learning to deliver data processing at scal",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-system---logistics-edition-e8fa14ff"
+    }
+  },
+  "features": [
+    "Multi-region deployment",
+    "Alerting system",
+    "Serverless functions",
+    "Multi-language support"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Zero manual intervention required",
+    "Cost optimization recommendations",
+    "Performance benchmarking",
+    "ROI in under 90 days"
+  ]
+}

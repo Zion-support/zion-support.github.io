@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/insights-ai---real-estate-073d9353",
+  "breadcrumbTitle": "Insights AI - Real-Estate",
+  "title": "Insights AI - Real-Estate",
+  "description": "Revolutionize real-estate through intelligent automation. Our Insights AI - Real-Estate leverages advanced machine learning to deliver supply chain at scale.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Insights AI - Real-Estate - Zion Tech Group",
+    "description": "Revolutionize real-estate through intelligent automation. Our Insights AI - Real-Estate leverages advanced machine learning to deliver supply chain at scale.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/insights-ai---real-estate-073d9353"
+    }
+  },
+  "features": [
+    "Custom integrations",
+    "Microservices deployment",
+    "GDPR compliance",
+    "Plugin architecture",
+    "Audit trails"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Dynamic resource allocation",
+    "Predictive maintenance scheduling",
+    "24/7 automated operations"
+  ]
+}

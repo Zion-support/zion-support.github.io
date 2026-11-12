@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/autonomous-system-manufacturing-e6c3a233",
+  "breadcrumbTitle": "Autonomous system-manufacturing",
+  "title": "Autonomous system-manufacturing",
+  "description": "The future of manufacturing is here with Autonomous system-manufacturing. Powered by cutting-edge AI, this platform delivers language processing like never befo",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous system-manufacturing - Zion Tech Group",
+    "description": "The future of manufacturing is here with Autonomous system-manufacturing. Powered by cutting-edge AI, this platform delivers language processing like never befo",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-system-manufacturing-e6c3a233"
+    }
+  },
+  "features": [
+    "Container orchestration",
+    "Auto-scaling capabilities",
+    "Role-based access control",
+    "Microservices deployment",
+    "Cloud-native architecture"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "99.9% uptime guarantee",
+    "50% reduction in operational costs",
+    "Seamless integration with existing systems",
+    "Self-healing infrastructure"
+  ]
+}

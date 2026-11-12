@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-engine---energy-edition-1-39bb3cb2",
+  "breadcrumbTitle": "AI Engine - Energy Edition #1",
+  "title": "AI Engine - Energy Edition #1",
+  "description": "Transform your energy operations with our AI Engine - Energy Edition #1. This AI-driven solution automates code optimization with unprecedented accuracy and eff",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Engine - Energy Edition #1 - Zion Tech Group",
+    "description": "Transform your energy operations with our AI Engine - Energy Edition #1. This AI-driven solution automates code optimization with unprecedented accuracy and eff",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-engine---energy-edition-1-39bb3cb2"
+    }
+  },
+  "features": [
+    "Multi-region deployment",
+    "Microservices deployment",
+    "Comprehensive monitoring",
+    "API-first design",
+    "Mobile-responsive interface"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "24/7 automated operations",
+    "3x faster decision making",
+    "Intelligent load balancing"
+  ]
+}

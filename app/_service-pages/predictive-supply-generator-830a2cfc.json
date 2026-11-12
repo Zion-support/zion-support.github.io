@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/predictive-supply-generator-830a2cfc",
+  "breadcrumbTitle": "Predictive Supply Generator",
+  "title": "Predictive Supply Generator",
+  "description": "Next-generation manufacturing solution: Predictive Supply Generator. Combines image recognition with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Predictive Supply Generator - Zion Tech Group",
+    "description": "Next-generation manufacturing solution: Predictive Supply Generator. Combines image recognition with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/predictive-supply-generator-830a2cfc"
+    }
+  },
+  "features": [
+    "Performance dashboards",
+    "Container orchestration",
+    "Mobile-responsive interface",
+    "Audit trails",
+    "API-first design"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "3x faster decision making",
+    "50% reduction in operational costs"
+  ]
+}

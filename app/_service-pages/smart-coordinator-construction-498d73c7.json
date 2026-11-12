@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/smart-coordinator-construction-498d73c7",
+  "breadcrumbTitle": "Smart coordinator-construction",
+  "title": "Smart coordinator-construction",
+  "description": "Revolutionize construction through intelligent automation. Our Smart coordinator-construction leverages advanced machine learning to deliver process automation ",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart coordinator-construction - Zion Tech Group",
+    "description": "Revolutionize construction through intelligent automation. Our Smart coordinator-construction leverages advanced machine learning to deliver process automation ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-coordinator-construction-498d73c7"
+    }
+  },
+  "features": [
+    "API-first design",
+    "Plugin architecture",
+    "Machine learning integration",
+    "SOC 2 certified"
+  ],
+  "benefits": [
+    "Dynamic resource allocation",
+    "Cost optimization recommendations",
+    "3x faster decision making"
+  ]
+}

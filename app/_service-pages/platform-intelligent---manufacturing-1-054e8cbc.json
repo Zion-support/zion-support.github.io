@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/platform-intelligent---manufacturing-1-054e8cbc",
+  "breadcrumbTitle": "Platform Intelligent - Manufacturing #1",
+  "title": "Platform Intelligent - Manufacturing #1",
+  "description": "Next-generation manufacturing solution: Platform Intelligent - Manufacturing #1. Combines performance monitoring with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Platform Intelligent - Manufacturing #1 - Zion Tech Group",
+    "description": "Next-generation manufacturing solution: Platform Intelligent - Manufacturing #1. Combines performance monitoring with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/platform-intelligent---manufacturing-1-054e8cbc"
+    }
+  },
+  "features": [
+    "Edge computing support",
+    "SOC 2 certified",
+    "Audit trails",
+    "Container orchestration",
+    "Zero-downtime updates"
+  ],
+  "benefits": [
+    "50% reduction in operational costs",
+    "Seamless integration with existing systems",
+    "3x faster decision making",
+    "Self-healing infrastructure"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/ai-coordinator---retail-edition-c375a7e7",
+  "breadcrumbTitle": "AI Coordinator - Retail Edition",
+  "title": "AI Coordinator - Retail Edition",
+  "description": "The future of retail is here with AI Coordinator - Retail Edition. Powered by cutting-edge AI, this platform delivers content generation like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Coordinator - Retail Edition - Zion Tech Group",
+    "description": "The future of retail is here with AI Coordinator - Retail Edition. Powered by cutting-edge AI, this platform delivers content generation like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-coordinator---retail-edition-c375a7e7"
+    }
+  },
+  "features": [
+    "Comprehensive monitoring",
+    "Performance dashboards",
+    "Open-source friendly",
+    "Plugin architecture"
+  ],
+  "benefits": [
+    "Dynamic resource allocation",
+    "50% reduction in operational costs",
+    "Intelligent load balancing"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-coordinator---logistics-edition-0c3b3472",
+  "breadcrumbTitle": "AI Coordinator - Logistics Edition",
+  "title": "AI Coordinator - Logistics Edition",
+  "description": "Next-generation logistics solution: AI Coordinator - Logistics Edition. Combines predictive analytics with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Coordinator - Logistics Edition - Zion Tech Group",
+    "description": "Next-generation logistics solution: AI Coordinator - Logistics Edition. Combines predictive analytics with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-coordinator---logistics-edition-0c3b3472"
+    }
+  },
+  "features": [
+    "Edge computing support",
+    "Real-time processing",
+    "Audit trails",
+    "Rollback mechanisms",
+    "Open-source friendly"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "Performance benchmarking",
+    "Cost optimization recommendations",
+    "50% reduction in operational costs"
+  ]
+}

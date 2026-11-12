@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/ai-suite---real-estate-edition-1172569f",
+  "breadcrumbTitle": "AI Suite - Real-Estate Edition",
+  "title": "AI Suite - Real-Estate Edition",
+  "description": "Revolutionize real-estate through intelligent automation. Our AI Suite - Real-Estate Edition leverages advanced machine learning to deliver process automation a",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Suite - Real-Estate Edition - Zion Tech Group",
+    "description": "Revolutionize real-estate through intelligent automation. Our AI Suite - Real-Estate Edition leverages advanced machine learning to deliver process automation a",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-suite---real-estate-edition-1172569f"
+    }
+  },
+  "features": [
+    "Container orchestration",
+    "Multi-region deployment",
+    "Role-based access control",
+    "Machine learning integration",
+    "Audit trails"
+  ],
+  "benefits": [
+    "Intelligent load balancing",
+    "Enterprise-grade security",
+    "3x faster decision making",
+    "99.9% uptime guarantee",
+    "Performance benchmarking"
+  ]
+}

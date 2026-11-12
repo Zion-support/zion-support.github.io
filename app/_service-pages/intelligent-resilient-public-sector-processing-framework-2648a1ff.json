@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-resilient-public-sector-processing-framework-2648a1ff",
+  "breadcrumbTitle": "Intelligent Resilient Public Sector Processing Framework",
+  "title": "Intelligent Resilient Public Sector Processing Framework",
+  "description": "Intelligent processing framework that automates resilient public sector data flows with real-time transformation.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Intelligent Resilient Public Sector Processing Framework - Zion Tech Group",
+    "description": "Intelligent processing framework that automates resilient public sector data flows with real-time transformation.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-resilient-public-sector-processing-framework-2648a1ff"
+    }
+  },
+  "features": [
+    "Real-time processing",
+    "Data transformation",
+    "ETL pipelines",
+    "Stream processing"
+  ],
+  "benefits": [
+    "Faster data flows",
+    "Reduced processing time",
+    "Higher throughput",
+    "Real-time transformation"
+  ]
+}

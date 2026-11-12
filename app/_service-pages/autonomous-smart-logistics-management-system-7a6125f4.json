@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/autonomous-smart-logistics-management-system-7a6125f4",
+  "breadcrumbTitle": "Autonomous Smart Logistics Management System",
+  "title": "Autonomous Smart Logistics Management System",
+  "description": "Autonomous management system that self-optimizes smart logistics processes with minimal human intervention.",
+  "basic": "$258/month",
+  "pro": "$648/month",
+  "enterprise": "$1948/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Autonomous Smart Logistics Management System - Zion Tech Group",
+    "description": "Autonomous management system that self-optimizes smart logistics processes with minimal human intervention.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-smart-logistics-management-system-7a6125f4"
+    }
+  },
+  "features": [
+    "Autonomous optimization",
+    "Self-healing systems",
+    "Resource allocation",
+    "Performance tuning"
+  ],
+  "benefits": [
+    "Zero-touch operations",
+    "Reduced overhead",
+    "Self-optimizing systems",
+    "Lower operational costs"
+  ]
+}

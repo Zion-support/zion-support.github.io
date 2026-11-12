@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligent-suite-manufacturing-a683c743",
+  "breadcrumbTitle": "Intelligent suite-manufacturing",
+  "title": "Intelligent suite-manufacturing",
+  "description": "Revolutionize manufacturing through intelligent automation. Our Intelligent suite-manufacturing leverages advanced machine learning to deliver language processi",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent suite-manufacturing - Zion Tech Group",
+    "description": "Revolutionize manufacturing through intelligent automation. Our Intelligent suite-manufacturing leverages advanced machine learning to deliver language processi",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-suite-manufacturing-a683c743"
+    }
+  },
+  "features": [
+    "Performance dashboards",
+    "Offline capabilities",
+    "SOC 2 certified",
+    "Open-source friendly",
+    "Audit trails"
+  ],
+  "benefits": [
+    "Dynamic resource allocation",
+    "50% reduction in operational costs",
+    "Intelligent load balancing",
+    "Seamless integration with existing systems"
+  ]
+}

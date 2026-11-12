@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligent-suite-for-automotive-edcf2327",
+  "breadcrumbTitle": "Intelligent Suite for Automotive",
+  "title": "Intelligent Suite for Automotive",
+  "description": "Revolutionize automotive through intelligent automation. Our Intelligent Suite for Automotive leverages advanced machine learning to deliver inventory managemen",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Suite for Automotive - Zion Tech Group",
+    "description": "Revolutionize automotive through intelligent automation. Our Intelligent Suite for Automotive leverages advanced machine learning to deliver inventory managemen",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-suite-for-automotive-edcf2327"
+    }
+  },
+  "features": [
+    "Custom integrations",
+    "Comprehensive monitoring",
+    "API-first design",
+    "HIPAA ready"
+  ],
+  "benefits": [
+    "Seamless integration with existing systems",
+    "Zero manual intervention required",
+    "Intelligent load balancing",
+    "Automated compliance reporting",
+    "24/7 automated operations"
+  ]
+}

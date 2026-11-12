@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/neural-decision-coordinator-c5038773",
+  "breadcrumbTitle": "Neural Decision Coordinator",
+  "title": "Neural Decision Coordinator",
+  "description": "Transform your gaming operations with our Neural Decision Coordinator. This AI-driven solution automates decision support with unprecedented accuracy and effici",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Neural Decision Coordinator - Zion Tech Group",
+    "description": "Transform your gaming operations with our Neural Decision Coordinator. This AI-driven solution automates decision support with unprecedented accuracy and effici",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/neural-decision-coordinator-c5038773"
+    }
+  },
+  "features": [
+    "Offline capabilities",
+    "Container orchestration",
+    "Cloud-native architecture",
+    "Audit trails",
+    "Alerting system"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Cost optimization recommendations",
+    "Predictive maintenance scheduling",
+    "Self-healing infrastructure",
+    "ROI in under 90 days"
+  ]
+}

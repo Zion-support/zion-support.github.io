@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/orchestrator-ai---logistics-dc4bf0ba",
+  "breadcrumbTitle": "Orchestrator AI - Logistics",
+  "title": "Orchestrator AI - Logistics",
+  "description": "Transform your logistics operations with our Orchestrator AI - Logistics. This AI-driven solution automates data processing with unprecedented accuracy and effi",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Orchestrator AI - Logistics - Zion Tech Group",
+    "description": "Transform your logistics operations with our Orchestrator AI - Logistics. This AI-driven solution automates data processing with unprecedented accuracy and effi",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/orchestrator-ai---logistics-dc4bf0ba"
+    }
+  },
+  "features": [
+    "Alerting system",
+    "SOC 2 certified",
+    "Zero-downtime updates",
+    "Edge computing support"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "Real-time insights and alerts",
+    "Dynamic resource allocation",
+    "Intelligent load balancing",
+    "Performance benchmarking"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/intelligent-customer-orchestrator-c2ce47fd",
+  "breadcrumbTitle": "Intelligent Customer Orchestrator",
+  "title": "Intelligent Customer Orchestrator",
+  "description": "Transform your insurance operations with our Intelligent Customer Orchestrator. This AI-driven solution automates decision support with unprecedented accuracy a",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Customer Orchestrator - Zion Tech Group",
+    "description": "Transform your insurance operations with our Intelligent Customer Orchestrator. This AI-driven solution automates decision support with unprecedented accuracy a",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-customer-orchestrator-c2ce47fd"
+    }
+  },
+  "features": [
+    "HIPAA ready",
+    "Microservices deployment",
+    "Audit trails",
+    "Zero-downtime updates"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Automated compliance reporting",
+    "Seamless integration with existing systems"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/healthcare-ai---logistics-8f3b3916",
+  "breadcrumbTitle": "Healthcare AI - Logistics",
+  "title": "Healthcare AI - Logistics",
+  "description": "Next-generation Logistics solution: Healthcare AI - Logistics. Combines process automation with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Healthcare AI - Logistics - Zion Tech Group",
+    "description": "Next-generation Logistics solution: Healthcare AI - Logistics. Combines process automation with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/healthcare-ai---logistics-8f3b3916"
+    }
+  },
+  "features": [
+    "Image recognition with computer vision",
+    "Healthcare data analytics with patient insights",
+    "Logistics route optimization with traffic prediction",
+    "Performance dashboards with real-time metrics",
+    "GDPR compliance with data portability"
+  ],
+  "benefits": [
+    "Improved quality with automated testing and validation",
+    "Reduced development time with code generation",
+    "Performance benchmarking against industry standards",
+    "Improved employee productivity with automation",
+    "Better market positioning with competitive analysis"
+  ]
+}

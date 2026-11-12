@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligence-ai---finance-4682300d",
+  "breadcrumbTitle": "Intelligence AI - Finance",
+  "title": "Intelligence AI - Finance",
+  "description": "Next-generation finance solution: Intelligence AI - Finance. Combines workflow management with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligence AI - Finance - Zion Tech Group",
+    "description": "Next-generation finance solution: Intelligence AI - Finance. Combines workflow management with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligence-ai---finance-4682300d"
+    }
+  },
+  "features": [
+    "Alerting system",
+    "Multi-region deployment",
+    "SOC 2 certified",
+    "GDPR compliance"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "ROI in under 90 days",
+    "Zero manual intervention required",
+    "Reduced human error by 95%"
+  ]
+}

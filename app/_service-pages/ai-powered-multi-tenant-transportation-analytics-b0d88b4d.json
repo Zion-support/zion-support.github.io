@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-multi-tenant-transportation-analytics-b0d88b4d",
+  "breadcrumbTitle": "AI-Powered Multi-Tenant Transportation Analytics",
+  "title": "AI-Powered Multi-Tenant Transportation Analytics",
+  "description": "AI-driven analytics platform that delivers multi-tenant insights into transportation operations, providing real-time monitoring, predictive modeling, and automa",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Multi-Tenant Transportation Analytics - Zion Tech Group",
+    "description": "AI-driven analytics platform that delivers multi-tenant insights into transportation operations, providing real-time monitoring, predictive modeling, and automa",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-multi-tenant-transportation-analytics-b0d88b4d"
+    }
+  },
+  "features": [
+    "Real-time monitoring",
+    "Predictive modeling",
+    "Automated reporting",
+    "Custom dashboards"
+  ],
+  "benefits": [
+    "Data-driven decision making",
+    "Improved operational efficiency",
+    "Proactive issue detection",
+    "Enhanced KPI tracking"
+  ]
+}

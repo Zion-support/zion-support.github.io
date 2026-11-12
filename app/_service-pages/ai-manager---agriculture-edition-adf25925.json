@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-manager---agriculture-edition-adf25925",
+  "breadcrumbTitle": "AI Manager - Agriculture Edition",
+  "title": "AI Manager - Agriculture Edition",
+  "description": "Revolutionize agriculture through intelligent automation. Our AI Manager - Agriculture Edition leverages advanced machine learning to deliver code optimization ",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Manager - Agriculture Edition - Zion Tech Group",
+    "description": "Revolutionize agriculture through intelligent automation. Our AI Manager - Agriculture Edition leverages advanced machine learning to deliver code optimization ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-manager---agriculture-edition-adf25925"
+    }
+  },
+  "features": [
+    "Container orchestration",
+    "Auto-scaling capabilities",
+    "Open-source friendly",
+    "Cloud-native architecture"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "Automated compliance reporting",
+    "Reduced human error by 95%",
+    "24/7 automated operations"
+  ]
+}

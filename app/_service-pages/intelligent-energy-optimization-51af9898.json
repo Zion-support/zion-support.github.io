@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/intelligent-energy-optimization-51af9898",
+  "breadcrumbTitle": "Intelligent Energy Optimization",
+  "title": "Intelligent Energy Optimization",
+  "description": "Revolutionize retail through intelligent automation. Our Intelligent Energy Optimization leverages advanced machine learning to deliver sales forecasting at sca",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Energy Optimization - Zion Tech Group",
+    "description": "Revolutionize retail through intelligent automation. Our Intelligent Energy Optimization leverages advanced machine learning to deliver sales forecasting at sca",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-energy-optimization-51af9898"
+    }
+  },
+  "features": [
+    "SOC 2 certified",
+    "Data encryption",
+    "Audit trails",
+    "Offline capabilities"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "Seamless integration with existing systems",
+    "Cost optimization recommendations"
+  ]
+}

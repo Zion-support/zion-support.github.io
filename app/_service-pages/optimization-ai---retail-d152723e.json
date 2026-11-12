@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/optimization-ai---retail-d152723e",
+  "breadcrumbTitle": "Optimization AI - Retail",
+  "title": "Optimization AI - Retail",
+  "description": "Next-generation retail solution: Optimization AI - Retail. Combines fraud prevention with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Optimization AI - Retail - Zion Tech Group",
+    "description": "Next-generation retail solution: Optimization AI - Retail. Combines fraud prevention with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/optimization-ai---retail-d152723e"
+    }
+  },
+  "features": [
+    "Mobile-responsive interface",
+    "Auto-scaling capabilities",
+    "Offline capabilities",
+    "Machine learning integration",
+    "Microservices deployment"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "Automated compliance reporting",
+    "ROI in under 90 days",
+    "Real-time insights and alerts"
+  ]
+}

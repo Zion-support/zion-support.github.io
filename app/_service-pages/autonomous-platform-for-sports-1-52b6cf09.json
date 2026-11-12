@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/autonomous-platform-for-sports-1-52b6cf09",
+  "breadcrumbTitle": "Autonomous Platform for Sports #1",
+  "title": "Autonomous Platform for Sports #1",
+  "description": "Revolutionize sports through intelligent automation. Our Autonomous Platform for Sports #1 leverages advanced machine learning to deliver data processing at sca",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous Platform for Sports #1 - Zion Tech Group",
+    "description": "Revolutionize sports through intelligent automation. Our Autonomous Platform for Sports #1 leverages advanced machine learning to deliver data processing at sca",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-platform-for-sports-1-52b6cf09"
+    }
+  },
+  "features": [
+    "Zero-downtime updates",
+    "Offline capabilities",
+    "Container orchestration",
+    "Custom integrations"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "Zero manual intervention required",
+    "Enterprise-grade security",
+    "24/7 automated operations"
+  ]
+}

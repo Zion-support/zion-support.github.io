@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/alice-company-a4225226",
+  "breadcrumbTitle": "Alice (company)",
+  "title": "Alice (company)",
+  "description": "Alice, formerly ActiveFence, is an Israeli-American artificial intelligence safety company. Founded in 2018 by Noam Schwartz, Alon Porat, Eyal Dykan and Iftach ",
+  "basic": "$N/A/month",
+  "pro": "$N/A/month",
+  "enterprise": "$N/A/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Alice (company) - Zion Tech Group",
+    "description": "Alice, formerly ActiveFence, is an Israeli-American artificial intelligence safety company. Founded in 2018 by Noam Schwartz, Alon Porat, Eyal Dykan and Iftach ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/alice-company-a4225226"
+    }
+  },
+  "features": [
+    "AI-driven automation",
+    "Cloud-native deployment",
+    "API-first architecture",
+    "Enterprise-grade security",
+    "Scalable infrastructure"
+  ],
+  "benefits": [
+    "Improved operational efficiency",
+    "Reduced manual processes",
+    "Data-driven decision making",
+    "Faster time-to value",
+    "Scalable performance"
+  ]
+}

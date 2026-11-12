@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-coordinator---education-edition-6e4020c3",
+  "breadcrumbTitle": "AI Coordinator - Education Edition",
+  "title": "AI Coordinator - Education Edition",
+  "description": "Unlock unprecedented growth with AI Coordinator - Education Edition. This autonomous system provides predictive analytics with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Coordinator - Education Edition - Zion Tech Group",
+    "description": "Unlock unprecedented growth with AI Coordinator - Education Edition. This autonomous system provides predictive analytics with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-coordinator---education-edition-6e4020c3"
+    }
+  },
+  "features": [
+    "Alerting system",
+    "Container orchestration",
+    "Rollback mechanisms",
+    "Offline capabilities",
+    "Comprehensive monitoring"
+  ],
+  "benefits": [
+    "Dynamic resource allocation",
+    "Scalable to millions of transactions",
+    "Cost optimization recommendations",
+    "Zero manual intervention required"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligent-content-insights-edaf747e",
+  "breadcrumbTitle": "Intelligent Content Insights",
+  "title": "Intelligent Content Insights",
+  "description": "Unlock unprecedented growth with Intelligent Content Insights. This autonomous system provides language processing with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Content Insights - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Intelligent Content Insights. This autonomous system provides language processing with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-content-insights-edaf747e"
+    }
+  },
+  "features": [
+    "GDPR compliance",
+    "Machine learning integration",
+    "Performance dashboards",
+    "Open-source friendly",
+    "Serverless functions"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "50% reduction in operational costs",
+    "99.9% uptime guarantee",
+    "Automated compliance reporting"
+  ]
+}

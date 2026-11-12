@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/engine-neural---legal-b079e755",
+  "breadcrumbTitle": "Engine Neural - Legal",
+  "title": "Engine Neural - Legal",
+  "description": "Unlock unprecedented growth with Engine Neural - Legal. This autonomous system provides security monitoring with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Engine Neural - Legal - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Engine Neural - Legal. This autonomous system provides security monitoring with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/engine-neural---legal-b079e755"
+    }
+  },
+  "features": [
+    "Comprehensive monitoring",
+    "API-first design",
+    "Auto-scaling capabilities",
+    "Custom integrations",
+    "Microservices deployment"
+  ],
+  "benefits": [
+    "Seamless integration with existing systems",
+    "ROI in under 90 days",
+    "Dynamic resource allocation",
+    "Real-time insights and alerts"
+  ]
+}

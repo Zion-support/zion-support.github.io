@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/intelligent-performance-director-d7e5280e",
+  "breadcrumbTitle": "Intelligent Performance Director",
+  "title": "Intelligent Performance Director",
+  "description": "Transform your Telecom operations with our Intelligent Performance Director. This AI-driven solution automates customer insights with unprecedented accuracy and",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Performance Director - Zion Tech Group",
+    "description": "Transform your Telecom operations with our Intelligent Performance Director. This AI-driven solution automates customer insights with unprecedented accuracy and",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-performance-director-d7e5280e"
+    }
+  },
+  "features": [
+    "Market analysis with buyer behavior insights",
+    "Sentiment analysis with real-time monitoring",
+    "Brand monitoring across social channels",
+    "Auto-scaling capabilities with predictive scaling",
+    "HIPAA ready with healthcare data protection"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee with redundant architecture",
+    "Enhanced security with continuous threat monitoring",
+    "Improved conversion rates with personalization",
+    "Better resource utilization with auto-scaling",
+    "Enhanced decision making with data-driven insights"
+  ]
+}

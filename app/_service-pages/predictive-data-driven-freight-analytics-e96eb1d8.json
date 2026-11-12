@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/predictive-data-driven-freight-analytics-e96eb1d8",
+  "breadcrumbTitle": "Predictive Data-Driven Freight Analytics",
+  "title": "Predictive Data-Driven Freight Analytics",
+  "description": "Freight intelligence platform that provides data-driven rate forecasting, capacity planning, and carrier performance analytics for logistics optimization.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Predictive Data-Driven Freight Analytics - Zion Tech Group",
+    "description": "Freight intelligence platform that provides data-driven rate forecasting, capacity planning, and carrier performance analytics for logistics optimization.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/predictive-data-driven-freight-analytics-e96eb1d8"
+    }
+  },
+  "features": [
+    "Rate forecasting",
+    "Capacity planning",
+    "Carrier scorecards",
+    "Lane optimization"
+  ],
+  "benefits": [
+    "Cost reduction",
+    "Better capacity",
+    "Improved reliability",
+    "Strategic sourcing"
+  ]
+}

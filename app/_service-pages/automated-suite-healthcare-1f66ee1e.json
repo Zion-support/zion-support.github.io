@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/automated-suite-healthcare-1f66ee1e",
+  "breadcrumbTitle": "Automated suite-healthcare",
+  "title": "Automated suite-healthcare",
+  "description": "Next-generation healthcare solution: Automated suite-healthcare. Combines market intelligence with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated suite-healthcare - Zion Tech Group",
+    "description": "Next-generation healthcare solution: Automated suite-healthcare. Combines market intelligence with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-suite-healthcare-1f66ee1e"
+    }
+  },
+  "features": [
+    "Open-source friendly",
+    "Microservices deployment",
+    "Role-based access control",
+    "Custom integrations"
+  ],
+  "benefits": [
+    "24/7 automated operations",
+    "Automated compliance reporting",
+    "Self-healing infrastructure",
+    "Seamless integration with existing systems",
+    "Intelligent load balancing"
+  ]
+}

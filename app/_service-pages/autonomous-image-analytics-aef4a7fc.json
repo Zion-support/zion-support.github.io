@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/autonomous-image-analytics-aef4a7fc",
+  "breadcrumbTitle": "Autonomous Image Analytics",
+  "title": "Autonomous Image Analytics",
+  "description": "The future of transportation is here with Autonomous Image Analytics. Powered by cutting-edge AI, this platform delivers compliance monitoring like never before",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous Image Analytics - Zion Tech Group",
+    "description": "The future of transportation is here with Autonomous Image Analytics. Powered by cutting-edge AI, this platform delivers compliance monitoring like never before",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-image-analytics-aef4a7fc"
+    }
+  },
+  "features": [
+    "Open-source friendly",
+    "GDPR compliance",
+    "Audit trails",
+    "Mobile-responsive interface",
+    "Cloud-native architecture"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "50% reduction in operational costs",
+    "Dynamic resource allocation"
+  ]
+}

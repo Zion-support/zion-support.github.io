@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/ai-insights---energy-edition-d7b7b5e7",
+  "breadcrumbTitle": "AI Insights - Energy Edition",
+  "title": "AI Insights - Energy Edition",
+  "description": "Unlock unprecedented growth with AI Insights - Energy Edition. This autonomous system provides workflow management with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Insights - Energy Edition - Zion Tech Group",
+    "description": "Unlock unprecedented growth with AI Insights - Energy Edition. This autonomous system provides workflow management with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-insights---energy-edition-d7b7b5e7"
+    }
+  },
+  "features": [
+    "Multi-region deployment",
+    "Microservices deployment",
+    "Custom integrations",
+    "Plugin architecture",
+    "Role-based access control"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "Predictive maintenance scheduling",
+    "99.9% uptime guarantee",
+    "Dynamic resource allocation",
+    "Real-time insights and alerts"
+  ]
+}

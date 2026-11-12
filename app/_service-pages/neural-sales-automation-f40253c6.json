@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/neural-sales-automation-f40253c6",
+  "breadcrumbTitle": "Neural Sales Automation",
+  "title": "Neural Sales Automation",
+  "description": "Next-generation automotive solution: Neural Sales Automation. Combines content generation with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Neural Sales Automation - Zion Tech Group",
+    "description": "Next-generation automotive solution: Neural Sales Automation. Combines content generation with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/neural-sales-automation-f40253c6"
+    }
+  },
+  "features": [
+    "Alerting system",
+    "SOC 2 certified",
+    "Auto-scaling capabilities",
+    "Microservices deployment"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "Reduced human error by 95%",
+    "Scalable to millions of transactions"
+  ]
+}

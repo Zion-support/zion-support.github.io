@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/baichuan-79f45e77",
+  "breadcrumbTitle": "Baichuan",
+  "title": "Baichuan",
+  "description": "Baichuan AI (Baichuan; Chinese: 百川智能; pinyin: Bǎichuān Zhìnéng) is an artificial intelligence (AI) company based in Beijing, China. As of 2024, it has been dubb",
+  "basic": "$N/A/month",
+  "pro": "$N/A/month",
+  "enterprise": "$N/A/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Baichuan - Zion Tech Group",
+    "description": "Baichuan AI (Baichuan; Chinese: 百川智能; pinyin: Bǎichuān Zhìnéng) is an artificial intelligence (AI) company based in Beijing, China. As of 2024, it has been dubb",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/baichuan-79f45e77"
+    }
+  },
+  "features": [
+    "AI-driven automation",
+    "Cloud-native deployment",
+    "API-first architecture",
+    "Enterprise-grade security",
+    "Scalable infrastructure"
+  ],
+  "benefits": [
+    "Improved operational efficiency",
+    "Reduced manual processes",
+    "Data-driven decision making",
+    "Faster time-to value",
+    "Scalable performance"
+  ]
+}

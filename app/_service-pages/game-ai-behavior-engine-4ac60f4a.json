@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/game-ai-behavior-engine-4ac60f4a",
+  "breadcrumbTitle": "Game AI Behavior Engine",
+  "title": "Game AI Behavior Engine",
+  "description": "Create intelligent NPCs with realistic behaviors using advanced AI. Supports dynamic dialogue, adaptive difficulty, and emergent gameplay without scripted decis",
+  "basic": "$999/month",
+  "pro": "$2999/month",
+  "enterprise": "$9999/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Game AI Behavior Engine - Zion Tech Group",
+    "description": "Create intelligent NPCs with realistic behaviors using advanced AI. Supports dynamic dialogue, adaptive difficulty, and emergent gameplay without scripted decis",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/game-ai-behavior-engine-4ac60f4a"
+    }
+  },
+  "features": [
+    "Dynamic NPC behavior",
+    "Adaptive difficulty scaling",
+    "Procedural dialogue generation",
+    "Emergent gameplay support",
+    "Unity/Unreal integration"
+  ],
+  "benefits": [
+    "Reduce AI development time 70%",
+    "Increase player engagement",
+    "Create living worlds",
+    "Scale to thousands of NPCs",
+    "No behavior tree maintenance"
+  ]
+}

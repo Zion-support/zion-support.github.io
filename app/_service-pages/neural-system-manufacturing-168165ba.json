@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/neural-system-manufacturing-168165ba",
+  "breadcrumbTitle": "Neural system-manufacturing",
+  "title": "Neural system-manufacturing",
+  "description": "Revolutionize manufacturing through intelligent automation. Our Neural system-manufacturing leverages advanced machine learning to deliver performance monitorin",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Neural system-manufacturing - Zion Tech Group",
+    "description": "Revolutionize manufacturing through intelligent automation. Our Neural system-manufacturing leverages advanced machine learning to deliver performance monitorin",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/neural-system-manufacturing-168165ba"
+    }
+  },
+  "features": [
+    "Open-source friendly",
+    "Custom integrations",
+    "Cloud-native architecture",
+    "Serverless functions",
+    "Plugin architecture"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "Enterprise-grade security",
+    "Real-time insights and alerts"
+  ]
+}

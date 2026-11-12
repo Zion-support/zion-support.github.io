@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-healthcare---logistics-edition-1-af7327be",
+  "breadcrumbTitle": "AI Healthcare - Logistics Edition #1",
+  "title": "AI Healthcare - Logistics Edition #1",
+  "description": "Revolutionize Logistics through intelligent automation. Our AI Healthcare - Logistics Edition #1 leverages advanced machine learning to deliver data quality at ",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Healthcare - Logistics Edition #1 - Zion Tech Group",
+    "description": "Revolutionize Logistics through intelligent automation. Our AI Healthcare - Logistics Edition #1 leverages advanced machine learning to deliver data quality at ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-healthcare---logistics-edition-1-af7327be"
+    }
+  },
+  "features": [
+    "HIPAA ready with healthcare data protection",
+    "Role-based access control with SSO integration",
+    "Edge computing support for low-latency operations",
+    "Content generation with plagiarism checks",
+    "API-first design with comprehensive REST and GraphQL endpoints"
+  ],
+  "benefits": [
+    "Performance benchmarking against industry standards",
+    "Zero manual intervention required for routine tasks",
+    "Improved employee productivity with automation",
+    "Improved customer retention with proactive service"
+  ]
+}

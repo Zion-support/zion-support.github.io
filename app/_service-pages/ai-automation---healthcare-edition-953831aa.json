@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/ai-automation---healthcare-edition-953831aa",
+  "breadcrumbTitle": "AI Automation - Healthcare Edition",
+  "title": "AI Automation - Healthcare Edition",
+  "description": "Transform your healthcare operations with our AI Automation - Healthcare Edition. This AI-driven solution automates fraud prevention with unprecedented accuracy",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Automation - Healthcare Edition - Zion Tech Group",
+    "description": "Transform your healthcare operations with our AI Automation - Healthcare Edition. This AI-driven solution automates fraud prevention with unprecedented accuracy",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-automation---healthcare-edition-953831aa"
+    }
+  },
+  "features": [
+    "Open-source friendly",
+    "Comprehensive monitoring",
+    "SOC 2 certified",
+    "API-first design",
+    "Container orchestration"
+  ],
+  "benefits": [
+    "50% reduction in operational costs",
+    "Performance benchmarking",
+    "Zero manual intervention required",
+    "Dynamic resource allocation",
+    "Enterprise-grade security"
+  ]
+}

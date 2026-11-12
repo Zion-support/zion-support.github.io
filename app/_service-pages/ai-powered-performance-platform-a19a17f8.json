@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/ai-powered-performance-platform-a19a17f8",
+  "breadcrumbTitle": "AI-Powered Performance Platform",
+  "title": "AI-Powered Performance Platform",
+  "description": "Transform your finance operations with our AI-Powered Performance Platform. This AI-driven solution automates maintenance scheduling with unprecedented accuracy",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Performance Platform - Zion Tech Group",
+    "description": "Transform your finance operations with our AI-Powered Performance Platform. This AI-driven solution automates maintenance scheduling with unprecedented accuracy",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-performance-platform-a19a17f8"
+    }
+  },
+  "features": [
+    "Custom integrations",
+    "Offline capabilities",
+    "Audit trails",
+    "Edge computing support"
+  ],
+  "benefits": [
+    "24/7 automated operations",
+    "Seamless integration with existing systems",
+    "3x faster decision making"
+  ]
+}

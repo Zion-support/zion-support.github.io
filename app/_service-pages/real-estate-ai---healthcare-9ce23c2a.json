@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/real-estate-ai---healthcare-9ce23c2a",
+  "breadcrumbTitle": "Real Estate AI - Healthcare",
+  "title": "Real Estate AI - Healthcare",
+  "description": "Next-generation Healthcare solution: Real Estate AI - Healthcare. Combines threat detection with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Real Estate AI - Healthcare - Zion Tech Group",
+    "description": "Next-generation Healthcare solution: Real Estate AI - Healthcare. Combines threat detection with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/real-estate-ai---healthcare-9ce23c2a"
+    }
+  },
+  "features": [
+    "Custom integrations with webhook support",
+    "Business intelligence with KPI dashboards",
+    "Serverless functions for cost-effective scaling",
+    "Budget optimization with cost allocation",
+    "Customer service automation with chatbot integration"
+  ],
+  "benefits": [
+    "50% reduction in operational costs through automation",
+    "Real-time insights and alerts for proactive management",
+    "Improved product quality with automated testing",
+    "24/7 automated operations without human intervention",
+    "Reduced risk with early warning systems"
+  ]
+}

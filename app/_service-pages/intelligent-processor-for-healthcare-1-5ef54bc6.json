@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-processor-for-healthcare-1-5ef54bc6",
+  "breadcrumbTitle": "Intelligent Processor for Healthcare #1",
+  "title": "Intelligent Processor for Healthcare #1",
+  "description": "Unlock unprecedented growth with Intelligent Processor for Healthcare #1. This autonomous system provides maintenance scheduling with zero manual intervention n",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Processor for Healthcare #1 - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Intelligent Processor for Healthcare #1. This autonomous system provides maintenance scheduling with zero manual intervention n",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-processor-for-healthcare-1-5ef54bc6"
+    }
+  },
+  "features": [
+    "API-first design",
+    "Container orchestration",
+    "Mobile-responsive interface",
+    "Open-source friendly",
+    "GDPR compliance"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "Self-healing infrastructure",
+    "Scalable to millions of transactions"
+  ]
+}

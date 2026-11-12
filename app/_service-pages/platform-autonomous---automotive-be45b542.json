@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/platform-autonomous---automotive-be45b542",
+  "breadcrumbTitle": "Platform Autonomous - Automotive",
+  "title": "Platform Autonomous - Automotive",
+  "description": "Next-generation automotive solution: Platform Autonomous - Automotive. Combines network optimization with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Platform Autonomous - Automotive - Zion Tech Group",
+    "description": "Next-generation automotive solution: Platform Autonomous - Automotive. Combines network optimization with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/platform-autonomous---automotive-be45b542"
+    }
+  },
+  "features": [
+    "Rollback mechanisms",
+    "Plugin architecture",
+    "Performance dashboards",
+    "Real-time processing"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "Scalable to millions of transactions",
+    "Zero manual intervention required"
+  ]
+}

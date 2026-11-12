@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/director-intelligent---gaming-d900fa9c",
+  "breadcrumbTitle": "Director Intelligent - Gaming",
+  "title": "Director Intelligent - Gaming",
+  "description": "Revolutionize gaming through intelligent automation. Our Director Intelligent - Gaming leverages advanced machine learning to deliver energy management at scale",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Director Intelligent - Gaming - Zion Tech Group",
+    "description": "Revolutionize gaming through intelligent automation. Our Director Intelligent - Gaming leverages advanced machine learning to deliver energy management at scale",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/director-intelligent---gaming-d900fa9c"
+    }
+  },
+  "features": [
+    "Zero-downtime updates",
+    "Mobile-responsive interface",
+    "Custom integrations",
+    "Rollback mechanisms"
+  ],
+  "benefits": [
+    "Seamless integration with existing systems",
+    "3x faster decision making",
+    "Zero manual intervention required",
+    "Automated compliance reporting",
+    "Cost optimization recommendations"
+  ]
+}

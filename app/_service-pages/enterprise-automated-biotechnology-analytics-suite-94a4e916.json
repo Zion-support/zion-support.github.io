@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/enterprise-automated-biotechnology-analytics-suite-94a4e916",
+  "breadcrumbTitle": "Enterprise Automated Biotechnology Analytics Suite",
+  "title": "Enterprise Automated Biotechnology Analytics Suite",
+  "description": "Enterprise analytics suite that delivers automated biotechnology insights with unified dashboards and reporting.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Enterprise Automated Biotechnology Analytics Suite - Zion Tech Group",
+    "description": "Enterprise analytics suite that delivers automated biotechnology insights with unified dashboards and reporting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/enterprise-automated-biotechnology-analytics-suite-94a4e916"
+    }
+  },
+  "features": [
+    "Data visualization",
+    "Custom dashboards",
+    "Report generation",
+    "KPI tracking"
+  ],
+  "benefits": [
+    "Unified data view",
+    "Faster insights",
+    "Customizable reports",
+    "Cross-functional collaboration"
+  ]
+}

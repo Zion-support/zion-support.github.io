@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/director-autonomous---tech-c882270e",
+  "breadcrumbTitle": "Director Autonomous - Tech",
+  "title": "Director Autonomous - Tech",
+  "description": "The future of technology is here with Director Autonomous - Tech. Powered by cutting-edge AI, this platform delivers market intelligence like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Director Autonomous - Tech - Zion Tech Group",
+    "description": "The future of technology is here with Director Autonomous - Tech. Powered by cutting-edge AI, this platform delivers market intelligence like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/director-autonomous---tech-c882270e"
+    }
+  },
+  "features": [
+    "Container orchestration",
+    "API-first design",
+    "Edge computing support",
+    "Microservices deployment",
+    "Multi-region deployment"
+  ],
+  "benefits": [
+    "Scalable to millions of transactions",
+    "Reduced human error by 95%",
+    "24/7 automated operations"
+  ]
+}

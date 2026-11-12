@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-maintenance-coordinator-3b123a98",
+  "breadcrumbTitle": "Intelligent Maintenance Coordinator",
+  "title": "Intelligent Maintenance Coordinator",
+  "description": "The future of automotive is here with Intelligent Maintenance Coordinator. Powered by cutting-edge AI, this platform delivers language processing like never bef",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Maintenance Coordinator - Zion Tech Group",
+    "description": "The future of automotive is here with Intelligent Maintenance Coordinator. Powered by cutting-edge AI, this platform delivers language processing like never bef",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-maintenance-coordinator-3b123a98"
+    }
+  },
+  "features": [
+    "Microservices deployment",
+    "Edge computing support",
+    "Alerting system",
+    "API-first design",
+    "Custom integrations"
+  ],
+  "benefits": [
+    "50% reduction in operational costs",
+    "Intelligent load balancing",
+    "Scalable to millions of transactions"
+  ]
+}

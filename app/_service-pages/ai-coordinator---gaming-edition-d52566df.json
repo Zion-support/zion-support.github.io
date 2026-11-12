@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-coordinator---gaming-edition-d52566df",
+  "breadcrumbTitle": "AI Coordinator - Gaming Edition",
+  "title": "AI Coordinator - Gaming Edition",
+  "description": "Next-generation gaming solution: AI Coordinator - Gaming Edition. Combines maintenance scheduling with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Coordinator - Gaming Edition - Zion Tech Group",
+    "description": "Next-generation gaming solution: AI Coordinator - Gaming Edition. Combines maintenance scheduling with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-coordinator---gaming-edition-d52566df"
+    }
+  },
+  "features": [
+    "Comprehensive monitoring",
+    "Rollback mechanisms",
+    "Custom integrations",
+    "HIPAA ready"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "Automated compliance reporting",
+    "Scalable to millions of transactions",
+    "Intelligent load balancing"
+  ]
+}

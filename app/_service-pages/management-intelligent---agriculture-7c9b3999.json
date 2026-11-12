@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/management-intelligent---agriculture-7c9b3999",
+  "breadcrumbTitle": "Management Intelligent - Agriculture",
+  "title": "Management Intelligent - Agriculture",
+  "description": "Revolutionize agriculture through intelligent automation. Our Management Intelligent - Agriculture leverages advanced machine learning to deliver threat detecti",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Management Intelligent - Agriculture - Zion Tech Group",
+    "description": "Revolutionize agriculture through intelligent automation. Our Management Intelligent - Agriculture leverages advanced machine learning to deliver threat detecti",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/management-intelligent---agriculture-7c9b3999"
+    }
+  },
+  "features": [
+    "GDPR compliance",
+    "Edge computing support",
+    "Audit trails",
+    "Container orchestration",
+    "Plugin architecture"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "Automated compliance reporting",
+    "Reduced human error by 95%"
+  ]
+}

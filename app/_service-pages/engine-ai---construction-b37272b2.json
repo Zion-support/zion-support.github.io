@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/engine-ai---construction-b37272b2",
+  "breadcrumbTitle": "Engine AI - Construction",
+  "title": "Engine AI - Construction",
+  "description": "Unlock unprecedented growth with Engine AI - Construction. This autonomous system provides quality control with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Engine AI - Construction - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Engine AI - Construction. This autonomous system provides quality control with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/engine-ai---construction-b37272b2"
+    }
+  },
+  "features": [
+    "GDPR compliance",
+    "Machine learning integration",
+    "API-first design",
+    "Container orchestration"
+  ],
+  "benefits": [
+    "Scalable to millions of transactions",
+    "Performance benchmarking",
+    "24/7 automated operations",
+    "Real-time insights and alerts"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/smart-supply-for-manufacturing-b711a856",
+  "breadcrumbTitle": "Smart Supply for Manufacturing",
+  "title": "Smart Supply for Manufacturing",
+  "description": "Unlock unprecedented growth with Smart Supply for Manufacturing. This autonomous system provides scenario planning with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Supply for Manufacturing - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Smart Supply for Manufacturing. This autonomous system provides scenario planning with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-supply-for-manufacturing-b711a856"
+    }
+  },
+  "features": [
+    "Data encryption at rest and in transit",
+    "Executive dashboards with drill-down capabilities",
+    "Mobile-responsive interface with offline capabilities",
+    "Content generation with plagiarism checks",
+    "Comprehensive monitoring with custom dashboards"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling to prevent downtime",
+    "Improved conversion rates with personalization",
+    "Better code quality with automated reviews",
+    "Better compliance with automated audit trails",
+    "Reduced development time with code generation"
+  ]
+}

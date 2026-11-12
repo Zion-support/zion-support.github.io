@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/supply-adaptive---retail-15ca3579",
+  "breadcrumbTitle": "Supply Adaptive - Retail",
+  "title": "Supply Adaptive - Retail",
+  "description": "Transform your Retail operations with our Supply Adaptive - Retail. This AI-driven solution automates executive dashboards with unprecedented accuracy and effic",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Supply Adaptive - Retail - Zion Tech Group",
+    "description": "Transform your Retail operations with our Supply Adaptive - Retail. This AI-driven solution automates executive dashboards with unprecedented accuracy and effic",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/supply-adaptive---retail-15ca3579"
+    }
+  },
+  "features": [
+    "Healthcare data analytics with patient insights",
+    "Microservices deployment with container orchestration",
+    "Executive dashboards with drill-down capabilities",
+    "Scenario planning with Monte Carlo simulations",
+    "Process discovery with activity analysis"
+  ],
+  "benefits": [
+    "Better market positioning with competitive analysis",
+    "Dynamic resource allocation based on demand patterns",
+    "Improved quality with automated testing and validation",
+    "Better supply chain visibility with tracking",
+    "Reduced development time with code generation"
+  ]
+}

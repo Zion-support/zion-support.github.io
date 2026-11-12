@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/ai-supply---hospitality-edition-24bda4f4",
+  "breadcrumbTitle": "AI Supply - Hospitality Edition",
+  "title": "AI Supply - Hospitality Edition",
+  "description": "The future of Hospitality is here with AI Supply - Hospitality Edition. Powered by cutting-edge AI, this platform delivers language processing like never before",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Supply - Hospitality Edition - Zion Tech Group",
+    "description": "The future of Hospitality is here with AI Supply - Hospitality Edition. Powered by cutting-edge AI, this platform delivers language processing like never before",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-supply---hospitality-edition-24bda4f4"
+    }
+  },
+  "features": [
+    "Revenue forecasting with market trend analysis",
+    "Cost reduction with process mining",
+    "Custom integrations with webhook support",
+    "A/B testing framework for continuous optimization",
+    "Compliance monitoring with regulatory updates"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee with redundant architecture",
+    "Dynamic resource allocation based on demand patterns",
+    "ROI achieved in under 90 days with cost savings",
+    "Reduced churn with proactive customer retention",
+    "24/7 automated operations without human intervention"
+  ]
+}

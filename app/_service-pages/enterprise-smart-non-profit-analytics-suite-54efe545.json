@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/enterprise-smart-non-profit-analytics-suite-54efe545",
+  "breadcrumbTitle": "Enterprise Smart Non-Profit Analytics Suite",
+  "title": "Enterprise Smart Non-Profit Analytics Suite",
+  "description": "Enterprise analytics suite that delivers smart non-profit insights with unified dashboards and reporting.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Enterprise Smart Non-Profit Analytics Suite - Zion Tech Group",
+    "description": "Enterprise analytics suite that delivers smart non-profit insights with unified dashboards and reporting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/enterprise-smart-non-profit-analytics-suite-54efe545"
+    }
+  },
+  "features": [
+    "Data visualization",
+    "Custom dashboards",
+    "Report generation",
+    "KPI tracking"
+  ],
+  "benefits": [
+    "Unified data view",
+    "Faster insights",
+    "Customizable reports",
+    "Cross-functional collaboration"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/automated-inventory-manager-d3f93f11",
+  "breadcrumbTitle": "Automated Inventory Manager",
+  "title": "Automated Inventory Manager",
+  "description": "Transform your manufacturing operations with our Automated Inventory Manager. This AI-driven solution automates process automation with unprecedented accuracy a",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated Inventory Manager - Zion Tech Group",
+    "description": "Transform your manufacturing operations with our Automated Inventory Manager. This AI-driven solution automates process automation with unprecedented accuracy a",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-inventory-manager-d3f93f11"
+    }
+  },
+  "features": [
+    "Mobile-responsive interface",
+    "Serverless functions",
+    "Offline capabilities",
+    "Performance dashboards"
+  ],
+  "benefits": [
+    "24/7 automated operations",
+    "Scalable to millions of transactions",
+    "Zero manual intervention required",
+    "Intelligent load balancing",
+    "Real-time insights and alerts"
+  ]
+}

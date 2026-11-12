@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/automated-system-hospitality-81e0c9b7",
+  "breadcrumbTitle": "Automated system-hospitality",
+  "title": "Automated system-hospitality",
+  "description": "Revolutionize hospitality through intelligent automation. Our Automated system-hospitality leverages advanced machine learning to deliver network optimization a",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated system-hospitality - Zion Tech Group",
+    "description": "Revolutionize hospitality through intelligent automation. Our Automated system-hospitality leverages advanced machine learning to deliver network optimization a",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-system-hospitality-81e0c9b7"
+    }
+  },
+  "features": [
+    "SOC 2 certified",
+    "Data encryption",
+    "Mobile-responsive interface",
+    "Zero-downtime updates",
+    "Rollback mechanisms"
+  ],
+  "benefits": [
+    "Seamless integration with existing systems",
+    "Zero manual intervention required",
+    "Real-time insights and alerts"
+  ]
+}

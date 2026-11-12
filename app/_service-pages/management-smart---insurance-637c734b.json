@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/management-smart---insurance-637c734b",
+  "breadcrumbTitle": "Management Smart - Insurance",
+  "title": "Management Smart - Insurance",
+  "description": "Next-generation insurance solution: Management Smart - Insurance. Combines predictive analytics with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Management Smart - Insurance - Zion Tech Group",
+    "description": "Next-generation insurance solution: Management Smart - Insurance. Combines predictive analytics with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/management-smart---insurance-637c734b"
+    }
+  },
+  "features": [
+    "Serverless functions",
+    "Performance dashboards",
+    "Plugin architecture",
+    "Multi-language support"
+  ],
+  "benefits": [
+    "Dynamic resource allocation",
+    "3x faster decision making",
+    "Self-healing infrastructure",
+    "ROI in under 90 days",
+    "Scalable to millions of transactions"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/neural-manager-logistics-695fb521",
+  "breadcrumbTitle": "Neural manager-logistics",
+  "title": "Neural manager-logistics",
+  "description": "Transform your logistics operations with our Neural manager-logistics. This AI-driven solution automates threat detection with unprecedented accuracy and effici",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Neural manager-logistics - Zion Tech Group",
+    "description": "Transform your logistics operations with our Neural manager-logistics. This AI-driven solution automates threat detection with unprecedented accuracy and effici",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/neural-manager-logistics-695fb521"
+    }
+  },
+  "features": [
+    "Performance dashboards",
+    "Open-source friendly",
+    "Plugin architecture",
+    "SOC 2 certified"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "ROI in under 90 days",
+    "Reduced human error by 95%",
+    "Predictive maintenance scheduling",
+    "Scalable to millions of transactions"
+  ]
+}

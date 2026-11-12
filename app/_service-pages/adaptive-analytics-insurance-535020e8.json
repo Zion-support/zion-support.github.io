@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/adaptive-analytics-insurance-535020e8",
+  "breadcrumbTitle": "Adaptive analytics-insurance",
+  "title": "Adaptive analytics-insurance",
+  "description": "The future of insurance is here with Adaptive analytics-insurance. Powered by cutting-edge AI, this platform delivers fraud prevention like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Adaptive analytics-insurance - Zion Tech Group",
+    "description": "The future of insurance is here with Adaptive analytics-insurance. Powered by cutting-edge AI, this platform delivers fraud prevention like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/adaptive-analytics-insurance-535020e8"
+    }
+  },
+  "features": [
+    "Container orchestration",
+    "Multi-region deployment",
+    "Role-based access control",
+    "Open-source friendly",
+    "Comprehensive monitoring"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Reduced human error by 95%",
+    "ROI in under 90 days",
+    "Zero manual intervention required",
+    "3x faster decision making"
+  ]
+}

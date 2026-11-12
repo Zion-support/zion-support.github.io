@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/neural-insights-healthcare-1-f2e19c98",
+  "breadcrumbTitle": "Neural insights-healthcare #1",
+  "title": "Neural insights-healthcare #1",
+  "description": "Revolutionize healthcare through intelligent automation. Our Neural insights-healthcare #1 leverages advanced machine learning to deliver supply chain at scale.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Neural insights-healthcare #1 - Zion Tech Group",
+    "description": "Revolutionize healthcare through intelligent automation. Our Neural insights-healthcare #1 leverages advanced machine learning to deliver supply chain at scale.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/neural-insights-healthcare-1-f2e19c98"
+    }
+  },
+  "features": [
+    "HIPAA ready",
+    "Cloud-native architecture",
+    "Role-based access control",
+    "Multi-language support",
+    "Serverless functions"
+  ],
+  "benefits": [
+    "Cost optimization recommendations",
+    "Scalable to millions of transactions",
+    "Zero manual intervention required",
+    "Performance benchmarking",
+    "ROI in under 90 days"
+  ]
+}

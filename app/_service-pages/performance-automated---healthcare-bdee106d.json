@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/performance-automated---healthcare-bdee106d",
+  "breadcrumbTitle": "Performance Automated - Healthcare",
+  "title": "Performance Automated - Healthcare",
+  "description": "Transform your Healthcare operations with our Performance Automated - Healthcare. This AI-driven solution automates financial risk management with unprecedented",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Performance Automated - Healthcare - Zion Tech Group",
+    "description": "Transform your Healthcare operations with our Performance Automated - Healthcare. This AI-driven solution automates financial risk management with unprecedented",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/performance-automated---healthcare-bdee106d"
+    }
+  },
+  "features": [
+    "Sentiment analysis with real-time monitoring",
+    "GDPR compliance with data portability",
+    "Logistics route optimization with traffic prediction",
+    "Budget optimization with cost allocation",
+    "Cost reduction with process mining"
+  ],
+  "benefits": [
+    "Reduced support tickets with self-service options",
+    "Better risk management with predictive analytics",
+    "Better compliance with automated audit trails",
+    "Reduced churn with proactive customer retention",
+    "Reduced marketing costs with targeted campaigns"
+  ]
+}

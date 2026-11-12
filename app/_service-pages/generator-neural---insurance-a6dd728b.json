@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/generator-neural---insurance-a6dd728b",
+  "breadcrumbTitle": "Generator Neural - Insurance",
+  "title": "Generator Neural - Insurance",
+  "description": "Transform your insurance operations with our Generator Neural - Insurance. This AI-driven solution automates fraud prevention with unprecedented accuracy and ef",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Generator Neural - Insurance - Zion Tech Group",
+    "description": "Transform your insurance operations with our Generator Neural - Insurance. This AI-driven solution automates fraud prevention with unprecedented accuracy and ef",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/generator-neural---insurance-a6dd728b"
+    }
+  },
+  "features": [
+    "Mobile-responsive interface",
+    "Plugin architecture",
+    "Real-time processing",
+    "Performance dashboards",
+    "SOC 2 certified"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Performance benchmarking",
+    "Automated compliance reporting",
+    "Scalable to millions of transactions"
+  ]
+}

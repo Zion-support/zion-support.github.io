@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/experience-automated---construction-7f4f9c81",
+  "breadcrumbTitle": "Experience Automated - Construction",
+  "title": "Experience Automated - Construction",
+  "description": "Unlock unprecedented growth with Experience Automated - Construction. This autonomous system provides quality control with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Experience Automated - Construction - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Experience Automated - Construction. This autonomous system provides quality control with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/experience-automated---construction-7f4f9c81"
+    }
+  },
+  "features": [
+    "Logistics route optimization with traffic prediction",
+    "Serverless functions for cost-effective scaling",
+    "User experience analytics with behavior tracking",
+    "Manufacturing quality control with defect detection",
+    "Comprehensive monitoring with custom dashboards"
+  ],
+  "benefits": [
+    "Automated compliance reporting for regulatory requirements",
+    "Faster time-to-market with accelerated development",
+    "Predictive maintenance scheduling to prevent downtime",
+    "Improved product quality with automated testing"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/predictive-sales-lead-scoring-129360dd",
+  "breadcrumbTitle": "Predictive Sales Lead Scoring",
+  "title": "Predictive Sales Lead Scoring",
+  "description": "Machine learning system that scores and prioritizes sales leads based on engagement patterns.",
+  "basic": "$218/month",
+  "pro": "$548/month",
+  "enterprise": "$1648/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Predictive Sales Lead Scoring - Zion Tech Group",
+    "description": "Machine learning system that scores and prioritizes sales leads based on engagement patterns.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/predictive-sales-lead-scoring-129360dd"
+    }
+  },
+  "features": [
+    "Real-time scoring",
+    "Behavioral tracking",
+    "Lead nurturing",
+    "Pipeline optimization"
+  ],
+  "benefits": [
+    "40% increase in conversions",
+    "Higher team productivity",
+    "Better lead quality",
+    "Shortened sales cycles"
+  ]
+}

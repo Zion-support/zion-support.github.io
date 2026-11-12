@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/intelligence-adaptive---legal-80d01a7f",
+  "breadcrumbTitle": "Intelligence Adaptive - Legal",
+  "title": "Intelligence Adaptive - Legal",
+  "description": "Transform your legal operations with our Intelligence Adaptive - Legal. This AI-driven solution automates workflow management with unprecedented accuracy and ef",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligence Adaptive - Legal - Zion Tech Group",
+    "description": "Transform your legal operations with our Intelligence Adaptive - Legal. This AI-driven solution automates workflow management with unprecedented accuracy and ef",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligence-adaptive---legal-80d01a7f"
+    }
+  },
+  "features": [
+    "GDPR compliance",
+    "Alerting system",
+    "Role-based access control",
+    "Multi-region deployment",
+    "Auto-scaling capabilities"
+  ],
+  "benefits": [
+    "Dynamic resource allocation",
+    "Enterprise-grade security",
+    "Seamless integration with existing systems",
+    "Scalable to millions of transactions",
+    "50% reduction in operational costs"
+  ]
+}

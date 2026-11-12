@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-driven-cloud-native-supply-chain-optimization-aea5a62c",
+  "breadcrumbTitle": "AI-Driven Cloud-Native Supply Chain Optimization",
+  "title": "AI-Driven Cloud-Native Supply Chain Optimization",
+  "description": "End-to-end supply chain platform that uses cloud-native optimization algorithms for demand planning, inventory management, and logistics coordination.",
+  "basic": "$258/month",
+  "pro": "$648/month",
+  "enterprise": "$1948/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Driven Cloud-Native Supply Chain Optimization - Zion Tech Group",
+    "description": "End-to-end supply chain platform that uses cloud-native optimization algorithms for demand planning, inventory management, and logistics coordination.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-driven-cloud-native-supply-chain-optimization-aea5a62c"
+    }
+  },
+  "features": [
+    "Demand forecasting",
+    "Inventory optimization",
+    "Supplier risk",
+    "Logistics planning"
+  ],
+  "benefits": [
+    "Reduced inventory costs",
+    "Improved service levels",
+    "Resilient supply chain",
+    "Faster response"
+  ]
+}

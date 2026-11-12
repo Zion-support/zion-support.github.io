@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/serverless-frictionless-insurtech-deployment-50d4d96b",
+  "breadcrumbTitle": "Serverless Frictionless Insurtech Deployment",
+  "title": "Serverless Frictionless Insurtech Deployment",
+  "description": "Serverless deployment platform that auto-scales frictionless insurtech workloads without infrastructure management.",
+  "basic": "$218/month",
+  "pro": "$548/month",
+  "enterprise": "$1648/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Serverless Frictionless Insurtech Deployment - Zion Tech Group",
+    "description": "Serverless deployment platform that auto-scales frictionless insurtech workloads without infrastructure management.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/serverless-frictionless-insurtech-deployment-50d4d96b"
+    }
+  },
+  "features": [
+    "Function-as-a-Service",
+    "Event-driven architecture",
+    "Stateless scaling",
+    "Cold start optimization"
+  ],
+  "benefits": [
+    "Zero infrastructure management",
+    "Pay-per-execution",
+    "Automatic scaling",
+    "Reduced DevOps overhead"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/automated-decision-analyzer-e05fdd4f",
+  "breadcrumbTitle": "Automated Decision Analyzer",
+  "title": "Automated Decision Analyzer",
+  "description": "Unlock unprecedented growth with Automated Decision Analyzer. This autonomous system provides network optimization with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated Decision Analyzer - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Automated Decision Analyzer. This autonomous system provides network optimization with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-decision-analyzer-e05fdd4f"
+    }
+  },
+  "features": [
+    "SOC 2 certified",
+    "Open-source friendly",
+    "Zero-downtime updates",
+    "Alerting system"
+  ],
+  "benefits": [
+    "Intelligent load balancing",
+    "Enterprise-grade security",
+    "50% reduction in operational costs"
+  ]
+}

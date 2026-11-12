@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/automated-sales-coordinator-724c5b44",
+  "breadcrumbTitle": "Automated Sales Coordinator",
+  "title": "Automated Sales Coordinator",
+  "description": "The future of agriculture is here with Automated Sales Coordinator. Powered by cutting-edge AI, this platform delivers performance monitoring like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated Sales Coordinator - Zion Tech Group",
+    "description": "The future of agriculture is here with Automated Sales Coordinator. Powered by cutting-edge AI, this platform delivers performance monitoring like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-sales-coordinator-724c5b44"
+    }
+  },
+  "features": [
+    "Multi-language support",
+    "SOC 2 certified",
+    "Mobile-responsive interface",
+    "API-first design",
+    "Container orchestration"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "3x faster decision making",
+    "Self-healing infrastructure",
+    "Scalable to millions of transactions",
+    "Performance benchmarking"
+  ]
+}

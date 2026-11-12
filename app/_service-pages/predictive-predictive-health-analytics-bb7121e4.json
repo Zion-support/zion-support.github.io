@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/predictive-predictive-health-analytics-bb7121e4",
+  "breadcrumbTitle": "Predictive Predictive Health Analytics",
+  "title": "Predictive Predictive Health Analytics",
+  "description": "Population health analytics platform that uses predictive predictive modeling to identify at-risk patients, optimize resource allocation, and improve care quali",
+  "basic": "$278/month",
+  "pro": "$698/month",
+  "enterprise": "$2098/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Predictive Predictive Health Analytics - Zion Tech Group",
+    "description": "Population health analytics platform that uses predictive predictive modeling to identify at-risk patients, optimize resource allocation, and improve care quali",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/predictive-predictive-health-analytics-bb7121e4"
+    }
+  },
+  "features": [
+    "Risk stratification",
+    "Population segmentation",
+    "Care gap identification",
+    "Outcome tracking"
+  ],
+  "benefits": [
+    "Early intervention",
+    "Cost reduction",
+    "Quality improvement",
+    "Regulatory compliance"
+  ]
+}

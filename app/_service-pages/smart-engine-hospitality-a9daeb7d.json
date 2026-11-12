@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/smart-engine-hospitality-a9daeb7d",
+  "breadcrumbTitle": "Smart engine-hospitality",
+  "title": "Smart engine-hospitality",
+  "description": "Revolutionize hospitality through intelligent automation. Our Smart engine-hospitality leverages advanced machine learning to deliver data processing at scale.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart engine-hospitality - Zion Tech Group",
+    "description": "Revolutionize hospitality through intelligent automation. Our Smart engine-hospitality leverages advanced machine learning to deliver data processing at scale.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-engine-hospitality-a9daeb7d"
+    }
+  },
+  "features": [
+    "Rollback mechanisms",
+    "Data encryption",
+    "API-first design",
+    "Comprehensive monitoring",
+    "Container orchestration"
+  ],
+  "benefits": [
+    "Performance benchmarking",
+    "Scalable to millions of transactions",
+    "Reduced human error by 95%",
+    "3x faster decision making",
+    "ROI in under 90 days"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/adaptive-fraud-advisor-0b04c59a",
+  "breadcrumbTitle": "Adaptive Fraud Advisor",
+  "title": "Adaptive Fraud Advisor",
+  "description": "Transform your insurance operations with our Adaptive Fraud Advisor. This AI-driven solution automates quality control with unprecedented accuracy and efficienc",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Adaptive Fraud Advisor - Zion Tech Group",
+    "description": "Transform your insurance operations with our Adaptive Fraud Advisor. This AI-driven solution automates quality control with unprecedented accuracy and efficienc",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/adaptive-fraud-advisor-0b04c59a"
+    }
+  },
+  "features": [
+    "Data encryption",
+    "Alerting system",
+    "Role-based access control",
+    "Audit trails",
+    "SOC 2 certified"
+  ],
+  "benefits": [
+    "Performance benchmarking",
+    "Cost optimization recommendations",
+    "Intelligent load balancing",
+    "Zero manual intervention required"
+  ]
+}

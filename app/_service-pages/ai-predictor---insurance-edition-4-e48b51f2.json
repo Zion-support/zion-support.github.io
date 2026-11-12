@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-predictor---insurance-edition-4-e48b51f2",
+  "breadcrumbTitle": "AI Predictor - Insurance Edition #4",
+  "title": "AI Predictor - Insurance Edition #4",
+  "description": "Transform your insurance operations with our AI Predictor - Insurance Edition #4. This AI-driven solution automates sales forecasting with unprecedented accurac",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Predictor - Insurance Edition #4 - Zion Tech Group",
+    "description": "Transform your insurance operations with our AI Predictor - Insurance Edition #4. This AI-driven solution automates sales forecasting with unprecedented accurac",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-predictor---insurance-edition-4-e48b51f2"
+    }
+  },
+  "features": [
+    "Open-source friendly",
+    "Custom integrations",
+    "Offline capabilities",
+    "Cloud-native architecture",
+    "Container orchestration"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Intelligent load balancing",
+    "ROI in under 90 days"
+  ]
+}

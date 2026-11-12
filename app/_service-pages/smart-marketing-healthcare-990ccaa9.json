@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/smart-marketing-healthcare-990ccaa9",
+  "breadcrumbTitle": "Smart marketing-healthcare",
+  "title": "Smart marketing-healthcare",
+  "description": "Unlock unprecedented growth with Smart marketing-healthcare. This autonomous system provides budget optimization with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart marketing-healthcare - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Smart marketing-healthcare. This autonomous system provides budget optimization with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-marketing-healthcare-990ccaa9"
+    }
+  },
+  "features": [
+    "Machine learning integration with automatic model training",
+    "Custom integrations with webhook support",
+    "Microservices deployment with container orchestration",
+    "Image recognition with computer vision",
+    "User experience analytics with behavior tracking"
+  ],
+  "benefits": [
+    "Increased revenue with optimized pricing strategies",
+    "Improved forecast accuracy with ML models",
+    "Reduced marketing costs with targeted campaigns",
+    "Faster content creation with AI assistance"
+  ]
+}

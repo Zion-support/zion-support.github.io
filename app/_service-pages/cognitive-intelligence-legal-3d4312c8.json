@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/cognitive-intelligence-legal-3d4312c8",
+  "breadcrumbTitle": "Cognitive intelligence-legal",
+  "title": "Cognitive intelligence-legal",
+  "description": "Next-generation legal solution: Cognitive intelligence-legal. Combines decision support with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Cognitive intelligence-legal - Zion Tech Group",
+    "description": "Next-generation legal solution: Cognitive intelligence-legal. Combines decision support with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cognitive-intelligence-legal-3d4312c8"
+    }
+  },
+  "features": [
+    "Custom integrations",
+    "Container orchestration",
+    "Audit trails",
+    "Machine learning integration",
+    "HIPAA ready"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "Cost optimization recommendations",
+    "Predictive maintenance scheduling"
+  ]
+}

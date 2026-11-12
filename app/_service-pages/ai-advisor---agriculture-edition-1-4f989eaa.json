@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/ai-advisor---agriculture-edition-1-4f989eaa",
+  "breadcrumbTitle": "AI Advisor - Agriculture Edition #1",
+  "title": "AI Advisor - Agriculture Edition #1",
+  "description": "Revolutionize agriculture through intelligent automation. Our AI Advisor - Agriculture Edition #1 leverages advanced machine learning to deliver image recogniti",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Advisor - Agriculture Edition #1 - Zion Tech Group",
+    "description": "Revolutionize agriculture through intelligent automation. Our AI Advisor - Agriculture Edition #1 leverages advanced machine learning to deliver image recogniti",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-advisor---agriculture-edition-1-4f989eaa"
+    }
+  },
+  "features": [
+    "Serverless functions",
+    "Offline capabilities",
+    "Real-time processing",
+    "Cloud-native architecture",
+    "Zero-downtime updates"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "Dynamic resource allocation",
+    "3x faster decision making",
+    "Real-time insights and alerts",
+    "Enterprise-grade security"
+  ]
+}

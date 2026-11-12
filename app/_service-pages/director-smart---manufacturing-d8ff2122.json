@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/director-smart---manufacturing-d8ff2122",
+  "breadcrumbTitle": "Director Smart - Manufacturing",
+  "title": "Director Smart - Manufacturing",
+  "description": "Revolutionize manufacturing through intelligent automation. Our Director Smart - Manufacturing leverages advanced machine learning to deliver financial planning",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Director Smart - Manufacturing - Zion Tech Group",
+    "description": "Revolutionize manufacturing through intelligent automation. Our Director Smart - Manufacturing leverages advanced machine learning to deliver financial planning",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/director-smart---manufacturing-d8ff2122"
+    }
+  },
+  "features": [
+    "Microservices deployment",
+    "Custom integrations",
+    "API-first design",
+    "Zero-downtime updates",
+    "Alerting system"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "ROI in under 90 days",
+    "Reduced human error by 95%"
+  ]
+}

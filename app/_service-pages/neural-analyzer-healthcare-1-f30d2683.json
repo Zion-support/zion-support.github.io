@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/neural-analyzer-healthcare-1-f30d2683",
+  "breadcrumbTitle": "Neural analyzer-healthcare #1",
+  "title": "Neural analyzer-healthcare #1",
+  "description": "Transform your healthcare operations with our Neural analyzer-healthcare #1. This AI-driven solution automates image recognition with unprecedented accuracy and",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Neural analyzer-healthcare #1 - Zion Tech Group",
+    "description": "Transform your healthcare operations with our Neural analyzer-healthcare #1. This AI-driven solution automates image recognition with unprecedented accuracy and",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/neural-analyzer-healthcare-1-f30d2683"
+    }
+  },
+  "features": [
+    "Open-source friendly",
+    "Offline capabilities",
+    "Role-based access control",
+    "Audit trails",
+    "Cloud-native architecture"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "24/7 automated operations",
+    "Predictive maintenance scheduling"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/analytics-ai---transportation-ad09d330",
+  "breadcrumbTitle": "Analytics AI - Transportation",
+  "title": "Analytics AI - Transportation",
+  "description": "Next-generation transportation solution: Analytics AI - Transportation. Combines predictive analytics with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Analytics AI - Transportation - Zion Tech Group",
+    "description": "Next-generation transportation solution: Analytics AI - Transportation. Combines predictive analytics with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/analytics-ai---transportation-ad09d330"
+    }
+  },
+  "features": [
+    "Edge computing support",
+    "Offline capabilities",
+    "Machine learning integration",
+    "Mobile-responsive interface",
+    "API-first design"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "Automated compliance reporting",
+    "Performance benchmarking"
+  ]
+}

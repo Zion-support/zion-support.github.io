@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/enterprise-streamlined-sales-analytics-suite-e80a626a",
+  "breadcrumbTitle": "Enterprise Streamlined Sales Analytics Suite",
+  "title": "Enterprise Streamlined Sales Analytics Suite",
+  "description": "Enterprise analytics suite that delivers streamlined sales insights with unified dashboards and reporting.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Enterprise Streamlined Sales Analytics Suite - Zion Tech Group",
+    "description": "Enterprise analytics suite that delivers streamlined sales insights with unified dashboards and reporting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/enterprise-streamlined-sales-analytics-suite-e80a626a"
+    }
+  },
+  "features": [
+    "Data visualization",
+    "Custom dashboards",
+    "Report generation",
+    "KPI tracking"
+  ],
+  "benefits": [
+    "Unified data view",
+    "Faster insights",
+    "Customizable reports",
+    "Cross-functional collaboration"
+  ]
+}

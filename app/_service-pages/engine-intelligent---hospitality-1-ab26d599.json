@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/engine-intelligent---hospitality-1-ab26d599",
+  "breadcrumbTitle": "Engine Intelligent - Hospitality #1",
+  "title": "Engine Intelligent - Hospitality #1",
+  "description": "Unlock unprecedented growth with Engine Intelligent - Hospitality #1. This autonomous system provides code optimization with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Engine Intelligent - Hospitality #1 - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Engine Intelligent - Hospitality #1. This autonomous system provides code optimization with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/engine-intelligent---hospitality-1-ab26d599"
+    }
+  },
+  "features": [
+    "Alerting system",
+    "Container orchestration",
+    "Multi-region deployment",
+    "Multi-language support"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "Intelligent load balancing",
+    "Zero manual intervention required",
+    "Seamless integration with existing systems"
+  ]
+}

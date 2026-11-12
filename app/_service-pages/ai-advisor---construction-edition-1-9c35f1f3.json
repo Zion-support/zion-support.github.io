@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/ai-advisor---construction-edition-1-9c35f1f3",
+  "breadcrumbTitle": "AI Advisor - Construction Edition #1",
+  "title": "AI Advisor - Construction Edition #1",
+  "description": "The future of construction is here with AI Advisor - Construction Edition #1. Powered by cutting-edge AI, this platform delivers maintenance scheduling like nev",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Advisor - Construction Edition #1 - Zion Tech Group",
+    "description": "The future of construction is here with AI Advisor - Construction Edition #1. Powered by cutting-edge AI, this platform delivers maintenance scheduling like nev",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-advisor---construction-edition-1-9c35f1f3"
+    }
+  },
+  "features": [
+    "Serverless functions",
+    "Mobile-responsive interface",
+    "Container orchestration",
+    "Comprehensive monitoring",
+    "Real-time processing"
+  ],
+  "benefits": [
+    "Automated compliance reporting",
+    "Scalable to millions of transactions",
+    "Self-healing infrastructure",
+    "ROI in under 90 days",
+    "3x faster decision making"
+  ]
+}

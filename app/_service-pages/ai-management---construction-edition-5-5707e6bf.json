@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-management---construction-edition-5-5707e6bf",
+  "breadcrumbTitle": "AI Management - Construction Edition #5",
+  "title": "AI Management - Construction Edition #5",
+  "description": "The future of construction is here with AI Management - Construction Edition #5. Powered by cutting-edge AI, this platform delivers decision support like never ",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Management - Construction Edition #5 - Zion Tech Group",
+    "description": "The future of construction is here with AI Management - Construction Edition #5. Powered by cutting-edge AI, this platform delivers decision support like never ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-management---construction-edition-5-5707e6bf"
+    }
+  },
+  "features": [
+    "Plugin architecture",
+    "Microservices deployment",
+    "Offline capabilities",
+    "Audit trails",
+    "Multi-language support"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "99.9% uptime guarantee",
+    "Scalable to millions of transactions"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-director---real-estate-edition-1a7621b4",
+  "breadcrumbTitle": "AI Director - Real Estate Edition",
+  "title": "AI Director - Real Estate Edition",
+  "description": "Revolutionize Real Estate through intelligent automation. Our AI Director - Real Estate Edition leverages advanced machine learning to deliver financial plannin",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Director - Real Estate Edition - Zion Tech Group",
+    "description": "Revolutionize Real Estate through intelligent automation. Our AI Director - Real Estate Edition leverages advanced machine learning to deliver financial plannin",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-director---real-estate-edition-1a7621b4"
+    }
+  },
+  "features": [
+    "Open-source friendly with plugin architecture",
+    "Cost reduction with process mining",
+    "Business intelligence with KPI dashboards",
+    "Microservices deployment with container orchestration",
+    "Healthcare data analytics with patient insights"
+  ],
+  "benefits": [
+    "Improved employee productivity with automation",
+    "Improved customer satisfaction with faster response times",
+    "Improved product quality with automated testing",
+    "Predictive maintenance scheduling to prevent downtime"
+  ]
+}

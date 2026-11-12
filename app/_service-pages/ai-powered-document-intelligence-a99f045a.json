@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-document-intelligence-a99f045a",
+  "breadcrumbTitle": "AI-Powered Document Intelligence",
+  "title": "AI-Powered Document Intelligence",
+  "description": "Next-generation technology solution: AI-Powered Document Intelligence. Combines maintenance scheduling with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Document Intelligence - Zion Tech Group",
+    "description": "Next-generation technology solution: AI-Powered Document Intelligence. Combines maintenance scheduling with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-document-intelligence-a99f045a"
+    }
+  },
+  "features": [
+    "Multi-region deployment",
+    "Open-source friendly",
+    "HIPAA ready",
+    "Edge computing support",
+    "GDPR compliance"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "Automated compliance reporting",
+    "Zero manual intervention required"
+  ]
+}

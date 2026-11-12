@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-quality-insights-6c2c581d",
+  "breadcrumbTitle": "AI-Powered Quality Insights",
+  "title": "AI-Powered Quality Insights",
+  "description": "Transform your media operations with our AI-Powered Quality Insights. This AI-driven solution automates predictive analytics with unprecedented accuracy and eff",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Quality Insights - Zion Tech Group",
+    "description": "Transform your media operations with our AI-Powered Quality Insights. This AI-driven solution automates predictive analytics with unprecedented accuracy and eff",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-quality-insights-6c2c581d"
+    }
+  },
+  "features": [
+    "Machine learning integration",
+    "Serverless functions",
+    "Mobile-responsive interface",
+    "Multi-language support",
+    "Multi-region deployment"
+  ],
+  "benefits": [
+    "24/7 automated operations",
+    "Automated compliance reporting",
+    "Scalable to millions of transactions"
+  ]
+}

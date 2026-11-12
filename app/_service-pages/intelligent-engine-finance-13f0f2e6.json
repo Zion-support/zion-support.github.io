@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-engine-finance-13f0f2e6",
+  "breadcrumbTitle": "Intelligent engine-finance",
+  "title": "Intelligent engine-finance",
+  "description": "The future of finance is here with Intelligent engine-finance. Powered by cutting-edge AI, this platform delivers decision support like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent engine-finance - Zion Tech Group",
+    "description": "The future of finance is here with Intelligent engine-finance. Powered by cutting-edge AI, this platform delivers decision support like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-engine-finance-13f0f2e6"
+    }
+  },
+  "features": [
+    "Machine learning integration",
+    "Container orchestration",
+    "Custom integrations",
+    "Plugin architecture",
+    "Role-based access control"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "Automated compliance reporting",
+    "Scalable to millions of transactions"
+  ]
+}

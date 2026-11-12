@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/enterprise-insightful-logistics-analytics-suite-e16dccee",
+  "breadcrumbTitle": "Enterprise Insightful Logistics Analytics Suite",
+  "title": "Enterprise Insightful Logistics Analytics Suite",
+  "description": "Enterprise analytics suite that delivers insightful logistics insights with unified dashboards and reporting.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Enterprise Insightful Logistics Analytics Suite - Zion Tech Group",
+    "description": "Enterprise analytics suite that delivers insightful logistics insights with unified dashboards and reporting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/enterprise-insightful-logistics-analytics-suite-e16dccee"
+    }
+  },
+  "features": [
+    "Data visualization",
+    "Custom dashboards",
+    "Report generation",
+    "KPI tracking"
+  ],
+  "benefits": [
+    "Unified data view",
+    "Faster insights",
+    "Customizable reports",
+    "Cross-functional collaboration"
+  ]
+}

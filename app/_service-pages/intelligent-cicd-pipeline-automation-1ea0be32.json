@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-cicd-pipeline-automation-1ea0be32",
+  "breadcrumbTitle": "Intelligent CI/CD Pipeline Automation",
+  "title": "Intelligent CI/CD Pipeline Automation",
+  "description": "Machine learning-driven continuous integration and deployment system with intelligent rollback capabilities.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Intelligent CI/CD Pipeline Automation - Zion Tech Group",
+    "description": "Machine learning-driven continuous integration and deployment system with intelligent rollback capabilities.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-cicd-pipeline-automation-1ea0be32"
+    }
+  },
+  "features": [
+    "Automated testing",
+    "Smart deployment",
+    "Rollback automation",
+    "Performance monitoring"
+  ],
+  "benefits": [
+    "Faster releases",
+    "Reduced errors",
+    "Improved reliability",
+    "Continuous delivery"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-analyzer---insurance-edition-6-adcd4657",
+  "breadcrumbTitle": "AI Analyzer - Insurance Edition #6",
+  "title": "AI Analyzer - Insurance Edition #6",
+  "description": "Revolutionize insurance through intelligent automation. Our AI Analyzer - Insurance Edition #6 leverages advanced machine learning to deliver code optimization ",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Analyzer - Insurance Edition #6 - Zion Tech Group",
+    "description": "Revolutionize insurance through intelligent automation. Our AI Analyzer - Insurance Edition #6 leverages advanced machine learning to deliver code optimization ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-analyzer---insurance-edition-6-adcd4657"
+    }
+  },
+  "features": [
+    "Alerting system",
+    "Serverless functions",
+    "Microservices deployment",
+    "Real-time processing",
+    "Plugin architecture"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Reduced human error by 95%",
+    "Predictive maintenance scheduling"
+  ]
+}

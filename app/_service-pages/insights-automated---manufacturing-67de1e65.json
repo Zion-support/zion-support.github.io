@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/insights-automated---manufacturing-67de1e65",
+  "breadcrumbTitle": "Insights Automated - Manufacturing",
+  "title": "Insights Automated - Manufacturing",
+  "description": "Revolutionize manufacturing through intelligent automation. Our Insights Automated - Manufacturing leverages advanced machine learning to deliver code optimizat",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Insights Automated - Manufacturing - Zion Tech Group",
+    "description": "Revolutionize manufacturing through intelligent automation. Our Insights Automated - Manufacturing leverages advanced machine learning to deliver code optimizat",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/insights-automated---manufacturing-67de1e65"
+    }
+  },
+  "features": [
+    "Edge computing support",
+    "Audit trails",
+    "Data encryption",
+    "API-first design",
+    "Cloud-native architecture"
+  ],
+  "benefits": [
+    "50% reduction in operational costs",
+    "Enterprise-grade security",
+    "Zero manual intervention required",
+    "99.9% uptime guarantee"
+  ]
+}

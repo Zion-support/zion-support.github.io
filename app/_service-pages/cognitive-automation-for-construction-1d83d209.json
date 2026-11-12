@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/cognitive-automation-for-construction-1d83d209",
+  "breadcrumbTitle": "Cognitive Automation for Construction",
+  "title": "Cognitive Automation for Construction",
+  "description": "Revolutionize construction through intelligent automation. Our Cognitive Automation for Construction leverages advanced machine learning to deliver threat detec",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Cognitive Automation for Construction - Zion Tech Group",
+    "description": "Revolutionize construction through intelligent automation. Our Cognitive Automation for Construction leverages advanced machine learning to deliver threat detec",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cognitive-automation-for-construction-1d83d209"
+    }
+  },
+  "features": [
+    "SOC 2 certified",
+    "Custom integrations",
+    "Zero-downtime updates",
+    "Multi-language support",
+    "Machine learning integration"
+  ],
+  "benefits": [
+    "Automated compliance reporting",
+    "Dynamic resource allocation",
+    "ROI in under 90 days"
+  ]
+}

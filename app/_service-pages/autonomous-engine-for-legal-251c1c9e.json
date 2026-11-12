@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/autonomous-engine-for-legal-251c1c9e",
+  "breadcrumbTitle": "Autonomous Engine for Legal",
+  "title": "Autonomous Engine for Legal",
+  "description": "Next-generation legal solution: Autonomous Engine for Legal. Combines energy management with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous Engine for Legal - Zion Tech Group",
+    "description": "Next-generation legal solution: Autonomous Engine for Legal. Combines energy management with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-engine-for-legal-251c1c9e"
+    }
+  },
+  "features": [
+    "Multi-language support",
+    "Role-based access control",
+    "Microservices deployment",
+    "Container orchestration",
+    "Offline capabilities"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Real-time insights and alerts",
+    "Predictive maintenance scheduling"
+  ]
+}

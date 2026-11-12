@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/platform-intelligent---telecom-1cae9dab",
+  "breadcrumbTitle": "Platform Intelligent - Telecom",
+  "title": "Platform Intelligent - Telecom",
+  "description": "Revolutionize telecom through intelligent automation. Our Platform Intelligent - Telecom leverages advanced machine learning to deliver compliance monitoring at",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Platform Intelligent - Telecom - Zion Tech Group",
+    "description": "Revolutionize telecom through intelligent automation. Our Platform Intelligent - Telecom leverages advanced machine learning to deliver compliance monitoring at",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/platform-intelligent---telecom-1cae9dab"
+    }
+  },
+  "features": [
+    "Data encryption",
+    "SOC 2 certified",
+    "Rollback mechanisms",
+    "Cloud-native architecture",
+    "Microservices deployment"
+  ],
+  "benefits": [
+    "50% reduction in operational costs",
+    "Automated compliance reporting",
+    "Real-time insights and alerts",
+    "Enterprise-grade security"
+  ]
+}

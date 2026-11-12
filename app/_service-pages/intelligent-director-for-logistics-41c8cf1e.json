@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/intelligent-director-for-logistics-41c8cf1e",
+  "breadcrumbTitle": "Intelligent Director for Logistics",
+  "title": "Intelligent Director for Logistics",
+  "description": "Revolutionize logistics through intelligent automation. Our Intelligent Director for Logistics leverages advanced machine learning to deliver revenue forecastin",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Intelligent Director for Logistics - Zion Tech Group",
+    "description": "Revolutionize logistics through intelligent automation. Our Intelligent Director for Logistics leverages advanced machine learning to deliver revenue forecastin",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-director-for-logistics-41c8cf1e"
+    }
+  },
+  "features": [
+    "Logistics route optimization with traffic prediction",
+    "Market analysis with buyer behavior insights",
+    "Showback with utilization reports",
+    "Backup and restore with versioning",
+    "Data encryption at rest and in transit"
+  ],
+  "benefits": [
+    "Better supply chain visibility with tracking",
+    "Better benefits utilization rates",
+    "Better inventory turnover ratios",
+    "reduced workplace safety incidents",
+    "Increased upsell and cross-sell opportunities"
+  ]
+}

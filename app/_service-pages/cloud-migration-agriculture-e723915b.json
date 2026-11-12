@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/cloud-migration-agriculture-e723915b",
+  "breadcrumbTitle": "Cloud Migration Services - Agriculture",
+  "title": "Cloud Migration Services - Agriculture",
+  "description": "Seamless cloud migration for Agriculture companies. We move workloads to AWS/Azure/GCP with minimal downtime and maximum performance.",
+  "basic": "$299/month",
+  "pro": "$799/month",
+  "enterprise": "$2499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Cloud Migration Services - Agriculture - Zion Tech Group",
+    "description": "Seamless cloud migration for Agriculture companies. We move workloads to AWS/Azure/GCP with minimal downtime and maximum performance.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cloud-migration-agriculture-e723915b"
+    }
+  },
+  "features": [
+    "Cloud readiness assessment",
+    "Migration planning and execution",
+    "Data transfer and validation",
+    "Cost optimization",
+    "Security and compliance checks"
+  ],
+  "benefits": [
+    "30-50% infra cost reduction",
+    "Scalable resources on demand",
+    "Improved disaster recovery",
+    "Faster deployment cycles",
+    "Better business continuity"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/zero-trust-composable-aerospace-security-mesh-6bfd6fd4",
+  "breadcrumbTitle": "Zero-Trust Composable Aerospace Security Mesh",
+  "title": "Zero-Trust Composable Aerospace Security Mesh",
+  "description": "Zero-trust security mesh that protects composable aerospace infrastructure with continuous validation and adaptive threat response.",
+  "basic": "$298/month",
+  "pro": "$748/month",
+  "enterprise": "$2248/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Zero-Trust Composable Aerospace Security Mesh - Zion Tech Group",
+    "description": "Zero-trust security mesh that protects composable aerospace infrastructure with continuous validation and adaptive threat response.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/zero-trust-composable-aerospace-security-mesh-6bfd6fd4"
+    }
+  },
+  "features": [
+    "Continuous validation",
+    "Micro-segmentation",
+    "Threat isolation",
+    "Adaptive authentication"
+  ],
+  "benefits": [
+    "Zero breach risk",
+    "Continuous compliance",
+    "Threat isolation",
+    "Regulatory assurance"
+  ]
+}

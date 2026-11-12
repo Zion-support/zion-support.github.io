@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/ai-powered-performance-advisor-404ec13e",
+  "breadcrumbTitle": "AI-Powered Performance Advisor",
+  "title": "AI-Powered Performance Advisor",
+  "description": "Revolutionize insurance through intelligent automation. Our AI-Powered Performance Advisor leverages advanced machine learning to deliver data processing at sca",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI-Powered Performance Advisor - Zion Tech Group",
+    "description": "Revolutionize insurance through intelligent automation. Our AI-Powered Performance Advisor leverages advanced machine learning to deliver data processing at sca",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-performance-advisor-404ec13e"
+    }
+  },
+  "features": [
+    "Mobile-responsive interface",
+    "GDPR compliance",
+    "Role-based access control",
+    "Serverless functions"
+  ],
+  "benefits": [
+    "Intelligent load balancing",
+    "Dynamic resource allocation",
+    "24/7 automated operations"
+  ]
+}

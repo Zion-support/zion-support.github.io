@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/cognitive-director-for-retail-d5979fa3",
+  "breadcrumbTitle": "Cognitive Director for Retail",
+  "title": "Cognitive Director for Retail",
+  "description": "Transform your retail operations with our Cognitive Director for Retail. This AI-driven solution automates user experience with unprecedented accuracy and effic",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Cognitive Director for Retail - Zion Tech Group",
+    "description": "Transform your retail operations with our Cognitive Director for Retail. This AI-driven solution automates user experience with unprecedented accuracy and effic",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cognitive-director-for-retail-d5979fa3"
+    }
+  },
+  "features": [
+    "Data encryption",
+    "Multi-language support",
+    "Edge computing support",
+    "Open-source friendly",
+    "Audit trails"
+  ],
+  "benefits": [
+    "Dynamic resource allocation",
+    "Enterprise-grade security",
+    "Predictive maintenance scheduling",
+    "3x faster decision making"
+  ]
+}

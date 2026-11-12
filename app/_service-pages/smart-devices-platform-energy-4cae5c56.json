@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/smart-devices-platform-energy-4cae5c56",
+  "breadcrumbTitle": "Smart Devices Platform - Energy",
+  "title": "Smart Devices Platform - Energy",
+  "description": "Next-generation energy solution: Smart Devices Platform - Energy. Combines telemetry collection with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Devices Platform - Energy - Zion Tech Group",
+    "description": "Next-generation energy solution: Smart Devices Platform - Energy. Combines telemetry collection with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-devices-platform-energy-4cae5c56"
+    }
+  },
+  "features": [
+    "Comprehensive monitoring with custom dashboards",
+    "Network optimization for constrained devices",
+    "Edge computing support for low-latency operations",
+    "API-first design with comprehensive REST and GraphQL endpoints",
+    "Audit trails with compliance reporting"
+  ],
+  "benefits": [
+    "Scalable to millions of transactions per second",
+    "Real-time insights and alerts for proactive management",
+    "Cost optimization recommendations with savings analysis",
+    "Seamless integration with existing systems and workflows",
+    "Automated compliance reporting for regulatory requirements"
+  ]
+}

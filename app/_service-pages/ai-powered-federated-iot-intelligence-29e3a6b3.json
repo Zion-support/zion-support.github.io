@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-federated-iot-intelligence-29e3a6b3",
+  "breadcrumbTitle": "AI-Powered Federated IoT Intelligence",
+  "title": "AI-Powered Federated IoT Intelligence",
+  "description": "Edge AI platform that processes IoT sensor data in real-time with federated insights.",
+  "basic": "$258/month",
+  "pro": "$648/month",
+  "enterprise": "$1948/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Federated IoT Intelligence - Zion Tech Group",
+    "description": "Edge AI platform that processes IoT sensor data in real-time with federated insights.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-federated-iot-intelligence-29e3a6b3"
+    }
+  },
+  "features": [
+    "Edge processing",
+    "Real-time analytics",
+    "Automated responses",
+    "Energy efficiency"
+  ],
+  "benefits": [
+    "Reduced latency",
+    "Better insights",
+    "Automated responses",
+    "Energy efficiency"
+  ]
+}

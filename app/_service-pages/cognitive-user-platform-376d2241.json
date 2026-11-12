@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/cognitive-user-platform-376d2241",
+  "breadcrumbTitle": "Cognitive User Platform",
+  "title": "Cognitive User Platform",
+  "description": "Revolutionize transportation through intelligent automation. Our Cognitive User Platform leverages advanced machine learning to deliver data processing at scale",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Cognitive User Platform - Zion Tech Group",
+    "description": "Revolutionize transportation through intelligent automation. Our Cognitive User Platform leverages advanced machine learning to deliver data processing at scale",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cognitive-user-platform-376d2241"
+    }
+  },
+  "features": [
+    "Rollback mechanisms",
+    "API-first design",
+    "Multi-region deployment",
+    "Open-source friendly",
+    "Auto-scaling capabilities"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "Predictive maintenance scheduling",
+    "Real-time insights and alerts"
+  ]
+}

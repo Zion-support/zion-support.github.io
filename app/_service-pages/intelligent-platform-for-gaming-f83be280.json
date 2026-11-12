@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligent-platform-for-gaming-f83be280",
+  "breadcrumbTitle": "Intelligent Platform for Gaming",
+  "title": "Intelligent Platform for Gaming",
+  "description": "Next-generation gaming solution: Intelligent Platform for Gaming. Combines resource optimization with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Platform for Gaming - Zion Tech Group",
+    "description": "Next-generation gaming solution: Intelligent Platform for Gaming. Combines resource optimization with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-platform-for-gaming-f83be280"
+    }
+  },
+  "features": [
+    "Offline capabilities",
+    "Audit trails",
+    "Rollback mechanisms",
+    "Cloud-native architecture",
+    "Custom integrations"
+  ],
+  "benefits": [
+    "50% reduction in operational costs",
+    "Real-time insights and alerts",
+    "Seamless integration with existing systems",
+    "Self-healing infrastructure"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/suite-autonomous---retail-e259b712",
+  "breadcrumbTitle": "Suite Autonomous - Retail",
+  "title": "Suite Autonomous - Retail",
+  "description": "Revolutionize retail through intelligent automation. Our Suite Autonomous - Retail leverages advanced machine learning to deliver supply chain at scale.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Suite Autonomous - Retail - Zion Tech Group",
+    "description": "Revolutionize retail through intelligent automation. Our Suite Autonomous - Retail leverages advanced machine learning to deliver supply chain at scale.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/suite-autonomous---retail-e259b712"
+    }
+  },
+  "features": [
+    "Alerting system",
+    "Machine learning integration",
+    "Multi-language support",
+    "Role-based access control"
+  ],
+  "benefits": [
+    "24/7 automated operations",
+    "Scalable to millions of transactions",
+    "Reduced human error by 95%",
+    "Seamless integration with existing systems",
+    "Intelligent load balancing"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/cognitive-autonomous-healthcare-decision-engine-ab6621a2",
+  "breadcrumbTitle": "Cognitive Autonomous Healthcare Decision Engine",
+  "title": "Cognitive Autonomous Healthcare Decision Engine",
+  "description": "Cognitive decision engine that processes autonomous signals to drive healthcare strategy with deep learning.",
+  "basic": "$278/month",
+  "pro": "$698/month",
+  "enterprise": "$2098/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Cognitive Autonomous Healthcare Decision Engine - Zion Tech Group",
+    "description": "Cognitive decision engine that processes autonomous signals to drive healthcare strategy with deep learning.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cognitive-autonomous-healthcare-decision-engine-ab6621a2"
+    }
+  },
+  "features": [
+    "Cognitive reasoning",
+    "Scenario analysis",
+    "Decision trees",
+    "Recommendation engine"
+  ],
+  "benefits": [
+    "Better decision quality",
+    "Reduced risk",
+    "Faster insights",
+    "Competitive intelligence"
+  ]
+}

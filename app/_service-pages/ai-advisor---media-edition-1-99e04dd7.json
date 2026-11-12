@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-advisor---media-edition-1-99e04dd7",
+  "breadcrumbTitle": "AI Advisor - Media Edition #1",
+  "title": "AI Advisor - Media Edition #1",
+  "description": "Revolutionize media through intelligent automation. Our AI Advisor - Media Edition #1 leverages advanced machine learning to deliver fraud prevention at scale.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Advisor - Media Edition #1 - Zion Tech Group",
+    "description": "Revolutionize media through intelligent automation. Our AI Advisor - Media Edition #1 leverages advanced machine learning to deliver fraud prevention at scale.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-advisor---media-edition-1-99e04dd7"
+    }
+  },
+  "features": [
+    "Audit trails",
+    "Open-source friendly",
+    "Cloud-native architecture",
+    "Multi-language support"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "Self-healing infrastructure",
+    "Intelligent load balancing",
+    "Real-time insights and alerts"
+  ]
+}

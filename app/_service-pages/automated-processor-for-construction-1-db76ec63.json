@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/automated-processor-for-construction-1-db76ec63",
+  "breadcrumbTitle": "Automated Processor for Construction #1",
+  "title": "Automated Processor for Construction #1",
+  "description": "Revolutionize construction through intelligent automation. Our Automated Processor for Construction #1 leverages advanced machine learning to deliver supply cha",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated Processor for Construction #1 - Zion Tech Group",
+    "description": "Revolutionize construction through intelligent automation. Our Automated Processor for Construction #1 leverages advanced machine learning to deliver supply cha",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-processor-for-construction-1-db76ec63"
+    }
+  },
+  "features": [
+    "Container orchestration",
+    "Offline capabilities",
+    "Multi-region deployment",
+    "Role-based access control",
+    "HIPAA ready"
+  ],
+  "benefits": [
+    "Seamless integration with existing systems",
+    "Reduced human error by 95%",
+    "ROI in under 90 days",
+    "3x faster decision making",
+    "24/7 automated operations"
+  ]
+}

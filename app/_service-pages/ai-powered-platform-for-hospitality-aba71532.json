@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-platform-for-hospitality-aba71532",
+  "breadcrumbTitle": "AI-Powered Platform for Hospitality",
+  "title": "AI-Powered Platform for Hospitality",
+  "description": "Transform your hospitality operations with our AI-Powered Platform for Hospitality. This AI-driven solution automates sales forecasting with unprecedented accur",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Platform for Hospitality - Zion Tech Group",
+    "description": "Transform your hospitality operations with our AI-Powered Platform for Hospitality. This AI-driven solution automates sales forecasting with unprecedented accur",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-platform-for-hospitality-aba71532"
+    }
+  },
+  "features": [
+    "Edge computing support",
+    "Plugin architecture",
+    "Multi-language support",
+    "Microservices deployment",
+    "Auto-scaling capabilities"
+  ],
+  "benefits": [
+    "Scalable to millions of transactions",
+    "Seamless integration with existing systems",
+    "Dynamic resource allocation"
+  ]
+}

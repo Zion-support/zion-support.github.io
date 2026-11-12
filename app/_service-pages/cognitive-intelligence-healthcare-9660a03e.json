@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/cognitive-intelligence-healthcare-9660a03e",
+  "breadcrumbTitle": "Cognitive intelligence-healthcare",
+  "title": "Cognitive intelligence-healthcare",
+  "description": "Transform your healthcare operations with our Cognitive intelligence-healthcare. This AI-driven solution automates predictive analytics with unprecedented accur",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Cognitive intelligence-healthcare - Zion Tech Group",
+    "description": "Transform your healthcare operations with our Cognitive intelligence-healthcare. This AI-driven solution automates predictive analytics with unprecedented accur",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cognitive-intelligence-healthcare-9660a03e"
+    }
+  },
+  "features": [
+    "SOC 2 certified",
+    "Cloud-native architecture",
+    "Custom integrations",
+    "API-first design"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "Performance benchmarking",
+    "3x faster decision making"
+  ]
+}

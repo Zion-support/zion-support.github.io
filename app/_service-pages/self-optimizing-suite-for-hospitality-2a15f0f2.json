@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/self-optimizing-suite-for-hospitality-2a15f0f2",
+  "breadcrumbTitle": "Self-Optimizing Suite for Hospitality",
+  "title": "Self-Optimizing Suite for Hospitality",
+  "description": "Revolutionize hospitality through intelligent automation. Our Self-Optimizing Suite for Hospitality leverages advanced machine learning to deliver fraud prevent",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Self-Optimizing Suite for Hospitality - Zion Tech Group",
+    "description": "Revolutionize hospitality through intelligent automation. Our Self-Optimizing Suite for Hospitality leverages advanced machine learning to deliver fraud prevent",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/self-optimizing-suite-for-hospitality-2a15f0f2"
+    }
+  },
+  "features": [
+    "Edge computing support",
+    "Audit trails",
+    "SOC 2 certified",
+    "Multi-language support",
+    "GDPR compliance"
+  ],
+  "benefits": [
+    "Dynamic resource allocation",
+    "3x faster decision making",
+    "Self-healing infrastructure"
+  ]
+}

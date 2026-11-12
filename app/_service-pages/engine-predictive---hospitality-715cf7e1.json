@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/engine-predictive---hospitality-715cf7e1",
+  "breadcrumbTitle": "Engine Predictive - Hospitality",
+  "title": "Engine Predictive - Hospitality",
+  "description": "Unlock unprecedented growth with Engine Predictive - Hospitality. This autonomous system provides inventory management with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Engine Predictive - Hospitality - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Engine Predictive - Hospitality. This autonomous system provides inventory management with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/engine-predictive---hospitality-715cf7e1"
+    }
+  },
+  "features": [
+    "Custom integrations",
+    "Multi-region deployment",
+    "Edge computing support",
+    "Open-source friendly",
+    "Zero-downtime updates"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "Automated compliance reporting",
+    "99.9% uptime guarantee",
+    "50% reduction in operational costs",
+    "Real-time insights and alerts"
+  ]
+}

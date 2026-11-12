@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/predictive-insightful-operational-risk-scoring-6b9a24df",
+  "breadcrumbTitle": "Predictive Insightful Operational Risk Scoring",
+  "title": "Predictive Insightful Operational Risk Scoring",
+  "description": "Predictive risk scoring engine that assesses insightful operational vulnerabilities with machine learning.",
+  "basic": "$278/month",
+  "pro": "$698/month",
+  "enterprise": "$2098/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Predictive Insightful Operational Risk Scoring - Zion Tech Group",
+    "description": "Predictive risk scoring engine that assesses insightful operational vulnerabilities with machine learning.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/predictive-insightful-operational-risk-scoring-6b9a24df"
+    }
+  },
+  "features": [
+    "Risk assessment",
+    "Threat modeling",
+    "Compliance scoring",
+    "Mitigation planning"
+  ],
+  "benefits": [
+    "Proactive risk mitigation",
+    "Compliance assurance",
+    "Reduced exposure",
+    "Faster incident response"
+  ]
+}

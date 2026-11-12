@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/platform-autonomous---construction-1-5bc33333",
+  "breadcrumbTitle": "Platform Autonomous - Construction #1",
+  "title": "Platform Autonomous - Construction #1",
+  "description": "The future of construction is here with Platform Autonomous - Construction #1. Powered by cutting-edge AI, this platform delivers energy management like never b",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Platform Autonomous - Construction #1 - Zion Tech Group",
+    "description": "The future of construction is here with Platform Autonomous - Construction #1. Powered by cutting-edge AI, this platform delivers energy management like never b",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/platform-autonomous---construction-1-5bc33333"
+    }
+  },
+  "features": [
+    "HIPAA ready",
+    "Rollback mechanisms",
+    "Offline capabilities",
+    "Open-source friendly"
+  ],
+  "benefits": [
+    "24/7 automated operations",
+    "Cost optimization recommendations",
+    "Seamless integration with existing systems",
+    "Self-healing infrastructure",
+    "Reduced human error by 95%"
+  ]
+}

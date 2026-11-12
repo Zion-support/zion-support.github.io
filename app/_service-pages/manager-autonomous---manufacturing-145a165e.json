@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/manager-autonomous---manufacturing-145a165e",
+  "breadcrumbTitle": "Manager Autonomous - Manufacturing",
+  "title": "Manager Autonomous - Manufacturing",
+  "description": "Transform your Manufacturing operations with our Manager Autonomous - Manufacturing. This AI-driven solution automates energy management with unprecedented accu",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Manager Autonomous - Manufacturing - Zion Tech Group",
+    "description": "Transform your Manufacturing operations with our Manager Autonomous - Manufacturing. This AI-driven solution automates energy management with unprecedented accu",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/manager-autonomous---manufacturing-145a165e"
+    }
+  },
+  "features": [
+    "HIPAA ready with healthcare data protection",
+    "Executive dashboards with drill-down capabilities",
+    "Budget optimization with cost allocation",
+    "Scenario planning with Monte Carlo simulations",
+    "Data encryption at rest and in transit"
+  ],
+  "benefits": [
+    "3x faster decision making with real-time insights",
+    "Performance benchmarking against industry standards",
+    "Better supply chain visibility with tracking",
+    "99.9% uptime guarantee with redundant architecture",
+    "Faster time-to-market with accelerated development"
+  ]
+}

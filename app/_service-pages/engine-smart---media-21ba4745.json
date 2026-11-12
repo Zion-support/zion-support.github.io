@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/engine-smart---media-21ba4745",
+  "breadcrumbTitle": "Engine Smart - Media",
+  "title": "Engine Smart - Media",
+  "description": "Next-generation media solution: Engine Smart - Media. Combines performance monitoring with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Engine Smart - Media - Zion Tech Group",
+    "description": "Next-generation media solution: Engine Smart - Media. Combines performance monitoring with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/engine-smart---media-21ba4745"
+    }
+  },
+  "features": [
+    "Comprehensive monitoring",
+    "Cloud-native architecture",
+    "API-first design",
+    "Custom integrations",
+    "Audit trails"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Automated compliance reporting",
+    "Reduced human error by 95%",
+    "Performance benchmarking",
+    "Enterprise-grade security"
+  ]
+}

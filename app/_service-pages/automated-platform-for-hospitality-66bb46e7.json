@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/automated-platform-for-hospitality-66bb46e7",
+  "breadcrumbTitle": "Automated Platform for Hospitality",
+  "title": "Automated Platform for Hospitality",
+  "description": "The future of hospitality is here with Automated Platform for Hospitality. Powered by cutting-edge AI, this platform delivers fraud prevention like never before",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated Platform for Hospitality - Zion Tech Group",
+    "description": "The future of hospitality is here with Automated Platform for Hospitality. Powered by cutting-edge AI, this platform delivers fraud prevention like never before",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-platform-for-hospitality-66bb46e7"
+    }
+  },
+  "features": [
+    "Edge computing support",
+    "Auto-scaling capabilities",
+    "Comprehensive monitoring",
+    "Multi-region deployment",
+    "Container orchestration"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "Automated compliance reporting",
+    "Enterprise-grade security",
+    "24/7 automated operations"
+  ]
+}

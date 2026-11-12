@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/manager-predictive---healthcare-c02207c8",
+  "breadcrumbTitle": "Manager Predictive - Healthcare",
+  "title": "Manager Predictive - Healthcare",
+  "description": "Transform your healthcare operations with our Manager Predictive - Healthcare. This AI-driven solution automates document processing with unprecedented accuracy",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Manager Predictive - Healthcare - Zion Tech Group",
+    "description": "Transform your healthcare operations with our Manager Predictive - Healthcare. This AI-driven solution automates document processing with unprecedented accuracy",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/manager-predictive---healthcare-c02207c8"
+    }
+  },
+  "features": [
+    "Zero-downtime updates",
+    "Auto-scaling capabilities",
+    "Custom integrations",
+    "Plugin architecture",
+    "SOC 2 certified"
+  ],
+  "benefits": [
+    "Seamless integration with existing systems",
+    "Real-time insights and alerts",
+    "24/7 automated operations",
+    "Intelligent load balancing",
+    "ROI in under 90 days"
+  ]
+}

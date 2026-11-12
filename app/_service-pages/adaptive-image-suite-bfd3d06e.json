@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/adaptive-image-suite-bfd3d06e",
+  "breadcrumbTitle": "Adaptive Image Suite",
+  "title": "Adaptive Image Suite",
+  "description": "Transform your education operations with our Adaptive Image Suite. This AI-driven solution automates threat detection with unprecedented accuracy and efficiency",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Adaptive Image Suite - Zion Tech Group",
+    "description": "Transform your education operations with our Adaptive Image Suite. This AI-driven solution automates threat detection with unprecedented accuracy and efficiency",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/adaptive-image-suite-bfd3d06e"
+    }
+  },
+  "features": [
+    "Open-source friendly",
+    "Mobile-responsive interface",
+    "Custom integrations",
+    "Alerting system",
+    "Cloud-native architecture"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "Intelligent load balancing",
+    "3x faster decision making"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-insights-sports-2c1d525d",
+  "breadcrumbTitle": "AI-Powered insights-sports",
+  "title": "AI-Powered insights-sports",
+  "description": "The future of sports is here with AI-Powered insights-sports. Powered by cutting-edge AI, this platform delivers process automation like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI-Powered insights-sports - Zion Tech Group",
+    "description": "The future of sports is here with AI-Powered insights-sports. Powered by cutting-edge AI, this platform delivers process automation like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-insights-sports-2c1d525d"
+    }
+  },
+  "features": [
+    "Comprehensive monitoring",
+    "Zero-downtime updates",
+    "Plugin architecture",
+    "Rollback mechanisms",
+    "Microservices deployment"
+  ],
+  "benefits": [
+    "Performance benchmarking",
+    "Self-healing infrastructure",
+    "Intelligent load balancing"
+  ]
+}

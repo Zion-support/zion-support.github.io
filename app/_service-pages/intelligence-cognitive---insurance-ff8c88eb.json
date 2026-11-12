@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligence-cognitive---insurance-ff8c88eb",
+  "breadcrumbTitle": "Intelligence Cognitive - Insurance",
+  "title": "Intelligence Cognitive - Insurance",
+  "description": "Unlock unprecedented growth with Intelligence Cognitive - Insurance. This autonomous system provides fraud prevention with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligence Cognitive - Insurance - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Intelligence Cognitive - Insurance. This autonomous system provides fraud prevention with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligence-cognitive---insurance-ff8c88eb"
+    }
+  },
+  "features": [
+    "Offline capabilities",
+    "Alerting system",
+    "Auto-scaling capabilities",
+    "Multi-region deployment",
+    "Role-based access control"
+  ],
+  "benefits": [
+    "Automated compliance reporting",
+    "3x faster decision making",
+    "Reduced human error by 95%",
+    "Intelligent load balancing"
+  ]
+}

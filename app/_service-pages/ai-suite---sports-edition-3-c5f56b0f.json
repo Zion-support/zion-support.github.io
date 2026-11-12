@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-suite---sports-edition-3-c5f56b0f",
+  "breadcrumbTitle": "AI Suite - Sports Edition #3",
+  "title": "AI Suite - Sports Edition #3",
+  "description": "Revolutionize sports through intelligent automation. Our AI Suite - Sports Edition #3 leverages advanced machine learning to deliver image recognition at scale.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Suite - Sports Edition #3 - Zion Tech Group",
+    "description": "Revolutionize sports through intelligent automation. Our AI Suite - Sports Edition #3 leverages advanced machine learning to deliver image recognition at scale.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-suite---sports-edition-3-c5f56b0f"
+    }
+  },
+  "features": [
+    "Rollback mechanisms",
+    "SOC 2 certified",
+    "Microservices deployment",
+    "Role-based access control",
+    "Plugin architecture"
+  ],
+  "benefits": [
+    "Performance benchmarking",
+    "24/7 automated operations",
+    "Reduced human error by 95%",
+    "Self-healing infrastructure"
+  ]
+}

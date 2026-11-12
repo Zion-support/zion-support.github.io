@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/automated-data-director-1-2c688245",
+  "breadcrumbTitle": "Automated Data Director #1",
+  "title": "Automated Data Director #1",
+  "description": "Unlock unprecedented growth with Automated Data Director #1. This autonomous system provides document processing with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated Data Director #1 - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Automated Data Director #1. This autonomous system provides document processing with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-data-director-1-2c688245"
+    }
+  },
+  "features": [
+    "Audit trails",
+    "Machine learning integration",
+    "Data encryption",
+    "Plugin architecture"
+  ],
+  "benefits": [
+    "24/7 automated operations",
+    "Intelligent load balancing",
+    "50% reduction in operational costs"
+  ]
+}

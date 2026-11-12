@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/neural-insights-for-retail-1-5d0c9f1f",
+  "breadcrumbTitle": "Neural Insights for Retail #1",
+  "title": "Neural Insights for Retail #1",
+  "description": "Next-generation retail solution: Neural Insights for Retail #1. Combines workflow management with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Neural Insights for Retail #1 - Zion Tech Group",
+    "description": "Next-generation retail solution: Neural Insights for Retail #1. Combines workflow management with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/neural-insights-for-retail-1-5d0c9f1f"
+    }
+  },
+  "features": [
+    "API-first design",
+    "Offline capabilities",
+    "Multi-region deployment",
+    "Machine learning integration"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "ROI in under 90 days",
+    "Dynamic resource allocation",
+    "Seamless integration with existing systems",
+    "Automated compliance reporting"
+  ]
+}

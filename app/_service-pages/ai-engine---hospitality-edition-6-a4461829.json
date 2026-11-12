@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-engine---hospitality-edition-6-a4461829",
+  "breadcrumbTitle": "AI Engine - Hospitality Edition #6",
+  "title": "AI Engine - Hospitality Edition #6",
+  "description": "Next-generation hospitality solution: AI Engine - Hospitality Edition #6. Combines decision support with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Engine - Hospitality Edition #6 - Zion Tech Group",
+    "description": "Next-generation hospitality solution: AI Engine - Hospitality Edition #6. Combines decision support with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-engine---hospitality-edition-6-a4461829"
+    }
+  },
+  "features": [
+    "Alerting system",
+    "Role-based access control",
+    "Plugin architecture",
+    "Mobile-responsive interface",
+    "Container orchestration"
+  ],
+  "benefits": [
+    "Intelligent load balancing",
+    "Performance benchmarking",
+    "Zero manual intervention required",
+    "Automated compliance reporting"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/automated-advisor-logistics-0edad7f0",
+  "breadcrumbTitle": "Automated advisor-logistics",
+  "title": "Automated advisor-logistics",
+  "description": "Transform your logistics operations with our Automated advisor-logistics. This AI-driven solution automates market intelligence with unprecedented accuracy and ",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated advisor-logistics - Zion Tech Group",
+    "description": "Transform your logistics operations with our Automated advisor-logistics. This AI-driven solution automates market intelligence with unprecedented accuracy and ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-advisor-logistics-0edad7f0"
+    }
+  },
+  "features": [
+    "Serverless functions",
+    "Edge computing support",
+    "SOC 2 certified",
+    "Performance dashboards",
+    "Audit trails"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "24/7 automated operations",
+    "3x faster decision making",
+    "99.9% uptime guarantee"
+  ]
+}

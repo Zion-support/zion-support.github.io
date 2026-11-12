@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/smart-document-insights-17c6fa07",
+  "breadcrumbTitle": "Smart Document Insights",
+  "title": "Smart Document Insights",
+  "description": "The future of education is here with Smart Document Insights. Powered by cutting-edge AI, this platform delivers code optimization like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Document Insights - Zion Tech Group",
+    "description": "The future of education is here with Smart Document Insights. Powered by cutting-edge AI, this platform delivers code optimization like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-document-insights-17c6fa07"
+    }
+  },
+  "features": [
+    "Mobile-responsive interface",
+    "Multi-region deployment",
+    "Alerting system",
+    "Multi-language support",
+    "Microservices deployment"
+  ],
+  "benefits": [
+    "50% reduction in operational costs",
+    "99.9% uptime guarantee",
+    "Zero manual intervention required",
+    "Scalable to millions of transactions"
+  ]
+}

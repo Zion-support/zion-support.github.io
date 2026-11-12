@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-network-engine-8a667adf",
+  "breadcrumbTitle": "Intelligent Network Engine",
+  "title": "Intelligent Network Engine",
+  "description": "Unlock unprecedented growth with Intelligent Network Engine. This autonomous system provides sales forecasting with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Network Engine - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Intelligent Network Engine. This autonomous system provides sales forecasting with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-network-engine-8a667adf"
+    }
+  },
+  "features": [
+    "Microservices deployment",
+    "Real-time processing",
+    "Zero-downtime updates",
+    "Offline capabilities",
+    "Container orchestration"
+  ],
+  "benefits": [
+    "Performance benchmarking",
+    "ROI in under 90 days",
+    "Zero manual intervention required"
+  ]
+}

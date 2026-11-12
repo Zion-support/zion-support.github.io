@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/smart-intelligence-telecom-b0268912",
+  "breadcrumbTitle": "Smart intelligence-telecom",
+  "title": "Smart intelligence-telecom",
+  "description": "The future of telecom is here with Smart intelligence-telecom. Powered by cutting-edge AI, this platform delivers quality control like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart intelligence-telecom - Zion Tech Group",
+    "description": "The future of telecom is here with Smart intelligence-telecom. Powered by cutting-edge AI, this platform delivers quality control like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-intelligence-telecom-b0268912"
+    }
+  },
+  "features": [
+    "Multi-language support",
+    "Auto-scaling capabilities",
+    "Plugin architecture",
+    "Open-source friendly",
+    "SOC 2 certified"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "24/7 automated operations",
+    "50% reduction in operational costs",
+    "Zero manual intervention required"
+  ]
+}

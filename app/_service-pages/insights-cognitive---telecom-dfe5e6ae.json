@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/insights-cognitive---telecom-dfe5e6ae",
+  "breadcrumbTitle": "Insights Cognitive - Telecom",
+  "title": "Insights Cognitive - Telecom",
+  "description": "Unlock unprecedented growth with Insights Cognitive - Telecom. This autonomous system provides document processing with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Insights Cognitive - Telecom - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Insights Cognitive - Telecom. This autonomous system provides document processing with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/insights-cognitive---telecom-dfe5e6ae"
+    }
+  },
+  "features": [
+    "Machine learning integration",
+    "Performance dashboards",
+    "Cloud-native architecture",
+    "SOC 2 certified",
+    "Plugin architecture"
+  ],
+  "benefits": [
+    "Performance benchmarking",
+    "Scalable to millions of transactions",
+    "Zero manual intervention required"
+  ]
+}

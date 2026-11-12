@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/platform-intelligent---education-19bb880b",
+  "breadcrumbTitle": "Platform Intelligent - Education",
+  "title": "Platform Intelligent - Education",
+  "description": "Next-generation education solution: Platform Intelligent - Education. Combines data processing with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Platform Intelligent - Education - Zion Tech Group",
+    "description": "Next-generation education solution: Platform Intelligent - Education. Combines data processing with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/platform-intelligent---education-19bb880b"
+    }
+  },
+  "features": [
+    "Auto-scaling capabilities",
+    "Plugin architecture",
+    "Multi-language support",
+    "Open-source friendly",
+    "Machine learning integration"
+  ],
+  "benefits": [
+    "Scalable to millions of transactions",
+    "Real-time insights and alerts",
+    "ROI in under 90 days",
+    "Performance benchmarking"
+  ]
+}

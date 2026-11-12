@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/smart-automation-healthcare-1-72bce44d",
+  "breadcrumbTitle": "Smart automation-healthcare #1",
+  "title": "Smart automation-healthcare #1",
+  "description": "The future of healthcare is here with Smart automation-healthcare #1. Powered by cutting-edge AI, this platform delivers market intelligence like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart automation-healthcare #1 - Zion Tech Group",
+    "description": "The future of healthcare is here with Smart automation-healthcare #1. Powered by cutting-edge AI, this platform delivers market intelligence like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-automation-healthcare-1-72bce44d"
+    }
+  },
+  "features": [
+    "Auto-scaling capabilities",
+    "Offline capabilities",
+    "Edge computing support",
+    "Container orchestration"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "Performance benchmarking",
+    "50% reduction in operational costs",
+    "Predictive maintenance scheduling"
+  ]
+}

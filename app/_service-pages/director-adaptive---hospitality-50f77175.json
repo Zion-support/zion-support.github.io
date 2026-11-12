@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/director-adaptive---hospitality-50f77175",
+  "breadcrumbTitle": "Director Adaptive - Hospitality",
+  "title": "Director Adaptive - Hospitality",
+  "description": "Next-generation hospitality solution: Director Adaptive - Hospitality. Combines customer insights with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Director Adaptive - Hospitality - Zion Tech Group",
+    "description": "Next-generation hospitality solution: Director Adaptive - Hospitality. Combines customer insights with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/director-adaptive---hospitality-50f77175"
+    }
+  },
+  "features": [
+    "Auto-scaling capabilities",
+    "Comprehensive monitoring",
+    "Multi-language support",
+    "Plugin architecture",
+    "Rollback mechanisms"
+  ],
+  "benefits": [
+    "Scalable to millions of transactions",
+    "50% reduction in operational costs",
+    "24/7 automated operations"
+  ]
+}

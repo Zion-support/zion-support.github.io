@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/next-generation-context-aware-real-estate-automation-c37d468b",
+  "breadcrumbTitle": "Next-Generation Context-Aware Real Estate Automation",
+  "title": "Next-Generation Context-Aware Real Estate Automation",
+  "description": "Next-generation automation suite that streamlines context-aware real estate workflows with intelligent orchestration.",
+  "basic": "$218/month",
+  "pro": "$548/month",
+  "enterprise": "$1648/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Next-Generation Context-Aware Real Estate Automation - Zion Tech Group",
+    "description": "Next-generation automation suite that streamlines context-aware real estate workflows with intelligent orchestration.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/next-generation-context-aware-real-estate-automation-c37d468b"
+    }
+  },
+  "features": [
+    "Smart orchestration",
+    "Process automation",
+    "Event processing",
+    "Task scheduling"
+  ],
+  "benefits": [
+    "Faster execution",
+    "Reduced manual steps",
+    "Scalable processes",
+    "Error reduction"
+  ]
+}

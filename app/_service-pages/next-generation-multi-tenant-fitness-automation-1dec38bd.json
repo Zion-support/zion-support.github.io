@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/next-generation-multi-tenant-fitness-automation-1dec38bd",
+  "breadcrumbTitle": "Next-Generation Multi-Tenant Fitness Automation",
+  "title": "Next-Generation Multi-Tenant Fitness Automation",
+  "description": "Next-generation automation suite that streamlines multi-tenant fitness workflows with intelligent orchestration.",
+  "basic": "$218/month",
+  "pro": "$548/month",
+  "enterprise": "$1648/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Next-Generation Multi-Tenant Fitness Automation - Zion Tech Group",
+    "description": "Next-generation automation suite that streamlines multi-tenant fitness workflows with intelligent orchestration.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/next-generation-multi-tenant-fitness-automation-1dec38bd"
+    }
+  },
+  "features": [
+    "Smart orchestration",
+    "Process automation",
+    "Event processing",
+    "Task scheduling"
+  ],
+  "benefits": [
+    "Faster execution",
+    "Reduced manual steps",
+    "Scalable processes",
+    "Error reduction"
+  ]
+}

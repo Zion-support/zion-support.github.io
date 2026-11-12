@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/director-intelligent---agriculture-a251b860",
+  "breadcrumbTitle": "Director Intelligent - Agriculture",
+  "title": "Director Intelligent - Agriculture",
+  "description": "Unlock unprecedented growth with Director Intelligent - Agriculture. This autonomous system provides data processing with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Director Intelligent - Agriculture - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Director Intelligent - Agriculture. This autonomous system provides data processing with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/director-intelligent---agriculture-a251b860"
+    }
+  },
+  "features": [
+    "Auto-scaling capabilities",
+    "Custom integrations",
+    "Performance dashboards",
+    "GDPR compliance",
+    "API-first design"
+  ],
+  "benefits": [
+    "Automated compliance reporting",
+    "Predictive maintenance scheduling",
+    "Self-healing infrastructure",
+    "Seamless integration with existing systems",
+    "24/7 automated operations"
+  ]
+}

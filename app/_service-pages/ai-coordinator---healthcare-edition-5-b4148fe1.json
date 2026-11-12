@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-coordinator---healthcare-edition-5-b4148fe1",
+  "breadcrumbTitle": "AI Coordinator - Healthcare Edition #5",
+  "title": "AI Coordinator - Healthcare Edition #5",
+  "description": "Revolutionize healthcare through intelligent automation. Our AI Coordinator - Healthcare Edition #5 leverages advanced machine learning to deliver process autom",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Coordinator - Healthcare Edition #5 - Zion Tech Group",
+    "description": "Revolutionize healthcare through intelligent automation. Our AI Coordinator - Healthcare Edition #5 leverages advanced machine learning to deliver process autom",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-coordinator---healthcare-edition-5-b4148fe1"
+    }
+  },
+  "features": [
+    "HIPAA ready",
+    "Custom integrations",
+    "Comprehensive monitoring",
+    "Multi-language support"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Predictive maintenance scheduling",
+    "Zero manual intervention required",
+    "50% reduction in operational costs"
+  ]
+}

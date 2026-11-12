@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/cognitive-decision-insights-8dae6483",
+  "breadcrumbTitle": "Cognitive Decision Insights",
+  "title": "Cognitive Decision Insights",
+  "description": "Revolutionize finance through intelligent automation. Our Cognitive Decision Insights leverages advanced machine learning to deliver performance monitoring at s",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Cognitive Decision Insights - Zion Tech Group",
+    "description": "Revolutionize finance through intelligent automation. Our Cognitive Decision Insights leverages advanced machine learning to deliver performance monitoring at s",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cognitive-decision-insights-8dae6483"
+    }
+  },
+  "features": [
+    "Machine learning integration",
+    "Performance dashboards",
+    "Multi-region deployment",
+    "Role-based access control",
+    "Edge computing support"
+  ],
+  "benefits": [
+    "24/7 automated operations",
+    "Predictive maintenance scheduling",
+    "Scalable to millions of transactions"
+  ]
+}

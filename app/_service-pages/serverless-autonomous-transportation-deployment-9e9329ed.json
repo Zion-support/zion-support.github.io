@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/serverless-autonomous-transportation-deployment-9e9329ed",
+  "breadcrumbTitle": "Serverless Autonomous Transportation Deployment",
+  "title": "Serverless Autonomous Transportation Deployment",
+  "description": "Serverless deployment platform that auto-scales autonomous transportation workloads without infrastructure management.",
+  "basic": "$218/month",
+  "pro": "$548/month",
+  "enterprise": "$1648/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Serverless Autonomous Transportation Deployment - Zion Tech Group",
+    "description": "Serverless deployment platform that auto-scales autonomous transportation workloads without infrastructure management.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/serverless-autonomous-transportation-deployment-9e9329ed"
+    }
+  },
+  "features": [
+    "Function-as-a-Service",
+    "Event-driven architecture",
+    "Stateless scaling",
+    "Cold start optimization"
+  ],
+  "benefits": [
+    "Zero infrastructure management",
+    "Pay-per-execution",
+    "Automatic scaling",
+    "Reduced DevOps overhead"
+  ]
+}

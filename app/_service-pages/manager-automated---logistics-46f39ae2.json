@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/manager-automated---logistics-46f39ae2",
+  "breadcrumbTitle": "Manager Automated - Logistics",
+  "title": "Manager Automated - Logistics",
+  "description": "Transform your logistics operations with our Manager Automated - Logistics. This AI-driven solution automates predictive analytics with unprecedented accuracy a",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Manager Automated - Logistics - Zion Tech Group",
+    "description": "Transform your logistics operations with our Manager Automated - Logistics. This AI-driven solution automates predictive analytics with unprecedented accuracy a",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/manager-automated---logistics-46f39ae2"
+    }
+  },
+  "features": [
+    "Microservices deployment",
+    "HIPAA ready",
+    "Open-source friendly",
+    "API-first design",
+    "Offline capabilities"
+  ],
+  "benefits": [
+    "50% reduction in operational costs",
+    "Real-time insights and alerts",
+    "ROI in under 90 days",
+    "Enterprise-grade security",
+    "Self-healing infrastructure"
+  ]
+}

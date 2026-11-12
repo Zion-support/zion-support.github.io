@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/automated-financial-analyzer-fc130ed5",
+  "breadcrumbTitle": "Automated Financial Analyzer",
+  "title": "Automated Financial Analyzer",
+  "description": "Revolutionize technology through intelligent automation. Our Automated Financial Analyzer leverages advanced machine learning to deliver image recognition at sc",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated Financial Analyzer - Zion Tech Group",
+    "description": "Revolutionize technology through intelligent automation. Our Automated Financial Analyzer leverages advanced machine learning to deliver image recognition at sc",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-financial-analyzer-fc130ed5"
+    }
+  },
+  "features": [
+    "Auto-scaling capabilities",
+    "Multi-language support",
+    "Audit trails",
+    "Microservices deployment"
+  ],
+  "benefits": [
+    "Cost optimization recommendations",
+    "Scalable to millions of transactions",
+    "3x faster decision making"
+  ]
+}

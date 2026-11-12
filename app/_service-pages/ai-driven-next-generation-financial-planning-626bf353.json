@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-driven-next-generation-financial-planning-626bf353",
+  "breadcrumbTitle": "AI-Driven Next-Generation Financial Planning",
+  "title": "AI-Driven Next-Generation Financial Planning",
+  "description": "Automated financial planning system that creates next-generation personalized wealth strategies, tax optimization, and retirement planning using advanced algori",
+  "basic": "$258/month",
+  "pro": "$648/month",
+  "enterprise": "$1948/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Driven Next-Generation Financial Planning - Zion Tech Group",
+    "description": "Automated financial planning system that creates next-generation personalized wealth strategies, tax optimization, and retirement planning using advanced algori",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-driven-next-generation-financial-planning-626bf353"
+    }
+  },
+  "features": [
+    "Goal-based planning",
+    "Tax optimization",
+    "Monte Carlo simulation",
+    "Rebalancing automation"
+  ],
+  "benefits": [
+    "Personalized advice",
+    "Tax efficiency",
+    "Goal achievement",
+    "Lower fees"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-management---insurance-edition-624fd341",
+  "breadcrumbTitle": "AI Management - Insurance Edition",
+  "title": "AI Management - Insurance Edition",
+  "description": "The future of insurance is here with AI Management - Insurance Edition. Powered by cutting-edge AI, this platform delivers risk assessment like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Management - Insurance Edition - Zion Tech Group",
+    "description": "The future of insurance is here with AI Management - Insurance Edition. Powered by cutting-edge AI, this platform delivers risk assessment like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-management---insurance-edition-624fd341"
+    }
+  },
+  "features": [
+    "HIPAA ready",
+    "Offline capabilities",
+    "SOC 2 certified",
+    "Edge computing support",
+    "Zero-downtime updates"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "50% reduction in operational costs",
+    "Self-healing infrastructure"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/automated-coordinator-construction-1-ed312932",
+  "breadcrumbTitle": "Automated coordinator-construction #1",
+  "title": "Automated coordinator-construction #1",
+  "description": "Next-generation construction solution: Automated coordinator-construction #1. Combines supply chain with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated coordinator-construction #1 - Zion Tech Group",
+    "description": "Next-generation construction solution: Automated coordinator-construction #1. Combines supply chain with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-coordinator-construction-1-ed312932"
+    }
+  },
+  "features": [
+    "Role-based access control",
+    "GDPR compliance",
+    "Audit trails",
+    "Machine learning integration"
+  ],
+  "benefits": [
+    "Dynamic resource allocation",
+    "Reduced human error by 95%",
+    "99.9% uptime guarantee"
+  ]
+}

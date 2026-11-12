@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligent-financial-automation-51ff19aa",
+  "breadcrumbTitle": "Intelligent Financial Automation",
+  "title": "Intelligent Financial Automation",
+  "description": "Next-generation legal solution: Intelligent Financial Automation. Combines risk assessment with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Financial Automation - Zion Tech Group",
+    "description": "Next-generation legal solution: Intelligent Financial Automation. Combines risk assessment with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-financial-automation-51ff19aa"
+    }
+  },
+  "features": [
+    "Microservices deployment",
+    "Edge computing support",
+    "Container orchestration",
+    "Audit trails"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "Scalable to millions of transactions",
+    "24/7 automated operations",
+    "Dynamic resource allocation",
+    "Intelligent load balancing"
+  ]
+}

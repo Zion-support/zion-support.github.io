@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/automation-neural---retail-3569d117",
+  "breadcrumbTitle": "Automation Neural - Retail",
+  "title": "Automation Neural - Retail",
+  "description": "Next-generation retail solution: Automation Neural - Retail. Combines sales forecasting with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automation Neural - Retail - Zion Tech Group",
+    "description": "Next-generation retail solution: Automation Neural - Retail. Combines sales forecasting with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automation-neural---retail-3569d117"
+    }
+  },
+  "features": [
+    "Offline capabilities",
+    "Rollback mechanisms",
+    "SOC 2 certified",
+    "Serverless functions",
+    "Audit trails"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Scalable to millions of transactions",
+    "Enterprise-grade security",
+    "Dynamic resource allocation",
+    "Automated compliance reporting"
+  ]
+}

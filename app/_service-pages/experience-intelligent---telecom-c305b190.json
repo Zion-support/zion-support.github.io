@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/experience-intelligent---telecom-c305b190",
+  "breadcrumbTitle": "Experience Intelligent - Telecom",
+  "title": "Experience Intelligent - Telecom",
+  "description": "Next-generation Telecom solution: Experience Intelligent - Telecom. Combines data governance with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Experience Intelligent - Telecom - Zion Tech Group",
+    "description": "Next-generation Telecom solution: Experience Intelligent - Telecom. Combines data governance with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/experience-intelligent---telecom-c305b190"
+    }
+  },
+  "features": [
+    "Process discovery with activity analysis",
+    "Mobile-responsive interface with offline capabilities",
+    "Microservices deployment with container orchestration",
+    "Machine learning integration with automatic model training",
+    "Business intelligence with KPI dashboards"
+  ],
+  "benefits": [
+    "Real-time insights and alerts for proactive management",
+    "Better inventory management with demand forecasting",
+    "Better market positioning with competitive analysis",
+    "99.9% uptime guarantee with redundant architecture"
+  ]
+}

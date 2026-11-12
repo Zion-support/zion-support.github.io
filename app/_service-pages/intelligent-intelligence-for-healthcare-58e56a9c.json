@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-intelligence-for-healthcare-58e56a9c",
+  "breadcrumbTitle": "Intelligent Intelligence for Healthcare",
+  "title": "Intelligent Intelligence for Healthcare",
+  "description": "Revolutionize healthcare through intelligent automation. Our Intelligent Intelligence for Healthcare leverages advanced machine learning to deliver language pro",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Intelligence for Healthcare - Zion Tech Group",
+    "description": "Revolutionize healthcare through intelligent automation. Our Intelligent Intelligence for Healthcare leverages advanced machine learning to deliver language pro",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-intelligence-for-healthcare-58e56a9c"
+    }
+  },
+  "features": [
+    "HIPAA ready",
+    "Multi-region deployment",
+    "SOC 2 certified",
+    "Custom integrations",
+    "Machine learning integration"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "99.9% uptime guarantee",
+    "Reduced human error by 95%"
+  ]
+}

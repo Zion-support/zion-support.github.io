@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/neural-decision-analyzer-45f57902",
+  "breadcrumbTitle": "Neural Decision Analyzer",
+  "title": "Neural Decision Analyzer",
+  "description": "The future of hospitality is here with Neural Decision Analyzer. Powered by cutting-edge AI, this platform delivers decision support like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Neural Decision Analyzer - Zion Tech Group",
+    "description": "The future of hospitality is here with Neural Decision Analyzer. Powered by cutting-edge AI, this platform delivers decision support like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/neural-decision-analyzer-45f57902"
+    }
+  },
+  "features": [
+    "Cloud-native architecture",
+    "Edge computing support",
+    "Plugin architecture",
+    "Rollback mechanisms",
+    "HIPAA ready"
+  ],
+  "benefits": [
+    "Cost optimization recommendations",
+    "Performance benchmarking",
+    "ROI in under 90 days"
+  ]
+}

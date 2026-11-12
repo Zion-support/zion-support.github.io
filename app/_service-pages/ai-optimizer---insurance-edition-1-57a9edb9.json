@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/ai-optimizer---insurance-edition-1-57a9edb9",
+  "breadcrumbTitle": "AI Optimizer - Insurance Edition #1",
+  "title": "AI Optimizer - Insurance Edition #1",
+  "description": "Revolutionize insurance through intelligent automation. Our AI Optimizer - Insurance Edition #1 leverages advanced machine learning to deliver network optimizat",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Optimizer - Insurance Edition #1 - Zion Tech Group",
+    "description": "Revolutionize insurance through intelligent automation. Our AI Optimizer - Insurance Edition #1 leverages advanced machine learning to deliver network optimizat",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-optimizer---insurance-edition-1-57a9edb9"
+    }
+  },
+  "features": [
+    "Open-source friendly",
+    "Machine learning integration",
+    "Data encryption",
+    "Custom integrations",
+    "Offline capabilities"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Intelligent load balancing",
+    "Cost optimization recommendations",
+    "24/7 automated operations",
+    "50% reduction in operational costs"
+  ]
+}

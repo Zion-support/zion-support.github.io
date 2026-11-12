@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-modular-iot-intelligence-bacc9872",
+  "breadcrumbTitle": "AI-Powered Modular IoT Intelligence",
+  "title": "AI-Powered Modular IoT Intelligence",
+  "description": "Edge AI platform that processes IoT sensor data in real-time with modular insights.",
+  "basic": "$258/month",
+  "pro": "$648/month",
+  "enterprise": "$1948/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Modular IoT Intelligence - Zion Tech Group",
+    "description": "Edge AI platform that processes IoT sensor data in real-time with modular insights.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-modular-iot-intelligence-bacc9872"
+    }
+  },
+  "features": [
+    "Edge processing",
+    "Real-time analytics",
+    "Automated responses",
+    "Energy efficiency"
+  ],
+  "benefits": [
+    "Reduced latency",
+    "Better insights",
+    "Automated responses",
+    "Energy efficiency"
+  ]
+}

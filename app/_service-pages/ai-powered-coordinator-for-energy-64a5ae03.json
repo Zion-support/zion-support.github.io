@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/ai-powered-coordinator-for-energy-64a5ae03",
+  "breadcrumbTitle": "AI-Powered Coordinator for Energy",
+  "title": "AI-Powered Coordinator for Energy",
+  "description": "Revolutionize energy through intelligent automation. Our AI-Powered Coordinator for Energy leverages advanced machine learning to deliver sales forecasting at s",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Coordinator for Energy - Zion Tech Group",
+    "description": "Revolutionize energy through intelligent automation. Our AI-Powered Coordinator for Energy leverages advanced machine learning to deliver sales forecasting at s",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-coordinator-for-energy-64a5ae03"
+    }
+  },
+  "features": [
+    "HIPAA ready",
+    "Container orchestration",
+    "Serverless functions",
+    "Role-based access control"
+  ],
+  "benefits": [
+    "24/7 automated operations",
+    "Zero manual intervention required",
+    "Real-time insights and alerts"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/automated-processor-hospitality-789a3531",
+  "breadcrumbTitle": "Automated processor-hospitality",
+  "title": "Automated processor-hospitality",
+  "description": "Transform your hospitality operations with our Automated processor-hospitality. This AI-driven solution automates customer insights with unprecedented accuracy ",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated processor-hospitality - Zion Tech Group",
+    "description": "Transform your hospitality operations with our Automated processor-hospitality. This AI-driven solution automates customer insights with unprecedented accuracy ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-processor-hospitality-789a3531"
+    }
+  },
+  "features": [
+    "Real-time processing",
+    "Comprehensive monitoring",
+    "Role-based access control",
+    "GDPR compliance",
+    "Alerting system"
+  ],
+  "benefits": [
+    "Scalable to millions of transactions",
+    "Enterprise-grade security",
+    "Intelligent load balancing"
+  ]
+}

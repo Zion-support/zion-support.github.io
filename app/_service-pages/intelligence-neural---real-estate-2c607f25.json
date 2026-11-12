@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligence-neural---real-estate-2c607f25",
+  "breadcrumbTitle": "Intelligence Neural - Real-Estate",
+  "title": "Intelligence Neural - Real-Estate",
+  "description": "Unlock unprecedented growth with Intelligence Neural - Real-Estate. This autonomous system provides customer insights with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligence Neural - Real-Estate - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Intelligence Neural - Real-Estate. This autonomous system provides customer insights with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligence-neural---real-estate-2c607f25"
+    }
+  },
+  "features": [
+    "Cloud-native architecture",
+    "Plugin architecture",
+    "Serverless functions",
+    "Machine learning integration"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "Enterprise-grade security",
+    "Cost optimization recommendations",
+    "Automated compliance reporting"
+  ]
+}

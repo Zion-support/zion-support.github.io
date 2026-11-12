@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-intelligence---legal-edition-5173ee68",
+  "breadcrumbTitle": "AI Intelligence - Legal Edition",
+  "title": "AI Intelligence - Legal Edition",
+  "description": "Unlock unprecedented growth with AI Intelligence - Legal Edition. This autonomous system provides supply chain with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Intelligence - Legal Edition - Zion Tech Group",
+    "description": "Unlock unprecedented growth with AI Intelligence - Legal Edition. This autonomous system provides supply chain with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-intelligence---legal-edition-5173ee68"
+    }
+  },
+  "features": [
+    "Serverless functions",
+    "Cloud-native architecture",
+    "Role-based access control",
+    "Alerting system"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Intelligent load balancing",
+    "ROI in under 90 days",
+    "Real-time insights and alerts",
+    "Scalable to millions of transactions"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/adaptive-intelligence-automotive-e6a38931",
+  "breadcrumbTitle": "Adaptive intelligence-automotive",
+  "title": "Adaptive intelligence-automotive",
+  "description": "Transform your automotive operations with our Adaptive intelligence-automotive. This AI-driven solution automates inventory management with unprecedented accura",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Adaptive intelligence-automotive - Zion Tech Group",
+    "description": "Transform your automotive operations with our Adaptive intelligence-automotive. This AI-driven solution automates inventory management with unprecedented accura",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/adaptive-intelligence-automotive-e6a38931"
+    }
+  },
+  "features": [
+    "Audit trails",
+    "Serverless functions",
+    "Role-based access control",
+    "API-first design"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Predictive maintenance scheduling",
+    "50% reduction in operational costs",
+    "Seamless integration with existing systems"
+  ]
+}

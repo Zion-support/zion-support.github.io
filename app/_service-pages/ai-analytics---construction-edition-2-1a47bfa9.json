@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-analytics---construction-edition-2-1a47bfa9",
+  "breadcrumbTitle": "AI Analytics - Construction Edition #2",
+  "title": "AI Analytics - Construction Edition #2",
+  "description": "The future of construction is here with AI Analytics - Construction Edition #2. Powered by cutting-edge AI, this platform delivers image recognition like never ",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Analytics - Construction Edition #2 - Zion Tech Group",
+    "description": "The future of construction is here with AI Analytics - Construction Edition #2. Powered by cutting-edge AI, this platform delivers image recognition like never ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-analytics---construction-edition-2-1a47bfa9"
+    }
+  },
+  "features": [
+    "Cloud-native architecture",
+    "API-first design",
+    "Role-based access control",
+    "Zero-downtime updates",
+    "Edge computing support"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "Zero manual intervention required",
+    "Self-healing infrastructure",
+    "Automated compliance reporting"
+  ]
+}

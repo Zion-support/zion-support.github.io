@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/automated-network-orchestrator-b1b180bf",
+  "breadcrumbTitle": "Automated Network Orchestrator",
+  "title": "Automated Network Orchestrator",
+  "description": "Next-generation finance solution: Automated Network Orchestrator. Combines decision support with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated Network Orchestrator - Zion Tech Group",
+    "description": "Next-generation finance solution: Automated Network Orchestrator. Combines decision support with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-network-orchestrator-b1b180bf"
+    }
+  },
+  "features": [
+    "Open-source friendly",
+    "Comprehensive monitoring",
+    "Role-based access control",
+    "Data encryption",
+    "Auto-scaling capabilities"
+  ],
+  "benefits": [
+    "Dynamic resource allocation",
+    "24/7 automated operations",
+    "Scalable to millions of transactions",
+    "ROI in under 90 days"
+  ]
+}

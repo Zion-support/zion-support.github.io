@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/predictive-autonomous-freight-analytics-222e4715",
+  "breadcrumbTitle": "Predictive Autonomous Freight Analytics",
+  "title": "Predictive Autonomous Freight Analytics",
+  "description": "Freight intelligence platform that provides autonomous rate forecasting, capacity planning, and carrier performance analytics for logistics optimization.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Predictive Autonomous Freight Analytics - Zion Tech Group",
+    "description": "Freight intelligence platform that provides autonomous rate forecasting, capacity planning, and carrier performance analytics for logistics optimization.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/predictive-autonomous-freight-analytics-222e4715"
+    }
+  },
+  "features": [
+    "Rate forecasting",
+    "Capacity planning",
+    "Carrier scorecards",
+    "Lane optimization"
+  ],
+  "benefits": [
+    "Cost reduction",
+    "Better capacity",
+    "Improved reliability",
+    "Strategic sourcing"
+  ]
+}

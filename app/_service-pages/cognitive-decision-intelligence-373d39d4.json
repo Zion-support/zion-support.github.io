@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/cognitive-decision-intelligence-373d39d4",
+  "breadcrumbTitle": "Cognitive Decision Intelligence",
+  "title": "Cognitive Decision Intelligence",
+  "description": "Transform your construction operations with our Cognitive Decision Intelligence. This AI-driven solution automates compliance monitoring with unprecedented accu",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Cognitive Decision Intelligence - Zion Tech Group",
+    "description": "Transform your construction operations with our Cognitive Decision Intelligence. This AI-driven solution automates compliance monitoring with unprecedented accu",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cognitive-decision-intelligence-373d39d4"
+    }
+  },
+  "features": [
+    "API-first design",
+    "Role-based access control",
+    "Comprehensive monitoring",
+    "Edge computing support",
+    "GDPR compliance"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "3x faster decision making",
+    "Automated compliance reporting",
+    "Real-time insights and alerts",
+    "Self-healing infrastructure"
+  ]
+}

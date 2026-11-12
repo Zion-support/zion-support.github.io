@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-real-time-insurance-processing-framework-f7a4eb2c",
+  "breadcrumbTitle": "Intelligent Real-Time Insurance Processing Framework",
+  "title": "Intelligent Real-Time Insurance Processing Framework",
+  "description": "Intelligent processing framework that automates real-time insurance data flows with real-time transformation.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Intelligent Real-Time Insurance Processing Framework - Zion Tech Group",
+    "description": "Intelligent processing framework that automates real-time insurance data flows with real-time transformation.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-real-time-insurance-processing-framework-f7a4eb2c"
+    }
+  },
+  "features": [
+    "Real-time processing",
+    "Data transformation",
+    "ETL pipelines",
+    "Stream processing"
+  ],
+  "benefits": [
+    "Faster data flows",
+    "Reduced processing time",
+    "Higher throughput",
+    "Real-time transformation"
+  ]
+}

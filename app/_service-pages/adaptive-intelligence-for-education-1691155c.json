@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/adaptive-intelligence-for-education-1691155c",
+  "breadcrumbTitle": "Adaptive Intelligence for Education",
+  "title": "Adaptive Intelligence for Education",
+  "description": "Revolutionize education through intelligent automation. Our Adaptive Intelligence for Education leverages advanced machine learning to deliver content generatio",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Adaptive Intelligence for Education - Zion Tech Group",
+    "description": "Revolutionize education through intelligent automation. Our Adaptive Intelligence for Education leverages advanced machine learning to deliver content generatio",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/adaptive-intelligence-for-education-1691155c"
+    }
+  },
+  "features": [
+    "Alerting system",
+    "Audit trails",
+    "Plugin architecture",
+    "Microservices deployment",
+    "Container orchestration"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "ROI in under 90 days",
+    "Enterprise-grade security"
+  ]
+}

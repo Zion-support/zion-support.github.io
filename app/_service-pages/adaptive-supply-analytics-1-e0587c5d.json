@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/adaptive-supply-analytics-1-e0587c5d",
+  "breadcrumbTitle": "Adaptive Supply Analytics #1",
+  "title": "Adaptive Supply Analytics #1",
+  "description": "Next-generation sports solution: Adaptive Supply Analytics #1. Combines risk assessment with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Adaptive Supply Analytics #1 - Zion Tech Group",
+    "description": "Next-generation sports solution: Adaptive Supply Analytics #1. Combines risk assessment with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/adaptive-supply-analytics-1-e0587c5d"
+    }
+  },
+  "features": [
+    "HIPAA ready",
+    "Multi-region deployment",
+    "Multi-language support",
+    "Alerting system",
+    "Real-time processing"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "Seamless integration with existing systems",
+    "50% reduction in operational costs"
+  ]
+}

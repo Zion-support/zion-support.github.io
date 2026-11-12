@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/coordinator-self-optimizing---healthcare-eab409e5",
+  "breadcrumbTitle": "Coordinator Self-Optimizing - Healthcare",
+  "title": "Coordinator Self-Optimizing - Healthcare",
+  "description": "Next-generation healthcare solution: Coordinator Self-Optimizing - Healthcare. Combines market intelligence with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Coordinator Self-Optimizing - Healthcare - Zion Tech Group",
+    "description": "Next-generation healthcare solution: Coordinator Self-Optimizing - Healthcare. Combines market intelligence with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/coordinator-self-optimizing---healthcare-eab409e5"
+    }
+  },
+  "features": [
+    "Multi-language support",
+    "Zero-downtime updates",
+    "Container orchestration",
+    "Serverless functions",
+    "Machine learning integration"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "3x faster decision making",
+    "Automated compliance reporting"
+  ]
+}

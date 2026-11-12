@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/coordinator-automated---healthcare-c5144ec4",
+  "breadcrumbTitle": "Coordinator Automated - Healthcare",
+  "title": "Coordinator Automated - Healthcare",
+  "description": "Unlock unprecedented growth with Coordinator Automated - Healthcare. This autonomous system provides customer insights with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Coordinator Automated - Healthcare - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Coordinator Automated - Healthcare. This autonomous system provides customer insights with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/coordinator-automated---healthcare-c5144ec4"
+    }
+  },
+  "features": [
+    "Plugin architecture",
+    "Alerting system",
+    "Offline capabilities",
+    "Audit trails"
+  ],
+  "benefits": [
+    "Automated compliance reporting",
+    "Scalable to millions of transactions",
+    "Self-healing infrastructure"
+  ]
+}

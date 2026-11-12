@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/smart-energy-orchestrator-15f2af2f",
+  "breadcrumbTitle": "Smart Energy Orchestrator",
+  "title": "Smart Energy Orchestrator",
+  "description": "Revolutionize agriculture through intelligent automation. Our Smart Energy Orchestrator leverages advanced machine learning to deliver content generation at sca",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Energy Orchestrator - Zion Tech Group",
+    "description": "Revolutionize agriculture through intelligent automation. Our Smart Energy Orchestrator leverages advanced machine learning to deliver content generation at sca",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-energy-orchestrator-15f2af2f"
+    }
+  },
+  "features": [
+    "Mobile-responsive interface",
+    "Machine learning integration",
+    "Alerting system",
+    "GDPR compliance",
+    "Cloud-native architecture"
+  ],
+  "benefits": [
+    "Intelligent load balancing",
+    "Scalable to millions of transactions",
+    "Real-time insights and alerts",
+    "Zero manual intervention required"
+  ]
+}

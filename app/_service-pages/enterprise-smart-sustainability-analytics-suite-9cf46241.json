@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/enterprise-smart-sustainability-analytics-suite-9cf46241",
+  "breadcrumbTitle": "Enterprise Smart Sustainability Analytics Suite",
+  "title": "Enterprise Smart Sustainability Analytics Suite",
+  "description": "Enterprise analytics suite that delivers smart sustainability insights with unified dashboards and reporting.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Enterprise Smart Sustainability Analytics Suite - Zion Tech Group",
+    "description": "Enterprise analytics suite that delivers smart sustainability insights with unified dashboards and reporting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/enterprise-smart-sustainability-analytics-suite-9cf46241"
+    }
+  },
+  "features": [
+    "Data visualization",
+    "Custom dashboards",
+    "Report generation",
+    "KPI tracking"
+  ],
+  "benefits": [
+    "Unified data view",
+    "Faster insights",
+    "Customizable reports",
+    "Cross-functional collaboration"
+  ]
+}

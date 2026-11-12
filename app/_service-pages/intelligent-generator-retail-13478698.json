@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/intelligent-generator-retail-13478698",
+  "breadcrumbTitle": "Intelligent generator-retail",
+  "title": "Intelligent generator-retail",
+  "description": "Revolutionize retail through intelligent automation. Our Intelligent generator-retail leverages advanced machine learning to deliver quality control at scale.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent generator-retail - Zion Tech Group",
+    "description": "Revolutionize retail through intelligent automation. Our Intelligent generator-retail leverages advanced machine learning to deliver quality control at scale.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-generator-retail-13478698"
+    }
+  },
+  "features": [
+    "Role-based access control",
+    "Alerting system",
+    "Serverless functions",
+    "Microservices deployment"
+  ],
+  "benefits": [
+    "Intelligent load balancing",
+    "99.9% uptime guarantee",
+    "Dynamic resource allocation"
+  ]
+}

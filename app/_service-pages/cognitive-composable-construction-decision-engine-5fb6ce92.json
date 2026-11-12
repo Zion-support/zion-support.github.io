@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/cognitive-composable-construction-decision-engine-5fb6ce92",
+  "breadcrumbTitle": "Cognitive Composable Construction Decision Engine",
+  "title": "Cognitive Composable Construction Decision Engine",
+  "description": "Cognitive decision engine that processes composable signals to drive construction strategy with deep learning.",
+  "basic": "$278/month",
+  "pro": "$698/month",
+  "enterprise": "$2098/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Cognitive Composable Construction Decision Engine - Zion Tech Group",
+    "description": "Cognitive decision engine that processes composable signals to drive construction strategy with deep learning.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cognitive-composable-construction-decision-engine-5fb6ce92"
+    }
+  },
+  "features": [
+    "Cognitive reasoning",
+    "Scenario analysis",
+    "Decision trees",
+    "Recommendation engine"
+  ],
+  "benefits": [
+    "Better decision quality",
+    "Reduced risk",
+    "Faster insights",
+    "Competitive intelligence"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/manager-ai---construction-a2f89c66",
+  "breadcrumbTitle": "Manager AI - Construction",
+  "title": "Manager AI - Construction",
+  "description": "The future of construction is here with Manager AI - Construction. Powered by cutting-edge AI, this platform delivers document processing like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Manager AI - Construction - Zion Tech Group",
+    "description": "The future of construction is here with Manager AI - Construction. Powered by cutting-edge AI, this platform delivers document processing like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/manager-ai---construction-a2f89c66"
+    }
+  },
+  "features": [
+    "Auto-scaling capabilities",
+    "API-first design",
+    "HIPAA ready",
+    "Offline capabilities",
+    "Cloud-native architecture"
+  ],
+  "benefits": [
+    "Automated compliance reporting",
+    "Seamless integration with existing systems",
+    "Performance benchmarking",
+    "99.9% uptime guarantee"
+  ]
+}

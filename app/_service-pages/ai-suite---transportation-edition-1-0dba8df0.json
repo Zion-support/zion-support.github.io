@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-suite---transportation-edition-1-0dba8df0",
+  "breadcrumbTitle": "AI Suite - Transportation Edition #1",
+  "title": "AI Suite - Transportation Edition #1",
+  "description": "Revolutionize transportation through intelligent automation. Our AI Suite - Transportation Edition #1 leverages advanced machine learning to deliver security mo",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Suite - Transportation Edition #1 - Zion Tech Group",
+    "description": "Revolutionize transportation through intelligent automation. Our AI Suite - Transportation Edition #1 leverages advanced machine learning to deliver security mo",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-suite---transportation-edition-1-0dba8df0"
+    }
+  },
+  "features": [
+    "Audit trails",
+    "Data encryption",
+    "Plugin architecture",
+    "Serverless functions"
+  ],
+  "benefits": [
+    "50% reduction in operational costs",
+    "3x faster decision making",
+    "Zero manual intervention required",
+    "Self-healing infrastructure",
+    "Scalable to millions of transactions"
+  ]
+}

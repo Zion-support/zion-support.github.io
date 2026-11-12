@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/advisor-ai---automotive-3fd4b3e5",
+  "breadcrumbTitle": "Advisor AI - Automotive",
+  "title": "Advisor AI - Automotive",
+  "description": "Revolutionize automotive through intelligent automation. Our Advisor AI - Automotive leverages advanced machine learning to deliver threat detection at scale.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Advisor AI - Automotive - Zion Tech Group",
+    "description": "Revolutionize automotive through intelligent automation. Our Advisor AI - Automotive leverages advanced machine learning to deliver threat detection at scale.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/advisor-ai---automotive-3fd4b3e5"
+    }
+  },
+  "features": [
+    "Microservices deployment",
+    "Alerting system",
+    "Offline capabilities",
+    "Custom integrations"
+  ],
+  "benefits": [
+    "Cost optimization recommendations",
+    "Real-time insights and alerts",
+    "24/7 automated operations",
+    "Enterprise-grade security",
+    "Intelligent load balancing"
+  ]
+}

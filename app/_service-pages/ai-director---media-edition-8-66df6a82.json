@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-director---media-edition-8-66df6a82",
+  "breadcrumbTitle": "AI Director - Media Edition #8",
+  "title": "AI Director - Media Edition #8",
+  "description": "Transform your media operations with our AI Director - Media Edition #8. This AI-driven solution automates threat detection with unprecedented accuracy and effi",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Director - Media Edition #8 - Zion Tech Group",
+    "description": "Transform your media operations with our AI Director - Media Edition #8. This AI-driven solution automates threat detection with unprecedented accuracy and effi",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-director---media-edition-8-66df6a82"
+    }
+  },
+  "features": [
+    "Microservices deployment",
+    "Alerting system",
+    "Multi-language support",
+    "Container orchestration",
+    "Plugin architecture"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Zero manual intervention required",
+    "Scalable to millions of transactions"
+  ]
+}

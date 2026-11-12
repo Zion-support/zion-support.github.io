@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/predictive-sales-suite-d9a00246",
+  "breadcrumbTitle": "Predictive Sales Suite",
+  "title": "Predictive Sales Suite",
+  "description": "Revolutionize legal through intelligent automation. Our Predictive Sales Suite leverages advanced machine learning to deliver content generation at scale.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Predictive Sales Suite - Zion Tech Group",
+    "description": "Revolutionize legal through intelligent automation. Our Predictive Sales Suite leverages advanced machine learning to deliver content generation at scale.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/predictive-sales-suite-d9a00246"
+    }
+  },
+  "features": [
+    "Comprehensive monitoring",
+    "API-first design",
+    "Data encryption",
+    "Serverless functions"
+  ],
+  "benefits": [
+    "50% reduction in operational costs",
+    "3x faster decision making",
+    "Cost optimization recommendations"
+  ]
+}

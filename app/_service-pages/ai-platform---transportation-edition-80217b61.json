@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/ai-platform---transportation-edition-80217b61",
+  "breadcrumbTitle": "AI Platform - Transportation Edition",
+  "title": "AI Platform - Transportation Edition",
+  "description": "Next-generation transportation solution: AI Platform - Transportation Edition. Combines image recognition with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Platform - Transportation Edition - Zion Tech Group",
+    "description": "Next-generation transportation solution: AI Platform - Transportation Edition. Combines image recognition with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-platform---transportation-edition-80217b61"
+    }
+  },
+  "features": [
+    "Alerting system",
+    "Custom integrations",
+    "Cloud-native architecture",
+    "GDPR compliance",
+    "SOC 2 certified"
+  ],
+  "benefits": [
+    "Performance benchmarking",
+    "ROI in under 90 days",
+    "Enterprise-grade security",
+    "Zero manual intervention required",
+    "Real-time insights and alerts"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/networking-media-e3b84bab",
+  "breadcrumbTitle": "Network & Connectivity for Media",
+  "title": "Network & Connectivity for Media",
+  "description": "Network design, optimization, and support for Media. Reliable connectivity, secure access, and performance monitoring across sites.",
+  "basic": "$299/month",
+  "pro": "$799/month",
+  "enterprise": "$2499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Network & Connectivity for Media - Zion Tech Group",
+    "description": "Network design, optimization, and support for Media. Reliable connectivity, secure access, and performance monitoring across sites.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/networking-media-e3b84bab"
+    }
+  },
+  "features": [
+    "Network design and topology",
+    "SD-WAN and MPLS options",
+    "VPN and zero-trust access",
+    "Wi-Fi optimization",
+    "Performance monitoring"
+  ],
+  "benefits": [
+    "Improved uptime and throughput",
+    "Secure remote access",
+    "Better application performance",
+    "Scalable connectivity",
+    "Lower bandwidth costs"
+  ]
+}

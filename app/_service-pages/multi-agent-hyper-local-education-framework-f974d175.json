@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/multi-agent-hyper-local-education-framework-f974d175",
+  "breadcrumbTitle": "Multi-Agent Hyper-Local Education Framework",
+  "title": "Multi-Agent Hyper-Local Education Framework",
+  "description": "Multi-agent framework that deploys hyper-local education AI agents for collaborative problem-solving and distributed intelligence.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Multi-Agent Hyper-Local Education Framework - Zion Tech Group",
+    "description": "Multi-agent framework that deploys hyper-local education AI agents for collaborative problem-solving and distributed intelligence.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/multi-agent-hyper-local-education-framework-f974d175"
+    }
+  },
+  "features": [
+    "Collaborative agents",
+    "Shared memory pools",
+    "Role assignment",
+    "Emergent coordination"
+  ],
+  "benefits": [
+    "Multi-task parallelism",
+    "Specialist agents",
+    "Knowledge sharing",
+    "Emergent problem-solving"
+  ]
+}

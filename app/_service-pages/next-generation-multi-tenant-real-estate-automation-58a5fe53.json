@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/next-generation-multi-tenant-real-estate-automation-58a5fe53",
+  "breadcrumbTitle": "Next-Generation Multi-Tenant Real Estate Automation",
+  "title": "Next-Generation Multi-Tenant Real Estate Automation",
+  "description": "Next-generation automation suite that streamlines multi-tenant real estate workflows with intelligent orchestration.",
+  "basic": "$218/month",
+  "pro": "$548/month",
+  "enterprise": "$1648/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Next-Generation Multi-Tenant Real Estate Automation - Zion Tech Group",
+    "description": "Next-generation automation suite that streamlines multi-tenant real estate workflows with intelligent orchestration.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/next-generation-multi-tenant-real-estate-automation-58a5fe53"
+    }
+  },
+  "features": [
+    "Smart orchestration",
+    "Process automation",
+    "Event processing",
+    "Task scheduling"
+  ],
+  "benefits": [
+    "Faster execution",
+    "Reduced manual steps",
+    "Scalable processes",
+    "Error reduction"
+  ]
+}

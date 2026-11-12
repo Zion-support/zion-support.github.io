@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/automated-coordinator-for-manufacturing-d81bbc0a",
+  "breadcrumbTitle": "Automated Coordinator for Manufacturing",
+  "title": "Automated Coordinator for Manufacturing",
+  "description": "The future of manufacturing is here with Automated Coordinator for Manufacturing. Powered by cutting-edge AI, this platform delivers workflow management like ne",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated Coordinator for Manufacturing - Zion Tech Group",
+    "description": "The future of manufacturing is here with Automated Coordinator for Manufacturing. Powered by cutting-edge AI, this platform delivers workflow management like ne",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-coordinator-for-manufacturing-d81bbc0a"
+    }
+  },
+  "features": [
+    "Alerting system",
+    "GDPR compliance",
+    "API-first design",
+    "Performance dashboards"
+  ],
+  "benefits": [
+    "24/7 automated operations",
+    "3x faster decision making",
+    "Dynamic resource allocation",
+    "Cost optimization recommendations"
+  ]
+}

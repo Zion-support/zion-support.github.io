@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/smart-document-suite-6b095e76",
+  "breadcrumbTitle": "Smart Document Suite",
+  "title": "Smart Document Suite",
+  "description": "Next-generation automotive solution: Smart Document Suite. Combines financial planning with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Document Suite - Zion Tech Group",
+    "description": "Next-generation automotive solution: Smart Document Suite. Combines financial planning with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-document-suite-6b095e76"
+    }
+  },
+  "features": [
+    "GDPR compliance",
+    "Alerting system",
+    "Serverless functions",
+    "Plugin architecture"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Intelligent load balancing",
+    "Enterprise-grade security",
+    "3x faster decision making",
+    "Self-healing infrastructure"
+  ]
+}

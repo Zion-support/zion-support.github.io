@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/proactive-vision-ai-for-legal-44ca35a6",
+  "breadcrumbTitle": "Proactive Vision AI for Legal",
+  "title": "Proactive Vision AI for Legal",
+  "description": "Vision AI system powered by proactive computer vision models for legal analysis and automated visual inspection.",
+  "basic": "$258/month",
+  "pro": "$648/month",
+  "enterprise": "$1948/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Proactive Vision AI for Legal - Zion Tech Group",
+    "description": "Vision AI system powered by proactive computer vision models for legal analysis and automated visual inspection.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/proactive-vision-ai-for-legal-44ca35a6"
+    }
+  },
+  "features": [
+    "Real-time object detection",
+    "Image classification",
+    "Anomaly detection",
+    "Visual inspection"
+  ],
+  "benefits": [
+    "Automated quality control",
+    "Reduced inspection costs",
+    "Defect detection",
+    "Visual search"
+  ]
+}

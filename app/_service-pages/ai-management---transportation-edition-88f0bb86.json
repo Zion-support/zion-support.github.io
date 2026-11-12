@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-management---transportation-edition-88f0bb86",
+  "breadcrumbTitle": "AI Management - Transportation Edition",
+  "title": "AI Management - Transportation Edition",
+  "description": "Transform your transportation operations with our AI Management - Transportation Edition. This AI-driven solution automates risk assessment with unprecedented a",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Management - Transportation Edition - Zion Tech Group",
+    "description": "Transform your transportation operations with our AI Management - Transportation Edition. This AI-driven solution automates risk assessment with unprecedented a",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-management---transportation-edition-88f0bb86"
+    }
+  },
+  "features": [
+    "Comprehensive monitoring",
+    "Microservices deployment",
+    "Performance dashboards",
+    "Real-time processing",
+    "Serverless functions"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "Enterprise-grade security",
+    "3x faster decision making",
+    "Cost optimization recommendations"
+  ]
+}

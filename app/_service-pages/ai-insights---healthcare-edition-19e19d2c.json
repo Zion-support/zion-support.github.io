@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-insights---healthcare-edition-19e19d2c",
+  "breadcrumbTitle": "AI Insights - Healthcare Edition",
+  "title": "AI Insights - Healthcare Edition",
+  "description": "Unlock unprecedented growth with AI Insights - Healthcare Edition. This autonomous system provides inventory management with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Insights - Healthcare Edition - Zion Tech Group",
+    "description": "Unlock unprecedented growth with AI Insights - Healthcare Edition. This autonomous system provides inventory management with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-insights---healthcare-edition-19e19d2c"
+    }
+  },
+  "features": [
+    "Zero-downtime updates",
+    "Multi-region deployment",
+    "HIPAA ready",
+    "Rollback mechanisms"
+  ],
+  "benefits": [
+    "Seamless integration with existing systems",
+    "Real-time insights and alerts",
+    "Intelligent load balancing",
+    "ROI in under 90 days"
+  ]
+}

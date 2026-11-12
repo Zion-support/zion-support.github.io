@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/smart-decision-coordinator-ef4f3fab",
+  "breadcrumbTitle": "Smart Decision Coordinator",
+  "title": "Smart Decision Coordinator",
+  "description": "Revolutionize healthcare through intelligent automation. Our Smart Decision Coordinator leverages advanced machine learning to deliver workflow management at sc",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Decision Coordinator - Zion Tech Group",
+    "description": "Revolutionize healthcare through intelligent automation. Our Smart Decision Coordinator leverages advanced machine learning to deliver workflow management at sc",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-decision-coordinator-ef4f3fab"
+    }
+  },
+  "features": [
+    "Offline capabilities",
+    "Machine learning integration",
+    "GDPR compliance",
+    "Audit trails",
+    "HIPAA ready"
+  ],
+  "benefits": [
+    "Cost optimization recommendations",
+    "Real-time insights and alerts",
+    "Enterprise-grade security",
+    "Zero manual intervention required",
+    "99.9% uptime guarantee"
+  ]
+}

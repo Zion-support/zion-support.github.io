@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/devops-healthcare-35459253",
+  "breadcrumbTitle": "DevOps & Automation for Healthcare",
+  "title": "DevOps & Automation for Healthcare",
+  "description": "DevOps and automation for Healthcare teams. CI/CD, infrastructure as code, and observability to ship faster and safer.",
+  "basic": "$299/month",
+  "pro": "$799/month",
+  "enterprise": "$2499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "DevOps & Automation for Healthcare - Zion Tech Group",
+    "description": "DevOps and automation for Healthcare teams. CI/CD, infrastructure as code, and observability to ship faster and safer.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/devops-healthcare-35459253"
+    }
+  },
+  "features": [
+    "CI/CD pipeline setup",
+    "Infrastructure as code (Terraform/CloudFormation)",
+    "Container orchestration (Kubernetes)",
+    "Monitoring and alerting",
+    "Release automation"
+  ],
+  "benefits": [
+    "Shorter release cycles",
+    "Reduced manual errors",
+    "Higher deployment frequency",
+    "Improved reliability",
+    "Faster incident resolution"
+  ]
+}

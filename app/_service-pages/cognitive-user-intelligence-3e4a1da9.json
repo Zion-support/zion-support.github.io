@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/cognitive-user-intelligence-3e4a1da9",
+  "breadcrumbTitle": "Cognitive User Intelligence",
+  "title": "Cognitive User Intelligence",
+  "description": "Revolutionize retail through intelligent automation. Our Cognitive User Intelligence leverages advanced machine learning to deliver threat detection at scale.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Cognitive User Intelligence - Zion Tech Group",
+    "description": "Revolutionize retail through intelligent automation. Our Cognitive User Intelligence leverages advanced machine learning to deliver threat detection at scale.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cognitive-user-intelligence-3e4a1da9"
+    }
+  },
+  "features": [
+    "Multi-language support",
+    "Custom integrations",
+    "API-first design",
+    "Multi-region deployment"
+  ],
+  "benefits": [
+    "Intelligent load balancing",
+    "Automated compliance reporting",
+    "ROI in under 90 days",
+    "Cost optimization recommendations",
+    "99.9% uptime guarantee"
+  ]
+}

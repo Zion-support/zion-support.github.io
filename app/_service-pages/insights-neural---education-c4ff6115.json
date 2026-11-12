@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/insights-neural---education-c4ff6115",
+  "breadcrumbTitle": "Insights Neural - Education",
+  "title": "Insights Neural - Education",
+  "description": "Revolutionize education through intelligent automation. Our Insights Neural - Education leverages advanced machine learning to deliver document processing at sc",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Insights Neural - Education - Zion Tech Group",
+    "description": "Revolutionize education through intelligent automation. Our Insights Neural - Education leverages advanced machine learning to deliver document processing at sc",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/insights-neural---education-c4ff6115"
+    }
+  },
+  "features": [
+    "HIPAA ready",
+    "Plugin architecture",
+    "Comprehensive monitoring",
+    "Performance dashboards",
+    "Open-source friendly"
+  ],
+  "benefits": [
+    "Seamless integration with existing systems",
+    "Predictive maintenance scheduling",
+    "Scalable to millions of transactions",
+    "Dynamic resource allocation",
+    "Cost optimization recommendations"
+  ]
+}

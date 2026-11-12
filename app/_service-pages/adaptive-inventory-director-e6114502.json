@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/adaptive-inventory-director-e6114502",
+  "breadcrumbTitle": "Adaptive Inventory Director",
+  "title": "Adaptive Inventory Director",
+  "description": "Next-generation hospitality solution: Adaptive Inventory Director. Combines decision support with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Adaptive Inventory Director - Zion Tech Group",
+    "description": "Next-generation hospitality solution: Adaptive Inventory Director. Combines decision support with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/adaptive-inventory-director-e6114502"
+    }
+  },
+  "features": [
+    "SOC 2 certified",
+    "Cloud-native architecture",
+    "Container orchestration",
+    "Performance dashboards",
+    "Alerting system"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "Self-healing infrastructure",
+    "Enterprise-grade security"
+  ]
+}

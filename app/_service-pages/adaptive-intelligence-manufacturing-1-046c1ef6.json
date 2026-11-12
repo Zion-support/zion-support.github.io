@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/adaptive-intelligence-manufacturing-1-046c1ef6",
+  "breadcrumbTitle": "Adaptive intelligence-manufacturing #1",
+  "title": "Adaptive intelligence-manufacturing #1",
+  "description": "Next-generation manufacturing solution: Adaptive intelligence-manufacturing #1. Combines energy management with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Adaptive intelligence-manufacturing #1 - Zion Tech Group",
+    "description": "Next-generation manufacturing solution: Adaptive intelligence-manufacturing #1. Combines energy management with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/adaptive-intelligence-manufacturing-1-046c1ef6"
+    }
+  },
+  "features": [
+    "Custom integrations",
+    "Data encryption",
+    "Auto-scaling capabilities",
+    "Alerting system",
+    "Real-time processing"
+  ],
+  "benefits": [
+    "24/7 automated operations",
+    "Seamless integration with existing systems",
+    "Predictive maintenance scheduling",
+    "Scalable to millions of transactions",
+    "Reduced human error by 95%"
+  ]
+}

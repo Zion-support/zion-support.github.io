@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/intelligent-decision-support-system-real-estate-intelligent-decision-support-system-for-real-estate",
+  "breadcrumbTitle": "Intelligent Decision Support System for Real Estate",
+  "title": "Intelligent Decision Support System for Real Estate",
+  "description": "AI-driven decision support system for real estate. Delivers data-backed recommendations for Property valuation, market analysis, tenant matching with confidence",
+  "basic": "$123/month",
+  "pro": "$326/month",
+  "enterprise": "$554/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Decision Support System for Real Estate - Zion Tech Group",
+    "description": "AI-driven decision support system for real estate. Delivers data-backed recommendations for Property valuation, market analysis, tenant matching with confidence",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-decision-support-system-real-estate-intelligent-decision-support-system-for-real-estate"
+    }
+  },
+  "features": [
+    "AI-powered automation",
+    "Enterprise-grade security",
+    "24/7 monitoring",
+    "API-first integration",
+    "Scalable architecture"
+  ],
+  "benefits": [
+    "37% reduction in operational costs",
+    "Process 65% faster with automation",
+    "99.9% uptime guarantee with enterprise SLAs",
+    "ROI realized in under 90 days",
+    "Zero-downtime deployment"
+  ]
+}

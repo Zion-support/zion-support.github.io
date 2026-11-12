@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/enterprise-composable-aviation-analytics-suite-c1de5ad0",
+  "breadcrumbTitle": "Enterprise Composable Aviation Analytics Suite",
+  "title": "Enterprise Composable Aviation Analytics Suite",
+  "description": "Enterprise analytics suite that delivers composable aviation insights with unified dashboards and reporting.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Enterprise Composable Aviation Analytics Suite - Zion Tech Group",
+    "description": "Enterprise analytics suite that delivers composable aviation insights with unified dashboards and reporting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/enterprise-composable-aviation-analytics-suite-c1de5ad0"
+    }
+  },
+  "features": [
+    "Data visualization",
+    "Custom dashboards",
+    "Report generation",
+    "KPI tracking"
+  ],
+  "benefits": [
+    "Unified data view",
+    "Faster insights",
+    "Customizable reports",
+    "Cross-functional collaboration"
+  ]
+}

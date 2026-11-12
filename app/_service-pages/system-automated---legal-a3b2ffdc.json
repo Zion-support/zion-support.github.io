@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/system-automated---legal-a3b2ffdc",
+  "breadcrumbTitle": "System Automated - Legal",
+  "title": "System Automated - Legal",
+  "description": "Transform your legal operations with our System Automated - Legal. This AI-driven solution automates compliance monitoring with unprecedented accuracy and effic",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "System Automated - Legal - Zion Tech Group",
+    "description": "Transform your legal operations with our System Automated - Legal. This AI-driven solution automates compliance monitoring with unprecedented accuracy and effic",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/system-automated---legal-a3b2ffdc"
+    }
+  },
+  "features": [
+    "Role-based access control",
+    "Audit trails",
+    "Multi-language support",
+    "Machine learning integration",
+    "Open-source friendly"
+  ],
+  "benefits": [
+    "Dynamic resource allocation",
+    "Predictive maintenance scheduling",
+    "Automated compliance reporting",
+    "Seamless integration with existing systems",
+    "Zero manual intervention required"
+  ]
+}

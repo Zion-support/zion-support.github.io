@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-advisor---sports-edition-2-4ff054d1",
+  "breadcrumbTitle": "AI Advisor - Sports Edition #2",
+  "title": "AI Advisor - Sports Edition #2",
+  "description": "Next-generation sports solution: AI Advisor - Sports Edition #2. Combines document processing with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Advisor - Sports Edition #2 - Zion Tech Group",
+    "description": "Next-generation sports solution: AI Advisor - Sports Edition #2. Combines document processing with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-advisor---sports-edition-2-4ff054d1"
+    }
+  },
+  "features": [
+    "Offline capabilities",
+    "Multi-region deployment",
+    "Mobile-responsive interface",
+    "Plugin architecture",
+    "HIPAA ready"
+  ],
+  "benefits": [
+    "Cost optimization recommendations",
+    "ROI in under 90 days",
+    "Seamless integration with existing systems",
+    "Reduced human error by 95%"
+  ]
+}

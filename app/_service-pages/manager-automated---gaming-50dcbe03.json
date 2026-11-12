@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/manager-automated---gaming-50dcbe03",
+  "breadcrumbTitle": "Manager Automated - Gaming",
+  "title": "Manager Automated - Gaming",
+  "description": "Transform your gaming operations with our Manager Automated - Gaming. This AI-driven solution automates security monitoring with unprecedented accuracy and effi",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Manager Automated - Gaming - Zion Tech Group",
+    "description": "Transform your gaming operations with our Manager Automated - Gaming. This AI-driven solution automates security monitoring with unprecedented accuracy and effi",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/manager-automated---gaming-50dcbe03"
+    }
+  },
+  "features": [
+    "Open-source friendly",
+    "Cloud-native architecture",
+    "Comprehensive monitoring",
+    "API-first design",
+    "Zero-downtime updates"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Performance benchmarking",
+    "Zero manual intervention required"
+  ]
+}

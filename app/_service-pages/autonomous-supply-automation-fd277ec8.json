@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/autonomous-supply-automation-fd277ec8",
+  "breadcrumbTitle": "Autonomous Supply Automation",
+  "title": "Autonomous Supply Automation",
+  "description": "Next-generation manufacturing solution: Autonomous Supply Automation. Combines financial planning with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous Supply Automation - Zion Tech Group",
+    "description": "Next-generation manufacturing solution: Autonomous Supply Automation. Combines financial planning with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-supply-automation-fd277ec8"
+    }
+  },
+  "features": [
+    "HIPAA ready",
+    "Data encryption",
+    "Edge computing support",
+    "Microservices deployment"
+  ],
+  "benefits": [
+    "Performance benchmarking",
+    "Automated compliance reporting",
+    "ROI in under 90 days"
+  ]
+}

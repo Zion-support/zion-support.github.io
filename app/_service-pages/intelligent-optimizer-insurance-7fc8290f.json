@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligent-optimizer-insurance-7fc8290f",
+  "breadcrumbTitle": "Intelligent optimizer-insurance",
+  "title": "Intelligent optimizer-insurance",
+  "description": "Next-generation insurance solution: Intelligent optimizer-insurance. Combines maintenance scheduling with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent optimizer-insurance - Zion Tech Group",
+    "description": "Next-generation insurance solution: Intelligent optimizer-insurance. Combines maintenance scheduling with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-optimizer-insurance-7fc8290f"
+    }
+  },
+  "features": [
+    "Auto-scaling capabilities",
+    "Plugin architecture",
+    "Comprehensive monitoring",
+    "Machine learning integration",
+    "Role-based access control"
+  ],
+  "benefits": [
+    "Seamless integration with existing systems",
+    "3x faster decision making",
+    "50% reduction in operational costs",
+    "Cost optimization recommendations"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/automated-engine-real-estate-675a80c7",
+  "breadcrumbTitle": "Automated engine-real-estate",
+  "title": "Automated engine-real-estate",
+  "description": "The future of real-estate is here with Automated engine-real-estate. Powered by cutting-edge AI, this platform delivers compliance monitoring like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated engine-real-estate - Zion Tech Group",
+    "description": "The future of real-estate is here with Automated engine-real-estate. Powered by cutting-edge AI, this platform delivers compliance monitoring like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-engine-real-estate-675a80c7"
+    }
+  },
+  "features": [
+    "Role-based access control",
+    "Multi-region deployment",
+    "Machine learning integration",
+    "Open-source friendly"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "Performance benchmarking",
+    "Scalable to millions of transactions",
+    "Intelligent load balancing"
+  ]
+}

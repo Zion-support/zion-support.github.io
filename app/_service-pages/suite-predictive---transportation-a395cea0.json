@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/suite-predictive---transportation-a395cea0",
+  "breadcrumbTitle": "Suite Predictive - Transportation",
+  "title": "Suite Predictive - Transportation",
+  "description": "Unlock unprecedented growth with Suite Predictive - Transportation. This autonomous system provides market intelligence with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Suite Predictive - Transportation - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Suite Predictive - Transportation. This autonomous system provides market intelligence with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/suite-predictive---transportation-a395cea0"
+    }
+  },
+  "features": [
+    "Cloud-native architecture",
+    "Offline capabilities",
+    "Data encryption",
+    "HIPAA ready",
+    "Plugin architecture"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Seamless integration with existing systems",
+    "Scalable to millions of transactions",
+    "Enterprise-grade security",
+    "Intelligent load balancing"
+  ]
+}

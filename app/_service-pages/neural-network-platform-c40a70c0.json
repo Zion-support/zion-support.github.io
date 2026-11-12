@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/neural-network-platform-c40a70c0",
+  "breadcrumbTitle": "Neural Network Platform",
+  "title": "Neural Network Platform",
+  "description": "The future of retail is here with Neural Network Platform. Powered by cutting-edge AI, this platform delivers image recognition like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Neural Network Platform - Zion Tech Group",
+    "description": "The future of retail is here with Neural Network Platform. Powered by cutting-edge AI, this platform delivers image recognition like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/neural-network-platform-c40a70c0"
+    }
+  },
+  "features": [
+    "Cloud-native architecture",
+    "API-first design",
+    "Zero-downtime updates",
+    "GDPR compliance",
+    "Mobile-responsive interface"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "Performance benchmarking",
+    "Zero manual intervention required",
+    "Automated compliance reporting"
+  ]
+}

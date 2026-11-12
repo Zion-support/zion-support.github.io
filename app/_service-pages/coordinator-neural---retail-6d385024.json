@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/coordinator-neural---retail-6d385024",
+  "breadcrumbTitle": "Coordinator Neural - Retail",
+  "title": "Coordinator Neural - Retail",
+  "description": "Revolutionize retail through intelligent automation. Our Coordinator Neural - Retail leverages advanced machine learning to deliver image recognition at scale.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Coordinator Neural - Retail - Zion Tech Group",
+    "description": "Revolutionize retail through intelligent automation. Our Coordinator Neural - Retail leverages advanced machine learning to deliver image recognition at scale.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/coordinator-neural---retail-6d385024"
+    }
+  },
+  "features": [
+    "Custom integrations",
+    "Multi-region deployment",
+    "GDPR compliance",
+    "Edge computing support"
+  ],
+  "benefits": [
+    "Seamless integration with existing systems",
+    "99.9% uptime guarantee",
+    "24/7 automated operations",
+    "Reduced human error by 95%"
+  ]
+}

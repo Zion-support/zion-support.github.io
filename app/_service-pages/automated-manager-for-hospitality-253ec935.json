@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/automated-manager-for-hospitality-253ec935",
+  "breadcrumbTitle": "Automated Manager for Hospitality",
+  "title": "Automated Manager for Hospitality",
+  "description": "The future of hospitality is here with Automated Manager for Hospitality. Powered by cutting-edge AI, this platform delivers network optimization like never bef",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated Manager for Hospitality - Zion Tech Group",
+    "description": "The future of hospitality is here with Automated Manager for Hospitality. Powered by cutting-edge AI, this platform delivers network optimization like never bef",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-manager-for-hospitality-253ec935"
+    }
+  },
+  "features": [
+    "Rollback mechanisms",
+    "Edge computing support",
+    "Plugin architecture",
+    "HIPAA ready"
+  ],
+  "benefits": [
+    "50% reduction in operational costs",
+    "Dynamic resource allocation",
+    "Scalable to millions of transactions"
+  ]
+}

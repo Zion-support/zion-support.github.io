@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-compliance-automation-daf2ffd7",
+  "breadcrumbTitle": "Intelligent Compliance Automation",
+  "title": "Intelligent Compliance Automation",
+  "description": "Automated compliance platform that monitors, audits, and enforces regulatory requirements.",
+  "basic": "$258/month",
+  "pro": "$648/month",
+  "enterprise": "$1948/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Intelligent Compliance Automation - Zion Tech Group",
+    "description": "Automated compliance platform that monitors, audits, and enforces regulatory requirements.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-compliance-automation-daf2ffd7"
+    }
+  },
+  "features": [
+    "Regulatory monitoring",
+    "Audit automation",
+    "Violation detection",
+    "Remediation guidance"
+  ],
+  "benefits": [
+    "Full compliance coverage",
+    "Reduced audit burden",
+    "Automated reporting",
+    "Risk mitigation"
+  ]
+}

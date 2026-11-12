@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/platform-smart---telecom-1-db750cae",
+  "breadcrumbTitle": "Platform Smart - Telecom #1",
+  "title": "Platform Smart - Telecom #1",
+  "description": "Transform your telecom operations with our Platform Smart - Telecom #1. This AI-driven solution automates content generation with unprecedented accuracy and eff",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Platform Smart - Telecom #1 - Zion Tech Group",
+    "description": "Transform your telecom operations with our Platform Smart - Telecom #1. This AI-driven solution automates content generation with unprecedented accuracy and eff",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/platform-smart---telecom-1-db750cae"
+    }
+  },
+  "features": [
+    "Role-based access control",
+    "Edge computing support",
+    "Zero-downtime updates",
+    "Comprehensive monitoring",
+    "Auto-scaling capabilities"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "Performance benchmarking",
+    "Enterprise-grade security"
+  ]
+}

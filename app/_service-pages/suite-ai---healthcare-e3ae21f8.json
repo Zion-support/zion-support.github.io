@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/suite-ai---healthcare-e3ae21f8",
+  "breadcrumbTitle": "Suite AI - Healthcare",
+  "title": "Suite AI - Healthcare",
+  "description": "The future of healthcare is here with Suite AI - Healthcare. Powered by cutting-edge AI, this platform delivers financial planning like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Suite AI - Healthcare - Zion Tech Group",
+    "description": "The future of healthcare is here with Suite AI - Healthcare. Powered by cutting-edge AI, this platform delivers financial planning like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/suite-ai---healthcare-e3ae21f8"
+    }
+  },
+  "features": [
+    "Data encryption",
+    "Comprehensive monitoring",
+    "Performance dashboards",
+    "Custom integrations",
+    "Machine learning integration"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "Predictive maintenance scheduling",
+    "Automated compliance reporting",
+    "24/7 automated operations",
+    "Self-healing infrastructure"
+  ]
+}

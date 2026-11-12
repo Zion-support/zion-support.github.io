@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-language-automation-70380962",
+  "breadcrumbTitle": "Intelligent Language Automation",
+  "title": "Intelligent Language Automation",
+  "description": "Transform your healthcare operations with our Intelligent Language Automation. This AI-driven solution automates inventory management with unprecedented accurac",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Language Automation - Zion Tech Group",
+    "description": "Transform your healthcare operations with our Intelligent Language Automation. This AI-driven solution automates inventory management with unprecedented accurac",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-language-automation-70380962"
+    }
+  },
+  "features": [
+    "Offline capabilities",
+    "Real-time processing",
+    "Custom integrations",
+    "Alerting system"
+  ],
+  "benefits": [
+    "Performance benchmarking",
+    "Cost optimization recommendations",
+    "24/7 automated operations",
+    "Automated compliance reporting"
+  ]
+}

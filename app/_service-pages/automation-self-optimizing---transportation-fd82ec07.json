@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/automation-self-optimizing---transportation-fd82ec07",
+  "breadcrumbTitle": "Automation Self-Optimizing - Transportation",
+  "title": "Automation Self-Optimizing - Transportation",
+  "description": "Next-generation transportation solution: Automation Self-Optimizing - Transportation. Combines decision support with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automation Self-Optimizing - Transportation - Zion Tech Group",
+    "description": "Next-generation transportation solution: Automation Self-Optimizing - Transportation. Combines decision support with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automation-self-optimizing---transportation-fd82ec07"
+    }
+  },
+  "features": [
+    "Machine learning integration",
+    "Rollback mechanisms",
+    "Custom integrations",
+    "GDPR compliance",
+    "Multi-language support"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "Reduced human error by 95%",
+    "24/7 automated operations"
+  ]
+}

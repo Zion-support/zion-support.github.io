@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-optimization---energy-edition-4b108f61",
+  "breadcrumbTitle": "AI Optimization - Energy Edition",
+  "title": "AI Optimization - Energy Edition",
+  "description": "Revolutionize energy through intelligent automation. Our AI Optimization - Energy Edition leverages advanced machine learning to deliver inventory management at",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Optimization - Energy Edition - Zion Tech Group",
+    "description": "Revolutionize energy through intelligent automation. Our AI Optimization - Energy Edition leverages advanced machine learning to deliver inventory management at",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-optimization---energy-edition-4b108f61"
+    }
+  },
+  "features": [
+    "Audit trails",
+    "Role-based access control",
+    "Multi-language support",
+    "SOC 2 certified"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "ROI in under 90 days",
+    "Predictive maintenance scheduling",
+    "Intelligent load balancing",
+    "Real-time insights and alerts"
+  ]
+}

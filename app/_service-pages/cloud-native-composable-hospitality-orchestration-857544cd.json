@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/cloud-native-composable-hospitality-orchestration-857544cd",
+  "breadcrumbTitle": "Cloud-Native Composable Hospitality Orchestration",
+  "title": "Cloud-Native Composable Hospitality Orchestration",
+  "description": "Cloud-native orchestration platform that manages composable hospitality resources with auto-scaling and cost control.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Cloud-Native Composable Hospitality Orchestration - Zion Tech Group",
+    "description": "Cloud-native orchestration platform that manages composable hospitality resources with auto-scaling and cost control.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cloud-native-composable-hospitality-orchestration-857544cd"
+    }
+  },
+  "features": [
+    "Container orchestration",
+    "Resource management",
+    "Health monitoring",
+    "Auto-healing"
+  ],
+  "benefits": [
+    "Reduced infrastructure cost",
+    "Auto-scaling",
+    "Container efficiency",
+    "Developer productivity"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-data-driven-iot-intelligence-264d41e4",
+  "breadcrumbTitle": "AI-Powered Data-Driven IoT Intelligence",
+  "title": "AI-Powered Data-Driven IoT Intelligence",
+  "description": "Edge AI platform that processes IoT sensor data in real-time with data-driven insights.",
+  "basic": "$258/month",
+  "pro": "$648/month",
+  "enterprise": "$1948/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Data-Driven IoT Intelligence - Zion Tech Group",
+    "description": "Edge AI platform that processes IoT sensor data in real-time with data-driven insights.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-data-driven-iot-intelligence-264d41e4"
+    }
+  },
+  "features": [
+    "Edge processing",
+    "Real-time analytics",
+    "Automated responses",
+    "Energy efficiency"
+  ],
+  "benefits": [
+    "Reduced latency",
+    "Better insights",
+    "Automated responses",
+    "Energy efficiency"
+  ]
+}

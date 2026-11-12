@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/platform-automated---retail-565eead1",
+  "breadcrumbTitle": "Platform Automated - Retail",
+  "title": "Platform Automated - Retail",
+  "description": "Next-generation retail solution: Platform Automated - Retail. Combines content generation with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Platform Automated - Retail - Zion Tech Group",
+    "description": "Next-generation retail solution: Platform Automated - Retail. Combines content generation with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/platform-automated---retail-565eead1"
+    }
+  },
+  "features": [
+    "API-first design",
+    "Mobile-responsive interface",
+    "HIPAA ready",
+    "Open-source friendly"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "Cost optimization recommendations",
+    "Predictive maintenance scheduling"
+  ]
+}

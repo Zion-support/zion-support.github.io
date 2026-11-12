@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-predictive-public-sector-intelligence-platform-9c355a3d",
+  "breadcrumbTitle": "AI-Powered Predictive Public Sector Intelligence Platform",
+  "title": "AI-Powered Predictive Public Sector Intelligence Platform",
+  "description": "AI-driven intelligence platform that delivers predictive insights and automated decision-making for public sector operations.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Predictive Public Sector Intelligence Platform - Zion Tech Group",
+    "description": "AI-driven intelligence platform that delivers predictive insights and automated decision-making for public sector operations.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-predictive-public-sector-intelligence-platform-9c355a3d"
+    }
+  },
+  "features": [
+    "Real-time intelligence",
+    "Automated insights",
+    "Predictive alerts",
+    "API integration"
+  ],
+  "benefits": [
+    "Real-time actionable insights",
+    "Automated decision-making",
+    "Reduced latency",
+    "Improved accuracy"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/automated-threat-generator-2a3e6f6a",
+  "breadcrumbTitle": "Automated Threat Generator",
+  "title": "Automated Threat Generator",
+  "description": "Transform your sports operations with our Automated Threat Generator. This AI-driven solution automates data processing with unprecedented accuracy and efficien",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated Threat Generator - Zion Tech Group",
+    "description": "Transform your sports operations with our Automated Threat Generator. This AI-driven solution automates data processing with unprecedented accuracy and efficien",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-threat-generator-2a3e6f6a"
+    }
+  },
+  "features": [
+    "Plugin architecture",
+    "Role-based access control",
+    "Offline capabilities",
+    "Comprehensive monitoring",
+    "API-first design"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "Self-healing infrastructure",
+    "Automated compliance reporting",
+    "Real-time insights and alerts"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/ai-platform---insurance-edition-4-3683fbe3",
+  "breadcrumbTitle": "AI Platform - Insurance Edition #4",
+  "title": "AI Platform - Insurance Edition #4",
+  "description": "Revolutionize insurance through intelligent automation. Our AI Platform - Insurance Edition #4 leverages advanced machine learning to deliver compliance monitor",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Platform - Insurance Edition #4 - Zion Tech Group",
+    "description": "Revolutionize insurance through intelligent automation. Our AI Platform - Insurance Edition #4 leverages advanced machine learning to deliver compliance monitor",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-platform---insurance-edition-4-3683fbe3"
+    }
+  },
+  "features": [
+    "Performance dashboards",
+    "API-first design",
+    "HIPAA ready",
+    "Data encryption",
+    "SOC 2 certified"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "Cost optimization recommendations",
+    "Seamless integration with existing systems",
+    "Zero manual intervention required",
+    "Intelligent load balancing"
+  ]
+}

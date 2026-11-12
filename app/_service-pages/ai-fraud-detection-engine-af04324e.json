@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/ai-fraud-detection-engine-af04324e",
+  "breadcrumbTitle": "AI Fraud Detection Engine",
+  "title": "AI Fraud Detection Engine",
+  "description": "Real-time fraud detection for payments, banking, and insurance. Graph neural networks detect complex fraud rings with 99.9% accuracy and sub-millisecond latency",
+  "basic": "$0.001/transaction/month",
+  "pro": "$0.0005/transaction/month",
+  "enterprise": "$custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Fraud Detection Engine - Zion Tech Group",
+    "description": "Real-time fraud detection for payments, banking, and insurance. Graph neural networks detect complex fraud rings with 99.9% accuracy and sub-millisecond latency",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-fraud-detection-engine-af04324e"
+    }
+  },
+  "features": [
+    "Graph neural network detection",
+    "Sub-millisecond scoring",
+    "Fraud ring identification",
+    "Explainable AI decisions",
+    "Real-time model updates"
+  ],
+  "benefits": [
+    "Reduce fraud losses 60%",
+    "Minimize false declines",
+    "Regulatory compliance",
+    "Scale to billions of transactions",
+    "Continuous learning"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/ai-suite---manufacturing-edition-1-6273fe82",
+  "breadcrumbTitle": "AI Suite - Manufacturing Edition #1",
+  "title": "AI Suite - Manufacturing Edition #1",
+  "description": "Transform your manufacturing operations with our AI Suite - Manufacturing Edition #1. This AI-driven solution automates image recognition with unprecedented acc",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Suite - Manufacturing Edition #1 - Zion Tech Group",
+    "description": "Transform your manufacturing operations with our AI Suite - Manufacturing Edition #1. This AI-driven solution automates image recognition with unprecedented acc",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-suite---manufacturing-edition-1-6273fe82"
+    }
+  },
+  "features": [
+    "Edge computing support",
+    "GDPR compliance",
+    "Zero-downtime updates",
+    "Real-time processing"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "Cost optimization recommendations",
+    "99.9% uptime guarantee"
+  ]
+}

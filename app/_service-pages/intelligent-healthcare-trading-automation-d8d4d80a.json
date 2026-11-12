@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-healthcare-trading-automation-d8d4d80a",
+  "breadcrumbTitle": "Intelligent Healthcare Trading Automation",
+  "title": "Intelligent Healthcare Trading Automation",
+  "description": "Algorithmic trading platform that executes intelligent strategies using AI-driven market analysis, sentiment processing, and real-time risk management.",
+  "basic": "$318/month",
+  "pro": "$798/month",
+  "enterprise": "$2398/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Healthcare Trading Automation - Zion Tech Group",
+    "description": "Algorithmic trading platform that executes intelligent strategies using AI-driven market analysis, sentiment processing, and real-time risk management.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-healthcare-trading-automation-d8d4d80a"
+    }
+  },
+  "features": [
+    "Signal generation",
+    "Execution optimization",
+    "Risk controls",
+    "Performance attribution"
+  ],
+  "benefits": [
+    "Alpha generation",
+    "Reduced latency",
+    "Disciplined execution",
+    "Scalable strategies"
+  ]
+}

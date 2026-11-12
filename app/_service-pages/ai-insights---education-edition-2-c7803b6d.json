@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-insights---education-edition-2-c7803b6d",
+  "breadcrumbTitle": "AI Insights - Education Edition #2",
+  "title": "AI Insights - Education Edition #2",
+  "description": "The future of education is here with AI Insights - Education Edition #2. Powered by cutting-edge AI, this platform delivers code optimization like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Insights - Education Edition #2 - Zion Tech Group",
+    "description": "The future of education is here with AI Insights - Education Edition #2. Powered by cutting-edge AI, this platform delivers code optimization like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-insights---education-edition-2-c7803b6d"
+    }
+  },
+  "features": [
+    "Container orchestration",
+    "Performance dashboards",
+    "Plugin architecture",
+    "Mobile-responsive interface",
+    "Cloud-native architecture"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "Seamless integration with existing systems",
+    "Zero manual intervention required"
+  ]
+}

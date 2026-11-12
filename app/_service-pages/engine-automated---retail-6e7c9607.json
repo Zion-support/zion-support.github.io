@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/engine-automated---retail-6e7c9607",
+  "breadcrumbTitle": "Engine Automated - Retail",
+  "title": "Engine Automated - Retail",
+  "description": "Next-generation retail solution: Engine Automated - Retail. Combines security monitoring with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Engine Automated - Retail - Zion Tech Group",
+    "description": "Next-generation retail solution: Engine Automated - Retail. Combines security monitoring with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/engine-automated---retail-6e7c9607"
+    }
+  },
+  "features": [
+    "Data encryption",
+    "Rollback mechanisms",
+    "Open-source friendly",
+    "Serverless functions"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "Intelligent load balancing",
+    "Self-healing infrastructure",
+    "Dynamic resource allocation"
+  ]
+}

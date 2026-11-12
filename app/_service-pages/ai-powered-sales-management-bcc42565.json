@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/ai-powered-sales-management-bcc42565",
+  "breadcrumbTitle": "AI-Powered Sales Management",
+  "title": "AI-Powered Sales Management",
+  "description": "Transform your construction operations with our AI-Powered Sales Management. This AI-driven solution automates image recognition with unprecedented accuracy and",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI-Powered Sales Management - Zion Tech Group",
+    "description": "Transform your construction operations with our AI-Powered Sales Management. This AI-driven solution automates image recognition with unprecedented accuracy and",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-sales-management-bcc42565"
+    }
+  },
+  "features": [
+    "HIPAA ready",
+    "Microservices deployment",
+    "Data encryption",
+    "GDPR compliance",
+    "Zero-downtime updates"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Dynamic resource allocation",
+    "Self-healing infrastructure",
+    "Enterprise-grade security",
+    "Automated compliance reporting"
+  ]
+}

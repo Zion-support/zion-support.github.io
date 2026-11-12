@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/automated-sales-generator-4953eb03",
+  "breadcrumbTitle": "Automated Sales Generator",
+  "title": "Automated Sales Generator",
+  "description": "Transform your insurance operations with our Automated Sales Generator. This AI-driven solution automates quality control with unprecedented accuracy and effici",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated Sales Generator - Zion Tech Group",
+    "description": "Transform your insurance operations with our Automated Sales Generator. This AI-driven solution automates quality control with unprecedented accuracy and effici",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-sales-generator-4953eb03"
+    }
+  },
+  "features": [
+    "Data encryption",
+    "Mobile-responsive interface",
+    "Role-based access control",
+    "Cloud-native architecture",
+    "SOC 2 certified"
+  ],
+  "benefits": [
+    "50% reduction in operational costs",
+    "Performance benchmarking",
+    "Real-time insights and alerts",
+    "Dynamic resource allocation",
+    "Reduced human error by 95%"
+  ]
+}

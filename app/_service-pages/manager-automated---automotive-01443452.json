@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/manager-automated---automotive-01443452",
+  "breadcrumbTitle": "Manager Automated - Automotive",
+  "title": "Manager Automated - Automotive",
+  "description": "Revolutionize automotive through intelligent automation. Our Manager Automated - Automotive leverages advanced machine learning to deliver financial planning at",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Manager Automated - Automotive - Zion Tech Group",
+    "description": "Revolutionize automotive through intelligent automation. Our Manager Automated - Automotive leverages advanced machine learning to deliver financial planning at",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/manager-automated---automotive-01443452"
+    }
+  },
+  "features": [
+    "Open-source friendly",
+    "Cloud-native architecture",
+    "Serverless functions",
+    "Auto-scaling capabilities",
+    "Container orchestration"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "Dynamic resource allocation",
+    "Self-healing infrastructure"
+  ]
+}

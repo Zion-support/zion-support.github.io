@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/autonomous-analytics-hospitality-434c74d8",
+  "breadcrumbTitle": "Autonomous analytics-hospitality",
+  "title": "Autonomous analytics-hospitality",
+  "description": "Revolutionize hospitality through intelligent automation. Our Autonomous analytics-hospitality leverages advanced machine learning to deliver resource optimizat",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous analytics-hospitality - Zion Tech Group",
+    "description": "Revolutionize hospitality through intelligent automation. Our Autonomous analytics-hospitality leverages advanced machine learning to deliver resource optimizat",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-analytics-hospitality-434c74d8"
+    }
+  },
+  "features": [
+    "GDPR compliance",
+    "API-first design",
+    "Container orchestration",
+    "Multi-language support"
+  ],
+  "benefits": [
+    "24/7 automated operations",
+    "50% reduction in operational costs",
+    "Dynamic resource allocation",
+    "Performance benchmarking",
+    "3x faster decision making"
+  ]
+}

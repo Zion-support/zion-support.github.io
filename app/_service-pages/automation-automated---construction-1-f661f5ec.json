@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/automation-automated---construction-1-f661f5ec",
+  "breadcrumbTitle": "Automation Automated - Construction #1",
+  "title": "Automation Automated - Construction #1",
+  "description": "Next-generation construction solution: Automation Automated - Construction #1. Combines energy management with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automation Automated - Construction #1 - Zion Tech Group",
+    "description": "Next-generation construction solution: Automation Automated - Construction #1. Combines energy management with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automation-automated---construction-1-f661f5ec"
+    }
+  },
+  "features": [
+    "Cloud-native architecture",
+    "Rollback mechanisms",
+    "Zero-downtime updates",
+    "Offline capabilities"
+  ],
+  "benefits": [
+    "Cost optimization recommendations",
+    "Enterprise-grade security",
+    "Dynamic resource allocation",
+    "Predictive maintenance scheduling"
+  ]
+}

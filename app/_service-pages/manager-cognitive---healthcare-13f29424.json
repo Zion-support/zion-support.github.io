@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/manager-cognitive---healthcare-13f29424",
+  "breadcrumbTitle": "Manager Cognitive - Healthcare",
+  "title": "Manager Cognitive - Healthcare",
+  "description": "Unlock unprecedented growth with Manager Cognitive - Healthcare. This autonomous system provides fraud prevention with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Manager Cognitive - Healthcare - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Manager Cognitive - Healthcare. This autonomous system provides fraud prevention with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/manager-cognitive---healthcare-13f29424"
+    }
+  },
+  "features": [
+    "Mobile-responsive interface",
+    "Edge computing support",
+    "Cloud-native architecture",
+    "API-first design",
+    "Offline capabilities"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "3x faster decision making",
+    "99.9% uptime guarantee",
+    "Seamless integration with existing systems",
+    "Automated compliance reporting"
+  ]
+}

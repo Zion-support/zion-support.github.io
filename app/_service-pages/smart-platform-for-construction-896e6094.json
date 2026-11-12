@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/smart-platform-for-construction-896e6094",
+  "breadcrumbTitle": "Smart Platform for Construction",
+  "title": "Smart Platform for Construction",
+  "description": "Next-generation construction solution: Smart Platform for Construction. Combines data processing with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Platform for Construction - Zion Tech Group",
+    "description": "Next-generation construction solution: Smart Platform for Construction. Combines data processing with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-platform-for-construction-896e6094"
+    }
+  },
+  "features": [
+    "Rollback mechanisms",
+    "Machine learning integration",
+    "Edge computing support",
+    "Data encryption",
+    "Audit trails"
+  ],
+  "benefits": [
+    "Scalable to millions of transactions",
+    "Enterprise-grade security",
+    "Cost optimization recommendations",
+    "3x faster decision making"
+  ]
+}

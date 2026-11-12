@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/analyzer-adaptive---real-estate-7a8af085",
+  "breadcrumbTitle": "Analyzer Adaptive - Real-Estate",
+  "title": "Analyzer Adaptive - Real-Estate",
+  "description": "Transform your real-estate operations with our Analyzer Adaptive - Real-Estate. This AI-driven solution automates compliance monitoring with unprecedented accur",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Analyzer Adaptive - Real-Estate - Zion Tech Group",
+    "description": "Transform your real-estate operations with our Analyzer Adaptive - Real-Estate. This AI-driven solution automates compliance monitoring with unprecedented accur",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/analyzer-adaptive---real-estate-7a8af085"
+    }
+  },
+  "features": [
+    "Real-time processing",
+    "Rollback mechanisms",
+    "Comprehensive monitoring",
+    "Edge computing support",
+    "Cloud-native architecture"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Intelligent load balancing",
+    "Enterprise-grade security"
+  ]
+}

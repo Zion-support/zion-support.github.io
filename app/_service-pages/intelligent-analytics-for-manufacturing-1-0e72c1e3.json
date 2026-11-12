@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/intelligent-analytics-for-manufacturing-1-0e72c1e3",
+  "breadcrumbTitle": "Intelligent Analytics for Manufacturing #1",
+  "title": "Intelligent Analytics for Manufacturing #1",
+  "description": "The future of Manufacturing is here with Intelligent Analytics for Manufacturing #1. Powered by cutting-edge AI, this platform delivers performance monitoring l",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Analytics for Manufacturing #1 - Zion Tech Group",
+    "description": "The future of Manufacturing is here with Intelligent Analytics for Manufacturing #1. Powered by cutting-edge AI, this platform delivers performance monitoring l",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-analytics-for-manufacturing-1-0e72c1e3"
+    }
+  },
+  "features": [
+    "Compliance monitoring with regulatory updates",
+    "Process discovery with activity analysis",
+    "Version control with rollback capabilities",
+    "Cloud-native architecture with multi-region deployment",
+    "Manufacturing quality control with defect detection"
+  ],
+  "benefits": [
+    "Faster time-to-market with accelerated development",
+    "Better code quality with automated reviews",
+    "Improved product quality with automated testing",
+    "Better supply chain visibility with tracking",
+    "24/7 automated operations without human intervention"
+  ]
+}

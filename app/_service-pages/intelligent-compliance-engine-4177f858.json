@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/intelligent-compliance-engine-4177f858",
+  "breadcrumbTitle": "Intelligent Compliance Engine",
+  "title": "Intelligent Compliance Engine",
+  "description": "The future of transportation is here with Intelligent Compliance Engine. Powered by cutting-edge AI, this platform delivers process automation like never before",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Compliance Engine - Zion Tech Group",
+    "description": "The future of transportation is here with Intelligent Compliance Engine. Powered by cutting-edge AI, this platform delivers process automation like never before",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-compliance-engine-4177f858"
+    }
+  },
+  "features": [
+    "Role-based access control",
+    "Microservices deployment",
+    "Zero-downtime updates",
+    "Comprehensive monitoring",
+    "Real-time processing"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "ROI in under 90 days",
+    "Cost optimization recommendations",
+    "Intelligent load balancing",
+    "3x faster decision making"
+  ]
+}

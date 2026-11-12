@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/smart-advisor-agriculture-c47b6abd",
+  "breadcrumbTitle": "Smart advisor-agriculture",
+  "title": "Smart advisor-agriculture",
+  "description": "Next-generation agriculture solution: Smart advisor-agriculture. Combines market intelligence with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart advisor-agriculture - Zion Tech Group",
+    "description": "Next-generation agriculture solution: Smart advisor-agriculture. Combines market intelligence with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-advisor-agriculture-c47b6abd"
+    }
+  },
+  "features": [
+    "Zero-downtime updates",
+    "Custom integrations",
+    "GDPR compliance",
+    "Performance dashboards",
+    "Machine learning integration"
+  ],
+  "benefits": [
+    "Seamless integration with existing systems",
+    "50% reduction in operational costs",
+    "Intelligent load balancing",
+    "Reduced human error by 95%",
+    "Self-healing infrastructure"
+  ]
+}

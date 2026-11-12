@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/platform-neural---real-estate-73d9fd5b",
+  "breadcrumbTitle": "Platform Neural - Real-Estate",
+  "title": "Platform Neural - Real-Estate",
+  "description": "Revolutionize real-estate through intelligent automation. Our Platform Neural - Real-Estate leverages advanced machine learning to deliver image recognition at ",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Platform Neural - Real-Estate - Zion Tech Group",
+    "description": "Revolutionize real-estate through intelligent automation. Our Platform Neural - Real-Estate leverages advanced machine learning to deliver image recognition at ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/platform-neural---real-estate-73d9fd5b"
+    }
+  },
+  "features": [
+    "API-first design",
+    "Open-source friendly",
+    "Multi-region deployment",
+    "Serverless functions",
+    "Machine learning integration"
+  ],
+  "benefits": [
+    "50% reduction in operational costs",
+    "Predictive maintenance scheduling",
+    "Cost optimization recommendations"
+  ]
+}

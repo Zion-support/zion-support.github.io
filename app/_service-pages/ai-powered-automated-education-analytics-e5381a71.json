@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-automated-education-analytics-e5381a71",
+  "breadcrumbTitle": "AI-Powered Automated Education Analytics",
+  "title": "AI-Powered Automated Education Analytics",
+  "description": "AI-driven analytics platform that delivers automated insights into education operations, providing real-time monitoring, predictive modeling, and automated repo",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Automated Education Analytics - Zion Tech Group",
+    "description": "AI-driven analytics platform that delivers automated insights into education operations, providing real-time monitoring, predictive modeling, and automated repo",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-automated-education-analytics-e5381a71"
+    }
+  },
+  "features": [
+    "Real-time data visualization",
+    "Predictive modeling",
+    "Automated reporting",
+    "Custom dashboards"
+  ],
+  "benefits": [
+    "Data-driven decision making",
+    "Improved operational efficiency",
+    "Proactive issue detection",
+    "Enhanced KPI tracking"
+  ]
+}

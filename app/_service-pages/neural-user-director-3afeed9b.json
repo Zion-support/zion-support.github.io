@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/neural-user-director-3afeed9b",
+  "breadcrumbTitle": "Neural User Director",
+  "title": "Neural User Director",
+  "description": "The future of construction is here with Neural User Director. Powered by cutting-edge AI, this platform delivers market intelligence like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Neural User Director - Zion Tech Group",
+    "description": "The future of construction is here with Neural User Director. Powered by cutting-edge AI, this platform delivers market intelligence like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/neural-user-director-3afeed9b"
+    }
+  },
+  "features": [
+    "GDPR compliance",
+    "Performance dashboards",
+    "Mobile-responsive interface",
+    "Plugin architecture",
+    "Multi-region deployment"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "Automated compliance reporting",
+    "Zero manual intervention required",
+    "99.9% uptime guarantee"
+  ]
+}

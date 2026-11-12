@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/intelligent-director-logistics-1-90365284",
+  "breadcrumbTitle": "Intelligent director-logistics #1",
+  "title": "Intelligent director-logistics #1",
+  "description": "Revolutionize logistics through intelligent automation. Our Intelligent director-logistics #1 leverages advanced machine learning to deliver performance monitor",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent director-logistics #1 - Zion Tech Group",
+    "description": "Revolutionize logistics through intelligent automation. Our Intelligent director-logistics #1 leverages advanced machine learning to deliver performance monitor",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-director-logistics-1-90365284"
+    }
+  },
+  "features": [
+    "Offline capabilities",
+    "Zero-downtime updates",
+    "Plugin architecture",
+    "Container orchestration",
+    "Comprehensive monitoring"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "50% reduction in operational costs",
+    "Self-healing infrastructure",
+    "Real-time insights and alerts",
+    "3x faster decision making"
+  ]
+}

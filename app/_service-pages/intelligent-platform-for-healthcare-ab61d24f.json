@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligent-platform-for-healthcare-ab61d24f",
+  "breadcrumbTitle": "Intelligent Platform for Healthcare",
+  "title": "Intelligent Platform for Healthcare",
+  "description": "Revolutionize healthcare through intelligent automation. Our Intelligent Platform for Healthcare leverages advanced machine learning to deliver performance moni",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Platform for Healthcare - Zion Tech Group",
+    "description": "Revolutionize healthcare through intelligent automation. Our Intelligent Platform for Healthcare leverages advanced machine learning to deliver performance moni",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-platform-for-healthcare-ab61d24f"
+    }
+  },
+  "features": [
+    "SOC 2 certified",
+    "Serverless functions",
+    "Plugin architecture",
+    "Alerting system",
+    "API-first design"
+  ],
+  "benefits": [
+    "Intelligent load balancing",
+    "Predictive maintenance scheduling",
+    "Seamless integration with existing systems",
+    "Automated compliance reporting"
+  ]
+}

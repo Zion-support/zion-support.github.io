@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/ai-platform---construction-edition-1-f610c939",
+  "breadcrumbTitle": "AI Platform - Construction Edition #1",
+  "title": "AI Platform - Construction Edition #1",
+  "description": "Revolutionize construction through intelligent automation. Our AI Platform - Construction Edition #1 leverages advanced machine learning to deliver workflow man",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Platform - Construction Edition #1 - Zion Tech Group",
+    "description": "Revolutionize construction through intelligent automation. Our AI Platform - Construction Edition #1 leverages advanced machine learning to deliver workflow man",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-platform---construction-edition-1-f610c939"
+    }
+  },
+  "features": [
+    "API-first design",
+    "Multi-language support",
+    "HIPAA ready",
+    "Custom integrations",
+    "SOC 2 certified"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "Self-healing infrastructure",
+    "99.9% uptime guarantee",
+    "Reduced human error by 95%",
+    "Intelligent load balancing"
+  ]
+}

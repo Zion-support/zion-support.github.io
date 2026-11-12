@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/analyzer-autonomous---hospitality-6b7389e9",
+  "breadcrumbTitle": "Analyzer Autonomous - Hospitality",
+  "title": "Analyzer Autonomous - Hospitality",
+  "description": "Unlock unprecedented growth with Analyzer Autonomous - Hospitality. This autonomous system provides document processing with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Analyzer Autonomous - Hospitality - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Analyzer Autonomous - Hospitality. This autonomous system provides document processing with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/analyzer-autonomous---hospitality-6b7389e9"
+    }
+  },
+  "features": [
+    "Alerting system",
+    "Multi-region deployment",
+    "Zero-downtime updates",
+    "Plugin architecture"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "Intelligent load balancing",
+    "24/7 automated operations",
+    "ROI in under 90 days",
+    "Cost optimization recommendations"
+  ]
+}

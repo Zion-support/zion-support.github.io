@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-platform---healthcare-edition-5-1e43c6dc",
+  "breadcrumbTitle": "AI Platform - Healthcare Edition #5",
+  "title": "AI Platform - Healthcare Edition #5",
+  "description": "Unlock unprecedented growth with AI Platform - Healthcare Edition #5. This autonomous system provides workflow management with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Platform - Healthcare Edition #5 - Zion Tech Group",
+    "description": "Unlock unprecedented growth with AI Platform - Healthcare Edition #5. This autonomous system provides workflow management with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-platform---healthcare-edition-5-1e43c6dc"
+    }
+  },
+  "features": [
+    "Cloud-native architecture",
+    "API-first design",
+    "Zero-downtime updates",
+    "Plugin architecture",
+    "Data encryption"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "24/7 automated operations",
+    "ROI in under 90 days",
+    "99.9% uptime guarantee"
+  ]
+}

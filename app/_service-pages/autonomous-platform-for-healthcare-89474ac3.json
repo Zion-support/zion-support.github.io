@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/autonomous-platform-for-healthcare-89474ac3",
+  "breadcrumbTitle": "Autonomous Platform for Healthcare",
+  "title": "Autonomous Platform for Healthcare",
+  "description": "The future of healthcare is here with Autonomous Platform for Healthcare. Powered by cutting-edge AI, this platform delivers compliance monitoring like never be",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous Platform for Healthcare - Zion Tech Group",
+    "description": "The future of healthcare is here with Autonomous Platform for Healthcare. Powered by cutting-edge AI, this platform delivers compliance monitoring like never be",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-platform-for-healthcare-89474ac3"
+    }
+  },
+  "features": [
+    "Offline capabilities",
+    "Comprehensive monitoring",
+    "HIPAA ready",
+    "Custom integrations",
+    "Microservices deployment"
+  ],
+  "benefits": [
+    "Scalable to millions of transactions",
+    "3x faster decision making",
+    "99.9% uptime guarantee"
+  ]
+}

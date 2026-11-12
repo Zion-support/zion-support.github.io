@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-financial-intelligence-b4cf52cb",
+  "breadcrumbTitle": "AI-Powered Financial Intelligence",
+  "title": "AI-Powered Financial Intelligence",
+  "description": "Unlock unprecedented growth with AI-Powered Financial Intelligence. This autonomous system provides network optimization with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Financial Intelligence - Zion Tech Group",
+    "description": "Unlock unprecedented growth with AI-Powered Financial Intelligence. This autonomous system provides network optimization with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-financial-intelligence-b4cf52cb"
+    }
+  },
+  "features": [
+    "Offline capabilities",
+    "HIPAA ready",
+    "Comprehensive monitoring",
+    "Zero-downtime updates",
+    "API-first design"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "Scalable to millions of transactions",
+    "Dynamic resource allocation"
+  ]
+}

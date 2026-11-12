@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/cognitive-quality-manager-b4c8f300",
+  "breadcrumbTitle": "Cognitive Quality Manager",
+  "title": "Cognitive Quality Manager",
+  "description": "The future of transportation is here with Cognitive Quality Manager. Powered by cutting-edge AI, this platform delivers workflow management like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Cognitive Quality Manager - Zion Tech Group",
+    "description": "The future of transportation is here with Cognitive Quality Manager. Powered by cutting-edge AI, this platform delivers workflow management like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cognitive-quality-manager-b4c8f300"
+    }
+  },
+  "features": [
+    "SOC 2 certified",
+    "Container orchestration",
+    "Mobile-responsive interface",
+    "API-first design"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "3x faster decision making",
+    "Self-healing infrastructure",
+    "50% reduction in operational costs"
+  ]
+}

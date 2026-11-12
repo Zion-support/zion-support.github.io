@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/smart-suite-automotive-f2f357a1",
+  "breadcrumbTitle": "Smart suite-automotive",
+  "title": "Smart suite-automotive",
+  "description": "Unlock unprecedented growth with Smart suite-automotive. This autonomous system provides predictive analytics with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart suite-automotive - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Smart suite-automotive. This autonomous system provides predictive analytics with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-suite-automotive-f2f357a1"
+    }
+  },
+  "features": [
+    "Plugin architecture",
+    "API-first design",
+    "Open-source friendly",
+    "Edge computing support",
+    "HIPAA ready"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "ROI in under 90 days",
+    "Dynamic resource allocation",
+    "Performance benchmarking"
+  ]
+}

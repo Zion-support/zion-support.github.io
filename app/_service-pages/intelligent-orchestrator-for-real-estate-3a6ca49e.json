@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-orchestrator-for-real-estate-3a6ca49e",
+  "breadcrumbTitle": "Intelligent Orchestrator for Real-Estate",
+  "title": "Intelligent Orchestrator for Real-Estate",
+  "description": "Transform your real-estate operations with our Intelligent Orchestrator for Real-Estate. This AI-driven solution automates fraud prevention with unprecedented a",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Orchestrator for Real-Estate - Zion Tech Group",
+    "description": "Transform your real-estate operations with our Intelligent Orchestrator for Real-Estate. This AI-driven solution automates fraud prevention with unprecedented a",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-orchestrator-for-real-estate-3a6ca49e"
+    }
+  },
+  "features": [
+    "API-first design",
+    "SOC 2 certified",
+    "Custom integrations",
+    "Data encryption",
+    "Offline capabilities"
+  ],
+  "benefits": [
+    "24/7 automated operations",
+    "Reduced human error by 95%",
+    "Predictive maintenance scheduling"
+  ]
+}

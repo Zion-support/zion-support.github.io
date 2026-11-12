@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/next-generation-self-learning-construction-automation-98ff7fe4",
+  "breadcrumbTitle": "Next-Generation Self-Learning Construction Automation",
+  "title": "Next-Generation Self-Learning Construction Automation",
+  "description": "Next-generation automation suite that streamlines self-learning construction workflows with intelligent orchestration.",
+  "basic": "$218/month",
+  "pro": "$548/month",
+  "enterprise": "$1648/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Next-Generation Self-Learning Construction Automation - Zion Tech Group",
+    "description": "Next-generation automation suite that streamlines self-learning construction workflows with intelligent orchestration.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/next-generation-self-learning-construction-automation-98ff7fe4"
+    }
+  },
+  "features": [
+    "Smart orchestration",
+    "Process automation",
+    "Event processing",
+    "Task scheduling"
+  ],
+  "benefits": [
+    "Faster execution",
+    "Reduced manual steps",
+    "Scalable processes",
+    "Error reduction"
+  ]
+}

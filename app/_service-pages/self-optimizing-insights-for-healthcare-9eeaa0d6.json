@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/self-optimizing-insights-for-healthcare-9eeaa0d6",
+  "breadcrumbTitle": "Self-Optimizing Insights for Healthcare",
+  "title": "Self-Optimizing Insights for Healthcare",
+  "description": "The future of healthcare is here with Self-Optimizing Insights for Healthcare. Powered by cutting-edge AI, this platform delivers network optimization like neve",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Self-Optimizing Insights for Healthcare - Zion Tech Group",
+    "description": "The future of healthcare is here with Self-Optimizing Insights for Healthcare. Powered by cutting-edge AI, this platform delivers network optimization like neve",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/self-optimizing-insights-for-healthcare-9eeaa0d6"
+    }
+  },
+  "features": [
+    "HIPAA ready",
+    "Microservices deployment",
+    "Open-source friendly",
+    "Multi-language support"
+  ],
+  "benefits": [
+    "Scalable to millions of transactions",
+    "Self-healing infrastructure",
+    "50% reduction in operational costs"
+  ]
+}

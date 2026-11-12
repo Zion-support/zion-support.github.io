@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/autonomous-image-optimizer-21daf537",
+  "breadcrumbTitle": "Autonomous Image Optimizer",
+  "title": "Autonomous Image Optimizer",
+  "description": "The future of automotive is here with Autonomous Image Optimizer. Powered by cutting-edge AI, this platform delivers workflow management like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous Image Optimizer - Zion Tech Group",
+    "description": "The future of automotive is here with Autonomous Image Optimizer. Powered by cutting-edge AI, this platform delivers workflow management like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-image-optimizer-21daf537"
+    }
+  },
+  "features": [
+    "Multi-language support",
+    "GDPR compliance",
+    "API-first design",
+    "Plugin architecture"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "Zero manual intervention required",
+    "3x faster decision making",
+    "Scalable to millions of transactions"
+  ]
+}

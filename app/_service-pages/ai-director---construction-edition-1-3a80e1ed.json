@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-director---construction-edition-1-3a80e1ed",
+  "breadcrumbTitle": "AI Director - Construction Edition #1",
+  "title": "AI Director - Construction Edition #1",
+  "description": "The future of construction is here with AI Director - Construction Edition #1. Powered by cutting-edge AI, this platform delivers user experience like never bef",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Director - Construction Edition #1 - Zion Tech Group",
+    "description": "The future of construction is here with AI Director - Construction Edition #1. Powered by cutting-edge AI, this platform delivers user experience like never bef",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-director---construction-edition-1-3a80e1ed"
+    }
+  },
+  "features": [
+    "Edge computing support",
+    "Real-time processing",
+    "Open-source friendly",
+    "HIPAA ready",
+    "Role-based access control"
+  ],
+  "benefits": [
+    "Seamless integration with existing systems",
+    "Cost optimization recommendations",
+    "Real-time insights and alerts",
+    "Performance benchmarking"
+  ]
+}

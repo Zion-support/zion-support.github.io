@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/platform-intelligent---hospitality-9489a355",
+  "breadcrumbTitle": "Platform Intelligent - Hospitality",
+  "title": "Platform Intelligent - Hospitality",
+  "description": "Unlock unprecedented growth with Platform Intelligent - Hospitality. This autonomous system provides image recognition with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Platform Intelligent - Hospitality - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Platform Intelligent - Hospitality. This autonomous system provides image recognition with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/platform-intelligent---hospitality-9489a355"
+    }
+  },
+  "features": [
+    "Serverless functions",
+    "Multi-language support",
+    "API-first design",
+    "Data encryption",
+    "Performance dashboards"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "Predictive maintenance scheduling",
+    "Cost optimization recommendations",
+    "Automated compliance reporting",
+    "50% reduction in operational costs"
+  ]
+}

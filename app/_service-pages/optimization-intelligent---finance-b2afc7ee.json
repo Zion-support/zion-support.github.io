@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/optimization-intelligent---finance-b2afc7ee",
+  "breadcrumbTitle": "Optimization Intelligent - Finance",
+  "title": "Optimization Intelligent - Finance",
+  "description": "Unlock unprecedented growth with Optimization Intelligent - Finance. This autonomous system provides performance monitoring with zero manual intervention needed",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Optimization Intelligent - Finance - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Optimization Intelligent - Finance. This autonomous system provides performance monitoring with zero manual intervention needed",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/optimization-intelligent---finance-b2afc7ee"
+    }
+  },
+  "features": [
+    "Audit trails",
+    "Auto-scaling capabilities",
+    "Serverless functions",
+    "Offline capabilities",
+    "Cloud-native architecture"
+  ],
+  "benefits": [
+    "Seamless integration with existing systems",
+    "Dynamic resource allocation",
+    "Predictive maintenance scheduling"
+  ]
+}

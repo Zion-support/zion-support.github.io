@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/smart-suite-hospitality-2-49bed7a1",
+  "breadcrumbTitle": "Smart suite-hospitality #2",
+  "title": "Smart suite-hospitality #2",
+  "description": "Next-generation hospitality solution: Smart suite-hospitality #2. Combines maintenance scheduling with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart suite-hospitality #2 - Zion Tech Group",
+    "description": "Next-generation hospitality solution: Smart suite-hospitality #2. Combines maintenance scheduling with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-suite-hospitality-2-49bed7a1"
+    }
+  },
+  "features": [
+    "SOC 2 certified",
+    "Data encryption",
+    "Comprehensive monitoring",
+    "Container orchestration",
+    "Alerting system"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "Zero manual intervention required",
+    "Automated compliance reporting"
+  ]
+}

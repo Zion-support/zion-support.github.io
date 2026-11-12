@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/intelligent-advisor-retail-e4539079",
+  "breadcrumbTitle": "Intelligent advisor-retail",
+  "title": "Intelligent advisor-retail",
+  "description": "The future of retail is here with Intelligent advisor-retail. Powered by cutting-edge AI, this platform delivers predictive analytics like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent advisor-retail - Zion Tech Group",
+    "description": "The future of retail is here with Intelligent advisor-retail. Powered by cutting-edge AI, this platform delivers predictive analytics like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-advisor-retail-e4539079"
+    }
+  },
+  "features": [
+    "Audit trails",
+    "Offline capabilities",
+    "Performance dashboards",
+    "Container orchestration"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "Dynamic resource allocation",
+    "3x faster decision making"
+  ]
+}

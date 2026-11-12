@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/smart-engine-education-1-76aa057e",
+  "breadcrumbTitle": "Smart engine-education #1",
+  "title": "Smart engine-education #1",
+  "description": "Unlock unprecedented growth with Smart engine-education #1. This autonomous system provides network optimization with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart engine-education #1 - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Smart engine-education #1. This autonomous system provides network optimization with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-engine-education-1-76aa057e"
+    }
+  },
+  "features": [
+    "SOC 2 certified",
+    "Performance dashboards",
+    "Microservices deployment",
+    "Auto-scaling capabilities"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "99.9% uptime guarantee",
+    "Scalable to millions of transactions"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/smart-healthcare-quality-control-f6e79507",
+  "breadcrumbTitle": "Smart Healthcare Quality Control",
+  "title": "Smart Healthcare Quality Control",
+  "description": "Computer vision system that provides smart automated inspection, defect detection, and quality assurance for manufacturing production lines.",
+  "basic": "$258/month",
+  "pro": "$648/month",
+  "enterprise": "$1948/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Healthcare Quality Control - Zion Tech Group",
+    "description": "Computer vision system that provides smart automated inspection, defect detection, and quality assurance for manufacturing production lines.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-healthcare-quality-control-f6e79507"
+    }
+  },
+  "features": [
+    "Visual inspection",
+    "Defect classification",
+    "Root cause analysis",
+    "Real-time alerts"
+  ],
+  "benefits": [
+    "Zero defects",
+    "Faster throughput",
+    "Reduced waste",
+    "Consistent quality"
+  ]
+}

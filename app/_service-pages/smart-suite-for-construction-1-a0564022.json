@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/smart-suite-for-construction-1-a0564022",
+  "breadcrumbTitle": "Smart Suite for Construction #1",
+  "title": "Smart Suite for Construction #1",
+  "description": "Next-generation construction solution: Smart Suite for Construction #1. Combines fraud prevention with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Suite for Construction #1 - Zion Tech Group",
+    "description": "Next-generation construction solution: Smart Suite for Construction #1. Combines fraud prevention with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-suite-for-construction-1-a0564022"
+    }
+  },
+  "features": [
+    "Machine learning integration",
+    "Custom integrations",
+    "Serverless functions",
+    "Audit trails"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "24/7 automated operations",
+    "Predictive maintenance scheduling"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-powered-director-for-retail-978342f8",
+  "breadcrumbTitle": "AI-Powered Director for Retail",
+  "title": "AI-Powered Director for Retail",
+  "description": "Revolutionize retail through intelligent automation. Our AI-Powered Director for Retail leverages advanced machine learning to deliver performance monitoring at",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI-Powered Director for Retail - Zion Tech Group",
+    "description": "Revolutionize retail through intelligent automation. Our AI-Powered Director for Retail leverages advanced machine learning to deliver performance monitoring at",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-director-for-retail-978342f8"
+    }
+  },
+  "features": [
+    "Serverless functions",
+    "Open-source friendly",
+    "Audit trails",
+    "Offline capabilities"
+  ],
+  "benefits": [
+    "Seamless integration with existing systems",
+    "Real-time insights and alerts",
+    "Automated compliance reporting",
+    "Zero manual intervention required",
+    "Performance benchmarking"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/predictive-advisor-for-hospitality-533ef7d3",
+  "breadcrumbTitle": "Predictive Advisor for Hospitality",
+  "title": "Predictive Advisor for Hospitality",
+  "description": "Next-generation hospitality solution: Predictive Advisor for Hospitality. Combines customer insights with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Predictive Advisor for Hospitality - Zion Tech Group",
+    "description": "Next-generation hospitality solution: Predictive Advisor for Hospitality. Combines customer insights with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/predictive-advisor-for-hospitality-533ef7d3"
+    }
+  },
+  "features": [
+    "Offline capabilities",
+    "Performance dashboards",
+    "Edge computing support",
+    "Multi-language support"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "Zero manual intervention required",
+    "24/7 automated operations",
+    "Scalable to millions of transactions"
+  ]
+}

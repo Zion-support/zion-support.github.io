@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/system-automated---insurance-1-0adbb54e",
+  "breadcrumbTitle": "System Automated - Insurance #1",
+  "title": "System Automated - Insurance #1",
+  "description": "The future of insurance is here with System Automated - Insurance #1. Powered by cutting-edge AI, this platform delivers sales forecasting like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "System Automated - Insurance #1 - Zion Tech Group",
+    "description": "The future of insurance is here with System Automated - Insurance #1. Powered by cutting-edge AI, this platform delivers sales forecasting like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/system-automated---insurance-1-0adbb54e"
+    }
+  },
+  "features": [
+    "SOC 2 certified",
+    "Multi-language support",
+    "Offline capabilities",
+    "Edge computing support",
+    "API-first design"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "3x faster decision making",
+    "Scalable to millions of transactions",
+    "Automated compliance reporting",
+    "50% reduction in operational costs"
+  ]
+}

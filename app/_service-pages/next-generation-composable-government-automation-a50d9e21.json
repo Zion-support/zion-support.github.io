@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/next-generation-composable-government-automation-a50d9e21",
+  "breadcrumbTitle": "Next-Generation Composable Government Automation",
+  "title": "Next-Generation Composable Government Automation",
+  "description": "Next-generation automation suite that streamlines composable government workflows with intelligent orchestration.",
+  "basic": "$218/month",
+  "pro": "$548/month",
+  "enterprise": "$1648/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Next-Generation Composable Government Automation - Zion Tech Group",
+    "description": "Next-generation automation suite that streamlines composable government workflows with intelligent orchestration.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/next-generation-composable-government-automation-a50d9e21"
+    }
+  },
+  "features": [
+    "Smart orchestration",
+    "Process automation",
+    "Event processing",
+    "Task scheduling"
+  ],
+  "benefits": [
+    "Faster execution",
+    "Reduced manual steps",
+    "Scalable processes",
+    "Error reduction"
+  ]
+}

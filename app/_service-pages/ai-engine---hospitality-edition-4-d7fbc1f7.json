@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/ai-engine---hospitality-edition-4-d7fbc1f7",
+  "breadcrumbTitle": "AI Engine - Hospitality Edition #4",
+  "title": "AI Engine - Hospitality Edition #4",
+  "description": "Transform your hospitality operations with our AI Engine - Hospitality Edition #4. This AI-driven solution automates risk assessment with unprecedented accuracy",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Engine - Hospitality Edition #4 - Zion Tech Group",
+    "description": "Transform your hospitality operations with our AI Engine - Hospitality Edition #4. This AI-driven solution automates risk assessment with unprecedented accuracy",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-engine---hospitality-edition-4-d7fbc1f7"
+    }
+  },
+  "features": [
+    "API-first design",
+    "Performance dashboards",
+    "Real-time processing",
+    "SOC 2 certified",
+    "Zero-downtime updates"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "Real-time insights and alerts",
+    "Predictive maintenance scheduling",
+    "99.9% uptime guarantee",
+    "Self-healing infrastructure"
+  ]
+}

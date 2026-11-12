@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/platform-automated---logistics-1d3de31b",
+  "breadcrumbTitle": "Platform Automated - Logistics",
+  "title": "Platform Automated - Logistics",
+  "description": "Transform your logistics operations with our Platform Automated - Logistics. This AI-driven solution automates data processing with unprecedented accuracy and e",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Platform Automated - Logistics - Zion Tech Group",
+    "description": "Transform your logistics operations with our Platform Automated - Logistics. This AI-driven solution automates data processing with unprecedented accuracy and e",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/platform-automated---logistics-1d3de31b"
+    }
+  },
+  "features": [
+    "Plugin architecture",
+    "Custom integrations",
+    "GDPR compliance",
+    "Rollback mechanisms",
+    "Auto-scaling capabilities"
+  ],
+  "benefits": [
+    "Automated compliance reporting",
+    "Dynamic resource allocation",
+    "Self-healing infrastructure",
+    "Predictive maintenance scheduling"
+  ]
+}

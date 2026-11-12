@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/engine-neural---manufacturing-6d91bec8",
+  "breadcrumbTitle": "Engine Neural - Manufacturing",
+  "title": "Engine Neural - Manufacturing",
+  "description": "Next-generation manufacturing solution: Engine Neural - Manufacturing. Combines fraud prevention with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Engine Neural - Manufacturing - Zion Tech Group",
+    "description": "Next-generation manufacturing solution: Engine Neural - Manufacturing. Combines fraud prevention with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/engine-neural---manufacturing-6d91bec8"
+    }
+  },
+  "features": [
+    "Audit trails",
+    "Multi-language support",
+    "HIPAA ready",
+    "Real-time processing"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "24/7 automated operations",
+    "Cost optimization recommendations",
+    "Real-time insights and alerts"
+  ]
+}

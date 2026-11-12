@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-engine---insurance-edition-31482d86",
+  "breadcrumbTitle": "AI Engine - Insurance Edition",
+  "title": "AI Engine - Insurance Edition",
+  "description": "Unlock unprecedented growth with AI Engine - Insurance Edition. This autonomous system provides performance monitoring with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Engine - Insurance Edition - Zion Tech Group",
+    "description": "Unlock unprecedented growth with AI Engine - Insurance Edition. This autonomous system provides performance monitoring with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-engine---insurance-edition-31482d86"
+    }
+  },
+  "features": [
+    "Cloud-native architecture",
+    "Serverless functions",
+    "Audit trails",
+    "Zero-downtime updates",
+    "Data encryption"
+  ],
+  "benefits": [
+    "Scalable to millions of transactions",
+    "Self-healing infrastructure",
+    "Automated compliance reporting",
+    "Seamless integration with existing systems"
+  ]
+}

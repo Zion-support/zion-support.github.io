@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-platform-manufacturing-296128e2",
+  "breadcrumbTitle": "Intelligent platform-manufacturing",
+  "title": "Intelligent platform-manufacturing",
+  "description": "Unlock unprecedented growth with Intelligent platform-manufacturing. This autonomous system provides image recognition with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent platform-manufacturing - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Intelligent platform-manufacturing. This autonomous system provides image recognition with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-platform-manufacturing-296128e2"
+    }
+  },
+  "features": [
+    "SOC 2 certified",
+    "Cloud-native architecture",
+    "HIPAA ready",
+    "Performance dashboards",
+    "Zero-downtime updates"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "Dynamic resource allocation",
+    "3x faster decision making"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/intelligent-director-for-hospitality-1-4bf38725",
+  "breadcrumbTitle": "Intelligent Director for Hospitality #1",
+  "title": "Intelligent Director for Hospitality #1",
+  "description": "The future of hospitality is here with Intelligent Director for Hospitality #1. Powered by cutting-edge AI, this platform delivers document processing like neve",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Director for Hospitality #1 - Zion Tech Group",
+    "description": "The future of hospitality is here with Intelligent Director for Hospitality #1. Powered by cutting-edge AI, this platform delivers document processing like neve",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-director-for-hospitality-1-4bf38725"
+    }
+  },
+  "features": [
+    "Comprehensive monitoring",
+    "HIPAA ready",
+    "SOC 2 certified",
+    "Offline capabilities"
+  ],
+  "benefits": [
+    "Automated compliance reporting",
+    "Intelligent load balancing",
+    "Cost optimization recommendations"
+  ]
+}

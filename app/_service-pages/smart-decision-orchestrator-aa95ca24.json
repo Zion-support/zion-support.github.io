@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/smart-decision-orchestrator-aa95ca24",
+  "breadcrumbTitle": "Smart Decision Orchestrator",
+  "title": "Smart Decision Orchestrator",
+  "description": "Unlock unprecedented growth with Smart Decision Orchestrator. This autonomous system provides workflow management with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Decision Orchestrator - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Smart Decision Orchestrator. This autonomous system provides workflow management with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-decision-orchestrator-aa95ca24"
+    }
+  },
+  "features": [
+    "Container orchestration",
+    "Rollback mechanisms",
+    "Cloud-native architecture",
+    "Audit trails",
+    "Edge computing support"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Self-healing infrastructure",
+    "Zero manual intervention required",
+    "Scalable to millions of transactions"
+  ]
+}

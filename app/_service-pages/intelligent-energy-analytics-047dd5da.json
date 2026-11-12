@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligent-energy-analytics-047dd5da",
+  "breadcrumbTitle": "Intelligent Energy Analytics",
+  "title": "Intelligent Energy Analytics",
+  "description": "Next-generation manufacturing solution: Intelligent Energy Analytics. Combines predictive analytics with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Energy Analytics - Zion Tech Group",
+    "description": "Next-generation manufacturing solution: Intelligent Energy Analytics. Combines predictive analytics with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-energy-analytics-047dd5da"
+    }
+  },
+  "features": [
+    "Performance dashboards",
+    "Plugin architecture",
+    "GDPR compliance",
+    "Custom integrations",
+    "Real-time processing"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "24/7 automated operations",
+    "50% reduction in operational costs",
+    "ROI in under 90 days"
+  ]
+}

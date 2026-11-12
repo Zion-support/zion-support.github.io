@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/platform-neural---insurance-1-87bbb497",
+  "breadcrumbTitle": "Platform Neural - Insurance #1",
+  "title": "Platform Neural - Insurance #1",
+  "description": "Next-generation insurance solution: Platform Neural - Insurance #1. Combines user experience with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Platform Neural - Insurance #1 - Zion Tech Group",
+    "description": "Next-generation insurance solution: Platform Neural - Insurance #1. Combines user experience with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/platform-neural---insurance-1-87bbb497"
+    }
+  },
+  "features": [
+    "Performance dashboards",
+    "Edge computing support",
+    "HIPAA ready",
+    "Plugin architecture",
+    "Multi-language support"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "Intelligent load balancing",
+    "Reduced human error by 95%"
+  ]
+}

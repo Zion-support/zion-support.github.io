@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/director-self-optimizing---education-ae9a657e",
+  "breadcrumbTitle": "Director Self-Optimizing - Education",
+  "title": "Director Self-Optimizing - Education",
+  "description": "Revolutionize education through intelligent automation. Our Director Self-Optimizing - Education leverages advanced machine learning to deliver financial planni",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Director Self-Optimizing - Education - Zion Tech Group",
+    "description": "Revolutionize education through intelligent automation. Our Director Self-Optimizing - Education leverages advanced machine learning to deliver financial planni",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/director-self-optimizing---education-ae9a657e"
+    }
+  },
+  "features": [
+    "Real-time processing",
+    "Offline capabilities",
+    "SOC 2 certified",
+    "Plugin architecture"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "3x faster decision making",
+    "Cost optimization recommendations",
+    "Predictive maintenance scheduling"
+  ]
+}

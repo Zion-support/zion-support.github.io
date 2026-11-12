@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/conversational-ai-for-healthcare-8d6c917d",
+  "breadcrumbTitle": "Conversational AI for Healthcare",
+  "title": "Conversational AI for Healthcare",
+  "description": "Natural language processing system that handles healthcare inquiries through intelligent chatbots.",
+  "basic": "$179/month",
+  "pro": "$449/month",
+  "enterprise": "$1349/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Conversational AI for Healthcare - Zion Tech Group",
+    "description": "Natural language processing system that handles healthcare inquiries through intelligent chatbots.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/conversational-ai-for-healthcare-8d6c917d"
+    }
+  },
+  "features": [
+    "Natural language understanding",
+    "Multi-language support",
+    "Context awareness",
+    "Seamless handoff"
+  ],
+  "benefits": [
+    "24/7 availability",
+    "Instant response times",
+    "Consistent service quality",
+    "Reduced support costs"
+  ]
+}

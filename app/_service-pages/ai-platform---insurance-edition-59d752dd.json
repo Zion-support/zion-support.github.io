@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-platform---insurance-edition-59d752dd",
+  "breadcrumbTitle": "AI Platform - Insurance Edition",
+  "title": "AI Platform - Insurance Edition",
+  "description": "Transform your insurance operations with our AI Platform - Insurance Edition. This AI-driven solution automates maintenance scheduling with unprecedented accura",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Platform - Insurance Edition - Zion Tech Group",
+    "description": "Transform your insurance operations with our AI Platform - Insurance Edition. This AI-driven solution automates maintenance scheduling with unprecedented accura",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-platform---insurance-edition-59d752dd"
+    }
+  },
+  "features": [
+    "Open-source friendly",
+    "Offline capabilities",
+    "HIPAA ready",
+    "Machine learning integration"
+  ],
+  "benefits": [
+    "Performance benchmarking",
+    "Seamless integration with existing systems",
+    "Intelligent load balancing",
+    "3x faster decision making",
+    "Scalable to millions of transactions"
+  ]
+}

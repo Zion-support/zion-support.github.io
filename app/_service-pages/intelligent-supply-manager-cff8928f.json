@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/intelligent-supply-manager-cff8928f",
+  "breadcrumbTitle": "Intelligent Supply Manager",
+  "title": "Intelligent Supply Manager",
+  "description": "Next-generation finance solution: Intelligent Supply Manager. Combines image recognition with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Supply Manager - Zion Tech Group",
+    "description": "Next-generation finance solution: Intelligent Supply Manager. Combines image recognition with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-supply-manager-cff8928f"
+    }
+  },
+  "features": [
+    "Container orchestration",
+    "Custom integrations",
+    "Open-source friendly",
+    "Role-based access control",
+    "Multi-language support"
+  ],
+  "benefits": [
+    "Seamless integration with existing systems",
+    "Self-healing infrastructure",
+    "24/7 automated operations",
+    "Scalable to millions of transactions",
+    "ROI in under 90 days"
+  ]
+}

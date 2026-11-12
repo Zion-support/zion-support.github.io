@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-insights-energy-4847ad15",
+  "breadcrumbTitle": "Intelligent insights-energy",
+  "title": "Intelligent insights-energy",
+  "description": "The future of energy is here with Intelligent insights-energy. Powered by cutting-edge AI, this platform delivers energy management like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent insights-energy - Zion Tech Group",
+    "description": "The future of energy is here with Intelligent insights-energy. Powered by cutting-edge AI, this platform delivers energy management like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-insights-energy-4847ad15"
+    }
+  },
+  "features": [
+    "Open-source friendly",
+    "Performance dashboards",
+    "Serverless functions",
+    "SOC 2 certified",
+    "Multi-region deployment"
+  ],
+  "benefits": [
+    "Cost optimization recommendations",
+    "Intelligent load balancing",
+    "Performance benchmarking"
+  ]
+}

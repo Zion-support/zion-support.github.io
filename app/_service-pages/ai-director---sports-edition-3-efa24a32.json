@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-director---sports-edition-3-efa24a32",
+  "breadcrumbTitle": "AI Director - Sports Edition #3",
+  "title": "AI Director - Sports Edition #3",
+  "description": "Transform your sports operations with our AI Director - Sports Edition #3. This AI-driven solution automates market intelligence with unprecedented accuracy and",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Director - Sports Edition #3 - Zion Tech Group",
+    "description": "Transform your sports operations with our AI Director - Sports Edition #3. This AI-driven solution automates market intelligence with unprecedented accuracy and",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-director---sports-edition-3-efa24a32"
+    }
+  },
+  "features": [
+    "Microservices deployment",
+    "SOC 2 certified",
+    "Performance dashboards",
+    "Cloud-native architecture",
+    "Serverless functions"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "Scalable to millions of transactions",
+    "50% reduction in operational costs",
+    "Intelligent load balancing"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/automated-management-logistics-8d5d927c",
+  "breadcrumbTitle": "Automated management-logistics",
+  "title": "Automated management-logistics",
+  "description": "Revolutionize logistics through intelligent automation. Our Automated management-logistics leverages advanced machine learning to deliver risk assessment at sca",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated management-logistics - Zion Tech Group",
+    "description": "Revolutionize logistics through intelligent automation. Our Automated management-logistics leverages advanced machine learning to deliver risk assessment at sca",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-management-logistics-8d5d927c"
+    }
+  },
+  "features": [
+    "Microservices deployment",
+    "Plugin architecture",
+    "Data encryption",
+    "Zero-downtime updates"
+  ],
+  "benefits": [
+    "Performance benchmarking",
+    "Real-time insights and alerts",
+    "50% reduction in operational costs",
+    "Cost optimization recommendations",
+    "Enterprise-grade security"
+  ]
+}

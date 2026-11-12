@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/adaptive-insights-for-construction-5de14841",
+  "breadcrumbTitle": "Adaptive Insights for Construction",
+  "title": "Adaptive Insights for Construction",
+  "description": "The future of construction is here with Adaptive Insights for Construction. Powered by cutting-edge AI, this platform delivers data processing like never before",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Adaptive Insights for Construction - Zion Tech Group",
+    "description": "The future of construction is here with Adaptive Insights for Construction. Powered by cutting-edge AI, this platform delivers data processing like never before",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/adaptive-insights-for-construction-5de14841"
+    }
+  },
+  "features": [
+    "Zero-downtime updates",
+    "Container orchestration",
+    "Offline capabilities",
+    "GDPR compliance",
+    "Performance dashboards"
+  ],
+  "benefits": [
+    "Seamless integration with existing systems",
+    "Automated compliance reporting",
+    "Self-healing infrastructure",
+    "99.9% uptime guarantee"
+  ]
+}

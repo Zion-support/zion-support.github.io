@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/platform-smart---insurance-2e5c8231",
+  "breadcrumbTitle": "Platform Smart - Insurance",
+  "title": "Platform Smart - Insurance",
+  "description": "Revolutionize insurance through intelligent automation. Our Platform Smart - Insurance leverages advanced machine learning to deliver user experience at scale.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Platform Smart - Insurance - Zion Tech Group",
+    "description": "Revolutionize insurance through intelligent automation. Our Platform Smart - Insurance leverages advanced machine learning to deliver user experience at scale.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/platform-smart---insurance-2e5c8231"
+    }
+  },
+  "features": [
+    "Edge computing support",
+    "Serverless functions",
+    "Comprehensive monitoring",
+    "Data encryption",
+    "Custom integrations"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "99.9% uptime guarantee",
+    "Self-healing infrastructure",
+    "ROI in under 90 days"
+  ]
+}

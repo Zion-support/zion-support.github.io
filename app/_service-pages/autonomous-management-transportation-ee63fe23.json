@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/autonomous-management-transportation-ee63fe23",
+  "breadcrumbTitle": "Autonomous management-transportation",
+  "title": "Autonomous management-transportation",
+  "description": "Revolutionize transportation through intelligent automation. Our Autonomous management-transportation leverages advanced machine learning to deliver customer in",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous management-transportation - Zion Tech Group",
+    "description": "Revolutionize transportation through intelligent automation. Our Autonomous management-transportation leverages advanced machine learning to deliver customer in",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-management-transportation-ee63fe23"
+    }
+  },
+  "features": [
+    "GDPR compliance",
+    "Role-based access control",
+    "Plugin architecture",
+    "Data encryption",
+    "Offline capabilities"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "Dynamic resource allocation",
+    "Scalable to millions of transactions",
+    "3x faster decision making"
+  ]
+}

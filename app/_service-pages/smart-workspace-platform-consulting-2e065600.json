@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/smart-workspace-platform-consulting-2e065600",
+  "breadcrumbTitle": "Smart Workspace Platform - Consulting",
+  "title": "Smart Workspace Platform - Consulting",
+  "description": "Enhance your consulting business with Smart Workspace Platform - Consulting. Our solution provides knowledge sharing with enterprise-grade reliability and secur",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Workspace Platform - Consulting - Zion Tech Group",
+    "description": "Enhance your consulting business with Smart Workspace Platform - Consulting. Our solution provides knowledge sharing with enterprise-grade reliability and secur",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-workspace-platform-consulting-2e065600"
+    }
+  },
+  "features": [
+    "Task assignment with automated reminders",
+    "Role-based access control with SSO integration",
+    "Alerting system with intelligent notifications",
+    "Edge computing support for low-latency operations",
+    "Knowledge base with smart search"
+  ],
+  "benefits": [
+    "Real-time insights and alerts for proactive management",
+    "3x faster decision making with real-time insights",
+    "Cost optimization recommendations with savings analysis",
+    "50% reduction in operational costs through automation",
+    "Zero manual intervention required for routine tasks"
+  ]
+}

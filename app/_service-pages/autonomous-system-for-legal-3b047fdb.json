@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/autonomous-system-for-legal-3b047fdb",
+  "breadcrumbTitle": "Autonomous System for Legal",
+  "title": "Autonomous System for Legal",
+  "description": "Next-generation legal solution: Autonomous System for Legal. Combines image recognition with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous System for Legal - Zion Tech Group",
+    "description": "Next-generation legal solution: Autonomous System for Legal. Combines image recognition with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-system-for-legal-3b047fdb"
+    }
+  },
+  "features": [
+    "Custom integrations",
+    "SOC 2 certified",
+    "GDPR compliance",
+    "Performance dashboards",
+    "Offline capabilities"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "Enterprise-grade security",
+    "24/7 automated operations"
+  ]
+}

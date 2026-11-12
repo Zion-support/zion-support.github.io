@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/suite-smart---media-2f754bd4",
+  "breadcrumbTitle": "Suite Smart - Media",
+  "title": "Suite Smart - Media",
+  "description": "Next-generation media solution: Suite Smart - Media. Combines predictive analytics with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Suite Smart - Media - Zion Tech Group",
+    "description": "Next-generation media solution: Suite Smart - Media. Combines predictive analytics with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/suite-smart---media-2f754bd4"
+    }
+  },
+  "features": [
+    "Performance dashboards",
+    "Role-based access control",
+    "Machine learning integration",
+    "API-first design",
+    "GDPR compliance"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "Automated compliance reporting",
+    "99.9% uptime guarantee"
+  ]
+}

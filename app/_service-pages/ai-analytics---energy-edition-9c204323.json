@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/ai-analytics---energy-edition-9c204323",
+  "breadcrumbTitle": "AI Analytics - Energy Edition",
+  "title": "AI Analytics - Energy Edition",
+  "description": "Transform your energy operations with our AI Analytics - Energy Edition. This AI-driven solution automates threat detection with unprecedented accuracy and effi",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Analytics - Energy Edition - Zion Tech Group",
+    "description": "Transform your energy operations with our AI Analytics - Energy Edition. This AI-driven solution automates threat detection with unprecedented accuracy and effi",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-analytics---energy-edition-9c204323"
+    }
+  },
+  "features": [
+    "Role-based access control",
+    "Container orchestration",
+    "HIPAA ready",
+    "Custom integrations",
+    "Auto-scaling capabilities"
+  ],
+  "benefits": [
+    "Intelligent load balancing",
+    "Automated compliance reporting",
+    "Scalable to millions of transactions",
+    "Dynamic resource allocation",
+    "Real-time insights and alerts"
+  ]
+}

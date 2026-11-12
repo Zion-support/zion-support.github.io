@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-engine---transportation-edition-4-1c3be9ca",
+  "breadcrumbTitle": "AI Engine - Transportation Edition #4",
+  "title": "AI Engine - Transportation Edition #4",
+  "description": "Unlock unprecedented growth with AI Engine - Transportation Edition #4. This autonomous system provides performance monitoring with zero manual intervention nee",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Engine - Transportation Edition #4 - Zion Tech Group",
+    "description": "Unlock unprecedented growth with AI Engine - Transportation Edition #4. This autonomous system provides performance monitoring with zero manual intervention nee",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-engine---transportation-edition-4-1c3be9ca"
+    }
+  },
+  "features": [
+    "API-first design",
+    "Alerting system",
+    "Microservices deployment",
+    "Multi-language support"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "Cost optimization recommendations",
+    "24/7 automated operations",
+    "Performance benchmarking",
+    "Self-healing infrastructure"
+  ]
+}

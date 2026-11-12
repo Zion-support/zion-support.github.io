@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-workflow-optimizer-425029c7",
+  "breadcrumbTitle": "Intelligent Workflow Optimizer",
+  "title": "Intelligent Workflow Optimizer",
+  "description": "Revolutionize healthcare through intelligent automation. Our Intelligent Workflow Optimizer leverages advanced machine learning to deliver supply chain at scale",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Workflow Optimizer - Zion Tech Group",
+    "description": "Revolutionize healthcare through intelligent automation. Our Intelligent Workflow Optimizer leverages advanced machine learning to deliver supply chain at scale",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-workflow-optimizer-425029c7"
+    }
+  },
+  "features": [
+    "Zero-downtime updates",
+    "Rollback mechanisms",
+    "Multi-language support",
+    "Machine learning integration"
+  ],
+  "benefits": [
+    "50% reduction in operational costs",
+    "ROI in under 90 days",
+    "Real-time insights and alerts",
+    "Enterprise-grade security"
+  ]
+}

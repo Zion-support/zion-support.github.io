@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-coordinator---healthcare-edition-a7e3545d",
+  "breadcrumbTitle": "AI Coordinator - Healthcare Edition",
+  "title": "AI Coordinator - Healthcare Edition",
+  "description": "Unlock unprecedented growth with AI Coordinator - Healthcare Edition. This autonomous system provides customer insights with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Coordinator - Healthcare Edition - Zion Tech Group",
+    "description": "Unlock unprecedented growth with AI Coordinator - Healthcare Edition. This autonomous system provides customer insights with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-coordinator---healthcare-edition-a7e3545d"
+    }
+  },
+  "features": [
+    "Machine learning integration",
+    "GDPR compliance",
+    "Custom integrations",
+    "Microservices deployment",
+    "Serverless functions"
+  ],
+  "benefits": [
+    "Performance benchmarking",
+    "Intelligent load balancing",
+    "24/7 automated operations",
+    "Dynamic resource allocation"
+  ]
+}

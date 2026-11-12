@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligence-intelligent---retail-79de0fc7",
+  "breadcrumbTitle": "Intelligence Intelligent - Retail",
+  "title": "Intelligence Intelligent - Retail",
+  "description": "The future of retail is here with Intelligence Intelligent - Retail. Powered by cutting-edge AI, this platform delivers content generation like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligence Intelligent - Retail - Zion Tech Group",
+    "description": "The future of retail is here with Intelligence Intelligent - Retail. Powered by cutting-edge AI, this platform delivers content generation like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligence-intelligent---retail-79de0fc7"
+    }
+  },
+  "features": [
+    "GDPR compliance",
+    "Cloud-native architecture",
+    "Microservices deployment",
+    "Zero-downtime updates"
+  ],
+  "benefits": [
+    "Seamless integration with existing systems",
+    "Zero manual intervention required",
+    "Enterprise-grade security",
+    "Scalable to millions of transactions"
+  ]
+}

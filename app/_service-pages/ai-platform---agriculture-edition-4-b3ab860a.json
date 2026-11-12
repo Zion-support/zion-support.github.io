@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-platform---agriculture-edition-4-b3ab860a",
+  "breadcrumbTitle": "AI Platform - Agriculture Edition #4",
+  "title": "AI Platform - Agriculture Edition #4",
+  "description": "Revolutionize agriculture through intelligent automation. Our AI Platform - Agriculture Edition #4 leverages advanced machine learning to deliver quality contro",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Platform - Agriculture Edition #4 - Zion Tech Group",
+    "description": "Revolutionize agriculture through intelligent automation. Our AI Platform - Agriculture Edition #4 leverages advanced machine learning to deliver quality contro",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-platform---agriculture-edition-4-b3ab860a"
+    }
+  },
+  "features": [
+    "Mobile-responsive interface",
+    "Open-source friendly",
+    "Auto-scaling capabilities",
+    "Multi-language support",
+    "Offline capabilities"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "Enterprise-grade security",
+    "99.9% uptime guarantee"
+  ]
+}

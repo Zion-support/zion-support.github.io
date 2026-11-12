@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-engine---construction-edition-3-00649bac",
+  "breadcrumbTitle": "AI Engine - Construction Edition #3",
+  "title": "AI Engine - Construction Edition #3",
+  "description": "Unlock unprecedented growth with AI Engine - Construction Edition #3. This autonomous system provides process automation with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Engine - Construction Edition #3 - Zion Tech Group",
+    "description": "Unlock unprecedented growth with AI Engine - Construction Edition #3. This autonomous system provides process automation with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-engine---construction-edition-3-00649bac"
+    }
+  },
+  "features": [
+    "Serverless functions",
+    "Multi-region deployment",
+    "Custom integrations",
+    "API-first design",
+    "Rollback mechanisms"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "Automated compliance reporting",
+    "50% reduction in operational costs",
+    "Zero manual intervention required"
+  ]
+}

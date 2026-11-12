@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/ai-powered-manager-for-insurance-ec666ed9",
+  "breadcrumbTitle": "AI-Powered Manager for Insurance",
+  "title": "AI-Powered Manager for Insurance",
+  "description": "Transform your insurance operations with our AI-Powered Manager for Insurance. This AI-driven solution automates risk assessment with unprecedented accuracy and",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Manager for Insurance - Zion Tech Group",
+    "description": "Transform your insurance operations with our AI-Powered Manager for Insurance. This AI-driven solution automates risk assessment with unprecedented accuracy and",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-manager-for-insurance-ec666ed9"
+    }
+  },
+  "features": [
+    "Machine learning integration",
+    "Microservices deployment",
+    "Real-time processing",
+    "Role-based access control",
+    "HIPAA ready"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "Enterprise-grade security",
+    "Self-healing infrastructure",
+    "Cost optimization recommendations",
+    "Zero manual intervention required"
+  ]
+}

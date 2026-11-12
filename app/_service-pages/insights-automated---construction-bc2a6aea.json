@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/insights-automated---construction-bc2a6aea",
+  "breadcrumbTitle": "Insights Automated - Construction",
+  "title": "Insights Automated - Construction",
+  "description": "Unlock unprecedented growth with Insights Automated - Construction. This autonomous system provides sales forecasting with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Insights Automated - Construction - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Insights Automated - Construction. This autonomous system provides sales forecasting with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/insights-automated---construction-bc2a6aea"
+    }
+  },
+  "features": [
+    "API-first design",
+    "Container orchestration",
+    "Role-based access control",
+    "Alerting system",
+    "Data encryption"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "Enterprise-grade security",
+    "99.9% uptime guarantee",
+    "50% reduction in operational costs"
+  ]
+}

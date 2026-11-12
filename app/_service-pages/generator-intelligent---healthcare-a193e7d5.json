@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/generator-intelligent---healthcare-a193e7d5",
+  "breadcrumbTitle": "Generator Intelligent - Healthcare",
+  "title": "Generator Intelligent - Healthcare",
+  "description": "Next-generation healthcare solution: Generator Intelligent - Healthcare. Combines threat detection with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Generator Intelligent - Healthcare - Zion Tech Group",
+    "description": "Next-generation healthcare solution: Generator Intelligent - Healthcare. Combines threat detection with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/generator-intelligent---healthcare-a193e7d5"
+    }
+  },
+  "features": [
+    "Performance dashboards",
+    "Custom integrations",
+    "Mobile-responsive interface",
+    "Offline capabilities"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "24/7 automated operations",
+    "Intelligent load balancing"
+  ]
+}

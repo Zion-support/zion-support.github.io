@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/cognitive-content-manager-cca92b92",
+  "breadcrumbTitle": "Cognitive Content Manager",
+  "title": "Cognitive Content Manager",
+  "description": "The future of healthcare is here with Cognitive Content Manager. Powered by cutting-edge AI, this platform delivers energy management like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Cognitive Content Manager - Zion Tech Group",
+    "description": "The future of healthcare is here with Cognitive Content Manager. Powered by cutting-edge AI, this platform delivers energy management like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cognitive-content-manager-cca92b92"
+    }
+  },
+  "features": [
+    "Rollback mechanisms",
+    "Microservices deployment",
+    "Container orchestration",
+    "HIPAA ready",
+    "Mobile-responsive interface"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Reduced human error by 95%",
+    "ROI in under 90 days"
+  ]
+}

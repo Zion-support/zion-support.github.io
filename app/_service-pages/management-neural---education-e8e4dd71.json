@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/management-neural---education-e8e4dd71",
+  "breadcrumbTitle": "Management Neural - Education",
+  "title": "Management Neural - Education",
+  "description": "Transform your education operations with our Management Neural - Education. This AI-driven solution automates user experience with unprecedented accuracy and ef",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Management Neural - Education - Zion Tech Group",
+    "description": "Transform your education operations with our Management Neural - Education. This AI-driven solution automates user experience with unprecedented accuracy and ef",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/management-neural---education-e8e4dd71"
+    }
+  },
+  "features": [
+    "Container orchestration",
+    "Serverless functions",
+    "Real-time processing",
+    "Comprehensive monitoring"
+  ],
+  "benefits": [
+    "Seamless integration with existing systems",
+    "Self-healing infrastructure",
+    "Reduced human error by 95%"
+  ]
+}

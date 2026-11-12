@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-optimizer---manufacturing-edition-1-99058676",
+  "breadcrumbTitle": "AI Optimizer - Manufacturing Edition #1",
+  "title": "AI Optimizer - Manufacturing Edition #1",
+  "description": "Next-generation manufacturing solution: AI Optimizer - Manufacturing Edition #1. Combines supply chain with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Optimizer - Manufacturing Edition #1 - Zion Tech Group",
+    "description": "Next-generation manufacturing solution: AI Optimizer - Manufacturing Edition #1. Combines supply chain with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-optimizer---manufacturing-edition-1-99058676"
+    }
+  },
+  "features": [
+    "Open-source friendly",
+    "HIPAA ready",
+    "Custom integrations",
+    "Serverless functions",
+    "Alerting system"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "Performance benchmarking",
+    "3x faster decision making",
+    "24/7 automated operations"
+  ]
+}

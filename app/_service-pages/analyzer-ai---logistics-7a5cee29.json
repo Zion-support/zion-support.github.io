@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/analyzer-ai---logistics-7a5cee29",
+  "breadcrumbTitle": "Analyzer AI - Logistics",
+  "title": "Analyzer AI - Logistics",
+  "description": "Next-generation logistics solution: Analyzer AI - Logistics. Combines user experience with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Analyzer AI - Logistics - Zion Tech Group",
+    "description": "Next-generation logistics solution: Analyzer AI - Logistics. Combines user experience with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/analyzer-ai---logistics-7a5cee29"
+    }
+  },
+  "features": [
+    "Role-based access control",
+    "Real-time processing",
+    "Edge computing support",
+    "Multi-region deployment",
+    "GDPR compliance"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "Self-healing infrastructure",
+    "Cost optimization recommendations",
+    "Seamless integration with existing systems"
+  ]
+}

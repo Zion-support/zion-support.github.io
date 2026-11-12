@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/ai-engine---gaming-edition-4-a5e8c59c",
+  "breadcrumbTitle": "AI Engine - Gaming Edition #4",
+  "title": "AI Engine - Gaming Edition #4",
+  "description": "The future of gaming is here with AI Engine - Gaming Edition #4. Powered by cutting-edge AI, this platform delivers resource optimization like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Engine - Gaming Edition #4 - Zion Tech Group",
+    "description": "The future of gaming is here with AI Engine - Gaming Edition #4. Powered by cutting-edge AI, this platform delivers resource optimization like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-engine---gaming-edition-4-a5e8c59c"
+    }
+  },
+  "features": [
+    "GDPR compliance",
+    "Audit trails",
+    "Role-based access control",
+    "API-first design"
+  ],
+  "benefits": [
+    "24/7 automated operations",
+    "3x faster decision making",
+    "Self-healing infrastructure"
+  ]
+}

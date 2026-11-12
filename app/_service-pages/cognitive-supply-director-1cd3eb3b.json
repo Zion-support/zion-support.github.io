@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/cognitive-supply-director-1cd3eb3b",
+  "breadcrumbTitle": "Cognitive Supply Director",
+  "title": "Cognitive Supply Director",
+  "description": "The future of energy is here with Cognitive Supply Director. Powered by cutting-edge AI, this platform delivers network optimization like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Cognitive Supply Director - Zion Tech Group",
+    "description": "The future of energy is here with Cognitive Supply Director. Powered by cutting-edge AI, this platform delivers network optimization like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cognitive-supply-director-1cd3eb3b"
+    }
+  },
+  "features": [
+    "Mobile-responsive interface",
+    "Performance dashboards",
+    "Open-source friendly",
+    "Offline capabilities",
+    "Cloud-native architecture"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "Reduced human error by 95%",
+    "Scalable to millions of transactions",
+    "Zero manual intervention required",
+    "Automated compliance reporting"
+  ]
+}

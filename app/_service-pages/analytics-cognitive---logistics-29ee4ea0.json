@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/analytics-cognitive---logistics-29ee4ea0",
+  "breadcrumbTitle": "Analytics Cognitive - Logistics",
+  "title": "Analytics Cognitive - Logistics",
+  "description": "Transform your logistics operations with our Analytics Cognitive - Logistics. This AI-driven solution automates content generation with unprecedented accuracy a",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Analytics Cognitive - Logistics - Zion Tech Group",
+    "description": "Transform your logistics operations with our Analytics Cognitive - Logistics. This AI-driven solution automates content generation with unprecedented accuracy a",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/analytics-cognitive---logistics-29ee4ea0"
+    }
+  },
+  "features": [
+    "Alerting system",
+    "Zero-downtime updates",
+    "Container orchestration",
+    "Machine learning integration",
+    "Serverless functions"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "Zero manual intervention required",
+    "Intelligent load balancing",
+    "Dynamic resource allocation"
+  ]
+}

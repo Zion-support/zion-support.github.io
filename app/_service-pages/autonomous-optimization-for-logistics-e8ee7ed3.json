@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/autonomous-optimization-for-logistics-e8ee7ed3",
+  "breadcrumbTitle": "Autonomous Optimization for Logistics",
+  "title": "Autonomous Optimization for Logistics",
+  "description": "Transform your logistics operations with our Autonomous Optimization for Logistics. This AI-driven solution automates security monitoring with unprecedented acc",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous Optimization for Logistics - Zion Tech Group",
+    "description": "Transform your logistics operations with our Autonomous Optimization for Logistics. This AI-driven solution automates security monitoring with unprecedented acc",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-optimization-for-logistics-e8ee7ed3"
+    }
+  },
+  "features": [
+    "Role-based access control",
+    "Cloud-native architecture",
+    "Offline capabilities",
+    "Data encryption"
+  ],
+  "benefits": [
+    "Scalable to millions of transactions",
+    "Zero manual intervention required",
+    "ROI in under 90 days",
+    "3x faster decision making"
+  ]
+}

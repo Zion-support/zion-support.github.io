@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/advisor-intelligent---telecom-4dee13eb",
+  "breadcrumbTitle": "Advisor Intelligent - Telecom",
+  "title": "Advisor Intelligent - Telecom",
+  "description": "Transform your telecom operations with our Advisor Intelligent - Telecom. This AI-driven solution automates workflow management with unprecedented accuracy and ",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Advisor Intelligent - Telecom - Zion Tech Group",
+    "description": "Transform your telecom operations with our Advisor Intelligent - Telecom. This AI-driven solution automates workflow management with unprecedented accuracy and ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/advisor-intelligent---telecom-4dee13eb"
+    }
+  },
+  "features": [
+    "Alerting system",
+    "Microservices deployment",
+    "Performance dashboards",
+    "Edge computing support",
+    "API-first design"
+  ],
+  "benefits": [
+    "24/7 automated operations",
+    "3x faster decision making",
+    "Seamless integration with existing systems",
+    "Automated compliance reporting"
+  ]
+}

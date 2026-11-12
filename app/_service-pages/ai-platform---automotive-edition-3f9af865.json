@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-platform---automotive-edition-3f9af865",
+  "breadcrumbTitle": "AI Platform - Automotive Edition",
+  "title": "AI Platform - Automotive Edition",
+  "description": "Unlock unprecedented growth with AI Platform - Automotive Edition. This autonomous system provides customer insights with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Platform - Automotive Edition - Zion Tech Group",
+    "description": "Unlock unprecedented growth with AI Platform - Automotive Edition. This autonomous system provides customer insights with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-platform---automotive-edition-3f9af865"
+    }
+  },
+  "features": [
+    "HIPAA ready",
+    "Multi-region deployment",
+    "Cloud-native architecture",
+    "Performance dashboards"
+  ],
+  "benefits": [
+    "24/7 automated operations",
+    "Cost optimization recommendations",
+    "Real-time insights and alerts",
+    "50% reduction in operational costs"
+  ]
+}

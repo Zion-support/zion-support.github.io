@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/cognitive-threat-insights-90d08875",
+  "breadcrumbTitle": "Cognitive Threat Insights",
+  "title": "Cognitive Threat Insights",
+  "description": "Next-generation hospitality solution: Cognitive Threat Insights. Combines code optimization with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Cognitive Threat Insights - Zion Tech Group",
+    "description": "Next-generation hospitality solution: Cognitive Threat Insights. Combines code optimization with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cognitive-threat-insights-90d08875"
+    }
+  },
+  "features": [
+    "Rollback mechanisms",
+    "Performance dashboards",
+    "Edge computing support",
+    "Alerting system"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "Real-time insights and alerts",
+    "ROI in under 90 days"
+  ]
+}

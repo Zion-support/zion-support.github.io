@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/smart-advisor-hospitality-8c7774cc",
+  "breadcrumbTitle": "Smart advisor-hospitality",
+  "title": "Smart advisor-hospitality",
+  "description": "Revolutionize hospitality through intelligent automation. Our Smart advisor-hospitality leverages advanced machine learning to deliver process automation at sca",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart advisor-hospitality - Zion Tech Group",
+    "description": "Revolutionize hospitality through intelligent automation. Our Smart advisor-hospitality leverages advanced machine learning to deliver process automation at sca",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-advisor-hospitality-8c7774cc"
+    }
+  },
+  "features": [
+    "HIPAA ready",
+    "Data encryption",
+    "Custom integrations",
+    "Multi-region deployment"
+  ],
+  "benefits": [
+    "24/7 automated operations",
+    "3x faster decision making",
+    "Dynamic resource allocation"
+  ]
+}

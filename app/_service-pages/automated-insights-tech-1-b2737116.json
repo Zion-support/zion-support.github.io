@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/automated-insights-tech-1-b2737116",
+  "breadcrumbTitle": "Automated insights-tech #1",
+  "title": "Automated insights-tech #1",
+  "description": "Unlock unprecedented growth with Automated insights-tech #1. This autonomous system provides customer insights with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated insights-tech #1 - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Automated insights-tech #1. This autonomous system provides customer insights with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-insights-tech-1-b2737116"
+    }
+  },
+  "features": [
+    "Container orchestration",
+    "Zero-downtime updates",
+    "Edge computing support",
+    "Cloud-native architecture"
+  ],
+  "benefits": [
+    "Seamless integration with existing systems",
+    "Automated compliance reporting",
+    "24/7 automated operations",
+    "ROI in under 90 days"
+  ]
+}

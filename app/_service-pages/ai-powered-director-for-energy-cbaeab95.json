@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-powered-director-for-energy-cbaeab95",
+  "breadcrumbTitle": "AI-Powered Director for Energy",
+  "title": "AI-Powered Director for Energy",
+  "description": "Transform your energy operations with our AI-Powered Director for Energy. This AI-driven solution automates maintenance scheduling with unprecedented accuracy a",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI-Powered Director for Energy - Zion Tech Group",
+    "description": "Transform your energy operations with our AI-Powered Director for Energy. This AI-driven solution automates maintenance scheduling with unprecedented accuracy a",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-director-for-energy-cbaeab95"
+    }
+  },
+  "features": [
+    "Multi-region deployment",
+    "GDPR compliance",
+    "Offline capabilities",
+    "Microservices deployment",
+    "Role-based access control"
+  ],
+  "benefits": [
+    "Cost optimization recommendations",
+    "Enterprise-grade security",
+    "50% reduction in operational costs",
+    "ROI in under 90 days"
+  ]
+}

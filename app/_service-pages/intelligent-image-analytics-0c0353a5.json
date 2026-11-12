@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/intelligent-image-analytics-0c0353a5",
+  "breadcrumbTitle": "Intelligent Image Analytics",
+  "title": "Intelligent Image Analytics",
+  "description": "The future of insurance is here with Intelligent Image Analytics. Powered by cutting-edge AI, this platform delivers market intelligence like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Image Analytics - Zion Tech Group",
+    "description": "The future of insurance is here with Intelligent Image Analytics. Powered by cutting-edge AI, this platform delivers market intelligence like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-image-analytics-0c0353a5"
+    }
+  },
+  "features": [
+    "SOC 2 certified",
+    "Alerting system",
+    "Performance dashboards",
+    "API-first design",
+    "Cloud-native architecture"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "Seamless integration with existing systems",
+    "Scalable to millions of transactions",
+    "ROI in under 90 days",
+    "Zero manual intervention required"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-platform---education-edition-3-70e81336",
+  "breadcrumbTitle": "AI Platform - Education Edition #3",
+  "title": "AI Platform - Education Edition #3",
+  "description": "Transform your education operations with our AI Platform - Education Edition #3. This AI-driven solution automates compliance monitoring with unprecedented accu",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Platform - Education Edition #3 - Zion Tech Group",
+    "description": "Transform your education operations with our AI Platform - Education Edition #3. This AI-driven solution automates compliance monitoring with unprecedented accu",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-platform---education-edition-3-70e81336"
+    }
+  },
+  "features": [
+    "Container orchestration",
+    "Custom integrations",
+    "Machine learning integration",
+    "HIPAA ready"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "Seamless integration with existing systems",
+    "Performance benchmarking",
+    "99.9% uptime guarantee"
+  ]
+}

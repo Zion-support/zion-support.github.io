@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/autonomous-intelligence-for-insurance-974223cd",
+  "breadcrumbTitle": "Autonomous Intelligence for Insurance",
+  "title": "Autonomous Intelligence for Insurance",
+  "description": "Revolutionize insurance through intelligent automation. Our Autonomous Intelligence for Insurance leverages advanced machine learning to deliver content generat",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous Intelligence for Insurance - Zion Tech Group",
+    "description": "Revolutionize insurance through intelligent automation. Our Autonomous Intelligence for Insurance leverages advanced machine learning to deliver content generat",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-intelligence-for-insurance-974223cd"
+    }
+  },
+  "features": [
+    "Edge computing support",
+    "Cloud-native architecture",
+    "Data encryption",
+    "Open-source friendly"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "Self-healing infrastructure",
+    "Automated compliance reporting",
+    "Performance benchmarking",
+    "Intelligent load balancing"
+  ]
+}

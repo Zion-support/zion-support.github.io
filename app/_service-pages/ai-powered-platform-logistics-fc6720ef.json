@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-powered-platform-logistics-fc6720ef",
+  "breadcrumbTitle": "AI-Powered platform-logistics",
+  "title": "AI-Powered platform-logistics",
+  "description": "Next-generation logistics solution: AI-Powered platform-logistics. Combines fraud prevention with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered platform-logistics - Zion Tech Group",
+    "description": "Next-generation logistics solution: AI-Powered platform-logistics. Combines fraud prevention with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-platform-logistics-fc6720ef"
+    }
+  },
+  "features": [
+    "Cloud-native architecture",
+    "Plugin architecture",
+    "Machine learning integration",
+    "Microservices deployment",
+    "Open-source friendly"
+  ],
+  "benefits": [
+    "24/7 automated operations",
+    "ROI in under 90 days",
+    "Scalable to millions of transactions",
+    "Zero manual intervention required"
+  ]
+}

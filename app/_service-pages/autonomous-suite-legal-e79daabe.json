@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/autonomous-suite-legal-e79daabe",
+  "breadcrumbTitle": "Autonomous suite-legal",
+  "title": "Autonomous suite-legal",
+  "description": "Revolutionize legal through intelligent automation. Our Autonomous suite-legal leverages advanced machine learning to deliver image recognition at scale.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous suite-legal - Zion Tech Group",
+    "description": "Revolutionize legal through intelligent automation. Our Autonomous suite-legal leverages advanced machine learning to deliver image recognition at scale.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-suite-legal-e79daabe"
+    }
+  },
+  "features": [
+    "SOC 2 certified",
+    "HIPAA ready",
+    "Cloud-native architecture",
+    "Multi-language support",
+    "Performance dashboards"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Enterprise-grade security",
+    "24/7 automated operations"
+  ]
+}

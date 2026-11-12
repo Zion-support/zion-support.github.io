@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-platform---automotive-edition-2-2cba546d",
+  "breadcrumbTitle": "AI Platform - Automotive Edition #2",
+  "title": "AI Platform - Automotive Edition #2",
+  "description": "Next-generation automotive solution: AI Platform - Automotive Edition #2. Combines data processing with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Platform - Automotive Edition #2 - Zion Tech Group",
+    "description": "Next-generation automotive solution: AI Platform - Automotive Edition #2. Combines data processing with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-platform---automotive-edition-2-2cba546d"
+    }
+  },
+  "features": [
+    "Container orchestration",
+    "Cloud-native architecture",
+    "HIPAA ready",
+    "Multi-region deployment",
+    "Custom integrations"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "Cost optimization recommendations",
+    "99.9% uptime guarantee",
+    "Intelligent load balancing"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/enterprise-predictive-real-estate-analytics-suite-7e340f80",
+  "breadcrumbTitle": "Enterprise Predictive Real Estate Analytics Suite",
+  "title": "Enterprise Predictive Real Estate Analytics Suite",
+  "description": "Enterprise analytics suite that delivers predictive real estate insights with unified dashboards and reporting.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Enterprise Predictive Real Estate Analytics Suite - Zion Tech Group",
+    "description": "Enterprise analytics suite that delivers predictive real estate insights with unified dashboards and reporting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/enterprise-predictive-real-estate-analytics-suite-7e340f80"
+    }
+  },
+  "features": [
+    "Data visualization",
+    "Custom dashboards",
+    "Report generation",
+    "KPI tracking"
+  ],
+  "benefits": [
+    "Unified data view",
+    "Faster insights",
+    "Customizable reports",
+    "Cross-functional collaboration"
+  ]
+}

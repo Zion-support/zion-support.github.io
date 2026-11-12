@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/analytics-adaptive---agriculture-3b30ee43",
+  "breadcrumbTitle": "Analytics Adaptive - Agriculture",
+  "title": "Analytics Adaptive - Agriculture",
+  "description": "Unlock unprecedented growth with Analytics Adaptive - Agriculture. This autonomous system provides maintenance scheduling with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Analytics Adaptive - Agriculture - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Analytics Adaptive - Agriculture. This autonomous system provides maintenance scheduling with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/analytics-adaptive---agriculture-3b30ee43"
+    }
+  },
+  "features": [
+    "SOC 2 certified",
+    "Performance dashboards",
+    "Custom integrations",
+    "Container orchestration"
+  ],
+  "benefits": [
+    "Dynamic resource allocation",
+    "Self-healing infrastructure",
+    "3x faster decision making"
+  ]
+}

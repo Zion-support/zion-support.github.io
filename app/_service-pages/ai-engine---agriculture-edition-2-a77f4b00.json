@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-engine---agriculture-edition-2-a77f4b00",
+  "breadcrumbTitle": "AI Engine - Agriculture Edition #2",
+  "title": "AI Engine - Agriculture Edition #2",
+  "description": "Next-generation agriculture solution: AI Engine - Agriculture Edition #2. Combines market intelligence with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Engine - Agriculture Edition #2 - Zion Tech Group",
+    "description": "Next-generation agriculture solution: AI Engine - Agriculture Edition #2. Combines market intelligence with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-engine---agriculture-edition-2-a77f4b00"
+    }
+  },
+  "features": [
+    "API-first design",
+    "Custom integrations",
+    "Open-source friendly",
+    "Data encryption",
+    "Rollback mechanisms"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "Real-time insights and alerts",
+    "Predictive maintenance scheduling"
+  ]
+}

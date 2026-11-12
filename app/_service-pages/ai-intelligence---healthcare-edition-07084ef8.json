@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-intelligence---healthcare-edition-07084ef8",
+  "breadcrumbTitle": "AI Intelligence - Healthcare Edition",
+  "title": "AI Intelligence - Healthcare Edition",
+  "description": "Transform your healthcare operations with our AI Intelligence - Healthcare Edition. This AI-driven solution automates security monitoring with unprecedented acc",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Intelligence - Healthcare Edition - Zion Tech Group",
+    "description": "Transform your healthcare operations with our AI Intelligence - Healthcare Edition. This AI-driven solution automates security monitoring with unprecedented acc",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-intelligence---healthcare-edition-07084ef8"
+    }
+  },
+  "features": [
+    "Machine learning integration",
+    "Performance dashboards",
+    "Alerting system",
+    "Audit trails",
+    "Multi-region deployment"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "Automated compliance reporting",
+    "Predictive maintenance scheduling"
+  ]
+}

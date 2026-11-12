@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/autonomous-advisor-logistics-5f15430f",
+  "breadcrumbTitle": "Autonomous advisor-logistics",
+  "title": "Autonomous advisor-logistics",
+  "description": "Next-generation logistics solution: Autonomous advisor-logistics. Combines user experience with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous advisor-logistics - Zion Tech Group",
+    "description": "Next-generation logistics solution: Autonomous advisor-logistics. Combines user experience with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-advisor-logistics-5f15430f"
+    }
+  },
+  "features": [
+    "Comprehensive monitoring",
+    "HIPAA ready",
+    "Audit trails",
+    "Performance dashboards"
+  ],
+  "benefits": [
+    "Intelligent load balancing",
+    "Dynamic resource allocation",
+    "Predictive maintenance scheduling",
+    "Real-time insights and alerts"
+  ]
+}

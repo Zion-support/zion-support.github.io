@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-insights---transportation-edition-612c64c2",
+  "breadcrumbTitle": "AI Insights - Transportation Edition",
+  "title": "AI Insights - Transportation Edition",
+  "description": "Unlock unprecedented growth with AI Insights - Transportation Edition. This autonomous system provides network optimization with zero manual intervention needed",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Insights - Transportation Edition - Zion Tech Group",
+    "description": "Unlock unprecedented growth with AI Insights - Transportation Edition. This autonomous system provides network optimization with zero manual intervention needed",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-insights---transportation-edition-612c64c2"
+    }
+  },
+  "features": [
+    "Cloud-native architecture",
+    "GDPR compliance",
+    "Plugin architecture",
+    "Custom integrations",
+    "Offline capabilities"
+  ],
+  "benefits": [
+    "Seamless integration with existing systems",
+    "Zero manual intervention required",
+    "Intelligent load balancing",
+    "3x faster decision making"
+  ]
+}

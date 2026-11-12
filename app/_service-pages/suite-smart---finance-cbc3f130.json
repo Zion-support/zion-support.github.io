@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/suite-smart---finance-cbc3f130",
+  "breadcrumbTitle": "Suite Smart - Finance",
+  "title": "Suite Smart - Finance",
+  "description": "Revolutionize finance through intelligent automation. Our Suite Smart - Finance leverages advanced machine learning to deliver predictive analytics at scale.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Suite Smart - Finance - Zion Tech Group",
+    "description": "Revolutionize finance through intelligent automation. Our Suite Smart - Finance leverages advanced machine learning to deliver predictive analytics at scale.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/suite-smart---finance-cbc3f130"
+    }
+  },
+  "features": [
+    "SOC 2 certified",
+    "Offline capabilities",
+    "Data encryption",
+    "Comprehensive monitoring",
+    "Auto-scaling capabilities"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "Enterprise-grade security",
+    "Real-time insights and alerts",
+    "Predictive maintenance scheduling"
+  ]
+}

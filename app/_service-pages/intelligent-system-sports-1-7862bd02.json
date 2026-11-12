@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-system-sports-1-7862bd02",
+  "breadcrumbTitle": "Intelligent system-sports #1",
+  "title": "Intelligent system-sports #1",
+  "description": "Next-generation sports solution: Intelligent system-sports #1. Combines energy management with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent system-sports #1 - Zion Tech Group",
+    "description": "Next-generation sports solution: Intelligent system-sports #1. Combines energy management with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-system-sports-1-7862bd02"
+    }
+  },
+  "features": [
+    "Real-time processing",
+    "Performance dashboards",
+    "Edge computing support",
+    "Multi-region deployment"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Enterprise-grade security",
+    "24/7 automated operations",
+    "Self-healing infrastructure"
+  ]
+}

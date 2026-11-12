@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligent-engine-real-estate-1-171ce359",
+  "breadcrumbTitle": "Intelligent engine-real-estate #1",
+  "title": "Intelligent engine-real-estate #1",
+  "description": "Revolutionize real-estate through intelligent automation. Our Intelligent engine-real-estate #1 leverages advanced machine learning to deliver performance monit",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent engine-real-estate #1 - Zion Tech Group",
+    "description": "Revolutionize real-estate through intelligent automation. Our Intelligent engine-real-estate #1 leverages advanced machine learning to deliver performance monit",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-engine-real-estate-1-171ce359"
+    }
+  },
+  "features": [
+    "API-first design",
+    "Comprehensive monitoring",
+    "Plugin architecture",
+    "Performance dashboards"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "24/7 automated operations",
+    "Enterprise-grade security",
+    "Predictive maintenance scheduling",
+    "Seamless integration with existing systems"
+  ]
+}

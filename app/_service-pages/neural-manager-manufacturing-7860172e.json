@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/neural-manager-manufacturing-7860172e",
+  "breadcrumbTitle": "Neural manager-manufacturing",
+  "title": "Neural manager-manufacturing",
+  "description": "Next-generation manufacturing solution: Neural manager-manufacturing. Combines energy management with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Neural manager-manufacturing - Zion Tech Group",
+    "description": "Next-generation manufacturing solution: Neural manager-manufacturing. Combines energy management with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/neural-manager-manufacturing-7860172e"
+    }
+  },
+  "features": [
+    "Role-based access control",
+    "GDPR compliance",
+    "HIPAA ready",
+    "Audit trails"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Self-healing infrastructure",
+    "99.9% uptime guarantee",
+    "Reduced human error by 95%",
+    "Automated compliance reporting"
+  ]
+}

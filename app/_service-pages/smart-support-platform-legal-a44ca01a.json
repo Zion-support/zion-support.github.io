@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/smart-support-platform-legal-a44ca01a",
+  "breadcrumbTitle": "Smart Support Platform - Legal",
+  "title": "Smart Support Platform - Legal",
+  "description": "The future of legal is here with Smart Support Platform - Legal. Powered by cutting-edge AI, this platform delivers financial risk management like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Smart Support Platform - Legal - Zion Tech Group",
+    "description": "The future of legal is here with Smart Support Platform - Legal. Powered by cutting-edge AI, this platform delivers financial risk management like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-support-platform-legal-a44ca01a"
+    }
+  },
+  "features": [
+    "Security information and event management (SIEM)",
+    "Image recognition with computer vision",
+    "Role-based access control with SSO integration",
+    "Behavioral analytics for anomaly detection",
+    "Identity management with IAM"
+  ],
+  "benefits": [
+    "Better risk management with predictive analytics",
+    "Improved conversion rates with personalization",
+    "Reduced support tickets with self-service options",
+    "Reduced procurement cycle times",
+    "Better customer experience with personalization"
+  ]
+}

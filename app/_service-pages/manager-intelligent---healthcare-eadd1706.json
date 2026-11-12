@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/manager-intelligent---healthcare-eadd1706",
+  "breadcrumbTitle": "Manager Intelligent - Healthcare",
+  "title": "Manager Intelligent - Healthcare",
+  "description": "Unlock unprecedented growth with Manager Intelligent - Healthcare. This autonomous system provides data processing with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Manager Intelligent - Healthcare - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Manager Intelligent - Healthcare. This autonomous system provides data processing with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/manager-intelligent---healthcare-eadd1706"
+    }
+  },
+  "features": [
+    "Role-based access control",
+    "Custom integrations",
+    "GDPR compliance",
+    "Plugin architecture"
+  ],
+  "benefits": [
+    "Seamless integration with existing systems",
+    "Intelligent load balancing",
+    "Performance benchmarking",
+    "Enterprise-grade security"
+  ]
+}

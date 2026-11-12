@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/adaptive-document-analyzer-116bab0f",
+  "breadcrumbTitle": "Adaptive Document Analyzer",
+  "title": "Adaptive Document Analyzer",
+  "description": "Revolutionize hospitality through intelligent automation. Our Adaptive Document Analyzer leverages advanced machine learning to deliver code optimization at sca",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Adaptive Document Analyzer - Zion Tech Group",
+    "description": "Revolutionize hospitality through intelligent automation. Our Adaptive Document Analyzer leverages advanced machine learning to deliver code optimization at sca",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/adaptive-document-analyzer-116bab0f"
+    }
+  },
+  "features": [
+    "SOC 2 certified",
+    "Auto-scaling capabilities",
+    "Plugin architecture",
+    "HIPAA ready",
+    "Comprehensive monitoring"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Performance benchmarking",
+    "Enterprise-grade security",
+    "50% reduction in operational costs"
+  ]
+}

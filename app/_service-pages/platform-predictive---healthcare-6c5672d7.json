@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/platform-predictive---healthcare-6c5672d7",
+  "breadcrumbTitle": "Platform Predictive - Healthcare",
+  "title": "Platform Predictive - Healthcare",
+  "description": "Next-generation healthcare solution: Platform Predictive - Healthcare. Combines code optimization with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Platform Predictive - Healthcare - Zion Tech Group",
+    "description": "Next-generation healthcare solution: Platform Predictive - Healthcare. Combines code optimization with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/platform-predictive---healthcare-6c5672d7"
+    }
+  },
+  "features": [
+    "Microservices deployment",
+    "Real-time processing",
+    "Offline capabilities",
+    "HIPAA ready",
+    "Open-source friendly"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "Real-time insights and alerts",
+    "Reduced human error by 95%",
+    "Cost optimization recommendations"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-customer-analytics-38ae339f",
+  "breadcrumbTitle": "Intelligent Customer Analytics",
+  "title": "Intelligent Customer Analytics",
+  "description": "Transform your transportation operations with our Intelligent Customer Analytics. This AI-driven solution automates workflow management with unprecedented accur",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Customer Analytics - Zion Tech Group",
+    "description": "Transform your transportation operations with our Intelligent Customer Analytics. This AI-driven solution automates workflow management with unprecedented accur",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-customer-analytics-38ae339f"
+    }
+  },
+  "features": [
+    "Auto-scaling capabilities",
+    "Cloud-native architecture",
+    "Zero-downtime updates",
+    "SOC 2 certified",
+    "Container orchestration"
+  ],
+  "benefits": [
+    "Cost optimization recommendations",
+    "Seamless integration with existing systems",
+    "24/7 automated operations"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-self-learning-logistics-processing-framework-89dcba8a",
+  "breadcrumbTitle": "Intelligent Self-Learning Logistics Processing Framework",
+  "title": "Intelligent Self-Learning Logistics Processing Framework",
+  "description": "Intelligent processing framework that automates self-learning logistics data flows with real-time transformation.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Intelligent Self-Learning Logistics Processing Framework - Zion Tech Group",
+    "description": "Intelligent processing framework that automates self-learning logistics data flows with real-time transformation.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-self-learning-logistics-processing-framework-89dcba8a"
+    }
+  },
+  "features": [
+    "Real-time processing",
+    "Data transformation",
+    "ETL pipelines",
+    "Stream processing"
+  ],
+  "benefits": [
+    "Faster data flows",
+    "Reduced processing time",
+    "Higher throughput",
+    "Real-time transformation"
+  ]
+}

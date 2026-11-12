@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligence-predictive---insurance-b847967e",
+  "breadcrumbTitle": "Intelligence Predictive - Insurance",
+  "title": "Intelligence Predictive - Insurance",
+  "description": "Unlock unprecedented growth with Intelligence Predictive - Insurance. This autonomous system provides decision support with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligence Predictive - Insurance - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Intelligence Predictive - Insurance. This autonomous system provides decision support with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligence-predictive---insurance-b847967e"
+    }
+  },
+  "features": [
+    "Multi-language support",
+    "Serverless functions",
+    "Cloud-native architecture",
+    "Container orchestration",
+    "Rollback mechanisms"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "ROI in under 90 days",
+    "Intelligent load balancing"
+  ]
+}

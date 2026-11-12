@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/autonomous-optimizer-hospitality-c3e11a44",
+  "breadcrumbTitle": "Autonomous optimizer-hospitality",
+  "title": "Autonomous optimizer-hospitality",
+  "description": "The future of hospitality is here with Autonomous optimizer-hospitality. Powered by cutting-edge AI, this platform delivers quality control like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous optimizer-hospitality - Zion Tech Group",
+    "description": "The future of hospitality is here with Autonomous optimizer-hospitality. Powered by cutting-edge AI, this platform delivers quality control like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-optimizer-hospitality-c3e11a44"
+    }
+  },
+  "features": [
+    "Alerting system",
+    "Offline capabilities",
+    "Rollback mechanisms",
+    "Open-source friendly",
+    "Performance dashboards"
+  ],
+  "benefits": [
+    "Performance benchmarking",
+    "Scalable to millions of transactions",
+    "99.9% uptime guarantee"
+  ]
+}

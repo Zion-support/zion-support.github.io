@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-modular-customer-experience-suite-7d16c788",
+  "breadcrumbTitle": "AI-Powered Modular Customer Experience Suite",
+  "title": "AI-Powered Modular Customer Experience Suite",
+  "description": "Next-generation customer experience platform that delivers modular service delivery across all touchpoints.",
+  "basic": "$218/month",
+  "pro": "$548/month",
+  "enterprise": "$1648/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Modular Customer Experience Suite - Zion Tech Group",
+    "description": "Next-generation customer experience platform that delivers modular service delivery across all touchpoints.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-modular-customer-experience-suite-7d16c788"
+    }
+  },
+  "features": [
+    "Omnichannel support",
+    "Personalization engine",
+    "Sentiment analysis",
+    "Journey mapping"
+  ],
+  "benefits": [
+    "Higher customer satisfaction",
+    "Increased loyalty",
+    "Reduced churn",
+    "Improved CSAT scores"
+  ]
+}

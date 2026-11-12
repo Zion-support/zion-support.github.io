@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/autonomous-director-automotive-48c26483",
+  "breadcrumbTitle": "Autonomous director-automotive",
+  "title": "Autonomous director-automotive",
+  "description": "Next-generation automotive solution: Autonomous director-automotive. Combines language processing with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous director-automotive - Zion Tech Group",
+    "description": "Next-generation automotive solution: Autonomous director-automotive. Combines language processing with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-director-automotive-48c26483"
+    }
+  },
+  "features": [
+    "HIPAA ready",
+    "Zero-downtime updates",
+    "API-first design",
+    "Cloud-native architecture"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "Zero manual intervention required",
+    "Predictive maintenance scheduling"
+  ]
+}

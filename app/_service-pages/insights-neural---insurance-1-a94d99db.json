@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/insights-neural---insurance-1-a94d99db",
+  "breadcrumbTitle": "Insights Neural - Insurance #1",
+  "title": "Insights Neural - Insurance #1",
+  "description": "Next-generation insurance solution: Insights Neural - Insurance #1. Combines energy management with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Insights Neural - Insurance #1 - Zion Tech Group",
+    "description": "Next-generation insurance solution: Insights Neural - Insurance #1. Combines energy management with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/insights-neural---insurance-1-a94d99db"
+    }
+  },
+  "features": [
+    "Multi-language support",
+    "Custom integrations",
+    "Zero-downtime updates",
+    "Auto-scaling capabilities",
+    "Data encryption"
+  ],
+  "benefits": [
+    "Cost optimization recommendations",
+    "Seamless integration with existing systems",
+    "Predictive maintenance scheduling",
+    "Enterprise-grade security",
+    "Zero manual intervention required"
+  ]
+}

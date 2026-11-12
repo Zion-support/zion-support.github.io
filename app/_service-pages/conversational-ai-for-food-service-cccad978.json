@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/conversational-ai-for-food-service-cccad978",
+  "breadcrumbTitle": "Conversational AI for Food Service",
+  "title": "Conversational AI for Food Service",
+  "description": "Natural language processing system that handles food service inquiries through intelligent chatbots.",
+  "basic": "$179/month",
+  "pro": "$449/month",
+  "enterprise": "$1349/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Conversational AI for Food Service - Zion Tech Group",
+    "description": "Natural language processing system that handles food service inquiries through intelligent chatbots.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/conversational-ai-for-food-service-cccad978"
+    }
+  },
+  "features": [
+    "Natural language understanding",
+    "Multi-language support",
+    "Context awareness",
+    "Seamless handoff"
+  ],
+  "benefits": [
+    "24/7 availability",
+    "Instant response times",
+    "Consistent service quality",
+    "Reduced support costs"
+  ]
+}

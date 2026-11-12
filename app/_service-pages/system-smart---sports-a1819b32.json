@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/system-smart---sports-a1819b32",
+  "breadcrumbTitle": "System Smart - Sports",
+  "title": "System Smart - Sports",
+  "description": "The future of sports is here with System Smart - Sports. Powered by cutting-edge AI, this platform delivers decision support like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "System Smart - Sports - Zion Tech Group",
+    "description": "The future of sports is here with System Smart - Sports. Powered by cutting-edge AI, this platform delivers decision support like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/system-smart---sports-a1819b32"
+    }
+  },
+  "features": [
+    "Role-based access control",
+    "Performance dashboards",
+    "Mobile-responsive interface",
+    "Machine learning integration",
+    "Data encryption"
+  ],
+  "benefits": [
+    "24/7 automated operations",
+    "Scalable to millions of transactions",
+    "ROI in under 90 days",
+    "Predictive maintenance scheduling",
+    "Automated compliance reporting"
+  ]
+}

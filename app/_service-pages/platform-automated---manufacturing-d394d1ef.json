@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/platform-automated---manufacturing-d394d1ef",
+  "breadcrumbTitle": "Platform Automated - Manufacturing",
+  "title": "Platform Automated - Manufacturing",
+  "description": "The future of manufacturing is here with Platform Automated - Manufacturing. Powered by cutting-edge AI, this platform delivers process automation like never be",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Platform Automated - Manufacturing - Zion Tech Group",
+    "description": "The future of manufacturing is here with Platform Automated - Manufacturing. Powered by cutting-edge AI, this platform delivers process automation like never be",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/platform-automated---manufacturing-d394d1ef"
+    }
+  },
+  "features": [
+    "Comprehensive monitoring",
+    "GDPR compliance",
+    "API-first design",
+    "Mobile-responsive interface",
+    "Plugin architecture"
+  ],
+  "benefits": [
+    "Dynamic resource allocation",
+    "Real-time insights and alerts",
+    "ROI in under 90 days"
+  ]
+}

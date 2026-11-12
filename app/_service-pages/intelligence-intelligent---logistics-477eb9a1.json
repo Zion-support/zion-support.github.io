@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligence-intelligent---logistics-477eb9a1",
+  "breadcrumbTitle": "Intelligence Intelligent - Logistics",
+  "title": "Intelligence Intelligent - Logistics",
+  "description": "The future of logistics is here with Intelligence Intelligent - Logistics. Powered by cutting-edge AI, this platform delivers inventory management like never be",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligence Intelligent - Logistics - Zion Tech Group",
+    "description": "The future of logistics is here with Intelligence Intelligent - Logistics. Powered by cutting-edge AI, this platform delivers inventory management like never be",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligence-intelligent---logistics-477eb9a1"
+    }
+  },
+  "features": [
+    "SOC 2 certified",
+    "Role-based access control",
+    "Multi-region deployment",
+    "HIPAA ready",
+    "Offline capabilities"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "Real-time insights and alerts",
+    "Dynamic resource allocation"
+  ]
+}

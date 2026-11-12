@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/cognitive-agile-non-profit-decision-engine-70954c4f",
+  "breadcrumbTitle": "Cognitive Agile Non-Profit Decision Engine",
+  "title": "Cognitive Agile Non-Profit Decision Engine",
+  "description": "Cognitive decision engine that processes agile signals to drive non-profit strategy with deep learning.",
+  "basic": "$278/month",
+  "pro": "$698/month",
+  "enterprise": "$2098/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Cognitive Agile Non-Profit Decision Engine - Zion Tech Group",
+    "description": "Cognitive decision engine that processes agile signals to drive non-profit strategy with deep learning.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cognitive-agile-non-profit-decision-engine-70954c4f"
+    }
+  },
+  "features": [
+    "Cognitive reasoning",
+    "Scenario analysis",
+    "Decision trees",
+    "Recommendation engine"
+  ],
+  "benefits": [
+    "Better decision quality",
+    "Reduced risk",
+    "Faster insights",
+    "Competitive intelligence"
+  ]
+}

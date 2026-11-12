@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/next-generation-hyper-local-customer-automation-558bb88d",
+  "breadcrumbTitle": "Next-Generation Hyper-Local Customer Automation",
+  "title": "Next-Generation Hyper-Local Customer Automation",
+  "description": "Next-generation automation suite that streamlines hyper-local customer workflows with intelligent orchestration.",
+  "basic": "$218/month",
+  "pro": "$548/month",
+  "enterprise": "$1648/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Next-Generation Hyper-Local Customer Automation - Zion Tech Group",
+    "description": "Next-generation automation suite that streamlines hyper-local customer workflows with intelligent orchestration.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/next-generation-hyper-local-customer-automation-558bb88d"
+    }
+  },
+  "features": [
+    "Smart orchestration",
+    "Process automation",
+    "Event processing",
+    "Task scheduling"
+  ],
+  "benefits": [
+    "Faster execution",
+    "Reduced manual steps",
+    "Scalable processes",
+    "Error reduction"
+  ]
+}

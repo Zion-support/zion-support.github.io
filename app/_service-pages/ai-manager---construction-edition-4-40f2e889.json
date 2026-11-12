@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/ai-manager---construction-edition-4-40f2e889",
+  "breadcrumbTitle": "AI Manager - Construction Edition #4",
+  "title": "AI Manager - Construction Edition #4",
+  "description": "Next-generation construction solution: AI Manager - Construction Edition #4. Combines compliance monitoring with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Manager - Construction Edition #4 - Zion Tech Group",
+    "description": "Next-generation construction solution: AI Manager - Construction Edition #4. Combines compliance monitoring with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-manager---construction-edition-4-40f2e889"
+    }
+  },
+  "features": [
+    "Alerting system",
+    "Rollback mechanisms",
+    "API-first design",
+    "Offline capabilities",
+    "Multi-region deployment"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "Performance benchmarking",
+    "Predictive maintenance scheduling",
+    "Seamless integration with existing systems",
+    "24/7 automated operations"
+  ]
+}

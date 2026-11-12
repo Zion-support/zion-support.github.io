@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/quantum-ready-industry-specific-healthcare-analytics-dc40921d",
+  "breadcrumbTitle": "Quantum-Ready Industry-Specific Healthcare Analytics",
+  "title": "Quantum-Ready Industry-Specific Healthcare Analytics",
+  "description": "Quantum-ready analytics platform that prepares industry-specific healthcare workloads for future quantum acceleration.",
+  "basic": "$298/month",
+  "pro": "$748/month",
+  "enterprise": "$2248/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Quantum-Ready Industry-Specific Healthcare Analytics - Zion Tech Group",
+    "description": "Quantum-ready analytics platform that prepares industry-specific healthcare workloads for future quantum acceleration.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/quantum-ready-industry-specific-healthcare-analytics-dc40921d"
+    }
+  },
+  "features": [
+    "Quantum simulation",
+    "Hybrid classical-quantum",
+    "Algorithm optimization",
+    "Future-proofing"
+  ],
+  "benefits": [
+    "Quantum advantage readiness",
+    "Future-proof algorithms",
+    "Hybrid optimization",
+    "Competitive edge"
+  ]
+}

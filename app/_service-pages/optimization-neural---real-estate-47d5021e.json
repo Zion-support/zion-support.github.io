@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/optimization-neural---real-estate-47d5021e",
+  "breadcrumbTitle": "Optimization Neural - Real-Estate",
+  "title": "Optimization Neural - Real-Estate",
+  "description": "Transform your real-estate operations with our Optimization Neural - Real-Estate. This AI-driven solution automates market intelligence with unprecedented accur",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Optimization Neural - Real-Estate - Zion Tech Group",
+    "description": "Transform your real-estate operations with our Optimization Neural - Real-Estate. This AI-driven solution automates market intelligence with unprecedented accur",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/optimization-neural---real-estate-47d5021e"
+    }
+  },
+  "features": [
+    "Alerting system",
+    "Plugin architecture",
+    "Cloud-native architecture",
+    "Microservices deployment",
+    "Zero-downtime updates"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "Predictive maintenance scheduling",
+    "Seamless integration with existing systems"
+  ]
+}

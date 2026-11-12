@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-system---hospitality-edition-2-2b928df0",
+  "breadcrumbTitle": "AI System - Hospitality Edition #2",
+  "title": "AI System - Hospitality Edition #2",
+  "description": "Next-generation hospitality solution: AI System - Hospitality Edition #2. Combines compliance monitoring with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI System - Hospitality Edition #2 - Zion Tech Group",
+    "description": "Next-generation hospitality solution: AI System - Hospitality Edition #2. Combines compliance monitoring with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-system---hospitality-edition-2-2b928df0"
+    }
+  },
+  "features": [
+    "Alerting system",
+    "Rollback mechanisms",
+    "Audit trails",
+    "Comprehensive monitoring",
+    "HIPAA ready"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "Scalable to millions of transactions",
+    "Reduced human error by 95%",
+    "Cost optimization recommendations"
+  ]
+}

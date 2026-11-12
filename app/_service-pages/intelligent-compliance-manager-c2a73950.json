@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-compliance-manager-c2a73950",
+  "breadcrumbTitle": "Intelligent Compliance Manager",
+  "title": "Intelligent Compliance Manager",
+  "description": "The future of gaming is here with Intelligent Compliance Manager. Powered by cutting-edge AI, this platform delivers threat detection like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Compliance Manager - Zion Tech Group",
+    "description": "The future of gaming is here with Intelligent Compliance Manager. Powered by cutting-edge AI, this platform delivers threat detection like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-compliance-manager-c2a73950"
+    }
+  },
+  "features": [
+    "HIPAA ready",
+    "Multi-region deployment",
+    "Plugin architecture",
+    "Multi-language support"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "99.9% uptime guarantee",
+    "Predictive maintenance scheduling",
+    "Cost optimization recommendations"
+  ]
+}

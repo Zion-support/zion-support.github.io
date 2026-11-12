@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/director-intelligent---finance-da6182da",
+  "breadcrumbTitle": "Director Intelligent - Finance",
+  "title": "Director Intelligent - Finance",
+  "description": "Revolutionize finance through intelligent automation. Our Director Intelligent - Finance leverages advanced machine learning to deliver maintenance scheduling a",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Director Intelligent - Finance - Zion Tech Group",
+    "description": "Revolutionize finance through intelligent automation. Our Director Intelligent - Finance leverages advanced machine learning to deliver maintenance scheduling a",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/director-intelligent---finance-da6182da"
+    }
+  },
+  "features": [
+    "Offline capabilities",
+    "Real-time processing",
+    "Audit trails",
+    "Machine learning integration",
+    "Auto-scaling capabilities"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Performance benchmarking",
+    "24/7 automated operations",
+    "Real-time insights and alerts",
+    "Dynamic resource allocation"
+  ]
+}

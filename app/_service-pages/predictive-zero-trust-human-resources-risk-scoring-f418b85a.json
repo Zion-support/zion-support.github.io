@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/predictive-zero-trust-human-resources-risk-scoring-f418b85a",
+  "breadcrumbTitle": "Predictive Zero-Trust Human Resources Risk Scoring",
+  "title": "Predictive Zero-Trust Human Resources Risk Scoring",
+  "description": "Predictive risk scoring engine that assesses zero-trust human resources vulnerabilities with machine learning.",
+  "basic": "$278/month",
+  "pro": "$698/month",
+  "enterprise": "$2098/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Predictive Zero-Trust Human Resources Risk Scoring - Zion Tech Group",
+    "description": "Predictive risk scoring engine that assesses zero-trust human resources vulnerabilities with machine learning.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/predictive-zero-trust-human-resources-risk-scoring-f418b85a"
+    }
+  },
+  "features": [
+    "Risk assessment",
+    "Threat modeling",
+    "Compliance scoring",
+    "Mitigation planning"
+  ],
+  "benefits": [
+    "Proactive risk mitigation",
+    "Compliance assurance",
+    "Reduced exposure",
+    "Faster incident response"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-decision-generator-fe47a98d",
+  "breadcrumbTitle": "Intelligent Decision Generator",
+  "title": "Intelligent Decision Generator",
+  "description": "The future of real-estate is here with Intelligent Decision Generator. Powered by cutting-edge AI, this platform delivers risk assessment like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Decision Generator - Zion Tech Group",
+    "description": "The future of real-estate is here with Intelligent Decision Generator. Powered by cutting-edge AI, this platform delivers risk assessment like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-decision-generator-fe47a98d"
+    }
+  },
+  "features": [
+    "Performance dashboards",
+    "Comprehensive monitoring",
+    "Serverless functions",
+    "Machine learning integration",
+    "Multi-language support"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "24/7 automated operations",
+    "Scalable to millions of transactions"
+  ]
+}

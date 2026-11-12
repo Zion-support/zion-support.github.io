@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/neural-threat-intelligence-011421f7",
+  "breadcrumbTitle": "Neural Threat Intelligence",
+  "title": "Neural Threat Intelligence",
+  "description": "Next-generation agriculture solution: Neural Threat Intelligence. Combines data processing with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Neural Threat Intelligence - Zion Tech Group",
+    "description": "Next-generation agriculture solution: Neural Threat Intelligence. Combines data processing with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/neural-threat-intelligence-011421f7"
+    }
+  },
+  "features": [
+    "Open-source friendly",
+    "GDPR compliance",
+    "Serverless functions",
+    "Multi-region deployment",
+    "Cloud-native architecture"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "3x faster decision making",
+    "Predictive maintenance scheduling"
+  ]
+}

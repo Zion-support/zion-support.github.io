@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/analytics-automated---logistics-1-66220401",
+  "breadcrumbTitle": "Analytics Automated - Logistics #1",
+  "title": "Analytics Automated - Logistics #1",
+  "description": "Unlock unprecedented growth with Analytics Automated - Logistics #1. This autonomous system provides customer insights with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Analytics Automated - Logistics #1 - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Analytics Automated - Logistics #1. This autonomous system provides customer insights with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/analytics-automated---logistics-1-66220401"
+    }
+  },
+  "features": [
+    "Plugin architecture",
+    "Multi-region deployment",
+    "Role-based access control",
+    "Alerting system"
+  ],
+  "benefits": [
+    "50% reduction in operational costs",
+    "Self-healing infrastructure",
+    "Predictive maintenance scheduling"
+  ]
+}

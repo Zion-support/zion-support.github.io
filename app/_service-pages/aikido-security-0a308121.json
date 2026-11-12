@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/aikido-security-0a308121",
+  "breadcrumbTitle": "Aikido Security",
+  "title": "Aikido Security",
+  "description": "Aikido Security BV is a cybersecurity company based in Ghent, Belgium and founded in 2022. The company develops application security software.",
+  "basic": "$N/A/month",
+  "pro": "$N/A/month",
+  "enterprise": "$N/A/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Aikido Security - Zion Tech Group",
+    "description": "Aikido Security BV is a cybersecurity company based in Ghent, Belgium and founded in 2022. The company develops application security software.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/aikido-security-0a308121"
+    }
+  },
+  "features": [
+    "AI-driven automation",
+    "Cloud-native deployment",
+    "API-first architecture",
+    "Enterprise-grade security",
+    "Scalable infrastructure"
+  ],
+  "benefits": [
+    "Improved operational efficiency",
+    "Reduced manual processes",
+    "Data-driven decision making",
+    "Faster time-to value",
+    "Scalable performance"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/intelligent-system-for-insurance-0140ec20",
+  "breadcrumbTitle": "Intelligent System for Insurance",
+  "title": "Intelligent System for Insurance",
+  "description": "Next-generation insurance solution: Intelligent System for Insurance. Combines performance monitoring with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent System for Insurance - Zion Tech Group",
+    "description": "Next-generation insurance solution: Intelligent System for Insurance. Combines performance monitoring with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-system-for-insurance-0140ec20"
+    }
+  },
+  "features": [
+    "Mobile-responsive interface",
+    "SOC 2 certified",
+    "Audit trails",
+    "Multi-language support",
+    "Offline capabilities"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "3x faster decision making",
+    "Dynamic resource allocation",
+    "24/7 automated operations",
+    "Zero manual intervention required"
+  ]
+}

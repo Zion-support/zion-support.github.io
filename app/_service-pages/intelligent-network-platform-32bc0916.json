@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligent-network-platform-32bc0916",
+  "breadcrumbTitle": "Intelligent Network Platform",
+  "title": "Intelligent Network Platform",
+  "description": "Revolutionize transportation through intelligent automation. Our Intelligent Network Platform leverages advanced machine learning to deliver code optimization a",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Network Platform - Zion Tech Group",
+    "description": "Revolutionize transportation through intelligent automation. Our Intelligent Network Platform leverages advanced machine learning to deliver code optimization a",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-network-platform-32bc0916"
+    }
+  },
+  "features": [
+    "Auto-scaling capabilities",
+    "Real-time processing",
+    "HIPAA ready",
+    "Audit trails",
+    "Cloud-native architecture"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "Zero manual intervention required",
+    "Scalable to millions of transactions",
+    "Predictive maintenance scheduling"
+  ]
+}

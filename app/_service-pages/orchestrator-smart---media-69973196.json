@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/orchestrator-smart---media-69973196",
+  "breadcrumbTitle": "Orchestrator Smart - Media",
+  "title": "Orchestrator Smart - Media",
+  "description": "The future of media is here with Orchestrator Smart - Media. Powered by cutting-edge AI, this platform delivers maintenance scheduling like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Orchestrator Smart - Media - Zion Tech Group",
+    "description": "The future of media is here with Orchestrator Smart - Media. Powered by cutting-edge AI, this platform delivers maintenance scheduling like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/orchestrator-smart---media-69973196"
+    }
+  },
+  "features": [
+    "Mobile-responsive interface",
+    "Multi-language support",
+    "Offline capabilities",
+    "Machine learning integration",
+    "Zero-downtime updates"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Zero manual intervention required",
+    "Intelligent load balancing",
+    "Real-time insights and alerts"
+  ]
+}

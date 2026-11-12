@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/automated-analytics-for-healthcare-018319b5",
+  "breadcrumbTitle": "Automated Analytics for Healthcare",
+  "title": "Automated Analytics for Healthcare",
+  "description": "Next-generation healthcare solution: Automated Analytics for Healthcare. Combines sales forecasting with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated Analytics for Healthcare - Zion Tech Group",
+    "description": "Next-generation healthcare solution: Automated Analytics for Healthcare. Combines sales forecasting with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-analytics-for-healthcare-018319b5"
+    }
+  },
+  "features": [
+    "Data encryption",
+    "Open-source friendly",
+    "Multi-region deployment",
+    "Alerting system",
+    "Offline capabilities"
+  ],
+  "benefits": [
+    "Cost optimization recommendations",
+    "Zero manual intervention required",
+    "Performance benchmarking"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/automated-coordinator-real-estate-ae2da916",
+  "breadcrumbTitle": "Automated coordinator-real-estate",
+  "title": "Automated coordinator-real-estate",
+  "description": "Revolutionize real-estate through intelligent automation. Our Automated coordinator-real-estate leverages advanced machine learning to deliver process automatio",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated coordinator-real-estate - Zion Tech Group",
+    "description": "Revolutionize real-estate through intelligent automation. Our Automated coordinator-real-estate leverages advanced machine learning to deliver process automatio",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-coordinator-real-estate-ae2da916"
+    }
+  },
+  "features": [
+    "Plugin architecture",
+    "GDPR compliance",
+    "Machine learning integration",
+    "Microservices deployment",
+    "Offline capabilities"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "Cost optimization recommendations",
+    "99.9% uptime guarantee"
+  ]
+}

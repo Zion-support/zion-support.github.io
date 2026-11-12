@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/ai-services-manufacturing-fc2f0e28",
+  "breadcrumbTitle": "AI Readiness & Deployment for Manufacturing",
+  "title": "AI Readiness & Deployment for Manufacturing",
+  "description": "AI readiness assessment and deployment support for Manufacturing. Identify high-ROI use cases, build prototypes, and scale responsibly.",
+  "basic": "$299/month",
+  "pro": "$799/month",
+  "enterprise": "$2499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Readiness & Deployment for Manufacturing - Zion Tech Group",
+    "description": "AI readiness assessment and deployment support for Manufacturing. Identify high-ROI use cases, build prototypes, and scale responsibly.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-services-manufacturing-fc2f0e28"
+    }
+  },
+  "features": [
+    "AI readiness assessment",
+    "Use case prioritization",
+    "Proof-of-concept development",
+    "Data readiness review",
+    "Governance and ethics review"
+  ],
+  "benefits": [
+    "Faster AI adoption",
+    "Reduced project risk",
+    "Clear governance model",
+    "Better data quality",
+    "Measurable business outcomes"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/adaptive-analytics-for-logistics-075a1b82",
+  "breadcrumbTitle": "Adaptive Analytics for Logistics",
+  "title": "Adaptive Analytics for Logistics",
+  "description": "Transform your logistics operations with our Adaptive Analytics for Logistics. This AI-driven solution automates maintenance scheduling with unprecedented accur",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Adaptive Analytics for Logistics - Zion Tech Group",
+    "description": "Transform your logistics operations with our Adaptive Analytics for Logistics. This AI-driven solution automates maintenance scheduling with unprecedented accur",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/adaptive-analytics-for-logistics-075a1b82"
+    }
+  },
+  "features": [
+    "SOC 2 certified",
+    "API-first design",
+    "Microservices deployment",
+    "Rollback mechanisms"
+  ],
+  "benefits": [
+    "Intelligent load balancing",
+    "24/7 automated operations",
+    "ROI in under 90 days",
+    "Enterprise-grade security"
+  ]
+}

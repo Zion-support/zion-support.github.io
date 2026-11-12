@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/adaptive-intelligence-tech-efa5a279",
+  "breadcrumbTitle": "Adaptive intelligence-tech",
+  "title": "Adaptive intelligence-tech",
+  "description": "Unlock unprecedented growth with Adaptive intelligence-tech. This autonomous system provides network optimization with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Adaptive intelligence-tech - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Adaptive intelligence-tech. This autonomous system provides network optimization with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/adaptive-intelligence-tech-efa5a279"
+    }
+  },
+  "features": [
+    "Role-based access control",
+    "Performance dashboards",
+    "HIPAA ready",
+    "Microservices deployment"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "Enterprise-grade security",
+    "24/7 automated operations",
+    "Automated compliance reporting"
+  ]
+}

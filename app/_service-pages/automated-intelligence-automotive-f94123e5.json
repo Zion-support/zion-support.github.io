@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/automated-intelligence-automotive-f94123e5",
+  "breadcrumbTitle": "Automated intelligence-automotive",
+  "title": "Automated intelligence-automotive",
+  "description": "Revolutionize automotive through intelligent automation. Our Automated intelligence-automotive leverages advanced machine learning to deliver maintenance schedu",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated intelligence-automotive - Zion Tech Group",
+    "description": "Revolutionize automotive through intelligent automation. Our Automated intelligence-automotive leverages advanced machine learning to deliver maintenance schedu",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-intelligence-automotive-f94123e5"
+    }
+  },
+  "features": [
+    "Role-based access control",
+    "Custom integrations",
+    "Edge computing support",
+    "Auto-scaling capabilities",
+    "Open-source friendly"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "Real-time insights and alerts",
+    "Automated compliance reporting",
+    "Self-healing infrastructure"
+  ]
+}

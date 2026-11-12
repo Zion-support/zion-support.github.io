@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-resilient-travel-analytics-1fa2f952",
+  "breadcrumbTitle": "AI-Powered Resilient Travel Analytics",
+  "title": "AI-Powered Resilient Travel Analytics",
+  "description": "AI-driven analytics platform that delivers resilient insights into travel operations, providing real-time monitoring, predictive modeling, and automated reporti",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Resilient Travel Analytics - Zion Tech Group",
+    "description": "AI-driven analytics platform that delivers resilient insights into travel operations, providing real-time monitoring, predictive modeling, and automated reporti",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-resilient-travel-analytics-1fa2f952"
+    }
+  },
+  "features": [
+    "Real-time monitoring",
+    "Predictive modeling",
+    "Automated reporting",
+    "Custom dashboards"
+  ],
+  "benefits": [
+    "Data-driven decision making",
+    "Improved operational efficiency",
+    "Proactive issue detection",
+    "Enhanced KPI tracking"
+  ]
+}

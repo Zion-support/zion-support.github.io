@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/ai-insights---legal-edition-cfa4bdc5",
+  "breadcrumbTitle": "AI Insights - Legal Edition",
+  "title": "AI Insights - Legal Edition",
+  "description": "Next-generation legal solution: AI Insights - Legal Edition. Combines quality control with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Insights - Legal Edition - Zion Tech Group",
+    "description": "Next-generation legal solution: AI Insights - Legal Edition. Combines quality control with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-insights---legal-edition-cfa4bdc5"
+    }
+  },
+  "features": [
+    "Audit trails",
+    "Zero-downtime updates",
+    "Machine learning integration",
+    "Real-time processing",
+    "SOC 2 certified"
+  ],
+  "benefits": [
+    "Dynamic resource allocation",
+    "Seamless integration with existing systems",
+    "99.9% uptime guarantee",
+    "Intelligent load balancing",
+    "3x faster decision making"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/automated-analyzer-for-insurance-4c3caaf5",
+  "breadcrumbTitle": "Automated Analyzer for Insurance",
+  "title": "Automated Analyzer for Insurance",
+  "description": "Next-generation insurance solution: Automated Analyzer for Insurance. Combines sales forecasting with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated Analyzer for Insurance - Zion Tech Group",
+    "description": "Next-generation insurance solution: Automated Analyzer for Insurance. Combines sales forecasting with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-analyzer-for-insurance-4c3caaf5"
+    }
+  },
+  "features": [
+    "HIPAA ready",
+    "Audit trails",
+    "Comprehensive monitoring",
+    "Plugin architecture",
+    "Auto-scaling capabilities"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "Seamless integration with existing systems",
+    "Dynamic resource allocation",
+    "3x faster decision making",
+    "99.9% uptime guarantee"
+  ]
+}

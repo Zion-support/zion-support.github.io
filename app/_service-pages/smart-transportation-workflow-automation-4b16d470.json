@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/smart-transportation-workflow-automation-4b16d470",
+  "breadcrumbTitle": "Smart Transportation Workflow Automation",
+  "title": "Smart Transportation Workflow Automation",
+  "description": "Intelligent workflow automation platform that streamlines transportation processes and eliminates manual tasks.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Smart Transportation Workflow Automation - Zion Tech Group",
+    "description": "Intelligent workflow automation platform that streamlines transportation processes and eliminates manual tasks.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-transportation-workflow-automation-4b16d470"
+    }
+  },
+  "features": [
+    "Process mapping",
+    "Task automation",
+    "Workflow optimization",
+    "Exception handling"
+  ],
+  "benefits": [
+    "Faster operations",
+    "Reduced errors",
+    "Improved productivity",
+    "Better resource utilization"
+  ]
+}

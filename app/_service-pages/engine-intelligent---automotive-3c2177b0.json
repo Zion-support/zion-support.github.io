@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/engine-intelligent---automotive-3c2177b0",
+  "breadcrumbTitle": "Engine Intelligent - Automotive",
+  "title": "Engine Intelligent - Automotive",
+  "description": "Revolutionize automotive through intelligent automation. Our Engine Intelligent - Automotive leverages advanced machine learning to deliver data processing at s",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Engine Intelligent - Automotive - Zion Tech Group",
+    "description": "Revolutionize automotive through intelligent automation. Our Engine Intelligent - Automotive leverages advanced machine learning to deliver data processing at s",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/engine-intelligent---automotive-3c2177b0"
+    }
+  },
+  "features": [
+    "Rollback mechanisms",
+    "Comprehensive monitoring",
+    "Offline capabilities",
+    "Serverless functions"
+  ],
+  "benefits": [
+    "24/7 automated operations",
+    "ROI in under 90 days",
+    "Automated compliance reporting"
+  ]
+}

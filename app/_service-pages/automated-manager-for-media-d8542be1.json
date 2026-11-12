@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/automated-manager-for-media-d8542be1",
+  "breadcrumbTitle": "Automated Manager for Media",
+  "title": "Automated Manager for Media",
+  "description": "Revolutionize media through intelligent automation. Our Automated Manager for Media leverages advanced machine learning to deliver energy management at scale.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated Manager for Media - Zion Tech Group",
+    "description": "Revolutionize media through intelligent automation. Our Automated Manager for Media leverages advanced machine learning to deliver energy management at scale.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-manager-for-media-d8542be1"
+    }
+  },
+  "features": [
+    "SOC 2 certified",
+    "Microservices deployment",
+    "API-first design",
+    "Offline capabilities"
+  ],
+  "benefits": [
+    "Cost optimization recommendations",
+    "ROI in under 90 days",
+    "Seamless integration with existing systems"
+  ]
+}

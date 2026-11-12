@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/system-autonomous---logistics-5d556d77",
+  "breadcrumbTitle": "System Autonomous - Logistics",
+  "title": "System Autonomous - Logistics",
+  "description": "Next-generation logistics solution: System Autonomous - Logistics. Combines data processing with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "System Autonomous - Logistics - Zion Tech Group",
+    "description": "Next-generation logistics solution: System Autonomous - Logistics. Combines data processing with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/system-autonomous---logistics-5d556d77"
+    }
+  },
+  "features": [
+    "Plugin architecture",
+    "GDPR compliance",
+    "HIPAA ready",
+    "API-first design",
+    "Cloud-native architecture"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "50% reduction in operational costs",
+    "Predictive maintenance scheduling",
+    "Cost optimization recommendations"
+  ]
+}

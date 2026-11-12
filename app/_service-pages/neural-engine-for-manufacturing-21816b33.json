@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/neural-engine-for-manufacturing-21816b33",
+  "breadcrumbTitle": "Neural Engine for Manufacturing",
+  "title": "Neural Engine for Manufacturing",
+  "description": "Revolutionize manufacturing through intelligent automation. Our Neural Engine for Manufacturing leverages advanced machine learning to deliver resource optimiza",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Neural Engine for Manufacturing - Zion Tech Group",
+    "description": "Revolutionize manufacturing through intelligent automation. Our Neural Engine for Manufacturing leverages advanced machine learning to deliver resource optimiza",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/neural-engine-for-manufacturing-21816b33"
+    }
+  },
+  "features": [
+    "Data encryption",
+    "Mobile-responsive interface",
+    "Comprehensive monitoring",
+    "Audit trails",
+    "SOC 2 certified"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "Intelligent load balancing",
+    "Scalable to millions of transactions"
+  ]
+}

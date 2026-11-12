@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/analyzer-automated---legal-6121da72",
+  "breadcrumbTitle": "Analyzer Automated - Legal",
+  "title": "Analyzer Automated - Legal",
+  "description": "Revolutionize legal through intelligent automation. Our Analyzer Automated - Legal leverages advanced machine learning to deliver decision support at scale.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Analyzer Automated - Legal - Zion Tech Group",
+    "description": "Revolutionize legal through intelligent automation. Our Analyzer Automated - Legal leverages advanced machine learning to deliver decision support at scale.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/analyzer-automated---legal-6121da72"
+    }
+  },
+  "features": [
+    "Custom integrations",
+    "API-first design",
+    "Serverless functions",
+    "HIPAA ready"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Reduced human error by 95%",
+    "Real-time insights and alerts"
+  ]
+}

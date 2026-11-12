@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/ai-insights---retail-edition-5-72ab9384",
+  "breadcrumbTitle": "AI Insights - Retail Edition #5",
+  "title": "AI Insights - Retail Edition #5",
+  "description": "Transform your retail operations with our AI Insights - Retail Edition #5. This AI-driven solution automates decision support with unprecedented accuracy and ef",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Insights - Retail Edition #5 - Zion Tech Group",
+    "description": "Transform your retail operations with our AI Insights - Retail Edition #5. This AI-driven solution automates decision support with unprecedented accuracy and ef",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-insights---retail-edition-5-72ab9384"
+    }
+  },
+  "features": [
+    "Comprehensive monitoring",
+    "Performance dashboards",
+    "Microservices deployment",
+    "Audit trails"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "ROI in under 90 days",
+    "3x faster decision making"
+  ]
+}

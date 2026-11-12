@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/self-optimizing-system-insurance-e8d66a5c",
+  "breadcrumbTitle": "Self-Optimizing system-insurance",
+  "title": "Self-Optimizing system-insurance",
+  "description": "Revolutionize insurance through intelligent automation. Our Self-Optimizing system-insurance leverages advanced machine learning to deliver image recognition at",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Self-Optimizing system-insurance - Zion Tech Group",
+    "description": "Revolutionize insurance through intelligent automation. Our Self-Optimizing system-insurance leverages advanced machine learning to deliver image recognition at",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/self-optimizing-system-insurance-e8d66a5c"
+    }
+  },
+  "features": [
+    "SOC 2 certified",
+    "Open-source friendly",
+    "Container orchestration",
+    "Comprehensive monitoring",
+    "Zero-downtime updates"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Enterprise-grade security",
+    "Performance benchmarking",
+    "Zero manual intervention required"
+  ]
+}

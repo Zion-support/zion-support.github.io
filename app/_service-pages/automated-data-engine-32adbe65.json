@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/automated-data-engine-32adbe65",
+  "breadcrumbTitle": "Automated Data Engine",
+  "title": "Automated Data Engine",
+  "description": "Revolutionize transportation through intelligent automation. Our Automated Data Engine leverages advanced machine learning to deliver user experience at scale.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated Data Engine - Zion Tech Group",
+    "description": "Revolutionize transportation through intelligent automation. Our Automated Data Engine leverages advanced machine learning to deliver user experience at scale.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-data-engine-32adbe65"
+    }
+  },
+  "features": [
+    "Offline capabilities",
+    "Alerting system",
+    "Open-source friendly",
+    "Multi-region deployment"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "Seamless integration with existing systems",
+    "ROI in under 90 days"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-manager---retail-edition-6-ef660aef",
+  "breadcrumbTitle": "AI Manager - Retail Edition #6",
+  "title": "AI Manager - Retail Edition #6",
+  "description": "Revolutionize retail through intelligent automation. Our AI Manager - Retail Edition #6 leverages advanced machine learning to deliver predictive analytics at s",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Manager - Retail Edition #6 - Zion Tech Group",
+    "description": "Revolutionize retail through intelligent automation. Our AI Manager - Retail Edition #6 leverages advanced machine learning to deliver predictive analytics at s",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-manager---retail-edition-6-ef660aef"
+    }
+  },
+  "features": [
+    "Comprehensive monitoring",
+    "Auto-scaling capabilities",
+    "Cloud-native architecture",
+    "Container orchestration"
+  ],
+  "benefits": [
+    "Performance benchmarking",
+    "99.9% uptime guarantee",
+    "50% reduction in operational costs",
+    "Enterprise-grade security",
+    "3x faster decision making"
+  ]
+}

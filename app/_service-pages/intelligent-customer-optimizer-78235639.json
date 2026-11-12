@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/intelligent-customer-optimizer-78235639",
+  "breadcrumbTitle": "Intelligent Customer Optimizer",
+  "title": "Intelligent Customer Optimizer",
+  "description": "Transform your Hospitality operations with our Intelligent Customer Optimizer. This AI-driven solution automates risk assessment with unprecedented accuracy and",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Customer Optimizer - Zion Tech Group",
+    "description": "Transform your Hospitality operations with our Intelligent Customer Optimizer. This AI-driven solution automates risk assessment with unprecedented accuracy and",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-customer-optimizer-78235639"
+    }
+  },
+  "features": [
+    "Data governance with policy enforcement",
+    "Energy optimization with consumption tracking",
+    "Scenario planning with Monte Carlo simulations",
+    "Multi-region deployment with automatic failover",
+    "HIPAA ready with healthcare data protection"
+  ],
+  "benefits": [
+    "Improved customer satisfaction with faster response times",
+    "Better resource utilization with auto-scaling",
+    "Reduced support tickets with self-service options",
+    "Better supply chain visibility with tracking",
+    "Improved conversion rates with personalization"
+  ]
+}

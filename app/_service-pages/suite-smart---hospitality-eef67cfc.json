@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/suite-smart---hospitality-eef67cfc",
+  "breadcrumbTitle": "Suite Smart - Hospitality",
+  "title": "Suite Smart - Hospitality",
+  "description": "Next-generation hospitality solution: Suite Smart - Hospitality. Combines process automation with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Suite Smart - Hospitality - Zion Tech Group",
+    "description": "Next-generation hospitality solution: Suite Smart - Hospitality. Combines process automation with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/suite-smart---hospitality-eef67cfc"
+    }
+  },
+  "features": [
+    "Serverless functions",
+    "Mobile-responsive interface",
+    "SOC 2 certified",
+    "Audit trails"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Intelligent load balancing",
+    "Seamless integration with existing systems",
+    "Reduced human error by 95%"
+  ]
+}

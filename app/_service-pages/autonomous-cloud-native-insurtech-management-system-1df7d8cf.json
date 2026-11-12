@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/autonomous-cloud-native-insurtech-management-system-1df7d8cf",
+  "breadcrumbTitle": "Autonomous Cloud-Native Insurtech Management System",
+  "title": "Autonomous Cloud-Native Insurtech Management System",
+  "description": "Autonomous management system that self-optimizes cloud-native insurtech processes with minimal human intervention.",
+  "basic": "$258/month",
+  "pro": "$648/month",
+  "enterprise": "$1948/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Autonomous Cloud-Native Insurtech Management System - Zion Tech Group",
+    "description": "Autonomous management system that self-optimizes cloud-native insurtech processes with minimal human intervention.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-cloud-native-insurtech-management-system-1df7d8cf"
+    }
+  },
+  "features": [
+    "Autonomous optimization",
+    "Self-healing systems",
+    "Resource allocation",
+    "Performance tuning"
+  ],
+  "benefits": [
+    "Zero-touch operations",
+    "Reduced overhead",
+    "Self-optimizing systems",
+    "Lower operational costs"
+  ]
+}

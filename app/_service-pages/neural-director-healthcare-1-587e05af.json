@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/neural-director-healthcare-1-587e05af",
+  "breadcrumbTitle": "Neural director-healthcare #1",
+  "title": "Neural director-healthcare #1",
+  "description": "Transform your healthcare operations with our Neural director-healthcare #1. This AI-driven solution automates compliance monitoring with unprecedented accuracy",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Neural director-healthcare #1 - Zion Tech Group",
+    "description": "Transform your healthcare operations with our Neural director-healthcare #1. This AI-driven solution automates compliance monitoring with unprecedented accuracy",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/neural-director-healthcare-1-587e05af"
+    }
+  },
+  "features": [
+    "Multi-region deployment",
+    "GDPR compliance",
+    "Container orchestration",
+    "Microservices deployment",
+    "Open-source friendly"
+  ],
+  "benefits": [
+    "24/7 automated operations",
+    "Real-time insights and alerts",
+    "Automated compliance reporting"
+  ]
+}

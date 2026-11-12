@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-financial-intelligence-1d55439a",
+  "breadcrumbTitle": "Intelligent Financial Intelligence",
+  "title": "Intelligent Financial Intelligence",
+  "description": "The future of agriculture is here with Intelligent Financial Intelligence. Powered by cutting-edge AI, this platform delivers document processing like never bef",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Financial Intelligence - Zion Tech Group",
+    "description": "The future of agriculture is here with Intelligent Financial Intelligence. Powered by cutting-edge AI, this platform delivers document processing like never bef",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-financial-intelligence-1d55439a"
+    }
+  },
+  "features": [
+    "SOC 2 certified",
+    "Serverless functions",
+    "Open-source friendly",
+    "Alerting system"
+  ],
+  "benefits": [
+    "Cost optimization recommendations",
+    "Enterprise-grade security",
+    "Intelligent load balancing",
+    "24/7 automated operations"
+  ]
+}

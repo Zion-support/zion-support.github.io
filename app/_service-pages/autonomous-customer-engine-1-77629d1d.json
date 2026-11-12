@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/autonomous-customer-engine-1-77629d1d",
+  "breadcrumbTitle": "Autonomous Customer Engine #1",
+  "title": "Autonomous Customer Engine #1",
+  "description": "The future of real-estate is here with Autonomous Customer Engine #1. Powered by cutting-edge AI, this platform delivers security monitoring like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous Customer Engine #1 - Zion Tech Group",
+    "description": "The future of real-estate is here with Autonomous Customer Engine #1. Powered by cutting-edge AI, this platform delivers security monitoring like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-customer-engine-1-77629d1d"
+    }
+  },
+  "features": [
+    "Multi-region deployment",
+    "HIPAA ready",
+    "Auto-scaling capabilities",
+    "Plugin architecture",
+    "Open-source friendly"
+  ],
+  "benefits": [
+    "Automated compliance reporting",
+    "Real-time insights and alerts",
+    "Dynamic resource allocation",
+    "3x faster decision making"
+  ]
+}

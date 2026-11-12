@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/ai-orchestrator---automotive-edition-2-fe9171f9",
+  "breadcrumbTitle": "AI Orchestrator - Automotive Edition #2",
+  "title": "AI Orchestrator - Automotive Edition #2",
+  "description": "Next-generation automotive solution: AI Orchestrator - Automotive Edition #2. Combines security monitoring with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Orchestrator - Automotive Edition #2 - Zion Tech Group",
+    "description": "Next-generation automotive solution: AI Orchestrator - Automotive Edition #2. Combines security monitoring with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-orchestrator---automotive-edition-2-fe9171f9"
+    }
+  },
+  "features": [
+    "Container orchestration",
+    "Role-based access control",
+    "Plugin architecture",
+    "Cloud-native architecture"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "24/7 automated operations",
+    "Performance benchmarking"
+  ]
+}

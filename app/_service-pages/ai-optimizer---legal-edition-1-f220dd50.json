@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-optimizer---legal-edition-1-f220dd50",
+  "breadcrumbTitle": "AI Optimizer - Legal Edition #1",
+  "title": "AI Optimizer - Legal Edition #1",
+  "description": "The future of legal is here with AI Optimizer - Legal Edition #1. Powered by cutting-edge AI, this platform delivers decision support like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Optimizer - Legal Edition #1 - Zion Tech Group",
+    "description": "The future of legal is here with AI Optimizer - Legal Edition #1. Powered by cutting-edge AI, this platform delivers decision support like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-optimizer---legal-edition-1-f220dd50"
+    }
+  },
+  "features": [
+    "Alerting system",
+    "Zero-downtime updates",
+    "Role-based access control",
+    "SOC 2 certified",
+    "Rollback mechanisms"
+  ],
+  "benefits": [
+    "24/7 automated operations",
+    "Scalable to millions of transactions",
+    "Dynamic resource allocation",
+    "50% reduction in operational costs"
+  ]
+}

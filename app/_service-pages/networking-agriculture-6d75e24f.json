@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/networking-agriculture-6d75e24f",
+  "breadcrumbTitle": "Network & Connectivity for Agriculture",
+  "title": "Network & Connectivity for Agriculture",
+  "description": "Network design, optimization, and support for Agriculture. Reliable connectivity, secure access, and performance monitoring across sites.",
+  "basic": "$299/month",
+  "pro": "$799/month",
+  "enterprise": "$2499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Network & Connectivity for Agriculture - Zion Tech Group",
+    "description": "Network design, optimization, and support for Agriculture. Reliable connectivity, secure access, and performance monitoring across sites.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/networking-agriculture-6d75e24f"
+    }
+  },
+  "features": [
+    "Network design and topology",
+    "SD-WAN and MPLS options",
+    "VPN and zero-trust access",
+    "Wi-Fi optimization",
+    "Performance monitoring"
+  ],
+  "benefits": [
+    "Improved uptime and throughput",
+    "Secure remote access",
+    "Better application performance",
+    "Scalable connectivity",
+    "Lower bandwidth costs"
+  ]
+}

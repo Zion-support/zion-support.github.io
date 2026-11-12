@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/platform-automated---manufacturing-1-c9231546",
+  "breadcrumbTitle": "Platform Automated - Manufacturing #1",
+  "title": "Platform Automated - Manufacturing #1",
+  "description": "Unlock unprecedented growth with Platform Automated - Manufacturing #1. This autonomous system provides energy management with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Platform Automated - Manufacturing #1 - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Platform Automated - Manufacturing #1. This autonomous system provides energy management with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/platform-automated---manufacturing-1-c9231546"
+    }
+  },
+  "features": [
+    "Open-source friendly",
+    "Performance dashboards",
+    "Alerting system",
+    "Plugin architecture",
+    "Rollback mechanisms"
+  ],
+  "benefits": [
+    "Performance benchmarking",
+    "Predictive maintenance scheduling",
+    "ROI in under 90 days",
+    "Intelligent load balancing",
+    "50% reduction in operational costs"
+  ]
+}

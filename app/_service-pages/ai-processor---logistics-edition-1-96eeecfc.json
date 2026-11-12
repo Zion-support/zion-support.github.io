@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-processor---logistics-edition-1-96eeecfc",
+  "breadcrumbTitle": "AI Processor - Logistics Edition #1",
+  "title": "AI Processor - Logistics Edition #1",
+  "description": "Revolutionize logistics through intelligent automation. Our AI Processor - Logistics Edition #1 leverages advanced machine learning to deliver document processi",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Processor - Logistics Edition #1 - Zion Tech Group",
+    "description": "Revolutionize logistics through intelligent automation. Our AI Processor - Logistics Edition #1 leverages advanced machine learning to deliver document processi",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-processor---logistics-edition-1-96eeecfc"
+    }
+  },
+  "features": [
+    "Mobile-responsive interface",
+    "Serverless functions",
+    "Custom integrations",
+    "Container orchestration"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Performance benchmarking",
+    "Enterprise-grade security",
+    "3x faster decision making"
+  ]
+}

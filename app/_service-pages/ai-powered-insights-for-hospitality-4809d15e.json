@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/ai-powered-insights-for-hospitality-4809d15e",
+  "breadcrumbTitle": "AI-Powered Insights for Hospitality",
+  "title": "AI-Powered Insights for Hospitality",
+  "description": "Next-generation hospitality solution: AI-Powered Insights for Hospitality. Combines risk assessment with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Insights for Hospitality - Zion Tech Group",
+    "description": "Next-generation hospitality solution: AI-Powered Insights for Hospitality. Combines risk assessment with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-insights-for-hospitality-4809d15e"
+    }
+  },
+  "features": [
+    "Cloud-native architecture",
+    "Mobile-responsive interface",
+    "Multi-region deployment",
+    "Serverless functions",
+    "Comprehensive monitoring"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "Cost optimization recommendations",
+    "Reduced human error by 95%",
+    "50% reduction in operational costs",
+    "Zero manual intervention required"
+  ]
+}

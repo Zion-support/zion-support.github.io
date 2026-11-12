@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/autonomous-document-platform-20edfec5",
+  "breadcrumbTitle": "Autonomous Document Platform",
+  "title": "Autonomous Document Platform",
+  "description": "Revolutionize manufacturing through intelligent automation. Our Autonomous Document Platform leverages advanced machine learning to deliver resource optimizatio",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous Document Platform - Zion Tech Group",
+    "description": "Revolutionize manufacturing through intelligent automation. Our Autonomous Document Platform leverages advanced machine learning to deliver resource optimizatio",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-document-platform-20edfec5"
+    }
+  },
+  "features": [
+    "HIPAA ready",
+    "Edge computing support",
+    "Machine learning integration",
+    "Role-based access control",
+    "Performance dashboards"
+  ],
+  "benefits": [
+    "50% reduction in operational costs",
+    "Real-time insights and alerts",
+    "3x faster decision making"
+  ]
+}

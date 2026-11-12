@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/cognitive-sales-manager-04f0f524",
+  "breadcrumbTitle": "Cognitive Sales Manager",
+  "title": "Cognitive Sales Manager",
+  "description": "Revolutionize legal through intelligent automation. Our Cognitive Sales Manager leverages advanced machine learning to deliver market intelligence at scale.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Cognitive Sales Manager - Zion Tech Group",
+    "description": "Revolutionize legal through intelligent automation. Our Cognitive Sales Manager leverages advanced machine learning to deliver market intelligence at scale.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cognitive-sales-manager-04f0f524"
+    }
+  },
+  "features": [
+    "Microservices deployment",
+    "Custom integrations",
+    "Container orchestration",
+    "Audit trails",
+    "Offline capabilities"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "50% reduction in operational costs",
+    "Dynamic resource allocation"
+  ]
+}

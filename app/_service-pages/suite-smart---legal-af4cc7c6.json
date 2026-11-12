@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/suite-smart---legal-af4cc7c6",
+  "breadcrumbTitle": "Suite Smart - Legal",
+  "title": "Suite Smart - Legal",
+  "description": "Transform your legal operations with our Suite Smart - Legal. This AI-driven solution automates image recognition with unprecedented accuracy and efficiency.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Suite Smart - Legal - Zion Tech Group",
+    "description": "Transform your legal operations with our Suite Smart - Legal. This AI-driven solution automates image recognition with unprecedented accuracy and efficiency.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/suite-smart---legal-af4cc7c6"
+    }
+  },
+  "features": [
+    "Auto-scaling capabilities",
+    "Zero-downtime updates",
+    "Plugin architecture",
+    "Machine learning integration",
+    "API-first design"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "Dynamic resource allocation",
+    "99.9% uptime guarantee",
+    "Real-time insights and alerts"
+  ]
+}

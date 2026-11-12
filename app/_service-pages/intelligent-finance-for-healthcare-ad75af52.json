@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligent-finance-for-healthcare-ad75af52",
+  "breadcrumbTitle": "Intelligent Finance for Healthcare",
+  "title": "Intelligent Finance for Healthcare",
+  "description": "Transform your Healthcare operations with our Intelligent Finance for Healthcare. This AI-driven solution automates data processing with unprecedented accuracy ",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Finance for Healthcare - Zion Tech Group",
+    "description": "Transform your Healthcare operations with our Intelligent Finance for Healthcare. This AI-driven solution automates data processing with unprecedented accuracy ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-finance-for-healthcare-ad75af52"
+    }
+  },
+  "features": [
+    "HIPAA ready with healthcare data protection",
+    "Code optimization with performance profiling",
+    "Role-based access control with SSO integration",
+    "Zero-downtime updates with blue-green deployment",
+    "Machine learning integration with automatic model training"
+  ],
+  "benefits": [
+    "ROI achieved in under 90 days with cost savings",
+    "Better compliance with automated audit trails",
+    "3x faster decision making with real-time insights",
+    "Enhanced security posture with continuous monitoring"
+  ]
+}

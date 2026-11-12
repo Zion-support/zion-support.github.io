@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/engine-adaptive---gaming-49d4b3c3",
+  "breadcrumbTitle": "Engine Adaptive - Gaming",
+  "title": "Engine Adaptive - Gaming",
+  "description": "The future of gaming is here with Engine Adaptive - Gaming. Powered by cutting-edge AI, this platform delivers energy management like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Engine Adaptive - Gaming - Zion Tech Group",
+    "description": "The future of gaming is here with Engine Adaptive - Gaming. Powered by cutting-edge AI, this platform delivers energy management like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/engine-adaptive---gaming-49d4b3c3"
+    }
+  },
+  "features": [
+    "Rollback mechanisms",
+    "Open-source friendly",
+    "Alerting system",
+    "Machine learning integration",
+    "API-first design"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "Real-time insights and alerts",
+    "Performance benchmarking",
+    "Zero manual intervention required",
+    "99.9% uptime guarantee"
+  ]
+}

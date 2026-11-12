@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/adaptive-director-for-insurance-1-e6d8780a",
+  "breadcrumbTitle": "Adaptive Director for Insurance #1",
+  "title": "Adaptive Director for Insurance #1",
+  "description": "Next-generation insurance solution: Adaptive Director for Insurance #1. Combines customer insights with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Adaptive Director for Insurance #1 - Zion Tech Group",
+    "description": "Next-generation insurance solution: Adaptive Director for Insurance #1. Combines customer insights with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/adaptive-director-for-insurance-1-e6d8780a"
+    }
+  },
+  "features": [
+    "Alerting system",
+    "HIPAA ready",
+    "Custom integrations",
+    "Serverless functions",
+    "API-first design"
+  ],
+  "benefits": [
+    "Performance benchmarking",
+    "Cost optimization recommendations",
+    "Self-healing infrastructure"
+  ]
+}

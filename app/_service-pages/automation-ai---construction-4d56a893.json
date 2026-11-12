@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/automation-ai---construction-4d56a893",
+  "breadcrumbTitle": "Automation AI - Construction",
+  "title": "Automation AI - Construction",
+  "description": "The future of construction is here with Automation AI - Construction. Powered by cutting-edge AI, this platform delivers code optimization like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automation AI - Construction - Zion Tech Group",
+    "description": "The future of construction is here with Automation AI - Construction. Powered by cutting-edge AI, this platform delivers code optimization like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automation-ai---construction-4d56a893"
+    }
+  },
+  "features": [
+    "Edge computing support",
+    "Plugin architecture",
+    "Auto-scaling capabilities",
+    "Mobile-responsive interface"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "Dynamic resource allocation",
+    "Self-healing infrastructure",
+    "Predictive maintenance scheduling"
+  ]
+}

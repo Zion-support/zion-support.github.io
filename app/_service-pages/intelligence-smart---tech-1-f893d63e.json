@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/intelligence-smart---tech-1-f893d63e",
+  "breadcrumbTitle": "Intelligence Smart - Tech #1",
+  "title": "Intelligence Smart - Tech #1",
+  "description": "Revolutionize technology through intelligent automation. Our Intelligence Smart - Tech #1 leverages advanced machine learning to deliver supply chain at scale.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligence Smart - Tech #1 - Zion Tech Group",
+    "description": "Revolutionize technology through intelligent automation. Our Intelligence Smart - Tech #1 leverages advanced machine learning to deliver supply chain at scale.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligence-smart---tech-1-f893d63e"
+    }
+  },
+  "features": [
+    "Alerting system",
+    "Multi-region deployment",
+    "GDPR compliance",
+    "Role-based access control"
+  ],
+  "benefits": [
+    "Automated compliance reporting",
+    "Scalable to millions of transactions",
+    "50% reduction in operational costs"
+  ]
+}

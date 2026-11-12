@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/autonomous-engine-for-automotive-0f289e28",
+  "breadcrumbTitle": "Autonomous Engine for Automotive",
+  "title": "Autonomous Engine for Automotive",
+  "description": "Unlock unprecedented growth with Autonomous Engine for Automotive. This autonomous system provides content generation with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous Engine for Automotive - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Autonomous Engine for Automotive. This autonomous system provides content generation with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-engine-for-automotive-0f289e28"
+    }
+  },
+  "features": [
+    "Data encryption",
+    "Container orchestration",
+    "GDPR compliance",
+    "SOC 2 certified"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "Scalable to millions of transactions",
+    "Real-time insights and alerts",
+    "Predictive maintenance scheduling",
+    "3x faster decision making"
+  ]
+}

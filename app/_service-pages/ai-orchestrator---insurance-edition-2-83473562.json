@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-orchestrator---insurance-edition-2-83473562",
+  "breadcrumbTitle": "AI Orchestrator - Insurance Edition #2",
+  "title": "AI Orchestrator - Insurance Edition #2",
+  "description": "Next-generation insurance solution: AI Orchestrator - Insurance Edition #2. Combines supply chain with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Orchestrator - Insurance Edition #2 - Zion Tech Group",
+    "description": "Next-generation insurance solution: AI Orchestrator - Insurance Edition #2. Combines supply chain with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-orchestrator---insurance-edition-2-83473562"
+    }
+  },
+  "features": [
+    "SOC 2 certified",
+    "Microservices deployment",
+    "Multi-region deployment",
+    "Comprehensive monitoring",
+    "Cloud-native architecture"
+  ],
+  "benefits": [
+    "Dynamic resource allocation",
+    "Automated compliance reporting",
+    "3x faster decision making",
+    "Reduced human error by 95%"
+  ]
+}

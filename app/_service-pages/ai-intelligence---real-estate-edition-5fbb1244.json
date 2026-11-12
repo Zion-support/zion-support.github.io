@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/ai-intelligence---real-estate-edition-5fbb1244",
+  "breadcrumbTitle": "AI Intelligence - Real Estate Edition",
+  "title": "AI Intelligence - Real Estate Edition",
+  "description": "Revolutionize Real Estate through intelligent automation. Our AI Intelligence - Real Estate Edition leverages advanced machine learning to deliver threat detect",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Intelligence - Real Estate Edition - Zion Tech Group",
+    "description": "Revolutionize Real Estate through intelligent automation. Our AI Intelligence - Real Estate Edition leverages advanced machine learning to deliver threat detect",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-intelligence---real-estate-edition-5fbb1244"
+    }
+  },
+  "features": [
+    "Data quality with anomaly detection",
+    "Energy optimization with consumption tracking",
+    "Customer journey mapping with touchpoint analysis",
+    "Market analysis with buyer behavior insights",
+    "Manufacturing quality control with defect detection"
+  ],
+  "benefits": [
+    "3x faster decision making with real-time insights",
+    "Dynamic resource allocation based on demand patterns",
+    "Faster content creation with AI assistance",
+    "Reduced infrastructure costs with cloud optimization",
+    "Zero manual intervention required for routine tasks"
+  ]
+}

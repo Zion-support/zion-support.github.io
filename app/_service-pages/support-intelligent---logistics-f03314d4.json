@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/support-intelligent---logistics-f03314d4",
+  "breadcrumbTitle": "Support Intelligent - Logistics",
+  "title": "Support Intelligent - Logistics",
+  "description": "Next-generation Logistics solution: Support Intelligent - Logistics. Combines threat detection with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Support Intelligent - Logistics - Zion Tech Group",
+    "description": "Next-generation Logistics solution: Support Intelligent - Logistics. Combines threat detection with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/support-intelligent---logistics-f03314d4"
+    }
+  },
+  "features": [
+    "Microservices deployment with container orchestration",
+    "Maintenance scheduling with predictive analytics",
+    "Market analysis with buyer behavior insights",
+    "Code optimization with performance profiling",
+    "Automation opportunity identification"
+  ],
+  "benefits": [
+    "Automated compliance reporting for regulatory requirements",
+    "Improved brand awareness with social monitoring",
+    "Better financial planning with predictive models",
+    "Improved forecast accuracy with ML models",
+    "Improved sales performance with lead scoring"
+  ]
+}

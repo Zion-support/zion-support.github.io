@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/smart-maintenance-coordinator-2cb0708a",
+  "breadcrumbTitle": "Smart Maintenance Coordinator",
+  "title": "Smart Maintenance Coordinator",
+  "description": "Transform your finance operations with our Smart Maintenance Coordinator. This AI-driven solution automates performance monitoring with unprecedented accuracy a",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Maintenance Coordinator - Zion Tech Group",
+    "description": "Transform your finance operations with our Smart Maintenance Coordinator. This AI-driven solution automates performance monitoring with unprecedented accuracy a",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-maintenance-coordinator-2cb0708a"
+    }
+  },
+  "features": [
+    "Machine learning integration",
+    "Custom integrations",
+    "Plugin architecture",
+    "Cloud-native architecture",
+    "Performance dashboards"
+  ],
+  "benefits": [
+    "Intelligent load balancing",
+    "99.9% uptime guarantee",
+    "Scalable to millions of transactions"
+  ]
+}

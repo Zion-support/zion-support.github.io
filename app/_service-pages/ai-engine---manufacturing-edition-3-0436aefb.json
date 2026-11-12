@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-engine---manufacturing-edition-3-0436aefb",
+  "breadcrumbTitle": "AI Engine - Manufacturing Edition #3",
+  "title": "AI Engine - Manufacturing Edition #3",
+  "description": "Revolutionize manufacturing through intelligent automation. Our AI Engine - Manufacturing Edition #3 leverages advanced machine learning to deliver quality cont",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Engine - Manufacturing Edition #3 - Zion Tech Group",
+    "description": "Revolutionize manufacturing through intelligent automation. Our AI Engine - Manufacturing Edition #3 leverages advanced machine learning to deliver quality cont",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-engine---manufacturing-edition-3-0436aefb"
+    }
+  },
+  "features": [
+    "Edge computing support",
+    "Plugin architecture",
+    "Multi-language support",
+    "Offline capabilities"
+  ],
+  "benefits": [
+    "Dynamic resource allocation",
+    "Reduced human error by 95%",
+    "Scalable to millions of transactions",
+    "3x faster decision making",
+    "Automated compliance reporting"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-driven-data-driven-customer-analytics-8640f1bc",
+  "breadcrumbTitle": "AI-Driven Data-Driven Customer Analytics",
+  "title": "AI-Driven Data-Driven Customer Analytics",
+  "description": "Customer intelligence platform that delivers data-driven insights into shopper behavior, lifetime value, and churn prediction for retail and e-commerce business",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Driven Data-Driven Customer Analytics - Zion Tech Group",
+    "description": "Customer intelligence platform that delivers data-driven insights into shopper behavior, lifetime value, and churn prediction for retail and e-commerce business",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-driven-data-driven-customer-analytics-8640f1bc"
+    }
+  },
+  "features": [
+    "Behavioral analysis",
+    "LTV prediction",
+    "Churn prevention",
+    "Segment activation"
+  ],
+  "benefits": [
+    "Higher retention",
+    "Increased LTV",
+    "Targeted marketing",
+    "Better ROI"
+  ]
+}

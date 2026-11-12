@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/ai-support---healthcare-edition-8a33fe5b",
+  "breadcrumbTitle": "AI Support - Healthcare Edition",
+  "title": "AI Support - Healthcare Edition",
+  "description": "Transform your Healthcare operations with our AI Support - Healthcare Edition. This AI-driven solution automates language processing with unprecedented accuracy",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Support - Healthcare Edition - Zion Tech Group",
+    "description": "Transform your Healthcare operations with our AI Support - Healthcare Edition. This AI-driven solution automates language processing with unprecedented accuracy",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-support---healthcare-edition-8a33fe5b"
+    }
+  },
+  "features": [
+    "Compliance monitoring with regulatory updates",
+    "User experience analytics with behavior tracking",
+    "Logistics route optimization with traffic prediction",
+    "Energy optimization with consumption tracking",
+    "Content generation with plagiarism checks"
+  ],
+  "benefits": [
+    "Real-time insights and alerts for proactive management",
+    "Improved forecast accuracy with ML models",
+    "Enhanced team productivity with intelligent assistance",
+    "Better compliance with automated audit trails",
+    "Enhanced security posture with continuous monitoring"
+  ]
+}

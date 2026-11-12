@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/cloud-native-cloud-native-edtech-orchestration-68fe7e7b",
+  "breadcrumbTitle": "Cloud-Native Cloud-Native Edtech Orchestration",
+  "title": "Cloud-Native Cloud-Native Edtech Orchestration",
+  "description": "Cloud-native orchestration platform that manages cloud-native edtech resources with auto-scaling and cost control.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Cloud-Native Cloud-Native Edtech Orchestration - Zion Tech Group",
+    "description": "Cloud-native orchestration platform that manages cloud-native edtech resources with auto-scaling and cost control.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cloud-native-cloud-native-edtech-orchestration-68fe7e7b"
+    }
+  },
+  "features": [
+    "Container orchestration",
+    "Resource management",
+    "Health monitoring",
+    "Auto-healing"
+  ],
+  "benefits": [
+    "Reduced infrastructure cost",
+    "Auto-scaling",
+    "Container efficiency",
+    "Developer productivity"
+  ]
+}

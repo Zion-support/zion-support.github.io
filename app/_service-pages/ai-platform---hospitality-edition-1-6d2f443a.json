@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-platform---hospitality-edition-1-6d2f443a",
+  "breadcrumbTitle": "AI Platform - Hospitality Edition #1",
+  "title": "AI Platform - Hospitality Edition #1",
+  "description": "The future of hospitality is here with AI Platform - Hospitality Edition #1. Powered by cutting-edge AI, this platform delivers data processing like never befor",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Platform - Hospitality Edition #1 - Zion Tech Group",
+    "description": "The future of hospitality is here with AI Platform - Hospitality Edition #1. Powered by cutting-edge AI, this platform delivers data processing like never befor",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-platform---hospitality-edition-1-6d2f443a"
+    }
+  },
+  "features": [
+    "Real-time processing",
+    "HIPAA ready",
+    "Comprehensive monitoring",
+    "Custom integrations",
+    "Offline capabilities"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "Automated compliance reporting",
+    "Zero manual intervention required",
+    "Reduced human error by 95%"
+  ]
+}

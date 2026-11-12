@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-automated-risk-assessment-9925934f",
+  "breadcrumbTitle": "AI-Powered Automated Risk Assessment",
+  "title": "AI-Powered Automated Risk Assessment",
+  "description": "Advanced risk analytics platform that provides automated credit scoring, fraud detection, and portfolio risk analysis using machine learning and alternative dat",
+  "basic": "$298/month",
+  "pro": "$748/month",
+  "enterprise": "$2248/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Automated Risk Assessment - Zion Tech Group",
+    "description": "Advanced risk analytics platform that provides automated credit scoring, fraud detection, and portfolio risk analysis using machine learning and alternative dat",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-automated-risk-assessment-9925934f"
+    }
+  },
+  "features": [
+    "Credit scoring",
+    "Fraud detection",
+    "Portfolio risk",
+    "Regulatory reporting"
+  ],
+  "benefits": [
+    "Reduced defaults",
+    "Faster decisions",
+    "Lower fraud losses",
+    "Compliance automation"
+  ]
+}

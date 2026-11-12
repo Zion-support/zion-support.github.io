@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/enterprise-real-time-aerospace-analytics-suite-6309a9a4",
+  "breadcrumbTitle": "Enterprise Real-Time Aerospace Analytics Suite",
+  "title": "Enterprise Real-Time Aerospace Analytics Suite",
+  "description": "Enterprise analytics suite that delivers real-time aerospace insights with unified dashboards and reporting.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Enterprise Real-Time Aerospace Analytics Suite - Zion Tech Group",
+    "description": "Enterprise analytics suite that delivers real-time aerospace insights with unified dashboards and reporting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/enterprise-real-time-aerospace-analytics-suite-6309a9a4"
+    }
+  },
+  "features": [
+    "Data visualization",
+    "Custom dashboards",
+    "Report generation",
+    "KPI tracking"
+  ],
+  "benefits": [
+    "Unified data view",
+    "Faster insights",
+    "Customizable reports",
+    "Cross-functional collaboration"
+  ]
+}

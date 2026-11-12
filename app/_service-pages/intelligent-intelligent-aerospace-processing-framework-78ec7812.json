@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-intelligent-aerospace-processing-framework-78ec7812",
+  "breadcrumbTitle": "Intelligent Intelligent Aerospace Processing Framework",
+  "title": "Intelligent Intelligent Aerospace Processing Framework",
+  "description": "Intelligent processing framework that automates intelligent aerospace data flows with real-time transformation.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Intelligent Intelligent Aerospace Processing Framework - Zion Tech Group",
+    "description": "Intelligent processing framework that automates intelligent aerospace data flows with real-time transformation.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-intelligent-aerospace-processing-framework-78ec7812"
+    }
+  },
+  "features": [
+    "Real-time processing",
+    "Data transformation",
+    "ETL pipelines",
+    "Stream processing"
+  ],
+  "benefits": [
+    "Faster data flows",
+    "Reduced processing time",
+    "Higher throughput",
+    "Real-time transformation"
+  ]
+}

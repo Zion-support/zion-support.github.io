@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/engine-autonomous---legal-2-43ec1907",
+  "breadcrumbTitle": "Engine Autonomous - Legal #2",
+  "title": "Engine Autonomous - Legal #2",
+  "description": "Next-generation legal solution: Engine Autonomous - Legal #2. Combines sales forecasting with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Engine Autonomous - Legal #2 - Zion Tech Group",
+    "description": "Next-generation legal solution: Engine Autonomous - Legal #2. Combines sales forecasting with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/engine-autonomous---legal-2-43ec1907"
+    }
+  },
+  "features": [
+    "API-first design",
+    "Zero-downtime updates",
+    "Plugin architecture",
+    "Rollback mechanisms",
+    "Mobile-responsive interface"
+  ],
+  "benefits": [
+    "Intelligent load balancing",
+    "Scalable to millions of transactions",
+    "3x faster decision making"
+  ]
+}

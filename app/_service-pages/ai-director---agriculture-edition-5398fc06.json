@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/ai-director---agriculture-edition-5398fc06",
+  "breadcrumbTitle": "AI Director - Agriculture Edition",
+  "title": "AI Director - Agriculture Edition",
+  "description": "Revolutionize agriculture through intelligent automation. Our AI Director - Agriculture Edition leverages advanced machine learning to deliver process automatio",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Director - Agriculture Edition - Zion Tech Group",
+    "description": "Revolutionize agriculture through intelligent automation. Our AI Director - Agriculture Edition leverages advanced machine learning to deliver process automatio",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-director---agriculture-edition-5398fc06"
+    }
+  },
+  "features": [
+    "Container orchestration",
+    "Edge computing support",
+    "Auto-scaling capabilities",
+    "Rollback mechanisms",
+    "Multi-region deployment"
+  ],
+  "benefits": [
+    "24/7 automated operations",
+    "Automated compliance reporting",
+    "Reduced human error by 95%",
+    "Zero manual intervention required",
+    "Real-time insights and alerts"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-automation-hospitality-8c3d1615",
+  "breadcrumbTitle": "AI-Powered automation-hospitality",
+  "title": "AI-Powered automation-hospitality",
+  "description": "Next-generation hospitality solution: AI-Powered automation-hospitality. Combines energy management with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered automation-hospitality - Zion Tech Group",
+    "description": "Next-generation hospitality solution: AI-Powered automation-hospitality. Combines energy management with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-automation-hospitality-8c3d1615"
+    }
+  },
+  "features": [
+    "Multi-region deployment",
+    "Multi-language support",
+    "Serverless functions",
+    "Real-time processing",
+    "Comprehensive monitoring"
+  ],
+  "benefits": [
+    "Dynamic resource allocation",
+    "Intelligent load balancing",
+    "Predictive maintenance scheduling"
+  ]
+}

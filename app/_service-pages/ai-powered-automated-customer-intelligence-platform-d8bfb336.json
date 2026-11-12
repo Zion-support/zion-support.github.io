@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-automated-customer-intelligence-platform-d8bfb336",
+  "breadcrumbTitle": "AI-Powered Automated Customer Intelligence Platform",
+  "title": "AI-Powered Automated Customer Intelligence Platform",
+  "description": "AI-driven intelligence platform that delivers automated insights and automated decision-making for customer operations.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Automated Customer Intelligence Platform - Zion Tech Group",
+    "description": "AI-driven intelligence platform that delivers automated insights and automated decision-making for customer operations.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-automated-customer-intelligence-platform-d8bfb336"
+    }
+  },
+  "features": [
+    "Real-time intelligence",
+    "Automated insights",
+    "Predictive alerts",
+    "API integration"
+  ],
+  "benefits": [
+    "Real-time actionable insights",
+    "Automated decision-making",
+    "Reduced latency",
+    "Improved accuracy"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/smart-performance-coordinator-ad6cf765",
+  "breadcrumbTitle": "Smart Performance Coordinator",
+  "title": "Smart Performance Coordinator",
+  "description": "Revolutionize agriculture through intelligent automation. Our Smart Performance Coordinator leverages advanced machine learning to deliver document processing a",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Performance Coordinator - Zion Tech Group",
+    "description": "Revolutionize agriculture through intelligent automation. Our Smart Performance Coordinator leverages advanced machine learning to deliver document processing a",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-performance-coordinator-ad6cf765"
+    }
+  },
+  "features": [
+    "Machine learning integration",
+    "Custom integrations",
+    "Offline capabilities",
+    "Mobile-responsive interface",
+    "Audit trails"
+  ],
+  "benefits": [
+    "Automated compliance reporting",
+    "Reduced human error by 95%",
+    "50% reduction in operational costs",
+    "ROI in under 90 days"
+  ]
+}

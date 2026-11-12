@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligence-intelligent---finance-8242b1fe",
+  "breadcrumbTitle": "Intelligence Intelligent - Finance",
+  "title": "Intelligence Intelligent - Finance",
+  "description": "Next-generation finance solution: Intelligence Intelligent - Finance. Combines data processing with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligence Intelligent - Finance - Zion Tech Group",
+    "description": "Next-generation finance solution: Intelligence Intelligent - Finance. Combines data processing with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligence-intelligent---finance-8242b1fe"
+    }
+  },
+  "features": [
+    "Plugin architecture",
+    "Alerting system",
+    "Real-time processing",
+    "GDPR compliance",
+    "Mobile-responsive interface"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "Cost optimization recommendations",
+    "Self-healing infrastructure",
+    "Seamless integration with existing systems"
+  ]
+}

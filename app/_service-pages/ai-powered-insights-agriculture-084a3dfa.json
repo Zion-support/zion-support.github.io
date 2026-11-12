@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/ai-powered-insights-agriculture-084a3dfa",
+  "breadcrumbTitle": "AI-Powered insights-agriculture",
+  "title": "AI-Powered insights-agriculture",
+  "description": "The future of agriculture is here with AI-Powered insights-agriculture. Powered by cutting-edge AI, this platform delivers market intelligence like never before",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered insights-agriculture - Zion Tech Group",
+    "description": "The future of agriculture is here with AI-Powered insights-agriculture. Powered by cutting-edge AI, this platform delivers market intelligence like never before",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-insights-agriculture-084a3dfa"
+    }
+  },
+  "features": [
+    "Microservices deployment",
+    "Audit trails",
+    "Mobile-responsive interface",
+    "Machine learning integration"
+  ],
+  "benefits": [
+    "50% reduction in operational costs",
+    "Automated compliance reporting",
+    "Zero manual intervention required"
+  ]
+}

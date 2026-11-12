@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/management-autonomous---real-estate-039a6215",
+  "breadcrumbTitle": "Management Autonomous - Real-Estate",
+  "title": "Management Autonomous - Real-Estate",
+  "description": "The future of real-estate is here with Management Autonomous - Real-Estate. Powered by cutting-edge AI, this platform delivers maintenance scheduling like never",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Management Autonomous - Real-Estate - Zion Tech Group",
+    "description": "The future of real-estate is here with Management Autonomous - Real-Estate. Powered by cutting-edge AI, this platform delivers maintenance scheduling like never",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/management-autonomous---real-estate-039a6215"
+    }
+  },
+  "features": [
+    "Microservices deployment",
+    "Plugin architecture",
+    "Alerting system",
+    "SOC 2 certified"
+  ],
+  "benefits": [
+    "Scalable to millions of transactions",
+    "Self-healing infrastructure",
+    "Automated compliance reporting",
+    "Predictive maintenance scheduling"
+  ]
+}

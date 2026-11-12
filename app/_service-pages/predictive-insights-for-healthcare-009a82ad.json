@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/predictive-insights-for-healthcare-009a82ad",
+  "breadcrumbTitle": "Predictive Insights for Healthcare",
+  "title": "Predictive Insights for Healthcare",
+  "description": "Unlock unprecedented growth with Predictive Insights for Healthcare. This autonomous system provides document processing with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Predictive Insights for Healthcare - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Predictive Insights for Healthcare. This autonomous system provides document processing with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/predictive-insights-for-healthcare-009a82ad"
+    }
+  },
+  "features": [
+    "HIPAA ready",
+    "Open-source friendly",
+    "Machine learning integration",
+    "Role-based access control"
+  ],
+  "benefits": [
+    "Performance benchmarking",
+    "Reduced human error by 95%",
+    "24/7 automated operations"
+  ]
+}

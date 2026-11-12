@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-advisor-gaming-475cb29a",
+  "breadcrumbTitle": "Intelligent advisor-gaming",
+  "title": "Intelligent advisor-gaming",
+  "description": "Revolutionize gaming through intelligent automation. Our Intelligent advisor-gaming leverages advanced machine learning to deliver content generation at scale.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent advisor-gaming - Zion Tech Group",
+    "description": "Revolutionize gaming through intelligent automation. Our Intelligent advisor-gaming leverages advanced machine learning to deliver content generation at scale.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-advisor-gaming-475cb29a"
+    }
+  },
+  "features": [
+    "Performance dashboards",
+    "Real-time processing",
+    "Zero-downtime updates",
+    "Microservices deployment",
+    "Container orchestration"
+  ],
+  "benefits": [
+    "Dynamic resource allocation",
+    "Seamless integration with existing systems",
+    "Predictive maintenance scheduling"
+  ]
+}

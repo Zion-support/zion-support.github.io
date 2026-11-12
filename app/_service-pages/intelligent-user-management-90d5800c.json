@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligent-user-management-90d5800c",
+  "breadcrumbTitle": "Intelligent User Management",
+  "title": "Intelligent User Management",
+  "description": "Next-generation healthcare solution: Intelligent User Management. Combines supply chain with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent User Management - Zion Tech Group",
+    "description": "Next-generation healthcare solution: Intelligent User Management. Combines supply chain with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-user-management-90d5800c"
+    }
+  },
+  "features": [
+    "Microservices deployment",
+    "Auto-scaling capabilities",
+    "Multi-region deployment",
+    "Data encryption"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Seamless integration with existing systems",
+    "Reduced human error by 95%",
+    "Zero manual intervention required",
+    "Automated compliance reporting"
+  ]
+}

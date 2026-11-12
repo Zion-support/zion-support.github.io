@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/cognitive-composable-agriculture-decision-engine-1ff4a034",
+  "breadcrumbTitle": "Cognitive Composable Agriculture Decision Engine",
+  "title": "Cognitive Composable Agriculture Decision Engine",
+  "description": "Cognitive decision engine that processes composable signals to drive agriculture strategy with deep learning.",
+  "basic": "$278/month",
+  "pro": "$698/month",
+  "enterprise": "$2098/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Cognitive Composable Agriculture Decision Engine - Zion Tech Group",
+    "description": "Cognitive decision engine that processes composable signals to drive agriculture strategy with deep learning.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cognitive-composable-agriculture-decision-engine-1ff4a034"
+    }
+  },
+  "features": [
+    "Cognitive reasoning",
+    "Scenario analysis",
+    "Decision trees",
+    "Recommendation engine"
+  ],
+  "benefits": [
+    "Better decision quality",
+    "Reduced risk",
+    "Faster insights",
+    "Competitive intelligence"
+  ]
+}

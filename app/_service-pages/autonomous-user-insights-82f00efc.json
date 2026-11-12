@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/autonomous-user-insights-82f00efc",
+  "breadcrumbTitle": "Autonomous User Insights",
+  "title": "Autonomous User Insights",
+  "description": "The future of insurance is here with Autonomous User Insights. Powered by cutting-edge AI, this platform delivers threat detection like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous User Insights - Zion Tech Group",
+    "description": "The future of insurance is here with Autonomous User Insights. Powered by cutting-edge AI, this platform delivers threat detection like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-user-insights-82f00efc"
+    }
+  },
+  "features": [
+    "Zero-downtime updates",
+    "Serverless functions",
+    "Role-based access control",
+    "Rollback mechanisms"
+  ],
+  "benefits": [
+    "50% reduction in operational costs",
+    "Cost optimization recommendations",
+    "Dynamic resource allocation"
+  ]
+}

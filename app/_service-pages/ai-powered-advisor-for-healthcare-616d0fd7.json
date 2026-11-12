@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-powered-advisor-for-healthcare-616d0fd7",
+  "breadcrumbTitle": "AI-Powered Advisor for Healthcare",
+  "title": "AI-Powered Advisor for Healthcare",
+  "description": "Unlock unprecedented growth with AI-Powered Advisor for Healthcare. This autonomous system provides image recognition with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Advisor for Healthcare - Zion Tech Group",
+    "description": "Unlock unprecedented growth with AI-Powered Advisor for Healthcare. This autonomous system provides image recognition with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-advisor-for-healthcare-616d0fd7"
+    }
+  },
+  "features": [
+    "Plugin architecture",
+    "Alerting system",
+    "Offline capabilities",
+    "Comprehensive monitoring",
+    "Performance dashboards"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "50% reduction in operational costs",
+    "Dynamic resource allocation",
+    "Reduced human error by 95%"
+  ]
+}

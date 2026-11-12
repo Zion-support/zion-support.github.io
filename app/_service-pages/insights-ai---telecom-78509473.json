@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/insights-ai---telecom-78509473",
+  "breadcrumbTitle": "Insights AI - Telecom",
+  "title": "Insights AI - Telecom",
+  "description": "Next-generation telecom solution: Insights AI - Telecom. Combines document processing with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Insights AI - Telecom - Zion Tech Group",
+    "description": "Next-generation telecom solution: Insights AI - Telecom. Combines document processing with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/insights-ai---telecom-78509473"
+    }
+  },
+  "features": [
+    "Alerting system",
+    "Container orchestration",
+    "HIPAA ready",
+    "Multi-region deployment",
+    "Machine learning integration"
+  ],
+  "benefits": [
+    "Cost optimization recommendations",
+    "24/7 automated operations",
+    "Predictive maintenance scheduling",
+    "Zero manual intervention required",
+    "Real-time insights and alerts"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/automated-code-platform-66a57d8e",
+  "breadcrumbTitle": "Automated Code Platform",
+  "title": "Automated Code Platform",
+  "description": "Revolutionize insurance through intelligent automation. Our Automated Code Platform leverages advanced machine learning to deliver data processing at scale.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated Code Platform - Zion Tech Group",
+    "description": "Revolutionize insurance through intelligent automation. Our Automated Code Platform leverages advanced machine learning to deliver data processing at scale.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-code-platform-66a57d8e"
+    }
+  },
+  "features": [
+    "GDPR compliance",
+    "Plugin architecture",
+    "Multi-language support",
+    "Container orchestration",
+    "Real-time processing"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "99.9% uptime guarantee",
+    "Performance benchmarking"
+  ]
+}

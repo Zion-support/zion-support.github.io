@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-processor---insurance-edition-5885c6d3",
+  "breadcrumbTitle": "AI Processor - Insurance Edition",
+  "title": "AI Processor - Insurance Edition",
+  "description": "Next-generation insurance solution: AI Processor - Insurance Edition. Combines financial planning with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Processor - Insurance Edition - Zion Tech Group",
+    "description": "Next-generation insurance solution: AI Processor - Insurance Edition. Combines financial planning with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-processor---insurance-edition-5885c6d3"
+    }
+  },
+  "features": [
+    "HIPAA ready",
+    "Offline capabilities",
+    "Open-source friendly",
+    "Multi-region deployment",
+    "Edge computing support"
+  ],
+  "benefits": [
+    "Performance benchmarking",
+    "99.9% uptime guarantee",
+    "ROI in under 90 days",
+    "Self-healing infrastructure"
+  ]
+}

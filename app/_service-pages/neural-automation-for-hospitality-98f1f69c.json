@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/neural-automation-for-hospitality-98f1f69c",
+  "breadcrumbTitle": "Neural Automation for Hospitality",
+  "title": "Neural Automation for Hospitality",
+  "description": "Transform your hospitality operations with our Neural Automation for Hospitality. This AI-driven solution automates energy management with unprecedented accurac",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Neural Automation for Hospitality - Zion Tech Group",
+    "description": "Transform your hospitality operations with our Neural Automation for Hospitality. This AI-driven solution automates energy management with unprecedented accurac",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/neural-automation-for-hospitality-98f1f69c"
+    }
+  },
+  "features": [
+    "GDPR compliance",
+    "Container orchestration",
+    "Serverless functions",
+    "Multi-region deployment"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "50% reduction in operational costs",
+    "Self-healing infrastructure"
+  ]
+}

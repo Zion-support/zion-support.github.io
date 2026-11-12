@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/multi-agent-scalable-insurance-framework-6dd44cad",
+  "breadcrumbTitle": "Multi-Agent Scalable Insurance Framework",
+  "title": "Multi-Agent Scalable Insurance Framework",
+  "description": "Multi-agent framework that deploys scalable insurance AI agents for collaborative problem-solving and distributed intelligence.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Multi-Agent Scalable Insurance Framework - Zion Tech Group",
+    "description": "Multi-agent framework that deploys scalable insurance AI agents for collaborative problem-solving and distributed intelligence.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/multi-agent-scalable-insurance-framework-6dd44cad"
+    }
+  },
+  "features": [
+    "Collaborative agents",
+    "Shared memory pools",
+    "Role assignment",
+    "Emergent coordination"
+  ],
+  "benefits": [
+    "Multi-task parallelism",
+    "Specialist agents",
+    "Knowledge sharing",
+    "Emergent problem-solving"
+  ]
+}

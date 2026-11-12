@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-intelligence---energy-edition-976a41d6",
+  "breadcrumbTitle": "AI Intelligence - Energy Edition",
+  "title": "AI Intelligence - Energy Edition",
+  "description": "The future of energy is here with AI Intelligence - Energy Edition. Powered by cutting-edge AI, this platform delivers fraud prevention like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Intelligence - Energy Edition - Zion Tech Group",
+    "description": "The future of energy is here with AI Intelligence - Energy Edition. Powered by cutting-edge AI, this platform delivers fraud prevention like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-intelligence---energy-edition-976a41d6"
+    }
+  },
+  "features": [
+    "Cloud-native architecture",
+    "Mobile-responsive interface",
+    "Microservices deployment",
+    "Custom integrations"
+  ],
+  "benefits": [
+    "Dynamic resource allocation",
+    "Enterprise-grade security",
+    "Automated compliance reporting",
+    "Intelligent load balancing"
+  ]
+}

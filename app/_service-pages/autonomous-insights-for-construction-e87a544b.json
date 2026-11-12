@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/autonomous-insights-for-construction-e87a544b",
+  "breadcrumbTitle": "Autonomous Insights for Construction",
+  "title": "Autonomous Insights for Construction",
+  "description": "Next-generation construction solution: Autonomous Insights for Construction. Combines threat detection with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous Insights for Construction - Zion Tech Group",
+    "description": "Next-generation construction solution: Autonomous Insights for Construction. Combines threat detection with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-insights-for-construction-e87a544b"
+    }
+  },
+  "features": [
+    "API-first design",
+    "Real-time processing",
+    "Rollback mechanisms",
+    "Edge computing support"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Cost optimization recommendations",
+    "Automated compliance reporting",
+    "3x faster decision making"
+  ]
+}

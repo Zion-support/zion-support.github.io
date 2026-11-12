@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/enterprise-serverless-proptech-analytics-suite-68b68b8c",
+  "breadcrumbTitle": "Enterprise Serverless Proptech Analytics Suite",
+  "title": "Enterprise Serverless Proptech Analytics Suite",
+  "description": "Enterprise analytics suite that delivers serverless proptech insights with unified dashboards and reporting.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Enterprise Serverless Proptech Analytics Suite - Zion Tech Group",
+    "description": "Enterprise analytics suite that delivers serverless proptech insights with unified dashboards and reporting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/enterprise-serverless-proptech-analytics-suite-68b68b8c"
+    }
+  },
+  "features": [
+    "Data visualization",
+    "Custom dashboards",
+    "Report generation",
+    "KPI tracking"
+  ],
+  "benefits": [
+    "Unified data view",
+    "Faster insights",
+    "Customizable reports",
+    "Cross-functional collaboration"
+  ]
+}

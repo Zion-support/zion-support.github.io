@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/cognitive-integrated-hospitality-decision-engine-6c742c4c",
+  "breadcrumbTitle": "Cognitive Integrated Hospitality Decision Engine",
+  "title": "Cognitive Integrated Hospitality Decision Engine",
+  "description": "Cognitive decision engine that processes integrated signals to drive hospitality strategy with deep learning.",
+  "basic": "$278/month",
+  "pro": "$698/month",
+  "enterprise": "$2098/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Cognitive Integrated Hospitality Decision Engine - Zion Tech Group",
+    "description": "Cognitive decision engine that processes integrated signals to drive hospitality strategy with deep learning.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cognitive-integrated-hospitality-decision-engine-6c742c4c"
+    }
+  },
+  "features": [
+    "Cognitive reasoning",
+    "Scenario analysis",
+    "Decision trees",
+    "Recommendation engine"
+  ],
+  "benefits": [
+    "Better decision quality",
+    "Reduced risk",
+    "Faster insights",
+    "Competitive intelligence"
+  ]
+}

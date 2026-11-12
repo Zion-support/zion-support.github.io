@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/ai-director---healthcare-edition-19f7eb8b",
+  "breadcrumbTitle": "AI Director - Healthcare Edition",
+  "title": "AI Director - Healthcare Edition",
+  "description": "Next-generation healthcare solution: AI Director - Healthcare Edition. Combines compliance monitoring with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Director - Healthcare Edition - Zion Tech Group",
+    "description": "Next-generation healthcare solution: AI Director - Healthcare Edition. Combines compliance monitoring with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-director---healthcare-edition-19f7eb8b"
+    }
+  },
+  "features": [
+    "Role-based access control",
+    "Custom integrations",
+    "Real-time processing",
+    "Offline capabilities",
+    "Edge computing support"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "Performance benchmarking",
+    "Scalable to millions of transactions",
+    "Cost optimization recommendations",
+    "Dynamic resource allocation"
+  ]
+}

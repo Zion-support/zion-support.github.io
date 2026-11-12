@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/system-ai---logistics-1-59e8a9a0",
+  "breadcrumbTitle": "System AI - Logistics #1",
+  "title": "System AI - Logistics #1",
+  "description": "Unlock unprecedented growth with System AI - Logistics #1. This autonomous system provides predictive analytics with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "System AI - Logistics #1 - Zion Tech Group",
+    "description": "Unlock unprecedented growth with System AI - Logistics #1. This autonomous system provides predictive analytics with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/system-ai---logistics-1-59e8a9a0"
+    }
+  },
+  "features": [
+    "GDPR compliance",
+    "Edge computing support",
+    "API-first design",
+    "Machine learning integration",
+    "Alerting system"
+  ],
+  "benefits": [
+    "Automated compliance reporting",
+    "Cost optimization recommendations",
+    "Seamless integration with existing systems"
+  ]
+}

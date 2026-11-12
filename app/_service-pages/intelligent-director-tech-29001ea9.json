@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligent-director-tech-29001ea9",
+  "breadcrumbTitle": "Intelligent director-tech",
+  "title": "Intelligent director-tech",
+  "description": "The future of technology is here with Intelligent director-tech. Powered by cutting-edge AI, this platform delivers workflow management like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent director-tech - Zion Tech Group",
+    "description": "The future of technology is here with Intelligent director-tech. Powered by cutting-edge AI, this platform delivers workflow management like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-director-tech-29001ea9"
+    }
+  },
+  "features": [
+    "Real-time processing",
+    "Open-source friendly",
+    "Data encryption",
+    "Auto-scaling capabilities",
+    "Serverless functions"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "Dynamic resource allocation",
+    "99.9% uptime guarantee",
+    "Scalable to millions of transactions"
+  ]
+}

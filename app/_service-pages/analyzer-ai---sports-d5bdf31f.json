@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/analyzer-ai---sports-d5bdf31f",
+  "breadcrumbTitle": "Analyzer AI - Sports",
+  "title": "Analyzer AI - Sports",
+  "description": "Next-generation sports solution: Analyzer AI - Sports. Combines quality control with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Analyzer AI - Sports - Zion Tech Group",
+    "description": "Next-generation sports solution: Analyzer AI - Sports. Combines quality control with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/analyzer-ai---sports-d5bdf31f"
+    }
+  },
+  "features": [
+    "API-first design",
+    "Zero-downtime updates",
+    "Microservices deployment",
+    "Edge computing support",
+    "Custom integrations"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "Self-healing infrastructure",
+    "Dynamic resource allocation"
+  ]
+}

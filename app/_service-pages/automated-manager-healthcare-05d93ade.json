@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/automated-manager-healthcare-05d93ade",
+  "breadcrumbTitle": "Automated manager-healthcare",
+  "title": "Automated manager-healthcare",
+  "description": "Transform your healthcare operations with our Automated manager-healthcare. This AI-driven solution automates image recognition with unprecedented accuracy and ",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated manager-healthcare - Zion Tech Group",
+    "description": "Transform your healthcare operations with our Automated manager-healthcare. This AI-driven solution automates image recognition with unprecedented accuracy and ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-manager-healthcare-05d93ade"
+    }
+  },
+  "features": [
+    "Container orchestration",
+    "API-first design",
+    "Multi-language support",
+    "Plugin architecture"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Self-healing infrastructure",
+    "Enterprise-grade security",
+    "Performance benchmarking",
+    "Cost optimization recommendations"
+  ]
+}

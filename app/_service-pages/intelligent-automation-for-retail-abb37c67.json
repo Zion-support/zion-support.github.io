@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligent-automation-for-retail-abb37c67",
+  "breadcrumbTitle": "Intelligent Automation for Retail",
+  "title": "Intelligent Automation for Retail",
+  "description": "Revolutionize retail through intelligent automation. Our Intelligent Automation for Retail leverages advanced machine learning to deliver financial planning at ",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Automation for Retail - Zion Tech Group",
+    "description": "Revolutionize retail through intelligent automation. Our Intelligent Automation for Retail leverages advanced machine learning to deliver financial planning at ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-automation-for-retail-abb37c67"
+    }
+  },
+  "features": [
+    "Zero-downtime updates",
+    "Alerting system",
+    "Cloud-native architecture",
+    "Performance dashboards",
+    "Mobile-responsive interface"
+  ],
+  "benefits": [
+    "Automated compliance reporting",
+    "Self-healing infrastructure",
+    "Real-time insights and alerts",
+    "Zero manual intervention required"
+  ]
+}

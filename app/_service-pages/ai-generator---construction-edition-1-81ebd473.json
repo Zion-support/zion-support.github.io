@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-generator---construction-edition-1-81ebd473",
+  "breadcrumbTitle": "AI Generator - Construction Edition #1",
+  "title": "AI Generator - Construction Edition #1",
+  "description": "Transform your construction operations with our AI Generator - Construction Edition #1. This AI-driven solution automates document processing with unprecedented",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Generator - Construction Edition #1 - Zion Tech Group",
+    "description": "Transform your construction operations with our AI Generator - Construction Edition #1. This AI-driven solution automates document processing with unprecedented",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-generator---construction-edition-1-81ebd473"
+    }
+  },
+  "features": [
+    "Audit trails",
+    "Auto-scaling capabilities",
+    "Alerting system",
+    "Plugin architecture",
+    "Serverless functions"
+  ],
+  "benefits": [
+    "Dynamic resource allocation",
+    "Cost optimization recommendations",
+    "Self-healing infrastructure"
+  ]
+}

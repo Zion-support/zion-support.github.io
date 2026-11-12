@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-director---retail-edition-a33ddd08",
+  "breadcrumbTitle": "AI Director - Retail Edition",
+  "title": "AI Director - Retail Edition",
+  "description": "Revolutionize retail through intelligent automation. Our AI Director - Retail Edition leverages advanced machine learning to deliver financial planning at scale",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Director - Retail Edition - Zion Tech Group",
+    "description": "Revolutionize retail through intelligent automation. Our AI Director - Retail Edition leverages advanced machine learning to deliver financial planning at scale",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-director---retail-edition-a33ddd08"
+    }
+  },
+  "features": [
+    "Serverless functions",
+    "Auto-scaling capabilities",
+    "Open-source friendly",
+    "Offline capabilities",
+    "Audit trails"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "24/7 automated operations",
+    "Real-time insights and alerts"
+  ]
+}

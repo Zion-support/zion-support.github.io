@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/predictive-predictive-insurtech-risk-scoring-5cb8ec05",
+  "breadcrumbTitle": "Predictive Predictive Insurtech Risk Scoring",
+  "title": "Predictive Predictive Insurtech Risk Scoring",
+  "description": "Predictive risk scoring engine that assesses predictive insurtech vulnerabilities with machine learning.",
+  "basic": "$278/month",
+  "pro": "$698/month",
+  "enterprise": "$2098/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Predictive Predictive Insurtech Risk Scoring - Zion Tech Group",
+    "description": "Predictive risk scoring engine that assesses predictive insurtech vulnerabilities with machine learning.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/predictive-predictive-insurtech-risk-scoring-5cb8ec05"
+    }
+  },
+  "features": [
+    "Risk assessment",
+    "Threat modeling",
+    "Compliance scoring",
+    "Mitigation planning"
+  ],
+  "benefits": [
+    "Proactive risk mitigation",
+    "Compliance assurance",
+    "Reduced exposure",
+    "Faster incident response"
+  ]
+}

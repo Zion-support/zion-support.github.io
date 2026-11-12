@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-sales---manufacturing-edition-d23a775f",
+  "breadcrumbTitle": "AI Sales - Manufacturing Edition",
+  "title": "AI Sales - Manufacturing Edition",
+  "description": "Transform your Manufacturing operations with our AI Sales - Manufacturing Edition. This AI-driven solution automates financial planning with unprecedented accur",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Sales - Manufacturing Edition - Zion Tech Group",
+    "description": "Transform your Manufacturing operations with our AI Sales - Manufacturing Edition. This AI-driven solution automates financial planning with unprecedented accur",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-sales---manufacturing-edition-d23a775f"
+    }
+  },
+  "features": [
+    "HIPAA ready with healthcare data protection",
+    "Machine learning integration with automatic model training",
+    "Real-time processing with streaming analytics",
+    "Security monitoring with threat intelligence",
+    "Multi-region deployment with automatic failover"
+  ],
+  "benefits": [
+    "Faster content creation with AI assistance",
+    "3x faster decision making with real-time insights",
+    "Cost optimization recommendations with savings analysis",
+    "Faster time-to-market with accelerated development"
+  ]
+}

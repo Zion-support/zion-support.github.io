@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/smart-healthcare-for-logistics-9815cccc",
+  "breadcrumbTitle": "Smart Healthcare for Logistics",
+  "title": "Smart Healthcare for Logistics",
+  "description": "Transform your Logistics operations with our Smart Healthcare for Logistics. This AI-driven solution automates process discovery with unprecedented accuracy and",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Healthcare for Logistics - Zion Tech Group",
+    "description": "Transform your Logistics operations with our Smart Healthcare for Logistics. This AI-driven solution automates process discovery with unprecedented accuracy and",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-healthcare-for-logistics-9815cccc"
+    }
+  },
+  "features": [
+    "Compliance monitoring with regulatory updates",
+    "Inventory prediction with demand forecasting",
+    "Data encryption at rest and in transit",
+    "Custom integrations with webhook support",
+    "Image recognition with computer vision"
+  ],
+  "benefits": [
+    "Enhanced security posture with continuous monitoring",
+    "Better market positioning with competitive analysis",
+    "ROI achieved in under 90 days with cost savings",
+    "Improved forecast accuracy with ML models"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/ai-powered-advisor-insurance-3dd83fd7",
+  "breadcrumbTitle": "AI-Powered advisor-insurance",
+  "title": "AI-Powered advisor-insurance",
+  "description": "Next-generation insurance solution: AI-Powered advisor-insurance. Combines market intelligence with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered advisor-insurance - Zion Tech Group",
+    "description": "Next-generation insurance solution: AI-Powered advisor-insurance. Combines market intelligence with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-advisor-insurance-3dd83fd7"
+    }
+  },
+  "features": [
+    "Comprehensive monitoring",
+    "Machine learning integration",
+    "Auto-scaling capabilities",
+    "Data encryption"
+  ],
+  "benefits": [
+    "Automated compliance reporting",
+    "Reduced human error by 95%",
+    "ROI in under 90 days"
+  ]
+}

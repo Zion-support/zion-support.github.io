@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/ai-manager---energy-edition-0958e0bb",
+  "breadcrumbTitle": "AI Manager - Energy Edition",
+  "title": "AI Manager - Energy Edition",
+  "description": "The future of energy is here with AI Manager - Energy Edition. Powered by cutting-edge AI, this platform delivers inventory management like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Manager - Energy Edition - Zion Tech Group",
+    "description": "The future of energy is here with AI Manager - Energy Edition. Powered by cutting-edge AI, this platform delivers inventory management like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-manager---energy-edition-0958e0bb"
+    }
+  },
+  "features": [
+    "Performance dashboards",
+    "Alerting system",
+    "SOC 2 certified",
+    "Rollback mechanisms"
+  ],
+  "benefits": [
+    "Automated compliance reporting",
+    "50% reduction in operational costs",
+    "Cost optimization recommendations"
+  ]
+}

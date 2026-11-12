@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/ai-director---hospitality-edition-9-26e157b7",
+  "breadcrumbTitle": "AI Director - Hospitality Edition #9",
+  "title": "AI Director - Hospitality Edition #9",
+  "description": "Unlock unprecedented growth with AI Director - Hospitality Edition #9. This autonomous system provides decision support with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Director - Hospitality Edition #9 - Zion Tech Group",
+    "description": "Unlock unprecedented growth with AI Director - Hospitality Edition #9. This autonomous system provides decision support with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-director---hospitality-edition-9-26e157b7"
+    }
+  },
+  "features": [
+    "Auto-scaling capabilities",
+    "Role-based access control",
+    "Plugin architecture",
+    "Multi-language support",
+    "Multi-region deployment"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "Real-time insights and alerts",
+    "Cost optimization recommendations",
+    "Zero manual intervention required",
+    "Performance benchmarking"
+  ]
+}

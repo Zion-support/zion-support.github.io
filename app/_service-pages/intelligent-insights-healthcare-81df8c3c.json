@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/intelligent-insights-healthcare-81df8c3c",
+  "breadcrumbTitle": "Intelligent insights-healthcare",
+  "title": "Intelligent insights-healthcare",
+  "description": "Unlock unprecedented growth with Intelligent insights-healthcare. This autonomous system provides resource optimization with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent insights-healthcare - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Intelligent insights-healthcare. This autonomous system provides resource optimization with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-insights-healthcare-81df8c3c"
+    }
+  },
+  "features": [
+    "Open-source friendly",
+    "Machine learning integration",
+    "Data encryption",
+    "SOC 2 certified",
+    "Edge computing support"
+  ],
+  "benefits": [
+    "Performance benchmarking",
+    "Zero manual intervention required",
+    "Predictive maintenance scheduling",
+    "3x faster decision making",
+    "Seamless integration with existing systems"
+  ]
+}

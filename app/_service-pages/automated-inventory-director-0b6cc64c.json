@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/automated-inventory-director-0b6cc64c",
+  "breadcrumbTitle": "Automated Inventory Director",
+  "title": "Automated Inventory Director",
+  "description": "Transform your transportation operations with our Automated Inventory Director. This AI-driven solution automates fraud prevention with unprecedented accuracy a",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated Inventory Director - Zion Tech Group",
+    "description": "Transform your transportation operations with our Automated Inventory Director. This AI-driven solution automates fraud prevention with unprecedented accuracy a",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-inventory-director-0b6cc64c"
+    }
+  },
+  "features": [
+    "Cloud-native architecture",
+    "Multi-language support",
+    "Role-based access control",
+    "Offline capabilities"
+  ],
+  "benefits": [
+    "Scalable to millions of transactions",
+    "Automated compliance reporting",
+    "3x faster decision making",
+    "Self-healing infrastructure"
+  ]
+}

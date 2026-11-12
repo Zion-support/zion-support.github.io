@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/ai-suite---logistics-edition-6d790dea",
+  "breadcrumbTitle": "AI Suite - Logistics Edition",
+  "title": "AI Suite - Logistics Edition",
+  "description": "Transform your logistics operations with our AI Suite - Logistics Edition. This AI-driven solution automates energy management with unprecedented accuracy and e",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Suite - Logistics Edition - Zion Tech Group",
+    "description": "Transform your logistics operations with our AI Suite - Logistics Edition. This AI-driven solution automates energy management with unprecedented accuracy and e",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-suite---logistics-edition-6d790dea"
+    }
+  },
+  "features": [
+    "Real-time processing",
+    "Zero-downtime updates",
+    "Role-based access control",
+    "Performance dashboards",
+    "Custom integrations"
+  ],
+  "benefits": [
+    "Dynamic resource allocation",
+    "Cost optimization recommendations",
+    "50% reduction in operational costs",
+    "24/7 automated operations",
+    "3x faster decision making"
+  ]
+}

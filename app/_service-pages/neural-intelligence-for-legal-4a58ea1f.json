@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/neural-intelligence-for-legal-4a58ea1f",
+  "breadcrumbTitle": "Neural Intelligence for Legal",
+  "title": "Neural Intelligence for Legal",
+  "description": "Next-generation legal solution: Neural Intelligence for Legal. Combines customer insights with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Neural Intelligence for Legal - Zion Tech Group",
+    "description": "Next-generation legal solution: Neural Intelligence for Legal. Combines customer insights with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/neural-intelligence-for-legal-4a58ea1f"
+    }
+  },
+  "features": [
+    "API-first design",
+    "Zero-downtime updates",
+    "Real-time processing",
+    "Data encryption",
+    "Audit trails"
+  ],
+  "benefits": [
+    "50% reduction in operational costs",
+    "Dynamic resource allocation",
+    "3x faster decision making"
+  ]
+}

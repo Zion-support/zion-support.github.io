@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/smart-manager-for-logistics-bca7b0f9",
+  "breadcrumbTitle": "Smart Manager for Logistics",
+  "title": "Smart Manager for Logistics",
+  "description": "Revolutionize Logistics through intelligent automation. Our Smart Manager for Logistics leverages advanced machine learning to deliver sales forecasting at scal",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Manager for Logistics - Zion Tech Group",
+    "description": "Revolutionize Logistics through intelligent automation. Our Smart Manager for Logistics leverages advanced machine learning to deliver sales forecasting at scal",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-manager-for-logistics-bca7b0f9"
+    }
+  },
+  "features": [
+    "Process discovery with activity analysis",
+    "Audit trails with compliance reporting",
+    "Maintenance scheduling with predictive analytics",
+    "Revenue forecasting with market trend analysis",
+    "Energy optimization with consumption tracking"
+  ],
+  "benefits": [
+    "Better inventory management with demand forecasting",
+    "Increased revenue with optimized pricing strategies",
+    "Reduced operational risks with predictive models",
+    "Reduced customer acquisition costs with optimization"
+  ]
+}

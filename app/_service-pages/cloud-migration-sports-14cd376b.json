@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/cloud-migration-sports-14cd376b",
+  "breadcrumbTitle": "Cloud Migration Services - Sports",
+  "title": "Cloud Migration Services - Sports",
+  "description": "Seamless cloud migration for Sports companies. We move workloads to AWS/Azure/GCP with minimal downtime and maximum performance.",
+  "basic": "$299/month",
+  "pro": "$799/month",
+  "enterprise": "$2499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Cloud Migration Services - Sports - Zion Tech Group",
+    "description": "Seamless cloud migration for Sports companies. We move workloads to AWS/Azure/GCP with minimal downtime and maximum performance.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cloud-migration-sports-14cd376b"
+    }
+  },
+  "features": [
+    "Cloud readiness assessment",
+    "Migration planning and execution",
+    "Data transfer and validation",
+    "Cost optimization",
+    "Security and compliance checks"
+  ],
+  "benefits": [
+    "30-50% infra cost reduction",
+    "Scalable resources on demand",
+    "Improved disaster recovery",
+    "Faster deployment cycles",
+    "Better business continuity"
+  ]
+}

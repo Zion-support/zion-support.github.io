@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/smart-workflow-manager-d53ceb8b",
+  "breadcrumbTitle": "Smart Workflow Manager",
+  "title": "Smart Workflow Manager",
+  "description": "Revolutionize hospitality through intelligent automation. Our Smart Workflow Manager leverages advanced machine learning to deliver image recognition at scale.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Workflow Manager - Zion Tech Group",
+    "description": "Revolutionize hospitality through intelligent automation. Our Smart Workflow Manager leverages advanced machine learning to deliver image recognition at scale.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-workflow-manager-d53ceb8b"
+    }
+  },
+  "features": [
+    "Serverless functions",
+    "Role-based access control",
+    "Machine learning integration",
+    "Multi-language support"
+  ],
+  "benefits": [
+    "24/7 automated operations",
+    "Seamless integration with existing systems",
+    "3x faster decision making"
+  ]
+}

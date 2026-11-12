@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/neural-manager-energy-8186ac6a",
+  "breadcrumbTitle": "Neural manager-energy",
+  "title": "Neural manager-energy",
+  "description": "Next-generation energy solution: Neural manager-energy. Combines document processing with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Neural manager-energy - Zion Tech Group",
+    "description": "Next-generation energy solution: Neural manager-energy. Combines document processing with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/neural-manager-energy-8186ac6a"
+    }
+  },
+  "features": [
+    "HIPAA ready",
+    "Real-time processing",
+    "Alerting system",
+    "Plugin architecture"
+  ],
+  "benefits": [
+    "Performance benchmarking",
+    "50% reduction in operational costs",
+    "Cost optimization recommendations"
+  ]
+}

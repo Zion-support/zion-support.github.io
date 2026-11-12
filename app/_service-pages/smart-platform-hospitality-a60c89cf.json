@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/smart-platform-hospitality-a60c89cf",
+  "breadcrumbTitle": "Smart platform-hospitality",
+  "title": "Smart platform-hospitality",
+  "description": "Revolutionize hospitality through intelligent automation. Our Smart platform-hospitality leverages advanced machine learning to deliver energy management at sca",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart platform-hospitality - Zion Tech Group",
+    "description": "Revolutionize hospitality through intelligent automation. Our Smart platform-hospitality leverages advanced machine learning to deliver energy management at sca",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-platform-hospitality-a60c89cf"
+    }
+  },
+  "features": [
+    "Zero-downtime updates",
+    "Multi-region deployment",
+    "Edge computing support",
+    "Comprehensive monitoring"
+  ],
+  "benefits": [
+    "Dynamic resource allocation",
+    "Automated compliance reporting",
+    "Reduced human error by 95%",
+    "Performance benchmarking",
+    "Real-time insights and alerts"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/coordinator-cognitive---sports-0b777bc2",
+  "breadcrumbTitle": "Coordinator Cognitive - Sports",
+  "title": "Coordinator Cognitive - Sports",
+  "description": "Next-generation sports solution: Coordinator Cognitive - Sports. Combines energy management with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Coordinator Cognitive - Sports - Zion Tech Group",
+    "description": "Next-generation sports solution: Coordinator Cognitive - Sports. Combines energy management with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/coordinator-cognitive---sports-0b777bc2"
+    }
+  },
+  "features": [
+    "Role-based access control",
+    "Zero-downtime updates",
+    "Mobile-responsive interface",
+    "Container orchestration",
+    "Comprehensive monitoring"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "Enterprise-grade security",
+    "Seamless integration with existing systems",
+    "ROI in under 90 days",
+    "Cost optimization recommendations"
+  ]
+}

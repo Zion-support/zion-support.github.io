@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-federated-insurtech-analytics-a97dad9d",
+  "breadcrumbTitle": "AI-Powered Federated Insurtech Analytics",
+  "title": "AI-Powered Federated Insurtech Analytics",
+  "description": "AI-driven analytics platform that delivers federated insights into insurtech operations, providing real-time monitoring, predictive modeling, and automated repo",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Federated Insurtech Analytics - Zion Tech Group",
+    "description": "AI-driven analytics platform that delivers federated insights into insurtech operations, providing real-time monitoring, predictive modeling, and automated repo",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-federated-insurtech-analytics-a97dad9d"
+    }
+  },
+  "features": [
+    "Real-time monitoring",
+    "Predictive modeling",
+    "Automated reporting",
+    "Custom dashboards"
+  ],
+  "benefits": [
+    "Data-driven decision making",
+    "Improved operational efficiency",
+    "Proactive issue detection",
+    "Enhanced KPI tracking"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-engine---retail-edition-4752c251",
+  "breadcrumbTitle": "AI Engine - Retail Edition",
+  "title": "AI Engine - Retail Edition",
+  "description": "Unlock unprecedented growth with AI Engine - Retail Edition. This autonomous system provides maintenance scheduling with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Engine - Retail Edition - Zion Tech Group",
+    "description": "Unlock unprecedented growth with AI Engine - Retail Edition. This autonomous system provides maintenance scheduling with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-engine---retail-edition-4752c251"
+    }
+  },
+  "features": [
+    "Cloud-native architecture",
+    "Plugin architecture",
+    "Zero-downtime updates",
+    "Rollback mechanisms",
+    "Alerting system"
+  ],
+  "benefits": [
+    "Cost optimization recommendations",
+    "24/7 automated operations",
+    "Dynamic resource allocation"
+  ]
+}

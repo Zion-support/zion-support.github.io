@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/ai-manager---healthcare-edition-45f90b2c",
+  "breadcrumbTitle": "AI Manager - Healthcare Edition",
+  "title": "AI Manager - Healthcare Edition",
+  "description": "Revolutionize healthcare through intelligent automation. Our AI Manager - Healthcare Edition leverages advanced machine learning to deliver process automation a",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Manager - Healthcare Edition - Zion Tech Group",
+    "description": "Revolutionize healthcare through intelligent automation. Our AI Manager - Healthcare Edition leverages advanced machine learning to deliver process automation a",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-manager---healthcare-edition-45f90b2c"
+    }
+  },
+  "features": [
+    "Serverless functions",
+    "Offline capabilities",
+    "Multi-language support",
+    "Custom integrations"
+  ],
+  "benefits": [
+    "Performance benchmarking",
+    "3x faster decision making",
+    "24/7 automated operations"
+  ]
+}

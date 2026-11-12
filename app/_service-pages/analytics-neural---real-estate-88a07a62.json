@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/analytics-neural---real-estate-88a07a62",
+  "breadcrumbTitle": "Analytics Neural - Real-Estate",
+  "title": "Analytics Neural - Real-Estate",
+  "description": "Next-generation real-estate solution: Analytics Neural - Real-Estate. Combines threat detection with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Analytics Neural - Real-Estate - Zion Tech Group",
+    "description": "Next-generation real-estate solution: Analytics Neural - Real-Estate. Combines threat detection with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/analytics-neural---real-estate-88a07a62"
+    }
+  },
+  "features": [
+    "Offline capabilities",
+    "Auto-scaling capabilities",
+    "Microservices deployment",
+    "Role-based access control",
+    "Custom integrations"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "ROI in under 90 days",
+    "Enterprise-grade security",
+    "Automated compliance reporting"
+  ]
+}

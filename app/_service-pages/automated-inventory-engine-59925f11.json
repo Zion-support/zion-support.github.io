@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/automated-inventory-engine-59925f11",
+  "breadcrumbTitle": "Automated Inventory Engine",
+  "title": "Automated Inventory Engine",
+  "description": "Next-generation hospitality solution: Automated Inventory Engine. Combines customer insights with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated Inventory Engine - Zion Tech Group",
+    "description": "Next-generation hospitality solution: Automated Inventory Engine. Combines customer insights with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-inventory-engine-59925f11"
+    }
+  },
+  "features": [
+    "Custom integrations",
+    "Data encryption",
+    "Open-source friendly",
+    "Real-time processing"
+  ],
+  "benefits": [
+    "Automated compliance reporting",
+    "Dynamic resource allocation",
+    "Cost optimization recommendations"
+  ]
+}

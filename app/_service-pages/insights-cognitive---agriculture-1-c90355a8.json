@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/insights-cognitive---agriculture-1-c90355a8",
+  "breadcrumbTitle": "Insights Cognitive - Agriculture #1",
+  "title": "Insights Cognitive - Agriculture #1",
+  "description": "Transform your agriculture operations with our Insights Cognitive - Agriculture #1. This AI-driven solution automates compliance monitoring with unprecedented a",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Insights Cognitive - Agriculture #1 - Zion Tech Group",
+    "description": "Transform your agriculture operations with our Insights Cognitive - Agriculture #1. This AI-driven solution automates compliance monitoring with unprecedented a",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/insights-cognitive---agriculture-1-c90355a8"
+    }
+  },
+  "features": [
+    "Microservices deployment",
+    "Performance dashboards",
+    "Custom integrations",
+    "Role-based access control"
+  ],
+  "benefits": [
+    "Scalable to millions of transactions",
+    "ROI in under 90 days",
+    "Reduced human error by 95%"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-modular-insurance-processing-framework-9827c616",
+  "breadcrumbTitle": "Intelligent Modular Insurance Processing Framework",
+  "title": "Intelligent Modular Insurance Processing Framework",
+  "description": "Intelligent processing framework that automates modular insurance data flows with real-time transformation.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Intelligent Modular Insurance Processing Framework - Zion Tech Group",
+    "description": "Intelligent processing framework that automates modular insurance data flows with real-time transformation.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-modular-insurance-processing-framework-9827c616"
+    }
+  },
+  "features": [
+    "Real-time processing",
+    "Data transformation",
+    "ETL pipelines",
+    "Stream processing"
+  ],
+  "benefits": [
+    "Faster data flows",
+    "Reduced processing time",
+    "Higher throughput",
+    "Real-time transformation"
+  ]
+}

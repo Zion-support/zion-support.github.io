@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/manager-adaptive---education-1-808005f7",
+  "breadcrumbTitle": "Manager Adaptive - Education #1",
+  "title": "Manager Adaptive - Education #1",
+  "description": "The future of education is here with Manager Adaptive - Education #1. Powered by cutting-edge AI, this platform delivers decision support like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Manager Adaptive - Education #1 - Zion Tech Group",
+    "description": "The future of education is here with Manager Adaptive - Education #1. Powered by cutting-edge AI, this platform delivers decision support like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/manager-adaptive---education-1-808005f7"
+    }
+  },
+  "features": [
+    "SOC 2 certified",
+    "Microservices deployment",
+    "Multi-language support",
+    "Audit trails",
+    "HIPAA ready"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "Self-healing infrastructure",
+    "Enterprise-grade security",
+    "Predictive maintenance scheduling",
+    "50% reduction in operational costs"
+  ]
+}

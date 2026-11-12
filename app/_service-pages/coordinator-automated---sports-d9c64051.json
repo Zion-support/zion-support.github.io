@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/coordinator-automated---sports-d9c64051",
+  "breadcrumbTitle": "Coordinator Automated - Sports",
+  "title": "Coordinator Automated - Sports",
+  "description": "Next-generation sports solution: Coordinator Automated - Sports. Combines customer insights with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Coordinator Automated - Sports - Zion Tech Group",
+    "description": "Next-generation sports solution: Coordinator Automated - Sports. Combines customer insights with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/coordinator-automated---sports-d9c64051"
+    }
+  },
+  "features": [
+    "Auto-scaling capabilities",
+    "API-first design",
+    "Multi-region deployment",
+    "Mobile-responsive interface",
+    "Cloud-native architecture"
+  ],
+  "benefits": [
+    "Scalable to millions of transactions",
+    "24/7 automated operations",
+    "50% reduction in operational costs",
+    "Reduced human error by 95%",
+    "Intelligent load balancing"
+  ]
+}

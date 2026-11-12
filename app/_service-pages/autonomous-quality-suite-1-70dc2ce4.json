@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/autonomous-quality-suite-1-70dc2ce4",
+  "breadcrumbTitle": "Autonomous Quality Suite #1",
+  "title": "Autonomous Quality Suite #1",
+  "description": "Unlock unprecedented growth with Autonomous Quality Suite #1. This autonomous system provides inventory management with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous Quality Suite #1 - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Autonomous Quality Suite #1. This autonomous system provides inventory management with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-quality-suite-1-70dc2ce4"
+    }
+  },
+  "features": [
+    "Container orchestration",
+    "Cloud-native architecture",
+    "API-first design",
+    "Open-source friendly",
+    "Machine learning integration"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "99.9% uptime guarantee",
+    "24/7 automated operations"
+  ]
+}

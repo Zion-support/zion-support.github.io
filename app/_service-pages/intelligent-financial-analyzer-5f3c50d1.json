@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-financial-analyzer-5f3c50d1",
+  "breadcrumbTitle": "Intelligent Financial Analyzer",
+  "title": "Intelligent Financial Analyzer",
+  "description": "Transform your logistics operations with our Intelligent Financial Analyzer. This AI-driven solution automates threat detection with unprecedented accuracy and ",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Financial Analyzer - Zion Tech Group",
+    "description": "Transform your logistics operations with our Intelligent Financial Analyzer. This AI-driven solution automates threat detection with unprecedented accuracy and ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-financial-analyzer-5f3c50d1"
+    }
+  },
+  "features": [
+    "Data encryption",
+    "Alerting system",
+    "Microservices deployment",
+    "Mobile-responsive interface"
+  ],
+  "benefits": [
+    "50% reduction in operational costs",
+    "Predictive maintenance scheduling",
+    "99.9% uptime guarantee",
+    "Real-time insights and alerts"
+  ]
+}

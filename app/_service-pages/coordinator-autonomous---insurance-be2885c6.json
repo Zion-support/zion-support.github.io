@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/coordinator-autonomous---insurance-be2885c6",
+  "breadcrumbTitle": "Coordinator Autonomous - Insurance",
+  "title": "Coordinator Autonomous - Insurance",
+  "description": "Next-generation insurance solution: Coordinator Autonomous - Insurance. Combines quality control with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Coordinator Autonomous - Insurance - Zion Tech Group",
+    "description": "Next-generation insurance solution: Coordinator Autonomous - Insurance. Combines quality control with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/coordinator-autonomous---insurance-be2885c6"
+    }
+  },
+  "features": [
+    "SOC 2 certified",
+    "Plugin architecture",
+    "Open-source friendly",
+    "GDPR compliance",
+    "Mobile-responsive interface"
+  ],
+  "benefits": [
+    "Scalable to millions of transactions",
+    "50% reduction in operational costs",
+    "Real-time insights and alerts",
+    "ROI in under 90 days",
+    "Dynamic resource allocation"
+  ]
+}

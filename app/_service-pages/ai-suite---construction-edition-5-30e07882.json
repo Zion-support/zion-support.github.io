@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-suite---construction-edition-5-30e07882",
+  "breadcrumbTitle": "AI Suite - Construction Edition #5",
+  "title": "AI Suite - Construction Edition #5",
+  "description": "Next-generation construction solution: AI Suite - Construction Edition #5. Combines decision support with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Suite - Construction Edition #5 - Zion Tech Group",
+    "description": "Next-generation construction solution: AI Suite - Construction Edition #5. Combines decision support with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-suite---construction-edition-5-30e07882"
+    }
+  },
+  "features": [
+    "Offline capabilities",
+    "Multi-region deployment",
+    "Comprehensive monitoring",
+    "Plugin architecture",
+    "Microservices deployment"
+  ],
+  "benefits": [
+    "50% reduction in operational costs",
+    "Real-time insights and alerts",
+    "Performance benchmarking",
+    "Zero manual intervention required"
+  ]
+}

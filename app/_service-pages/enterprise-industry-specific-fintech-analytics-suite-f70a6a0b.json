@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/enterprise-industry-specific-fintech-analytics-suite-f70a6a0b",
+  "breadcrumbTitle": "Enterprise Industry-Specific Fintech Analytics Suite",
+  "title": "Enterprise Industry-Specific Fintech Analytics Suite",
+  "description": "Enterprise analytics suite that delivers industry-specific fintech insights with unified dashboards and reporting.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Enterprise Industry-Specific Fintech Analytics Suite - Zion Tech Group",
+    "description": "Enterprise analytics suite that delivers industry-specific fintech insights with unified dashboards and reporting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/enterprise-industry-specific-fintech-analytics-suite-f70a6a0b"
+    }
+  },
+  "features": [
+    "Data visualization",
+    "Custom dashboards",
+    "Report generation",
+    "KPI tracking"
+  ],
+  "benefits": [
+    "Unified data view",
+    "Faster insights",
+    "Customizable reports",
+    "Cross-functional collaboration"
+  ]
+}

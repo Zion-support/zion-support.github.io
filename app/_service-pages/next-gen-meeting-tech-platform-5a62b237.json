@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/next-gen-meeting-tech-platform-5a62b237",
+  "breadcrumbTitle": "Next-Gen Meeting Tech Platform",
+  "title": "Next-Gen Meeting Tech Platform",
+  "description": "Transform your tech operations with our Next-Gen Meeting Tech Platform. This AI-driven solution automates feedback collection with unprecedented accuracy and ef",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Next-Gen Meeting Tech Platform - Zion Tech Group",
+    "description": "Transform your tech operations with our Next-Gen Meeting Tech Platform. This AI-driven solution automates feedback collection with unprecedented accuracy and ef",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/next-gen-meeting-tech-platform-5a62b237"
+    }
+  },
+  "features": [
+    "Data encryption at rest and in transit",
+    "Comprehensive monitoring with custom dashboards",
+    "SOC 2 certified with security controls",
+    "Custom integrations with webhook support",
+    "Meeting transcription with action item extraction"
+  ],
+  "benefits": [
+    "Automated compliance reporting for regulatory requirements",
+    "Predictive maintenance scheduling to prevent downtime",
+    "Dynamic resource allocation based on demand patterns",
+    "99.9% uptime guarantee with redundant architecture",
+    "Seamless integration with existing systems and workflows"
+  ]
+}

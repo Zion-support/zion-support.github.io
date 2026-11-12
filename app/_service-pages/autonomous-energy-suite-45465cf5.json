@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/autonomous-energy-suite-45465cf5",
+  "breadcrumbTitle": "Autonomous Energy Suite",
+  "title": "Autonomous Energy Suite",
+  "description": "Transform your real-estate operations with our Autonomous Energy Suite. This AI-driven solution automates network optimization with unprecedented accuracy and e",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous Energy Suite - Zion Tech Group",
+    "description": "Transform your real-estate operations with our Autonomous Energy Suite. This AI-driven solution automates network optimization with unprecedented accuracy and e",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-energy-suite-45465cf5"
+    }
+  },
+  "features": [
+    "Machine learning integration",
+    "Open-source friendly",
+    "Serverless functions",
+    "Mobile-responsive interface"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "99.9% uptime guarantee",
+    "Real-time insights and alerts",
+    "Dynamic resource allocation",
+    "Intelligent load balancing"
+  ]
+}

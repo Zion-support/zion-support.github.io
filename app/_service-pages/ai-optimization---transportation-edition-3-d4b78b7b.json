@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-optimization---transportation-edition-3-d4b78b7b",
+  "breadcrumbTitle": "AI Optimization - Transportation Edition #3",
+  "title": "AI Optimization - Transportation Edition #3",
+  "description": "Transform your transportation operations with our AI Optimization - Transportation Edition #3. This AI-driven solution automates maintenance scheduling with unp",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Optimization - Transportation Edition #3 - Zion Tech Group",
+    "description": "Transform your transportation operations with our AI Optimization - Transportation Edition #3. This AI-driven solution automates maintenance scheduling with unp",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-optimization---transportation-edition-3-d4b78b7b"
+    }
+  },
+  "features": [
+    "Machine learning integration",
+    "Edge computing support",
+    "Offline capabilities",
+    "API-first design",
+    "Auto-scaling capabilities"
+  ],
+  "benefits": [
+    "Seamless integration with existing systems",
+    "3x faster decision making",
+    "Real-time insights and alerts"
+  ]
+}

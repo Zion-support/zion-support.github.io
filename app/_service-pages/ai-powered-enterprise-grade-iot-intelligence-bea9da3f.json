@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-enterprise-grade-iot-intelligence-bea9da3f",
+  "breadcrumbTitle": "AI-Powered Enterprise-Grade IoT Intelligence",
+  "title": "AI-Powered Enterprise-Grade IoT Intelligence",
+  "description": "Edge AI platform that processes IoT sensor data in real-time with enterprise-grade insights.",
+  "basic": "$258/month",
+  "pro": "$648/month",
+  "enterprise": "$1948/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Enterprise-Grade IoT Intelligence - Zion Tech Group",
+    "description": "Edge AI platform that processes IoT sensor data in real-time with enterprise-grade insights.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-enterprise-grade-iot-intelligence-bea9da3f"
+    }
+  },
+  "features": [
+    "Edge processing",
+    "Real-time analytics",
+    "Automated responses",
+    "Energy efficiency"
+  ],
+  "benefits": [
+    "Reduced latency",
+    "Better insights",
+    "Automated responses",
+    "Energy efficiency"
+  ]
+}

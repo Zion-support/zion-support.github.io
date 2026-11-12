@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/automated-inventory-intelligence-cb20b7e6",
+  "breadcrumbTitle": "Automated Inventory Intelligence",
+  "title": "Automated Inventory Intelligence",
+  "description": "Transform your hospitality operations with our Automated Inventory Intelligence. This AI-driven solution automates predictive analytics with unprecedented accur",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated Inventory Intelligence - Zion Tech Group",
+    "description": "Transform your hospitality operations with our Automated Inventory Intelligence. This AI-driven solution automates predictive analytics with unprecedented accur",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-inventory-intelligence-cb20b7e6"
+    }
+  },
+  "features": [
+    "GDPR compliance",
+    "Machine learning integration",
+    "Performance dashboards",
+    "Role-based access control",
+    "Real-time processing"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "Predictive maintenance scheduling",
+    "Performance benchmarking"
+  ]
+}

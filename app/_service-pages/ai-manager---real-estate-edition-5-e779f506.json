@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/ai-manager---real-estate-edition-5-e779f506",
+  "breadcrumbTitle": "AI Manager - Real-Estate Edition #5",
+  "title": "AI Manager - Real-Estate Edition #5",
+  "description": "The future of real-estate is here with AI Manager - Real-Estate Edition #5. Powered by cutting-edge AI, this platform delivers market intelligence like never be",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Manager - Real-Estate Edition #5 - Zion Tech Group",
+    "description": "The future of real-estate is here with AI Manager - Real-Estate Edition #5. Powered by cutting-edge AI, this platform delivers market intelligence like never be",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-manager---real-estate-edition-5-e779f506"
+    }
+  },
+  "features": [
+    "SOC 2 certified",
+    "Mobile-responsive interface",
+    "Zero-downtime updates",
+    "Serverless functions",
+    "Cloud-native architecture"
+  ],
+  "benefits": [
+    "Intelligent load balancing",
+    "3x faster decision making",
+    "Self-healing infrastructure",
+    "Enterprise-grade security",
+    "24/7 automated operations"
+  ]
+}

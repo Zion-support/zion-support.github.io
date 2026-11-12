@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-driven-real-time-customer-analytics-57c4d2bd",
+  "breadcrumbTitle": "AI-Driven Real-Time Customer Analytics",
+  "title": "AI-Driven Real-Time Customer Analytics",
+  "description": "Customer intelligence platform that delivers real-time insights into shopper behavior, lifetime value, and churn prediction for retail and e-commerce businesses",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Driven Real-Time Customer Analytics - Zion Tech Group",
+    "description": "Customer intelligence platform that delivers real-time insights into shopper behavior, lifetime value, and churn prediction for retail and e-commerce businesses",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-driven-real-time-customer-analytics-57c4d2bd"
+    }
+  },
+  "features": [
+    "Behavioral analysis",
+    "LTV prediction",
+    "Churn prevention",
+    "Segment activation"
+  ],
+  "benefits": [
+    "Higher retention",
+    "Increased LTV",
+    "Targeted marketing",
+    "Better ROI"
+  ]
+}

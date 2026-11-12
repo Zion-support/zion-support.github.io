@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-performance-optimizer-ed4896b1",
+  "breadcrumbTitle": "Intelligent Performance Optimizer",
+  "title": "Intelligent Performance Optimizer",
+  "description": "Revolutionize transportation through intelligent automation. Our Intelligent Performance Optimizer leverages advanced machine learning to deliver image recognit",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Performance Optimizer - Zion Tech Group",
+    "description": "Revolutionize transportation through intelligent automation. Our Intelligent Performance Optimizer leverages advanced machine learning to deliver image recognit",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-performance-optimizer-ed4896b1"
+    }
+  },
+  "features": [
+    "Edge computing support",
+    "Alerting system",
+    "Comprehensive monitoring",
+    "Container orchestration",
+    "Zero-downtime updates"
+  ],
+  "benefits": [
+    "Intelligent load balancing",
+    "Zero manual intervention required",
+    "Reduced human error by 95%"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/generator-intelligent---transportation-826310e0",
+  "breadcrumbTitle": "Generator Intelligent - Transportation",
+  "title": "Generator Intelligent - Transportation",
+  "description": "Next-generation transportation solution: Generator Intelligent - Transportation. Combines maintenance scheduling with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Generator Intelligent - Transportation - Zion Tech Group",
+    "description": "Next-generation transportation solution: Generator Intelligent - Transportation. Combines maintenance scheduling with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/generator-intelligent---transportation-826310e0"
+    }
+  },
+  "features": [
+    "Plugin architecture",
+    "Cloud-native architecture",
+    "GDPR compliance",
+    "Auto-scaling capabilities"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Enterprise-grade security",
+    "Predictive maintenance scheduling",
+    "Self-healing infrastructure",
+    "Performance benchmarking"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/analytics-data-healthcare-db0e8fd1",
+  "breadcrumbTitle": "Analytics Data - Healthcare",
+  "title": "Analytics Data - Healthcare",
+  "description": "Enhance your healthcare business with Analytics Data - Healthcare. Our solution provides data migration with enterprise-grade reliability and security.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Analytics Data - Healthcare - Zion Tech Group",
+    "description": "Enhance your healthcare business with Analytics Data - Healthcare. Our solution provides data migration with enterprise-grade reliability and security.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/analytics-data-healthcare-db0e8fd1"
+    }
+  },
+  "features": [
+    "HIPAA ready with healthcare data protection",
+    "SOC 2 certified with security controls",
+    "Real-time processing with streaming analytics",
+    "Custom integrations with webhook support",
+    "Read replicas for horizontal scaling"
+  ],
+  "benefits": [
+    "Cost optimization recommendations with savings analysis",
+    "Zero manual intervention required for routine tasks",
+    "Real-time insights and alerts for proactive management",
+    "24/7 automated operations without human intervention",
+    "99.9% uptime guarantee with redundant architecture"
+  ]
+}

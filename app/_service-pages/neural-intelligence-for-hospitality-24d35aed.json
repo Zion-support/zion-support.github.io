@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/neural-intelligence-for-hospitality-24d35aed",
+  "breadcrumbTitle": "Neural Intelligence for Hospitality",
+  "title": "Neural Intelligence for Hospitality",
+  "description": "Revolutionize hospitality through intelligent automation. Our Neural Intelligence for Hospitality leverages advanced machine learning to deliver resource optimi",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Neural Intelligence for Hospitality - Zion Tech Group",
+    "description": "Revolutionize hospitality through intelligent automation. Our Neural Intelligence for Hospitality leverages advanced machine learning to deliver resource optimi",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/neural-intelligence-for-hospitality-24d35aed"
+    }
+  },
+  "features": [
+    "Plugin architecture",
+    "Offline capabilities",
+    "Audit trails",
+    "Serverless functions"
+  ],
+  "benefits": [
+    "Cost optimization recommendations",
+    "Real-time insights and alerts",
+    "24/7 automated operations",
+    "Automated compliance reporting"
+  ]
+}

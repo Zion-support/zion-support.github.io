@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligent-content-analyzer-5ce439ea",
+  "breadcrumbTitle": "Intelligent Content Analyzer",
+  "title": "Intelligent Content Analyzer",
+  "description": "The future of agriculture is here with Intelligent Content Analyzer. Powered by cutting-edge AI, this platform delivers maintenance scheduling like never before",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Content Analyzer - Zion Tech Group",
+    "description": "The future of agriculture is here with Intelligent Content Analyzer. Powered by cutting-edge AI, this platform delivers maintenance scheduling like never before",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-content-analyzer-5ce439ea"
+    }
+  },
+  "features": [
+    "Plugin architecture",
+    "Multi-language support",
+    "HIPAA ready",
+    "Edge computing support"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Enterprise-grade security",
+    "Scalable to millions of transactions",
+    "Seamless integration with existing systems",
+    "24/7 automated operations"
+  ]
+}

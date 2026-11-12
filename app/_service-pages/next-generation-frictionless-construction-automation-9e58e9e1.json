@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/next-generation-frictionless-construction-automation-9e58e9e1",
+  "breadcrumbTitle": "Next-Generation Frictionless Construction Automation",
+  "title": "Next-Generation Frictionless Construction Automation",
+  "description": "Next-generation automation suite that streamlines frictionless construction workflows with intelligent orchestration.",
+  "basic": "$218/month",
+  "pro": "$548/month",
+  "enterprise": "$1648/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Next-Generation Frictionless Construction Automation - Zion Tech Group",
+    "description": "Next-generation automation suite that streamlines frictionless construction workflows with intelligent orchestration.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/next-generation-frictionless-construction-automation-9e58e9e1"
+    }
+  },
+  "features": [
+    "Smart orchestration",
+    "Process automation",
+    "Event processing",
+    "Task scheduling"
+  ],
+  "benefits": [
+    "Faster execution",
+    "Reduced manual steps",
+    "Scalable processes",
+    "Error reduction"
+  ]
+}

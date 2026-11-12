@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/machine-learning-model-operations-platform-9b2e5c01",
+  "breadcrumbTitle": "Machine Learning Model Operations Platform",
+  "title": "Machine Learning Model Operations Platform",
+  "description": "MLOps solution that automates model deployment, monitoring, and retraining for production AI systems.",
+  "basic": "$278/month",
+  "pro": "$698/month",
+  "enterprise": "$2098/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Machine Learning Model Operations Platform - Zion Tech Group",
+    "description": "MLOps solution that automates model deployment, monitoring, and retraining for production AI systems.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/machine-learning-model-operations-platform-9b2e5c01"
+    }
+  },
+  "features": [
+    "Model deployment",
+    "Performance monitoring",
+    "Automated retraining",
+    "Version control"
+  ],
+  "benefits": [
+    "Production-ready models",
+    "Continuous improvement",
+    "Reduced downtime",
+    "Better accuracy"
+  ]
+}

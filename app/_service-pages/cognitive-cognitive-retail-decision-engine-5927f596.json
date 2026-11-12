@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/cognitive-cognitive-retail-decision-engine-5927f596",
+  "breadcrumbTitle": "Cognitive Cognitive Retail Decision Engine",
+  "title": "Cognitive Cognitive Retail Decision Engine",
+  "description": "Cognitive decision engine that processes cognitive signals to drive retail strategy with deep learning.",
+  "basic": "$278/month",
+  "pro": "$698/month",
+  "enterprise": "$2098/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Cognitive Cognitive Retail Decision Engine - Zion Tech Group",
+    "description": "Cognitive decision engine that processes cognitive signals to drive retail strategy with deep learning.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cognitive-cognitive-retail-decision-engine-5927f596"
+    }
+  },
+  "features": [
+    "Cognitive reasoning",
+    "Scenario analysis",
+    "Decision trees",
+    "Recommendation engine"
+  ],
+  "benefits": [
+    "Better decision quality",
+    "Reduced risk",
+    "Faster insights",
+    "Competitive intelligence"
+  ]
+}

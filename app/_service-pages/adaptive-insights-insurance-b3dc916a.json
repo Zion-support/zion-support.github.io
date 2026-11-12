@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/adaptive-insights-insurance-b3dc916a",
+  "breadcrumbTitle": "Adaptive insights-insurance",
+  "title": "Adaptive insights-insurance",
+  "description": "Next-generation insurance solution: Adaptive insights-insurance. Combines quality control with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Adaptive insights-insurance - Zion Tech Group",
+    "description": "Next-generation insurance solution: Adaptive insights-insurance. Combines quality control with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/adaptive-insights-insurance-b3dc916a"
+    }
+  },
+  "features": [
+    "Machine learning integration",
+    "GDPR compliance",
+    "Cloud-native architecture",
+    "API-first design"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "50% reduction in operational costs",
+    "Enterprise-grade security",
+    "Intelligent load balancing",
+    "Scalable to millions of transactions"
+  ]
+}

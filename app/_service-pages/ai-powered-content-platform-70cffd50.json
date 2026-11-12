@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-content-platform-70cffd50",
+  "breadcrumbTitle": "AI-Powered Content Platform",
+  "title": "AI-Powered Content Platform",
+  "description": "Unlock unprecedented growth with AI-Powered Content Platform. This autonomous system provides risk assessment with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Content Platform - Zion Tech Group",
+    "description": "Unlock unprecedented growth with AI-Powered Content Platform. This autonomous system provides risk assessment with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-content-platform-70cffd50"
+    }
+  },
+  "features": [
+    "Offline capabilities",
+    "Serverless functions",
+    "Container orchestration",
+    "API-first design",
+    "Data encryption"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "3x faster decision making",
+    "Scalable to millions of transactions"
+  ]
+}

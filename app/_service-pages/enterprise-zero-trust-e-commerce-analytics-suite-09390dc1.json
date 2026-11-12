@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/enterprise-zero-trust-e-commerce-analytics-suite-09390dc1",
+  "breadcrumbTitle": "Enterprise Zero-Trust E-Commerce Analytics Suite",
+  "title": "Enterprise Zero-Trust E-Commerce Analytics Suite",
+  "description": "Enterprise analytics suite that delivers zero-trust e-commerce insights with unified dashboards and reporting.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Enterprise Zero-Trust E-Commerce Analytics Suite - Zion Tech Group",
+    "description": "Enterprise analytics suite that delivers zero-trust e-commerce insights with unified dashboards and reporting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/enterprise-zero-trust-e-commerce-analytics-suite-09390dc1"
+    }
+  },
+  "features": [
+    "Data visualization",
+    "Custom dashboards",
+    "Report generation",
+    "KPI tracking"
+  ],
+  "benefits": [
+    "Unified data view",
+    "Faster insights",
+    "Customizable reports",
+    "Cross-functional collaboration"
+  ]
+}

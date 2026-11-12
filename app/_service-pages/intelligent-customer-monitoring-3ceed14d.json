@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligent-customer-monitoring-3ceed14d",
+  "breadcrumbTitle": "Intelligent Customer Monitoring",
+  "title": "Intelligent Customer Monitoring",
+  "description": "Next-generation Retail solution: Intelligent Customer Monitoring. Combines code optimization with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Customer Monitoring - Zion Tech Group",
+    "description": "Next-generation Retail solution: Intelligent Customer Monitoring. Combines code optimization with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-customer-monitoring-3ceed14d"
+    }
+  },
+  "features": [
+    "Language processing with sentiment analysis",
+    "Healthcare data analytics with patient insights",
+    "Content generation with plagiarism checks",
+    "Customer journey mapping with touchpoint analysis",
+    "Process discovery with activity analysis"
+  ],
+  "benefits": [
+    "Reduced infrastructure costs with cloud optimization",
+    "Enterprise-grade security with end-to-end encryption",
+    "Improved sales performance with lead scoring",
+    "Enhanced security with continuous threat monitoring"
+  ]
+}

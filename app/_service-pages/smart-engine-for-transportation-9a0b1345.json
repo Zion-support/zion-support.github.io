@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/smart-engine-for-transportation-9a0b1345",
+  "breadcrumbTitle": "Smart Engine for Transportation",
+  "title": "Smart Engine for Transportation",
+  "description": "Revolutionize transportation through intelligent automation. Our Smart Engine for Transportation leverages advanced machine learning to deliver network optimiza",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Engine for Transportation - Zion Tech Group",
+    "description": "Revolutionize transportation through intelligent automation. Our Smart Engine for Transportation leverages advanced machine learning to deliver network optimiza",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-engine-for-transportation-9a0b1345"
+    }
+  },
+  "features": [
+    "Rollback mechanisms",
+    "Performance dashboards",
+    "Comprehensive monitoring",
+    "Open-source friendly",
+    "Mobile-responsive interface"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Self-healing infrastructure",
+    "Seamless integration with existing systems"
+  ]
+}

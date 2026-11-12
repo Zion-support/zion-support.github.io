@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/director-autonomous---energy-df2c472e",
+  "breadcrumbTitle": "Director Autonomous - Energy",
+  "title": "Director Autonomous - Energy",
+  "description": "Unlock unprecedented growth with Director Autonomous - Energy. This autonomous system provides customer insights with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Director Autonomous - Energy - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Director Autonomous - Energy. This autonomous system provides customer insights with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/director-autonomous---energy-df2c472e"
+    }
+  },
+  "features": [
+    "Role-based access control",
+    "GDPR compliance",
+    "Auto-scaling capabilities",
+    "Microservices deployment"
+  ],
+  "benefits": [
+    "50% reduction in operational costs",
+    "24/7 automated operations",
+    "Scalable to millions of transactions",
+    "99.9% uptime guarantee",
+    "Real-time insights and alerts"
+  ]
+}

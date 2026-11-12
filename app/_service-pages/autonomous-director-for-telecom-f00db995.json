@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/autonomous-director-for-telecom-f00db995",
+  "breadcrumbTitle": "Autonomous Director for Telecom",
+  "title": "Autonomous Director for Telecom",
+  "description": "Next-generation telecom solution: Autonomous Director for Telecom. Combines security monitoring with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous Director for Telecom - Zion Tech Group",
+    "description": "Next-generation telecom solution: Autonomous Director for Telecom. Combines security monitoring with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-director-for-telecom-f00db995"
+    }
+  },
+  "features": [
+    "Multi-language support",
+    "Machine learning integration",
+    "Edge computing support",
+    "Performance dashboards"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "24/7 automated operations",
+    "Enterprise-grade security"
+  ]
+}

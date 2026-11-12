@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligent-platform-retail-d559c13c",
+  "breadcrumbTitle": "Intelligent platform-retail",
+  "title": "Intelligent platform-retail",
+  "description": "Next-generation retail solution: Intelligent platform-retail. Combines decision support with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent platform-retail - Zion Tech Group",
+    "description": "Next-generation retail solution: Intelligent platform-retail. Combines decision support with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-platform-retail-d559c13c"
+    }
+  },
+  "features": [
+    "GDPR compliance",
+    "Multi-language support",
+    "Role-based access control",
+    "Real-time processing"
+  ],
+  "benefits": [
+    "Performance benchmarking",
+    "Cost optimization recommendations",
+    "Real-time insights and alerts",
+    "Automated compliance reporting",
+    "3x faster decision making"
+  ]
+}

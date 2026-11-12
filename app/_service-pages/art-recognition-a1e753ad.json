@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/art-recognition-a1e753ad",
+  "breadcrumbTitle": "Art Recognition",
+  "title": "Art Recognition",
+  "description": "Art Recognition is a Swiss technology company headquartered in Adliswil, within the Zurich metropolitan area, Switzerland.  Art Recognition specializes in the a",
+  "basic": "$N/A/month",
+  "pro": "$N/A/month",
+  "enterprise": "$N/A/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Art Recognition - Zion Tech Group",
+    "description": "Art Recognition is a Swiss technology company headquartered in Adliswil, within the Zurich metropolitan area, Switzerland.  Art Recognition specializes in the a",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/art-recognition-a1e753ad"
+    }
+  },
+  "features": [
+    "AI-driven automation",
+    "Cloud-native deployment",
+    "API-first architecture",
+    "Enterprise-grade security",
+    "Scalable infrastructure"
+  ],
+  "benefits": [
+    "Improved operational efficiency",
+    "Reduced manual processes",
+    "Data-driven decision making",
+    "Faster time-to value",
+    "Scalable performance"
+  ]
+}

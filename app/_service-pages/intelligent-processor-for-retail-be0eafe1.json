@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-processor-for-retail-be0eafe1",
+  "breadcrumbTitle": "Intelligent Processor for Retail",
+  "title": "Intelligent Processor for Retail",
+  "description": "Revolutionize retail through intelligent automation. Our Intelligent Processor for Retail leverages advanced machine learning to deliver image recognition at sc",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Processor for Retail - Zion Tech Group",
+    "description": "Revolutionize retail through intelligent automation. Our Intelligent Processor for Retail leverages advanced machine learning to deliver image recognition at sc",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-processor-for-retail-be0eafe1"
+    }
+  },
+  "features": [
+    "Custom integrations",
+    "Edge computing support",
+    "SOC 2 certified",
+    "Auto-scaling capabilities",
+    "Multi-language support"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "3x faster decision making",
+    "Cost optimization recommendations"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-coordinator---transportation-edition-23b7af8c",
+  "breadcrumbTitle": "AI Coordinator - Transportation Edition",
+  "title": "AI Coordinator - Transportation Edition",
+  "description": "Next-generation transportation solution: AI Coordinator - Transportation Edition. Combines image recognition with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Coordinator - Transportation Edition - Zion Tech Group",
+    "description": "Next-generation transportation solution: AI Coordinator - Transportation Edition. Combines image recognition with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-coordinator---transportation-edition-23b7af8c"
+    }
+  },
+  "features": [
+    "Rollback mechanisms",
+    "Mobile-responsive interface",
+    "Auto-scaling capabilities",
+    "Performance dashboards",
+    "Multi-language support"
+  ],
+  "benefits": [
+    "Dynamic resource allocation",
+    "Automated compliance reporting",
+    "50% reduction in operational costs",
+    "3x faster decision making"
+  ]
+}

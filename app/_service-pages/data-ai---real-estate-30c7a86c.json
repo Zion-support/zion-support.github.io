@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/data-ai---real-estate-30c7a86c",
+  "breadcrumbTitle": "Data AI - Real Estate",
+  "title": "Data AI - Real Estate",
+  "description": "Next-generation Real Estate solution: Data AI - Real Estate. Combines financial planning with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Data AI - Real Estate - Zion Tech Group",
+    "description": "Next-generation Real Estate solution: Data AI - Real Estate. Combines financial planning with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/data-ai---real-estate-30c7a86c"
+    }
+  },
+  "features": [
+    "Automation opportunity identification",
+    "Performance dashboards with real-time metrics",
+    "Healthcare data analytics with patient insights",
+    "GDPR compliance with data portability",
+    "Open-source friendly with plugin architecture"
+  ],
+  "benefits": [
+    "Better market positioning with competitive analysis",
+    "Improved employee productivity with automation",
+    "99.9% uptime guarantee with redundant architecture",
+    "Reduced customer acquisition costs with optimization"
+  ]
+}

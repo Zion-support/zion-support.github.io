@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-director---insurance-edition-3-3b202682",
+  "breadcrumbTitle": "AI Director - Insurance Edition #3",
+  "title": "AI Director - Insurance Edition #3",
+  "description": "Transform your insurance operations with our AI Director - Insurance Edition #3. This AI-driven solution automates security monitoring with unprecedented accura",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Director - Insurance Edition #3 - Zion Tech Group",
+    "description": "Transform your insurance operations with our AI Director - Insurance Edition #3. This AI-driven solution automates security monitoring with unprecedented accura",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-director---insurance-edition-3-3b202682"
+    }
+  },
+  "features": [
+    "Edge computing support",
+    "Serverless functions",
+    "Cloud-native architecture",
+    "Alerting system",
+    "Rollback mechanisms"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "Intelligent load balancing",
+    "Zero manual intervention required",
+    "Dynamic resource allocation"
+  ]
+}

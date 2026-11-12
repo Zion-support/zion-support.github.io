@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-system---education-edition-3-4cdaa0c3",
+  "breadcrumbTitle": "AI System - Education Edition #3",
+  "title": "AI System - Education Edition #3",
+  "description": "The future of education is here with AI System - Education Edition #3. Powered by cutting-edge AI, this platform delivers document processing like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI System - Education Edition #3 - Zion Tech Group",
+    "description": "The future of education is here with AI System - Education Edition #3. Powered by cutting-edge AI, this platform delivers document processing like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-system---education-edition-3-4cdaa0c3"
+    }
+  },
+  "features": [
+    "Container orchestration",
+    "Multi-language support",
+    "Custom integrations",
+    "GDPR compliance",
+    "SOC 2 certified"
+  ],
+  "benefits": [
+    "Dynamic resource allocation",
+    "99.9% uptime guarantee",
+    "Automated compliance reporting"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-composable-aerospace-intelligence-platform-bcb71060",
+  "breadcrumbTitle": "AI-Powered Composable Aerospace Intelligence Platform",
+  "title": "AI-Powered Composable Aerospace Intelligence Platform",
+  "description": "AI-driven intelligence platform that delivers composable insights and automated decision-making for aerospace operations.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Composable Aerospace Intelligence Platform - Zion Tech Group",
+    "description": "AI-driven intelligence platform that delivers composable insights and automated decision-making for aerospace operations.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-composable-aerospace-intelligence-platform-bcb71060"
+    }
+  },
+  "features": [
+    "Real-time intelligence",
+    "Automated insights",
+    "Predictive alerts",
+    "API integration"
+  ],
+  "benefits": [
+    "Real-time actionable insights",
+    "Automated decision-making",
+    "Reduced latency",
+    "Improved accuracy"
+  ]
+}

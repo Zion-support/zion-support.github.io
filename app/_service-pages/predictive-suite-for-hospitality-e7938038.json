@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/predictive-suite-for-hospitality-e7938038",
+  "breadcrumbTitle": "Predictive Suite for Hospitality",
+  "title": "Predictive Suite for Hospitality",
+  "description": "Transform your hospitality operations with our Predictive Suite for Hospitality. This AI-driven solution automates inventory management with unprecedented accur",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Predictive Suite for Hospitality - Zion Tech Group",
+    "description": "Transform your hospitality operations with our Predictive Suite for Hospitality. This AI-driven solution automates inventory management with unprecedented accur",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/predictive-suite-for-hospitality-e7938038"
+    }
+  },
+  "features": [
+    "Multi-language support",
+    "Offline capabilities",
+    "HIPAA ready",
+    "Alerting system"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "ROI in under 90 days",
+    "Cost optimization recommendations",
+    "3x faster decision making",
+    "Seamless integration with existing systems"
+  ]
+}

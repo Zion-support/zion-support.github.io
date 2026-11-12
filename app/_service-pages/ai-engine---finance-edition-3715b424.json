@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-engine---finance-edition-3715b424",
+  "breadcrumbTitle": "AI Engine - Finance Edition",
+  "title": "AI Engine - Finance Edition",
+  "description": "Unlock unprecedented growth with AI Engine - Finance Edition. This autonomous system provides supply chain with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Engine - Finance Edition - Zion Tech Group",
+    "description": "Unlock unprecedented growth with AI Engine - Finance Edition. This autonomous system provides supply chain with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-engine---finance-edition-3715b424"
+    }
+  },
+  "features": [
+    "GDPR compliance",
+    "SOC 2 certified",
+    "Open-source friendly",
+    "Role-based access control"
+  ],
+  "benefits": [
+    "Performance benchmarking",
+    "Automated compliance reporting",
+    "Real-time insights and alerts",
+    "Zero manual intervention required",
+    "Dynamic resource allocation"
+  ]
+}

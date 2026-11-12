@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/optimization-neural---automotive-00471ff6",
+  "breadcrumbTitle": "Optimization Neural - Automotive",
+  "title": "Optimization Neural - Automotive",
+  "description": "Next-generation automotive solution: Optimization Neural - Automotive. Combines image recognition with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Optimization Neural - Automotive - Zion Tech Group",
+    "description": "Next-generation automotive solution: Optimization Neural - Automotive. Combines image recognition with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/optimization-neural---automotive-00471ff6"
+    }
+  },
+  "features": [
+    "API-first design",
+    "Role-based access control",
+    "Custom integrations",
+    "Cloud-native architecture"
+  ],
+  "benefits": [
+    "Intelligent load balancing",
+    "Real-time insights and alerts",
+    "Predictive maintenance scheduling",
+    "99.9% uptime guarantee",
+    "Zero manual intervention required"
+  ]
+}

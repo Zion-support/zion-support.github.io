@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/intelligent-engine-insurance-ab6628d3",
+  "breadcrumbTitle": "Intelligent engine-insurance",
+  "title": "Intelligent engine-insurance",
+  "description": "Revolutionize insurance through intelligent automation. Our Intelligent engine-insurance leverages advanced machine learning to deliver energy management at sca",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent engine-insurance - Zion Tech Group",
+    "description": "Revolutionize insurance through intelligent automation. Our Intelligent engine-insurance leverages advanced machine learning to deliver energy management at sca",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-engine-insurance-ab6628d3"
+    }
+  },
+  "features": [
+    "Zero-downtime updates",
+    "Audit trails",
+    "Machine learning integration",
+    "API-first design",
+    "Offline capabilities"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Automated compliance reporting",
+    "Performance benchmarking",
+    "99.9% uptime guarantee",
+    "24/7 automated operations"
+  ]
+}

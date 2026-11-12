@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/intelligent-manager-for-agriculture-1-d1819c4a",
+  "breadcrumbTitle": "Intelligent Manager for Agriculture #1",
+  "title": "Intelligent Manager for Agriculture #1",
+  "description": "Optimize your agriculture workflows with Intelligent Manager for Agriculture #1. This intelligent platform delivers feedback collection through advanced automat",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Intelligent Manager for Agriculture #1 - Zion Tech Group",
+    "description": "Optimize your agriculture workflows with Intelligent Manager for Agriculture #1. This intelligent platform delivers feedback collection through advanced automat",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-manager-for-agriculture-1-d1819c4a"
+    }
+  },
+  "features": [
+    "High availability with clustering",
+    "Data loss prevention (DLP)",
+    "Machine learning integration with automatic model training",
+    "Identity management with IAM",
+    "Usage analytics with insights"
+  ],
+  "benefits": [
+    "Performance benchmarking against industry standards",
+    "Improved agent productivity and satisfaction",
+    "Scalable to millions of transactions per second",
+    "Improved forecast accuracy with ML models",
+    "Better email open and click-through rates"
+  ]
+}

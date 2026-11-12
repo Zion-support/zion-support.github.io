@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/supply-smart---finance-bf97c9ee",
+  "breadcrumbTitle": "Supply Smart - Finance",
+  "title": "Supply Smart - Finance",
+  "description": "Revolutionize Finance through intelligent automation. Our Supply Smart - Finance leverages advanced machine learning to deliver financial risk management at sca",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Supply Smart - Finance - Zion Tech Group",
+    "description": "Revolutionize Finance through intelligent automation. Our Supply Smart - Finance leverages advanced machine learning to deliver financial risk management at sca",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/supply-smart---finance-bf97c9ee"
+    }
+  },
+  "features": [
+    "Logistics route optimization with traffic prediction",
+    "Financial risk management with scenario analysis",
+    "Image recognition with computer vision",
+    "Fraud detection with anomaly analysis",
+    "Mobile-responsive interface with offline capabilities"
+  ],
+  "benefits": [
+    "Enhanced decision making with data-driven insights",
+    "99.9% uptime guarantee with redundant architecture",
+    "Improved quality with automated testing and validation",
+    "Better customer experience with personalization",
+    "Improved customer satisfaction with faster response times"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/enterprise-serverless-retail-analytics-suite-0fdbbaae",
+  "breadcrumbTitle": "Enterprise Serverless Retail Analytics Suite",
+  "title": "Enterprise Serverless Retail Analytics Suite",
+  "description": "Enterprise analytics suite that delivers serverless retail insights with unified dashboards and reporting.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Enterprise Serverless Retail Analytics Suite - Zion Tech Group",
+    "description": "Enterprise analytics suite that delivers serverless retail insights with unified dashboards and reporting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/enterprise-serverless-retail-analytics-suite-0fdbbaae"
+    }
+  },
+  "features": [
+    "Data visualization",
+    "Custom dashboards",
+    "Report generation",
+    "KPI tracking"
+  ],
+  "benefits": [
+    "Unified data view",
+    "Faster insights",
+    "Customizable reports",
+    "Cross-functional collaboration"
+  ]
+}

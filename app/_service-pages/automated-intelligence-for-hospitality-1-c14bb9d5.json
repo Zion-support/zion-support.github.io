@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/automated-intelligence-for-hospitality-1-c14bb9d5",
+  "breadcrumbTitle": "Automated Intelligence for Hospitality #1",
+  "title": "Automated Intelligence for Hospitality #1",
+  "description": "Transform your hospitality operations with our Automated Intelligence for Hospitality #1. This AI-driven solution automates market intelligence with unprecedent",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated Intelligence for Hospitality #1 - Zion Tech Group",
+    "description": "Transform your hospitality operations with our Automated Intelligence for Hospitality #1. This AI-driven solution automates market intelligence with unprecedent",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-intelligence-for-hospitality-1-c14bb9d5"
+    }
+  },
+  "features": [
+    "Performance dashboards",
+    "Mobile-responsive interface",
+    "API-first design",
+    "Microservices deployment",
+    "Auto-scaling capabilities"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "50% reduction in operational costs",
+    "24/7 automated operations",
+    "Seamless integration with existing systems",
+    "Enterprise-grade security"
+  ]
+}

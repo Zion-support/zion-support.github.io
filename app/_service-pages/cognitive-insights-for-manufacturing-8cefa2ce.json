@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/cognitive-insights-for-manufacturing-8cefa2ce",
+  "breadcrumbTitle": "Cognitive Insights for Manufacturing",
+  "title": "Cognitive Insights for Manufacturing",
+  "description": "Transform your manufacturing operations with our Cognitive Insights for Manufacturing. This AI-driven solution automates customer insights with unprecedented ac",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Cognitive Insights for Manufacturing - Zion Tech Group",
+    "description": "Transform your manufacturing operations with our Cognitive Insights for Manufacturing. This AI-driven solution automates customer insights with unprecedented ac",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cognitive-insights-for-manufacturing-8cefa2ce"
+    }
+  },
+  "features": [
+    "GDPR compliance",
+    "Performance dashboards",
+    "HIPAA ready",
+    "Microservices deployment"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Self-healing infrastructure",
+    "24/7 automated operations",
+    "Scalable to millions of transactions"
+  ]
+}

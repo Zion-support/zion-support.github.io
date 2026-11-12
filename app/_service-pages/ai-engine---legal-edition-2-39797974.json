@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-engine---legal-edition-2-39797974",
+  "breadcrumbTitle": "AI Engine - Legal Edition #2",
+  "title": "AI Engine - Legal Edition #2",
+  "description": "The future of legal is here with AI Engine - Legal Edition #2. Powered by cutting-edge AI, this platform delivers content generation like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Engine - Legal Edition #2 - Zion Tech Group",
+    "description": "The future of legal is here with AI Engine - Legal Edition #2. Powered by cutting-edge AI, this platform delivers content generation like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-engine---legal-edition-2-39797974"
+    }
+  },
+  "features": [
+    "Rollback mechanisms",
+    "Zero-downtime updates",
+    "HIPAA ready",
+    "API-first design"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "Automated compliance reporting",
+    "24/7 automated operations",
+    "Enterprise-grade security"
+  ]
+}

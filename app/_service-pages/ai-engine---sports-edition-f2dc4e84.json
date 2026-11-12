@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-engine---sports-edition-f2dc4e84",
+  "breadcrumbTitle": "AI Engine - Sports Edition",
+  "title": "AI Engine - Sports Edition",
+  "description": "Revolutionize sports through intelligent automation. Our AI Engine - Sports Edition leverages advanced machine learning to deliver decision support at scale.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Engine - Sports Edition - Zion Tech Group",
+    "description": "Revolutionize sports through intelligent automation. Our AI Engine - Sports Edition leverages advanced machine learning to deliver decision support at scale.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-engine---sports-edition-f2dc4e84"
+    }
+  },
+  "features": [
+    "Edge computing support",
+    "Serverless functions",
+    "Machine learning integration",
+    "Role-based access control",
+    "API-first design"
+  ],
+  "benefits": [
+    "Cost optimization recommendations",
+    "Real-time insights and alerts",
+    "Performance benchmarking",
+    "3x faster decision making"
+  ]
+}

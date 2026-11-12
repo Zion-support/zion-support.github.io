@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/intelligent-system-for-healthcare-dcfc3eb6",
+  "breadcrumbTitle": "Intelligent System for Healthcare",
+  "title": "Intelligent System for Healthcare",
+  "description": "Transform your Healthcare operations with our Intelligent System for Healthcare. This AI-driven solution automates brand monitoring with unprecedented accuracy ",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent System for Healthcare - Zion Tech Group",
+    "description": "Transform your Healthcare operations with our Intelligent System for Healthcare. This AI-driven solution automates brand monitoring with unprecedented accuracy ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-system-for-healthcare-dcfc3eb6"
+    }
+  },
+  "features": [
+    "Custom integrations with webhook support",
+    "Code optimization with performance profiling",
+    "Zero-downtime updates with blue-green deployment",
+    "Energy optimization with consumption tracking",
+    "Manufacturing quality control with defect detection"
+  ],
+  "benefits": [
+    "Improved employee productivity with automation",
+    "Zero manual intervention required for routine tasks",
+    "50% reduction in operational costs through automation",
+    "Better market positioning with competitive analysis",
+    "Reduced development time with code generation"
+  ]
+}

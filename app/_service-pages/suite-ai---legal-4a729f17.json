@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/suite-ai---legal-4a729f17",
+  "breadcrumbTitle": "Suite AI - Legal",
+  "title": "Suite AI - Legal",
+  "description": "Transform your legal operations with our Suite AI - Legal. This AI-driven solution automates decision support with unprecedented accuracy and efficiency.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Suite AI - Legal - Zion Tech Group",
+    "description": "Transform your legal operations with our Suite AI - Legal. This AI-driven solution automates decision support with unprecedented accuracy and efficiency.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/suite-ai---legal-4a729f17"
+    }
+  },
+  "features": [
+    "Audit trails",
+    "Microservices deployment",
+    "Performance dashboards",
+    "Alerting system"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "ROI in under 90 days",
+    "Dynamic resource allocation",
+    "Scalable to millions of transactions",
+    "Cost optimization recommendations"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/intelligent-generator-for-construction-1-02ff58a6",
+  "breadcrumbTitle": "Intelligent Generator for Construction #1",
+  "title": "Intelligent Generator for Construction #1",
+  "description": "Next-generation construction solution: Intelligent Generator for Construction #1. Combines performance monitoring with adaptive intelligence for optimal results",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Generator for Construction #1 - Zion Tech Group",
+    "description": "Next-generation construction solution: Intelligent Generator for Construction #1. Combines performance monitoring with adaptive intelligence for optimal results",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-generator-for-construction-1-02ff58a6"
+    }
+  },
+  "features": [
+    "Plugin architecture",
+    "Container orchestration",
+    "Audit trails",
+    "Alerting system"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "3x faster decision making",
+    "24/7 automated operations"
+  ]
+}

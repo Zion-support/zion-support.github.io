@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-modular-legal-analytics-90e63097",
+  "breadcrumbTitle": "AI-Powered Modular Legal Analytics",
+  "title": "AI-Powered Modular Legal Analytics",
+  "description": "AI-driven analytics platform that delivers modular insights into legal operations, providing real-time monitoring, predictive modeling, and automated reporting ",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Modular Legal Analytics - Zion Tech Group",
+    "description": "AI-driven analytics platform that delivers modular insights into legal operations, providing real-time monitoring, predictive modeling, and automated reporting ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-modular-legal-analytics-90e63097"
+    }
+  },
+  "features": [
+    "Real-time monitoring",
+    "Predictive modeling",
+    "Automated reporting",
+    "Custom dashboards"
+  ],
+  "benefits": [
+    "Data-driven decision making",
+    "Improved operational efficiency",
+    "Proactive issue detection",
+    "Enhanced KPI tracking"
+  ]
+}

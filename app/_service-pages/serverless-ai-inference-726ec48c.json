@@ -1,0 +1,23 @@
+{
+  "breadcrumbPath": "/services/serverless-ai-inference-726ec48c",
+  "breadcrumbTitle": "Serverless AI Inference",
+  "title": "Serverless AI Inference",
+  "description": "Deploy AI models as serverless functions with auto-scaling and pay-per-use pricing.",
+  "basic": "$199/month",
+  "pro": "$599/month",
+  "enterprise": "$1999/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Serverless AI Inference - Zion Tech Group",
+    "description": "Deploy AI models as serverless functions with auto-scaling and pay-per-use pricing.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/serverless-ai-inference-726ec48c"
+    }
+  },
+  "features": [
+    "No features listed"
+  ],
+  "benefits": [
+    "No benefits listed"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/automation-ai---hospitality-5bfc7da6",
+  "breadcrumbTitle": "Automation AI - Hospitality",
+  "title": "Automation AI - Hospitality",
+  "description": "The future of hospitality is here with Automation AI - Hospitality. Powered by cutting-edge AI, this platform delivers decision support like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automation AI - Hospitality - Zion Tech Group",
+    "description": "The future of hospitality is here with Automation AI - Hospitality. Powered by cutting-edge AI, this platform delivers decision support like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automation-ai---hospitality-5bfc7da6"
+    }
+  },
+  "features": [
+    "GDPR compliance",
+    "Plugin architecture",
+    "Container orchestration",
+    "Comprehensive monitoring",
+    "Multi-language support"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "Enterprise-grade security",
+    "50% reduction in operational costs"
+  ]
+}

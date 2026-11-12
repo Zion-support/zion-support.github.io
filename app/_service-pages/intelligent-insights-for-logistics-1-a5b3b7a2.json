@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligent-insights-for-logistics-1-a5b3b7a2",
+  "breadcrumbTitle": "Intelligent Insights for Logistics #1",
+  "title": "Intelligent Insights for Logistics #1",
+  "description": "Transform your logistics operations with our Intelligent Insights for Logistics #1. This AI-driven solution automates quality control with unprecedented accurac",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Insights for Logistics #1 - Zion Tech Group",
+    "description": "Transform your logistics operations with our Intelligent Insights for Logistics #1. This AI-driven solution automates quality control with unprecedented accurac",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-insights-for-logistics-1-a5b3b7a2"
+    }
+  },
+  "features": [
+    "Alerting system",
+    "Open-source friendly",
+    "Machine learning integration",
+    "Audit trails",
+    "Serverless functions"
+  ],
+  "benefits": [
+    "Seamless integration with existing systems",
+    "Real-time insights and alerts",
+    "Scalable to millions of transactions",
+    "Reduced human error by 95%"
+  ]
+}

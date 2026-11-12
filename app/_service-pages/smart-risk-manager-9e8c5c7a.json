@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/smart-risk-manager-9e8c5c7a",
+  "breadcrumbTitle": "Smart Risk Manager",
+  "title": "Smart Risk Manager",
+  "description": "The future of healthcare is here with Smart Risk Manager. Powered by cutting-edge AI, this platform delivers inventory management like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Risk Manager - Zion Tech Group",
+    "description": "The future of healthcare is here with Smart Risk Manager. Powered by cutting-edge AI, this platform delivers inventory management like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-risk-manager-9e8c5c7a"
+    }
+  },
+  "features": [
+    "SOC 2 certified",
+    "Machine learning integration",
+    "Alerting system",
+    "Serverless functions",
+    "Plugin architecture"
+  ],
+  "benefits": [
+    "Scalable to millions of transactions",
+    "Seamless integration with existing systems",
+    "Reduced human error by 95%"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/self-optimizing-customer-director-5c4fd818",
+  "breadcrumbTitle": "Self-Optimizing Customer Director",
+  "title": "Self-Optimizing Customer Director",
+  "description": "Next-generation automotive solution: Self-Optimizing Customer Director. Combines network optimization with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Self-Optimizing Customer Director - Zion Tech Group",
+    "description": "Next-generation automotive solution: Self-Optimizing Customer Director. Combines network optimization with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/self-optimizing-customer-director-5c4fd818"
+    }
+  },
+  "features": [
+    "Cloud-native architecture",
+    "Multi-language support",
+    "Microservices deployment",
+    "Performance dashboards",
+    "SOC 2 certified"
+  ],
+  "benefits": [
+    "Cost optimization recommendations",
+    "Seamless integration with existing systems",
+    "Predictive maintenance scheduling"
+  ]
+}

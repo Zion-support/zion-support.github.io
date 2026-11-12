@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/insights-autonomous---insurance-597433d6",
+  "breadcrumbTitle": "Insights Autonomous - Insurance",
+  "title": "Insights Autonomous - Insurance",
+  "description": "Next-generation insurance solution: Insights Autonomous - Insurance. Combines document processing with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Insights Autonomous - Insurance - Zion Tech Group",
+    "description": "Next-generation insurance solution: Insights Autonomous - Insurance. Combines document processing with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/insights-autonomous---insurance-597433d6"
+    }
+  },
+  "features": [
+    "GDPR compliance",
+    "Comprehensive monitoring",
+    "Container orchestration",
+    "Rollback mechanisms",
+    "Multi-region deployment"
+  ],
+  "benefits": [
+    "50% reduction in operational costs",
+    "Performance benchmarking",
+    "Enterprise-grade security",
+    "Zero manual intervention required",
+    "Seamless integration with existing systems"
+  ]
+}

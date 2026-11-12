@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/coordinator-neural---healthcare-924f0fe8",
+  "breadcrumbTitle": "Coordinator Neural - Healthcare",
+  "title": "Coordinator Neural - Healthcare",
+  "description": "The future of healthcare is here with Coordinator Neural - Healthcare. Powered by cutting-edge AI, this platform delivers customer insights like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Coordinator Neural - Healthcare - Zion Tech Group",
+    "description": "The future of healthcare is here with Coordinator Neural - Healthcare. Powered by cutting-edge AI, this platform delivers customer insights like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/coordinator-neural---healthcare-924f0fe8"
+    }
+  },
+  "features": [
+    "Real-time processing",
+    "Zero-downtime updates",
+    "Alerting system",
+    "Microservices deployment",
+    "Plugin architecture"
+  ],
+  "benefits": [
+    "Performance benchmarking",
+    "Self-healing infrastructure",
+    "Zero manual intervention required",
+    "ROI in under 90 days"
+  ]
+}

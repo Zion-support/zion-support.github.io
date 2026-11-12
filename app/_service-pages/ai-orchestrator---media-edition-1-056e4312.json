@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/ai-orchestrator---media-edition-1-056e4312",
+  "breadcrumbTitle": "AI Orchestrator - Media Edition #1",
+  "title": "AI Orchestrator - Media Edition #1",
+  "description": "Revolutionize media through intelligent automation. Our AI Orchestrator - Media Edition #1 leverages advanced machine learning to deliver security monitoring at",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Orchestrator - Media Edition #1 - Zion Tech Group",
+    "description": "Revolutionize media through intelligent automation. Our AI Orchestrator - Media Edition #1 leverages advanced machine learning to deliver security monitoring at",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-orchestrator---media-edition-1-056e4312"
+    }
+  },
+  "features": [
+    "Audit trails",
+    "Container orchestration",
+    "Comprehensive monitoring",
+    "Custom integrations"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "ROI in under 90 days",
+    "99.9% uptime guarantee"
+  ]
+}

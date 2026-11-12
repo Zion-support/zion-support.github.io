@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/management-intelligent---insurance-ded1775a",
+  "breadcrumbTitle": "Management Intelligent - Insurance",
+  "title": "Management Intelligent - Insurance",
+  "description": "Unlock unprecedented growth with Management Intelligent - Insurance. This autonomous system provides decision support with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Management Intelligent - Insurance - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Management Intelligent - Insurance. This autonomous system provides decision support with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/management-intelligent---insurance-ded1775a"
+    }
+  },
+  "features": [
+    "Microservices deployment",
+    "Cloud-native architecture",
+    "GDPR compliance",
+    "API-first design"
+  ],
+  "benefits": [
+    "Intelligent load balancing",
+    "Performance benchmarking",
+    "Seamless integration with existing systems"
+  ]
+}

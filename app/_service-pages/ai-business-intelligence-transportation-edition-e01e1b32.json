@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/ai-business-intelligence-transportation-edition-e01e1b32",
+  "breadcrumbTitle": "AI Business Intelligence - Transportation Edition",
+  "title": "AI Business Intelligence - Transportation Edition",
+  "description": "Next-generation transportation solution: AI Business Intelligence - Transportation Edition. Combines compliance monitoring with adaptive intelligence for optima",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Business Intelligence - Transportation Edition - Zion Tech Group",
+    "description": "Next-generation transportation solution: AI Business Intelligence - Transportation Edition. Combines compliance monitoring with adaptive intelligence for optima",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-business-intelligence-transportation-edition-e01e1b32"
+    }
+  },
+  "features": [
+    "High availability with clustering",
+    "Brand monitoring across social channels",
+    "Security monitoring with threat intelligence",
+    "Budget optimization with cost allocation",
+    "Performance testing with load simulation"
+  ],
+  "benefits": [
+    "Reduced time to resolve (TTR) incidents",
+    "ROI achieved in under 90 days with cost savings",
+    "Reduced contract negotiation time",
+    "99.9% uptime guarantee with redundant architecture",
+    "Reduced procurement cycle times"
+  ]
+}

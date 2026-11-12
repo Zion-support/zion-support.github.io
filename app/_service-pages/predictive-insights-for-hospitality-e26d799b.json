@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/predictive-insights-for-hospitality-e26d799b",
+  "breadcrumbTitle": "Predictive Insights for Hospitality",
+  "title": "Predictive Insights for Hospitality",
+  "description": "Revolutionize hospitality through intelligent automation. Our Predictive Insights for Hospitality leverages advanced machine learning to deliver workflow manage",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Predictive Insights for Hospitality - Zion Tech Group",
+    "description": "Revolutionize hospitality through intelligent automation. Our Predictive Insights for Hospitality leverages advanced machine learning to deliver workflow manage",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/predictive-insights-for-hospitality-e26d799b"
+    }
+  },
+  "features": [
+    "Cloud-native architecture",
+    "Custom integrations",
+    "Audit trails",
+    "Real-time processing",
+    "Container orchestration"
+  ],
+  "benefits": [
+    "50% reduction in operational costs",
+    "Self-healing infrastructure",
+    "ROI in under 90 days"
+  ]
+}

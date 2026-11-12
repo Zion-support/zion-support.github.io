@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/intelligent-coordinator-for-construction-ba49ef75",
+  "breadcrumbTitle": "Intelligent Coordinator for Construction",
+  "title": "Intelligent Coordinator for Construction",
+  "description": "Optimize your construction workflows with Intelligent Coordinator for Construction. This intelligent platform delivers invoice processing through advanced autom",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Intelligent Coordinator for Construction - Zion Tech Group",
+    "description": "Optimize your construction workflows with Intelligent Coordinator for Construction. This intelligent platform delivers invoice processing through advanced autom",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-coordinator-for-construction-ba49ef75"
+    }
+  },
+  "features": [
+    "Risk quantification with scoring",
+    "Web Application Firewall (WAF)",
+    "Custom integrations with webhook support",
+    "Identity management with IAM",
+    "Data loss prevention (DLP)"
+  ],
+  "benefits": [
+    "Reduced time to resolve (TTR) incidents",
+    "Reduced risk with early warning systems",
+    "Better code quality with automated reviews",
+    "Faster time-to-market with accelerated development",
+    "Better resource utilization with auto-scaling"
+  ]
+}

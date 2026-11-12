@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/intelligent-platform-for-insurance-781a43ad",
+  "breadcrumbTitle": "Intelligent Platform for Insurance",
+  "title": "Intelligent Platform for Insurance",
+  "description": "Next-generation insurance solution: Intelligent Platform for Insurance. Combines network optimization with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Intelligent Platform for Insurance - Zion Tech Group",
+    "description": "Next-generation insurance solution: Intelligent Platform for Insurance. Combines network optimization with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-platform-for-insurance-781a43ad"
+    }
+  },
+  "features": [
+    "Security information and event management (SIEM)",
+    "Sales process optimization with pipeline management",
+    "Energy optimization with consumption tracking",
+    "Sentiment analysis with real-time monitoring",
+    "Financial risk management with scenario analysis"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee with redundant architecture",
+    "Improved customer satisfaction scores",
+    "better employee performance metrics",
+    "Better shipping and delivery times",
+    "Better customer retention rates"
+  ]
+}

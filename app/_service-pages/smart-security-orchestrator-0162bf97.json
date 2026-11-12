@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/smart-security-orchestrator-0162bf97",
+  "breadcrumbTitle": "Smart Security Orchestrator",
+  "title": "Smart Security Orchestrator",
+  "description": "Next-generation healthcare solution: Smart Security Orchestrator. Combines compliance monitoring with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Security Orchestrator - Zion Tech Group",
+    "description": "Next-generation healthcare solution: Smart Security Orchestrator. Combines compliance monitoring with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-security-orchestrator-0162bf97"
+    }
+  },
+  "features": [
+    "Cloud-native architecture",
+    "Performance dashboards",
+    "Container orchestration",
+    "Zero-downtime updates",
+    "SOC 2 certified"
+  ],
+  "benefits": [
+    "Automated compliance reporting",
+    "Dynamic resource allocation",
+    "Self-healing infrastructure"
+  ]
+}

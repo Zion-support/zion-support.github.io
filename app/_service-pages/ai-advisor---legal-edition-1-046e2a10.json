@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-advisor---legal-edition-1-046e2a10",
+  "breadcrumbTitle": "AI Advisor - Legal Edition #1",
+  "title": "AI Advisor - Legal Edition #1",
+  "description": "Revolutionize legal through intelligent automation. Our AI Advisor - Legal Edition #1 leverages advanced machine learning to deliver data processing at scale.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Advisor - Legal Edition #1 - Zion Tech Group",
+    "description": "Revolutionize legal through intelligent automation. Our AI Advisor - Legal Edition #1 leverages advanced machine learning to deliver data processing at scale.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-advisor---legal-edition-1-046e2a10"
+    }
+  },
+  "features": [
+    "Plugin architecture",
+    "Multi-language support",
+    "Auto-scaling capabilities",
+    "Open-source friendly"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Reduced human error by 95%",
+    "Dynamic resource allocation",
+    "Predictive maintenance scheduling"
+  ]
+}

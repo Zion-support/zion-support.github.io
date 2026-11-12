@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-engine---legal-edition-1-bcd715d0",
+  "breadcrumbTitle": "AI Engine - Legal Edition #1",
+  "title": "AI Engine - Legal Edition #1",
+  "description": "Transform your legal operations with our AI Engine - Legal Edition #1. This AI-driven solution automates decision support with unprecedented accuracy and effici",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Engine - Legal Edition #1 - Zion Tech Group",
+    "description": "Transform your legal operations with our AI Engine - Legal Edition #1. This AI-driven solution automates decision support with unprecedented accuracy and effici",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-engine---legal-edition-1-bcd715d0"
+    }
+  },
+  "features": [
+    "Rollback mechanisms",
+    "Microservices deployment",
+    "Performance dashboards",
+    "Audit trails"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "Seamless integration with existing systems",
+    "Performance benchmarking",
+    "24/7 automated operations"
+  ]
+}

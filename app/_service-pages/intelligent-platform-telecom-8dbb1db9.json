@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-platform-telecom-8dbb1db9",
+  "breadcrumbTitle": "Intelligent platform-telecom",
+  "title": "Intelligent platform-telecom",
+  "description": "Transform your telecom operations with our Intelligent platform-telecom. This AI-driven solution automates market intelligence with unprecedented accuracy and e",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent platform-telecom - Zion Tech Group",
+    "description": "Transform your telecom operations with our Intelligent platform-telecom. This AI-driven solution automates market intelligence with unprecedented accuracy and e",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-platform-telecom-8dbb1db9"
+    }
+  },
+  "features": [
+    "Custom integrations",
+    "Microservices deployment",
+    "Data encryption",
+    "Edge computing support",
+    "Zero-downtime updates"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "ROI in under 90 days",
+    "Enterprise-grade security"
+  ]
+}

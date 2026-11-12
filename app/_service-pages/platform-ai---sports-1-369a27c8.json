@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/platform-ai---sports-1-369a27c8",
+  "breadcrumbTitle": "Platform AI - Sports #1",
+  "title": "Platform AI - Sports #1",
+  "description": "Next-generation sports solution: Platform AI - Sports #1. Combines maintenance scheduling with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Platform AI - Sports #1 - Zion Tech Group",
+    "description": "Next-generation sports solution: Platform AI - Sports #1. Combines maintenance scheduling with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/platform-ai---sports-1-369a27c8"
+    }
+  },
+  "features": [
+    "Comprehensive monitoring",
+    "Multi-language support",
+    "HIPAA ready",
+    "Audit trails"
+  ],
+  "benefits": [
+    "Seamless integration with existing systems",
+    "Predictive maintenance scheduling",
+    "99.9% uptime guarantee",
+    "Reduced human error by 95%"
+  ]
+}

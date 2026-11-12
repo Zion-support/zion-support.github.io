@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-driven-scalable-financial-planning-c152a23d",
+  "breadcrumbTitle": "AI-Driven Scalable Financial Planning",
+  "title": "AI-Driven Scalable Financial Planning",
+  "description": "Automated financial planning system that creates scalable personalized wealth strategies, tax optimization, and retirement planning using advanced algorithms.",
+  "basic": "$258/month",
+  "pro": "$648/month",
+  "enterprise": "$1948/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Driven Scalable Financial Planning - Zion Tech Group",
+    "description": "Automated financial planning system that creates scalable personalized wealth strategies, tax optimization, and retirement planning using advanced algorithms.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-driven-scalable-financial-planning-c152a23d"
+    }
+  },
+  "features": [
+    "Goal-based planning",
+    "Tax optimization",
+    "Monte Carlo simulation",
+    "Rebalancing automation"
+  ],
+  "benefits": [
+    "Personalized advice",
+    "Tax efficiency",
+    "Goal achievement",
+    "Lower fees"
+  ]
+}

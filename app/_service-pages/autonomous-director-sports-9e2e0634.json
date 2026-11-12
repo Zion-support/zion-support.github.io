@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/autonomous-director-sports-9e2e0634",
+  "breadcrumbTitle": "Autonomous director-sports",
+  "title": "Autonomous director-sports",
+  "description": "The future of sports is here with Autonomous director-sports. Powered by cutting-edge AI, this platform delivers maintenance scheduling like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous director-sports - Zion Tech Group",
+    "description": "The future of sports is here with Autonomous director-sports. Powered by cutting-edge AI, this platform delivers maintenance scheduling like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-director-sports-9e2e0634"
+    }
+  },
+  "features": [
+    "Open-source friendly",
+    "API-first design",
+    "Comprehensive monitoring",
+    "Offline capabilities",
+    "Custom integrations"
+  ],
+  "benefits": [
+    "50% reduction in operational costs",
+    "Dynamic resource allocation",
+    "99.9% uptime guarantee",
+    "Intelligent load balancing"
+  ]
+}

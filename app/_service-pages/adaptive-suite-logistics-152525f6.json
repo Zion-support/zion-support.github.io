@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/adaptive-suite-logistics-152525f6",
+  "breadcrumbTitle": "Adaptive suite-logistics",
+  "title": "Adaptive suite-logistics",
+  "description": "Transform your logistics operations with our Adaptive suite-logistics. This AI-driven solution automates security monitoring with unprecedented accuracy and eff",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Adaptive suite-logistics - Zion Tech Group",
+    "description": "Transform your logistics operations with our Adaptive suite-logistics. This AI-driven solution automates security monitoring with unprecedented accuracy and eff",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/adaptive-suite-logistics-152525f6"
+    }
+  },
+  "features": [
+    "SOC 2 certified",
+    "Microservices deployment",
+    "API-first design",
+    "Audit trails",
+    "Cloud-native architecture"
+  ],
+  "benefits": [
+    "Seamless integration with existing systems",
+    "Intelligent load balancing",
+    "3x faster decision making",
+    "24/7 automated operations"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-powered-image-director-4f605359",
+  "breadcrumbTitle": "AI-Powered Image Director",
+  "title": "AI-Powered Image Director",
+  "description": "Revolutionize agriculture through intelligent automation. Our AI-Powered Image Director leverages advanced machine learning to deliver financial planning at sca",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Image Director - Zion Tech Group",
+    "description": "Revolutionize agriculture through intelligent automation. Our AI-Powered Image Director leverages advanced machine learning to deliver financial planning at sca",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-image-director-4f605359"
+    }
+  },
+  "features": [
+    "Multi-language support",
+    "Cloud-native architecture",
+    "Auto-scaling capabilities",
+    "SOC 2 certified",
+    "Multi-region deployment"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "Self-healing infrastructure",
+    "3x faster decision making",
+    "ROI in under 90 days"
+  ]
+}

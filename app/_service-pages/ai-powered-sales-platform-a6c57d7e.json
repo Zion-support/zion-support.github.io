@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-sales-platform-a6c57d7e",
+  "breadcrumbTitle": "AI-Powered Sales Platform",
+  "title": "AI-Powered Sales Platform",
+  "description": "Unlock unprecedented growth with AI-Powered Sales Platform. This autonomous system provides customer insights with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Sales Platform - Zion Tech Group",
+    "description": "Unlock unprecedented growth with AI-Powered Sales Platform. This autonomous system provides customer insights with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-sales-platform-a6c57d7e"
+    }
+  },
+  "features": [
+    "HIPAA ready",
+    "Offline capabilities",
+    "Role-based access control",
+    "Machine learning integration"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Self-healing infrastructure",
+    "24/7 automated operations",
+    "Zero manual intervention required"
+  ]
+}

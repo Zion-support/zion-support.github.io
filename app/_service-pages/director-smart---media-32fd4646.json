@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/director-smart---media-32fd4646",
+  "breadcrumbTitle": "Director Smart - Media",
+  "title": "Director Smart - Media",
+  "description": "The future of media is here with Director Smart - Media. Powered by cutting-edge AI, this platform delivers data processing like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Director Smart - Media - Zion Tech Group",
+    "description": "The future of media is here with Director Smart - Media. Powered by cutting-edge AI, this platform delivers data processing like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/director-smart---media-32fd4646"
+    }
+  },
+  "features": [
+    "Microservices deployment",
+    "Cloud-native architecture",
+    "Serverless functions",
+    "Role-based access control"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "Automated compliance reporting",
+    "Self-healing infrastructure",
+    "Dynamic resource allocation"
+  ]
+}

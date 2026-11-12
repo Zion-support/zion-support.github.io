@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/platform-smart---tech-d1a15352",
+  "breadcrumbTitle": "Platform Smart - Tech",
+  "title": "Platform Smart - Tech",
+  "description": "Unlock unprecedented growth with Platform Smart - Tech. This autonomous system provides image recognition with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Platform Smart - Tech - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Platform Smart - Tech. This autonomous system provides image recognition with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/platform-smart---tech-d1a15352"
+    }
+  },
+  "features": [
+    "Serverless functions",
+    "Open-source friendly",
+    "Audit trails",
+    "Cloud-native architecture"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Zero manual intervention required",
+    "Automated compliance reporting"
+  ]
+}

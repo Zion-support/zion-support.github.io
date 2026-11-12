@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-generated-next-generation-game-content-d64a4229",
+  "breadcrumbTitle": "AI-Generated Next-Generation Game Content",
+  "title": "AI-Generated Next-Generation Game Content",
+  "description": "Procedural content generation platform that creates next-generation game assets, levels, narratives, and quests using generative AI, reducing development time a",
+  "basic": "$278/month",
+  "pro": "$698/month",
+  "enterprise": "$2098/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI-Generated Next-Generation Game Content - Zion Tech Group",
+    "description": "Procedural content generation platform that creates next-generation game assets, levels, narratives, and quests using generative AI, reducing development time a",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-generated-next-generation-game-content-d64a4229"
+    }
+  },
+  "features": [
+    "Level generation",
+    "Asset creation",
+    "Narrative design",
+    "Balance testing"
+  ],
+  "benefits": [
+    "Faster content creation",
+    "Infinite replayability",
+    "Reduced dev costs",
+    "Dynamic experiences"
+  ]
+}

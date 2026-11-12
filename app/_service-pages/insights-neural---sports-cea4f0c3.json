@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/insights-neural---sports-cea4f0c3",
+  "breadcrumbTitle": "Insights Neural - Sports",
+  "title": "Insights Neural - Sports",
+  "description": "The future of sports is here with Insights Neural - Sports. Powered by cutting-edge AI, this platform delivers language processing like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Insights Neural - Sports - Zion Tech Group",
+    "description": "The future of sports is here with Insights Neural - Sports. Powered by cutting-edge AI, this platform delivers language processing like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/insights-neural---sports-cea4f0c3"
+    }
+  },
+  "features": [
+    "HIPAA ready",
+    "Serverless functions",
+    "Performance dashboards",
+    "Real-time processing",
+    "SOC 2 certified"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "Seamless integration with existing systems",
+    "Cost optimization recommendations"
+  ]
+}

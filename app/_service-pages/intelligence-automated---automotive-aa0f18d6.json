@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligence-automated---automotive-aa0f18d6",
+  "breadcrumbTitle": "Intelligence Automated - Automotive",
+  "title": "Intelligence Automated - Automotive",
+  "description": "Unlock unprecedented growth with Intelligence Automated - Automotive. This autonomous system provides content generation with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligence Automated - Automotive - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Intelligence Automated - Automotive. This autonomous system provides content generation with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligence-automated---automotive-aa0f18d6"
+    }
+  },
+  "features": [
+    "Custom integrations",
+    "Plugin architecture",
+    "API-first design",
+    "Role-based access control"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Cost optimization recommendations",
+    "Intelligent load balancing",
+    "Automated compliance reporting",
+    "Zero manual intervention required"
+  ]
+}

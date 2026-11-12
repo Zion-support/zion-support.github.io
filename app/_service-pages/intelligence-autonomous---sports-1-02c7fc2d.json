@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligence-autonomous---sports-1-02c7fc2d",
+  "breadcrumbTitle": "Intelligence Autonomous - Sports #1",
+  "title": "Intelligence Autonomous - Sports #1",
+  "description": "The future of sports is here with Intelligence Autonomous - Sports #1. Powered by cutting-edge AI, this platform delivers maintenance scheduling like never befo",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligence Autonomous - Sports #1 - Zion Tech Group",
+    "description": "The future of sports is here with Intelligence Autonomous - Sports #1. Powered by cutting-edge AI, this platform delivers maintenance scheduling like never befo",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligence-autonomous---sports-1-02c7fc2d"
+    }
+  },
+  "features": [
+    "Performance dashboards",
+    "Machine learning integration",
+    "Real-time processing",
+    "Auto-scaling capabilities"
+  ],
+  "benefits": [
+    "Dynamic resource allocation",
+    "Cost optimization recommendations",
+    "Self-healing infrastructure",
+    "Reduced human error by 95%"
+  ]
+}

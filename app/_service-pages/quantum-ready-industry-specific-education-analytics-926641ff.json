@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/quantum-ready-industry-specific-education-analytics-926641ff",
+  "breadcrumbTitle": "Quantum-Ready Industry-Specific Education Analytics",
+  "title": "Quantum-Ready Industry-Specific Education Analytics",
+  "description": "Quantum-ready analytics platform that prepares industry-specific education workloads for future quantum acceleration.",
+  "basic": "$298/month",
+  "pro": "$748/month",
+  "enterprise": "$2248/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Quantum-Ready Industry-Specific Education Analytics - Zion Tech Group",
+    "description": "Quantum-ready analytics platform that prepares industry-specific education workloads for future quantum acceleration.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/quantum-ready-industry-specific-education-analytics-926641ff"
+    }
+  },
+  "features": [
+    "Quantum simulation",
+    "Hybrid classical-quantum",
+    "Algorithm optimization",
+    "Future-proofing"
+  ],
+  "benefits": [
+    "Quantum advantage readiness",
+    "Future-proof algorithms",
+    "Hybrid optimization",
+    "Competitive edge"
+  ]
+}

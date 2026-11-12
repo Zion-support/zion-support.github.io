@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/system-ai---sports-d20a5085",
+  "breadcrumbTitle": "System AI - Sports",
+  "title": "System AI - Sports",
+  "description": "The future of sports is here with System AI - Sports. Powered by cutting-edge AI, this platform delivers threat detection like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "System AI - Sports - Zion Tech Group",
+    "description": "The future of sports is here with System AI - Sports. Powered by cutting-edge AI, this platform delivers threat detection like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/system-ai---sports-d20a5085"
+    }
+  },
+  "features": [
+    "Data encryption",
+    "Comprehensive monitoring",
+    "Container orchestration",
+    "Microservices deployment",
+    "Mobile-responsive interface"
+  ],
+  "benefits": [
+    "Cost optimization recommendations",
+    "Performance benchmarking",
+    "Seamless integration with existing systems",
+    "3x faster decision making",
+    "Automated compliance reporting"
+  ]
+}

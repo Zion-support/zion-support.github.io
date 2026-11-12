@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/system-intelligent---education-1-7d4c8050",
+  "breadcrumbTitle": "System Intelligent - Education #1",
+  "title": "System Intelligent - Education #1",
+  "description": "The future of education is here with System Intelligent - Education #1. Powered by cutting-edge AI, this platform delivers risk assessment like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "System Intelligent - Education #1 - Zion Tech Group",
+    "description": "The future of education is here with System Intelligent - Education #1. Powered by cutting-edge AI, this platform delivers risk assessment like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/system-intelligent---education-1-7d4c8050"
+    }
+  },
+  "features": [
+    "Microservices deployment",
+    "Comprehensive monitoring",
+    "Real-time processing",
+    "Offline capabilities",
+    "Alerting system"
+  ],
+  "benefits": [
+    "24/7 automated operations",
+    "Predictive maintenance scheduling",
+    "Cost optimization recommendations",
+    "Intelligent load balancing"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-advanced-retail-personalization-e4b3250a",
+  "breadcrumbTitle": "AI-Powered Advanced Retail Personalization",
+  "title": "AI-Powered Advanced Retail Personalization",
+  "description": "Omnichannel personalization engine that delivers advanced product recommendations, dynamic pricing, and individualized experiences across all retail touchpoints",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Advanced Retail Personalization - Zion Tech Group",
+    "description": "Omnichannel personalization engine that delivers advanced product recommendations, dynamic pricing, and individualized experiences across all retail touchpoints",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-advanced-retail-personalization-e4b3250a"
+    }
+  },
+  "features": [
+    "Product recommendations",
+    "Dynamic pricing",
+    "Customer segmentation",
+    "Cross-channel orchestration"
+  ],
+  "benefits": [
+    "Increased conversion",
+    "Higher AOV",
+    "Better loyalty",
+    "Revenue growth"
+  ]
+}

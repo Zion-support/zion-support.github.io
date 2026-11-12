@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/autonomous-analytics-for-healthcare-bb77e844",
+  "breadcrumbTitle": "Autonomous Analytics for Healthcare",
+  "title": "Autonomous Analytics for Healthcare",
+  "description": "Next-generation healthcare solution: Autonomous Analytics for Healthcare. Combines maintenance scheduling with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous Analytics for Healthcare - Zion Tech Group",
+    "description": "Next-generation healthcare solution: Autonomous Analytics for Healthcare. Combines maintenance scheduling with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-analytics-for-healthcare-bb77e844"
+    }
+  },
+  "features": [
+    "Microservices deployment",
+    "Custom integrations",
+    "Audit trails",
+    "Alerting system",
+    "Comprehensive monitoring"
+  ],
+  "benefits": [
+    "Automated compliance reporting",
+    "Scalable to millions of transactions",
+    "24/7 automated operations",
+    "Zero manual intervention required"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-engine---finance-edition-5-a3c4912c",
+  "breadcrumbTitle": "AI Engine - Finance Edition #5",
+  "title": "AI Engine - Finance Edition #5",
+  "description": "Revolutionize finance through intelligent automation. Our AI Engine - Finance Edition #5 leverages advanced machine learning to deliver decision support at scal",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Engine - Finance Edition #5 - Zion Tech Group",
+    "description": "Revolutionize finance through intelligent automation. Our AI Engine - Finance Edition #5 leverages advanced machine learning to deliver decision support at scal",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-engine---finance-edition-5-a3c4912c"
+    }
+  },
+  "features": [
+    "Multi-language support",
+    "Open-source friendly",
+    "Alerting system",
+    "Auto-scaling capabilities"
+  ],
+  "benefits": [
+    "Intelligent load balancing",
+    "Zero manual intervention required",
+    "24/7 automated operations",
+    "Dynamic resource allocation"
+  ]
+}

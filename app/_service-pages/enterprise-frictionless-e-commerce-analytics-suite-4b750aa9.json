@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/enterprise-frictionless-e-commerce-analytics-suite-4b750aa9",
+  "breadcrumbTitle": "Enterprise Frictionless E-Commerce Analytics Suite",
+  "title": "Enterprise Frictionless E-Commerce Analytics Suite",
+  "description": "Enterprise analytics suite that delivers frictionless e-commerce insights with unified dashboards and reporting.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Enterprise Frictionless E-Commerce Analytics Suite - Zion Tech Group",
+    "description": "Enterprise analytics suite that delivers frictionless e-commerce insights with unified dashboards and reporting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/enterprise-frictionless-e-commerce-analytics-suite-4b750aa9"
+    }
+  },
+  "features": [
+    "Data visualization",
+    "Custom dashboards",
+    "Report generation",
+    "KPI tracking"
+  ],
+  "benefits": [
+    "Unified data view",
+    "Faster insights",
+    "Customizable reports",
+    "Cross-functional collaboration"
+  ]
+}

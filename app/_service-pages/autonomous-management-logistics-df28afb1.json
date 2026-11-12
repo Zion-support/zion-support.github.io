@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/autonomous-management-logistics-df28afb1",
+  "breadcrumbTitle": "Autonomous management-logistics",
+  "title": "Autonomous management-logistics",
+  "description": "The future of logistics is here with Autonomous management-logistics. Powered by cutting-edge AI, this platform delivers workflow management like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous management-logistics - Zion Tech Group",
+    "description": "The future of logistics is here with Autonomous management-logistics. Powered by cutting-edge AI, this platform delivers workflow management like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-management-logistics-df28afb1"
+    }
+  },
+  "features": [
+    "Offline capabilities",
+    "SOC 2 certified",
+    "Cloud-native architecture",
+    "Edge computing support",
+    "API-first design"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Real-time insights and alerts",
+    "50% reduction in operational costs",
+    "Self-healing infrastructure"
+  ]
+}

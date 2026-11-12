@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/automated-workflow-system-insurance-automated-workflow-system-for-insurance",
+  "breadcrumbTitle": "Automated Workflow System for Insurance",
+  "title": "Automated Workflow System for Insurance",
+  "description": "End-to-end workflow automation solution for insurance operations. Streamlines Claims processing, risk assessment, fraud detection through intelligent process or",
+  "basic": "$124/month",
+  "pro": "$413/month",
+  "enterprise": "$1006/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated Workflow System for Insurance - Zion Tech Group",
+    "description": "End-to-end workflow automation solution for insurance operations. Streamlines Claims processing, risk assessment, fraud detection through intelligent process or",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-workflow-system-insurance-automated-workflow-system-for-insurance"
+    }
+  },
+  "features": [
+    "AI-powered automation",
+    "Enterprise-grade security",
+    "24/7 monitoring",
+    "API-first integration",
+    "Scalable architecture"
+  ],
+  "benefits": [
+    "42% reduction in operational costs",
+    "Process 96% faster with automation",
+    "99.9% uptime guarantee with enterprise SLAs",
+    "ROI realized in under 90 days",
+    "Zero-downtime deployment"
+  ]
+}

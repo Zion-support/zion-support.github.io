@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/predictive-analytics-insurance-c5885164",
+  "breadcrumbTitle": "Predictive analytics-insurance",
+  "title": "Predictive analytics-insurance",
+  "description": "Unlock unprecedented growth with Predictive analytics-insurance. This autonomous system provides customer insights with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Predictive analytics-insurance - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Predictive analytics-insurance. This autonomous system provides customer insights with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/predictive-analytics-insurance-c5885164"
+    }
+  },
+  "features": [
+    "Rollback mechanisms",
+    "Edge computing support",
+    "API-first design",
+    "Open-source friendly"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "Self-healing infrastructure",
+    "Zero manual intervention required",
+    "Scalable to millions of transactions"
+  ]
+}

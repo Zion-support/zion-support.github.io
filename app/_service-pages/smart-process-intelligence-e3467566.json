@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/smart-process-intelligence-e3467566",
+  "breadcrumbTitle": "Smart Process Intelligence",
+  "title": "Smart Process Intelligence",
+  "description": "Next-generation transportation solution: Smart Process Intelligence. Combines performance monitoring with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Process Intelligence - Zion Tech Group",
+    "description": "Next-generation transportation solution: Smart Process Intelligence. Combines performance monitoring with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-process-intelligence-e3467566"
+    }
+  },
+  "features": [
+    "Multi-language support",
+    "Open-source friendly",
+    "Cloud-native architecture",
+    "Performance dashboards"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "Predictive maintenance scheduling",
+    "Real-time insights and alerts"
+  ]
+}

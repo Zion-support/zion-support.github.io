@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/enterprise-cloud-native-construction-analytics-suite-66d67ab6",
+  "breadcrumbTitle": "Enterprise Cloud-Native Construction Analytics Suite",
+  "title": "Enterprise Cloud-Native Construction Analytics Suite",
+  "description": "Enterprise analytics suite that delivers cloud-native construction insights with unified dashboards and reporting.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Enterprise Cloud-Native Construction Analytics Suite - Zion Tech Group",
+    "description": "Enterprise analytics suite that delivers cloud-native construction insights with unified dashboards and reporting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/enterprise-cloud-native-construction-analytics-suite-66d67ab6"
+    }
+  },
+  "features": [
+    "Data visualization",
+    "Custom dashboards",
+    "Report generation",
+    "KPI tracking"
+  ],
+  "benefits": [
+    "Unified data view",
+    "Faster insights",
+    "Customizable reports",
+    "Cross-functional collaboration"
+  ]
+}

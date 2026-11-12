@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/automated-insights-construction-0552d6bb",
+  "breadcrumbTitle": "Automated insights-construction",
+  "title": "Automated insights-construction",
+  "description": "Next-generation construction solution: Automated insights-construction. Combines data processing with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated insights-construction - Zion Tech Group",
+    "description": "Next-generation construction solution: Automated insights-construction. Combines data processing with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-insights-construction-0552d6bb"
+    }
+  },
+  "features": [
+    "Mobile-responsive interface",
+    "Offline capabilities",
+    "Rollback mechanisms",
+    "API-first design",
+    "HIPAA ready"
+  ],
+  "benefits": [
+    "Scalable to millions of transactions",
+    "50% reduction in operational costs",
+    "24/7 automated operations"
+  ]
+}

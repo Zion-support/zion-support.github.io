@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/adaptive-energy-management-d85f91d5",
+  "breadcrumbTitle": "Adaptive Energy Management",
+  "title": "Adaptive Energy Management",
+  "description": "Transform your construction operations with our Adaptive Energy Management. This AI-driven solution automates threat detection with unprecedented accuracy and e",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Adaptive Energy Management - Zion Tech Group",
+    "description": "Transform your construction operations with our Adaptive Energy Management. This AI-driven solution automates threat detection with unprecedented accuracy and e",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/adaptive-energy-management-d85f91d5"
+    }
+  },
+  "features": [
+    "Zero-downtime updates",
+    "SOC 2 certified",
+    "Container orchestration",
+    "Multi-region deployment",
+    "Edge computing support"
+  ],
+  "benefits": [
+    "50% reduction in operational costs",
+    "Real-time insights and alerts",
+    "99.9% uptime guarantee"
+  ]
+}

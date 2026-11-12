@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-analytics---healthcare-edition-4-db0ccb13",
+  "breadcrumbTitle": "AI Analytics - Healthcare Edition #4",
+  "title": "AI Analytics - Healthcare Edition #4",
+  "description": "The future of healthcare is here with AI Analytics - Healthcare Edition #4. Powered by cutting-edge AI, this platform delivers security monitoring like never be",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Analytics - Healthcare Edition #4 - Zion Tech Group",
+    "description": "The future of healthcare is here with AI Analytics - Healthcare Edition #4. Powered by cutting-edge AI, this platform delivers security monitoring like never be",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-analytics---healthcare-edition-4-db0ccb13"
+    }
+  },
+  "features": [
+    "Multi-language support",
+    "Plugin architecture",
+    "Auto-scaling capabilities",
+    "API-first design",
+    "Edge computing support"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Self-healing infrastructure",
+    "Real-time insights and alerts",
+    "50% reduction in operational costs"
+  ]
+}

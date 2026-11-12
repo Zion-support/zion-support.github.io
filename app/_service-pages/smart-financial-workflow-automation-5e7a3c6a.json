@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/smart-financial-workflow-automation-5e7a3c6a",
+  "breadcrumbTitle": "Smart Financial Workflow Automation",
+  "title": "Smart Financial Workflow Automation",
+  "description": "Intelligent workflow automation platform that streamlines financial processes and eliminates manual tasks.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Smart Financial Workflow Automation - Zion Tech Group",
+    "description": "Intelligent workflow automation platform that streamlines financial processes and eliminates manual tasks.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-financial-workflow-automation-5e7a3c6a"
+    }
+  },
+  "features": [
+    "Process mapping",
+    "Task automation",
+    "Workflow optimization",
+    "Exception handling"
+  ],
+  "benefits": [
+    "Faster operations",
+    "Reduced errors",
+    "Improved productivity",
+    "Better resource utilization"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/predictive-intelligence-for-legal-b74b06d0",
+  "breadcrumbTitle": "Predictive Intelligence for Legal",
+  "title": "Predictive Intelligence for Legal",
+  "description": "Next-generation legal solution: Predictive Intelligence for Legal. Combines inventory management with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Predictive Intelligence for Legal - Zion Tech Group",
+    "description": "Next-generation legal solution: Predictive Intelligence for Legal. Combines inventory management with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/predictive-intelligence-for-legal-b74b06d0"
+    }
+  },
+  "features": [
+    "Data encryption",
+    "Open-source friendly",
+    "Multi-language support",
+    "GDPR compliance",
+    "Auto-scaling capabilities"
+  ],
+  "benefits": [
+    "24/7 automated operations",
+    "Automated compliance reporting",
+    "Enterprise-grade security"
+  ]
+}

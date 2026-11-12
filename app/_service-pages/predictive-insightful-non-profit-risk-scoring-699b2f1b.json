@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/predictive-insightful-non-profit-risk-scoring-699b2f1b",
+  "breadcrumbTitle": "Predictive Insightful Non-Profit Risk Scoring",
+  "title": "Predictive Insightful Non-Profit Risk Scoring",
+  "description": "Predictive risk scoring engine that assesses insightful non-profit vulnerabilities with machine learning.",
+  "basic": "$278/month",
+  "pro": "$698/month",
+  "enterprise": "$2098/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Predictive Insightful Non-Profit Risk Scoring - Zion Tech Group",
+    "description": "Predictive risk scoring engine that assesses insightful non-profit vulnerabilities with machine learning.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/predictive-insightful-non-profit-risk-scoring-699b2f1b"
+    }
+  },
+  "features": [
+    "Risk assessment",
+    "Threat modeling",
+    "Compliance scoring",
+    "Mitigation planning"
+  ],
+  "benefits": [
+    "Proactive risk mitigation",
+    "Compliance assurance",
+    "Reduced exposure",
+    "Faster incident response"
+  ]
+}

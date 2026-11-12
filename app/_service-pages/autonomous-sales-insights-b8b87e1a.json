@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/autonomous-sales-insights-b8b87e1a",
+  "breadcrumbTitle": "Autonomous Sales Insights",
+  "title": "Autonomous Sales Insights",
+  "description": "Next-generation sports solution: Autonomous Sales Insights. Combines language processing with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous Sales Insights - Zion Tech Group",
+    "description": "Next-generation sports solution: Autonomous Sales Insights. Combines language processing with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-sales-insights-b8b87e1a"
+    }
+  },
+  "features": [
+    "Plugin architecture",
+    "Role-based access control",
+    "Mobile-responsive interface",
+    "Custom integrations",
+    "Open-source friendly"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "Seamless integration with existing systems",
+    "Zero manual intervention required",
+    "Scalable to millions of transactions"
+  ]
+}

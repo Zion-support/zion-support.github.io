@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-powered-coordinator-for-healthcare-6c6fd385",
+  "breadcrumbTitle": "AI-Powered Coordinator for Healthcare",
+  "title": "AI-Powered Coordinator for Healthcare",
+  "description": "Next-generation healthcare solution: AI-Powered Coordinator for Healthcare. Combines language processing with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Coordinator for Healthcare - Zion Tech Group",
+    "description": "Next-generation healthcare solution: AI-Powered Coordinator for Healthcare. Combines language processing with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-coordinator-for-healthcare-6c6fd385"
+    }
+  },
+  "features": [
+    "Machine learning integration",
+    "SOC 2 certified",
+    "Alerting system",
+    "Microservices deployment"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "Predictive maintenance scheduling",
+    "Performance benchmarking",
+    "Real-time insights and alerts",
+    "50% reduction in operational costs"
+  ]
+}

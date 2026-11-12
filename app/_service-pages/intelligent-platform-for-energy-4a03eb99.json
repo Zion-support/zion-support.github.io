@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-platform-for-energy-4a03eb99",
+  "breadcrumbTitle": "Intelligent Platform for Energy",
+  "title": "Intelligent Platform for Energy",
+  "description": "Unlock unprecedented growth with Intelligent Platform for Energy. This autonomous system provides energy management with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Platform for Energy - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Intelligent Platform for Energy. This autonomous system provides energy management with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-platform-for-energy-4a03eb99"
+    }
+  },
+  "features": [
+    "Role-based access control",
+    "Multi-region deployment",
+    "Offline capabilities",
+    "Audit trails",
+    "GDPR compliance"
+  ],
+  "benefits": [
+    "Intelligent load balancing",
+    "Automated compliance reporting",
+    "Performance benchmarking"
+  ]
+}

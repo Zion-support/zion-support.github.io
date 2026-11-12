@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/automated-sales-healthcare-b6352e4a",
+  "breadcrumbTitle": "Automated sales-healthcare",
+  "title": "Automated sales-healthcare",
+  "description": "Unlock unprecedented growth with Automated sales-healthcare. This autonomous system provides sentiment analysis with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated sales-healthcare - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Automated sales-healthcare. This autonomous system provides sentiment analysis with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-sales-healthcare-b6352e4a"
+    }
+  },
+  "features": [
+    "Fraud detection with anomaly analysis",
+    "Data encryption at rest and in transit",
+    "Customer journey mapping with touchpoint analysis",
+    "SOC 2 certified with security controls",
+    "Alerting system with intelligent notifications"
+  ],
+  "benefits": [
+    "Improved conversion rates with personalization",
+    "Scalable to millions of transactions per second",
+    "Improved brand awareness with social monitoring",
+    "Better market positioning with competitive analysis",
+    "Enhanced security posture with continuous monitoring"
+  ]
+}

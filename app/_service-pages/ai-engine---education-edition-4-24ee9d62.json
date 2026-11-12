@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-engine---education-edition-4-24ee9d62",
+  "breadcrumbTitle": "AI Engine - Education Edition #4",
+  "title": "AI Engine - Education Edition #4",
+  "description": "Next-generation education solution: AI Engine - Education Edition #4. Combines decision support with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Engine - Education Edition #4 - Zion Tech Group",
+    "description": "Next-generation education solution: AI Engine - Education Edition #4. Combines decision support with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-engine---education-edition-4-24ee9d62"
+    }
+  },
+  "features": [
+    "Open-source friendly",
+    "API-first design",
+    "Multi-region deployment",
+    "Custom integrations"
+  ],
+  "benefits": [
+    "Intelligent load balancing",
+    "Real-time insights and alerts",
+    "24/7 automated operations",
+    "Scalable to millions of transactions"
+  ]
+}

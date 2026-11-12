@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/suite-ai---gaming-ea8e2b8d",
+  "breadcrumbTitle": "Suite AI - Gaming",
+  "title": "Suite AI - Gaming",
+  "description": "Unlock unprecedented growth with Suite AI - Gaming. This autonomous system provides inventory management with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Suite AI - Gaming - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Suite AI - Gaming. This autonomous system provides inventory management with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/suite-ai---gaming-ea8e2b8d"
+    }
+  },
+  "features": [
+    "GDPR compliance",
+    "Edge computing support",
+    "Custom integrations",
+    "API-first design"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "ROI in under 90 days",
+    "Automated compliance reporting",
+    "Intelligent load balancing"
+  ]
+}

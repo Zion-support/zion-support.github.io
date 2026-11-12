@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/neural-decision-insights-5925003d",
+  "breadcrumbTitle": "Neural Decision Insights",
+  "title": "Neural Decision Insights",
+  "description": "Transform your insurance operations with our Neural Decision Insights. This AI-driven solution automates fraud prevention with unprecedented accuracy and effici",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Neural Decision Insights - Zion Tech Group",
+    "description": "Transform your insurance operations with our Neural Decision Insights. This AI-driven solution automates fraud prevention with unprecedented accuracy and effici",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/neural-decision-insights-5925003d"
+    }
+  },
+  "features": [
+    "Zero-downtime updates",
+    "Real-time processing",
+    "API-first design",
+    "Auto-scaling capabilities"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "ROI in under 90 days",
+    "Intelligent load balancing",
+    "24/7 automated operations"
+  ]
+}

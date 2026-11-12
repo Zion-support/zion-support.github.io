@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/system-autonomous---retail-0f0e13fe",
+  "breadcrumbTitle": "System Autonomous - Retail",
+  "title": "System Autonomous - Retail",
+  "description": "Next-generation retail solution: System Autonomous - Retail. Combines data processing with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "System Autonomous - Retail - Zion Tech Group",
+    "description": "Next-generation retail solution: System Autonomous - Retail. Combines data processing with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/system-autonomous---retail-0f0e13fe"
+    }
+  },
+  "features": [
+    "Multi-language support",
+    "Edge computing support",
+    "API-first design",
+    "Offline capabilities",
+    "Plugin architecture"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Real-time insights and alerts",
+    "24/7 automated operations"
+  ]
+}

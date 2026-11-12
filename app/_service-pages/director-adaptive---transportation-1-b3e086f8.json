@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/director-adaptive---transportation-1-b3e086f8",
+  "breadcrumbTitle": "Director Adaptive - Transportation #1",
+  "title": "Director Adaptive - Transportation #1",
+  "description": "Next-generation transportation solution: Director Adaptive - Transportation #1. Combines process automation with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Director Adaptive - Transportation #1 - Zion Tech Group",
+    "description": "Next-generation transportation solution: Director Adaptive - Transportation #1. Combines process automation with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/director-adaptive---transportation-1-b3e086f8"
+    }
+  },
+  "features": [
+    "HIPAA ready",
+    "Performance dashboards",
+    "Edge computing support",
+    "Mobile-responsive interface"
+  ],
+  "benefits": [
+    "Scalable to millions of transactions",
+    "Real-time insights and alerts",
+    "Zero manual intervention required",
+    "Dynamic resource allocation"
+  ]
+}

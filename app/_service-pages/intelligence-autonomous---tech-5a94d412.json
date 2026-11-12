@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/intelligence-autonomous---tech-5a94d412",
+  "breadcrumbTitle": "Intelligence Autonomous - Tech",
+  "title": "Intelligence Autonomous - Tech",
+  "description": "Unlock unprecedented growth with Intelligence Autonomous - Tech. This autonomous system provides risk assessment with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligence Autonomous - Tech - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Intelligence Autonomous - Tech. This autonomous system provides risk assessment with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligence-autonomous---tech-5a94d412"
+    }
+  },
+  "features": [
+    "Performance dashboards",
+    "Plugin architecture",
+    "Edge computing support",
+    "Data encryption",
+    "Alerting system"
+  ],
+  "benefits": [
+    "Performance benchmarking",
+    "Seamless integration with existing systems",
+    "Cost optimization recommendations",
+    "Predictive maintenance scheduling",
+    "Enterprise-grade security"
+  ]
+}

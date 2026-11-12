@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/autonomous-image-analytics-1-dfa0cc50",
+  "breadcrumbTitle": "Autonomous Image Analytics #1",
+  "title": "Autonomous Image Analytics #1",
+  "description": "The future of telecom is here with Autonomous Image Analytics #1. Powered by cutting-edge AI, this platform delivers customer insights like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous Image Analytics #1 - Zion Tech Group",
+    "description": "The future of telecom is here with Autonomous Image Analytics #1. Powered by cutting-edge AI, this platform delivers customer insights like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-image-analytics-1-dfa0cc50"
+    }
+  },
+  "features": [
+    "Zero-downtime updates",
+    "Data encryption",
+    "Rollback mechanisms",
+    "Multi-region deployment",
+    "GDPR compliance"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Automated compliance reporting",
+    "ROI in under 90 days"
+  ]
+}

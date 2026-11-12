@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/coordinator-autonomous---legal-a751c257",
+  "breadcrumbTitle": "Coordinator Autonomous - Legal",
+  "title": "Coordinator Autonomous - Legal",
+  "description": "The future of legal is here with Coordinator Autonomous - Legal. Powered by cutting-edge AI, this platform delivers code optimization like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Coordinator Autonomous - Legal - Zion Tech Group",
+    "description": "The future of legal is here with Coordinator Autonomous - Legal. Powered by cutting-edge AI, this platform delivers code optimization like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/coordinator-autonomous---legal-a751c257"
+    }
+  },
+  "features": [
+    "Serverless functions",
+    "Performance dashboards",
+    "SOC 2 certified",
+    "Role-based access control",
+    "Comprehensive monitoring"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "Seamless integration with existing systems",
+    "Intelligent load balancing",
+    "Performance benchmarking"
+  ]
+}

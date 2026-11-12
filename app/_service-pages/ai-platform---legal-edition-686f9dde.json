@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-platform---legal-edition-686f9dde",
+  "breadcrumbTitle": "AI Platform - Legal Edition",
+  "title": "AI Platform - Legal Edition",
+  "description": "Next-generation legal solution: AI Platform - Legal Edition. Combines user experience with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Platform - Legal Edition - Zion Tech Group",
+    "description": "Next-generation legal solution: AI Platform - Legal Edition. Combines user experience with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-platform---legal-edition-686f9dde"
+    }
+  },
+  "features": [
+    "Rollback mechanisms",
+    "API-first design",
+    "Multi-language support",
+    "Zero-downtime updates"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "Dynamic resource allocation",
+    "3x faster decision making",
+    "Zero manual intervention required",
+    "Enterprise-grade security"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/project-powered-remote-work-automation-48be1059",
+  "breadcrumbTitle": "Project-Powered Remote-Work Automation",
+  "title": "Project-Powered Remote-Work Automation",
+  "description": "Enhance your remote-work business with Project-Powered Remote-Work Automation. Our solution provides document collaboration with enterprise-grade reliability an",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Project-Powered Remote-Work Automation - Zion Tech Group",
+    "description": "Enhance your remote-work business with Project-Powered Remote-Work Automation. Our solution provides document collaboration with enterprise-grade reliability an",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/project-powered-remote-work-automation-48be1059"
+    }
+  },
+  "features": [
+    "Real-time processing with streaming analytics",
+    "Edge computing support for low-latency operations",
+    "Real-time document collaboration with version control",
+    "Task assignment with automated reminders",
+    "Zero-downtime updates with blue-green deployment"
+  ],
+  "benefits": [
+    "3x faster decision making with real-time insights",
+    "Zero manual intervention required for routine tasks",
+    "Enterprise-grade security with end-to-end encryption",
+    "50% reduction in operational costs through automation",
+    "ROI achieved in under 90 days with cost savings"
+  ]
+}

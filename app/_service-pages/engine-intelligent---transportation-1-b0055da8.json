@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/engine-intelligent---transportation-1-b0055da8",
+  "breadcrumbTitle": "Engine Intelligent - Transportation #1",
+  "title": "Engine Intelligent - Transportation #1",
+  "description": "The future of transportation is here with Engine Intelligent - Transportation #1. Powered by cutting-edge AI, this platform delivers customer insights like neve",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Engine Intelligent - Transportation #1 - Zion Tech Group",
+    "description": "The future of transportation is here with Engine Intelligent - Transportation #1. Powered by cutting-edge AI, this platform delivers customer insights like neve",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/engine-intelligent---transportation-1-b0055da8"
+    }
+  },
+  "features": [
+    "Edge computing support",
+    "SOC 2 certified",
+    "Alerting system",
+    "Zero-downtime updates",
+    "Comprehensive monitoring"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "24/7 automated operations",
+    "Self-healing infrastructure"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/coordinator-predictive---sports-fb3e97e4",
+  "breadcrumbTitle": "Coordinator Predictive - Sports",
+  "title": "Coordinator Predictive - Sports",
+  "description": "Revolutionize sports through intelligent automation. Our Coordinator Predictive - Sports leverages advanced machine learning to deliver process automation at sc",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Coordinator Predictive - Sports - Zion Tech Group",
+    "description": "Revolutionize sports through intelligent automation. Our Coordinator Predictive - Sports leverages advanced machine learning to deliver process automation at sc",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/coordinator-predictive---sports-fb3e97e4"
+    }
+  },
+  "features": [
+    "Audit trails",
+    "Multi-region deployment",
+    "Plugin architecture",
+    "HIPAA ready"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "Predictive maintenance scheduling",
+    "Enterprise-grade security"
+  ]
+}

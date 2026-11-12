@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligent-fraud-engine-2b93d69b",
+  "breadcrumbTitle": "Intelligent Fraud Engine",
+  "title": "Intelligent Fraud Engine",
+  "description": "Revolutionize manufacturing through intelligent automation. Our Intelligent Fraud Engine leverages advanced machine learning to deliver network optimization at ",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Fraud Engine - Zion Tech Group",
+    "description": "Revolutionize manufacturing through intelligent automation. Our Intelligent Fraud Engine leverages advanced machine learning to deliver network optimization at ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-fraud-engine-2b93d69b"
+    }
+  },
+  "features": [
+    "Zero-downtime updates",
+    "SOC 2 certified",
+    "Mobile-responsive interface",
+    "Alerting system",
+    "Rollback mechanisms"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Intelligent load balancing",
+    "Scalable to millions of transactions",
+    "99.9% uptime guarantee"
+  ]
+}

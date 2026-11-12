@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-director---legal-edition-2-de059d5b",
+  "breadcrumbTitle": "AI Director - Legal Edition #2",
+  "title": "AI Director - Legal Edition #2",
+  "description": "Next-generation legal solution: AI Director - Legal Edition #2. Combines inventory management with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Director - Legal Edition #2 - Zion Tech Group",
+    "description": "Next-generation legal solution: AI Director - Legal Edition #2. Combines inventory management with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-director---legal-edition-2-de059d5b"
+    }
+  },
+  "features": [
+    "Edge computing support",
+    "Multi-language support",
+    "Role-based access control",
+    "Performance dashboards",
+    "Custom integrations"
+  ],
+  "benefits": [
+    "50% reduction in operational costs",
+    "Automated compliance reporting",
+    "Reduced human error by 95%",
+    "Cost optimization recommendations"
+  ]
+}

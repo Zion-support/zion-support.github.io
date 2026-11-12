@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-suite---transportation-edition-2b0b42dd",
+  "breadcrumbTitle": "AI Suite - Transportation Edition",
+  "title": "AI Suite - Transportation Edition",
+  "description": "The future of transportation is here with AI Suite - Transportation Edition. Powered by cutting-edge AI, this platform delivers data processing like never befor",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Suite - Transportation Edition - Zion Tech Group",
+    "description": "The future of transportation is here with AI Suite - Transportation Edition. Powered by cutting-edge AI, this platform delivers data processing like never befor",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-suite---transportation-edition-2b0b42dd"
+    }
+  },
+  "features": [
+    "Multi-region deployment",
+    "API-first design",
+    "Machine learning integration",
+    "Auto-scaling capabilities"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "99.9% uptime guarantee",
+    "Real-time insights and alerts",
+    "Enterprise-grade security",
+    "50% reduction in operational costs"
+  ]
+}

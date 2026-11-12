@@ -1,0 +1,23 @@
+{
+  "breadcrumbPath": "/services/ai-pricing-calculator-aeac8970",
+  "breadcrumbTitle": "AI Pricing Calculator",
+  "title": "AI Pricing Calculator",
+  "description": "Calculate pricing for AI services based on usage, complexity, and market benchmarks.",
+  "basic": "$29/month",
+  "pro": "$79/month",
+  "enterprise": "$199/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Pricing Calculator - Zion Tech Group",
+    "description": "Calculate pricing for AI services based on usage, complexity, and market benchmarks.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-pricing-calculator-aeac8970"
+    }
+  },
+  "features": [
+    "No features listed"
+  ],
+  "benefits": [
+    "No benefits listed"
+  ]
+}

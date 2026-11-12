@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-powered-user-intelligence-cf6163d1",
+  "breadcrumbTitle": "AI-Powered User Intelligence",
+  "title": "AI-Powered User Intelligence",
+  "description": "Transform your sports operations with our AI-Powered User Intelligence. This AI-driven solution automates fraud prevention with unprecedented accuracy and effic",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI-Powered User Intelligence - Zion Tech Group",
+    "description": "Transform your sports operations with our AI-Powered User Intelligence. This AI-driven solution automates fraud prevention with unprecedented accuracy and effic",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-user-intelligence-cf6163d1"
+    }
+  },
+  "features": [
+    "Edge computing support",
+    "Multi-region deployment",
+    "Multi-language support",
+    "Auto-scaling capabilities",
+    "Performance dashboards"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "50% reduction in operational costs",
+    "99.9% uptime guarantee",
+    "Seamless integration with existing systems"
+  ]
+}

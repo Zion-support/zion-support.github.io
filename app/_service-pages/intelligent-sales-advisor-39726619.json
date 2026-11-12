@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-sales-advisor-39726619",
+  "breadcrumbTitle": "Intelligent Sales Advisor",
+  "title": "Intelligent Sales Advisor",
+  "description": "Next-generation hospitality solution: Intelligent Sales Advisor. Combines predictive analytics with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Sales Advisor - Zion Tech Group",
+    "description": "Next-generation hospitality solution: Intelligent Sales Advisor. Combines predictive analytics with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-sales-advisor-39726619"
+    }
+  },
+  "features": [
+    "Zero-downtime updates",
+    "Alerting system",
+    "GDPR compliance",
+    "API-first design"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "Reduced human error by 95%",
+    "Enterprise-grade security",
+    "3x faster decision making"
+  ]
+}

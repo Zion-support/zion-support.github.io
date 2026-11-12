@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/next-generation-integrated-operational-automation-a98d698c",
+  "breadcrumbTitle": "Next-Generation Integrated Operational Automation",
+  "title": "Next-Generation Integrated Operational Automation",
+  "description": "Next-generation automation suite that streamlines integrated operational workflows with intelligent orchestration.",
+  "basic": "$218/month",
+  "pro": "$548/month",
+  "enterprise": "$1648/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Next-Generation Integrated Operational Automation - Zion Tech Group",
+    "description": "Next-generation automation suite that streamlines integrated operational workflows with intelligent orchestration.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/next-generation-integrated-operational-automation-a98d698c"
+    }
+  },
+  "features": [
+    "Smart orchestration",
+    "Process automation",
+    "Event processing",
+    "Task scheduling"
+  ],
+  "benefits": [
+    "Faster execution",
+    "Reduced manual steps",
+    "Scalable processes",
+    "Error reduction"
+  ]
+}

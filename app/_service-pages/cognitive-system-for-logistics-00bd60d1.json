@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/cognitive-system-for-logistics-00bd60d1",
+  "breadcrumbTitle": "Cognitive System for Logistics",
+  "title": "Cognitive System for Logistics",
+  "description": "Revolutionize logistics through intelligent automation. Our Cognitive System for Logistics leverages advanced machine learning to deliver customer insights at s",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Cognitive System for Logistics - Zion Tech Group",
+    "description": "Revolutionize logistics through intelligent automation. Our Cognitive System for Logistics leverages advanced machine learning to deliver customer insights at s",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cognitive-system-for-logistics-00bd60d1"
+    }
+  },
+  "features": [
+    "Offline capabilities",
+    "Cloud-native architecture",
+    "Role-based access control",
+    "GDPR compliance"
+  ],
+  "benefits": [
+    "Dynamic resource allocation",
+    "ROI in under 90 days",
+    "Real-time insights and alerts"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/ai-director---tech-edition-1-1ee996c3",
+  "breadcrumbTitle": "AI Director - Tech Edition #1",
+  "title": "AI Director - Tech Edition #1",
+  "description": "Revolutionize technology through intelligent automation. Our AI Director - Tech Edition #1 leverages advanced machine learning to deliver user experience at sca",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Director - Tech Edition #1 - Zion Tech Group",
+    "description": "Revolutionize technology through intelligent automation. Our AI Director - Tech Edition #1 leverages advanced machine learning to deliver user experience at sca",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-director---tech-edition-1-1ee996c3"
+    }
+  },
+  "features": [
+    "Zero-downtime updates",
+    "Auto-scaling capabilities",
+    "Serverless functions",
+    "Mobile-responsive interface"
+  ],
+  "benefits": [
+    "Automated compliance reporting",
+    "Seamless integration with existing systems",
+    "50% reduction in operational costs"
+  ]
+}

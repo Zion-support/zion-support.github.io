@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligent-risk-analyzer-8d3676a0",
+  "breadcrumbTitle": "Intelligent Risk Analyzer",
+  "title": "Intelligent Risk Analyzer",
+  "description": "Next-generation automotive solution: Intelligent Risk Analyzer. Combines quality control with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Risk Analyzer - Zion Tech Group",
+    "description": "Next-generation automotive solution: Intelligent Risk Analyzer. Combines quality control with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-risk-analyzer-8d3676a0"
+    }
+  },
+  "features": [
+    "Cloud-native architecture",
+    "API-first design",
+    "Edge computing support",
+    "Auto-scaling capabilities"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Real-time insights and alerts",
+    "ROI in under 90 days",
+    "Self-healing infrastructure",
+    "50% reduction in operational costs"
+  ]
+}

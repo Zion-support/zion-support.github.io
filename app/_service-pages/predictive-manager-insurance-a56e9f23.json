@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/predictive-manager-insurance-a56e9f23",
+  "breadcrumbTitle": "Predictive manager-insurance",
+  "title": "Predictive manager-insurance",
+  "description": "Revolutionize insurance through intelligent automation. Our Predictive manager-insurance leverages advanced machine learning to deliver supply chain at scale.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Predictive manager-insurance - Zion Tech Group",
+    "description": "Revolutionize insurance through intelligent automation. Our Predictive manager-insurance leverages advanced machine learning to deliver supply chain at scale.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/predictive-manager-insurance-a56e9f23"
+    }
+  },
+  "features": [
+    "Open-source friendly",
+    "API-first design",
+    "Alerting system",
+    "Machine learning integration"
+  ],
+  "benefits": [
+    "Dynamic resource allocation",
+    "Automated compliance reporting",
+    "50% reduction in operational costs",
+    "Real-time insights and alerts",
+    "99.9% uptime guarantee"
+  ]
+}

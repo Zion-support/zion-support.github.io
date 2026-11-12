@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/smart-fraud-director-f6b205d3",
+  "breadcrumbTitle": "Smart Fraud Director",
+  "title": "Smart Fraud Director",
+  "description": "The future of energy is here with Smart Fraud Director. Powered by cutting-edge AI, this platform delivers supply chain like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Fraud Director - Zion Tech Group",
+    "description": "The future of energy is here with Smart Fraud Director. Powered by cutting-edge AI, this platform delivers supply chain like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-fraud-director-f6b205d3"
+    }
+  },
+  "features": [
+    "Plugin architecture",
+    "Auto-scaling capabilities",
+    "Open-source friendly",
+    "Real-time processing",
+    "Alerting system"
+  ],
+  "benefits": [
+    "Automated compliance reporting",
+    "3x faster decision making",
+    "24/7 automated operations"
+  ]
+}

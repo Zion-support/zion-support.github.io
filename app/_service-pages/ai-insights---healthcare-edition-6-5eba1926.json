@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-insights---healthcare-edition-6-5eba1926",
+  "breadcrumbTitle": "AI Insights - Healthcare Edition #6",
+  "title": "AI Insights - Healthcare Edition #6",
+  "description": "Next-generation healthcare solution: AI Insights - Healthcare Edition #6. Combines content generation with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Insights - Healthcare Edition #6 - Zion Tech Group",
+    "description": "Next-generation healthcare solution: AI Insights - Healthcare Edition #6. Combines content generation with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-insights---healthcare-edition-6-5eba1926"
+    }
+  },
+  "features": [
+    "Offline capabilities",
+    "Performance dashboards",
+    "SOC 2 certified",
+    "Rollback mechanisms",
+    "API-first design"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Dynamic resource allocation",
+    "Intelligent load balancing",
+    "Scalable to millions of transactions"
+  ]
+}

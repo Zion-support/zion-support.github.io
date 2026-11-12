@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-financial-planning--analysis-5a703338",
+  "breadcrumbTitle": "AI Financial Planning & Analysis",
+  "title": "AI Financial Planning & Analysis",
+  "description": "Financial intelligence platform that automates budgeting, forecasting, and financial reporting. Provides real-time insights for better financial decision-making",
+  "basic": "$299/month",
+  "pro": "$699/month",
+  "enterprise": "$1999/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Financial Planning & Analysis - Zion Tech Group",
+    "description": "Financial intelligence platform that automates budgeting, forecasting, and financial reporting. Provides real-time insights for better financial decision-making",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-financial-planning--analysis-5a703338"
+    }
+  },
+  "features": [
+    "Automated financial forecasting",
+    "Budget variance analysis",
+    "Cash flow optimization",
+    "Financial KPI dashboards"
+  ],
+  "benefits": [
+    "Faster financial reporting",
+    "Improved forecast accuracy",
+    "Better cash flow management",
+    "Data-driven financial decisions"
+  ]
+}

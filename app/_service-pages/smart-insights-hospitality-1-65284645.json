@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/smart-insights-hospitality-1-65284645",
+  "breadcrumbTitle": "Smart insights-hospitality #1",
+  "title": "Smart insights-hospitality #1",
+  "description": "Next-generation hospitality solution: Smart insights-hospitality #1. Combines threat detection with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart insights-hospitality #1 - Zion Tech Group",
+    "description": "Next-generation hospitality solution: Smart insights-hospitality #1. Combines threat detection with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-insights-hospitality-1-65284645"
+    }
+  },
+  "features": [
+    "Comprehensive monitoring",
+    "Real-time processing",
+    "Serverless functions",
+    "Cloud-native architecture"
+  ],
+  "benefits": [
+    "24/7 automated operations",
+    "Scalable to millions of transactions",
+    "Seamless integration with existing systems"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-generator---transportation-edition-3055746a",
+  "breadcrumbTitle": "AI Generator - Transportation Edition",
+  "title": "AI Generator - Transportation Edition",
+  "description": "Transform your transportation operations with our AI Generator - Transportation Edition. This AI-driven solution automates sales forecasting with unprecedented ",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Generator - Transportation Edition - Zion Tech Group",
+    "description": "Transform your transportation operations with our AI Generator - Transportation Edition. This AI-driven solution automates sales forecasting with unprecedented ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-generator---transportation-edition-3055746a"
+    }
+  },
+  "features": [
+    "Plugin architecture",
+    "Data encryption",
+    "SOC 2 certified",
+    "Edge computing support",
+    "Cloud-native architecture"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "Predictive maintenance scheduling",
+    "Scalable to millions of transactions",
+    "Automated compliance reporting"
+  ]
+}

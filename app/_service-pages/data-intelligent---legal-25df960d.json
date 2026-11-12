@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/data-intelligent---legal-25df960d",
+  "breadcrumbTitle": "Data Intelligent - Legal",
+  "title": "Data Intelligent - Legal",
+  "description": "The future of Legal is here with Data Intelligent - Legal. Powered by cutting-edge AI, this platform delivers predictive analytics like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Data Intelligent - Legal - Zion Tech Group",
+    "description": "The future of Legal is here with Data Intelligent - Legal. Powered by cutting-edge AI, this platform delivers predictive analytics like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/data-intelligent---legal-25df960d"
+    }
+  },
+  "features": [
+    "Logistics route optimization with traffic prediction",
+    "Machine learning integration with automatic model training",
+    "Language processing with sentiment analysis",
+    "GDPR compliance with data portability",
+    "Customer journey mapping with touchpoint analysis"
+  ],
+  "benefits": [
+    "Improved forecast accuracy with ML models",
+    "Improved customer satisfaction with faster response times",
+    "Reduced risk with early warning systems",
+    "Reduced customer acquisition costs with optimization",
+    "Improved sales performance with lead scoring"
+  ]
+}

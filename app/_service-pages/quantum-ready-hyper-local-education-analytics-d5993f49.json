@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/quantum-ready-hyper-local-education-analytics-d5993f49",
+  "breadcrumbTitle": "Quantum-Ready Hyper-Local Education Analytics",
+  "title": "Quantum-Ready Hyper-Local Education Analytics",
+  "description": "Quantum-ready analytics platform that prepares hyper-local education workloads for future quantum acceleration.",
+  "basic": "$298/month",
+  "pro": "$748/month",
+  "enterprise": "$2248/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Quantum-Ready Hyper-Local Education Analytics - Zion Tech Group",
+    "description": "Quantum-ready analytics platform that prepares hyper-local education workloads for future quantum acceleration.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/quantum-ready-hyper-local-education-analytics-d5993f49"
+    }
+  },
+  "features": [
+    "Quantum simulation",
+    "Hybrid classical-quantum",
+    "Algorithm optimization",
+    "Future-proofing"
+  ],
+  "benefits": [
+    "Quantum advantage readiness",
+    "Future-proof algorithms",
+    "Hybrid optimization",
+    "Competitive edge"
+  ]
+}

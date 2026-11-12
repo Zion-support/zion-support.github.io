@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/optimization-autonomous---education-5736a3e4",
+  "breadcrumbTitle": "Optimization Autonomous - Education",
+  "title": "Optimization Autonomous - Education",
+  "description": "Revolutionize education through intelligent automation. Our Optimization Autonomous - Education leverages advanced machine learning to deliver compliance monito",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Optimization Autonomous - Education - Zion Tech Group",
+    "description": "Revolutionize education through intelligent automation. Our Optimization Autonomous - Education leverages advanced machine learning to deliver compliance monito",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/optimization-autonomous---education-5736a3e4"
+    }
+  },
+  "features": [
+    "Open-source friendly",
+    "Multi-region deployment",
+    "Container orchestration",
+    "Alerting system",
+    "Comprehensive monitoring"
+  ],
+  "benefits": [
+    "Automated compliance reporting",
+    "Zero manual intervention required",
+    "Seamless integration with existing systems"
+  ]
+}

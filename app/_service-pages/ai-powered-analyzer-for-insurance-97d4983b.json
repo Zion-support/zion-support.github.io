@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-powered-analyzer-for-insurance-97d4983b",
+  "breadcrumbTitle": "AI-Powered Analyzer for Insurance",
+  "title": "AI-Powered Analyzer for Insurance",
+  "description": "Transform your insurance operations with our AI-Powered Analyzer for Insurance. This AI-driven solution automates predictive analytics with unprecedented accura",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI-Powered Analyzer for Insurance - Zion Tech Group",
+    "description": "Transform your insurance operations with our AI-Powered Analyzer for Insurance. This AI-driven solution automates predictive analytics with unprecedented accura",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-analyzer-for-insurance-97d4983b"
+    }
+  },
+  "features": [
+    "Performance dashboards",
+    "Container orchestration",
+    "Multi-region deployment",
+    "Cloud-native architecture",
+    "Role-based access control"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "99.9% uptime guarantee",
+    "Dynamic resource allocation",
+    "Scalable to millions of transactions"
+  ]
+}

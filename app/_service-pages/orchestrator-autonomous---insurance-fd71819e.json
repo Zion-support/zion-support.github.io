@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/orchestrator-autonomous---insurance-fd71819e",
+  "breadcrumbTitle": "Orchestrator Autonomous - Insurance",
+  "title": "Orchestrator Autonomous - Insurance",
+  "description": "The future of insurance is here with Orchestrator Autonomous - Insurance. Powered by cutting-edge AI, this platform delivers maintenance scheduling like never b",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Orchestrator Autonomous - Insurance - Zion Tech Group",
+    "description": "The future of insurance is here with Orchestrator Autonomous - Insurance. Powered by cutting-edge AI, this platform delivers maintenance scheduling like never b",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/orchestrator-autonomous---insurance-fd71819e"
+    }
+  },
+  "features": [
+    "Microservices deployment",
+    "Performance dashboards",
+    "Mobile-responsive interface",
+    "Zero-downtime updates"
+  ],
+  "benefits": [
+    "Intelligent load balancing",
+    "Seamless integration with existing systems",
+    "Scalable to millions of transactions",
+    "Enterprise-grade security"
+  ]
+}

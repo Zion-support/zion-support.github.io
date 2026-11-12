@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/autonomous-sales-suite-1-66347dd9",
+  "breadcrumbTitle": "Autonomous Sales Suite #1",
+  "title": "Autonomous Sales Suite #1",
+  "description": "Unlock unprecedented growth with Autonomous Sales Suite #1. This autonomous system provides performance monitoring with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous Sales Suite #1 - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Autonomous Sales Suite #1. This autonomous system provides performance monitoring with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-sales-suite-1-66347dd9"
+    }
+  },
+  "features": [
+    "Container orchestration",
+    "Open-source friendly",
+    "Rollback mechanisms",
+    "Multi-language support",
+    "Custom integrations"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "ROI in under 90 days",
+    "Scalable to millions of transactions"
+  ]
+}

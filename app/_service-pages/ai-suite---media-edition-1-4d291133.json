@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/ai-suite---media-edition-1-4d291133",
+  "breadcrumbTitle": "AI Suite - Media Edition #1",
+  "title": "AI Suite - Media Edition #1",
+  "description": "The future of media is here with AI Suite - Media Edition #1. Powered by cutting-edge AI, this platform delivers fraud prevention like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Suite - Media Edition #1 - Zion Tech Group",
+    "description": "The future of media is here with AI Suite - Media Edition #1. Powered by cutting-edge AI, this platform delivers fraud prevention like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-suite---media-edition-1-4d291133"
+    }
+  },
+  "features": [
+    "Machine learning integration",
+    "Offline capabilities",
+    "GDPR compliance",
+    "API-first design"
+  ],
+  "benefits": [
+    "50% reduction in operational costs",
+    "99.9% uptime guarantee",
+    "Cost optimization recommendations"
+  ]
+}

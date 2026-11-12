@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-maintenance-platform-1-3eb0f0f4",
+  "breadcrumbTitle": "Intelligent Maintenance Platform #1",
+  "title": "Intelligent Maintenance Platform #1",
+  "description": "The future of logistics is here with Intelligent Maintenance Platform #1. Powered by cutting-edge AI, this platform delivers document processing like never befo",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Maintenance Platform #1 - Zion Tech Group",
+    "description": "The future of logistics is here with Intelligent Maintenance Platform #1. Powered by cutting-edge AI, this platform delivers document processing like never befo",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-maintenance-platform-1-3eb0f0f4"
+    }
+  },
+  "features": [
+    "Container orchestration",
+    "HIPAA ready",
+    "API-first design",
+    "Custom integrations",
+    "Comprehensive monitoring"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "24/7 automated operations",
+    "Real-time insights and alerts"
+  ]
+}

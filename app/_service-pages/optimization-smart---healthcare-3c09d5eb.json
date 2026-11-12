@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/optimization-smart---healthcare-3c09d5eb",
+  "breadcrumbTitle": "Optimization Smart - Healthcare",
+  "title": "Optimization Smart - Healthcare",
+  "description": "Revolutionize healthcare through intelligent automation. Our Optimization Smart - Healthcare leverages advanced machine learning to deliver sales forecasting at",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Optimization Smart - Healthcare - Zion Tech Group",
+    "description": "Revolutionize healthcare through intelligent automation. Our Optimization Smart - Healthcare leverages advanced machine learning to deliver sales forecasting at",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/optimization-smart---healthcare-3c09d5eb"
+    }
+  },
+  "features": [
+    "Comprehensive monitoring",
+    "Rollback mechanisms",
+    "Edge computing support",
+    "Serverless functions",
+    "Offline capabilities"
+  ],
+  "benefits": [
+    "Scalable to millions of transactions",
+    "24/7 automated operations",
+    "Automated compliance reporting"
+  ]
+}

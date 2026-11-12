@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/autonomous-management-construction-192b206e",
+  "breadcrumbTitle": "Autonomous management-construction",
+  "title": "Autonomous management-construction",
+  "description": "Next-generation construction solution: Autonomous management-construction. Combines energy management with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous management-construction - Zion Tech Group",
+    "description": "Next-generation construction solution: Autonomous management-construction. Combines energy management with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-management-construction-192b206e"
+    }
+  },
+  "features": [
+    "Microservices deployment",
+    "Container orchestration",
+    "API-first design",
+    "Edge computing support",
+    "Role-based access control"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "Zero manual intervention required",
+    "Performance benchmarking",
+    "Self-healing infrastructure",
+    "Scalable to millions of transactions"
+  ]
+}

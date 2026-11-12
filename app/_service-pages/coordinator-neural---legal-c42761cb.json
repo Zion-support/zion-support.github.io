@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/coordinator-neural---legal-c42761cb",
+  "breadcrumbTitle": "Coordinator Neural - Legal",
+  "title": "Coordinator Neural - Legal",
+  "description": "Revolutionize legal through intelligent automation. Our Coordinator Neural - Legal leverages advanced machine learning to deliver document processing at scale.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Coordinator Neural - Legal - Zion Tech Group",
+    "description": "Revolutionize legal through intelligent automation. Our Coordinator Neural - Legal leverages advanced machine learning to deliver document processing at scale.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/coordinator-neural---legal-c42761cb"
+    }
+  },
+  "features": [
+    "Real-time processing",
+    "Open-source friendly",
+    "Mobile-responsive interface",
+    "Plugin architecture",
+    "Role-based access control"
+  ],
+  "benefits": [
+    "Cost optimization recommendations",
+    "Real-time insights and alerts",
+    "50% reduction in operational costs",
+    "99.9% uptime guarantee",
+    "Automated compliance reporting"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligent-optimization-retail-79a3ab78",
+  "breadcrumbTitle": "Intelligent optimization-retail",
+  "title": "Intelligent optimization-retail",
+  "description": "The future of retail is here with Intelligent optimization-retail. Powered by cutting-edge AI, this platform delivers fraud prevention like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent optimization-retail - Zion Tech Group",
+    "description": "The future of retail is here with Intelligent optimization-retail. Powered by cutting-edge AI, this platform delivers fraud prevention like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-optimization-retail-79a3ab78"
+    }
+  },
+  "features": [
+    "Plugin architecture",
+    "Open-source friendly",
+    "Microservices deployment",
+    "Alerting system",
+    "Multi-language support"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Predictive maintenance scheduling",
+    "ROI in under 90 days",
+    "99.9% uptime guarantee"
+  ]
+}

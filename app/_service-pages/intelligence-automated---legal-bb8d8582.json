@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/intelligence-automated---legal-bb8d8582",
+  "breadcrumbTitle": "Intelligence Automated - Legal",
+  "title": "Intelligence Automated - Legal",
+  "description": "Next-generation legal solution: Intelligence Automated - Legal. Combines resource optimization with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligence Automated - Legal - Zion Tech Group",
+    "description": "Next-generation legal solution: Intelligence Automated - Legal. Combines resource optimization with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligence-automated---legal-bb8d8582"
+    }
+  },
+  "features": [
+    "Machine learning integration",
+    "SOC 2 certified",
+    "GDPR compliance",
+    "Multi-language support"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "Dynamic resource allocation",
+    "24/7 automated operations"
+  ]
+}

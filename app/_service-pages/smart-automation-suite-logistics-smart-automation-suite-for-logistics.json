@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/smart-automation-suite-logistics-smart-automation-suite-for-logistics",
+  "breadcrumbTitle": "Smart Automation Suite for Logistics",
+  "title": "Smart Automation Suite for Logistics",
+  "description": "Comprehensive smart automation suite designed for logistics enterprises. Automates Route optimization, fleet management, warehouse automation across all operati",
+  "basic": "$92/month",
+  "pro": "$376/month",
+  "enterprise": "$802/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Automation Suite for Logistics - Zion Tech Group",
+    "description": "Comprehensive smart automation suite designed for logistics enterprises. Automates Route optimization, fleet management, warehouse automation across all operati",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-automation-suite-logistics-smart-automation-suite-for-logistics"
+    }
+  },
+  "features": [
+    "AI-powered automation",
+    "Enterprise-grade security",
+    "24/7 monitoring",
+    "API-first integration",
+    "Scalable architecture"
+  ],
+  "benefits": [
+    "48% reduction in operational costs",
+    "Process 93% faster with automation",
+    "99.9% uptime guarantee with enterprise SLAs",
+    "ROI realized in under 90 days",
+    "Zero-downtime deployment"
+  ]
+}

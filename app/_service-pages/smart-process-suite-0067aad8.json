@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/smart-process-suite-0067aad8",
+  "breadcrumbTitle": "Smart Process Suite",
+  "title": "Smart Process Suite",
+  "description": "Unlock unprecedented growth with Smart Process Suite. This autonomous system provides workflow management with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Process Suite - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Smart Process Suite. This autonomous system provides workflow management with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-process-suite-0067aad8"
+    }
+  },
+  "features": [
+    "Role-based access control",
+    "HIPAA ready",
+    "Auto-scaling capabilities",
+    "Cloud-native architecture"
+  ],
+  "benefits": [
+    "Intelligent load balancing",
+    "Reduced human error by 95%",
+    "Dynamic resource allocation"
+  ]
+}

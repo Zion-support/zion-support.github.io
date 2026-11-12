@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/insights-intelligent---healthcare-448f7bc1",
+  "breadcrumbTitle": "Insights Intelligent - Healthcare",
+  "title": "Insights Intelligent - Healthcare",
+  "description": "Revolutionize Healthcare through intelligent automation. Our Insights Intelligent - Healthcare leverages advanced machine learning to deliver supply chain at sc",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Insights Intelligent - Healthcare - Zion Tech Group",
+    "description": "Revolutionize Healthcare through intelligent automation. Our Insights Intelligent - Healthcare leverages advanced machine learning to deliver supply chain at sc",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/insights-intelligent---healthcare-448f7bc1"
+    }
+  },
+  "features": [
+    "Language processing with sentiment analysis",
+    "Mobile-responsive interface with offline capabilities",
+    "Microservices deployment with container orchestration",
+    "Sales process optimization with pipeline management",
+    "Code optimization with performance profiling"
+  ],
+  "benefits": [
+    "Increased revenue with optimized pricing strategies",
+    "50% reduction in operational costs through automation",
+    "Enhanced security posture with continuous monitoring",
+    "Improved customer retention with proactive service",
+    "Improved sales performance with lead scoring"
+  ]
+}

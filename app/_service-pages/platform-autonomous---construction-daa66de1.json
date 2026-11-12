@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/platform-autonomous---construction-daa66de1",
+  "breadcrumbTitle": "Platform Autonomous - Construction",
+  "title": "Platform Autonomous - Construction",
+  "description": "Next-generation construction solution: Platform Autonomous - Construction. Combines inventory management with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Platform Autonomous - Construction - Zion Tech Group",
+    "description": "Next-generation construction solution: Platform Autonomous - Construction. Combines inventory management with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/platform-autonomous---construction-daa66de1"
+    }
+  },
+  "features": [
+    "Edge computing support",
+    "Microservices deployment",
+    "Real-time processing",
+    "API-first design",
+    "Mobile-responsive interface"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "Reduced human error by 95%",
+    "Real-time insights and alerts"
+  ]
+}

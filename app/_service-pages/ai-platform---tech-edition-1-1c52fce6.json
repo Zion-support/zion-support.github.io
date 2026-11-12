@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-platform---tech-edition-1-1c52fce6",
+  "breadcrumbTitle": "AI Platform - Tech Edition #1",
+  "title": "AI Platform - Tech Edition #1",
+  "description": "The future of technology is here with AI Platform - Tech Edition #1. Powered by cutting-edge AI, this platform delivers resource optimization like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Platform - Tech Edition #1 - Zion Tech Group",
+    "description": "The future of technology is here with AI Platform - Tech Edition #1. Powered by cutting-edge AI, this platform delivers resource optimization like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-platform---tech-edition-1-1c52fce6"
+    }
+  },
+  "features": [
+    "API-first design",
+    "Performance dashboards",
+    "Container orchestration",
+    "Real-time processing"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "Automated compliance reporting",
+    "50% reduction in operational costs",
+    "Scalable to millions of transactions",
+    "Reduced human error by 95%"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/ai-experience---logistics-edition-e34331ca",
+  "breadcrumbTitle": "AI Experience - Logistics Edition",
+  "title": "AI Experience - Logistics Edition",
+  "description": "Next-generation Logistics solution: AI Experience - Logistics Edition. Combines document processing with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Experience - Logistics Edition - Zion Tech Group",
+    "description": "Next-generation Logistics solution: AI Experience - Logistics Edition. Combines document processing with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-experience---logistics-edition-e34331ca"
+    }
+  },
+  "features": [
+    "Data encryption at rest and in transit",
+    "Maintenance scheduling with predictive analytics",
+    "Customer journey mapping with touchpoint analysis",
+    "Mobile-responsive interface with offline capabilities",
+    "Revenue forecasting with market trend analysis"
+  ],
+  "benefits": [
+    "Improved quality with automated testing and validation",
+    "99.9% uptime guarantee with redundant architecture",
+    "Faster content creation with AI assistance",
+    "Scalable to millions of transactions per second",
+    "Real-time insights and alerts for proactive management"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/automated-advisor-for-healthcare-aa2c52c2",
+  "breadcrumbTitle": "Automated Advisor for Healthcare",
+  "title": "Automated Advisor for Healthcare",
+  "description": "The future of healthcare is here with Automated Advisor for Healthcare. Powered by cutting-edge AI, this platform delivers workflow management like never before",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated Advisor for Healthcare - Zion Tech Group",
+    "description": "The future of healthcare is here with Automated Advisor for Healthcare. Powered by cutting-edge AI, this platform delivers workflow management like never before",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-advisor-for-healthcare-aa2c52c2"
+    }
+  },
+  "features": [
+    "Mobile-responsive interface",
+    "Multi-region deployment",
+    "HIPAA ready",
+    "Zero-downtime updates",
+    "Audit trails"
+  ],
+  "benefits": [
+    "Intelligent load balancing",
+    "ROI in under 90 days",
+    "Real-time insights and alerts",
+    "Self-healing infrastructure"
+  ]
+}

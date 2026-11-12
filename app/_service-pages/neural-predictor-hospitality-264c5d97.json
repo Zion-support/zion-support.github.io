@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/neural-predictor-hospitality-264c5d97",
+  "breadcrumbTitle": "Neural predictor-hospitality",
+  "title": "Neural predictor-hospitality",
+  "description": "Unlock unprecedented growth with Neural predictor-hospitality. This autonomous system provides decision support with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Neural predictor-hospitality - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Neural predictor-hospitality. This autonomous system provides decision support with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/neural-predictor-hospitality-264c5d97"
+    }
+  },
+  "features": [
+    "Microservices deployment",
+    "HIPAA ready",
+    "API-first design",
+    "Zero-downtime updates"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "Dynamic resource allocation",
+    "Enterprise-grade security",
+    "ROI in under 90 days"
+  ]
+}

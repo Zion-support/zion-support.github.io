@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/ai-platform---manufacturing-edition-3-0329637d",
+  "breadcrumbTitle": "AI Platform - Manufacturing Edition #3",
+  "title": "AI Platform - Manufacturing Edition #3",
+  "description": "Transform your manufacturing operations with our AI Platform - Manufacturing Edition #3. This AI-driven solution automates user experience with unprecedented ac",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Platform - Manufacturing Edition #3 - Zion Tech Group",
+    "description": "Transform your manufacturing operations with our AI Platform - Manufacturing Edition #3. This AI-driven solution automates user experience with unprecedented ac",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-platform---manufacturing-edition-3-0329637d"
+    }
+  },
+  "features": [
+    "Rollback mechanisms",
+    "Auto-scaling capabilities",
+    "API-first design",
+    "Zero-downtime updates"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Intelligent load balancing",
+    "Scalable to millions of transactions"
+  ]
+}

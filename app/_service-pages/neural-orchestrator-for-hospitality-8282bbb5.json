@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/neural-orchestrator-for-hospitality-8282bbb5",
+  "breadcrumbTitle": "Neural Orchestrator for Hospitality",
+  "title": "Neural Orchestrator for Hospitality",
+  "description": "Next-generation hospitality solution: Neural Orchestrator for Hospitality. Combines data processing with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Neural Orchestrator for Hospitality - Zion Tech Group",
+    "description": "Next-generation hospitality solution: Neural Orchestrator for Hospitality. Combines data processing with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/neural-orchestrator-for-hospitality-8282bbb5"
+    }
+  },
+  "features": [
+    "Audit trails",
+    "Microservices deployment",
+    "API-first design",
+    "Data encryption",
+    "Container orchestration"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "Cost optimization recommendations",
+    "Predictive maintenance scheduling"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/ai-system---tech-edition-8-71472446",
+  "breadcrumbTitle": "AI System - Tech Edition #8",
+  "title": "AI System - Tech Edition #8",
+  "description": "Revolutionize technology through intelligent automation. Our AI System - Tech Edition #8 leverages advanced machine learning to deliver customer insights at sca",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI System - Tech Edition #8 - Zion Tech Group",
+    "description": "Revolutionize technology through intelligent automation. Our AI System - Tech Edition #8 leverages advanced machine learning to deliver customer insights at sca",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-system---tech-edition-8-71472446"
+    }
+  },
+  "features": [
+    "Custom integrations",
+    "Offline capabilities",
+    "Real-time processing",
+    "Open-source friendly"
+  ],
+  "benefits": [
+    "Performance benchmarking",
+    "Scalable to millions of transactions",
+    "Self-healing infrastructure"
+  ]
+}

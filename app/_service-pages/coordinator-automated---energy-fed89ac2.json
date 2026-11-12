@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/coordinator-automated---energy-fed89ac2",
+  "breadcrumbTitle": "Coordinator Automated - Energy",
+  "title": "Coordinator Automated - Energy",
+  "description": "Transform your energy operations with our Coordinator Automated - Energy. This AI-driven solution automates energy management with unprecedented accuracy and ef",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Coordinator Automated - Energy - Zion Tech Group",
+    "description": "Transform your energy operations with our Coordinator Automated - Energy. This AI-driven solution automates energy management with unprecedented accuracy and ef",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/coordinator-automated---energy-fed89ac2"
+    }
+  },
+  "features": [
+    "Open-source friendly",
+    "Real-time processing",
+    "Role-based access control",
+    "HIPAA ready",
+    "Edge computing support"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "Scalable to millions of transactions",
+    "24/7 automated operations",
+    "3x faster decision making"
+  ]
+}

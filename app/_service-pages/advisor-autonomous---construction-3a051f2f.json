@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/advisor-autonomous---construction-3a051f2f",
+  "breadcrumbTitle": "Advisor Autonomous - Construction",
+  "title": "Advisor Autonomous - Construction",
+  "description": "Transform your construction operations with our Advisor Autonomous - Construction. This AI-driven solution automates workflow management with unprecedented accu",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Advisor Autonomous - Construction - Zion Tech Group",
+    "description": "Transform your construction operations with our Advisor Autonomous - Construction. This AI-driven solution automates workflow management with unprecedented accu",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/advisor-autonomous---construction-3a051f2f"
+    }
+  },
+  "features": [
+    "Edge computing support",
+    "SOC 2 certified",
+    "GDPR compliance",
+    "Custom integrations",
+    "Offline capabilities"
+  ],
+  "benefits": [
+    "50% reduction in operational costs",
+    "Seamless integration with existing systems",
+    "Self-healing infrastructure"
+  ]
+}

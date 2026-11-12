@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/quality-inspection-vision-ai-7d0529aa",
+  "breadcrumbTitle": "Quality Inspection Vision AI",
+  "title": "Quality Inspection Vision AI",
+  "description": "Automated visual inspection using computer vision. Detects defects at line speed with 99.9% accuracy. Adapts to new products without reprogramming.",
+  "basic": "$1999/line/mo/month",
+  "pro": "$4999/line/mo/month",
+  "enterprise": "$custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Quality Inspection Vision AI - Zion Tech Group",
+    "description": "Automated visual inspection using computer vision. Detects defects at line speed with 99.9% accuracy. Adapts to new products without reprogramming.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/quality-inspection-vision-ai-7d0529aa"
+    }
+  },
+  "features": [
+    "Line-speed inspection",
+    "99.9% defect detection",
+    "Zero-shot learning",
+    "Defect classification",
+    "Traceability integration"
+  ],
+  "benefits": [
+    "Eliminate manual inspection",
+    "Reduce scrap 40%",
+    "Increase throughput",
+    "Consistent quality 24/7",
+    "Regulatory documentation"
+  ]
+}

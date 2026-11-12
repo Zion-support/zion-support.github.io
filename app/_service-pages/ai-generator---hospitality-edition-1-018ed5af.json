@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-generator---hospitality-edition-1-018ed5af",
+  "breadcrumbTitle": "AI Generator - Hospitality Edition #1",
+  "title": "AI Generator - Hospitality Edition #1",
+  "description": "Transform your hospitality operations with our AI Generator - Hospitality Edition #1. This AI-driven solution automates compliance monitoring with unprecedented",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Generator - Hospitality Edition #1 - Zion Tech Group",
+    "description": "Transform your hospitality operations with our AI Generator - Hospitality Edition #1. This AI-driven solution automates compliance monitoring with unprecedented",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-generator---hospitality-edition-1-018ed5af"
+    }
+  },
+  "features": [
+    "Serverless functions",
+    "Performance dashboards",
+    "SOC 2 certified",
+    "Multi-region deployment"
+  ],
+  "benefits": [
+    "Cost optimization recommendations",
+    "Seamless integration with existing systems",
+    "Real-time insights and alerts",
+    "Scalable to millions of transactions"
+  ]
+}

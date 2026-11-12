@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/optimization-autonomous---automotive-8ad0a026",
+  "breadcrumbTitle": "Optimization Autonomous - Automotive",
+  "title": "Optimization Autonomous - Automotive",
+  "description": "Unlock unprecedented growth with Optimization Autonomous - Automotive. This autonomous system provides language processing with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Optimization Autonomous - Automotive - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Optimization Autonomous - Automotive. This autonomous system provides language processing with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/optimization-autonomous---automotive-8ad0a026"
+    }
+  },
+  "features": [
+    "Cloud-native architecture",
+    "Performance dashboards",
+    "Offline capabilities",
+    "Audit trails"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Seamless integration with existing systems",
+    "Zero manual intervention required",
+    "Predictive maintenance scheduling"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/ai-suite---automotive-edition-6-376ae104",
+  "breadcrumbTitle": "AI Suite - Automotive Edition #6",
+  "title": "AI Suite - Automotive Edition #6",
+  "description": "Next-generation automotive solution: AI Suite - Automotive Edition #6. Combines decision support with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Suite - Automotive Edition #6 - Zion Tech Group",
+    "description": "Next-generation automotive solution: AI Suite - Automotive Edition #6. Combines decision support with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-suite---automotive-edition-6-376ae104"
+    }
+  },
+  "features": [
+    "Plugin architecture",
+    "Machine learning integration",
+    "API-first design",
+    "Zero-downtime updates",
+    "Open-source friendly"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "Automated compliance reporting",
+    "Predictive maintenance scheduling",
+    "Reduced human error by 95%",
+    "Scalable to millions of transactions"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/intelligent-manager-for-logistics-ee3f7287",
+  "breadcrumbTitle": "Intelligent Manager for Logistics",
+  "title": "Intelligent Manager for Logistics",
+  "description": "Next-generation logistics solution: Intelligent Manager for Logistics. Combines security monitoring with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Manager for Logistics - Zion Tech Group",
+    "description": "Next-generation logistics solution: Intelligent Manager for Logistics. Combines security monitoring with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-manager-for-logistics-ee3f7287"
+    }
+  },
+  "features": [
+    "Multi-language support",
+    "Multi-region deployment",
+    "Edge computing support",
+    "Serverless functions"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "50% reduction in operational costs",
+    "3x faster decision making"
+  ]
+}

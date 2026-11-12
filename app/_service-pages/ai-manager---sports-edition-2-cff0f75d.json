@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-manager---sports-edition-2-cff0f75d",
+  "breadcrumbTitle": "AI Manager - Sports Edition #2",
+  "title": "AI Manager - Sports Edition #2",
+  "description": "Next-generation sports solution: AI Manager - Sports Edition #2. Combines financial planning with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Manager - Sports Edition #2 - Zion Tech Group",
+    "description": "Next-generation sports solution: AI Manager - Sports Edition #2. Combines financial planning with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-manager---sports-edition-2-cff0f75d"
+    }
+  },
+  "features": [
+    "Open-source friendly",
+    "Machine learning integration",
+    "Microservices deployment",
+    "API-first design"
+  ],
+  "benefits": [
+    "Performance benchmarking",
+    "Real-time insights and alerts",
+    "Predictive maintenance scheduling",
+    "Intelligent load balancing",
+    "Scalable to millions of transactions"
+  ]
+}

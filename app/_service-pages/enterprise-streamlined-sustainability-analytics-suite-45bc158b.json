@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/enterprise-streamlined-sustainability-analytics-suite-45bc158b",
+  "breadcrumbTitle": "Enterprise Streamlined Sustainability Analytics Suite",
+  "title": "Enterprise Streamlined Sustainability Analytics Suite",
+  "description": "Enterprise analytics suite that delivers streamlined sustainability insights with unified dashboards and reporting.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Enterprise Streamlined Sustainability Analytics Suite - Zion Tech Group",
+    "description": "Enterprise analytics suite that delivers streamlined sustainability insights with unified dashboards and reporting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/enterprise-streamlined-sustainability-analytics-suite-45bc158b"
+    }
+  },
+  "features": [
+    "Data visualization",
+    "Custom dashboards",
+    "Report generation",
+    "KPI tracking"
+  ],
+  "benefits": [
+    "Unified data view",
+    "Faster insights",
+    "Customizable reports",
+    "Cross-functional collaboration"
+  ]
+}

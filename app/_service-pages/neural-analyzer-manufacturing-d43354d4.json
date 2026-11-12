@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/neural-analyzer-manufacturing-d43354d4",
+  "breadcrumbTitle": "Neural analyzer-manufacturing",
+  "title": "Neural analyzer-manufacturing",
+  "description": "Transform your manufacturing operations with our Neural analyzer-manufacturing. This AI-driven solution automates decision support with unprecedented accuracy a",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Neural analyzer-manufacturing - Zion Tech Group",
+    "description": "Transform your manufacturing operations with our Neural analyzer-manufacturing. This AI-driven solution automates decision support with unprecedented accuracy a",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/neural-analyzer-manufacturing-d43354d4"
+    }
+  },
+  "features": [
+    "SOC 2 certified",
+    "Rollback mechanisms",
+    "Role-based access control",
+    "Auto-scaling capabilities",
+    "Plugin architecture"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Real-time insights and alerts",
+    "Intelligent load balancing",
+    "Dynamic resource allocation"
+  ]
+}

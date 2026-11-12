@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/smart-real-estate-quality-control-612c1876",
+  "breadcrumbTitle": "Smart Real Estate Quality Control",
+  "title": "Smart Real Estate Quality Control",
+  "description": "Computer vision system that provides enterprise-grade automated inspection, defect detection, and quality assurance for manufacturing production lines.",
+  "basic": "$258/month",
+  "pro": "$648/month",
+  "enterprise": "$1948/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Smart Real Estate Quality Control - Zion Tech Group",
+    "description": "Computer vision system that provides enterprise-grade automated inspection, defect detection, and quality assurance for manufacturing production lines.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-real-estate-quality-control-612c1876"
+    }
+  },
+  "features": [
+    "Visual inspection",
+    "Defect classification",
+    "Root cause analysis",
+    "Real-time alerts"
+  ],
+  "benefits": [
+    "Zero defects",
+    "Faster throughput",
+    "Reduced waste",
+    "Consistent quality"
+  ]
+}

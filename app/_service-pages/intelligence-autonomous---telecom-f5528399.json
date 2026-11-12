@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligence-autonomous---telecom-f5528399",
+  "breadcrumbTitle": "Intelligence Autonomous - Telecom",
+  "title": "Intelligence Autonomous - Telecom",
+  "description": "The future of telecom is here with Intelligence Autonomous - Telecom. Powered by cutting-edge AI, this platform delivers resource optimization like never before",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligence Autonomous - Telecom - Zion Tech Group",
+    "description": "The future of telecom is here with Intelligence Autonomous - Telecom. Powered by cutting-edge AI, this platform delivers resource optimization like never before",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligence-autonomous---telecom-f5528399"
+    }
+  },
+  "features": [
+    "Serverless functions",
+    "Multi-language support",
+    "Rollback mechanisms",
+    "API-first design"
+  ],
+  "benefits": [
+    "50% reduction in operational costs",
+    "Predictive maintenance scheduling",
+    "Real-time insights and alerts",
+    "ROI in under 90 days"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/manager-autonomous---media-c23b9f7c",
+  "breadcrumbTitle": "Manager Autonomous - Media",
+  "title": "Manager Autonomous - Media",
+  "description": "Next-generation media solution: Manager Autonomous - Media. Combines network optimization with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Manager Autonomous - Media - Zion Tech Group",
+    "description": "Next-generation media solution: Manager Autonomous - Media. Combines network optimization with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/manager-autonomous---media-c23b9f7c"
+    }
+  },
+  "features": [
+    "Multi-language support",
+    "Edge computing support",
+    "Mobile-responsive interface",
+    "Container orchestration"
+  ],
+  "benefits": [
+    "24/7 automated operations",
+    "Intelligent load balancing",
+    "50% reduction in operational costs"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-engine---agriculture-edition-172eb169",
+  "breadcrumbTitle": "AI Engine - Agriculture Edition",
+  "title": "AI Engine - Agriculture Edition",
+  "description": "Unlock unprecedented growth with AI Engine - Agriculture Edition. This autonomous system provides risk assessment with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Engine - Agriculture Edition - Zion Tech Group",
+    "description": "Unlock unprecedented growth with AI Engine - Agriculture Edition. This autonomous system provides risk assessment with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-engine---agriculture-edition-172eb169"
+    }
+  },
+  "features": [
+    "Custom integrations",
+    "Data encryption",
+    "Alerting system",
+    "Comprehensive monitoring",
+    "Multi-region deployment"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "Enterprise-grade security",
+    "Self-healing infrastructure",
+    "Seamless integration with existing systems"
+  ]
+}

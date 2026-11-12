@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligence-ai---legal-68f2e78c",
+  "breadcrumbTitle": "Intelligence AI - Legal",
+  "title": "Intelligence AI - Legal",
+  "description": "Transform your legal operations with our Intelligence AI - Legal. This AI-driven solution automates user experience with unprecedented accuracy and efficiency.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligence AI - Legal - Zion Tech Group",
+    "description": "Transform your legal operations with our Intelligence AI - Legal. This AI-driven solution automates user experience with unprecedented accuracy and efficiency.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligence-ai---legal-68f2e78c"
+    }
+  },
+  "features": [
+    "Role-based access control",
+    "Plugin architecture",
+    "HIPAA ready",
+    "Custom integrations"
+  ],
+  "benefits": [
+    "24/7 automated operations",
+    "Performance benchmarking",
+    "Automated compliance reporting",
+    "Enterprise-grade security",
+    "Dynamic resource allocation"
+  ]
+}

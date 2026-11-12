@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/advisor-autonomous---insurance-694ae40a",
+  "breadcrumbTitle": "Advisor Autonomous - Insurance",
+  "title": "Advisor Autonomous - Insurance",
+  "description": "Next-generation insurance solution: Advisor Autonomous - Insurance. Combines performance monitoring with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Advisor Autonomous - Insurance - Zion Tech Group",
+    "description": "Next-generation insurance solution: Advisor Autonomous - Insurance. Combines performance monitoring with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/advisor-autonomous---insurance-694ae40a"
+    }
+  },
+  "features": [
+    "Alerting system",
+    "Comprehensive monitoring",
+    "Data encryption",
+    "Plugin architecture",
+    "Real-time processing"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "Automated compliance reporting",
+    "24/7 automated operations",
+    "Zero manual intervention required"
+  ]
+}

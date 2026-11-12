@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/intelligent-system-finance-3b175365",
+  "breadcrumbTitle": "Intelligent system-finance",
+  "title": "Intelligent system-finance",
+  "description": "Transform your finance operations with our Intelligent system-finance. This AI-driven solution automates financial planning with unprecedented accuracy and effi",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent system-finance - Zion Tech Group",
+    "description": "Transform your finance operations with our Intelligent system-finance. This AI-driven solution automates financial planning with unprecedented accuracy and effi",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-system-finance-3b175365"
+    }
+  },
+  "features": [
+    "Container orchestration",
+    "Serverless functions",
+    "HIPAA ready",
+    "Open-source friendly",
+    "Zero-downtime updates"
+  ],
+  "benefits": [
+    "Scalable to millions of transactions",
+    "Intelligent load balancing",
+    "Zero manual intervention required",
+    "3x faster decision making",
+    "Reduced human error by 95%"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/autonomous-inventory-system-1-dca03ab3",
+  "breadcrumbTitle": "Autonomous Inventory System #1",
+  "title": "Autonomous Inventory System #1",
+  "description": "The future of telecom is here with Autonomous Inventory System #1. Powered by cutting-edge AI, this platform delivers performance monitoring like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous Inventory System #1 - Zion Tech Group",
+    "description": "The future of telecom is here with Autonomous Inventory System #1. Powered by cutting-edge AI, this platform delivers performance monitoring like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-inventory-system-1-dca03ab3"
+    }
+  },
+  "features": [
+    "Alerting system",
+    "Performance dashboards",
+    "Custom integrations",
+    "GDPR compliance"
+  ],
+  "benefits": [
+    "50% reduction in operational costs",
+    "Reduced human error by 95%",
+    "3x faster decision making"
+  ]
+}

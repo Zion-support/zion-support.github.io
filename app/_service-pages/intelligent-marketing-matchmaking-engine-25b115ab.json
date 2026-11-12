@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-marketing-matchmaking-engine-25b115ab",
+  "breadcrumbTitle": "Intelligent Marketing Matchmaking Engine",
+  "title": "Intelligent Marketing Matchmaking Engine",
+  "description": "AI-driven matchmaking system that creates automated player matches based on skill, playstyle, and behavioral patterns for optimal gaming experiences.",
+  "basic": "$258/month",
+  "pro": "$648/month",
+  "enterprise": "$1948/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Marketing Matchmaking Engine - Zion Tech Group",
+    "description": "AI-driven matchmaking system that creates automated player matches based on skill, playstyle, and behavioral patterns for optimal gaming experiences.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-marketing-matchmaking-engine-25b115ab"
+    }
+  },
+  "features": [
+    "Skill-based matching",
+    "Latency optimization",
+    "Fair play detection",
+    "Dynamic balancing"
+  ],
+  "benefits": [
+    "Better player experience",
+    "Reduced toxicity",
+    "Higher engagement",
+    "Longer sessions"
+  ]
+}

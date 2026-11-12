@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-manager---automotive-edition-15b6b471",
+  "breadcrumbTitle": "AI Manager - Automotive Edition",
+  "title": "AI Manager - Automotive Edition",
+  "description": "The future of automotive is here with AI Manager - Automotive Edition. Powered by cutting-edge AI, this platform delivers document processing like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Manager - Automotive Edition - Zion Tech Group",
+    "description": "The future of automotive is here with AI Manager - Automotive Edition. Powered by cutting-edge AI, this platform delivers document processing like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-manager---automotive-edition-15b6b471"
+    }
+  },
+  "features": [
+    "GDPR compliance",
+    "HIPAA ready",
+    "Cloud-native architecture",
+    "Multi-region deployment",
+    "Data encryption"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "ROI in under 90 days",
+    "Dynamic resource allocation",
+    "Enterprise-grade security"
+  ]
+}

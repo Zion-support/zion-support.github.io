@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/smart-workflow-generator-6ce0a54c",
+  "breadcrumbTitle": "Smart Workflow Generator",
+  "title": "Smart Workflow Generator",
+  "description": "Transform your transportation operations with our Smart Workflow Generator. This AI-driven solution automates code optimization with unprecedented accuracy and ",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Workflow Generator - Zion Tech Group",
+    "description": "Transform your transportation operations with our Smart Workflow Generator. This AI-driven solution automates code optimization with unprecedented accuracy and ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-workflow-generator-6ce0a54c"
+    }
+  },
+  "features": [
+    "Edge computing support",
+    "API-first design",
+    "Multi-region deployment",
+    "Real-time processing",
+    "Cloud-native architecture"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "Cost optimization recommendations",
+    "Seamless integration with existing systems",
+    "Automated compliance reporting",
+    "Scalable to millions of transactions"
+  ]
+}

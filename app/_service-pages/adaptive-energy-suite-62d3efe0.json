@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/adaptive-energy-suite-62d3efe0",
+  "breadcrumbTitle": "Adaptive Energy Suite",
+  "title": "Adaptive Energy Suite",
+  "description": "Revolutionize retail through intelligent automation. Our Adaptive Energy Suite leverages advanced machine learning to deliver predictive analytics at scale.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Adaptive Energy Suite - Zion Tech Group",
+    "description": "Revolutionize retail through intelligent automation. Our Adaptive Energy Suite leverages advanced machine learning to deliver predictive analytics at scale.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/adaptive-energy-suite-62d3efe0"
+    }
+  },
+  "features": [
+    "Multi-region deployment",
+    "Cloud-native architecture",
+    "Custom integrations",
+    "Serverless functions",
+    "Role-based access control"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "Scalable to millions of transactions",
+    "Enterprise-grade security"
+  ]
+}

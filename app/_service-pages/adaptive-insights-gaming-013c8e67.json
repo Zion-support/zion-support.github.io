@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/adaptive-insights-gaming-013c8e67",
+  "breadcrumbTitle": "Adaptive insights-gaming",
+  "title": "Adaptive insights-gaming",
+  "description": "The future of gaming is here with Adaptive insights-gaming. Powered by cutting-edge AI, this platform delivers image recognition like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Adaptive insights-gaming - Zion Tech Group",
+    "description": "The future of gaming is here with Adaptive insights-gaming. Powered by cutting-edge AI, this platform delivers image recognition like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/adaptive-insights-gaming-013c8e67"
+    }
+  },
+  "features": [
+    "Real-time processing",
+    "Multi-region deployment",
+    "Microservices deployment",
+    "Role-based access control"
+  ],
+  "benefits": [
+    "Dynamic resource allocation",
+    "99.9% uptime guarantee",
+    "24/7 automated operations"
+  ]
+}

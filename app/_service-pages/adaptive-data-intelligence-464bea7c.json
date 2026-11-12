@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/adaptive-data-intelligence-464bea7c",
+  "breadcrumbTitle": "Adaptive Data Intelligence",
+  "title": "Adaptive Data Intelligence",
+  "description": "Unlock unprecedented growth with Adaptive Data Intelligence. This autonomous system provides supply chain with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Adaptive Data Intelligence - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Adaptive Data Intelligence. This autonomous system provides supply chain with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/adaptive-data-intelligence-464bea7c"
+    }
+  },
+  "features": [
+    "Multi-language support",
+    "Alerting system",
+    "Open-source friendly",
+    "Offline capabilities",
+    "Rollback mechanisms"
+  ],
+  "benefits": [
+    "Performance benchmarking",
+    "Predictive maintenance scheduling",
+    "Reduced human error by 95%",
+    "24/7 automated operations"
+  ]
+}

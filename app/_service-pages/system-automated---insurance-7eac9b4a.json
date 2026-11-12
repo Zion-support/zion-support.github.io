@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/system-automated---insurance-7eac9b4a",
+  "breadcrumbTitle": "System Automated - Insurance",
+  "title": "System Automated - Insurance",
+  "description": "Transform your insurance operations with our System Automated - Insurance. This AI-driven solution automates risk assessment with unprecedented accuracy and eff",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "System Automated - Insurance - Zion Tech Group",
+    "description": "Transform your insurance operations with our System Automated - Insurance. This AI-driven solution automates risk assessment with unprecedented accuracy and eff",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/system-automated---insurance-7eac9b4a"
+    }
+  },
+  "features": [
+    "Container orchestration",
+    "Role-based access control",
+    "Data encryption",
+    "HIPAA ready",
+    "Offline capabilities"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "Scalable to millions of transactions",
+    "3x faster decision making"
+  ]
+}

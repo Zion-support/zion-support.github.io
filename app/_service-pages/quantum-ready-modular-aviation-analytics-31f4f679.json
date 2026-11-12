@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/quantum-ready-modular-aviation-analytics-31f4f679",
+  "breadcrumbTitle": "Quantum-Ready Modular Aviation Analytics",
+  "title": "Quantum-Ready Modular Aviation Analytics",
+  "description": "Quantum-ready analytics platform that prepares modular aviation workloads for future quantum acceleration.",
+  "basic": "$298/month",
+  "pro": "$748/month",
+  "enterprise": "$2248/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Quantum-Ready Modular Aviation Analytics - Zion Tech Group",
+    "description": "Quantum-ready analytics platform that prepares modular aviation workloads for future quantum acceleration.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/quantum-ready-modular-aviation-analytics-31f4f679"
+    }
+  },
+  "features": [
+    "Quantum simulation",
+    "Hybrid classical-quantum",
+    "Algorithm optimization",
+    "Future-proofing"
+  ],
+  "benefits": [
+    "Quantum advantage readiness",
+    "Future-proof algorithms",
+    "Hybrid optimization",
+    "Competitive edge"
+  ]
+}

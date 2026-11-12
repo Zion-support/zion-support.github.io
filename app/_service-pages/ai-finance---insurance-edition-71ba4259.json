@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/ai-finance---insurance-edition-71ba4259",
+  "breadcrumbTitle": "AI Finance - Insurance Edition",
+  "title": "AI Finance - Insurance Edition",
+  "description": "Next-generation Insurance solution: AI Finance - Insurance Edition. Combines quality control with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Finance - Insurance Edition - Zion Tech Group",
+    "description": "Next-generation Insurance solution: AI Finance - Insurance Edition. Combines quality control with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-finance---insurance-edition-71ba4259"
+    }
+  },
+  "features": [
+    "Role-based access control with SSO integration",
+    "Automation opportunity identification",
+    "Data encryption at rest and in transit",
+    "Cloud-native architecture with multi-region deployment",
+    "Performance dashboards with real-time metrics"
+  ],
+  "benefits": [
+    "Zero manual intervention required for routine tasks",
+    "Enhanced security with continuous threat monitoring",
+    "Improved forecast accuracy with ML models",
+    "Performance benchmarking against industry standards",
+    "ROI achieved in under 90 days with cost savings"
+  ]
+}

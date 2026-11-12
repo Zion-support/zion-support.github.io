@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-agriculture-warehouse-automation-ed5b7070",
+  "breadcrumbTitle": "Intelligent Agriculture Warehouse Automation",
+  "title": "Intelligent Agriculture Warehouse Automation",
+  "description": "Warehouse management system that uses automated AI and robotics orchestration for automated picking, packing, inventory tracking, and space optimization.",
+  "basic": "$278/month",
+  "pro": "$698/month",
+  "enterprise": "$2098/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Intelligent Agriculture Warehouse Automation - Zion Tech Group",
+    "description": "Warehouse management system that uses automated AI and robotics orchestration for automated picking, packing, inventory tracking, and space optimization.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-agriculture-warehouse-automation-ed5b7070"
+    }
+  },
+  "features": [
+    "Automated picking",
+    "Inventory tracking",
+    "Space optimization",
+    "Robot coordination"
+  ],
+  "benefits": [
+    "Higher throughput",
+    "Lower labor costs",
+    "Accuracy improvement",
+    "Scalable operations"
+  ]
+}

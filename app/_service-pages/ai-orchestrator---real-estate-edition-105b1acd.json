@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-orchestrator---real-estate-edition-105b1acd",
+  "breadcrumbTitle": "AI Orchestrator - Real-Estate Edition",
+  "title": "AI Orchestrator - Real-Estate Edition",
+  "description": "Unlock unprecedented growth with AI Orchestrator - Real-Estate Edition. This autonomous system provides image recognition with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Orchestrator - Real-Estate Edition - Zion Tech Group",
+    "description": "Unlock unprecedented growth with AI Orchestrator - Real-Estate Edition. This autonomous system provides image recognition with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-orchestrator---real-estate-edition-105b1acd"
+    }
+  },
+  "features": [
+    "Multi-region deployment",
+    "Serverless functions",
+    "Open-source friendly",
+    "Performance dashboards"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "Performance benchmarking",
+    "3x faster decision making",
+    "ROI in under 90 days"
+  ]
+}

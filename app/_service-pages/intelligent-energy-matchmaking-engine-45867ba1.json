@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-energy-matchmaking-engine-45867ba1",
+  "breadcrumbTitle": "Intelligent Energy Matchmaking Engine",
+  "title": "Intelligent Energy Matchmaking Engine",
+  "description": "AI-driven matchmaking system that creates intelligent player matches based on skill, playstyle, and behavioral patterns for optimal gaming experiences.",
+  "basic": "$258/month",
+  "pro": "$648/month",
+  "enterprise": "$1948/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Energy Matchmaking Engine - Zion Tech Group",
+    "description": "AI-driven matchmaking system that creates intelligent player matches based on skill, playstyle, and behavioral patterns for optimal gaming experiences.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-energy-matchmaking-engine-45867ba1"
+    }
+  },
+  "features": [
+    "Skill-based matching",
+    "Latency optimization",
+    "Fair play detection",
+    "Dynamic balancing"
+  ],
+  "benefits": [
+    "Better player experience",
+    "Reduced toxicity",
+    "Higher engagement",
+    "Longer sessions"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-director---gaming-edition-bab2c880",
+  "breadcrumbTitle": "AI Director - Gaming Edition",
+  "title": "AI Director - Gaming Edition",
+  "description": "Revolutionize gaming through intelligent automation. Our AI Director - Gaming Edition leverages advanced machine learning to deliver user experience at scale.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Director - Gaming Edition - Zion Tech Group",
+    "description": "Revolutionize gaming through intelligent automation. Our AI Director - Gaming Edition leverages advanced machine learning to deliver user experience at scale.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-director---gaming-edition-bab2c880"
+    }
+  },
+  "features": [
+    "Real-time processing",
+    "Performance dashboards",
+    "Comprehensive monitoring",
+    "Role-based access control",
+    "Open-source friendly"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "50% reduction in operational costs",
+    "Zero manual intervention required",
+    "3x faster decision making"
+  ]
+}

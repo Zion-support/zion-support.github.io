@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/neural-suite-for-hospitality-53e674fb",
+  "breadcrumbTitle": "Neural Suite for Hospitality",
+  "title": "Neural Suite for Hospitality",
+  "description": "The future of hospitality is here with Neural Suite for Hospitality. Powered by cutting-edge AI, this platform delivers image recognition like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Neural Suite for Hospitality - Zion Tech Group",
+    "description": "The future of hospitality is here with Neural Suite for Hospitality. Powered by cutting-edge AI, this platform delivers image recognition like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/neural-suite-for-hospitality-53e674fb"
+    }
+  },
+  "features": [
+    "Performance dashboards",
+    "Audit trails",
+    "Rollback mechanisms",
+    "Open-source friendly"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "Cost optimization recommendations",
+    "Dynamic resource allocation",
+    "Enterprise-grade security"
+  ]
+}

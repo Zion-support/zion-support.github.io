@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/intelligent-orchestrator-for-healthcare-099eb7cc",
+  "breadcrumbTitle": "Intelligent Orchestrator for Healthcare",
+  "title": "Intelligent Orchestrator for Healthcare",
+  "description": "Next-generation healthcare solution: Intelligent Orchestrator for Healthcare. Combines risk assessment with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Orchestrator for Healthcare - Zion Tech Group",
+    "description": "Next-generation healthcare solution: Intelligent Orchestrator for Healthcare. Combines risk assessment with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-orchestrator-for-healthcare-099eb7cc"
+    }
+  },
+  "features": [
+    "API-first design",
+    "Role-based access control",
+    "Mobile-responsive interface",
+    "Multi-region deployment"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "Seamless integration with existing systems",
+    "Cost optimization recommendations"
+  ]
+}

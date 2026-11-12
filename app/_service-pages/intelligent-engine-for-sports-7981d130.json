@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligent-engine-for-sports-7981d130",
+  "breadcrumbTitle": "Intelligent Engine for Sports",
+  "title": "Intelligent Engine for Sports",
+  "description": "Next-generation sports solution: Intelligent Engine for Sports. Combines maintenance scheduling with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Engine for Sports - Zion Tech Group",
+    "description": "Next-generation sports solution: Intelligent Engine for Sports. Combines maintenance scheduling with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-engine-for-sports-7981d130"
+    }
+  },
+  "features": [
+    "Open-source friendly",
+    "Performance dashboards",
+    "Alerting system",
+    "Multi-language support",
+    "Container orchestration"
+  ],
+  "benefits": [
+    "Performance benchmarking",
+    "Reduced human error by 95%",
+    "Automated compliance reporting",
+    "ROI in under 90 days"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/next-generation-smart-energy-automation-150fe021",
+  "breadcrumbTitle": "Next-Generation Smart Energy Automation",
+  "title": "Next-Generation Smart Energy Automation",
+  "description": "Next-generation automation suite that streamlines smart energy workflows with intelligent orchestration.",
+  "basic": "$218/month",
+  "pro": "$548/month",
+  "enterprise": "$1648/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Next-Generation Smart Energy Automation - Zion Tech Group",
+    "description": "Next-generation automation suite that streamlines smart energy workflows with intelligent orchestration.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/next-generation-smart-energy-automation-150fe021"
+    }
+  },
+  "features": [
+    "Smart orchestration",
+    "Process automation",
+    "Event processing",
+    "Task scheduling"
+  ],
+  "benefits": [
+    "Faster execution",
+    "Reduced manual steps",
+    "Scalable processes",
+    "Error reduction"
+  ]
+}

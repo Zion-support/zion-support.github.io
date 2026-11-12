@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-system---telecom-edition-5d647817",
+  "breadcrumbTitle": "AI System - Telecom Edition",
+  "title": "AI System - Telecom Edition",
+  "description": "Transform your telecom operations with our AI System - Telecom Edition. This AI-driven solution automates threat detection with unprecedented accuracy and effic",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI System - Telecom Edition - Zion Tech Group",
+    "description": "Transform your telecom operations with our AI System - Telecom Edition. This AI-driven solution automates threat detection with unprecedented accuracy and effic",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-system---telecom-edition-5d647817"
+    }
+  },
+  "features": [
+    "Auto-scaling capabilities",
+    "HIPAA ready",
+    "Offline capabilities",
+    "Multi-language support",
+    "Role-based access control"
+  ],
+  "benefits": [
+    "Seamless integration with existing systems",
+    "ROI in under 90 days",
+    "50% reduction in operational costs"
+  ]
+}

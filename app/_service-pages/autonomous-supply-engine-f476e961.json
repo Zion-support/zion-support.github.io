@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/autonomous-supply-engine-f476e961",
+  "breadcrumbTitle": "Autonomous Supply Engine",
+  "title": "Autonomous Supply Engine",
+  "description": "The future of agriculture is here with Autonomous Supply Engine. Powered by cutting-edge AI, this platform delivers predictive analytics like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous Supply Engine - Zion Tech Group",
+    "description": "The future of agriculture is here with Autonomous Supply Engine. Powered by cutting-edge AI, this platform delivers predictive analytics like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-supply-engine-f476e961"
+    }
+  },
+  "features": [
+    "Data encryption",
+    "SOC 2 certified",
+    "Zero-downtime updates",
+    "Performance dashboards"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "Reduced human error by 95%",
+    "Real-time insights and alerts",
+    "Enterprise-grade security"
+  ]
+}

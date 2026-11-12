@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/cognitive-advanced-proptech-decision-engine-1c2d2808",
+  "breadcrumbTitle": "Cognitive Advanced Proptech Decision Engine",
+  "title": "Cognitive Advanced Proptech Decision Engine",
+  "description": "Cognitive decision engine that processes advanced signals to drive proptech strategy with deep learning.",
+  "basic": "$278/month",
+  "pro": "$698/month",
+  "enterprise": "$2098/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Cognitive Advanced Proptech Decision Engine - Zion Tech Group",
+    "description": "Cognitive decision engine that processes advanced signals to drive proptech strategy with deep learning.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cognitive-advanced-proptech-decision-engine-1c2d2808"
+    }
+  },
+  "features": [
+    "Cognitive reasoning",
+    "Scenario analysis",
+    "Decision trees",
+    "Recommendation engine"
+  ],
+  "benefits": [
+    "Better decision quality",
+    "Reduced risk",
+    "Faster insights",
+    "Competitive intelligence"
+  ]
+}

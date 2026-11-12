@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/smart-manager-legal-caabd94e",
+  "breadcrumbTitle": "Smart manager-legal",
+  "title": "Smart manager-legal",
+  "description": "Transform your legal operations with our Smart manager-legal. This AI-driven solution automates resource optimization with unprecedented accuracy and efficiency",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart manager-legal - Zion Tech Group",
+    "description": "Transform your legal operations with our Smart manager-legal. This AI-driven solution automates resource optimization with unprecedented accuracy and efficiency",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-manager-legal-caabd94e"
+    }
+  },
+  "features": [
+    "Multi-region deployment",
+    "Auto-scaling capabilities",
+    "Custom integrations",
+    "Role-based access control",
+    "Alerting system"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "99.9% uptime guarantee",
+    "Enterprise-grade security",
+    "Predictive maintenance scheduling",
+    "50% reduction in operational costs"
+  ]
+}

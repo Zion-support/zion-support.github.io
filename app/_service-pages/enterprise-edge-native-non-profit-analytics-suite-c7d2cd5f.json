@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/enterprise-edge-native-non-profit-analytics-suite-c7d2cd5f",
+  "breadcrumbTitle": "Enterprise Edge-Native Non-Profit Analytics Suite",
+  "title": "Enterprise Edge-Native Non-Profit Analytics Suite",
+  "description": "Enterprise analytics suite that delivers edge-native non-profit insights with unified dashboards and reporting.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Enterprise Edge-Native Non-Profit Analytics Suite - Zion Tech Group",
+    "description": "Enterprise analytics suite that delivers edge-native non-profit insights with unified dashboards and reporting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/enterprise-edge-native-non-profit-analytics-suite-c7d2cd5f"
+    }
+  },
+  "features": [
+    "Data visualization",
+    "Custom dashboards",
+    "Report generation",
+    "KPI tracking"
+  ],
+  "benefits": [
+    "Unified data view",
+    "Faster insights",
+    "Customizable reports",
+    "Cross-functional collaboration"
+  ]
+}

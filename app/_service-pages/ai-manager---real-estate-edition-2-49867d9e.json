@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-manager---real-estate-edition-2-49867d9e",
+  "breadcrumbTitle": "AI Manager - Real-Estate Edition #2",
+  "title": "AI Manager - Real-Estate Edition #2",
+  "description": "Next-generation real-estate solution: AI Manager - Real-Estate Edition #2. Combines financial planning with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Manager - Real-Estate Edition #2 - Zion Tech Group",
+    "description": "Next-generation real-estate solution: AI Manager - Real-Estate Edition #2. Combines financial planning with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-manager---real-estate-edition-2-49867d9e"
+    }
+  },
+  "features": [
+    "HIPAA ready",
+    "Offline capabilities",
+    "Multi-language support",
+    "Container orchestration",
+    "Multi-region deployment"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "Cost optimization recommendations",
+    "Seamless integration with existing systems",
+    "Dynamic resource allocation"
+  ]
+}

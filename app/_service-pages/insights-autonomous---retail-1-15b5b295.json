@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/insights-autonomous---retail-1-15b5b295",
+  "breadcrumbTitle": "Insights Autonomous - Retail #1",
+  "title": "Insights Autonomous - Retail #1",
+  "description": "The future of retail is here with Insights Autonomous - Retail #1. Powered by cutting-edge AI, this platform delivers process automation like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Insights Autonomous - Retail #1 - Zion Tech Group",
+    "description": "The future of retail is here with Insights Autonomous - Retail #1. Powered by cutting-edge AI, this platform delivers process automation like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/insights-autonomous---retail-1-15b5b295"
+    }
+  },
+  "features": [
+    "Real-time processing",
+    "Machine learning integration",
+    "Container orchestration",
+    "Open-source friendly"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "ROI in under 90 days",
+    "Seamless integration with existing systems",
+    "3x faster decision making",
+    "Enterprise-grade security"
+  ]
+}

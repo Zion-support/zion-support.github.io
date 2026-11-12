@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/ai-powered-workflow-suite-0ae942c0",
+  "breadcrumbTitle": "AI-Powered Workflow Suite",
+  "title": "AI-Powered Workflow Suite",
+  "description": "Transform your media operations with our AI-Powered Workflow Suite. This AI-driven solution automates energy management with unprecedented accuracy and efficien",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Workflow Suite - Zion Tech Group",
+    "description": "Transform your media operations with our AI-Powered Workflow Suite. This AI-driven solution automates energy management with unprecedented accuracy and efficien",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-workflow-suite-0ae942c0"
+    }
+  },
+  "features": [
+    "Role-based access control",
+    "Zero-downtime updates",
+    "Multi-language support",
+    "Machine learning integration"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Scalable to millions of transactions",
+    "Enterprise-grade security"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/autonomous-intelligence-education-8dfe03c1",
+  "breadcrumbTitle": "Autonomous intelligence-education",
+  "title": "Autonomous intelligence-education",
+  "description": "Next-generation education solution: Autonomous intelligence-education. Combines performance monitoring with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous intelligence-education - Zion Tech Group",
+    "description": "Next-generation education solution: Autonomous intelligence-education. Combines performance monitoring with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-intelligence-education-8dfe03c1"
+    }
+  },
+  "features": [
+    "Custom integrations",
+    "Multi-language support",
+    "Role-based access control",
+    "Cloud-native architecture",
+    "Mobile-responsive interface"
+  ],
+  "benefits": [
+    "Performance benchmarking",
+    "99.9% uptime guarantee",
+    "Automated compliance reporting",
+    "Real-time insights and alerts"
+  ]
+}

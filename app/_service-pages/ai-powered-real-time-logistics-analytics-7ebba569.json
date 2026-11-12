@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-real-time-logistics-analytics-7ebba569",
+  "breadcrumbTitle": "AI-Powered Real-Time Logistics Analytics",
+  "title": "AI-Powered Real-Time Logistics Analytics",
+  "description": "AI-driven analytics platform that delivers real-time insights into logistics operations, providing real-time monitoring, predictive modeling, and automated repo",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI-Powered Real-Time Logistics Analytics - Zion Tech Group",
+    "description": "AI-driven analytics platform that delivers real-time insights into logistics operations, providing real-time monitoring, predictive modeling, and automated repo",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-real-time-logistics-analytics-7ebba569"
+    }
+  },
+  "features": [
+    "Real-time monitoring",
+    "Predictive modeling",
+    "Automated reporting",
+    "Custom dashboards"
+  ],
+  "benefits": [
+    "Data-driven decision making",
+    "Improved operational efficiency",
+    "Proactive issue detection",
+    "Enhanced KPI tracking"
+  ]
+}

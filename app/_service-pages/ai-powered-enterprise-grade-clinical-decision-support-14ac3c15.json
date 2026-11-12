@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-enterprise-grade-clinical-decision-support-14ac3c15",
+  "breadcrumbTitle": "AI-Powered Enterprise-Grade Clinical Decision Support",
+  "title": "AI-Powered Enterprise-Grade Clinical Decision Support",
+  "description": "Clinical AI system that provides enterprise-grade diagnostic assistance, treatment recommendations, and care pathway optimization for healthcare providers.",
+  "basic": "$298/month",
+  "pro": "$748/month",
+  "enterprise": "$2248/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Enterprise-Grade Clinical Decision Support - Zion Tech Group",
+    "description": "Clinical AI system that provides enterprise-grade diagnostic assistance, treatment recommendations, and care pathway optimization for healthcare providers.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-enterprise-grade-clinical-decision-support-14ac3c15"
+    }
+  },
+  "features": [
+    "Diagnostic assistance",
+    "Treatment planning",
+    "Drug interaction checking",
+    "Outcome prediction"
+  ],
+  "benefits": [
+    "Improved accuracy",
+    "Personalized care",
+    "Reduced errors",
+    "Cost optimization"
+  ]
+}

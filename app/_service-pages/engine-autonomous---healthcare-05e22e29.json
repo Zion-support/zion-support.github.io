@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/engine-autonomous---healthcare-05e22e29",
+  "breadcrumbTitle": "Engine Autonomous - Healthcare",
+  "title": "Engine Autonomous - Healthcare",
+  "description": "Transform your healthcare operations with our Engine Autonomous - Healthcare. This AI-driven solution automates fraud prevention with unprecedented accuracy and",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Engine Autonomous - Healthcare - Zion Tech Group",
+    "description": "Transform your healthcare operations with our Engine Autonomous - Healthcare. This AI-driven solution automates fraud prevention with unprecedented accuracy and",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/engine-autonomous---healthcare-05e22e29"
+    }
+  },
+  "features": [
+    "Real-time processing",
+    "Data encryption",
+    "Serverless functions",
+    "Plugin architecture"
+  ],
+  "benefits": [
+    "Scalable to millions of transactions",
+    "Enterprise-grade security",
+    "Seamless integration with existing systems",
+    "Cost optimization recommendations",
+    "99.9% uptime guarantee"
+  ]
+}

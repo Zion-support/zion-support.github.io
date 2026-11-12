@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/cognitive-fraud-coordinator-dc6ce4a2",
+  "breadcrumbTitle": "Cognitive Fraud Coordinator",
+  "title": "Cognitive Fraud Coordinator",
+  "description": "Next-generation construction solution: Cognitive Fraud Coordinator. Combines decision support with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Cognitive Fraud Coordinator - Zion Tech Group",
+    "description": "Next-generation construction solution: Cognitive Fraud Coordinator. Combines decision support with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cognitive-fraud-coordinator-dc6ce4a2"
+    }
+  },
+  "features": [
+    "Mobile-responsive interface",
+    "Multi-language support",
+    "Edge computing support",
+    "Data encryption",
+    "Open-source friendly"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "ROI in under 90 days",
+    "Cost optimization recommendations",
+    "Intelligent load balancing"
+  ]
+}

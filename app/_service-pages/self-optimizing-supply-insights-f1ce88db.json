@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/self-optimizing-supply-insights-f1ce88db",
+  "breadcrumbTitle": "Self-Optimizing Supply Insights",
+  "title": "Self-Optimizing Supply Insights",
+  "description": "Unlock unprecedented growth with Self-Optimizing Supply Insights. This autonomous system provides workflow management with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Self-Optimizing Supply Insights - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Self-Optimizing Supply Insights. This autonomous system provides workflow management with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/self-optimizing-supply-insights-f1ce88db"
+    }
+  },
+  "features": [
+    "Container orchestration",
+    "Offline capabilities",
+    "Real-time processing",
+    "Serverless functions",
+    "Rollback mechanisms"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "Enterprise-grade security",
+    "24/7 automated operations"
+  ]
+}

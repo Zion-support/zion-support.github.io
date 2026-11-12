@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/insights-autonomous---tech-3ac83b99",
+  "breadcrumbTitle": "Insights Autonomous - Tech",
+  "title": "Insights Autonomous - Tech",
+  "description": "Next-generation technology solution: Insights Autonomous - Tech. Combines process automation with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Insights Autonomous - Tech - Zion Tech Group",
+    "description": "Next-generation technology solution: Insights Autonomous - Tech. Combines process automation with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/insights-autonomous---tech-3ac83b99"
+    }
+  },
+  "features": [
+    "Real-time processing",
+    "Role-based access control",
+    "Auto-scaling capabilities",
+    "Comprehensive monitoring"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Cost optimization recommendations",
+    "50% reduction in operational costs"
+  ]
+}

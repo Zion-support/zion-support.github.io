@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/enterprise-self-learning-gaming-analytics-suite-af4bcc8b",
+  "breadcrumbTitle": "Enterprise Self-Learning Gaming Analytics Suite",
+  "title": "Enterprise Self-Learning Gaming Analytics Suite",
+  "description": "Enterprise analytics suite that delivers self-learning gaming insights with unified dashboards and reporting.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Enterprise Self-Learning Gaming Analytics Suite - Zion Tech Group",
+    "description": "Enterprise analytics suite that delivers self-learning gaming insights with unified dashboards and reporting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/enterprise-self-learning-gaming-analytics-suite-af4bcc8b"
+    }
+  },
+  "features": [
+    "Data visualization",
+    "Custom dashboards",
+    "Report generation",
+    "KPI tracking"
+  ],
+  "benefits": [
+    "Unified data view",
+    "Faster insights",
+    "Customizable reports",
+    "Cross-functional collaboration"
+  ]
+}

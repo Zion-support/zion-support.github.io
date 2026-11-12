@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/next-generation-edge-native-sales-automation-68104f30",
+  "breadcrumbTitle": "Next-Generation Edge-Native Sales Automation",
+  "title": "Next-Generation Edge-Native Sales Automation",
+  "description": "Next-generation automation suite that streamlines edge-native sales workflows with intelligent orchestration.",
+  "basic": "$218/month",
+  "pro": "$548/month",
+  "enterprise": "$1648/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Next-Generation Edge-Native Sales Automation - Zion Tech Group",
+    "description": "Next-generation automation suite that streamlines edge-native sales workflows with intelligent orchestration.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/next-generation-edge-native-sales-automation-68104f30"
+    }
+  },
+  "features": [
+    "Smart orchestration",
+    "Process automation",
+    "Event processing",
+    "Task scheduling"
+  ],
+  "benefits": [
+    "Faster execution",
+    "Reduced manual steps",
+    "Scalable processes",
+    "Error reduction"
+  ]
+}

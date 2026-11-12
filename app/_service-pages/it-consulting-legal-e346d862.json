@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/it-consulting-legal-e346d862",
+  "breadcrumbTitle": "IT Consulting & Strategy - Legal",
+  "title": "IT Consulting & Strategy - Legal",
+  "description": "Strategic IT consulting for Legal leaders. Align technology with business goals, reduce costs, and accelerate digital transformation.",
+  "basic": "$299/month",
+  "pro": "$799/month",
+  "enterprise": "$2499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "IT Consulting & Strategy - Legal - Zion Tech Group",
+    "description": "Strategic IT consulting for Legal leaders. Align technology with business goals, reduce costs, and accelerate digital transformation.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-consulting-legal-e346d862"
+    }
+  },
+  "features": [
+    "IT landscape assessment",
+    "Technology roadmap",
+    "Vendor selection and negotiation",
+    "Budget and capacity planning",
+    "Digital transformation strategy"
+  ],
+  "benefits": [
+    "Clear 3-year IT roadmap",
+    "Vendor cost savings",
+    "Faster time-to-value",
+    "Reduced technical debt",
+    "Executive-ready reporting"
+  ]
+}

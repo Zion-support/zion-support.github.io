@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/optimizer-ai---legal-f574fe97",
+  "breadcrumbTitle": "Optimizer AI - Legal",
+  "title": "Optimizer AI - Legal",
+  "description": "Revolutionize legal through intelligent automation. Our Optimizer AI - Legal leverages advanced machine learning to deliver market intelligence at scale.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Optimizer AI - Legal - Zion Tech Group",
+    "description": "Revolutionize legal through intelligent automation. Our Optimizer AI - Legal leverages advanced machine learning to deliver market intelligence at scale.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/optimizer-ai---legal-f574fe97"
+    }
+  },
+  "features": [
+    "Offline capabilities",
+    "GDPR compliance",
+    "Microservices deployment",
+    "Edge computing support"
+  ],
+  "benefits": [
+    "Performance benchmarking",
+    "99.9% uptime guarantee",
+    "Automated compliance reporting"
+  ]
+}

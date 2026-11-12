@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/ai-engine---gaming-edition-3-8ea5c242",
+  "breadcrumbTitle": "AI Engine - Gaming Edition #3",
+  "title": "AI Engine - Gaming Edition #3",
+  "description": "Next-generation gaming solution: AI Engine - Gaming Edition #3. Combines document processing with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Engine - Gaming Edition #3 - Zion Tech Group",
+    "description": "Next-generation gaming solution: AI Engine - Gaming Edition #3. Combines document processing with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-engine---gaming-edition-3-8ea5c242"
+    }
+  },
+  "features": [
+    "Serverless functions",
+    "Mobile-responsive interface",
+    "Real-time processing",
+    "SOC 2 certified"
+  ],
+  "benefits": [
+    "50% reduction in operational costs",
+    "3x faster decision making",
+    "Enterprise-grade security"
+  ]
+}

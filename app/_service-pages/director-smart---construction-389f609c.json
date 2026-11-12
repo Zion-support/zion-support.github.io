@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/director-smart---construction-389f609c",
+  "breadcrumbTitle": "Director Smart - Construction",
+  "title": "Director Smart - Construction",
+  "description": "Next-generation construction solution: Director Smart - Construction. Combines workflow management with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Director Smart - Construction - Zion Tech Group",
+    "description": "Next-generation construction solution: Director Smart - Construction. Combines workflow management with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/director-smart---construction-389f609c"
+    }
+  },
+  "features": [
+    "Multi-language support",
+    "Data encryption",
+    "Container orchestration",
+    "Comprehensive monitoring",
+    "Zero-downtime updates"
+  ],
+  "benefits": [
+    "Dynamic resource allocation",
+    "Performance benchmarking",
+    "24/7 automated operations",
+    "3x faster decision making"
+  ]
+}

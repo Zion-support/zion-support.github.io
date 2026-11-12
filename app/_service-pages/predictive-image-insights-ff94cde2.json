@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/predictive-image-insights-ff94cde2",
+  "breadcrumbTitle": "Predictive Image Insights",
+  "title": "Predictive Image Insights",
+  "description": "The future of agriculture is here with Predictive Image Insights. Powered by cutting-edge AI, this platform delivers workflow management like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Predictive Image Insights - Zion Tech Group",
+    "description": "The future of agriculture is here with Predictive Image Insights. Powered by cutting-edge AI, this platform delivers workflow management like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/predictive-image-insights-ff94cde2"
+    }
+  },
+  "features": [
+    "HIPAA ready",
+    "Data encryption",
+    "SOC 2 certified",
+    "Rollback mechanisms",
+    "Mobile-responsive interface"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "Cost optimization recommendations",
+    "3x faster decision making"
+  ]
+}

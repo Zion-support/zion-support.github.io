@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-analytics---hospitality-edition-e16b0d3b",
+  "breadcrumbTitle": "AI Analytics - Hospitality Edition",
+  "title": "AI Analytics - Hospitality Edition",
+  "description": "Transform your hospitality operations with our AI Analytics - Hospitality Edition. This AI-driven solution automates network optimization with unprecedented acc",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Analytics - Hospitality Edition - Zion Tech Group",
+    "description": "Transform your hospitality operations with our AI Analytics - Hospitality Edition. This AI-driven solution automates network optimization with unprecedented acc",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-analytics---hospitality-edition-e16b0d3b"
+    }
+  },
+  "features": [
+    "Rollback mechanisms",
+    "Serverless functions",
+    "Audit trails",
+    "Plugin architecture",
+    "Zero-downtime updates"
+  ],
+  "benefits": [
+    "50% reduction in operational costs",
+    "Self-healing infrastructure",
+    "Cost optimization recommendations"
+  ]
+}

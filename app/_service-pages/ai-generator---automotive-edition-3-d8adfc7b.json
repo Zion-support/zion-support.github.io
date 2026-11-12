@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/ai-generator---automotive-edition-3-d8adfc7b",
+  "breadcrumbTitle": "AI Generator - Automotive Edition #3",
+  "title": "AI Generator - Automotive Edition #3",
+  "description": "Next-generation automotive solution: AI Generator - Automotive Edition #3. Combines language processing with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Generator - Automotive Edition #3 - Zion Tech Group",
+    "description": "Next-generation automotive solution: AI Generator - Automotive Edition #3. Combines language processing with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-generator---automotive-edition-3-d8adfc7b"
+    }
+  },
+  "features": [
+    "Role-based access control",
+    "Zero-downtime updates",
+    "Offline capabilities",
+    "Audit trails"
+  ],
+  "benefits": [
+    "Dynamic resource allocation",
+    "ROI in under 90 days",
+    "Self-healing infrastructure"
+  ]
+}

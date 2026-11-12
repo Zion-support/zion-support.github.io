@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-suite---construction-edition-93e8850c",
+  "breadcrumbTitle": "AI Suite - Construction Edition",
+  "title": "AI Suite - Construction Edition",
+  "description": "Transform your construction operations with our AI Suite - Construction Edition. This AI-driven solution automates decision support with unprecedented accuracy ",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Suite - Construction Edition - Zion Tech Group",
+    "description": "Transform your construction operations with our AI Suite - Construction Edition. This AI-driven solution automates decision support with unprecedented accuracy ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-suite---construction-edition-93e8850c"
+    }
+  },
+  "features": [
+    "Plugin architecture",
+    "Container orchestration",
+    "Data encryption",
+    "Audit trails",
+    "Alerting system"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "ROI in under 90 days",
+    "3x faster decision making"
+  ]
+}

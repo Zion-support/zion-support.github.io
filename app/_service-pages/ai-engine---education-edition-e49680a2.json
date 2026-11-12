@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-engine---education-edition-e49680a2",
+  "breadcrumbTitle": "AI Engine - Education Edition",
+  "title": "AI Engine - Education Edition",
+  "description": "Unlock unprecedented growth with AI Engine - Education Edition. This autonomous system provides energy management with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Engine - Education Edition - Zion Tech Group",
+    "description": "Unlock unprecedented growth with AI Engine - Education Edition. This autonomous system provides energy management with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-engine---education-edition-e49680a2"
+    }
+  },
+  "features": [
+    "Comprehensive monitoring",
+    "Alerting system",
+    "GDPR compliance",
+    "Performance dashboards",
+    "Role-based access control"
+  ],
+  "benefits": [
+    "Dynamic resource allocation",
+    "50% reduction in operational costs",
+    "Self-healing infrastructure",
+    "99.9% uptime guarantee"
+  ]
+}

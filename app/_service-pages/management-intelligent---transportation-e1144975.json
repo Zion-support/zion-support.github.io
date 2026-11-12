@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/management-intelligent---transportation-e1144975",
+  "breadcrumbTitle": "Management Intelligent - Transportation",
+  "title": "Management Intelligent - Transportation",
+  "description": "Unlock unprecedented growth with Management Intelligent - Transportation. This autonomous system provides threat detection with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Management Intelligent - Transportation - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Management Intelligent - Transportation. This autonomous system provides threat detection with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/management-intelligent---transportation-e1144975"
+    }
+  },
+  "features": [
+    "Microservices deployment",
+    "Multi-region deployment",
+    "Auto-scaling capabilities",
+    "Edge computing support",
+    "Comprehensive monitoring"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "99.9% uptime guarantee",
+    "Cost optimization recommendations",
+    "Reduced human error by 95%",
+    "ROI in under 90 days"
+  ]
+}

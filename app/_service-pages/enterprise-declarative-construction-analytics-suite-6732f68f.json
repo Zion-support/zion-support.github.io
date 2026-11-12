@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/enterprise-declarative-construction-analytics-suite-6732f68f",
+  "breadcrumbTitle": "Enterprise Declarative Construction Analytics Suite",
+  "title": "Enterprise Declarative Construction Analytics Suite",
+  "description": "Enterprise analytics suite that delivers declarative construction insights with unified dashboards and reporting.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Enterprise Declarative Construction Analytics Suite - Zion Tech Group",
+    "description": "Enterprise analytics suite that delivers declarative construction insights with unified dashboards and reporting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/enterprise-declarative-construction-analytics-suite-6732f68f"
+    }
+  },
+  "features": [
+    "Data visualization",
+    "Custom dashboards",
+    "Report generation",
+    "KPI tracking"
+  ],
+  "benefits": [
+    "Unified data view",
+    "Faster insights",
+    "Customizable reports",
+    "Cross-functional collaboration"
+  ]
+}

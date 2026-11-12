@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/coordinator-smart---legal-1-2b2b4a7f",
+  "breadcrumbTitle": "Coordinator Smart - Legal #1",
+  "title": "Coordinator Smart - Legal #1",
+  "description": "The future of legal is here with Coordinator Smart - Legal #1. Powered by cutting-edge AI, this platform delivers data processing like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Coordinator Smart - Legal #1 - Zion Tech Group",
+    "description": "The future of legal is here with Coordinator Smart - Legal #1. Powered by cutting-edge AI, this platform delivers data processing like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/coordinator-smart---legal-1-2b2b4a7f"
+    }
+  },
+  "features": [
+    "Mobile-responsive interface",
+    "Multi-region deployment",
+    "Microservices deployment",
+    "API-first design",
+    "Comprehensive monitoring"
+  ],
+  "benefits": [
+    "50% reduction in operational costs",
+    "Seamless integration with existing systems",
+    "Reduced human error by 95%",
+    "Zero manual intervention required",
+    "Intelligent load balancing"
+  ]
+}

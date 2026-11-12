@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/intelligence-adaptive---logistics-a524c14d",
+  "breadcrumbTitle": "Intelligence Adaptive - Logistics",
+  "title": "Intelligence Adaptive - Logistics",
+  "description": "Next-generation logistics solution: Intelligence Adaptive - Logistics. Combines predictive analytics with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligence Adaptive - Logistics - Zion Tech Group",
+    "description": "Next-generation logistics solution: Intelligence Adaptive - Logistics. Combines predictive analytics with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligence-adaptive---logistics-a524c14d"
+    }
+  },
+  "features": [
+    "GDPR compliance",
+    "Open-source friendly",
+    "Plugin architecture",
+    "Offline capabilities",
+    "Container orchestration"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "Automated compliance reporting",
+    "Predictive maintenance scheduling",
+    "Intelligent load balancing",
+    "3x faster decision making"
+  ]
+}

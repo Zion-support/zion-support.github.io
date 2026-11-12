@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/enterprise-cognitive-proptech-analytics-suite-0113e32b",
+  "breadcrumbTitle": "Enterprise Cognitive Proptech Analytics Suite",
+  "title": "Enterprise Cognitive Proptech Analytics Suite",
+  "description": "Enterprise analytics suite that delivers cognitive proptech insights with unified dashboards and reporting.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Enterprise Cognitive Proptech Analytics Suite - Zion Tech Group",
+    "description": "Enterprise analytics suite that delivers cognitive proptech insights with unified dashboards and reporting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/enterprise-cognitive-proptech-analytics-suite-0113e32b"
+    }
+  },
+  "features": [
+    "Data visualization",
+    "Custom dashboards",
+    "Report generation",
+    "KPI tracking"
+  ],
+  "benefits": [
+    "Unified data view",
+    "Faster insights",
+    "Customizable reports",
+    "Cross-functional collaboration"
+  ]
+}

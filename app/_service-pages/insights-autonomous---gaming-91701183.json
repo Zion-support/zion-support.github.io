@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/insights-autonomous---gaming-91701183",
+  "breadcrumbTitle": "Insights Autonomous - Gaming",
+  "title": "Insights Autonomous - Gaming",
+  "description": "The future of gaming is here with Insights Autonomous - Gaming. Powered by cutting-edge AI, this platform delivers process automation like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Insights Autonomous - Gaming - Zion Tech Group",
+    "description": "The future of gaming is here with Insights Autonomous - Gaming. Powered by cutting-edge AI, this platform delivers process automation like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/insights-autonomous---gaming-91701183"
+    }
+  },
+  "features": [
+    "Custom integrations",
+    "Audit trails",
+    "Machine learning integration",
+    "Real-time processing",
+    "Microservices deployment"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Seamless integration with existing systems",
+    "24/7 automated operations",
+    "Zero manual intervention required",
+    "Performance benchmarking"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/neural-intelligence-for-healthcare-2c984b06",
+  "breadcrumbTitle": "Neural Intelligence for Healthcare",
+  "title": "Neural Intelligence for Healthcare",
+  "description": "Transform your healthcare operations with our Neural Intelligence for Healthcare. This AI-driven solution automates decision support with unprecedented accuracy",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Neural Intelligence for Healthcare - Zion Tech Group",
+    "description": "Transform your healthcare operations with our Neural Intelligence for Healthcare. This AI-driven solution automates decision support with unprecedented accuracy",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/neural-intelligence-for-healthcare-2c984b06"
+    }
+  },
+  "features": [
+    "Open-source friendly",
+    "Rollback mechanisms",
+    "Machine learning integration",
+    "Custom integrations",
+    "Alerting system"
+  ],
+  "benefits": [
+    "Intelligent load balancing",
+    "24/7 automated operations",
+    "Reduced human error by 95%",
+    "Dynamic resource allocation",
+    "3x faster decision making"
+  ]
+}

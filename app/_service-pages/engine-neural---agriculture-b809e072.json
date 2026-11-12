@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/engine-neural---agriculture-b809e072",
+  "breadcrumbTitle": "Engine Neural - Agriculture",
+  "title": "Engine Neural - Agriculture",
+  "description": "Revolutionize agriculture through intelligent automation. Our Engine Neural - Agriculture leverages advanced machine learning to deliver process automation at s",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Engine Neural - Agriculture - Zion Tech Group",
+    "description": "Revolutionize agriculture through intelligent automation. Our Engine Neural - Agriculture leverages advanced machine learning to deliver process automation at s",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/engine-neural---agriculture-b809e072"
+    }
+  },
+  "features": [
+    "HIPAA ready",
+    "Comprehensive monitoring",
+    "Alerting system",
+    "Rollback mechanisms",
+    "Performance dashboards"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "99.9% uptime guarantee",
+    "Automated compliance reporting",
+    "Real-time insights and alerts"
+  ]
+}

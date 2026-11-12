@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/engine-neural---education-e3d4d45c",
+  "breadcrumbTitle": "Engine Neural - Education",
+  "title": "Engine Neural - Education",
+  "description": "Transform your education operations with our Engine Neural - Education. This AI-driven solution automates performance monitoring with unprecedented accuracy and",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Engine Neural - Education - Zion Tech Group",
+    "description": "Transform your education operations with our Engine Neural - Education. This AI-driven solution automates performance monitoring with unprecedented accuracy and",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/engine-neural---education-e3d4d45c"
+    }
+  },
+  "features": [
+    "Cloud-native architecture",
+    "API-first design",
+    "Multi-language support",
+    "Comprehensive monitoring"
+  ],
+  "benefits": [
+    "Dynamic resource allocation",
+    "Seamless integration with existing systems",
+    "24/7 automated operations",
+    "Scalable to millions of transactions"
+  ]
+}

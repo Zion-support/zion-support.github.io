@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/intelligent-optimization-insurance-1-4476688f",
+  "breadcrumbTitle": "Intelligent optimization-insurance #1",
+  "title": "Intelligent optimization-insurance #1",
+  "description": "Transform your insurance operations with our Intelligent optimization-insurance #1. This AI-driven solution automates supply chain with unprecedented accuracy a",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent optimization-insurance #1 - Zion Tech Group",
+    "description": "Transform your insurance operations with our Intelligent optimization-insurance #1. This AI-driven solution automates supply chain with unprecedented accuracy a",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-optimization-insurance-1-4476688f"
+    }
+  },
+  "features": [
+    "Comprehensive monitoring",
+    "Serverless functions",
+    "Microservices deployment",
+    "Auto-scaling capabilities",
+    "Rollback mechanisms"
+  ],
+  "benefits": [
+    "Seamless integration with existing systems",
+    "Self-healing infrastructure",
+    "Reduced human error by 95%",
+    "Scalable to millions of transactions",
+    "Enterprise-grade security"
+  ]
+}

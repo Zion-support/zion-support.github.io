@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/predictive-frictionless-public-sector-risk-scoring-b0f40dc0",
+  "breadcrumbTitle": "Predictive Frictionless Public Sector Risk Scoring",
+  "title": "Predictive Frictionless Public Sector Risk Scoring",
+  "description": "Predictive risk scoring engine that assesses frictionless public sector vulnerabilities with machine learning.",
+  "basic": "$278/month",
+  "pro": "$698/month",
+  "enterprise": "$2098/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Predictive Frictionless Public Sector Risk Scoring - Zion Tech Group",
+    "description": "Predictive risk scoring engine that assesses frictionless public sector vulnerabilities with machine learning.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/predictive-frictionless-public-sector-risk-scoring-b0f40dc0"
+    }
+  },
+  "features": [
+    "Risk assessment",
+    "Threat modeling",
+    "Compliance scoring",
+    "Mitigation planning"
+  ],
+  "benefits": [
+    "Proactive risk mitigation",
+    "Compliance assurance",
+    "Reduced exposure",
+    "Faster incident response"
+  ]
+}

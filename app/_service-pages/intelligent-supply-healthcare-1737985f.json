@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/intelligent-supply-healthcare-1737985f",
+  "breadcrumbTitle": "Intelligent Supply Healthcare",
+  "title": "Intelligent Supply Healthcare",
+  "description": "Unlock unprecedented growth with Intelligent Supply Healthcare. This autonomous system provides document processing with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Supply Healthcare - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Intelligent Supply Healthcare. This autonomous system provides document processing with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-supply-healthcare-1737985f"
+    }
+  },
+  "features": [
+    "Business intelligence with KPI dashboards",
+    "Inventory prediction with demand forecasting",
+    "Sentiment analysis with real-time monitoring",
+    "Brand monitoring across social channels",
+    "Custom integrations with webhook support"
+  ],
+  "benefits": [
+    "Better code quality with automated reviews",
+    "Scalable to millions of transactions per second",
+    "Improved brand awareness with social monitoring",
+    "ROI achieved in under 90 days with cost savings",
+    "Reduced shipping costs with route optimization"
+  ]
+}

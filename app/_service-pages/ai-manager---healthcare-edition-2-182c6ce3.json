@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/ai-manager---healthcare-edition-2-182c6ce3",
+  "breadcrumbTitle": "AI Manager - Healthcare Edition #2",
+  "title": "AI Manager - Healthcare Edition #2",
+  "description": "Next-generation healthcare solution: AI Manager - Healthcare Edition #2. Combines data processing with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Manager - Healthcare Edition #2 - Zion Tech Group",
+    "description": "Next-generation healthcare solution: AI Manager - Healthcare Edition #2. Combines data processing with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-manager---healthcare-edition-2-182c6ce3"
+    }
+  },
+  "features": [
+    "Machine learning integration",
+    "HIPAA ready",
+    "Plugin architecture",
+    "Container orchestration"
+  ],
+  "benefits": [
+    "Dynamic resource allocation",
+    "Seamless integration with existing systems",
+    "Real-time insights and alerts"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/intelligent-manufacturing-retail-460f17a1",
+  "breadcrumbTitle": "Intelligent manufacturing-retail",
+  "title": "Intelligent manufacturing-retail",
+  "description": "Next-generation Retail solution: Intelligent manufacturing-retail. Combines inventory management with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent manufacturing-retail - Zion Tech Group",
+    "description": "Next-generation Retail solution: Intelligent manufacturing-retail. Combines inventory management with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-manufacturing-retail-460f17a1"
+    }
+  },
+  "features": [
+    "Security monitoring with threat intelligence",
+    "HIPAA ready with healthcare data protection",
+    "Zero-downtime updates with blue-green deployment",
+    "Logistics route optimization with traffic prediction",
+    "SOC 2 certified with security controls"
+  ],
+  "benefits": [
+    "Faster time-to-market with accelerated development",
+    "Reduced risk with early warning systems",
+    "Improved customer retention with proactive service",
+    "Improved brand awareness with social monitoring",
+    "ROI achieved in under 90 days with cost savings"
+  ]
+}

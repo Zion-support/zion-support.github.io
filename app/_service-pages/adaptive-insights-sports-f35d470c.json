@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/adaptive-insights-sports-f35d470c",
+  "breadcrumbTitle": "Adaptive insights-sports",
+  "title": "Adaptive insights-sports",
+  "description": "Next-generation sports solution: Adaptive insights-sports. Combines quality control with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Adaptive insights-sports - Zion Tech Group",
+    "description": "Next-generation sports solution: Adaptive insights-sports. Combines quality control with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/adaptive-insights-sports-f35d470c"
+    }
+  },
+  "features": [
+    "Audit trails",
+    "Data encryption",
+    "Cloud-native architecture",
+    "Performance dashboards",
+    "Microservices deployment"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Enterprise-grade security",
+    "Performance benchmarking"
+  ]
+}

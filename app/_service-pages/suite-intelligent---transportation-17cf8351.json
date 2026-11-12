@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/suite-intelligent---transportation-17cf8351",
+  "breadcrumbTitle": "Suite Intelligent - Transportation",
+  "title": "Suite Intelligent - Transportation",
+  "description": "Next-generation transportation solution: Suite Intelligent - Transportation. Combines code optimization with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Suite Intelligent - Transportation - Zion Tech Group",
+    "description": "Next-generation transportation solution: Suite Intelligent - Transportation. Combines code optimization with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/suite-intelligent---transportation-17cf8351"
+    }
+  },
+  "features": [
+    "Cloud-native architecture",
+    "Real-time processing",
+    "Machine learning integration",
+    "Offline capabilities",
+    "Performance dashboards"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "99.9% uptime guarantee",
+    "Cost optimization recommendations"
+  ]
+}

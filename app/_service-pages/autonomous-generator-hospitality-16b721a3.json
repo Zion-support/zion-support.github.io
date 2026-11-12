@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/autonomous-generator-hospitality-16b721a3",
+  "breadcrumbTitle": "Autonomous generator-hospitality",
+  "title": "Autonomous generator-hospitality",
+  "description": "The future of hospitality is here with Autonomous generator-hospitality. Powered by cutting-edge AI, this platform delivers security monitoring like never befor",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous generator-hospitality - Zion Tech Group",
+    "description": "The future of hospitality is here with Autonomous generator-hospitality. Powered by cutting-edge AI, this platform delivers security monitoring like never befor",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-generator-hospitality-16b721a3"
+    }
+  },
+  "features": [
+    "API-first design",
+    "Custom integrations",
+    "Zero-downtime updates",
+    "Mobile-responsive interface",
+    "Audit trails"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Real-time insights and alerts",
+    "Predictive maintenance scheduling",
+    "Seamless integration with existing systems"
+  ]
+}

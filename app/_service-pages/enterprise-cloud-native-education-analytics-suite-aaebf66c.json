@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/enterprise-cloud-native-education-analytics-suite-aaebf66c",
+  "breadcrumbTitle": "Enterprise Cloud-Native Education Analytics Suite",
+  "title": "Enterprise Cloud-Native Education Analytics Suite",
+  "description": "Enterprise analytics suite that delivers cloud-native education insights with unified dashboards and reporting.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Enterprise Cloud-Native Education Analytics Suite - Zion Tech Group",
+    "description": "Enterprise analytics suite that delivers cloud-native education insights with unified dashboards and reporting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/enterprise-cloud-native-education-analytics-suite-aaebf66c"
+    }
+  },
+  "features": [
+    "Data visualization",
+    "Custom dashboards",
+    "Report generation",
+    "KPI tracking"
+  ],
+  "benefits": [
+    "Unified data view",
+    "Faster insights",
+    "Customizable reports",
+    "Cross-functional collaboration"
+  ]
+}

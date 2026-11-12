@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/director-cognitive---finance-25805464",
+  "breadcrumbTitle": "Director Cognitive - Finance",
+  "title": "Director Cognitive - Finance",
+  "description": "Next-generation finance solution: Director Cognitive - Finance. Combines financial planning with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Director Cognitive - Finance - Zion Tech Group",
+    "description": "Next-generation finance solution: Director Cognitive - Finance. Combines financial planning with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/director-cognitive---finance-25805464"
+    }
+  },
+  "features": [
+    "Zero-downtime updates",
+    "Mobile-responsive interface",
+    "Offline capabilities",
+    "Rollback mechanisms"
+  ],
+  "benefits": [
+    "Cost optimization recommendations",
+    "Seamless integration with existing systems",
+    "Predictive maintenance scheduling",
+    "99.9% uptime guarantee"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/cognitive-frictionless-education-decision-engine-2dbcfce9",
+  "breadcrumbTitle": "Cognitive Frictionless Education Decision Engine",
+  "title": "Cognitive Frictionless Education Decision Engine",
+  "description": "Cognitive decision engine that processes frictionless signals to drive education strategy with deep learning.",
+  "basic": "$278/month",
+  "pro": "$698/month",
+  "enterprise": "$2098/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Cognitive Frictionless Education Decision Engine - Zion Tech Group",
+    "description": "Cognitive decision engine that processes frictionless signals to drive education strategy with deep learning.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cognitive-frictionless-education-decision-engine-2dbcfce9"
+    }
+  },
+  "features": [
+    "Cognitive reasoning",
+    "Scenario analysis",
+    "Decision trees",
+    "Recommendation engine"
+  ],
+  "benefits": [
+    "Better decision quality",
+    "Reduced risk",
+    "Faster insights",
+    "Competitive intelligence"
+  ]
+}

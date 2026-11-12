@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/platform-predictive---legal-c92d1e9c",
+  "breadcrumbTitle": "Platform Predictive - Legal",
+  "title": "Platform Predictive - Legal",
+  "description": "The future of legal is here with Platform Predictive - Legal. Powered by cutting-edge AI, this platform delivers maintenance scheduling like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Platform Predictive - Legal - Zion Tech Group",
+    "description": "The future of legal is here with Platform Predictive - Legal. Powered by cutting-edge AI, this platform delivers maintenance scheduling like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/platform-predictive---legal-c92d1e9c"
+    }
+  },
+  "features": [
+    "SOC 2 certified",
+    "HIPAA ready",
+    "Machine learning integration",
+    "Plugin architecture"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "Predictive maintenance scheduling",
+    "Cost optimization recommendations",
+    "Enterprise-grade security"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligent-orchestrator-for-media-8a147d9a",
+  "breadcrumbTitle": "Intelligent Orchestrator for Media",
+  "title": "Intelligent Orchestrator for Media",
+  "description": "Unlock unprecedented growth with Intelligent Orchestrator for Media. This autonomous system provides workflow management with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Orchestrator for Media - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Intelligent Orchestrator for Media. This autonomous system provides workflow management with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-orchestrator-for-media-8a147d9a"
+    }
+  },
+  "features": [
+    "Performance dashboards",
+    "Custom integrations",
+    "HIPAA ready",
+    "Serverless functions"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "Seamless integration with existing systems",
+    "Dynamic resource allocation",
+    "Enterprise-grade security",
+    "Performance benchmarking"
+  ]
+}

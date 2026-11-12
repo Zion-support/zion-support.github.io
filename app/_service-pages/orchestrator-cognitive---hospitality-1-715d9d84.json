@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/orchestrator-cognitive---hospitality-1-715d9d84",
+  "breadcrumbTitle": "Orchestrator Cognitive - Hospitality #1",
+  "title": "Orchestrator Cognitive - Hospitality #1",
+  "description": "The future of hospitality is here with Orchestrator Cognitive - Hospitality #1. Powered by cutting-edge AI, this platform delivers data processing like never be",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Orchestrator Cognitive - Hospitality #1 - Zion Tech Group",
+    "description": "The future of hospitality is here with Orchestrator Cognitive - Hospitality #1. Powered by cutting-edge AI, this platform delivers data processing like never be",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/orchestrator-cognitive---hospitality-1-715d9d84"
+    }
+  },
+  "features": [
+    "Offline capabilities",
+    "Open-source friendly",
+    "Real-time processing",
+    "Rollback mechanisms",
+    "API-first design"
+  ],
+  "benefits": [
+    "Dynamic resource allocation",
+    "Zero manual intervention required",
+    "50% reduction in operational costs"
+  ]
+}

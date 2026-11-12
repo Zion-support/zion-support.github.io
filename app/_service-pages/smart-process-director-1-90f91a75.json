@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/smart-process-director-1-90f91a75",
+  "breadcrumbTitle": "Smart Process Director #1",
+  "title": "Smart Process Director #1",
+  "description": "Unlock unprecedented growth with Smart Process Director #1. This autonomous system provides risk assessment with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Process Director #1 - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Smart Process Director #1. This autonomous system provides risk assessment with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-process-director-1-90f91a75"
+    }
+  },
+  "features": [
+    "Zero-downtime updates",
+    "Role-based access control",
+    "HIPAA ready",
+    "Mobile-responsive interface",
+    "API-first design"
+  ],
+  "benefits": [
+    "24/7 automated operations",
+    "50% reduction in operational costs",
+    "Performance benchmarking"
+  ]
+}

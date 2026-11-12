@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/predictive-frictionless-hospitality-risk-scoring-aaf62528",
+  "breadcrumbTitle": "Predictive Frictionless Hospitality Risk Scoring",
+  "title": "Predictive Frictionless Hospitality Risk Scoring",
+  "description": "Predictive risk scoring engine that assesses frictionless hospitality vulnerabilities with machine learning.",
+  "basic": "$278/month",
+  "pro": "$698/month",
+  "enterprise": "$2098/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Predictive Frictionless Hospitality Risk Scoring - Zion Tech Group",
+    "description": "Predictive risk scoring engine that assesses frictionless hospitality vulnerabilities with machine learning.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/predictive-frictionless-hospitality-risk-scoring-aaf62528"
+    }
+  },
+  "features": [
+    "Risk assessment",
+    "Threat modeling",
+    "Compliance scoring",
+    "Mitigation planning"
+  ],
+  "benefits": [
+    "Proactive risk mitigation",
+    "Compliance assurance",
+    "Reduced exposure",
+    "Faster incident response"
+  ]
+}

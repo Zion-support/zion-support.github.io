@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/suite-intelligent---construction-98d97fe2",
+  "breadcrumbTitle": "Suite Intelligent - Construction",
+  "title": "Suite Intelligent - Construction",
+  "description": "Unlock unprecedented growth with Suite Intelligent - Construction. This autonomous system provides decision support with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Suite Intelligent - Construction - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Suite Intelligent - Construction. This autonomous system provides decision support with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/suite-intelligent---construction-98d97fe2"
+    }
+  },
+  "features": [
+    "Auto-scaling capabilities",
+    "Mobile-responsive interface",
+    "Open-source friendly",
+    "Microservices deployment"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "Intelligent load balancing",
+    "50% reduction in operational costs"
+  ]
+}

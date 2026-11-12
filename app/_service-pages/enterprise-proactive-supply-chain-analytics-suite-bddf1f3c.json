@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/enterprise-proactive-supply-chain-analytics-suite-bddf1f3c",
+  "breadcrumbTitle": "Enterprise Proactive Supply Chain Analytics Suite",
+  "title": "Enterprise Proactive Supply Chain Analytics Suite",
+  "description": "Enterprise analytics suite that delivers proactive supply chain insights with unified dashboards and reporting.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Enterprise Proactive Supply Chain Analytics Suite - Zion Tech Group",
+    "description": "Enterprise analytics suite that delivers proactive supply chain insights with unified dashboards and reporting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/enterprise-proactive-supply-chain-analytics-suite-bddf1f3c"
+    }
+  },
+  "features": [
+    "Data visualization",
+    "Custom dashboards",
+    "Report generation",
+    "KPI tracking"
+  ],
+  "benefits": [
+    "Unified data view",
+    "Faster insights",
+    "Customizable reports",
+    "Cross-functional collaboration"
+  ]
+}

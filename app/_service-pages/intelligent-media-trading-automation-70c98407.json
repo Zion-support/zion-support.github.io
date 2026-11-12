@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-media-trading-automation-70c98407",
+  "breadcrumbTitle": "Intelligent Media Trading Automation",
+  "title": "Intelligent Media Trading Automation",
+  "description": "Algorithmic trading platform that executes intelligent strategies using AI-driven market analysis, sentiment processing, and real-time risk management.",
+  "basic": "$318/month",
+  "pro": "$798/month",
+  "enterprise": "$2398/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Intelligent Media Trading Automation - Zion Tech Group",
+    "description": "Algorithmic trading platform that executes intelligent strategies using AI-driven market analysis, sentiment processing, and real-time risk management.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-media-trading-automation-70c98407"
+    }
+  },
+  "features": [
+    "Signal generation",
+    "Execution optimization",
+    "Risk controls",
+    "Performance attribution"
+  ],
+  "benefits": [
+    "Alpha generation",
+    "Reduced latency",
+    "Disciplined execution",
+    "Scalable strategies"
+  ]
+}

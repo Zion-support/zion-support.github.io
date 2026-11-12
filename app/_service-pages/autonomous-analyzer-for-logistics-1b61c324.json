@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/autonomous-analyzer-for-logistics-1b61c324",
+  "breadcrumbTitle": "Autonomous Analyzer for Logistics",
+  "title": "Autonomous Analyzer for Logistics",
+  "description": "Unlock unprecedented growth with Autonomous Analyzer for Logistics. This autonomous system provides performance monitoring with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous Analyzer for Logistics - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Autonomous Analyzer for Logistics. This autonomous system provides performance monitoring with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-analyzer-for-logistics-1b61c324"
+    }
+  },
+  "features": [
+    "Cloud-native architecture",
+    "API-first design",
+    "Mobile-responsive interface",
+    "Zero-downtime updates",
+    "Plugin architecture"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "Performance benchmarking",
+    "Seamless integration with existing systems"
+  ]
+}

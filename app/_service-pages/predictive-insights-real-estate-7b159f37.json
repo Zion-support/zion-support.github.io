@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/predictive-insights-real-estate-7b159f37",
+  "breadcrumbTitle": "Predictive insights-real-estate",
+  "title": "Predictive insights-real-estate",
+  "description": "Revolutionize real-estate through intelligent automation. Our Predictive insights-real-estate leverages advanced machine learning to deliver sales forecasting a",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Predictive insights-real-estate - Zion Tech Group",
+    "description": "Revolutionize real-estate through intelligent automation. Our Predictive insights-real-estate leverages advanced machine learning to deliver sales forecasting a",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/predictive-insights-real-estate-7b159f37"
+    }
+  },
+  "features": [
+    "Zero-downtime updates",
+    "Alerting system",
+    "Open-source friendly",
+    "Role-based access control"
+  ],
+  "benefits": [
+    "Dynamic resource allocation",
+    "Reduced human error by 95%",
+    "Intelligent load balancing"
+  ]
+}

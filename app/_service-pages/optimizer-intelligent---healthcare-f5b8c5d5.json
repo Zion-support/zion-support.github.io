@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/optimizer-intelligent---healthcare-f5b8c5d5",
+  "breadcrumbTitle": "Optimizer Intelligent - Healthcare",
+  "title": "Optimizer Intelligent - Healthcare",
+  "description": "Revolutionize Healthcare through intelligent automation. Our Optimizer Intelligent - Healthcare leverages advanced machine learning to deliver language processi",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Optimizer Intelligent - Healthcare - Zion Tech Group",
+    "description": "Revolutionize Healthcare through intelligent automation. Our Optimizer Intelligent - Healthcare leverages advanced machine learning to deliver language processi",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/optimizer-intelligent---healthcare-f5b8c5d5"
+    }
+  },
+  "features": [
+    "Compliance monitoring with regulatory updates",
+    "Mobile-responsive interface with offline capabilities",
+    "Customer journey mapping with touchpoint analysis",
+    "Document processing with OCR and NLP",
+    "Edge computing support for low-latency operations"
+  ],
+  "benefits": [
+    "Improved product quality with automated testing",
+    "Improved customer satisfaction with faster response times",
+    "Improved employee productivity with automation",
+    "Faster time-to-market with accelerated development",
+    "Enhanced security posture with continuous monitoring"
+  ]
+}

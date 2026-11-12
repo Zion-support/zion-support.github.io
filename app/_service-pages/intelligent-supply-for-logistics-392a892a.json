@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/intelligent-supply-for-logistics-392a892a",
+  "breadcrumbTitle": "Intelligent Supply for Logistics",
+  "title": "Intelligent Supply for Logistics",
+  "description": "The future of Logistics is here with Intelligent Supply for Logistics. Powered by cutting-edge AI, this platform delivers revenue forecasting like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Supply for Logistics - Zion Tech Group",
+    "description": "The future of Logistics is here with Intelligent Supply for Logistics. Powered by cutting-edge AI, this platform delivers revenue forecasting like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-supply-for-logistics-392a892a"
+    }
+  },
+  "features": [
+    "SOC 2 certified with security controls",
+    "Image recognition with computer vision",
+    "Predictive modeling with ensemble methods",
+    "Alerting system with intelligent notifications",
+    "Edge computing support for low-latency operations"
+  ],
+  "benefits": [
+    "Improved employee productivity with automation",
+    "Reduced support tickets with self-service options",
+    "Scalable to millions of transactions per second",
+    "Reduced shipping costs with route optimization",
+    "Enhanced security with continuous threat monitoring"
+  ]
+}

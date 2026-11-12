@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/coordinator-autonomous---hospitality-710e4d32",
+  "breadcrumbTitle": "Coordinator Autonomous - Hospitality",
+  "title": "Coordinator Autonomous - Hospitality",
+  "description": "The future of hospitality is here with Coordinator Autonomous - Hospitality. Powered by cutting-edge AI, this platform delivers market intelligence like never b",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Coordinator Autonomous - Hospitality - Zion Tech Group",
+    "description": "The future of hospitality is here with Coordinator Autonomous - Hospitality. Powered by cutting-edge AI, this platform delivers market intelligence like never b",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/coordinator-autonomous---hospitality-710e4d32"
+    }
+  },
+  "features": [
+    "Real-time processing",
+    "Machine learning integration",
+    "Alerting system",
+    "Audit trails",
+    "HIPAA ready"
+  ],
+  "benefits": [
+    "Automated compliance reporting",
+    "50% reduction in operational costs",
+    "Seamless integration with existing systems",
+    "Scalable to millions of transactions"
+  ]
+}

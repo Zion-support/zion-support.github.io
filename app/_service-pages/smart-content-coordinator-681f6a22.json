@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/smart-content-coordinator-681f6a22",
+  "breadcrumbTitle": "Smart Content Coordinator",
+  "title": "Smart Content Coordinator",
+  "description": "Revolutionize insurance through intelligent automation. Our Smart Content Coordinator leverages advanced machine learning to deliver compliance monitoring at sc",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Content Coordinator - Zion Tech Group",
+    "description": "Revolutionize insurance through intelligent automation. Our Smart Content Coordinator leverages advanced machine learning to deliver compliance monitoring at sc",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-content-coordinator-681f6a22"
+    }
+  },
+  "features": [
+    "SOC 2 certified",
+    "Plugin architecture",
+    "Mobile-responsive interface",
+    "Custom integrations",
+    "Alerting system"
+  ],
+  "benefits": [
+    "Dynamic resource allocation",
+    "Automated compliance reporting",
+    "Intelligent load balancing",
+    "Seamless integration with existing systems"
+  ]
+}

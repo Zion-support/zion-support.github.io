@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/platform-smart---telecom-f797a613",
+  "breadcrumbTitle": "Platform Smart - Telecom",
+  "title": "Platform Smart - Telecom",
+  "description": "Revolutionize telecom through intelligent automation. Our Platform Smart - Telecom leverages advanced machine learning to deliver decision support at scale.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Platform Smart - Telecom - Zion Tech Group",
+    "description": "Revolutionize telecom through intelligent automation. Our Platform Smart - Telecom leverages advanced machine learning to deliver decision support at scale.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/platform-smart---telecom-f797a613"
+    }
+  },
+  "features": [
+    "Comprehensive monitoring",
+    "Machine learning integration",
+    "SOC 2 certified",
+    "Edge computing support"
+  ],
+  "benefits": [
+    "Scalable to millions of transactions",
+    "99.9% uptime guarantee",
+    "Cost optimization recommendations"
+  ]
+}

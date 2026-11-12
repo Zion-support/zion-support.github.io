@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/cognitive-hyper-local-public-sector-decision-engine-a50e781c",
+  "breadcrumbTitle": "Cognitive Hyper-Local Public Sector Decision Engine",
+  "title": "Cognitive Hyper-Local Public Sector Decision Engine",
+  "description": "Cognitive decision engine that processes hyper-local signals to drive public sector strategy with deep learning.",
+  "basic": "$278/month",
+  "pro": "$698/month",
+  "enterprise": "$2098/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Cognitive Hyper-Local Public Sector Decision Engine - Zion Tech Group",
+    "description": "Cognitive decision engine that processes hyper-local signals to drive public sector strategy with deep learning.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cognitive-hyper-local-public-sector-decision-engine-a50e781c"
+    }
+  },
+  "features": [
+    "Cognitive reasoning",
+    "Scenario analysis",
+    "Decision trees",
+    "Recommendation engine"
+  ],
+  "benefits": [
+    "Better decision quality",
+    "Reduced risk",
+    "Faster insights",
+    "Competitive intelligence"
+  ]
+}

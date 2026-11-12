@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/analytics-cognitive---logistics-1-c3aa68cd",
+  "breadcrumbTitle": "Analytics Cognitive - Logistics #1",
+  "title": "Analytics Cognitive - Logistics #1",
+  "description": "Unlock unprecedented growth with Analytics Cognitive - Logistics #1. This autonomous system provides financial planning with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Analytics Cognitive - Logistics #1 - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Analytics Cognitive - Logistics #1. This autonomous system provides financial planning with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/analytics-cognitive---logistics-1-c3aa68cd"
+    }
+  },
+  "features": [
+    "Custom integrations",
+    "Open-source friendly",
+    "Alerting system",
+    "Role-based access control",
+    "Real-time processing"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "Intelligent load balancing",
+    "3x faster decision making"
+  ]
+}

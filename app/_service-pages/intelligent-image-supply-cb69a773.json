@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/intelligent-image-supply-cb69a773",
+  "breadcrumbTitle": "Intelligent Image Supply",
+  "title": "Intelligent Image Supply",
+  "description": "Transform your Real Estate operations with our Intelligent Image Supply. This AI-driven solution automates decision support with unprecedented accuracy and effi",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Image Supply - Zion Tech Group",
+    "description": "Transform your Real Estate operations with our Intelligent Image Supply. This AI-driven solution automates decision support with unprecedented accuracy and effi",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-image-supply-cb69a773"
+    }
+  },
+  "features": [
+    "Content generation with plagiarism checks",
+    "HIPAA ready with healthcare data protection",
+    "Microservices deployment with container orchestration",
+    "Document processing with OCR and NLP",
+    "Brand monitoring across social channels"
+  ],
+  "benefits": [
+    "Improved conversion rates with personalization",
+    "Reduced marketing costs with targeted campaigns",
+    "Better inventory management with demand forecasting",
+    "Better risk management with predictive analytics",
+    "Enhanced decision making with data-driven insights"
+  ]
+}

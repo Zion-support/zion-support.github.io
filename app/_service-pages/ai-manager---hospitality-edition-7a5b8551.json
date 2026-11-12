@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-manager---hospitality-edition-7a5b8551",
+  "breadcrumbTitle": "AI Manager - Hospitality Edition",
+  "title": "AI Manager - Hospitality Edition",
+  "description": "Transform your hospitality operations with our AI Manager - Hospitality Edition. This AI-driven solution automates code optimization with unprecedented accuracy",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Manager - Hospitality Edition - Zion Tech Group",
+    "description": "Transform your hospitality operations with our AI Manager - Hospitality Edition. This AI-driven solution automates code optimization with unprecedented accuracy",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-manager---hospitality-edition-7a5b8551"
+    }
+  },
+  "features": [
+    "Role-based access control",
+    "Multi-region deployment",
+    "Comprehensive monitoring",
+    "Audit trails",
+    "Auto-scaling capabilities"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "Real-time insights and alerts",
+    "Automated compliance reporting",
+    "50% reduction in operational costs"
+  ]
+}

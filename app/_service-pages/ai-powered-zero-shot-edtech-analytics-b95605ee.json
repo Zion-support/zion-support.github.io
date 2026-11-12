@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-zero-shot-edtech-analytics-b95605ee",
+  "breadcrumbTitle": "AI-Powered Zero-Shot Edtech Analytics",
+  "title": "AI-Powered Zero-Shot Edtech Analytics",
+  "description": "AI-driven analytics platform that delivers zero-shot insights into edtech operations, providing real-time monitoring, predictive modeling, and automated reporti",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Zero-Shot Edtech Analytics - Zion Tech Group",
+    "description": "AI-driven analytics platform that delivers zero-shot insights into edtech operations, providing real-time monitoring, predictive modeling, and automated reporti",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-zero-shot-edtech-analytics-b95605ee"
+    }
+  },
+  "features": [
+    "Real-time monitoring",
+    "Predictive modeling",
+    "Automated reporting",
+    "Custom dashboards"
+  ],
+  "benefits": [
+    "Data-driven decision making",
+    "Improved operational efficiency",
+    "Proactive issue detection",
+    "Enhanced KPI tracking"
+  ]
+}

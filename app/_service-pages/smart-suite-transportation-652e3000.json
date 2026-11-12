@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/smart-suite-transportation-652e3000",
+  "breadcrumbTitle": "Smart suite-transportation",
+  "title": "Smart suite-transportation",
+  "description": "Revolutionize Transportation through intelligent automation. Our Smart suite-transportation leverages advanced machine learning to deliver energy management at ",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart suite-transportation - Zion Tech Group",
+    "description": "Revolutionize Transportation through intelligent automation. Our Smart suite-transportation leverages advanced machine learning to deliver energy management at ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-suite-transportation-652e3000"
+    }
+  },
+  "features": [
+    "Executive dashboards with drill-down capabilities",
+    "Predictive modeling with ensemble methods",
+    "Language processing with sentiment analysis",
+    "Compliance monitoring with regulatory updates",
+    "Manufacturing quality control with defect detection"
+  ],
+  "benefits": [
+    "Better resource utilization with auto-scaling",
+    "Reduced shipping costs with route optimization",
+    "50% reduction in operational costs through automation",
+    "Better customer experience with personalization"
+  ]
+}

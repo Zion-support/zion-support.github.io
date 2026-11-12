@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/smart-automation-for-transportation-1-66057bb6",
+  "breadcrumbTitle": "Smart Automation for Transportation #1",
+  "title": "Smart Automation for Transportation #1",
+  "description": "Revolutionize transportation through intelligent automation. Our Smart Automation for Transportation #1 leverages advanced machine learning to deliver process a",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Automation for Transportation #1 - Zion Tech Group",
+    "description": "Revolutionize transportation through intelligent automation. Our Smart Automation for Transportation #1 leverages advanced machine learning to deliver process a",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-automation-for-transportation-1-66057bb6"
+    }
+  },
+  "features": [
+    "Custom integrations",
+    "Multi-language support",
+    "Plugin architecture",
+    "GDPR compliance",
+    "Alerting system"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Intelligent load balancing",
+    "Seamless integration with existing systems"
+  ]
+}

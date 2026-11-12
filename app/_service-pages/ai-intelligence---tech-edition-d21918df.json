@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/ai-intelligence---tech-edition-d21918df",
+  "breadcrumbTitle": "AI Intelligence - Tech Edition",
+  "title": "AI Intelligence - Tech Edition",
+  "description": "Unlock unprecedented growth with AI Intelligence - Tech Edition. This autonomous system provides inventory management with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Intelligence - Tech Edition - Zion Tech Group",
+    "description": "Unlock unprecedented growth with AI Intelligence - Tech Edition. This autonomous system provides inventory management with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-intelligence---tech-edition-d21918df"
+    }
+  },
+  "features": [
+    "Audit trails",
+    "Auto-scaling capabilities",
+    "API-first design",
+    "Open-source friendly",
+    "Real-time processing"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "99.9% uptime guarantee",
+    "Real-time insights and alerts",
+    "Reduced human error by 95%",
+    "Seamless integration with existing systems"
+  ]
+}

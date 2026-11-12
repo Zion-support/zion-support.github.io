@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-suite---logistics-edition-11-17281762",
+  "breadcrumbTitle": "AI Suite - Logistics Edition #11",
+  "title": "AI Suite - Logistics Edition #11",
+  "description": "Unlock unprecedented growth with AI Suite - Logistics Edition #11. This autonomous system provides data processing with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Suite - Logistics Edition #11 - Zion Tech Group",
+    "description": "Unlock unprecedented growth with AI Suite - Logistics Edition #11. This autonomous system provides data processing with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-suite---logistics-edition-11-17281762"
+    }
+  },
+  "features": [
+    "Cloud-native architecture",
+    "HIPAA ready",
+    "Offline capabilities",
+    "Alerting system"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "Zero manual intervention required",
+    "Automated compliance reporting",
+    "Scalable to millions of transactions",
+    "Cost optimization recommendations"
+  ]
+}

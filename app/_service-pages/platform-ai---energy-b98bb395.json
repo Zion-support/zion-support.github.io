@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/platform-ai---energy-b98bb395",
+  "breadcrumbTitle": "Platform AI - Energy",
+  "title": "Platform AI - Energy",
+  "description": "Next-generation energy solution: Platform AI - Energy. Combines fraud prevention with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Platform AI - Energy - Zion Tech Group",
+    "description": "Next-generation energy solution: Platform AI - Energy. Combines fraud prevention with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/platform-ai---energy-b98bb395"
+    }
+  },
+  "features": [
+    "Role-based access control",
+    "Plugin architecture",
+    "Edge computing support",
+    "Multi-language support"
+  ],
+  "benefits": [
+    "Automated compliance reporting",
+    "Enterprise-grade security",
+    "Performance benchmarking",
+    "Zero manual intervention required",
+    "Predictive maintenance scheduling"
+  ]
+}

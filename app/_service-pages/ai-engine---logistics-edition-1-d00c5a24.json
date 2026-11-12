@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-engine---logistics-edition-1-d00c5a24",
+  "breadcrumbTitle": "AI Engine - Logistics Edition #1",
+  "title": "AI Engine - Logistics Edition #1",
+  "description": "Revolutionize logistics through intelligent automation. Our AI Engine - Logistics Edition #1 leverages advanced machine learning to deliver process automation a",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Engine - Logistics Edition #1 - Zion Tech Group",
+    "description": "Revolutionize logistics through intelligent automation. Our AI Engine - Logistics Edition #1 leverages advanced machine learning to deliver process automation a",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-engine---logistics-edition-1-d00c5a24"
+    }
+  },
+  "features": [
+    "Real-time processing",
+    "Serverless functions",
+    "Data encryption",
+    "Multi-language support",
+    "Container orchestration"
+  ],
+  "benefits": [
+    "Automated compliance reporting",
+    "ROI in under 90 days",
+    "Cost optimization recommendations",
+    "3x faster decision making"
+  ]
+}

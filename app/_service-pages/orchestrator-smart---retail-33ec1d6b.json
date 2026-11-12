@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/orchestrator-smart---retail-33ec1d6b",
+  "breadcrumbTitle": "Orchestrator Smart - Retail",
+  "title": "Orchestrator Smart - Retail",
+  "description": "The future of retail is here with Orchestrator Smart - Retail. Powered by cutting-edge AI, this platform delivers financial planning like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Orchestrator Smart - Retail - Zion Tech Group",
+    "description": "The future of retail is here with Orchestrator Smart - Retail. Powered by cutting-edge AI, this platform delivers financial planning like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/orchestrator-smart---retail-33ec1d6b"
+    }
+  },
+  "features": [
+    "Audit trails",
+    "Open-source friendly",
+    "HIPAA ready",
+    "API-first design",
+    "Container orchestration"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "Automated compliance reporting",
+    "Performance benchmarking"
+  ]
+}

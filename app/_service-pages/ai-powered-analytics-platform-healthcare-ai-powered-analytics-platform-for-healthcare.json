@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/ai-powered-analytics-platform-healthcare-ai-powered-analytics-platform-for-healthcare",
+  "breadcrumbTitle": "AI-Powered Analytics Platform for Healthcare",
+  "title": "AI-Powered Analytics Platform for Healthcare",
+  "description": "Advanced healthcare analytics platform leveraging machine learning to AI diagnostics, patient data analytics, telemedicine automation. Provides real-time insigh",
+  "basic": "$91/month",
+  "pro": "$304/month",
+  "enterprise": "$572/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Analytics Platform for Healthcare - Zion Tech Group",
+    "description": "Advanced healthcare analytics platform leveraging machine learning to AI diagnostics, patient data analytics, telemedicine automation. Provides real-time insigh",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-analytics-platform-healthcare-ai-powered-analytics-platform-for-healthcare"
+    }
+  },
+  "features": [
+    "AI-powered automation",
+    "Enterprise-grade security",
+    "24/7 monitoring",
+    "API-first integration",
+    "Scalable architecture"
+  ],
+  "benefits": [
+    "38% reduction in operational costs",
+    "Process 94% faster with automation",
+    "99.9% uptime guarantee with enterprise SLAs",
+    "ROI realized in under 90 days",
+    "Zero-downtime deployment"
+  ]
+}

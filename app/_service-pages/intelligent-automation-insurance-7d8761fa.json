@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-automation-insurance-7d8761fa",
+  "breadcrumbTitle": "Intelligent automation-insurance",
+  "title": "Intelligent automation-insurance",
+  "description": "Revolutionize insurance through intelligent automation. Our Intelligent automation-insurance leverages advanced machine learning to deliver sales forecasting at",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent automation-insurance - Zion Tech Group",
+    "description": "Revolutionize insurance through intelligent automation. Our Intelligent automation-insurance leverages advanced machine learning to deliver sales forecasting at",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-automation-insurance-7d8761fa"
+    }
+  },
+  "features": [
+    "Container orchestration",
+    "API-first design",
+    "Edge computing support",
+    "Real-time processing",
+    "Auto-scaling capabilities"
+  ],
+  "benefits": [
+    "Automated compliance reporting",
+    "24/7 automated operations",
+    "Seamless integration with existing systems"
+  ]
+}

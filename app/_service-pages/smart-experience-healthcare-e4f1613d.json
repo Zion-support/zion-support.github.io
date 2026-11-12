@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/smart-experience-healthcare-e4f1613d",
+  "breadcrumbTitle": "Smart experience-healthcare",
+  "title": "Smart experience-healthcare",
+  "description": "Next-generation Healthcare solution: Smart experience-healthcare. Combines master data management with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart experience-healthcare - Zion Tech Group",
+    "description": "Next-generation Healthcare solution: Smart experience-healthcare. Combines master data management with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-experience-healthcare-e4f1613d"
+    }
+  },
+  "features": [
+    "Healthcare data analytics with patient insights",
+    "Machine learning integration with automatic model training",
+    "A/B testing framework for continuous optimization",
+    "Financial risk management with scenario analysis",
+    "Data governance with policy enforcement"
+  ],
+  "benefits": [
+    "Dynamic resource allocation based on demand patterns",
+    "Enterprise-grade security with end-to-end encryption",
+    "Reduced development time with code generation",
+    "Improved quality with automated testing and validation",
+    "Improved customer retention with proactive service"
+  ]
+}

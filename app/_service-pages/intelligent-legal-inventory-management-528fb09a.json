@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-legal-inventory-management-528fb09a",
+  "breadcrumbTitle": "Intelligent Legal Inventory Management",
+  "title": "Intelligent Legal Inventory Management",
+  "description": "AI-driven inventory optimization platform that provides intelligent demand forecasting, automated replenishment, and assortment planning for retail operations.",
+  "basic": "$258/month",
+  "pro": "$648/month",
+  "enterprise": "$1948/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Legal Inventory Management - Zion Tech Group",
+    "description": "AI-driven inventory optimization platform that provides intelligent demand forecasting, automated replenishment, and assortment planning for retail operations.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-legal-inventory-management-528fb09a"
+    }
+  },
+  "features": [
+    "Demand forecasting",
+    "Auto-replenishment",
+    "Assortment optimization",
+    "Markdown optimization"
+  ],
+  "benefits": [
+    "Reduced stockouts",
+    "Lower inventory costs",
+    "Optimized assortments",
+    "Improved margins"
+  ]
+}

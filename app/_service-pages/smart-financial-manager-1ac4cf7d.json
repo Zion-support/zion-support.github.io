@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/smart-financial-manager-1ac4cf7d",
+  "breadcrumbTitle": "Smart Financial Manager",
+  "title": "Smart Financial Manager",
+  "description": "Next-generation real-estate solution: Smart Financial Manager. Combines maintenance scheduling with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Financial Manager - Zion Tech Group",
+    "description": "Next-generation real-estate solution: Smart Financial Manager. Combines maintenance scheduling with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-financial-manager-1ac4cf7d"
+    }
+  },
+  "features": [
+    "Mobile-responsive interface",
+    "Alerting system",
+    "Container orchestration",
+    "API-first design"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "Automated compliance reporting",
+    "Zero manual intervention required"
+  ]
+}

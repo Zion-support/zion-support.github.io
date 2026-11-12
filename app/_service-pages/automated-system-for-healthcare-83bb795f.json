@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/automated-system-for-healthcare-83bb795f",
+  "breadcrumbTitle": "Automated System for Healthcare",
+  "title": "Automated System for Healthcare",
+  "description": "Revolutionize healthcare through intelligent automation. Our Automated System for Healthcare leverages advanced machine learning to deliver decision support at ",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated System for Healthcare - Zion Tech Group",
+    "description": "Revolutionize healthcare through intelligent automation. Our Automated System for Healthcare leverages advanced machine learning to deliver decision support at ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-system-for-healthcare-83bb795f"
+    }
+  },
+  "features": [
+    "Real-time processing",
+    "Mobile-responsive interface",
+    "Multi-language support",
+    "Multi-region deployment"
+  ],
+  "benefits": [
+    "Scalable to millions of transactions",
+    "Cost optimization recommendations",
+    "Real-time insights and alerts",
+    "Intelligent load balancing"
+  ]
+}

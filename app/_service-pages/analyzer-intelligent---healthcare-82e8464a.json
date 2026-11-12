@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/analyzer-intelligent---healthcare-82e8464a",
+  "breadcrumbTitle": "Analyzer Intelligent - Healthcare",
+  "title": "Analyzer Intelligent - Healthcare",
+  "description": "Next-generation healthcare solution: Analyzer Intelligent - Healthcare. Combines fraud prevention with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Analyzer Intelligent - Healthcare - Zion Tech Group",
+    "description": "Next-generation healthcare solution: Analyzer Intelligent - Healthcare. Combines fraud prevention with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/analyzer-intelligent---healthcare-82e8464a"
+    }
+  },
+  "features": [
+    "GDPR compliance",
+    "Audit trails",
+    "Offline capabilities",
+    "HIPAA ready",
+    "Plugin architecture"
+  ],
+  "benefits": [
+    "Scalable to millions of transactions",
+    "99.9% uptime guarantee",
+    "Real-time insights and alerts",
+    "Enterprise-grade security"
+  ]
+}

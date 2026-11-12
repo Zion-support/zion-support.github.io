@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/intelligent-system-telecom-f745d3d1",
+  "breadcrumbTitle": "Intelligent system-telecom",
+  "title": "Intelligent system-telecom",
+  "description": "Transform your telecom operations with our Intelligent system-telecom. This AI-driven solution automates security monitoring with unprecedented accuracy and eff",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent system-telecom - Zion Tech Group",
+    "description": "Transform your telecom operations with our Intelligent system-telecom. This AI-driven solution automates security monitoring with unprecedented accuracy and eff",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-system-telecom-f745d3d1"
+    }
+  },
+  "features": [
+    "HIPAA ready",
+    "Alerting system",
+    "Serverless functions",
+    "Zero-downtime updates",
+    "Mobile-responsive interface"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "Self-healing infrastructure",
+    "Performance benchmarking",
+    "3x faster decision making",
+    "Zero manual intervention required"
+  ]
+}

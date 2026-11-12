@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-platform---telecom-edition-2-6c7ea304",
+  "breadcrumbTitle": "AI Platform - Telecom Edition #2",
+  "title": "AI Platform - Telecom Edition #2",
+  "description": "Revolutionize telecom through intelligent automation. Our AI Platform - Telecom Edition #2 leverages advanced machine learning to deliver energy management at s",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Platform - Telecom Edition #2 - Zion Tech Group",
+    "description": "Revolutionize telecom through intelligent automation. Our AI Platform - Telecom Edition #2 leverages advanced machine learning to deliver energy management at s",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-platform---telecom-edition-2-6c7ea304"
+    }
+  },
+  "features": [
+    "Custom integrations",
+    "Open-source friendly",
+    "Container orchestration",
+    "Multi-language support",
+    "Comprehensive monitoring"
+  ],
+  "benefits": [
+    "Scalable to millions of transactions",
+    "50% reduction in operational costs",
+    "ROI in under 90 days",
+    "99.9% uptime guarantee"
+  ]
+}

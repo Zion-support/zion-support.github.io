@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligent-director-manufacturing-9009ee19",
+  "breadcrumbTitle": "Intelligent director-manufacturing",
+  "title": "Intelligent director-manufacturing",
+  "description": "Next-generation manufacturing solution: Intelligent director-manufacturing. Combines risk assessment with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent director-manufacturing - Zion Tech Group",
+    "description": "Next-generation manufacturing solution: Intelligent director-manufacturing. Combines risk assessment with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-director-manufacturing-9009ee19"
+    }
+  },
+  "features": [
+    "Data encryption",
+    "HIPAA ready",
+    "Open-source friendly",
+    "Auto-scaling capabilities",
+    "Alerting system"
+  ],
+  "benefits": [
+    "Dynamic resource allocation",
+    "Performance benchmarking",
+    "3x faster decision making",
+    "Predictive maintenance scheduling"
+  ]
+}

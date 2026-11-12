@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/smart-system-healthcare-1-410397e7",
+  "breadcrumbTitle": "Smart system-healthcare #1",
+  "title": "Smart system-healthcare #1",
+  "description": "Unlock unprecedented growth with Smart system-healthcare #1. This autonomous system provides image recognition with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart system-healthcare #1 - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Smart system-healthcare #1. This autonomous system provides image recognition with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-system-healthcare-1-410397e7"
+    }
+  },
+  "features": [
+    "Alerting system",
+    "Performance dashboards",
+    "Edge computing support",
+    "Zero-downtime updates",
+    "Plugin architecture"
+  ],
+  "benefits": [
+    "Intelligent load balancing",
+    "3x faster decision making",
+    "Performance benchmarking",
+    "Real-time insights and alerts",
+    "Automated compliance reporting"
+  ]
+}

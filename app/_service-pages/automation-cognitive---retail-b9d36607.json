@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/automation-cognitive---retail-b9d36607",
+  "breadcrumbTitle": "Automation Cognitive - Retail",
+  "title": "Automation Cognitive - Retail",
+  "description": "Unlock unprecedented growth with Automation Cognitive - Retail. This autonomous system provides market intelligence with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automation Cognitive - Retail - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Automation Cognitive - Retail. This autonomous system provides market intelligence with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automation-cognitive---retail-b9d36607"
+    }
+  },
+  "features": [
+    "Machine learning integration",
+    "Container orchestration",
+    "Edge computing support",
+    "Microservices deployment",
+    "SOC 2 certified"
+  ],
+  "benefits": [
+    "Intelligent load balancing",
+    "Enterprise-grade security",
+    "Real-time insights and alerts"
+  ]
+}

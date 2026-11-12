@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/predictive-platform-logistics-8f6a8c49",
+  "breadcrumbTitle": "Predictive platform-logistics",
+  "title": "Predictive platform-logistics",
+  "description": "Unlock unprecedented growth with Predictive platform-logistics. This autonomous system provides supply chain with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Predictive platform-logistics - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Predictive platform-logistics. This autonomous system provides supply chain with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/predictive-platform-logistics-8f6a8c49"
+    }
+  },
+  "features": [
+    "HIPAA ready",
+    "Role-based access control",
+    "Performance dashboards",
+    "Offline capabilities",
+    "Serverless functions"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "Scalable to millions of transactions",
+    "3x faster decision making",
+    "Cost optimization recommendations",
+    "Predictive maintenance scheduling"
+  ]
+}

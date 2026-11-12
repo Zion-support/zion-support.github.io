@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/engine-ai---legal-3c0d5211",
+  "breadcrumbTitle": "Engine AI - Legal",
+  "title": "Engine AI - Legal",
+  "description": "Transform your legal operations with our Engine AI - Legal. This AI-driven solution automates process automation with unprecedented accuracy and efficiency.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Engine AI - Legal - Zion Tech Group",
+    "description": "Transform your legal operations with our Engine AI - Legal. This AI-driven solution automates process automation with unprecedented accuracy and efficiency.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/engine-ai---legal-3c0d5211"
+    }
+  },
+  "features": [
+    "Plugin architecture",
+    "Multi-region deployment",
+    "SOC 2 certified",
+    "Data encryption"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "Enterprise-grade security",
+    "99.9% uptime guarantee",
+    "Scalable to millions of transactions",
+    "3x faster decision making"
+  ]
+}

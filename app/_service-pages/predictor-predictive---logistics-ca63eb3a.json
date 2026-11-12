@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/predictor-predictive---logistics-ca63eb3a",
+  "breadcrumbTitle": "Predictor Predictive - Logistics",
+  "title": "Predictor Predictive - Logistics",
+  "description": "Transform your logistics operations with our Predictor Predictive - Logistics. This AI-driven solution automates performance monitoring with unprecedented accur",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Predictor Predictive - Logistics - Zion Tech Group",
+    "description": "Transform your logistics operations with our Predictor Predictive - Logistics. This AI-driven solution automates performance monitoring with unprecedented accur",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/predictor-predictive---logistics-ca63eb3a"
+    }
+  },
+  "features": [
+    "API-first design",
+    "Mobile-responsive interface",
+    "Alerting system",
+    "Cloud-native architecture",
+    "Auto-scaling capabilities"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "Dynamic resource allocation",
+    "Real-time insights and alerts"
+  ]
+}

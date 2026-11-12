@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/smart-sales-analytics-cebb6b60",
+  "breadcrumbTitle": "Smart Sales Analytics",
+  "title": "Smart Sales Analytics",
+  "description": "Transform your hospitality operations with our Smart Sales Analytics. This AI-driven solution automates security monitoring with unprecedented accuracy and effi",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Sales Analytics - Zion Tech Group",
+    "description": "Transform your hospitality operations with our Smart Sales Analytics. This AI-driven solution automates security monitoring with unprecedented accuracy and effi",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-sales-analytics-cebb6b60"
+    }
+  },
+  "features": [
+    "Zero-downtime updates",
+    "Auto-scaling capabilities",
+    "Multi-region deployment",
+    "Offline capabilities"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Performance benchmarking",
+    "Cost optimization recommendations"
+  ]
+}

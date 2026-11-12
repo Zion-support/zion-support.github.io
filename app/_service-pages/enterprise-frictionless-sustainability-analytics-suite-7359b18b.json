@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/enterprise-frictionless-sustainability-analytics-suite-7359b18b",
+  "breadcrumbTitle": "Enterprise Frictionless Sustainability Analytics Suite",
+  "title": "Enterprise Frictionless Sustainability Analytics Suite",
+  "description": "Enterprise analytics suite that delivers frictionless sustainability insights with unified dashboards and reporting.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Enterprise Frictionless Sustainability Analytics Suite - Zion Tech Group",
+    "description": "Enterprise analytics suite that delivers frictionless sustainability insights with unified dashboards and reporting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/enterprise-frictionless-sustainability-analytics-suite-7359b18b"
+    }
+  },
+  "features": [
+    "Data visualization",
+    "Custom dashboards",
+    "Report generation",
+    "KPI tracking"
+  ],
+  "benefits": [
+    "Unified data view",
+    "Faster insights",
+    "Customizable reports",
+    "Cross-functional collaboration"
+  ]
+}

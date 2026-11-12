@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/ai-engine---construction-edition-2-c82251e5",
+  "breadcrumbTitle": "AI Engine - Construction Edition #2",
+  "title": "AI Engine - Construction Edition #2",
+  "description": "Next-generation construction solution: AI Engine - Construction Edition #2. Combines predictive analytics with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Engine - Construction Edition #2 - Zion Tech Group",
+    "description": "Next-generation construction solution: AI Engine - Construction Edition #2. Combines predictive analytics with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-engine---construction-edition-2-c82251e5"
+    }
+  },
+  "features": [
+    "Plugin architecture",
+    "Microservices deployment",
+    "Performance dashboards",
+    "Offline capabilities",
+    "Alerting system"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Cost optimization recommendations",
+    "Automated compliance reporting",
+    "50% reduction in operational costs",
+    "ROI in under 90 days"
+  ]
+}

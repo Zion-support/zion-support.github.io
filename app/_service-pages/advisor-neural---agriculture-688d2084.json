@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/advisor-neural---agriculture-688d2084",
+  "breadcrumbTitle": "Advisor Neural - Agriculture",
+  "title": "Advisor Neural - Agriculture",
+  "description": "The future of agriculture is here with Advisor Neural - Agriculture. Powered by cutting-edge AI, this platform delivers risk assessment like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Advisor Neural - Agriculture - Zion Tech Group",
+    "description": "The future of agriculture is here with Advisor Neural - Agriculture. Powered by cutting-edge AI, this platform delivers risk assessment like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/advisor-neural---agriculture-688d2084"
+    }
+  },
+  "features": [
+    "GDPR compliance",
+    "Machine learning integration",
+    "Alerting system",
+    "Comprehensive monitoring",
+    "Custom integrations"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "Seamless integration with existing systems",
+    "Performance benchmarking"
+  ]
+}

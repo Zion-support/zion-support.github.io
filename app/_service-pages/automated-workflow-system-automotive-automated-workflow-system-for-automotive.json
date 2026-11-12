@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/automated-workflow-system-automotive-automated-workflow-system-for-automotive",
+  "breadcrumbTitle": "Automated Workflow System for Automotive",
+  "title": "Automated Workflow System for Automotive",
+  "description": "End-to-end workflow automation solution for automotive operations. Streamlines Autonomous driving, fleet telemetry, predictive maintenance through intelligent p",
+  "basic": "$135/month",
+  "pro": "$395/month",
+  "enterprise": "$1015/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated Workflow System for Automotive - Zion Tech Group",
+    "description": "End-to-end workflow automation solution for automotive operations. Streamlines Autonomous driving, fleet telemetry, predictive maintenance through intelligent p",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-workflow-system-automotive-automated-workflow-system-for-automotive"
+    }
+  },
+  "features": [
+    "AI-powered automation",
+    "Enterprise-grade security",
+    "24/7 monitoring",
+    "API-first integration",
+    "Scalable architecture"
+  ],
+  "benefits": [
+    "35% reduction in operational costs",
+    "Process 31% faster with automation",
+    "99.9% uptime guarantee with enterprise SLAs",
+    "ROI realized in under 90 days",
+    "Zero-downtime deployment"
+  ]
+}
