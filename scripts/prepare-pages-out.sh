@@ -6,25 +6,50 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT"
 rm -rf out
-mkdir -p out
-
-if [ -d public ]; then
-  cp -a public/. out/
-fi
+python3 scripts/export-public-pages.py public out
 # Generate FinOps scenario pages and promotion blocks into out/
 node scripts/render-finops-scenario.cjs out/
 # public/sitemap-0.xml + sitemap.xml (index → sitemap-0) + robots.txt ship as-is.
+
+# Validate every legacy fallback source before copy. The checkout must remain quiescent.
+# A regular file under a symlink directory could otherwise alias excluded ops documents.
+copy_public_file() {
+  local source="$1"
+  local destination="$2"
+  local ancestor="$source"
+  case "$source" in
+    ""|/*|..|../*|*/../*|*/..)
+      echo "ERROR: invalid fallback source path" >&2
+      return 1
+      ;;
+  esac
+  while :; do
+    if [ -L "$ancestor" ]; then
+      echo "ERROR: fallback source links are not permitted" >&2
+      return 1
+    fi
+    case "$ancestor" in
+      */*) ancestor="${ancestor%/*}" ;;
+      *) break ;;
+    esac
+  done
+  if [ ! -f "$source" ]; then
+    echo "ERROR: fallback source must be a regular file" >&2
+    return 1
+  fi
+  cp -a "$source" "$destination"
+}
 
 # Dual-path gap-fill (public wins). Hubs only — never copy country leaves.
 for d in field-services field-services-brazil plans discovery enterprise about solutions blog managed-it-services ai-consulting-services finops-consulting autonomous-ai-agents healthcare-it-hipaa fintech-it-ai; do
   if [ -f "$d/index.html" ] && [ ! -f "out/$d/index.html" ]; then
     mkdir -p "out/$d"
-    cp -a "$d/index.html" "out/$d/index.html"
+    copy_public_file "$d/index.html" "out/$d/index.html"
   fi
 done
 if [ -f field-services/brazil/index.html ] && [ ! -f out/field-services/brazil/index.html ]; then
   mkdir -p out/field-services/brazil
-  cp -a field-services/brazil/index.html out/field-services/brazil/index.html
+  copy_public_file field-services/brazil/index.html out/field-services/brazil/index.html
 fi
 
 # Dual-path blog posts (public wins). Slug hubs only — never walk the whole repo.
@@ -34,7 +59,7 @@ if [ -d blog ]; then
     rel="${f#blog/}"
     if [ ! -f "out/blog/$rel" ]; then
       mkdir -p "out/blog/$(dirname "$rel")"
-      cp -a "$f" "out/blog/$rel"
+      copy_public_file "$f" "out/blog/$rel"
     fi
   done
 fi
@@ -43,10 +68,10 @@ fi
 for f in assets/css/site.css assets/js/zion-shell.js css/site.css; do
   if [ -f "public/$f" ] && [ ! -f "out/$f" ]; then
     mkdir -p "out/$(dirname "$f")"
-    cp -a "public/$f" "out/$f"
+    copy_public_file "public/$f" "out/$f"
   elif [ -f "$f" ] && [ ! -f "out/$f" ]; then
     mkdir -p "out/$(dirname "$f")"
-    cp -a "$f" "out/$f"
+    copy_public_file "$f" "out/$f"
   fi
 done
 
@@ -65,11 +90,11 @@ assert_money_path() {
     # publish a Pay RED, but a genuinely absent page must still fail closed.
     if [ -f "public/$rel" ]; then
       mkdir -p "out/$(dirname "$rel")"
-      cp -a "public/$rel" "$f"
+      copy_public_file "public/$rel" "$f"
       echo "RECOVERED out/$rel from public/$rel" >&2
     elif [ -f "$rel" ]; then
       mkdir -p "out/$(dirname "$rel")"
-      cp -a "$rel" "$f"
+      copy_public_file "$rel" "$f"
       echo "RECOVERED out/$rel from $rel" >&2
     fi
   fi
@@ -101,5 +126,7 @@ assert_money_path() {
 assert_money_path services/ai-automation/index.html
 assert_money_path plans/index.html
 assert_money_path discovery/index.html
+
+python3 scripts/assert-no-private-ops.py out
 
 echo "Prepared out ($(find out -type f | wc -l) files)"
