@@ -2,6 +2,36 @@
 import path from 'node:path';
 import { getHeapStatistics } from 'node:v8';
 
+// Observe compiler phases without retaining modules, paths, or source content.
+class BuildMemoryPhases {
+  apply(compiler) {
+    let current;
+    let timer;
+    const record = (phase) => {
+      console.log('[build-memory-phase]', JSON.stringify({
+        compiler: compiler.name || 'unknown', phase,
+        pid: process.pid, ...process.memoryUsage(),
+        modules: current?.modules.size || 0,
+        chunks: current?.chunks.size || 0,
+      }));
+    };
+    const stop = () => { clearInterval(timer); current = undefined; };
+    compiler.hooks.thisCompilation.tap('BuildMemoryPhases', compilation => {
+      current = compilation;
+      record('start');
+      clearInterval(timer);
+      timer = setInterval(() => record('sample'), 20000);
+      timer.unref();
+      for (const phase of ['finishModules', 'afterOptimizeDependencies',
+        'afterOptimizeModules', 'afterCodeGeneration', 'afterProcessAssets']) {
+        compilation.hooks[phase].tap('BuildMemoryPhases', () => record(phase));
+      }
+    });
+    compiler.hooks.done.tap('BuildMemoryPhases', () => { record('done'); stop(); });
+    compiler.hooks.failed.tap('BuildMemoryPhases', () => { record('failed'); stop(); });
+  }
+}
+
 const nextConfig = {
   output: 'export',
   experimental: {
@@ -53,6 +83,7 @@ const nextConfig = {
         },
       };
     }
+    if (!dev) config.plugins.push(new BuildMemoryPhases());
     // Limit parallelism in webpack
     config.parallelism = 1;
     return config;
