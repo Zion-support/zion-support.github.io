@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Read-only catalog language contracts for existing artifacts or in-memory snapshots.
 
-Checks a bounded sample: four localized catalogs and five token-cost editions.
+Checks all five catalog hubs and five token-cost editions.
 No generation, HTTP, form submission, payment, or deployment is performed.
 """
 import argparse
@@ -171,22 +171,49 @@ def check_page(html, url, lang, slug, require_apps=True):
     return groups
 
 
-def cases(family):
-    result = [(l, 'apps-network') for l in LANGS if l != 'en']
+def check_destinations(html, url, root):
+    errors = []
+    for anchor in Document(html).tagged('a'):
+        href = anchor.attrs.get('href', '')
+        parsed = urlsplit(urljoin(url, href))
+        if parsed.netloc != 'ziontechgroup.com':
+            continue
+        relative = unquote(parsed.path).lstrip('/')
+        target = root / (relative + 'index.html' if not relative or relative.endswith('/') else relative)
+        if not target.resolve().is_relative_to(root.resolve()) or not target.is_file():
+            errors.append('Missing local destination: ' + parsed.path)
+    return sorted(set(errors))
+
+
+def cases(family, paths=None):
+    if paths is not None:
+        if not paths or len(paths) != len(set(paths)):
+            raise ValueError("Manifest must be nonempty and contain distinct paths")
+        result = []
+        for entry in paths:
+            match = re.fullmatch(r"(?:(pt|es|fr|de)/)?([a-z0-9-]+)/index\.html", entry)
+            if not match:
+                raise ValueError("Invalid artifact path: " + entry)
+            result.append((match[1] or "en", match[2]))
+        return result
+    result = [(l, 'apps-network') for l in LANGS]
     if family == 'generated':
         result += [(l, 'token-cost') for l in LANGS]
     return result
 
 
-def check_root(root, family='generated'):
+def check_root(root, family='generated', paths=None, verify_destinations=False):
     result = []
-    for lang, slug in cases(family):
+    for lang, slug in cases(family, paths):
         rel = route(lang, slug).lstrip('/') + 'index.html'
         file = root / rel
         if not file.is_file():
             result.append({'url': SITE + route(lang, slug), 'groups': {'input': ['Missing ' + rel]}})
         else:
-            result.append({'url': SITE + route(lang, slug), 'groups': check_page(file.read_text(), SITE + route(lang, slug), lang, slug)})
+            groups = check_page(file.read_text(), SITE + route(lang, slug), lang, slug)
+            if verify_destinations:
+                groups['destinations'] = check_destinations(file.read_text(), SITE + route(lang, slug), root)
+            result.append({'url': SITE + route(lang, slug), 'groups': groups})
     failed = collections.Counter(key for row in result for key, errors in row['groups'].items() if errors)
     total = sum(len(row['groups']) for row in result)
     return {'pages': len(result), 'groups': total, 'failed_groups': sum(failed.values()),
@@ -225,9 +252,9 @@ def mutation_tests(good):
         results.append({'case': name, 'rejected_by': group})
     return results
 
-def check_snapshot(pages, family):
+def check_snapshot(pages, family, paths=None):
     result = []
-    for lang, slug in cases(family):
+    for lang, slug in cases(family, paths):
         rel = route(lang, slug).lstrip('/') + 'index.html'
         groups = (check_page(pages[rel], SITE + route(lang, slug), lang, slug)
                   if rel in pages else {'input': ['Missing ' + rel]})
@@ -244,14 +271,19 @@ def main():
     source.add_argument('--root', type=Path, help='Already assembled public artifact directory')
     source.add_argument('--snapshot', type=Path, help='JSON object mapping relative HTML paths to content')
     parser.add_argument('--family', choices=['generated', 'hubs'], default='generated')
+    parser.add_argument('--paths-manifest', type=Path, help='Nonempty JSON array of exact generated HTML paths')
+    parser.add_argument('--verify-destinations', action='store_true', help='Require same-domain anchor targets in --root')
     parser.add_argument('--negative-controls', action='store_true', help='Verify rejection of 16 known invalid mutations')
     args = parser.parse_args()
+    paths = json.loads(args.paths_manifest.read_text()) if args.paths_manifest else None
+    if args.verify_destinations and not args.root:
+        parser.error('--verify-destinations requires --root')
     if args.root:
-        result = check_root(args.root, args.family)
+        result = check_root(args.root, args.family, paths, args.verify_destinations)
         read_es = lambda: (args.root / 'es/apps-network/index.html').read_text()
     else:
         pages = json.loads(args.snapshot.read_text())
-        result = check_snapshot(pages, args.family)
+        result = check_snapshot(pages, args.family, paths)
         read_es = lambda: pages['es/apps-network/index.html']
     if args.negative_controls and not result['failed_groups']:
         result['negative_controls'] = mutation_tests(read_es())

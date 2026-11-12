@@ -104,7 +104,7 @@ function relatedFor(app, lang = LANGS[0]) {
   const out = [];
   const seen = new Set([app.slug]);
   const hrefFor = (slug) =>
-    lang.code !== 'en' && fs.existsSync(path.join(PUBLIC, lang.prefix, slug, 'index.html'))
+    lang.code !== 'en' && (APPS.some((a) => a.slug === slug) || fs.existsSync(path.join(PUBLIC, lang.prefix, slug, 'index.html')))
       ? `/${lang.prefix}${slug}/`
       : `/${slug}/`;
   const push = (slug, meta) => {
@@ -293,7 +293,8 @@ for (const app of APPS) {
 // Localized index pages for the new apps, so every language has a real landing
 // page under /<lang>/apps-network/ that interlinks back into the network.
 for (const lang of LANGS) {
-  if (lang.code === 'en') continue;
+  // EN and PT hubs belong to the complete catalog generator; never shrink PT to 15 apps.
+  if (lang.code === 'en' || lang.code === 'pt') continue;
   const t = T[lang.code];
   const cards = APPS.map((app) => {
     const related = relatedFor(app, lang)
