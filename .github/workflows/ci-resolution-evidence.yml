@@ -1,0 +1,75 @@
+name: CI run-pair recovery evidence (manual, read-only)
+
+# Opt-in review aid for existing GitHub Actions failure notifications.
+# NEVER deletes Gmail, closes issues, merges, deploys or declares a release healthy.
+"on":
+  workflow_dispatch:
+    inputs:
+      failed_run_id:
+        description: 'Original failed run ID in this repository'
+        required: true
+        type: string
+      later_run_id:
+        description: 'Later successful run ID for the same workflow in this repository'
+        required: true
+        type: string
+  pull_request:
+    paths:
+      - '.github/workflows/ci-resolution-evidence.yml'
+      - 'automation/ci-resolution-evidence.cjs'
+      - 'automation/ci-resolution-evidence.test.cjs'
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: ci-run-pair-evidence-${{ github.event_name == 'pull_request' && format('pr-{0}', github.event.pull_request.number) || format('manual-{0}', github.run_id) }}
+  cancel-in-progress: false
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout read-only
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          persist-credentials: false
+
+      - name: Node.js for deterministic offline checks
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
+        with:
+          node-version: '22'
+
+      - name: Test eligibility classifier without network access
+        run: node --test automation/ci-resolution-evidence.test.cjs
+
+      - name: Fetch bounded GitHub run pair and emit human-review report
+        if: github.event_name == 'workflow_dispatch'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          FAILED_ID: ${{ inputs.failed_run_id }}
+          LATER_ID: ${{ inputs.later_run_id }}
+        run: |
+          set -euo pipefail
+          [[ "$FAILED_ID" =~ ^[0-9]{1,15}$ ]] || { echo '::error::Invalid failed run ID'; exit 1; }
+          [[ "$LATER_ID" =~ ^[0-9]{1,15}$ ]] || { echo '::error::Invalid later run ID'; exit 1; }
+          gh api "repos/${GITHUB_REPOSITORY}/actions/runs/${FAILED_ID}" > "${RUNNER_TEMP}/ci-failed-run.json"
+          gh api "repos/${GITHUB_REPOSITORY}/actions/runs/${LATER_ID}" > "${RUNNER_TEMP}/ci-later-run.json"
+          node automation/ci-resolution-evidence.cjs \
+            "${RUNNER_TEMP}/ci-failed-run.json" \
+            "${RUNNER_TEMP}/ci-later-run.json" \
+            "${GITHUB_REPOSITORY}" \
+            automation/reports
+
+      - name: Upload evidence for human review (never auto-clean Gmail)
+        if: always() && github.event_name == 'workflow_dispatch'
+        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
+        with:
+          name: ci-run-pair-evidence-${{ github.run_id }}
+          path: |
+            automation/reports/ci-resolution-*.json
+            automation/reports/ci-resolution-*.md
+          if-no-files-found: error
+          retention-days: 14
