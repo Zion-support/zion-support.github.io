@@ -127,8 +127,10 @@
     "workflows:validate:light": "echo 'workflows:validate:light: OK (stub - automation paused post-P0)'"
   },
   "dependencies": {
+    "@heroicons/react": "2.2.0",
     "@sendgrid/mail": "^8.1.6",
     "@stripe/stripe-js": "^9.7.0",
+    "clsx": "2.1.1",
     "lucide-react": "^1.17.0",
     "qrcode.react": "^4.2.0",
     "react": "^19.2.6",

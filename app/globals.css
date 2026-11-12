@@ -1,5 +1,7 @@
 /* app/globals.css — Zion Tech Group design system */
-@import "tailwindcss";
+@import "tailwindcss" source("./");
+@source "../components";
+@config "../tailwind.config.ts";
 
 @theme {
   --font-sans: ui-sans-serif, system-ui, sans-serif;

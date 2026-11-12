@@ -140,6 +140,20 @@ const INDUSTRIES = [
   { key: "healthcare-&-life-sciences", label: "Healthcare & Life Sciences", emoji: "🏥", color: "from-pink-500 to-rose-500",   count: 12,  sample: "AI Drug Discovery & Molecular Design" },
 ];
 
+function LiveAgentClock() {
+  const [time, setTime] = useState('');
+
+  // Live clock for agent banner
+  useEffect(() => {
+    const update = () => setTime(new Date().toLocaleTimeString('en-US', { timeZone: 'America/Sao_Paulo', hour12: true, hour: '2-digit', minute: '2-digit' }));
+    update();
+    const interval = setInterval(update, 1000);
+    return () => clearInterval(interval);
+  }, []);
+
+  return <>{time}</>;
+}
+
 export default function HomePage() {
   const services: Service[] = allServices as Service[];
 
@@ -155,16 +169,6 @@ export default function HomePage() {
   const [releaseNotes, setReleaseNotes] = useState<any[]>([]);
   const [search, setSearch] = useState('');
   const [catFilter, setCatFilter] = useState<string | null>(null);
-  const [time, setTime] = useState('');
-
-  // Live clock for agent banner
-  useEffect(() => {
-    const update = () => setTime(new Date().toLocaleTimeString('en-US', { timeZone: 'America/Sao_Paulo', hour12: true, hour: '2-digit', minute: '2-digit' }));
-    update();
-    const interval = setInterval(update, 1000);
-    return () => clearInterval(interval);
-  }, []);
-
   // Agent stats for banner
   const activeBots = 9;
   const totalServices = Math.max(serviceCount, 0);
@@ -697,7 +701,7 @@ export default function HomePage() {
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
                     <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
                   </span>
-                  <span className="text-xs text-emerald-400 font-medium">Live Right Now — {time}</span>
+                  <span className="text-xs text-emerald-400 font-medium">Live Right Now — <LiveAgentClock /></span>
                 </div>
                 <h2 className="text-3xl md:text-4xl font-bold mb-3">
                   <span className="bg-gradient-to-r from-violet-400 via-purple-300 to-pink-400 bg-clip-text text-transparent">
@@ -965,9 +969,8 @@ export default function HomePage() {
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
             {CATEGORIES.map(cat => {
-              const catServices = services.filter((s: any) => s.category === cat.key);
-              const n = catServices.length;
-              const catCounts: number[] = CATEGORIES.map(c => services.filter((s: any) => s.category === c.key).length);
+              const n = (byCategory[cat.key] || []).length;
+              const catCounts: number[] = CATEGORIES.map(c => (byCategory[c.key] || []).length);
               const maxN = Math.max(...(catCounts.length > 0 ? catCounts : [1]));
               const pct = maxN > 0 ? (n / maxN) * 100 : 0;
               return (
