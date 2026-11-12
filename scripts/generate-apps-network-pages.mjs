@@ -103,14 +103,16 @@ const FILLER_SLUGS = [
 function relatedFor(app, lang = LANGS[0]) {
   const out = [];
   const seen = new Set([app.slug]);
-  const hrefFor = (slug) =>
-    lang.code !== 'en' && (APPS.some((a) => a.slug === slug) || fs.existsSync(path.join(PUBLIC, lang.prefix, slug, 'index.html')))
+  // Localize generated siblings only; preserve reviewed destinations for other tools.
+  // A matching localized file can be a placeholder, not a verified translation.
+  const hrefFor = (slug, meta) =>
+    lang.code !== 'en' && APPS.some((a) => a.slug === slug)
       ? `/${lang.prefix}${slug}/`
-      : `/${slug}/`;
+      : meta.href || `/${slug}/`;
   const push = (slug, meta) => {
     if (seen.has(slug) || !AVAILABLE.has(slug)) return;
     seen.add(slug);
-    out.push({ ...meta, href: hrefFor(slug) });
+    out.push({ ...meta, href: hrefFor(slug, meta) });
   };
   for (const slug of app.related) {
     const mine = APPS.find((a) => a.slug === slug);
