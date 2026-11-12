@@ -95,7 +95,8 @@ test('PR auditor tests cannot supersede the scheduled integrity report',()=>{
  assert.ok(yaml.includes("format('pr-{0}', github.event.pull_request.number)"));
  assert.ok(yaml.includes("|| 'production'"));
  assert.match(yaml,/cancel-in-progress:\s*false/);
- assert.match(yaml,/persist-credentials:\s*false/);
+ assert.doesNotMatch(yaml,/actions\/checkout@|persist-credentials:\s*true|GITHUB_TOKEN|secrets\./);
+ assert.match(yaml,/EXPECTED_SHA: \$\{\{ github\.sha \}\}/);
  assert.match(yaml,/cron:\s*'17 13 \* \* \*'/);
 });
 
@@ -219,4 +220,107 @@ test('bounded report retains aggregate findings when evidence list is truncated'
   assert.equal(result.findings.length,100);
   assert.equal(result.truncatedFindings,5);
  });
+});
+
+// Exercise the workflow's actual Bash, not a second acquisition implementation.
+// Only the fixed public fetch is redirected to a local Git fixture: no network.
+const {spawnSync}=require('node:child_process');
+const {pathToFileURL}=require('node:url');
+const publicOrigin='https://github.com/Zion-support/zion-support.github.io.git';
+function acquisitionScript() {
+ const yaml=fs.readFileSync(path.resolve(__dirname,'../.github/workflows/ai-github-workflow-integrity-audit-daily.yml'),'utf8');
+ const block=yaml.match(/^        run: \|\n((?:          .*\n)+)/m);
+ assert.ok(block,'Public acquisition run block must exist');
+ return block[1].replace(/^          /gm,'');
+}
+function acquisitionFixture(t,mode='normal') {
+ const root=fs.mkdtempSync(path.join(os.tmpdir(),'zion-public-acquisition-'));
+ t.after(()=>fs.rmSync(root,{recursive:true,force:true}));
+ const origin=path.join(root,'origin'),bin=path.join(root,'bin'),home=path.join(root,'home');
+ for(const dir of [origin,bin,home])fs.mkdirSync(dir);
+ const realGit=process.env.PATH.split(path.delimiter).map(p=>path.join(p,'git')).find(p=>fs.existsSync(p));
+ assert.ok(realGit);
+ const cleanEnv={PATH:process.env.PATH,HOME:home,GIT_CONFIG_NOSYSTEM:'1',GIT_CONFIG_GLOBAL:'/dev/null',GIT_TERMINAL_PROMPT:'0'};
+ const git=(args,cwd=origin)=>spawnSync(realGit,args,{cwd,env:cleanEnv,encoding:'utf8'});
+ const mustGit=(args,cwd)=>{const r=git(args,cwd);assert.equal(r.status,0,r.stderr);return r.stdout.trim();};
+ mustGit(['init','-q']);
+ for(const file of ['.github/workflows/fixture.yml','automation/input.cjs','scripts/automation/input.cjs','.nvmrc','excluded.txt']) {
+  const target=path.join(origin,file);fs.mkdirSync(path.dirname(target),{recursive:true});fs.writeFileSync(target,'fixture\n');
+ }
+ mustGit(['add','.']);
+ const gitlink='d919f24b003164826ecd6d1fe8c7e5727eaf391a';
+ mustGit(['update-index','--add','--cacheinfo',`160000,${gitlink},.pageploy`]);
+ mustGit(['-c','user.name=CI fixture','-c','user.email=ci-fixture@example.invalid','commit','-qm','orphan gitlink fixture']);
+ const sha=mustGit(['rev-parse','HEAD']),trace=path.join(root,'git-calls.jsonl');
+ fs.writeFileSync(path.join(bin,'git'),`#!${process.execPath}
+'use strict';
+const fs=require('node:fs'),assert=require('node:assert/strict'),cp=require('node:child_process');
+const args=process.argv.slice(2),mode=${JSON.stringify(mode)};
+fs.appendFileSync(${JSON.stringify(trace)},JSON.stringify(args)+'\\n');
+for(const key of ['GITHUB_TOKEN','GH_TOKEN','GIT_CONFIG_COUNT','GIT_CONFIG_KEY_0','GIT_CONFIG_VALUE_0','GIT_SSH_COMMAND','BASH_ENV','HTTP_PROXY','HTTPS_PROXY','TEST_AUTH_SENTINEL'])assert.equal(process.env[key],undefined,key+' leaked');
+for(const [key,value] of Object.entries({GIT_CONFIG_NOSYSTEM:'1',GIT_CONFIG_GLOBAL:'/dev/null',GIT_TERMINAL_PROMPT:'0',GIT_ASKPASS:'/bin/false',SSH_ASKPASS:'/bin/false',HOME:${JSON.stringify(home)}}))assert.equal(process.env[key],value,key);
+if(args[0]==='remote')assert.deepEqual(args,['remote','add','origin',${JSON.stringify(publicOrigin)}]);
+if(args.includes('fetch')) {
+ assert.deepEqual(args,['-c','credential.helper=','fetch','--depth=1','--filter=blob:none','--no-tags','--no-recurse-submodules','origin',${JSON.stringify(sha)}]);
+ if(mode==='fetch-failure')process.exit(42);
+ args[args.indexOf('origin')]=${JSON.stringify(pathToFileURL(origin).href)};
+}
+if(args.includes('checkout'))assert.deepEqual(args,['-c','credential.helper=','checkout','--detach','FETCH_HEAD']);
+if((mode==='fetch-mismatch'&&args.join(' ')==='rev-parse FETCH_HEAD')||(mode==='head-mismatch'&&args.join(' ')==='rev-parse HEAD')) {console.log('0'.repeat(40));process.exit(0);}
+const result=cp.spawnSync(${JSON.stringify(realGit)},args,{env:process.env,stdio:'inherit'});
+process.exit(result.status===null?1:result.status);
+`,{mode:0o755});
+ const env={...process.env,PATH:bin+path.delimiter+process.env.PATH,RUNNER_TEMP:home,EXPECTED_SHA:sha,
+  GITHUB_TOKEN:'synthetic-do-not-inherit',GH_TOKEN:'synthetic-do-not-inherit',TEST_AUTH_SENTINEL:'synthetic',
+  GIT_CONFIG_COUNT:'1',GIT_CONFIG_KEY_0:'credential.helper',GIT_CONFIG_VALUE_0:'synthetic-helper',
+  GIT_SSH_COMMAND:'false',HTTP_PROXY:'http://example.invalid',HTTPS_PROXY:'http://example.invalid'};
+ const calls=()=>fs.existsSync(trace)?fs.readFileSync(trace,'utf8').trim().split('\n').map(JSON.parse):[];
+ const acquire=(expected=sha,script=acquisitionScript())=>{
+  const work=fs.mkdtempSync(path.join(root,'work-'));
+  const result=spawnSync('bash',['--noprofile','--norc','-c',script],{cwd:work,env:{...env,EXPECTED_SHA:expected},encoding:'utf8',timeout:15000});
+  assert.ifError(result.error);
+  return {work,result};
+ };
+ return {root,sha,gitlink,git,mustGit,calls,acquire};
+}
+test('public acquisition rejects invalid SHA before any Git call',t=>{
+ const f=acquisitionFixture(t);
+ for(const sha of ['', 'main','a'.repeat(39),'a'.repeat(41),'g'.repeat(40),'$(touch injected)','a'.repeat(40)+'\n']) {
+  const {work,result}=f.acquire(sha);
+  assert.notEqual(result.status,0,JSON.stringify(sha));
+  assert.deepEqual(fs.readdirSync(work),[]);
+ }
+ assert.deepEqual(f.calls(),[],'No Git or network operation for invalid input');
+});
+test('public acquisition preserves orphan gitlink and exact revision without inherited auth',t=>{
+ const f=acquisitionFixture(t),{work,result}=f.acquire();
+ assert.equal(result.status,0,result.stderr);
+ assert.equal(f.mustGit(['rev-parse','HEAD'],work),f.sha);
+ assert.equal(f.mustGit(['rev-parse','FETCH_HEAD'],work),f.sha);
+ assert.equal(f.mustGit(['remote','get-url','origin'],work),publicOrigin);
+ assert.equal(f.mustGit(['ls-files','--stage','.pageploy'],work),`160000 ${f.gitlink} 0\t.pageploy`);
+ assert.equal(fs.existsSync(path.join(work,'.pageploy')),false);
+ assert.equal(fs.existsSync(path.join(work,'.gitmodules')),false);
+ assert.equal(fs.existsSync(path.join(work,'excluded.txt')),false);
+ for(const file of ['.github/workflows/fixture.yml','automation/input.cjs','scripts/automation/input.cjs','.nvmrc'])assert.ok(fs.existsSync(path.join(work,file)),file);
+ assert.equal(f.git(['config','--local','--get-regexp','credential|extraheader|includeif'],work).status,1);
+ assert.ok(!f.calls().some(args=>args.includes('submodule')),'Acquisition must not clean submodule auth');
+ // Reproduce the old checkout cleanup failure against that same sparse index.
+ const old=f.git(['submodule','foreach','--recursive','sh','-c',"git config --local --name-only --get-regexp 'core\\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"],work);
+ assert.equal(old.status,128);
+ assert.match(old.stderr,/No url found for submodule path '\.pageploy' in \.gitmodules/);
+});
+test('public acquisition stops on fetch failure or either revision mismatch',t=>{
+ for(const mode of ['fetch-failure','fetch-mismatch','head-mismatch']) {
+  const f=acquisitionFixture(t,mode),{result}=f.acquire();
+  assert.notEqual(result.status,0,mode);
+  const checkedOut=f.calls().some(args=>args.includes('checkout'));
+  assert.equal(checkedOut,mode==='head-mismatch',mode);
+ }
+});
+test('public acquisition rejects an existing Git directory',t=>{
+ const f=acquisitionFixture(t);
+ const {result}=f.acquire(f.sha,'mkdir .git\n'+acquisitionScript());
+ assert.notEqual(result.status,0);
+ assert.deepEqual(f.calls(),[]);
 });
