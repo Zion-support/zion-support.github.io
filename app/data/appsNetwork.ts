@@ -4,6 +4,7 @@ export type AppsNetworkApp = {
   name: string;
   href: string;
   description: string;
+  descriptionPt?: string;
   group: 'money' | 'ops' | 'govern' | 'work' | 'ai' | 'field' | 'hub';
   related: string[];
 };

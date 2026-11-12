@@ -111,7 +111,7 @@ export default function SmartRecommendationEngine({ className = '' }: SmartRecom
           matchReasons: matchedKeywords.slice(0, 3)
         };
       })
-      .filter(Boolean)
+      .filter((service): service is Recommendation => service !== null)
       .sort((a, b) => b.score - a.score)
       .slice(0, 6);
 

@@ -13,8 +13,8 @@ export default function Service() {
   return (
     <div className="min-h-[calc(100vh-4.5rem)] pb-16">
       <BreadcrumbSchema 
-        serviceName="Advanced Cybersecurity AI Defense System"
-        serviceDescription="Defend against sophisticated cyber threats with our Advanced Cybersecurity AI Defense System. This cutting-edge platform leverages artificial intelligence and machine learning to provide proactive threat detection, automated incident response, and adaptive security posture for enterprise environments."
+        title="Advanced Cybersecurity AI Defense System"
+        path="/services/advanced-cybersecurity-ai-defense-system-9a2f4c6b/"
       />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <header className="mb-12">

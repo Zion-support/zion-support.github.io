@@ -301,7 +301,7 @@ function ToolCard({
             {tool.desc}
           </p>
 
-          {tool.note && (
+          {'note' in tool && tool.note && (
             <p className="text-amber-400/80 text-xs mt-2 flex items-center gap-1">
               <span className="inline-block h-1.5 w-1.5 rounded-full bg-amber-400" />
               {tool.note}

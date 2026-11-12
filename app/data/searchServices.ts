@@ -22,5 +22,6 @@ const searchServices = allServices.map((s: any) => ({
   ].filter(Boolean),
 }));
 
+export type SearchService = (typeof searchServices)[number];
 export type { Service };
 export { allServices, searchServices };

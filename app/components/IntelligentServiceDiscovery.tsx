@@ -70,7 +70,7 @@ export default function IntelligentServiceDiscovery() {
 
   // Filter services based on current filters
   const filteredServices = useMemo(() => {
-    return services.filter((service: any) => {
+    return services.filter((service: Service) => {
       // Category filter
       if (filters.categories.length > 0 && !filters.categories.includes(service.category)) {
         return false;
@@ -115,7 +115,7 @@ export default function IntelligentServiceDiscovery() {
     
     // Score services based on relevance
     return filteredServices
-      .map((service: any) => {
+      .map((service: Service) => {
         let score = 0;
         
         // Category match bonus
@@ -297,7 +297,7 @@ export default function IntelligentServiceDiscovery() {
 
         {/* Service Cards Grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-          {recommendations.map((service: any) => (
+          {recommendations.map((service: Service) => (
             <div
               key={service.id}
               className="glass-card group hover:border-cyan-500/40 transition-all flex flex-col"

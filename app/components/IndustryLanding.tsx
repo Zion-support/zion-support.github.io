@@ -28,8 +28,8 @@ const INDUSTRY_SERVICES: Record<string, {
   services: string[];
   painPoints: string[];
   solutions: string[];
-  seoKeywords: string[];
-  seoBenefits: string[];
+  seoKeywords?: string[];
+  seoBenefits?: string[];
 }> = {
   'healthcare-&-life-sciences': {
     key: 'healthcare-&-life-sciences',

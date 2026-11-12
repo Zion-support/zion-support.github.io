@@ -13,8 +13,8 @@ export default function Service() {
   return (
     <div className="min-h-[calc(100vh-4.5rem)] pb-16">
       <BreadcrumbSchema 
-        serviceName="AI-Powered Digital Twin Platform"
-        serviceDescription="Create intelligent virtual replicas of physical assets, processes, and systems with our AI-Powered Digital Twin Platform. This advanced platform combines IoT, AI, and simulation technologies to enable predictive maintenance, performance optimization, and what-if analysis for complex enterprise environments."
+        title="AI-Powered Digital Twin Platform"
+        path="/services/ai-powered-digital-twin-platform-8c9b0d1e/"
       />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <header className="mb-12">

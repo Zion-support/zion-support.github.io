@@ -13,8 +13,8 @@ export default function Service() {
   return (
     <div className="min-h-[calc(100vh-4.5rem)] pb-16">
       <BreadcrumbSchema 
-        serviceName="Quantum Computing Optimization Service"
-        serviceDescription="Unlock unprecedented computational power with our Quantum Computing Optimization Service. This enterprise-grade platform combines quantum algorithms with classical computing to solve complex optimization problems intractable for traditional systems."
+        title="Quantum Computing Optimization Service"
+        path="/services/quantum-computing-optimization-service-7f8a2b1c/"
       />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <header className="mb-12">
