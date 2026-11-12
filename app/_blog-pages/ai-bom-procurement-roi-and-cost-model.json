@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "AI BOM Procurement: ROI and cost model | Zion Tech Group",
+    "description": "AI BOM Procurement: ROI and cost model",
+    "keywords": [
+      "ai",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "AI BOM Procurement: ROI and cost model",
+      "description": "AI BOM Procurement: ROI and cost model",
+      "url": "https://ziontechgroup.com/blog/ai-bom-procurement-roi-and-cost-model/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/ai-bom-procurement-roi-and-cost-model/"
+    }
+  },
+  "values": [
+    "AI BOM Procurement: ROI and cost model",
+    "AI BOM Procurement: ROI and cost model",
+    "AI BOM Procurement: ROI and cost model",
+    "Next actions",
+    "Review your highest-friction workflow, contact Zion Tech Group for a scoped pilot, and start with one measurable outcome. Set a 30-day review date, define success metrics, assign an owner, and document rollback criteria before expanding. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan. The organizations that move fastest in 2026 are the ones that combine clear intent with disciplined execution.",
+    "Next actions",
+    " Review your highest-friction workflow, contact Zion Tech Group for a scoped pilot, and start with one measurable outcome. Set a 30-day review date, define success metrics, assign an owner, and document rollback criteria before expanding. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan. The organizations that move fastest in 2026 are the ones that combine clear intent with disciplined execution.",
+    "/blog/cloud-migration-services-architecture-overview",
+    "Cloud Migration Services Architecture Overview",
+    "/blog/autonomous-code-deployment-2026-6798",
+    "Autonomous Code Deployment 2026 6798",
+    "/blog/container-security-lifecycle-2026-6675",
+    "Container Security Lifecycle 2026 6675",
+    "/blog/ai-bdr-sdr-2026-7352",
+    "Ai Bdr Sdr 2026 7352"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "AI BOM Procurement: ROI and cost model",
+    "description": "AI BOM Procurement: ROI and cost model",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T04:51:51Z",
+    "dateModified": "2026-08-07T04:51:51Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/ai-bom-procurement-roi-and-cost-model/"
+  }
+}

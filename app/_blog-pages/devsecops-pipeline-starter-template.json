@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "DevSecOps Pipeline: starter template | Zion Tech Group",
+    "description": "DevSecOps Pipeline: starter template",
+    "keywords": [
+      "it",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "DevSecOps Pipeline: starter template",
+      "description": "DevSecOps Pipeline: starter template",
+      "url": "https://ziontechgroup.com/blog/devsecops-pipeline-starter-template/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/devsecops-pipeline-starter-template/"
+    }
+  },
+  "values": [
+    "DevSecOps Pipeline: starter template",
+    "DevSecOps Pipeline: starter template",
+    "DevSecOps Pipeline: starter template",
+    "Outcomes to measure",
+    "Leading indicators for devsecops pipeline: starter template: workflow completion rate, escalation rate, time-to-resolution, and user satisfaction. Lagging indicators: revenue trend, cost trend, customer retention, and operational efficiency. Track both leading and lagging indicators so you can explain progress to leadership before financial results appear. Use a rolling 90-day window and re-baseline monthly; this keeps the program accountable without demanding perfection on day one. Publish metrics in a shared dashboard so the whole team sees progress, not just the program sponsor.",
+    "Outcomes to measure",
+    " Leading indicators for devsecops pipeline: starter template: workflow completion rate, escalation rate, time-to-resolution, and user satisfaction. Lagging indicators: revenue trend, cost trend, customer retention, and operational efficiency. Track both leading and lagging indicators so you can explain progress to leadership before financial results appear. Use a rolling 90-day window and re-baseline monthly; this keeps the program accountable without demanding perfection on day one. Publish metrics in a shared dashboard so the whole team sees progress, not just the program sponsor.",
+    "/blog/micro-saas-ai-customer-onboarding-2026-6991",
+    "Micro Saas Ai Customer Onboarding 2026 6991",
+    "/blog/data-warehouse-modernization-2026-7091",
+    "Data Warehouse Modernization 2026 7091",
+    "/blog/ai-performance-monitoring-starter-template",
+    "Ai Performance Monitoring Starter Template",
+    "/blog/microsaas-expense-tracker-security-and-governance",
+    "Microsaas Expense Tracker Security And Governance"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "DevSecOps Pipeline: starter template",
+    "description": "DevSecOps Pipeline: starter template",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T07:56:50Z",
+    "dateModified": "2026-08-07T07:56:50Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/devsecops-pipeline-starter-template/"
+  }
+}

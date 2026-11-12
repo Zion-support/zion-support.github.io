@@ -1,11 +1,13 @@
 /** @type {import('next').NextConfig} */
 import path from 'node:path';
+import { getHeapStatistics } from 'node:v8';
 
 const nextConfig = {
   output: 'export',
   experimental: {
     // Reduce webpack memory footprint (fixes OOM on GH-hosted runners, 125k+ file tree)
     webpackMemoryOptimizations: true,
+    webpackBuildWorker: true,
   },
   outputFileTracingRoot: path.join(process.cwd(), 'app'),
   basePath: '',
@@ -21,7 +23,17 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   // Static export via webpack
-  webpack: (config, { isServer }) => {
+  webpack: (config, { isServer, nextRuntime, dev }) => {
+    if (!dev) {
+      console.log('[build-memory]', JSON.stringify({
+        compiler: nextRuntime || (isServer ? 'server' : 'client'),
+        webpackBuildWorker: process.env.NEXT_PRIVATE_BUILD_WORKER === '1',
+        heapLimitBytes: getHeapStatistics().heap_size_limit,
+        rssBytes: process.memoryUsage().rss,
+        pid: process.pid,
+        ppid: process.ppid,
+      }));
+    }
     const appDir = path.join(process.cwd(), 'app');
     config.resolve.alias = {
       ...(config.resolve.alias || {}),

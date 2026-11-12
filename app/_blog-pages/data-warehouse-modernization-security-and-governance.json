@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "Data Warehouse Modernization: security and governance | Zion Tech Group",
+    "description": "Data Warehouse Modernization: security and governance",
+    "keywords": [
+      "automation",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "Data Warehouse Modernization: security and governance",
+      "description": "Data Warehouse Modernization: security and governance",
+      "url": "https://ziontechgroup.com/blog/data-warehouse-modernization-security-and-governance/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/data-warehouse-modernization-security-and-governance/"
+    }
+  },
+  "values": [
+    "Data Warehouse Modernization: security and governance",
+    "Data Warehouse Modernization: security and governance",
+    "Data Warehouse Modernization: security and governance",
+    "Outcomes to measure",
+    "Leading indicators for data warehouse modernization: security and governance: workflow completion rate, escalation rate, time-to-resolution, and user satisfaction. Lagging indicators: revenue trend, cost trend, customer retention, and operational efficiency. Track both leading and lagging indicators so you can explain progress to leadership before financial results appear. Use a rolling 90-day window and re-baseline monthly; this keeps the program accountable without demanding perfection on day one. Publish metrics in a shared dashboard so the whole team sees progress, not just the program sponsor.",
+    "Outcomes to measure",
+    " Leading indicators for data warehouse modernization: security and governance: workflow completion rate, escalation rate, time-to-resolution, and user satisfaction. Lagging indicators: revenue trend, cost trend, customer retention, and operational efficiency. Track both leading and lagging indicators so you can explain progress to leadership before financial results appear. Use a rolling 90-day window and re-baseline monthly; this keeps the program accountable without demanding perfection on day one. Publish metrics in a shared dashboard so the whole team sees progress, not just the program sponsor.",
+    "/blog/enterprise-backup-dr-2026-8201",
+    "Enterprise Backup Dr 2026 8201",
+    "/blog/network-infrastructure-2026-7123",
+    "Network Infrastructure 2026 7123",
+    "/blog/api-integration-2026-7358",
+    "Api Integration 2026 7358",
+    "/blog/devops-gen-ai-cicd-2026-7783",
+    "Devops Gen Ai Cicd 2026 7783"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Data Warehouse Modernization: security and governance",
+    "description": "Data Warehouse Modernization: security and governance",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-10T18:48:22Z",
+    "dateModified": "2026-08-10T18:48:22Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/data-warehouse-modernization-security-and-governance/"
+  }
+}

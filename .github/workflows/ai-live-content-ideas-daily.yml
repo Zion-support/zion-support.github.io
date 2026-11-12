@@ -105,7 +105,7 @@ jobs:
         run: |
           set -euo pipefail
           npm run rsc:guard
-          npm run build
+          NODE_OPTIONS=--max-old-space-size=6144 npm run build
 
       - name: Commit, push, and deploy
         env:

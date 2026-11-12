@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "IT Consulting: implementation playbook | Zion Tech Group",
+    "description": "IT Consulting: implementation playbook",
+    "keywords": [
+      "security",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "IT Consulting: implementation playbook",
+      "description": "IT Consulting: implementation playbook",
+      "url": "https://ziontechgroup.com/blog/it-consulting-implementation-playbook/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/it-consulting-implementation-playbook/"
+    }
+  },
+  "values": [
+    "IT Consulting: implementation playbook",
+    "IT Consulting: implementation playbook",
+    "IT Consulting: implementation playbook",
+    "Recommended next step",
+    "Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "Recommended next step",
+    " Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "/blog/ai-ad-copy-generator-operations-handbook",
+    "Ai Ad Copy Generator Operations Handbook",
+    "/blog/api-orchestration-layer-2026-6727",
+    "Api Orchestration Layer 2026 6727",
+    "/blog/ai-agent-safety-evaluation-2026",
+    "Ai Agent Safety Evaluation 2026",
+    "/blog/autonomous-qa-engineering-2026-7282",
+    "Autonomous Qa Engineering 2026 7282"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "IT Consulting: implementation playbook",
+    "description": "IT Consulting: implementation playbook",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T07:57:01Z",
+    "dateModified": "2026-08-07T07:57:01Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/it-consulting-implementation-playbook/"
+  }
+}

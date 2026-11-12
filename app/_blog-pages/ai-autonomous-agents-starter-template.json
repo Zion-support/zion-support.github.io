@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "AI Autonomous Agents: starter template | Zion Tech Group",
+    "description": "AI Autonomous Agents: starter template",
+    "keywords": [
+      "ai",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "AI Autonomous Agents: starter template",
+      "description": "AI Autonomous Agents: starter template",
+      "url": "https://ziontechgroup.com/blog/ai-autonomous-agents-starter-template/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/ai-autonomous-agents-starter-template/"
+    }
+  },
+  "values": [
+    "AI Autonomous Agents: starter template",
+    "AI Autonomous Agents: starter template",
+    "AI Autonomous Agents: starter template",
+    "Conversion path",
+    "If this guide matches your ai autonomous agents: starter template initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "Conversion path",
+    " If this guide matches your ai autonomous agents: starter template initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "/blog/ai-customer-support-pro-2026",
+    "Ai Customer Support Pro 2026",
+    "/blog/ai-agentic-workflows-2026-7138",
+    "Ai Agentic Workflows 2026 7138",
+    "/blog/ai-data-lakehouse-pipelines-checklist-for-it-leaders",
+    "Ai Data Lakehouse Pipelines Checklist For It Leaders",
+    "/blog/micro-saas-ai-hr-recruitment-2026-6852",
+    "Micro Saas Ai Hr Recruitment 2026 6852"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "AI Autonomous Agents: starter template",
+    "description": "AI Autonomous Agents: starter template",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T04:52:17Z",
+    "dateModified": "2026-08-07T04:52:17Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/ai-autonomous-agents-starter-template/"
+  }
+}

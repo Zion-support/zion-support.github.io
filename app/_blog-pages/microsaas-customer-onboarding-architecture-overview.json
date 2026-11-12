@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "MicroSaaS Customer Onboarding: architecture overview | Zion Tech Group",
+    "description": "MicroSaaS Customer Onboarding: architecture overview",
+    "keywords": [
+      "it",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "MicroSaaS Customer Onboarding: architecture overview",
+      "description": "MicroSaaS Customer Onboarding: architecture overview",
+      "url": "https://ziontechgroup.com/blog/microsaas-customer-onboarding-architecture-overview/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/microsaas-customer-onboarding-architecture-overview/"
+    }
+  },
+  "values": [
+    "MicroSaaS Customer Onboarding: architecture overview",
+    "MicroSaaS Customer Onboarding: architecture overview",
+    "MicroSaaS Customer Onboarding: architecture overview",
+    "Conversion path",
+    "If this guide matches your microsaas customer onboarding: architecture overview initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "Conversion path",
+    " If this guide matches your microsaas customer onboarding: architecture overview initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "/blog/cloud-native-app-development-architecture-overview",
+    "Cloud Native App Development Architecture Overview",
+    "/blog/ai-api-gateway-architecture-overview",
+    "Ai Api Gateway Architecture Overview",
+    "/blog/microsaas-customer-onboarding-vendor-evaluation",
+    "Microsaas Customer Onboarding Vendor Evaluation",
+    "/blog/brand-voice-guardian-security-and-governance",
+    "Brand Voice Guardian Security And Governance"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "MicroSaaS Customer Onboarding: architecture overview",
+    "description": "MicroSaaS Customer Onboarding: architecture overview",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T08:12:12Z",
+    "dateModified": "2026-08-07T08:12:12Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/microsaas-customer-onboarding-architecture-overview/"
+  }
+}

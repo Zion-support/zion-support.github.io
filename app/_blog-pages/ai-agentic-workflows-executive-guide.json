@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "AI Agentic Workflows: executive guide | Zion Tech Group",
+    "description": "AI Agentic Workflows: executive guide",
+    "keywords": [
+      "automation",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "AI Agentic Workflows: executive guide",
+      "description": "AI Agentic Workflows: executive guide",
+      "url": "https://ziontechgroup.com/blog/ai-agentic-workflows-executive-guide/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/ai-agentic-workflows-executive-guide/"
+    }
+  },
+  "values": [
+    "AI Agentic Workflows: executive guide",
+    "AI Agentic Workflows: executive guide",
+    "AI Agentic Workflows: executive guide",
+    "Next actions",
+    "Review your highest-friction workflow, contact Zion Tech Group for a scoped pilot, and start with one measurable outcome. Set a 30-day review date, define success metrics, assign an owner, and document rollback criteria before expanding. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan. The organizations that move fastest in 2026 are the ones that combine clear intent with disciplined execution.",
+    "Next actions",
+    " Review your highest-friction workflow, contact Zion Tech Group for a scoped pilot, and start with one measurable outcome. Set a 30-day review date, define success metrics, assign an owner, and document rollback criteria before expanding. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan. The organizations that move fastest in 2026 are the ones that combine clear intent with disciplined execution.",
+    "/blog/api-integration-2026-7151",
+    "Api Integration 2026 7151",
+    "/blog/ai-development-acceleration-2026-6977",
+    "Ai Development Acceleration 2026 6977",
+    "/blog/endpoint-management-2026",
+    "Endpoint Management 2026",
+    "/blog/ai-3d-asset-generator-2026-6580",
+    "Ai 3D Asset Generator 2026 6580"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "AI Agentic Workflows: executive guide",
+    "description": "AI Agentic Workflows: executive guide",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T04:51:03Z",
+    "dateModified": "2026-08-07T04:51:03Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/ai-agentic-workflows-executive-guide/"
+  }
+}

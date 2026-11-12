@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "5G Solutions: architecture overview | Zion Tech Group",
+    "description": "5G Solutions: architecture overview",
+    "keywords": [
+      "it",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "5G Solutions: architecture overview",
+      "description": "5G Solutions: architecture overview",
+      "url": "https://ziontechgroup.com/blog/5g-solutions-architecture-overview/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/5g-solutions-architecture-overview/"
+    }
+  },
+  "values": [
+    "5G Solutions: architecture overview",
+    "5G Solutions: architecture overview",
+    "5G Solutions: architecture overview",
+    "Recommended next step",
+    "Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "Recommended next step",
+    " Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "/blog/api-management-gateway-operations-handbook",
+    "Api Management Gateway Operations Handbook",
+    "/blog/cloud-native-app-development-2026-7019",
+    "Cloud Native App Development 2026 7019",
+    "/blog/network-infrastructure-2026-7192",
+    "Network Infrastructure 2026 7192",
+    "/blog/ai-data-lakehouse-pipelines-automation-roadmap",
+    "Ai Data Lakehouse Pipelines Automation Roadmap"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "5G Solutions: architecture overview",
+    "description": "5G Solutions: architecture overview",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T07:56:58Z",
+    "dateModified": "2026-08-07T07:56:58Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/5g-solutions-architecture-overview/"
+  }
+}

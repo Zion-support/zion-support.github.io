@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "API Security Testing: security and governance | Zion Tech Group",
+    "description": "API Security Testing: security and governance",
+    "keywords": [
+      "data",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "API Security Testing: security and governance",
+      "description": "API Security Testing: security and governance",
+      "url": "https://ziontechgroup.com/blog/api-security-testing-security-and-governance/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/api-security-testing-security-and-governance/"
+    }
+  },
+  "values": [
+    "API Security Testing: security and governance",
+    "API Security Testing: security and governance",
+    "API Security Testing: security and governance",
+    "Action checklist",
+    "For api security testing: security and governance: pick one workflow, assign ownership, define success metrics, instrument execution, and set a 30-day review date. Write the checklist down and share it with stakeholders so expectations are explicit. Before launch, verify access controls, monitoring, rollback criteria, and on-call coverage. After launch, review metrics weekly and escalate deviations immediately; small drifts become large incidents when ignored. Use the checklist as a living document and update it as the program learns from real operation.",
+    "Action checklist",
+    " For api security testing: security and governance: pick one workflow, assign ownership, define success metrics, instrument execution, and set a 30-day review date. Write the checklist down and share it with stakeholders so expectations are explicit. Before launch, verify access controls, monitoring, rollback criteria, and on-call coverage. After launch, review metrics weekly and escalate deviations immediately; small drifts become large incidents when ignored. Use the checklist as a living document and update it as the program learns from real operation.",
+    "/blog/chaos-engineering-common-mistakes",
+    "Chaos Engineering Common Mistakes",
+    "/blog/ai-agent-safety-evaluation-architecture-overview",
+    "Ai Agent Safety Evaluation Architecture Overview",
+    "/blog/ai-observability-common-mistakes",
+    "Ai Observability Common Mistakes",
+    "/blog/it-consulting-2026-6708",
+    "It Consulting 2026 6708"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "API Security Testing: security and governance",
+    "description": "API Security Testing: security and governance",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T08:27:30Z",
+    "dateModified": "2026-08-07T08:27:30Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/api-security-testing-security-and-governance/"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "Cloud Migration Services: common mistakes | Zion Tech Group",
+    "description": "Cloud Migration Services: common mistakes",
+    "keywords": [
+      "ai",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "Cloud Migration Services: common mistakes",
+      "description": "Cloud Migration Services: common mistakes",
+      "url": "https://ziontechgroup.com/blog/cloud-migration-services-common-mistakes/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/cloud-migration-services-common-mistakes/"
+    }
+  },
+  "values": [
+    "Cloud Migration Services: common mistakes",
+    "Cloud Migration Services: common mistakes",
+    "Cloud Migration Services: common mistakes",
+    "Action checklist",
+    "For cloud migration services: common mistakes: pick one workflow, assign ownership, define success metrics, instrument execution, and set a 30-day review date. Write the checklist down and share it with stakeholders so expectations are explicit. Before launch, verify access controls, monitoring, rollback criteria, and on-call coverage. After launch, review metrics weekly and escalate deviations immediately; small drifts become large incidents when ignored. Use the checklist as a living document and update it as the program learns from real operation.",
+    "Action checklist",
+    " For cloud migration services: common mistakes: pick one workflow, assign ownership, define success metrics, instrument execution, and set a 30-day review date. Write the checklist down and share it with stakeholders so expectations are explicit. Before launch, verify access controls, monitoring, rollback criteria, and on-call coverage. After launch, review metrics weekly and escalate deviations immediately; small drifts become large incidents when ignored. Use the checklist as a living document and update it as the program learns from real operation.",
+    "/blog/api-management-gateway-2026-7359",
+    "Api Management Gateway 2026 7359",
+    "/blog/managed-it-services-small-business-2026-6835",
+    "Managed It Services Small Business 2026 6835",
+    "/blog/ai-agentic-workflows-architecture-overview",
+    "Ai Agentic Workflows Architecture Overview",
+    "/blog/event-driven-architecture-2026-7030",
+    "Event Driven Architecture 2026 7030"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Cloud Migration Services: common mistakes",
+    "description": "Cloud Migration Services: common mistakes",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T04:52:03Z",
+    "dateModified": "2026-08-07T04:52:03Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/cloud-migration-services-common-mistakes/"
+  }
+}

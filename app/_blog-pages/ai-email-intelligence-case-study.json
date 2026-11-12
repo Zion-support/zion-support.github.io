@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "AI Email Intelligence: case study | Zion Tech Group",
+    "description": "AI Email Intelligence: case study",
+    "keywords": [
+      "automation",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "AI Email Intelligence: case study",
+      "description": "AI Email Intelligence: case study",
+      "url": "https://ziontechgroup.com/blog/ai-email-intelligence-case-study/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/ai-email-intelligence-case-study/"
+    }
+  },
+  "values": [
+    "AI Email Intelligence: case study",
+    "AI Email Intelligence: case study",
+    "AI Email Intelligence: case study",
+    "Action checklist",
+    "For ai email intelligence: case study: pick one workflow, assign ownership, define success metrics, instrument execution, and set a 30-day review date. Write the checklist down and share it with stakeholders so expectations are explicit. Before launch, verify access controls, monitoring, rollback criteria, and on-call coverage. After launch, review metrics weekly and escalate deviations immediately; small drifts become large incidents when ignored. Use the checklist as a living document and update it as the program learns from real operation.",
+    "Action checklist",
+    " For ai email intelligence: case study: pick one workflow, assign ownership, define success metrics, instrument execution, and set a 30-day review date. Write the checklist down and share it with stakeholders so expectations are explicit. Before launch, verify access controls, monitoring, rollback criteria, and on-call coverage. After launch, review metrics weekly and escalate deviations immediately; small drifts become large incidents when ignored. Use the checklist as a living document and update it as the program learns from real operation.",
+    "/blog/cloud-migration-services-2026-6779",
+    "Cloud Migration Services 2026 6779",
+    "/blog/ai-customer-support-pro-2026-6978",
+    "Ai Customer Support Pro 2026 6978",
+    "/blog/edge-computing-deployment-2026-6612",
+    "Edge Computing Deployment 2026 6612",
+    "/blog/edge-computing-deployment-2026-6888",
+    "Edge Computing Deployment 2026 6888"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "AI Email Intelligence: case study",
+    "description": "AI Email Intelligence: case study",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T04:51:55Z",
+    "dateModified": "2026-08-07T04:51:55Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/ai-email-intelligence-case-study/"
+  }
+}

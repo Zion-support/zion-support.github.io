@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "AI Email Intelligence: architecture overview | Zion Tech Group",
+    "description": "AI Email Intelligence: architecture overview",
+    "keywords": [
+      "automation",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "AI Email Intelligence: architecture overview",
+      "description": "AI Email Intelligence: architecture overview",
+      "url": "https://ziontechgroup.com/blog/ai-email-intelligence-architecture-overview/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/ai-email-intelligence-architecture-overview/"
+    }
+  },
+  "values": [
+    "AI Email Intelligence: architecture overview",
+    "AI Email Intelligence: architecture overview",
+    "AI Email Intelligence: architecture overview",
+    "Action checklist",
+    "For ai email intelligence: architecture overview: pick one workflow, assign ownership, define success metrics, instrument execution, and set a 30-day review date. Write the checklist down and share it with stakeholders so expectations are explicit. Before launch, verify access controls, monitoring, rollback criteria, and on-call coverage. After launch, review metrics weekly and escalate deviations immediately; small drifts become large incidents when ignored. Use the checklist as a living document and update it as the program learns from real operation.",
+    "Action checklist",
+    " For ai email intelligence: architecture overview: pick one workflow, assign ownership, define success metrics, instrument execution, and set a 30-day review date. Write the checklist down and share it with stakeholders so expectations are explicit. Before launch, verify access controls, monitoring, rollback criteria, and on-call coverage. After launch, review metrics weekly and escalate deviations immediately; small drifts become large incidents when ignored. Use the checklist as a living document and update it as the program learns from real operation.",
+    "/blog/ai-bdr-sdr-2026-7283",
+    "Ai Bdr Sdr 2026 7283",
+    "/blog/data-analytics-platform-modern-enterprise-2026-7181",
+    "Data Analytics Platform Modern Enterprise 2026 7181",
+    "/blog/ai-msp-security-compliance-2026-7049",
+    "Ai Msp Security Compliance 2026 7049",
+    "/blog/cloud-cost-ai-optimizer-2026-7017",
+    "Cloud Cost Ai Optimizer 2026 7017"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "AI Email Intelligence: architecture overview",
+    "description": "AI Email Intelligence: architecture overview",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T04:51:25Z",
+    "dateModified": "2026-08-07T04:51:25Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/ai-email-intelligence-architecture-overview/"
+  }
+}

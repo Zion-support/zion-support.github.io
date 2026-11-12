@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "MicroSaaS Social Media Manager: architecture overview | Zion Tech Group",
+    "description": "MicroSaaS Social Media Manager: architecture overview",
+    "keywords": [
+      "automation",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "MicroSaaS Social Media Manager: architecture overview",
+      "description": "MicroSaaS Social Media Manager: architecture overview",
+      "url": "https://ziontechgroup.com/blog/microsaas-social-media-manager-architecture-overview/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/microsaas-social-media-manager-architecture-overview/"
+    }
+  },
+  "values": [
+    "MicroSaaS Social Media Manager: architecture overview",
+    "MicroSaaS Social Media Manager: architecture overview",
+    "MicroSaaS Social Media Manager: architecture overview",
+    "Outcomes to measure",
+    "Leading indicators for microsaas social media manager: architecture overview: workflow completion rate, escalation rate, time-to-resolution, and user satisfaction. Lagging indicators: revenue trend, cost trend, customer retention, and operational efficiency. Track both leading and lagging indicators so you can explain progress to leadership before financial results appear. Use a rolling 90-day window and re-baseline monthly; this keeps the program accountable without demanding perfection on day one. Publish metrics in a shared dashboard so the whole team sees progress, not just the program sponsor.",
+    "Outcomes to measure",
+    " Leading indicators for microsaas social media manager: architecture overview: workflow completion rate, escalation rate, time-to-resolution, and user satisfaction. Lagging indicators: revenue trend, cost trend, customer retention, and operational efficiency. Track both leading and lagging indicators so you can explain progress to leadership before financial results appear. Use a rolling 90-day window and re-baseline monthly; this keeps the program accountable without demanding perfection on day one. Publish metrics in a shared dashboard so the whole team sees progress, not just the program sponsor.",
+    "/blog/api-gateway-management-2026-6598",
+    "Api Gateway Management 2026 6598",
+    "/blog/devops-cicd-policy-and-compliance",
+    "Devops Cicd Policy And Compliance",
+    "/blog/ai-agentic-workflows-2026-7345",
+    "Ai Agentic Workflows 2026 7345",
+    "/blog/api-integration-2026-6530",
+    "Api Integration 2026 6530"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "MicroSaaS Social Media Manager: architecture overview",
+    "description": "MicroSaaS Social Media Manager: architecture overview",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T04:51:55Z",
+    "dateModified": "2026-08-07T04:51:55Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/microsaas-social-media-manager-architecture-overview/"
+  }
+}

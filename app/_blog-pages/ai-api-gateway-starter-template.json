@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "AI API Gateway: starter template | Zion Tech Group",
+    "description": "AI API Gateway: starter template",
+    "keywords": [
+      "security",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "AI API Gateway: starter template",
+      "description": "AI API Gateway: starter template",
+      "url": "https://ziontechgroup.com/blog/ai-api-gateway-starter-template/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/ai-api-gateway-starter-template/"
+    }
+  },
+  "values": [
+    "AI API Gateway: starter template",
+    "AI API Gateway: starter template",
+    "AI API Gateway: starter template",
+    "Recommended next step",
+    "Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "Recommended next step",
+    " Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "/blog/cloud-cost-ai-optimizer-2026-7293",
+    "Cloud Cost Ai Optimizer 2026 7293",
+    "/blog/ai-accessibility-optimizer-executive-guide",
+    "Ai Accessibility Optimizer Executive Guide",
+    "/blog/enterprise-ai-intelligence-hub-evaluation-framework",
+    "Enterprise Ai Intelligence Hub Evaluation Framework",
+    "/blog/devops-gen-ai-cicd-2026-7300",
+    "Devops Gen Ai Cicd 2026 7300"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "AI API Gateway: starter template",
+    "description": "AI API Gateway: starter template",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T04:52:30Z",
+    "dateModified": "2026-08-07T04:52:30Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/ai-api-gateway-starter-template/"
+  }
+}

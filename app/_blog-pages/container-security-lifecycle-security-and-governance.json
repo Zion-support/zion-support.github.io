@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "Container Security Lifecycle: security and governance | Zion Tech Group",
+    "description": "Container Security Lifecycle: security and governance",
+    "keywords": [
+      "ai",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "Container Security Lifecycle: security and governance",
+      "description": "Container Security Lifecycle: security and governance",
+      "url": "https://ziontechgroup.com/blog/container-security-lifecycle-security-and-governance/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/container-security-lifecycle-security-and-governance/"
+    }
+  },
+  "values": [
+    "Container Security Lifecycle: security and governance",
+    "Container Security Lifecycle: security and governance",
+    "Container Security Lifecycle: security and governance",
+    "Conversion path",
+    "If this guide matches your container security lifecycle: security and governance initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "Conversion path",
+    " If this guide matches your container security lifecycle: security and governance initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "/blog/etl-pipeline-optimization-roi-and-cost-model",
+    "Etl Pipeline Optimization Roi And Cost Model",
+    "/blog/ai-3d-asset-generator-2026-6580",
+    "Ai 3D Asset Generator 2026 6580",
+    "/blog/enterprise-backup-dr-2026-7097",
+    "Enterprise Backup Dr 2026 7097",
+    "/blog/ai-observability-2026-6772",
+    "Ai Observability 2026 6772"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Container Security Lifecycle: security and governance",
+    "description": "Container Security Lifecycle: security and governance",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T07:56:47Z",
+    "dateModified": "2026-08-07T07:56:47Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/container-security-lifecycle-security-and-governance/"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "Automated AI Reporting: case study | Zion Tech Group",
+    "description": "Automated AI Reporting: case study",
+    "keywords": [
+      "data",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "Automated AI Reporting: case study",
+      "description": "Automated AI Reporting: case study",
+      "url": "https://ziontechgroup.com/blog/automated-ai-reporting-case-study/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/automated-ai-reporting-case-study/"
+    }
+  },
+  "values": [
+    "Automated AI Reporting: case study",
+    "Automated AI Reporting: case study",
+    "Automated AI Reporting: case study",
+    "Recommended next step",
+    "Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "Recommended next step",
+    " Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "/blog/ai-performance-monitoring-vendor-evaluation",
+    "Ai Performance Monitoring Vendor Evaluation",
+    "/blog/autonomous-code-deployment-2026-7212",
+    "Autonomous Code Deployment 2026 7212",
+    "/blog/cloud-native-app-development-2026-6674",
+    "Cloud Native App Development 2026 6674",
+    "/blog/data-warehouse-modernization-2026-6815",
+    "Data Warehouse Modernization 2026 6815"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Automated AI Reporting: case study",
+    "description": "Automated AI Reporting: case study",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T08:42:53Z",
+    "dateModified": "2026-08-07T08:42:53Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/automated-ai-reporting-case-study/"
+  }
+}

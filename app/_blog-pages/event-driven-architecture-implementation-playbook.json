@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "Event Driven Architecture: implementation playbook | Zion Tech Group",
+    "description": "Event Driven Architecture: implementation playbook",
+    "keywords": [
+      "security",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "Event Driven Architecture: implementation playbook",
+      "description": "Event Driven Architecture: implementation playbook",
+      "url": "https://ziontechgroup.com/blog/event-driven-architecture-implementation-playbook/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/event-driven-architecture-implementation-playbook/"
+    }
+  },
+  "values": [
+    "Event Driven Architecture: implementation playbook",
+    "Event Driven Architecture: implementation playbook",
+    "Event Driven Architecture: implementation playbook",
+    "Outcomes to measure",
+    "Leading indicators for event driven architecture: implementation playbook: workflow completion rate, escalation rate, time-to-resolution, and user satisfaction. Lagging indicators: revenue trend, cost trend, customer retention, and operational efficiency. Track both leading and lagging indicators so you can explain progress to leadership before financial results appear. Use a rolling 90-day window and re-baseline monthly; this keeps the program accountable without demanding perfection on day one. Publish metrics in a shared dashboard so the whole team sees progress, not just the program sponsor.",
+    "Outcomes to measure",
+    " Leading indicators for event driven architecture: implementation playbook: workflow completion rate, escalation rate, time-to-resolution, and user satisfaction. Lagging indicators: revenue trend, cost trend, customer retention, and operational efficiency. Track both leading and lagging indicators so you can explain progress to leadership before financial results appear. Use a rolling 90-day window and re-baseline monthly; this keeps the program accountable without demanding perfection on day one. Publish metrics in a shared dashboard so the whole team sees progress, not just the program sponsor.",
+    "/blog/micro-saas-ai-social-media-manager-2026-6992",
+    "Micro Saas Ai Social Media Manager 2026 6992",
+    "/blog/chaos-engineering-2026-6533",
+    "Chaos Engineering 2026 6533",
+    "/blog/automation-orchestration-starter-template",
+    "Automation Orchestration Starter Template",
+    "/blog/ai-data-backup-2026-6831",
+    "Ai Data Backup 2026 6831"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Event Driven Architecture: implementation playbook",
+    "description": "Event Driven Architecture: implementation playbook",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T04:52:13Z",
+    "dateModified": "2026-08-07T04:52:13Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/event-driven-architecture-implementation-playbook/"
+  }
+}

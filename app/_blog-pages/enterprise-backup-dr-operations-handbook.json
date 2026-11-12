@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "Enterprise Backup DR: operations handbook | Zion Tech Group",
+    "description": "Enterprise Backup DR: operations handbook",
+    "keywords": [
+      "security",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "Enterprise Backup DR: operations handbook",
+      "description": "Enterprise Backup DR: operations handbook",
+      "url": "https://ziontechgroup.com/blog/enterprise-backup-dr-operations-handbook/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/enterprise-backup-dr-operations-handbook/"
+    }
+  },
+  "values": [
+    "Enterprise Backup DR: operations handbook",
+    "Enterprise Backup DR: operations handbook",
+    "Enterprise Backup DR: operations handbook",
+    "Conversion path",
+    "If this guide matches your enterprise backup dr: operations handbook initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "Conversion path",
+    " If this guide matches your enterprise backup dr: operations handbook initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "/blog/ai-bdr-sdr-2026-7283",
+    "Ai Bdr Sdr 2026 7283",
+    "/blog/ai-accessibility-auditor-automation-roadmap",
+    "Ai Accessibility Auditor Automation Roadmap",
+    "/blog/ai-data-backup-2026-6624",
+    "Ai Data Backup 2026 6624",
+    "/blog/ai-performance-monitoring-case-study",
+    "Ai Performance Monitoring Case Study"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Enterprise Backup DR: operations handbook",
+    "description": "Enterprise Backup DR: operations handbook",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T04:21:34Z",
+    "dateModified": "2026-08-07T04:21:34Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/enterprise-backup-dr-operations-handbook/"
+  }
+}

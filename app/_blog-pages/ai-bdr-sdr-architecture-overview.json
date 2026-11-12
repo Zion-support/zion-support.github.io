@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "AI BDR SDR: architecture overview | Zion Tech Group",
+    "description": "AI BDR SDR: architecture overview",
+    "keywords": [
+      "it",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "AI BDR SDR: architecture overview",
+      "description": "AI BDR SDR: architecture overview",
+      "url": "https://ziontechgroup.com/blog/ai-bdr-sdr-architecture-overview/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/ai-bdr-sdr-architecture-overview/"
+    }
+  },
+  "values": [
+    "AI BDR SDR: architecture overview",
+    "AI BDR SDR: architecture overview",
+    "AI BDR SDR: architecture overview",
+    "Action checklist",
+    "For ai bdr sdr: architecture overview: pick one workflow, assign ownership, define success metrics, instrument execution, and set a 30-day review date. Write the checklist down and share it with stakeholders so expectations are explicit. Before launch, verify access controls, monitoring, rollback criteria, and on-call coverage. After launch, review metrics weekly and escalate deviations immediately; small drifts become large incidents when ignored. Use the checklist as a living document and update it as the program learns from real operation.",
+    "Action checklist",
+    " For ai bdr sdr: architecture overview: pick one workflow, assign ownership, define success metrics, instrument execution, and set a 30-day review date. Write the checklist down and share it with stakeholders so expectations are explicit. Before launch, verify access controls, monitoring, rollback criteria, and on-call coverage. After launch, review metrics weekly and escalate deviations immediately; small drifts become large incidents when ignored. Use the checklist as a living document and update it as the program learns from real operation.",
+    "/blog/ai-msp-security-compliance-2026-6842",
+    "Ai Msp Security Compliance 2026 6842",
+    "/blog/api-gateway-management-2026-7219",
+    "Api Gateway Management 2026 7219",
+    "/blog/genai-devops-cicd-security-and-governance",
+    "Genai Devops Cicd Security And Governance",
+    "/blog/api-orchestration-layer-2026-7210",
+    "Api Orchestration Layer 2026 7210"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "AI BDR SDR: architecture overview",
+    "description": "AI BDR SDR: architecture overview",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T04:51:29Z",
+    "dateModified": "2026-08-07T04:51:29Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/ai-bdr-sdr-architecture-overview/"
+  }
+}

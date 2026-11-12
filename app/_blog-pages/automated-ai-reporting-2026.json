@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "Automated AI Reporting | Zion Tech Group",
+    "description": "Automated AI Reporting",
+    "keywords": [
+      "cloud",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "Automated AI Reporting",
+      "description": "Automated AI Reporting",
+      "url": "https://ziontechgroup.com/blog/automated-ai-reporting-2026/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/automated-ai-reporting-2026/"
+    }
+  },
+  "values": [
+    "Automated AI Reporting",
+    "Automated AI Reporting",
+    "Automated AI Reporting",
+    "Outcomes to measure",
+    "Leading indicators for automated ai reporting: workflow completion rate, escalation rate, time-to-resolution, and user satisfaction. Lagging indicators: revenue trend, cost trend, customer retention, and operational efficiency. Track both leading and lagging indicators so you can explain progress to leadership before financial results appear. Use a rolling 90-day window and re-baseline monthly; this keeps the program accountable without demanding perfection on day one. Publish metrics in a shared dashboard so the whole team sees progress, not just the program sponsor.",
+    "Outcomes to measure",
+    " Leading indicators for automated ai reporting: workflow completion rate, escalation rate, time-to-resolution, and user satisfaction. Lagging indicators: revenue trend, cost trend, customer retention, and operational efficiency. Track both leading and lagging indicators so you can explain progress to leadership before financial results appear. Use a rolling 90-day window and re-baseline monthly; this keeps the program accountable without demanding perfection on day one. Publish metrics in a shared dashboard so the whole team sees progress, not just the program sponsor.",
+    "/blog/api-management-gateway-2026-7221",
+    "Api Management Gateway 2026 7221",
+    "/blog/aiops-anomaly-detection-2026-6588",
+    "Aiops Anomaly Detection 2026 6588",
+    "/blog/api-gateway-management-2026-7357",
+    "Api Gateway Management 2026 7357",
+    "/blog/ai-msp-security-compliance-2026-6842",
+    "Ai Msp Security Compliance 2026 6842"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Automated AI Reporting",
+    "description": "Automated AI Reporting",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T04:51:17Z",
+    "dateModified": "2026-08-07T04:51:17Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/automated-ai-reporting-2026/"
+  }
+}

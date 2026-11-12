@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "AI Email Intelligence: policy and compliance | Zion Tech Group",
+    "description": "AI Email Intelligence: policy and compliance",
+    "keywords": [
+      "it",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "AI Email Intelligence: policy and compliance",
+      "description": "AI Email Intelligence: policy and compliance",
+      "url": "https://ziontechgroup.com/blog/ai-email-intelligence-policy-and-compliance/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/ai-email-intelligence-policy-and-compliance/"
+    }
+  },
+  "values": [
+    "AI Email Intelligence: policy and compliance",
+    "AI Email Intelligence: policy and compliance",
+    "AI Email Intelligence: policy and compliance",
+    "Recommended next step",
+    "Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "Recommended next step",
+    " Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "/blog/devops-cicd-security-and-governance",
+    "Devops Cicd Security And Governance",
+    "/blog/ai-data-backup-starter-template",
+    "Ai Data Backup Starter Template",
+    "/blog/endpoint-management-2026-6682",
+    "Endpoint Management 2026 6682",
+    "/blog/ai-msp-security-compliance-2026-7187",
+    "Ai Msp Security Compliance 2026 7187"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "AI Email Intelligence: policy and compliance",
+    "description": "AI Email Intelligence: policy and compliance",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T04:52:26Z",
+    "dateModified": "2026-08-07T04:52:26Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/ai-email-intelligence-policy-and-compliance/"
+  }
+}

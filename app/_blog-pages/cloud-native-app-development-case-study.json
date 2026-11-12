@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "Cloud Native App Development: case study | Zion Tech Group",
+    "description": "Cloud Native App Development: case study",
+    "keywords": [
+      "security",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "Cloud Native App Development: case study",
+      "description": "Cloud Native App Development: case study",
+      "url": "https://ziontechgroup.com/blog/cloud-native-app-development-case-study/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/cloud-native-app-development-case-study/"
+    }
+  },
+  "values": [
+    "Cloud Native App Development: case study",
+    "Cloud Native App Development: case study",
+    "Cloud Native App Development: case study",
+    "Recommended next step",
+    "Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "Recommended next step",
+    " Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "/blog/cloud-cost-ai-optimizer-2026-7293",
+    "Cloud Cost Ai Optimizer 2026 7293",
+    "/blog/ai-data-backup-2026",
+    "Ai Data Backup 2026",
+    "/blog/ai-data-lakehouse-pipelines-evaluation-framework",
+    "Ai Data Lakehouse Pipelines Evaluation Framework",
+    "/blog/cloud-finops-2026-6604",
+    "Cloud Finops 2026 6604"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Cloud Native App Development: case study",
+    "description": "Cloud Native App Development: case study",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T07:26:02Z",
+    "dateModified": "2026-08-07T07:26:02Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/cloud-native-app-development-case-study/"
+  }
+}

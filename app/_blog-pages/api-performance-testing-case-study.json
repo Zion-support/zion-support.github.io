@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "API Performance Testing: case study | Zion Tech Group",
+    "description": "API Performance Testing: case study",
+    "keywords": [
+      "security",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "API Performance Testing: case study",
+      "description": "API Performance Testing: case study",
+      "url": "https://ziontechgroup.com/blog/api-performance-testing-case-study/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/api-performance-testing-case-study/"
+    }
+  },
+  "values": [
+    "API Performance Testing: case study",
+    "API Performance Testing: case study",
+    "API Performance Testing: case study",
+    "Action checklist",
+    "For api performance testing: case study: pick one workflow, assign ownership, define success metrics, instrument execution, and set a 30-day review date. Write the checklist down and share it with stakeholders so expectations are explicit. Before launch, verify access controls, monitoring, rollback criteria, and on-call coverage. After launch, review metrics weekly and escalate deviations immediately; small drifts become large incidents when ignored. Use the checklist as a living document and update it as the program learns from real operation.",
+    "Action checklist",
+    " For api performance testing: case study: pick one workflow, assign ownership, define success metrics, instrument execution, and set a 30-day review date. Write the checklist down and share it with stakeholders so expectations are explicit. Before launch, verify access controls, monitoring, rollback criteria, and on-call coverage. After launch, review metrics weekly and escalate deviations immediately; small drifts become large incidents when ignored. Use the checklist as a living document and update it as the program learns from real operation.",
+    "/blog/api-integration-2026-6944",
+    "Api Integration 2026 6944",
+    "/blog/micro-saas-ai-hr-recruitment-2026-6921",
+    "Micro Saas Ai Hr Recruitment 2026 6921",
+    "/blog/ai-ad-copy-generator-2026-6790",
+    "Ai Ad Copy Generator 2026 6790",
+    "/blog/container-security-lifecycle-case-study",
+    "Container Security Lifecycle Case Study"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "API Performance Testing: case study",
+    "description": "API Performance Testing: case study",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T09:28:31Z",
+    "dateModified": "2026-08-07T09:28:31Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/api-performance-testing-case-study/"
+  }
+}

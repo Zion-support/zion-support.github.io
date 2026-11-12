@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "Cloud Native App Development: policy and compliance | Zion Tech Group",
+    "description": "Cloud Native App Development: policy and compliance",
+    "keywords": [
+      "data",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "Cloud Native App Development: policy and compliance",
+      "description": "Cloud Native App Development: policy and compliance",
+      "url": "https://ziontechgroup.com/blog/cloud-native-app-development-policy-and-compliance/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/cloud-native-app-development-policy-and-compliance/"
+    }
+  },
+  "values": [
+    "Cloud Native App Development: policy and compliance",
+    "Cloud Native App Development: policy and compliance",
+    "Cloud Native App Development: policy and compliance",
+    "Outcomes to measure",
+    "Leading indicators for cloud native app development: policy and compliance: workflow completion rate, escalation rate, time-to-resolution, and user satisfaction. Lagging indicators: revenue trend, cost trend, customer retention, and operational efficiency. Track both leading and lagging indicators so you can explain progress to leadership before financial results appear. Use a rolling 90-day window and re-baseline monthly; this keeps the program accountable without demanding perfection on day one. Publish metrics in a shared dashboard so the whole team sees progress, not just the program sponsor.",
+    "Outcomes to measure",
+    " Leading indicators for cloud native app development: policy and compliance: workflow completion rate, escalation rate, time-to-resolution, and user satisfaction. Lagging indicators: revenue trend, cost trend, customer retention, and operational efficiency. Track both leading and lagging indicators so you can explain progress to leadership before financial results appear. Use a rolling 90-day window and re-baseline monthly; this keeps the program accountable without demanding perfection on day one. Publish metrics in a shared dashboard so the whole team sees progress, not just the program sponsor.",
+    "/blog/data-analytics-platform-policy-and-compliance",
+    "Data Analytics Platform Policy And Compliance",
+    "/blog/api-performance-testing-evaluation-framework",
+    "Api Performance Testing Evaluation Framework",
+    "/blog/ai-data-lakehouse-pipelines-2026-6843",
+    "Ai Data Lakehouse Pipelines 2026 6843",
+    "/blog/ai-development-acceleration-security-and-governance",
+    "Ai Development Acceleration Security And Governance"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Cloud Native App Development: policy and compliance",
+    "description": "Cloud Native App Development: policy and compliance",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T08:27:38Z",
+    "dateModified": "2026-08-07T08:27:38Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/cloud-native-app-development-policy-and-compliance/"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "Cloud Native App Development: security and governance | Zion Tech Group",
+    "description": "Cloud Native App Development: security and governance",
+    "keywords": [
+      "automation",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "Cloud Native App Development: security and governance",
+      "description": "Cloud Native App Development: security and governance",
+      "url": "https://ziontechgroup.com/blog/cloud-native-app-development-security-and-governance/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/cloud-native-app-development-security-and-governance/"
+    }
+  },
+  "values": [
+    "Cloud Native App Development: security and governance",
+    "Cloud Native App Development: security and governance",
+    "Cloud Native App Development: security and governance",
+    "Conversion path",
+    "If this guide matches your cloud native app development: security and governance initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "Conversion path",
+    " If this guide matches your cloud native app development: security and governance initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "/blog/graphql-federation-platform-2026",
+    "Graphql Federation Platform 2026",
+    "/blog/cloud-cost-ai-optimizer-2026-6603",
+    "Cloud Cost Ai Optimizer 2026 6603",
+    "/blog/ai-data-lakehouse-pipelines-policy-and-compliance",
+    "Ai Data Lakehouse Pipelines Policy And Compliance",
+    "/blog/database-migration-service-2026-7299",
+    "Database Migration Service 2026 7299"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Cloud Native App Development: security and governance",
+    "description": "Cloud Native App Development: security and governance",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T04:52:20Z",
+    "dateModified": "2026-08-07T04:52:20Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/cloud-native-app-development-security-and-governance/"
+  }
+}

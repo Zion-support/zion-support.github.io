@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "AI API Gateway: operations handbook | Zion Tech Group",
+    "description": "AI API Gateway: operations handbook",
+    "keywords": [
+      "cloud",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "AI API Gateway: operations handbook",
+      "description": "AI API Gateway: operations handbook",
+      "url": "https://ziontechgroup.com/blog/ai-api-gateway-operations-handbook/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/ai-api-gateway-operations-handbook/"
+    }
+  },
+  "values": [
+    "AI API Gateway: operations handbook",
+    "AI API Gateway: operations handbook",
+    "AI API Gateway: operations handbook",
+    "Action checklist",
+    "For ai api gateway: operations handbook: pick one workflow, assign ownership, define success metrics, instrument execution, and set a 30-day review date. Write the checklist down and share it with stakeholders so expectations are explicit. Before launch, verify access controls, monitoring, rollback criteria, and on-call coverage. After launch, review metrics weekly and escalate deviations immediately; small drifts become large incidents when ignored. Use the checklist as a living document and update it as the program learns from real operation.",
+    "Action checklist",
+    " For ai api gateway: operations handbook: pick one workflow, assign ownership, define success metrics, instrument execution, and set a 30-day review date. Write the checklist down and share it with stakeholders so expectations are explicit. Before launch, verify access controls, monitoring, rollback criteria, and on-call coverage. After launch, review metrics weekly and escalate deviations immediately; small drifts become large incidents when ignored. Use the checklist as a living document and update it as the program learns from real operation.",
+    "/blog/api-gateway-management-2026-7288",
+    "Api Gateway Management 2026 7288",
+    "/blog/microsaas-translation-engine-evaluation-framework",
+    "Microsaas Translation Engine Evaluation Framework",
+    "/blog/ai-data-lakehouse-pipelines-case-study",
+    "Ai Data Lakehouse Pipelines Case Study",
+    "/blog/microsaas-hr-recruitment-policy-and-compliance",
+    "Microsaas Hr Recruitment Policy And Compliance"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "AI API Gateway: operations handbook",
+    "description": "AI API Gateway: operations handbook",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T09:28:30Z",
+    "dateModified": "2026-08-07T09:28:30Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/ai-api-gateway-operations-handbook/"
+  }
+}

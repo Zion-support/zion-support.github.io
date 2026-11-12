@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "AI 3D Asset Generator: checklist for IT leaders | Zion Tech Group",
+    "description": "AI 3D Asset Generator: checklist for IT leaders",
+    "keywords": [
+      "ai",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "AI 3D Asset Generator: checklist for IT leaders",
+      "description": "AI 3D Asset Generator: checklist for IT leaders",
+      "url": "https://ziontechgroup.com/blog/ai-3d-asset-generator-checklist-for-it-leaders/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/ai-3d-asset-generator-checklist-for-it-leaders/"
+    }
+  },
+  "values": [
+    "AI 3D Asset Generator: checklist for IT leaders",
+    "AI 3D Asset Generator: checklist for IT leaders",
+    "AI 3D Asset Generator: checklist for IT leaders",
+    "Outcomes to measure",
+    "Leading indicators for ai 3d asset generator: checklist for it leaders: workflow completion rate, escalation rate, time-to-resolution, and user satisfaction. Lagging indicators: revenue trend, cost trend, customer retention, and operational efficiency. Track both leading and lagging indicators so you can explain progress to leadership before financial results appear. Use a rolling 90-day window and re-baseline monthly; this keeps the program accountable without demanding perfection on day one. Publish metrics in a shared dashboard so the whole team sees progress, not just the program sponsor.",
+    "Outcomes to measure",
+    " Leading indicators for ai 3d asset generator: checklist for it leaders: workflow completion rate, escalation rate, time-to-resolution, and user satisfaction. Lagging indicators: revenue trend, cost trend, customer retention, and operational efficiency. Track both leading and lagging indicators so you can explain progress to leadership before financial results appear. Use a rolling 90-day window and re-baseline monthly; this keeps the program accountable without demanding perfection on day one. Publish metrics in a shared dashboard so the whole team sees progress, not just the program sponsor.",
+    "/blog/api-management-gateway-operations-handbook",
+    "Api Management Gateway Operations Handbook",
+    "/blog/container-security-lifecycle-architecture-overview",
+    "Container Security Lifecycle Architecture Overview",
+    "/blog/autonomous-code-deployment-evaluation-framework",
+    "Autonomous Code Deployment Evaluation Framework",
+    "/blog/enterprise-backup-dr-starter-template",
+    "Enterprise Backup Dr Starter Template"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "AI 3D Asset Generator: checklist for IT leaders",
+    "description": "AI 3D Asset Generator: checklist for IT leaders",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T07:57:01Z",
+    "dateModified": "2026-08-07T07:57:01Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/ai-3d-asset-generator-checklist-for-it-leaders/"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "Database Migration Service: policy and compliance | Zion Tech Group",
+    "description": "Database Migration Service: policy and compliance",
+    "keywords": [
+      "ai",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "Database Migration Service: policy and compliance",
+      "description": "Database Migration Service: policy and compliance",
+      "url": "https://ziontechgroup.com/blog/database-migration-service-policy-and-compliance/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/database-migration-service-policy-and-compliance/"
+    }
+  },
+  "values": [
+    "Database Migration Service: policy and compliance",
+    "Database Migration Service: policy and compliance",
+    "Database Migration Service: policy and compliance",
+    "Recommended next step",
+    "Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "Recommended next step",
+    " Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "/blog/microsaas-social-media-manager-executive-guide",
+    "Microsaas Social Media Manager Executive Guide",
+    "/blog/ai-accessibility-optimizer-2026-6858",
+    "Ai Accessibility Optimizer 2026 6858",
+    "/blog/managed-it-services-small-business-2026-6973",
+    "Managed It Services Small Business 2026 6973",
+    "/blog/chaos-engineering-2026-6740",
+    "Chaos Engineering 2026 6740"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Database Migration Service: policy and compliance",
+    "description": "Database Migration Service: policy and compliance",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T07:56:53Z",
+    "dateModified": "2026-08-07T07:56:53Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/database-migration-service-policy-and-compliance/"
+  }
+}

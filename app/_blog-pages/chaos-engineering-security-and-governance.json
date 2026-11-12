@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "Chaos Engineering: security and governance | Zion Tech Group",
+    "description": "Chaos Engineering: security and governance",
+    "keywords": [
+      "ai",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "Chaos Engineering: security and governance",
+      "description": "Chaos Engineering: security and governance",
+      "url": "https://ziontechgroup.com/blog/chaos-engineering-security-and-governance/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/chaos-engineering-security-and-governance/"
+    }
+  },
+  "values": [
+    "Chaos Engineering: security and governance",
+    "Chaos Engineering: security and governance",
+    "Chaos Engineering: security and governance",
+    "Conversion path",
+    "If this guide matches your chaos engineering: security and governance initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "Conversion path",
+    " If this guide matches your chaos engineering: security and governance initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "/blog/ai-development-acceleration-implementation-playbook",
+    "Ai Development Acceleration Implementation Playbook",
+    "/blog/api-gateway-management-2026-6552",
+    "Api Gateway Management 2026 6552",
+    "/blog/api-security-testing-deployment-patterns",
+    "Api Security Testing Deployment Patterns",
+    "/blog/enterprise-backup-dr-2026-7166",
+    "Enterprise Backup Dr 2026 7166"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Chaos Engineering: security and governance",
+    "description": "Chaos Engineering: security and governance",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T04:51:59Z",
+    "dateModified": "2026-08-07T04:51:59Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/chaos-engineering-security-and-governance/"
+  }
+}

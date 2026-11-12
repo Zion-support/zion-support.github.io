@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "AI Performance Monitoring: evaluation framework | Zion Tech Group",
+    "description": "AI Performance Monitoring: evaluation framework",
+    "keywords": [
+      "ai",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "AI Performance Monitoring: evaluation framework",
+      "description": "AI Performance Monitoring: evaluation framework",
+      "url": "https://ziontechgroup.com/blog/ai-performance-monitoring-evaluation-framework/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/ai-performance-monitoring-evaluation-framework/"
+    }
+  },
+  "values": [
+    "AI Performance Monitoring: evaluation framework",
+    "AI Performance Monitoring: evaluation framework",
+    "AI Performance Monitoring: evaluation framework",
+    "Action checklist",
+    "For ai performance monitoring: evaluation framework: pick one workflow, assign ownership, define success metrics, instrument execution, and set a 30-day review date. Write the checklist down and share it with stakeholders so expectations are explicit. Before launch, verify access controls, monitoring, rollback criteria, and on-call coverage. After launch, review metrics weekly and escalate deviations immediately; small drifts become large incidents when ignored. Use the checklist as a living document and update it as the program learns from real operation.",
+    "Action checklist",
+    " For ai performance monitoring: evaluation framework: pick one workflow, assign ownership, define success metrics, instrument execution, and set a 30-day review date. Write the checklist down and share it with stakeholders so expectations are explicit. Before launch, verify access controls, monitoring, rollback criteria, and on-call coverage. After launch, review metrics weekly and escalate deviations immediately; small drifts become large incidents when ignored. Use the checklist as a living document and update it as the program learns from real operation.",
+    "/blog/cloud-cost-ai-optimizer-architecture-overview",
+    "Cloud Cost Ai Optimizer Architecture Overview",
+    "/blog/automated-ai-reporting-2026-6659",
+    "Automated Ai Reporting 2026 6659",
+    "/blog/automated-ai-reporting-2026-6797",
+    "Automated Ai Reporting 2026 6797",
+    "/blog/apm-application-performance-2026-6601",
+    "Apm Application Performance 2026 6601"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "AI Performance Monitoring: evaluation framework",
+    "description": "AI Performance Monitoring: evaluation framework",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T07:26:18Z",
+    "dateModified": "2026-08-07T07:26:18Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/ai-performance-monitoring-evaluation-framework/"
+  }
+}

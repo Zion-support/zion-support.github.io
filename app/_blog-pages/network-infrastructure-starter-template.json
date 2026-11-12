@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "Network Infrastructure: starter template | Zion Tech Group",
+    "description": "Network Infrastructure: starter template",
+    "keywords": [
+      "security",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "Network Infrastructure: starter template",
+      "description": "Network Infrastructure: starter template",
+      "url": "https://ziontechgroup.com/blog/network-infrastructure-starter-template/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/network-infrastructure-starter-template/"
+    }
+  },
+  "values": [
+    "Network Infrastructure: starter template",
+    "Network Infrastructure: starter template",
+    "Network Infrastructure: starter template",
+    "Recommended next step",
+    "Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "Recommended next step",
+    " Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "/blog/api-management-gateway-2026",
+    "Api Management Gateway 2026",
+    "/blog/ai-agentic-workflows-2026",
+    "Ai Agentic Workflows 2026",
+    "/blog/api-security-testing-2026-6554",
+    "Api Security Testing 2026 6554",
+    "/blog/ai-email-intelligence-checklist-for-it-leaders",
+    "Ai Email Intelligence Checklist For It Leaders"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Network Infrastructure: starter template",
+    "description": "Network Infrastructure: starter template",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T05:08:08Z",
+    "dateModified": "2026-08-07T05:08:08Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/network-infrastructure-starter-template/"
+  }
+}

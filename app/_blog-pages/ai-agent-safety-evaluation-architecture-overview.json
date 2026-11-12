@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "AI Agent Safety Evaluation: architecture overview | Zion Tech Group",
+    "description": "AI Agent Safety Evaluation: architecture overview",
+    "keywords": [
+      "security",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "AI Agent Safety Evaluation: architecture overview",
+      "description": "AI Agent Safety Evaluation: architecture overview",
+      "url": "https://ziontechgroup.com/blog/ai-agent-safety-evaluation-architecture-overview/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/ai-agent-safety-evaluation-architecture-overview/"
+    }
+  },
+  "values": [
+    "AI Agent Safety Evaluation: architecture overview",
+    "AI Agent Safety Evaluation: architecture overview",
+    "AI Agent Safety Evaluation: architecture overview",
+    "Action checklist",
+    "For ai agent safety evaluation: architecture overview: pick one workflow, assign ownership, define success metrics, instrument execution, and set a 30-day review date. Write the checklist down and share it with stakeholders so expectations are explicit. Before launch, verify access controls, monitoring, rollback criteria, and on-call coverage. After launch, review metrics weekly and escalate deviations immediately; small drifts become large incidents when ignored. Use the checklist as a living document and update it as the program learns from real operation.",
+    "Action checklist",
+    " For ai agent safety evaluation: architecture overview: pick one workflow, assign ownership, define success metrics, instrument execution, and set a 30-day review date. Write the checklist down and share it with stakeholders so expectations are explicit. Before launch, verify access controls, monitoring, rollback criteria, and on-call coverage. After launch, review metrics weekly and escalate deviations immediately; small drifts become large incidents when ignored. Use the checklist as a living document and update it as the program learns from real operation.",
+    "/blog/devops-gen-ai-cicd-2026-6679",
+    "Devops Gen Ai Cicd 2026 6679",
+    "/blog/incident-response-retainer-2026-6895",
+    "Incident Response Retainer 2026 6895",
+    "/blog/ai-development-acceleration-2026-6908",
+    "Ai Development Acceleration 2026 6908",
+    "/blog/ai-agent-safety-evaluation-2026-6722",
+    "Ai Agent Safety Evaluation 2026 6722"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "AI Agent Safety Evaluation: architecture overview",
+    "description": "AI Agent Safety Evaluation: architecture overview",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T04:52:13Z",
+    "dateModified": "2026-08-07T04:52:13Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/ai-agent-safety-evaluation-architecture-overview/"
+  }
+}

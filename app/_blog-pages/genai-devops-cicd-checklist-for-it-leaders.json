@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "GenAI DevOps CI/CD: checklist for IT leaders | Zion Tech Group",
+    "description": "GenAI DevOps CI/CD: checklist for IT leaders",
+    "keywords": [
+      "cloud",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "GenAI DevOps CI/CD: checklist for IT leaders",
+      "description": "GenAI DevOps CI/CD: checklist for IT leaders",
+      "url": "https://ziontechgroup.com/blog/genai-devops-cicd-checklist-for-it-leaders/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/genai-devops-cicd-checklist-for-it-leaders/"
+    }
+  },
+  "values": [
+    "GenAI DevOps CI/CD: checklist for IT leaders",
+    "GenAI DevOps CI/CD: checklist for IT leaders",
+    "GenAI DevOps CI/CD: checklist for IT leaders",
+    "Action checklist",
+    "For genai devops ci/cd: checklist for it leaders: pick one workflow, assign ownership, define success metrics, instrument execution, and set a 30-day review date. Write the checklist down and share it with stakeholders so expectations are explicit. Before launch, verify access controls, monitoring, rollback criteria, and on-call coverage. After launch, review metrics weekly and escalate deviations immediately; small drifts become large incidents when ignored. Use the checklist as a living document and update it as the program learns from real operation.",
+    "Action checklist",
+    " For genai devops ci/cd: checklist for it leaders: pick one workflow, assign ownership, define success metrics, instrument execution, and set a 30-day review date. Write the checklist down and share it with stakeholders so expectations are explicit. Before launch, verify access controls, monitoring, rollback criteria, and on-call coverage. After launch, review metrics weekly and escalate deviations immediately; small drifts become large incidents when ignored. Use the checklist as a living document and update it as the program learns from real operation.",
+    "/blog/ai-development-acceleration-2026",
+    "Ai Development Acceleration 2026",
+    "/blog/ai-for-fleet-and-logistics-operations",
+    "Ai For Fleet And Logistics Operations",
+    "/blog/accessibility-compliance-2026-7148",
+    "Accessibility Compliance 2026 7148",
+    "/blog/ai-bom-procurement-2026-6594",
+    "Ai Bom Procurement 2026 6594"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "GenAI DevOps CI/CD: checklist for IT leaders",
+    "description": "GenAI DevOps CI/CD: checklist for IT leaders",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T07:26:20Z",
+    "dateModified": "2026-08-07T07:26:20Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/genai-devops-cicd-checklist-for-it-leaders/"
+  }
+}

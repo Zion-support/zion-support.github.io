@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "MicroSaaS Expense Tracker | Zion Tech Group",
+    "description": "MicroSaaS Expense Tracker",
+    "keywords": [
+      "data",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "MicroSaaS Expense Tracker",
+      "description": "MicroSaaS Expense Tracker",
+      "url": "https://ziontechgroup.com/blog/micro-saas-ai-expense-tracker-2026/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/micro-saas-ai-expense-tracker-2026/"
+    }
+  },
+  "values": [
+    "MicroSaaS Expense Tracker",
+    "MicroSaaS Expense Tracker",
+    "MicroSaaS Expense Tracker",
+    "Next actions",
+    "Review your highest-friction workflow, contact Zion Tech Group for a scoped pilot, and start with one measurable outcome. Set a 30-day review date, define success metrics, assign an owner, and document rollback criteria before expanding. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan. The organizations that move fastest in 2026 are the ones that combine clear intent with disciplined execution.",
+    "Next actions",
+    " Review your highest-friction workflow, contact Zion Tech Group for a scoped pilot, and start with one measurable outcome. Set a 30-day review date, define success metrics, assign an owner, and document rollback criteria before expanding. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan. The organizations that move fastest in 2026 are the ones that combine clear intent with disciplined execution.",
+    "/blog/ai-agent-safety-evaluation-2026-7343",
+    "Ai Agent Safety Evaluation 2026 7343",
+    "/blog/micro-saas-ai-hr-recruitment-2026-6783",
+    "Micro Saas Ai Hr Recruitment 2026 6783",
+    "/blog/api-gateway-management-2026-6759",
+    "Api Gateway Management 2026 6759",
+    "/blog/ai-customer-success-churn-2026-7120",
+    "Ai Customer Success Churn 2026 7120"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "MicroSaaS Expense Tracker",
+    "description": "MicroSaaS Expense Tracker",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T04:51:34Z",
+    "dateModified": "2026-08-07T04:51:34Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/micro-saas-ai-expense-tracker-2026/"
+  }
+}

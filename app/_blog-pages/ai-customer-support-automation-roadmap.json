@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "AI Customer Support: automation roadmap | Zion Tech Group",
+    "description": "AI Customer Support: automation roadmap",
+    "keywords": [
+      "cloud",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "AI Customer Support: automation roadmap",
+      "description": "AI Customer Support: automation roadmap",
+      "url": "https://ziontechgroup.com/blog/ai-customer-support-automation-roadmap/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/ai-customer-support-automation-roadmap/"
+    }
+  },
+  "values": [
+    "AI Customer Support: automation roadmap",
+    "AI Customer Support: automation roadmap",
+    "AI Customer Support: automation roadmap",
+    "Next actions",
+    "Review your highest-friction workflow, contact Zion Tech Group for a scoped pilot, and start with one measurable outcome. Set a 30-day review date, define success metrics, assign an owner, and document rollback criteria before expanding. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan. The organizations that move fastest in 2026 are the ones that combine clear intent with disciplined execution.",
+    "Next actions",
+    " Review your highest-friction workflow, contact Zion Tech Group for a scoped pilot, and start with one measurable outcome. Set a 30-day review date, define success metrics, assign an owner, and document rollback criteria before expanding. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan. The organizations that move fastest in 2026 are the ones that combine clear intent with disciplined execution.",
+    "/blog/api-performance-testing-implementation-playbook",
+    "Api Performance Testing Implementation Playbook",
+    "/blog/micro-saas-ai-hr-recruitment-2026-7197",
+    "Micro Saas Ai Hr Recruitment 2026 7197",
+    "/blog/accessibility-compliance-2026-7217",
+    "Accessibility Compliance 2026 7217",
+    "/blog/it-consulting-2026-7329",
+    "It Consulting 2026 7329"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "AI Customer Support: automation roadmap",
+    "description": "AI Customer Support: automation roadmap",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T07:56:44Z",
+    "dateModified": "2026-08-07T07:56:44Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/ai-customer-support-automation-roadmap/"
+  }
+}

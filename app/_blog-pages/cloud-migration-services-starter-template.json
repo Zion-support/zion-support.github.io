@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "Cloud Migration Services: starter template | Zion Tech Group",
+    "description": "Cloud Migration Services: starter template",
+    "keywords": [
+      "it",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "Cloud Migration Services: starter template",
+      "description": "Cloud Migration Services: starter template",
+      "url": "https://ziontechgroup.com/blog/cloud-migration-services-starter-template/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/cloud-migration-services-starter-template/"
+    }
+  },
+  "values": [
+    "Cloud Migration Services: starter template",
+    "Cloud Migration Services: starter template",
+    "Cloud Migration Services: starter template",
+    "Outcomes to measure",
+    "Leading indicators for cloud migration services: starter template: workflow completion rate, escalation rate, time-to-resolution, and user satisfaction. Lagging indicators: revenue trend, cost trend, customer retention, and operational efficiency. Track both leading and lagging indicators so you can explain progress to leadership before financial results appear. Use a rolling 90-day window and re-baseline monthly; this keeps the program accountable without demanding perfection on day one. Publish metrics in a shared dashboard so the whole team sees progress, not just the program sponsor.",
+    "Outcomes to measure",
+    " Leading indicators for cloud migration services: starter template: workflow completion rate, escalation rate, time-to-resolution, and user satisfaction. Lagging indicators: revenue trend, cost trend, customer retention, and operational efficiency. Track both leading and lagging indicators so you can explain progress to leadership before financial results appear. Use a rolling 90-day window and re-baseline monthly; this keeps the program accountable without demanding perfection on day one. Publish metrics in a shared dashboard so the whole team sees progress, not just the program sponsor.",
+    "/blog/edge-ai-and-iot-deploying-models-at-the-edge",
+    "Edge Ai And Iot Deploying Models At The Edge",
+    "/blog/cyber-threat-intelligence-checklist-for-it-leaders",
+    "Cyber Threat Intelligence Checklist For It Leaders",
+    "/blog/ai-agent-safety-evaluation-deployment-patterns",
+    "Ai Agent Safety Evaluation Deployment Patterns",
+    "/blog/aiops-anomaly-detection-2026-7209",
+    "Aiops Anomaly Detection 2026 7209"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Cloud Migration Services: starter template",
+    "description": "Cloud Migration Services: starter template",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T07:26:18Z",
+    "dateModified": "2026-08-07T07:26:18Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/cloud-migration-services-starter-template/"
+  }
+}

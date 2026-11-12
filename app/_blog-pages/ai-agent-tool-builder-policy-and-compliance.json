@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "AI Agent Tool Builder: policy and compliance | Zion Tech Group",
+    "description": "AI Agent Tool Builder: policy and compliance",
+    "keywords": [
+      "automation",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "AI Agent Tool Builder: policy and compliance",
+      "description": "AI Agent Tool Builder: policy and compliance",
+      "url": "https://ziontechgroup.com/blog/ai-agent-tool-builder-policy-and-compliance/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/ai-agent-tool-builder-policy-and-compliance/"
+    }
+  },
+  "values": [
+    "AI Agent Tool Builder: policy and compliance",
+    "AI Agent Tool Builder: policy and compliance",
+    "AI Agent Tool Builder: policy and compliance",
+    "Outcomes to measure",
+    "Leading indicators for ai agent tool builder: policy and compliance: workflow completion rate, escalation rate, time-to-resolution, and user satisfaction. Lagging indicators: revenue trend, cost trend, customer retention, and operational efficiency. Track both leading and lagging indicators so you can explain progress to leadership before financial results appear. Use a rolling 90-day window and re-baseline monthly; this keeps the program accountable without demanding perfection on day one. Publish metrics in a shared dashboard so the whole team sees progress, not just the program sponsor.",
+    "Outcomes to measure",
+    " Leading indicators for ai agent tool builder: policy and compliance: workflow completion rate, escalation rate, time-to-resolution, and user satisfaction. Lagging indicators: revenue trend, cost trend, customer retention, and operational efficiency. Track both leading and lagging indicators so you can explain progress to leadership before financial results appear. Use a rolling 90-day window and re-baseline monthly; this keeps the program accountable without demanding perfection on day one. Publish metrics in a shared dashboard so the whole team sees progress, not just the program sponsor.",
+    "/blog/incident-response-retainer-2026-7309",
+    "Incident Response Retainer 2026 7309",
+    "/blog/ai-api-gateway-architecture-overview",
+    "Ai Api Gateway Architecture Overview",
+    "/blog/smart-contract-audit-deployment-patterns",
+    "Smart Contract Audit Deployment Patterns",
+    "/blog/cloud-cost-ai-optimizer-security-and-governance",
+    "Cloud Cost Ai Optimizer Security And Governance"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "AI Agent Tool Builder: policy and compliance",
+    "description": "AI Agent Tool Builder: policy and compliance",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T04:51:33Z",
+    "dateModified": "2026-08-07T04:51:33Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/ai-agent-tool-builder-policy-and-compliance/"
+  }
+}

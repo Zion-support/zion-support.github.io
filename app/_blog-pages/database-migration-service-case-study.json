@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "Database Migration Service: case study | Zion Tech Group",
+    "description": "Database Migration Service: case study",
+    "keywords": [
+      "automation",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "Database Migration Service: case study",
+      "description": "Database Migration Service: case study",
+      "url": "https://ziontechgroup.com/blog/database-migration-service-case-study/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/database-migration-service-case-study/"
+    }
+  },
+  "values": [
+    "Database Migration Service: case study",
+    "Database Migration Service: case study",
+    "Database Migration Service: case study",
+    "Conversion path",
+    "If this guide matches your database migration service: case study initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "Conversion path",
+    " If this guide matches your database migration service: case study initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "/blog/ai-api-gateway-2026-6689",
+    "Ai Api Gateway 2026 6689",
+    "/blog/ai-agent-tool-builder-2026-7275",
+    "Ai Agent Tool Builder 2026 7275",
+    "/blog/chaos-engineering-2026-7292",
+    "Chaos Engineering 2026 7292",
+    "/blog/ai-agent-tool-builder-2026-7068",
+    "Ai Agent Tool Builder 2026 7068"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Database Migration Service: case study",
+    "description": "Database Migration Service: case study",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T04:51:11Z",
+    "dateModified": "2026-08-07T04:51:11Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/database-migration-service-case-study/"
+  }
+}

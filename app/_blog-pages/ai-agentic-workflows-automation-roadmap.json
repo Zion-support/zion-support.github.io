@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "AI Agentic Workflows: automation roadmap | Zion Tech Group",
+    "description": "AI Agentic Workflows: automation roadmap",
+    "keywords": [
+      "it",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "AI Agentic Workflows: automation roadmap",
+      "description": "AI Agentic Workflows: automation roadmap",
+      "url": "https://ziontechgroup.com/blog/ai-agentic-workflows-automation-roadmap/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/ai-agentic-workflows-automation-roadmap/"
+    }
+  },
+  "values": [
+    "AI Agentic Workflows: automation roadmap",
+    "AI Agentic Workflows: automation roadmap",
+    "AI Agentic Workflows: automation roadmap",
+    "Next actions",
+    "Review your highest-friction workflow, contact Zion Tech Group for a scoped pilot, and start with one measurable outcome. Set a 30-day review date, define success metrics, assign an owner, and document rollback criteria before expanding. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan. The organizations that move fastest in 2026 are the ones that combine clear intent with disciplined execution.",
+    "Next actions",
+    " Review your highest-friction workflow, contact Zion Tech Group for a scoped pilot, and start with one measurable outcome. Set a 30-day review date, define success metrics, assign an owner, and document rollback criteria before expanding. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan. The organizations that move fastest in 2026 are the ones that combine clear intent with disciplined execution.",
+    "/blog/database-migration-service-security-and-governance",
+    "Database Migration Service Security And Governance",
+    "/blog/endpoint-management-2026-7027",
+    "Endpoint Management 2026 7027",
+    "/blog/ai-agentic-workflows-2026-6931",
+    "Ai Agentic Workflows 2026 6931",
+    "/blog/event-driven-architecture-2026",
+    "Event Driven Architecture 2026"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "AI Agentic Workflows: automation roadmap",
+    "description": "AI Agentic Workflows: automation roadmap",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T04:52:32Z",
+    "dateModified": "2026-08-07T04:52:32Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/ai-agentic-workflows-automation-roadmap/"
+  }
+}

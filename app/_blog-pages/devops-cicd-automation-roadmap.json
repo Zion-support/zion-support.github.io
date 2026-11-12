@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "DevOps CI/CD: automation roadmap | Zion Tech Group",
+    "description": "DevOps CI/CD: automation roadmap",
+    "keywords": [
+      "data",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "DevOps CI/CD: automation roadmap",
+      "description": "DevOps CI/CD: automation roadmap",
+      "url": "https://ziontechgroup.com/blog/devops-cicd-automation-roadmap/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/devops-cicd-automation-roadmap/"
+    }
+  },
+  "values": [
+    "DevOps CI/CD: automation roadmap",
+    "DevOps CI/CD: automation roadmap",
+    "DevOps CI/CD: automation roadmap",
+    "Recommended next step",
+    "Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "Recommended next step",
+    " Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "/blog/api-gateway-management-2026-6805",
+    "Api Gateway Management 2026 6805",
+    "/blog/edge-computing-deployment-2026-7578",
+    "Edge Computing Deployment 2026 7578",
+    "/blog/api-gateway-management-2026-7081",
+    "Api Gateway Management 2026 7081",
+    "/blog/data-warehouse-modernization-2026-7091",
+    "Data Warehouse Modernization 2026 7091"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "DevOps CI/CD: automation roadmap",
+    "description": "DevOps CI/CD: automation roadmap",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-10T18:48:22Z",
+    "dateModified": "2026-08-10T18:48:22Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/devops-cicd-automation-roadmap/"
+  }
+}

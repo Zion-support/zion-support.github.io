@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "API Security Testing: ROI and cost model | Zion Tech Group",
+    "description": "API Security Testing: ROI and cost model",
+    "keywords": [
+      "ai",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "API Security Testing: ROI and cost model",
+      "description": "API Security Testing: ROI and cost model",
+      "url": "https://ziontechgroup.com/blog/api-security-testing-roi-and-cost-model/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/api-security-testing-roi-and-cost-model/"
+    }
+  },
+  "values": [
+    "API Security Testing: ROI and cost model",
+    "API Security Testing: ROI and cost model",
+    "API Security Testing: ROI and cost model",
+    "Recommended next step",
+    "Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "Recommended next step",
+    " Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "/blog/accessibility-compliance-vendor-evaluation",
+    "Accessibility Compliance Vendor Evaluation",
+    "/blog/chaos-engineering-2026-6947",
+    "Chaos Engineering 2026 6947",
+    "/blog/microsaas-hr-recruitment-checklist-for-it-leaders",
+    "Microsaas Hr Recruitment Checklist For It Leaders",
+    "/blog/ai-observability-2026-6772",
+    "Ai Observability 2026 6772"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "API Security Testing: ROI and cost model",
+    "description": "API Security Testing: ROI and cost model",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T07:57:03Z",
+    "dateModified": "2026-08-07T07:57:03Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/api-security-testing-roi-and-cost-model/"
+  }
+}

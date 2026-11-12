@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "Endpoint Management: checklist for IT leaders | Zion Tech Group",
+    "description": "Endpoint Management: checklist for IT leaders",
+    "keywords": [
+      "automation",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "Endpoint Management: checklist for IT leaders",
+      "description": "Endpoint Management: checklist for IT leaders",
+      "url": "https://ziontechgroup.com/blog/endpoint-management-checklist-for-it-leaders/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/endpoint-management-checklist-for-it-leaders/"
+    }
+  },
+  "values": [
+    "Endpoint Management: checklist for IT leaders",
+    "Endpoint Management: checklist for IT leaders",
+    "Endpoint Management: checklist for IT leaders",
+    "Recommended next step",
+    "Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "Recommended next step",
+    " Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "/blog/ai-3d-asset-generator-executive-guide",
+    "Ai 3D Asset Generator Executive Guide",
+    "/blog/api-orchestration-layer-evaluation-framework",
+    "Api Orchestration Layer Evaluation Framework",
+    "/blog/event-driven-architecture-2026-7030",
+    "Event Driven Architecture 2026 7030",
+    "/blog/micro-saas-ai-customer-onboarding-2026-7198",
+    "Micro Saas Ai Customer Onboarding 2026 7198"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Endpoint Management: checklist for IT leaders",
+    "description": "Endpoint Management: checklist for IT leaders",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T04:51:49Z",
+    "dateModified": "2026-08-07T04:51:49Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/endpoint-management-checklist-for-it-leaders/"
+  }
+}

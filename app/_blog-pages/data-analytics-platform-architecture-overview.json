@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "Data Analytics Platform: architecture overview | Zion Tech Group",
+    "description": "Data Analytics Platform: architecture overview",
+    "keywords": [
+      "automation",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "Data Analytics Platform: architecture overview",
+      "description": "Data Analytics Platform: architecture overview",
+      "url": "https://ziontechgroup.com/blog/data-analytics-platform-architecture-overview/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/data-analytics-platform-architecture-overview/"
+    }
+  },
+  "values": [
+    "Data Analytics Platform: architecture overview",
+    "Data Analytics Platform: architecture overview",
+    "Data Analytics Platform: architecture overview",
+    "Recommended next step",
+    "Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "Recommended next step",
+    " Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "/blog/ai-data-backup-2026-7107",
+    "Ai Data Backup 2026 7107",
+    "/blog/cloud-migration-services-2026-7193",
+    "Cloud Migration Services 2026 7193",
+    "/blog/ai-msp-security-compliance-2026-6980",
+    "Ai Msp Security Compliance 2026 6980",
+    "/blog/autonomous-qa-engineering-2026-7075",
+    "Autonomous Qa Engineering 2026 7075"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Data Analytics Platform: architecture overview",
+    "description": "Data Analytics Platform: architecture overview",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T04:51:36Z",
+    "dateModified": "2026-08-07T04:51:36Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/data-analytics-platform-architecture-overview/"
+  }
+}

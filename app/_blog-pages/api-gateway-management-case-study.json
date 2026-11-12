@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "API Gateway Management: case study | Zion Tech Group",
+    "description": "API Gateway Management: case study",
+    "keywords": [
+      "it",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "API Gateway Management: case study",
+      "description": "API Gateway Management: case study",
+      "url": "https://ziontechgroup.com/blog/api-gateway-management-case-study/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/api-gateway-management-case-study/"
+    }
+  },
+  "values": [
+    "API Gateway Management: case study",
+    "API Gateway Management: case study",
+    "API Gateway Management: case study",
+    "Recommended next step",
+    "Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "Recommended next step",
+    " Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "/blog/cybersecurity-for-msps-security-and-governance",
+    "Cybersecurity For Msps Security And Governance",
+    "/blog/managed-it-services-small-business-2026-6628",
+    "Managed It Services Small Business 2026 6628",
+    "/blog/ai-agentic-workflows-2026-6517",
+    "Ai Agentic Workflows 2026 6517",
+    "/blog/cloud-finops-starter-template",
+    "Cloud Finops Starter Template"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "API Gateway Management: case study",
+    "description": "API Gateway Management: case study",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T04:51:59Z",
+    "dateModified": "2026-08-07T04:51:59Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/api-gateway-management-case-study/"
+  }
+}

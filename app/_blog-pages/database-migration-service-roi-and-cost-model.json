@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "Database Migration Service: ROI and cost model | Zion Tech Group",
+    "description": "Database Migration Service: ROI and cost model",
+    "keywords": [
+      "it",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "Database Migration Service: ROI and cost model",
+      "description": "Database Migration Service: ROI and cost model",
+      "url": "https://ziontechgroup.com/blog/database-migration-service-roi-and-cost-model/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/database-migration-service-roi-and-cost-model/"
+    }
+  },
+  "values": [
+    "Database Migration Service: ROI and cost model",
+    "Database Migration Service: ROI and cost model",
+    "Database Migration Service: ROI and cost model",
+    "Outcomes to measure",
+    "Leading indicators for database migration service: roi and cost model: workflow completion rate, escalation rate, time-to-resolution, and user satisfaction. Lagging indicators: revenue trend, cost trend, customer retention, and operational efficiency. Track both leading and lagging indicators so you can explain progress to leadership before financial results appear. Use a rolling 90-day window and re-baseline monthly; this keeps the program accountable without demanding perfection on day one. Publish metrics in a shared dashboard so the whole team sees progress, not just the program sponsor.",
+    "Outcomes to measure",
+    " Leading indicators for database migration service: roi and cost model: workflow completion rate, escalation rate, time-to-resolution, and user satisfaction. Lagging indicators: revenue trend, cost trend, customer retention, and operational efficiency. Track both leading and lagging indicators so you can explain progress to leadership before financial results appear. Use a rolling 90-day window and re-baseline monthly; this keeps the program accountable without demanding perfection on day one. Publish metrics in a shared dashboard so the whole team sees progress, not just the program sponsor.",
+    "/blog/container-security-lifecycle-2026-6951",
+    "Container Security Lifecycle 2026 6951",
+    "/blog/ai-accessibility-optimizer-2026-6720",
+    "Ai Accessibility Optimizer 2026 6720",
+    "/blog/devsecops-pipeline-policy-and-compliance",
+    "Devsecops Pipeline Policy And Compliance",
+    "/blog/ai-3d-asset-generator-2026-7063",
+    "Ai 3D Asset Generator 2026 7063"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Database Migration Service: ROI and cost model",
+    "description": "Database Migration Service: ROI and cost model",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T04:51:54Z",
+    "dateModified": "2026-08-07T04:51:54Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/database-migration-service-roi-and-cost-model/"
+  }
+}

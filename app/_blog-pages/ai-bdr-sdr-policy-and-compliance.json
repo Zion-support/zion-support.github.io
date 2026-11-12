@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "AI BDR SDR: policy and compliance | Zion Tech Group",
+    "description": "AI BDR SDR: policy and compliance",
+    "keywords": [
+      "data",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "AI BDR SDR: policy and compliance",
+      "description": "AI BDR SDR: policy and compliance",
+      "url": "https://ziontechgroup.com/blog/ai-bdr-sdr-policy-and-compliance/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/ai-bdr-sdr-policy-and-compliance/"
+    }
+  },
+  "values": [
+    "AI BDR SDR: policy and compliance",
+    "AI BDR SDR: policy and compliance",
+    "AI BDR SDR: policy and compliance",
+    "Next actions",
+    "Review your highest-friction workflow, contact Zion Tech Group for a scoped pilot, and start with one measurable outcome. Set a 30-day review date, define success metrics, assign an owner, and document rollback criteria before expanding. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan. The organizations that move fastest in 2026 are the ones that combine clear intent with disciplined execution.",
+    "Next actions",
+    " Review your highest-friction workflow, contact Zion Tech Group for a scoped pilot, and start with one measurable outcome. Set a 30-day review date, define success metrics, assign an owner, and document rollback criteria before expanding. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan. The organizations that move fastest in 2026 are the ones that combine clear intent with disciplined execution.",
+    "/blog/cloud-native-app-development-2026-7088",
+    "Cloud Native App Development 2026 7088",
+    "/blog/ai-email-intelligence-architecture-overview",
+    "Ai Email Intelligence Architecture Overview",
+    "/blog/enterprise-backup-dr-architecture-overview",
+    "Enterprise Backup Dr Architecture Overview",
+    "/blog/ai-msp-security-compliance-2026-6842",
+    "Ai Msp Security Compliance 2026 6842"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "AI BDR SDR: policy and compliance",
+    "description": "AI BDR SDR: policy and compliance",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T07:26:11Z",
+    "dateModified": "2026-08-07T07:26:11Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/ai-bdr-sdr-policy-and-compliance/"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "AI BOM Procurement: policy and compliance | Zion Tech Group",
+    "description": "AI BOM Procurement: policy and compliance",
+    "keywords": [
+      "ai",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "AI BOM Procurement: policy and compliance",
+      "description": "AI BOM Procurement: policy and compliance",
+      "url": "https://ziontechgroup.com/blog/ai-bom-procurement-policy-and-compliance/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/ai-bom-procurement-policy-and-compliance/"
+    }
+  },
+  "values": [
+    "AI BOM Procurement: policy and compliance",
+    "AI BOM Procurement: policy and compliance",
+    "AI BOM Procurement: policy and compliance",
+    "Next actions",
+    "Review your highest-friction workflow, contact Zion Tech Group for a scoped pilot, and start with one measurable outcome. Set a 30-day review date, define success metrics, assign an owner, and document rollback criteria before expanding. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan. The organizations that move fastest in 2026 are the ones that combine clear intent with disciplined execution.",
+    "Next actions",
+    " Review your highest-friction workflow, contact Zion Tech Group for a scoped pilot, and start with one measurable outcome. Set a 30-day review date, define success metrics, assign an owner, and document rollback criteria before expanding. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan. The organizations that move fastest in 2026 are the ones that combine clear intent with disciplined execution.",
+    "/blog/apm-application-performance-operations-handbook",
+    "Apm Application Performance Operations Handbook",
+    "/blog/ai-api-gateway-2026-6551",
+    "Ai Api Gateway 2026 6551",
+    "/blog/api-performance-testing-implementation-playbook",
+    "Api Performance Testing Implementation Playbook",
+    "/blog/ai-bdr-sdr-2026-6800",
+    "Ai Bdr Sdr 2026 6800"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "AI BOM Procurement: policy and compliance",
+    "description": "AI BOM Procurement: policy and compliance",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T07:56:57Z",
+    "dateModified": "2026-08-07T07:56:57Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/ai-bom-procurement-policy-and-compliance/"
+  }
+}

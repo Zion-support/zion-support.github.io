@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "API Integration: operations handbook | Zion Tech Group",
+    "description": "API Integration: operations handbook",
+    "keywords": [
+      "automation",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "API Integration: operations handbook",
+      "description": "API Integration: operations handbook",
+      "url": "https://ziontechgroup.com/blog/api-integration-operations-handbook/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/api-integration-operations-handbook/"
+    }
+  },
+  "values": [
+    "API Integration: operations handbook",
+    "API Integration: operations handbook",
+    "API Integration: operations handbook",
+    "Next actions",
+    "Review your highest-friction workflow, contact Zion Tech Group for a scoped pilot, and start with one measurable outcome. Set a 30-day review date, define success metrics, assign an owner, and document rollback criteria before expanding. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan. The organizations that move fastest in 2026 are the ones that combine clear intent with disciplined execution.",
+    "Next actions",
+    " Review your highest-friction workflow, contact Zion Tech Group for a scoped pilot, and start with one measurable outcome. Set a 30-day review date, define success metrics, assign an owner, and document rollback criteria before expanding. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan. The organizations that move fastest in 2026 are the ones that combine clear intent with disciplined execution.",
+    "/blog/it-consulting-vendor-evaluation",
+    "It Consulting Vendor Evaluation",
+    "/blog/microsaas-social-media-manager-executive-guide",
+    "Microsaas Social Media Manager Executive Guide",
+    "/blog/it-consulting-2026-6639",
+    "It Consulting 2026 6639",
+    "/blog/micro-saas-ai-hr-recruitment-2026-6783",
+    "Micro Saas Ai Hr Recruitment 2026 6783"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "API Integration: operations handbook",
+    "description": "API Integration: operations handbook",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T07:26:11Z",
+    "dateModified": "2026-08-07T07:26:11Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/api-integration-operations-handbook/"
+  }
+}

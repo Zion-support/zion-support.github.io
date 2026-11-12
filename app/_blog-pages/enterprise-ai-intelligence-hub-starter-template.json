@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "Enterprise AI Intelligence Hub: starter template | Zion Tech Group",
+    "description": "Enterprise AI Intelligence Hub: starter template",
+    "keywords": [
+      "security",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "Enterprise AI Intelligence Hub: starter template",
+      "description": "Enterprise AI Intelligence Hub: starter template",
+      "url": "https://ziontechgroup.com/blog/enterprise-ai-intelligence-hub-starter-template/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/enterprise-ai-intelligence-hub-starter-template/"
+    }
+  },
+  "values": [
+    "Enterprise AI Intelligence Hub: starter template",
+    "Enterprise AI Intelligence Hub: starter template",
+    "Enterprise AI Intelligence Hub: starter template",
+    "Conversion path",
+    "If this guide matches your enterprise ai intelligence hub: starter template initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "Conversion path",
+    " If this guide matches your enterprise ai intelligence hub: starter template initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "/blog/data-analytics-platform-modern-enterprise-2026-6767",
+    "Data Analytics Platform Modern Enterprise 2026 6767",
+    "/blog/ai-observability-2026-6979",
+    "Ai Observability 2026 6979",
+    "/blog/devops-gen-ai-cicd-2026-6886",
+    "Devops Gen Ai Cicd 2026 6886",
+    "/blog/cybersecurity-platform-msp-2026-6765",
+    "Cybersecurity Platform Msp 2026 6765"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Enterprise AI Intelligence Hub: starter template",
+    "description": "Enterprise AI Intelligence Hub: starter template",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T04:51:13Z",
+    "dateModified": "2026-08-07T04:51:13Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/enterprise-ai-intelligence-hub-starter-template/"
+  }
+}

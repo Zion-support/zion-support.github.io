@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "Accessibility Compliance: policy and compliance | Zion Tech Group",
+    "description": "Accessibility Compliance: policy and compliance",
+    "keywords": [
+      "cloud",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "Accessibility Compliance: policy and compliance",
+      "description": "Accessibility Compliance: policy and compliance",
+      "url": "https://ziontechgroup.com/blog/accessibility-compliance-policy-and-compliance/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/accessibility-compliance-policy-and-compliance/"
+    }
+  },
+  "values": [
+    "Accessibility Compliance: policy and compliance",
+    "Accessibility Compliance: policy and compliance",
+    "Accessibility Compliance: policy and compliance",
+    "Recommended next step",
+    "Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "Recommended next step",
+    " Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "/blog/cloud-finops-2026-6535",
+    "Cloud Finops 2026 6535",
+    "/blog/enterprise-backup-dr-2026-6545",
+    "Enterprise Backup Dr 2026 6545",
+    "/blog/brand-voice-guardian-2026-7216",
+    "Brand Voice Guardian 2026 7216",
+    "/blog/cloud-finops-2026-6880",
+    "Cloud Finops 2026 6880"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Accessibility Compliance: policy and compliance",
+    "description": "Accessibility Compliance: policy and compliance",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T04:52:37Z",
+    "dateModified": "2026-08-07T04:52:37Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/accessibility-compliance-policy-and-compliance/"
+  }
+}

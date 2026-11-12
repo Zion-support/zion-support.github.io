@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "APM Application Performance: case study | Zion Tech Group",
+    "description": "APM Application Performance: case study",
+    "keywords": [
+      "automation",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "APM Application Performance: case study",
+      "description": "APM Application Performance: case study",
+      "url": "https://ziontechgroup.com/blog/apm-application-performance-case-study/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/apm-application-performance-case-study/"
+    }
+  },
+  "values": [
+    "APM Application Performance: case study",
+    "APM Application Performance: case study",
+    "APM Application Performance: case study",
+    "Conversion path",
+    "If this guide matches your apm application performance: case study initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "Conversion path",
+    " If this guide matches your apm application performance: case study initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "/blog/aiops-anomaly-detection-2026-7209",
+    "Aiops Anomaly Detection 2026 7209",
+    "/blog/apm-application-performance-implementation-playbook",
+    "Apm Application Performance Implementation Playbook",
+    "/blog/devops-cicd-checklist-for-it-leaders",
+    "Devops Cicd Checklist For It Leaders",
+    "/blog/ai-bdr-sdr-common-mistakes",
+    "Ai Bdr Sdr Common Mistakes"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "APM Application Performance: case study",
+    "description": "APM Application Performance: case study",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T09:13:16Z",
+    "dateModified": "2026-08-07T09:13:16Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/apm-application-performance-case-study/"
+  }
+}

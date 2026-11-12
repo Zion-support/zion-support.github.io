@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "Container Security Lifecycle: vendor evaluation | Zion Tech Group",
+    "description": "Container Security Lifecycle: vendor evaluation",
+    "keywords": [
+      "cloud",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "Container Security Lifecycle: vendor evaluation",
+      "description": "Container Security Lifecycle: vendor evaluation",
+      "url": "https://ziontechgroup.com/blog/container-security-lifecycle-vendor-evaluation/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/container-security-lifecycle-vendor-evaluation/"
+    }
+  },
+  "values": [
+    "Container Security Lifecycle: vendor evaluation",
+    "Container Security Lifecycle: vendor evaluation",
+    "Container Security Lifecycle: vendor evaluation",
+    "Next actions",
+    "Review your highest-friction workflow, contact Zion Tech Group for a scoped pilot, and start with one measurable outcome. Set a 30-day review date, define success metrics, assign an owner, and document rollback criteria before expanding. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan. The organizations that move fastest in 2026 are the ones that combine clear intent with disciplined execution.",
+    "Next actions",
+    " Review your highest-friction workflow, contact Zion Tech Group for a scoped pilot, and start with one measurable outcome. Set a 30-day review date, define success metrics, assign an owner, and document rollback criteria before expanding. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan. The organizations that move fastest in 2026 are the ones that combine clear intent with disciplined execution.",
+    "/blog/ai-autonomous-agents-automation-roadmap",
+    "Ai Autonomous Agents Automation Roadmap",
+    "/blog/ai-msp-security-compliance-2026-7049",
+    "Ai Msp Security Compliance 2026 7049",
+    "/blog/data-warehouse-modernization-2026-7160",
+    "Data Warehouse Modernization 2026 7160",
+    "/blog/network-infrastructure-implementation-playbook",
+    "Network Infrastructure Implementation Playbook"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Container Security Lifecycle: vendor evaluation",
+    "description": "Container Security Lifecycle: vendor evaluation",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T05:08:08Z",
+    "dateModified": "2026-08-07T05:08:08Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/container-security-lifecycle-vendor-evaluation/"
+  }
+}

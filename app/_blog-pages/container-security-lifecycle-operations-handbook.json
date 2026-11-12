@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "Container Security Lifecycle: operations handbook | Zion Tech Group",
+    "description": "Container Security Lifecycle: operations handbook",
+    "keywords": [
+      "ai",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "Container Security Lifecycle: operations handbook",
+      "description": "Container Security Lifecycle: operations handbook",
+      "url": "https://ziontechgroup.com/blog/container-security-lifecycle-operations-handbook/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/container-security-lifecycle-operations-handbook/"
+    }
+  },
+  "values": [
+    "Container Security Lifecycle: operations handbook",
+    "Container Security Lifecycle: operations handbook",
+    "Container Security Lifecycle: operations handbook",
+    "Conversion path",
+    "If this guide matches your container security lifecycle: operations handbook initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "Conversion path",
+    " If this guide matches your container security lifecycle: operations handbook initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "/blog/ai-bom-procurement-2026-6732",
+    "Ai Bom Procurement 2026 6732",
+    "/blog/micro-saas-ai-social-media-manager-2026-6785",
+    "Micro Saas Ai Social Media Manager 2026 6785",
+    "/blog/microsaas-social-media-manager-automation-roadmap",
+    "Microsaas Social Media Manager Automation Roadmap",
+    "/blog/ai-email-intelligence-2026-6700",
+    "Ai Email Intelligence 2026 6700"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Container Security Lifecycle: operations handbook",
+    "description": "Container Security Lifecycle: operations handbook",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T07:26:07Z",
+    "dateModified": "2026-08-07T07:26:07Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/container-security-lifecycle-operations-handbook/"
+  }
+}

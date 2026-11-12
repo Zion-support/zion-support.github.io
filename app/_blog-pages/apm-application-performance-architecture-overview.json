@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "APM Application Performance: architecture overview | Zion Tech Group",
+    "description": "APM Application Performance: architecture overview",
+    "keywords": [
+      "automation",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "APM Application Performance: architecture overview",
+      "description": "APM Application Performance: architecture overview",
+      "url": "https://ziontechgroup.com/blog/apm-application-performance-architecture-overview/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/apm-application-performance-architecture-overview/"
+    }
+  },
+  "values": [
+    "APM Application Performance: architecture overview",
+    "APM Application Performance: architecture overview",
+    "APM Application Performance: architecture overview",
+    "Conversion path",
+    "If this guide matches your apm application performance: architecture overview initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "Conversion path",
+    " If this guide matches your apm application performance: architecture overview initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "/blog/endpoint-management-2026-6751",
+    "Endpoint Management 2026 6751",
+    "/blog/managed-it-services-small-business-2026-6973",
+    "Managed It Services Small Business 2026 6973",
+    "/blog/ai-agentic-workflows-operations-handbook",
+    "Ai Agentic Workflows Operations Handbook",
+    "/blog/micro-saas-ai-translation-engine-2026-7195",
+    "Micro Saas Ai Translation Engine 2026 7195"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "APM Application Performance: architecture overview",
+    "description": "APM Application Performance: architecture overview",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T04:51:49Z",
+    "dateModified": "2026-08-07T04:51:49Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/apm-application-performance-architecture-overview/"
+  }
+}

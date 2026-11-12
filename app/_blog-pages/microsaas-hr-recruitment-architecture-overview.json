@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "MicroSaaS HR Recruitment: architecture overview | Zion Tech Group",
+    "description": "MicroSaaS HR Recruitment: architecture overview",
+    "keywords": [
+      "cloud",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "MicroSaaS HR Recruitment: architecture overview",
+      "description": "MicroSaaS HR Recruitment: architecture overview",
+      "url": "https://ziontechgroup.com/blog/microsaas-hr-recruitment-architecture-overview/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/microsaas-hr-recruitment-architecture-overview/"
+    }
+  },
+  "values": [
+    "MicroSaaS HR Recruitment: architecture overview",
+    "MicroSaaS HR Recruitment: architecture overview",
+    "MicroSaaS HR Recruitment: architecture overview",
+    "Next actions",
+    "Review your highest-friction workflow, contact Zion Tech Group for a scoped pilot, and start with one measurable outcome. Set a 30-day review date, define success metrics, assign an owner, and document rollback criteria before expanding. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan. The organizations that move fastest in 2026 are the ones that combine clear intent with disciplined execution.",
+    "Next actions",
+    " Review your highest-friction workflow, contact Zion Tech Group for a scoped pilot, and start with one measurable outcome. Set a 30-day review date, define success metrics, assign an owner, and document rollback criteria before expanding. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan. The organizations that move fastest in 2026 are the ones that combine clear intent with disciplined execution.",
+    "/blog/container-security-lifecycle-2026-7158",
+    "Container Security Lifecycle 2026 7158",
+    "/blog/ai-performance-monitoring-2026-6804",
+    "Ai Performance Monitoring 2026 6804",
+    "/blog/ai-for-hr-and-talent-acquisition-streamlining-recruitment",
+    "Ai For Hr And Talent Acquisition Streamlining Recruitment",
+    "/blog/edge-computing-deployment-deployment-patterns",
+    "Edge Computing Deployment Deployment Patterns"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "MicroSaaS HR Recruitment: architecture overview",
+    "description": "MicroSaaS HR Recruitment: architecture overview",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T08:27:30Z",
+    "dateModified": "2026-08-07T08:27:30Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/microsaas-hr-recruitment-architecture-overview/"
+  }
+}

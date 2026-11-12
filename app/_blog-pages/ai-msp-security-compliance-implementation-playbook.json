@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "AI MSP Security Compliance: implementation playbook | Zion Tech Group",
+    "description": "AI MSP Security Compliance: implementation playbook",
+    "keywords": [
+      "it",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "AI MSP Security Compliance: implementation playbook",
+      "description": "AI MSP Security Compliance: implementation playbook",
+      "url": "https://ziontechgroup.com/blog/ai-msp-security-compliance-implementation-playbook/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/ai-msp-security-compliance-implementation-playbook/"
+    }
+  },
+  "values": [
+    "AI MSP Security Compliance: implementation playbook",
+    "AI MSP Security Compliance: implementation playbook",
+    "AI MSP Security Compliance: implementation playbook",
+    "Recommended next step",
+    "Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "Recommended next step",
+    " Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "/blog/ai-accessibility-auditor-operations-handbook",
+    "Ai Accessibility Auditor Operations Handbook",
+    "/blog/cloud-cost-optimization-implementation-playbook",
+    "Cloud Cost Optimization Implementation Playbook",
+    "/blog/autonomous-code-deployment-case-study",
+    "Autonomous Code Deployment Case Study",
+    "/blog/ai-data-lakehouse-pipelines-2026-7257",
+    "Ai Data Lakehouse Pipelines 2026 7257"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "AI MSP Security Compliance: implementation playbook",
+    "description": "AI MSP Security Compliance: implementation playbook",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T08:12:14Z",
+    "dateModified": "2026-08-07T08:12:14Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/ai-msp-security-compliance-implementation-playbook/"
+  }
+}

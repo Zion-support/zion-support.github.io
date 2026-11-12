@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "Managed IT Services: case study | Zion Tech Group",
+    "description": "Managed IT Services: case study",
+    "keywords": [
+      "cloud",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "Managed IT Services: case study",
+      "description": "Managed IT Services: case study",
+      "url": "https://ziontechgroup.com/blog/managed-it-services-case-study/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/managed-it-services-case-study/"
+    }
+  },
+  "values": [
+    "Managed IT Services: case study",
+    "Managed IT Services: case study",
+    "Managed IT Services: case study",
+    "Conversion path",
+    "If this guide matches your managed it services: case study initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "Conversion path",
+    " If this guide matches your managed it services: case study initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "/blog/ai-email-intelligence-2026-6976",
+    "Ai Email Intelligence 2026 6976",
+    "/blog/ai-agent-tool-builder-2026-6792",
+    "Ai Agent Tool Builder 2026 6792",
+    "/blog/data-analytics-platform-modern-enterprise-2026-7043",
+    "Data Analytics Platform Modern Enterprise 2026 7043",
+    "/blog/chaos-engineering-implementation-playbook",
+    "Chaos Engineering Implementation Playbook"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Managed IT Services: case study",
+    "description": "Managed IT Services: case study",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T04:51:38Z",
+    "dateModified": "2026-08-07T04:51:38Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/managed-it-services-case-study/"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "Cloud Cost Optimization: checklist for IT leaders | Zion Tech Group",
+    "description": "Cloud Cost Optimization: checklist for IT leaders",
+    "keywords": [
+      "automation",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "Cloud Cost Optimization: checklist for IT leaders",
+      "description": "Cloud Cost Optimization: checklist for IT leaders",
+      "url": "https://ziontechgroup.com/blog/cloud-cost-optimization-checklist-for-it-leaders/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/cloud-cost-optimization-checklist-for-it-leaders/"
+    }
+  },
+  "values": [
+    "Cloud Cost Optimization: checklist for IT leaders",
+    "Cloud Cost Optimization: checklist for IT leaders",
+    "Cloud Cost Optimization: checklist for IT leaders",
+    "Conversion path",
+    "If this guide matches your cloud cost optimization: checklist for it leaders initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "Conversion path",
+    " If this guide matches your cloud cost optimization: checklist for it leaders initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "/blog/endpoint-management-2026-6889",
+    "Endpoint Management 2026 6889",
+    "/blog/apm-application-performance-architecture-overview",
+    "Apm Application Performance Architecture Overview",
+    "/blog/api-orchestration-layer-case-study",
+    "Api Orchestration Layer Case Study",
+    "/blog/ai-observability-executive-guide",
+    "Ai Observability Executive Guide"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Cloud Cost Optimization: checklist for IT leaders",
+    "description": "Cloud Cost Optimization: checklist for IT leaders",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T04:51:51Z",
+    "dateModified": "2026-08-07T04:51:51Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/cloud-cost-optimization-checklist-for-it-leaders/"
+  }
+}

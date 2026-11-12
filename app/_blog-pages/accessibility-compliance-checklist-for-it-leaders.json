@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "Accessibility Compliance: checklist for IT leaders | Zion Tech Group",
+    "description": "Accessibility Compliance: checklist for IT leaders",
+    "keywords": [
+      "data",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "Accessibility Compliance: checklist for IT leaders",
+      "description": "Accessibility Compliance: checklist for IT leaders",
+      "url": "https://ziontechgroup.com/blog/accessibility-compliance-checklist-for-it-leaders/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/accessibility-compliance-checklist-for-it-leaders/"
+    }
+  },
+  "values": [
+    "Accessibility Compliance: checklist for IT leaders",
+    "Accessibility Compliance: checklist for IT leaders",
+    "Accessibility Compliance: checklist for IT leaders",
+    "Conversion path",
+    "If this guide matches your accessibility compliance: checklist for it leaders initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "Conversion path",
+    " If this guide matches your accessibility compliance: checklist for it leaders initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "/blog/ai-3d-asset-generator-executive-guide",
+    "Ai 3D Asset Generator Executive Guide",
+    "/blog/cybersecurity-platform-msp-2026-6696",
+    "Cybersecurity Platform Msp 2026 6696",
+    "/blog/5g-solutions-operations-handbook",
+    "5G Solutions Operations Handbook",
+    "/blog/ai-autonomous-agents-common-mistakes",
+    "Ai Autonomous Agents Common Mistakes"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Accessibility Compliance: checklist for IT leaders",
+    "description": "Accessibility Compliance: checklist for IT leaders",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T07:26:21Z",
+    "dateModified": "2026-08-07T07:26:21Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/accessibility-compliance-checklist-for-it-leaders/"
+  }
+}

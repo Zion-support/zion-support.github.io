@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "Event Driven Architecture: common mistakes | Zion Tech Group",
+    "description": "Event Driven Architecture: common mistakes",
+    "keywords": [
+      "ai",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "Event Driven Architecture: common mistakes",
+      "description": "Event Driven Architecture: common mistakes",
+      "url": "https://ziontechgroup.com/blog/event-driven-architecture-common-mistakes/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/event-driven-architecture-common-mistakes/"
+    }
+  },
+  "values": [
+    "Event Driven Architecture: common mistakes",
+    "Event Driven Architecture: common mistakes",
+    "Event Driven Architecture: common mistakes",
+    "Conversion path",
+    "If this guide matches your event driven architecture: common mistakes initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "Conversion path",
+    " If this guide matches your event driven architecture: common mistakes initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "/blog/edge-computing-deployment-2026-7095",
+    "Edge Computing Deployment 2026 7095",
+    "/blog/cloud-cost-optimization-checklist-2026-6764",
+    "Cloud Cost Optimization Checklist 2026 6764",
+    "/blog/ai-email-intelligence-2026-7183",
+    "Ai Email Intelligence 2026 7183",
+    "/blog/automated-ai-reporting-2026-6935",
+    "Automated Ai Reporting 2026 6935"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Event Driven Architecture: common mistakes",
+    "description": "Event Driven Architecture: common mistakes",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T04:51:09Z",
+    "dateModified": "2026-08-07T04:51:09Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/event-driven-architecture-common-mistakes/"
+  }
+}

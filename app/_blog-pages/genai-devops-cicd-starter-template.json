@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "GenAI DevOps CI/CD: starter template | Zion Tech Group",
+    "description": "GenAI DevOps CI/CD: starter template",
+    "keywords": [
+      "ai",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "GenAI DevOps CI/CD: starter template",
+      "description": "GenAI DevOps CI/CD: starter template",
+      "url": "https://ziontechgroup.com/blog/genai-devops-cicd-starter-template/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/genai-devops-cicd-starter-template/"
+    }
+  },
+  "values": [
+    "GenAI DevOps CI/CD: starter template",
+    "GenAI DevOps CI/CD: starter template",
+    "GenAI DevOps CI/CD: starter template",
+    "Next actions",
+    "Review your highest-friction workflow, contact Zion Tech Group for a scoped pilot, and start with one measurable outcome. Set a 30-day review date, define success metrics, assign an owner, and document rollback criteria before expanding. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan. The organizations that move fastest in 2026 are the ones that combine clear intent with disciplined execution.",
+    "Next actions",
+    " Review your highest-friction workflow, contact Zion Tech Group for a scoped pilot, and start with one measurable outcome. Set a 30-day review date, define success metrics, assign an owner, and document rollback criteria before expanding. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan. The organizations that move fastest in 2026 are the ones that combine clear intent with disciplined execution.",
+    "/blog/automated-ai-reporting-roi-and-cost-model",
+    "Automated Ai Reporting Roi And Cost Model",
+    "/blog/cloud-cost-ai-optimizer-2026-6534",
+    "Cloud Cost Ai Optimizer 2026 6534",
+    "/blog/chaos-engineering-deployment-patterns",
+    "Chaos Engineering Deployment Patterns",
+    "/blog/smart-contract-audit-2026-6617",
+    "Smart Contract Audit 2026 6617"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "GenAI DevOps CI/CD: starter template",
+    "description": "GenAI DevOps CI/CD: starter template",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T09:43:50Z",
+    "dateModified": "2026-08-07T09:43:50Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/genai-devops-cicd-starter-template/"
+  }
+}

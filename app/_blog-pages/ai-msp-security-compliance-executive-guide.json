@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "AI MSP Security Compliance: executive guide | Zion Tech Group",
+    "description": "AI MSP Security Compliance: executive guide",
+    "keywords": [
+      "security",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "AI MSP Security Compliance: executive guide",
+      "description": "AI MSP Security Compliance: executive guide",
+      "url": "https://ziontechgroup.com/blog/ai-msp-security-compliance-executive-guide/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/ai-msp-security-compliance-executive-guide/"
+    }
+  },
+  "values": [
+    "AI MSP Security Compliance: executive guide",
+    "AI MSP Security Compliance: executive guide",
+    "AI MSP Security Compliance: executive guide",
+    "Outcomes to measure",
+    "Leading indicators for ai msp security compliance: executive guide: workflow completion rate, escalation rate, time-to-resolution, and user satisfaction. Lagging indicators: revenue trend, cost trend, customer retention, and operational efficiency. Track both leading and lagging indicators so you can explain progress to leadership before financial results appear. Use a rolling 90-day window and re-baseline monthly; this keeps the program accountable without demanding perfection on day one. Publish metrics in a shared dashboard so the whole team sees progress, not just the program sponsor.",
+    "Outcomes to measure",
+    " Leading indicators for ai msp security compliance: executive guide: workflow completion rate, escalation rate, time-to-resolution, and user satisfaction. Lagging indicators: revenue trend, cost trend, customer retention, and operational efficiency. Track both leading and lagging indicators so you can explain progress to leadership before financial results appear. Use a rolling 90-day window and re-baseline monthly; this keeps the program accountable without demanding perfection on day one. Publish metrics in a shared dashboard so the whole team sees progress, not just the program sponsor.",
+    "/blog/data-analytics-platform-modern-enterprise-2026-7181",
+    "Data Analytics Platform Modern Enterprise 2026 7181",
+    "/blog/endpoint-management-2026-7303",
+    "Endpoint Management 2026 7303",
+    "/blog/automated-ai-reporting-2026-6590",
+    "Automated Ai Reporting 2026 6590",
+    "/blog/endpoint-management-2026-6889",
+    "Endpoint Management 2026 6889"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "AI MSP Security Compliance: executive guide",
+    "description": "AI MSP Security Compliance: executive guide",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T04:52:03Z",
+    "dateModified": "2026-08-07T04:52:03Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/ai-msp-security-compliance-executive-guide/"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "DevOps CI/CD: ROI and cost model | Zion Tech Group",
+    "description": "DevOps CI/CD: ROI and cost model",
+    "keywords": [
+      "it",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "DevOps CI/CD: ROI and cost model",
+      "description": "DevOps CI/CD: ROI and cost model",
+      "url": "https://ziontechgroup.com/blog/devops-cicd-roi-and-cost-model/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/devops-cicd-roi-and-cost-model/"
+    }
+  },
+  "values": [
+    "DevOps CI/CD: ROI and cost model",
+    "DevOps CI/CD: ROI and cost model",
+    "DevOps CI/CD: ROI and cost model",
+    "Outcomes to measure",
+    "Leading indicators for devops ci/cd: roi and cost model: workflow completion rate, escalation rate, time-to-resolution, and user satisfaction. Lagging indicators: revenue trend, cost trend, customer retention, and operational efficiency. Track both leading and lagging indicators so you can explain progress to leadership before financial results appear. Use a rolling 90-day window and re-baseline monthly; this keeps the program accountable without demanding perfection on day one. Publish metrics in a shared dashboard so the whole team sees progress, not just the program sponsor.",
+    "Outcomes to measure",
+    " Leading indicators for devops ci/cd: roi and cost model: workflow completion rate, escalation rate, time-to-resolution, and user satisfaction. Lagging indicators: revenue trend, cost trend, customer retention, and operational efficiency. Track both leading and lagging indicators so you can explain progress to leadership before financial results appear. Use a rolling 90-day window and re-baseline monthly; this keeps the program accountable without demanding perfection on day one. Publish metrics in a shared dashboard so the whole team sees progress, not just the program sponsor.",
+    "/blog/ai-bdr-sdr-2026-6662",
+    "Ai Bdr Sdr 2026 6662",
+    "/blog/autonomous-code-deployment-2026-6660",
+    "Autonomous Code Deployment 2026 6660",
+    "/blog/enterprise-ai-intelligence-hub-architecture-overview",
+    "Enterprise Ai Intelligence Hub Architecture Overview",
+    "/blog/cloud-cost-optimization-checklist-2026-7178",
+    "Cloud Cost Optimization Checklist 2026 7178"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "DevOps CI/CD: ROI and cost model",
+    "description": "DevOps CI/CD: ROI and cost model",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T04:51:24Z",
+    "dateModified": "2026-08-07T04:51:24Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/devops-cicd-roi-and-cost-model/"
+  }
+}

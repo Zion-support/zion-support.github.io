@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "API Security Testing: checklist for IT leaders | Zion Tech Group",
+    "description": "API Security Testing: checklist for IT leaders",
+    "keywords": [
+      "data",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "API Security Testing: checklist for IT leaders",
+      "description": "API Security Testing: checklist for IT leaders",
+      "url": "https://ziontechgroup.com/blog/api-security-testing-checklist-for-it-leaders/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/api-security-testing-checklist-for-it-leaders/"
+    }
+  },
+  "values": [
+    "API Security Testing: checklist for IT leaders",
+    "API Security Testing: checklist for IT leaders",
+    "API Security Testing: checklist for IT leaders",
+    "Conversion path",
+    "If this guide matches your api security testing: checklist for it leaders initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "Conversion path",
+    " If this guide matches your api security testing: checklist for it leaders initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "/blog/ai-bom-procurement-security-and-governance",
+    "Ai Bom Procurement Security And Governance",
+    "/blog/ai-data-backup-2026",
+    "Ai Data Backup 2026",
+    "/blog/microsaas-customer-onboarding-vendor-evaluation",
+    "Microsaas Customer Onboarding Vendor Evaluation",
+    "/blog/ai-observability-operations-handbook",
+    "Ai Observability Operations Handbook"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "API Security Testing: checklist for IT leaders",
+    "description": "API Security Testing: checklist for IT leaders",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T05:08:04Z",
+    "dateModified": "2026-08-07T05:08:04Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/api-security-testing-checklist-for-it-leaders/"
+  }
+}

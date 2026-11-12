@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "MicroSaaS Customer Onboarding: policy and compliance | Zion Tech Group",
+    "description": "MicroSaaS Customer Onboarding: policy and compliance",
+    "keywords": [
+      "cloud",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "MicroSaaS Customer Onboarding: policy and compliance",
+      "description": "MicroSaaS Customer Onboarding: policy and compliance",
+      "url": "https://ziontechgroup.com/blog/microsaas-customer-onboarding-policy-and-compliance/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/microsaas-customer-onboarding-policy-and-compliance/"
+    }
+  },
+  "values": [
+    "MicroSaaS Customer Onboarding: policy and compliance",
+    "MicroSaaS Customer Onboarding: policy and compliance",
+    "MicroSaaS Customer Onboarding: policy and compliance",
+    "Next actions",
+    "Review your highest-friction workflow, contact Zion Tech Group for a scoped pilot, and start with one measurable outcome. Set a 30-day review date, define success metrics, assign an owner, and document rollback criteria before expanding. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan. The organizations that move fastest in 2026 are the ones that combine clear intent with disciplined execution.",
+    "Next actions",
+    " Review your highest-friction workflow, contact Zion Tech Group for a scoped pilot, and start with one measurable outcome. Set a 30-day review date, define success metrics, assign an owner, and document rollback criteria before expanding. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan. The organizations that move fastest in 2026 are the ones that combine clear intent with disciplined execution.",
+    "/blog/container-security-lifecycle-automation-roadmap",
+    "Container Security Lifecycle Automation Roadmap",
+    "/blog/cloud-finops-2026-7294",
+    "Cloud Finops 2026 7294",
+    "/blog/ai-bom-procurement-vendor-evaluation",
+    "Ai Bom Procurement Vendor Evaluation",
+    "/blog/ai-autonomous-agents-2026-6518",
+    "Ai Autonomous Agents 2026 6518"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "MicroSaaS Customer Onboarding: policy and compliance",
+    "description": "MicroSaaS Customer Onboarding: policy and compliance",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T04:52:29Z",
+    "dateModified": "2026-08-07T04:52:29Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/microsaas-customer-onboarding-policy-and-compliance/"
+  }
+}

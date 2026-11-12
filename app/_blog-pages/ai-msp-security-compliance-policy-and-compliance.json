@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "AI MSP Security Compliance: policy and compliance | Zion Tech Group",
+    "description": "AI MSP Security Compliance: policy and compliance",
+    "keywords": [
+      "ai",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "AI MSP Security Compliance: policy and compliance",
+      "description": "AI MSP Security Compliance: policy and compliance",
+      "url": "https://ziontechgroup.com/blog/ai-msp-security-compliance-policy-and-compliance/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/ai-msp-security-compliance-policy-and-compliance/"
+    }
+  },
+  "values": [
+    "AI MSP Security Compliance: policy and compliance",
+    "AI MSP Security Compliance: policy and compliance",
+    "AI MSP Security Compliance: policy and compliance",
+    "Recommended next step",
+    "Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "Recommended next step",
+    " Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "/blog/it-consulting-2026-6639",
+    "It Consulting 2026 6639",
+    "/blog/micro-saas-ai-translation-engine-2026-7126",
+    "Micro Saas Ai Translation Engine 2026 7126",
+    "/blog/graphql-federation-platform-2026-7308",
+    "Graphql Federation Platform 2026 7308",
+    "/blog/cybersecurity-platform-msp-2026-6627",
+    "Cybersecurity Platform Msp 2026 6627"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "AI MSP Security Compliance: policy and compliance",
+    "description": "AI MSP Security Compliance: policy and compliance",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T04:51:50Z",
+    "dateModified": "2026-08-07T04:51:50Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/ai-msp-security-compliance-policy-and-compliance/"
+  }
+}

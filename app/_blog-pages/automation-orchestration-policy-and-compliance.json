@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "Automation Orchestration: policy and compliance | Zion Tech Group",
+    "description": "Automation Orchestration: policy and compliance",
+    "keywords": [
+      "automation",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "Automation Orchestration: policy and compliance",
+      "description": "Automation Orchestration: policy and compliance",
+      "url": "https://ziontechgroup.com/blog/automation-orchestration-policy-and-compliance/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/automation-orchestration-policy-and-compliance/"
+    }
+  },
+  "values": [
+    "Automation Orchestration: policy and compliance",
+    "Automation Orchestration: policy and compliance",
+    "Automation Orchestration: policy and compliance",
+    "Recommended next step",
+    "Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "Recommended next step",
+    " Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "/blog/endpoint-management-policy-and-compliance",
+    "Endpoint Management Policy And Compliance",
+    "/blog/autonomous-qa-engineering-2026-7144",
+    "Autonomous Qa Engineering 2026 7144",
+    "/blog/autonomous-qa-engineering-2026-6730",
+    "Autonomous Qa Engineering 2026 6730",
+    "/blog/micro-saas-ai-hr-recruitment-2026-6852",
+    "Micro Saas Ai Hr Recruitment 2026 6852"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Automation Orchestration: policy and compliance",
+    "description": "Automation Orchestration: policy and compliance",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T04:51:15Z",
+    "dateModified": "2026-08-07T04:51:15Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/automation-orchestration-policy-and-compliance/"
+  }
+}

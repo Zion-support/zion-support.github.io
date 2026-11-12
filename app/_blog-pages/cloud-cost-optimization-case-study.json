@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "Cloud Cost Optimization: case study | Zion Tech Group",
+    "description": "Cloud Cost Optimization: case study",
+    "keywords": [
+      "automation",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "Cloud Cost Optimization: case study",
+      "description": "Cloud Cost Optimization: case study",
+      "url": "https://ziontechgroup.com/blog/cloud-cost-optimization-case-study/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/cloud-cost-optimization-case-study/"
+    }
+  },
+  "values": [
+    "Cloud Cost Optimization: case study",
+    "Cloud Cost Optimization: case study",
+    "Cloud Cost Optimization: case study",
+    "Conversion path",
+    "If this guide matches your cloud cost optimization: case study initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "Conversion path",
+    " If this guide matches your cloud cost optimization: case study initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "/blog/api-integration-2026-6806",
+    "Api Integration 2026 6806",
+    "/blog/5g-solutions-2026-6776",
+    "5G Solutions 2026 6776",
+    "/blog/ai-development-acceleration-2026-6632",
+    "Ai Development Acceleration 2026 6632",
+    "/blog/cybersecurity-platform-msp-2026-6627",
+    "Cybersecurity Platform Msp 2026 6627"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Cloud Cost Optimization: case study",
+    "description": "Cloud Cost Optimization: case study",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T04:52:03Z",
+    "dateModified": "2026-08-07T04:52:03Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/cloud-cost-optimization-case-study/"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "Cloud Migration Services: checklist for IT leaders | Zion Tech Group",
+    "description": "Cloud Migration Services: checklist for IT leaders",
+    "keywords": [
+      "ai",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "Cloud Migration Services: checklist for IT leaders",
+      "description": "Cloud Migration Services: checklist for IT leaders",
+      "url": "https://ziontechgroup.com/blog/cloud-migration-services-checklist-for-it-leaders/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/cloud-migration-services-checklist-for-it-leaders/"
+    }
+  },
+  "values": [
+    "Cloud Migration Services: checklist for IT leaders",
+    "Cloud Migration Services: checklist for IT leaders",
+    "Cloud Migration Services: checklist for IT leaders",
+    "Outcomes to measure",
+    "Leading indicators for cloud migration services: checklist for it leaders: workflow completion rate, escalation rate, time-to-resolution, and user satisfaction. Lagging indicators: revenue trend, cost trend, customer retention, and operational efficiency. Track both leading and lagging indicators so you can explain progress to leadership before financial results appear. Use a rolling 90-day window and re-baseline monthly; this keeps the program accountable without demanding perfection on day one. Publish metrics in a shared dashboard so the whole team sees progress, not just the program sponsor.",
+    "Outcomes to measure",
+    " Leading indicators for cloud migration services: checklist for it leaders: workflow completion rate, escalation rate, time-to-resolution, and user satisfaction. Lagging indicators: revenue trend, cost trend, customer retention, and operational efficiency. Track both leading and lagging indicators so you can explain progress to leadership before financial results appear. Use a rolling 90-day window and re-baseline monthly; this keeps the program accountable without demanding perfection on day one. Publish metrics in a shared dashboard so the whole team sees progress, not just the program sponsor.",
+    "/blog/api-security-testing-2026-6899",
+    "Api Security Testing 2026 6899",
+    "/blog/ai-msp-security-compliance-2026-6911",
+    "Ai Msp Security Compliance 2026 6911",
+    "/blog/ai-api-gateway-2026-7103",
+    "Ai Api Gateway 2026 7103",
+    "/blog/aiops-anomaly-detection-starter-template",
+    "Aiops Anomaly Detection Starter Template"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Cloud Migration Services: checklist for IT leaders",
+    "description": "Cloud Migration Services: checklist for IT leaders",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T04:52:31Z",
+    "dateModified": "2026-08-07T04:52:31Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/cloud-migration-services-checklist-for-it-leaders/"
+  }
+}

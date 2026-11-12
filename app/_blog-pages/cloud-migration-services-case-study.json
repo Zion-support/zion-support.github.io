@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "Cloud Migration Services: case study | Zion Tech Group",
+    "description": "Cloud Migration Services: case study",
+    "keywords": [
+      "data",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "Cloud Migration Services: case study",
+      "description": "Cloud Migration Services: case study",
+      "url": "https://ziontechgroup.com/blog/cloud-migration-services-case-study/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/cloud-migration-services-case-study/"
+    }
+  },
+  "values": [
+    "Cloud Migration Services: case study",
+    "Cloud Migration Services: case study",
+    "Cloud Migration Services: case study",
+    "Recommended next step",
+    "Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "Recommended next step",
+    " Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "/blog/brand-voice-guardian-2026-7147",
+    "Brand Voice Guardian 2026 7147",
+    "/blog/chaos-engineering-2026",
+    "Chaos Engineering 2026",
+    "/blog/ai-api-gateway-architecture-overview",
+    "Ai Api Gateway Architecture Overview",
+    "/blog/apm-application-performance-2026-6670",
+    "Apm Application Performance 2026 6670"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Cloud Migration Services: case study",
+    "description": "Cloud Migration Services: case study",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T05:08:03Z",
+    "dateModified": "2026-08-07T05:08:03Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/cloud-migration-services-case-study/"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "Cloud FinOps: operations handbook | Zion Tech Group",
+    "description": "Cloud FinOps: operations handbook",
+    "keywords": [
+      "ai",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "Cloud FinOps: operations handbook",
+      "description": "Cloud FinOps: operations handbook",
+      "url": "https://ziontechgroup.com/blog/cloud-finops-operations-handbook/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/cloud-finops-operations-handbook/"
+    }
+  },
+  "values": [
+    "Cloud FinOps: operations handbook",
+    "Cloud FinOps: operations handbook",
+    "Cloud FinOps: operations handbook",
+    "Action checklist",
+    "For cloud finops: operations handbook: pick one workflow, assign ownership, define success metrics, instrument execution, and set a 30-day review date. Write the checklist down and share it with stakeholders so expectations are explicit. Before launch, verify access controls, monitoring, rollback criteria, and on-call coverage. After launch, review metrics weekly and escalate deviations immediately; small drifts become large incidents when ignored. Use the checklist as a living document and update it as the program learns from real operation.",
+    "Action checklist",
+    " For cloud finops: operations handbook: pick one workflow, assign ownership, define success metrics, instrument execution, and set a 30-day review date. Write the checklist down and share it with stakeholders so expectations are explicit. Before launch, verify access controls, monitoring, rollback criteria, and on-call coverage. After launch, review metrics weekly and escalate deviations immediately; small drifts become large incidents when ignored. Use the checklist as a living document and update it as the program learns from real operation.",
+    "/blog/brand-voice-guardian-2026-7285",
+    "Brand Voice Guardian 2026 7285",
+    "/blog/cloud-native-app-development-2026-6674",
+    "Cloud Native App Development 2026 6674",
+    "/blog/network-infrastructure-architecture-overview",
+    "Network Infrastructure Architecture Overview",
+    "/blog/api-management-gateway-2026-7290",
+    "Api Management Gateway 2026 7290"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Cloud FinOps: operations handbook",
+    "description": "Cloud FinOps: operations handbook",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T04:51:35Z",
+    "dateModified": "2026-08-07T04:51:35Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/cloud-finops-operations-handbook/"
+  }
+}

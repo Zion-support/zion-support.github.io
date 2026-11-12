@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "Autonomous QA Engineering: case study | Zion Tech Group",
+    "description": "Autonomous QA Engineering: case study",
+    "keywords": [
+      "cloud",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "Autonomous QA Engineering: case study",
+      "description": "Autonomous QA Engineering: case study",
+      "url": "https://ziontechgroup.com/blog/autonomous-qa-engineering-case-study/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/autonomous-qa-engineering-case-study/"
+    }
+  },
+  "values": [
+    "Autonomous QA Engineering: case study",
+    "Autonomous QA Engineering: case study",
+    "Autonomous QA Engineering: case study",
+    "Recommended next step",
+    "Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "Recommended next step",
+    " Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "/blog/micro-saas-ai-translation-engine-2026-7264",
+    "Micro Saas Ai Translation Engine 2026 7264",
+    "/blog/database-migration-service-2026-6816",
+    "Database Migration Service 2026 6816",
+    "/blog/devsecops-pipeline-2026-6611",
+    "Devsecops Pipeline 2026 6611",
+    "/blog/api-security-testing-2026-6623",
+    "Api Security Testing 2026 6623"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Autonomous QA Engineering: case study",
+    "description": "Autonomous QA Engineering: case study",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T05:08:05Z",
+    "dateModified": "2026-08-07T05:08:05Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/autonomous-qa-engineering-case-study/"
+  }
+}

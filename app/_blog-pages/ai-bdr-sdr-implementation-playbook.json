@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "AI BDR SDR: implementation playbook | Zion Tech Group",
+    "description": "AI BDR SDR: implementation playbook",
+    "keywords": [
+      "it",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "AI BDR SDR: implementation playbook",
+      "description": "AI BDR SDR: implementation playbook",
+      "url": "https://ziontechgroup.com/blog/ai-bdr-sdr-implementation-playbook/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/ai-bdr-sdr-implementation-playbook/"
+    }
+  },
+  "values": [
+    "AI BDR SDR: implementation playbook",
+    "AI BDR SDR: implementation playbook",
+    "AI BDR SDR: implementation playbook",
+    "Outcomes to measure",
+    "Leading indicators for ai bdr sdr: implementation playbook: workflow completion rate, escalation rate, time-to-resolution, and user satisfaction. Lagging indicators: revenue trend, cost trend, customer retention, and operational efficiency. Track both leading and lagging indicators so you can explain progress to leadership before financial results appear. Use a rolling 90-day window and re-baseline monthly; this keeps the program accountable without demanding perfection on day one. Publish metrics in a shared dashboard so the whole team sees progress, not just the program sponsor.",
+    "Outcomes to measure",
+    " Leading indicators for ai bdr sdr: implementation playbook: workflow completion rate, escalation rate, time-to-resolution, and user satisfaction. Lagging indicators: revenue trend, cost trend, customer retention, and operational efficiency. Track both leading and lagging indicators so you can explain progress to leadership before financial results appear. Use a rolling 90-day window and re-baseline monthly; this keeps the program accountable without demanding perfection on day one. Publish metrics in a shared dashboard so the whole team sees progress, not just the program sponsor.",
+    "/blog/data-warehouse-modernization-2026-6677",
+    "Data Warehouse Modernization 2026 6677",
+    "/blog/cloud-cost-optimization-checklist-2026-6626",
+    "Cloud Cost Optimization Checklist 2026 6626",
+    "/blog/cybersecurity-platform-msp-2026-7110",
+    "Cybersecurity Platform Msp 2026 7110",
+    "/blog/aiops-anomaly-detection-2026-7209",
+    "Aiops Anomaly Detection 2026 7209"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "AI BDR SDR: implementation playbook",
+    "description": "AI BDR SDR: implementation playbook",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T04:51:11Z",
+    "dateModified": "2026-08-07T04:51:11Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/ai-bdr-sdr-implementation-playbook/"
+  }
+}

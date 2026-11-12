@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "Cyber Threat Intelligence: ROI and cost model | Zion Tech Group",
+    "description": "Cyber Threat Intelligence: ROI and cost model",
+    "keywords": [
+      "it",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "Cyber Threat Intelligence: ROI and cost model",
+      "description": "Cyber Threat Intelligence: ROI and cost model",
+      "url": "https://ziontechgroup.com/blog/cyber-threat-intelligence-roi-and-cost-model/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/cyber-threat-intelligence-roi-and-cost-model/"
+    }
+  },
+  "values": [
+    "Cyber Threat Intelligence: ROI and cost model",
+    "Cyber Threat Intelligence: ROI and cost model",
+    "Cyber Threat Intelligence: ROI and cost model",
+    "Conversion path",
+    "If this guide matches your cyber threat intelligence: roi and cost model initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "Conversion path",
+    " If this guide matches your cyber threat intelligence: roi and cost model initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "/blog/api-integration-deployment-patterns",
+    "Api Integration Deployment Patterns",
+    "/blog/api-gateway-management-2026-6828",
+    "Api Gateway Management 2026 6828",
+    "/blog/edge-computing-deployment-roi-and-cost-model",
+    "Edge Computing Deployment Roi And Cost Model",
+    "/blog/cloud-migration-services-case-study",
+    "Cloud Migration Services Case Study"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Cyber Threat Intelligence: ROI and cost model",
+    "description": "Cyber Threat Intelligence: ROI and cost model",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T07:26:20Z",
+    "dateModified": "2026-08-07T07:26:20Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/cyber-threat-intelligence-roi-and-cost-model/"
+  }
+}

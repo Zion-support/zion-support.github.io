@@ -1,0 +1,31 @@
+{
+  "template": "page-shell",
+  "metadata": {
+    "title": "Automation Orchestration | Zion Tech Group",
+    "description": "Practical guide to automation orchestration: frameworks, metrics, and rollout playbook.",
+    "alternates": {
+      "canonical": "/blog/automation-orchestration-enterprise-2026-7803/"
+    },
+    "openGraph": {
+      "title": "Automation Orchestration",
+      "description": "Practical guide to automation orchestration.",
+      "url": "https://ziontechgroup.com/blog/automation-orchestration-enterprise-2026-7803/",
+      "type": "article"
+    },
+    "twitter": {
+      "card": "summary_large_image",
+      "title": "Automation Orchestration",
+      "description": "Practical guide to automation orchestration."
+    }
+  },
+  "values": [
+    "Automation Orchestration",
+    "Practical guide to automation orchestration: frameworks, metrics, and rollout playbook.",
+    "https://ziontechgroup.com/blog/automation-orchestration-enterprise-2026-7803/",
+    "Automation Orchestration",
+    "Practical guide to automation orchestration: frameworks, metrics, and rollout playbook.",
+    "https://ziontechgroup.com/blog/automation-orchestration-enterprise-2026-7803/",
+    "Automation Orchestration is moving from experiment to operating layer. Most programs fail because they optimize for demos instead of outcomes.",
+    "With strong governance, automation orchestration becomes reliable infrastructure."
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "API Management Gateway: starter template | Zion Tech Group",
+    "description": "API Management Gateway: starter template",
+    "keywords": [
+      "cloud",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "API Management Gateway: starter template",
+      "description": "API Management Gateway: starter template",
+      "url": "https://ziontechgroup.com/blog/api-management-gateway-starter-template/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/api-management-gateway-starter-template/"
+    }
+  },
+  "values": [
+    "API Management Gateway: starter template",
+    "API Management Gateway: starter template",
+    "API Management Gateway: starter template",
+    "Recommended next step",
+    "Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "Recommended next step",
+    " Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "/blog/automation-orchestration-enterprise-2026-6837",
+    "Automation Orchestration Enterprise 2026 6837",
+    "/blog/brand-voice-guardian-vendor-evaluation",
+    "Brand Voice Guardian Vendor Evaluation",
+    "/blog/autonomous-code-deployment-policy-and-compliance",
+    "Autonomous Code Deployment Policy And Compliance",
+    "/blog/ai-in-sustainability-and-esg-reporting",
+    "Ai In Sustainability And Esg Reporting"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "API Management Gateway: starter template",
+    "description": "API Management Gateway: starter template",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T04:51:28Z",
+    "dateModified": "2026-08-07T04:51:28Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/api-management-gateway-starter-template/"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "template": "page-shell",
+  "metadata": {
+    "title": "Network Infrastructure | Zion Tech Group",
+    "description": "Practical guide to network infrastructure: frameworks, metrics, and rollout playbook.",
+    "alternates": {
+      "canonical": "/blog/network-infrastructure-2026-7123/"
+    },
+    "openGraph": {
+      "title": "Network Infrastructure",
+      "description": "Practical guide to network infrastructure.",
+      "url": "https://ziontechgroup.com/blog/network-infrastructure-2026-7123/",
+      "type": "article"
+    },
+    "twitter": {
+      "card": "summary_large_image",
+      "title": "Network Infrastructure",
+      "description": "Practical guide to network infrastructure."
+    }
+  },
+  "values": [
+    "Network Infrastructure",
+    "Practical guide to network infrastructure: frameworks, metrics, and rollout playbook.",
+    "https://ziontechgroup.com/blog/network-infrastructure-2026-7123/",
+    "Network Infrastructure",
+    "Practical guide to network infrastructure: frameworks, metrics, and rollout playbook.",
+    "https://ziontechgroup.com/blog/network-infrastructure-2026-7123/",
+    "Network Infrastructure is moving from experiment to operating layer. Most programs fail because they optimize for demos instead of outcomes.",
+    "With strong governance, network infrastructure becomes reliable infrastructure."
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "Automation Orchestration | Zion Tech Group",
+    "description": "Automation Orchestration",
+    "keywords": [
+      "automation",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "Automation Orchestration",
+      "description": "Automation Orchestration",
+      "url": "https://ziontechgroup.com/blog/automation-orchestration-enterprise-2026/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/automation-orchestration-enterprise-2026/"
+    }
+  },
+  "values": [
+    "Automation Orchestration",
+    "Automation Orchestration",
+    "Automation Orchestration",
+    "Recommended next step",
+    "Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "Recommended next step",
+    " Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "/blog/ai-accessibility-auditor-2026-6581",
+    "Ai Accessibility Auditor 2026 6581",
+    "/blog/chaos-engineering-case-study",
+    "Chaos Engineering Case Study",
+    "/blog/endpoint-management-2026-7096",
+    "Endpoint Management 2026 7096",
+    "/blog/cloud-cost-optimization-checklist-2026-6833",
+    "Cloud Cost Optimization Checklist 2026 6833"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Automation Orchestration",
+    "description": "Automation Orchestration",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T04:52:02Z",
+    "dateModified": "2026-08-07T04:52:02Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/automation-orchestration-enterprise-2026/"
+  }
+}

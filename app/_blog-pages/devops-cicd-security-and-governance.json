@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "DevOps CI/CD: security and governance | Zion Tech Group",
+    "description": "DevOps CI/CD: security and governance",
+    "keywords": [
+      "it",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "DevOps CI/CD: security and governance",
+      "description": "DevOps CI/CD: security and governance",
+      "url": "https://ziontechgroup.com/blog/devops-cicd-security-and-governance/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/devops-cicd-security-and-governance/"
+    }
+  },
+  "values": [
+    "DevOps CI/CD: security and governance",
+    "DevOps CI/CD: security and governance",
+    "DevOps CI/CD: security and governance",
+    "Conversion path",
+    "If this guide matches your devops ci/cd: security and governance initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "Conversion path",
+    " If this guide matches your devops ci/cd: security and governance initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "/blog/ai-msp-security-compliance-2026-7325",
+    "Ai Msp Security Compliance 2026 7325",
+    "/blog/network-infrastructure-2026-6985",
+    "Network Infrastructure 2026 6985",
+    "/blog/ai-accessibility-optimizer-2026-6927",
+    "Ai Accessibility Optimizer 2026 6927",
+    "/blog/event-driven-architecture-2026-7237",
+    "Event Driven Architecture 2026 7237"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "DevOps CI/CD: security and governance",
+    "description": "DevOps CI/CD: security and governance",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T04:51:26Z",
+    "dateModified": "2026-08-07T04:51:26Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/devops-cicd-security-and-governance/"
+  }
+}

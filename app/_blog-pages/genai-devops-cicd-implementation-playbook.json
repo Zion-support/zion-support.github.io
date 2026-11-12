@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "GenAI DevOps CI/CD: implementation playbook | Zion Tech Group",
+    "description": "GenAI DevOps CI/CD: implementation playbook",
+    "keywords": [
+      "it",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "GenAI DevOps CI/CD: implementation playbook",
+      "description": "GenAI DevOps CI/CD: implementation playbook",
+      "url": "https://ziontechgroup.com/blog/genai-devops-cicd-implementation-playbook/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/genai-devops-cicd-implementation-playbook/"
+    }
+  },
+  "values": [
+    "GenAI DevOps CI/CD: implementation playbook",
+    "GenAI DevOps CI/CD: implementation playbook",
+    "GenAI DevOps CI/CD: implementation playbook",
+    "Conversion path",
+    "If this guide matches your genai devops ci/cd: implementation playbook initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "Conversion path",
+    " If this guide matches your genai devops ci/cd: implementation playbook initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "/blog/ai-agentic-workflows-2026-7345",
+    "Ai Agentic Workflows 2026 7345",
+    "/blog/api-management-gateway-2026-7221",
+    "Api Management Gateway 2026 7221",
+    "/blog/api-gateway-management-2026-6805",
+    "Api Gateway Management 2026 6805",
+    "/blog/autonomous-code-deployment-2026-6522",
+    "Autonomous Code Deployment 2026 6522"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "GenAI DevOps CI/CD: implementation playbook",
+    "description": "GenAI DevOps CI/CD: implementation playbook",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T04:51:36Z",
+    "dateModified": "2026-08-07T04:51:36Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/genai-devops-cicd-implementation-playbook/"
+  }
+}

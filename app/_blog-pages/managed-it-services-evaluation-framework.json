@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "Managed IT Services: evaluation framework | Zion Tech Group",
+    "description": "Managed IT Services: evaluation framework",
+    "keywords": [
+      "cloud",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "Managed IT Services: evaluation framework",
+      "description": "Managed IT Services: evaluation framework",
+      "url": "https://ziontechgroup.com/blog/managed-it-services-evaluation-framework/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/managed-it-services-evaluation-framework/"
+    }
+  },
+  "values": [
+    "Managed IT Services: evaluation framework",
+    "Managed IT Services: evaluation framework",
+    "Managed IT Services: evaluation framework",
+    "Recommended next step",
+    "Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "Recommended next step",
+    " Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "/blog/data-analytics-platform-modern-enterprise-2026-7319",
+    "Data Analytics Platform Modern Enterprise 2026 7319",
+    "/blog/ai-ad-copy-generator-policy-and-compliance",
+    "Ai Ad Copy Generator Policy And Compliance",
+    "/blog/ai-development-acceleration-2026-6770",
+    "Ai Development Acceleration 2026 6770",
+    "/blog/micro-saas-ai-hr-recruitment-2026-6990",
+    "Micro Saas Ai Hr Recruitment 2026 6990"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Managed IT Services: evaluation framework",
+    "description": "Managed IT Services: evaluation framework",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T04:52:02Z",
+    "dateModified": "2026-08-07T04:52:02Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/managed-it-services-evaluation-framework/"
+  }
+}

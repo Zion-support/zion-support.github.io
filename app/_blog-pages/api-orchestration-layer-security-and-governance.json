@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "API Orchestration Layer: security and governance | Zion Tech Group",
+    "description": "API Orchestration Layer: security and governance",
+    "keywords": [
+      "automation",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "API Orchestration Layer: security and governance",
+      "description": "API Orchestration Layer: security and governance",
+      "url": "https://ziontechgroup.com/blog/api-orchestration-layer-security-and-governance/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/api-orchestration-layer-security-and-governance/"
+    }
+  },
+  "values": [
+    "API Orchestration Layer: security and governance",
+    "API Orchestration Layer: security and governance",
+    "API Orchestration Layer: security and governance",
+    "Conversion path",
+    "If this guide matches your api orchestration layer: security and governance initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "Conversion path",
+    " If this guide matches your api orchestration layer: security and governance initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "/blog/ai-bom-procurement-starter-template",
+    "Ai Bom Procurement Starter Template",
+    "/blog/cloud-native-app-development-2026-7019",
+    "Cloud Native App Development 2026 7019",
+    "/blog/automated-ai-reporting-2026-6797",
+    "Automated Ai Reporting 2026 6797",
+    "/blog/event-driven-architecture-2026-6892",
+    "Event Driven Architecture 2026 6892"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "API Orchestration Layer: security and governance",
+    "description": "API Orchestration Layer: security and governance",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T07:56:54Z",
+    "dateModified": "2026-08-07T07:56:54Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/api-orchestration-layer-security-and-governance/"
+  }
+}

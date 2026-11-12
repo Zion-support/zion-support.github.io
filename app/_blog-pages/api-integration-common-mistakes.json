@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "API Integration: common mistakes | Zion Tech Group",
+    "description": "API Integration: common mistakes",
+    "keywords": [
+      "ai",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "API Integration: common mistakes",
+      "description": "API Integration: common mistakes",
+      "url": "https://ziontechgroup.com/blog/api-integration-common-mistakes/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/api-integration-common-mistakes/"
+    }
+  },
+  "values": [
+    "API Integration: common mistakes",
+    "API Integration: common mistakes",
+    "API Integration: common mistakes",
+    "Conversion path",
+    "If this guide matches your api integration: common mistakes initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "Conversion path",
+    " If this guide matches your api integration: common mistakes initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "/blog/brand-voice-guardian-2026-6526",
+    "Brand Voice Guardian 2026 6526",
+    "/blog/ai-data-lakehouse-pipelines-checklist-for-it-leaders",
+    "Ai Data Lakehouse Pipelines Checklist For It Leaders",
+    "/blog/autonomous-qa-engineering-vendor-evaluation",
+    "Autonomous Qa Engineering Vendor Evaluation",
+    "/blog/micro-saas-ai-hr-recruitment-2026-6576",
+    "Micro Saas Ai Hr Recruitment 2026 6576"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "API Integration: common mistakes",
+    "description": "API Integration: common mistakes",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T04:52:07Z",
+    "dateModified": "2026-08-07T04:52:07Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/api-integration-common-mistakes/"
+  }
+}

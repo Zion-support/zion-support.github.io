@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "DevSecOps Pipeline: vendor evaluation | Zion Tech Group",
+    "description": "DevSecOps Pipeline: vendor evaluation",
+    "keywords": [
+      "it",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "DevSecOps Pipeline: vendor evaluation",
+      "description": "DevSecOps Pipeline: vendor evaluation",
+      "url": "https://ziontechgroup.com/blog/devsecops-pipeline-vendor-evaluation/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/devsecops-pipeline-vendor-evaluation/"
+    }
+  },
+  "values": [
+    "DevSecOps Pipeline: vendor evaluation",
+    "DevSecOps Pipeline: vendor evaluation",
+    "DevSecOps Pipeline: vendor evaluation",
+    "Conversion path",
+    "If this guide matches your devsecops pipeline: vendor evaluation initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "Conversion path",
+    " If this guide matches your devsecops pipeline: vendor evaluation initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "/blog/ai-agent-safety-evaluation-deployment-patterns",
+    "Ai Agent Safety Evaluation Deployment Patterns",
+    "/blog/smart-contract-audit-2026-6824",
+    "Smart Contract Audit 2026 6824",
+    "/blog/ai-agent-safety-evaluation-2026-6929",
+    "Ai Agent Safety Evaluation 2026 6929",
+    "/blog/ai-observability-2026-7255",
+    "Ai Observability 2026 7255"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "DevSecOps Pipeline: vendor evaluation",
+    "description": "DevSecOps Pipeline: vendor evaluation",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T04:51:15Z",
+    "dateModified": "2026-08-07T04:51:15Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/devsecops-pipeline-vendor-evaluation/"
+  }
+}

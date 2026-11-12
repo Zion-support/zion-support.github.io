@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "Brand Voice Guardian: architecture overview | Zion Tech Group",
+    "description": "Brand Voice Guardian: architecture overview",
+    "keywords": [
+      "automation",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "Brand Voice Guardian: architecture overview",
+      "description": "Brand Voice Guardian: architecture overview",
+      "url": "https://ziontechgroup.com/blog/brand-voice-guardian-architecture-overview/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/brand-voice-guardian-architecture-overview/"
+    }
+  },
+  "values": [
+    "Brand Voice Guardian: architecture overview",
+    "Brand Voice Guardian: architecture overview",
+    "Brand Voice Guardian: architecture overview",
+    "Recommended next step",
+    "Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "Recommended next step",
+    " Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "/blog/automation-orchestration-enterprise-2026-7182",
+    "Automation Orchestration Enterprise 2026 7182",
+    "/blog/ai-customer-support-common-mistakes",
+    "Ai Customer Support Common Mistakes",
+    "/blog/database-migration-service-vendor-evaluation",
+    "Database Migration Service Vendor Evaluation",
+    "/blog/devsecops-pipeline-implementation-playbook",
+    "Devsecops Pipeline Implementation Playbook"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Brand Voice Guardian: architecture overview",
+    "description": "Brand Voice Guardian: architecture overview",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T05:08:09Z",
+    "dateModified": "2026-08-07T05:08:09Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/brand-voice-guardian-architecture-overview/"
+  }
+}

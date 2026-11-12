@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "MicroSaaS Expense Tracker: architecture overview | Zion Tech Group",
+    "description": "MicroSaaS Expense Tracker: architecture overview",
+    "keywords": [
+      "data",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "MicroSaaS Expense Tracker: architecture overview",
+      "description": "MicroSaaS Expense Tracker: architecture overview",
+      "url": "https://ziontechgroup.com/blog/microsaas-expense-tracker-architecture-overview/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/microsaas-expense-tracker-architecture-overview/"
+    }
+  },
+  "values": [
+    "MicroSaaS Expense Tracker: architecture overview",
+    "MicroSaaS Expense Tracker: architecture overview",
+    "MicroSaaS Expense Tracker: architecture overview",
+    "Conversion path",
+    "If this guide matches your microsaas expense tracker: architecture overview initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "Conversion path",
+    " If this guide matches your microsaas expense tracker: architecture overview initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "/blog/event-driven-architecture-2026-6616",
+    "Event Driven Architecture 2026 6616",
+    "/blog/data-analytics-platform-modern-enterprise-2026-6560",
+    "Data Analytics Platform Modern Enterprise 2026 6560",
+    "/blog/ai-for-government-services-and-public-sector-automation",
+    "Ai For Government Services And Public Sector Automation",
+    "/blog/aiops-anomaly-detection-2026",
+    "Aiops Anomaly Detection 2026"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "MicroSaaS Expense Tracker: architecture overview",
+    "description": "MicroSaaS Expense Tracker: architecture overview",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T04:51:36Z",
+    "dateModified": "2026-08-07T04:51:36Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/microsaas-expense-tracker-architecture-overview/"
+  }
+}

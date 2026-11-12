@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "DevOps CI/CD: case study | Zion Tech Group",
+    "description": "DevOps CI/CD: case study",
+    "keywords": [
+      "it",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "DevOps CI/CD: case study",
+      "description": "DevOps CI/CD: case study",
+      "url": "https://ziontechgroup.com/blog/devops-cicd-case-study/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/devops-cicd-case-study/"
+    }
+  },
+  "values": [
+    "DevOps CI/CD: case study",
+    "DevOps CI/CD: case study",
+    "DevOps CI/CD: case study",
+    "Recommended next step",
+    "Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "Recommended next step",
+    " Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "/blog/autonomous-code-deployment-2026",
+    "Autonomous Code Deployment 2026",
+    "/blog/ai-agentic-workflows-2026-7138",
+    "Ai Agentic Workflows 2026 7138",
+    "/blog/api-integration-2026-6668",
+    "Api Integration 2026 6668",
+    "/blog/ai-ad-copy-generator-2026-7342",
+    "Ai Ad Copy Generator 2026 7342"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "DevOps CI/CD: case study",
+    "description": "DevOps CI/CD: case study",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T04:21:35Z",
+    "dateModified": "2026-08-07T04:21:35Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/devops-cicd-case-study/"
+  }
+}

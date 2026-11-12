@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "Cybersecurity for MSPs: deployment patterns | Zion Tech Group",
+    "description": "Cybersecurity for MSPs: deployment patterns",
+    "keywords": [
+      "automation",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "Cybersecurity for MSPs: deployment patterns",
+      "description": "Cybersecurity for MSPs: deployment patterns",
+      "url": "https://ziontechgroup.com/blog/cybersecurity-for-msps-deployment-patterns/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/cybersecurity-for-msps-deployment-patterns/"
+    }
+  },
+  "values": [
+    "Cybersecurity for MSPs: deployment patterns",
+    "Cybersecurity for MSPs: deployment patterns",
+    "Cybersecurity for MSPs: deployment patterns",
+    "Conversion path",
+    "If this guide matches your cybersecurity for msps: deployment patterns initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "Conversion path",
+    " If this guide matches your cybersecurity for msps: deployment patterns initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "/blog/ai-observability-common-mistakes",
+    "Ai Observability Common Mistakes",
+    "/blog/ai-accessibility-auditor-2026-7202",
+    "Ai Accessibility Auditor 2026 7202",
+    "/blog/micro-saas-ai-translation-engine-2026-6712",
+    "Micro Saas Ai Translation Engine 2026 6712",
+    "/blog/data-warehouse-modernization-2026-6815",
+    "Data Warehouse Modernization 2026 6815"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Cybersecurity for MSPs: deployment patterns",
+    "description": "Cybersecurity for MSPs: deployment patterns",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T07:56:41Z",
+    "dateModified": "2026-08-07T07:56:41Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/cybersecurity-for-msps-deployment-patterns/"
+  }
+}

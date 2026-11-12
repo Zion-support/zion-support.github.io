@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "Cloud FinOps: case study | Zion Tech Group",
+    "description": "Cloud FinOps: case study",
+    "keywords": [
+      "data",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "Cloud FinOps: case study",
+      "description": "Cloud FinOps: case study",
+      "url": "https://ziontechgroup.com/blog/cloud-finops-case-study/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/cloud-finops-case-study/"
+    }
+  },
+  "values": [
+    "Cloud FinOps: case study",
+    "Cloud FinOps: case study",
+    "Cloud FinOps: case study",
+    "Outcomes to measure",
+    "Leading indicators for cloud finops: case study: workflow completion rate, escalation rate, time-to-resolution, and user satisfaction. Lagging indicators: revenue trend, cost trend, customer retention, and operational efficiency. Track both leading and lagging indicators so you can explain progress to leadership before financial results appear. Use a rolling 90-day window and re-baseline monthly; this keeps the program accountable without demanding perfection on day one. Publish metrics in a shared dashboard so the whole team sees progress, not just the program sponsor.",
+    "Outcomes to measure",
+    " Leading indicators for cloud finops: case study: workflow completion rate, escalation rate, time-to-resolution, and user satisfaction. Lagging indicators: revenue trend, cost trend, customer retention, and operational efficiency. Track both leading and lagging indicators so you can explain progress to leadership before financial results appear. Use a rolling 90-day window and re-baseline monthly; this keeps the program accountable without demanding perfection on day one. Publish metrics in a shared dashboard so the whole team sees progress, not just the program sponsor.",
+    "/blog/cyber-threat-intelligence-2026-6676",
+    "Cyber Threat Intelligence 2026 6676",
+    "/blog/it-consulting-architecture-overview",
+    "It Consulting Architecture Overview",
+    "/blog/cloud-cost-ai-optimizer-automation-roadmap",
+    "Cloud Cost Ai Optimizer Automation Roadmap",
+    "/blog/devops-cicd-2026-6849",
+    "Devops Cicd 2026 6849"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Cloud FinOps: case study",
+    "description": "Cloud FinOps: case study",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T04:52:38Z",
+    "dateModified": "2026-08-07T04:52:38Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/cloud-finops-case-study/"
+  }
+}

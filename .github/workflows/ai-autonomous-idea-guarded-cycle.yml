@@ -63,7 +63,7 @@ jobs:
           npm run type-check
           npm run test:ci
           npm run rsc:guard
-          npm run build
+          NODE_OPTIONS=--max-old-space-size=6144 npm run build
 
       - name: Commit and push guarded-cycle updates
         if: ${{ github.event_name == 'schedule' || github.event.inputs.auto_commit != 'false' }}

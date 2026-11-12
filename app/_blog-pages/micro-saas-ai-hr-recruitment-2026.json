@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "MicroSaaS HR Recruitment | Zion Tech Group",
+    "description": "MicroSaaS HR Recruitment",
+    "keywords": [
+      "it",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "MicroSaaS HR Recruitment",
+      "description": "MicroSaaS HR Recruitment",
+      "url": "https://ziontechgroup.com/blog/micro-saas-ai-hr-recruitment-2026/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/micro-saas-ai-hr-recruitment-2026/"
+    }
+  },
+  "values": [
+    "MicroSaaS HR Recruitment",
+    "MicroSaaS HR Recruitment",
+    "MicroSaaS HR Recruitment",
+    "Conversion path",
+    "If this guide matches your microsaas hr recruitment initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "Conversion path",
+    " If this guide matches your microsaas hr recruitment initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "/blog/endpoint-management-2026-7303",
+    "Endpoint Management 2026 7303",
+    "/blog/ai-agentic-workflows-2026-6655",
+    "Ai Agentic Workflows 2026 6655",
+    "/blog/ai-it-operations-vendor-evaluation",
+    "Ai It Operations Vendor Evaluation",
+    "/blog/api-management-gateway-security-and-governance",
+    "Api Management Gateway Security And Governance"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "MicroSaaS HR Recruitment",
+    "description": "MicroSaaS HR Recruitment",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T04:52:38Z",
+    "dateModified": "2026-08-07T04:52:38Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/micro-saas-ai-hr-recruitment-2026/"
+  }
+}

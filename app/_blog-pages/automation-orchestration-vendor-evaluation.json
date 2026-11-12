@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "Automation Orchestration: vendor evaluation | Zion Tech Group",
+    "description": "Automation Orchestration: vendor evaluation",
+    "keywords": [
+      "data",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "Automation Orchestration: vendor evaluation",
+      "description": "Automation Orchestration: vendor evaluation",
+      "url": "https://ziontechgroup.com/blog/automation-orchestration-vendor-evaluation/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/automation-orchestration-vendor-evaluation/"
+    }
+  },
+  "values": [
+    "Automation Orchestration: vendor evaluation",
+    "Automation Orchestration: vendor evaluation",
+    "Automation Orchestration: vendor evaluation",
+    "Conversion path",
+    "If this guide matches your automation orchestration: vendor evaluation initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "Conversion path",
+    " If this guide matches your automation orchestration: vendor evaluation initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "/blog/ai-autonomous-agents-executive-guide",
+    "Ai Autonomous Agents Executive Guide",
+    "/blog/ai-performance-monitoring-2026-7011",
+    "Ai Performance Monitoring 2026 7011",
+    "/blog/it-consulting-2026-6570",
+    "It Consulting 2026 6570",
+    "/blog/vector-databases-and-enterprise-rag-systems",
+    "Vector Databases And Enterprise Rag Systems"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Automation Orchestration: vendor evaluation",
+    "description": "Automation Orchestration: vendor evaluation",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T09:13:15Z",
+    "dateModified": "2026-08-07T09:13:15Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/automation-orchestration-vendor-evaluation/"
+  }
+}

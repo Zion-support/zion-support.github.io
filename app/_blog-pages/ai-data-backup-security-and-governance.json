@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "AI Data Backup: security and governance | Zion Tech Group",
+    "description": "AI Data Backup: security and governance",
+    "keywords": [
+      "data",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "AI Data Backup: security and governance",
+      "description": "AI Data Backup: security and governance",
+      "url": "https://ziontechgroup.com/blog/ai-data-backup-security-and-governance/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/ai-data-backup-security-and-governance/"
+    }
+  },
+  "values": [
+    "AI Data Backup: security and governance",
+    "AI Data Backup: security and governance",
+    "AI Data Backup: security and governance",
+    "Conversion path",
+    "If this guide matches your ai data backup: security and governance initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "Conversion path",
+    " If this guide matches your ai data backup: security and governance initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "/blog/microsaas-customer-onboarding-case-study",
+    "Microsaas Customer Onboarding Case Study",
+    "/blog/endpoint-management-2026-7165",
+    "Endpoint Management 2026 7165",
+    "/blog/ai-autonomous-agents-2026-7277",
+    "Ai Autonomous Agents 2026 7277",
+    "/blog/api-management-gateway-operations-handbook",
+    "Api Management Gateway Operations Handbook"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "AI Data Backup: security and governance",
+    "description": "AI Data Backup: security and governance",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T09:13:14Z",
+    "dateModified": "2026-08-07T09:13:14Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/ai-data-backup-security-and-governance/"
+  }
+}

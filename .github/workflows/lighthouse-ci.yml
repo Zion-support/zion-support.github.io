@@ -46,7 +46,7 @@ jobs:
 
       - name: Build
         env:
-          NODE_OPTIONS: --max-old-space-size=12288 --max-semi-space-size=64
+          NODE_OPTIONS: --max-old-space-size=6144 --max-semi-space-size=64
           NEXT_BUILD_WORKER_COUNT: "1"
         run: |
           set -euo pipefail
