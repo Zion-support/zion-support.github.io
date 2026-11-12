@@ -124,7 +124,9 @@
     "smoke:netlify:playwright": "echo 'smoke:netlify:playwright: OK (stub - automation paused post-P0)'",
     "smoke:production:sample": "echo 'smoke:production:sample: OK (stub - automation paused post-P0)'",
     "workflows:contracts:weekly": "echo 'workflows:contracts:weekly: OK (stub - automation paused post-P0)'",
-    "workflows:validate:light": "echo 'workflows:validate:light: OK (stub - automation paused post-P0)'"
+    "workflows:validate:light": "echo 'workflows:validate:light: OK (stub - automation paused post-P0)'",
+    "workflows:yaml-parse": "ruby scripts/automation/parse-github-workflows-yaml.rb",
+    "workflows:grep-guards": "bash scripts/automation/run-workflow-grep-guards.sh"
   },
   "dependencies": {
     "@sendgrid/mail": "^8.1.6",
@@ -168,7 +170,8 @@
     "yargs": "^18.0.0"
   },
   "engines": {
-    "node": "22"
+    "node": "22",
+    "npm": ">=10 <11"
   },
   "overrides": {
     "js-yaml": "^3.15.2",
