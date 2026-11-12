@@ -289,15 +289,15 @@
       <p class="lede">Use this estimator to model potential impact from your first production automation rollout.</p>
       <div class="grid g2">
         <div class="card">
-          <label>Team members in the workflow <span id="peopleVal">22</span></label>
+          <label for="people">Team members in the workflow <span id="peopleVal">22</span></label>
           <input id="people" type="range" min="2" max="80" value="22" />
-          <label>Average blended hourly cost $<span id="rateVal">58</span></label>
+          <label for="rate">Average blended hourly cost $<span id="rateVal">58</span></label>
           <input id="rate" type="range" min="20" max="200" value="58" />
-          <label>Hours/week per person that can be automated <span id="hoursVal">6</span></label>
+          <label for="hours">Hours/week per person that can be automated <span id="hoursVal">6</span></label>
           <input id="hours" type="range" min="1" max="20" value="6" />
-          <label>Expected automation coverage <span id="coverVal">35</span>%</label>
+          <label for="cover">Expected automation coverage <span id="coverVal">35</span>%</label>
           <input id="cover" type="range" min="5" max="80" value="35" />
-          <label>Estimated implementation investment $<span id="investVal">18000</span></label>
+          <label for="invest">Estimated implementation investment $<span id="investVal">18000</span></label>
           <input id="invest" type="range" min="5000" max="80000" step="1000" value="18000" />
         </div>
         <div class="card">
@@ -318,16 +318,16 @@
       <h2>Get a recommended rollout path</h2>
       <div class="grid g2">
         <div class="card">
-          <label>Primary objective</label>
+          <label for="objective">Primary objective</label>
           <select id="objective">
             <option>Increase revenue and conversion</option>
             <option>Reduce support volume</option>
             <option>Accelerate engineering delivery</option>
             <option>Strengthen security and compliance</option>
           </select>
-          <label>Target launch window</label>
+          <label for="window">Target launch window</label>
           <select id="window"><option>31-60 days</option><option>0-30 days</option><option>61-90 days</option></select>
-          <label>Team readiness score</label>
+          <label for="ready">Team readiness score</label>
           <input id="ready" type="range" min="1" max="5" value="3" />
           <p class="muted">Growing readiness: <span id="readyVal">3</span>/5</p>
         </div>
@@ -588,10 +588,10 @@
     calc();
     document.getElementById('ready').addEventListener('input',e=>{document.getElementById('readyVal').textContent=e.target.value;});
   </script>
-<p><a href="/apps/finops-scenario-estimator.html" class="finops-promo-link">FinOps AI Estimator</a></p>
+<aside aria-label="FinOps resource"><p><a href="/apps/finops-scenario-estimator.html" class="finops-promo-link">FinOps AI Estimator</a></p></aside>
 
-<section class="wrap" style="margin-top:3rem">
-  <h2 style="margin-bottom:.5rem">Zion Apps Network</h2>
+<section class="wrap" style="margin-top:3rem" aria-labelledby="apps-network-heading">
+  <h2 id="apps-network-heading" style="margin-bottom:.5rem">Zion Apps Network</h2>
   <p class="lede">Production-ready apps for FinOps, security, managed IT, and AI automation. Every app links to related tools and services. Explore the full <a href="/apps/" style="color:#c4b5fd; font-weight:650;">Apps Network hub</a>.</p>
   <div class="grid g4" style="margin-top:1rem">
     <a class="card" href="/apps/finops-pilot-guide.html" style="text-decoration:none;color:inherit">
