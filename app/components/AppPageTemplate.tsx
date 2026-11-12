@@ -95,7 +95,7 @@ export function AppPageTemplate({
           </p>
           <div className="flex flex-wrap gap-4">
             <a href="/discovery/" className="inline-flex items-center px-6 py-3 rounded-lg bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold hover:opacity-90 transition">
-              Discovery $99
+              Free Discovery
             </a>
             <a href="/pricing" className="inline-flex items-center px-6 py-3 rounded-lg border border-slate-700 text-slate-300 font-medium hover:border-purple-500/40 transition">
               View Pricing
@@ -176,7 +176,7 @@ export function AppPageTemplate({
                     href="/discovery/"
                     className="inline-flex items-center px-6 py-3 rounded-lg bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold hover:opacity-90 transition"
                   >
-                    Free AI/IT Discovery $99
+                    Free AI/IT Discovery
                   </Link>
                   <Link
                     href="/apps/playbook/"

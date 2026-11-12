@@ -481,9 +481,6 @@ export default function HomePage() {
               <Link href="/discovery/" className="btn-primary text-lg px-10 py-4">
                 🚀 Start Free Discovery Now →
               </Link>
-              <Link href="/discovery" className="btn-secondary text-lg px-10 py-4">
-                📄 Discovery $99 (Deep Dive)
-              </Link>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-left">
               <div className="bg-slate-900/60 rounded-xl p-5 border border-emerald-500/20">
@@ -1485,8 +1482,7 @@ export default function HomePage() {
                 {h.name}
               </Link>
             ))}
-            <Link href="/discovery" className="text-purple-300 font-semibold hover:text-pink-300">Free Discovery →</Link>
-            <Link href="/discovery/" className="text-purple-300 font-semibold hover:text-pink-300">Discovery $99 →</Link>
+            <Link href="/discovery/" className="text-purple-300 font-semibold hover:text-pink-300">Free Discovery →</Link>
           </div>
         </div>
       </section>
