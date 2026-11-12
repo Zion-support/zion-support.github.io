@@ -70,3 +70,6 @@ div.cta{margin:32px 0;padding:22px;border-radius:16px;background:linear-gradient
 .btn.sm,.pay a{font-size:.88rem;padding:8px 12px}
 .howto ol{color:var(--muted);padding-left:20px}
 .howto li{margin:8px 0}
+
+/* Keep the native Discovery fragment target below the sticky navigation. */
+#dq{scroll-margin-block-start:6rem}
