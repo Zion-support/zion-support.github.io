@@ -1,16 +1,22 @@
-# Ensures ai-automation-health-static-freshness-guard.yml keeps schedule/incident anchors (grep-only).
+# Checks freshness behavior and retains schedule/incident anchors.
 name: ai automation health static freshness guard smoke (weekly)
 
 permissions:
   contents: read
 
 "on":
+  pull_request:
+    paths:
+      - 'scripts/automation/check-automation-health-static-freshness.cjs'
+      - 'scripts/automation/check-automation-health-static-freshness.test.cjs'
+      - '.github/workflows/ai-automation-health-static-freshness-guard.yml'
+      - '.github/workflows/ai-automation-health-static-freshness-guard-smoke-weekly.yml'
   schedule:
     - cron: '25 12 * * 2' # Tuesdays 12:25 UTC
   workflow_dispatch:
 
 concurrency:
-  group: ai-automation-health-static-freshness-guard-smoke-weekly
+  group: ai-automation-health-static-freshness-guard-smoke-${{ github.event.pull_request.number || github.ref }}
   cancel-in-progress: false
 
 jobs:
@@ -20,6 +26,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
+        with:
+          node-version-file: '.nvmrc'
+
+      - name: Test freshness reports and workflow outputs
+        run: node --test scripts/automation/check-automation-health-static-freshness.test.cjs
 
       - name: ai-automation-health-static-freshness-guard.yml anchors
         run: |
@@ -37,3 +51,4 @@ jobs:
           grep -Fq 'automation-health-static-freshness' "$f"
           grep -Fq 'gh-issue-close-on-recovery.cjs' "$f"
           echo "ok: $f"
+

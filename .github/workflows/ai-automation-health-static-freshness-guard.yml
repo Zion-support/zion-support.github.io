@@ -41,7 +41,7 @@ jobs:
         run: node scripts/automation/check-automation-health-static-freshness.cjs
 
       - name: Escalate stale static health snapshot
-        if: steps.freshness.outputs.static_health_fresh != 'true'
+        if: ${{ !cancelled() && steps.freshness.outcome == 'failure' }}
         env:
           GH_TOKEN: ${{ github.token }}
           ISSUE_FINGERPRINT: automation-health-static-freshness
@@ -60,7 +60,7 @@ jobs:
           node scripts/automation/gh-issue-dedupe-or-create.cjs
 
       - name: Close stale-static-health issue on recovery
-        if: steps.freshness.outputs.static_health_fresh == 'true'
+        if: ${{ steps.freshness.outcome == 'success' && steps.freshness.outputs.static_health_fresh == 'true' }}
         env:
           GH_TOKEN: ${{ github.token }}
           RECOVERY_FINGERPRINT: automation-health-static-freshness
@@ -74,3 +74,4 @@ jobs:
           name: automation-health-static-freshness-${{ github.run_id }}
           path: automation/reports/automation-health-static-freshness-latest.json
           if-no-files-found: warn
+
