@@ -1,0 +1,122 @@
+{
+  "en": {
+    "lang": "en", "name": "English", "home": "Home", "network": "Apps network", "directory": "Browse the directory", "languages": "Language", "skip": "Skip to content", "open": "Explore resource", "tools": "Planning tools", "guides": "Service guides", "discovery": "Free online Discovery", "source": "Source on GitHub",
+    "title": "Find the right starting point for your next IT project",
+    "intro": "Explore Zion tools and practical guides for service requests, cloud cost planning and AI app selection. Start with one business question, document your assumptions and take a clear brief into a conversation with our team.",
+    "homeTitle": "IT services and AI projects, with a clear next step",
+    "homeIntro": "Zion Tech Group helps teams plan IT services and evaluate AI opportunities. Explore practical resources, prepare a service request or begin a free online Discovery to explain your goals.",
+    "eyebrow": "Zion Tech Group · Apps network", "featured": "Six resources. Three practical paths.",
+    "scope": "The calculators and checklists below are browser tools; the guides are planning resources. They do not connect to your infrastructure, run AI models, reserve technicians or authorize work. Review each resource’s scope before using it.",
+    "stepsTitle": "From a useful tool to a reviewable project",
+    "steps": ["Choose one outcome: a clearer service brief, a cloud cost scenario or an app comparison.", "Use assumptions or fictional data first. Record what is known, what is missing and who will validate it.", "Review the result with the responsible team. Agree scope, evidence, acceptance criteria and next steps before implementation."],
+    "discoveryBody": "Describe the process you want to improve in our free online questionnaire. Review the on-screen result and request an email copy. Email delivery depends on the provider and recipient inbox.",
+    "discoveryLanguage": "The linked questionnaire is in Portuguese. You can also contact our commercial team to discuss your project.",
+    "contact": "Contact Zion", "promo": "Explore the Zion apps network by goal", "promoBody": "Prepare a field service request, model cloud costs or compare an AI app with six practical resources and five complete language editions.",
+    "groups": ["Plan a field service", "Model a cloud cost scenario", "Evaluate an AI app"],
+    "cards": [
+      ["Datacenter service request", "Build a useful brief: equipment, location, access, maintenance window and expected completion evidence.", "Guide"],
+      ["Field visit handoff", "Review readiness in a local checklist, including the separate client, PO and Zion operational approvals.", "Browser checklist"],
+      ["FinOps scenario estimator", "Compare assumed cloud spend, savings, recurring costs and implementation investment. Results are estimates in USD.", "Browser calculator"],
+      ["FinOps pilot guide", "Define a baseline, a limited pilot and a measurement plan before treating a forecast as actual savings.", "Guide"],
+      ["App selection scorecard", "Compare evidence across five criteria and prepare a brief. A score supports review; it does not approve deployment.", "Browser scorecard"],
+      ["Equipment lifecycle guide", "Compare repair, replacement and reuse questions, and record the facts needed for a decision.", "Guide"]
+    ],
+    "fieldNote": "Before a purchase, reservation, supplier commitment or dispatch: formal written client confirmation of scope and price, the corresponding PO and a separate Zion operational release are required."
+  },
+  "pt": {
+    "lang": "pt-BR", "name": "Português", "home": "Início", "network": "Rede de apps", "directory": "Explorar o diretório", "languages": "Idioma", "skip": "Ir para o conteúdo", "open": "Explorar recurso", "tools": "Ferramentas de planejamento", "guides": "Guias de serviços", "discovery": "Discovery online gratuito", "source": "Código no GitHub",
+    "title": "Encontre o ponto de partida para seu próximo projeto de TI",
+    "intro": "Explore ferramentas e guias da Zion para solicitações de serviços, planejamento de custos de nuvem e seleção de apps de IA. Comece com uma necessidade, registre as premissas e prepare uma conversa objetiva com nossa equipe.",
+    "homeTitle": "Serviços de TI e projetos de IA com um próximo passo claro",
+    "homeIntro": "A Zion Tech Group ajuda equipes a planejar serviços de TI e avaliar oportunidades de IA. Explore recursos práticos, prepare uma solicitação de serviço ou comece um Discovery online gratuito para apresentar seus objetivos.",
+    "eyebrow": "Zion Tech Group · Rede de apps", "featured": "Seis recursos. Três caminhos práticos.",
+    "scope": "As calculadoras e listas abaixo funcionam no navegador; os guias apoiam o planejamento. Eles não se conectam à sua infraestrutura, executam modelos de IA, reservam técnicos ou autorizam serviços. Confira o escopo de cada recurso antes de usá-lo.",
+    "stepsTitle": "Da ferramenta a um projeto que pode ser avaliado",
+    "steps": ["Escolha um resultado: uma solicitação mais clara, um cenário de custos de nuvem ou uma comparação de apps.", "Comece com premissas ou dados fictícios. Registre o que está confirmado, o que falta e quem fará a validação.", "Revise o resultado com a equipe responsável. Combine escopo, evidências, critérios de aceite e próximos passos antes da implementação."],
+    "discoveryBody": "Descreva o processo que deseja melhorar no questionário online gratuito. Consulte o resultado na tela e solicite uma cópia por e-mail. A entrega depende do provedor e da caixa de entrada do destinatário.",
+    "discoveryLanguage": "O questionário está em português. Você também pode conversar com nossa equipe comercial sobre o projeto.",
+    "contact": "Fale com a Zion", "promo": "Explore a rede de apps da Zion por objetivo", "promoBody": "Prepare um atendimento de campo, simule custos de nuvem ou compare um app de IA com seis recursos práticos e cinco versões completas de idioma.",
+    "groups": ["Planeje um atendimento de campo", "Simule custos de nuvem", "Avalie um app de IA"],
+    "cards": [
+      ["Solicitação de serviço em datacenter", "Prepare um escopo útil: equipamentos, local, acesso, janela de manutenção e evidências esperadas na conclusão.", "Guia"],
+      ["Passagem de atendimento de campo", "Revise a prontidão em uma lista local, incluindo as aprovações separadas do cliente, do PO e da operação Zion.", "Lista no navegador"],
+      ["Estimador de cenários FinOps", "Compare gastos de nuvem, economia, custos recorrentes e investimento de implementação assumidos. Os resultados são estimativas em USD.", "Calculadora no navegador"],
+      ["Guia de piloto FinOps", "Defina uma linha de base, um piloto limitado e um plano de medição antes de considerar uma previsão como economia real.", "Guia"],
+      ["Avaliação para seleção de apps", "Compare evidências em cinco critérios e prepare um resumo. A pontuação apoia a análise; não aprova uma implantação.", "Avaliação no navegador"],
+      ["Guia de ciclo de vida de equipamentos", "Compare questões de reparo, substituição e reutilização e registre os fatos necessários para decidir.", "Guia"]
+    ],
+    "fieldNote": "Antes de compra, reserva, compromisso com fornecedor ou despacho: são necessários confirmação formal escrita do cliente sobre escopo e preço, o PO correspondente e uma liberação operacional separada da Zion."
+  },
+  "es": {
+    "lang": "es", "name": "Español", "home": "Inicio", "network": "Red de apps", "directory": "Explorar el directorio", "languages": "Idioma", "skip": "Ir al contenido", "open": "Explorar recurso", "tools": "Herramientas de planificación", "guides": "Guías de servicios", "discovery": "Discovery gratuito en línea", "source": "Código en GitHub",
+    "title": "Encuentre el punto de partida para su próximo proyecto de TI",
+    "intro": "Explore herramientas y guías de Zion para solicitudes de servicio, planificación de costes de nube y selección de apps de IA. Empiece con una necesidad, documente las hipótesis y prepare una conversación concreta con nuestro equipo.",
+    "homeTitle": "Servicios de TI y proyectos de IA con un siguiente paso claro",
+    "homeIntro": "Zion Tech Group ayuda a los equipos a planificar servicios de TI y evaluar oportunidades de IA. Explore recursos prácticos, prepare una solicitud de servicio o comience un Discovery gratuito en línea para explicar sus objetivos.",
+    "eyebrow": "Zion Tech Group · Red de apps", "featured": "Seis recursos. Tres caminos prácticos.",
+    "scope": "Las calculadoras y listas funcionan en el navegador; las guías apoyan la planificación. No se conectan a su infraestructura, ejecutan modelos de IA, reservan técnicos ni autorizan trabajos. Revise el alcance de cada recurso antes de utilizarlo.",
+    "stepsTitle": "De una herramienta útil a un proyecto que se puede revisar",
+    "steps": ["Elija un resultado: una solicitud más clara, un escenario de costes de nube o una comparación de apps.", "Empiece con hipótesis o datos ficticios. Registre lo confirmado, lo pendiente y quién lo validará.", "Revise el resultado con el equipo responsable. Acuerde alcance, evidencias, criterios de aceptación y siguientes pasos antes de implementar."],
+    "discoveryBody": "Describa el proceso que quiere mejorar en el cuestionario gratuito en línea. Revise el resultado en pantalla y solicite una copia por correo. La entrega depende del proveedor y del buzón del destinatario.",
+    "discoveryLanguage": "El cuestionario enlazado está en portugués. También puede contactar con nuestro equipo comercial para hablar de su proyecto.",
+    "contact": "Contactar con Zion", "promo": "Explore la red de apps de Zion según su objetivo", "promoBody": "Prepare un servicio de campo, modele costes de nube o compare una app de IA con seis recursos prácticos y cinco versiones completas de idioma.",
+    "groups": ["Planifique un servicio de campo", "Modele costes de nube", "Evalúe una app de IA"],
+    "cards": [
+      ["Solicitud de servicio en datacenter", "Prepare un alcance útil: equipos, ubicación, acceso, ventana de mantenimiento y evidencias de finalización.", "Guía"],
+      ["Traspaso de servicio de campo", "Revise la preparación en una lista local, con las aprobaciones separadas del cliente, del PO y de la operación Zion.", "Lista en el navegador"],
+      ["Estimador de escenarios FinOps", "Compare gastos de nube, ahorro, costes recurrentes e inversión de implementación supuestos. Los resultados son estimaciones en USD.", "Calculadora en el navegador"],
+      ["Guía de piloto FinOps", "Defina una base de referencia, un piloto limitado y un plan de medición antes de considerar una previsión como ahorro real.", "Guía"],
+      ["Evaluación para seleccionar apps", "Compare evidencias en cinco criterios y prepare un resumen. La puntuación apoya la revisión; no aprueba el despliegue.", "Evaluación en el navegador"],
+      ["Guía del ciclo de vida de equipos", "Compare cuestiones de reparación, sustitución y reutilización y registre los hechos necesarios para decidir.", "Guía"]
+    ],
+    "fieldNote": "Antes de comprar, reservar, comprometer a un proveedor o despachar: se requieren confirmación formal escrita del cliente sobre alcance y precio, el PO correspondiente y una autorización operativa separada de Zion."
+  },
+  "fr": {
+    "lang": "fr", "name": "Français", "home": "Accueil", "network": "Réseau d’apps", "directory": "Parcourir le répertoire", "languages": "Langue", "skip": "Aller au contenu", "open": "Explorer la ressource", "tools": "Outils de planification", "guides": "Guides de services", "discovery": "Discovery gratuit en ligne", "source": "Code sur GitHub",
+    "title": "Trouvez le point de départ de votre prochain projet informatique",
+    "intro": "Découvrez les outils et guides Zion pour préparer une intervention, estimer les coûts du cloud et sélectionner une app d’IA. Partez d’un besoin, documentez vos hypothèses et préparez un échange concret avec notre équipe.",
+    "homeTitle": "Services informatiques et projets d’IA, avec une prochaine étape claire",
+    "homeIntro": "Zion Tech Group aide les équipes à planifier des services informatiques et à évaluer les possibilités offertes par l’IA. Explorez nos ressources, préparez une demande de service ou commencez un Discovery gratuit en ligne pour présenter vos objectifs.",
+    "eyebrow": "Zion Tech Group · Réseau d’apps", "featured": "Six ressources. Trois parcours pratiques.",
+    "scope": "Les calculateurs et listes fonctionnent dans le navigateur ; les guides facilitent la planification. Ils ne se connectent pas à votre infrastructure, n’exécutent pas de modèles d’IA, ne réservent pas de techniciens et n’autorisent pas d’intervention. Vérifiez le périmètre de chaque ressource avant utilisation.",
+    "stepsTitle": "D’un outil utile à un projet prêt à être examiné",
+    "steps": ["Choisissez un résultat : une demande plus claire, un scénario de coûts cloud ou une comparaison d’apps.", "Commencez avec des hypothèses ou des données fictives. Notez les faits confirmés, les points manquants et la personne chargée de les valider.", "Examinez le résultat avec l’équipe responsable. Convenez du périmètre, des preuves, des critères d’acceptation et des prochaines étapes avant la mise en œuvre."],
+    "discoveryBody": "Décrivez le processus à améliorer dans notre questionnaire gratuit en ligne. Consultez le résultat à l’écran et demandez une copie par e-mail. La réception dépend du fournisseur et de la boîte du destinataire.",
+    "discoveryLanguage": "Le questionnaire lié est en portugais. Vous pouvez aussi contacter notre équipe commerciale pour discuter de votre projet.",
+    "contact": "Contacter Zion", "promo": "Explorez le réseau d’apps Zion selon votre objectif", "promoBody": "Préparez une intervention, estimez les coûts cloud ou comparez une app d’IA grâce à six ressources pratiques et cinq versions linguistiques complètes.",
+    "groups": ["Préparer une intervention sur site", "Estimer les coûts cloud", "Évaluer une app d’IA"],
+    "cards": [
+      ["Demande de service en datacenter", "Préparez un dossier utile : équipements, site, accès, fenêtre de maintenance et preuves de réalisation attendues.", "Guide"],
+      ["Transmission d’une intervention", "Vérifiez la préparation dans une liste locale, avec les validations distinctes du client, du bon de commande et de l’équipe opérationnelle Zion.", "Liste dans le navigateur"],
+      ["Estimateur de scénarios FinOps", "Comparez les hypothèses de dépenses cloud, d’économies, de coûts récurrents et d’investissement. Les résultats sont des estimations en USD.", "Calculateur dans le navigateur"],
+      ["Guide du pilote FinOps", "Définissez une référence, un pilote limité et un plan de mesure avant de considérer une prévision comme une économie réelle.", "Guide"],
+      ["Grille de sélection d’apps", "Comparez les preuves selon cinq critères et préparez une synthèse. Le score facilite l’examen ; il n’autorise pas le déploiement.", "Grille dans le navigateur"],
+      ["Guide du cycle de vie des équipements", "Comparez les questions de réparation, de remplacement et de réemploi et consignez les faits nécessaires à une décision.", "Guide"]
+    ],
+    "fieldNote": "Avant tout achat, réservation, engagement fournisseur ou envoi : une confirmation formelle écrite du client sur le périmètre et le prix, le bon de commande correspondant et une autorisation opérationnelle distincte de Zion sont requis."
+  },
+  "de": {
+    "lang": "de", "name": "Deutsch", "home": "Startseite", "network": "App-Netzwerk", "directory": "Verzeichnis durchsuchen", "languages": "Sprache", "skip": "Zum Inhalt", "open": "Ressource ansehen", "tools": "Planungswerkzeuge", "guides": "Service-Leitfäden", "discovery": "Kostenlose Online-Discovery", "source": "Quellcode auf GitHub",
+    "title": "Finden Sie den Einstieg für Ihr nächstes IT-Projekt",
+    "intro": "Entdecken Sie Zion-Werkzeuge und Leitfäden für Serviceanfragen, Cloud-Kostenplanung und die Auswahl von KI-Apps. Beginnen Sie mit einer konkreten Frage, dokumentieren Sie Ihre Annahmen und bereiten Sie das Gespräch mit unserem Team vor.",
+    "homeTitle": "IT-Services und KI-Projekte mit einem klaren nächsten Schritt",
+    "homeIntro": "Zion Tech Group unterstützt Teams bei der Planung von IT-Services und der Bewertung von KI-Möglichkeiten. Nutzen Sie praktische Ressourcen, bereiten Sie eine Serviceanfrage vor oder erläutern Sie Ihre Ziele in einer kostenlosen Online-Discovery.",
+    "eyebrow": "Zion Tech Group · App-Netzwerk", "featured": "Sechs Ressourcen. Drei praktische Wege.",
+    "scope": "Die Rechner und Checklisten arbeiten im Browser; die Leitfäden unterstützen die Planung. Sie verbinden sich nicht mit Ihrer Infrastruktur, führen keine KI-Modelle aus, reservieren keine Techniker und geben keine Arbeiten frei. Prüfen Sie vor der Nutzung den Umfang jeder Ressource.",
+    "stepsTitle": "Vom nützlichen Werkzeug zum prüfbaren Projekt",
+    "steps": ["Wählen Sie ein Ziel: eine klarere Serviceanfrage, ein Cloud-Kostenszenario oder einen App-Vergleich.", "Beginnen Sie mit Annahmen oder fiktiven Daten. Halten Sie bestätigte Fakten, offene Punkte und die zuständigen Prüfer fest.", "Prüfen Sie das Ergebnis mit dem verantwortlichen Team. Vereinbaren Sie Umfang, Nachweise, Abnahmekriterien und nächste Schritte vor der Umsetzung."],
+    "discoveryBody": "Beschreiben Sie im kostenlosen Online-Fragebogen den zu verbessernden Prozess. Prüfen Sie das Ergebnis am Bildschirm und fordern Sie eine E-Mail-Kopie an. Die Zustellung hängt vom Anbieter und dem Postfach des Empfängers ab.",
+    "discoveryLanguage": "Der verlinkte Fragebogen ist auf Portugiesisch. Sie können Ihr Projekt auch mit unserem Vertrieb besprechen.",
+    "contact": "Zion kontaktieren", "promo": "Das Zion-App-Netzwerk nach Ihrem Ziel erkunden", "promoBody": "Bereiten Sie einen Vor-Ort-Service vor, modellieren Sie Cloud-Kosten oder vergleichen Sie eine KI-App mit sechs praktischen Ressourcen und fünf vollständigen Sprachversionen.",
+    "groups": ["Einen Vor-Ort-Service planen", "Cloud-Kosten modellieren", "Eine KI-App bewerten"],
+    "cards": [
+      ["Serviceanfrage für ein Rechenzentrum", "Erstellen Sie eine klare Anfrage: Geräte, Standort, Zugang, Wartungsfenster und erwartete Abschlussnachweise.", "Leitfaden"],
+      ["Übergabe eines Vor-Ort-Einsatzes", "Prüfen Sie die Bereitschaft anhand einer lokalen Checkliste, einschließlich separater Kundenbestätigung, Bestellung und Zion-Betriebsfreigabe.", "Checkliste im Browser"],
+      ["FinOps-Szenariorechner", "Vergleichen Sie angenommene Cloud-Ausgaben, Einsparungen, laufende Kosten und Implementierungsinvestitionen. Die Ergebnisse sind Schätzungen in USD.", "Rechner im Browser"],
+      ["FinOps-Pilotleitfaden", "Definieren Sie einen Ausgangswert, einen begrenzten Pilotversuch und einen Messplan, bevor Sie eine Prognose als tatsächliche Einsparung behandeln.", "Leitfaden"],
+      ["Bewertung zur App-Auswahl", "Vergleichen Sie Nachweise anhand von fünf Kriterien und erstellen Sie eine Übersicht. Die Punktzahl unterstützt die Prüfung; sie gibt keine Bereitstellung frei.", "Bewertung im Browser"],
+      ["Leitfaden zum Gerätelebenszyklus", "Vergleichen Sie Fragen zu Reparatur, Ersatz und Wiederverwendung und dokumentieren Sie die entscheidungsrelevanten Fakten.", "Leitfaden"]
+    ],
+    "fieldNote": "Vor Kauf, Reservierung, Lieferantenzusage oder Entsendung sind eine formelle schriftliche Kundenbestätigung zu Umfang und Preis, die zugehörige Bestellung und eine separate betriebliche Freigabe von Zion erforderlich."
+  }
+}

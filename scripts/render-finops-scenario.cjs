@@ -2,7 +2,7 @@
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
 const out=process.argv[2]||'out',version='2026-10-09-finops-scenario-v1',base='https://ziontechgroup.com';
 const copy=JSON.parse(fs.readFileSync('content/finops-scenario.json','utf8')),common=JSON.parse(fs.readFileSync('content/operational-tools.json','utf8')),L=['en','pt','es','fr','de'];
-const prefix=l=>l==='en'?'/':'/'+l+'/',home=l=>l==='pt'?'/':'/'+l+'/',route=(l,guide=false)=>prefix(l)+'apps/finops-'+(guide?'pilot-guide':'scenario-estimator')+'.html';
+const prefix=l=>l==='en'?'/':'/'+l+'/',home=l=>'/'+l+'/',route=(l,guide=false)=>prefix(l)+'apps/finops-'+(guide?'pilot-guide':'scenario-estimator')+'.html';
 const file=u=>path.join(out,u.slice(1)+(u.endsWith('/')?'index.html':'')),exists=u=>fs.existsSync(file(u)),write=(u,s)=>{fs.mkdirSync(path.dirname(file(u)),{recursive:true});fs.writeFileSync(file(u),s);};
 const esc=s=>String(s).replace(/[&<>"']/g,x=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[x]));
 const names={en:'English',pt:'Português',es:'Español',fr:'Français',de:'Deutsch'};

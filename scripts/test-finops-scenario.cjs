@@ -4,7 +4,7 @@ const version='2026-10-09-finops-scenario-v1';
 const repo=process.cwd();
 const L=['en','pt','es','fr','de'];
 const prefix=l=>l==='en'?'/':'/'+l+'/';
-const home=l=>l==='pt'?'/':'/'+l+'/';
+const home=l=>'/'+l+'/';
 const peers=['roi-calc','sla-calculator','ai-governance-checklist'];
 let publicFile=u=>path.join(repo,'public'+u+(u.endsWith('/')?'index.html':''));
 const outFile=u=>path.join(repo,'out'+u+(u.endsWith('/')?'index.html':''));
