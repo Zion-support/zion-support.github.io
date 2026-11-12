@@ -105,7 +105,7 @@ function relatedFor(app, lang = LANGS[0]) {
   const seen = new Set([app.slug]);
   const hrefFor = (slug) =>
     lang.code !== 'en' && fs.existsSync(path.join(PUBLIC, lang.prefix, slug, 'index.html'))
-      ? `${lang.prefix}${slug}/`
+      ? `/${lang.prefix}${slug}/`
       : `/${slug}/`;
   const push = (slug, meta) => {
     if (seen.has(slug) || !AVAILABLE.has(slug)) return;
@@ -134,9 +134,9 @@ function relatedFor(app, lang = LANGS[0]) {
   return out.slice(0, 6);
 }
 
-function langSwitch(current) {
+function langSwitch(current, slug) {
   return LANGS.map((l) => {
-    const href = pageUrl(l, current.slug);
+    const href = pageUrl(l, slug);
     const currentAttr = l.code === current.code ? ' aria-current="true"' : '';
     return `<a href="${href}"${currentAttr} hreflang="${l.code}">${l.code.toUpperCase()}</a>`;
   }).join('');
@@ -202,7 +202,7 @@ ${hreflangBlock(app)}
 <header class="site">
   <div class="wrap">
     <a class="brand" href="${lang.prefix ? `/${lang.prefix}` : '/'}">Zion <span>Apps Network</span></a>
-    <nav class="langs" aria-label="${esc(t.langSwitch)}">${langSwitch(lang)}</nav>
+    <nav class="langs" aria-label="${esc(t.langSwitch)}">${langSwitch(lang, app.slug)}</nav>
   </div>
 </header>
 <main id="main">
@@ -254,7 +254,7 @@ ${relatedCards}
       <p class="note">${esc(t.ctaBody)}</p>
       <div class="cta-row">
         <a class="btn" href="/discovery/">${esc(t.ctaPrimary)}</a>
-        <a class="btn alt" href="${lang.prefix ? `/${lang.prefix}` : ''}/apps-network/">${esc(t.hubLink)}</a>
+        <a class="btn alt" href="/${lang.prefix}apps-network/">${esc(t.hubLink)}</a>
       </div>
     </section>
   </div>
@@ -262,7 +262,7 @@ ${relatedCards}
 <footer>
   <div class="wrap">
     <div>Zion Apps Network · <a href="${lang.prefix ? `/${lang.prefix}` : '/'}">Zion Tech Group</a></div>
-    <div class="langs">${langSwitch(lang)}</div>
+    <div class="langs">${langSwitch(lang, app.slug)}</div>
   </div>
 </footer>
 </body>
@@ -296,7 +296,7 @@ for (const lang of LANGS) {
       .join('');
     return `<div class="card">
   <div class="g">${esc(GROUP_LABEL[lang.code][app.group] || app.group)}</div>
-  <h3><a href="${lang.prefix}${app.slug}/">${esc(app.name[lang.code])}</a></h3>
+  <h3><a href="/${lang.prefix}${app.slug}/">${esc(app.name[lang.code])}</a></h3>
   <p>${esc(app.tagline[lang.code])}</p>
   <ul class="rel">${related}</ul>
 </div>`;
@@ -318,7 +318,7 @@ ${hreflangBlock({ slug: 'apps-network' })}
 <header class="site">
   <div class="wrap">
     <a class="brand" href="/${lang.prefix}">Zion <span>Apps Network</span></a>
-    <nav class="langs" aria-label="${esc(t.langSwitch)}">${langSwitch(lang).replaceAll(`/${lang.prefix}apps-network/`, `/${lang.prefix}apps-network/`)}</nav>
+    <nav class="langs" aria-label="${esc(t.langSwitch)}">${langSwitch(lang, 'apps-network')}</nav>
   </div>
 </header>
 <main id="main">
