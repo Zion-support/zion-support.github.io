@@ -134,6 +134,12 @@ function relatedFor(app, lang = LANGS[0]) {
   return out.slice(0, 6);
 }
 
+function discoveryCta(lang, t) {
+  const notice = {en: 'Questionnaire in Portuguese (PT-BR)', pt: '', es: 'Cuestionario en portugués (PT-BR)', fr: 'Questionnaire en portugais (PT-BR)', de: 'Fragebogen auf Portugiesisch (PT-BR)'};
+  const label = t.ctaPrimary + (notice[lang.code] ? ' — ' + notice[lang.code] : '');
+  return `<a class="btn" href="/discovery/" hreflang="pt-BR">${esc(label)}</a>`;
+}
+
 function langSwitch(current, slug) {
   return LANGS.map((l) => {
     const href = pageUrl(l, slug);
@@ -212,7 +218,7 @@ ${hreflangBlock(app)}
       <h1>${esc(app.name[lang.code])}</h1>
       <p class="lede">${esc(app.tagline[lang.code])}</p>
       <div class="cta-row">
-        <a class="btn" href="/discovery/">${esc(t.ctaPrimary)}</a>
+        ${discoveryCta(lang, t)}
         <a class="btn alt" href="/pricing/">${esc(t.ctaSecondary)}</a>
       </div>
       <div class="badges">
@@ -253,7 +259,7 @@ ${relatedCards}
       <h2>${esc(t.ctaTitle)}</h2>
       <p class="note">${esc(t.ctaBody)}</p>
       <div class="cta-row">
-        <a class="btn" href="/discovery/">${esc(t.ctaPrimary)}</a>
+        ${discoveryCta(lang, t)}
         <a class="btn alt" href="/${lang.prefix}apps-network/">${esc(t.hubLink)}</a>
       </div>
     </section>
@@ -328,7 +334,7 @@ ${hreflangBlock({ slug: 'apps-network' })}
       <h1>Zion Apps Network</h1>
       <p class="lede">${APPS.length} ${lang.code === 'pt' ? 'aplicativos publicados em cinco idiomas, todos interligados.' : lang.code === 'es' ? 'aplicaciones publicadas en cinco idiomas, todas interconectadas.' : lang.code === 'fr' ? 'applications publiées en cinq langues, toutes interconnectées.' : 'Apps in fünf Sprachen veröffentlicht und alle vernetzt.'}</p>
       <div class="cta-row">
-        <a class="btn" href="/discovery/">${esc(t.ctaPrimary)}</a>
+        ${discoveryCta(lang, t)}
         <a class="btn alt" href="/${lang.prefix}apps/">${esc(t.allApps)}</a>
       </div>
     </div>
