@@ -187,7 +187,7 @@ test('traversal, script symlinks, ancestor symlinks and non-files are reported w
     'node automation/linked-dir/secret.cjs','node automation/directory.cjs'
    ]));
    const result=audit(wfDir);
-   assert.deepEqual(result.findings.map(f=>f.reason).sort(),['not-regular-file','symlink','symlink','unsafe-path']);
+   assert.deepEqual(result.findings.map(f=>f.reason).sort(),['not-regular-file','symlink','symlink-or-non-directory','unsafe-path']);
    assert.equal(result.counts.byType['workflow-calls-successful-noop'],undefined);
    assert.ok(!JSON.stringify(result).includes('OUTSIDE_SECRET'));
   }finally{fs.rmSync(outside,{recursive:true,force:true});}
@@ -323,4 +323,65 @@ test('public acquisition rejects an existing Git directory',t=>{
  const {result}=f.acquire(f.sha,'mkdir .git\n'+acquisitionScript());
  assert.notEqual(result.status,0);
  assert.deepEqual(f.calls(),[]);
+});
+
+for(const replacement of ['ancestor','file'])test(`source ${replacement} replacement during open never reads an external inode`,t=>{
+ withFixture((root,wfDir)=>{
+  const outside=fs.mkdtempSync(path.join(os.tmpdir(),'zion-race-outside-'));
+  const dir=path.join(root,'automation','swap'),target=path.join(dir,'race.cjs');
+  const external=path.join(outside,'race.cjs');
+  fs.mkdirSync(dir);fs.writeFileSync(target,"console.log('original safe source');");
+  fs.writeFileSync(external,"console.log('stub: EXTERNAL_CONTENT_MUST_NOT_BE_READ');");
+  fs.writeFileSync(path.join(wfDir,'race.yml'),workflow(['node automation/swap/race.cjs']));
+  const externalStat=fs.statSync(external),open=fs.openSync,read=fs.readSync;
+  let swapped=false,externalReads=0;
+  t.mock.method(fs,'openSync',function(file,...args){
+   if(!swapped&&String(file).endsWith('/race.cjs')) {
+    swapped=true;
+    if(replacement==='ancestor') {fs.renameSync(dir,dir+'-original');fs.symlinkSync(outside,dir);}
+    else {fs.renameSync(target,target+'.original');fs.symlinkSync(external,target);}
+   }
+   return open.call(this,file,...args);
+  });
+  t.mock.method(fs,'readSync',function(fd,...args){
+   const stat=fs.fstatSync(fd);
+   if(stat.dev===externalStat.dev&&stat.ino===externalStat.ino)externalReads++;
+   return read.call(this,fd,...args);
+  });
+  try {
+   const result=audit(wfDir);
+   assert.ok(swapped,'Swap must occur at the actual file-open boundary');
+   assert.equal(externalReads,0,'No bytes from the external inode may be read');
+   assert.equal(result.counts.byType['workflow-calls-successful-noop'],undefined);
+   if(replacement==='file')assert.equal(result.findings.find(f=>f.script==='automation/swap/race.cjs').reason,'symlink');
+  }finally{t.mock.restoreAll();fs.rmSync(outside,{recursive:true,force:true});}
+ });
+});
+
+test('source growth after fstat remains byte-bounded and explicitly uninspected',t=>{
+ withFixture((root,wfDir)=>{
+  const target=path.join(root,'automation','growing.cjs');
+  fs.writeFileSync(target,"console.log('safe');");
+  fs.writeFileSync(path.join(wfDir,'growth.yml'),workflow(['node automation/growing.cjs']));
+  const original=fs.statSync(target),fstat=fs.fstatSync,read=fs.readSync;
+  let grown=false,bytesRead=0;
+  t.mock.method(fs,'fstatSync',function(fd,...args){
+   const stat=fstat.call(this,fd,...args);
+   if(!grown&&stat.dev===original.dev&&stat.ino===original.ino) {
+    grown=true;fs.appendFileSync(target,'x'.repeat(10000));
+   }
+   return stat;
+  });
+  t.mock.method(fs,'readSync',function(fd,...args){
+   const stat=fstat(fd),count=read.call(this,fd,...args);
+   if(stat.dev===original.dev&&stat.ino===original.ino)bytesRead+=count;
+   return count;
+  });
+  try {
+   const result=audit(wfDir);
+   assert.ok(grown);
+   assert.equal(bytesRead,3001,'Read at most the limit plus one overflow byte');
+   assert.equal(result.findings.find(f=>f.script==='automation/growing.cjs').reason,'source-size-limit');
+  }finally{t.mock.restoreAll();}
+ });
 });

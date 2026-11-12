@@ -120,26 +120,34 @@ function workflowScriptDependencies(yaml) {
 function readBoundedSource(root,relative,maxBytes) {
   const parts=relative.split('/');
   if(path.isAbsolute(relative)||parts.some(p=>!p||p==='.'||p==='..'))return {reason:'unsafe-path'};
-  let current=path.resolve(root), fd;
+  // The Linux runner provides /proc/self/fd. Pin each directory before resolving
+  // its child: O_NOFOLLOW on only the final path cannot stop ancestor swaps.
+  const {O_RDONLY,O_NOFOLLOW,O_DIRECTORY,O_NONBLOCK}=fs.constants;
+  if(process.platform!=='linux'||[O_NOFOLLOW,O_DIRECTORY,O_NONBLOCK].some(v=>v===undefined))
+    return {reason:'safe-open-unavailable'};
+  const directories=[];
+  let fd;
   try {
-    for(const part of parts) {
-      current=path.join(current,part);
-      const stat=fs.lstatSync(current);
-      if(stat.isSymbolicLink())return {reason:'symlink'};
+    let directory=fs.openSync('/',O_RDONLY|O_DIRECTORY|O_NOFOLLOW);
+    directories.push(directory);
+    for(const part of [...path.resolve(root).split('/').filter(Boolean),...parts.slice(0,-1)]) {
+      directory=fs.openSync(`/proc/self/fd/${directory}/${part}`,O_RDONLY|O_DIRECTORY|O_NOFOLLOW);
+      directories.push(directory);
     }
-    const stat=fs.lstatSync(current);
-    if(!stat.isFile())return {reason:'not-regular-file'};
-    if(stat.size>maxBytes)return {reason:'source-size-limit'};
-    fd=fs.openSync(current,fs.constants.O_RDONLY|fs.constants.O_NOFOLLOW);
+    fd=fs.openSync(`/proc/self/fd/${directory}/${parts.at(-1)}`,O_RDONLY|O_NOFOLLOW|O_NONBLOCK);
     const opened=fs.fstatSync(fd);
-    if(!opened.isFile()||opened.size>maxBytes)return {reason:'source-size-limit'};
+    if(!opened.isFile())return {reason:'not-regular-file'};
+    if(opened.size>maxBytes)return {reason:'source-size-limit'};
     const bytes=Buffer.alloc(maxBytes+1);
     let size=0, read;
     while(size<bytes.length&&(read=fs.readSync(fd,bytes,size,bytes.length-size,null))>0)size+=read;
     if(size>maxBytes)return {reason:'source-size-limit'};
     return {content:bytes.subarray(0,size).toString('utf8')};
-  }catch(error){return {reason:error.code==='ENOENT'?'missing':'unreadable'};}
-  finally{if(fd!==undefined)fs.closeSync(fd);}
+  }catch(error){return {reason:({ENOENT:'missing',ELOOP:'symlink',ENOTDIR:'symlink-or-non-directory'})[error.code]||'unreadable'};}
+  finally{
+    if(fd!==undefined)fs.closeSync(fd);
+    for(const directory of directories.reverse())fs.closeSync(directory);
+  }
 }
 function audit(dir=path.join(ROOT,'.github/workflows')){
   const root=path.resolve(dir,'..','..');
