@@ -106,4 +106,8 @@ assert_money_path discovery/index.html
 node --test scripts/normalize-zion-contact.test.cjs
 node scripts/normalize-zion-contact.cjs out/
 
+# Legacy service aliases must land on the catalog, never refresh themselves.
+node --test scripts/check-legacy-redirects.test.cjs
+node scripts/check-legacy-redirects.cjs out/
+
 echo "Prepared out ($(find out -type f | wc -l) files)"
