@@ -269,7 +269,7 @@ Para ver nosso novo portfólio e ferramentas gratuitas: https://ziontechgroup.co
 Atenciosamente,
 Kleber Garcia Alcatrão
 CEO, Zion Tech Group
-+1 302 464 0950
++55 11 97614-0076
 kleber@ziontechgroup.com`;
   }
   if (language === 'Spanish') {
@@ -289,7 +289,7 @@ Nuestro sitio web con nuevos servicios y herramientas gratuitas: https://ziontec
 Saludos,
 Kleber Garcia Alcatrão
 CEO, Zion Tech Group
-+1 302 464 0950
++55 11 97614-0076
 kleber@ziontechgroup.com`;
   }
   return `Hi,
@@ -308,7 +308,7 @@ Our latest AI services and free tools are here: https://ziontechgroup.com
 Best,
 Kleber Garcia Alcatrão
 CEO, Zion Tech Group
-+1 302 464 0950
++55 11 97614-0076
 kleber@ziontechgroup.com`;
 }
 
@@ -350,7 +350,7 @@ You can also explore our AI services and free tools here: https://ziontechgroup.
 Best,
 Kleber Garcia Alcatrão
 CEO, Zion Tech Group
-+1 302 464 0950
++55 11 97614-0076
 kleber@ziontechgroup.com`;
   });
 }

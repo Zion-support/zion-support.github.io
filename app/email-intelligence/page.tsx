@@ -107,7 +107,7 @@ export default function EmailIntelligencePage() {
           <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Email Workflow?</h2>
           <p className="text-gray-300 mb-8">Contact us today to get started with the world&apos;s most advanced AI email intelligence system.</p>
           <div className="text-gray-400 space-y-2">
-            <p>📞 <a href="tel:+13024640950" className="text-yellow-400 hover:underline">+1 302 464 0950</a></p>
+            <p>📞 <a href="tel:+5511976140076" className="text-yellow-400 hover:underline">+55 11 97614-0076</a></p>
             <p>✉️ <a href="mailto:kleber@ziontechgroup.com" className="text-yellow-400 hover:underline">kleber@ziontechgroup.com</a></p>
             <p>📍 364 E Main St STE 1008, Middletown, DE 19709</p>
           </div>

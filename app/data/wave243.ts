@@ -18,7 +18,7 @@ export const wave243VectorDatabaseServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: 'Free (100K vectors, 2 indexes)', pro: '$70/month (unlimited indexes, Enterprise features)', enterprise: 'Custom (VPC, dedicated infrastructure, SOC 2)' },
-    contactInfo: { website: 'https://pinecone.io', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://pinecone.io', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Similarity search: find the most relevant vectors in milliseconds across billions of embeddings',
       'Metadata filtering: combine vector similarity with structured filters for precise retrieval',
@@ -49,7 +49,7 @@ export const wave243ApiDocumentationServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: 'Free (public docs for open-source)', pro: '$99/month (private docs + custom domain)', enterprise: 'Custom (SSO + audit logs + dedicated CSM)' },
-    contactInfo: { website: 'https://readme.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://readme.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Interactive API explorer: developers test endpoints directly in the browser with live responses',
       'Swagger/OpenAPI import: auto-generate docs from OpenAPI 2.0/3.0/3.1 specs in minutes',
@@ -80,7 +80,7 @@ export const wave243CustomerDataPlatformServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: 'Free (1,000 tracked users, 2 sources)', pro: '$120/month (unlimited sources, 50K users)', enterprise: 'Custom (unlimited users + Audience Builder + warehouse)' },
-    contactInfo: { website: 'https://segment.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://segment.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Single tracking API: collect customer events from web, mobile, server, and cloud with one library',
       '450+ integrations: route data in real-time to analytics, CRM, advertising, and data warehouse tools',
@@ -111,7 +111,7 @@ export const wave243EdgeComputingCloudServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: 'Free (100K requests/day)', pro: '$5/month (10M requests/month)', enterprise: 'Custom (unlimited requests + dedicated support + SLA)' },
-    contactInfo: { website: 'https://workers.cloudflare.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://workers.cloudflare.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Global deployment: code runs in 310+ cities within milliseconds of every internet user',
       'Zero cold starts: V8 isolates spin up in under 1ms — no cold start penalty vs. AWS Lambda',
@@ -142,7 +142,7 @@ export const wave243TestAutomationFrameworkServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: 'Free (open source, MIT license)', pro: 'Free (Playwright Test Runner included)', enterprise: 'Custom (Playwright Cloud + Grid + enterprise support)' },
-    contactInfo: { website: 'https://playwright.dev', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://playwright.dev', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Cross-browser: test on Chromium, Firefox, and WebKit with a single unified API',
       'Auto-wait and retry: built-in assertions that wait for elements — eliminates flaky tests',

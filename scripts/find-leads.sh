@@ -60,15 +60,15 @@ cat > "$OUTPUT_FILE" << LEADS_EOF
   "outreach_templates": {
     "ai_services": {
       "subject": "AI Solutions for {company} — Custom Proposal Inside",
-      "body": "Hi {name},\n\nI noticed {company} could benefit from AI-powered solutions. At Zion Tech Group, we build custom AI services — from document processing and predictive analytics to chatbots and fraud detection.\n\nWe've helped businesses reduce costs by 40-60% with AI automation.\n\nWould you be open to a 15-minute call this week?\n\nBest regards,\nKleber Garcia\nZion Tech Group\n📱 +1 302 464 0950\n📧 kleber@ziontechgroup.com\n🌐 ziontechgroup.com"
+      "body": "Hi {name},\n\nI noticed {company} could benefit from AI-powered solutions. At Zion Tech Group, we build custom AI services — from document processing and predictive analytics to chatbots and fraud detection.\n\nWe've helped businesses reduce costs by 40-60% with AI automation.\n\nWould you be open to a 15-minute call this week?\n\nBest regards,\nKleber Garcia\nZion Tech Group\n📱 +55 11 97614-0076\n📧 kleber@ziontechgroup.com\n🌐 ziontechgroup.com"
     },
     "it_services": {
       "subject": "IT Solutions for {company} — Free Assessment",
-      "body": "Hi {name},\n\nZion Tech Group provides enterprise IT services — cloud migration, cybersecurity, disaster recovery, and infrastructure management.\n\nWe offer a free IT assessment to identify cost savings and security improvements.\n\nInterested in a quick call?\n\nBest regards,\nKleber Garcia\nZion Tech Group\n📱 +1 302 464 0950\n📧 kleber@ziontechgroup.com\n🌐 ziontechgroup.com"
+      "body": "Hi {name},\n\nZion Tech Group provides enterprise IT services — cloud migration, cybersecurity, disaster recovery, and infrastructure management.\n\nWe offer a free IT assessment to identify cost savings and security improvements.\n\nInterested in a quick call?\n\nBest regards,\nKleber Garcia\nZion Tech Group\n📱 +55 11 97614-0076\n📧 kleber@ziontechgroup.com\n🌐 ziontechgroup.com"
     },
     "micro_saas": {
       "subject": "Build Your Micro-SaaS Idea — MVP in 2 Weeks",
-      "body": "Hi {name},\n\nHave a micro-SaaS idea? We build MVPs fast — feature flags, subscription analytics, churn prediction, and more.\n\nOur AI-powered development process delivers production-ready micro-SaaS products in 2-4 weeks.\n\nLet's discuss your idea:\n\nBest regards,\nKleber Garcia\nZion Tech Group\n📱 +1 302 464 0950\n📧 kleber@ziontechgroup.com\n🌐 ziontechgroup.com"
+      "body": "Hi {name},\n\nHave a micro-SaaS idea? We build MVPs fast — feature flags, subscription analytics, churn prediction, and more.\n\nOur AI-powered development process delivers production-ready micro-SaaS products in 2-4 weeks.\n\nLet's discuss your idea:\n\nBest regards,\nKleber Garcia\nZion Tech Group\n📱 +55 11 97614-0076\n📧 kleber@ziontechgroup.com\n🌐 ziontechgroup.com"
     }
   },
   "target_industries": [

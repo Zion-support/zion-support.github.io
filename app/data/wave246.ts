@@ -18,7 +18,7 @@ export const wave246AiCodeReviewServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: 'Included with GitHub Team ($4/user/month)', pro: 'Included with GitHub Enterprise ($21/user/month)', enterprise: 'Custom (GitHub Enterprise Cloud + Advanced Security)' },
-    contactInfo: { website: 'https://github.com/features/copilot', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://github.com/features/copilot', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Automatic PR analysis: AI reviews every pull request and leaves contextual comments',
       'Bug and vulnerability detection: catches logic errors, security flaws, and anti-patterns',
@@ -49,7 +49,7 @@ export const wave246IncidentManagementServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: 'Free (5 users, basic incident management)', pro: '$21/user/month (on-call scheduling, escalations, automation)', enterprise: '$49/user/month (AIOps, analytics, change events, SSO)' },
-    contactInfo: { website: 'https://pagerduty.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://pagerduty.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Intelligent alert grouping: AI correlates 98% of noise into actionable incidents',
       '700+ integrations: Datadog, New Relic, AWS CloudWatch, Prometheus, Slack, and more',
@@ -80,7 +80,7 @@ export const wave246DeveloperExperienceServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: 'Free (open source, Apache 2.0 license)', pro: 'Free (self-hosted, community plugins)', enterprise: 'Custom (managed hosting via Roadie, Frontside, or internal platform team)' },
-    contactInfo: { website: 'https://backstage.io', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://backstage.io', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Service catalog: discover every microservice, API, library, and data pipeline in one place',
       'Software templates: scaffold new services with approved patterns in minutes, not days',
@@ -111,7 +111,7 @@ export const wave246EdgeAiInferenceServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: 'Free (open source, Apache 2.0 license)', pro: 'Free (self-hosted, community support)', enterprise: 'Custom (NVIDIA AI Enterprise license, production support, SLA)' },
-    contactInfo: { website: 'https://developer.nvidia.com/triton-inference-server', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://developer.nvidia.com/triton-inference-server', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Multi-framework support: serve TensorFlow, PyTorch, ONNX, TensorRT, and custom backends',
       'Dynamic batching: automatically group requests for 5-10x throughput improvement',
@@ -142,7 +142,7 @@ export const wave246AiGovernanceServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: 'Free (Phoenix open-source library, local LLM evaluation)', pro: '$250/month (Arize Cloud, 50M predictions monitored)', enterprise: 'Custom (unlimited scale, on-premise, SSO, dedicated support)' },
-    contactInfo: { website: 'https://arize.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://arize.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Model performance monitoring: track accuracy, drift, and degradation in real-time',
       'LLM observability: monitor prompt-response quality, token usage, and hallucination rates',

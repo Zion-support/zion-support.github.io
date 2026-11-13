@@ -3,7 +3,7 @@ export const SITE_URL = 'https://ziontechgroup.com';
 
 export const CONTACT_INFO = {
   email: 'kleber@ziontechgroup.com',
-  phone: '+1 302 464 0950',
+  phone: '+55 11 97614-0076',
   address: {
     street: '364 E Main St STE 1008',
     city: 'Middletown',

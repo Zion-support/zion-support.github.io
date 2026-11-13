@@ -24,7 +24,7 @@ export const wave232Services: Service[] = [
       'Compliance-ready reports for SOC 2, ISO 27001, and internal audits'
     ],
     pricing: { basic: '$299/mo', pro: '$799/mo', enterprise: 'Custom' },
-    contactInfo: { website: '/services/ai-code-quality-security-scan', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/ai-code-quality-security-scan', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     icon: '🔍',
     href: '/services/ai-code-quality-security-scan',
     popular: true,
@@ -52,7 +52,7 @@ export const wave232Services: Service[] = [
       'Real-time alerts prevent compliance drift before it becomes a finding'
     ],
     pricing: { basic: '$1,799/mo', pro: '$4,499/mo', enterprise: 'Custom' },
-    contactInfo: { website: '/services/pci-dss-compliance-monitoring', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/pci-dss-compliance-monitoring', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     icon: '🛡️',
     href: '/services/pci-dss-compliance-monitoring',
     popular: true,
@@ -80,7 +80,7 @@ export const wave232Services: Service[] = [
       'Simple setup gets your team tracking time in under 15 minutes'
     ],
     pricing: { basic: '$39/mo', pro: '$99/mo', enterprise: '$249/mo' },
-    contactInfo: { website: '/services/project-time-tracking-invoicing', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/project-time-tracking-invoicing', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     icon: '⏱️',
     href: '/services/project-time-tracking-invoicing',
     popular: true,
@@ -108,7 +108,7 @@ export const wave232Services: Service[] = [
       'Slack and Teams integration puts answers where people already work'
     ],
     pricing: { basic: '$199/mo', pro: '$599/mo', enterprise: 'Custom' },
-    contactInfo: { website: '/services/ai-knowledge-base-faq-chatbot', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/ai-knowledge-base-faq-chatbot', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     icon: '🤖',
     href: '/services/ai-knowledge-base-faq-chatbot',
     popular: true,
@@ -136,7 +136,7 @@ export const wave232Services: Service[] = [
       'Per-application access eliminates lateral movement attack surface'
     ],
     pricing: { basic: '$8/user/mo', pro: '$15/user/mo', enterprise: 'Custom' },
-    contactInfo: { website: '/services/zero-trust-remote-access-vpn', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/zero-trust-remote-access-vpn', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     icon: '🔐',
     href: '/services/zero-trust-remote-access-vpn',
     popular: true,

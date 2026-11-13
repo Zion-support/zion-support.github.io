@@ -529,7 +529,7 @@ def generate_draft_v6(email_data: Dict, memory: ConversationMemory,
             f"I'd love to schedule a brief call to discuss your specific needs. "
             f"What's your availability this week?\n\n"
             f"{greetings['closing']}\nKleber Garcia Alcatrao\nCEO, Zion Tech Group\n"
-            f"📧 kleber@ziontechgroup.com\n📞 +1 302 464 0950\n🌐 https://zion-support.github.io"
+            f"📧 kleber@ziontechgroup.com\n📞 +55 11 97614-0076\n🌐 https://zion-support.github.io"
         ),
         "support_request": (
             f"{greeting}\n\n"
@@ -539,7 +539,7 @@ def generate_draft_v6(email_data: Dict, memory: ConversationMemory,
             f"2. Diagnosis and action plan — within 4 hours\n"
             f"3. Dedicated engineer assigned for complex issues\n"
             f"4. Resolution update every 24 hours\n\n"
-            f"For critical production issues, call me directly at +1 302 464 0950.\n\n"
+            f"For critical production issues, call me directly at +55 11 97614-0076.\n\n"
             f"{greetings['closing']}\nKleber Garcia Alcatrao"
         ),
         "complaint": (
@@ -551,7 +551,7 @@ def generate_draft_v6(email_data: Dict, memory: ConversationMemory,
             f"2. 👤 Assigning a dedicated resolution specialist\n"
             f"3. 📋 Investigating the root cause\n"
             f"4. 📞 Will follow up with a resolution plan within 24 hours\n\n"
-            f"Please feel free to call me directly at +1 302 464 0950.\n\n"
+            f"Please feel free to call me directly at +55 11 97614-0076.\n\n"
             f"Sincerely,\nKleber Garcia Alcatrao"
         ),
         "partnership": (
@@ -574,7 +574,7 @@ def generate_draft_v6(email_data: Dict, memory: ConversationMemory,
             f"Here's my availability for the coming week:\n"
             f"• Monday – Wednesday: 10 AM – 5 PM EST\n"
             f"• Thursday – Friday: 9 AM – 4 PM EST\n"
-            f"(Call +1 302 464 0950 for earlier/later slots)\n\n"
+            f"(Call +55 11 97614-0076 for earlier/later slots)\n\n"
             f"Which day and time works best for you? I'll send a calendar invite.\n\n"
             f"{greetings['closing']}\nKleber Garcia Alcatrao"
         ),
@@ -632,7 +632,7 @@ def generate_draft_v6(email_data: Dict, memory: ConversationMemory,
             f"How can we best help you?\n\n"
             f"Explore 1,168+ services at https://zion-support.github.io\n\n"
             f"{greetings['closing']}\nKleber Garcia Alcatrao\n"
-            f"📧 kleber@ziontechgroup.com\n📞 +1 302 464 0950"
+            f"📧 kleber@ziontechgroup.com\n📞 +55 11 97614-0076"
         )
 
     # Score the draft quality

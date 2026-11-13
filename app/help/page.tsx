@@ -38,7 +38,7 @@ const QUICK_TOPICS = [
 ];
 
 const CONTACTS = [
-  { label: 'Call', value: '+1 302 464 0950', href: 'tel:+13024640950', icon: '📞' },
+  { label: 'Call', value: '+55 11 97614-0076', href: 'tel:+5511976140076', icon: '📞' },
   { label: 'Email', value: 'kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com?subject=Zion%20Help%20Inquiry', icon: '✉️' },
   { label: 'Calendly', value: 'Book 30 min', href: 'https://calendly.com/kleber-ziontechgroup', icon: '📅' },
   { label: 'Meet', value: 'Join meeting', href: 'https://meet.google.com/ouu-khao-kuy', icon: '🗓️' },
@@ -60,7 +60,7 @@ export default function HelpPage() {
         <div className="mx-auto max-w-6xl px-4 sm:px-6 py-16 md:py-20">
           <h1 className="text-3xl md:text-4xl font-bold text-white mb-3">Help Center</h1>
           <p className="text-slate-300 text-base max-w-2xl mb-8">
-            Start here for common support questions before booking a consultation. Phone: <a className="text-purple-300 hover:text-purple-200" href="tel:+13024640950">+1 302 464 0950</a>.
+            Start here for common support questions before booking a consultation. Phone: <a className="text-purple-300 hover:text-purple-200" href="tel:+5511976140076">+55 11 97614-0076</a>.
           </p>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">

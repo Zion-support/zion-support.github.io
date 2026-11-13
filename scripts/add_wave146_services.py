@@ -9,7 +9,7 @@ SERVICES_FILE = os.path.join(os.path.dirname(__file__), '..', 'app', 'data', 'se
 CONTACT = {
     "website": "https://ziontechgroup.com",
     "email": "kleber@ziontechgroup.com",
-    "phone": "+1 302 464 0950"
+    "phone": "+55 11 97614-0076"
 }
 
 ADDRESS = "364 E Main St STE 1008, Middletown, DE 19709"

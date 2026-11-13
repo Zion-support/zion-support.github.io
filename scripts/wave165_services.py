@@ -15,7 +15,7 @@ NEW_SERVICES = [
     "features": ["Autonomous multi-source research", "Academic paper analysis (PubMed, arXiv)", "Patent landscape mapping", "Competitive intelligence reports", "Auto-citation and bibliography", "Natural language query to structured report", "Scheduled monitoring and alerts", "Export to Word, PDF, LaTeX"],
     "benefits": ["10x faster literature reviews", "Never miss relevant patents or papers", "Data-driven competitive insights", "Reduce research costs by 70%"],
     "pricing": {"basic": "$499/mo", "pro": "$1,499/mo", "enterprise": "Custom"},
-    "contactInfo": {"website": "/services/ai-autonomous-research-assistant", "email": "kleber@ziontechgroup.com", "phone": "+1 302 464 0950"},
+    "contactInfo": {"website": "/services/ai-autonomous-research-assistant", "email": "kleber@ziontechgroup.com", "phone": "+55 11 97614-0076"},
     "icon": "🔬", "href": "/services/ai-autonomous-research-assistant", "popular": True, "category": "ai", "industry": "Research"
   },
   {
@@ -25,7 +25,7 @@ NEW_SERVICES = [
     "features": ["Facial emotion detection (7 basic emotions)", "Voice tone and prosody analysis", "Text sentiment and emotion detection", "Real-time streaming API", "On-device processing for privacy", "Emotion timeline visualization", "Demographic-aware analysis", "Integration with video conferencing tools"],
     "benefits": ["Understand customer emotions in real-time", "Improve product experience with emotional data", "Mental health screening support", "Privacy-first architecture"],
     "pricing": {"basic": "$799/mo", "pro": "$2,499/mo", "enterprise": "Custom"},
-    "contactInfo": {"website": "/services/ai-emotion-recognition-platform", "email": "kleber@ziontechgroup.com", "phone": "+1 302 464 0950"},
+    "contactInfo": {"website": "/services/ai-emotion-recognition-platform", "email": "kleber@ziontechgroup.com", "phone": "+55 11 97614-0076"},
     "icon": "😊", "href": "/services/ai-emotion-recognition-platform", "popular": False, "category": "ai", "industry": "Technology"
   },
   {
@@ -35,7 +35,7 @@ NEW_SERVICES = [
     "features": ["Vulnerability detection (100+ patterns)", "Multi-chain support (Ethereum, Solana, Polygon)", "Gas optimization suggestions", "Access control analysis", "Formal verification integration", "Auto-generated audit reports", "CI/CD pipeline integration", "Remediation code suggestions"],
     "benefits": ["Prevent costly smart contract exploits", "10x faster than manual audits", "Continuous monitoring for new vulnerabilities", "Meet security audit requirements"],
     "pricing": {"basic": "$1,999/mo", "pro": "$5,999/mo", "enterprise": "Custom"},
-    "contactInfo": {"website": "/services/ai-smart-contract-auditor", "email": "kleber@ziontechgroup.com", "phone": "+1 302 464 0950"},
+    "contactInfo": {"website": "/services/ai-smart-contract-auditor", "email": "kleber@ziontechgroup.com", "phone": "+55 11 97614-0076"},
     "icon": "⛓️", "href": "/services/ai-smart-contract-auditor", "popular": True, "category": "ai", "industry": "Blockchain"
   },
   {
@@ -45,7 +45,7 @@ NEW_SERVICES = [
     "features": ["Demand forecasting by role and location", "Optimal shift scheduling", "Attrition prediction with risk scores", "Succession planning recommendations", "Skills gap analysis", "Compensation benchmarking", "Integration with Workday, BambooHR, ADP", "Diversity and inclusion analytics"],
     "benefits": ["Reduce hiring costs by 30%", "Improve employee retention", "Optimize labor spend", "Data-driven workforce decisions"],
     "pricing": {"basic": "$1,299/mo", "pro": "$3,999/mo", "enterprise": "Custom"},
-    "contactInfo": {"website": "/services/ai-workforce-planning-optimizer", "email": "kleber@ziontechgroup.com", "phone": "+1 302 464 0950"},
+    "contactInfo": {"website": "/services/ai-workforce-planning-optimizer", "email": "kleber@ziontechgroup.com", "phone": "+55 11 97614-0076"},
     "icon": "👥", "href": "/services/ai-workforce-planning-optimizer", "popular": False, "category": "ai", "industry": "HR"
   },
   {
@@ -55,7 +55,7 @@ NEW_SERVICES = [
     "features": ["Auto-generate API documentation", "Inline comment generation", "Architecture diagram extraction", "README and changelog generation", "Multi-language support (30+)", "Swagger/OpenAPI spec generation", "Integration with GitHub, GitLab, Bitbucket", "Custom documentation templates"],
     "benefits": ["Always up-to-date documentation", "Reduce documentation time by 90%", "Improve code onboarding", "Consistent documentation style"],
     "pricing": {"basic": "$199/mo", "pro": "$599/mo", "enterprise": "Custom"},
-    "contactInfo": {"website": "/services/ai-code-documentation-generator", "email": "kleber@ziontechgroup.com", "phone": "+1 302 464 0950"},
+    "contactInfo": {"website": "/services/ai-code-documentation-generator", "email": "kleber@ziontechgroup.com", "phone": "+55 11 97614-0076"},
     "icon": "📚", "href": "/services/ai-code-documentation-generator", "popular": True, "category": "ai", "industry": "Technology"
   },
   {
@@ -65,7 +65,7 @@ NEW_SERVICES = [
     "features": ["Full supply chain modeling", "Real-time simulation engine", "Disruption prediction and alerting", "Inventory optimization across nodes", "What-if scenario analysis", "Supplier risk scoring", "Carbon footprint tracking", "Integration with ERP and WMS"],
     "benefits": ["Reduce supply chain disruptions by 50%", "Optimize inventory costs", "Data-driven scenario planning", "Improve sustainability metrics"],
     "pricing": {"basic": "$2,999/mo", "pro": "$7,999/mo", "enterprise": "Custom"},
-    "contactInfo": {"website": "/services/ai-supply-chain-digital-twin", "email": "kleber@ziontechgroup.com", "phone": "+1 302 464 0950"},
+    "contactInfo": {"website": "/services/ai-supply-chain-digital-twin", "email": "kleber@ziontechgroup.com", "phone": "+55 11 97614-0076"},
     "icon": "🔄", "href": "/services/ai-supply-chain-digital-twin", "popular": False, "category": "ai", "industry": "Supply Chain"
   },
   {
@@ -75,7 +75,7 @@ NEW_SERVICES = [
     "features": ["Adaptive curriculum generation", "AI tutoring with Socratic method", "Skill gap analysis", "Spaced repetition scheduling", "Multi-modal content (video, text, interactive)", "Progress analytics dashboard", "LMS integration (SCORM, xAPI)", "Certification tracking"],
     "benefits": ["3x faster skill acquisition", "Personalized at scale", "Reduce training costs", "Measurable skill improvement"],
     "pricing": {"basic": "$399/mo", "pro": "$1,299/mo", "enterprise": "Custom"},
-    "contactInfo": {"website": "/services/ai-personalized-learning-platform", "email": "kleber@ziontechgroup.com", "phone": "+1 302 464 0950"},
+    "contactInfo": {"website": "/services/ai-personalized-learning-platform", "email": "kleber@ziontechgroup.com", "phone": "+55 11 97614-0076"},
     "icon": "🎓", "href": "/services/ai-personalized-learning-platform", "popular": True, "category": "ai", "industry": "Education"
   },
   {
@@ -85,7 +85,7 @@ NEW_SERVICES = [
     "features": ["Demand forecasting by zone", "HVAC optimization (20-40% savings)", "Renewable energy management", "Carbon emissions tracking", "Anomaly detection for equipment", "Utility bill analysis", "Integration with BMS and SCADA", "ESG reporting automation"],
     "benefits": ["Reduce energy costs by 25-40%", "Meet carbon reduction targets", "Predict and prevent equipment failures", "Automated ESG compliance"],
     "pricing": {"basic": "$999/mo", "pro": "$3,499/mo", "enterprise": "Custom"},
-    "contactInfo": {"website": "/services/ai-energy-optimization-platform", "email": "kleber@ziontechgroup.com", "phone": "+1 302 464 0950"},
+    "contactInfo": {"website": "/services/ai-energy-optimization-platform", "email": "kleber@ziontechgroup.com", "phone": "+55 11 97614-0076"},
     "icon": "⚡", "href": "/services/ai-energy-optimization-platform", "popular": False, "category": "ai", "industry": "Energy"
   },
 
@@ -97,7 +97,7 @@ NEW_SERVICES = [
     "features": ["Automatic mTLS encryption", "Traffic routing and canary deployments", "Circuit breaking and retry policies", "Distributed tracing (OpenTelemetry)", "Multi-cluster federation", "Zero-trust network policies", "Performance dashboards", "Istio/Linkerd compatibility"],
     "benefits": ["Secure microservices communication", "Zero-downtime deployments", "Full observability across services", "Simplify multi-cluster management"],
     "pricing": {"basic": "$1,499/mo", "pro": "$4,499/mo", "enterprise": "Custom"},
-    "contactInfo": {"website": "/services/it-service-mesh-platform", "email": "kleber@ziontechgroup.com", "phone": "+1 302 464 0950"},
+    "contactInfo": {"website": "/services/it-service-mesh-platform", "email": "kleber@ziontechgroup.com", "phone": "+55 11 97614-0076"},
     "icon": "🕸️", "href": "/services/it-service-mesh-platform", "popular": False, "category": "it", "industry": "Technology"
   },
   {
@@ -107,7 +107,7 @@ NEW_SERVICES = [
     "features": ["Legacy warehouse assessment", "Automated schema migration", "ETL/ELT pipeline modernization", "Performance benchmarking", "Cost comparison analysis", "Data validation and reconciliation", "Dbt integration", "Training and knowledge transfer"],
     "benefits": ["Reduce warehouse costs by 40%", "Improve query performance 10x", "Modern data stack adoption", "Self-service analytics enablement"],
     "pricing": {"basic": "$4,999/mo", "pro": "$12,999/mo", "enterprise": "Custom"},
-    "contactInfo": {"website": "/services/it-data-warehouse-modernization", "email": "kleber@ziontechgroup.com", "phone": "+1 302 464 0950"},
+    "contactInfo": {"website": "/services/it-data-warehouse-modernization", "email": "kleber@ziontechgroup.com", "phone": "+55 11 97614-0076"},
     "icon": "🏗️", "href": "/services/it-data-warehouse-modernization", "popular": False, "category": "it", "industry": "Technology"
   },
   {
@@ -117,7 +117,7 @@ NEW_SERVICES = [
     "features": ["AI-powered incident triage", "Auto-remediation runbooks", "Multi-channel alerting (PagerDuty, Slack, Teams)", "Incident timeline reconstruction", "Post-incident review automation", "SLA tracking and reporting", "War room collaboration", "Integration with 100+ monitoring tools"],
     "benefits": ["Reduce MTTR by 70%", "Automate repetitive incident response", "Improve SLA compliance", "Learn from every incident"],
     "pricing": {"basic": "$599/mo", "pro": "$1,999/mo", "enterprise": "Custom"},
-    "contactInfo": {"website": "/services/it-incident-management-platform", "email": "kleber@ziontechgroup.com", "phone": "+1 302 464 0950"},
+    "contactInfo": {"website": "/services/it-incident-management-platform", "email": "kleber@ziontechgroup.com", "phone": "+55 11 97614-0076"},
     "icon": "🚨", "href": "/services/it-incident-management-platform", "popular": True, "category": "it", "industry": "Technology"
   },
   {
@@ -127,7 +127,7 @@ NEW_SERVICES = [
     "features": ["Cryptographic inventory and assessment", "Quantum vulnerability scoring", "NIST PQC algorithm migration", "TLS and certificate modernization", "Crypto-agility framework", "Compliance reporting (CNSA 2.0)", "Hybrid certificate deployment", "Zero-downtime migration"],
     "benefits": ["Future-proof against quantum attacks", "Meet CNSA 2.0 compliance deadlines", "Identify crypto vulnerabilities", "Seamless migration with no downtime"],
     "pricing": {"basic": "$2,999/mo", "pro": "$8,999/mo", "enterprise": "Custom"},
-    "contactInfo": {"website": "/services/it-quantum-safe-cryptography", "email": "kleber@ziontechgroup.com", "phone": "+1 302 464 0950"},
+    "contactInfo": {"website": "/services/it-quantum-safe-cryptography", "email": "kleber@ziontechgroup.com", "phone": "+55 11 97614-0076"},
     "icon": "🔐", "href": "/services/it-quantum-safe-cryptography", "popular": False, "category": "it", "industry": "Technology"
   },
   {
@@ -137,7 +137,7 @@ NEW_SERVICES = [
     "features": ["AI-powered enterprise search", "Personalized content feeds", "Knowledge base with AI Q&A", "Employee onboarding workflows", "MS 365 and Google Workspace integration", "Analytics and engagement metrics", "Mobile-first design", "Custom branding and theming"],
     "benefits": ["Improve employee productivity by 25%", "Reduce information silos", "Enhance employee engagement", "Unified digital employee experience"],
     "pricing": {"basic": "$299/mo", "pro": "$899/mo", "enterprise": "Custom"},
-    "contactInfo": {"website": "/services/it-digital-workplace-platform", "email": "kleber@ziontechgroup.com", "phone": "+1 302 464 0950"},
+    "contactInfo": {"website": "/services/it-digital-workplace-platform", "email": "kleber@ziontechgroup.com", "phone": "+55 11 97614-0076"},
     "icon": "💼", "href": "/services/it-digital-workplace-platform", "popular": False, "category": "it", "industry": "Technology"
   },
 
@@ -149,7 +149,7 @@ NEW_SERVICES = [
     "features": ["Multi-platform review monitoring", "AI-generated response suggestions", "Sentiment trend analysis", "Competitor review benchmarking", "Review request automation", "Star rating tracking", "Custom reporting and alerts", "Multi-location management"],
     "benefits": ["Improve online reputation", "Save 10+ hours/week on review management", "Increase review volume by 40%", "Data-driven reputation insights"],
     "pricing": {"basic": "$59/mo", "pro": "$179/mo", "enterprise": "Custom"},
-    "contactInfo": {"website": "/services/micro-saas-review-management", "email": "kleber@ziontechgroup.com", "phone": "+1 302 464 0950"},
+    "contactInfo": {"website": "/services/micro-saas-review-management", "email": "kleber@ziontechgroup.com", "phone": "+55 11 97614-0076"},
     "icon": "⭐", "href": "/services/micro-saas-review-management", "popular": True, "category": "micro-saas", "industry": "Local Business"
   },
   {
@@ -159,7 +159,7 @@ NEW_SERVICES = [
     "features": ["Contract template library", "E-signature (legally binding)", "Renewal and expiration alerts", "AI clause risk analysis", "Obligation tracking", "Approval workflows", "Integration with HubSpot, Salesforce, QuickBooks", "Audit trail and version history"],
     "benefits": ["Never miss a contract renewal", "Reduce contract risk with AI analysis", "Speed up contract cycles by 60%", "Centralized contract repository"],
     "pricing": {"basic": "$89/mo", "pro": "$279/mo", "enterprise": "Custom"},
-    "contactInfo": {"website": "/services/micro-saas-contract-management", "email": "kleber@ziontechgroup.com", "phone": "+1 302 464 0950"},
+    "contactInfo": {"website": "/services/micro-saas-contract-management", "email": "kleber@ziontechgroup.com", "phone": "+55 11 97614-0076"},
     "icon": "📝", "href": "/services/micro-saas-contract-management", "popular": False, "category": "micro-saas", "industry": "Legal"
   },
   {
@@ -169,7 +169,7 @@ NEW_SERVICES = [
     "features": ["Pulse surveys (custom and templates)", "eNPS tracking and benchmarking", "Peer-to-peer recognition", "AI-powered action suggestions", "Manager coaching insights", "Integration with Slack, Teams, HRIS", "Anonymous feedback channel", "Custom engagement dashboards"],
     "benefits": ["Improve employee retention by 20%", "Identify engagement risks early", "Data-driven culture decisions", "Boost team morale and productivity"],
     "pricing": {"basic": "$49/mo", "pro": "$149/mo", "enterprise": "Custom"},
-    "contactInfo": {"website": "/services/micro-saas-employee-engagement", "email": "kleber@ziontechgroup.com", "phone": "+1 302 464 0950"},
+    "contactInfo": {"website": "/services/micro-saas-employee-engagement", "email": "kleber@ziontechgroup.com", "phone": "+55 11 97614-0076"},
     "icon": "💚", "href": "/services/micro-saas-employee-engagement", "popular": False, "category": "micro-saas", "industry": "HR"
   },
   {
@@ -179,7 +179,7 @@ NEW_SERVICES = [
     "features": ["Custom invoice templates", "Recurring invoice automation", "Payment tracking dashboard", "Automatic late payment reminders", "Multi-currency support", "Tax calculation (VAT, GST, Sales Tax)", "Stripe/PayPal payment integration", "Expense and time tracking"],
     "benefits": ["Get paid 2x faster", "Automate invoicing workflows", "Professional brand image", "Accurate tax compliance"],
     "pricing": {"basic": "$29/mo", "pro": "$89/mo", "enterprise": "Custom"},
-    "contactInfo": {"website": "/services/micro-saas-invoice-generator", "email": "kleber@ziontechgroup.com", "phone": "+1 302 464 0950"},
+    "contactInfo": {"website": "/services/micro-saas-invoice-generator", "email": "kleber@ziontechgroup.com", "phone": "+55 11 97614-0076"},
     "icon": "🧾", "href": "/services/micro-saas-invoice-generator", "popular": True, "category": "micro-saas", "industry": "Finance"
   },
 
@@ -191,7 +191,7 @@ NEW_SERVICES = [
     "features": ["Automated decoy deployment", "Honeypots for common services (SSH, HTTP, DB)", "Deception tokens (fake credentials, files)", "Real-time attack alerts", "Forensic session capture", "MITRE ATT&CK mapping", "Integration with SIEM/SOAR", "Threat intelligence feeds"],
     "benefits": ["Detect threats weeks earlier", "Zero false positives", "Understand attacker TTPs", "Validate detection capabilities"],
     "pricing": {"basic": "$1,999/mo", "pro": "$5,999/mo", "enterprise": "Custom"},
-    "contactInfo": {"website": "/services/security-deception-technology-platform", "email": "kleber@ziontechgroup.com", "phone": "+1 302 464 0950"},
+    "contactInfo": {"website": "/services/security-deception-technology-platform", "email": "kleber@ziontechgroup.com", "phone": "+55 11 97614-0076"},
     "icon": "🎭", "href": "/services/security-deception-technology-platform", "popular": False, "category": "security", "industry": "Technology"
   },
   {
@@ -201,7 +201,7 @@ NEW_SERVICES = [
     "features": ["AI-powered content classification", "Endpoint DLP agent", "Cloud DLP (SaaS and IaaS)", "Email DLP with encryption", "USB and device control", "Automated policy enforcement", "Incident investigation workflows", "Regulatory compliance (GDPR, HIPAA, PCI)"],
     "benefits": ["Prevent data breaches from insider threats", "Automate compliance enforcement", "Protect IP and trade secrets", "Reduce data exposure risk"],
     "pricing": {"basic": "$799/mo", "pro": "$2,499/mo", "enterprise": "Custom"},
-    "contactInfo": {"website": "/services/security-data-loss-prevention", "email": "kleber@ziontechgroup.com", "phone": "+1 302 464 0950"},
+    "contactInfo": {"website": "/services/security-data-loss-prevention", "email": "kleber@ziontechgroup.com", "phone": "+55 11 97614-0076"},
     "icon": "🛡️", "href": "/services/security-data-loss-prevention", "popular": True, "category": "security", "industry": "Technology"
   },
 
@@ -213,7 +213,7 @@ NEW_SERVICES = [
     "features": ["Multi-cloud cost analysis", "Reserved instance planning", "Spot instance orchestration", "Right-sizing recommendations", "Waste detection (idle resources)", "FinOps chargeback reports", "Budget alerts and forecasting", "Kubernetes cost allocation"],
     "benefits": ["Reduce cloud spend by 30-50%", "Automated cost optimization", "FinOps team enablement", "Real-time cost visibility"],
     "pricing": {"basic": "$499/mo", "pro": "$1,499/mo", "enterprise": "Custom"},
-    "contactInfo": {"website": "/services/cloud-cost-optimization-platform", "email": "kleber@ziontechgroup.com", "phone": "+1 302 464 0950"},
+    "contactInfo": {"website": "/services/cloud-cost-optimization-platform", "email": "kleber@ziontechgroup.com", "phone": "+55 11 97614-0076"},
     "icon": "💸", "href": "/services/cloud-cost-optimization-platform", "popular": True, "category": "cloud", "industry": "Technology"
   },
 ]

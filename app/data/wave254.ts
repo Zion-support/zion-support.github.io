@@ -15,7 +15,7 @@ export const wave254MicroSaasServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: '$12/mo (up to 5 users, 50 receipts/month)', pro: '$29/mo (up to 25 users, 500 receipts/month)', enterprise: 'Custom (unlimited users, custom integrations, dedicated support)' },
-    contactInfo: { website: '/services/expense-tracker-pro', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/expense-tracker-pro', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'AI receipt scanning: extract data from photos of receipts with 99% accuracy',
       'Smart categorization: automatically categorize expenses using machine learning',
@@ -42,7 +42,7 @@ export const wave254MicroSaasServices: Service[] = [
     industry: 'Human Resources',
     stage: 'published',
     pricing: { basic: '$8/mo (up to 10 employees, basic tracking)', pro: '$15/mo (up to 100 employees, payroll export)', enterprise: 'Custom (unlimited employees, custom workflows, API access)' },
-    contactInfo: { website: '/services/employee-timesheet-manager', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/employee-timesheet-manager', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'GPS clock-in: geofenced clock-in/out to verify employee location',
       'Payroll export: one-click export to ADP, Gusto, Paychex, and QuickBooks Payroll',
@@ -69,7 +69,7 @@ export const wave254MicroSaasServices: Service[] = [
     industry: 'Sales & Business',
     stage: 'published',
     pricing: { basic: '$19/mo (up to 3 users, 10 proposals/month)', pro: '$49/mo (up to 15 users, unlimited proposals)', enterprise: 'Custom (unlimited users, custom branding, CRM integration, SLA)' },
-    contactInfo: { website: '/services/proposal-builder', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/proposal-builder', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Drag-and-drop templates: 200+ professionally designed proposal templates',
       'E-signature integration: built-in DocuSign and HelloSign for instant signing',
@@ -96,7 +96,7 @@ export const wave254MicroSaasServices: Service[] = [
     industry: 'Marketing & Reputation',
     stage: 'published',
     pricing: { basic: '$29/mo (up to 3 locations, 100 reviews/month)', pro: '$79/mo (up to 25 locations, unlimited reviews)', enterprise: 'Custom (unlimited locations, white-label, API access, dedicated support)' },
-    contactInfo: { website: '/services/review-management-platform', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/review-management-platform', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Google & Yelp monitoring: track reviews across 50+ platforms in real time',
       'AI sentiment analysis: NLP-powered analysis of review tone, topics, and urgency',
@@ -123,7 +123,7 @@ export const wave254MicroSaasServices: Service[] = [
     industry: 'Operations & Data',
     stage: 'published',
     pricing: { basic: '$15/mo (up to 5 users, 1,000 submissions/month)', pro: '$39/mo (up to 25 users, 10,000 submissions/month)', enterprise: 'Custom (unlimited users, custom integrations, dedicated infrastructure)' },
-    contactInfo: { website: '/services/form-automation-hub', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/form-automation-hub', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Conditional logic: show/hide fields based on user responses for smart forms',
       '50+ integrations: connect to Slack, Google Sheets, Salesforce, Zapier, and more',
@@ -153,7 +153,7 @@ export const wave254ItServices: Service[] = [
     industry: 'IT Infrastructure',
     stage: 'published',
     pricing: { basic: '$5/device/mo (up to 20 devices, basic monitoring)', pro: '$12/device/mo (up to 200 devices, supply automation)', enterprise: 'Custom (unlimited devices, dedicated technician, SLA)' },
-    contactInfo: { website: '/services/managed-print-services', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/managed-print-services', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Fleet monitoring: real-time status monitoring of all networked printers and MFPs',
       'Supply automation: automatic toner and supply ordering when levels drop below threshold',
@@ -180,7 +180,7 @@ export const wave254ItServices: Service[] = [
     industry: 'Communications',
     stage: 'published',
     pricing: { basic: '$18/user/mo (up to 10 users, basic calling)', pro: '$35/user/mo (up to 100 users, advanced features)', enterprise: 'Custom (unlimited users, custom IVR, dedicated trunk, SLA)' },
-    contactInfo: { website: '/services/voip-phone-system', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/voip-phone-system', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Auto-attendant: customizable IVR menus with professional greetings and routing',
       'Intelligent call routing: skills-based, round-robin, and time-based routing rules',
@@ -207,7 +207,7 @@ export const wave254ItServices: Service[] = [
     industry: 'IT Operations',
     stage: 'published',
     pricing: { basic: '$3/asset/mo (up to 100 assets, basic tracking)', pro: '$2/asset/mo (up to 1,000 assets, compliance reporting)', enterprise: 'Custom (unlimited assets, custom workflows, API access, dedicated support)' },
-    contactInfo: { website: '/services/it-asset-management', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/it-asset-management', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Hardware tracking: barcode and QR code scanning for physical asset inventory',
       'Software license management: track license compliance, renewals, and usage',
@@ -238,7 +238,7 @@ export const wave254AiServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: '$49/mo (up to 500 conversations/month, basic NLU)', pro: '$149/mo (up to 10,000 conversations/month, advanced AI)', enterprise: 'Custom (unlimited conversations, custom models, dedicated infrastructure, SLA)' },
-    contactInfo: { website: '/services/ai-customer-support-chatbot', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/ai-customer-support-chatbot', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       '80% auto-resolution: handle the majority of customer inquiries without human intervention',
       'Knowledge base integration: automatically pull answers from your existing documentation',
@@ -265,7 +265,7 @@ export const wave254AiServices: Service[] = [
     industry: 'Human Resources',
     stage: 'published',
     pricing: { basic: '$39/mo (up to 100 resumes/month, basic matching)', pro: '$99/mo (up to 1,000 resumes/month, bias detection)', enterprise: 'Custom (unlimited resumes, custom models, ATS integration, SLA)' },
-    contactInfo: { website: '/services/ai-resume-screener', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/ai-resume-screener', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Resume ranking: AI scores and ranks candidates based on job requirement match',
       'Bias detection: identify and flag potentially biased language in job descriptions and screening',
@@ -292,7 +292,7 @@ export const wave254AiServices: Service[] = [
     industry: 'Productivity',
     stage: 'published',
     pricing: { basic: '$25/mo (up to 10 hours/month transcription)', pro: '$69/mo (up to 100 hours/month, AI summaries)', enterprise: 'Custom (unlimited hours, custom models, API access, dedicated support)' },
-    contactInfo: { website: '/services/ai-meeting-assistant', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/ai-meeting-assistant', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Real-time transcription: live captions with speaker identification and timestamps',
       'AI summaries: automatic generation of meeting summaries with key discussion points',

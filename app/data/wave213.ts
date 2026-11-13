@@ -18,7 +18,7 @@ export const wave213CodeGenerationServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: '$10/month (Individual)', pro: '$19/month (Business)', enterprise: '$39/user/month (Enterprise)' },
-    contactInfo: { website: 'https://github.com/features/copilot', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://github.com/features/copilot', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Context-aware code suggestions in 40+ programming languages and frameworks',
       'Natural language to code: describe what you want in comments, get working code',
@@ -49,7 +49,7 @@ export const wave213DigitalHumansServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: '$22/month (Starter, 10 min video)', pro: '$67/month (Creator, 30 min video)', enterprise: 'Custom (unlimited video + custom avatars)' },
-    contactInfo: { website: 'https://synthesia.io', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://synthesia.io', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       '140+ AI avatars: diverse, photorealistic digital human presenters',
       '140+ languages and accents with natural lip sync and intonation',
@@ -80,7 +80,7 @@ export const wave213UptimeMonitoringServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: 'Free (50 monitors, 5-min intervals)', pro: '$7/month (Pro, 1-min intervals)', enterprise: '$54/month (Pro, 30-sec intervals + SMS)' },
-    contactInfo: { website: 'https://uptimerobot.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://uptimerobot.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       '5-minute interval checks on 50+ monitors (HTTP, ping, port, keyword, heartbeat)',
       'Real-time alerts via email, SMS, Slack, Telegram, webhook, and 20+ integrations',
@@ -111,7 +111,7 @@ export const wave213AiTranslationServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: 'Free (500K chars/month)', pro: '$10.49/month (Pro, unlimited)', enterprise: 'Custom (API + team management + data security)' },
-    contactInfo: { website: 'https://deepl.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://deepl.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       '31 languages with industry-leading translation accuracy in blind evaluations',
       'Document translation: preserves formatting in PDF, DOCX, PPTX, and XLSX files',
@@ -142,7 +142,7 @@ export const wave213PredictiveMaintenanceServices: Service[] = [
     stage: 'published',
     popular: false,
     pricing: { basic: 'Custom (pilot program)', pro: '$50K/year (single facility)', enterprise: 'Custom ($200K+/year multi-site deployment)' },
-    contactInfo: { website: 'https://augury.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://augury.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Wireless sensors: vibration, temperature, ultrasonic, and magnetic field monitoring',
       'AI fault detection: identifies 30+ fault types including bearing wear, misalignment, and imbalance',

@@ -293,10 +293,10 @@ export default function IndustrySolutionsPage() {
                 ✉️ Email Us
               </a>
               <a 
-                href="tel:+130****0950" 
+                href="tel:+5511976140076" 
                 className="btn-secondary text-lg px-10 py-4"
               >
-                ☎ +1 302 464 0950
+                ☎ +55 11 97614-0076
               </a>
             </div>
           </div>

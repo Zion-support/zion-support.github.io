@@ -89,7 +89,7 @@ def block(en):
     if ci:
         site=ci.get('website',f'/services/{cid}')
         em=ci.get('email','kleber@ziontechgroup.com')
-        ph=ci.get('phone','+1 302 464 0950')
+        ph=ci.get('phone','+55 11 97614-0076')
         L.append('    contactInfo: {')
         L.append(f"      website: '{ts(site)}',")
         L.append(f"      email: '{ts(em)}',")

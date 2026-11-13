@@ -11,7 +11,7 @@ export const wave190AiServices: Service[] = [
     features: ['IoT Sensor Analysis', 'Failure Prediction', 'Maintenance Scheduling', 'Parts Inventory', 'Digital Twin'],
     benefits: ['60% less unplanned downtime', 'Extend asset life 25%'],
     pricing: { basic: '$499/mo', pro: '$1,499/mo', enterprise: 'Custom' },
-    contactInfo: { website: '/services/ai-predictive-maintenance', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/ai-predictive-maintenance', email: 'commercial@ziontechgroup.com', phone: '+55 11 97614-0076' },
     icon: '🔧', href: '/services/ai-predictive-maintenance', popular: true, category: 'ai', industry: 'Manufacturing',
   },
   {
@@ -21,7 +21,7 @@ export const wave190AiServices: Service[] = [
     features: ['Multi-Document Summary', 'Key Clause Extraction', 'Multi-Language', 'Custom Templates', 'API Access'],
     benefits: ['Summarize 100 pages in seconds', 'Never miss critical clauses'],
     pricing: { basic: '$149/mo', pro: '$449/mo', enterprise: '$1,499/mo' },
-    contactInfo: { website: '/services/ai-nlp-document-summarizer', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/ai-nlp-document-summarizer', email: 'commercial@ziontechgroup.com', phone: '+55 11 97614-0076' },
     icon: '📝', href: '/services/ai-nlp-document-summarizer', popular: false, category: 'ai', industry: 'Legal',
   },
 ];
@@ -34,7 +34,7 @@ export const wave190CloudServices: Service[] = [
     features: ['Edge Node Management', 'Low Latency <10ms', 'IoT Integration', 'Container Orchestration', 'Zero-Touch Provisioning'],
     benefits: ['Process data locally', 'Reduce bandwidth 80%'],
     pricing: { basic: '$299/mo', pro: '$899/mo', enterprise: '$2,999/mo' },
-    contactInfo: { website: '/services/cloud-edge-computing', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/cloud-edge-computing', email: 'commercial@ziontechgroup.com', phone: '+55 11 97614-0076' },
     icon: '📡', href: '/services/cloud-edge-computing', popular: false, category: 'cloud', industry: 'Technology',
   },
 ];
@@ -47,7 +47,7 @@ export const wave190SecurityServices: Service[] = [
     features: ['Log Aggregation', 'Threat Intelligence', 'Managed SOC', 'Incident Response', 'Compliance Dashboards'],
     benefits: ['Enterprise SOC at 10% cost', 'Detect threats in minutes'],
     pricing: { basic: '$1,499/mo', pro: '$4,499/mo', enterprise: 'Custom' },
-    contactInfo: { website: '/services/security-siem-socaas', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/security-siem-socaas', email: 'commercial@ziontechgroup.com', phone: '+55 11 97614-0076' },
     icon: '🛡️', href: '/services/security-siem-socaas', popular: true, category: 'security', industry: 'Technology',
   },
 ];
@@ -60,7 +60,7 @@ export const wave190DataServices: Service[] = [
     features: ['Domain Ownership', 'Self-Serve Platform', 'Federated Governance', 'Data Contracts', 'Product Thinking'],
     benefits: ['Scale analytics 10x', 'Empower domain teams'],
     pricing: { basic: '$799/mo', pro: '$2,499/mo', enterprise: 'Custom' },
-    contactInfo: { website: '/services/data-data-mesh-platform', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/data-data-mesh-platform', email: 'commercial@ziontechgroup.com', phone: '+55 11 97614-0076' },
     icon: '🕸️', href: '/services/data-data-mesh-platform', popular: true, category: 'data', industry: 'Technology',
   },
 ];
@@ -73,7 +73,7 @@ export const wave190AutomationServices: Service[] = [
     features: ['Visual Process Designer', 'RPA Integration', 'Real-Time Analytics', 'Mobile Approvals', 'SLA Monitoring'],
     benefits: ['Automate 80% manual processes', 'Real-time visibility'],
     pricing: { basic: '$399/mo', pro: '$1,199/mo', enterprise: 'Custom' },
-    contactInfo: { website: '/services/automation-bpm-suite', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/automation-bpm-suite', email: 'commercial@ziontechgroup.com', phone: '+55 11 97614-0076' },
     icon: '⚙️', href: '/services/automation-bpm-suite', popular: false, category: 'automation', industry: 'Enterprise',
   },
 ];
@@ -86,7 +86,7 @@ export const wave190ItServices: Service[] = [
     features: ['VDI', 'App Virtualization', 'Endpoint Management', 'Zero Trust Access', 'SSO'],
     benefits: ['Work from anywhere', 'Reduce endpoint costs 40%'],
     pricing: { basic: '$99/mo', pro: '$299/mo', enterprise: '$999/mo' },
-    contactInfo: { website: '/services/it-digital-workspace', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/it-digital-workspace', email: 'commercial@ziontechgroup.com', phone: '+55 11 97614-0076' },
     icon: '💻', href: '/services/it-digital-workspace', popular: true, category: 'it', industry: 'Technology',
   },
 ];
@@ -99,7 +99,7 @@ export const wave190MicroSaasServices: Service[] = [
     features: ['NPS Surveys', 'Sentiment Analysis', 'Review Aggregation', 'Action Workflows', 'Real-Time Alerts'],
     benefits: ['Improve NPS 30%', 'Close feedback loop'],
     pricing: { basic: '$49/mo', pro: '$149/mo', enterprise: '$499/mo' },
-    contactInfo: { website: '/services/microsaas-customer-feedback', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/microsaas-customer-feedback', email: 'commercial@ziontechgroup.com', phone: '+55 11 97614-0076' },
     icon: '💬', href: '/services/microsaas-customer-feedback', popular: false, category: 'micro-saas', industry: 'SaaS',
   },
   {
@@ -109,7 +109,7 @@ export const wave190MicroSaasServices: Service[] = [
     features: ['Invoice Templates', 'Payment Tracking', 'Recurring Billing', 'Multi-Currency', 'Tax Compliance'],
     benefits: ['Get paid 2x faster', 'Automate billing'],
     pricing: { basic: '$29/mo', pro: '$79/mo', enterprise: '$199/mo' },
-    contactInfo: { website: '/services/microsaas-invoice-builder', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/microsaas-invoice-builder', email: 'commercial@ziontechgroup.com', phone: '+55 11 97614-0076' },
     icon: '🧾', href: '/services/microsaas-invoice-builder', popular: false, category: 'micro-saas', industry: 'Finance',
   },
 ];

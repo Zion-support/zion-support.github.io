@@ -12,7 +12,7 @@ export const wave282DataCenterServices: Service[] = [
     stage: 'published',
     popular: false,
     pricing: { basic: '$249/mo', pro: '$749/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'TIA-942 and EIA/TIA-568 compliant topology design',
       'MPO/MTP and LC fiber trunk deployment',
@@ -39,7 +39,7 @@ export const wave282DataCenterServices: Service[] = [
     stage: 'published',
     popular: false,
     pricing: { basic: '$199/mo', pro: '$699/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Secure chain-of-custody and barcode/RFID asset tracking',
       'NIST 800-88 and DoD 5220.22-M data sanitization',
@@ -66,7 +66,7 @@ export const wave282DataCenterServices: Service[] = [
     stage: 'published',
     popular: false,
     pricing: { basic: '$149/mo', pro: '$499/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Uptime Institute Tier certification prep',
       'Electrical safety (NFPA 70E) and lockout/tagout',
@@ -93,7 +93,7 @@ export const wave282DataCenterServices: Service[] = [
     stage: 'published',
     popular: false,
     pricing: { basic: '$399/mo', pro: '$1,199/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Prefabricated data hall modules (containerized or booth-style)',
       'Modular power and cooling skids (UPS, PDUs, CRAH/CRAC)',
@@ -120,7 +120,7 @@ export const wave282DataCenterServices: Service[] = [
     stage: 'published',
     popular: false,
     pricing: { basic: '$399/mo', pro: '$1,199/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'HIPAA Security Rule gap assessments for data centers',
       'HITRUST CSF certification program management',
@@ -147,7 +147,7 @@ export const wave282DataCenterServices: Service[] = [
     stage: 'published',
     popular: false,
     pricing: { basic: '$199/mo', pro: '$699/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Carrier-neutral meet-me room coordination',
       'Cross-connect and port provisioning management',
@@ -174,7 +174,7 @@ export const wave282DataCenterServices: Service[] = [
     stage: 'published',
     popular: false,
     pricing: { basic: '$299/mo', pro: '$899/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'SIEM integration with physical access control systems',
       'Correlated alerting for cyber and physical threat events',
@@ -201,7 +201,7 @@ export const wave282DataCenterServices: Service[] = [
     stage: 'published',
     popular: false,
     pricing: { basic: '$299/mo', pro: '$999/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Utility tariff analysis and demand charge optimization',
       'Renewable PPA negotiation and offtake structuring',
@@ -228,7 +228,7 @@ export const wave282DataCenterServices: Service[] = [
     stage: 'published',
     popular: false,
     pricing: { basic: '$399/mo', pro: '$1,499/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Power availability and latency mapping',
       'Carrier-neutral fiber route surveys and diversity analysis',
@@ -255,7 +255,7 @@ export const wave282DataCenterServices: Service[] = [
     stage: 'published',
     popular: false,
     pricing: { basic: '$199/mo', pro: '$699/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Zero-leak detection and water intrusion monitoring',
       'Particulate and volatile organic compound (VOC) sensing',

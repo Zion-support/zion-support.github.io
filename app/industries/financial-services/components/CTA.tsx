@@ -43,10 +43,10 @@ export default function FinancialServicesCTA() {
             <h3 className="font-semibold text-white mb-2">Call Us</h3>
             <p className="text-slate-400 text-sm mb-4">Direct line to our team</p>
             <a
-              href="tel:+13024640950"
+              href="tel:+5511976140076"
               className="btn-secondary text-sm"
             >
-              +1 302 464 0950
+              +55 11 97614-0076
             </a>
           </div>
 

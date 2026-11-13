@@ -16,7 +16,7 @@ export const wave250AiDevopsPlatformServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: 'Free (CI module, 20 builds/month, 1 user)', pro: '$100/user/month (full platform, CD, Feature Flags)', enterprise: 'Custom (SSO, audit logs, dedicated support, SLA)' },
-    contactInfo: { website: 'https://harness.io', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://harness.io', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'AI-powered continuous delivery: ML models predict deployment failures before they reach production',
       'Automated rollback: detect failed deployments in seconds and auto-revert without human intervention',
@@ -47,7 +47,7 @@ export const wave250CloudCostOptimizationServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: 'Free (Spot Eco, AWS only, basic recommendations)', pro: '0.5% of managed cloud spend (full platform, multi-cloud)', enterprise: 'Custom (dedicated FinOps team, custom policies, SLA)' },
-    contactInfo: { website: 'https://spot.io', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://spot.io', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Predictive AI: analyzes workload patterns and predicts optimal compute purchasing strategy',
       'Spot instance automation: safely run production workloads on spot instances with zero downtime',
@@ -78,7 +78,7 @@ export const wave250DataMeshPlatformServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: 'Free (Trino open source, self-managed)', pro: '$100/node/month (Starburst Galaxy, managed, 50+ connectors)', enterprise: 'Custom (Starburst Enterprise, on-prem, SSO, audit)' },
-    contactInfo: { website: 'https://starburst.io', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://starburst.io', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Universal SQL: query data across 50+ sources with one SQL interface',
       'Data mesh enablement: domain teams publish data products with self-service access and federated governance',
@@ -109,7 +109,7 @@ export const wave250AiCustomerSupportServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: 'Free (Starter, 100 people, basic chatbot)', pro: '$74/seat/month (Advanced, Fin AI agent, automation)', enterprise: 'Custom (dedicated success manager, custom AI training, SLA)' },
-    contactInfo: { website: 'https://intercom.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://intercom.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Fin AI agent: resolves 50% of customer conversations autonomously with contextual understanding',
       'Omnichannel inbox: unify live chat, email, WhatsApp, and in-app messages in one workspace',
@@ -140,7 +140,7 @@ export const wave250EdgeAiPlatformServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: '$99 (Jetson Nano, 5W, 0.5 TFLOPS, hobbyist/education)', pro: '$599 (Jetson Orin NX, 20W, 100 TOPS, production edge AI)', enterprise: 'Custom (Jetson AGX Orin, 60W, 275 TOPS, industrial)' },
-    contactInfo: { website: 'https://nvidia.com/en-us/autonomous-machines/embedded-systems/', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://nvidia.com/en-us/autonomous-machines/embedded-systems/', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'GPU-accelerated edge inference: run complex AI models on-device with 275 TOPS of compute in 60W',
       'JetPack SDK: complete Linux environment with CUDA-X, TensorRT, and pre-trained AI models',

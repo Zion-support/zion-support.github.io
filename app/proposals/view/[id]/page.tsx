@@ -80,7 +80,7 @@ ${needsList ? `<h2>Stated Needs</h2><ul>${needsList}</ul>` : ''}
 <h2>Recommended Services</h2>
 <table><thead><tr><th>Service</th><th>Category</th><th>Starting Price</th></tr></thead><tbody>${rows}</tbody></table>
 <div class="cta"><h2 style="color:#fff;margin-top:0">Ready to get started?</h2>
-<p>Contact: <strong>+1 302 464 0950</strong> or <strong>kleber@ziontechgroup.com</strong></p>
+<p>Contact: <strong>+55 11 97614-0076</strong> or <strong>kleber@ziontechgroup.com</strong></p>
 <p>364 E Main St STE 1008, Middletown, DE 19709</p></div>
 <div class="footer">Zion Tech Group — All services include implementation support, SLA guarantees, and 24/7 monitoring.</div>
 </body></html>`;

@@ -41,7 +41,7 @@ export default function ConsultingPage() {
 
           {/* Call */}
           <a
-            href="tel:+13024640950"
+            href="tel:+5511976140076"
             className="rounded-2xl border border-slate-800 bg-slate-900/60 p-6 hover:border-purple-500/50 transition group"
           >
             <div className="text-3xl mb-3">📞</div>
@@ -50,7 +50,7 @@ export default function ConsultingPage() {
               Talk directly with our team to discover the right fit for your business today.
             </p>
             <span className="text-purple-300 font-semibold text-sm group-hover:text-white transition">
-              +1 302 464 0950 →
+              +55 11 97614-0076 →
             </span>
           </a>
 

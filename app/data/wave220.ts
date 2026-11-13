@@ -18,7 +18,7 @@ export const wave220AiVideoAnalyticsServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: 'Free (demo)', pro: '$50K/year (single venue)', enterprise: 'Custom ($500K+/year multi-venue)' },
-    contactInfo: { website: 'https://hawkeyeinnovations.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://hawkeyeinnovations.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       '30+ high-speed camera array with sub-millimeter tracking accuracy',
       'Real-time ball and player trajectory prediction using deep learning',
@@ -49,7 +49,7 @@ export const wave220SyntheticVoiceCloningServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: 'Free (10K chars/month)', pro: '$5/month (30K chars)', enterprise: '$330/month (2M chars + voice cloning)' },
-    contactInfo: { website: 'https://elevenlabs.io', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://elevenlabs.io', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Voice cloning from 1-minute audio sample with 95% similarity to original voice',
       '32 languages with native-sounding accents and natural prosody',
@@ -80,7 +80,7 @@ export const wave220AiContractLifecycleServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: 'Free (trial)', pro: '$45K/year (standard CLM)', enterprise: 'Custom ($150K+/year with AI add-ons)' },
-    contactInfo: { website: 'https://ironcladapp.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ironcladapp.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'AI contract analysis: auto-extract 50+ key terms, dates, and obligations',
       'AI Playbooks: negotiate routine contracts without legal team involvement',
@@ -111,7 +111,7 @@ export const wave220AutonomousVehicleTelemetryServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: 'Free (ride-hailing per trip)', pro: 'Fleet partnership program', enterprise: 'Custom (OEM licensing)' },
-    contactInfo: { website: 'https://waymo.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://waymo.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Multi-sensor fusion: LiDAR, 29 cameras, and 6 radar units per vehicle',
       'Real-time telemetry: 20+ TB of sensor data processed per vehicle daily',
@@ -142,7 +142,7 @@ export const wave220AiAccessibilityTestingServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: 'Free (axe DevTools Community)', pro: '$40/month (axe DevTools Pro)', enterprise: '$50K/year (axe Monitor + automated scanning)' },
-    contactInfo: { website: 'https://deque.com/axe', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://deque.com/axe', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Automated WCAG 2.2, Section 508, and EN 301 549 compliance scanning',
       'AI-powered issue detection: 80%+ of accessibility issues found automatically',

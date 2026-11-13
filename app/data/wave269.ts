@@ -30,7 +30,7 @@ export const wave269Services: Service[] = [
     contactInfo: {
       website: '/services/ai-clinical-trial-matching',
       email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
+      phone: '+55 11 97614-0076',
     },
   },
   {
@@ -62,7 +62,7 @@ export const wave269Services: Service[] = [
     contactInfo: {
       website: '/services/it-managed-detection-response',
       email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
+      phone: '+55 11 97614-0076',
     },
   },
   {
@@ -94,7 +94,7 @@ export const wave269Services: Service[] = [
     contactInfo: {
       website: '/services/micro-saas-customer-health-score',
       email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
+      phone: '+55 11 97614-0076',
     },
   },
   {
@@ -126,7 +126,7 @@ export const wave269Services: Service[] = [
     contactInfo: {
       website: '/services/ai-financial-close-automation',
       email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
+      phone: '+55 11 97614-0076',
     },
   },
   {
@@ -158,7 +158,7 @@ export const wave269Services: Service[] = [
     contactInfo: {
       website: '/services/it-cloud-cost-optimization',
       email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
+      phone: '+55 11 97614-0076',
     },
   },
 ];

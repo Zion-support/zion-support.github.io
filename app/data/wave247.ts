@@ -18,7 +18,7 @@ export const wave247AiTranslationServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: 'Free (500K characters/month, 5 document translations)', pro: '$8.74/user/month (unlimited text, 100GB document translation)', enterprise: 'Custom (API access, SSO, dedicated infrastructure, SLA)' },
-    contactInfo: { website: 'https://deepl.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://deepl.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       '31 languages with context-aware translation that preserves tone and nuance',
       'Document translation: translate PDF, Word, PowerPoint while preserving formatting',
@@ -49,7 +49,7 @@ export const wave247DigitalHumansServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: '$22/month (10 minutes of video, 70+ avatars)', pro: '$67/month (30 minutes, 140+ avatars, custom branding)', enterprise: 'Custom (unlimited video, custom avatars, API, SSO, dedicated support)' },
-    contactInfo: { website: 'https://synthesia.io', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://synthesia.io', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       '240+ diverse AI avatars: choose presenters by ethnicity, age, clothing, and language',
       '140+ languages with natural lip-sync and regional accent accuracy',
@@ -80,7 +80,7 @@ export const wave247PredictiveMaintenanceServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: 'Free (up to 5 users, basic CMMS)', pro: '$35/user/month (predictive analytics, IoT integrations)', enterprise: 'Custom (unlimited users, API, dedicated support, custom ML models)' },
-    contactInfo: { website: 'https://onupkeep.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://onupkeep.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'AI failure prediction: ML models analyze sensor data to predict equipment breakdowns',
       'Anomaly detection: identify deviations from normal operating patterns in real-time',
@@ -111,7 +111,7 @@ export const wave247UptimeMonitoringServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: 'Free (10 monitors, 1-minute checks, 1 status page)', pro: '$24/month (unlimited monitors, 10-second checks, call notifications)', enterprise: 'Custom (SSO, audit logs, dedicated support, custom SLA)' },
-    contactInfo: { website: 'https://betterstack.com/better-uptime', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://betterstack.com/better-uptime', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Global monitoring: check endpoints from 20+ locations every 10 seconds',
       'Multi-protocol support: HTTP/HTTPS, TCP, ping, DNS, SSL certificate monitoring',
@@ -142,7 +142,7 @@ export const wave247AiCodeGenerationServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: 'Free (limited AI requests, public repos)', pro: '$20/month (unlimited AI requests, private repos, GPT-4/Claude)', enterprise: 'Custom (team management, SSO, audit logs, self-hosted models)' },
-    contactInfo: { website: 'https://cursor.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://cursor.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Cmd+K inline editing: select code and describe changes in natural language',
       'Cmd+L AI chat: ask questions about your codebase with full repository context',

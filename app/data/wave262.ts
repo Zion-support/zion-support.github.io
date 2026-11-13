@@ -14,7 +14,7 @@ export const wave262AiServices: Service[] = [
     industry: 'Supply Chain',
     stage: 'published',
     pricing: { basic: '$799/mo', pro: '$1,999/mo', enterprise: 'Custom quote' },
-    contactInfo: { website: '/services/ai-supply-chain-optimizer', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/ai-supply-chain-optimizer', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'AI demand forecasting (94% accuracy)',
       'Multi-echelon inventory optimization',
@@ -43,7 +43,7 @@ export const wave262AiServices: Service[] = [
     industry: 'Finance',
     stage: 'published',
     pricing: { basic: '$599/mo', pro: '$1,499/mo', enterprise: 'Custom quote' },
-    contactInfo: { website: '/services/ai-financial-close-automation', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/ai-financial-close-automation', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Automated intercompany reconciliation',
       'AI journal entry suggestions & posting',
@@ -72,7 +72,7 @@ export const wave262AiServices: Service[] = [
     industry: 'Productivity',
     stage: 'published',
     pricing: { basic: '$15/user/mo', pro: '$29/user/mo', enterprise: '$49/user/mo' },
-    contactInfo: { website: '/services/ai-meeting-intelligence', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/ai-meeting-intelligence', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Automatic recording & transcription (99% accuracy)',
       'AI-generated meeting summaries & highlights',
@@ -101,7 +101,7 @@ export const wave262AiServices: Service[] = [
     industry: 'SaaS, Subscription',
     stage: 'published',
     pricing: { basic: '$299/mo (up to 1,000 accounts)', pro: '$799/mo (10,000 accounts)', enterprise: 'Custom quote' },
-    contactInfo: { website: '/services/ai-customer-churn-predictor', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/ai-customer-churn-predictor', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Churn risk scoring (60-90 day prediction window)',
       'Multi-signal analysis (usage, tickets, NPS, billing)',
@@ -130,7 +130,7 @@ export const wave262AiServices: Service[] = [
     industry: 'Cybersecurity',
     stage: 'published',
     pricing: { basic: '$1,499/mo', pro: '$3,999/mo', enterprise: 'Custom quote' },
-    contactInfo: { website: '/services/ai-cybersecurity-threat-hunting', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/ai-cybersecurity-threat-hunting', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Continuous automated threat hunting',
       'Behavioral anomaly detection (UEBA)',
@@ -162,7 +162,7 @@ export const wave262MicroSaasServices: Service[] = [
     industry: 'HR, Cross-Industry',
     stage: 'published',
     pricing: { basic: '$99/mo (up to 50 employees)', pro: '$249/mo (200 employees)', enterprise: '$499/mo (unlimited)' },
-    contactInfo: { website: '/services/microsaas-employee-onboarding', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/microsaas-employee-onboarding', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Automated onboarding workflows by role/department',
       'IT provisioning (accounts, laptop, access)',
@@ -191,7 +191,7 @@ export const wave262MicroSaasServices: Service[] = [
     industry: 'Procurement, Cross-Industry',
     stage: 'published',
     pricing: { basic: '$79/mo', pro: '$199/mo', enterprise: '$449/mo' },
-    contactInfo: { website: '/services/microsaas-vendor-management', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/microsaas-vendor-management', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Centralized vendor database & profiles',
       'Contract lifecycle management',
@@ -223,7 +223,7 @@ export const wave262ItServices: Service[] = [
     industry: 'Cross-Industry',
     stage: 'published',
     pricing: { basic: '$9,999 (assessment + plan)', pro: '$24,999 (migration up to 20 servers)', enterprise: 'Custom quote' },
-    contactInfo: { website: '/services/it-cloud-migration', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/it-cloud-migration', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Full infrastructure discovery & assessment',
       'Migration strategy (lift-shift, re-platform, re-architect)',
@@ -252,7 +252,7 @@ export const wave262ItServices: Service[] = [
     industry: 'Cybersecurity',
     stage: 'published',
     pricing: { basic: '$2,499/mo (up to 50 endpoints)', pro: '$5,999/mo (250 endpoints)', enterprise: 'Custom quote' },
-    contactInfo: { website: '/services/it-managed-detection-response', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/it-managed-detection-response', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       '24/7/365 security monitoring by expert analysts',
       'Endpoint Detection & Response (EDR)',

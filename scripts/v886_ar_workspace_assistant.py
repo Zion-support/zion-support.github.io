@@ -234,7 +234,7 @@ RECOMMENDATIONS:
 - {'✅ High productivity scores' if all(w['productivity_score'] > 60 for w in self.workspaces.values()) else 'ℹ️ Productivity can be improved with layout optimization'}
 
 Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
-Contact: +1 302 464 0950 | kleber@ziontechgroup.com
+Contact: +55 11 97614-0076 | kleber@ziontechgroup.com
 """
         return report
 

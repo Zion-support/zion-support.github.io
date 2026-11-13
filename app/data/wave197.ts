@@ -14,7 +14,7 @@ export const wave197EmailIntelligenceServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: '$199/mo', pro: '$499/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+55 11 97614-0076' },
   },
 ];
 
@@ -32,7 +32,7 @@ export const wave197AiServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: '$79/mo', pro: '$199/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+55 11 97614-0076' },
   },
 ];
 
@@ -50,7 +50,7 @@ export const wave197BlockchainServices: Service[] = [
     stage: 'published',
     popular: false,
     pricing: { basic: '$999/mo', pro: '$2,499/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+55 11 97614-0076' },
   },
 ];
 
@@ -68,7 +68,7 @@ export const wave197IotServices: Service[] = [
     stage: 'published',
     popular: false,
     pricing: { basic: '$499/mo', pro: '$1,299/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+55 11 97614-0076' },
   },
 ];
 
@@ -86,7 +86,7 @@ export const wave197MicroSaasServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: '$99/mo', pro: '$249/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+55 11 97614-0076' },
   },
   {
     id: 'churn-prediction',
@@ -101,7 +101,7 @@ export const wave197MicroSaasServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: '$149/mo', pro: '$399/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+55 11 97614-0076' },
   },
 ];
 

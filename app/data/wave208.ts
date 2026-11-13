@@ -13,7 +13,7 @@ export const wave208AiServices: Service[] = [
     stage: "published",
     popular: true,
     pricing: { basic: "$299/mo", pro: "$699/mo", enterprise: "$1499/mo" },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "Scope 1, 2, and 3 emissions tracking across operations",
       "AI-powered reduction recommendations with ROI analysis",
@@ -40,7 +40,7 @@ export const wave208AiServices: Service[] = [
     stage: "published",
     popular: false,
     pricing: { basic: "$499/mo", pro: "$1199/mo", enterprise: "$2499/mo" },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "Multi-spectral and SAR imagery processing",
       "AI object detection and land use classification",
@@ -70,7 +70,7 @@ export const wave208DataServices: Service[] = [
     stage: "published",
     popular: true,
     pricing: { basic: "$599/mo", pro: "$1399/mo", enterprise: "$2999/mo" },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "Domain-oriented data product management",
       "Self-serve data infrastructure portal",
@@ -100,7 +100,7 @@ export const wave208CloudServices: Service[] = [
     stage: "published",
     popular: true,
     pricing: { basic: "$199/mo", pro: "$499/mo", enterprise: "$999/mo" },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "Cross-cloud cost visibility and analytics",
       "AI-powered waste detection and recommendations",
@@ -130,7 +130,7 @@ export const wave208SecurityServices: Service[] = [
     stage: "published",
     popular: true,
     pricing: { basic: "$249/mo", pro: "$599/mo", enterprise: "$1299/mo" },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "Dependency vulnerability scanning (SCA)",
       "SBOM generation and management (SPDX, CycloneDX)",
@@ -160,7 +160,7 @@ export const wave208AutomationServices: Service[] = [
     stage: "published",
     popular: true,
     pricing: { basic: "$199/mo", pro: "$449/mo", enterprise: "$999/mo" },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "Multi-format document ingestion (PDF, scan, email, image)",
       "AI classification with 99% accuracy",
@@ -190,7 +190,7 @@ export const wave208ItServices: Service[] = [
     stage: "published",
     popular: false,
     pricing: { basic: "$149/mo", pro: "$399/mo", enterprise: "$899/mo" },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "Real user monitoring (RUM) with session replay",
       "Synthetic transaction testing from global locations",
@@ -220,7 +220,7 @@ export const wave208MicroSaasServices: Service[] = [
     stage: "published",
     popular: true,
     pricing: { basic: "$99/mo", pro: "$299/mo", enterprise: "$699/mo" },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "AI churn risk scoring with behavioral signals",
       "Early warning alerts with risk factor breakdown",
@@ -250,7 +250,7 @@ export const wave208HealthcareItServices: Service[] = [
     stage: "published",
     popular: false,
     pricing: { basic: "$799/mo", pro: "$1799/mo", enterprise: "$3999/mo" },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "AI patient recruitment with EHR data matching",
       "Site selection optimization with enrollment forecasting",
@@ -283,7 +283,7 @@ export const wave208AiMlOpsServices: Service[] = [
     stage: "published",
     popular: true,
     pricing: { basic: "Free (self-hosted)", pro: "Managed from $50/mo", enterprise: "Enterprise: SSO, RBAC, unlimited models" },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "Experiment tracking: log parameters, metrics, artifacts, and compare runs across model versions",
       "Model Registry with stage transitions (None → Staging → Production → Archived) and approval workflows",
@@ -312,7 +312,7 @@ export const wave208DevSecOpsServices: Service[] = [
     stage: "published",
     popular: true,
     pricing: { basic: "Free: 200 tests/mo", pro: "Team from $125/mo per developer", enterprise: "Business: unlimited tests, custom policies, SSO" },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "Dependency scanning: detects known vulnerabilities (CVEs) in npm, PyPI, Maven, Go, Ruby, and .NET packages",
       "Container image scanning: analyze Docker images layer-by-layer against 1M+ known vulnerabilities",
@@ -341,7 +341,7 @@ export const wave208FinTechServices: Service[] = [
     stage: "published",
     popular: true,
     pricing: { basic: "2.9% + 30¢ per transaction", pro: "Custom volume pricing from 2.5%", enterprise: "Enterprise: dedicated support, custom interchange optimization" },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "Global payments: accept 135+ currencies, 40+ payment methods (cards, wallets, bank transfers, buy-now-pay-later)",
       "Subscription billing engine: prorations, metered billing, trial management, dunning, and revenue recognition",
@@ -370,7 +370,7 @@ export const wave208EdTechServices: Service[] = [
     stage: "published",
     popular: false,
     pricing: { basic: "Free (self-hosted, open source)", pro: "MoodleCloud from $120/yr for 50 users", enterprise: "Moodle Workplace: custom pricing, multi-tenancy, advanced reporting" },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "Course builder with drag-and-drop activity types: quizzes, assignments, forums, SCORM packages, H5P interactive content",
       "Competency-based education framework: define learning plans, track competencies across courses, generate completion evidence",
@@ -399,7 +399,7 @@ export const wave208IotServices: Service[] = [
     stage: "published",
     popular: false,
     pricing: { basic: "Free (self-hosted, open source)", pro: "Professional Edition from $10/device/mo", enterprise: "Edge: on-prem processing, unlimited tenants, white-label" },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "Device management at scale: provision, monitor, and control millions of devices with hierarchical asset relationships",
       "Multi-protocol ingestion: MQTT, CoAP, HTTP, OPC-UA, Modbus, BACnet — connect any industrial or consumer device",

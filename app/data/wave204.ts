@@ -13,7 +13,7 @@ export const wave204AiServices: Service[] = [
     stage: "published",
     popular: true,
     pricing: { basic: "$49/mo", pro: "$129/mo", enterprise: "$299/mo" },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "Real-time transcription with speaker diarization",
       "AI-generated summaries with key decisions and action items",
@@ -40,7 +40,7 @@ export const wave204AiServices: Service[] = [
     stage: "published",
     popular: true,
     pricing: { basic: "$199/mo", pro: "$449/mo", enterprise: "$999/mo" },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "Deep code analysis across 30+ programming languages",
       "OWASP Top 10 and CWE vulnerability detection",
@@ -67,7 +67,7 @@ export const wave204AiServices: Service[] = [
     stage: "published",
     popular: false,
     pricing: { basic: "$149/mo", pro: "$349/mo", enterprise: "$799/mo" },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "Multi-signal churn prediction (usage, billing, support, NPS)",
       "Customer health scoring with trend analysis",
@@ -97,7 +97,7 @@ export const wave204DataServices: Service[] = [
     stage: "published",
     popular: false,
     pricing: { basic: "$249/mo", pro: "$549/mo", enterprise: "$1199/mo" },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "Log-based CDC for PostgreSQL, MySQL, SQL Server, Oracle, MongoDB",
       "Schema evolution handling with backward compatibility",
@@ -127,7 +127,7 @@ export const wave204CloudServices: Service[] = [
     stage: "published",
     popular: true,
     pricing: { basic: "$99/mo", pro: "$249/mo", enterprise: "$549/mo" },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "Private container registry with geo-replication",
       "CVE scanning on push with severity-based blocking",
@@ -157,7 +157,7 @@ export const wave204SecurityServices: Service[] = [
     stage: "published",
     popular: true,
     pricing: { basic: "$99/mo", pro: "$249/mo", enterprise: "$549/mo" },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "AI phishing detection with URL sandboxing and time-of-click analysis",
       "Business Email Compromise (BEC) detection using sender behavior analysis",
@@ -187,7 +187,7 @@ export const wave204AutomationServices: Service[] = [
     stage: "published",
     popular: true,
     pricing: { basic: "$149/mo", pro: "$349/mo", enterprise: "$799/mo" },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "Automated incident creation from monitoring alerts",
       "On-call scheduling with rotation and escalation policies",
@@ -217,7 +217,7 @@ export const wave204ItServices: Service[] = [
     stage: "published",
     popular: false,
     pricing: { basic: "$79/mo", pro: "$199/mo", enterprise: "$449/mo" },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "Windows and Linux virtual desktops from any device",
       "GPU-accelerated instances for CAD, 3D, and video workloads",
@@ -247,7 +247,7 @@ export const wave204MicroSaasServices: Service[] = [
     stage: "published",
     popular: true,
     pricing: { basic: "$99/mo", pro: "$249/mo", enterprise: "$549/mo" },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "MRR/ARR tracking with expansion, contraction, and churn breakdown",
       "Cohort analysis with retention and revenue curves",

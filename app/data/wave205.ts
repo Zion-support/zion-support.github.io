@@ -13,7 +13,7 @@ export const wave205AiServices: Service[] = [
     stage: "published",
     popular: true,
     pricing: { basic: "$199/mo", pro: "$449/mo", enterprise: "$999/mo" },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "Real-time transcription with speaker identification",
       "Sentiment analysis with emotion detection",
@@ -40,7 +40,7 @@ export const wave205AiServices: Service[] = [
     stage: "published",
     popular: true,
     pricing: { basic: "$149/mo", pro: "$349/mo", enterprise: "$799/mo" },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "Probabilistic demand forecasting with confidence intervals",
       "Multi-echelon inventory optimization across warehouses",
@@ -70,7 +70,7 @@ export const wave205DataServices: Service[] = [
     stage: "published",
     popular: true,
     pricing: { basic: "$199/mo", pro: "$449/mo", enterprise: "$999/mo" },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "Automated data freshness monitoring with SLA tracking",
       "Volume anomaly detection with statistical baselines",
@@ -100,7 +100,7 @@ export const wave205CloudServices: Service[] = [
     stage: "published",
     popular: false,
     pricing: { basic: "$299/mo", pro: "$699/mo", enterprise: "$1499/mo" },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "Container orchestration at the edge with K3s/KubeEdge",
       "Centralized management console for thousands of edge nodes",
@@ -130,7 +130,7 @@ export const wave205SecurityServices: Service[] = [
     stage: "published",
     popular: true,
     pricing: { basic: "$299/mo", pro: "$699/mo", enterprise: "$1499/mo" },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "Automated web application and API scanning",
       "AI-driven attack simulation with exploit chaining",
@@ -160,7 +160,7 @@ export const wave205AutomationServices: Service[] = [
     stage: "published",
     popular: false,
     pricing: { basic: "$99/mo", pro: "$249/mo", enterprise: "$549/mo" },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "Drag-and-drop workflow designer with conditional routing",
       "Document template library with dynamic field population",
@@ -190,7 +190,7 @@ export const wave205ItServices: Service[] = [
     stage: "published",
     popular: true,
     pricing: { basic: "$49/mo", pro: "$129/mo", enterprise: "$299/mo" },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "Cloud PBX with global PSTN connectivity and local numbers",
       "HD video conferencing with screen sharing and recording",
@@ -220,7 +220,7 @@ export const wave205MicroSaasServices: Service[] = [
     stage: "published",
     popular: true,
     pricing: { basic: "$29/mo", pro: "$79/mo", enterprise: "$199/mo" },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "Multi-platform scheduling (Instagram, Twitter, LinkedIn, Facebook, TikTok)",
       "AI content suggestions based on trending topics and brand voice",

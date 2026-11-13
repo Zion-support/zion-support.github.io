@@ -14,7 +14,7 @@ export const wave198AiServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: '$199/mo', pro: '$499/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+55 11 97614-0076' },
   },
   {
     id: 'ai-supply-chain-optimizer',
@@ -29,7 +29,7 @@ export const wave198AiServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: '$599/mo', pro: '$1,499/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+55 11 97614-0076' },
   },
 ];
 
@@ -47,7 +47,7 @@ export const wave198HealthcareItServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: '$299/mo', pro: '$799/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+55 11 97614-0076' },
   },
 ];
 
@@ -65,7 +65,7 @@ export const wave198EdtechServices: Service[] = [
     stage: 'published',
     popular: false,
     pricing: { basic: '$199/mo', pro: '$499/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+55 11 97614-0076' },
   },
 ];
 
@@ -83,7 +83,7 @@ export const wave198FintechServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: '$499/mo', pro: '$1,299/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+55 11 97614-0076' },
   },
 ];
 
@@ -101,7 +101,7 @@ export const wave198MicroSaasServices: Service[] = [
     stage: 'published',
     popular: false,
     pricing: { basic: '$49/mo', pro: '$149/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+55 11 97614-0076' },
   },
   {
     id: 'employee-engagement-platform',
@@ -116,7 +116,7 @@ export const wave198MicroSaasServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: '$39/mo', pro: '$99/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+55 11 97614-0076' },
   },
 ];
 

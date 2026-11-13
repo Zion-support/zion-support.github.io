@@ -16,7 +16,7 @@ export const wave251AiVideoGenerationServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: 'Free (125 credits, 5GB assets, 720p)', pro: '$15/month (625 credits, 100GB, 4K)', enterprise: 'Custom (unlimited credits, team seats, API access)' },
-    contactInfo: { website: 'https://runwayml.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://runwayml.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Gen-3 Alpha text-to-video: generate cinematic video from text prompts',
       'Image-to-video: animate still images with natural motion and camera movement',
@@ -47,7 +47,7 @@ export const wave251BlockchainIdentityServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: 'Free (open source, self-hosted)', pro: '$0.01/verification (managed service, 10K verifications/month)', enterprise: 'Custom (private chain, custom schemas, dedicated support)' },
-    contactInfo: { website: 'https://polygon.technology/polygon-id', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://polygon.technology/polygon-id', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Self-sovereign identity: users own and control their identity data',
       'Zero-knowledge proofs: verify claims without revealing underlying data',
@@ -78,7 +78,7 @@ export const wave251SmartBuildingIotServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: '$2/building/month (basic monitoring, email alerts)', pro: '$8/building/month (AI optimization, predictive maintenance)', enterprise: 'Custom (digital twin, API access, dedicated support)' },
-    contactInfo: { website: 'https://buildingos.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://buildingos.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Unified building dashboard: monitor HVAC, lighting, security, and energy from one interface',
       'AI energy optimization: automatically adjust systems based on occupancy, weather, and utility rates',
@@ -109,7 +109,7 @@ export const wave251AiFinancialPlanningServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: '$500/month (10 users, 3 data sources, basic forecasting)', pro: '$2,000/month (50 users, unlimited data sources, AI forecasting)', enterprise: 'Custom (unlimited users, dedicated AI training, SLA)' },
-    contactInfo: { website: 'https://uplift.ai', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://uplift.ai', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'AI-powered forecasting: ML models generate accurate financial forecasts in real time',
       'Scenario planning: model best-case, worst-case, and custom scenarios',
@@ -140,7 +140,7 @@ export const wave251RoboticProcessAutomationServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: '$750/month (basic bot, 1 user)', pro: '$2,500/month (unlimited bots, AI skills, 10 users)', enterprise: 'Custom (unlimited bots, dedicated AI training, on-prem option)' },
-    contactInfo: { website: 'https://automationanywhere.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://automationanywhere.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'AI-powered bots: combine RPA with generative AI for unstructured data and complex decisions',
       'No-code automation builder: citizen developers create bots with drag-and-drop designer',

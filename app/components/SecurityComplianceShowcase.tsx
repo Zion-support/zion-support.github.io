@@ -446,11 +446,11 @@ export default function SecurityComplianceShowcase() {
                 <span>Get Security Assessment</span>
               </a>
               <a
-                href="tel:+130****0950"
+                href="tel:+5511976140076"
                 className="bg-slate-800 hover:bg-slate-700 text-white font-bold py-4 px-8 rounded-lg transition-all border border-slate-700 inline-flex items-center justify-center gap-2"
               >
                 <span>📞</span>
-                <span>+1 302 464 0950</span>
+                <span>+55 11 97614-0076</span>
               </a>
             </div>
           </div>

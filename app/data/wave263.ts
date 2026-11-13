@@ -14,7 +14,7 @@ export const wave263AiServices: Service[] = [
     industry: 'Real Estate',
     stage: 'published',
     pricing: { basic: '$149/mo (50 reports)', pro: '$399/mo (200 reports)', enterprise: '$999/mo (unlimited)' },
-    contactInfo: { website: '/services/ai-real-estate-valuation', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/ai-real-estate-valuation', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Instant AI property valuations (AVM)',
       'Comparable sales analysis & adjustments',
@@ -43,7 +43,7 @@ export const wave263AiServices: Service[] = [
     industry: 'Energy, Facilities',
     stage: 'published',
     pricing: { basic: '$499/mo (1 facility)', pro: '$1,299/mo (5 facilities)', enterprise: 'Custom quote' },
-    contactInfo: { website: '/services/ai-energy-optimization', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/ai-energy-optimization', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Real-time energy consumption monitoring',
       'AI demand forecasting & load optimization',
@@ -72,7 +72,7 @@ export const wave263AiServices: Service[] = [
     industry: 'Cross-Industry',
     stage: 'published',
     pricing: { basic: '$0.05/word', pro: '$0.03/word (volume)', enterprise: 'Custom pricing' },
-    contactInfo: { website: '/services/ai-multilingual-translation', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/ai-multilingual-translation', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       '100+ language pairs supported',
       'Format-preserving translation (PDF, PPTX, DOCX)',
@@ -101,7 +101,7 @@ export const wave263AiServices: Service[] = [
     industry: 'Manufacturing, Industrial',
     stage: 'published',
     pricing: { basic: '$999/mo (up to 50 sensors)', pro: '$2,499/mo (250 sensors)', enterprise: 'Custom quote' },
-    contactInfo: { website: '/services/ai-predictive-maintenance', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/ai-predictive-maintenance', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Real-time sensor data ingestion & analysis',
       'Failure prediction with time-to-failure estimates',
@@ -130,7 +130,7 @@ export const wave263AiServices: Service[] = [
     industry: 'Finance, SaaS',
     stage: 'published',
     pricing: { basic: '$499/mo', pro: '$1,299/mo', enterprise: 'Custom quote' },
-    contactInfo: { website: '/services/ai-revenue-recognition', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/ai-revenue-recognition', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Automated contract analysis & obligation identification',
       'Variable consideration estimation (usage, bonuses)',
@@ -162,7 +162,7 @@ export const wave263MicroSaasServices: Service[] = [
     industry: 'Community, SaaS',
     stage: 'published',
     pricing: { basic: '$79/mo (500 members)', pro: '$199/mo (5,000 members)', enterprise: '$499/mo (unlimited)' },
-    contactInfo: { website: '/services/microsaas-community-platform', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/microsaas-community-platform', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Discussion forums with moderation tools',
       'Member profiles & directory',
@@ -191,7 +191,7 @@ export const wave263MicroSaasServices: Service[] = [
     industry: 'Cross-Industry',
     stage: 'published',
     pricing: { basic: '$29/mo (1,000 submissions)', pro: '$79/mo (10,000 submissions)', enterprise: '$199/mo (unlimited)' },
-    contactInfo: { website: '/services/microsaas-form-builder', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/microsaas-form-builder', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Drag-and-drop form builder (no code)',
       'Conditional logic & branching',
@@ -223,7 +223,7 @@ export const wave263ItServices: Service[] = [
     industry: 'Cross-Industry',
     stage: 'published',
     pricing: { basic: '$1,999/mo (up to 10 VMs)', pro: '$4,999/mo (50 VMs)', enterprise: 'Custom quote' },
-    contactInfo: { website: '/services/it-disaster-recovery', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/it-disaster-recovery', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Continuous data replication (RPO under 15 min)',
       'Automated failover & failback',
@@ -252,7 +252,7 @@ export const wave263ItServices: Service[] = [
     industry: 'Cross-Industry',
     stage: 'published',
     pricing: { basic: '$2,499 (design + assessment)', pro: '$7,499 (deployment)', enterprise: 'Custom managed NOC' },
-    contactInfo: { website: '/services/it-network-infrastructure', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/it-network-infrastructure', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'LAN/WAN architecture design & documentation',
       'SD-WAN deployment & optimization',

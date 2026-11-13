@@ -15,7 +15,7 @@ export const wave207ObservabilityServices: Service[] = [
     stage: "published",
     popular: true,
     pricing: { basic: "Free (self-hosted)", pro: "Free tier: 10K metrics, 50GB logs", enterprise: "Cloud Pro from $29/mo" },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "Composable dashboards with 100+ visualization types (time series, heatmaps, geomaps, gauges)",
       "Unified observability: metrics (Prometheus/Mimir), logs (Loki), and traces (Tempo) in a single interface",
@@ -43,7 +43,7 @@ export const wave207IdentityServices: Service[] = [
     stage: "published",
     popular: true,
     pricing: { basic: "100% Free (OSS)", pro: "Free at any user count", enterprise: "Red Hat support available" },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "Single Sign-On (SSO) with OpenID Connect, OAuth 2.0, and SAML 2.0 protocol support",
       "User federation against LDAP, Active Directory, and custom user stores",
@@ -71,7 +71,7 @@ export const wave207CmsServices: Service[] = [
     stage: "published",
     popular: false,
     pricing: { basic: "Free (self-hosted)", pro: "Cloud Pro from $99/mo", enterprise: "Cloud Pro: 50K entries, 10 users" },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "Intuitive admin panel with drag-and-drop content type builder — no coding required for content modeling",
       "REST and GraphQL APIs auto-generated from content types; SDKs for JavaScript, PHP, and more",
@@ -99,7 +99,7 @@ export const wave207EcommerceServices: Service[] = [
     stage: "published",
     popular: false,
     pricing: { basic: "Free (self-hosted)", pro: "Cloud Pro from $99/mo", enterprise: "Cloud Pro: unlimited orders, 10 admin users" },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "Headless commerce engine with REST and GraphQL storefront APIs — works with any frontend (Next.js, Remix, mobile)",
       "Modular architecture: pick only the modules you need (products, inventory, orders, payments, notifications, search)",
@@ -127,7 +127,7 @@ export const wave207DocumentationServices: Service[] = [
     stage: "published",
     popular: false,
     pricing: { basic: "Free (self-hosted)", pro: "Cloud Team from $10/user/mo", enterprise: "Cloud Team: unlimited documents, 10GB storage" },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "Real-time collaborative rich-text editor with Markdown support, code blocks, and embeds",
       "Hierarchical document tree with drag-and-drop organization — structure knowledge like a filesystem",
@@ -156,7 +156,7 @@ export const wave207AiServices: Service[] = [
     stage: "published",
     popular: true,
     pricing: { basic: "$349/mo", pro: "$799/mo", enterprise: "$1699/mo" },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "Alternative data analysis (cash flow, behavioral, social signals)",
       "Explainable AI with reason codes for every decision",
@@ -183,7 +183,7 @@ export const wave207AiServices: Service[] = [
     stage: "published",
     popular: true,
     pricing: { basic: "$199/mo", pro: "$449/mo", enterprise: "$999/mo" },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "Predictive no-show modeling with patient risk scoring",
       "Intelligent overbooking based on cancellation probability",
@@ -213,7 +213,7 @@ export const wave207DataServices: Service[] = [
     stage: "published",
     popular: false,
     pricing: { basic: "$499/mo", pro: "$1199/mo", enterprise: "$2499/mo" },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "Pre-built financial data models (banking, insurance, capital markets)",
       "Regulatory reporting templates (CCAR, Basel III, Solvency II)",
@@ -243,7 +243,7 @@ export const wave207CloudServices: Service[] = [
     stage: "published",
     popular: true,
     pricing: { basic: "$299/mo", pro: "$699/mo", enterprise: "$1499/mo" },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "Unified management console for on-prem, private, and public cloud",
       "Intelligent workload placement based on cost, performance, and compliance",
@@ -273,7 +273,7 @@ export const wave207SecurityServices: Service[] = [
     stage: "published",
     popular: true,
     pricing: { basic: "$349/mo", pro: "$799/mo", enterprise: "$1699/mo" },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "Real-time transaction scoring with sub-50ms latency",
       "Behavioral biometrics (typing, mouse, touch patterns)",
@@ -303,7 +303,7 @@ export const wave207AutomationServices: Service[] = [
     stage: "published",
     popular: true,
     pricing: { basic: "$399/mo", pro: "$899/mo", enterprise: "$1999/mo" },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "Real-time OEE (Overall Equipment Effectiveness) tracking",
       "Predictive quality with in-line defect detection",
@@ -333,7 +333,7 @@ export const wave207ItServices: Service[] = [
     stage: "published",
     popular: true,
     pricing: { basic: "$49/mo", pro: "$129/mo", enterprise: "$299/mo" },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "Single console for Windows, macOS, iOS, Android, and IoT",
       "Zero-touch enrollment with automated device provisioning",
@@ -363,7 +363,7 @@ export const wave207MicroSaasServices: Service[] = [
     stage: "published",
     popular: true,
     pricing: { basic: "$79/mo", pro: "$199/mo", enterprise: "$449/mo" },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "AI content generation from RFP requirements and past wins",
       "Content library with version control and approval workflows",
@@ -393,7 +393,7 @@ export const wave207HealthcareItServices: Service[] = [
     stage: "published",
     popular: true,
     pricing: { basic: "$299/mo", pro: "$699/mo", enterprise: "$1499/mo" },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "HD video consultations with screen sharing",
       "E-prescribing with pharmacy network integration",
@@ -420,7 +420,7 @@ export const wave207HealthcareItServices: Service[] = [
     stage: "published",
     popular: false,
     pricing: { basic: "$499/mo", pro: "$1199/mo", enterprise: "$2499/mo" },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "HL7 FHIR R4 compliant API gateway",
       "Patient identity matching across systems",

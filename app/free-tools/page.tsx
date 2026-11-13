@@ -19,7 +19,7 @@ export default function FreeToolsProxy() {
             If you need custom AI integrations, IT automation, or managed delivery, Zion Tech Group can build tailored solutions on top of these patterns.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4 mt-6">
-            <a href="tel:+13024640950" className="btn-primary text-lg">☎ +1 302 464 0950</a>
+            <a href="tel:+5511976140076" className="btn-primary text-lg">☎ +55 11 97614-0076</a>
             <a href="https://calendly.com/kleber-ziontechgroup" target="_blank" rel="noreferrer" className="btn-secondary text-lg">📅 Book Consultation</a>
             <Link href="/contact/" className="btn-secondary text-lg">Contact Us</Link>
           </div>
@@ -31,7 +31,7 @@ export default function FreeToolsProxy() {
             We offer AI implementation, IT automation, managed support, and custom integrations for teams that want production-ready solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:+13024640950" className="btn-primary text-lg">☎ +1 302 464 0950</a>
+            <a href="tel:+5511976140076" className="btn-primary text-lg">☎ +55 11 97614-0076</a>
             <a href="https://calendly.com/kleber-ziontechgroup" target="_blank" rel="noreferrer" className="btn-secondary text-lg">📅 Book a Consultation</a>
             <Link href="/services/" className="btn-secondary text-lg">View Services</Link>
           </div>

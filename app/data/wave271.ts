@@ -30,7 +30,7 @@ export const wave271Services: Service[] = [
     contactInfo: {
       website: '/services/ai-fraud-detection-platform',
       email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
+      phone: '+55 11 97614-0076',
     },
   },
   {
@@ -62,7 +62,7 @@ export const wave271Services: Service[] = [
     contactInfo: {
       website: '/services/it-data-center-interconnect',
       email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
+      phone: '+55 11 97614-0076',
     },
   },
   {
@@ -94,7 +94,7 @@ export const wave271Services: Service[] = [
     contactInfo: {
       website: '/services/micro-saas-ai-form-builder',
       email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
+      phone: '+55 11 97614-0076',
     },
   },
   {
@@ -126,7 +126,7 @@ export const wave271Services: Service[] = [
     contactInfo: {
       website: '/services/ai-document-understanding-api',
       email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
+      phone: '+55 11 97614-0076',
     },
   },
 ];

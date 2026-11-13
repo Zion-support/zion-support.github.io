@@ -112,7 +112,7 @@ const Navigation: React.FC = () => {
 
           {/* CTA */}
           <div className="hidden lg:flex items-center gap-3">
-            <a href="tel:+130****0950" className="text-slate-400 hover:text-emerald-400 transition-colors"><Phone className="h-4 w-4" /></a>
+            <a href="tel:+5511976140076" className="text-slate-400 hover:text-emerald-400 transition-colors"><Phone className="h-4 w-4" /></a>
             <a href="mailto:kleber@ziontechgroup.com" className="text-slate-400 hover:text-emerald-400 transition-colors"><Mail className="h-4 w-4" /></a>
             <Link href="/contact" className="bg-gradient-to-r from-emerald-600 to-cyan-600 hover:from-emerald-500 hover:to-cyan-500 text-white px-5 py-2 rounded-lg text-sm font-semibold transition-all shadow-lg shadow-emerald-500/20">
               Get Started
@@ -146,7 +146,7 @@ const Navigation: React.FC = () => {
               <div className="pt-3 px-2">
                 <Link href="/contact" className="bg-gradient-to-r from-emerald-600 to-cyan-600 text-white block px-4 py-3 rounded-lg text-base font-semibold text-center" onClick={toggleMenu}>⚡ Get Started Free</Link>
                 <div className="flex items-center justify-center gap-4 mt-3 text-sm text-slate-400">
-                  <a href="tel:+13024640950" className="flex items-center gap-1 hover:text-emerald-400"><Phone className="h-3.5 w-3.5" /> +1 302 464 0950</a>
+                  <a href="tel:+5511976140076" className="flex items-center gap-1 hover:text-emerald-400"><Phone className="h-3.5 w-3.5" /> +55 11 97614-0076</a>
                   <a href="mailto:kleber@ziontechgroup.com" className="flex items-center gap-1 hover:text-emerald-400"><Mail className="h-3.5 w-3.5" /> Email</a>
                 </div>
               </div>

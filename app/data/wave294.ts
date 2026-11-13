@@ -22,7 +22,7 @@ export const wave294ItServices = [
     contactInfo: {
       website: "/services/it-support-tiered-escalation-framework",
       email: "kleber@ziontechgroup.com",
-      phone: "+1 302 464 0950"
+      phone: "+55 11 97614-0076"
     },
     icon: "📞",
     href: "/services/it-support-tiered-escalation-framework",
@@ -54,7 +54,7 @@ export const wave294ItServices = [
     contactInfo: {
       website: "/services/it-desktop-lifecycle-refresh-runner",
       email: "kleber@ziontechgroup.com",
-      phone: "+1 302 464 0950"
+      phone: "+55 11 97614-0076"
     },
     icon: "🖥️",
     href: "/services/it-desktop-lifecycle-refresh-runner",
@@ -89,7 +89,7 @@ export const wave294AiServices = [
     contactInfo: {
       website: "/services/ai-project-risk-radar",
       email: "kleber@ziontechgroup.com",
-      phone: "+1 302 464 0950"
+      phone: "+55 11 97614-0076"
     },
     icon: "📡",
     href: "/services/ai-project-risk-radar",
@@ -124,7 +124,7 @@ export const wave294SecurityServices = [
     contactInfo: {
       website: "/services/security-access-request-auditor",
       email: "kleber@ziontechgroup.com",
-      phone: "+1 302 464 0950"
+      phone: "+55 11 97614-0076"
     },
     icon: "🔑",
     href: "/services/security-access-request-auditor",
@@ -156,7 +156,7 @@ export const wave294SecurityServices = [
     contactInfo: {
       website: "/services/security-social-engineering-risk-estimator",
       email: "kleber@ziontechgroup.com",
-      phone: "+1 302 464 0950"
+      phone: "+55 11 97614-0076"
     },
     icon: "🎭",
     href: "/services/security-social-engineering-risk-estimator",
@@ -191,7 +191,7 @@ export const wave294CloudServices = [
     contactInfo: {
       website: "/services/cloud-cost-anomaly-storyteller",
       email: "kleber@ziontechgroup.com",
-      phone: "+1 302 464 0950"
+      phone: "+55 11 97614-0076"
     },
     icon: "📊",
     href: "/services/cloud-cost-anomaly-storyteller",
@@ -226,7 +226,7 @@ export const wave294DataServices = [
     contactInfo: {
       website: "/services/data-dictionary-auto-harmonizer",
       email: "kleber@ziontechgroup.com",
-      phone: "+1 302 464 0950"
+      phone: "+55 11 97614-0076"
     },
     icon: "📚",
     href: "/services/data-dictionary-auto-harmonizer",
@@ -261,7 +261,7 @@ export const wave294AutomationServices = [
     contactInfo: {
       website: "/services/automation-merge-request-health-check",
       email: "kleber@ziontechgroup.com",
-      phone: "+1 302 464 0950"
+      phone: "+55 11 97614-0076"
     },
     icon: "🔀",
     href: "/services/automation-merge-request-health-check",
@@ -296,7 +296,7 @@ export const wave294MicroSaasServices = [
     contactInfo: {
       website: "/services/micro-saas-ai-invoice-gap-detector",
       email: "kleber@ziontechgroup.com",
-      phone: "+1 302 464 0950"
+      phone: "+55 11 97614-0076"
     },
     icon: "🧾",
     href: "/services/micro-saas-ai-invoice-gap-detector",
@@ -328,7 +328,7 @@ export const wave294MicroSaasServices = [
     contactInfo: {
       website: "/services/micro-saas-ai-ops-morning-brief",
       email: "kleber@ziontechgroup.com",
-      phone: "+1 302 464 0950"
+      phone: "+55 11 97614-0076"
     },
     icon: "☕",
     href: "/services/micro-saas-ai-ops-morning-brief",

@@ -1,3 +1,11 @@
+<!-- ZION-OFFICIAL-WHATSAPP-20261113 -->
+## Contato oficial vigente da Zion — 13/11/2026
+Por instrucao direta de Kleber, o WhatsApp comercial oficial da Zion e **+55 11 97614-0076**. E.164: **+5511976140076**; link: **https://wa.me/5511976140076**; telefone: **tel:+5511976140076**.
+Use este contato nas respostas, assinaturas, propostas, paginas e geradores futuros da Zion. Esta decisao substitui numeros comerciais anteriores e placeholders de contato da propria Zion. Preserve documentos, mensagens e recibos historicos; nao substitua telefones de clientes, terceiros, credenciais, IDs de contas ou destinos tecnicos de gateway.
+O numero foi confirmado pelo proprietario; o teste de envio/recebimento permanece pendente ate existir recibo real. Nao declarar funcionamento apenas porque um link abre. O teste unico desta fase e exclusivo do Codex: nao reenviar nem criar tarefa, agente, cron ou campanha duplicada.
+Referencia local: /Users/klebergarciaalcatrao/.hermes/zion-official-contact.json
+<!-- /ZION-OFFICIAL-WHATSAPP-20261113 -->
+
 # AGENTS.md - Your Workspace
 
 This folder is home. Treat it that way.

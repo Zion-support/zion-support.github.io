@@ -234,8 +234,8 @@ export default function ServiceStatusDashboard() {
             <a href="mailto:kleber@ziontechgroup.com" className="px-5 py-2.5 bg-gray-800 hover:bg-gray-700 text-gray-300 rounded-lg transition-colors border border-gray-700 text-sm">
               📧 kleber@ziontechgroup.com
             </a>
-            <a href="tel:+130****0950" className="px-5 py-2.5 bg-gray-800 hover:bg-gray-700 text-gray-300 rounded-lg transition-colors border border-gray-700 text-sm">
-              📞 +1 302 464 0950
+            <a href="tel:+5511976140076" className="px-5 py-2.5 bg-gray-800 hover:bg-gray-700 text-gray-300 rounded-lg transition-colors border border-gray-700 text-sm">
+              📞 +55 11 97614-0076
             </a>
           </div>
           <p className="text-gray-600 text-xs mt-3">364 E Main St STE 1008, Middletown DE 19709</p>

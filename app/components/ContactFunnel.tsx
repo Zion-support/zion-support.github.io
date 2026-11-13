@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 
 const SITE_URL   = 'https://ziontechgroup.com';
-const PHONE      = '+1 302 464 0950';
+const PHONE      = '+55 11 97614-0076';
 const EMAIL      = 'kleber@ziontechgroup.com';
 const ADDRESS    = '364 E Main St STE 1008, Middletown, DE 19709, USA';
 const MAPS_URL   = 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709';

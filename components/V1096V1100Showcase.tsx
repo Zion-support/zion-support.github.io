@@ -227,7 +227,7 @@ export default function V1096V1100Showcase() {
           <h3 className="text-2xl font-bold text-white mb-4">Ready to Transform Your Email Intelligence?</h3>
           <p className="text-purple-200 mb-6">Contact our team for a personalized demo and pricing.</p>
           <div className="flex flex-wrap justify-center gap-6 text-white/90">
-            <span>📱 +1 302 464 0950</span>
+            <span>📱 +55 11 97614-0076</span>
             <span>📧 kleber@ziontechgroup.com</span>
             <span>📍 364 E Main St STE 1008, Middletown DE 19709</span>
           </div>

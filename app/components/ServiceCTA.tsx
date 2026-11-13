@@ -25,8 +25,8 @@ export default function ServiceCTA({ serviceName }: ServiceCTAProps) {
           <Link href="/contact/" className="btn-secondary text-lg px-8 py-3">
             ⚙️ Start Contact Flow
           </Link>
-          <a href="tel:+13024640950" className="btn-secondary text-lg px-8 py-3">
-            ☎ Call +1 302 464 0950
+          <a href="tel:+5511976140076" className="btn-secondary text-lg px-8 py-3">
+            ☎ Call +55 11 97614-0076
           </a>
         </div>
       </div>

@@ -18,7 +18,7 @@ export default function Page() {
       <section className="py-20 bg-gradient-to-b from-slate-900 to-slate-950 border-t border-slate-800/60">
         <div className="container-page text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>
-          <p className="text-slate-400 max-w-xl mx-auto mb-8">Contact our team: +1 302 464 0950 | kleber@ziontechgroup.com</p>
+          <p className="text-slate-400 max-w-xl mx-auto mb-8">Contact our team: +55 11 97614-0076 | kleber@ziontechgroup.com</p>
           <a href="/contact" className="inline-flex items-center px-8 py-3 rounded-lg bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold text-lg">Schedule Free Consultation</a>
         </div>
       </section>

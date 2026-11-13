@@ -713,7 +713,7 @@ export default function ServicesHubPage() {
                 {[
                   { icon: '✅', text: 'Free consultation' },
                   { icon: '🔒', text: 'No obligation' },
-                  { icon: '📞', text: '+1 302 464 0950' },
+                  { icon: '📞', text: '+55 11 97614-0076' },
                   { icon: '🇺🇸', text: 'US-based team' },
                 ].map((badge) => (
                   <div key={badge.text} className="flex items-center gap-1.5">

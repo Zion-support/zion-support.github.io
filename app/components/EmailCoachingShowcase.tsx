@@ -295,11 +295,11 @@ export default function EmailCoachingShowcase() {
                 <span>→</span>
               </a>
               <a
-                href="tel:+13024640950"
+                href="tel:+5511976140076"
                 className="bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-lg transition-all border border-white/20 inline-flex items-center justify-center gap-2"
               >
                 <span>📞</span>
-                <span>+1 302 464 0950</span>
+                <span>+55 11 97614-0076</span>
               </a>
             </div>
             <p className="text-gray-400 text-sm mt-4">

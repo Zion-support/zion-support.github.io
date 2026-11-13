@@ -14,7 +14,7 @@ export const wave196AiServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: '$99/mo', pro: '$299/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+55 11 97614-0076' },
   },
   {
     id: 'ai-video-generator',
@@ -29,7 +29,7 @@ export const wave196AiServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: '$149/mo', pro: '$399/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+55 11 97614-0076' },
   },
 ];
 
@@ -47,7 +47,7 @@ export const wave196DataServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: '$399/mo', pro: '$999/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+55 11 97614-0076' },
   },
 ];
 
@@ -65,7 +65,7 @@ export const wave196CloudServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: '$49/mo', pro: '$199/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+55 11 97614-0076' },
   },
 ];
 
@@ -83,7 +83,7 @@ export const wave196SecurityServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: '$349/mo', pro: '$899/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+55 11 97614-0076' },
   },
 ];
 
@@ -101,7 +101,7 @@ export const wave196AutomationServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: '$199/mo', pro: '$499/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+55 11 97614-0076' },
   },
 ];
 
@@ -119,7 +119,7 @@ export const wave196MicroSaasServices: Service[] = [
     stage: 'published',
     popular: false,
     pricing: { basic: '$79/mo', pro: '$199/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+55 11 97614-0076' },
   },
   {
     id: 'inventory-management',
@@ -134,7 +134,7 @@ export const wave196MicroSaasServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: '$99/mo', pro: '$249/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+55 11 97614-0076' },
   },
   {
     id: 'project-time-tracker',
@@ -149,7 +149,7 @@ export const wave196MicroSaasServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: '$29/mo', pro: '$79/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+55 11 97614-0076' },
   },
 ];
 

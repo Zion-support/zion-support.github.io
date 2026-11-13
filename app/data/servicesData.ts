@@ -15,7 +15,7 @@ const allServices: readonly Service[] = rawData.map((service: Service) => ({
   // Ensure contactInfo exists
   contactInfo: service.contactInfo || {
     email: 'info@ziontechgroup.com',
-    phone: '+1-302-464-0950',
+    phone: '+55 11 97614-0076',
     website: `/services/${service.id}`
   }
 }));

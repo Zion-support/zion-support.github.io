@@ -16,7 +16,7 @@ const NEW_SERVICES = [
     pricing: { 'basic': '$499', 'pro': '$1,299', 'enterprise': '$4,999' },
     id: 'ai-anti-money-laundering-intelligence',
     timestamp: new Date().toISOString(),
-    contactInfo: { website: '/services/ai-anti-money-laundering-intelligence', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/ai-anti-money-laundering-intelligence', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     icon: '🛡️', href: '/services/ai-anti-money-laundering-intelligence', popular: true
   },
   {
@@ -29,7 +29,7 @@ const NEW_SERVICES = [
     pricing: { 'basic': '$299', 'pro': '$799', 'enterprise': '$2,499' },
     id: 'ai-kyc-identity-verification',
     timestamp: new Date().toISOString(),
-    contactInfo: { website: '/services/ai-kyc-identity-verification', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/ai-kyc-identity-verification', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     icon: '🆔', href: '/services/ai-kyc-identity-verification', popular: true
   },
   {
@@ -42,7 +42,7 @@ const NEW_SERVICES = [
     pricing: { 'basic': '$399', 'pro': '$999', 'enterprise': '$3,499' },
     id: 'ai-credit-risk-scoring',
     timestamp: new Date().toISOString(),
-    contactInfo: { website: '/services/ai-credit-risk-scoring', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/ai-credit-risk-scoring', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     icon: '📊', href: '/services/ai-credit-risk-scoring', popular: true
   },
   // Healthcare
@@ -56,7 +56,7 @@ const NEW_SERVICES = [
     pricing: { 'basic': '$599', 'pro': '$1,499', 'enterprise': '$4,999' },
     id: 'ai-medical-diagnosis-assistant',
     timestamp: new Date().toISOString(),
-    contactInfo: { website: '/services/ai-medical-diagnosis-assistant', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/ai-medical-diagnosis-assistant', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     icon: '🩺', href: '/services/ai-medical-diagnosis-assistant', popular: true
   },
   {
@@ -69,7 +69,7 @@ const NEW_SERVICES = [
     pricing: { 'basic': '$799', 'pro': '$1,999', 'enterprise': '$4,999' },
     id: 'ai-telemedicine-platform',
     timestamp: new Date().toISOString(),
-    contactInfo: { website: '/services/ai-telemedicine-platform', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/ai-telemedicine-platform', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     icon: '📞', href: '/services/ai-telemedicine-platform', popular: true
   },
   // Retail
@@ -83,7 +83,7 @@ const NEW_SERVICES = [
     pricing: { 'basic': '$299', 'pro': '$799', 'enterprise': '$2,499' },
     id: 'ai-personalized-product-recommendations',
     timestamp: new Date().toISOString(),
-    contactInfo: { website: '/services/ai-personalized-product-recommendations', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/ai-personalized-product-recommendations', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     icon: '🛍️', href: '/services/ai-personalized-product-recommendations', popular: true
   },
   {
@@ -96,7 +96,7 @@ const NEW_SERVICES = [
     pricing: { 'basic': '$399', 'pro': '$999', 'enterprise': '$3,499' },
     id: 'ai-demand-forecasting',
     timestamp: new Date().toISOString(),
-    contactInfo: { website: '/services/ai-demand-forecasting', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/ai-demand-forecasting', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     icon: '📊', href: '/services/ai-demand-forecasting', popular: true
   },
   // Manufacturing
@@ -110,7 +110,7 @@ const NEW_SERVICES = [
     pricing: { 'basic': '$799', 'pro': '$1,999', 'enterprise': '$4,999' },
     id: 'ai-computer-vision-quality-inspection',
     timestamp: new Date().toISOString(),
-    contactInfo: { website: '/services/ai-computer-vision-quality-inspection', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/ai-computer-vision-quality-inspection', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     icon: '👁️', href: '/services/ai-computer-vision-quality-inspection', popular: true
   },
   {
@@ -123,7 +123,7 @@ const NEW_SERVICES = [
     pricing: { 'basic': '$699', 'pro': '$1,699', 'enterprise': '$4,499' },
     id: 'ai-predictive-maintenance',
     timestamp: new Date().toISOString(),
-    contactInfo: { website: '/services/ai-predictive-maintenance', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/ai-predictive-maintenance', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     icon: '🔧', href: '/services/ai-predictive-maintenance', popular: true
   },
   // Logistics
@@ -137,7 +137,7 @@ const NEW_SERVICES = [
     pricing: { 'basic': '$499', 'pro': '$1,299', 'enterprise': '$3,999' },
     id: 'ai-route-optimizer-pro',
     timestamp: new Date().toISOString(),
-    contactInfo: { website: '/services/ai-route-optimizer-pro', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/ai-route-optimizer-pro', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     icon: '🚚', href: '/services/ai-route-optimizer-pro', popular: true
   },
   {
@@ -150,7 +150,7 @@ const NEW_SERVICES = [
     pricing: { 'basic': '$599', 'pro': '$1,499', 'enterprise': '$3,999' },
     id: 'ai-supply-chain-visibility',
     timestamp: new Date().toISOString(),
-    contactInfo: { website: '/services/ai-supply-chain-visibility', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/ai-supply-chain-visibility', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     icon: '🌐', href: '/services/ai-supply-chain-visibility', popular: true
   }
 ];

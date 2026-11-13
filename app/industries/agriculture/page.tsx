@@ -187,8 +187,8 @@ export default function AgricultureIndustryPage() {
                 </Link>
               </div>
 
-              <a href="tel:+130****0950" className="text-slate-400 hover:text-slate-300">
-                ☎ +1 302 464 0950
+              <a href="tel:+5511976140076" className="text-slate-400 hover:text-slate-300">
+                ☎ +55 11 97614-0076
               </a>
             </div>
           </div>

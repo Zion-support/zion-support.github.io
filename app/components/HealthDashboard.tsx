@@ -189,7 +189,7 @@ export default function HealthDashboard() {
           <p className="text-gray-400 mb-4">Explore {stats.total_services}+ services or contact our team</p>
           <div className="flex flex-wrap justify-center gap-4 text-sm">
             <span className="text-gray-300">📧 kleber@ziontechgroup.com</span>
-            <span className="text-gray-300">📞 +1 302 464 0950</span>
+            <span className="text-gray-300">📞 +55 11 97614-0076</span>
             <span className="text-gray-300">📍 364 E Main St, Middletown DE</span>
           </div>
         </div>

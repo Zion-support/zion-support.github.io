@@ -18,7 +18,7 @@ export const wave216SwarmIntelligenceServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: 'Free (simulation only)', pro: '$2,000/month (100 agents)', enterprise: 'Custom ($50K+/program)' },
-    contactInfo: { website: 'https://kilobots.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://kilobots.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Decentralized coordination algorithms — no single point of failure',
       'Support for 1000+ simultaneous heterogeneous robot agents',
@@ -46,7 +46,7 @@ export const wave216SwarmIntelligenceServices: Service[] = [
     stage: 'published',
     popular: false,
     pricing: { basic: 'Free (map consumer app)', pro: '$499/hardware kit', enterprise: '$50,000+/year (map data license)' },
-    contactInfo: { website: 'https://hivemapper.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://hivemapper.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       '100,000+ crowd-sourced mapping vehicles across 50+ countries',
       'AI-powered change detection: identifies new construction, signs, detours in <24 hours',
@@ -77,7 +77,7 @@ export const wave216EdgeAiInferenceServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: '$199/developer kit', pro: '$999/Orin NX module', enterprise: '$1,999/AGX Orin + volume pricing' },
-    contactInfo: { website: 'https://nvidia.com/jetson', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://nvidia.com/jetson', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'AGX Orin delivers 275 TOPS INT8 AI performance in a compact module',
       'NVIDIA TensorRT for optimized model inference (YOLO, BERT, GPT)',
@@ -105,7 +105,7 @@ export const wave216EdgeAiInferenceServices: Service[] = [
     stage: 'published',
     popular: false,
     pricing: { basic: 'Integrated into Snapdragon SoCs', pro: 'Developer access via Qualcomm Innovation Center', enterprise: 'Custom NPU firmware licensing available' },
-    contactInfo: { website: 'https://qualcomm.com/ai', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://qualcomm.com/ai', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Hexagon NPU supports 48 TOPS INT8 inference performance',
       'On-device LLM inference: Llama 3 7B at 15+ tokens/second',
@@ -136,7 +136,7 @@ export const wave216SyntheticDataGenerationServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: 'Free (10,000 rows/month)', pro: '$500/month (1M rows)', enterprise: 'Custom ($25K+/year)' },
-    contactInfo: { website: 'https://mostly.ai', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://mostly.ai', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Generative adversarial networks (GAN) and diffusion models for realistic data',
       'Statistical fidelity validation: synthetic data within 2% of real data distributions',
@@ -167,7 +167,7 @@ export const wave216AiGovernanceComplianceServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: 'Free (open-source toolkit)', pro: '$5,000/month (Watsonx.governance)', enterprise: 'Custom ($100K+/year)' },
-    contactInfo: { website: 'https://ibm.com/watsonx/governance', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ibm.com/watsonx/governance', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Automated model documentation: training data, hyperparameters, bias test results',
       'EU AI Act compliance mapping with automated risk tier classification',
@@ -198,7 +198,7 @@ export const wave216AutonomousRpaServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: 'Free (Community edition)', pro: '$420/month (automation cloud)', enterprise: 'Custom ($50K+/year platform)' },
-    contactInfo: { website: 'https://uipath.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://uipath.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Autonomous agents: multi-step reasoning across applications and documents',
       'Computer vision reads any screen — SAP, Salesforce, legacy mainframes, PDFs',
@@ -229,7 +229,7 @@ export const wave216FederatedLearningServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: 'Free (open-source)', pro: 'Supported build ($10K/year)', enterprise: 'Custom deployment ($50K+/program)' },
-    contactInfo: { website: 'https://intel.com/openfl', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://intel.com/openfl', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Horizontal and vertical federated learning supported with aggregation director',
       'Differential privacy and secure aggregation prevent gradient leakage',
@@ -260,7 +260,7 @@ export const wave216SpaceComputingServices: Service[] = [
     stage: 'published',
     popular: false,
     pricing: { basic: 'Research partnership', pro: 'Orbital compute slot ($100K/mission)', enterprise: 'Dedicated orbital data center ($50M+)' },
-    contactInfo: { website: 'https://leolabs.space', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://leolabs.space', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Orbital data center modules with 10kW solar-powered compute capacity',
       'Direct-to-ground laser downlink at 100 Gbps per satellite',

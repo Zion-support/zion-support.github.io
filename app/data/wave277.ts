@@ -30,7 +30,7 @@ export const wave277Services: Service[] = [
     contactInfo: {
       website: '/services/dc-digital-twin-capacity-simulation',
       email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
+      phone: '+55 11 97614-0076',
     },
   },
   {
@@ -62,7 +62,7 @@ export const wave277Services: Service[] = [
     contactInfo: {
       website: '/services/dc-green-carbon-operations',
       email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
+      phone: '+55 11 97614-0076',
     },
   },
   {
@@ -94,7 +94,7 @@ export const wave277Services: Service[] = [
     contactInfo: {
       website: '/services/dc-liquid-immersion-cooling',
       email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
+      phone: '+55 11 97614-0076',
     },
   },
   {
@@ -126,7 +126,7 @@ export const wave277Services: Service[] = [
     contactInfo: {
       website: '/services/dc-finops-cost-optimization',
       email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
+      phone: '+55 11 97614-0076',
     },
   },
   {
@@ -158,7 +158,7 @@ export const wave277Services: Service[] = [
     contactInfo: {
       website: '/services/dc-renewable-ppa-advisory',
       email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
+      phone: '+55 11 97614-0076',
     },
   },
   {
@@ -190,7 +190,7 @@ export const wave277Services: Service[] = [
     contactInfo: {
       website: '/services/dc-hardware-lifecycle-management',
       email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
+      phone: '+55 11 97614-0076',
     },
   },
 ];

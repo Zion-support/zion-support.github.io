@@ -352,8 +352,8 @@ export default async function IndustryPage({ params }: { params: Promise<{ key: 
               <Link href="/contact/" className="btn-primary text-lg px-10 py-4">
                 🚀 Get Your Custom Proposal
               </Link>
-              <a href="tel:+130****0950" className="btn-secondary text-lg px-10 py-4">
-                ☎ +1 302 464 0950
+              <a href="tel:+5511976140076" className="btn-secondary text-lg px-10 py-4">
+                ☎ +55 11 97614-0076
               </a>
             </div>
           </div>

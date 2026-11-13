@@ -91,7 +91,7 @@ export default function V1036V1040Showcase() {
           <h3 className="text-2xl font-bold text-white mb-4">Ready to Supercharge Your Email Intelligence?</h3>
           <p className="text-indigo-100 mb-6">Join 10,000+ businesses using Zion Tech Group&apos;s 1,040+ AI email engines</p>
           <div className="flex flex-wrap justify-center gap-6 text-white">
-            <a href="tel:+13024640950" className="hover:text-indigo-200 transition">📱 +1 302 464 0950</a>
+            <a href="tel:+5511976140076" className="hover:text-indigo-200 transition">📱 +55 11 97614-0076</a>
             <a href="mailto:kleber@ziontechgroup.com" className="hover:text-indigo-200 transition">✉️ kleber@ziontechgroup.com</a>
             <span>📍 364 E Main St STE 1008, Middletown DE 19709</span>
           </div>

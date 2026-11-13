@@ -15,7 +15,7 @@ export const wave209DataStreamingServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: '$499/mo', pro: '$1,299/mo', enterprise: '$3,499/mo' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Managed Kafka clusters with auto-scaling',
       'Exactly-once processing semantics',
@@ -44,7 +44,7 @@ export const wave209SearchServices: Service[] = [
     industry: 'Technology & SaaS',
     stage: 'published',
     pricing: { basic: '$99/mo', pro: '$299/mo', enterprise: '$799/mo' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Typo-tolerant search with intelligent ranking',
       'Faceted navigation and filtering',
@@ -73,7 +73,7 @@ export const wave209DevOpsServices: Service[] = [
     industry: 'Technology & SaaS',
     stage: 'published',
     pricing: { basic: '$0 (open source)', pro: '$49/mo', enterprise: '$149/mo' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Issue tracking with custom workflows and states',
       'Sprint planning with capacity forecasting',
@@ -103,7 +103,7 @@ export const wave209TestingServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: '$149/mo', pro: '$399/mo', enterprise: '$999/mo' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Cross-browser testing (Chromium, Firefox, WebKit)',
       'Auto-wait and retry mechanisms for flaky tests',
@@ -132,7 +132,7 @@ export const wave209ApiServices: Service[] = [
     industry: 'Technology & SaaS',
     stage: 'published',
     pricing: { basic: '$299/mo', pro: '$799/mo', enterprise: '$2,499/mo' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'API routing and load balancing across services',
       'Rate limiting and quota management',

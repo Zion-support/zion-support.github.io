@@ -9,7 +9,7 @@ export const wave174AiServices: Service[] = [
     features: ['Autonomous feature implementation end-to-end', 'Codebase context understanding (AST, imports, types)', 'Automatic test generation with coverage targets', 'PR creation with description and review notes', 'Follows project lint, style, and convention rules', 'Multi-file refactoring with cross-dependency tracking', 'Human review gate before merge'],
     benefits: ['Ship features 10x faster with AI doing the coding', 'Tests written automatically alongside code', 'Follows your conventions, not generic patterns', 'Human review maintains quality control'],
     pricing: {basic:'$99/mo', pro:'$299/mo', enterprise:'$999/mo'},
-    contactInfo: {website:'/services/w174-ai-agentic-coding', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    contactInfo: {website:'/services/w174-ai-agentic-coding', email:'kleber@ziontechgroup.com', phone:'+55 11 97614-0076'},
     icon: '🤖', href: '/services/w174-ai-agentic-coding', popular: true, category: 'ai', industry: 'Software Development',
   },
   {
@@ -17,7 +17,7 @@ export const wave174AiServices: Service[] = [
     features: ['Managed vector database (Pinecone, Weaviate, Qdrant)', 'Automated embedding pipeline with multiple models', 'Configurable chunking strategies (semantic, fixed, recursive)', 'Hybrid search (vector + keyword + reranking)', 'Source attribution and citation in responses', 'Multi-tenant with access control', 'Observability: latency, relevance scores, retrieval quality'],
     benefits: ['Grounded AI answers with zero hallucination', 'Managed infrastructure, no MLOps burden', 'Source citations build user trust', 'Multi-tenant ready from day one'],
     pricing: {basic:'$299/mo', pro:'$899/mo', enterprise:'$2,999/mo'},
-    contactInfo: {website:'/services/w174-ai-vector-rag', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    contactInfo: {website:'/services/w174-ai-vector-rag', email:'kleber@ziontechgroup.com', phone:'+55 11 97614-0076'},
     icon: '🔗', href: '/services/w174-ai-vector-rag', popular: true, category: 'ai', industry: 'Technology',
   },
   {
@@ -25,7 +25,7 @@ export const wave174AiServices: Service[] = [
     features: ['Voice cloning from 30-second audio sample', '50+ language support with accent control', 'Emotion and speaking style adjustment', 'Real-time streaming TTS (< 200ms first byte)', 'Consent and licensing management', 'Audio watermarking for authenticity', 'API with SSML support and pronunciation dictionaries'],
     benefits: ['Clone any voice from just 30 seconds of audio', 'Real-time streaming for live applications', 'Consent management ensures ethical use', 'Watermarking prevents misuse'],
     pricing: {basic:'$149/mo', pro:'$449/mo', enterprise:'$1,499/mo'},
-    contactInfo: {website:'/services/w174-ai-voice-clone-studio', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    contactInfo: {website:'/services/w174-ai-voice-clone-studio', email:'kleber@ziontechgroup.com', phone:'+55 11 97614-0076'},
     icon: '🎙️', href: '/services/w174-ai-voice-clone-studio', popular: false, category: 'ai', industry: 'Media',
   },
   {
@@ -33,7 +33,7 @@ export const wave174AiServices: Service[] = [
     features: ['Portfolio analysis and rebalancing suggestions', 'Risk assessment with scenario modeling', 'Compliance checking (SEC, FINRA, suitability)', 'Client report and communication drafting', 'Market intelligence and news summarization', 'Regulatory change monitoring and impact analysis', 'Audit trail for all AI-generated recommendations'],
     benefits: ['Serve 3x more clients with AI assistance', 'Compliance checks on every recommendation', 'Real-time market intelligence in every meeting', 'Full audit trail for regulatory examinations'],
     pricing: {basic:'$599/mo', pro:'$1,799/mo', enterprise:'$5,999/mo'},
-    contactInfo: {website:'/services/w174-ai-financial-advisor', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    contactInfo: {website:'/services/w174-ai-financial-advisor', email:'kleber@ziontechgroup.com', phone:'+55 11 97614-0076'},
     icon: '💼', href: '/services/w174-ai-financial-advisor', popular: true, category: 'ai', industry: 'Financial Services',
   },
   {
@@ -41,7 +41,7 @@ export const wave174AiServices: Service[] = [
     features: ['Fine-tuned models for brand consistency', 'Style presets and reference image control', 'Batch generation with variation management', 'Upscaling and outpainting', 'Background removal and replacement', 'API with prompt templates and parameter presets', 'Integration with Figma, Canva, Adobe'],
     benefits: ['On-brand imagery every time with fine-tuning', 'Generate 1000s of marketing images in minutes', 'No more stock photo licensing costs', 'Consistent brand style across all outputs'],
     pricing: {basic:'$79/mo', pro:'$249/mo', enterprise:'$799/mo'},
-    contactInfo: {website:'/services/w174-ai-image-gen-studio', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    contactInfo: {website:'/services/w174-ai-image-gen-studio', email:'kleber@ziontechgroup.com', phone:'+55 11 97614-0076'},
     icon: '🎨', href: '/services/w174-ai-image-gen-studio', popular: false, category: 'ai', industry: 'Marketing',
   },
   {
@@ -49,7 +49,7 @@ export const wave174AiServices: Service[] = [
     features: ['AI demand forecasting (30/60/90 day)', 'Multi-echelon inventory optimization', 'Supplier risk scoring and diversification', 'Logistics route and carrier optimization', 'What-if scenario modeling', 'Real-time disruption alerts', 'Integration with SAP, Oracle SCM, Kinaxis'],
     benefits: ['Reduce inventory costs by 20-30%', 'Prevent stockouts with accurate forecasting', 'Supplier diversification reduces risk', 'Scenario modeling for decision support'],
     pricing: {basic:'$999/mo', pro:'$2,999/mo', enterprise:'Custom'},
-    contactInfo: {website:'/services/w174-ai-supply-chain-optimizer', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    contactInfo: {website:'/services/w174-ai-supply-chain-optimizer', email:'kleber@ziontechgroup.com', phone:'+55 11 97614-0076'},
     icon: '📦', href: '/services/w174-ai-supply-chain-optimizer', popular: false, category: 'ai', industry: 'Supply Chain',
   },
   {
@@ -57,7 +57,7 @@ export const wave174AiServices: Service[] = [
     features: ['Real-time transcription with speaker IDs', 'Action item extraction and assignment', 'Decision and key takeaway logging', 'Automated follow-up email drafting', 'Searchable meeting knowledge base', 'Meeting effectiveness scoring', 'CRM integration for customer meetings'],
     benefits: ['Never lose a meeting decision again', 'Action items captured and assigned automatically', 'Searchable archive of all organizational knowledge', 'Meeting effectiveness data drives improvement'],
     pricing: {basic:'$29/mo', pro:'$79/mo', enterprise:'$249/mo'},
-    contactInfo: {website:'/services/w174-ai-meeting-intelligence', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    contactInfo: {website:'/services/w174-ai-meeting-intelligence', email:'kleber@ziontechgroup.com', phone:'+55 11 97614-0076'},
     icon: '🎯', href: '/services/w174-ai-meeting-intelligence', popular: false, category: 'ai', industry: 'Productivity',
   },
   {
@@ -65,7 +65,7 @@ export const wave174AiServices: Service[] = [
     features: ['Smart error grouping (deduplication, fingerprinting)', 'AI root cause analysis across services', 'Anomaly detection on metrics and traces', 'Auto-incident creation with severity scoring', 'Fix suggestions from similar past incidents', 'Performance regression detection', 'Integration with Datadog, New Relic, Sentry, PagerDuty'],
     benefits: ['Find root cause in minutes, not hours', 'AI suggests fixes from past incident patterns', 'Reduce alert noise by 90% with smart grouping', 'Auto-incident creation speeds response'],
     pricing: {basic:'$399/mo', pro:'$1,199/mo', enterprise:'$3,999/mo'},
-    contactInfo: {website:'/services/w174-ai-error-observability', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    contactInfo: {website:'/services/w174-ai-error-observability', email:'kleber@ziontechgroup.com', phone:'+55 11 97614-0076'},
     icon: '🔍', href: '/services/w174-ai-error-observability', popular: false, category: 'ai', industry: 'DevOps',
   },
   {
@@ -73,7 +73,7 @@ export const wave174AiServices: Service[] = [
     features: ['AI curriculum design from learning objectives', 'Course content generation (text, quiz, video scripts)', 'Adaptive learning pathways', 'Assessment and rubric generation', 'Competency mapping and gap analysis', 'SCORM/xAPI export for LMS', 'Multi-language content generation'],
     benefits: ['Create full courses in hours, not weeks', 'Adaptive pathways personalize learning', 'Competency-driven curriculum alignment', 'LMS-compatible output (SCORM, xAPI)'],
     pricing: {basic:'$199/mo', pro:'$599/mo', enterprise:'$1,999/mo'},
-    contactInfo: {website:'/services/w174-ai-curriculum-generator', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    contactInfo: {website:'/services/w174-ai-curriculum-generator', email:'kleber@ziontechgroup.com', phone:'+55 11 97614-0076'},
     icon: '📚', href: '/services/w174-ai-curriculum-generator', popular: false, category: 'ai', industry: 'Education',
   },
   {
@@ -81,7 +81,7 @@ export const wave174AiServices: Service[] = [
     features: ['Clause extraction and classification', 'Risk scoring per clause and overall', 'Playbook comparison and deviation flagging', 'Red-line and alternative clause suggestions', 'Obligation extraction and tracking', 'Template generation from approved clauses', 'Integration with DocuSign, Ironclad, Contractbook'],
     benefits: ['Reduce contract review time by 80%', 'Consistent playbook enforcement', 'Risk scoring prioritizes negotiation items', 'Obligation tracking prevents missed commitments'],
     pricing: {basic:'$399/mo', pro:'$1,199/mo', enterprise:'$3,999/mo'},
-    contactInfo: {website:'/services/w174-ai-contract-analyzer', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    contactInfo: {website:'/services/w174-ai-contract-analyzer', email:'kleber@ziontechgroup.com', phone:'+55 11 97614-0076'},
     icon: '📑', href: '/services/w174-ai-contract-analyzer', popular: true, category: 'ai', industry: 'Legal',
   },
   {
@@ -89,7 +89,7 @@ export const wave174AiServices: Service[] = [
     features: ['Multi-modal emotion detection (text, voice, face)', 'Real-time customer sentiment scoring', 'Frustration and escalation prediction', 'Agent coaching signals during calls', 'Emotion trend analytics and reporting', 'Customer journey emotion mapping', 'Integration with Genesys, Five9, NICE CXone'],
     benefits: ['Detect frustration before customers churn', 'Real-time coaching improves agent performance', 'Emotion trends reveal systemic CX issues', 'Data-driven CX improvement'],
     pricing: {basic:'$499/mo', pro:'$1,499/mo', enterprise:'$4,999/mo'},
-    contactInfo: {website:'/services/w174-ai-emotion-analytics', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    contactInfo: {website:'/services/w174-ai-emotion-analytics', email:'kleber@ziontechgroup.com', phone:'+55 11 97614-0076'},
     icon: '😊', href: '/services/w174-ai-emotion-analytics', popular: false, category: 'ai', industry: 'Customer Service',
   },
   {
@@ -97,7 +97,7 @@ export const wave174AiServices: Service[] = [
     features: ['Molecular property prediction (binding, toxicity, solubility)', 'Virtual screening of compound libraries', 'De novo molecule generation with constraints', 'ADMET optimization and prediction', 'Protein-ligand interaction analysis', 'Literature and patent search integration', 'Collaboration with Schrödinger, ChemAxon, RDKit'],
     benefits: ['Reduce discovery phase by 60%', 'Screen millions of compounds virtually', 'Novel molecule generation with target constraints', 'ADMET prediction reduces late-stage failures'],
     pricing: {basic:'$4,999/mo', pro:'$14,999/mo', enterprise:'Custom'},
-    contactInfo: {website:'/services/w174-ai-drug-discovery', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    contactInfo: {website:'/services/w174-ai-drug-discovery', email:'kleber@ziontechgroup.com', phone:'+55 11 97614-0076'},
     icon: '💊', href: '/services/w174-ai-drug-discovery', popular: false, category: 'ai', industry: 'Pharmaceuticals',
   },
 ];
@@ -108,7 +108,7 @@ export const wave174MicroSaasServices: Service[] = [
     features: ['Auto-generation from git/PR/ticket history', 'Semantic versioning integration', 'Public changelog page with custom domain', 'RSS and email subscription for updates', 'Category tagging (feature, fix, breaking)', 'Markdown and HTML export', 'GitHub, GitLab, Bitbucket integration'],
     benefits: ['Never write a changelog manually again', 'Public page builds trust with users', 'Semantic versioning stays in sync', 'Subscribers auto-notified on releases'],
     pricing: {basic:'$9/mo', pro:'$29/mo', enterprise:'$99/mo'},
-    contactInfo: {website:'/services/w174-changelogify', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    contactInfo: {website:'/services/w174-changelogify', email:'kleber@ziontechgroup.com', phone:'+55 11 97614-0076'},
     icon: '📋', href: '/services/w174-changelogify', popular: true, category: 'micro-saas', industry: 'Developer Tools',
   },
   {
@@ -116,7 +116,7 @@ export const wave174MicroSaasServices: Service[] = [
     features: ['HTTP/HTTPS ping monitoring (1-min intervals)', 'SSL certificate expiry monitoring', 'Domain expiry alerts', 'Public status page with branding', '12 global monitoring regions', 'PagerDuty, Slack, Opsgenie alerts', 'API for programmatic checks'],
     benefits: ['Detect downtime in under 60 seconds', 'SSL/domain alerts prevent expiry surprises', 'Status page builds customer trust', '12 regions for global accuracy'],
     pricing: {basic:'$7/mo', pro:'$25/mo', enterprise:'$99/mo'},
-    contactInfo: {website:'/services/w174-uptimecanary', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    contactInfo: {website:'/services/w174-uptimecanary', email:'kleber@ziontechgroup.com', phone:'+55 11 97614-0076'},
     icon: '🐦', href: '/services/w174-uptimecanary', popular: true, category: 'micro-saas', industry: 'Technology',
   },
   {
@@ -124,7 +124,7 @@ export const wave174MicroSaasServices: Service[] = [
     features: ['Real-time sales tax calculation by jurisdiction', 'Economic nexus tracking and alerts', 'Automated filing and remittance', 'Multi-state, county, city compliance', 'Exemption certificate management', 'Tax report generation for accountants', 'Integration with Stripe, Shopify, WooCommerce, NetSuite'],
     benefits: ['Never miss a tax filing deadline', 'Nexus tracking prevents audit exposure', 'Automated calculation eliminates manual lookup', 'Multi-jurisdiction compliance out of the box'],
     pricing: {basic:'$49/mo', pro:'$149/mo', enterprise:'$499/mo'},
-    contactInfo: {website:'/services/w174-taxflow', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    contactInfo: {website:'/services/w174-taxflow', email:'kleber@ziontechgroup.com', phone:'+55 11 97614-0076'},
     icon: '🧾', href: '/services/w174-taxflow', popular: false, category: 'micro-saas', industry: 'Finance',
   },
   {
@@ -132,7 +132,7 @@ export const wave174MicroSaasServices: Service[] = [
     features: ['AI credit scoring with alternative data', 'Real-time loan decisioning (< 2 seconds)', 'Underwriting rules engine with exceptions', 'Fair lending compliance (ECOA, FCRA)', 'Explainable decisions for adverse action notices', 'Portfolio risk monitoring', 'Integration with Plaid, Experian, Equifax, TransUnion'],
     benefits: ['Approve more good borrowers with AI', 'Sub-2-second decisions improve conversion', 'Alternative data serves thin-file applicants', 'Fair lending compliance with explainability'],
     pricing: {basic:'$299/mo', pro:'$899/mo', enterprise:'$2,999/mo'},
-    contactInfo: {website:'/services/w174-credrisk', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    contactInfo: {website:'/services/w174-credrisk', email:'kleber@ziontechgroup.com', phone:'+55 11 97614-0076'},
     icon: '💳', href: '/services/w174-credrisk', popular: false, category: 'micro-saas', industry: 'Financial Services',
   },
   {
@@ -140,7 +140,7 @@ export const wave174MicroSaasServices: Service[] = [
     features: ['200+ format conversion pairs', 'PDF merge, split, watermark, OCR', 'Image resize, compress, convert, watermark', 'Video/audio transcode and thumbnail', 'Batch processing with webhook completion', 'CDN-backed file storage', 'REST API with SDKs (Python, Node, Go, Ruby)'],
     benefits: ['Convert any file format instantly', 'Batch processing handles millions of files', 'OCR extracts text from any document', 'CDN-backed delivery is globally fast'],
     pricing: {basic:'$19/mo', pro:'$59/mo', enterprise:'$199/mo'},
-    contactInfo: {website:'/services/w174-fileforge', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    contactInfo: {website:'/services/w174-fileforge', email:'kleber@ziontechgroup.com', phone:'+55 11 97614-0076'},
     icon: '📁', href: '/services/w174-fileforge', popular: true, category: 'micro-saas', industry: 'Developer Tools',
   },
   {
@@ -148,7 +148,7 @@ export const wave174MicroSaasServices: Service[] = [
     features: ['Natural language query understanding', 'Typo tolerance and synonym expansion', 'Faceted filtering and sorting', 'Merchandising and boosting rules', 'Click and conversion analytics', 'Recommendations from search behavior', 'JavaScript SDK and API'],
     benefits: ['Users find what they want 3x faster', 'NL queries reduce zero-result searches', 'Merchandising rules drive revenue', 'Search analytics reveal intent patterns'],
     pricing: {basic:'$29/mo', pro:'$99/mo', enterprise:'$349/mo'},
-    contactInfo: {website:'/services/w174-aisearch', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    contactInfo: {website:'/services/w174-aisearch', email:'kleber@ziontechgroup.com', phone:'+55 11 97614-0076'},
     icon: '🔎', href: '/services/w174-aisearch', popular: false, category: 'micro-saas', industry: 'E-Commerce',
   },
   {
@@ -156,7 +156,7 @@ export const wave174MicroSaasServices: Service[] = [
     features: ['Pulse surveys (weekly, bi-weekly, custom)', '1-on-1 meeting templates and tracking', 'OKR/goal setting and progress tracking', 'Burnout and disengagement risk scoring', 'Anonymous feedback channels', 'Manager effectiveness dashboard', 'Integration with Slack, Teams, Workday'],
     benefits: ['Detect disengagement before attrition', 'Pulse surveys replace annual engagement surveys', 'OKR alignment across teams', 'Manager coaching insights, not just scores'],
     pricing: {basic:'$4/user/mo', pro:'$8/user/mo', enterprise:'$15/user/mo'},
-    contactInfo: {website:'/services/w174-teampulse', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    contactInfo: {website:'/services/w174-teampulse', email:'kleber@ziontechgroup.com', phone:'+55 11 97614-0076'},
     icon: '💜', href: '/services/w174-teampulse', popular: false, category: 'micro-saas', industry: 'Human Resources',
   },
   {
@@ -164,7 +164,7 @@ export const wave174MicroSaasServices: Service[] = [
     features: ['Automatic string extraction from code', 'Translation management with workflow', 'In-context visual editing', 'Machine translation + human review', '80+ language support', 'ICU MessageFormat and plural rules', 'GitHub/GitLab sync and CI/CD integration'],
     benefits: ['Localize your app in days, not months', 'In-context editing eliminates key confusion', 'MT + human review balances speed and quality', 'CI/CD keeps translations in sync with code'],
     pricing: {basic:'$29/mo', pro:'$99/mo', enterprise:'$349/mo'},
-    contactInfo: {website:'/services/w174-translatix', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    contactInfo: {website:'/services/w174-translatix', email:'kleber@ziontechgroup.com', phone:'+55 11 97614-0076'},
     icon: '🌍', href: '/services/w174-translatix', popular: false, category: 'micro-saas', industry: 'Developer Tools',
   },
   {
@@ -172,7 +172,7 @@ export const wave174MicroSaasServices: Service[] = [
     features: ['Auto-generated from OpenAPI 3.x specs', 'Interactive try-it-out console', 'Code samples in 10+ languages', 'GraphQL schema documentation', 'Versioning and changelog', 'Custom branding and domain', 'Search and navigation'],
     benefits: ['Interactive docs reduce API support tickets by 50%', 'Code samples in every language accelerate integration', 'Auto-generated stays in sync with your API', 'Custom branding for developer portals'],
     pricing: {basic:'$19/mo', pro:'$59/mo', enterprise:'$199/mo'},
-    contactInfo: {website:'/services/w174-apidocs', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    contactInfo: {website:'/services/w174-apidocs', email:'kleber@ziontechgroup.com', phone:'+55 11 97614-0076'},
     icon: '📘', href: '/services/w174-apidocs', popular: false, category: 'micro-saas', industry: 'Developer Tools',
   },
   {
@@ -180,7 +180,7 @@ export const wave174MicroSaasServices: Service[] = [
     features: ['Online appointment booking with calendar sync', 'Virtual walk-in queue management', 'SMS/email reminders and confirmations', 'No-show prediction and overbooking', 'Multi-provider and location support', 'Patient/customer self-service portal', 'Integration with Google Calendar, EHR systems'],
     benefits: ['Reduce no-shows by 40% with reminders', 'Virtual queues eliminate physical waiting', 'Online booking 24/7 availability', 'Overbooking optimization maximizes capacity'],
     pricing: {basic:'$25/mo', pro:'$75/mo', enterprise:'$199/mo'},
-    contactInfo: {website:'/services/w174-schedflow', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    contactInfo: {website:'/services/w174-schedflow', email:'kleber@ziontechgroup.com', phone:'+55 11 97614-0076'},
     icon: '🗓️', href: '/services/w174-schedflow', popular: false, category: 'micro-saas', industry: 'Healthcare',
   },
   {
@@ -188,7 +188,7 @@ export const wave174MicroSaasServices: Service[] = [
     features: ['Affiliate link tracking and attribution', 'Multi-tier commission structures', 'Automated payout processing (Stripe, PayPal)', 'Fraud detection and prevention', 'Partner portal with dashboards', 'A/B testing of referral incentives', 'Integration with Stripe, Shopify, WooCommerce'],
     benefits: ['Launch affiliate programs in minutes', 'Fraud detection protects margins', 'Partner portal drives self-service growth', 'A/B testing optimizes incentive structures'],
     pricing: {basic:'$49/mo', pro:'$149/mo', enterprise:'$499/mo'},
-    contactInfo: {website:'/services/w174-affiliatrack', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    contactInfo: {website:'/services/w174-affiliatrack', email:'kleber@ziontechgroup.com', phone:'+55 11 97614-0076'},
     icon: '🤝', href: '/services/w174-affiliatrack', popular: false, category: 'micro-saas', industry: 'Marketing',
   },
   {
@@ -196,7 +196,7 @@ export const wave174MicroSaasServices: Service[] = [
     features: ['Encrypted environment variable storage', 'Environment promotion (dev → staging → prod)', 'Secret rotation and expiry policies', 'Full audit trail and change history', 'Instant rollback on misconfigurations', 'CLI and SDK for all languages', 'Integration with Kubernetes, Docker, CI/CD'],
     benefits: ['Never leak .env files again', 'Environment promotion eliminates copy-paste errors', 'Audit trail for compliance and debugging', 'Instant rollback on bad deployments'],
     pricing: {basic:'$15/mo', pro:'$49/mo', enterprise:'$149/mo'},
-    contactInfo: {website:'/services/w174-envault', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    contactInfo: {website:'/services/w174-envault', email:'kleber@ziontechgroup.com', phone:'+55 11 97614-0076'},
     icon: '🔑', href: '/services/w174-envault', popular: true, category: 'micro-saas', industry: 'Developer Tools',
   },
 ];
@@ -207,7 +207,7 @@ export const wave174ItServices: Service[] = [
     features: ['Remote monitoring and management (RMM)', 'Professional services automation (PSA)', 'Remote access and control', 'Patch management across clients', 'Client billing and SLA tracking', 'Automation scripts and policies', 'Integration with ConnectWise, Autotask, Datto'],
     benefits: ['Manage 100+ clients from one platform', 'Automate 70% of routine MSP tasks', 'Client billing integrated with service delivery', 'SLA tracking ensures compliance'],
     pricing: {basic:'$199/mo', pro:'$599/mo', enterprise:'$1,999/mo'},
-    contactInfo: {website:'/services/w174-msp-platform', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    contactInfo: {website:'/services/w174-msp-platform', email:'kleber@ziontechgroup.com', phone:'+55 11 97614-0076'},
     icon: '🖥️', href: '/services/w174-msp-platform', popular: true, category: 'it', industry: 'IT Operations',
   },
   {
@@ -215,7 +215,7 @@ export const wave174ItServices: Service[] = [
     features: ['Intent-based network configuration', 'Automated compliance and drift remediation', 'Zero-touch provisioning (ZTP)', 'Network topology discovery and mapping', 'Change management with rollback', 'Multi-vendor support (Cisco, Arista, Juniper)', 'Netmiko/NAPALM/Ansible integration'],
     benefits: ['Eliminate manual CLI configuration errors', 'Intent-based: describe what, not how', 'Automated drift remediation keeps network compliant', 'Zero-touch provisioning scales operations'],
     pricing: {basic:'$799/mo', pro:'$2,499/mo', enterprise:'$7,999/mo'},
-    contactInfo: {website:'/services/w174-network-automation', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    contactInfo: {website:'/services/w174-network-automation', email:'kleber@ziontechgroup.com', phone:'+55 11 97614-0076'},
     icon: '🌐', href: '/services/w174-network-automation', popular: false, category: 'it', industry: 'Networking',
   },
   {
@@ -223,7 +223,7 @@ export const wave174ItServices: Service[] = [
     features: ['Automated incident triage and classification', 'War room creation with Slack/Teams bridge', 'Runbook execution (manual and automated)', 'Escalation policies and on-call management', 'Status page integration', 'Post-mortem templates and tracking', 'PagerDuty, Opsgenie, VictorOps integration'],
     benefits: ['Reduce MTTR by 60% with structured response', 'War rooms unify communication instantly', 'Runbooks ensure consistent response', 'Post-mortems drive continuous improvement'],
     pricing: {basic:'$399/mo', pro:'$1,199/mo', enterprise:'$3,999/mo'},
-    contactInfo: {website:'/services/w174-incident-response', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    contactInfo: {website:'/services/w174-incident-response', email:'kleber@ziontechgroup.com', phone:'+55 11 97614-0076'},
     icon: '🚨', href: '/services/w174-incident-response', popular: true, category: 'it', industry: 'IT Operations',
   },
   {
@@ -231,7 +231,7 @@ export const wave174ItServices: Service[] = [
     features: ['Application-aware routing and QoS', 'Multi-link (broadband, 5G, MPLS) aggregation', 'Built-in firewall and IDS/IPS', 'Centralized policy management', 'Auto-failover and self-healing', 'Cloud on-ramp optimization', 'Cisco Meraki, Fortinet, VMware Velocloud support'],
     benefits: ['Replace expensive MPLS with broadband + 5G', 'Application QoS ensures critical app performance', 'Self-healing reduces support tickets', 'Centralized management for all sites'],
     pricing: {basic:'$199/site/mo', pro:'$399/site/mo', enterprise:'Custom'},
-    contactInfo: {website:'/services/w174-sd-wan-managed', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    contactInfo: {website:'/services/w174-sd-wan-managed', email:'kleber@ziontechgroup.com', phone:'+55 11 97614-0076'},
     icon: '📡', href: '/services/w174-sd-wan-managed', popular: false, category: 'it', industry: 'Networking',
   },
   {
@@ -239,7 +239,7 @@ export const wave174ItServices: Service[] = [
     features: ['Device enrollment (BYOD and corporate)', 'Policy enforcement and configuration', 'Remote lock, wipe, and troubleshooting', 'Compliance monitoring and reporting', 'Integrated threat detection (EDR)', 'OS and app deployment', 'Integration with Intune, Jamf, Workspace ONE'],
     benefits: ['Manage all platforms from one console', 'Compliance enforcement automated', 'Remote wipe protects lost/stolen devices', 'Integrated EDR for endpoint security'],
     pricing: {basic:'$6/device/mo', pro:'$12/device/mo', enterprise:'$25/device/mo'},
-    contactInfo: {website:'/services/w174-endpoint-mgmt', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    contactInfo: {website:'/services/w174-endpoint-mgmt', email:'kleber@ziontechgroup.com', phone:'+55 11 97614-0076'},
     icon: '💻', href: '/services/w174-endpoint-mgmt', popular: false, category: 'it', industry: 'End User Computing',
   },
   {
@@ -247,7 +247,7 @@ export const wave174ItServices: Service[] = [
     features: ['24/7 database monitoring and alerting', 'Performance tuning and query optimization', 'High availability and replication setup', 'Backup verification and DR testing', 'Database migration and upgrades', 'Capacity planning and forecasting', 'Support for Postgres, MySQL, SQL Server, Oracle, MongoDB'],
     benefits: ['Expert DBA support without hiring', '24/7 monitoring catches issues before outage', 'Performance tuning reduces cloud costs', 'HA/DR setup protects business continuity'],
     pricing: {basic:'$499/mo', pro:'$1,499/mo', enterprise:'$4,999/mo'},
-    contactInfo: {website:'/services/w174-database-admin-managed', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    contactInfo: {website:'/services/w174-database-admin-managed', email:'kleber@ziontechgroup.com', phone:'+55 11 97614-0076'},
     icon: '🗄️', href: '/services/w174-database-admin-managed', popular: false, category: 'it', industry: 'Data Operations',
   },
   {
@@ -255,7 +255,7 @@ export const wave174ItServices: Service[] = [
     features: ['Code complexity and duplication analysis', 'Dependency health and vulnerability audit', 'Architecture drift detection', 'Test coverage and quality assessment', 'Prioritized remediation roadmap', 'ROI estimation for each debt item', 'Integration with SonarQube, CodeClimate, Dependabot'],
     benefits: ['Quantify tech debt with hard metrics', 'Prioritized roadmap focuses effort', 'ROI estimates justify remediation investment', 'Track debt reduction over time'],
     pricing: {basic:'$2,499', pro:'$7,999', enterprise:'Custom'},
-    contactInfo: {website:'/services/w174-tech-debt-assessment', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    contactInfo: {website:'/services/w174-tech-debt-assessment', email:'kleber@ziontechgroup.com', phone:'+55 11 97614-0076'},
     icon: '🏗️', href: '/services/w174-tech-debt-assessment', popular: false, category: 'it', industry: 'Software Development',
   },
   {
@@ -263,7 +263,7 @@ export const wave174ItServices: Service[] = [
     features: ['M365 or Google Workspace architecture design', 'Migration from on-prem or competitor platforms', 'Governance and lifecycle management', 'Security configuration (DLP, IRM, eDiscovery)', 'Teams/SharePoint/Drive structure design', 'Adoption training and change management', 'Ongoing optimization and support'],
     benefits: ['Maximize ROI on collaboration investment', 'Governance prevents sprawl and data leaks', 'Migration with zero data loss', 'Adoption training ensures user buy-in'],
     pricing: {basic:'$2,999', pro:'$9,999', enterprise:'Custom'},
-    contactInfo: {website:'/services/w174-collaboration-platform', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    contactInfo: {website:'/services/w174-collaboration-platform', email:'kleber@ziontechgroup.com', phone:'+55 11 97614-0076'},
     icon: '👥', href: '/services/w174-collaboration-platform', popular: false, category: 'it', industry: 'Communication',
   },
   {
@@ -271,7 +271,7 @@ export const wave174ItServices: Service[] = [
     features: ['Multi-framework gap analysis (SOC 2, ISO, HIPAA, PCI)', 'Automated evidence collection', 'Control mapping across frameworks', 'Remediation tracking with deadlines', 'Auditor-ready documentation', 'Continuous compliance monitoring', 'Integration with Drata, Vanta, Secureframe'],
     benefits: ['Pass audits the first time, every time', 'Automated evidence eliminates manual collection', 'Control mapping reduces redundant work', 'Continuous monitoring keeps you audit-ready'],
     pricing: {basic:'$999/mo', pro:'$2,999/mo', enterprise:'$9,999/mo'},
-    contactInfo: {website:'/services/w174-it-audit-readiness', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    contactInfo: {website:'/services/w174-it-audit-readiness', email:'kleber@ziontechgroup.com', phone:'+55 11 97614-0076'},
     icon: '✅', href: '/services/w174-it-audit-readiness', popular: true, category: 'it', industry: 'Compliance',
   },
   {
@@ -279,7 +279,7 @@ export const wave174ItServices: Service[] = [
     features: ['OpenTelemetry implementation', 'Metrics (Prometheus) + dashboards (Grafana)', 'Distributed tracing (Jaeger/Tempo)', 'Log aggregation (Loki/Elasticsearch)', 'Continuous profiling (Pyroscope)', 'SLO/SLI definition and error budget tracking', 'Integration with Datadog, New Relic, Honeycomb'],
     benefits: ['Full-stack visibility in one platform', 'OpenTelemetry avoids vendor lock-in', 'Debug any issue across services in minutes', 'SLO tracking shifts from uptime to reliability'],
     pricing: {basic:'$499/mo', pro:'$1,499/mo', enterprise:'$4,999/mo'},
-    contactInfo: {website:'/services/w174-monitoring-observability', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    contactInfo: {website:'/services/w174-monitoring-observability', email:'kleber@ziontechgroup.com', phone:'+55 11 97614-0076'},
     icon: '👁️', href: '/services/w174-monitoring-observability', popular: false, category: 'it', industry: 'DevOps',
   },
 ];
@@ -290,7 +290,7 @@ export const wave174SecurityServices: Service[] = [
     features: ['SIEM deployment and configuration', 'Log source onboarding and normalization', 'Correlation rule development and tuning', 'Alert triage and false positive reduction', 'Threat hunting by certified analysts', 'Compliance reporting (PCI, HIPAA, SOC 2)', 'Splunk, Sentinel, QRadar, Elastic support'],
     benefits: ['Expert SIEM management without hiring', 'Tuned rules reduce false positives by 90%', 'Threat hunting finds what automated rules miss', 'Compliance reports from your SIEM data'],
     pricing: {basic:'$1,999/mo', pro:'$4,999/mo', enterprise:'Custom'},
-    contactInfo: {website:'/services/w174-siem-managed', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    contactInfo: {website:'/services/w174-siem-managed', email:'kleber@ziontechgroup.com', phone:'+55 11 97614-0076'},
     icon: '🛡️', href: '/services/w174-siem-managed', popular: true, category: 'security', industry: 'Cybersecurity',
   },
   {
@@ -298,7 +298,7 @@ export const wave174SecurityServices: Service[] = [
     features: ['Endpoint DLP (USB, clipboard, print control)', 'Network DLP (SSL inspection, content filtering)', 'Cloud DLP (CASB integration)', 'Email DLP with content inspection and OCR', 'Policy engine with regulatory templates', 'Incident workflow and remediation', 'Integration with MIP, Zscaler, Netskope'],
     benefits: ['Prevent sensitive data exfiltration across all channels', 'Regulatory templates for quick deployment', 'OCR inspects images for sensitive content', 'Incident workflow ensures accountability'],
     pricing: {basic:'$799/mo', pro:'$2,499/mo', enterprise:'$7,999/mo'},
-    contactInfo: {website:'/services/w174-dlp-platform', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    contactInfo: {website:'/services/w174-dlp-platform', email:'kleber@ziontechgroup.com', phone:'+55 11 97614-0076'},
     icon: '🔒', href: '/services/w174-dlp-platform', popular: false, category: 'security', industry: 'Data Protection',
   },
   {
@@ -306,7 +306,7 @@ export const wave174SecurityServices: Service[] = [
     features: ['On-demand and scheduled pentesting', 'Web application testing (OWASP Top 10)', 'API security testing', 'Mobile app testing (iOS, Android)', 'Cloud configuration testing (AWS, Azure, GCP)', 'Certified testers (OSCP, OSCE, OSEE)', 'Remediation guidance and retesting included'],
     benefits: ['Continuous testing, not just annual', 'Certified ethical hackers with real experience', 'Remediation guidance you can act on', 'Retesting verifies fixes actually work'],
     pricing: {basic:'$2,499/mo', pro:'$7,999/mo', enterprise:'Custom'},
-    contactInfo: {website:'/services/w174-pentest-as-service', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    contactInfo: {website:'/services/w174-pentest-as-service', email:'kleber@ziontechgroup.com', phone:'+55 11 97614-0076'},
     icon: '⚔️', href: '/services/w174-pentest-as-service', popular: true, category: 'security', industry: 'Cybersecurity',
   },
   {
@@ -314,7 +314,7 @@ export const wave174SecurityServices: Service[] = [
     features: ['Automated access reviews and certifications', 'Role mining and optimization', 'Segregation of duties (SoD) enforcement', 'Privileged access management (PAM)', 'Access request and approval workflows', 'Identity analytics and risk scoring', 'Integration with SailPoint, CyberArk, Okta'],
     benefits: ['Ensure least privilege across 1000s of identities', 'Automated reviews replace manual access audits', 'SoD enforcement prevents fraud', 'PAM secures privileged accounts'],
     pricing: {basic:'$999/mo', pro:'$2,999/mo', enterprise:'$9,999/mo'},
-    contactInfo: {website:'/services/w174-identity-governance', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    contactInfo: {website:'/services/w174-identity-governance', email:'kleber@ziontechgroup.com', phone:'+55 11 97614-0076'},
     icon: '🪪', href: '/services/w174-identity-governance', popular: false, category: 'security', industry: 'Identity',
   },
   {
@@ -322,7 +322,7 @@ export const wave174SecurityServices: Service[] = [
     features: ['Behavioral ransomware detection', 'Deception technology (canary files, honeypots)', 'Automated containment and isolation', 'Immutable and air-gapped backup', 'Guaranteed recovery runbooks and testing', 'Ransomware negotiation support', 'Integration with CrowdStrike, SentinelOne, Commvault'],
     benefits: ['Multi-layer defense stops most ransomware', 'Deception technology catches early-stage attacks', 'Immutable backups guarantee recovery', 'Tested runbooks ensure business continuity'],
     pricing: {basic:'$499/mo', pro:'$1,499/mo', enterprise:'$4,999/mo'},
-    contactInfo: {website:'/services/w174-ransomware-protection', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    contactInfo: {website:'/services/w174-ransomware-protection', email:'kleber@ziontechgroup.com', phone:'+55 11 97614-0076'},
     icon: '🦠', href: '/services/w174-ransomware-protection', popular: true, category: 'security', industry: 'Cybersecurity',
   },
   {
@@ -330,7 +330,7 @@ export const wave174SecurityServices: Service[] = [
     features: ['AI-powered WAF rule management and tuning', 'Bot detection and management (good vs bad)', 'DDoS protection (L7 and L3/4)', 'PCI 6.6 compliance', 'Rate limiting and geo-blocking', 'Custom rule development', 'Akamai, Cloudflare, AWS WAF support'],
     benefits: ['AI tuning eliminates false positives', 'Bot management protects APIs and checkout', 'DDoS protection included, not separate', 'PCI compliance with WAF evidence'],
     pricing: {basic:'$399/mo', pro:'$1,199/mo', enterprise:'$3,999/mo'},
-    contactInfo: {website:'/services/w174-waf-managed', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    contactInfo: {website:'/services/w174-waf-managed', email:'kleber@ziontechgroup.com', phone:'+55 11 97614-0076'},
     icon: '🧱', href: '/services/w174-waf-managed', popular: false, category: 'security', industry: 'Cybersecurity',
   },
   {
@@ -338,7 +338,7 @@ export const wave174SecurityServices: Service[] = [
     features: ['NIST CSF maturity assessment', 'CMMC and CIS Controls gap analysis', 'Current state evaluation (people, process, tech)', 'Risk-prioritized roadmap', 'Build vs buy analysis with TCO', 'Quick wins identification', 'Executive and board-ready findings'],
     benefits: ['Know where you stand vs industry frameworks', 'Prioritized roadmap maximizes risk reduction per dollar', 'Build vs buy saves 30-50% vs wrong choices', 'Quick wins deliver value immediately'],
     pricing: {basic:'$4,999', pro:'$14,999', enterprise:'Custom'},
-    contactInfo: {website:'/services/w174-security-operations', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    contactInfo: {website:'/services/w174-security-operations', email:'kleber@ziontechgroup.com', phone:'+55 11 97614-0076'},
     icon: '📊', href: '/services/w174-security-operations', popular: false, category: 'security', industry: 'Cybersecurity',
   },
   {
@@ -346,7 +346,7 @@ export const wave174SecurityServices: Service[] = [
     features: ['FIDO2/WebAuthn and passkey deployment', 'Push notification authentication', 'Conditional access policies', 'Phishing-resistant MFA enforcement', 'Passwordless migration path', 'Self-service account recovery', 'Integration with Okta, Entra ID, Duo, Yubico'],
     benefits: ['Reduce phishing success by 99%', 'Passwordless eliminates password attacks', 'Passkeys work across all devices', 'Conditional access adapts to risk level'],
     pricing: {basic:'$3/user/mo', pro:'$6/user/mo', enterprise:'$12/user/mo'},
-    contactInfo: {website:'/services/w174-mfa-passwordless', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    contactInfo: {website:'/services/w174-mfa-passwordless', email:'kleber@ziontechgroup.com', phone:'+55 11 97614-0076'},
     icon: '🔐', href: '/services/w174-mfa-passwordless', popular: false, category: 'security', industry: 'Identity',
   },
 ];
@@ -357,7 +357,7 @@ export const wave174CloudServices: Service[] = [
     features: ['Monolith to microservices refactoring', 'Docker containerization and optimization', 'Service mesh implementation (Istio, Linkerd)', '12-factor app compliance review', 'CI/CD pipeline modernization', 'Observability and tracing implementation', 'Kubernetes deployment and Day-2 operations'],
     benefits: ['Cloud-native architecture for scale and resilience', 'Service mesh for secure inter-service communication', '12-factor compliance for portable deployments', 'CI/CD modernization accelerates delivery'],
     pricing: {basic:'$9,999', pro:'$29,999', enterprise:'Custom'},
-    contactInfo: {website:'/services/w174-cloud-native-transform', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    contactInfo: {website:'/services/w174-cloud-native-transform', email:'kleber@ziontechgroup.com', phone:'+55 11 97614-0076'},
     icon: '☁️', href: '/services/w174-cloud-native-transform', popular: true, category: 'cloud', industry: 'Cloud Computing',
   },
   {
@@ -365,7 +365,7 @@ export const wave174CloudServices: Service[] = [
     features: ['Landing zone architecture (AWS Control Tower, Azure Landing Zone)', 'Account/subscription structure and vending', 'IAM strategy and guardrails', 'Tagging and naming convention enforcement', 'Cost allocation and chargeback design', 'Policy-as-code (SCPs, Azure Policy, OPA)', 'Network and security baseline automation'],
     benefits: ['Enterprise-ready cloud from day one', 'Governance prevents cloud sprawl', 'Policy-as-code enforces standards automatically', 'Cost allocation drives accountability'],
     pricing: {basic:'$4,999', pro:'$14,999', enterprise:'Custom'},
-    contactInfo: {website:'/services/w174-cloud-governance', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    contactInfo: {website:'/services/w174-cloud-governance', email:'kleber@ziontechgroup.com', phone:'+55 11 97614-0076'},
     icon: '🏛️', href: '/services/w174-cloud-governance', popular: true, category: 'cloud', industry: 'Cloud Computing',
   },
   {
@@ -373,7 +373,7 @@ export const wave174CloudServices: Service[] = [
     features: ['SLO/SLI definition and tracking', 'Error budget dashboards and policies', 'Incident management and escalation', 'Chaos engineering integration (Gremlin, Litmus)', 'Release readiness scoring', 'On-call management and scheduling', 'Terraform/Pulumi for reliability infrastructure'],
     benefits: ['Ship features faster with error budget insight', 'Chaos engineering finds weaknesses before users do', 'Release readiness score prevents bad deployments', 'SLOs align engineering with business goals'],
     pricing: {basic:'$599/mo', pro:'$1,799/mo', enterprise:'$5,999/mo'},
-    contactInfo: {website:'/services/w174-sre-platform', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    contactInfo: {website:'/services/w174-sre-platform', email:'kleber@ziontechgroup.com', phone:'+55 11 97614-0076'},
     icon: '🎯', href: '/services/w174-sre-platform', popular: false, category: 'cloud', industry: 'DevOps',
   },
   {
@@ -381,7 +381,7 @@ export const wave174CloudServices: Service[] = [
     features: ['CDN architecture and provider selection', 'Caching strategy and TTL optimization', 'Origin shielding and failover', 'Image optimization (WebP, AVIF, resize)', 'Real-time purge and invalidation', 'Video streaming optimization (HLS/DASH)', 'Cloudflare, Fastly, Akamai, AWS CloudFront support'],
     benefits: ['Sub-100ms global load times', 'Image optimization reduces bandwidth 50%', 'Origin shielding reduces origin load', 'CDN expertise without hiring'],
     pricing: {basic:'$299/mo', pro:'$899/mo', enterprise:'$2,999/mo'},
-    contactInfo: {website:'/services/w174-cdn-optimization', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    contactInfo: {website:'/services/w174-cdn-optimization', email:'kleber@ziontechgroup.com', phone:'+55 11 97614-0076'},
     icon: '⚡', href: '/services/w174-cdn-optimization', popular: false, category: 'cloud', industry: 'Infrastructure',
   },
   {
@@ -389,7 +389,7 @@ export const wave174CloudServices: Service[] = [
     features: ['Data residency controls per region', 'Automated sovereignty auditing', 'Encryption key localization (BYOK, HYOK)', 'Cross-border data flow mapping', 'Regulatory compliance (GDPR, LGPD, CSL, FZ-152)', 'Data classification and tagging', 'AWS, Azure, GCP residency configuration'],
     benefits: ['Data stays in the right country automatically', 'Sovereignty auditing for regulatory evidence', 'Encryption key never leaves jurisdiction', 'Cross-border flow mapping for compliance'],
     pricing: {basic:'$799/mo', pro:'$2,499/mo', enterprise:'$7,999/mo'},
-    contactInfo: {website:'/services/w174-cloud-data-sovereignty', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    contactInfo: {website:'/services/w174-cloud-data-sovereignty', email:'kleber@ziontechgroup.com', phone:'+55 11 97614-0076'},
     icon: '🌐', href: '/services/w174-cloud-data-sovereignty', popular: false, category: 'cloud', industry: 'Compliance',
   },
   {
@@ -397,7 +397,7 @@ export const wave174CloudServices: Service[] = [
     features: ['Carbon footprint tracking per workload', 'Green region recommendation (AWS, Azure, GCP)', 'Right-sizing for energy efficiency', 'Non-critical workload scheduling (off-peak)', 'Carbon offset integration', 'Sustainability reporting (ESG-aligned)', 'API for carbon metrics in your dashboard'],
     benefits: ['Reduce cloud carbon footprint by 30-50%', 'Green regions use renewable energy', 'Off-peak scheduling reduces grid impact', 'ESG-aligned reporting for sustainability goals'],
     pricing: {basic:'$199/mo', pro:'$599/mo', enterprise:'$1,999/mo'},
-    contactInfo: {website:'/services/w174-green-cloud', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    contactInfo: {website:'/services/w174-green-cloud', email:'kleber@ziontechgroup.com', phone:'+55 11 97614-0076'},
     icon: '🌿', href: '/services/w174-green-cloud', popular: false, category: 'cloud', industry: 'Sustainability',
   },
   {
@@ -405,7 +405,7 @@ export const wave174CloudServices: Service[] = [
     features: ['Event bus design (EventBridge, Pub/Sub, Event Grid)', 'Event schema registry and evolution', 'Choreography vs orchestration patterns', 'Dead letter queue and error handling', 'Event sourcing and CQRS patterns', 'Exactly-once processing guarantees', 'Multi-cloud event routing'],
     benefits: ['Decoupled services scale independently', 'Event-driven architecture is more resilient', 'Schema registry prevents breaking changes', 'CQRS optimizes read and write paths'],
     pricing: {basic:'$499/mo', pro:'$1,499/mo', enterprise:'$4,999/mo'},
-    contactInfo: {website:'/services/w174-cloud-events-platform', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    contactInfo: {website:'/services/w174-cloud-events-platform', email:'kleber@ziontechgroup.com', phone:'+55 11 97614-0076'},
     icon: '🔀', href: '/services/w174-cloud-events-platform', popular: false, category: 'cloud', industry: 'Architecture',
   },
   {
@@ -413,7 +413,7 @@ export const wave174CloudServices: Service[] = [
     features: ['Unified dashboard across AWS, Azure, GCP', 'OpenTelemetry-native collection', 'Cross-cloud trace correlation', 'Multi-cloud cost and performance comparison', 'Cloud-agnostic alerting', 'SLO tracking across providers', 'No vendor lock-in (OTel standard)'],
     benefits: ['One dashboard for all clouds', 'Cross-cloud correlation for multi-cloud issues', 'OTel standard prevents vendor lock-in', 'Cost comparison drives optimization'],
     pricing: {basic:'$599/mo', pro:'$1,799/mo', enterprise:'$5,999/mo'},
-    contactInfo: {website:'/services/w174-multi-cloud-observability', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    contactInfo: {website:'/services/w174-multi-cloud-observability', email:'kleber@ziontechgroup.com', phone:'+55 11 97614-0076'},
     icon: '👁️', href: '/services/w174-multi-cloud-observability', popular: false, category: 'cloud', industry: 'Cloud Computing',
   },
 ];
@@ -424,7 +424,7 @@ export const wave174DataServices: Service[] = [
     features: ['Domain data product definition and ownership', 'Federated governance with global policies', 'Self-service data infrastructure', 'Automated discoverability and cataloging', 'Data product contracts and SLAs', 'Inter-domain data sharing with access control', 'Integration with AWS Lake Formation, GCP Dataplex'],
     benefits: ['Domain teams own their data, not central team', 'Self-serve infrastructure eliminates bottlenecks', 'Contracts ensure data quality between domains', 'Discoverability makes data products findable'],
     pricing: {basic:'$999/mo', pro:'$2,999/mo', enterprise:'$9,999/mo'},
-    contactInfo: {website:'/services/w174-data-mesh-platform', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    contactInfo: {website:'/services/w174-data-mesh-platform', email:'kleber@ziontechgroup.com', phone:'+55 11 97614-0076'},
     icon: '🕸️', href: '/services/w174-data-mesh-platform', popular: true, category: 'data', industry: 'Data Engineering',
   },
   {
@@ -432,7 +432,7 @@ export const wave174DataServices: Service[] = [
     features: ['Experiment tracking and comparison', 'Model registry with versioning and staging', 'CI/CD pipelines for ML (train, validate, deploy)', 'Model A/B testing and champion/challenger', 'Drift detection and automated retraining', 'Model serving (online, batch, edge)', 'Integration with MLflow, SageMaker, Vertex AI, W&B'],
     benefits: ['Ship ML models to production reliably', 'Experiment tracking prevents lost work', 'Automated retraining keeps models fresh', 'A/B testing proves model improvement'],
     pricing: {basic:'$599/mo', pro:'$1,799/mo', enterprise:'$5,999/mo'},
-    contactInfo: {website:'/services/w174-ml-ops-platform', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    contactInfo: {website:'/services/w174-ml-ops-platform', email:'kleber@ziontechgroup.com', phone:'+55 11 97614-0076'},
     icon: '🧪', href: '/services/w174-ml-ops-platform', popular: true, category: 'data', industry: 'Machine Learning',
   },
   {
@@ -440,7 +440,7 @@ export const wave174DataServices: Service[] = [
     features: ['Sub-second query on billions of rows', 'Streaming ingestion (Kafka, Kinesis, Pub/Sub)', 'Pre-aggregation and materialized views', 'Real-time dashboard builder', 'SQL-compatible query interface', 'Multi-tenant with data isolation', 'ClickHouse, Apache Druid, Apache Pinot support'],
     benefits: ['Query billions of rows in under a second', 'Real-time dashboards from streaming data', 'SQL-compatible, no new query language', 'Pre-aggregation reduces compute costs'],
     pricing: {basic:'$799/mo', pro:'$2,499/mo', enterprise:'$7,999/mo'},
-    contactInfo: {website:'/services/w174-realtime-analytics', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    contactInfo: {website:'/services/w174-realtime-analytics', email:'kleber@ziontechgroup.com', phone:'+55 11 97614-0076'},
     icon: '⚡', href: '/services/w174-realtime-analytics', popular: false, category: 'data', industry: 'Analytics',
   },
   {
@@ -448,7 +448,7 @@ export const wave174DataServices: Service[] = [
     features: ['Centralized schema registry (Avro, Protobuf, JSON)', 'Breaking change detection and prevention', 'Compatibility modes (backward, forward, full)', 'Contract testing in CI/CD', 'Automated schema documentation', 'Data product contract enforcement', 'Integration with Confluent Schema Registry, AWS Glue'],
     benefits: ['Prevent breaking changes from reaching production', 'Contract testing in CI catches issues early', 'Compatibility modes enable schema evolution', 'Automated docs keep schema knowledge current'],
     pricing: {basic:'$199/mo', pro:'$599/mo', enterprise:'$1,999/mo'},
-    contactInfo: {website:'/services/w174-data-contracts', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    contactInfo: {website:'/services/w174-data-contracts', email:'kleber@ziontechgroup.com', phone:'+55 11 97614-0076'},
     icon: '📜', href: '/services/w174-data-contracts', popular: false, category: 'data', industry: 'Data Engineering',
   },
   {
@@ -456,7 +456,7 @@ export const wave174DataServices: Service[] = [
     features: ['Push data from Snowflake/BigQuery to SaaS tools', 'Sync to Salesforce, HubSpot, Braze, Zendesk', 'Column mapping and transformation', 'Scheduled and event-triggered syncs', 'Sync monitoring and error alerting', 'Pre-built and custom destinations', 'Reverse ETL sync optimization'],
     benefits: ['Activate warehouse data in business tools', 'CRM, ad, and support teams use fresh data', 'No more CSV exports and manual imports', 'Monitor sync health and catch issues fast'],
     pricing: {basic:'$299/mo', pro:'$899/mo', enterprise:'$2,999/mo'},
-    contactInfo: {website:'/services/w174-reverse-etl', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    contactInfo: {website:'/services/w174-reverse-etl', email:'kleber@ziontechgroup.com', phone:'+55 11 97614-0076'},
     icon: '🔄', href: '/services/w174-reverse-etl', popular: false, category: 'data', industry: 'Data Engineering',
   },
   {
@@ -464,7 +464,7 @@ export const wave174DataServices: Service[] = [
     features: ['Multi-model evaluation (OpenAI, Anthropic, Gemini, local)', 'Accuracy, latency, cost benchmarking', 'Safety and toxicity evaluation', 'Fairness and bias testing', 'A/B testing in production with routing', 'Automated evaluation pipelines (CI/CD for LLMs)', 'Leaderboard and comparison dashboards'],
     benefits: ['Choose the best model with data, not guessing', 'Safety evaluation before production deployment', 'Cost benchmarking optimizes spend', 'A/B testing proves model upgrade value'],
     pricing: {basic:'$299/mo', pro:'$899/mo', enterprise:'$2,999/mo'},
-    contactInfo: {website:'/services/w174-llm-eval-benchmark', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    contactInfo: {website:'/services/w174-llm-eval-benchmark', email:'kleber@ziontechgroup.com', phone:'+55 11 97614-0076'},
     icon: '📊', href: '/services/w174-llm-eval-benchmark', popular: false, category: 'data', industry: 'Machine Learning',
   },
   {
@@ -472,7 +472,7 @@ export const wave174DataServices: Service[] = [
     features: ['Volume and freshness anomaly detection', 'Schema change monitoring', 'Distribution and statistical drift detection', 'End-to-end data lineage tracking', 'Incident creation and alerting', 'Root cause analysis for data issues', 'Integration with Airflow, dbt, Snowflake, Databricks'],
     benefits: ['Catch data issues before business impact', 'Lineage tracks data from source to dashboard', 'Statistical drift catches subtle data changes', 'Root cause analysis reduces debugging time'],
     pricing: {basic:'$399/mo', pro:'$1,199/mo', enterprise:'$3,999/mo'},
-    contactInfo: {website:'/services/w174-data-observability', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    contactInfo: {website:'/services/w174-data-observability', email:'kleber@ziontechgroup.com', phone:'+55 11 97614-0076'},
     icon: '👁️', href: '/services/w174-data-observability', popular: true, category: 'data', industry: 'Data Operations',
   },
   {
@@ -480,7 +480,7 @@ export const wave174DataServices: Service[] = [
     features: ['Auto-organize and tag documents', 'Natural language Q&A over knowledge base', 'Relevant info surfacing in Slack, Teams, Confluence', 'Knowledge gap identification', 'Content lifecycle and freshness management', 'Access control and permissions', 'Integration with Confluence, SharePoint, Notion, GDrive'],
     benefits: ['Find any information in seconds with NL search', 'AI surfaces relevant knowledge in your workflow', 'Knowledge gaps identified and addressed', 'Content lifecycle keeps knowledge fresh'],
     pricing: {basic:'$299/mo', pro:'$899/mo', enterprise:'$2,999/mo'},
-    contactInfo: {website:'/services/w174-knowledge-mgmt', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    contactInfo: {website:'/services/w174-knowledge-mgmt', email:'kleber@ziontechgroup.com', phone:'+55 11 97614-0076'},
     icon: '🧠', href: '/services/w174-knowledge-mgmt', popular: false, category: 'data', industry: 'Knowledge Management',
   },
 ];
@@ -491,7 +491,7 @@ export const wave174AutomationServices: Service[] = [
     features: ['Copilot design and deployment', 'Context-aware assistance in flow of work', 'Multi-channel (Slack, Teams, email, browser extension)', 'Knowledge grounding (RAG) with your data', 'Guardrails and output validation', 'Usage analytics and effectiveness tracking', 'SSO and enterprise security'],
     benefits: ['AI assistance where employees already work', 'Knowledge-grounded answers reduce hallucination', 'Guardrails ensure safe, on-brand output', 'Usage analytics prove ROI'],
     pricing: {basic:'$299/mo', pro:'$899/mo', enterprise:'$2,999/mo'},
-    contactInfo: {website:'/services/w174-ai-copilot-workflow', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    contactInfo: {website:'/services/w174-ai-copilot-workflow', email:'kleber@ziontechgroup.com', phone:'+55 11 97614-0076'},
     icon: '🤖', href: '/services/w174-ai-copilot-workflow', popular: true, category: 'automation', industry: 'Productivity',
   },
   {
@@ -499,7 +499,7 @@ export const wave174AutomationServices: Service[] = [
     features: ['AI audience segmentation and scoring', 'Multi-channel campaign orchestration', 'AI content generation (email, ad, social copy)', 'Journey builder with AI optimization', 'Lead scoring and lifecycle management', 'Attribution modeling and revenue tracking', 'Integration with Salesforce, HubSpot, Marketo'],
     benefits: ['AI segmentation finds high-value audiences', 'Multi-channel from a single platform', 'AI content generates on-brand copy at scale', 'Attribution proves marketing ROI'],
     pricing: {basic:'$199/mo', pro:'$599/mo', enterprise:'$1,999/mo'},
-    contactInfo: {website:'/services/w174-marketing-automation-ai', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    contactInfo: {website:'/services/w174-marketing-automation-ai', email:'kleber@ziontechgroup.com', phone:'+55 11 97614-0076'},
     icon: '📣', href: '/services/w174-marketing-automation-ai', popular: true, category: 'automation', industry: 'Marketing',
   },
   {
@@ -507,7 +507,7 @@ export const wave174AutomationServices: Service[] = [
     features: ['SAP, Oracle, NetSuite, Dynamics integration', 'Bidirectional data synchronization', 'Business workflow automation (AP, AR, PO)', 'Custom module and extension development', 'Legacy ERP modernization and API enablement', 'Error handling and reconciliation', 'iPaaS connectivity (MuleSoft, Boomi, Workato)'],
     benefits: ['Integrate ERP with modern cloud apps', 'Automate manual ERP workflows', 'Real-time sync eliminates batch delays', 'Legacy ERP API enablement for digital transformation'],
     pricing: {basic:'$999/mo', pro:'$2,999/mo', enterprise:'$9,999/mo'},
-    contactInfo: {website:'/services/w174-erp-integration-automation', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    contactInfo: {website:'/services/w174-erp-integration-automation', email:'kleber@ziontechgroup.com', phone:'+55 11 97614-0076'},
     icon: '🔌', href: '/services/w174-erp-integration-automation', popular: false, category: 'automation', industry: 'Operations',
   },
   {
@@ -515,7 +515,7 @@ export const wave174AutomationServices: Service[] = [
     features: ['Employee onboarding workflows', 'Offboarding and knowledge transfer automation', 'Time tracking and schedule management', 'Benefits enrollment and change automation', 'Performance review cycles and 360 feedback', 'Compliance reporting (EEO-1, ACA, VETS-4212)', 'Integration with Workday, BambooHR, Rippling, ADP'],
     benefits: ['Onboarding in hours, not days', 'Offboarding ensures complete deprovisioning', 'Compliance reporting automated', 'Performance reviews on schedule, every cycle'],
     pricing: {basic:'$199/mo', pro:'$599/mo', enterprise:'$1,999/mo'},
-    contactInfo: {website:'/services/w174-hr-automation', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    contactInfo: {website:'/services/w174-hr-automation', email:'kleber@ziontechgroup.com', phone:'+55 11 97614-0076'},
     icon: '👥', href: '/services/w174-hr-automation', popular: false, category: 'automation', industry: 'Human Resources',
   },
   {
@@ -523,7 +523,7 @@ export const wave174AutomationServices: Service[] = [
     features: ['Matter management and tracking', 'E-billing and outside counsel management', 'Contract lifecycle automation', 'IP portfolio and docket management', 'Legal hold and e-discovery workflow', 'Compliance and regulatory tracking', 'Integration with Clio, PracticePanther, Relativity'],
     benefits: ['Reduce outside counsel spend by 25%', 'Matter management prevents dropped balls', 'E-billing catches billing guideline violations', 'Contract lifecycle closes deals faster'],
     pricing: {basic:'$499/mo', pro:'$1,499/mo', enterprise:'$4,999/mo'},
-    contactInfo: {website:'/services/w174-legal-automation', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    contactInfo: {website:'/services/w174-legal-automation', email:'kleber@ziontechgroup.com', phone:'+55 11 97614-0076'},
     icon: '⚖️', href: '/services/w174-legal-automation', popular: false, category: 'automation', industry: 'Legal',
   },
   {
@@ -531,7 +531,7 @@ export const wave174AutomationServices: Service[] = [
     features: ['Financial close automation and scheduling', 'Accounts payable and receivable automation', 'Bank and intercompany reconciliation', 'Expense management and policy enforcement', 'Financial reporting and consolidation', 'Audit trail and SOX compliance', 'Integration with NetSuite, Sage, QuickBooks, SAP'],
     benefits: ['Reduce month-end close time by 50%', 'AP automation eliminates manual invoice processing', 'Auto-reconciliation catches discrepancies', 'SOX-compliant audit trails'],
     pricing: {basic:'$399/mo', pro:'$1,199/mo', enterprise:'$3,999/mo'},
-    contactInfo: {website:'/services/w174-finance-automation', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    contactInfo: {website:'/services/w174-finance-automation', email:'kleber@ziontechgroup.com', phone:'+55 11 97614-0076'},
     icon: '💰', href: '/services/w174-finance-automation', popular: true, category: 'automation', industry: 'Finance',
   },
   {
@@ -539,7 +539,7 @@ export const wave174AutomationServices: Service[] = [
     features: ['Internal developer portal (Backstage)', 'Golden path templates for new services', 'Service catalog and dependency tracking', 'Self-service environment provisioning', 'CI/CD pipeline templates', 'Infrastructure-as-code guardrails', 'Developer experience metrics and feedback'],
     benefits: ['Developer self-service reduces tickets by 80%', 'Golden paths ensure best practices by default', 'Service catalog prevents duplicated effort', 'Platform engineering scales with org growth'],
     pricing: {basic:'$599/mo', pro:'$1,799/mo', enterprise:'$5,999/mo'},
-    contactInfo: {website:'/services/w174-DevOps-accelerator', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    contactInfo: {website:'/services/w174-DevOps-accelerator', email:'kleber@ziontechgroup.com', phone:'+55 11 97614-0076'},
     icon: '🚀', href: '/services/w174-DevOps-accelerator', popular: false, category: 'automation', industry: 'DevOps',
   },
   {
@@ -547,7 +547,7 @@ export const wave174AutomationServices: Service[] = [
     features: ['AI customer health scoring', 'Churn risk prediction and alerting', 'Expansion and upsell opportunity detection', 'Automated playbooks and outreach sequences', 'Renewal forecasting and management', 'Product usage analytics and adoption scoring', 'Integration with Salesforce, Gainsight, Totango'],
     benefits: ['Proactive retention reduces churn 25%', 'Health scoring identifies at-risk accounts early', 'Expansion opportunities drive revenue growth', 'Automated playbooks scale CS team efficiency'],
     pricing: {basic:'$399/mo', pro:'$1,199/mo', enterprise:'$3,999/mo'},
-    contactInfo: {website:'/services/w174-customer-success-ai', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    contactInfo: {website:'/services/w174-customer-success-ai', email:'kleber@ziontechgroup.com', phone:'+55 11 97614-0076'},
     icon: '🎯', href: '/services/w174-customer-success-ai', popular: false, category: 'automation', industry: 'Customer Success',
   },
   {
@@ -555,7 +555,7 @@ export const wave174AutomationServices: Service[] = [
     features: ['AI lead scoring and prioritization', 'Call coaching with real-time suggestions', 'Deal intelligence and risk assessment', 'Automated CRM data entry and updates', 'Competitive intelligence for deals', 'Pipeline forecasting with AI accuracy', 'Integration with Salesforce, HubSpot, Outreach, Gong'],
     benefits: ['Increase win rates by 20% with AI guidance', 'Lead scoring focuses reps on best opportunities', 'Automated CRM updates reduce admin by 50%', 'Deal intelligence catches at-risk deals early'],
     pricing: {basic:'$199/mo', pro:'$599/mo', enterprise:'$1,999/mo'},
-    contactInfo: {website:'/services/w174-sales-intelligence-ai', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    contactInfo: {website:'/services/w174-sales-intelligence-ai', email:'kleber@ziontechgroup.com', phone:'+55 11 97614-0076'},
     icon: '📊', href: '/services/w174-sales-intelligence-ai', popular: false, category: 'automation', industry: 'Sales',
   },
   {
@@ -563,7 +563,7 @@ export const wave174AutomationServices: Service[] = [
     features: ['Pick-path optimization (reduce travel time 40%)', 'Real-time inventory tracking (RFID, barcode, IoT)', 'Automated shipment labeling and documentation', 'Dock scheduling and yard management', 'Returns processing automation', 'Labor planning and productivity tracking', 'Integration with Manhattan, Blue Yonder, SAP EWM'],
     benefits: ['Pick-path optimization reduces labor 40%', 'Real-time tracking eliminates inventory discrepancies', 'Automated shipping reduces errors', 'Dock scheduling increases throughput'],
     pricing: {basic:'$499/mo', pro:'$1,499/mo', enterprise:'$4,999/mo'},
-    contactInfo: {website:'/services/w174-warehouse-automation', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    contactInfo: {website:'/services/w174-warehouse-automation', email:'kleber@ziontechgroup.com', phone:'+55 11 97614-0076'},
     icon: '🏭', href: '/services/w174-warehouse-automation', popular: false, category: 'automation', industry: 'Logistics',
   },
   {
@@ -571,7 +571,7 @@ export const wave174AutomationServices: Service[] = [
     features: ['Automated order processing and fulfilment', 'Multi-channel inventory synchronization', 'Dynamic pricing rules and competitor matching', 'Fraud screening and risk scoring', 'Marketplace listing management (Amazon, Walmart, eBay)', 'Return and refund automation', 'Integration with Shopify, WooCommerce, BigCommerce'],
     benefits: ['Process orders 5x faster with automation', 'Inventory sync prevents overselling', 'Dynamic pricing maximizes margin', 'Fraud screening reduces chargebacks'],
     pricing: {basic:'$99/mo', pro:'$299/mo', enterprise:'$999/mo'},
-    contactInfo: {website:'/services/w174-ecommerce-automation', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    contactInfo: {website:'/services/w174-ecommerce-automation', email:'kleber@ziontechgroup.com', phone:'+55 11 97614-0076'},
     icon: '🛒', href: '/services/w174-ecommerce-automation', popular: true, category: 'automation', industry: 'E-Commerce',
   },
   {
@@ -579,7 +579,7 @@ export const wave174AutomationServices: Service[] = [
     features: ['HVAC and lighting optimization (IoT-driven)', 'Space and room booking with utilization analytics', 'Preventive maintenance scheduling', 'Energy monitoring and optimization', 'Visitor management and access control', 'Lease and tenant management', 'Integration with MRI, Yardi, BuildingIQ, Siemens'],
     benefits: ['Reduce energy costs by 20-35%', 'Space utilization analytics optimize real estate', 'Preventive maintenance extends asset life', 'Smart HVAC improves occupant comfort'],
     pricing: {basic:'$299/mo', pro:'$899/mo', enterprise:'$2,999/mo'},
-    contactInfo: {website:'/services/w174-property-tech-automation', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    contactInfo: {website:'/services/w174-property-tech-automation', email:'kleber@ziontechgroup.com', phone:'+55 11 97614-0076'},
     icon: '🏢', href: '/services/w174-property-tech-automation', popular: false, category: 'automation', industry: 'Real Estate',
   },
 ];

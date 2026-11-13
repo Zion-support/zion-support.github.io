@@ -174,8 +174,8 @@ export default function V891V895Showcase() {
             <h3 className="text-2xl font-bold text-white mb-3">Ready to Transform Healthcare with AI?</h3>
             <p className="text-gray-300 mb-6">Contact our HealthTech experts for a personalized consultation and discover how our Bioinformatics & HealthTech solutions can revolutionize patient care and outcomes.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center text-sm">
-              <a href="tel:+13024640950" className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-blue-500/25 transition-all">
-                📞 +1 302 464 0950
+              <a href="tel:+5511976140076" className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-blue-500/25 transition-all">
+                📞 +55 11 97614-0076
               </a>
               <a href="mailto:kleber@ziontechgroup.com" className="bg-white/5 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all border border-white/10">
                 ✉️ kleber@ziontechgroup.com

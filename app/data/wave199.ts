@@ -13,7 +13,7 @@ export const wave199AiServices: Service[] = [
     stage: "published",
     popular: false,
     pricing: { basic: '$149/mo', pro: '$349/mo', enterprise: '$799/mo' },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "Robot fleet layout designer with drag-and-drop warehouse mapping",
       "Pick-path optimization using ant colony algorithms",
@@ -40,7 +40,7 @@ export const wave199AiServices: Service[] = [
     stage: "published",
     popular: false,
     pricing: { basic: '$199/mo', pro: '$449/mo', enterprise: '$999/mo' },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "Image forensics analysis (Error Level Analysis, metadata inspection)",
       "Video deepfake detection with frame-by-frame scoring",
@@ -67,7 +67,7 @@ export const wave199AiServices: Service[] = [
     stage: "published",
     popular: true,
     pricing: { basic: '$129/mo', pro: '$299/mo', enterprise: '$649/mo' },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "Multi-format ingestion (PDF, TIFF, JPEG, PNG, DOCX)",
       "Contextual entity extraction with custom field training",
@@ -97,7 +97,7 @@ export const wave199DataServices: Service[] = [
     stage: "published",
     popular: false,
     pricing: { basic: '$299/mo', pro: '$699/mo', enterprise: '$1499/mo' },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "Data product catalog with searchable metadata registry",
       "Domain-based access control and ownership management",
@@ -124,7 +124,7 @@ export const wave199DataServices: Service[] = [
     stage: "published",
     popular: false,
     pricing: { basic: '$149/mo', pro: '$349/mo', enterprise: '$799/mo' },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "Automated profiling for new and changed datasets",
       "Rule builder with 100+ built-in quality checks",
@@ -154,7 +154,7 @@ export const wave199CloudServices: Service[] = [
     stage: "published",
     popular: true,
     pricing: { basic: '$199/mo', pro: '$449/mo', enterprise: '$999/mo' },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "Multi-cloud cost aggregation and normalization",
       "Idle resource detection with auto-remediation policies",
@@ -181,7 +181,7 @@ export const wave199CloudServices: Service[] = [
     stage: "published",
     popular: false,
     pricing: { basic: '$99/mo', pro: '$249/mo', enterprise: '$549/mo' },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "Single pane of glass for Route53, Cloud DNS, Azure DNS",
       "Geo-location, latency, and weighted routing policies",
@@ -211,7 +211,7 @@ export const wave199SecurityServices: Service[] = [
     stage: "published",
     popular: true,
     pricing: { basic: '$249/mo', pro: '$549/mo', enterprise: '$1199/mo' },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "SBOM generation and continuous integrity verification",
       "Malicious package detection across npm, PyPI, Maven, NuGet",
@@ -241,7 +241,7 @@ export const wave199AutomationServices: Service[] = [
     stage: "published",
     popular: false,
     pricing: { basic: '$199/mo', pro: '$449/mo', enterprise: '$999/mo' },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "Event log ingestion from ERP, CRM, and BPM systems",
       "Automated process discovery with variant analysis",
@@ -271,7 +271,7 @@ export const wave199ItServices: Service[] = [
     stage: "published",
     popular: false,
     pricing: { basic: '$79/mo', pro: '$199/mo', enterprise: '$449/mo' },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "Auto-discovery of network-connected devices and software",
       "License compliance tracking with true-up reporting",
@@ -301,7 +301,7 @@ export const wave199MicroSaasServices: Service[] = [
     stage: "published",
     popular: false,
     pricing: { basic: '$29/mo', pro: '$79/mo', enterprise: '$199/mo' },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "One-click link monetization with interstitial ad insertion",
       "Link cloaking with 301/302 redirect options",

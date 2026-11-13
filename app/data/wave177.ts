@@ -8,7 +8,7 @@ export const wave177SecurityServices: Service[] = [
     features: ['24/7 on-call IR team', 'Forensic evidence collection', 'Containment and eradication', 'Stakeholder communication plan', 'Post-incident report'],
     benefits: ['Reduce breach dwell time', 'Meet regulatory disclosure timelines', 'Preserve evidence for insurance and legal', 'Restore trust with stakeholders'],
     pricing: { basic: '$1,499/mo', pro: '$3,999/mo', enterprise: 'Custom' },
-    contactInfo: { website: '/services/w177-security-incident-response', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/w177-security-incident-response', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     icon: '🚨', href: '/services/w177-security-incident-response', popular: false, category: 'security', industry: 'Security Services',
   },
 ];
@@ -21,7 +21,7 @@ export const wave177CloudServices: Service[] = [
     features: ['Cost visibility and dashboards', 'Rightsizing recommendations', 'Reserved instance planning', 'Waste detection and cleanup', 'Multi-cloud normalization', 'Anomaly alerts and budgets'],
     benefits: ['Lower spend without performance loss', 'Visibility into every resource', 'Protect against billing surprises', 'Finance and engineering alignment'],
     pricing: { basic: '$499/mo', pro: '$1,499/mo', enterprise: 'Custom' },
-    contactInfo: { website: '/services/w177-cloud-cost-optimization', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/w177-cloud-cost-optimization', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     icon: '💸', href: '/services/w177-cloud-cost-optimization', popular: false, category: 'cloud', industry: 'Cloud',
   },
 ];
@@ -34,7 +34,7 @@ export const wave177DataServices: Service[] = [
     features: ['Change data capture (CDC)', 'Stream processing and enrichment', 'Schema registry and governance', 'Dead-letter handling and replay', 'Operational dashboards', 'Data quality checks'],
     benefits: ['Insights within seconds, not hours', 'Reduce batch-window complexity', 'Governed data as it flows', 'Resilient pipelines with replay'],
     pricing: { basic: '$1,199/mo', pro: '$3,499/mo', enterprise: 'Custom' },
-    contactInfo: { website: '/services/w177-data-realtime-pipeline', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/w177-data-realtime-pipeline', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     icon: '🔄', href: '/services/w177-data-realtime-pipeline', popular: false, category: 'data', industry: 'Data Engineering',
   },
 ];
@@ -47,7 +47,7 @@ export const wave177AutomationServices: Service[] = [
     features: ['Process discovery from logs', 'Bottleneck identification', 'Automation opportunity scoring', 'ROI estimation', 'Flow generation for RPA/iPaaS', 'Change impact analysis'],
     benefits: ['Automate what matters most first', 'Prove ROI before building', 'Reduce manual assessment work', 'Continuous improvement loop'],
     pricing: { basic: '$799/mo', pro: '$2,199/mo', enterprise: 'Custom' },
-    contactInfo: { website: '/services/w177-automation-process-mining', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/w177-automation-process-mining', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     icon: '⛏️', href: '/services/w177-automation-process-mining', popular: false, category: 'automation', industry: 'Automation',
   },
 ];
@@ -60,7 +60,7 @@ export const wave177MicroSaasServices: Service[] = [
     features: ['SSO with SAML/OIDC', 'SCIM directory sync', 'Audit logs and events', 'Admin dashboard', 'Org and role management', 'Security hardening support'],
     benefits: ['Sell to enterprise buyers faster', 'Reduce identity engineering cost', 'Pass SOC2/ISO audits easier', 'Standard auth with less code'],
     pricing: { basic: '$39/mo', pro: '$99/mo', enterprise: '$299/mo' },
-    contactInfo: { website: '/services/w177-micro-saas-workos-auth', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/w177-micro-saas-workos-auth', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     icon: '🧩', href: '/services/w177-micro-saas-workos-auth', popular: true, category: 'micro-saas', industry: 'Developer Tools',
   },
 ];
@@ -73,7 +73,7 @@ export const wave177ItServices: Service[] = [
     features: ['Policy-driven backup schedules', 'Point-in-time recovery', 'DR runbooks and testing', 'Cross-region replication', 'RPO/RTO reporting', 'Compliance retention'],
     benefits: ['Reduce data loss risk', 'Meet recovery objectives', 'Operationalize DR with runbooks', 'Retention compliance without guesswork'],
     pricing: { basic: '$399/mo', pro: '$1,199/mo', enterprise: 'Custom' },
-    contactInfo: { website: '/services/w177-it-backup-recovery', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/w177-it-backup-recovery', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     icon: '🗄️', href: '/services/w177-it-backup-recovery', popular: false, category: 'it', industry: 'Infrastructure',
   },
 ];
@@ -86,7 +86,7 @@ export const wave177AiServices: Service[] = [
     features: ['Recording and transcription', 'Summaries and highlights', 'Action item extraction', 'Sentiment and engagement signals', 'CRM/project tool sync', 'Meeting search and replay'],
     benefits: ['Never miss a commitment', 'Summarize meetings in minutes', 'Automate follow-ups', 'Improve team alignment'],
     pricing: { basic: '$49/mo', pro: '$149/mo', enterprise: '$499/mo' },
-    contactInfo: { website: '/services/w177-ai-meeting-intelligence', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/w177-ai-meeting-intelligence', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     icon: '🎯', href: '/services/w177-ai-meeting-intelligence', popular: true, category: 'ai', industry: 'Productivity',
   },
 ];

@@ -34,7 +34,7 @@ export default function StickyMobileCTA() {
             ⚡ Get a Proposal
           </Link>
           <a
-            href="tel:+13024640950"
+            href="tel:+5511976140076"
             className="px-4 py-3 rounded-xl bg-slate-800 border border-slate-700 text-white font-semibold text-sm hover:bg-slate-700 transition-all"
           >
             ☎ Call

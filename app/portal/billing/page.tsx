@@ -35,7 +35,7 @@ export default function BillingPage() {
           </div>
         </div>
         <div className="mt-8 p-4 bg-purple-950/30 rounded-xl border border-purple-500/20">
-          <p className="text-purple-300 text-sm">Need a detailed invoice or to update billing info? <a href="/contact/" className="underline hover:text-purple-200">Contact us</a> or call <a href="tel:+13024640950" className="underline">+1 302 464 0950</a>.</p>
+          <p className="text-purple-300 text-sm">Need a detailed invoice or to update billing info? <a href="/contact/" className="underline hover:text-purple-200">Contact us</a> or call <a href="tel:+5511976140076" className="underline">+55 11 97614-0076</a>.</p>
         </div>
       </div>
     </div>

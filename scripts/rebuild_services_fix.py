@@ -116,7 +116,7 @@ def svc(en, sp=2):
     if ci:
         site = ci.get('website', f'/services/{cid}')
         em   = ci.get('email', 'kleber@ziontechgroup.com')
-        ph   = ci.get('phone', '+1 302 464 0950')
+        ph   = ci.get('phone', '+55 11 97614-0076')
         L.append(f"{ind2}contactInfo: {{")
         L.append(f"{ind2}  website: '{ts(site)}',")
         L.append(f"{ind2}  email: '{ts(em)}',")

@@ -95,7 +95,7 @@ export default function ProductPageLayout({ data }: ProductPageLayoutProps) {
           <h2 className="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>
           <p className="text-slate-300 mb-8 max-w-2xl mx-auto">
             Let&apos;s discuss how {data.title} can transform your business.
-            364 E Main St STE 1008, Middletown, DE 19709 · +1 302 464 0950
+            364 E Main St STE 1008, Middletown, DE 19709 · +55 11 97614-0076
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="mailto:kleber@ziontechgroup.com" className="btn-primary text-lg px-8">

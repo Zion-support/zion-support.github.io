@@ -4,7 +4,7 @@ export type { Service };
 const contact = () => ({
   website: 'https://ziontechgroup.com',
   email: 'kleber@ziontechgroup.com',
-  phone: '+1 302 464 0950',
+  phone: '+55 11 97614-0076',
 });
 
 export const wave259ItServices: Service[] = [

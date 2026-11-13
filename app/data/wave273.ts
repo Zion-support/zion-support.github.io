@@ -30,7 +30,7 @@ export const wave273Services: Service[] = [
     contactInfo: {
       website: '/services/ai-knowledge-graph-builder',
       email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
+      phone: '+55 11 97614-0076',
     },
   },
   {
@@ -62,7 +62,7 @@ export const wave273Services: Service[] = [
     contactInfo: {
       website: '/services/micro-saas-lead-scoring-engine',
       email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
+      phone: '+55 11 97614-0076',
     },
   },
   {
@@ -94,7 +94,7 @@ export const wave273Services: Service[] = [
     contactInfo: {
       website: '/services/it-site-reliability-engineering',
       email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
+      phone: '+55 11 97614-0076',
     },
   },
   {
@@ -126,7 +126,7 @@ export const wave273Services: Service[] = [
     contactInfo: {
       website: '/services/ai-multilingual-content-localization',
       email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
+      phone: '+55 11 97614-0076',
     },
   },
 ];

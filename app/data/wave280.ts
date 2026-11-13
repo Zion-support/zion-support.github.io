@@ -12,7 +12,7 @@ export const wave280ItServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: '$149/mo', pro: '$499/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Cross-platform endpoint inventory and policy enforcement',
       'AI-driven patch prioritization and automated deployment',
@@ -39,7 +39,7 @@ export const wave280ItServices: Service[] = [
     stage: 'published',
     popular: false,
     pricing: { basic: '$199/mo', pro: '$599/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'AI backup scheduling based on change frequency and criticality',
       'Immutable air-gapped backups with ransomware protection',
@@ -66,7 +66,7 @@ export const wave280ItServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: '$299/mo', pro: '$899/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Unified control plane for AWS, Azure, GCP, and on-prem',
       'Cloud-agnostic policy engine and governance guardrails',
@@ -93,7 +93,7 @@ export const wave280ItServices: Service[] = [
     stage: 'published',
     popular: false,
     pricing: { basic: '$199/mo', pro: '$699/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'AI-powered anomaly detection for login and access patterns',
       'Just-in-time privileged access with auto-expiry',
@@ -120,7 +120,7 @@ export const wave280ItServices: Service[] = [
     stage: 'published',
     popular: false,
     pricing: { basic: '$299/mo', pro: '$899/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Intent-based networking with natural-language policy translation',
       'Self-healing WAN with dynamic path optimization',
@@ -147,7 +147,7 @@ export const wave280ItServices: Service[] = [
     stage: 'published',
     popular: false,
     pricing: { basic: '$249/mo', pro: '$749/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'AI-powered VM and container right-sizing recommendations',
       'Zombie resource detection and automated cleanup',
@@ -174,7 +174,7 @@ export const wave280ItServices: Service[] = [
     stage: 'published',
     popular: false,
     pricing: { basic: '$199/mo', pro: '$599/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'DaaS and VDI deployment with GPU acceleration',
       'Unified communications and collaboration suite integration',
@@ -201,7 +201,7 @@ export const wave280ItServices: Service[] = [
     stage: 'published',
     popular: false,
     pricing: { basic: '$149/mo', pro: '$449/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Automated software inventory across devices and SaaS',
       'License compliance analysis and audit-ready reporting',
@@ -228,7 +228,7 @@ export const wave280ItServices: Service[] = [
     stage: 'published',
     popular: false,
     pricing: { basic: '$349/mo', pro: '$999/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'AI-controlled cooling optimization (liquid, air, immersion)',
       'Real-time PUE and energy efficiency monitoring',
@@ -255,7 +255,7 @@ export const wave280ItServices: Service[] = [
     stage: 'published',
     popular: false,
     pricing: { basic: '$199/mo', pro: '$599/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Full-stack tracing (frontend, backend, database, infrastructure)',
       'AI anomaly detection and automatic root-cause correlation',
@@ -282,7 +282,7 @@ export const wave280ItServices: Service[] = [
     stage: 'published',
     popular: false,
     pricing: { basic: '$99/mo', pro: '$299/mo', enterprise: '$999/mo' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Adaptive phishing simulation campaigns',
       'Personalized training modules based on click behavior',

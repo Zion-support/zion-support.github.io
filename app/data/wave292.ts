@@ -22,7 +22,7 @@ export const wave292ItServices = [
     contactInfo: {
       website: "/services/it-remote-support-quality-assurance",
       email: "kleber@ziontechgroup.com",
-      phone: "+1 302 464 0950"
+      phone: "+55 11 97614-0076"
     },
     icon: "🎧",
     href: "/services/it-remote-support-quality-assurance",
@@ -54,7 +54,7 @@ export const wave292ItServices = [
     contactInfo: {
       website: "/services/it-accessibility-compliance-tracker",
       email: "kleber@ziontechgroup.com",
-      phone: "+1 302 464 0950"
+      phone: "+55 11 97614-0076"
     },
     icon: "♿",
     href: "/services/it-accessibility-compliance-tracker",
@@ -89,7 +89,7 @@ export const wave292AiServices = [
     contactInfo: {
       website: "/services/ai-applied-forecasting-for-cash-position",
       email: "kleber@ziontechgroup.com",
-      phone: "+1 302 464 0950"
+      phone: "+55 11 97614-0076"
     },
     icon: "💵",
     href: "/services/ai-applied-forecasting-for-cash-position",
@@ -124,7 +124,7 @@ export const wave292SecurityServices = [
     contactInfo: {
       website: "/services/security-conversation-risk-classifier",
       email: "kleber@ziontechgroup.com",
-      phone: "+1 302 464 0950"
+      phone: "+55 11 97614-0076"
     },
     icon: "🔐",
     href: "/services/security-conversation-risk-classifier",
@@ -159,7 +159,7 @@ export const wave292CloudServices = [
     contactInfo: {
       website: "/services/cloud-workspace-provisioning-tracker",
       email: "kleber@ziontechgroup.com",
-      phone: "+1 302 464 0950"
+      phone: "+55 11 97614-0076"
     },
     icon: "🧪",
     href: "/services/cloud-workspace-provisioning-tracker",
@@ -194,7 +194,7 @@ export const wave292DataServices = [
     contactInfo: {
       website: "/services/data-governance-role-mapper",
       email: "kleber@ziontechgroup.com",
-      phone: "+1 302 464 0950"
+      phone: "+55 11 97614-0076"
     },
     icon: "🧭",
     href: "/services/data-governance-role-mapper",
@@ -229,7 +229,7 @@ export const wave292AutomationServices = [
     contactInfo: {
       website: "/services/automation-vendor-spend-tracker",
       email: "kleber@ziontechgroup.com",
-      phone: "+1 302 464 0950"
+      phone: "+55 11 97614-0076"
     },
     icon: "🧾",
     href: "/services/automation-vendor-spend-tracker",
@@ -264,7 +264,7 @@ export const wave292MicroSaasServices = [
     contactInfo: {
       website: "/services/micro-saas-ai-incident-postcard",
       email: "kleber@ziontechgroup.com",
-      phone: "+1 302 464 0950"
+      phone: "+55 11 97614-0076"
     },
     icon: "📨",
     href: "/services/micro-saas-ai-incident-postcard",
@@ -296,7 +296,7 @@ export const wave292MicroSaasServices = [
     contactInfo: {
       website: "/services/micro-saas-ai-energy-spend-advisor",
       email: "kleber@ziontechgroup.com",
-      phone: "+1 302 464 0950"
+      phone: "+55 11 97614-0076"
     },
     icon: "⚡",
     href: "/services/micro-saas-ai-energy-spend-advisor",

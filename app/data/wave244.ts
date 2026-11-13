@@ -18,7 +18,7 @@ export const wave244InfrastructureAsCodeServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: 'Free (team of 1, unlimited stacks)', pro: '$100/user/month (team features, SSO, policy)', enterprise: 'Custom (self-hosted, audit logs, dedicated support)' },
-    contactInfo: { website: 'https://pulumi.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://pulumi.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Real languages: write IaC in TypeScript, Python, Go, C#, or Java — no HCL or YAML required',
       '250+ provider packages: AWS, Azure, GCP, Kubernetes, Datadog, Cloudflare, and more',
@@ -49,7 +49,7 @@ export const wave244AiProcurementServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: 'Not publicly listed — custom enterprise pricing', pro: 'Contact for vendor risk automation quote', enterprise: 'Custom (unlimited vendors + integrations + dedicated CSM)' },
-    contactInfo: { website: 'https://torq.io', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://torq.io', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'AI security questionnaire processing: auto-analyze SOC 2, ISO 27001, and penetration test reports',
       'Vendor risk scoring: continuous AI monitoring of vendor security posture with change alerts',
@@ -80,7 +80,7 @@ export const wave244SyntheticMediaDetectionServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: '$30/month (10 AI videos, 1 seat)', pro: '$99/month (unlimited videos, 5 seats)', enterprise: 'Custom (API access, custom avatars, SSO, SOC 2)' },
-    contactInfo: { website: 'https://synthesia.io', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://synthesia.io', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       '230+ AI avatars: diverse, photorepresentative presenters available in 140+ languages',
       'Custom avatar: create a digital twin of a real presenter in a 15-minute recording session',
@@ -111,7 +111,7 @@ export const wave244WebassemblyRuntimeServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: 'Free (open source, self-hosted Spin CLI)', pro: 'Fermyon Cloud Free tier (1M requests/month)', enterprise: 'Custom (Fermyon Platform on-prem, dedicated support, SLA)' },
-    contactInfo: { website: 'https://fermyon.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://fermyon.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Sub-millisecond cold starts: Wasm microVMs boot in under 100µs vs. seconds for containers',
       'Tiny binaries: spin up with MBs instead of GB container images — faster deploys, less bandwidth',
@@ -142,7 +142,7 @@ export const wave244DeveloperPortalServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: 'Free (open source, self-hosted, CNCF project)', pro: 'Free (community plugins, 1,500+ integrations)', enterprise: 'Custom (Roadie, Spotify Backstage Managed, or self-hosted with enterprise support)' },
-    contactInfo: { website: 'https://backstage.io', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://backstage.io', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Software Catalog: auto-discovered inventory of all services, APIs, libraries, and data pipelines',
       'Scaffolder: self-service templates that create repos, CI/CD, cloud resources, and register in catalog',

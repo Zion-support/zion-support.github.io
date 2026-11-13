@@ -146,7 +146,7 @@ export default function AIServicesPage() {
             We can build a custom AI solution tailored to your exact requirements. Let's talk.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <a href="tel:+13024640950" className="btn-primary">📞 +1 302 464 0950</a>
+            <a href="tel:+5511976140076" className="btn-primary">📞 +55 11 97614-0076</a>
             <Link href="/contact/" className="btn-secondary">✉️ Contact Us</Link>
           </div>
         </div>

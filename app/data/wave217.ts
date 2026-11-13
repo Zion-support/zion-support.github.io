@@ -18,7 +18,7 @@ export const wave217CarbonCaptureTechServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: '$1,000/ton CO₂ removed', pro: '$700/ton (>1,000 tons/year)', enterprise: '$500/ton (enterprise multi-year agreements)' },
-    contactInfo: { website: 'https://climeworks.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://climeworks.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Direct air capture technology removes legacy CO₂ emissions permanently',
       'Carbfix mineralization: CO₂ turned into stone underground within 2 years',
@@ -46,7 +46,7 @@ export const wave217CarbonCaptureTechServices: Service[] = [
     stage: 'published',
     popular: false,
     pricing: { basic: '$300/ton CO₂ removed', pro: '$200/ton (>5,000 tons/year)', enterprise: '$150/ton (large-scale programs)' },
-    contactInfo: { website: 'https://heirloomcarbon.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://heirloomcarbon.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Limestone-based carbon capture — no chemicals, no energy-intensive processes',
       'Spreads on agricultural land, improving soil health and crop productivity',
@@ -77,7 +77,7 @@ export const wave217BrainComputerInterfaceServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: 'Clinical trial participation', pro: 'Medical device program (hospital partnership)', enterprise: 'Research licensing (custom)' },
-    contactInfo: { website: 'https://neuralink.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://neuralink.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'N1 implant: 1,024 electrodes on 64 ultra-thin flexible threads',
       'Wireless charging and Bluetooth data transmission — no external wires',
@@ -105,7 +105,7 @@ export const wave217BrainComputerInterfaceServices: Service[] = [
     stage: 'published',
     popular: false,
     pricing: { basic: 'Clinical trial participation', pro: 'Hospital implantation program', enterprise: 'Platform licensing for research institutions' },
-    contactInfo: { website: 'https://synchron.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://synchron.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Endovascular delivery — no craniotomy, no open brain surgery',
       '16-electrode stent-mounted array positioned in superior sagittal sinus',
@@ -136,7 +136,7 @@ export const wave217PrecisionFermentationServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: 'Consumer products (B2C retail)', pro: 'B2B protein ingredient ($50/kg)', enterprise: 'Custom formulation partnerships' },
-    contactInfo: { website: 'https://perfectday.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://perfectday.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Real dairy proteins (whey, casein) produced without cows — molecularly identical',
       'GRAS (Generally Recognized as Safe) FDA status for food use',
@@ -167,7 +167,7 @@ export const wave217AutonomousMarineVehicleServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: 'Data subscription ($10K/year)', pro: 'Mission charter ($50K/mission)', enterprise: 'Fleet deployment (custom $500K+)' },
-    contactInfo: { website: 'https://saildrone.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://saildrone.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Wind and solar powered — zero emissions, 12+ month mission endurance',
       '100+ vehicle fleet operating across all major ocean basins',
@@ -198,7 +198,7 @@ export const wave217SmartGridEnergyServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: 'Free (residential demand response)', pro: '$50K/year (utility pilot)', enterprise: '$500K+/year (grid-scale deployment)' },
-    contactInfo: { website: 'https://auto-grid.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://auto-grid.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Virtual power plant: aggregates millions of EVs, batteries, and smart devices',
       'AI predicts energy demand 48 hours ahead with 95% accuracy',
@@ -229,7 +229,7 @@ export const wave217AiDrugDiscoveryServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: 'Research collaboration', pro: '$5M/target (discovery to candidate)', enterprise: '$50M+ (full pipeline partnership)' },
-    contactInfo: { website: 'https://insilico.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://insilico.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Generative AI designs novel drug molecules from scratch in 30 days',
       'Pharma.AI platform: target discovery → molecule generation → trial prediction',
@@ -260,7 +260,7 @@ export const wave2173dPrintedElectronicsServices: Service[] = [
     stage: 'published',
     popular: false,
     pricing: { basic: 'Prototype printing service ($5,000/run)', pro: '$250K/production system', enterprise: 'Custom integration ($1M+)' },
-    contactInfo: { website: 'https://optomec.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://optomec.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Print conductive traces (silver, copper, gold) on any 3D surface',
       '10-micron resolution — finer than screen printing by 10x',

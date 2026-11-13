@@ -14,7 +14,7 @@ export const wave260AiServices: Service[] = [
     industry: 'Customer Service, Healthcare, Finance',
     stage: 'published',
     pricing: { basic: '$299/mo (5K minutes)', pro: '$799/mo (25K minutes)', enterprise: '$1,999/mo (unlimited)' },
-    contactInfo: { website: '/services/ai-voice-assistant', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/ai-voice-assistant', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Natural language voice understanding',
       'Custom voice cloning (5 min sample)',
@@ -43,7 +43,7 @@ export const wave260AiServices: Service[] = [
     industry: 'Finance, E-commerce, Insurance',
     stage: 'published',
     pricing: { basic: '$499/mo (100K transactions)', pro: '$1,499/mo (1M transactions)', enterprise: '$4,999/mo (unlimited)' },
-    contactInfo: { website: '/services/ai-fraud-detection', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/ai-fraud-detection', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Real-time transaction scoring (under 50ms)',
       'Ensemble ML models (99.7% accuracy)',
@@ -72,7 +72,7 @@ export const wave260AiServices: Service[] = [
     industry: 'Software Development',
     stage: 'published',
     pricing: { basic: '$79/mo (10 repos)', pro: '$199/mo (50 repos)', enterprise: '$499/mo (unlimited)' },
-    contactInfo: { website: '/services/ai-code-review', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/ai-code-review', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Automated PR review comments',
       'Security vulnerability detection (OWASP Top 10)',
@@ -104,7 +104,7 @@ export const wave260MicroSaasServices: Service[] = [
     industry: 'SaaS, DevOps',
     stage: 'published',
     pricing: { basic: '$19/mo (3 services)', pro: '$59/mo (15 services)', enterprise: '$149/mo (unlimited)' },
-    contactInfo: { website: '/services/microsaas-status-page', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/microsaas-status-page', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Real-time uptime monitoring (1-min intervals)',
       'Custom domain & white-label support',
@@ -133,7 +133,7 @@ export const wave260MicroSaasServices: Service[] = [
     industry: 'Marketing, E-commerce',
     stage: 'published',
     pricing: { basic: '$15/mo (5K clicks)', pro: '$49/mo (50K clicks)', enterprise: '$149/mo (500K clicks)' },
-    contactInfo: { website: '/services/microsaas-url-shortener', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/microsaas-url-shortener', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Branded short domains (yourbrand.co)',
       'QR code generation for every link',
@@ -165,7 +165,7 @@ export const wave260ItServices: Service[] = [
     industry: 'Cross-Industry',
     stage: 'published',
     pricing: { basic: '$1,999/mo (up to 50 endpoints)', pro: '$4,999/mo (up to 250 endpoints)', enterprise: 'Custom quote' },
-    contactInfo: { website: '/services/it-managed-security', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/it-managed-security', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       '24/7 threat monitoring & detection',
       'AI-powered SIEM with behavioral analytics',
@@ -194,7 +194,7 @@ export const wave260ItServices: Service[] = [
     industry: 'Cross-Industry',
     stage: 'published',
     pricing: { basic: '$2,499 (assessment + design)', pro: '$7,499 (full implementation)', enterprise: 'Custom quote' },
-    contactInfo: { website: '/services/it-network-design', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/it-network-design', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Comprehensive network assessment',
       'Topology design with redundancy planning',

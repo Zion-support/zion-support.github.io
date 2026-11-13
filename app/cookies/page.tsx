@@ -124,7 +124,7 @@ export default function CookiesPage() {
               <p className="text-slate-300">
                 <span className="text-white font-semibold">Zion Tech Group</span><br />
                 Email: <a href="mailto:kleber@ziontechgroup.com" className="text-purple-400 hover:underline">kleber@ziontechgroup.com</a><br />
-                Phone: <a href="tel:+1-302-464-0950" className="text-purple-400 hover:underline">+1 302 464 0950</a><br />
+                Phone: <a href="tel:+55 11 97614-0076" className="text-purple-400 hover:underline">+55 11 97614-0076</a><br />
                 Address: 364 E Main St STE 1008, Middletown, DE 19709
               </p>
             </div>

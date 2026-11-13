@@ -22,7 +22,7 @@ export const wave293ItServices = [
     contactInfo: {
       website: "/services/it-application-inventory-verifier",
       email: "kleber@ziontechgroup.com",
-      phone: "+1 302 464 0950"
+      phone: "+55 11 97614-0076"
     },
     icon: "🧩",
     href: "/services/it-application-inventory-verifier",
@@ -54,7 +54,7 @@ export const wave293ItServices = [
     contactInfo: {
       website: "/services/it-knowledge-transfer-runner",
       email: "kleber@ziontechgroup.com",
-      phone: "+1 302 464 0950"
+      phone: "+55 11 97614-0076"
     },
     icon: "📘",
     href: "/services/it-knowledge-transfer-runner",
@@ -89,7 +89,7 @@ export const wave293AiServices = [
     contactInfo: {
       website: "/services/ai-revenue-performance-doctor",
       email: "kleber@ziontechgroup.com",
-      phone: "+1 302 464 0950"
+      phone: "+55 11 97614-0076"
     },
     icon: "🩺",
     href: "/services/ai-revenue-performance-doctor",
@@ -124,7 +124,7 @@ export const wave293SecurityServices = [
     contactInfo: {
       website: "/services/security-supply-chain-exposure-radar",
       email: "kleber@ziontechgroup.com",
-      phone: "+1 302 464 0950"
+      phone: "+55 11 97614-0076"
     },
     icon: "🔗",
     href: "/services/security-supply-chain-exposure-radar",
@@ -159,7 +159,7 @@ export const wave293CloudServices = [
     contactInfo: {
       website: "/services/cloud-disaster-recovery-tester",
       email: "kleber@ziontechgroup.com",
-      phone: "+1 302 464 0950"
+      phone: "+55 11 97614-0076"
     },
     icon: "🛟",
     href: "/services/cloud-disaster-recovery-tester",
@@ -194,7 +194,7 @@ export const wave293DataServices = [
     contactInfo: {
       website: "/services/data-pii-detection-classifier",
       email: "kleber@ziontechgroup.com",
-      phone: "+1 302 464 0950"
+      phone: "+55 11 97614-0076"
     },
     icon: "🕵️",
     href: "/services/data-pii-detection-classifier",
@@ -229,7 +229,7 @@ export const wave293AutomationServices = [
     contactInfo: {
       website: "/services/automation-client-onboarding-gate",
       email: "kleber@ziontechgroup.com",
-      phone: "+1 302 464 0950"
+      phone: "+55 11 97614-0076"
     },
     icon: "🚦",
     href: "/services/automation-client-onboarding-gate",
@@ -264,7 +264,7 @@ export const wave293MicroSaasServices = [
     contactInfo: {
       website: "/services/micro-saas-ai-product-pricing-lab",
       email: "kleber@ziontechgroup.com",
-      phone: "+1 302 464 0950"
+      phone: "+55 11 97614-0076"
     },
     icon: "🧪",
     href: "/services/micro-saas-ai-product-pricing-lab",

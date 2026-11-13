@@ -35,7 +35,7 @@ export default function ProjectsPage() {
           ))}
         </div>
         <div className="mt-8 p-4 bg-green-950/30 rounded-xl border border-green-500/20">
-          <p className="text-green-300 text-sm">Need to request a change or check on a milestone? <a href="/contact/" className="underline hover:text-green-200">Contact your project manager</a> or call <a href="tel:+13024640950" className="underline">+1 302 464 0950</a>.</p>
+          <p className="text-green-300 text-sm">Need to request a change or check on a milestone? <a href="/contact/" className="underline hover:text-green-200">Contact your project manager</a> or call <a href="tel:+5511976140076" className="underline">+55 11 97614-0076</a>.</p>
         </div>
       </div>
     </div>

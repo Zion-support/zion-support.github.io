@@ -13,7 +13,7 @@ export const wave201AiServices: Service[] = [
     stage: "published",
     popular: true,
     pricing: { basic: '$449/mo', pro: '$999/mo', enterprise: '$2199/mo' },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "Continuous network traffic analysis with behavioral baselines",
       "Automated alert triage with false positive suppression",
@@ -40,7 +40,7 @@ export const wave201AiServices: Service[] = [
     stage: "published",
     popular: true,
     pricing: { basic: '$299/mo', pro: '$699/mo', enterprise: '$1499/mo' },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "Unified revenue data model across CRM, marketing, and billing",
       "AI pipeline forecast with deal-by-deal confidence scoring",
@@ -70,7 +70,7 @@ export const wave201DataServices: Service[] = [
     stage: "published",
     popular: false,
     pricing: { basic: '$349/mo', pro: '$799/mo', enterprise: '$1699/mo' },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "Centralized feature registry with versioning and lineage",
       "Online and offline feature serving with sub-ms latency",
@@ -97,7 +97,7 @@ export const wave201DataServices: Service[] = [
     stage: "published",
     popular: false,
     pricing: { basic: '$199/mo', pro: '$449/mo', enterprise: '$999/mo' },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "Statistical distribution matching with fidelity scoring",
       "Referential integrity preservation across related tables",
@@ -127,7 +127,7 @@ export const wave201CloudServices: Service[] = [
     stage: "published",
     popular: true,
     pricing: { basic: '$199/mo', pro: '$449/mo', enterprise: '$999/mo' },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "Automated agentless discovery of servers, apps, and dependencies",
       "Dependency mapping with network flow analysis",
@@ -157,7 +157,7 @@ export const wave201SecurityServices: Service[] = [
     stage: "published",
     popular: false,
     pricing: { basic: '$199/mo', pro: '$449/mo', enterprise: '$999/mo' },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "Automated joiner-mover-leaver provisioning workflows",
       "Access certification campaigns with manager attestation",
@@ -187,7 +187,7 @@ export const wave201AutomationServices: Service[] = [
     stage: "published",
     popular: true,
     pricing: { basic: '$149/mo', pro: '$349/mo', enterprise: '$799/mo' },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "Multi-framework support: Terraform, CloudFormation, K8s, Ansible",
       "500+ built-in security and compliance policies",
@@ -214,7 +214,7 @@ export const wave201AutomationServices: Service[] = [
     stage: "published",
     popular: false,
     pricing: { basic: '$129/mo', pro: '$299/mo', enterprise: '$649/mo' },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "Subset extraction with referential integrity preservation",
       "Data masking with format-preserving encryption",
@@ -244,7 +244,7 @@ export const wave201ItServices: Service[] = [
     stage: "published",
     popular: true,
     pricing: { basic: '$149/mo', pro: '$349/mo', enterprise: '$799/mo' },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "Synthetic transaction monitoring from global vantage points",
       "Real user monitoring with Core Web Vitals tracking",
@@ -274,7 +274,7 @@ export const wave201MicroSaasServices: Service[] = [
     stage: "published",
     popular: false,
     pricing: { basic: '$199/mo', pro: '$449/mo', enterprise: '$999/mo' },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "Multi-tenant architecture with per-tenant customization",
       "Drag-and-drop dashboard builder with 40+ widget types",

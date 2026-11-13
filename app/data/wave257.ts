@@ -14,7 +14,7 @@ export const wave257MicroSaasServices: Service[] = [
     industry: 'Sales',
     stage: 'published',
     pricing: { basic: '$19/user/mo (1,000 contacts)', pro: '$39/user/mo (10,000 contacts, automation)', enterprise: '$79/user/mo (unlimited, API, priority support)' },
-    contactInfo: { website: '/services/crm-for-small-business', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/crm-for-small-business', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Contact management with custom fields and tags',
       'Deal pipeline with drag-and-drop stages and probability scoring',
@@ -42,7 +42,7 @@ export const wave257MicroSaasServices: Service[] = [
     industry: 'Customer Support',
     stage: 'published',
     pricing: { basic: '$49/mo (3 users, 100 articles)', pro: '$149/mo (25 users, unlimited articles)', enterprise: '$399/mo (unlimited, SSO, API, analytics)' },
-    contactInfo: { website: '/services/knowledge-base-platform', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/knowledge-base-platform', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'WYSIWYG editor with markdown support and media embedding',
       'AI-powered search with natural language understanding',
@@ -73,7 +73,7 @@ export const wave257ItServices: Service[] = [
     industry: 'Cloud Operations',
     stage: 'published',
     pricing: { basic: '$499/mo (single cloud, up to $5K spend)', pro: '$1,499/mo (multi-cloud, up to $50K spend)', enterprise: '$3,999/mo (unlimited, FinOps team, SLA)' },
-    contactInfo: { website: '/services/cloud-cost-optimization', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/cloud-cost-optimization', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Automated rightsizing recommendations for compute, storage, database',
       'Reserved instance and savings plan portfolio optimization',
@@ -101,7 +101,7 @@ export const wave257ItServices: Service[] = [
     industry: 'IT Resilience',
     stage: 'published',
     pricing: { basic: '$2,999 (assessment + DR plan document)', pro: '$7,499 (full plan + implementation + 1 test)', enterprise: '$14,999 (multi-site, quarterly testing, 24/7 support)' },
-    contactInfo: { website: '/services/disaster-recovery-planning', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/disaster-recovery-planning', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Business impact analysis and risk assessment',
       'RTO/RPO definition for all critical systems',
@@ -132,7 +132,7 @@ export const wave257AiServices: Service[] = [
     industry: 'IoT & Edge',
     stage: 'published',
     pricing: { basic: '$399/mo (100 devices, cloud processing)', pro: '$1,199/mo (1,000 devices, edge inference)', enterprise: '$3,499/mo (10K+ devices, custom models, SLA)' },
-    contactInfo: { website: '/services/ai-anomaly-detection-iot', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/ai-anomaly-detection-iot', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Real-time telemetry processing from MQTT, AMQP, HTTP protocols',
       'Unsupervised anomaly detection: no labeled data required',
@@ -160,7 +160,7 @@ export const wave257AiServices: Service[] = [
     industry: 'Trust & Safety',
     stage: 'published',
     pricing: { basic: '$299/mo (100K API calls)', pro: '$999/mo (1M calls, image + video)', enterprise: '$2,999/mo (10M+ calls, custom policies, SLA)' },
-    contactInfo: { website: '/services/ai-content-moderation', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/ai-content-moderation', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Multi-modal moderation: text, image, video, and audio',
       'Toxicity detection: hate speech, threats, harassment, self-harm',

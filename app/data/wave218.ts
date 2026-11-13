@@ -18,7 +18,7 @@ export const wave218RegenerativeAgricultureAiServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: 'Free (farm enrollment)', pro: 'Revenue share on carbon credits (15%)', enterprise: 'Corporate carbon portfolio ($1M+/year)' },
-    contactInfo: { website: 'https://indigoag.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://indigoag.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Satellite-based field monitoring: NDVI, soil carbon, moisture, and crop health',
       'AI-powered MRV (Measure, Report, Verify) for carbon credit certification',
@@ -49,7 +49,7 @@ export const wave218AutonomousConstructionServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: 'Pilot program (1 machine, 30 days)', pro: '$15,000/month per machine', enterprise: 'Fleet deployment (custom pricing)' },
-    contactInfo: { website: 'https://builtrobotics.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://builtrobotics.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Retrofit kit: converts any excavator/bulldozer to autonomous in 48 hours',
       'AI operator (ARI) executes construction plans with ±25mm accuracy',
@@ -80,7 +80,7 @@ export const wave218EmotionAiServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: 'SDK license ($10K/year)', pro: '$50K/year (media analytics)', enterprise: 'Custom ($200K+/year for automotive OEM)' },
-    contactInfo: { website: 'https://smarteye.se', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://smarteye.se', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Detects 7 emotions, 15 facial expressions, and cognitive states in real time',
       'Works with standard RGB cameras — no specialized hardware required',
@@ -111,7 +111,7 @@ export const wave218SatelliteInternetServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: '$120/month (residential)', pro: '$250/month (business, 1TB priority)', enterprise: '$5,000/month (maritime/aviation)' },
-    contactInfo: { website: 'https://starlink.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://starlink.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       '6,000+ LEO satellites providing global coverage including polar regions',
       '50-250 Mbps download, 20-40ms latency — comparable to terrestrial broadband',
@@ -142,7 +142,7 @@ export const wave218AiLegalAssistantServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: 'Not available (enterprise only)', pro: '$1,000/seat/year (mid-size firms)', enterprise: 'Custom ($500K+/year for AmLaw 100 firms)' },
-    contactInfo: { website: 'https://harvey.ai', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://harvey.ai', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Legal research: natural language queries across case law, statutes, and regulations',
       'Contract analysis: review 100+ page agreements in minutes, flag risks and anomalies',
@@ -173,7 +173,7 @@ export const wave218NuclearFusionEnergyServices: Service[] = [
     stage: 'published',
     popular: false,
     pricing: { basic: 'Research partnership', pro: 'Corporate PPA (power purchase agreement)', enterprise: 'Strategic investment (Series B+)' },
-    contactInfo: { website: 'https://cfs.energy', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://cfs.energy', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'High-temperature superconducting (HTS) magnets: 20 Tesla field strength — world record',
       'SPARC reactor: compact tokamak design, 140 MW fusion power output',
@@ -204,7 +204,7 @@ export const wave218HolographicDisplayServices: Service[] = [
     stage: 'published',
     popular: false,
     pricing: { basic: '$399 (Portrait, 6.9")', pro: '$3,500 (32" light field display)', enterprise: '$15,000 (65" wall-sized holographic display)' },
-    contactInfo: { website: 'https://lookingglassfactory.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://lookingglassfactory.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Glasses-free 3D: view holographic content without headsets or special glasses',
       '45-100 simultaneous perspectives: multiple viewers see correct 3D from any angle',

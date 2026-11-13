@@ -16,7 +16,7 @@ export const waveAuxServices = [
       'Visible automation with audit trails'
     ],
     pricing: { basic: '$299/mo', pro: '$799/mo', enterprise: '$1,999/mo' },
-    contactInfo: { website: '/services/ai-agentic-workflow-automation', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/ai-agentic-workflow-automation', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     icon: '🤖',
     href: '/services/ai-agentic-workflow-automation',
     popular: true,
@@ -41,7 +41,7 @@ export const waveAuxServices = [
       'Consistent measurements and reports'
     ],
     pricing: { basic: '$499/mo', pro: '$1,299/mo', enterprise: '$3,499/mo' },
-    contactInfo: { website: '/services/ai-computer-vision-quality-inspection', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/ai-computer-vision-quality-inspection', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     icon: '👁️',
     href: '/services/ai-computer-vision-quality-inspection',
     popular: false,
@@ -66,7 +66,7 @@ export const waveAuxServices = [
       'Less hallucination, more trust'
     ],
     pricing: { basic: '$199/mo', pro: '$549/mo', enterprise: '$1,499/mo' },
-    contactInfo: { website: '/services/ai-knowledge-base-rag-platform', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/ai-knowledge-base-rag-platform', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     icon: '📚',
     href: '/services/ai-knowledge-base-rag-platform',
     popular: true,
@@ -91,7 +91,7 @@ export const waveAuxServices = [
       'Self-service BI for business users'
     ],
     pricing: { basic: '$499/mo', pro: '$1,499/mo', enterprise: '$4,999/mo' },
-    contactInfo: { website: '/services/data-warehouse-modernization', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/data-warehouse-modernization', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     icon: '🧊',
     href: '/services/data-warehouse-modernization',
     popular: false,
@@ -116,7 +116,7 @@ export const waveAuxServices = [
       'Clear recovery path after events'
     ],
     pricing: { basic: '$599/mo', pro: '$1,799/mo', enterprise: '$5,999/mo' },
-    contactInfo: { website: '/services/cyber-incident-response-retainer', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/cyber-incident-response-retainer', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     icon: '🛡️',
     href: '/services/cyber-incident-response-retainer',
     popular: true,
@@ -141,7 +141,7 @@ export const waveAuxServices = [
       'Clear SLO ownership'
     ],
     pricing: { basic: '$349/mo', pro: '$899/mo', enterprise: '$2,499/mo' },
-    contactInfo: { website: '/services/managed-observability-247', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/managed-observability-247', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     icon: '📡',
     href: '/services/managed-observability-247',
     popular: false,

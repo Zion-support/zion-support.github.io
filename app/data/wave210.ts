@@ -16,7 +16,7 @@ export const wave210DatabaseServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: 'Free (OSS)', pro: '$5/mo (managed)', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Full ACID compliance with MVCC for reliable concurrent access',
       'Advanced SQL: CTEs, window functions, lateral joins, recursive queries, JSON/JSONB with indexing',
@@ -46,7 +46,7 @@ export const wave210CollaborationServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: 'Free (self-hosted)', pro: '$36/user/mo (Enterprise)', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'File sync & share with end-to-end encryption, granular permissions, version control, ransomware detection',
       'Integrated online office suite (Collabora Online / OnlyOffice) for real-time collaborative editing',
@@ -76,7 +76,7 @@ export const wave210MediaStreamingServices: Service[] = [
     stage: 'published',
     popular: false,
     pricing: { basic: '100% Free', pro: 'No paid tiers', enterprise: 'No paid tiers' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Universal media streaming with automatic format transcoding (H.264/H.265/VP9/AV1) for any device',
       'Rich metadata fetching from TMDB, TVDb, OMDb, MusicBrainz — automatic posters, fanart, cast info, reviews',
@@ -105,7 +105,7 @@ export const wave210InfrastructureAsCodeServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: 'Free (OSS, MPL 2.0)', pro: 'Free tier (500 resources)', enterprise: '$0.00014/hr/resource' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Multi-cloud provisioning across 3,000+ providers (AWS, Azure, GCP, Cloudflare, Datadog, Kubernetes)',
       'Plan-apply workflow with detailed diff — see exactly what will change before making any changes',
@@ -135,7 +135,7 @@ export const wave210LowCodeServices: Service[] = [
     stage: 'published',
     popular: false,
     pricing: { basic: 'Free (self-hosted)', pro: '$15/mo (Cloud Pro)', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'All-in-one backend: Document database, OAuth2/OpenID auth (60+ providers), file storage, cloud functions',
       'Built-in avatars, localization, team management, usage metrics, and health monitoring',

@@ -18,7 +18,7 @@ export const wave215QuantumComputingServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: 'Free (simulator access)', pro: '$10,000/cluster hour', enterprise: 'Custom ($250K+/year)' },
-    contactInfo: { website: 'https://quantum.ibm.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://quantum.ibm.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Access to 100+ qubit Eagle and Heron processors via cloud',
       'Qiskit Runtime for hybrid quantum-classical algorithm execution',
@@ -46,7 +46,7 @@ export const wave215QuantumComputingServices: Service[] = [
     stage: 'published',
     popular: false,
     pricing: { basic: 'Research partnership only', pro: 'Custom (enterprise program)', enterprise: 'Custom ($500K+/year)' },
-    contactInfo: { website: 'https://quantumai.google', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://quantumai.google', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Willow processor with 105 physical qubits and breakthrough error rates',
       'Cirq open-source quantum computing framework',
@@ -77,7 +77,7 @@ export const wave215NeuromorphicProcessingServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: 'Research (university program)', pro: '$50,000/development kit', enterprise: 'Custom ($200K+/program)' },
-    contactInfo: { website: 'https://intel.com/loihi', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://intel.com/loihi', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       '128 neuromorphic cores with 1 million artificial neurons per chip',
       'On-chip learning without backpropagation — 1000x energy efficiency',
@@ -108,7 +108,7 @@ export const wave215DigitalTwinPlatforms: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: 'Free (individual)', pro: '$9,000/enterprise license/year', enterprise: 'Custom ($100K+ for deployment)' },
-    contactInfo: { website: 'https://nvidia.com/omniverse', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://nvidia.com/omniverse', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'OpenUSD-based 3D scene composition and real-time collaboration',
       'Physics-accurate simulation with PhysX and Flow engines',
@@ -139,7 +139,7 @@ export const wave215HomomorphicEncryptionServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: 'Free (open-source library)', pro: '$0.10/compute hour', enterprise: '$25,000/hour sustained compute' },
-    contactInfo: { website: 'https://github.com/microsoft/SEAL', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://github.com/microsoft/SEAL', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'BFV and CKKS schemes for exact and approximate arithmetic on encrypted data',
       'Encrypted machine learning inference with <10x overhead vs plaintext',
@@ -170,7 +170,7 @@ export const wave215AutonomousDroneDelivery: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: 'Partnership inquiry', pro: 'Route pilot program ($50K setup)', enterprise: 'Full deployment ($10M+ per vertiport)' },
-    contactInfo: { website: 'https://wisk.aero', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://wisk.aero', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Self-flying eVTOL (electric vertical takeoff and landing) aircraft',
       '4-passenger or 100kg cargo configuration with 90 mile range',

@@ -7,7 +7,7 @@
     "features": ["Multi-platform: Windows, macOS, iOS, Android, ChromeOS, RaspberryPi ESP32 IoT", "OS patch deployment with maintenance-window scheduling and rollback protection", "Remote actions: wipe, lock, locate, reboot, reset password, revoke certs", "Self-service app catalog: users install approved apps without IT ticket", "Compliance policies: BitLocker, FileVault, firewall rules, USB restriction, AV enforcement"],
     "benefits": ["Manage 10 000+ endpoints from one console — cut IT admin time per device 70%", "Self-service app store cuts internal IT helpdesk tickets 50-65%", "Patch compliance rate rises from 55% to 99% with automated maintenance windows"],
     "pricing": {"basic": "5", "pro": "19", "enterprise": "Custom"},
-    "contactInfo": {"website": "/services/it-unified-endpoint-management", "email": "kleber@ziontechgroup.com", "phone": "+1 302 464 0950"},
+    "contactInfo": {"website": "/services/it-unified-endpoint-management", "email": "kleber@ziontechgroup.com", "phone": "+55 11 97614-0076"},
     "href": "/services/it-unified-endpoint-management",
     "category": "it",
     "popular": false,

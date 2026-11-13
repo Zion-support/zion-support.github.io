@@ -24,7 +24,7 @@ export const wave233AiServices: Service[] = [
       'Regulatory-ready reporting simplifies compliance with PCI DSS and AML requirements'
     ],
     pricing: { basic: '$2,999/mo', pro: '$7,499/mo', enterprise: 'Custom' },
-    contactInfo: { website: '/services/ai-financial-fraud-detection', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/ai-financial-fraud-detection', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     icon: '🛡️',
     href: '/services/ai-financial-fraud-detection',
     popular: true,
@@ -52,7 +52,7 @@ export const wave233AiServices: Service[] = [
       'Lower per-patient recruitment costs by up to 50% through automation'
     ],
     pricing: { basic: '$1,799/mo', pro: '$4,499/mo', enterprise: 'Custom' },
-    contactInfo: { website: '/services/ai-clinical-trial-matching', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/ai-clinical-trial-matching', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     icon: '🧬',
     href: '/services/ai-clinical-trial-matching',
     popular: true,
@@ -83,7 +83,7 @@ export const wave233ItServices: Service[] = [
       'Cut IT procurement costs by 20% through better asset utilization insights'
     ],
     pricing: { basic: '$499/mo', pro: '$1,499/mo', enterprise: 'Custom' },
-    contactInfo: { website: '/services/it-asset-management-lifecycle', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/it-asset-management-lifecycle', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     icon: '💻',
     href: '/services/it-asset-management-lifecycle',
     popular: true,
@@ -114,7 +114,7 @@ export const wave233MicroSaasServices: Service[] = [
       'Multi-channel distribution maximizes response rates across customer touchpoints'
     ],
     pricing: { basic: '$29/mo', pro: '$79/mo', enterprise: '$199/mo' },
-    contactInfo: { website: '/services/micro-saas-survey-nps-platform', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/micro-saas-survey-nps-platform', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     icon: '📊',
     href: '/services/micro-saas-survey-nps-platform',
     popular: true,
@@ -142,7 +142,7 @@ export const wave233MicroSaasServices: Service[] = [
       'Recurring booking support retains clients with effortless repeat scheduling'
     ],
     pricing: { basic: '$39/mo', pro: '$99/mo', enterprise: '$249/mo' },
-    contactInfo: { website: '/services/micro-saas-appointment-booking', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/micro-saas-appointment-booking', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     icon: '📅',
     href: '/services/micro-saas-appointment-booking',
     popular: true,

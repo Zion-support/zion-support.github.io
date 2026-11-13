@@ -12,7 +12,7 @@ export const wave212PerformanceTestingServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: 'Free (OSS)', pro: 'Free tier (50K VUs)', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Developer-centric with Go and JavaScript scripting API',
       'Cloud and local execution options',
@@ -41,7 +41,7 @@ export const wave212ChaosEngineeringServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: 'Free (OSS)', pro: 'Free tier (community support)', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Kubernetes-native, installed via Helm or Operators',
       'Supports pod, network, filesystem, and time chaos experiments',
@@ -70,7 +70,7 @@ export const wave212ServiceMeshServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: 'Free (OSS)', pro: 'Free tier (community support)', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Zero-trust security with automatic mTLS between services',
       'Fine-grained traffic control (retries, timeouts, circuit breaking)',
@@ -99,7 +99,7 @@ export const wave212APIGatewayServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: 'Free (OSS)', pro: 'Free tier (1M requests/month)', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'High-performance plugin architecture (authentication, rate limiting, logging)',
       'Supports multiple protocols: HTTP/1.1, HTTP/2, WebSocket, TCP, TLS',
@@ -128,7 +128,7 @@ export const wave212EventStreamingServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: 'Free (OSS)', pro: 'Free tier (community support)', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Multi-tenancy and geo-replication built-in',
       'Separation of compute and storage for independent scaling',

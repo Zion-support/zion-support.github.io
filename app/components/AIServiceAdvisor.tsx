@@ -45,7 +45,7 @@ export default function AIServiceAdvisor() {
     setMsgs(p=>[...p,u]); setInput(''); setIsTyping(true);
     setTimeout(() => {
       const svcs = matchServices(u.content);
-      let r = svcs.length ? `Great question! Based on your needs:\n\n${svcs.map(s=>`${s}`).join('\n')}\n\nWould you like:\n• 📞 Free consultation?\n• 📧 Detailed proposal?\n• 💬 Learn more?\n\nCall: +1 302 464 0950` : "I'd love to help! Tell me more about what you need:\n\n• AI / Machine Learning\n• Cloud migration\n• Cybersecurity\n• Data analytics\n• Automation\n• IT services\n\nOr call: +1 302 464 0950";
+      let r = svcs.length ? `Great question! Based on your needs:\n\n${svcs.map(s=>`${s}`).join('\n')}\n\nWould you like:\n• 📞 Free consultation?\n• 📧 Detailed proposal?\n• 💬 Learn more?\n\nCall: +55 11 97614-0076` : "I'd love to help! Tell me more about what you need:\n\n• AI / Machine Learning\n• Cloud migration\n• Cybersecurity\n• Data analytics\n• Automation\n• IT services\n\nOr call: +55 11 97614-0076";
       setMsgs(p=>[...p,{role:'assistant',content:r}]); setIsTyping(false);
     }, 600+Math.random()*600);
   };

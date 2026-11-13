@@ -18,7 +18,7 @@ export const wave219AutonomousWarehouseRoboticsServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: 'Free (facility assessment)', pro: '$1,500/robot/month', enterprise: 'Custom fleet pricing ($500K+/year)' },
-    contactInfo: { website: 'https://locusrobotics.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://locusrobotics.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Autonomous navigation: no facility modifications required — deploys in hours',
       'Multi-robot coordination: 500+ robots working simultaneously without collisions',
@@ -49,7 +49,7 @@ export const wave219AiMusicGenerationServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: 'Free (50 credits/day)', pro: '$10/month (2,500 credits)', enterprise: '$30/month (10,000 credits + commercial license)' },
-    contactInfo: { website: 'https://suno.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://suno.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Text-to-song: describe any genre, mood, or concept in natural language',
       'Full vocal generation: AI sings lyrics in multiple languages and styles',
@@ -80,7 +80,7 @@ export const wave219DigitalIdentityVerificationServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: 'Pay-per-check ($1.50/verification)', pro: '$1,000/month + $1.00/check', enterprise: 'Custom ($10K+/month)' },
-    contactInfo: { website: 'https://onfido.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://onfido.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Document verification: 200+ countries, 4,000+ document types supported',
       'Facial biometrics: liveness detection prevents spoofing with photos/videos',
@@ -111,7 +111,7 @@ export const wave219SmartCityIotServices: Service[] = [
     stage: 'published',
     popular: false,
     pricing: { basic: 'Pilot (single district)', pro: '$50K/year (city-wide lighting)', enterprise: 'Custom ($200K+/year full city deployment)' },
-    contactInfo: { website: 'https://felixsmart.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://felixsmart.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Unified IoT dashboard: manage lighting, waste, parking, air quality, and traffic',
       'Predictive maintenance: AI detects equipment failures before they occur',
@@ -142,7 +142,7 @@ export const wave219AiPoweredCybersecurityServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: 'Free (30-day trial)', pro: '$50K/year (up to 500 assets)', enterprise: 'Custom ($200K+/year for 10,000+ assets)' },
-    contactInfo: { website: 'https://darktrace.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://darktrace.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Self-learning AI: no rules or signatures — learns your environment autonomously',
       'Real-time threat detection: identifies novel and zero-day attacks in seconds',
@@ -173,7 +173,7 @@ export const wave219VerticalFarmingServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: 'Consumer (retail produce)', pro: 'Farm partnership program', enterprise: 'Turnkey farm solution ($50M+ per facility)' },
-    contactInfo: { website: 'https://plenty.ag', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://plenty.ag', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'AI-optimized growing: computer vision monitors plant health in real time',
       '350x more productive per acre than conventional farming',
@@ -204,7 +204,7 @@ export const wave219WearableHealthTechServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: '$299 (ring) + $6/month (membership)', pro: '$399 (Heritage)', enterprise: 'Corporate wellness ($150/employee/year)' },
-    contactInfo: { website: 'https://ouraring.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ouraring.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Sleep tracking: clinical-grade sleep stages, REM, deep sleep, and sleep efficiency',
       'HRV monitoring: real-time autonomic nervous system balance tracking',

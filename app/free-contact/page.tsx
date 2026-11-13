@@ -58,8 +58,8 @@ export default function FreeContactPage() {
 
         <div className="text-center space-y-4">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
-            <a href="tel:+13024640950" className="btn-primary text-lg px-8 py-4">
-              ☎ +1 302 464 0950
+            <a href="tel:+5511976140076" className="btn-primary text-lg px-8 py-4">
+              ☎ +55 11 97614-0076
             </a>
             <a href="https://calendly.com/kleber-ziontechgroup" target="_blank" rel="noreferrer" className="btn-secondary text-lg px-8 py-4">
               📅 Book a Consultation

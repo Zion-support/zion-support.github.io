@@ -18,7 +18,7 @@ export const wave245AiAgentOrchestrationServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: 'Free (open source, MIT license)', pro: '$100/month (LangSmith observability, 50K traces)', enterprise: 'Custom (self-hosted, SSO, dedicated support, SLA)' },
-    contactInfo: { website: 'https://langchain.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://langchain.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'LangGraph stateful agents: cyclic, branching workflows with persistent memory and human-in-the-loop',
       '700+ integrations: OpenAI, Anthropic, Google, Pinecone, PostgreSQL, Slack, GitHub, and more',
@@ -49,7 +49,7 @@ export const wave245DataProductPlatformServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: 'Free (dbt Core, open source, unlimited local development)', pro: '$100/developer/month (dbt Cloud, job scheduling, CI/CD)', enterprise: 'Custom (SSO, audit logs, dedicated support, custom hosting)' },
-    contactInfo: { website: 'https://getdbt.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://getdbt.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'SQL-first transformations: write data models in SQL with Jinja templating for DRY, reusable code',
       'Built-in testing: schema tests, data quality tests, and custom assertions for every model',
@@ -80,7 +80,7 @@ export const wave245ZeroTrustSecurityServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: 'Custom (enterprise sales required)', pro: 'Custom (per-user pricing, ZIA + ZPA bundles)', enterprise: 'Custom (full platform, dedicated support, professional services)' },
-    contactInfo: { website: 'https://zscaler.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://zscaler.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Zero trust network access (ZTNA): replace VPN with direct-to-app access without network exposure',
       'Secure web gateway: inspect all traffic including TLS/SSL with inline threat prevention',
@@ -111,7 +111,7 @@ export const wave245SyntheticDataGenerationServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: 'Free (up to 100K rows, community support)', pro: '$5,000/year (1M rows, advanced models, email support)', enterprise: 'Custom (unlimited rows, on-premise, dedicated CSM, SLA)' },
-    contactInfo: { website: 'https://mostly.ai', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://mostly.ai', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Statistical fidelity: synthetic data preserves 95-100% of original statistical properties',
       'Privacy guarantees: mathematically proven privacy — zero real records in synthetic output',
@@ -142,7 +142,7 @@ export const wave245MlopsPlatformServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: 'Free (personal, unlimited experiments, 100GB storage)', pro: '$50/user/month (teams, 1TB storage, advanced reports)', enterprise: 'Custom (SSO, on-premise, dedicated support, custom storage)' },
-    contactInfo: { website: 'https://wandb.ai', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://wandb.ai', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Experiment tracking: log metrics, parameters, and outputs from every training run automatically',
       'Hyperparameter optimization: Bayesian search, grid search, and early stopping with W&B Sweeps',

@@ -462,7 +462,7 @@ for s in NEW:
         "features":   s["features"],
         "benefits":   s["benefits"],
         "pricing":    {"basic": s["basic"], "pro": s["pro"], "enterprise": s["enterprise"]},
-        "contactInfo":{"website": f"/services/{s['id']}", "email": "kleber@ziontechgroup.com", "phone": "+1 302 464 0950"},
+        "contactInfo":{"website": f"/services/{s['id']}", "email": "kleber@ziontechgroup.com", "phone": "+55 11 97614-0076"},
         "href":       f"/services/{s['id']}",
         "category":   s["category"],
         "popular":    s.get("popular", False),
@@ -523,7 +523,7 @@ for svc in services:
         "id": svc["id"], "title": svc["title"], "description": svc["description"],
         "icon": "★", "features": svc["features"], "benefits": svc["benefits"],
         "pricing": svc["pricing"],
-        "contactInfo": {"website": f"/services/{svc['id']}", "email": "kleber@ziontechgroup.com", "phone": "+1 302 464 0950"},
+        "contactInfo": {"website": f"/services/{svc['id']}", "email": "kleber@ziontechgroup.com", "phone": "+55 11 97614-0076"},
         "href": f"/services/{svc['id']}", "category": svc["category"], "popular": svc["popular"]
     }
     json_added += 1

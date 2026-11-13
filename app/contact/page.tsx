@@ -10,9 +10,9 @@ const quickActions = [
   { label: 'Request Proposal', href: 'mailto:kleber@ziontechgroup.com?subject=Proposal%20Request%20-%20Zion%20Tech%20Group', icon: '📄' },
   { label: 'Our Services', href: '/services/', icon: '🧩' },
   { label: 'Free AI Discovery', href: '/discovery', icon: '🎯' },
-  { label: 'Call Now', href: 'tel:+130****0950', icon: '📞' },
+  { label: 'Call Now', href: 'tel:+5511976140076', icon: '📞' },
   { label: 'Book Consultation', href: 'https://calendly.com/kleber-ziontechgroup', icon: '📅' },
-  { label: 'WhatsApp', href: 'https://wa.me/13024640950', icon: '💬' },
+  { label: 'WhatsApp', href: 'https://wa.me/5511976140076', icon: '💬' },
 ];
 
 export default function ContactPage() {
@@ -25,7 +25,7 @@ export default function ContactPage() {
             Tell us about your AI, IT, or automation project. We respond fast and can start with a free consultation.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4 mt-6">
-            <a href="tel:+13024640950" className="btn-primary text-lg">☎ +1 302 464 0950</a>
+            <a href="tel:+5511976140076" className="btn-primary text-lg">☎ +55 11 97614-0076</a>
             <a href="https://calendly.com/kleber-ziontechgroup" target="_blank" rel="noreferrer" className="btn-secondary text-lg">📅 Book Consultation</a>
             <a href="https://meet.google.com/ouu-khao-kuy" target="_blank" rel="noreferrer" className="btn-secondary text-lg">🎥 Google Meet</a>
             <Link href="/services/" className="btn-secondary text-lg">Our Services</Link>
@@ -57,7 +57,7 @@ export default function ContactPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="https://calendly.com/kleber-ziontechgroup" target="_blank" rel="noreferrer" className="btn-primary text-lg">📅 Schedule a Call</a>
-            <a href="tel:+13024640950" className="btn-secondary text-lg">📞 +1 302 464 0950</a>
+            <a href="tel:+5511976140076" className="btn-secondary text-lg">📞 +55 11 97614-0076</a>
             <a href="mailto:kleber@ziontechgroup.com?subject=Project%20Inquiry%20-%20Zion%20Tech%20Group" className="btn-secondary text-lg">✉️ Email Us</a>
           </div>
 

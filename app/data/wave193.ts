@@ -14,7 +14,7 @@ export const wave193AiServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: '$299/mo', pro: '$799/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+55 11 97614-0076' },
   },
   {
     id: 'ai-conversational-analytics',
@@ -29,7 +29,7 @@ export const wave193AiServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: '$199/mo', pro: '$549/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+55 11 97614-0076' },
   },
 ];
 
@@ -47,7 +47,7 @@ export const wave193DataServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: '$499/mo', pro: '$1,299/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+55 11 97614-0076' },
   },
   {
     id: 'real-estate-data-analytics',
@@ -62,7 +62,7 @@ export const wave193DataServices: Service[] = [
     stage: 'published',
     popular: false,
     pricing: { basic: '$149/mo', pro: '$399/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+55 11 97614-0076' },
   },
 ];
 
@@ -80,7 +80,7 @@ export const wave193CloudServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: '$399/mo', pro: '$999/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+55 11 97614-0076' },
   },
 ];
 
@@ -98,7 +98,7 @@ export const wave193SecurityServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: '$249/mo', pro: '$699/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+55 11 97614-0076' },
   },
 ];
 
@@ -116,7 +116,7 @@ export const wave193AutomationServices: Service[] = [
     stage: 'published',
     popular: false,
     pricing: { basic: '$199/mo', pro: '$549/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+55 11 97614-0076' },
   },
   {
     id: 'logistics-route-optimization',
@@ -131,7 +131,7 @@ export const wave193AutomationServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: '$299/mo', pro: '$799/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+55 11 97614-0076' },
   },
   {
     id: 'energy-management',
@@ -146,7 +146,7 @@ export const wave193AutomationServices: Service[] = [
     stage: 'published',
     popular: false,
     pricing: { basic: '$349/mo', pro: '$899/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+55 11 97614-0076' },
   },
 ];
 
@@ -164,7 +164,7 @@ export const wave193MicroSaasServices: Service[] = [
     stage: 'published',
     popular: false,
     pricing: { basic: '$49/mo', pro: '$149/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+55 11 97614-0076' },
   },
   {
     id: 'invoice-factoring',
@@ -179,7 +179,7 @@ export const wave193MicroSaasServices: Service[] = [
     stage: 'published',
     popular: false,
     pricing: { basic: '2% fee', pro: '1.5% fee', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+55 11 97614-0076' },
   },
 ];
 

@@ -16,7 +16,7 @@ export const wave211MonitoringServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: 'Free (OSS)', pro: 'Free tier (10K samples/sec)', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Multi-dimensional data model with time series identified by metric name and key/value pairs',
       'PromQL: powerful flexible query language to leverage dimensionality',
@@ -47,7 +47,7 @@ export const wave211LoggingServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: 'Free (OSS)', pro: 'Free tier (50 GB/day)', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Does not index full text of logs, only metadata (labels) — significantly lower operational cost',
       'Labels support dynamic discovery and rich filtering capabilities',
@@ -78,7 +78,7 @@ export const wave211SecurityScanningServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: 'Free (OSS)', pro: 'Free tier (unlimited scans)', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Detects vulnerabilities in OS packages (Alpine, RHEL, CentOS, etc.) and language-specific bundles (Bundler, Composer, npm, yarn)',
       'Identifies IaC issues in Terraform, CloudFormation, Kubernetes, and Dockerfiles',
@@ -109,7 +109,7 @@ export const wave211BackupRecoveryServices: Service[] = [
     stage: 'published',
     popular: false,
     pricing: { basic: 'Free (OSS, Apache 2.0)', pro: 'Free tier (community support)', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Backs up Kubernetes objects and persistent volumes to arbitrary cloud storage',
       'Supports snapshot-based volume backups for AWS EBS, GCE PD, Azure Disk, and more',
@@ -140,7 +140,7 @@ export const wave211IdentityManagementServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: 'Free (OSS, Apache 2.0)', pro: 'Free tier (community support)', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Single Sign-On (SSO) for web applications and RESTful APIs with support for OpenID Connect, OAuth 2.0, and SAML 2.0',
       'User Federation: pluggable user storage via LDAP and Active Directory, or custom providers',

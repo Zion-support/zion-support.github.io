@@ -194,7 +194,7 @@ export default function V956V960Showcase() {
           <h4 className="text-2xl font-bold text-white mb-2">Ready to Transform Your Email Intelligence?</h4>
           <p className="text-gray-400 mb-6">Get V956-V960 deployed for your organization today.</p>
           <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-300">
-            <span>📞 +1 302 464 0950</span>
+            <span>📞 +55 11 97614-0076</span>
             <span>✉️ kleber@ziontechgroup.com</span>
             <span>📍 364 E Main St STE 1008, Middletown, DE 19709</span>
           </div>

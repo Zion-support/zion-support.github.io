@@ -14,7 +14,7 @@ export const wave224AiServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: '$299/month', pro: '$999/month', enterprise: '$2,999/month' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: ['Multi-model orchestration', 'A/B testing for prompts', 'Cost optimization', 'Compliance monitoring'],
     benefits: ['Deploy LLMs 10x faster', 'Reduce model costs by 40%', 'Ensure regulatory compliance', 'Enterprise-grade security']
   },
@@ -29,7 +29,7 @@ export const wave224AiServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: '$199/month', pro: '$599/month', enterprise: '$1,499/month' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: ['Drag-and-drop agent builder', 'Multi-agent collaboration', 'Decision logging', 'API integrations'],
     benefits: ['Automate complex workflows', 'Reduce operational costs', 'Scale decision-making', 'Maintain compliance']
   },
@@ -43,7 +43,7 @@ export const wave224AiServices: Service[] = [
     industry: 'Content',
     stage: 'published',
     pricing: { basic: '$149/month', pro: '$499/month', enterprise: '$1,299/month' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: ['Text, image, audio, video', 'Real-time processing', 'API access', 'Brand voice training'],
     benefits: ['Unified AI experience', 'Reduce tool costs', 'Consistent output quality', 'Faster content creation']
   },
@@ -58,7 +58,7 @@ export const wave224AiServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: '$99/month', pro: '$299/month', enterprise: '$799/month' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: ['Multi-language support', 'Security scanning', 'Performance suggestions', 'CI/CD integration'],
     benefits: ['Catch bugs before production', 'Reduce code review time', 'Improve code quality', 'Developer productivity']
   },
@@ -72,7 +72,7 @@ export const wave224AiServices: Service[] = [
     industry: 'Customer Service',
     stage: 'published',
     pricing: { basic: '$199/month', pro: '$599/month', enterprise: '$1,499/month' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: ['Sentiment analysis', 'Topic clustering', 'Keyword extraction', 'Compliance monitoring'],
     benefits: ['Improve customer satisfaction', 'Reduce handle time', 'Ensure compliance', 'Data-driven insights']
   },
@@ -86,7 +86,7 @@ export const wave224AiServices: Service[] = [
     industry: 'Legal',
     stage: 'published',
     pricing: { basic: '$149/month', pro: '$399/month', enterprise: '$999/month' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: ['Clause extraction', 'Risk scoring', 'Obligation tracking', 'Version comparison'],
     benefits: ['Review contracts 10x faster', 'Never miss key clauses', 'Risk mitigation', 'Compliance automation']
   },
@@ -100,7 +100,7 @@ export const wave224AiServices: Service[] = [
     industry: 'Manufacturing',
     stage: 'published',
     pricing: { basic: '$299/month', pro: '$899/month', enterprise: '$2,499/month' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: ['Sensor data integration', 'Failure prediction', 'Maintenance scheduling', 'ROI dashboard'],
     benefits: ['Reduce unplanned downtime', 'Extend equipment life', 'Optimize maintenance costs', 'Prevent failures']
   },
@@ -114,7 +114,7 @@ export const wave224AiServices: Service[] = [
     industry: 'Finance',
     stage: 'published',
     pricing: { basic: '$199/month', pro: '$699/month', enterprise: '$1,999/month' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: ['Real-time scoring', 'Multi-layer detection', 'False positive reduction', 'Case management'],
     benefits: ['Stop fraud instantly', 'Reduce chargebacks', 'Protect revenue', 'Regulatory compliant']
   },
@@ -128,7 +128,7 @@ export const wave224AiServices: Service[] = [
     industry: 'E-commerce',
     stage: 'published',
     pricing: { basic: '$249/month', pro: '$799/month', enterprise: '$2,299/month' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: ['Competitor monitoring', 'Demand forecasting', 'A/B testing', 'Profit optimization'],
     benefits: ['Increase margins by 15%', 'Respond to market changes', 'Maximize revenue', 'Data-driven pricing']
   },
@@ -142,7 +142,7 @@ export const wave224AiServices: Service[] = [
     industry: 'Marketing',
     stage: 'published',
     pricing: { basic: '$99/month', pro: '$299/month', enterprise: '$799/month' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: ['SEO-optimized content', 'Keyword research', 'Multi-language support', 'Content calendar'],
     benefits: ['Rank higher in search', 'Publish content faster', 'Reduce content costs', 'Improve engagement']
   }
@@ -160,7 +160,7 @@ export const wave224ItServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: '$499/month', pro: '$1,299/month', enterprise: '$3,999/month' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: ['Identity verification', 'Device compliance', 'Network microsegmentation', 'Continuous monitoring'],
     benefits: ['Eliminate lateral movement', 'Verify every request', 'Reduce breach impact', 'Regulatory compliance']
   },
@@ -175,7 +175,7 @@ export const wave224ItServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: '$2,999/project', pro: '$9,999/project', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: ['Architecture assessment', 'Container strategy', 'CI/CD pipelines', 'Cost optimization'],
     benefits: ['Reduce cloud costs', 'Improve scalability', 'Faster deployments', 'Modern architecture']
   },
@@ -189,7 +189,7 @@ export const wave224ItServices: Service[] = [
     industry: 'DevOps',
     stage: 'published',
     pricing: { basic: '$199/month', pro: '$599/month', enterprise: '$1,799/month' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: ['GitOps deployment', 'Automated testing', 'Monitoring dashboards', 'Rollback automation'],
     benefits: ['Deploy 10x faster', 'Reduce errors', 'Improve reliability', 'Team productivity']
   },
@@ -203,7 +203,7 @@ export const wave224ItServices: Service[] = [
     industry: 'Security',
     stage: 'published',
     pricing: { basic: '$499/month', pro: '$1,499/month', enterprise: '$4,999/month' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: ['24/7 monitoring', 'Automated response', 'Threat intelligence', 'Forensic analysis'],
     benefits: ['Stop threats instantly', 'Minimize damage', 'Compliance reporting', 'Peace of mind']
   },
@@ -217,7 +217,7 @@ export const wave224ItServices: Service[] = [
     industry: 'Backup',
     stage: 'published',
     pricing: { basic: '$99/month', pro: '$299/month', enterprise: '$799/month' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: ['Automatic backups', 'Ransomware detection', 'Instant restore', 'Compliance archives'],
     benefits: ['Never lose data', 'Fast recovery', 'Regulatory compliant', 'Peace of mind']
   }
@@ -235,7 +235,7 @@ export const wave224MicroSaasServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: '$29/month', pro: '$79/month', enterprise: '$199/month' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: ['Auto meeting notes', 'Action item tracking', 'Follow-up emails', 'Calendar integration'],
     benefits: ['Never miss action items', 'Save meeting time', 'Improve follow-up', 'Team alignment']
   },
@@ -250,7 +250,7 @@ export const wave224MicroSaasServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: '$49/month', pro: '$149/month', enterprise: '$499/month' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: ['Lead scoring AI', 'Email sequences', 'Meeting scheduler', 'Performance analytics'],
     benefits: ['Close deals faster', 'Reduce manual work', 'Better lead quality', 'Increase conversions']
   },
@@ -264,7 +264,7 @@ export const wave224MicroSaasServices: Service[] = [
     industry: 'Marketing',
     stage: 'published',
     pricing: { basic: '$39/month', pro: '$99/month', enterprise: '$299/month' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: ['AI personalization', 'A/B testing', 'Open rate optimization', 'Analytics dashboard'],
     benefits: ['Double open rates', 'Increase clicks', 'Automate campaigns', 'Better results']
   },
@@ -278,7 +278,7 @@ export const wave224MicroSaasServices: Service[] = [
     industry: 'Marketing',
     stage: 'published',
     pricing: { basic: '$29/month', pro: '$79/month', enterprise: '$199/month' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: ['Multi-platform posting', 'AI content creation', 'Performance analytics', 'Hashtag optimization'],
     benefits: ['Save 10 hours/week', 'Better engagement', 'Consistent posting', 'Growth analytics']
   },
@@ -292,7 +292,7 @@ export const wave224MicroSaasServices: Service[] = [
     industry: 'Finance',
     stage: 'published',
     pricing: { basic: '$39/month', pro: '$99/month', enterprise: '$249/month' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: ['OCR processing', 'PO matching', 'Approval workflows', 'Accounting integration'],
     benefits: ['Process invoices 5x faster', 'Eliminate manual entry', 'Reduce errors', 'Save time']
   }

@@ -16,7 +16,7 @@ export const wave253AiSupplyChainServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: '$100,000/year (up to 10 users, basic planning modules)', pro: '$250,000/year (up to 100 users, full concurrent planning)', enterprise: 'Custom (unlimited users, custom AI models, SLA)' },
-    contactInfo: { website: 'https://kinaxis.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://kinaxis.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Concurrent planning: connect demand, supply, inventory, and capacity in one real-time model',
       'AI demand sensing: analyze 100+ signals to predict demand changes before orders',
@@ -47,7 +47,7 @@ export const wave253VoiceCloningAiServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: 'Free (10,000 characters/month, 3 custom voices)', pro: '$33/month (100,000 characters, 30 custom voices, commercial)', enterprise: 'Custom (unlimited characters, API access, dedicated infrastructure)' },
-    contactInfo: { website: 'https://elevenlabs.io', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://elevenlabs.io', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Instant voice cloning: create a digital replica of any voice from 30 seconds of audio',
       'Emotional control: adjust tone, pacing, and emotion to match context',
@@ -78,7 +78,7 @@ export const wave253AiLegalResearchServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: '$1,000/month (5 users, basic research, 100 queries/day)', pro: '$5,000/month (25 users, full platform, unlimited queries)', enterprise: 'Custom (unlimited users, private deployment, custom models, SLA)' },
-    contactInfo: { website: 'https://harvey.ai', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://harvey.ai', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Legal research: AI searches case law, statutes, and regulations across jurisdictions',
       'Contract analysis: review, redline, and summarize contracts with AI',
@@ -109,7 +109,7 @@ export const wave253AutonomousMobileRobotsServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: '$50,000/year (5 robots, basic orchestration, 1 site)', pro: '$250,000/year (50 robots, full orchestration, multi-site)', enterprise: 'Custom (unlimited robots, custom integrations, SLA)' },
-    contactInfo: { website: 'https://locusrobotics.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://locusrobotics.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Multi-robot orchestration: coordinate 10,000+ robots across 300+ sites',
       'Human-robot collaboration: robots work alongside humans, increasing productivity 2-3x',
@@ -140,7 +140,7 @@ export const wave253AiClimateRiskServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: '$25,000/year (10 assets, 5 climate hazards, basic reporting)', pro: '$100,000/year (100 assets, 15+ hazards, scenario analysis)', enterprise: 'Custom (unlimited assets, custom models, SLA)' },
-    contactInfo: { website: 'https://jupiterintel.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://jupiterintel.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Asset-level climate risk scoring: quantify physical risk at 1km resolution',
       '15+ climate hazards: flood, heat stress, water stress, wildfire, hurricane, sea level rise',

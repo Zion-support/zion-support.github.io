@@ -176,10 +176,10 @@ export default function ServiceConfigurator() {
             📧 Request Full Proposal
           </a>
           <a
-            href="tel:+13024640950"
+            href="tel:+5511976140076"
             className="px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all text-center"
           >
-            📞 Call +1 302 464 0950
+            📞 Call +55 11 97614-0076
           </a>
         </div>
       </div>

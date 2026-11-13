@@ -343,10 +343,10 @@ export default function VoiceVideoShowcase() {
                 🎙️ Request Demo
               </a>
               <a
-                href="tel:+130****0950"
+                href="tel:+5511976140076"
                 className="bg-slate-800 hover:bg-slate-700 text-white font-bold py-4 px-8 rounded-xl transition-all border border-slate-700"
               >
-                📞 Call +1 302 464 0950
+                📞 Call +55 11 97614-0076
               </a>
             </div>
           </div>

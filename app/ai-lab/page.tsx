@@ -347,8 +347,8 @@ export default function AILabPage() {
           </div>
           <p className="text-slate-500 text-sm mt-4">
             Or call{' '}
-            <a href="tel:+13024640950" className="text-purple-400 hover:text-purple-300">
-              +1 302 464 0950
+            <a href="tel:+5511976140076" className="text-purple-400 hover:text-purple-300">
+              +55 11 97614-0076
             </a>
           </p>
         </section>

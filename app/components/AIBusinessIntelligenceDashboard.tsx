@@ -308,10 +308,10 @@ export default function AIBusinessIntelligenceDashboard() {
                 📧 Get Started Today
               </a>
               <a
-                href="tel:+130****0950"
+                href="tel:+5511976140076"
                 className="inline-block bg-blue-600 text-white font-semibold px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors border-2 border-white"
               >
-                📞 Call +1 302 464 0950
+                📞 Call +55 11 97614-0076
               </a>
             </div>
           </div>

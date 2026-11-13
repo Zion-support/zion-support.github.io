@@ -213,7 +213,7 @@ export default function HomePage() {
             },
             contactPoint: {
               '@type': 'ContactPoint',
-              telephone: '+1-302-464-0950',
+              telephone: '+55 11 97614-0076',
               contactType: 'sales',
               email: 'kleber@ziontechgroup.com'
             },
@@ -268,8 +268,8 @@ export default function HomePage() {
               <Link href="/services/" className="btn-secondary text-lg px-10 py-4">
                 {`🛠️ Explore All ${serviceCount}+ Services`}
               </Link>
-              <a href="tel:+13024640950" className="btn-secondary text-lg px-10 py-4">
-                ☎ +1 302 464 0950
+              <a href="tel:+5511976140076" className="btn-secondary text-lg px-10 py-4">
+                ☎ +55 11 97614-0076
               </a>
             </div>
 
@@ -333,8 +333,8 @@ export default function HomePage() {
               <a href="mailto:kleber@ziontechgroup.com" className="flex items-center gap-2 px-4 py-2 rounded-lg bg-slate-800/60 border border-slate-700/50 text-slate-300 hover:text-purple-300 hover:border-purple-500/30 transition-all">
                 ✉ kleber@ziontechgroup.com
               </a>
-              <a href="tel:+130****0950" className="flex items-center gap-2 px-4 py-2 rounded-lg bg-slate-800/60 border border-slate-700/50 text-slate-300 hover:text-purple-300 hover:border-purple-500/30 transition-all">
-                ☎ +1 302 464 0950
+              <a href="tel:+5511976140076" className="flex items-center gap-2 px-4 py-2 rounded-lg bg-slate-800/60 border border-slate-700/50 text-slate-300 hover:text-purple-300 hover:border-purple-500/30 transition-all">
+                ☎ +55 11 97614-0076
               </a>
               <span className="flex items-center gap-2 px-4 py-2 rounded-lg bg-slate-800/60 border border-slate-700/50 text-slate-400">
                 📍 364 E Main St STE 1008, Middletown, DE 19709
@@ -1164,8 +1164,8 @@ export default function HomePage() {
               <a href="mailto:kleber@ziontechgroup.com" className="btn-secondary text-lg px-10 py-4">
                 ✉️ Email Us
               </a>
-              <a href="tel:+13024640950" className="btn-secondary text-lg px-10 py-4">
-                                            ☎ +1 302 464 0950
+              <a href="tel:+5511976140076" className="btn-secondary text-lg px-10 py-4">
+                                            ☎ +55 11 97614-0076
                                           </a>
             </div>
           </div>

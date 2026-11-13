@@ -345,10 +345,10 @@ export default function AIServiceMatcher() {
                   📧 Email My Custom Proposal
                 </a>
                 <a
-                  href="tel:+130****0950"
+                  href="tel:+5511976140076"
                   className="px-6 py-3 bg-gray-700 hover:bg-gray-600 text-white font-medium rounded-lg transition-colors border border-gray-600"
                 >
-                  📞 Call +1 302 464 0950
+                  📞 Call +55 11 97614-0076
                 </a>
               </div>
               <p className="text-gray-500 text-xs mt-3">📍 364 E Main St STE 1008, Middletown DE 19709</p>

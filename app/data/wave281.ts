@@ -13,7 +13,7 @@ export const wave281DataCenterServices: Service[] =
     stage: 'published',
     popular: false,
     pricing: { basic: '$349/mo', pro: '$999/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'DCIM platform selection and deployment (Sunbird, Nlyte, Schneider, Raritan)',
       'Real-time power, thermal, and network asset monitoring',
@@ -40,7 +40,7 @@ export const wave281DataCenterServices: Service[] =
     stage: 'published',
     popular: false,
     pricing: { basic: '$299/mo', pro: '$899/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Biometric badge readers and PIN + card dual-factor mantrap design',
       'AI video analytics for tailgating and anomalous behavior detection',
@@ -67,7 +67,7 @@ export const wave281DataCenterServices: Service[] =
     stage: 'published',
     popular: false,
     pricing: { basic: '$199/mo', pro: '$599/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Patch panel and fiber tray cross-connect provisioning',
       'Cloud on-ramp integration (AWS/Azure/GCP/OCI)',
@@ -94,7 +94,7 @@ export const wave281DataCenterServices: Service[] =
     stage: 'published',
     popular: false,
     pricing: { basic: '$499/mo', pro: '$1,999/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Cabinet, cage, suite, and wholesale hall configurations',
       'Redundant 2N power feeds and UPS-backed circuits',
@@ -121,7 +121,7 @@ export const wave281DataCenterServices: Service[] =
     stage: 'published',
     popular: false,
     pricing: { basic: '$399/mo', pro: '$1,199/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       '24/7 Tier 1–3 NOC staffing with shift coverage',
       'Remote hands for hardware swaps, cabling, and patching',
@@ -148,7 +148,7 @@ export const wave281DataCenterServices: Service[] =
     stage: 'published',
     popular: false,
     pricing: { basic: '$349/mo', pro: '$999/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Digital twin thermal modeling of the facility',
       'Real-time sensor ingestion (temperature, humidity, airflow)',
@@ -175,7 +175,7 @@ export const wave281DataCenterServices: Service[] =
     stage: 'published',
     popular: false,
     pricing: { basic: '$299/mo', pro: '$899/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'ISO container and rack-scale micro DC designs',
       'Ruggedized enclosures for industrial and outdoor environments',
@@ -202,7 +202,7 @@ export const wave281DataCenterServices: Service[] =
     stage: 'published',
     popular: false,
     pricing: { basic: '$299/mo', pro: '$899/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'PUE, WUE, and carbon-intensity telemetry collection',
       'Scope 1/2/3 GHG Protocol emissions calculation',
@@ -229,7 +229,7 @@ export const wave281DataCenterServices: Service[] =
     stage: 'published',
     popular: false,
     pricing: { basic: '$249/mo', pro: '$749/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'TIA-942 and ISO/IEC 11801 compliant infrastructure design',
       'Copper Cat6A/Cat8 and fiber (OS2/OM4/OM5) installation',
@@ -256,7 +256,7 @@ export const wave281DataCenterServices: Service[] =
     stage: 'published',
     popular: false,
     pricing: { basic: '$349/mo', pro: '$999/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'OT asset discovery and network mapping (Modbus, BACnet, SNMP)',
       'Zero-trust segmentation between IT and OT networks',
@@ -283,7 +283,7 @@ export const wave281DataCenterServices: Service[] =
     stage: 'published',
     popular: false,
     pricing: { basic: '$499/mo', pro: '$1,499/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Private 5G small cell and core planning',
       'Indoor distributed antenna system (DAS) design',
@@ -310,7 +310,7 @@ export const wave281DataCenterServices: Service[] =
     stage: 'published',
     popular: false,
     pricing: { basic: '$199/mo', pro: '$599/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Wireless and wired temperature/humidity sensor arrays',
       'Water leak detection and under-floor fluid monitoring',
@@ -337,7 +337,7 @@ export const wave281DataCenterServices: Service[] =
     stage: 'published',
     popular: false,
     pricing: { basic: '$149/mo', pro: '$449/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Rack-and-stack with torque screwdriving and labeling',
       'Server, network, and storage hardware replacement',

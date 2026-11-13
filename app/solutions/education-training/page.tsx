@@ -19,7 +19,7 @@ export default function Page() {
           <h2 className="text-xl font-semibold text-white mb-3">Get Started Today</h2>
           <p className="text-slate-400 mb-4">Contact our team for a free consultation.</p>
           <div className="flex flex-wrap gap-4 text-sm">
-            <a href="tel:+13024640950" className="text-emerald-400">📞 +1 302 464 0950</a>
+            <a href="tel:+5511976140076" className="text-emerald-400">📞 +55 11 97614-0076</a>
             <a href="mailto:kleber@ziontechgroup.com" className="text-emerald-400">✉️ kleber@ziontechgroup.com</a>
           </div>
         </div>

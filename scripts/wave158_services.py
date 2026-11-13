@@ -5,7 +5,7 @@ import json
 SERVICES_JSON = 'app/data/servicesData.json'
 SERVICES_TS = 'app/data/servicesData.ts'
 E = "kleber@ziontechgroup.com"
-P = "+1 302 464 0950"
+P = "+55 11 97614-0076"
 
 NEW = [
     # MICRO-SAAS (5)

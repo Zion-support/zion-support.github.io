@@ -15,7 +15,7 @@ export const wave231AiServices: Service[] = [
     stage: "published",
     popular: true,
     pricing: { basic: "$1,299/mo", pro: "$3,499/mo", enterprise: "Custom" },
-    contactInfo: { website: "/services/", email: "kleber@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "/services/", email: "kleber@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "ML-based demand prediction using historical sales, promotions, and external market signals",
       "Seasonal trend analysis with automated decomposition of cyclical, trend, and residual components",
@@ -43,7 +43,7 @@ export const wave231AiServices: Service[] = [
     stage: "published",
     popular: true,
     pricing: { basic: "$349/mo", pro: "$899/mo", enterprise: "Custom" },
-    contactInfo: { website: "/services/", email: "kleber@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "/services/", email: "kleber@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "Real-time brand monitoring across Twitter, Reddit, Instagram, Facebook, LinkedIn, and YouTube",
       "Granular sentiment scoring (positive, negative, neutral) with emotion detection (joy, anger, fear, etc.)",
@@ -74,7 +74,7 @@ export const wave231ItServices: Service[] = [
     stage: "published",
     popular: true,
     pricing: { basic: "$999/mo", pro: "$2,999/mo", enterprise: "Custom" },
-    contactInfo: { website: "/services/", email: "kleber@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "/services/", email: "kleber@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "Multi-cloud cost analysis across AWS, Azure, and GCP with unified dashboard and tagging enforcement",
       "Wasted resource detection: idle instances, unattached EBS volumes, orphaned load balancers, unused IPs",
@@ -102,7 +102,7 @@ export const wave231ItServices: Service[] = [
     stage: "published",
     popular: true,
     pricing: { basic: "$2,499/mo", pro: "$5,999/mo", enterprise: "Custom" },
-    contactInfo: { website: "/services/", email: "kleber@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "/services/", email: "kleber@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "Automated failover orchestration with dependency-aware startup sequences for multi-tier applications",
       "Continuous data replication with RPO < 1 hour and RTO < 4 hours for critical production workloads",
@@ -133,7 +133,7 @@ export const wave231MicroSaasServices: Service[] = [
     stage: "published",
     popular: true,
     pricing: { basic: "$59/mo", pro: "$149/mo", enterprise: "$349/mo" },
-    contactInfo: { website: "/services/", email: "kleber@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "/services/", email: "kleber@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "Digital onboarding workflows with role-based templates for engineering, sales, operations, and executive hires",
       "Document collection with e-signatures for offer letters, NDAs, tax forms, and policy acknowledgments",

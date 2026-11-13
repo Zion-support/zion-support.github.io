@@ -12,7 +12,7 @@ type Step = 'budget' | 'needs' | 'services' | 'timeline' | 'review';
 
 const COMPANY = {
   name: 'Zion Tech Group',
-  phone: '+1 302 464 0950',
+  phone: '+55 11 97614-0076',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008, Middletown, DE 19709',
 };
@@ -310,7 +310,7 @@ ${services.length > 0 ? `<p style="margin-top:12px;color:#666;font-size:14px">
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-slate-300 mb-2">Phone (optional)</label>
-                  <input type="tel" value={contactPhone} onChange={e => setContactPhone(e.target.value)} placeholder="+1 302 464 0950" className="w-full rounded-lg border border-slate-700 bg-slate-800 p-3 text-white" />
+                  <input type="tel" value={contactPhone} onChange={e => setContactPhone(e.target.value)} placeholder="Your phone number" className="w-full rounded-lg border border-slate-700 bg-slate-800 p-3 text-white" />
                 </div>
               </div>
               <div className="mt-8 flex justify-between">

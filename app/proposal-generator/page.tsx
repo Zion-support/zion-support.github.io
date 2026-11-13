@@ -545,7 +545,7 @@ export default function ProposalGeneratorPage() {
                 </a>
               </div>
               <p className="text-sm text-gray-600">
-                Questions? Call us at <a href="tel:+13024640950" className="text-blue-600 font-semibold">+1 302 464 0950</a>
+                Questions? Call us at <a href="tel:+5511976140076" className="text-blue-600 font-semibold">+55 11 97614-0076</a>
               </p>
             </div>
           </div>

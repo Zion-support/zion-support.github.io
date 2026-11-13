@@ -1,7 +1,7 @@
 import { Service } from './serviceTypes';
 
 // Wave 234 — 5 real services across AI, IT, and Micro-SaaS
-// Contact: kleber@ziontechgroup.com | +1 302 464 0950
+// Contact: kleber@ziontechgroup.com | +55 11 97614-0076
 
 // ── AI Services ──────────────────────────────────────────────
 
@@ -34,7 +34,7 @@ export const wave234AiServices: Service[] = [
     contactInfo: {
       website: 'https://ziontechgroup.com',
       email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
+      phone: '+55 11 97614-0076',
     },
     icon: 'Zap',
     href: '/services/ai-energy-grid-optimization',
@@ -71,7 +71,7 @@ export const wave234AiServices: Service[] = [
     contactInfo: {
       website: 'https://ziontechgroup.com',
       email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
+      phone: '+55 11 97614-0076',
     },
     icon: 'FileText',
     href: '/services/ai-document-classification-extraction',
@@ -113,7 +113,7 @@ export const wave234ItServices: Service[] = [
     contactInfo: {
       website: 'https://ziontechgroup.com',
       email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
+      phone: '+55 11 97614-0076',
     },
     icon: 'Shield',
     href: '/services/email-security-anti-phishing',
@@ -155,7 +155,7 @@ export const wave234MicroSaasServices: Service[] = [
     contactInfo: {
       website: 'https://ziontechgroup.com',
       email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
+      phone: '+55 11 97614-0076',
     },
     icon: 'Package',
     href: '/services/micro-saas-inventory-order-management',
@@ -192,7 +192,7 @@ export const wave234MicroSaasServices: Service[] = [
     contactInfo: {
       website: 'https://ziontechgroup.com',
       email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
+      phone: '+55 11 97614-0076',
     },
     icon: 'Users',
     href: '/services/micro-saas-hr-leave-attendance-tracker',

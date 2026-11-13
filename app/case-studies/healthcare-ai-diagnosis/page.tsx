@@ -183,8 +183,8 @@ export default function HealthcareAIDiagnosisCaseStudy() {
             <Link href="/services" className="btn-primary text-lg px-10 py-4">
               🏥 Browse Healthcare Services
             </Link>
-            <a href="tel:+13024640950" className="btn-secondary text-lg px-10 py-4">
-              ☎ +1 302 464 0950
+            <a href="tel:+5511976140076" className="btn-secondary text-lg px-10 py-4">
+              ☎ +55 11 97614-0076
             </a>
             <a href="https://calendly.com/kleber-ziontechgroup" target="_blank" rel="noreferrer" className="btn-secondary text-lg px-10 py-4">
               📅 Book Consultation

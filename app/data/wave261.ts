@@ -14,7 +14,7 @@ export const wave261AiServices: Service[] = [
     industry: 'Legal',
     stage: 'published',
     pricing: { basic: '$399/mo', pro: '$999/mo', enterprise: '$2,499/mo' },
-    contactInfo: { website: '/services/ai-legal-research', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/ai-legal-research', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Natural language legal search across case law',
       'Contract clause extraction & risk scoring',
@@ -43,7 +43,7 @@ export const wave261AiServices: Service[] = [
     industry: 'Healthcare',
     stage: 'published',
     pricing: { basic: '$1,999/mo (100 scans)', pro: '$4,999/mo (500 scans)', enterprise: 'Custom quote' },
-    contactInfo: { website: '/services/ai-healthcare-diagnostics', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/ai-healthcare-diagnostics', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'FDA-cleared AI diagnostic models',
       'Radiology, pathology, dermatology support',
@@ -75,7 +75,7 @@ export const wave261MicroSaasServices: Service[] = [
     industry: 'SaaS, Customer Support',
     stage: 'published',
     pricing: { basic: '$39/mo (50 articles)', pro: '$99/mo (500 articles)', enterprise: '$249/mo (unlimited)' },
-    contactInfo: { website: '/services/microsaas-knowledge-base', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/microsaas-knowledge-base', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'AI-powered semantic search',
       'Auto-suggest articles from support tickets',
@@ -104,7 +104,7 @@ export const wave261MicroSaasServices: Service[] = [
     industry: 'Professional Services, Agencies',
     stage: 'published',
     pricing: { basic: '$9/user/mo', pro: '$19/user/mo', enterprise: '$39/user/mo' },
-    contactInfo: { website: '/services/microsaas-time-tracking', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/microsaas-time-tracking', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Automatic time tracking (no manual entry)',
       'Project profitability analysis',
@@ -136,7 +136,7 @@ export const wave261ItServices: Service[] = [
     industry: 'Cross-Industry',
     stage: 'published',
     pricing: { basic: '$4,999 (assessment)', pro: '$14,999 (design + setup)', enterprise: 'Custom quote' },
-    contactInfo: { website: '/services/it-data-center', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/it-data-center', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Site assessment & requirements analysis',
       'Power & cooling design optimization',
@@ -165,7 +165,7 @@ export const wave261ItServices: Service[] = [
     industry: 'Cross-Industry',
     stage: 'published',
     pricing: { basic: '$3,999 (SOC 2 Readiness)', pro: '$9,999 (Full SOC 2)', enterprise: 'Custom multi-framework' },
-    contactInfo: { website: '/services/it-compliance', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/it-compliance', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Multi-framework gap assessment',
       'Security policy & procedure development',

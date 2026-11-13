@@ -12,7 +12,7 @@ export const wave279ItAiServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: '$399/mo', pro: '$1,199/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Self-service infrastructure catalogs (Kubernetes, serverless, databases)',
       'Internal developer portal with scorecards and SLO visibility',
@@ -39,7 +39,7 @@ export const wave279ItAiServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: '$499/mo', pro: '$1,499/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'ML pipeline attestation and artifact signing',
       'Inference gateway with per-user rate limits and anomaly detection',
@@ -66,7 +66,7 @@ export const wave279ItAiServices: Service[] = [
     stage: 'published',
     popular: false,
     pricing: { basic: '$349/mo', pro: '$999/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'OpenTelemetry collector deployment and instrumentation',
       'eBPF-driven network flow and socket metrics',
@@ -93,7 +93,7 @@ export const wave279ItAiServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: '$499/mo', pro: '$1,499/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'LoRA/QLoRA fine-tuning on domain-specific datasets',
       'Prompt caching, prefix caching, and speculative decoding',
@@ -120,7 +120,7 @@ export const wave279ItAiServices: Service[] = [
     stage: 'published',
     popular: false,
     pricing: { basic: '$299/mo', pro: '$899/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Tabular synthetic data for ML training (CTGAN, TVAE)',
       'Image and video synthesis for CV model fine-tuning',
@@ -147,7 +147,7 @@ export const wave279ItAiServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: '$499/mo', pro: '$1,499/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Multi-agent topology designer (sequential, parallel, swarm)',
       'Shared memory and context passing between agents',
@@ -174,7 +174,7 @@ export const wave279ItAiServices: Service[] = [
     stage: 'published',
     popular: false,
     pricing: { basic: '$299/mo', pro: '$899/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'AI-powered alert classification and noise reduction',
       'Executable runbooks with approval gates and rollback',
@@ -201,7 +201,7 @@ export const wave279ItAiServices: Service[] = [
     stage: 'published',
     popular: false,
     pricing: { basic: '$599/mo', pro: '$1,799/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Self-service data discovery and catalog with semantic search',
       'Domain-oriented ownership and data product contracts',
@@ -228,7 +228,7 @@ export const wave279ItAiServices: Service[] = [
     stage: 'published',
     popular: false,
     pricing: { basic: '$299/mo', pro: '$899/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Automated policy enforcement and guardrails',
       'Model cards and lineage tracking',
@@ -255,7 +255,7 @@ export const wave279ItAiServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: '$499/mo', pro: '$1,499/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'AI alert triage with false-positive reduction by 90%',
       'Automated threat hunting across logs and endpoints',
@@ -282,7 +282,7 @@ export const wave279ItAiServices: Service[] = [
     stage: 'published',
     popular: false,
     pricing: { basic: '$299/mo', pro: '$899/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Optimized inference runtime (ONNX, TensorRT, CoreML)',
       'Model compression and quantization for edge devices',
@@ -309,7 +309,7 @@ export const wave279ItAiServices: Service[] = [
     stage: 'published',
     popular: false,
     pricing: { basic: '$499/mo', pro: '$1,499/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Physics-based simulation and surrogate modeling',
       'Real-time telemetry ingestion and state synchronization',
@@ -336,7 +336,7 @@ export const wave279ItAiServices: Service[] = [
     stage: 'published',
     popular: false,
     pricing: { basic: '$199/mo', pro: '$599/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'AI-generated test scripts from user stories and requirements',
       'Self-healing selectors resilient to UI changes',
@@ -363,7 +363,7 @@ export const wave279ItAiServices: Service[] = [
     stage: 'published',
     popular: false,
     pricing: { basic: '$299/endpoint/mo', pro: '$599/endpoint/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       '24/7 security monitoring with AI-enhanced analytics',
       'Behavior-based anomaly detection across endpoints, networks, cloud',
@@ -390,7 +390,7 @@ export const wave279ItAiServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: '$199/mo', pro: '$599/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Automated right-sizing and idle resource elimination',
       'AI-based reserved instance and savings plan recommendations',
@@ -417,7 +417,7 @@ export const wave279ItAiServices: Service[] = [
     stage: 'published',
     popular: false,
     pricing: { basic: '$299/mo', pro: '$899/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Natural-language-to-UI generation and refinement',
       'Drag-and-drop workflow builder with AI actions',
@@ -444,7 +444,7 @@ export const wave279ItAiServices: Service[] = [
     stage: 'published',
     popular: false,
     pricing: { basic: '$299/mo', pro: '$899/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Column-level profiling and freshness monitoring',
       'AI anomaly detection across metrics, logs, and traces',
@@ -471,7 +471,7 @@ export const wave279ItAiServices: Service[] = [
     stage: 'published',
     popular: false,
     pricing: { basic: '$299/mo', pro: '$899/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Unified content ingestion from Confluence, SharePoint, Drive, Notion',
       'Semantic search with natural language queries',
@@ -498,7 +498,7 @@ export const wave279ItAiServices: Service[] = [
     stage: 'published',
     popular: false,
     pricing: { basic: '$399/mo', pro: '$1,199/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Event-driven architecture design and implementation',
       'Function-as-a-Service migration and refactoring',
@@ -525,7 +525,7 @@ export const wave279ItAiServices: Service[] = [
     stage: 'published',
     popular: false,
     pricing: { basic: '$499/mo', pro: '$1,499/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Satellite and aerial imagery object detection',
       'Time-series change detection (construction, deforestation, flooding)',

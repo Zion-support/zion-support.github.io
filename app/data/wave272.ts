@@ -30,7 +30,7 @@ export const wave272Services: Service[] = [
     contactInfo: {
       website: '/services/ai-predictive-maintenance-iot',
       email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
+      phone: '+55 11 97614-0076',
     },
   },
   {
@@ -62,7 +62,7 @@ export const wave272Services: Service[] = [
     contactInfo: {
       website: '/services/micro-saas-ab-test-platform',
       email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
+      phone: '+55 11 97614-0076',
     },
   },
   {
@@ -94,7 +94,7 @@ export const wave272Services: Service[] = [
     contactInfo: {
       website: '/services/it-it-asset-lifecycle-management',
       email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
+      phone: '+55 11 97614-0076',
     },
   },
   {
@@ -126,7 +126,7 @@ export const wave272Services: Service[] = [
     contactInfo: {
       website: '/services/ai-regulatory-compliance-monitor',
       email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
+      phone: '+55 11 97614-0076',
     },
   },
   {
@@ -158,7 +158,7 @@ export const wave272Services: Service[] = [
     contactInfo: {
       website: '/services/micro-saas-status-page',
       email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
+      phone: '+55 11 97614-0076',
     },
   },
 ];

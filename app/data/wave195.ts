@@ -14,7 +14,7 @@ export const wave195AiServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: '$249/mo', pro: '$699/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+55 11 97614-0076' },
   },
 ];
 
@@ -32,7 +32,7 @@ export const wave195SecurityServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: '$999/mo', pro: '$2,499/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+55 11 97614-0076' },
   },
   {
     id: 'data-loss-prevention',
@@ -47,7 +47,7 @@ export const wave195SecurityServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: '$499/mo', pro: '$1,299/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+55 11 97614-0076' },
   },
 ];
 
@@ -65,7 +65,7 @@ export const wave195MicroSaasServices: Service[] = [
     stage: 'published',
     popular: false,
     pricing: { basic: '$199/mo', pro: '$499/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+55 11 97614-0076' },
   },
   {
     id: 'multi-cloud-cost-optimizer',
@@ -80,7 +80,7 @@ export const wave195MicroSaasServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: '$149/mo', pro: '$399/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+55 11 97614-0076' },
   },
   {
     id: 'hr-recruitment',
@@ -95,7 +95,7 @@ export const wave195MicroSaasServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: '$199/mo', pro: '$499/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+55 11 97614-0076' },
   },
   {
     id: 'marketing-attribution',
@@ -110,7 +110,7 @@ export const wave195MicroSaasServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: '$149/mo', pro: '$399/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+55 11 97614-0076' },
   },
   {
     id: 'edtech-platform',
@@ -125,7 +125,7 @@ export const wave195MicroSaasServices: Service[] = [
     stage: 'published',
     popular: false,
     pricing: { basic: '$299/mo', pro: '$799/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+55 11 97614-0076' },
   },
   {
     id: 'social-media-scheduler',
@@ -140,7 +140,7 @@ export const wave195MicroSaasServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: '$49/mo', pro: '$149/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+55 11 97614-0076' },
   },
   {
     id: 'support-chatbot',
@@ -155,7 +155,7 @@ export const wave195MicroSaasServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: '$99/mo', pro: '$299/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'commercial@ziontechgroup.com', phone: '+55 11 97614-0076' },
   },
 ];
 

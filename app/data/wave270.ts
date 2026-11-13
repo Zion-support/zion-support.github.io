@@ -30,7 +30,7 @@ export const wave270Services: Service[] = [
     contactInfo: {
       website: '/services/ai-meeting-intelligence-platform',
       email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
+      phone: '+55 11 97614-0076',
     },
   },
   {
@@ -62,7 +62,7 @@ export const wave270Services: Service[] = [
     contactInfo: {
       website: '/services/micro-saas-white-label-analytics',
       email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
+      phone: '+55 11 97614-0076',
     },
   },
   {
@@ -94,7 +94,7 @@ export const wave270Services: Service[] = [
     contactInfo: {
       website: '/services/it-zero-trust-network-access',
       email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
+      phone: '+55 11 97614-0076',
     },
   },
   {
@@ -126,7 +126,7 @@ export const wave270Services: Service[] = [
     contactInfo: {
       website: '/services/ai-customer-support-copilot',
       email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
+      phone: '+55 11 97614-0076',
     },
   },
   {
@@ -158,7 +158,7 @@ export const wave270Services: Service[] = [
     contactInfo: {
       website: '/services/micro-saas-subscription-analytics',
       email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
+      phone: '+55 11 97614-0076',
     },
   },
 ];

@@ -13,7 +13,7 @@ export const wave200AiServices: Service[] = [
     stage: "published",
     popular: true,
     pricing: { basic: '$499/mo', pro: '$1199/mo', enterprise: '$2499/mo' },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "Patient recruitment matching using EHR data analysis",
       "Site performance scoring with predictive enrollment models",
@@ -40,7 +40,7 @@ export const wave200AiServices: Service[] = [
     stage: "published",
     popular: true,
     pricing: { basic: '$299/mo', pro: '$699/mo', enterprise: '$1499/mo' },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "Real-time sensor data ingestion and anomaly detection",
       "Failure prediction with remaining useful life estimates",
@@ -67,7 +67,7 @@ export const wave200AiServices: Service[] = [
     stage: "published",
     popular: false,
     pricing: { basic: '$199/mo', pro: '$449/mo', enterprise: '$999/mo' },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "Natural language search across case law and statutes",
       "Precedent analysis with relevance scoring",
@@ -97,7 +97,7 @@ export const wave200DataServices: Service[] = [
     stage: "published",
     popular: true,
     pricing: { basic: '$349/mo', pro: '$799/mo', enterprise: '$1699/mo' },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "Sub-second latency processing of 1M+ events/sec",
       "Complex event processing with pattern matching",
@@ -124,7 +124,7 @@ export const wave200DataServices: Service[] = [
     stage: "published",
     popular: false,
     pricing: { basic: '$199/mo', pro: '$449/mo', enterprise: '$999/mo' },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "Schema contract definition with versioning",
       "Automated freshness and completeness monitoring",
@@ -154,7 +154,7 @@ export const wave200CloudServices: Service[] = [
     stage: "published",
     popular: true,
     pricing: { basic: '$149/mo', pro: '$349/mo', enterprise: '$799/mo' },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "Per-namespace, per-deployment cost attribution",
       "Right-sizing recommendations with actual usage analysis",
@@ -184,7 +184,7 @@ export const wave200SecurityServices: Service[] = [
     stage: "published",
     popular: true,
     pricing: { basic: '$199/mo', pro: '$449/mo', enterprise: '$999/mo' },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "Automatic API discovery including shadow and zombie APIs",
       "Behavioral analysis for abuse and anomaly detection",
@@ -211,7 +211,7 @@ export const wave200SecurityServices: Service[] = [
     stage: "published",
     popular: false,
     pricing: { basic: '$249/mo', pro: '$549/mo', enterprise: '$1199/mo' },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "Identity-aware access with SSO and MFA integration",
       "Device posture assessment before granting access",
@@ -241,7 +241,7 @@ export const wave200AutomationServices: Service[] = [
     stage: "published",
     popular: true,
     pricing: { basic: '$99/mo', pro: '$249/mo', enterprise: '$549/mo' },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "Drag-and-drop workflow designer with branching logic",
       "200+ pre-built connectors (Salesforce, SAP, Slack, etc.)",
@@ -271,7 +271,7 @@ export const wave200ItServices: Service[] = [
     stage: "published",
     popular: true,
     pricing: { basic: '$149/mo', pro: '$349/mo', enterprise: '$799/mo' },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "Behavioral AI detection for fileless and zero-day attacks",
       "Automated isolation and remediation of compromised endpoints",
@@ -301,7 +301,7 @@ export const wave200MicroSaasServices: Service[] = [
     stage: "published",
     popular: true,
     pricing: { basic: '$79/mo', pro: '$199/mo', enterprise: '$449/mo' },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "Multi-signal churn scoring (usage, support, billing, NPS)",
       "Automated health score dashboards per customer",

@@ -216,7 +216,7 @@ export default function EmailIntelligenceShowcase() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center text-left">
               <div className="text-white">
                 <div className="font-semibold">📞 Phone:</div>
-                <div>+1 302 464 0950</div>
+                <div>+55 11 97614-0076</div>
               </div>
               <div className="text-white">
                 <div className="font-semibold">✉️ Email:</div>

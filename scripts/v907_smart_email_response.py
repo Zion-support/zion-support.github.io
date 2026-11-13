@@ -257,9 +257,9 @@ I'll respond with more details shortly.
     def _get_closing(self, tone: str) -> str:
         """Get appropriate closing based on tone"""
         closings = {
-            'professional': "Best regards,\n[Your Name]\n+1 302 464 0950\nkleber@ziontechgroup.com",
-            'friendly': "Thanks again! 😊\n\nBest,\n[Your Name]\n+1 302 464 0950",
-            'urgent': "Regards,\n[Your Name]\n+1 302 464 0950\nkleber@ziontechgroup.com",
+            'professional': "Best regards,\n[Your Name]\n+55 11 97614-0076\nkleber@ziontechgroup.com",
+            'friendly': "Thanks again! 😊\n\nBest,\n[Your Name]\n+55 11 97614-0076",
+            'urgent': "Regards,\n[Your Name]\n+55 11 97614-0076\nkleber@ziontechgroup.com",
             'casual': "Cheers,\n[Your Name]"
         }
         return closings.get(tone, closings['professional'])
@@ -307,7 +307,7 @@ REPLY-ALL ENFORCEMENT:
 ✅ Maintains thread context
 
 Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
-Contact: +1 302 464 0950 | kleber@ziontechgroup.com
+Contact: +55 11 97614-0076 | kleber@ziontechgroup.com
 """
         return report
 

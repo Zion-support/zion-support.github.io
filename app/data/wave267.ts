@@ -30,7 +30,7 @@ export const wave267Services: Service[] = [
     contactInfo: {
       website: '/services/ai-video-content-analyzer',
       email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
+      phone: '+55 11 97614-0076',
     },
   },
   {
@@ -62,7 +62,7 @@ export const wave267Services: Service[] = [
     contactInfo: {
       website: '/services/micro-saas-feature-flag-platform',
       email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
+      phone: '+55 11 97614-0076',
     },
   },
   {
@@ -94,7 +94,7 @@ export const wave267Services: Service[] = [
     contactInfo: {
       website: '/services/it-itil-service-desk',
       email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
+      phone: '+55 11 97614-0076',
     },
   },
   {
@@ -126,7 +126,7 @@ export const wave267Services: Service[] = [
     contactInfo: {
       website: '/services/ai-voice-agent-customer-service',
       email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
+      phone: '+55 11 97614-0076',
     },
   },
   {
@@ -158,7 +158,7 @@ export const wave267Services: Service[] = [
     contactInfo: {
       website: '/services/micro-saas-churn-prediction',
       email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
+      phone: '+55 11 97614-0076',
     },
   },
 ];

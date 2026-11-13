@@ -14,7 +14,7 @@ export const wave256MicroSaasServices: Service[] = [
     industry: 'Productivity',
     stage: 'published',
     pricing: { basic: '$29/mo (5 users, 10 projects)', pro: '$79/mo (25 users, unlimited projects)', enterprise: '$199/mo (unlimited users, SSO, API)' },
-    contactInfo: { website: '/services/project-management-suite', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/project-management-suite', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Gantt charts with critical path analysis and dependency mapping',
       'Kanban boards with WIP limits, swimlanes, and automation rules',
@@ -42,7 +42,7 @@ export const wave256MicroSaasServices: Service[] = [
     industry: 'Developer Tools',
     stage: 'published',
     pricing: { basic: '$19/mo (50K emails)', pro: '$79/mo (500K emails, dedicated IP)', enterprise: '$249/mo (5M emails, custom domain, SLA)' },
-    contactInfo: { website: '/services/email-delivery-platform', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/email-delivery-platform', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'REST API and SMTP relay with sub-100ms delivery',
       'Drag-and-drop template editor with dynamic variables',
@@ -70,7 +70,7 @@ export const wave256MicroSaasServices: Service[] = [
     industry: 'Marketing',
     stage: 'published',
     pricing: { basic: '$9/mo (5K clicks/mo)', pro: '$39/mo (100K clicks, custom domain)', enterprise: '$149/mo (1M clicks, API, team seats)' },
-    contactInfo: { website: '/services/url-shortener-analytics', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/url-shortener-analytics', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Branded short links with custom domains (e.g., your.co/link)',
       'Click analytics: geo, device, referrer, time-series',
@@ -101,7 +101,7 @@ export const wave256ItServices: Service[] = [
     industry: 'IT Operations',
     stage: 'published',
     pricing: { basic: '$149/mo (250 assets)', pro: '$399/mo (2,500 assets, auto-discovery)', enterprise: '$999/mo (unlimited, CMDB, API)' },
-    contactInfo: { website: '/services/it-asset-management', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/it-asset-management', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Automated network discovery and inventory scanning',
       'Software license tracking with compliance alerts',
@@ -129,7 +129,7 @@ export const wave256ItServices: Service[] = [
     industry: 'Cybersecurity',
     stage: 'published',
     pricing: { basic: '$2,499 (external network, up to 256 IPs)', pro: '$4,999 (internal + external, web apps)', enterprise: '$9,999 (full scope, social engineering, retest)' },
-    contactInfo: { website: '/services/network-penetration-testing', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/network-penetration-testing', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'External and internal network penetration testing',
       'Web application and API security assessment',
@@ -157,7 +157,7 @@ export const wave256ItServices: Service[] = [
     industry: 'Infrastructure',
     stage: 'published',
     pricing: { basic: '$4,999 (assessment + migration plan)', pro: '$14,999 (full migration, up to 50 servers)', enterprise: 'Custom (large-scale, multi-site, hybrid cloud)' },
-    contactInfo: { website: '/services/data-center-relocation', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/data-center-relocation', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Complete infrastructure assessment and dependency mapping',
       'Migration strategy: lift-and-shift, re-platform, re-architect',
@@ -188,7 +188,7 @@ export const wave256AiServices: Service[] = [
     industry: 'Customer Success',
     stage: 'published',
     pricing: { basic: '$299/mo (1,000 customers)', pro: '$799/mo (10,000 customers, auto-actions)', enterprise: '$2,499/mo (unlimited, custom models, API)' },
-    contactInfo: { website: '/services/ai-customer-churn-prediction', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/ai-customer-churn-prediction', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Real-time churn probability scoring for every customer',
       'Root cause analysis: why each customer is at risk',
@@ -216,7 +216,7 @@ export const wave256AiServices: Service[] = [
     industry: 'FinTech',
     stage: 'published',
     pricing: { basic: '$199/mo (500 invoices/mo)', pro: '$499/mo (5,000 invoices, fraud rules)', enterprise: '$1,499/mo (unlimited, custom models, ERP integration)' },
-    contactInfo: { website: '/services/ai-invoice-fraud-detection', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/ai-invoice-fraud-detection', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'OCR extraction from PDF, email, scanned paper, and EDI',
       'Fraud detection: fake vendors, altered amounts, duplicate invoices',
@@ -244,7 +244,7 @@ export const wave256AiServices: Service[] = [
     industry: 'Productivity',
     stage: 'published',
     pricing: { basic: '$15/user/mo (20 meetings)', pro: '$35/user/mo (unlimited, action items)', enterprise: '$65/user/mo (API, custom integrations, SSO)' },
-    contactInfo: { website: '/services/ai-meeting-summarizer', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/ai-meeting-summarizer', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Real-time transcription with speaker identification',
       'AI-generated summaries: key decisions, discussion points, action items',

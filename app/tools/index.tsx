@@ -148,7 +148,7 @@ export default function ToolsIndexPage() {
             No signup required, no data stored.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4 mt-6">
-            <Link href="tel:+130****0950" className="btn-primary text-lg">☎ +1 302 464 0950</Link>
+            <Link href="tel:+5511976140076" className="btn-primary text-lg">☎ +55 11 97614-0076</Link>
             <a href="https://calendly.com/kleber-ziontechgroup" target="_blank" rel="noreferrer" className="btn-secondary text-lg">
               📅 Book Consultation
             </a>
@@ -213,7 +213,7 @@ export default function ToolsIndexPage() {
             We offer AI implementation, IT automation, managed support, and custom integrations for teams that want production-ready solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:+130****0950" className="btn-primary text-lg">☎ +1 302 464 0950</a>
+            <a href="tel:+5511976140076" className="btn-primary text-lg">☎ +55 11 97614-0076</a>
             <a href="https://calendly.com/kleber-ziontechgroup" target="_blank" rel="noreferrer" className="btn-secondary text-lg">
               📅 Book a Consultation
             </a>

@@ -12,7 +12,7 @@ export const wave278DataCenterServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: '$499/mo', pro: '$1,499/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'High-density colocation (40–100+ kW per rack)',
       'GPU cluster deployment and power distribution',
@@ -39,7 +39,7 @@ export const wave278DataCenterServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: '$399/mo', pro: '$1,199/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Workload assessment and placement strategy',
       'Cloud repatriation for analytics, ML, and databases',
@@ -66,7 +66,7 @@ export const wave278DataCenterServices: Service[] = [
     stage: 'published',
     popular: false,
     pricing: { basic: '$299/mo', pro: '$899/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Micro-data center siting and design',
       'Ruggedized enclosure options (remote, outdoor, industrial)',
@@ -93,7 +93,7 @@ export const wave278DataCenterServices: Service[] = [
     stage: 'published',
     popular: false,
     pricing: { basic: '$299/mo', pro: '$799/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Carbon footprint auditing and benchmarking',
       'Renewable PPA negotiation and procurement',
@@ -120,7 +120,7 @@ export const wave278DataCenterServices: Service[] = [
     stage: 'published',
     popular: false,
     pricing: { basic: '$499/mo', pro: '$1,499/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       '3D facility modeling with real-time telemetry sync',
       'Power distribution and cooling loop simulation',
@@ -147,7 +147,7 @@ export const wave278DataCenterServices: Service[] = [
     stage: 'published',
     popular: false,
     pricing: { basic: '$399/mo', pro: '$1,199/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Predictive failure detection with 90%+ accuracy',
       'Automated root-cause analysis and remediation',
@@ -174,7 +174,7 @@ export const wave278DataCenterServices: Service[] = [
       stage: 'published',
       popular: false,
       pricing: { basic: '$249/mo', pro: '$749/mo', enterprise: 'Custom' },
-      contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+      contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
       features: [
         'Structured cabling design and audit',
         'Copper and fiber optic deployment',
@@ -201,7 +201,7 @@ export const wave278DataCenterServices: Service[] = [
       stage: 'published',
       popular: false,
       pricing: { basic: '$349/mo', pro: '$999/mo', enterprise: 'Custom' },
-      contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+      contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
       features: [
         'Server and switch rack installation',
         'PDU and power distribution setup',
@@ -228,7 +228,7 @@ export const wave278DataCenterServices: Service[] = [
       stage: 'published',
       popular: false,
       pricing: { basic: '$299/mo', pro: '$899/mo', enterprise: 'Custom' },
-      contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+      contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
       features: [
         'Biometric and multi-factor access',
         'Man trap and mantrap design',

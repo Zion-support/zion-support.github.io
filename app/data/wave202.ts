@@ -13,7 +13,7 @@ export const wave202AiServices: Service[] = [
     stage: "published",
     popular: false,
     pricing: { basic: "$99/mo", pro: "$249/mo", enterprise: "$549/mo" },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "Satellite NDVI imagery analysis with field-level resolution",
       "Weather forecast integration with growing degree day models",
@@ -40,7 +40,7 @@ export const wave202AiServices: Service[] = [
     stage: "published",
     popular: true,
     pricing: { basic: "$499/mo", pro: "$1199/mo", enterprise: "$2499/mo" },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "Renewable generation forecasting (solar, wind) with 96h horizon",
       "Demand prediction with weather and event correlation",
@@ -67,7 +67,7 @@ export const wave202AiServices: Service[] = [
     stage: "published",
     popular: true,
     pricing: { basic: "$149/mo", pro: "$349/mo", enterprise: "$799/mo" },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "Resume parsing with skills extraction and experience mapping",
       "Bias detection and mitigation in screening criteria",
@@ -97,7 +97,7 @@ export const wave202DataServices: Service[] = [
     stage: "published",
     popular: true,
     pricing: { basic: "$299/mo", pro: "$699/mo", enterprise: "$1499/mo" },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "Real-time identity resolution across devices and channels",
       "Unified customer profile with 360-degree view",
@@ -127,7 +127,7 @@ export const wave202CloudServices: Service[] = [
     stage: "published",
     popular: false,
     pricing: { basic: "$249/mo", pro: "$549/mo", enterprise: "$1199/mo" },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "Automated failover orchestration across regions and clouds",
       "Continuous data replication with RPO monitoring",
@@ -157,7 +157,7 @@ export const wave202SecurityServices: Service[] = [
     stage: "published",
     popular: true,
     pricing: { basic: "$199/mo", pro: "$449/mo", enterprise: "$999/mo" },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "Content inspection across email, cloud storage, and endpoints",
       "User behavior analytics for insider threat detection",
@@ -187,7 +187,7 @@ export const wave202AutomationServices: Service[] = [
     stage: "published",
     popular: true,
     pricing: { basic: "$199/mo", pro: "$449/mo", enterprise: "$999/mo" },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "No-code visual bot designer with drag-and-drop actions",
       "AI document understanding for unstructured data processing",
@@ -217,7 +217,7 @@ export const wave202ItServices: Service[] = [
     stage: "published",
     popular: false,
     pricing: { basic: "$199/mo", pro: "$449/mo", enterprise: "$999/mo" },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "NetFlow/sFlow analysis with application-level visibility",
       "Full packet capture with intelligent filtering and storage",
@@ -247,7 +247,7 @@ export const wave202MicroSaasServices: Service[] = [
     stage: "published",
     popular: true,
     pricing: { basic: "$49/mo", pro: "$129/mo", enterprise: "$299/mo" },
-    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+55 11 97614-0076" },
     features: [
       "Multi-platform review monitoring (Google, Yelp, TripAdvisor, etc.)",
       "AI-powered response generation with brand voice matching",

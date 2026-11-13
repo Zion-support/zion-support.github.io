@@ -212,8 +212,8 @@ export default function HospitalityTourismPage() {
             Our autonomous AI agents analyze your business and deliver a roadmap to growth.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:+130****0950" className="btn-primary text-lg px-10 py-4">
-              ☎ +1 302 464 0950
+            <a href="tel:+5511976140076" className="btn-primary text-lg px-10 py-4">
+              ☎ +55 11 97614-0076
             </a>
             <a href="https://calendly.com/kleber-ziontechgroup" target="_blank" rel="noreferrer noreferrer" className="btn-secondary text-lg px-10 py-4">
               📅 Book Free Consultation

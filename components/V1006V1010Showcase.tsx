@@ -321,7 +321,7 @@ export default function V1006V1010Showcase() {
             </a>
           </div>
           <div className="text-gray-400 text-sm space-y-1">
-            <p>📞 <a href="tel:+13024640950" className="text-cyan-400 hover:underline">+1 302 464 0950</a> | ✉️ <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:underline">kleber@ziontechgroup.com</a></p>
+            <p>📞 <a href="tel:+5511976140076" className="text-cyan-400 hover:underline">+55 11 97614-0076</a> | ✉️ <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:underline">kleber@ziontechgroup.com</a></p>
             <p>📍 364 E Main St STE 1008, Middletown, DE 19709</p>
           </div>
         </div>

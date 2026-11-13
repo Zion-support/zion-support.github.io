@@ -16,7 +16,7 @@ export const wave252AiCodeSecurityServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: 'Free (200 tests/month, 1 user, public repos)', pro: '$100/user/month (unlimited tests, private repos)', enterprise: 'Custom (SSO, on-prem, custom policies, SLA)' },
-    contactInfo: { website: 'https://snyk.io', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://snyk.io', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'AI-powered vulnerability detection: find security issues in code, dependencies, containers, and IaC',
       'One-click fix: AI generates precise code fixes that developers can apply with a single click',
@@ -47,7 +47,7 @@ export const wave252NaturalLanguageDataServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: 'Free (open source, self-hosted)', pro: '$50/month (managed cloud, 100 queries/day, 5 users)', enterprise: 'Custom (unlimited queries, SSO, custom model training)' },
-    contactInfo: { website: 'https://vanna.ai', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://vanna.ai', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Natural language to SQL: ask questions in plain English and get accurate SQL',
       'Self-improving AI: learns from each query-result pair to improve accuracy',
@@ -78,7 +78,7 @@ export const wave252AiRecruitingServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: '$5,000/year (basic video interviewing, 100 assessments)', pro: '$25,000/year (AI assessments, analytics, 1,000 assessments)', enterprise: 'Custom (unlimited assessments, custom AI models, SLA)' },
-    contactInfo: { website: 'https://hirevue.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://hirevue.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'AI video interviewing: structured interviews with AI-powered competency assessment',
       'Game-based assessments: evaluate cognitive ability, personality, and job-relevant skills',
@@ -109,7 +109,7 @@ export const wave252DigitalTwinSimulationServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: '$5,000/year (Ansys Discovery, basic simulation, 1 user)', pro: '$25,000/year (full physics suite, digital twin builder, 5 users)', enterprise: 'Custom (unlimited users, HPC, custom physics, SLA)' },
-    contactInfo: { website: 'https://ansys.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://ansys.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Physics-based simulation: structural, thermal, fluid, electromagnetic analysis',
       'Live digital twins: combine simulation models with IoT sensor data',
@@ -140,7 +140,7 @@ export const wave252AiAccessibilityTestingServices: Service[] = [
     stage: 'published',
     popular: true,
     pricing: { basic: '$99/month (100 pages, basic WCAG 2.1 checks)', pro: '$499/month (1,000 pages, WCAG 2.2, AI fix suggestions)', enterprise: 'Custom (unlimited pages, custom compliance frameworks, SLA)' },
-    contactInfo: { website: 'https://accessibilityinspector.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: 'https://accessibilityinspector.com', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'AI-powered WCAG 2.2 testing: detect 3x more issues than rule-based tools',
       'Context-aware analysis: understand page semantics to catch issues traditional tools miss',

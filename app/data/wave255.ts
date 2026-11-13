@@ -14,7 +14,7 @@ export const wave255MicroSaasServices: Service[] = [
     industry: 'Product Launch',
     stage: 'published',
     pricing: { basic: '$15/mo (up to 1,000 waitlist signups)', pro: '$29/mo (up to 25,000 signups, referral program)', enterprise: 'Custom (unlimited signups, white-label, API access)' },
-    contactInfo: { website: '/services/waitlist-manager', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/waitlist-manager', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Position tracking: real-time waitlist position with estimated access timing',
       'Referral incentives: reward users for referring friends with tiered perks',
@@ -41,7 +41,7 @@ export const wave255MicroSaasServices: Service[] = [
     industry: 'Social Media Marketing',
     stage: 'published',
     pricing: { basic: '$9/mo (up to 5 links, basic analytics)', pro: '$25/mo (unlimited links, e-commerce, lead capture)', enterprise: 'Custom (unlimited links, white-label, custom domains, API access)' },
-    contactInfo: { website: '/services/link-in-bio-platform', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/link-in-bio-platform', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Analytics-rich pages: track clicks, geographic data, device type, and referral sources',
       'E-commerce integration: sell products, digital downloads, and services directly from your page',
@@ -68,7 +68,7 @@ export const wave255MicroSaasServices: Service[] = [
     industry: 'Client Management',
     stage: 'published',
     pricing: { basic: '$35/mo (up to 5 clients, basic portal)', pro: '$79/mo (up to 50 clients, full features)', enterprise: 'Custom (unlimited clients, white-label, custom domain, API access, SLA)' },
-    contactInfo: { website: '/services/client-portal-builder', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/client-portal-builder', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'File sharing: secure drag-and-drop file sharing with version history and permissions',
       'Project tracking: Kanban boards, Gantt charts, and milestone tracking for client projects',
@@ -95,7 +95,7 @@ export const wave255MicroSaasServices: Service[] = [
     industry: 'Customer Success',
     stage: 'published',
     pricing: { basic: '$12/mo (up to 200 responses/month, basic surveys)', pro: '$35/mo (up to 5,000 responses/month, advanced analytics)', enterprise: 'Custom (unlimited responses, custom branding, API access, dedicated support)' },
-    contactInfo: { website: '/services/satisfaction-survey-tool', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/satisfaction-survey-tool', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'NPS surveys: Net Promoter Score surveys with trend tracking and benchmarking',
       'CSAT surveys: Customer Satisfaction Score surveys for transactional and relationship feedback',
@@ -125,7 +125,7 @@ export const wave255ItServices: Service[] = [
     industry: 'Infrastructure',
     stage: 'published',
     pricing: { basic: '$2,500 (up to 5 VMs, basic support)', pro: '$10,000 (up to 50 VMs, live migration, HA clustering)', enterprise: 'Custom (unlimited VMs, dedicated infrastructure, 24/7 support, SLA)' },
-    contactInfo: { website: '/services/server-virtualization', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/server-virtualization', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'VMware/Hyper-V/KVM: support for all major hypervisor platforms based on your needs',
       'Live migration: move running VMs between physical hosts with zero downtime',
@@ -152,7 +152,7 @@ export const wave255ItServices: Service[] = [
     industry: 'IT Migration',
     stage: 'published',
     pricing: { basic: '$15/user (one-time, up to 50 users, standard migration)', pro: '$10/user (one-time, 50-500 users, zero downtime)', enterprise: 'Custom (unlimited users, staged migration, dedicated project manager)' },
-    contactInfo: { website: '/services/email-migration-service', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/email-migration-service', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Google Workspace migration: migrate to or from Google Workspace with full data transfer',
       'Microsoft 365 migration: seamless migration to or from Microsoft 365 and Exchange Online',
@@ -179,7 +179,7 @@ export const wave255ItServices: Service[] = [
     industry: 'Cybersecurity',
     stage: 'published',
     pricing: { basic: '$3,000 (external network testing, up to 256 IPs)', pro: '$8,000 (external + internal + web app testing)', enterprise: 'Custom (full scope, social engineering, red team, quarterly retesting)' },
-    contactInfo: { website: '/services/network-penetration-testing', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/network-penetration-testing', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'External network testing: identify vulnerabilities visible from the internet',
       'Internal network testing: assess lateral movement risks within your internal network',
@@ -209,7 +209,7 @@ export const wave255AiServices: Service[] = [
     industry: 'Content Safety',
     stage: 'published',
     pricing: { basic: '$0.001/request (up to 100,000 requests/month)', pro: '$0.0005/request (up to 10M requests/month, custom models)', enterprise: 'Custom (unlimited requests, dedicated infrastructure, custom training)' },
-    contactInfo: { website: '/services/ai-content-moderation', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/ai-content-moderation', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Text moderation: detect hate speech, profanity, threats, and harassment in 40+ languages',
       'Image moderation: identify NSFW, violent, and inappropriate images with 99.5% accuracy',
@@ -236,7 +236,7 @@ export const wave255AiServices: Service[] = [
     industry: 'E-Commerce',
     stage: 'published',
     pricing: { basic: '$99/mo (up to 100 products, basic monitoring)', pro: '$299/mo (up to 5,000 products, dynamic pricing)', enterprise: 'Custom (unlimited products, custom ML models, API access, dedicated support)' },
-    contactInfo: { website: '/services/ai-pricing-optimizer', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/ai-pricing-optimizer', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Competitor monitoring: real-time tracking of competitor prices across 100+ marketplaces',
       'Demand forecasting: AI predicts demand changes based on seasonality, trends, and events',
@@ -263,7 +263,7 @@ export const wave255AiServices: Service[] = [
     industry: 'Financial Services',
     stage: 'published',
     pricing: { basic: '$0.05/transaction (up to 10,000 transactions/month)', pro: '$0.03/transaction (up to 1M transactions/month, advanced models)', enterprise: 'Custom (unlimited transactions, custom models, dedicated infrastructure, SLA)' },
-    contactInfo: { website: '/services/ai-fraud-detection', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/ai-fraud-detection', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' },
     features: [
       'Transaction monitoring: real-time analysis of every transaction for fraud indicators',
       'Account takeover prevention: detect suspicious login patterns and credential stuffing attempts',

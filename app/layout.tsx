@@ -79,7 +79,7 @@ export default function RootLayout({
             name: 'Zion Tech Group',
             url: 'https://ziontechgroup.com',
             email: 'kleber@ziontechgroup.com',
-            telephone: '+1 302 464 0950',
+            telephone: '+55 11 97614-0076',
             address: '364 E Main St STE 1008, Middletown, DE 19709',
             sameAs: [
               'https://github.com/zion-support',

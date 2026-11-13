@@ -22,7 +22,7 @@ export const wave289ItServices = [
     contactInfo: {
       website: "/services/it-service-lifespan-dashboard",
       email: "kleber@ziontechgroup.com",
-      phone: "+1 302 464 0950",
+      phone: "+55 11 97614-0076",
     },
     icon: "🗓️",
     href: "/services/it-service-lifespan-dashboard",
@@ -54,7 +54,7 @@ export const wave289ItServices = [
     contactInfo: {
       website: "/services/it-vpn-health-monitor",
       email: "kleber@ziontechgroup.com",
-      phone: "+1 302 464 0950",
+      phone: "+55 11 97614-0076",
     },
     icon: "🔒",
     href: "/services/it-vpn-health-monitor",
@@ -86,7 +86,7 @@ export const wave289ItServices = [
     contactInfo: {
       website: "/services/it-configuration-drift-detector",
       email: "kleber@ziontechgroup.com",
-      phone: "+1 302 464 0950",
+      phone: "+55 11 97614-0076",
     },
     icon: "🧭",
     href: "/services/it-configuration-drift-detector",
@@ -118,7 +118,7 @@ export const wave289ItServices = [
     contactInfo: {
       website: "/services/it-user-onboarding-factory",
       email: "kleber@ziontechgroup.com",
-      phone: "+1 302 464 0950",
+      phone: "+55 11 97614-0076",
     },
     icon: "🚀",
     href: "/services/it-user-onboarding-factory",
@@ -150,7 +150,7 @@ export const wave289ItServices = [
     contactInfo: {
       website: "/services/it-access-governance-hub",
       email: "kleber@ziontechgroup.com",
-      phone: "+1 302 464 0950",
+      phone: "+55 11 97614-0076",
     },
     icon: "🛡️",
     href: "/services/it-access-governance-hub",
