@@ -3,7 +3,7 @@
 
 import { useState, useMemo, useEffect, useCallback } from 'react';
 import Link from 'next/link';
-import { allServices, type Service } from '@/data/servicesData';
+import { allServices, type Service } from '@/data/servicesClientData';
 import { CATEGORIES, type CategoryMeta } from '@/constants/categories';
 
 // ──── Type Definitions ────

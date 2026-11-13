@@ -3,7 +3,7 @@
 
 import { useState, useMemo } from 'react';
 import Link from 'next/link';
-import { allServices, type Service } from '@/data/servicesData';
+import { allServices, type Service } from '@/data/servicesClientData';
 import { CATEGORIES } from '@/constants/categories';
 import AnimatedCounter from '@/components/AnimatedCounter';
 

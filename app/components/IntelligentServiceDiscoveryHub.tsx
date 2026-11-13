@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useMemo, useCallback } from 'react';
 import Link from 'next/link';
-import { allServices, type Service } from '../data/servicesData';
+import { allServices, type Service } from '../data/servicesClientData';
 
 // Smart navigation categories with priority ordering
 const SMART_CATEGORIES = [

@@ -1,6 +1,10 @@
 /** @type {import('next').NextConfig} */
 import path from 'node:path';
 import { getHeapStatistics } from 'node:v8';
+import clientCatalog from './scripts/client-catalog.cjs';
+
+// Covers npm and direct Next CLI builds/development; content hashes avoid stale data.
+clientCatalog.ensureClientCatalog(process.cwd());
 
 // Observe compiler phases without retaining modules, paths, or source content.
 class BuildMemoryPhases {
@@ -74,6 +78,7 @@ const nextConfig = {
     };
     // Reduce memory usage during build
     if (!isServer) {
+      config.plugins.push(new clientCatalog.ClientCatalogBoundaryPlugin());
       config.optimization = {
         ...config.optimization,
         splitChunks: {

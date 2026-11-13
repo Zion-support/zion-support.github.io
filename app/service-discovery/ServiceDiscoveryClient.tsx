@@ -3,7 +3,7 @@
 
 import { useState, useMemo } from 'react';
 import Link from 'next/link';
-import { allServices } from '../data/servicesData';
+import { allServices } from '../data/servicesClientData';
 
 // Industry definitions with comprehensive coverage
 const INDUSTRIES = [

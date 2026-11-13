@@ -126,14 +126,14 @@ function main() {
     missingCount: missing.length,
     artifactsGenerated: regenerated,
     buildError,
-    next: missing.length === 0
+    next: missing.length === 0 && !buildError
       ? 'verified local static export'
       : 'build regression — inspect referenced scripts/logs',
   };
 
   fs.writeFileSync(statePath, JSON.stringify(state, null, 2));
   console.log(JSON.stringify(state, null, 2));
-  process.exit(missing.length === 0 ? 0 : 2);
+  process.exit(missing.length === 0 && !buildError ? 0 : 2);
 }
 
 try { main(); } catch (e) { console.error(e); process.exit(1); }

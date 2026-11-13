@@ -1,5 +1,5 @@
 // app/data/searchServices.ts - Search index for services
-import { allServices, type Service } from './servicesData';
+import { allServices, type Service } from './servicesClientData';
 
 // Generate search index from services
 const searchServices = allServices.map((s: any) => ({

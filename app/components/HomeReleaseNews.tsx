@@ -15,7 +15,7 @@ export default function HomeReleaseNews({ initialServices, knownReleaseIds }: { 
         const known = new Set(knownReleaseIds);
         // An independently refreshed release file may reference other catalog entries.
         if (entries.some((entry: any) => !known.has(entry.id))) {
-          const { allServices } = await import('../data/servicesData');
+          const { allServices } = await import('../data/servicesClientData');
           if (ac.signal.aborted) return;
           const wanted = new Set(entries.map((entry: any) => entry.id));
           setReleaseServices(allServices.filter(service => wanted.has(service.id)).map(({id, title, href}) => ({id, title, href})));

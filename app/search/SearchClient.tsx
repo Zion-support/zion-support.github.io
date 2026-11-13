@@ -3,7 +3,7 @@
 
 import { useState, useMemo } from 'react';
 import Link from 'next/link';
-import { allServices, type Service } from '@/data/servicesData';
+import { allServices, type Service } from '@/data/servicesClientData';
 
 const CATEGORIES = [
   { key: 'ai', label: 'AI Services', emoji: '🧠', color: 'from-purple-500 to-indigo-500', count: 2148 },

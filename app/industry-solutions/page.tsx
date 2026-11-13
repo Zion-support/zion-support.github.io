@@ -4,7 +4,7 @@
 import Link from 'next/link';
 import { INDUSTRY_SERVICES } from '@/components/SmartRecommendationEngine';
 import SmartRecommendationEngine from '@/components/SmartRecommendationEngine';
-import { allServices } from '@/data/servicesData';
+import { allServices } from '@/data/servicesClientData';
 
 const INDUSTRY_CONFIG = [
   {

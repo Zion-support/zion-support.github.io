@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useMemo, useCallback } from 'react';
-import { allServices, type Service } from '@/data/servicesData';
+import { allServices, type Service } from '@/data/servicesClientData';
 import { CATEGORIES } from '@/constants/categories';
 
 // Industry mapping for filtering

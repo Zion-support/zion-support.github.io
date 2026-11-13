@@ -3,7 +3,7 @@
 import { pingTool } from '@/data/tools_ping_client';
 
 import { useState, useMemo, useEffect } from 'react';
-import { allServices, type Service } from '../../data/servicesData';
+import { allServices, type Service } from '../../data/servicesClientData';
 import Link from 'next/link';
 import SmartServiceCard from '@/components/SmartServiceCard';
 

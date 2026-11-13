@@ -112,3 +112,6 @@ Google Drive
 .worker-assets/
 .worker-assets.report.json
 .worker-assets.failed.json
+
+# Generated browser catalog and its atomic-write/cache files
+/app/data/servicesClientData.generated.*

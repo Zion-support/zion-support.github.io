@@ -3,7 +3,7 @@
 // app/recommendations/page.tsx - AI-Powered Service Recommendations
 import { useState } from 'react';
 import Link from 'next/link';
-import { allServices, type Service } from '@/data/servicesData';
+import { allServices, type Service } from '@/data/servicesClientData';
 
 // Recommendation engine based on business needs
 const RECOMMENDATION_SETS = [

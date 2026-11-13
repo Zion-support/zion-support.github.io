@@ -4,7 +4,7 @@ import { pingTool } from '@/data/tools_ping_client';
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { allServices, type Service } from '../../data/servicesData';
+import { allServices, type Service } from '../../data/servicesClientData';
 
 const questions = [
   { id: 'category', label: 'What area do you need help with?', options: ['AI & Automation', 'IT Infrastructure', 'Cloud & DevOps', 'Data & Analytics', 'Cybersecurity'] },

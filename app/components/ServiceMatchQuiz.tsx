@@ -3,7 +3,7 @@
 import { useState, useMemo } from 'react';
 import Link from 'next/link';
 import ServiceMatchQuizIntro from './ServiceMatchQuizIntro';
-import { allServices } from '../data/servicesData';
+import { allServices } from '../data/servicesClientData';
 
 // ── Quiz Questions ──
 const QUESTIONS = [
