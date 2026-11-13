@@ -130,16 +130,22 @@ function relatedOf(app, limit = 4) {
   return out;
 }
 
+function catalogLink(item) {
+  const portuguese = item.href === '/discovery/';
+  const label = item.name + (portuguese ? ' (PT-BR)' : '');
+  return `<a href="${item.href}"${portuguese ? ' hreflang="pt-BR"' : ''}>${esc(label)}</a>`;
+}
+
 function renderGroup(group, label, t) {
   const items = apps.filter((a) => a.group === group);
   if (!items.length) return '';
   const cards = items
     .map((app) => {
       const rel = relatedOf(app)
-        .map((r) => `<a href="${r.href}">${esc(r.name)}</a>`)
+        .map((r) => catalogLink(r))
         .join('');
       return `<div class="card">
-  <h3><a href="${app.href}">${esc(app.name)}</a></h3>
+  <h3>${catalogLink(app)}</h3>
   <p>${esc(app.description)}</p>
   ${rel ? `<div class="rel">${rel}</div>` : ''}
 </div>`;
@@ -160,7 +166,7 @@ const groups = GROUP_ORDER.map((g) => renderGroup(g, GROUP_LABEL.en[g] || g, t))
 
 const langNav = LANGS.map(
   (l) =>
-    `<a href="${l.prefix ? `/${l.prefix}` : ''}/apps-network/"${l.code === 'en' ? ' aria-current="true"' : ''}>${l.code.toUpperCase()}</a>`
+    `<a href="/${l.prefix}apps-network/"${l.code === 'en' ? ' aria-current="true"' : ''}>${l.code.toUpperCase()}</a>`
 ).join('');
 
 const html = `<!DOCTYPE html>
@@ -172,7 +178,7 @@ const html = `<!DOCTYPE html>
 <meta name="description" content="Zion Apps Network: ${apps.length} interlinked AI, FinOps, security, operations and field-service apps, each with related-tool links. Free to try, no credit card.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="${SITE}/apps-network/">
-${LANGS.map((l) => `  <link rel="alternate" hreflang="${l.code}" href="${l.prefix ? `${SITE}/${l.prefix}` : SITE}/apps-network/">`).join('\n')}
+${LANGS.map((l) => `  <link rel="alternate" hreflang="${l.code}" href="${SITE}/${l.prefix}apps-network/">`).join('\n')}
   <link rel="alternate" hreflang="x-default" href="${SITE}/apps-network/">
 <script type="application/ld+json">${JSON.stringify({
   '@context': 'https://schema.org',
@@ -199,7 +205,7 @@ ${LANGS.map((l) => `  <link rel="alternate" hreflang="${l.code}" href="${l.prefi
       <h1>Zion Apps Network</h1>
       <p class="lede">Production-ready AI, FinOps, security, operations and field-service apps — every one interlinked with its siblings, so you never hit a dead end. Free to try, no credit card.</p>
       <div class="cta-row">
-        <a class="btn" href="/discovery/">Start Free Discovery</a>
+        <a class="btn" href="/discovery/" hreflang="pt-BR">Start Free Discovery — Questionnaire in Portuguese (PT-BR)</a>
         <a class="btn alt" href="/apps/">Live catalog</a>
       </div>
       <div class="stats">
@@ -220,7 +226,7 @@ ${groups}
       <h2>Need these capabilities in production?</h2>
       <p class="note">Start with a free Discovery — one process, one report, one 30-minute session — then scope a pilot with measurable KPIs.</p>
       <div class="cta-row">
-        <a class="btn" href="/discovery/">Start Free Discovery</a>
+        <a class="btn" href="/discovery/" hreflang="pt-BR">Start Free Discovery — Questionnaire in Portuguese (PT-BR)</a>
         <a class="btn alt" href="/pricing/">View pricing</a>
       </div>
     </section>

@@ -607,8 +607,8 @@ export const APPS = [
 
 /** Apps that already have a live page — used for the "related" cards. */
 export const RELATED_CATALOG = [
-  { slug: 'roi-calc', name: 'ROI Calculator', href: '/roi-calc/', group: 'money', description: 'Hours leaked vs Discovery / Consulting / Starter.' },
-  { slug: 'finops-estimator', name: 'FinOps Estimator', href: '/finops-estimator/', group: 'money', description: 'Compute, storage, egress and model spend sketch.' },
+  { slug: 'roi-calc', name: 'AI ROI Calculator', href: '/roi-calculator/', group: 'money', description: 'Model illustrative automation ROI from manual hours, costs and assumptions in USD.' },
+  { slug: 'finops-estimator', name: 'FinOps scenario estimator', href: '/apps/finops-scenario-estimator.html', group: 'money', description: 'Compare an illustrative cloud-cost scenario from manual USD assumptions; no cloud account connection.' },
   { slug: 'sla-calculator', name: 'SLA Calculator', href: '/sla-calculator/', group: 'ops', description: 'Allowed downtime and penalty exposure.' },
   { slug: 'ai-governance-checklist', name: 'AI Governance Checklist', href: '/ai-governance-checklist/', group: 'govern', description: 'Ten controls. Live readiness score.' },
   { slug: 'llm-gateway', name: 'LLM Gateway', href: '/llm-gateway/', group: 'ai', description: 'Smart model routing, caching & failover.' },

@@ -103,14 +103,16 @@ const FILLER_SLUGS = [
 function relatedFor(app, lang = LANGS[0]) {
   const out = [];
   const seen = new Set([app.slug]);
-  const hrefFor = (slug) =>
-    lang.code !== 'en' && fs.existsSync(path.join(PUBLIC, lang.prefix, slug, 'index.html'))
-      ? `${lang.prefix}${slug}/`
-      : `/${slug}/`;
+  // Localize generated siblings only; preserve reviewed destinations for other tools.
+  // A matching localized file can be a placeholder, not a verified translation.
+  const hrefFor = (slug, meta) =>
+    lang.code !== 'en' && APPS.some((a) => a.slug === slug)
+      ? `/${lang.prefix}${slug}/`
+      : meta.href || `/${slug}/`;
   const push = (slug, meta) => {
     if (seen.has(slug) || !AVAILABLE.has(slug)) return;
     seen.add(slug);
-    out.push({ ...meta, href: hrefFor(slug) });
+    out.push({ ...meta, href: hrefFor(slug, meta) });
   };
   for (const slug of app.related) {
     const mine = APPS.find((a) => a.slug === slug);
@@ -134,9 +136,15 @@ function relatedFor(app, lang = LANGS[0]) {
   return out.slice(0, 6);
 }
 
-function langSwitch(current) {
+function discoveryCta(lang, t) {
+  const notice = {en: 'Questionnaire in Portuguese (PT-BR)', pt: '', es: 'Cuestionario en portugués (PT-BR)', fr: 'Questionnaire en portugais (PT-BR)', de: 'Fragebogen auf Portugiesisch (PT-BR)'};
+  const label = t.ctaPrimary + (notice[lang.code] ? ' — ' + notice[lang.code] : '');
+  return `<a class="btn" href="/discovery/" hreflang="pt-BR">${esc(label)}</a>`;
+}
+
+function langSwitch(current, slug) {
   return LANGS.map((l) => {
-    const href = pageUrl(l, current.slug);
+    const href = pageUrl(l, slug);
     const currentAttr = l.code === current.code ? ' aria-current="true"' : '';
     return `<a href="${href}"${currentAttr} hreflang="${l.code}">${l.code.toUpperCase()}</a>`;
   }).join('');
@@ -202,7 +210,7 @@ ${hreflangBlock(app)}
 <header class="site">
   <div class="wrap">
     <a class="brand" href="${lang.prefix ? `/${lang.prefix}` : '/'}">Zion <span>Apps Network</span></a>
-    <nav class="langs" aria-label="${esc(t.langSwitch)}">${langSwitch(lang)}</nav>
+    <nav class="langs" aria-label="${esc(t.langSwitch)}">${langSwitch(lang, app.slug)}</nav>
   </div>
 </header>
 <main id="main">
@@ -212,7 +220,7 @@ ${hreflangBlock(app)}
       <h1>${esc(app.name[lang.code])}</h1>
       <p class="lede">${esc(app.tagline[lang.code])}</p>
       <div class="cta-row">
-        <a class="btn" href="/discovery/">${esc(t.ctaPrimary)}</a>
+        ${discoveryCta(lang, t)}
         <a class="btn alt" href="/pricing/">${esc(t.ctaSecondary)}</a>
       </div>
       <div class="badges">
@@ -253,8 +261,8 @@ ${relatedCards}
       <h2>${esc(t.ctaTitle)}</h2>
       <p class="note">${esc(t.ctaBody)}</p>
       <div class="cta-row">
-        <a class="btn" href="/discovery/">${esc(t.ctaPrimary)}</a>
-        <a class="btn alt" href="${lang.prefix ? `/${lang.prefix}` : ''}/apps-network/">${esc(t.hubLink)}</a>
+        ${discoveryCta(lang, t)}
+        <a class="btn alt" href="/${lang.prefix}apps-network/">${esc(t.hubLink)}</a>
       </div>
     </section>
   </div>
@@ -262,7 +270,7 @@ ${relatedCards}
 <footer>
   <div class="wrap">
     <div>Zion Apps Network · <a href="${lang.prefix ? `/${lang.prefix}` : '/'}">Zion Tech Group</a></div>
-    <div class="langs">${langSwitch(lang)}</div>
+    <div class="langs">${langSwitch(lang, app.slug)}</div>
   </div>
 </footer>
 </body>
@@ -287,7 +295,8 @@ for (const app of APPS) {
 // Localized index pages for the new apps, so every language has a real landing
 // page under /<lang>/apps-network/ that interlinks back into the network.
 for (const lang of LANGS) {
-  if (lang.code === 'en') continue;
+  // EN and PT hubs belong to the complete catalog generator; never shrink PT to 15 apps.
+  if (lang.code === 'en' || lang.code === 'pt') continue;
   const t = T[lang.code];
   const cards = APPS.map((app) => {
     const related = relatedFor(app, lang)
@@ -296,7 +305,7 @@ for (const lang of LANGS) {
       .join('');
     return `<div class="card">
   <div class="g">${esc(GROUP_LABEL[lang.code][app.group] || app.group)}</div>
-  <h3><a href="${lang.prefix}${app.slug}/">${esc(app.name[lang.code])}</a></h3>
+  <h3><a href="/${lang.prefix}${app.slug}/">${esc(app.name[lang.code])}</a></h3>
   <p>${esc(app.tagline[lang.code])}</p>
   <ul class="rel">${related}</ul>
 </div>`;
@@ -318,7 +327,7 @@ ${hreflangBlock({ slug: 'apps-network' })}
 <header class="site">
   <div class="wrap">
     <a class="brand" href="/${lang.prefix}">Zion <span>Apps Network</span></a>
-    <nav class="langs" aria-label="${esc(t.langSwitch)}">${langSwitch(lang).replaceAll(`/${lang.prefix}apps-network/`, `/${lang.prefix}apps-network/`)}</nav>
+    <nav class="langs" aria-label="${esc(t.langSwitch)}">${langSwitch(lang, 'apps-network')}</nav>
   </div>
 </header>
 <main id="main">
@@ -328,7 +337,7 @@ ${hreflangBlock({ slug: 'apps-network' })}
       <h1>Zion Apps Network</h1>
       <p class="lede">${APPS.length} ${lang.code === 'pt' ? 'aplicativos publicados em cinco idiomas, todos interligados.' : lang.code === 'es' ? 'aplicaciones publicadas en cinco idiomas, todas interconectadas.' : lang.code === 'fr' ? 'applications publiées en cinq langues, toutes interconnectées.' : 'Apps in fünf Sprachen veröffentlicht und alle vernetzt.'}</p>
       <div class="cta-row">
-        <a class="btn" href="/discovery/">${esc(t.ctaPrimary)}</a>
+        ${discoveryCta(lang, t)}
         <a class="btn alt" href="/${lang.prefix}apps/">${esc(t.allApps)}</a>
       </div>
     </div>
@@ -360,7 +369,7 @@ for (const app of APPS) {
   }
 }
 for (const lang of LANGS) {
-  sitemapUrls.push(`  <url><loc>${lang.prefix ? `${SITE}/${lang.prefix}` : SITE}/apps-network/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>`);
+  sitemapUrls.push(`  <url><loc>${pageUrl(lang, 'apps-network')}</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>`);
 }
 write(
   path.join(PUBLIC, 'apps-network-sitemap.xml'),
