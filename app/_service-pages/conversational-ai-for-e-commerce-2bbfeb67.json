@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/conversational-ai-for-e-commerce-2bbfeb67",
+  "breadcrumbTitle": "Conversational AI for E-Commerce",
+  "title": "Conversational AI for E-Commerce",
+  "description": "Natural language processing system that handles e-commerce inquiries through intelligent chatbots.",
+  "basic": "$179/month",
+  "pro": "$449/month",
+  "enterprise": "$1349/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Conversational AI for E-Commerce - Zion Tech Group",
+    "description": "Natural language processing system that handles e-commerce inquiries through intelligent chatbots.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/conversational-ai-for-e-commerce-2bbfeb67"
+    }
+  },
+  "features": [
+    "Natural language understanding",
+    "Multi-language support",
+    "Context awareness",
+    "Seamless handoff"
+  ],
+  "benefits": [
+    "24/7 availability",
+    "Instant response times",
+    "Consistent service quality",
+    "Reduced support costs"
+  ]
+}

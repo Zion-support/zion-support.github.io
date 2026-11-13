@@ -1,0 +1,29 @@
+{
+  "title": "AI Customer Support Agent",
+  "description": "Fully automated 24/7 customer support using RAG + LLMs: answer FAQs, troubleshoot issues, process returns, and escalate complex tickets with context handoff.",
+  "basic": "$99/mo/month",
+  "pro": "$299/mo/month",
+  "enterprise": "$999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Customer Support Agent - Zion Tech Group",
+    "description": "Fully automated 24/7 customer support using RAG + LLMs: answer FAQs, troubleshoot issues, process returns, and escalate complex tickets with context handoff.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-customer-support-agent"
+    }
+  },
+  "features": [
+    "Multilingual support (50+ languages)",
+    "Integrations: Zendesk, Intercom, Salesforce",
+    "Document retrieval from knowledge base (RAG)",
+    "Sentiment-aware responses & escalation",
+    "Analytics: resolution rate, CSAT impact"
+  ],
+  "benefits": [
+    "Reduce costs with ai customer support agent",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/manager-ai---hospitality-875b7516",
+  "breadcrumbTitle": "Manager AI - Hospitality",
+  "title": "Manager AI - Hospitality",
+  "description": "Revolutionize hospitality through intelligent automation. Our Manager AI - Hospitality leverages advanced machine learning to deliver data processing at scale.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Manager AI - Hospitality - Zion Tech Group",
+    "description": "Revolutionize hospitality through intelligent automation. Our Manager AI - Hospitality leverages advanced machine learning to deliver data processing at scale.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/manager-ai---hospitality-875b7516"
+    }
+  },
+  "features": [
+    "SOC 2 certified",
+    "Microservices deployment",
+    "Custom integrations",
+    "Multi-region deployment",
+    "Real-time processing"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "Seamless integration with existing systems",
+    "ROI in under 90 days",
+    "Intelligent load balancing"
+  ]
+}

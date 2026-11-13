@@ -1,0 +1,27 @@
+{
+  "title": "Cybersecurity Audit",
+  "description": "Professional cybersecurity audit services by Zion Tech Group. Advanced AI and technology solutions.",
+  "basic": "$99/mo/month",
+  "pro": "$349/mo/month",
+  "enterprise": "$1,299/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Cybersecurity Audit - Zion Tech Group",
+    "description": "Professional cybersecurity audit services by Zion Tech Group. Advanced AI and technology solutions.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cybersecurity-audit"
+    }
+  },
+  "features": [
+    "Enterprise-grade implementation",
+    "24/7 monitoring",
+    "Compliance-ready"
+  ],
+  "benefits": [
+    "Reduce costs with cybersecurity audit",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/insights-intelligent---manufacturing-7f320051",
+  "breadcrumbTitle": "Insights Intelligent - Manufacturing",
+  "title": "Insights Intelligent - Manufacturing",
+  "description": "Revolutionize Manufacturing through intelligent automation. Our Insights Intelligent - Manufacturing leverages advanced machine learning to deliver sales foreca",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Insights Intelligent - Manufacturing - Zion Tech Group",
+    "description": "Revolutionize Manufacturing through intelligent automation. Our Insights Intelligent - Manufacturing leverages advanced machine learning to deliver sales foreca",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/insights-intelligent---manufacturing-7f320051"
+    }
+  },
+  "features": [
+    "Version control with rollback capabilities",
+    "Machine learning integration with automatic model training",
+    "Maintenance scheduling with predictive analytics",
+    "Cost reduction with process mining",
+    "Cloud-native architecture with multi-region deployment"
+  ],
+  "benefits": [
+    "Improved quality with automated testing and validation",
+    "Seamless integration with existing systems and workflows",
+    "Improved conversion rates with personalization",
+    "Better risk management with predictive analytics"
+  ]
+}

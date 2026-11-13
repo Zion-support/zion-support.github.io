@@ -1,0 +1,29 @@
+{
+  "title": "Legacy App Modernization",
+  "description": "Transform legacy applications to cloud-native architectures.",
+  "basic": "$N/A/month",
+  "pro": "$N/A/month",
+  "enterprise": "$N/A/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Legacy App Modernization - Zion Tech Group",
+    "description": "Transform legacy applications to cloud-native architectures.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-application-modernization"
+    }
+  },
+  "features": [
+    "Assessment",
+    "Architecture design",
+    "Refactoring",
+    "Re-platforming",
+    "API layer"
+  ],
+  "benefits": [
+    "Modern architecture",
+    "Cloud-native",
+    "Cost reduction",
+    "Faster delivery"
+  ]
+}

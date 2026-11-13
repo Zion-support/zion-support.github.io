@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/automated-code-insights-4b9567e4",
+  "breadcrumbTitle": "Automated Code Insights",
+  "title": "Automated Code Insights",
+  "description": "Transform your media operations with our Automated Code Insights. This AI-driven solution automates customer insights with unprecedented accuracy and efficiency",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated Code Insights - Zion Tech Group",
+    "description": "Transform your media operations with our Automated Code Insights. This AI-driven solution automates customer insights with unprecedented accuracy and efficiency",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-code-insights-4b9567e4"
+    }
+  },
+  "features": [
+    "Serverless functions",
+    "Multi-language support",
+    "Zero-downtime updates",
+    "Audit trails",
+    "SOC 2 certified"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "ROI in under 90 days",
+    "24/7 automated operations",
+    "50% reduction in operational costs"
+  ]
+}

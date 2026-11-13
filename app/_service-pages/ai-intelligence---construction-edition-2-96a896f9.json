@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/ai-intelligence---construction-edition-2-96a896f9",
+  "breadcrumbTitle": "AI Intelligence - Construction Edition #2",
+  "title": "AI Intelligence - Construction Edition #2",
+  "description": "Next-generation construction solution: AI Intelligence - Construction Edition #2. Combines workflow management with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Intelligence - Construction Edition #2 - Zion Tech Group",
+    "description": "Next-generation construction solution: AI Intelligence - Construction Edition #2. Combines workflow management with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-intelligence---construction-edition-2-96a896f9"
+    }
+  },
+  "features": [
+    "Edge computing support",
+    "Serverless functions",
+    "Machine learning integration",
+    "Role-based access control"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "Predictive maintenance scheduling",
+    "Automated compliance reporting"
+  ]
+}

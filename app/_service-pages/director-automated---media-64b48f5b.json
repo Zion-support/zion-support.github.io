@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/director-automated---media-64b48f5b",
+  "breadcrumbTitle": "Director Automated - Media",
+  "title": "Director Automated - Media",
+  "description": "Next-generation media solution: Director Automated - Media. Combines supply chain with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Director Automated - Media - Zion Tech Group",
+    "description": "Next-generation media solution: Director Automated - Media. Combines supply chain with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/director-automated---media-64b48f5b"
+    }
+  },
+  "features": [
+    "Multi-language support",
+    "Plugin architecture",
+    "GDPR compliance",
+    "Auto-scaling capabilities"
+  ],
+  "benefits": [
+    "Dynamic resource allocation",
+    "Intelligent load balancing",
+    "Scalable to millions of transactions",
+    "50% reduction in operational costs"
+  ]
+}

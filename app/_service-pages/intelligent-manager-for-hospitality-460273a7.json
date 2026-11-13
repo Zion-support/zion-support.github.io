@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligent-manager-for-hospitality-460273a7",
+  "breadcrumbTitle": "Intelligent Manager for Hospitality",
+  "title": "Intelligent Manager for Hospitality",
+  "description": "Transform your hospitality operations with our Intelligent Manager for Hospitality. This AI-driven solution automates fraud prevention with unprecedented accura",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Manager for Hospitality - Zion Tech Group",
+    "description": "Transform your hospitality operations with our Intelligent Manager for Hospitality. This AI-driven solution automates fraud prevention with unprecedented accura",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-manager-for-hospitality-460273a7"
+    }
+  },
+  "features": [
+    "GDPR compliance",
+    "Machine learning integration",
+    "Audit trails",
+    "SOC 2 certified",
+    "Serverless functions"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "99.9% uptime guarantee",
+    "Scalable to millions of transactions",
+    "Performance benchmarking"
+  ]
+}

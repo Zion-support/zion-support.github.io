@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "Event Driven Architecture: case study | Zion Tech Group",
+    "description": "Event Driven Architecture: case study",
+    "keywords": [
+      "security",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "Event Driven Architecture: case study",
+      "description": "Event Driven Architecture: case study",
+      "url": "https://ziontechgroup.com/blog/event-driven-architecture-case-study/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/event-driven-architecture-case-study/"
+    }
+  },
+  "values": [
+    "Event Driven Architecture: case study",
+    "Event Driven Architecture: case study",
+    "Event Driven Architecture: case study",
+    "Recommended next step",
+    "Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "Recommended next step",
+    " Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "/blog/etl-pipeline-optimization-2026-6753",
+    "Etl Pipeline Optimization 2026 6753",
+    "/blog/autonomous-code-deployment-2026-6936",
+    "Autonomous Code Deployment 2026 6936",
+    "/blog/api-gateway-management-2026-6529",
+    "Api Gateway Management 2026 6529",
+    "/blog/enterprise-ai-intelligence-hub-2026-6579",
+    "Enterprise Ai Intelligence Hub 2026 6579"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Event Driven Architecture: case study",
+    "description": "Event Driven Architecture: case study",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T04:51:53Z",
+    "dateModified": "2026-08-07T04:51:53Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/event-driven-architecture-case-study/"
+  }
+}

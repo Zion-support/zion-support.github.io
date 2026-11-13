@@ -1,0 +1,29 @@
+{
+  "title": "Micro-SaaS Customer Health Score Platform",
+  "description": "B2B SaaS customer health monitoring that aggregates product usage, support tickets, NPS scores, and payment history into a single health score. Predicts churn 60 days in advance.",
+  "basic": "$99/mo/month",
+  "pro": "$299/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Micro-SaaS Customer Health Score Platform - Zion Tech Group",
+    "description": "B2B SaaS customer health monitoring that aggregates product usage, support tickets, NPS scores, and payment history into a single health score. Predicts churn 6",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-customer-health-score"
+    }
+  },
+  "features": [
+    "Composite health score (0-100) per customer account",
+    "Product usage tracking and feature adoption metrics",
+    "Support ticket sentiment analysis and escalation triggers",
+    "NPS/CSAT survey automation and trend analysis",
+    "Payment history and contract renewal tracking"
+  ],
+  "benefits": [
+    "Predict churn 60 days before it happens",
+    "Prioritize CSM time on highest-risk accounts",
+    "Increase net revenue retention by 15-25%",
+    "Data-driven renewal and expansion conversations"
+  ]
+}

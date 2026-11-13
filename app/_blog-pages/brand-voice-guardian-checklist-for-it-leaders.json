@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "Brand Voice Guardian: checklist for IT leaders | Zion Tech Group",
+    "description": "Brand Voice Guardian: checklist for IT leaders",
+    "keywords": [
+      "it",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "Brand Voice Guardian: checklist for IT leaders",
+      "description": "Brand Voice Guardian: checklist for IT leaders",
+      "url": "https://ziontechgroup.com/blog/brand-voice-guardian-checklist-for-it-leaders/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/brand-voice-guardian-checklist-for-it-leaders/"
+    }
+  },
+  "values": [
+    "Brand Voice Guardian: checklist for IT leaders",
+    "Brand Voice Guardian: checklist for IT leaders",
+    "Brand Voice Guardian: checklist for IT leaders",
+    "Next actions",
+    "Review your highest-friction workflow, contact Zion Tech Group for a scoped pilot, and start with one measurable outcome. Set a 30-day review date, define success metrics, assign an owner, and document rollback criteria before expanding. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan. The organizations that move fastest in 2026 are the ones that combine clear intent with disciplined execution.",
+    "Next actions",
+    " Review your highest-friction workflow, contact Zion Tech Group for a scoped pilot, and start with one measurable outcome. Set a 30-day review date, define success metrics, assign an owner, and document rollback criteria before expanding. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan. The organizations that move fastest in 2026 are the ones that combine clear intent with disciplined execution.",
+    "/blog/api-gateway-management-evaluation-framework",
+    "Api Gateway Management Evaluation Framework",
+    "/blog/micro-saas-ai-hr-recruitment-2026-6921",
+    "Micro Saas Ai Hr Recruitment 2026 6921",
+    "/blog/devsecops-pipeline-automation-roadmap",
+    "Devsecops Pipeline Automation Roadmap",
+    "/blog/devsecops-pipeline-2026",
+    "Devsecops Pipeline 2026"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Brand Voice Guardian: checklist for IT leaders",
+    "description": "Brand Voice Guardian: checklist for IT leaders",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T08:42:51Z",
+    "dateModified": "2026-08-07T08:42:51Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/brand-voice-guardian-checklist-for-it-leaders/"
+  }
+}

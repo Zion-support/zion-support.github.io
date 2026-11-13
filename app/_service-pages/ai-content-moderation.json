@@ -1,0 +1,29 @@
+{
+  "title": "AI Content Moderation Platform",
+  "description": "Automated content review for user-generated platforms — detect spam, harassment, and policy violations across text, image, and video.",
+  "basic": "$49/mo/month",
+  "pro": "$149/mo/month",
+  "enterprise": "$499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Content Moderation Platform - Zion Tech Group",
+    "description": "Automated content review for user-generated platforms — detect spam, harassment, and policy violations across text, image, and video.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-content-moderation"
+    }
+  },
+  "features": [
+    "Multi-modal content analysis",
+    "Custom policy rule engine",
+    "Real-time moderation workflows",
+    "Appeal and escalation handling",
+    "Compliance audit logging"
+  ],
+  "benefits": [
+    "Reduce costs with ai content moderation platform",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/autonomous-customer-service-ai-2e2cd9ed",
+  "breadcrumbTitle": "Autonomous Customer Service AI",
+  "title": "Autonomous Customer Service AI",
+  "description": "24/7 intelligent customer support system that handles inquiries, resolves issues, and provides personalized assistance without human intervention. Integrates wi",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous Customer Service AI - Zion Tech Group",
+    "description": "24/7 intelligent customer support system that handles inquiries, resolves issues, and provides personalized assistance without human intervention. Integrates wi",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-customer-service-ai-2e2cd9ed"
+    }
+  },
+  "features": [
+    "Natural language understanding",
+    "Multi-channel support (chat, email, social)",
+    "Sentiment-aware responses",
+    "Seamless human handoff"
+  ],
+  "benefits": [
+    "90% reduction in support tickets",
+    "Instant response times",
+    "Consistent service quality",
+    "24/7 availability"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "Autonomous Code Deployment Agent",
+  "description": "Code-review finder, security scan (SAST/DAST), test-retry, feature-flag gate, rollback on error-rate spike, chat-notification on completion.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Autonomous Code Deployment Agent - Zion Tech Group",
+    "description": "Code-review finder, security scan (SAST/DAST), test-retry, feature-flag gate, rollback on error-rate spike, chat-notification on completion.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-autonomous-code-deployment"
+    }
+  },
+  "features": [
+    "Code-review finder (comment on PR per pattern)",
+    "Security scan (CodeQL + Snyk + Trivy)",
+    "Auto-retry flaky test up to 3x",
+    "Feature-flag gate auto-enable on green CI",
+    "Rollback automatic on error-rate spike"
+  ],
+  "benefits": [
+    "Reduce costs with autonomous code deployment agent",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

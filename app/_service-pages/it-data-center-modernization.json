@@ -1,0 +1,29 @@
+{
+  "title": "IT Data Center Modernization Service",
+  "description": "End-to-end data center transformation including assessment, migration planning, hybrid cloud architecture, and decommissioning. Modernize legacy infrastructure with minimal downtime.",
+  "basic": "$25,000 project/month",
+  "pro": "$75,000 project/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "IT Data Center Modernization Service - Zion Tech Group",
+    "description": "End-to-end data center transformation including assessment, migration planning, hybrid cloud architecture, and decommissioning. Modernize legacy infrastructure ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-data-center-modernization"
+    }
+  },
+  "features": [
+    "Comprehensive infrastructure assessment and TCO analysis",
+    "Hybrid cloud architecture design (on-prem + cloud)",
+    "Workload migration planning with dependency mapping",
+    "Network redesign for software-defined networking",
+    "Storage modernization (SAN/NAS to software-defined)"
+  ],
+  "benefits": [
+    "Reduce infrastructure costs by 40-60%",
+    "Improve application performance and availability",
+    "Enable cloud-native development on modern platform",
+    "Eliminate end-of-life hardware risks"
+  ]
+}

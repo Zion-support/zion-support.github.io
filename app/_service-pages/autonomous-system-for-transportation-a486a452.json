@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/autonomous-system-for-transportation-a486a452",
+  "breadcrumbTitle": "Autonomous System for Transportation",
+  "title": "Autonomous System for Transportation",
+  "description": "Unlock unprecedented growth with Autonomous System for Transportation. This autonomous system provides financial planning with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous System for Transportation - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Autonomous System for Transportation. This autonomous system provides financial planning with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-system-for-transportation-a486a452"
+    }
+  },
+  "features": [
+    "Machine learning integration",
+    "Plugin architecture",
+    "API-first design",
+    "Microservices deployment",
+    "Auto-scaling capabilities"
+  ],
+  "benefits": [
+    "Seamless integration with existing systems",
+    "Real-time insights and alerts",
+    "99.9% uptime guarantee"
+  ]
+}

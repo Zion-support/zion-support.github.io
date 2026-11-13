@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/intelligent-security-manager-f795a0d8",
+  "breadcrumbTitle": "Intelligent Security Manager",
+  "title": "Intelligent Security Manager",
+  "description": "Unlock unprecedented growth with Intelligent Security Manager. This autonomous system provides process automation with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Security Manager - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Intelligent Security Manager. This autonomous system provides process automation with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-security-manager-f795a0d8"
+    }
+  },
+  "features": [
+    "Zero-downtime updates",
+    "Plugin architecture",
+    "HIPAA ready",
+    "API-first design",
+    "Alerting system"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "Cost optimization recommendations",
+    "Seamless integration with existing systems",
+    "Performance benchmarking",
+    "24/7 automated operations"
+  ]
+}

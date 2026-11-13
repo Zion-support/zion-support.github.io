@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/optimization-adaptive---insurance-3df622c2",
+  "breadcrumbTitle": "Optimization Adaptive - Insurance",
+  "title": "Optimization Adaptive - Insurance",
+  "description": "Transform your insurance operations with our Optimization Adaptive - Insurance. This AI-driven solution automates market intelligence with unprecedented accurac",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Optimization Adaptive - Insurance - Zion Tech Group",
+    "description": "Transform your insurance operations with our Optimization Adaptive - Insurance. This AI-driven solution automates market intelligence with unprecedented accurac",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/optimization-adaptive---insurance-3df622c2"
+    }
+  },
+  "features": [
+    "Offline capabilities",
+    "HIPAA ready",
+    "Edge computing support",
+    "Serverless functions",
+    "Custom integrations"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "Scalable to millions of transactions",
+    "Seamless integration with existing systems"
+  ]
+}

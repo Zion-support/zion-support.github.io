@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-system---automotive-edition-9ad98432",
+  "breadcrumbTitle": "AI System - Automotive Edition",
+  "title": "AI System - Automotive Edition",
+  "description": "Next-generation automotive solution: AI System - Automotive Edition. Combines process automation with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI System - Automotive Edition - Zion Tech Group",
+    "description": "Next-generation automotive solution: AI System - Automotive Edition. Combines process automation with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-system---automotive-edition-9ad98432"
+    }
+  },
+  "features": [
+    "Role-based access control",
+    "Custom integrations",
+    "Offline capabilities",
+    "Data encryption",
+    "Multi-language support"
+  ],
+  "benefits": [
+    "Cost optimization recommendations",
+    "Automated compliance reporting",
+    "Performance benchmarking"
+  ]
+}

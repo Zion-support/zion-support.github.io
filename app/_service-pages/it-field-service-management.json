@@ -1,0 +1,29 @@
+{
+  "title": "IT Field Service Management & Mobile Workforce",
+  "description": "Field service management platform for mobile workforce. Scheduling, dispatch, work orders, and mobile app for technicians. Increase first-time fix rates by 35%.",
+  "basic": "$50/tech/mo/month",
+  "pro": "$85/tech/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "IT Field Service Management & Mobile Workforce - Zion Tech Group",
+    "description": "Field service management platform for mobile workforce. Scheduling, dispatch, work orders, and mobile app for technicians. Increase first-time fix rates by 35%.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-field-service-management"
+    }
+  },
+  "features": [
+    "AI-optimized scheduling and dispatch",
+    "Mobile app for technicians (iOS, Android)",
+    "Work order management and tracking",
+    "Parts and inventory management",
+    "Customer portal and self-service"
+  ],
+  "benefits": [
+    "Increase first-time fix rate by 35%",
+    "Reduce travel time with AI routing",
+    "Improve customer satisfaction with real-time updates",
+    "Scale field operations without adding dispatchers"
+  ]
+}

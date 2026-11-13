@@ -1,4 +1,4 @@
-type Service = Record<string, any>;
+type Service = Record<string, any> & { pricing: Record<string, string> };
 
 const rawObject = require('./servicesData.json') as { services?: Service[] };
 const rawData: Service[] = Array.isArray(rawObject) ? rawObject : (rawObject.services || []);

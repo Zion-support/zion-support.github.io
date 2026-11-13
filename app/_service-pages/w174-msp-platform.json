@@ -1,0 +1,29 @@
+{
+  "title": "Managed Service Provider (MSP) Platform",
+  "description": "All-in-one MSP platform: RMM, PSA, remote access, ticketing, and billing. Manage hundreds of client endpoints from one dashboard with automation.",
+  "basic": "$199/mo/month",
+  "pro": "$599/mo/month",
+  "enterprise": "$1,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Managed Service Provider (MSP) Platform - Zion Tech Group",
+    "description": "All-in-one MSP platform: RMM, PSA, remote access, ticketing, and billing. Manage hundreds of client endpoints from one dashboard with automation.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w174-msp-platform"
+    }
+  },
+  "features": [
+    "Remote monitoring and management (RMM)",
+    "Professional services automation (PSA)",
+    "Remote access and control",
+    "Patch management across clients",
+    "Client billing and SLA tracking"
+  ],
+  "benefits": [
+    "Manage 100+ clients from one platform",
+    "Automate 70% of routine MSP tasks",
+    "Client billing integrated with service delivery",
+    "SLA tracking ensures compliance"
+  ]
+}

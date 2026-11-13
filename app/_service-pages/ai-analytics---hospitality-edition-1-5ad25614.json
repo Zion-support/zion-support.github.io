@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-analytics---hospitality-edition-1-5ad25614",
+  "breadcrumbTitle": "AI Analytics - Hospitality Edition #1",
+  "title": "AI Analytics - Hospitality Edition #1",
+  "description": "Next-generation hospitality solution: AI Analytics - Hospitality Edition #1. Combines data processing with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Analytics - Hospitality Edition #1 - Zion Tech Group",
+    "description": "Next-generation hospitality solution: AI Analytics - Hospitality Edition #1. Combines data processing with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-analytics---hospitality-edition-1-5ad25614"
+    }
+  },
+  "features": [
+    "Real-time processing",
+    "Role-based access control",
+    "Comprehensive monitoring",
+    "GDPR compliance",
+    "Zero-downtime updates"
+  ],
+  "benefits": [
+    "24/7 automated operations",
+    "Reduced human error by 95%",
+    "Cost optimization recommendations",
+    "Dynamic resource allocation"
+  ]
+}

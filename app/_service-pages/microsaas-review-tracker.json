@@ -1,0 +1,28 @@
+{
+  "title": "ReviewTracker - Review Management",
+  "description": "Monitor and respond to online reviews across Google, Yelp, Trustpilot, and industry-specific platforms. AI-suggested responses and sentiment tracking.",
+  "basic": "$25/mo/month",
+  "pro": "$69/mo/month",
+  "enterprise": "$129/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "ReviewTracker - Review Management - Zion Tech Group",
+    "description": "Monitor and respond to online reviews across Google, Yelp, Trustpilot, and industry-specific platforms. AI-suggested responses and sentiment tracking.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/microsaas-review-tracker"
+    }
+  },
+  "features": [
+    "Multi-platform Monitoring",
+    "AI Response Suggestions",
+    "Sentiment Tracking",
+    "Review Widget",
+    "Analytics Dashboard"
+  ],
+  "benefits": [
+    "Boost online reputation",
+    "Save time on responses",
+    "Track sentiment trends"
+  ]
+}

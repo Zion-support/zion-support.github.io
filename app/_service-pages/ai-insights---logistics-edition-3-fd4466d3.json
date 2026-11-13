@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-insights---logistics-edition-3-fd4466d3",
+  "breadcrumbTitle": "AI Insights - Logistics Edition #3",
+  "title": "AI Insights - Logistics Edition #3",
+  "description": "Unlock unprecedented growth with AI Insights - Logistics Edition #3. This autonomous system provides energy management with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Insights - Logistics Edition #3 - Zion Tech Group",
+    "description": "Unlock unprecedented growth with AI Insights - Logistics Edition #3. This autonomous system provides energy management with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-insights---logistics-edition-3-fd4466d3"
+    }
+  },
+  "features": [
+    "Real-time processing",
+    "Offline capabilities",
+    "Serverless functions",
+    "Machine learning integration",
+    "Alerting system"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "Zero manual intervention required",
+    "Intelligent load balancing"
+  ]
+}

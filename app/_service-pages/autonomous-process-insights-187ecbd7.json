@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/autonomous-process-insights-187ecbd7",
+  "breadcrumbTitle": "Autonomous Process Insights",
+  "title": "Autonomous Process Insights",
+  "description": "The future of technology is here with Autonomous Process Insights. Powered by cutting-edge AI, this platform delivers financial planning like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous Process Insights - Zion Tech Group",
+    "description": "The future of technology is here with Autonomous Process Insights. Powered by cutting-edge AI, this platform delivers financial planning like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-process-insights-187ecbd7"
+    }
+  },
+  "features": [
+    "Performance dashboards",
+    "Container orchestration",
+    "Real-time processing",
+    "Alerting system"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Predictive maintenance scheduling",
+    "Cost optimization recommendations",
+    "Seamless integration with existing systems"
+  ]
+}

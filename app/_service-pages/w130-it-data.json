@@ -1,0 +1,30 @@
+{
+  "title": "Data Engineering & Pipeline Automation",
+  "description": "End-to-end data platform: ingestion, transformation, quality, and orchestration. Supports batch and real-time pipelines with AI-powered data quality.",
+  "basic": "$N/A/month",
+  "pro": "$7997/month",
+  "enterprise": "$19997/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Data Engineering & Pipeline Automation - Zion Tech Group",
+    "description": "End-to-end data platform: ingestion, transformation, quality, and orchestration. Supports batch and real-time pipelines with AI-powered data quality.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w130-it-data"
+    }
+  },
+  "features": [
+    "Data ingestion (batch/streaming)",
+    "ETL/ELT automation",
+    "Data quality monitoring",
+    "Schema management",
+    "Pipeline orchestration"
+  ],
+  "benefits": [
+    "80% faster pipeline development",
+    "Automated data quality",
+    "Self-healing pipelines",
+    "Unified data catalog",
+    "Reduced cloud costs"
+  ]
+}

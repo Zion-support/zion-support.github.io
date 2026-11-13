@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/manager-ai---tech-6eb36bcd",
+  "breadcrumbTitle": "Manager AI - Tech",
+  "title": "Manager AI - Tech",
+  "description": "Transform your technology operations with our Manager AI - Tech. This AI-driven solution automates financial planning with unprecedented accuracy and efficiency",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Manager AI - Tech - Zion Tech Group",
+    "description": "Transform your technology operations with our Manager AI - Tech. This AI-driven solution automates financial planning with unprecedented accuracy and efficiency",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/manager-ai---tech-6eb36bcd"
+    }
+  },
+  "features": [
+    "Mobile-responsive interface",
+    "Real-time processing",
+    "Offline capabilities",
+    "HIPAA ready"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "Scalable to millions of transactions",
+    "Reduced human error by 95%"
+  ]
+}

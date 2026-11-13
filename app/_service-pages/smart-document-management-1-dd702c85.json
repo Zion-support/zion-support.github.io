@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/smart-document-management-1-dd702c85",
+  "breadcrumbTitle": "Smart Document Management #1",
+  "title": "Smart Document Management #1",
+  "description": "Revolutionize hospitality through intelligent automation. Our Smart Document Management #1 leverages advanced machine learning to deliver workflow management at",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Document Management #1 - Zion Tech Group",
+    "description": "Revolutionize hospitality through intelligent automation. Our Smart Document Management #1 leverages advanced machine learning to deliver workflow management at",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-document-management-1-dd702c85"
+    }
+  },
+  "features": [
+    "Custom integrations",
+    "Plugin architecture",
+    "Alerting system",
+    "Offline capabilities"
+  ],
+  "benefits": [
+    "Automated compliance reporting",
+    "Reduced human error by 95%",
+    "Seamless integration with existing systems",
+    "Cost optimization recommendations"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/suite-automated---logistics-1-5c402099",
+  "breadcrumbTitle": "Suite Automated - Logistics #1",
+  "title": "Suite Automated - Logistics #1",
+  "description": "Unlock unprecedented growth with Suite Automated - Logistics #1. This autonomous system provides predictive analytics with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Suite Automated - Logistics #1 - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Suite Automated - Logistics #1. This autonomous system provides predictive analytics with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/suite-automated---logistics-1-5c402099"
+    }
+  },
+  "features": [
+    "Machine learning integration",
+    "Offline capabilities",
+    "Comprehensive monitoring",
+    "SOC 2 certified"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Reduced human error by 95%",
+    "50% reduction in operational costs",
+    "Zero manual intervention required"
+  ]
+}

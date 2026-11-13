@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-resilient-healthcare-intelligence-platform-92f9528d",
+  "breadcrumbTitle": "AI-Powered Resilient Healthcare Intelligence Platform",
+  "title": "AI-Powered Resilient Healthcare Intelligence Platform",
+  "description": "AI-driven intelligence platform that delivers resilient insights and automated decision-making for healthcare operations.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Resilient Healthcare Intelligence Platform - Zion Tech Group",
+    "description": "AI-driven intelligence platform that delivers resilient insights and automated decision-making for healthcare operations.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-resilient-healthcare-intelligence-platform-92f9528d"
+    }
+  },
+  "features": [
+    "Real-time intelligence",
+    "Automated insights",
+    "Predictive alerts",
+    "API integration"
+  ],
+  "benefits": [
+    "Real-time actionable insights",
+    "Automated decision-making",
+    "Reduced latency",
+    "Improved accuracy"
+  ]
+}

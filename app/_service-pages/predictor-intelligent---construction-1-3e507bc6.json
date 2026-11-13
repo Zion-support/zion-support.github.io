@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/predictor-intelligent---construction-1-3e507bc6",
+  "breadcrumbTitle": "Predictor Intelligent - Construction #1",
+  "title": "Predictor Intelligent - Construction #1",
+  "description": "Transform your construction operations with our Predictor Intelligent - Construction #1. This AI-driven solution automates resource optimization with unpreceden",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Predictor Intelligent - Construction #1 - Zion Tech Group",
+    "description": "Transform your construction operations with our Predictor Intelligent - Construction #1. This AI-driven solution automates resource optimization with unpreceden",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/predictor-intelligent---construction-1-3e507bc6"
+    }
+  },
+  "features": [
+    "Multi-region deployment",
+    "Microservices deployment",
+    "API-first design",
+    "Open-source friendly",
+    "Container orchestration"
+  ],
+  "benefits": [
+    "Automated compliance reporting",
+    "Enterprise-grade security",
+    "3x faster decision making"
+  ]
+}

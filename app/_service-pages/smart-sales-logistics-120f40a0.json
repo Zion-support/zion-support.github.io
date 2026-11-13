@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/smart-sales-logistics-120f40a0",
+  "breadcrumbTitle": "Smart sales-logistics",
+  "title": "Smart sales-logistics",
+  "description": "Next-generation Logistics solution: Smart sales-logistics. Combines competitive intelligence with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart sales-logistics - Zion Tech Group",
+    "description": "Next-generation Logistics solution: Smart sales-logistics. Combines competitive intelligence with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-sales-logistics-120f40a0"
+    }
+  },
+  "features": [
+    "Data encryption at rest and in transit",
+    "Version control with rollback capabilities",
+    "Financial risk management with scenario analysis",
+    "Real-time processing with streaming analytics",
+    "GDPR compliance with data portability"
+  ],
+  "benefits": [
+    "50% reduction in operational costs through automation",
+    "Improved customer satisfaction with faster response times",
+    "Enhanced security posture with continuous monitoring",
+    "24/7 automated operations without human intervention",
+    "3x faster decision making with real-time insights"
+  ]
+}

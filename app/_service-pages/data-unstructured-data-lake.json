@@ -1,0 +1,28 @@
+{
+  "title": "Unstructured Data Lake",
+  "description": "Unstructured data pipeline and lake: ingest PDF, Images, Audio, and Video at scale; auto-classify per document schema; OCR, ASR, object-detection hooks per file type; natural-language query with cited source passages.",
+  "basic": "$399/mo/month",
+  "pro": "$1,299/mo/month",
+  "enterprise": "$3,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Unstructured Data Lake - Zion Tech Group",
+    "description": "Unstructured data pipeline and lake: ingest PDF, Images, Audio, and Video at scale; auto-classify per document schema; OCR, ASR, object-detection hooks per file",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/data-unstructured-data-lake"
+    }
+  },
+  "features": [
+    "Ingest PDF, Images, Audio, and Video with automatic format and codec detection",
+    "Auto-classify per schema: invoice, contract, report, or document using layout-aware LLM",
+    "OCR and ASR and object-detection hooks applied per detected file type",
+    "Natural-language query returns retrieved chunks with cited source passages"
+  ],
+  "benefits": [
+    "Reduce costs with unstructured data lake",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

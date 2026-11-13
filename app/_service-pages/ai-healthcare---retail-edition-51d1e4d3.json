@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/ai-healthcare---retail-edition-51d1e4d3",
+  "breadcrumbTitle": "AI Healthcare - Retail Edition",
+  "title": "AI Healthcare - Retail Edition",
+  "description": "The future of Retail is here with AI Healthcare - Retail Edition. Powered by cutting-edge AI, this platform delivers customer service automation like never befo",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Healthcare - Retail Edition - Zion Tech Group",
+    "description": "The future of Retail is here with AI Healthcare - Retail Edition. Powered by cutting-edge AI, this platform delivers customer service automation like never befo",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-healthcare---retail-edition-51d1e4d3"
+    }
+  },
+  "features": [
+    "Budget optimization with cost allocation",
+    "HIPAA ready with healthcare data protection",
+    "Custom integrations with webhook support",
+    "Cloud-native architecture with multi-region deployment",
+    "Customer service automation with chatbot integration"
+  ],
+  "benefits": [
+    "Enterprise-grade security with end-to-end encryption",
+    "Faster content creation with AI assistance",
+    "Improved customer retention with proactive service",
+    "Improved brand awareness with social monitoring",
+    "Better resource utilization with auto-scaling"
+  ]
+}

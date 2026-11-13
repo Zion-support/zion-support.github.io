@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/system-smart---transportation-d33d132d",
+  "breadcrumbTitle": "System Smart - Transportation",
+  "title": "System Smart - Transportation",
+  "description": "Revolutionize transportation through intelligent automation. Our System Smart - Transportation leverages advanced machine learning to deliver performance monito",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "System Smart - Transportation - Zion Tech Group",
+    "description": "Revolutionize transportation through intelligent automation. Our System Smart - Transportation leverages advanced machine learning to deliver performance monito",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/system-smart---transportation-d33d132d"
+    }
+  },
+  "features": [
+    "Machine learning integration",
+    "Real-time processing",
+    "Open-source friendly",
+    "Data encryption",
+    "Audit trails"
+  ],
+  "benefits": [
+    "Performance benchmarking",
+    "ROI in under 90 days",
+    "Self-healing infrastructure",
+    "24/7 automated operations",
+    "Enterprise-grade security"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligence-smart---retail-580e3f79",
+  "breadcrumbTitle": "Intelligence Smart - Retail",
+  "title": "Intelligence Smart - Retail",
+  "description": "Next-generation retail solution: Intelligence Smart - Retail. Combines fraud prevention with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligence Smart - Retail - Zion Tech Group",
+    "description": "Next-generation retail solution: Intelligence Smart - Retail. Combines fraud prevention with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligence-smart---retail-580e3f79"
+    }
+  },
+  "features": [
+    "Comprehensive monitoring",
+    "Microservices deployment",
+    "Zero-downtime updates",
+    "Plugin architecture",
+    "GDPR compliance"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Seamless integration with existing systems",
+    "Real-time insights and alerts"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "title": "Edge-Native Declarative Construction Processing",
+  "description": "Edge-native processing layer that delivers declarative construction insights with sub-millisecond latency.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Edge-Native Declarative Construction Processing - Zion Tech Group",
+    "description": "Edge-native processing layer that delivers declarative construction insights with sub-millisecond latency.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/edge-native-declarative-construction-processing-d3ebe339"
+    }
+  },
+  "features": [
+    "Edge computing",
+    "Low-latency processing",
+    "Sensor fusion",
+    "Real-time analytics"
+  ],
+  "benefits": [
+    "Sub-millisecond response",
+    "Reduced latency",
+    "Edge efficiency",
+    "Real-time processing"
+  ]
+}

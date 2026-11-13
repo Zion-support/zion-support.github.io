@@ -1,0 +1,29 @@
+{
+  "title": "Quantum Computing Readiness Assessment",
+  "description": "Evaluate your organization quantum readiness, identify cryptographic vulnerabilities, and develop migration strategies for post-quantum security standards.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Quantum Computing Readiness Assessment - Zion Tech Group",
+    "description": "Evaluate your organization quantum readiness, identify cryptographic vulnerabilities, and develop migration strategies for post-quantum security standards.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-quantum-readiness"
+    }
+  },
+  "features": [
+    "Post-quantum cryptography assessment",
+    "Quantum vulnerability scanning across systems",
+    "NIST PQC migration roadmap development",
+    "Quantum-safe encryption implementation",
+    "Executive quantum risk briefing and training"
+  ],
+  "benefits": [
+    "Reduce costs with quantum computing readiness assessment",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

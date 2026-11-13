@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-director---automotive-edition-89805e79",
+  "breadcrumbTitle": "AI Director - Automotive Edition",
+  "title": "AI Director - Automotive Edition",
+  "description": "Next-generation automotive solution: AI Director - Automotive Edition. Combines code optimization with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Director - Automotive Edition - Zion Tech Group",
+    "description": "Next-generation automotive solution: AI Director - Automotive Edition. Combines code optimization with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-director---automotive-edition-89805e79"
+    }
+  },
+  "features": [
+    "Edge computing support",
+    "Open-source friendly",
+    "Machine learning integration",
+    "SOC 2 certified",
+    "Real-time processing"
+  ],
+  "benefits": [
+    "Dynamic resource allocation",
+    "3x faster decision making",
+    "Automated compliance reporting",
+    "Zero manual intervention required"
+  ]
+}

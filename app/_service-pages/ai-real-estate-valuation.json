@@ -1,0 +1,28 @@
+{
+  "title": "AI Real Estate Valuation & Analytics",
+  "description": "Automated AVM: comps zoning property features market trends confidence interval risk score comparable sales report for residential and commercial real estate.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Real Estate Valuation & Analytics - Zion Tech Group",
+    "description": "Automated AVM: comps zoning property features market trends confidence interval risk score comparable sales report for residential and commercial real estate.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-real-estate-valuation"
+    }
+  },
+  "features": [
+    "Automated AVM ML model",
+    "Confidence interval + risk score",
+    "Comparable sales per property",
+    "Commercial lease + cap rate valuation"
+  ],
+  "benefits": [
+    "Reduce costs with ai real estate valuation & analytics",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

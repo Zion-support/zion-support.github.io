@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligent-decision-processor-66b8b2c9",
+  "breadcrumbTitle": "Intelligent Decision Processor",
+  "title": "Intelligent Decision Processor",
+  "description": "The future of telecom is here with Intelligent Decision Processor. Powered by cutting-edge AI, this platform delivers language processing like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Decision Processor - Zion Tech Group",
+    "description": "The future of telecom is here with Intelligent Decision Processor. Powered by cutting-edge AI, this platform delivers language processing like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-decision-processor-66b8b2c9"
+    }
+  },
+  "features": [
+    "API-first design",
+    "Zero-downtime updates",
+    "Audit trails",
+    "Plugin architecture"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "Dynamic resource allocation",
+    "3x faster decision making",
+    "Performance benchmarking",
+    "ROI in under 90 days"
+  ]
+}

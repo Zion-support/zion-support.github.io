@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/ai-supply---gaming-edition-707096c7",
+  "breadcrumbTitle": "AI Supply - Gaming Edition",
+  "title": "AI Supply - Gaming Edition",
+  "description": "Unlock unprecedented growth with AI Supply - Gaming Edition. This autonomous system provides maintenance scheduling with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Supply - Gaming Edition - Zion Tech Group",
+    "description": "Unlock unprecedented growth with AI Supply - Gaming Edition. This autonomous system provides maintenance scheduling with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-supply---gaming-edition-707096c7"
+    }
+  },
+  "features": [
+    "Customer journey mapping with touchpoint analysis",
+    "Custom integrations with webhook support",
+    "Scenario planning with Monte Carlo simulations",
+    "Automation opportunity identification",
+    "Compliance monitoring with regulatory updates"
+  ],
+  "benefits": [
+    "Improved employee productivity with automation",
+    "Improved customer satisfaction with faster response times",
+    "24/7 automated operations without human intervention",
+    "Improved product quality with automated testing",
+    "Reduced operational risks with predictive models"
+  ]
+}

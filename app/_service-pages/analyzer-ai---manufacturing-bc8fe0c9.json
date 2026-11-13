@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/analyzer-ai---manufacturing-bc8fe0c9",
+  "breadcrumbTitle": "Analyzer AI - Manufacturing",
+  "title": "Analyzer AI - Manufacturing",
+  "description": "Unlock unprecedented growth with Analyzer AI - Manufacturing. This autonomous system provides security monitoring with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Analyzer AI - Manufacturing - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Analyzer AI - Manufacturing. This autonomous system provides security monitoring with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/analyzer-ai---manufacturing-bc8fe0c9"
+    }
+  },
+  "features": [
+    "Auto-scaling capabilities",
+    "GDPR compliance",
+    "SOC 2 certified",
+    "HIPAA ready",
+    "Serverless functions"
+  ],
+  "benefits": [
+    "24/7 automated operations",
+    "Enterprise-grade security",
+    "Self-healing infrastructure"
+  ]
+}

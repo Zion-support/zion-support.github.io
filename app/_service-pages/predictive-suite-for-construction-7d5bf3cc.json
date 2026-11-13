@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/predictive-suite-for-construction-7d5bf3cc",
+  "breadcrumbTitle": "Predictive Suite for Construction",
+  "title": "Predictive Suite for Construction",
+  "description": "Transform your construction operations with our Predictive Suite for Construction. This AI-driven solution automates energy management with unprecedented accura",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Predictive Suite for Construction - Zion Tech Group",
+    "description": "Transform your construction operations with our Predictive Suite for Construction. This AI-driven solution automates energy management with unprecedented accura",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/predictive-suite-for-construction-7d5bf3cc"
+    }
+  },
+  "features": [
+    "Custom integrations",
+    "Auto-scaling capabilities",
+    "Container orchestration",
+    "Microservices deployment",
+    "Performance dashboards"
+  ],
+  "benefits": [
+    "Seamless integration with existing systems",
+    "Enterprise-grade security",
+    "3x faster decision making",
+    "Intelligent load balancing",
+    "Self-healing infrastructure"
+  ]
+}

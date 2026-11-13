@@ -1,0 +1,29 @@
+{
+  "title": "GCP Data Analytics Platform",
+  "description": "End-to-end GCP analytics: BigQuery, Dataflow, Pub/Sub streaming, Looker dashboards. GCS Delta Lakehouse with partition pruning and auto-clustering.",
+  "basic": "$99/mo/month",
+  "pro": "$349/mo/month",
+  "enterprise": "$1,299/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "GCP Data Analytics Platform - Zion Tech Group",
+    "description": "End-to-end GCP analytics: BigQuery, Dataflow, Pub/Sub streaming, Looker dashboards. GCS Delta Lakehouse with partition pruning and auto-clustering.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/gcp-data-analytics-platform"
+    }
+  },
+  "features": [
+    "BigQuery + partition-cluster auto-tuning",
+    "Dataflow batch + streaming pipelines",
+    "Pub/Sub to BigQuery streaming ingestion",
+    "Looker Studio + Looker dashboards",
+    "GCS Delta Lakehouse (Iceberg/Delta)"
+  ],
+  "benefits": [
+    "Reduce costs with gcp data analytics platform",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

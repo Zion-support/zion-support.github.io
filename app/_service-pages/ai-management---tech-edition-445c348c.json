@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-management---tech-edition-445c348c",
+  "breadcrumbTitle": "AI Management - Tech Edition",
+  "title": "AI Management - Tech Edition",
+  "description": "Transform your technology operations with our AI Management - Tech Edition. This AI-driven solution automates supply chain with unprecedented accuracy and effic",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Management - Tech Edition - Zion Tech Group",
+    "description": "Transform your technology operations with our AI Management - Tech Edition. This AI-driven solution automates supply chain with unprecedented accuracy and effic",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-management---tech-edition-445c348c"
+    }
+  },
+  "features": [
+    "Data encryption",
+    "Plugin architecture",
+    "SOC 2 certified",
+    "Mobile-responsive interface"
+  ],
+  "benefits": [
+    "Intelligent load balancing",
+    "Cost optimization recommendations",
+    "Enterprise-grade security",
+    "Self-healing infrastructure"
+  ]
+}

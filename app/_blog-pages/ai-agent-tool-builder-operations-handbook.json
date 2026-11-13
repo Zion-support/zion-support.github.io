@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "AI Agent Tool Builder: operations handbook | Zion Tech Group",
+    "description": "AI Agent Tool Builder: operations handbook",
+    "keywords": [
+      "data",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "AI Agent Tool Builder: operations handbook",
+      "description": "AI Agent Tool Builder: operations handbook",
+      "url": "https://ziontechgroup.com/blog/ai-agent-tool-builder-operations-handbook/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/ai-agent-tool-builder-operations-handbook/"
+    }
+  },
+  "values": [
+    "AI Agent Tool Builder: operations handbook",
+    "AI Agent Tool Builder: operations handbook",
+    "AI Agent Tool Builder: operations handbook",
+    "Recommended next step",
+    "Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "Recommended next step",
+    " Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "/blog/cloud-native-app-development-2026-6674",
+    "Cloud Native App Development 2026 6674",
+    "/blog/endpoint-management-2026-6751",
+    "Endpoint Management 2026 6751",
+    "/blog/data-warehouse-modernization-operations-handbook",
+    "Data Warehouse Modernization Operations Handbook",
+    "/blog/managed-it-services-case-study",
+    "Managed It Services Case Study"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "AI Agent Tool Builder: operations handbook",
+    "description": "AI Agent Tool Builder: operations handbook",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T07:56:57Z",
+    "dateModified": "2026-08-07T07:56:57Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/ai-agent-tool-builder-operations-handbook/"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/insights-neural---automotive-ebbbee49",
+  "breadcrumbTitle": "Insights Neural - Automotive",
+  "title": "Insights Neural - Automotive",
+  "description": "The future of automotive is here with Insights Neural - Automotive. Powered by cutting-edge AI, this platform delivers financial planning like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Insights Neural - Automotive - Zion Tech Group",
+    "description": "The future of automotive is here with Insights Neural - Automotive. Powered by cutting-edge AI, this platform delivers financial planning like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/insights-neural---automotive-ebbbee49"
+    }
+  },
+  "features": [
+    "Audit trails",
+    "GDPR compliance",
+    "Serverless functions",
+    "Multi-region deployment",
+    "Custom integrations"
+  ],
+  "benefits": [
+    "24/7 automated operations",
+    "3x faster decision making",
+    "Predictive maintenance scheduling",
+    "99.9% uptime guarantee",
+    "Intelligent load balancing"
+  ]
+}

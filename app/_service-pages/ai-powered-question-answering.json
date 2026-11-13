@@ -1,0 +1,29 @@
+{
+  "title": "Enterprise AI Question Answering (Internal Knowledge)",
+  "description": "Chatbot that answers employee questions from internal docs: HR policies, engineering runbooks, sales playbooks; cite sources, track unanswered queries.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Enterprise AI Question Answering (Internal Knowledge) - Zion Tech Group",
+    "description": "Chatbot that answers employee questions from internal docs: HR policies, engineering runbooks, sales playbooks; cite sources, track unanswered queries.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-question-answering"
+    }
+  },
+  "features": [
+    "RAG over private document corpus",
+    "Source citation & confidence scores",
+    "Multi-department bots (HR, Eng, Sales, Support)",
+    "Feedback loop to improve answers",
+    "Analytics: most-asked questions, gaps in docs"
+  ],
+  "benefits": [
+    "Reduce costs with enterprise ai question answering (internal knowledge)",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

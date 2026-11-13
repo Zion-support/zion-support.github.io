@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/neural-experience-manufacturing-80d9ccfa",
+  "breadcrumbTitle": "Neural experience-manufacturing",
+  "title": "Neural experience-manufacturing",
+  "description": "Next-generation Manufacturing solution: Neural experience-manufacturing. Combines maintenance scheduling with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Neural experience-manufacturing - Zion Tech Group",
+    "description": "Next-generation Manufacturing solution: Neural experience-manufacturing. Combines maintenance scheduling with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/neural-experience-manufacturing-80d9ccfa"
+    }
+  },
+  "features": [
+    "Role-based access control with SSO integration",
+    "Machine learning integration with automatic model training",
+    "Data encryption at rest and in transit",
+    "Security monitoring with threat intelligence",
+    "Budget optimization with cost allocation"
+  ],
+  "benefits": [
+    "Better risk management with predictive analytics",
+    "Enhanced security posture with continuous monitoring",
+    "Reduced churn with proactive customer retention",
+    "Reduced customer acquisition costs with optimization"
+  ]
+}

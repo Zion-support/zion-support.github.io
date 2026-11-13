@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/neural-orchestrator-insurance-f2a0b992",
+  "breadcrumbTitle": "Neural orchestrator-insurance",
+  "title": "Neural orchestrator-insurance",
+  "description": "Revolutionize insurance through intelligent automation. Our Neural orchestrator-insurance leverages advanced machine learning to deliver financial planning at s",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Neural orchestrator-insurance - Zion Tech Group",
+    "description": "Revolutionize insurance through intelligent automation. Our Neural orchestrator-insurance leverages advanced machine learning to deliver financial planning at s",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/neural-orchestrator-insurance-f2a0b992"
+    }
+  },
+  "features": [
+    "Zero-downtime updates",
+    "Mobile-responsive interface",
+    "Machine learning integration",
+    "Rollback mechanisms",
+    "HIPAA ready"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "ROI in under 90 days",
+    "Cost optimization recommendations",
+    "Reduced human error by 95%"
+  ]
+}

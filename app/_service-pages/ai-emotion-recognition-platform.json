@@ -1,0 +1,29 @@
+{
+  "title": "AI Emotion Recognition Platform",
+  "description": "Real-time emotion and sentiment analysis from facial expressions, voice tone, and text. Used for customer experience optimization, market research, and mental health screening. GDPR-compliant with on-device processing option.",
+  "basic": "$799/mo/month",
+  "pro": "$2,499/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Emotion Recognition Platform - Zion Tech Group",
+    "description": "Real-time emotion and sentiment analysis from facial expressions, voice tone, and text. Used for customer experience optimization, market research, and mental h",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-emotion-recognition-platform"
+    }
+  },
+  "features": [
+    "Facial emotion detection (7 basic emotions)",
+    "Voice tone and prosody analysis",
+    "Text sentiment and emotion detection",
+    "Real-time streaming API",
+    "On-device processing for privacy"
+  ],
+  "benefits": [
+    "Understand customer emotions in real-time",
+    "Improve product experience with emotional data",
+    "Mental health screening support",
+    "Privacy-first architecture"
+  ]
+}

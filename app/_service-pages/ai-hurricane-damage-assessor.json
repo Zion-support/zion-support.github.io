@@ -1,0 +1,28 @@
+{
+  "title": "AI Hurricane & Storm Damage Assessment",
+  "description": "Post-storm damage assessment from satellite/droone imagery: roof damage detection, flood extent mapping, insurance claim validation, and repair cost estimation. Processes 10,000+ properties per hour.",
+  "basic": "$999/month",
+  "pro": "$2999/month",
+  "enterprise": "$9999/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Hurricane & Storm Damage Assessment - Zion Tech Group",
+    "description": "Post-storm damage assessment from satellite/droone imagery: roof damage detection, flood extent mapping, insurance claim validation, and repair cost estimation.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-hurricane-damage-assessor"
+    }
+  },
+  "features": [
+    "AI roof damage detection",
+    "Flood extent mapping",
+    "Insurance claim validation",
+    "Repair cost estimation",
+    "Before/after comparison"
+  ],
+  "benefits": [
+    "Assess 10K properties/hour",
+    "Accelerate insurance claims",
+    "Prioritize emergency response"
+  ]
+}

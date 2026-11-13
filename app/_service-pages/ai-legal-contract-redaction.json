@@ -1,0 +1,28 @@
+{
+  "title": "AI Legal Contract Redaction",
+  "description": "Automatically redacts PII, trade secrets, and privileged information from legal documents before sharing or discovery.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Legal Contract Redaction - Zion Tech Group",
+    "description": "Automatically redacts PII, trade secrets, and privileged information from legal documents before sharing or discovery.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-legal-contract-redaction"
+    }
+  },
+  "features": [
+    "Entity recognition (PII, PHI, PCI)",
+    "Custom redaction rules per jurisdiction",
+    "Audit trail of redactions",
+    "Secure workspace with encryption"
+  ],
+  "benefits": [
+    "Reduce costs with ai legal contract redaction",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

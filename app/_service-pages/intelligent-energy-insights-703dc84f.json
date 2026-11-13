@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/intelligent-energy-insights-703dc84f",
+  "breadcrumbTitle": "Intelligent Energy Insights",
+  "title": "Intelligent Energy Insights",
+  "description": "Next-generation healthcare solution: Intelligent Energy Insights. Combines fraud prevention with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Energy Insights - Zion Tech Group",
+    "description": "Next-generation healthcare solution: Intelligent Energy Insights. Combines fraud prevention with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-energy-insights-703dc84f"
+    }
+  },
+  "features": [
+    "Role-based access control",
+    "Real-time processing",
+    "GDPR compliance",
+    "Microservices deployment",
+    "Plugin architecture"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "Self-healing infrastructure",
+    "3x faster decision making",
+    "Performance benchmarking",
+    "Real-time insights and alerts"
+  ]
+}

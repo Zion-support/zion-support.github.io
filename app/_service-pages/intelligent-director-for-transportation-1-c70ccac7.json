@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/intelligent-director-for-transportation-1-c70ccac7",
+  "breadcrumbTitle": "Intelligent Director for Transportation #1",
+  "title": "Intelligent Director for Transportation #1",
+  "description": "The future of transportation is here with Intelligent Director for Transportation #1. Powered by cutting-edge AI, this platform delivers compliance monitoring l",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Director for Transportation #1 - Zion Tech Group",
+    "description": "The future of transportation is here with Intelligent Director for Transportation #1. Powered by cutting-edge AI, this platform delivers compliance monitoring l",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-director-for-transportation-1-c70ccac7"
+    }
+  },
+  "features": [
+    "Auto-scaling capabilities",
+    "API-first design",
+    "Role-based access control",
+    "Rollback mechanisms",
+    "Performance dashboards"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "Performance benchmarking",
+    "Scalable to millions of transactions",
+    "Zero manual intervention required",
+    "50% reduction in operational costs"
+  ]
+}

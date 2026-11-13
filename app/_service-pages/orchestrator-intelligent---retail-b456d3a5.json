@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/orchestrator-intelligent---retail-b456d3a5",
+  "breadcrumbTitle": "Orchestrator Intelligent - Retail",
+  "title": "Orchestrator Intelligent - Retail",
+  "description": "Revolutionize retail through intelligent automation. Our Orchestrator Intelligent - Retail leverages advanced machine learning to deliver maintenance scheduling",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Orchestrator Intelligent - Retail - Zion Tech Group",
+    "description": "Revolutionize retail through intelligent automation. Our Orchestrator Intelligent - Retail leverages advanced machine learning to deliver maintenance scheduling",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/orchestrator-intelligent---retail-b456d3a5"
+    }
+  },
+  "features": [
+    "SOC 2 certified",
+    "GDPR compliance",
+    "Custom integrations",
+    "HIPAA ready",
+    "Plugin architecture"
+  ],
+  "benefits": [
+    "Scalable to millions of transactions",
+    "50% reduction in operational costs",
+    "Zero manual intervention required"
+  ]
+}

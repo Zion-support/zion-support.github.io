@@ -1,0 +1,29 @@
+{
+  "title": "AI Sleep Optimization & Wellness Platform",
+  "description": "AI-powered sleep optimization that analyzes sleep patterns, provides personalized recommendations, and integrates with wearables. Improve sleep quality by 40%.",
+  "basic": "$19/mo/month",
+  "pro": "$39/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Sleep Optimization & Wellness Platform - Zion Tech Group",
+    "description": "AI-powered sleep optimization that analyzes sleep patterns, provides personalized recommendations, and integrates with wearables. Improve sleep quality by 40%.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-ai-sleep-optimizer"
+    }
+  },
+  "features": [
+    "Sleep pattern analysis from wearables",
+    "AI personalized sleep recommendations",
+    "Smart alarm and wake-up optimization",
+    "Sleep environment optimization (light, temp, sound)",
+    "Integration with Apple Watch, Fitbit, Oura"
+  ],
+  "benefits": [
+    "Improve sleep quality by 40%",
+    "Personalized recommendations based on your data",
+    "Integrate with all major wearables",
+    "Screen for sleep disorders early"
+  ]
+}

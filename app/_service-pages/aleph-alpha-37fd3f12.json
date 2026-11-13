@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/aleph-alpha-37fd3f12",
+  "breadcrumbTitle": "Aleph Alpha",
+  "title": "Aleph Alpha",
+  "description": "Aleph Alpha GmbH is a German artificial intelligence (AI) startup developing large language models (LLMs). It emphasizes transparency of the sources used to gen",
+  "basic": "$N/A/month",
+  "pro": "$N/A/month",
+  "enterprise": "$N/A/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Aleph Alpha - Zion Tech Group",
+    "description": "Aleph Alpha GmbH is a German artificial intelligence (AI) startup developing large language models (LLMs). It emphasizes transparency of the sources used to gen",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/aleph-alpha-37fd3f12"
+    }
+  },
+  "features": [
+    "AI-driven automation",
+    "Cloud-native deployment",
+    "API-first architecture",
+    "Enterprise-grade security",
+    "Scalable infrastructure"
+  ],
+  "benefits": [
+    "Improved operational efficiency",
+    "Reduced manual processes",
+    "Data-driven decision making",
+    "Faster time-to value",
+    "Scalable performance"
+  ]
+}

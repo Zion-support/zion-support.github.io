@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/coordinator-automated---agriculture-00e9d95e",
+  "breadcrumbTitle": "Coordinator Automated - Agriculture",
+  "title": "Coordinator Automated - Agriculture",
+  "description": "Revolutionize agriculture through intelligent automation. Our Coordinator Automated - Agriculture leverages advanced machine learning to deliver supply chain at",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Coordinator Automated - Agriculture - Zion Tech Group",
+    "description": "Revolutionize agriculture through intelligent automation. Our Coordinator Automated - Agriculture leverages advanced machine learning to deliver supply chain at",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/coordinator-automated---agriculture-00e9d95e"
+    }
+  },
+  "features": [
+    "HIPAA ready",
+    "Custom integrations",
+    "GDPR compliance",
+    "API-first design",
+    "Role-based access control"
+  ],
+  "benefits": [
+    "Automated compliance reporting",
+    "24/7 automated operations",
+    "99.9% uptime guarantee"
+  ]
+}

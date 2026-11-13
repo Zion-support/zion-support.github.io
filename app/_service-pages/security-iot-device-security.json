@@ -1,0 +1,29 @@
+{
+  "title": "IoT Device Security Platform",
+  "description": "Secure IoT device fleets with continuous monitoring, firmware vulnerability detection, and automated patch management for industrial and consumer IoT.",
+  "basic": "$999/mo/month",
+  "pro": "$2,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "IoT Device Security Platform - Zion Tech Group",
+    "description": "Secure IoT device fleets with continuous monitoring, firmware vulnerability detection, and automated patch management for industrial and consumer IoT.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/security-iot-device-security"
+    }
+  },
+  "features": [
+    "Device inventory and classification",
+    "Firmware vulnerability scanning",
+    "Behavioral anomaly detection",
+    "Automated patch management",
+    "Network segmentation recommendations"
+  ],
+  "benefits": [
+    "Prevent IoT botnet recruitment",
+    "Ensure firmware integrity",
+    "Meet IoT security compliance",
+    "Reduce breach risk across device fleets"
+  ]
+}

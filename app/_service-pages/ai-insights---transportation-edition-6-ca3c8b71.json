@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/ai-insights---transportation-edition-6-ca3c8b71",
+  "breadcrumbTitle": "AI Insights - Transportation Edition #6",
+  "title": "AI Insights - Transportation Edition #6",
+  "description": "Next-generation transportation solution: AI Insights - Transportation Edition #6. Combines resource optimization with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Insights - Transportation Edition #6 - Zion Tech Group",
+    "description": "Next-generation transportation solution: AI Insights - Transportation Edition #6. Combines resource optimization with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-insights---transportation-edition-6-ca3c8b71"
+    }
+  },
+  "features": [
+    "Container orchestration",
+    "API-first design",
+    "Machine learning integration",
+    "Microservices deployment",
+    "GDPR compliance"
+  ],
+  "benefits": [
+    "24/7 automated operations",
+    "ROI in under 90 days",
+    "99.9% uptime guarantee",
+    "Enterprise-grade security",
+    "Reduced human error by 95%"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/automated-inventory-insights-9d90ada3",
+  "breadcrumbTitle": "Automated Inventory Insights",
+  "title": "Automated Inventory Insights",
+  "description": "Transform your agriculture operations with our Automated Inventory Insights. This AI-driven solution automates financial planning with unprecedented accuracy an",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated Inventory Insights - Zion Tech Group",
+    "description": "Transform your agriculture operations with our Automated Inventory Insights. This AI-driven solution automates financial planning with unprecedented accuracy an",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-inventory-insights-9d90ada3"
+    }
+  },
+  "features": [
+    "Plugin architecture",
+    "API-first design",
+    "Machine learning integration",
+    "Rollback mechanisms",
+    "Role-based access control"
+  ],
+  "benefits": [
+    "Scalable to millions of transactions",
+    "ROI in under 90 days",
+    "Seamless integration with existing systems"
+  ]
+}

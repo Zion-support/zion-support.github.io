@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "MicroSaaS Customer Onboarding: case study | Zion Tech Group",
+    "description": "MicroSaaS Customer Onboarding: case study",
+    "keywords": [
+      "data",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "MicroSaaS Customer Onboarding: case study",
+      "description": "MicroSaaS Customer Onboarding: case study",
+      "url": "https://ziontechgroup.com/blog/microsaas-customer-onboarding-case-study/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/microsaas-customer-onboarding-case-study/"
+    }
+  },
+  "values": [
+    "MicroSaaS Customer Onboarding: case study",
+    "MicroSaaS Customer Onboarding: case study",
+    "MicroSaaS Customer Onboarding: case study",
+    "Next actions",
+    "Review your highest-friction workflow, contact Zion Tech Group for a scoped pilot, and start with one measurable outcome. Set a 30-day review date, define success metrics, assign an owner, and document rollback criteria before expanding. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan. The organizations that move fastest in 2026 are the ones that combine clear intent with disciplined execution.",
+    "Next actions",
+    " Review your highest-friction workflow, contact Zion Tech Group for a scoped pilot, and start with one measurable outcome. Set a 30-day review date, define success metrics, assign an owner, and document rollback criteria before expanding. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan. The organizations that move fastest in 2026 are the ones that combine clear intent with disciplined execution.",
+    "/blog/enterprise-backup-dr-case-study",
+    "Enterprise Backup Dr Case Study",
+    "/blog/it-consulting-evaluation-framework",
+    "It Consulting Evaluation Framework",
+    "/blog/event-driven-architecture-2026-6616",
+    "Event Driven Architecture 2026 6616",
+    "/blog/ai-bom-procurement-2026",
+    "Ai Bom Procurement 2026"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "MicroSaaS Customer Onboarding: case study",
+    "description": "MicroSaaS Customer Onboarding: case study",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T07:56:56Z",
+    "dateModified": "2026-08-07T07:56:56Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/microsaas-customer-onboarding-case-study/"
+  }
+}

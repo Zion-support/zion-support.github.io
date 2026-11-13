@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/neural-analyzer-healthcare-383d44e2",
+  "breadcrumbTitle": "Neural analyzer-healthcare",
+  "title": "Neural analyzer-healthcare",
+  "description": "Next-generation healthcare solution: Neural analyzer-healthcare. Combines workflow management with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Neural analyzer-healthcare - Zion Tech Group",
+    "description": "Next-generation healthcare solution: Neural analyzer-healthcare. Combines workflow management with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/neural-analyzer-healthcare-383d44e2"
+    }
+  },
+  "features": [
+    "Zero-downtime updates",
+    "API-first design",
+    "Performance dashboards",
+    "Open-source friendly",
+    "Multi-region deployment"
+  ],
+  "benefits": [
+    "Performance benchmarking",
+    "50% reduction in operational costs",
+    "3x faster decision making"
+  ]
+}

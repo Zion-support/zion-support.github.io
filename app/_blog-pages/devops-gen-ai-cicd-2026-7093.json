@@ -1,0 +1,31 @@
+{
+  "template": "page-shell",
+  "metadata": {
+    "title": "GenAI DevOps CI/CD | Zion Tech Group",
+    "description": "Practical guide to genai devops ci/cd: frameworks, metrics, and rollout playbook.",
+    "alternates": {
+      "canonical": "/blog/devops-gen-ai-cicd-2026-7093/"
+    },
+    "openGraph": {
+      "title": "GenAI DevOps CI/CD",
+      "description": "Practical guide to genai devops ci/cd.",
+      "url": "https://ziontechgroup.com/blog/devops-gen-ai-cicd-2026-7093/",
+      "type": "article"
+    },
+    "twitter": {
+      "card": "summary_large_image",
+      "title": "GenAI DevOps CI/CD",
+      "description": "Practical guide to genai devops ci/cd."
+    }
+  },
+  "values": [
+    "GenAI DevOps CI/CD",
+    "Practical guide to genai devops ci/cd: frameworks, metrics, and rollout playbook.",
+    "https://ziontechgroup.com/blog/devops-gen-ai-cicd-2026-7093/",
+    "GenAI DevOps CI/CD",
+    "Practical guide to genai devops ci/cd: frameworks, metrics, and rollout playbook.",
+    "https://ziontechgroup.com/blog/devops-gen-ai-cicd-2026-7093/",
+    "GenAI DevOps CI/CD is moving from experiment to operating layer. Most programs fail because they optimize for demos instead of outcomes.",
+    "With strong governance, genai devops ci/cd becomes reliable infrastructure."
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "TaxFlow — Tax Compliance Automation",
+  "description": "Automated sales tax calculation, filing, and remittance for e-commerce and SaaS. Real-time rates, nexus tracking, and multi-state/county compliance.",
+  "basic": "$49/mo/month",
+  "pro": "$149/mo/month",
+  "enterprise": "$499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "TaxFlow — Tax Compliance Automation - Zion Tech Group",
+    "description": "Automated sales tax calculation, filing, and remittance for e-commerce and SaaS. Real-time rates, nexus tracking, and multi-state/county compliance.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w174-taxflow"
+    }
+  },
+  "features": [
+    "Real-time sales tax calculation by jurisdiction",
+    "Economic nexus tracking and alerts",
+    "Automated filing and remittance",
+    "Multi-state, county, city compliance",
+    "Exemption certificate management"
+  ],
+  "benefits": [
+    "Never miss a tax filing deadline",
+    "Nexus tracking prevents audit exposure",
+    "Automated calculation eliminates manual lookup",
+    "Multi-jurisdiction compliance out of the box"
+  ]
+}

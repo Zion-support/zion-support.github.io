@@ -1,0 +1,29 @@
+{
+  "title": "SAP Integration Hub",
+  "description": "Pre-built connectors for SAP ERP, S/4HANA, SuccessFactors, and Ariba. Real-time sync, IDoc/BAPI support, and error handling out of the box.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "SAP Integration Hub - Zion Tech Group",
+    "description": "Pre-built connectors for SAP ERP, S/4HANA, SuccessFactors, and Ariba. Real-time sync, IDoc/BAPI support, and error handling out of the box.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-sap-integration-hub"
+    }
+  },
+  "features": [
+    "SAP ERP BAPI/IDoc adapters",
+    "SuccessFactors sync",
+    "Ariba network integration",
+    "Error reconciliation dashboard",
+    "SAP-certified connectors"
+  ],
+  "benefits": [
+    "Reduce costs with sap integration hub",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

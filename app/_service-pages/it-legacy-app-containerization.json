@@ -1,0 +1,29 @@
+{
+  "title": "Legacy App Containerization",
+  "description": "Migrate monoliths and legacy apps to Docker/Kubernetes with minimal code changes. Automated dependency analysis and service extraction.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Legacy App Containerization - Zion Tech Group",
+    "description": "Migrate monoliths and legacy apps to Docker/Kubernetes with minimal code changes. Automated dependency analysis and service extraction.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-legacy-app-containerization"
+    }
+  },
+  "features": [
+    "Automated dependency mapping",
+    "Service extraction recommendations",
+    "StatefulSet migration",
+    "Database connection pooling",
+    "Blue-green deployment"
+  ],
+  "benefits": [
+    "Reduce costs with legacy app containerization",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

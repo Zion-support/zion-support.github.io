@@ -1,0 +1,29 @@
+{
+  "title": "AI Predictive Quality Control for Manufacturing",
+  "description": "Computer vision AI for automated quality inspection on production lines. Detects defects in real-time with 99.5% accuracy, reducing waste and improving yield.",
+  "basic": "$3,999/mo/month",
+  "pro": "$9,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Predictive Quality Control for Manufacturing - Zion Tech Group",
+    "description": "Computer vision AI for automated quality inspection on production lines. Detects defects in real-time with 99.5% accuracy, reducing waste and improving yield.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-predictive-quality-control"
+    }
+  },
+  "features": [
+    "Real-time visual defect detection",
+    "Sub-millimeter defect classification",
+    "Production line integration (PLC, SCADA)",
+    "Root cause analysis for defect patterns",
+    "Yield optimization recommendations"
+  ],
+  "benefits": [
+    "Detect 99.5% of defects automatically",
+    "Reduce scrap by 30%",
+    "Improve yield by 15%",
+    "Eliminate manual inspection bottlenecks"
+  ]
+}

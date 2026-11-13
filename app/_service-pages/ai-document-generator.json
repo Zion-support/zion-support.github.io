@@ -1,0 +1,29 @@
+{
+  "title": "AI Document Generator & Workflow Automation",
+  "description": "AI-powered document creation platform that generates contracts, proposals, reports, and compliance documents from templates.",
+  "basic": "$49/mo/month",
+  "pro": "$149/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Document Generator & Workflow Automation - Zion Tech Group",
+    "description": "AI-powered document creation platform that generates contracts, proposals, reports, and compliance documents from templates.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-document-generator"
+    }
+  },
+  "features": [
+    "Natural language document generation",
+    "500+ professional templates",
+    "Multi-language document creation",
+    "Collaborative editing and approval workflows",
+    "E-signature integration"
+  ],
+  "benefits": [
+    "Create documents 10x faster",
+    "Ensure legal compliance",
+    "Reduce errors and inconsistencies",
+    "Scale document production"
+  ]
+}

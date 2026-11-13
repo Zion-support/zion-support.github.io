@@ -1,0 +1,29 @@
+{
+  "title": "AI Customer Feedback Analyzer & NPS Platform",
+  "description": "Collect, analyze, and act on customer feedback from surveys, reviews, support tickets, and social media. AI identifies themes, sentiment, and priority actions.",
+  "basic": "$99/mo/month",
+  "pro": "$299/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Customer Feedback Analyzer & NPS Platform - Zion Tech Group",
+    "description": "Collect, analyze, and act on customer feedback from surveys, reviews, support tickets, and social media. AI identifies themes, sentiment, and priority actions.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-ai-customer-feedback"
+    }
+  },
+  "features": [
+    "Multi-channel feedback collection",
+    "AI theme extraction and clustering",
+    "Sentiment analysis with emotion detection",
+    "NPS, CSAT, and CES scoring with trend analysis",
+    "Automated follow-up for detractors"
+  ],
+  "benefits": [
+    "Understand customer sentiment in real-time",
+    "Identify product issues before they escalate",
+    "Increase NPS by 15+ points with closed-loop follow-up",
+    "Unify feedback from all channels in one place"
+  ]
+}

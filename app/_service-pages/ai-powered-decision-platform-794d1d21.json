@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-powered-decision-platform-794d1d21",
+  "breadcrumbTitle": "AI-Powered Decision Platform",
+  "title": "AI-Powered Decision Platform",
+  "description": "Revolutionize media through intelligent automation. Our AI-Powered Decision Platform leverages advanced machine learning to deliver workflow management at scale",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI-Powered Decision Platform - Zion Tech Group",
+    "description": "Revolutionize media through intelligent automation. Our AI-Powered Decision Platform leverages advanced machine learning to deliver workflow management at scale",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-decision-platform-794d1d21"
+    }
+  },
+  "features": [
+    "Custom integrations",
+    "Performance dashboards",
+    "Alerting system",
+    "HIPAA ready"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "Dynamic resource allocation",
+    "Predictive maintenance scheduling",
+    "Real-time insights and alerts",
+    "Scalable to millions of transactions"
+  ]
+}

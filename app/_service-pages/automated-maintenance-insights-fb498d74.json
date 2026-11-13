@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/automated-maintenance-insights-fb498d74",
+  "breadcrumbTitle": "Automated Maintenance Insights",
+  "title": "Automated Maintenance Insights",
+  "description": "The future of logistics is here with Automated Maintenance Insights. Powered by cutting-edge AI, this platform delivers network optimization like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated Maintenance Insights - Zion Tech Group",
+    "description": "The future of logistics is here with Automated Maintenance Insights. Powered by cutting-edge AI, this platform delivers network optimization like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-maintenance-insights-fb498d74"
+    }
+  },
+  "features": [
+    "Machine learning integration",
+    "HIPAA ready",
+    "Role-based access control",
+    "Mobile-responsive interface"
+  ],
+  "benefits": [
+    "Cost optimization recommendations",
+    "99.9% uptime guarantee",
+    "24/7 automated operations",
+    "Enterprise-grade security"
+  ]
+}

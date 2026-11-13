@@ -1,0 +1,29 @@
+{
+  "title": "Cybersecurity & Penetration Testing",
+  "description": "Comprehensive security assessments, vulnerability management, and incident response to protect your digital assets.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Cybersecurity & Penetration Testing - Zion Tech Group",
+    "description": "Comprehensive security assessments, vulnerability management, and incident response to protect your digital assets.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cybersecurity"
+    }
+  },
+  "features": [
+    "Network & web application penetration testing",
+    "Vulnerability scanning & remediation",
+    "Security awareness training",
+    "Incident response & forensics",
+    "Compliance audits (SOC 2, ISO 27001)"
+  ],
+  "benefits": [
+    "Reduce costs with cybersecurity & penetration testing",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

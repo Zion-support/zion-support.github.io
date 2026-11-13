@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/manager-ai---real-estate-71002d40",
+  "breadcrumbTitle": "Manager AI - Real-Estate",
+  "title": "Manager AI - Real-Estate",
+  "description": "Unlock unprecedented growth with Manager AI - Real-Estate. This autonomous system provides security monitoring with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Manager AI - Real-Estate - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Manager AI - Real-Estate. This autonomous system provides security monitoring with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/manager-ai---real-estate-71002d40"
+    }
+  },
+  "features": [
+    "Alerting system",
+    "Cloud-native architecture",
+    "HIPAA ready",
+    "GDPR compliance",
+    "Offline capabilities"
+  ],
+  "benefits": [
+    "Seamless integration with existing systems",
+    "3x faster decision making",
+    "Predictive maintenance scheduling",
+    "Intelligent load balancing",
+    "99.9% uptime guarantee"
+  ]
+}

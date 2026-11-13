@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-advisor-logistics-1f88b69b",
+  "breadcrumbTitle": "AI-Powered advisor-logistics",
+  "title": "AI-Powered advisor-logistics",
+  "description": "Unlock unprecedented growth with AI-Powered advisor-logistics. This autonomous system provides market intelligence with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered advisor-logistics - Zion Tech Group",
+    "description": "Unlock unprecedented growth with AI-Powered advisor-logistics. This autonomous system provides market intelligence with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-advisor-logistics-1f88b69b"
+    }
+  },
+  "features": [
+    "Machine learning integration",
+    "Alerting system",
+    "Container orchestration",
+    "Performance dashboards"
+  ],
+  "benefits": [
+    "Seamless integration with existing systems",
+    "3x faster decision making",
+    "Enterprise-grade security",
+    "99.9% uptime guarantee"
+  ]
+}

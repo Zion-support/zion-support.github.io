@@ -1,0 +1,29 @@
+{
+  "title": "RelNoter — Release Notes Generator",
+  "description": "Auto-generate release notes from git commits, PRs, and tickets. Beautiful formatting, categorization, and publishing to Slack, email, and changelog pages.",
+  "basic": "$9/mo/month",
+  "pro": "$29/mo/month",
+  "enterprise": "$99/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "RelNoter — Release Notes Generator - Zion Tech Group",
+    "description": "Auto-generate release notes from git commits, PRs, and tickets. Beautiful formatting, categorization, and publishing to Slack, email, and changelog pages.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w175-relnoter"
+    }
+  },
+  "features": [
+    "Auto-generation from git/PR history",
+    "Smart categorization (feat, fix, breaking, perf)",
+    "Beautiful formatting with templates",
+    "Publish to Slack, email, and web",
+    "Semantic version integration"
+  ],
+  "benefits": [
+    "Never write release notes manually",
+    "Smart categorization organizes changes",
+    "Stakeholder variants for different audiences",
+    "Auto-publish keeps teams informed"
+  ]
+}

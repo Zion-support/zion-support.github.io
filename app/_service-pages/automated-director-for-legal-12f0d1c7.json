@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/automated-director-for-legal-12f0d1c7",
+  "breadcrumbTitle": "Automated Director for Legal",
+  "title": "Automated Director for Legal",
+  "description": "Revolutionize legal through intelligent automation. Our Automated Director for Legal leverages advanced machine learning to deliver code optimization at scale.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated Director for Legal - Zion Tech Group",
+    "description": "Revolutionize legal through intelligent automation. Our Automated Director for Legal leverages advanced machine learning to deliver code optimization at scale.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-director-for-legal-12f0d1c7"
+    }
+  },
+  "features": [
+    "Offline capabilities",
+    "Rollback mechanisms",
+    "GDPR compliance",
+    "Data encryption",
+    "Performance dashboards"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "24/7 automated operations",
+    "Performance benchmarking",
+    "Dynamic resource allocation",
+    "Real-time insights and alerts"
+  ]
+}

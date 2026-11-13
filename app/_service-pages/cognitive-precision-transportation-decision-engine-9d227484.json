@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/cognitive-precision-transportation-decision-engine-9d227484",
+  "breadcrumbTitle": "Cognitive Precision Transportation Decision Engine",
+  "title": "Cognitive Precision Transportation Decision Engine",
+  "description": "Cognitive decision engine that processes precision signals to drive transportation strategy with deep learning.",
+  "basic": "$278/month",
+  "pro": "$698/month",
+  "enterprise": "$2098/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Cognitive Precision Transportation Decision Engine - Zion Tech Group",
+    "description": "Cognitive decision engine that processes precision signals to drive transportation strategy with deep learning.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cognitive-precision-transportation-decision-engine-9d227484"
+    }
+  },
+  "features": [
+    "Cognitive reasoning",
+    "Scenario analysis",
+    "Decision trees",
+    "Recommendation engine"
+  ],
+  "benefits": [
+    "Better decision quality",
+    "Reduced risk",
+    "Faster insights",
+    "Competitive intelligence"
+  ]
+}

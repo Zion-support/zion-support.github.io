@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/automated-security-management-1-69ed6e32",
+  "breadcrumbTitle": "Automated Security Management #1",
+  "title": "Automated Security Management #1",
+  "description": "Next-generation legal solution: Automated Security Management #1. Combines energy management with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated Security Management #1 - Zion Tech Group",
+    "description": "Next-generation legal solution: Automated Security Management #1. Combines energy management with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-security-management-1-69ed6e32"
+    }
+  },
+  "features": [
+    "Custom integrations",
+    "Offline capabilities",
+    "Open-source friendly",
+    "Data encryption",
+    "Alerting system"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "Reduced human error by 95%",
+    "Predictive maintenance scheduling"
+  ]
+}

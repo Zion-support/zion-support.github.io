@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/saas-support-healthcare-fe0bb817",
+  "breadcrumbTitle": "SaaS Support & Admin for Healthcare",
+  "title": "SaaS Support & Admin for Healthcare",
+  "description": "SaaS administration and support for Healthcare. User management, integrations, automation, and vendor management across your stack.",
+  "basic": "$299/month",
+  "pro": "$799/month",
+  "enterprise": "$2499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "SaaS Support & Admin for Healthcare - Zion Tech Group",
+    "description": "SaaS administration and support for Healthcare. User management, integrations, automation, and vendor management across your stack.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/saas-support-healthcare-fe0bb817"
+    }
+  },
+  "features": [
+    "User provisioning and SSO",
+    "App integration and workflows",
+    "License optimization",
+    "Admin training and documentation",
+    "Vendor management"
+  ],
+  "benefits": [
+    "Reduced SaaS sprawl",
+    "Lower license costs",
+    "Faster user onboarding",
+    "Higher adoption rates",
+    "Consistent security controls"
+  ]
+}

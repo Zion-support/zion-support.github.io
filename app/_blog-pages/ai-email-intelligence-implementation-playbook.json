@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "AI Email Intelligence: implementation playbook | Zion Tech Group",
+    "description": "AI Email Intelligence: implementation playbook",
+    "keywords": [
+      "ai",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "AI Email Intelligence: implementation playbook",
+      "description": "AI Email Intelligence: implementation playbook",
+      "url": "https://ziontechgroup.com/blog/ai-email-intelligence-implementation-playbook/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/ai-email-intelligence-implementation-playbook/"
+    }
+  },
+  "values": [
+    "AI Email Intelligence: implementation playbook",
+    "AI Email Intelligence: implementation playbook",
+    "AI Email Intelligence: implementation playbook",
+    "Outcomes to measure",
+    "Leading indicators for ai email intelligence: implementation playbook: workflow completion rate, escalation rate, time-to-resolution, and user satisfaction. Lagging indicators: revenue trend, cost trend, customer retention, and operational efficiency. Track both leading and lagging indicators so you can explain progress to leadership before financial results appear. Use a rolling 90-day window and re-baseline monthly; this keeps the program accountable without demanding perfection on day one. Publish metrics in a shared dashboard so the whole team sees progress, not just the program sponsor.",
+    "Outcomes to measure",
+    " Leading indicators for ai email intelligence: implementation playbook: workflow completion rate, escalation rate, time-to-resolution, and user satisfaction. Lagging indicators: revenue trend, cost trend, customer retention, and operational efficiency. Track both leading and lagging indicators so you can explain progress to leadership before financial results appear. Use a rolling 90-day window and re-baseline monthly; this keeps the program accountable without demanding perfection on day one. Publish metrics in a shared dashboard so the whole team sees progress, not just the program sponsor.",
+    "/blog/microsaas-hr-recruitment-deployment-patterns",
+    "Microsaas Hr Recruitment Deployment Patterns",
+    "/blog/data-warehouse-modernization-implementation-playbook",
+    "Data Warehouse Modernization Implementation Playbook",
+    "/blog/ai-email-intelligence-architecture-overview",
+    "Ai Email Intelligence Architecture Overview",
+    "/blog/devops-gen-ai-cicd-2026-7300",
+    "Devops Gen Ai Cicd 2026 7300"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "AI Email Intelligence: implementation playbook",
+    "description": "AI Email Intelligence: implementation playbook",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T07:26:16Z",
+    "dateModified": "2026-08-07T07:26:16Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/ai-email-intelligence-implementation-playbook/"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/antavo-f01e7ca2",
+  "breadcrumbTitle": "Antavo",
+  "title": "Antavo",
+  "description": "Antavo is a Hungarian company marketing an AI-powered B2B loyalty platform to help companies develop and manage loyalty programs. It was founded in 2012 by Hung",
+  "basic": "$N/A/month",
+  "pro": "$N/A/month",
+  "enterprise": "$N/A/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Antavo - Zion Tech Group",
+    "description": "Antavo is a Hungarian company marketing an AI-powered B2B loyalty platform to help companies develop and manage loyalty programs. It was founded in 2012 by Hung",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/antavo-f01e7ca2"
+    }
+  },
+  "features": [
+    "AI-driven automation",
+    "Cloud-native deployment",
+    "API-first architecture",
+    "Enterprise-grade security",
+    "Scalable infrastructure"
+  ],
+  "benefits": [
+    "Improved operational efficiency",
+    "Reduced manual processes",
+    "Data-driven decision making",
+    "Faster time-to value",
+    "Scalable performance"
+  ]
+}

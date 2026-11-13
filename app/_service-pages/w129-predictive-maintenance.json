@@ -1,0 +1,29 @@
+{
+  "title": "Predictive Maintenance AI",
+  "description": "IoT sensor analysis with ML failure prediction. Reduces unplanned downtime by 73% and extends equipment life.",
+  "basic": "$N/A/month",
+  "pro": "$12997/month",
+  "enterprise": "$24997/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Predictive Maintenance AI - Zion Tech Group",
+    "description": "IoT sensor analysis with ML failure prediction. Reduces unplanned downtime by 73% and extends equipment life.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w129-predictive-maintenance"
+    }
+  },
+  "features": [
+    "IoT sensor processing",
+    "Failure prediction",
+    "Anomaly detection",
+    "Maintenance scheduling",
+    "Root cause analysis"
+  ],
+  "benefits": [
+    "73% less downtime",
+    "Extended equipment life",
+    "Optimized maintenance costs",
+    "Improved safety"
+  ]
+}

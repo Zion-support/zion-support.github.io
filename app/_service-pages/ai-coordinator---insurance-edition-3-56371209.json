@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/ai-coordinator---insurance-edition-3-56371209",
+  "breadcrumbTitle": "AI Coordinator - Insurance Edition #3",
+  "title": "AI Coordinator - Insurance Edition #3",
+  "description": "Transform your insurance operations with our AI Coordinator - Insurance Edition #3. This AI-driven solution automates decision support with unprecedented accura",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Coordinator - Insurance Edition #3 - Zion Tech Group",
+    "description": "Transform your insurance operations with our AI Coordinator - Insurance Edition #3. This AI-driven solution automates decision support with unprecedented accura",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-coordinator---insurance-edition-3-56371209"
+    }
+  },
+  "features": [
+    "Open-source friendly",
+    "GDPR compliance",
+    "Auto-scaling capabilities",
+    "Multi-region deployment"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "Cost optimization recommendations",
+    "Intelligent load balancing"
+  ]
+}

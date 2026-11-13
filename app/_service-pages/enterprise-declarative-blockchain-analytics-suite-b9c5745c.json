@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/enterprise-declarative-blockchain-analytics-suite-b9c5745c",
+  "breadcrumbTitle": "Enterprise Declarative Blockchain Analytics Suite",
+  "title": "Enterprise Declarative Blockchain Analytics Suite",
+  "description": "Enterprise analytics suite that delivers declarative blockchain insights with unified dashboards and reporting.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Enterprise Declarative Blockchain Analytics Suite - Zion Tech Group",
+    "description": "Enterprise analytics suite that delivers declarative blockchain insights with unified dashboards and reporting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/enterprise-declarative-blockchain-analytics-suite-b9c5745c"
+    }
+  },
+  "features": [
+    "Data visualization",
+    "Custom dashboards",
+    "Report generation",
+    "KPI tracking"
+  ],
+  "benefits": [
+    "Unified data view",
+    "Faster insights",
+    "Customizable reports",
+    "Cross-functional collaboration"
+  ]
+}

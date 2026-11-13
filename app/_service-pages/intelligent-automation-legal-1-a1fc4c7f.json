@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligent-automation-legal-1-a1fc4c7f",
+  "breadcrumbTitle": "Intelligent automation-legal #1",
+  "title": "Intelligent automation-legal #1",
+  "description": "Revolutionize legal through intelligent automation. Our Intelligent automation-legal #1 leverages advanced machine learning to deliver security monitoring at sc",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent automation-legal #1 - Zion Tech Group",
+    "description": "Revolutionize legal through intelligent automation. Our Intelligent automation-legal #1 leverages advanced machine learning to deliver security monitoring at sc",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-automation-legal-1-a1fc4c7f"
+    }
+  },
+  "features": [
+    "Microservices deployment",
+    "Edge computing support",
+    "Container orchestration",
+    "Real-time processing",
+    "Rollback mechanisms"
+  ],
+  "benefits": [
+    "Dynamic resource allocation",
+    "3x faster decision making",
+    "24/7 automated operations",
+    "Zero manual intervention required"
+  ]
+}

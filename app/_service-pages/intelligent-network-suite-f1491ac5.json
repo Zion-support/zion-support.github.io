@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/intelligent-network-suite-f1491ac5",
+  "breadcrumbTitle": "Intelligent Network Suite",
+  "title": "Intelligent Network Suite",
+  "description": "Unlock unprecedented growth with Intelligent Network Suite. This autonomous system provides performance monitoring with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Network Suite - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Intelligent Network Suite. This autonomous system provides performance monitoring with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-network-suite-f1491ac5"
+    }
+  },
+  "features": [
+    "Auto-scaling capabilities",
+    "Role-based access control",
+    "Custom integrations",
+    "Microservices deployment"
+  ],
+  "benefits": [
+    "Scalable to millions of transactions",
+    "Real-time insights and alerts",
+    "Automated compliance reporting"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "ScreenDoor — Feature Flag Platform",
+  "description": "Feature flags and progressive rollouts: toggle features, A/B test, canary releases, and kill switches. Target by segment, gradual rollout, and instant rollback.",
+  "basic": "$15/mo/month",
+  "pro": "$49/mo/month",
+  "enterprise": "$149/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "ScreenDoor — Feature Flag Platform - Zion Tech Group",
+    "description": "Feature flags and progressive rollouts: toggle features, A/B test, canary releases, and kill switches. Target by segment, gradual rollout, and instant rollback.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w175-screendoor"
+    }
+  },
+  "features": [
+    "Feature toggle management",
+    "Progressive and canary rollouts",
+    "Segment targeting (user, geo, device, custom)",
+    "A/B testing with statistical significance",
+    "Kill switch for instant rollback"
+  ],
+  "benefits": [
+    "Deploy with confidence using feature flags",
+    "Canary releases limit blast radius",
+    "Kill switch rolls back in milliseconds",
+    "Sub-5ms evaluation, zero performance impact"
+  ]
+}

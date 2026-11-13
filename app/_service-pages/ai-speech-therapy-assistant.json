@@ -1,0 +1,28 @@
+{
+  "title": "AI Speech Therapy & Language Development Assistant",
+  "description": "Support speech-language pathologists: articulation scoring, language milestone tracking, therapy exercise generation, and progress reporting. Used by 500+ clinics.",
+  "basic": "$49/therapist/month",
+  "pro": "$99/therapist/month",
+  "enterprise": "$199/therapist/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Speech Therapy & Language Development Assistant - Zion Tech Group",
+    "description": "Support speech-language pathologists: articulation scoring, language milestone tracking, therapy exercise generation, and progress reporting. Used by 500+ clini",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-speech-therapy-assistant"
+    }
+  },
+  "features": [
+    "Articulation accuracy scoring",
+    "Language milestone tracking",
+    "Auto-generated therapy exercises",
+    "Progress reporting (CPT codes)",
+    "Home practice app"
+  ],
+  "benefits": [
+    "Double patient capacity",
+    "Consistent articulation scoring",
+    "Insurance-ready documentation"
+  ]
+}

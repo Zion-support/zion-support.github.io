@@ -1,0 +1,29 @@
+{
+  "title": "AI Quantum Computing & Optimization Services",
+  "description": "Quantum computing and quantum-inspired optimization for complex problems. Portfolio optimization, logistics, drug discovery, and cryptography with quantum advantage.",
+  "basic": "$5,000/mo/month",
+  "pro": "$15,000/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Quantum Computing & Optimization Services - Zion Tech Group",
+    "description": "Quantum computing and quantum-inspired optimization for complex problems. Portfolio optimization, logistics, drug discovery, and cryptography with quantum advan",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-quantum-computing"
+    }
+  },
+  "features": [
+    "Quantum algorithm design and implementation",
+    "Quantum-inspired classical optimization",
+    "Portfolio and risk optimization",
+    "Supply chain and logistics optimization",
+    "Quantum machine learning"
+  ],
+  "benefits": [
+    "Solve optimization problems 1000x faster",
+    "Find optimal solutions for NP-hard problems",
+    "Prepare for quantum advantage in your industry",
+    "Hybrid approach delivers value today"
+  ]
+}

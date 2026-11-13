@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/optimizer-automated---hospitality-d2007801",
+  "breadcrumbTitle": "Optimizer Automated - Hospitality",
+  "title": "Optimizer Automated - Hospitality",
+  "description": "Revolutionize hospitality through intelligent automation. Our Optimizer Automated - Hospitality leverages advanced machine learning to deliver workflow manageme",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Optimizer Automated - Hospitality - Zion Tech Group",
+    "description": "Revolutionize hospitality through intelligent automation. Our Optimizer Automated - Hospitality leverages advanced machine learning to deliver workflow manageme",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/optimizer-automated---hospitality-d2007801"
+    }
+  },
+  "features": [
+    "Alerting system",
+    "Real-time processing",
+    "SOC 2 certified",
+    "Multi-region deployment"
+  ],
+  "benefits": [
+    "Intelligent load balancing",
+    "Self-healing infrastructure",
+    "ROI in under 90 days",
+    "Dynamic resource allocation",
+    "50% reduction in operational costs"
+  ]
+}

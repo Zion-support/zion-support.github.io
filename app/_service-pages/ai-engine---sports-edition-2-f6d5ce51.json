@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-engine---sports-edition-2-f6d5ce51",
+  "breadcrumbTitle": "AI Engine - Sports Edition #2",
+  "title": "AI Engine - Sports Edition #2",
+  "description": "The future of sports is here with AI Engine - Sports Edition #2. Powered by cutting-edge AI, this platform delivers financial planning like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Engine - Sports Edition #2 - Zion Tech Group",
+    "description": "The future of sports is here with AI Engine - Sports Edition #2. Powered by cutting-edge AI, this platform delivers financial planning like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-engine---sports-edition-2-f6d5ce51"
+    }
+  },
+  "features": [
+    "Comprehensive monitoring",
+    "Microservices deployment",
+    "Open-source friendly",
+    "API-first design"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "50% reduction in operational costs",
+    "Automated compliance reporting",
+    "ROI in under 90 days"
+  ]
+}

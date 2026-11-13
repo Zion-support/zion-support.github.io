@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/analytics-smart---real-estate-6d5fee30",
+  "breadcrumbTitle": "Analytics Smart - Real-Estate",
+  "title": "Analytics Smart - Real-Estate",
+  "description": "Transform your real-estate operations with our Analytics Smart - Real-Estate. This AI-driven solution automates language processing with unprecedented accuracy ",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Analytics Smart - Real-Estate - Zion Tech Group",
+    "description": "Transform your real-estate operations with our Analytics Smart - Real-Estate. This AI-driven solution automates language processing with unprecedented accuracy ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/analytics-smart---real-estate-6d5fee30"
+    }
+  },
+  "features": [
+    "Serverless functions",
+    "Comprehensive monitoring",
+    "SOC 2 certified",
+    "Multi-region deployment",
+    "Edge computing support"
+  ],
+  "benefits": [
+    "Cost optimization recommendations",
+    "3x faster decision making",
+    "99.9% uptime guarantee"
+  ]
+}

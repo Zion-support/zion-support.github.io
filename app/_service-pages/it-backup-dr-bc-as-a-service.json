@@ -1,0 +1,28 @@
+{
+  "title": "Backup / DR/BCaaS",
+  "description": "Managed backup and disaster recovery: 3-2-1-1-airgap policy, every-30s WORM snapshots, point-in-time restore to 90 days, failover tests every 30 min, 4-hour RTO, 15-min RPO SLA.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Backup / DR/BCaaS - Zion Tech Group",
+    "description": "Managed backup and disaster recovery: 3-2-1-1-airgap policy, every-30s WORM snapshots, point-in-time restore to 90 days, failover tests every 30 min, 4-hour RTO",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-backup-dr-bc-as-a-service"
+    }
+  },
+  "features": [
+    "3-2-1-1-airgap backup policy enforced automatically",
+    "WORM snapshots every 30 seconds, point-in-time restore to 90 days",
+    "Automatic failover testing every 30 minutes with pass/fail report",
+    "4-hour RTO and 15-minute RPO SLA with financial credit clause"
+  ],
+  "benefits": [
+    "Reduce costs with backup / dr/bcaas",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

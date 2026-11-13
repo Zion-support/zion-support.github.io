@@ -1,0 +1,28 @@
+{
+  "title": "AI Noise Pollution Detection & Mapping",
+  "description": "IoT + ML platform for noise monitoring: real-time noise mapping, regulatory compliance tracking, construction noise alerts, and urban planning noise modeling.",
+  "basic": "$149/node/month",
+  "pro": "$299/node/month",
+  "enterprise": "$799/node/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Noise Pollution Detection & Mapping - Zion Tech Group",
+    "description": "IoT + ML platform for noise monitoring: real-time noise mapping, regulatory compliance tracking, construction noise alerts, and urban planning noise modeling.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-noise-pollution-mapper"
+    }
+  },
+  "features": [
+    "Real-time noise level mapping",
+    "Regulatory compliance dashboards",
+    "Construction noise alerting",
+    "Urban noise modeling (3D)",
+    "Historical trend analysis"
+  ],
+  "benefits": [
+    "Ensure noise compliance",
+    "Reduce citizen complaints",
+    "Data-driven urban planning"
+  ]
+}

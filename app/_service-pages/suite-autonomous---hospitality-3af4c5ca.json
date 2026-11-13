@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/suite-autonomous---hospitality-3af4c5ca",
+  "breadcrumbTitle": "Suite Autonomous - Hospitality",
+  "title": "Suite Autonomous - Hospitality",
+  "description": "Transform your hospitality operations with our Suite Autonomous - Hospitality. This AI-driven solution automates supply chain with unprecedented accuracy and ef",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Suite Autonomous - Hospitality - Zion Tech Group",
+    "description": "Transform your hospitality operations with our Suite Autonomous - Hospitality. This AI-driven solution automates supply chain with unprecedented accuracy and ef",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/suite-autonomous---hospitality-3af4c5ca"
+    }
+  },
+  "features": [
+    "Open-source friendly",
+    "Audit trails",
+    "Custom integrations",
+    "Rollback mechanisms",
+    "Comprehensive monitoring"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "Enterprise-grade security",
+    "3x faster decision making",
+    "99.9% uptime guarantee",
+    "50% reduction in operational costs"
+  ]
+}

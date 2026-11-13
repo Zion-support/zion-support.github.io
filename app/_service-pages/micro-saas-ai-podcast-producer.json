@@ -1,0 +1,29 @@
+{
+  "title": "AI Podcast Producer & Content Repurposing",
+  "description": "AI-powered podcast production that edits audio, removes filler words, generates show notes, creates clips for social media, and repurposes episodes into blog posts and newsletters.",
+  "basic": "$39/mo/month",
+  "pro": "$99/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Podcast Producer & Content Repurposing - Zion Tech Group",
+    "description": "AI-powered podcast production that edits audio, removes filler words, generates show notes, creates clips for social media, and repurposes episodes into blog po",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-ai-podcast-producer"
+    }
+  },
+  "features": [
+    "AI audio editing (remove ums, ahs, long pauses)",
+    "Automatic transcription with speaker detection",
+    "AI show notes and summary generation",
+    "Social media clip extraction and captioning",
+    "Blog post and newsletter generation from episodes"
+  ],
+  "benefits": [
+    "Produce podcasts 5x faster",
+    "Repurpose every episode into 10+ content pieces",
+    "Reach global audiences with AI translation",
+    "Grow audience with optimized social clips"
+  ]
+}

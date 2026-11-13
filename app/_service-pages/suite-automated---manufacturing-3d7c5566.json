@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/suite-automated---manufacturing-3d7c5566",
+  "breadcrumbTitle": "Suite Automated - Manufacturing",
+  "title": "Suite Automated - Manufacturing",
+  "description": "Next-generation manufacturing solution: Suite Automated - Manufacturing. Combines compliance monitoring with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Suite Automated - Manufacturing - Zion Tech Group",
+    "description": "Next-generation manufacturing solution: Suite Automated - Manufacturing. Combines compliance monitoring with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/suite-automated---manufacturing-3d7c5566"
+    }
+  },
+  "features": [
+    "Role-based access control",
+    "HIPAA ready",
+    "Data encryption",
+    "Container orchestration",
+    "Auto-scaling capabilities"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "Performance benchmarking",
+    "50% reduction in operational costs",
+    "Cost optimization recommendations",
+    "Self-healing infrastructure"
+  ]
+}

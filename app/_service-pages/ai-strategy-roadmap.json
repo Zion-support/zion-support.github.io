@@ -1,0 +1,29 @@
+{
+  "title": "AI Strategy & Roadmap",
+  "description": "Align AI initiatives with business goals. Discovery workshops, use-case prioritization, vendor evaluation, and phased roadmaps for production AI at...",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Strategy & Roadmap - Zion Tech Group",
+    "description": "Align AI initiatives with business goals. Discovery workshops, use-case prioritization, vendor evaluation, and phased roadmaps for production AI at...",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-strategy-roadmap"
+    }
+  },
+  "features": [
+    "Discovery & Opportunity Mapping",
+    "Use-Case Prioritization",
+    "Vendor & Build-vs-Buy Evaluation",
+    "Phased Roadmap Design",
+    "KPI & Success Metrics"
+  ],
+  "benefits": [
+    "Reduce costs with ai strategy & roadmap",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

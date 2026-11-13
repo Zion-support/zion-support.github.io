@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/analyzer-automated---agriculture-0f99f7d4",
+  "breadcrumbTitle": "Analyzer Automated - Agriculture",
+  "title": "Analyzer Automated - Agriculture",
+  "description": "The future of agriculture is here with Analyzer Automated - Agriculture. Powered by cutting-edge AI, this platform delivers energy management like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Analyzer Automated - Agriculture - Zion Tech Group",
+    "description": "The future of agriculture is here with Analyzer Automated - Agriculture. Powered by cutting-edge AI, this platform delivers energy management like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/analyzer-automated---agriculture-0f99f7d4"
+    }
+  },
+  "features": [
+    "Open-source friendly",
+    "Serverless functions",
+    "Custom integrations",
+    "Audit trails",
+    "HIPAA ready"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "Enterprise-grade security",
+    "Automated compliance reporting"
+  ]
+}

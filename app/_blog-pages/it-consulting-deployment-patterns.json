@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "IT Consulting: deployment patterns | Zion Tech Group",
+    "description": "IT Consulting: deployment patterns",
+    "keywords": [
+      "it",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "IT Consulting: deployment patterns",
+      "description": "IT Consulting: deployment patterns",
+      "url": "https://ziontechgroup.com/blog/it-consulting-deployment-patterns/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/it-consulting-deployment-patterns/"
+    }
+  },
+  "values": [
+    "IT Consulting: deployment patterns",
+    "IT Consulting: deployment patterns",
+    "IT Consulting: deployment patterns",
+    "Conversion path",
+    "If this guide matches your it consulting: deployment patterns initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "Conversion path",
+    " If this guide matches your it consulting: deployment patterns initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "/blog/cloud-cost-ai-optimizer-starter-template",
+    "Cloud Cost Ai Optimizer Starter Template",
+    "/blog/ai-bom-procurement-2026-6870",
+    "Ai Bom Procurement 2026 6870",
+    "/blog/ai-data-backup-operations-handbook",
+    "Ai Data Backup Operations Handbook",
+    "/blog/enterprise-ai-intelligence-hub-automation-roadmap",
+    "Enterprise Ai Intelligence Hub Automation Roadmap"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "IT Consulting: deployment patterns",
+    "description": "IT Consulting: deployment patterns",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T08:27:39Z",
+    "dateModified": "2026-08-07T08:27:39Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/it-consulting-deployment-patterns/"
+  }
+}

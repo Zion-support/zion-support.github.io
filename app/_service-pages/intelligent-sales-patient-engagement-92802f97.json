@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-sales-patient-engagement-92802f97",
+  "breadcrumbTitle": "Intelligent Sales Patient Engagement",
+  "title": "Intelligent Sales Patient Engagement",
+  "description": "AI-driven patient engagement platform that delivers real-time personalized care journeys, remote monitoring, and adherence support through intelligent automatio",
+  "basic": "$258/month",
+  "pro": "$648/month",
+  "enterprise": "$1948/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Intelligent Sales Patient Engagement - Zion Tech Group",
+    "description": "AI-driven patient engagement platform that delivers real-time personalized care journeys, remote monitoring, and adherence support through intelligent automatio",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-sales-patient-engagement-92802f97"
+    }
+  },
+  "features": [
+    "Personalized care plans",
+    "Remote monitoring",
+    "Medication adherence",
+    "Virtual consultations"
+  ],
+  "benefits": [
+    "Better outcomes",
+    "Higher satisfaction",
+    "Reduced readmissions",
+    "Lower costs"
+  ]
+}

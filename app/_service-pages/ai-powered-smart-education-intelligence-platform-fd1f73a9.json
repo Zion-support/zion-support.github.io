@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-smart-education-intelligence-platform-fd1f73a9",
+  "breadcrumbTitle": "AI-Powered Smart Education Intelligence Platform",
+  "title": "AI-Powered Smart Education Intelligence Platform",
+  "description": "AI-driven intelligence platform that delivers smart insights and automated decision-making for education operations.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Smart Education Intelligence Platform - Zion Tech Group",
+    "description": "AI-driven intelligence platform that delivers smart insights and automated decision-making for education operations.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-smart-education-intelligence-platform-fd1f73a9"
+    }
+  },
+  "features": [
+    "Real-time intelligence",
+    "Automated insights",
+    "Predictive alerts",
+    "API integration"
+  ],
+  "benefits": [
+    "Real-time actionable insights",
+    "Automated decision-making",
+    "Reduced latency",
+    "Improved accuracy"
+  ]
+}

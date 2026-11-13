@@ -1,0 +1,29 @@
+{
+  "title": "AI-Powered Log Anomaly Detection",
+  "description": "Automatically detect unusual patterns, spikes, and errors in logs using unsupervised ML; reduce alert fatigue and surface issues before they cause outages.",
+  "basic": "$399/mo/month",
+  "pro": "$999/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI-Powered Log Anomaly Detection - Zion Tech Group",
+    "description": "Automatically detect unusual patterns, spikes, and errors in logs using unsupervised ML; reduce alert fatigue and surface issues before they cause outages.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-log-anomaly-detection"
+    }
+  },
+  "features": [
+    "Unsupervised clustering of log events",
+    "Real-time anomaly scoring per time-series",
+    "Seamless integration with ELK/Prometheus",
+    "Alert suppression & correlation",
+    "Root-cause hinting via pattern matching"
+  ],
+  "benefits": [
+    "Reduce costs with ai-powered log anomaly detection",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

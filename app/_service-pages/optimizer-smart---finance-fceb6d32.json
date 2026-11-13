@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/optimizer-smart---finance-fceb6d32",
+  "breadcrumbTitle": "Optimizer Smart - Finance",
+  "title": "Optimizer Smart - Finance",
+  "description": "Transform your finance operations with our Optimizer Smart - Finance. This AI-driven solution automates customer insights with unprecedented accuracy and effici",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Optimizer Smart - Finance - Zion Tech Group",
+    "description": "Transform your finance operations with our Optimizer Smart - Finance. This AI-driven solution automates customer insights with unprecedented accuracy and effici",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/optimizer-smart---finance-fceb6d32"
+    }
+  },
+  "features": [
+    "Auto-scaling capabilities",
+    "Open-source friendly",
+    "Mobile-responsive interface",
+    "Role-based access control",
+    "Custom integrations"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "Real-time insights and alerts",
+    "Dynamic resource allocation"
+  ]
+}

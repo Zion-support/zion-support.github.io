@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "Chaos Engineering: case study | Zion Tech Group",
+    "description": "Chaos Engineering: case study",
+    "keywords": [
+      "data",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "Chaos Engineering: case study",
+      "description": "Chaos Engineering: case study",
+      "url": "https://ziontechgroup.com/blog/chaos-engineering-case-study/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/chaos-engineering-case-study/"
+    }
+  },
+  "values": [
+    "Chaos Engineering: case study",
+    "Chaos Engineering: case study",
+    "Chaos Engineering: case study",
+    "Next actions",
+    "Review your highest-friction workflow, contact Zion Tech Group for a scoped pilot, and start with one measurable outcome. Set a 30-day review date, define success metrics, assign an owner, and document rollback criteria before expanding. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan. The organizations that move fastest in 2026 are the ones that combine clear intent with disciplined execution.",
+    "Next actions",
+    " Review your highest-friction workflow, contact Zion Tech Group for a scoped pilot, and start with one measurable outcome. Set a 30-day review date, define success metrics, assign an owner, and document rollback criteria before expanding. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan. The organizations that move fastest in 2026 are the ones that combine clear intent with disciplined execution.",
+    "/blog/graphql-federation-platform-checklist-for-it-leaders",
+    "Graphql Federation Platform Checklist For It Leaders",
+    "/blog/smart-contract-audit-2026-7169",
+    "Smart Contract Audit 2026 7169",
+    "/blog/event-driven-architecture-2026-7030",
+    "Event Driven Architecture 2026 7030",
+    "/blog/automation-orchestration-enterprise-2026-6768",
+    "Automation Orchestration Enterprise 2026 6768"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Chaos Engineering: case study",
+    "description": "Chaos Engineering: case study",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T04:21:38Z",
+    "dateModified": "2026-08-07T04:21:38Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/chaos-engineering-case-study/"
+  }
+}

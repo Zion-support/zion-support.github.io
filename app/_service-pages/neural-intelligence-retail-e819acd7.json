@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/neural-intelligence-retail-e819acd7",
+  "breadcrumbTitle": "Neural intelligence-retail",
+  "title": "Neural intelligence-retail",
+  "description": "The future of retail is here with Neural intelligence-retail. Powered by cutting-edge AI, this platform delivers image recognition like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Neural intelligence-retail - Zion Tech Group",
+    "description": "The future of retail is here with Neural intelligence-retail. Powered by cutting-edge AI, this platform delivers image recognition like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/neural-intelligence-retail-e819acd7"
+    }
+  },
+  "features": [
+    "Offline capabilities",
+    "Rollback mechanisms",
+    "Plugin architecture",
+    "Cloud-native architecture",
+    "Role-based access control"
+  ],
+  "benefits": [
+    "Cost optimization recommendations",
+    "Reduced human error by 95%",
+    "Intelligent load balancing"
+  ]
+}

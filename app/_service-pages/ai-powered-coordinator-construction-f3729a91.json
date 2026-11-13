@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-powered-coordinator-construction-f3729a91",
+  "breadcrumbTitle": "AI-Powered coordinator-construction",
+  "title": "AI-Powered coordinator-construction",
+  "description": "Transform your construction operations with our AI-Powered coordinator-construction. This AI-driven solution automates quality control with unprecedented accura",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered coordinator-construction - Zion Tech Group",
+    "description": "Transform your construction operations with our AI-Powered coordinator-construction. This AI-driven solution automates quality control with unprecedented accura",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-coordinator-construction-f3729a91"
+    }
+  },
+  "features": [
+    "Plugin architecture",
+    "Audit trails",
+    "Mobile-responsive interface",
+    "Serverless functions"
+  ],
+  "benefits": [
+    "24/7 automated operations",
+    "Scalable to millions of transactions",
+    "Zero manual intervention required",
+    "Intelligent load balancing",
+    "Reduced human error by 95%"
+  ]
+}

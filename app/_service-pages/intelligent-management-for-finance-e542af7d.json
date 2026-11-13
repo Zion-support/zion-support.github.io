@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-management-for-finance-e542af7d",
+  "breadcrumbTitle": "Intelligent Management for Finance",
+  "title": "Intelligent Management for Finance",
+  "description": "Transform your finance operations with our Intelligent Management for Finance. This AI-driven solution automates customer insights with unprecedented accuracy a",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Management for Finance - Zion Tech Group",
+    "description": "Transform your finance operations with our Intelligent Management for Finance. This AI-driven solution automates customer insights with unprecedented accuracy a",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-management-for-finance-e542af7d"
+    }
+  },
+  "features": [
+    "API-first design",
+    "Offline capabilities",
+    "Rollback mechanisms",
+    "Performance dashboards",
+    "SOC 2 certified"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Real-time insights and alerts",
+    "24/7 automated operations"
+  ]
+}

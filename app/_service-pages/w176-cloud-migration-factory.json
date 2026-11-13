@@ -1,0 +1,29 @@
+{
+  "title": "Cloud Migration Factory",
+  "description": "Industrialized cloud migration for 100+ workloads: automated assessment, migration patterns, wave planning, and execution at scale.",
+  "basic": "$19,999/month",
+  "pro": "$49,999/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Cloud Migration Factory - Zion Tech Group",
+    "description": "Industrialized cloud migration for 100+ workloads: automated assessment, migration patterns, wave planning, and execution at scale.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w176-cloud-migration-factory"
+    }
+  },
+  "features": [
+    "Automated application assessment",
+    "Migration pattern matching (6R)",
+    "Wave planning with dependencies",
+    "Automated migration execution",
+    "Landing zone pre-configured"
+  ],
+  "benefits": [
+    "Migrate 100+ workloads predictably",
+    "Automated patterns accelerate execution",
+    "Wave planning manages dependencies",
+    "Leadership dashboards show progress"
+  ]
+}

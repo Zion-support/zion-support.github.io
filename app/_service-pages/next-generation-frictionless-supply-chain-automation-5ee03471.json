@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/next-generation-frictionless-supply-chain-automation-5ee03471",
+  "breadcrumbTitle": "Next-Generation Frictionless Supply Chain Automation",
+  "title": "Next-Generation Frictionless Supply Chain Automation",
+  "description": "Next-generation automation suite that streamlines frictionless supply chain workflows with intelligent orchestration.",
+  "basic": "$218/month",
+  "pro": "$548/month",
+  "enterprise": "$1648/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Next-Generation Frictionless Supply Chain Automation - Zion Tech Group",
+    "description": "Next-generation automation suite that streamlines frictionless supply chain workflows with intelligent orchestration.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/next-generation-frictionless-supply-chain-automation-5ee03471"
+    }
+  },
+  "features": [
+    "Smart orchestration",
+    "Process automation",
+    "Event processing",
+    "Task scheduling"
+  ],
+  "benefits": [
+    "Faster execution",
+    "Reduced manual steps",
+    "Scalable processes",
+    "Error reduction"
+  ]
+}

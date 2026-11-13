@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/smart-orchestrator-for-healthcare-6bae6fdf",
+  "breadcrumbTitle": "Smart Orchestrator for Healthcare",
+  "title": "Smart Orchestrator for Healthcare",
+  "description": "Unlock unprecedented growth with Smart Orchestrator for Healthcare. This autonomous system provides customer insights with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Orchestrator for Healthcare - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Smart Orchestrator for Healthcare. This autonomous system provides customer insights with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-orchestrator-for-healthcare-6bae6fdf"
+    }
+  },
+  "features": [
+    "Edge computing support",
+    "Multi-language support",
+    "Offline capabilities",
+    "API-first design"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "3x faster decision making",
+    "Reduced human error by 95%"
+  ]
+}

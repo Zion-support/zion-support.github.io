@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "Enterprise Backup DR: architecture overview | Zion Tech Group",
+    "description": "Enterprise Backup DR: architecture overview",
+    "keywords": [
+      "it",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "Enterprise Backup DR: architecture overview",
+      "description": "Enterprise Backup DR: architecture overview",
+      "url": "https://ziontechgroup.com/blog/enterprise-backup-dr-architecture-overview/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/enterprise-backup-dr-architecture-overview/"
+    }
+  },
+  "values": [
+    "Enterprise Backup DR: architecture overview",
+    "Enterprise Backup DR: architecture overview",
+    "Enterprise Backup DR: architecture overview",
+    "Conversion path",
+    "If this guide matches your enterprise backup dr: architecture overview initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "Conversion path",
+    " If this guide matches your enterprise backup dr: architecture overview initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "/blog/chaos-engineering-2026-6809",
+    "Chaos Engineering 2026 6809",
+    "/blog/ai-it-operations-automation-2026-6763",
+    "Ai It Operations Automation 2026 6763",
+    "/blog/ai-development-acceleration-2026-7322",
+    "Ai Development Acceleration 2026 7322",
+    "/blog/apm-application-performance-2026-6946",
+    "Apm Application Performance 2026 6946"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Enterprise Backup DR: architecture overview",
+    "description": "Enterprise Backup DR: architecture overview",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T04:51:31Z",
+    "dateModified": "2026-08-07T04:51:31Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/enterprise-backup-dr-architecture-overview/"
+  }
+}

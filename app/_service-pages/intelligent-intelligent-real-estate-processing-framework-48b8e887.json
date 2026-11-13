@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-intelligent-real-estate-processing-framework-48b8e887",
+  "breadcrumbTitle": "Intelligent Intelligent Real Estate Processing Framework",
+  "title": "Intelligent Intelligent Real Estate Processing Framework",
+  "description": "Intelligent processing framework that automates intelligent real estate data flows with real-time transformation.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Intelligent Intelligent Real Estate Processing Framework - Zion Tech Group",
+    "description": "Intelligent processing framework that automates intelligent real estate data flows with real-time transformation.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-intelligent-real-estate-processing-framework-48b8e887"
+    }
+  },
+  "features": [
+    "Real-time processing",
+    "Data transformation",
+    "ETL pipelines",
+    "Stream processing"
+  ],
+  "benefits": [
+    "Faster data flows",
+    "Reduced processing time",
+    "Higher throughput",
+    "Real-time transformation"
+  ]
+}

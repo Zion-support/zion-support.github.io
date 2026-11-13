@@ -1,0 +1,29 @@
+{
+  "title": "Unified Observability Platform",
+  "description": "Single pane of glass for logs, metrics, traces, and profiles. Powered by OpenTelemetry, with AI-assisted root cause analysis.",
+  "basic": "$199/mo/month",
+  "pro": "$599/mo/month",
+  "enterprise": "$1,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Unified Observability Platform - Zion Tech Group",
+    "description": "Single pane of glass for logs, metrics, traces, and profiles. Powered by OpenTelemetry, with AI-assisted root cause analysis.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-observability-unified"
+    }
+  },
+  "features": [
+    "OpenTelemetry auto-instrumentation",
+    "Log aggregation & search",
+    "Distributed tracing",
+    "Profiling (CPU/memory)",
+    "AI RCA (root cause)"
+  ],
+  "benefits": [
+    "Reduce costs with unified observability platform",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

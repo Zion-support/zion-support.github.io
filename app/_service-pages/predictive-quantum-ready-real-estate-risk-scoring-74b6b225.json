@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/predictive-quantum-ready-real-estate-risk-scoring-74b6b225",
+  "breadcrumbTitle": "Predictive Quantum-Ready Real Estate Risk Scoring",
+  "title": "Predictive Quantum-Ready Real Estate Risk Scoring",
+  "description": "Predictive risk scoring engine that assesses quantum-ready real estate vulnerabilities with machine learning.",
+  "basic": "$278/month",
+  "pro": "$698/month",
+  "enterprise": "$2098/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Predictive Quantum-Ready Real Estate Risk Scoring - Zion Tech Group",
+    "description": "Predictive risk scoring engine that assesses quantum-ready real estate vulnerabilities with machine learning.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/predictive-quantum-ready-real-estate-risk-scoring-74b6b225"
+    }
+  },
+  "features": [
+    "Risk assessment",
+    "Threat modeling",
+    "Compliance scoring",
+    "Mitigation planning"
+  ],
+  "benefits": [
+    "Proactive risk mitigation",
+    "Compliance assurance",
+    "Reduced exposure",
+    "Faster incident response"
+  ]
+}

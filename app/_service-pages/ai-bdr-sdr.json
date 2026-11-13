@@ -1,0 +1,29 @@
+{
+  "title": "AI BDR/SDR Agent",
+  "description": "Autonomous AI Business Development & Sales Development Representative: prospect, qualify, email, book meetings, and nurture leads 24/7 without human intervention.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI BDR/SDR Agent - Zion Tech Group",
+    "description": "Autonomous AI Business Development & Sales Development Representative: prospect, qualify, email, book meetings, and nurture leads 24/7 without human interventio",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-bdr-sdr"
+    }
+  },
+  "features": [
+    "Lead research & enrichment (LinkedIn, company data)",
+    "Personalized cold email & LinkedIn outreach",
+    "Intent signal detection & prioritization",
+    "Automated meeting booking (Calendly integration)",
+    "CRM sync (HubSpot, Salesforce)"
+  ],
+  "benefits": [
+    "Reduce costs with ai bdr/sdr agent",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/insights-autonomous---manufacturing-ad2d1f6b",
+  "breadcrumbTitle": "Insights Autonomous - Manufacturing",
+  "title": "Insights Autonomous - Manufacturing",
+  "description": "Revolutionize manufacturing through intelligent automation. Our Insights Autonomous - Manufacturing leverages advanced machine learning to deliver quality contr",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Insights Autonomous - Manufacturing - Zion Tech Group",
+    "description": "Revolutionize manufacturing through intelligent automation. Our Insights Autonomous - Manufacturing leverages advanced machine learning to deliver quality contr",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/insights-autonomous---manufacturing-ad2d1f6b"
+    }
+  },
+  "features": [
+    "HIPAA ready",
+    "Edge computing support",
+    "Performance dashboards",
+    "SOC 2 certified",
+    "Custom integrations"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "Enterprise-grade security",
+    "Zero manual intervention required",
+    "Scalable to millions of transactions",
+    "Predictive maintenance scheduling"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "AI Document Understanding Platform",
+  "description": "Enterprise document AI platform that extracts, classifies, and processes unstructured documents at scale. Handles contracts, invoices, forms, IDs, and custom documents with 99%+ accuracy.",
+  "basic": "$999/mo/month",
+  "pro": "$2,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Document Understanding Platform - Zion Tech Group",
+    "description": "Enterprise document AI platform that extracts, classifies, and processes unstructured documents at scale. Handles contracts, invoices, forms, IDs, and custom do",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-document-understanding-platform"
+    }
+  },
+  "features": [
+    "OCR + AI extraction for any document type",
+    "Automatic document classification and routing",
+    "Contract analysis with clause extraction and risk flags",
+    "Invoice processing with GL code assignment",
+    "ID and form verification with fraud detection"
+  ],
+  "benefits": [
+    "Process documents 10x faster than manual review",
+    "Achieve 99%+ extraction accuracy with AI validation",
+    "Reduce document processing costs by 80%",
+    "Scale document operations without adding headcount"
+  ]
+}

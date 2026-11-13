@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "ETL Pipeline Optimization: starter template | Zion Tech Group",
+    "description": "ETL Pipeline Optimization: starter template",
+    "keywords": [
+      "security",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "ETL Pipeline Optimization: starter template",
+      "description": "ETL Pipeline Optimization: starter template",
+      "url": "https://ziontechgroup.com/blog/etl-pipeline-optimization-starter-template/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/etl-pipeline-optimization-starter-template/"
+    }
+  },
+  "values": [
+    "ETL Pipeline Optimization: starter template",
+    "ETL Pipeline Optimization: starter template",
+    "ETL Pipeline Optimization: starter template",
+    "Recommended next step",
+    "Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "Recommended next step",
+    " Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "/blog/ai-for-real-estate-and-property-management",
+    "Ai For Real Estate And Property Management",
+    "/blog/devops-cicd-deployment-patterns",
+    "Devops Cicd Deployment Patterns",
+    "/blog/ai-it-operations-automation-2026-6832",
+    "Ai It Operations Automation 2026 6832",
+    "/blog/data-warehouse-modernization-checklist-for-it-leaders",
+    "Data Warehouse Modernization Checklist For It Leaders"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "ETL Pipeline Optimization: starter template",
+    "description": "ETL Pipeline Optimization: starter template",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T09:28:32Z",
+    "dateModified": "2026-08-07T09:28:32Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/etl-pipeline-optimization-starter-template/"
+  }
+}

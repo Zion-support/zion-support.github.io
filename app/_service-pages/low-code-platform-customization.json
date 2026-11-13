@@ -1,0 +1,29 @@
+{
+  "title": "Low-Code Platform Customization & Integration",
+  "description": "Extend and integrate your low-code platforms (Retool, Appian, Power Apps, OutSystems) with custom components, APIs, and enterprise system connectors.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Low-Code Platform Customization & Integration - Zion Tech Group",
+    "description": "Extend and integrate your low-code platforms (Retool, Appian, Power Apps, OutSystems) with custom components, APIs, and enterprise system connectors.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/low-code-platform-customization"
+    }
+  },
+  "features": [
+    "Custom UI component development",
+    "Enterprise system connectors (SAP, Oracle, legacy)",
+    "API Gateway & middleware integration",
+    "Performance optimization & caching",
+    "Security hardening & audit logging"
+  ],
+  "benefits": [
+    "Reduce costs with low-code platform customization & integration",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/automated-management-for-education-d50b4e4a",
+  "breadcrumbTitle": "Automated Management for Education",
+  "title": "Automated Management for Education",
+  "description": "Next-generation education solution: Automated Management for Education. Combines supply chain with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated Management for Education - Zion Tech Group",
+    "description": "Next-generation education solution: Automated Management for Education. Combines supply chain with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-management-for-education-d50b4e4a"
+    }
+  },
+  "features": [
+    "API-first design",
+    "Performance dashboards",
+    "Comprehensive monitoring",
+    "Audit trails",
+    "Role-based access control"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "ROI in under 90 days",
+    "Reduced human error by 95%"
+  ]
+}

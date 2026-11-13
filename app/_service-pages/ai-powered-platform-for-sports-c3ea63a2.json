@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-powered-platform-for-sports-c3ea63a2",
+  "breadcrumbTitle": "AI-Powered Platform for Sports",
+  "title": "AI-Powered Platform for Sports",
+  "description": "Revolutionize sports through intelligent automation. Our AI-Powered Platform for Sports leverages advanced machine learning to deliver process automation at sca",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Platform for Sports - Zion Tech Group",
+    "description": "Revolutionize sports through intelligent automation. Our AI-Powered Platform for Sports leverages advanced machine learning to deliver process automation at sca",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-platform-for-sports-c3ea63a2"
+    }
+  },
+  "features": [
+    "Container orchestration",
+    "Role-based access control",
+    "Custom integrations",
+    "Cloud-native architecture"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Enterprise-grade security",
+    "Real-time insights and alerts",
+    "Automated compliance reporting",
+    "3x faster decision making"
+  ]
+}

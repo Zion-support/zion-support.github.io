@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/insights-smart---insurance-816b4263",
+  "breadcrumbTitle": "Insights Smart - Insurance",
+  "title": "Insights Smart - Insurance",
+  "description": "Revolutionize insurance through intelligent automation. Our Insights Smart - Insurance leverages advanced machine learning to deliver workflow management at sca",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Insights Smart - Insurance - Zion Tech Group",
+    "description": "Revolutionize insurance through intelligent automation. Our Insights Smart - Insurance leverages advanced machine learning to deliver workflow management at sca",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/insights-smart---insurance-816b4263"
+    }
+  },
+  "features": [
+    "Offline capabilities",
+    "Alerting system",
+    "Performance dashboards",
+    "API-first design",
+    "Microservices deployment"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Zero manual intervention required",
+    "Real-time insights and alerts"
+  ]
+}

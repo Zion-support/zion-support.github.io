@@ -1,0 +1,29 @@
+{
+  "title": "Managed Web Application Firewall (WAF)",
+  "description": "Cloud WAF with AI-powered rule tuning, bot management, DDoS protection, and compliance (PCI 6.6). Protect web apps without the management burden.",
+  "basic": "$399/mo/month",
+  "pro": "$1,199/mo/month",
+  "enterprise": "$3,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Managed Web Application Firewall (WAF) - Zion Tech Group",
+    "description": "Cloud WAF with AI-powered rule tuning, bot management, DDoS protection, and compliance (PCI 6.6). Protect web apps without the management burden.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w174-waf-managed"
+    }
+  },
+  "features": [
+    "AI-powered WAF rule management and tuning",
+    "Bot detection and management (good vs bad)",
+    "DDoS protection (L7 and L3/4)",
+    "PCI 6.6 compliance",
+    "Rate limiting and geo-blocking"
+  ],
+  "benefits": [
+    "AI tuning eliminates false positives",
+    "Bot management protects APIs and checkout",
+    "DDoS protection included, not separate",
+    "PCI compliance with WAF evidence"
+  ]
+}

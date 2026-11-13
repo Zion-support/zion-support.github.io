@@ -1,0 +1,29 @@
+{
+  "title": "Accessibility & WCAG Compliance",
+  "description": "Automated WCAG 2.2 auditing, AI-powered remediation suggestions, screen reader simulation, and continuous accessibility compliance monitoring.",
+  "basic": "$299/mo/month",
+  "pro": "$799/mo/month",
+  "enterprise": "$2,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Accessibility & WCAG Compliance - Zion Tech Group",
+    "description": "Automated WCAG 2.2 auditing, AI-powered remediation suggestions, screen reader simulation, and continuous accessibility compliance monitoring.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/accessibility-compliance"
+    }
+  },
+  "features": [
+    "WCAG 2.2 AA/AAA automated auditing",
+    "Screen reader simulation & navigation testing",
+    "Auto-generated remediation code snippets",
+    "Color contrast & typography analysis",
+    "Continuous CI/CD accessibility gates"
+  ],
+  "benefits": [
+    "Reduce costs with accessibility & wcag compliance",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

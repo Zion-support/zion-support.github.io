@@ -1,0 +1,29 @@
+{
+  "title": "Multi-Cloud Orchestration Platform",
+  "description": "Unified orchestration across AWS, Azure, and GCP. Deploy, manage, and monitor workloads from a single control plane. Infrastructure as Code with drift detection and auto-remediation.",
+  "basic": "$1,999/mo/month",
+  "pro": "$5,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Multi-Cloud Orchestration Platform - Zion Tech Group",
+    "description": "Unified orchestration across AWS, Azure, and GCP. Deploy, manage, and monitor workloads from a single control plane. Infrastructure as Code with drift detection",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cloud-multi-cloud-orchestration"
+    }
+  },
+  "features": [
+    "Single pane of glass for AWS, Azure, GCP",
+    "Infrastructure as Code (Terraform/Pulumi)",
+    "Drift detection and auto-remediation",
+    "Cost optimization across clouds",
+    "Compliance policy enforcement"
+  ],
+  "benefits": [
+    "Reduce multi-cloud complexity",
+    "Optimize cloud spend across providers",
+    "Ensure compliance everywhere",
+    "Faster disaster recovery"
+  ]
+}

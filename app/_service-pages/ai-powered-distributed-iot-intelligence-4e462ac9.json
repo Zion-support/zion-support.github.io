@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-distributed-iot-intelligence-4e462ac9",
+  "breadcrumbTitle": "AI-Powered Distributed IoT Intelligence",
+  "title": "AI-Powered Distributed IoT Intelligence",
+  "description": "Edge AI platform that processes IoT sensor data in real-time with distributed insights.",
+  "basic": "$258/month",
+  "pro": "$648/month",
+  "enterprise": "$1948/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Distributed IoT Intelligence - Zion Tech Group",
+    "description": "Edge AI platform that processes IoT sensor data in real-time with distributed insights.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-distributed-iot-intelligence-4e462ac9"
+    }
+  },
+  "features": [
+    "Edge processing",
+    "Real-time analytics",
+    "Automated responses",
+    "Energy efficiency"
+  ],
+  "benefits": [
+    "Reduced latency",
+    "Better insights",
+    "Automated responses",
+    "Energy efficiency"
+  ]
+}

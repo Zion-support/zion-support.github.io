@@ -1,0 +1,28 @@
+{
+  "title": "Kubernetes Multi-Cloud Management",
+  "description": "Deploy and manage Kubernetes clusters across AWS, GCP, Azure, and on-prem with a single control plane. Includes GitOps and policy enforcement.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Kubernetes Multi-Cloud Management - Zion Tech Group",
+    "description": "Deploy and manage Kubernetes clusters across AWS, GCP, Azure, and on-prem with a single control plane. Includes GitOps and policy enforcement.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-kubernetes-multicloud"
+    }
+  },
+  "features": [
+    "Cluster lifecycle automation",
+    "Cost allocation per namespace",
+    "Security policy as code (OPA/Gatekeeper)",
+    "Cross-cloud service mesh"
+  ],
+  "benefits": [
+    "Reduce costs with kubernetes multi-cloud management",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-powered-management-insurance-b166edb1",
+  "breadcrumbTitle": "AI-Powered management-insurance",
+  "title": "AI-Powered management-insurance",
+  "description": "Next-generation insurance solution: AI-Powered management-insurance. Combines workflow management with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered management-insurance - Zion Tech Group",
+    "description": "Next-generation insurance solution: AI-Powered management-insurance. Combines workflow management with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-management-insurance-b166edb1"
+    }
+  },
+  "features": [
+    "API-first design",
+    "Mobile-responsive interface",
+    "Machine learning integration",
+    "Multi-language support"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "3x faster decision making",
+    "Self-healing infrastructure",
+    "Predictive maintenance scheduling",
+    "Zero manual intervention required"
+  ]
+}

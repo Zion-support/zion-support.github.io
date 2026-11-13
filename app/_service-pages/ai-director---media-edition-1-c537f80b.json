@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-director---media-edition-1-c537f80b",
+  "breadcrumbTitle": "AI Director - Media Edition #1",
+  "title": "AI Director - Media Edition #1",
+  "description": "The future of media is here with AI Director - Media Edition #1. Powered by cutting-edge AI, this platform delivers performance monitoring like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Director - Media Edition #1 - Zion Tech Group",
+    "description": "The future of media is here with AI Director - Media Edition #1. Powered by cutting-edge AI, this platform delivers performance monitoring like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-director---media-edition-1-c537f80b"
+    }
+  },
+  "features": [
+    "API-first design",
+    "GDPR compliance",
+    "Microservices deployment",
+    "Zero-downtime updates",
+    "Auto-scaling capabilities"
+  ],
+  "benefits": [
+    "24/7 automated operations",
+    "99.9% uptime guarantee",
+    "Cost optimization recommendations"
+  ]
+}

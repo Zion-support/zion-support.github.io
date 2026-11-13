@@ -1,0 +1,29 @@
+{
+  "title": "Cloud FinOps Advisory Service",
+  "description": "Expert cloud cost optimization: FinOps maturity, reserved instance strategy, waste elimination, unit economics.",
+  "basic": "$1,999/mo/month",
+  "pro": "$4,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Cloud FinOps Advisory Service - Zion Tech Group",
+    "description": "Expert cloud cost optimization: FinOps maturity, reserved instance strategy, waste elimination, unit economics.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w177-cloud-finops"
+    }
+  },
+  "features": [
+    "Cloud spend analysis and benchmarking",
+    "Reserved instance and savings plan strategy",
+    "Waste identification and elimination",
+    "Unit economics (cost per customer",
+    "transaction)"
+  ],
+  "benefits": [
+    "Typical 30-50% cost reduction",
+    "Reserved instance strategy saves 40-70%",
+    "Unit economics drive cost accountability",
+    "FinOps maturity for ongoing optimization"
+  ]
+}

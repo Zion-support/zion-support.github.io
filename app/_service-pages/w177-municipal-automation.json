@@ -1,0 +1,29 @@
+{
+  "title": "Municipal and City Services Automation",
+  "description": "Automate city operations: permit processing, citizen requests, work orders, and public records. Digital government.",
+  "basic": "$999/mo/month",
+  "pro": "$2,999/mo/month",
+  "enterprise": "$9,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Municipal and City Services Automation - Zion Tech Group",
+    "description": "Automate city operations: permit processing, citizen requests, work orders, and public records. Digital government.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w177-municipal-automation"
+    }
+  },
+  "features": [
+    "Permit and license processing automation",
+    "Citizen request and complaint management",
+    "Work order creation and tracking",
+    "Public records request processing",
+    "Fee calculation and payment"
+  ],
+  "benefits": [
+    "Permit processing in days not weeks",
+    "Citizen requests tracked and resolved",
+    "Work orders automated from intake",
+    "Public records compliance"
+  ]
+}

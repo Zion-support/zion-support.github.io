@@ -1,0 +1,29 @@
+{
+  "title": "APM Application Performance",
+  "description": "Deep-dive application performance monitoring with distributed tracing, slow query dashboards, error tracking, and SLO/SLI burn-rate alerting.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "APM Application Performance - Zion Tech Group",
+    "description": "Deep-dive application performance monitoring with distributed tracing, slow query dashboards, error tracking, and SLO/SLI burn-rate alerting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/apm-application-performance"
+    }
+  },
+  "features": [
+    "Distributed traces per request",
+    "Slow query / endpoint dashboard",
+    "Error tracking with stack",
+    "SLO burn-rate alerting",
+    "Service map dependency view"
+  ],
+  "benefits": [
+    "Reduce costs with apm application performance",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

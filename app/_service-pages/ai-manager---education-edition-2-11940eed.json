@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/ai-manager---education-edition-2-11940eed",
+  "breadcrumbTitle": "AI Manager - Education Edition #2",
+  "title": "AI Manager - Education Edition #2",
+  "description": "The future of education is here with AI Manager - Education Edition #2. Powered by cutting-edge AI, this platform delivers language processing like never before",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Manager - Education Edition #2 - Zion Tech Group",
+    "description": "The future of education is here with AI Manager - Education Edition #2. Powered by cutting-edge AI, this platform delivers language processing like never before",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-manager---education-edition-2-11940eed"
+    }
+  },
+  "features": [
+    "Container orchestration",
+    "Data encryption",
+    "SOC 2 certified",
+    "Multi-language support"
+  ],
+  "benefits": [
+    "Seamless integration with existing systems",
+    "Intelligent load balancing",
+    "Zero manual intervention required"
+  ]
+}

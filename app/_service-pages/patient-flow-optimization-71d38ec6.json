@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/patient-flow-optimization-71d38ec6",
+  "breadcrumbTitle": "Patient Flow Optimization",
+  "title": "Patient Flow Optimization",
+  "description": "AI-powered hospital operations platform. Predicts admission surges, optimizes bed management, reduces ED wait times, and coordinates discharge planning across d",
+  "basic": "$4999/mo/month",
+  "pro": "$14999/mo/month",
+  "enterprise": "$custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Patient Flow Optimization - Zion Tech Group",
+    "description": "AI-powered hospital operations platform. Predicts admission surges, optimizes bed management, reduces ED wait times, and coordinates discharge planning across d",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/patient-flow-optimization-71d38ec6"
+    }
+  },
+  "features": [
+    "Admission surge prediction",
+    "Bed management optimization",
+    "ED wait time reduction",
+    "Discharge coordination",
+    "Staffing optimization"
+  ],
+  "benefits": [
+    "Reduce LOS by 15%",
+    "Cut ED wait times 30%",
+    "Increase bed utilization",
+    "Improve staff satisfaction",
+    "CMS compliance ready"
+  ]
+}

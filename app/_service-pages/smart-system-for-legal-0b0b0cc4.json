@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/smart-system-for-legal-0b0b0cc4",
+  "breadcrumbTitle": "Smart System for Legal",
+  "title": "Smart System for Legal",
+  "description": "Transform your legal operations with our Smart System for Legal. This AI-driven solution automates quality control with unprecedented accuracy and efficiency.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart System for Legal - Zion Tech Group",
+    "description": "Transform your legal operations with our Smart System for Legal. This AI-driven solution automates quality control with unprecedented accuracy and efficiency.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-system-for-legal-0b0b0cc4"
+    }
+  },
+  "features": [
+    "Container orchestration",
+    "Data encryption",
+    "HIPAA ready",
+    "Offline capabilities",
+    "Multi-region deployment"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "Enterprise-grade security",
+    "Self-healing infrastructure"
+  ]
+}

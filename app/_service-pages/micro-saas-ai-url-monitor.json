@@ -1,0 +1,29 @@
+{
+  "title": "AI Website Uptime & Performance Monitor",
+  "description": "Monitor website uptime, performance, and SEO health from 50+ global locations. AI predicts outages before they happen and auto-remediates common issues.",
+  "basic": "$29/mo/month",
+  "pro": "$89/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Website Uptime & Performance Monitor - Zion Tech Group",
+    "description": "Monitor website uptime, performance, and SEO health from 50+ global locations. AI predicts outages before they happen and auto-remediates common issues.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-ai-url-monitor"
+    }
+  },
+  "features": [
+    "Uptime monitoring from 50+ global locations",
+    "Core Web Vitals and Lighthouse scoring",
+    "AI-powered anomaly detection and prediction",
+    "Auto-remediation for common issues",
+    "SSL certificate expiration monitoring"
+  ],
+  "benefits": [
+    "Detect outages in under 60 seconds",
+    "Predict issues before they cause downtime",
+    "Auto-fix common problems without human intervention",
+    "Maintain SEO rankings with performance monitoring"
+  ]
+}

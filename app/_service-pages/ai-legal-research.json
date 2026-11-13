@@ -1,0 +1,28 @@
+{
+  "title": "AI Legal Research Engine",
+  "description": "LLM legal research: semantic search across case law statutes regulations SEC filings patents. Produces cited answers source attribution alerts law changes per jurisdiction.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Legal Research Engine - Zion Tech Group",
+    "description": "LLM legal research: semantic search across case law statutes regulations SEC filings patents. Produces cited answers source attribution alerts law changes per j",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-legal-research"
+    }
+  },
+  "features": [
+    "Semantic search case law+statutes+regs",
+    "Source attribution + citation per answer",
+    "Law change alerts per jurisdiction",
+    "Memo export per research session"
+  ],
+  "benefits": [
+    "Reduce costs with ai legal research engine",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

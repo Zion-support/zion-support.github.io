@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/engine-intelligent---legal-1-7560aa28",
+  "breadcrumbTitle": "Engine Intelligent - Legal #1",
+  "title": "Engine Intelligent - Legal #1",
+  "description": "Transform your legal operations with our Engine Intelligent - Legal #1. This AI-driven solution automates user experience with unprecedented accuracy and effici",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Engine Intelligent - Legal #1 - Zion Tech Group",
+    "description": "Transform your legal operations with our Engine Intelligent - Legal #1. This AI-driven solution automates user experience with unprecedented accuracy and effici",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/engine-intelligent---legal-1-7560aa28"
+    }
+  },
+  "features": [
+    "Open-source friendly",
+    "Machine learning integration",
+    "Alerting system",
+    "Plugin architecture",
+    "SOC 2 certified"
+  ],
+  "benefits": [
+    "Seamless integration with existing systems",
+    "Automated compliance reporting",
+    "99.9% uptime guarantee",
+    "Reduced human error by 95%"
+  ]
+}

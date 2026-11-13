@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/enterprise-industry-specific-insurtech-analytics-suite-b7d38fc0",
+  "breadcrumbTitle": "Enterprise Industry-Specific Insurtech Analytics Suite",
+  "title": "Enterprise Industry-Specific Insurtech Analytics Suite",
+  "description": "Enterprise analytics suite that delivers industry-specific insurtech insights with unified dashboards and reporting.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Enterprise Industry-Specific Insurtech Analytics Suite - Zion Tech Group",
+    "description": "Enterprise analytics suite that delivers industry-specific insurtech insights with unified dashboards and reporting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/enterprise-industry-specific-insurtech-analytics-suite-b7d38fc0"
+    }
+  },
+  "features": [
+    "Data visualization",
+    "Custom dashboards",
+    "Report generation",
+    "KPI tracking"
+  ],
+  "benefits": [
+    "Unified data view",
+    "Faster insights",
+    "Customizable reports",
+    "Cross-functional collaboration"
+  ]
+}

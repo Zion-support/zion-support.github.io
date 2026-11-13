@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/smart-marketing-quality-control-1b0d2351",
+  "breadcrumbTitle": "Smart Marketing Quality Control",
+  "title": "Smart Marketing Quality Control",
+  "description": "Computer vision system that provides automated automated inspection, defect detection, and quality assurance for manufacturing production lines.",
+  "basic": "$258/month",
+  "pro": "$648/month",
+  "enterprise": "$1948/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Marketing Quality Control - Zion Tech Group",
+    "description": "Computer vision system that provides automated automated inspection, defect detection, and quality assurance for manufacturing production lines.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-marketing-quality-control-1b0d2351"
+    }
+  },
+  "features": [
+    "Visual inspection",
+    "Defect classification",
+    "Root cause analysis",
+    "Real-time alerts"
+  ],
+  "benefits": [
+    "Zero defects",
+    "Faster throughput",
+    "Reduced waste",
+    "Consistent quality"
+  ]
+}

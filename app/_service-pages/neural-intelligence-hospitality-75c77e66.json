@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/neural-intelligence-hospitality-75c77e66",
+  "breadcrumbTitle": "Neural intelligence-hospitality",
+  "title": "Neural intelligence-hospitality",
+  "description": "Next-generation hospitality solution: Neural intelligence-hospitality. Combines workflow management with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Neural intelligence-hospitality - Zion Tech Group",
+    "description": "Next-generation hospitality solution: Neural intelligence-hospitality. Combines workflow management with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/neural-intelligence-hospitality-75c77e66"
+    }
+  },
+  "features": [
+    "Microservices deployment",
+    "Comprehensive monitoring",
+    "Mobile-responsive interface",
+    "Multi-region deployment",
+    "Role-based access control"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "24/7 automated operations",
+    "Self-healing infrastructure"
+  ]
+}

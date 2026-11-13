@@ -1,0 +1,29 @@
+{
+  "title": "AI Insurance Underwriting Copilot",
+  "description": "AI copilot for insurance underwriters: risk scoring, policy recommendation, regulation compliance, and loss prediction. Speed up underwriting by 60%.",
+  "basic": "$599/mo/month",
+  "pro": "$1,799/mo/month",
+  "enterprise": "$5,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Insurance Underwriting Copilot - Zion Tech Group",
+    "description": "AI copilot for insurance underwriters: risk scoring, policy recommendation, regulation compliance, and loss prediction. Speed up underwriting by 60%.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w176-ai-insurance-underwrite"
+    }
+  },
+  "features": [
+    "Automated risk scoring and classification",
+    "Policy recommendation engine",
+    "Regulatory compliance checking (state/NAIC)",
+    "Loss ratio prediction and pricing guidance",
+    "Document extraction from submissions"
+  ],
+  "benefits": [
+    "Speed up underwriting by 60%",
+    "Consistent risk scoring reduces leakage",
+    "Compliance checking on every policy",
+    "AI pricing guidance improves loss ratio"
+  ]
+}

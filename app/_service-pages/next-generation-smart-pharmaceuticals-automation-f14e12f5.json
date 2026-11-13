@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/next-generation-smart-pharmaceuticals-automation-f14e12f5",
+  "breadcrumbTitle": "Next-Generation Smart Pharmaceuticals Automation",
+  "title": "Next-Generation Smart Pharmaceuticals Automation",
+  "description": "Next-generation automation suite that streamlines smart pharmaceuticals workflows with intelligent orchestration.",
+  "basic": "$218/month",
+  "pro": "$548/month",
+  "enterprise": "$1648/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Next-Generation Smart Pharmaceuticals Automation - Zion Tech Group",
+    "description": "Next-generation automation suite that streamlines smart pharmaceuticals workflows with intelligent orchestration.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/next-generation-smart-pharmaceuticals-automation-f14e12f5"
+    }
+  },
+  "features": [
+    "Smart orchestration",
+    "Process automation",
+    "Event processing",
+    "Task scheduling"
+  ],
+  "benefits": [
+    "Faster execution",
+    "Reduced manual steps",
+    "Scalable processes",
+    "Error reduction"
+  ]
+}

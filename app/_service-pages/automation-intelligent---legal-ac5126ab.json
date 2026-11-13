@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/automation-intelligent---legal-ac5126ab",
+  "breadcrumbTitle": "Automation Intelligent - Legal",
+  "title": "Automation Intelligent - Legal",
+  "description": "Unlock unprecedented growth with Automation Intelligent - Legal. This autonomous system provides market intelligence with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automation Intelligent - Legal - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Automation Intelligent - Legal. This autonomous system provides market intelligence with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automation-intelligent---legal-ac5126ab"
+    }
+  },
+  "features": [
+    "Audit trails",
+    "SOC 2 certified",
+    "API-first design",
+    "Multi-language support"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "Cost optimization recommendations",
+    "Self-healing infrastructure",
+    "99.9% uptime guarantee"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/ai-platform---energy-edition-5-be9fd6e6",
+  "breadcrumbTitle": "AI Platform - Energy Edition #5",
+  "title": "AI Platform - Energy Edition #5",
+  "description": "Next-generation energy solution: AI Platform - Energy Edition #5. Combines network optimization with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Platform - Energy Edition #5 - Zion Tech Group",
+    "description": "Next-generation energy solution: AI Platform - Energy Edition #5. Combines network optimization with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-platform---energy-edition-5-be9fd6e6"
+    }
+  },
+  "features": [
+    "API-first design",
+    "Multi-language support",
+    "Audit trails",
+    "Cloud-native architecture"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Real-time insights and alerts",
+    "Scalable to millions of transactions"
+  ]
+}

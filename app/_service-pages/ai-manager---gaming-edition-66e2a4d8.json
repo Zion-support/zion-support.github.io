@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/ai-manager---gaming-edition-66e2a4d8",
+  "breadcrumbTitle": "AI Manager - Gaming Edition",
+  "title": "AI Manager - Gaming Edition",
+  "description": "Transform your gaming operations with our AI Manager - Gaming Edition. This AI-driven solution automates user experience with unprecedented accuracy and efficie",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Manager - Gaming Edition - Zion Tech Group",
+    "description": "Transform your gaming operations with our AI Manager - Gaming Edition. This AI-driven solution automates user experience with unprecedented accuracy and efficie",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-manager---gaming-edition-66e2a4d8"
+    }
+  },
+  "features": [
+    "Container orchestration",
+    "Performance dashboards",
+    "Audit trails",
+    "Alerting system",
+    "Data encryption"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "Scalable to millions of transactions",
+    "Self-healing infrastructure",
+    "Dynamic resource allocation",
+    "Reduced human error by 95%"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "AI Brand Sentiment Tracker",
+  "description": "Real-time brand and product sentiment tracking across social, news, reviews, and forums. Trend detection, crisis alerts, and competitive benchmarking.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Brand Sentiment Tracker - Zion Tech Group",
+    "description": "Real-time brand and product sentiment tracking across social, news, reviews, and forums. Trend detection, crisis alerts, and competitive benchmarking.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w176-ai-sentiment-track"
+    }
+  },
+  "features": [
+    "Multi-source sentiment monitoring",
+    "Real-time trend detection and alerts",
+    "Crisis detection with severity scoring",
+    "Competitive sentiment benchmarking",
+    "Topic and aspect-level analysis"
+  ],
+  "benefits": [
+    "Detect PR crises before they escalate",
+    "Topic-level insights reveal what matters",
+    "Competitive benchmarking informs strategy",
+    "Trend detection spots opportunities early"
+  ]
+}

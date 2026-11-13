@@ -1,0 +1,28 @@
+{
+  "title": "Spatial Computing 3D Scene Generator",
+  "description": "Text/Image 3D scene via Gaussian Splatting/LRM; real-time viewer in browser via Three.js; FBX/GLTF/OBJ export for game/VR pipeline.",
+  "basic": "$79/mo/month",
+  "pro": "$249/mo/month",
+  "enterprise": "$799/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Spatial Computing 3D Scene Generator - Zion Tech Group",
+    "description": "Text/Image 3D scene via Gaussian Splatting/LRM; real-time viewer in browser via Three.js; FBX/GLTF/OBJ export for game/VR pipeline.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-spatial-computing-3d-scene"
+    }
+  },
+  "features": [
+    "Text/Image 3D scene Gaussian Splatting/LRM",
+    "Real-time browser viewer via Three.js",
+    "Object decomposition + physics export",
+    "FBX/GLTF/OBJ export + textures baked"
+  ],
+  "benefits": [
+    "Reduce costs with spatial computing 3d scene generator",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "Multimodal Video Understanding Engine",
+  "description": "End-to-end video understanding pipeline: per-frame CLIP + action recognition, temporal scene segmentation, automatic transcript + OCR extraction, chapter/time-stamped topic indexing, and natural-language search across full video library.",
+  "basic": "$79/mo/month",
+  "pro": "$249/mo/month",
+  "enterprise": "$799/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Multimodal Video Understanding Engine - Zion Tech Group",
+    "description": "End-to-end video understanding pipeline: per-frame CLIP + action recognition, temporal scene segmentation, automatic transcript + OCR extraction, chapter/time-s",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-multimodal-video-understanding"
+    }
+  },
+  "features": [
+    "Frame-level CLIP embeddings + action-recognition time-series across entire video",
+    "Scene-change detection + automatic key-frame extraction per 30-second segment",
+    "Auto-generated transcript + OCR with chapter marker overlay",
+    "Natural-language question answering across video with time-stamped answer snippets",
+    "Batch ingest: 1000+ video files automatically processed and indexed within hours"
+  ],
+  "benefits": [
+    "Reduce costs with multimodal video understanding engine",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

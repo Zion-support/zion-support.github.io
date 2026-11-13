@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/autonomous-platform-transportation-70d1d908",
+  "breadcrumbTitle": "Autonomous platform-transportation",
+  "title": "Autonomous platform-transportation",
+  "description": "Next-generation transportation solution: Autonomous platform-transportation. Combines financial planning with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous platform-transportation - Zion Tech Group",
+    "description": "Next-generation transportation solution: Autonomous platform-transportation. Combines financial planning with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-platform-transportation-70d1d908"
+    }
+  },
+  "features": [
+    "Zero-downtime updates",
+    "Audit trails",
+    "Auto-scaling capabilities",
+    "Multi-region deployment",
+    "API-first design"
+  ],
+  "benefits": [
+    "Intelligent load balancing",
+    "Real-time insights and alerts",
+    "99.9% uptime guarantee",
+    "Reduced human error by 95%"
+  ]
+}

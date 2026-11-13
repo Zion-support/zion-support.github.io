@@ -1,0 +1,29 @@
+{
+  "title": "Pharma Drug Discovery AI",
+  "description": "Accelerate drug discovery with molecular simulation and toxicity prediction.",
+  "basic": "$25,000/month",
+  "pro": "$8,000/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Pharma Drug Discovery AI - Zion Tech Group",
+    "description": "Accelerate drug discovery with molecular simulation and toxicity prediction.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/pharma-drug-discovery-ai"
+    }
+  },
+  "features": [
+    "Molecular simulation",
+    "Target identification",
+    "Toxicity prediction",
+    "Clinical optimization",
+    "Literature mining"
+  ],
+  "benefits": [
+    "50% faster discovery",
+    "Cost reduction",
+    "Higher success rates",
+    "Regulatory ready"
+  ]
+}

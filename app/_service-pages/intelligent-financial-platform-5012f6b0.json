@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/intelligent-financial-platform-5012f6b0",
+  "breadcrumbTitle": "Intelligent Financial Platform",
+  "title": "Intelligent Financial Platform",
+  "description": "Revolutionize energy through intelligent automation. Our Intelligent Financial Platform leverages advanced machine learning to deliver predictive analytics at s",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Financial Platform - Zion Tech Group",
+    "description": "Revolutionize energy through intelligent automation. Our Intelligent Financial Platform leverages advanced machine learning to deliver predictive analytics at s",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-financial-platform-5012f6b0"
+    }
+  },
+  "features": [
+    "Serverless functions",
+    "Auto-scaling capabilities",
+    "Custom integrations",
+    "Mobile-responsive interface",
+    "Offline capabilities"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "Dynamic resource allocation",
+    "Enterprise-grade security",
+    "Predictive maintenance scheduling",
+    "ROI in under 90 days"
+  ]
+}

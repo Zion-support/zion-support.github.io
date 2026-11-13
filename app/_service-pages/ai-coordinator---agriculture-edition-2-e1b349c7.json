@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-coordinator---agriculture-edition-2-e1b349c7",
+  "breadcrumbTitle": "AI Coordinator - Agriculture Edition #2",
+  "title": "AI Coordinator - Agriculture Edition #2",
+  "description": "Next-generation agriculture solution: AI Coordinator - Agriculture Edition #2. Combines fraud prevention with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Coordinator - Agriculture Edition #2 - Zion Tech Group",
+    "description": "Next-generation agriculture solution: AI Coordinator - Agriculture Edition #2. Combines fraud prevention with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-coordinator---agriculture-edition-2-e1b349c7"
+    }
+  },
+  "features": [
+    "Multi-language support",
+    "Rollback mechanisms",
+    "Data encryption",
+    "SOC 2 certified",
+    "Multi-region deployment"
+  ],
+  "benefits": [
+    "Automated compliance reporting",
+    "3x faster decision making",
+    "Intelligent load balancing"
+  ]
+}

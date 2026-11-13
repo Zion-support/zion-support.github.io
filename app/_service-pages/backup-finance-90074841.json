@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/backup-finance-90074841",
+  "breadcrumbTitle": "Data Backup & DR for Finance",
+  "title": "Data Backup & DR for Finance",
+  "description": "Reliable data backup and disaster recovery for Finance. Automated backups, tested restores, and rapid recovery when you need it most.",
+  "basic": "$299/month",
+  "pro": "$799/month",
+  "enterprise": "$2499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Data Backup & DR for Finance - Zion Tech Group",
+    "description": "Reliable data backup and disaster recovery for Finance. Automated backups, tested restores, and rapid recovery when you need it most.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/backup-finance-90074841"
+    }
+  },
+  "features": [
+    "Automated daily backups",
+    "Off-site and cloud replication",
+    "RTO/RPO planning",
+    "Backup verification and testing",
+    "Encryption at rest and in transit"
+  ],
+  "benefits": [
+    "Business continuity assurance",
+    "Minimal data loss",
+    "Fast recovery times",
+    "Regulatory-grade retention",
+    "Simplified IT resilience"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "title": "AI Wind Farm Performance Optimizer",
+  "description": "Maximize wind turbine output: yaw optimization, pitch control, wake effect modeling, and predictive maintenance. Increases energy output by 12% and reduces maintenance by 40%.",
+  "basic": "$499/turbine/month",
+  "pro": "$999/turbine/month",
+  "enterprise": "$2499/turbine/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Wind Farm Performance Optimizer - Zion Tech Group",
+    "description": "Maximize wind turbine output: yaw optimization, pitch control, wake effect modeling, and predictive maintenance. Increases energy output by 12% and reduces main",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-wind-farm-optimizer"
+    }
+  },
+  "features": [
+    "Yaw & pitch AI optimization",
+    "Wake effect modeling & mitigation",
+    "Predictive maintenance scheduling",
+    "Power curve anomaly detection",
+    "Grid integration optimization"
+  ],
+  "benefits": [
+    "Increase output by 12%",
+    "Reduce maintenance by 40%",
+    "Maximize ROI per turbine"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/robust-neural-manufacturing-processor-2cded5ee",
+  "breadcrumbTitle": "Robust Neural Manufacturing Processor",
+  "title": "Robust Neural Manufacturing Processor",
+  "description": "Neural processing unit optimized for robust manufacturing workloads, delivering robust inference at scale.",
+  "basic": "$278/month",
+  "pro": "$698/month",
+  "enterprise": "$2098/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Robust Neural Manufacturing Processor - Zion Tech Group",
+    "description": "Neural processing unit optimized for robust manufacturing workloads, delivering robust inference at scale.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/robust-neural-manufacturing-processor-2cded5ee"
+    }
+  },
+  "features": [
+    "Accelerated inference",
+    "Model compression",
+    "Hardware acceleration",
+    "Batch optimization"
+  ],
+  "benefits": [
+    "10x inference speed",
+    "Reduced latency",
+    "Cost-effective scaling",
+    "Hardware optimization"
+  ]
+}

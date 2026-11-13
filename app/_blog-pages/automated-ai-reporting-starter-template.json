@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "Automated AI Reporting: starter template | Zion Tech Group",
+    "description": "Automated AI Reporting: starter template",
+    "keywords": [
+      "cloud",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "Automated AI Reporting: starter template",
+      "description": "Automated AI Reporting: starter template",
+      "url": "https://ziontechgroup.com/blog/automated-ai-reporting-starter-template/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/automated-ai-reporting-starter-template/"
+    }
+  },
+  "values": [
+    "Automated AI Reporting: starter template",
+    "Automated AI Reporting: starter template",
+    "Automated AI Reporting: starter template",
+    "Recommended next step",
+    "Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "Recommended next step",
+    " Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "/blog/ai-accessibility-auditor-architecture-overview",
+    "Ai Accessibility Auditor Architecture Overview",
+    "/blog/ai-email-intelligence-policy-and-compliance",
+    "Ai Email Intelligence Policy And Compliance",
+    "/blog/ai-observability-architecture-overview",
+    "Ai Observability Architecture Overview",
+    "/blog/ai-data-backup-2026-6831",
+    "Ai Data Backup 2026 6831"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Automated AI Reporting: starter template",
+    "description": "Automated AI Reporting: starter template",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T07:26:06Z",
+    "dateModified": "2026-08-07T07:26:06Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/automated-ai-reporting-starter-template/"
+  }
+}

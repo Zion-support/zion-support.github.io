@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-advisor---agriculture-edition-2-56f74463",
+  "breadcrumbTitle": "AI Advisor - Agriculture Edition #2",
+  "title": "AI Advisor - Agriculture Edition #2",
+  "description": "Transform your agriculture operations with our AI Advisor - Agriculture Edition #2. This AI-driven solution automates compliance monitoring with unprecedented a",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Advisor - Agriculture Edition #2 - Zion Tech Group",
+    "description": "Transform your agriculture operations with our AI Advisor - Agriculture Edition #2. This AI-driven solution automates compliance monitoring with unprecedented a",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-advisor---agriculture-edition-2-56f74463"
+    }
+  },
+  "features": [
+    "Plugin architecture",
+    "Microservices deployment",
+    "Role-based access control",
+    "Zero-downtime updates",
+    "Open-source friendly"
+  ],
+  "benefits": [
+    "50% reduction in operational costs",
+    "Seamless integration with existing systems",
+    "Dynamic resource allocation",
+    "Intelligent load balancing"
+  ]
+}

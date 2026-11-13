@@ -1,0 +1,29 @@
+{
+  "title": "AffiliateHub — Affiliate Management Micro-SaaS",
+  "description": "Affiliate program management for SaaS and e-commerce. Track referrals, manage commissions, and provide affiliates with marketing materials and dashboards.",
+  "basic": "$49/mo/month",
+  "pro": "$149/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AffiliateHub — Affiliate Management Micro-SaaS - Zion Tech Group",
+    "description": "Affiliate program management for SaaS and e-commerce. Track referrals, manage commissions, and provide affiliates with marketing materials and dashboards.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-affiliate-manager"
+    }
+  },
+  "features": [
+    "Affiliate signup and onboarding",
+    "Referral tracking (cookies, links)",
+    "Commission management and payouts",
+    "Affiliate dashboard",
+    "Marketing material library"
+  ],
+  "benefits": [
+    "Grow through affiliate marketing",
+    "Automate commission tracking",
+    "Prevent affiliate fraud",
+    "Professional affiliate program"
+  ]
+}

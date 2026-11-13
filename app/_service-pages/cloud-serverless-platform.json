@@ -1,0 +1,29 @@
+{
+  "title": "Serverless Application Platform",
+  "description": "Build and deploy serverless applications with auto-scaling, pay-per-execution pricing, and built-in observability. Supports Node.js, Python, Go, and Rust runtimes.",
+  "basic": "$199/mo/month",
+  "pro": "$599/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Serverless Application Platform - Zion Tech Group",
+    "description": "Build and deploy serverless applications with auto-scaling, pay-per-execution pricing, and built-in observability. Supports Node.js, Python, Go, and Rust runtim",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cloud-serverless-platform"
+    }
+  },
+  "features": [
+    "Auto-scaling serverless functions",
+    "Pay-per-execution pricing",
+    "Multi-runtime support (Node, Python, Go, Rust)",
+    "Built-in API gateway",
+    "Distributed tracing"
+  ],
+  "benefits": [
+    "Zero infrastructure management",
+    "Pay only for what you use",
+    "Instant scaling to millions of requests",
+    "Faster time to market"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/manager-adaptive---energy-1-14e035cf",
+  "breadcrumbTitle": "Manager Adaptive - Energy #1",
+  "title": "Manager Adaptive - Energy #1",
+  "description": "Next-generation energy solution: Manager Adaptive - Energy #1. Combines maintenance scheduling with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Manager Adaptive - Energy #1 - Zion Tech Group",
+    "description": "Next-generation energy solution: Manager Adaptive - Energy #1. Combines maintenance scheduling with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/manager-adaptive---energy-1-14e035cf"
+    }
+  },
+  "features": [
+    "Offline capabilities",
+    "HIPAA ready",
+    "Custom integrations",
+    "Container orchestration"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "Intelligent load balancing",
+    "Cost optimization recommendations"
+  ]
+}

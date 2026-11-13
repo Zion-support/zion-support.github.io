@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/neural-sales-platform-c77a5a1f",
+  "breadcrumbTitle": "Neural Sales Platform",
+  "title": "Neural Sales Platform",
+  "description": "The future of telecom is here with Neural Sales Platform. Powered by cutting-edge AI, this platform delivers quality control like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Neural Sales Platform - Zion Tech Group",
+    "description": "The future of telecom is here with Neural Sales Platform. Powered by cutting-edge AI, this platform delivers quality control like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/neural-sales-platform-c77a5a1f"
+    }
+  },
+  "features": [
+    "Zero-downtime updates",
+    "GDPR compliance",
+    "Real-time processing",
+    "Comprehensive monitoring",
+    "Data encryption"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "Intelligent load balancing",
+    "Self-healing infrastructure"
+  ]
+}

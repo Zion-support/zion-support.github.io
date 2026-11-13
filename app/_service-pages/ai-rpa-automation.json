@@ -1,0 +1,28 @@
+{
+  "title": "AI Robotic Process Automation (RPA)",
+  "description": "Web desktop mobile RPA: automates mouse keyboard form data entry ERP tax portal batch processing screen-scrape scheduler audit log per bot.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Robotic Process Automation (RPA) - Zion Tech Group",
+    "description": "Web desktop mobile RPA: automates mouse keyboard form data entry ERP tax portal batch processing screen-scrape scheduler audit log per bot.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-rpa-automation"
+    }
+  },
+  "features": [
+    "Desktop + web + mobile RPA",
+    "ERP / tax portal connector",
+    "Screen-scrape + form fill + readback",
+    "Scheduler + audit log per bot"
+  ],
+  "benefits": [
+    "Reduce costs with ai robotic process automation (rpa)",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

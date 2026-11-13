@@ -1,0 +1,28 @@
+{
+  "title": "Machine Translation Quality Engine",
+  "description": "Neural MT post-editing quality scoring (COMET/HYENA), terminology enforcement, auto-edit suggestion, and translation memory browser.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Machine Translation Quality Engine - Zion Tech Group",
+    "description": "Neural MT post-editing quality scoring (COMET/HYENA), terminology enforcement, auto-edit suggestion, and translation memory browser.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-machine-translation-quality"
+    }
+  },
+  "features": [
+    "COMET/HYENA quality scoring per segment",
+    "Terminology enforcement dictionary",
+    "Auto-edit suggestion (Neural MT post-editing)",
+    "Translation memory browser per language pair"
+  ],
+  "benefits": [
+    "Reduce costs with machine translation quality engine",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "title": "Data Mesh & Decentralized Analytics",
+  "description": "Transform from centralized data lakes to distributed data mesh. Domain-oriented ownership, self-serve data infrastructure, federated governance, and data-as-a-product.",
+  "basic": "$N/A/month",
+  "pro": "$N/A/month",
+  "enterprise": "$N/A/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Data Mesh & Decentralized Analytics - Zion Tech Group",
+    "description": "Transform from centralized data lakes to distributed data mesh. Domain-oriented ownership, self-serve data infrastructure, federated governance, and data-as-a-p",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-data-mesh-architecture"
+    }
+  },
+  "features": [
+    "Domain-oriented data ownership",
+    "Self-serve data platform",
+    "Federated governance",
+    "Data product catalog",
+    "Interoperability standards"
+  ],
+  "benefits": [
+    "10x faster data access",
+    "Domain autonomy",
+    "Scalable governance",
+    "Better data quality",
+    "Faster time-to-insight"
+  ]
+}

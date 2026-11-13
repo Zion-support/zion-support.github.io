@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/ai-suite---tech-edition-92f1ce4b",
+  "breadcrumbTitle": "AI Suite - Tech Edition",
+  "title": "AI Suite - Tech Edition",
+  "description": "Next-generation technology solution: AI Suite - Tech Edition. Combines network optimization with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Suite - Tech Edition - Zion Tech Group",
+    "description": "Next-generation technology solution: AI Suite - Tech Edition. Combines network optimization with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-suite---tech-edition-92f1ce4b"
+    }
+  },
+  "features": [
+    "SOC 2 certified",
+    "Machine learning integration",
+    "Role-based access control",
+    "Auto-scaling capabilities",
+    "Open-source friendly"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "Seamless integration with existing systems",
+    "Intelligent load balancing",
+    "Self-healing infrastructure",
+    "99.9% uptime guarantee"
+  ]
+}

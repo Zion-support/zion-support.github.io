@@ -1,0 +1,29 @@
+{
+  "title": "AI Oil & Gas Predictive Analytics",
+  "description": "Predictive analytics for oil and gas operations. Reservoir modeling, production optimization, and equipment failure prediction.",
+  "basic": "$4,999/mo/month",
+  "pro": "$14,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Oil & Gas Predictive Analytics - Zion Tech Group",
+    "description": "Predictive analytics for oil and gas operations. Reservoir modeling, production optimization, and equipment failure prediction.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-oil-gas-predictive-analytics"
+    }
+  },
+  "features": [
+    "Reservoir simulation",
+    "Production optimization",
+    "Equipment failure prediction",
+    "Pipeline integrity monitoring",
+    "Environmental impact prediction"
+  ],
+  "benefits": [
+    "Increase production by 10%",
+    "Reduce unplanned downtime",
+    "Optimize drilling",
+    "Meet environmental regulations"
+  ]
+}

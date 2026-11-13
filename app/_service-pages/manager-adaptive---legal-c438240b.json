@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/manager-adaptive---legal-c438240b",
+  "breadcrumbTitle": "Manager Adaptive - Legal",
+  "title": "Manager Adaptive - Legal",
+  "description": "The future of legal is here with Manager Adaptive - Legal. Powered by cutting-edge AI, this platform delivers predictive analytics like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Manager Adaptive - Legal - Zion Tech Group",
+    "description": "The future of legal is here with Manager Adaptive - Legal. Powered by cutting-edge AI, this platform delivers predictive analytics like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/manager-adaptive---legal-c438240b"
+    }
+  },
+  "features": [
+    "Custom integrations",
+    "HIPAA ready",
+    "Plugin architecture",
+    "Edge computing support"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "3x faster decision making",
+    "ROI in under 90 days",
+    "50% reduction in operational costs"
+  ]
+}

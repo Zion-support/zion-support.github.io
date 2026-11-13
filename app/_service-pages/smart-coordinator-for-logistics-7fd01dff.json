@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/smart-coordinator-for-logistics-7fd01dff",
+  "breadcrumbTitle": "Smart Coordinator for Logistics",
+  "title": "Smart Coordinator for Logistics",
+  "description": "Next-generation logistics solution: Smart Coordinator for Logistics. Combines energy management with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Coordinator for Logistics - Zion Tech Group",
+    "description": "Next-generation logistics solution: Smart Coordinator for Logistics. Combines energy management with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-coordinator-for-logistics-7fd01dff"
+    }
+  },
+  "features": [
+    "SOC 2 certified",
+    "Audit trails",
+    "Alerting system",
+    "Mobile-responsive interface",
+    "Data encryption"
+  ],
+  "benefits": [
+    "Automated compliance reporting",
+    "Self-healing infrastructure",
+    "ROI in under 90 days"
+  ]
+}

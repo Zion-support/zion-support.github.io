@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/smart-decision-manager-f0cefef9",
+  "breadcrumbTitle": "Smart Decision Manager",
+  "title": "Smart Decision Manager",
+  "description": "Unlock unprecedented growth with Smart Decision Manager. This autonomous system provides document processing with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Decision Manager - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Smart Decision Manager. This autonomous system provides document processing with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-decision-manager-f0cefef9"
+    }
+  },
+  "features": [
+    "Cloud-native architecture",
+    "Machine learning integration",
+    "Offline capabilities",
+    "Open-source friendly",
+    "Audit trails"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Predictive maintenance scheduling",
+    "Performance benchmarking",
+    "Scalable to millions of transactions"
+  ]
+}

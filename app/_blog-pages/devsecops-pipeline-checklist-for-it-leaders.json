@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "DevSecOps Pipeline: checklist for IT leaders | Zion Tech Group",
+    "description": "DevSecOps Pipeline: checklist for IT leaders",
+    "keywords": [
+      "it",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "DevSecOps Pipeline: checklist for IT leaders",
+      "description": "DevSecOps Pipeline: checklist for IT leaders",
+      "url": "https://ziontechgroup.com/blog/devsecops-pipeline-checklist-for-it-leaders/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/devsecops-pipeline-checklist-for-it-leaders/"
+    }
+  },
+  "values": [
+    "DevSecOps Pipeline: checklist for IT leaders",
+    "DevSecOps Pipeline: checklist for IT leaders",
+    "DevSecOps Pipeline: checklist for IT leaders",
+    "Conversion path",
+    "If this guide matches your devsecops pipeline: checklist for it leaders initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "Conversion path",
+    " If this guide matches your devsecops pipeline: checklist for it leaders initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "/blog/devops-cicd-2026-6849",
+    "Devops Cicd 2026 6849",
+    "/blog/cloud-migration-services-automation-roadmap",
+    "Cloud Migration Services Automation Roadmap",
+    "/blog/container-security-lifecycle-executive-guide",
+    "Container Security Lifecycle Executive Guide",
+    "/blog/api-security-testing-executive-guide",
+    "Api Security Testing Executive Guide"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "DevSecOps Pipeline: checklist for IT leaders",
+    "description": "DevSecOps Pipeline: checklist for IT leaders",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T04:52:04Z",
+    "dateModified": "2026-08-07T04:52:04Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/devsecops-pipeline-checklist-for-it-leaders/"
+  }
+}

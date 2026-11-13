@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-manager---logistics-edition-6bdfce31",
+  "breadcrumbTitle": "AI Manager - Logistics Edition",
+  "title": "AI Manager - Logistics Edition",
+  "description": "Next-generation logistics solution: AI Manager - Logistics Edition. Combines image recognition with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Manager - Logistics Edition - Zion Tech Group",
+    "description": "Next-generation logistics solution: AI Manager - Logistics Edition. Combines image recognition with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-manager---logistics-edition-6bdfce31"
+    }
+  },
+  "features": [
+    "Cloud-native architecture",
+    "Real-time processing",
+    "Machine learning integration",
+    "Auto-scaling capabilities",
+    "Offline capabilities"
+  ],
+  "benefits": [
+    "Scalable to millions of transactions",
+    "ROI in under 90 days",
+    "50% reduction in operational costs"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-operational-patient-engagement-405dbaa6",
+  "breadcrumbTitle": "Intelligent Operational Patient Engagement",
+  "title": "Intelligent Operational Patient Engagement",
+  "description": "AI-driven patient engagement platform that delivers adaptive personalized care journeys, remote monitoring, and adherence support through intelligent automation",
+  "basic": "$258/month",
+  "pro": "$648/month",
+  "enterprise": "$1948/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Operational Patient Engagement - Zion Tech Group",
+    "description": "AI-driven patient engagement platform that delivers adaptive personalized care journeys, remote monitoring, and adherence support through intelligent automation",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-operational-patient-engagement-405dbaa6"
+    }
+  },
+  "features": [
+    "Personalized care plans",
+    "Remote monitoring",
+    "Medication adherence",
+    "Virtual consultations"
+  ],
+  "benefits": [
+    "Better outcomes",
+    "Higher satisfaction",
+    "Reduced readmissions",
+    "Lower costs"
+  ]
+}

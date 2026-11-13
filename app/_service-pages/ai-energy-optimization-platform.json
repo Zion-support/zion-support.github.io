@@ -1,0 +1,29 @@
+{
+  "title": "AI Energy Optimization Platform",
+  "description": "Optimize energy consumption across buildings, factories, and data centers using AI. Predict demand, optimize HVAC, manage renewables, and reduce carbon emissions. Real-time monitoring with automated control.",
+  "basic": "$999/mo/month",
+  "pro": "$3,499/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Energy Optimization Platform - Zion Tech Group",
+    "description": "Optimize energy consumption across buildings, factories, and data centers using AI. Predict demand, optimize HVAC, manage renewables, and reduce carbon emission",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-energy-optimization-platform"
+    }
+  },
+  "features": [
+    "Demand forecasting by zone",
+    "HVAC optimization (20-40% savings)",
+    "Renewable energy management",
+    "Carbon emissions tracking",
+    "Anomaly detection for equipment"
+  ],
+  "benefits": [
+    "Reduce energy costs by 25-40%",
+    "Meet carbon reduction targets",
+    "Predict and prevent equipment failures",
+    "Automated ESG compliance"
+  ]
+}

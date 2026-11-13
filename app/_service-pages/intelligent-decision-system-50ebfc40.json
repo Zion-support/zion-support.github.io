@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-decision-system-50ebfc40",
+  "breadcrumbTitle": "Intelligent Decision System",
+  "title": "Intelligent Decision System",
+  "description": "Unlock unprecedented growth with Intelligent Decision System. This autonomous system provides decision support with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Decision System - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Intelligent Decision System. This autonomous system provides decision support with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-decision-system-50ebfc40"
+    }
+  },
+  "features": [
+    "Microservices deployment",
+    "Open-source friendly",
+    "Multi-language support",
+    "Mobile-responsive interface",
+    "GDPR compliance"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "Scalable to millions of transactions",
+    "50% reduction in operational costs"
+  ]
+}

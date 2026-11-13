@@ -1,0 +1,29 @@
+{
+  "title": "AI-Powered Office Automation",
+  "description": "AI copilot for office workflows: document classification, contract parsing, email triage, invoice data extraction, and workflow routing — all with no-code builder.",
+  "basic": "$99/mo/month",
+  "pro": "$299/mo/month",
+  "enterprise": "$999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI-Powered Office Automation - Zion Tech Group",
+    "description": "AI copilot for office workflows: document classification, contract parsing, email triage, invoice data extraction, and workflow routing — all with no-code build",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-office-automation"
+    }
+  },
+  "features": [
+    "Document classification AI",
+    "Contract key clause extraction",
+    "Email triage + auto-response",
+    "Invoice data extraction",
+    "No-code workflow builder"
+  ],
+  "benefits": [
+    "Reduce costs with ai-powered office automation",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

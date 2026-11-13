@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/ai-suite---manufacturing-edition-90e06aab",
+  "breadcrumbTitle": "AI Suite - Manufacturing Edition",
+  "title": "AI Suite - Manufacturing Edition",
+  "description": "Revolutionize manufacturing through intelligent automation. Our AI Suite - Manufacturing Edition leverages advanced machine learning to deliver predictive analy",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Suite - Manufacturing Edition - Zion Tech Group",
+    "description": "Revolutionize manufacturing through intelligent automation. Our AI Suite - Manufacturing Edition leverages advanced machine learning to deliver predictive analy",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-suite---manufacturing-edition-90e06aab"
+    }
+  },
+  "features": [
+    "Mobile-responsive interface",
+    "Cloud-native architecture",
+    "Offline capabilities",
+    "Performance dashboards",
+    "Audit trails"
+  ],
+  "benefits": [
+    "Dynamic resource allocation",
+    "Scalable to millions of transactions",
+    "Zero manual intervention required",
+    "Self-healing infrastructure",
+    "Seamless integration with existing systems"
+  ]
+}

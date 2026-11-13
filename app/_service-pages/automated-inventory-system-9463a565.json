@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/automated-inventory-system-9463a565",
+  "breadcrumbTitle": "Automated Inventory System",
+  "title": "Automated Inventory System",
+  "description": "The future of construction is here with Automated Inventory System. Powered by cutting-edge AI, this platform delivers threat detection like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated Inventory System - Zion Tech Group",
+    "description": "The future of construction is here with Automated Inventory System. Powered by cutting-edge AI, this platform delivers threat detection like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-inventory-system-9463a565"
+    }
+  },
+  "features": [
+    "Container orchestration",
+    "Real-time processing",
+    "Machine learning integration",
+    "Comprehensive monitoring",
+    "Cloud-native architecture"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "Predictive maintenance scheduling",
+    "Performance benchmarking",
+    "Zero manual intervention required"
+  ]
+}

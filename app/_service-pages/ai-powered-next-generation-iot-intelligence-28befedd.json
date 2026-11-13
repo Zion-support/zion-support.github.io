@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-next-generation-iot-intelligence-28befedd",
+  "breadcrumbTitle": "AI-Powered Next-Generation IoT Intelligence",
+  "title": "AI-Powered Next-Generation IoT Intelligence",
+  "description": "Edge AI platform that processes IoT sensor data in real-time with next-generation insights.",
+  "basic": "$258/month",
+  "pro": "$648/month",
+  "enterprise": "$1948/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Next-Generation IoT Intelligence - Zion Tech Group",
+    "description": "Edge AI platform that processes IoT sensor data in real-time with next-generation insights.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-next-generation-iot-intelligence-28befedd"
+    }
+  },
+  "features": [
+    "Edge processing",
+    "Real-time analytics",
+    "Automated responses",
+    "Energy efficiency"
+  ],
+  "benefits": [
+    "Reduced latency",
+    "Better insights",
+    "Automated responses",
+    "Energy efficiency"
+  ]
+}

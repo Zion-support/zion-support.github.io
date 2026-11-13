@@ -1,7 +1,9 @@
+'use client';
+
 // app/recommendations/page.tsx - AI-Powered Service Recommendations
 import { useState } from 'react';
 import Link from 'next/link';
-import { allServices, type Service } from '@/data/servicesData';
+import { allServices, type Service } from '@/data/servicesClientData';
 
 // Recommendation engine based on business needs
 const RECOMMENDATION_SETS = [
@@ -135,7 +137,7 @@ export default function RecommendationsPage() {
               </h3>
               {recommended.length > 0 ? (
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {recommended.map((service: any) => (
+                  {recommended.map((service: Service) => (
                     <Link
                       key={service.id}
                       href={service.href}

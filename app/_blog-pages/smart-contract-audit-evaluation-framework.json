@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "Smart Contract Audit: evaluation framework | Zion Tech Group",
+    "description": "Smart Contract Audit: evaluation framework",
+    "keywords": [
+      "ai",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "Smart Contract Audit: evaluation framework",
+      "description": "Smart Contract Audit: evaluation framework",
+      "url": "https://ziontechgroup.com/blog/smart-contract-audit-evaluation-framework/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/smart-contract-audit-evaluation-framework/"
+    }
+  },
+  "values": [
+    "Smart Contract Audit: evaluation framework",
+    "Smart Contract Audit: evaluation framework",
+    "Smart Contract Audit: evaluation framework",
+    "Recommended next step",
+    "Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "Recommended next step",
+    " Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "/blog/apm-application-performance-policy-and-compliance",
+    "Apm Application Performance Policy And Compliance",
+    "/blog/ai-3d-asset-generator-vendor-evaluation",
+    "Ai 3D Asset Generator Vendor Evaluation",
+    "/blog/ai-performance-monitoring-common-mistakes",
+    "Ai Performance Monitoring Common Mistakes",
+    "/blog/microsaas-translation-engine-executive-guide",
+    "Microsaas Translation Engine Executive Guide"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Smart Contract Audit: evaluation framework",
+    "description": "Smart Contract Audit: evaluation framework",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T04:21:37Z",
+    "dateModified": "2026-08-07T04:21:37Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/smart-contract-audit-evaluation-framework/"
+  }
+}

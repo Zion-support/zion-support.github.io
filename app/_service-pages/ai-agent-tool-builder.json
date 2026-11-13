@@ -1,0 +1,28 @@
+{
+  "title": "AI Agent Tool Builder",
+  "description": "Visual no-code tool builder for LLM agents: define function-calling tools, MCP server scaffolding, OpenAPI wrapper, and sandbox test harness.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Agent Tool Builder - Zion Tech Group",
+    "description": "Visual no-code tool builder for LLM agents: define function-calling tools, MCP server scaffolding, OpenAPI wrapper, and sandbox test harness.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-agent-tool-builder"
+    }
+  },
+  "features": [
+    "Drag-drop tool schema builder",
+    "MCP server scaffold + OpenAPI wrapper",
+    "Sandbox execution harness per tool",
+    "Multi-model compatibility (OpenAI/Anthropic/Google)"
+  ],
+  "benefits": [
+    "Reduce costs with ai agent tool builder",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

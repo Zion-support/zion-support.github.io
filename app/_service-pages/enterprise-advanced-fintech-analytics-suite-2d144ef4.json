@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/enterprise-advanced-fintech-analytics-suite-2d144ef4",
+  "breadcrumbTitle": "Enterprise Advanced Fintech Analytics Suite",
+  "title": "Enterprise Advanced Fintech Analytics Suite",
+  "description": "Enterprise analytics suite that delivers advanced fintech insights with unified dashboards and reporting.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Enterprise Advanced Fintech Analytics Suite - Zion Tech Group",
+    "description": "Enterprise analytics suite that delivers advanced fintech insights with unified dashboards and reporting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/enterprise-advanced-fintech-analytics-suite-2d144ef4"
+    }
+  },
+  "features": [
+    "Data visualization",
+    "Custom dashboards",
+    "Report generation",
+    "KPI tracking"
+  ],
+  "benefits": [
+    "Unified data view",
+    "Faster insights",
+    "Customizable reports",
+    "Cross-functional collaboration"
+  ]
+}

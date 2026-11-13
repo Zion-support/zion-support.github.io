@@ -1,0 +1,29 @@
+{
+  "title": "Data Loss Prevention (DLP) Platform",
+  "description": "Enterprise DLP for endpoints, network, cloud, and email. Detect and prevent PII, IP, and sensitive data exfiltration with policy-based controls and OCR content inspection.",
+  "basic": "$799/mo/month",
+  "pro": "$2,499/mo/month",
+  "enterprise": "$7,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Data Loss Prevention (DLP) Platform - Zion Tech Group",
+    "description": "Enterprise DLP for endpoints, network, cloud, and email. Detect and prevent PII, IP, and sensitive data exfiltration with policy-based controls and OCR content ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w174-dlp-platform"
+    }
+  },
+  "features": [
+    "Endpoint DLP (USB, clipboard, print control)",
+    "Network DLP (SSL inspection, content filtering)",
+    "Cloud DLP (CASB integration)",
+    "Email DLP with content inspection and OCR",
+    "Policy engine with regulatory templates"
+  ],
+  "benefits": [
+    "Prevent sensitive data exfiltration across all channels",
+    "Regulatory templates for quick deployment",
+    "OCR inspects images for sensitive content",
+    "Incident workflow ensures accountability"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/automated-supply-automation-270fe014",
+  "breadcrumbTitle": "Automated Supply Automation",
+  "title": "Automated Supply Automation",
+  "description": "Next-generation logistics solution: Automated Supply Automation. Combines resource optimization with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated Supply Automation - Zion Tech Group",
+    "description": "Next-generation logistics solution: Automated Supply Automation. Combines resource optimization with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-supply-automation-270fe014"
+    }
+  },
+  "features": [
+    "Rollback mechanisms",
+    "Role-based access control",
+    "Custom integrations",
+    "Mobile-responsive interface",
+    "Multi-language support"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Seamless integration with existing systems",
+    "Zero manual intervention required",
+    "ROI in under 90 days"
+  ]
+}

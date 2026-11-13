@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/predictive-next-generation-freight-analytics-dc9ae0d5",
+  "breadcrumbTitle": "Predictive Next-Generation Freight Analytics",
+  "title": "Predictive Next-Generation Freight Analytics",
+  "description": "Freight intelligence platform that provides next-generation rate forecasting, capacity planning, and carrier performance analytics for logistics optimization.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Predictive Next-Generation Freight Analytics - Zion Tech Group",
+    "description": "Freight intelligence platform that provides next-generation rate forecasting, capacity planning, and carrier performance analytics for logistics optimization.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/predictive-next-generation-freight-analytics-dc9ae0d5"
+    }
+  },
+  "features": [
+    "Rate forecasting",
+    "Capacity planning",
+    "Carrier scorecards",
+    "Lane optimization"
+  ],
+  "benefits": [
+    "Cost reduction",
+    "Better capacity",
+    "Improved reliability",
+    "Strategic sourcing"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-autonomous-sales-analytics-513d9a3a",
+  "breadcrumbTitle": "AI-Powered Autonomous Sales Analytics",
+  "title": "AI-Powered Autonomous Sales Analytics",
+  "description": "AI-driven analytics platform that delivers autonomous insights into sales operations, providing real-time monitoring, predictive modeling, and automated reporti",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI-Powered Autonomous Sales Analytics - Zion Tech Group",
+    "description": "AI-driven analytics platform that delivers autonomous insights into sales operations, providing real-time monitoring, predictive modeling, and automated reporti",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-autonomous-sales-analytics-513d9a3a"
+    }
+  },
+  "features": [
+    "Real-time monitoring",
+    "Predictive modeling",
+    "Automated reporting",
+    "Custom dashboards"
+  ],
+  "benefits": [
+    "Data-driven decision making",
+    "Improved operational efficiency",
+    "Proactive issue detection",
+    "Enhanced KPI tracking"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "AI Code Assistant (Enterprise)",
+  "description": "Private, fine-tuned AI coding copilot trained on your internal repositories with role-based access and SOC 2 compliance.",
+  "basic": "$2,499/mo/month",
+  "pro": "$4,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Code Assistant (Enterprise) - Zion Tech Group",
+    "description": "Private, fine-tuned AI coding copilot trained on your internal repositories with role-based access and SOC 2 compliance.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-code-assistant-enterprise"
+    }
+  },
+  "features": [
+    "Private fine-tuned model",
+    "Repo-aware completions",
+    "Security scanning integrations",
+    "Role-based access",
+    "On-prem or VPC deployment"
+  ],
+  "benefits": [
+    "Reduce costs with ai code assistant (enterprise)",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/cognitive-director-sports-c37f71f1",
+  "breadcrumbTitle": "Cognitive director-sports",
+  "title": "Cognitive director-sports",
+  "description": "The future of sports is here with Cognitive director-sports. Powered by cutting-edge AI, this platform delivers quality control like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Cognitive director-sports - Zion Tech Group",
+    "description": "The future of sports is here with Cognitive director-sports. Powered by cutting-edge AI, this platform delivers quality control like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cognitive-director-sports-c37f71f1"
+    }
+  },
+  "features": [
+    "Open-source friendly",
+    "HIPAA ready",
+    "Custom integrations",
+    "Machine learning integration"
+  ],
+  "benefits": [
+    "24/7 automated operations",
+    "50% reduction in operational costs",
+    "Automated compliance reporting",
+    "Self-healing infrastructure"
+  ]
+}

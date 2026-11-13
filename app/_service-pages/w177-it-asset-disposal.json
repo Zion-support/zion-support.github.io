@@ -1,0 +1,29 @@
+{
+  "title": "IT Asset Disposal and Recycling",
+  "description": "Secure IT asset disposal: data destruction, environmental compliance, asset recovery. Certified and auditable.",
+  "basic": "$99/asset/month",
+  "pro": "$199/asset/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "IT Asset Disposal and Recycling - Zion Tech Group",
+    "description": "Secure IT asset disposal: data destruction, environmental compliance, asset recovery. Certified and auditable.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w177-it-asset-disposal"
+    }
+  },
+  "features": [
+    "Secure data destruction (NIST 800-88)",
+    "Environmental compliance (R2",
+    "e-Stewards)",
+    "Asset recovery and resale",
+    "Chain of custody documentation"
+  ],
+  "benefits": [
+    "Certified data destruction for compliance",
+    "Environmental compliance prevents fines",
+    "Asset recovery returns value",
+    "Chain of custody for audit"
+  ]
+}

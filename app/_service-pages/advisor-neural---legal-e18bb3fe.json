@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/advisor-neural---legal-e18bb3fe",
+  "breadcrumbTitle": "Advisor Neural - Legal",
+  "title": "Advisor Neural - Legal",
+  "description": "Transform your legal operations with our Advisor Neural - Legal. This AI-driven solution automates user experience with unprecedented accuracy and efficiency.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Advisor Neural - Legal - Zion Tech Group",
+    "description": "Transform your legal operations with our Advisor Neural - Legal. This AI-driven solution automates user experience with unprecedented accuracy and efficiency.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/advisor-neural---legal-e18bb3fe"
+    }
+  },
+  "features": [
+    "Serverless functions",
+    "Machine learning integration",
+    "Alerting system",
+    "Container orchestration"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "Dynamic resource allocation",
+    "Zero manual intervention required",
+    "Cost optimization recommendations"
+  ]
+}

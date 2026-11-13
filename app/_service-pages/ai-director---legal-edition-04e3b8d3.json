@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-director---legal-edition-04e3b8d3",
+  "breadcrumbTitle": "AI Director - Legal Edition",
+  "title": "AI Director - Legal Edition",
+  "description": "Unlock unprecedented growth with AI Director - Legal Edition. This autonomous system provides content generation with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Director - Legal Edition - Zion Tech Group",
+    "description": "Unlock unprecedented growth with AI Director - Legal Edition. This autonomous system provides content generation with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-director---legal-edition-04e3b8d3"
+    }
+  },
+  "features": [
+    "Role-based access control",
+    "Offline capabilities",
+    "Audit trails",
+    "Cloud-native architecture",
+    "Multi-language support"
+  ],
+  "benefits": [
+    "Scalable to millions of transactions",
+    "Seamless integration with existing systems",
+    "Zero manual intervention required",
+    "Cost optimization recommendations"
+  ]
+}

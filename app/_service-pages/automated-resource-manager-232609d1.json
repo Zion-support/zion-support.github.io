@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/automated-resource-manager-232609d1",
+  "breadcrumbTitle": "Automated Resource Manager",
+  "title": "Automated Resource Manager",
+  "description": "Transform your hospitality operations with our Automated Resource Manager. This AI-driven solution automates document processing with unprecedented accuracy and",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated Resource Manager - Zion Tech Group",
+    "description": "Transform your hospitality operations with our Automated Resource Manager. This AI-driven solution automates document processing with unprecedented accuracy and",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-resource-manager-232609d1"
+    }
+  },
+  "features": [
+    "SOC 2 certified",
+    "HIPAA ready",
+    "Role-based access control",
+    "Open-source friendly",
+    "Custom integrations"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "3x faster decision making",
+    "99.9% uptime guarantee",
+    "Intelligent load balancing"
+  ]
+}

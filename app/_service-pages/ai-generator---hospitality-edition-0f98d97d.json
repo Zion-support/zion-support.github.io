@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-generator---hospitality-edition-0f98d97d",
+  "breadcrumbTitle": "AI Generator - Hospitality Edition",
+  "title": "AI Generator - Hospitality Edition",
+  "description": "Revolutionize hospitality through intelligent automation. Our AI Generator - Hospitality Edition leverages advanced machine learning to deliver language process",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Generator - Hospitality Edition - Zion Tech Group",
+    "description": "Revolutionize hospitality through intelligent automation. Our AI Generator - Hospitality Edition leverages advanced machine learning to deliver language process",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-generator---hospitality-edition-0f98d97d"
+    }
+  },
+  "features": [
+    "Rollback mechanisms",
+    "Alerting system",
+    "Open-source friendly",
+    "Multi-language support"
+  ],
+  "benefits": [
+    "Intelligent load balancing",
+    "99.9% uptime guarantee",
+    "Predictive maintenance scheduling",
+    "50% reduction in operational costs"
+  ]
+}

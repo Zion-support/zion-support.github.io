@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/engine-autonomous---legal-1-5248ada9",
+  "breadcrumbTitle": "Engine Autonomous - Legal #1",
+  "title": "Engine Autonomous - Legal #1",
+  "description": "The future of legal is here with Engine Autonomous - Legal #1. Powered by cutting-edge AI, this platform delivers content generation like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Engine Autonomous - Legal #1 - Zion Tech Group",
+    "description": "The future of legal is here with Engine Autonomous - Legal #1. Powered by cutting-edge AI, this platform delivers content generation like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/engine-autonomous---legal-1-5248ada9"
+    }
+  },
+  "features": [
+    "Offline capabilities",
+    "Serverless functions",
+    "Real-time processing",
+    "Custom integrations",
+    "Machine learning integration"
+  ],
+  "benefits": [
+    "Dynamic resource allocation",
+    "Zero manual intervention required",
+    "50% reduction in operational costs",
+    "Scalable to millions of transactions",
+    "Predictive maintenance scheduling"
+  ]
+}

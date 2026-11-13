@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-risk-manager-1-9be39c31",
+  "breadcrumbTitle": "Intelligent Risk Manager #1",
+  "title": "Intelligent Risk Manager #1",
+  "description": "Unlock unprecedented growth with Intelligent Risk Manager #1. This autonomous system provides energy management with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Risk Manager #1 - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Intelligent Risk Manager #1. This autonomous system provides energy management with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-risk-manager-1-9be39c31"
+    }
+  },
+  "features": [
+    "Performance dashboards",
+    "Audit trails",
+    "Serverless functions",
+    "Zero-downtime updates"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "Automated compliance reporting",
+    "Zero manual intervention required",
+    "99.9% uptime guarantee"
+  ]
+}

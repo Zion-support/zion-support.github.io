@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/platform-autonomous---insurance-053c9cc6",
+  "breadcrumbTitle": "Platform Autonomous - Insurance",
+  "title": "Platform Autonomous - Insurance",
+  "description": "Unlock unprecedented growth with Platform Autonomous - Insurance. This autonomous system provides performance monitoring with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Platform Autonomous - Insurance - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Platform Autonomous - Insurance. This autonomous system provides performance monitoring with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/platform-autonomous---insurance-053c9cc6"
+    }
+  },
+  "features": [
+    "Auto-scaling capabilities",
+    "GDPR compliance",
+    "Microservices deployment",
+    "SOC 2 certified",
+    "Offline capabilities"
+  ],
+  "benefits": [
+    "50% reduction in operational costs",
+    "Cost optimization recommendations",
+    "Real-time insights and alerts"
+  ]
+}

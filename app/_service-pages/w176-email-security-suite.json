@@ -1,0 +1,29 @@
+{
+  "title": "Email Security & Protection Suite",
+  "description": "Complete email security: inbound/outbound filtering, ATP sandboxing, DLP, encryption, and archival. Protect against phishing, BEC, and data exfiltration.",
+  "basic": "$4/user/mo/month",
+  "pro": "$8/user/mo/month",
+  "enterprise": "$15/user/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Email Security & Protection Suite - Zion Tech Group",
+    "description": "Complete email security: inbound/outbound filtering, ATP sandboxing, DLP, encryption, and archival. Protect against phishing, BEC, and data exfiltration.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w176-email-security-suite"
+    }
+  },
+  "features": [
+    "Inbound spam and phishing filtering",
+    "BEC and impersonation detection",
+    "Attachment sandboxing (ATP)",
+    "Outbound DLP and encryption",
+    "Email archival and eDiscovery"
+  ],
+  "benefits": [
+    "Block 99.9% of phishing and spam",
+    "BEC detection prevents wire fraud",
+    "DLP prevents sensitive data leaks",
+    "Archival meets compliance requirements"
+  ]
+}

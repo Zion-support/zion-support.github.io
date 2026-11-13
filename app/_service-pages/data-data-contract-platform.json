@@ -1,0 +1,29 @@
+{
+  "title": "Data Contract Platform",
+  "description": "Define, enforce, and monitor data contracts between producers and consumers. Ensure data quality, schema consistency, and ownership across the organization.",
+  "basic": "$799/mo/month",
+  "pro": "$2,499/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Data Contract Platform - Zion Tech Group",
+    "description": "Define, enforce, and monitor data contracts between producers and consumers. Ensure data quality, schema consistency, and ownership across the organization.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/data-data-contract-platform"
+    }
+  },
+  "features": [
+    "Data contract definition",
+    "Schema enforcement",
+    "Quality monitoring",
+    "Data ownership tracking",
+    "Integration with data pipelines"
+  ],
+  "benefits": [
+    "Ensure data quality",
+    "Prevent schema breakages",
+    "Clear data ownership",
+    "Enable data mesh"
+  ]
+}

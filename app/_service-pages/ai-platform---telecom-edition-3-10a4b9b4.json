@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/ai-platform---telecom-edition-3-10a4b9b4",
+  "breadcrumbTitle": "AI Platform - Telecom Edition #3",
+  "title": "AI Platform - Telecom Edition #3",
+  "description": "The future of telecom is here with AI Platform - Telecom Edition #3. Powered by cutting-edge AI, this platform delivers fraud prevention like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Platform - Telecom Edition #3 - Zion Tech Group",
+    "description": "The future of telecom is here with AI Platform - Telecom Edition #3. Powered by cutting-edge AI, this platform delivers fraud prevention like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-platform---telecom-edition-3-10a4b9b4"
+    }
+  },
+  "features": [
+    "Open-source friendly",
+    "Plugin architecture",
+    "HIPAA ready",
+    "Mobile-responsive interface",
+    "Cloud-native architecture"
+  ],
+  "benefits": [
+    "24/7 automated operations",
+    "Real-time insights and alerts",
+    "Performance benchmarking",
+    "Dynamic resource allocation",
+    "Zero manual intervention required"
+  ]
+}

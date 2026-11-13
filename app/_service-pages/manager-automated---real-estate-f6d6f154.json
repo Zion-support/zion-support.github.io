@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/manager-automated---real-estate-f6d6f154",
+  "breadcrumbTitle": "Manager Automated - Real-Estate",
+  "title": "Manager Automated - Real-Estate",
+  "description": "Transform your real-estate operations with our Manager Automated - Real-Estate. This AI-driven solution automates inventory management with unprecedented accura",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Manager Automated - Real-Estate - Zion Tech Group",
+    "description": "Transform your real-estate operations with our Manager Automated - Real-Estate. This AI-driven solution automates inventory management with unprecedented accura",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/manager-automated---real-estate-f6d6f154"
+    }
+  },
+  "features": [
+    "Zero-downtime updates",
+    "Offline capabilities",
+    "Real-time processing",
+    "Cloud-native architecture",
+    "Microservices deployment"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Cost optimization recommendations",
+    "Reduced human error by 95%",
+    "Enterprise-grade security",
+    "Intelligent load balancing"
+  ]
+}

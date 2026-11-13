@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-driven-proactive-customer-analytics-072722cd",
+  "breadcrumbTitle": "AI-Driven Proactive Customer Analytics",
+  "title": "AI-Driven Proactive Customer Analytics",
+  "description": "Customer intelligence platform that delivers proactive insights into shopper behavior, lifetime value, and churn prediction for retail and e-commerce businesses",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI-Driven Proactive Customer Analytics - Zion Tech Group",
+    "description": "Customer intelligence platform that delivers proactive insights into shopper behavior, lifetime value, and churn prediction for retail and e-commerce businesses",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-driven-proactive-customer-analytics-072722cd"
+    }
+  },
+  "features": [
+    "Behavioral analysis",
+    "LTV prediction",
+    "Churn prevention",
+    "Segment activation"
+  ],
+  "benefits": [
+    "Higher retention",
+    "Increased LTV",
+    "Targeted marketing",
+    "Better ROI"
+  ]
+}

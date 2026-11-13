@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/next-generation-cognitive-logistics-automation-144896c5",
+  "breadcrumbTitle": "Next-Generation Cognitive Logistics Automation",
+  "title": "Next-Generation Cognitive Logistics Automation",
+  "description": "Next-generation automation suite that streamlines cognitive logistics workflows with intelligent orchestration.",
+  "basic": "$218/month",
+  "pro": "$548/month",
+  "enterprise": "$1648/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Next-Generation Cognitive Logistics Automation - Zion Tech Group",
+    "description": "Next-generation automation suite that streamlines cognitive logistics workflows with intelligent orchestration.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/next-generation-cognitive-logistics-automation-144896c5"
+    }
+  },
+  "features": [
+    "Smart orchestration",
+    "Process automation",
+    "Event processing",
+    "Task scheduling"
+  ],
+  "benefits": [
+    "Faster execution",
+    "Reduced manual steps",
+    "Scalable processes",
+    "Error reduction"
+  ]
+}

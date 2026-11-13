@@ -1,0 +1,29 @@
+{
+  "title": "Cloud Access Security Broker (CASB)",
+  "description": "CASB solution for visibility and control over cloud applications. Shadow IT discovery, data loss prevention, threat protection, and compliance monitoring across SaaS.",
+  "basic": "$1,499/mo/month",
+  "pro": "$4,499/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Cloud Access Security Broker (CASB) - Zion Tech Group",
+    "description": "CASB solution for visibility and control over cloud applications. Shadow IT discovery, data loss prevention, threat protection, and compliance monitoring across",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/security-cloud-access-security-broker"
+    }
+  },
+  "features": [
+    "Shadow IT discovery",
+    "Cloud app risk assessment",
+    "Data loss prevention for cloud",
+    "Threat protection (UEBA)",
+    "Compliance monitoring (GDPR, HIPAA)"
+  ],
+  "benefits": [
+    "Discover and control shadow IT",
+    "Prevent data leaks in cloud apps",
+    "Meet compliance requirements",
+    "Unified cloud security visibility"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligent-analytics-for-legal-5b383ce6",
+  "breadcrumbTitle": "Intelligent Analytics for Legal",
+  "title": "Intelligent Analytics for Legal",
+  "description": "Transform your legal operations with our Intelligent Analytics for Legal. This AI-driven solution automates document processing with unprecedented accuracy and ",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Analytics for Legal - Zion Tech Group",
+    "description": "Transform your legal operations with our Intelligent Analytics for Legal. This AI-driven solution automates document processing with unprecedented accuracy and ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-analytics-for-legal-5b383ce6"
+    }
+  },
+  "features": [
+    "Real-time processing",
+    "Auto-scaling capabilities",
+    "GDPR compliance",
+    "Machine learning integration",
+    "Data encryption"
+  ],
+  "benefits": [
+    "Intelligent load balancing",
+    "3x faster decision making",
+    "Dynamic resource allocation",
+    "Self-healing infrastructure"
+  ]
+}

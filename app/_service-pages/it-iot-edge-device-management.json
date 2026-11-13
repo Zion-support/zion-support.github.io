@@ -1,0 +1,29 @@
+{
+  "title": "IT IoT Device Management & Edge Computing",
+  "description": "Enterprise IoT platform for provisioning, monitoring, and managing millions of connected devices with edge computing.",
+  "basic": "$0.50/device/mo/month",
+  "pro": "$1.50/device/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "IT IoT Device Management & Edge Computing - Zion Tech Group",
+    "description": "Enterprise IoT platform for provisioning, monitoring, and managing millions of connected devices with edge computing.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-iot-edge-device-management"
+    }
+  },
+  "features": [
+    "Zero-touch device provisioning at scale",
+    "Over-the-air firmware updates",
+    "Real-time device health monitoring",
+    "Edge computing with local processing",
+    "Device grouping and policy management"
+  ],
+  "benefits": [
+    "Manage millions of devices from one console",
+    "Reduce bandwidth costs with edge processing",
+    "Prevent device failures",
+    "Deploy updates without downtime"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "title": "Disaster Recovery as a Service (DRaaS)",
+  "description": "Cloud-based disaster recovery with automated failover, continuous replication, and sub-minute RTO. Protects against ransomware, outages, and natural disasters.",
+  "basic": "$N/A/month",
+  "pro": "$9997/month",
+  "enterprise": "$24997/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Disaster Recovery as a Service (DRaaS) - Zion Tech Group",
+    "description": "Cloud-based disaster recovery with automated failover, continuous replication, and sub-minute RTO. Protects against ransomware, outages, and natural disasters.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w130-it-dr"
+    }
+  },
+  "features": [
+    "Continuous data replication",
+    "Automated failover",
+    "Sub-minute RTO",
+    "Ransomware protection",
+    "Multi-cloud DR"
+  ],
+  "benefits": [
+    "Sub-minute recovery",
+    "Ransomware resilience",
+    "Automated testing",
+    "Multi-cloud protection",
+    "Compliance-ready"
+  ]
+}

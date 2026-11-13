@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/engine-autonomous---telecom-90509378",
+  "breadcrumbTitle": "Engine Autonomous - Telecom",
+  "title": "Engine Autonomous - Telecom",
+  "description": "The future of telecom is here with Engine Autonomous - Telecom. Powered by cutting-edge AI, this platform delivers data processing like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Engine Autonomous - Telecom - Zion Tech Group",
+    "description": "The future of telecom is here with Engine Autonomous - Telecom. Powered by cutting-edge AI, this platform delivers data processing like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/engine-autonomous---telecom-90509378"
+    }
+  },
+  "features": [
+    "Rollback mechanisms",
+    "Edge computing support",
+    "Comprehensive monitoring",
+    "Serverless functions",
+    "Auto-scaling capabilities"
+  ],
+  "benefits": [
+    "Intelligent load balancing",
+    "50% reduction in operational costs",
+    "Seamless integration with existing systems",
+    "Performance benchmarking"
+  ]
+}

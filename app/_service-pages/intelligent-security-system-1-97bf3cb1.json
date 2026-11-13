@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/intelligent-security-system-1-97bf3cb1",
+  "breadcrumbTitle": "Intelligent Security System #1",
+  "title": "Intelligent Security System #1",
+  "description": "Revolutionize hospitality through intelligent automation. Our Intelligent Security System #1 leverages advanced machine learning to deliver document processing ",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Security System #1 - Zion Tech Group",
+    "description": "Revolutionize hospitality through intelligent automation. Our Intelligent Security System #1 leverages advanced machine learning to deliver document processing ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-security-system-1-97bf3cb1"
+    }
+  },
+  "features": [
+    "GDPR compliance",
+    "Microservices deployment",
+    "Zero-downtime updates",
+    "Alerting system",
+    "Real-time processing"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "Intelligent load balancing",
+    "Automated compliance reporting",
+    "3x faster decision making",
+    "Cost optimization recommendations"
+  ]
+}

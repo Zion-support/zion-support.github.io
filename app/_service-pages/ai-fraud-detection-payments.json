@@ -1,0 +1,29 @@
+{
+  "title": "AI Payment Fraud Detection & Prevention",
+  "description": "Real-time AI fraud detection for payment processors, banks, and e-commerce platforms with sub-second decisioning and adaptive ML models.",
+  "basic": "$499/mo/month",
+  "pro": "$1,499/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Payment Fraud Detection & Prevention - Zion Tech Group",
+    "description": "Real-time AI fraud detection for payment processors, banks, and e-commerce platforms with sub-second decisioning and adaptive ML models.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-fraud-detection-payments"
+    }
+  },
+  "features": [
+    "Real-time transaction scoring",
+    "Behavioral biometrics analysis",
+    "Device fingerprinting",
+    "Velocity checks and pattern detection",
+    "Chargeback prediction"
+  ],
+  "benefits": [
+    "Reduce fraud losses by 85%",
+    "Minimize false positives",
+    "Meet PCI DSS requirements",
+    "Protect customer trust"
+  ]
+}

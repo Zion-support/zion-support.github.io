@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "AI Agent Tool Builder: architecture overview | Zion Tech Group",
+    "description": "AI Agent Tool Builder: architecture overview",
+    "keywords": [
+      "automation",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "AI Agent Tool Builder: architecture overview",
+      "description": "AI Agent Tool Builder: architecture overview",
+      "url": "https://ziontechgroup.com/blog/ai-agent-tool-builder-architecture-overview/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/ai-agent-tool-builder-architecture-overview/"
+    }
+  },
+  "values": [
+    "AI Agent Tool Builder: architecture overview",
+    "AI Agent Tool Builder: architecture overview",
+    "AI Agent Tool Builder: architecture overview",
+    "Conversion path",
+    "If this guide matches your ai agent tool builder: architecture overview initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "Conversion path",
+    " If this guide matches your ai agent tool builder: architecture overview initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "/blog/event-driven-architecture-2026-7168",
+    "Event Driven Architecture 2026 7168",
+    "/blog/cloud-cost-ai-optimizer-2026-6603",
+    "Cloud Cost Ai Optimizer 2026 6603",
+    "/blog/managed-it-services-small-business-2026-7180",
+    "Managed It Services Small Business 2026 7180",
+    "/blog/it-consulting-starter-template",
+    "It Consulting Starter Template"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "AI Agent Tool Builder: architecture overview",
+    "description": "AI Agent Tool Builder: architecture overview",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T04:51:49Z",
+    "dateModified": "2026-08-07T04:51:49Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/ai-agent-tool-builder-architecture-overview/"
+  }
+}

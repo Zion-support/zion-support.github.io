@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/insights-smart---retail-ef82c1ec",
+  "breadcrumbTitle": "Insights Smart - Retail",
+  "title": "Insights Smart - Retail",
+  "description": "Unlock unprecedented growth with Insights Smart - Retail. This autonomous system provides process automation with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Insights Smart - Retail - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Insights Smart - Retail. This autonomous system provides process automation with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/insights-smart---retail-ef82c1ec"
+    }
+  },
+  "features": [
+    "Multi-region deployment",
+    "GDPR compliance",
+    "Cloud-native architecture",
+    "HIPAA ready",
+    "Role-based access control"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Predictive maintenance scheduling",
+    "Cost optimization recommendations",
+    "Self-healing infrastructure"
+  ]
+}

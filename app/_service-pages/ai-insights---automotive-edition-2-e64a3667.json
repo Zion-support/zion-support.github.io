@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/ai-insights---automotive-edition-2-e64a3667",
+  "breadcrumbTitle": "AI Insights - Automotive Edition #2",
+  "title": "AI Insights - Automotive Edition #2",
+  "description": "Next-generation automotive solution: AI Insights - Automotive Edition #2. Combines data processing with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Insights - Automotive Edition #2 - Zion Tech Group",
+    "description": "Next-generation automotive solution: AI Insights - Automotive Edition #2. Combines data processing with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-insights---automotive-edition-2-e64a3667"
+    }
+  },
+  "features": [
+    "SOC 2 certified",
+    "Data encryption",
+    "GDPR compliance",
+    "Auto-scaling capabilities",
+    "API-first design"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Self-healing infrastructure",
+    "Performance benchmarking",
+    "Zero manual intervention required",
+    "Scalable to millions of transactions"
+  ]
+}

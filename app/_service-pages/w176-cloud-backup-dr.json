@@ -1,0 +1,29 @@
+{
+  "title": "Cloud Backup & DR Orchestration",
+  "description": "Cloud-native backup and DR: automated snapshots, cross-region replication, DR testing, and compliance retention. RPO minutes, RTO hours.",
+  "basic": "$199/mo/month",
+  "pro": "$599/mo/month",
+  "enterprise": "$1,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Cloud Backup & DR Orchestration - Zion Tech Group",
+    "description": "Cloud-native backup and DR: automated snapshots, cross-region replication, DR testing, and compliance retention. RPO minutes, RTO hours.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w176-cloud-backup-dr"
+    }
+  },
+  "features": [
+    "Automated snapshot and backup scheduling",
+    "Cross-region and cross-cloud replication",
+    "DR testing with automated validation",
+    "RPO < 15 min, RTO < 2 hour guarantees",
+    "Compliance retention policies"
+  ],
+  "benefits": [
+    "Guaranteed recovery from any failure",
+    "Cross-region replication for resilience",
+    "DR testing proves recovery capability",
+    "Ransomware recovery built in"
+  ]
+}

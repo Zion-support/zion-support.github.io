@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/engine-smart---legal-1-3c6250a3",
+  "breadcrumbTitle": "Engine Smart - Legal #1",
+  "title": "Engine Smart - Legal #1",
+  "description": "Transform your legal operations with our Engine Smart - Legal #1. This AI-driven solution automates image recognition with unprecedented accuracy and efficiency",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Engine Smart - Legal #1 - Zion Tech Group",
+    "description": "Transform your legal operations with our Engine Smart - Legal #1. This AI-driven solution automates image recognition with unprecedented accuracy and efficiency",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/engine-smart---legal-1-3c6250a3"
+    }
+  },
+  "features": [
+    "API-first design",
+    "Multi-region deployment",
+    "Performance dashboards",
+    "Auto-scaling capabilities",
+    "Machine learning integration"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "24/7 automated operations",
+    "Reduced human error by 95%",
+    "Cost optimization recommendations"
+  ]
+}

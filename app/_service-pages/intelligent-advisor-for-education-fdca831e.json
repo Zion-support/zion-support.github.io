@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-advisor-for-education-fdca831e",
+  "breadcrumbTitle": "Intelligent Advisor for Education",
+  "title": "Intelligent Advisor for Education",
+  "description": "Unlock unprecedented growth with Intelligent Advisor for Education. This autonomous system provides market intelligence with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Advisor for Education - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Intelligent Advisor for Education. This autonomous system provides market intelligence with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-advisor-for-education-fdca831e"
+    }
+  },
+  "features": [
+    "Multi-language support",
+    "API-first design",
+    "Machine learning integration",
+    "Role-based access control"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "ROI in under 90 days",
+    "Dynamic resource allocation",
+    "99.9% uptime guarantee"
+  ]
+}

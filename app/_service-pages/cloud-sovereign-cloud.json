@@ -1,0 +1,29 @@
+{
+  "title": "Sovereign Cloud Deployment",
+  "description": "Deploy and manage sovereign cloud infrastructure. Data residency compliance, local cloud providers, and hybrid architectures for regulated industries.",
+  "basic": "$2,999/mo/month",
+  "pro": "$8,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Sovereign Cloud Deployment - Zion Tech Group",
+    "description": "Deploy and manage sovereign cloud infrastructure. Data residency compliance, local cloud providers, and hybrid architectures for regulated industries.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cloud-sovereign-cloud"
+    }
+  },
+  "features": [
+    "Data residency compliance",
+    "Local cloud provider integration",
+    "Hybrid architecture design",
+    "Compliance automation (GDPR, LGPD, POPIA)",
+    "Integration with local providers"
+  ],
+  "benefits": [
+    "Meet data sovereignty laws",
+    "Avoid regulatory penalties",
+    "Local performance optimization",
+    "Hybrid flexibility"
+  ]
+}

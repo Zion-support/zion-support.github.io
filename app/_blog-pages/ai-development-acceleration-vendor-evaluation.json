@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "AI Development Acceleration: vendor evaluation | Zion Tech Group",
+    "description": "AI Development Acceleration: vendor evaluation",
+    "keywords": [
+      "ai",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "AI Development Acceleration: vendor evaluation",
+      "description": "AI Development Acceleration: vendor evaluation",
+      "url": "https://ziontechgroup.com/blog/ai-development-acceleration-vendor-evaluation/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/ai-development-acceleration-vendor-evaluation/"
+    }
+  },
+  "values": [
+    "AI Development Acceleration: vendor evaluation",
+    "AI Development Acceleration: vendor evaluation",
+    "AI Development Acceleration: vendor evaluation",
+    "Outcomes to measure",
+    "Leading indicators for ai development acceleration: vendor evaluation: workflow completion rate, escalation rate, time-to-resolution, and user satisfaction. Lagging indicators: revenue trend, cost trend, customer retention, and operational efficiency. Track both leading and lagging indicators so you can explain progress to leadership before financial results appear. Use a rolling 90-day window and re-baseline monthly; this keeps the program accountable without demanding perfection on day one. Publish metrics in a shared dashboard so the whole team sees progress, not just the program sponsor.",
+    "Outcomes to measure",
+    " Leading indicators for ai development acceleration: vendor evaluation: workflow completion rate, escalation rate, time-to-resolution, and user satisfaction. Lagging indicators: revenue trend, cost trend, customer retention, and operational efficiency. Track both leading and lagging indicators so you can explain progress to leadership before financial results appear. Use a rolling 90-day window and re-baseline monthly; this keeps the program accountable without demanding perfection on day one. Publish metrics in a shared dashboard so the whole team sees progress, not just the program sponsor.",
+    "/blog/ai-observability-2026-7255",
+    "Ai Observability 2026 7255",
+    "/blog/autonomous-qa-engineering-2026-6937",
+    "Autonomous Qa Engineering 2026 6937",
+    "/blog/it-consulting-starter-template",
+    "It Consulting Starter Template",
+    "/blog/chaos-engineering-2026-6740",
+    "Chaos Engineering 2026 6740"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "AI Development Acceleration: vendor evaluation",
+    "description": "AI Development Acceleration: vendor evaluation",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T04:51:30Z",
+    "dateModified": "2026-08-07T04:51:30Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/ai-development-acceleration-vendor-evaluation/"
+  }
+}

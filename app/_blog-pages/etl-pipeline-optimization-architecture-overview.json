@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "ETL Pipeline Optimization: architecture overview | Zion Tech Group",
+    "description": "ETL Pipeline Optimization: architecture overview",
+    "keywords": [
+      "security",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "ETL Pipeline Optimization: architecture overview",
+      "description": "ETL Pipeline Optimization: architecture overview",
+      "url": "https://ziontechgroup.com/blog/etl-pipeline-optimization-architecture-overview/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/etl-pipeline-optimization-architecture-overview/"
+    }
+  },
+  "values": [
+    "ETL Pipeline Optimization: architecture overview",
+    "ETL Pipeline Optimization: architecture overview",
+    "ETL Pipeline Optimization: architecture overview",
+    "Conversion path",
+    "If this guide matches your etl pipeline optimization: architecture overview initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "Conversion path",
+    " If this guide matches your etl pipeline optimization: architecture overview initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "/blog/graphql-federation-platform-2026-7101",
+    "Graphql Federation Platform 2026 7101",
+    "/blog/enterprise-ai-intelligence-hub-policy-and-compliance",
+    "Enterprise Ai Intelligence Hub Policy And Compliance",
+    "/blog/ai-development-acceleration-operations-handbook",
+    "Ai Development Acceleration Operations Handbook",
+    "/blog/autonomous-qa-engineering-policy-and-compliance",
+    "Autonomous Qa Engineering Policy And Compliance"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "ETL Pipeline Optimization: architecture overview",
+    "description": "ETL Pipeline Optimization: architecture overview",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T09:28:30Z",
+    "dateModified": "2026-08-07T09:28:30Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/etl-pipeline-optimization-architecture-overview/"
+  }
+}

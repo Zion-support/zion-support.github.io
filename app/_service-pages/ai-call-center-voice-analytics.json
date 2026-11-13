@@ -1,0 +1,29 @@
+{
+  "title": "AI Call Center Voice Analytics",
+  "description": "Real-time call transcription, sentiment analysis, agent coaching insights, and compliance monitoring for contact centers.",
+  "basic": "$199/mo/month",
+  "pro": "$599/mo/month",
+  "enterprise": "$1,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Call Center Voice Analytics - Zion Tech Group",
+    "description": "Real-time call transcription, sentiment analysis, agent coaching insights, and compliance monitoring for contact centers.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-call-center-voice-analytics"
+    }
+  },
+  "features": [
+    "Real-time speech-to-text transcription",
+    "Sentiment & emotion detection",
+    "Agent compliance monitoring (PCI, GDPR)",
+    "Automated coaching suggestions",
+    "Keyword & topic trend analysis"
+  ],
+  "benefits": [
+    "Reduce costs with ai call center voice analytics",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

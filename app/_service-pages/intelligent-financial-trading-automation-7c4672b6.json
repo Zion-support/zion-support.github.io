@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-financial-trading-automation-7c4672b6",
+  "breadcrumbTitle": "Intelligent Financial Trading Automation",
+  "title": "Intelligent Financial Trading Automation",
+  "description": "Algorithmic trading platform that executes intelligent strategies using AI-driven market analysis, sentiment processing, and real-time risk management.",
+  "basic": "$318/month",
+  "pro": "$798/month",
+  "enterprise": "$2398/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Intelligent Financial Trading Automation - Zion Tech Group",
+    "description": "Algorithmic trading platform that executes intelligent strategies using AI-driven market analysis, sentiment processing, and real-time risk management.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-financial-trading-automation-7c4672b6"
+    }
+  },
+  "features": [
+    "Signal generation",
+    "Execution optimization",
+    "Risk controls",
+    "Performance attribution"
+  ],
+  "benefits": [
+    "Alpha generation",
+    "Reduced latency",
+    "Disciplined execution",
+    "Scalable strategies"
+  ]
+}

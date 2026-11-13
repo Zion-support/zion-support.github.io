@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/engine-intelligent---agriculture-3c03a611",
+  "breadcrumbTitle": "Engine Intelligent - Agriculture",
+  "title": "Engine Intelligent - Agriculture",
+  "description": "The future of agriculture is here with Engine Intelligent - Agriculture. Powered by cutting-edge AI, this platform delivers resource optimization like never bef",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Engine Intelligent - Agriculture - Zion Tech Group",
+    "description": "The future of agriculture is here with Engine Intelligent - Agriculture. Powered by cutting-edge AI, this platform delivers resource optimization like never bef",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/engine-intelligent---agriculture-3c03a611"
+    }
+  },
+  "features": [
+    "Edge computing support",
+    "Real-time processing",
+    "Rollback mechanisms",
+    "HIPAA ready",
+    "Plugin architecture"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "ROI in under 90 days",
+    "Self-healing infrastructure",
+    "Zero manual intervention required",
+    "99.9% uptime guarantee"
+  ]
+}

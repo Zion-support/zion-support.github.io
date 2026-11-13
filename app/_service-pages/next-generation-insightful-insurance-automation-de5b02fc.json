@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/next-generation-insightful-insurance-automation-de5b02fc",
+  "breadcrumbTitle": "Next-Generation Insightful Insurance Automation",
+  "title": "Next-Generation Insightful Insurance Automation",
+  "description": "Next-generation automation suite that streamlines insightful insurance workflows with intelligent orchestration.",
+  "basic": "$218/month",
+  "pro": "$548/month",
+  "enterprise": "$1648/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Next-Generation Insightful Insurance Automation - Zion Tech Group",
+    "description": "Next-generation automation suite that streamlines insightful insurance workflows with intelligent orchestration.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/next-generation-insightful-insurance-automation-de5b02fc"
+    }
+  },
+  "features": [
+    "Smart orchestration",
+    "Process automation",
+    "Event processing",
+    "Task scheduling"
+  ],
+  "benefits": [
+    "Faster execution",
+    "Reduced manual steps",
+    "Scalable processes",
+    "Error reduction"
+  ]
+}

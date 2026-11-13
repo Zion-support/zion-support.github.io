@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/neural-image-suite-7f3bbd25",
+  "breadcrumbTitle": "Neural Image Suite",
+  "title": "Neural Image Suite",
+  "description": "Unlock unprecedented growth with Neural Image Suite. This autonomous system provides inventory management with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Neural Image Suite - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Neural Image Suite. This autonomous system provides inventory management with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/neural-image-suite-7f3bbd25"
+    }
+  },
+  "features": [
+    "Real-time processing",
+    "GDPR compliance",
+    "Role-based access control",
+    "Serverless functions"
+  ],
+  "benefits": [
+    "Performance benchmarking",
+    "3x faster decision making",
+    "Reduced human error by 95%"
+  ]
+}

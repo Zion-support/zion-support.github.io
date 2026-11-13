@@ -6,12 +6,15 @@
   "packageManager": "npm@10.9.8",
   "scripts": {
     "dev": "next dev",
-    "build": "next build --webpack",
+    "build": "node --max-old-space-size=6144 scripts/build-static.cjs",
     "build:ci": "node scripts/build-wrapper.cjs",
     "build:check": "npm run type-check && node scripts/build-wrapper.cjs",
     "start": "next start",
     "lint": "next lint",
     "lint:check": "npx eslint app components --ext .ts,.tsx,.js,.mjs --ignore-pattern \".next/**\" --ignore-pattern \"out/**\" --ignore-pattern \"dist/**\" --ignore-pattern \"build/**\" --quiet --cache --cache-location .eslintcache",
+    "catalog:generate": "node scripts/client-catalog.cjs",
+    "catalog:test": "node --test scripts/client-catalog.test.cjs scripts/quiz-pricing.test.cjs scripts/home-pricing.test.cjs",
+    "pretype-check": "npm run catalog:generate",
     "type-check": "tsc --noEmit",
     "wrap": "bash scripts/error-wrapper.sh",
     "postbuild": "node scripts/generate_service_index.cjs && node scripts/generate-sitemap-feed.cjs && node scripts/checks/build-and-verify.cjs",
@@ -127,8 +130,10 @@
     "workflows:validate:light": "echo 'workflows:validate:light: OK (stub - automation paused post-P0)'"
   },
   "dependencies": {
+    "@heroicons/react": "2.2.0",
     "@sendgrid/mail": "^8.1.6",
     "@stripe/stripe-js": "^9.7.0",
+    "clsx": "2.1.1",
     "lucide-react": "^1.17.0",
     "qrcode.react": "^4.2.0",
     "react": "^19.2.6",

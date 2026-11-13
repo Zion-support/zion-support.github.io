@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-generator---real-estate-edition-1-7c740e4c",
+  "breadcrumbTitle": "AI Generator - Real-Estate Edition #1",
+  "title": "AI Generator - Real-Estate Edition #1",
+  "description": "Next-generation real-estate solution: AI Generator - Real-Estate Edition #1. Combines content generation with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Generator - Real-Estate Edition #1 - Zion Tech Group",
+    "description": "Next-generation real-estate solution: AI Generator - Real-Estate Edition #1. Combines content generation with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-generator---real-estate-edition-1-7c740e4c"
+    }
+  },
+  "features": [
+    "Audit trails",
+    "Plugin architecture",
+    "Multi-region deployment",
+    "GDPR compliance"
+  ],
+  "benefits": [
+    "24/7 automated operations",
+    "Predictive maintenance scheduling",
+    "Automated compliance reporting",
+    "Performance benchmarking"
+  ]
+}

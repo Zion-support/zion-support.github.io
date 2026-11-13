@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "AI Observability: vendor evaluation | Zion Tech Group",
+    "description": "AI Observability: vendor evaluation",
+    "keywords": [
+      "automation",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "AI Observability: vendor evaluation",
+      "description": "AI Observability: vendor evaluation",
+      "url": "https://ziontechgroup.com/blog/ai-observability-vendor-evaluation/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/ai-observability-vendor-evaluation/"
+    }
+  },
+  "values": [
+    "AI Observability: vendor evaluation",
+    "AI Observability: vendor evaluation",
+    "AI Observability: vendor evaluation",
+    "Action checklist",
+    "For ai observability: vendor evaluation: pick one workflow, assign ownership, define success metrics, instrument execution, and set a 30-day review date. Write the checklist down and share it with stakeholders so expectations are explicit. Before launch, verify access controls, monitoring, rollback criteria, and on-call coverage. After launch, review metrics weekly and escalate deviations immediately; small drifts become large incidents when ignored. Use the checklist as a living document and update it as the program learns from real operation.",
+    "Action checklist",
+    " For ai observability: vendor evaluation: pick one workflow, assign ownership, define success metrics, instrument execution, and set a 30-day review date. Write the checklist down and share it with stakeholders so expectations are explicit. Before launch, verify access controls, monitoring, rollback criteria, and on-call coverage. After launch, review metrics weekly and escalate deviations immediately; small drifts become large incidents when ignored. Use the checklist as a living document and update it as the program learns from real operation.",
+    "/blog/ai-autonomous-agents-2026-7208",
+    "Ai Autonomous Agents 2026 7208",
+    "/blog/ai-data-lakehouse-pipelines-executive-guide",
+    "Ai Data Lakehouse Pipelines Executive Guide",
+    "/blog/micro-saas-ai-customer-onboarding-2026",
+    "Micro Saas Ai Customer Onboarding 2026",
+    "/blog/ai-email-intelligence-2026-6907",
+    "Ai Email Intelligence 2026 6907"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "AI Observability: vendor evaluation",
+    "description": "AI Observability: vendor evaluation",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T08:12:13Z",
+    "dateModified": "2026-08-07T08:12:13Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/ai-observability-vendor-evaluation/"
+  }
+}

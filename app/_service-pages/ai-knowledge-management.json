@@ -1,0 +1,29 @@
+{
+  "title": "AI Knowledge Management",
+  "description": "Centralize organizational knowledge with AI-powered semantic search, auto-tagging, content gap detection, and intelligent Q&A across your document corpus.",
+  "basic": "$149/mo/month",
+  "pro": "$399/mo/month",
+  "enterprise": "$1,299/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Knowledge Management - Zion Tech Group",
+    "description": "Centralize organizational knowledge with AI-powered semantic search, auto-tagging, content gap detection, and intelligent Q&A across your document corpus.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-knowledge-management"
+    }
+  },
+  "features": [
+    "Semantic search across all documents",
+    "Auto-tagging & intelligent categorization",
+    "Knowledge gap detection",
+    "AI Q&A over internal documents",
+    "Content lifecycle & freshness monitoring"
+  ],
+  "benefits": [
+    "Reduce costs with ai knowledge management",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

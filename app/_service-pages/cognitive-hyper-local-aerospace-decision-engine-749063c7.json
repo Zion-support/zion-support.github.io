@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/cognitive-hyper-local-aerospace-decision-engine-749063c7",
+  "breadcrumbTitle": "Cognitive Hyper-Local Aerospace Decision Engine",
+  "title": "Cognitive Hyper-Local Aerospace Decision Engine",
+  "description": "Cognitive decision engine that processes hyper-local signals to drive aerospace strategy with deep learning.",
+  "basic": "$278/month",
+  "pro": "$698/month",
+  "enterprise": "$2098/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Cognitive Hyper-Local Aerospace Decision Engine - Zion Tech Group",
+    "description": "Cognitive decision engine that processes hyper-local signals to drive aerospace strategy with deep learning.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cognitive-hyper-local-aerospace-decision-engine-749063c7"
+    }
+  },
+  "features": [
+    "Cognitive reasoning",
+    "Scenario analysis",
+    "Decision trees",
+    "Recommendation engine"
+  ],
+  "benefits": [
+    "Better decision quality",
+    "Reduced risk",
+    "Faster insights",
+    "Competitive intelligence"
+  ]
+}

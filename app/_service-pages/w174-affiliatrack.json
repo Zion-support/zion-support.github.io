@@ -1,0 +1,29 @@
+{
+  "title": "Affiliatrack — Affiliate & Referral Platform",
+  "description": "Affiliate and referral program management: tracking, commission calculation, payouts, and fraud detection. Grow revenue with partner programs.",
+  "basic": "$49/mo/month",
+  "pro": "$149/mo/month",
+  "enterprise": "$499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Affiliatrack — Affiliate & Referral Platform - Zion Tech Group",
+    "description": "Affiliate and referral program management: tracking, commission calculation, payouts, and fraud detection. Grow revenue with partner programs.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w174-affiliatrack"
+    }
+  },
+  "features": [
+    "Affiliate link tracking and attribution",
+    "Multi-tier commission structures",
+    "Automated payout processing (Stripe, PayPal)",
+    "Fraud detection and prevention",
+    "Partner portal with dashboards"
+  ],
+  "benefits": [
+    "Launch affiliate programs in minutes",
+    "Fraud detection protects margins",
+    "Partner portal drives self-service growth",
+    "A/B testing optimizes incentive structures"
+  ]
+}

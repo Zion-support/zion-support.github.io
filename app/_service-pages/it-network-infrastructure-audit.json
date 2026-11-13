@@ -1,0 +1,28 @@
+{
+  "title": "Network Infrastructure Audit",
+  "description": "Comprehensive network assessment covering topology analysis, bandwidth optimization, security posture, and hardware lifecycle management.",
+  "basic": "$2,000/project/month",
+  "pro": "$5,000/project/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Network Infrastructure Audit - Zion Tech Group",
+    "description": "Comprehensive network assessment covering topology analysis, bandwidth optimization, security posture, and hardware lifecycle management.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-network-infrastructure-audit"
+    }
+  },
+  "features": [
+    "Topology Analysis",
+    "Bandwidth Optimization",
+    "Security Assessment",
+    "Hardware Lifecycle",
+    "Recommendations Report"
+  ],
+  "benefits": [
+    "Optimize network performance",
+    "Identify security gaps",
+    "Plan upgrades"
+  ]
+}

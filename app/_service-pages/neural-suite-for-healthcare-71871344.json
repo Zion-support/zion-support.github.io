@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/neural-suite-for-healthcare-71871344",
+  "breadcrumbTitle": "Neural Suite for Healthcare",
+  "title": "Neural Suite for Healthcare",
+  "description": "Next-generation healthcare solution: Neural Suite for Healthcare. Combines resource optimization with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Neural Suite for Healthcare - Zion Tech Group",
+    "description": "Next-generation healthcare solution: Neural Suite for Healthcare. Combines resource optimization with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/neural-suite-for-healthcare-71871344"
+    }
+  },
+  "features": [
+    "Container orchestration",
+    "Auto-scaling capabilities",
+    "Role-based access control",
+    "HIPAA ready"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "24/7 automated operations",
+    "Automated compliance reporting"
+  ]
+}

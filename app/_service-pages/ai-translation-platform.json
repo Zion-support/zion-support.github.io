@@ -1,0 +1,29 @@
+{
+  "title": "AI Translation & Localization Platform",
+  "description": "Enterprise AI translation platform with 100+ language pairs, domain-specific models, and human-in-the-loop review. Translate documents, websites, and apps at scale.",
+  "basic": "$199/mo/month",
+  "pro": "$499/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Translation & Localization Platform - Zion Tech Group",
+    "description": "Enterprise AI translation platform with 100+ language pairs, domain-specific models, and human-in-the-loop review. Translate documents, websites, and apps at sc",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-translation-platform"
+    }
+  },
+  "features": [
+    "AI translation for 100+ language pairs",
+    "Domain-specific models (legal, medical, tech)",
+    "Human-in-the-loop review workflow",
+    "Website and app localization",
+    "Translation memory and glossary management"
+  ],
+  "benefits": [
+    "Translate 10x faster than human translators",
+    "95%+ accuracy with domain models",
+    "Reduce translation costs by 80%",
+    "Localize products for global markets"
+  ]
+}

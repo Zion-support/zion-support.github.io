@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/insights-smart---media-1-c66b3ebf",
+  "breadcrumbTitle": "Insights Smart - Media #1",
+  "title": "Insights Smart - Media #1",
+  "description": "Transform your media operations with our Insights Smart - Media #1. This AI-driven solution automates maintenance scheduling with unprecedented accuracy and eff",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Insights Smart - Media #1 - Zion Tech Group",
+    "description": "Transform your media operations with our Insights Smart - Media #1. This AI-driven solution automates maintenance scheduling with unprecedented accuracy and eff",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/insights-smart---media-1-c66b3ebf"
+    }
+  },
+  "features": [
+    "API-first design",
+    "GDPR compliance",
+    "Multi-language support",
+    "Edge computing support",
+    "Auto-scaling capabilities"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "Self-healing infrastructure",
+    "Performance benchmarking"
+  ]
+}

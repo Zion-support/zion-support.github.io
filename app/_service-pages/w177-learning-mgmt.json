@@ -1,0 +1,29 @@
+{
+  "title": "Learning Management System (LMS)",
+  "description": "Manage training: course creation, delivery, tracking, compliance reporting. SCORM and xAPI compliant.",
+  "basic": "$4/user/mo/month",
+  "pro": "$8/user/mo/month",
+  "enterprise": "$15/user/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Learning Management System (LMS) - Zion Tech Group",
+    "description": "Manage training: course creation, delivery, tracking, compliance reporting. SCORM and xAPI compliant.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w177-learning-mgmt"
+    }
+  },
+  "features": [
+    "Course creation and management",
+    "SCORM and xAPI compliance",
+    "Learning paths and certifications",
+    "Compliance training tracking",
+    "Skills gap analysis"
+  ],
+  "benefits": [
+    "Course creation and delivery in one platform",
+    "SCORM/xAPI for content compatibility",
+    "Compliance tracking for regulated industries",
+    "Skills gap analysis for development"
+  ]
+}

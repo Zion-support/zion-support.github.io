@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-resilient-healthcare-analytics-f1eb09de",
+  "breadcrumbTitle": "AI-Powered Resilient Healthcare Analytics",
+  "title": "AI-Powered Resilient Healthcare Analytics",
+  "description": "AI-driven analytics platform that delivers resilient insights into healthcare operations, providing real-time monitoring, predictive modeling, and automated rep",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Resilient Healthcare Analytics - Zion Tech Group",
+    "description": "AI-driven analytics platform that delivers resilient insights into healthcare operations, providing real-time monitoring, predictive modeling, and automated rep",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-resilient-healthcare-analytics-f1eb09de"
+    }
+  },
+  "features": [
+    "Real-time monitoring",
+    "Predictive modeling",
+    "Automated reporting",
+    "Custom dashboards"
+  ],
+  "benefits": [
+    "Data-driven decision making",
+    "Improved operational efficiency",
+    "Proactive issue detection",
+    "Enhanced KPI tracking"
+  ]
+}

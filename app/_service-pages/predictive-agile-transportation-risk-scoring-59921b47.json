@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/predictive-agile-transportation-risk-scoring-59921b47",
+  "breadcrumbTitle": "Predictive Agile Transportation Risk Scoring",
+  "title": "Predictive Agile Transportation Risk Scoring",
+  "description": "Predictive risk scoring engine that assesses agile transportation vulnerabilities with machine learning.",
+  "basic": "$278/month",
+  "pro": "$698/month",
+  "enterprise": "$2098/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Predictive Agile Transportation Risk Scoring - Zion Tech Group",
+    "description": "Predictive risk scoring engine that assesses agile transportation vulnerabilities with machine learning.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/predictive-agile-transportation-risk-scoring-59921b47"
+    }
+  },
+  "features": [
+    "Risk assessment",
+    "Threat modeling",
+    "Compliance scoring",
+    "Mitigation planning"
+  ],
+  "benefits": [
+    "Proactive risk mitigation",
+    "Compliance assurance",
+    "Reduced exposure",
+    "Faster incident response"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/adaptive-suite-for-healthcare-fcf26c15",
+  "breadcrumbTitle": "Adaptive Suite for Healthcare",
+  "title": "Adaptive Suite for Healthcare",
+  "description": "The future of healthcare is here with Adaptive Suite for Healthcare. Powered by cutting-edge AI, this platform delivers energy management like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Adaptive Suite for Healthcare - Zion Tech Group",
+    "description": "The future of healthcare is here with Adaptive Suite for Healthcare. Powered by cutting-edge AI, this platform delivers energy management like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/adaptive-suite-for-healthcare-fcf26c15"
+    }
+  },
+  "features": [
+    "Data encryption",
+    "Alerting system",
+    "Mobile-responsive interface",
+    "Custom integrations",
+    "Microservices deployment"
+  ],
+  "benefits": [
+    "Cost optimization recommendations",
+    "Self-healing infrastructure",
+    "Dynamic resource allocation",
+    "Real-time insights and alerts"
+  ]
+}

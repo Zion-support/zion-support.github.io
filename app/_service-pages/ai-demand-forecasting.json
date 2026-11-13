@@ -1,0 +1,29 @@
+{
+  "title": "AI Demand Forecasting & Inventory Optimization",
+  "description": "ML-powered demand forecasting that analyzes seasonality, trends, promotions, and external factors to predict demand with 95%+ accuracy. Optimize inventory and reduce stockouts.",
+  "basic": "$1,999/mo/month",
+  "pro": "$4,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Demand Forecasting & Inventory Optimization - Zion Tech Group",
+    "description": "ML-powered demand forecasting that analyzes seasonality, trends, promotions, and external factors to predict demand with 95%+ accuracy. Optimize inventory and r",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-demand-forecasting"
+    }
+  },
+  "features": [
+    "Multi-variable demand forecasting (seasonality, trends, events)",
+    "Promotion and campaign impact modeling",
+    "External factor integration (weather, economic indicators)",
+    "Inventory optimization with safety stock calculations",
+    "Automated reorder point recommendations"
+  ],
+  "benefits": [
+    "95%+ forecast accuracy",
+    "Reduce stockouts by 60%",
+    "Lower inventory carrying costs by 25%",
+    "Optimize working capital with data-driven ordering"
+  ]
+}

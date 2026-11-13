@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/self-optimizing-coordinator-for-insurance-eb661ae3",
+  "breadcrumbTitle": "Self-Optimizing Coordinator for Insurance",
+  "title": "Self-Optimizing Coordinator for Insurance",
+  "description": "The future of insurance is here with Self-Optimizing Coordinator for Insurance. Powered by cutting-edge AI, this platform delivers fraud prevention like never b",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Self-Optimizing Coordinator for Insurance - Zion Tech Group",
+    "description": "The future of insurance is here with Self-Optimizing Coordinator for Insurance. Powered by cutting-edge AI, this platform delivers fraud prevention like never b",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/self-optimizing-coordinator-for-insurance-eb661ae3"
+    }
+  },
+  "features": [
+    "Mobile-responsive interface",
+    "Real-time processing",
+    "Audit trails",
+    "Rollback mechanisms",
+    "Serverless functions"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "Performance benchmarking",
+    "Zero manual intervention required"
+  ]
+}

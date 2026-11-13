@@ -1,0 +1,29 @@
+{
+  "title": "Ai Exam Proctoring",
+  "description": "AI Exam Proctoring — enterprise-grade solution with AI-powered automation, real-time analytics, and seamless integration. Built for scale with security-first architecture.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Ai Exam Proctoring - Zion Tech Group",
+    "description": "AI Exam Proctoring — enterprise-grade solution with AI-powered automation, real-time analytics, and seamless integration. Built for scale with security-first ar",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-exam-proctoring"
+    }
+  },
+  "features": [
+    "AI-powered exam proctoring automation",
+    "Real-time analytics and monitoring",
+    "Enterprise-grade security (SOC2, HIPAA ready)",
+    "REST API and webhooks for integrations",
+    "Multi-tenant SaaS architecture"
+  ],
+  "benefits": [
+    "Reduce manual effort in exam proctoring by 80%",
+    "Make data-driven decisions in real-time",
+    "Scale without adding headcount",
+    "Enterprise security out of the box"
+  ]
+}

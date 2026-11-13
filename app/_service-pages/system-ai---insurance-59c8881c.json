@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/system-ai---insurance-59c8881c",
+  "breadcrumbTitle": "System AI - Insurance",
+  "title": "System AI - Insurance",
+  "description": "Unlock unprecedented growth with System AI - Insurance. This autonomous system provides predictive analytics with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "System AI - Insurance - Zion Tech Group",
+    "description": "Unlock unprecedented growth with System AI - Insurance. This autonomous system provides predictive analytics with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/system-ai---insurance-59c8881c"
+    }
+  },
+  "features": [
+    "Performance dashboards",
+    "Multi-region deployment",
+    "Real-time processing",
+    "Offline capabilities"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "Performance benchmarking",
+    "Reduced human error by 95%",
+    "ROI in under 90 days"
+  ]
+}

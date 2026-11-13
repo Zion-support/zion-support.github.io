@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligence-autonomous---transportation-d0e10e5c",
+  "breadcrumbTitle": "Intelligence Autonomous - Transportation",
+  "title": "Intelligence Autonomous - Transportation",
+  "description": "Transform your transportation operations with our Intelligence Autonomous - Transportation. This AI-driven solution automates data processing with unprecedented",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligence Autonomous - Transportation - Zion Tech Group",
+    "description": "Transform your transportation operations with our Intelligence Autonomous - Transportation. This AI-driven solution automates data processing with unprecedented",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligence-autonomous---transportation-d0e10e5c"
+    }
+  },
+  "features": [
+    "Real-time processing",
+    "SOC 2 certified",
+    "Offline capabilities",
+    "Container orchestration",
+    "Role-based access control"
+  ],
+  "benefits": [
+    "50% reduction in operational costs",
+    "Reduced human error by 95%",
+    "Self-healing infrastructure"
+  ]
+}

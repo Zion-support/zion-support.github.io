@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/insights-adaptive---insurance-061518d3",
+  "breadcrumbTitle": "Insights Adaptive - Insurance",
+  "title": "Insights Adaptive - Insurance",
+  "description": "The future of insurance is here with Insights Adaptive - Insurance. Powered by cutting-edge AI, this platform delivers language processing like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Insights Adaptive - Insurance - Zion Tech Group",
+    "description": "The future of insurance is here with Insights Adaptive - Insurance. Powered by cutting-edge AI, this platform delivers language processing like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/insights-adaptive---insurance-061518d3"
+    }
+  },
+  "features": [
+    "Serverless functions",
+    "Container orchestration",
+    "Offline capabilities",
+    "GDPR compliance"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Real-time insights and alerts",
+    "Dynamic resource allocation",
+    "Reduced human error by 95%"
+  ]
+}

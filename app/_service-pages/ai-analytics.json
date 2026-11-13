@@ -1,0 +1,29 @@
+{
+  "title": "AI Analytics & BI",
+  "description": "Transform your data into actionable insights with our advanced AI analytics platform.",
+  "basic": "$199/mo/month",
+  "pro": "$599/mo/month",
+  "enterprise": "$1,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Analytics & BI - Zion Tech Group",
+    "description": "Transform your data into actionable insights with our advanced AI analytics platform.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-analytics"
+    }
+  },
+  "features": [
+    "Real-time data processing",
+    "Predictive analytics",
+    "Custom dashboards",
+    "Automated reporting",
+    "Machine learning models"
+  ],
+  "benefits": [
+    "Reduce costs with ai analytics & bi",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

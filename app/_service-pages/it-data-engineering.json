@@ -1,0 +1,29 @@
+{
+  "title": "IT Data Engineering & Pipeline Development",
+  "description": "Build scalable data pipelines and engineering solutions. From batch ETL to real-time streaming, with data quality, governance, and observability built in.",
+  "basic": "$5,000/mo/month",
+  "pro": "$12,000/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "IT Data Engineering & Pipeline Development - Zion Tech Group",
+    "description": "Build scalable data pipelines and engineering solutions. From batch ETL to real-time streaming, with data quality, governance, and observability built in.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-data-engineering"
+    }
+  },
+  "features": [
+    "Batch and real-time ETL/ELT pipeline development",
+    "Data quality framework and monitoring",
+    "Data catalog and lineage implementation",
+    "Streaming data with Kafka, Spark, Flink",
+    "Data mesh and domain-oriented architecture"
+  ],
+  "benefits": [
+    "Process data 10x faster with modern pipelines",
+    "Ensure data quality with automated monitoring",
+    "Reduce data infrastructure costs by 35%",
+    "Enable self-service data for all teams"
+  ]
+}

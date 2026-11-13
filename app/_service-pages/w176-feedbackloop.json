@@ -1,0 +1,29 @@
+{
+  "title": "FeedbackLoop — Product Feedback",
+  "description": "Collect, prioritize, and act on product feedback: feature request voting, roadmap communication, and changelog integration. Close the loop with users.",
+  "basic": "$29/mo/month",
+  "pro": "$79/mo/month",
+  "enterprise": "$249/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "FeedbackLoop — Product Feedback - Zion Tech Group",
+    "description": "Collect, prioritize, and act on product feedback: feature request voting, roadmap communication, and changelog integration. Close the loop with users.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w176-feedbackloop"
+    }
+  },
+  "features": [
+    "Feature request collection and voting",
+    "Priority scoring and auto-tagging",
+    "Public roadmap with status updates",
+    "Changelog integration from git/PR",
+    "User segmentation for targeted feedback"
+  ],
+  "benefits": [
+    "Users vote on features they want",
+    "Priority scoring based on demand",
+    "Roadmap transparency builds trust",
+    "Changelog auto-generated from merges"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-event-driven-customer-experience-suite-e1384e07",
+  "breadcrumbTitle": "AI-Powered Event-Driven Customer Experience Suite",
+  "title": "AI-Powered Event-Driven Customer Experience Suite",
+  "description": "Next-generation customer experience platform that delivers event-driven service delivery across all touchpoints.",
+  "basic": "$218/month",
+  "pro": "$548/month",
+  "enterprise": "$1648/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Event-Driven Customer Experience Suite - Zion Tech Group",
+    "description": "Next-generation customer experience platform that delivers event-driven service delivery across all touchpoints.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-event-driven-customer-experience-suite-e1384e07"
+    }
+  },
+  "features": [
+    "Omnichannel support",
+    "Personalization engine",
+    "Sentiment analysis",
+    "Journey mapping"
+  ],
+  "benefits": [
+    "Higher customer satisfaction",
+    "Increased loyalty",
+    "Reduced churn",
+    "Improved CSAT scores"
+  ]
+}

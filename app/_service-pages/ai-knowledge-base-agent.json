@@ -1,0 +1,29 @@
+{
+  "title": "AI Knowledge Base & Knowledge Graph Agent",
+  "description": "Turn your documents, wikis, and internal data into an intelligent, queryable knowledge graph with conversational AI search and automated content synchronization.",
+  "basic": "$149/mo/month",
+  "pro": "$399/mo/month",
+  "enterprise": "$1,299/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Knowledge Base & Knowledge Graph Agent - Zion Tech Group",
+    "description": "Turn your documents, wikis, and internal data into an intelligent, queryable knowledge graph with conversational AI search and automated content synchronization",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-knowledge-base-agent"
+    }
+  },
+  "features": [
+    "Multi-source document ingestion (PDF, DOC, Confluence, Notion)",
+    "Semantic search with natural language queries",
+    "Automated knowledge graph construction",
+    "Answer citation & source linking",
+    "Real-time sync with source systems"
+  ],
+  "benefits": [
+    "Reduce costs with ai knowledge base & knowledge graph agent",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

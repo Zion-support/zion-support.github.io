@@ -1,0 +1,29 @@
+{
+  "title": "Self-Service Analytics Platform",
+  "description": "Self-service analytics for business analysts: semantic layer + named metric layer, NL to SQL, dashboard builder, governance + lineage. No SQL required by end user.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Self-Service Analytics Platform - Zion Tech Group",
+    "description": "Self-service analytics for business analysts: semantic layer + named metric layer, NL to SQL, dashboard builder, governance + lineage. No SQL required by end us",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/self-service-analytics"
+    }
+  },
+  "features": [
+    "Semantic layer — named metrics single source of truth",
+    "NL to SQL per business question",
+    "Dashboard builder (no SQL required)",
+    "Semantic model governance + approval workflow",
+    "Row/column-level security per user/group"
+  ],
+  "benefits": [
+    "Reduce costs with self-service analytics platform",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

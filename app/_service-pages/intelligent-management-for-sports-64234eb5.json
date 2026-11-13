@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-management-for-sports-64234eb5",
+  "breadcrumbTitle": "Intelligent Management for Sports",
+  "title": "Intelligent Management for Sports",
+  "description": "The future of sports is here with Intelligent Management for Sports. Powered by cutting-edge AI, this platform delivers workflow management like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Management for Sports - Zion Tech Group",
+    "description": "The future of sports is here with Intelligent Management for Sports. Powered by cutting-edge AI, this platform delivers workflow management like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-management-for-sports-64234eb5"
+    }
+  },
+  "features": [
+    "Offline capabilities",
+    "Alerting system",
+    "Real-time processing",
+    "Auto-scaling capabilities",
+    "Plugin architecture"
+  ],
+  "benefits": [
+    "Automated compliance reporting",
+    "Real-time insights and alerts",
+    "Cost optimization recommendations"
+  ]
+}

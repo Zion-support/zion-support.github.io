@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-manager---education-edition-1-ace6bf5f",
+  "breadcrumbTitle": "AI Manager - Education Edition #1",
+  "title": "AI Manager - Education Edition #1",
+  "description": "Transform your education operations with our AI Manager - Education Edition #1. This AI-driven solution automates process automation with unprecedented accuracy",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Manager - Education Edition #1 - Zion Tech Group",
+    "description": "Transform your education operations with our AI Manager - Education Edition #1. This AI-driven solution automates process automation with unprecedented accuracy",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-manager---education-edition-1-ace6bf5f"
+    }
+  },
+  "features": [
+    "HIPAA ready",
+    "Plugin architecture",
+    "Microservices deployment",
+    "Zero-downtime updates",
+    "Rollback mechanisms"
+  ],
+  "benefits": [
+    "Intelligent load balancing",
+    "3x faster decision making",
+    "Automated compliance reporting"
+  ]
+}

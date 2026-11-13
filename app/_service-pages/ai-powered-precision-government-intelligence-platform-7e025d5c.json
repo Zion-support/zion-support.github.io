@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-precision-government-intelligence-platform-7e025d5c",
+  "breadcrumbTitle": "AI-Powered Precision Government Intelligence Platform",
+  "title": "AI-Powered Precision Government Intelligence Platform",
+  "description": "AI-driven intelligence platform that delivers precision insights and automated decision-making for government operations.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Precision Government Intelligence Platform - Zion Tech Group",
+    "description": "AI-driven intelligence platform that delivers precision insights and automated decision-making for government operations.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-precision-government-intelligence-platform-7e025d5c"
+    }
+  },
+  "features": [
+    "Real-time intelligence",
+    "Automated insights",
+    "Predictive alerts",
+    "API integration"
+  ],
+  "benefits": [
+    "Real-time actionable insights",
+    "Automated decision-making",
+    "Reduced latency",
+    "Improved accuracy"
+  ]
+}

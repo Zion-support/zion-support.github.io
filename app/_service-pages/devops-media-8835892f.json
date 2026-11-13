@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/devops-media-8835892f",
+  "breadcrumbTitle": "DevOps & Automation for Media",
+  "title": "DevOps & Automation for Media",
+  "description": "DevOps and automation for Media teams. CI/CD, infrastructure as code, and observability to ship faster and safer.",
+  "basic": "$299/month",
+  "pro": "$799/month",
+  "enterprise": "$2499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "DevOps & Automation for Media - Zion Tech Group",
+    "description": "DevOps and automation for Media teams. CI/CD, infrastructure as code, and observability to ship faster and safer.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/devops-media-8835892f"
+    }
+  },
+  "features": [
+    "CI/CD pipeline setup",
+    "Infrastructure as code (Terraform/CloudFormation)",
+    "Container orchestration (Kubernetes)",
+    "Monitoring and alerting",
+    "Release automation"
+  ],
+  "benefits": [
+    "Shorter release cycles",
+    "Reduced manual errors",
+    "Higher deployment frequency",
+    "Improved reliability",
+    "Faster incident resolution"
+  ]
+}

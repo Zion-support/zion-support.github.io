@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-system---automotive-edition-6-4f407d90",
+  "breadcrumbTitle": "AI System - Automotive Edition #6",
+  "title": "AI System - Automotive Edition #6",
+  "description": "The future of automotive is here with AI System - Automotive Edition #6. Powered by cutting-edge AI, this platform delivers document processing like never befor",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI System - Automotive Edition #6 - Zion Tech Group",
+    "description": "The future of automotive is here with AI System - Automotive Edition #6. Powered by cutting-edge AI, this platform delivers document processing like never befor",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-system---automotive-edition-6-4f407d90"
+    }
+  },
+  "features": [
+    "API-first design",
+    "Alerting system",
+    "Auto-scaling capabilities",
+    "GDPR compliance",
+    "Plugin architecture"
+  ],
+  "benefits": [
+    "Scalable to millions of transactions",
+    "Zero manual intervention required",
+    "ROI in under 90 days",
+    "Cost optimization recommendations"
+  ]
+}

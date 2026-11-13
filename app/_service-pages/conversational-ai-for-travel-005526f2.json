@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/conversational-ai-for-travel-005526f2",
+  "breadcrumbTitle": "Conversational AI for Travel",
+  "title": "Conversational AI for Travel",
+  "description": "Natural language processing system that handles travel inquiries through intelligent chatbots.",
+  "basic": "$179/month",
+  "pro": "$449/month",
+  "enterprise": "$1349/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Conversational AI for Travel - Zion Tech Group",
+    "description": "Natural language processing system that handles travel inquiries through intelligent chatbots.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/conversational-ai-for-travel-005526f2"
+    }
+  },
+  "features": [
+    "Natural language understanding",
+    "Multi-language support",
+    "Context awareness",
+    "Seamless handoff"
+  ],
+  "benefits": [
+    "24/7 availability",
+    "Instant response times",
+    "Consistent service quality",
+    "Reduced support costs"
+  ]
+}

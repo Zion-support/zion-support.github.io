@@ -1,0 +1,29 @@
+{
+  "title": "AI Crop Disease Detector",
+  "description": "Detect crop diseases from smartphone photos: 200+ disease types, treatment recommendations, outbreak prediction. Offline mode.",
+  "basic": "$49/mo/month",
+  "pro": "$149/mo/month",
+  "enterprise": "$499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Crop Disease Detector - Zion Tech Group",
+    "description": "Detect crop diseases from smartphone photos: 200+ disease types, treatment recommendations, outbreak prediction. Offline mode.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w177-ai-crop-disease"
+    }
+  },
+  "features": [
+    "200+ crop disease identification",
+    "Treatment and prevention recommendations",
+    "Outbreak prediction and spread modeling",
+    "Offline mobile inference",
+    "Weather and soil condition integration"
+  ],
+  "benefits": [
+    "Detect diseases early from a photo",
+    "Treatment recommendations by disease",
+    "Outbreak prediction prevents spread",
+    "Offline mode works anywhere"
+  ]
+}

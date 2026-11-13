@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-real-time-risk-assessment-cde7dadf",
+  "breadcrumbTitle": "AI-Powered Real-Time Risk Assessment",
+  "title": "AI-Powered Real-Time Risk Assessment",
+  "description": "Advanced risk analytics platform that provides real-time credit scoring, fraud detection, and portfolio risk analysis using machine learning and alternative dat",
+  "basic": "$298/month",
+  "pro": "$748/month",
+  "enterprise": "$2248/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI-Powered Real-Time Risk Assessment - Zion Tech Group",
+    "description": "Advanced risk analytics platform that provides real-time credit scoring, fraud detection, and portfolio risk analysis using machine learning and alternative dat",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-real-time-risk-assessment-cde7dadf"
+    }
+  },
+  "features": [
+    "Credit scoring",
+    "Fraud detection",
+    "Portfolio risk",
+    "Regulatory reporting"
+  ],
+  "benefits": [
+    "Reduced defaults",
+    "Faster decisions",
+    "Lower fraud losses",
+    "Compliance automation"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-system---real-estate-edition-2-1b59cd02",
+  "breadcrumbTitle": "AI System - Real-Estate Edition #2",
+  "title": "AI System - Real-Estate Edition #2",
+  "description": "Transform your real-estate operations with our AI System - Real-Estate Edition #2. This AI-driven solution automates resource optimization with unprecedented ac",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI System - Real-Estate Edition #2 - Zion Tech Group",
+    "description": "Transform your real-estate operations with our AI System - Real-Estate Edition #2. This AI-driven solution automates resource optimization with unprecedented ac",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-system---real-estate-edition-2-1b59cd02"
+    }
+  },
+  "features": [
+    "SOC 2 certified",
+    "Cloud-native architecture",
+    "GDPR compliance",
+    "Microservices deployment"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "3x faster decision making",
+    "Predictive maintenance scheduling",
+    "Intelligent load balancing"
+  ]
+}

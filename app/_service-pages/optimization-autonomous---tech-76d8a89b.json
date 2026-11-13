@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/optimization-autonomous---tech-76d8a89b",
+  "breadcrumbTitle": "Optimization Autonomous - Tech",
+  "title": "Optimization Autonomous - Tech",
+  "description": "Revolutionize technology through intelligent automation. Our Optimization Autonomous - Tech leverages advanced machine learning to deliver user experience at sc",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Optimization Autonomous - Tech - Zion Tech Group",
+    "description": "Revolutionize technology through intelligent automation. Our Optimization Autonomous - Tech leverages advanced machine learning to deliver user experience at sc",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/optimization-autonomous---tech-76d8a89b"
+    }
+  },
+  "features": [
+    "Edge computing support",
+    "API-first design",
+    "Machine learning integration",
+    "Performance dashboards",
+    "GDPR compliance"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Scalable to millions of transactions",
+    "Real-time insights and alerts"
+  ]
+}

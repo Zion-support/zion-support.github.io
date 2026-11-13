@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/smart-director-telecom-4e098d58",
+  "breadcrumbTitle": "Smart director-telecom",
+  "title": "Smart director-telecom",
+  "description": "The future of telecom is here with Smart director-telecom. Powered by cutting-edge AI, this platform delivers sales forecasting like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart director-telecom - Zion Tech Group",
+    "description": "The future of telecom is here with Smart director-telecom. Powered by cutting-edge AI, this platform delivers sales forecasting like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-director-telecom-4e098d58"
+    }
+  },
+  "features": [
+    "Offline capabilities",
+    "HIPAA ready",
+    "Open-source friendly",
+    "Microservices deployment",
+    "Audit trails"
+  ],
+  "benefits": [
+    "Scalable to millions of transactions",
+    "24/7 automated operations",
+    "Automated compliance reporting"
+  ]
+}

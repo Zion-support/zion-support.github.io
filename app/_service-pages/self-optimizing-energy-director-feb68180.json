@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/self-optimizing-energy-director-feb68180",
+  "breadcrumbTitle": "Self-Optimizing Energy Director",
+  "title": "Self-Optimizing Energy Director",
+  "description": "Unlock unprecedented growth with Self-Optimizing Energy Director. This autonomous system provides financial planning with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Self-Optimizing Energy Director - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Self-Optimizing Energy Director. This autonomous system provides financial planning with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/self-optimizing-energy-director-feb68180"
+    }
+  },
+  "features": [
+    "GDPR compliance",
+    "API-first design",
+    "Alerting system",
+    "HIPAA ready"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "Enterprise-grade security",
+    "Seamless integration with existing systems"
+  ]
+}

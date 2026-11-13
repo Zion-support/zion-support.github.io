@@ -1,0 +1,28 @@
+{
+  "title": "Event-Driven Architecture (EDA) Platform",
+  "description": "Design and implement event-driven microservices: Apache Kafka or Pulsar event mesh, schema registry, CQRS plus event sourcing patterns, exactly-once delivery, and replay and replay-sanitise pipelines.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Event-Driven Architecture (EDA) Platform - Zion Tech Group",
+    "description": "Design and implement event-driven microservices: Apache Kafka or Pulsar event mesh, schema registry, CQRS plus event sourcing patterns, exactly-once delivery, a",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/event-driven-architecture"
+    }
+  },
+  "features": [
+    "Intelligent automation and orchestration",
+    "Enterprise-grade integration",
+    "Real-time monitoring and alerts",
+    "Scalable multi-tenant architecture"
+  ],
+  "benefits": [
+    "Reduce costs with event-driven architecture (eda) platform",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-agile-proptech-analytics-3c091a99",
+  "breadcrumbTitle": "AI-Powered Agile Proptech Analytics",
+  "title": "AI-Powered Agile Proptech Analytics",
+  "description": "AI-driven analytics platform that delivers agile insights into proptech operations, providing real-time monitoring, predictive modeling, and automated reporting",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Agile Proptech Analytics - Zion Tech Group",
+    "description": "AI-driven analytics platform that delivers agile insights into proptech operations, providing real-time monitoring, predictive modeling, and automated reporting",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-agile-proptech-analytics-3c091a99"
+    }
+  },
+  "features": [
+    "Real-time monitoring",
+    "Predictive modeling",
+    "Automated reporting",
+    "Custom dashboards"
+  ],
+  "benefits": [
+    "Data-driven decision making",
+    "Improved operational efficiency",
+    "Proactive issue detection",
+    "Enhanced KPI tracking"
+  ]
+}

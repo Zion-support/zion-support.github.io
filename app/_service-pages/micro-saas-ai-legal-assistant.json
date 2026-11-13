@@ -1,0 +1,29 @@
+{
+  "title": "Micro-SaaS AI Legal Assistant for SMBs",
+  "description": "AI legal assistant that drafts contracts, reviews NDAs, generates privacy policies, and answers legal questions. Not a replacement for lawyers — a force multiplier for small businesses.",
+  "basic": "$79/mo/month",
+  "pro": "$199/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Micro-SaaS AI Legal Assistant for SMBs - Zion Tech Group",
+    "description": "AI legal assistant that drafts contracts, reviews NDAs, generates privacy policies, and answers legal questions. Not a replacement for lawyers — a force multipl",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-ai-legal-assistant"
+    }
+  },
+  "features": [
+    "Contract drafting from templates + AI customization",
+    "NDA review with risk flagging and redlines",
+    "Privacy policy and terms of service generator",
+    "Legal Q&A chatbot trained on US business law",
+    "Document comparison (original vs modified)"
+  ],
+  "benefits": [
+    "Save $10K+/year on routine legal work",
+    "Draft contracts in minutes not days",
+    "Catch risky clauses before signing",
+    "Always up-to-date with current regulations"
+  ]
+}

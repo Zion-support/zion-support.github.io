@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/optimization-smart---agriculture-c4d214f5",
+  "breadcrumbTitle": "Optimization Smart - Agriculture",
+  "title": "Optimization Smart - Agriculture",
+  "description": "Transform your agriculture operations with our Optimization Smart - Agriculture. This AI-driven solution automates process automation with unprecedented accurac",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Optimization Smart - Agriculture - Zion Tech Group",
+    "description": "Transform your agriculture operations with our Optimization Smart - Agriculture. This AI-driven solution automates process automation with unprecedented accurac",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/optimization-smart---agriculture-c4d214f5"
+    }
+  },
+  "features": [
+    "Machine learning integration",
+    "SOC 2 certified",
+    "Open-source friendly",
+    "Microservices deployment"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "Performance benchmarking",
+    "Self-healing infrastructure"
+  ]
+}

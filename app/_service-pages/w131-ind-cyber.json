@@ -1,0 +1,30 @@
+{
+  "title": "Cybersecurity Operations Center (SOC)",
+  "description": "AI-powered 24/7 security operations center. Threat detection, incident response, vulnerability management, and compliance monitoring with human-in-the-loop.",
+  "basic": "$N/A/month",
+  "pro": "$24997/month",
+  "enterprise": "$59997/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Cybersecurity Operations Center (SOC) - Zion Tech Group",
+    "description": "AI-powered 24/7 security operations center. Threat detection, incident response, vulnerability management, and compliance monitoring with human-in-the-loop.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w131-ind-cyber"
+    }
+  },
+  "features": [
+    "24/7 threat monitoring",
+    "AI threat detection",
+    "Incident response",
+    "Vulnerability management",
+    "SIEM/SOAR integration"
+  ],
+  "benefits": [
+    "75% faster threat detection",
+    "24/7 expert monitoring",
+    "Automated incident response",
+    "Compliance-ready",
+    "Reduce breach risk by 85%"
+  ]
+}

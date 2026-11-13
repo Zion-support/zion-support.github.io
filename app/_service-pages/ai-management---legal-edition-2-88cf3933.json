@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-management---legal-edition-2-88cf3933",
+  "breadcrumbTitle": "AI Management - Legal Edition #2",
+  "title": "AI Management - Legal Edition #2",
+  "description": "Transform your legal operations with our AI Management - Legal Edition #2. This AI-driven solution automates data processing with unprecedented accuracy and eff",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Management - Legal Edition #2 - Zion Tech Group",
+    "description": "Transform your legal operations with our AI Management - Legal Edition #2. This AI-driven solution automates data processing with unprecedented accuracy and eff",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-management---legal-edition-2-88cf3933"
+    }
+  },
+  "features": [
+    "SOC 2 certified",
+    "Offline capabilities",
+    "Container orchestration",
+    "Edge computing support"
+  ],
+  "benefits": [
+    "Dynamic resource allocation",
+    "Zero manual intervention required",
+    "Enterprise-grade security",
+    "ROI in under 90 days"
+  ]
+}

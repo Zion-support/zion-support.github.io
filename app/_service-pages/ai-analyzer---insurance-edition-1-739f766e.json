@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-analyzer---insurance-edition-1-739f766e",
+  "breadcrumbTitle": "AI Analyzer - Insurance Edition #1",
+  "title": "AI Analyzer - Insurance Edition #1",
+  "description": "Transform your insurance operations with our AI Analyzer - Insurance Edition #1. This AI-driven solution automates quality control with unprecedented accuracy a",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Analyzer - Insurance Edition #1 - Zion Tech Group",
+    "description": "Transform your insurance operations with our AI Analyzer - Insurance Edition #1. This AI-driven solution automates quality control with unprecedented accuracy a",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-analyzer---insurance-edition-1-739f766e"
+    }
+  },
+  "features": [
+    "Custom integrations",
+    "Offline capabilities",
+    "Container orchestration",
+    "Microservices deployment",
+    "Alerting system"
+  ],
+  "benefits": [
+    "Performance benchmarking",
+    "Zero manual intervention required",
+    "Seamless integration with existing systems"
+  ]
+}

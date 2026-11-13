@@ -1,0 +1,29 @@
+{
+  "title": "SIEM Security Platform",
+  "description": "Cloud-native SIEM with real-time event correlation, MITRE ATT&CK tracking, UEBA behavioral baselines, and automated incident ticketing for SOC teams.",
+  "basic": "$999/mo/month",
+  "pro": "$2,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "SIEM Security Platform - Zion Tech Group",
+    "description": "Cloud-native SIEM with real-time event correlation, MITRE ATT&CK tracking, UEBA behavioral baselines, and automated incident ticketing for SOC teams.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/siem-security-platform"
+    }
+  },
+  "features": [
+    "Real-time log correlation",
+    "MITRE ATT&CK grid view",
+    "UEBA - user behavior analytics",
+    "Automated incident tickets",
+    "Compliance dashboards"
+  ],
+  "benefits": [
+    "Reduce costs with siem security platform",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

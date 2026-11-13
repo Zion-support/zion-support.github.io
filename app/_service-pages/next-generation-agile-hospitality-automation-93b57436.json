@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/next-generation-agile-hospitality-automation-93b57436",
+  "breadcrumbTitle": "Next-Generation Agile Hospitality Automation",
+  "title": "Next-Generation Agile Hospitality Automation",
+  "description": "Next-generation automation suite that streamlines agile hospitality workflows with intelligent orchestration.",
+  "basic": "$218/month",
+  "pro": "$548/month",
+  "enterprise": "$1648/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Next-Generation Agile Hospitality Automation - Zion Tech Group",
+    "description": "Next-generation automation suite that streamlines agile hospitality workflows with intelligent orchestration.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/next-generation-agile-hospitality-automation-93b57436"
+    }
+  },
+  "features": [
+    "Smart orchestration",
+    "Process automation",
+    "Event processing",
+    "Task scheduling"
+  ],
+  "benefits": [
+    "Faster execution",
+    "Reduced manual steps",
+    "Scalable processes",
+    "Error reduction"
+  ]
+}

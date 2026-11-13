@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "AI BDR SDR: common mistakes | Zion Tech Group",
+    "description": "AI BDR SDR: common mistakes",
+    "keywords": [
+      "automation",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "AI BDR SDR: common mistakes",
+      "description": "AI BDR SDR: common mistakes",
+      "url": "https://ziontechgroup.com/blog/ai-bdr-sdr-common-mistakes/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/ai-bdr-sdr-common-mistakes/"
+    }
+  },
+  "values": [
+    "AI BDR SDR: common mistakes",
+    "AI BDR SDR: common mistakes",
+    "AI BDR SDR: common mistakes",
+    "Outcomes to measure",
+    "Leading indicators for ai bdr sdr: common mistakes: workflow completion rate, escalation rate, time-to-resolution, and user satisfaction. Lagging indicators: revenue trend, cost trend, customer retention, and operational efficiency. Track both leading and lagging indicators so you can explain progress to leadership before financial results appear. Use a rolling 90-day window and re-baseline monthly; this keeps the program accountable without demanding perfection on day one. Publish metrics in a shared dashboard so the whole team sees progress, not just the program sponsor.",
+    "Outcomes to measure",
+    " Leading indicators for ai bdr sdr: common mistakes: workflow completion rate, escalation rate, time-to-resolution, and user satisfaction. Lagging indicators: revenue trend, cost trend, customer retention, and operational efficiency. Track both leading and lagging indicators so you can explain progress to leadership before financial results appear. Use a rolling 90-day window and re-baseline monthly; this keeps the program accountable without demanding perfection on day one. Publish metrics in a shared dashboard so the whole team sees progress, not just the program sponsor.",
+    "/blog/micro-saas-ai-hr-recruitment-2026-6645",
+    "Micro Saas Ai Hr Recruitment 2026 6645",
+    "/blog/container-security-lifecycle-deployment-patterns",
+    "Container Security Lifecycle Deployment Patterns",
+    "/blog/ai-api-gateway-architecture-overview",
+    "Ai Api Gateway Architecture Overview",
+    "/blog/cybersecurity-for-msps-policy-and-compliance",
+    "Cybersecurity For Msps Policy And Compliance"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "AI BDR SDR: common mistakes",
+    "description": "AI BDR SDR: common mistakes",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T08:12:16Z",
+    "dateModified": "2026-08-07T08:12:16Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/ai-bdr-sdr-common-mistakes/"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/cognitive-modular-retail-decision-engine-176dcc15",
+  "breadcrumbTitle": "Cognitive Modular Retail Decision Engine",
+  "title": "Cognitive Modular Retail Decision Engine",
+  "description": "Cognitive decision engine that processes modular signals to drive retail strategy with deep learning.",
+  "basic": "$278/month",
+  "pro": "$698/month",
+  "enterprise": "$2098/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Cognitive Modular Retail Decision Engine - Zion Tech Group",
+    "description": "Cognitive decision engine that processes modular signals to drive retail strategy with deep learning.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cognitive-modular-retail-decision-engine-176dcc15"
+    }
+  },
+  "features": [
+    "Cognitive reasoning",
+    "Scenario analysis",
+    "Decision trees",
+    "Recommendation engine"
+  ],
+  "benefits": [
+    "Better decision quality",
+    "Reduced risk",
+    "Faster insights",
+    "Competitive intelligence"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/ai-powered-suite-healthcare-9d78b5bc",
+  "breadcrumbTitle": "AI-Powered suite-healthcare",
+  "title": "AI-Powered suite-healthcare",
+  "description": "The future of healthcare is here with AI-Powered suite-healthcare. Powered by cutting-edge AI, this platform delivers image recognition like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered suite-healthcare - Zion Tech Group",
+    "description": "The future of healthcare is here with AI-Powered suite-healthcare. Powered by cutting-edge AI, this platform delivers image recognition like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-suite-healthcare-9d78b5bc"
+    }
+  },
+  "features": [
+    "Performance dashboards",
+    "Audit trails",
+    "HIPAA ready",
+    "Alerting system",
+    "Real-time processing"
+  ],
+  "benefits": [
+    "Seamless integration with existing systems",
+    "Zero manual intervention required",
+    "3x faster decision making",
+    "Performance benchmarking",
+    "Scalable to millions of transactions"
+  ]
+}

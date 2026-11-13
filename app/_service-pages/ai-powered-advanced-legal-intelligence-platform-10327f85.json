@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-advanced-legal-intelligence-platform-10327f85",
+  "breadcrumbTitle": "AI-Powered Advanced Legal Intelligence Platform",
+  "title": "AI-Powered Advanced Legal Intelligence Platform",
+  "description": "AI-driven intelligence platform that delivers advanced insights and automated decision-making for legal operations.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Advanced Legal Intelligence Platform - Zion Tech Group",
+    "description": "AI-driven intelligence platform that delivers advanced insights and automated decision-making for legal operations.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-advanced-legal-intelligence-platform-10327f85"
+    }
+  },
+  "features": [
+    "Real-time intelligence",
+    "Automated insights",
+    "Predictive alerts",
+    "API integration"
+  ],
+  "benefits": [
+    "Real-time actionable insights",
+    "Automated decision-making",
+    "Reduced latency",
+    "Improved accuracy"
+  ]
+}

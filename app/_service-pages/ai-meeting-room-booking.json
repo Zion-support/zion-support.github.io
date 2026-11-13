@@ -1,0 +1,29 @@
+{
+  "title": "AI Smart Meeting Room Booking",
+  "description": "AI-powered meeting room optimization with automatic room selection based on attendee count, equipment needs, and calendar analysis.",
+  "basic": "$199/mo/month",
+  "pro": "$599/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Smart Meeting Room Booking - Zion Tech Group",
+    "description": "AI-powered meeting room optimization with automatic room selection based on attendee count, equipment needs, and calendar analysis.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-meeting-room-booking"
+    }
+  },
+  "features": [
+    "Auto room selection by requirements",
+    "Conflict detection and resolution",
+    "Equipment matching",
+    "Automatic release of unused rooms",
+    "Calendar integration"
+  ],
+  "benefits": [
+    "Eliminate meeting room conflicts",
+    "Increase room utilization by 35%",
+    "Reduce phantom bookings",
+    "Optimize space planning"
+  ]
+}

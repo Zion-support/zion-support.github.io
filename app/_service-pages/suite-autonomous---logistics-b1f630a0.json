@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/suite-autonomous---logistics-b1f630a0",
+  "breadcrumbTitle": "Suite Autonomous - Logistics",
+  "title": "Suite Autonomous - Logistics",
+  "description": "Transform your logistics operations with our Suite Autonomous - Logistics. This AI-driven solution automates resource optimization with unprecedented accuracy a",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Suite Autonomous - Logistics - Zion Tech Group",
+    "description": "Transform your logistics operations with our Suite Autonomous - Logistics. This AI-driven solution automates resource optimization with unprecedented accuracy a",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/suite-autonomous---logistics-b1f630a0"
+    }
+  },
+  "features": [
+    "Edge computing support",
+    "Rollback mechanisms",
+    "Zero-downtime updates",
+    "Microservices deployment",
+    "Mobile-responsive interface"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "Seamless integration with existing systems",
+    "Automated compliance reporting"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "Multi-Cloud Observability Platform",
+  "description": "Unified observability across AWS, Azure, and GCP with OpenTelemetry. Single pane for metrics, traces, and logs regardless of cloud provider.",
+  "basic": "$599/mo/month",
+  "pro": "$1,799/mo/month",
+  "enterprise": "$5,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Multi-Cloud Observability Platform - Zion Tech Group",
+    "description": "Unified observability across AWS, Azure, and GCP with OpenTelemetry. Single pane for metrics, traces, and logs regardless of cloud provider.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w174-multi-cloud-observability"
+    }
+  },
+  "features": [
+    "Unified dashboard across AWS, Azure, GCP",
+    "OpenTelemetry-native collection",
+    "Cross-cloud trace correlation",
+    "Multi-cloud cost and performance comparison",
+    "Cloud-agnostic alerting"
+  ],
+  "benefits": [
+    "One dashboard for all clouds",
+    "Cross-cloud correlation for multi-cloud issues",
+    "OTel standard prevents vendor lock-in",
+    "Cost comparison drives optimization"
+  ]
+}

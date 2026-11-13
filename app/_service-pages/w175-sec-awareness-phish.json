@@ -1,0 +1,29 @@
+{
+  "title": "Security Awareness & Phish Simulation",
+  "description": "Phish simulation campaigns with training modules, risk scoring, and compliance reporting. Reduce phishing susceptibility by 85% with continuous training.",
+  "basic": "$3/user/mo/month",
+  "pro": "$6/user/mo/month",
+  "enterprise": "$12/user/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Security Awareness & Phish Simulation - Zion Tech Group",
+    "description": "Phish simulation campaigns with training modules, risk scoring, and compliance reporting. Reduce phishing susceptibility by 85% with continuous training.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w175-sec-awareness-phish"
+    }
+  },
+  "features": [
+    "Phish simulation campaigns (email, SMS, voice)",
+    "Interactive training modules and quizzes",
+    "Employee and department risk scoring",
+    "Automated remedial training triggers",
+    "LMS-compatible content (SCORM)"
+  ],
+  "benefits": [
+    "Reduce phishing susceptibility by 85%",
+    "Continuous training, not once-a-year",
+    "Risk scoring identifies high-risk employees",
+    "Compliance reports for auditors"
+  ]
+}

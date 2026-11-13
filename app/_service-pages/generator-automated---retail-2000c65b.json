@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/generator-automated---retail-2000c65b",
+  "breadcrumbTitle": "Generator Automated - Retail",
+  "title": "Generator Automated - Retail",
+  "description": "Unlock unprecedented growth with Generator Automated - Retail. This autonomous system provides quality control with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Generator Automated - Retail - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Generator Automated - Retail. This autonomous system provides quality control with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/generator-automated---retail-2000c65b"
+    }
+  },
+  "features": [
+    "Edge computing support",
+    "Plugin architecture",
+    "Auto-scaling capabilities",
+    "Offline capabilities",
+    "Open-source friendly"
+  ],
+  "benefits": [
+    "24/7 automated operations",
+    "99.9% uptime guarantee",
+    "Cost optimization recommendations",
+    "Zero manual intervention required",
+    "Scalable to millions of transactions"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "Agentic Workflow Orchestrator",
+  "description": "Orchestrate multi-agent AI workflows: DAG of agents with routing, handoff, conditional branches, state persistence, retry logic, human-review gates. LangGraph/Semantic Kernel backend.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Agentic Workflow Orchestrator - Zion Tech Group",
+    "description": "Orchestrate multi-agent AI workflows: DAG of agents with routing, handoff, conditional branches, state persistence, retry logic, human-review gates. LangGraph/S",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/agentic-workflow-orchestrator"
+    }
+  },
+  "features": [
+    "Multi-agent workflow DAG editor (visual + code)",
+    "Agent handoff + state persistence",
+    "Conditional branching + retry policy per step",
+    "Human-review gate per critical node",
+    "Audit trail per agent + cost tracking"
+  ],
+  "benefits": [
+    "Reduce costs with agentic workflow orchestrator",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

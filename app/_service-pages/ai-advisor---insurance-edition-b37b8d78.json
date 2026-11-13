@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-advisor---insurance-edition-b37b8d78",
+  "breadcrumbTitle": "AI Advisor - Insurance Edition",
+  "title": "AI Advisor - Insurance Edition",
+  "description": "Revolutionize insurance through intelligent automation. Our AI Advisor - Insurance Edition leverages advanced machine learning to deliver language processing at",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Advisor - Insurance Edition - Zion Tech Group",
+    "description": "Revolutionize insurance through intelligent automation. Our AI Advisor - Insurance Edition leverages advanced machine learning to deliver language processing at",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-advisor---insurance-edition-b37b8d78"
+    }
+  },
+  "features": [
+    "Offline capabilities",
+    "Serverless functions",
+    "Open-source friendly",
+    "Plugin architecture"
+  ],
+  "benefits": [
+    "50% reduction in operational costs",
+    "99.9% uptime guarantee",
+    "Performance benchmarking",
+    "Real-time insights and alerts"
+  ]
+}

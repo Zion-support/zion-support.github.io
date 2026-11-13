@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/ai-coordinator---hospitality-edition-4975be3d",
+  "breadcrumbTitle": "AI Coordinator - Hospitality Edition",
+  "title": "AI Coordinator - Hospitality Edition",
+  "description": "Revolutionize hospitality through intelligent automation. Our AI Coordinator - Hospitality Edition leverages advanced machine learning to deliver code optimizat",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Coordinator - Hospitality Edition - Zion Tech Group",
+    "description": "Revolutionize hospitality through intelligent automation. Our AI Coordinator - Hospitality Edition leverages advanced machine learning to deliver code optimizat",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-coordinator---hospitality-edition-4975be3d"
+    }
+  },
+  "features": [
+    "Multi-region deployment",
+    "Microservices deployment",
+    "Open-source friendly",
+    "Rollback mechanisms",
+    "Cloud-native architecture"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "ROI in under 90 days",
+    "Enterprise-grade security",
+    "Zero manual intervention required",
+    "3x faster decision making"
+  ]
+}

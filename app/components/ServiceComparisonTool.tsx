@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { allServices } from '../data/servicesData';
+import { allServices } from '../data/servicesClientData';
 
 interface ComparisonResult {
   winner: string;

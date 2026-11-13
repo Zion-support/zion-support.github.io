@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligent-energy-processor-772e5d37",
+  "breadcrumbTitle": "Intelligent Energy Processor",
+  "title": "Intelligent Energy Processor",
+  "description": "Next-generation manufacturing solution: Intelligent Energy Processor. Combines resource optimization with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Energy Processor - Zion Tech Group",
+    "description": "Next-generation manufacturing solution: Intelligent Energy Processor. Combines resource optimization with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-energy-processor-772e5d37"
+    }
+  },
+  "features": [
+    "Multi-language support",
+    "Performance dashboards",
+    "Edge computing support",
+    "Audit trails",
+    "Data encryption"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "Performance benchmarking",
+    "Zero manual intervention required",
+    "Enterprise-grade security"
+  ]
+}

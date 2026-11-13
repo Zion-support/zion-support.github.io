@@ -1,0 +1,29 @@
+{
+  "title": "Compliance and Audit Tracker",
+  "description": "Automated compliance tracking for SOC 2, HIPAA, GDPR with evidence collection.",
+  "basic": "$599/mo/month",
+  "pro": "$1,799/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Compliance and Audit Tracker - Zion Tech Group",
+    "description": "Automated compliance tracking for SOC 2, HIPAA, GDPR with evidence collection.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-compliance-tracker"
+    }
+  },
+  "features": [
+    "Compliance tracking",
+    "Evidence collection",
+    "Audit trails",
+    "Real-time scoring",
+    "Policy management"
+  ],
+  "benefits": [
+    "80% audit prep saved",
+    "Real-time compliance",
+    "Always audit-ready",
+    "Multi-framework"
+  ]
+}

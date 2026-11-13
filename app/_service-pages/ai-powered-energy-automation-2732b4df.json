@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-powered-energy-automation-2732b4df",
+  "breadcrumbTitle": "AI-Powered Energy Automation",
+  "title": "AI-Powered Energy Automation",
+  "description": "Next-generation hospitality solution: AI-Powered Energy Automation. Combines security monitoring with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Energy Automation - Zion Tech Group",
+    "description": "Next-generation hospitality solution: AI-Powered Energy Automation. Combines security monitoring with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-energy-automation-2732b4df"
+    }
+  },
+  "features": [
+    "Open-source friendly",
+    "Container orchestration",
+    "Audit trails",
+    "Data encryption"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "50% reduction in operational costs",
+    "Dynamic resource allocation",
+    "ROI in under 90 days",
+    "Real-time insights and alerts"
+  ]
+}

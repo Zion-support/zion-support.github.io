@@ -1,0 +1,29 @@
+{
+  "title": "Incident Response & Security Operations Center",
+  "description": "24/7 SOC and incident response - threat detection, investigation, containment, recovery with automated playbooks and forensics.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Incident Response & Security Operations Center - Zion Tech Group",
+    "description": "24/7 SOC and incident response - threat detection, investigation, containment, recovery with automated playbooks and forensics.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-incident-response"
+    }
+  },
+  "features": [
+    "24/7 monitoring",
+    "Auto detection and classification",
+    "Response playbook automation",
+    "Digital forensics",
+    "Executive reporting"
+  ],
+  "benefits": [
+    "Reduce costs with incident response & security operations center",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

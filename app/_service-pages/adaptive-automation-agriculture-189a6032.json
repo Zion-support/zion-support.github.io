@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/adaptive-automation-agriculture-189a6032",
+  "breadcrumbTitle": "Adaptive automation-agriculture",
+  "title": "Adaptive automation-agriculture",
+  "description": "Next-generation agriculture solution: Adaptive automation-agriculture. Combines supply chain with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Adaptive automation-agriculture - Zion Tech Group",
+    "description": "Next-generation agriculture solution: Adaptive automation-agriculture. Combines supply chain with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/adaptive-automation-agriculture-189a6032"
+    }
+  },
+  "features": [
+    "SOC 2 certified",
+    "GDPR compliance",
+    "API-first design",
+    "Open-source friendly",
+    "Rollback mechanisms"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "ROI in under 90 days",
+    "Dynamic resource allocation",
+    "Seamless integration with existing systems"
+  ]
+}

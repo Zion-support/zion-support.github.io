@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/next-generation-cloud-native-supply-chain-automation-3e6bd6dc",
+  "breadcrumbTitle": "Next-Generation Cloud-Native Supply Chain Automation",
+  "title": "Next-Generation Cloud-Native Supply Chain Automation",
+  "description": "Next-generation automation suite that streamlines cloud-native supply chain workflows with intelligent orchestration.",
+  "basic": "$218/month",
+  "pro": "$548/month",
+  "enterprise": "$1648/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Next-Generation Cloud-Native Supply Chain Automation - Zion Tech Group",
+    "description": "Next-generation automation suite that streamlines cloud-native supply chain workflows with intelligent orchestration.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/next-generation-cloud-native-supply-chain-automation-3e6bd6dc"
+    }
+  },
+  "features": [
+    "Smart orchestration",
+    "Process automation",
+    "Event processing",
+    "Task scheduling"
+  ],
+  "benefits": [
+    "Faster execution",
+    "Reduced manual steps",
+    "Scalable processes",
+    "Error reduction"
+  ]
+}

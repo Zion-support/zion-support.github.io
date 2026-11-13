@@ -1,0 +1,29 @@
+{
+  "title": "AI Supply Chain Risk Management",
+  "description": "Monitor and mitigate supply chain risks with AI. Supplier risk scoring, disruption prediction, alternative sourcing recommendations, and real-time monitoring.",
+  "basic": "$1,999/mo/month",
+  "pro": "$5,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Supply Chain Risk Management - Zion Tech Group",
+    "description": "Monitor and mitigate supply chain risks with AI. Supplier risk scoring, disruption prediction, alternative sourcing recommendations, and real-time monitoring.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-supply-chain-risk-management"
+    }
+  },
+  "features": [
+    "Supplier risk scoring",
+    "Geopolitical risk monitoring",
+    "Disruption prediction",
+    "Alternative sourcing recommendations",
+    "Financial health monitoring"
+  ],
+  "benefits": [
+    "Predict disruptions weeks in advance",
+    "Diversify supplier base proactively",
+    "Reduce supply chain costs",
+    "Improve resilience"
+  ]
+}

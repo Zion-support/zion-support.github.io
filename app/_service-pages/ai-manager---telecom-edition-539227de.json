@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-manager---telecom-edition-539227de",
+  "breadcrumbTitle": "AI Manager - Telecom Edition",
+  "title": "AI Manager - Telecom Edition",
+  "description": "Transform your telecom operations with our AI Manager - Telecom Edition. This AI-driven solution automates language processing with unprecedented accuracy and e",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Manager - Telecom Edition - Zion Tech Group",
+    "description": "Transform your telecom operations with our AI Manager - Telecom Edition. This AI-driven solution automates language processing with unprecedented accuracy and e",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-manager---telecom-edition-539227de"
+    }
+  },
+  "features": [
+    "Zero-downtime updates",
+    "Real-time processing",
+    "GDPR compliance",
+    "Container orchestration",
+    "Offline capabilities"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "Enterprise-grade security",
+    "99.9% uptime guarantee"
+  ]
+}

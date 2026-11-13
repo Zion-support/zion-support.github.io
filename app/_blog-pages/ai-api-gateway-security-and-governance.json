@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "AI API Gateway: security and governance | Zion Tech Group",
+    "description": "AI API Gateway: security and governance",
+    "keywords": [
+      "security",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "AI API Gateway: security and governance",
+      "description": "AI API Gateway: security and governance",
+      "url": "https://ziontechgroup.com/blog/ai-api-gateway-security-and-governance/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/ai-api-gateway-security-and-governance/"
+    }
+  },
+  "values": [
+    "AI API Gateway: security and governance",
+    "AI API Gateway: security and governance",
+    "AI API Gateway: security and governance",
+    "Conversion path",
+    "If this guide matches your ai api gateway: security and governance initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "Conversion path",
+    " If this guide matches your ai api gateway: security and governance initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "/blog/api-gateway-management-2026-7219",
+    "Api Gateway Management 2026 7219",
+    "/blog/network-infrastructure-implementation-playbook",
+    "Network Infrastructure Implementation Playbook",
+    "/blog/enterprise-backup-dr-2026-6821",
+    "Enterprise Backup Dr 2026 6821",
+    "/blog/autonomous-code-deployment-policy-and-compliance",
+    "Autonomous Code Deployment Policy And Compliance"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "AI API Gateway: security and governance",
+    "description": "AI API Gateway: security and governance",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T05:08:10Z",
+    "dateModified": "2026-08-07T05:08:10Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/ai-api-gateway-security-and-governance/"
+  }
+}

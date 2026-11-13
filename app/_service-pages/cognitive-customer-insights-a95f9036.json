@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/cognitive-customer-insights-a95f9036",
+  "breadcrumbTitle": "Cognitive Customer Insights",
+  "title": "Cognitive Customer Insights",
+  "description": "Next-generation telecom solution: Cognitive Customer Insights. Combines threat detection with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Cognitive Customer Insights - Zion Tech Group",
+    "description": "Next-generation telecom solution: Cognitive Customer Insights. Combines threat detection with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cognitive-customer-insights-a95f9036"
+    }
+  },
+  "features": [
+    "SOC 2 certified",
+    "Mobile-responsive interface",
+    "Real-time processing",
+    "Role-based access control"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "Dynamic resource allocation",
+    "Real-time insights and alerts",
+    "Automated compliance reporting",
+    "3x faster decision making"
+  ]
+}

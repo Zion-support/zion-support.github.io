@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-suite---gaming-edition-2-c0ef85f5",
+  "breadcrumbTitle": "AI Suite - Gaming Edition #2",
+  "title": "AI Suite - Gaming Edition #2",
+  "description": "Next-generation gaming solution: AI Suite - Gaming Edition #2. Combines maintenance scheduling with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Suite - Gaming Edition #2 - Zion Tech Group",
+    "description": "Next-generation gaming solution: AI Suite - Gaming Edition #2. Combines maintenance scheduling with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-suite---gaming-edition-2-c0ef85f5"
+    }
+  },
+  "features": [
+    "Real-time processing",
+    "Plugin architecture",
+    "Multi-region deployment",
+    "Machine learning integration",
+    "HIPAA ready"
+  ],
+  "benefits": [
+    "Seamless integration with existing systems",
+    "Performance benchmarking",
+    "99.9% uptime guarantee",
+    "Reduced human error by 95%"
+  ]
+}

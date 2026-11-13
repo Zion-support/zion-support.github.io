@@ -1,0 +1,29 @@
+{
+  "title": "Feature Engineering Platform",
+  "description": "Feature store as-a-service: feature definition registry, feature pipeline orchestration, online + offline serving, point-in-time correctness, model drift detection.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Feature Engineering Platform - Zion Tech Group",
+    "description": "Feature store as-a-service: feature definition registry, feature pipeline orchestration, online + offline serving, point-in-time correctness, model drift detect",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/feature-engineering-platform"
+    }
+  },
+  "features": [
+    "Feature definition registry per team",
+    "Offline feature compute (dbt/SQL transforms)",
+    "Online feature serving sub-10ms (Feast/Redis)",
+    "Point-in-time correctness validation",
+    "Model drift detect + alert on distribution shift"
+  ],
+  "benefits": [
+    "Reduce costs with feature engineering platform",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

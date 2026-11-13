@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/manager-self-optimizing---insurance-36e8d72c",
+  "breadcrumbTitle": "Manager Self-Optimizing - Insurance",
+  "title": "Manager Self-Optimizing - Insurance",
+  "description": "Revolutionize insurance through intelligent automation. Our Manager Self-Optimizing - Insurance leverages advanced machine learning to deliver financial plannin",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Manager Self-Optimizing - Insurance - Zion Tech Group",
+    "description": "Revolutionize insurance through intelligent automation. Our Manager Self-Optimizing - Insurance leverages advanced machine learning to deliver financial plannin",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/manager-self-optimizing---insurance-36e8d72c"
+    }
+  },
+  "features": [
+    "Zero-downtime updates",
+    "API-first design",
+    "Auto-scaling capabilities",
+    "Role-based access control",
+    "SOC 2 certified"
+  ],
+  "benefits": [
+    "Cost optimization recommendations",
+    "Seamless integration with existing systems",
+    "3x faster decision making",
+    "Automated compliance reporting",
+    "99.9% uptime guarantee"
+  ]
+}

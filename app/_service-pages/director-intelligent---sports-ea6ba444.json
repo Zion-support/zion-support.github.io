@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/director-intelligent---sports-ea6ba444",
+  "breadcrumbTitle": "Director Intelligent - Sports",
+  "title": "Director Intelligent - Sports",
+  "description": "Next-generation sports solution: Director Intelligent - Sports. Combines performance monitoring with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Director Intelligent - Sports - Zion Tech Group",
+    "description": "Next-generation sports solution: Director Intelligent - Sports. Combines performance monitoring with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/director-intelligent---sports-ea6ba444"
+    }
+  },
+  "features": [
+    "Microservices deployment",
+    "Alerting system",
+    "HIPAA ready",
+    "Multi-region deployment",
+    "Serverless functions"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "Automated compliance reporting",
+    "Scalable to millions of transactions"
+  ]
+}

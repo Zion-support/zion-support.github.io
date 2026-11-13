@@ -1,0 +1,29 @@
+{
+  "title": "AI Legal E-Discovery Platform",
+  "description": "AI-powered electronic discovery for legal teams. Document review, privilege detection, and case strategy analytics with predictive coding.",
+  "basic": "$1,499/mo/month",
+  "pro": "$4,499/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Legal E-Discovery Platform - Zion Tech Group",
+    "description": "AI-powered electronic discovery for legal teams. Document review, privilege detection, and case strategy analytics with predictive coding.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-legal-e-discovery"
+    }
+  },
+  "features": [
+    "Predictive coding",
+    "Privilege detection",
+    "Document clustering",
+    "Concept search",
+    "Relevance ranking"
+  ],
+  "benefits": [
+    "Reduce document review time by 80%",
+    "Lower e-discovery costs",
+    "Improve review accuracy",
+    "Scale legal team capacity"
+  ]
+}

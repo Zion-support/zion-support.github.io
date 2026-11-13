@@ -1,0 +1,29 @@
+{
+  "title": "Micro-SAAS AI HR Recruitment Platform",
+  "description": "AI-powered recruitment platform that screens resumes, ranks candidates, schedules interviews, and predicts hiring success.",
+  "basic": "$199/month",
+  "pro": "$599/month",
+  "enterprise": "$1799/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Micro-SAAS AI HR Recruitment Platform - Zion Tech Group",
+    "description": "AI-powered recruitment platform that screens resumes, ranks candidates, schedules interviews, and predicts hiring success.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-ai-hr-recruitment"
+    }
+  },
+  "features": [
+    "AI resume screening",
+    "Candidate ranking",
+    "Interview scheduling",
+    "Predictive hiring analytics",
+    "ATS integration"
+  ],
+  "benefits": [
+    "70% faster time-to-hire",
+    "Better quality hires",
+    "Reduced bias",
+    "Lower recruitment costs"
+  ]
+}

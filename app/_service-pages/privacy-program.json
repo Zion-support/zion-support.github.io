@@ -1,0 +1,29 @@
+{
+  "title": "Privacy Program & Data Governance",
+  "description": "Full privacy program: data mapping, discovery, inventory, classification, consent management, DSAR automation, PIAs, DPO support, regulatory reporting (GDPR/CCPA/PIPEDA/CPC).",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Privacy Program & Data Governance - Zion Tech Group",
+    "description": "Full privacy program: data mapping, discovery, inventory, classification, consent management, DSAR automation, PIAs, DPO support, regulatory reporting (GDPR/CCP",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/privacy-program"
+    }
+  },
+  "features": [
+    "Data mapping + inventory + classification",
+    "Consent management platform (web + mobile)",
+    "DSAR automation (discover/collect/redact/deliver)",
+    "Privacy impact assessment per workflow",
+    "Regulatory privacy report multi-jurisdiction"
+  ],
+  "benefits": [
+    "Reduce costs with privacy program & data governance",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

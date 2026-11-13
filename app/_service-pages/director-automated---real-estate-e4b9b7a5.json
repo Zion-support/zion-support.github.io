@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/director-automated---real-estate-e4b9b7a5",
+  "breadcrumbTitle": "Director Automated - Real-Estate",
+  "title": "Director Automated - Real-Estate",
+  "description": "Unlock unprecedented growth with Director Automated - Real-Estate. This autonomous system provides supply chain with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Director Automated - Real-Estate - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Director Automated - Real-Estate. This autonomous system provides supply chain with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/director-automated---real-estate-e4b9b7a5"
+    }
+  },
+  "features": [
+    "Performance dashboards",
+    "SOC 2 certified",
+    "Plugin architecture",
+    "Mobile-responsive interface",
+    "Multi-language support"
+  ],
+  "benefits": [
+    "Dynamic resource allocation",
+    "Cost optimization recommendations",
+    "Predictive maintenance scheduling",
+    "24/7 automated operations",
+    "99.9% uptime guarantee"
+  ]
+}

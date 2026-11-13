@@ -1,0 +1,29 @@
+{
+  "title": "IT Procurement Automation",
+  "description": "Automate IT procurement: request workflows, vendor comparison, approval chains, and PO generation. Reduce procurement cycle time from weeks to days.",
+  "basic": "$399/mo/month",
+  "pro": "$1,199/mo/month",
+  "enterprise": "$3,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "IT Procurement Automation - Zion Tech Group",
+    "description": "Automate IT procurement: request workflows, vendor comparison, approval chains, and PO generation. Reduce procurement cycle time from weeks to days.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w175-procurement-automation"
+    }
+  },
+  "features": [
+    "Automated procurement request workflows",
+    "Vendor comparison and RFQ management",
+    "Multi-level approval chains",
+    "Purchase order generation and tracking",
+    "Receiving and invoice matching"
+  ],
+  "benefits": [
+    "Reduce procurement cycle time by 70%",
+    "Approval chains ensure governance",
+    "Spend analytics reveal optimization opportunities",
+    "Automated POs eliminate manual work"
+  ]
+}

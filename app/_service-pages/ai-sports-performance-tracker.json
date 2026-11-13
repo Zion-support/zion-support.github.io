@@ -1,0 +1,28 @@
+{
+  "title": "AI Sports Performance & Injury Prevention",
+  "description": "Computer vision sports analytics: biomechanics analysis, injury risk scoring, training load optimization, and opponent scouting reports. Works with any sport.",
+  "basic": "$49/athlete/month",
+  "pro": "$99/athlete/month",
+  "enterprise": "$249/athlete/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Sports Performance & Injury Prevention - Zion Tech Group",
+    "description": "Computer vision sports analytics: biomechanics analysis, injury risk scoring, training load optimization, and opponent scouting reports. Works with any sport.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-sports-performance-tracker"
+    }
+  },
+  "features": [
+    "Biomechanics analysis from video",
+    "Injury risk scoring per athlete",
+    "Training load optimization",
+    "Automated opponent scouting",
+    "Performance trend dashboards"
+  ],
+  "benefits": [
+    "Reduce injuries by 40%",
+    "Optimize training loads",
+    "Gain competitive edge"
+  ]
+}

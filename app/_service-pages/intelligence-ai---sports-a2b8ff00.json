@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligence-ai---sports-a2b8ff00",
+  "breadcrumbTitle": "Intelligence AI - Sports",
+  "title": "Intelligence AI - Sports",
+  "description": "Next-generation sports solution: Intelligence AI - Sports. Combines image recognition with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligence AI - Sports - Zion Tech Group",
+    "description": "Next-generation sports solution: Intelligence AI - Sports. Combines image recognition with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligence-ai---sports-a2b8ff00"
+    }
+  },
+  "features": [
+    "Custom integrations",
+    "Role-based access control",
+    "Audit trails",
+    "Cloud-native architecture",
+    "Performance dashboards"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Zero manual intervention required",
+    "Predictive maintenance scheduling"
+  ]
+}

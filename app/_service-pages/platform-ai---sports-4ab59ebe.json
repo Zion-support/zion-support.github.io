@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/platform-ai---sports-4ab59ebe",
+  "breadcrumbTitle": "Platform AI - Sports",
+  "title": "Platform AI - Sports",
+  "description": "Transform your sports operations with our Platform AI - Sports. This AI-driven solution automates content generation with unprecedented accuracy and efficiency.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Platform AI - Sports - Zion Tech Group",
+    "description": "Transform your sports operations with our Platform AI - Sports. This AI-driven solution automates content generation with unprecedented accuracy and efficiency.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/platform-ai---sports-4ab59ebe"
+    }
+  },
+  "features": [
+    "Multi-language support",
+    "Open-source friendly",
+    "Auto-scaling capabilities",
+    "Rollback mechanisms"
+  ],
+  "benefits": [
+    "Cost optimization recommendations",
+    "50% reduction in operational costs",
+    "Zero manual intervention required"
+  ]
+}

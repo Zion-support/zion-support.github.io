@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/smart-manager-construction-6a5169b3",
+  "breadcrumbTitle": "Smart manager-construction",
+  "title": "Smart manager-construction",
+  "description": "Next-generation construction solution: Smart manager-construction. Combines decision support with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart manager-construction - Zion Tech Group",
+    "description": "Next-generation construction solution: Smart manager-construction. Combines decision support with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-manager-construction-6a5169b3"
+    }
+  },
+  "features": [
+    "Edge computing support",
+    "Open-source friendly",
+    "Plugin architecture",
+    "Cloud-native architecture",
+    "Role-based access control"
+  ],
+  "benefits": [
+    "Intelligent load balancing",
+    "Seamless integration with existing systems",
+    "Real-time insights and alerts"
+  ]
+}

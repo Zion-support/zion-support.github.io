@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/autonomous-suite-education-c0f753e5",
+  "breadcrumbTitle": "Autonomous suite-education",
+  "title": "Autonomous suite-education",
+  "description": "Revolutionize education through intelligent automation. Our Autonomous suite-education leverages advanced machine learning to deliver workflow management at sca",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous suite-education - Zion Tech Group",
+    "description": "Revolutionize education through intelligent automation. Our Autonomous suite-education leverages advanced machine learning to deliver workflow management at sca",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-suite-education-c0f753e5"
+    }
+  },
+  "features": [
+    "Microservices deployment",
+    "Auto-scaling capabilities",
+    "Offline capabilities",
+    "Edge computing support",
+    "Audit trails"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "Self-healing infrastructure",
+    "3x faster decision making",
+    "Reduced human error by 95%",
+    "Automated compliance reporting"
+  ]
+}

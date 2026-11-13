@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/intelligent-analyzer-for-construction-f395b250",
+  "breadcrumbTitle": "Intelligent Analyzer for Construction",
+  "title": "Intelligent Analyzer for Construction",
+  "description": "Transform your construction operations with our Intelligent Analyzer for Construction. This AI-driven solution automates maintenance scheduling with unprecedent",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Analyzer for Construction - Zion Tech Group",
+    "description": "Transform your construction operations with our Intelligent Analyzer for Construction. This AI-driven solution automates maintenance scheduling with unprecedent",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-analyzer-for-construction-f395b250"
+    }
+  },
+  "features": [
+    "API-first design",
+    "Multi-region deployment",
+    "Microservices deployment",
+    "GDPR compliance",
+    "Audit trails"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "Performance benchmarking",
+    "Dynamic resource allocation",
+    "99.9% uptime guarantee",
+    "3x faster decision making"
+  ]
+}

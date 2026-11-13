@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "AI Ad Copy Generator: executive guide | Zion Tech Group",
+    "description": "AI Ad Copy Generator: executive guide",
+    "keywords": [
+      "automation",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "AI Ad Copy Generator: executive guide",
+      "description": "AI Ad Copy Generator: executive guide",
+      "url": "https://ziontechgroup.com/blog/ai-ad-copy-generator-executive-guide/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/ai-ad-copy-generator-executive-guide/"
+    }
+  },
+  "values": [
+    "AI Ad Copy Generator: executive guide",
+    "AI Ad Copy Generator: executive guide",
+    "AI Ad Copy Generator: executive guide",
+    "Conversion path",
+    "If this guide matches your ai ad copy generator: executive guide initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "Conversion path",
+    " If this guide matches your ai ad copy generator: executive guide initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "/blog/accessibility-compliance-checklist-for-it-leaders",
+    "Accessibility Compliance Checklist For It Leaders",
+    "/blog/ai-for-climate-tech-and-sustainability-operations",
+    "Ai For Climate Tech And Sustainability Operations",
+    "/blog/micro-saas-ai-social-media-manager-2026-6785",
+    "Micro Saas Ai Social Media Manager 2026 6785",
+    "/blog/data-warehouse-modernization-2026-7229",
+    "Data Warehouse Modernization 2026 7229"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "AI Ad Copy Generator: executive guide",
+    "description": "AI Ad Copy Generator: executive guide",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T08:27:35Z",
+    "dateModified": "2026-08-07T08:27:35Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/ai-ad-copy-generator-executive-guide/"
+  }
+}

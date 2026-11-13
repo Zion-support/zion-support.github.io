@@ -1,0 +1,29 @@
+{
+  "title": "Automated Compliance Reporting",
+  "description": "SOC 2, HIPAA, GDPR, and PCI-DSS compliance report generation. Continuous monitoring with automated evidence collection.",
+  "basic": "$N/A/month",
+  "pro": "$4997/month",
+  "enterprise": "$9997/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Automated Compliance Reporting - Zion Tech Group",
+    "description": "SOC 2, HIPAA, GDPR, and PCI-DSS compliance report generation. Continuous monitoring with automated evidence collection.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w128-compliance-reporter"
+    }
+  },
+  "features": [
+    "SOC 2 Type II reports",
+    "HIPAA compliance",
+    "GDPR data mapping",
+    "PCI-DSS assessments",
+    "Automated evidence collection"
+  ],
+  "benefits": [
+    "80% faster audits",
+    "Continuous compliance",
+    "Reduce audit costs",
+    "Avoid penalties"
+  ]
+}

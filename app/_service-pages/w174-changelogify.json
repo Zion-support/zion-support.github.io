@@ -1,0 +1,29 @@
+{
+  "title": "Changelogify — Auto Changelog",
+  "description": "Auto-generate beautiful changelogs from git commits, PRs, and Jira tickets. Semantic versioning, release notes, and public changelog pages with RSS.",
+  "basic": "$9/mo/month",
+  "pro": "$29/mo/month",
+  "enterprise": "$99/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Changelogify — Auto Changelog - Zion Tech Group",
+    "description": "Auto-generate beautiful changelogs from git commits, PRs, and Jira tickets. Semantic versioning, release notes, and public changelog pages with RSS.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w174-changelogify"
+    }
+  },
+  "features": [
+    "Auto-generation from git/PR/ticket history",
+    "Semantic versioning integration",
+    "Public changelog page with custom domain",
+    "RSS and email subscription for updates",
+    "Category tagging (feature, fix, breaking)"
+  ],
+  "benefits": [
+    "Never write a changelog manually again",
+    "Public page builds trust with users",
+    "Semantic versioning stays in sync",
+    "Subscribers auto-notified on releases"
+  ]
+}

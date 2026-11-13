@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "AI Ad Copy Generator: architecture overview | Zion Tech Group",
+    "description": "AI Ad Copy Generator: architecture overview",
+    "keywords": [
+      "automation",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "AI Ad Copy Generator: architecture overview",
+      "description": "AI Ad Copy Generator: architecture overview",
+      "url": "https://ziontechgroup.com/blog/ai-ad-copy-generator-architecture-overview/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/ai-ad-copy-generator-architecture-overview/"
+    }
+  },
+  "values": [
+    "AI Ad Copy Generator: architecture overview",
+    "AI Ad Copy Generator: architecture overview",
+    "AI Ad Copy Generator: architecture overview",
+    "Next actions",
+    "Review your highest-friction workflow, contact Zion Tech Group for a scoped pilot, and start with one measurable outcome. Set a 30-day review date, define success metrics, assign an owner, and document rollback criteria before expanding. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan. The organizations that move fastest in 2026 are the ones that combine clear intent with disciplined execution.",
+    "Next actions",
+    " Review your highest-friction workflow, contact Zion Tech Group for a scoped pilot, and start with one measurable outcome. Set a 30-day review date, define success metrics, assign an owner, and document rollback criteria before expanding. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan. The organizations that move fastest in 2026 are the ones that combine clear intent with disciplined execution.",
+    "/blog/endpoint-management-2026-7096",
+    "Endpoint Management 2026 7096",
+    "/blog/ai-customer-success-churn-prevention-architecture-overview",
+    "Ai Customer Success Churn Prevention Architecture Overview",
+    "/blog/autonomous-code-deployment-operations-handbook",
+    "Autonomous Code Deployment Operations Handbook",
+    "/blog/brand-voice-guardian-vendor-evaluation",
+    "Brand Voice Guardian Vendor Evaluation"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "AI Ad Copy Generator: architecture overview",
+    "description": "AI Ad Copy Generator: architecture overview",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T07:26:07Z",
+    "dateModified": "2026-08-07T07:26:07Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/ai-ad-copy-generator-architecture-overview/"
+  }
+}

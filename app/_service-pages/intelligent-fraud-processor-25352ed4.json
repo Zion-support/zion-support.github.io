@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-fraud-processor-25352ed4",
+  "breadcrumbTitle": "Intelligent Fraud Processor",
+  "title": "Intelligent Fraud Processor",
+  "description": "Transform your gaming operations with our Intelligent Fraud Processor. This AI-driven solution automates decision support with unprecedented accuracy and effici",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Fraud Processor - Zion Tech Group",
+    "description": "Transform your gaming operations with our Intelligent Fraud Processor. This AI-driven solution automates decision support with unprecedented accuracy and effici",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-fraud-processor-25352ed4"
+    }
+  },
+  "features": [
+    "Alerting system",
+    "Role-based access control",
+    "Rollback mechanisms",
+    "Serverless functions",
+    "Custom integrations"
+  ],
+  "benefits": [
+    "Seamless integration with existing systems",
+    "ROI in under 90 days",
+    "Self-healing infrastructure"
+  ]
+}

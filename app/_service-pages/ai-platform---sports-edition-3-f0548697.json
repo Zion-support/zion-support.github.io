@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-platform---sports-edition-3-f0548697",
+  "breadcrumbTitle": "AI Platform - Sports Edition #3",
+  "title": "AI Platform - Sports Edition #3",
+  "description": "The future of sports is here with AI Platform - Sports Edition #3. Powered by cutting-edge AI, this platform delivers code optimization like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Platform - Sports Edition #3 - Zion Tech Group",
+    "description": "The future of sports is here with AI Platform - Sports Edition #3. Powered by cutting-edge AI, this platform delivers code optimization like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-platform---sports-edition-3-f0548697"
+    }
+  },
+  "features": [
+    "Microservices deployment",
+    "Rollback mechanisms",
+    "Mobile-responsive interface",
+    "Open-source friendly",
+    "Role-based access control"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Dynamic resource allocation",
+    "Zero manual intervention required"
+  ]
+}

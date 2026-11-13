@@ -1,0 +1,29 @@
+{
+  "title": "AI Mental Health Support & Wellness Chatbot",
+  "description": "HIPAA-compliant AI chatbot providing 24/7 mental health support, crisis detection, and therapeutic conversation.",
+  "basic": "$99/mo/month",
+  "pro": "$499/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Mental Health Support & Wellness Chatbot - Zion Tech Group",
+    "description": "HIPAA-compliant AI chatbot providing 24/7 mental health support, crisis detection, and therapeutic conversation.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-mental-health-support-chatbot"
+    }
+  },
+  "features": [
+    "24/7 empathetic AI conversation",
+    "Crisis detection and escalation",
+    "CBT and DBT-based therapeutic techniques",
+    "Mood tracking and journaling",
+    "Integration with therapist workflows"
+  ],
+  "benefits": [
+    "Provide 24/7 mental health support",
+    "Reduce therapist workload",
+    "Early crisis detection",
+    "Improve employee wellness"
+  ]
+}

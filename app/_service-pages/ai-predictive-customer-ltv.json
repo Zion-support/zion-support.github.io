@@ -1,0 +1,28 @@
+{
+  "title": "AI Predictive Customer Lifetime Value",
+  "description": "Predict customer LTV from day one: behavioral scoring, churn prediction, upsell timing optimization, and cohort analysis. Integrates with Shopify, Stripe, HubSpot.",
+  "basic": "$99/month",
+  "pro": "$299/month",
+  "enterprise": "$999/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Predictive Customer Lifetime Value - Zion Tech Group",
+    "description": "Predict customer LTV from day one: behavioral scoring, churn prediction, upsell timing optimization, and cohort analysis. Integrates with Shopify, Stripe, HubSp",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-predictive-customer-ltv"
+    }
+  },
+  "features": [
+    "Day-one LTV prediction",
+    "Behavioral scoring models",
+    "Churn prediction (90-day window)",
+    "Upsell timing optimization",
+    "Cohort value comparison"
+  ],
+  "benefits": [
+    "Know LTV before first purchase",
+    "Reduce churn by 30%",
+    "Perfect upsell timing"
+  ]
+}

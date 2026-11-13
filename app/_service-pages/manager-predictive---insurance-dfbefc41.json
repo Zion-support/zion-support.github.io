@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/manager-predictive---insurance-dfbefc41",
+  "breadcrumbTitle": "Manager Predictive - Insurance",
+  "title": "Manager Predictive - Insurance",
+  "description": "Next-generation insurance solution: Manager Predictive - Insurance. Combines supply chain with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Manager Predictive - Insurance - Zion Tech Group",
+    "description": "Next-generation insurance solution: Manager Predictive - Insurance. Combines supply chain with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/manager-predictive---insurance-dfbefc41"
+    }
+  },
+  "features": [
+    "Open-source friendly",
+    "Edge computing support",
+    "Auto-scaling capabilities",
+    "Zero-downtime updates",
+    "Custom integrations"
+  ],
+  "benefits": [
+    "Dynamic resource allocation",
+    "Performance benchmarking",
+    "Automated compliance reporting",
+    "Scalable to millions of transactions"
+  ]
+}

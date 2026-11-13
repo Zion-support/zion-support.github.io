@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "Cloud Native App Development: deployment patterns | Zion Tech Group",
+    "description": "Cloud Native App Development: deployment patterns",
+    "keywords": [
+      "cloud",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "Cloud Native App Development: deployment patterns",
+      "description": "Cloud Native App Development: deployment patterns",
+      "url": "https://ziontechgroup.com/blog/cloud-native-app-development-deployment-patterns/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/cloud-native-app-development-deployment-patterns/"
+    }
+  },
+  "values": [
+    "Cloud Native App Development: deployment patterns",
+    "Cloud Native App Development: deployment patterns",
+    "Cloud Native App Development: deployment patterns",
+    "Conversion path",
+    "If this guide matches your cloud native app development: deployment patterns initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "Conversion path",
+    " If this guide matches your cloud native app development: deployment patterns initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "/blog/network-infrastructure-2026-7192",
+    "Network Infrastructure 2026 7192",
+    "/blog/ai-data-lakehouse-pipelines-2026-7050",
+    "Ai Data Lakehouse Pipelines 2026 7050",
+    "/blog/data-warehouse-modernization-2026",
+    "Data Warehouse Modernization 2026",
+    "/blog/cybersecurity-platform-msp-2026-7110",
+    "Cybersecurity Platform Msp 2026 7110"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Cloud Native App Development: deployment patterns",
+    "description": "Cloud Native App Development: deployment patterns",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T04:51:57Z",
+    "dateModified": "2026-08-07T04:51:57Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/cloud-native-app-development-deployment-patterns/"
+  }
+}

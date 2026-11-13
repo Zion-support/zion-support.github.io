@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/automated-manager-retail-4bae6889",
+  "breadcrumbTitle": "Automated manager-retail",
+  "title": "Automated manager-retail",
+  "description": "The future of retail is here with Automated manager-retail. Powered by cutting-edge AI, this platform delivers market intelligence like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated manager-retail - Zion Tech Group",
+    "description": "The future of retail is here with Automated manager-retail. Powered by cutting-edge AI, this platform delivers market intelligence like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-manager-retail-4bae6889"
+    }
+  },
+  "features": [
+    "Real-time processing",
+    "Multi-region deployment",
+    "Comprehensive monitoring",
+    "GDPR compliance"
+  ],
+  "benefits": [
+    "24/7 automated operations",
+    "Enterprise-grade security",
+    "Predictive maintenance scheduling"
+  ]
+}

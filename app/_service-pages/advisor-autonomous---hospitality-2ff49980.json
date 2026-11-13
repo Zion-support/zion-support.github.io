@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/advisor-autonomous---hospitality-2ff49980",
+  "breadcrumbTitle": "Advisor Autonomous - Hospitality",
+  "title": "Advisor Autonomous - Hospitality",
+  "description": "Revolutionize hospitality through intelligent automation. Our Advisor Autonomous - Hospitality leverages advanced machine learning to deliver security monitorin",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Advisor Autonomous - Hospitality - Zion Tech Group",
+    "description": "Revolutionize hospitality through intelligent automation. Our Advisor Autonomous - Hospitality leverages advanced machine learning to deliver security monitorin",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/advisor-autonomous---hospitality-2ff49980"
+    }
+  },
+  "features": [
+    "Plugin architecture",
+    "Performance dashboards",
+    "SOC 2 certified",
+    "Alerting system",
+    "Open-source friendly"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "Automated compliance reporting",
+    "Intelligent load balancing",
+    "Zero manual intervention required",
+    "Seamless integration with existing systems"
+  ]
+}

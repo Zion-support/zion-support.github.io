@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/analyzer-predictive---insurance-4eb87950",
+  "breadcrumbTitle": "Analyzer Predictive - Insurance",
+  "title": "Analyzer Predictive - Insurance",
+  "description": "Unlock unprecedented growth with Analyzer Predictive - Insurance. This autonomous system provides predictive analytics with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Analyzer Predictive - Insurance - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Analyzer Predictive - Insurance. This autonomous system provides predictive analytics with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/analyzer-predictive---insurance-4eb87950"
+    }
+  },
+  "features": [
+    "Real-time processing",
+    "Plugin architecture",
+    "Alerting system",
+    "Audit trails",
+    "Microservices deployment"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "Real-time insights and alerts",
+    "ROI in under 90 days"
+  ]
+}

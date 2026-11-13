@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "AI BDR SDR: executive guide | Zion Tech Group",
+    "description": "AI BDR SDR: executive guide",
+    "keywords": [
+      "security",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "AI BDR SDR: executive guide",
+      "description": "AI BDR SDR: executive guide",
+      "url": "https://ziontechgroup.com/blog/ai-bdr-sdr-executive-guide/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/ai-bdr-sdr-executive-guide/"
+    }
+  },
+  "values": [
+    "AI BDR SDR: executive guide",
+    "AI BDR SDR: executive guide",
+    "AI BDR SDR: executive guide",
+    "Conversion path",
+    "If this guide matches your ai bdr sdr: executive guide initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "Conversion path",
+    " If this guide matches your ai bdr sdr: executive guide initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "/blog/network-infrastructure-evaluation-framework",
+    "Network Infrastructure Evaluation Framework",
+    "/blog/ai-accessibility-optimizer-security-and-governance",
+    "Ai Accessibility Optimizer Security And Governance",
+    "/blog/ai-customer-support-pro-2026-7185",
+    "Ai Customer Support Pro 2026 7185",
+    "/blog/ai-agentic-workflows-2026-7276",
+    "Ai Agentic Workflows 2026 7276"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "AI BDR SDR: executive guide",
+    "description": "AI BDR SDR: executive guide",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T08:58:05Z",
+    "dateModified": "2026-08-07T08:58:05Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/ai-bdr-sdr-executive-guide/"
+  }
+}

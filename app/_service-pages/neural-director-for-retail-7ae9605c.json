@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/neural-director-for-retail-7ae9605c",
+  "breadcrumbTitle": "Neural Director for Retail",
+  "title": "Neural Director for Retail",
+  "description": "Unlock unprecedented growth with Neural Director for Retail. This autonomous system provides security monitoring with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Neural Director for Retail - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Neural Director for Retail. This autonomous system provides security monitoring with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/neural-director-for-retail-7ae9605c"
+    }
+  },
+  "features": [
+    "Container orchestration",
+    "Audit trails",
+    "SOC 2 certified",
+    "Custom integrations",
+    "Serverless functions"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Performance benchmarking",
+    "Cost optimization recommendations"
+  ]
+}

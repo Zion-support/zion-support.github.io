@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-adaptive-iot-intelligence-9ddd5f6f",
+  "breadcrumbTitle": "AI-Powered Adaptive IoT Intelligence",
+  "title": "AI-Powered Adaptive IoT Intelligence",
+  "description": "Edge AI platform that processes IoT sensor data in real-time, providing adaptive insights and automated control for smart devices and industrial systems.",
+  "basic": "$258/month",
+  "pro": "$648/month",
+  "enterprise": "$1948/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Adaptive IoT Intelligence - Zion Tech Group",
+    "description": "Edge AI platform that processes IoT sensor data in real-time, providing adaptive insights and automated control for smart devices and industrial systems.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-adaptive-iot-intelligence-9ddd5f6f"
+    }
+  },
+  "features": [
+    "Edge processing",
+    "Real-time analytics",
+    "Automated control",
+    "Device management"
+  ],
+  "benefits": [
+    "Reduced latency",
+    "Better insights",
+    "Automated responses",
+    "Energy efficiency"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/smart-human-resources-quality-control-b4bdf176",
+  "breadcrumbTitle": "Smart Human Resources Quality Control",
+  "title": "Smart Human Resources Quality Control",
+  "description": "Computer vision system that provides adaptive automated inspection, defect detection, and quality assurance for manufacturing production lines.",
+  "basic": "$258/month",
+  "pro": "$648/month",
+  "enterprise": "$1948/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Human Resources Quality Control - Zion Tech Group",
+    "description": "Computer vision system that provides adaptive automated inspection, defect detection, and quality assurance for manufacturing production lines.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-human-resources-quality-control-b4bdf176"
+    }
+  },
+  "features": [
+    "Visual inspection",
+    "Defect classification",
+    "Root cause analysis",
+    "Real-time alerts"
+  ],
+  "benefits": [
+    "Zero defects",
+    "Faster throughput",
+    "Reduced waste",
+    "Consistent quality"
+  ]
+}

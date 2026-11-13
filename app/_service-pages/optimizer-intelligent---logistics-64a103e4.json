@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/optimizer-intelligent---logistics-64a103e4",
+  "breadcrumbTitle": "Optimizer Intelligent - Logistics",
+  "title": "Optimizer Intelligent - Logistics",
+  "description": "Next-generation logistics solution: Optimizer Intelligent - Logistics. Combines user experience with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Optimizer Intelligent - Logistics - Zion Tech Group",
+    "description": "Next-generation logistics solution: Optimizer Intelligent - Logistics. Combines user experience with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/optimizer-intelligent---logistics-64a103e4"
+    }
+  },
+  "features": [
+    "Open-source friendly",
+    "Offline capabilities",
+    "Mobile-responsive interface",
+    "Edge computing support",
+    "Container orchestration"
+  ],
+  "benefits": [
+    "Cost optimization recommendations",
+    "Reduced human error by 95%",
+    "24/7 automated operations"
+  ]
+}

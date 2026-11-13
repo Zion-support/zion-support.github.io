@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "Chaos Engineering: starter template | Zion Tech Group",
+    "description": "Chaos Engineering: starter template",
+    "keywords": [
+      "ai",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "Chaos Engineering: starter template",
+      "description": "Chaos Engineering: starter template",
+      "url": "https://ziontechgroup.com/blog/chaos-engineering-starter-template/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/chaos-engineering-starter-template/"
+    }
+  },
+  "values": [
+    "Chaos Engineering: starter template",
+    "Chaos Engineering: starter template",
+    "Chaos Engineering: starter template",
+    "Recommended next step",
+    "Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "Recommended next step",
+    " Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "/blog/ai-ad-copy-generator-2026-6790",
+    "Ai Ad Copy Generator 2026 6790",
+    "/blog/microsaas-customer-onboarding-policy-and-compliance",
+    "Microsaas Customer Onboarding Policy And Compliance",
+    "/blog/microsaas-expense-tracker-architecture-overview",
+    "Microsaas Expense Tracker Architecture Overview",
+    "/blog/ai-customer-support-pro-2026-6771",
+    "Ai Customer Support Pro 2026 6771"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Chaos Engineering: starter template",
+    "description": "Chaos Engineering: starter template",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T07:26:17Z",
+    "dateModified": "2026-08-07T07:26:17Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/chaos-engineering-starter-template/"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-director---energy-edition-2a9476b6",
+  "breadcrumbTitle": "AI Director - Energy Edition",
+  "title": "AI Director - Energy Edition",
+  "description": "Transform your energy operations with our AI Director - Energy Edition. This AI-driven solution automates inventory management with unprecedented accuracy and e",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Director - Energy Edition - Zion Tech Group",
+    "description": "Transform your energy operations with our AI Director - Energy Edition. This AI-driven solution automates inventory management with unprecedented accuracy and e",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-director---energy-edition-2a9476b6"
+    }
+  },
+  "features": [
+    "SOC 2 certified",
+    "Multi-region deployment",
+    "Container orchestration",
+    "Zero-downtime updates",
+    "Machine learning integration"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "Automated compliance reporting",
+    "Cost optimization recommendations"
+  ]
+}

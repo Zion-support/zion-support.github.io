@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-analytics---healthcare-edition-5-df3b6175",
+  "breadcrumbTitle": "AI Analytics - Healthcare Edition #5",
+  "title": "AI Analytics - Healthcare Edition #5",
+  "description": "Transform your healthcare operations with our AI Analytics - Healthcare Edition #5. This AI-driven solution automates fraud prevention with unprecedented accura",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Analytics - Healthcare Edition #5 - Zion Tech Group",
+    "description": "Transform your healthcare operations with our AI Analytics - Healthcare Edition #5. This AI-driven solution automates fraud prevention with unprecedented accura",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-analytics---healthcare-edition-5-df3b6175"
+    }
+  },
+  "features": [
+    "Edge computing support",
+    "Zero-downtime updates",
+    "Performance dashboards",
+    "HIPAA ready",
+    "Real-time processing"
+  ],
+  "benefits": [
+    "50% reduction in operational costs",
+    "Self-healing infrastructure",
+    "24/7 automated operations"
+  ]
+}

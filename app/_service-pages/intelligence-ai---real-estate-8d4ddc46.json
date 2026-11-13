@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligence-ai---real-estate-8d4ddc46",
+  "breadcrumbTitle": "Intelligence AI - Real-Estate",
+  "title": "Intelligence AI - Real-Estate",
+  "description": "Revolutionize real-estate through intelligent automation. Our Intelligence AI - Real-Estate leverages advanced machine learning to deliver risk assessment at sc",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligence AI - Real-Estate - Zion Tech Group",
+    "description": "Revolutionize real-estate through intelligent automation. Our Intelligence AI - Real-Estate leverages advanced machine learning to deliver risk assessment at sc",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligence-ai---real-estate-8d4ddc46"
+    }
+  },
+  "features": [
+    "Edge computing support",
+    "Serverless functions",
+    "Real-time processing",
+    "Open-source friendly",
+    "Plugin architecture"
+  ],
+  "benefits": [
+    "Scalable to millions of transactions",
+    "Self-healing infrastructure",
+    "Predictive maintenance scheduling",
+    "50% reduction in operational costs"
+  ]
+}

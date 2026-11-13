@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/smart-insights-for-gaming-1bfc4de8",
+  "breadcrumbTitle": "Smart Insights for Gaming",
+  "title": "Smart Insights for Gaming",
+  "description": "Unlock unprecedented growth with Smart Insights for Gaming. This autonomous system provides workflow management with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Insights for Gaming - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Smart Insights for Gaming. This autonomous system provides workflow management with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-insights-for-gaming-1bfc4de8"
+    }
+  },
+  "features": [
+    "Auto-scaling capabilities",
+    "Cloud-native architecture",
+    "Offline capabilities",
+    "Mobile-responsive interface",
+    "Zero-downtime updates"
+  ],
+  "benefits": [
+    "Seamless integration with existing systems",
+    "50% reduction in operational costs",
+    "Zero manual intervention required",
+    "Scalable to millions of transactions"
+  ]
+}

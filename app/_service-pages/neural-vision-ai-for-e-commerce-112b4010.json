@@ -1,0 +1,28 @@
+{
+  "title": "Neural Vision AI for E-Commerce",
+  "description": "Vision AI system powered by neural computer vision models for e-commerce analysis and automated visual inspection.",
+  "basic": "$258/month",
+  "pro": "$648/month",
+  "enterprise": "$1948/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Neural Vision AI for E-Commerce - Zion Tech Group",
+    "description": "Vision AI system powered by neural computer vision models for e-commerce analysis and automated visual inspection.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/neural-vision-ai-for-e-commerce-112b4010"
+    }
+  },
+  "features": [
+    "Real-time object detection",
+    "Image classification",
+    "Anomaly detection",
+    "Visual inspection"
+  ],
+  "benefits": [
+    "Automated quality control",
+    "Reduced inspection costs",
+    "Defect detection",
+    "Visual search"
+  ]
+}

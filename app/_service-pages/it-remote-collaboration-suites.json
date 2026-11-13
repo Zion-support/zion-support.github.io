@@ -1,0 +1,28 @@
+{
+  "title": "Remote Collaboration Suite",
+  "description": "Video meetings, persistent team chat, screen/annotation, whiteboard, file sharing, and calendar sync across 15+ SaaS tools.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Remote Collaboration Suite - Zion Tech Group",
+    "description": "Video meetings, persistent team chat, screen/annotation, whiteboard, file sharing, and calendar sync across 15+ SaaS tools.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-remote-collaboration-suites"
+    }
+  },
+  "features": [
+    "HD video meetings + network adaptivity",
+    "Persistent team chat + threaded topic",
+    "In-meeting whiteboard + live annotation",
+    "Calendar sync + async video update per thread"
+  ],
+  "benefits": [
+    "Reduce costs with remote collaboration suite",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

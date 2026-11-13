@@ -1,0 +1,29 @@
+{
+  "title": "Micro-SaaS Smart Subscription Manager",
+  "description": "AI-powered subscription analytics and churn prediction platform. Tracks MRR, LTV, cohort analysis, and automates dunning emails to reduce involuntary churn by up to 40%.",
+  "basic": "$49/mo/month",
+  "pro": "$149/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Micro-SaaS Smart Subscription Manager - Zion Tech Group",
+    "description": "AI-powered subscription analytics and churn prediction platform. Tracks MRR, LTV, cohort analysis, and automates dunning emails to reduce involuntary churn by u",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-smart-subscription-manager"
+    }
+  },
+  "features": [
+    "Real-time MRR/ARR dashboard with trend analysis",
+    "AI churn prediction with risk scoring per customer",
+    "Automated dunning email sequences with A/B testing",
+    "Cohort retention analysis and LTV forecasting",
+    "Stripe/Paddle/Chargebee integration"
+  ],
+  "benefits": [
+    "Reduce churn by up to 40% with predictive alerts",
+    "Increase LTV through smart upsell recommendations",
+    "Save 10+ hours/week on manual subscription management",
+    "Real-time revenue visibility for stakeholders"
+  ]
+}

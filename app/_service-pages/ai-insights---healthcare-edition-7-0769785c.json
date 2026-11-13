@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-insights---healthcare-edition-7-0769785c",
+  "breadcrumbTitle": "AI Insights - Healthcare Edition #7",
+  "title": "AI Insights - Healthcare Edition #7",
+  "description": "Unlock unprecedented growth with AI Insights - Healthcare Edition #7. This autonomous system provides risk assessment with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Insights - Healthcare Edition #7 - Zion Tech Group",
+    "description": "Unlock unprecedented growth with AI Insights - Healthcare Edition #7. This autonomous system provides risk assessment with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-insights---healthcare-edition-7-0769785c"
+    }
+  },
+  "features": [
+    "Edge computing support",
+    "Audit trails",
+    "Open-source friendly",
+    "API-first design",
+    "Data encryption"
+  ],
+  "benefits": [
+    "Automated compliance reporting",
+    "Zero manual intervention required",
+    "Scalable to millions of transactions"
+  ]
+}

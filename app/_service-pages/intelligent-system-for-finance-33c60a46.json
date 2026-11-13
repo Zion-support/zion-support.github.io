@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligent-system-for-finance-33c60a46",
+  "breadcrumbTitle": "Intelligent System for Finance",
+  "title": "Intelligent System for Finance",
+  "description": "The future of finance is here with Intelligent System for Finance. Powered by cutting-edge AI, this platform delivers content generation like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent System for Finance - Zion Tech Group",
+    "description": "The future of finance is here with Intelligent System for Finance. Powered by cutting-edge AI, this platform delivers content generation like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-system-for-finance-33c60a46"
+    }
+  },
+  "features": [
+    "Plugin architecture",
+    "API-first design",
+    "Open-source friendly",
+    "Data encryption",
+    "Serverless functions"
+  ],
+  "benefits": [
+    "Scalable to millions of transactions",
+    "24/7 automated operations",
+    "Intelligent load balancing",
+    "Self-healing infrastructure"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/quantum-ready-data-driven-transportation-analytics-d0508e54",
+  "breadcrumbTitle": "Quantum-Ready Data-Driven Transportation Analytics",
+  "title": "Quantum-Ready Data-Driven Transportation Analytics",
+  "description": "Quantum-ready analytics platform that prepares data-driven transportation workloads for future quantum acceleration.",
+  "basic": "$298/month",
+  "pro": "$748/month",
+  "enterprise": "$2248/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Quantum-Ready Data-Driven Transportation Analytics - Zion Tech Group",
+    "description": "Quantum-ready analytics platform that prepares data-driven transportation workloads for future quantum acceleration.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/quantum-ready-data-driven-transportation-analytics-d0508e54"
+    }
+  },
+  "features": [
+    "Quantum simulation",
+    "Hybrid classical-quantum",
+    "Algorithm optimization",
+    "Future-proofing"
+  ],
+  "benefits": [
+    "Quantum advantage readiness",
+    "Future-proof algorithms",
+    "Hybrid optimization",
+    "Competitive edge"
+  ]
+}

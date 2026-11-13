@@ -1,0 +1,28 @@
+{
+  "title": "Web Application Firewall",
+  "description": "Managed WAF with OWASP Top-10 rulesets, API-protection for OWASP API Top-10, bot management with human-versus-bot scoring, CDN-integrated DDoS mitigation, rate-limiting, geo-blocking, and custom rule pipeline per region.",
+  "basic": "$199/mo/month",
+  "pro": "$599/mo/month",
+  "enterprise": "$1,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Web Application Firewall - Zion Tech Group",
+    "description": "Managed WAF with OWASP Top-10 rulesets, API-protection for OWASP API Top-10, bot management with human-versus-bot scoring, CDN-integrated DDoS mitigation, rate-",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/security-web-application-firewall"
+    }
+  },
+  "features": [
+    "OWASP Top-10 core ruleset plus OWASP API Top-10, auto-updated monthly",
+    "Bot management with per-request human-versus-bot score and CAPTCHA escalation",
+    "DDoS mitigation at CDN edge — SYN flood and HTTP flood absorbed before reaching origin",
+    "Geo-block and custom-rule pipeline per region — no platform team PR cycle required"
+  ],
+  "benefits": [
+    "Reduce costs with web application firewall",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

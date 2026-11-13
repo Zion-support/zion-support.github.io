@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/automation-intelligent---media-1-c00acee1",
+  "breadcrumbTitle": "Automation Intelligent - Media #1",
+  "title": "Automation Intelligent - Media #1",
+  "description": "Next-generation media solution: Automation Intelligent - Media #1. Combines image recognition with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automation Intelligent - Media #1 - Zion Tech Group",
+    "description": "Next-generation media solution: Automation Intelligent - Media #1. Combines image recognition with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automation-intelligent---media-1-c00acee1"
+    }
+  },
+  "features": [
+    "Comprehensive monitoring",
+    "Custom integrations",
+    "Microservices deployment",
+    "Container orchestration",
+    "SOC 2 certified"
+  ],
+  "benefits": [
+    "Seamless integration with existing systems",
+    "99.9% uptime guarantee",
+    "24/7 automated operations",
+    "Predictive maintenance scheduling",
+    "Zero manual intervention required"
+  ]
+}

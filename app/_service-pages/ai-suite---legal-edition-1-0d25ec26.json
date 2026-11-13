@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-suite---legal-edition-1-0d25ec26",
+  "breadcrumbTitle": "AI Suite - Legal Edition #1",
+  "title": "AI Suite - Legal Edition #1",
+  "description": "The future of legal is here with AI Suite - Legal Edition #1. Powered by cutting-edge AI, this platform delivers language processing like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Suite - Legal Edition #1 - Zion Tech Group",
+    "description": "The future of legal is here with AI Suite - Legal Edition #1. Powered by cutting-edge AI, this platform delivers language processing like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-suite---legal-edition-1-0d25ec26"
+    }
+  },
+  "features": [
+    "Open-source friendly",
+    "Mobile-responsive interface",
+    "Machine learning integration",
+    "Multi-region deployment",
+    "Container orchestration"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "50% reduction in operational costs",
+    "Scalable to millions of transactions"
+  ]
+}

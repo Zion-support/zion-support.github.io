@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/neural-sales-manager-2860f238",
+  "breadcrumbTitle": "Neural Sales Manager",
+  "title": "Neural Sales Manager",
+  "description": "Unlock unprecedented growth with Neural Sales Manager. This autonomous system provides threat detection with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Neural Sales Manager - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Neural Sales Manager. This autonomous system provides threat detection with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/neural-sales-manager-2860f238"
+    }
+  },
+  "features": [
+    "HIPAA ready",
+    "Open-source friendly",
+    "Audit trails",
+    "Plugin architecture",
+    "Serverless functions"
+  ],
+  "benefits": [
+    "Seamless integration with existing systems",
+    "Real-time insights and alerts",
+    "Scalable to millions of transactions",
+    "Self-healing infrastructure",
+    "Zero manual intervention required"
+  ]
+}

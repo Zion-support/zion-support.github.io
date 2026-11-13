@@ -1,7 +1,7 @@
 // app/products/page.tsx — Products & Platforms
 'use client';
 import Link from 'next/link';
-import { allServices } from '@/data/servicesData';
+import { allServices } from '@/data/servicesClientData';
 
 const PRODUCTS: readonly {
   key: string;

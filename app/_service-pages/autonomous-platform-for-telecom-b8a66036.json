@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/autonomous-platform-for-telecom-b8a66036",
+  "breadcrumbTitle": "Autonomous Platform for Telecom",
+  "title": "Autonomous Platform for Telecom",
+  "description": "The future of telecom is here with Autonomous Platform for Telecom. Powered by cutting-edge AI, this platform delivers image recognition like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous Platform for Telecom - Zion Tech Group",
+    "description": "The future of telecom is here with Autonomous Platform for Telecom. Powered by cutting-edge AI, this platform delivers image recognition like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-platform-for-telecom-b8a66036"
+    }
+  },
+  "features": [
+    "Role-based access control",
+    "Comprehensive monitoring",
+    "Mobile-responsive interface",
+    "Open-source friendly",
+    "Multi-region deployment"
+  ],
+  "benefits": [
+    "Performance benchmarking",
+    "Cost optimization recommendations",
+    "Zero manual intervention required"
+  ]
+}

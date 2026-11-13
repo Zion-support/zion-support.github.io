@@ -1,0 +1,29 @@
+{
+  "title": "Graph Database & Analytics",
+  "description": "Graph database: fraud rings, social networks, knowledge graphs, recommendation engine. Neo4j + GDS — community detection, centrality, shortest-path, link prediction, visual dashboard.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Graph Database & Analytics - Zion Tech Group",
+    "description": "Graph database: fraud rings, social networks, knowledge graphs, recommendation engine. Neo4j + GDS — community detection, centrality, shortest-path, link predic",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/graph-database-analytics"
+    }
+  },
+  "features": [
+    "Neo4j cluster + GDS (community/pagerank)",
+    "Knowledge graph from internal docs + relations",
+    "Relationship query builder UI",
+    "Shortest-path + link-prediction for recommendations",
+    "Visual graph explorer + dashboard"
+  ],
+  "benefits": [
+    "Reduce costs with graph database & analytics",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "AI Video Analytics & Content Moderation",
+  "description": "Real-time video analytics platform for content moderation, object detection, and behavioral analysis. Powers safe user-generated content and intelligent surveillance.",
+  "basic": "$2,499/mo/month",
+  "pro": "$6,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Video Analytics & Content Moderation - Zion Tech Group",
+    "description": "Real-time video analytics platform for content moderation, object detection, and behavioral analysis. Powers safe user-generated content and intelligent surveil",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-video-analytics-platform"
+    }
+  },
+  "features": [
+    "Real-time content moderation (violence, nudity, hate)",
+    "Object and scene detection in video streams",
+    "Facial recognition with privacy controls",
+    "Behavioral anomaly detection",
+    "Automated video tagging and transcription"
+  ],
+  "benefits": [
+    "Moderate 100% of video content automatically",
+    "Reduce content moderation costs by 90%",
+    "Detect threats in real-time",
+    "Scale video operations without adding reviewers"
+  ]
+}

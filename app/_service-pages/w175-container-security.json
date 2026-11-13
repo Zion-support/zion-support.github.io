@@ -1,0 +1,29 @@
+{
+  "title": "Container & K8s Security Platform",
+  "description": "Full container security: image scanning, runtime protection, K8s policy enforcement, network policy, and compliance. From build to runtime protection.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Container & K8s Security Platform - Zion Tech Group",
+    "description": "Full container security: image scanning, runtime protection, K8s policy enforcement, network policy, and compliance. From build to runtime protection.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w175-container-security"
+    }
+  },
+  "features": [
+    "Container image scanning (OS + app CVEs)",
+    "SBOM generation and monitoring",
+    "Runtime threat detection and blocking",
+    "K8s policy enforcement (OPA, Kyverno)",
+    "Network policy and micro-segmentation"
+  ],
+  "benefits": [
+    "Never deploy vulnerable containers",
+    "Runtime protection catches zero-days",
+    "K8s policies enforce best practices",
+    "Network policy limits blast radius"
+  ]
+}

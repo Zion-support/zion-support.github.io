@@ -1,0 +1,28 @@
+{
+  "title": "Analytics Engineering Platform",
+  "description": "dbt core orchestration, lineage graph, semantic layer, freshness SLAs, and an in-browser model explorer for SQL analysts.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Analytics Engineering Platform - Zion Tech Group",
+    "description": "dbt core orchestration, lineage graph, semantic layer, freshness SLAs, and an in-browser model explorer for SQL analysts.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/data-analytics-engineering-platform"
+    }
+  },
+  "features": [
+    "dbt model orchestration + Freshness SLA",
+    "Column-level lineage graph UI",
+    "Semantic Layer (Looker/dbt-metricflow)",
+    "In-browser SQL editor + scheduler"
+  ],
+  "benefits": [
+    "Reduce costs with analytics engineering platform",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

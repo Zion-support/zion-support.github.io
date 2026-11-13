@@ -1,0 +1,29 @@
+{
+  "title": "Enterprise Architecture as a Service",
+  "description": "Strategic enterprise architecture consulting and tooling. Technology roadmap, application portfolio rationalization, and target architecture design for digital transformation.",
+  "basic": "$4,999/mo/month",
+  "pro": "$14,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Enterprise Architecture as a Service - Zion Tech Group",
+    "description": "Strategic enterprise architecture consulting and tooling. Technology roadmap, application portfolio rationalization, and target architecture design for digital ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-enterprise-architecture"
+    }
+  },
+  "features": [
+    "Application portfolio assessment",
+    "Technology roadmap development",
+    "Target architecture design",
+    "Integration architecture planning",
+    "TOGAF and ArchiMate frameworks"
+  ],
+  "benefits": [
+    "Align IT with business strategy",
+    "Reduce technical debt",
+    "Optimize technology spend",
+    "Accelerate digital transformation"
+  ]
+}

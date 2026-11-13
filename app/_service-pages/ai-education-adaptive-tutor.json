@@ -1,0 +1,28 @@
+{
+  "title": "AI Adaptive Tutoring System",
+  "description": "Personalized K-12 adaptive: adjusts difficulty by mastery scaffolds strugglers accelerates high performers curriculum-standard tagged problems.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Adaptive Tutoring System - Zion Tech Group",
+    "description": "Personalized K-12 adaptive: adjusts difficulty by mastery scaffolds strugglers accelerates high performers curriculum-standard tagged problems.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-education-adaptive-tutor"
+    }
+  },
+  "features": [
+    "Mastery-level adaptive engine",
+    "Scaffold strugglers + accelerate performers",
+    "Curriculum-standard problem tagging",
+    "Parent+teacher mastery heat-map"
+  ],
+  "benefits": [
+    "Reduce costs with ai adaptive tutoring system",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

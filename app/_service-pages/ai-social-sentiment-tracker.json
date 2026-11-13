@@ -1,0 +1,29 @@
+{
+  "title": "Social Sentiment Tracker",
+  "description": "Monitor brand sentiment across Twitter, Reddit, news, forums in real-time. Crisis detection alerts before issues go viral.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Social Sentiment Tracker - Zion Tech Group",
+    "description": "Monitor brand sentiment across Twitter, Reddit, news, forums in real-time. Crisis detection alerts before issues go viral.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-social-sentiment-tracker"
+    }
+  },
+  "features": [
+    "30+ data sources",
+    "Sentiment scoring (-100 to +100)",
+    "Crisis detection",
+    "Influencer identification",
+    "Competitor benchmark"
+  ],
+  "benefits": [
+    "Reduce costs with social sentiment tracker",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

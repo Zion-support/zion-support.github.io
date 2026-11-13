@@ -1,0 +1,28 @@
+{
+  "title": "Multi-Tenant Vision AI for Clean Energy",
+  "description": "Vision AI system powered by multi-tenant computer vision models for clean energy analysis and automated visual inspection.",
+  "basic": "$258/month",
+  "pro": "$648/month",
+  "enterprise": "$1948/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Multi-Tenant Vision AI for Clean Energy - Zion Tech Group",
+    "description": "Vision AI system powered by multi-tenant computer vision models for clean energy analysis and automated visual inspection.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/multi-tenant-vision-ai-for-clean-energy-4d4e1e44"
+    }
+  },
+  "features": [
+    "Real-time object detection",
+    "Image classification",
+    "Anomaly detection",
+    "Visual inspection"
+  ],
+  "benefits": [
+    "Automated quality control",
+    "Reduced inspection costs",
+    "Defect detection",
+    "Visual search"
+  ]
+}

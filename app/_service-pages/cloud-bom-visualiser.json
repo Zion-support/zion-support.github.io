@@ -1,0 +1,29 @@
+{
+  "title": "Cloud BOM & Dependency Visualiser",
+  "description": "Map every cloud dependency from DNS records and load balancers to container images and Lambda layers. Visual graph with change impact analysis.",
+  "basic": "$99/mo/month",
+  "pro": "$349/mo/month",
+  "enterprise": "$1,299/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Cloud BOM & Dependency Visualiser - Zion Tech Group",
+    "description": "Map every cloud dependency from DNS records and load balancers to container images and Lambda layers. Visual graph with change impact analysis.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cloud-bom-visualiser"
+    }
+  },
+  "features": [
+    "Full dependency graph visualisation",
+    "Change impact analysis",
+    "Real-time configuration drift alerts",
+    "Kubernetes resource aware",
+    "Export to SVG and PDF"
+  ],
+  "benefits": [
+    "Reduce costs with cloud bom & dependency visualiser",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

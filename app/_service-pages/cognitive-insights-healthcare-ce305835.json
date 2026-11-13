@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/cognitive-insights-healthcare-ce305835",
+  "breadcrumbTitle": "Cognitive insights-healthcare",
+  "title": "Cognitive insights-healthcare",
+  "description": "Next-generation healthcare solution: Cognitive insights-healthcare. Combines network optimization with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Cognitive insights-healthcare - Zion Tech Group",
+    "description": "Next-generation healthcare solution: Cognitive insights-healthcare. Combines network optimization with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cognitive-insights-healthcare-ce305835"
+    }
+  },
+  "features": [
+    "HIPAA ready",
+    "Machine learning integration",
+    "Plugin architecture",
+    "Container orchestration",
+    "Edge computing support"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Intelligent load balancing",
+    "Performance benchmarking",
+    "ROI in under 90 days"
+  ]
+}

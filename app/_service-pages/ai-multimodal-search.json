@@ -1,0 +1,29 @@
+{
+  "title": "AI Multimodal Search & Discovery Platform",
+  "description": "AI search that understands text, images, video, and audio. Find anything across your enterprise content with natural language queries and visual similarity search.",
+  "basic": "$499/mo/month",
+  "pro": "$1,499/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Multimodal Search & Discovery Platform - Zion Tech Group",
+    "description": "AI search that understands text, images, video, and audio. Find anything across your enterprise content with natural language queries and visual similarity sear",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-multimodal-search"
+    }
+  },
+  "features": [
+    "Text, image, video, and audio search",
+    "Natural language query understanding",
+    "Visual similarity search",
+    "Cross-language search and translation",
+    "Integration with SharePoint, Confluence, Google Drive"
+  ],
+  "benefits": [
+    "Find any content in seconds across all formats",
+    "Increase knowledge reuse by 60%",
+    "Support 100+ languages out of the box",
+    "Embed intelligent search in any application"
+  ]
+}

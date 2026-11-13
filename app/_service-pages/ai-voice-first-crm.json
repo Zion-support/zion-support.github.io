@@ -1,0 +1,29 @@
+{
+  "title": "Voice-First CRM & Sales Assistant",
+  "description": "Voice-first CRM for field sales and inside sales teams: automatic call transcription, real-time deal coaching via live prompt injection, pipeline update via voice command, contact enrichment, and post-call auto-summary + next-step action items.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Voice-First CRM & Sales Assistant - Zion Tech Group",
+    "description": "Voice-first CRM for field sales and inside sales teams: automatic call transcription, real-time deal coaching via live prompt injection, pipeline update via voi",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-voice-first-crm"
+    }
+  },
+  "features": [
+    "Real-time call transcription with speaker separation across phone, Zoom, Teams",
+    "Live deal coaching: sales rep hears contextual prompts mid-call via earpiece or screen pop-up",
+    "Voice command CRM update: update stage, log notes, create task — all hands-free",
+    "Auto-contact enrichment via Clearbit, ZoomInfo, LinkedIn — contact record complete in 3 seconds",
+    "Post-call: auto-summary, action items, next-step suggestions delivered to Slack/CRM within 30 seconds"
+  ],
+  "benefits": [
+    "Reduce costs with voice-first crm & sales assistant",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

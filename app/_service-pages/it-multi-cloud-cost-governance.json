@@ -1,0 +1,29 @@
+{
+  "title": "Multi-Cloud Cost Governance",
+  "description": "Unified cost visibility and policy enforcement across AWS, Azure, GCP. budgets, alerts, rightsizing recommendations, and chargeback/showback.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Multi-Cloud Cost Governance - Zion Tech Group",
+    "description": "Unified cost visibility and policy enforcement across AWS, Azure, GCP. budgets, alerts, rightsizing recommendations, and chargeback/showback.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-multi-cloud-cost-governance"
+    }
+  },
+  "features": [
+    "Multi-cloud ingestion",
+    "Budget thresholds & alerts",
+    "Rightsizing AI",
+    "Tag compliance enforcement",
+    "Department chargeback"
+  ],
+  "benefits": [
+    "Reduce costs with multi-cloud cost governance",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

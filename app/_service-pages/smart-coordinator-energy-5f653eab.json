@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/smart-coordinator-energy-5f653eab",
+  "breadcrumbTitle": "Smart coordinator-energy",
+  "title": "Smart coordinator-energy",
+  "description": "Next-generation energy solution: Smart coordinator-energy. Combines workflow management with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart coordinator-energy - Zion Tech Group",
+    "description": "Next-generation energy solution: Smart coordinator-energy. Combines workflow management with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-coordinator-energy-5f653eab"
+    }
+  },
+  "features": [
+    "Container orchestration",
+    "Offline capabilities",
+    "Alerting system",
+    "Comprehensive monitoring",
+    "HIPAA ready"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "Intelligent load balancing",
+    "Scalable to millions of transactions",
+    "Zero manual intervention required",
+    "3x faster decision making"
+  ]
+}

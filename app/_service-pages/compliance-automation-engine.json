@@ -1,0 +1,28 @@
+{
+  "title": "Compliance Automation Engine",
+  "description": "Rule-based compliance engine that embeds regulatory logic into your data pipelines and APIs. Automates access reviews, entitlement certifications, policy violation detection, and remediation tracking.",
+  "basic": "$499/mo/month",
+  "pro": "$1,499/mo/month",
+  "enterprise": "$4,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Compliance Automation Engine - Zion Tech Group",
+    "description": "Rule-based compliance engine that embeds regulatory logic into your data pipelines and APIs. Automates access reviews, entitlement certifications, policy violat",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/compliance-automation-engine"
+    }
+  },
+  "features": [
+    "Intelligent automation and orchestration",
+    "Enterprise-grade integration",
+    "Real-time monitoring and alerts",
+    "Scalable multi-tenant architecture"
+  ],
+  "benefits": [
+    "Reduce costs with compliance automation engine",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

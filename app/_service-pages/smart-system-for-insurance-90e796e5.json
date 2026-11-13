@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/smart-system-for-insurance-90e796e5",
+  "breadcrumbTitle": "Smart System for Insurance",
+  "title": "Smart System for Insurance",
+  "description": "Revolutionize insurance through intelligent automation. Our Smart System for Insurance leverages advanced machine learning to deliver document processing at sca",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart System for Insurance - Zion Tech Group",
+    "description": "Revolutionize insurance through intelligent automation. Our Smart System for Insurance leverages advanced machine learning to deliver document processing at sca",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-system-for-insurance-90e796e5"
+    }
+  },
+  "features": [
+    "Auto-scaling capabilities",
+    "API-first design",
+    "Data encryption",
+    "Alerting system"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "Automated compliance reporting",
+    "Enterprise-grade security",
+    "Scalable to millions of transactions"
+  ]
+}

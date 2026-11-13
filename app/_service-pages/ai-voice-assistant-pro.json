@@ -1,0 +1,29 @@
+{
+  "title": "Voice Assistant Pro",
+  "description": "Custom voice assistants for brands: wake-word detection, natural-language task execution, multi-turn dialog. Deploy on-premise or cloud.",
+  "basic": "$99/mo/month",
+  "pro": "$299/mo/month",
+  "enterprise": "$999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Voice Assistant Pro - Zion Tech Group",
+    "description": "Custom voice assistants for brands: wake-word detection, natural-language task execution, multi-turn dialog. Deploy on-premise or cloud.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-voice-assistant-pro"
+    }
+  },
+  "features": [
+    "Custom wake-word training",
+    "Task execution",
+    "Multi-turn context",
+    "On-premise deployment",
+    "Twilio/Asterisk integration"
+  ],
+  "benefits": [
+    "Reduce costs with voice assistant pro",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

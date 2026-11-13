@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/intelligent-logistics-sales-c39872a3",
+  "breadcrumbTitle": "Intelligent Logistics Sales",
+  "title": "Intelligent Logistics Sales",
+  "description": "The future of Telecom is here with Intelligent Logistics Sales. Powered by cutting-edge AI, this platform delivers network optimization like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Logistics Sales - Zion Tech Group",
+    "description": "The future of Telecom is here with Intelligent Logistics Sales. Powered by cutting-edge AI, this platform delivers network optimization like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-logistics-sales-c39872a3"
+    }
+  },
+  "features": [
+    "Cloud-native architecture with multi-region deployment",
+    "Energy optimization with consumption tracking",
+    "Document processing with OCR and NLP",
+    "Data quality with anomaly detection",
+    "Performance dashboards with real-time metrics"
+  ],
+  "benefits": [
+    "Reduced infrastructure costs with cloud optimization",
+    "Enhanced team productivity with intelligent assistance",
+    "Better customer experience with personalization",
+    "99.9% uptime guarantee with redundant architecture",
+    "24/7 automated operations without human intervention"
+  ]
+}

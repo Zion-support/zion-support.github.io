@@ -1,0 +1,29 @@
+{
+  "title": "IT Log Management & SIEM",
+  "description": "Centralized log management with real-time analysis, correlation, and alerting. Ingest logs from any source and detect threats, anomalies, and operational issues.",
+  "basic": "$500/mo/month",
+  "pro": "$1,500/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "IT Log Management & SIEM - Zion Tech Group",
+    "description": "Centralized log management with real-time analysis, correlation, and alerting. Ingest logs from any source and detect threats, anomalies, and operational issues",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-log-management"
+    }
+  },
+  "features": [
+    "Centralized log collection from any source",
+    "Real-time log analysis and correlation",
+    "Custom alerting and dashboards",
+    "Compliance reporting (SOC 2, HIPAA, PCI)",
+    "Long-term log retention and archiving"
+  ],
+  "benefits": [
+    "Detect threats in real-time",
+    "Meet compliance log retention requirements",
+    "Troubleshoot issues 10x faster",
+    "Centralize all logs in one platform"
+  ]
+}

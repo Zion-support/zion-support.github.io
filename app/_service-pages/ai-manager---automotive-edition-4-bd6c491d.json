@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-manager---automotive-edition-4-bd6c491d",
+  "breadcrumbTitle": "AI Manager - Automotive Edition #4",
+  "title": "AI Manager - Automotive Edition #4",
+  "description": "Next-generation automotive solution: AI Manager - Automotive Edition #4. Combines resource optimization with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Manager - Automotive Edition #4 - Zion Tech Group",
+    "description": "Next-generation automotive solution: AI Manager - Automotive Edition #4. Combines resource optimization with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-manager---automotive-edition-4-bd6c491d"
+    }
+  },
+  "features": [
+    "Edge computing support",
+    "Machine learning integration",
+    "Serverless functions",
+    "Cloud-native architecture",
+    "Plugin architecture"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "Enterprise-grade security",
+    "24/7 automated operations"
+  ]
+}

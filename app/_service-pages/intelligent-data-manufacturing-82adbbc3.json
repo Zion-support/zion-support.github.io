@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligent-data-manufacturing-82adbbc3",
+  "breadcrumbTitle": "Intelligent Data Manufacturing",
+  "title": "Intelligent Data Manufacturing",
+  "description": "Transform your Gaming operations with our Intelligent Data Manufacturing. This AI-driven solution automates predictive modeling with unprecedented accuracy and ",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Data Manufacturing - Zion Tech Group",
+    "description": "Transform your Gaming operations with our Intelligent Data Manufacturing. This AI-driven solution automates predictive modeling with unprecedented accuracy and ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-data-manufacturing-82adbbc3"
+    }
+  },
+  "features": [
+    "Process discovery with activity analysis",
+    "Version control with rollback capabilities",
+    "Auto-scaling capabilities with predictive scaling",
+    "SOC 2 certified with security controls",
+    "Market analysis with buyer behavior insights"
+  ],
+  "benefits": [
+    "Better code quality with automated reviews",
+    "Dynamic resource allocation based on demand patterns",
+    "Improved sales performance with lead scoring",
+    "Reduced development time with code generation"
+  ]
+}

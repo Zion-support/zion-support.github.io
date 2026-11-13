@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "API Integration: case study | Zion Tech Group",
+    "description": "API Integration: case study",
+    "keywords": [
+      "data",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "API Integration: case study",
+      "description": "API Integration: case study",
+      "url": "https://ziontechgroup.com/blog/api-integration-case-study/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/api-integration-case-study/"
+    }
+  },
+  "values": [
+    "API Integration: case study",
+    "API Integration: case study",
+    "API Integration: case study",
+    "Recommended next step",
+    "Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "Recommended next step",
+    " Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "/blog/microsaas-expense-tracker-architecture-overview",
+    "Microsaas Expense Tracker Architecture Overview",
+    "/blog/ai-for-digital-transformation-and-change-management",
+    "Ai For Digital Transformation And Change Management",
+    "/blog/api-security-testing-2026-7175",
+    "Api Security Testing 2026 7175",
+    "/blog/autonomous-qa-engineering-2026-6799",
+    "Autonomous Qa Engineering 2026 6799"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "API Integration: case study",
+    "description": "API Integration: case study",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T04:51:46Z",
+    "dateModified": "2026-08-07T04:51:46Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/api-integration-case-study/"
+  }
+}

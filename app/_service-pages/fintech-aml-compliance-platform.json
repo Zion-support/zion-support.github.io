@@ -1,0 +1,29 @@
+{
+  "title": "Anti-Money Laundering (AML) Compliance Platform",
+  "description": "AI-powered AML compliance with transaction monitoring, suspicious activity detection, customer due diligence, and regulatory reporting. Meet FinCEN, FATF, and BSA requirements.",
+  "basic": "$2,999/mo/month",
+  "pro": "$8,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Anti-Money Laundering (AML) Compliance Platform - Zion Tech Group",
+    "description": "AI-powered AML compliance with transaction monitoring, suspicious activity detection, customer due diligence, and regulatory reporting. Meet FinCEN, FATF, and B",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/fintech-aml-compliance-platform"
+    }
+  },
+  "features": [
+    "Real-time transaction monitoring",
+    "Suspicious activity detection (AI)",
+    "Customer due diligence (CDD/EDD)",
+    "Sanctions screening",
+    "SAR filing automation"
+  ],
+  "benefits": [
+    "Reduce false positives by 60%",
+    "Automate compliance reporting",
+    "Meet regulatory requirements",
+    "Reduce compliance costs"
+  ]
+}

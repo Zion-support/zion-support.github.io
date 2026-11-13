@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/advisor-smart---retail-93d4de9d",
+  "breadcrumbTitle": "Advisor Smart - Retail",
+  "title": "Advisor Smart - Retail",
+  "description": "Unlock unprecedented growth with Advisor Smart - Retail. This autonomous system provides supply chain with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Advisor Smart - Retail - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Advisor Smart - Retail. This autonomous system provides supply chain with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/advisor-smart---retail-93d4de9d"
+    }
+  },
+  "features": [
+    "Role-based access control",
+    "Machine learning integration",
+    "Custom integrations",
+    "Comprehensive monitoring",
+    "HIPAA ready"
+  ],
+  "benefits": [
+    "Cost optimization recommendations",
+    "Scalable to millions of transactions",
+    "Enterprise-grade security"
+  ]
+}

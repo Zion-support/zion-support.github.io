@@ -1,0 +1,29 @@
+{
+  "title": "Natural Language Search Engine",
+  "description": "AI-powered search that understands natural language queries. Semantic search, auto-summarization, and question-answering over documents, databases, and knowledge bases.",
+  "basic": "$399/mo/month",
+  "pro": "$1,299/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Natural Language Search Engine - Zion Tech Group",
+    "description": "AI-powered search that understands natural language queries. Semantic search, auto-summarization, and question-answering over documents, databases, and knowledg",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-natural-language-search"
+    }
+  },
+  "features": [
+    "Semantic search (vector embeddings)",
+    "Natural language question answering",
+    "Auto-summarization of results",
+    "Multi-language support",
+    "Document and database indexing"
+  ],
+  "benefits": [
+    "Find information 10x faster",
+    "Natural language instead of keywords",
+    "Summarized answers not just links",
+    "Improve knowledge discovery"
+  ]
+}

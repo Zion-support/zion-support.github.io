@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/generator-adaptive---real-estate-5d2a40f5",
+  "breadcrumbTitle": "Generator Adaptive - Real-Estate",
+  "title": "Generator Adaptive - Real-Estate",
+  "description": "Revolutionize real-estate through intelligent automation. Our Generator Adaptive - Real-Estate leverages advanced machine learning to deliver market intelligenc",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Generator Adaptive - Real-Estate - Zion Tech Group",
+    "description": "Revolutionize real-estate through intelligent automation. Our Generator Adaptive - Real-Estate leverages advanced machine learning to deliver market intelligenc",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/generator-adaptive---real-estate-5d2a40f5"
+    }
+  },
+  "features": [
+    "HIPAA ready",
+    "Multi-region deployment",
+    "Offline capabilities",
+    "API-first design"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "Real-time insights and alerts",
+    "Scalable to millions of transactions",
+    "3x faster decision making",
+    "Predictive maintenance scheduling"
+  ]
+}

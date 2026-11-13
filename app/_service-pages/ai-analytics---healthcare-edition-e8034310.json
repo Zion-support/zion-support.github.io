@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-analytics---healthcare-edition-e8034310",
+  "breadcrumbTitle": "AI Analytics - Healthcare Edition",
+  "title": "AI Analytics - Healthcare Edition",
+  "description": "Next-generation healthcare solution: AI Analytics - Healthcare Edition. Combines data processing with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Analytics - Healthcare Edition - Zion Tech Group",
+    "description": "Next-generation healthcare solution: AI Analytics - Healthcare Edition. Combines data processing with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-analytics---healthcare-edition-e8034310"
+    }
+  },
+  "features": [
+    "Plugin architecture",
+    "Offline capabilities",
+    "Serverless functions",
+    "Machine learning integration",
+    "Auto-scaling capabilities"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "Self-healing infrastructure",
+    "Reduced human error by 95%"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/suite-smart---agriculture-e126a6bd",
+  "breadcrumbTitle": "Suite Smart - Agriculture",
+  "title": "Suite Smart - Agriculture",
+  "description": "Next-generation agriculture solution: Suite Smart - Agriculture. Combines predictive analytics with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Suite Smart - Agriculture - Zion Tech Group",
+    "description": "Next-generation agriculture solution: Suite Smart - Agriculture. Combines predictive analytics with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/suite-smart---agriculture-e126a6bd"
+    }
+  },
+  "features": [
+    "Serverless functions",
+    "Audit trails",
+    "Multi-language support",
+    "Alerting system",
+    "Role-based access control"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "Dynamic resource allocation",
+    "3x faster decision making",
+    "Self-healing infrastructure"
+  ]
+}

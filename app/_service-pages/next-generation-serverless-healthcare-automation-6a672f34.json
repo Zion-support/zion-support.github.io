@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/next-generation-serverless-healthcare-automation-6a672f34",
+  "breadcrumbTitle": "Next-Generation Serverless Healthcare Automation",
+  "title": "Next-Generation Serverless Healthcare Automation",
+  "description": "Next-generation automation suite that streamlines serverless healthcare workflows with intelligent orchestration.",
+  "basic": "$218/month",
+  "pro": "$548/month",
+  "enterprise": "$1648/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Next-Generation Serverless Healthcare Automation - Zion Tech Group",
+    "description": "Next-generation automation suite that streamlines serverless healthcare workflows with intelligent orchestration.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/next-generation-serverless-healthcare-automation-6a672f34"
+    }
+  },
+  "features": [
+    "Smart orchestration",
+    "Process automation",
+    "Event processing",
+    "Task scheduling"
+  ],
+  "benefits": [
+    "Faster execution",
+    "Reduced manual steps",
+    "Scalable processes",
+    "Error reduction"
+  ]
+}

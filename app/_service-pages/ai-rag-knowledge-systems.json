@@ -1,0 +1,29 @@
+{
+  "title": "AI RAG & Knowledge Systems",
+  "description": "Enterprise retrieval-augmented generation (RAG) for accurate, grounded AI. Connect LLMs to your knowledge bases, documents, and real-time data with...",
+  "basic": "$149/mo/month",
+  "pro": "$399/mo/month",
+  "enterprise": "$1,299/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI RAG & Knowledge Systems - Zion Tech Group",
+    "description": "Enterprise retrieval-augmented generation (RAG) for accurate, grounded AI. Connect LLMs to your knowledge bases, documents, and real-time data with...",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-rag-knowledge-systems"
+    }
+  },
+  "features": [
+    "Intelligent Retrieval",
+    "Source Attribution & Citations",
+    "Knowledge Graph Integration",
+    "Real-Time Data Grounding",
+    "Chunking & Embedding Strategies"
+  ],
+  "benefits": [
+    "Reduce costs with ai rag & knowledge systems",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

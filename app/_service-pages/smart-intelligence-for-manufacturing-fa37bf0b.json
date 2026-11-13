@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/smart-intelligence-for-manufacturing-fa37bf0b",
+  "breadcrumbTitle": "Smart Intelligence for Manufacturing",
+  "title": "Smart Intelligence for Manufacturing",
+  "description": "Next-generation manufacturing solution: Smart Intelligence for Manufacturing. Combines content generation with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Intelligence for Manufacturing - Zion Tech Group",
+    "description": "Next-generation manufacturing solution: Smart Intelligence for Manufacturing. Combines content generation with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-intelligence-for-manufacturing-fa37bf0b"
+    }
+  },
+  "features": [
+    "Performance dashboards",
+    "Serverless functions",
+    "Multi-language support",
+    "Open-source friendly"
+  ],
+  "benefits": [
+    "Seamless integration with existing systems",
+    "ROI in under 90 days",
+    "Intelligent load balancing"
+  ]
+}

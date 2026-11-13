@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/smart-engine-for-legal-c24324e8",
+  "breadcrumbTitle": "Smart Engine for Legal",
+  "title": "Smart Engine for Legal",
+  "description": "Transform your legal operations with our Smart Engine for Legal. This AI-driven solution automates process automation with unprecedented accuracy and efficiency",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Engine for Legal - Zion Tech Group",
+    "description": "Transform your legal operations with our Smart Engine for Legal. This AI-driven solution automates process automation with unprecedented accuracy and efficiency",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-engine-for-legal-c24324e8"
+    }
+  },
+  "features": [
+    "Performance dashboards",
+    "Serverless functions",
+    "Comprehensive monitoring",
+    "Plugin architecture"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Automated compliance reporting",
+    "Reduced human error by 95%",
+    "Scalable to millions of transactions"
+  ]
+}

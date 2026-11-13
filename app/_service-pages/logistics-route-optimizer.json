@@ -1,0 +1,29 @@
+{
+  "title": "Logistics Route Optimizer",
+  "description": "AI-powered route optimization for delivery fleets. Real-time traffic, driver hours, vehicle capacity, and customer preferences for optimal routing.",
+  "basic": "$N/A/month",
+  "pro": "$N/A/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Logistics Route Optimizer - Zion Tech Group",
+    "description": "AI-powered route optimization for delivery fleets. Real-time traffic, driver hours, vehicle capacity, and customer preferences for optimal routing.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/logistics-route-optimizer"
+    }
+  },
+  "features": [
+    "Route optimization",
+    "Real-time traffic",
+    "Driver hours tracking",
+    "Vehicle capacity",
+    "Customer preferences"
+  ],
+  "benefits": [
+    "25% fuel savings",
+    "40% more deliveries",
+    "Customer satisfaction",
+    "Driver efficiency"
+  ]
+}

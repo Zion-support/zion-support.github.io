@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/intelligent-analyzer-telecom-3be20edc",
+  "breadcrumbTitle": "Intelligent analyzer-telecom",
+  "title": "Intelligent analyzer-telecom",
+  "description": "Unlock unprecedented growth with Intelligent analyzer-telecom. This autonomous system provides customer insights with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent analyzer-telecom - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Intelligent analyzer-telecom. This autonomous system provides customer insights with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-analyzer-telecom-3be20edc"
+    }
+  },
+  "features": [
+    "Alerting system",
+    "Comprehensive monitoring",
+    "Auto-scaling capabilities",
+    "Real-time processing",
+    "Role-based access control"
+  ],
+  "benefits": [
+    "Intelligent load balancing",
+    "50% reduction in operational costs",
+    "Zero manual intervention required",
+    "Performance benchmarking",
+    "3x faster decision making"
+  ]
+}

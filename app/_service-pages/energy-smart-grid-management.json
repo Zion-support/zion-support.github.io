@@ -1,0 +1,29 @@
+{
+  "title": "AI Smart Grid Management Platform",
+  "description": "AI-powered smart grid management for utilities. Load forecasting, demand response optimization, renewable integration, and outage prediction.",
+  "basic": "$4,999/mo/month",
+  "pro": "$14,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Smart Grid Management Platform - Zion Tech Group",
+    "description": "AI-powered smart grid management for utilities. Load forecasting, demand response optimization, renewable integration, and outage prediction.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/energy-smart-grid-management"
+    }
+  },
+  "features": [
+    "Load forecasting (ML models)",
+    "Demand response optimization",
+    "Renewable energy integration",
+    "Outage prediction and prevention",
+    "Grid stability monitoring"
+  ],
+  "benefits": [
+    "Reduce grid outages by 40%",
+    "Optimize renewable energy usage",
+    "Improve grid stability",
+    "Reduce operational costs"
+  ]
+}

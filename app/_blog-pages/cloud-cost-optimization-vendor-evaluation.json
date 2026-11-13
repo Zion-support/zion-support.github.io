@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "Cloud Cost Optimization: vendor evaluation | Zion Tech Group",
+    "description": "Cloud Cost Optimization: vendor evaluation",
+    "keywords": [
+      "data",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "Cloud Cost Optimization: vendor evaluation",
+      "description": "Cloud Cost Optimization: vendor evaluation",
+      "url": "https://ziontechgroup.com/blog/cloud-cost-optimization-vendor-evaluation/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/cloud-cost-optimization-vendor-evaluation/"
+    }
+  },
+  "values": [
+    "Cloud Cost Optimization: vendor evaluation",
+    "Cloud Cost Optimization: vendor evaluation",
+    "Cloud Cost Optimization: vendor evaluation",
+    "Next actions",
+    "Review your highest-friction workflow, contact Zion Tech Group for a scoped pilot, and start with one measurable outcome. Set a 30-day review date, define success metrics, assign an owner, and document rollback criteria before expanding. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan. The organizations that move fastest in 2026 are the ones that combine clear intent with disciplined execution.",
+    "Next actions",
+    " Review your highest-friction workflow, contact Zion Tech Group for a scoped pilot, and start with one measurable outcome. Set a 30-day review date, define success metrics, assign an owner, and document rollback criteria before expanding. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan. The organizations that move fastest in 2026 are the ones that combine clear intent with disciplined execution.",
+    "/blog/cloud-cost-ai-optimizer-2026-7086",
+    "Cloud Cost Ai Optimizer 2026 7086",
+    "/blog/ai-data-backup-2026-6900",
+    "Ai Data Backup 2026 6900",
+    "/blog/api-integration-2026-7220",
+    "Api Integration 2026 7220",
+    "/blog/api-integration-case-study",
+    "Api Integration Case Study"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Cloud Cost Optimization: vendor evaluation",
+    "description": "Cloud Cost Optimization: vendor evaluation",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T04:52:07Z",
+    "dateModified": "2026-08-07T04:52:07Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/cloud-cost-optimization-vendor-evaluation/"
+  }
+}

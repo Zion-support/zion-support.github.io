@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/advisor-ai---construction-d0d0f206",
+  "breadcrumbTitle": "Advisor AI - Construction",
+  "title": "Advisor AI - Construction",
+  "description": "The future of construction is here with Advisor AI - Construction. Powered by cutting-edge AI, this platform delivers supply chain like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Advisor AI - Construction - Zion Tech Group",
+    "description": "The future of construction is here with Advisor AI - Construction. Powered by cutting-edge AI, this platform delivers supply chain like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/advisor-ai---construction-d0d0f206"
+    }
+  },
+  "features": [
+    "Real-time processing",
+    "Rollback mechanisms",
+    "Multi-language support",
+    "Zero-downtime updates"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "Automated compliance reporting",
+    "Seamless integration with existing systems",
+    "Dynamic resource allocation"
+  ]
+}

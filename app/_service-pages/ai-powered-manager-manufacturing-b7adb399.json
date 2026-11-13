@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-manager-manufacturing-b7adb399",
+  "breadcrumbTitle": "AI-Powered manager-manufacturing",
+  "title": "AI-Powered manager-manufacturing",
+  "description": "Transform your manufacturing operations with our AI-Powered manager-manufacturing. This AI-driven solution automates quality control with unprecedented accuracy",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered manager-manufacturing - Zion Tech Group",
+    "description": "Transform your manufacturing operations with our AI-Powered manager-manufacturing. This AI-driven solution automates quality control with unprecedented accuracy",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-manager-manufacturing-b7adb399"
+    }
+  },
+  "features": [
+    "Serverless functions",
+    "Zero-downtime updates",
+    "Open-source friendly",
+    "Auto-scaling capabilities"
+  ],
+  "benefits": [
+    "Scalable to millions of transactions",
+    "Zero manual intervention required",
+    "3x faster decision making",
+    "Automated compliance reporting"
+  ]
+}

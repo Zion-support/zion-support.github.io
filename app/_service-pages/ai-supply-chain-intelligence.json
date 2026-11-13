@@ -1,0 +1,29 @@
+{
+  "title": "AI Supply Chain Intelligence",
+  "description": "End-to-end supply chain visibility with predictive disruption alerts, multi-tier vendor risk scoring, and AI-driven cost optimization.",
+  "basic": "$199/mo/month",
+  "pro": "$599/mo/month",
+  "enterprise": "$1,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Supply Chain Intelligence - Zion Tech Group",
+    "description": "End-to-end supply chain visibility with predictive disruption alerts, multi-tier vendor risk scoring, and AI-driven cost optimization.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-supply-chain-intelligence"
+    }
+  },
+  "features": [
+    "Real-time multi-tier visibility",
+    "Predictive disruption alerts",
+    "Vendor risk assessment",
+    "Cost optimization engine",
+    "Scenario simulation and planning"
+  ],
+  "benefits": [
+    "Reduce costs with ai supply chain intelligence",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

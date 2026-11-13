@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligent-resource-platform-e0981736",
+  "breadcrumbTitle": "Intelligent Resource Platform",
+  "title": "Intelligent Resource Platform",
+  "description": "Next-generation manufacturing solution: Intelligent Resource Platform. Combines image recognition with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Resource Platform - Zion Tech Group",
+    "description": "Next-generation manufacturing solution: Intelligent Resource Platform. Combines image recognition with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-resource-platform-e0981736"
+    }
+  },
+  "features": [
+    "Real-time processing",
+    "Container orchestration",
+    "GDPR compliance",
+    "API-first design"
+  ],
+  "benefits": [
+    "Dynamic resource allocation",
+    "Predictive maintenance scheduling",
+    "ROI in under 90 days",
+    "Self-healing infrastructure",
+    "Enterprise-grade security"
+  ]
+}

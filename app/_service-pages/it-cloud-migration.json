@@ -1,0 +1,29 @@
+{
+  "title": "IT Cloud Migration & Modernization Factory",
+  "description": "End-to-end cloud migration and application modernization. Rehost, re-platform, or refactor workloads to AWS, Azure, or GCP with zero downtime and automated testing.",
+  "basic": "$10,000/mo/month",
+  "pro": "$25,000/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "IT Cloud Migration & Modernization Factory - Zion Tech Group",
+    "description": "End-to-end cloud migration and application modernization. Rehost, re-platform, or refactor workloads to AWS, Azure, or GCP with zero downtime and automated test",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-cloud-migration"
+    }
+  },
+  "features": [
+    "Cloud readiness assessment and roadmap",
+    "Rehost, re-platform, refactor strategies",
+    "Database migration with zero downtime",
+    "Containerization and Kubernetes migration",
+    "Automated testing and validation"
+  ],
+  "benefits": [
+    "Migrate in half the time with automation",
+    "Reduce cloud costs by 30% from day one",
+    "Zero downtime during migration",
+    "Modernize legacy apps for cloud-native"
+  ]
+}

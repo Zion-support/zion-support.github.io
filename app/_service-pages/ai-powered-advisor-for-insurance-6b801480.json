@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-powered-advisor-for-insurance-6b801480",
+  "breadcrumbTitle": "AI-Powered Advisor for Insurance",
+  "title": "AI-Powered Advisor for Insurance",
+  "description": "The future of insurance is here with AI-Powered Advisor for Insurance. Powered by cutting-edge AI, this platform delivers document processing like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Advisor for Insurance - Zion Tech Group",
+    "description": "The future of insurance is here with AI-Powered Advisor for Insurance. Powered by cutting-edge AI, this platform delivers document processing like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-advisor-for-insurance-6b801480"
+    }
+  },
+  "features": [
+    "Performance dashboards",
+    "Mobile-responsive interface",
+    "API-first design",
+    "Custom integrations",
+    "Role-based access control"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "99.9% uptime guarantee",
+    "Seamless integration with existing systems",
+    "Automated compliance reporting"
+  ]
+}

@@ -1,0 +1,30 @@
+name: Worker asset package checks
+on:
+  pull_request:
+    paths:
+      - 'cloudflare/**'
+      - 'scripts/pack-worker-assets.mjs'
+      - 'scripts/worker-assets.test.mjs'
+      - 'wrangler.jsonc'
+      - '.github/workflows/worker-assets.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  runtime:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          sparse-checkout: |
+            cloudflare
+            scripts
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm install --prefix "$RUNNER_TEMP/worker-test" --no-audit --no-fund wrangler@4.161.0
+      - run: node --test scripts/worker-assets.test.mjs
+        env:
+          WORKER_TEST_MODULES: ${{ runner.temp }}/worker-test

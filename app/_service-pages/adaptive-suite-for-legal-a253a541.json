@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/adaptive-suite-for-legal-a253a541",
+  "breadcrumbTitle": "Adaptive Suite for Legal",
+  "title": "Adaptive Suite for Legal",
+  "description": "The future of legal is here with Adaptive Suite for Legal. Powered by cutting-edge AI, this platform delivers network optimization like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Adaptive Suite for Legal - Zion Tech Group",
+    "description": "The future of legal is here with Adaptive Suite for Legal. Powered by cutting-edge AI, this platform delivers network optimization like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/adaptive-suite-for-legal-a253a541"
+    }
+  },
+  "features": [
+    "Audit trails",
+    "Data encryption",
+    "API-first design",
+    "Mobile-responsive interface"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "Performance benchmarking",
+    "99.9% uptime guarantee"
+  ]
+}

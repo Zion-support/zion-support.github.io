@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/enterprise-declarative-sustainability-analytics-suite-a8e34aa5",
+  "breadcrumbTitle": "Enterprise Declarative Sustainability Analytics Suite",
+  "title": "Enterprise Declarative Sustainability Analytics Suite",
+  "description": "Enterprise analytics suite that delivers declarative sustainability insights with unified dashboards and reporting.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Enterprise Declarative Sustainability Analytics Suite - Zion Tech Group",
+    "description": "Enterprise analytics suite that delivers declarative sustainability insights with unified dashboards and reporting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/enterprise-declarative-sustainability-analytics-suite-a8e34aa5"
+    }
+  },
+  "features": [
+    "Data visualization",
+    "Custom dashboards",
+    "Report generation",
+    "KPI tracking"
+  ],
+  "benefits": [
+    "Unified data view",
+    "Faster insights",
+    "Customizable reports",
+    "Cross-functional collaboration"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/self-optimizing-document-insights-d44db59d",
+  "breadcrumbTitle": "Self-Optimizing Document Insights",
+  "title": "Self-Optimizing Document Insights",
+  "description": "Revolutionize real-estate through intelligent automation. Our Self-Optimizing Document Insights leverages advanced machine learning to deliver process automatio",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Self-Optimizing Document Insights - Zion Tech Group",
+    "description": "Revolutionize real-estate through intelligent automation. Our Self-Optimizing Document Insights leverages advanced machine learning to deliver process automatio",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/self-optimizing-document-insights-d44db59d"
+    }
+  },
+  "features": [
+    "Alerting system",
+    "Machine learning integration",
+    "Audit trails",
+    "Auto-scaling capabilities"
+  ],
+  "benefits": [
+    "50% reduction in operational costs",
+    "Cost optimization recommendations",
+    "Zero manual intervention required"
+  ]
+}

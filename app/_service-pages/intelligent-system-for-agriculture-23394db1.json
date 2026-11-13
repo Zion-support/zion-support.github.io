@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/intelligent-system-for-agriculture-23394db1",
+  "breadcrumbTitle": "Intelligent System for Agriculture",
+  "title": "Intelligent System for Agriculture",
+  "description": "Revolutionize agriculture through intelligent automation. Our Intelligent System for Agriculture leverages advanced machine learning to deliver code optimizatio",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent System for Agriculture - Zion Tech Group",
+    "description": "Revolutionize agriculture through intelligent automation. Our Intelligent System for Agriculture leverages advanced machine learning to deliver code optimizatio",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-system-for-agriculture-23394db1"
+    }
+  },
+  "features": [
+    "Real-time processing",
+    "Microservices deployment",
+    "Mobile-responsive interface",
+    "Open-source friendly",
+    "HIPAA ready"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "50% reduction in operational costs",
+    "24/7 automated operations",
+    "Self-healing infrastructure",
+    "Real-time insights and alerts"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-optimization---construction-edition-b7614339",
+  "breadcrumbTitle": "AI Optimization - Construction Edition",
+  "title": "AI Optimization - Construction Edition",
+  "description": "Unlock unprecedented growth with AI Optimization - Construction Edition. This autonomous system provides data processing with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Optimization - Construction Edition - Zion Tech Group",
+    "description": "Unlock unprecedented growth with AI Optimization - Construction Edition. This autonomous system provides data processing with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-optimization---construction-edition-b7614339"
+    }
+  },
+  "features": [
+    "API-first design",
+    "Edge computing support",
+    "SOC 2 certified",
+    "Audit trails"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "Cost optimization recommendations",
+    "Enterprise-grade security",
+    "Reduced human error by 95%",
+    "Dynamic resource allocation"
+  ]
+}

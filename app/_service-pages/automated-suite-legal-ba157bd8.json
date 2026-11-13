@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/automated-suite-legal-ba157bd8",
+  "breadcrumbTitle": "Automated suite-legal",
+  "title": "Automated suite-legal",
+  "description": "Revolutionize legal through intelligent automation. Our Automated suite-legal leverages advanced machine learning to deliver user experience at scale.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated suite-legal - Zion Tech Group",
+    "description": "Revolutionize legal through intelligent automation. Our Automated suite-legal leverages advanced machine learning to deliver user experience at scale.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-suite-legal-ba157bd8"
+    }
+  },
+  "features": [
+    "Custom integrations",
+    "SOC 2 certified",
+    "Rollback mechanisms",
+    "Comprehensive monitoring",
+    "Role-based access control"
+  ],
+  "benefits": [
+    "Cost optimization recommendations",
+    "Performance benchmarking",
+    "3x faster decision making",
+    "50% reduction in operational costs",
+    "ROI in under 90 days"
+  ]
+}

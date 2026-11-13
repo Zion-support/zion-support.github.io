@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/director-ai---logistics-7c3696e2",
+  "breadcrumbTitle": "Director AI - Logistics",
+  "title": "Director AI - Logistics",
+  "description": "Next-generation logistics solution: Director AI - Logistics. Combines predictive analytics with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Director AI - Logistics - Zion Tech Group",
+    "description": "Next-generation logistics solution: Director AI - Logistics. Combines predictive analytics with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/director-ai---logistics-7c3696e2"
+    }
+  },
+  "features": [
+    "Offline capabilities",
+    "Multi-region deployment",
+    "Container orchestration",
+    "HIPAA ready"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "Enterprise-grade security",
+    "Reduced human error by 95%"
+  ]
+}

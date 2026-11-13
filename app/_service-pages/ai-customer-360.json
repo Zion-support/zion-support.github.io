@@ -1,0 +1,29 @@
+{
+  "title": "Customer 360 Unified Profile",
+  "description": "Aggregate all customer data (CRM, support, usage, billing) into single timeline. AI suggests next best action per customer.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Customer 360 Unified Profile - Zion Tech Group",
+    "description": "Aggregate all customer data (CRM, support, usage, billing) into single timeline. AI suggests next best action per customer.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-customer-360"
+    }
+  },
+  "features": [
+    "Data unification (10+ sources)",
+    "Timeline view",
+    "Next-best-action recommendations",
+    "Segment builder",
+    "Predictive CLV"
+  ],
+  "benefits": [
+    "Reduce costs with customer 360 unified profile",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

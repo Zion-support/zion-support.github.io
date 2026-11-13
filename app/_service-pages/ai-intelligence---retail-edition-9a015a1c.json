@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-intelligence---retail-edition-9a015a1c",
+  "breadcrumbTitle": "AI Intelligence - Retail Edition",
+  "title": "AI Intelligence - Retail Edition",
+  "description": "Transform your retail operations with our AI Intelligence - Retail Edition. This AI-driven solution automates market intelligence with unprecedented accuracy an",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Intelligence - Retail Edition - Zion Tech Group",
+    "description": "Transform your retail operations with our AI Intelligence - Retail Edition. This AI-driven solution automates market intelligence with unprecedented accuracy an",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-intelligence---retail-edition-9a015a1c"
+    }
+  },
+  "features": [
+    "Open-source friendly",
+    "Mobile-responsive interface",
+    "Plugin architecture",
+    "Multi-region deployment",
+    "Auto-scaling capabilities"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "Enterprise-grade security",
+    "Self-healing infrastructure"
+  ]
+}

@@ -1,6 +1,5 @@
 // app/industries/healthcare-services/page.tsx
 // SEO-optimized landing page for Healthcare IT & Life Sciences
-'use client';
 
 import { Suspense } from 'react';
 import Link from 'next/link';

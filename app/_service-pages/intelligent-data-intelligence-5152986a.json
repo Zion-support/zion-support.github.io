@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-data-intelligence-5152986a",
+  "breadcrumbTitle": "Intelligent Data Intelligence",
+  "title": "Intelligent Data Intelligence",
+  "description": "The future of automotive is here with Intelligent Data Intelligence. Powered by cutting-edge AI, this platform delivers compliance monitoring like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Data Intelligence - Zion Tech Group",
+    "description": "The future of automotive is here with Intelligent Data Intelligence. Powered by cutting-edge AI, this platform delivers compliance monitoring like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-data-intelligence-5152986a"
+    }
+  },
+  "features": [
+    "Alerting system",
+    "Serverless functions",
+    "Real-time processing",
+    "Edge computing support"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Automated compliance reporting",
+    "3x faster decision making",
+    "Dynamic resource allocation"
+  ]
+}

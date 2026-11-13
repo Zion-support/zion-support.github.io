@@ -1,0 +1,29 @@
+{
+  "title": "Pharma & Life Sciences Automation",
+  "description": "Automate pharmaceutical operations: clinical trial management, regulatory submissions, pharmacovigilance, and GxP compliance. FDA/EMA aligned.",
+  "basic": "$1,999/mo/month",
+  "pro": "$5,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Pharma & Life Sciences Automation - Zion Tech Group",
+    "description": "Automate pharmaceutical operations: clinical trial management, regulatory submissions, pharmacovigilance, and GxP compliance. FDA/EMA aligned.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w176-pharma-automation"
+    }
+  },
+  "features": [
+    "Clinical trial workflow automation",
+    "Regulatory submission drafting and tracking",
+    "Pharmacovigilance signal detection",
+    "GxP compliance and audit management",
+    "Document control and eSignatures"
+  ],
+  "benefits": [
+    "Clinical trial ops accelerated by 40%",
+    "Regulatory submissions on time, every time",
+    "Pharmacovigilance detects signals earlier",
+    "GxP compliance automated, not manual"
+  ]
+}

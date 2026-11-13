@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/system-adaptive---legal-5e738b63",
+  "breadcrumbTitle": "System Adaptive - Legal",
+  "title": "System Adaptive - Legal",
+  "description": "Transform your legal operations with our System Adaptive - Legal. This AI-driven solution automates data processing with unprecedented accuracy and efficiency.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "System Adaptive - Legal - Zion Tech Group",
+    "description": "Transform your legal operations with our System Adaptive - Legal. This AI-driven solution automates data processing with unprecedented accuracy and efficiency.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/system-adaptive---legal-5e738b63"
+    }
+  },
+  "features": [
+    "Alerting system",
+    "Role-based access control",
+    "GDPR compliance",
+    "SOC 2 certified"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Performance benchmarking",
+    "Cost optimization recommendations"
+  ]
+}

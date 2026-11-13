@@ -1,0 +1,29 @@
+{
+  "title": "SRE as a Service",
+  "description": "Dedicated Site Reliability Engineering team for your infrastructure. SLO management, incident response, capacity planning, chaos engineering, and reliability best practices.",
+  "basic": "$N/A/month",
+  "pro": "$N/A/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "SRE as a Service - Zion Tech Group",
+    "description": "Dedicated Site Reliability Engineering team for your infrastructure. SLO management, incident response, capacity planning, chaos engineering, and reliability be",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-sre-as-a-service"
+    }
+  },
+  "features": [
+    "SLO definition/management",
+    "Incident response",
+    "Capacity planning",
+    "Chaos engineering",
+    "Error budget tracking"
+  ],
+  "benefits": [
+    "99.99% reliability target",
+    "MTTR reduced by 60%",
+    "Error budget culture",
+    "Proactive reliability"
+  ]
+}

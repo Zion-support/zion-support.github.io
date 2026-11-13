@@ -3,7 +3,7 @@
 
 import { useState, useMemo } from 'react';
 import Link from 'next/link';
-import { allServices, type Service } from '@/data/servicesData';
+import { allServices, type Service } from '@/data/servicesClientData';
 import { CATEGORIES } from '@/constants/categories';
 import AnimatedCounter from '@/components/AnimatedCounter';
 
@@ -28,8 +28,8 @@ const INDUSTRY_SERVICES: Record<string, {
   services: string[];
   painPoints: string[];
   solutions: string[];
-  seoKeywords: string[];
-  seoBenefits: string[];
+  seoKeywords?: string[];
+  seoBenefits?: string[];
 }> = {
   'healthcare-&-life-sciences': {
     key: 'healthcare-&-life-sciences',

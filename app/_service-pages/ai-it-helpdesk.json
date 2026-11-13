@@ -1,0 +1,29 @@
+{
+  "title": "AI IT Helpdesk & Support",
+  "description": "Automated Tier-1 IT support for employees: password resets, software installs, device troubleshooting, and knowledge base search.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI IT Helpdesk & Support - Zion Tech Group",
+    "description": "Automated Tier-1 IT support for employees: password resets, software installs, device troubleshooting, and knowledge base search.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-it-helpdesk"
+    }
+  },
+  "features": [
+    "Automated ticket creation & routing",
+    "Knowledge base search with semantic understanding",
+    "Password reset & MFA enrollment automation",
+    "Software request fulfillment workflows",
+    "Hardware troubleshooting decision trees"
+  ],
+  "benefits": [
+    "Reduce costs with ai it helpdesk & support",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

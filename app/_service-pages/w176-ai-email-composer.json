@@ -1,0 +1,29 @@
+{
+  "title": "AI Email Composer & Optimizer",
+  "description": "AI-powered email drafting with tone matching, audience adaptation, subject line optimization, and send-time prediction. Increase open rates by 35% and response rates by 50%.",
+  "basic": "$29/mo/month",
+  "pro": "$79/mo/month",
+  "enterprise": "$249/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Email Composer & Optimizer - Zion Tech Group",
+    "description": "AI-powered email drafting with tone matching, audience adaptation, subject line optimization, and send-time prediction. Increase open rates by 35% and response ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w176-ai-email-composer"
+    }
+  },
+  "features": [
+    "Context-aware email drafting",
+    "Tone matching (formal, friendly, urgent, persuasive)",
+    "Subject line A/B optimization",
+    "Send-time prediction per recipient",
+    "Response prediction scoring"
+  ],
+  "benefits": [
+    "Draft perfect emails in seconds",
+    "Subject optimization increases opens by 35%",
+    "Send-time prediction maximizes visibility",
+    "Response scoring prioritizes follow-ups"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "AI Financial Advisory Copilot",
+  "description": "AI copilot for financial advisors: portfolio analysis, risk assessment, compliance checking, and client communication drafting. SEC/FINRA compliant with audit trails.",
+  "basic": "$599/mo/month",
+  "pro": "$1,799/mo/month",
+  "enterprise": "$5,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Financial Advisory Copilot - Zion Tech Group",
+    "description": "AI copilot for financial advisors: portfolio analysis, risk assessment, compliance checking, and client communication drafting. SEC/FINRA compliant with audit t",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w174-ai-financial-advisor"
+    }
+  },
+  "features": [
+    "Portfolio analysis and rebalancing suggestions",
+    "Risk assessment with scenario modeling",
+    "Compliance checking (SEC, FINRA, suitability)",
+    "Client report and communication drafting",
+    "Market intelligence and news summarization"
+  ],
+  "benefits": [
+    "Serve 3x more clients with AI assistance",
+    "Compliance checks on every recommendation",
+    "Real-time market intelligence in every meeting",
+    "Full audit trail for regulatory examinations"
+  ]
+}

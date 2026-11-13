@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/suite-adaptive---real-estate-49a18dbc",
+  "breadcrumbTitle": "Suite Adaptive - Real-Estate",
+  "title": "Suite Adaptive - Real-Estate",
+  "description": "Transform your real-estate operations with our Suite Adaptive - Real-Estate. This AI-driven solution automates data processing with unprecedented accuracy and e",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Suite Adaptive - Real-Estate - Zion Tech Group",
+    "description": "Transform your real-estate operations with our Suite Adaptive - Real-Estate. This AI-driven solution automates data processing with unprecedented accuracy and e",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/suite-adaptive---real-estate-49a18dbc"
+    }
+  },
+  "features": [
+    "Auto-scaling capabilities",
+    "HIPAA ready",
+    "Data encryption",
+    "Plugin architecture"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Self-healing infrastructure",
+    "Cost optimization recommendations"
+  ]
+}

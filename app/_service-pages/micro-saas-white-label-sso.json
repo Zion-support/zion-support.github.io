@@ -1,0 +1,29 @@
+{
+  "title": "White-Label SSO & Identity Provider",
+  "description": "Embeddable single sign-on solution for SaaS platforms. Multi-tenant identity management, social login, MFA, and self-service branding for your customers.",
+  "basic": "$N/A/month",
+  "pro": "$N/A/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "White-Label SSO & Identity Provider - Zion Tech Group",
+    "description": "Embeddable single sign-on solution for SaaS platforms. Multi-tenant identity management, social login, MFA, and self-service branding for your customers.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-white-label-sso"
+    }
+  },
+  "features": [
+    "Multi-tenant SSO",
+    "Social login (Google, Apple, GitHub)",
+    "MFA/TOTP/SMS",
+    "Custom branding per tenant",
+    "SCIM provisioning"
+  ],
+  "benefits": [
+    "Reduce auth dev time by 80%",
+    "Enterprise-grade security",
+    "White-label ready",
+    "SOC 2 compliant"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "Legacy App Refactoring & Strangler Fig",
+  "description": "Strangler fig: reverse-engineer monolith deps, incrementally migrate bounded contexts to modern services with feature-flags, dual-run validation, rollback at every step.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Legacy App Refactoring & Strangler Fig - Zion Tech Group",
+    "description": "Strangler fig: reverse-engineer monolith deps, incrementally migrate bounded contexts to modern services with feature-flags, dual-run validation, rollback at ev",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/legacy-app-refactor"
+    }
+  },
+  "features": [
+    "Strangler fig incremental migration plan",
+    "Gradual bounded-context extraction per sprint",
+    "Dual-run production validation + canary",
+    "Feature-flag cutover per module",
+    "Anti-corruption layer per legacy interface"
+  ],
+  "benefits": [
+    "Reduce costs with legacy app refactoring & strangler fig",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

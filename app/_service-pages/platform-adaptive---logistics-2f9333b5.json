@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/platform-adaptive---logistics-2f9333b5",
+  "breadcrumbTitle": "Platform Adaptive - Logistics",
+  "title": "Platform Adaptive - Logistics",
+  "description": "Transform your logistics operations with our Platform Adaptive - Logistics. This AI-driven solution automates content generation with unprecedented accuracy and",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Platform Adaptive - Logistics - Zion Tech Group",
+    "description": "Transform your logistics operations with our Platform Adaptive - Logistics. This AI-driven solution automates content generation with unprecedented accuracy and",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/platform-adaptive---logistics-2f9333b5"
+    }
+  },
+  "features": [
+    "Cloud-native architecture",
+    "HIPAA ready",
+    "SOC 2 certified",
+    "Microservices deployment",
+    "Machine learning integration"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "99.9% uptime guarantee",
+    "Self-healing infrastructure",
+    "Automated compliance reporting",
+    "Intelligent load balancing"
+  ]
+}

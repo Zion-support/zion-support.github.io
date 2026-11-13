@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/ai-powered-performance-automation-1-c52d08dc",
+  "breadcrumbTitle": "AI-Powered Performance Automation #1",
+  "title": "AI-Powered Performance Automation #1",
+  "description": "Revolutionize hospitality through intelligent automation. Our AI-Powered Performance Automation #1 leverages advanced machine learning to deliver compliance mon",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI-Powered Performance Automation #1 - Zion Tech Group",
+    "description": "Revolutionize hospitality through intelligent automation. Our AI-Powered Performance Automation #1 leverages advanced machine learning to deliver compliance mon",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-performance-automation-1-c52d08dc"
+    }
+  },
+  "features": [
+    "Performance dashboards",
+    "Plugin architecture",
+    "SOC 2 certified",
+    "Open-source friendly"
+  ],
+  "benefits": [
+    "Intelligent load balancing",
+    "Self-healing infrastructure",
+    "Zero manual intervention required"
+  ]
+}

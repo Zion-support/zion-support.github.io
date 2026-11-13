@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligence-intelligent---telecom-e5d6f4e3",
+  "breadcrumbTitle": "Intelligence Intelligent - Telecom",
+  "title": "Intelligence Intelligent - Telecom",
+  "description": "Next-generation telecom solution: Intelligence Intelligent - Telecom. Combines market intelligence with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligence Intelligent - Telecom - Zion Tech Group",
+    "description": "Next-generation telecom solution: Intelligence Intelligent - Telecom. Combines market intelligence with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligence-intelligent---telecom-e5d6f4e3"
+    }
+  },
+  "features": [
+    "Auto-scaling capabilities",
+    "Plugin architecture",
+    "Comprehensive monitoring",
+    "Mobile-responsive interface",
+    "API-first design"
+  ],
+  "benefits": [
+    "Cost optimization recommendations",
+    "99.9% uptime guarantee",
+    "Enterprise-grade security",
+    "3x faster decision making"
+  ]
+}

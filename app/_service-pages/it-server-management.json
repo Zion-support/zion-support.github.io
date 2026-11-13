@@ -1,0 +1,29 @@
+{
+  "title": "IT Server Management & Infrastructure Monitoring",
+  "description": "24/7 server management with proactive monitoring, patching, backups, and performance optimization. For on-premises, cloud, and hybrid environments.",
+  "basic": "$500/server/mo/month",
+  "pro": "$800/server/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "IT Server Management & Infrastructure Monitoring - Zion Tech Group",
+    "description": "24/7 server management with proactive monitoring, patching, backups, and performance optimization. For on-premises, cloud, and hybrid environments.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-server-management"
+    }
+  },
+  "features": [
+    "24/7 server monitoring and alerting",
+    "Automated patching and updates",
+    "Performance optimization and tuning",
+    "Backup verification and testing",
+    "Capacity planning and forecasting"
+  ],
+  "benefits": [
+    "Achieve 99.9% server uptime",
+    "Proactively prevent issues before they impact",
+    "Optimize server performance and costs",
+    "Ensure backups are always verified and ready"
+  ]
+}

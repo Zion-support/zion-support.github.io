@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/coordinator-autonomous---sports-ec100d31",
+  "breadcrumbTitle": "Coordinator Autonomous - Sports",
+  "title": "Coordinator Autonomous - Sports",
+  "description": "Revolutionize sports through intelligent automation. Our Coordinator Autonomous - Sports leverages advanced machine learning to deliver market intelligence at s",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Coordinator Autonomous - Sports - Zion Tech Group",
+    "description": "Revolutionize sports through intelligent automation. Our Coordinator Autonomous - Sports leverages advanced machine learning to deliver market intelligence at s",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/coordinator-autonomous---sports-ec100d31"
+    }
+  },
+  "features": [
+    "Machine learning integration",
+    "Real-time processing",
+    "API-first design",
+    "Mobile-responsive interface"
+  ],
+  "benefits": [
+    "24/7 automated operations",
+    "Predictive maintenance scheduling",
+    "Self-healing infrastructure",
+    "Real-time insights and alerts"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "AI Legal Research & Case Analysis",
+  "description": "AI legal research assistant that analyzes case law, statutes, and regulations in seconds. Generate legal memos, find relevant precedents, and predict case outcomes.",
+  "basic": "$599/mo/month",
+  "pro": "$1,799/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Legal Research & Case Analysis - Zion Tech Group",
+    "description": "AI legal research assistant that analyzes case law, statutes, and regulations in seconds. Generate legal memos, find relevant precedents, and predict case outco",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-legal-research-assistant"
+    }
+  },
+  "features": [
+    "Natural language legal research across jurisdictions",
+    "Case law analysis with relevance scoring",
+    "Automated legal memo generation",
+    "Contract clause risk analysis",
+    "Regulatory change monitoring"
+  ],
+  "benefits": [
+    "Research 10x faster than manual methods",
+    "Find relevant precedents others miss",
+    "Reduce legal research costs by 70%",
+    "Predict case outcomes with 85% accuracy"
+  ]
+}

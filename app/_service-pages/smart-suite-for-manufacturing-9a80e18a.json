@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/smart-suite-for-manufacturing-9a80e18a",
+  "breadcrumbTitle": "Smart Suite for Manufacturing",
+  "title": "Smart Suite for Manufacturing",
+  "description": "The future of manufacturing is here with Smart Suite for Manufacturing. Powered by cutting-edge AI, this platform delivers customer insights like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Suite for Manufacturing - Zion Tech Group",
+    "description": "The future of manufacturing is here with Smart Suite for Manufacturing. Powered by cutting-edge AI, this platform delivers customer insights like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-suite-for-manufacturing-9a80e18a"
+    }
+  },
+  "features": [
+    "HIPAA ready",
+    "Container orchestration",
+    "Plugin architecture",
+    "Zero-downtime updates"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "Automated compliance reporting",
+    "Enterprise-grade security",
+    "24/7 automated operations",
+    "3x faster decision making"
+  ]
+}

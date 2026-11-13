@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligence-intelligent---transportation-62ffcb50",
+  "breadcrumbTitle": "Intelligence Intelligent - Transportation",
+  "title": "Intelligence Intelligent - Transportation",
+  "description": "Revolutionize transportation through intelligent automation. Our Intelligence Intelligent - Transportation leverages advanced machine learning to deliver code o",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligence Intelligent - Transportation - Zion Tech Group",
+    "description": "Revolutionize transportation through intelligent automation. Our Intelligence Intelligent - Transportation leverages advanced machine learning to deliver code o",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligence-intelligent---transportation-62ffcb50"
+    }
+  },
+  "features": [
+    "Plugin architecture",
+    "Serverless functions",
+    "Alerting system",
+    "Offline capabilities",
+    "Auto-scaling capabilities"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Scalable to millions of transactions",
+    "3x faster decision making",
+    "Predictive maintenance scheduling"
+  ]
+}

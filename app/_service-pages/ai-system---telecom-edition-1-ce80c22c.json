@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/ai-system---telecom-edition-1-ce80c22c",
+  "breadcrumbTitle": "AI System - Telecom Edition #1",
+  "title": "AI System - Telecom Edition #1",
+  "description": "Revolutionize telecom through intelligent automation. Our AI System - Telecom Edition #1 leverages advanced machine learning to deliver maintenance scheduling a",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI System - Telecom Edition #1 - Zion Tech Group",
+    "description": "Revolutionize telecom through intelligent automation. Our AI System - Telecom Edition #1 leverages advanced machine learning to deliver maintenance scheduling a",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-system---telecom-edition-1-ce80c22c"
+    }
+  },
+  "features": [
+    "Open-source friendly",
+    "Mobile-responsive interface",
+    "Microservices deployment",
+    "Multi-region deployment",
+    "Edge computing support"
+  ],
+  "benefits": [
+    "50% reduction in operational costs",
+    "Cost optimization recommendations",
+    "Zero manual intervention required",
+    "Automated compliance reporting",
+    "Enterprise-grade security"
+  ]
+}

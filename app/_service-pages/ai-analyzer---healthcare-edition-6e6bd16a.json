@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-analyzer---healthcare-edition-6e6bd16a",
+  "breadcrumbTitle": "AI Analyzer - Healthcare Edition",
+  "title": "AI Analyzer - Healthcare Edition",
+  "description": "Next-generation healthcare solution: AI Analyzer - Healthcare Edition. Combines supply chain with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Analyzer - Healthcare Edition - Zion Tech Group",
+    "description": "Next-generation healthcare solution: AI Analyzer - Healthcare Edition. Combines supply chain with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-analyzer---healthcare-edition-6e6bd16a"
+    }
+  },
+  "features": [
+    "Rollback mechanisms",
+    "Comprehensive monitoring",
+    "SOC 2 certified",
+    "Data encryption"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "Reduced human error by 95%",
+    "24/7 automated operations",
+    "Cost optimization recommendations",
+    "3x faster decision making"
+  ]
+}

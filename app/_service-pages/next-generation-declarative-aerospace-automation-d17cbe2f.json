@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/next-generation-declarative-aerospace-automation-d17cbe2f",
+  "breadcrumbTitle": "Next-Generation Declarative Aerospace Automation",
+  "title": "Next-Generation Declarative Aerospace Automation",
+  "description": "Next-generation automation suite that streamlines declarative aerospace workflows with intelligent orchestration.",
+  "basic": "$218/month",
+  "pro": "$548/month",
+  "enterprise": "$1648/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Next-Generation Declarative Aerospace Automation - Zion Tech Group",
+    "description": "Next-generation automation suite that streamlines declarative aerospace workflows with intelligent orchestration.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/next-generation-declarative-aerospace-automation-d17cbe2f"
+    }
+  },
+  "features": [
+    "Smart orchestration",
+    "Process automation",
+    "Event processing",
+    "Task scheduling"
+  ],
+  "benefits": [
+    "Faster execution",
+    "Reduced manual steps",
+    "Scalable processes",
+    "Error reduction"
+  ]
+}

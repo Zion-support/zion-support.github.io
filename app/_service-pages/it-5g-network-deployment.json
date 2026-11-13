@@ -1,0 +1,29 @@
+{
+  "title": "5G Network Planning & Deployment",
+  "description": "End-to-end 5G network architecture, RF planning, edge computing integration, and private 5G deployment for enterprise campuses and industrial IoT.",
+  "basic": "$99/mo/month",
+  "pro": "$349/mo/month",
+  "enterprise": "$1,299/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "5G Network Planning & Deployment - Zion Tech Group",
+    "description": "End-to-end 5G network architecture, RF planning, edge computing integration, and private 5G deployment for enterprise campuses and industrial IoT.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-5g-network-deployment"
+    }
+  },
+  "features": [
+    "5G network architecture and RF planning",
+    "Private 5G network deployment for campuses",
+    "Edge computing integration with 5G infrastructure",
+    "Network slicing design and implementation",
+    "Industrial IoT connectivity and optimization"
+  ],
+  "benefits": [
+    "Reduce costs with 5g network planning & deployment",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

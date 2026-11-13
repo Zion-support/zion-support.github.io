@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "API Security Testing: executive guide | Zion Tech Group",
+    "description": "API Security Testing: executive guide",
+    "keywords": [
+      "data",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "API Security Testing: executive guide",
+      "description": "API Security Testing: executive guide",
+      "url": "https://ziontechgroup.com/blog/api-security-testing-executive-guide/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/api-security-testing-executive-guide/"
+    }
+  },
+  "values": [
+    "API Security Testing: executive guide",
+    "API Security Testing: executive guide",
+    "API Security Testing: executive guide",
+    "Next actions",
+    "Review your highest-friction workflow, contact Zion Tech Group for a scoped pilot, and start with one measurable outcome. Set a 30-day review date, define success metrics, assign an owner, and document rollback criteria before expanding. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan. The organizations that move fastest in 2026 are the ones that combine clear intent with disciplined execution.",
+    "Next actions",
+    " Review your highest-friction workflow, contact Zion Tech Group for a scoped pilot, and start with one measurable outcome. Set a 30-day review date, define success metrics, assign an owner, and document rollback criteria before expanding. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan. The organizations that move fastest in 2026 are the ones that combine clear intent with disciplined execution.",
+    "/blog/micro-saas-ai-hr-recruitment-2026-6783",
+    "Micro Saas Ai Hr Recruitment 2026 6783",
+    "/blog/managed-it-services-small-business-2026-6697",
+    "Managed It Services Small Business 2026 6697",
+    "/blog/micro-saas-ai-hr-recruitment-2026-6576",
+    "Micro Saas Ai Hr Recruitment 2026 6576",
+    "/blog/genai-devops-cicd-evaluation-framework",
+    "Genai Devops Cicd Evaluation Framework"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "API Security Testing: executive guide",
+    "description": "API Security Testing: executive guide",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T04:51:56Z",
+    "dateModified": "2026-08-07T04:51:56Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/api-security-testing-executive-guide/"
+  }
+}

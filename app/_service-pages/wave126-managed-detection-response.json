@@ -1,0 +1,29 @@
+{
+  "title": "Managed Detection & Response (MDR)",
+  "description": "Enterprise-grade 24/7 security operations delivered as a service. AI-augmented threat detection across endpoints, network, and cloud — with human-led incident investigation, containment, and response in under 15 minutes.",
+  "basic": "$N/A/month",
+  "pro": "$14997/month",
+  "enterprise": "$29997/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Managed Detection & Response (MDR) - Zion Tech Group",
+    "description": "Enterprise-grade 24/7 security operations delivered as a service. AI-augmented threat detection across endpoints, network, and cloud — with human-led incident i",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/wave126-managed-detection-response"
+    }
+  },
+  "features": [
+    "24/7 SOC with AI-augmented threat detection",
+    "Endpoint, network, and cloud telemetry correlation",
+    "Threat hunting by veteran security analysts",
+    "Incident investigation & containment (<15 min SLA)",
+    "Playbook-driven & custom incident response"
+  ],
+  "benefits": [
+    "Enterprise SOC capability without building one",
+    "Sub-15-minute response to active threats",
+    "Reduce mean time to detect by 90%",
+    "Compliance-ready with full audit trail"
+  ]
+}

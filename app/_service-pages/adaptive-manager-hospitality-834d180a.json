@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/adaptive-manager-hospitality-834d180a",
+  "breadcrumbTitle": "Adaptive manager-hospitality",
+  "title": "Adaptive manager-hospitality",
+  "description": "Next-generation hospitality solution: Adaptive manager-hospitality. Combines threat detection with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Adaptive manager-hospitality - Zion Tech Group",
+    "description": "Next-generation hospitality solution: Adaptive manager-hospitality. Combines threat detection with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/adaptive-manager-hospitality-834d180a"
+    }
+  },
+  "features": [
+    "Microservices deployment",
+    "Data encryption",
+    "Edge computing support",
+    "Multi-region deployment",
+    "GDPR compliance"
+  ],
+  "benefits": [
+    "24/7 automated operations",
+    "50% reduction in operational costs",
+    "Performance benchmarking"
+  ]
+}

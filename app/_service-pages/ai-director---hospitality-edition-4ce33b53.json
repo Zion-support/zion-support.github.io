@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-director---hospitality-edition-4ce33b53",
+  "breadcrumbTitle": "AI Director - Hospitality Edition",
+  "title": "AI Director - Hospitality Edition",
+  "description": "The future of hospitality is here with AI Director - Hospitality Edition. Powered by cutting-edge AI, this platform delivers risk assessment like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Director - Hospitality Edition - Zion Tech Group",
+    "description": "The future of hospitality is here with AI Director - Hospitality Edition. Powered by cutting-edge AI, this platform delivers risk assessment like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-director---hospitality-edition-4ce33b53"
+    }
+  },
+  "features": [
+    "Multi-region deployment",
+    "Edge computing support",
+    "Audit trails",
+    "Plugin architecture",
+    "Alerting system"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Scalable to millions of transactions",
+    "Enterprise-grade security"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "Database Optimization & Management",
+  "description": "Database performance tuning, query optimization, migration, and high-availability clustering for PostgreSQL, MySQL, MongoDB, and more.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Database Optimization & Management - Zion Tech Group",
+    "description": "Database performance tuning, query optimization, migration, and high-availability clustering for PostgreSQL, MySQL, MongoDB, and more.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/database-optimization"
+    }
+  },
+  "features": [
+    "Query performance analysis & optimization",
+    "Database schema design & migration",
+    "High-availability & replication setup",
+    "Automated backup & disaster recovery",
+    "Index optimization & caching strategies"
+  ],
+  "benefits": [
+    "Reduce costs with database optimization & management",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

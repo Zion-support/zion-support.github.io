@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/adaptive-orchestrator-logistics-0df545f6",
+  "breadcrumbTitle": "Adaptive orchestrator-logistics",
+  "title": "Adaptive orchestrator-logistics",
+  "description": "Revolutionize logistics through intelligent automation. Our Adaptive orchestrator-logistics leverages advanced machine learning to deliver market intelligence a",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Adaptive orchestrator-logistics - Zion Tech Group",
+    "description": "Revolutionize logistics through intelligent automation. Our Adaptive orchestrator-logistics leverages advanced machine learning to deliver market intelligence a",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/adaptive-orchestrator-logistics-0df545f6"
+    }
+  },
+  "features": [
+    "Comprehensive monitoring",
+    "Mobile-responsive interface",
+    "Alerting system",
+    "Microservices deployment",
+    "HIPAA ready"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "Predictive maintenance scheduling",
+    "Seamless integration with existing systems"
+  ]
+}

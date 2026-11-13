@@ -1,0 +1,29 @@
+{
+  "title": "Manufacturing Energy Management System",
+  "description": "AI-powered energy management for manufacturing facilities. Monitor, optimize, and reduce energy consumption across production lines while maintaining output quality.",
+  "basic": "$999/mo/month",
+  "pro": "$2,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Manufacturing Energy Management System - Zion Tech Group",
+    "description": "AI-powered energy management for manufacturing facilities. Monitor, optimize, and reduce energy consumption across production lines while maintaining output qua",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/manufacturing-energy-management"
+    }
+  },
+  "features": [
+    "Real-time energy monitoring",
+    "Peak demand management",
+    "Energy consumption forecasting",
+    "Equipment efficiency analysis",
+    "Carbon footprint tracking"
+  ],
+  "benefits": [
+    "Reduce energy costs by 20-35%",
+    "Meet sustainability targets",
+    "Optimize peak demand charges",
+    "Improve equipment efficiency"
+  ]
+}

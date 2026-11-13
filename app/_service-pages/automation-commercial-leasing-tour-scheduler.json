@@ -1,0 +1,29 @@
+{
+  "title": "Commercial Leasing & Property Tour Scheduler",
+  "description": "End-to-end commercial-property tour scheduling and lead qualification: booking agent handoff, CRM opportunity creation, automated reminders, post-tour follow-up nurturing, and leasing-commission attribution dashboard.",
+  "basic": "$99/mo/month",
+  "pro": "$299/mo/month",
+  "enterprise": "$999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Commercial Leasing & Property Tour Scheduler - Zion Tech Group",
+    "description": "End-to-end commercial-property tour scheduling and lead qualification: booking agent handoff, CRM opportunity creation, automated reminders, post-tour follow-up",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automation-commercial-leasing-tour-scheduler"
+    }
+  },
+  "features": [
+    "Self-service booking agent for commercial property showings",
+    "Automated CRM opportunity creation and lead scoring per inquiry source",
+    "Multi-channel tour reminders: SMS, email, WhatsApp, push notification",
+    "Post-tour nurturing sequence: re-engagement at 48 h, 1w, 2w, 4w with incremental incentives",
+    "Leasing-commission attribution: tie closed deals back to originating touchpoints"
+  ],
+  "benefits": [
+    "Reduce costs with commercial leasing & property tour scheduler",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

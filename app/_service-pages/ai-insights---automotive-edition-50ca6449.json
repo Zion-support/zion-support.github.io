@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-insights---automotive-edition-50ca6449",
+  "breadcrumbTitle": "AI Insights - Automotive Edition",
+  "title": "AI Insights - Automotive Edition",
+  "description": "Unlock unprecedented growth with AI Insights - Automotive Edition. This autonomous system provides energy management with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Insights - Automotive Edition - Zion Tech Group",
+    "description": "Unlock unprecedented growth with AI Insights - Automotive Edition. This autonomous system provides energy management with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-insights---automotive-edition-50ca6449"
+    }
+  },
+  "features": [
+    "Microservices deployment",
+    "Comprehensive monitoring",
+    "Cloud-native architecture",
+    "Audit trails",
+    "Data encryption"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Predictive maintenance scheduling",
+    "Cost optimization recommendations",
+    "Enterprise-grade security"
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "DevSecOps Pipeline: operations handbook | Zion Tech Group",
+    "description": "DevSecOps Pipeline: operations handbook",
+    "keywords": [
+      "it",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "DevSecOps Pipeline: operations handbook",
+      "description": "DevSecOps Pipeline: operations handbook",
+      "url": "https://ziontechgroup.com/blog/devsecops-pipeline-operations-handbook/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/devsecops-pipeline-operations-handbook/"
+    }
+  },
+  "values": [
+    "DevSecOps Pipeline: operations handbook",
+    "DevSecOps Pipeline: operations handbook",
+    "DevSecOps Pipeline: operations handbook",
+    "Conversion path",
+    "If this guide matches your devsecops pipeline: operations handbook initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "Conversion path",
+    " If this guide matches your devsecops pipeline: operations handbook initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "/blog/apm-application-performance-automation-roadmap",
+    "Apm Application Performance Automation Roadmap",
+    "/blog/microsaas-customer-onboarding-deployment-patterns",
+    "Microsaas Customer Onboarding Deployment Patterns",
+    "/blog/cloud-finops-2026",
+    "Cloud Finops 2026",
+    "/blog/autonomous-qa-engineering-2026-6592",
+    "Autonomous Qa Engineering 2026 6592"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "DevSecOps Pipeline: operations handbook",
+    "description": "DevSecOps Pipeline: operations handbook",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T07:56:49Z",
+    "dateModified": "2026-08-07T07:56:49Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/devsecops-pipeline-operations-handbook/"
+  }
+}

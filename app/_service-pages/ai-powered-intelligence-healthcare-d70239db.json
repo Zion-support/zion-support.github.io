@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-intelligence-healthcare-d70239db",
+  "breadcrumbTitle": "AI-Powered intelligence-healthcare",
+  "title": "AI-Powered intelligence-healthcare",
+  "description": "Next-generation healthcare solution: AI-Powered intelligence-healthcare. Combines resource optimization with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered intelligence-healthcare - Zion Tech Group",
+    "description": "Next-generation healthcare solution: AI-Powered intelligence-healthcare. Combines resource optimization with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-intelligence-healthcare-d70239db"
+    }
+  },
+  "features": [
+    "Real-time processing",
+    "Role-based access control",
+    "Container orchestration",
+    "GDPR compliance",
+    "Comprehensive monitoring"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "99.9% uptime guarantee",
+    "3x faster decision making"
+  ]
+}

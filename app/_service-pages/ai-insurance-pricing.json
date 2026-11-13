@@ -1,0 +1,28 @@
+{
+  "title": "AI Insurance Pricing Advisor",
+  "description": "ML pricing model for underwriters: ingests claim history risk factors market data produces per-risk pricing with confidence interval exposure summary benchmark vs competitors.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Insurance Pricing Advisor - Zion Tech Group",
+    "description": "ML pricing model for underwriters: ingests claim history risk factors market data produces per-risk pricing with confidence interval exposure summary benchmark ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-insurance-pricing"
+    }
+  },
+  "features": [
+    "Per-risk ML pricing model",
+    "Confidence interval + exposure summary",
+    "Market rate benchmarking vs competitors",
+    "Underwriter explainability per recommendation"
+  ],
+  "benefits": [
+    "Reduce costs with ai insurance pricing advisor",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

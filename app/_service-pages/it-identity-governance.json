@@ -1,0 +1,29 @@
+{
+  "title": "Identity Governance & Administration",
+  "description": "Centralized IGA: lifecycle management, access certifications, separation-of-duties policies. Integrates with Active Directory, Okta, Azure AD.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Identity Governance & Administration - Zion Tech Group",
+    "description": "Centralized IGA: lifecycle management, access certifications, separation-of-duties policies. Integrates with Active Directory, Okta, Azure AD.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-identity-governance"
+    }
+  },
+  "features": [
+    "Provisioning/deprovisioning workflows",
+    "Access certification campaigns",
+    "SoD policy engine",
+    "Role mining & optimization",
+    "SOD analytics"
+  ],
+  "benefits": [
+    "Reduce costs with identity governance & administration",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

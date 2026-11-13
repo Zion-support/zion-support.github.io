@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/autonomous-energy-director-ade8246d",
+  "breadcrumbTitle": "Autonomous Energy Director",
+  "title": "Autonomous Energy Director",
+  "description": "Transform your sports operations with our Autonomous Energy Director. This AI-driven solution automates image recognition with unprecedented accuracy and effici",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous Energy Director - Zion Tech Group",
+    "description": "Transform your sports operations with our Autonomous Energy Director. This AI-driven solution automates image recognition with unprecedented accuracy and effici",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-energy-director-ade8246d"
+    }
+  },
+  "features": [
+    "Custom integrations",
+    "Alerting system",
+    "Edge computing support",
+    "Multi-language support",
+    "Zero-downtime updates"
+  ],
+  "benefits": [
+    "Automated compliance reporting",
+    "99.9% uptime guarantee",
+    "ROI in under 90 days",
+    "50% reduction in operational costs"
+  ]
+}

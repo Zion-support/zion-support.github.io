@@ -1,0 +1,29 @@
+{
+  "title": "AI Voice Clone Studio",
+  "description": "Professional voice cloning and text-to-speech with 30-second sample creation. 50+ languages, emotion control, and real-time streaming. Built-in consent management and watermarking.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Voice Clone Studio - Zion Tech Group",
+    "description": "Professional voice cloning and text-to-speech with 30-second sample creation. 50+ languages, emotion control, and real-time streaming. Built-in consent manageme",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w174-ai-voice-clone-studio"
+    }
+  },
+  "features": [
+    "Voice cloning from 30-second audio sample",
+    "50+ language support with accent control",
+    "Emotion and speaking style adjustment",
+    "Real-time streaming TTS (< 200ms first byte)",
+    "Consent and licensing management"
+  ],
+  "benefits": [
+    "Clone any voice from just 30 seconds of audio",
+    "Real-time streaming for live applications",
+    "Consent management ensures ethical use",
+    "Watermarking prevents misuse"
+  ]
+}

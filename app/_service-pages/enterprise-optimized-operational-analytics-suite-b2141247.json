@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/enterprise-optimized-operational-analytics-suite-b2141247",
+  "breadcrumbTitle": "Enterprise Optimized Operational Analytics Suite",
+  "title": "Enterprise Optimized Operational Analytics Suite",
+  "description": "Enterprise analytics suite that delivers optimized operational insights with unified dashboards and reporting.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Enterprise Optimized Operational Analytics Suite - Zion Tech Group",
+    "description": "Enterprise analytics suite that delivers optimized operational insights with unified dashboards and reporting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/enterprise-optimized-operational-analytics-suite-b2141247"
+    }
+  },
+  "features": [
+    "Data visualization",
+    "Custom dashboards",
+    "Report generation",
+    "KPI tracking"
+  ],
+  "benefits": [
+    "Unified data view",
+    "Faster insights",
+    "Customizable reports",
+    "Cross-functional collaboration"
+  ]
+}

@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from 'react';
 import Link from 'next/link';
-import { allServices, type Service } from '@/data/servicesData';
+import { allServices, type Service } from '@/data/servicesClientData';
 import { CATEGORIES } from '@/constants/categories';
 
 interface Recommendation {
@@ -111,7 +111,7 @@ export default function SmartRecommendationEngine({ className = '' }: SmartRecom
           matchReasons: matchedKeywords.slice(0, 3)
         };
       })
-      .filter(Boolean)
+      .filter((service): service is Recommendation => service !== null)
       .sort((a, b) => b.score - a.score)
       .slice(0, 6);
 

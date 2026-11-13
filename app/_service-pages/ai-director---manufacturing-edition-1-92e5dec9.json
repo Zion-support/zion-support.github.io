@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-director---manufacturing-edition-1-92e5dec9",
+  "breadcrumbTitle": "AI Director - Manufacturing Edition #1",
+  "title": "AI Director - Manufacturing Edition #1",
+  "description": "Transform your manufacturing operations with our AI Director - Manufacturing Edition #1. This AI-driven solution automates performance monitoring with unprecede",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Director - Manufacturing Edition #1 - Zion Tech Group",
+    "description": "Transform your manufacturing operations with our AI Director - Manufacturing Edition #1. This AI-driven solution automates performance monitoring with unprecede",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-director---manufacturing-edition-1-92e5dec9"
+    }
+  },
+  "features": [
+    "Performance dashboards",
+    "Edge computing support",
+    "Plugin architecture",
+    "HIPAA ready"
+  ],
+  "benefits": [
+    "Intelligent load balancing",
+    "Performance benchmarking",
+    "Zero manual intervention required",
+    "3x faster decision making",
+    "Automated compliance reporting"
+  ]
+}

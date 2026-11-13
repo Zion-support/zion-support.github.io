@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/engine-automated---manufacturing-bcb3a1ff",
+  "breadcrumbTitle": "Engine Automated - Manufacturing",
+  "title": "Engine Automated - Manufacturing",
+  "description": "Revolutionize manufacturing through intelligent automation. Our Engine Automated - Manufacturing leverages advanced machine learning to deliver performance moni",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Engine Automated - Manufacturing - Zion Tech Group",
+    "description": "Revolutionize manufacturing through intelligent automation. Our Engine Automated - Manufacturing leverages advanced machine learning to deliver performance moni",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/engine-automated---manufacturing-bcb3a1ff"
+    }
+  },
+  "features": [
+    "Plugin architecture",
+    "Multi-language support",
+    "Custom integrations",
+    "Machine learning integration",
+    "Real-time processing"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "50% reduction in operational costs",
+    "Cost optimization recommendations",
+    "ROI in under 90 days",
+    "3x faster decision making"
+  ]
+}

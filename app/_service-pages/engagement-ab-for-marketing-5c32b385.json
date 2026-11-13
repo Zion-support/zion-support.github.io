@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/engagement-ab-for-marketing-5c32b385",
+  "breadcrumbTitle": "Engagement A/B for Marketing",
+  "title": "Engagement A/B for Marketing",
+  "description": "Unlock unprecedented growth with Engagement A/B for Marketing. This autonomous system provides a/b testing with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Engagement A/B for Marketing - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Engagement A/B for Marketing. This autonomous system provides a/b testing with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/engagement-ab-for-marketing-5c32b385"
+    }
+  },
+  "features": [
+    "Machine learning integration with automatic model training",
+    "Role-based access control with SSO integration",
+    "A/B testing framework for content optimization",
+    "Personalization engine for dynamic content",
+    "Data encryption at rest and in transit"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee with redundant architecture",
+    "ROI achieved in under 90 days with cost savings",
+    "Scalable to millions of transactions per second",
+    "Seamless integration with existing systems and workflows",
+    "Real-time insights and alerts for proactive management"
+  ]
+}

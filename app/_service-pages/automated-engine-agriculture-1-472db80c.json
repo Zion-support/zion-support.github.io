@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/automated-engine-agriculture-1-472db80c",
+  "breadcrumbTitle": "Automated engine-agriculture #1",
+  "title": "Automated engine-agriculture #1",
+  "description": "Transform your agriculture operations with our Automated engine-agriculture #1. This AI-driven solution automates risk assessment with unprecedented accuracy an",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated engine-agriculture #1 - Zion Tech Group",
+    "description": "Transform your agriculture operations with our Automated engine-agriculture #1. This AI-driven solution automates risk assessment with unprecedented accuracy an",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-engine-agriculture-1-472db80c"
+    }
+  },
+  "features": [
+    "Custom integrations",
+    "Cloud-native architecture",
+    "Multi-region deployment",
+    "Real-time processing",
+    "Plugin architecture"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Predictive maintenance scheduling",
+    "Zero manual intervention required"
+  ]
+}

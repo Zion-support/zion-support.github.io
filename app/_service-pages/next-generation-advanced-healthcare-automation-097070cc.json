@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/next-generation-advanced-healthcare-automation-097070cc",
+  "breadcrumbTitle": "Next-Generation Advanced Healthcare Automation",
+  "title": "Next-Generation Advanced Healthcare Automation",
+  "description": "Next-generation automation suite that streamlines advanced healthcare workflows with intelligent orchestration.",
+  "basic": "$218/month",
+  "pro": "$548/month",
+  "enterprise": "$1648/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Next-Generation Advanced Healthcare Automation - Zion Tech Group",
+    "description": "Next-generation automation suite that streamlines advanced healthcare workflows with intelligent orchestration.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/next-generation-advanced-healthcare-automation-097070cc"
+    }
+  },
+  "features": [
+    "Smart orchestration",
+    "Process automation",
+    "Event processing",
+    "Task scheduling"
+  ],
+  "benefits": [
+    "Faster execution",
+    "Reduced manual steps",
+    "Scalable processes",
+    "Error reduction"
+  ]
+}

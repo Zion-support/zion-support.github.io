@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-transportation-patient-engagement-3e53c220",
+  "breadcrumbTitle": "Intelligent Transportation Patient Engagement",
+  "title": "Intelligent Transportation Patient Engagement",
+  "description": "AI-driven patient engagement platform that delivers scalable personalized care journeys, remote monitoring, and adherence support through intelligent automation",
+  "basic": "$258/month",
+  "pro": "$648/month",
+  "enterprise": "$1948/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Intelligent Transportation Patient Engagement - Zion Tech Group",
+    "description": "AI-driven patient engagement platform that delivers scalable personalized care journeys, remote monitoring, and adherence support through intelligent automation",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-transportation-patient-engagement-3e53c220"
+    }
+  },
+  "features": [
+    "Personalized care plans",
+    "Remote monitoring",
+    "Medication adherence",
+    "Virtual consultations"
+  ],
+  "benefits": [
+    "Better outcomes",
+    "Higher satisfaction",
+    "Reduced readmissions",
+    "Lower costs"
+  ]
+}

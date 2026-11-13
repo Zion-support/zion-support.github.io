@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/smart-insights-automotive-fc7047db",
+  "breadcrumbTitle": "Smart insights-automotive",
+  "title": "Smart insights-automotive",
+  "description": "Revolutionize automotive through intelligent automation. Our Smart insights-automotive leverages advanced machine learning to deliver quality control at scale.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart insights-automotive - Zion Tech Group",
+    "description": "Revolutionize automotive through intelligent automation. Our Smart insights-automotive leverages advanced machine learning to deliver quality control at scale.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-insights-automotive-fc7047db"
+    }
+  },
+  "features": [
+    "Data encryption",
+    "Offline capabilities",
+    "Real-time processing",
+    "Open-source friendly",
+    "Serverless functions"
+  ],
+  "benefits": [
+    "Seamless integration with existing systems",
+    "Reduced human error by 95%",
+    "Cost optimization recommendations",
+    "Intelligent load balancing"
+  ]
+}

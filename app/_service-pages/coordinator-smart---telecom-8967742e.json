@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/coordinator-smart---telecom-8967742e",
+  "breadcrumbTitle": "Coordinator Smart - Telecom",
+  "title": "Coordinator Smart - Telecom",
+  "description": "Next-generation telecom solution: Coordinator Smart - Telecom. Combines threat detection with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Coordinator Smart - Telecom - Zion Tech Group",
+    "description": "Next-generation telecom solution: Coordinator Smart - Telecom. Combines threat detection with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/coordinator-smart---telecom-8967742e"
+    }
+  },
+  "features": [
+    "Cloud-native architecture",
+    "Open-source friendly",
+    "Real-time processing",
+    "Multi-region deployment",
+    "Mobile-responsive interface"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "Intelligent load balancing",
+    "Seamless integration with existing systems",
+    "Dynamic resource allocation"
+  ]
+}

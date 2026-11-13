@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "API Performance Testing: common mistakes | Zion Tech Group",
+    "description": "API Performance Testing: common mistakes",
+    "keywords": [
+      "automation",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "API Performance Testing: common mistakes",
+      "description": "API Performance Testing: common mistakes",
+      "url": "https://ziontechgroup.com/blog/api-performance-testing-common-mistakes/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/api-performance-testing-common-mistakes/"
+    }
+  },
+  "values": [
+    "API Performance Testing: common mistakes",
+    "API Performance Testing: common mistakes",
+    "API Performance Testing: common mistakes",
+    "Conversion path",
+    "If this guide matches your api performance testing: common mistakes initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "Conversion path",
+    " If this guide matches your api performance testing: common mistakes initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "/blog/ai-ad-copy-generator-2026-7066",
+    "Ai Ad Copy Generator 2026 7066",
+    "/blog/ai-performance-monitoring-2026-7080",
+    "Ai Performance Monitoring 2026 7080",
+    "/blog/accessibility-compliance-2026-7286",
+    "Accessibility Compliance 2026 7286",
+    "/blog/ai-data-lakehouse-pipelines-security-and-governance",
+    "Ai Data Lakehouse Pipelines Security And Governance"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "API Performance Testing: common mistakes",
+    "description": "API Performance Testing: common mistakes",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T08:27:33Z",
+    "dateModified": "2026-08-07T08:27:33Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/api-performance-testing-common-mistakes/"
+  }
+}

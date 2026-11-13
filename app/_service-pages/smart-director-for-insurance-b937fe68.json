@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/smart-director-for-insurance-b937fe68",
+  "breadcrumbTitle": "Smart Director for Insurance",
+  "title": "Smart Director for Insurance",
+  "description": "Next-generation insurance solution: Smart Director for Insurance. Combines financial planning with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Director for Insurance - Zion Tech Group",
+    "description": "Next-generation insurance solution: Smart Director for Insurance. Combines financial planning with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-director-for-insurance-b937fe68"
+    }
+  },
+  "features": [
+    "GDPR compliance",
+    "Container orchestration",
+    "Zero-downtime updates",
+    "Offline capabilities",
+    "Auto-scaling capabilities"
+  ],
+  "benefits": [
+    "Seamless integration with existing systems",
+    "Scalable to millions of transactions",
+    "50% reduction in operational costs"
+  ]
+}

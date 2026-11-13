@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-resilient-hospitality-processing-framework-dc5286a9",
+  "breadcrumbTitle": "Intelligent Resilient Hospitality Processing Framework",
+  "title": "Intelligent Resilient Hospitality Processing Framework",
+  "description": "Intelligent processing framework that automates resilient hospitality data flows with real-time transformation.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Intelligent Resilient Hospitality Processing Framework - Zion Tech Group",
+    "description": "Intelligent processing framework that automates resilient hospitality data flows with real-time transformation.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-resilient-hospitality-processing-framework-dc5286a9"
+    }
+  },
+  "features": [
+    "Real-time processing",
+    "Data transformation",
+    "ETL pipelines",
+    "Stream processing"
+  ],
+  "benefits": [
+    "Faster data flows",
+    "Reduced processing time",
+    "Higher throughput",
+    "Real-time transformation"
+  ]
+}

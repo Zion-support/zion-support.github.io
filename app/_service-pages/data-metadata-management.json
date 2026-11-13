@@ -1,0 +1,28 @@
+{
+  "title": "Enterprise Metadata Management",
+  "description": "Centralized metadata management platform with data cataloging, glossary management, and lineage tracking. Supports 50+ data sources.",
+  "basic": "$399/mo/month",
+  "pro": "$1,099/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Enterprise Metadata Management - Zion Tech Group",
+    "description": "Centralized metadata management platform with data cataloging, glossary management, and lineage tracking. Supports 50+ data sources.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/data-metadata-management"
+    }
+  },
+  "features": [
+    "Data Catalog",
+    "Business Glossary",
+    "Lineage Tracking",
+    "Impact Analysis",
+    "Tagging & Classification"
+  ],
+  "benefits": [
+    "Find data faster",
+    "Understand data lineage",
+    "Improve governance"
+  ]
+}

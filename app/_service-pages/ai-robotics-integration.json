@@ -1,0 +1,29 @@
+{
+  "title": "AI Robotics Integration & Autonomous Systems",
+  "description": "AI integration for industrial and commercial robotics — computer vision navigation, autonomous task planning, human-robot collaboration, and fleet management.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Robotics Integration & Autonomous Systems - Zion Tech Group",
+    "description": "AI integration for industrial and commercial robotics — computer vision navigation, autonomous task planning, human-robot collaboration, and fleet management.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-robotics-integration"
+    }
+  },
+  "features": [
+    "Computer vision for robot navigation and obstacle avoidance",
+    "Autonomous task planning with reinforcement learning",
+    "Human-robot collaboration and safety monitoring",
+    "Multi-robot fleet management and coordination",
+    "Edge AI deployment for low-latency real-time control"
+  ],
+  "benefits": [
+    "Reduce costs with ai robotics integration & autonomous systems",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "Cloud Cost Anomaly Detector",
+  "description": "AI-powered cloud cost anomaly detection with root-cause attribution, budget forecasting, and auto-generated cost-reduction playbooks.",
+  "basic": "$99/mo/month",
+  "pro": "$349/mo/month",
+  "enterprise": "$1,299/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Cloud Cost Anomaly Detector - Zion Tech Group",
+    "description": "AI-powered cloud cost anomaly detection with root-cause attribution, budget forecasting, and auto-generated cost-reduction playbooks.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cloud-cost-anomaly-detector"
+    }
+  },
+  "features": [
+    "ML anomaly detection",
+    "Root-cause attribution",
+    "Budget forecasting",
+    "Cost-reduction recommendations",
+    "AWS/Azure/GCP unified view"
+  ],
+  "benefits": [
+    "Reduce costs with cloud cost anomaly detector",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

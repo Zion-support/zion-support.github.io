@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/self-optimizing-manager-logistics-6079c614",
+  "breadcrumbTitle": "Self-Optimizing manager-logistics",
+  "title": "Self-Optimizing manager-logistics",
+  "description": "Transform your logistics operations with our Self-Optimizing manager-logistics. This AI-driven solution automates risk assessment with unprecedented accuracy an",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Self-Optimizing manager-logistics - Zion Tech Group",
+    "description": "Transform your logistics operations with our Self-Optimizing manager-logistics. This AI-driven solution automates risk assessment with unprecedented accuracy an",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/self-optimizing-manager-logistics-6079c614"
+    }
+  },
+  "features": [
+    "Performance dashboards",
+    "Offline capabilities",
+    "Container orchestration",
+    "SOC 2 certified",
+    "Rollback mechanisms"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Performance benchmarking",
+    "Seamless integration with existing systems",
+    "Self-healing infrastructure"
+  ]
+}

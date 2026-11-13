@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/adaptive-risk-orchestrator-14edde4a",
+  "breadcrumbTitle": "Adaptive Risk Orchestrator",
+  "title": "Adaptive Risk Orchestrator",
+  "description": "The future of hospitality is here with Adaptive Risk Orchestrator. Powered by cutting-edge AI, this platform delivers supply chain like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Adaptive Risk Orchestrator - Zion Tech Group",
+    "description": "The future of hospitality is here with Adaptive Risk Orchestrator. Powered by cutting-edge AI, this platform delivers supply chain like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/adaptive-risk-orchestrator-14edde4a"
+    }
+  },
+  "features": [
+    "Comprehensive monitoring",
+    "HIPAA ready",
+    "Machine learning integration",
+    "Data encryption",
+    "Role-based access control"
+  ],
+  "benefits": [
+    "50% reduction in operational costs",
+    "3x faster decision making",
+    "Enterprise-grade security",
+    "99.9% uptime guarantee"
+  ]
+}

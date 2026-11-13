@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/automated-advisor-for-transportation-a28e90ca",
+  "breadcrumbTitle": "Automated Advisor for Transportation",
+  "title": "Automated Advisor for Transportation",
+  "description": "Transform your transportation operations with our Automated Advisor for Transportation. This AI-driven solution automates process automation with unprecedented ",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated Advisor for Transportation - Zion Tech Group",
+    "description": "Transform your transportation operations with our Automated Advisor for Transportation. This AI-driven solution automates process automation with unprecedented ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-advisor-for-transportation-a28e90ca"
+    }
+  },
+  "features": [
+    "API-first design",
+    "Container orchestration",
+    "Plugin architecture",
+    "Open-source friendly"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "Performance benchmarking",
+    "50% reduction in operational costs"
+  ]
+}

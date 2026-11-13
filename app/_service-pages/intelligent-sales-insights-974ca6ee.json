@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-sales-insights-974ca6ee",
+  "breadcrumbTitle": "Intelligent Sales Insights",
+  "title": "Intelligent Sales Insights",
+  "description": "Revolutionize retail through intelligent automation. Our Intelligent Sales Insights leverages advanced machine learning to deliver user experience at scale.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Sales Insights - Zion Tech Group",
+    "description": "Revolutionize retail through intelligent automation. Our Intelligent Sales Insights leverages advanced machine learning to deliver user experience at scale.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-sales-insights-974ca6ee"
+    }
+  },
+  "features": [
+    "Container orchestration",
+    "Mobile-responsive interface",
+    "Audit trails",
+    "API-first design"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Automated compliance reporting",
+    "Performance benchmarking",
+    "Seamless integration with existing systems"
+  ]
+}

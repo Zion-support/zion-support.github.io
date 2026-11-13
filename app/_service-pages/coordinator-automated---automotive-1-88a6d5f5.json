@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/coordinator-automated---automotive-1-88a6d5f5",
+  "breadcrumbTitle": "Coordinator Automated - Automotive #1",
+  "title": "Coordinator Automated - Automotive #1",
+  "description": "Revolutionize automotive through intelligent automation. Our Coordinator Automated - Automotive #1 leverages advanced machine learning to deliver threat detecti",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Coordinator Automated - Automotive #1 - Zion Tech Group",
+    "description": "Revolutionize automotive through intelligent automation. Our Coordinator Automated - Automotive #1 leverages advanced machine learning to deliver threat detecti",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/coordinator-automated---automotive-1-88a6d5f5"
+    }
+  },
+  "features": [
+    "API-first design",
+    "GDPR compliance",
+    "Multi-language support",
+    "Offline capabilities",
+    "SOC 2 certified"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "Self-healing infrastructure",
+    "Reduced human error by 95%"
+  ]
+}

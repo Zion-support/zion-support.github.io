@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/autonomous-security-coordinator-1efe8ff9",
+  "breadcrumbTitle": "Autonomous Security Coordinator",
+  "title": "Autonomous Security Coordinator",
+  "description": "Next-generation manufacturing solution: Autonomous Security Coordinator. Combines market intelligence with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous Security Coordinator - Zion Tech Group",
+    "description": "Next-generation manufacturing solution: Autonomous Security Coordinator. Combines market intelligence with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-security-coordinator-1efe8ff9"
+    }
+  },
+  "features": [
+    "API-first design",
+    "Audit trails",
+    "Multi-region deployment",
+    "Plugin architecture",
+    "Serverless functions"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "Zero manual intervention required",
+    "Scalable to millions of transactions",
+    "Dynamic resource allocation",
+    "Performance benchmarking"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/ai-orchestrator---retail-edition-2-dc0f4f40",
+  "breadcrumbTitle": "AI Orchestrator - Retail Edition #2",
+  "title": "AI Orchestrator - Retail Edition #2",
+  "description": "Revolutionize retail through intelligent automation. Our AI Orchestrator - Retail Edition #2 leverages advanced machine learning to deliver maintenance scheduli",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Orchestrator - Retail Edition #2 - Zion Tech Group",
+    "description": "Revolutionize retail through intelligent automation. Our AI Orchestrator - Retail Edition #2 leverages advanced machine learning to deliver maintenance scheduli",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-orchestrator---retail-edition-2-dc0f4f40"
+    }
+  },
+  "features": [
+    "Auto-scaling capabilities",
+    "Offline capabilities",
+    "API-first design",
+    "Mobile-responsive interface",
+    "Edge computing support"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "Cost optimization recommendations",
+    "Self-healing infrastructure",
+    "Intelligent load balancing",
+    "Automated compliance reporting"
+  ]
+}

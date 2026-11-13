@@ -1,0 +1,29 @@
+{
+  "title": "Data Lakehouse Platform",
+  "description": "Unified platform combining data lake flexibility with data warehouse performance — ACID transactions, time travel, and open-table format support.",
+  "basic": "$399/mo/month",
+  "pro": "$1,299/mo/month",
+  "enterprise": "$3,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Data Lakehouse Platform - Zion Tech Group",
+    "description": "Unified platform combining data lake flexibility with data warehouse performance — ACID transactions, time travel, and open-table format support.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/data-lakehouse"
+    }
+  },
+  "features": [
+    "Open-table format (Iceberg)",
+    "ACID transactions",
+    "Time-travel queries",
+    "Schema evolution",
+    "Separation of compute/storage"
+  ],
+  "benefits": [
+    "Reduce costs with data lakehouse platform",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

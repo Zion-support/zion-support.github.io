@@ -1,0 +1,29 @@
+{
+  "title": "Translatix — i18n Localization Platform",
+  "description": "Developer-friendly app localization: string extraction, translation management, in-context editing, and automated deployment. 80+ languages with MT + human review.",
+  "basic": "$29/mo/month",
+  "pro": "$99/mo/month",
+  "enterprise": "$349/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Translatix — i18n Localization Platform - Zion Tech Group",
+    "description": "Developer-friendly app localization: string extraction, translation management, in-context editing, and automated deployment. 80+ languages with MT + human revi",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w174-translatix"
+    }
+  },
+  "features": [
+    "Automatic string extraction from code",
+    "Translation management with workflow",
+    "In-context visual editing",
+    "Machine translation + human review",
+    "80+ language support"
+  ],
+  "benefits": [
+    "Localize your app in days, not months",
+    "In-context editing eliminates key confusion",
+    "MT + human review balances speed and quality",
+    "CI/CD keeps translations in sync with code"
+  ]
+}

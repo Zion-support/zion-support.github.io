@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "Enterprise AI Intelligence Hub: operations handbook | Zion Tech Group",
+    "description": "Enterprise AI Intelligence Hub: operations handbook",
+    "keywords": [
+      "security",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "Enterprise AI Intelligence Hub: operations handbook",
+      "description": "Enterprise AI Intelligence Hub: operations handbook",
+      "url": "https://ziontechgroup.com/blog/enterprise-ai-intelligence-hub-operations-handbook/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/enterprise-ai-intelligence-hub-operations-handbook/"
+    }
+  },
+  "values": [
+    "Enterprise AI Intelligence Hub: operations handbook",
+    "Enterprise AI Intelligence Hub: operations handbook",
+    "Enterprise AI Intelligence Hub: operations handbook",
+    "Outcomes to measure",
+    "Leading indicators for enterprise ai intelligence hub: operations handbook: workflow completion rate, escalation rate, time-to-resolution, and user satisfaction. Lagging indicators: revenue trend, cost trend, customer retention, and operational efficiency. Track both leading and lagging indicators so you can explain progress to leadership before financial results appear. Use a rolling 90-day window and re-baseline monthly; this keeps the program accountable without demanding perfection on day one. Publish metrics in a shared dashboard so the whole team sees progress, not just the program sponsor.",
+    "Outcomes to measure",
+    " Leading indicators for enterprise ai intelligence hub: operations handbook: workflow completion rate, escalation rate, time-to-resolution, and user satisfaction. Lagging indicators: revenue trend, cost trend, customer retention, and operational efficiency. Track both leading and lagging indicators so you can explain progress to leadership before financial results appear. Use a rolling 90-day window and re-baseline monthly; this keeps the program accountable without demanding perfection on day one. Publish metrics in a shared dashboard so the whole team sees progress, not just the program sponsor.",
+    "/blog/cyber-threat-intelligence-2026-7297",
+    "Cyber Threat Intelligence 2026 7297",
+    "/blog/genai-devops-cicd-executive-guide",
+    "Genai Devops Cicd Executive Guide",
+    "/blog/incident-response-retainer-2026-6757",
+    "Incident Response Retainer 2026 6757",
+    "/blog/ai-development-acceleration-2026-6563",
+    "Ai Development Acceleration 2026 6563"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Enterprise AI Intelligence Hub: operations handbook",
+    "description": "Enterprise AI Intelligence Hub: operations handbook",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T07:56:56Z",
+    "dateModified": "2026-08-07T07:56:56Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/enterprise-ai-intelligence-hub-operations-handbook/"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligent-advisor-hospitality-1-2fde3c0a",
+  "breadcrumbTitle": "Intelligent advisor-hospitality #1",
+  "title": "Intelligent advisor-hospitality #1",
+  "description": "Next-generation hospitality solution: Intelligent advisor-hospitality #1. Combines code optimization with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent advisor-hospitality #1 - Zion Tech Group",
+    "description": "Next-generation hospitality solution: Intelligent advisor-hospitality #1. Combines code optimization with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-advisor-hospitality-1-2fde3c0a"
+    }
+  },
+  "features": [
+    "Comprehensive monitoring",
+    "Edge computing support",
+    "Custom integrations",
+    "Real-time processing",
+    "GDPR compliance"
+  ],
+  "benefits": [
+    "Intelligent load balancing",
+    "Real-time insights and alerts",
+    "Reduced human error by 95%",
+    "ROI in under 90 days"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "MLOps Platform",
+  "description": "End-to-end ML lifecycle platform: experiment tracking, model registry, CI/CD for ML, feature store, and monitoring dashboards.",
+  "basic": "$2,499/mo/month",
+  "pro": "$4,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "MLOps Platform - Zion Tech Group",
+    "description": "End-to-end ML lifecycle platform: experiment tracking, model registry, CI/CD for ML, feature store, and monitoring dashboards.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/mlops-platform"
+    }
+  },
+  "features": [
+    "Experiment tracking",
+    "Model registry & version",
+    "ML pipeline CI/CD",
+    "Feature store",
+    "Model drift monitoring"
+  ],
+  "benefits": [
+    "Reduce costs with mlops platform",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

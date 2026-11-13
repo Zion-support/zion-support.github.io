@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-director---healthcare-edition-5-bd32835b",
+  "breadcrumbTitle": "AI Director - Healthcare Edition #5",
+  "title": "AI Director - Healthcare Edition #5",
+  "description": "The future of healthcare is here with AI Director - Healthcare Edition #5. Powered by cutting-edge AI, this platform delivers resource optimization like never b",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Director - Healthcare Edition #5 - Zion Tech Group",
+    "description": "The future of healthcare is here with AI Director - Healthcare Edition #5. Powered by cutting-edge AI, this platform delivers resource optimization like never b",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-director---healthcare-edition-5-bd32835b"
+    }
+  },
+  "features": [
+    "Microservices deployment",
+    "Cloud-native architecture",
+    "Container orchestration",
+    "Audit trails",
+    "API-first design"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "Seamless integration with existing systems",
+    "3x faster decision making",
+    "50% reduction in operational costs"
+  ]
+}

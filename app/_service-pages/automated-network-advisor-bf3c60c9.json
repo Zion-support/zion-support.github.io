@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/automated-network-advisor-bf3c60c9",
+  "breadcrumbTitle": "Automated Network Advisor",
+  "title": "Automated Network Advisor",
+  "description": "Revolutionize insurance through intelligent automation. Our Automated Network Advisor leverages advanced machine learning to deliver predictive analytics at sca",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated Network Advisor - Zion Tech Group",
+    "description": "Revolutionize insurance through intelligent automation. Our Automated Network Advisor leverages advanced machine learning to deliver predictive analytics at sca",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-network-advisor-bf3c60c9"
+    }
+  },
+  "features": [
+    "API-first design",
+    "Performance dashboards",
+    "Open-source friendly",
+    "Offline capabilities",
+    "Alerting system"
+  ],
+  "benefits": [
+    "Seamless integration with existing systems",
+    "Predictive maintenance scheduling",
+    "24/7 automated operations",
+    "Real-time insights and alerts",
+    "Reduced human error by 95%"
+  ]
+}

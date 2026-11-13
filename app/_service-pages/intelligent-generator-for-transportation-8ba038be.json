@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligent-generator-for-transportation-8ba038be",
+  "breadcrumbTitle": "Intelligent Generator for Transportation",
+  "title": "Intelligent Generator for Transportation",
+  "description": "Revolutionize transportation through intelligent automation. Our Intelligent Generator for Transportation leverages advanced machine learning to deliver process",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Generator for Transportation - Zion Tech Group",
+    "description": "Revolutionize transportation through intelligent automation. Our Intelligent Generator for Transportation leverages advanced machine learning to deliver process",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-generator-for-transportation-8ba038be"
+    }
+  },
+  "features": [
+    "Alerting system",
+    "Role-based access control",
+    "Mobile-responsive interface",
+    "Multi-region deployment"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "Reduced human error by 95%",
+    "24/7 automated operations",
+    "Intelligent load balancing",
+    "3x faster decision making"
+  ]
+}

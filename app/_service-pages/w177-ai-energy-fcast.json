@@ -1,0 +1,29 @@
+{
+  "title": "AI Energy Demand Forecaster",
+  "description": "ML energy demand forecasting: load prediction, renewable generation forecasting, demand response optimization.",
+  "basic": "$1,999/mo/month",
+  "pro": "$5,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Energy Demand Forecaster - Zion Tech Group",
+    "description": "ML energy demand forecasting: load prediction, renewable generation forecasting, demand response optimization.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w177-ai-energy-fcast"
+    }
+  },
+  "features": [
+    "Short and long-term load forecasting",
+    "Renewable generation prediction (solar",
+    "wind)",
+    "Demand response optimization",
+    "Weather-driven demand modeling"
+  ],
+  "benefits": [
+    "Accurate load forecasting reduces reserve costs",
+    "Renewable prediction optimizes grid integration",
+    "Demand response reduces peak pricing",
+    "Price forecasting enables procurement savings"
+  ]
+}

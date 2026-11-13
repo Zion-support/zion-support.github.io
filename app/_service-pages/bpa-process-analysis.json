@@ -1,0 +1,29 @@
+{
+  "title": "Business Process Analysis (BPA)",
+  "description": "Process discovery + event log mining, variant discovery, bottleneck detection, automation opportunity scoring. Output: BPMN design + automation ROI per task.",
+  "basic": "$99/mo/month",
+  "pro": "$299/mo/month",
+  "enterprise": "$999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Business Process Analysis (BPA) - Zion Tech Group",
+    "description": "Process discovery + event log mining, variant discovery, bottleneck detection, automation opportunity scoring. Output: BPMN design + automation ROI per task.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/bpa-process-analysis"
+    }
+  },
+  "features": [
+    "Process event log mining + variant discovery",
+    "Bottleneck + wait-time per activity",
+    "Automation opportunity ROAS scoring",
+    "Target BPMN process design",
+    "Automation ROI per identified opportunity"
+  ],
+  "benefits": [
+    "Reduce costs with business process analysis (bpa)",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

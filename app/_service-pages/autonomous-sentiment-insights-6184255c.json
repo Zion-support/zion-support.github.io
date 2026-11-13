@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/autonomous-sentiment-insights-6184255c",
+  "breadcrumbTitle": "Autonomous Sentiment Insights",
+  "title": "Autonomous Sentiment Insights",
+  "description": "Revolutionize Hospitality through intelligent automation. Our Autonomous Sentiment Insights leverages advanced machine learning to deliver maintenance schedulin",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous Sentiment Insights - Zion Tech Group",
+    "description": "Revolutionize Hospitality through intelligent automation. Our Autonomous Sentiment Insights leverages advanced machine learning to deliver maintenance schedulin",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-sentiment-insights-6184255c"
+    }
+  },
+  "features": [
+    "Cost reduction with process mining",
+    "Brand monitoring across social channels",
+    "Edge computing support for low-latency operations",
+    "GDPR compliance with data portability",
+    "Document processing with OCR and NLP"
+  ],
+  "benefits": [
+    "Enhanced team productivity with intelligent assistance",
+    "Improved forecast accuracy with ML models",
+    "Improved sales performance with lead scoring",
+    "99.9% uptime guarantee with redundant architecture",
+    "50% reduction in operational costs through automation"
+  ]
+}

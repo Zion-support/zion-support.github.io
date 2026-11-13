@@ -1,0 +1,29 @@
+{
+  "title": "Manufacturing Digital Twin Platform",
+  "description": "Process simulation, optimization, and what-if analysis. Reduces operational costs by 25% through predictive modeling.",
+  "basic": "$N/A/month",
+  "pro": "$44997/month",
+  "enterprise": "$89997/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Manufacturing Digital Twin Platform - Zion Tech Group",
+    "description": "Process simulation, optimization, and what-if analysis. Reduces operational costs by 25% through predictive modeling.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w129-digital-twin"
+    }
+  },
+  "features": [
+    "Process simulation",
+    "Optimization engine",
+    "What-if analysis",
+    "Real-time monitoring",
+    "Predictive modeling"
+  ],
+  "benefits": [
+    "25% cost reduction",
+    "Improved throughput",
+    "Energy savings",
+    "Risk-free experimentation"
+  ]
+}

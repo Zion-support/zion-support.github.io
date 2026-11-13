@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-advisor---real-estate-edition-1-334a0ef1",
+  "breadcrumbTitle": "AI Advisor - Real-Estate Edition #1",
+  "title": "AI Advisor - Real-Estate Edition #1",
+  "description": "Next-generation real-estate solution: AI Advisor - Real-Estate Edition #1. Combines document processing with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Advisor - Real-Estate Edition #1 - Zion Tech Group",
+    "description": "Next-generation real-estate solution: AI Advisor - Real-Estate Edition #1. Combines document processing with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-advisor---real-estate-edition-1-334a0ef1"
+    }
+  },
+  "features": [
+    "Data encryption",
+    "Microservices deployment",
+    "Zero-downtime updates",
+    "Comprehensive monitoring"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "ROI in under 90 days",
+    "3x faster decision making",
+    "Seamless integration with existing systems"
+  ]
+}

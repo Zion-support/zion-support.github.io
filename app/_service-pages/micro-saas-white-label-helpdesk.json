@@ -1,0 +1,29 @@
+{
+  "title": "DeskForge — White-Label Helpdesk",
+  "description": "Fully white-label helpdesk solution for agencies and SaaS companies. Multi-brand support, AI-powered ticket routing, canned responses, and SLA management. Custom domain and branding included.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "DeskForge — White-Label Helpdesk - Zion Tech Group",
+    "description": "Fully white-label helpdesk solution for agencies and SaaS companies. Multi-brand support, AI-powered ticket routing, canned responses, and SLA management. Custo",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-white-label-helpdesk"
+    }
+  },
+  "features": [
+    "Full white-label customization",
+    "AI ticket routing and prioritization",
+    "Multi-brand/multi-tenant support",
+    "Canned response library",
+    "SLA management and tracking"
+  ],
+  "benefits": [
+    "Launch helpdesk under your brand",
+    "Reduce support response time",
+    "Scale support without hiring",
+    "Improve customer satisfaction"
+  ]
+}

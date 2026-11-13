@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-management---insurance-edition-3-8c0f6845",
+  "breadcrumbTitle": "AI Management - Insurance Edition #3",
+  "title": "AI Management - Insurance Edition #3",
+  "description": "Revolutionize insurance through intelligent automation. Our AI Management - Insurance Edition #3 leverages advanced machine learning to deliver workflow managem",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Management - Insurance Edition #3 - Zion Tech Group",
+    "description": "Revolutionize insurance through intelligent automation. Our AI Management - Insurance Edition #3 leverages advanced machine learning to deliver workflow managem",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-management---insurance-edition-3-8c0f6845"
+    }
+  },
+  "features": [
+    "Rollback mechanisms",
+    "Open-source friendly",
+    "Plugin architecture",
+    "Multi-region deployment"
+  ],
+  "benefits": [
+    "50% reduction in operational costs",
+    "Real-time insights and alerts",
+    "99.9% uptime guarantee",
+    "ROI in under 90 days"
+  ]
+}

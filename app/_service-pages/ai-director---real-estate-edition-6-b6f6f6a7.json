@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-director---real-estate-edition-6-b6f6f6a7",
+  "breadcrumbTitle": "AI Director - Real-Estate Edition #6",
+  "title": "AI Director - Real-Estate Edition #6",
+  "description": "The future of real-estate is here with AI Director - Real-Estate Edition #6. Powered by cutting-edge AI, this platform delivers sales forecasting like never bef",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Director - Real-Estate Edition #6 - Zion Tech Group",
+    "description": "The future of real-estate is here with AI Director - Real-Estate Edition #6. Powered by cutting-edge AI, this platform delivers sales forecasting like never bef",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-director---real-estate-edition-6-b6f6f6a7"
+    }
+  },
+  "features": [
+    "Cloud-native architecture",
+    "Plugin architecture",
+    "Machine learning integration",
+    "Custom integrations",
+    "Alerting system"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Enterprise-grade security",
+    "Seamless integration with existing systems"
+  ]
+}

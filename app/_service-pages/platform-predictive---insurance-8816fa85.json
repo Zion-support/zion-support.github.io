@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/platform-predictive---insurance-8816fa85",
+  "breadcrumbTitle": "Platform Predictive - Insurance",
+  "title": "Platform Predictive - Insurance",
+  "description": "Next-generation insurance solution: Platform Predictive - Insurance. Combines supply chain with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Platform Predictive - Insurance - Zion Tech Group",
+    "description": "Next-generation insurance solution: Platform Predictive - Insurance. Combines supply chain with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/platform-predictive---insurance-8816fa85"
+    }
+  },
+  "features": [
+    "Audit trails",
+    "Multi-region deployment",
+    "Performance dashboards",
+    "Rollback mechanisms",
+    "Role-based access control"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "Reduced human error by 95%",
+    "Automated compliance reporting",
+    "Enterprise-grade security"
+  ]
+}

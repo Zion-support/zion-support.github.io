@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/manager-smart---finance-3a6f72e9",
+  "breadcrumbTitle": "Manager Smart - Finance",
+  "title": "Manager Smart - Finance",
+  "description": "Revolutionize finance through intelligent automation. Our Manager Smart - Finance leverages advanced machine learning to deliver resource optimization at scale.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Manager Smart - Finance - Zion Tech Group",
+    "description": "Revolutionize finance through intelligent automation. Our Manager Smart - Finance leverages advanced machine learning to deliver resource optimization at scale.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/manager-smart---finance-3a6f72e9"
+    }
+  },
+  "features": [
+    "Real-time processing",
+    "Container orchestration",
+    "Alerting system",
+    "Open-source friendly",
+    "Multi-region deployment"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "ROI in under 90 days",
+    "Cost optimization recommendations",
+    "Self-healing infrastructure",
+    "Seamless integration with existing systems"
+  ]
+}

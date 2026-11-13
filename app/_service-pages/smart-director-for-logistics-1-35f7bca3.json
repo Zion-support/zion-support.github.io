@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/smart-director-for-logistics-1-35f7bca3",
+  "breadcrumbTitle": "Smart Director for Logistics #1",
+  "title": "Smart Director for Logistics #1",
+  "description": "Revolutionize logistics through intelligent automation. Our Smart Director for Logistics #1 leverages advanced machine learning to deliver fraud prevention at s",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Director for Logistics #1 - Zion Tech Group",
+    "description": "Revolutionize logistics through intelligent automation. Our Smart Director for Logistics #1 leverages advanced machine learning to deliver fraud prevention at s",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-director-for-logistics-1-35f7bca3"
+    }
+  },
+  "features": [
+    "Plugin architecture",
+    "API-first design",
+    "Multi-region deployment",
+    "Edge computing support",
+    "Machine learning integration"
+  ],
+  "benefits": [
+    "Performance benchmarking",
+    "Cost optimization recommendations",
+    "Reduced human error by 95%",
+    "Zero manual intervention required",
+    "50% reduction in operational costs"
+  ]
+}

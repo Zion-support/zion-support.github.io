@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-edge-native-transportation-processing-framework-0f2faa24",
+  "breadcrumbTitle": "Intelligent Edge-Native Transportation Processing Framework",
+  "title": "Intelligent Edge-Native Transportation Processing Framework",
+  "description": "Intelligent processing framework that automates edge-native transportation data flows with real-time transformation.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Intelligent Edge-Native Transportation Processing Framework - Zion Tech Group",
+    "description": "Intelligent processing framework that automates edge-native transportation data flows with real-time transformation.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-edge-native-transportation-processing-framework-0f2faa24"
+    }
+  },
+  "features": [
+    "Real-time processing",
+    "Data transformation",
+    "ETL pipelines",
+    "Stream processing"
+  ],
+  "benefits": [
+    "Faster data flows",
+    "Reduced processing time",
+    "Higher throughput",
+    "Real-time transformation"
+  ]
+}

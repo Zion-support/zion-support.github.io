@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/neural-analytics-insurance-b1c5e26e",
+  "breadcrumbTitle": "Neural analytics-insurance",
+  "title": "Neural analytics-insurance",
+  "description": "Revolutionize insurance through intelligent automation. Our Neural analytics-insurance leverages advanced machine learning to deliver risk assessment at scale.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Neural analytics-insurance - Zion Tech Group",
+    "description": "Revolutionize insurance through intelligent automation. Our Neural analytics-insurance leverages advanced machine learning to deliver risk assessment at scale.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/neural-analytics-insurance-b1c5e26e"
+    }
+  },
+  "features": [
+    "Open-source friendly",
+    "Zero-downtime updates",
+    "API-first design",
+    "Performance dashboards",
+    "Data encryption"
+  ],
+  "benefits": [
+    "24/7 automated operations",
+    "50% reduction in operational costs",
+    "Self-healing infrastructure",
+    "Intelligent load balancing"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/advisor-ai---insurance-1-63e671f9",
+  "breadcrumbTitle": "Advisor AI - Insurance #1",
+  "title": "Advisor AI - Insurance #1",
+  "description": "Unlock unprecedented growth with Advisor AI - Insurance #1. This autonomous system provides content generation with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Advisor AI - Insurance #1 - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Advisor AI - Insurance #1. This autonomous system provides content generation with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/advisor-ai---insurance-1-63e671f9"
+    }
+  },
+  "features": [
+    "API-first design",
+    "Plugin architecture",
+    "Edge computing support",
+    "Offline capabilities",
+    "Serverless functions"
+  ],
+  "benefits": [
+    "Seamless integration with existing systems",
+    "50% reduction in operational costs",
+    "Cost optimization recommendations",
+    "Predictive maintenance scheduling"
+  ]
+}

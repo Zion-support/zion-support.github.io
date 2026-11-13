@@ -1,0 +1,29 @@
+{
+  "title": "AI Predictive Maintenance for Small Business",
+  "description": "Affordable AI predictive maintenance for small manufacturers and facilities. Predict equipment failures 2-4 weeks in advance using vibration, temperature, and usage data.",
+  "basic": "$199/mo/month",
+  "pro": "$499/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Predictive Maintenance for Small Business - Zion Tech Group",
+    "description": "Affordable AI predictive maintenance for small manufacturers and facilities. Predict equipment failures 2-4 weeks in advance using vibration, temperature, and u",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-ai-predictive-maintenance-lite"
+    }
+  },
+  "features": [
+    "Sensor data ingestion (vibration, temperature, humidity)",
+    "AI failure prediction 2-4 weeks ahead",
+    "Maintenance work order generation",
+    "Spare parts inventory recommendations",
+    "Mobile app for technicians"
+  ],
+  "benefits": [
+    "Prevent 80% of unexpected breakdowns",
+    "Extend equipment life by 30%",
+    "Reduce maintenance costs by 40%",
+    "Affordable for small manufacturers"
+  ]
+}

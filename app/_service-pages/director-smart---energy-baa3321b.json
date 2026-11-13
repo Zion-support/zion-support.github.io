@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/director-smart---energy-baa3321b",
+  "breadcrumbTitle": "Director Smart - Energy",
+  "title": "Director Smart - Energy",
+  "description": "The future of energy is here with Director Smart - Energy. Powered by cutting-edge AI, this platform delivers financial planning like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Director Smart - Energy - Zion Tech Group",
+    "description": "The future of energy is here with Director Smart - Energy. Powered by cutting-edge AI, this platform delivers financial planning like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/director-smart---energy-baa3321b"
+    }
+  },
+  "features": [
+    "Audit trails",
+    "Cloud-native architecture",
+    "SOC 2 certified",
+    "Auto-scaling capabilities",
+    "Data encryption"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "50% reduction in operational costs",
+    "Self-healing infrastructure",
+    "24/7 automated operations"
+  ]
+}

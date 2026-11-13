@@ -1,0 +1,29 @@
+{
+  "title": "SchedFlow — Appointment & Queue Mgmt",
+  "description": "Appointment scheduling and virtual queue management for healthcare, salons, government offices. Online booking, SMS reminders, walk-in queuing, and no-show reduction.",
+  "basic": "$25/mo/month",
+  "pro": "$75/mo/month",
+  "enterprise": "$199/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "SchedFlow — Appointment & Queue Mgmt - Zion Tech Group",
+    "description": "Appointment scheduling and virtual queue management for healthcare, salons, government offices. Online booking, SMS reminders, walk-in queuing, and no-show redu",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w174-schedflow"
+    }
+  },
+  "features": [
+    "Online appointment booking with calendar sync",
+    "Virtual walk-in queue management",
+    "SMS/email reminders and confirmations",
+    "No-show prediction and overbooking",
+    "Multi-provider and location support"
+  ],
+  "benefits": [
+    "Reduce no-shows by 40% with reminders",
+    "Virtual queues eliminate physical waiting",
+    "Online booking 24/7 availability",
+    "Overbooking optimization maximizes capacity"
+  ]
+}

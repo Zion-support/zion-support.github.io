@@ -1,0 +1,28 @@
+{
+  "title": "Business Intelligence Cockpit",
+  "description": "Executive BI dashboard connecting ERP/CRM/HRIS: revenue run-rate, headcount cost, CAC/LTV, NRR, runway, and scenario modelling.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Business Intelligence Cockpit - Zion Tech Group",
+    "description": "Executive BI dashboard connecting ERP/CRM/HRIS: revenue run-rate, headcount cost, CAC/LTV, NRR, runway, and scenario modelling.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-business-intelligence-cockpit"
+    }
+  },
+  "features": [
+    "Automated data connection ERP/CRM/HRIS/ADP",
+    "Executive KPI cards + drill-through detail",
+    "Scenario modelling (what-if sliders)",
+    "Scheduled PDF/email executive pack per week"
+  ],
+  "benefits": [
+    "Reduce costs with business intelligence cockpit",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

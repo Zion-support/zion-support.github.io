@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/platform-intelligent---finance-29c37912",
+  "breadcrumbTitle": "Platform Intelligent - Finance",
+  "title": "Platform Intelligent - Finance",
+  "description": "Next-generation finance solution: Platform Intelligent - Finance. Combines sales forecasting with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Platform Intelligent - Finance - Zion Tech Group",
+    "description": "Next-generation finance solution: Platform Intelligent - Finance. Combines sales forecasting with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/platform-intelligent---finance-29c37912"
+    }
+  },
+  "features": [
+    "Comprehensive monitoring",
+    "Serverless functions",
+    "Real-time processing",
+    "Performance dashboards"
+  ],
+  "benefits": [
+    "Cost optimization recommendations",
+    "Enterprise-grade security",
+    "Seamless integration with existing systems"
+  ]
+}

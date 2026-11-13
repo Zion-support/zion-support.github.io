@@ -1,0 +1,29 @@
+{
+  "title": "Privacy Management Platform",
+  "description": "Comprehensive privacy management for GDPR, CCPA, LGPD, and global privacy regulations. Data mapping, consent management, and DSR automation.",
+  "basic": "$599/mo/month",
+  "pro": "$1,799/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Privacy Management Platform - Zion Tech Group",
+    "description": "Comprehensive privacy management for GDPR, CCPA, LGPD, and global privacy regulations. Data mapping, consent management, and DSR automation.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/security-privacy-management"
+    }
+  },
+  "features": [
+    "Data mapping and inventory",
+    "Consent management",
+    "Data subject request (DSR) automation",
+    "Privacy impact assessments",
+    "Cookie consent management"
+  ],
+  "benefits": [
+    "Automate privacy compliance",
+    "Reduce DSR processing time by 80%",
+    "Manage consent across channels",
+    "Prevent privacy violations"
+  ]
+}

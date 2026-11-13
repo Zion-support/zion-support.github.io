@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/manager-cognitive---retail-1-ef8aec25",
+  "breadcrumbTitle": "Manager Cognitive - Retail #1",
+  "title": "Manager Cognitive - Retail #1",
+  "description": "Unlock unprecedented growth with Manager Cognitive - Retail #1. This autonomous system provides threat detection with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Manager Cognitive - Retail #1 - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Manager Cognitive - Retail #1. This autonomous system provides threat detection with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/manager-cognitive---retail-1-ef8aec25"
+    }
+  },
+  "features": [
+    "Cloud-native architecture",
+    "Mobile-responsive interface",
+    "Offline capabilities",
+    "HIPAA ready",
+    "Audit trails"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "99.9% uptime guarantee",
+    "Real-time insights and alerts"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "Slack/Teams Governance & Analytics",
+  "description": "Governance and analytics for Slack and Teams: channel management, DLP, compliance archival, and adoption analytics. Keep collaboration safe and organized.",
+  "basic": "$5/user/mo/month",
+  "pro": "$10/user/mo/month",
+  "enterprise": "$20/user/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Slack/Teams Governance & Analytics - Zion Tech Group",
+    "description": "Governance and analytics for Slack and Teams: channel management, DLP, compliance archival, and adoption analytics. Keep collaboration safe and organized.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w176-slack-teams-governance"
+    }
+  },
+  "features": [
+    "Channel lifecycle management and naming policies",
+    "DLP and sensitive content detection",
+    "Compliance archival and eDiscovery",
+    "Adoption and engagement analytics",
+    "Guest and external access governance"
+  ],
+  "benefits": [
+    "Governance prevents collaboration sprawl",
+    "DLP catches sensitive data in messages",
+    "Compliance archive for regulated industries",
+    "Adoption analytics measure value"
+  ]
+}

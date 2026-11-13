@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/enterprise-modular-education-analytics-suite-a5c5bb1f",
+  "breadcrumbTitle": "Enterprise Modular Education Analytics Suite",
+  "title": "Enterprise Modular Education Analytics Suite",
+  "description": "Enterprise analytics suite that delivers modular education insights with unified dashboards and reporting.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Enterprise Modular Education Analytics Suite - Zion Tech Group",
+    "description": "Enterprise analytics suite that delivers modular education insights with unified dashboards and reporting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/enterprise-modular-education-analytics-suite-a5c5bb1f"
+    }
+  },
+  "features": [
+    "Data visualization",
+    "Custom dashboards",
+    "Report generation",
+    "KPI tracking"
+  ],
+  "benefits": [
+    "Unified data view",
+    "Faster insights",
+    "Customizable reports",
+    "Cross-functional collaboration"
+  ]
+}

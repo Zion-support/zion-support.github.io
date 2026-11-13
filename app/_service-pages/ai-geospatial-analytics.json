@@ -1,0 +1,29 @@
+{
+  "title": "AI Geospatial Analytics & Location Intelligence",
+  "description": "AI-powered geospatial analysis for site selection, logistics optimization, and market intelligence. Analyze satellite imagery, foot traffic, and geographic data.",
+  "basic": "$1,999/mo/month",
+  "pro": "$4,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Geospatial Analytics & Location Intelligence - Zion Tech Group",
+    "description": "AI-powered geospatial analysis for site selection, logistics optimization, and market intelligence. Analyze satellite imagery, foot traffic, and geographic data",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-geospatial-analytics"
+    }
+  },
+  "features": [
+    "Site selection AI based on demographic and traffic data",
+    "Foot traffic analysis and prediction",
+    "Satellite imagery analysis",
+    "Trade area and catchment analysis",
+    "Integration with Google Maps, Esri, Mapbox"
+  ],
+  "benefits": [
+    "Make data-driven location decisions",
+    "Optimize delivery routes and logistics",
+    "Understand market potential by geography",
+    "Monitor assets and operations from satellite data"
+  ]
+}

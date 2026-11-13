@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-retail-trading-automation-05063770",
+  "breadcrumbTitle": "Intelligent Retail Trading Automation",
+  "title": "Intelligent Retail Trading Automation",
+  "description": "Algorithmic trading platform that executes cloud-native strategies using AI-driven market analysis, sentiment processing, and real-time risk management.",
+  "basic": "$318/month",
+  "pro": "$798/month",
+  "enterprise": "$2398/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Intelligent Retail Trading Automation - Zion Tech Group",
+    "description": "Algorithmic trading platform that executes cloud-native strategies using AI-driven market analysis, sentiment processing, and real-time risk management.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-retail-trading-automation-05063770"
+    }
+  },
+  "features": [
+    "Signal generation",
+    "Execution optimization",
+    "Risk controls",
+    "Performance attribution"
+  ],
+  "benefits": [
+    "Alpha generation",
+    "Reduced latency",
+    "Disciplined execution",
+    "Scalable strategies"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "FormCraft — Form Builder Micro-SaaS",
+  "description": "Drag-and-drop form builder with 100+ templates, conditional logic, payment collection, and analytics. Create surveys, registrations, orders, and lead capture forms without code.",
+  "basic": "$29/mo/month",
+  "pro": "$89/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "FormCraft — Form Builder Micro-SaaS - Zion Tech Group",
+    "description": "Drag-and-drop form builder with 100+ templates, conditional logic, payment collection, and analytics. Create surveys, registrations, orders, and lead capture fo",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-form-builder"
+    }
+  },
+  "features": [
+    "Drag-and-drop form builder",
+    "100+ templates",
+    "Conditional logic",
+    "Payment collection (Stripe, PayPal)",
+    "Analytics and conversion tracking"
+  ],
+  "benefits": [
+    "Build forms in minutes",
+    "Increase form completion rates",
+    "Collect payments seamlessly",
+    "Integrate with existing tools"
+  ]
+}

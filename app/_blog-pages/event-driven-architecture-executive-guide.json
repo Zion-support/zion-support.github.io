@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "Event Driven Architecture: executive guide | Zion Tech Group",
+    "description": "Event Driven Architecture: executive guide",
+    "keywords": [
+      "ai",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "Event Driven Architecture: executive guide",
+      "description": "Event Driven Architecture: executive guide",
+      "url": "https://ziontechgroup.com/blog/event-driven-architecture-executive-guide/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/event-driven-architecture-executive-guide/"
+    }
+  },
+  "values": [
+    "Event Driven Architecture: executive guide",
+    "Event Driven Architecture: executive guide",
+    "Event Driven Architecture: executive guide",
+    "Conversion path",
+    "If this guide matches your event driven architecture: executive guide initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "Conversion path",
+    " If this guide matches your event driven architecture: executive guide initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "/blog/ai-api-gateway-2026-6551",
+    "Ai Api Gateway 2026 6551",
+    "/blog/ai-3d-asset-generator-operations-handbook",
+    "Ai 3D Asset Generator Operations Handbook",
+    "/blog/devops-gen-ai-cicd-2026-6610",
+    "Devops Gen Ai Cicd 2026 6610",
+    "/blog/ai-autonomous-agents-implementation-playbook",
+    "Ai Autonomous Agents Implementation Playbook"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Event Driven Architecture: executive guide",
+    "description": "Event Driven Architecture: executive guide",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T05:08:11Z",
+    "dateModified": "2026-08-07T05:08:11Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/event-driven-architecture-executive-guide/"
+  }
+}

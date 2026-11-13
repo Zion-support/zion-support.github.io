@@ -1,0 +1,28 @@
+{
+  "title": "Cognitive Few-Shot Edtech Decision Engine",
+  "description": "Cognitive decision engine that processes few-shot signals to drive edtech strategy with deep learning.",
+  "basic": "$278/month",
+  "pro": "$698/month",
+  "enterprise": "$2098/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Cognitive Few-Shot Edtech Decision Engine - Zion Tech Group",
+    "description": "Cognitive decision engine that processes few-shot signals to drive edtech strategy with deep learning.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cognitive-few-shot-edtech-decision-engine-a6f996d6"
+    }
+  },
+  "features": [
+    "Cognitive reasoning",
+    "Scenario analysis",
+    "Decision trees",
+    "Recommendation engine"
+  ],
+  "benefits": [
+    "Better decision quality",
+    "Reduced risk",
+    "Faster insights",
+    "Competitive intelligence"
+  ]
+}

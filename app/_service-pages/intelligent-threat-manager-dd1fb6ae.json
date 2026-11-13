@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligent-threat-manager-dd1fb6ae",
+  "breadcrumbTitle": "Intelligent Threat Manager",
+  "title": "Intelligent Threat Manager",
+  "description": "The future of energy is here with Intelligent Threat Manager. Powered by cutting-edge AI, this platform delivers maintenance scheduling like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Threat Manager - Zion Tech Group",
+    "description": "The future of energy is here with Intelligent Threat Manager. Powered by cutting-edge AI, this platform delivers maintenance scheduling like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-threat-manager-dd1fb6ae"
+    }
+  },
+  "features": [
+    "Machine learning integration",
+    "Open-source friendly",
+    "Alerting system",
+    "GDPR compliance"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Self-healing infrastructure",
+    "Intelligent load balancing",
+    "Zero manual intervention required",
+    "Automated compliance reporting"
+  ]
+}

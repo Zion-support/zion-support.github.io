@@ -1,0 +1,29 @@
+{
+  "title": "AI Proposal & RFP Generator",
+  "description": "Auto-generate winning proposals and RFP responses from your knowledge base. AI matches requirements, drafts content, and optimizes pricing sections.",
+  "basic": "$199/mo/month",
+  "pro": "$599/mo/month",
+  "enterprise": "$1,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Proposal & RFP Generator - Zion Tech Group",
+    "description": "Auto-generate winning proposals and RFP responses from your knowledge base. AI matches requirements, drafts content, and optimizes pricing sections.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w176-ai-proposal-generator"
+    }
+  },
+  "features": [
+    "RFP requirement extraction and matching",
+    "Content auto-generation from knowledge base",
+    "Pricing section optimization",
+    "Compliance matrix auto-generation",
+    "Past win/loss analysis incorporation"
+  ],
+  "benefits": [
+    "Write proposals 10x faster with AI",
+    "Win rate analysis improves content",
+    "Compliance matrices auto-generated",
+    "Collaborative review maintains quality"
+  ]
+}

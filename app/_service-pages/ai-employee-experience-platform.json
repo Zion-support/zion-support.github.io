@@ -1,0 +1,29 @@
+{
+  "title": "AI Employee Experience & Engagement Platform",
+  "description": "AI-powered employee experience platform with sentiment analysis, engagement surveys, career pathing, and automated HR workflow optimization.",
+  "basic": "$5/employee/mo/month",
+  "pro": "$12/employee/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Employee Experience & Engagement Platform - Zion Tech Group",
+    "description": "AI-powered employee experience platform with sentiment analysis, engagement surveys, career pathing, and automated HR workflow optimization.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-employee-experience-platform"
+    }
+  },
+  "features": [
+    "Real-time employee sentiment analysis",
+    "AI-powered engagement surveys",
+    "Personalized career pathing",
+    "Automated HR workflow optimization",
+    "Predictive attrition modeling"
+  ],
+  "benefits": [
+    "Improve employee retention by 30%",
+    "Increase engagement scores",
+    "Reduce HR administrative work",
+    "Build data-driven culture"
+  ]
+}

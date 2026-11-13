@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/next-generation-frictionless-pharmaceuticals-automation-4dc9e16b",
+  "breadcrumbTitle": "Next-Generation Frictionless Pharmaceuticals Automation",
+  "title": "Next-Generation Frictionless Pharmaceuticals Automation",
+  "description": "Next-generation automation suite that streamlines frictionless pharmaceuticals workflows with intelligent orchestration.",
+  "basic": "$218/month",
+  "pro": "$548/month",
+  "enterprise": "$1648/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Next-Generation Frictionless Pharmaceuticals Automation - Zion Tech Group",
+    "description": "Next-generation automation suite that streamlines frictionless pharmaceuticals workflows with intelligent orchestration.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/next-generation-frictionless-pharmaceuticals-automation-4dc9e16b"
+    }
+  },
+  "features": [
+    "Smart orchestration",
+    "Process automation",
+    "Event processing",
+    "Task scheduling"
+  ],
+  "benefits": [
+    "Faster execution",
+    "Reduced manual steps",
+    "Scalable processes",
+    "Error reduction"
+  ]
+}

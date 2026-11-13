@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/engine-ai---insurance-5f6bef9a",
+  "breadcrumbTitle": "Engine AI - Insurance",
+  "title": "Engine AI - Insurance",
+  "description": "Transform your insurance operations with our Engine AI - Insurance. This AI-driven solution automates sales forecasting with unprecedented accuracy and efficien",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Engine AI - Insurance - Zion Tech Group",
+    "description": "Transform your insurance operations with our Engine AI - Insurance. This AI-driven solution automates sales forecasting with unprecedented accuracy and efficien",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/engine-ai---insurance-5f6bef9a"
+    }
+  },
+  "features": [
+    "GDPR compliance",
+    "Real-time processing",
+    "Custom integrations",
+    "Role-based access control",
+    "Cloud-native architecture"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "Performance benchmarking",
+    "50% reduction in operational costs"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-powered-manager-for-agriculture-5d114c26",
+  "breadcrumbTitle": "AI-Powered Manager for Agriculture",
+  "title": "AI-Powered Manager for Agriculture",
+  "description": "Revolutionize agriculture through intelligent automation. Our AI-Powered Manager for Agriculture leverages advanced machine learning to deliver predictive analy",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Manager for Agriculture - Zion Tech Group",
+    "description": "Revolutionize agriculture through intelligent automation. Our AI-Powered Manager for Agriculture leverages advanced machine learning to deliver predictive analy",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-manager-for-agriculture-5d114c26"
+    }
+  },
+  "features": [
+    "Microservices deployment",
+    "Cloud-native architecture",
+    "Data encryption",
+    "Offline capabilities",
+    "Auto-scaling capabilities"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "50% reduction in operational costs",
+    "Enterprise-grade security",
+    "Performance benchmarking"
+  ]
+}

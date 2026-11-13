@@ -1,0 +1,29 @@
+{
+  "title": "AI Personal Finance Manager & Advisor",
+  "description": "AI-powered personal finance manager that categorizes spending, predicts cash flow, and provides personalized financial advice. Like having a financial advisor in your pocket.",
+  "basic": "$9/mo/month",
+  "pro": "$19/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Personal Finance Manager & Advisor - Zion Tech Group",
+    "description": "AI-powered personal finance manager that categorizes spending, predicts cash flow, and provides personalized financial advice. Like having a financial advisor i",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-ai-personal-finance"
+    }
+  },
+  "features": [
+    "Automatic transaction categorization",
+    "AI cash flow prediction and budgeting",
+    "Bill negotiation and subscription optimization",
+    "Savings goal tracking with AI recommendations",
+    "Investment portfolio analysis"
+  ],
+  "benefits": [
+    "Save 20% more with AI-optimized budgets",
+    "Negotiate bills automatically",
+    "Predict cash flow 30 days ahead",
+    "Get personalized financial advice 24/7"
+  ]
+}

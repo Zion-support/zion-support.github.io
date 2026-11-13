@@ -1,0 +1,30 @@
+{
+  "title": "AI ESG Reporting Platform",
+  "description": "Automated ESG data collection, analysis, and report generation. Supports GRI, SASB, TCFD, and EU Taxonomy frameworks. Real-time ESG scoring.",
+  "basic": "$N/A/month",
+  "pro": "$4997/month",
+  "enterprise": "$12997/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI ESG Reporting Platform - Zion Tech Group",
+    "description": "Automated ESG data collection, analysis, and report generation. Supports GRI, SASB, TCFD, and EU Taxonomy frameworks. Real-time ESG scoring.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w130-saas-esg"
+    }
+  },
+  "features": [
+    "Multi-framework support (GRI/SASB/TCFD)",
+    "Automated data collection",
+    "Carbon footprint calculation",
+    "ESG scoring & benchmarking",
+    "Stakeholder engagement tracking"
+  ],
+  "benefits": [
+    "80% faster ESG reporting",
+    "Real-time ESG scoring",
+    "Regulatory compliance",
+    "Investor-ready reports",
+    "Supply chain visibility"
+  ]
+}

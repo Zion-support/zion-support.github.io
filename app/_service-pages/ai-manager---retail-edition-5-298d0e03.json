@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-manager---retail-edition-5-298d0e03",
+  "breadcrumbTitle": "AI Manager - Retail Edition #5",
+  "title": "AI Manager - Retail Edition #5",
+  "description": "Transform your retail operations with our AI Manager - Retail Edition #5. This AI-driven solution automates maintenance scheduling with unprecedented accuracy a",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Manager - Retail Edition #5 - Zion Tech Group",
+    "description": "Transform your retail operations with our AI Manager - Retail Edition #5. This AI-driven solution automates maintenance scheduling with unprecedented accuracy a",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-manager---retail-edition-5-298d0e03"
+    }
+  },
+  "features": [
+    "Alerting system",
+    "Mobile-responsive interface",
+    "Edge computing support",
+    "Zero-downtime updates",
+    "Custom integrations"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "Scalable to millions of transactions",
+    "Zero manual intervention required"
+  ]
+}

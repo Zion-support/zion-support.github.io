@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/smart-maintenance-orchestrator-5fa0a28c",
+  "breadcrumbTitle": "Smart Maintenance Orchestrator",
+  "title": "Smart Maintenance Orchestrator",
+  "description": "The future of legal is here with Smart Maintenance Orchestrator. Powered by cutting-edge AI, this platform delivers workflow management like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Maintenance Orchestrator - Zion Tech Group",
+    "description": "The future of legal is here with Smart Maintenance Orchestrator. Powered by cutting-edge AI, this platform delivers workflow management like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-maintenance-orchestrator-5fa0a28c"
+    }
+  },
+  "features": [
+    "SOC 2 certified",
+    "Offline capabilities",
+    "GDPR compliance",
+    "Multi-language support",
+    "Real-time processing"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Dynamic resource allocation",
+    "Performance benchmarking"
+  ]
+}

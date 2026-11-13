@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/optimizer-smart---education-e8229404",
+  "breadcrumbTitle": "Optimizer Smart - Education",
+  "title": "Optimizer Smart - Education",
+  "description": "Revolutionize education through intelligent automation. Our Optimizer Smart - Education leverages advanced machine learning to deliver image recognition at scal",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Optimizer Smart - Education - Zion Tech Group",
+    "description": "Revolutionize education through intelligent automation. Our Optimizer Smart - Education leverages advanced machine learning to deliver image recognition at scal",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/optimizer-smart---education-e8229404"
+    }
+  },
+  "features": [
+    "Edge computing support",
+    "Open-source friendly",
+    "Audit trails",
+    "Comprehensive monitoring",
+    "Offline capabilities"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "Automated compliance reporting",
+    "50% reduction in operational costs",
+    "ROI in under 90 days"
+  ]
+}

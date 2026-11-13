@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "AI Data Lakehouse Pipelines: executive guide | Zion Tech Group",
+    "description": "AI Data Lakehouse Pipelines: executive guide",
+    "keywords": [
+      "automation",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "AI Data Lakehouse Pipelines: executive guide",
+      "description": "AI Data Lakehouse Pipelines: executive guide",
+      "url": "https://ziontechgroup.com/blog/ai-data-lakehouse-pipelines-executive-guide/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/ai-data-lakehouse-pipelines-executive-guide/"
+    }
+  },
+  "values": [
+    "AI Data Lakehouse Pipelines: executive guide",
+    "AI Data Lakehouse Pipelines: executive guide",
+    "AI Data Lakehouse Pipelines: executive guide",
+    "Conversion path",
+    "If this guide matches your ai data lakehouse pipelines: executive guide initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "Conversion path",
+    " If this guide matches your ai data lakehouse pipelines: executive guide initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "/blog/automation-orchestration-enterprise-2026-7320",
+    "Automation Orchestration Enterprise 2026 7320",
+    "/blog/ai-observability-executive-guide",
+    "Ai Observability Executive Guide",
+    "/blog/autonomous-qa-engineering-case-study",
+    "Autonomous Qa Engineering Case Study",
+    "/blog/chaos-engineering-2026-6809",
+    "Chaos Engineering 2026 6809"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "AI Data Lakehouse Pipelines: executive guide",
+    "description": "AI Data Lakehouse Pipelines: executive guide",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T07:56:53Z",
+    "dateModified": "2026-08-07T07:56:53Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/ai-data-lakehouse-pipelines-executive-guide/"
+  }
+}

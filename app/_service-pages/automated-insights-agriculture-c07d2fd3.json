@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/automated-insights-agriculture-c07d2fd3",
+  "breadcrumbTitle": "Automated insights-agriculture",
+  "title": "Automated insights-agriculture",
+  "description": "Next-generation agriculture solution: Automated insights-agriculture. Combines image recognition with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated insights-agriculture - Zion Tech Group",
+    "description": "Next-generation agriculture solution: Automated insights-agriculture. Combines image recognition with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-insights-agriculture-c07d2fd3"
+    }
+  },
+  "features": [
+    "Real-time processing",
+    "Offline capabilities",
+    "Data encryption",
+    "Container orchestration",
+    "Mobile-responsive interface"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "Dynamic resource allocation",
+    "Enterprise-grade security",
+    "Seamless integration with existing systems"
+  ]
+}

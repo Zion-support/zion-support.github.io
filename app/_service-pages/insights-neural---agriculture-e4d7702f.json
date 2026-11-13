@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/insights-neural---agriculture-e4d7702f",
+  "breadcrumbTitle": "Insights Neural - Agriculture",
+  "title": "Insights Neural - Agriculture",
+  "description": "The future of agriculture is here with Insights Neural - Agriculture. Powered by cutting-edge AI, this platform delivers market intelligence like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Insights Neural - Agriculture - Zion Tech Group",
+    "description": "The future of agriculture is here with Insights Neural - Agriculture. Powered by cutting-edge AI, this platform delivers market intelligence like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/insights-neural---agriculture-e4d7702f"
+    }
+  },
+  "features": [
+    "GDPR compliance",
+    "API-first design",
+    "Container orchestration",
+    "Zero-downtime updates",
+    "Rollback mechanisms"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "Scalable to millions of transactions",
+    "Dynamic resource allocation",
+    "Zero manual intervention required"
+  ]
+}

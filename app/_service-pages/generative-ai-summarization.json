@@ -1,0 +1,29 @@
+{
+  "title": "Generative AI Document Summarizer",
+  "description": "Enterprise document summarization engine: ingest PDFs, Word docs, and transcripts to generate executive briefs, meeting notes, and compliance abstracts.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Generative AI Document Summarizer - Zion Tech Group",
+    "description": "Enterprise document summarization engine: ingest PDFs, Word docs, and transcripts to generate executive briefs, meeting notes, and compliance abstracts.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/generative-ai-summarization"
+    }
+  },
+  "features": [
+    "Multi-format document ingest",
+    "Configurable summary length",
+    "Citation-backed extraction",
+    "Compliance abstract templates",
+    "Bulk processing API"
+  ],
+  "benefits": [
+    "Reduce costs with generative ai document summarizer",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

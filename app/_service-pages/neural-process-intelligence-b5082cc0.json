@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/neural-process-intelligence-b5082cc0",
+  "breadcrumbTitle": "Neural Process Intelligence",
+  "title": "Neural Process Intelligence",
+  "description": "Unlock unprecedented growth with Neural Process Intelligence. This autonomous system provides customer insights with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Neural Process Intelligence - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Neural Process Intelligence. This autonomous system provides customer insights with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/neural-process-intelligence-b5082cc0"
+    }
+  },
+  "features": [
+    "Microservices deployment",
+    "Comprehensive monitoring",
+    "GDPR compliance",
+    "Data encryption"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Reduced human error by 95%",
+    "Real-time insights and alerts"
+  ]
+}

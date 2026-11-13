@@ -1,0 +1,28 @@
+{
+  "title": "CampaignHub - Email Campaign Manager",
+  "description": "All-in-one email campaign platform with drag-and-drop editor, A/B testing, automation workflows, and deliverability optimization for growing businesses.",
+  "basic": "$29/mo/month",
+  "pro": "$79/mo/month",
+  "enterprise": "$149/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "CampaignHub - Email Campaign Manager - Zion Tech Group",
+    "description": "All-in-one email campaign platform with drag-and-drop editor, A/B testing, automation workflows, and deliverability optimization for growing businesses.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/microsaas-email-campaign-manager"
+    }
+  },
+  "features": [
+    "Drag-drop Editor",
+    "A/B Testing",
+    "Automation Workflows",
+    "Deliverability Optimization",
+    "Audience Segmentation"
+  ],
+  "benefits": [
+    "Increase open rates 35%",
+    "Automate campaigns",
+    "Improve deliverability"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/cloud-migration-technology-987c8e31",
+  "breadcrumbTitle": "Cloud Migration Services - Technology",
+  "title": "Cloud Migration Services - Technology",
+  "description": "Seamless cloud migration for Technology companies. We move workloads to AWS/Azure/GCP with minimal downtime and maximum performance.",
+  "basic": "$299/month",
+  "pro": "$799/month",
+  "enterprise": "$2499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Cloud Migration Services - Technology - Zion Tech Group",
+    "description": "Seamless cloud migration for Technology companies. We move workloads to AWS/Azure/GCP with minimal downtime and maximum performance.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cloud-migration-technology-987c8e31"
+    }
+  },
+  "features": [
+    "Cloud readiness assessment",
+    "Migration planning and execution",
+    "Data transfer and validation",
+    "Cost optimization",
+    "Security and compliance checks"
+  ],
+  "benefits": [
+    "30-50% infra cost reduction",
+    "Scalable resources on demand",
+    "Improved disaster recovery",
+    "Faster deployment cycles",
+    "Better business continuity"
+  ]
+}

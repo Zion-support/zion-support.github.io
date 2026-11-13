@@ -1,0 +1,29 @@
+{
+  "title": "Green Computing & Carbon-Neutral IT Consulting",
+  "description": "Sustainability-first IT consulting. Carbon footprint assessment, green cloud migration strategies, and regulatory compliance for ESG reporting.",
+  "basic": "$2,499/mo/month",
+  "pro": "$7,499/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Green Computing & Carbon-Neutral IT Consulting - Zion Tech Group",
+    "description": "Sustainability-first IT consulting. Carbon footprint assessment, green cloud migration strategies, and regulatory compliance for ESG reporting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-green-computing-consulting"
+    }
+  },
+  "features": [
+    "IT carbon footprint assessment",
+    "Green cloud migration roadmap",
+    "Energy-efficient architecture design",
+    "ESG compliance reporting (GRI, CDP)",
+    "Vendor sustainability scoring"
+  ],
+  "benefits": [
+    "Meet ESG regulatory requirements",
+    "Reduce cloud costs by 20%",
+    "Attract sustainability-conscious customers",
+    "Future-proof IT operations"
+  ]
+}

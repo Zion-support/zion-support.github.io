@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/system-ai---agriculture-bb2adeae",
+  "breadcrumbTitle": "System AI - Agriculture",
+  "title": "System AI - Agriculture",
+  "description": "The future of agriculture is here with System AI - Agriculture. Powered by cutting-edge AI, this platform delivers customer insights like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "System AI - Agriculture - Zion Tech Group",
+    "description": "The future of agriculture is here with System AI - Agriculture. Powered by cutting-edge AI, this platform delivers customer insights like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/system-ai---agriculture-bb2adeae"
+    }
+  },
+  "features": [
+    "Edge computing support",
+    "Multi-region deployment",
+    "Audit trails",
+    "Rollback mechanisms",
+    "Role-based access control"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "50% reduction in operational costs",
+    "Cost optimization recommendations",
+    "3x faster decision making",
+    "ROI in under 90 days"
+  ]
+}

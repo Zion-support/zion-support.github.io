@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-platform---gaming-edition-2-7d1e2d2e",
+  "breadcrumbTitle": "AI Platform - Gaming Edition #2",
+  "title": "AI Platform - Gaming Edition #2",
+  "description": "Unlock unprecedented growth with AI Platform - Gaming Edition #2. This autonomous system provides resource optimization with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Platform - Gaming Edition #2 - Zion Tech Group",
+    "description": "Unlock unprecedented growth with AI Platform - Gaming Edition #2. This autonomous system provides resource optimization with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-platform---gaming-edition-2-7d1e2d2e"
+    }
+  },
+  "features": [
+    "Edge computing support",
+    "API-first design",
+    "Alerting system",
+    "Data encryption",
+    "HIPAA ready"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "Zero manual intervention required",
+    "Performance benchmarking"
+  ]
+}

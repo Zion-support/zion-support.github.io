@@ -1,0 +1,29 @@
+{
+  "title": "LegalBot — AI Legal Q&A Assistant",
+  "description": "AI legal assistant for common legal questions: employment law, IP basics, contract review, and regulatory queries. Not legal advice, but legal information at scale.",
+  "basic": "$99/mo/month",
+  "pro": "$299/mo/month",
+  "enterprise": "$999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "LegalBot — AI Legal Q&A Assistant - Zion Tech Group",
+    "description": "AI legal assistant for common legal questions: employment law, IP basics, contract review, and regulatory queries. Not legal advice, but legal information at sc",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w175-legalbot"
+    }
+  },
+  "features": [
+    "Employment law Q&A (wage, leave, termination)",
+    "IP basics (trademark, copyright, patent)",
+    "Contract clause explanation and risk flags",
+    "Regulatory requirement lookup",
+    "Jurisdiction-aware responses"
+  ],
+  "benefits": [
+    "Get legal information in seconds, not days",
+    "Reduce routine attorney inquiries by 70%",
+    "Jurisdiction-aware for multi-state ops",
+    "Escalation to attorney for real advice"
+  ]
+}

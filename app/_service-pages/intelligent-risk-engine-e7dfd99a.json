@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/intelligent-risk-engine-e7dfd99a",
+  "breadcrumbTitle": "Intelligent Risk Engine",
+  "title": "Intelligent Risk Engine",
+  "description": "Next-generation transportation solution: Intelligent Risk Engine. Combines market intelligence with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Risk Engine - Zion Tech Group",
+    "description": "Next-generation transportation solution: Intelligent Risk Engine. Combines market intelligence with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-risk-engine-e7dfd99a"
+    }
+  },
+  "features": [
+    "Serverless functions",
+    "Microservices deployment",
+    "Performance dashboards",
+    "Audit trails",
+    "Container orchestration"
+  ],
+  "benefits": [
+    "Dynamic resource allocation",
+    "Performance benchmarking",
+    "Self-healing infrastructure",
+    "Intelligent load balancing",
+    "Cost optimization recommendations"
+  ]
+}

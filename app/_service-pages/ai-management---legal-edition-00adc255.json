@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-management---legal-edition-00adc255",
+  "breadcrumbTitle": "AI Management - Legal Edition",
+  "title": "AI Management - Legal Edition",
+  "description": "Transform your legal operations with our AI Management - Legal Edition. This AI-driven solution automates sales forecasting with unprecedented accuracy and effi",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Management - Legal Edition - Zion Tech Group",
+    "description": "Transform your legal operations with our AI Management - Legal Edition. This AI-driven solution automates sales forecasting with unprecedented accuracy and effi",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-management---legal-edition-00adc255"
+    }
+  },
+  "features": [
+    "Real-time processing",
+    "Open-source friendly",
+    "Offline capabilities",
+    "HIPAA ready",
+    "Rollback mechanisms"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "Intelligent load balancing",
+    "Scalable to millions of transactions"
+  ]
+}

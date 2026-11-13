@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-driven-enterprise-grade-financial-planning-8cbc0d60",
+  "breadcrumbTitle": "AI-Driven Enterprise-Grade Financial Planning",
+  "title": "AI-Driven Enterprise-Grade Financial Planning",
+  "description": "Automated financial planning system that creates enterprise-grade personalized wealth strategies, tax optimization, and retirement planning using advanced algor",
+  "basic": "$258/month",
+  "pro": "$648/month",
+  "enterprise": "$1948/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI-Driven Enterprise-Grade Financial Planning - Zion Tech Group",
+    "description": "Automated financial planning system that creates enterprise-grade personalized wealth strategies, tax optimization, and retirement planning using advanced algor",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-driven-enterprise-grade-financial-planning-8cbc0d60"
+    }
+  },
+  "features": [
+    "Goal-based planning",
+    "Tax optimization",
+    "Monte Carlo simulation",
+    "Rebalancing automation"
+  ],
+  "benefits": [
+    "Personalized advice",
+    "Tax efficiency",
+    "Goal achievement",
+    "Lower fees"
+  ]
+}

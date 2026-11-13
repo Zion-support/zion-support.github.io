@@ -1,0 +1,29 @@
+{
+  "title": "Open Banking API Platform",
+  "description": "PSD2-compliant open banking platform with API gateway, consent management, and third-party integration. Enable account aggregation, payment initiation, and data sharing.",
+  "basic": "$1,999/mo/month",
+  "pro": "$5,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Open Banking API Platform - Zion Tech Group",
+    "description": "PSD2-compliant open banking platform with API gateway, consent management, and third-party integration. Enable account aggregation, payment initiation, and data",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/fintech-open-banking-platform"
+    }
+  },
+  "features": [
+    "PSD2-compliant APIs",
+    "Consent management",
+    "Account aggregation",
+    "Payment initiation",
+    "Third-party provider management"
+  ],
+  "benefits": [
+    "Enable open banking partnerships",
+    "PSD2 compliance",
+    "New revenue streams from APIs",
+    "Enhanced customer experience"
+  ]
+}

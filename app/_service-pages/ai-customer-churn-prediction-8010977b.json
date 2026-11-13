@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-customer-churn-prediction-8010977b",
+  "breadcrumbTitle": "AI Customer Churn Prediction",
+  "title": "AI Customer Churn Prediction",
+  "description": "Predictive analytics tool that identifies at-risk customers before they leave. Provides intervention recommendations to improve retention and reduce churn rates",
+  "basic": "$149/month",
+  "pro": "$399/month",
+  "enterprise": "$999/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Customer Churn Prediction - Zion Tech Group",
+    "description": "Predictive analytics tool that identifies at-risk customers before they leave. Provides intervention recommendations to improve retention and reduce churn rates",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-customer-churn-prediction-8010977b"
+    }
+  },
+  "features": [
+    "Real-time churn risk scoring",
+    "Root cause analysis",
+    "Intervention recommendation engine",
+    "Retention campaign automation"
+  ],
+  "benefits": [
+    "30% reduction in customer churn",
+    "Improved customer lifetime value",
+    "Proactive retention strategies",
+    "Reduced acquisition costs"
+  ]
+}

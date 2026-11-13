@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/intelligent-platform-energy-1-34ab682d",
+  "breadcrumbTitle": "Intelligent platform-energy #1",
+  "title": "Intelligent platform-energy #1",
+  "description": "Revolutionize energy through intelligent automation. Our Intelligent platform-energy #1 leverages advanced machine learning to deliver image recognition at scal",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent platform-energy #1 - Zion Tech Group",
+    "description": "Revolutionize energy through intelligent automation. Our Intelligent platform-energy #1 leverages advanced machine learning to deliver image recognition at scal",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-platform-energy-1-34ab682d"
+    }
+  },
+  "features": [
+    "Container orchestration",
+    "Microservices deployment",
+    "Auto-scaling capabilities",
+    "Comprehensive monitoring",
+    "Custom integrations"
+  ],
+  "benefits": [
+    "Automated compliance reporting",
+    "24/7 automated operations",
+    "Enterprise-grade security",
+    "Reduced human error by 95%",
+    "Performance benchmarking"
+  ]
+}

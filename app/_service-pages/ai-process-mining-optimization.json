@@ -1,0 +1,29 @@
+{
+  "title": "AI Process Mining & Optimization",
+  "description": "Discover, analyze, and optimize business processes using AI-powered process mining. Automatically identify bottlenecks, compliance violations, and optimization opportunities from event logs.",
+  "basic": "$2,499/mo/month",
+  "pro": "$5,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Process Mining & Optimization - Zion Tech Group",
+    "description": "Discover, analyze, and optimize business processes using AI-powered process mining. Automatically identify bottlenecks, compliance violations, and optimization ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-process-mining-optimization"
+    }
+  },
+  "features": [
+    "Automatic process discovery from system event logs",
+    "Conformance checking against designed processes",
+    "Bottleneck identification and root cause analysis",
+    "Process simulation for what-if scenarios",
+    "Compliance violation detection and alerting"
+  ],
+  "benefits": [
+    "Reduce process cycle times by 30-50%",
+    "Identify automation opportunities worth millions",
+    "Ensure compliance with automated conformance checks",
+    "Data-driven process improvement decisions"
+  ]
+}

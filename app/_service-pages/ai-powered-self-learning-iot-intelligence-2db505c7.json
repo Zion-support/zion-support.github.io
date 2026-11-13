@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-self-learning-iot-intelligence-2db505c7",
+  "breadcrumbTitle": "AI-Powered Self-Learning IoT Intelligence",
+  "title": "AI-Powered Self-Learning IoT Intelligence",
+  "description": "Edge AI platform that processes IoT sensor data in real-time with self-learning insights.",
+  "basic": "$258/month",
+  "pro": "$648/month",
+  "enterprise": "$1948/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Self-Learning IoT Intelligence - Zion Tech Group",
+    "description": "Edge AI platform that processes IoT sensor data in real-time with self-learning insights.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-self-learning-iot-intelligence-2db505c7"
+    }
+  },
+  "features": [
+    "Edge processing",
+    "Real-time analytics",
+    "Automated responses",
+    "Energy efficiency"
+  ],
+  "benefits": [
+    "Reduced latency",
+    "Better insights",
+    "Automated responses",
+    "Energy efficiency"
+  ]
+}

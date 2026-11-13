@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/engine-adaptive---healthcare-0bae508e",
+  "breadcrumbTitle": "Engine Adaptive - Healthcare",
+  "title": "Engine Adaptive - Healthcare",
+  "description": "Next-generation healthcare solution: Engine Adaptive - Healthcare. Combines market intelligence with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Engine Adaptive - Healthcare - Zion Tech Group",
+    "description": "Next-generation healthcare solution: Engine Adaptive - Healthcare. Combines market intelligence with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/engine-adaptive---healthcare-0bae508e"
+    }
+  },
+  "features": [
+    "Custom integrations",
+    "Offline capabilities",
+    "Plugin architecture",
+    "Zero-downtime updates",
+    "HIPAA ready"
+  ],
+  "benefits": [
+    "Dynamic resource allocation",
+    "Zero manual intervention required",
+    "Intelligent load balancing",
+    "Predictive maintenance scheduling"
+  ]
+}

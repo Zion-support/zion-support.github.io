@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/adaptive-suite-retail-f0f0df33",
+  "breadcrumbTitle": "Adaptive suite-retail",
+  "title": "Adaptive suite-retail",
+  "description": "Transform your retail operations with our Adaptive suite-retail. This AI-driven solution automates fraud prevention with unprecedented accuracy and efficiency.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Adaptive suite-retail - Zion Tech Group",
+    "description": "Transform your retail operations with our Adaptive suite-retail. This AI-driven solution automates fraud prevention with unprecedented accuracy and efficiency.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/adaptive-suite-retail-f0f0df33"
+    }
+  },
+  "features": [
+    "Open-source friendly",
+    "Role-based access control",
+    "Custom integrations",
+    "Real-time processing",
+    "Cloud-native architecture"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "3x faster decision making",
+    "ROI in under 90 days"
+  ]
+}

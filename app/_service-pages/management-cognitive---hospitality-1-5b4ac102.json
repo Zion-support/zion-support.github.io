@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/management-cognitive---hospitality-1-5b4ac102",
+  "breadcrumbTitle": "Management Cognitive - Hospitality #1",
+  "title": "Management Cognitive - Hospitality #1",
+  "description": "Transform your hospitality operations with our Management Cognitive - Hospitality #1. This AI-driven solution automates maintenance scheduling with unprecedente",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Management Cognitive - Hospitality #1 - Zion Tech Group",
+    "description": "Transform your hospitality operations with our Management Cognitive - Hospitality #1. This AI-driven solution automates maintenance scheduling with unprecedente",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/management-cognitive---hospitality-1-5b4ac102"
+    }
+  },
+  "features": [
+    "Open-source friendly",
+    "API-first design",
+    "Multi-language support",
+    "SOC 2 certified"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "99.9% uptime guarantee",
+    "Cost optimization recommendations",
+    "ROI in under 90 days"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "title": "Predictive Supply Chain Optimizer",
+  "description": "Demand forecasting XGBoost/LightGBM, inventory reorder point SDE, route optimisation OR-Tools, and supplier risk scoring per vendor.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Predictive Supply Chain Optimizer - Zion Tech Group",
+    "description": "Demand forecasting XGBoost/LightGBM, inventory reorder point SDE, route optimisation OR-Tools, and supplier risk scoring per vendor.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-predictive-supply-chain-optimizer"
+    }
+  },
+  "features": [
+    "Demand forecast XGBoost/LightGBM per SKU",
+    "Safety-stock SDE (service-level, lead-time)",
+    "Route optimisation OR-Tools per order-batch",
+    "Supplier risk score per vendor/region/country"
+  ],
+  "benefits": [
+    "Reduce costs with predictive supply chain optimizer",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

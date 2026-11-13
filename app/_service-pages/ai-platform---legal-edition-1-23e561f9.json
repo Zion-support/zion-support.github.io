@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-platform---legal-edition-1-23e561f9",
+  "breadcrumbTitle": "AI Platform - Legal Edition #1",
+  "title": "AI Platform - Legal Edition #1",
+  "description": "Transform your legal operations with our AI Platform - Legal Edition #1. This AI-driven solution automates threat detection with unprecedented accuracy and effi",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Platform - Legal Edition #1 - Zion Tech Group",
+    "description": "Transform your legal operations with our AI Platform - Legal Edition #1. This AI-driven solution automates threat detection with unprecedented accuracy and effi",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-platform---legal-edition-1-23e561f9"
+    }
+  },
+  "features": [
+    "SOC 2 certified",
+    "Audit trails",
+    "Performance dashboards",
+    "Plugin architecture",
+    "Zero-downtime updates"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "Predictive maintenance scheduling",
+    "99.9% uptime guarantee"
+  ]
+}

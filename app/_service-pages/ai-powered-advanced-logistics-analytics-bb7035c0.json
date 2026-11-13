@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-advanced-logistics-analytics-bb7035c0",
+  "breadcrumbTitle": "AI-Powered Advanced Logistics Analytics",
+  "title": "AI-Powered Advanced Logistics Analytics",
+  "description": "AI-driven analytics platform that delivers advanced insights into logistics operations, providing real-time monitoring, predictive modeling, and automated repor",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Advanced Logistics Analytics - Zion Tech Group",
+    "description": "AI-driven analytics platform that delivers advanced insights into logistics operations, providing real-time monitoring, predictive modeling, and automated repor",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-advanced-logistics-analytics-bb7035c0"
+    }
+  },
+  "features": [
+    "Real-time data visualization",
+    "Predictive modeling",
+    "Automated reporting",
+    "Custom dashboards"
+  ],
+  "benefits": [
+    "Data-driven decision making",
+    "Improved operational efficiency",
+    "Proactive issue detection",
+    "Enhanced KPI tracking"
+  ]
+}

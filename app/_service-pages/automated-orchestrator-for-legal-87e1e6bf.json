@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/automated-orchestrator-for-legal-87e1e6bf",
+  "breadcrumbTitle": "Automated Orchestrator for Legal",
+  "title": "Automated Orchestrator for Legal",
+  "description": "The future of legal is here with Automated Orchestrator for Legal. Powered by cutting-edge AI, this platform delivers resource optimization like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated Orchestrator for Legal - Zion Tech Group",
+    "description": "The future of legal is here with Automated Orchestrator for Legal. Powered by cutting-edge AI, this platform delivers resource optimization like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-orchestrator-for-legal-87e1e6bf"
+    }
+  },
+  "features": [
+    "Open-source friendly",
+    "Zero-downtime updates",
+    "Alerting system",
+    "Container orchestration",
+    "API-first design"
+  ],
+  "benefits": [
+    "Cost optimization recommendations",
+    "Self-healing infrastructure",
+    "Scalable to millions of transactions"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "DevSecOps Platform",
+  "description": "Integrate security into CI/CD pipelines. Automated security scanning, compliance gates, and developer-friendly security tools for shift-left security.",
+  "basic": "$999/mo/month",
+  "pro": "$2,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "DevSecOps Platform - Zion Tech Group",
+    "description": "Integrate security into CI/CD pipelines. Automated security scanning, compliance gates, and developer-friendly security tools for shift-left security.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-devsecops-platform"
+    }
+  },
+  "features": [
+    "SAST/DAST scanning in CI/CD",
+    "Container image scanning",
+    "Infrastructure as Code scanning",
+    "Secret detection",
+    "Compliance gates"
+  ],
+  "benefits": [
+    "Shift security left",
+    "Reduce vulnerabilities in production",
+    "Automate compliance checking",
+    "Developer-friendly security"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "AI Document Q&A Engine",
+  "description": "Upload PDFs, Word docs, and spreadsheets; ask natural language questions and get instant cited answers with multi-document cross-referencing and role-based access control.",
+  "basic": "$149/mo/month",
+  "pro": "$399/mo/month",
+  "enterprise": "$1,299/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Document Q&A Engine - Zion Tech Group",
+    "description": "Upload PDFs, Word docs, and spreadsheets; ask natural language questions and get instant cited answers with multi-document cross-referencing and role-based acce",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-document-qa"
+    }
+  },
+  "features": [
+    "Multi-format PDF/Word/Sheets ingest",
+    "Natural language query with citations",
+    "Cross-document comparison view",
+    "Role-based access and audit log",
+    "Snippet-level answer provenance"
+  ],
+  "benefits": [
+    "Reduce costs with ai document q&a engine",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

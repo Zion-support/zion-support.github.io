@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-optimizer---insurance-edition-27fb2163",
+  "breadcrumbTitle": "AI Optimizer - Insurance Edition",
+  "title": "AI Optimizer - Insurance Edition",
+  "description": "The future of insurance is here with AI Optimizer - Insurance Edition. Powered by cutting-edge AI, this platform delivers decision support like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Optimizer - Insurance Edition - Zion Tech Group",
+    "description": "The future of insurance is here with AI Optimizer - Insurance Edition. Powered by cutting-edge AI, this platform delivers decision support like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-optimizer---insurance-edition-27fb2163"
+    }
+  },
+  "features": [
+    "Real-time processing",
+    "Serverless functions",
+    "API-first design",
+    "Plugin architecture"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "99.9% uptime guarantee",
+    "Seamless integration with existing systems",
+    "ROI in under 90 days",
+    "50% reduction in operational costs"
+  ]
+}

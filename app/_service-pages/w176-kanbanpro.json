@@ -1,0 +1,29 @@
+{
+  "title": "KanbanPro — Project Boards",
+  "description": "Visual project management with Kanban boards, Gantt charts, time tracking, and automation rules. For teams that want simplicity, not complexity.",
+  "basic": "$5/user/mo/month",
+  "pro": "$12/user/mo/month",
+  "enterprise": "$25/user/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "KanbanPro — Project Boards - Zion Tech Group",
+    "description": "Visual project management with Kanban boards, Gantt charts, time tracking, and automation rules. For teams that want simplicity, not complexity.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w176-kanbanpro"
+    }
+  },
+  "features": [
+    "Kanban boards with custom workflows",
+    "Gantt chart view for timelines",
+    "Time tracking with billable rates",
+    "Automation rules and triggers",
+    "Dependencies and critical path"
+  ],
+  "benefits": [
+    "Kanban + Gantt in one tool",
+    "Automation rules eliminate busywork",
+    "Time tracking built in, not separate",
+    "Simpler than Jira, more capable than Trello"
+  ]
+}

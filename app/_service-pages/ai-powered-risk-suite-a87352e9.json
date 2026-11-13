@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-powered-risk-suite-a87352e9",
+  "breadcrumbTitle": "AI-Powered Risk Suite",
+  "title": "AI-Powered Risk Suite",
+  "description": "Transform your logistics operations with our AI-Powered Risk Suite. This AI-driven solution automates workflow management with unprecedented accuracy and effici",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Risk Suite - Zion Tech Group",
+    "description": "Transform your logistics operations with our AI-Powered Risk Suite. This AI-driven solution automates workflow management with unprecedented accuracy and effici",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-risk-suite-a87352e9"
+    }
+  },
+  "features": [
+    "Alerting system",
+    "Open-source friendly",
+    "Edge computing support",
+    "GDPR compliance",
+    "Machine learning integration"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "Dynamic resource allocation",
+    "Zero manual intervention required",
+    "99.9% uptime guarantee"
+  ]
+}

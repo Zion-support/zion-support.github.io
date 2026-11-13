@@ -1,0 +1,30 @@
+{
+  "title": "AI Content Moderation Platform",
+  "description": "Real-time content moderation for user-generated content. AI-powered text, image, and video moderation with custom rules, human review queues, and compliance reporting.",
+  "basic": "$399/mo/month",
+  "pro": "$1,299/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Content Moderation Platform - Zion Tech Group",
+    "description": "Real-time content moderation for user-generated content. AI-powered text, image, and video moderation with custom rules, human review queues, and compliance rep",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-ai-content-moderation"
+    }
+  },
+  "features": [
+    "Real-time text moderation",
+    "Image and video analysis",
+    "Custom moderation rules",
+    "Human review queues",
+    "Compliance reporting"
+  ],
+  "benefits": [
+    "95% auto-moderation rate",
+    "Sub-second processing",
+    "Custom rules engine",
+    "Global compliance",
+    "Scalable to millions of posts"
+  ]
+}

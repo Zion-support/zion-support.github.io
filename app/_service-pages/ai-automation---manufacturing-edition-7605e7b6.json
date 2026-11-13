@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-automation---manufacturing-edition-7605e7b6",
+  "breadcrumbTitle": "AI Automation - Manufacturing Edition",
+  "title": "AI Automation - Manufacturing Edition",
+  "description": "Next-generation manufacturing solution: AI Automation - Manufacturing Edition. Combines resource optimization with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Automation - Manufacturing Edition - Zion Tech Group",
+    "description": "Next-generation manufacturing solution: AI Automation - Manufacturing Edition. Combines resource optimization with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-automation---manufacturing-edition-7605e7b6"
+    }
+  },
+  "features": [
+    "Offline capabilities",
+    "Performance dashboards",
+    "Zero-downtime updates",
+    "Custom integrations"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "Real-time insights and alerts",
+    "3x faster decision making",
+    "99.9% uptime guarantee"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/intelligent-energy-automation-7f072eb1",
+  "breadcrumbTitle": "Intelligent Energy Automation",
+  "title": "Intelligent Energy Automation",
+  "description": "Revolutionize healthcare through intelligent automation. Our Intelligent Energy Automation leverages advanced machine learning to deliver performance monitoring",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Energy Automation - Zion Tech Group",
+    "description": "Revolutionize healthcare through intelligent automation. Our Intelligent Energy Automation leverages advanced machine learning to deliver performance monitoring",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-energy-automation-7f072eb1"
+    }
+  },
+  "features": [
+    "Rollback mechanisms",
+    "Machine learning integration",
+    "Cloud-native architecture",
+    "Audit trails"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "Reduced human error by 95%",
+    "Intelligent load balancing"
+  ]
+}

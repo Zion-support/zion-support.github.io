@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/manager-ai---automotive-7eefa216",
+  "breadcrumbTitle": "Manager AI - Automotive",
+  "title": "Manager AI - Automotive",
+  "description": "The future of automotive is here with Manager AI - Automotive. Powered by cutting-edge AI, this platform delivers code optimization like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Manager AI - Automotive - Zion Tech Group",
+    "description": "The future of automotive is here with Manager AI - Automotive. Powered by cutting-edge AI, this platform delivers code optimization like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/manager-ai---automotive-7eefa216"
+    }
+  },
+  "features": [
+    "Real-time processing",
+    "Role-based access control",
+    "Auto-scaling capabilities",
+    "Microservices deployment",
+    "Open-source friendly"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Scalable to millions of transactions",
+    "Intelligent load balancing",
+    "Performance benchmarking"
+  ]
+}

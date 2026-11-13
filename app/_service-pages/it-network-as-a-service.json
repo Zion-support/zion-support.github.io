@@ -1,0 +1,29 @@
+{
+  "title": "Network as a Service",
+  "description": "Fully managed enterprise network with SD-WAN and zero-trust security.",
+  "basic": "$2,999/mo/month",
+  "pro": "$N/A/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Network as a Service - Zion Tech Group",
+    "description": "Fully managed enterprise network with SD-WAN and zero-trust security.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-network-as-a-service"
+    }
+  },
+  "features": [
+    "SD-WAN",
+    "Zero-trust security",
+    "24/7 NOC",
+    "Predictable OPEX",
+    "Auto-scaling"
+  ],
+  "benefits": [
+    "40% cost reduction",
+    "Enterprise security",
+    "Predictable costs",
+    "Zero-touch provisioning"
+  ]
+}

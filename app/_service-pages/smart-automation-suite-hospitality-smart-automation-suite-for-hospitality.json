@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/smart-automation-suite-hospitality-smart-automation-suite-for-hospitality",
+  "breadcrumbTitle": "Smart Automation Suite for Hospitality",
+  "title": "Smart Automation Suite for Hospitality",
+  "description": "Comprehensive smart automation suite designed for hospitality enterprises. Automates Dynamic pricing, guest experience analytics, staffing optimization across a",
+  "basic": "$65/month",
+  "pro": "$167/month",
+  "enterprise": "$441/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Automation Suite for Hospitality - Zion Tech Group",
+    "description": "Comprehensive smart automation suite designed for hospitality enterprises. Automates Dynamic pricing, guest experience analytics, staffing optimization across a",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-automation-suite-hospitality-smart-automation-suite-for-hospitality"
+    }
+  },
+  "features": [
+    "AI-powered automation",
+    "Enterprise-grade security",
+    "24/7 monitoring",
+    "API-first integration",
+    "Scalable architecture"
+  ],
+  "benefits": [
+    "58% reduction in operational costs",
+    "Process 81% faster with automation",
+    "99.9% uptime guarantee with enterprise SLAs",
+    "ROI realized in under 90 days",
+    "Zero-downtime deployment"
+  ]
+}

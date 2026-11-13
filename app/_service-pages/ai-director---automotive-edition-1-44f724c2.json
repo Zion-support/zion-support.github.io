@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-director---automotive-edition-1-44f724c2",
+  "breadcrumbTitle": "AI Director - Automotive Edition #1",
+  "title": "AI Director - Automotive Edition #1",
+  "description": "Transform your automotive operations with our AI Director - Automotive Edition #1. This AI-driven solution automates financial planning with unprecedented accur",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Director - Automotive Edition #1 - Zion Tech Group",
+    "description": "Transform your automotive operations with our AI Director - Automotive Edition #1. This AI-driven solution automates financial planning with unprecedented accur",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-director---automotive-edition-1-44f724c2"
+    }
+  },
+  "features": [
+    "Machine learning integration",
+    "Comprehensive monitoring",
+    "GDPR compliance",
+    "Serverless functions",
+    "Performance dashboards"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "Predictive maintenance scheduling",
+    "Enterprise-grade security",
+    "3x faster decision making"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-platform---retail-edition-38db7882",
+  "breadcrumbTitle": "AI Platform - Retail Edition",
+  "title": "AI Platform - Retail Edition",
+  "description": "Revolutionize retail through intelligent automation. Our AI Platform - Retail Edition leverages advanced machine learning to deliver financial planning at scale",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Platform - Retail Edition - Zion Tech Group",
+    "description": "Revolutionize retail through intelligent automation. Our AI Platform - Retail Edition leverages advanced machine learning to deliver financial planning at scale",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-platform---retail-edition-38db7882"
+    }
+  },
+  "features": [
+    "Audit trails",
+    "Multi-region deployment",
+    "Plugin architecture",
+    "Mobile-responsive interface",
+    "Rollback mechanisms"
+  ],
+  "benefits": [
+    "24/7 automated operations",
+    "Zero manual intervention required",
+    "Intelligent load balancing"
+  ]
+}

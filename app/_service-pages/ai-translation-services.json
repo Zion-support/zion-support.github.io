@@ -1,0 +1,29 @@
+{
+  "title": "AI Translation & Localization",
+  "description": "Enterprise translation engine with 100+ language support, context-aware Neural MT, terminology management, and human review workflows.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Translation & Localization - Zion Tech Group",
+    "description": "Enterprise translation engine with 100+ language support, context-aware Neural MT, terminology management, and human review workflows.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-translation-services"
+    }
+  },
+  "features": [
+    "100+ language Neural Machine Translation",
+    "Domain-specific model fine-tuning",
+    "Translation memory & glossary integration",
+    "Quality scoring & consistency checks",
+    "API integration for real-time translation"
+  ],
+  "benefits": [
+    "Reduce costs with ai translation & localization",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

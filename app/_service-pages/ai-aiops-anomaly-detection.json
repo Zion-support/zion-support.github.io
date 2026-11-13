@@ -1,0 +1,28 @@
+{
+  "title": "AI-AIOps Anomaly Detection",
+  "description": "Detects infrastructure anomalies (CPU, memory, error rates) before they cause outages using unsupervised learning and seasonal decomposition.",
+  "basic": "$399/mo/month",
+  "pro": "$999/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI-AIOps Anomaly Detection - Zion Tech Group",
+    "description": "Detects infrastructure anomalies (CPU, memory, error rates) before they cause outages using unsupervised learning and seasonal decomposition.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-aiops-anomaly-detection"
+    }
+  },
+  "features": [
+    "Metric anomaly scoring",
+    "Correlation across services",
+    "Predictive alerting (30 min lead)",
+    "Integration with PagerDuty & Slack"
+  ],
+  "benefits": [
+    "Reduce costs with ai-aiops anomaly detection",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "AI Observability & MLOps",
+  "description": "Monitor, debug, and optimize AI systems at scale. End-to-end observability for LLMs, agents, and ML pipelines with tracing, evaluation, and cost an...",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Observability & MLOps - Zion Tech Group",
+    "description": "Monitor, debug, and optimize AI systems at scale. End-to-end observability for LLMs, agents, and ML pipelines with tracing, evaluation, and cost an...",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-observability-mlops"
+    }
+  },
+  "features": [
+    "End-to-End Tracing",
+    "Quality & Safety Evaluation",
+    "Cost & Usage Analytics",
+    "MLOps Pipeline Management",
+    "Debugging & Root Cause"
+  ],
+  "benefits": [
+    "Reduce costs with ai observability & mlops",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

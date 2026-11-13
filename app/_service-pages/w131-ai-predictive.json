@@ -1,0 +1,30 @@
+{
+  "title": "Predictive Analytics Platform",
+  "description": "No-code predictive analytics for business forecasting, demand planning, and risk assessment. AutoML with explainable AI and automated feature engineering.",
+  "basic": "$N/A/month",
+  "pro": "$7997/month",
+  "enterprise": "$18997/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Predictive Analytics Platform - Zion Tech Group",
+    "description": "No-code predictive analytics for business forecasting, demand planning, and risk assessment. AutoML with explainable AI and automated feature engineering.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w131-ai-predictive"
+    }
+  },
+  "features": [
+    "AutoML",
+    "Demand forecasting",
+    "Risk assessment",
+    "Customer churn prediction",
+    "Anomaly detection"
+  ],
+  "benefits": [
+    "No data science team needed",
+    "80% faster model deployment",
+    "Explainable predictions",
+    "Automated feature engineering",
+    "Real-time scoring"
+  ]
+}

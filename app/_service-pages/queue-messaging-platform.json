@@ -1,0 +1,29 @@
+{
+  "title": "Queue & Messaging Platform",
+  "description": "High-throughput message queue with pub/sub patterns, message replay, dead-letter queues, and exactly-once delivery guarantees.",
+  "basic": "$99/mo/month",
+  "pro": "$299/mo/month",
+  "enterprise": "$999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Queue & Messaging Platform - Zion Tech Group",
+    "description": "High-throughput message queue with pub/sub patterns, message replay, dead-letter queues, and exactly-once delivery guarantees.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/queue-messaging-platform"
+    }
+  },
+  "features": [
+    "Pub/sub + point-to-point",
+    "Exactly-once delivery",
+    "Dead-letter queue",
+    "Message replay",
+    "Multi-region replication"
+  ],
+  "benefits": [
+    "Reduce costs with queue & messaging platform",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

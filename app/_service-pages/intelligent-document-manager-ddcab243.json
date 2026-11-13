@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligent-document-manager-ddcab243",
+  "breadcrumbTitle": "Intelligent Document Manager",
+  "title": "Intelligent Document Manager",
+  "description": "Revolutionize telecom through intelligent automation. Our Intelligent Document Manager leverages advanced machine learning to deliver maintenance scheduling at ",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Document Manager - Zion Tech Group",
+    "description": "Revolutionize telecom through intelligent automation. Our Intelligent Document Manager leverages advanced machine learning to deliver maintenance scheduling at ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-document-manager-ddcab243"
+    }
+  },
+  "features": [
+    "Serverless functions",
+    "GDPR compliance",
+    "Plugin architecture",
+    "HIPAA ready",
+    "Edge computing support"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "Enterprise-grade security",
+    "Automated compliance reporting",
+    "3x faster decision making"
+  ]
+}

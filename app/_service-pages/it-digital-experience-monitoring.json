@@ -1,0 +1,29 @@
+{
+  "title": "IT Digital Experience Monitoring (DEM)",
+  "description": "AI-powered digital experience monitoring for web applications, APIs, and digital services with real-user monitoring and synthetic testing.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "IT Digital Experience Monitoring (DEM) - Zion Tech Group",
+    "description": "AI-powered digital experience monitoring for web applications, APIs, and digital services with real-user monitoring and synthetic testing.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-digital-experience-monitoring"
+    }
+  },
+  "features": [
+    "Real-user monitoring (RUM)",
+    "Synthetic transaction monitoring",
+    "API performance monitoring",
+    "End-user experience scoring",
+    "Root cause analysis with AI"
+  ],
+  "benefits": [
+    "Detect issues before users complain",
+    "Optimize digital experience",
+    "Reduce MTTR by 70%",
+    "Improve customer satisfaction"
+  ]
+}

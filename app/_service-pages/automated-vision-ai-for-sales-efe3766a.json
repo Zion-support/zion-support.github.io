@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/automated-vision-ai-for-sales-efe3766a",
+  "breadcrumbTitle": "Automated Vision AI for Sales",
+  "title": "Automated Vision AI for Sales",
+  "description": "Vision AI system powered by automated computer vision models for sales analysis and automated visual inspection.",
+  "basic": "$258/month",
+  "pro": "$648/month",
+  "enterprise": "$1948/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Automated Vision AI for Sales - Zion Tech Group",
+    "description": "Vision AI system powered by automated computer vision models for sales analysis and automated visual inspection.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-vision-ai-for-sales-efe3766a"
+    }
+  },
+  "features": [
+    "Real-time object detection",
+    "Image classification",
+    "Anomaly detection",
+    "Visual inspection"
+  ],
+  "benefits": [
+    "Automated quality control",
+    "Reduced inspection costs",
+    "Defect detection",
+    "Visual search"
+  ]
+}

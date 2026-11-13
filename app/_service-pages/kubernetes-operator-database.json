@@ -1,0 +1,29 @@
+{
+  "title": "Kubernetes Operator for Database Automation",
+  "description": "Fully-managed PostgreSQL/MySQL/MongoDB on Kubernetes: automated backups, point-in-time recovery, connection pooling, replica failover, storage auto-scaling, and version upgrades — all via declarative Custom Resources.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Kubernetes Operator for Database Automation - Zion Tech Group",
+    "description": "Fully-managed PostgreSQL/MySQL/MongoDB on Kubernetes: automated backups, point-in-time recovery, connection pooling, replica failover, storage auto-scaling, and",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/kubernetes-operator-database"
+    }
+  },
+  "features": [
+    "One-command DB deployment (YAML CRD)",
+    "Automated streaming backups + PITR",
+    "Read-replica auto-failover",
+    "Storage auto-scaling (PVC expansion)",
+    "Minor/major version rolling upgrades"
+  ],
+  "benefits": [
+    "Reduce costs with kubernetes operator for database automation",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

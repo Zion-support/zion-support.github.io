@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/ai-management---healthcare-edition-b742b5f4",
+  "breadcrumbTitle": "AI Management - Healthcare Edition",
+  "title": "AI Management - Healthcare Edition",
+  "description": "The future of healthcare is here with AI Management - Healthcare Edition. Powered by cutting-edge AI, this platform delivers compliance monitoring like never be",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Management - Healthcare Edition - Zion Tech Group",
+    "description": "The future of healthcare is here with AI Management - Healthcare Edition. Powered by cutting-edge AI, this platform delivers compliance monitoring like never be",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-management---healthcare-edition-b742b5f4"
+    }
+  },
+  "features": [
+    "Role-based access control",
+    "Edge computing support",
+    "Mobile-responsive interface",
+    "API-first design",
+    "Performance dashboards"
+  ],
+  "benefits": [
+    "Automated compliance reporting",
+    "Cost optimization recommendations",
+    "Self-healing infrastructure",
+    "Performance benchmarking",
+    "Zero manual intervention required"
+  ]
+}

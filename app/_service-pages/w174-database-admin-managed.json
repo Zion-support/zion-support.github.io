@@ -1,0 +1,29 @@
+{
+  "title": "Managed Database Administration",
+  "description": "Expert DBA services for PostgreSQL, MySQL, SQL Server, Oracle, and MongoDB. Performance tuning, HA/DR setup, migrations, and 24/7 monitoring.",
+  "basic": "$499/mo/month",
+  "pro": "$1,499/mo/month",
+  "enterprise": "$4,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Managed Database Administration - Zion Tech Group",
+    "description": "Expert DBA services for PostgreSQL, MySQL, SQL Server, Oracle, and MongoDB. Performance tuning, HA/DR setup, migrations, and 24/7 monitoring.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w174-database-admin-managed"
+    }
+  },
+  "features": [
+    "24/7 database monitoring and alerting",
+    "Performance tuning and query optimization",
+    "High availability and replication setup",
+    "Backup verification and DR testing",
+    "Database migration and upgrades"
+  ],
+  "benefits": [
+    "Expert DBA support without hiring",
+    "24/7 monitoring catches issues before outage",
+    "Performance tuning reduces cloud costs",
+    "HA/DR setup protects business continuity"
+  ]
+}

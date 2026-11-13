@@ -1,0 +1,29 @@
+{
+  "title": "Software License Management",
+  "description": "Track and optimize software licenses: usage monitoring, compliance alerting, renewal management, and vendor negotiation support. Reduce waste by 25%.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Software License Management - Zion Tech Group",
+    "description": "Track and optimize software licenses: usage monitoring, compliance alerting, renewal management, and vendor negotiation support. Reduce waste by 25%.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w176-license-management"
+    }
+  },
+  "features": [
+    "License inventory and usage tracking",
+    "Under-utilized license identification",
+    "Compliance alerting (over and under-deployed)",
+    "Renewal and expiry management",
+    "Vendor negotiation data and benchmarks"
+  ],
+  "benefits": [
+    "Reduce software spend waste by 25%",
+    "Compliance alerting prevents audit risk",
+    "Usage data strengthens vendor negotiations",
+    "Renewal management never misses a date"
+  ]
+}

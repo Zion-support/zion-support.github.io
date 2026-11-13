@@ -1,0 +1,29 @@
+{
+  "title": "AI Knowledge Graph Engine",
+  "description": "Enterprise knowledge graph platform that connects disparate data sources into a unified semantic layer. Enables intelligent search, recommendation, and decision support across organizational knowledge.",
+  "basic": "$1,999/mo/month",
+  "pro": "$4,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Knowledge Graph Engine - Zion Tech Group",
+    "description": "Enterprise knowledge graph platform that connects disparate data sources into a unified semantic layer. Enables intelligent search, recommendation, and decision",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-knowledge-graph-engine"
+    }
+  },
+  "features": [
+    "Automated knowledge extraction from unstructured data",
+    "Entity resolution and relationship mapping",
+    "Natural language query interface",
+    "Semantic search with context understanding",
+    "Graph-based recommendation engine"
+  ],
+  "benefits": [
+    "Connect siloed data into unified knowledge layer",
+    "Enable intelligent search across all enterprise data",
+    "Discover hidden relationships and insights",
+    "Power next-gen AI applications with structured knowledge"
+  ]
+}

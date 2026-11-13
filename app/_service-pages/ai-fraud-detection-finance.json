@@ -1,0 +1,28 @@
+{
+  "title": "AI Fraud Detection for Finance",
+  "description": "Real-time transaction monitoring for banks, fintechs, and accounting firms with explainable AI decisions and SAR report generation.",
+  "basic": "$399/mo/month",
+  "pro": "$999/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Fraud Detection for Finance - Zion Tech Group",
+    "description": "Real-time transaction monitoring for banks, fintechs, and accounting firms with explainable AI decisions and SAR report generation.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-fraud-detection-finance"
+    }
+  },
+  "features": [
+    "Rule-based plus ML hybrid model",
+    "Explainable decision reasons (XAI)",
+    "Adaptive learning from investigator feedback",
+    "Automatic SAR filing templates"
+  ],
+  "benefits": [
+    "Reduce costs with ai fraud detection for finance",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

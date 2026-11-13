@@ -1,0 +1,29 @@
+{
+  "title": "AI Crop Disease Detection Platform",
+  "description": "Detect crop diseases, pest infestations, and nutrient deficiencies from drone and smartphone imagery. Early detection saves 20-40% of crop yield.",
+  "basic": "$199/mo/month",
+  "pro": "$599/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Crop Disease Detection Platform - Zion Tech Group",
+    "description": "Detect crop diseases, pest infestations, and nutrient deficiencies from drone and smartphone imagery. Early detection saves 20-40% of crop yield.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/agritech-crop-disease-detection"
+    }
+  },
+  "features": [
+    "Drone imagery analysis",
+    "Smartphone photo diagnosis",
+    "500+ disease recognition",
+    "Pest identification",
+    "Nutrient deficiency detection"
+  ],
+  "benefits": [
+    "Detect diseases 2 weeks early",
+    "Reduce crop loss by 30%",
+    "Optimize pesticide use",
+    "Increase yield predictability"
+  ]
+}

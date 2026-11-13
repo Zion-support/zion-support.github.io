@@ -1,0 +1,29 @@
+{
+  "title": "Micro-SAAS AI Social Media Manager",
+  "description": "AI-powered social media management. Auto-generates posts, schedules content, analyzes engagement, and provides competitor insights.",
+  "basic": "$49/month",
+  "pro": "$149/month",
+  "enterprise": "$399/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Micro-SAAS AI Social Media Manager - Zion Tech Group",
+    "description": "AI-powered social media management. Auto-generates posts, schedules content, analyzes engagement, and provides competitor insights.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-ai-social-media-manager"
+    }
+  },
+  "features": [
+    "AI content generation",
+    "Multi-platform scheduling",
+    "Engagement analytics",
+    "Competitor monitoring",
+    "Hashtag optimization"
+  ],
+  "benefits": [
+    "10x content output",
+    "Optimal posting times",
+    "Data-driven strategy",
+    "Unified dashboard"
+  ]
+}

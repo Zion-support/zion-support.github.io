@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/neural-workflow-engine-61287916",
+  "breadcrumbTitle": "Neural Workflow Engine",
+  "title": "Neural Workflow Engine",
+  "description": "Next-generation finance solution: Neural Workflow Engine. Combines supply chain with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Neural Workflow Engine - Zion Tech Group",
+    "description": "Next-generation finance solution: Neural Workflow Engine. Combines supply chain with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/neural-workflow-engine-61287916"
+    }
+  },
+  "features": [
+    "Open-source friendly",
+    "Data encryption",
+    "Performance dashboards",
+    "Cloud-native architecture",
+    "Edge computing support"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "Scalable to millions of transactions",
+    "99.9% uptime guarantee"
+  ]
+}

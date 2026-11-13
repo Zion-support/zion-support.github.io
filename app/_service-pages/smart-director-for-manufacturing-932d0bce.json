@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/smart-director-for-manufacturing-932d0bce",
+  "breadcrumbTitle": "Smart Director for Manufacturing",
+  "title": "Smart Director for Manufacturing",
+  "description": "Unlock unprecedented growth with Smart Director for Manufacturing. This autonomous system provides data processing with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Director for Manufacturing - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Smart Director for Manufacturing. This autonomous system provides data processing with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-director-for-manufacturing-932d0bce"
+    }
+  },
+  "features": [
+    "Cloud-native architecture",
+    "Audit trails",
+    "Alerting system",
+    "Performance dashboards",
+    "Container orchestration"
+  ],
+  "benefits": [
+    "Performance benchmarking",
+    "99.9% uptime guarantee",
+    "Dynamic resource allocation"
+  ]
+}

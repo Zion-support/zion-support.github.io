@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-orchestrator---insurance-edition-4622f0bc",
+  "breadcrumbTitle": "AI Orchestrator - Insurance Edition",
+  "title": "AI Orchestrator - Insurance Edition",
+  "description": "Transform your insurance operations with our AI Orchestrator - Insurance Edition. This AI-driven solution automates document processing with unprecedented accur",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Orchestrator - Insurance Edition - Zion Tech Group",
+    "description": "Transform your insurance operations with our AI Orchestrator - Insurance Edition. This AI-driven solution automates document processing with unprecedented accur",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-orchestrator---insurance-edition-4622f0bc"
+    }
+  },
+  "features": [
+    "Real-time processing",
+    "Offline capabilities",
+    "Cloud-native architecture",
+    "Custom integrations"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "Cost optimization recommendations",
+    "Self-healing infrastructure",
+    "Zero manual intervention required"
+  ]
+}

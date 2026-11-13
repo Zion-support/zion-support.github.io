@@ -1,0 +1,29 @@
+{
+  "title": "Micro-SAAS AI Code Reviewer",
+  "description": "AI-powered code review that catches bugs, security vulnerabilities, and performance issues before merge. Supports 40+ languages.",
+  "basic": "$49/month",
+  "pro": "$149/month",
+  "enterprise": "$449/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Micro-SAAS AI Code Reviewer - Zion Tech Group",
+    "description": "AI-powered code review that catches bugs, security vulnerabilities, and performance issues before merge. Supports 40+ languages.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-ai-code-reviewer"
+    }
+  },
+  "features": [
+    "Automated code review",
+    "Security vulnerability detection",
+    "Performance suggestions",
+    "Style enforcement",
+    "Custom rules engine"
+  ],
+  "benefits": [
+    "Catch bugs before production",
+    "Enforce coding standards",
+    "Reduce review time by 80%",
+    "Security-first approach"
+  ]
+}

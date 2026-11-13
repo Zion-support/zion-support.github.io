@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/smart-financial-director-ce427dec",
+  "breadcrumbTitle": "Smart Financial Director",
+  "title": "Smart Financial Director",
+  "description": "Transform your insurance operations with our Smart Financial Director. This AI-driven solution automates data processing with unprecedented accuracy and efficie",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Financial Director - Zion Tech Group",
+    "description": "Transform your insurance operations with our Smart Financial Director. This AI-driven solution automates data processing with unprecedented accuracy and efficie",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-financial-director-ce427dec"
+    }
+  },
+  "features": [
+    "GDPR compliance",
+    "Multi-region deployment",
+    "HIPAA ready",
+    "Auto-scaling capabilities",
+    "Container orchestration"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "24/7 automated operations",
+    "Reduced human error by 95%"
+  ]
+}

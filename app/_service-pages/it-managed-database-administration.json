@@ -1,0 +1,29 @@
+{
+  "title": "IT Database Administration as a Service (DBAaaS)",
+  "description": "Fully managed database administration for PostgreSQL, MySQL, MongoDB, Redis, and cloud-native databases.",
+  "basic": "$399/mo per instance/month",
+  "pro": "$999/mo per instance/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "IT Database Administration as a Service (DBAaaS) - Zion Tech Group",
+    "description": "Fully managed database administration for PostgreSQL, MySQL, MongoDB, Redis, and cloud-native databases.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-managed-database-administration"
+    }
+  },
+  "features": [
+    "24/7 database monitoring and alerting",
+    "Automated backup and point-in-time recovery",
+    "Query performance analysis and optimization",
+    "Index tuning and schema optimization",
+    "Replication and high-availability"
+  ],
+  "benefits": [
+    "Eliminate database downtime",
+    "Reduce database costs",
+    "Free team from routine DBA tasks",
+    "Ensure data security and compliance"
+  ]
+}

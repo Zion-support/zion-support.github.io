@@ -1,0 +1,29 @@
+{
+  "title": "Cloud Native Transformation Service",
+  "description": "Transform monoliths to cloud-native: containerize, add service mesh, implement observability, and refactor to microservices. 12-factor app compliance.",
+  "basic": "$9,999/month",
+  "pro": "$29,999/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Cloud Native Transformation Service - Zion Tech Group",
+    "description": "Transform monoliths to cloud-native: containerize, add service mesh, implement observability, and refactor to microservices. 12-factor app compliance.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w174-cloud-native-transform"
+    }
+  },
+  "features": [
+    "Monolith to microservices refactoring",
+    "Docker containerization and optimization",
+    "Service mesh implementation (Istio, Linkerd)",
+    "12-factor app compliance review",
+    "CI/CD pipeline modernization"
+  ],
+  "benefits": [
+    "Cloud-native architecture for scale and resilience",
+    "Service mesh for secure inter-service communication",
+    "12-factor compliance for portable deployments",
+    "CI/CD modernization accelerates delivery"
+  ]
+}

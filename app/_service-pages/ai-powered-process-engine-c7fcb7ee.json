@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/ai-powered-process-engine-c7fcb7ee",
+  "breadcrumbTitle": "AI-Powered Process Engine",
+  "title": "AI-Powered Process Engine",
+  "description": "Transform your real-estate operations with our AI-Powered Process Engine. This AI-driven solution automates threat detection with unprecedented accuracy and eff",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Process Engine - Zion Tech Group",
+    "description": "Transform your real-estate operations with our AI-Powered Process Engine. This AI-driven solution automates threat detection with unprecedented accuracy and eff",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-process-engine-c7fcb7ee"
+    }
+  },
+  "features": [
+    "Offline capabilities",
+    "Real-time processing",
+    "Role-based access control",
+    "Container orchestration",
+    "Cloud-native architecture"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "Zero manual intervention required",
+    "Predictive maintenance scheduling",
+    "Seamless integration with existing systems",
+    "Automated compliance reporting"
+  ]
+}

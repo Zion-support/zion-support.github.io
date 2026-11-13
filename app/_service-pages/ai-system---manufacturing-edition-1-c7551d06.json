@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-system---manufacturing-edition-1-c7551d06",
+  "breadcrumbTitle": "AI System - Manufacturing Edition #1",
+  "title": "AI System - Manufacturing Edition #1",
+  "description": "Next-generation manufacturing solution: AI System - Manufacturing Edition #1. Combines energy management with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI System - Manufacturing Edition #1 - Zion Tech Group",
+    "description": "Next-generation manufacturing solution: AI System - Manufacturing Edition #1. Combines energy management with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-system---manufacturing-edition-1-c7551d06"
+    }
+  },
+  "features": [
+    "Audit trails",
+    "Multi-language support",
+    "Cloud-native architecture",
+    "API-first design",
+    "GDPR compliance"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "Automated compliance reporting",
+    "3x faster decision making"
+  ]
+}

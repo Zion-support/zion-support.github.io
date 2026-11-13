@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/cognitive-code-suite-59b74ec4",
+  "breadcrumbTitle": "Cognitive Code Suite",
+  "title": "Cognitive Code Suite",
+  "description": "The future of healthcare is here with Cognitive Code Suite. Powered by cutting-edge AI, this platform delivers workflow management like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Cognitive Code Suite - Zion Tech Group",
+    "description": "The future of healthcare is here with Cognitive Code Suite. Powered by cutting-edge AI, this platform delivers workflow management like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cognitive-code-suite-59b74ec4"
+    }
+  },
+  "features": [
+    "Open-source friendly",
+    "Performance dashboards",
+    "Mobile-responsive interface",
+    "Comprehensive monitoring"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Dynamic resource allocation",
+    "Cost optimization recommendations",
+    "Automated compliance reporting"
+  ]
+}

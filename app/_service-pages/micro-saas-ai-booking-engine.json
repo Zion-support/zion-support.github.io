@@ -1,0 +1,29 @@
+{
+  "title": "AI Smart Booking & Scheduling Engine",
+  "description": "Intelligent booking system that optimizes schedules, reduces no-shows, and maximizes utilization. AI learns booking patterns and suggests optimal availability windows.",
+  "basic": "$59/mo/month",
+  "pro": "$179/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Smart Booking & Scheduling Engine - Zion Tech Group",
+    "description": "Intelligent booking system that optimizes schedules, reduces no-shows, and maximizes utilization. AI learns booking patterns and suggests optimal availability w",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-ai-booking-engine"
+    }
+  },
+  "features": [
+    "AI-optimized availability suggestions",
+    "Smart scheduling with buffer time optimization",
+    "Automated reminders via SMS, email, WhatsApp",
+    "No-show prediction and overbooking protection",
+    "Multi-timezone support with automatic conversion"
+  ],
+  "benefits": [
+    "Reduce no-shows by 80%",
+    "Maximize schedule utilization by 25%",
+    "Eliminate back-and-forth scheduling emails",
+    "Collect payments automatically at booking"
+  ]
+}

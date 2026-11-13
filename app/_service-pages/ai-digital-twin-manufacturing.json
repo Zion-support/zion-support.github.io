@@ -1,0 +1,29 @@
+{
+  "title": "AI Digital Twin for Manufacturing",
+  "description": "Create digital twins of manufacturing processes for simulation, optimization, and predictive analytics. Reduce downtime and improve throughput.",
+  "basic": "$3,999/mo/month",
+  "pro": "$12,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Digital Twin for Manufacturing - Zion Tech Group",
+    "description": "Create digital twins of manufacturing processes for simulation, optimization, and predictive analytics. Reduce downtime and improve throughput.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-digital-twin-manufacturing"
+    }
+  },
+  "features": [
+    "Process digital twin creation",
+    "Real-time simulation",
+    "What-if scenario analysis",
+    "Quality prediction",
+    "Energy optimization"
+  ],
+  "benefits": [
+    "Optimize production processes",
+    "Reduce downtime by 30%",
+    "Improve product quality",
+    "Enable data-driven decisions"
+  ]
+}

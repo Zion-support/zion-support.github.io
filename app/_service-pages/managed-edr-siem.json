@@ -1,0 +1,29 @@
+{
+  "title": "Managed EDR + SIEM SOC Service",
+  "description": "24/7 managed detection: EDR (CrowdStrike/SentinelOne) + SIEM (Splunk/QRadar/Sentinel), managed SOC tier 1/2 triage, kill-chain containment, executive monthly threat report.",
+  "basic": "$999/mo/month",
+  "pro": "$2,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Managed EDR + SIEM SOC Service - Zion Tech Group",
+    "description": "24/7 managed detection: EDR (CrowdStrike/SentinelOne) + SIEM (Splunk/QRadar/Sentinel), managed SOC tier 1/2 triage, kill-chain containment, executive monthly th",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/managed-edr-siem"
+    }
+  },
+  "features": [
+    "EDR deployment + 24/7 managed tuning",
+    "SIEM log aggregation + correlation rules",
+    "SOC Tier-1/2 triage with analyst SLA",
+    "Automated kill-chain containment",
+    "Monthly executive threat report + KPI dashboard"
+  ],
+  "benefits": [
+    "Reduce costs with managed edr + siem soc service",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

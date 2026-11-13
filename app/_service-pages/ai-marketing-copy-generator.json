@@ -1,0 +1,28 @@
+{
+  "title": "AI Marketing Copy Generator",
+  "description": "Multi-format copy engine: SEO blog, ad headline, landing page, LinkedIn post, email sequence — brand-voice tuned per company.",
+  "basic": "$49/mo/month",
+  "pro": "$149/mo/month",
+  "enterprise": "$499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Marketing Copy Generator - Zion Tech Group",
+    "description": "Multi-format copy engine: SEO blog, ad headline, landing page, LinkedIn post, email sequence — brand-voice tuned per company.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-marketing-copy-generator"
+    }
+  },
+  "features": [
+    "10+ output formats (blog/ad/landing/LinkedIn/email)",
+    "Brand voice training on your tone/guidelines",
+    "SEO brief + outline + draft in one pass",
+    "Human-in-loop review + approval workflow"
+  ],
+  "benefits": [
+    "Reduce costs with ai marketing copy generator",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

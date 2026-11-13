@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/ai-platform---agriculture-edition-10c8f5fc",
+  "breadcrumbTitle": "AI Platform - Agriculture Edition",
+  "title": "AI Platform - Agriculture Edition",
+  "description": "Unlock unprecedented growth with AI Platform - Agriculture Edition. This autonomous system provides process automation with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Platform - Agriculture Edition - Zion Tech Group",
+    "description": "Unlock unprecedented growth with AI Platform - Agriculture Edition. This autonomous system provides process automation with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-platform---agriculture-edition-10c8f5fc"
+    }
+  },
+  "features": [
+    "Alerting system",
+    "Mobile-responsive interface",
+    "Audit trails",
+    "HIPAA ready"
+  ],
+  "benefits": [
+    "Automated compliance reporting",
+    "Reduced human error by 95%",
+    "Zero manual intervention required"
+  ]
+}

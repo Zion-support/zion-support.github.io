@@ -1,0 +1,30 @@
+{
+  "title": "Enterprise Speech-to-Text Platform",
+  "description": "Real-time speech recognition for enterprise. Custom language models, speaker diarization, multi-language support, medical/legal domain accuracy, and edge deployment.",
+  "basic": "$N/A/month",
+  "pro": "$N/A/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Enterprise Speech-to-Text Platform - Zion Tech Group",
+    "description": "Real-time speech recognition for enterprise. Custom language models, speaker diarization, multi-language support, medical/legal domain accuracy, and edge deploy",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-speech-to-text-enterprise"
+    }
+  },
+  "features": [
+    "Real-time transcription",
+    "Custom language models",
+    "Speaker diarization",
+    "Multi-language (50+)",
+    "Medical/legal models"
+  ],
+  "benefits": [
+    "95%+ accuracy",
+    "Real-time processing",
+    "Domain-specific models",
+    "Edge deployment option",
+    "50+ languages"
+  ]
+}

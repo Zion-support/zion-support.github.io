@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/automated-performance-marketing-61adb3e2",
+  "breadcrumbTitle": "Automated Performance Marketing",
+  "title": "Automated Performance Marketing",
+  "description": "Next-generation transportation solution: Automated Performance Marketing. Combines reputation management with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Automated Performance Marketing - Zion Tech Group",
+    "description": "Next-generation transportation solution: Automated Performance Marketing. Combines reputation management with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-performance-marketing-61adb3e2"
+    }
+  },
+  "features": [
+    "Data quality with anomaly detection",
+    "Self-healing with auto-recovery",
+    "Microservices deployment with container orchestration",
+    "Web Application Firewall (WAF)",
+    "API gateway with rate limiting"
+  ],
+  "benefits": [
+    "Better inventory management with demand forecasting",
+    "Improved product quality scores",
+    "Dynamic resource allocation based on demand patterns",
+    "24/7 automated operations without human intervention",
+    "Enhanced team productivity with intelligent assistance"
+  ]
+}

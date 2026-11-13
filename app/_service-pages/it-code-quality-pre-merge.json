@@ -1,0 +1,28 @@
+{
+  "title": "Code Quality & Pre-Merge Automation",
+  "description": "Pre-merge quality gate: SAST, secret-scan, dependency-audit, trunk-based branch review, automated PR reviewer with inline comments, per-PR quality score, and merge-blocking on regressions across 25+ languages.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Code Quality & Pre-Merge Automation - Zion Tech Group",
+    "description": "Pre-merge quality gate: SAST, secret-scan, dependency-audit, trunk-based branch review, automated PR reviewer with inline comments, per-PR quality score, and me",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-code-quality-pre-merge"
+    }
+  },
+  "features": [
+    "SAST, secret-scan, and dependency-audit running at every pull request",
+    "25-plus language ecosystems including TypeScript, Python, Go, Rust, and Java",
+    "Automated 1st-pass PR reviewer with inline code comments before human review",
+    "Quality score covering maintainability index and cognitive complexity trend"
+  ],
+  "benefits": [
+    "Reduce costs with code quality & pre-merge automation",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

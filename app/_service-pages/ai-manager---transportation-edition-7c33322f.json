@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-manager---transportation-edition-7c33322f",
+  "breadcrumbTitle": "AI Manager - Transportation Edition",
+  "title": "AI Manager - Transportation Edition",
+  "description": "Unlock unprecedented growth with AI Manager - Transportation Edition. This autonomous system provides threat detection with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Manager - Transportation Edition - Zion Tech Group",
+    "description": "Unlock unprecedented growth with AI Manager - Transportation Edition. This autonomous system provides threat detection with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-manager---transportation-edition-7c33322f"
+    }
+  },
+  "features": [
+    "Data encryption",
+    "Multi-region deployment",
+    "Container orchestration",
+    "Microservices deployment"
+  ],
+  "benefits": [
+    "50% reduction in operational costs",
+    "Automated compliance reporting",
+    "Performance benchmarking",
+    "Enterprise-grade security"
+  ]
+}

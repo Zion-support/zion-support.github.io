@@ -1,0 +1,29 @@
+{
+  "title": "Cloud Readiness Assessment",
+  "description": "Assess organizational cloud readiness: people, process, technology, governance. Roadmap with quick wins and cost modeling.",
+  "basic": "$7,999/month",
+  "pro": "$19,999/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Cloud Readiness Assessment - Zion Tech Group",
+    "description": "Assess organizational cloud readiness: people, process, technology, governance. Roadmap with quick wins and cost modeling.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w177-cloud-readiness"
+    }
+  },
+  "features": [
+    "Organizational cloud readiness assessment",
+    "Application portfolio analysis and cloud fit",
+    "People and skills gap analysis",
+    "Governance and compliance readiness",
+    "TCO modeling and ROI projections"
+  ],
+  "benefits": [
+    "Know your readiness before you invest",
+    "Application portfolio tells you what to move first",
+    "Skills gaps addressed before migration",
+    "TCO model justifies the investment"
+  ]
+}

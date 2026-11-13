@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "GraphQL Federation Platform: checklist for IT leaders | Zion Tech Group",
+    "description": "GraphQL Federation Platform: checklist for IT leaders",
+    "keywords": [
+      "cloud",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "GraphQL Federation Platform: checklist for IT leaders",
+      "description": "GraphQL Federation Platform: checklist for IT leaders",
+      "url": "https://ziontechgroup.com/blog/graphql-federation-platform-checklist-for-it-leaders/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/graphql-federation-platform-checklist-for-it-leaders/"
+    }
+  },
+  "values": [
+    "GraphQL Federation Platform: checklist for IT leaders",
+    "GraphQL Federation Platform: checklist for IT leaders",
+    "GraphQL Federation Platform: checklist for IT leaders",
+    "Conversion path",
+    "If this guide matches your graphql federation platform: checklist for it leaders initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "Conversion path",
+    " If this guide matches your graphql federation platform: checklist for it leaders initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "/blog/automation-orchestration-enterprise-2026-7113",
+    "Automation Orchestration Enterprise 2026 7113",
+    "/blog/smart-contract-audit-implementation-playbook",
+    "Smart Contract Audit Implementation Playbook",
+    "/blog/api-performance-testing-2026-6760",
+    "Api Performance Testing 2026 6760",
+    "/blog/ai-accessibility-optimizer-vendor-evaluation",
+    "Ai Accessibility Optimizer Vendor Evaluation"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "GraphQL Federation Platform: checklist for IT leaders",
+    "description": "GraphQL Federation Platform: checklist for IT leaders",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T04:51:44Z",
+    "dateModified": "2026-08-07T04:51:44Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/graphql-federation-platform-checklist-for-it-leaders/"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-automation---real-estate-edition-1-6bd6486b",
+  "breadcrumbTitle": "AI Automation - Real-Estate Edition #1",
+  "title": "AI Automation - Real-Estate Edition #1",
+  "description": "Next-generation real-estate solution: AI Automation - Real-Estate Edition #1. Combines sales forecasting with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Automation - Real-Estate Edition #1 - Zion Tech Group",
+    "description": "Next-generation real-estate solution: AI Automation - Real-Estate Edition #1. Combines sales forecasting with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-automation---real-estate-edition-1-6bd6486b"
+    }
+  },
+  "features": [
+    "Open-source friendly",
+    "Serverless functions",
+    "Multi-region deployment",
+    "Data encryption",
+    "Role-based access control"
+  ],
+  "benefits": [
+    "Cost optimization recommendations",
+    "24/7 automated operations",
+    "Seamless integration with existing systems"
+  ]
+}

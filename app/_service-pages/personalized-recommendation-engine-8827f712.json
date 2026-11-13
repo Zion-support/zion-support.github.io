@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/personalized-recommendation-engine-8827f712",
+  "breadcrumbTitle": "Personalized Recommendation Engine",
+  "title": "Personalized Recommendation Engine",
+  "description": "AI-powered personalization across web, mobile, email, and in-store. Real-time recommendations using collaborative filtering, content-based, and session-aware mo",
+  "basic": "$0.001/recommendation/month",
+  "pro": "$0.0005/recommendation/month",
+  "enterprise": "$custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Personalized Recommendation Engine - Zion Tech Group",
+    "description": "AI-powered personalization across web, mobile, email, and in-store. Real-time recommendations using collaborative filtering, content-based, and session-aware mo",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/personalized-recommendation-engine-8827f712"
+    }
+  },
+  "features": [
+    "Real-time personalization",
+    "Multi-channel delivery",
+    "Cold-start handling",
+    "A/B testing framework",
+    "Revenue attribution"
+  ],
+  "benefits": [
+    "Increase conversion 15-30%",
+    "Boost AOV 10-20%",
+    "Improve customer LTV",
+    "Reduce marketing spend",
+    "Privacy-compliant"
+  ]
+}

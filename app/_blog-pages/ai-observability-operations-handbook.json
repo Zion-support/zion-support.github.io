@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "AI Observability: operations handbook | Zion Tech Group",
+    "description": "AI Observability: operations handbook",
+    "keywords": [
+      "ai",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "AI Observability: operations handbook",
+      "description": "AI Observability: operations handbook",
+      "url": "https://ziontechgroup.com/blog/ai-observability-operations-handbook/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/ai-observability-operations-handbook/"
+    }
+  },
+  "values": [
+    "AI Observability: operations handbook",
+    "AI Observability: operations handbook",
+    "AI Observability: operations handbook",
+    "Conversion path",
+    "If this guide matches your ai observability: operations handbook initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "Conversion path",
+    " If this guide matches your ai observability: operations handbook initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "/blog/chaos-engineering-2026-6533",
+    "Chaos Engineering 2026 6533",
+    "/blog/ai-for-conversation-and-customer-analytics",
+    "Ai For Conversation And Customer Analytics",
+    "/blog/ai-performance-monitoring-2026",
+    "Ai Performance Monitoring 2026",
+    "/blog/enterprise-ai-intelligence-hub-2026-6993",
+    "Enterprise Ai Intelligence Hub 2026 6993"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "AI Observability: operations handbook",
+    "description": "AI Observability: operations handbook",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T04:52:10Z",
+    "dateModified": "2026-08-07T04:52:10Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/ai-observability-operations-handbook/"
+  }
+}

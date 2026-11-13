@@ -104,3 +104,14 @@ Google Drive
 .ssh/
 .netrc
 .npmrc
+
+# Local gh-pages publishing worktree, never a repository submodule
+/.pageploy/
+
+# Reproducible Worker deployment package (source remains in out/)
+.worker-assets/
+.worker-assets.report.json
+.worker-assets.failed.json
+
+# Generated browser catalog and its atomic-write/cache files
+/app/data/servicesClientData.generated.*

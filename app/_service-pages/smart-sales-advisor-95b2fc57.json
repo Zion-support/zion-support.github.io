@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/smart-sales-advisor-95b2fc57",
+  "breadcrumbTitle": "Smart Sales Advisor",
+  "title": "Smart Sales Advisor",
+  "description": "Unlock unprecedented growth with Smart Sales Advisor. This autonomous system provides market intelligence with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Sales Advisor - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Smart Sales Advisor. This autonomous system provides market intelligence with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-sales-advisor-95b2fc57"
+    }
+  },
+  "features": [
+    "Performance dashboards",
+    "Custom integrations",
+    "Zero-downtime updates",
+    "API-first design",
+    "HIPAA ready"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "Scalable to millions of transactions",
+    "Automated compliance reporting"
+  ]
+}

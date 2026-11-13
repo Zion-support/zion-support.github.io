@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/enterprise-streamlined-media-analytics-suite-fe70724b",
+  "breadcrumbTitle": "Enterprise Streamlined Media Analytics Suite",
+  "title": "Enterprise Streamlined Media Analytics Suite",
+  "description": "Enterprise analytics suite that delivers streamlined media insights with unified dashboards and reporting.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Enterprise Streamlined Media Analytics Suite - Zion Tech Group",
+    "description": "Enterprise analytics suite that delivers streamlined media insights with unified dashboards and reporting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/enterprise-streamlined-media-analytics-suite-fe70724b"
+    }
+  },
+  "features": [
+    "Data visualization",
+    "Custom dashboards",
+    "Report generation",
+    "KPI tracking"
+  ],
+  "benefits": [
+    "Unified data view",
+    "Faster insights",
+    "Customizable reports",
+    "Cross-functional collaboration"
+  ]
+}

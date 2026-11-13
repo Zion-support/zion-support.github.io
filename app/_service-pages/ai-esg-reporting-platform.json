@@ -1,0 +1,28 @@
+{
+  "title": "AI ESG Reporting & Sustainability Platform",
+  "description": "Automated ESG data collection, scoring, and reporting: GHG emissions tracking, social impact measurement, governance scoring, and GRI/SASB/TCFD compliant reports.",
+  "basic": "$299/month",
+  "pro": "$799/month",
+  "enterprise": "$2499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI ESG Reporting & Sustainability Platform - Zion Tech Group",
+    "description": "Automated ESG data collection, scoring, and reporting: GHG emissions tracking, social impact measurement, governance scoring, and GRI/SASB/TCFD compliant report",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-esg-reporting-platform"
+    }
+  },
+  "features": [
+    "Automated GHG emissions tracking",
+    "Social impact measurement",
+    "ESG governance scoring",
+    "GRI/SASB/TCFD report generation",
+    "Supply chain ESG monitoring"
+  ],
+  "benefits": [
+    "Automate ESG reporting",
+    "Reduce audit costs by 60%",
+    "Benchmark against 10K+ companies"
+  ]
+}

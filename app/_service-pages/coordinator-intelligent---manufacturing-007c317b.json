@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/coordinator-intelligent---manufacturing-007c317b",
+  "breadcrumbTitle": "Coordinator Intelligent - Manufacturing",
+  "title": "Coordinator Intelligent - Manufacturing",
+  "description": "Next-generation manufacturing solution: Coordinator Intelligent - Manufacturing. Combines workflow management with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Coordinator Intelligent - Manufacturing - Zion Tech Group",
+    "description": "Next-generation manufacturing solution: Coordinator Intelligent - Manufacturing. Combines workflow management with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/coordinator-intelligent---manufacturing-007c317b"
+    }
+  },
+  "features": [
+    "Multi-language support",
+    "Zero-downtime updates",
+    "Open-source friendly",
+    "Custom integrations"
+  ],
+  "benefits": [
+    "24/7 automated operations",
+    "50% reduction in operational costs",
+    "Dynamic resource allocation",
+    "Seamless integration with existing systems",
+    "Real-time insights and alerts"
+  ]
+}

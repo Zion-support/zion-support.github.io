@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-proactive-pharmaceuticals-intelligence-platform-a50349c2",
+  "breadcrumbTitle": "AI-Powered Proactive Pharmaceuticals Intelligence Platform",
+  "title": "AI-Powered Proactive Pharmaceuticals Intelligence Platform",
+  "description": "AI-driven intelligence platform that delivers proactive insights and automated decision-making for pharmaceuticals operations.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Proactive Pharmaceuticals Intelligence Platform - Zion Tech Group",
+    "description": "AI-driven intelligence platform that delivers proactive insights and automated decision-making for pharmaceuticals operations.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-proactive-pharmaceuticals-intelligence-platform-a50349c2"
+    }
+  },
+  "features": [
+    "Real-time intelligence",
+    "Automated insights",
+    "Predictive alerts",
+    "API integration"
+  ],
+  "benefits": [
+    "Real-time actionable insights",
+    "Automated decision-making",
+    "Reduced latency",
+    "Improved accuracy"
+  ]
+}

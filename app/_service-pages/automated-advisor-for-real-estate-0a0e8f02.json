@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/automated-advisor-for-real-estate-0a0e8f02",
+  "breadcrumbTitle": "Automated Advisor for Real-Estate",
+  "title": "Automated Advisor for Real-Estate",
+  "description": "Unlock unprecedented growth with Automated Advisor for Real-Estate. This autonomous system provides network optimization with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated Advisor for Real-Estate - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Automated Advisor for Real-Estate. This autonomous system provides network optimization with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-advisor-for-real-estate-0a0e8f02"
+    }
+  },
+  "features": [
+    "Container orchestration",
+    "Open-source friendly",
+    "SOC 2 certified",
+    "Offline capabilities",
+    "Comprehensive monitoring"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "Intelligent load balancing",
+    "ROI in under 90 days"
+  ]
+}

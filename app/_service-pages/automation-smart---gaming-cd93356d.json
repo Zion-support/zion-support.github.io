@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/automation-smart---gaming-cd93356d",
+  "breadcrumbTitle": "Automation Smart - Gaming",
+  "title": "Automation Smart - Gaming",
+  "description": "Transform your gaming operations with our Automation Smart - Gaming. This AI-driven solution automates process automation with unprecedented accuracy and effici",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automation Smart - Gaming - Zion Tech Group",
+    "description": "Transform your gaming operations with our Automation Smart - Gaming. This AI-driven solution automates process automation with unprecedented accuracy and effici",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automation-smart---gaming-cd93356d"
+    }
+  },
+  "features": [
+    "HIPAA ready",
+    "Performance dashboards",
+    "Role-based access control",
+    "Custom integrations",
+    "Microservices deployment"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Cost optimization recommendations",
+    "Self-healing infrastructure",
+    "Reduced human error by 95%",
+    "Intelligent load balancing"
+  ]
+}

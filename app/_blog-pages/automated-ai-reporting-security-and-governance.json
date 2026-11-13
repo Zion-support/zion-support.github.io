@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "Automated AI Reporting: security and governance | Zion Tech Group",
+    "description": "Automated AI Reporting: security and governance",
+    "keywords": [
+      "it",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "Automated AI Reporting: security and governance",
+      "description": "Automated AI Reporting: security and governance",
+      "url": "https://ziontechgroup.com/blog/automated-ai-reporting-security-and-governance/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/automated-ai-reporting-security-and-governance/"
+    }
+  },
+  "values": [
+    "Automated AI Reporting: security and governance",
+    "Automated AI Reporting: security and governance",
+    "Automated AI Reporting: security and governance",
+    "Recommended next step",
+    "Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "Recommended next step",
+    " Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "/blog/ai-ad-copy-generator-vendor-evaluation",
+    "Ai Ad Copy Generator Vendor Evaluation",
+    "/blog/ai-agent-tool-builder-2026-7206",
+    "Ai Agent Tool Builder 2026 7206",
+    "/blog/aiops-anomaly-detection-security-and-governance",
+    "Aiops Anomaly Detection Security And Governance",
+    "/blog/ai-data-backup-checklist-for-it-leaders",
+    "Ai Data Backup Checklist For It Leaders"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Automated AI Reporting: security and governance",
+    "description": "Automated AI Reporting: security and governance",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T08:27:36Z",
+    "dateModified": "2026-08-07T08:27:36Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/automated-ai-reporting-security-and-governance/"
+  }
+}

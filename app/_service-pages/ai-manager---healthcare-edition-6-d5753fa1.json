@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-manager---healthcare-edition-6-d5753fa1",
+  "breadcrumbTitle": "AI Manager - Healthcare Edition #6",
+  "title": "AI Manager - Healthcare Edition #6",
+  "description": "Transform your healthcare operations with our AI Manager - Healthcare Edition #6. This AI-driven solution automates document processing with unprecedented accur",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Manager - Healthcare Edition #6 - Zion Tech Group",
+    "description": "Transform your healthcare operations with our AI Manager - Healthcare Edition #6. This AI-driven solution automates document processing with unprecedented accur",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-manager---healthcare-edition-6-d5753fa1"
+    }
+  },
+  "features": [
+    "Role-based access control",
+    "Audit trails",
+    "Microservices deployment",
+    "Serverless functions",
+    "Open-source friendly"
+  ],
+  "benefits": [
+    "50% reduction in operational costs",
+    "Performance benchmarking",
+    "Zero manual intervention required",
+    "3x faster decision making"
+  ]
+}

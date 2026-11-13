@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-powered-insights-for-healthcare-05a808ee",
+  "breadcrumbTitle": "AI-Powered Insights for Healthcare",
+  "title": "AI-Powered Insights for Healthcare",
+  "description": "Unlock unprecedented growth with AI-Powered Insights for Healthcare. This autonomous system provides quality control with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI-Powered Insights for Healthcare - Zion Tech Group",
+    "description": "Unlock unprecedented growth with AI-Powered Insights for Healthcare. This autonomous system provides quality control with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-insights-for-healthcare-05a808ee"
+    }
+  },
+  "features": [
+    "Container orchestration",
+    "Open-source friendly",
+    "Multi-region deployment",
+    "Zero-downtime updates",
+    "API-first design"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "Seamless integration with existing systems",
+    "Enterprise-grade security",
+    "50% reduction in operational costs"
+  ]
+}

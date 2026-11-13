@@ -1,0 +1,29 @@
+{
+  "title": "AI Model Fine-Tuning Platform",
+  "description": "Fine-tune LLMs and foundation models on your data. Managed training, RLHF, LoRA/QLoRA support, and model evaluation with A/B testing.",
+  "basic": "$499/mo/month",
+  "pro": "$1,499/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Model Fine-Tuning Platform - Zion Tech Group",
+    "description": "Fine-tune LLMs and foundation models on your data. Managed training, RLHF, LoRA/QLoRA support, and model evaluation with A/B testing.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-fine-tuning-platform"
+    }
+  },
+  "features": [
+    "Managed fine-tuning pipelines",
+    "LoRA and QLoRA support",
+    "RLHF and DPO alignment",
+    "Model evaluation and A/B testing",
+    "Integration with HuggingFace, OpenAI"
+  ],
+  "benefits": [
+    "Custom models for your domain",
+    "10x cheaper than training from scratch",
+    "Maintain data privacy",
+    "Iterate quickly on model improvements"
+  ]
+}

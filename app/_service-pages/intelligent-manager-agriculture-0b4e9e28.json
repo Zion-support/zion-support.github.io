@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/intelligent-manager-agriculture-0b4e9e28",
+  "breadcrumbTitle": "Intelligent manager-agriculture",
+  "title": "Intelligent manager-agriculture",
+  "description": "Revolutionize agriculture through intelligent automation. Our Intelligent manager-agriculture leverages advanced machine learning to deliver security monitoring",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent manager-agriculture - Zion Tech Group",
+    "description": "Revolutionize agriculture through intelligent automation. Our Intelligent manager-agriculture leverages advanced machine learning to deliver security monitoring",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-manager-agriculture-0b4e9e28"
+    }
+  },
+  "features": [
+    "SOC 2 certified",
+    "Custom integrations",
+    "Container orchestration",
+    "GDPR compliance",
+    "Microservices deployment"
+  ],
+  "benefits": [
+    "Intelligent load balancing",
+    "Real-time insights and alerts",
+    "Automated compliance reporting",
+    "Cost optimization recommendations",
+    "Enterprise-grade security"
+  ]
+}

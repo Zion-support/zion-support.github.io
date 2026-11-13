@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-supply-chain-matchmaking-engine-83718770",
+  "breadcrumbTitle": "Intelligent Supply Chain Matchmaking Engine",
+  "title": "Intelligent Supply Chain Matchmaking Engine",
+  "description": "AI-driven matchmaking system that creates smart player matches based on skill, playstyle, and behavioral patterns for optimal gaming experiences.",
+  "basic": "$258/month",
+  "pro": "$648/month",
+  "enterprise": "$1948/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Supply Chain Matchmaking Engine - Zion Tech Group",
+    "description": "AI-driven matchmaking system that creates smart player matches based on skill, playstyle, and behavioral patterns for optimal gaming experiences.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-supply-chain-matchmaking-engine-83718770"
+    }
+  },
+  "features": [
+    "Skill-based matching",
+    "Latency optimization",
+    "Fair play detection",
+    "Dynamic balancing"
+  ],
+  "benefits": [
+    "Better player experience",
+    "Reduced toxicity",
+    "Higher engagement",
+    "Longer sessions"
+  ]
+}

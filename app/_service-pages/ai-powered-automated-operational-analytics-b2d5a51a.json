@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-automated-operational-analytics-b2d5a51a",
+  "breadcrumbTitle": "AI-Powered Automated Operational Analytics",
+  "title": "AI-Powered Automated Operational Analytics",
+  "description": "AI-driven analytics platform that delivers automated insights into operational operations, providing real-time monitoring, predictive modeling, and automated re",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI-Powered Automated Operational Analytics - Zion Tech Group",
+    "description": "AI-driven analytics platform that delivers automated insights into operational operations, providing real-time monitoring, predictive modeling, and automated re",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-automated-operational-analytics-b2d5a51a"
+    }
+  },
+  "features": [
+    "Real-time monitoring",
+    "Predictive modeling",
+    "Automated reporting",
+    "Custom dashboards"
+  ],
+  "benefits": [
+    "Data-driven decision making",
+    "Improved operational efficiency",
+    "Proactive issue detection",
+    "Enhanced KPI tracking"
+  ]
+}

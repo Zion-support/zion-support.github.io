@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/coordinator-autonomous---agriculture-96b0dc0e",
+  "breadcrumbTitle": "Coordinator Autonomous - Agriculture",
+  "title": "Coordinator Autonomous - Agriculture",
+  "description": "The future of agriculture is here with Coordinator Autonomous - Agriculture. Powered by cutting-edge AI, this platform delivers decision support like never befo",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Coordinator Autonomous - Agriculture - Zion Tech Group",
+    "description": "The future of agriculture is here with Coordinator Autonomous - Agriculture. Powered by cutting-edge AI, this platform delivers decision support like never befo",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/coordinator-autonomous---agriculture-96b0dc0e"
+    }
+  },
+  "features": [
+    "Audit trails",
+    "Machine learning integration",
+    "API-first design",
+    "Performance dashboards"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Zero manual intervention required",
+    "Enterprise-grade security"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "AI Trade Compliance Checker",
+  "description": "Automate trade compliance: restricted party screening, tariff classification, export license determination, sanctions compliance.",
+  "basic": "$799/mo/month",
+  "pro": "$2,499/mo/month",
+  "enterprise": "$7,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Trade Compliance Checker - Zion Tech Group",
+    "description": "Automate trade compliance: restricted party screening, tariff classification, export license determination, sanctions compliance.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w177-ai-trade-comp"
+    }
+  },
+  "features": [
+    "Restricted party screening (OFAC",
+    "EU",
+    "UN)",
+    "HS code and tariff classification",
+    "Export license determination"
+  ],
+  "benefits": [
+    "Avoid trade violation penalties",
+    "Automated screening replaces manual lookup",
+    "Tariff classification accuracy",
+    "Export license determination in seconds"
+  ]
+}

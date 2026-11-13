@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/insights-adaptive---transportation-1-aa45040e",
+  "breadcrumbTitle": "Insights Adaptive - Transportation #1",
+  "title": "Insights Adaptive - Transportation #1",
+  "description": "Next-generation transportation solution: Insights Adaptive - Transportation #1. Combines supply chain with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Insights Adaptive - Transportation #1 - Zion Tech Group",
+    "description": "Next-generation transportation solution: Insights Adaptive - Transportation #1. Combines supply chain with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/insights-adaptive---transportation-1-aa45040e"
+    }
+  },
+  "features": [
+    "Mobile-responsive interface",
+    "Zero-downtime updates",
+    "Custom integrations",
+    "Role-based access control",
+    "Auto-scaling capabilities"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Reduced human error by 95%",
+    "Real-time insights and alerts"
+  ]
+}

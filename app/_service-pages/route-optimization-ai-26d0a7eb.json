@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/route-optimization-ai-26d0a7eb",
+  "breadcrumbTitle": "Route Optimization AI",
+  "title": "Route Optimization AI",
+  "description": "AI-powered route optimization for last-mile and long-haul logistics. Real-time traffic, weather, and constraint-aware routing with dynamic reoptimization.",
+  "basic": "$49/vehicle/mo/month",
+  "pro": "$99/vehicle/mo/month",
+  "enterprise": "$custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Route Optimization AI - Zion Tech Group",
+    "description": "AI-powered route optimization for last-mile and long-haul logistics. Real-time traffic, weather, and constraint-aware routing with dynamic reoptimization.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/route-optimization-ai-26d0a7eb"
+    }
+  },
+  "features": [
+    "Real-time dynamic routing",
+    "Multi-constraint optimization",
+    "Traffic/weather integration",
+    "Fleet-wide optimization",
+    "Driver app integration"
+  ],
+  "benefits": [
+    "Reduce fuel costs 15%",
+    "Improve on-time delivery",
+    "Increase driver efficiency",
+    "Reduce emissions",
+    "Scale to 10,000+ vehicles"
+  ]
+}

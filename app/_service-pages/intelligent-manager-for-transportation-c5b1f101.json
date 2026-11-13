@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/intelligent-manager-for-transportation-c5b1f101",
+  "breadcrumbTitle": "Intelligent Manager for Transportation",
+  "title": "Intelligent Manager for Transportation",
+  "description": "Transform your transportation operations with our Intelligent Manager for Transportation. This AI-driven solution automates resource optimization with unprecede",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Manager for Transportation - Zion Tech Group",
+    "description": "Transform your transportation operations with our Intelligent Manager for Transportation. This AI-driven solution automates resource optimization with unprecede",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-manager-for-transportation-c5b1f101"
+    }
+  },
+  "features": [
+    "SOC 2 certified",
+    "Comprehensive monitoring",
+    "GDPR compliance",
+    "Open-source friendly",
+    "Custom integrations"
+  ],
+  "benefits": [
+    "24/7 automated operations",
+    "Real-time insights and alerts",
+    "ROI in under 90 days",
+    "Automated compliance reporting",
+    "Enterprise-grade security"
+  ]
+}

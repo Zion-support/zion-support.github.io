@@ -1,0 +1,29 @@
+{
+  "title": "AI Code Review & Quality Automation",
+  "description": "Automated code review powered by large language models. Detects bugs, security vulnerabilities, performance issues, and style violations.",
+  "basic": "$15/developer/mo/month",
+  "pro": "$35/developer/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Code Review & Quality Automation - Zion Tech Group",
+    "description": "Automated code review powered by large language models. Detects bugs, security vulnerabilities, performance issues, and style violations.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-code-quality-review-automation"
+    }
+  },
+  "features": [
+    "Automated PR review with inline comments",
+    "OWASP Top 10 vulnerability detection",
+    "Performance anti-pattern identification",
+    "Code complexity scoring",
+    "Auto-fix suggestions"
+  ],
+  "benefits": [
+    "Catch 80% of bugs before human review",
+    "Reduce code review time by 60%",
+    "Enforce coding standards",
+    "Improve code quality and security"
+  ]
+}

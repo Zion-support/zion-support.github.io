@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/autonomous-intelligent-sports-c1025c76",
+  "breadcrumbTitle": "Autonomous intelligent-sports",
+  "title": "Autonomous intelligent-sports",
+  "description": "Drive innovation in sports with Autonomous intelligent-sports. This AI-powered platform transforms maintenance scheduling into a competitive advantage.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Autonomous intelligent-sports - Zion Tech Group",
+    "description": "Drive innovation in sports with Autonomous intelligent-sports. This AI-powered platform transforms maintenance scheduling into a competitive advantage.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-intelligent-sports-c1025c76"
+    }
+  },
+  "features": [
+    "Business continuity planning",
+    "Inventory prediction with demand forecasting",
+    "Usage analytics with insights",
+    "Privileged access management (PAM)",
+    "Penetration testing with red team"
+  ],
+  "benefits": [
+    "Better code quality with automated reviews",
+    "Improved sales performance with lead scoring",
+    "Improved forecast accuracy",
+    "Improved recruitment conversion rates",
+    "Reduced legal review cycles"
+  ]
+}

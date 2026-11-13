@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/automated-insights-energy-8b7a370f",
+  "breadcrumbTitle": "Automated insights-energy",
+  "title": "Automated insights-energy",
+  "description": "Unlock unprecedented growth with Automated insights-energy. This autonomous system provides process automation with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated insights-energy - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Automated insights-energy. This autonomous system provides process automation with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-insights-energy-8b7a370f"
+    }
+  },
+  "features": [
+    "Plugin architecture",
+    "Microservices deployment",
+    "Open-source friendly",
+    "Performance dashboards",
+    "GDPR compliance"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Performance benchmarking",
+    "Seamless integration with existing systems",
+    "Cost optimization recommendations"
+  ]
+}

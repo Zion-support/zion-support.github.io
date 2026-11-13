@@ -1,0 +1,29 @@
+{
+  "title": "Enterprise Recommendation Engine",
+  "description": "AI recommendations for e-commerce with collaborative filtering and A/B testing.",
+  "basic": "$799/mo/month",
+  "pro": "$2,499/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Enterprise Recommendation Engine - Zion Tech Group",
+    "description": "AI recommendations for e-commerce with collaborative filtering and A/B testing.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-recommendation-engine"
+    }
+  },
+  "features": [
+    "Collaborative filtering",
+    "Content-based",
+    "Hybrid models",
+    "A/B testing",
+    "Real-time serving"
+  ],
+  "benefits": [
+    "20-35% conversion lift",
+    "Personalization",
+    "A/B testing",
+    "Real-time serving"
+  ]
+}

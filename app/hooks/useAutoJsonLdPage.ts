@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { usePathname} from 'next/navigation';
 import JsonLd from '../components/JsonLd';
 
@@ -11,14 +11,19 @@ export function useAutoJsonLdPage() {
   const orgName = 'Zion Tech Group';
   const fullUrl = `${siteUrl}${pathname || '/'}`;
 
-  const title =
-    (typeof document !== 'undefined' ? document.title.replace(/\s*\|.*$/, '').trim() : '') || orgName;
-
-  const description =
-    (typeof document !== 'undefined'
-      ? document.querySelector('meta[name="description"]')?.getAttribute('content')
-      : null) ||
-    `${orgName} service page.`;
+  // Keep the server snapshot and the first browser render identical.
+  const [pageMetadata, setPageMetadata] = useState({
+    title: orgName,
+    description: `${orgName} service page.`,
+  });
+  useEffect(() => {
+    setPageMetadata({
+      title: document.title.replace(/\s*\|.*$/, '').trim() || orgName,
+      description: document.querySelector('meta[name="description"]')?.getAttribute('content')
+        || `${orgName} service page.`,
+    });
+  }, [pathname]);
+  const { title, description } = pageMetadata;
 
   const pathSegments = (pathname || '/').split('/').filter(Boolean);
 

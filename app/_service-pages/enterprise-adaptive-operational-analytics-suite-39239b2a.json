@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/enterprise-adaptive-operational-analytics-suite-39239b2a",
+  "breadcrumbTitle": "Enterprise Adaptive Operational Analytics Suite",
+  "title": "Enterprise Adaptive Operational Analytics Suite",
+  "description": "Enterprise analytics suite that delivers adaptive operational insights with unified dashboards and reporting.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Enterprise Adaptive Operational Analytics Suite - Zion Tech Group",
+    "description": "Enterprise analytics suite that delivers adaptive operational insights with unified dashboards and reporting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/enterprise-adaptive-operational-analytics-suite-39239b2a"
+    }
+  },
+  "features": [
+    "Data visualization",
+    "Custom dashboards",
+    "Report generation",
+    "KPI tracking"
+  ],
+  "benefits": [
+    "Unified data view",
+    "Faster insights",
+    "Customizable reports",
+    "Cross-functional collaboration"
+  ]
+}

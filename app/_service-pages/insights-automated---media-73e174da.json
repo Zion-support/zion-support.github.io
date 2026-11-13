@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/insights-automated---media-73e174da",
+  "breadcrumbTitle": "Insights Automated - Media",
+  "title": "Insights Automated - Media",
+  "description": "Unlock unprecedented growth with Insights Automated - Media. This autonomous system provides workflow management with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Insights Automated - Media - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Insights Automated - Media. This autonomous system provides workflow management with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/insights-automated---media-73e174da"
+    }
+  },
+  "features": [
+    "Serverless functions",
+    "Multi-language support",
+    "SOC 2 certified",
+    "Cloud-native architecture"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "Zero manual intervention required",
+    "ROI in under 90 days",
+    "50% reduction in operational costs",
+    "Reduced human error by 95%"
+  ]
+}

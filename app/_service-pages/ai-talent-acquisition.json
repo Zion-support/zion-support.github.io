@@ -1,0 +1,29 @@
+{
+  "title": "AI Talent Acquisition & Hiring Intelligence",
+  "description": "End-to-end AI recruiting platform — candidate sourcing, resume screening, bias-free scoring, interview scheduling, and predictive hiring success modeling.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Talent Acquisition & Hiring Intelligence - Zion Tech Group",
+    "description": "End-to-end AI recruiting platform — candidate sourcing, resume screening, bias-free scoring, interview scheduling, and predictive hiring success modeling.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-talent-acquisition"
+    }
+  },
+  "features": [
+    "Multi-platform AI candidate sourcing",
+    "Bias-free resume scoring & ranking",
+    "Automated interview scheduling & coordination",
+    "Predictive hiring success modeling",
+    "Competitor talent mapping & intelligence"
+  ],
+  "benefits": [
+    "Reduce costs with ai talent acquisition & hiring intelligence",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

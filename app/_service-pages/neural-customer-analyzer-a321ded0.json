@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/neural-customer-analyzer-a321ded0",
+  "breadcrumbTitle": "Neural Customer Analyzer",
+  "title": "Neural Customer Analyzer",
+  "description": "The future of agriculture is here with Neural Customer Analyzer. Powered by cutting-edge AI, this platform delivers predictive analytics like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Neural Customer Analyzer - Zion Tech Group",
+    "description": "The future of agriculture is here with Neural Customer Analyzer. Powered by cutting-edge AI, this platform delivers predictive analytics like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/neural-customer-analyzer-a321ded0"
+    }
+  },
+  "features": [
+    "Multi-language support",
+    "Alerting system",
+    "HIPAA ready",
+    "Audit trails"
+  ],
+  "benefits": [
+    "50% reduction in operational costs",
+    "ROI in under 90 days",
+    "Seamless integration with existing systems"
+  ]
+}

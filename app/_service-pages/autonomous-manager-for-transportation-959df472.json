@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/autonomous-manager-for-transportation-959df472",
+  "breadcrumbTitle": "Autonomous Manager for Transportation",
+  "title": "Autonomous Manager for Transportation",
+  "description": "The future of transportation is here with Autonomous Manager for Transportation. Powered by cutting-edge AI, this platform delivers network optimization like ne",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous Manager for Transportation - Zion Tech Group",
+    "description": "The future of transportation is here with Autonomous Manager for Transportation. Powered by cutting-edge AI, this platform delivers network optimization like ne",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-manager-for-transportation-959df472"
+    }
+  },
+  "features": [
+    "GDPR compliance",
+    "Plugin architecture",
+    "Offline capabilities",
+    "Container orchestration",
+    "Auto-scaling capabilities"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "ROI in under 90 days",
+    "Self-healing infrastructure"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "AI Invoice Factoring & Working Capital Marketplace",
+  "description": "Connect businesses with instant working capital through AI-powered invoice factoring. ML assesses credit risk in real-time and matches sellers with optimal funding partners.",
+  "basic": "$1.5% per invoice/month",
+  "pro": "$1.0% per invoice/month",
+  "enterprise": "$Custom volume rates/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Invoice Factoring & Working Capital Marketplace - Zion Tech Group",
+    "description": "Connect businesses with instant working capital through AI-powered invoice factoring. ML assesses credit risk in real-time and matches sellers with optimal fund",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-invoice-factoring-working-capital"
+    }
+  },
+  "features": [
+    "Real-time AI credit risk scoring",
+    "Automated invoice verification & fraud detection",
+    "Multi-lender marketplace",
+    "Instant funding in under 60 seconds",
+    "Blockchain-verified invoice authenticity"
+  ],
+  "benefits": [
+    "Get working capital in hours, not weeks",
+    "Reduce factoring fees",
+    "Eliminate manual processing",
+    "Improve cash flow predictability"
+  ]
+}

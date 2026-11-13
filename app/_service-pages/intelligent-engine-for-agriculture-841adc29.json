@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/intelligent-engine-for-agriculture-841adc29",
+  "breadcrumbTitle": "Intelligent Engine for Agriculture",
+  "title": "Intelligent Engine for Agriculture",
+  "description": "Revolutionize agriculture through intelligent automation. Our Intelligent Engine for Agriculture leverages advanced machine learning to deliver workflow managem",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Engine for Agriculture - Zion Tech Group",
+    "description": "Revolutionize agriculture through intelligent automation. Our Intelligent Engine for Agriculture leverages advanced machine learning to deliver workflow managem",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-engine-for-agriculture-841adc29"
+    }
+  },
+  "features": [
+    "Offline capabilities",
+    "Auto-scaling capabilities",
+    "Performance dashboards",
+    "Multi-region deployment",
+    "Container orchestration"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "3x faster decision making",
+    "Zero manual intervention required",
+    "Scalable to millions of transactions",
+    "Seamless integration with existing systems"
+  ]
+}

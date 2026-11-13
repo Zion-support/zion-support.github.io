@@ -1,0 +1,30 @@
+{
+  "title": "Energy Management AI",
+  "description": "Smart energy management for commercial buildings and industrial facilities. AI-powered optimization of HVAC, lighting, and renewable energy integration.",
+  "basic": "$N/A/month",
+  "pro": "$7997/month",
+  "enterprise": "$19997/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Energy Management AI - Zion Tech Group",
+    "description": "Smart energy management for commercial buildings and industrial facilities. AI-powered optimization of HVAC, lighting, and renewable energy integration.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w131-ind-energy"
+    }
+  },
+  "features": [
+    "HVAC optimization",
+    "Lighting control",
+    "Renewable integration",
+    "Demand response",
+    "Carbon tracking"
+  ],
+  "benefits": [
+    "25% energy cost reduction",
+    "30% carbon reduction",
+    "Predictive maintenance",
+    "Automated demand response",
+    "ESG compliance"
+  ]
+}

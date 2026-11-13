@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/next-generation-hyper-local-fitness-automation-3c2534d8",
+  "breadcrumbTitle": "Next-Generation Hyper-Local Fitness Automation",
+  "title": "Next-Generation Hyper-Local Fitness Automation",
+  "description": "Next-generation automation suite that streamlines hyper-local fitness workflows with intelligent orchestration.",
+  "basic": "$218/month",
+  "pro": "$548/month",
+  "enterprise": "$1648/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Next-Generation Hyper-Local Fitness Automation - Zion Tech Group",
+    "description": "Next-generation automation suite that streamlines hyper-local fitness workflows with intelligent orchestration.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/next-generation-hyper-local-fitness-automation-3c2534d8"
+    }
+  },
+  "features": [
+    "Smart orchestration",
+    "Process automation",
+    "Event processing",
+    "Task scheduling"
+  ],
+  "benefits": [
+    "Faster execution",
+    "Reduced manual steps",
+    "Scalable processes",
+    "Error reduction"
+  ]
+}

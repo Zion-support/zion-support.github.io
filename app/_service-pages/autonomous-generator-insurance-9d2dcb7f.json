@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/autonomous-generator-insurance-9d2dcb7f",
+  "breadcrumbTitle": "Autonomous generator-insurance",
+  "title": "Autonomous generator-insurance",
+  "description": "The future of insurance is here with Autonomous generator-insurance. Powered by cutting-edge AI, this platform delivers decision support like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous generator-insurance - Zion Tech Group",
+    "description": "The future of insurance is here with Autonomous generator-insurance. Powered by cutting-edge AI, this platform delivers decision support like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-generator-insurance-9d2dcb7f"
+    }
+  },
+  "features": [
+    "Zero-downtime updates",
+    "Machine learning integration",
+    "Offline capabilities",
+    "Comprehensive monitoring",
+    "Serverless functions"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "24/7 automated operations",
+    "99.9% uptime guarantee"
+  ]
+}

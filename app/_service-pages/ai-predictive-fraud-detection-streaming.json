@@ -1,0 +1,28 @@
+{
+  "title": "Streaming Fraud Detection (Real-Time)",
+  "description": "Real-time fraud scoring on Kafka event stream: feature engineering IsolationForest + XGBoost alert/block with feedback loop for model retrain.",
+  "basic": "$399/mo/month",
+  "pro": "$999/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Streaming Fraud Detection (Real-Time) - Zion Tech Group",
+    "description": "Real-time fraud scoring on Kafka event stream: feature engineering IsolationForest + XGBoost alert/block with feedback loop for model retrain.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-predictive-fraud-detection-streaming"
+    }
+  },
+  "features": [
+    "Kafka event stream feature engineering",
+    "IsolationForest + XGBoost stacked fraud score",
+    "Online feature store for low-latency inference",
+    "Feedback loop model retrain pipeline"
+  ],
+  "benefits": [
+    "Reduce costs with streaming fraud detection (real-time)",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

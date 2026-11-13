@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/autonomous-maintenance-director-17a16380",
+  "breadcrumbTitle": "Autonomous Maintenance Director",
+  "title": "Autonomous Maintenance Director",
+  "description": "Unlock unprecedented growth with Autonomous Maintenance Director. This autonomous system provides image recognition with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous Maintenance Director - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Autonomous Maintenance Director. This autonomous system provides image recognition with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-maintenance-director-17a16380"
+    }
+  },
+  "features": [
+    "Multi-language support",
+    "Open-source friendly",
+    "Offline capabilities",
+    "Multi-region deployment",
+    "Real-time processing"
+  ],
+  "benefits": [
+    "Performance benchmarking",
+    "Seamless integration with existing systems",
+    "99.9% uptime guarantee",
+    "Intelligent load balancing",
+    "Enterprise-grade security"
+  ]
+}

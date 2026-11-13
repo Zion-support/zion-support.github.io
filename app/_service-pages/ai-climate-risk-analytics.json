@@ -1,0 +1,29 @@
+{
+  "title": "AI Climate Risk Analytics",
+  "description": "Assess climate-related financial and operational risks using AI. Physical risk modeling, transition risk analysis, and TCFD-compliant reporting.",
+  "basic": "$1,999/mo/month",
+  "pro": "$5,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Climate Risk Analytics - Zion Tech Group",
+    "description": "Assess climate-related financial and operational risks using AI. Physical risk modeling, transition risk analysis, and TCFD-compliant reporting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-climate-risk-analytics"
+    }
+  },
+  "features": [
+    "Physical risk modeling (flood, fire, storm)",
+    "Transition risk analysis",
+    "Carbon footprint forecasting",
+    "TCFD and ISSB compliance reporting",
+    "Integration with geospatial data"
+  ],
+  "benefits": [
+    "Meet climate disclosure requirements",
+    "Protect assets from physical risks",
+    "Identify transition opportunities",
+    "Investor-grade climate data"
+  ]
+}

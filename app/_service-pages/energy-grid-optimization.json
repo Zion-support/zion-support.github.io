@@ -1,0 +1,29 @@
+{
+  "title": "AI Energy Grid Optimization",
+  "description": "Smart grid optimization with demand forecasting and renewable integration.",
+  "basic": "$20,000/month",
+  "pro": "$6,000/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Energy Grid Optimization - Zion Tech Group",
+    "description": "Smart grid optimization with demand forecasting and renewable integration.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/energy-grid-optimization"
+    }
+  },
+  "features": [
+    "Demand forecasting",
+    "Renewable integration",
+    "Load balancing",
+    "Predictive maintenance",
+    "Outage prediction"
+  ],
+  "benefits": [
+    "20% efficiency gain",
+    "Renewable optimization",
+    "Outage reduction",
+    "Cost savings"
+  ]
+}

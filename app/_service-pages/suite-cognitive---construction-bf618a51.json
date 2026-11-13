@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/suite-cognitive---construction-bf618a51",
+  "breadcrumbTitle": "Suite Cognitive - Construction",
+  "title": "Suite Cognitive - Construction",
+  "description": "Transform your construction operations with our Suite Cognitive - Construction. This AI-driven solution automates user experience with unprecedented accuracy an",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Suite Cognitive - Construction - Zion Tech Group",
+    "description": "Transform your construction operations with our Suite Cognitive - Construction. This AI-driven solution automates user experience with unprecedented accuracy an",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/suite-cognitive---construction-bf618a51"
+    }
+  },
+  "features": [
+    "Alerting system",
+    "Rollback mechanisms",
+    "Audit trails",
+    "Zero-downtime updates",
+    "Serverless functions"
+  ],
+  "benefits": [
+    "Scalable to millions of transactions",
+    "Performance benchmarking",
+    "Seamless integration with existing systems"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "AI Supply Chain Sustainability Platform",
+  "description": "Measure, monitor, and improve supply chain sustainability. Carbon footprint tracking, supplier ESG scoring, and circular economy optimization.",
+  "basic": "$1,499/mo/month",
+  "pro": "$4,499/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Supply Chain Sustainability Platform - Zion Tech Group",
+    "description": "Measure, monitor, and improve supply chain sustainability. Carbon footprint tracking, supplier ESG scoring, and circular economy optimization.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-supply-chain-sustainability"
+    }
+  },
+  "features": [
+    "Scope 1/2/3 carbon tracking",
+    "Supplier ESG scoring",
+    "Circular economy optimization",
+    "Sustainability reporting (GRI, CDP)",
+    "Integration with procurement systems"
+  ],
+  "benefits": [
+    "Meet ESG requirements",
+    "Reduce carbon footprint",
+    "Optimize sustainable sourcing",
+    "Improve brand reputation"
+  ]
+}

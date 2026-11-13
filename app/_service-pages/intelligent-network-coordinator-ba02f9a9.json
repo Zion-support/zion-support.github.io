@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligent-network-coordinator-ba02f9a9",
+  "breadcrumbTitle": "Intelligent Network Coordinator",
+  "title": "Intelligent Network Coordinator",
+  "description": "The future of education is here with Intelligent Network Coordinator. Powered by cutting-edge AI, this platform delivers energy management like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Network Coordinator - Zion Tech Group",
+    "description": "The future of education is here with Intelligent Network Coordinator. Powered by cutting-edge AI, this platform delivers energy management like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-network-coordinator-ba02f9a9"
+    }
+  },
+  "features": [
+    "Machine learning integration",
+    "HIPAA ready",
+    "Custom integrations",
+    "Real-time processing",
+    "Plugin architecture"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "24/7 automated operations",
+    "Automated compliance reporting",
+    "Cost optimization recommendations"
+  ]
+}

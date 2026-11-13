@@ -1,0 +1,29 @@
+{
+  "title": "Cloud Telephony & VoIP Service",
+  "description": "Business cloud telephony: PBX, call routing, IVR, conferencing, and call analytics. Replace PBX hardware with cloud VoIP.",
+  "basic": "$20/user/mo/month",
+  "pro": "$35/user/mo/month",
+  "enterprise": "$55/user/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Cloud Telephony & VoIP Service - Zion Tech Group",
+    "description": "Business cloud telephony: PBX, call routing, IVR, conferencing, and call analytics. Replace PBX hardware with cloud VoIP.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w176-cloud-telephony"
+    }
+  },
+  "features": [
+    "Cloud PBX with auto-attendant",
+    "Advanced call routing and IVR",
+    "HD audio conferencing",
+    "Call recording and analytics",
+    "Number porting and management"
+  ],
+  "benefits": [
+    "Replace expensive PBX hardware",
+    "Analytics reveal call patterns and quality",
+    "IVR routes callers efficiently",
+    "CRM integration for screen pops"
+  ]
+}

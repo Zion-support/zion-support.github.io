@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "Data Analytics Platform: case study | Zion Tech Group",
+    "description": "Data Analytics Platform: case study",
+    "keywords": [
+      "automation",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "Data Analytics Platform: case study",
+      "description": "Data Analytics Platform: case study",
+      "url": "https://ziontechgroup.com/blog/data-analytics-platform-case-study/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/data-analytics-platform-case-study/"
+    }
+  },
+  "values": [
+    "Data Analytics Platform: case study",
+    "Data Analytics Platform: case study",
+    "Data Analytics Platform: case study",
+    "Conversion path",
+    "If this guide matches your data analytics platform: case study initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "Conversion path",
+    " If this guide matches your data analytics platform: case study initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "/blog/api-orchestration-layer-2026-7141",
+    "Api Orchestration Layer 2026 7141",
+    "/blog/event-driven-architecture-2026-6961",
+    "Event Driven Architecture 2026 6961",
+    "/blog/ai-api-gateway-2026",
+    "Ai Api Gateway 2026",
+    "/blog/automation-orchestration-enterprise-2026-6975",
+    "Automation Orchestration Enterprise 2026 6975"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Data Analytics Platform: case study",
+    "description": "Data Analytics Platform: case study",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T07:56:42Z",
+    "dateModified": "2026-08-07T07:56:42Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/data-analytics-platform-case-study/"
+  }
+}

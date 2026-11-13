@@ -1,0 +1,29 @@
+{
+  "title": "CampaignDash — Ad Campaign Analytics",
+  "description": "Unified ad campaign analytics across Google, Meta, LinkedIn, TikTok, and X. Cross-channel ROI, attribution, and optimization recommendations.",
+  "basic": "$49/mo/month",
+  "pro": "$149/mo/month",
+  "enterprise": "$499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "CampaignDash — Ad Campaign Analytics - Zion Tech Group",
+    "description": "Unified ad campaign analytics across Google, Meta, LinkedIn, TikTok, and X. Cross-channel ROI, attribution, and optimization recommendations.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w175-campaigndash"
+    }
+  },
+  "features": [
+    "Cross-channel campaign aggregation",
+    "ROAS and CPA tracking by channel and campaign",
+    "Attribution modeling (first, last, multi-touch)",
+    "AI optimization recommendations",
+    "Budget pacing and reallocation alerts"
+  ],
+  "benefits": [
+    "See all ad performance in one dashboard",
+    "Attribution reveals true channel value",
+    "AI recommendations improve ROAS 15%",
+    "Budget pacing prevents overspend"
+  ]
+}

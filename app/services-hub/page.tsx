@@ -1,5 +1,4 @@
 // app/services-hub/page.tsx — Services Hub: main entry point for browsing all services
-'use client';
 
 import Link from 'next/link';
 import { allServices, type Service } from '@/data/servicesData';

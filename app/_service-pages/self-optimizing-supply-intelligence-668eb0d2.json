@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/self-optimizing-supply-intelligence-668eb0d2",
+  "breadcrumbTitle": "Self-Optimizing Supply Intelligence",
+  "title": "Self-Optimizing Supply Intelligence",
+  "description": "Unlock unprecedented growth with Self-Optimizing Supply Intelligence. This autonomous system provides document processing with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Self-Optimizing Supply Intelligence - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Self-Optimizing Supply Intelligence. This autonomous system provides document processing with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/self-optimizing-supply-intelligence-668eb0d2"
+    }
+  },
+  "features": [
+    "GDPR compliance",
+    "Offline capabilities",
+    "Cloud-native architecture",
+    "Zero-downtime updates",
+    "Auto-scaling capabilities"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "Predictive maintenance scheduling",
+    "50% reduction in operational costs",
+    "24/7 automated operations",
+    "3x faster decision making"
+  ]
+}

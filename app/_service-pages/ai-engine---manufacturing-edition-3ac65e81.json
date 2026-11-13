@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-engine---manufacturing-edition-3ac65e81",
+  "breadcrumbTitle": "AI Engine - Manufacturing Edition",
+  "title": "AI Engine - Manufacturing Edition",
+  "description": "Transform your manufacturing operations with our AI Engine - Manufacturing Edition. This AI-driven solution automates fraud prevention with unprecedented accura",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Engine - Manufacturing Edition - Zion Tech Group",
+    "description": "Transform your manufacturing operations with our AI Engine - Manufacturing Edition. This AI-driven solution automates fraud prevention with unprecedented accura",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-engine---manufacturing-edition-3ac65e81"
+    }
+  },
+  "features": [
+    "Plugin architecture",
+    "Offline capabilities",
+    "Microservices deployment",
+    "Container orchestration"
+  ],
+  "benefits": [
+    "Performance benchmarking",
+    "99.9% uptime guarantee",
+    "Real-time insights and alerts",
+    "3x faster decision making"
+  ]
+}

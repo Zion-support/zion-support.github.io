@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/next-generation-cloud-native-hospitality-automation-1fa7ef15",
+  "breadcrumbTitle": "Next-Generation Cloud-Native Hospitality Automation",
+  "title": "Next-Generation Cloud-Native Hospitality Automation",
+  "description": "Next-generation automation suite that streamlines cloud-native hospitality workflows with intelligent orchestration.",
+  "basic": "$218/month",
+  "pro": "$548/month",
+  "enterprise": "$1648/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Next-Generation Cloud-Native Hospitality Automation - Zion Tech Group",
+    "description": "Next-generation automation suite that streamlines cloud-native hospitality workflows with intelligent orchestration.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/next-generation-cloud-native-hospitality-automation-1fa7ef15"
+    }
+  },
+  "features": [
+    "Smart orchestration",
+    "Process automation",
+    "Event processing",
+    "Task scheduling"
+  ],
+  "benefits": [
+    "Faster execution",
+    "Reduced manual steps",
+    "Scalable processes",
+    "Error reduction"
+  ]
+}

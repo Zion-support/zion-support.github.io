@@ -1,0 +1,28 @@
+{
+  "title": "Voice-to-Action Platform",
+  "description": "ASR (speech-to-text) + LLM intent extraction + action execution: schedule meetings, create tickets, run queries — all via natural voice.",
+  "basic": "$2,499/mo/month",
+  "pro": "$4,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Voice-to-Action Platform - Zion Tech Group",
+    "description": "ASR (speech-to-text) + LLM intent extraction + action execution: schedule meetings, create tickets, run queries — all via natural voice.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-voice-to-action-platform"
+    }
+  },
+  "features": [
+    "ASR (Whisper/Deepgram) multi-language",
+    "Intent extraction + slot-filling via LLM",
+    "Connector library (calendar/CRM/ticketing)",
+    "Privacy-first: on-prem ASR + LLM option"
+  ],
+  "benefits": [
+    "Reduce costs with voice-to-action platform",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

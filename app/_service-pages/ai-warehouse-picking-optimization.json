@@ -1,0 +1,29 @@
+{
+  "title": "AI Warehouse Picking Optimization",
+  "description": "Optimize warehouse picking routes and batch assignments with AI. Reduce picker travel time, increase throughput, and improve order accuracy.",
+  "basic": "$999/mo/month",
+  "pro": "$2,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Warehouse Picking Optimization - Zion Tech Group",
+    "description": "Optimize warehouse picking routes and batch assignments with AI. Reduce picker travel time, increase throughput, and improve order accuracy.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-warehouse-picking-optimization"
+    }
+  },
+  "features": [
+    "Pick path optimization",
+    "Batch order optimization",
+    "Slotting optimization",
+    "Real-time order prioritization",
+    "Integration with WMS (Manhattan, Blue Yonder)"
+  ],
+  "benefits": [
+    "Reduce pick time by 30%",
+    "Increase throughput by 25%",
+    "Improve order accuracy",
+    "Optimize labor allocation"
+  ]
+}

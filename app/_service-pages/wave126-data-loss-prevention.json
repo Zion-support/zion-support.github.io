@@ -1,0 +1,29 @@
+{
+  "title": "Data Loss Prevention (DLP)",
+  "description": "Comprehensive data protection across endpoints, cloud applications, and email. AI-powered classification, policy enforcement, and insider threat detection — ensuring sensitive data never leaves your organization undetected.",
+  "basic": "$N/A/month",
+  "pro": "$9997/month",
+  "enterprise": "$22997/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Data Loss Prevention (DLP) - Zion Tech Group",
+    "description": "Comprehensive data protection across endpoints, cloud applications, and email. AI-powered classification, policy enforcement, and insider threat detection — ens",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/wave126-data-loss-prevention"
+    }
+  },
+  "features": [
+    "Endpoint DLP for managed & unmanaged devices",
+    "Cloud app DLP (CASB integration for O365, GSuite, Slack)",
+    "Email DLP with content inspection & encryption",
+    "AI-powered data classification & labeling",
+    "Insider threat detection & behavioral analysis"
+  ],
+  "benefits": [
+    "Stop data exfiltration before it happens",
+    "Meet HIPAA, PCI-DSS, GDPR data handling requirements",
+    "Detect insider threats through behavioral analytics",
+    "Full visibility into where sensitive data lives and moves"
+  ]
+}

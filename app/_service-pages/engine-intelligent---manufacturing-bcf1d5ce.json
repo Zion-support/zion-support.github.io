@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/engine-intelligent---manufacturing-bcf1d5ce",
+  "breadcrumbTitle": "Engine Intelligent - Manufacturing",
+  "title": "Engine Intelligent - Manufacturing",
+  "description": "Next-generation manufacturing solution: Engine Intelligent - Manufacturing. Combines image recognition with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Engine Intelligent - Manufacturing - Zion Tech Group",
+    "description": "Next-generation manufacturing solution: Engine Intelligent - Manufacturing. Combines image recognition with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/engine-intelligent---manufacturing-bcf1d5ce"
+    }
+  },
+  "features": [
+    "Data encryption",
+    "Multi-region deployment",
+    "Microservices deployment",
+    "Machine learning integration"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "Performance benchmarking",
+    "Intelligent load balancing"
+  ]
+}

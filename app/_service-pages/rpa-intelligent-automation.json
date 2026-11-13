@@ -1,0 +1,29 @@
+{
+  "title": "RPA + Intelligent Document Processing",
+  "description": "RPA robots augmented with AI document understanding: extract structured data from PDFs, invoices, and emails; fill ERP/CRM forms; reconcile payments; and escalate exceptions — end-to-end touchless processing.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "RPA + Intelligent Document Processing - Zion Tech Group",
+    "description": "RPA robots augmented with AI document understanding: extract structured data from PDFs, invoices, and emails; fill ERP/CRM forms; reconcile payments; and escala",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/rpa-intelligent-automation"
+    }
+  },
+  "features": [
+    "AI document extraction (OCR + LLM)",
+    "ERP/CRM auto-population (SAP, NetSuite, SF)",
+    "Exception classification + routing",
+    "End-to-end audit trail per transaction",
+    "Unattended robots + attended robot copilot mode"
+  ],
+  "benefits": [
+    "Reduce costs with rpa + intelligent document processing",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

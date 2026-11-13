@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/automated-intelligence-for-hospitality-6481ed05",
+  "breadcrumbTitle": "Automated Intelligence for Hospitality",
+  "title": "Automated Intelligence for Hospitality",
+  "description": "Next-generation hospitality solution: Automated Intelligence for Hospitality. Combines security monitoring with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated Intelligence for Hospitality - Zion Tech Group",
+    "description": "Next-generation hospitality solution: Automated Intelligence for Hospitality. Combines security monitoring with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-intelligence-for-hospitality-6481ed05"
+    }
+  },
+  "features": [
+    "Alerting system",
+    "Microservices deployment",
+    "Offline capabilities",
+    "Comprehensive monitoring",
+    "Auto-scaling capabilities"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "Intelligent load balancing",
+    "Enterprise-grade security",
+    "Reduced human error by 95%"
+  ]
+}

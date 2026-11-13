@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-legal-matchmaking-engine-24f6116b",
+  "breadcrumbTitle": "Intelligent Legal Matchmaking Engine",
+  "title": "Intelligent Legal Matchmaking Engine",
+  "description": "AI-driven matchmaking system that creates intelligent player matches based on skill, playstyle, and behavioral patterns for optimal gaming experiences.",
+  "basic": "$258/month",
+  "pro": "$648/month",
+  "enterprise": "$1948/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Intelligent Legal Matchmaking Engine - Zion Tech Group",
+    "description": "AI-driven matchmaking system that creates intelligent player matches based on skill, playstyle, and behavioral patterns for optimal gaming experiences.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-legal-matchmaking-engine-24f6116b"
+    }
+  },
+  "features": [
+    "Skill-based matching",
+    "Latency optimization",
+    "Fair play detection",
+    "Dynamic balancing"
+  ],
+  "benefits": [
+    "Better player experience",
+    "Reduced toxicity",
+    "Higher engagement",
+    "Longer sessions"
+  ]
+}

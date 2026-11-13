@@ -1,0 +1,29 @@
+{
+  "title": "API Development & Integration",
+  "description": "Custom API design, development, and integration — REST, GraphQL, Webhooks, and third-party service connectors.",
+  "basic": "$49/mo/month",
+  "pro": "$199/mo/month",
+  "enterprise": "$699/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "API Development & Integration - Zion Tech Group",
+    "description": "Custom API design, development, and integration — REST, GraphQL, Webhooks, and third-party service connectors.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/api-integration"
+    }
+  },
+  "features": [
+    "RESTful & GraphQL API design",
+    "Third-party API integrations",
+    "Webhook architecture & event systems",
+    "API gateway & rate limiting",
+    "API documentation & versioning (OpenAPI/Swagger)"
+  ],
+  "benefits": [
+    "Reduce costs with api development & integration",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/ai-suite---automotive-edition-3-5c389b22",
+  "breadcrumbTitle": "AI Suite - Automotive Edition #3",
+  "title": "AI Suite - Automotive Edition #3",
+  "description": "Transform your automotive operations with our AI Suite - Automotive Edition #3. This AI-driven solution automates risk assessment with unprecedented accuracy an",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Suite - Automotive Edition #3 - Zion Tech Group",
+    "description": "Transform your automotive operations with our AI Suite - Automotive Edition #3. This AI-driven solution automates risk assessment with unprecedented accuracy an",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-suite---automotive-edition-3-5c389b22"
+    }
+  },
+  "features": [
+    "HIPAA ready",
+    "Zero-downtime updates",
+    "Container orchestration",
+    "SOC 2 certified",
+    "Cloud-native architecture"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "50% reduction in operational costs",
+    "3x faster decision making",
+    "24/7 automated operations",
+    "Real-time insights and alerts"
+  ]
+}

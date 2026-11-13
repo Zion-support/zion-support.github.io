@@ -1,0 +1,29 @@
+{
+  "title": "AI Clinical Decision Support System",
+  "description": "AI-powered clinical decision support that analyzes patient data, medical literature, and clinical guidelines to provide evidence-based treatment recommendations. Integrates with EHR systems.",
+  "basic": "$1,999/mo/month",
+  "pro": "$5,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Clinical Decision Support System - Zion Tech Group",
+    "description": "AI-powered clinical decision support that analyzes patient data, medical literature, and clinical guidelines to provide evidence-based treatment recommendations",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/healthcare-clinical-decision-support"
+    }
+  },
+  "features": [
+    "Evidence-based treatment suggestions",
+    "Drug interaction alerts",
+    "Clinical guideline integration",
+    "Patient risk stratification",
+    "EHR integration (Epic, Cerner)"
+  ],
+  "benefits": [
+    "Reduce diagnostic errors by 30%",
+    "Improve treatment outcomes",
+    "Stay current with medical literature",
+    "Enhance clinical efficiency"
+  ]
+}

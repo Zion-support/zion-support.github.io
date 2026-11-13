@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/next-generation-modular-energy-automation-81b3573a",
+  "breadcrumbTitle": "Next-Generation Modular Energy Automation",
+  "title": "Next-Generation Modular Energy Automation",
+  "description": "Next-generation automation suite that streamlines modular energy workflows with intelligent orchestration.",
+  "basic": "$218/month",
+  "pro": "$548/month",
+  "enterprise": "$1648/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Next-Generation Modular Energy Automation - Zion Tech Group",
+    "description": "Next-generation automation suite that streamlines modular energy workflows with intelligent orchestration.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/next-generation-modular-energy-automation-81b3573a"
+    }
+  },
+  "features": [
+    "Smart orchestration",
+    "Process automation",
+    "Event processing",
+    "Task scheduling"
+  ],
+  "benefits": [
+    "Faster execution",
+    "Reduced manual steps",
+    "Scalable processes",
+    "Error reduction"
+  ]
+}

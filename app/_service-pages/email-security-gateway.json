@@ -1,0 +1,28 @@
+{
+  "title": "Email Security & Anti-Phishing Gateway",
+  "description": "Advanced email security gateway that blocks phishing, BEC attacks, malware, and spam with AI-powered analysis. Includes email archiving, encryption, DLP, and continuity features. Protects against zero-day threats.",
+  "basic": "$N/A/month",
+  "pro": "$N/A/month",
+  "enterprise": "$12/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Email Security & Anti-Phishing Gateway - Zion Tech Group",
+    "description": "Advanced email security gateway that blocks phishing, BEC attacks, malware, and spam with AI-powered analysis. Includes email archiving, encryption, DLP, and co",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/email-security-gateway"
+    }
+  },
+  "features": [
+    "AI anti-phishing",
+    "BEC protection",
+    "Malware sandboxing",
+    "Email encryption",
+    "Data loss prevention"
+  ],
+  "benefits": [
+    "99.9% phishing detection",
+    "Zero-day threat protection",
+    "100% email continuity"
+  ]
+}

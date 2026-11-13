@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/adaptive-insights-legal-05f495e3",
+  "breadcrumbTitle": "Adaptive insights-legal",
+  "title": "Adaptive insights-legal",
+  "description": "Next-generation legal solution: Adaptive insights-legal. Combines threat detection with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Adaptive insights-legal - Zion Tech Group",
+    "description": "Next-generation legal solution: Adaptive insights-legal. Combines threat detection with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/adaptive-insights-legal-05f495e3"
+    }
+  },
+  "features": [
+    "API-first design",
+    "Microservices deployment",
+    "Performance dashboards",
+    "Rollback mechanisms"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Real-time insights and alerts",
+    "99.9% uptime guarantee"
+  ]
+}

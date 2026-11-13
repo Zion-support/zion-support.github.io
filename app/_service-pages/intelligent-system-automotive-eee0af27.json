@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligent-system-automotive-eee0af27",
+  "breadcrumbTitle": "Intelligent system-automotive",
+  "title": "Intelligent system-automotive",
+  "description": "Next-generation automotive solution: Intelligent system-automotive. Combines security monitoring with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent system-automotive - Zion Tech Group",
+    "description": "Next-generation automotive solution: Intelligent system-automotive. Combines security monitoring with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-system-automotive-eee0af27"
+    }
+  },
+  "features": [
+    "Edge computing support",
+    "SOC 2 certified",
+    "Offline capabilities",
+    "Comprehensive monitoring"
+  ],
+  "benefits": [
+    "Cost optimization recommendations",
+    "99.9% uptime guarantee",
+    "Dynamic resource allocation",
+    "Scalable to millions of transactions",
+    "Seamless integration with existing systems"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/generator-autonomous---construction-ef5df83b",
+  "breadcrumbTitle": "Generator Autonomous - Construction",
+  "title": "Generator Autonomous - Construction",
+  "description": "Revolutionize construction through intelligent automation. Our Generator Autonomous - Construction leverages advanced machine learning to deliver financial plan",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Generator Autonomous - Construction - Zion Tech Group",
+    "description": "Revolutionize construction through intelligent automation. Our Generator Autonomous - Construction leverages advanced machine learning to deliver financial plan",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/generator-autonomous---construction-ef5df83b"
+    }
+  },
+  "features": [
+    "Cloud-native architecture",
+    "Auto-scaling capabilities",
+    "Alerting system",
+    "Container orchestration",
+    "Edge computing support"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "24/7 automated operations",
+    "50% reduction in operational costs"
+  ]
+}

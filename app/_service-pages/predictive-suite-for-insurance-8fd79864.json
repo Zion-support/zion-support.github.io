@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/predictive-suite-for-insurance-8fd79864",
+  "breadcrumbTitle": "Predictive Suite for Insurance",
+  "title": "Predictive Suite for Insurance",
+  "description": "Transform your insurance operations with our Predictive Suite for Insurance. This AI-driven solution automates inventory management with unprecedented accuracy ",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Predictive Suite for Insurance - Zion Tech Group",
+    "description": "Transform your insurance operations with our Predictive Suite for Insurance. This AI-driven solution automates inventory management with unprecedented accuracy ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/predictive-suite-for-insurance-8fd79864"
+    }
+  },
+  "features": [
+    "Container orchestration",
+    "Open-source friendly",
+    "GDPR compliance",
+    "Multi-region deployment",
+    "Audit trails"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "Seamless integration with existing systems",
+    "50% reduction in operational costs"
+  ]
+}

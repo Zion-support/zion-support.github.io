@@ -1,0 +1,29 @@
+{
+  "title": "AI Weather Prediction & Climate Risk Analytics",
+  "description": "AI-powered hyperlocal weather prediction and climate risk analytics. Protect assets, optimize operations, and manage climate risk with 95% accurate forecasts.",
+  "basic": "$1,999/mo/month",
+  "pro": "$4,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Weather Prediction & Climate Risk Analytics - Zion Tech Group",
+    "description": "AI-powered hyperlocal weather prediction and climate risk analytics. Protect assets, optimize operations, and manage climate risk with 95% accurate forecasts.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-weather-prediction"
+    }
+  },
+  "features": [
+    "Hyperlocal weather forecasting (1km resolution)",
+    "Climate risk scoring for assets and supply chains",
+    "Severe weather early warning",
+    "Integration with IoT sensors and SCADA",
+    "Historical climate trend analysis"
+  ],
+  "benefits": [
+    "95% accurate hyperlocal forecasts",
+    "Protect assets from weather disruptions",
+    "Optimize operations with weather intelligence",
+    "Manage long-term climate risk"
+  ]
+}

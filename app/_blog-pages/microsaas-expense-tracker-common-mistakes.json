@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "MicroSaaS Expense Tracker: common mistakes | Zion Tech Group",
+    "description": "MicroSaaS Expense Tracker: common mistakes",
+    "keywords": [
+      "it",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "MicroSaaS Expense Tracker: common mistakes",
+      "description": "MicroSaaS Expense Tracker: common mistakes",
+      "url": "https://ziontechgroup.com/blog/microsaas-expense-tracker-common-mistakes/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/microsaas-expense-tracker-common-mistakes/"
+    }
+  },
+  "values": [
+    "MicroSaaS Expense Tracker: common mistakes",
+    "MicroSaaS Expense Tracker: common mistakes",
+    "MicroSaaS Expense Tracker: common mistakes",
+    "Conversion path",
+    "If this guide matches your microsaas expense tracker: common mistakes initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "Conversion path",
+    " If this guide matches your microsaas expense tracker: common mistakes initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "/blog/genai-devops-cicd-operations-handbook",
+    "Genai Devops Cicd Operations Handbook",
+    "/blog/ai-observability-case-study",
+    "Ai Observability Case Study",
+    "/blog/data-analytics-platform-automation-roadmap",
+    "Data Analytics Platform Automation Roadmap",
+    "/blog/cybersecurity-platform-msp-2026-6903",
+    "Cybersecurity Platform Msp 2026 6903"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "MicroSaaS Expense Tracker: common mistakes",
+    "description": "MicroSaaS Expense Tracker: common mistakes",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T05:08:08Z",
+    "dateModified": "2026-08-07T05:08:08Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/microsaas-expense-tracker-common-mistakes/"
+  }
+}

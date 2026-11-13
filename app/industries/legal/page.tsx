@@ -1,5 +1,4 @@
 // app/industries/legal/page.tsx - Legal & Compliance AI Solutions
-'use client';
 
 import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';

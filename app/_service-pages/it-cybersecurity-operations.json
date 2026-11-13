@@ -1,0 +1,29 @@
+{
+  "title": "IT Cybersecurity Operations & Incident Response",
+  "description": "24/7 cybersecurity operations with threat detection, incident response, and compliance monitoring. SOC-as-a-service for organizations of all sizes.",
+  "basic": "$5,000/mo/month",
+  "pro": "$12,000/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "IT Cybersecurity Operations & Incident Response - Zion Tech Group",
+    "description": "24/7 cybersecurity operations with threat detection, incident response, and compliance monitoring. SOC-as-a-service for organizations of all sizes.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-cybersecurity-operations"
+    }
+  },
+  "features": [
+    "24/7 security monitoring by certified analysts",
+    "SIEM management and tuning",
+    "Incident response with 15-minute SLA",
+    "Threat intelligence integration",
+    "Vulnerability scanning and management"
+  ],
+  "benefits": [
+    "Enterprise-grade SOC for 1/10th the cost",
+    "Detect and respond to threats in 15 minutes",
+    "Meet compliance monitoring requirements",
+    "Access certified security analysts 24/7"
+  ]
+}

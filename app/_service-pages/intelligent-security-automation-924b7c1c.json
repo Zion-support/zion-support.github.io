@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligent-security-automation-924b7c1c",
+  "breadcrumbTitle": "Intelligent Security Automation",
+  "title": "Intelligent Security Automation",
+  "description": "Transform your telecom operations with our Intelligent Security Automation. This AI-driven solution automates energy management with unprecedented accuracy and ",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Security Automation - Zion Tech Group",
+    "description": "Transform your telecom operations with our Intelligent Security Automation. This AI-driven solution automates energy management with unprecedented accuracy and ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-security-automation-924b7c1c"
+    }
+  },
+  "features": [
+    "Role-based access control",
+    "Cloud-native architecture",
+    "Auto-scaling capabilities",
+    "HIPAA ready"
+  ],
+  "benefits": [
+    "Scalable to millions of transactions",
+    "99.9% uptime guarantee",
+    "ROI in under 90 days",
+    "Zero manual intervention required",
+    "Performance benchmarking"
+  ]
+}

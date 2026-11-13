@@ -1,0 +1,29 @@
+{
+  "title": "AI-Powered Observability & SRE",
+  "description": "Comprehensive observability platform combining metrics, logs, traces, and AI-powered anomaly detection to achieve proactive reliability and reduce MTTR to minutes.",
+  "basic": "$199/mo/month",
+  "pro": "$599/mo/month",
+  "enterprise": "$1,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI-Powered Observability & SRE - Zion Tech Group",
+    "description": "Comprehensive observability platform combining metrics, logs, traces, and AI-powered anomaly detection to achieve proactive reliability and reduce MTTR to minut",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-observability-1"
+    }
+  },
+  "features": [
+    "Unified observability (metrics, logs, traces, profiles)",
+    "AI-powered anomaly detection and root cause analysis",
+    "Automated incident classification and routing",
+    "SLO/SLI management with error budget tracking",
+    "Predictive alerting — detect issues before users do"
+  ],
+  "benefits": [
+    "Reduce costs with ai-powered observability & sre",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

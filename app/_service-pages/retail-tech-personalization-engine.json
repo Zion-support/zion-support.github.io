@@ -1,0 +1,29 @@
+{
+  "title": "AI Retail Personalization Engine",
+  "description": "Hyper-personalized shopping experiences. Product recommendations, dynamic pricing, customer segmentation, and omnichannel orchestration.",
+  "basic": "$399/mo/month",
+  "pro": "$1,199/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Retail Personalization Engine - Zion Tech Group",
+    "description": "Hyper-personalized shopping experiences. Product recommendations, dynamic pricing, customer segmentation, and omnichannel orchestration.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/retail-tech-personalization-engine"
+    }
+  },
+  "features": [
+    "Real-time product recommendations",
+    "Dynamic pricing optimization",
+    "Customer segmentation",
+    "Omnichannel orchestration",
+    "A/B testing framework"
+  ],
+  "benefits": [
+    "Increase conversion 35%",
+    "Boost average order value",
+    "Personalize at scale",
+    "Unify online and offline"
+  ]
+}

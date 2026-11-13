@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/platform-automated---telecom-620fc7a0",
+  "breadcrumbTitle": "Platform Automated - Telecom",
+  "title": "Platform Automated - Telecom",
+  "description": "Next-generation telecom solution: Platform Automated - Telecom. Combines performance monitoring with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Platform Automated - Telecom - Zion Tech Group",
+    "description": "Next-generation telecom solution: Platform Automated - Telecom. Combines performance monitoring with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/platform-automated---telecom-620fc7a0"
+    }
+  },
+  "features": [
+    "Audit trails",
+    "Role-based access control",
+    "HIPAA ready",
+    "Custom integrations"
+  ],
+  "benefits": [
+    "Dynamic resource allocation",
+    "50% reduction in operational costs",
+    "Automated compliance reporting"
+  ]
+}

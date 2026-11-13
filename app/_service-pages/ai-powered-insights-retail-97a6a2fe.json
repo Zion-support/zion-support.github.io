@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-insights-retail-97a6a2fe",
+  "breadcrumbTitle": "AI-Powered insights-retail",
+  "title": "AI-Powered insights-retail",
+  "description": "Transform your retail operations with our AI-Powered insights-retail. This AI-driven solution automates predictive analytics with unprecedented accuracy and eff",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered insights-retail - Zion Tech Group",
+    "description": "Transform your retail operations with our AI-Powered insights-retail. This AI-driven solution automates predictive analytics with unprecedented accuracy and eff",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-insights-retail-97a6a2fe"
+    }
+  },
+  "features": [
+    "Rollback mechanisms",
+    "Role-based access control",
+    "SOC 2 certified",
+    "HIPAA ready",
+    "Serverless functions"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "50% reduction in operational costs",
+    "Self-healing infrastructure"
+  ]
+}

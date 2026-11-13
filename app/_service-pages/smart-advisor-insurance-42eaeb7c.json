@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/smart-advisor-insurance-42eaeb7c",
+  "breadcrumbTitle": "Smart advisor-insurance",
+  "title": "Smart advisor-insurance",
+  "description": "Revolutionize insurance through intelligent automation. Our Smart advisor-insurance leverages advanced machine learning to deliver fraud prevention at scale.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart advisor-insurance - Zion Tech Group",
+    "description": "Revolutionize insurance through intelligent automation. Our Smart advisor-insurance leverages advanced machine learning to deliver fraud prevention at scale.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-advisor-insurance-42eaeb7c"
+    }
+  },
+  "features": [
+    "Performance dashboards",
+    "Serverless functions",
+    "Multi-region deployment",
+    "HIPAA ready",
+    "Cloud-native architecture"
+  ],
+  "benefits": [
+    "50% reduction in operational costs",
+    "Enterprise-grade security",
+    "Zero manual intervention required",
+    "Performance benchmarking",
+    "Seamless integration with existing systems"
+  ]
+}

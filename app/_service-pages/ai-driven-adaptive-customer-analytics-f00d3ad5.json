@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-driven-adaptive-customer-analytics-f00d3ad5",
+  "breadcrumbTitle": "AI-Driven Adaptive Customer Analytics",
+  "title": "AI-Driven Adaptive Customer Analytics",
+  "description": "Customer intelligence platform that delivers adaptive insights into shopper behavior, lifetime value, and churn prediction for retail and e-commerce businesses.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Driven Adaptive Customer Analytics - Zion Tech Group",
+    "description": "Customer intelligence platform that delivers adaptive insights into shopper behavior, lifetime value, and churn prediction for retail and e-commerce businesses.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-driven-adaptive-customer-analytics-f00d3ad5"
+    }
+  },
+  "features": [
+    "Behavioral analysis",
+    "LTV prediction",
+    "Churn prevention",
+    "Segment activation"
+  ],
+  "benefits": [
+    "Higher retention",
+    "Increased LTV",
+    "Targeted marketing",
+    "Better ROI"
+  ]
+}

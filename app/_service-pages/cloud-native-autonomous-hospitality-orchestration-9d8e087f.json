@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/cloud-native-autonomous-hospitality-orchestration-9d8e087f",
+  "breadcrumbTitle": "Cloud-Native Autonomous Hospitality Orchestration",
+  "title": "Cloud-Native Autonomous Hospitality Orchestration",
+  "description": "Cloud-native orchestration platform that manages autonomous hospitality resources with auto-scaling and cost control.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Cloud-Native Autonomous Hospitality Orchestration - Zion Tech Group",
+    "description": "Cloud-native orchestration platform that manages autonomous hospitality resources with auto-scaling and cost control.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cloud-native-autonomous-hospitality-orchestration-9d8e087f"
+    }
+  },
+  "features": [
+    "Container orchestration",
+    "Resource management",
+    "Health monitoring",
+    "Auto-healing"
+  ],
+  "benefits": [
+    "Reduced infrastructure cost",
+    "Auto-scaling",
+    "Container efficiency",
+    "Developer productivity"
+  ]
+}

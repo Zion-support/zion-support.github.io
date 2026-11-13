@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/automated-energy-director-1-89d90281",
+  "breadcrumbTitle": "Automated Energy Director #1",
+  "title": "Automated Energy Director #1",
+  "description": "Transform your legal operations with our Automated Energy Director #1. This AI-driven solution automates sales forecasting with unprecedented accuracy and effic",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated Energy Director #1 - Zion Tech Group",
+    "description": "Transform your legal operations with our Automated Energy Director #1. This AI-driven solution automates sales forecasting with unprecedented accuracy and effic",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-energy-director-1-89d90281"
+    }
+  },
+  "features": [
+    "Machine learning integration",
+    "Open-source friendly",
+    "Plugin architecture",
+    "Multi-region deployment",
+    "SOC 2 certified"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "Seamless integration with existing systems",
+    "99.9% uptime guarantee",
+    "Self-healing infrastructure",
+    "Dynamic resource allocation"
+  ]
+}

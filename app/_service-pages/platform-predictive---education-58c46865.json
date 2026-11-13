@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/platform-predictive---education-58c46865",
+  "breadcrumbTitle": "Platform Predictive - Education",
+  "title": "Platform Predictive - Education",
+  "description": "Next-generation education solution: Platform Predictive - Education. Combines energy management with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Platform Predictive - Education - Zion Tech Group",
+    "description": "Next-generation education solution: Platform Predictive - Education. Combines energy management with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/platform-predictive---education-58c46865"
+    }
+  },
+  "features": [
+    "HIPAA ready",
+    "Microservices deployment",
+    "Performance dashboards",
+    "Real-time processing",
+    "Role-based access control"
+  ],
+  "benefits": [
+    "Intelligent load balancing",
+    "3x faster decision making",
+    "Predictive maintenance scheduling",
+    "Enterprise-grade security"
+  ]
+}

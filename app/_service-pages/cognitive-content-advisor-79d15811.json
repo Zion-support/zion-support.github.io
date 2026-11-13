@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/cognitive-content-advisor-79d15811",
+  "breadcrumbTitle": "Cognitive Content Advisor",
+  "title": "Cognitive Content Advisor",
+  "description": "Revolutionize education through intelligent automation. Our Cognitive Content Advisor leverages advanced machine learning to deliver inventory management at sca",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Cognitive Content Advisor - Zion Tech Group",
+    "description": "Revolutionize education through intelligent automation. Our Cognitive Content Advisor leverages advanced machine learning to deliver inventory management at sca",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cognitive-content-advisor-79d15811"
+    }
+  },
+  "features": [
+    "Auto-scaling capabilities",
+    "Multi-language support",
+    "GDPR compliance",
+    "Plugin architecture",
+    "Container orchestration"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "Real-time insights and alerts",
+    "Reduced human error by 95%"
+  ]
+}

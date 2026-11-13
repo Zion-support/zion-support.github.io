@@ -1,0 +1,28 @@
+{
+  "title": "Customer Self-Service Portal Builder",
+  "description": "Build branded customer portals where clients can manage accounts, view invoices, submit tickets, track orders, and access documentation. No-code builder with drag-and-drop widgets, SSO integration, and mobile-responsive design.",
+  "basic": "$N/A/month",
+  "pro": "$N/A/month",
+  "enterprise": "$299/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Customer Self-Service Portal Builder - Zion Tech Group",
+    "description": "Build branded customer portals where clients can manage accounts, view invoices, submit tickets, track orders, and access documentation. No-code builder with dr",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/customer-portal-builder"
+    }
+  },
+  "features": [
+    "Drag-and-drop builder",
+    "Account management",
+    "Ticket submission",
+    "Invoice viewing",
+    "Order tracking"
+  ],
+  "benefits": [
+    "70% reduction in support calls",
+    "Improved customer satisfaction",
+    "Branded professional experience"
+  ]
+}

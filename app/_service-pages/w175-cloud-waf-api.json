@@ -1,0 +1,29 @@
+{
+  "title": "Cloud WAF & API Gateway Security",
+  "description": "Combined WAF and API gateway with rate limiting, bot management, JWT validation, and mTLS. Protect web apps and APIs with a single cloud-native service.",
+  "basic": "$199/mo/month",
+  "pro": "$599/mo/month",
+  "enterprise": "$1,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Cloud WAF & API Gateway Security - Zion Tech Group",
+    "description": "Combined WAF and API gateway with rate limiting, bot management, JWT validation, and mTLS. Protect web apps and APIs with a single cloud-native service.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w175-cloud-waf-api"
+    }
+  },
+  "features": [
+    "WAF with OWASP Core Rule Set",
+    "API gateway with rate limiting",
+    "JWT/OAuth2 token validation",
+    "mTLS between services",
+    "Bot detection and CAPTCHA challenge"
+  ],
+  "benefits": [
+    "WAF + API gateway in one service",
+    "Rate limiting prevents API abuse",
+    "mTLS secures service-to-service",
+    "Bot management protects critical flows"
+  ]
+}

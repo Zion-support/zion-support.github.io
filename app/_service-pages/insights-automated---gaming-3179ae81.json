@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/insights-automated---gaming-3179ae81",
+  "breadcrumbTitle": "Insights Automated - Gaming",
+  "title": "Insights Automated - Gaming",
+  "description": "Unlock unprecedented growth with Insights Automated - Gaming. This autonomous system provides document processing with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Insights Automated - Gaming - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Insights Automated - Gaming. This autonomous system provides document processing with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/insights-automated---gaming-3179ae81"
+    }
+  },
+  "features": [
+    "Cloud-native architecture",
+    "Rollback mechanisms",
+    "HIPAA ready",
+    "Alerting system",
+    "Real-time processing"
+  ],
+  "benefits": [
+    "Intelligent load balancing",
+    "50% reduction in operational costs",
+    "Real-time insights and alerts",
+    "Zero manual intervention required"
+  ]
+}

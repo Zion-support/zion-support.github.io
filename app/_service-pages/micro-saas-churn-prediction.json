@@ -1,0 +1,29 @@
+{
+  "title": "ChurnGuard — Churn Prediction & Prevention",
+  "description": "AI-powered churn prediction for SaaS. Identify at-risk accounts, automate retention playbooks, and track health scores in real-time.",
+  "basic": "$99/mo/month",
+  "pro": "$299/mo/month",
+  "enterprise": "$799/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "ChurnGuard — Churn Prediction & Prevention - Zion Tech Group",
+    "description": "AI-powered churn prediction for SaaS. Identify at-risk accounts, automate retention playbooks, and track health scores in real-time.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-churn-prediction"
+    }
+  },
+  "features": [
+    "ML churn prediction",
+    "Health score automation",
+    "Retention playbook engine",
+    "Integration with Stripe, HubSpot, Intercom",
+    "Cohort analysis"
+  ],
+  "benefits": [
+    "Reduce churn by 30%",
+    "Automate retention efforts",
+    "Prioritize at-risk accounts",
+    "Increase LTV"
+  ]
+}

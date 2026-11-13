@@ -1,0 +1,29 @@
+{
+  "title": "AI Talent Retention Platform",
+  "description": "Predict and prevent employee attrition with AI. Analyze engagement, compensation, and career progression to identify flight risks.",
+  "basic": "$999/mo/month",
+  "pro": "$2,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Talent Retention Platform - Zion Tech Group",
+    "description": "Predict and prevent employee attrition with AI. Analyze engagement, compensation, and career progression to identify flight risks.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-talent-retention-platform"
+    }
+  },
+  "features": [
+    "Attrition risk prediction",
+    "Compensation benchmarking",
+    "Career path recommendations",
+    "Manager effectiveness scoring",
+    "Engagement survey analysis"
+  ],
+  "benefits": [
+    "Reduce attrition by 20%",
+    "Save on replacement costs",
+    "Improve engagement",
+    "Data-driven retention"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "title": "Real-Time Operational Analytics",
+  "description": "Sub-second analytics on operational DB change streams: CDC Kafka Flink aggregations → Superset/Metabase dashboards.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Real-Time Operational Analytics - Zion Tech Group",
+    "description": "Sub-second analytics on operational DB change streams: CDC Kafka Flink aggregations → Superset/Metabase dashboards.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/data-real-time-operational-analytics"
+    }
+  },
+  "features": [
+    "PostgreSQL/BigQuery/Snowflake CDC ingestion",
+    "Flink SQL window aggregations (sub-second)",
+    "Role-based Superset/Metabase dashboard",
+    "Latency SLA alert per dashboard"
+  ],
+  "benefits": [
+    "Reduce costs with real-time operational analytics",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

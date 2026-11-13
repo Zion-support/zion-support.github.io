@@ -1,0 +1,29 @@
+{
+  "title": "Change Data Capture (CDC) Platform",
+  "description": "Real-time change data capture for databases. Stream data changes to data lakes, warehouses, and applications with low latency and minimal source impact.",
+  "basic": "$799/mo/month",
+  "pro": "$2,499/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Change Data Capture (CDC) Platform - Zion Tech Group",
+    "description": "Real-time change data capture for databases. Stream data changes to data lakes, warehouses, and applications with low latency and minimal source impact.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/data-change-data-capture"
+    }
+  },
+  "features": [
+    "Real-time CDC for all major databases",
+    "Sub-second latency",
+    "Minimal source system impact",
+    "Schema evolution handling",
+    "Integration with Kafka, Snowflake, Databricks"
+  ],
+  "benefits": [
+    "Real-time data synchronization",
+    "Minimal impact on source systems",
+    "Enable event-driven architectures",
+    "Keep all systems in sync"
+  ]
+}

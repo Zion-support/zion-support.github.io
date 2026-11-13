@@ -1,0 +1,29 @@
+{
+  "title": "Restaurant Operations Automation",
+  "description": "Restaurant tech automation: order routing, inventory management, labor scheduling, menu optimization, and multi-location management.",
+  "basic": "$99/location/mo/month",
+  "pro": "$199/location/mo/month",
+  "enterprise": "$399/location/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Restaurant Operations Automation - Zion Tech Group",
+    "description": "Restaurant tech automation: order routing, inventory management, labor scheduling, menu optimization, and multi-location management.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w175-restaurant-automation"
+    }
+  },
+  "features": [
+    "Order routing and kitchen display integration",
+    "Inventory tracking with auto-reorder",
+    "Labor scheduling and compliance",
+    "Menu optimization based on sales data",
+    "Multi-location management and reporting"
+  ],
+  "benefits": [
+    "Order routing reduces ticket times",
+    "Auto-reorder prevents stockouts and waste",
+    "Labor scheduling optimizes for demand",
+    "Menu optimization increases average check"
+  ]
+}

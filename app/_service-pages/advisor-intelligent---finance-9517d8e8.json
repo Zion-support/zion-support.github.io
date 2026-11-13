@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/advisor-intelligent---finance-9517d8e8",
+  "breadcrumbTitle": "Advisor Intelligent - Finance",
+  "title": "Advisor Intelligent - Finance",
+  "description": "Next-generation finance solution: Advisor Intelligent - Finance. Combines decision support with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Advisor Intelligent - Finance - Zion Tech Group",
+    "description": "Next-generation finance solution: Advisor Intelligent - Finance. Combines decision support with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/advisor-intelligent---finance-9517d8e8"
+    }
+  },
+  "features": [
+    "Serverless functions",
+    "Offline capabilities",
+    "Rollback mechanisms",
+    "Plugin architecture",
+    "Custom integrations"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "99.9% uptime guarantee",
+    "Zero manual intervention required",
+    "Real-time insights and alerts"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "DevSecOps & Security Automation",
+  "description": "Embed security into CI/CD pipelines with automated SAST, DAST, SCA, container scanning, and infrastructure-as-code security checks — shifting security left without slowing delivery.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "DevSecOps & Security Automation - Zion Tech Group",
+    "description": "Embed security into CI/CD pipelines with automated SAST, DAST, SCA, container scanning, and infrastructure-as-code security checks — shifting security left with",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-devsecops-1"
+    }
+  },
+  "features": [
+    "Automated SAST/DAST scanning in CI/CD",
+    "Software composition analysis (SCA) for dependencies",
+    "Container and Kubernetes security scanning",
+    "Infrastructure-as-code security validation (Terraform, CloudFormation)",
+    "Secrets detection and rotation automation"
+  ],
+  "benefits": [
+    "Reduce costs with devsecops & security automation",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

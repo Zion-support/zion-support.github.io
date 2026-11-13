@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligence-automated---agriculture-02b1cd52",
+  "breadcrumbTitle": "Intelligence Automated - Agriculture",
+  "title": "Intelligence Automated - Agriculture",
+  "description": "Next-generation agriculture solution: Intelligence Automated - Agriculture. Combines data processing with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligence Automated - Agriculture - Zion Tech Group",
+    "description": "Next-generation agriculture solution: Intelligence Automated - Agriculture. Combines data processing with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligence-automated---agriculture-02b1cd52"
+    }
+  },
+  "features": [
+    "Machine learning integration",
+    "Performance dashboards",
+    "Comprehensive monitoring",
+    "Cloud-native architecture"
+  ],
+  "benefits": [
+    "Cost optimization recommendations",
+    "Predictive maintenance scheduling",
+    "Real-time insights and alerts",
+    "99.9% uptime guarantee",
+    "Enterprise-grade security"
+  ]
+}

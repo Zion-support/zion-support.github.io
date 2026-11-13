@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/smart-analyzer-for-construction-e3c8a84f",
+  "breadcrumbTitle": "Smart Analyzer for Construction",
+  "title": "Smart Analyzer for Construction",
+  "description": "Next-generation construction solution: Smart Analyzer for Construction. Combines fraud prevention with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Analyzer for Construction - Zion Tech Group",
+    "description": "Next-generation construction solution: Smart Analyzer for Construction. Combines fraud prevention with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-analyzer-for-construction-e3c8a84f"
+    }
+  },
+  "features": [
+    "Performance dashboards",
+    "Role-based access control",
+    "Mobile-responsive interface",
+    "Cloud-native architecture",
+    "GDPR compliance"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "Predictive maintenance scheduling",
+    "Cost optimization recommendations",
+    "24/7 automated operations",
+    "99.9% uptime guarantee"
+  ]
+}

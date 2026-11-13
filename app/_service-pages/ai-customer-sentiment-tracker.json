@@ -1,0 +1,28 @@
+{
+  "title": "AI Customer Sentiment Tracker",
+  "description": "Monitors support tickets, reviews, social mentions, and surveys to produce a real-time Net Promoter Score (NPS) and emotion heatmap.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Customer Sentiment Tracker - Zion Tech Group",
+    "description": "Monitors support tickets, reviews, social mentions, and surveys to produce a real-time Net Promoter Score (NPS) and emotion heatmap.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-customer-sentiment-tracker"
+    }
+  },
+  "features": [
+    "Multi-channel aggregation (email, chat, social)",
+    "Emotion classification (8 categories)",
+    "Trend alerts for sentiment drops",
+    "Root-cause topic clustering"
+  ],
+  "benefits": [
+    "Reduce costs with ai customer sentiment tracker",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligent-threat-advisor-5dcdf850",
+  "breadcrumbTitle": "Intelligent Threat Advisor",
+  "title": "Intelligent Threat Advisor",
+  "description": "Transform your agriculture operations with our Intelligent Threat Advisor. This AI-driven solution automates customer insights with unprecedented accuracy and e",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Threat Advisor - Zion Tech Group",
+    "description": "Transform your agriculture operations with our Intelligent Threat Advisor. This AI-driven solution automates customer insights with unprecedented accuracy and e",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-threat-advisor-5dcdf850"
+    }
+  },
+  "features": [
+    "Plugin architecture",
+    "SOC 2 certified",
+    "Machine learning integration",
+    "Serverless functions",
+    "Real-time processing"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "Enterprise-grade security",
+    "3x faster decision making",
+    "Seamless integration with existing systems"
+  ]
+}

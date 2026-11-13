@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-insights-hospitality-a3a3b5da",
+  "breadcrumbTitle": "Intelligent insights-hospitality",
+  "title": "Intelligent insights-hospitality",
+  "description": "Revolutionize hospitality through intelligent automation. Our Intelligent insights-hospitality leverages advanced machine learning to deliver process automation",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent insights-hospitality - Zion Tech Group",
+    "description": "Revolutionize hospitality through intelligent automation. Our Intelligent insights-hospitality leverages advanced machine learning to deliver process automation",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-insights-hospitality-a3a3b5da"
+    }
+  },
+  "features": [
+    "HIPAA ready",
+    "Serverless functions",
+    "Multi-language support",
+    "Open-source friendly",
+    "SOC 2 certified"
+  ],
+  "benefits": [
+    "Cost optimization recommendations",
+    "Real-time insights and alerts",
+    "24/7 automated operations"
+  ]
+}

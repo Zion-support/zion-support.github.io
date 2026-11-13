@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-proactive-insurtech-processing-framework-6b3968f5",
+  "breadcrumbTitle": "Intelligent Proactive Insurtech Processing Framework",
+  "title": "Intelligent Proactive Insurtech Processing Framework",
+  "description": "Intelligent processing framework that automates proactive insurtech data flows with real-time transformation.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Intelligent Proactive Insurtech Processing Framework - Zion Tech Group",
+    "description": "Intelligent processing framework that automates proactive insurtech data flows with real-time transformation.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-proactive-insurtech-processing-framework-6b3968f5"
+    }
+  },
+  "features": [
+    "Real-time processing",
+    "Data transformation",
+    "ETL pipelines",
+    "Stream processing"
+  ],
+  "benefits": [
+    "Faster data flows",
+    "Reduced processing time",
+    "Higher throughput",
+    "Real-time transformation"
+  ]
+}

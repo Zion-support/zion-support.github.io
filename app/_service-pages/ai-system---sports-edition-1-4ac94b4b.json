@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-system---sports-edition-1-4ac94b4b",
+  "breadcrumbTitle": "AI System - Sports Edition #1",
+  "title": "AI System - Sports Edition #1",
+  "description": "The future of sports is here with AI System - Sports Edition #1. Powered by cutting-edge AI, this platform delivers customer insights like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI System - Sports Edition #1 - Zion Tech Group",
+    "description": "The future of sports is here with AI System - Sports Edition #1. Powered by cutting-edge AI, this platform delivers customer insights like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-system---sports-edition-1-4ac94b4b"
+    }
+  },
+  "features": [
+    "Comprehensive monitoring",
+    "Mobile-responsive interface",
+    "Plugin architecture",
+    "Auto-scaling capabilities",
+    "Edge computing support"
+  ],
+  "benefits": [
+    "Performance benchmarking",
+    "Zero manual intervention required",
+    "99.9% uptime guarantee"
+  ]
+}

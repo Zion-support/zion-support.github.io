@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-coordinator---legal-edition-2-3845974f",
+  "breadcrumbTitle": "AI Coordinator - Legal Edition #2",
+  "title": "AI Coordinator - Legal Edition #2",
+  "description": "The future of legal is here with AI Coordinator - Legal Edition #2. Powered by cutting-edge AI, this platform delivers security monitoring like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Coordinator - Legal Edition #2 - Zion Tech Group",
+    "description": "The future of legal is here with AI Coordinator - Legal Edition #2. Powered by cutting-edge AI, this platform delivers security monitoring like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-coordinator---legal-edition-2-3845974f"
+    }
+  },
+  "features": [
+    "Alerting system",
+    "Audit trails",
+    "Open-source friendly",
+    "Plugin architecture",
+    "Performance dashboards"
+  ],
+  "benefits": [
+    "Scalable to millions of transactions",
+    "24/7 automated operations",
+    "ROI in under 90 days",
+    "Zero manual intervention required"
+  ]
+}

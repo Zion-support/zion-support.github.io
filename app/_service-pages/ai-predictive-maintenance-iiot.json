@@ -1,0 +1,29 @@
+{
+  "title": "AI Predictive Maintenance IIoT Platform",
+  "description": "Industrial IoT predictive maintenance for manufacturing and energy. Sensor data analysis, anomaly detection, remaining useful life prediction, and automated work order generation.",
+  "basic": "$2,999/mo/month",
+  "pro": "$7,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Predictive Maintenance IIoT Platform - Zion Tech Group",
+    "description": "Industrial IoT predictive maintenance for manufacturing and energy. Sensor data analysis, anomaly detection, remaining useful life prediction, and automated wor",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-predictive-maintenance-iiot"
+    }
+  },
+  "features": [
+    "Vibration analysis and anomaly detection",
+    "Thermal imaging analysis",
+    "Remaining useful life prediction",
+    "Automated work order generation",
+    "CMMS/EPA integration"
+  ],
+  "benefits": [
+    "Reduce unplanned downtime by 60%",
+    "Extend asset lifespan by 25%",
+    "Optimize spare parts inventory",
+    "Increase production efficiency"
+  ]
+}

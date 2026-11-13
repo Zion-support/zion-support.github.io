@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/autonomous-sales-system-423fc93e",
+  "breadcrumbTitle": "Autonomous Sales System",
+  "title": "Autonomous Sales System",
+  "description": "The future of insurance is here with Autonomous Sales System. Powered by cutting-edge AI, this platform delivers security monitoring like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous Sales System - Zion Tech Group",
+    "description": "The future of insurance is here with Autonomous Sales System. Powered by cutting-edge AI, this platform delivers security monitoring like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-sales-system-423fc93e"
+    }
+  },
+  "features": [
+    "Cloud-native architecture",
+    "Real-time processing",
+    "Audit trails",
+    "Custom integrations",
+    "Data encryption"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Zero manual intervention required",
+    "3x faster decision making"
+  ]
+}

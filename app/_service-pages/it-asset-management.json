@@ -1,0 +1,27 @@
+{
+  "title": "IT Asset Management & Lifecycle",
+  "description": "Complete IT asset lifecycle management from procurement to disposal with automated discovery and license tracking.",
+  "basic": "$99/mo/month",
+  "pro": "$349/mo/month",
+  "enterprise": "$1,299/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "IT Asset Management & Lifecycle - Zion Tech Group",
+    "description": "Complete IT asset lifecycle management from procurement to disposal with automated discovery and license tracking.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-asset-management"
+    }
+  },
+  "features": [
+    "Enterprise-grade implementation",
+    "24/7 monitoring",
+    "Compliance-ready"
+  ],
+  "benefits": [
+    "Reduce costs with it asset management & lifecycle",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

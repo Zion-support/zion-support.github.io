@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligent-advisor-for-transportation-6a235928",
+  "breadcrumbTitle": "Intelligent Advisor for Transportation",
+  "title": "Intelligent Advisor for Transportation",
+  "description": "The future of transportation is here with Intelligent Advisor for Transportation. Powered by cutting-edge AI, this platform delivers fraud prevention like never",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Advisor for Transportation - Zion Tech Group",
+    "description": "The future of transportation is here with Intelligent Advisor for Transportation. Powered by cutting-edge AI, this platform delivers fraud prevention like never",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-advisor-for-transportation-6a235928"
+    }
+  },
+  "features": [
+    "Real-time processing",
+    "Audit trails",
+    "Plugin architecture",
+    "Role-based access control",
+    "Performance dashboards"
+  ],
+  "benefits": [
+    "Cost optimization recommendations",
+    "Performance benchmarking",
+    "Self-healing infrastructure",
+    "Scalable to millions of transactions"
+  ]
+}

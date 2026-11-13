@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/adaptive-suite-for-hospitality-c6d3e925",
+  "breadcrumbTitle": "Adaptive Suite for Hospitality",
+  "title": "Adaptive Suite for Hospitality",
+  "description": "Next-generation hospitality solution: Adaptive Suite for Hospitality. Combines user experience with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Adaptive Suite for Hospitality - Zion Tech Group",
+    "description": "Next-generation hospitality solution: Adaptive Suite for Hospitality. Combines user experience with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/adaptive-suite-for-hospitality-c6d3e925"
+    }
+  },
+  "features": [
+    "HIPAA ready",
+    "Multi-region deployment",
+    "SOC 2 certified",
+    "Offline capabilities",
+    "Rollback mechanisms"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "Enterprise-grade security",
+    "50% reduction in operational costs"
+  ]
+}

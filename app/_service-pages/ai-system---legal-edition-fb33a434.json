@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-system---legal-edition-fb33a434",
+  "breadcrumbTitle": "AI System - Legal Edition",
+  "title": "AI System - Legal Edition",
+  "description": "Revolutionize legal through intelligent automation. Our AI System - Legal Edition leverages advanced machine learning to deliver supply chain at scale.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI System - Legal Edition - Zion Tech Group",
+    "description": "Revolutionize legal through intelligent automation. Our AI System - Legal Edition leverages advanced machine learning to deliver supply chain at scale.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-system---legal-edition-fb33a434"
+    }
+  },
+  "features": [
+    "GDPR compliance",
+    "Open-source friendly",
+    "Audit trails",
+    "HIPAA ready",
+    "Comprehensive monitoring"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "Zero manual intervention required",
+    "99.9% uptime guarantee",
+    "Real-time insights and alerts"
+  ]
+}

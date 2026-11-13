@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/intelligent-orchestrator-for-telecom-e7c0de61",
+  "breadcrumbTitle": "Intelligent Orchestrator for Telecom",
+  "title": "Intelligent Orchestrator for Telecom",
+  "description": "Unlock unprecedented growth with Intelligent Orchestrator for Telecom. This autonomous system provides process automation with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Orchestrator for Telecom - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Intelligent Orchestrator for Telecom. This autonomous system provides process automation with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-orchestrator-for-telecom-e7c0de61"
+    }
+  },
+  "features": [
+    "Container orchestration",
+    "Microservices deployment",
+    "Plugin architecture",
+    "Role-based access control"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Cost optimization recommendations",
+    "Dynamic resource allocation"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/director-smart---legal-c0b76b1f",
+  "breadcrumbTitle": "Director Smart - Legal",
+  "title": "Director Smart - Legal",
+  "description": "The future of legal is here with Director Smart - Legal. Powered by cutting-edge AI, this platform delivers workflow management like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Director Smart - Legal - Zion Tech Group",
+    "description": "The future of legal is here with Director Smart - Legal. Powered by cutting-edge AI, this platform delivers workflow management like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/director-smart---legal-c0b76b1f"
+    }
+  },
+  "features": [
+    "Role-based access control",
+    "Edge computing support",
+    "HIPAA ready",
+    "Audit trails"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Predictive maintenance scheduling",
+    "50% reduction in operational costs"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/adaptive-director-for-healthcare-73697678",
+  "breadcrumbTitle": "Adaptive Director for Healthcare",
+  "title": "Adaptive Director for Healthcare",
+  "description": "Unlock unprecedented growth with Adaptive Director for Healthcare. This autonomous system provides content generation with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Adaptive Director for Healthcare - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Adaptive Director for Healthcare. This autonomous system provides content generation with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/adaptive-director-for-healthcare-73697678"
+    }
+  },
+  "features": [
+    "Edge computing support",
+    "Audit trails",
+    "Plugin architecture",
+    "Custom integrations",
+    "Zero-downtime updates"
+  ],
+  "benefits": [
+    "Automated compliance reporting",
+    "Cost optimization recommendations",
+    "50% reduction in operational costs"
+  ]
+}

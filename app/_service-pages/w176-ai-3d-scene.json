@@ -1,0 +1,29 @@
+{
+  "title": "AI 3D Scene Generator",
+  "description": "Generate 3D scenes and environments from text or images for games, AR/VR, and architecture. PBR materials, lighting, and export to major 3D formats.",
+  "basic": "$99/mo/month",
+  "pro": "$299/mo/month",
+  "enterprise": "$999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI 3D Scene Generator - Zion Tech Group",
+    "description": "Generate 3D scenes and environments from text or images for games, AR/VR, and architecture. PBR materials, lighting, and export to major 3D formats.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w176-ai-3d-scene"
+    }
+  },
+  "features": [
+    "Text-to-3D scene generation",
+    "Image-to-3D scene interpretation",
+    "PBR material and lighting generation",
+    "Style control (realistic, stylized, low-poly)",
+    "LOD generation for games"
+  ],
+  "benefits": [
+    "Generate 3D environments in minutes",
+    "Style control for different use cases",
+    "LOD generation for game optimization",
+    "Multi-format export for any engine"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/enterprise-autonomous-edtech-analytics-suite-f2f516c0",
+  "breadcrumbTitle": "Enterprise Autonomous Edtech Analytics Suite",
+  "title": "Enterprise Autonomous Edtech Analytics Suite",
+  "description": "Enterprise analytics suite that delivers autonomous edtech insights with unified dashboards and reporting.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Enterprise Autonomous Edtech Analytics Suite - Zion Tech Group",
+    "description": "Enterprise analytics suite that delivers autonomous edtech insights with unified dashboards and reporting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/enterprise-autonomous-edtech-analytics-suite-f2f516c0"
+    }
+  },
+  "features": [
+    "Data visualization",
+    "Custom dashboards",
+    "Report generation",
+    "KPI tracking"
+  ],
+  "benefits": [
+    "Unified data view",
+    "Faster insights",
+    "Customizable reports",
+    "Cross-functional collaboration"
+  ]
+}

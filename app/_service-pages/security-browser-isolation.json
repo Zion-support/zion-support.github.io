@@ -1,0 +1,28 @@
+{
+  "title": "Browser Isolation & Web Security",
+  "description": "Remote browser isolation for internet access: containerised browser runs in cloud, pixel-streamed to the user, no download can reach the corporate device, URL categorisation, DLP inspection on every render, and SSL inspection for encoded threats.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Browser Isolation & Web Security - Zion Tech Group",
+    "description": "Remote browser isolation for internet access: containerised browser runs in cloud, pixel-streamed to the user, no download can reach the corporate device, URL c",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/security-browser-isolation"
+    }
+  },
+  "features": [
+    "Remote container browser — the full browser runs in the cloud, pixel-streamed live",
+    "Zero download risk — malware, ransomware, and drive-by exploits never touch the endpoint",
+    "URL categorisation and DLP inspection on every rendered page",
+    "SSL inspection decrypts TLS streams to detect threats encoded within encrypted sessions"
+  ],
+  "benefits": [
+    "Reduce costs with browser isolation & web security",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

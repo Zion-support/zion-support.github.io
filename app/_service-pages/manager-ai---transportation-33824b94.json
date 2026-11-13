@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/manager-ai---transportation-33824b94",
+  "breadcrumbTitle": "Manager AI - Transportation",
+  "title": "Manager AI - Transportation",
+  "description": "Transform your transportation operations with our Manager AI - Transportation. This AI-driven solution automates document processing with unprecedented accuracy",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Manager AI - Transportation - Zion Tech Group",
+    "description": "Transform your transportation operations with our Manager AI - Transportation. This AI-driven solution automates document processing with unprecedented accuracy",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/manager-ai---transportation-33824b94"
+    }
+  },
+  "features": [
+    "Data encryption",
+    "Mobile-responsive interface",
+    "Container orchestration",
+    "Microservices deployment"
+  ],
+  "benefits": [
+    "Performance benchmarking",
+    "99.9% uptime guarantee",
+    "Real-time insights and alerts",
+    "Self-healing infrastructure",
+    "Automated compliance reporting"
+  ]
+}

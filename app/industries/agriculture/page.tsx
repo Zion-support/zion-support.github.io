@@ -1,5 +1,4 @@
 // app/industries/agriculture/page.tsx - Agriculture AI Solutions (SEO Optimized)
-'use client';
 
 import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';

@@ -1,0 +1,29 @@
+{
+  "title": "AI Document Generation Platform",
+  "description": "Auto-generate contracts, proposals, reports, and emails from templates and data. Conditional logic, data merging, e-signature, and lifecycle management.",
+  "basic": "$N/A/month",
+  "pro": "$N/A/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Document Generation Platform - Zion Tech Group",
+    "description": "Auto-generate contracts, proposals, reports, and emails from templates and data. Conditional logic, data merging, e-signature, and lifecycle management.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-document-generation"
+    }
+  },
+  "features": [
+    "Template library",
+    "Data merging",
+    "Conditional logic",
+    "E-signature",
+    "Version control"
+  ],
+  "benefits": [
+    "90% faster document creation",
+    "Error-free generation",
+    "Template management",
+    "Legal compliance"
+  ]
+}

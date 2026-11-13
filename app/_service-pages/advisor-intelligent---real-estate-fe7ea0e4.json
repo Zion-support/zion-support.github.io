@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/advisor-intelligent---real-estate-fe7ea0e4",
+  "breadcrumbTitle": "Advisor Intelligent - Real-Estate",
+  "title": "Advisor Intelligent - Real-Estate",
+  "description": "Revolutionize real-estate through intelligent automation. Our Advisor Intelligent - Real-Estate leverages advanced machine learning to deliver decision support ",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Advisor Intelligent - Real-Estate - Zion Tech Group",
+    "description": "Revolutionize real-estate through intelligent automation. Our Advisor Intelligent - Real-Estate leverages advanced machine learning to deliver decision support ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/advisor-intelligent---real-estate-fe7ea0e4"
+    }
+  },
+  "features": [
+    "Container orchestration",
+    "Auto-scaling capabilities",
+    "Machine learning integration",
+    "Zero-downtime updates"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "Real-time insights and alerts",
+    "Reduced human error by 95%"
+  ]
+}

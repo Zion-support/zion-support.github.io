@@ -1,0 +1,29 @@
+{
+  "title": "Executive IT Briefing Service",
+  "description": "Monthly executive briefings on IT health, security posture, cost trends, and strategic recommendations. Board-ready reports without the technical jargon.",
+  "basic": "$999/mo/month",
+  "pro": "$2,499/mo/month",
+  "enterprise": "$7,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Executive IT Briefing Service - Zion Tech Group",
+    "description": "Monthly executive briefings on IT health, security posture, cost trends, and strategic recommendations. Board-ready reports without the technical jargon.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w176-executive-it-brief"
+    }
+  },
+  "features": [
+    "Monthly IT health scorecard",
+    "Security posture summary (non-technical)",
+    "Cloud cost trends and forecasting",
+    "Strategic recommendation roadmap",
+    "Risk register and mitigation status"
+  ],
+  "benefits": [
+    "IT insights in business language",
+    "Board-ready without technical translation",
+    "Proactive recommendations, not just status",
+    "Trends reveal direction, not just snapshots"
+  ]
+}

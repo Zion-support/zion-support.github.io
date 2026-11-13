@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/automated-quality-generator-0a2168f3",
+  "breadcrumbTitle": "Automated Quality Generator",
+  "title": "Automated Quality Generator",
+  "description": "Transform your manufacturing operations with our Automated Quality Generator. This AI-driven solution automates quality control with unprecedented accuracy and ",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated Quality Generator - Zion Tech Group",
+    "description": "Transform your manufacturing operations with our Automated Quality Generator. This AI-driven solution automates quality control with unprecedented accuracy and ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-quality-generator-0a2168f3"
+    }
+  },
+  "features": [
+    "Mobile-responsive interface",
+    "API-first design",
+    "Container orchestration",
+    "Serverless functions"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "ROI in under 90 days",
+    "Cost optimization recommendations",
+    "24/7 automated operations",
+    "50% reduction in operational costs"
+  ]
+}

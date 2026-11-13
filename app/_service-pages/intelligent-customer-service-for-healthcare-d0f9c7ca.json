@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/intelligent-customer-service-for-healthcare-d0f9c7ca",
+  "breadcrumbTitle": "Intelligent Customer Service for Healthcare",
+  "title": "Intelligent Customer Service for Healthcare",
+  "description": "Enhance your healthcare business with Intelligent Customer Service for Healthcare. Our solution provides customer service automation with enterprise-grade relia",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Intelligent Customer Service for Healthcare - Zion Tech Group",
+    "description": "Enhance your healthcare business with Intelligent Customer Service for Healthcare. Our solution provides customer service automation with enterprise-grade relia",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-customer-service-for-healthcare-d0f9c7ca"
+    }
+  },
+  "features": [
+    "Chaos engineering for resilience",
+    "HIPAA ready with healthcare data protection",
+    "Market analysis with buyer behavior insights",
+    "Performance testing with load simulation",
+    "Cache optimization with Redis"
+  ],
+  "benefits": [
+    "Improved customer satisfaction with faster response times",
+    "Increased revenue with optimized pricing strategies",
+    "Improved performance review completion rates",
+    "Higher first call resolution (FCR) rates",
+    "reduced environmental impact and costs"
+  ]
+}

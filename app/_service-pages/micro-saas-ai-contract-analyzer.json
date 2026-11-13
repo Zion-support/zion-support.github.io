@@ -1,0 +1,29 @@
+{
+  "title": "Micro-SAAS AI Contract Analyzer",
+  "description": "AI-powered contract review and analysis. Automatically extracts key terms, flags risky clauses, compares against templates, and generates summary reports.",
+  "basic": "$149/month",
+  "pro": "$449/month",
+  "enterprise": "$1299/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Micro-SAAS AI Contract Analyzer - Zion Tech Group",
+    "description": "AI-powered contract review and analysis. Automatically extracts key terms, flags risky clauses, compares against templates, and generates summary reports.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-ai-contract-analyzer"
+    }
+  },
+  "features": [
+    "Clause extraction & classification",
+    "Risk scoring engine",
+    "Template comparison",
+    "Redline suggestions",
+    "Multi-language support"
+  ],
+  "benefits": [
+    "80% faster contract review",
+    "Never miss critical clauses",
+    "Standardize contract language",
+    "Reduce legal costs"
+  ]
+}

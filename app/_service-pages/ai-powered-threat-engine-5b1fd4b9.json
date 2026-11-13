@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-threat-engine-5b1fd4b9",
+  "breadcrumbTitle": "AI-Powered Threat Engine",
+  "title": "AI-Powered Threat Engine",
+  "description": "Transform your retail operations with our AI-Powered Threat Engine. This AI-driven solution automates market intelligence with unprecedented accuracy and effici",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI-Powered Threat Engine - Zion Tech Group",
+    "description": "Transform your retail operations with our AI-Powered Threat Engine. This AI-driven solution automates market intelligence with unprecedented accuracy and effici",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-threat-engine-5b1fd4b9"
+    }
+  },
+  "features": [
+    "Microservices deployment",
+    "Custom integrations",
+    "Comprehensive monitoring",
+    "Open-source friendly"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "24/7 automated operations",
+    "Zero manual intervention required",
+    "Self-healing infrastructure"
+  ]
+}

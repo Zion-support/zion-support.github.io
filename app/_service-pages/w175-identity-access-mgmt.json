@@ -1,0 +1,29 @@
+{
+  "title": "Identity & Access Management (IAM)",
+  "description": "Centralized IAM with SSO, MFA, directory sync, and lifecycle management. Okta, Entra ID, or Ping deployment with governance and compliance.",
+  "basic": "$5/user/mo/month",
+  "pro": "$10/user/mo/month",
+  "enterprise": "$20/user/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Identity & Access Management (IAM) - Zion Tech Group",
+    "description": "Centralized IAM with SSO, MFA, directory sync, and lifecycle management. Okta, Entra ID, or Ping deployment with governance and compliance.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w175-identity-access-mgmt"
+    }
+  },
+  "features": [
+    "SSO across all applications (SAML, OIDC, WS-Fed)",
+    "MFA with phishing-resistant factors",
+    "Directory sync (AD, LDAP, Google, HRDS)",
+    "User lifecycle management (joiner, mover, leaver)",
+    "Application governance and access reviews"
+  ],
+  "benefits": [
+    "One login for all applications",
+    "MFA reduces credential attacks by 99%",
+    "Automated lifecycle prevents orphan accounts",
+    "Access reviews ensure least privilege"
+  ]
+}

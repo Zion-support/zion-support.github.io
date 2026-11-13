@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/next-generation-autonomous-aerospace-automation-50696dbc",
+  "breadcrumbTitle": "Next-Generation Autonomous Aerospace Automation",
+  "title": "Next-Generation Autonomous Aerospace Automation",
+  "description": "Next-generation automation suite that streamlines autonomous aerospace workflows with intelligent orchestration.",
+  "basic": "$218/month",
+  "pro": "$548/month",
+  "enterprise": "$1648/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Next-Generation Autonomous Aerospace Automation - Zion Tech Group",
+    "description": "Next-generation automation suite that streamlines autonomous aerospace workflows with intelligent orchestration.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/next-generation-autonomous-aerospace-automation-50696dbc"
+    }
+  },
+  "features": [
+    "Smart orchestration",
+    "Process automation",
+    "Event processing",
+    "Task scheduling"
+  ],
+  "benefits": [
+    "Faster execution",
+    "Reduced manual steps",
+    "Scalable processes",
+    "Error reduction"
+  ]
+}

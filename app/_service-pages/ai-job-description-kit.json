@@ -1,0 +1,29 @@
+{
+  "title": "AI Job Description & Interview Kit",
+  "description": "Create bias-free, inclusive job descriptions tailored to your role. Auto-generate scoring rubrics and EEOC/ADA compliant interview questions.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Job Description & Interview Kit - Zion Tech Group",
+    "description": "Create bias-free, inclusive job descriptions tailored to your role. Auto-generate scoring rubrics and EEOC/ADA compliant interview questions.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-job-description-kit"
+    }
+  },
+  "features": [
+    "Bias detection and inclusive language",
+    "Interview question generator with rubrics",
+    "Role and level templates",
+    "ATS-ready export",
+    "EEOC and ADA compliance check"
+  ],
+  "benefits": [
+    "Reduce costs with ai job description & interview kit",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

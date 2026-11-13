@@ -1,0 +1,29 @@
+{
+  "title": "AI Customer Service Automation",
+  "description": "End-to-end customer service automation with AI chatbots, ticket classification, and quality analytics.",
+  "basic": "$599/mo/month",
+  "pro": "$1,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Customer Service Automation - Zion Tech Group",
+    "description": "End-to-end customer service automation with AI chatbots, ticket classification, and quality analytics.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-customer-service-automation"
+    }
+  },
+  "features": [
+    "AI chatbot",
+    "Ticket classification",
+    "Response suggestions",
+    "Quality analytics",
+    "Human handoff"
+  ],
+  "benefits": [
+    "80% self-service",
+    "3x faster resolution",
+    "Consistent quality",
+    "Cost reduction"
+  ]
+}

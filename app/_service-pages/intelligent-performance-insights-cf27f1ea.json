@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-performance-insights-cf27f1ea",
+  "breadcrumbTitle": "Intelligent Performance Insights",
+  "title": "Intelligent Performance Insights",
+  "description": "Unlock unprecedented growth with Intelligent Performance Insights. This autonomous system provides content generation with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Performance Insights - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Intelligent Performance Insights. This autonomous system provides content generation with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-performance-insights-cf27f1ea"
+    }
+  },
+  "features": [
+    "Open-source friendly",
+    "Auto-scaling capabilities",
+    "Alerting system",
+    "Machine learning integration",
+    "Rollback mechanisms"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "Predictive maintenance scheduling",
+    "Reduced human error by 95%"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/manager-smart---gaming-da6c3d09",
+  "breadcrumbTitle": "Manager Smart - Gaming",
+  "title": "Manager Smart - Gaming",
+  "description": "Transform your gaming operations with our Manager Smart - Gaming. This AI-driven solution automates threat detection with unprecedented accuracy and efficiency.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Manager Smart - Gaming - Zion Tech Group",
+    "description": "Transform your gaming operations with our Manager Smart - Gaming. This AI-driven solution automates threat detection with unprecedented accuracy and efficiency.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/manager-smart---gaming-da6c3d09"
+    }
+  },
+  "features": [
+    "HIPAA ready",
+    "Cloud-native architecture",
+    "Custom integrations",
+    "Mobile-responsive interface",
+    "Plugin architecture"
+  ],
+  "benefits": [
+    "Dynamic resource allocation",
+    "99.9% uptime guarantee",
+    "Reduced human error by 95%",
+    "Zero manual intervention required",
+    "Cost optimization recommendations"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "CDN & Edge Cache",
+  "description": "Global content delivery network with smart caching, image optimization, DDoS mitigation, and sub-50ms TTFB for static and dynamic assets.",
+  "basic": "$99/mo/month",
+  "pro": "$349/mo/month",
+  "enterprise": "$1,299/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "CDN & Edge Cache - Zion Tech Group",
+    "description": "Global content delivery network with smart caching, image optimization, DDoS mitigation, and sub-50ms TTFB for static and dynamic assets.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cdn-edge-cache"
+    }
+  },
+  "features": [
+    "300+ global edge PoPs",
+    "Smart caching rules",
+    "Automatic image optimization",
+    "DDoS mitigation included",
+    "Edge-side includes"
+  ],
+  "benefits": [
+    "Reduce costs with cdn & edge cache",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

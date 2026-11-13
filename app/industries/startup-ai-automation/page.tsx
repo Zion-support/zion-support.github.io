@@ -1,11 +1,10 @@
 // app/industries/startup-ai-automation/page.tsx
 // SEO-optimized landing page for AI Automation for Startups
-'use client';
 
 import { Suspense } from 'react';
 import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
-import { Rocket, Brain, Automation, DollarSign, Clock, TrendingUp, Zap, Users } from 'lucide-react';
+import { Rocket, Brain, Workflow, DollarSign, Clock, TrendingUp, Zap, Users } from 'lucide-react';
 
 export const metadata = {
   title: 'AI Automation for Startups | Reduce Costs & Accelerate Growth | Zion Tech Group',
@@ -86,7 +85,7 @@ function StartupAIContent() {
                 { icon: Rocket, title: 'Rapid Scaling', desc: 'Systems that grow with your startup' },
                 { icon: Brain, title: 'Smart Automation', desc: 'LLM-powered tools for customer support and docs' },
                 { icon: Zap, title: 'Instant Onboarding', desc: 'Get productive in days, not months' },
-                { icon: Automation, title: 'No-Code Integration', desc: 'Connect tools without heavy engineering' },
+                { icon: Workflow, title: 'No-Code Integration', desc: 'Connect tools without heavy engineering' },
               ].map((b, i) => (
                 <div key={i} className="glass-card p-6 text-center">
                   <div className="w-12 h-12 bg-purple-600/20 rounded-full flex items-center justify-center mx-auto mb-3">

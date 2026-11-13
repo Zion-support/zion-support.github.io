@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/platform-autonomous---energy-c9f98901",
+  "breadcrumbTitle": "Platform Autonomous - Energy",
+  "title": "Platform Autonomous - Energy",
+  "description": "Next-generation Energy solution: Platform Autonomous - Energy. Combines decision support with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Platform Autonomous - Energy - Zion Tech Group",
+    "description": "Next-generation Energy solution: Platform Autonomous - Energy. Combines decision support with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/platform-autonomous---energy-c9f98901"
+    }
+  },
+  "features": [
+    "Language processing with sentiment analysis",
+    "Content generation with plagiarism checks",
+    "A/B testing framework for continuous optimization",
+    "Multi-language support with localization",
+    "Process discovery with activity analysis"
+  ],
+  "benefits": [
+    "Real-time insights and alerts for proactive management",
+    "Enhanced team productivity with intelligent assistance",
+    "Better supply chain visibility with tracking",
+    "Improved employee productivity with automation"
+  ]
+}

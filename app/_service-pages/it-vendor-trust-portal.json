@@ -1,0 +1,29 @@
+{
+  "title": "IT Vendor Risk & Trust Portal",
+  "description": "Continuous vendor monitoring with security scorecards, financial health tracking, contract expiry alerts, and automated periodic vendor reassessments.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "IT Vendor Risk & Trust Portal - Zion Tech Group",
+    "description": "Continuous vendor monitoring with security scorecards, financial health tracking, contract expiry alerts, and automated periodic vendor reassessments.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-vendor-trust-portal"
+    }
+  },
+  "features": [
+    "Security and compliance scorecard",
+    "Financial health monitoring",
+    "Contract expiry alerting",
+    "Periodic self-assessment workflow",
+    "Task action feed per vendor"
+  ],
+  "benefits": [
+    "Reduce costs with it vendor risk & trust portal",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/next-generation-composable-fintech-automation-6ae0887e",
+  "breadcrumbTitle": "Next-Generation Composable Fintech Automation",
+  "title": "Next-Generation Composable Fintech Automation",
+  "description": "Next-generation automation suite that streamlines composable fintech workflows with intelligent orchestration.",
+  "basic": "$218/month",
+  "pro": "$548/month",
+  "enterprise": "$1648/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Next-Generation Composable Fintech Automation - Zion Tech Group",
+    "description": "Next-generation automation suite that streamlines composable fintech workflows with intelligent orchestration.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/next-generation-composable-fintech-automation-6ae0887e"
+    }
+  },
+  "features": [
+    "Smart orchestration",
+    "Process automation",
+    "Event processing",
+    "Task scheduling"
+  ],
+  "benefits": [
+    "Faster execution",
+    "Reduced manual steps",
+    "Scalable processes",
+    "Error reduction"
+  ]
+}

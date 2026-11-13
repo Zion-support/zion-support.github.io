@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-property-management-automation-610aa338",
+  "breadcrumbTitle": "AI-Powered Property Management Automation",
+  "title": "AI-Powered Property Management Automation",
+  "description": "Intelligent property management system that automates tenant screening, maintenance scheduling, rent collection, and lease management with autonomous efficiency",
+  "basic": "$218/month",
+  "pro": "$548/month",
+  "enterprise": "$1648/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Property Management Automation - Zion Tech Group",
+    "description": "Intelligent property management system that automates tenant screening, maintenance scheduling, rent collection, and lease management with autonomous efficiency",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-property-management-automation-610aa338"
+    }
+  },
+  "features": [
+    "Tenant screening",
+    "Maintenance automation",
+    "Rent optimization",
+    "Lease management"
+  ],
+  "benefits": [
+    "Reduced vacancies",
+    "Lower operating costs",
+    "Improved tenant satisfaction",
+    "Scalable operations"
+  ]
+}

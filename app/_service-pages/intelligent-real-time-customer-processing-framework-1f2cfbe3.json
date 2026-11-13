@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-real-time-customer-processing-framework-1f2cfbe3",
+  "breadcrumbTitle": "Intelligent Real-Time Customer Processing Framework",
+  "title": "Intelligent Real-Time Customer Processing Framework",
+  "description": "Intelligent processing framework that automates real-time customer data flows with real-time transformation.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Intelligent Real-Time Customer Processing Framework - Zion Tech Group",
+    "description": "Intelligent processing framework that automates real-time customer data flows with real-time transformation.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-real-time-customer-processing-framework-1f2cfbe3"
+    }
+  },
+  "features": [
+    "Real-time processing",
+    "Data transformation",
+    "ETL pipelines",
+    "Stream processing"
+  ],
+  "benefits": [
+    "Faster data flows",
+    "Reduced processing time",
+    "Higher throughput",
+    "Real-time transformation"
+  ]
+}

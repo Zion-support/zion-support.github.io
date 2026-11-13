@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/automated-intelligence-for-finance-5f05c769",
+  "breadcrumbTitle": "Automated Intelligence for Finance",
+  "title": "Automated Intelligence for Finance",
+  "description": "The future of finance is here with Automated Intelligence for Finance. Powered by cutting-edge AI, this platform delivers inventory management like never before",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated Intelligence for Finance - Zion Tech Group",
+    "description": "The future of finance is here with Automated Intelligence for Finance. Powered by cutting-edge AI, this platform delivers inventory management like never before",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-intelligence-for-finance-5f05c769"
+    }
+  },
+  "features": [
+    "Offline capabilities",
+    "Container orchestration",
+    "Performance dashboards",
+    "GDPR compliance",
+    "Open-source friendly"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Intelligent load balancing",
+    "Seamless integration with existing systems"
+  ]
+}

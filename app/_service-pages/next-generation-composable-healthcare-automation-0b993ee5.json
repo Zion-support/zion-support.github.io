@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/next-generation-composable-healthcare-automation-0b993ee5",
+  "breadcrumbTitle": "Next-Generation Composable Healthcare Automation",
+  "title": "Next-Generation Composable Healthcare Automation",
+  "description": "Next-generation automation suite that streamlines composable healthcare workflows with intelligent orchestration.",
+  "basic": "$218/month",
+  "pro": "$548/month",
+  "enterprise": "$1648/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Next-Generation Composable Healthcare Automation - Zion Tech Group",
+    "description": "Next-generation automation suite that streamlines composable healthcare workflows with intelligent orchestration.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/next-generation-composable-healthcare-automation-0b993ee5"
+    }
+  },
+  "features": [
+    "Smart orchestration",
+    "Process automation",
+    "Event processing",
+    "Task scheduling"
+  ],
+  "benefits": [
+    "Faster execution",
+    "Reduced manual steps",
+    "Scalable processes",
+    "Error reduction"
+  ]
+}

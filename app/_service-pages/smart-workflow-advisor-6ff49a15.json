@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/smart-workflow-advisor-6ff49a15",
+  "breadcrumbTitle": "Smart Workflow Advisor",
+  "title": "Smart Workflow Advisor",
+  "description": "Transform your telecom operations with our Smart Workflow Advisor. This AI-driven solution automates compliance monitoring with unprecedented accuracy and effic",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Workflow Advisor - Zion Tech Group",
+    "description": "Transform your telecom operations with our Smart Workflow Advisor. This AI-driven solution automates compliance monitoring with unprecedented accuracy and effic",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-workflow-advisor-6ff49a15"
+    }
+  },
+  "features": [
+    "Role-based access control",
+    "Mobile-responsive interface",
+    "Auto-scaling capabilities",
+    "GDPR compliance",
+    "Custom integrations"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "ROI in under 90 days",
+    "Enterprise-grade security",
+    "24/7 automated operations"
+  ]
+}

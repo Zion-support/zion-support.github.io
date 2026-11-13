@@ -1,0 +1,29 @@
+{
+  "title": "AI Carbon Footprint Optimizer",
+  "description": "Automated Scope 1-3 carbon accounting: ingests utility bills, cloud usage, travel itineraries, supplier invoices, and calculates real-time carbon intensity scores with prioritised reduction actions and ESG report-ready outputs.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Carbon Footprint Optimizer - Zion Tech Group",
+    "description": "Automated Scope 1-3 carbon accounting: ingests utility bills, cloud usage, travel itineraries, supplier invoices, and calculates real-time carbon intensity scor",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-carbon-optimizer"
+    }
+  },
+  "features": [
+    "Scope 1-3 automatic accounting from bills, APIs, and invoices",
+    "Machine learning intensity factors per city, data-centre, and carrier",
+    "Priority-ranked action plan generated weekly",
+    "ESG/CSRD-ready report PDF and CSV exports",
+    "Alerts: budget exceeded, deviation from reduction trajectory"
+  ],
+  "benefits": [
+    "Reduce costs with ai carbon footprint optimizer",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

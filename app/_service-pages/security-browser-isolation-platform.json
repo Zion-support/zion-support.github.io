@@ -1,0 +1,28 @@
+{
+  "title": "Browser Isolation Platform",
+  "description": "Remote browser isolation: inspect every uncertified or risky site in cloud sandbox, drive-by download protection, credential-forwarding safe mock environment, phishing-engine sandbox analysis, bandwidth savings 30+.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Browser Isolation Platform - Zion Tech Group",
+    "description": "Remote browser isolation: inspect every uncertified or risky site in cloud sandbox, drive-by download protection, credential-forwarding safe mock environment, p",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/security-browser-isolation-platform"
+    }
+  },
+  "features": [
+    "Remote browser isolation — all rendering occurs off-device in a cloud sandbox",
+    "Drive-by download protection — adware aphishing payloads isolated from endpoint",
+    "Credential-forwarding sandbox — test credentials safely no overposting to real accounts",
+    "Phishing engine sandbox analysis — 30-day credential-reuse window check in isolated browser"
+  ],
+  "benefits": [
+    "Reduce costs with browser isolation platform",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

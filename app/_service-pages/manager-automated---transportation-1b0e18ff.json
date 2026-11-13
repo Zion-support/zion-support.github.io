@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/manager-automated---transportation-1b0e18ff",
+  "breadcrumbTitle": "Manager Automated - Transportation",
+  "title": "Manager Automated - Transportation",
+  "description": "The future of transportation is here with Manager Automated - Transportation. Powered by cutting-edge AI, this platform delivers data processing like never befo",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Manager Automated - Transportation - Zion Tech Group",
+    "description": "The future of transportation is here with Manager Automated - Transportation. Powered by cutting-edge AI, this platform delivers data processing like never befo",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/manager-automated---transportation-1b0e18ff"
+    }
+  },
+  "features": [
+    "Serverless functions",
+    "Mobile-responsive interface",
+    "Auto-scaling capabilities",
+    "Offline capabilities"
+  ],
+  "benefits": [
+    "Cost optimization recommendations",
+    "ROI in under 90 days",
+    "99.9% uptime guarantee"
+  ]
+}

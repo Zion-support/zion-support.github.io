@@ -1,0 +1,29 @@
+{
+  "title": "Zero Trust Architecture Implementation",
+  "description": "End-to-end Zero Trust implementation. Identity verification, micro-segmentation, continuous monitoring, and policy enforcement across hybrid cloud and on-prem.",
+  "basic": "$3,999/mo/month",
+  "pro": "$11,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Zero Trust Architecture Implementation - Zion Tech Group",
+    "description": "End-to-end Zero Trust implementation. Identity verification, micro-segmentation, continuous monitoring, and policy enforcement across hybrid cloud and on-prem.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/security-zero-trust-architecture"
+    }
+  },
+  "features": [
+    "Identity-centric security",
+    "Micro-segmentation design",
+    "Continuous verification",
+    "Policy engine deployment",
+    "Integration with Zscaler, Palo Alto, Cloudflare"
+  ],
+  "benefits": [
+    "Eliminate implicit trust",
+    "Reduce attack surface by 80%",
+    "Meet compliance requirements",
+    "Secure hybrid workforce"
+  ]
+}

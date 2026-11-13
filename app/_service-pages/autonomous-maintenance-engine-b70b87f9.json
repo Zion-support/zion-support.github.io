@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/autonomous-maintenance-engine-b70b87f9",
+  "breadcrumbTitle": "Autonomous Maintenance Engine",
+  "title": "Autonomous Maintenance Engine",
+  "description": "Transform your Finance operations with our Autonomous Maintenance Engine. This AI-driven solution automates executive dashboards with unprecedented accuracy and",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous Maintenance Engine - Zion Tech Group",
+    "description": "Transform your Finance operations with our Autonomous Maintenance Engine. This AI-driven solution automates executive dashboards with unprecedented accuracy and",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-maintenance-engine-b70b87f9"
+    }
+  },
+  "features": [
+    "Mobile-responsive interface with offline capabilities",
+    "Scenario planning with Monte Carlo simulations",
+    "Executive dashboards with drill-down capabilities",
+    "Cost reduction with process mining",
+    "Serverless functions for cost-effective scaling"
+  ],
+  "benefits": [
+    "Automated compliance reporting for regulatory requirements",
+    "Faster time-to-market with accelerated development",
+    "Enhanced team productivity with intelligent assistance",
+    "Reduced shipping costs with route optimization",
+    "Better risk management with predictive analytics"
+  ]
+}

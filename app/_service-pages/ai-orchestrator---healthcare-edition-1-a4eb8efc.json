@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/ai-orchestrator---healthcare-edition-1-a4eb8efc",
+  "breadcrumbTitle": "AI Orchestrator - Healthcare Edition #1",
+  "title": "AI Orchestrator - Healthcare Edition #1",
+  "description": "Next-generation healthcare solution: AI Orchestrator - Healthcare Edition #1. Combines network optimization with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Orchestrator - Healthcare Edition #1 - Zion Tech Group",
+    "description": "Next-generation healthcare solution: AI Orchestrator - Healthcare Edition #1. Combines network optimization with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-orchestrator---healthcare-edition-1-a4eb8efc"
+    }
+  },
+  "features": [
+    "API-first design",
+    "Mobile-responsive interface",
+    "GDPR compliance",
+    "Container orchestration",
+    "Offline capabilities"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Real-time insights and alerts",
+    "Scalable to millions of transactions",
+    "Reduced human error by 95%",
+    "Seamless integration with existing systems"
+  ]
+}

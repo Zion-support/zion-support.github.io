@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/cognitive-fraud-director-c1ee8296",
+  "breadcrumbTitle": "Cognitive Fraud Director",
+  "title": "Cognitive Fraud Director",
+  "description": "Revolutionize logistics through intelligent automation. Our Cognitive Fraud Director leverages advanced machine learning to deliver user experience at scale.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Cognitive Fraud Director - Zion Tech Group",
+    "description": "Revolutionize logistics through intelligent automation. Our Cognitive Fraud Director leverages advanced machine learning to deliver user experience at scale.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cognitive-fraud-director-c1ee8296"
+    }
+  },
+  "features": [
+    "Multi-language support",
+    "Custom integrations",
+    "Data encryption",
+    "Offline capabilities",
+    "SOC 2 certified"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "Scalable to millions of transactions",
+    "Reduced human error by 95%"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/cognitive-insights-legal-c0e4d6a3",
+  "breadcrumbTitle": "Cognitive insights-legal",
+  "title": "Cognitive insights-legal",
+  "description": "The future of legal is here with Cognitive insights-legal. Powered by cutting-edge AI, this platform delivers compliance monitoring like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Cognitive insights-legal - Zion Tech Group",
+    "description": "The future of legal is here with Cognitive insights-legal. Powered by cutting-edge AI, this platform delivers compliance monitoring like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cognitive-insights-legal-c0e4d6a3"
+    }
+  },
+  "features": [
+    "Cloud-native architecture",
+    "Custom integrations",
+    "Edge computing support",
+    "Multi-language support",
+    "Real-time processing"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Performance benchmarking",
+    "50% reduction in operational costs"
+  ]
+}

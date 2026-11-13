@@ -1,0 +1,29 @@
+{
+  "title": "IT SaaS Backup & Disaster Recovery",
+  "description": "Protect your SaaS data with automated backups and one-click recovery for Microsoft 365, Google Workspace, Salesforce, and 50+ SaaS applications. RPO under 1 hour.",
+  "basic": "$500/mo/month",
+  "pro": "$1,500/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "IT SaaS Backup & Disaster Recovery - Zion Tech Group",
+    "description": "Protect your SaaS data with automated backups and one-click recovery for Microsoft 365, Google Workspace, Salesforce, and 50+ SaaS applications. RPO under 1 hou",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-saas-backup-recovery"
+    }
+  },
+  "features": [
+    "Automated daily backups for 50+ SaaS apps",
+    "One-click granular recovery (files, emails, records)",
+    "Point-in-time recovery with unlimited retention",
+    "Cross-account and cross-region backup copies",
+    "Ransomware detection and alerting"
+  ],
+  "benefits": [
+    "Protect against SaaS data loss and ransomware",
+    "Meet compliance backup requirements",
+    "Recover data in minutes, not days",
+    "Eliminate manual backup processes"
+  ]
+}

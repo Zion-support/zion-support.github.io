@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-orchestrator---energy-edition-f226ed75",
+  "breadcrumbTitle": "AI Orchestrator - Energy Edition",
+  "title": "AI Orchestrator - Energy Edition",
+  "description": "Revolutionize energy through intelligent automation. Our AI Orchestrator - Energy Edition leverages advanced machine learning to deliver image recognition at sc",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Orchestrator - Energy Edition - Zion Tech Group",
+    "description": "Revolutionize energy through intelligent automation. Our AI Orchestrator - Energy Edition leverages advanced machine learning to deliver image recognition at sc",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-orchestrator---energy-edition-f226ed75"
+    }
+  },
+  "features": [
+    "Offline capabilities",
+    "Multi-region deployment",
+    "Auto-scaling capabilities",
+    "Mobile-responsive interface",
+    "Custom integrations"
+  ],
+  "benefits": [
+    "Performance benchmarking",
+    "Zero manual intervention required",
+    "Cost optimization recommendations",
+    "ROI in under 90 days"
+  ]
+}

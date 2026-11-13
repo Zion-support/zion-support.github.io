@@ -1,0 +1,28 @@
+{
+  "title": "AI Sales Coach & Call Analysis",
+  "description": "Real-time analysis: talk-listen ratio objection handling competitor mention pricing signal detection recommended next-step per call stage with CRM auto-scorecard team leaderboard.",
+  "basic": "$199/mo/month",
+  "pro": "$499/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Sales Coach & Call Analysis - Zion Tech Group",
+    "description": "Real-time analysis: talk-listen ratio objection handling competitor mention pricing signal detection recommended next-step per call stage with CRM auto-scorecar",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-sales-coach"
+    }
+  },
+  "features": [
+    "Real-time talk-listen + objection detection",
+    "Recommended next-step per call stage",
+    "CRM scorecard + follow-up task auto-created",
+    "Team leaderboard + best-practice highlight"
+  ],
+  "benefits": [
+    "Reduce costs with ai sales coach & call analysis",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-powered-orchestrator-for-insurance-25ef8e26",
+  "breadcrumbTitle": "AI-Powered Orchestrator for Insurance",
+  "title": "AI-Powered Orchestrator for Insurance",
+  "description": "The future of insurance is here with AI-Powered Orchestrator for Insurance. Powered by cutting-edge AI, this platform delivers decision support like never befor",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Orchestrator for Insurance - Zion Tech Group",
+    "description": "The future of insurance is here with AI-Powered Orchestrator for Insurance. Powered by cutting-edge AI, this platform delivers decision support like never befor",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-orchestrator-for-insurance-25ef8e26"
+    }
+  },
+  "features": [
+    "HIPAA ready",
+    "Container orchestration",
+    "GDPR compliance",
+    "Real-time processing",
+    "Offline capabilities"
+  ],
+  "benefits": [
+    "50% reduction in operational costs",
+    "99.9% uptime guarantee",
+    "Reduced human error by 95%",
+    "Scalable to millions of transactions"
+  ]
+}

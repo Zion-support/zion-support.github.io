@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/neural-intelligence-logistics-56e15857",
+  "breadcrumbTitle": "Neural intelligence-logistics",
+  "title": "Neural intelligence-logistics",
+  "description": "Revolutionize logistics through intelligent automation. Our Neural intelligence-logistics leverages advanced machine learning to deliver document processing at ",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Neural intelligence-logistics - Zion Tech Group",
+    "description": "Revolutionize logistics through intelligent automation. Our Neural intelligence-logistics leverages advanced machine learning to deliver document processing at ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/neural-intelligence-logistics-56e15857"
+    }
+  },
+  "features": [
+    "SOC 2 certified",
+    "Comprehensive monitoring",
+    "Plugin architecture",
+    "Custom integrations",
+    "Rollback mechanisms"
+  ],
+  "benefits": [
+    "24/7 automated operations",
+    "50% reduction in operational costs",
+    "Seamless integration with existing systems",
+    "Reduced human error by 95%",
+    "ROI in under 90 days"
+  ]
+}

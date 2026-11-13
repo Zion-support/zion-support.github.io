@@ -1,0 +1,29 @@
+{
+  "title": "Data Governance & Catalog",
+  "description": "Unified data catalog, lineage tracking, and policy enforcement engine for regulated industries with automated compliance.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Data Governance & Catalog - Zion Tech Group",
+    "description": "Unified data catalog, lineage tracking, and policy enforcement engine for regulated industries with automated compliance.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/data-governance-platform"
+    }
+  },
+  "features": [
+    "Automated data catalog",
+    "End-to-end lineage",
+    "PII auto-classification",
+    "Policy enforcement engine",
+    "GDPR / CCPA compliance"
+  ],
+  "benefits": [
+    "Reduce costs with data governance & catalog",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

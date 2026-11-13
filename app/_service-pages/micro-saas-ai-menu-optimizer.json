@@ -1,0 +1,29 @@
+{
+  "title": "AI Menu Engineering & Profit Optimizer",
+  "description": "AI-powered menu engineering for restaurants and food service. Analyzes sales data, food costs, and customer preferences to optimize menu pricing and layout for maximum profit.",
+  "basic": "$149/mo/month",
+  "pro": "$399/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Menu Engineering & Profit Optimizer - Zion Tech Group",
+    "description": "AI-powered menu engineering for restaurants and food service. Analyzes sales data, food costs, and customer preferences to optimize menu pricing and layout for ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-ai-menu-optimizer"
+    }
+  },
+  "features": [
+    "AI menu item profitability analysis",
+    "Star/Puzzle/Plowhorse/Pet classification",
+    "Dynamic pricing recommendations",
+    "Food cost tracking and alerting",
+    "Customer preference analysis from orders"
+  ],
+  "benefits": [
+    "Increase profit margins by 15-25%",
+    "Identify hidden star items and costly dogs",
+    "Optimize menu layout for higher check sizes",
+    "Reduce food waste with demand prediction"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-legal-patient-engagement-ee653ba7",
+  "breadcrumbTitle": "Intelligent Legal Patient Engagement",
+  "title": "Intelligent Legal Patient Engagement",
+  "description": "AI-driven patient engagement platform that delivers adaptive personalized care journeys, remote monitoring, and adherence support through intelligent automation",
+  "basic": "$258/month",
+  "pro": "$648/month",
+  "enterprise": "$1948/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Intelligent Legal Patient Engagement - Zion Tech Group",
+    "description": "AI-driven patient engagement platform that delivers adaptive personalized care journeys, remote monitoring, and adherence support through intelligent automation",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-legal-patient-engagement-ee653ba7"
+    }
+  },
+  "features": [
+    "Personalized care plans",
+    "Remote monitoring",
+    "Medication adherence",
+    "Virtual consultations"
+  ],
+  "benefits": [
+    "Better outcomes",
+    "Higher satisfaction",
+    "Reduced readmissions",
+    "Lower costs"
+  ]
+}

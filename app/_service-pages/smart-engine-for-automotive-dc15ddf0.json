@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/smart-engine-for-automotive-dc15ddf0",
+  "breadcrumbTitle": "Smart Engine for Automotive",
+  "title": "Smart Engine for Automotive",
+  "description": "Unlock unprecedented growth with Smart Engine for Automotive. This autonomous system provides maintenance scheduling with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Engine for Automotive - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Smart Engine for Automotive. This autonomous system provides maintenance scheduling with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-engine-for-automotive-dc15ddf0"
+    }
+  },
+  "features": [
+    "Auto-scaling capabilities",
+    "Data encryption",
+    "Custom integrations",
+    "Zero-downtime updates"
+  ],
+  "benefits": [
+    "Intelligent load balancing",
+    "Seamless integration with existing systems",
+    "99.9% uptime guarantee",
+    "50% reduction in operational costs"
+  ]
+}

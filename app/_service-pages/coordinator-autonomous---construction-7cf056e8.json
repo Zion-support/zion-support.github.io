@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/coordinator-autonomous---construction-7cf056e8",
+  "breadcrumbTitle": "Coordinator Autonomous - Construction",
+  "title": "Coordinator Autonomous - Construction",
+  "description": "Revolutionize construction through intelligent automation. Our Coordinator Autonomous - Construction leverages advanced machine learning to deliver document pro",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Coordinator Autonomous - Construction - Zion Tech Group",
+    "description": "Revolutionize construction through intelligent automation. Our Coordinator Autonomous - Construction leverages advanced machine learning to deliver document pro",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/coordinator-autonomous---construction-7cf056e8"
+    }
+  },
+  "features": [
+    "Custom integrations",
+    "Microservices deployment",
+    "Comprehensive monitoring",
+    "Open-source friendly",
+    "Role-based access control"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "24/7 automated operations",
+    "Cost optimization recommendations"
+  ]
+}

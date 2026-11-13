@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-operational-warehouse-automation-bc1fe512",
+  "breadcrumbTitle": "Intelligent Operational Warehouse Automation",
+  "title": "Intelligent Operational Warehouse Automation",
+  "description": "Warehouse management system that uses cloud-native AI and robotics orchestration for automated picking, packing, inventory tracking, and space optimization.",
+  "basic": "$278/month",
+  "pro": "$698/month",
+  "enterprise": "$2098/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Operational Warehouse Automation - Zion Tech Group",
+    "description": "Warehouse management system that uses cloud-native AI and robotics orchestration for automated picking, packing, inventory tracking, and space optimization.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-operational-warehouse-automation-bc1fe512"
+    }
+  },
+  "features": [
+    "Automated picking",
+    "Inventory tracking",
+    "Space optimization",
+    "Robot coordination"
+  ],
+  "benefits": [
+    "Higher throughput",
+    "Lower labor costs",
+    "Accuracy improvement",
+    "Scalable operations"
+  ]
+}

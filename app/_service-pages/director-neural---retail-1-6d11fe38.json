@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/director-neural---retail-1-6d11fe38",
+  "breadcrumbTitle": "Director Neural - Retail #1",
+  "title": "Director Neural - Retail #1",
+  "description": "Next-generation retail solution: Director Neural - Retail #1. Combines document processing with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Director Neural - Retail #1 - Zion Tech Group",
+    "description": "Next-generation retail solution: Director Neural - Retail #1. Combines document processing with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/director-neural---retail-1-6d11fe38"
+    }
+  },
+  "features": [
+    "Mobile-responsive interface",
+    "SOC 2 certified",
+    "Machine learning integration",
+    "Multi-language support",
+    "Offline capabilities"
+  ],
+  "benefits": [
+    "24/7 automated operations",
+    "Intelligent load balancing",
+    "Reduced human error by 95%"
+  ]
+}

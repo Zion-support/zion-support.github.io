@@ -1,0 +1,28 @@
+{
+  "title": "Compliance & Audit Automation",
+  "description": "SOC 2 Type II evidence collection, control-test automation, GRC Evidence Vault, continuous monitoring dashboard, and auditor-ready report.",
+  "basic": "$499/mo/month",
+  "pro": "$1,499/mo/month",
+  "enterprise": "$4,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Compliance & Audit Automation - Zion Tech Group",
+    "description": "SOC 2 Type II evidence collection, control-test automation, GRC Evidence Vault, continuous monitoring dashboard, and auditor-ready report.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/security-compliance-audit-platform"
+    }
+  },
+  "features": [
+    "SOC 2 Type II evidence auto-collection",
+    "Control-test automation (30+ pre-built tests)",
+    "GRC Evidence Vault (versioned, immutable)",
+    "Continuous monitoring dashboard per control"
+  ],
+  "benefits": [
+    "Reduce costs with compliance & audit automation",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

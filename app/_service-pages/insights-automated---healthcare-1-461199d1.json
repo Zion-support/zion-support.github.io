@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/insights-automated---healthcare-1-461199d1",
+  "breadcrumbTitle": "Insights Automated - Healthcare #1",
+  "title": "Insights Automated - Healthcare #1",
+  "description": "Revolutionize healthcare through intelligent automation. Our Insights Automated - Healthcare #1 leverages advanced machine learning to deliver workflow manageme",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Insights Automated - Healthcare #1 - Zion Tech Group",
+    "description": "Revolutionize healthcare through intelligent automation. Our Insights Automated - Healthcare #1 leverages advanced machine learning to deliver workflow manageme",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/insights-automated---healthcare-1-461199d1"
+    }
+  },
+  "features": [
+    "Mobile-responsive interface",
+    "Performance dashboards",
+    "Comprehensive monitoring",
+    "Plugin architecture",
+    "Offline capabilities"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "Dynamic resource allocation",
+    "Self-healing infrastructure",
+    "Real-time insights and alerts"
+  ]
+}

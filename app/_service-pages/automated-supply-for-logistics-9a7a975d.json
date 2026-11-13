@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/automated-supply-for-logistics-9a7a975d",
+  "breadcrumbTitle": "Automated Supply for Logistics",
+  "title": "Automated Supply for Logistics",
+  "description": "Next-generation Logistics solution: Automated Supply for Logistics. Combines market analysis with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated Supply for Logistics - Zion Tech Group",
+    "description": "Next-generation Logistics solution: Automated Supply for Logistics. Combines market analysis with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-supply-for-logistics-9a7a975d"
+    }
+  },
+  "features": [
+    "Healthcare data analytics with patient insights",
+    "Predictive modeling with ensemble methods",
+    "Machine learning integration with automatic model training",
+    "Microservices deployment with container orchestration",
+    "Business intelligence with KPI dashboards"
+  ],
+  "benefits": [
+    "Increased revenue with optimized pricing strategies",
+    "Real-time insights and alerts for proactive management",
+    "24/7 automated operations without human intervention",
+    "3x faster decision making with real-time insights"
+  ]
+}

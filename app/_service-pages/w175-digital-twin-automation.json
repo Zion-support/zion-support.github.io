@@ -1,0 +1,29 @@
+{
+  "title": "Digital Twin & Simulation Automation",
+  "description": "Create and automate digital twin simulations: what-if scenarios, predictive maintenance triggers, and process optimization recommendations.",
+  "basic": "$1,999/mo/month",
+  "pro": "$5,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Digital Twin & Simulation Automation - Zion Tech Group",
+    "description": "Create and automate digital twin simulations: what-if scenarios, predictive maintenance triggers, and process optimization recommendations.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w175-digital-twin-automation"
+    }
+  },
+  "features": [
+    "Digital twin model creation",
+    "What-if scenario simulation",
+    "Auto-trigger maintenance from twin insights",
+    "Process optimization recommendations",
+    "IoT data integration and calibration"
+  ],
+  "benefits": [
+    "Test changes virtually before physical implementation",
+    "Predictive insights from twin reduce downtime",
+    "Process optimization drives continuous improvement",
+    "IoT data keeps twins accurate and current"
+  ]
+}

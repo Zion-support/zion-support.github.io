@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-platform---hospitality-edition-2-277f8a23",
+  "breadcrumbTitle": "AI Platform - Hospitality Edition #2",
+  "title": "AI Platform - Hospitality Edition #2",
+  "description": "Revolutionize hospitality through intelligent automation. Our AI Platform - Hospitality Edition #2 leverages advanced machine learning to deliver image recognit",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Platform - Hospitality Edition #2 - Zion Tech Group",
+    "description": "Revolutionize hospitality through intelligent automation. Our AI Platform - Hospitality Edition #2 leverages advanced machine learning to deliver image recognit",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-platform---hospitality-edition-2-277f8a23"
+    }
+  },
+  "features": [
+    "Serverless functions",
+    "API-first design",
+    "Multi-region deployment",
+    "Container orchestration",
+    "Rollback mechanisms"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "99.9% uptime guarantee",
+    "Real-time insights and alerts",
+    "Performance benchmarking"
+  ]
+}

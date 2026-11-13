@@ -1,0 +1,29 @@
+{
+  "title": "AI Mentor Matchmaking & Career Development Platform",
+  "description": "AI-powered platform matching professionals with ideal mentors based on career goals, skills gaps, industry, and personality compatibility.",
+  "basic": "$29/mo per user/month",
+  "pro": "$79/mo per user/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Mentor Matchmaking & Career Development Platform - Zion Tech Group",
+    "description": "AI-powered platform matching professionals with ideal mentors based on career goals, skills gaps, industry, and personality compatibility.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-mentor-career-matchmaking-platform"
+    }
+  },
+  "features": [
+    "AI compatibility matching",
+    "Automated scheduling across time zones",
+    "Goal-setting and milestone tracking",
+    "Video call integration with recording",
+    "Skills gap analysis"
+  ],
+  "benefits": [
+    "Accelerate career growth",
+    "Reduce employee turnover by 35%",
+    "Scale mentorship programs",
+    "Data-driven matching outperforms manual by 3x"
+  ]
+}

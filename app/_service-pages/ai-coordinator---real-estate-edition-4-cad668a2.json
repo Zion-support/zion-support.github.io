@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-coordinator---real-estate-edition-4-cad668a2",
+  "breadcrumbTitle": "AI Coordinator - Real-Estate Edition #4",
+  "title": "AI Coordinator - Real-Estate Edition #4",
+  "description": "Next-generation real-estate solution: AI Coordinator - Real-Estate Edition #4. Combines maintenance scheduling with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Coordinator - Real-Estate Edition #4 - Zion Tech Group",
+    "description": "Next-generation real-estate solution: AI Coordinator - Real-Estate Edition #4. Combines maintenance scheduling with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-coordinator---real-estate-edition-4-cad668a2"
+    }
+  },
+  "features": [
+    "Audit trails",
+    "Edge computing support",
+    "Performance dashboards",
+    "Custom integrations",
+    "Machine learning integration"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Reduced human error by 95%",
+    "Enterprise-grade security"
+  ]
+}

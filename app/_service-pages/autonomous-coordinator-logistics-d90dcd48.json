@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/autonomous-coordinator-logistics-d90dcd48",
+  "breadcrumbTitle": "Autonomous coordinator-logistics",
+  "title": "Autonomous coordinator-logistics",
+  "description": "Next-generation logistics solution: Autonomous coordinator-logistics. Combines content generation with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous coordinator-logistics - Zion Tech Group",
+    "description": "Next-generation logistics solution: Autonomous coordinator-logistics. Combines content generation with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-coordinator-logistics-d90dcd48"
+    }
+  },
+  "features": [
+    "Zero-downtime updates",
+    "Custom integrations",
+    "Container orchestration",
+    "Rollback mechanisms",
+    "Role-based access control"
+  ],
+  "benefits": [
+    "Scalable to millions of transactions",
+    "Predictive maintenance scheduling",
+    "99.9% uptime guarantee",
+    "Automated compliance reporting",
+    "Dynamic resource allocation"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "title": "AI-Powered Serverless Transportation Analytics",
+  "description": "AI-driven analytics platform that delivers serverless insights into transportation operations, providing real-time monitoring, predictive modeling, and automated reporting capabilities.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI-Powered Serverless Transportation Analytics - Zion Tech Group",
+    "description": "AI-driven analytics platform that delivers serverless insights into transportation operations, providing real-time monitoring, predictive modeling, and automate",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-serverless-transportation-analytics-1931b9fe"
+    }
+  },
+  "features": [
+    "Real-time monitoring",
+    "Predictive modeling",
+    "Automated reporting",
+    "Custom dashboards"
+  ],
+  "benefits": [
+    "Data-driven decision making",
+    "Improved operational efficiency",
+    "Proactive issue detection",
+    "Enhanced KPI tracking"
+  ]
+}

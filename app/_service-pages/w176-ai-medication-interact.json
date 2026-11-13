@@ -1,0 +1,29 @@
+{
+  "title": "AI Medication Interaction Checker",
+  "description": "AI-powered drug interaction checker: contraindications, dosage adjustment, duplicate therapy detection. Evidence-based alerts with severity classification.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Medication Interaction Checker - Zion Tech Group",
+    "description": "AI-powered drug interaction checker: contraindications, dosage adjustment, duplicate therapy detection. Evidence-based alerts with severity classification.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w176-ai-medication-interact"
+    }
+  },
+  "features": [
+    "Drug-drug interaction detection",
+    "Drug-allergy contraindication checking",
+    "Dosage adjustment recommendations (renal/hepatic)",
+    "Duplicate therapy detection",
+    "Severity classification (critical, major, minor)"
+  ],
+  "benefits": [
+    "Prevent adverse drug events",
+    "Evidence-based alerts reduce alert fatigue",
+    "Dosage adjustments for special populations",
+    "FHIR integration fits into clinical workflow"
+  ]
+}

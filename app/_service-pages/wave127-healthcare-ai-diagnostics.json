@@ -1,0 +1,29 @@
+{
+  "title": "Healthcare AI Diagnostics Assistant",
+  "description": "FDA-aligned AI assistant for clinical decision support. Analyzes medical imaging (X-ray, CT, MRI), correlates patient history, and surfaces differential diagnoses with evidence citations — augmenting clinician judgment, not replacing it.",
+  "basic": "$N/A/month",
+  "pro": "$29997/month",
+  "enterprise": "$69997/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Healthcare AI Diagnostics Assistant - Zion Tech Group",
+    "description": "FDA-aligned AI assistant for clinical decision support. Analyzes medical imaging (X-ray, CT, MRI), correlates patient history, and surfaces differential diagnos",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/wave127-healthcare-ai-diagnostics"
+    }
+  },
+  "features": [
+    "Medical imaging analysis (X-ray, CT, MRI, ultrasound)",
+    "Differential diagnosis with evidence scoring",
+    "Patient history correlation & risk factorization",
+    "FDA 510(k) alignment & validation tracking",
+    "Clinical workflow integration (EHR/FHIR)"
+  ],
+  "benefits": [
+    "Augment diagnostic accuracy — not replace clinical judgment",
+    "Reduce diagnostic turnaround from hours to minutes",
+    "Equitable AI with continuous bias monitoring",
+    "Full regulatory traceability for CMS / Joint Commission"
+  ]
+}

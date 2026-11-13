@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-powered-workflow-insights-77158a36",
+  "breadcrumbTitle": "AI-Powered Workflow Insights",
+  "title": "AI-Powered Workflow Insights",
+  "description": "Unlock unprecedented growth with AI-Powered Workflow Insights. This autonomous system provides quality control with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Workflow Insights - Zion Tech Group",
+    "description": "Unlock unprecedented growth with AI-Powered Workflow Insights. This autonomous system provides quality control with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-workflow-insights-77158a36"
+    }
+  },
+  "features": [
+    "Machine learning integration",
+    "Cloud-native architecture",
+    "Container orchestration",
+    "Performance dashboards",
+    "GDPR compliance"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "24/7 automated operations",
+    "Reduced human error by 95%",
+    "Predictive maintenance scheduling"
+  ]
+}

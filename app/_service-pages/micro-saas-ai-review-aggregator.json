@@ -1,0 +1,29 @@
+{
+  "title": "Micro-SaaS AI Review Aggregator & Response Manager",
+  "description": "Aggregate reviews from Google, Yelp, Amazon, Trustpilot, and 20+ platforms into one dashboard. AI analyzes sentiment, generates response drafts, and tracks review trends.",
+  "basic": "$59/mo/month",
+  "pro": "$149/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Micro-SaaS AI Review Aggregator & Response Manager - Zion Tech Group",
+    "description": "Aggregate reviews from Google, Yelp, Amazon, Trustpilot, and 20+ platforms into one dashboard. AI analyzes sentiment, generates response drafts, and tracks revi",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-ai-review-aggregator"
+    }
+  },
+  "features": [
+    "Multi-platform review aggregation (20+ sources)",
+    "AI sentiment and topic analysis",
+    "Auto-generated response drafts",
+    "Competitor review benchmarking",
+    "Review request automation via email/SMS"
+  ],
+  "benefits": [
+    "Manage all reviews from one place",
+    "Respond 5x faster with AI drafts",
+    "Improve ratings with proactive requests",
+    "Benchmark against competitors"
+  ]
+}

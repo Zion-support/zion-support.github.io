@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/director-intelligent---media-6f815f4a",
+  "breadcrumbTitle": "Director Intelligent - Media",
+  "title": "Director Intelligent - Media",
+  "description": "Next-generation media solution: Director Intelligent - Media. Combines maintenance scheduling with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Director Intelligent - Media - Zion Tech Group",
+    "description": "Next-generation media solution: Director Intelligent - Media. Combines maintenance scheduling with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/director-intelligent---media-6f815f4a"
+    }
+  },
+  "features": [
+    "SOC 2 certified",
+    "Zero-downtime updates",
+    "Performance dashboards",
+    "Plugin architecture"
+  ],
+  "benefits": [
+    "Performance benchmarking",
+    "ROI in under 90 days",
+    "Intelligent load balancing",
+    "Automated compliance reporting"
+  ]
+}

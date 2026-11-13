@@ -1,0 +1,29 @@
+{
+  "title": "Predictive Maintenance for Manufacturing",
+  "description": "IoT sensor fusion + ML to predict equipment failures 7–30 days in advance. Reduces downtime by 50%, extends asset life.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Predictive Maintenance for Manufacturing - Zion Tech Group",
+    "description": "IoT sensor fusion + ML to predict equipment failures 7–30 days in advance. Reduces downtime by 50%, extends asset life.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-predictive-maintenance-factory"
+    }
+  },
+  "features": [
+    "Vibration & thermal analysis",
+    "Failure mode classification",
+    "Maintenance scheduling",
+    "Parts inventory forecasting",
+    "OEE dashboards"
+  ],
+  "benefits": [
+    "Reduce costs with predictive maintenance for manufacturing",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

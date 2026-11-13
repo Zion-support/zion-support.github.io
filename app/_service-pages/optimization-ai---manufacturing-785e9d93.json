@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/optimization-ai---manufacturing-785e9d93",
+  "breadcrumbTitle": "Optimization AI - Manufacturing",
+  "title": "Optimization AI - Manufacturing",
+  "description": "Unlock unprecedented growth with Optimization AI - Manufacturing. This autonomous system provides threat detection with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Optimization AI - Manufacturing - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Optimization AI - Manufacturing. This autonomous system provides threat detection with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/optimization-ai---manufacturing-785e9d93"
+    }
+  },
+  "features": [
+    "Data encryption",
+    "Plugin architecture",
+    "HIPAA ready",
+    "Microservices deployment"
+  ],
+  "benefits": [
+    "50% reduction in operational costs",
+    "Predictive maintenance scheduling",
+    "ROI in under 90 days",
+    "Enterprise-grade security",
+    "Seamless integration with existing systems"
+  ]
+}

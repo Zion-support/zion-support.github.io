@@ -1,0 +1,29 @@
+{
+  "title": "IT Service Desk Automation",
+  "description": "AI-powered IT service management with intelligent ticket routing, auto-resolution, self-service portals, and SLA monitoring.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "IT Service Desk Automation - Zion Tech Group",
+    "description": "AI-powered IT service management with intelligent ticket routing, auto-resolution, self-service portals, and SLA monitoring.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-service-desk-automation"
+    }
+  },
+  "features": [
+    "Intelligent ticket classification",
+    "Auto-resolution engine",
+    "Self-service knowledge base",
+    "SLA monitoring and escalation",
+    "Performance analytics"
+  ],
+  "benefits": [
+    "Reduce costs with it service desk automation",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

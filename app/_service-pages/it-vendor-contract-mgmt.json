@@ -1,0 +1,29 @@
+{
+  "title": "IT Vendor & Contract Management",
+  "description": "Centralise IT vendor contracts, SLAs, and renewal dates. AI monitors terms, flags expiring agreements, and automates renewal workflows with configurable approval chains.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "IT Vendor & Contract Management - Zion Tech Group",
+    "description": "Centralise IT vendor contracts, SLAs, and renewal dates. AI monitors terms, flags expiring agreements, and automates renewal workflows with configurable approva",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-vendor-contract-mgmt"
+    }
+  },
+  "features": [
+    "Central contract repository",
+    "Automated renewal alerts",
+    "SLA tracking dashboard",
+    "Configurable approval workflows",
+    "Vendor spend analytics"
+  ],
+  "benefits": [
+    "Reduce costs with it vendor & contract management",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

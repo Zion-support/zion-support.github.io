@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/enterprise-advanced-e-commerce-analytics-suite-7dfaf83c",
+  "breadcrumbTitle": "Enterprise Advanced E-Commerce Analytics Suite",
+  "title": "Enterprise Advanced E-Commerce Analytics Suite",
+  "description": "Enterprise analytics suite that delivers advanced e-commerce insights with unified dashboards and reporting.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Enterprise Advanced E-Commerce Analytics Suite - Zion Tech Group",
+    "description": "Enterprise analytics suite that delivers advanced e-commerce insights with unified dashboards and reporting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/enterprise-advanced-e-commerce-analytics-suite-7dfaf83c"
+    }
+  },
+  "features": [
+    "Data visualization",
+    "Custom dashboards",
+    "Report generation",
+    "KPI tracking"
+  ],
+  "benefits": [
+    "Unified data view",
+    "Faster insights",
+    "Customizable reports",
+    "Cross-functional collaboration"
+  ]
+}

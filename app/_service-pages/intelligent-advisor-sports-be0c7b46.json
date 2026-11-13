@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/intelligent-advisor-sports-be0c7b46",
+  "breadcrumbTitle": "Intelligent advisor-sports",
+  "title": "Intelligent advisor-sports",
+  "description": "Unlock unprecedented growth with Intelligent advisor-sports. This autonomous system provides predictive analytics with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent advisor-sports - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Intelligent advisor-sports. This autonomous system provides predictive analytics with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-advisor-sports-be0c7b46"
+    }
+  },
+  "features": [
+    "Microservices deployment",
+    "Audit trails",
+    "Rollback mechanisms",
+    "HIPAA ready"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "Scalable to millions of transactions",
+    "ROI in under 90 days"
+  ]
+}

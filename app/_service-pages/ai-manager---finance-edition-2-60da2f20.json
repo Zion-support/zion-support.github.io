@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-manager---finance-edition-2-60da2f20",
+  "breadcrumbTitle": "AI Manager - Finance Edition #2",
+  "title": "AI Manager - Finance Edition #2",
+  "description": "Transform your finance operations with our AI Manager - Finance Edition #2. This AI-driven solution automates financial planning with unprecedented accuracy and",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Manager - Finance Edition #2 - Zion Tech Group",
+    "description": "Transform your finance operations with our AI Manager - Finance Edition #2. This AI-driven solution automates financial planning with unprecedented accuracy and",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-manager---finance-edition-2-60da2f20"
+    }
+  },
+  "features": [
+    "Real-time processing",
+    "Plugin architecture",
+    "Performance dashboards",
+    "Microservices deployment"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "ROI in under 90 days",
+    "Real-time insights and alerts",
+    "Cost optimization recommendations",
+    "Automated compliance reporting"
+  ]
+}

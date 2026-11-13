@@ -1,0 +1,30 @@
+{
+  "title": "Construction AI Management",
+  "description": "AI-powered construction management: progress monitoring, safety compliance, resource optimization, and predictive delay analysis. Drone and camera integration.",
+  "basic": "$N/A/month",
+  "pro": "$12997/month",
+  "enterprise": "$29997/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Construction AI Management - Zion Tech Group",
+    "description": "AI-powered construction management: progress monitoring, safety compliance, resource optimization, and predictive delay analysis. Drone and camera integration.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w131-ind-construction"
+    }
+  },
+  "features": [
+    "Progress monitoring",
+    "Safety compliance detection",
+    "Resource optimization",
+    "Predict delays",
+    "Drone integration"
+  ],
+  "benefits": [
+    "30% fewer delays",
+    "50% safer sites",
+    "15% cost savings",
+    "Real-time progress tracking",
+    "Automated compliance"
+  ]
+}

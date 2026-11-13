@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/ai-real-estate---hospitality-edition-1-636469a0",
+  "breadcrumbTitle": "AI Real Estate - Hospitality Edition #1",
+  "title": "AI Real Estate - Hospitality Edition #1",
+  "description": "Revolutionize Hospitality through intelligent automation. Our AI Real Estate - Hospitality Edition #1 leverages advanced machine learning to deliver budget opti",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Real Estate - Hospitality Edition #1 - Zion Tech Group",
+    "description": "Revolutionize Hospitality through intelligent automation. Our AI Real Estate - Hospitality Edition #1 leverages advanced machine learning to deliver budget opti",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-real-estate---hospitality-edition-1-636469a0"
+    }
+  },
+  "features": [
+    "Image recognition with computer vision",
+    "Version control with rollback capabilities",
+    "Sentiment analysis with real-time monitoring",
+    "API-first design with comprehensive REST and GraphQL endpoints",
+    "Multi-language support with localization"
+  ],
+  "benefits": [
+    "Reduced customer acquisition costs with optimization",
+    "Reduced operational risks with predictive models",
+    "Reduced shipping costs with route optimization",
+    "Better code quality with automated reviews",
+    "Real-time insights and alerts for proactive management"
+  ]
+}

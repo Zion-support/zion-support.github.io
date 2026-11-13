@@ -1,0 +1,29 @@
+{
+  "title": "AI-Powered Incident Postmortem Generator",
+  "description": "Automatically generate blameless postmortem reports from incident data: timeline reconstruction, root cause hypothesis, action items, and status tracking.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI-Powered Incident Postmortem Generator - Zion Tech Group",
+    "description": "Automatically generate blameless postmortem reports from incident data: timeline reconstruction, root cause hypothesis, action items, and status tracking.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-incident-postmortem"
+    }
+  },
+  "features": [
+    "Timeline assembly from logs/metrics/alerts",
+    "Root cause inference via causal graph",
+    "Impact quantification (users, revenue, SLA)",
+    "Auto-generated action items with owners",
+    "Follow-up tracking & closure verification"
+  ],
+  "benefits": [
+    "Reduce costs with ai-powered incident postmortem generator",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/optimization-ai---energy-1-36a5895f",
+  "breadcrumbTitle": "Optimization AI - Energy #1",
+  "title": "Optimization AI - Energy #1",
+  "description": "Next-generation energy solution: Optimization AI - Energy #1. Combines market intelligence with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Optimization AI - Energy #1 - Zion Tech Group",
+    "description": "Next-generation energy solution: Optimization AI - Energy #1. Combines market intelligence with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/optimization-ai---energy-1-36a5895f"
+    }
+  },
+  "features": [
+    "Open-source friendly",
+    "Role-based access control",
+    "Alerting system",
+    "API-first design"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "ROI in under 90 days",
+    "Automated compliance reporting",
+    "Scalable to millions of transactions",
+    "Self-healing infrastructure"
+  ]
+}

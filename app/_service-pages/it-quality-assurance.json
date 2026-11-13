@@ -1,0 +1,29 @@
+{
+  "title": "IT Quality Assurance & Testing Automation",
+  "description": "Comprehensive QA and testing automation. From manual testing to full test automation with CI/CD integration. Ensure quality at speed.",
+  "basic": "$3,000/mo/month",
+  "pro": "$7,000/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "IT Quality Assurance & Testing Automation - Zion Tech Group",
+    "description": "Comprehensive QA and testing automation. From manual testing to full test automation with CI/CD integration. Ensure quality at speed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-quality-assurance"
+    }
+  },
+  "features": [
+    "Test strategy and planning",
+    "Test automation framework development",
+    "Selenium, Cypress, Playwright automation",
+    "Performance and load testing",
+    "Security testing and vulnerability scanning"
+  ],
+  "benefits": [
+    "Reduce testing time by 70% with automation",
+    "Catch 95% of bugs before production",
+    "Enable continuous delivery with confidence",
+    "Reduce QA costs while improving quality"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/self-optimizing-platform-logistics-fe611fcc",
+  "breadcrumbTitle": "Self-Optimizing platform-logistics",
+  "title": "Self-Optimizing platform-logistics",
+  "description": "Unlock unprecedented growth with Self-Optimizing platform-logistics. This autonomous system provides customer insights with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Self-Optimizing platform-logistics - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Self-Optimizing platform-logistics. This autonomous system provides customer insights with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/self-optimizing-platform-logistics-fe611fcc"
+    }
+  },
+  "features": [
+    "Offline capabilities",
+    "API-first design",
+    "Serverless functions",
+    "Alerting system",
+    "Mobile-responsive interface"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "24/7 automated operations",
+    "3x faster decision making"
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "API Integration: security and governance | Zion Tech Group",
+    "description": "API Integration: security and governance",
+    "keywords": [
+      "automation",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "API Integration: security and governance",
+      "description": "API Integration: security and governance",
+      "url": "https://ziontechgroup.com/blog/api-integration-security-and-governance/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/api-integration-security-and-governance/"
+    }
+  },
+  "values": [
+    "API Integration: security and governance",
+    "API Integration: security and governance",
+    "API Integration: security and governance",
+    "Conversion path",
+    "If this guide matches your api integration: security and governance initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "Conversion path",
+    " If this guide matches your api integration: security and governance initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "/blog/brand-voice-guardian-automation-roadmap",
+    "Brand Voice Guardian Automation Roadmap",
+    "/blog/ai-agent-tool-builder-2026-6585",
+    "Ai Agent Tool Builder 2026 6585",
+    "/blog/api-orchestration-layer-vendor-evaluation",
+    "Api Orchestration Layer Vendor Evaluation",
+    "/blog/5g-solutions-2026-6914",
+    "5G Solutions 2026 6914"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "API Integration: security and governance",
+    "description": "API Integration: security and governance",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T07:26:05Z",
+    "dateModified": "2026-08-07T07:26:05Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/api-integration-security-and-governance/"
+  }
+}

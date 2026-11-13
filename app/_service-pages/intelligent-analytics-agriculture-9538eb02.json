@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligent-analytics-agriculture-9538eb02",
+  "breadcrumbTitle": "Intelligent analytics-agriculture",
+  "title": "Intelligent analytics-agriculture",
+  "description": "Next-generation agriculture solution: Intelligent analytics-agriculture. Combines decision support with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent analytics-agriculture - Zion Tech Group",
+    "description": "Next-generation agriculture solution: Intelligent analytics-agriculture. Combines decision support with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-analytics-agriculture-9538eb02"
+    }
+  },
+  "features": [
+    "Container orchestration",
+    "Role-based access control",
+    "Performance dashboards",
+    "API-first design"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "50% reduction in operational costs",
+    "Real-time insights and alerts",
+    "Seamless integration with existing systems",
+    "Reduced human error by 95%"
+  ]
+}

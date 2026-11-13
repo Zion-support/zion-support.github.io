@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/insights-smart---tech-b33c3fb4",
+  "breadcrumbTitle": "Insights Smart - Tech",
+  "title": "Insights Smart - Tech",
+  "description": "Next-generation technology solution: Insights Smart - Tech. Combines resource optimization with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Insights Smart - Tech - Zion Tech Group",
+    "description": "Next-generation technology solution: Insights Smart - Tech. Combines resource optimization with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/insights-smart---tech-b33c3fb4"
+    }
+  },
+  "features": [
+    "Open-source friendly",
+    "Multi-region deployment",
+    "Data encryption",
+    "Plugin architecture",
+    "Machine learning integration"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "Reduced human error by 95%",
+    "Intelligent load balancing"
+  ]
+}

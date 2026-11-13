@@ -1,0 +1,29 @@
+{
+  "title": "Social Media Content Hub & Publisher",
+  "description": "All-in-one social media content hub: AI-assisted content ideation and drafting per platform, content calendar, multi-platform publishing (LinkedIn, X/Twitter, Instagram, Facebook, TikTok, YouTube), real-time engagement monitoring, and weekly performance reporting.",
+  "basic": "$99/mo/month",
+  "pro": "$299/mo/month",
+  "enterprise": "$999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Social Media Content Hub & Publisher - Zion Tech Group",
+    "description": "All-in-one social media content hub: AI-assisted content ideation and drafting per platform, content calendar, multi-platform publishing (LinkedIn, X/Twitter, I",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automation-social-media-content-hub"
+    }
+  },
+  "features": [
+    "AI content drafting: platform-optimised posts per network with tone + brand voice pre-trained",
+    "Content calendar kanban: quarterly calendar with drag-drop scheduling per platform",
+    "Bulk publishing: schedule 50+ posts across 6 platforms in one session with platform-native format",
+    "Real-time engagement: mentions, DMs, comments all in one inbox with AI-suggested replies",
+    "Weekly performance report: top-performing content type, audience growth trend, best posting time slot"
+  ],
+  "benefits": [
+    "Reduce costs with social media content hub & publisher",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

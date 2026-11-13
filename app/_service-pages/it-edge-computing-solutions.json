@@ -1,0 +1,29 @@
+{
+  "title": "Edge Computing & IoT Infrastructure",
+  "description": "Deploy compute closer to your data sources with edge computing architecture — low-latency processing, distributed AI inference, and resilient IoT device management.",
+  "basic": "$99/mo/month",
+  "pro": "$349/mo/month",
+  "enterprise": "$1,299/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Edge Computing & IoT Infrastructure - Zion Tech Group",
+    "description": "Deploy compute closer to your data sources with edge computing architecture — low-latency processing, distributed AI inference, and resilient IoT device managem",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-edge-computing-solutions"
+    }
+  },
+  "features": [
+    "Edge server deployment & configuration",
+    "Container orchestration at the edge (K3s, KubeEdge)",
+    "IoT device provisioning & lifecycle management",
+    "Low-latency AI inference on edge hardware",
+    "Offline-first data synchronization with cloud"
+  ],
+  "benefits": [
+    "Reduce costs with edge computing & iot infrastructure",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

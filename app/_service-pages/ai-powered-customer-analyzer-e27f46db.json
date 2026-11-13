@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-customer-analyzer-e27f46db",
+  "breadcrumbTitle": "AI-Powered Customer Analyzer",
+  "title": "AI-Powered Customer Analyzer",
+  "description": "Transform your technology operations with our AI-Powered Customer Analyzer. This AI-driven solution automates sales forecasting with unprecedented accuracy and ",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Customer Analyzer - Zion Tech Group",
+    "description": "Transform your technology operations with our AI-Powered Customer Analyzer. This AI-driven solution automates sales forecasting with unprecedented accuracy and ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-customer-analyzer-e27f46db"
+    }
+  },
+  "features": [
+    "Role-based access control",
+    "Machine learning integration",
+    "Performance dashboards",
+    "HIPAA ready",
+    "Cloud-native architecture"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "Reduced human error by 95%",
+    "99.9% uptime guarantee"
+  ]
+}

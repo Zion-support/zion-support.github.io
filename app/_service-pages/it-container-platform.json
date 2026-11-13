@@ -1,0 +1,29 @@
+{
+  "title": "IT Container Platform & Kubernetes Management",
+  "description": "Container platform design, deployment, and management. Kubernetes, Docker, and service mesh for cloud-native applications. From development to production.",
+  "basic": "$2,500/mo/month",
+  "pro": "$6,000/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "IT Container Platform & Kubernetes Management - Zion Tech Group",
+    "description": "Container platform design, deployment, and management. Kubernetes, Docker, and service mesh for cloud-native applications. From development to production.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-container-platform"
+    }
+  },
+  "features": [
+    "Kubernetes cluster design and deployment",
+    "Container registry and CI/CD integration",
+    "Service mesh (Istio, Linkerd) implementation",
+    "Container security and policy management",
+    "Monitoring and logging for containers"
+  ],
+  "benefits": [
+    "Deploy containers at scale with Kubernetes",
+    "Reduce container costs by 40% with optimization",
+    "Secure containers with policy enforcement",
+    "Enable DevOps with self-service platforms"
+  ]
+}

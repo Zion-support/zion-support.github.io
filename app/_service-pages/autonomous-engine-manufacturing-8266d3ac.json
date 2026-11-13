@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/autonomous-engine-manufacturing-8266d3ac",
+  "breadcrumbTitle": "Autonomous engine-manufacturing",
+  "title": "Autonomous engine-manufacturing",
+  "description": "Unlock unprecedented growth with Autonomous engine-manufacturing. This autonomous system provides data processing with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous engine-manufacturing - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Autonomous engine-manufacturing. This autonomous system provides data processing with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-engine-manufacturing-8266d3ac"
+    }
+  },
+  "features": [
+    "API-first design",
+    "Custom integrations",
+    "Cloud-native architecture",
+    "Offline capabilities",
+    "Rollback mechanisms"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "3x faster decision making",
+    "Intelligent load balancing"
+  ]
+}

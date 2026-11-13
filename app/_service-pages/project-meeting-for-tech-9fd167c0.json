@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/project-meeting-for-tech-9fd167c0",
+  "breadcrumbTitle": "Project Meeting for Tech",
+  "title": "Project Meeting for Tech",
+  "description": "Next-generation tech solution: Project Meeting for Tech. Combines meeting intelligence with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Project Meeting for Tech - Zion Tech Group",
+    "description": "Next-generation tech solution: Project Meeting for Tech. Combines meeting intelligence with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/project-meeting-for-tech-9fd167c0"
+    }
+  },
+  "features": [
+    "Microservices deployment with container orchestration",
+    "Cloud-native architecture with multi-region deployment",
+    "Edge computing support for low-latency operations",
+    "Knowledge base with smart search",
+    "Zero-downtime updates with blue-green deployment"
+  ],
+  "benefits": [
+    "Enterprise-grade security with end-to-end encryption",
+    "99.9% uptime guarantee with redundant architecture",
+    "24/7 automated operations without human intervention",
+    "Cost optimization recommendations with savings analysis",
+    "ROI achieved in under 90 days with cost savings"
+  ]
+}

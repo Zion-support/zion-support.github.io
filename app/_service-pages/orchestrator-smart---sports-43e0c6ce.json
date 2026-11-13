@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/orchestrator-smart---sports-43e0c6ce",
+  "breadcrumbTitle": "Orchestrator Smart - Sports",
+  "title": "Orchestrator Smart - Sports",
+  "description": "Next-generation sports solution: Orchestrator Smart - Sports. Combines image recognition with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Orchestrator Smart - Sports - Zion Tech Group",
+    "description": "Next-generation sports solution: Orchestrator Smart - Sports. Combines image recognition with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/orchestrator-smart---sports-43e0c6ce"
+    }
+  },
+  "features": [
+    "Rollback mechanisms",
+    "Edge computing support",
+    "Audit trails",
+    "Zero-downtime updates"
+  ],
+  "benefits": [
+    "50% reduction in operational costs",
+    "Cost optimization recommendations",
+    "Predictive maintenance scheduling"
+  ]
+}

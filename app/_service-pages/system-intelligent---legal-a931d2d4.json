@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/system-intelligent---legal-a931d2d4",
+  "breadcrumbTitle": "System Intelligent - Legal",
+  "title": "System Intelligent - Legal",
+  "description": "Unlock unprecedented growth with System Intelligent - Legal. This autonomous system provides document processing with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "System Intelligent - Legal - Zion Tech Group",
+    "description": "Unlock unprecedented growth with System Intelligent - Legal. This autonomous system provides document processing with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/system-intelligent---legal-a931d2d4"
+    }
+  },
+  "features": [
+    "Machine learning integration",
+    "Multi-region deployment",
+    "Open-source friendly",
+    "Performance dashboards"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "50% reduction in operational costs",
+    "Cost optimization recommendations",
+    "Performance benchmarking",
+    "24/7 automated operations"
+  ]
+}

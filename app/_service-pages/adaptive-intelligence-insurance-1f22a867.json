@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/adaptive-intelligence-insurance-1f22a867",
+  "breadcrumbTitle": "Adaptive intelligence-insurance",
+  "title": "Adaptive intelligence-insurance",
+  "description": "Next-generation insurance solution: Adaptive intelligence-insurance. Combines decision support with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Adaptive intelligence-insurance - Zion Tech Group",
+    "description": "Next-generation insurance solution: Adaptive intelligence-insurance. Combines decision support with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/adaptive-intelligence-insurance-1f22a867"
+    }
+  },
+  "features": [
+    "Data encryption",
+    "Zero-downtime updates",
+    "Offline capabilities",
+    "API-first design"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "Real-time insights and alerts",
+    "3x faster decision making",
+    "Enterprise-grade security"
+  ]
+}

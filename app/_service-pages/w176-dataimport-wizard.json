@@ -1,0 +1,29 @@
+{
+  "title": "DataImport Wizard — CSV/Excel Tool",
+  "description": "Smart data import tool: auto-detect formats, validate, transform, map columns, and import to any database or API. Handle messy data gracefully.",
+  "basic": "$15/mo/month",
+  "pro": "$49/mo/month",
+  "enterprise": "$149/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "DataImport Wizard — CSV/Excel Tool - Zion Tech Group",
+    "description": "Smart data import tool: auto-detect formats, validate, transform, map columns, and import to any database or API. Handle messy data gracefully.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w176-dataimport-wizard"
+    }
+  },
+  "features": [
+    "Auto-detect CSV, Excel, JSON, XML formats",
+    "Schema inference and column mapping",
+    "Data validation and cleaning rules",
+    "Transformation expressions",
+    "Duplicate detection during import"
+  ],
+  "benefits": [
+    "Import messy data without manual cleanup",
+    "Auto-mapping eliminates column matching",
+    "Validation catches errors before import",
+    "Scheduled imports keep data fresh"
+  ]
+}

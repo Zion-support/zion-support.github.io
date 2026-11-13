@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/director-intelligent---retail-51b67e96",
+  "breadcrumbTitle": "Director Intelligent - Retail",
+  "title": "Director Intelligent - Retail",
+  "description": "Next-generation retail solution: Director Intelligent - Retail. Combines inventory management with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Director Intelligent - Retail - Zion Tech Group",
+    "description": "Next-generation retail solution: Director Intelligent - Retail. Combines inventory management with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/director-intelligent---retail-51b67e96"
+    }
+  },
+  "features": [
+    "Comprehensive monitoring",
+    "Performance dashboards",
+    "Role-based access control",
+    "API-first design",
+    "SOC 2 certified"
+  ],
+  "benefits": [
+    "Cost optimization recommendations",
+    "Intelligent load balancing",
+    "Real-time insights and alerts"
+  ]
+}

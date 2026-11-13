@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-cloud-native-retail-personalization-e783b1ca",
+  "breadcrumbTitle": "AI-Powered Cloud-Native Retail Personalization",
+  "title": "AI-Powered Cloud-Native Retail Personalization",
+  "description": "Omnichannel personalization engine that delivers cloud-native product recommendations, dynamic pricing, and individualized experiences across all retail touchpo",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Cloud-Native Retail Personalization - Zion Tech Group",
+    "description": "Omnichannel personalization engine that delivers cloud-native product recommendations, dynamic pricing, and individualized experiences across all retail touchpo",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-cloud-native-retail-personalization-e783b1ca"
+    }
+  },
+  "features": [
+    "Product recommendations",
+    "Dynamic pricing",
+    "Customer segmentation",
+    "Cross-channel orchestration"
+  ],
+  "benefits": [
+    "Increased conversion",
+    "Higher AOV",
+    "Better loyalty",
+    "Revenue growth"
+  ]
+}

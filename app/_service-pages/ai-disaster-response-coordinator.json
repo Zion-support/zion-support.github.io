@@ -1,0 +1,28 @@
+{
+  "title": "AI Disaster Response & Coordination Platform",
+  "description": "Coordinate emergency response across agencies: resource allocation optimization, evacuation routing, damage assessment from satellite/drone, and real-time situational awareness.",
+  "basic": "$999/month",
+  "pro": "$2999/month",
+  "enterprise": "$9999/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Disaster Response & Coordination Platform - Zion Tech Group",
+    "description": "Coordinate emergency response across agencies: resource allocation optimization, evacuation routing, damage assessment from satellite/drone, and real-time situa",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-disaster-response-coordinator"
+    }
+  },
+  "features": [
+    "Multi-agency coordination dashboard",
+    "Resource allocation optimization",
+    "Satellite/drone damage assessment",
+    "Evacuation route planning",
+    "Real-time resource tracking"
+  ],
+  "benefits": [
+    "Coordinate 10x faster",
+    "Optimize resource deployment",
+    "Save more lives"
+  ]
+}

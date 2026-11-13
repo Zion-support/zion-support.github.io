@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/analytics-autonomous---insurance-d0a152a4",
+  "breadcrumbTitle": "Analytics Autonomous - Insurance",
+  "title": "Analytics Autonomous - Insurance",
+  "description": "The future of insurance is here with Analytics Autonomous - Insurance. Powered by cutting-edge AI, this platform delivers content generation like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Analytics Autonomous - Insurance - Zion Tech Group",
+    "description": "The future of insurance is here with Analytics Autonomous - Insurance. Powered by cutting-edge AI, this platform delivers content generation like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/analytics-autonomous---insurance-d0a152a4"
+    }
+  },
+  "features": [
+    "Container orchestration",
+    "Machine learning integration",
+    "API-first design",
+    "HIPAA ready"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "Seamless integration with existing systems",
+    "Cost optimization recommendations",
+    "Scalable to millions of transactions",
+    "3x faster decision making"
+  ]
+}

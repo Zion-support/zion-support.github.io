@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/smart-advisor-for-agriculture-7b368ed8",
+  "breadcrumbTitle": "Smart Advisor for Agriculture",
+  "title": "Smart Advisor for Agriculture",
+  "description": "The future of agriculture is here with Smart Advisor for Agriculture. Powered by cutting-edge AI, this platform delivers process automation like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Advisor for Agriculture - Zion Tech Group",
+    "description": "The future of agriculture is here with Smart Advisor for Agriculture. Powered by cutting-edge AI, this platform delivers process automation like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-advisor-for-agriculture-7b368ed8"
+    }
+  },
+  "features": [
+    "Cloud-native architecture",
+    "API-first design",
+    "GDPR compliance",
+    "Microservices deployment"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "Self-healing infrastructure",
+    "Enterprise-grade security",
+    "99.9% uptime guarantee"
+  ]
+}

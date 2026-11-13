@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-platform---gaming-edition-5-f223cdfc",
+  "breadcrumbTitle": "AI Platform - Gaming Edition #5",
+  "title": "AI Platform - Gaming Edition #5",
+  "description": "Next-generation gaming solution: AI Platform - Gaming Edition #5. Combines financial planning with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Platform - Gaming Edition #5 - Zion Tech Group",
+    "description": "Next-generation gaming solution: AI Platform - Gaming Edition #5. Combines financial planning with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-platform---gaming-edition-5-f223cdfc"
+    }
+  },
+  "features": [
+    "Comprehensive monitoring",
+    "Open-source friendly",
+    "Alerting system",
+    "Offline capabilities",
+    "Serverless functions"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "50% reduction in operational costs",
+    "Intelligent load balancing"
+  ]
+}

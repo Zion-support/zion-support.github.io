@@ -1,0 +1,29 @@
+{
+  "title": "LinkForge — URL Shortener & Analytics Micro-SaaS",
+  "description": "Branded URL shortener with advanced analytics. Link tracking, QR codes, retargeting pixels, and team collaboration for marketing teams.",
+  "basic": "$19/mo/month",
+  "pro": "$59/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "LinkForge — URL Shortener & Analytics Micro-SaaS - Zion Tech Group",
+    "description": "Branded URL shortener with advanced analytics. Link tracking, QR codes, retargeting pixels, and team collaboration for marketing teams.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-url-shortener-analytics"
+    }
+  },
+  "features": [
+    "Branded short domains",
+    "Click analytics and geolocation",
+    "QR code generation",
+    "Retargeting pixel integration",
+    "Team collaboration"
+  ],
+  "benefits": [
+    "Track every click with detail",
+    "Branded links build trust",
+    "Retarget visitors with ads",
+    "Team link management"
+  ]
+}

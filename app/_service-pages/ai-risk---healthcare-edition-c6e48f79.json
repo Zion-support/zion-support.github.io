@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-risk---healthcare-edition-c6e48f79",
+  "breadcrumbTitle": "AI Risk - Healthcare Edition",
+  "title": "AI Risk - Healthcare Edition",
+  "description": "Transform your Healthcare operations with our AI Risk - Healthcare Edition. This AI-driven solution automates data quality with unprecedented accuracy and effic",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Risk - Healthcare Edition - Zion Tech Group",
+    "description": "Transform your Healthcare operations with our AI Risk - Healthcare Edition. This AI-driven solution automates data quality with unprecedented accuracy and effic",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-risk---healthcare-edition-c6e48f79"
+    }
+  },
+  "features": [
+    "Maintenance scheduling with predictive analytics",
+    "API-first design with comprehensive REST and GraphQL endpoints",
+    "Budget optimization with cost allocation",
+    "Network optimization with traffic analysis",
+    "Competitive intelligence with market share tracking"
+  ],
+  "benefits": [
+    "Faster time-to-market with accelerated development",
+    "Cost optimization recommendations with savings analysis",
+    "Reduced development time with code generation",
+    "Better risk management with predictive analytics"
+  ]
+}

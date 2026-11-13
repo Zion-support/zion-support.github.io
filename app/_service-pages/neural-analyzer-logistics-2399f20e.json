@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/neural-analyzer-logistics-2399f20e",
+  "breadcrumbTitle": "Neural analyzer-logistics",
+  "title": "Neural analyzer-logistics",
+  "description": "Next-generation logistics solution: Neural analyzer-logistics. Combines workflow management with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Neural analyzer-logistics - Zion Tech Group",
+    "description": "Next-generation logistics solution: Neural analyzer-logistics. Combines workflow management with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/neural-analyzer-logistics-2399f20e"
+    }
+  },
+  "features": [
+    "Real-time processing",
+    "GDPR compliance",
+    "Performance dashboards",
+    "Offline capabilities",
+    "Edge computing support"
+  ],
+  "benefits": [
+    "Performance benchmarking",
+    "Zero manual intervention required",
+    "Seamless integration with existing systems",
+    "Scalable to millions of transactions",
+    "ROI in under 90 days"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/generator-ai---healthcare-1-76802bad",
+  "breadcrumbTitle": "Generator AI - Healthcare #1",
+  "title": "Generator AI - Healthcare #1",
+  "description": "Revolutionize healthcare through intelligent automation. Our Generator AI - Healthcare #1 leverages advanced machine learning to deliver code optimization at sc",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Generator AI - Healthcare #1 - Zion Tech Group",
+    "description": "Revolutionize healthcare through intelligent automation. Our Generator AI - Healthcare #1 leverages advanced machine learning to deliver code optimization at sc",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/generator-ai---healthcare-1-76802bad"
+    }
+  },
+  "features": [
+    "Data encryption",
+    "Container orchestration",
+    "Mobile-responsive interface",
+    "Auto-scaling capabilities",
+    "Multi-language support"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "Predictive maintenance scheduling",
+    "Performance benchmarking",
+    "Real-time insights and alerts"
+  ]
+}

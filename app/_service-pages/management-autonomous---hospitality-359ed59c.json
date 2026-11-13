@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/management-autonomous---hospitality-359ed59c",
+  "breadcrumbTitle": "Management Autonomous - Hospitality",
+  "title": "Management Autonomous - Hospitality",
+  "description": "Unlock unprecedented growth with Management Autonomous - Hospitality. This autonomous system provides decision support with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Management Autonomous - Hospitality - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Management Autonomous - Hospitality. This autonomous system provides decision support with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/management-autonomous---hospitality-359ed59c"
+    }
+  },
+  "features": [
+    "Auto-scaling capabilities",
+    "Multi-language support",
+    "Edge computing support",
+    "Data encryption",
+    "SOC 2 certified"
+  ],
+  "benefits": [
+    "Automated compliance reporting",
+    "ROI in under 90 days",
+    "99.9% uptime guarantee",
+    "Self-healing infrastructure"
+  ]
+}

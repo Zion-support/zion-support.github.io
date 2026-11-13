@@ -1,0 +1,29 @@
+{
+  "title": "IT Data Migration & Modernization Service",
+  "description": "End-to-end data migration from legacy systems to modern cloud platforms. Zero-downtime migration with automated validation.",
+  "basic": "$2,000/mo/month",
+  "pro": "$5,000/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "IT Data Migration & Modernization Service - Zion Tech Group",
+    "description": "End-to-end data migration from legacy systems to modern cloud platforms. Zero-downtime migration with automated validation.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-data-migration-service"
+    }
+  },
+  "features": [
+    "Legacy system assessment and planning",
+    "Automated schema conversion",
+    "Zero-downtime migration execution",
+    "Data validation and reconciliation",
+    "Rollback capabilities"
+  ],
+  "benefits": [
+    "Migrate without business disruption",
+    "Modernize legacy infrastructure",
+    "Reduce technical debt",
+    "Ensure data integrity"
+  ]
+}

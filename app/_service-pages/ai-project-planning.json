@@ -1,0 +1,28 @@
+{
+  "title": "AI Project Planning & Scheduling",
+  "description": "PM-grade AI: scope→WBS→resource allocation→critical path→risk register→milestone tracking. Syncs to Jira Asana Monday auto-updates when scope changes.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Project Planning & Scheduling - Zion Tech Group",
+    "description": "PM-grade AI: scope→WBS→resource allocation→critical path→risk register→milestone tracking. Syncs to Jira Asana Monday auto-updates when scope changes.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-project-planning"
+    }
+  },
+  "features": [
+    "Scope to WBS auto-generation",
+    "Resource allocation + critical path analysis",
+    "Risk register + contingency recommendation",
+    "Sync Jira Asana Monday"
+  ],
+  "benefits": [
+    "Reduce costs with ai project planning & scheduling",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

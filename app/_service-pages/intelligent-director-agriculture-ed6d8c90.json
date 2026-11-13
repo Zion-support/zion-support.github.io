@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-director-agriculture-ed6d8c90",
+  "breadcrumbTitle": "Intelligent director-agriculture",
+  "title": "Intelligent director-agriculture",
+  "description": "Next-generation agriculture solution: Intelligent director-agriculture. Combines resource optimization with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent director-agriculture - Zion Tech Group",
+    "description": "Next-generation agriculture solution: Intelligent director-agriculture. Combines resource optimization with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-director-agriculture-ed6d8c90"
+    }
+  },
+  "features": [
+    "Zero-downtime updates",
+    "Edge computing support",
+    "API-first design",
+    "HIPAA ready",
+    "Rollback mechanisms"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "Real-time insights and alerts",
+    "24/7 automated operations"
+  ]
+}

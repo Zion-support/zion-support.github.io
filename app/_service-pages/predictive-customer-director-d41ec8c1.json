@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/predictive-customer-director-d41ec8c1",
+  "breadcrumbTitle": "Predictive Customer Director",
+  "title": "Predictive Customer Director",
+  "description": "Revolutionize manufacturing through intelligent automation. Our Predictive Customer Director leverages advanced machine learning to deliver threat detection at ",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Predictive Customer Director - Zion Tech Group",
+    "description": "Revolutionize manufacturing through intelligent automation. Our Predictive Customer Director leverages advanced machine learning to deliver threat detection at ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/predictive-customer-director-d41ec8c1"
+    }
+  },
+  "features": [
+    "Mobile-responsive interface",
+    "HIPAA ready",
+    "Role-based access control",
+    "Plugin architecture",
+    "Custom integrations"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "24/7 automated operations",
+    "Reduced human error by 95%"
+  ]
+}

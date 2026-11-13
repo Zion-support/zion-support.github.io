@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/enterprise-hyper-local-insurtech-analytics-suite-26f91bab",
+  "breadcrumbTitle": "Enterprise Hyper-Local Insurtech Analytics Suite",
+  "title": "Enterprise Hyper-Local Insurtech Analytics Suite",
+  "description": "Enterprise analytics suite that delivers hyper-local insurtech insights with unified dashboards and reporting.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Enterprise Hyper-Local Insurtech Analytics Suite - Zion Tech Group",
+    "description": "Enterprise analytics suite that delivers hyper-local insurtech insights with unified dashboards and reporting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/enterprise-hyper-local-insurtech-analytics-suite-26f91bab"
+    }
+  },
+  "features": [
+    "Data visualization",
+    "Custom dashboards",
+    "Report generation",
+    "KPI tracking"
+  ],
+  "benefits": [
+    "Unified data view",
+    "Faster insights",
+    "Customizable reports",
+    "Cross-functional collaboration"
+  ]
+}

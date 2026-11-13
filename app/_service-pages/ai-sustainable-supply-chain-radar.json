@@ -1,0 +1,28 @@
+{
+  "title": "Sustainable Supply Chain Radar",
+  "description": "Supply-chain ESG tracking: carbon-intensity per supplier tier, green-alternative sourcing score, Scope 3 quantification, regulatory dashboard for CSRD and CBAM, and regulatory penalty simulator per scenario.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Sustainable Supply Chain Radar - Zion Tech Group",
+    "description": "Supply-chain ESG tracking: carbon-intensity per supplier tier, green-alternative sourcing score, Scope 3 quantification, regulatory dashboard for CSRD and CBAM,",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-sustainable-supply-chain-radar"
+    }
+  },
+  "features": [
+    "Supplier-scope carbon database from tier-1 to tier-n with Scope 3 quantification",
+    "Green-alternative sourcing score with cost-impact tradeoff analysis",
+    "CSRD and CBAM compliant auto-reports per quarter per jurisdiction",
+    "Regulatory penalty simulator — cost-of-non-compliance per scenario"
+  ],
+  "benefits": [
+    "Reduce costs with sustainable supply chain radar",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

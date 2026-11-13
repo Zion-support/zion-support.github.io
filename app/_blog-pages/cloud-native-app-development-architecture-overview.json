@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "Cloud Native App Development: architecture overview | Zion Tech Group",
+    "description": "Cloud Native App Development: architecture overview",
+    "keywords": [
+      "automation",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "Cloud Native App Development: architecture overview",
+      "description": "Cloud Native App Development: architecture overview",
+      "url": "https://ziontechgroup.com/blog/cloud-native-app-development-architecture-overview/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/cloud-native-app-development-architecture-overview/"
+    }
+  },
+  "values": [
+    "Cloud Native App Development: architecture overview",
+    "Cloud Native App Development: architecture overview",
+    "Cloud Native App Development: architecture overview",
+    "Conversion path",
+    "If this guide matches your cloud native app development: architecture overview initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "Conversion path",
+    " If this guide matches your cloud native app development: architecture overview initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "/blog/automation-orchestration-implementation-playbook",
+    "Automation Orchestration Implementation Playbook",
+    "/blog/container-security-lifecycle-2026-7089",
+    "Container Security Lifecycle 2026 7089",
+    "/blog/api-performance-testing-2026-6898",
+    "Api Performance Testing 2026 6898",
+    "/blog/automated-ai-reporting-2026-7280",
+    "Automated Ai Reporting 2026 7280"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Cloud Native App Development: architecture overview",
+    "description": "Cloud Native App Development: architecture overview",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T04:51:47Z",
+    "dateModified": "2026-08-07T04:51:47Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/cloud-native-app-development-architecture-overview/"
+  }
+}

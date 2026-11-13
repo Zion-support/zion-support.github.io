@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/cognitive-suite-for-hospitality-64d32a32",
+  "breadcrumbTitle": "Cognitive Suite for Hospitality",
+  "title": "Cognitive Suite for Hospitality",
+  "description": "Revolutionize hospitality through intelligent automation. Our Cognitive Suite for Hospitality leverages advanced machine learning to deliver financial planning ",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Cognitive Suite for Hospitality - Zion Tech Group",
+    "description": "Revolutionize hospitality through intelligent automation. Our Cognitive Suite for Hospitality leverages advanced machine learning to deliver financial planning ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cognitive-suite-for-hospitality-64d32a32"
+    }
+  },
+  "features": [
+    "Container orchestration",
+    "Multi-region deployment",
+    "Rollback mechanisms",
+    "Open-source friendly"
+  ],
+  "benefits": [
+    "Scalable to millions of transactions",
+    "Automated compliance reporting",
+    "Enterprise-grade security",
+    "50% reduction in operational costs",
+    "Seamless integration with existing systems"
+  ]
+}

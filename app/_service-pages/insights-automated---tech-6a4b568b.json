@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/insights-automated---tech-6a4b568b",
+  "breadcrumbTitle": "Insights Automated - Tech",
+  "title": "Insights Automated - Tech",
+  "description": "Next-generation technology solution: Insights Automated - Tech. Combines image recognition with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Insights Automated - Tech - Zion Tech Group",
+    "description": "Next-generation technology solution: Insights Automated - Tech. Combines image recognition with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/insights-automated---tech-6a4b568b"
+    }
+  },
+  "features": [
+    "Audit trails",
+    "Data encryption",
+    "Microservices deployment",
+    "SOC 2 certified",
+    "Plugin architecture"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Reduced human error by 95%",
+    "Real-time insights and alerts"
+  ]
+}

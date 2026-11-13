@@ -1,0 +1,28 @@
+{
+  "title": "AI Invoice Processing & Auto-Posting",
+  "description": "Invoice automation: three-way PO matching, OCR line-item extraction, GL coding by vendor and line item, approval workflow per threshold, and ERP auto-post to NetSuite, SAP, or QuickBooks with zero human touch.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Invoice Processing & Auto-Posting - Zion Tech Group",
+    "description": "Invoice automation: three-way PO matching, OCR line-item extraction, GL coding by vendor and line item, approval workflow per threshold, and ERP auto-post to Ne",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/invoice-ai-automation"
+    }
+  },
+  "features": [
+    "Intelligent automation and orchestration",
+    "Enterprise-grade integration",
+    "Real-time monitoring and alerts",
+    "Scalable multi-tenant architecture"
+  ],
+  "benefits": [
+    "Reduce costs with ai invoice processing & auto-posting",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/adaptive-advisor-for-construction-5b6000aa",
+  "breadcrumbTitle": "Adaptive Advisor for Construction",
+  "title": "Adaptive Advisor for Construction",
+  "description": "Next-generation construction solution: Adaptive Advisor for Construction. Combines inventory management with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Adaptive Advisor for Construction - Zion Tech Group",
+    "description": "Next-generation construction solution: Adaptive Advisor for Construction. Combines inventory management with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/adaptive-advisor-for-construction-5b6000aa"
+    }
+  },
+  "features": [
+    "Multi-language support",
+    "Microservices deployment",
+    "Machine learning integration",
+    "Alerting system",
+    "Open-source friendly"
+  ],
+  "benefits": [
+    "Dynamic resource allocation",
+    "Real-time insights and alerts",
+    "3x faster decision making",
+    "Cost optimization recommendations",
+    "Enterprise-grade security"
+  ]
+}

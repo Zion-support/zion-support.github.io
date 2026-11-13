@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/ai-healthcare---logistics-edition-64f26ae8",
+  "breadcrumbTitle": "AI Healthcare - Logistics Edition",
+  "title": "AI Healthcare - Logistics Edition",
+  "description": "Unlock unprecedented growth with AI Healthcare - Logistics Edition. This autonomous system provides master data management with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Healthcare - Logistics Edition - Zion Tech Group",
+    "description": "Unlock unprecedented growth with AI Healthcare - Logistics Edition. This autonomous system provides master data management with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-healthcare---logistics-edition-64f26ae8"
+    }
+  },
+  "features": [
+    "Predictive modeling with ensemble methods",
+    "Auto-scaling capabilities with predictive scaling",
+    "GDPR compliance with data portability",
+    "SOC 2 certified with security controls",
+    "Data governance with policy enforcement"
+  ],
+  "benefits": [
+    "Faster content creation with AI assistance",
+    "50% reduction in operational costs through automation",
+    "3x faster decision making with real-time insights",
+    "Seamless integration with existing systems and workflows",
+    "Real-time insights and alerts for proactive management"
+  ]
+}

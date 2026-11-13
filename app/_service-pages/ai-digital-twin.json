@@ -1,0 +1,29 @@
+{
+  "title": "AI Digital Twin & Simulation Platform",
+  "description": "Create digital twins of physical assets, processes, and systems. Simulate scenarios, predict failures, and optimize operations with AI-powered simulation.",
+  "basic": "$4,999/mo/month",
+  "pro": "$12,000/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Digital Twin & Simulation Platform - Zion Tech Group",
+    "description": "Create digital twins of physical assets, processes, and systems. Simulate scenarios, predict failures, and optimize operations with AI-powered simulation.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-digital-twin"
+    }
+  },
+  "features": [
+    "3D digital twin modeling from CAD and IoT data",
+    "Real-time sensor data integration",
+    "Predictive simulation and what-if analysis",
+    "Failure prediction and maintenance optimization",
+    "Integration with SCADA, MES, and IoT platforms"
+  ],
+  "benefits": [
+    "Reduce unplanned downtime by 50%",
+    "Optimize operations with virtual testing",
+    "Predict failures 30 days in advance",
+    "Simulate changes without disrupting production"
+  ]
+}

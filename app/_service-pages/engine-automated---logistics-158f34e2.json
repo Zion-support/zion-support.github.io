@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/engine-automated---logistics-158f34e2",
+  "breadcrumbTitle": "Engine Automated - Logistics",
+  "title": "Engine Automated - Logistics",
+  "description": "Revolutionize logistics through intelligent automation. Our Engine Automated - Logistics leverages advanced machine learning to deliver customer insights at sca",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Engine Automated - Logistics - Zion Tech Group",
+    "description": "Revolutionize logistics through intelligent automation. Our Engine Automated - Logistics leverages advanced machine learning to deliver customer insights at sca",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/engine-automated---logistics-158f34e2"
+    }
+  },
+  "features": [
+    "Role-based access control",
+    "Microservices deployment",
+    "Cloud-native architecture",
+    "SOC 2 certified",
+    "GDPR compliance"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "Dynamic resource allocation",
+    "Seamless integration with existing systems",
+    "Enterprise-grade security",
+    "Cost optimization recommendations"
+  ]
+}

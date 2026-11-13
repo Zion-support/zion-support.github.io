@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/enterprise-zero-trust-marketing-analytics-suite-d16dc06f",
+  "breadcrumbTitle": "Enterprise Zero-Trust Marketing Analytics Suite",
+  "title": "Enterprise Zero-Trust Marketing Analytics Suite",
+  "description": "Enterprise analytics suite that delivers zero-trust marketing insights with unified dashboards and reporting.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Enterprise Zero-Trust Marketing Analytics Suite - Zion Tech Group",
+    "description": "Enterprise analytics suite that delivers zero-trust marketing insights with unified dashboards and reporting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/enterprise-zero-trust-marketing-analytics-suite-d16dc06f"
+    }
+  },
+  "features": [
+    "Data visualization",
+    "Custom dashboards",
+    "Report generation",
+    "KPI tracking"
+  ],
+  "benefits": [
+    "Unified data view",
+    "Faster insights",
+    "Customizable reports",
+    "Cross-functional collaboration"
+  ]
+}

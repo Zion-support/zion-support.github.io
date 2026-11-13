@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-system---retail-edition-1-5d445fed",
+  "breadcrumbTitle": "AI System - Retail Edition #1",
+  "title": "AI System - Retail Edition #1",
+  "description": "The future of retail is here with AI System - Retail Edition #1. Powered by cutting-edge AI, this platform delivers image recognition like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI System - Retail Edition #1 - Zion Tech Group",
+    "description": "The future of retail is here with AI System - Retail Edition #1. Powered by cutting-edge AI, this platform delivers image recognition like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-system---retail-edition-1-5d445fed"
+    }
+  },
+  "features": [
+    "Open-source friendly",
+    "Microservices deployment",
+    "Zero-downtime updates",
+    "Mobile-responsive interface",
+    "Real-time processing"
+  ],
+  "benefits": [
+    "50% reduction in operational costs",
+    "Enterprise-grade security",
+    "Performance benchmarking",
+    "Real-time insights and alerts"
+  ]
+}

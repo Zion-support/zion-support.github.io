@@ -1,0 +1,29 @@
+{
+  "title": "IT Data Catalog & Metadata Management",
+  "description": "Enterprise data catalog with automated metadata discovery, data lineage tracking, and governance for modern data ecosystems.",
+  "basic": "$499/mo/month",
+  "pro": "$1,499/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "IT Data Catalog & Metadata Management - Zion Tech Group",
+    "description": "Enterprise data catalog with automated metadata discovery, data lineage tracking, and governance for modern data ecosystems.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-data-catalog-service"
+    }
+  },
+  "features": [
+    "Automated metadata discovery across databases and lakes",
+    "Data lineage visualization",
+    "Data quality scoring",
+    "Business glossary management",
+    "Self-service data discovery"
+  ],
+  "benefits": [
+    "Find data assets 10x faster",
+    "Ensure data quality and trust",
+    "Meet data governance requirements",
+    "Enable self-service analytics"
+  ]
+}

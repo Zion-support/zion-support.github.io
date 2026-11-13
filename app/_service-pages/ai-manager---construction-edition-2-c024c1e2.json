@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-manager---construction-edition-2-c024c1e2",
+  "breadcrumbTitle": "AI Manager - Construction Edition #2",
+  "title": "AI Manager - Construction Edition #2",
+  "description": "Unlock unprecedented growth with AI Manager - Construction Edition #2. This autonomous system provides sales forecasting with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Manager - Construction Edition #2 - Zion Tech Group",
+    "description": "Unlock unprecedented growth with AI Manager - Construction Edition #2. This autonomous system provides sales forecasting with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-manager---construction-edition-2-c024c1e2"
+    }
+  },
+  "features": [
+    "Cloud-native architecture",
+    "API-first design",
+    "Microservices deployment",
+    "Plugin architecture",
+    "Open-source friendly"
+  ],
+  "benefits": [
+    "Intelligent load balancing",
+    "Performance benchmarking",
+    "Seamless integration with existing systems",
+    "50% reduction in operational costs"
+  ]
+}

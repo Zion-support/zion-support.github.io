@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "AI MSP Security Compliance: security and governance | Zion Tech Group",
+    "description": "AI MSP Security Compliance: security and governance",
+    "keywords": [
+      "ai",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "AI MSP Security Compliance: security and governance",
+      "description": "AI MSP Security Compliance: security and governance",
+      "url": "https://ziontechgroup.com/blog/ai-msp-security-compliance-security-and-governance/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/ai-msp-security-compliance-security-and-governance/"
+    }
+  },
+  "values": [
+    "AI MSP Security Compliance: security and governance",
+    "AI MSP Security Compliance: security and governance",
+    "AI MSP Security Compliance: security and governance",
+    "Conversion path",
+    "If this guide matches your ai msp security compliance: security and governance initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "Conversion path",
+    " If this guide matches your ai msp security compliance: security and governance initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "/blog/ai-msp-security-compliance-policy-and-compliance",
+    "Ai Msp Security Compliance Policy And Compliance",
+    "/blog/ai-agent-tool-builder-checklist-for-it-leaders",
+    "Ai Agent Tool Builder Checklist For It Leaders",
+    "/blog/incident-response-retainer-2026-7033",
+    "Incident Response Retainer 2026 7033",
+    "/blog/ai-email-intelligence-2026-7183",
+    "Ai Email Intelligence 2026 7183"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "AI MSP Security Compliance: security and governance",
+    "description": "AI MSP Security Compliance: security and governance",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T04:52:25Z",
+    "dateModified": "2026-08-07T04:52:25Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/ai-msp-security-compliance-security-and-governance/"
+  }
+}

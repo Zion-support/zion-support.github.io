@@ -1,0 +1,29 @@
+{
+  "title": "Ai Cro Optimizer",
+  "description": "AI Cro Optimizer — enterprise-grade solution with AI-powered automation, real-time analytics, and seamless integration. Built for scale with security-first architecture.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Ai Cro Optimizer - Zion Tech Group",
+    "description": "AI Cro Optimizer — enterprise-grade solution with AI-powered automation, real-time analytics, and seamless integration. Built for scale with security-first arch",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-cro-optimizer"
+    }
+  },
+  "features": [
+    "AI-powered cro optimizer automation",
+    "Real-time analytics and monitoring",
+    "Enterprise-grade security (SOC2, HIPAA ready)",
+    "REST API and webhooks for integrations",
+    "Multi-tenant SaaS architecture"
+  ],
+  "benefits": [
+    "Reduce manual effort in cro optimizer by 80%",
+    "Make data-driven decisions in real-time",
+    "Scale without adding headcount",
+    "Enterprise security out of the box"
+  ]
+}

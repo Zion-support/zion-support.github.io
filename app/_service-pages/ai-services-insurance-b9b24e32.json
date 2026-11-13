@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/ai-services-insurance-b9b24e32",
+  "breadcrumbTitle": "AI Readiness & Deployment for Insurance",
+  "title": "AI Readiness & Deployment for Insurance",
+  "description": "AI readiness assessment and deployment support for Insurance. Identify high-ROI use cases, build prototypes, and scale responsibly.",
+  "basic": "$299/month",
+  "pro": "$799/month",
+  "enterprise": "$2499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Readiness & Deployment for Insurance - Zion Tech Group",
+    "description": "AI readiness assessment and deployment support for Insurance. Identify high-ROI use cases, build prototypes, and scale responsibly.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-services-insurance-b9b24e32"
+    }
+  },
+  "features": [
+    "AI readiness assessment",
+    "Use case prioritization",
+    "Proof-of-concept development",
+    "Data readiness review",
+    "Governance and ethics review"
+  ],
+  "benefits": [
+    "Faster AI adoption",
+    "Reduced project risk",
+    "Clear governance model",
+    "Better data quality",
+    "Measurable business outcomes"
+  ]
+}

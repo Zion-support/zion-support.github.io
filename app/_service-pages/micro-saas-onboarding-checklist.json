@@ -1,0 +1,29 @@
+{
+  "title": "OnboardFlow — Onboarding Checklist Micro-SaaS",
+  "description": "Interactive onboarding checklists for SaaS products. Drag-and-drop builder, progress tracking, and integration with Intercom, Pendo, and Segment.",
+  "basic": "$29/mo/month",
+  "pro": "$89/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "OnboardFlow — Onboarding Checklist Micro-SaaS - Zion Tech Group",
+    "description": "Interactive onboarding checklists for SaaS products. Drag-and-drop builder, progress tracking, and integration with Intercom, Pendo, and Segment.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-onboarding-checklist"
+    }
+  },
+  "features": [
+    "Drag-and-drop checklist builder",
+    "Progress tracking",
+    "Conditional logic",
+    "Integration with Intercom, Pendo, Segment",
+    "Custom branding"
+  ],
+  "benefits": [
+    "Increase activation rates by 40%",
+    "Reduce onboarding time",
+    "Visual progress motivates users",
+    "Track completion analytics"
+  ]
+}

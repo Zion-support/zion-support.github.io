@@ -1,0 +1,29 @@
+{
+  "title": "AI Construction Site Safety & Compliance",
+  "description": "Computer vision-based construction site safety monitoring with PPE detection, hazard identification, and automated compliance reporting.",
+  "basic": "$999/mo/month",
+  "pro": "$2,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Construction Site Safety & Compliance - Zion Tech Group",
+    "description": "Computer vision-based construction site safety monitoring with PPE detection, hazard identification, and automated compliance reporting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-construction-site-safety"
+    }
+  },
+  "features": [
+    "Real-time PPE detection (hard hats, vests, gloves)",
+    "Hazard zone intrusion alerts",
+    "Heavy equipment proximity warnings",
+    "Fall detection and prevention",
+    "Automated safety compliance reports"
+  ],
+  "benefits": [
+    "Reduce workplace incidents by 60%",
+    "Automate safety compliance",
+    "Lower insurance premiums",
+    "Protect worker lives"
+  ]
+}

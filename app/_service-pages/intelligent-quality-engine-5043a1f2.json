@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/intelligent-quality-engine-5043a1f2",
+  "breadcrumbTitle": "Intelligent Quality Engine",
+  "title": "Intelligent Quality Engine",
+  "description": "The future of healthcare is here with Intelligent Quality Engine. Powered by cutting-edge AI, this platform delivers compliance monitoring like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Quality Engine - Zion Tech Group",
+    "description": "The future of healthcare is here with Intelligent Quality Engine. Powered by cutting-edge AI, this platform delivers compliance monitoring like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-quality-engine-5043a1f2"
+    }
+  },
+  "features": [
+    "Mobile-responsive interface",
+    "Microservices deployment",
+    "Comprehensive monitoring",
+    "API-first design"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "50% reduction in operational costs",
+    "ROI in under 90 days"
+  ]
+}

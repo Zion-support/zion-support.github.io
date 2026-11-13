@@ -1,0 +1,28 @@
+{
+  "title": "AI-Powered Hyper-Local E-Commerce Analytics",
+  "description": "AI-driven analytics platform that delivers hyper-local insights into e-commerce operations, providing real-time monitoring, predictive modeling, and automated reporting capabilities.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI-Powered Hyper-Local E-Commerce Analytics - Zion Tech Group",
+    "description": "AI-driven analytics platform that delivers hyper-local insights into e-commerce operations, providing real-time monitoring, predictive modeling, and automated r",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-hyper-local-e-commerce-analytics-fd1891ee"
+    }
+  },
+  "features": [
+    "Real-time monitoring",
+    "Predictive modeling",
+    "Automated reporting",
+    "Custom dashboards"
+  ],
+  "benefits": [
+    "Data-driven decision making",
+    "Improved operational efficiency",
+    "Proactive issue detection",
+    "Enhanced KPI tracking"
+  ]
+}

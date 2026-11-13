@@ -1,0 +1,29 @@
+{
+  "title": "IT Asset Discovery & Management",
+  "description": "Automated network discovery, CMDB management, and IT asset lifecycle tracking. Real-time visibility into all hardware and software assets.",
+  "basic": "$N/A/month",
+  "pro": "$5997/month",
+  "enterprise": "$12997/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "IT Asset Discovery & Management - Zion Tech Group",
+    "description": "Automated network discovery, CMDB management, and IT asset lifecycle tracking. Real-time visibility into all hardware and software assets.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w128-it-asset"
+    }
+  },
+  "features": [
+    "Auto-discovery scanning",
+    "CMDB management",
+    "Software license tracking",
+    "Lifecycle management",
+    "Compliance reporting"
+  ],
+  "benefits": [
+    "100% asset visibility",
+    "License compliance",
+    "Reduced audit costs",
+    "Better procurement decisions"
+  ]
+}

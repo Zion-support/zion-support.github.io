@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/automation-intelligent---healthcare-1-21de7dd6",
+  "breadcrumbTitle": "Automation Intelligent - Healthcare #1",
+  "title": "Automation Intelligent - Healthcare #1",
+  "description": "Next-generation healthcare solution: Automation Intelligent - Healthcare #1. Combines workflow management with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automation Intelligent - Healthcare #1 - Zion Tech Group",
+    "description": "Next-generation healthcare solution: Automation Intelligent - Healthcare #1. Combines workflow management with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automation-intelligent---healthcare-1-21de7dd6"
+    }
+  },
+  "features": [
+    "Auto-scaling capabilities",
+    "Open-source friendly",
+    "Zero-downtime updates",
+    "Plugin architecture",
+    "Offline capabilities"
+  ],
+  "benefits": [
+    "Cost optimization recommendations",
+    "Dynamic resource allocation",
+    "Enterprise-grade security"
+  ]
+}

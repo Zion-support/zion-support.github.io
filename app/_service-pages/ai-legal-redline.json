@@ -1,0 +1,29 @@
+{
+  "title": "AI Legal Document Redlining & Review",
+  "description": "Automated contract review against playbooks: flag risky clauses, missing obligations, fee anomalies, and unfavorable T&Cs. Generates redlines + executive summary per document type (MSA, SOW, NDA, EULA).",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Legal Document Redlining & Review - Zion Tech Group",
+    "description": "Automated contract review against playbooks: flag risky clauses, missing obligations, fee anomalies, and unfavorable T&Cs. Generates redlines + executive summar",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-legal-redline"
+    }
+  },
+  "features": [
+    "Clause risk scoring vs your playbook",
+    "Missing obligation auto-detection",
+    "Fee/price anomaly flagging",
+    "Redline stub generation per clause",
+    "Executive summary + risk digest"
+  ],
+  "benefits": [
+    "Reduce costs with ai legal document redlining & review",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "Web Accessibility Audit Service",
+  "description": "WCAG 2.2 AA/AAA compliance audit: automated and manual testing, VPAT generation, remediation guidance, and ongoing monitoring. Section 508 and ADA compliance.",
+  "basic": "$2,499/month",
+  "pro": "$7,999/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Web Accessibility Audit Service - Zion Tech Group",
+    "description": "WCAG 2.2 AA/AAA compliance audit: automated and manual testing, VPAT generation, remediation guidance, and ongoing monitoring. Section 508 and ADA compliance.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w176-accessibility-audit"
+    }
+  },
+  "features": [
+    "Automated WCAG 2.2 scanning",
+    "Manual expert testing (screen reader, keyboard)",
+    "VPAT/ACR generation",
+    "Remediation guidance with code examples",
+    "Ongoing compliance monitoring"
+  ],
+  "benefits": [
+    "Avoid accessibility lawsuits",
+    "VPAT generated for procurement",
+    "Code examples accelerate remediation",
+    "Ongoing monitoring prevents regression"
+  ]
+}

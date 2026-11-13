@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-automation---hospitality-edition-1-d788e2f1",
+  "breadcrumbTitle": "AI Automation - Hospitality Edition #1",
+  "title": "AI Automation - Hospitality Edition #1",
+  "description": "Transform your hospitality operations with our AI Automation - Hospitality Edition #1. This AI-driven solution automates performance monitoring with unprecedent",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Automation - Hospitality Edition #1 - Zion Tech Group",
+    "description": "Transform your hospitality operations with our AI Automation - Hospitality Edition #1. This AI-driven solution automates performance monitoring with unprecedent",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-automation---hospitality-edition-1-d788e2f1"
+    }
+  },
+  "features": [
+    "Serverless functions",
+    "Data encryption",
+    "Multi-language support",
+    "Auto-scaling capabilities",
+    "Container orchestration"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "Zero manual intervention required",
+    "Automated compliance reporting",
+    "Real-time insights and alerts"
+  ]
+}

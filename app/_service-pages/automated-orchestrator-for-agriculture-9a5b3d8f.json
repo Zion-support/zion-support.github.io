@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/automated-orchestrator-for-agriculture-9a5b3d8f",
+  "breadcrumbTitle": "Automated Orchestrator for Agriculture",
+  "title": "Automated Orchestrator for Agriculture",
+  "description": "Transform your agriculture operations with our Automated Orchestrator for Agriculture. This AI-driven solution automates security monitoring with unprecedented ",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated Orchestrator for Agriculture - Zion Tech Group",
+    "description": "Transform your agriculture operations with our Automated Orchestrator for Agriculture. This AI-driven solution automates security monitoring with unprecedented ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-orchestrator-for-agriculture-9a5b3d8f"
+    }
+  },
+  "features": [
+    "Role-based access control",
+    "Alerting system",
+    "Custom integrations",
+    "Machine learning integration",
+    "Open-source friendly"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "Predictive maintenance scheduling",
+    "Cost optimization recommendations"
+  ]
+}

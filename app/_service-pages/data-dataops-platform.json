@@ -1,0 +1,29 @@
+{
+  "title": "DataOps Platform",
+  "description": "Automate data pipeline development, testing, and deployment. Version control for data, automated testing, monitoring, and CI/CD for data engineering teams.",
+  "basic": "$599/mo/month",
+  "pro": "$1,799/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "DataOps Platform - Zion Tech Group",
+    "description": "Automate data pipeline development, testing, and deployment. Version control for data, automated testing, monitoring, and CI/CD for data engineering teams.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/data-dataops-platform"
+    }
+  },
+  "features": [
+    "Data pipeline version control",
+    "Automated data testing",
+    "Pipeline CI/CD",
+    "Data quality monitoring",
+    "Lineage tracking"
+  ],
+  "benefits": [
+    "Ship data products faster",
+    "Catch data quality issues early",
+    "Reproducible data pipelines",
+    "Data team productivity boost"
+  ]
+}

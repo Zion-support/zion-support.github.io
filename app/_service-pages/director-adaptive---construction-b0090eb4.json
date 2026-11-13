@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/director-adaptive---construction-b0090eb4",
+  "breadcrumbTitle": "Director Adaptive - Construction",
+  "title": "Director Adaptive - Construction",
+  "description": "The future of construction is here with Director Adaptive - Construction. Powered by cutting-edge AI, this platform delivers energy management like never before",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Director Adaptive - Construction - Zion Tech Group",
+    "description": "The future of construction is here with Director Adaptive - Construction. Powered by cutting-edge AI, this platform delivers energy management like never before",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/director-adaptive---construction-b0090eb4"
+    }
+  },
+  "features": [
+    "Microservices deployment",
+    "GDPR compliance",
+    "Auto-scaling capabilities",
+    "Serverless functions",
+    "API-first design"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Predictive maintenance scheduling",
+    "Intelligent load balancing"
+  ]
+}

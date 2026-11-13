@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/automated-manager-insurance-479b1aaf",
+  "breadcrumbTitle": "Automated manager-insurance",
+  "title": "Automated manager-insurance",
+  "description": "The future of insurance is here with Automated manager-insurance. Powered by cutting-edge AI, this platform delivers predictive analytics like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated manager-insurance - Zion Tech Group",
+    "description": "The future of insurance is here with Automated manager-insurance. Powered by cutting-edge AI, this platform delivers predictive analytics like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-manager-insurance-479b1aaf"
+    }
+  },
+  "features": [
+    "Comprehensive monitoring",
+    "Serverless functions",
+    "Data encryption",
+    "Mobile-responsive interface"
+  ],
+  "benefits": [
+    "Dynamic resource allocation",
+    "Reduced human error by 95%",
+    "50% reduction in operational costs",
+    "Zero manual intervention required",
+    "Real-time insights and alerts"
+  ]
+}

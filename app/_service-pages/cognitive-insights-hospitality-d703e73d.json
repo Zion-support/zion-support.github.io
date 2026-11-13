@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/cognitive-insights-hospitality-d703e73d",
+  "breadcrumbTitle": "Cognitive insights-hospitality",
+  "title": "Cognitive insights-hospitality",
+  "description": "Transform your Hospitality operations with our Cognitive insights-hospitality. This AI-driven solution automates decision support with unprecedented accuracy an",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Cognitive insights-hospitality - Zion Tech Group",
+    "description": "Transform your Hospitality operations with our Cognitive insights-hospitality. This AI-driven solution automates decision support with unprecedented accuracy an",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cognitive-insights-hospitality-d703e73d"
+    }
+  },
+  "features": [
+    "API-first design with comprehensive REST and GraphQL endpoints",
+    "Comprehensive monitoring with custom dashboards",
+    "Performance dashboards with real-time metrics",
+    "Fraud detection with anomaly analysis",
+    "Serverless functions for cost-effective scaling"
+  ],
+  "benefits": [
+    "Increased revenue with optimized pricing strategies",
+    "Faster time-to-market with accelerated development",
+    "Improved product quality with automated testing",
+    "Better financial planning with predictive models"
+  ]
+}

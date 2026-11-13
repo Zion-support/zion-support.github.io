@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/predictive-event-driven-supply-chain-risk-scoring-a5294d05",
+  "breadcrumbTitle": "Predictive Event-Driven Supply Chain Risk Scoring",
+  "title": "Predictive Event-Driven Supply Chain Risk Scoring",
+  "description": "Predictive risk scoring engine that assesses event-driven supply chain vulnerabilities with machine learning.",
+  "basic": "$278/month",
+  "pro": "$698/month",
+  "enterprise": "$2098/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Predictive Event-Driven Supply Chain Risk Scoring - Zion Tech Group",
+    "description": "Predictive risk scoring engine that assesses event-driven supply chain vulnerabilities with machine learning.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/predictive-event-driven-supply-chain-risk-scoring-a5294d05"
+    }
+  },
+  "features": [
+    "Risk assessment",
+    "Threat modeling",
+    "Compliance scoring",
+    "Mitigation planning"
+  ],
+  "benefits": [
+    "Proactive risk mitigation",
+    "Compliance assurance",
+    "Reduced exposure",
+    "Faster incident response"
+  ]
+}

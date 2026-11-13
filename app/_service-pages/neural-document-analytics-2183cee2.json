@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/neural-document-analytics-2183cee2",
+  "breadcrumbTitle": "Neural Document Analytics",
+  "title": "Neural Document Analytics",
+  "description": "Revolutionize legal through intelligent automation. Our Neural Document Analytics leverages advanced machine learning to deliver performance monitoring at scale",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Neural Document Analytics - Zion Tech Group",
+    "description": "Revolutionize legal through intelligent automation. Our Neural Document Analytics leverages advanced machine learning to deliver performance monitoring at scale",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/neural-document-analytics-2183cee2"
+    }
+  },
+  "features": [
+    "Multi-region deployment",
+    "API-first design",
+    "HIPAA ready",
+    "Serverless functions",
+    "Comprehensive monitoring"
+  ],
+  "benefits": [
+    "Performance benchmarking",
+    "ROI in under 90 days",
+    "3x faster decision making",
+    "Automated compliance reporting",
+    "Zero manual intervention required"
+  ]
+}

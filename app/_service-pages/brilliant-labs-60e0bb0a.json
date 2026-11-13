@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/brilliant-labs-60e0bb0a",
+  "breadcrumbTitle": "Brilliant Labs",
+  "title": "Brilliant Labs",
+  "description": "Brilliant Labs is an artificial intelligence and automation technology company.",
+  "basic": "$N/A/month",
+  "pro": "$N/A/month",
+  "enterprise": "$N/A/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Brilliant Labs - Zion Tech Group",
+    "description": "Brilliant Labs is an artificial intelligence and automation technology company.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/brilliant-labs-60e0bb0a"
+    }
+  },
+  "features": [
+    "AI-driven automation",
+    "Cloud-native deployment",
+    "API-first architecture",
+    "Enterprise-grade security",
+    "Scalable infrastructure"
+  ],
+  "benefits": [
+    "Improved operational efficiency",
+    "Reduced manual processes",
+    "Data-driven decision making",
+    "Faster time-to value",
+    "Scalable performance"
+  ]
+}

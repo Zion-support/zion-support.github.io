@@ -1,0 +1,29 @@
+{
+  "title": "Data Science Platform (Managed)",
+  "description": "Managed data science on Kubernetes: MLflow tracking, model registry, managed feature store, KServe/Seldon inference, model CI/CD, GPU scheduling. Batch + real-time inference.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Data Science Platform (Managed) - Zion Tech Group",
+    "description": "Managed data science on Kubernetes: MLflow tracking, model registry, managed feature store, KServe/Seldon inference, model CI/CD, GPU scheduling. Batch + real-t",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/data-science-platform"
+    }
+  },
+  "features": [
+    "MLflow experiment tracking + model registry",
+    "Managed feature store (Feast) auto-provisioned",
+    "KServe/Seldon batch + real-time inference",
+    "Model CI/CD per training run + gate before prod",
+    "GPU scheduling per experiment, no queue"
+  ],
+  "benefits": [
+    "Reduce costs with data science platform (managed)",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

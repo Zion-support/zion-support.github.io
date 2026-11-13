@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-generated-intelligent-game-content-d3c3ed6a",
+  "breadcrumbTitle": "AI-Generated Intelligent Game Content",
+  "title": "AI-Generated Intelligent Game Content",
+  "description": "Procedural content generation platform that creates intelligent game assets, levels, narratives, and quests using generative AI, reducing development time and c",
+  "basic": "$278/month",
+  "pro": "$698/month",
+  "enterprise": "$2098/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Generated Intelligent Game Content - Zion Tech Group",
+    "description": "Procedural content generation platform that creates intelligent game assets, levels, narratives, and quests using generative AI, reducing development time and c",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-generated-intelligent-game-content-d3c3ed6a"
+    }
+  },
+  "features": [
+    "Level generation",
+    "Asset creation",
+    "Narrative design",
+    "Balance testing"
+  ],
+  "benefits": [
+    "Faster content creation",
+    "Infinite replayability",
+    "Reduced dev costs",
+    "Dynamic experiences"
+  ]
+}

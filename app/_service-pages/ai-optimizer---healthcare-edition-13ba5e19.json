@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-optimizer---healthcare-edition-13ba5e19",
+  "breadcrumbTitle": "AI Optimizer - Healthcare Edition",
+  "title": "AI Optimizer - Healthcare Edition",
+  "description": "Revolutionize healthcare through intelligent automation. Our AI Optimizer - Healthcare Edition leverages advanced machine learning to deliver predictive analyti",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Optimizer - Healthcare Edition - Zion Tech Group",
+    "description": "Revolutionize healthcare through intelligent automation. Our AI Optimizer - Healthcare Edition leverages advanced machine learning to deliver predictive analyti",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-optimizer---healthcare-edition-13ba5e19"
+    }
+  },
+  "features": [
+    "HIPAA ready",
+    "Mobile-responsive interface",
+    "Role-based access control",
+    "Performance dashboards"
+  ],
+  "benefits": [
+    "Performance benchmarking",
+    "ROI in under 90 days",
+    "Zero manual intervention required",
+    "Self-healing infrastructure",
+    "Real-time insights and alerts"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "Micro-SaaS AI Hiring Pipeline & ATS",
+  "description": "Lightweight AI-powered applicant tracking system for SMBs. Smart resume parsing, candidate scoring, interview scheduling, and offer management — all in one affordable platform.",
+  "basic": "$99/mo/month",
+  "pro": "$249/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Micro-SaaS AI Hiring Pipeline & ATS - Zion Tech Group",
+    "description": "Lightweight AI-powered applicant tracking system for SMBs. Smart resume parsing, candidate scoring, interview scheduling, and offer management — all in one affo",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-ai-hiring-pipeline"
+    }
+  },
+  "features": [
+    "AI resume parsing and candidate scoring",
+    "Smart job description generator",
+    "Automated interview scheduling",
+    "Candidate communication templates",
+    "Offer letter generation and e-signature"
+  ],
+  "benefits": [
+    "Reduce time-to-hire by 50%",
+    "Screen 100 resumes in minutes",
+    "Eliminate scheduling back-and-forth",
+    "Affordable for small businesses"
+  ]
+}

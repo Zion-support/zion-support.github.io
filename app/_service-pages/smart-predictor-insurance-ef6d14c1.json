@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/smart-predictor-insurance-ef6d14c1",
+  "breadcrumbTitle": "Smart predictor-insurance",
+  "title": "Smart predictor-insurance",
+  "description": "Next-generation insurance solution: Smart predictor-insurance. Combines document processing with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart predictor-insurance - Zion Tech Group",
+    "description": "Next-generation insurance solution: Smart predictor-insurance. Combines document processing with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-predictor-insurance-ef6d14c1"
+    }
+  },
+  "features": [
+    "Alerting system",
+    "Mobile-responsive interface",
+    "HIPAA ready",
+    "Multi-region deployment",
+    "Role-based access control"
+  ],
+  "benefits": [
+    "Seamless integration with existing systems",
+    "Zero manual intervention required",
+    "Reduced human error by 95%"
+  ]
+}

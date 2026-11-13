@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/autonomous-manager-energy-88db4529",
+  "breadcrumbTitle": "Autonomous manager-energy",
+  "title": "Autonomous manager-energy",
+  "description": "The future of energy is here with Autonomous manager-energy. Powered by cutting-edge AI, this platform delivers data processing like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous manager-energy - Zion Tech Group",
+    "description": "The future of energy is here with Autonomous manager-energy. Powered by cutting-edge AI, this platform delivers data processing like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-manager-energy-88db4529"
+    }
+  },
+  "features": [
+    "Offline capabilities",
+    "Cloud-native architecture",
+    "Edge computing support",
+    "SOC 2 certified"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "Zero manual intervention required",
+    "Scalable to millions of transactions"
+  ]
+}

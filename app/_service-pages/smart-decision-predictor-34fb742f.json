@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/smart-decision-predictor-34fb742f",
+  "breadcrumbTitle": "Smart Decision Predictor",
+  "title": "Smart Decision Predictor",
+  "description": "Next-generation healthcare solution: Smart Decision Predictor. Combines content generation with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Decision Predictor - Zion Tech Group",
+    "description": "Next-generation healthcare solution: Smart Decision Predictor. Combines content generation with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-decision-predictor-34fb742f"
+    }
+  },
+  "features": [
+    "Offline capabilities",
+    "Serverless functions",
+    "Open-source friendly",
+    "Mobile-responsive interface",
+    "Auto-scaling capabilities"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "Dynamic resource allocation",
+    "ROI in under 90 days",
+    "Scalable to millions of transactions"
+  ]
+}

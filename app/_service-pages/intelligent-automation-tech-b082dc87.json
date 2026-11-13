@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligent-automation-tech-b082dc87",
+  "breadcrumbTitle": "Intelligent automation-tech",
+  "title": "Intelligent automation-tech",
+  "description": "Next-generation technology solution: Intelligent automation-tech. Combines data processing with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent automation-tech - Zion Tech Group",
+    "description": "Next-generation technology solution: Intelligent automation-tech. Combines data processing with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-automation-tech-b082dc87"
+    }
+  },
+  "features": [
+    "Auto-scaling capabilities",
+    "HIPAA ready",
+    "Edge computing support",
+    "SOC 2 certified"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Scalable to millions of transactions",
+    "24/7 automated operations",
+    "Intelligent load balancing",
+    "Dynamic resource allocation"
+  ]
+}

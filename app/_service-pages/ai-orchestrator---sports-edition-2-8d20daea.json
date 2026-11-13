@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-orchestrator---sports-edition-2-8d20daea",
+  "breadcrumbTitle": "AI Orchestrator - Sports Edition #2",
+  "title": "AI Orchestrator - Sports Edition #2",
+  "description": "The future of sports is here with AI Orchestrator - Sports Edition #2. Powered by cutting-edge AI, this platform delivers predictive analytics like never before",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Orchestrator - Sports Edition #2 - Zion Tech Group",
+    "description": "The future of sports is here with AI Orchestrator - Sports Edition #2. Powered by cutting-edge AI, this platform delivers predictive analytics like never before",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-orchestrator---sports-edition-2-8d20daea"
+    }
+  },
+  "features": [
+    "Custom integrations",
+    "Microservices deployment",
+    "Edge computing support",
+    "Cloud-native architecture"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "Intelligent load balancing",
+    "Dynamic resource allocation",
+    "50% reduction in operational costs"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "FeatureVault — Feature Request Tracker",
+  "description": "Customer feedback and feature request management platform. Public roadmap, voting boards, and automatic categorization of feedback using AI. Integrates with Intercom, Zendesk, and Slack.",
+  "basic": "$49/mo/month",
+  "pro": "$149/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "FeatureVault — Feature Request Tracker - Zion Tech Group",
+    "description": "Customer feedback and feature request management platform. Public roadmap, voting boards, and automatic categorization of feedback using AI. Integrates with Int",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-feature-request-tracker"
+    }
+  },
+  "features": [
+    "Public roadmap with voting",
+    "AI-powered feedback categorization",
+    "Intercom/Zendesk/Slack integration",
+    "Customer segmentation by plan",
+    "Changelog and release notes"
+  ],
+  "benefits": [
+    "Prioritize features by customer demand",
+    "Reduce support ticket volume",
+    "Increase customer engagement",
+    "Data-driven product decisions"
+  ]
+}

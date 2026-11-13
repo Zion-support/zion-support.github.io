@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/manager-neural---insurance-afafedc1",
+  "breadcrumbTitle": "Manager Neural - Insurance",
+  "title": "Manager Neural - Insurance",
+  "description": "Unlock unprecedented growth with Manager Neural - Insurance. This autonomous system provides network optimization with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Manager Neural - Insurance - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Manager Neural - Insurance. This autonomous system provides network optimization with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/manager-neural---insurance-afafedc1"
+    }
+  },
+  "features": [
+    "Zero-downtime updates",
+    "Multi-region deployment",
+    "Comprehensive monitoring",
+    "SOC 2 certified",
+    "Alerting system"
+  ],
+  "benefits": [
+    "Automated compliance reporting",
+    "3x faster decision making",
+    "Predictive maintenance scheduling",
+    "99.9% uptime guarantee"
+  ]
+}

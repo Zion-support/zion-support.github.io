@@ -1,0 +1,28 @@
+{
+  "title": "Managed Database as a Service (DBaaS)",
+  "description": "Fully managed databases with automated backups, scaling, and monitoring. Supports PostgreSQL, MySQL, MongoDB, and Redis. Includes query optimization, security patching, and 24/7 support.",
+  "basic": "$N/A/month",
+  "pro": "$N/A/month",
+  "enterprise": "$599/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Managed Database as a Service (DBaaS) - Zion Tech Group",
+    "description": "Fully managed databases with automated backups, scaling, and monitoring. Supports PostgreSQL, MySQL, MongoDB, and Redis. Includes query optimization, security p",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/database-as-a-service"
+    }
+  },
+  "features": [
+    "PostgreSQL/MySQL/MongoDB/Redis",
+    "Automated backups",
+    "Auto-scaling",
+    "Query optimization",
+    "Security patching"
+  ],
+  "benefits": [
+    "99.99% uptime",
+    "70% reduction in DB admin time",
+    "Auto-scaling on demand"
+  ]
+}

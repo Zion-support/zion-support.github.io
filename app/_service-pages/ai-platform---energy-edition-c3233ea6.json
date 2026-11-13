@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-platform---energy-edition-c3233ea6",
+  "breadcrumbTitle": "AI Platform - Energy Edition",
+  "title": "AI Platform - Energy Edition",
+  "description": "The future of energy is here with AI Platform - Energy Edition. Powered by cutting-edge AI, this platform delivers sales forecasting like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Platform - Energy Edition - Zion Tech Group",
+    "description": "The future of energy is here with AI Platform - Energy Edition. Powered by cutting-edge AI, this platform delivers sales forecasting like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-platform---energy-edition-c3233ea6"
+    }
+  },
+  "features": [
+    "Edge computing support",
+    "Performance dashboards",
+    "Offline capabilities",
+    "Role-based access control",
+    "Multi-region deployment"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "Scalable to millions of transactions",
+    "24/7 automated operations"
+  ]
+}

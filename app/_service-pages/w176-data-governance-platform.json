@@ -1,0 +1,29 @@
+{
+  "title": "Data Governance Platform",
+  "description": "Enterprise data governance: policy management, data classification, stewardship workflows, and compliance tracking. Govern your data assets properly.",
+  "basic": "$599/mo/month",
+  "pro": "$1,799/mo/month",
+  "enterprise": "$5,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Data Governance Platform - Zion Tech Group",
+    "description": "Enterprise data governance: policy management, data classification, stewardship workflows, and compliance tracking. Govern your data assets properly.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w176-data-governance-platform"
+    }
+  },
+  "features": [
+    "Data policy definition and enforcement",
+    "Automated data classification (PII, PHI, sensitive)",
+    "Stewardship workflows and accountability",
+    "Data lineage and impact analysis",
+    "Compliance tracking (GDPR, CCPA, HIPAA)"
+  ],
+  "benefits": [
+    "Classify sensitive data automatically",
+    "Stewardship ensures data quality accountability",
+    "Lineage tracks data from source to report",
+    "Compliance tracking reduces audit risk"
+  ]
+}

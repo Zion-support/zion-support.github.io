@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/manager-neural---agriculture-a2b6395e",
+  "breadcrumbTitle": "Manager Neural - Agriculture",
+  "title": "Manager Neural - Agriculture",
+  "description": "Revolutionize agriculture through intelligent automation. Our Manager Neural - Agriculture leverages advanced machine learning to deliver decision support at sc",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Manager Neural - Agriculture - Zion Tech Group",
+    "description": "Revolutionize agriculture through intelligent automation. Our Manager Neural - Agriculture leverages advanced machine learning to deliver decision support at sc",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/manager-neural---agriculture-a2b6395e"
+    }
+  },
+  "features": [
+    "Alerting system",
+    "Auto-scaling capabilities",
+    "API-first design",
+    "SOC 2 certified",
+    "Data encryption"
+  ],
+  "benefits": [
+    "Dynamic resource allocation",
+    "Cost optimization recommendations",
+    "ROI in under 90 days"
+  ]
+}

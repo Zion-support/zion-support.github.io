@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/automation-automated---telecom-4343cc9c",
+  "breadcrumbTitle": "Automation Automated - Telecom",
+  "title": "Automation Automated - Telecom",
+  "description": "Unlock unprecedented growth with Automation Automated - Telecom. This autonomous system provides data processing with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automation Automated - Telecom - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Automation Automated - Telecom. This autonomous system provides data processing with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automation-automated---telecom-4343cc9c"
+    }
+  },
+  "features": [
+    "HIPAA ready",
+    "Role-based access control",
+    "Plugin architecture",
+    "Microservices deployment",
+    "API-first design"
+  ],
+  "benefits": [
+    "Scalable to millions of transactions",
+    "Zero manual intervention required",
+    "Cost optimization recommendations"
+  ]
+}

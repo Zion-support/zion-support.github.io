@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-coordinator---sports-edition-fea91728",
+  "breadcrumbTitle": "AI Coordinator - Sports Edition",
+  "title": "AI Coordinator - Sports Edition",
+  "description": "Transform your sports operations with our AI Coordinator - Sports Edition. This AI-driven solution automates customer insights with unprecedented accuracy and e",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Coordinator - Sports Edition - Zion Tech Group",
+    "description": "Transform your sports operations with our AI Coordinator - Sports Edition. This AI-driven solution automates customer insights with unprecedented accuracy and e",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-coordinator---sports-edition-fea91728"
+    }
+  },
+  "features": [
+    "Serverless functions",
+    "Role-based access control",
+    "Real-time processing",
+    "Multi-language support"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "Enterprise-grade security",
+    "Cost optimization recommendations",
+    "50% reduction in operational costs"
+  ]
+}

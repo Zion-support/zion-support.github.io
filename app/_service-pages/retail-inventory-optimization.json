@@ -1,0 +1,29 @@
+{
+  "title": "AI Retail Inventory Optimization",
+  "description": "AI-powered inventory optimization for retail chains. Demand forecasting, automatic replenishment, markdown optimization, and omnichannel inventory visibility.",
+  "basic": "$799/mo/month",
+  "pro": "$2,499/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Retail Inventory Optimization - Zion Tech Group",
+    "description": "AI-powered inventory optimization for retail chains. Demand forecasting, automatic replenishment, markdown optimization, and omnichannel inventory visibility.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/retail-inventory-optimization"
+    }
+  },
+  "features": [
+    "Demand forecasting by SKU and location",
+    "Automatic purchase orders",
+    "Markdown optimization",
+    "Omnichannel inventory visibility",
+    "Seasonal trend analysis"
+  ],
+  "benefits": [
+    "Reduce stockouts by 45%",
+    "Decrease excess inventory by 30%",
+    "Optimize markdown timing",
+    "Improve inventory turnover"
+  ]
+}

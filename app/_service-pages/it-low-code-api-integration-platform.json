@@ -1,0 +1,29 @@
+{
+  "title": "IT Low-Code Integration & API Management Platform",
+  "description": "Visual integration platform connecting any application, data source, or API without code. 500+ pre-built SaaS connectors.",
+  "basic": "$299/mo/month",
+  "pro": "$999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "IT Low-Code Integration & API Management Platform - Zion Tech Group",
+    "description": "Visual integration platform connecting any application, data source, or API without code. 500+ pre-built SaaS connectors.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-low-code-api-integration-platform"
+    }
+  },
+  "features": [
+    "500+ pre-built SaaS connectors",
+    "Visual drag-and-drop integration builder",
+    "Real-time and batch synchronization",
+    "API gateway with rate limiting",
+    "Data transformation engine"
+  ],
+  "benefits": [
+    "Reduce integration time by 90%",
+    "Connect any system without coding",
+    "Eliminate data silos",
+    "Scale integrations without engineering"
+  ]
+}

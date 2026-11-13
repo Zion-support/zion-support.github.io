@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-driven-adaptive-financial-planning-7b0b2efd",
+  "breadcrumbTitle": "AI-Driven Adaptive Financial Planning",
+  "title": "AI-Driven Adaptive Financial Planning",
+  "description": "Automated financial planning system that creates adaptive personalized wealth strategies, tax optimization, and retirement planning using advanced algorithms.",
+  "basic": "$258/month",
+  "pro": "$648/month",
+  "enterprise": "$1948/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Driven Adaptive Financial Planning - Zion Tech Group",
+    "description": "Automated financial planning system that creates adaptive personalized wealth strategies, tax optimization, and retirement planning using advanced algorithms.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-driven-adaptive-financial-planning-7b0b2efd"
+    }
+  },
+  "features": [
+    "Goal-based planning",
+    "Tax optimization",
+    "Monte Carlo simulation",
+    "Rebalancing automation"
+  ],
+  "benefits": [
+    "Personalized advice",
+    "Tax efficiency",
+    "Goal achievement",
+    "Lower fees"
+  ]
+}

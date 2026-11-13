@@ -1,0 +1,29 @@
+{
+  "title": "FinTech Fraud Detection Engine",
+  "description": "Real-time transaction monitoring with behavioral analytics and anomaly detection. Processes 1M+ transactions per second.",
+  "basic": "$N/A/month",
+  "pro": "$24997/month",
+  "enterprise": "$49997/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "FinTech Fraud Detection Engine - Zion Tech Group",
+    "description": "Real-time transaction monitoring with behavioral analytics and anomaly detection. Processes 1M+ transactions per second.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w129-fintech-fraud"
+    }
+  },
+  "features": [
+    "Real-time monitoring",
+    "Behavioral analytics",
+    "Anomaly detection",
+    "AML compliance",
+    "Chargeback prevention"
+  ],
+  "benefits": [
+    "94% fraud detection",
+    "<50ms latency",
+    "AML compliance",
+    "Reduced chargebacks"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-cloud-native-operational-intelligence-platform-43ad972d",
+  "breadcrumbTitle": "AI-Powered Cloud-Native Operational Intelligence Platform",
+  "title": "AI-Powered Cloud-Native Operational Intelligence Platform",
+  "description": "AI-driven intelligence platform that delivers cloud-native insights and automated decision-making for operational operations.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Cloud-Native Operational Intelligence Platform - Zion Tech Group",
+    "description": "AI-driven intelligence platform that delivers cloud-native insights and automated decision-making for operational operations.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-cloud-native-operational-intelligence-platform-43ad972d"
+    }
+  },
+  "features": [
+    "Real-time intelligence",
+    "Automated insights",
+    "Predictive alerts",
+    "API integration"
+  ],
+  "benefits": [
+    "Real-time actionable insights",
+    "Automated decision-making",
+    "Reduced latency",
+    "Improved accuracy"
+  ]
+}

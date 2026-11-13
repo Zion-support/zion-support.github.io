@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/autonomous-analytics-construction-9529ff5f",
+  "breadcrumbTitle": "Autonomous analytics-construction",
+  "title": "Autonomous analytics-construction",
+  "description": "Next-generation construction solution: Autonomous analytics-construction. Combines decision support with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous analytics-construction - Zion Tech Group",
+    "description": "Next-generation construction solution: Autonomous analytics-construction. Combines decision support with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-analytics-construction-9529ff5f"
+    }
+  },
+  "features": [
+    "Real-time processing",
+    "API-first design",
+    "Role-based access control",
+    "Edge computing support",
+    "HIPAA ready"
+  ],
+  "benefits": [
+    "Seamless integration with existing systems",
+    "50% reduction in operational costs",
+    "Scalable to millions of transactions",
+    "Real-time insights and alerts",
+    "Enterprise-grade security"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "MISP Threat Intelligence Platform",
+  "description": "Private MISP TI platform: automated feed ingestion (OTX/Abuse.ch/Feodo/URLhaus), STIX/TAXII sharing, SIEM playbook sync, custom indicator lifecycle management.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "MISP Threat Intelligence Platform - Zion Tech Group",
+    "description": "Private MISP TI platform: automated feed ingestion (OTX/Abuse.ch/Feodo/URLhaus), STIX/TAXII sharing, SIEM playbook sync, custom indicator lifecycle management.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/misp-threat-intel"
+    }
+  },
+  "features": [
+    "Private MISP on AWS/GCP/Azure",
+    "Automated feed ingestion via STIX/TAXII",
+    "Indicator lifecycle (create/update/expire)",
+    "Partner sharing via TAXII/STIX",
+    "SIEM integration (Splunk/QRadar/Sentinel)"
+  ],
+  "benefits": [
+    "Reduce costs with misp threat intelligence platform",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

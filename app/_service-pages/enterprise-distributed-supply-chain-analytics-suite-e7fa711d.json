@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/enterprise-distributed-supply-chain-analytics-suite-e7fa711d",
+  "breadcrumbTitle": "Enterprise Distributed Supply Chain Analytics Suite",
+  "title": "Enterprise Distributed Supply Chain Analytics Suite",
+  "description": "Enterprise analytics suite that delivers distributed supply chain insights with unified dashboards and reporting.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Enterprise Distributed Supply Chain Analytics Suite - Zion Tech Group",
+    "description": "Enterprise analytics suite that delivers distributed supply chain insights with unified dashboards and reporting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/enterprise-distributed-supply-chain-analytics-suite-e7fa711d"
+    }
+  },
+  "features": [
+    "Data visualization",
+    "Custom dashboards",
+    "Report generation",
+    "KPI tracking"
+  ],
+  "benefits": [
+    "Unified data view",
+    "Faster insights",
+    "Customizable reports",
+    "Cross-functional collaboration"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-engine-for-manufacturing-8c753b02",
+  "breadcrumbTitle": "AI-Powered Engine for Manufacturing",
+  "title": "AI-Powered Engine for Manufacturing",
+  "description": "Next-generation manufacturing solution: AI-Powered Engine for Manufacturing. Combines content generation with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Engine for Manufacturing - Zion Tech Group",
+    "description": "Next-generation manufacturing solution: AI-Powered Engine for Manufacturing. Combines content generation with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-engine-for-manufacturing-8c753b02"
+    }
+  },
+  "features": [
+    "Audit trails",
+    "Custom integrations",
+    "Edge computing support",
+    "Open-source friendly",
+    "Role-based access control"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "Cost optimization recommendations",
+    "Dynamic resource allocation"
+  ]
+}

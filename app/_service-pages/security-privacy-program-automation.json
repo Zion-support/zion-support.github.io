@@ -1,0 +1,28 @@
+{
+  "title": "Privacy Program Automation",
+  "description": "DPIA/LIA workflow, consent receipt ledger, DSAR ticketing + fulfilment SLA tracker, and automated GDPR/CCPA disclosure.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Privacy Program Automation - Zion Tech Group",
+    "description": "DPIA/LIA workflow, consent receipt ledger, DSAR ticketing + fulfilment SLA tracker, and automated GDPR/CCPA disclosure.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/security-privacy-program-automation"
+    }
+  },
+  "features": [
+    "DPIAs/LIAs auto-route per data type",
+    "Consent receipt ledger + preference store",
+    "DSAR ticketing + fulfilment SLA tracker",
+    "Automated data subject disclosure PDF"
+  ],
+  "benefits": [
+    "Reduce costs with privacy program automation",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

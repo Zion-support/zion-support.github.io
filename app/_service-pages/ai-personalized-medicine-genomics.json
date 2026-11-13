@@ -1,0 +1,29 @@
+{
+  "title": "AI Personalized Medicine & Genomics Platform",
+  "description": "AI-driven genomic analysis for personalized treatment plans, drug response prediction, and rare disease diagnosis.",
+  "basic": "$3,000/mo/month",
+  "pro": "$8,000/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Personalized Medicine & Genomics Platform - Zion Tech Group",
+    "description": "AI-driven genomic analysis for personalized treatment plans, drug response prediction, and rare disease diagnosis.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-personalized-medicine-genomics"
+    }
+  },
+  "features": [
+    "Whole genome sequencing analysis",
+    "Pharmacogenomic drug response prediction",
+    "Rare disease variant identification",
+    "Cancer treatment recommendation engine",
+    "EHR integration via FHIR/HL7"
+  ],
+  "benefits": [
+    "Improve treatment outcomes by 40%",
+    "Reduce adverse drug reactions",
+    "Accelerate rare disease diagnosis",
+    "Enable precision medicine at scale"
+  ]
+}

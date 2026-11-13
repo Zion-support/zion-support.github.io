@@ -1,0 +1,29 @@
+{
+  "title": "AI Carbon Capture Optimization",
+  "description": "Optimize carbon capture and storage operations with AI. Process optimization, monitoring, and reporting for industrial carbon capture facilities.",
+  "basic": "$3,999/mo/month",
+  "pro": "$12,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Carbon Capture Optimization - Zion Tech Group",
+    "description": "Optimize carbon capture and storage operations with AI. Process optimization, monitoring, and reporting for industrial carbon capture facilities.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/energy-carbon-capture-optimization"
+    }
+  },
+  "features": [
+    "Process optimization AI",
+    "CO2 capture efficiency monitoring",
+    "Storage integrity monitoring",
+    "Carbon credit verification",
+    "Regulatory reporting automation"
+  ],
+  "benefits": [
+    "Increase capture efficiency by 15%",
+    "Reduce operating costs",
+    "Automate carbon credit reporting",
+    "Ensure regulatory compliance"
+  ]
+}

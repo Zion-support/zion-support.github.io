@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/insights-smart---hospitality-da69f150",
+  "breadcrumbTitle": "Insights Smart - Hospitality",
+  "title": "Insights Smart - Hospitality",
+  "description": "The future of hospitality is here with Insights Smart - Hospitality. Powered by cutting-edge AI, this platform delivers performance monitoring like never before",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Insights Smart - Hospitality - Zion Tech Group",
+    "description": "The future of hospitality is here with Insights Smart - Hospitality. Powered by cutting-edge AI, this platform delivers performance monitoring like never before",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/insights-smart---hospitality-da69f150"
+    }
+  },
+  "features": [
+    "Serverless functions",
+    "Offline capabilities",
+    "Open-source friendly",
+    "Container orchestration",
+    "Plugin architecture"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "Reduced human error by 95%",
+    "Cost optimization recommendations",
+    "Intelligent load balancing",
+    "Automated compliance reporting"
+  ]
+}

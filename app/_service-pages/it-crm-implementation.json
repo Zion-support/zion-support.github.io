@@ -1,0 +1,29 @@
+{
+  "title": "IT CRM Implementation & Customer Data Platform",
+  "description": "CRM implementation and customer data platform setup. Salesforce, HubSpot, or Microsoft Dynamics — with custom workflows, integrations, and analytics.",
+  "basic": "$3,000/mo/month",
+  "pro": "$8,000/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "IT CRM Implementation & Customer Data Platform - Zion Tech Group",
+    "description": "CRM implementation and customer data platform setup. Salesforce, HubSpot, or Microsoft Dynamics — with custom workflows, integrations, and analytics.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-crm-implementation"
+    }
+  },
+  "features": [
+    "CRM selection and licensing optimization",
+    "Custom object and workflow design",
+    "Sales process automation",
+    "Marketing automation integration",
+    "Customer data platform (CDP) setup"
+  ],
+  "benefits": [
+    "Increase sales productivity by 35%",
+    "Unify customer data across all systems",
+    "Automate sales and marketing workflows",
+    "Improve customer retention with 360-degree view"
+  ]
+}

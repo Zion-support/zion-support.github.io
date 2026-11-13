@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/smart-automation-construction-812e9afc",
+  "breadcrumbTitle": "Smart automation-construction",
+  "title": "Smart automation-construction",
+  "description": "Unlock unprecedented growth with Smart automation-construction. This autonomous system provides financial planning with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart automation-construction - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Smart automation-construction. This autonomous system provides financial planning with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-automation-construction-812e9afc"
+    }
+  },
+  "features": [
+    "Microservices deployment",
+    "Real-time processing",
+    "Mobile-responsive interface",
+    "Comprehensive monitoring",
+    "Auto-scaling capabilities"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Intelligent load balancing",
+    "Predictive maintenance scheduling",
+    "Self-healing infrastructure"
+  ]
+}

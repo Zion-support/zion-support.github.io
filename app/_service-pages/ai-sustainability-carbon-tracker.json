@@ -1,0 +1,28 @@
+{
+  "title": "AI Sustainability & Carbon Tracker",
+  "description": "Automatically calculates organizational carbon footprint from operational data (energy, travel, cloud usage) and suggests reduction strategies.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Sustainability & Carbon Tracker - Zion Tech Group",
+    "description": "Automatically calculates organizational carbon footprint from operational data (energy, travel, cloud usage) and suggests reduction strategies.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-sustainability-carbon-tracker"
+    }
+  },
+  "features": [
+    "Integration with AWS/GCP carbon APIs",
+    "Travel emission estimation from calendars",
+    "Supply chain scope 3 modeling",
+    "Regulatory reporting templates (ESG)"
+  ],
+  "benefits": [
+    "Reduce costs with ai sustainability & carbon tracker",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

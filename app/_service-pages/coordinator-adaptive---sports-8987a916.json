@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/coordinator-adaptive---sports-8987a916",
+  "breadcrumbTitle": "Coordinator Adaptive - Sports",
+  "title": "Coordinator Adaptive - Sports",
+  "description": "Next-generation sports solution: Coordinator Adaptive - Sports. Combines workflow management with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Coordinator Adaptive - Sports - Zion Tech Group",
+    "description": "Next-generation sports solution: Coordinator Adaptive - Sports. Combines workflow management with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/coordinator-adaptive---sports-8987a916"
+    }
+  },
+  "features": [
+    "Multi-language support",
+    "HIPAA ready",
+    "Real-time processing",
+    "API-first design",
+    "Auto-scaling capabilities"
+  ],
+  "benefits": [
+    "24/7 automated operations",
+    "Automated compliance reporting",
+    "Enterprise-grade security",
+    "Dynamic resource allocation",
+    "Predictive maintenance scheduling"
+  ]
+}

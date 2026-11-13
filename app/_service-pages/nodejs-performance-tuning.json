@@ -1,0 +1,29 @@
+{
+  "title": "Node.js Performance Tuning & Profiling",
+  "description": "Deep performance optimization for Node.js applications: event loop analysis, memory leak detection, concurrency tuning, and scalability architecture review.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Node.js Performance Tuning & Profiling - Zion Tech Group",
+    "description": "Deep performance optimization for Node.js applications: event loop analysis, memory leak detection, concurrency tuning, and scalability architecture review.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/nodejs-performance-tuning"
+    }
+  },
+  "features": [
+    "Event loop delay monitoring & troubleshooting",
+    "Memory profiling & leak detection",
+    "CPU & I/O bottleneck analysis",
+    "Cluster & worker threads optimization",
+    "Garbage collection tuning"
+  ],
+  "benefits": [
+    "Reduce costs with node.js performance tuning & profiling",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/autonomous-intelligence-sports-f8a39948",
+  "breadcrumbTitle": "Autonomous intelligence-sports",
+  "title": "Autonomous intelligence-sports",
+  "description": "Next-generation sports solution: Autonomous intelligence-sports. Combines threat detection with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous intelligence-sports - Zion Tech Group",
+    "description": "Next-generation sports solution: Autonomous intelligence-sports. Combines threat detection with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-intelligence-sports-f8a39948"
+    }
+  },
+  "features": [
+    "GDPR compliance",
+    "Rollback mechanisms",
+    "Cloud-native architecture",
+    "Mobile-responsive interface"
+  ],
+  "benefits": [
+    "24/7 automated operations",
+    "Dynamic resource allocation",
+    "Scalable to millions of transactions"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/neural-orchestrator-for-legal-099d5a4d",
+  "breadcrumbTitle": "Neural Orchestrator for Legal",
+  "title": "Neural Orchestrator for Legal",
+  "description": "Revolutionize legal through intelligent automation. Our Neural Orchestrator for Legal leverages advanced machine learning to deliver document processing at scal",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Neural Orchestrator for Legal - Zion Tech Group",
+    "description": "Revolutionize legal through intelligent automation. Our Neural Orchestrator for Legal leverages advanced machine learning to deliver document processing at scal",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/neural-orchestrator-for-legal-099d5a4d"
+    }
+  },
+  "features": [
+    "Multi-language support",
+    "SOC 2 certified",
+    "API-first design",
+    "Rollback mechanisms"
+  ],
+  "benefits": [
+    "Scalable to millions of transactions",
+    "Self-healing infrastructure",
+    "Real-time insights and alerts"
+  ]
+}

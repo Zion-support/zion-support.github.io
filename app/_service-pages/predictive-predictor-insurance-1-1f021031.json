@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/predictive-predictor-insurance-1-1f021031",
+  "breadcrumbTitle": "Predictive predictor-insurance #1",
+  "title": "Predictive predictor-insurance #1",
+  "description": "Next-generation insurance solution: Predictive predictor-insurance #1. Combines supply chain with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Predictive predictor-insurance #1 - Zion Tech Group",
+    "description": "Next-generation insurance solution: Predictive predictor-insurance #1. Combines supply chain with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/predictive-predictor-insurance-1-1f021031"
+    }
+  },
+  "features": [
+    "Data encryption",
+    "SOC 2 certified",
+    "API-first design",
+    "Open-source friendly",
+    "Container orchestration"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "Zero manual intervention required",
+    "Automated compliance reporting",
+    "3x faster decision making"
+  ]
+}

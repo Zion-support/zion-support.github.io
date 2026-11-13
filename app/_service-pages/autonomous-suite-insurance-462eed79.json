@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/autonomous-suite-insurance-462eed79",
+  "breadcrumbTitle": "Autonomous suite-insurance",
+  "title": "Autonomous suite-insurance",
+  "description": "Revolutionize insurance through intelligent automation. Our Autonomous suite-insurance leverages advanced machine learning to deliver quality control at scale.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous suite-insurance - Zion Tech Group",
+    "description": "Revolutionize insurance through intelligent automation. Our Autonomous suite-insurance leverages advanced machine learning to deliver quality control at scale.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-suite-insurance-462eed79"
+    }
+  },
+  "features": [
+    "Rollback mechanisms",
+    "Performance dashboards",
+    "Comprehensive monitoring",
+    "Role-based access control",
+    "Open-source friendly"
+  ],
+  "benefits": [
+    "Automated compliance reporting",
+    "Performance benchmarking",
+    "50% reduction in operational costs"
+  ]
+}

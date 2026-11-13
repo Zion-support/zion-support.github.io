@@ -1,0 +1,29 @@
+{
+  "title": "Synthetic Data Generator & Privacy Shield",
+  "description": "Generative synthetic data platform for ML training, software testing, and GDPR/CCPA privacy compliance: maintains statistical distributions of real data while producing 100% synthetic records that pass all real-world QA and validation tests without human PII.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Synthetic Data Generator & Privacy Shield - Zion Tech Group",
+    "description": "Generative synthetic data platform for ML training, software testing, and GDPR/CCPA privacy compliance: maintains statistical distributions of real data while p",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/data-synthetic-data-generator"
+    }
+  },
+  "features": [
+    "Generative tabular model: preserves statistical distributions and edge-cases from real data",
+    "PII-free guarantee: no real person IDs, SSNs, phone numbers, addresses, or credit card numbers in output",
+    "Edge-case preservation: rare events, outliers, null patterns and multi-filed relationship preserved statistically",
+    "Schema evolution: same generator continues generating data from updated schema as schema evolves",
+    "SDV + CTGAN engine: zero-code, point-and-click configuration or full Python API"
+  ],
+  "benefits": [
+    "Reduce costs with synthetic data generator & privacy shield",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "Generative AI Enterprise",
+  "description": "Enterprise-scale generative AI for content, code, and data. Deploy secure, governed LLM workflows with custom models, RAG, and fine-tuning for prod...",
+  "basic": "$2,499/mo/month",
+  "pro": "$4,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Generative AI Enterprise - Zion Tech Group",
+    "description": "Enterprise-scale generative AI for content, code, and data. Deploy secure, governed LLM workflows with custom models, RAG, and fine-tuning for prod...",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/generative-ai-enterprise"
+    }
+  },
+  "features": [
+    "Secure LLM Deployment",
+    "RAG & Knowledge Grounding",
+    "Custom Model Fine-Tuning",
+    "Multi-Modal Generation",
+    "Governance & Compliance"
+  ],
+  "benefits": [
+    "Reduce costs with generative ai enterprise",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

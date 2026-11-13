@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/automated-process-management-22be67cc",
+  "breadcrumbTitle": "Automated Process Management",
+  "title": "Automated Process Management",
+  "description": "Revolutionize transportation through intelligent automation. Our Automated Process Management leverages advanced machine learning to deliver financial planning ",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated Process Management - Zion Tech Group",
+    "description": "Revolutionize transportation through intelligent automation. Our Automated Process Management leverages advanced machine learning to deliver financial planning ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-process-management-22be67cc"
+    }
+  },
+  "features": [
+    "GDPR compliance",
+    "Data encryption",
+    "Open-source friendly",
+    "Zero-downtime updates",
+    "HIPAA ready"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Predictive maintenance scheduling",
+    "Zero manual intervention required"
+  ]
+}

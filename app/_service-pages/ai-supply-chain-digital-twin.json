@@ -1,0 +1,29 @@
+{
+  "title": "AI Supply Chain Digital Twin",
+  "description": "Create a virtual replica of your entire supply chain for simulation, optimization, and risk management. Model scenarios, predict disruptions, and optimize inventory across the network in real-time.",
+  "basic": "$2,999/mo/month",
+  "pro": "$7,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Supply Chain Digital Twin - Zion Tech Group",
+    "description": "Create a virtual replica of your entire supply chain for simulation, optimization, and risk management. Model scenarios, predict disruptions, and optimize inven",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-supply-chain-digital-twin"
+    }
+  },
+  "features": [
+    "Full supply chain modeling",
+    "Real-time simulation engine",
+    "Disruption prediction and alerting",
+    "Inventory optimization across nodes",
+    "What-if scenario analysis"
+  ],
+  "benefits": [
+    "Reduce supply chain disruptions by 50%",
+    "Optimize inventory costs",
+    "Data-driven scenario planning",
+    "Improve sustainability metrics"
+  ]
+}

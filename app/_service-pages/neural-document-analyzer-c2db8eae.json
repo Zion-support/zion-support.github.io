@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/neural-document-analyzer-c2db8eae",
+  "breadcrumbTitle": "Neural Document Analyzer",
+  "title": "Neural Document Analyzer",
+  "description": "Unlock unprecedented growth with Neural Document Analyzer. This autonomous system provides resource optimization with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Neural Document Analyzer - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Neural Document Analyzer. This autonomous system provides resource optimization with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/neural-document-analyzer-c2db8eae"
+    }
+  },
+  "features": [
+    "Multi-region deployment",
+    "GDPR compliance",
+    "Plugin architecture",
+    "Cloud-native architecture"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Intelligent load balancing",
+    "Zero manual intervention required"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "Fleet Management Platform",
+  "description": "AI fleet management with route optimization and driver safety scoring.",
+  "basic": "$49/vehicle/mo/month",
+  "pro": "$N/A/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Fleet Management Platform - Zion Tech Group",
+    "description": "AI fleet management with route optimization and driver safety scoring.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-fleet-optimizer"
+    }
+  },
+  "features": [
+    "Route optimization",
+    "Fuel tracking",
+    "Maintenance scheduling",
+    "Driver safety",
+    "GPS tracking"
+  ],
+  "benefits": [
+    "20% fuel savings",
+    "30% less downtime",
+    "Driver safety",
+    "Compliance"
+  ]
+}

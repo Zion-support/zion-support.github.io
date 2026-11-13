@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/analytics-ai---legal-11352eb9",
+  "breadcrumbTitle": "Analytics AI - Legal",
+  "title": "Analytics AI - Legal",
+  "description": "Revolutionize legal through intelligent automation. Our Analytics AI - Legal leverages advanced machine learning to deliver inventory management at scale.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Analytics AI - Legal - Zion Tech Group",
+    "description": "Revolutionize legal through intelligent automation. Our Analytics AI - Legal leverages advanced machine learning to deliver inventory management at scale.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/analytics-ai---legal-11352eb9"
+    }
+  },
+  "features": [
+    "Audit trails",
+    "Performance dashboards",
+    "Machine learning integration",
+    "Zero-downtime updates"
+  ],
+  "benefits": [
+    "Dynamic resource allocation",
+    "99.9% uptime guarantee",
+    "Zero manual intervention required",
+    "Real-time insights and alerts",
+    "Predictive maintenance scheduling"
+  ]
+}

@@ -1,0 +1,27 @@
+name: Static export storage checks
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/static-export-links.cjs'
+      - 'scripts/static-export-links.test.cjs'
+      - 'scripts/build-static.cjs'
+      - '.github/workflows/static-export-storage.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  copy-semantics:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          sparse-checkout: scripts
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --test scripts/static-export-links.test.cjs

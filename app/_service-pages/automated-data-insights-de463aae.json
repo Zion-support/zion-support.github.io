@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/automated-data-insights-de463aae",
+  "breadcrumbTitle": "Automated Data Insights",
+  "title": "Automated Data Insights",
+  "description": "The future of automotive is here with Automated Data Insights. Powered by cutting-edge AI, this platform delivers inventory management like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated Data Insights - Zion Tech Group",
+    "description": "The future of automotive is here with Automated Data Insights. Powered by cutting-edge AI, this platform delivers inventory management like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-data-insights-de463aae"
+    }
+  },
+  "features": [
+    "Alerting system",
+    "Audit trails",
+    "HIPAA ready",
+    "Multi-language support",
+    "API-first design"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "Automated compliance reporting",
+    "Scalable to millions of transactions"
+  ]
+}

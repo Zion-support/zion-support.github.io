@@ -1,0 +1,29 @@
+{
+  "title": "Application Security Testing Platform",
+  "description": "Comprehensive application security testing with SAST, DAST, SCA, and API security testing. Unified platform for DevSecOps teams.",
+  "basic": "$799/mo/month",
+  "pro": "$2,499/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Application Security Testing Platform - Zion Tech Group",
+    "description": "Comprehensive application security testing with SAST, DAST, SCA, and API security testing. Unified platform for DevSecOps teams.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/security-application-security-testing"
+    }
+  },
+  "features": [
+    "Static application security testing (SAST)",
+    "Dynamic application security testing (DAST)",
+    "Software composition analysis (SCA)",
+    "API security testing",
+    "Interactive application security testing (IAST)"
+  ],
+  "benefits": [
+    "Find vulnerabilities early",
+    "Unified security testing platform",
+    "Developer-friendly remediation",
+    "Automate security in CI/CD"
+  ]
+}

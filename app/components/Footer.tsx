@@ -34,7 +34,7 @@ const Footer: React.FC = () => {
 
   const solutionLinks = [
     { name: 'Consulting', href: '/consulting' },
-    { name: 'Discovery $99', href: '/discovery' },
+    { name: 'Free Discovery', href: '/discovery' },
     { name: 'By Industry', href: '/industries' },
     { name: 'By Technology', href: '/technologies' },
     { name: 'All Services', href: '/services' },

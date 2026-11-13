@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/smart-energy-optimizer-616bc8ff",
+  "breadcrumbTitle": "Smart Energy Optimizer",
+  "title": "Smart Energy Optimizer",
+  "description": "The future of hospitality is here with Smart Energy Optimizer. Powered by cutting-edge AI, this platform delivers data processing like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Energy Optimizer - Zion Tech Group",
+    "description": "The future of hospitality is here with Smart Energy Optimizer. Powered by cutting-edge AI, this platform delivers data processing like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-energy-optimizer-616bc8ff"
+    }
+  },
+  "features": [
+    "Audit trails",
+    "Mobile-responsive interface",
+    "Container orchestration",
+    "Data encryption"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Enterprise-grade security",
+    "Predictive maintenance scheduling"
+  ]
+}

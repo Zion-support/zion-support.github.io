@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/autonomous-edge-native-supply-chain-management-system-4f3de447",
+  "breadcrumbTitle": "Autonomous Edge-Native Supply Chain Management System",
+  "title": "Autonomous Edge-Native Supply Chain Management System",
+  "description": "Autonomous management system that self-optimizes edge-native supply chain processes with minimal human intervention.",
+  "basic": "$258/month",
+  "pro": "$648/month",
+  "enterprise": "$1948/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Autonomous Edge-Native Supply Chain Management System - Zion Tech Group",
+    "description": "Autonomous management system that self-optimizes edge-native supply chain processes with minimal human intervention.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-edge-native-supply-chain-management-system-4f3de447"
+    }
+  },
+  "features": [
+    "Autonomous optimization",
+    "Self-healing systems",
+    "Resource allocation",
+    "Performance tuning"
+  ],
+  "benefits": [
+    "Zero-touch operations",
+    "Reduced overhead",
+    "Self-optimizing systems",
+    "Lower operational costs"
+  ]
+}

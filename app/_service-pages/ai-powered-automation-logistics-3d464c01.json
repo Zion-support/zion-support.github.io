@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-powered-automation-logistics-3d464c01",
+  "breadcrumbTitle": "AI-Powered automation-logistics",
+  "title": "AI-Powered automation-logistics",
+  "description": "Revolutionize logistics through intelligent automation. Our AI-Powered automation-logistics leverages advanced machine learning to deliver performance monitorin",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered automation-logistics - Zion Tech Group",
+    "description": "Revolutionize logistics through intelligent automation. Our AI-Powered automation-logistics leverages advanced machine learning to deliver performance monitorin",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-automation-logistics-3d464c01"
+    }
+  },
+  "features": [
+    "Comprehensive monitoring",
+    "SOC 2 certified",
+    "Serverless functions",
+    "Plugin architecture"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "Predictive maintenance scheduling",
+    "Cost optimization recommendations",
+    "3x faster decision making",
+    "Dynamic resource allocation"
+  ]
+}

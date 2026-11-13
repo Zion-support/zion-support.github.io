@@ -1,0 +1,28 @@
+{
+  "title": "AI Predictive Churn & Retention",
+  "description": "Predicts customer churn 30-90 days before event: ML ingests product usage behavior support tickets NPS scores contract data produces ranked at-risk list recommended retention.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Predictive Churn & Retention - Zion Tech Group",
+    "description": "Predicts customer churn 30-90 days before event: ML ingests product usage behavior support tickets NPS scores contract data produces ranked at-risk list recomme",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-predictive-churn"
+    }
+  },
+  "features": [
+    "Predict churn 30-90 days before event",
+    "Feature importance per customer",
+    "Recommended retention action per at-risk account",
+    "CLV-adjusted retention spend optimization"
+  ],
+  "benefits": [
+    "Reduce costs with ai predictive churn & retention",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

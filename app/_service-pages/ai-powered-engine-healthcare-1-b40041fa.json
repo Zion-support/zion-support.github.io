@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/ai-powered-engine-healthcare-1-b40041fa",
+  "breadcrumbTitle": "AI-Powered engine-healthcare #1",
+  "title": "AI-Powered engine-healthcare #1",
+  "description": "The future of healthcare is here with AI-Powered engine-healthcare #1. Powered by cutting-edge AI, this platform delivers risk assessment like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI-Powered engine-healthcare #1 - Zion Tech Group",
+    "description": "The future of healthcare is here with AI-Powered engine-healthcare #1. Powered by cutting-edge AI, this platform delivers risk assessment like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-engine-healthcare-1-b40041fa"
+    }
+  },
+  "features": [
+    "Microservices deployment",
+    "Auto-scaling capabilities",
+    "API-first design",
+    "Comprehensive monitoring",
+    "HIPAA ready"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "Self-healing infrastructure",
+    "Seamless integration with existing systems",
+    "Real-time insights and alerts",
+    "Automated compliance reporting"
+  ]
+}

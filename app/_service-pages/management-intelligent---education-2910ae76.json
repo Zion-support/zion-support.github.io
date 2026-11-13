@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/management-intelligent---education-2910ae76",
+  "breadcrumbTitle": "Management Intelligent - Education",
+  "title": "Management Intelligent - Education",
+  "description": "Next-generation education solution: Management Intelligent - Education. Combines process automation with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Management Intelligent - Education - Zion Tech Group",
+    "description": "Next-generation education solution: Management Intelligent - Education. Combines process automation with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/management-intelligent---education-2910ae76"
+    }
+  },
+  "features": [
+    "API-first design",
+    "GDPR compliance",
+    "Container orchestration",
+    "HIPAA ready",
+    "Serverless functions"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Real-time insights and alerts",
+    "99.9% uptime guarantee",
+    "Self-healing infrastructure",
+    "Scalable to millions of transactions"
+  ]
+}

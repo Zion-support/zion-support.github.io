@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-insights-automotive-87b93a48",
+  "breadcrumbTitle": "Intelligent insights-automotive",
+  "title": "Intelligent insights-automotive",
+  "description": "The future of automotive is here with Intelligent insights-automotive. Powered by cutting-edge AI, this platform delivers quality control like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent insights-automotive - Zion Tech Group",
+    "description": "The future of automotive is here with Intelligent insights-automotive. Powered by cutting-edge AI, this platform delivers quality control like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-insights-automotive-87b93a48"
+    }
+  },
+  "features": [
+    "Open-source friendly",
+    "Cloud-native architecture",
+    "Comprehensive monitoring",
+    "Offline capabilities"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "Self-healing infrastructure",
+    "Dynamic resource allocation",
+    "Scalable to millions of transactions"
+  ]
+}

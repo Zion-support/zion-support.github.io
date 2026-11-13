@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/neural-risk-orchestrator-c46465d3",
+  "breadcrumbTitle": "Neural Risk Orchestrator",
+  "title": "Neural Risk Orchestrator",
+  "description": "Revolutionize insurance through intelligent automation. Our Neural Risk Orchestrator leverages advanced machine learning to deliver quality control at scale.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Neural Risk Orchestrator - Zion Tech Group",
+    "description": "Revolutionize insurance through intelligent automation. Our Neural Risk Orchestrator leverages advanced machine learning to deliver quality control at scale.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/neural-risk-orchestrator-c46465d3"
+    }
+  },
+  "features": [
+    "Data encryption",
+    "Alerting system",
+    "API-first design",
+    "Offline capabilities"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Cost optimization recommendations",
+    "50% reduction in operational costs",
+    "Performance benchmarking",
+    "Intelligent load balancing"
+  ]
+}

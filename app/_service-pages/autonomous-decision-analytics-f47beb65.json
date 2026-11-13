@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/autonomous-decision-analytics-f47beb65",
+  "breadcrumbTitle": "Autonomous Decision Analytics",
+  "title": "Autonomous Decision Analytics",
+  "description": "The future of logistics is here with Autonomous Decision Analytics. Powered by cutting-edge AI, this platform delivers market intelligence like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous Decision Analytics - Zion Tech Group",
+    "description": "The future of logistics is here with Autonomous Decision Analytics. Powered by cutting-edge AI, this platform delivers market intelligence like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-decision-analytics-f47beb65"
+    }
+  },
+  "features": [
+    "API-first design",
+    "Role-based access control",
+    "Rollback mechanisms",
+    "Multi-region deployment",
+    "Real-time processing"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "50% reduction in operational costs",
+    "99.9% uptime guarantee",
+    "ROI in under 90 days",
+    "Automated compliance reporting"
+  ]
+}

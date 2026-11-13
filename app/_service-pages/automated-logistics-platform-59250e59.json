@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/automated-logistics-platform-59250e59",
+  "breadcrumbTitle": "Automated Logistics Platform",
+  "title": "Automated Logistics Platform",
+  "description": "The future of Telecom is here with Automated Logistics Platform. Powered by cutting-edge AI, this platform delivers cost reduction like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated Logistics Platform - Zion Tech Group",
+    "description": "The future of Telecom is here with Automated Logistics Platform. Powered by cutting-edge AI, this platform delivers cost reduction like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-logistics-platform-59250e59"
+    }
+  },
+  "features": [
+    "Audit trails with compliance reporting",
+    "Data governance with policy enforcement",
+    "Market analysis with buyer behavior insights",
+    "Multi-region deployment with automatic failover",
+    "Healthcare data analytics with patient insights"
+  ],
+  "benefits": [
+    "Performance benchmarking against industry standards",
+    "Reduced operational risks with predictive models",
+    "Better customer experience with personalization",
+    "Reduced human error by 95% with automated processes",
+    "Dynamic resource allocation based on demand patterns"
+  ]
+}

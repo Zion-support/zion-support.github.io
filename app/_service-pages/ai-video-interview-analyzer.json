@@ -1,0 +1,29 @@
+{
+  "title": "AI Video Interview Analysis Platform",
+  "description": "AI-powered video interview analysis for hiring. Evaluate candidate responses, communication skills, and role fit with standardized assessment criteria.",
+  "basic": "$599/mo/month",
+  "pro": "$1,799/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Video Interview Analysis Platform - Zion Tech Group",
+    "description": "AI-powered video interview analysis for hiring. Evaluate candidate responses, communication skills, and role fit with standardized assessment criteria.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-video-interview-analyzer"
+    }
+  },
+  "features": [
+    "Response quality analysis",
+    "Communication skills scoring",
+    "Sentiment and confidence detection",
+    "Structured interview templates",
+    "Bias detection and mitigation"
+  ],
+  "benefits": [
+    "Reduce time-to-hire by 40%",
+    "Standardize interview evaluation",
+    "Reduce unconscious bias",
+    "Scale hiring without adding recruiters"
+  ]
+}

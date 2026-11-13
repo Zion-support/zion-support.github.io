@@ -1,0 +1,29 @@
+{
+  "title": "TravelExpense — T and E Management",
+  "description": "Travel and expense management: booking, receipt capture, per diem calculation, policy enforcement.",
+  "basic": "$8/user/mo/month",
+  "pro": "$15/user/mo/month",
+  "enterprise": "$30/user/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "TravelExpense — T and E Management - Zion Tech Group",
+    "description": "Travel and expense management: booking, receipt capture, per diem calculation, policy enforcement.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w177-travel-expense"
+    }
+  },
+  "features": [
+    "Travel booking with policy compliance",
+    "Receipt capture and OCR",
+    "Per diem calculation by destination",
+    "Corporate card reconciliation",
+    "Mileage and distance tracking"
+  ],
+  "benefits": [
+    "Policy compliance at booking time",
+    "Receipt OCR eliminates manual entry",
+    "Per diem accuracy by destination",
+    "Corporate card reconciliation automated"
+  ]
+}

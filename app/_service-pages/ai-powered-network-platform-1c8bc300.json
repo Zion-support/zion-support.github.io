@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-network-platform-1c8bc300",
+  "breadcrumbTitle": "AI-Powered Network Platform",
+  "title": "AI-Powered Network Platform",
+  "description": "Next-generation education solution: AI-Powered Network Platform. Combines supply chain with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI-Powered Network Platform - Zion Tech Group",
+    "description": "Next-generation education solution: AI-Powered Network Platform. Combines supply chain with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-network-platform-1c8bc300"
+    }
+  },
+  "features": [
+    "SOC 2 certified",
+    "Mobile-responsive interface",
+    "Real-time processing",
+    "Role-based access control",
+    "Container orchestration"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "Cost optimization recommendations",
+    "3x faster decision making"
+  ]
+}

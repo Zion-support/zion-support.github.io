@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/autonomous-supply-analytics-38e554d9",
+  "breadcrumbTitle": "Autonomous Supply Analytics",
+  "title": "Autonomous Supply Analytics",
+  "description": "The future of finance is here with Autonomous Supply Analytics. Powered by cutting-edge AI, this platform delivers security monitoring like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous Supply Analytics - Zion Tech Group",
+    "description": "The future of finance is here with Autonomous Supply Analytics. Powered by cutting-edge AI, this platform delivers security monitoring like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-supply-analytics-38e554d9"
+    }
+  },
+  "features": [
+    "Open-source friendly",
+    "API-first design",
+    "Container orchestration",
+    "Plugin architecture",
+    "Microservices deployment"
+  ],
+  "benefits": [
+    "Automated compliance reporting",
+    "99.9% uptime guarantee",
+    "Reduced human error by 95%",
+    "24/7 automated operations",
+    "Zero manual intervention required"
+  ]
+}

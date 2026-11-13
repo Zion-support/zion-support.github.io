@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/manager-intelligent---education-362a732e",
+  "breadcrumbTitle": "Manager Intelligent - Education",
+  "title": "Manager Intelligent - Education",
+  "description": "Unlock unprecedented growth with Manager Intelligent - Education. This autonomous system provides language processing with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Manager Intelligent - Education - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Manager Intelligent - Education. This autonomous system provides language processing with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/manager-intelligent---education-362a732e"
+    }
+  },
+  "features": [
+    "Open-source friendly",
+    "Role-based access control",
+    "Custom integrations",
+    "Container orchestration",
+    "Mobile-responsive interface"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "Seamless integration with existing systems",
+    "Real-time insights and alerts"
+  ]
+}

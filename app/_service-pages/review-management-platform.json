@@ -1,0 +1,28 @@
+{
+  "title": "Review & Reputation Management Platform",
+  "description": "Monitor, collect, and manage online reviews across Google, Yelp, TripAdvisor, and industry-specific sites. AI-powered sentiment analysis, automated review requests, response templates, and competitive benchmarking.",
+  "basic": "$N/A/month",
+  "pro": "$N/A/month",
+  "enterprise": "$249/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Review & Reputation Management Platform - Zion Tech Group",
+    "description": "Monitor, collect, and manage online reviews across Google, Yelp, TripAdvisor, and industry-specific sites. AI-powered sentiment analysis, automated review reque",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/review-management-platform"
+    }
+  },
+  "features": [
+    "Multi-platform monitoring",
+    "Automated review requests",
+    "AI sentiment analysis",
+    "Response templates",
+    "Competitive benchmarking"
+  ],
+  "benefits": [
+    "3x more positive reviews",
+    "Early warning for negative feedback",
+    "Improved local SEO rankings"
+  ]
+}

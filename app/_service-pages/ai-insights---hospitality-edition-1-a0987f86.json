@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-insights---hospitality-edition-1-a0987f86",
+  "breadcrumbTitle": "AI Insights - Hospitality Edition #1",
+  "title": "AI Insights - Hospitality Edition #1",
+  "description": "Revolutionize hospitality through intelligent automation. Our AI Insights - Hospitality Edition #1 leverages advanced machine learning to deliver energy managem",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Insights - Hospitality Edition #1 - Zion Tech Group",
+    "description": "Revolutionize hospitality through intelligent automation. Our AI Insights - Hospitality Edition #1 leverages advanced machine learning to deliver energy managem",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-insights---hospitality-edition-1-a0987f86"
+    }
+  },
+  "features": [
+    "Auto-scaling capabilities",
+    "Zero-downtime updates",
+    "Container orchestration",
+    "Role-based access control",
+    "Multi-language support"
+  ],
+  "benefits": [
+    "24/7 automated operations",
+    "Intelligent load balancing",
+    "Zero manual intervention required"
+  ]
+}

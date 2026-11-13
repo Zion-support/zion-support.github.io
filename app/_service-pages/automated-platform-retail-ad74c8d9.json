@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/automated-platform-retail-ad74c8d9",
+  "breadcrumbTitle": "Automated platform-retail",
+  "title": "Automated platform-retail",
+  "description": "Revolutionize retail through intelligent automation. Our Automated platform-retail leverages advanced machine learning to deliver data processing at scale.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated platform-retail - Zion Tech Group",
+    "description": "Revolutionize retail through intelligent automation. Our Automated platform-retail leverages advanced machine learning to deliver data processing at scale.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-platform-retail-ad74c8d9"
+    }
+  },
+  "features": [
+    "Edge computing support",
+    "Multi-language support",
+    "Comprehensive monitoring",
+    "HIPAA ready",
+    "Performance dashboards"
+  ],
+  "benefits": [
+    "Cost optimization recommendations",
+    "99.9% uptime guarantee",
+    "50% reduction in operational costs"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "AI Intelligent Document Processing & Routing",
+  "description": "Automated document intake with AI extraction, classification, and intelligent routing to the right team or workflow — invoices, claims, applications, and contracts.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Intelligent Document Processing & Routing - Zion Tech Group",
+    "description": "Automated document intake with AI extraction, classification, and intelligent routing to the right team or workflow — invoices, claims, applications, and contra",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-intelligent-routing"
+    }
+  },
+  "features": [
+    "OCR + AI document understanding (99.5% accuracy)",
+    "Intelligent document classification and tagging",
+    "Automated data extraction to structured formats",
+    "Smart routing to teams based on content",
+    "Integration with RPA for downstream automation"
+  ],
+  "benefits": [
+    "Reduce costs with ai intelligent document processing & routing",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "Container Security Runtime",
+  "description": "Kubernetes-aware container security with image scanning, admission control, runtime threat detection, secret scanning, and CVSS scoring in CI/CD pipelines.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Container Security Runtime - Zion Tech Group",
+    "description": "Kubernetes-aware container security with image scanning, admission control, runtime threat detection, secret scanning, and CVSS scoring in CI/CD pipelines.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/container-security-runtime"
+    }
+  },
+  "features": [
+    "Image vulnerability scan",
+    "K8s admission control",
+    "Runtime threat detection",
+    "Secret scanning (registry + env)",
+    "SBOM generation on push"
+  ],
+  "benefits": [
+    "Reduce costs with container security runtime",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

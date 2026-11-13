@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/intelligent-sales-for-automotive-e0462dcd",
+  "breadcrumbTitle": "Intelligent Sales for Automotive",
+  "title": "Intelligent Sales for Automotive",
+  "description": "Optimize your automotive workflows with Intelligent Sales for Automotive. This intelligent platform delivers edge computing through advanced automation and AI.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Intelligent Sales for Automotive - Zion Tech Group",
+    "description": "Optimize your automotive workflows with Intelligent Sales for Automotive. This intelligent platform delivers edge computing through advanced automation and AI.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-sales-for-automotive-e0462dcd"
+    }
+  },
+  "features": [
+    "Alerting system with intelligent notifications",
+    "HIPAA ready with healthcare data protection",
+    "Customer journey mapping with touchpoint analysis",
+    "Disaster recovery automation",
+    "Language processing with sentiment analysis"
+  ],
+  "benefits": [
+    "improved customer loyalty programs",
+    "Reduced average handle time (AHT)",
+    "Reduced stockouts and overstocks",
+    "Reduced training time to productivity",
+    "Improved conversion funnel metrics"
+  ]
+}

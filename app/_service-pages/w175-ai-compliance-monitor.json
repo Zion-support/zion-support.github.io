@@ -1,0 +1,29 @@
+{
+  "title": "AI Regulatory Compliance Monitor",
+  "description": "AI that monitors regulatory changes across jurisdictions and maps them to your controls. Automatic impact assessment and remediation task creation. Never miss a compliance change.",
+  "basic": "$599/mo/month",
+  "pro": "$1,799/mo/month",
+  "enterprise": "$5,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Regulatory Compliance Monitor - Zion Tech Group",
+    "description": "AI that monitors regulatory changes across jurisdictions and maps them to your controls. Automatic impact assessment and remediation task creation. Never miss a",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w175-ai-compliance-monitor"
+    }
+  },
+  "features": [
+    "Regulatory change monitoring (SEC, FDA, FTC, EU)",
+    "Impact assessment on current controls",
+    "Remediation task auto-creation",
+    "Regulatory text summarization",
+    "Cross-regulation control mapping"
+  ],
+  "benefits": [
+    "Never miss a regulatory change again",
+    "AI assesses impact in minutes, not weeks",
+    "Remediation tasks created automatically",
+    "Cross-regulation mapping reduces redundant work"
+  ]
+}

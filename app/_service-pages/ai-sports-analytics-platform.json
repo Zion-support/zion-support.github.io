@@ -1,0 +1,29 @@
+{
+  "title": "AI Sports Analytics & Performance Optimization",
+  "description": "Computer vision and wearable sensor platform for athlete performance analysis, injury prevention, and tactical optimization.",
+  "basic": "$2,000/mo/month",
+  "pro": "$5,000/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Sports Analytics & Performance Optimization - Zion Tech Group",
+    "description": "Computer vision and wearable sensor platform for athlete performance analysis, injury prevention, and tactical optimization.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-sports-analytics-platform"
+    }
+  },
+  "features": [
+    "Real-time player tracking via computer vision",
+    "Biomechanical movement analysis",
+    "Injury risk prediction models",
+    "Tactical pattern recognition",
+    "Opponent scouting reports"
+  ],
+  "benefits": [
+    "Improve team performance by 15%",
+    "Reduce injuries by 30%",
+    "Optimize training programs",
+    "Gain competitive intelligence"
+  ]
+}

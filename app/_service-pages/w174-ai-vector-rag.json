@@ -1,0 +1,29 @@
+{
+  "title": "AI Vector RAG Platform",
+  "description": "Production-ready Retrieval-Augmented Generation with managed vector databases, embedding pipelines, chunking strategies, and relevance tuning. Connect any LLM for grounded, hallucination-free answers.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Vector RAG Platform - Zion Tech Group",
+    "description": "Production-ready Retrieval-Augmented Generation with managed vector databases, embedding pipelines, chunking strategies, and relevance tuning. Connect any LLM f",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w174-ai-vector-rag"
+    }
+  },
+  "features": [
+    "Managed vector database (Pinecone, Weaviate, Qdrant)",
+    "Automated embedding pipeline with multiple models",
+    "Configurable chunking strategies (semantic, fixed, recursive)",
+    "Hybrid search (vector + keyword + reranking)",
+    "Source attribution and citation in responses"
+  ],
+  "benefits": [
+    "Grounded AI answers with zero hallucination",
+    "Managed infrastructure, no MLOps burden",
+    "Source citations build user trust",
+    "Multi-tenant ready from day one"
+  ]
+}

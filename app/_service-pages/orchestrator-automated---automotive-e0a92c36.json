@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/orchestrator-automated---automotive-e0a92c36",
+  "breadcrumbTitle": "Orchestrator Automated - Automotive",
+  "title": "Orchestrator Automated - Automotive",
+  "description": "Next-generation automotive solution: Orchestrator Automated - Automotive. Combines image recognition with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Orchestrator Automated - Automotive - Zion Tech Group",
+    "description": "Next-generation automotive solution: Orchestrator Automated - Automotive. Combines image recognition with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/orchestrator-automated---automotive-e0a92c36"
+    }
+  },
+  "features": [
+    "Performance dashboards",
+    "Custom integrations",
+    "Real-time processing",
+    "Mobile-responsive interface",
+    "Cloud-native architecture"
+  ],
+  "benefits": [
+    "Cost optimization recommendations",
+    "ROI in under 90 days",
+    "Scalable to millions of transactions"
+  ]
+}

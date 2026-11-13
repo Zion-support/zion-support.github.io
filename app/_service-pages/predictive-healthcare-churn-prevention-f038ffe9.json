@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/predictive-healthcare-churn-prevention-f038ffe9",
+  "breadcrumbTitle": "Predictive Healthcare Churn Prevention",
+  "title": "Predictive Healthcare Churn Prevention",
+  "description": "Machine learning system that identifies smart churn signals in telecom customer behavior, enabling proactive retention strategies and personalized intervention ",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Predictive Healthcare Churn Prevention - Zion Tech Group",
+    "description": "Machine learning system that identifies smart churn signals in telecom customer behavior, enabling proactive retention strategies and personalized intervention ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/predictive-healthcare-churn-prevention-f038ffe9"
+    }
+  },
+  "features": [
+    "Behavioral analysis",
+    "Risk scoring",
+    "Automated interventions",
+    "Campaign optimization"
+  ],
+  "benefits": [
+    "Reduced churn rate",
+    "Increased ARPU",
+    "Higher customer lifetime value",
+    "Proactive retention"
+  ]
+}

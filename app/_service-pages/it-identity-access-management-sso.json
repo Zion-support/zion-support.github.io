@@ -1,0 +1,28 @@
+{
+  "title": "Identity & Access Management (SSO/MFA)",
+  "description": "SSO (SAML 2.0/OIDC), adaptive MFA (TOTP/WebAuthn/risk-based), SCIM auto-provision/revoke, JIT privileged-access.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Identity & Access Management (SSO/MFA) - Zion Tech Group",
+    "description": "SSO (SAML 2.0/OIDC), adaptive MFA (TOTP/WebAuthn/risk-based), SCIM auto-provision/revoke, JIT privileged-access.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-identity-access-management-sso"
+    }
+  },
+  "features": [
+    "SSO (SAML 2.0 + OIDC) for all SaaS apps",
+    "Adaptive MFA (TOTP/WebAuthn/risk-based)",
+    "SCIM auto-provision + de-provision per hire/fire",
+    "JIT privileged-access, session recorded"
+  ],
+  "benefits": [
+    "Reduce costs with identity & access management (sso/mfa)",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

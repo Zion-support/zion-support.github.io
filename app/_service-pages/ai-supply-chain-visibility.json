@@ -1,0 +1,29 @@
+{
+  "title": "AI Supply Chain Visibility Platform",
+  "description": "End-to-end supply chain monitoring with AI-driven anomaly detection, predictive ETAs, and automated disruption alerts across suppliers, logistics, and inventory.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Supply Chain Visibility Platform - Zion Tech Group",
+    "description": "End-to-end supply chain monitoring with AI-driven anomaly detection, predictive ETAs, and automated disruption alerts across suppliers, logistics, and inventory",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-supply-chain-visibility"
+    }
+  },
+  "features": [
+    "Real-time shipment tracking & ETA prediction",
+    "Supplier risk scoring & early warning",
+    "Inventory anomaly detection",
+    "Automated disruption alerts (Slack/email)",
+    "Root cause analysis & recommendation engine"
+  ],
+  "benefits": [
+    "Reduce costs with ai supply chain visibility platform",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

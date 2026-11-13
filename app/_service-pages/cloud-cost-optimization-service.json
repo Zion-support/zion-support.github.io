@@ -1,0 +1,29 @@
+{
+  "title": "Cloud Cost Optimization (FinOps)",
+  "description": "ML-driven cloud cost optimization across AWS, Azure, and GCP with right-sizing recommendations, reserved instance optimization, and anomaly detection.",
+  "basic": "$99/mo/month",
+  "pro": "$349/mo/month",
+  "enterprise": "$1,299/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Cloud Cost Optimization (FinOps) - Zion Tech Group",
+    "description": "ML-driven cloud cost optimization across AWS, Azure, and GCP with right-sizing recommendations, reserved instance optimization, and anomaly detection.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cloud-cost-optimization-service"
+    }
+  },
+  "features": [
+    "Multi-cloud unified cost visibility",
+    "ML-driven instance right-sizing",
+    "Reserved instance & savings plan optimizer",
+    "Idle resource detection & cleanup",
+    "Showback/chargeback automation"
+  ],
+  "benefits": [
+    "Reduce costs with cloud cost optimization (finops)",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

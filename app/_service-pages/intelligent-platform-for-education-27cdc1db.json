@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-platform-for-education-27cdc1db",
+  "breadcrumbTitle": "Intelligent Platform for Education",
+  "title": "Intelligent Platform for Education",
+  "description": "Transform your education operations with our Intelligent Platform for Education. This AI-driven solution automates inventory management with unprecedented accur",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Platform for Education - Zion Tech Group",
+    "description": "Transform your education operations with our Intelligent Platform for Education. This AI-driven solution automates inventory management with unprecedented accur",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-platform-for-education-27cdc1db"
+    }
+  },
+  "features": [
+    "Multi-language support",
+    "Rollback mechanisms",
+    "Container orchestration",
+    "Alerting system",
+    "Custom integrations"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "Seamless integration with existing systems",
+    "Intelligent load balancing"
+  ]
+}

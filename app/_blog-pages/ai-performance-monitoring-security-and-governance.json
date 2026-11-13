@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "AI Performance Monitoring: security and governance | Zion Tech Group",
+    "description": "AI Performance Monitoring: security and governance",
+    "keywords": [
+      "security",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "AI Performance Monitoring: security and governance",
+      "description": "AI Performance Monitoring: security and governance",
+      "url": "https://ziontechgroup.com/blog/ai-performance-monitoring-security-and-governance/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/ai-performance-monitoring-security-and-governance/"
+    }
+  },
+  "values": [
+    "AI Performance Monitoring: security and governance",
+    "AI Performance Monitoring: security and governance",
+    "AI Performance Monitoring: security and governance",
+    "Conversion path",
+    "If this guide matches your ai performance monitoring: security and governance initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "Conversion path",
+    " If this guide matches your ai performance monitoring: security and governance initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "/blog/cloud-cost-ai-optimizer-2026",
+    "Cloud Cost Ai Optimizer 2026",
+    "/blog/data-analytics-platform-modern-enterprise-2026-7181",
+    "Data Analytics Platform Modern Enterprise 2026 7181",
+    "/blog/microsaas-hr-recruitment-case-study",
+    "Microsaas Hr Recruitment Case Study",
+    "/blog/cloud-migration-services-policy-and-compliance",
+    "Cloud Migration Services Policy And Compliance"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "AI Performance Monitoring: security and governance",
+    "description": "AI Performance Monitoring: security and governance",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T04:52:10Z",
+    "dateModified": "2026-08-07T04:52:10Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/ai-performance-monitoring-security-and-governance/"
+  }
+}

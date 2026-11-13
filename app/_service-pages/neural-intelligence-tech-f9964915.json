@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/neural-intelligence-tech-f9964915",
+  "breadcrumbTitle": "Neural intelligence-tech",
+  "title": "Neural intelligence-tech",
+  "description": "Unlock unprecedented growth with Neural intelligence-tech. This autonomous system provides document processing with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Neural intelligence-tech - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Neural intelligence-tech. This autonomous system provides document processing with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/neural-intelligence-tech-f9964915"
+    }
+  },
+  "features": [
+    "Data encryption",
+    "Open-source friendly",
+    "Zero-downtime updates",
+    "Plugin architecture",
+    "API-first design"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "Predictive maintenance scheduling",
+    "Real-time insights and alerts"
+  ]
+}

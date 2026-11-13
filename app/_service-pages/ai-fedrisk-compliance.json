@@ -1,0 +1,28 @@
+{
+  "title": "AI FedRAMP Compliance Assistant",
+  "description": "Maps your control implementations to FedRAMP Rev 5 generates POA&M tracks continuous monitoring artifacts auto-generates audit evidence bundles readiness gap report.",
+  "basic": "$299/mo/month",
+  "pro": "$799/mo/month",
+  "enterprise": "$2,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI FedRAMP Compliance Assistant - Zion Tech Group",
+    "description": "Maps your control implementations to FedRAMP Rev 5 generates POA&M tracks continuous monitoring artifacts auto-generates audit evidence bundles readiness gap re",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-fedrisk-compliance"
+    }
+  },
+  "features": [
+    "FedRAMP Rev 5 control mapping",
+    "POA&M auto-generation + monthly tracking",
+    "Continuous monitoring artifact creation",
+    "Audit evidence bundle per annual assessment"
+  ],
+  "benefits": [
+    "Reduce costs with ai fedramp compliance assistant",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

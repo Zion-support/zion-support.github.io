@@ -1,0 +1,29 @@
+{
+  "title": "AI Employee Engagement & Retention Platform",
+  "description": "AI platform that measures employee engagement in real-time, predicts flight risk, and recommends retention actions. Pulse surveys, sentiment analysis, and manager coaching.",
+  "basic": "$5/employee/mo/month",
+  "pro": "$10/employee/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Employee Engagement & Retention Platform - Zion Tech Group",
+    "description": "AI platform that measures employee engagement in real-time, predicts flight risk, and recommends retention actions. Pulse surveys, sentiment analysis, and manag",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-employee-engagement"
+    }
+  },
+  "features": [
+    "Real-time engagement monitoring",
+    "AI flight risk prediction",
+    "Automated pulse surveys with sentiment analysis",
+    "Manager coaching recommendations",
+    "Benchmarking against industry standards"
+  ],
+  "benefits": [
+    "Reduce turnover by 25%",
+    "Identify at-risk employees 6 months early",
+    "Data-driven retention strategies",
+    "Improve employee satisfaction scores"
+  ]
+}

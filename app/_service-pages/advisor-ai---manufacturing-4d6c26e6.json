@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/advisor-ai---manufacturing-4d6c26e6",
+  "breadcrumbTitle": "Advisor AI - Manufacturing",
+  "title": "Advisor AI - Manufacturing",
+  "description": "Next-generation manufacturing solution: Advisor AI - Manufacturing. Combines threat detection with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Advisor AI - Manufacturing - Zion Tech Group",
+    "description": "Next-generation manufacturing solution: Advisor AI - Manufacturing. Combines threat detection with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/advisor-ai---manufacturing-4d6c26e6"
+    }
+  },
+  "features": [
+    "Plugin architecture",
+    "Data encryption",
+    "Serverless functions",
+    "Machine learning integration",
+    "Role-based access control"
+  ],
+  "benefits": [
+    "Performance benchmarking",
+    "Cost optimization recommendations",
+    "Automated compliance reporting"
+  ]
+}

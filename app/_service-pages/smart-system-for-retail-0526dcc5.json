@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/smart-system-for-retail-0526dcc5",
+  "breadcrumbTitle": "Smart System for Retail",
+  "title": "Smart System for Retail",
+  "description": "Revolutionize retail through intelligent automation. Our Smart System for Retail leverages advanced machine learning to deliver fraud prevention at scale.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart System for Retail - Zion Tech Group",
+    "description": "Revolutionize retail through intelligent automation. Our Smart System for Retail leverages advanced machine learning to deliver fraud prevention at scale.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-system-for-retail-0526dcc5"
+    }
+  },
+  "features": [
+    "Serverless functions",
+    "Alerting system",
+    "Open-source friendly",
+    "Rollback mechanisms",
+    "GDPR compliance"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Performance benchmarking",
+    "Scalable to millions of transactions",
+    "Intelligent load balancing"
+  ]
+}

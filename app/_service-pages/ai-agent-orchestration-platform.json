@@ -1,0 +1,29 @@
+{
+  "title": "AI Agent Orchestration Platform",
+  "description": "Build, deploy, and manage autonomous AI agents. Multi-agent workflows, tool integration, memory management, and human-in-the-loop controls.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Agent Orchestration Platform - Zion Tech Group",
+    "description": "Build, deploy, and manage autonomous AI agents. Multi-agent workflows, tool integration, memory management, and human-in-the-loop controls.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-agent-orchestration-platform"
+    }
+  },
+  "features": [
+    "Visual agent builder",
+    "Multi-agent coordination",
+    "Tool and API integration",
+    "Memory and context management",
+    "Human-in-the-loop checkpoints"
+  ],
+  "benefits": [
+    "Build agentic apps 10x faster",
+    "Coordinate complex workflows",
+    "Safe autonomous operation",
+    "Full observability"
+  ]
+}

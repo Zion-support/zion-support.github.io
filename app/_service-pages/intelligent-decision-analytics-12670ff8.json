@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-decision-analytics-12670ff8",
+  "breadcrumbTitle": "Intelligent Decision Analytics",
+  "title": "Intelligent Decision Analytics",
+  "description": "Revolutionize healthcare through intelligent automation. Our Intelligent Decision Analytics leverages advanced machine learning to deliver document processing a",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Decision Analytics - Zion Tech Group",
+    "description": "Revolutionize healthcare through intelligent automation. Our Intelligent Decision Analytics leverages advanced machine learning to deliver document processing a",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-decision-analytics-12670ff8"
+    }
+  },
+  "features": [
+    "Offline capabilities",
+    "Open-source friendly",
+    "Data encryption",
+    "Role-based access control",
+    "Multi-region deployment"
+  ],
+  "benefits": [
+    "Performance benchmarking",
+    "Scalable to millions of transactions",
+    "24/7 automated operations"
+  ]
+}

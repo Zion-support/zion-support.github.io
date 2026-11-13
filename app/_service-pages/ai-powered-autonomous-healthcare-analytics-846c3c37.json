@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-autonomous-healthcare-analytics-846c3c37",
+  "breadcrumbTitle": "AI-Powered Autonomous Healthcare Analytics",
+  "title": "AI-Powered Autonomous Healthcare Analytics",
+  "description": "AI-driven analytics platform that delivers autonomous insights into healthcare operations, providing real-time monitoring, predictive modeling, and automated re",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI-Powered Autonomous Healthcare Analytics - Zion Tech Group",
+    "description": "AI-driven analytics platform that delivers autonomous insights into healthcare operations, providing real-time monitoring, predictive modeling, and automated re",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-autonomous-healthcare-analytics-846c3c37"
+    }
+  },
+  "features": [
+    "Real-time monitoring",
+    "Predictive modeling",
+    "Automated reporting",
+    "Custom dashboards"
+  ],
+  "benefits": [
+    "Data-driven decision making",
+    "Improved operational efficiency",
+    "Proactive issue detection",
+    "Enhanced KPI tracking"
+  ]
+}

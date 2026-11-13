@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/generator-neural---manufacturing-2593351a",
+  "breadcrumbTitle": "Generator Neural - Manufacturing",
+  "title": "Generator Neural - Manufacturing",
+  "description": "Unlock unprecedented growth with Generator Neural - Manufacturing. This autonomous system provides quality control with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Generator Neural - Manufacturing - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Generator Neural - Manufacturing. This autonomous system provides quality control with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/generator-neural---manufacturing-2593351a"
+    }
+  },
+  "features": [
+    "Cloud-native architecture",
+    "GDPR compliance",
+    "Plugin architecture",
+    "Custom integrations",
+    "Zero-downtime updates"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "3x faster decision making",
+    "Reduced human error by 95%"
+  ]
+}

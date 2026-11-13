@@ -1,0 +1,29 @@
+{
+  "title": "Secure Data Sharing Platform",
+  "description": "Share data securely between organizations: clean rooms, differential privacy, access controls, and audit logging. Collaborate without exposing raw data.",
+  "basic": "$799/mo/month",
+  "pro": "$2,499/mo/month",
+  "enterprise": "$7,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Secure Data Sharing Platform - Zion Tech Group",
+    "description": "Share data securely between organizations: clean rooms, differential privacy, access controls, and audit logging. Collaborate without exposing raw data.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w176-data-sharing"
+    }
+  },
+  "features": [
+    "Cross-organization data sharing",
+    "Clean room computing (no raw data exchange)",
+    "Differential privacy controls",
+    "Row and column level access policies",
+    "Usage metering and audit logging"
+  ],
+  "benefits": [
+    "Share insights without exposing raw data",
+    "Clean rooms for competitive collaboration",
+    "Differential privacy provides math guarantees",
+    "Audit logging for governance"
+  ]
+}

@@ -1,5 +1,4 @@
 // app/solutions-hub/page.tsx — Solutions Hub: Browse by business outcome
-'use client';
 
 import Link from 'next/link';
 

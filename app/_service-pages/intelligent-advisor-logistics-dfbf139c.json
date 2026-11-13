@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligent-advisor-logistics-dfbf139c",
+  "breadcrumbTitle": "Intelligent advisor-logistics",
+  "title": "Intelligent advisor-logistics",
+  "description": "Unlock unprecedented growth with Intelligent advisor-logistics. This autonomous system provides user experience with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent advisor-logistics - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Intelligent advisor-logistics. This autonomous system provides user experience with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-advisor-logistics-dfbf139c"
+    }
+  },
+  "features": [
+    "Alerting system",
+    "Microservices deployment",
+    "Audit trails",
+    "Serverless functions",
+    "Plugin architecture"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "ROI in under 90 days",
+    "Dynamic resource allocation",
+    "Predictive maintenance scheduling"
+  ]
+}

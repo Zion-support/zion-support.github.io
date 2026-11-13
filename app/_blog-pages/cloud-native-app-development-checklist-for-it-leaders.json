@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "Cloud Native App Development: checklist for IT leaders | Zion Tech Group",
+    "description": "Cloud Native App Development: checklist for IT leaders",
+    "keywords": [
+      "automation",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "Cloud Native App Development: checklist for IT leaders",
+      "description": "Cloud Native App Development: checklist for IT leaders",
+      "url": "https://ziontechgroup.com/blog/cloud-native-app-development-checklist-for-it-leaders/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/cloud-native-app-development-checklist-for-it-leaders/"
+    }
+  },
+  "values": [
+    "Cloud Native App Development: checklist for IT leaders",
+    "Cloud Native App Development: checklist for IT leaders",
+    "Cloud Native App Development: checklist for IT leaders",
+    "Outcomes to measure",
+    "Leading indicators for cloud native app development: checklist for it leaders: workflow completion rate, escalation rate, time-to-resolution, and user satisfaction. Lagging indicators: revenue trend, cost trend, customer retention, and operational efficiency. Track both leading and lagging indicators so you can explain progress to leadership before financial results appear. Use a rolling 90-day window and re-baseline monthly; this keeps the program accountable without demanding perfection on day one. Publish metrics in a shared dashboard so the whole team sees progress, not just the program sponsor.",
+    "Outcomes to measure",
+    " Leading indicators for cloud native app development: checklist for it leaders: workflow completion rate, escalation rate, time-to-resolution, and user satisfaction. Lagging indicators: revenue trend, cost trend, customer retention, and operational efficiency. Track both leading and lagging indicators so you can explain progress to leadership before financial results appear. Use a rolling 90-day window and re-baseline monthly; this keeps the program accountable without demanding perfection on day one. Publish metrics in a shared dashboard so the whole team sees progress, not just the program sponsor.",
+    "/blog/cloud-finops-2026",
+    "Cloud Finops 2026",
+    "/blog/cloud-cost-optimization-checklist-2026-7247",
+    "Cloud Cost Optimization Checklist 2026 7247",
+    "/blog/ai-accessibility-auditor-implementation-playbook",
+    "Ai Accessibility Auditor Implementation Playbook",
+    "/blog/5g-solutions-2026-6638",
+    "5G Solutions 2026 6638"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Cloud Native App Development: checklist for IT leaders",
+    "description": "Cloud Native App Development: checklist for IT leaders",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T04:52:37Z",
+    "dateModified": "2026-08-07T04:52:37Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/cloud-native-app-development-checklist-for-it-leaders/"
+  }
+}

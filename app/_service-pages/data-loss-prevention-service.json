@@ -1,0 +1,28 @@
+{
+  "title": "Data Loss Prevention (DLP) Service",
+  "description": "Comprehensive DLP solution that monitors, detects, and prevents data exfiltration across email, cloud, and endpoints. Includes content inspection, policy enforcement, and incident response.",
+  "basic": "$N/A/month",
+  "pro": "$N/A/month",
+  "enterprise": "$25/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Data Loss Prevention (DLP) Service - Zion Tech Group",
+    "description": "Comprehensive DLP solution that monitors, detects, and prevents data exfiltration across email, cloud, and endpoints. Includes content inspection, policy enforc",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/data-loss-prevention-service"
+    }
+  },
+  "features": [
+    "Content inspection",
+    "Email DLP",
+    "Cloud DLP",
+    "Endpoint DLP",
+    "Policy enforcement"
+  ],
+  "benefits": [
+    "99% data leak prevention",
+    "Automated policy enforcement",
+    "Compliance-ready reporting"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/ai-manager---manufacturing-edition-2-06153f70",
+  "breadcrumbTitle": "AI Manager - Manufacturing Edition #2",
+  "title": "AI Manager - Manufacturing Edition #2",
+  "description": "Next-generation manufacturing solution: AI Manager - Manufacturing Edition #2. Combines document processing with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Manager - Manufacturing Edition #2 - Zion Tech Group",
+    "description": "Next-generation manufacturing solution: AI Manager - Manufacturing Edition #2. Combines document processing with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-manager---manufacturing-edition-2-06153f70"
+    }
+  },
+  "features": [
+    "HIPAA ready",
+    "Alerting system",
+    "Mobile-responsive interface",
+    "Audit trails",
+    "Performance dashboards"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "Self-healing infrastructure",
+    "24/7 automated operations",
+    "Zero manual intervention required",
+    "Automated compliance reporting"
+  ]
+}

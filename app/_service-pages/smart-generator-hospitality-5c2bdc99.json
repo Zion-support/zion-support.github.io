@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/smart-generator-hospitality-5c2bdc99",
+  "breadcrumbTitle": "Smart generator-hospitality",
+  "title": "Smart generator-hospitality",
+  "description": "Unlock unprecedented growth with Smart generator-hospitality. This autonomous system provides market intelligence with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart generator-hospitality - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Smart generator-hospitality. This autonomous system provides market intelligence with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-generator-hospitality-5c2bdc99"
+    }
+  },
+  "features": [
+    "Performance dashboards",
+    "Custom integrations",
+    "Cloud-native architecture",
+    "SOC 2 certified"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "Scalable to millions of transactions",
+    "Reduced human error by 95%",
+    "24/7 automated operations",
+    "50% reduction in operational costs"
+  ]
+}

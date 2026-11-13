@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligent-director-for-hospitality-d395769f",
+  "breadcrumbTitle": "Intelligent Director for Hospitality",
+  "title": "Intelligent Director for Hospitality",
+  "description": "Unlock unprecedented growth with Intelligent Director for Hospitality. This autonomous system provides process automation with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Director for Hospitality - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Intelligent Director for Hospitality. This autonomous system provides process automation with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-director-for-hospitality-d395769f"
+    }
+  },
+  "features": [
+    "Alerting system",
+    "Plugin architecture",
+    "Data encryption",
+    "SOC 2 certified",
+    "Microservices deployment"
+  ],
+  "benefits": [
+    "Dynamic resource allocation",
+    "Seamless integration with existing systems",
+    "3x faster decision making",
+    "Zero manual intervention required"
+  ]
+}

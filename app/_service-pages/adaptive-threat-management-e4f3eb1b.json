@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/adaptive-threat-management-e4f3eb1b",
+  "breadcrumbTitle": "Adaptive Threat Management",
+  "title": "Adaptive Threat Management",
+  "description": "Next-generation energy solution: Adaptive Threat Management. Combines customer insights with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Adaptive Threat Management - Zion Tech Group",
+    "description": "Next-generation energy solution: Adaptive Threat Management. Combines customer insights with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/adaptive-threat-management-e4f3eb1b"
+    }
+  },
+  "features": [
+    "Open-source friendly",
+    "Machine learning integration",
+    "Plugin architecture",
+    "Custom integrations",
+    "Container orchestration"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Predictive maintenance scheduling",
+    "Cost optimization recommendations",
+    "ROI in under 90 days"
+  ]
+}

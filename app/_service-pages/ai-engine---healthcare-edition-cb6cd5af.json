@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-engine---healthcare-edition-cb6cd5af",
+  "breadcrumbTitle": "AI Engine - Healthcare Edition",
+  "title": "AI Engine - Healthcare Edition",
+  "description": "Unlock unprecedented growth with AI Engine - Healthcare Edition. This autonomous system provides threat detection with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Engine - Healthcare Edition - Zion Tech Group",
+    "description": "Unlock unprecedented growth with AI Engine - Healthcare Edition. This autonomous system provides threat detection with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-engine---healthcare-edition-cb6cd5af"
+    }
+  },
+  "features": [
+    "Plugin architecture",
+    "Container orchestration",
+    "Auto-scaling capabilities",
+    "Data encryption",
+    "Real-time processing"
+  ],
+  "benefits": [
+    "24/7 automated operations",
+    "Zero manual intervention required",
+    "Self-healing infrastructure",
+    "ROI in under 90 days"
+  ]
+}

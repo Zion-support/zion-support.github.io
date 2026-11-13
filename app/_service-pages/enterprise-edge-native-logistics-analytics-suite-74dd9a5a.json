@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/enterprise-edge-native-logistics-analytics-suite-74dd9a5a",
+  "breadcrumbTitle": "Enterprise Edge-Native Logistics Analytics Suite",
+  "title": "Enterprise Edge-Native Logistics Analytics Suite",
+  "description": "Enterprise analytics suite that delivers edge-native logistics insights with unified dashboards and reporting.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Enterprise Edge-Native Logistics Analytics Suite - Zion Tech Group",
+    "description": "Enterprise analytics suite that delivers edge-native logistics insights with unified dashboards and reporting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/enterprise-edge-native-logistics-analytics-suite-74dd9a5a"
+    }
+  },
+  "features": [
+    "Data visualization",
+    "Custom dashboards",
+    "Report generation",
+    "KPI tracking"
+  ],
+  "benefits": [
+    "Unified data view",
+    "Faster insights",
+    "Customizable reports",
+    "Cross-functional collaboration"
+  ]
+}

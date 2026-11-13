@@ -1,0 +1,29 @@
+{
+  "title": "Procurement & Sourcing Automation",
+  "description": "Automate procurement: requisitions, RFQs, vendor selection, PO generation, and invoice processing. Reduce procurement cycle by 70%.",
+  "basic": "$399/mo/month",
+  "pro": "$1,199/mo/month",
+  "enterprise": "$3,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Procurement & Sourcing Automation - Zion Tech Group",
+    "description": "Automate procurement: requisitions, RFQs, vendor selection, PO generation, and invoice processing. Reduce procurement cycle by 70%.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w175-procurement-workflow"
+    }
+  },
+  "features": [
+    "Requisition and approval workflows",
+    "RFQ generation and vendor response management",
+    "Vendor scoring and selection",
+    "Purchase order generation and tracking",
+    "Invoice matching and payment scheduling"
+  ],
+  "benefits": [
+    "Reduce procurement cycle by 70%",
+    "Vendor scoring improves sourcing quality",
+    "Invoice matching catches discrepancies",
+    "Contract compliance prevents overspend"
+  ]
+}

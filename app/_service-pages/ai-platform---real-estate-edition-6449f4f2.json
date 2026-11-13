@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/ai-platform---real-estate-edition-6449f4f2",
+  "breadcrumbTitle": "AI Platform - Real Estate Edition",
+  "title": "AI Platform - Real Estate Edition",
+  "description": "Transform your Real Estate operations with our AI Platform - Real Estate Edition. This AI-driven solution automates content generation with unprecedented accura",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Platform - Real Estate Edition - Zion Tech Group",
+    "description": "Transform your Real Estate operations with our AI Platform - Real Estate Edition. This AI-driven solution automates content generation with unprecedented accura",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-platform---real-estate-edition-6449f4f2"
+    }
+  },
+  "features": [
+    "Sentiment analysis with real-time monitoring",
+    "Role-based access control with SSO integration",
+    "Auto-scaling capabilities with predictive scaling",
+    "Open-source friendly with plugin architecture",
+    "Alerting system with intelligent notifications"
+  ],
+  "benefits": [
+    "3x faster decision making with real-time insights",
+    "Seamless integration with existing systems and workflows",
+    "Better market positioning with competitive analysis",
+    "Performance benchmarking against industry standards",
+    "Enterprise-grade security with end-to-end encryption"
+  ]
+}

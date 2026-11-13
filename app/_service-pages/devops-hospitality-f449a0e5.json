@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/devops-hospitality-f449a0e5",
+  "breadcrumbTitle": "DevOps & Automation for Hospitality",
+  "title": "DevOps & Automation for Hospitality",
+  "description": "DevOps and automation for Hospitality teams. CI/CD, infrastructure as code, and observability to ship faster and safer.",
+  "basic": "$299/month",
+  "pro": "$799/month",
+  "enterprise": "$2499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "DevOps & Automation for Hospitality - Zion Tech Group",
+    "description": "DevOps and automation for Hospitality teams. CI/CD, infrastructure as code, and observability to ship faster and safer.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/devops-hospitality-f449a0e5"
+    }
+  },
+  "features": [
+    "CI/CD pipeline setup",
+    "Infrastructure as code (Terraform/CloudFormation)",
+    "Container orchestration (Kubernetes)",
+    "Monitoring and alerting",
+    "Release automation"
+  ],
+  "benefits": [
+    "Shorter release cycles",
+    "Reduced manual errors",
+    "Higher deployment frequency",
+    "Improved reliability",
+    "Faster incident resolution"
+  ]
+}

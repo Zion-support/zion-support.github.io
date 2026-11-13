@@ -1,0 +1,29 @@
+{
+  "title": "AI Supply Chain Risk Intelligence Platform",
+  "description": "Real-time supply chain risk monitoring using AI to analyze supplier financial health, geopolitical events, weather disruptions, and logistics bottlenecks. Predicts disruptions 30-90 days in advance.",
+  "basic": "$2,999/mo/month",
+  "pro": "$6,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Supply Chain Risk Intelligence Platform - Zion Tech Group",
+    "description": "Real-time supply chain risk monitoring using AI to analyze supplier financial health, geopolitical events, weather disruptions, and logistics bottlenecks. Predi",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-supply-chain-risk-intelligence"
+    }
+  },
+  "features": [
+    "Multi-tier supplier risk scoring and monitoring",
+    "Geopolitical and regulatory change impact analysis",
+    "Weather and natural disaster disruption forecasting",
+    "Logistics bottleneck prediction with alternative routing",
+    "Supplier financial health monitoring and early warning"
+  ],
+  "benefits": [
+    "Predict supply chain disruptions 30-90 days ahead",
+    "Reduce stockouts by 45% with demand sensing",
+    "Diversify supplier base with data-driven insights",
+    "Meet ESG reporting requirements across supply chain"
+  ]
+}

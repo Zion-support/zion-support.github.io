@@ -1,0 +1,29 @@
+{
+  "title": "Automated Penetration Testing",
+  "description": "Continuous, automated penetration testing of web apps, APIs, and infrastructure with CVE scanning, exploitable-path reporting, and fix verification.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Automated Penetration Testing - Zion Tech Group",
+    "description": "Continuous, automated penetration testing of web apps, APIs, and infrastructure with CVE scanning, exploitable-path reporting, and fix verification.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-pen-testing"
+    }
+  },
+  "features": [
+    "Automated OWASP Top 10 scans",
+    "API security testing",
+    "Infrastructure CVE scan",
+    "Exploitable-path chain reports",
+    "Remediation ticket integration"
+  ],
+  "benefits": [
+    "Reduce costs with automated penetration testing",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

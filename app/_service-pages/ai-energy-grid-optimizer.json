@@ -1,0 +1,28 @@
+{
+  "title": "AI Energy Grid Optimization Platform",
+  "description": "Grid-scale energy management: demand forecasting, renewable integration, battery dispatch optimization, real-time load balancing. Reduces energy waste by 22%.",
+  "basic": "$999/month",
+  "pro": "$2999/month",
+  "enterprise": "$9999/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Energy Grid Optimization Platform - Zion Tech Group",
+    "description": "Grid-scale energy management: demand forecasting, renewable integration, battery dispatch optimization, real-time load balancing. Reduces energy waste by 22%.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-energy-grid-optimizer"
+    }
+  },
+  "features": [
+    "AI demand forecasting (15min-7day horizons)",
+    "Solar/wind generation prediction",
+    "Battery storage dispatch optimization",
+    "Real-time load balancing",
+    "Carbon emission tracking"
+  ],
+  "benefits": [
+    "Reduce energy waste by 22%",
+    "Save 15% on energy costs",
+    "Improve grid reliability"
+  ]
+}

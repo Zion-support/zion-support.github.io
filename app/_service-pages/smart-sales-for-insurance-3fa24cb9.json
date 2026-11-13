@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/smart-sales-for-insurance-3fa24cb9",
+  "breadcrumbTitle": "Smart Sales for Insurance",
+  "title": "Smart Sales for Insurance",
+  "description": "The future of Insurance is here with Smart Sales for Insurance. Powered by cutting-edge AI, this platform delivers sentiment analysis like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Sales for Insurance - Zion Tech Group",
+    "description": "The future of Insurance is here with Smart Sales for Insurance. Powered by cutting-edge AI, this platform delivers sentiment analysis like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-sales-for-insurance-3fa24cb9"
+    }
+  },
+  "features": [
+    "Version control with rollback capabilities",
+    "Fraud detection with anomaly analysis",
+    "Brand monitoring across social channels",
+    "Multi-region deployment with automatic failover",
+    "Business intelligence with KPI dashboards"
+  ],
+  "benefits": [
+    "Real-time insights and alerts for proactive management",
+    "Better market positioning with competitive analysis",
+    "Zero manual intervention required for routine tasks",
+    "Automated compliance reporting for regulatory requirements"
+  ]
+}

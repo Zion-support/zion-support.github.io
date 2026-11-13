@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/ai-automation---legal-edition-1-b6f83043",
+  "breadcrumbTitle": "AI Automation - Legal Edition #1",
+  "title": "AI Automation - Legal Edition #1",
+  "description": "Next-generation legal solution: AI Automation - Legal Edition #1. Combines workflow management with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Automation - Legal Edition #1 - Zion Tech Group",
+    "description": "Next-generation legal solution: AI Automation - Legal Edition #1. Combines workflow management with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-automation---legal-edition-1-b6f83043"
+    }
+  },
+  "features": [
+    "Edge computing support",
+    "Open-source friendly",
+    "Rollback mechanisms",
+    "Cloud-native architecture"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "Performance benchmarking",
+    "Dynamic resource allocation"
+  ]
+}

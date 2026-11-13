@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/smart-content-suite-dd370907",
+  "breadcrumbTitle": "Smart Content Suite",
+  "title": "Smart Content Suite",
+  "description": "Transform your telecom operations with our Smart Content Suite. This AI-driven solution automates compliance monitoring with unprecedented accuracy and efficien",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Content Suite - Zion Tech Group",
+    "description": "Transform your telecom operations with our Smart Content Suite. This AI-driven solution automates compliance monitoring with unprecedented accuracy and efficien",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-content-suite-dd370907"
+    }
+  },
+  "features": [
+    "Offline capabilities",
+    "Open-source friendly",
+    "SOC 2 certified",
+    "Edge computing support",
+    "HIPAA ready"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "Reduced human error by 95%",
+    "Predictive maintenance scheduling",
+    "99.9% uptime guarantee"
+  ]
+}

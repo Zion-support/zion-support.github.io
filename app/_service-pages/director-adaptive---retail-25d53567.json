@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/director-adaptive---retail-25d53567",
+  "breadcrumbTitle": "Director Adaptive - Retail",
+  "title": "Director Adaptive - Retail",
+  "description": "Revolutionize retail through intelligent automation. Our Director Adaptive - Retail leverages advanced machine learning to deliver resource optimization at scal",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Director Adaptive - Retail - Zion Tech Group",
+    "description": "Revolutionize retail through intelligent automation. Our Director Adaptive - Retail leverages advanced machine learning to deliver resource optimization at scal",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/director-adaptive---retail-25d53567"
+    }
+  },
+  "features": [
+    "Zero-downtime updates",
+    "Open-source friendly",
+    "Comprehensive monitoring",
+    "Performance dashboards",
+    "HIPAA ready"
+  ],
+  "benefits": [
+    "Intelligent load balancing",
+    "Zero manual intervention required",
+    "Scalable to millions of transactions"
+  ]
+}

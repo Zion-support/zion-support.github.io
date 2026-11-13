@@ -1,0 +1,29 @@
+{
+  "title": "AI Payment Reconciliation & Cash Application",
+  "description": "Automate payment reconciliation with AI that matches payments to invoices across banks, payment gateways, and ERPs. Reduce reconciliation time by 95%.",
+  "basic": "$399/mo/month",
+  "pro": "$999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Payment Reconciliation & Cash Application - Zion Tech Group",
+    "description": "Automate payment reconciliation with AI that matches payments to invoices across banks, payment gateways, and ERPs. Reduce reconciliation time by 95%.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-ai-payment-reconciliation"
+    }
+  },
+  "features": [
+    "Multi-bank and gateway aggregation",
+    "AI auto-matching to invoices",
+    "Exception handling with smart suggestions",
+    "Integration with SAP, NetSuite, QuickBooks",
+    "Real-time reconciliation dashboard"
+  ],
+  "benefits": [
+    "95% faster reconciliation",
+    "Reduce unmatched items by 90%",
+    "Improve cash flow visibility",
+    "Eliminate manual matching errors"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/automated-system-for-agriculture-f8d4559c",
+  "breadcrumbTitle": "Automated System for Agriculture",
+  "title": "Automated System for Agriculture",
+  "description": "Revolutionize agriculture through intelligent automation. Our Automated System for Agriculture leverages advanced machine learning to deliver maintenance schedu",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated System for Agriculture - Zion Tech Group",
+    "description": "Revolutionize agriculture through intelligent automation. Our Automated System for Agriculture leverages advanced machine learning to deliver maintenance schedu",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-system-for-agriculture-f8d4559c"
+    }
+  },
+  "features": [
+    "Plugin architecture",
+    "Role-based access control",
+    "Data encryption",
+    "SOC 2 certified",
+    "Comprehensive monitoring"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "Self-healing infrastructure",
+    "99.9% uptime guarantee",
+    "Seamless integration with existing systems",
+    "Predictive maintenance scheduling"
+  ]
+}

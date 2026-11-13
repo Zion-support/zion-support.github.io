@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/orchestrator-ai---manufacturing-73765e34",
+  "breadcrumbTitle": "Orchestrator AI - Manufacturing",
+  "title": "Orchestrator AI - Manufacturing",
+  "description": "Next-generation manufacturing solution: Orchestrator AI - Manufacturing. Combines data processing with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Orchestrator AI - Manufacturing - Zion Tech Group",
+    "description": "Next-generation manufacturing solution: Orchestrator AI - Manufacturing. Combines data processing with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/orchestrator-ai---manufacturing-73765e34"
+    }
+  },
+  "features": [
+    "Alerting system",
+    "GDPR compliance",
+    "Multi-region deployment",
+    "Performance dashboards"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "Intelligent load balancing",
+    "Reduced human error by 95%",
+    "Real-time insights and alerts"
+  ]
+}

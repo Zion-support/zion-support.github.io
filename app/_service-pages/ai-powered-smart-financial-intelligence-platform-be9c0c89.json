@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-smart-financial-intelligence-platform-be9c0c89",
+  "breadcrumbTitle": "AI-Powered Smart Financial Intelligence Platform",
+  "title": "AI-Powered Smart Financial Intelligence Platform",
+  "description": "AI-driven intelligence platform that delivers smart insights and automated decision-making for financial operations.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Smart Financial Intelligence Platform - Zion Tech Group",
+    "description": "AI-driven intelligence platform that delivers smart insights and automated decision-making for financial operations.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-smart-financial-intelligence-platform-be9c0c89"
+    }
+  },
+  "features": [
+    "Real-time intelligence",
+    "Automated insights",
+    "Predictive alerts",
+    "API integration"
+  ],
+  "benefits": [
+    "Real-time actionable insights",
+    "Automated decision-making",
+    "Reduced latency",
+    "Improved accuracy"
+  ]
+}

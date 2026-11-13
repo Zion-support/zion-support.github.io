@@ -1,0 +1,29 @@
+{
+  "title": "Ai Drug Discovery Platform",
+  "description": "AI Drug Discovery Platform — enterprise-grade solution with AI-powered automation, real-time analytics, and seamless integration. Built for scale with security-first architecture.",
+  "basic": "$2,499/mo/month",
+  "pro": "$4,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Ai Drug Discovery Platform - Zion Tech Group",
+    "description": "AI Drug Discovery Platform — enterprise-grade solution with AI-powered automation, real-time analytics, and seamless integration. Built for scale with security-",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-drug-discovery-platform"
+    }
+  },
+  "features": [
+    "AI-powered drug discovery automation",
+    "Real-time analytics and monitoring",
+    "Enterprise-grade security (SOC2, HIPAA ready)",
+    "REST API and webhooks for integrations",
+    "Multi-tenant SaaS architecture"
+  ],
+  "benefits": [
+    "Reduce manual effort in drug discovery by 80%",
+    "Make data-driven decisions in real-time",
+    "Scale without adding headcount",
+    "Enterprise security out of the box"
+  ]
+}

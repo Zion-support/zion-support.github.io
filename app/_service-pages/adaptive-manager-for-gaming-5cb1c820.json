@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/adaptive-manager-for-gaming-5cb1c820",
+  "breadcrumbTitle": "Adaptive Manager for Gaming",
+  "title": "Adaptive Manager for Gaming",
+  "description": "Revolutionize gaming through intelligent automation. Our Adaptive Manager for Gaming leverages advanced machine learning to deliver network optimization at scal",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Adaptive Manager for Gaming - Zion Tech Group",
+    "description": "Revolutionize gaming through intelligent automation. Our Adaptive Manager for Gaming leverages advanced machine learning to deliver network optimization at scal",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/adaptive-manager-for-gaming-5cb1c820"
+    }
+  },
+  "features": [
+    "Performance dashboards",
+    "Plugin architecture",
+    "GDPR compliance",
+    "Multi-language support"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "Scalable to millions of transactions",
+    "99.9% uptime guarantee"
+  ]
+}

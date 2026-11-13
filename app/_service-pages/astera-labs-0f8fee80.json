@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/astera-labs-0f8fee80",
+  "breadcrumbTitle": "Astera Labs",
+  "title": "Astera Labs",
+  "description": "Astera Labs, Inc., headquartered in San Jose, California, is a fabless manufacturing company that develops connectivity technologies and related software that a",
+  "basic": "$N/A/month",
+  "pro": "$N/A/month",
+  "enterprise": "$N/A/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Astera Labs - Zion Tech Group",
+    "description": "Astera Labs, Inc., headquartered in San Jose, California, is a fabless manufacturing company that develops connectivity technologies and related software that a",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/astera-labs-0f8fee80"
+    }
+  },
+  "features": [
+    "AI-driven automation",
+    "Cloud-native deployment",
+    "API-first architecture",
+    "Enterprise-grade security",
+    "Scalable infrastructure"
+  ],
+  "benefits": [
+    "Improved operational efficiency",
+    "Reduced manual processes",
+    "Data-driven decision making",
+    "Faster time-to value",
+    "Scalable performance"
+  ]
+}

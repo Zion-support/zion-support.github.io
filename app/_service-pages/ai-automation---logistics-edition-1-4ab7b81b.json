@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-automation---logistics-edition-1-4ab7b81b",
+  "breadcrumbTitle": "AI Automation - Logistics Edition #1",
+  "title": "AI Automation - Logistics Edition #1",
+  "description": "Revolutionize logistics through intelligent automation. Our AI Automation - Logistics Edition #1 leverages advanced machine learning to deliver performance moni",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Automation - Logistics Edition #1 - Zion Tech Group",
+    "description": "Revolutionize logistics through intelligent automation. Our AI Automation - Logistics Edition #1 leverages advanced machine learning to deliver performance moni",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-automation---logistics-edition-1-4ab7b81b"
+    }
+  },
+  "features": [
+    "Machine learning integration",
+    "Offline capabilities",
+    "Role-based access control",
+    "Real-time processing"
+  ],
+  "benefits": [
+    "Automated compliance reporting",
+    "Reduced human error by 95%",
+    "Cost optimization recommendations",
+    "Real-time insights and alerts"
+  ]
+}

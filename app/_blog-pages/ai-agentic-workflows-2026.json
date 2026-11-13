@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "AI Agentic Workflows | Zion Tech Group",
+    "description": "AI Agentic Workflows",
+    "keywords": [
+      "automation",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "AI Agentic Workflows",
+      "description": "AI Agentic Workflows",
+      "url": "https://ziontechgroup.com/blog/ai-agentic-workflows-2026/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/ai-agentic-workflows-2026/"
+    }
+  },
+  "values": [
+    "AI Agentic Workflows",
+    "AI Agentic Workflows",
+    "AI Agentic Workflows",
+    "Recommended next step",
+    "Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "Recommended next step",
+    " Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "/blog/it-consulting-2026-6846",
+    "It Consulting 2026 6846",
+    "/blog/cloud-migration-services-2026-7193",
+    "Cloud Migration Services 2026 7193",
+    "/blog/incident-response-retainer-2026-6757",
+    "Incident Response Retainer 2026 6757",
+    "/blog/genai-devops-cicd-roi-and-cost-model",
+    "Genai Devops Cicd Roi And Cost Model"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "AI Agentic Workflows",
+    "description": "AI Agentic Workflows",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T04:51:40Z",
+    "dateModified": "2026-08-07T04:51:40Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/ai-agentic-workflows-2026/"
+  }
+}

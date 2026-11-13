@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-engine---healthcare-edition-8-cc4a6e6c",
+  "breadcrumbTitle": "AI Engine - Healthcare Edition #8",
+  "title": "AI Engine - Healthcare Edition #8",
+  "description": "Unlock unprecedented growth with AI Engine - Healthcare Edition #8. This autonomous system provides inventory management with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Engine - Healthcare Edition #8 - Zion Tech Group",
+    "description": "Unlock unprecedented growth with AI Engine - Healthcare Edition #8. This autonomous system provides inventory management with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-engine---healthcare-edition-8-cc4a6e6c"
+    }
+  },
+  "features": [
+    "Container orchestration",
+    "Mobile-responsive interface",
+    "Plugin architecture",
+    "Data encryption",
+    "Multi-region deployment"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "3x faster decision making",
+    "Zero manual intervention required"
+  ]
+}

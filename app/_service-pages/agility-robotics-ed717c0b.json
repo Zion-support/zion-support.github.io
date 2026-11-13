@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/agility-robotics-ed717c0b",
+  "breadcrumbTitle": "Agility Robotics",
+  "title": "Agility Robotics",
+  "description": "Agility Robotics, Inc. is a privately held American humanoid robotics and engineering company. The company was founded in 2015 as a spin-off from Oregon State U",
+  "basic": "$N/A/month",
+  "pro": "$N/A/month",
+  "enterprise": "$N/A/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Agility Robotics - Zion Tech Group",
+    "description": "Agility Robotics, Inc. is a privately held American humanoid robotics and engineering company. The company was founded in 2015 as a spin-off from Oregon State U",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/agility-robotics-ed717c0b"
+    }
+  },
+  "features": [
+    "AI-driven automation",
+    "Cloud-native deployment",
+    "API-first architecture",
+    "Enterprise-grade security",
+    "Scalable infrastructure"
+  ],
+  "benefits": [
+    "Improved operational efficiency",
+    "Reduced manual processes",
+    "Data-driven decision making",
+    "Faster time-to value",
+    "Scalable performance"
+  ]
+}

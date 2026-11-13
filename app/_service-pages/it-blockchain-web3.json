@@ -1,0 +1,29 @@
+{
+  "title": "IT Blockchain & Web3 Development",
+  "description": "Enterprise blockchain and Web3 development. Smart contracts, DeFi protocols, NFT platforms, and decentralized applications on Ethereum, Solana, and enterprise chains.",
+  "basic": "$8,000/mo/month",
+  "pro": "$20,000/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "IT Blockchain & Web3 Development - Zion Tech Group",
+    "description": "Enterprise blockchain and Web3 development. Smart contracts, DeFi protocols, NFT platforms, and decentralized applications on Ethereum, Solana, and enterprise c",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-blockchain-web3"
+    }
+  },
+  "features": [
+    "Smart contract development and auditing",
+    "DeFi protocol design and implementation",
+    "NFT marketplace and platform development",
+    "Enterprise blockchain (Hyperledger, Corda)",
+    "Tokenomics design and token launch"
+  ],
+  "benefits": [
+    "Launch blockchain products in weeks, not months",
+    "Secure smart contracts with professional audits",
+    "Tokenize assets for new revenue streams",
+    "Build trust with transparent blockchain solutions"
+  ]
+}

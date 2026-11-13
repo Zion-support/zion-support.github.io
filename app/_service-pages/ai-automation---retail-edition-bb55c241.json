@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-automation---retail-edition-bb55c241",
+  "breadcrumbTitle": "AI Automation - Retail Edition",
+  "title": "AI Automation - Retail Edition",
+  "description": "Revolutionize retail through intelligent automation. Our AI Automation - Retail Edition leverages advanced machine learning to deliver performance monitoring at",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Automation - Retail Edition - Zion Tech Group",
+    "description": "Revolutionize retail through intelligent automation. Our AI Automation - Retail Edition leverages advanced machine learning to deliver performance monitoring at",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-automation---retail-edition-bb55c241"
+    }
+  },
+  "features": [
+    "Cloud-native architecture",
+    "Zero-downtime updates",
+    "Auto-scaling capabilities",
+    "Machine learning integration",
+    "SOC 2 certified"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "50% reduction in operational costs",
+    "ROI in under 90 days"
+  ]
+}

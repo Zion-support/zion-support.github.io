@@ -1,0 +1,29 @@
+{
+  "title": "Data Engineering & ETL Pipelines",
+  "description": "Build robust data pipelines, ETL/ELT workflows, and data lake architectures for real-time and batch processing.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Data Engineering & ETL Pipelines - Zion Tech Group",
+    "description": "Build robust data pipelines, ETL/ELT workflows, and data lake architectures for real-time and batch processing.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/data-engineering"
+    }
+  },
+  "features": [
+    "ETL/ELT pipeline design & deployment",
+    "Data lake & warehouse architecture",
+    "Real-time stream processing (Kafka, Spark)",
+    "Data quality monitoring & validation",
+    "Schema evolution & versioning"
+  ],
+  "benefits": [
+    "Reduce costs with data engineering & etl pipelines",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

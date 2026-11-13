@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligence-ai---tech-a332101e",
+  "breadcrumbTitle": "Intelligence AI - Tech",
+  "title": "Intelligence AI - Tech",
+  "description": "Revolutionize technology through intelligent automation. Our Intelligence AI - Tech leverages advanced machine learning to deliver code optimization at scale.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligence AI - Tech - Zion Tech Group",
+    "description": "Revolutionize technology through intelligent automation. Our Intelligence AI - Tech leverages advanced machine learning to deliver code optimization at scale.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligence-ai---tech-a332101e"
+    }
+  },
+  "features": [
+    "Data encryption",
+    "Plugin architecture",
+    "Open-source friendly",
+    "API-first design",
+    "Custom integrations"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "99.9% uptime guarantee",
+    "Zero manual intervention required"
+  ]
+}

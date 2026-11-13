@@ -1,0 +1,29 @@
+{
+  "title": "Competitor Intelligence Engine",
+  "description": "Automated competitor tracking: pricing changes, feature releases, marketing campaigns from 10K+ sources. Weekly digest + real-time alerts.",
+  "basic": "$199/mo/month",
+  "pro": "$599/mo/month",
+  "enterprise": "$1,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Competitor Intelligence Engine - Zion Tech Group",
+    "description": "Automated competitor tracking: pricing changes, feature releases, marketing campaigns from 10K+ sources. Weekly digest + real-time alerts.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-competitor-intelligence"
+    }
+  },
+  "features": [
+    "Daily web crawls",
+    "Feature matrix auto-update",
+    "Sentiment tracking",
+    "Alert rules & thresholds",
+    "Export to PDF/PPT"
+  ],
+  "benefits": [
+    "Reduce costs with competitor intelligence engine",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

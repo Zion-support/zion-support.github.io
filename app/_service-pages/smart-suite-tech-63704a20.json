@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/smart-suite-tech-63704a20",
+  "breadcrumbTitle": "Smart suite-tech",
+  "title": "Smart suite-tech",
+  "description": "Unlock unprecedented growth with Smart suite-tech. This autonomous system provides risk assessment with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart suite-tech - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Smart suite-tech. This autonomous system provides risk assessment with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-suite-tech-63704a20"
+    }
+  },
+  "features": [
+    "Cloud-native architecture",
+    "Container orchestration",
+    "Custom integrations",
+    "Mobile-responsive interface",
+    "Edge computing support"
+  ],
+  "benefits": [
+    "24/7 automated operations",
+    "Scalable to millions of transactions",
+    "3x faster decision making",
+    "Reduced human error by 95%"
+  ]
+}

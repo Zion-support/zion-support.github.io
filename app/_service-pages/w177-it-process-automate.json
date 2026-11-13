@@ -1,0 +1,29 @@
+{
+  "title": "IT Process Automation (RPA)",
+  "description": "Robotic process automation for IT: user provisioning, ticket routing, report generation, system monitoring.",
+  "basic": "$399/mo/month",
+  "pro": "$1,199/mo/month",
+  "enterprise": "$3,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "IT Process Automation (RPA) - Zion Tech Group",
+    "description": "Robotic process automation for IT: user provisioning, ticket routing, report generation, system monitoring.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w177-it-process-automate"
+    }
+  },
+  "features": [
+    "User provisioning and deprovisioning",
+    "Ticket auto-routing and categorization",
+    "Report generation and distribution",
+    "System monitoring and alerting",
+    "Password reset automation"
+  ],
+  "benefits": [
+    "Automate 80% of repetitive IT tasks",
+    "User provisioning in minutes not hours",
+    "Ticket routing reduces response time",
+    "Report generation eliminates manual work"
+  ]
+}

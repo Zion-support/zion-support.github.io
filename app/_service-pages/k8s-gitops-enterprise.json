@@ -1,0 +1,28 @@
+{
+  "title": "Kubernetes GitOps Enterprise Platform",
+  "description": "Enterprise Kubernetes with GitOps: ArgoCD or Flux continuous delivery, OPA or Gatekeeper policy enforcement, cluster fleet management, cost allocation, namespace quotas, and image scanning — all via Git commits.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Kubernetes GitOps Enterprise Platform - Zion Tech Group",
+    "description": "Enterprise Kubernetes with GitOps: ArgoCD or Flux continuous delivery, OPA or Gatekeeper policy enforcement, cluster fleet management, cost allocation, namespac",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/k8s-gitops-enterprise"
+    }
+  },
+  "features": [
+    "Intelligent automation and orchestration",
+    "Enterprise-grade integration",
+    "Real-time monitoring and alerts",
+    "Scalable multi-tenant architecture"
+  ],
+  "benefits": [
+    "Reduce costs with kubernetes gitops enterprise platform",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

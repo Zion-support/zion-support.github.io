@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/next-generation-automated-transportation-automation-57e7e91f",
+  "breadcrumbTitle": "Next-Generation Automated Transportation Automation",
+  "title": "Next-Generation Automated Transportation Automation",
+  "description": "Next-generation automation suite that streamlines automated transportation workflows with intelligent orchestration.",
+  "basic": "$218/month",
+  "pro": "$548/month",
+  "enterprise": "$1648/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Next-Generation Automated Transportation Automation - Zion Tech Group",
+    "description": "Next-generation automation suite that streamlines automated transportation workflows with intelligent orchestration.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/next-generation-automated-transportation-automation-57e7e91f"
+    }
+  },
+  "features": [
+    "Smart orchestration",
+    "Process automation",
+    "Event processing",
+    "Task scheduling"
+  ],
+  "benefits": [
+    "Faster execution",
+    "Reduced manual steps",
+    "Scalable processes",
+    "Error reduction"
+  ]
+}

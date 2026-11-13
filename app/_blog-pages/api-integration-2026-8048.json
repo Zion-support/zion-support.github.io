@@ -1,0 +1,31 @@
+{
+  "template": "page-shell",
+  "metadata": {
+    "title": "API Integration | Zion Tech Group",
+    "description": "Practical guide to api integration: frameworks, metrics, and rollout playbook.",
+    "alternates": {
+      "canonical": "/blog/api-integration-2026-8048/"
+    },
+    "openGraph": {
+      "title": "API Integration",
+      "description": "Practical guide to api integration.",
+      "url": "https://ziontechgroup.com/blog/api-integration-2026-8048/",
+      "type": "article"
+    },
+    "twitter": {
+      "card": "summary_large_image",
+      "title": "API Integration",
+      "description": "Practical guide to api integration."
+    }
+  },
+  "values": [
+    "API Integration",
+    "Practical guide to api integration: frameworks, metrics, and rollout playbook.",
+    "https://ziontechgroup.com/blog/api-integration-2026-8048/",
+    "API Integration",
+    "Practical guide to api integration: frameworks, metrics, and rollout playbook.",
+    "https://ziontechgroup.com/blog/api-integration-2026-8048/",
+    "API Integration is moving from experiment to operating layer. Most programs fail because they optimize for demos instead of outcomes.",
+    "With strong governance, api integration becomes reliable infrastructure."
+  ]
+}

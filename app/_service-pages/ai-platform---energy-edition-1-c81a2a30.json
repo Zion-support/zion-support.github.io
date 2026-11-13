@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-platform---energy-edition-1-c81a2a30",
+  "breadcrumbTitle": "AI Platform - Energy Edition #1",
+  "title": "AI Platform - Energy Edition #1",
+  "description": "Transform your energy operations with our AI Platform - Energy Edition #1. This AI-driven solution automates process automation with unprecedented accuracy and ",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Platform - Energy Edition #1 - Zion Tech Group",
+    "description": "Transform your energy operations with our AI Platform - Energy Edition #1. This AI-driven solution automates process automation with unprecedented accuracy and ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-platform---energy-edition-1-c81a2a30"
+    }
+  },
+  "features": [
+    "Real-time processing",
+    "Microservices deployment",
+    "Serverless functions",
+    "Role-based access control",
+    "Rollback mechanisms"
+  ],
+  "benefits": [
+    "Seamless integration with existing systems",
+    "Scalable to millions of transactions",
+    "Dynamic resource allocation"
+  ]
+}

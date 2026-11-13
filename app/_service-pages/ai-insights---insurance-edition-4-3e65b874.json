@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-insights---insurance-edition-4-3e65b874",
+  "breadcrumbTitle": "AI Insights - Insurance Edition #4",
+  "title": "AI Insights - Insurance Edition #4",
+  "description": "Unlock unprecedented growth with AI Insights - Insurance Edition #4. This autonomous system provides network optimization with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Insights - Insurance Edition #4 - Zion Tech Group",
+    "description": "Unlock unprecedented growth with AI Insights - Insurance Edition #4. This autonomous system provides network optimization with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-insights---insurance-edition-4-3e65b874"
+    }
+  },
+  "features": [
+    "Open-source friendly",
+    "Role-based access control",
+    "Audit trails",
+    "Edge computing support",
+    "Performance dashboards"
+  ],
+  "benefits": [
+    "Automated compliance reporting",
+    "Performance benchmarking",
+    "Scalable to millions of transactions",
+    "Real-time insights and alerts"
+  ]
+}

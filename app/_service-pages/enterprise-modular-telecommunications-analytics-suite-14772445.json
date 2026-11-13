@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/enterprise-modular-telecommunications-analytics-suite-14772445",
+  "breadcrumbTitle": "Enterprise Modular Telecommunications Analytics Suite",
+  "title": "Enterprise Modular Telecommunications Analytics Suite",
+  "description": "Enterprise analytics suite that delivers modular telecommunications insights with unified dashboards and reporting.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Enterprise Modular Telecommunications Analytics Suite - Zion Tech Group",
+    "description": "Enterprise analytics suite that delivers modular telecommunications insights with unified dashboards and reporting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/enterprise-modular-telecommunications-analytics-suite-14772445"
+    }
+  },
+  "features": [
+    "Data visualization",
+    "Custom dashboards",
+    "Report generation",
+    "KPI tracking"
+  ],
+  "benefits": [
+    "Unified data view",
+    "Faster insights",
+    "Customizable reports",
+    "Cross-functional collaboration"
+  ]
+}

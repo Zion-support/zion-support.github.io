@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/optimizer-self-optimizing---insurance-56dc10ad",
+  "breadcrumbTitle": "Optimizer Self-Optimizing - Insurance",
+  "title": "Optimizer Self-Optimizing - Insurance",
+  "description": "Revolutionize insurance through intelligent automation. Our Optimizer Self-Optimizing - Insurance leverages advanced machine learning to deliver security monito",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Optimizer Self-Optimizing - Insurance - Zion Tech Group",
+    "description": "Revolutionize insurance through intelligent automation. Our Optimizer Self-Optimizing - Insurance leverages advanced machine learning to deliver security monito",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/optimizer-self-optimizing---insurance-56dc10ad"
+    }
+  },
+  "features": [
+    "Real-time processing",
+    "Audit trails",
+    "Performance dashboards",
+    "Cloud-native architecture",
+    "Microservices deployment"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "Intelligent load balancing",
+    "Real-time insights and alerts",
+    "24/7 automated operations"
+  ]
+}

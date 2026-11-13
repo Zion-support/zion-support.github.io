@@ -1,0 +1,29 @@
+{
+  "title": "Security Operations Center Build",
+  "description": "Design and build a SOC from scratch: technology selection, team structure, playbooks, and tiered staffing. Get a mature SOC without the learning curve.",
+  "basic": "$49,999/month",
+  "pro": "$99,999/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Security Operations Center Build - Zion Tech Group",
+    "description": "Design and build a SOC from scratch: technology selection, team structure, playbooks, and tiered staffing. Get a mature SOC without the learning curve.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w175-sec-ops-center"
+    }
+  },
+  "features": [
+    "SOC technology stack selection and deployment",
+    "Team structure and tiering design",
+    "Playbook and runbook development",
+    "Detection rule development and tuning",
+    "Staffing model and shift scheduling"
+  ],
+  "benefits": [
+    "Production-ready SOC in 3 months, not 2 years",
+    "Proven technology stack and team structure",
+    "Playbooks ensure consistent response",
+    "Maturity roadmap for continuous improvement"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "IT VoIP & Business Telephony Solutions",
+  "description": "Modern business telephony with VoIP, SIP trunking, and unified communications. Crystal-clear voice, video, and messaging for distributed teams.",
+  "basic": "$15/user/mo/month",
+  "pro": "$25/user/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "IT VoIP & Business Telephony Solutions - Zion Tech Group",
+    "description": "Modern business telephony with VoIP, SIP trunking, and unified communications. Crystal-clear voice, video, and messaging for distributed teams.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-voip-telephony"
+    }
+  },
+  "features": [
+    "VoIP phone system deployment",
+    "SIP trunking for cost savings",
+    "Auto-attendant and call routing",
+    "Voicemail-to-email and transcription",
+    "Call recording and analytics"
+  ],
+  "benefits": [
+    "Reduce phone costs by 60% with VoIP",
+    "Enable work-from-anywhere with softphones",
+    "Improve customer experience with smart routing",
+    "Scale phone system without adding hardware"
+  ]
+}

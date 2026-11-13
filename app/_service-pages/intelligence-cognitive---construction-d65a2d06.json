@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligence-cognitive---construction-d65a2d06",
+  "breadcrumbTitle": "Intelligence Cognitive - Construction",
+  "title": "Intelligence Cognitive - Construction",
+  "description": "Transform your construction operations with our Intelligence Cognitive - Construction. This AI-driven solution automates workflow management with unprecedented ",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligence Cognitive - Construction - Zion Tech Group",
+    "description": "Transform your construction operations with our Intelligence Cognitive - Construction. This AI-driven solution automates workflow management with unprecedented ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligence-cognitive---construction-d65a2d06"
+    }
+  },
+  "features": [
+    "Alerting system",
+    "Cloud-native architecture",
+    "Audit trails",
+    "Serverless functions"
+  ],
+  "benefits": [
+    "24/7 automated operations",
+    "Automated compliance reporting",
+    "ROI in under 90 days",
+    "Enterprise-grade security",
+    "Dynamic resource allocation"
+  ]
+}

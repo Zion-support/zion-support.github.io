@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/ai-experience---healthcare-edition-b82a5c08",
+  "breadcrumbTitle": "AI Experience - Healthcare Edition",
+  "title": "AI Experience - Healthcare Edition",
+  "description": "Unlock unprecedented growth with AI Experience - Healthcare Edition. This autonomous system provides data processing with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Experience - Healthcare Edition - Zion Tech Group",
+    "description": "Unlock unprecedented growth with AI Experience - Healthcare Edition. This autonomous system provides data processing with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-experience---healthcare-edition-b82a5c08"
+    }
+  },
+  "features": [
+    "Performance dashboards with real-time metrics",
+    "Cost reduction with process mining",
+    "Document processing with OCR and NLP",
+    "Compliance monitoring with regulatory updates",
+    "Role-based access control with SSO integration"
+  ],
+  "benefits": [
+    "ROI achieved in under 90 days with cost savings",
+    "Real-time insights and alerts for proactive management",
+    "Better code quality with automated reviews",
+    "Better supply chain visibility with tracking",
+    "Faster time-to-market with accelerated development"
+  ]
+}

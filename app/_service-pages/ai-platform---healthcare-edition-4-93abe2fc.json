@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-platform---healthcare-edition-4-93abe2fc",
+  "breadcrumbTitle": "AI Platform - Healthcare Edition #4",
+  "title": "AI Platform - Healthcare Edition #4",
+  "description": "Transform your healthcare operations with our AI Platform - Healthcare Edition #4. This AI-driven solution automates network optimization with unprecedented acc",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Platform - Healthcare Edition #4 - Zion Tech Group",
+    "description": "Transform your healthcare operations with our AI Platform - Healthcare Edition #4. This AI-driven solution automates network optimization with unprecedented acc",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-platform---healthcare-edition-4-93abe2fc"
+    }
+  },
+  "features": [
+    "Plugin architecture",
+    "Mobile-responsive interface",
+    "Offline capabilities",
+    "Data encryption"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "Automated compliance reporting",
+    "3x faster decision making",
+    "Intelligent load balancing",
+    "Cost optimization recommendations"
+  ]
+}

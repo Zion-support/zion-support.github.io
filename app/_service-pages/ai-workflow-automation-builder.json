@@ -1,0 +1,28 @@
+{
+  "title": "AI Workflow Automation Builder — Starter",
+  "description": "Entry-level AI workflow builder: natural language workflow design, 100+ connectors, AI decision nodes, scheduled triggers, and human-in-the-loop approval steps for small teams.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Workflow Automation Builder — Starter - Zion Tech Group",
+    "description": "Entry-level AI workflow builder: natural language workflow design, 100+ connectors, AI decision nodes, scheduled triggers, and human-in-the-loop approval steps ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-workflow-automation-builder"
+    }
+  },
+  "features": [
+    "Natural-language workflow authoring",
+    "100+ pre-built app connectors",
+    "AI decision nodes (classify, extract, score)",
+    "Human-in-the-loop approval node"
+  ],
+  "benefits": [
+    "Reduce costs with ai workflow automation builder — starter",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/automated-document-intelligence-de201fcb",
+  "breadcrumbTitle": "Automated Document Intelligence",
+  "title": "Automated Document Intelligence",
+  "description": "Transform your telecom operations with our Automated Document Intelligence. This AI-driven solution automates supply chain with unprecedented accuracy and effic",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated Document Intelligence - Zion Tech Group",
+    "description": "Transform your telecom operations with our Automated Document Intelligence. This AI-driven solution automates supply chain with unprecedented accuracy and effic",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-document-intelligence-de201fcb"
+    }
+  },
+  "features": [
+    "Serverless functions",
+    "Audit trails",
+    "Machine learning integration",
+    "Mobile-responsive interface"
+  ],
+  "benefits": [
+    "24/7 automated operations",
+    "Zero manual intervention required",
+    "Enterprise-grade security"
+  ]
+}

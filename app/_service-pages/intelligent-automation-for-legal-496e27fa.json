@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligent-automation-for-legal-496e27fa",
+  "breadcrumbTitle": "Intelligent Automation for Legal",
+  "title": "Intelligent Automation for Legal",
+  "description": "Next-generation legal solution: Intelligent Automation for Legal. Combines sales forecasting with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Automation for Legal - Zion Tech Group",
+    "description": "Next-generation legal solution: Intelligent Automation for Legal. Combines sales forecasting with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-automation-for-legal-496e27fa"
+    }
+  },
+  "features": [
+    "Plugin architecture",
+    "Rollback mechanisms",
+    "Mobile-responsive interface",
+    "API-first design",
+    "Multi-language support"
+  ],
+  "benefits": [
+    "Performance benchmarking",
+    "Predictive maintenance scheduling",
+    "ROI in under 90 days",
+    "Cost optimization recommendations"
+  ]
+}

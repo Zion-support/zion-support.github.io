@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-management---insurance-edition-5-5adef348",
+  "breadcrumbTitle": "AI Management - Insurance Edition #5",
+  "title": "AI Management - Insurance Edition #5",
+  "description": "Revolutionize insurance through intelligent automation. Our AI Management - Insurance Edition #5 leverages advanced machine learning to deliver energy managemen",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Management - Insurance Edition #5 - Zion Tech Group",
+    "description": "Revolutionize insurance through intelligent automation. Our AI Management - Insurance Edition #5 leverages advanced machine learning to deliver energy managemen",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-management---insurance-edition-5-5adef348"
+    }
+  },
+  "features": [
+    "Cloud-native architecture",
+    "Mobile-responsive interface",
+    "Auto-scaling capabilities",
+    "Performance dashboards",
+    "Container orchestration"
+  ],
+  "benefits": [
+    "24/7 automated operations",
+    "Automated compliance reporting",
+    "Cost optimization recommendations"
+  ]
+}

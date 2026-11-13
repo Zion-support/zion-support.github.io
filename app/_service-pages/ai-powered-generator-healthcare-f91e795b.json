@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-generator-healthcare-f91e795b",
+  "breadcrumbTitle": "AI-Powered generator-healthcare",
+  "title": "AI-Powered generator-healthcare",
+  "description": "The future of healthcare is here with AI-Powered generator-healthcare. Powered by cutting-edge AI, this platform delivers predictive analytics like never before",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered generator-healthcare - Zion Tech Group",
+    "description": "The future of healthcare is here with AI-Powered generator-healthcare. Powered by cutting-edge AI, this platform delivers predictive analytics like never before",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-generator-healthcare-f91e795b"
+    }
+  },
+  "features": [
+    "Performance dashboards",
+    "Rollback mechanisms",
+    "Mobile-responsive interface",
+    "API-first design",
+    "Edge computing support"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "Reduced human error by 95%",
+    "Zero manual intervention required"
+  ]
+}

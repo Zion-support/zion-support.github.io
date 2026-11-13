@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/self-optimizing-advisor-hospitality-4682c19c",
+  "breadcrumbTitle": "Self-Optimizing advisor-hospitality",
+  "title": "Self-Optimizing advisor-hospitality",
+  "description": "Revolutionize hospitality through intelligent automation. Our Self-Optimizing advisor-hospitality leverages advanced machine learning to deliver market intellig",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Self-Optimizing advisor-hospitality - Zion Tech Group",
+    "description": "Revolutionize hospitality through intelligent automation. Our Self-Optimizing advisor-hospitality leverages advanced machine learning to deliver market intellig",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/self-optimizing-advisor-hospitality-4682c19c"
+    }
+  },
+  "features": [
+    "Multi-language support",
+    "Offline capabilities",
+    "Cloud-native architecture",
+    "Rollback mechanisms",
+    "Data encryption"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "3x faster decision making",
+    "Automated compliance reporting"
+  ]
+}

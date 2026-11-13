@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/enterprise-industry-specific-financial-analytics-suite-58fd0194",
+  "breadcrumbTitle": "Enterprise Industry-Specific Financial Analytics Suite",
+  "title": "Enterprise Industry-Specific Financial Analytics Suite",
+  "description": "Enterprise analytics suite that delivers industry-specific financial insights with unified dashboards and reporting.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Enterprise Industry-Specific Financial Analytics Suite - Zion Tech Group",
+    "description": "Enterprise analytics suite that delivers industry-specific financial insights with unified dashboards and reporting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/enterprise-industry-specific-financial-analytics-suite-58fd0194"
+    }
+  },
+  "features": [
+    "Data visualization",
+    "Custom dashboards",
+    "Report generation",
+    "KPI tracking"
+  ],
+  "benefits": [
+    "Unified data view",
+    "Faster insights",
+    "Customizable reports",
+    "Cross-functional collaboration"
+  ]
+}

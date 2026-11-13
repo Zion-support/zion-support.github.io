@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "Brand Voice Guardian: evaluation framework | Zion Tech Group",
+    "description": "Brand Voice Guardian: evaluation framework",
+    "keywords": [
+      "automation",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "Brand Voice Guardian: evaluation framework",
+      "description": "Brand Voice Guardian: evaluation framework",
+      "url": "https://ziontechgroup.com/blog/brand-voice-guardian-evaluation-framework/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/brand-voice-guardian-evaluation-framework/"
+    }
+  },
+  "values": [
+    "Brand Voice Guardian: evaluation framework",
+    "Brand Voice Guardian: evaluation framework",
+    "Brand Voice Guardian: evaluation framework",
+    "Next actions",
+    "Review your highest-friction workflow, contact Zion Tech Group for a scoped pilot, and start with one measurable outcome. Set a 30-day review date, define success metrics, assign an owner, and document rollback criteria before expanding. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan. The organizations that move fastest in 2026 are the ones that combine clear intent with disciplined execution.",
+    "Next actions",
+    " Review your highest-friction workflow, contact Zion Tech Group for a scoped pilot, and start with one measurable outcome. Set a 30-day review date, define success metrics, assign an owner, and document rollback criteria before expanding. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan. The organizations that move fastest in 2026 are the ones that combine clear intent with disciplined execution.",
+    "/blog/ai-ad-copy-generator-2026-7066",
+    "Ai Ad Copy Generator 2026 7066",
+    "/blog/devops-gen-ai-cicd-2026",
+    "Devops Gen Ai Cicd 2026",
+    "/blog/api-management-gateway-2026-7014",
+    "Api Management Gateway 2026 7014",
+    "/blog/api-gateway-management-case-study",
+    "Api Gateway Management Case Study"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Brand Voice Guardian: evaluation framework",
+    "description": "Brand Voice Guardian: evaluation framework",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T05:07:53Z",
+    "dateModified": "2026-08-07T05:07:53Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/brand-voice-guardian-evaluation-framework/"
+  }
+}

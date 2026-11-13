@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/automated-system-sports-1-21d23861",
+  "breadcrumbTitle": "Automated system-sports #1",
+  "title": "Automated system-sports #1",
+  "description": "Revolutionize sports through intelligent automation. Our Automated system-sports #1 leverages advanced machine learning to deliver threat detection at scale.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated system-sports #1 - Zion Tech Group",
+    "description": "Revolutionize sports through intelligent automation. Our Automated system-sports #1 leverages advanced machine learning to deliver threat detection at scale.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-system-sports-1-21d23861"
+    }
+  },
+  "features": [
+    "Real-time processing",
+    "Edge computing support",
+    "Plugin architecture",
+    "Mobile-responsive interface",
+    "Auto-scaling capabilities"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "Enterprise-grade security",
+    "3x faster decision making"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligent-director-for-education-9d3251a7",
+  "breadcrumbTitle": "Intelligent Director for Education",
+  "title": "Intelligent Director for Education",
+  "description": "Transform your education operations with our Intelligent Director for Education. This AI-driven solution automates resource optimization with unprecedented accu",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Director for Education - Zion Tech Group",
+    "description": "Transform your education operations with our Intelligent Director for Education. This AI-driven solution automates resource optimization with unprecedented accu",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-director-for-education-9d3251a7"
+    }
+  },
+  "features": [
+    "Rollback mechanisms",
+    "Serverless functions",
+    "Audit trails",
+    "Auto-scaling capabilities",
+    "Edge computing support"
+  ],
+  "benefits": [
+    "Cost optimization recommendations",
+    "Reduced human error by 95%",
+    "50% reduction in operational costs",
+    "Predictive maintenance scheduling"
+  ]
+}

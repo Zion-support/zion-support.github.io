@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/predictive-automated-aerospace-risk-scoring-cda2c7ed",
+  "breadcrumbTitle": "Predictive Automated Aerospace Risk Scoring",
+  "title": "Predictive Automated Aerospace Risk Scoring",
+  "description": "Predictive risk scoring engine that assesses automated aerospace vulnerabilities with machine learning.",
+  "basic": "$278/month",
+  "pro": "$698/month",
+  "enterprise": "$2098/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Predictive Automated Aerospace Risk Scoring - Zion Tech Group",
+    "description": "Predictive risk scoring engine that assesses automated aerospace vulnerabilities with machine learning.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/predictive-automated-aerospace-risk-scoring-cda2c7ed"
+    }
+  },
+  "features": [
+    "Risk assessment",
+    "Threat modeling",
+    "Compliance scoring",
+    "Mitigation planning"
+  ],
+  "benefits": [
+    "Proactive risk mitigation",
+    "Compliance assurance",
+    "Reduced exposure",
+    "Faster incident response"
+  ]
+}

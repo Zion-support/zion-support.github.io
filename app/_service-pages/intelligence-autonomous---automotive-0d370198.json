@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligence-autonomous---automotive-0d370198",
+  "breadcrumbTitle": "Intelligence Autonomous - Automotive",
+  "title": "Intelligence Autonomous - Automotive",
+  "description": "Unlock unprecedented growth with Intelligence Autonomous - Automotive. This autonomous system provides performance monitoring with zero manual intervention need",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligence Autonomous - Automotive - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Intelligence Autonomous - Automotive. This autonomous system provides performance monitoring with zero manual intervention need",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligence-autonomous---automotive-0d370198"
+    }
+  },
+  "features": [
+    "Open-source friendly",
+    "Rollback mechanisms",
+    "Microservices deployment",
+    "Edge computing support",
+    "Data encryption"
+  ],
+  "benefits": [
+    "Intelligent load balancing",
+    "Self-healing infrastructure",
+    "Dynamic resource allocation",
+    "Scalable to millions of transactions"
+  ]
+}

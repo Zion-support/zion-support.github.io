@@ -1,0 +1,29 @@
+{
+  "title": "Privileged Access Management (PAM)",
+  "description": "Secure privileged accounts: vault credentials, session recording, just-in-time access, and approval workflows. Eliminate standing privileges.",
+  "basic": "$799/mo/month",
+  "pro": "$2,499/mo/month",
+  "enterprise": "$7,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Privileged Access Management (PAM) - Zion Tech Group",
+    "description": "Secure privileged accounts: vault credentials, session recording, just-in-time access, and approval workflows. Eliminate standing privileges.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w175-privileged-access"
+    }
+  },
+  "features": [
+    "Credential vaulting and rotation",
+    "Session recording and audit",
+    "Just-in-time (JIT) access provisioning",
+    "Approval workflows for privileged access",
+    "SSH and RDP session proxy"
+  ],
+  "benefits": [
+    "Eliminate standing privileged access",
+    "Session recording provides accountability",
+    "JIT access reduces attack surface",
+    "Credential rotation prevents credential abuse"
+  ]
+}

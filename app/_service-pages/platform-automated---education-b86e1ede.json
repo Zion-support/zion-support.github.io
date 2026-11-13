@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/platform-automated---education-b86e1ede",
+  "breadcrumbTitle": "Platform Automated - Education",
+  "title": "Platform Automated - Education",
+  "description": "Next-generation education solution: Platform Automated - Education. Combines compliance monitoring with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Platform Automated - Education - Zion Tech Group",
+    "description": "Next-generation education solution: Platform Automated - Education. Combines compliance monitoring with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/platform-automated---education-b86e1ede"
+    }
+  },
+  "features": [
+    "API-first design",
+    "HIPAA ready",
+    "Offline capabilities",
+    "Multi-region deployment"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Cost optimization recommendations",
+    "Predictive maintenance scheduling"
+  ]
+}

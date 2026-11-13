@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-real-time-hospitality-analytics-e72f68d4",
+  "breadcrumbTitle": "AI-Powered Real-Time Hospitality Analytics",
+  "title": "AI-Powered Real-Time Hospitality Analytics",
+  "description": "AI-driven analytics platform that delivers real-time insights into hospitality operations, providing real-time monitoring, predictive modeling, and automated re",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Real-Time Hospitality Analytics - Zion Tech Group",
+    "description": "AI-driven analytics platform that delivers real-time insights into hospitality operations, providing real-time monitoring, predictive modeling, and automated re",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-real-time-hospitality-analytics-e72f68d4"
+    }
+  },
+  "features": [
+    "Real-time monitoring",
+    "Predictive modeling",
+    "Automated reporting",
+    "Custom dashboards"
+  ],
+  "benefits": [
+    "Data-driven decision making",
+    "Improved operational efficiency",
+    "Proactive issue detection",
+    "Enhanced KPI tracking"
+  ]
+}

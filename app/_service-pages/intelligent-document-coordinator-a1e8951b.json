@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-document-coordinator-a1e8951b",
+  "breadcrumbTitle": "Intelligent Document Coordinator",
+  "title": "Intelligent Document Coordinator",
+  "description": "Revolutionize education through intelligent automation. Our Intelligent Document Coordinator leverages advanced machine learning to deliver language processing ",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Document Coordinator - Zion Tech Group",
+    "description": "Revolutionize education through intelligent automation. Our Intelligent Document Coordinator leverages advanced machine learning to deliver language processing ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-document-coordinator-a1e8951b"
+    }
+  },
+  "features": [
+    "Edge computing support",
+    "Multi-region deployment",
+    "API-first design",
+    "Custom integrations"
+  ],
+  "benefits": [
+    "Performance benchmarking",
+    "Scalable to millions of transactions",
+    "Automated compliance reporting",
+    "3x faster decision making"
+  ]
+}

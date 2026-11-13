@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/ai-optimizer---transportation-edition-1-c1bbfcb7",
+  "breadcrumbTitle": "AI Optimizer - Transportation Edition #1",
+  "title": "AI Optimizer - Transportation Edition #1",
+  "description": "Revolutionize transportation through intelligent automation. Our AI Optimizer - Transportation Edition #1 leverages advanced machine learning to deliver threat ",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Optimizer - Transportation Edition #1 - Zion Tech Group",
+    "description": "Revolutionize transportation through intelligent automation. Our AI Optimizer - Transportation Edition #1 leverages advanced machine learning to deliver threat ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-optimizer---transportation-edition-1-c1bbfcb7"
+    }
+  },
+  "features": [
+    "Serverless functions",
+    "HIPAA ready",
+    "Performance dashboards",
+    "Machine learning integration"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "Real-time insights and alerts",
+    "Self-healing infrastructure"
+  ]
+}

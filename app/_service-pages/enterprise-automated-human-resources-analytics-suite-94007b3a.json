@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/enterprise-automated-human-resources-analytics-suite-94007b3a",
+  "breadcrumbTitle": "Enterprise Automated Human Resources Analytics Suite",
+  "title": "Enterprise Automated Human Resources Analytics Suite",
+  "description": "Enterprise analytics suite that delivers automated human resources insights with unified dashboards and reporting.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Enterprise Automated Human Resources Analytics Suite - Zion Tech Group",
+    "description": "Enterprise analytics suite that delivers automated human resources insights with unified dashboards and reporting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/enterprise-automated-human-resources-analytics-suite-94007b3a"
+    }
+  },
+  "features": [
+    "Data visualization",
+    "Custom dashboards",
+    "Report generation",
+    "KPI tracking"
+  ],
+  "benefits": [
+    "Unified data view",
+    "Faster insights",
+    "Customizable reports",
+    "Cross-functional collaboration"
+  ]
+}

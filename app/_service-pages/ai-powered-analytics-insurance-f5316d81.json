@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-analytics-insurance-f5316d81",
+  "breadcrumbTitle": "AI-Powered analytics-insurance",
+  "title": "AI-Powered analytics-insurance",
+  "description": "Transform your insurance operations with our AI-Powered analytics-insurance. This AI-driven solution automates process automation with unprecedented accuracy an",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered analytics-insurance - Zion Tech Group",
+    "description": "Transform your insurance operations with our AI-Powered analytics-insurance. This AI-driven solution automates process automation with unprecedented accuracy an",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-analytics-insurance-f5316d81"
+    }
+  },
+  "features": [
+    "Edge computing support",
+    "Cloud-native architecture",
+    "Microservices deployment",
+    "Comprehensive monitoring"
+  ],
+  "benefits": [
+    "50% reduction in operational costs",
+    "99.9% uptime guarantee",
+    "Cost optimization recommendations",
+    "Self-healing infrastructure"
+  ]
+}

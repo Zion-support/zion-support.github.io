@@ -1,0 +1,29 @@
+{
+  "title": "Real-Time Time-Series Analytics Platform",
+  "description": "High-throughput real-time analytics for IoT, monitoring, and business metrics: stores, aggregates, and queries billions of events per day at <200ms p99 latency. Includes alert rules, anomaly detection, SQL + Python query engine, dashboards, and Grafana/PostgreSQL-compatible endpoints.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Real-Time Time-Series Analytics Platform - Zion Tech Group",
+    "description": "High-throughput real-time analytics for IoT, monitoring, and business metrics: stores, aggregates, and queries billions of events per day at <200ms p99 latency.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/data-realtime-time-series-analytics"
+    }
+  },
+  "features": [
+    "Ingestion: 1 million+ events/second per cluster with exactly-once guarantees",
+    "Down-sampling + retention policy: raw for 7 d, 1-minute roll-ups for 90 d, hourly for 3 y",
+    "SQL query engine + Python SDK for time-series queries in one familiar language",
+    "Alert rules: threshold, rate-of-change, compound condition — Slack, PagerDuty, Email, Webhook",
+    "Grafana + PostgreSQL wire-protocol: connect existing dashboards in 2 minutes"
+  ],
+  "benefits": [
+    "Reduce costs with real-time time-series analytics platform",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/automated-intelligence-for-agriculture-36da59f1",
+  "breadcrumbTitle": "Automated Intelligence for Agriculture",
+  "title": "Automated Intelligence for Agriculture",
+  "description": "Unlock unprecedented growth with Automated Intelligence for Agriculture. This autonomous system provides image recognition with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated Intelligence for Agriculture - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Automated Intelligence for Agriculture. This autonomous system provides image recognition with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-intelligence-for-agriculture-36da59f1"
+    }
+  },
+  "features": [
+    "Edge computing support",
+    "API-first design",
+    "Performance dashboards",
+    "Custom integrations"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Scalable to millions of transactions",
+    "Seamless integration with existing systems"
+  ]
+}

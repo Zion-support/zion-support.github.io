@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/intelligent-network-insights-9f169f19",
+  "breadcrumbTitle": "Intelligent Network Insights",
+  "title": "Intelligent Network Insights",
+  "description": "Revolutionize education through intelligent automation. Our Intelligent Network Insights leverages advanced machine learning to deliver language processing at s",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Network Insights - Zion Tech Group",
+    "description": "Revolutionize education through intelligent automation. Our Intelligent Network Insights leverages advanced machine learning to deliver language processing at s",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-network-insights-9f169f19"
+    }
+  },
+  "features": [
+    "Auto-scaling capabilities",
+    "Microservices deployment",
+    "Custom integrations",
+    "Edge computing support",
+    "Role-based access control"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Automated compliance reporting",
+    "Intelligent load balancing",
+    "Cost optimization recommendations",
+    "Scalable to millions of transactions"
+  ]
+}

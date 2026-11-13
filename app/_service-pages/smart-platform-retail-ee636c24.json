@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/smart-platform-retail-ee636c24",
+  "breadcrumbTitle": "Smart platform-retail",
+  "title": "Smart platform-retail",
+  "description": "Transform your retail operations with our Smart platform-retail. This AI-driven solution automates fraud prevention with unprecedented accuracy and efficiency.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart platform-retail - Zion Tech Group",
+    "description": "Transform your retail operations with our Smart platform-retail. This AI-driven solution automates fraud prevention with unprecedented accuracy and efficiency.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-platform-retail-ee636c24"
+    }
+  },
+  "features": [
+    "Zero-downtime updates",
+    "Open-source friendly",
+    "Machine learning integration",
+    "Rollback mechanisms",
+    "Multi-region deployment"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "Seamless integration with existing systems",
+    "Cost optimization recommendations",
+    "24/7 automated operations"
+  ]
+}

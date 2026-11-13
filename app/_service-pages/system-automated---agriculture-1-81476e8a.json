@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/system-automated---agriculture-1-81476e8a",
+  "breadcrumbTitle": "System Automated - Agriculture #1",
+  "title": "System Automated - Agriculture #1",
+  "description": "Next-generation agriculture solution: System Automated - Agriculture #1. Combines image recognition with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "System Automated - Agriculture #1 - Zion Tech Group",
+    "description": "Next-generation agriculture solution: System Automated - Agriculture #1. Combines image recognition with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/system-automated---agriculture-1-81476e8a"
+    }
+  },
+  "features": [
+    "Alerting system",
+    "Comprehensive monitoring",
+    "Plugin architecture",
+    "Multi-language support",
+    "Data encryption"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "50% reduction in operational costs",
+    "Self-healing infrastructure"
+  ]
+}

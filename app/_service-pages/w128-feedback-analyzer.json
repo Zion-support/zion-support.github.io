@@ -1,0 +1,29 @@
+{
+  "title": "Customer Feedback Analyzer",
+  "description": "NLP-powered analysis of customer reviews, surveys, and support tickets. Identifies trends, sentiment, and actionable insights.",
+  "basic": "$N/A/month",
+  "pro": "$1297/month",
+  "enterprise": "$2497/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Customer Feedback Analyzer - Zion Tech Group",
+    "description": "NLP-powered analysis of customer reviews, surveys, and support tickets. Identifies trends, sentiment, and actionable insights.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w128-feedback-analyzer"
+    }
+  },
+  "features": [
+    "Sentiment analysis",
+    "Trend detection",
+    "Topic clustering",
+    "Survey analysis",
+    "Support ticket classification"
+  ],
+  "benefits": [
+    "Understand customers at scale",
+    "Identify product issues early",
+    "Data-driven decisions",
+    "Reduce churn"
+  ]
+}

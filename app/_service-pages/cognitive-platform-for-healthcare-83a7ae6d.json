@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/cognitive-platform-for-healthcare-83a7ae6d",
+  "breadcrumbTitle": "Cognitive Platform for Healthcare",
+  "title": "Cognitive Platform for Healthcare",
+  "description": "Unlock unprecedented growth with Cognitive Platform for Healthcare. This autonomous system provides process automation with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Cognitive Platform for Healthcare - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Cognitive Platform for Healthcare. This autonomous system provides process automation with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cognitive-platform-for-healthcare-83a7ae6d"
+    }
+  },
+  "features": [
+    "Microservices deployment",
+    "Open-source friendly",
+    "Rollback mechanisms",
+    "API-first design",
+    "Cloud-native architecture"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "Real-time insights and alerts",
+    "3x faster decision making",
+    "Automated compliance reporting",
+    "Zero manual intervention required"
+  ]
+}

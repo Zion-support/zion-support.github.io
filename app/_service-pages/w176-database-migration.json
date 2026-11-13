@@ -1,0 +1,29 @@
+{
+  "title": "Database Migration Service",
+  "description": "Expert database migrations: schema translation, data transformation, validation, and cutover planning. Migrate between any database engines with zero data loss.",
+  "basic": "$4,999/month",
+  "pro": "$14,999/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Database Migration Service - Zion Tech Group",
+    "description": "Expert database migrations: schema translation, data transformation, validation, and cutover planning. Migrate between any database engines with zero data loss.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w176-database-migration"
+    }
+  },
+  "features": [
+    "Schema translation and optimization",
+    "Data transformation and type mapping",
+    "Stored procedure and trigger migration",
+    "Validation and reconciliation",
+    "Cutover planning with rollback"
+  ],
+  "benefits": [
+    "Zero data loss guaranteed",
+    "Expert migration between any engines",
+    "Performance benchmarking validates success",
+    "Rollback plan for safety"
+  ]
+}

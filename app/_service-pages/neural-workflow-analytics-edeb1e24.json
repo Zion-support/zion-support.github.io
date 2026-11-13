@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/neural-workflow-analytics-edeb1e24",
+  "breadcrumbTitle": "Neural Workflow Analytics",
+  "title": "Neural Workflow Analytics",
+  "description": "Revolutionize telecom through intelligent automation. Our Neural Workflow Analytics leverages advanced machine learning to deliver customer insights at scale.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Neural Workflow Analytics - Zion Tech Group",
+    "description": "Revolutionize telecom through intelligent automation. Our Neural Workflow Analytics leverages advanced machine learning to deliver customer insights at scale.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/neural-workflow-analytics-edeb1e24"
+    }
+  },
+  "features": [
+    "GDPR compliance",
+    "Offline capabilities",
+    "Cloud-native architecture",
+    "Edge computing support"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Dynamic resource allocation",
+    "3x faster decision making"
+  ]
+}

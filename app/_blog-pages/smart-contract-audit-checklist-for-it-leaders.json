@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "Smart Contract Audit: checklist for IT leaders | Zion Tech Group",
+    "description": "Smart Contract Audit: checklist for IT leaders",
+    "keywords": [
+      "cloud",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "Smart Contract Audit: checklist for IT leaders",
+      "description": "Smart Contract Audit: checklist for IT leaders",
+      "url": "https://ziontechgroup.com/blog/smart-contract-audit-checklist-for-it-leaders/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/smart-contract-audit-checklist-for-it-leaders/"
+    }
+  },
+  "values": [
+    "Smart Contract Audit: checklist for IT leaders",
+    "Smart Contract Audit: checklist for IT leaders",
+    "Smart Contract Audit: checklist for IT leaders",
+    "Next actions",
+    "Review your highest-friction workflow, contact Zion Tech Group for a scoped pilot, and start with one measurable outcome. Set a 30-day review date, define success metrics, assign an owner, and document rollback criteria before expanding. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan. The organizations that move fastest in 2026 are the ones that combine clear intent with disciplined execution.",
+    "Next actions",
+    " Review your highest-friction workflow, contact Zion Tech Group for a scoped pilot, and start with one measurable outcome. Set a 30-day review date, define success metrics, assign an owner, and document rollback criteria before expanding. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan. The organizations that move fastest in 2026 are the ones that combine clear intent with disciplined execution.",
+    "/blog/database-migration-service-2026-7299",
+    "Database Migration Service 2026 7299",
+    "/blog/enterprise-ai-intelligence-hub-2026-6579",
+    "Enterprise Ai Intelligence Hub 2026 6579",
+    "/blog/chaos-engineering-2026-7154",
+    "Chaos Engineering 2026 7154",
+    "/blog/automated-ai-reporting-roi-and-cost-model",
+    "Automated Ai Reporting Roi And Cost Model"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Smart Contract Audit: checklist for IT leaders",
+    "description": "Smart Contract Audit: checklist for IT leaders",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T07:26:20Z",
+    "dateModified": "2026-08-07T07:26:20Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/smart-contract-audit-checklist-for-it-leaders/"
+  }
+}

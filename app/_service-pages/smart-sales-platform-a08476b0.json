@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/smart-sales-platform-a08476b0",
+  "breadcrumbTitle": "Smart Sales Platform",
+  "title": "Smart Sales Platform",
+  "description": "The future of finance is here with Smart Sales Platform. Powered by cutting-edge AI, this platform delivers network optimization like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Sales Platform - Zion Tech Group",
+    "description": "The future of finance is here with Smart Sales Platform. Powered by cutting-edge AI, this platform delivers network optimization like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-sales-platform-a08476b0"
+    }
+  },
+  "features": [
+    "Role-based access control",
+    "API-first design",
+    "Multi-region deployment",
+    "Machine learning integration",
+    "Custom integrations"
+  ],
+  "benefits": [
+    "Seamless integration with existing systems",
+    "99.9% uptime guarantee",
+    "Self-healing infrastructure"
+  ]
+}

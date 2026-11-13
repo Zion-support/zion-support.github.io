@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/autonomous-system-for-logistics-1-d56a0c29",
+  "breadcrumbTitle": "Autonomous System for Logistics #1",
+  "title": "Autonomous System for Logistics #1",
+  "description": "Transform your logistics operations with our Autonomous System for Logistics #1. This AI-driven solution automates process automation with unprecedented accurac",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous System for Logistics #1 - Zion Tech Group",
+    "description": "Transform your logistics operations with our Autonomous System for Logistics #1. This AI-driven solution automates process automation with unprecedented accurac",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-system-for-logistics-1-d56a0c29"
+    }
+  },
+  "features": [
+    "Plugin architecture",
+    "Real-time processing",
+    "Rollback mechanisms",
+    "Open-source friendly",
+    "Edge computing support"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Dynamic resource allocation",
+    "Cost optimization recommendations",
+    "Self-healing infrastructure"
+  ]
+}

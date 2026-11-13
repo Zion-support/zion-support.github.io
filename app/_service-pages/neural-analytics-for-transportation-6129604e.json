@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/neural-analytics-for-transportation-6129604e",
+  "breadcrumbTitle": "Neural Analytics for Transportation",
+  "title": "Neural Analytics for Transportation",
+  "description": "Revolutionize transportation through intelligent automation. Our Neural Analytics for Transportation leverages advanced machine learning to deliver energy manag",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Neural Analytics for Transportation - Zion Tech Group",
+    "description": "Revolutionize transportation through intelligent automation. Our Neural Analytics for Transportation leverages advanced machine learning to deliver energy manag",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/neural-analytics-for-transportation-6129604e"
+    }
+  },
+  "features": [
+    "Offline capabilities",
+    "Microservices deployment",
+    "Mobile-responsive interface",
+    "GDPR compliance",
+    "Plugin architecture"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Cost optimization recommendations",
+    "Scalable to millions of transactions"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/automated-decision-platform-1b548fa7",
+  "breadcrumbTitle": "Automated Decision Platform",
+  "title": "Automated Decision Platform",
+  "description": "Revolutionize legal through intelligent automation. Our Automated Decision Platform leverages advanced machine learning to deliver code optimization at scale.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated Decision Platform - Zion Tech Group",
+    "description": "Revolutionize legal through intelligent automation. Our Automated Decision Platform leverages advanced machine learning to deliver code optimization at scale.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-decision-platform-1b548fa7"
+    }
+  },
+  "features": [
+    "Container orchestration",
+    "Comprehensive monitoring",
+    "Zero-downtime updates",
+    "Plugin architecture",
+    "SOC 2 certified"
+  ],
+  "benefits": [
+    "Performance benchmarking",
+    "24/7 automated operations",
+    "50% reduction in operational costs"
+  ]
+}

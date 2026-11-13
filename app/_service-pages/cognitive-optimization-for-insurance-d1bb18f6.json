@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/cognitive-optimization-for-insurance-d1bb18f6",
+  "breadcrumbTitle": "Cognitive Optimization for Insurance",
+  "title": "Cognitive Optimization for Insurance",
+  "description": "Revolutionize insurance through intelligent automation. Our Cognitive Optimization for Insurance leverages advanced machine learning to deliver resource optimiz",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Cognitive Optimization for Insurance - Zion Tech Group",
+    "description": "Revolutionize insurance through intelligent automation. Our Cognitive Optimization for Insurance leverages advanced machine learning to deliver resource optimiz",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cognitive-optimization-for-insurance-d1bb18f6"
+    }
+  },
+  "features": [
+    "Offline capabilities",
+    "HIPAA ready",
+    "Container orchestration",
+    "Comprehensive monitoring"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "3x faster decision making",
+    "Scalable to millions of transactions"
+  ]
+}

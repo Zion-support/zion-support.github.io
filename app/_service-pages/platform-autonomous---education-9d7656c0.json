@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/platform-autonomous---education-9d7656c0",
+  "breadcrumbTitle": "Platform Autonomous - Education",
+  "title": "Platform Autonomous - Education",
+  "description": "Next-generation education solution: Platform Autonomous - Education. Combines content generation with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Platform Autonomous - Education - Zion Tech Group",
+    "description": "Next-generation education solution: Platform Autonomous - Education. Combines content generation with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/platform-autonomous---education-9d7656c0"
+    }
+  },
+  "features": [
+    "Comprehensive monitoring",
+    "Multi-language support",
+    "Multi-region deployment",
+    "Machine learning integration",
+    "Performance dashboards"
+  ],
+  "benefits": [
+    "Seamless integration with existing systems",
+    "Reduced human error by 95%",
+    "Real-time insights and alerts"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "title": "AI Workplace Safety & Compliance Monitor",
+  "description": "Computer vision safety system: PPE compliance detection, fall detection, forklift proximity alerts, incident reporting. OSHA compliance built-in.",
+  "basic": "$149/location/month",
+  "pro": "$349/location/month",
+  "enterprise": "$999/location/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Workplace Safety & Compliance Monitor - Zion Tech Group",
+    "description": "Computer vision safety system: PPE compliance detection, fall detection, forklift proximity alerts, incident reporting. OSHA compliance built-in.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-workplace-safety-monitor"
+    }
+  },
+  "features": [
+    "Real-time PPE compliance detection",
+    "Fall & accident detection",
+    "Forklift/proximity zone alerts",
+    "OSHA compliance dashboard",
+    "Incident auto-reporting"
+  ],
+  "benefits": [
+    "Reduce injuries by 45%",
+    "Ensure OSHA compliance 24/7",
+    "Lower insurance premiums"
+  ]
+}

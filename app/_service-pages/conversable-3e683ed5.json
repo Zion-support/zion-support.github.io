@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/conversable-3e683ed5",
+  "breadcrumbTitle": "Conversable",
+  "title": "Conversable",
+  "description": "Conversable is an artificial intelligence and automation technology company.",
+  "basic": "$N/A/month",
+  "pro": "$N/A/month",
+  "enterprise": "$N/A/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Conversable - Zion Tech Group",
+    "description": "Conversable is an artificial intelligence and automation technology company.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/conversable-3e683ed5"
+    }
+  },
+  "features": [
+    "AI-driven automation",
+    "Cloud-native deployment",
+    "API-first architecture",
+    "Enterprise-grade security",
+    "Scalable infrastructure"
+  ],
+  "benefits": [
+    "Improved operational efficiency",
+    "Reduced manual processes",
+    "Data-driven decision making",
+    "Faster time-to value",
+    "Scalable performance"
+  ]
+}

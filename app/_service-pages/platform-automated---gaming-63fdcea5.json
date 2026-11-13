@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/platform-automated---gaming-63fdcea5",
+  "breadcrumbTitle": "Platform Automated - Gaming",
+  "title": "Platform Automated - Gaming",
+  "description": "The future of gaming is here with Platform Automated - Gaming. Powered by cutting-edge AI, this platform delivers user experience like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Platform Automated - Gaming - Zion Tech Group",
+    "description": "The future of gaming is here with Platform Automated - Gaming. Powered by cutting-edge AI, this platform delivers user experience like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/platform-automated---gaming-63fdcea5"
+    }
+  },
+  "features": [
+    "Rollback mechanisms",
+    "Offline capabilities",
+    "Performance dashboards",
+    "API-first design",
+    "Multi-region deployment"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "Real-time insights and alerts",
+    "Reduced human error by 95%"
+  ]
+}

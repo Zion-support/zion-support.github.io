@@ -1,0 +1,29 @@
+{
+  "title": "AI Curriculum & Course Generator",
+  "description": "AI-powered curriculum design and course content generation for education and corporate training. Learning objectives, assessments, multimedia content, and adaptive pathways.",
+  "basic": "$199/mo/month",
+  "pro": "$599/mo/month",
+  "enterprise": "$1,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Curriculum & Course Generator - Zion Tech Group",
+    "description": "AI-powered curriculum design and course content generation for education and corporate training. Learning objectives, assessments, multimedia content, and adapt",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w174-ai-curriculum-generator"
+    }
+  },
+  "features": [
+    "AI curriculum design from learning objectives",
+    "Course content generation (text, quiz, video scripts)",
+    "Adaptive learning pathways",
+    "Assessment and rubric generation",
+    "Competency mapping and gap analysis"
+  ],
+  "benefits": [
+    "Create full courses in hours, not weeks",
+    "Adaptive pathways personalize learning",
+    "Competency-driven curriculum alignment",
+    "LMS-compatible output (SCORM, xAPI)"
+  ]
+}

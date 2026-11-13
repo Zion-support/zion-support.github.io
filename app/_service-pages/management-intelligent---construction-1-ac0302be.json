@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/management-intelligent---construction-1-ac0302be",
+  "breadcrumbTitle": "Management Intelligent - Construction #1",
+  "title": "Management Intelligent - Construction #1",
+  "description": "Next-generation construction solution: Management Intelligent - Construction #1. Combines maintenance scheduling with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Management Intelligent - Construction #1 - Zion Tech Group",
+    "description": "Next-generation construction solution: Management Intelligent - Construction #1. Combines maintenance scheduling with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/management-intelligent---construction-1-ac0302be"
+    }
+  },
+  "features": [
+    "Real-time processing",
+    "Container orchestration",
+    "Offline capabilities",
+    "Mobile-responsive interface",
+    "Machine learning integration"
+  ],
+  "benefits": [
+    "Automated compliance reporting",
+    "99.9% uptime guarantee",
+    "ROI in under 90 days"
+  ]
+}

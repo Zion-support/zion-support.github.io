@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/engine-neural---tech-d0028352",
+  "breadcrumbTitle": "Engine Neural - Tech",
+  "title": "Engine Neural - Tech",
+  "description": "Revolutionize technology through intelligent automation. Our Engine Neural - Tech leverages advanced machine learning to deliver language processing at scale.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Engine Neural - Tech - Zion Tech Group",
+    "description": "Revolutionize technology through intelligent automation. Our Engine Neural - Tech leverages advanced machine learning to deliver language processing at scale.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/engine-neural---tech-d0028352"
+    }
+  },
+  "features": [
+    "SOC 2 certified",
+    "Offline capabilities",
+    "Plugin architecture",
+    "Comprehensive monitoring",
+    "Auto-scaling capabilities"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "Cost optimization recommendations",
+    "50% reduction in operational costs"
+  ]
+}

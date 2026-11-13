@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/insights-cognitive---gaming-c9f8006b",
+  "breadcrumbTitle": "Insights Cognitive - Gaming",
+  "title": "Insights Cognitive - Gaming",
+  "description": "Revolutionize gaming through intelligent automation. Our Insights Cognitive - Gaming leverages advanced machine learning to deliver image recognition at scale.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Insights Cognitive - Gaming - Zion Tech Group",
+    "description": "Revolutionize gaming through intelligent automation. Our Insights Cognitive - Gaming leverages advanced machine learning to deliver image recognition at scale.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/insights-cognitive---gaming-c9f8006b"
+    }
+  },
+  "features": [
+    "Machine learning integration",
+    "Offline capabilities",
+    "Rollback mechanisms",
+    "Alerting system",
+    "Cloud-native architecture"
+  ],
+  "benefits": [
+    "Intelligent load balancing",
+    "24/7 automated operations",
+    "Seamless integration with existing systems",
+    "Self-healing infrastructure"
+  ]
+}

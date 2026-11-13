@@ -1,0 +1,29 @@
+{
+  "title": "Micro-SaaS AI Social Media Listener & Engagement",
+  "description": "AI-powered social listening platform that monitors brand mentions, competitor activity, and industry trends across 20+ platforms. Auto-responds to common queries and escalates issues.",
+  "basic": "$79/mo/month",
+  "pro": "$199/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Micro-SaaS AI Social Media Listener & Engagement - Zion Tech Group",
+    "description": "AI-powered social listening platform that monitors brand mentions, competitor activity, and industry trends across 20+ platforms. Auto-responds to common querie",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-ai-social-listener"
+    }
+  },
+  "features": [
+    "Real-time brand mention monitoring across 20+ platforms",
+    "AI sentiment analysis with emotion detection",
+    "Auto-response for common queries and FAQs",
+    "Competitor tracking and benchmarking",
+    "Influencer identification and engagement tracking"
+  ],
+  "benefits": [
+    "Respond to customers 10x faster",
+    "Catch PR crises before they escalate",
+    "Identify sales opportunities from social signals",
+    "Benchmark against competitors automatically"
+  ]
+}

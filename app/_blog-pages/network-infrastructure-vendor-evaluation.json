@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "Network Infrastructure: vendor evaluation | Zion Tech Group",
+    "description": "Network Infrastructure: vendor evaluation",
+    "keywords": [
+      "ai",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "Network Infrastructure: vendor evaluation",
+      "description": "Network Infrastructure: vendor evaluation",
+      "url": "https://ziontechgroup.com/blog/network-infrastructure-vendor-evaluation/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/network-infrastructure-vendor-evaluation/"
+    }
+  },
+  "values": [
+    "Network Infrastructure: vendor evaluation",
+    "Network Infrastructure: vendor evaluation",
+    "Network Infrastructure: vendor evaluation",
+    "Outcomes to measure",
+    "Leading indicators for network infrastructure: vendor evaluation: workflow completion rate, escalation rate, time-to-resolution, and user satisfaction. Lagging indicators: revenue trend, cost trend, customer retention, and operational efficiency. Track both leading and lagging indicators so you can explain progress to leadership before financial results appear. Use a rolling 90-day window and re-baseline monthly; this keeps the program accountable without demanding perfection on day one. Publish metrics in a shared dashboard so the whole team sees progress, not just the program sponsor.",
+    "Outcomes to measure",
+    " Leading indicators for network infrastructure: vendor evaluation: workflow completion rate, escalation rate, time-to-resolution, and user satisfaction. Lagging indicators: revenue trend, cost trend, customer retention, and operational efficiency. Track both leading and lagging indicators so you can explain progress to leadership before financial results appear. Use a rolling 90-day window and re-baseline monthly; this keeps the program accountable without demanding perfection on day one. Publish metrics in a shared dashboard so the whole team sees progress, not just the program sponsor.",
+    "/blog/ai-accessibility-auditor-2026-7133",
+    "Ai Accessibility Auditor 2026 7133",
+    "/blog/ai-bdr-sdr-2026-7007",
+    "Ai Bdr Sdr 2026 7007",
+    "/blog/ai-ad-copy-generator-2026-7204",
+    "Ai Ad Copy Generator 2026 7204",
+    "/blog/cloud-finops-2026-6604",
+    "Cloud Finops 2026 6604"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Network Infrastructure: vendor evaluation",
+    "description": "Network Infrastructure: vendor evaluation",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T04:51:05Z",
+    "dateModified": "2026-08-07T04:51:05Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/network-infrastructure-vendor-evaluation/"
+  }
+}

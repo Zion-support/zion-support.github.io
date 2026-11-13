@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/smart-document-orchestrator-1-ddf684c8",
+  "breadcrumbTitle": "Smart Document Orchestrator #1",
+  "title": "Smart Document Orchestrator #1",
+  "description": "Next-generation telecom solution: Smart Document Orchestrator #1. Combines market intelligence with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Document Orchestrator #1 - Zion Tech Group",
+    "description": "Next-generation telecom solution: Smart Document Orchestrator #1. Combines market intelligence with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-document-orchestrator-1-ddf684c8"
+    }
+  },
+  "features": [
+    "Real-time processing",
+    "GDPR compliance",
+    "Multi-region deployment",
+    "Performance dashboards"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "Automated compliance reporting",
+    "Performance benchmarking",
+    "Dynamic resource allocation"
+  ]
+}

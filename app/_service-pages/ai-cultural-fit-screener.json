@@ -1,0 +1,28 @@
+{
+  "title": "AI Cultural Fit Screener",
+  "description": "AI evaluates resume+behavioral vs your company values: culture-fit score, behavioral alignment scoring, red-flag indicators before interview, auto short-list explanation.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Cultural Fit Screener - Zion Tech Group",
+    "description": "AI evaluates resume+behavioral vs your company values: culture-fit score, behavioral alignment scoring, red-flag indicators before interview, auto short-list ex",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-cultural-fit-screener"
+    }
+  },
+  "features": [
+    "Value-alignment scoring per candidate",
+    "Behavioral flag detection",
+    "Culture-card comparison vs new hire baseline",
+    "Auto short-list per candidate + hiring manager"
+  ],
+  "benefits": [
+    "Reduce costs with ai cultural fit screener",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

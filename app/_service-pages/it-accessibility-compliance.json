@@ -1,0 +1,29 @@
+{
+  "title": "IT Accessibility Compliance & Digital Inclusion",
+  "description": "Digital accessibility compliance for WCAG 2.1, ADA, and Section 508. Audits, remediation, and ongoing monitoring to ensure your digital properties are accessible to all.",
+  "basic": "$2,000/mo/month",
+  "pro": "$5,000/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "IT Accessibility Compliance & Digital Inclusion - Zion Tech Group",
+    "description": "Digital accessibility compliance for WCAG 2.1, ADA, and Section 508. Audits, remediation, and ongoing monitoring to ensure your digital properties are accessibl",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-accessibility-compliance"
+    }
+  },
+  "features": [
+    "WCAG 2.1 AA compliance audit",
+    "Automated accessibility scanning",
+    "Manual testing with assistive technologies",
+    "Remediation guidance and implementation",
+    "VPAT and accessibility statement creation"
+  ],
+  "benefits": [
+    "Achieve WCAG 2.1 AA compliance",
+    "Reduce legal risk of accessibility lawsuits",
+    "Reach 15% more users with accessible design",
+    "Demonstrate commitment to digital inclusion"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/neural-suite-logistics-92280a7c",
+  "breadcrumbTitle": "Neural suite-logistics",
+  "title": "Neural suite-logistics",
+  "description": "Next-generation logistics solution: Neural suite-logistics. Combines data processing with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Neural suite-logistics - Zion Tech Group",
+    "description": "Next-generation logistics solution: Neural suite-logistics. Combines data processing with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/neural-suite-logistics-92280a7c"
+    }
+  },
+  "features": [
+    "Alerting system",
+    "Auto-scaling capabilities",
+    "Offline capabilities",
+    "Plugin architecture",
+    "SOC 2 certified"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "ROI in under 90 days",
+    "Cost optimization recommendations",
+    "Reduced human error by 95%",
+    "Dynamic resource allocation"
+  ]
+}

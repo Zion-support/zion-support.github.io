@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "Network Infrastructure: implementation playbook | Zion Tech Group",
+    "description": "Network Infrastructure: implementation playbook",
+    "keywords": [
+      "ai",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "Network Infrastructure: implementation playbook",
+      "description": "Network Infrastructure: implementation playbook",
+      "url": "https://ziontechgroup.com/blog/network-infrastructure-implementation-playbook/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/network-infrastructure-implementation-playbook/"
+    }
+  },
+  "values": [
+    "Network Infrastructure: implementation playbook",
+    "Network Infrastructure: implementation playbook",
+    "Network Infrastructure: implementation playbook",
+    "Recommended next step",
+    "Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "Recommended next step",
+    " Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "/blog/cloud-migration-services-2026-6779",
+    "Cloud Migration Services 2026 6779",
+    "/blog/ai-data-backup-executive-guide",
+    "Ai Data Backup Executive Guide",
+    "/blog/ai-agent-safety-evaluation-2026-7136",
+    "Ai Agent Safety Evaluation 2026 7136",
+    "/blog/autonomous-qa-engineering-2026-6937",
+    "Autonomous Qa Engineering 2026 6937"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Network Infrastructure: implementation playbook",
+    "description": "Network Infrastructure: implementation playbook",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T04:52:16Z",
+    "dateModified": "2026-08-07T04:52:16Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/network-infrastructure-implementation-playbook/"
+  }
+}

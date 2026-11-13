@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/ai-platform---manufacturing-edition-1-6c700c14",
+  "breadcrumbTitle": "AI Platform - Manufacturing Edition #1",
+  "title": "AI Platform - Manufacturing Edition #1",
+  "description": "Next-generation manufacturing solution: AI Platform - Manufacturing Edition #1. Combines fraud prevention with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Platform - Manufacturing Edition #1 - Zion Tech Group",
+    "description": "Next-generation manufacturing solution: AI Platform - Manufacturing Edition #1. Combines fraud prevention with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-platform---manufacturing-edition-1-6c700c14"
+    }
+  },
+  "features": [
+    "GDPR compliance",
+    "HIPAA ready",
+    "Comprehensive monitoring",
+    "Zero-downtime updates"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "Predictive maintenance scheduling",
+    "Enterprise-grade security"
+  ]
+}

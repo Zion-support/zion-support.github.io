@@ -1,0 +1,29 @@
+{
+  "title": "AI Regulatory Compliance Automation",
+  "description": "Automate compliance monitoring and reporting for GDPR, HIPAA, SOC2, PCI-DSS, and industry-specific regulations. Continuous control monitoring, automated evidence collection, and real-time compliance dashboards.",
+  "basic": "$1,499/mo/month",
+  "pro": "$4,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Regulatory Compliance Automation - Zion Tech Group",
+    "description": "Automate compliance monitoring and reporting for GDPR, HIPAA, SOC2, PCI-DSS, and industry-specific regulations. Continuous control monitoring, automated evidenc",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-regulatory-compliance-automation"
+    }
+  },
+  "features": [
+    "Multi-framework compliance mapping",
+    "Automated evidence collection",
+    "Continuous control monitoring",
+    "Risk scoring and prioritization",
+    "Audit trail generation"
+  ],
+  "benefits": [
+    "Reduce compliance costs by 60%",
+    "Eliminate manual evidence collection",
+    "Real-time compliance visibility",
+    "Faster audit preparation"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/automated-sales-insights-043d6589",
+  "breadcrumbTitle": "Automated Sales Insights",
+  "title": "Automated Sales Insights",
+  "description": "Unlock unprecedented growth with Automated Sales Insights. This autonomous system provides compliance monitoring with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated Sales Insights - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Automated Sales Insights. This autonomous system provides compliance monitoring with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-sales-insights-043d6589"
+    }
+  },
+  "features": [
+    "Plugin architecture",
+    "Open-source friendly",
+    "Container orchestration",
+    "Offline capabilities"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "Dynamic resource allocation",
+    "Cost optimization recommendations",
+    "Enterprise-grade security"
+  ]
+}

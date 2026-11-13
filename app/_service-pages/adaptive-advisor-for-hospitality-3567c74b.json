@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/adaptive-advisor-for-hospitality-3567c74b",
+  "breadcrumbTitle": "Adaptive Advisor for Hospitality",
+  "title": "Adaptive Advisor for Hospitality",
+  "description": "The future of hospitality is here with Adaptive Advisor for Hospitality. Powered by cutting-edge AI, this platform delivers inventory management like never befo",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Adaptive Advisor for Hospitality - Zion Tech Group",
+    "description": "The future of hospitality is here with Adaptive Advisor for Hospitality. Powered by cutting-edge AI, this platform delivers inventory management like never befo",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/adaptive-advisor-for-hospitality-3567c74b"
+    }
+  },
+  "features": [
+    "Auto-scaling capabilities",
+    "Cloud-native architecture",
+    "Open-source friendly",
+    "Plugin architecture",
+    "Offline capabilities"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "99.9% uptime guarantee",
+    "Seamless integration with existing systems"
+  ]
+}

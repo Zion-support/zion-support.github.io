@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/processor-ai---logistics-648807fc",
+  "breadcrumbTitle": "Processor AI - Logistics",
+  "title": "Processor AI - Logistics",
+  "description": "Revolutionize logistics through intelligent automation. Our Processor AI - Logistics leverages advanced machine learning to deliver security monitoring at scale",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Processor AI - Logistics - Zion Tech Group",
+    "description": "Revolutionize logistics through intelligent automation. Our Processor AI - Logistics leverages advanced machine learning to deliver security monitoring at scale",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/processor-ai---logistics-648807fc"
+    }
+  },
+  "features": [
+    "Cloud-native architecture",
+    "HIPAA ready",
+    "Zero-downtime updates",
+    "Comprehensive monitoring"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Predictive maintenance scheduling",
+    "Zero manual intervention required",
+    "24/7 automated operations"
+  ]
+}

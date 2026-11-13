@@ -1,0 +1,29 @@
+{
+  "title": "AI Speech Analytics Platform",
+  "description": "Analyze customer calls with AI. Sentiment analysis, topic detection, compliance monitoring, and agent coaching insights.",
+  "basic": "$399/mo/month",
+  "pro": "$1,199/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Speech Analytics Platform - Zion Tech Group",
+    "description": "Analyze customer calls with AI. Sentiment analysis, topic detection, compliance monitoring, and agent coaching insights.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-speech-analytics"
+    }
+  },
+  "features": [
+    "Real-time transcription",
+    "Sentiment analysis",
+    "Topic and keyword detection",
+    "Compliance monitoring",
+    "Agent coaching insights"
+  ],
+  "benefits": [
+    "Improve customer satisfaction",
+    "Ensure compliance",
+    "Coach agents effectively",
+    "Automate call review"
+  ]
+}

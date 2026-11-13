@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/automated-system-healthcare-1-e9221f2d",
+  "breadcrumbTitle": "Automated system-healthcare #1",
+  "title": "Automated system-healthcare #1",
+  "description": "Transform your healthcare operations with our Automated system-healthcare #1. This AI-driven solution automates quality control with unprecedented accuracy and ",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated system-healthcare #1 - Zion Tech Group",
+    "description": "Transform your healthcare operations with our Automated system-healthcare #1. This AI-driven solution automates quality control with unprecedented accuracy and ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-system-healthcare-1-e9221f2d"
+    }
+  },
+  "features": [
+    "Open-source friendly",
+    "API-first design",
+    "Machine learning integration",
+    "Comprehensive monitoring"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "Self-healing infrastructure",
+    "Cost optimization recommendations"
+  ]
+}

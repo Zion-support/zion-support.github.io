@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/liveops-analytics-platform-918f128b",
+  "breadcrumbTitle": "LiveOps Analytics Platform",
+  "title": "LiveOps Analytics Platform",
+  "description": "Real-time analytics for live game operations. Player segmentation, event optimization, economy balancing, and automated A/B testing for maximum retention and re",
+  "basic": "$499/month",
+  "pro": "$1499/month",
+  "enterprise": "$4999/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "LiveOps Analytics Platform - Zion Tech Group",
+    "description": "Real-time analytics for live game operations. Player segmentation, event optimization, economy balancing, and automated A/B testing for maximum retention and re",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/liveops-analytics-platform-918f128b"
+    }
+  },
+  "features": [
+    "Real-time player analytics",
+    "Automated A/B testing",
+    "Economy balancing AI",
+    "Event performance optimization",
+    "Cohort analysis"
+  ],
+  "benefits": [
+    "Increase Day 30 retention 15%",
+    "Optimize IAP revenue",
+    "Reduce live ops workload",
+    "Data-driven event planning",
+    "Player lifecycle management"
+  ]
+}

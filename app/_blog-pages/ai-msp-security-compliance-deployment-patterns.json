@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "AI MSP Security Compliance: deployment patterns | Zion Tech Group",
+    "description": "AI MSP Security Compliance: deployment patterns",
+    "keywords": [
+      "security",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "AI MSP Security Compliance: deployment patterns",
+      "description": "AI MSP Security Compliance: deployment patterns",
+      "url": "https://ziontechgroup.com/blog/ai-msp-security-compliance-deployment-patterns/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/ai-msp-security-compliance-deployment-patterns/"
+    }
+  },
+  "values": [
+    "AI MSP Security Compliance: deployment patterns",
+    "AI MSP Security Compliance: deployment patterns",
+    "AI MSP Security Compliance: deployment patterns",
+    "Recommended next step",
+    "Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "Recommended next step",
+    " Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "/blog/container-security-lifecycle-2026-7227",
+    "Container Security Lifecycle 2026 7227",
+    "/blog/ai-voice-agents-and-conversational-automation",
+    "Ai Voice Agents And Conversational Automation",
+    "/blog/database-migration-service-2026-6816",
+    "Database Migration Service 2026 6816",
+    "/blog/ai-agentic-workflows-2026-6655",
+    "Ai Agentic Workflows 2026 6655"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "AI MSP Security Compliance: deployment patterns",
+    "description": "AI MSP Security Compliance: deployment patterns",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T04:51:24Z",
+    "dateModified": "2026-08-07T04:51:24Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/ai-msp-security-compliance-deployment-patterns/"
+  }
+}

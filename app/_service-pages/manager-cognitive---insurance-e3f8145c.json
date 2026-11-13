@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/manager-cognitive---insurance-e3f8145c",
+  "breadcrumbTitle": "Manager Cognitive - Insurance",
+  "title": "Manager Cognitive - Insurance",
+  "description": "Revolutionize insurance through intelligent automation. Our Manager Cognitive - Insurance leverages advanced machine learning to deliver image recognition at sc",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Manager Cognitive - Insurance - Zion Tech Group",
+    "description": "Revolutionize insurance through intelligent automation. Our Manager Cognitive - Insurance leverages advanced machine learning to deliver image recognition at sc",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/manager-cognitive---insurance-e3f8145c"
+    }
+  },
+  "features": [
+    "Rollback mechanisms",
+    "Mobile-responsive interface",
+    "Data encryption",
+    "Offline capabilities"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "Seamless integration with existing systems",
+    "Dynamic resource allocation",
+    "Performance benchmarking"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/automated-engine-for-construction-c9383c0b",
+  "breadcrumbTitle": "Automated Engine for Construction",
+  "title": "Automated Engine for Construction",
+  "description": "Unlock unprecedented growth with Automated Engine for Construction. This autonomous system provides code optimization with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated Engine for Construction - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Automated Engine for Construction. This autonomous system provides code optimization with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-engine-for-construction-c9383c0b"
+    }
+  },
+  "features": [
+    "Plugin architecture",
+    "Role-based access control",
+    "Performance dashboards",
+    "Multi-language support"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "Self-healing infrastructure",
+    "Cost optimization recommendations",
+    "Reduced human error by 95%",
+    "Scalable to millions of transactions"
+  ]
+}

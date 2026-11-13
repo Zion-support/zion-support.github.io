@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/automated-manager-for-automotive-5de3f7c5",
+  "breadcrumbTitle": "Automated Manager for Automotive",
+  "title": "Automated Manager for Automotive",
+  "description": "Unlock unprecedented growth with Automated Manager for Automotive. This autonomous system provides security monitoring with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated Manager for Automotive - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Automated Manager for Automotive. This autonomous system provides security monitoring with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-manager-for-automotive-5de3f7c5"
+    }
+  },
+  "features": [
+    "Open-source friendly",
+    "Multi-language support",
+    "SOC 2 certified",
+    "Performance dashboards",
+    "Role-based access control"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Automated compliance reporting",
+    "Enterprise-grade security",
+    "Zero manual intervention required",
+    "Intelligent load balancing"
+  ]
+}

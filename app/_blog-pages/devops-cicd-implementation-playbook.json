@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "DevOps CI/CD: implementation playbook | Zion Tech Group",
+    "description": "DevOps CI/CD: implementation playbook",
+    "keywords": [
+      "ai",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "DevOps CI/CD: implementation playbook",
+      "description": "DevOps CI/CD: implementation playbook",
+      "url": "https://ziontechgroup.com/blog/devops-cicd-implementation-playbook/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/devops-cicd-implementation-playbook/"
+    }
+  },
+  "values": [
+    "DevOps CI/CD: implementation playbook",
+    "DevOps CI/CD: implementation playbook",
+    "DevOps CI/CD: implementation playbook",
+    "Next actions",
+    "Review your highest-friction workflow, contact Zion Tech Group for a scoped pilot, and start with one measurable outcome. Set a 30-day review date, define success metrics, assign an owner, and document rollback criteria before expanding. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan. The organizations that move fastest in 2026 are the ones that combine clear intent with disciplined execution.",
+    "Next actions",
+    " Review your highest-friction workflow, contact Zion Tech Group for a scoped pilot, and start with one measurable outcome. Set a 30-day review date, define success metrics, assign an owner, and document rollback criteria before expanding. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan. The organizations that move fastest in 2026 are the ones that combine clear intent with disciplined execution.",
+    "/blog/api-gateway-management-2026-7012",
+    "Api Gateway Management 2026 7012",
+    "/blog/ai-3d-asset-generator-automation-roadmap",
+    "Ai 3D Asset Generator Automation Roadmap",
+    "/blog/database-migration-service-2026-6954",
+    "Database Migration Service 2026 6954",
+    "/blog/cloud-cost-ai-optimizer-2026-7293",
+    "Cloud Cost Ai Optimizer 2026 7293"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "DevOps CI/CD: implementation playbook",
+    "description": "DevOps CI/CD: implementation playbook",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T08:12:13Z",
+    "dateModified": "2026-08-07T08:12:13Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/devops-cicd-implementation-playbook/"
+  }
+}

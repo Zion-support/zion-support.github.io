@@ -1,0 +1,28 @@
+{
+  "title": "AI Retail Recommendation Engine",
+  "description": "Product recommendation engine for e-commerce that increases AOV by 15–25% using collaborative filtering, basket analysis, and real-time behavior.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Retail Recommendation Engine - Zion Tech Group",
+    "description": "Product recommendation engine for e-commerce that increases AOV by 15–25% using collaborative filtering, basket analysis, and real-time behavior.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-retail-recommendation-engine"
+    }
+  },
+  "features": [
+    "Real-time personalization",
+    "A/B testing built-in",
+    "Cross-sell & upsell suggestions",
+    "Seasonal trend integration"
+  ],
+  "benefits": [
+    "Reduce costs with ai retail recommendation engine",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

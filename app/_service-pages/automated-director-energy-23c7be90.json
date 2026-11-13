@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/automated-director-energy-23c7be90",
+  "breadcrumbTitle": "Automated director-energy",
+  "title": "Automated director-energy",
+  "description": "Unlock unprecedented growth with Automated director-energy. This autonomous system provides threat detection with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated director-energy - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Automated director-energy. This autonomous system provides threat detection with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-director-energy-23c7be90"
+    }
+  },
+  "features": [
+    "Offline capabilities",
+    "Custom integrations",
+    "Rollback mechanisms",
+    "Multi-region deployment",
+    "Container orchestration"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "ROI in under 90 days",
+    "Predictive maintenance scheduling"
+  ]
+}

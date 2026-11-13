@@ -1,0 +1,29 @@
+{
+  "title": "AI Integration & APIs",
+  "description": "Integrate AI into existing systems with unified APIs, event-driven pipelines, and enterprise connectors. One integration layer across LLMs, agents,...",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Integration & APIs - Zion Tech Group",
+    "description": "Integrate AI into existing systems with unified APIs, event-driven pipelines, and enterprise connectors. One integration layer across LLMs, agents,...",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-integration-apis"
+    }
+  },
+  "features": [
+    "Unified AI API Layer",
+    "Enterprise Connectors",
+    "Event-Driven Pipelines",
+    "Structured Outputs & Orchestration",
+    "Security & Access Control"
+  ],
+  "benefits": [
+    "Reduce costs with ai integration & apis",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

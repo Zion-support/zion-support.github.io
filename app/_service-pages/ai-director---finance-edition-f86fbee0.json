@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-director---finance-edition-f86fbee0",
+  "breadcrumbTitle": "AI Director - Finance Edition",
+  "title": "AI Director - Finance Edition",
+  "description": "The future of finance is here with AI Director - Finance Edition. Powered by cutting-edge AI, this platform delivers predictive analytics like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Director - Finance Edition - Zion Tech Group",
+    "description": "The future of finance is here with AI Director - Finance Edition. Powered by cutting-edge AI, this platform delivers predictive analytics like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-director---finance-edition-f86fbee0"
+    }
+  },
+  "features": [
+    "Role-based access control",
+    "Offline capabilities",
+    "Edge computing support",
+    "Cloud-native architecture",
+    "Mobile-responsive interface"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "99.9% uptime guarantee",
+    "24/7 automated operations",
+    "Dynamic resource allocation"
+  ]
+}

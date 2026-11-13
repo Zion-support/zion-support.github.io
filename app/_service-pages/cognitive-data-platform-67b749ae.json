@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/cognitive-data-platform-67b749ae",
+  "breadcrumbTitle": "Cognitive Data Platform",
+  "title": "Cognitive Data Platform",
+  "description": "Next-generation insurance solution: Cognitive Data Platform. Combines document processing with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Cognitive Data Platform - Zion Tech Group",
+    "description": "Next-generation insurance solution: Cognitive Data Platform. Combines document processing with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cognitive-data-platform-67b749ae"
+    }
+  },
+  "features": [
+    "Data encryption",
+    "Auto-scaling capabilities",
+    "Serverless functions",
+    "Role-based access control"
+  ],
+  "benefits": [
+    "Seamless integration with existing systems",
+    "ROI in under 90 days",
+    "Reduced human error by 95%"
+  ]
+}

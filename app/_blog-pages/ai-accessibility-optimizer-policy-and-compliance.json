@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "AI Accessibility Optimizer: policy and compliance | Zion Tech Group",
+    "description": "AI Accessibility Optimizer: policy and compliance",
+    "keywords": [
+      "it",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "AI Accessibility Optimizer: policy and compliance",
+      "description": "AI Accessibility Optimizer: policy and compliance",
+      "url": "https://ziontechgroup.com/blog/ai-accessibility-optimizer-policy-and-compliance/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/ai-accessibility-optimizer-policy-and-compliance/"
+    }
+  },
+  "values": [
+    "AI Accessibility Optimizer: policy and compliance",
+    "AI Accessibility Optimizer: policy and compliance",
+    "AI Accessibility Optimizer: policy and compliance",
+    "Recommended next step",
+    "Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "Recommended next step",
+    " Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "/blog/api-integration-starter-template",
+    "Api Integration Starter Template",
+    "/blog/container-security-lifecycle-2026",
+    "Container Security Lifecycle 2026",
+    "/blog/automated-ai-reporting-policy-and-compliance",
+    "Automated Ai Reporting Policy And Compliance",
+    "/blog/ai-3d-asset-generator-2026-7270",
+    "Ai 3D Asset Generator 2026 7270"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "AI Accessibility Optimizer: policy and compliance",
+    "description": "AI Accessibility Optimizer: policy and compliance",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T07:56:40Z",
+    "dateModified": "2026-08-07T07:56:40Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/ai-accessibility-optimizer-policy-and-compliance/"
+  }
+}

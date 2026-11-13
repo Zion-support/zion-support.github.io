@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/analytics-autonomous---sports-795360ae",
+  "breadcrumbTitle": "Analytics Autonomous - Sports",
+  "title": "Analytics Autonomous - Sports",
+  "description": "Revolutionize sports through intelligent automation. Our Analytics Autonomous - Sports leverages advanced machine learning to deliver image recognition at scale",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Analytics Autonomous - Sports - Zion Tech Group",
+    "description": "Revolutionize sports through intelligent automation. Our Analytics Autonomous - Sports leverages advanced machine learning to deliver image recognition at scale",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/analytics-autonomous---sports-795360ae"
+    }
+  },
+  "features": [
+    "Custom integrations",
+    "Performance dashboards",
+    "SOC 2 certified",
+    "HIPAA ready",
+    "Auto-scaling capabilities"
+  ],
+  "benefits": [
+    "Scalable to millions of transactions",
+    "Dynamic resource allocation",
+    "99.9% uptime guarantee"
+  ]
+}

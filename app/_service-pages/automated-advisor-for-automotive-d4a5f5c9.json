@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/automated-advisor-for-automotive-d4a5f5c9",
+  "breadcrumbTitle": "Automated Advisor for Automotive",
+  "title": "Automated Advisor for Automotive",
+  "description": "The future of automotive is here with Automated Advisor for Automotive. Powered by cutting-edge AI, this platform delivers process automation like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated Advisor for Automotive - Zion Tech Group",
+    "description": "The future of automotive is here with Automated Advisor for Automotive. Powered by cutting-edge AI, this platform delivers process automation like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-advisor-for-automotive-d4a5f5c9"
+    }
+  },
+  "features": [
+    "API-first design",
+    "Offline capabilities",
+    "Rollback mechanisms",
+    "Cloud-native architecture"
+  ],
+  "benefits": [
+    "Seamless integration with existing systems",
+    "50% reduction in operational costs",
+    "Enterprise-grade security"
+  ]
+}

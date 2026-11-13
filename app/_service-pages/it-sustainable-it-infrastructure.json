@@ -1,0 +1,29 @@
+{
+  "title": "IT Sustainable IT Infrastructure Consulting",
+  "description": "Green IT consulting to reduce carbon footprint of technology operations. Energy-efficient infrastructure design, carbon-aware workload scheduling, e-waste management, and sustainability reporting aligned with ESG goals.",
+  "basic": "$2,999/mo/month",
+  "pro": "$7,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "IT Sustainable IT Infrastructure Consulting - Zion Tech Group",
+    "description": "Green IT consulting to reduce carbon footprint of technology operations. Energy-efficient infrastructure design, carbon-aware workload scheduling, e-waste manag",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-sustainable-it-infrastructure"
+    }
+  },
+  "features": [
+    "Carbon footprint assessment",
+    "Energy-efficient architecture design",
+    "Carbon-aware workload optimization",
+    "E-waste management programs",
+    "Green cloud migration strategy"
+  ],
+  "benefits": [
+    "Reduce IT carbon footprint by 40%",
+    "Lower energy costs",
+    "Meet ESG reporting requirements",
+    "Enhance brand sustainability image"
+  ]
+}

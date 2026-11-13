@@ -1,0 +1,29 @@
+{
+  "title": "AI Demand Forecasting Platform",
+  "description": "ML demand forecasting for retail, CPG, and food: SKU-level predictions, promotion lift, weather impact, and new product forecasting. Reduce forecast error by 40%.",
+  "basic": "$499/mo/month",
+  "pro": "$1,499/mo/month",
+  "enterprise": "$4,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Demand Forecasting Platform - Zion Tech Group",
+    "description": "ML demand forecasting for retail, CPG, and food: SKU-level predictions, promotion lift, weather impact, and new product forecasting. Reduce forecast error by 40",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w175-ai-demand-forecasting"
+    }
+  },
+  "features": [
+    "SKU-level demand forecasting",
+    "Promotion and event lift modeling",
+    "Weather and external factor integration",
+    "New product forecasting (cold start)",
+    "Forecast accuracy tracking and bias correction"
+  ],
+  "benefits": [
+    "Reduce forecast error by 40%",
+    "SKU-level predictions prevent stockouts",
+    "Promotion lift modeling improves ROI",
+    "New product forecasting for launches"
+  ]
+}

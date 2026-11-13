@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligent-threat-platform-2f0ded65",
+  "breadcrumbTitle": "Intelligent Threat Platform",
+  "title": "Intelligent Threat Platform",
+  "description": "Unlock unprecedented growth with Intelligent Threat Platform. This autonomous system provides process automation with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Threat Platform - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Intelligent Threat Platform. This autonomous system provides process automation with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-threat-platform-2f0ded65"
+    }
+  },
+  "features": [
+    "Container orchestration",
+    "Alerting system",
+    "Cloud-native architecture",
+    "Zero-downtime updates"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Real-time insights and alerts",
+    "Seamless integration with existing systems",
+    "Performance benchmarking",
+    "Intelligent load balancing"
+  ]
+}

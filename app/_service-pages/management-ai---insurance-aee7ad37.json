@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/management-ai---insurance-aee7ad37",
+  "breadcrumbTitle": "Management AI - Insurance",
+  "title": "Management AI - Insurance",
+  "description": "Next-generation insurance solution: Management AI - Insurance. Combines process automation with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Management AI - Insurance - Zion Tech Group",
+    "description": "Next-generation insurance solution: Management AI - Insurance. Combines process automation with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/management-ai---insurance-aee7ad37"
+    }
+  },
+  "features": [
+    "Open-source friendly",
+    "Zero-downtime updates",
+    "Rollback mechanisms",
+    "GDPR compliance"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "50% reduction in operational costs",
+    "Cost optimization recommendations",
+    "ROI in under 90 days",
+    "Seamless integration with existing systems"
+  ]
+}

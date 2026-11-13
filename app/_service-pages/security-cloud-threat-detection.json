@@ -1,0 +1,28 @@
+{
+  "title": "Cloud Threat Detection & Response",
+  "description": "CloudTrail/CloudAudit log analytics, IAM anomaly detection (impossible travel, priv-esc pattern), GuardDuty integration, auto-remediation.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Cloud Threat Detection & Response - Zion Tech Group",
+    "description": "CloudTrail/CloudAudit log analytics, IAM anomaly detection (impossible travel, priv-esc pattern), GuardDuty integration, auto-remediation.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/security-cloud-threat-detection"
+    }
+  },
+  "features": [
+    "CloudTrail/Azure Activity/Stackdriver log stream",
+    "IAM anomaly patterns (impossible travel/priv-esc)",
+    "GuardDuty/Defender/Sentinel alert normalisation",
+    "Auto-remediation via Terraform/IaC config push"
+  ],
+  "benefits": [
+    "Reduce costs with cloud threat detection & response",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-content-optimizer-1-cf13e8a4",
+  "breadcrumbTitle": "Intelligent Content Optimizer #1",
+  "title": "Intelligent Content Optimizer #1",
+  "description": "Revolutionize automotive through intelligent automation. Our Intelligent Content Optimizer #1 leverages advanced machine learning to deliver maintenance schedul",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Content Optimizer #1 - Zion Tech Group",
+    "description": "Revolutionize automotive through intelligent automation. Our Intelligent Content Optimizer #1 leverages advanced machine learning to deliver maintenance schedul",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-content-optimizer-1-cf13e8a4"
+    }
+  },
+  "features": [
+    "Offline capabilities",
+    "Rollback mechanisms",
+    "Container orchestration",
+    "Custom integrations",
+    "Open-source friendly"
+  ],
+  "benefits": [
+    "Seamless integration with existing systems",
+    "Enterprise-grade security",
+    "Cost optimization recommendations"
+  ]
+}

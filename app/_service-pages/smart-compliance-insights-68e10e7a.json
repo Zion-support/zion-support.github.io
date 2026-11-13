@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/smart-compliance-insights-68e10e7a",
+  "breadcrumbTitle": "Smart Compliance Insights",
+  "title": "Smart Compliance Insights",
+  "description": "Unlock unprecedented growth with Smart Compliance Insights. This autonomous system provides risk assessment with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Compliance Insights - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Smart Compliance Insights. This autonomous system provides risk assessment with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-compliance-insights-68e10e7a"
+    }
+  },
+  "features": [
+    "Custom integrations",
+    "Alerting system",
+    "Real-time processing",
+    "Plugin architecture",
+    "Mobile-responsive interface"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "ROI in under 90 days",
+    "50% reduction in operational costs",
+    "Real-time insights and alerts"
+  ]
+}

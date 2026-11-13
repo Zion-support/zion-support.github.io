@@ -1,0 +1,29 @@
+{
+  "title": "AI Copilot & Enterprise Assistants",
+  "description": "Deploy AI copilots and enterprise assistants that augment human work. Context-aware, role-specific AI embedded in your tools and workflows.",
+  "basic": "$2,499/mo/month",
+  "pro": "$4,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Copilot & Enterprise Assistants - Zion Tech Group",
+    "description": "Deploy AI copilots and enterprise assistants that augment human work. Context-aware, role-specific AI embedded in your tools and workflows.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-copilot-enterprise"
+    }
+  },
+  "features": [
+    "Context-Aware Assistance",
+    "Role-Specific Intelligence",
+    "Embedded in Your Tools",
+    "Controlled & Governed",
+    "Learning & Improvement"
+  ],
+  "benefits": [
+    "Reduce costs with ai copilot & enterprise assistants",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "AI Contract Comparison & Deviation Analysis",
+  "description": "AI that compares contracts against your standard templates and flags deviations, risks, and missing clauses. Reduce legal review time by 80%.",
+  "basic": "$349/mo/month",
+  "pro": "$999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Contract Comparison & Deviation Analysis - Zion Tech Group",
+    "description": "AI that compares contracts against your standard templates and flags deviations, risks, and missing clauses. Reduce legal review time by 80%.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-ai-contract-comparison"
+    }
+  },
+  "features": [
+    "AI deviation detection vs standard templates",
+    "Missing clause identification",
+    "Risk scoring per deviation",
+    "Bulk contract comparison",
+    "Integration with DocuSign, SharePoint, Dropbox"
+  ],
+  "benefits": [
+    "80% faster contract review",
+    "Catch risky deviations human reviewers miss",
+    "Enforce standard terms automatically",
+    "Track negotiation changes across versions"
+  ]
+}

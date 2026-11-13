@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/ai-suite---transportation-edition-2-e3f8b1ef",
+  "breadcrumbTitle": "AI Suite - Transportation Edition #2",
+  "title": "AI Suite - Transportation Edition #2",
+  "description": "Next-generation transportation solution: AI Suite - Transportation Edition #2. Combines language processing with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Suite - Transportation Edition #2 - Zion Tech Group",
+    "description": "Next-generation transportation solution: AI Suite - Transportation Edition #2. Combines language processing with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-suite---transportation-edition-2-e3f8b1ef"
+    }
+  },
+  "features": [
+    "SOC 2 certified",
+    "Multi-language support",
+    "Multi-region deployment",
+    "GDPR compliance"
+  ],
+  "benefits": [
+    "Automated compliance reporting",
+    "Self-healing infrastructure",
+    "Seamless integration with existing systems"
+  ]
+}

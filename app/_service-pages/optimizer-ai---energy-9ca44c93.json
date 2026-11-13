@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/optimizer-ai---energy-9ca44c93",
+  "breadcrumbTitle": "Optimizer AI - Energy",
+  "title": "Optimizer AI - Energy",
+  "description": "Next-generation energy solution: Optimizer AI - Energy. Combines image recognition with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Optimizer AI - Energy - Zion Tech Group",
+    "description": "Next-generation energy solution: Optimizer AI - Energy. Combines image recognition with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/optimizer-ai---energy-9ca44c93"
+    }
+  },
+  "features": [
+    "API-first design",
+    "SOC 2 certified",
+    "Machine learning integration",
+    "Alerting system",
+    "Real-time processing"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "50% reduction in operational costs",
+    "Cost optimization recommendations",
+    "24/7 automated operations"
+  ]
+}

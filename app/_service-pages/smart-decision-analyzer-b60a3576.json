@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/smart-decision-analyzer-b60a3576",
+  "breadcrumbTitle": "Smart Decision Analyzer",
+  "title": "Smart Decision Analyzer",
+  "description": "Next-generation retail solution: Smart Decision Analyzer. Combines security monitoring with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Decision Analyzer - Zion Tech Group",
+    "description": "Next-generation retail solution: Smart Decision Analyzer. Combines security monitoring with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-decision-analyzer-b60a3576"
+    }
+  },
+  "features": [
+    "Audit trails",
+    "Custom integrations",
+    "Zero-downtime updates",
+    "Alerting system",
+    "Multi-region deployment"
+  ],
+  "benefits": [
+    "Performance benchmarking",
+    "Cost optimization recommendations",
+    "Intelligent load balancing",
+    "Self-healing infrastructure"
+  ]
+}

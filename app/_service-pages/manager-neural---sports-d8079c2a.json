@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/manager-neural---sports-d8079c2a",
+  "breadcrumbTitle": "Manager Neural - Sports",
+  "title": "Manager Neural - Sports",
+  "description": "Next-generation sports solution: Manager Neural - Sports. Combines energy management with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Manager Neural - Sports - Zion Tech Group",
+    "description": "Next-generation sports solution: Manager Neural - Sports. Combines energy management with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/manager-neural---sports-d8079c2a"
+    }
+  },
+  "features": [
+    "Real-time processing",
+    "Microservices deployment",
+    "Serverless functions",
+    "Auto-scaling capabilities",
+    "Container orchestration"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "Enterprise-grade security",
+    "Automated compliance reporting",
+    "Reduced human error by 95%"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "title": "API Security & Threat Protection Gateway",
+  "description": "Protect your APIs from attacks with AI-powered threat detection, bot management, and rate limiting. Includes OWASP API Top 10 protection and real-time analytics.",
+  "basic": "$N/A/month",
+  "pro": "$N/A/month",
+  "enterprise": "$899/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "API Security & Threat Protection Gateway - Zion Tech Group",
+    "description": "Protect your APIs from attacks with AI-powered threat detection, bot management, and rate limiting. Includes OWASP API Top 10 protection and real-time analytics",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/api-security-gateway"
+    }
+  },
+  "features": [
+    "AI threat detection",
+    "Bot management",
+    "Rate limiting",
+    "OWASP API Top 10",
+    "Schema validation"
+  ],
+  "benefits": [
+    "99.9% attack detection",
+    "Zero-trust API protection",
+    "Real-time threat intelligence"
+  ]
+}

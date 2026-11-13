@@ -1,0 +1,29 @@
+{
+  "title": "UptimeCanary — Monitoring & Alerts",
+  "description": "Simple uptime monitoring with HTTP checks, SSL monitoring, domain expiry alerts, and status pages. 1-minute intervals, 12 global regions, PagerDuty/Slack alerts.",
+  "basic": "$7/mo/month",
+  "pro": "$25/mo/month",
+  "enterprise": "$99/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "UptimeCanary — Monitoring & Alerts - Zion Tech Group",
+    "description": "Simple uptime monitoring with HTTP checks, SSL monitoring, domain expiry alerts, and status pages. 1-minute intervals, 12 global regions, PagerDuty/Slack alerts",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w174-uptimecanary"
+    }
+  },
+  "features": [
+    "HTTP/HTTPS ping monitoring (1-min intervals)",
+    "SSL certificate expiry monitoring",
+    "Domain expiry alerts",
+    "Public status page with branding",
+    "12 global monitoring regions"
+  ],
+  "benefits": [
+    "Detect downtime in under 60 seconds",
+    "SSL/domain alerts prevent expiry surprises",
+    "Status page builds customer trust",
+    "12 regions for global accuracy"
+  ]
+}

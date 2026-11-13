@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "AI IT Operations: case study | Zion Tech Group",
+    "description": "AI IT Operations: case study",
+    "keywords": [
+      "cloud",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "AI IT Operations: case study",
+      "description": "AI IT Operations: case study",
+      "url": "https://ziontechgroup.com/blog/ai-it-operations-case-study/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/ai-it-operations-case-study/"
+    }
+  },
+  "values": [
+    "AI IT Operations: case study",
+    "AI IT Operations: case study",
+    "AI IT Operations: case study",
+    "Recommended next step",
+    "Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "Recommended next step",
+    " Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "/blog/ai-agent-safety-evaluation-2026",
+    "Ai Agent Safety Evaluation 2026",
+    "/blog/ai-data-lakehouse-pipelines-2026-7326",
+    "Ai Data Lakehouse Pipelines 2026 7326",
+    "/blog/ai-ad-copy-generator-2026-6583",
+    "Ai Ad Copy Generator 2026 6583",
+    "/blog/incident-response-retainer-2026-6688",
+    "Incident Response Retainer 2026 6688"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "AI IT Operations: case study",
+    "description": "AI IT Operations: case study",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T04:51:32Z",
+    "dateModified": "2026-08-07T04:51:32Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/ai-it-operations-case-study/"
+  }
+}

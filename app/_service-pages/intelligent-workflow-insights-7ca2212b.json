@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligent-workflow-insights-7ca2212b",
+  "breadcrumbTitle": "Intelligent Workflow Insights",
+  "title": "Intelligent Workflow Insights",
+  "description": "Next-generation gaming solution: Intelligent Workflow Insights. Combines performance monitoring with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Workflow Insights - Zion Tech Group",
+    "description": "Next-generation gaming solution: Intelligent Workflow Insights. Combines performance monitoring with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-workflow-insights-7ca2212b"
+    }
+  },
+  "features": [
+    "Mobile-responsive interface",
+    "Performance dashboards",
+    "Offline capabilities",
+    "Cloud-native architecture",
+    "HIPAA ready"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "Zero manual intervention required",
+    "Performance benchmarking",
+    "3x faster decision making"
+  ]
+}

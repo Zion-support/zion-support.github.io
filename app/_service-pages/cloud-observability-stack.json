@@ -1,0 +1,29 @@
+{
+  "title": "Observability Stack as a Service",
+  "description": "Pre-integrated Prometheus+Grafana+Loki+Tempo stack with 400+ dashboards, alert rules pre-built, and PagerDuty/OpsGenie on-call.",
+  "basic": "$99/mo/month",
+  "pro": "$349/mo/month",
+  "enterprise": "$1,299/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Observability Stack as a Service - Zion Tech Group",
+    "description": "Pre-integrated Prometheus+Grafana+Loki+Tempo stack with 400+ dashboards, alert rules pre-built, and PagerDuty/OpsGenie on-call.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cloud-observability-stack"
+    }
+  },
+  "features": [
+    "Prometheus + Thanos long-term store",
+    "Grafana OSS with 400+ dashboards",
+    "Loki logs + Tempo traces (shared tenant ID)",
+    "Pre-built alert rules per service/database",
+    "PagerDuty/OpsGenie on-call routing"
+  ],
+  "benefits": [
+    "Reduce costs with observability stack as a service",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

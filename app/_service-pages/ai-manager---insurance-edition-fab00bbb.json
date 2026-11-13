@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-manager---insurance-edition-fab00bbb",
+  "breadcrumbTitle": "AI Manager - Insurance Edition",
+  "title": "AI Manager - Insurance Edition",
+  "description": "Transform your insurance operations with our AI Manager - Insurance Edition. This AI-driven solution automates inventory management with unprecedented accuracy ",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Manager - Insurance Edition - Zion Tech Group",
+    "description": "Transform your insurance operations with our AI Manager - Insurance Edition. This AI-driven solution automates inventory management with unprecedented accuracy ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-manager---insurance-edition-fab00bbb"
+    }
+  },
+  "features": [
+    "Container orchestration",
+    "Data encryption",
+    "Serverless functions",
+    "Multi-region deployment"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "99.9% uptime guarantee",
+    "Real-time insights and alerts",
+    "Performance benchmarking",
+    "Self-healing infrastructure"
+  ]
+}

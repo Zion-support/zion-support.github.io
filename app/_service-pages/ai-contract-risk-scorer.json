@@ -1,0 +1,28 @@
+{
+  "title": "AI Contract Risk Scoring & Redlining",
+  "description": "Upload any contract and get an instant risk score: clause-by-clause analysis, missing protections benchmarked against market standards, auto-redline suggestions, and approval workflow.",
+  "basic": "$49/month",
+  "pro": "$149/month",
+  "enterprise": "$499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Contract Risk Scoring & Redlining - Zion Tech Group",
+    "description": "Upload any contract and get an instant risk score: clause-by-clause analysis, missing protections benchmarked against market standards, auto-redline suggestions",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-contract-risk-scorer"
+    }
+  },
+  "features": [
+    "Instant contract risk scoring",
+    "Clause benchmarking vs market standards",
+    "Auto-redline suggestions",
+    "Missing protection detection",
+    "Multi-language contract support"
+  ],
+  "benefits": [
+    "Score contracts in seconds",
+    "Benchmark against market standards",
+    "Never miss hidden risks"
+  ]
+}

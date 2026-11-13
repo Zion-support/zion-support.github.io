@@ -1,0 +1,29 @@
+{
+  "title": "Data Center Audit and Optimization",
+  "description": "Comprehensive data center audit: capacity, power, cooling, security, efficiency. Optimization roadmap with ROI.",
+  "basic": "$4,999/month",
+  "pro": "$14,999/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Data Center Audit and Optimization - Zion Tech Group",
+    "description": "Comprehensive data center audit: capacity, power, cooling, security, efficiency. Optimization roadmap with ROI.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w177-data-center-audit"
+    }
+  },
+  "features": [
+    "Capacity and utilization assessment",
+    "Power and cooling efficiency analysis",
+    "Physical security audit",
+    "Cable management and documentation",
+    "Efficiency optimization recommendations"
+  ],
+  "benefits": [
+    "Identify capacity constraints before outages",
+    "Power and cooling optimization reduces costs",
+    "Security audit finds physical vulnerabilities",
+    "Efficiency roadmap with ROI justification"
+  ]
+}

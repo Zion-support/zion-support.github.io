@@ -1,0 +1,28 @@
+{
+  "title": "Knowledge Graph Builder",
+  "description": "Auto-build entity/relation graph from unstructured docs + structured DBs; SPARQL/GraphQL query; graph-visualisation frontend.",
+  "basic": "$149/mo/month",
+  "pro": "$399/mo/month",
+  "enterprise": "$1,299/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Knowledge Graph Builder - Zion Tech Group",
+    "description": "Auto-build entity/relation graph from unstructured docs + structured DBs; SPARQL/GraphQL query; graph-visualisation frontend.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-knowledge-graph-builder"
+    }
+  },
+  "features": [
+    "NER (Named Entity Recognition) + relation extraction",
+    "Graph schema auto-generated from data",
+    "SPARQL + GraphQL dual query layer",
+    "Neo4j/TypeDB graph store + schema management"
+  ],
+  "benefits": [
+    "Reduce costs with knowledge graph builder",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

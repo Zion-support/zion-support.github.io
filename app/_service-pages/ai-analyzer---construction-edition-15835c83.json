@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-analyzer---construction-edition-15835c83",
+  "breadcrumbTitle": "AI Analyzer - Construction Edition",
+  "title": "AI Analyzer - Construction Edition",
+  "description": "Transform your construction operations with our AI Analyzer - Construction Edition. This AI-driven solution automates user experience with unprecedented accurac",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Analyzer - Construction Edition - Zion Tech Group",
+    "description": "Transform your construction operations with our AI Analyzer - Construction Edition. This AI-driven solution automates user experience with unprecedented accurac",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-analyzer---construction-edition-15835c83"
+    }
+  },
+  "features": [
+    "GDPR compliance",
+    "Serverless functions",
+    "Alerting system",
+    "Machine learning integration"
+  ],
+  "benefits": [
+    "Scalable to millions of transactions",
+    "ROI in under 90 days",
+    "Automated compliance reporting",
+    "Cost optimization recommendations"
+  ]
+}

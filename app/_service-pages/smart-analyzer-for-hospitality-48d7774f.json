@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/smart-analyzer-for-hospitality-48d7774f",
+  "breadcrumbTitle": "Smart Analyzer for Hospitality",
+  "title": "Smart Analyzer for Hospitality",
+  "description": "Revolutionize hospitality through intelligent automation. Our Smart Analyzer for Hospitality leverages advanced machine learning to deliver language processing ",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Analyzer for Hospitality - Zion Tech Group",
+    "description": "Revolutionize hospitality through intelligent automation. Our Smart Analyzer for Hospitality leverages advanced machine learning to deliver language processing ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-analyzer-for-hospitality-48d7774f"
+    }
+  },
+  "features": [
+    "Serverless functions",
+    "Machine learning integration",
+    "Alerting system",
+    "Audit trails",
+    "Container orchestration"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Seamless integration with existing systems",
+    "Self-healing infrastructure"
+  ]
+}

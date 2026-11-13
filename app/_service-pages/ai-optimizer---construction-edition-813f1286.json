@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-optimizer---construction-edition-813f1286",
+  "breadcrumbTitle": "AI Optimizer - Construction Edition",
+  "title": "AI Optimizer - Construction Edition",
+  "description": "Next-generation construction solution: AI Optimizer - Construction Edition. Combines compliance monitoring with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Optimizer - Construction Edition - Zion Tech Group",
+    "description": "Next-generation construction solution: AI Optimizer - Construction Edition. Combines compliance monitoring with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-optimizer---construction-edition-813f1286"
+    }
+  },
+  "features": [
+    "Multi-region deployment",
+    "SOC 2 certified",
+    "Audit trails",
+    "API-first design",
+    "Zero-downtime updates"
+  ],
+  "benefits": [
+    "Seamless integration with existing systems",
+    "50% reduction in operational costs",
+    "3x faster decision making",
+    "ROI in under 90 days"
+  ]
+}

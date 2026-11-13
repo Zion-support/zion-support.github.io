@@ -1,0 +1,29 @@
+{
+  "title": "Real-Time Analytics Engine",
+  "description": "Sub-second analytics on streaming data with pre-aggregation, materialized views, and real-time dashboards. ClickHouse, Druid, or Pinot managed service.",
+  "basic": "$799/mo/month",
+  "pro": "$2,499/mo/month",
+  "enterprise": "$7,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Real-Time Analytics Engine - Zion Tech Group",
+    "description": "Sub-second analytics on streaming data with pre-aggregation, materialized views, and real-time dashboards. ClickHouse, Druid, or Pinot managed service.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w174-realtime-analytics"
+    }
+  },
+  "features": [
+    "Sub-second query on billions of rows",
+    "Streaming ingestion (Kafka, Kinesis, Pub/Sub)",
+    "Pre-aggregation and materialized views",
+    "Real-time dashboard builder",
+    "SQL-compatible query interface"
+  ],
+  "benefits": [
+    "Query billions of rows in under a second",
+    "Real-time dashboards from streaming data",
+    "SQL-compatible, no new query language",
+    "Pre-aggregation reduces compute costs"
+  ]
+}

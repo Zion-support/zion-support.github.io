@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/manager-cognitive---telecom-c4e91176",
+  "breadcrumbTitle": "Manager Cognitive - Telecom",
+  "title": "Manager Cognitive - Telecom",
+  "description": "Transform your telecom operations with our Manager Cognitive - Telecom. This AI-driven solution automates image recognition with unprecedented accuracy and effi",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Manager Cognitive - Telecom - Zion Tech Group",
+    "description": "Transform your telecom operations with our Manager Cognitive - Telecom. This AI-driven solution automates image recognition with unprecedented accuracy and effi",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/manager-cognitive---telecom-c4e91176"
+    }
+  },
+  "features": [
+    "Auto-scaling capabilities",
+    "Offline capabilities",
+    "Container orchestration",
+    "Data encryption"
+  ],
+  "benefits": [
+    "50% reduction in operational costs",
+    "Zero manual intervention required",
+    "Cost optimization recommendations",
+    "3x faster decision making",
+    "99.9% uptime guarantee"
+  ]
+}

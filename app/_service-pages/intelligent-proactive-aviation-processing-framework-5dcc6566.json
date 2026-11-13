@@ -1,0 +1,28 @@
+{
+  "title": "Intelligent Proactive Aviation Processing Framework",
+  "description": "Intelligent processing framework that automates proactive aviation data flows with real-time transformation.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Intelligent Proactive Aviation Processing Framework - Zion Tech Group",
+    "description": "Intelligent processing framework that automates proactive aviation data flows with real-time transformation.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-proactive-aviation-processing-framework-5dcc6566"
+    }
+  },
+  "features": [
+    "Real-time processing",
+    "Data transformation",
+    "ETL pipelines",
+    "Stream processing"
+  ],
+  "benefits": [
+    "Faster data flows",
+    "Reduced processing time",
+    "Higher throughput",
+    "Real-time transformation"
+  ]
+}

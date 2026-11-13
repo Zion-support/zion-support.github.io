@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/analyzer-neural---education-5f18e8fd",
+  "breadcrumbTitle": "Analyzer Neural - Education",
+  "title": "Analyzer Neural - Education",
+  "description": "The future of education is here with Analyzer Neural - Education. Powered by cutting-edge AI, this platform delivers market intelligence like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Analyzer Neural - Education - Zion Tech Group",
+    "description": "The future of education is here with Analyzer Neural - Education. Powered by cutting-edge AI, this platform delivers market intelligence like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/analyzer-neural---education-5f18e8fd"
+    }
+  },
+  "features": [
+    "Open-source friendly",
+    "Offline capabilities",
+    "Cloud-native architecture",
+    "Edge computing support",
+    "HIPAA ready"
+  ],
+  "benefits": [
+    "Cost optimization recommendations",
+    "Predictive maintenance scheduling",
+    "Enterprise-grade security",
+    "3x faster decision making"
+  ]
+}

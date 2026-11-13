@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/conversational-ai-for-sales-60f249c0",
+  "breadcrumbTitle": "Conversational AI for Sales",
+  "title": "Conversational AI for Sales",
+  "description": "Natural language processing system that handles sales inquiries through intelligent chatbots.",
+  "basic": "$179/month",
+  "pro": "$449/month",
+  "enterprise": "$1349/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Conversational AI for Sales - Zion Tech Group",
+    "description": "Natural language processing system that handles sales inquiries through intelligent chatbots.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/conversational-ai-for-sales-60f249c0"
+    }
+  },
+  "features": [
+    "Natural language understanding",
+    "Multi-language support",
+    "Context awareness",
+    "Seamless handoff"
+  ],
+  "benefits": [
+    "24/7 availability",
+    "Instant response times",
+    "Consistent service quality",
+    "Reduced support costs"
+  ]
+}

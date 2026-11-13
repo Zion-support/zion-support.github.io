@@ -1,0 +1,28 @@
+{
+  "title": "Endpoint Detection & Response (EDR)",
+  "description": "Advanced endpoint protection with real-time threat detection, automated response, and forensic investigation. Monitors all endpoints (laptops, servers, mobile) for malware, ransomware, and advanced persistent threats 24/7.",
+  "basic": "$N/A/month",
+  "pro": "$N/A/month",
+  "enterprise": "$35/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Endpoint Detection & Response (EDR) - Zion Tech Group",
+    "description": "Advanced endpoint protection with real-time threat detection, automated response, and forensic investigation. Monitors all endpoints (laptops, servers, mobile) ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/endpoint-detection-response"
+    }
+  },
+  "features": [
+    "Real-time threat detection",
+    "Automated response",
+    "Forensic investigation",
+    "Behavioral analysis",
+    "Threat hunting"
+  ],
+  "benefits": [
+    "99.9% threat detection rate",
+    "60% faster incident response",
+    "Compliance-ready reporting"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/neural-customer-intelligence-16cb6114",
+  "breadcrumbTitle": "Neural Customer Intelligence",
+  "title": "Neural Customer Intelligence",
+  "description": "Revolutionize logistics through intelligent automation. Our Neural Customer Intelligence leverages advanced machine learning to deliver language processing at s",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Neural Customer Intelligence - Zion Tech Group",
+    "description": "Revolutionize logistics through intelligent automation. Our Neural Customer Intelligence leverages advanced machine learning to deliver language processing at s",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/neural-customer-intelligence-16cb6114"
+    }
+  },
+  "features": [
+    "Edge computing support",
+    "HIPAA ready",
+    "Open-source friendly",
+    "Rollback mechanisms",
+    "Comprehensive monitoring"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Automated compliance reporting",
+    "Reduced human error by 95%"
+  ]
+}

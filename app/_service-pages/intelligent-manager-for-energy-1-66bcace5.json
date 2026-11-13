@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/intelligent-manager-for-energy-1-66bcace5",
+  "breadcrumbTitle": "Intelligent Manager for Energy #1",
+  "title": "Intelligent Manager for Energy #1",
+  "description": "Unlock unprecedented growth with Intelligent Manager for Energy #1. This autonomous system provides code optimization with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Manager for Energy #1 - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Intelligent Manager for Energy #1. This autonomous system provides code optimization with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-manager-for-energy-1-66bcace5"
+    }
+  },
+  "features": [
+    "Microservices deployment",
+    "Container orchestration",
+    "Cloud-native architecture",
+    "Multi-language support"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "3x faster decision making",
+    "Automated compliance reporting"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/ai-manufacturing---healthcare-edition-a49b5fef",
+  "breadcrumbTitle": "AI Manufacturing - Healthcare Edition",
+  "title": "AI Manufacturing - Healthcare Edition",
+  "description": "Transform your Healthcare operations with our AI Manufacturing - Healthcare Edition. This AI-driven solution automates performance monitoring with unprecedented",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Manufacturing - Healthcare Edition - Zion Tech Group",
+    "description": "Transform your Healthcare operations with our AI Manufacturing - Healthcare Edition. This AI-driven solution automates performance monitoring with unprecedented",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-manufacturing---healthcare-edition-a49b5fef"
+    }
+  },
+  "features": [
+    "Maintenance scheduling with predictive analytics",
+    "Sales process optimization with pipeline management",
+    "Security monitoring with threat intelligence",
+    "Revenue forecasting with market trend analysis",
+    "User experience analytics with behavior tracking"
+  ],
+  "benefits": [
+    "3x faster decision making with real-time insights",
+    "Improved brand awareness with social monitoring",
+    "Reduced development time with code generation",
+    "50% reduction in operational costs through automation",
+    "Reduced marketing costs with targeted campaigns"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/intelligent-suite-for-education-32aa2dbf",
+  "breadcrumbTitle": "Intelligent Suite for Education",
+  "title": "Intelligent Suite for Education",
+  "description": "Unlock unprecedented growth with Intelligent Suite for Education. This autonomous system provides maintenance scheduling with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Suite for Education - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Intelligent Suite for Education. This autonomous system provides maintenance scheduling with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-suite-for-education-32aa2dbf"
+    }
+  },
+  "features": [
+    "Auto-scaling capabilities",
+    "Offline capabilities",
+    "Multi-region deployment",
+    "SOC 2 certified"
+  ],
+  "benefits": [
+    "Performance benchmarking",
+    "50% reduction in operational costs",
+    "Dynamic resource allocation"
+  ]
+}

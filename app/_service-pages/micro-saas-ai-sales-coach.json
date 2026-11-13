@@ -1,0 +1,29 @@
+{
+  "title": "AI Sales Coach & Pipeline Optimizer",
+  "description": "AI-powered sales coaching that analyzes calls, emails, and pipeline data to recommend winning strategies. Real-time deal scoring, next-best-action suggestions, and automated follow-ups.",
+  "basic": "$149/mo/month",
+  "pro": "$399/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Sales Coach & Pipeline Optimizer - Zion Tech Group",
+    "description": "AI-powered sales coaching that analyzes calls, emails, and pipeline data to recommend winning strategies. Real-time deal scoring, next-best-action suggestions, ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-ai-sales-coach"
+    }
+  },
+  "features": [
+    "AI call analysis with talk-to-listen ratio scoring",
+    "Deal health scoring with win probability",
+    "Next-best-action recommendations per opportunity",
+    "Automated follow-up email sequences",
+    "Sales playbook enforcement and coaching"
+  ],
+  "benefits": [
+    "Increase win rates by 25-35%",
+    "Shorten sales cycles by 20%",
+    "Coach reps with AI instead of manual review",
+    "Forecast revenue with 90%+ accuracy"
+  ]
+}

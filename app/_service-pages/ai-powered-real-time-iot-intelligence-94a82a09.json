@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-real-time-iot-intelligence-94a82a09",
+  "breadcrumbTitle": "AI-Powered Real-Time IoT Intelligence",
+  "title": "AI-Powered Real-Time IoT Intelligence",
+  "description": "Edge AI platform that processes IoT sensor data in real-time with real-time insights.",
+  "basic": "$258/month",
+  "pro": "$648/month",
+  "enterprise": "$1948/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Real-Time IoT Intelligence - Zion Tech Group",
+    "description": "Edge AI platform that processes IoT sensor data in real-time with real-time insights.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-real-time-iot-intelligence-94a82a09"
+    }
+  },
+  "features": [
+    "Edge processing",
+    "Real-time analytics",
+    "Automated responses",
+    "Energy efficiency"
+  ],
+  "benefits": [
+    "Reduced latency",
+    "Better insights",
+    "Automated responses",
+    "Energy efficiency"
+  ]
+}

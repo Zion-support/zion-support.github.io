@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/neural-analyzer-for-sports-a000e13c",
+  "breadcrumbTitle": "Neural Analyzer for Sports",
+  "title": "Neural Analyzer for Sports",
+  "description": "The future of sports is here with Neural Analyzer for Sports. Powered by cutting-edge AI, this platform delivers risk assessment like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Neural Analyzer for Sports - Zion Tech Group",
+    "description": "The future of sports is here with Neural Analyzer for Sports. Powered by cutting-edge AI, this platform delivers risk assessment like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/neural-analyzer-for-sports-a000e13c"
+    }
+  },
+  "features": [
+    "Data encryption",
+    "Plugin architecture",
+    "API-first design",
+    "Container orchestration",
+    "Mobile-responsive interface"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "Zero manual intervention required",
+    "Cost optimization recommendations"
+  ]
+}

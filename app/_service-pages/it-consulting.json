@@ -1,0 +1,29 @@
+{
+  "title": "IT Strategy & Digital Transformation Consulting",
+  "description": "Strategic technology consulting — digital transformation roadmaps, tech stack evaluation, and CTO-as-a-service.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "IT Strategy & Digital Transformation Consulting - Zion Tech Group",
+    "description": "Strategic technology consulting — digital transformation roadmaps, tech stack evaluation, and CTO-as-a-service.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-consulting"
+    }
+  },
+  "features": [
+    "Technology stack assessment & recommendations",
+    "Digital transformation roadmap",
+    "CTO-as-a-service (fractional)",
+    "Vendor evaluation & selection",
+    "Technical due diligence for M&A"
+  ],
+  "benefits": [
+    "Reduce costs with it strategy & digital transformation consulting",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "title": "Identity Governance & Administration (IGA)",
+  "description": "Automated access review, SoD policy check, certification campaign, identity auto-provisioning/revocation, and entitlement analytics.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Identity Governance & Administration (IGA) - Zion Tech Group",
+    "description": "Automated access review, SoD policy check, certification campaign, identity auto-provisioning/revocation, and entitlement analytics.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/security-identity-governance-igac"
+    }
+  },
+  "features": [
+    "Automated access-review campaign per user/role",
+    "SoD (Segregation of Duties) rule engine",
+    "Auto-provision/revoke via SCIM API",
+    "Entitlement analytics + orphaned-access detection"
+  ],
+  "benefits": [
+    "Reduce costs with identity governance & administration (iga)",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

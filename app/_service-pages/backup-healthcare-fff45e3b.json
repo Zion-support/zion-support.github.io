@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/backup-healthcare-fff45e3b",
+  "breadcrumbTitle": "Data Backup & DR for Healthcare",
+  "title": "Data Backup & DR for Healthcare",
+  "description": "Reliable data backup and disaster recovery for Healthcare. Automated backups, tested restores, and rapid recovery when you need it most.",
+  "basic": "$299/month",
+  "pro": "$799/month",
+  "enterprise": "$2499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Data Backup & DR for Healthcare - Zion Tech Group",
+    "description": "Reliable data backup and disaster recovery for Healthcare. Automated backups, tested restores, and rapid recovery when you need it most.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/backup-healthcare-fff45e3b"
+    }
+  },
+  "features": [
+    "Automated daily backups",
+    "Off-site and cloud replication",
+    "RTO/RPO planning",
+    "Backup verification and testing",
+    "Encryption at rest and in transit"
+  ],
+  "benefits": [
+    "Business continuity assurance",
+    "Minimal data loss",
+    "Fast recovery times",
+    "Regulatory-grade retention",
+    "Simplified IT resilience"
+  ]
+}

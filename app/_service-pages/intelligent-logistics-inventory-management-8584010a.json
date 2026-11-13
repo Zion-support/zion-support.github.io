@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-logistics-inventory-management-8584010a",
+  "breadcrumbTitle": "Intelligent Logistics Inventory Management",
+  "title": "Intelligent Logistics Inventory Management",
+  "description": "AI-driven inventory optimization platform that provides enterprise-grade demand forecasting, automated replenishment, and assortment planning for retail operati",
+  "basic": "$258/month",
+  "pro": "$648/month",
+  "enterprise": "$1948/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Logistics Inventory Management - Zion Tech Group",
+    "description": "AI-driven inventory optimization platform that provides enterprise-grade demand forecasting, automated replenishment, and assortment planning for retail operati",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-logistics-inventory-management-8584010a"
+    }
+  },
+  "features": [
+    "Demand forecasting",
+    "Auto-replenishment",
+    "Assortment optimization",
+    "Markdown optimization"
+  ],
+  "benefits": [
+    "Reduced stockouts",
+    "Lower inventory costs",
+    "Optimized assortments",
+    "Improved margins"
+  ]
+}

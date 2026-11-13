@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-multi-tenant-iot-intelligence-33a06151",
+  "breadcrumbTitle": "AI-Powered Multi-Tenant IoT Intelligence",
+  "title": "AI-Powered Multi-Tenant IoT Intelligence",
+  "description": "Edge AI platform that processes IoT sensor data in real-time with multi-tenant insights.",
+  "basic": "$258/month",
+  "pro": "$648/month",
+  "enterprise": "$1948/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Multi-Tenant IoT Intelligence - Zion Tech Group",
+    "description": "Edge AI platform that processes IoT sensor data in real-time with multi-tenant insights.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-multi-tenant-iot-intelligence-33a06151"
+    }
+  },
+  "features": [
+    "Edge processing",
+    "Real-time analytics",
+    "Automated responses",
+    "Energy efficiency"
+  ],
+  "benefits": [
+    "Reduced latency",
+    "Better insights",
+    "Automated responses",
+    "Energy efficiency"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "AI Self-Healing Infrastructure",
+  "description": "Autonomous infrastructure remediation engine that detects anomalies, diagnoses root cause, and applies fixes — rollback guaranteed — without human intervention.",
+  "basic": "$399/mo/month",
+  "pro": "$1,199/mo/month",
+  "enterprise": "$3,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Self-Healing Infrastructure - Zion Tech Group",
+    "description": "Autonomous infrastructure remediation engine that detects anomalies, diagnoses root cause, and applies fixes — rollback guaranteed — without human intervention.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-self-healing-infra"
+    }
+  },
+  "features": [
+    "Anomaly detection per host",
+    "Auto root-cause diagnosis",
+    "Auto-remediation playbooks",
+    "Change-freeze awareness",
+    "Full audit trail"
+  ],
+  "benefits": [
+    "Reduce costs with ai self-healing infrastructure",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

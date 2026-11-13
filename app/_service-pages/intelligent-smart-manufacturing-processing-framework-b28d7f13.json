@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-smart-manufacturing-processing-framework-b28d7f13",
+  "breadcrumbTitle": "Intelligent Smart Manufacturing Processing Framework",
+  "title": "Intelligent Smart Manufacturing Processing Framework",
+  "description": "Intelligent processing framework that automates smart manufacturing data flows with real-time transformation.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Intelligent Smart Manufacturing Processing Framework - Zion Tech Group",
+    "description": "Intelligent processing framework that automates smart manufacturing data flows with real-time transformation.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-smart-manufacturing-processing-framework-b28d7f13"
+    }
+  },
+  "features": [
+    "Real-time processing",
+    "Data transformation",
+    "ETL pipelines",
+    "Stream processing"
+  ],
+  "benefits": [
+    "Faster data flows",
+    "Reduced processing time",
+    "Higher throughput",
+    "Real-time transformation"
+  ]
+}

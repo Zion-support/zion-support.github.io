@@ -1,0 +1,29 @@
+{
+  "title": "Cloud Performance Optimization",
+  "description": "Optimize cloud workloads for performance and cost: right-sizing, reserved instance strategy, storage tiering, and query optimization.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Cloud Performance Optimization - Zion Tech Group",
+    "description": "Optimize cloud workloads for performance and cost: right-sizing, reserved instance strategy, storage tiering, and query optimization.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w176-cloud-optimization"
+    }
+  },
+  "features": [
+    "Workload right-sizing recommendations",
+    "Reserved instance and savings plan optimization",
+    "Storage tiering and lifecycle policies",
+    "Database query optimization",
+    "CDN and caching strategy"
+  ],
+  "benefits": [
+    "Typical 30-50% cost reduction",
+    "Right-sizing matches resources to actual load",
+    "RI/SP optimization saves 40-70%",
+    "Performance benchmarks validate improvements"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "Legal Document Preparation and Filing",
+  "description": "Legal document preparation: template-per-case-type, clause auto-match per case facts, e-sign per jurisdiction, deadline tracking, regulatory filing per state and federal authority, and evidence binder auto-compile with exhibit order per relevance score.",
+  "basic": "$99/mo/month",
+  "pro": "$299/mo/month",
+  "enterprise": "$999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Legal Document Preparation and Filing - Zion Tech Group",
+    "description": "Legal document preparation: template-per-case-type, clause auto-match per case facts, e-sign per jurisdiction, deadline tracking, regulatory filing per state an",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automation-legal-document-preparation"
+    }
+  },
+  "features": [
+    "Template library per case type with clause auto-match per case facts entered",
+    "E-sign integrates per jurisdiction via DocuSign or HelloSign embedded signing",
+    "Deadline auto-calculation per court rules per state",
+    "Evidence binder auto-compile with exhibit auto-order by relevance per document",
+    "Regulatory filing per authority per batch or per individual case per filing limit"
+  ],
+  "benefits": [
+    "Reduce costs with legal document preparation and filing",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

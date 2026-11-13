@@ -1,0 +1,29 @@
+{
+  "title": "Cybersecurity Threat Intelligence Platform",
+  "description": "Real-time threat intelligence aggregation, analysis, and response. Monitor dark web, IOC feeds, and attack surface with AI-powered correlation.",
+  "basic": "$799/mo/month",
+  "pro": "$2,499/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Cybersecurity Threat Intelligence Platform - Zion Tech Group",
+    "description": "Real-time threat intelligence aggregation, analysis, and response. Monitor dark web, IOC feeds, and attack surface with AI-powered correlation.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cybersecurity-threat-intelligence-platform"
+    }
+  },
+  "features": [
+    "Dark web monitoring",
+    "IOC aggregation and correlation",
+    "Attack surface management",
+    "Threat actor profiling",
+    "Integration with SIEM/SOAR"
+  ],
+  "benefits": [
+    "Detect threats before they hit",
+    "Reduce incident response time",
+    "Proactive security posture",
+    "Automated threat correlation"
+  ]
+}

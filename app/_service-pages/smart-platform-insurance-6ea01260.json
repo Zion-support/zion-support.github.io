@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/smart-platform-insurance-6ea01260",
+  "breadcrumbTitle": "Smart platform-insurance",
+  "title": "Smart platform-insurance",
+  "description": "Transform your Insurance operations with our Smart platform-insurance. This AI-driven solution automates data quality with unprecedented accuracy and efficiency",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart platform-insurance - Zion Tech Group",
+    "description": "Transform your Insurance operations with our Smart platform-insurance. This AI-driven solution automates data quality with unprecedented accuracy and efficiency",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-platform-insurance-6ea01260"
+    }
+  },
+  "features": [
+    "Role-based access control with SSO integration",
+    "Fraud detection with anomaly analysis",
+    "Executive dashboards with drill-down capabilities",
+    "Master data management with golden records",
+    "Energy optimization with consumption tracking"
+  ],
+  "benefits": [
+    "Enhanced team productivity with intelligent assistance",
+    "Enhanced security with continuous threat monitoring",
+    "Improved sales performance with lead scoring",
+    "Real-time insights and alerts for proactive management",
+    "50% reduction in operational costs through automation"
+  ]
+}

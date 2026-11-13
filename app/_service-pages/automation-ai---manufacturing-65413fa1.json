@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/automation-ai---manufacturing-65413fa1",
+  "breadcrumbTitle": "Automation AI - Manufacturing",
+  "title": "Automation AI - Manufacturing",
+  "description": "Transform your manufacturing operations with our Automation AI - Manufacturing. This AI-driven solution automates workflow management with unprecedented accurac",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automation AI - Manufacturing - Zion Tech Group",
+    "description": "Transform your manufacturing operations with our Automation AI - Manufacturing. This AI-driven solution automates workflow management with unprecedented accurac",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automation-ai---manufacturing-65413fa1"
+    }
+  },
+  "features": [
+    "Performance dashboards",
+    "Alerting system",
+    "Data encryption",
+    "Real-time processing",
+    "SOC 2 certified"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Intelligent load balancing",
+    "Self-healing infrastructure",
+    "24/7 automated operations",
+    "Reduced human error by 95%"
+  ]
+}

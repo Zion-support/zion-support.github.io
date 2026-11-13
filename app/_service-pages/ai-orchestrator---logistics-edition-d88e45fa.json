@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-orchestrator---logistics-edition-d88e45fa",
+  "breadcrumbTitle": "AI Orchestrator - Logistics Edition",
+  "title": "AI Orchestrator - Logistics Edition",
+  "description": "Revolutionize logistics through intelligent automation. Our AI Orchestrator - Logistics Edition leverages advanced machine learning to deliver document processi",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Orchestrator - Logistics Edition - Zion Tech Group",
+    "description": "Revolutionize logistics through intelligent automation. Our AI Orchestrator - Logistics Edition leverages advanced machine learning to deliver document processi",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-orchestrator---logistics-edition-d88e45fa"
+    }
+  },
+  "features": [
+    "Cloud-native architecture",
+    "Edge computing support",
+    "HIPAA ready",
+    "Comprehensive monitoring",
+    "Performance dashboards"
+  ],
+  "benefits": [
+    "Automated compliance reporting",
+    "24/7 automated operations",
+    "Reduced human error by 95%"
+  ]
+}

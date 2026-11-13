@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/analytics-adaptive---hospitality-d9114224",
+  "breadcrumbTitle": "Analytics Adaptive - Hospitality",
+  "title": "Analytics Adaptive - Hospitality",
+  "description": "Next-generation hospitality solution: Analytics Adaptive - Hospitality. Combines supply chain with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Analytics Adaptive - Hospitality - Zion Tech Group",
+    "description": "Next-generation hospitality solution: Analytics Adaptive - Hospitality. Combines supply chain with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/analytics-adaptive---hospitality-d9114224"
+    }
+  },
+  "features": [
+    "Mobile-responsive interface",
+    "Open-source friendly",
+    "API-first design",
+    "Auto-scaling capabilities",
+    "SOC 2 certified"
+  ],
+  "benefits": [
+    "Automated compliance reporting",
+    "24/7 automated operations",
+    "3x faster decision making"
+  ]
+}

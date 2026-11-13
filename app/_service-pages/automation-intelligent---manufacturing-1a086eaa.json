@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/automation-intelligent---manufacturing-1a086eaa",
+  "breadcrumbTitle": "Automation Intelligent - Manufacturing",
+  "title": "Automation Intelligent - Manufacturing",
+  "description": "Revolutionize manufacturing through intelligent automation. Our Automation Intelligent - Manufacturing leverages advanced machine learning to deliver data proce",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automation Intelligent - Manufacturing - Zion Tech Group",
+    "description": "Revolutionize manufacturing through intelligent automation. Our Automation Intelligent - Manufacturing leverages advanced machine learning to deliver data proce",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automation-intelligent---manufacturing-1a086eaa"
+    }
+  },
+  "features": [
+    "Role-based access control",
+    "Machine learning integration",
+    "Custom integrations",
+    "Offline capabilities"
+  ],
+  "benefits": [
+    "Intelligent load balancing",
+    "Reduced human error by 95%",
+    "Self-healing infrastructure",
+    "Seamless integration with existing systems"
+  ]
+}

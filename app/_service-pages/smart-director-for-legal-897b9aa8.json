@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/smart-director-for-legal-897b9aa8",
+  "breadcrumbTitle": "Smart Director for Legal",
+  "title": "Smart Director for Legal",
+  "description": "Unlock unprecedented growth with Smart Director for Legal. This autonomous system provides performance monitoring with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Director for Legal - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Smart Director for Legal. This autonomous system provides performance monitoring with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-director-for-legal-897b9aa8"
+    }
+  },
+  "features": [
+    "Data encryption",
+    "Plugin architecture",
+    "Container orchestration",
+    "Real-time processing",
+    "Alerting system"
+  ],
+  "benefits": [
+    "50% reduction in operational costs",
+    "Intelligent load balancing",
+    "Performance benchmarking"
+  ]
+}

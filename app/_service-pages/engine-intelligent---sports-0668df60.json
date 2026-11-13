@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/engine-intelligent---sports-0668df60",
+  "breadcrumbTitle": "Engine Intelligent - Sports",
+  "title": "Engine Intelligent - Sports",
+  "description": "Next-generation sports solution: Engine Intelligent - Sports. Combines fraud prevention with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Engine Intelligent - Sports - Zion Tech Group",
+    "description": "Next-generation sports solution: Engine Intelligent - Sports. Combines fraud prevention with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/engine-intelligent---sports-0668df60"
+    }
+  },
+  "features": [
+    "Mobile-responsive interface",
+    "Performance dashboards",
+    "Edge computing support",
+    "Alerting system",
+    "Plugin architecture"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "Predictive maintenance scheduling",
+    "Enterprise-grade security"
+  ]
+}

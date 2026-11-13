@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/smart-supply-coordinator-03e7e397",
+  "breadcrumbTitle": "Smart Supply Coordinator",
+  "title": "Smart Supply Coordinator",
+  "description": "Unlock unprecedented growth with Smart Supply Coordinator. This autonomous system provides customer insights with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Supply Coordinator - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Smart Supply Coordinator. This autonomous system provides customer insights with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-supply-coordinator-03e7e397"
+    }
+  },
+  "features": [
+    "Open-source friendly",
+    "Microservices deployment",
+    "Alerting system",
+    "Rollback mechanisms"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "Automated compliance reporting",
+    "Intelligent load balancing"
+  ]
+}

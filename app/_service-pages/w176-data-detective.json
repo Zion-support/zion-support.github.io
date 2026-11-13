@@ -1,0 +1,29 @@
+{
+  "title": "Data Detective & Root Cause",
+  "description": "Automated data issue investigation: trace anomalies to root cause, identify upstream changes, and fix data pipeline breaks fast.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Data Detective & Root Cause - Zion Tech Group",
+    "description": "Automated data issue investigation: trace anomalies to root cause, identify upstream changes, and fix data pipeline breaks fast.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w176-data-detective"
+    }
+  },
+  "features": [
+    "Anomaly triage with root cause hints",
+    "Upstream change detection",
+    "Pipeline impact analysis",
+    "Data reconciliation tools",
+    "Historical comparison and diff"
+  ],
+  "benefits": [
+    "Find data issue root cause in minutes",
+    "Upstream change detection links cause and effect",
+    "Impact analysis shows blast radius",
+    "Fix suggestions speed remediation"
+  ]
+}

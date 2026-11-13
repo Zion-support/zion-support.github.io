@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "Enterprise AI Intelligence Hub: case study | Zion Tech Group",
+    "description": "Enterprise AI Intelligence Hub: case study",
+    "keywords": [
+      "it",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "Enterprise AI Intelligence Hub: case study",
+      "description": "Enterprise AI Intelligence Hub: case study",
+      "url": "https://ziontechgroup.com/blog/enterprise-ai-intelligence-hub-case-study/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/enterprise-ai-intelligence-hub-case-study/"
+    }
+  },
+  "values": [
+    "Enterprise AI Intelligence Hub: case study",
+    "Enterprise AI Intelligence Hub: case study",
+    "Enterprise AI Intelligence Hub: case study",
+    "Action checklist",
+    "For enterprise ai intelligence hub: case study: pick one workflow, assign ownership, define success metrics, instrument execution, and set a 30-day review date. Write the checklist down and share it with stakeholders so expectations are explicit. Before launch, verify access controls, monitoring, rollback criteria, and on-call coverage. After launch, review metrics weekly and escalate deviations immediately; small drifts become large incidents when ignored. Use the checklist as a living document and update it as the program learns from real operation.",
+    "Action checklist",
+    " For enterprise ai intelligence hub: case study: pick one workflow, assign ownership, define success metrics, instrument execution, and set a 30-day review date. Write the checklist down and share it with stakeholders so expectations are explicit. Before launch, verify access controls, monitoring, rollback criteria, and on-call coverage. After launch, review metrics weekly and escalate deviations immediately; small drifts become large incidents when ignored. Use the checklist as a living document and update it as the program learns from real operation.",
+    "/blog/ai-development-acceleration-2026",
+    "Ai Development Acceleration 2026",
+    "/blog/autonomous-qa-engineering-2026-6661",
+    "Autonomous Qa Engineering 2026 6661",
+    "/blog/cloud-finops-implementation-playbook",
+    "Cloud Finops Implementation Playbook",
+    "/blog/autonomous-code-deployment-checklist-for-it-leaders",
+    "Autonomous Code Deployment Checklist For It Leaders"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Enterprise AI Intelligence Hub: case study",
+    "description": "Enterprise AI Intelligence Hub: case study",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T08:12:12Z",
+    "dateModified": "2026-08-07T08:12:12Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/enterprise-ai-intelligence-hub-case-study/"
+  }
+}

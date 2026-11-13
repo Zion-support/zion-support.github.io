@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/neural-customer-manager-6764f2cf",
+  "breadcrumbTitle": "Neural Customer Manager",
+  "title": "Neural Customer Manager",
+  "description": "Transform your construction operations with our Neural Customer Manager. This AI-driven solution automates sales forecasting with unprecedented accuracy and eff",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Neural Customer Manager - Zion Tech Group",
+    "description": "Transform your construction operations with our Neural Customer Manager. This AI-driven solution automates sales forecasting with unprecedented accuracy and eff",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/neural-customer-manager-6764f2cf"
+    }
+  },
+  "features": [
+    "HIPAA ready",
+    "Alerting system",
+    "Container orchestration",
+    "Audit trails",
+    "Machine learning integration"
+  ],
+  "benefits": [
+    "Seamless integration with existing systems",
+    "Performance benchmarking",
+    "Real-time insights and alerts"
+  ]
+}

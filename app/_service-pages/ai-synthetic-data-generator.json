@@ -1,0 +1,29 @@
+{
+  "title": "AI Synthetic Data Generator Pro",
+  "description": "Generate statistically accurate synthetic datasets for ML training, testing, and compliance. Preserves statistical properties of real data while ensuring zero privacy risk. Supports tabular, time-series, text, and image data.",
+  "basic": "$399/mo/month",
+  "pro": "$1,299/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Synthetic Data Generator Pro - Zion Tech Group",
+    "description": "Generate statistically accurate synthetic datasets for ML training, testing, and compliance. Preserves statistical properties of real data while ensuring zero p",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-synthetic-data-generator"
+    }
+  },
+  "features": [
+    "Statistical fidelity preservation",
+    "Privacy guarantee (differential privacy)",
+    "Tabular, time-series, text, image generation",
+    "Data quality scoring",
+    "Schema-aware generation"
+  ],
+  "benefits": [
+    "Eliminate privacy compliance risks",
+    "Unlimited training data generation",
+    "Balance underrepresented classes",
+    "Accelerate ML development cycles"
+  ]
+}

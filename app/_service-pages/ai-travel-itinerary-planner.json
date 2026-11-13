@@ -1,0 +1,28 @@
+{
+  "title": "AI Travel Itinerary & Cost Optimizer",
+  "description": "Personalized travel planning: multi-city routing, real-time price tracking, visa requirements, cultural recommendations, and carbon footprint calculation. Integrates 50+ booking APIs.",
+  "basic": "$0 (5 plans/mo)/month",
+  "pro": "$9 (unlimited)/month",
+  "enterprise": "$29 (API access)/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Travel Itinerary & Cost Optimizer - Zion Tech Group",
+    "description": "Personalized travel planning: multi-city routing, real-time price tracking, visa requirements, cultural recommendations, and carbon footprint calculation. Integ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-travel-itinerary-planner"
+    }
+  },
+  "features": [
+    "AI multi-city route optimization",
+    "Real-time flight/hotel price tracking",
+    "Visa & entry requirement checker",
+    "Cultural experience recommendations",
+    "Carbon footprint calculator"
+  ],
+  "benefits": [
+    "Find cheapest routes automatically",
+    "Never miss visa requirements",
+    "Travel greener with carbon tracking"
+  ]
+}

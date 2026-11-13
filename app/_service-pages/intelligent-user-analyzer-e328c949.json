@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/intelligent-user-analyzer-e328c949",
+  "breadcrumbTitle": "Intelligent User Analyzer",
+  "title": "Intelligent User Analyzer",
+  "description": "Revolutionize technology through intelligent automation. Our Intelligent User Analyzer leverages advanced machine learning to deliver security monitoring at sca",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent User Analyzer - Zion Tech Group",
+    "description": "Revolutionize technology through intelligent automation. Our Intelligent User Analyzer leverages advanced machine learning to deliver security monitoring at sca",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-user-analyzer-e328c949"
+    }
+  },
+  "features": [
+    "Cloud-native architecture",
+    "Container orchestration",
+    "Audit trails",
+    "GDPR compliance"
+  ],
+  "benefits": [
+    "Intelligent load balancing",
+    "Cost optimization recommendations",
+    "Enterprise-grade security"
+  ]
+}

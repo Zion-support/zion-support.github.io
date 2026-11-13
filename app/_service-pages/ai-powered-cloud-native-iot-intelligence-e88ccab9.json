@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-cloud-native-iot-intelligence-e88ccab9",
+  "breadcrumbTitle": "AI-Powered Cloud-Native IoT Intelligence",
+  "title": "AI-Powered Cloud-Native IoT Intelligence",
+  "description": "Edge AI platform that processes IoT sensor data in real-time with cloud-native insights.",
+  "basic": "$258/month",
+  "pro": "$648/month",
+  "enterprise": "$1948/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Cloud-Native IoT Intelligence - Zion Tech Group",
+    "description": "Edge AI platform that processes IoT sensor data in real-time with cloud-native insights.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-cloud-native-iot-intelligence-e88ccab9"
+    }
+  },
+  "features": [
+    "Edge processing",
+    "Real-time analytics",
+    "Automated responses",
+    "Energy efficiency"
+  ],
+  "benefits": [
+    "Reduced latency",
+    "Better insights",
+    "Automated responses",
+    "Energy efficiency"
+  ]
+}

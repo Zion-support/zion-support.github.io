@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/real-time-vision-ai-for-aviation-c82bd5fa",
+  "breadcrumbTitle": "Real-Time Vision AI for Aviation",
+  "title": "Real-Time Vision AI for Aviation",
+  "description": "Vision AI system powered by real-time computer vision models for aviation analysis and automated visual inspection.",
+  "basic": "$258/month",
+  "pro": "$648/month",
+  "enterprise": "$1948/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Real-Time Vision AI for Aviation - Zion Tech Group",
+    "description": "Vision AI system powered by real-time computer vision models for aviation analysis and automated visual inspection.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/real-time-vision-ai-for-aviation-c82bd5fa"
+    }
+  },
+  "features": [
+    "Real-time object detection",
+    "Image classification",
+    "Anomaly detection",
+    "Visual inspection"
+  ],
+  "benefits": [
+    "Automated quality control",
+    "Reduced inspection costs",
+    "Defect detection",
+    "Visual search"
+  ]
+}

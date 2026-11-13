@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-automation-retail-71cb272e",
+  "breadcrumbTitle": "Intelligent automation-retail",
+  "title": "Intelligent automation-retail",
+  "description": "Transform your retail operations with our Intelligent automation-retail. This AI-driven solution automates network optimization with unprecedented accuracy and ",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent automation-retail - Zion Tech Group",
+    "description": "Transform your retail operations with our Intelligent automation-retail. This AI-driven solution automates network optimization with unprecedented accuracy and ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-automation-retail-71cb272e"
+    }
+  },
+  "features": [
+    "Serverless functions",
+    "Plugin architecture",
+    "Audit trails",
+    "Real-time processing",
+    "Zero-downtime updates"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Enterprise-grade security",
+    "Zero manual intervention required"
+  ]
+}

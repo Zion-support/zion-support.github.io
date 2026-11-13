@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/enterprise-distributed-edtech-analytics-suite-a859cb45",
+  "breadcrumbTitle": "Enterprise Distributed Edtech Analytics Suite",
+  "title": "Enterprise Distributed Edtech Analytics Suite",
+  "description": "Enterprise analytics suite that delivers distributed edtech insights with unified dashboards and reporting.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Enterprise Distributed Edtech Analytics Suite - Zion Tech Group",
+    "description": "Enterprise analytics suite that delivers distributed edtech insights with unified dashboards and reporting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/enterprise-distributed-edtech-analytics-suite-a859cb45"
+    }
+  },
+  "features": [
+    "Data visualization",
+    "Custom dashboards",
+    "Report generation",
+    "KPI tracking"
+  ],
+  "benefits": [
+    "Unified data view",
+    "Faster insights",
+    "Customizable reports",
+    "Cross-functional collaboration"
+  ]
+}

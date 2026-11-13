@@ -1,0 +1,29 @@
+{
+  "title": "AI for Regulated Industries",
+  "description": "AI solutions built for healthcare, finance, legal, and government. HIPAA, SOC 2, GDPR, and EU AI Act–ready with audit trails and human oversight.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI for Regulated Industries - Zion Tech Group",
+    "description": "AI solutions built for healthcare, finance, legal, and government. HIPAA, SOC 2, GDPR, and EU AI Act–ready with audit trails and human oversight.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-regulated-industries"
+    }
+  },
+  "features": [
+    "Regulatory-First Architecture",
+    "Human-in-the-Loop & Oversight",
+    "Bias & Fairness Monitoring",
+    "Documentation & Transparency",
+    "Sector-Specific Workflows"
+  ],
+  "benefits": [
+    "Reduce costs with ai for regulated industries",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-inventory-automation-46944d15",
+  "breadcrumbTitle": "Intelligent Inventory Automation",
+  "title": "Intelligent Inventory Automation",
+  "description": "The future of insurance is here with Intelligent Inventory Automation. Powered by cutting-edge AI, this platform delivers code optimization like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Inventory Automation - Zion Tech Group",
+    "description": "The future of insurance is here with Intelligent Inventory Automation. Powered by cutting-edge AI, this platform delivers code optimization like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-inventory-automation-46944d15"
+    }
+  },
+  "features": [
+    "Open-source friendly",
+    "Performance dashboards",
+    "Offline capabilities",
+    "Cloud-native architecture"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Predictive maintenance scheduling",
+    "24/7 automated operations",
+    "Reduced human error by 95%"
+  ]
+}

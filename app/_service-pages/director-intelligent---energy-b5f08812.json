@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/director-intelligent---energy-b5f08812",
+  "breadcrumbTitle": "Director Intelligent - Energy",
+  "title": "Director Intelligent - Energy",
+  "description": "Next-generation energy solution: Director Intelligent - Energy. Combines fraud prevention with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Director Intelligent - Energy - Zion Tech Group",
+    "description": "Next-generation energy solution: Director Intelligent - Energy. Combines fraud prevention with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/director-intelligent---energy-b5f08812"
+    }
+  },
+  "features": [
+    "Container orchestration",
+    "Machine learning integration",
+    "SOC 2 certified",
+    "Offline capabilities"
+  ],
+  "benefits": [
+    "Cost optimization recommendations",
+    "Predictive maintenance scheduling",
+    "ROI in under 90 days"
+  ]
+}

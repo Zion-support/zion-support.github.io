@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-manager---finance-edition-1-a8939665",
+  "breadcrumbTitle": "AI Manager - Finance Edition #1",
+  "title": "AI Manager - Finance Edition #1",
+  "description": "Next-generation finance solution: AI Manager - Finance Edition #1. Combines image recognition with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Manager - Finance Edition #1 - Zion Tech Group",
+    "description": "Next-generation finance solution: AI Manager - Finance Edition #1. Combines image recognition with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-manager---finance-edition-1-a8939665"
+    }
+  },
+  "features": [
+    "Alerting system",
+    "Plugin architecture",
+    "Offline capabilities",
+    "Performance dashboards",
+    "Serverless functions"
+  ],
+  "benefits": [
+    "Scalable to millions of transactions",
+    "Predictive maintenance scheduling",
+    "3x faster decision making",
+    "Zero manual intervention required"
+  ]
+}

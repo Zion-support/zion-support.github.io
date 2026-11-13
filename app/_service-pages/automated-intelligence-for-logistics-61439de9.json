@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/automated-intelligence-for-logistics-61439de9",
+  "breadcrumbTitle": "Automated Intelligence for Logistics",
+  "title": "Automated Intelligence for Logistics",
+  "description": "Next-generation logistics solution: Automated Intelligence for Logistics. Combines workflow management with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated Intelligence for Logistics - Zion Tech Group",
+    "description": "Next-generation logistics solution: Automated Intelligence for Logistics. Combines workflow management with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-intelligence-for-logistics-61439de9"
+    }
+  },
+  "features": [
+    "Multi-region deployment",
+    "Performance dashboards",
+    "Custom integrations",
+    "Audit trails",
+    "Alerting system"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "Zero manual intervention required",
+    "Enterprise-grade security",
+    "Dynamic resource allocation"
+  ]
+}

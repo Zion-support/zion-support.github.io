@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/cognitive-integrated-financial-decision-engine-006a3c9f",
+  "breadcrumbTitle": "Cognitive Integrated Financial Decision Engine",
+  "title": "Cognitive Integrated Financial Decision Engine",
+  "description": "Cognitive decision engine that processes integrated signals to drive financial strategy with deep learning.",
+  "basic": "$278/month",
+  "pro": "$698/month",
+  "enterprise": "$2098/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Cognitive Integrated Financial Decision Engine - Zion Tech Group",
+    "description": "Cognitive decision engine that processes integrated signals to drive financial strategy with deep learning.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cognitive-integrated-financial-decision-engine-006a3c9f"
+    }
+  },
+  "features": [
+    "Cognitive reasoning",
+    "Scenario analysis",
+    "Decision trees",
+    "Recommendation engine"
+  ],
+  "benefits": [
+    "Better decision quality",
+    "Reduced risk",
+    "Faster insights",
+    "Competitive intelligence"
+  ]
+}

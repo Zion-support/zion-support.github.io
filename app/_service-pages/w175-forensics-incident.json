@@ -1,0 +1,29 @@
+{
+  "title": "Digital Forensics & Incident Response",
+  "description": "DFIR service: evidence collection, forensic analysis, attribution, and legal-ready reporting. Respond to breaches with certified investigators and chain of custody.",
+  "basic": "$15,000/incident/month",
+  "pro": "$35,000/incident/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Digital Forensics & Incident Response - Zion Tech Group",
+    "description": "DFIR service: evidence collection, forensic analysis, attribution, and legal-ready reporting. Respond to breaches with certified investigators and chain of cust",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w175-forensics-incident"
+    }
+  },
+  "features": [
+    "Evidence collection with chain of custody",
+    "Disk and memory forensic analysis",
+    "Network forensic analysis and PCAP review",
+    "Malware reverse engineering",
+    "Attribution and threat actor profiling"
+  ],
+  "benefits": [
+    "Court-admissible evidence with chain of custody",
+    "Certified investigators with DFIR experience",
+    "Malware analysis reveals attack methodology",
+    "Legal-ready reports for litigation and insurance"
+  ]
+}

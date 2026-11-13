@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "AIOps Anomaly Detection: operations handbook | Zion Tech Group",
+    "description": "AIOps Anomaly Detection: operations handbook",
+    "keywords": [
+      "automation",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "AIOps Anomaly Detection: operations handbook",
+      "description": "AIOps Anomaly Detection: operations handbook",
+      "url": "https://ziontechgroup.com/blog/aiops-anomaly-detection-operations-handbook/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/aiops-anomaly-detection-operations-handbook/"
+    }
+  },
+  "values": [
+    "AIOps Anomaly Detection: operations handbook",
+    "AIOps Anomaly Detection: operations handbook",
+    "AIOps Anomaly Detection: operations handbook",
+    "Conversion path",
+    "If this guide matches your aiops anomaly detection: operations handbook initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "Conversion path",
+    " If this guide matches your aiops anomaly detection: operations handbook initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "/blog/enterprise-backup-dr-policy-and-compliance",
+    "Enterprise Backup Dr Policy And Compliance",
+    "/blog/micro-saas-ai-hr-recruitment-2026-6714",
+    "Micro Saas Ai Hr Recruitment 2026 6714",
+    "/blog/enterprise-ai-intelligence-hub-deployment-patterns",
+    "Enterprise Ai Intelligence Hub Deployment Patterns",
+    "/blog/ai-data-lakehouse-pipelines-2026-6981",
+    "Ai Data Lakehouse Pipelines 2026 6981"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "AIOps Anomaly Detection: operations handbook",
+    "description": "AIOps Anomaly Detection: operations handbook",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T07:56:54Z",
+    "dateModified": "2026-08-07T07:56:54Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/aiops-anomaly-detection-operations-handbook/"
+  }
+}

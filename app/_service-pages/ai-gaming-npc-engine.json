@@ -1,0 +1,28 @@
+{
+  "title": "AI NPC & Game Character Engine",
+  "description": "Procedural NPC generation for games: AI-driven dialogue, personality modeling, emotion state machines, and dynamic quest generation. Unity + Unreal integration.",
+  "basic": "$99/month",
+  "pro": "$299/month",
+  "enterprise": "$999/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI NPC & Game Character Engine - Zion Tech Group",
+    "description": "Procedural NPC generation for games: AI-driven dialogue, personality modeling, emotion state machines, and dynamic quest generation. Unity + Unreal integration.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-gaming-npc-engine"
+    }
+  },
+  "features": [
+    "AI personality & dialogue generation",
+    "Emotion state machines",
+    "Procedural quest generation",
+    "Multi-language voice synthesis",
+    "Unity & Unreal SDKs"
+  ],
+  "benefits": [
+    "Create infinite unique NPCs",
+    "Players feel real connections",
+    "Cut character dev time by 80%"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "AI Agent Orchestrator",
+  "description": "Production-grade platform for managing, monitoring, and scaling fleets of autonomous AI agents. Define workflows, enforce guardrails, track performance, and coordinate multi-agent systems — turning experimental agents into reliable business automation.",
+  "basic": "$N/A/month",
+  "pro": "$14997/month",
+  "enterprise": "$34997/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Agent Orchestrator - Zion Tech Group",
+    "description": "Production-grade platform for managing, monitoring, and scaling fleets of autonomous AI agents. Define workflows, enforce guardrails, track performance, and coo",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/wave127-ai-agent-orchestrator"
+    }
+  },
+  "features": [
+    "Multi-agent workflow definition & orchestration",
+    "Guardrail enforcement & output validation",
+    "Real-time agent monitoring & observability",
+    "Human-in-the-loop escalation paths",
+    "Agent performance analytics & benchmarking"
+  ],
+  "benefits": [
+    "Deploy AI agents to production with confidence",
+    "Coordinate complex multi-step tasks across agents",
+    "Full auditability and compliance for autonomous systems",
+    "Scale agent fleets from 10 to 10,000 seamlessly"
+  ]
+}

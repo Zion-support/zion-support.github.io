@@ -1,0 +1,29 @@
+{
+  "title": "Cloud-Native Application Development",
+  "description": "Full-stack cloud-native: containerized microservices, event-driven architecture, Kubernetes, CI/CD from code to production with OpenTelemetry observability from day one.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Cloud-Native Application Development - Zion Tech Group",
+    "description": "Full-stack cloud-native: containerized microservices, event-driven architecture, Kubernetes, CI/CD from code to production with OpenTelemetry observability from",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cloud-native-app-dev"
+    }
+  },
+  "features": [
+    "Kubernetes-native microservice architecture",
+    "Event-driven: Kafka/NATS/PubSub patterns",
+    "Auto-generated Helm charts + ArgoCD",
+    "Distributed tracing OpenTelemetry from bootstrap",
+    "GitOps deploy pipeline per environment"
+  ],
+  "benefits": [
+    "Reduce costs with cloud-native application development",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

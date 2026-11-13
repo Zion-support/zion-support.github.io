@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/smart-performance-suite-b9a90692",
+  "breadcrumbTitle": "Smart Performance Suite",
+  "title": "Smart Performance Suite",
+  "description": "Transform your healthcare operations with our Smart Performance Suite. This AI-driven solution automates code optimization with unprecedented accuracy and effic",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Performance Suite - Zion Tech Group",
+    "description": "Transform your healthcare operations with our Smart Performance Suite. This AI-driven solution automates code optimization with unprecedented accuracy and effic",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-performance-suite-b9a90692"
+    }
+  },
+  "features": [
+    "Offline capabilities",
+    "Serverless functions",
+    "Multi-language support",
+    "Zero-downtime updates",
+    "Performance dashboards"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "50% reduction in operational costs",
+    "Dynamic resource allocation",
+    "Performance benchmarking"
+  ]
+}

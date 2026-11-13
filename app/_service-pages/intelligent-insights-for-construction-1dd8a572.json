@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-insights-for-construction-1dd8a572",
+  "breadcrumbTitle": "Intelligent Insights for Construction",
+  "title": "Intelligent Insights for Construction",
+  "description": "Unlock unprecedented growth with Intelligent Insights for Construction. This autonomous system provides maintenance scheduling with zero manual intervention nee",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Insights for Construction - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Intelligent Insights for Construction. This autonomous system provides maintenance scheduling with zero manual intervention nee",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-insights-for-construction-1dd8a572"
+    }
+  },
+  "features": [
+    "SOC 2 certified",
+    "HIPAA ready",
+    "Plugin architecture",
+    "Alerting system"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "Predictive maintenance scheduling",
+    "Intelligent load balancing",
+    "50% reduction in operational costs"
+  ]
+}

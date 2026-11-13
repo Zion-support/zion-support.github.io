@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/cognitive-precision-pharmaceuticals-decision-engine-11fe3f69",
+  "breadcrumbTitle": "Cognitive Precision Pharmaceuticals Decision Engine",
+  "title": "Cognitive Precision Pharmaceuticals Decision Engine",
+  "description": "Cognitive decision engine that processes precision signals to drive pharmaceuticals strategy with deep learning.",
+  "basic": "$278/month",
+  "pro": "$698/month",
+  "enterprise": "$2098/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Cognitive Precision Pharmaceuticals Decision Engine - Zion Tech Group",
+    "description": "Cognitive decision engine that processes precision signals to drive pharmaceuticals strategy with deep learning.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cognitive-precision-pharmaceuticals-decision-engine-11fe3f69"
+    }
+  },
+  "features": [
+    "Cognitive reasoning",
+    "Scenario analysis",
+    "Decision trees",
+    "Recommendation engine"
+  ],
+  "benefits": [
+    "Better decision quality",
+    "Reduced risk",
+    "Faster insights",
+    "Competitive intelligence"
+  ]
+}

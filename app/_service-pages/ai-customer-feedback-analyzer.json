@@ -1,0 +1,29 @@
+{
+  "title": "AI Customer Feedback Analyzer",
+  "description": "Analyze customer feedback from surveys, reviews, support tickets, and social media. AI-powered theme extraction, sentiment tracking, and actionable insight generation.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Customer Feedback Analyzer - Zion Tech Group",
+    "description": "Analyze customer feedback from surveys, reviews, support tickets, and social media. AI-powered theme extraction, sentiment tracking, and actionable insight gene",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-customer-feedback-analyzer"
+    }
+  },
+  "features": [
+    "Multi-source feedback aggregation",
+    "AI theme and topic extraction",
+    "Sentiment trend tracking",
+    "NPS and CSAT analysis",
+    "Actionable insight generation"
+  ],
+  "benefits": [
+    "Understand customer pain points at scale",
+    "Track satisfaction trends over time",
+    "Prioritize product improvements",
+    "Close the feedback loop faster"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "Mobile Device Management (MDM/EMM)",
+  "description": "Enterprise mobile management: enrollment, policy, app deployment, content management, and conditional access for iOS, Android, and ChromeOS.",
+  "basic": "$4/device/mo/month",
+  "pro": "$8/device/mo/month",
+  "enterprise": "$15/device/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Mobile Device Management (MDM/EMM) - Zion Tech Group",
+    "description": "Enterprise mobile management: enrollment, policy, app deployment, content management, and conditional access for iOS, Android, and ChromeOS.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w175-mobile-device-mgmt"
+    }
+  },
+  "features": [
+    "Device enrollment (DEP, zero-touch)",
+    "Policy enforcement and compliance",
+    "Enterprise app store and deployment",
+    "Content and document management",
+    "Containerization (work/personal separation)"
+  ],
+  "benefits": [
+    "Secure mobile without impacting usability",
+    "Containerization separates work and personal",
+    "Enterprise app distribution without app store",
+    "Conditional access blocks non-compliant devices"
+  ]
+}

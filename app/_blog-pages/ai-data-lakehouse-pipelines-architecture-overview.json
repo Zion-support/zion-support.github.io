@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "AI Data Lakehouse Pipelines: architecture overview | Zion Tech Group",
+    "description": "AI Data Lakehouse Pipelines: architecture overview",
+    "keywords": [
+      "it",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "AI Data Lakehouse Pipelines: architecture overview",
+      "description": "AI Data Lakehouse Pipelines: architecture overview",
+      "url": "https://ziontechgroup.com/blog/ai-data-lakehouse-pipelines-architecture-overview/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/ai-data-lakehouse-pipelines-architecture-overview/"
+    }
+  },
+  "values": [
+    "AI Data Lakehouse Pipelines: architecture overview",
+    "AI Data Lakehouse Pipelines: architecture overview",
+    "AI Data Lakehouse Pipelines: architecture overview",
+    "Conversion path",
+    "If this guide matches your ai data lakehouse pipelines: architecture overview initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "Conversion path",
+    " If this guide matches your ai data lakehouse pipelines: architecture overview initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "/blog/incident-response-retainer-policy-and-compliance",
+    "Incident Response Retainer Policy And Compliance",
+    "/blog/automation-orchestration-enterprise-2026-6561",
+    "Automation Orchestration Enterprise 2026 6561",
+    "/blog/api-management-gateway-roi-and-cost-model",
+    "Api Management Gateway Roi And Cost Model",
+    "/blog/ai-agent-safety-evaluation-2026-6515",
+    "Ai Agent Safety Evaluation 2026 6515"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "AI Data Lakehouse Pipelines: architecture overview",
+    "description": "AI Data Lakehouse Pipelines: architecture overview",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T08:27:32Z",
+    "dateModified": "2026-08-07T08:27:32Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/ai-data-lakehouse-pipelines-architecture-overview/"
+  }
+}

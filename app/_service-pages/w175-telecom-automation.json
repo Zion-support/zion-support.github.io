@@ -1,0 +1,29 @@
+{
+  "title": "Telecom Operations Automation",
+  "description": "Automate telecom operations: provisioning, billing mediation, network fault management, and SLA monitoring. Reduce operational costs by 40%.",
+  "basic": "$799/mo/month",
+  "pro": "$2,499/mo/month",
+  "enterprise": "$7,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Telecom Operations Automation - Zion Tech Group",
+    "description": "Automate telecom operations: provisioning, billing mediation, network fault management, and SLA monitoring. Reduce operational costs by 40%.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w175-telecom-automation"
+    }
+  },
+  "features": [
+    "Service provisioning automation",
+    "Billing mediation and rating",
+    "Network fault detection and auto-remediation",
+    "SLA monitoring and breach alerting",
+    "Customer complaint workflow"
+  ],
+  "benefits": [
+    "Reduce provisioning time from days to minutes",
+    "Auto-remediation fixes 70% of network faults",
+    "SLA monitoring prevents revenue penalties",
+    "Capacity planning prevents shortages"
+  ]
+}

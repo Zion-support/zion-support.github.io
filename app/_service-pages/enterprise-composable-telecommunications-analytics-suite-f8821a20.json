@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/enterprise-composable-telecommunications-analytics-suite-f8821a20",
+  "breadcrumbTitle": "Enterprise Composable Telecommunications Analytics Suite",
+  "title": "Enterprise Composable Telecommunications Analytics Suite",
+  "description": "Enterprise analytics suite that delivers composable telecommunications insights with unified dashboards and reporting.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Enterprise Composable Telecommunications Analytics Suite - Zion Tech Group",
+    "description": "Enterprise analytics suite that delivers composable telecommunications insights with unified dashboards and reporting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/enterprise-composable-telecommunications-analytics-suite-f8821a20"
+    }
+  },
+  "features": [
+    "Data visualization",
+    "Custom dashboards",
+    "Report generation",
+    "KPI tracking"
+  ],
+  "benefits": [
+    "Unified data view",
+    "Faster insights",
+    "Customizable reports",
+    "Cross-functional collaboration"
+  ]
+}

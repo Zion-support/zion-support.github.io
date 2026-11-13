@@ -1,0 +1,28 @@
+{
+  "title": "Backup & Disaster Recovery Solution",
+  "description": "Immutable backup engine with RPO as low as 5 minutes, RTO of 30 minutes, off-site air-gapped storage, Lamport-timestamp chain-of-custody for tamper evidence, ransomware-hold per snapshot, point-in-time restore, and automated DR drill scheduling.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Backup & Disaster Recovery Solution - Zion Tech Group",
+    "description": "Immutable backup engine with RPO as low as 5 minutes, RTO of 30 minutes, off-site air-gapped storage, Lamport-timestamp chain-of-custody for tamper evidence, ra",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-backup-disaster-recovery-solution"
+    }
+  },
+  "features": [
+    "Immutable backup chain with Lamport-signed tamper-evident restore points",
+    "RPO of 5 minutes and RTO of 30 minutes SLA guaranteed in the contract",
+    "Air-gapped off-site storage with ransomware snapshot hold holding ransom",
+    "Automated DR drill scheduling — report sent to board before quarter-end"
+  ],
+  "benefits": [
+    "Reduce costs with backup & disaster recovery solution",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

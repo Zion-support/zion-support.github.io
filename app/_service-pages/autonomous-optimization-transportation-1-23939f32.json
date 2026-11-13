@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/autonomous-optimization-transportation-1-23939f32",
+  "breadcrumbTitle": "Autonomous optimization-transportation #1",
+  "title": "Autonomous optimization-transportation #1",
+  "description": "Transform your transportation operations with our Autonomous optimization-transportation #1. This AI-driven solution automates decision support with unprecedent",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous optimization-transportation #1 - Zion Tech Group",
+    "description": "Transform your transportation operations with our Autonomous optimization-transportation #1. This AI-driven solution automates decision support with unprecedent",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-optimization-transportation-1-23939f32"
+    }
+  },
+  "features": [
+    "Machine learning integration",
+    "Container orchestration",
+    "Offline capabilities",
+    "Serverless functions",
+    "Role-based access control"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "Performance benchmarking",
+    "99.9% uptime guarantee",
+    "Self-healing infrastructure"
+  ]
+}

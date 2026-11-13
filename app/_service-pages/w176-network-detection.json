@@ -1,0 +1,29 @@
+{
+  "title": "Network Detection & Response (NDR)",
+  "description": "Network-level threat detection: traffic analysis, lateral movement detection, encrypted traffic inspection, and beacon detection. See what EDR misses.",
+  "basic": "$799/mo/month",
+  "pro": "$2,499/mo/month",
+  "enterprise": "$7,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Network Detection & Response (NDR) - Zion Tech Group",
+    "description": "Network-level threat detection: traffic analysis, lateral movement detection, encrypted traffic inspection, and beacon detection. See what EDR misses.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w176-network-detection"
+    }
+  },
+  "features": [
+    "Full network traffic analysis",
+    "Lateral movement and C2 detection",
+    "Encrypted traffic inspection (JA3/JA3S)",
+    "Beacon and exfiltration pattern detection",
+    "Network forensics and PCAP storage"
+  ],
+  "benefits": [
+    "Detect threats EDR and SIEM miss",
+    "See lateral movement across the network",
+    "Encrypted traffic inspection without MITM",
+    "Forensics data for incident investigation"
+  ]
+}

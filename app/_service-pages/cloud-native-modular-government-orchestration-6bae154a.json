@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/cloud-native-modular-government-orchestration-6bae154a",
+  "breadcrumbTitle": "Cloud-Native Modular Government Orchestration",
+  "title": "Cloud-Native Modular Government Orchestration",
+  "description": "Cloud-native orchestration platform that manages modular government resources with auto-scaling and cost control.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Cloud-Native Modular Government Orchestration - Zion Tech Group",
+    "description": "Cloud-native orchestration platform that manages modular government resources with auto-scaling and cost control.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cloud-native-modular-government-orchestration-6bae154a"
+    }
+  },
+  "features": [
+    "Container orchestration",
+    "Resource management",
+    "Health monitoring",
+    "Auto-healing"
+  ],
+  "benefits": [
+    "Reduced infrastructure cost",
+    "Auto-scaling",
+    "Container efficiency",
+    "Developer productivity"
+  ]
+}

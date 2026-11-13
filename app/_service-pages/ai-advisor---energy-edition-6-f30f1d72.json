@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-advisor---energy-edition-6-f30f1d72",
+  "breadcrumbTitle": "AI Advisor - Energy Edition #6",
+  "title": "AI Advisor - Energy Edition #6",
+  "description": "Transform your energy operations with our AI Advisor - Energy Edition #6. This AI-driven solution automates network optimization with unprecedented accuracy and",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Advisor - Energy Edition #6 - Zion Tech Group",
+    "description": "Transform your energy operations with our AI Advisor - Energy Edition #6. This AI-driven solution automates network optimization with unprecedented accuracy and",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-advisor---energy-edition-6-f30f1d72"
+    }
+  },
+  "features": [
+    "Role-based access control",
+    "Machine learning integration",
+    "Microservices deployment",
+    "Real-time processing",
+    "API-first design"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "Predictive maintenance scheduling",
+    "Intelligent load balancing",
+    "Automated compliance reporting"
+  ]
+}

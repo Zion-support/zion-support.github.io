@@ -1,0 +1,29 @@
+{
+  "title": "Cloud Security Posture Management",
+  "description": "CSPM for AWS, Azure, GCP: misconfiguration detection, compliance checks, drift detection, auto-remediation.",
+  "basic": "$399/mo/month",
+  "pro": "$1,199/mo/month",
+  "enterprise": "$3,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Cloud Security Posture Management - Zion Tech Group",
+    "description": "CSPM for AWS, Azure, GCP: misconfiguration detection, compliance checks, drift detection, auto-remediation.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w177-cloud-cspm"
+    }
+  },
+  "features": [
+    "Multi-cloud misconfiguration detection",
+    "Continuous compliance assessment (CIS",
+    "SOC2",
+    "PCI)",
+    "Infrastructure drift detection"
+  ],
+  "benefits": [
+    "Detect cloud misconfigs before breach",
+    "Automated compliance checks 24/7",
+    "Auto-remediate common misconfigurations",
+    "Visualize cloud attack surface"
+  ]
+}

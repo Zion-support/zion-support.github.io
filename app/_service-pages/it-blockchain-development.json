@@ -1,0 +1,29 @@
+{
+  "title": "Blockchain Development & Smart Contract Auditing",
+  "description": "End-to-end blockchain solution development — smart contract creation, security auditing, tokenomics design, and Web3 integration for enterprises.",
+  "basic": "$2,999/mo/month",
+  "pro": "$Custom/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Blockchain Development & Smart Contract Auditing - Zion Tech Group",
+    "description": "End-to-end blockchain solution development — smart contract creation, security auditing, tokenomics design, and Web3 integration for enterprises.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-blockchain-development"
+    }
+  },
+  "features": [
+    "Smart contract development and deployment",
+    "Formal verification and security auditing",
+    "Tokenomics and governance design",
+    "DeFi protocol integration and development",
+    "Enterprise blockchain consulting and strategy"
+  ],
+  "benefits": [
+    "Reduce costs with blockchain development & smart contract auditing",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

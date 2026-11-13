@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-analytics-for-retail-25781404",
+  "breadcrumbTitle": "Intelligent Analytics for Retail",
+  "title": "Intelligent Analytics for Retail",
+  "description": "Unlock unprecedented growth with Intelligent Analytics for Retail. This autonomous system provides fraud prevention with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Analytics for Retail - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Intelligent Analytics for Retail. This autonomous system provides fraud prevention with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-analytics-for-retail-25781404"
+    }
+  },
+  "features": [
+    "Mobile-responsive interface",
+    "HIPAA ready",
+    "Multi-region deployment",
+    "Serverless functions",
+    "API-first design"
+  ],
+  "benefits": [
+    "Scalable to millions of transactions",
+    "Automated compliance reporting",
+    "Cost optimization recommendations"
+  ]
+}

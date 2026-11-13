@@ -1,0 +1,29 @@
+{
+  "title": "StatusPulse — Status Page Micro-SaaS",
+  "description": "Beautiful status pages for SaaS companies. Real-time incident communication, subscriber notifications, and uptime tracking. Custom domain and branding.",
+  "basic": "$19/mo/month",
+  "pro": "$59/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "StatusPulse — Status Page Micro-SaaS - Zion Tech Group",
+    "description": "Beautiful status pages for SaaS companies. Real-time incident communication, subscriber notifications, and uptime tracking. Custom domain and branding.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-status-page"
+    }
+  },
+  "features": [
+    "Real-time status updates",
+    "Incident communication",
+    "Email/SMS subscriber notifications",
+    "Uptime tracking and SLA reporting",
+    "Custom domain and branding"
+  ],
+  "benefits": [
+    "Build customer trust with transparency",
+    "Reduce support tickets during incidents",
+    "Professional incident communication",
+    "Custom branded status page"
+  ]
+}

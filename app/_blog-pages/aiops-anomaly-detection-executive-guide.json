@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "AIOps Anomaly Detection: executive guide | Zion Tech Group",
+    "description": "AIOps Anomaly Detection: executive guide",
+    "keywords": [
+      "automation",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "AIOps Anomaly Detection: executive guide",
+      "description": "AIOps Anomaly Detection: executive guide",
+      "url": "https://ziontechgroup.com/blog/aiops-anomaly-detection-executive-guide/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/aiops-anomaly-detection-executive-guide/"
+    }
+  },
+  "values": [
+    "AIOps Anomaly Detection: executive guide",
+    "AIOps Anomaly Detection: executive guide",
+    "AIOps Anomaly Detection: executive guide",
+    "Recommended next step",
+    "Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "Recommended next step",
+    " Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "/blog/container-security-lifecycle-evaluation-framework",
+    "Container Security Lifecycle Evaluation Framework",
+    "/blog/data-warehouse-modernization-evaluation-framework",
+    "Data Warehouse Modernization Evaluation Framework",
+    "/blog/autonomous-qa-engineering-evaluation-framework",
+    "Autonomous Qa Engineering Evaluation Framework",
+    "/blog/ai-api-gateway-2026-7034",
+    "Ai Api Gateway 2026 7034"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "AIOps Anomaly Detection: executive guide",
+    "description": "AIOps Anomaly Detection: executive guide",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T07:56:59Z",
+    "dateModified": "2026-08-07T07:56:59Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/aiops-anomaly-detection-executive-guide/"
+  }
+}

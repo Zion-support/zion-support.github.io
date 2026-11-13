@@ -1,0 +1,30 @@
+{
+  "title": "AgriTech AI Platform",
+  "description": "Precision agriculture with AI: crop monitoring, yield prediction, pest detection, and irrigation optimization. Satellite and drone imagery analysis.",
+  "basic": "$N/A/month",
+  "pro": "$5997/month",
+  "enterprise": "$14997/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AgriTech AI Platform - Zion Tech Group",
+    "description": "Precision agriculture with AI: crop monitoring, yield prediction, pest detection, and irrigation optimization. Satellite and drone imagery analysis.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w131-ind-agritech"
+    }
+  },
+  "features": [
+    "Crop monitoring",
+    "Yield prediction",
+    "Pest detection",
+    "Irrigation optimization",
+    "Soil analysis"
+  ],
+  "benefits": [
+    "20% yield increase",
+    "30% water savings",
+    "Early pest detection",
+    "Data-driven decisions",
+    "Reduced pesticide use"
+  ]
+}

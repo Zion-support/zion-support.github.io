@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-cloud-native-transportation-analytics-466f04ac",
+  "breadcrumbTitle": "AI-Powered Cloud-Native Transportation Analytics",
+  "title": "AI-Powered Cloud-Native Transportation Analytics",
+  "description": "AI-driven analytics platform that delivers cloud-native insights into transportation operations, providing real-time monitoring, predictive modeling, and automa",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI-Powered Cloud-Native Transportation Analytics - Zion Tech Group",
+    "description": "AI-driven analytics platform that delivers cloud-native insights into transportation operations, providing real-time monitoring, predictive modeling, and automa",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-cloud-native-transportation-analytics-466f04ac"
+    }
+  },
+  "features": [
+    "Real-time monitoring",
+    "Predictive modeling",
+    "Automated reporting",
+    "Custom dashboards"
+  ],
+  "benefits": [
+    "Data-driven decision making",
+    "Improved operational efficiency",
+    "Proactive issue detection",
+    "Enhanced KPI tracking"
+  ]
+}

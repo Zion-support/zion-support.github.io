@@ -1,0 +1,29 @@
+{
+  "title": "AI Zero Trust Network Access (ZTNA)",
+  "description": "AI-powered ZTNA platform: continuous identity verification, adaptive access policies, micro-segmentation, device posture scoring, and real-time threat-based access revocation — all enforced at the edge.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Zero Trust Network Access (ZTNA) - Zion Tech Group",
+    "description": "AI-powered ZTNA platform: continuous identity verification, adaptive access policies, micro-segmentation, device posture scoring, and real-time threat-based acc",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-zero-trust-network-access"
+    }
+  },
+  "features": [
+    "Continuous identity verification (adaptive auth)",
+    "Context-aware access policies",
+    "Device posture scoring + compliance gating",
+    "Micro-segmentation per user/session",
+    "Real-time threat intelligence integration"
+  ],
+  "benefits": [
+    "Reduce costs with ai zero trust network access (ztna)",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

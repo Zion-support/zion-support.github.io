@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "MicroSaaS Customer Onboarding: automation roadmap | Zion Tech Group",
+    "description": "MicroSaaS Customer Onboarding: automation roadmap",
+    "keywords": [
+      "ai",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "MicroSaaS Customer Onboarding: automation roadmap",
+      "description": "MicroSaaS Customer Onboarding: automation roadmap",
+      "url": "https://ziontechgroup.com/blog/microsaas-customer-onboarding-automation-roadmap/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/microsaas-customer-onboarding-automation-roadmap/"
+    }
+  },
+  "values": [
+    "MicroSaaS Customer Onboarding: automation roadmap",
+    "MicroSaaS Customer Onboarding: automation roadmap",
+    "MicroSaaS Customer Onboarding: automation roadmap",
+    "Recommended next step",
+    "Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "Recommended next step",
+    " Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "/blog/ai-bdr-sdr-2026-6800",
+    "Ai Bdr Sdr 2026 6800",
+    "/blog/api-integration-2026",
+    "Api Integration 2026",
+    "/blog/micro-saas-ai-hr-recruitment-2026-7197",
+    "Micro Saas Ai Hr Recruitment 2026 7197",
+    "/blog/devops-cicd-2026-6711",
+    "Devops Cicd 2026 6711"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "MicroSaaS Customer Onboarding: automation roadmap",
+    "description": "MicroSaaS Customer Onboarding: automation roadmap",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T09:28:32Z",
+    "dateModified": "2026-08-07T09:28:32Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/microsaas-customer-onboarding-automation-roadmap/"
+  }
+}

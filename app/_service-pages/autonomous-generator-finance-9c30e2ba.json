@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/autonomous-generator-finance-9c30e2ba",
+  "breadcrumbTitle": "Autonomous generator-finance",
+  "title": "Autonomous generator-finance",
+  "description": "Transform your finance operations with our Autonomous generator-finance. This AI-driven solution automates customer insights with unprecedented accuracy and eff",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous generator-finance - Zion Tech Group",
+    "description": "Transform your finance operations with our Autonomous generator-finance. This AI-driven solution automates customer insights with unprecedented accuracy and eff",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-generator-finance-9c30e2ba"
+    }
+  },
+  "features": [
+    "Zero-downtime updates",
+    "Container orchestration",
+    "Open-source friendly",
+    "Role-based access control",
+    "Mobile-responsive interface"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "24/7 automated operations",
+    "Zero manual intervention required"
+  ]
+}

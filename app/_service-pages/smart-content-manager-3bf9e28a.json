@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/smart-content-manager-3bf9e28a",
+  "breadcrumbTitle": "Smart Content Manager",
+  "title": "Smart Content Manager",
+  "description": "Unlock unprecedented growth with Smart Content Manager. This autonomous system provides maintenance scheduling with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Content Manager - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Smart Content Manager. This autonomous system provides maintenance scheduling with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-content-manager-3bf9e28a"
+    }
+  },
+  "features": [
+    "Data encryption",
+    "Multi-language support",
+    "HIPAA ready",
+    "Auto-scaling capabilities",
+    "API-first design"
+  ],
+  "benefits": [
+    "Cost optimization recommendations",
+    "Automated compliance reporting",
+    "Scalable to millions of transactions",
+    "Real-time insights and alerts"
+  ]
+}

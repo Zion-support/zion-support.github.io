@@ -28,29 +28,70 @@ jobs:
           cache: npm
           cache-dependency-path: package-lock.json
 
+      - name: Check advisory availability
+        id: advisory
+        env:
+          # Keep false until BOTH active consumers have reviewed, lossless FILES_NUL support.
+          FILES_NUL_CONSUMERS_REVIEWED: 'false'
+        run: |
+          set -euo pipefail
+          status=contract_required
+          for consumer in automation/openclaw-pr-hotfile-comment.cjs automation/openclaw-pr-hotfile-labels.cjs; do
+            if [ ! -f "$consumer" ] || [ ! -r "$consumer" ]; then status=unavailable; break; fi
+            if grep -Fq 'no-op - automation paused post-P0' "$consumer"; then
+              status=paused
+            else
+              rc=$?
+              if [ "$rc" -ne 1 ]; then status=unavailable; break; fi
+            fi
+          done
+          enabled=false
+          if [ "$status" = contract_required ] && [ "$FILES_NUL_CONSUMERS_REVIEWED" = true ]; then
+            status=ready
+            enabled=true
+          fi
+          printf 'enabled=%s\nstatus=%s\n' "$enabled" "$status" >> "$GITHUB_OUTPUT"
+          if [ "$status" = unavailable ]; then
+            echo '::error::Advisory preflight failed: a required consumer is missing or unreadable. Collection, analysis, comments and labels were not run.'
+            printf '### PR hot-file advisory preflight failed\n\nA required consumer is missing or unreadable. Collection and analysis were not run. No comments or labels were published.\n' >> "$GITHUB_STEP_SUMMARY"
+            exit 1
+          elif [ "$enabled" = true ]; then
+            printf '### PR hot-file advisory preflight\n\nStatus: ready. Analysis has not run yet.\n' >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "::warning::Hot-file advisory skipped ($status). Analysis, comments and labels were not run; both consumers require reviewed FILES_NUL support."
+            printf '### PR hot-file advisory skipped\n\nStatus: %s.\n\nCollection and analysis were not run. No comments or labels were published. Active consumers require a reviewed lossless FILES_NUL contract before activation.\n' "$status" >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Collect complete PR file list
+        if: steps.advisory.outputs.enabled == 'true'
+        env:
+          FILES_NUL: ${{ runner.temp }}/openclaw-pr-files.z
+        run: node automation/openclaw-pr-files.cjs "$FILES_NUL"
+
       - name: Install dependencies
-        if: hashFiles('automation/openclaw-pr-hotfile-comment.cjs') != ''
+        if: steps.advisory.outputs.enabled == 'true'
         run: npm ci --prefer-offline --no-audit --fund=false
 
       - name: Refresh hot-file router snapshot
+        if: steps.advisory.outputs.enabled == 'true'
         run: |
           set -euo pipefail
           npm run --if-present openclaw:conflict:predict
           npm run --if-present openclaw:hot:patch:route
 
       - name: Comment and label when PR touches hot files
+        if: steps.advisory.outputs.enabled == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}
+          FILES_NUL: ${{ runner.temp }}/openclaw-pr-files.z
+          PR: ${{ github.event.pull_request.number }}
         run: |
           set -euo pipefail
-          PR="${{ github.event.pull_request.number }}"
           if [ ! -f automation/openclaw-pr-hotfile-comment.cjs ]; then
             echo "openclaw hot-file scripts are not on this branch; skipping"
             exit 0
           fi
-          FILES="$(gh pr diff "$PR" --name-only | paste -sd "," -)"
-          export FILES
           node automation/openclaw-pr-hotfile-comment.cjs > /tmp/hot.md
           if grep -q 'no hot-file overlap' /tmp/hot.md; then echo "No overlap"; exit 0; fi
           if grep -q 'no changed files' /tmp/hot.md; then echo "No files"; exit 0; fi

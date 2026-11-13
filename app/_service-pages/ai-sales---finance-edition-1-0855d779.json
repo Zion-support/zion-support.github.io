@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/ai-sales---finance-edition-1-0855d779",
+  "breadcrumbTitle": "AI Sales - Finance Edition #1",
+  "title": "AI Sales - Finance Edition #1",
+  "description": "Next-generation Finance solution: AI Sales - Finance Edition #1. Combines process discovery with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Sales - Finance Edition #1 - Zion Tech Group",
+    "description": "Next-generation Finance solution: AI Sales - Finance Edition #1. Combines process discovery with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-sales---finance-edition-1-0855d779"
+    }
+  },
+  "features": [
+    "Customer service automation with chatbot integration",
+    "Open-source friendly with plugin architecture",
+    "Logistics route optimization with traffic prediction",
+    "Language processing with sentiment analysis",
+    "Mobile-responsive interface with offline capabilities"
+  ],
+  "benefits": [
+    "Reduced risk with early warning systems",
+    "Enhanced security with continuous threat monitoring",
+    "Reduced development time with code generation",
+    "Reduced operational risks with predictive models",
+    "3x faster decision making with real-time insights"
+  ]
+}

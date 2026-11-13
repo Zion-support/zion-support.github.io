@@ -1,0 +1,29 @@
+{
+  "title": "Cloud Data Sovereignty & Residency",
+  "description": "Ensure data stays in the right jurisdiction. Data residency controls, sovereignty auditing, and localization for GDPR, LGPD, Chinese Cybersecurity Law, and Russian FZ-152.",
+  "basic": "$799/mo/month",
+  "pro": "$2,499/mo/month",
+  "enterprise": "$7,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Cloud Data Sovereignty & Residency - Zion Tech Group",
+    "description": "Ensure data stays in the right jurisdiction. Data residency controls, sovereignty auditing, and localization for GDPR, LGPD, Chinese Cybersecurity Law, and Russ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w174-cloud-data-sovereignty"
+    }
+  },
+  "features": [
+    "Data residency controls per region",
+    "Automated sovereignty auditing",
+    "Encryption key localization (BYOK, HYOK)",
+    "Cross-border data flow mapping",
+    "Regulatory compliance (GDPR, LGPD, CSL, FZ-152)"
+  ],
+  "benefits": [
+    "Data stays in the right country automatically",
+    "Sovereignty auditing for regulatory evidence",
+    "Encryption key never leaves jurisdiction",
+    "Cross-border flow mapping for compliance"
+  ]
+}

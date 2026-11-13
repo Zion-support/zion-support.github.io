@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/smart-generator-for-agriculture-03f61763",
+  "breadcrumbTitle": "Smart Generator for Agriculture",
+  "title": "Smart Generator for Agriculture",
+  "description": "Next-generation agriculture solution: Smart Generator for Agriculture. Combines resource optimization with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Generator for Agriculture - Zion Tech Group",
+    "description": "Next-generation agriculture solution: Smart Generator for Agriculture. Combines resource optimization with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-generator-for-agriculture-03f61763"
+    }
+  },
+  "features": [
+    "Mobile-responsive interface",
+    "Edge computing support",
+    "Offline capabilities",
+    "Alerting system"
+  ],
+  "benefits": [
+    "Dynamic resource allocation",
+    "3x faster decision making",
+    "Scalable to millions of transactions"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-powered-sales-director-b5b1b021",
+  "breadcrumbTitle": "AI-Powered Sales Director",
+  "title": "AI-Powered Sales Director",
+  "description": "The future of real-estate is here with AI-Powered Sales Director. Powered by cutting-edge AI, this platform delivers security monitoring like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Sales Director - Zion Tech Group",
+    "description": "The future of real-estate is here with AI-Powered Sales Director. Powered by cutting-edge AI, this platform delivers security monitoring like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-sales-director-b5b1b021"
+    }
+  },
+  "features": [
+    "Plugin architecture",
+    "Audit trails",
+    "Alerting system",
+    "Serverless functions",
+    "Machine learning integration"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "Dynamic resource allocation",
+    "24/7 automated operations",
+    "Seamless integration with existing systems"
+  ]
+}

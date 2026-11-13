@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/predictive-real-time-health-analytics-916c82a2",
+  "breadcrumbTitle": "Predictive Real-Time Health Analytics",
+  "title": "Predictive Real-Time Health Analytics",
+  "description": "Population health analytics platform that uses real-time predictive modeling to identify at-risk patients, optimize resource allocation, and improve care qualit",
+  "basic": "$278/month",
+  "pro": "$698/month",
+  "enterprise": "$2098/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Predictive Real-Time Health Analytics - Zion Tech Group",
+    "description": "Population health analytics platform that uses real-time predictive modeling to identify at-risk patients, optimize resource allocation, and improve care qualit",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/predictive-real-time-health-analytics-916c82a2"
+    }
+  },
+  "features": [
+    "Risk stratification",
+    "Population segmentation",
+    "Care gap identification",
+    "Outcome tracking"
+  ],
+  "benefits": [
+    "Early intervention",
+    "Cost reduction",
+    "Quality improvement",
+    "Regulatory compliance"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/manager-ai---sports-1-091ff688",
+  "breadcrumbTitle": "Manager AI - Sports #1",
+  "title": "Manager AI - Sports #1",
+  "description": "The future of sports is here with Manager AI - Sports #1. Powered by cutting-edge AI, this platform delivers performance monitoring like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Manager AI - Sports #1 - Zion Tech Group",
+    "description": "The future of sports is here with Manager AI - Sports #1. Powered by cutting-edge AI, this platform delivers performance monitoring like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/manager-ai---sports-1-091ff688"
+    }
+  },
+  "features": [
+    "Real-time processing",
+    "Offline capabilities",
+    "HIPAA ready",
+    "Audit trails"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "24/7 automated operations",
+    "Automated compliance reporting",
+    "Dynamic resource allocation"
+  ]
+}

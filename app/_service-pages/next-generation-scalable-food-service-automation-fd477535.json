@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/next-generation-scalable-food-service-automation-fd477535",
+  "breadcrumbTitle": "Next-Generation Scalable Food Service Automation",
+  "title": "Next-Generation Scalable Food Service Automation",
+  "description": "Next-generation automation suite that streamlines scalable food service workflows with intelligent orchestration.",
+  "basic": "$218/month",
+  "pro": "$548/month",
+  "enterprise": "$1648/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Next-Generation Scalable Food Service Automation - Zion Tech Group",
+    "description": "Next-generation automation suite that streamlines scalable food service workflows with intelligent orchestration.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/next-generation-scalable-food-service-automation-fd477535"
+    }
+  },
+  "features": [
+    "Smart orchestration",
+    "Process automation",
+    "Event processing",
+    "Task scheduling"
+  ],
+  "benefits": [
+    "Faster execution",
+    "Reduced manual steps",
+    "Scalable processes",
+    "Error reduction"
+  ]
+}

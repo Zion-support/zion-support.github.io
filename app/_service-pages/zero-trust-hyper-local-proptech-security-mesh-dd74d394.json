@@ -1,0 +1,28 @@
+{
+  "title": "Zero-Trust Hyper-Local Proptech Security Mesh",
+  "description": "Zero-trust security mesh that protects hyper-local proptech infrastructure with continuous validation and adaptive threat response.",
+  "basic": "$298/month",
+  "pro": "$748/month",
+  "enterprise": "$2248/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Zero-Trust Hyper-Local Proptech Security Mesh - Zion Tech Group",
+    "description": "Zero-trust security mesh that protects hyper-local proptech infrastructure with continuous validation and adaptive threat response.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/zero-trust-hyper-local-proptech-security-mesh-dd74d394"
+    }
+  },
+  "features": [
+    "Continuous validation",
+    "Micro-segmentation",
+    "Threat isolation",
+    "Adaptive authentication"
+  ],
+  "benefits": [
+    "Zero breach risk",
+    "Continuous compliance",
+    "Threat isolation",
+    "Regulatory assurance"
+  ]
+}

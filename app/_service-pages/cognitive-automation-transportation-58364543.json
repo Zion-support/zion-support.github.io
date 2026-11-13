@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/cognitive-automation-transportation-58364543",
+  "breadcrumbTitle": "Cognitive automation-transportation",
+  "title": "Cognitive automation-transportation",
+  "description": "Next-generation transportation solution: Cognitive automation-transportation. Combines document processing with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Cognitive automation-transportation - Zion Tech Group",
+    "description": "Next-generation transportation solution: Cognitive automation-transportation. Combines document processing with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cognitive-automation-transportation-58364543"
+    }
+  },
+  "features": [
+    "Role-based access control",
+    "Offline capabilities",
+    "Open-source friendly",
+    "Cloud-native architecture",
+    "Serverless functions"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "Automated compliance reporting",
+    "Performance benchmarking"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "title": "IT Disaster Recovery Planning",
+  "description": "Comprehensive disaster recovery assessment, planning, and implementation service. Includes RTO/RPO analysis, backup strategy design, failover testing.",
+  "basic": "$2,500/project/month",
+  "pro": "$7,500/project/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "IT Disaster Recovery Planning - Zion Tech Group",
+    "description": "Comprehensive disaster recovery assessment, planning, and implementation service. Includes RTO/RPO analysis, backup strategy design, failover testing.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-disaster-recovery-planning"
+    }
+  },
+  "features": [
+    "RTO/RPO Analysis",
+    "Backup Strategy",
+    "Failover Testing",
+    "DR Runbooks",
+    "Compliance Mapping"
+  ],
+  "benefits": [
+    "Minimize downtime",
+    "Ensure business continuity",
+    "Meet compliance requirements"
+  ]
+}

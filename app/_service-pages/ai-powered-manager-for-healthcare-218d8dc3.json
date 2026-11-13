@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-powered-manager-for-healthcare-218d8dc3",
+  "breadcrumbTitle": "AI-Powered Manager for Healthcare",
+  "title": "AI-Powered Manager for Healthcare",
+  "description": "The future of healthcare is here with AI-Powered Manager for Healthcare. Powered by cutting-edge AI, this platform delivers supply chain like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Manager for Healthcare - Zion Tech Group",
+    "description": "The future of healthcare is here with AI-Powered Manager for Healthcare. Powered by cutting-edge AI, this platform delivers supply chain like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-manager-for-healthcare-218d8dc3"
+    }
+  },
+  "features": [
+    "SOC 2 certified",
+    "Machine learning integration",
+    "Plugin architecture",
+    "API-first design",
+    "Edge computing support"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "3x faster decision making",
+    "Zero manual intervention required",
+    "Cost optimization recommendations"
+  ]
+}

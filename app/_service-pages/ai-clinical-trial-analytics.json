@@ -1,0 +1,29 @@
+{
+  "title": "AI Clinical Trial Design & Analytics Platform",
+  "description": "AI-powered clinical trial design, patient matching, and analytics. Accelerate drug discovery and improve trial success rates with predictive modeling.",
+  "basic": "$4,999/mo/month",
+  "pro": "$12,000/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Clinical Trial Design & Analytics Platform - Zion Tech Group",
+    "description": "AI-powered clinical trial design, patient matching, and analytics. Accelerate drug discovery and improve trial success rates with predictive modeling.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-clinical-trial-analytics"
+    }
+  },
+  "features": [
+    "AI trial design optimization",
+    "Patient recruitment and matching",
+    "Adverse event prediction",
+    "Biomarker discovery and analysis",
+    "Real-time trial analytics dashboard"
+  ],
+  "benefits": [
+    "Accelerate trial timelines by 30%",
+    "Improve patient recruitment by 50%",
+    "Predict adverse events before they occur",
+    "Increase trial success rates with AI insights"
+  ]
+}

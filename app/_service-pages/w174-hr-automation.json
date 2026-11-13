@@ -1,0 +1,29 @@
+{
+  "title": "HR Process Automation Platform",
+  "description": "Automate HR processes: onboarding, offboarding, time tracking, benefits enrollment, performance reviews, and compliance reporting.",
+  "basic": "$199/mo/month",
+  "pro": "$599/mo/month",
+  "enterprise": "$1,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "HR Process Automation Platform - Zion Tech Group",
+    "description": "Automate HR processes: onboarding, offboarding, time tracking, benefits enrollment, performance reviews, and compliance reporting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w174-hr-automation"
+    }
+  },
+  "features": [
+    "Employee onboarding workflows",
+    "Offboarding and knowledge transfer automation",
+    "Time tracking and schedule management",
+    "Benefits enrollment and change automation",
+    "Performance review cycles and 360 feedback"
+  ],
+  "benefits": [
+    "Onboarding in hours, not days",
+    "Offboarding ensures complete deprovisioning",
+    "Compliance reporting automated",
+    "Performance reviews on schedule, every cycle"
+  ]
+}

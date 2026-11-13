@@ -1,0 +1,28 @@
+{
+  "title": "AI Document Classifier",
+  "description": "Auto-classifies invoices contracts NDAs receipts resumes medical records: routes to correct workflow extracts key fields attaches metadata search tags.",
+  "basic": "$149/mo/month",
+  "pro": "$399/mo/month",
+  "enterprise": "$1,299/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Document Classifier - Zion Tech Group",
+    "description": "Auto-classifies invoices contracts NDAs receipts resumes medical records: routes to correct workflow extracts key fields attaches metadata search tags.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-document-classifier"
+    }
+  },
+  "features": [
+    "99-doc ocr nlp classification",
+    "Key field extraction per doc type",
+    "Workflow queue routing + SLA tagging",
+    "Metadata + search tags auto-attached"
+  ],
+  "benefits": [
+    "Reduce costs with ai document classifier",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

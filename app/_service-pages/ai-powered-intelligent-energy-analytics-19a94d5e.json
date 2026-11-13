@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-intelligent-energy-analytics-19a94d5e",
+  "breadcrumbTitle": "AI-Powered Intelligent Energy Analytics",
+  "title": "AI-Powered Intelligent Energy Analytics",
+  "description": "AI-driven analytics platform that delivers intelligent insights into energy operations, providing real-time monitoring, predictive modeling, and automated repor",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Intelligent Energy Analytics - Zion Tech Group",
+    "description": "AI-driven analytics platform that delivers intelligent insights into energy operations, providing real-time monitoring, predictive modeling, and automated repor",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-intelligent-energy-analytics-19a94d5e"
+    }
+  },
+  "features": [
+    "Real-time data visualization",
+    "Predictive modeling",
+    "Automated reporting",
+    "Custom dashboards"
+  ],
+  "benefits": [
+    "Data-driven decision making",
+    "Improved operational efficiency",
+    "Proactive issue detection",
+    "Enhanced KPI tracking"
+  ]
+}

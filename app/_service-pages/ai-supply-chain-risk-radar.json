@@ -1,0 +1,28 @@
+{
+  "title": "AI Supply Chain Risk Intelligence",
+  "description": "Real-time supply chain disruption monitoring: natural disasters, geopolitical events, port congestion, supplier health. Predictive alerts 30 days before impact.",
+  "basic": "$299/month",
+  "pro": "$899/month",
+  "enterprise": "$3999/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Supply Chain Risk Intelligence - Zion Tech Group",
+    "description": "Real-time supply chain disruption monitoring: natural disasters, geopolitical events, port congestion, supplier health. Predictive alerts 30 days before impact.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-supply-chain-risk-radar"
+    }
+  },
+  "features": [
+    "Multi-tier supplier monitoring",
+    "Disaster & weather impact prediction",
+    "Geopolitical risk scoring",
+    "Port congestion forecasting",
+    "Supplier financial health tracking"
+  ],
+  "benefits": [
+    "30-day advance disruption alerts",
+    "Reduce stockouts by 45%",
+    "Maintain supply continuity"
+  ]
+}

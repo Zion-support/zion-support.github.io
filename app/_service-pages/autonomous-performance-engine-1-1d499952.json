@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/autonomous-performance-engine-1-1d499952",
+  "breadcrumbTitle": "Autonomous Performance Engine #1",
+  "title": "Autonomous Performance Engine #1",
+  "description": "Revolutionize logistics through intelligent automation. Our Autonomous Performance Engine #1 leverages advanced machine learning to deliver network optimization",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous Performance Engine #1 - Zion Tech Group",
+    "description": "Revolutionize logistics through intelligent automation. Our Autonomous Performance Engine #1 leverages advanced machine learning to deliver network optimization",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-performance-engine-1-1d499952"
+    }
+  },
+  "features": [
+    "Data encryption",
+    "Edge computing support",
+    "Performance dashboards",
+    "Container orchestration"
+  ],
+  "benefits": [
+    "Dynamic resource allocation",
+    "Intelligent load balancing",
+    "Reduced human error by 95%",
+    "Real-time insights and alerts"
+  ]
+}

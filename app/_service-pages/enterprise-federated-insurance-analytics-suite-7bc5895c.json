@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/enterprise-federated-insurance-analytics-suite-7bc5895c",
+  "breadcrumbTitle": "Enterprise Federated Insurance Analytics Suite",
+  "title": "Enterprise Federated Insurance Analytics Suite",
+  "description": "Enterprise analytics suite that delivers federated insurance insights with unified dashboards and reporting.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Enterprise Federated Insurance Analytics Suite - Zion Tech Group",
+    "description": "Enterprise analytics suite that delivers federated insurance insights with unified dashboards and reporting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/enterprise-federated-insurance-analytics-suite-7bc5895c"
+    }
+  },
+  "features": [
+    "Data visualization",
+    "Custom dashboards",
+    "Report generation",
+    "KPI tracking"
+  ],
+  "benefits": [
+    "Unified data view",
+    "Faster insights",
+    "Customizable reports",
+    "Cross-functional collaboration"
+  ]
+}

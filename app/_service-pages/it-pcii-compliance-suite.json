@@ -1,0 +1,29 @@
+{
+  "title": "PCI DSS Compliance Suite",
+  "description": "Automated PCI DSS v4.0 compliance monitoring, evidence collection, and reporting. Pre-built controls for 400+ requirements.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "PCI DSS Compliance Suite - Zion Tech Group",
+    "description": "Automated PCI DSS v4.0 compliance monitoring, evidence collection, and reporting. Pre-built controls for 400+ requirements.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-pcii-compliance-suite"
+    }
+  },
+  "features": [
+    "Control mapping (PCI DSS 4.0)",
+    "Automated evidence collection",
+    "Vulnerability scanning integration",
+    "Quarterly assessment workflow",
+    "Executive dashboards"
+  ],
+  "benefits": [
+    "Reduce costs with pci dss compliance suite",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

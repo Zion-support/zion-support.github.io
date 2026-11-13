@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-engine---insurance-edition-4-a04f9fb3",
+  "breadcrumbTitle": "AI Engine - Insurance Edition #4",
+  "title": "AI Engine - Insurance Edition #4",
+  "description": "The future of insurance is here with AI Engine - Insurance Edition #4. Powered by cutting-edge AI, this platform delivers sales forecasting like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Engine - Insurance Edition #4 - Zion Tech Group",
+    "description": "The future of insurance is here with AI Engine - Insurance Edition #4. Powered by cutting-edge AI, this platform delivers sales forecasting like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-engine---insurance-edition-4-a04f9fb3"
+    }
+  },
+  "features": [
+    "Multi-region deployment",
+    "Custom integrations",
+    "Cloud-native architecture",
+    "Microservices deployment",
+    "SOC 2 certified"
+  ],
+  "benefits": [
+    "Performance benchmarking",
+    "Enterprise-grade security",
+    "Zero manual intervention required",
+    "Cost optimization recommendations"
+  ]
+}

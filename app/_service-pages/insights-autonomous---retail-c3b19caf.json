@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/insights-autonomous---retail-c3b19caf",
+  "breadcrumbTitle": "Insights Autonomous - Retail",
+  "title": "Insights Autonomous - Retail",
+  "description": "Next-generation retail solution: Insights Autonomous - Retail. Combines resource optimization with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Insights Autonomous - Retail - Zion Tech Group",
+    "description": "Next-generation retail solution: Insights Autonomous - Retail. Combines resource optimization with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/insights-autonomous---retail-c3b19caf"
+    }
+  },
+  "features": [
+    "Auto-scaling capabilities",
+    "Cloud-native architecture",
+    "Open-source friendly",
+    "Plugin architecture",
+    "Data encryption"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "Real-time insights and alerts",
+    "3x faster decision making",
+    "Enterprise-grade security"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "Real-Time Translation Engine",
+  "description": "Sub-200ms speech-to-text and text-to-speech translation across 70+ languages with dialect preservation.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Real-Time Translation Engine - Zion Tech Group",
+    "description": "Sub-200ms speech-to-text and text-to-speech translation across 70+ languages with dialect preservation.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-realtime-translation"
+    }
+  },
+  "features": [
+    "70+ languages & dialects",
+    "Sub-200ms latency",
+    "Speaker diarization",
+    "Custom glossary per client",
+    "REST + WebSocket APIs"
+  ],
+  "benefits": [
+    "Reduce costs with real-time translation engine",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

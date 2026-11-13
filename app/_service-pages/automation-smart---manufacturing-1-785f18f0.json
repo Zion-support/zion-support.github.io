@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/automation-smart---manufacturing-1-785f18f0",
+  "breadcrumbTitle": "Automation Smart - Manufacturing #1",
+  "title": "Automation Smart - Manufacturing #1",
+  "description": "Revolutionize manufacturing through intelligent automation. Our Automation Smart - Manufacturing #1 leverages advanced machine learning to deliver user experien",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automation Smart - Manufacturing #1 - Zion Tech Group",
+    "description": "Revolutionize manufacturing through intelligent automation. Our Automation Smart - Manufacturing #1 leverages advanced machine learning to deliver user experien",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automation-smart---manufacturing-1-785f18f0"
+    }
+  },
+  "features": [
+    "Audit trails",
+    "Edge computing support",
+    "HIPAA ready",
+    "Performance dashboards"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Seamless integration with existing systems",
+    "Scalable to millions of transactions"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/automated-orchestrator-for-education-b0a59861",
+  "breadcrumbTitle": "Automated Orchestrator for Education",
+  "title": "Automated Orchestrator for Education",
+  "description": "Transform your education operations with our Automated Orchestrator for Education. This AI-driven solution automates workflow management with unprecedented accu",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated Orchestrator for Education - Zion Tech Group",
+    "description": "Transform your education operations with our Automated Orchestrator for Education. This AI-driven solution automates workflow management with unprecedented accu",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-orchestrator-for-education-b0a59861"
+    }
+  },
+  "features": [
+    "Multi-region deployment",
+    "Container orchestration",
+    "HIPAA ready",
+    "Rollback mechanisms",
+    "Zero-downtime updates"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "Performance benchmarking",
+    "Automated compliance reporting",
+    "Intelligent load balancing"
+  ]
+}

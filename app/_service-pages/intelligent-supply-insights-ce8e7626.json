@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligent-supply-insights-ce8e7626",
+  "breadcrumbTitle": "Intelligent Supply Insights",
+  "title": "Intelligent Supply Insights",
+  "description": "Revolutionize media through intelligent automation. Our Intelligent Supply Insights leverages advanced machine learning to deliver language processing at scale.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Supply Insights - Zion Tech Group",
+    "description": "Revolutionize media through intelligent automation. Our Intelligent Supply Insights leverages advanced machine learning to deliver language processing at scale.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-supply-insights-ce8e7626"
+    }
+  },
+  "features": [
+    "Data encryption",
+    "Plugin architecture",
+    "Real-time processing",
+    "Performance dashboards"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "Scalable to millions of transactions",
+    "Dynamic resource allocation",
+    "Seamless integration with existing systems",
+    "Zero manual intervention required"
+  ]
+}

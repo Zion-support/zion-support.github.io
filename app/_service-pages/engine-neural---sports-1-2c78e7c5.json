@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/engine-neural---sports-1-2c78e7c5",
+  "breadcrumbTitle": "Engine Neural - Sports #1",
+  "title": "Engine Neural - Sports #1",
+  "description": "Next-generation sports solution: Engine Neural - Sports #1. Combines customer insights with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Engine Neural - Sports #1 - Zion Tech Group",
+    "description": "Next-generation sports solution: Engine Neural - Sports #1. Combines customer insights with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/engine-neural---sports-1-2c78e7c5"
+    }
+  },
+  "features": [
+    "Machine learning integration",
+    "Mobile-responsive interface",
+    "Custom integrations",
+    "Open-source friendly"
+  ],
+  "benefits": [
+    "Performance benchmarking",
+    "Automated compliance reporting",
+    "Intelligent load balancing",
+    "3x faster decision making",
+    "Zero manual intervention required"
+  ]
+}

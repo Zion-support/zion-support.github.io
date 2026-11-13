@@ -1,0 +1,29 @@
+{
+  "title": "Vector Database",
+  "description": "Managed vector database for RAG pipelines, semantic search, and similarity queries with hybrid filtering, autoscaling, and multi-modal indexing.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Vector Database - Zion Tech Group",
+    "description": "Managed vector database for RAG pipelines, semantic search, and similarity queries with hybrid filtering, autoscaling, and multi-modal indexing.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/vector-database"
+    }
+  },
+  "features": [
+    "HNSW + IVF index types",
+    "Hybrid scalar + vector filter",
+    "Multi-modal embeddings",
+    "Autoscaling replicas",
+    "REST + gRPC + SDK"
+  ],
+  "benefits": [
+    "Reduce costs with vector database",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

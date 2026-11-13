@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/intelligent-platform-education-4d1be422",
+  "breadcrumbTitle": "Intelligent platform-education",
+  "title": "Intelligent platform-education",
+  "description": "The future of education is here with Intelligent platform-education. Powered by cutting-edge AI, this platform delivers compliance monitoring like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent platform-education - Zion Tech Group",
+    "description": "The future of education is here with Intelligent platform-education. Powered by cutting-edge AI, this platform delivers compliance monitoring like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-platform-education-4d1be422"
+    }
+  },
+  "features": [
+    "Edge computing support",
+    "Comprehensive monitoring",
+    "Microservices deployment",
+    "Container orchestration",
+    "Offline capabilities"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "Cost optimization recommendations",
+    "99.9% uptime guarantee",
+    "Intelligent load balancing",
+    "Seamless integration with existing systems"
+  ]
+}

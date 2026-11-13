@@ -1,0 +1,29 @@
+{
+  "title": "DigestIt — Internal Newsletter",
+  "description": "Create and distribute internal newsletters: curated content, employee submissions, analytics, Slack/email distribution.",
+  "basic": "$9/mo/month",
+  "pro": "$29/mo/month",
+  "enterprise": "$99/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "DigestIt — Internal Newsletter - Zion Tech Group",
+    "description": "Create and distribute internal newsletters: curated content, employee submissions, analytics, Slack/email distribution.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w177-digestion"
+    }
+  },
+  "features": [
+    "Editorial newsletter builder",
+    "Employee contribution collection",
+    "Content curation from RSS and internal",
+    "Analytics on open and engagement",
+    "Slack and email distribution"
+  ],
+  "benefits": [
+    "Keep teams informed with curated content",
+    "Employee contributions drive engagement",
+    "Analytics show what resonates",
+    "Archiving for institutional memory"
+  ]
+}

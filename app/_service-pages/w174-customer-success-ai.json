@@ -1,0 +1,29 @@
+{
+  "title": "AI Customer Success Platform",
+  "description": "AI-driven customer success: health scoring, churn prediction, expansion opportunity detection, and playbooks. Proactive retention instead of reactive support.",
+  "basic": "$399/mo/month",
+  "pro": "$1,199/mo/month",
+  "enterprise": "$3,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Customer Success Platform - Zion Tech Group",
+    "description": "AI-driven customer success: health scoring, churn prediction, expansion opportunity detection, and playbooks. Proactive retention instead of reactive support.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w174-customer-success-ai"
+    }
+  },
+  "features": [
+    "AI customer health scoring",
+    "Churn risk prediction and alerting",
+    "Expansion and upsell opportunity detection",
+    "Automated playbooks and outreach sequences",
+    "Renewal forecasting and management"
+  ],
+  "benefits": [
+    "Proactive retention reduces churn 25%",
+    "Health scoring identifies at-risk accounts early",
+    "Expansion opportunities drive revenue growth",
+    "Automated playbooks scale CS team efficiency"
+  ]
+}

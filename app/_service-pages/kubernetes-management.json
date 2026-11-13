@@ -1,0 +1,29 @@
+{
+  "title": "Container Orchestration & Kubernetes Management",
+  "description": "Expert Kubernetes deployment, scaling, monitoring, and optimization for containerized applications with GitOps-driven workflows.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Container Orchestration & Kubernetes Management - Zion Tech Group",
+    "description": "Expert Kubernetes deployment, scaling, monitoring, and optimization for containerized applications with GitOps-driven workflows.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/kubernetes-management"
+    }
+  },
+  "features": [
+    "Cluster design and deployment",
+    "Auto-scaling configuration",
+    "Service mesh implementation",
+    "CI/CD pipeline integration",
+    "Cost optimization and rightsizing"
+  ],
+  "benefits": [
+    "Reduce costs with container orchestration & kubernetes management",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

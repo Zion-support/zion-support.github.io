@@ -1,0 +1,29 @@
+{
+  "title": "IT Backup & Disaster Recovery as a Service",
+  "description": "Cloud-native backup and disaster recovery for VMs, databases, and SaaS applications with instant recovery and automated testing.",
+  "basic": "$199/mo/month",
+  "pro": "$599/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "IT Backup & Disaster Recovery as a Service - Zion Tech Group",
+    "description": "Cloud-native backup and disaster recovery for VMs, databases, and SaaS applications with instant recovery and automated testing.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-backup-recovery-service"
+    }
+  },
+  "features": [
+    "Agentless VM and database backup",
+    "Instant recovery with sub-minute RTO",
+    "Automated backup testing and validation",
+    "Immutable backups for ransomware protection",
+    "Cross-region replication"
+  ],
+  "benefits": [
+    "Achieve near-zero RPO and RTO",
+    "Protect against ransomware",
+    "Automate DR testing",
+    "Reduce backup costs by 40%"
+  ]
+}

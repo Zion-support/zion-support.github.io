@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligent-optimizer-for-transportation-fbe5aea9",
+  "breadcrumbTitle": "Intelligent Optimizer for Transportation",
+  "title": "Intelligent Optimizer for Transportation",
+  "description": "Next-generation transportation solution: Intelligent Optimizer for Transportation. Combines sales forecasting with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Optimizer for Transportation - Zion Tech Group",
+    "description": "Next-generation transportation solution: Intelligent Optimizer for Transportation. Combines sales forecasting with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-optimizer-for-transportation-fbe5aea9"
+    }
+  },
+  "features": [
+    "Microservices deployment",
+    "Multi-region deployment",
+    "Container orchestration",
+    "Open-source friendly",
+    "Role-based access control"
+  ],
+  "benefits": [
+    "Intelligent load balancing",
+    "99.9% uptime guarantee",
+    "Enterprise-grade security",
+    "Automated compliance reporting"
+  ]
+}

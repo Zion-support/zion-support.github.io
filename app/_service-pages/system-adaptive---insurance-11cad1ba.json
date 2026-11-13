@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/system-adaptive---insurance-11cad1ba",
+  "breadcrumbTitle": "System Adaptive - Insurance",
+  "title": "System Adaptive - Insurance",
+  "description": "Revolutionize insurance through intelligent automation. Our System Adaptive - Insurance leverages advanced machine learning to deliver financial planning at sca",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "System Adaptive - Insurance - Zion Tech Group",
+    "description": "Revolutionize insurance through intelligent automation. Our System Adaptive - Insurance leverages advanced machine learning to deliver financial planning at sca",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/system-adaptive---insurance-11cad1ba"
+    }
+  },
+  "features": [
+    "Container orchestration",
+    "Custom integrations",
+    "Cloud-native architecture",
+    "API-first design"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "24/7 automated operations",
+    "Cost optimization recommendations",
+    "Intelligent load balancing",
+    "Predictive maintenance scheduling"
+  ]
+}

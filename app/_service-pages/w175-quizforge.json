@@ -1,0 +1,29 @@
+{
+  "title": "QuizForge — Assessment & Quiz Builder",
+  "description": "AI-powered quiz and assessment builder for education and training. Auto-generate from content, adaptive difficulty, and detailed analytics.",
+  "basic": "$19/mo/month",
+  "pro": "$59/mo/month",
+  "enterprise": "$199/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "QuizForge — Assessment & Quiz Builder - Zion Tech Group",
+    "description": "AI-powered quiz and assessment builder for education and training. Auto-generate from content, adaptive difficulty, and detailed analytics.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w175-quizforge"
+    }
+  },
+  "features": [
+    "AI question generation from content",
+    "Multiple question types (MC, short, essay, code)",
+    "Adaptive difficulty adjustment",
+    "Timed assessments with anti-cheat",
+    "Detailed analytics and learning gaps"
+  ],
+  "benefits": [
+    "Generate assessments from any content in minutes",
+    "Adaptive difficulty challenges every student",
+    "Analytics reveal learning gaps",
+    "LMS-compatible delivery"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "title": "Enterprise Multi-Model Operational Analytics Suite",
+  "description": "Enterprise analytics suite that delivers multi-model operational insights with unified dashboards and reporting.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Enterprise Multi-Model Operational Analytics Suite - Zion Tech Group",
+    "description": "Enterprise analytics suite that delivers multi-model operational insights with unified dashboards and reporting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/enterprise-multi-model-operational-analytics-suite-bec299a8"
+    }
+  },
+  "features": [
+    "Data visualization",
+    "Custom dashboards",
+    "Report generation",
+    "KPI tracking"
+  ],
+  "benefits": [
+    "Unified data view",
+    "Faster insights",
+    "Customizable reports",
+    "Cross-functional collaboration"
+  ]
+}

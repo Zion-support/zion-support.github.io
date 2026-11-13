@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-serverless-iot-intelligence-34992d4a",
+  "breadcrumbTitle": "AI-Powered Serverless IoT Intelligence",
+  "title": "AI-Powered Serverless IoT Intelligence",
+  "description": "Edge AI platform that processes IoT sensor data in real-time with serverless insights.",
+  "basic": "$258/month",
+  "pro": "$648/month",
+  "enterprise": "$1948/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Serverless IoT Intelligence - Zion Tech Group",
+    "description": "Edge AI platform that processes IoT sensor data in real-time with serverless insights.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-serverless-iot-intelligence-34992d4a"
+    }
+  },
+  "features": [
+    "Edge processing",
+    "Real-time analytics",
+    "Automated responses",
+    "Energy efficiency"
+  ],
+  "benefits": [
+    "Reduced latency",
+    "Better insights",
+    "Automated responses",
+    "Energy efficiency"
+  ]
+}

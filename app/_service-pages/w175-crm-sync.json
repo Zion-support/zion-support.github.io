@@ -1,0 +1,29 @@
+{
+  "title": "CRMSync — Data Sync for Sales",
+  "description": "Keep CRM data clean and synced: deduplicate, enrich from Clearbit/ZoomInfo, sync between CRMs, and validate email/phone. 99.5% data accuracy.",
+  "basic": "$49/mo/month",
+  "pro": "$149/mo/month",
+  "enterprise": "$499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "CRMSync — Data Sync for Sales - Zion Tech Group",
+    "description": "Keep CRM data clean and synced: deduplicate, enrich from Clearbit/ZoomInfo, sync between CRMs, and validate email/phone. 99.5% data accuracy.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w175-crm-sync"
+    }
+  },
+  "features": [
+    "Contact deduplication and merging",
+    "Data enrichment (Clearbit, ZoomInfo, Apollo)",
+    "Cross-CRM synchronization (Salesforce, HubSpot, Pipedrive)",
+    "Email and phone validation",
+    "Activity sync (email, calendar, calls)"
+  ],
+  "benefits": [
+    "Clean CRM data drives better sales",
+    "Enrichment fills in missing data points",
+    "Cross-CRM sync for multi-tool teams",
+    "Validation prevents bounce and bad calls"
+  ]
+}

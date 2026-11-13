@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligent-director-insurance-5afa96fb",
+  "breadcrumbTitle": "Intelligent director-insurance",
+  "title": "Intelligent director-insurance",
+  "description": "Revolutionize insurance through intelligent automation. Our Intelligent director-insurance leverages advanced machine learning to deliver process automation at ",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent director-insurance - Zion Tech Group",
+    "description": "Revolutionize insurance through intelligent automation. Our Intelligent director-insurance leverages advanced machine learning to deliver process automation at ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-director-insurance-5afa96fb"
+    }
+  },
+  "features": [
+    "Custom integrations",
+    "Serverless functions",
+    "Rollback mechanisms",
+    "API-first design",
+    "Comprehensive monitoring"
+  ],
+  "benefits": [
+    "Intelligent load balancing",
+    "ROI in under 90 days",
+    "99.9% uptime guarantee",
+    "Self-healing infrastructure"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligent-maintenance-platform-2-12d57b3f",
+  "breadcrumbTitle": "Intelligent Maintenance Platform #2",
+  "title": "Intelligent Maintenance Platform #2",
+  "description": "Next-generation hospitality solution: Intelligent Maintenance Platform #2. Combines code optimization with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Maintenance Platform #2 - Zion Tech Group",
+    "description": "Next-generation hospitality solution: Intelligent Maintenance Platform #2. Combines code optimization with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-maintenance-platform-2-12d57b3f"
+    }
+  },
+  "features": [
+    "Alerting system",
+    "Audit trails",
+    "Cloud-native architecture",
+    "Multi-region deployment",
+    "Open-source friendly"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Seamless integration with existing systems",
+    "Intelligent load balancing",
+    "Enterprise-grade security"
+  ]
+}

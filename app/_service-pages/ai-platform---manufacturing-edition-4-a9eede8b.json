@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-platform---manufacturing-edition-4-a9eede8b",
+  "breadcrumbTitle": "AI Platform - Manufacturing Edition #4",
+  "title": "AI Platform - Manufacturing Edition #4",
+  "description": "Unlock unprecedented growth with AI Platform - Manufacturing Edition #4. This autonomous system provides decision support with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Platform - Manufacturing Edition #4 - Zion Tech Group",
+    "description": "Unlock unprecedented growth with AI Platform - Manufacturing Edition #4. This autonomous system provides decision support with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-platform---manufacturing-edition-4-a9eede8b"
+    }
+  },
+  "features": [
+    "Edge computing support",
+    "Mobile-responsive interface",
+    "Container orchestration",
+    "Role-based access control"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "Intelligent load balancing",
+    "Seamless integration with existing systems",
+    "Dynamic resource allocation",
+    "Enterprise-grade security"
+  ]
+}

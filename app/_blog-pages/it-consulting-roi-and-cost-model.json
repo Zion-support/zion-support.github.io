@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "IT Consulting: ROI and cost model | Zion Tech Group",
+    "description": "IT Consulting: ROI and cost model",
+    "keywords": [
+      "automation",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "IT Consulting: ROI and cost model",
+      "description": "IT Consulting: ROI and cost model",
+      "url": "https://ziontechgroup.com/blog/it-consulting-roi-and-cost-model/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/it-consulting-roi-and-cost-model/"
+    }
+  },
+  "values": [
+    "IT Consulting: ROI and cost model",
+    "IT Consulting: ROI and cost model",
+    "IT Consulting: ROI and cost model",
+    "Conversion path",
+    "If this guide matches your it consulting: roi and cost model initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "Conversion path",
+    " If this guide matches your it consulting: roi and cost model initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "/blog/ai-it-operations-implementation-playbook",
+    "Ai It Operations Implementation Playbook",
+    "/blog/cloud-finops-security-and-governance",
+    "Cloud Finops Security And Governance",
+    "/blog/accessibility-compliance-checklist-for-it-leaders",
+    "Accessibility Compliance Checklist For It Leaders",
+    "/blog/cloud-finops-2026-7225",
+    "Cloud Finops 2026 7225"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "IT Consulting: ROI and cost model",
+    "description": "IT Consulting: ROI and cost model",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T08:12:14Z",
+    "dateModified": "2026-08-07T08:12:14Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/it-consulting-roi-and-cost-model/"
+  }
+}

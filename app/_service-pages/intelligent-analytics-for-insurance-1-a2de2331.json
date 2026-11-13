@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-analytics-for-insurance-1-a2de2331",
+  "breadcrumbTitle": "Intelligent Analytics for Insurance #1",
+  "title": "Intelligent Analytics for Insurance #1",
+  "description": "Transform your insurance operations with our Intelligent Analytics for Insurance #1. This AI-driven solution automates performance monitoring with unprecedented",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Analytics for Insurance #1 - Zion Tech Group",
+    "description": "Transform your insurance operations with our Intelligent Analytics for Insurance #1. This AI-driven solution automates performance monitoring with unprecedented",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-analytics-for-insurance-1-a2de2331"
+    }
+  },
+  "features": [
+    "Zero-downtime updates",
+    "Comprehensive monitoring",
+    "Auto-scaling capabilities",
+    "Data encryption",
+    "Performance dashboards"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "Reduced human error by 95%",
+    "Cost optimization recommendations"
+  ]
+}

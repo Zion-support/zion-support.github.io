@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/platform-intelligent---insurance-5a47b2ca",
+  "breadcrumbTitle": "Platform Intelligent - Insurance",
+  "title": "Platform Intelligent - Insurance",
+  "description": "Unlock unprecedented growth with Platform Intelligent - Insurance. This autonomous system provides customer insights with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Platform Intelligent - Insurance - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Platform Intelligent - Insurance. This autonomous system provides customer insights with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/platform-intelligent---insurance-5a47b2ca"
+    }
+  },
+  "features": [
+    "Multi-language support",
+    "Offline capabilities",
+    "Data encryption",
+    "Comprehensive monitoring",
+    "Mobile-responsive interface"
+  ],
+  "benefits": [
+    "Automated compliance reporting",
+    "Performance benchmarking",
+    "Zero manual intervention required",
+    "Reduced human error by 95%",
+    "Enterprise-grade security"
+  ]
+}

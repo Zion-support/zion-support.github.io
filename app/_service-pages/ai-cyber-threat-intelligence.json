@@ -1,0 +1,29 @@
+{
+  "title": "AI Cyber Threat Intelligence Platform",
+  "description": "AI-powered threat intelligence platform that aggregates, analyzes, and contextualizes threat data from 100+ sources. Proactively identify threats targeting your organization.",
+  "basic": "$2,999/mo/month",
+  "pro": "$7,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Cyber Threat Intelligence Platform - Zion Tech Group",
+    "description": "AI-powered threat intelligence platform that aggregates, analyzes, and contextualizes threat data from 100+ sources. Proactively identify threats targeting your",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-cyber-threat-intelligence"
+    }
+  },
+  "features": [
+    "Threat intelligence aggregation (100+ sources)",
+    "AI threat correlation and prioritization",
+    "Dark web monitoring for leaked credentials",
+    "IOC enrichment and context",
+    "Automated threat briefings"
+  ],
+  "benefits": [
+    "Identify threats before they hit",
+    "Reduce threat research time by 90%",
+    "Proactive defense with dark web monitoring",
+    "Contextualized alerts reduce false positives"
+  ]
+}

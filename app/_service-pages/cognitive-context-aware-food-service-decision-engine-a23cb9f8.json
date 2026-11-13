@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/cognitive-context-aware-food-service-decision-engine-a23cb9f8",
+  "breadcrumbTitle": "Cognitive Context-Aware Food Service Decision Engine",
+  "title": "Cognitive Context-Aware Food Service Decision Engine",
+  "description": "Cognitive decision engine that processes context-aware signals to drive food service strategy with deep learning.",
+  "basic": "$278/month",
+  "pro": "$698/month",
+  "enterprise": "$2098/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Cognitive Context-Aware Food Service Decision Engine - Zion Tech Group",
+    "description": "Cognitive decision engine that processes context-aware signals to drive food service strategy with deep learning.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cognitive-context-aware-food-service-decision-engine-a23cb9f8"
+    }
+  },
+  "features": [
+    "Cognitive reasoning",
+    "Scenario analysis",
+    "Decision trees",
+    "Recommendation engine"
+  ],
+  "benefits": [
+    "Better decision quality",
+    "Reduced risk",
+    "Faster insights",
+    "Competitive intelligence"
+  ]
+}

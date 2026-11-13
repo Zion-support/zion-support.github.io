@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/ai-suite---legal-edition-002f3fbc",
+  "breadcrumbTitle": "AI Suite - Legal Edition",
+  "title": "AI Suite - Legal Edition",
+  "description": "Next-generation legal solution: AI Suite - Legal Edition. Combines sales forecasting with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Suite - Legal Edition - Zion Tech Group",
+    "description": "Next-generation legal solution: AI Suite - Legal Edition. Combines sales forecasting with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-suite---legal-edition-002f3fbc"
+    }
+  },
+  "features": [
+    "Serverless functions",
+    "Rollback mechanisms",
+    "Alerting system",
+    "Data encryption",
+    "API-first design"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "Reduced human error by 95%",
+    "99.9% uptime guarantee",
+    "50% reduction in operational costs",
+    "Performance benchmarking"
+  ]
+}

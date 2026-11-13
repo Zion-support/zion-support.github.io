@@ -1,0 +1,29 @@
+{
+  "title": "Customer Churn Prediction & Prevention",
+  "description": "Predict which customers are at risk of leaving, understand why, and trigger automated retention campaigns. Integrates with CRM, billing, and support systems.",
+  "basic": "$N/A/month",
+  "pro": "$N/A/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Customer Churn Prediction & Prevention - Zion Tech Group",
+    "description": "Predict which customers are at risk of leaving, understand why, and trigger automated retention campaigns. Integrates with CRM, billing, and support systems.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-customer-churn-prediction"
+    }
+  },
+  "features": [
+    "Churn scoring",
+    "Root cause analysis",
+    "Automated retention campaigns",
+    "Win-back offers",
+    "CRM integration"
+  ],
+  "benefits": [
+    "40% reduction in churn",
+    "Predictive 6+ months ahead",
+    "Automated retention",
+    "Actionable insights"
+  ]
+}

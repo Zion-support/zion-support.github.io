@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-insights---healthcare-edition-4-0b040dd1",
+  "breadcrumbTitle": "AI Insights - Healthcare Edition #4",
+  "title": "AI Insights - Healthcare Edition #4",
+  "description": "The future of healthcare is here with AI Insights - Healthcare Edition #4. Powered by cutting-edge AI, this platform delivers performance monitoring like never ",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Insights - Healthcare Edition #4 - Zion Tech Group",
+    "description": "The future of healthcare is here with AI Insights - Healthcare Edition #4. Powered by cutting-edge AI, this platform delivers performance monitoring like never ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-insights---healthcare-edition-4-0b040dd1"
+    }
+  },
+  "features": [
+    "Serverless functions",
+    "Container orchestration",
+    "HIPAA ready",
+    "Audit trails",
+    "Custom integrations"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "Seamless integration with existing systems",
+    "50% reduction in operational costs"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/autonomous-compliance-director-92948aab",
+  "breadcrumbTitle": "Autonomous Compliance Director",
+  "title": "Autonomous Compliance Director",
+  "description": "The future of hospitality is here with Autonomous Compliance Director. Powered by cutting-edge AI, this platform delivers risk assessment like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous Compliance Director - Zion Tech Group",
+    "description": "The future of hospitality is here with Autonomous Compliance Director. Powered by cutting-edge AI, this platform delivers risk assessment like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-compliance-director-92948aab"
+    }
+  },
+  "features": [
+    "HIPAA ready",
+    "Plugin architecture",
+    "Comprehensive monitoring",
+    "GDPR compliance"
+  ],
+  "benefits": [
+    "50% reduction in operational costs",
+    "Self-healing infrastructure",
+    "Reduced human error by 95%"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-real-time-route-optimization-2cd9b5d9",
+  "breadcrumbTitle": "AI-Powered Real-Time Route Optimization",
+  "title": "AI-Powered Real-Time Route Optimization",
+  "description": "Advanced logistics platform that computes real-time optimal routes, load planning, and delivery scheduling using real-time traffic, weather, and constraint data",
+  "basic": "$258/month",
+  "pro": "$648/month",
+  "enterprise": "$1948/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Real-Time Route Optimization - Zion Tech Group",
+    "description": "Advanced logistics platform that computes real-time optimal routes, load planning, and delivery scheduling using real-time traffic, weather, and constraint data",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-real-time-route-optimization-2cd9b5d9"
+    }
+  },
+  "features": [
+    "Route optimization",
+    "Load planning",
+    "Real-time tracking",
+    "Dynamic scheduling"
+  ],
+  "benefits": [
+    "Reduced fuel costs",
+    "Faster deliveries",
+    "Higher capacity utilization",
+    "Lower emissions"
+  ]
+}

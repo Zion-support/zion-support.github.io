@@ -1,0 +1,29 @@
+{
+  "title": "IT Unified Communications & Collaboration",
+  "description": "Design and deploy unified communications with Teams, Zoom, or Cisco. Voice, video, messaging, and collaboration in one platform.",
+  "basic": "$12/user/mo/month",
+  "pro": "$22/user/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "IT Unified Communications & Collaboration - Zion Tech Group",
+    "description": "Design and deploy unified communications with Teams, Zoom, or Cisco. Voice, video, messaging, and collaboration in one platform.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-unified-communications"
+    }
+  },
+  "features": [
+    "Microsoft Teams / Zoom / Cisco deployment",
+    "VoIP and PBX migration",
+    "Video conferencing room design",
+    "Contact center integration",
+    "Unified messaging and presence"
+  ],
+  "benefits": [
+    "Reduce communication costs by 40%",
+    "Improve collaboration across locations",
+    "Consolidate vendors into one platform",
+    "Enable seamless hybrid work"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/autonomous-workflow-orchestrator-1-ba11a4f1",
+  "breadcrumbTitle": "Autonomous Workflow Orchestrator #1",
+  "title": "Autonomous Workflow Orchestrator #1",
+  "description": "Unlock unprecedented growth with Autonomous Workflow Orchestrator #1. This autonomous system provides decision support with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous Workflow Orchestrator #1 - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Autonomous Workflow Orchestrator #1. This autonomous system provides decision support with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-workflow-orchestrator-1-ba11a4f1"
+    }
+  },
+  "features": [
+    "Microservices deployment",
+    "Audit trails",
+    "Custom integrations",
+    "Zero-downtime updates",
+    "Open-source friendly"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "50% reduction in operational costs",
+    "Self-healing infrastructure"
+  ]
+}

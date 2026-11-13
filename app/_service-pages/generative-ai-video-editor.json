@@ -1,0 +1,29 @@
+{
+  "title": "Generative AI Video Editor",
+  "description": "AI-powered video editor: auto-transcribe, auto-caption, text-to-speech voiceover, background removal, and one-click social media resizing.",
+  "basic": "$79/mo/month",
+  "pro": "$249/mo/month",
+  "enterprise": "$799/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Generative AI Video Editor - Zion Tech Group",
+    "description": "AI-powered video editor: auto-transcribe, auto-caption, text-to-speech voiceover, background removal, and one-click social media resizing.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/generative-ai-video-editor"
+    }
+  },
+  "features": [
+    "Auto-transcription + captions",
+    "Text-to-speech voiceover",
+    "Background removal",
+    "AI scene description",
+    "One-click aspect ratio resize"
+  ],
+  "benefits": [
+    "Reduce costs with generative ai video editor",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

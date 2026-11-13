@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/smart-suite-for-manufacturing-1-ed668bb3",
+  "breadcrumbTitle": "Smart Suite for Manufacturing #1",
+  "title": "Smart Suite for Manufacturing #1",
+  "description": "Next-generation manufacturing solution: Smart Suite for Manufacturing #1. Combines network optimization with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Suite for Manufacturing #1 - Zion Tech Group",
+    "description": "Next-generation manufacturing solution: Smart Suite for Manufacturing #1. Combines network optimization with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-suite-for-manufacturing-1-ed668bb3"
+    }
+  },
+  "features": [
+    "Microservices deployment",
+    "Open-source friendly",
+    "Audit trails",
+    "Offline capabilities",
+    "SOC 2 certified"
+  ],
+  "benefits": [
+    "Intelligent load balancing",
+    "Self-healing infrastructure",
+    "Real-time insights and alerts",
+    "50% reduction in operational costs"
+  ]
+}

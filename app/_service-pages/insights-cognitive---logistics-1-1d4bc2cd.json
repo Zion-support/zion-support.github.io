@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/insights-cognitive---logistics-1-1d4bc2cd",
+  "breadcrumbTitle": "Insights Cognitive - Logistics #1",
+  "title": "Insights Cognitive - Logistics #1",
+  "description": "Revolutionize logistics through intelligent automation. Our Insights Cognitive - Logistics #1 leverages advanced machine learning to deliver resource optimizati",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Insights Cognitive - Logistics #1 - Zion Tech Group",
+    "description": "Revolutionize logistics through intelligent automation. Our Insights Cognitive - Logistics #1 leverages advanced machine learning to deliver resource optimizati",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/insights-cognitive---logistics-1-1d4bc2cd"
+    }
+  },
+  "features": [
+    "Edge computing support",
+    "GDPR compliance",
+    "Serverless functions",
+    "Multi-region deployment",
+    "Audit trails"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "Enterprise-grade security",
+    "Seamless integration with existing systems",
+    "ROI in under 90 days"
+  ]
+}

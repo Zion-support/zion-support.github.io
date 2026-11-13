@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/optimizer-autonomous---sports-3092c920",
+  "breadcrumbTitle": "Optimizer Autonomous - Sports",
+  "title": "Optimizer Autonomous - Sports",
+  "description": "Next-generation sports solution: Optimizer Autonomous - Sports. Combines process automation with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Optimizer Autonomous - Sports - Zion Tech Group",
+    "description": "Next-generation sports solution: Optimizer Autonomous - Sports. Combines process automation with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/optimizer-autonomous---sports-3092c920"
+    }
+  },
+  "features": [
+    "HIPAA ready",
+    "Role-based access control",
+    "API-first design",
+    "Audit trails"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Enterprise-grade security",
+    "Dynamic resource allocation"
+  ]
+}

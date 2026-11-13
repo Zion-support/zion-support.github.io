@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/suite-predictive---real-estate-915a4ea4",
+  "breadcrumbTitle": "Suite Predictive - Real-Estate",
+  "title": "Suite Predictive - Real-Estate",
+  "description": "Unlock unprecedented growth with Suite Predictive - Real-Estate. This autonomous system provides customer insights with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Suite Predictive - Real-Estate - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Suite Predictive - Real-Estate. This autonomous system provides customer insights with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/suite-predictive---real-estate-915a4ea4"
+    }
+  },
+  "features": [
+    "Edge computing support",
+    "Alerting system",
+    "Audit trails",
+    "Offline capabilities",
+    "Custom integrations"
+  ],
+  "benefits": [
+    "Intelligent load balancing",
+    "24/7 automated operations",
+    "50% reduction in operational costs",
+    "ROI in under 90 days"
+  ]
+}

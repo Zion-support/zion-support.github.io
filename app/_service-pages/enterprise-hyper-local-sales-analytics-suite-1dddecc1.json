@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/enterprise-hyper-local-sales-analytics-suite-1dddecc1",
+  "breadcrumbTitle": "Enterprise Hyper-Local Sales Analytics Suite",
+  "title": "Enterprise Hyper-Local Sales Analytics Suite",
+  "description": "Enterprise analytics suite that delivers hyper-local sales insights with unified dashboards and reporting.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Enterprise Hyper-Local Sales Analytics Suite - Zion Tech Group",
+    "description": "Enterprise analytics suite that delivers hyper-local sales insights with unified dashboards and reporting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/enterprise-hyper-local-sales-analytics-suite-1dddecc1"
+    }
+  },
+  "features": [
+    "Data visualization",
+    "Custom dashboards",
+    "Report generation",
+    "KPI tracking"
+  ],
+  "benefits": [
+    "Unified data view",
+    "Faster insights",
+    "Customizable reports",
+    "Cross-functional collaboration"
+  ]
+}

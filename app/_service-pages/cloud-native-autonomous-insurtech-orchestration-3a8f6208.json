@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/cloud-native-autonomous-insurtech-orchestration-3a8f6208",
+  "breadcrumbTitle": "Cloud-Native Autonomous Insurtech Orchestration",
+  "title": "Cloud-Native Autonomous Insurtech Orchestration",
+  "description": "Cloud-native orchestration platform that manages autonomous insurtech resources with auto-scaling and cost control.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Cloud-Native Autonomous Insurtech Orchestration - Zion Tech Group",
+    "description": "Cloud-native orchestration platform that manages autonomous insurtech resources with auto-scaling and cost control.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cloud-native-autonomous-insurtech-orchestration-3a8f6208"
+    }
+  },
+  "features": [
+    "Container orchestration",
+    "Resource management",
+    "Health monitoring",
+    "Auto-healing"
+  ],
+  "benefits": [
+    "Reduced infrastructure cost",
+    "Auto-scaling",
+    "Container efficiency",
+    "Developer productivity"
+  ]
+}

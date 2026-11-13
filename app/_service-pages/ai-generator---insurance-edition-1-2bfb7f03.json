@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-generator---insurance-edition-1-2bfb7f03",
+  "breadcrumbTitle": "AI Generator - Insurance Edition #1",
+  "title": "AI Generator - Insurance Edition #1",
+  "description": "Revolutionize insurance through intelligent automation. Our AI Generator - Insurance Edition #1 leverages advanced machine learning to deliver quality control a",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Generator - Insurance Edition #1 - Zion Tech Group",
+    "description": "Revolutionize insurance through intelligent automation. Our AI Generator - Insurance Edition #1 leverages advanced machine learning to deliver quality control a",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-generator---insurance-edition-1-2bfb7f03"
+    }
+  },
+  "features": [
+    "Performance dashboards",
+    "Serverless functions",
+    "Cloud-native architecture",
+    "Audit trails",
+    "Custom integrations"
+  ],
+  "benefits": [
+    "Automated compliance reporting",
+    "3x faster decision making",
+    "Self-healing infrastructure",
+    "99.9% uptime guarantee"
+  ]
+}

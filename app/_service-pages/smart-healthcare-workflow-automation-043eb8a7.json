@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/smart-healthcare-workflow-automation-043eb8a7",
+  "breadcrumbTitle": "Smart Healthcare Workflow Automation",
+  "title": "Smart Healthcare Workflow Automation",
+  "description": "Intelligent workflow automation platform that streamlines healthcare processes and eliminates manual tasks.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Smart Healthcare Workflow Automation - Zion Tech Group",
+    "description": "Intelligent workflow automation platform that streamlines healthcare processes and eliminates manual tasks.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-healthcare-workflow-automation-043eb8a7"
+    }
+  },
+  "features": [
+    "Process mapping",
+    "Task automation",
+    "Workflow optimization",
+    "Exception handling"
+  ],
+  "benefits": [
+    "Faster operations",
+    "Reduced errors",
+    "Improved productivity",
+    "Better resource utilization"
+  ]
+}

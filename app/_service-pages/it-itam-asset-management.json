@@ -1,0 +1,29 @@
+{
+  "title": "IT Asset Management (ITAM) & Lifecycle",
+  "description": "Complete IT asset management from procurement to disposal. Track hardware, software licenses, and cloud resources. Optimize costs and ensure compliance.",
+  "basic": "$1,500/mo/month",
+  "pro": "$4,000/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "IT Asset Management (ITAM) & Lifecycle - Zion Tech Group",
+    "description": "Complete IT asset management from procurement to disposal. Track hardware, software licenses, and cloud resources. Optimize costs and ensure compliance.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-itam-asset-management"
+    }
+  },
+  "features": [
+    "Automated hardware and software discovery",
+    "Software license management and optimization",
+    "Cloud resource tracking and cost optimization",
+    "Asset lifecycle management (procure to retire)",
+    "Contract and warranty tracking"
+  ],
+  "benefits": [
+    "Reduce software license costs by 25%",
+    "Eliminate unused hardware and cloud waste",
+    "Pass software audits with confidence",
+    "Optimize IT spend with data-driven decisions"
+  ]
+}

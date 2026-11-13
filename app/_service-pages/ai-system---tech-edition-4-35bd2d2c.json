@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-system---tech-edition-4-35bd2d2c",
+  "breadcrumbTitle": "AI System - Tech Edition #4",
+  "title": "AI System - Tech Edition #4",
+  "description": "Transform your technology operations with our AI System - Tech Edition #4. This AI-driven solution automates user experience with unprecedented accuracy and eff",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI System - Tech Edition #4 - Zion Tech Group",
+    "description": "Transform your technology operations with our AI System - Tech Edition #4. This AI-driven solution automates user experience with unprecedented accuracy and eff",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-system---tech-edition-4-35bd2d2c"
+    }
+  },
+  "features": [
+    "Open-source friendly",
+    "Performance dashboards",
+    "Plugin architecture",
+    "Serverless functions"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Automated compliance reporting",
+    "Scalable to millions of transactions",
+    "24/7 automated operations"
+  ]
+}

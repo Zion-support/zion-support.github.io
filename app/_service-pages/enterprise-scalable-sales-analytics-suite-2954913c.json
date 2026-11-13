@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/enterprise-scalable-sales-analytics-suite-2954913c",
+  "breadcrumbTitle": "Enterprise Scalable Sales Analytics Suite",
+  "title": "Enterprise Scalable Sales Analytics Suite",
+  "description": "Enterprise analytics suite that delivers scalable sales insights with unified dashboards and reporting.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Enterprise Scalable Sales Analytics Suite - Zion Tech Group",
+    "description": "Enterprise analytics suite that delivers scalable sales insights with unified dashboards and reporting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/enterprise-scalable-sales-analytics-suite-2954913c"
+    }
+  },
+  "features": [
+    "Data visualization",
+    "Custom dashboards",
+    "Report generation",
+    "KPI tracking"
+  ],
+  "benefits": [
+    "Unified data view",
+    "Faster insights",
+    "Customizable reports",
+    "Cross-functional collaboration"
+  ]
+}

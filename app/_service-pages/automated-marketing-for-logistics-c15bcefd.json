@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/automated-marketing-for-logistics-c15bcefd",
+  "breadcrumbTitle": "Automated Marketing for Logistics",
+  "title": "Automated Marketing for Logistics",
+  "description": "Next-generation Logistics solution: Automated Marketing for Logistics. Combines supply chain with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated Marketing for Logistics - Zion Tech Group",
+    "description": "Next-generation Logistics solution: Automated Marketing for Logistics. Combines supply chain with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-marketing-for-logistics-c15bcefd"
+    }
+  },
+  "features": [
+    "Scenario planning with Monte Carlo simulations",
+    "API-first design with comprehensive REST and GraphQL endpoints",
+    "Fraud detection with anomaly analysis",
+    "Zero-downtime updates with blue-green deployment",
+    "Version control with rollback capabilities"
+  ],
+  "benefits": [
+    "3x faster decision making with real-time insights",
+    "Improved quality with automated testing and validation",
+    "Better financial planning with predictive models",
+    "Improved employee productivity with automation"
+  ]
+}

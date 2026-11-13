@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/industrial-telemetry-logistics-9a0f2b8e",
+  "breadcrumbTitle": "Industrial Telemetry - Logistics",
+  "title": "Industrial Telemetry - Logistics",
+  "description": "Unlock unprecedented growth with Industrial Telemetry - Logistics. This autonomous system provides telemetry collection with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Industrial Telemetry - Logistics - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Industrial Telemetry - Logistics. This autonomous system provides telemetry collection with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/industrial-telemetry-logistics-9a0f2b8e"
+    }
+  },
+  "features": [
+    "Data encryption at rest and in transit",
+    "Comprehensive monitoring with custom dashboards",
+    "API-first design with comprehensive REST and GraphQL endpoints",
+    "Open-source friendly with plugin architecture",
+    "SOC 2 certified with security controls"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling to prevent downtime",
+    "ROI achieved in under 90 days with cost savings",
+    "Seamless integration with existing systems and workflows",
+    "Real-time insights and alerts for proactive management",
+    "Reduced human error by 95% with automated processes"
+  ]
+}

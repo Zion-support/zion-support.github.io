@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/engine-adaptive---energy-a66f4f3a",
+  "breadcrumbTitle": "Engine Adaptive - Energy",
+  "title": "Engine Adaptive - Energy",
+  "description": "Revolutionize energy through intelligent automation. Our Engine Adaptive - Energy leverages advanced machine learning to deliver energy management at scale.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Engine Adaptive - Energy - Zion Tech Group",
+    "description": "Revolutionize energy through intelligent automation. Our Engine Adaptive - Energy leverages advanced machine learning to deliver energy management at scale.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/engine-adaptive---energy-a66f4f3a"
+    }
+  },
+  "features": [
+    "Auto-scaling capabilities",
+    "Performance dashboards",
+    "Cloud-native architecture",
+    "Mobile-responsive interface",
+    "HIPAA ready"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "Cost optimization recommendations",
+    "ROI in under 90 days",
+    "Intelligent load balancing",
+    "Predictive maintenance scheduling"
+  ]
+}

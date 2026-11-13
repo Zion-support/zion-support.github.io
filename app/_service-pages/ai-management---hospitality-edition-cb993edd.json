@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-management---hospitality-edition-cb993edd",
+  "breadcrumbTitle": "AI Management - Hospitality Edition",
+  "title": "AI Management - Hospitality Edition",
+  "description": "The future of hospitality is here with AI Management - Hospitality Edition. Powered by cutting-edge AI, this platform delivers threat detection like never befor",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Management - Hospitality Edition - Zion Tech Group",
+    "description": "The future of hospitality is here with AI Management - Hospitality Edition. Powered by cutting-edge AI, this platform delivers threat detection like never befor",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-management---hospitality-edition-cb993edd"
+    }
+  },
+  "features": [
+    "Container orchestration",
+    "Multi-language support",
+    "Data encryption",
+    "Cloud-native architecture",
+    "Microservices deployment"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "24/7 automated operations",
+    "Cost optimization recommendations"
+  ]
+}

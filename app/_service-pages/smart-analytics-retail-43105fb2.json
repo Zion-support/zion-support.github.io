@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/smart-analytics-retail-43105fb2",
+  "breadcrumbTitle": "Smart analytics-retail",
+  "title": "Smart analytics-retail",
+  "description": "Transform your retail operations with our Smart analytics-retail. This AI-driven solution automates process automation with unprecedented accuracy and efficienc",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart analytics-retail - Zion Tech Group",
+    "description": "Transform your retail operations with our Smart analytics-retail. This AI-driven solution automates process automation with unprecedented accuracy and efficienc",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-analytics-retail-43105fb2"
+    }
+  },
+  "features": [
+    "Machine learning integration",
+    "GDPR compliance",
+    "Offline capabilities",
+    "Edge computing support",
+    "Cloud-native architecture"
+  ],
+  "benefits": [
+    "Cost optimization recommendations",
+    "Scalable to millions of transactions",
+    "50% reduction in operational costs",
+    "Zero manual intervention required"
+  ]
+}

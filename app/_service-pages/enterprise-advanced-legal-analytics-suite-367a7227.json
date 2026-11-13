@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/enterprise-advanced-legal-analytics-suite-367a7227",
+  "breadcrumbTitle": "Enterprise Advanced Legal Analytics Suite",
+  "title": "Enterprise Advanced Legal Analytics Suite",
+  "description": "Enterprise analytics suite that delivers advanced legal insights with unified dashboards and reporting.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Enterprise Advanced Legal Analytics Suite - Zion Tech Group",
+    "description": "Enterprise analytics suite that delivers advanced legal insights with unified dashboards and reporting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/enterprise-advanced-legal-analytics-suite-367a7227"
+    }
+  },
+  "features": [
+    "Data visualization",
+    "Custom dashboards",
+    "Report generation",
+    "KPI tracking"
+  ],
+  "benefits": [
+    "Unified data view",
+    "Faster insights",
+    "Customizable reports",
+    "Cross-functional collaboration"
+  ]
+}

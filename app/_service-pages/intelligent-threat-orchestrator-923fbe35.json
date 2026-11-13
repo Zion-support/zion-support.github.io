@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligent-threat-orchestrator-923fbe35",
+  "breadcrumbTitle": "Intelligent Threat Orchestrator",
+  "title": "Intelligent Threat Orchestrator",
+  "description": "The future of gaming is here with Intelligent Threat Orchestrator. Powered by cutting-edge AI, this platform delivers security monitoring like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Threat Orchestrator - Zion Tech Group",
+    "description": "The future of gaming is here with Intelligent Threat Orchestrator. Powered by cutting-edge AI, this platform delivers security monitoring like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-threat-orchestrator-923fbe35"
+    }
+  },
+  "features": [
+    "Data encryption",
+    "Multi-region deployment",
+    "Auto-scaling capabilities",
+    "Serverless functions",
+    "SOC 2 certified"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Self-healing infrastructure",
+    "Automated compliance reporting",
+    "Performance benchmarking"
+  ]
+}

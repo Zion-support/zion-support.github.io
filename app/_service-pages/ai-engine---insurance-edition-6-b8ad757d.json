@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/ai-engine---insurance-edition-6-b8ad757d",
+  "breadcrumbTitle": "AI Engine - Insurance Edition #6",
+  "title": "AI Engine - Insurance Edition #6",
+  "description": "Unlock unprecedented growth with AI Engine - Insurance Edition #6. This autonomous system provides sales forecasting with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Engine - Insurance Edition #6 - Zion Tech Group",
+    "description": "Unlock unprecedented growth with AI Engine - Insurance Edition #6. This autonomous system provides sales forecasting with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-engine---insurance-edition-6-b8ad757d"
+    }
+  },
+  "features": [
+    "Multi-language support",
+    "SOC 2 certified",
+    "API-first design",
+    "Microservices deployment"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "Dynamic resource allocation",
+    "Performance benchmarking"
+  ]
+}

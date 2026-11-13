@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/management-intelligent---logistics-283315c8",
+  "breadcrumbTitle": "Management Intelligent - Logistics",
+  "title": "Management Intelligent - Logistics",
+  "description": "Next-generation logistics solution: Management Intelligent - Logistics. Combines performance monitoring with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Management Intelligent - Logistics - Zion Tech Group",
+    "description": "Next-generation logistics solution: Management Intelligent - Logistics. Combines performance monitoring with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/management-intelligent---logistics-283315c8"
+    }
+  },
+  "features": [
+    "Container orchestration",
+    "Zero-downtime updates",
+    "Comprehensive monitoring",
+    "Edge computing support",
+    "Machine learning integration"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Reduced human error by 95%",
+    "Intelligent load balancing"
+  ]
+}

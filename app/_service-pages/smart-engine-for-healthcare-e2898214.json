@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/smart-engine-for-healthcare-e2898214",
+  "breadcrumbTitle": "Smart Engine for Healthcare",
+  "title": "Smart Engine for Healthcare",
+  "description": "Transform your healthcare operations with our Smart Engine for Healthcare. This AI-driven solution automates inventory management with unprecedented accuracy an",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Engine for Healthcare - Zion Tech Group",
+    "description": "Transform your healthcare operations with our Smart Engine for Healthcare. This AI-driven solution automates inventory management with unprecedented accuracy an",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-engine-for-healthcare-e2898214"
+    }
+  },
+  "features": [
+    "Multi-region deployment",
+    "Alerting system",
+    "Open-source friendly",
+    "Role-based access control",
+    "GDPR compliance"
+  ],
+  "benefits": [
+    "Scalable to millions of transactions",
+    "Reduced human error by 95%",
+    "50% reduction in operational costs",
+    "Enterprise-grade security"
+  ]
+}

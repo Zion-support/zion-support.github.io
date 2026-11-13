@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/cognitive-analyzer-for-insurance-e2ffcd73",
+  "breadcrumbTitle": "Cognitive Analyzer for Insurance",
+  "title": "Cognitive Analyzer for Insurance",
+  "description": "Transform your insurance operations with our Cognitive Analyzer for Insurance. This AI-driven solution automates risk assessment with unprecedented accuracy and",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Cognitive Analyzer for Insurance - Zion Tech Group",
+    "description": "Transform your insurance operations with our Cognitive Analyzer for Insurance. This AI-driven solution automates risk assessment with unprecedented accuracy and",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cognitive-analyzer-for-insurance-e2ffcd73"
+    }
+  },
+  "features": [
+    "Microservices deployment",
+    "Real-time processing",
+    "Container orchestration",
+    "Edge computing support"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "99.9% uptime guarantee",
+    "Enterprise-grade security",
+    "Seamless integration with existing systems"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "title": "AI Elder Care Monitoring & Alert Platform",
+  "description": "IoT + AI for independent seniors: fall detection, medication reminders, vitals monitoring, emergency response, and family alerts. HIPAA-compliant with 24/7 monitoring.",
+  "basic": "$49/resident/month",
+  "pro": "$99/resident/month",
+  "enterprise": "$199/resident/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Elder Care Monitoring & Alert Platform - Zion Tech Group",
+    "description": "IoT + AI for independent seniors: fall detection, medication reminders, vitals monitoring, emergency response, and family alerts. HIPAA-compliant with 24/7 moni",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-elder-care-assistant"
+    }
+  },
+  "features": [
+    "Fall detection with 99% accuracy",
+    "Medication adherence tracking",
+    "Vitals monitoring (HR, BP, SpO2)",
+    "Emergency response auto-dispatch",
+    "Family caregiver dashboard"
+  ],
+  "benefits": [
+    "Detect falls in seconds",
+    "Reduce hospitalizations by 35%",
+    "Family peace of mind"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-advisor-sports-1-45ef2c28",
+  "breadcrumbTitle": "Intelligent advisor-sports #1",
+  "title": "Intelligent advisor-sports #1",
+  "description": "Revolutionize sports through intelligent automation. Our Intelligent advisor-sports #1 leverages advanced machine learning to deliver supply chain at scale.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent advisor-sports #1 - Zion Tech Group",
+    "description": "Revolutionize sports through intelligent automation. Our Intelligent advisor-sports #1 leverages advanced machine learning to deliver supply chain at scale.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-advisor-sports-1-45ef2c28"
+    }
+  },
+  "features": [
+    "Custom integrations",
+    "Plugin architecture",
+    "Comprehensive monitoring",
+    "HIPAA ready",
+    "Alerting system"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "Dynamic resource allocation",
+    "Automated compliance reporting"
+  ]
+}

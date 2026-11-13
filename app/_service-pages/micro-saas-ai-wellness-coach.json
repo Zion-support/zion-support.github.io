@@ -1,0 +1,29 @@
+{
+  "title": "AI Employee Wellness & Mental Health Platform",
+  "description": "AI-powered employee wellness platform with personalized mental health support, burnout prediction, meditation guidance, and anonymous counseling access. HIPAA compliant.",
+  "basic": "$12/employee/mo/month",
+  "pro": "$24/employee/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Employee Wellness & Mental Health Platform - Zion Tech Group",
+    "description": "AI-powered employee wellness platform with personalized mental health support, burnout prediction, meditation guidance, and anonymous counseling access. HIPAA c",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-ai-wellness-coach"
+    }
+  },
+  "features": [
+    "AI burnout prediction from work patterns",
+    "Personalized meditation and mindfulness",
+    "Anonymous AI therapy chatbot",
+    "EAP integration and referral tracking",
+    "Manager dashboards (aggregated, anonymous)"
+  ],
+  "benefits": [
+    "Reduce burnout by 40%",
+    "Improve employee retention by 25%",
+    "Decrease absenteeism by 30%",
+    "Scale mental health support company-wide"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "Outsourced IT Help Desk",
+  "description": "24/7 outsourced IT help desk with certified technicians: L1/L2 support, ticket management, knowledge base, and SLA guarantees. US-based or global.",
+  "basic": "$15/user/mo/month",
+  "pro": "$25/user/mo/month",
+  "enterprise": "$40/user/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Outsourced IT Help Desk - Zion Tech Group",
+    "description": "24/7 outsourced IT help desk with certified technicians: L1/L2 support, ticket management, knowledge base, and SLA guarantees. US-based or global.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w175-helpdesk-outsourced"
+    }
+  },
+  "features": [
+    "24/7 L1 and L2 technical support",
+    "Ticket management and escalation",
+    "Knowledge base and self-service portal",
+    "Remote desktop support",
+    "Onboarding and offboarding assistance"
+  ],
+  "benefits": [
+    "24/7 support without hiring",
+    "SLA guarantees response and resolution times",
+    "Certified technicians, not generalists",
+    "Scales with your organization"
+  ]
+}

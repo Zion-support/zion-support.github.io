@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/neural-analytics-automotive-8af90575",
+  "breadcrumbTitle": "Neural analytics-automotive",
+  "title": "Neural analytics-automotive",
+  "description": "The future of automotive is here with Neural analytics-automotive. Powered by cutting-edge AI, this platform delivers document processing like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Neural analytics-automotive - Zion Tech Group",
+    "description": "The future of automotive is here with Neural analytics-automotive. Powered by cutting-edge AI, this platform delivers document processing like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/neural-analytics-automotive-8af90575"
+    }
+  },
+  "features": [
+    "Role-based access control",
+    "Cloud-native architecture",
+    "Zero-downtime updates",
+    "Multi-language support"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "Reduced human error by 95%",
+    "Seamless integration with existing systems"
+  ]
+}

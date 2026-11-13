@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/insights-intelligent---legal-13777706",
+  "breadcrumbTitle": "Insights Intelligent - Legal",
+  "title": "Insights Intelligent - Legal",
+  "description": "Next-generation legal solution: Insights Intelligent - Legal. Combines network optimization with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Insights Intelligent - Legal - Zion Tech Group",
+    "description": "Next-generation legal solution: Insights Intelligent - Legal. Combines network optimization with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/insights-intelligent---legal-13777706"
+    }
+  },
+  "features": [
+    "GDPR compliance",
+    "Custom integrations",
+    "Plugin architecture",
+    "HIPAA ready",
+    "SOC 2 certified"
+  ],
+  "benefits": [
+    "Dynamic resource allocation",
+    "Seamless integration with existing systems",
+    "Reduced human error by 95%"
+  ]
+}

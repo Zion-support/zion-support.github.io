@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligence-autonomous---insurance-9e3d03c5",
+  "breadcrumbTitle": "Intelligence Autonomous - Insurance",
+  "title": "Intelligence Autonomous - Insurance",
+  "description": "Next-generation insurance solution: Intelligence Autonomous - Insurance. Combines compliance monitoring with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligence Autonomous - Insurance - Zion Tech Group",
+    "description": "Next-generation insurance solution: Intelligence Autonomous - Insurance. Combines compliance monitoring with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligence-autonomous---insurance-9e3d03c5"
+    }
+  },
+  "features": [
+    "Custom integrations",
+    "Performance dashboards",
+    "Data encryption",
+    "API-first design"
+  ],
+  "benefits": [
+    "Automated compliance reporting",
+    "Self-healing infrastructure",
+    "Performance benchmarking",
+    "Real-time insights and alerts",
+    "Predictive maintenance scheduling"
+  ]
+}

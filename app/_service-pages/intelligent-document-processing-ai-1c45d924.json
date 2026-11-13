@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-document-processing-ai-1c45d924",
+  "breadcrumbTitle": "Intelligent Document Processing AI",
+  "title": "Intelligent Document Processing AI",
+  "description": "Machine learning-powered document automation that extracts, categorizes, and processes documents at scale. Handles invoices, contracts, reports, and other busin",
+  "basic": "$249/month",
+  "pro": "$599/month",
+  "enterprise": "$1799/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Document Processing AI - Zion Tech Group",
+    "description": "Machine learning-powered document automation that extracts, categorizes, and processes documents at scale. Handles invoices, contracts, reports, and other busin",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-document-processing-ai-1c45d924"
+    }
+  },
+  "features": [
+    "OCR with 99% accuracy",
+    "Data extraction and validation",
+    "Automated workflow routing",
+    "Compliance monitoring"
+  ],
+  "benefits": [
+    "80% reduction in manual processing",
+    "Zero data entry errors",
+    "Faster document turnaround",
+    "Audit-ready processing logs"
+  ]
+}

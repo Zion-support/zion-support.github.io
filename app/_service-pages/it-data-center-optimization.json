@@ -1,0 +1,28 @@
+{
+  "title": "Data Center Optimization",
+  "description": "Comprehensive data center assessment and optimization service covering cooling, power, space utilization, and workload placement for maximum efficiency.",
+  "basic": "$5,000/project/month",
+  "pro": "$15,000/project/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Data Center Optimization - Zion Tech Group",
+    "description": "Comprehensive data center assessment and optimization service covering cooling, power, space utilization, and workload placement for maximum efficiency.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-data-center-optimization"
+    }
+  },
+  "features": [
+    "Cooling Optimization",
+    "Power Efficiency",
+    "Space Utilization",
+    "Workload Placement",
+    "Capacity Planning"
+  ],
+  "benefits": [
+    "Reduce energy costs 30%",
+    "Optimize capacity",
+    "Extend DC life"
+  ]
+}

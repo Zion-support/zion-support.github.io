@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/automated-intelligence-for-real-estate-9430e8d4",
+  "breadcrumbTitle": "Automated Intelligence for Real Estate",
+  "title": "Automated Intelligence for Real Estate",
+  "description": "Transform your Real Estate operations with our Automated Intelligence for Real Estate. This AI-driven solution automates predictive analytics with unprecedented",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated Intelligence for Real Estate - Zion Tech Group",
+    "description": "Transform your Real Estate operations with our Automated Intelligence for Real Estate. This AI-driven solution automates predictive analytics with unprecedented",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-intelligence-for-real-estate-9430e8d4"
+    }
+  },
+  "features": [
+    "Custom integrations with webhook support",
+    "Process discovery with activity analysis",
+    "Business intelligence with KPI dashboards",
+    "Data encryption at rest and in transit",
+    "Edge computing support for low-latency operations"
+  ],
+  "benefits": [
+    "Improved forecast accuracy with ML models",
+    "Improved employee productivity with automation",
+    "Reduced risk with early warning systems",
+    "Reduced marketing costs with targeted campaigns",
+    "Increased revenue with optimized pricing strategies"
+  ]
+}

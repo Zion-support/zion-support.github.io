@@ -1,0 +1,28 @@
+{
+  "title": "Legal Document Intelligence Pipeline",
+  "description": "OCR + NLP document-intelligence: pipeline-abstract multi-service orchestration for contracts, invoices, and regulatory submissions; auto-classification, clause extraction, anomaly flag, e-signature ready, approval routing.",
+  "basic": "$99/mo/month",
+  "pro": "$299/mo/month",
+  "enterprise": "$999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Legal Document Intelligence Pipeline - Zion Tech Group",
+    "description": "OCR + NLP document-intelligence: pipeline-abstract multi-service orchestration for contracts, invoices, and regulatory submissions; auto-classification, clause ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automation-document-intelligence-pipeline"
+    }
+  },
+  "features": [
+    "OCR + NLP pipeline orchestrating multiple document types in one session",
+    "Auto-classification — any document placed in input folder routed to correct intake path",
+    "Clause extraction, anomaly flag, and summarisation in same pipeline step",
+    "Approval routing with journalised highlight — every step durably signed and trusting"
+  ],
+  "benefits": [
+    "Reduce costs with legal document intelligence pipeline",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

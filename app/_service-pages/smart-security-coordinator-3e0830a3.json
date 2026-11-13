@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/smart-security-coordinator-3e0830a3",
+  "breadcrumbTitle": "Smart Security Coordinator",
+  "title": "Smart Security Coordinator",
+  "description": "Revolutionize energy through intelligent automation. Our Smart Security Coordinator leverages advanced machine learning to deliver image recognition at scale.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Security Coordinator - Zion Tech Group",
+    "description": "Revolutionize energy through intelligent automation. Our Smart Security Coordinator leverages advanced machine learning to deliver image recognition at scale.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-security-coordinator-3e0830a3"
+    }
+  },
+  "features": [
+    "Open-source friendly",
+    "Machine learning integration",
+    "Performance dashboards",
+    "SOC 2 certified"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "Zero manual intervention required",
+    "Dynamic resource allocation",
+    "Automated compliance reporting"
+  ]
+}

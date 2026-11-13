@@ -1,0 +1,28 @@
+{
+  "title": "Appointment Scheduling & Booking Suite",
+  "description": "Professional scheduling solution for service businesses. Online booking, calendar sync (Google, Outlook), automated reminders, payment collection, and waitlist management. Reduces no-shows by 80% with SMS and email reminders.",
+  "basic": "$N/A/month",
+  "pro": "$N/A/month",
+  "enterprise": "$129/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Appointment Scheduling & Booking Suite - Zion Tech Group",
+    "description": "Professional scheduling solution for service businesses. Online booking, calendar sync (Google, Outlook), automated reminders, payment collection, and waitlist ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/appointment-scheduling-suite"
+    }
+  },
+  "features": [
+    "Online booking page",
+    "Calendar sync",
+    "Automated reminders",
+    "Payment collection",
+    "Waitlist management"
+  ],
+  "benefits": [
+    "80% reduction in no-shows",
+    "50% less admin time",
+    "Increased bookings by 35%"
+  ]
+}

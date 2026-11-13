@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-analytics---manufacturing-edition-1-d8c157db",
+  "breadcrumbTitle": "AI Analytics - Manufacturing Edition #1",
+  "title": "AI Analytics - Manufacturing Edition #1",
+  "description": "Next-generation manufacturing solution: AI Analytics - Manufacturing Edition #1. Combines decision support with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Analytics - Manufacturing Edition #1 - Zion Tech Group",
+    "description": "Next-generation manufacturing solution: AI Analytics - Manufacturing Edition #1. Combines decision support with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-analytics---manufacturing-edition-1-d8c157db"
+    }
+  },
+  "features": [
+    "Role-based access control",
+    "Alerting system",
+    "Multi-language support",
+    "Custom integrations",
+    "Auto-scaling capabilities"
+  ],
+  "benefits": [
+    "Performance benchmarking",
+    "Zero manual intervention required",
+    "ROI in under 90 days",
+    "24/7 automated operations"
+  ]
+}

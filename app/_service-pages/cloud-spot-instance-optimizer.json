@@ -1,0 +1,28 @@
+{
+  "title": "Spot Instance Optimizer",
+  "description": "Multi-cloud spot and preemptible instance optimizer: smart bin-packing job scheduler, diversity-aware fallback strategy, SLA mix-ratio optimizer, graceful preempt handler with state checkpoint, and cost versus SLA trade-off dashboard.",
+  "basic": "$99/mo/month",
+  "pro": "$349/mo/month",
+  "enterprise": "$1,299/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Spot Instance Optimizer - Zion Tech Group",
+    "description": "Multi-cloud spot and preemptible instance optimizer: smart bin-packing job scheduler, diversity-aware fallback strategy, SLA mix-ratio optimizer, graceful preem",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cloud-spot-instance-optimizer"
+    }
+  },
+  "features": [
+    "Smart bin-packing job scheduler onto spot per instance-type and availability-zone",
+    "Diversity-aware fallback strategy with state checkpoint on preempt signal",
+    "SLA mix-ratio optimizer — sets percent on-demand versus percent spot to hold SLA",
+    "Graceful preempt handler: two-minute signal with mid-task checkpoint and auto-resume"
+  ],
+  "benefits": [
+    "Reduce costs with spot instance optimizer",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

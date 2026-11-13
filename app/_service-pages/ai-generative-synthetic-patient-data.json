@@ -1,0 +1,29 @@
+{
+  "title": "AI Generative Synthetic Patient Data Engine",
+  "description": "Generate HIPAA-compliant synthetic patient records: realistic demographics, diagnoses, lab values, medications, and care pathways. Train ML models, validate software, and test integrations without real PHI.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Generative Synthetic Patient Data Engine - Zion Tech Group",
+    "description": "Generate HIPAA-compliant synthetic patient records: realistic demographics, diagnoses, lab values, medications, and care pathways. Train ML models, validate sof",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-generative-synthetic-patient-data"
+    }
+  },
+  "features": [
+    "HIPAA-safe synthetic patient generation",
+    "Realistic diagnosis + procedure coding (ICD-10, CPT)",
+    "Configurable prevalence & comorbidity rates",
+    "FHIR R4 export format",
+    "Differential privacy guarantees"
+  ],
+  "benefits": [
+    "Reduce costs with ai generative synthetic patient data engine",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

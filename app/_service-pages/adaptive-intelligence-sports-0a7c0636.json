@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/adaptive-intelligence-sports-0a7c0636",
+  "breadcrumbTitle": "Adaptive intelligence-sports",
+  "title": "Adaptive intelligence-sports",
+  "description": "Next-generation sports solution: Adaptive intelligence-sports. Combines document processing with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Adaptive intelligence-sports - Zion Tech Group",
+    "description": "Next-generation sports solution: Adaptive intelligence-sports. Combines document processing with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/adaptive-intelligence-sports-0a7c0636"
+    }
+  },
+  "features": [
+    "Multi-language support",
+    "Multi-region deployment",
+    "Mobile-responsive interface",
+    "API-first design",
+    "Data encryption"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "Intelligent load balancing",
+    "ROI in under 90 days"
+  ]
+}

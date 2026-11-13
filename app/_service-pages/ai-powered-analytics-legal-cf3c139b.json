@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/ai-powered-analytics-legal-cf3c139b",
+  "breadcrumbTitle": "AI-Powered analytics-legal",
+  "title": "AI-Powered analytics-legal",
+  "description": "The future of legal is here with AI-Powered analytics-legal. Powered by cutting-edge AI, this platform delivers market intelligence like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered analytics-legal - Zion Tech Group",
+    "description": "The future of legal is here with AI-Powered analytics-legal. Powered by cutting-edge AI, this platform delivers market intelligence like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-analytics-legal-cf3c139b"
+    }
+  },
+  "features": [
+    "API-first design",
+    "Plugin architecture",
+    "SOC 2 certified",
+    "Rollback mechanisms"
+  ],
+  "benefits": [
+    "Seamless integration with existing systems",
+    "Predictive maintenance scheduling",
+    "Cost optimization recommendations"
+  ]
+}

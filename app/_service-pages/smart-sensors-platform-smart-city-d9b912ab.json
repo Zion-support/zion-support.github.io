@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/smart-sensors-platform-smart-city-d9b912ab",
+  "breadcrumbTitle": "Smart Sensors Platform - Smart-City",
+  "title": "Smart Sensors Platform - Smart-City",
+  "description": "Next-generation smart-city solution: Smart Sensors Platform - Smart-City. Combines automation control with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Sensors Platform - Smart-City - Zion Tech Group",
+    "description": "Next-generation smart-city solution: Smart Sensors Platform - Smart-City. Combines automation control with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-sensors-platform-smart-city-d9b912ab"
+    }
+  },
+  "features": [
+    "Cloud-native architecture with multi-region deployment",
+    "GDPR compliance with data portability",
+    "Device management with OTA updates",
+    "Data encryption at rest and in transit",
+    "Custom integrations with webhook support"
+  ],
+  "benefits": [
+    "24/7 automated operations without human intervention",
+    "Dynamic resource allocation based on demand patterns",
+    "99.9% uptime guarantee with redundant architecture",
+    "Automated compliance reporting for regulatory requirements",
+    "Scalable to millions of transactions per second"
+  ]
+}

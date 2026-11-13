@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/advanced-vision-ai-for-insurtech-c9ef59c0",
+  "breadcrumbTitle": "Advanced Vision AI for Insurtech",
+  "title": "Advanced Vision AI for Insurtech",
+  "description": "Vision AI system powered by advanced computer vision models for insurtech analysis and automated visual inspection.",
+  "basic": "$258/month",
+  "pro": "$648/month",
+  "enterprise": "$1948/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Advanced Vision AI for Insurtech - Zion Tech Group",
+    "description": "Vision AI system powered by advanced computer vision models for insurtech analysis and automated visual inspection.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/advanced-vision-ai-for-insurtech-c9ef59c0"
+    }
+  },
+  "features": [
+    "Real-time object detection",
+    "Image classification",
+    "Anomaly detection",
+    "Visual inspection"
+  ],
+  "benefits": [
+    "Automated quality control",
+    "Reduced inspection costs",
+    "Defect detection",
+    "Visual search"
+  ]
+}

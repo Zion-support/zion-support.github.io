@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/coordinator-automated---construction-2ba98e6d",
+  "breadcrumbTitle": "Coordinator Automated - Construction",
+  "title": "Coordinator Automated - Construction",
+  "description": "Revolutionize construction through intelligent automation. Our Coordinator Automated - Construction leverages advanced machine learning to deliver financial pla",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Coordinator Automated - Construction - Zion Tech Group",
+    "description": "Revolutionize construction through intelligent automation. Our Coordinator Automated - Construction leverages advanced machine learning to deliver financial pla",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/coordinator-automated---construction-2ba98e6d"
+    }
+  },
+  "features": [
+    "Performance dashboards",
+    "Machine learning integration",
+    "Microservices deployment",
+    "Cloud-native architecture",
+    "API-first design"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "Reduced human error by 95%",
+    "50% reduction in operational costs"
+  ]
+}

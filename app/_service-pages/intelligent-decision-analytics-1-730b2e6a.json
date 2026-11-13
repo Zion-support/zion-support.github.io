@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-decision-analytics-1-730b2e6a",
+  "breadcrumbTitle": "Intelligent Decision Analytics #1",
+  "title": "Intelligent Decision Analytics #1",
+  "description": "Transform your logistics operations with our Intelligent Decision Analytics #1. This AI-driven solution automates risk assessment with unprecedented accuracy an",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Decision Analytics #1 - Zion Tech Group",
+    "description": "Transform your logistics operations with our Intelligent Decision Analytics #1. This AI-driven solution automates risk assessment with unprecedented accuracy an",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-decision-analytics-1-730b2e6a"
+    }
+  },
+  "features": [
+    "Performance dashboards",
+    "Machine learning integration",
+    "Serverless functions",
+    "HIPAA ready",
+    "Audit trails"
+  ],
+  "benefits": [
+    "Cost optimization recommendations",
+    "Zero manual intervention required",
+    "24/7 automated operations"
+  ]
+}

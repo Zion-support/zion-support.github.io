@@ -1,0 +1,29 @@
+{
+  "title": "Computer Vision Quality Inspection",
+  "description": "AI visual inspection for manufacturing lines. Defect detection, measurement verification, and pass/fail classification at production speed.",
+  "basic": "$1,999/mo/month",
+  "pro": "$5,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Computer Vision Quality Inspection - Zion Tech Group",
+    "description": "AI visual inspection for manufacturing lines. Defect detection, measurement verification, and pass/fail classification at production speed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/manufacturing-tech-quality-vision"
+    }
+  },
+  "features": [
+    "Real-time defect detection",
+    "Dimensional measurement",
+    "Pass/fail classification",
+    "Integration with cameras and PLCs",
+    "Custom defect model training"
+  ],
+  "benefits": [
+    "Inspect 100% of production",
+    "Detect defects humans miss",
+    "Reduce scrap and rework",
+    "Measure at production speed"
+  ]
+}

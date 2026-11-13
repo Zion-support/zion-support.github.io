@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-advisor---insurance-edition-3-374e05ac",
+  "breadcrumbTitle": "AI Advisor - Insurance Edition #3",
+  "title": "AI Advisor - Insurance Edition #3",
+  "description": "The future of insurance is here with AI Advisor - Insurance Edition #3. Powered by cutting-edge AI, this platform delivers document processing like never before",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Advisor - Insurance Edition #3 - Zion Tech Group",
+    "description": "The future of insurance is here with AI Advisor - Insurance Edition #3. Powered by cutting-edge AI, this platform delivers document processing like never before",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-advisor---insurance-edition-3-374e05ac"
+    }
+  },
+  "features": [
+    "Serverless functions",
+    "Auto-scaling capabilities",
+    "Microservices deployment",
+    "Cloud-native architecture",
+    "Mobile-responsive interface"
+  ],
+  "benefits": [
+    "Intelligent load balancing",
+    "Scalable to millions of transactions",
+    "Seamless integration with existing systems",
+    "99.9% uptime guarantee"
+  ]
+}

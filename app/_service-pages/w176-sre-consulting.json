@@ -1,0 +1,29 @@
+{
+  "title": "SRE & Reliability Consulting",
+  "description": "Site Reliability Engineering consulting: SLO design, error budgets, incident process, chaos engineering, and on-call optimization. Improve reliability by design.",
+  "basic": "$9,999/month",
+  "pro": "$24,999/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "SRE & Reliability Consulting - Zion Tech Group",
+    "description": "Site Reliability Engineering consulting: SLO design, error budgets, incident process, chaos engineering, and on-call optimization. Improve reliability by design",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w176-sre-consulting"
+    }
+  },
+  "features": [
+    "SLO/SLI design workshop",
+    "Error budget policy development",
+    "Incident process design and training",
+    "Chaos engineering program setup",
+    "On-call optimization and burnout prevention"
+  ],
+  "benefits": [
+    "Reliability engineering by design, not accident",
+    "SLOs align engineering with business goals",
+    "Chaos engineering proves resilience",
+    "On-call optimization reduces burnout"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "AI Food Safety & Quality Inspection System",
+  "description": "Computer vision-based food safety inspection for restaurants, food processing plants, and supply chains.",
+  "basic": "$399/mo/month",
+  "pro": "$1,199/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Food Safety & Quality Inspection System - Zion Tech Group",
+    "description": "Computer vision-based food safety inspection for restaurants, food processing plants, and supply chains.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-food-safety-inspection"
+    }
+  },
+  "features": [
+    "Real-time contamination detection",
+    "Temperature monitoring alerts",
+    "Hygiene compliance verification",
+    "Pest detection in storage areas",
+    "Supply chain traceability"
+  ],
+  "benefits": [
+    "Prevent foodborne illness outbreaks",
+    "Automate safety inspections",
+    "Ensure regulatory compliance",
+    "Reduce food waste"
+  ]
+}

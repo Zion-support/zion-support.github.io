@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/cognitive-precision-logistics-decision-engine-538d5de8",
+  "breadcrumbTitle": "Cognitive Precision Logistics Decision Engine",
+  "title": "Cognitive Precision Logistics Decision Engine",
+  "description": "Cognitive decision engine that processes precision signals to drive logistics strategy with deep learning.",
+  "basic": "$278/month",
+  "pro": "$698/month",
+  "enterprise": "$2098/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Cognitive Precision Logistics Decision Engine - Zion Tech Group",
+    "description": "Cognitive decision engine that processes precision signals to drive logistics strategy with deep learning.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cognitive-precision-logistics-decision-engine-538d5de8"
+    }
+  },
+  "features": [
+    "Cognitive reasoning",
+    "Scenario analysis",
+    "Decision trees",
+    "Recommendation engine"
+  ],
+  "benefits": [
+    "Better decision quality",
+    "Reduced risk",
+    "Faster insights",
+    "Competitive intelligence"
+  ]
+}

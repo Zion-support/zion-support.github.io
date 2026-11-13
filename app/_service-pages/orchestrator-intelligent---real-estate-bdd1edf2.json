@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/orchestrator-intelligent---real-estate-bdd1edf2",
+  "breadcrumbTitle": "Orchestrator Intelligent - Real-Estate",
+  "title": "Orchestrator Intelligent - Real-Estate",
+  "description": "The future of real-estate is here with Orchestrator Intelligent - Real-Estate. Powered by cutting-edge AI, this platform delivers process automation like never ",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Orchestrator Intelligent - Real-Estate - Zion Tech Group",
+    "description": "The future of real-estate is here with Orchestrator Intelligent - Real-Estate. Powered by cutting-edge AI, this platform delivers process automation like never ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/orchestrator-intelligent---real-estate-bdd1edf2"
+    }
+  },
+  "features": [
+    "SOC 2 certified",
+    "Role-based access control",
+    "Comprehensive monitoring",
+    "Audit trails",
+    "Microservices deployment"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "Predictive maintenance scheduling",
+    "Cost optimization recommendations",
+    "Dynamic resource allocation",
+    "Self-healing infrastructure"
+  ]
+}

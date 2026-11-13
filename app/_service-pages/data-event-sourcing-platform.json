@@ -1,0 +1,28 @@
+{
+  "title": "Event Sourcing & CQRS Platform",
+  "description": "Append-only event log per aggregate, projection workers per read-model, snapshot compaction, and Kafka-compatible event bus.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Event Sourcing & CQRS Platform - Zion Tech Group",
+    "description": "Append-only event log per aggregate, projection workers per read-model, snapshot compaction, and Kafka-compatible event bus.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/data-event-sourcing-platform"
+    }
+  },
+  "features": [
+    "Append-only event log per aggregate ID",
+    "Projection worker auto-subscribes to topics",
+    "Snapshot compaction for long-lived aggregates",
+    "Read-model API (GraphQL/REST) per projection"
+  ],
+  "benefits": [
+    "Reduce costs with event sourcing & cqrs platform",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

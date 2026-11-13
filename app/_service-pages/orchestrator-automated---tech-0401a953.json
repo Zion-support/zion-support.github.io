@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/orchestrator-automated---tech-0401a953",
+  "breadcrumbTitle": "Orchestrator Automated - Tech",
+  "title": "Orchestrator Automated - Tech",
+  "description": "Revolutionize technology through intelligent automation. Our Orchestrator Automated - Tech leverages advanced machine learning to deliver workflow management at",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Orchestrator Automated - Tech - Zion Tech Group",
+    "description": "Revolutionize technology through intelligent automation. Our Orchestrator Automated - Tech leverages advanced machine learning to deliver workflow management at",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/orchestrator-automated---tech-0401a953"
+    }
+  },
+  "features": [
+    "GDPR compliance",
+    "Edge computing support",
+    "Role-based access control",
+    "Plugin architecture"
+  ],
+  "benefits": [
+    "Dynamic resource allocation",
+    "Real-time insights and alerts",
+    "Automated compliance reporting",
+    "Zero manual intervention required",
+    "3x faster decision making"
+  ]
+}

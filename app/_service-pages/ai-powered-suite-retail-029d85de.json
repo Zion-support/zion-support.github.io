@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/ai-powered-suite-retail-029d85de",
+  "breadcrumbTitle": "AI-Powered suite-retail",
+  "title": "AI-Powered suite-retail",
+  "description": "Transform your retail operations with our AI-Powered suite-retail. This AI-driven solution automates maintenance scheduling with unprecedented accuracy and effi",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI-Powered suite-retail - Zion Tech Group",
+    "description": "Transform your retail operations with our AI-Powered suite-retail. This AI-driven solution automates maintenance scheduling with unprecedented accuracy and effi",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-suite-retail-029d85de"
+    }
+  },
+  "features": [
+    "SOC 2 certified",
+    "Edge computing support",
+    "Data encryption",
+    "Multi-region deployment",
+    "Plugin architecture"
+  ],
+  "benefits": [
+    "Scalable to millions of transactions",
+    "Intelligent load balancing",
+    "Performance benchmarking",
+    "Enterprise-grade security",
+    "Seamless integration with existing systems"
+  ]
+}

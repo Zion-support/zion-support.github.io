@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/adaptive-insights-agriculture-1-2ae0648e",
+  "breadcrumbTitle": "Adaptive insights-agriculture #1",
+  "title": "Adaptive insights-agriculture #1",
+  "description": "Transform your agriculture operations with our Adaptive insights-agriculture #1. This AI-driven solution automates process automation with unprecedented accurac",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Adaptive insights-agriculture #1 - Zion Tech Group",
+    "description": "Transform your agriculture operations with our Adaptive insights-agriculture #1. This AI-driven solution automates process automation with unprecedented accurac",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/adaptive-insights-agriculture-1-2ae0648e"
+    }
+  },
+  "features": [
+    "Role-based access control",
+    "Rollback mechanisms",
+    "Data encryption",
+    "Audit trails",
+    "Offline capabilities"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Automated compliance reporting",
+    "ROI in under 90 days",
+    "Intelligent load balancing"
+  ]
+}

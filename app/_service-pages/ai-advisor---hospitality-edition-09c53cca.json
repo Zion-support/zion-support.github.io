@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/ai-advisor---hospitality-edition-09c53cca",
+  "breadcrumbTitle": "AI Advisor - Hospitality Edition",
+  "title": "AI Advisor - Hospitality Edition",
+  "description": "Revolutionize hospitality through intelligent automation. Our AI Advisor - Hospitality Edition leverages advanced machine learning to deliver performance monito",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Advisor - Hospitality Edition - Zion Tech Group",
+    "description": "Revolutionize hospitality through intelligent automation. Our AI Advisor - Hospitality Edition leverages advanced machine learning to deliver performance monito",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-advisor---hospitality-edition-09c53cca"
+    }
+  },
+  "features": [
+    "Cloud-native architecture",
+    "API-first design",
+    "Mobile-responsive interface",
+    "GDPR compliance",
+    "Container orchestration"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "24/7 automated operations",
+    "50% reduction in operational costs",
+    "ROI in under 90 days",
+    "Predictive maintenance scheduling"
+  ]
+}

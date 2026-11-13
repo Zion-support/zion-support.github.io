@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/adaptive-analytics-hospitality-1580bab0",
+  "breadcrumbTitle": "Adaptive analytics-hospitality",
+  "title": "Adaptive analytics-hospitality",
+  "description": "The future of hospitality is here with Adaptive analytics-hospitality. Powered by cutting-edge AI, this platform delivers document processing like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Adaptive analytics-hospitality - Zion Tech Group",
+    "description": "The future of hospitality is here with Adaptive analytics-hospitality. Powered by cutting-edge AI, this platform delivers document processing like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/adaptive-analytics-hospitality-1580bab0"
+    }
+  },
+  "features": [
+    "Audit trails",
+    "API-first design",
+    "Machine learning integration",
+    "Container orchestration"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Predictive maintenance scheduling",
+    "Self-healing infrastructure",
+    "ROI in under 90 days"
+  ]
+}

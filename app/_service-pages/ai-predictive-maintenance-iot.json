@@ -1,0 +1,28 @@
+{
+  "title": "AI Predictive Maintenance for Industrial IoT",
+  "description": "Predict equipment failures before they happen. Ingests sensor data, identifies anomalies, triggers maintenance work orders. Reduces unplanned downtime by 60%.",
+  "basic": "$199/month",
+  "pro": "$599/month",
+  "enterprise": "$2499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Predictive Maintenance for Industrial IoT - Zion Tech Group",
+    "description": "Predict equipment failures before they happen. Ingests sensor data, identifies anomalies, triggers maintenance work orders. Reduces unplanned downtime by 60%.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-predictive-maintenance-iot"
+    }
+  },
+  "features": [
+    "Real-time sensor data ingestion",
+    "Failure prediction (7-30 day window)",
+    "Root cause analysis",
+    "Maintenance work order auto-generation",
+    "Remaining useful life estimates"
+  ],
+  "benefits": [
+    "Reduce unplanned downtime by 60%",
+    "Extend asset life by 25%",
+    "Cut maintenance costs by 30%"
+  ]
+}

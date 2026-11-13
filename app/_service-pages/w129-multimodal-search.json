@@ -1,0 +1,29 @@
+{
+  "title": "Multimodal AI Search",
+  "description": "Search across text, images, video, and audio with a single query. Powers next-generation enterprise search and discovery.",
+  "basic": "$N/A/month",
+  "pro": "$7997/month",
+  "enterprise": "$16997/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Multimodal AI Search - Zion Tech Group",
+    "description": "Search across text, images, video, and audio with a single query. Powers next-generation enterprise search and discovery.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w129-multimodal-search"
+    }
+  },
+  "features": [
+    "Text search",
+    "Image search",
+    "Video search",
+    "Audio search",
+    "Cross-modal retrieval"
+  ],
+  "benefits": [
+    "Find anything instantly",
+    "Unify siloed content",
+    "Better knowledge discovery",
+    "Improved productivity"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-platform-for-insurance-2eff30ad",
+  "breadcrumbTitle": "AI-Powered Platform for Insurance",
+  "title": "AI-Powered Platform for Insurance",
+  "description": "Next-generation insurance solution: AI-Powered Platform for Insurance. Combines document processing with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Platform for Insurance - Zion Tech Group",
+    "description": "Next-generation insurance solution: AI-Powered Platform for Insurance. Combines document processing with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-platform-for-insurance-2eff30ad"
+    }
+  },
+  "features": [
+    "Performance dashboards",
+    "Auto-scaling capabilities",
+    "HIPAA ready",
+    "Serverless functions",
+    "Alerting system"
+  ],
+  "benefits": [
+    "Intelligent load balancing",
+    "Automated compliance reporting",
+    "3x faster decision making"
+  ]
+}

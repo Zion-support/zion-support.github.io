@@ -1,0 +1,29 @@
+{
+  "title": "AI Video Content Intelligence Platform",
+  "description": "Analyze video content at scale with scene detection, object recognition, transcription, sentiment analysis, and content moderation. Generate highlights, chapters, and searchable metadata for video libraries.",
+  "basic": "$499/mo/month",
+  "pro": "$1,499/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Video Content Intelligence Platform - Zion Tech Group",
+    "description": "Analyze video content at scale with scene detection, object recognition, transcription, sentiment analysis, and content moderation. Generate highlights, chapter",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-video-content-intelligence"
+    }
+  },
+  "features": [
+    "Automatic scene detection and chaptering",
+    "Object and face recognition",
+    "Multi-language transcription and translation",
+    "Content moderation and brand safety",
+    "Sentiment and emotion analysis"
+  ],
+  "benefits": [
+    "Make video libraries fully searchable",
+    "Automate content moderation",
+    "Increase content discoverability",
+    "Reduce manual video editing time"
+  ]
+}

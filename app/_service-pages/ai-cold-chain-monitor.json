@@ -1,0 +1,28 @@
+{
+  "title": "AI Cold Chain Monitoring for Pharmaceuticals",
+  "description": "IoT + AI for pharma cold chain: real-time temperature monitoring, excursion prediction, compliance reporting (GDP/FDA), and automated corrective actions. Prevents $35B in annual spoilage.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Cold Chain Monitoring for Pharmaceuticals - Zion Tech Group",
+    "description": "IoT + AI for pharma cold chain: real-time temperature monitoring, excursion prediction, compliance reporting (GDP/FDA), and automated corrective actions. Preven",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-cold-chain-monitor"
+    }
+  },
+  "features": [
+    "Real-time temperature/humidity monitoring",
+    "Excursion prediction (30-min advance)",
+    "Automated corrective actions",
+    "FDA 21 CFR Part 11 compliance",
+    "GDP documentation auto-generation"
+  ],
+  "benefits": [
+    "Prevent spoilage 30 min early",
+    "Full FDA/GDP compliance",
+    "Save millions in recalled products"
+  ]
+}

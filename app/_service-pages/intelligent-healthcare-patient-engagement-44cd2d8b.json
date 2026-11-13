@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-healthcare-patient-engagement-44cd2d8b",
+  "breadcrumbTitle": "Intelligent Healthcare Patient Engagement",
+  "title": "Intelligent Healthcare Patient Engagement",
+  "description": "AI-driven patient engagement platform that delivers enterprise-grade personalized care journeys, remote monitoring, and adherence support through intelligent au",
+  "basic": "$258/month",
+  "pro": "$648/month",
+  "enterprise": "$1948/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Intelligent Healthcare Patient Engagement - Zion Tech Group",
+    "description": "AI-driven patient engagement platform that delivers enterprise-grade personalized care journeys, remote monitoring, and adherence support through intelligent au",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-healthcare-patient-engagement-44cd2d8b"
+    }
+  },
+  "features": [
+    "Personalized care plans",
+    "Remote monitoring",
+    "Medication adherence",
+    "Virtual consultations"
+  ],
+  "benefits": [
+    "Better outcomes",
+    "Higher satisfaction",
+    "Reduced readmissions",
+    "Lower costs"
+  ]
+}

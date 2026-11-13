@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-generator---real-estate-edition-1-a65efc37",
+  "breadcrumbTitle": "AI Generator - Real Estate Edition #1",
+  "title": "AI Generator - Real Estate Edition #1",
+  "description": "Revolutionize Real Estate through intelligent automation. Our AI Generator - Real Estate Edition #1 leverages advanced machine learning to deliver customer jour",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Generator - Real Estate Edition #1 - Zion Tech Group",
+    "description": "Revolutionize Real Estate through intelligent automation. Our AI Generator - Real Estate Edition #1 leverages advanced machine learning to deliver customer jour",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-generator---real-estate-edition-1-a65efc37"
+    }
+  },
+  "features": [
+    "Process discovery with activity analysis",
+    "Fraud detection with anomaly analysis",
+    "Automation opportunity identification",
+    "A/B testing framework for continuous optimization",
+    "Document processing with OCR and NLP"
+  ],
+  "benefits": [
+    "Better customer experience with personalization",
+    "Improved quality with automated testing and validation",
+    "Reduced shipping costs with route optimization",
+    "Better inventory management with demand forecasting"
+  ]
+}

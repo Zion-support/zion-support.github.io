@@ -1,0 +1,29 @@
+{
+  "title": "AWS Serverless Migration",
+  "description": "Migrate EC2/S3 apps to serverless: Lambda + API Gateway + DynamoDB event-driven. Schema migration dual-write zero-downtime cutover — saves compute costs 60-80%.",
+  "basic": "$29/mo/month",
+  "pro": "$149/mo/month",
+  "enterprise": "$499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AWS Serverless Migration - Zion Tech Group",
+    "description": "Migrate EC2/S3 apps to serverless: Lambda + API Gateway + DynamoDB event-driven. Schema migration dual-write zero-downtime cutover — saves compute costs 60-80%.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/aws-serverless-migration"
+    }
+  },
+  "features": [
+    "Event-driven refactoring (SNS/SQS/Lambda)",
+    "DynamoDB single-table pattern design",
+    "Lambda cold-start + provisioned concurrency",
+    "Dual-write validation during migration window",
+    "RTO/RPO dashboard per migrated workload"
+  ],
+  "benefits": [
+    "Reduce costs with aws serverless migration",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

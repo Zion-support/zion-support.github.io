@@ -1,0 +1,29 @@
+{
+  "title": "Penetration Testing & Vulnerability Assessment",
+  "description": "Comprehensive security testing — network, web application, API, and social engineering assessments with detailed remediation reports and retesting.",
+  "basic": "$1,999/mo/month",
+  "pro": "$4,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Penetration Testing & Vulnerability Assessment - Zion Tech Group",
+    "description": "Comprehensive security testing — network, web application, API, and social engineering assessments with detailed remediation reports and retesting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-penetration-testing"
+    }
+  },
+  "features": [
+    "Black-box and white-box penetration testing",
+    "Web application and API security testing",
+    "Social engineering and phishing simulations",
+    "Wireless and network infrastructure testing",
+    "Detailed remediation reports with retesting"
+  ],
+  "benefits": [
+    "Reduce costs with penetration testing & vulnerability assessment",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

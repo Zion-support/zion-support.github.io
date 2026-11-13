@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/self-optimizing-sales-automation-7d49120f",
+  "breadcrumbTitle": "Self-Optimizing Sales Automation",
+  "title": "Self-Optimizing Sales Automation",
+  "description": "The future of hospitality is here with Self-Optimizing Sales Automation. Powered by cutting-edge AI, this platform delivers financial planning like never before",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Self-Optimizing Sales Automation - Zion Tech Group",
+    "description": "The future of hospitality is here with Self-Optimizing Sales Automation. Powered by cutting-edge AI, this platform delivers financial planning like never before",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/self-optimizing-sales-automation-7d49120f"
+    }
+  },
+  "features": [
+    "Rollback mechanisms",
+    "Data encryption",
+    "Auto-scaling capabilities",
+    "SOC 2 certified",
+    "Plugin architecture"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "50% reduction in operational costs",
+    "ROI in under 90 days"
+  ]
+}

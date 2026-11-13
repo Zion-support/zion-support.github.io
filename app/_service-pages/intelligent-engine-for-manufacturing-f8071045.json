@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-engine-for-manufacturing-f8071045",
+  "breadcrumbTitle": "Intelligent Engine for Manufacturing",
+  "title": "Intelligent Engine for Manufacturing",
+  "description": "Unlock unprecedented growth with Intelligent Engine for Manufacturing. This autonomous system provides maintenance scheduling with zero manual intervention need",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Engine for Manufacturing - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Intelligent Engine for Manufacturing. This autonomous system provides maintenance scheduling with zero manual intervention need",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-engine-for-manufacturing-f8071045"
+    }
+  },
+  "features": [
+    "Real-time processing",
+    "Edge computing support",
+    "Machine learning integration",
+    "Serverless functions"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "Real-time insights and alerts",
+    "Seamless integration with existing systems",
+    "ROI in under 90 days"
+  ]
+}

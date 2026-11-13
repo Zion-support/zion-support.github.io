@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-automated-code-generation-e10d1c8a",
+  "breadcrumbTitle": "AI-Powered Automated Code Generation",
+  "title": "AI-Powered Automated Code Generation",
+  "description": "Advanced code generation system that produces automated software solutions from natural language descriptions.",
+  "basic": "$258/month",
+  "pro": "$648/month",
+  "enterprise": "$1948/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Automated Code Generation - Zion Tech Group",
+    "description": "Advanced code generation system that produces automated software solutions from natural language descriptions.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-automated-code-generation-e10d1c8a"
+    }
+  },
+  "features": [
+    "Multi-language support",
+    "Code optimization",
+    "Security scanning",
+    "Documentation generation"
+  ],
+  "benefits": [
+    "10x faster development",
+    "Reduced bugs",
+    "Improved quality",
+    "Enhanced security"
+  ]
+}

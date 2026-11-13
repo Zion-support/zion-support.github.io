@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-healthcare-matchmaking-engine-05358e56",
+  "breadcrumbTitle": "Intelligent Healthcare Matchmaking Engine",
+  "title": "Intelligent Healthcare Matchmaking Engine",
+  "description": "AI-driven matchmaking system that creates adaptive player matches based on skill, playstyle, and behavioral patterns for optimal gaming experiences.",
+  "basic": "$258/month",
+  "pro": "$648/month",
+  "enterprise": "$1948/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Intelligent Healthcare Matchmaking Engine - Zion Tech Group",
+    "description": "AI-driven matchmaking system that creates adaptive player matches based on skill, playstyle, and behavioral patterns for optimal gaming experiences.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-healthcare-matchmaking-engine-05358e56"
+    }
+  },
+  "features": [
+    "Skill-based matching",
+    "Latency optimization",
+    "Fair play detection",
+    "Dynamic balancing"
+  ],
+  "benefits": [
+    "Better player experience",
+    "Reduced toxicity",
+    "Higher engagement",
+    "Longer sessions"
+  ]
+}

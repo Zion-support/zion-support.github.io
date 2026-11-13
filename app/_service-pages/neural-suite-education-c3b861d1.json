@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/neural-suite-education-c3b861d1",
+  "breadcrumbTitle": "Neural suite-education",
+  "title": "Neural suite-education",
+  "description": "Transform your education operations with our Neural suite-education. This AI-driven solution automates process automation with unprecedented accuracy and effici",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Neural suite-education - Zion Tech Group",
+    "description": "Transform your education operations with our Neural suite-education. This AI-driven solution automates process automation with unprecedented accuracy and effici",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/neural-suite-education-c3b861d1"
+    }
+  },
+  "features": [
+    "Auto-scaling capabilities",
+    "Offline capabilities",
+    "Multi-region deployment",
+    "Role-based access control"
+  ],
+  "benefits": [
+    "Cost optimization recommendations",
+    "Seamless integration with existing systems",
+    "Intelligent load balancing"
+  ]
+}

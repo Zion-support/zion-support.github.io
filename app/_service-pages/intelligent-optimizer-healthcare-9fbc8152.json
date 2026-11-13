@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/intelligent-optimizer-healthcare-9fbc8152",
+  "breadcrumbTitle": "Intelligent optimizer-healthcare",
+  "title": "Intelligent optimizer-healthcare",
+  "description": "Transform your healthcare operations with our Intelligent optimizer-healthcare. This AI-driven solution automates resource optimization with unprecedented accur",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent optimizer-healthcare - Zion Tech Group",
+    "description": "Transform your healthcare operations with our Intelligent optimizer-healthcare. This AI-driven solution automates resource optimization with unprecedented accur",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-optimizer-healthcare-9fbc8152"
+    }
+  },
+  "features": [
+    "Edge computing support",
+    "Custom integrations",
+    "Mobile-responsive interface",
+    "Auto-scaling capabilities"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "Automated compliance reporting",
+    "Self-healing infrastructure"
+  ]
+}

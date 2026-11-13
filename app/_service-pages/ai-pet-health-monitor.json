@@ -1,0 +1,28 @@
+{
+  "title": "AI Pet Health & Behavior Monitor",
+  "description": "Computer vision + wearable data for pet health: activity tracking, anomaly detection, breed-specific health risk scoring, and vet telemedicine integration. iOS + Android apps.",
+  "basic": "$4.99/pet/month",
+  "pro": "$9.99/pet/month",
+  "enterprise": "$19.99/pet/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Pet Health & Behavior Monitor - Zion Tech Group",
+    "description": "Computer vision + wearable data for pet health: activity tracking, anomaly detection, breed-specific health risk scoring, and vet telemedicine integration. iOS ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-pet-health-monitor"
+    }
+  },
+  "features": [
+    "Activity & sleep tracking",
+    "Behavior anomaly detection",
+    "Breed-specific health risk scoring",
+    "Vet telemedicine integration",
+    "Diet & nutrition recommendations"
+  ],
+  "benefits": [
+    "Detect illness 3 days early",
+    "Personalized pet nutrition",
+    "Connect with vets instantly"
+  ]
+}

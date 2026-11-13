@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/suite-automated---sports-49a98c72",
+  "breadcrumbTitle": "Suite Automated - Sports",
+  "title": "Suite Automated - Sports",
+  "description": "Unlock unprecedented growth with Suite Automated - Sports. This autonomous system provides threat detection with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Suite Automated - Sports - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Suite Automated - Sports. This autonomous system provides threat detection with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/suite-automated---sports-49a98c72"
+    }
+  },
+  "features": [
+    "Offline capabilities",
+    "Multi-language support",
+    "Auto-scaling capabilities",
+    "Audit trails",
+    "Container orchestration"
+  ],
+  "benefits": [
+    "24/7 automated operations",
+    "Dynamic resource allocation",
+    "Performance benchmarking"
+  ]
+}

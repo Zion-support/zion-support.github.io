@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/cognitive-resilient-non-profit-decision-engine-dc124e21",
+  "breadcrumbTitle": "Cognitive Resilient Non-Profit Decision Engine",
+  "title": "Cognitive Resilient Non-Profit Decision Engine",
+  "description": "Cognitive decision engine that processes resilient signals to drive non-profit strategy with deep learning.",
+  "basic": "$278/month",
+  "pro": "$698/month",
+  "enterprise": "$2098/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Cognitive Resilient Non-Profit Decision Engine - Zion Tech Group",
+    "description": "Cognitive decision engine that processes resilient signals to drive non-profit strategy with deep learning.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cognitive-resilient-non-profit-decision-engine-dc124e21"
+    }
+  },
+  "features": [
+    "Cognitive reasoning",
+    "Scenario analysis",
+    "Decision trees",
+    "Recommendation engine"
+  ],
+  "benefits": [
+    "Better decision quality",
+    "Reduced risk",
+    "Faster insights",
+    "Competitive intelligence"
+  ]
+}

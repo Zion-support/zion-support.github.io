@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-hyper-local-iot-intelligence-c8830726",
+  "breadcrumbTitle": "AI-Powered Hyper-Local IoT Intelligence",
+  "title": "AI-Powered Hyper-Local IoT Intelligence",
+  "description": "Edge AI platform that processes IoT sensor data in real-time with hyper-local insights.",
+  "basic": "$258/month",
+  "pro": "$648/month",
+  "enterprise": "$1948/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Hyper-Local IoT Intelligence - Zion Tech Group",
+    "description": "Edge AI platform that processes IoT sensor data in real-time with hyper-local insights.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-hyper-local-iot-intelligence-c8830726"
+    }
+  },
+  "features": [
+    "Edge processing",
+    "Real-time analytics",
+    "Automated responses",
+    "Energy efficiency"
+  ],
+  "benefits": [
+    "Reduced latency",
+    "Better insights",
+    "Automated responses",
+    "Energy efficiency"
+  ]
+}

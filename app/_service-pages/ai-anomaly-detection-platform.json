@@ -1,0 +1,30 @@
+{
+  "title": "Real-Time Anomaly Detection Platform",
+  "description": "AI-powered anomaly detection for metrics, logs, and events. Unsupervised learning, adaptive thresholds, root cause analysis, and automated alerting across your entire stack.",
+  "basic": "$499/mo/month",
+  "pro": "$1,799/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Real-Time Anomaly Detection Platform - Zion Tech Group",
+    "description": "AI-powered anomaly detection for metrics, logs, and events. Unsupervised learning, adaptive thresholds, root cause analysis, and automated alerting across your ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-anomaly-detection-platform"
+    }
+  },
+  "features": [
+    "Unsupervised learning",
+    "Adaptive thresholds",
+    "Root cause analysis",
+    "Automated alerting",
+    "Multi-source ingestion"
+  ],
+  "benefits": [
+    "90% fewer false positives",
+    "Detect unknown unknowns",
+    "Root cause in seconds",
+    "Adaptive learning",
+    "Multi-source correlation"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-education-patient-engagement-a18e26de",
+  "breadcrumbTitle": "Intelligent Education Patient Engagement",
+  "title": "Intelligent Education Patient Engagement",
+  "description": "AI-driven patient engagement platform that delivers insightful personalized care journeys, remote monitoring, and adherence support through intelligent automati",
+  "basic": "$258/month",
+  "pro": "$648/month",
+  "enterprise": "$1948/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Intelligent Education Patient Engagement - Zion Tech Group",
+    "description": "AI-driven patient engagement platform that delivers insightful personalized care journeys, remote monitoring, and adherence support through intelligent automati",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-education-patient-engagement-a18e26de"
+    }
+  },
+  "features": [
+    "Personalized care plans",
+    "Remote monitoring",
+    "Medication adherence",
+    "Virtual consultations"
+  ],
+  "benefits": [
+    "Better outcomes",
+    "Higher satisfaction",
+    "Reduced readmissions",
+    "Lower costs"
+  ]
+}

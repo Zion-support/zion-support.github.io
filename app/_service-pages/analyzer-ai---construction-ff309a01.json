@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/analyzer-ai---construction-ff309a01",
+  "breadcrumbTitle": "Analyzer AI - Construction",
+  "title": "Analyzer AI - Construction",
+  "description": "Revolutionize construction through intelligent automation. Our Analyzer AI - Construction leverages advanced machine learning to deliver quality control at scal",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Analyzer AI - Construction - Zion Tech Group",
+    "description": "Revolutionize construction through intelligent automation. Our Analyzer AI - Construction leverages advanced machine learning to deliver quality control at scal",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/analyzer-ai---construction-ff309a01"
+    }
+  },
+  "features": [
+    "Edge computing support",
+    "Microservices deployment",
+    "Custom integrations",
+    "Performance dashboards",
+    "Data encryption"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Performance benchmarking",
+    "Self-healing infrastructure",
+    "Seamless integration with existing systems"
+  ]
+}

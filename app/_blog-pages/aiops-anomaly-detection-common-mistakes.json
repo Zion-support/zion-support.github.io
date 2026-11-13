@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "AIOps Anomaly Detection: common mistakes | Zion Tech Group",
+    "description": "AIOps Anomaly Detection: common mistakes",
+    "keywords": [
+      "it",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "AIOps Anomaly Detection: common mistakes",
+      "description": "AIOps Anomaly Detection: common mistakes",
+      "url": "https://ziontechgroup.com/blog/aiops-anomaly-detection-common-mistakes/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/aiops-anomaly-detection-common-mistakes/"
+    }
+  },
+  "values": [
+    "AIOps Anomaly Detection: common mistakes",
+    "AIOps Anomaly Detection: common mistakes",
+    "AIOps Anomaly Detection: common mistakes",
+    "Outcomes to measure",
+    "Leading indicators for aiops anomaly detection: common mistakes: workflow completion rate, escalation rate, time-to-resolution, and user satisfaction. Lagging indicators: revenue trend, cost trend, customer retention, and operational efficiency. Track both leading and lagging indicators so you can explain progress to leadership before financial results appear. Use a rolling 90-day window and re-baseline monthly; this keeps the program accountable without demanding perfection on day one. Publish metrics in a shared dashboard so the whole team sees progress, not just the program sponsor.",
+    "Outcomes to measure",
+    " Leading indicators for aiops anomaly detection: common mistakes: workflow completion rate, escalation rate, time-to-resolution, and user satisfaction. Lagging indicators: revenue trend, cost trend, customer retention, and operational efficiency. Track both leading and lagging indicators so you can explain progress to leadership before financial results appear. Use a rolling 90-day window and re-baseline monthly; this keeps the program accountable without demanding perfection on day one. Publish metrics in a shared dashboard so the whole team sees progress, not just the program sponsor.",
+    "/blog/data-analytics-platform-operations-handbook",
+    "Data Analytics Platform Operations Handbook",
+    "/blog/event-driven-architecture-2026-6823",
+    "Event Driven Architecture 2026 6823",
+    "/blog/event-driven-architecture-vendor-evaluation",
+    "Event Driven Architecture Vendor Evaluation",
+    "/blog/ai-agentic-workflows-2026-7000",
+    "Ai Agentic Workflows 2026 7000"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "AIOps Anomaly Detection: common mistakes",
+    "description": "AIOps Anomaly Detection: common mistakes",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T04:52:28Z",
+    "dateModified": "2026-08-07T04:52:28Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/aiops-anomaly-detection-common-mistakes/"
+  }
+}

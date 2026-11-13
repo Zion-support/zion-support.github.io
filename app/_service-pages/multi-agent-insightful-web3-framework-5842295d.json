@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/multi-agent-insightful-web3-framework-5842295d",
+  "breadcrumbTitle": "Multi-Agent Insightful Web3 Framework",
+  "title": "Multi-Agent Insightful Web3 Framework",
+  "description": "Multi-agent framework that deploys insightful web3 AI agents for collaborative problem-solving and distributed intelligence.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Multi-Agent Insightful Web3 Framework - Zion Tech Group",
+    "description": "Multi-agent framework that deploys insightful web3 AI agents for collaborative problem-solving and distributed intelligence.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/multi-agent-insightful-web3-framework-5842295d"
+    }
+  },
+  "features": [
+    "Collaborative agents",
+    "Shared memory pools",
+    "Role assignment",
+    "Emergent coordination"
+  ],
+  "benefits": [
+    "Multi-task parallelism",
+    "Specialist agents",
+    "Knowledge sharing",
+    "Emergent problem-solving"
+  ]
+}

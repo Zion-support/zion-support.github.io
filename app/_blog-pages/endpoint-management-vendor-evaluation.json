@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "Endpoint Management: vendor evaluation | Zion Tech Group",
+    "description": "Endpoint Management: vendor evaluation",
+    "keywords": [
+      "it",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "Endpoint Management: vendor evaluation",
+      "description": "Endpoint Management: vendor evaluation",
+      "url": "https://ziontechgroup.com/blog/endpoint-management-vendor-evaluation/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/endpoint-management-vendor-evaluation/"
+    }
+  },
+  "values": [
+    "Endpoint Management: vendor evaluation",
+    "Endpoint Management: vendor evaluation",
+    "Endpoint Management: vendor evaluation",
+    "Conversion path",
+    "If this guide matches your endpoint management: vendor evaluation initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "Conversion path",
+    " If this guide matches your endpoint management: vendor evaluation initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "/blog/ai-observability-2026-6565",
+    "Ai Observability 2026 6565",
+    "/blog/ai-powered-customer-success-reducing-churn-and-driving-expansion",
+    "Ai Powered Customer Success Reducing Churn And Driving Expansion",
+    "/blog/edge-computing-deployment-2026-6888",
+    "Edge Computing Deployment 2026 6888",
+    "/blog/micro-saas-ai-translation-engine-2026-7057",
+    "Micro Saas Ai Translation Engine 2026 7057"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Endpoint Management: vendor evaluation",
+    "description": "Endpoint Management: vendor evaluation",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T04:51:56Z",
+    "dateModified": "2026-08-07T04:51:56Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/endpoint-management-vendor-evaluation/"
+  }
+}

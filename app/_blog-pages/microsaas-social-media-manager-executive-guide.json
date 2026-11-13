@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "MicroSaaS Social Media Manager: executive guide | Zion Tech Group",
+    "description": "MicroSaaS Social Media Manager: executive guide",
+    "keywords": [
+      "ai",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "MicroSaaS Social Media Manager: executive guide",
+      "description": "MicroSaaS Social Media Manager: executive guide",
+      "url": "https://ziontechgroup.com/blog/microsaas-social-media-manager-executive-guide/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/microsaas-social-media-manager-executive-guide/"
+    }
+  },
+  "values": [
+    "MicroSaaS Social Media Manager: executive guide",
+    "MicroSaaS Social Media Manager: executive guide",
+    "MicroSaaS Social Media Manager: executive guide",
+    "Next actions",
+    "Review your highest-friction workflow, contact Zion Tech Group for a scoped pilot, and start with one measurable outcome. Set a 30-day review date, define success metrics, assign an owner, and document rollback criteria before expanding. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan. The organizations that move fastest in 2026 are the ones that combine clear intent with disciplined execution.",
+    "Next actions",
+    " Review your highest-friction workflow, contact Zion Tech Group for a scoped pilot, and start with one measurable outcome. Set a 30-day review date, define success metrics, assign an owner, and document rollback criteria before expanding. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan. The organizations that move fastest in 2026 are the ones that combine clear intent with disciplined execution.",
+    "/blog/smart-contract-audit-2026-6686",
+    "Smart Contract Audit 2026 6686",
+    "/blog/enterprise-backup-dr-2026-6683",
+    "Enterprise Backup Dr 2026 6683",
+    "/blog/devops-gen-ai-cicd-2026-7162",
+    "Devops Gen Ai Cicd 2026 7162",
+    "/blog/api-performance-testing-2026-6553",
+    "Api Performance Testing 2026 6553"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "MicroSaaS Social Media Manager: executive guide",
+    "description": "MicroSaaS Social Media Manager: executive guide",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T04:51:23Z",
+    "dateModified": "2026-08-07T04:51:23Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/microsaas-social-media-manager-executive-guide/"
+  }
+}

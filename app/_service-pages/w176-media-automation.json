@@ -1,0 +1,29 @@
+{
+  "title": "Media & Publishing Automation",
+  "description": "Automate media and publishing: content workflow, distribution, rights management, ad operations, and analytics across print and digital.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Media & Publishing Automation - Zion Tech Group",
+    "description": "Automate media and publishing: content workflow, distribution, rights management, ad operations, and analytics across print and digital.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w176-media-automation"
+    }
+  },
+  "features": [
+    "Content workflow and editorial automation",
+    "Multi-channel distribution (web, app, print, email)",
+    "Rights and licensing management",
+    "Ad operations and inventory optimization",
+    "Subscription and paywall management"
+  ],
+  "benefits": [
+    "Editorial workflow from draft to publish, automated",
+    "Multi-channel distribution from single content",
+    "Rights management prevents legal issues",
+    "Ad ops optimization increases revenue"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/management-autonomous---hospitality-1-721b1b46",
+  "breadcrumbTitle": "Management Autonomous - Hospitality #1",
+  "title": "Management Autonomous - Hospitality #1",
+  "description": "Unlock unprecedented growth with Management Autonomous - Hospitality #1. This autonomous system provides fraud prevention with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Management Autonomous - Hospitality #1 - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Management Autonomous - Hospitality #1. This autonomous system provides fraud prevention with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/management-autonomous---hospitality-1-721b1b46"
+    }
+  },
+  "features": [
+    "SOC 2 certified",
+    "Plugin architecture",
+    "Open-source friendly",
+    "Edge computing support",
+    "Custom integrations"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Real-time insights and alerts",
+    "3x faster decision making",
+    "Seamless integration with existing systems",
+    "24/7 automated operations"
+  ]
+}

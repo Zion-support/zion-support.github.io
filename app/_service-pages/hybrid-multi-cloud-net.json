@@ -1,0 +1,29 @@
+{
+  "title": "Hybrid Multi-Cloud Networking",
+  "description": "Unified networking across private DC + public clouds: VPC peering, VPN/Direct Connect/Interconnect, centralized routing, cloud firewall, Istio/Linkerd cross-cloud mesh.",
+  "basic": "$99/mo/month",
+  "pro": "$349/mo/month",
+  "enterprise": "$1,299/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Hybrid Multi-Cloud Networking - Zion Tech Group",
+    "description": "Unified networking across private DC + public clouds: VPC peering, VPN/Direct Connect/Interconnect, centralized routing, cloud firewall, Istio/Linkerd cross-clo",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/hybrid-multi-cloud-net"
+    }
+  },
+  "features": [
+    "Cross-cloud VPC peering + VPN mesh",
+    "Transit Gateway/Cloud Router centralized routing",
+    "Cloud firewall + centralized egress",
+    "Istio/Linkerd cross-cloud service mesh",
+    "Centralized observability per cross-cloud request"
+  ],
+  "benefits": [
+    "Reduce costs with hybrid multi-cloud networking",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

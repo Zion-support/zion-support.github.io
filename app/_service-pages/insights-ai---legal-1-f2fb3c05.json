@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/insights-ai---legal-1-f2fb3c05",
+  "breadcrumbTitle": "Insights AI - Legal #1",
+  "title": "Insights AI - Legal #1",
+  "description": "Unlock unprecedented growth with Insights AI - Legal #1. This autonomous system provides energy management with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Insights AI - Legal #1 - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Insights AI - Legal #1. This autonomous system provides energy management with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/insights-ai---legal-1-f2fb3c05"
+    }
+  },
+  "features": [
+    "Mobile-responsive interface",
+    "Audit trails",
+    "Rollback mechanisms",
+    "Zero-downtime updates",
+    "Container orchestration"
+  ],
+  "benefits": [
+    "Seamless integration with existing systems",
+    "3x faster decision making",
+    "ROI in under 90 days",
+    "Reduced human error by 95%"
+  ]
+}

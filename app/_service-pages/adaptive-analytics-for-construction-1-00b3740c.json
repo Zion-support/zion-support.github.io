@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/adaptive-analytics-for-construction-1-00b3740c",
+  "breadcrumbTitle": "Adaptive Analytics for Construction #1",
+  "title": "Adaptive Analytics for Construction #1",
+  "description": "Next-generation construction solution: Adaptive Analytics for Construction #1. Combines image recognition with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Adaptive Analytics for Construction #1 - Zion Tech Group",
+    "description": "Next-generation construction solution: Adaptive Analytics for Construction #1. Combines image recognition with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/adaptive-analytics-for-construction-1-00b3740c"
+    }
+  },
+  "features": [
+    "Rollback mechanisms",
+    "Role-based access control",
+    "Real-time processing",
+    "Performance dashboards",
+    "Audit trails"
+  ],
+  "benefits": [
+    "Automated compliance reporting",
+    "ROI in under 90 days",
+    "Self-healing infrastructure"
+  ]
+}

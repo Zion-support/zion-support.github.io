@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/intelligent-generator-telecom-08cc00bc",
+  "breadcrumbTitle": "Intelligent generator-telecom",
+  "title": "Intelligent generator-telecom",
+  "description": "Next-generation telecom solution: Intelligent generator-telecom. Combines threat detection with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent generator-telecom - Zion Tech Group",
+    "description": "Next-generation telecom solution: Intelligent generator-telecom. Combines threat detection with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-generator-telecom-08cc00bc"
+    }
+  },
+  "features": [
+    "Container orchestration",
+    "Mobile-responsive interface",
+    "Data encryption",
+    "Real-time processing"
+  ],
+  "benefits": [
+    "Cost optimization recommendations",
+    "Real-time insights and alerts",
+    "Performance benchmarking"
+  ]
+}

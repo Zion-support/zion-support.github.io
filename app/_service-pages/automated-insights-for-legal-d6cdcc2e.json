@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/automated-insights-for-legal-d6cdcc2e",
+  "breadcrumbTitle": "Automated Insights for Legal",
+  "title": "Automated Insights for Legal",
+  "description": "Next-generation legal solution: Automated Insights for Legal. Combines image recognition with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated Insights for Legal - Zion Tech Group",
+    "description": "Next-generation legal solution: Automated Insights for Legal. Combines image recognition with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-insights-for-legal-d6cdcc2e"
+    }
+  },
+  "features": [
+    "Data encryption",
+    "Offline capabilities",
+    "Performance dashboards",
+    "HIPAA ready"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Reduced human error by 95%",
+    "50% reduction in operational costs",
+    "Zero manual intervention required"
+  ]
+}

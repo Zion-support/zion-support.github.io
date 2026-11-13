@@ -1,0 +1,29 @@
+{
+  "title": "AI Precision Agriculture & Crop Management",
+  "description": "AI-powered precision agriculture platform using satellite imagery, drone data, and IoT sensors to optimize crop yields and reduce resource waste.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Precision Agriculture & Crop Management - Zion Tech Group",
+    "description": "AI-powered precision agriculture platform using satellite imagery, drone data, and IoT sensors to optimize crop yields and reduce resource waste.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-precision-agriculture"
+    }
+  },
+  "features": [
+    "Satellite and drone crop health monitoring",
+    "Soil moisture and nutrient analysis",
+    "Pest and disease early detection",
+    "Irrigation optimization",
+    "Yield prediction models"
+  ],
+  "benefits": [
+    "Increase crop yields by 20%",
+    "Reduce water usage by 30%",
+    "Minimize pesticide use",
+    "Improve sustainability metrics"
+  ]
+}

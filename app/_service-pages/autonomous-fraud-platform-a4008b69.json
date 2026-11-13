@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/autonomous-fraud-platform-a4008b69",
+  "breadcrumbTitle": "Autonomous Fraud Platform",
+  "title": "Autonomous Fraud Platform",
+  "description": "The future of hospitality is here with Autonomous Fraud Platform. Powered by cutting-edge AI, this platform delivers risk assessment like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous Fraud Platform - Zion Tech Group",
+    "description": "The future of hospitality is here with Autonomous Fraud Platform. Powered by cutting-edge AI, this platform delivers risk assessment like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-fraud-platform-a4008b69"
+    }
+  },
+  "features": [
+    "Alerting system",
+    "Offline capabilities",
+    "Role-based access control",
+    "GDPR compliance",
+    "API-first design"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Intelligent load balancing",
+    "ROI in under 90 days",
+    "Cost optimization recommendations",
+    "Reduced human error by 95%"
+  ]
+}

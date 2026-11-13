@@ -1,0 +1,29 @@
+{
+  "title": "FileForge — File Conversion & Processing",
+  "description": "Universal file conversion API: PDF, Office, images, CAD, video, audio. Batch processing, OCR, compression, and watermarking. 200+ format pairs.",
+  "basic": "$19/mo/month",
+  "pro": "$59/mo/month",
+  "enterprise": "$199/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "FileForge — File Conversion & Processing - Zion Tech Group",
+    "description": "Universal file conversion API: PDF, Office, images, CAD, video, audio. Batch processing, OCR, compression, and watermarking. 200+ format pairs.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w174-fileforge"
+    }
+  },
+  "features": [
+    "200+ format conversion pairs",
+    "PDF merge, split, watermark, OCR",
+    "Image resize, compress, convert, watermark",
+    "Video/audio transcode and thumbnail",
+    "Batch processing with webhook completion"
+  ],
+  "benefits": [
+    "Convert any file format instantly",
+    "Batch processing handles millions of files",
+    "OCR extracts text from any document",
+    "CDN-backed delivery is globally fast"
+  ]
+}

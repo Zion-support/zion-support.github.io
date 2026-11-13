@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/optimization-ai---insurance-6d215af7",
+  "breadcrumbTitle": "Optimization AI - Insurance",
+  "title": "Optimization AI - Insurance",
+  "description": "Transform your insurance operations with our Optimization AI - Insurance. This AI-driven solution automates workflow management with unprecedented accuracy and ",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Optimization AI - Insurance - Zion Tech Group",
+    "description": "Transform your insurance operations with our Optimization AI - Insurance. This AI-driven solution automates workflow management with unprecedented accuracy and ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/optimization-ai---insurance-6d215af7"
+    }
+  },
+  "features": [
+    "Custom integrations",
+    "Data encryption",
+    "Serverless functions",
+    "SOC 2 certified"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Dynamic resource allocation",
+    "50% reduction in operational costs",
+    "24/7 automated operations",
+    "Self-healing infrastructure"
+  ]
+}

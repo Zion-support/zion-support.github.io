@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-optimizer---healthcare-edition-1-e1c39f52",
+  "breadcrumbTitle": "AI Optimizer - Healthcare Edition #1",
+  "title": "AI Optimizer - Healthcare Edition #1",
+  "description": "Unlock unprecedented growth with AI Optimizer - Healthcare Edition #1. This autonomous system provides process automation with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Optimizer - Healthcare Edition #1 - Zion Tech Group",
+    "description": "Unlock unprecedented growth with AI Optimizer - Healthcare Edition #1. This autonomous system provides process automation with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-optimizer---healthcare-edition-1-e1c39f52"
+    }
+  },
+  "features": [
+    "Auto-scaling capabilities",
+    "Performance dashboards",
+    "Open-source friendly",
+    "Machine learning integration"
+  ],
+  "benefits": [
+    "24/7 automated operations",
+    "Reduced human error by 95%",
+    "Cost optimization recommendations",
+    "Self-healing infrastructure"
+  ]
+}

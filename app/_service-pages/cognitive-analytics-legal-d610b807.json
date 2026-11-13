@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/cognitive-analytics-legal-d610b807",
+  "breadcrumbTitle": "Cognitive analytics-legal",
+  "title": "Cognitive analytics-legal",
+  "description": "Transform your legal operations with our Cognitive analytics-legal. This AI-driven solution automates maintenance scheduling with unprecedented accuracy and eff",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Cognitive analytics-legal - Zion Tech Group",
+    "description": "Transform your legal operations with our Cognitive analytics-legal. This AI-driven solution automates maintenance scheduling with unprecedented accuracy and eff",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cognitive-analytics-legal-d610b807"
+    }
+  },
+  "features": [
+    "Open-source friendly",
+    "Data encryption",
+    "Container orchestration",
+    "GDPR compliance"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Zero manual intervention required",
+    "Performance benchmarking",
+    "Intelligent load balancing"
+  ]
+}

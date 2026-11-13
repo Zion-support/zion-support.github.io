@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/ai-coordinator---telecom-edition-8979e39f",
+  "breadcrumbTitle": "AI Coordinator - Telecom Edition",
+  "title": "AI Coordinator - Telecom Edition",
+  "description": "Unlock unprecedented growth with AI Coordinator - Telecom Edition. This autonomous system provides user experience with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Coordinator - Telecom Edition - Zion Tech Group",
+    "description": "Unlock unprecedented growth with AI Coordinator - Telecom Edition. This autonomous system provides user experience with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-coordinator---telecom-edition-8979e39f"
+    }
+  },
+  "features": [
+    "Role-based access control",
+    "Microservices deployment",
+    "Performance dashboards",
+    "Open-source friendly"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "Real-time insights and alerts",
+    "Predictive maintenance scheduling"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "AI Will, Estate & Legacy Planning Assistant",
+  "description": "Guided AI assistant for creating legally sound wills, trusts, and estate plans. Analyzes assets, family structure, and state laws.",
+  "basic": "$19/mo/month",
+  "pro": "$49/mo/month",
+  "enterprise": "$Custom family plans/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Will, Estate & Legacy Planning Assistant - Zion Tech Group",
+    "description": "Guided AI assistant for creating legally sound wills, trusts, and estate plans. Analyzes assets, family structure, and state laws.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-estate-will-planning-assistant"
+    }
+  },
+  "features": [
+    "AI-guided will and trust creation wizard",
+    "State-specific legal compliance",
+    "Asset inventory and beneficiary management",
+    "Tax optimization recommendations",
+    "Attorney review network"
+  ],
+  "benefits": [
+    "Create a legal will in under 30 minutes",
+    "Save $1,000+ on attorney fees",
+    "Keep estate plans current",
+    "Ensure family financial security"
+  ]
+}

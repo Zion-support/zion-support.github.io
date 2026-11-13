@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/platform-autonomous---tech-f8ef9240",
+  "breadcrumbTitle": "Platform Autonomous - Tech",
+  "title": "Platform Autonomous - Tech",
+  "description": "Unlock unprecedented growth with Platform Autonomous - Tech. This autonomous system provides energy management with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Platform Autonomous - Tech - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Platform Autonomous - Tech. This autonomous system provides energy management with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/platform-autonomous---tech-f8ef9240"
+    }
+  },
+  "features": [
+    "API-first design",
+    "Real-time processing",
+    "Microservices deployment",
+    "Cloud-native architecture",
+    "Alerting system"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "Dynamic resource allocation",
+    "Performance benchmarking",
+    "Predictive maintenance scheduling",
+    "Seamless integration with existing systems"
+  ]
+}

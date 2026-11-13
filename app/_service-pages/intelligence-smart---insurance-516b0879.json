@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligence-smart---insurance-516b0879",
+  "breadcrumbTitle": "Intelligence Smart - Insurance",
+  "title": "Intelligence Smart - Insurance",
+  "description": "Revolutionize insurance through intelligent automation. Our Intelligence Smart - Insurance leverages advanced machine learning to deliver inventory management a",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligence Smart - Insurance - Zion Tech Group",
+    "description": "Revolutionize insurance through intelligent automation. Our Intelligence Smart - Insurance leverages advanced machine learning to deliver inventory management a",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligence-smart---insurance-516b0879"
+    }
+  },
+  "features": [
+    "Offline capabilities",
+    "Serverless functions",
+    "Zero-downtime updates",
+    "Alerting system",
+    "Container orchestration"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "ROI in under 90 days",
+    "Reduced human error by 95%",
+    "Seamless integration with existing systems"
+  ]
+}

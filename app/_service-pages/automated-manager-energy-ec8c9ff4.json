@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/automated-manager-energy-ec8c9ff4",
+  "breadcrumbTitle": "Automated manager-energy",
+  "title": "Automated manager-energy",
+  "description": "Next-generation energy solution: Automated manager-energy. Combines quality control with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated manager-energy - Zion Tech Group",
+    "description": "Next-generation energy solution: Automated manager-energy. Combines quality control with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-manager-energy-ec8c9ff4"
+    }
+  },
+  "features": [
+    "Mobile-responsive interface",
+    "HIPAA ready",
+    "API-first design",
+    "Rollback mechanisms",
+    "Edge computing support"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "ROI in under 90 days",
+    "Self-healing infrastructure",
+    "99.9% uptime guarantee"
+  ]
+}

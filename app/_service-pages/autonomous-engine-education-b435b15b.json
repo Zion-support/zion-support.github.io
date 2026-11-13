@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/autonomous-engine-education-b435b15b",
+  "breadcrumbTitle": "Autonomous engine-education",
+  "title": "Autonomous engine-education",
+  "description": "Revolutionize education through intelligent automation. Our Autonomous engine-education leverages advanced machine learning to deliver process automation at sca",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous engine-education - Zion Tech Group",
+    "description": "Revolutionize education through intelligent automation. Our Autonomous engine-education leverages advanced machine learning to deliver process automation at sca",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-engine-education-b435b15b"
+    }
+  },
+  "features": [
+    "Container orchestration",
+    "Multi-language support",
+    "GDPR compliance",
+    "Machine learning integration"
+  ],
+  "benefits": [
+    "Seamless integration with existing systems",
+    "24/7 automated operations",
+    "Real-time insights and alerts",
+    "ROI in under 90 days"
+  ]
+}

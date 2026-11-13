@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/neural-intelligence-gaming-1f95e8dc",
+  "breadcrumbTitle": "Neural intelligence-gaming",
+  "title": "Neural intelligence-gaming",
+  "description": "Revolutionize gaming through intelligent automation. Our Neural intelligence-gaming leverages advanced machine learning to deliver predictive analytics at scale",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Neural intelligence-gaming - Zion Tech Group",
+    "description": "Revolutionize gaming through intelligent automation. Our Neural intelligence-gaming leverages advanced machine learning to deliver predictive analytics at scale",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/neural-intelligence-gaming-1f95e8dc"
+    }
+  },
+  "features": [
+    "Alerting system",
+    "Custom integrations",
+    "Rollback mechanisms",
+    "Serverless functions",
+    "Offline capabilities"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "Intelligent load balancing",
+    "Performance benchmarking"
+  ]
+}

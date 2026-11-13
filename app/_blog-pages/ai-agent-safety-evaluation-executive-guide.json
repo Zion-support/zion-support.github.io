@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "AI Agent Safety Evaluation: executive guide | Zion Tech Group",
+    "description": "AI Agent Safety Evaluation: executive guide",
+    "keywords": [
+      "it",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "AI Agent Safety Evaluation: executive guide",
+      "description": "AI Agent Safety Evaluation: executive guide",
+      "url": "https://ziontechgroup.com/blog/ai-agent-safety-evaluation-executive-guide/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/ai-agent-safety-evaluation-executive-guide/"
+    }
+  },
+  "values": [
+    "AI Agent Safety Evaluation: executive guide",
+    "AI Agent Safety Evaluation: executive guide",
+    "AI Agent Safety Evaluation: executive guide",
+    "Conversion path",
+    "If this guide matches your ai agent safety evaluation: executive guide initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "Conversion path",
+    " If this guide matches your ai agent safety evaluation: executive guide initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "/blog/ai-email-intelligence-operations-handbook",
+    "Ai Email Intelligence Operations Handbook",
+    "/blog/ai-3d-asset-generator-security-and-governance",
+    "Ai 3D Asset Generator Security And Governance",
+    "/blog/ai-api-gateway-security-and-governance",
+    "Ai Api Gateway Security And Governance",
+    "/blog/ai-development-acceleration-common-mistakes",
+    "Ai Development Acceleration Common Mistakes"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "AI Agent Safety Evaluation: executive guide",
+    "description": "AI Agent Safety Evaluation: executive guide",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T07:56:45Z",
+    "dateModified": "2026-08-07T07:56:45Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/ai-agent-safety-evaluation-executive-guide/"
+  }
+}

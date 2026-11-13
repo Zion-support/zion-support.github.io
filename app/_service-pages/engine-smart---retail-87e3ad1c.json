@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/engine-smart---retail-87e3ad1c",
+  "breadcrumbTitle": "Engine Smart - Retail",
+  "title": "Engine Smart - Retail",
+  "description": "Next-generation retail solution: Engine Smart - Retail. Combines supply chain with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Engine Smart - Retail - Zion Tech Group",
+    "description": "Next-generation retail solution: Engine Smart - Retail. Combines supply chain with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/engine-smart---retail-87e3ad1c"
+    }
+  },
+  "features": [
+    "Audit trails",
+    "HIPAA ready",
+    "Comprehensive monitoring",
+    "Multi-language support",
+    "Role-based access control"
+  ],
+  "benefits": [
+    "Cost optimization recommendations",
+    "Enterprise-grade security",
+    "Predictive maintenance scheduling"
+  ]
+}

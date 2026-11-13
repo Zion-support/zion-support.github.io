@@ -1,0 +1,29 @@
+{
+  "title": "AI Subscription Analytics & Revenue Intelligence",
+  "description": "Deep analytics for subscription businesses. Track MRR, churn, LTV, cohort analysis, and expansion revenue. AI predicts at-risk accounts and recommends pricing changes.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Subscription Analytics & Revenue Intelligence - Zion Tech Group",
+    "description": "Deep analytics for subscription businesses. Track MRR, churn, LTV, cohort analysis, and expansion revenue. AI predicts at-risk accounts and recommends pricing c",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-ai-subscription-analytics"
+    }
+  },
+  "features": [
+    "MRR, ARR, and revenue waterfall analysis",
+    "Cohort retention and LTV analysis",
+    "AI churn prediction with risk scoring",
+    "Expansion revenue and upsell identification",
+    "Pricing optimization recommendations"
+  ],
+  "benefits": [
+    "Increase net revenue retention to 120%+",
+    "Predict churn 60 days in advance",
+    "Optimize pricing with data-driven insights",
+    "Automate board and investor reporting"
+  ]
+}

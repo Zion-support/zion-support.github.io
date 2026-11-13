@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/automated-risk-platform-6dad64b9",
+  "breadcrumbTitle": "Automated Risk Platform",
+  "title": "Automated Risk Platform",
+  "description": "Transform your real-estate operations with our Automated Risk Platform. This AI-driven solution automates compliance monitoring with unprecedented accuracy and ",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated Risk Platform - Zion Tech Group",
+    "description": "Transform your real-estate operations with our Automated Risk Platform. This AI-driven solution automates compliance monitoring with unprecedented accuracy and ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-risk-platform-6dad64b9"
+    }
+  },
+  "features": [
+    "Plugin architecture",
+    "Edge computing support",
+    "Performance dashboards",
+    "Role-based access control",
+    "Cloud-native architecture"
+  ],
+  "benefits": [
+    "Intelligent load balancing",
+    "Seamless integration with existing systems",
+    "Performance benchmarking"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "title": "Cloud-Native Smart Cities Optimization",
+  "description": "AI-driven cloud optimization platform that automatically manages resource allocation and cost optimization.",
+  "basic": "$218/month",
+  "pro": "$548/month",
+  "enterprise": "$1648/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Cloud-Native Smart Cities Optimization - Zion Tech Group",
+    "description": "AI-driven cloud optimization platform that automatically manages resource allocation and cost optimization.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cloud-native-smart-cities-optimization-fabac7f2"
+    }
+  },
+  "features": [
+    "Auto-scaling",
+    "Cost optimization",
+    "Performance tuning",
+    "Resource monitoring"
+  ],
+  "benefits": [
+    "Reduced cloud costs",
+    "Better performance",
+    "Automatic scaling",
+    "Optimized resources"
+  ]
+}

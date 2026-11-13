@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/automated-maintenance-suite-1-b0ae03d2",
+  "breadcrumbTitle": "Automated Maintenance Suite #1",
+  "title": "Automated Maintenance Suite #1",
+  "description": "Next-generation manufacturing solution: Automated Maintenance Suite #1. Combines user experience with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated Maintenance Suite #1 - Zion Tech Group",
+    "description": "Next-generation manufacturing solution: Automated Maintenance Suite #1. Combines user experience with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-maintenance-suite-1-b0ae03d2"
+    }
+  },
+  "features": [
+    "Real-time processing",
+    "Role-based access control",
+    "Edge computing support",
+    "Plugin architecture"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "Real-time insights and alerts",
+    "ROI in under 90 days",
+    "Zero manual intervention required",
+    "Cost optimization recommendations"
+  ]
+}

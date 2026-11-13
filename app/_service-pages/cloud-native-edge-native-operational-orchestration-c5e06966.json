@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/cloud-native-edge-native-operational-orchestration-c5e06966",
+  "breadcrumbTitle": "Cloud-Native Edge-Native Operational Orchestration",
+  "title": "Cloud-Native Edge-Native Operational Orchestration",
+  "description": "Cloud-native orchestration platform that manages edge-native operational resources with auto-scaling and cost control.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Cloud-Native Edge-Native Operational Orchestration - Zion Tech Group",
+    "description": "Cloud-native orchestration platform that manages edge-native operational resources with auto-scaling and cost control.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cloud-native-edge-native-operational-orchestration-c5e06966"
+    }
+  },
+  "features": [
+    "Container orchestration",
+    "Resource management",
+    "Health monitoring",
+    "Auto-healing"
+  ],
+  "benefits": [
+    "Reduced infrastructure cost",
+    "Auto-scaling",
+    "Container efficiency",
+    "Developer productivity"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/smart-automation-for-construction-76976448",
+  "breadcrumbTitle": "Smart Automation for Construction",
+  "title": "Smart Automation for Construction",
+  "description": "The future of construction is here with Smart Automation for Construction. Powered by cutting-edge AI, this platform delivers financial planning like never befo",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Automation for Construction - Zion Tech Group",
+    "description": "The future of construction is here with Smart Automation for Construction. Powered by cutting-edge AI, this platform delivers financial planning like never befo",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-automation-for-construction-76976448"
+    }
+  },
+  "features": [
+    "Cloud-native architecture",
+    "Multi-language support",
+    "Microservices deployment",
+    "Real-time processing",
+    "Container orchestration"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "Automated compliance reporting",
+    "Predictive maintenance scheduling"
+  ]
+}

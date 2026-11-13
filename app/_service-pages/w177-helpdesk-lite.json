@@ -1,0 +1,30 @@
+{
+  "title": "HelpDesk Lite — Simple Ticketing",
+  "description": "Lightweight help desk: ticket management, knowledge base, SLA tracking, canned responses. No bloat.",
+  "basic": "$15/agent/mo/month",
+  "pro": "$25/agent/mo/month",
+  "enterprise": "$45/agent/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "HelpDesk Lite — Simple Ticketing - Zion Tech Group",
+    "description": "Lightweight help desk: ticket management, knowledge base, SLA tracking, canned responses. No bloat.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w177-helpdesk-lite"
+    }
+  },
+  "features": [
+    "Ticket request management",
+    "Multi-channel (email",
+    "portal",
+    "chat)",
+    "Knowledge base and canned responses"
+  ],
+  "benefits": [
+    "Simple and fast",
+    "not complex",
+    "Multi-channel in one inbox",
+    "Canned responses speed up agents",
+    "CSAT surveys measure quality"
+  ]
+}

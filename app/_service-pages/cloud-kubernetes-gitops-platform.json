@@ -1,0 +1,29 @@
+{
+  "title": "Kubernetes GitOps Platform",
+  "description": "GitOps-driven Kubernetes operations: declarative manifests stored in Git, automated drift detection and reconciliation, environment promotion workflows, progressive delivery (canary/blue-green), and built-in secrets management with external vault sync.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Kubernetes GitOps Platform - Zion Tech Group",
+    "description": "GitOps-driven Kubernetes operations: declarative manifests stored in Git, automated drift detection and reconciliation, environment promotion workflows, progres",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cloud-kubernetes-gitops-platform"
+    }
+  },
+  "features": [
+    "Declarative manifests in Git — single source of truth for every cluster",
+    "Drift detection + auto-reconciliation every 60 seconds",
+    "Environment promotion: dev → staging → prod with approval gates",
+    "Progressive delivery: canary, blue-green, feature flags, canary analysis",
+    "Secrets: Vault, AWS Secrets Manager, Azure Key Vault with auto-rotation"
+  ],
+  "benefits": [
+    "Reduce costs with kubernetes gitops platform",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

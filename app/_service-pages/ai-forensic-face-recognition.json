@@ -1,0 +1,28 @@
+{
+  "title": "AI Forensic Face Recognition & Investigation Platform",
+  "description": "Law enforcement-grade face recognition: 1:N matching across mugshot databases, age progression modeling, disguise detection, and forensic-quality evidence packaging.",
+  "basic": "$999/month",
+  "pro": "$2999/month",
+  "enterprise": "$9999/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Forensic Face Recognition & Investigation Platform - Zion Tech Group",
+    "description": "Law enforcement-grade face recognition: 1:N matching across mugshot databases, age progression modeling, disguise detection, and forensic-quality evidence packa",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-forensic-face-recognition"
+    }
+  },
+  "features": [
+    "1:N matching (100M+ mugshots)",
+    "Age progression modeling",
+    "Disguise & makeup detection",
+    "Forensic evidence packaging",
+    "Gait analysis from video"
+  ],
+  "benefits": [
+    "Search 100M mugshots in seconds",
+    "Identify subjects despite disguises",
+    "Court-admissible evidence"
+  ]
+}

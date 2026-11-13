@@ -1,0 +1,29 @@
+{
+  "title": "ReviewPulse — Review Management",
+  "description": "Monitor, respond to, and analyze reviews across Google, Yelp, Trustpilot, G2, and App Stores. AI-generated responses and sentiment trend tracking.",
+  "basic": "$39/mo/month",
+  "pro": "$119/mo/month",
+  "enterprise": "$399/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "ReviewPulse — Review Management - Zion Tech Group",
+    "description": "Monitor, respond to, and analyze reviews across Google, Yelp, Trustpilot, G2, and App Stores. AI-generated responses and sentiment trend tracking.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w175-reviewpulse"
+    }
+  },
+  "features": [
+    "Multi-platform review monitoring",
+    "AI-generated response drafts",
+    "Sentiment trend tracking and alerting",
+    "Competitor review benchmarking",
+    "Review request automation (post-purchase)"
+  ],
+  "benefits": [
+    "Respond to every review in minutes with AI",
+    "Sentiment trends detect product issues early",
+    "Review requests increase rating volume",
+    "Fake review detection protects reputation"
+  ]
+}

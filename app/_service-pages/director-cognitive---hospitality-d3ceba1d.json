@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/director-cognitive---hospitality-d3ceba1d",
+  "breadcrumbTitle": "Director Cognitive - Hospitality",
+  "title": "Director Cognitive - Hospitality",
+  "description": "Unlock unprecedented growth with Director Cognitive - Hospitality. This autonomous system provides predictive analytics with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Director Cognitive - Hospitality - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Director Cognitive - Hospitality. This autonomous system provides predictive analytics with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/director-cognitive---hospitality-d3ceba1d"
+    }
+  },
+  "features": [
+    "Data encryption",
+    "Container orchestration",
+    "Edge computing support",
+    "Auto-scaling capabilities"
+  ],
+  "benefits": [
+    "Cost optimization recommendations",
+    "Real-time insights and alerts",
+    "3x faster decision making"
+  ]
+}

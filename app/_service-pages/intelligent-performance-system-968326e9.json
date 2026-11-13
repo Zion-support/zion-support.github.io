@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-performance-system-968326e9",
+  "breadcrumbTitle": "Intelligent Performance System",
+  "title": "Intelligent Performance System",
+  "description": "Revolutionize retail through intelligent automation. Our Intelligent Performance System leverages advanced machine learning to deliver threat detection at scale",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Performance System - Zion Tech Group",
+    "description": "Revolutionize retail through intelligent automation. Our Intelligent Performance System leverages advanced machine learning to deliver threat detection at scale",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-performance-system-968326e9"
+    }
+  },
+  "features": [
+    "Microservices deployment",
+    "Container orchestration",
+    "Zero-downtime updates",
+    "Auto-scaling capabilities"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "Zero manual intervention required",
+    "Reduced human error by 95%",
+    "Scalable to millions of transactions"
+  ]
+}

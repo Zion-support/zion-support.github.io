@@ -1,0 +1,28 @@
+{
+  "title": "AI Legal Document Review Assistant",
+  "description": "Accelerate legal document review with AI-powered contract analysis, clause extraction, risk identification, and compliance checking. Reduces review time by 80% while improving accuracy. Supports NDAs, MSAs, and complex commercial agreements.",
+  "basic": "$N/A/month",
+  "pro": "$N/A/month",
+  "enterprise": "$2499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Legal Document Review Assistant - Zion Tech Group",
+    "description": "Accelerate legal document review with AI-powered contract analysis, clause extraction, risk identification, and compliance checking. Reduces review time by 80% ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-legal-document-review"
+    }
+  },
+  "features": [
+    "Contract clause extraction",
+    "Risk identification",
+    "Compliance checking",
+    "Redline suggestions",
+    "Version comparison"
+  ],
+  "benefits": [
+    "80% faster document review",
+    "99% clause detection accuracy",
+    "Reduced legal costs"
+  ]
+}

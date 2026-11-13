@@ -1,0 +1,29 @@
+{
+  "title": "AI Predictive Maintenance — Industrial IoT",
+  "description": "Industrial IoT predictive maintenance: sensor fusion (vibration, temperature, current, ultrasound), ML failure prediction, remaining useful life (RUL) estimation, and automated work-order creation in your CMMS.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Predictive Maintenance — Industrial IoT - Zion Tech Group",
+    "description": "Industrial IoT predictive maintenance: sensor fusion (vibration, temperature, current, ultrasound), ML failure prediction, remaining useful life (RUL) estimatio",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-predictive-maintenance-industrial"
+    }
+  },
+  "features": [
+    "Multi-sensor fusion + edge analytics",
+    "RUL estimation per asset",
+    "Failure mode classification (bearing, motor, pump)",
+    "CMMS work-order auto-creation",
+    "OEE dashboard with MTBF/MTTR tracking"
+  ],
+  "benefits": [
+    "Reduce costs with ai predictive maintenance — industrial iot",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

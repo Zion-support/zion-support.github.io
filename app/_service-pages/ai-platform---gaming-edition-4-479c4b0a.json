@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-platform---gaming-edition-4-479c4b0a",
+  "breadcrumbTitle": "AI Platform - Gaming Edition #4",
+  "title": "AI Platform - Gaming Edition #4",
+  "description": "Transform your gaming operations with our AI Platform - Gaming Edition #4. This AI-driven solution automates fraud prevention with unprecedented accuracy and ef",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Platform - Gaming Edition #4 - Zion Tech Group",
+    "description": "Transform your gaming operations with our AI Platform - Gaming Edition #4. This AI-driven solution automates fraud prevention with unprecedented accuracy and ef",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-platform---gaming-edition-4-479c4b0a"
+    }
+  },
+  "features": [
+    "Edge computing support",
+    "API-first design",
+    "HIPAA ready",
+    "Audit trails",
+    "Auto-scaling capabilities"
+  ],
+  "benefits": [
+    "Automated compliance reporting",
+    "Self-healing infrastructure",
+    "Reduced human error by 95%"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/ai-predictor---insurance-edition-1-3ff37111",
+  "breadcrumbTitle": "AI Predictor - Insurance Edition #1",
+  "title": "AI Predictor - Insurance Edition #1",
+  "description": "Revolutionize insurance through intelligent automation. Our AI Predictor - Insurance Edition #1 leverages advanced machine learning to deliver risk assessment a",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Predictor - Insurance Edition #1 - Zion Tech Group",
+    "description": "Revolutionize insurance through intelligent automation. Our AI Predictor - Insurance Edition #1 leverages advanced machine learning to deliver risk assessment a",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-predictor---insurance-edition-1-3ff37111"
+    }
+  },
+  "features": [
+    "HIPAA ready",
+    "Open-source friendly",
+    "Cloud-native architecture",
+    "Microservices deployment"
+  ],
+  "benefits": [
+    "Automated compliance reporting",
+    "50% reduction in operational costs",
+    "99.9% uptime guarantee"
+  ]
+}

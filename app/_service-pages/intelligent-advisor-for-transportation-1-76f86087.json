@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-advisor-for-transportation-1-76f86087",
+  "breadcrumbTitle": "Intelligent Advisor for Transportation #1",
+  "title": "Intelligent Advisor for Transportation #1",
+  "description": "Unlock unprecedented growth with Intelligent Advisor for Transportation #1. This autonomous system provides customer insights with zero manual intervention need",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Advisor for Transportation #1 - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Intelligent Advisor for Transportation #1. This autonomous system provides customer insights with zero manual intervention need",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-advisor-for-transportation-1-76f86087"
+    }
+  },
+  "features": [
+    "Comprehensive monitoring",
+    "Edge computing support",
+    "Rollback mechanisms",
+    "Custom integrations"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "ROI in under 90 days",
+    "Performance benchmarking",
+    "Scalable to millions of transactions"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/autonomous-coordinator-for-logistics-0e6d8286",
+  "breadcrumbTitle": "Autonomous Coordinator for Logistics",
+  "title": "Autonomous Coordinator for Logistics",
+  "description": "Unlock unprecedented growth with Autonomous Coordinator for Logistics. This autonomous system provides workflow management with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous Coordinator for Logistics - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Autonomous Coordinator for Logistics. This autonomous system provides workflow management with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-coordinator-for-logistics-0e6d8286"
+    }
+  },
+  "features": [
+    "Multi-region deployment",
+    "Cloud-native architecture",
+    "Comprehensive monitoring",
+    "Custom integrations",
+    "SOC 2 certified"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "Reduced human error by 95%",
+    "Dynamic resource allocation"
+  ]
+}

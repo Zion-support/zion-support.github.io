@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/neural-resource-suite-6dd6de9a",
+  "breadcrumbTitle": "Neural Resource Suite",
+  "title": "Neural Resource Suite",
+  "description": "Transform your manufacturing operations with our Neural Resource Suite. This AI-driven solution automates sales forecasting with unprecedented accuracy and effi",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Neural Resource Suite - Zion Tech Group",
+    "description": "Transform your manufacturing operations with our Neural Resource Suite. This AI-driven solution automates sales forecasting with unprecedented accuracy and effi",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/neural-resource-suite-6dd6de9a"
+    }
+  },
+  "features": [
+    "API-first design",
+    "Performance dashboards",
+    "Container orchestration",
+    "Data encryption",
+    "Offline capabilities"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "ROI in under 90 days",
+    "Performance benchmarking",
+    "Cost optimization recommendations",
+    "3x faster decision making"
+  ]
+}

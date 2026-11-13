@@ -1,0 +1,29 @@
+{
+  "title": "AI HR Talent Analytics & Workforce Planning",
+  "description": "AI-powered workforce analytics for hiring, retention, and organizational planning. Predict attrition, identify high-potential employees, and optimize team composition.",
+  "basic": "$1,499/mo/month",
+  "pro": "$3,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI HR Talent Analytics & Workforce Planning - Zion Tech Group",
+    "description": "AI-powered workforce analytics for hiring, retention, and organizational planning. Predict attrition, identify high-potential employees, and optimize team compo",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-hr-talent-analytics"
+    }
+  },
+  "features": [
+    "Attrition prediction with risk scoring",
+    "High-potential employee identification",
+    "Workforce planning and headcount forecasting",
+    "Compensation benchmarking and equity analysis",
+    "Diversity, equity, and inclusion analytics"
+  ],
+  "benefits": [
+    "Reduce voluntary attrition by 20-30%",
+    "Identify flight risks 6 months in advance",
+    "Optimize workforce costs with data-driven planning",
+    "Improve diversity and inclusion with analytics"
+  ]
+}

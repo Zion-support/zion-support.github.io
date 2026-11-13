@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/system-ai---logistics-6b55a496",
+  "breadcrumbTitle": "System AI - Logistics",
+  "title": "System AI - Logistics",
+  "description": "Transform your logistics operations with our System AI - Logistics. This AI-driven solution automates quality control with unprecedented accuracy and efficiency",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "System AI - Logistics - Zion Tech Group",
+    "description": "Transform your logistics operations with our System AI - Logistics. This AI-driven solution automates quality control with unprecedented accuracy and efficiency",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/system-ai---logistics-6b55a496"
+    }
+  },
+  "features": [
+    "HIPAA ready",
+    "SOC 2 certified",
+    "Rollback mechanisms",
+    "Mobile-responsive interface"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "ROI in under 90 days",
+    "99.9% uptime guarantee",
+    "Enterprise-grade security",
+    "Zero manual intervention required"
+  ]
+}

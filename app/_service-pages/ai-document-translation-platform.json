@@ -1,0 +1,29 @@
+{
+  "title": "AI Document Translation Platform",
+  "description": "Enterprise document translation with AI. Translate contracts, manuals, and marketing materials while preserving formatting, terminology, and legal accuracy.",
+  "basic": "$399/mo/month",
+  "pro": "$1,299/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Document Translation Platform - Zion Tech Group",
+    "description": "Enterprise document translation with AI. Translate contracts, manuals, and marketing materials while preserving formatting, terminology, and legal accuracy.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-document-translation-platform"
+    }
+  },
+  "features": [
+    "Document format preservation",
+    "Industry-specific terminology",
+    "100+ language pairs",
+    "Legal and medical translation",
+    "Terminology management"
+  ],
+  "benefits": [
+    "Translate 10x faster than human",
+    "Ensure terminology consistency",
+    "Preserve document formatting",
+    "Scale localization operations"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/platform-smart---education-918d5760",
+  "breadcrumbTitle": "Platform Smart - Education",
+  "title": "Platform Smart - Education",
+  "description": "Transform your education operations with our Platform Smart - Education. This AI-driven solution automates performance monitoring with unprecedented accuracy an",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Platform Smart - Education - Zion Tech Group",
+    "description": "Transform your education operations with our Platform Smart - Education. This AI-driven solution automates performance monitoring with unprecedented accuracy an",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/platform-smart---education-918d5760"
+    }
+  },
+  "features": [
+    "Role-based access control",
+    "Machine learning integration",
+    "API-first design",
+    "Data encryption"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "Intelligent load balancing",
+    "Performance benchmarking",
+    "50% reduction in operational costs"
+  ]
+}

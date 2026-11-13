@@ -1,0 +1,29 @@
+{
+  "title": "IT Cloud Cost Optimization Service",
+  "description": "Comprehensive cloud cost analysis and optimization for AWS, Azure, and GCP. Identifies waste, recommends right-sizing, manages reserved instances, and implements FinOps best practices to reduce cloud spend by 30-50%.",
+  "basic": "$2,500/mo/month",
+  "pro": "$5,000/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "IT Cloud Cost Optimization Service - Zion Tech Group",
+    "description": "Comprehensive cloud cost analysis and optimization for AWS, Azure, and GCP. Identifies waste, recommends right-sizing, manages reserved instances, and implement",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-cloud-cost-optimization"
+    }
+  },
+  "features": [
+    "Multi-cloud cost analysis (AWS, Azure, GCP)",
+    "Idle resource detection and auto-remediation",
+    "Reserved instance and savings plan management",
+    "Right-sizing recommendations with performance impact analysis",
+    "Cost allocation tagging strategy and enforcement"
+  ],
+  "benefits": [
+    "Reduce cloud spend by 30-50% within 90 days",
+    "Eliminate waste from idle and over-provisioned resources",
+    "Implement FinOps culture with team accountability",
+    "Predictable cloud budgeting with forecasting"
+  ]
+}

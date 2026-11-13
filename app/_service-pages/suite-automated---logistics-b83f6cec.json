@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/suite-automated---logistics-b83f6cec",
+  "breadcrumbTitle": "Suite Automated - Logistics",
+  "title": "Suite Automated - Logistics",
+  "description": "Unlock unprecedented growth with Suite Automated - Logistics. This autonomous system provides fraud prevention with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Suite Automated - Logistics - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Suite Automated - Logistics. This autonomous system provides fraud prevention with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/suite-automated---logistics-b83f6cec"
+    }
+  },
+  "features": [
+    "GDPR compliance",
+    "API-first design",
+    "Edge computing support",
+    "Offline capabilities",
+    "Open-source friendly"
+  ],
+  "benefits": [
+    "Automated compliance reporting",
+    "Dynamic resource allocation",
+    "Intelligent load balancing",
+    "Enterprise-grade security",
+    "24/7 automated operations"
+  ]
+}

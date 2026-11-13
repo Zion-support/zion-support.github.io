@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/smart-security-logistics-76214883",
+  "breadcrumbTitle": "Smart security-logistics",
+  "title": "Smart security-logistics",
+  "description": "Next-generation Logistics solution: Smart security-logistics. Combines user experience with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart security-logistics - Zion Tech Group",
+    "description": "Next-generation Logistics solution: Smart security-logistics. Combines user experience with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-security-logistics-76214883"
+    }
+  },
+  "features": [
+    "Customer service automation with chatbot integration",
+    "Fraud detection with anomaly analysis",
+    "Maintenance scheduling with predictive analytics",
+    "Executive dashboards with drill-down capabilities",
+    "Predictive modeling with ensemble methods"
+  ],
+  "benefits": [
+    "Automated compliance reporting for regulatory requirements",
+    "Improved conversion rates with personalization",
+    "Enterprise-grade security with end-to-end encryption",
+    "Zero manual intervention required for routine tasks"
+  ]
+}

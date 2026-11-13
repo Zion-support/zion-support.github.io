@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/coordinator-automated---telecom-ff698e08",
+  "breadcrumbTitle": "Coordinator Automated - Telecom",
+  "title": "Coordinator Automated - Telecom",
+  "description": "The future of telecom is here with Coordinator Automated - Telecom. Powered by cutting-edge AI, this platform delivers decision support like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Coordinator Automated - Telecom - Zion Tech Group",
+    "description": "The future of telecom is here with Coordinator Automated - Telecom. Powered by cutting-edge AI, this platform delivers decision support like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/coordinator-automated---telecom-ff698e08"
+    }
+  },
+  "features": [
+    "Edge computing support",
+    "Audit trails",
+    "Performance dashboards",
+    "Auto-scaling capabilities",
+    "Custom integrations"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "Performance benchmarking",
+    "Predictive maintenance scheduling",
+    "24/7 automated operations"
+  ]
+}

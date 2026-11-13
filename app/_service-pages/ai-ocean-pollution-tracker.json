@@ -1,0 +1,29 @@
+{
+  "title": "AI Ocean Pollution Tracking & Marine Ecosystem Monitor",
+  "description": "Satellite and drone-based AI system for tracking ocean pollution, monitoring marine ecosystems, and detecting illegal dumping.",
+  "basic": "$1,500/mo/month",
+  "pro": "$4,000/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Ocean Pollution Tracking & Marine Ecosystem Monitor - Zion Tech Group",
+    "description": "Satellite and drone-based AI system for tracking ocean pollution, monitoring marine ecosystems, and detecting illegal dumping.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-ocean-pollution-tracker"
+    }
+  },
+  "features": [
+    "Satellite imagery analysis for pollution detection",
+    "Plastic waste concentration mapping",
+    "Illegal vessel discharge monitoring",
+    "Marine biodiversity tracking",
+    "Oil spill detection and trajectory prediction"
+  ],
+  "benefits": [
+    "Detect pollution events in real-time",
+    "Protect marine ecosystems",
+    "Support environmental compliance",
+    "Track cleanup effectiveness"
+  ]
+}

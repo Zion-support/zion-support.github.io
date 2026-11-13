@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/insights-cognitive---healthcare-1fce08fd",
+  "breadcrumbTitle": "Insights Cognitive - Healthcare",
+  "title": "Insights Cognitive - Healthcare",
+  "description": "The future of healthcare is here with Insights Cognitive - Healthcare. Powered by cutting-edge AI, this platform delivers image recognition like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Insights Cognitive - Healthcare - Zion Tech Group",
+    "description": "The future of healthcare is here with Insights Cognitive - Healthcare. Powered by cutting-edge AI, this platform delivers image recognition like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/insights-cognitive---healthcare-1fce08fd"
+    }
+  },
+  "features": [
+    "Plugin architecture",
+    "Offline capabilities",
+    "HIPAA ready",
+    "Cloud-native architecture"
+  ],
+  "benefits": [
+    "Cost optimization recommendations",
+    "Reduced human error by 95%",
+    "Self-healing infrastructure"
+  ]
+}

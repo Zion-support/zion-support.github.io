@@ -1,0 +1,29 @@
+{
+  "title": "AI Sentiment Analysis & Brand Monitoring",
+  "description": "Real-time brand perception tracking across social media, reviews, news, and forums. Understand customer emotion at scale and act on insights before they become crises.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Sentiment Analysis & Brand Monitoring - Zion Tech Group",
+    "description": "Real-time brand perception tracking across social media, reviews, news, and forums. Understand customer emotion at scale and act on insights before they become ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-sentiment-analysis"
+    }
+  },
+  "features": [
+    "Multi-platform social listening (X, Reddit, TikTok, news)",
+    "Emotion-level sentiment scoring (joy, anger, fear, trust)",
+    "Brand mention clustering & trending topic detection",
+    "Influencer identification & partnership scoring",
+    "Crisis early-warning system with alert triage"
+  ],
+  "benefits": [
+    "Reduce costs with ai sentiment analysis & brand monitoring",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

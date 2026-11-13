@@ -1,0 +1,29 @@
+{
+  "title": "AI Contract Risk Analyzer",
+  "description": "Analyze contract risk with AI. Identify unfavorable clauses, missing provisions, and compliance gaps. Compare against industry benchmarks and internal standards.",
+  "basic": "$799/mo/month",
+  "pro": "$2,499/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Contract Risk Analyzer - Zion Tech Group",
+    "description": "Analyze contract risk with AI. Identify unfavorable clauses, missing provisions, and compliance gaps. Compare against industry benchmarks and internal standards",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-contract-risk-analyzer"
+    }
+  },
+  "features": [
+    "Clause-level risk scoring",
+    "Missing provision detection",
+    "Compliance gap analysis",
+    "Industry benchmark comparison",
+    "Redline suggestions"
+  ],
+  "benefits": [
+    "Reduce contract risk exposure",
+    "Speed up contract review",
+    "Ensure compliance",
+    "Standardize risk assessment"
+  ]
+}

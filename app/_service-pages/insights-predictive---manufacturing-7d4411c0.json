@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/insights-predictive---manufacturing-7d4411c0",
+  "breadcrumbTitle": "Insights Predictive - Manufacturing",
+  "title": "Insights Predictive - Manufacturing",
+  "description": "Next-generation manufacturing solution: Insights Predictive - Manufacturing. Combines inventory management with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Insights Predictive - Manufacturing - Zion Tech Group",
+    "description": "Next-generation manufacturing solution: Insights Predictive - Manufacturing. Combines inventory management with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/insights-predictive---manufacturing-7d4411c0"
+    }
+  },
+  "features": [
+    "Offline capabilities",
+    "Real-time processing",
+    "Rollback mechanisms",
+    "HIPAA ready"
+  ],
+  "benefits": [
+    "Cost optimization recommendations",
+    "Dynamic resource allocation",
+    "Seamless integration with existing systems",
+    "Predictive maintenance scheduling",
+    "Automated compliance reporting"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "AI Sentiment & Brand Pulse Monitor",
+  "description": "Monitor brand mentions across social, reviews, news, forums. Sentiment trend analysis per region, product, issue. Alert on sentiment spike. Generate weekly brand health executive summary.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Sentiment & Brand Pulse Monitor - Zion Tech Group",
+    "description": "Monitor brand mentions across social, reviews, news, forums. Sentiment trend analysis per region, product, issue. Alert on sentiment spike. Generate weekly bran",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-sentiment-brand-pulse"
+    }
+  },
+  "features": [
+    "Multi-source brand mention ingestion",
+    "Sentiment scoring per region + product",
+    "Issue spike alert + anomaly detect",
+    "Weekly brand health executive summary",
+    "Competitor sentiment comparison view"
+  ],
+  "benefits": [
+    "Reduce costs with ai sentiment & brand pulse monitor",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

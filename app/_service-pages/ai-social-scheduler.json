@@ -1,0 +1,29 @@
+{
+  "title": "AI Social Scheduler & Content Composer",
+  "description": "Generate, schedule, and analyse social posts across LinkedIn, X/Twitter, Instagram, and TikTok. AI suggests optimal posting times per audience segment.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Social Scheduler & Content Composer - Zion Tech Group",
+    "description": "Generate, schedule, and analyse social posts across LinkedIn, X/Twitter, Instagram, and TikTok. AI suggests optimal posting times per audience segment.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-social-scheduler"
+    }
+  },
+  "features": [
+    "Multi-platform publishing queue",
+    "AI caption and hashtag writer",
+    "Optimal timing engine per channel",
+    "Engagement analytics dashboard",
+    "A/B post variant testing"
+  ],
+  "benefits": [
+    "Reduce costs with ai social scheduler & content composer",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

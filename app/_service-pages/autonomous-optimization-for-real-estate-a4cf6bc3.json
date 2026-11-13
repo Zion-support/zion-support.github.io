@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/autonomous-optimization-for-real-estate-a4cf6bc3",
+  "breadcrumbTitle": "Autonomous Optimization for Real-Estate",
+  "title": "Autonomous Optimization for Real-Estate",
+  "description": "Revolutionize real-estate through intelligent automation. Our Autonomous Optimization for Real-Estate leverages advanced machine learning to deliver maintenance",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous Optimization for Real-Estate - Zion Tech Group",
+    "description": "Revolutionize real-estate through intelligent automation. Our Autonomous Optimization for Real-Estate leverages advanced machine learning to deliver maintenance",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-optimization-for-real-estate-a4cf6bc3"
+    }
+  },
+  "features": [
+    "API-first design",
+    "HIPAA ready",
+    "Audit trails",
+    "Offline capabilities",
+    "Role-based access control"
+  ],
+  "benefits": [
+    "Intelligent load balancing",
+    "ROI in under 90 days",
+    "Cost optimization recommendations"
+  ]
+}

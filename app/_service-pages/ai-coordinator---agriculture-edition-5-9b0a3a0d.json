@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/ai-coordinator---agriculture-edition-5-9b0a3a0d",
+  "breadcrumbTitle": "AI Coordinator - Agriculture Edition #5",
+  "title": "AI Coordinator - Agriculture Edition #5",
+  "description": "Transform your agriculture operations with our AI Coordinator - Agriculture Edition #5. This AI-driven solution automates image recognition with unprecedented a",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Coordinator - Agriculture Edition #5 - Zion Tech Group",
+    "description": "Transform your agriculture operations with our AI Coordinator - Agriculture Edition #5. This AI-driven solution automates image recognition with unprecedented a",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-coordinator---agriculture-edition-5-9b0a3a0d"
+    }
+  },
+  "features": [
+    "Alerting system",
+    "Comprehensive monitoring",
+    "Real-time processing",
+    "Plugin architecture"
+  ],
+  "benefits": [
+    "Scalable to millions of transactions",
+    "Real-time insights and alerts",
+    "Reduced human error by 95%"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/suite-intelligent---logistics-00d3a0a1",
+  "breadcrumbTitle": "Suite Intelligent - Logistics",
+  "title": "Suite Intelligent - Logistics",
+  "description": "Unlock unprecedented growth with Suite Intelligent - Logistics. This autonomous system provides supply chain with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Suite Intelligent - Logistics - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Suite Intelligent - Logistics. This autonomous system provides supply chain with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/suite-intelligent---logistics-00d3a0a1"
+    }
+  },
+  "features": [
+    "Cloud-native architecture",
+    "Audit trails",
+    "Container orchestration",
+    "SOC 2 certified"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "Intelligent load balancing",
+    "99.9% uptime guarantee",
+    "Scalable to millions of transactions",
+    "Real-time insights and alerts"
+  ]
+}

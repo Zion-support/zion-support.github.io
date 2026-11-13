@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-processor---insurance-edition-6-31fae47a",
+  "breadcrumbTitle": "AI Processor - Insurance Edition #6",
+  "title": "AI Processor - Insurance Edition #6",
+  "description": "Transform your insurance operations with our AI Processor - Insurance Edition #6. This AI-driven solution automates language processing with unprecedented accur",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Processor - Insurance Edition #6 - Zion Tech Group",
+    "description": "Transform your insurance operations with our AI Processor - Insurance Edition #6. This AI-driven solution automates language processing with unprecedented accur",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-processor---insurance-edition-6-31fae47a"
+    }
+  },
+  "features": [
+    "Real-time processing",
+    "Role-based access control",
+    "Machine learning integration",
+    "Zero-downtime updates",
+    "Offline capabilities"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "Self-healing infrastructure",
+    "Zero manual intervention required"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/analyzer-adaptive---insurance-d365f87d",
+  "breadcrumbTitle": "Analyzer Adaptive - Insurance",
+  "title": "Analyzer Adaptive - Insurance",
+  "description": "Next-generation insurance solution: Analyzer Adaptive - Insurance. Combines resource optimization with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Analyzer Adaptive - Insurance - Zion Tech Group",
+    "description": "Next-generation insurance solution: Analyzer Adaptive - Insurance. Combines resource optimization with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/analyzer-adaptive---insurance-d365f87d"
+    }
+  },
+  "features": [
+    "Rollback mechanisms",
+    "Role-based access control",
+    "API-first design",
+    "Data encryption",
+    "Microservices deployment"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "99.9% uptime guarantee",
+    "24/7 automated operations"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/intelligent-analytics-insurance-a757f0ec",
+  "breadcrumbTitle": "Intelligent analytics-insurance",
+  "title": "Intelligent analytics-insurance",
+  "description": "Next-generation insurance solution: Intelligent analytics-insurance. Combines threat detection with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent analytics-insurance - Zion Tech Group",
+    "description": "Next-generation insurance solution: Intelligent analytics-insurance. Combines threat detection with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-analytics-insurance-a757f0ec"
+    }
+  },
+  "features": [
+    "SOC 2 certified",
+    "API-first design",
+    "Role-based access control",
+    "Open-source friendly"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "24/7 automated operations",
+    "Automated compliance reporting"
+  ]
+}

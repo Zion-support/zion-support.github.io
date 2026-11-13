@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-powered-sales-analyzer-2c1222be",
+  "breadcrumbTitle": "AI-Powered Sales Analyzer",
+  "title": "AI-Powered Sales Analyzer",
+  "description": "Next-generation logistics solution: AI-Powered Sales Analyzer. Combines process automation with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI-Powered Sales Analyzer - Zion Tech Group",
+    "description": "Next-generation logistics solution: AI-Powered Sales Analyzer. Combines process automation with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-sales-analyzer-2c1222be"
+    }
+  },
+  "features": [
+    "Mobile-responsive interface",
+    "Cloud-native architecture",
+    "Performance dashboards",
+    "Container orchestration",
+    "Edge computing support"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "99.9% uptime guarantee",
+    "Enterprise-grade security",
+    "Automated compliance reporting"
+  ]
+}

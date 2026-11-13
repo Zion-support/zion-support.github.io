@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligent-manager-for-healthcare-c1acd6d5",
+  "breadcrumbTitle": "Intelligent Manager for Healthcare",
+  "title": "Intelligent Manager for Healthcare",
+  "description": "Revolutionize healthcare through intelligent automation. Our Intelligent Manager for Healthcare leverages advanced machine learning to deliver quality control a",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Manager for Healthcare - Zion Tech Group",
+    "description": "Revolutionize healthcare through intelligent automation. Our Intelligent Manager for Healthcare leverages advanced machine learning to deliver quality control a",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-manager-for-healthcare-c1acd6d5"
+    }
+  },
+  "features": [
+    "Zero-downtime updates",
+    "Container orchestration",
+    "Open-source friendly",
+    "Alerting system"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "24/7 automated operations",
+    "Predictive maintenance scheduling",
+    "Reduced human error by 95%",
+    "Automated compliance reporting"
+  ]
+}

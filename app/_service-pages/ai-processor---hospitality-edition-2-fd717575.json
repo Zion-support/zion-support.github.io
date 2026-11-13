@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-processor---hospitality-edition-2-fd717575",
+  "breadcrumbTitle": "AI Processor - Hospitality Edition #2",
+  "title": "AI Processor - Hospitality Edition #2",
+  "description": "Next-generation hospitality solution: AI Processor - Hospitality Edition #2. Combines workflow management with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Processor - Hospitality Edition #2 - Zion Tech Group",
+    "description": "Next-generation hospitality solution: AI Processor - Hospitality Edition #2. Combines workflow management with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-processor---hospitality-edition-2-fd717575"
+    }
+  },
+  "features": [
+    "Audit trails",
+    "SOC 2 certified",
+    "Serverless functions",
+    "Mobile-responsive interface"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "Enterprise-grade security",
+    "Zero manual intervention required",
+    "99.9% uptime guarantee",
+    "3x faster decision making"
+  ]
+}

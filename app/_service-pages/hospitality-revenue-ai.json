@@ -1,0 +1,29 @@
+{
+  "title": "Hospitality Revenue Management AI",
+  "description": "AI-powered revenue optimization for hotels with dynamic pricing and demand forecasting.",
+  "basic": "$3/room/mo/month",
+  "pro": "$499/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Hospitality Revenue Management AI - Zion Tech Group",
+    "description": "AI-powered revenue optimization for hotels with dynamic pricing and demand forecasting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/hospitality-revenue-ai"
+    }
+  },
+  "features": [
+    "Dynamic pricing",
+    "Demand forecasting",
+    "Guest segmentation",
+    "Competitive intelligence",
+    "Channel optimization"
+  ],
+  "benefits": [
+    "15-25% RevPAR increase",
+    "Competitive pricing",
+    "Forecasting accuracy",
+    "Channel optimization"
+  ]
+}

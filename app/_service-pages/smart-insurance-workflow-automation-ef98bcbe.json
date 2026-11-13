@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/smart-insurance-workflow-automation-ef98bcbe",
+  "breadcrumbTitle": "Smart Insurance Workflow Automation",
+  "title": "Smart Insurance Workflow Automation",
+  "description": "Intelligent workflow automation platform that streamlines insurance processes and eliminates manual tasks.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Smart Insurance Workflow Automation - Zion Tech Group",
+    "description": "Intelligent workflow automation platform that streamlines insurance processes and eliminates manual tasks.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-insurance-workflow-automation-ef98bcbe"
+    }
+  },
+  "features": [
+    "Process mapping",
+    "Task automation",
+    "Workflow optimization",
+    "Exception handling"
+  ],
+  "benefits": [
+    "Faster operations",
+    "Reduced errors",
+    "Improved productivity",
+    "Better resource utilization"
+  ]
+}

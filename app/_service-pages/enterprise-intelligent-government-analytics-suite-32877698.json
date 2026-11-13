@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/enterprise-intelligent-government-analytics-suite-32877698",
+  "breadcrumbTitle": "Enterprise Intelligent Government Analytics Suite",
+  "title": "Enterprise Intelligent Government Analytics Suite",
+  "description": "Enterprise analytics suite that delivers intelligent government insights with unified dashboards and reporting.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Enterprise Intelligent Government Analytics Suite - Zion Tech Group",
+    "description": "Enterprise analytics suite that delivers intelligent government insights with unified dashboards and reporting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/enterprise-intelligent-government-analytics-suite-32877698"
+    }
+  },
+  "features": [
+    "Data visualization",
+    "Custom dashboards",
+    "Report generation",
+    "KPI tracking"
+  ],
+  "benefits": [
+    "Unified data view",
+    "Faster insights",
+    "Customizable reports",
+    "Cross-functional collaboration"
+  ]
+}

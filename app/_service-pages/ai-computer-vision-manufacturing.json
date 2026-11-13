@@ -1,0 +1,29 @@
+{
+  "title": "Computer Vision for Manufacturing",
+  "description": "Automated visual inspection, defect detection, quality control, and process monitoring using AI computer vision. Works with existing cameras and IoT sensors.",
+  "basic": "$N/A/month",
+  "pro": "$N/A/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Computer Vision for Manufacturing - Zion Tech Group",
+    "description": "Automated visual inspection, defect detection, quality control, and process monitoring using AI computer vision. Works with existing cameras and IoT sensors.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-computer-vision-manufacturing"
+    }
+  },
+  "features": [
+    "Defect detection",
+    "Visual inspection",
+    "Quality classification",
+    "Process monitoring",
+    "Anomaly detection"
+  ],
+  "benefits": [
+    "99.5% detection accuracy",
+    "100x faster than manual",
+    "Zero-defect target",
+    "Safety compliance"
+  ]
+}

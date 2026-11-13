@@ -3,6 +3,7 @@
 
 import { useEffect, useRef, useState, useCallback } from 'react';
 import { usePathname } from 'next/navigation';
+import Link from 'next/link';
 
 interface Heading {
   id: string;
@@ -29,7 +30,7 @@ export default function QuickJump({ contentRef, className = '' }: QuickJumpProps
   const [collapsed, setCollapsed] = useState(false);
   const localRef = useRef<HTMLElement>(null);
   const ref = contentRef?.current || localRef.current;
-  const pathname = usePathname();
+  const pathname = usePathname() ?? '';
 
   const extractHeadings = useCallback(() => {
     const container = ref || document;
@@ -158,7 +159,7 @@ export default function QuickJump({ contentRef, className = '' }: QuickJumpProps
 }
 
 export function PageJump() {
-  const pathname = usePathname();
+  const pathname = usePathname() ?? '';
   const [open, setOpen] = useState(false);
 
   const links = [

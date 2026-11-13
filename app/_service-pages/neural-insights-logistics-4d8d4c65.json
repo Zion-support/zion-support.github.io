@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/neural-insights-logistics-4d8d4c65",
+  "breadcrumbTitle": "Neural insights-logistics",
+  "title": "Neural insights-logistics",
+  "description": "Unlock unprecedented growth with Neural insights-logistics. This autonomous system provides user experience with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Neural insights-logistics - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Neural insights-logistics. This autonomous system provides user experience with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/neural-insights-logistics-4d8d4c65"
+    }
+  },
+  "features": [
+    "Rollback mechanisms",
+    "Comprehensive monitoring",
+    "SOC 2 certified",
+    "Data encryption",
+    "Audit trails"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "Intelligent load balancing",
+    "Seamless integration with existing systems"
+  ]
+}

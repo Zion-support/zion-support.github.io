@@ -1,0 +1,29 @@
+{
+  "title": "Data Mesh & Modern Data Platform Architecture",
+  "description": "Implement data mesh architecture with domain-oriented data ownership, self-serve data infrastructure, and federated computational governance.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Data Mesh & Modern Data Platform Architecture - Zion Tech Group",
+    "description": "Implement data mesh architecture with domain-oriented data ownership, self-serve data infrastructure, and federated computational governance.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-data-mesh-implementation"
+    }
+  },
+  "features": [
+    "Domain-oriented data product design",
+    "Self-serve data platform implementation",
+    "Federated computational governance framework",
+    "Data quality and lineage automation",
+    "Multi-cloud data lakehouse architecture"
+  ],
+  "benefits": [
+    "Reduce costs with data mesh & modern data platform architecture",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

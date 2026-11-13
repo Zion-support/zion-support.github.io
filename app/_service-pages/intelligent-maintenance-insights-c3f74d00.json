@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-maintenance-insights-c3f74d00",
+  "breadcrumbTitle": "Intelligent Maintenance Insights",
+  "title": "Intelligent Maintenance Insights",
+  "description": "Unlock unprecedented growth with Intelligent Maintenance Insights. This autonomous system provides customer insights with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Maintenance Insights - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Intelligent Maintenance Insights. This autonomous system provides customer insights with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-maintenance-insights-c3f74d00"
+    }
+  },
+  "features": [
+    "Mobile-responsive interface",
+    "Machine learning integration",
+    "Multi-language support",
+    "GDPR compliance"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Predictive maintenance scheduling",
+    "Reduced human error by 95%",
+    "Enterprise-grade security"
+  ]
+}

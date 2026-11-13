@@ -1,0 +1,29 @@
+{
+  "title": "IT Automation & Orchestration Platform",
+  "description": "Enterprise IT automation platform with workflow orchestration, infrastructure provisioning, configuration management, and self-healing system capabilities.",
+  "basic": "$99/mo/month",
+  "pro": "$299/mo/month",
+  "enterprise": "$999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "IT Automation & Orchestration Platform - Zion Tech Group",
+    "description": "Enterprise IT automation platform with workflow orchestration, infrastructure provisioning, configuration management, and self-healing system capabilities.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-automation-orchestrator"
+    }
+  },
+  "features": [
+    "Infrastructure automation with Terraform and Ansible",
+    "Workflow orchestration across IT systems",
+    "Self-healing infrastructure with event-driven automation",
+    "Compliance enforcement and drift detection",
+    "Centralized automation catalog and governance"
+  ],
+  "benefits": [
+    "Reduce costs with it automation & orchestration platform",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

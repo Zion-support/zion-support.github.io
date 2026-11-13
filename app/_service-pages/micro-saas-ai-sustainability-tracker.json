@@ -1,0 +1,29 @@
+{
+  "title": "AI Sustainability & ESG Compliance Tracker",
+  "description": "AI-powered sustainability tracking and ESG compliance platform. Automate data collection, calculate carbon footprint, and generate reports for GRI, CDP, TCFD, and SASB frameworks.",
+  "basic": "$999/mo/month",
+  "pro": "$2,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Sustainability & ESG Compliance Tracker - Zion Tech Group",
+    "description": "AI-powered sustainability tracking and ESG compliance platform. Automate data collection, calculate carbon footprint, and generate reports for GRI, CDP, TCFD, a",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-ai-sustainability-tracker"
+    }
+  },
+  "features": [
+    "Automated carbon footprint calculation",
+    "Scope 1/2/3 emissions tracking",
+    "ESG framework mapping (GRI",
+    " CDP",
+    " TCFD"
+  ],
+  "benefits": [
+    "Reduce ESG reporting time by 80%",
+    "Identify carbon reduction opportunities",
+    "Meet investor and regulatory ESG requirements",
+    "Benchmark sustainability performance"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/industry-specific-vision-ai-for-supply-chain-f7b56a05",
+  "breadcrumbTitle": "Industry-Specific Vision AI for Supply Chain",
+  "title": "Industry-Specific Vision AI for Supply Chain",
+  "description": "Vision AI system powered by industry-specific computer vision models for supply chain analysis and automated visual inspection.",
+  "basic": "$258/month",
+  "pro": "$648/month",
+  "enterprise": "$1948/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Industry-Specific Vision AI for Supply Chain - Zion Tech Group",
+    "description": "Vision AI system powered by industry-specific computer vision models for supply chain analysis and automated visual inspection.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/industry-specific-vision-ai-for-supply-chain-f7b56a05"
+    }
+  },
+  "features": [
+    "Real-time object detection",
+    "Image classification",
+    "Anomaly detection",
+    "Visual inspection"
+  ],
+  "benefits": [
+    "Automated quality control",
+    "Reduced inspection costs",
+    "Defect detection",
+    "Visual search"
+  ]
+}

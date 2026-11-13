@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-insights-legal-462dd5b7",
+  "breadcrumbTitle": "AI-Powered insights-legal",
+  "title": "AI-Powered insights-legal",
+  "description": "Next-generation legal solution: AI-Powered insights-legal. Combines user experience with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered insights-legal - Zion Tech Group",
+    "description": "Next-generation legal solution: AI-Powered insights-legal. Combines user experience with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-insights-legal-462dd5b7"
+    }
+  },
+  "features": [
+    "Microservices deployment",
+    "API-first design",
+    "Multi-language support",
+    "Performance dashboards",
+    "Plugin architecture"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "Automated compliance reporting",
+    "Dynamic resource allocation"
+  ]
+}

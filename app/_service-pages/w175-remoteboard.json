@@ -1,0 +1,29 @@
+{
+  "title": "RemoteBoard — Async Standup Tool",
+  "description": "Async daily standups and team updates for remote teams. Text, video, or voice check-ins with AI summaries, blockers tracking, and Slack/Teams integration.",
+  "basic": "$3/user/mo/month",
+  "pro": "$6/user/mo/month",
+  "enterprise": "$12/user/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "RemoteBoard — Async Standup Tool - Zion Tech Group",
+    "description": "Async daily standups and team updates for remote teams. Text, video, or voice check-ins with AI summaries, blockers tracking, and Slack/Teams integration.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w175-remoteboard"
+    }
+  },
+  "features": [
+    "Async standup collection (text, video, voice)",
+    "AI-generated standup summaries",
+    "Blocker and dependency tracking",
+    "Timezone-aware scheduling",
+    "Historical search and analytics"
+  ],
+  "benefits": [
+    "No more scheduling standups across timezones",
+    "AI summaries save leadership reading time",
+    "Blockers surface automatically",
+    "Team health metrics reveal burnout early"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/insights-cognitive---insurance-e19e7f93",
+  "breadcrumbTitle": "Insights Cognitive - Insurance",
+  "title": "Insights Cognitive - Insurance",
+  "description": "Next-generation insurance solution: Insights Cognitive - Insurance. Combines fraud prevention with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Insights Cognitive - Insurance - Zion Tech Group",
+    "description": "Next-generation insurance solution: Insights Cognitive - Insurance. Combines fraud prevention with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/insights-cognitive---insurance-e19e7f93"
+    }
+  },
+  "features": [
+    "Rollback mechanisms",
+    "Microservices deployment",
+    "Custom integrations",
+    "Performance dashboards",
+    "Edge computing support"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Performance benchmarking",
+    "24/7 automated operations"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "Telecom Network AI Optimization",
+  "description": "AI-powered network optimization with predictive maintenance and traffic optimization.",
+  "basic": "$10,000/month",
+  "pro": "$4,000/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Telecom Network AI Optimization - Zion Tech Group",
+    "description": "AI-powered network optimization with predictive maintenance and traffic optimization.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/telecom-network-ai"
+    }
+  },
+  "features": [
+    "Predictive maintenance",
+    "Traffic optimization",
+    "Anomaly detection",
+    "Customer experience",
+    "Capacity planning"
+  ],
+  "benefits": [
+    "30% less downtime",
+    "20% capacity gain",
+    "Customer satisfaction",
+    "Energy reduction"
+  ]
+}

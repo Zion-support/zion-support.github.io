@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/smart-engine-finance-16d971db",
+  "breadcrumbTitle": "Smart engine-finance",
+  "title": "Smart engine-finance",
+  "description": "Transform your finance operations with our Smart engine-finance. This AI-driven solution automates performance monitoring with unprecedented accuracy and effici",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart engine-finance - Zion Tech Group",
+    "description": "Transform your finance operations with our Smart engine-finance. This AI-driven solution automates performance monitoring with unprecedented accuracy and effici",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-engine-finance-16d971db"
+    }
+  },
+  "features": [
+    "Plugin architecture",
+    "Role-based access control",
+    "Container orchestration",
+    "Rollback mechanisms",
+    "Cloud-native architecture"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Scalable to millions of transactions",
+    "Self-healing infrastructure",
+    "24/7 automated operations"
+  ]
+}

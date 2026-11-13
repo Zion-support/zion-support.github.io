@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "AI MSP Security Compliance: common mistakes | Zion Tech Group",
+    "description": "AI MSP Security Compliance: common mistakes",
+    "keywords": [
+      "it",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "AI MSP Security Compliance: common mistakes",
+      "description": "AI MSP Security Compliance: common mistakes",
+      "url": "https://ziontechgroup.com/blog/ai-msp-security-compliance-common-mistakes/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/ai-msp-security-compliance-common-mistakes/"
+    }
+  },
+  "values": [
+    "AI MSP Security Compliance: common mistakes",
+    "AI MSP Security Compliance: common mistakes",
+    "AI MSP Security Compliance: common mistakes",
+    "Outcomes to measure",
+    "Leading indicators for ai msp security compliance: common mistakes: workflow completion rate, escalation rate, time-to-resolution, and user satisfaction. Lagging indicators: revenue trend, cost trend, customer retention, and operational efficiency. Track both leading and lagging indicators so you can explain progress to leadership before financial results appear. Use a rolling 90-day window and re-baseline monthly; this keeps the program accountable without demanding perfection on day one. Publish metrics in a shared dashboard so the whole team sees progress, not just the program sponsor.",
+    "Outcomes to measure",
+    " Leading indicators for ai msp security compliance: common mistakes: workflow completion rate, escalation rate, time-to-resolution, and user satisfaction. Lagging indicators: revenue trend, cost trend, customer retention, and operational efficiency. Track both leading and lagging indicators so you can explain progress to leadership before financial results appear. Use a rolling 90-day window and re-baseline monthly; this keeps the program accountable without demanding perfection on day one. Publish metrics in a shared dashboard so the whole team sees progress, not just the program sponsor.",
+    "/blog/cloud-finops-checklist-for-it-leaders",
+    "Cloud Finops Checklist For It Leaders",
+    "/blog/enterprise-ai-intelligence-hub-2026-6579",
+    "Enterprise Ai Intelligence Hub 2026 6579",
+    "/blog/autonomous-qa-engineering-2026-7282",
+    "Autonomous Qa Engineering 2026 7282",
+    "/blog/ai-customer-support-deployment-patterns",
+    "Ai Customer Support Deployment Patterns"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "AI MSP Security Compliance: common mistakes",
+    "description": "AI MSP Security Compliance: common mistakes",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T08:12:15Z",
+    "dateModified": "2026-08-07T08:12:15Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/ai-msp-security-compliance-common-mistakes/"
+  }
+}

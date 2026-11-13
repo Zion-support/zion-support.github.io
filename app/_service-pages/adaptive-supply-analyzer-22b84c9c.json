@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/adaptive-supply-analyzer-22b84c9c",
+  "breadcrumbTitle": "Adaptive Supply Analyzer",
+  "title": "Adaptive Supply Analyzer",
+  "description": "The future of energy is here with Adaptive Supply Analyzer. Powered by cutting-edge AI, this platform delivers workflow management like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Adaptive Supply Analyzer - Zion Tech Group",
+    "description": "The future of energy is here with Adaptive Supply Analyzer. Powered by cutting-edge AI, this platform delivers workflow management like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/adaptive-supply-analyzer-22b84c9c"
+    }
+  },
+  "features": [
+    "API-first design",
+    "GDPR compliance",
+    "Comprehensive monitoring",
+    "Plugin architecture",
+    "Mobile-responsive interface"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Scalable to millions of transactions",
+    "3x faster decision making"
+  ]
+}

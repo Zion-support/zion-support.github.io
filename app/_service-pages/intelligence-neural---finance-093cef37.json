@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligence-neural---finance-093cef37",
+  "breadcrumbTitle": "Intelligence Neural - Finance",
+  "title": "Intelligence Neural - Finance",
+  "description": "Unlock unprecedented growth with Intelligence Neural - Finance. This autonomous system provides maintenance scheduling with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligence Neural - Finance - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Intelligence Neural - Finance. This autonomous system provides maintenance scheduling with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligence-neural---finance-093cef37"
+    }
+  },
+  "features": [
+    "Microservices deployment",
+    "Data encryption",
+    "Alerting system",
+    "Open-source friendly"
+  ],
+  "benefits": [
+    "50% reduction in operational costs",
+    "ROI in under 90 days",
+    "Predictive maintenance scheduling",
+    "Seamless integration with existing systems"
+  ]
+}

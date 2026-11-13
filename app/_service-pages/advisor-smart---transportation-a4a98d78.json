@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/advisor-smart---transportation-a4a98d78",
+  "breadcrumbTitle": "Advisor Smart - Transportation",
+  "title": "Advisor Smart - Transportation",
+  "description": "The future of transportation is here with Advisor Smart - Transportation. Powered by cutting-edge AI, this platform delivers document processing like never befo",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Advisor Smart - Transportation - Zion Tech Group",
+    "description": "The future of transportation is here with Advisor Smart - Transportation. Powered by cutting-edge AI, this platform delivers document processing like never befo",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/advisor-smart---transportation-a4a98d78"
+    }
+  },
+  "features": [
+    "Mobile-responsive interface",
+    "Microservices deployment",
+    "Alerting system",
+    "GDPR compliance"
+  ],
+  "benefits": [
+    "24/7 automated operations",
+    "Enterprise-grade security",
+    "50% reduction in operational costs",
+    "Performance benchmarking"
+  ]
+}

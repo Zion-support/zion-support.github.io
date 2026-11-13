@@ -1,0 +1,29 @@
+{
+  "title": "Edge Computing Orchestration",
+  "description": "Deploy and manage containerized workloads across distributed edge nodes. Auto-scaling, zero-trust networking, and offline sync for true edge-native applications.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Edge Computing Orchestration - Zion Tech Group",
+    "description": "Deploy and manage containerized workloads across distributed edge nodes. Auto-scaling, zero-trust networking, and offline sync for true edge-native applications",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-edge-computing-orchestration"
+    }
+  },
+  "features": [
+    "Multi-cluster management",
+    "GitOps-driven deployment",
+    "Edge-native storage",
+    "Offline-first sync",
+    "Observability across regions"
+  ],
+  "benefits": [
+    "Reduce costs with edge computing orchestration",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

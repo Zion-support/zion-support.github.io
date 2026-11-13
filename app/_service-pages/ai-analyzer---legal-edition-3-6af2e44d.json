@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-analyzer---legal-edition-3-6af2e44d",
+  "breadcrumbTitle": "AI Analyzer - Legal Edition #3",
+  "title": "AI Analyzer - Legal Edition #3",
+  "description": "The future of legal is here with AI Analyzer - Legal Edition #3. Powered by cutting-edge AI, this platform delivers user experience like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Analyzer - Legal Edition #3 - Zion Tech Group",
+    "description": "The future of legal is here with AI Analyzer - Legal Edition #3. Powered by cutting-edge AI, this platform delivers user experience like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-analyzer---legal-edition-3-6af2e44d"
+    }
+  },
+  "features": [
+    "GDPR compliance",
+    "Multi-language support",
+    "Offline capabilities",
+    "Custom integrations"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "Cost optimization recommendations",
+    "Seamless integration with existing systems",
+    "3x faster decision making",
+    "Predictive maintenance scheduling"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/automated-workflow-platform-3915ecb9",
+  "breadcrumbTitle": "Automated Workflow Platform",
+  "title": "Automated Workflow Platform",
+  "description": "Unlock unprecedented growth with Automated Workflow Platform. This autonomous system provides decision support with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated Workflow Platform - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Automated Workflow Platform. This autonomous system provides decision support with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-workflow-platform-3915ecb9"
+    }
+  },
+  "features": [
+    "Serverless functions",
+    "API-first design",
+    "Comprehensive monitoring",
+    "SOC 2 certified",
+    "Offline capabilities"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "24/7 automated operations",
+    "Predictive maintenance scheduling"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "Insurance AI Claims Processor",
+  "description": "End-to-end claims processing with AI — intake, fraud detection, damage assessment, adjudication, and payment. Reduces processing time from weeks to minutes.",
+  "basic": "$N/A/month",
+  "pro": "$N/A/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Insurance AI Claims Processor - Zion Tech Group",
+    "description": "End-to-end claims processing with AI — intake, fraud detection, damage assessment, adjudication, and payment. Reduces processing time from weeks to minutes.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/insurance-ai-claims-processor"
+    }
+  },
+  "features": [
+    "Automated intake",
+    "Fraud detection",
+    "Damage assessment",
+    "Adjudication",
+    "Payment processing"
+  ],
+  "benefits": [
+    "80% faster processing",
+    "Fraud detection 95%+",
+    "Customer satisfaction",
+    "Cost reduction"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/orchestrator-ai---transportation-a14baaa1",
+  "breadcrumbTitle": "Orchestrator AI - Transportation",
+  "title": "Orchestrator AI - Transportation",
+  "description": "Revolutionize transportation through intelligent automation. Our Orchestrator AI - Transportation leverages advanced machine learning to deliver process automat",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Orchestrator AI - Transportation - Zion Tech Group",
+    "description": "Revolutionize transportation through intelligent automation. Our Orchestrator AI - Transportation leverages advanced machine learning to deliver process automat",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/orchestrator-ai---transportation-a14baaa1"
+    }
+  },
+  "features": [
+    "API-first design",
+    "Comprehensive monitoring",
+    "HIPAA ready",
+    "Machine learning integration",
+    "Container orchestration"
+  ],
+  "benefits": [
+    "24/7 automated operations",
+    "Seamless integration with existing systems",
+    "Cost optimization recommendations",
+    "Self-healing infrastructure",
+    "Performance benchmarking"
+  ]
+}

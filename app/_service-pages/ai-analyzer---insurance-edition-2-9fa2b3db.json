@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-analyzer---insurance-edition-2-9fa2b3db",
+  "breadcrumbTitle": "AI Analyzer - Insurance Edition #2",
+  "title": "AI Analyzer - Insurance Edition #2",
+  "description": "The future of insurance is here with AI Analyzer - Insurance Edition #2. Powered by cutting-edge AI, this platform delivers threat detection like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Analyzer - Insurance Edition #2 - Zion Tech Group",
+    "description": "The future of insurance is here with AI Analyzer - Insurance Edition #2. Powered by cutting-edge AI, this platform delivers threat detection like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-analyzer---insurance-edition-2-9fa2b3db"
+    }
+  },
+  "features": [
+    "Rollback mechanisms",
+    "Alerting system",
+    "Offline capabilities",
+    "Open-source friendly",
+    "Edge computing support"
+  ],
+  "benefits": [
+    "50% reduction in operational costs",
+    "Cost optimization recommendations",
+    "Automated compliance reporting",
+    "Zero manual intervention required"
+  ]
+}

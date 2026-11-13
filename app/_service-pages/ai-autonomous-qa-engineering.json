@@ -1,0 +1,28 @@
+{
+  "title": "Autonomous QA Engineering Platform",
+  "description": "Auto-generate comprehensive E2E tests from user session replay; auto-fix flaky selectors; run tests on every PR; auto-open bug ticket on fail.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Autonomous QA Engineering Platform - Zion Tech Group",
+    "description": "Auto-generate comprehensive E2E tests from user session replay; auto-fix flaky selectors; run tests on every PR; auto-open bug ticket on fail.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-autonomous-qa-engineering"
+    }
+  },
+  "features": [
+    "E2E test auto-generation from session replay",
+    "Auto-fix flaky selector on retry (best-match)",
+    "Run full E2E suite per PR + auto-open Jira",
+    "Flake budget SLA gate per PR"
+  ],
+  "benefits": [
+    "Reduce costs with autonomous qa engineering platform",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

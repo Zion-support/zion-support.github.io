@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "MicroSaaS Social Media Manager: operations handbook | Zion Tech Group",
+    "description": "MicroSaaS Social Media Manager: operations handbook",
+    "keywords": [
+      "ai",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "MicroSaaS Social Media Manager: operations handbook",
+      "description": "MicroSaaS Social Media Manager: operations handbook",
+      "url": "https://ziontechgroup.com/blog/microsaas-social-media-manager-operations-handbook/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/microsaas-social-media-manager-operations-handbook/"
+    }
+  },
+  "values": [
+    "MicroSaaS Social Media Manager: operations handbook",
+    "MicroSaaS Social Media Manager: operations handbook",
+    "MicroSaaS Social Media Manager: operations handbook",
+    "Action checklist",
+    "For microsaas social media manager: operations handbook: pick one workflow, assign ownership, define success metrics, instrument execution, and set a 30-day review date. Write the checklist down and share it with stakeholders so expectations are explicit. Before launch, verify access controls, monitoring, rollback criteria, and on-call coverage. After launch, review metrics weekly and escalate deviations immediately; small drifts become large incidents when ignored. Use the checklist as a living document and update it as the program learns from real operation.",
+    "Action checklist",
+    " For microsaas social media manager: operations handbook: pick one workflow, assign ownership, define success metrics, instrument execution, and set a 30-day review date. Write the checklist down and share it with stakeholders so expectations are explicit. Before launch, verify access controls, monitoring, rollback criteria, and on-call coverage. After launch, review metrics weekly and escalate deviations immediately; small drifts become large incidents when ignored. Use the checklist as a living document and update it as the program learns from real operation.",
+    "/blog/etl-pipeline-optimization-common-mistakes",
+    "Etl Pipeline Optimization Common Mistakes",
+    "/blog/event-driven-architecture-2026-6961",
+    "Event Driven Architecture 2026 6961",
+    "/blog/cyber-threat-intelligence-security-and-governance",
+    "Cyber Threat Intelligence Security And Governance",
+    "/blog/api-integration-vendor-evaluation",
+    "Api Integration Vendor Evaluation"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "MicroSaaS Social Media Manager: operations handbook",
+    "description": "MicroSaaS Social Media Manager: operations handbook",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T08:27:32Z",
+    "dateModified": "2026-08-07T08:27:32Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/microsaas-social-media-manager-operations-handbook/"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "title": "Data Warehouse Modernization",
+  "description": "Migration from legacy data warehouses (Oracle, Teradata) to modern cloud-native stacks (Snowflake, BigQuery, Databricks) with zero downtime.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Data Warehouse Modernization - Zion Tech Group",
+    "description": "Migration from legacy data warehouses (Oracle, Teradata) to modern cloud-native stacks (Snowflake, BigQuery, Databricks) with zero downtime.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-data-warehouse-modernization"
+    }
+  },
+  "features": [
+    "Schema conversion tools",
+    "ETL/ELT pipeline rebuild",
+    "Query optimization",
+    "Training for data team"
+  ],
+  "benefits": [
+    "Reduce costs with data warehouse modernization",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

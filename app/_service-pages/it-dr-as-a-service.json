@@ -1,0 +1,29 @@
+{
+  "title": "Disaster Recovery as a Service",
+  "description": "Cloud-based disaster recovery with automated failover, continuous replication, and regular DR testing. RPO/RTO guarantees with multi-region support.",
+  "basic": "$N/A/month",
+  "pro": "$N/A/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Disaster Recovery as a Service - Zion Tech Group",
+    "description": "Cloud-based disaster recovery with automated failover, continuous replication, and regular DR testing. RPO/RTO guarantees with multi-region support.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-dr-as-a-service"
+    }
+  },
+  "features": [
+    "Automated failover",
+    "Continuous replication",
+    "Regular DR testing",
+    "Multi-region support",
+    "RPO/RTO guarantees"
+  ],
+  "benefits": [
+    "Minutes not hours recovery",
+    "Zero data loss",
+    "Compliance ready",
+    "24/7 monitoring"
+  ]
+}

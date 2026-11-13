@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligence-cognitive---transportation-90be6862",
+  "breadcrumbTitle": "Intelligence Cognitive - Transportation",
+  "title": "Intelligence Cognitive - Transportation",
+  "description": "Next-generation transportation solution: Intelligence Cognitive - Transportation. Combines threat detection with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligence Cognitive - Transportation - Zion Tech Group",
+    "description": "Next-generation transportation solution: Intelligence Cognitive - Transportation. Combines threat detection with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligence-cognitive---transportation-90be6862"
+    }
+  },
+  "features": [
+    "Auto-scaling capabilities",
+    "Serverless functions",
+    "HIPAA ready",
+    "Zero-downtime updates"
+  ],
+  "benefits": [
+    "50% reduction in operational costs",
+    "ROI in under 90 days",
+    "Intelligent load balancing",
+    "Automated compliance reporting"
+  ]
+}

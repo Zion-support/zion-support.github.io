@@ -1,0 +1,29 @@
+{
+  "title": "Secure Data Clean Rooms",
+  "description": "Data clean rooms for secure collaboration: query across parties without exposing raw data. Differential privacy.",
+  "basic": "$799/mo/month",
+  "pro": "$2,499/mo/month",
+  "enterprise": "$7,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Secure Data Clean Rooms - Zion Tech Group",
+    "description": "Data clean rooms for secure collaboration: query across parties without exposing raw data. Differential privacy.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w177-data-cleanroom"
+    }
+  },
+  "features": [
+    "Cross-organization data querying",
+    "No raw data exposure",
+    "Differential privacy controls",
+    "Row and column level access",
+    "Usage metering and audit logging"
+  ],
+  "benefits": [
+    "Share insights without exposing raw data",
+    "Differential privacy provides math guarantees",
+    "Audit logging for governance",
+    "Compliance controls for regulated data"
+  ]
+}

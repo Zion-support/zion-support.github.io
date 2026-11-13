@@ -1,0 +1,29 @@
+{
+  "title": "AI Customer Support",
+  "description": "24/7 AI-powered customer service with intelligent ticket routing, auto-resolution, and sentiment analysis.",
+  "basic": "$99/mo/month",
+  "pro": "$299/mo/month",
+  "enterprise": "$999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Customer Support - Zion Tech Group",
+    "description": "24/7 AI-powered customer service with intelligent ticket routing, auto-resolution, and sentiment analysis.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-customer-support"
+    }
+  },
+  "features": [
+    "AI chatbot with human handoff",
+    "Smart ticket routing & prioritization",
+    "Sentiment analysis & escalation",
+    "Knowledge base auto-sync",
+    "Multi-channel support (email, chat, social)"
+  ],
+  "benefits": [
+    "Reduce costs with ai customer support",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

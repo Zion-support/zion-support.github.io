@@ -1,0 +1,29 @@
+{
+  "title": "Voice Infrastructure & Contact Center Solutions",
+  "description": "Modern contact center infrastructure - SIP trunking, IVR design, call routing, quality monitoring, and AI agent assistance.",
+  "basic": "$199/mo/month",
+  "pro": "$699/mo/month",
+  "enterprise": "$2,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Voice Infrastructure & Contact Center Solutions - Zion Tech Group",
+    "description": "Modern contact center infrastructure - SIP trunking, IVR design, call routing, quality monitoring, and AI agent assistance.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-voice-infrastructure"
+    }
+  },
+  "features": [
+    "SIP and VoIP infrastructure",
+    "Intelligent routing and IVR",
+    "Call quality monitoring",
+    "AI agent assistance",
+    "Omnichannel integration"
+  ],
+  "benefits": [
+    "Reduce costs with voice infrastructure & contact center solutions",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "Network Automation Platform",
+  "description": "Automate network configuration, monitoring, and troubleshooting. Infrastructure as Code for networks with compliance checking and change management.",
+  "basic": "$1,999/mo/month",
+  "pro": "$5,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Network Automation Platform - Zion Tech Group",
+    "description": "Automate network configuration, monitoring, and troubleshooting. Infrastructure as Code for networks with compliance checking and change management.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-network-automation-platform"
+    }
+  },
+  "features": [
+    "Network configuration automation",
+    "Compliance checking",
+    "Change management workflows",
+    "Network monitoring and alerting",
+    "Integration with Cisco, Juniper, Arista"
+  ],
+  "benefits": [
+    "Reduce network configuration errors",
+    "Automate repetitive network tasks",
+    "Ensure compliance",
+    "Faster network deployments"
+  ]
+}

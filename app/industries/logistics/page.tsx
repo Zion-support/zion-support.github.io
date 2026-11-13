@@ -1,5 +1,4 @@
 // app/industries/logistics/page.tsx - Logistics & Supply Chain AI Solutions
-'use client';
 
 import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';

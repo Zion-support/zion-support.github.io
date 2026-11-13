@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/cognitive-intelligence-real-estate-37f0d50f",
+  "breadcrumbTitle": "Cognitive intelligence-real-estate",
+  "title": "Cognitive intelligence-real-estate",
+  "description": "Transform your real-estate operations with our Cognitive intelligence-real-estate. This AI-driven solution automates supply chain with unprecedented accuracy an",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Cognitive intelligence-real-estate - Zion Tech Group",
+    "description": "Transform your real-estate operations with our Cognitive intelligence-real-estate. This AI-driven solution automates supply chain with unprecedented accuracy an",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cognitive-intelligence-real-estate-37f0d50f"
+    }
+  },
+  "features": [
+    "SOC 2 certified",
+    "Open-source friendly",
+    "Serverless functions",
+    "Role-based access control"
+  ],
+  "benefits": [
+    "Automated compliance reporting",
+    "Intelligent load balancing",
+    "Zero manual intervention required",
+    "Scalable to millions of transactions"
+  ]
+}

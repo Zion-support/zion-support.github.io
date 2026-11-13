@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/adaptive-generator-hospitality-8053c0b0",
+  "breadcrumbTitle": "Adaptive generator-hospitality",
+  "title": "Adaptive generator-hospitality",
+  "description": "Transform your hospitality operations with our Adaptive generator-hospitality. This AI-driven solution automates energy management with unprecedented accuracy a",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Adaptive generator-hospitality - Zion Tech Group",
+    "description": "Transform your hospitality operations with our Adaptive generator-hospitality. This AI-driven solution automates energy management with unprecedented accuracy a",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/adaptive-generator-hospitality-8053c0b0"
+    }
+  },
+  "features": [
+    "Comprehensive monitoring",
+    "Microservices deployment",
+    "Open-source friendly",
+    "Multi-region deployment",
+    "Serverless functions"
+  ],
+  "benefits": [
+    "Cost optimization recommendations",
+    "Intelligent load balancing",
+    "Zero manual intervention required"
+  ]
+}

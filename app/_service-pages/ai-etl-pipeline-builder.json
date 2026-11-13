@@ -1,0 +1,29 @@
+{
+  "title": "AI ETL Pipeline Builder",
+  "description": "Natural language ETL builder: describe source, target, transformation — AI generates production-ready dbt/Glue/Dataflow pipeline. Auto-tests, docs, type-map.",
+  "basic": "$199/mo/month",
+  "pro": "$599/mo/month",
+  "enterprise": "$1,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI ETL Pipeline Builder - Zion Tech Group",
+    "description": "Natural language ETL builder: describe source, target, transformation — AI generates production-ready dbt/Glue/Dataflow pipeline. Auto-tests, docs, type-map.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-etl-pipeline-builder"
+    }
+  },
+  "features": [
+    "NL to ETL: dbt/Glue/Dataflow",
+    "Auto-generated transform tests + documentation",
+    "Schema mapping + type coercion per column",
+    "Schedule + alert (Airflow/Step/Cloud Scheduler)",
+    "CLI + UI — iterate pipeline in minutes"
+  ],
+  "benefits": [
+    "Reduce costs with ai etl pipeline builder",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-director---education-edition-38b3b9e3",
+  "breadcrumbTitle": "AI Director - Education Edition",
+  "title": "AI Director - Education Edition",
+  "description": "Transform your education operations with our AI Director - Education Edition. This AI-driven solution automates decision support with unprecedented accuracy and",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Director - Education Edition - Zion Tech Group",
+    "description": "Transform your education operations with our AI Director - Education Edition. This AI-driven solution automates decision support with unprecedented accuracy and",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-director---education-edition-38b3b9e3"
+    }
+  },
+  "features": [
+    "Role-based access control",
+    "Performance dashboards",
+    "HIPAA ready",
+    "Container orchestration",
+    "Alerting system"
+  ],
+  "benefits": [
+    "Intelligent load balancing",
+    "Cost optimization recommendations",
+    "Performance benchmarking"
+  ]
+}

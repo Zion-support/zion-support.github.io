@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/ai-manager---legal-edition-6-97f4dca2",
+  "breadcrumbTitle": "AI Manager - Legal Edition #6",
+  "title": "AI Manager - Legal Edition #6",
+  "description": "Revolutionize legal through intelligent automation. Our AI Manager - Legal Edition #6 leverages advanced machine learning to deliver customer insights at scale.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Manager - Legal Edition #6 - Zion Tech Group",
+    "description": "Revolutionize legal through intelligent automation. Our AI Manager - Legal Edition #6 leverages advanced machine learning to deliver customer insights at scale.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-manager---legal-edition-6-97f4dca2"
+    }
+  },
+  "features": [
+    "Multi-language support",
+    "API-first design",
+    "Open-source friendly",
+    "Rollback mechanisms"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "Intelligent load balancing",
+    "Enterprise-grade security"
+  ]
+}

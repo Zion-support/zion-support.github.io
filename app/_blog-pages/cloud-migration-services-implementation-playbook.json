@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "Cloud Migration Services: implementation playbook | Zion Tech Group",
+    "description": "Cloud Migration Services: implementation playbook",
+    "keywords": [
+      "ai",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "Cloud Migration Services: implementation playbook",
+      "description": "Cloud Migration Services: implementation playbook",
+      "url": "https://ziontechgroup.com/blog/cloud-migration-services-implementation-playbook/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/cloud-migration-services-implementation-playbook/"
+    }
+  },
+  "values": [
+    "Cloud Migration Services: implementation playbook",
+    "Cloud Migration Services: implementation playbook",
+    "Cloud Migration Services: implementation playbook",
+    "Conversion path",
+    "If this guide matches your cloud migration services: implementation playbook initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "Conversion path",
+    " If this guide matches your cloud migration services: implementation playbook initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "/blog/cyber-threat-intelligence-2026-7090",
+    "Cyber Threat Intelligence 2026 7090",
+    "/blog/ai-accessibility-auditor-2026-6788",
+    "Ai Accessibility Auditor 2026 6788",
+    "/blog/managed-it-services-small-business-2026-6766",
+    "Managed It Services Small Business 2026 6766",
+    "/blog/ai-msp-security-compliance-automation-roadmap",
+    "Ai Msp Security Compliance Automation Roadmap"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Cloud Migration Services: implementation playbook",
+    "description": "Cloud Migration Services: implementation playbook",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T07:56:47Z",
+    "dateModified": "2026-08-07T07:56:47Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/cloud-migration-services-implementation-playbook/"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "title": "Virtual CISO (vCISO) Service",
+  "description": "Fractional CISO services: security strategy, compliance roadmap, incident response planning, and board reporting. Enterprise security leadership without the full-time hire.",
+  "basic": "$5,000/mo/month",
+  "pro": "$10,000/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Virtual CISO (vCISO) Service - Zion Tech Group",
+    "description": "Fractional CISO services: security strategy, compliance roadmap, incident response planning, and board reporting. Enterprise security leadership without the ful",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w177-executive-ciso"
+    }
+  },
+  "features": [
+    "Security strategy and roadmap development",
+    "Compliance program management (SOC2",
+    "ISO",
+    "PCI)",
+    "Incident response plan development and testing"
+  ],
+  "benefits": [
+    "Enterprise security leadership at fractional cost",
+    "Compliance program management by experts",
+    "Incident response readiness",
+    "Board-level security reporting"
+  ]
+}

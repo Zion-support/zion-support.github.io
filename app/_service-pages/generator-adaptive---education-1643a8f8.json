@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/generator-adaptive---education-1643a8f8",
+  "breadcrumbTitle": "Generator Adaptive - Education",
+  "title": "Generator Adaptive - Education",
+  "description": "Next-generation education solution: Generator Adaptive - Education. Combines image recognition with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Generator Adaptive - Education - Zion Tech Group",
+    "description": "Next-generation education solution: Generator Adaptive - Education. Combines image recognition with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/generator-adaptive---education-1643a8f8"
+    }
+  },
+  "features": [
+    "API-first design",
+    "Offline capabilities",
+    "Performance dashboards",
+    "Comprehensive monitoring",
+    "Multi-language support"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "Reduced human error by 95%",
+    "24/7 automated operations"
+  ]
+}

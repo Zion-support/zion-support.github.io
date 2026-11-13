@@ -1,0 +1,29 @@
+{
+  "title": "Digital Twin for Manufacturing",
+  "description": "Create digital twins of manufacturing assets. Real-time simulation, predictive maintenance, process optimization, and what-if scenario modeling.",
+  "basic": "$2,999/mo/month",
+  "pro": "$8,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Digital Twin for Manufacturing - Zion Tech Group",
+    "description": "Create digital twins of manufacturing assets. Real-time simulation, predictive maintenance, process optimization, and what-if scenario modeling.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/manufacturing-tech-digital-twin"
+    }
+  },
+  "features": [
+    "Real-time asset digital twins",
+    "Predictive maintenance simulation",
+    "Process optimization",
+    "What-if scenario modeling",
+    "Integration with IoT sensors"
+  ],
+  "benefits": [
+    "Reduce unplanned downtime 45%",
+    "Optimize processes digitally",
+    "Predict failures before they occur",
+    "Improve OEE by 20%"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "AI Speech & Voice Solutions",
+  "description": "Enterprise-grade speech technology including high-accuracy transcription, AI voice cloning, real-time translation, voice biometrics, and conversational AI for customer service.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Speech & Voice Solutions - Zion Tech Group",
+    "description": "Enterprise-grade speech technology including high-accuracy transcription, AI voice cloning, real-time translation, voice biometrics, and conversational AI for c",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-speech-voice-solutions"
+    }
+  },
+  "features": [
+    "99.2% accuracy speech-to-text in 60+ languages",
+    "Real-time voice translation for live meetings",
+    "Voice cloning for personalized brand audio content",
+    "Voice biometrics for secure identity verification",
+    "Conversational IVR with natural language understanding"
+  ],
+  "benefits": [
+    "Reduce costs with ai speech & voice solutions",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

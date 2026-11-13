@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-suite---energy-edition-6f3a7f2d",
+  "breadcrumbTitle": "AI Suite - Energy Edition",
+  "title": "AI Suite - Energy Edition",
+  "description": "Next-generation energy solution: AI Suite - Energy Edition. Combines document processing with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Suite - Energy Edition - Zion Tech Group",
+    "description": "Next-generation energy solution: AI Suite - Energy Edition. Combines document processing with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-suite---energy-edition-6f3a7f2d"
+    }
+  },
+  "features": [
+    "Container orchestration",
+    "Comprehensive monitoring",
+    "Microservices deployment",
+    "Mobile-responsive interface"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "Scalable to millions of transactions",
+    "Zero manual intervention required",
+    "Automated compliance reporting",
+    "24/7 automated operations"
+  ]
+}

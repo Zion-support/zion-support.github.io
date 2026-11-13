@@ -1,0 +1,29 @@
+{
+  "title": "AI Cybersecurity Operations Center",
+  "description": "AI-powered SOC that automates threat detection, investigation, and response. Reduce alert fatigue by 90% and mean time to respond by 80%.",
+  "basic": "$3,999/mo/month",
+  "pro": "$12,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Cybersecurity Operations Center - Zion Tech Group",
+    "description": "AI-powered SOC that automates threat detection, investigation, and response. Reduce alert fatigue by 90% and mean time to respond by 80%.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-cybersecurity-operations"
+    }
+  },
+  "features": [
+    "AI alert triage and correlation",
+    "Automated threat investigation",
+    "Playbook-driven response",
+    "Threat hunting automation",
+    "Integration with 200+ security tools"
+  ],
+  "benefits": [
+    "Reduce alert fatigue by 90%",
+    "Automate 80% of tier-1 investigations",
+    "Improve threat detection coverage",
+    "Scale security team without hiring"
+  ]
+}

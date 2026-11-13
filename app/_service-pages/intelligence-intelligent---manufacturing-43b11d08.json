@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/intelligence-intelligent---manufacturing-43b11d08",
+  "breadcrumbTitle": "Intelligence Intelligent - Manufacturing",
+  "title": "Intelligence Intelligent - Manufacturing",
+  "description": "Next-generation manufacturing solution: Intelligence Intelligent - Manufacturing. Combines decision support with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligence Intelligent - Manufacturing - Zion Tech Group",
+    "description": "Next-generation manufacturing solution: Intelligence Intelligent - Manufacturing. Combines decision support with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligence-intelligent---manufacturing-43b11d08"
+    }
+  },
+  "features": [
+    "Comprehensive monitoring",
+    "Performance dashboards",
+    "Auto-scaling capabilities",
+    "Rollback mechanisms",
+    "Plugin architecture"
+  ],
+  "benefits": [
+    "Automated compliance reporting",
+    "Performance benchmarking",
+    "ROI in under 90 days",
+    "Scalable to millions of transactions",
+    "Zero manual intervention required"
+  ]
+}

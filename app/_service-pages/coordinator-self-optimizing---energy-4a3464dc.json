@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/coordinator-self-optimizing---energy-4a3464dc",
+  "breadcrumbTitle": "Coordinator Self-Optimizing - Energy",
+  "title": "Coordinator Self-Optimizing - Energy",
+  "description": "The future of energy is here with Coordinator Self-Optimizing - Energy. Powered by cutting-edge AI, this platform delivers risk assessment like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Coordinator Self-Optimizing - Energy - Zion Tech Group",
+    "description": "The future of energy is here with Coordinator Self-Optimizing - Energy. Powered by cutting-edge AI, this platform delivers risk assessment like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/coordinator-self-optimizing---energy-4a3464dc"
+    }
+  },
+  "features": [
+    "HIPAA ready",
+    "Plugin architecture",
+    "Edge computing support",
+    "Alerting system"
+  ],
+  "benefits": [
+    "Scalable to millions of transactions",
+    "3x faster decision making",
+    "Cost optimization recommendations"
+  ]
+}

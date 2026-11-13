@@ -1,0 +1,29 @@
+{
+  "title": "Security Training for Developers",
+  "description": "Developer-focused security training: OWASP Top 10, secure coding practices, threat modeling, and code review checklists. Reduce vulnerabilities at the source.",
+  "basic": "$25/dev/mo/month",
+  "pro": "$50/dev/mo/month",
+  "enterprise": "$100/dev/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Security Training for Developers - Zion Tech Group",
+    "description": "Developer-focused security training: OWASP Top 10, secure coding practices, threat modeling, and code review checklists. Reduce vulnerabilities at the source.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w176-security-training-dev"
+    }
+  },
+  "features": [
+    "OWASP Top 10 and CWE training",
+    "Language-specific secure coding (JS, Python, Java, Go)",
+    "Threat modeling workshops (STRIDE)",
+    "Code review security checklists",
+    "Hands-on labs with vulnerable apps"
+  ],
+  "benefits": [
+    "Developers write secure code from the start",
+    "Language-specific training, not generic",
+    "Threat modeling catches design flaws",
+    "Hands-on labs reinforce learning"
+  ]
+}

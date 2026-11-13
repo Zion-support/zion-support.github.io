@@ -1,0 +1,29 @@
+{
+  "title": "AI Visual Inspection & Quality Control",
+  "description": "Computer vision-powered quality control for manufacturing: detect defects, classify product flaws, and ensure consistent quality on the production line.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Visual Inspection & Quality Control - Zion Tech Group",
+    "description": "Computer vision-powered quality control for manufacturing: detect defects, classify product flaws, and ensure consistent quality on the production line.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-visual-inspection"
+    }
+  },
+  "features": [
+    "Defect detection (scratches, dents, misalignments)",
+    "Real-time inspection at line speed",
+    "Anomaly detection on novel defect types",
+    "Self-learning model improvement",
+    "Integration with PLCs & MES systems"
+  ],
+  "benefits": [
+    "Reduce costs with ai visual inspection & quality control",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

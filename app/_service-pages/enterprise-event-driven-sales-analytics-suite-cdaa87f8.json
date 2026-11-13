@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/enterprise-event-driven-sales-analytics-suite-cdaa87f8",
+  "breadcrumbTitle": "Enterprise Event-Driven Sales Analytics Suite",
+  "title": "Enterprise Event-Driven Sales Analytics Suite",
+  "description": "Enterprise analytics suite that delivers event-driven sales insights with unified dashboards and reporting.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Enterprise Event-Driven Sales Analytics Suite - Zion Tech Group",
+    "description": "Enterprise analytics suite that delivers event-driven sales insights with unified dashboards and reporting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/enterprise-event-driven-sales-analytics-suite-cdaa87f8"
+    }
+  },
+  "features": [
+    "Data visualization",
+    "Custom dashboards",
+    "Report generation",
+    "KPI tracking"
+  ],
+  "benefits": [
+    "Unified data view",
+    "Faster insights",
+    "Customizable reports",
+    "Cross-functional collaboration"
+  ]
+}

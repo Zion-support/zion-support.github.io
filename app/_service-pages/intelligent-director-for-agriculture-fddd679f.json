@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/intelligent-director-for-agriculture-fddd679f",
+  "breadcrumbTitle": "Intelligent Director for Agriculture",
+  "title": "Intelligent Director for Agriculture",
+  "description": "Revolutionize agriculture through intelligent automation. Our Intelligent Director for Agriculture leverages advanced machine learning to deliver survey automat",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Intelligent Director for Agriculture - Zion Tech Group",
+    "description": "Revolutionize agriculture through intelligent automation. Our Intelligent Director for Agriculture leverages advanced machine learning to deliver survey automat",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-director-for-agriculture-fddd679f"
+    }
+  },
+  "features": [
+    "Image recognition with computer vision",
+    "Comprehensive monitoring with custom dashboards",
+    "Cache optimization with Redis",
+    "Business continuity planning",
+    "Code optimization with performance profiling"
+  ],
+  "benefits": [
+    "Reduced training time to productivity",
+    "better employee performance metrics",
+    "Reduced contract negotiation time",
+    "Better compliance with automated audit trails",
+    "Better inventory turnover ratios"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/insights-intelligent---finance-634833e5",
+  "breadcrumbTitle": "Insights Intelligent - Finance",
+  "title": "Insights Intelligent - Finance",
+  "description": "The future of finance is here with Insights Intelligent - Finance. Powered by cutting-edge AI, this platform delivers predictive analytics like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Insights Intelligent - Finance - Zion Tech Group",
+    "description": "The future of finance is here with Insights Intelligent - Finance. Powered by cutting-edge AI, this platform delivers predictive analytics like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/insights-intelligent---finance-634833e5"
+    }
+  },
+  "features": [
+    "Offline capabilities",
+    "GDPR compliance",
+    "Custom integrations",
+    "Rollback mechanisms"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "99.9% uptime guarantee",
+    "Reduced human error by 95%",
+    "Scalable to millions of transactions",
+    "Predictive maintenance scheduling"
+  ]
+}

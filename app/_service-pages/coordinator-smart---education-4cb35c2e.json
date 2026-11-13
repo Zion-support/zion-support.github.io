@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/coordinator-smart---education-4cb35c2e",
+  "breadcrumbTitle": "Coordinator Smart - Education",
+  "title": "Coordinator Smart - Education",
+  "description": "The future of education is here with Coordinator Smart - Education. Powered by cutting-edge AI, this platform delivers network optimization like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Coordinator Smart - Education - Zion Tech Group",
+    "description": "The future of education is here with Coordinator Smart - Education. Powered by cutting-edge AI, this platform delivers network optimization like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/coordinator-smart---education-4cb35c2e"
+    }
+  },
+  "features": [
+    "Auto-scaling capabilities",
+    "Role-based access control",
+    "API-first design",
+    "Serverless functions",
+    "Container orchestration"
+  ],
+  "benefits": [
+    "Scalable to millions of transactions",
+    "Performance benchmarking",
+    "Zero manual intervention required"
+  ]
+}

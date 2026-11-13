@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/autonomous-orchestrator-for-hospitality-e63bf993",
+  "breadcrumbTitle": "Autonomous Orchestrator for Hospitality",
+  "title": "Autonomous Orchestrator for Hospitality",
+  "description": "Unlock unprecedented growth with Autonomous Orchestrator for Hospitality. This autonomous system provides user experience with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous Orchestrator for Hospitality - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Autonomous Orchestrator for Hospitality. This autonomous system provides user experience with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-orchestrator-for-hospitality-e63bf993"
+    }
+  },
+  "features": [
+    "Real-time processing",
+    "Role-based access control",
+    "HIPAA ready",
+    "Multi-region deployment"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Predictive maintenance scheduling",
+    "Reduced human error by 95%"
+  ]
+}

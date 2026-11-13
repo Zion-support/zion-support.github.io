@@ -1,0 +1,29 @@
+{
+  "title": "IT Quantum-Safe Cryptography Migration",
+  "description": "Prepare your infrastructure for the post-quantum era. Cryptographic inventory, vulnerability assessment, and migration to NIST-approved quantum-resistant algorithms. Compliance with CNSA 2.0 timeline.",
+  "basic": "$2,999/mo/month",
+  "pro": "$8,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "IT Quantum-Safe Cryptography Migration - Zion Tech Group",
+    "description": "Prepare your infrastructure for the post-quantum era. Cryptographic inventory, vulnerability assessment, and migration to NIST-approved quantum-resistant algori",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-quantum-safe-cryptography"
+    }
+  },
+  "features": [
+    "Cryptographic inventory and assessment",
+    "Quantum vulnerability scoring",
+    "NIST PQC algorithm migration",
+    "TLS and certificate modernization",
+    "Crypto-agility framework"
+  ],
+  "benefits": [
+    "Future-proof against quantum attacks",
+    "Meet CNSA 2.0 compliance deadlines",
+    "Identify crypto vulnerabilities",
+    "Seamless migration with no downtime"
+  ]
+}

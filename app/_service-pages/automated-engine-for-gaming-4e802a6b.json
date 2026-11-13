@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/automated-engine-for-gaming-4e802a6b",
+  "breadcrumbTitle": "Automated Engine for Gaming",
+  "title": "Automated Engine for Gaming",
+  "description": "Next-generation gaming solution: Automated Engine for Gaming. Combines threat detection with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated Engine for Gaming - Zion Tech Group",
+    "description": "Next-generation gaming solution: Automated Engine for Gaming. Combines threat detection with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-engine-for-gaming-4e802a6b"
+    }
+  },
+  "features": [
+    "Plugin architecture",
+    "Mobile-responsive interface",
+    "SOC 2 certified",
+    "HIPAA ready",
+    "Open-source friendly"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "3x faster decision making",
+    "Zero manual intervention required"
+  ]
+}

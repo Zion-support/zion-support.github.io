@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/analytics-intelligent---sports-cc2d7a68",
+  "breadcrumbTitle": "Analytics Intelligent - Sports",
+  "title": "Analytics Intelligent - Sports",
+  "description": "Unlock unprecedented growth with Analytics Intelligent - Sports. This autonomous system provides predictive analytics with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Analytics Intelligent - Sports - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Analytics Intelligent - Sports. This autonomous system provides predictive analytics with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/analytics-intelligent---sports-cc2d7a68"
+    }
+  },
+  "features": [
+    "Audit trails",
+    "Auto-scaling capabilities",
+    "Comprehensive monitoring",
+    "Role-based access control",
+    "Custom integrations"
+  ],
+  "benefits": [
+    "Automated compliance reporting",
+    "99.9% uptime guarantee",
+    "Predictive maintenance scheduling",
+    "50% reduction in operational costs"
+  ]
+}

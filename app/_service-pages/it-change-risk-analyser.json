@@ -1,0 +1,29 @@
+{
+  "title": "IT Change Risk Analyser",
+  "description": "Assess change request risk using historical data, blast-radius modelling, and ML-predicted outage probability. Integrates with ServiceNow and Jira change management.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "IT Change Risk Analyser - Zion Tech Group",
+    "description": "Assess change request risk using historical data, blast-radius modelling, and ML-predicted outage probability. Integrates with ServiceNow and Jira change manage",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-change-risk-analyser"
+    }
+  },
+  "features": [
+    "Blast-radius graph builder",
+    "ML-predicted outage probability",
+    "Change approval workflow",
+    "Historical change success rate",
+    "SLA impact calculator"
+  ],
+  "benefits": [
+    "Reduce costs with it change risk analyser",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

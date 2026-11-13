@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-customer-director-1312adda",
+  "breadcrumbTitle": "AI-Powered Customer Director",
+  "title": "AI-Powered Customer Director",
+  "description": "Next-generation insurance solution: AI-Powered Customer Director. Combines data processing with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI-Powered Customer Director - Zion Tech Group",
+    "description": "Next-generation insurance solution: AI-Powered Customer Director. Combines data processing with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-customer-director-1312adda"
+    }
+  },
+  "features": [
+    "HIPAA ready",
+    "Open-source friendly",
+    "Custom integrations",
+    "Machine learning integration",
+    "Performance dashboards"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "Performance benchmarking",
+    "Predictive maintenance scheduling"
+  ]
+}

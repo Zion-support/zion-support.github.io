@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/warehouse-automation-orchestrator-cadb3631",
+  "breadcrumbTitle": "Warehouse Automation Orchestrator",
+  "title": "Warehouse Automation Orchestrator",
+  "description": "Orchestrate AS/RS, conveyors, AMRs, and pick-to-light systems with AI. Real-time slotting, wave optimization, and labor allocation for maximum throughput.",
+  "basic": "$9999/mo/month",
+  "pro": "$29999/mo/month",
+  "enterprise": "$custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Warehouse Automation Orchestrator - Zion Tech Group",
+    "description": "Orchestrate AS/RS, conveyors, AMRs, and pick-to-light systems with AI. Real-time slotting, wave optimization, and labor allocation for maximum throughput.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/warehouse-automation-orchestrator-cadb3631"
+    }
+  },
+  "features": [
+    "Multi-system orchestration",
+    "Real-time slotting AI",
+    "Wave optimization",
+    "Labor allocation",
+    "WMS/ERP integration"
+  ],
+  "benefits": [
+    "Increase throughput 50%",
+    "Reduce labor costs 30%",
+    "Optimize space utilization",
+    "Real-time visibility",
+    "Peak season readiness"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "Automated Reporting Platform",
+  "description": "Automate report generation and distribution: scheduled reports, dynamic parameters, multi-format output, and delivery to email, Slack, and portals.",
+  "basic": "$99/mo/month",
+  "pro": "$299/mo/month",
+  "enterprise": "$999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Automated Reporting Platform - Zion Tech Group",
+    "description": "Automate report generation and distribution: scheduled reports, dynamic parameters, multi-format output, and delivery to email, Slack, and portals.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w176-reporting-automation"
+    }
+  },
+  "features": [
+    "Scheduled report generation",
+    "Dynamic parameter and date range",
+    "Multi-format output (PDF, Excel, HTML, CSV)",
+    "Delivery to email, Slack, Teams, portals",
+    "Exception-based reporting (only when thresholds breach)"
+  ],
+  "benefits": [
+    "Eliminate manual report creation",
+    "Exception reporting reduces noise",
+    "Multi-format for different audiences",
+    "Self-service reduces analyst requests"
+  ]
+}

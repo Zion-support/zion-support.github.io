@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-market-analyzer-d835f2b9",
+  "breadcrumbTitle": "Intelligent Market Analyzer",
+  "title": "Intelligent Market Analyzer",
+  "description": "Revolutionize telecom through intelligent automation. Our Intelligent Market Analyzer leverages advanced machine learning to deliver image recognition at scale.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Market Analyzer - Zion Tech Group",
+    "description": "Revolutionize telecom through intelligent automation. Our Intelligent Market Analyzer leverages advanced machine learning to deliver image recognition at scale.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-market-analyzer-d835f2b9"
+    }
+  },
+  "features": [
+    "GDPR compliance",
+    "Audit trails",
+    "Performance dashboards",
+    "API-first design",
+    "Zero-downtime updates"
+  ],
+  "benefits": [
+    "Performance benchmarking",
+    "Seamless integration with existing systems",
+    "Cost optimization recommendations"
+  ]
+}

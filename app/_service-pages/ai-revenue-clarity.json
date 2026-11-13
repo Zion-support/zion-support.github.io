@@ -1,0 +1,29 @@
+{
+  "title": "AI Revenue Clarity & Forecasting",
+  "description": "Ingest pipeline, CRM custom objects, deal stages. ML forecasts: probability-adjusted revenue by rep, team, region. Detect stalled deals. Auto-generate pipeline coverage report.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Revenue Clarity & Forecasting - Zion Tech Group",
+    "description": "Ingest pipeline, CRM custom objects, deal stages. ML forecasts: probability-adjusted revenue by rep, team, region. Detect stalled deals. Auto-generate pipeline ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-revenue-clarity"
+    }
+  },
+  "features": [
+    "Pipeline ingestion from CRM + custom objects",
+    "Revenue forecast probability-adjusted",
+    "Stalled-deal early-warning detection",
+    "Pipeline coverage score per rep",
+    "Revenue-at-risk breakdown per stage"
+  ],
+  "benefits": [
+    "Reduce costs with ai revenue clarity & forecasting",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

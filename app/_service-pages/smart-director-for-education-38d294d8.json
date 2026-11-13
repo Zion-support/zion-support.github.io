@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/smart-director-for-education-38d294d8",
+  "breadcrumbTitle": "Smart Director for Education",
+  "title": "Smart Director for Education",
+  "description": "Transform your education operations with our Smart Director for Education. This AI-driven solution automates customer insights with unprecedented accuracy and e",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Director for Education - Zion Tech Group",
+    "description": "Transform your education operations with our Smart Director for Education. This AI-driven solution automates customer insights with unprecedented accuracy and e",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-director-for-education-38d294d8"
+    }
+  },
+  "features": [
+    "Plugin architecture",
+    "Performance dashboards",
+    "Edge computing support",
+    "Auto-scaling capabilities",
+    "Microservices deployment"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "Intelligent load balancing",
+    "99.9% uptime guarantee"
+  ]
+}

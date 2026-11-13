@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/manager-neural---automotive-420dc470",
+  "breadcrumbTitle": "Manager Neural - Automotive",
+  "title": "Manager Neural - Automotive",
+  "description": "Next-generation automotive solution: Manager Neural - Automotive. Combines threat detection with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Manager Neural - Automotive - Zion Tech Group",
+    "description": "Next-generation automotive solution: Manager Neural - Automotive. Combines threat detection with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/manager-neural---automotive-420dc470"
+    }
+  },
+  "features": [
+    "Offline capabilities",
+    "GDPR compliance",
+    "Edge computing support",
+    "Audit trails",
+    "HIPAA ready"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Seamless integration with existing systems",
+    "Enterprise-grade security",
+    "3x faster decision making",
+    "Scalable to millions of transactions"
+  ]
+}

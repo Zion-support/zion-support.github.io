@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-network-automation-a1b14875",
+  "breadcrumbTitle": "Intelligent Network Automation",
+  "title": "Intelligent Network Automation",
+  "description": "Unlock unprecedented growth with Intelligent Network Automation. This autonomous system provides quality control with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Network Automation - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Intelligent Network Automation. This autonomous system provides quality control with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-network-automation-a1b14875"
+    }
+  },
+  "features": [
+    "Container orchestration",
+    "SOC 2 certified",
+    "GDPR compliance",
+    "Open-source friendly",
+    "Role-based access control"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "Automated compliance reporting",
+    "Reduced human error by 95%"
+  ]
+}

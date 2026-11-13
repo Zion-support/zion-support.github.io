@@ -1,0 +1,29 @@
+{
+  "title": "Generative AI Legal Document Review",
+  "description": "AI contract review that highlights risks, suggests clauses, compares against playbooks, and redlines in your firms style — cutting document review time 80%.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Generative AI Legal Document Review - Zion Tech Group",
+    "description": "AI contract review that highlights risks, suggests clauses, compares against playbooks, and redlines in your firms style — cutting document review time 80%.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/generative-ai-legal-review"
+    }
+  },
+  "features": [
+    "Risk clause highlighting",
+    "Playbook clause matching",
+    "Redline suggestion engine",
+    "Multi-doc comparison",
+    "Workflow routing"
+  ],
+  "benefits": [
+    "Reduce costs with generative ai legal document review",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

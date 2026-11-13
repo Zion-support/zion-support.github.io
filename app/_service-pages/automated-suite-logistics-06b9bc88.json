@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/automated-suite-logistics-06b9bc88",
+  "breadcrumbTitle": "Automated suite-logistics",
+  "title": "Automated suite-logistics",
+  "description": "Transform your logistics operations with our Automated suite-logistics. This AI-driven solution automates resource optimization with unprecedented accuracy and ",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated suite-logistics - Zion Tech Group",
+    "description": "Transform your logistics operations with our Automated suite-logistics. This AI-driven solution automates resource optimization with unprecedented accuracy and ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-suite-logistics-06b9bc88"
+    }
+  },
+  "features": [
+    "Plugin architecture",
+    "Role-based access control",
+    "Microservices deployment",
+    "Custom integrations"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "Intelligent load balancing",
+    "Real-time insights and alerts",
+    "Seamless integration with existing systems"
+  ]
+}

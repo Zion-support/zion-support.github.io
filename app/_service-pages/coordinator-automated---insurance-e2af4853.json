@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/coordinator-automated---insurance-e2af4853",
+  "breadcrumbTitle": "Coordinator Automated - Insurance",
+  "title": "Coordinator Automated - Insurance",
+  "description": "Unlock unprecedented growth with Coordinator Automated - Insurance. This autonomous system provides resource optimization with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Coordinator Automated - Insurance - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Coordinator Automated - Insurance. This autonomous system provides resource optimization with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/coordinator-automated---insurance-e2af4853"
+    }
+  },
+  "features": [
+    "HIPAA ready",
+    "Alerting system",
+    "Open-source friendly",
+    "Cloud-native architecture",
+    "Plugin architecture"
+  ],
+  "benefits": [
+    "Dynamic resource allocation",
+    "Self-healing infrastructure",
+    "Reduced human error by 95%"
+  ]
+}

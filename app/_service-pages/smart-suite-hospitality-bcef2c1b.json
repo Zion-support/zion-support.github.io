@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/smart-suite-hospitality-bcef2c1b",
+  "breadcrumbTitle": "Smart suite-hospitality",
+  "title": "Smart suite-hospitality",
+  "description": "Revolutionize hospitality through intelligent automation. Our Smart suite-hospitality leverages advanced machine learning to deliver sales forecasting at scale.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart suite-hospitality - Zion Tech Group",
+    "description": "Revolutionize hospitality through intelligent automation. Our Smart suite-hospitality leverages advanced machine learning to deliver sales forecasting at scale.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-suite-hospitality-bcef2c1b"
+    }
+  },
+  "features": [
+    "HIPAA ready",
+    "Microservices deployment",
+    "Machine learning integration",
+    "GDPR compliance",
+    "Role-based access control"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "Automated compliance reporting",
+    "24/7 automated operations",
+    "Reduced human error by 95%"
+  ]
+}

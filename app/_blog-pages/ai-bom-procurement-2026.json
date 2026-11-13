@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "AI BOM Procurement | Zion Tech Group",
+    "description": "AI BOM Procurement",
+    "keywords": [
+      "ai",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "AI BOM Procurement",
+      "description": "AI BOM Procurement",
+      "url": "https://ziontechgroup.com/blog/ai-bom-procurement-2026/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/ai-bom-procurement-2026/"
+    }
+  },
+  "values": [
+    "AI BOM Procurement",
+    "AI BOM Procurement",
+    "AI BOM Procurement",
+    "Conversion path",
+    "If this guide matches your ai bom procurement initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "Conversion path",
+    " If this guide matches your ai bom procurement initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "/blog/cloud-cost-optimization-checklist-2026-7247",
+    "Cloud Cost Optimization Checklist 2026 7247",
+    "/blog/ai-performance-monitoring-implementation-playbook",
+    "Ai Performance Monitoring Implementation Playbook",
+    "/blog/accessibility-compliance-2026-6665",
+    "Accessibility Compliance 2026 6665",
+    "/blog/cloud-cost-ai-optimizer-2026-7155",
+    "Cloud Cost Ai Optimizer 2026 7155"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "AI BOM Procurement",
+    "description": "AI BOM Procurement",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T04:52:28Z",
+    "dateModified": "2026-08-07T04:52:28Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/ai-bom-procurement-2026/"
+  }
+}

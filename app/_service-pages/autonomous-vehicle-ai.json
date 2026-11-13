@@ -1,0 +1,29 @@
+{
+  "title": "Autonomous Vehicle AI Platform",
+  "description": "AI platform for autonomous vehicle development with sensor fusion and safety validation.",
+  "basic": "$50,000/month",
+  "pro": "$10,000/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Autonomous Vehicle AI Platform - Zion Tech Group",
+    "description": "AI platform for autonomous vehicle development with sensor fusion and safety validation.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-vehicle-ai"
+    }
+  },
+  "features": [
+    "Sensor fusion",
+    "Path planning",
+    "Object detection",
+    "Simulation",
+    "HD mapping"
+  ],
+  "benefits": [
+    "Faster development",
+    "Safety validation",
+    "Regulatory compliance",
+    "Simulation at scale"
+  ]
+}

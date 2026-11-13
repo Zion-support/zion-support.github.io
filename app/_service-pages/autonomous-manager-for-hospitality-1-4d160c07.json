@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/autonomous-manager-for-hospitality-1-4d160c07",
+  "breadcrumbTitle": "Autonomous Manager for Hospitality #1",
+  "title": "Autonomous Manager for Hospitality #1",
+  "description": "The future of hospitality is here with Autonomous Manager for Hospitality #1. Powered by cutting-edge AI, this platform delivers supply chain like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous Manager for Hospitality #1 - Zion Tech Group",
+    "description": "The future of hospitality is here with Autonomous Manager for Hospitality #1. Powered by cutting-edge AI, this platform delivers supply chain like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-manager-for-hospitality-1-4d160c07"
+    }
+  },
+  "features": [
+    "Offline capabilities",
+    "Alerting system",
+    "Multi-language support",
+    "Open-source friendly",
+    "GDPR compliance"
+  ],
+  "benefits": [
+    "Intelligent load balancing",
+    "Scalable to millions of transactions",
+    "24/7 automated operations",
+    "Real-time insights and alerts"
+  ]
+}

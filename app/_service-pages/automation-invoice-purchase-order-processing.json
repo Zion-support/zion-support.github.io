@@ -1,0 +1,29 @@
+{
+  "title": "Invoice & Purchase Order Processing",
+  "description": "AI-powered invoice + PO processing pipeline: scans, OCR, vendor matching via payment history, line-item validation vs. PO, three-way match against GRN, GL-code auto-suggestion, ERP posting stub, and exception-routing for unmatched documents.",
+  "basic": "$99/mo/month",
+  "pro": "$299/mo/month",
+  "enterprise": "$999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Invoice & Purchase Order Processing - Zion Tech Group",
+    "description": "AI-powered invoice + PO processing pipeline: scans, OCR, vendor matching via payment history, line-item validation vs. PO, three-way match against GRN, GL-code ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automation-invoice-purchase-order-processing"
+    }
+  },
+  "features": [
+    "Multi-format OCR: scanned PDF, email attachment, vendor portal, API, paper mail with routing",
+    "Three-way match: invoice vs. PO vs. goods-received note auto-compared per line item",
+    "GL-code suggestion: vendor + line-item category ML classification with override audit trail",
+    "Exception routing: unmatched → human worker queue with one-click approve/reject/edit",
+    "ERP posting API stub: NetSuite, QuickBooks, Sage, Xero, Workday all pre-wired"
+  ],
+  "benefits": [
+    "Reduce costs with invoice & purchase order processing",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

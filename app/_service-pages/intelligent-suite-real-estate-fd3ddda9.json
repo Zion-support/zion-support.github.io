@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligent-suite-real-estate-fd3ddda9",
+  "breadcrumbTitle": "Intelligent suite-real-estate",
+  "title": "Intelligent suite-real-estate",
+  "description": "Revolutionize real-estate through intelligent automation. Our Intelligent suite-real-estate leverages advanced machine learning to deliver content generation at",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent suite-real-estate - Zion Tech Group",
+    "description": "Revolutionize real-estate through intelligent automation. Our Intelligent suite-real-estate leverages advanced machine learning to deliver content generation at",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-suite-real-estate-fd3ddda9"
+    }
+  },
+  "features": [
+    "Comprehensive monitoring",
+    "Mobile-responsive interface",
+    "Alerting system",
+    "Plugin architecture",
+    "Open-source friendly"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "24/7 automated operations",
+    "Self-healing infrastructure",
+    "Cost optimization recommendations"
+  ]
+}

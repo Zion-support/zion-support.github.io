@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/smart-intelligence-for-education-ed4b229e",
+  "breadcrumbTitle": "Smart Intelligence for Education",
+  "title": "Smart Intelligence for Education",
+  "description": "Next-generation education solution: Smart Intelligence for Education. Combines risk assessment with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Intelligence for Education - Zion Tech Group",
+    "description": "Next-generation education solution: Smart Intelligence for Education. Combines risk assessment with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-intelligence-for-education-ed4b229e"
+    }
+  },
+  "features": [
+    "Real-time processing",
+    "API-first design",
+    "Performance dashboards",
+    "Zero-downtime updates",
+    "Mobile-responsive interface"
+  ],
+  "benefits": [
+    "Dynamic resource allocation",
+    "Performance benchmarking",
+    "ROI in under 90 days"
+  ]
+}

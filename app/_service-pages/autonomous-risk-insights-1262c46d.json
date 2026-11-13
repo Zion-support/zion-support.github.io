@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/autonomous-risk-insights-1262c46d",
+  "breadcrumbTitle": "Autonomous Risk Insights",
+  "title": "Autonomous Risk Insights",
+  "description": "Unlock unprecedented growth with Autonomous Risk Insights. This autonomous system provides inventory management with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous Risk Insights - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Autonomous Risk Insights. This autonomous system provides inventory management with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-risk-insights-1262c46d"
+    }
+  },
+  "features": [
+    "Plugin architecture",
+    "Real-time processing",
+    "Role-based access control",
+    "Open-source friendly"
+  ],
+  "benefits": [
+    "Performance benchmarking",
+    "ROI in under 90 days",
+    "Dynamic resource allocation"
+  ]
+}

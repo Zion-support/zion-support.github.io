@@ -1,0 +1,20 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "ziontechgroup",
+  "main": "cloudflare/worker.mjs",
+  "compatibility_date": "2026-05-14",
+  "workers_dev": true,
+  "build": { "command": "node scripts/pack-worker-assets.mjs" },
+  "assets": {
+    "directory": ".worker-assets",
+    "binding": "ASSETS",
+    "html_handling": "none",
+    "not_found_handling": "none",
+    "run_worker_first": ["/__zion_packed_v1/*"]
+  },
+  "observability": {
+    "enabled": true,
+    "logs": { "enabled": true, "head_sampling_rate": 0.01 },
+    "traces": { "enabled": true, "head_sampling_rate": 0.01 }
+  }
+}

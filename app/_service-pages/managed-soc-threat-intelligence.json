@@ -1,0 +1,29 @@
+{
+  "title": "Managed SOC & Threat Intelligence",
+  "description": "24/7 Security Operations Center with AI-enhanced threat detection, incident response, and proactive threat hunting.",
+  "basic": "$1,499/mo/month",
+  "pro": "$3,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Managed SOC & Threat Intelligence - Zion Tech Group",
+    "description": "24/7 Security Operations Center with AI-enhanced threat detection, incident response, and proactive threat hunting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/managed-soc-threat-intelligence"
+    }
+  },
+  "features": [
+    "24/7 security monitoring",
+    "AI-powered threat detection",
+    "Incident response automation",
+    "Proactive threat hunting",
+    "Compliance reporting"
+  ],
+  "benefits": [
+    "Reduce costs with managed soc & threat intelligence",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/system-ai---transportation-07130718",
+  "breadcrumbTitle": "System AI - Transportation",
+  "title": "System AI - Transportation",
+  "description": "The future of transportation is here with System AI - Transportation. Powered by cutting-edge AI, this platform delivers inventory management like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "System AI - Transportation - Zion Tech Group",
+    "description": "The future of transportation is here with System AI - Transportation. Powered by cutting-edge AI, this platform delivers inventory management like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/system-ai---transportation-07130718"
+    }
+  },
+  "features": [
+    "Alerting system",
+    "API-first design",
+    "Microservices deployment",
+    "Container orchestration",
+    "Multi-language support"
+  ],
+  "benefits": [
+    "Scalable to millions of transactions",
+    "Enterprise-grade security",
+    "Real-time insights and alerts",
+    "Intelligent load balancing",
+    "Zero manual intervention required"
+  ]
+}

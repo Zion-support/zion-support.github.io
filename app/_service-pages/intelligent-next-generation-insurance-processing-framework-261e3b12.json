@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-next-generation-insurance-processing-framework-261e3b12",
+  "breadcrumbTitle": "Intelligent Next-Generation Insurance Processing Framework",
+  "title": "Intelligent Next-Generation Insurance Processing Framework",
+  "description": "Intelligent processing framework that automates next-generation insurance data flows with real-time transformation.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Intelligent Next-Generation Insurance Processing Framework - Zion Tech Group",
+    "description": "Intelligent processing framework that automates next-generation insurance data flows with real-time transformation.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-next-generation-insurance-processing-framework-261e3b12"
+    }
+  },
+  "features": [
+    "Real-time processing",
+    "Data transformation",
+    "ETL pipelines",
+    "Stream processing"
+  ],
+  "benefits": [
+    "Faster data flows",
+    "Reduced processing time",
+    "Higher throughput",
+    "Real-time transformation"
+  ]
+}

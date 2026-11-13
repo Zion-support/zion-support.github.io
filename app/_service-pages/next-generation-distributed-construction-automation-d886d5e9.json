@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/next-generation-distributed-construction-automation-d886d5e9",
+  "breadcrumbTitle": "Next-Generation Distributed Construction Automation",
+  "title": "Next-Generation Distributed Construction Automation",
+  "description": "Next-generation automation suite that streamlines distributed construction workflows with intelligent orchestration.",
+  "basic": "$218/month",
+  "pro": "$548/month",
+  "enterprise": "$1648/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Next-Generation Distributed Construction Automation - Zion Tech Group",
+    "description": "Next-generation automation suite that streamlines distributed construction workflows with intelligent orchestration.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/next-generation-distributed-construction-automation-d886d5e9"
+    }
+  },
+  "features": [
+    "Smart orchestration",
+    "Process automation",
+    "Event processing",
+    "Task scheduling"
+  ],
+  "benefits": [
+    "Faster execution",
+    "Reduced manual steps",
+    "Scalable processes",
+    "Error reduction"
+  ]
+}

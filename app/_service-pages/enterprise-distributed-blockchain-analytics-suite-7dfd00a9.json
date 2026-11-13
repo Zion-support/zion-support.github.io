@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/enterprise-distributed-blockchain-analytics-suite-7dfd00a9",
+  "breadcrumbTitle": "Enterprise Distributed Blockchain Analytics Suite",
+  "title": "Enterprise Distributed Blockchain Analytics Suite",
+  "description": "Enterprise analytics suite that delivers distributed blockchain insights with unified dashboards and reporting.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Enterprise Distributed Blockchain Analytics Suite - Zion Tech Group",
+    "description": "Enterprise analytics suite that delivers distributed blockchain insights with unified dashboards and reporting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/enterprise-distributed-blockchain-analytics-suite-7dfd00a9"
+    }
+  },
+  "features": [
+    "Data visualization",
+    "Custom dashboards",
+    "Report generation",
+    "KPI tracking"
+  ],
+  "benefits": [
+    "Unified data view",
+    "Faster insights",
+    "Customizable reports",
+    "Cross-functional collaboration"
+  ]
+}

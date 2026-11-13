@@ -1,0 +1,29 @@
+{
+  "title": "Telemedicine Platform for Healthcare IT",
+  "description": "HIPAA-compliant telemedicine platform with video consultations, e-prescribing, patient scheduling, and EHR integration.",
+  "basic": "$399/mo/month",
+  "pro": "$1,199/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Telemedicine Platform for Healthcare IT - Zion Tech Group",
+    "description": "HIPAA-compliant telemedicine platform with video consultations, e-prescribing, patient scheduling, and EHR integration.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/healthcare-it-telemedicine-platform"
+    }
+  },
+  "features": [
+    "HD video consultations",
+    "HIPAA-compliant messaging",
+    "E-prescribing (EPCS)",
+    "Patient scheduling and reminders",
+    "EHR/EMR integration"
+  ],
+  "benefits": [
+    "Expand patient reach",
+    "Reduce no-show rates",
+    "Streamline workflows",
+    "Ensure HIPAA compliance"
+  ]
+}

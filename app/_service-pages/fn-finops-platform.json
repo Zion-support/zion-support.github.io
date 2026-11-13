@@ -1,0 +1,29 @@
+{
+  "title": "FinOps Cloud Governance",
+  "description": "Cloud financial governance platform with budget alerts, right-sizing recommendations, resource tagging enforcement, and chargeback/showback reporting.",
+  "basic": "$99/mo/month",
+  "pro": "$349/mo/month",
+  "enterprise": "$1,299/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "FinOps Cloud Governance - Zion Tech Group",
+    "description": "Cloud financial governance platform with budget alerts, right-sizing recommendations, resource tagging enforcement, and chargeback/showback reporting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/fn-finops-platform"
+    }
+  },
+  "features": [
+    "Real-time budget alerts",
+    "Auto right-sizing engine",
+    "Resource tagging enforcement",
+    "Chargeback + showback reports",
+    "Multi-cloud cost view"
+  ],
+  "benefits": [
+    "Reduce costs with finops cloud governance",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

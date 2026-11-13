@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-platform---education-edition-865f6c02",
+  "breadcrumbTitle": "AI Platform - Education Edition",
+  "title": "AI Platform - Education Edition",
+  "description": "Revolutionize education through intelligent automation. Our AI Platform - Education Edition leverages advanced machine learning to deliver code optimization at ",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Platform - Education Edition - Zion Tech Group",
+    "description": "Revolutionize education through intelligent automation. Our AI Platform - Education Edition leverages advanced machine learning to deliver code optimization at ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-platform---education-edition-865f6c02"
+    }
+  },
+  "features": [
+    "Offline capabilities",
+    "Comprehensive monitoring",
+    "Role-based access control",
+    "Audit trails",
+    "Container orchestration"
+  ],
+  "benefits": [
+    "Scalable to millions of transactions",
+    "Reduced human error by 95%",
+    "Cost optimization recommendations",
+    "Automated compliance reporting"
+  ]
+}

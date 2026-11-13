@@ -1,0 +1,28 @@
+{
+  "title": "AI Voice Cloning & Localization Platform",
+  "description": "Clone any voice from 30 seconds of audio. Generate localized voiceovers in 40+ languages with preserved accent and emotion. TTS for audiobooks, ads, and IVR systems.",
+  "basic": "$49/month",
+  "pro": "$149/month",
+  "enterprise": "$499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Voice Cloning & Localization Platform - Zion Tech Group",
+    "description": "Clone any voice from 30 seconds of audio. Generate localized voiceovers in 40+ languages with preserved accent and emotion. TTS for audiobooks, ads, and IVR sys",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-voice-cloner"
+    }
+  },
+  "features": [
+    "30-second voice cloning",
+    "40+ language localization",
+    "Emotion & accent preservation",
+    "Audiobook production pipeline",
+    "Advertising voice generation"
+  ],
+  "benefits": [
+    "Clone any voice instantly",
+    "Localize content in 40+ languages",
+    "Preserve speaker emotion perfectly"
+  ]
+}

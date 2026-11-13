@@ -1,0 +1,29 @@
+{
+  "title": "AI Production Scheduling Optimizer",
+  "description": "AI-powered production scheduling that optimizes for delivery, cost, and resource utilization. Handle complex constraints, changeovers, and multi-site scheduling.",
+  "basic": "$1,999/mo/month",
+  "pro": "$5,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Production Scheduling Optimizer - Zion Tech Group",
+    "description": "AI-powered production scheduling that optimizes for delivery, cost, and resource utilization. Handle complex constraints, changeovers, and multi-site scheduling",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/manufacturing-production-scheduling"
+    }
+  },
+  "features": [
+    "Constraint-based scheduling",
+    "Multi-site optimization",
+    "Changeover minimization",
+    "What-if scenario planning",
+    "Real-time schedule adjustment"
+  ],
+  "benefits": [
+    "Improve on-time delivery by 25%",
+    "Reduce changeover time by 30%",
+    "Optimize resource utilization",
+    "Handle complex scheduling constraints"
+  ]
+}

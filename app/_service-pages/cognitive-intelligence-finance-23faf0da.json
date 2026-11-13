@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/cognitive-intelligence-finance-23faf0da",
+  "breadcrumbTitle": "Cognitive intelligence-finance",
+  "title": "Cognitive intelligence-finance",
+  "description": "Transform your finance operations with our Cognitive intelligence-finance. This AI-driven solution automates user experience with unprecedented accuracy and eff",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Cognitive intelligence-finance - Zion Tech Group",
+    "description": "Transform your finance operations with our Cognitive intelligence-finance. This AI-driven solution automates user experience with unprecedented accuracy and eff",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cognitive-intelligence-finance-23faf0da"
+    }
+  },
+  "features": [
+    "Microservices deployment",
+    "Offline capabilities",
+    "Cloud-native architecture",
+    "Role-based access control",
+    "Data encryption"
+  ],
+  "benefits": [
+    "Seamless integration with existing systems",
+    "Enterprise-grade security",
+    "ROI in under 90 days"
+  ]
+}

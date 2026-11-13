@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/neural-content-intelligence-cf6ae71b",
+  "breadcrumbTitle": "Neural Content Intelligence",
+  "title": "Neural Content Intelligence",
+  "description": "Transform your manufacturing operations with our Neural Content Intelligence. This AI-driven solution automates content generation with unprecedented accuracy a",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Neural Content Intelligence - Zion Tech Group",
+    "description": "Transform your manufacturing operations with our Neural Content Intelligence. This AI-driven solution automates content generation with unprecedented accuracy a",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/neural-content-intelligence-cf6ae71b"
+    }
+  },
+  "features": [
+    "Performance dashboards",
+    "Open-source friendly",
+    "Real-time processing",
+    "Multi-language support",
+    "HIPAA ready"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "99.9% uptime guarantee",
+    "Real-time insights and alerts",
+    "Dynamic resource allocation",
+    "Automated compliance reporting"
+  ]
+}

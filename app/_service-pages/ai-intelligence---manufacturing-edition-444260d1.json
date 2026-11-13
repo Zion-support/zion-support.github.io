@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-intelligence---manufacturing-edition-444260d1",
+  "breadcrumbTitle": "AI Intelligence - Manufacturing Edition",
+  "title": "AI Intelligence - Manufacturing Edition",
+  "description": "Revolutionize manufacturing through intelligent automation. Our AI Intelligence - Manufacturing Edition leverages advanced machine learning to deliver quality c",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Intelligence - Manufacturing Edition - Zion Tech Group",
+    "description": "Revolutionize manufacturing through intelligent automation. Our AI Intelligence - Manufacturing Edition leverages advanced machine learning to deliver quality c",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-intelligence---manufacturing-edition-444260d1"
+    }
+  },
+  "features": [
+    "Alerting system",
+    "API-first design",
+    "Microservices deployment",
+    "Machine learning integration"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "Dynamic resource allocation",
+    "ROI in under 90 days",
+    "99.9% uptime guarantee",
+    "Zero manual intervention required"
+  ]
+}

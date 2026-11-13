@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/management-ai---energy-085b312d",
+  "breadcrumbTitle": "Management AI - Energy",
+  "title": "Management AI - Energy",
+  "description": "The future of energy is here with Management AI - Energy. Powered by cutting-edge AI, this platform delivers supply chain like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Management AI - Energy - Zion Tech Group",
+    "description": "The future of energy is here with Management AI - Energy. Powered by cutting-edge AI, this platform delivers supply chain like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/management-ai---energy-085b312d"
+    }
+  },
+  "features": [
+    "Machine learning integration",
+    "Container orchestration",
+    "HIPAA ready",
+    "Multi-region deployment"
+  ],
+  "benefits": [
+    "Intelligent load balancing",
+    "Self-healing infrastructure",
+    "24/7 automated operations"
+  ]
+}

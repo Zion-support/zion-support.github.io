@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/platform-automated---real-estate-1-a1cf5a83",
+  "breadcrumbTitle": "Platform Automated - Real-Estate #1",
+  "title": "Platform Automated - Real-Estate #1",
+  "description": "Transform your real-estate operations with our Platform Automated - Real-Estate #1. This AI-driven solution automates workflow management with unprecedented acc",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Platform Automated - Real-Estate #1 - Zion Tech Group",
+    "description": "Transform your real-estate operations with our Platform Automated - Real-Estate #1. This AI-driven solution automates workflow management with unprecedented acc",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/platform-automated---real-estate-1-a1cf5a83"
+    }
+  },
+  "features": [
+    "Zero-downtime updates",
+    "Custom integrations",
+    "SOC 2 certified",
+    "Rollback mechanisms",
+    "Role-based access control"
+  ],
+  "benefits": [
+    "24/7 automated operations",
+    "Cost optimization recommendations",
+    "Intelligent load balancing",
+    "Scalable to millions of transactions",
+    "Real-time insights and alerts"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-automation---insurance-edition-0a31893b",
+  "breadcrumbTitle": "AI Automation - Insurance Edition",
+  "title": "AI Automation - Insurance Edition",
+  "description": "Next-generation insurance solution: AI Automation - Insurance Edition. Combines data processing with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Automation - Insurance Edition - Zion Tech Group",
+    "description": "Next-generation insurance solution: AI Automation - Insurance Edition. Combines data processing with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-automation---insurance-edition-0a31893b"
+    }
+  },
+  "features": [
+    "Auto-scaling capabilities",
+    "Serverless functions",
+    "Performance dashboards",
+    "Multi-region deployment",
+    "GDPR compliance"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "Seamless integration with existing systems",
+    "Cost optimization recommendations"
+  ]
+}

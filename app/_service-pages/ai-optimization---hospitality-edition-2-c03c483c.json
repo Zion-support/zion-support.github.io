@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/ai-optimization---hospitality-edition-2-c03c483c",
+  "breadcrumbTitle": "AI Optimization - Hospitality Edition #2",
+  "title": "AI Optimization - Hospitality Edition #2",
+  "description": "Next-generation hospitality solution: AI Optimization - Hospitality Edition #2. Combines energy management with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Optimization - Hospitality Edition #2 - Zion Tech Group",
+    "description": "Next-generation hospitality solution: AI Optimization - Hospitality Edition #2. Combines energy management with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-optimization---hospitality-edition-2-c03c483c"
+    }
+  },
+  "features": [
+    "Audit trails",
+    "HIPAA ready",
+    "Container orchestration",
+    "Zero-downtime updates",
+    "Auto-scaling capabilities"
+  ],
+  "benefits": [
+    "Performance benchmarking",
+    "Seamless integration with existing systems",
+    "50% reduction in operational costs",
+    "24/7 automated operations",
+    "Zero manual intervention required"
+  ]
+}

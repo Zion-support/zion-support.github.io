@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/intelligent-director-for-hospitality-be2b9549",
+  "breadcrumbTitle": "Intelligent Director for Hospitality",
+  "title": "Intelligent Director for Hospitality",
+  "description": "Optimize your hospitality workflows with Intelligent Director for Hospitality. This intelligent platform delivers employee engagement through advanced automatio",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Intelligent Director for Hospitality - Zion Tech Group",
+    "description": "Optimize your hospitality workflows with Intelligent Director for Hospitality. This intelligent platform delivers employee engagement through advanced automatio",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-director-for-hospitality-be2b9549"
+    }
+  },
+  "features": [
+    "Executive dashboards with drill-down capabilities",
+    "FinOps with cloud financial management",
+    "Disaster recovery automation",
+    "Logistics route optimization with traffic prediction",
+    "Showback with utilization reports"
+  ],
+  "benefits": [
+    "Better risk management with predictive analytics",
+    "Dynamic resource allocation based on demand patterns",
+    "Better employee engagement scores",
+    "Better warranty claim processing",
+    "Reduced human error by 95% with automated processes"
+  ]
+}

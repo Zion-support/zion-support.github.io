@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/neural-supply-manufacturing-d9b48df2",
+  "breadcrumbTitle": "Neural supply-manufacturing",
+  "title": "Neural supply-manufacturing",
+  "description": "Next-generation Manufacturing solution: Neural supply-manufacturing. Combines logistics route optimization with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Neural supply-manufacturing - Zion Tech Group",
+    "description": "Next-generation Manufacturing solution: Neural supply-manufacturing. Combines logistics route optimization with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/neural-supply-manufacturing-d9b48df2"
+    }
+  },
+  "features": [
+    "Image recognition with computer vision",
+    "API-first design with comprehensive REST and GraphQL endpoints",
+    "Role-based access control with SSO integration",
+    "Audit trails with compliance reporting",
+    "Brand monitoring across social channels"
+  ],
+  "benefits": [
+    "Performance benchmarking against industry standards",
+    "Improved conversion rates with personalization",
+    "Enhanced decision making with data-driven insights",
+    "3x faster decision making with real-time insights"
+  ]
+}

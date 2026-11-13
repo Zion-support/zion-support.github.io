@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-transportation-inventory-management-70726cf7",
+  "breadcrumbTitle": "Intelligent Transportation Inventory Management",
+  "title": "Intelligent Transportation Inventory Management",
+  "description": "AI-driven inventory optimization platform that provides cloud-native demand forecasting, automated replenishment, and assortment planning for retail operations.",
+  "basic": "$258/month",
+  "pro": "$648/month",
+  "enterprise": "$1948/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Transportation Inventory Management - Zion Tech Group",
+    "description": "AI-driven inventory optimization platform that provides cloud-native demand forecasting, automated replenishment, and assortment planning for retail operations.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-transportation-inventory-management-70726cf7"
+    }
+  },
+  "features": [
+    "Demand forecasting",
+    "Auto-replenishment",
+    "Assortment optimization",
+    "Markdown optimization"
+  ],
+  "benefits": [
+    "Reduced stockouts",
+    "Lower inventory costs",
+    "Optimized assortments",
+    "Improved margins"
+  ]
+}

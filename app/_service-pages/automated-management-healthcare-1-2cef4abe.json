@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/automated-management-healthcare-1-2cef4abe",
+  "breadcrumbTitle": "Automated management-healthcare #1",
+  "title": "Automated management-healthcare #1",
+  "description": "Next-generation healthcare solution: Automated management-healthcare #1. Combines decision support with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated management-healthcare #1 - Zion Tech Group",
+    "description": "Next-generation healthcare solution: Automated management-healthcare #1. Combines decision support with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-management-healthcare-1-2cef4abe"
+    }
+  },
+  "features": [
+    "Container orchestration",
+    "Serverless functions",
+    "Role-based access control",
+    "Machine learning integration",
+    "Open-source friendly"
+  ],
+  "benefits": [
+    "24/7 automated operations",
+    "Cost optimization recommendations",
+    "Performance benchmarking",
+    "3x faster decision making"
+  ]
+}

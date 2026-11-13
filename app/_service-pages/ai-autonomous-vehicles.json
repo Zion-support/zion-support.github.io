@@ -1,0 +1,29 @@
+{
+  "title": "AI Autonomous Vehicle Perception & Planning",
+  "description": "AI perception and planning stack for autonomous vehicles. Object detection, path planning, and decision-making for self-driving cars, trucks, and drones.",
+  "basic": "$4,999/mo/month",
+  "pro": "$12,000/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Autonomous Vehicle Perception & Planning - Zion Tech Group",
+    "description": "AI perception and planning stack for autonomous vehicles. Object detection, path planning, and decision-making for self-driving cars, trucks, and drones.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-autonomous-vehicles"
+    }
+  },
+  "features": [
+    "Multi-sensor fusion (camera, LiDAR, radar)",
+    "Real-time object detection and tracking",
+    "Path planning and trajectory optimization",
+    "Behavior prediction for other road users",
+    "Simulation environment for testing"
+  ],
+  "benefits": [
+    "Detect objects with 99.9% accuracy",
+    "Plan safe paths in complex environments",
+    "Test millions of scenarios in simulation",
+    "Deploy to edge with real-time performance"
+  ]
+}

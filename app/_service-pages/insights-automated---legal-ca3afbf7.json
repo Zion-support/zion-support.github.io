@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/insights-automated---legal-ca3afbf7",
+  "breadcrumbTitle": "Insights Automated - Legal",
+  "title": "Insights Automated - Legal",
+  "description": "The future of legal is here with Insights Automated - Legal. Powered by cutting-edge AI, this platform delivers language processing like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Insights Automated - Legal - Zion Tech Group",
+    "description": "The future of legal is here with Insights Automated - Legal. Powered by cutting-edge AI, this platform delivers language processing like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/insights-automated---legal-ca3afbf7"
+    }
+  },
+  "features": [
+    "Plugin architecture",
+    "Edge computing support",
+    "Custom integrations",
+    "API-first design",
+    "Multi-region deployment"
+  ],
+  "benefits": [
+    "Seamless integration with existing systems",
+    "Automated compliance reporting",
+    "Performance benchmarking",
+    "Cost optimization recommendations",
+    "Zero manual intervention required"
+  ]
+}

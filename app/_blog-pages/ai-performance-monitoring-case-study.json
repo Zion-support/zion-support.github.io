@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "AI Performance Monitoring: case study | Zion Tech Group",
+    "description": "AI Performance Monitoring: case study",
+    "keywords": [
+      "security",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "AI Performance Monitoring: case study",
+      "description": "AI Performance Monitoring: case study",
+      "url": "https://ziontechgroup.com/blog/ai-performance-monitoring-case-study/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/ai-performance-monitoring-case-study/"
+    }
+  },
+  "values": [
+    "AI Performance Monitoring: case study",
+    "AI Performance Monitoring: case study",
+    "AI Performance Monitoring: case study",
+    "Recommended next step",
+    "Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "Recommended next step",
+    " Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "/blog/microsaas-social-media-manager-case-study",
+    "Microsaas Social Media Manager Case Study",
+    "/blog/ai-for-cybersecurity-operations-and-threat-hunting",
+    "Ai For Cybersecurity Operations And Threat Hunting",
+    "/blog/container-security-lifecycle-automation-roadmap",
+    "Container Security Lifecycle Automation Roadmap",
+    "/blog/aiops-anomaly-detection-2026-6795",
+    "Aiops Anomaly Detection 2026 6795"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "AI Performance Monitoring: case study",
+    "description": "AI Performance Monitoring: case study",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T04:52:22Z",
+    "dateModified": "2026-08-07T04:52:22Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/ai-performance-monitoring-case-study/"
+  }
+}

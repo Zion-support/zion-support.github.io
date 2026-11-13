@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/cybersecurity-automotive-d870d02c",
+  "breadcrumbTitle": "Cybersecurity & Compliance for Automotive",
+  "title": "Cybersecurity & Compliance for Automotive",
+  "description": "Comprehensive cybersecurity and compliance for Automotive. Protect data, meet regulations, and respond to threats with confidence.",
+  "basic": "$299/month",
+  "pro": "$799/month",
+  "enterprise": "$2499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Cybersecurity & Compliance for Automotive - Zion Tech Group",
+    "description": "Comprehensive cybersecurity and compliance for Automotive. Protect data, meet regulations, and respond to threats with confidence.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cybersecurity-automotive-d870d02c"
+    }
+  },
+  "features": [
+    "Security audit and gap analysis",
+    "Endpoint Detection and Response (EDR)",
+    "Firewall and VPN configuration",
+    "Identity and access management",
+    "Incident response planning"
+  ],
+  "benefits": [
+    "Reduced breach risk",
+    "Regulatory compliance readiness",
+    "Faster incident response",
+    "Employee security awareness training",
+    "Continuous monitoring"
+  ]
+}

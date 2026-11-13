@@ -1,0 +1,27 @@
+{
+  "title": "Mobile App Development",
+  "description": "Build cross-platform and native mobile applications with AI-powered features, offline-first architecture, and enterprise-grade security.",
+  "basic": "$99/mo/month",
+  "pro": "$349/mo/month",
+  "enterprise": "$1,299/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Mobile App Development - Zion Tech Group",
+    "description": "Build cross-platform and native mobile applications with AI-powered features, offline-first architecture, and enterprise-grade security.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/mobile-development"
+    }
+  },
+  "features": [
+    "Enterprise-grade implementation",
+    "24/7 monitoring",
+    "Compliance-ready"
+  ],
+  "benefits": [
+    "Reduce costs with mobile app development",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

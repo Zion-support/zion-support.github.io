@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-analyzer---hospitality-edition-1-833704a0",
+  "breadcrumbTitle": "AI Analyzer - Hospitality Edition #1",
+  "title": "AI Analyzer - Hospitality Edition #1",
+  "description": "Next-generation hospitality solution: AI Analyzer - Hospitality Edition #1. Combines security monitoring with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Analyzer - Hospitality Edition #1 - Zion Tech Group",
+    "description": "Next-generation hospitality solution: AI Analyzer - Hospitality Edition #1. Combines security monitoring with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-analyzer---hospitality-edition-1-833704a0"
+    }
+  },
+  "features": [
+    "GDPR compliance",
+    "Multi-region deployment",
+    "Performance dashboards",
+    "Alerting system",
+    "Cloud-native architecture"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Seamless integration with existing systems",
+    "Predictive maintenance scheduling",
+    "24/7 automated operations"
+  ]
+}

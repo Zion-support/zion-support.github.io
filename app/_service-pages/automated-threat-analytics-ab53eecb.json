@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/automated-threat-analytics-ab53eecb",
+  "breadcrumbTitle": "Automated Threat Analytics",
+  "title": "Automated Threat Analytics",
+  "description": "Transform your insurance operations with our Automated Threat Analytics. This AI-driven solution automates supply chain with unprecedented accuracy and efficien",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated Threat Analytics - Zion Tech Group",
+    "description": "Transform your insurance operations with our Automated Threat Analytics. This AI-driven solution automates supply chain with unprecedented accuracy and efficien",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-threat-analytics-ab53eecb"
+    }
+  },
+  "features": [
+    "Serverless functions",
+    "Performance dashboards",
+    "Cloud-native architecture",
+    "Container orchestration",
+    "SOC 2 certified"
+  ],
+  "benefits": [
+    "24/7 automated operations",
+    "50% reduction in operational costs",
+    "99.9% uptime guarantee"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/neural-document-insights-8a408d89",
+  "breadcrumbTitle": "Neural Document Insights",
+  "title": "Neural Document Insights",
+  "description": "The future of construction is here with Neural Document Insights. Powered by cutting-edge AI, this platform delivers customer insights like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Neural Document Insights - Zion Tech Group",
+    "description": "The future of construction is here with Neural Document Insights. Powered by cutting-edge AI, this platform delivers customer insights like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/neural-document-insights-8a408d89"
+    }
+  },
+  "features": [
+    "Role-based access control",
+    "Plugin architecture",
+    "Performance dashboards",
+    "Real-time processing",
+    "Multi-language support"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Cost optimization recommendations",
+    "Self-healing infrastructure",
+    "Predictive maintenance scheduling",
+    "Performance benchmarking"
+  ]
+}

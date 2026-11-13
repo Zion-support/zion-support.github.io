@@ -1,0 +1,29 @@
+{
+  "title": "AI Video Generator & Editor",
+  "description": "Generate professional videos from text prompts or scripts: auto-scene composition, voiceover, subtitles, and multi-format export (MP4, GIF, Reels).",
+  "basic": "$49/mo/month",
+  "pro": "$149/mo/month",
+  "enterprise": "$499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Video Generator & Editor - Zion Tech Group",
+    "description": "Generate professional videos from text prompts or scripts: auto-scene composition, voiceover, subtitles, and multi-format export (MP4, GIF, Reels).",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-video-generator"
+    }
+  },
+  "features": [
+    "Text-to-video generation (diffusion + GANs)",
+    "Auto storyboard & scene composition",
+    "AI voiceover with 50+ languages",
+    "Built-in captions & subtitles",
+    "Export for social (9:16, 1:1, 16:9)"
+  ],
+  "benefits": [
+    "Reduce costs with ai video generator & editor",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

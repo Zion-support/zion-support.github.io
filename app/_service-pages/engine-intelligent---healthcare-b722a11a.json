@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/engine-intelligent---healthcare-b722a11a",
+  "breadcrumbTitle": "Engine Intelligent - Healthcare",
+  "title": "Engine Intelligent - Healthcare",
+  "description": "Transform your healthcare operations with our Engine Intelligent - Healthcare. This AI-driven solution automates compliance monitoring with unprecedented accura",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Engine Intelligent - Healthcare - Zion Tech Group",
+    "description": "Transform your healthcare operations with our Engine Intelligent - Healthcare. This AI-driven solution automates compliance monitoring with unprecedented accura",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/engine-intelligent---healthcare-b722a11a"
+    }
+  },
+  "features": [
+    "Edge computing support",
+    "Zero-downtime updates",
+    "Performance dashboards",
+    "Plugin architecture"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "Performance benchmarking",
+    "3x faster decision making"
+  ]
+}

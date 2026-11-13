@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-director---transportation-edition-895e6f22",
+  "breadcrumbTitle": "AI Director - Transportation Edition",
+  "title": "AI Director - Transportation Edition",
+  "description": "Next-generation transportation solution: AI Director - Transportation Edition. Combines resource optimization with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Director - Transportation Edition - Zion Tech Group",
+    "description": "Next-generation transportation solution: AI Director - Transportation Edition. Combines resource optimization with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-director---transportation-edition-895e6f22"
+    }
+  },
+  "features": [
+    "Multi-region deployment",
+    "Zero-downtime updates",
+    "API-first design",
+    "Rollback mechanisms",
+    "Open-source friendly"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Automated compliance reporting",
+    "Reduced human error by 95%",
+    "Dynamic resource allocation"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/advisor-intelligent---hospitality-73e74751",
+  "breadcrumbTitle": "Advisor Intelligent - Hospitality",
+  "title": "Advisor Intelligent - Hospitality",
+  "description": "Unlock unprecedented growth with Advisor Intelligent - Hospitality. This autonomous system provides financial planning with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Advisor Intelligent - Hospitality - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Advisor Intelligent - Hospitality. This autonomous system provides financial planning with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/advisor-intelligent---hospitality-73e74751"
+    }
+  },
+  "features": [
+    "Offline capabilities",
+    "Zero-downtime updates",
+    "Rollback mechanisms",
+    "Cloud-native architecture"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "Automated compliance reporting",
+    "Dynamic resource allocation"
+  ]
+}

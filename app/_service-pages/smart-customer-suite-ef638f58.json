@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/smart-customer-suite-ef638f58",
+  "breadcrumbTitle": "Smart Customer Suite",
+  "title": "Smart Customer Suite",
+  "description": "Next-generation Real Estate solution: Smart Customer Suite. Combines business intelligence with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Customer Suite - Zion Tech Group",
+    "description": "Next-generation Real Estate solution: Smart Customer Suite. Combines business intelligence with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-customer-suite-ef638f58"
+    }
+  },
+  "features": [
+    "Brand monitoring across social channels",
+    "Healthcare data analytics with patient insights",
+    "Serverless functions for cost-effective scaling",
+    "Image recognition with computer vision",
+    "Manufacturing quality control with defect detection"
+  ],
+  "benefits": [
+    "Reduced churn with proactive customer retention",
+    "Scalable to millions of transactions per second",
+    "Faster content creation with AI assistance",
+    "Automated compliance reporting for regulatory requirements",
+    "Improved employee productivity with automation"
+  ]
+}

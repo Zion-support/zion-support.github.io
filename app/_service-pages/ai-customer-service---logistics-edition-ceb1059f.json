@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/ai-customer-service---logistics-edition-ceb1059f",
+  "breadcrumbTitle": "AI Customer Service - Logistics Edition",
+  "title": "AI Customer Service - Logistics Edition",
+  "description": "Unlock unprecedented growth with AI Customer Service - Logistics Edition. This autonomous system provides inventory management with zero manual intervention nee",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Customer Service - Logistics Edition - Zion Tech Group",
+    "description": "Unlock unprecedented growth with AI Customer Service - Logistics Edition. This autonomous system provides inventory management with zero manual intervention nee",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-customer-service---logistics-edition-ceb1059f"
+    }
+  },
+  "features": [
+    "API-first design with comprehensive REST and GraphQL endpoints",
+    "Cloud-native architecture with multi-region deployment",
+    "Logistics route optimization with traffic prediction",
+    "Edge computing support for low-latency operations",
+    "HIPAA ready with healthcare data protection"
+  ],
+  "benefits": [
+    "Reduced customer acquisition costs with optimization",
+    "Improved sales performance with lead scoring",
+    "Improved product quality with automated testing",
+    "Real-time insights and alerts for proactive management",
+    "Scalable to millions of transactions per second"
+  ]
+}

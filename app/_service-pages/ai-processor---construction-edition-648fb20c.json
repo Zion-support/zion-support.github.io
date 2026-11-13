@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-processor---construction-edition-648fb20c",
+  "breadcrumbTitle": "AI Processor - Construction Edition",
+  "title": "AI Processor - Construction Edition",
+  "description": "Next-generation construction solution: AI Processor - Construction Edition. Combines financial planning with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Processor - Construction Edition - Zion Tech Group",
+    "description": "Next-generation construction solution: AI Processor - Construction Edition. Combines financial planning with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-processor---construction-edition-648fb20c"
+    }
+  },
+  "features": [
+    "API-first design",
+    "Data encryption",
+    "GDPR compliance",
+    "Offline capabilities",
+    "Custom integrations"
+  ],
+  "benefits": [
+    "50% reduction in operational costs",
+    "Predictive maintenance scheduling",
+    "Real-time insights and alerts",
+    "Performance benchmarking"
+  ]
+}

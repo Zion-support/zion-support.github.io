@@ -1,0 +1,29 @@
+{
+  "title": "AI Predictive Maintenance for Aviation",
+  "description": "Predict aircraft component failures before they happen. Sensor data analysis, flight data monitoring, and maintenance scheduling for airlines and MRO providers.",
+  "basic": "$4,999/mo/month",
+  "pro": "$14,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Predictive Maintenance for Aviation - Zion Tech Group",
+    "description": "Predict aircraft component failures before they happen. Sensor data analysis, flight data monitoring, and maintenance scheduling for airlines and MRO providers.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-predictive-maintenance-aviation"
+    }
+  },
+  "features": [
+    "Flight data monitoring",
+    "Component failure prediction",
+    "Remaining useful life estimation",
+    "Maintenance scheduling optimization",
+    "Integration with airline MRO systems"
+  ],
+  "benefits": [
+    "Reduce AOG events by 40%",
+    "Optimize maintenance costs",
+    "Improve flight safety",
+    "Meet regulatory requirements"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/insights-smart---media-47717c08",
+  "breadcrumbTitle": "Insights Smart - Media",
+  "title": "Insights Smart - Media",
+  "description": "The future of media is here with Insights Smart - Media. Powered by cutting-edge AI, this platform delivers financial planning like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Insights Smart - Media - Zion Tech Group",
+    "description": "The future of media is here with Insights Smart - Media. Powered by cutting-edge AI, this platform delivers financial planning like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/insights-smart---media-47717c08"
+    }
+  },
+  "features": [
+    "Comprehensive monitoring",
+    "Rollback mechanisms",
+    "Offline capabilities",
+    "Custom integrations"
+  ],
+  "benefits": [
+    "Intelligent load balancing",
+    "24/7 automated operations",
+    "Enterprise-grade security",
+    "Dynamic resource allocation",
+    "Cost optimization recommendations"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "title": "AI Maritime Emission Tracking & Compliance Platform",
+  "description": "Track and report ship emissions (CO2, SOx, NOx) in real-time: fuel consumption monitoring, EU MRV/IMO DCS compliance, CII rating prediction, and decarbonization roadmap.",
+  "basic": "$299/vessel/month",
+  "pro": "$699/vessel/month",
+  "enterprise": "$1999/vessel/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Maritime Emission Tracking & Compliance Platform - Zion Tech Group",
+    "description": "Track and report ship emissions (CO2, SOx, NOx) in real-time: fuel consumption monitoring, EU MRV/IMO DCS compliance, CII rating prediction, and decarbonization",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-ship-emission-tracker"
+    }
+  },
+  "features": [
+    "Real-time emission monitoring",
+    "EU MRV/IMO DCS compliance",
+    "CII rating prediction",
+    "Fuel consumption optimization",
+    "Decarbonization route mapping"
+  ],
+  "benefits": [
+    "Ensure IMO compliance",
+    "Reduce fuel costs by 12%",
+    "Meet decarbonization targets"
+  ]
+}

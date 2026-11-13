@@ -1,0 +1,29 @@
+{
+  "title": "Unified Endpoint & Device Management",
+  "description": "Unified endpoint management across Windows, macOS, iOS, Android, ChromeOS, and IoT: OS patch deployment, remote wipe, app catalog + distribution, inventory management, and compliance policy enforcement from a single console.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Unified Endpoint & Device Management - Zion Tech Group",
+    "description": "Unified endpoint management across Windows, macOS, iOS, Android, ChromeOS, and IoT: OS patch deployment, remote wipe, app catalog + distribution, inventory mana",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-unified-endpoint-management"
+    }
+  },
+  "features": [
+    "Multi-platform: Windows, macOS, iOS, Android, ChromeOS, RaspberryPi ESP32 IoT",
+    "OS patch deployment with maintenance-window scheduling and rollback protection",
+    "Remote actions: wipe, lock, locate, reboot, reset password, revoke certs",
+    "Self-service app catalog: users install approved apps without IT ticket",
+    "Compliance policies: BitLocker, FileVault, firewall rules, USB restriction, AV enforcement"
+  ],
+  "benefits": [
+    "Reduce costs with unified endpoint & device management",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

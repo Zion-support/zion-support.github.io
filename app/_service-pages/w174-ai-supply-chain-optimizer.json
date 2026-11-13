@@ -1,0 +1,29 @@
+{
+  "title": "AI Supply Chain Optimizer",
+  "description": "AI-powered supply chain optimization: demand forecasting, inventory optimization, supplier risk scoring, and logistics route planning. Reduce costs and prevent stockouts.",
+  "basic": "$999/mo/month",
+  "pro": "$2,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Supply Chain Optimizer - Zion Tech Group",
+    "description": "AI-powered supply chain optimization: demand forecasting, inventory optimization, supplier risk scoring, and logistics route planning. Reduce costs and prevent ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w174-ai-supply-chain-optimizer"
+    }
+  },
+  "features": [
+    "AI demand forecasting (30/60/90 day)",
+    "Multi-echelon inventory optimization",
+    "Supplier risk scoring and diversification",
+    "Logistics route and carrier optimization",
+    "What-if scenario modeling"
+  ],
+  "benefits": [
+    "Reduce inventory costs by 20-30%",
+    "Prevent stockouts with accurate forecasting",
+    "Supplier diversification reduces risk",
+    "Scenario modeling for decision support"
+  ]
+}

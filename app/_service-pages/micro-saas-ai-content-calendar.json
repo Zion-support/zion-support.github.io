@@ -1,0 +1,29 @@
+{
+  "title": "Micro-SaaS AI Content Calendar & Planner",
+  "description": "Intelligent content planning platform that uses AI to generate content ideas, auto-schedule posts across channels, and optimize posting times based on audience engagement patterns.",
+  "basic": "$29/mo/month",
+  "pro": "$79/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Micro-SaaS AI Content Calendar & Planner - Zion Tech Group",
+    "description": "Intelligent content planning platform that uses AI to generate content ideas, auto-schedule posts across channels, and optimize posting times based on audience ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-ai-content-calendar"
+    }
+  },
+  "features": [
+    "AI content idea generation based on trending topics",
+    "Multi-channel scheduling (Twitter, LinkedIn, Instagram, TikTok)",
+    "Optimal posting time prediction per audience segment",
+    "Content performance analytics with ROI tracking",
+    "Collaborative editorial calendar with approval workflows"
+  ],
+  "benefits": [
+    "Plan a month of content in under 2 hours",
+    "Increase engagement 3x with optimal timing",
+    "Maintain consistent brand voice across all channels",
+    "Eliminate content gaps with AI suggestions"
+  ]
+}

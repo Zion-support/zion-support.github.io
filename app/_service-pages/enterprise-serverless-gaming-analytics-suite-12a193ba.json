@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/enterprise-serverless-gaming-analytics-suite-12a193ba",
+  "breadcrumbTitle": "Enterprise Serverless Gaming Analytics Suite",
+  "title": "Enterprise Serverless Gaming Analytics Suite",
+  "description": "Enterprise analytics suite that delivers serverless gaming insights with unified dashboards and reporting.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Enterprise Serverless Gaming Analytics Suite - Zion Tech Group",
+    "description": "Enterprise analytics suite that delivers serverless gaming insights with unified dashboards and reporting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/enterprise-serverless-gaming-analytics-suite-12a193ba"
+    }
+  },
+  "features": [
+    "Data visualization",
+    "Custom dashboards",
+    "Report generation",
+    "KPI tracking"
+  ],
+  "benefits": [
+    "Unified data view",
+    "Faster insights",
+    "Customizable reports",
+    "Cross-functional collaboration"
+  ]
+}

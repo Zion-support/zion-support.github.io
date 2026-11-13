@@ -1,0 +1,29 @@
+{
+  "title": "MeetingMind — AI Meeting Notes Micro-SaaS",
+  "description": "AI-powered meeting notes and action item extraction. Integrates with Zoom, Google Meet, and Teams to automatically transcribe, summarize, and extract action items from meetings. Share notes with one click.",
+  "basic": "$39/mo/month",
+  "pro": "$119/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "MeetingMind — AI Meeting Notes Micro-SaaS - Zion Tech Group",
+    "description": "AI-powered meeting notes and action item extraction. Integrates with Zoom, Google Meet, and Teams to automatically transcribe, summarize, and extract action ite",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-meeting-notes-ai"
+    }
+  },
+  "features": [
+    "Auto-transcribe meetings (Zoom, Meet, Teams)",
+    "AI summary with key decisions",
+    "Action item extraction and assignment",
+    "Search across all meeting notes",
+    "Integration with Slack, Notion, Asana"
+  ],
+  "benefits": [
+    "Never take manual meeting notes",
+    "Find any decision in seconds",
+    "Automatic action item tracking",
+    "10x faster meeting follow-up"
+  ]
+}

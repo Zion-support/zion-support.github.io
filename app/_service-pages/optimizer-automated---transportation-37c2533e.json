@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/optimizer-automated---transportation-37c2533e",
+  "breadcrumbTitle": "Optimizer Automated - Transportation",
+  "title": "Optimizer Automated - Transportation",
+  "description": "Next-generation transportation solution: Optimizer Automated - Transportation. Combines threat detection with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Optimizer Automated - Transportation - Zion Tech Group",
+    "description": "Next-generation transportation solution: Optimizer Automated - Transportation. Combines threat detection with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/optimizer-automated---transportation-37c2533e"
+    }
+  },
+  "features": [
+    "Microservices deployment",
+    "GDPR compliance",
+    "API-first design",
+    "Auto-scaling capabilities",
+    "Audit trails"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "Enterprise-grade security",
+    "Cost optimization recommendations",
+    "Intelligent load balancing",
+    "Scalable to millions of transactions"
+  ]
+}

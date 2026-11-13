@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "AI Agentic Workflows: checklist for IT leaders | Zion Tech Group",
+    "description": "AI Agentic Workflows: checklist for IT leaders",
+    "keywords": [
+      "cloud",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "AI Agentic Workflows: checklist for IT leaders",
+      "description": "AI Agentic Workflows: checklist for IT leaders",
+      "url": "https://ziontechgroup.com/blog/ai-agentic-workflows-checklist-for-it-leaders/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/ai-agentic-workflows-checklist-for-it-leaders/"
+    }
+  },
+  "values": [
+    "AI Agentic Workflows: checklist for IT leaders",
+    "AI Agentic Workflows: checklist for IT leaders",
+    "AI Agentic Workflows: checklist for IT leaders",
+    "Outcomes to measure",
+    "Leading indicators for ai agentic workflows: checklist for it leaders: workflow completion rate, escalation rate, time-to-resolution, and user satisfaction. Lagging indicators: revenue trend, cost trend, customer retention, and operational efficiency. Track both leading and lagging indicators so you can explain progress to leadership before financial results appear. Use a rolling 90-day window and re-baseline monthly; this keeps the program accountable without demanding perfection on day one. Publish metrics in a shared dashboard so the whole team sees progress, not just the program sponsor.",
+    "Outcomes to measure",
+    " Leading indicators for ai agentic workflows: checklist for it leaders: workflow completion rate, escalation rate, time-to-resolution, and user satisfaction. Lagging indicators: revenue trend, cost trend, customer retention, and operational efficiency. Track both leading and lagging indicators so you can explain progress to leadership before financial results appear. Use a rolling 90-day window and re-baseline monthly; this keeps the program accountable without demanding perfection on day one. Publish metrics in a shared dashboard so the whole team sees progress, not just the program sponsor.",
+    "/blog/smart-contract-audit-architecture-overview",
+    "Smart Contract Audit Architecture Overview",
+    "/blog/micro-saas-ai-hr-recruitment-2026-6921",
+    "Micro Saas Ai Hr Recruitment 2026 6921",
+    "/blog/microsaas-hr-recruitment-roi-and-cost-model",
+    "Microsaas Hr Recruitment Roi And Cost Model",
+    "/blog/brand-voice-guardian-operations-handbook",
+    "Brand Voice Guardian Operations Handbook"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "AI Agentic Workflows: checklist for IT leaders",
+    "description": "AI Agentic Workflows: checklist for IT leaders",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T05:07:49Z",
+    "dateModified": "2026-08-07T05:07:49Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/ai-agentic-workflows-checklist-for-it-leaders/"
+  }
+}

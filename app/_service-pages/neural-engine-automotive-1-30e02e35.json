@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/neural-engine-automotive-1-30e02e35",
+  "breadcrumbTitle": "Neural engine-automotive #1",
+  "title": "Neural engine-automotive #1",
+  "description": "Transform your automotive operations with our Neural engine-automotive #1. This AI-driven solution automates data processing with unprecedented accuracy and eff",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Neural engine-automotive #1 - Zion Tech Group",
+    "description": "Transform your automotive operations with our Neural engine-automotive #1. This AI-driven solution automates data processing with unprecedented accuracy and eff",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/neural-engine-automotive-1-30e02e35"
+    }
+  },
+  "features": [
+    "Zero-downtime updates",
+    "Real-time processing",
+    "Serverless functions",
+    "API-first design",
+    "Audit trails"
+  ],
+  "benefits": [
+    "Cost optimization recommendations",
+    "3x faster decision making",
+    "Self-healing infrastructure",
+    "Scalable to millions of transactions"
+  ]
+}

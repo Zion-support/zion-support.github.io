@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-multi-tenant-aviation-intelligence-platform-e1a1c1ff",
+  "breadcrumbTitle": "AI-Powered Multi-Tenant Aviation Intelligence Platform",
+  "title": "AI-Powered Multi-Tenant Aviation Intelligence Platform",
+  "description": "AI-driven intelligence platform that delivers multi-tenant insights and automated decision-making for aviation operations.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Multi-Tenant Aviation Intelligence Platform - Zion Tech Group",
+    "description": "AI-driven intelligence platform that delivers multi-tenant insights and automated decision-making for aviation operations.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-multi-tenant-aviation-intelligence-platform-e1a1c1ff"
+    }
+  },
+  "features": [
+    "Real-time intelligence",
+    "Automated insights",
+    "Predictive alerts",
+    "API integration"
+  ],
+  "benefits": [
+    "Real-time actionable insights",
+    "Automated decision-making",
+    "Reduced latency",
+    "Improved accuracy"
+  ]
+}

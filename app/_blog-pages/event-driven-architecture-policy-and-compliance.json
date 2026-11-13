@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "Event Driven Architecture: policy and compliance | Zion Tech Group",
+    "description": "Event Driven Architecture: policy and compliance",
+    "keywords": [
+      "ai",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "Event Driven Architecture: policy and compliance",
+      "description": "Event Driven Architecture: policy and compliance",
+      "url": "https://ziontechgroup.com/blog/event-driven-architecture-policy-and-compliance/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/event-driven-architecture-policy-and-compliance/"
+    }
+  },
+  "values": [
+    "Event Driven Architecture: policy and compliance",
+    "Event Driven Architecture: policy and compliance",
+    "Event Driven Architecture: policy and compliance",
+    "Conversion path",
+    "If this guide matches your event driven architecture: policy and compliance initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "Conversion path",
+    " If this guide matches your event driven architecture: policy and compliance initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "/blog/devsecops-pipeline-2026-7301",
+    "Devsecops Pipeline 2026 7301",
+    "/blog/smart-contract-audit-deployment-patterns",
+    "Smart Contract Audit Deployment Patterns",
+    "/blog/cloud-native-app-development-2026-7226",
+    "Cloud Native App Development 2026 7226",
+    "/blog/ai-email-intelligence-2026-7321",
+    "Ai Email Intelligence 2026 7321"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Event Driven Architecture: policy and compliance",
+    "description": "Event Driven Architecture: policy and compliance",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T04:51:08Z",
+    "dateModified": "2026-08-07T04:51:08Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/event-driven-architecture-policy-and-compliance/"
+  }
+}

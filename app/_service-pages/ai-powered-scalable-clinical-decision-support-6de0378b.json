@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-scalable-clinical-decision-support-6de0378b",
+  "breadcrumbTitle": "AI-Powered Scalable Clinical Decision Support",
+  "title": "AI-Powered Scalable Clinical Decision Support",
+  "description": "Clinical AI system that provides scalable diagnostic assistance, treatment recommendations, and care pathway optimization for healthcare providers.",
+  "basic": "$298/month",
+  "pro": "$748/month",
+  "enterprise": "$2248/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Scalable Clinical Decision Support - Zion Tech Group",
+    "description": "Clinical AI system that provides scalable diagnostic assistance, treatment recommendations, and care pathway optimization for healthcare providers.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-scalable-clinical-decision-support-6de0378b"
+    }
+  },
+  "features": [
+    "Diagnostic assistance",
+    "Treatment planning",
+    "Drug interaction checking",
+    "Outcome prediction"
+  ],
+  "benefits": [
+    "Improved accuracy",
+    "Personalized care",
+    "Reduced errors",
+    "Cost optimization"
+  ]
+}

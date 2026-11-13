@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/experience-ai-hospitality-73a52b24",
+  "breadcrumbTitle": "Experience AI - Hospitality",
+  "title": "Experience AI - Hospitality",
+  "description": "Revolutionize hospitality through intelligent automation. Our Experience AI - Hospitality leverages advanced machine learning to deliver budget tracking at scal",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Experience AI - Hospitality - Zion Tech Group",
+    "description": "Revolutionize hospitality through intelligent automation. Our Experience AI - Hospitality leverages advanced machine learning to deliver budget tracking at scal",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/experience-ai-hospitality-73a52b24"
+    }
+  },
+  "features": [
+    "SSL/TLS encryption for all connections",
+    "Performance testing with load simulation",
+    "Privileged access management (PAM)",
+    "Energy optimization with consumption tracking",
+    "HIPAA ready with healthcare data protection"
+  ],
+  "benefits": [
+    "Cost optimization recommendations with savings analysis",
+    "Reduced content creation time",
+    "reduced environmental impact and costs",
+    "Reduced shipping costs with route optimization",
+    "Predictive maintenance scheduling to prevent downtime"
+  ]
+}

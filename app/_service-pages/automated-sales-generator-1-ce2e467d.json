@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/automated-sales-generator-1-ce2e467d",
+  "breadcrumbTitle": "Automated Sales Generator #1",
+  "title": "Automated Sales Generator #1",
+  "description": "The future of hospitality is here with Automated Sales Generator #1. Powered by cutting-edge AI, this platform delivers predictive analytics like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated Sales Generator #1 - Zion Tech Group",
+    "description": "The future of hospitality is here with Automated Sales Generator #1. Powered by cutting-edge AI, this platform delivers predictive analytics like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-sales-generator-1-ce2e467d"
+    }
+  },
+  "features": [
+    "Cloud-native architecture",
+    "SOC 2 certified",
+    "Serverless functions",
+    "Open-source friendly",
+    "Audit trails"
+  ],
+  "benefits": [
+    "Intelligent load balancing",
+    "Self-healing infrastructure",
+    "Real-time insights and alerts",
+    "ROI in under 90 days"
+  ]
+}

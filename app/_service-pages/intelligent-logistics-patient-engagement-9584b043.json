@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-logistics-patient-engagement-9584b043",
+  "breadcrumbTitle": "Intelligent Logistics Patient Engagement",
+  "title": "Intelligent Logistics Patient Engagement",
+  "description": "AI-driven patient engagement platform that delivers proactive personalized care journeys, remote monitoring, and adherence support through intelligent automatio",
+  "basic": "$258/month",
+  "pro": "$648/month",
+  "enterprise": "$1948/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Logistics Patient Engagement - Zion Tech Group",
+    "description": "AI-driven patient engagement platform that delivers proactive personalized care journeys, remote monitoring, and adherence support through intelligent automatio",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-logistics-patient-engagement-9584b043"
+    }
+  },
+  "features": [
+    "Personalized care plans",
+    "Remote monitoring",
+    "Medication adherence",
+    "Virtual consultations"
+  ],
+  "benefits": [
+    "Better outcomes",
+    "Higher satisfaction",
+    "Reduced readmissions",
+    "Lower costs"
+  ]
+}

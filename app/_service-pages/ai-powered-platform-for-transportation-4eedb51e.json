@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/ai-powered-platform-for-transportation-4eedb51e",
+  "breadcrumbTitle": "AI-Powered Platform for Transportation",
+  "title": "AI-Powered Platform for Transportation",
+  "description": "Unlock unprecedented growth with AI-Powered Platform for Transportation. This autonomous system provides resource optimization with zero manual intervention nee",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI-Powered Platform for Transportation - Zion Tech Group",
+    "description": "Unlock unprecedented growth with AI-Powered Platform for Transportation. This autonomous system provides resource optimization with zero manual intervention nee",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-platform-for-transportation-4eedb51e"
+    }
+  },
+  "features": [
+    "Open-source friendly",
+    "API-first design",
+    "Plugin architecture",
+    "SOC 2 certified",
+    "Rollback mechanisms"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "Reduced human error by 95%",
+    "Scalable to millions of transactions",
+    "Real-time insights and alerts",
+    "99.9% uptime guarantee"
+  ]
+}

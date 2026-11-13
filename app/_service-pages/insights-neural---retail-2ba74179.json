@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/insights-neural---retail-2ba74179",
+  "breadcrumbTitle": "Insights Neural - Retail",
+  "title": "Insights Neural - Retail",
+  "description": "The future of retail is here with Insights Neural - Retail. Powered by cutting-edge AI, this platform delivers energy management like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Insights Neural - Retail - Zion Tech Group",
+    "description": "The future of retail is here with Insights Neural - Retail. Powered by cutting-edge AI, this platform delivers energy management like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/insights-neural---retail-2ba74179"
+    }
+  },
+  "features": [
+    "Rollback mechanisms",
+    "Cloud-native architecture",
+    "Plugin architecture",
+    "Alerting system",
+    "Open-source friendly"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "50% reduction in operational costs",
+    "24/7 automated operations"
+  ]
+}

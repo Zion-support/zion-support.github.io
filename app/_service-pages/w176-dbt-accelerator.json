@@ -1,0 +1,29 @@
+{
+  "title": "dbt Analytics Engineering Accelerator",
+  "description": "Accelerate dbt implementation: project setup, modeling patterns, testing framework, CI/CD, and performance optimization for dbt Core and Cloud.",
+  "basic": "$999/month",
+  "pro": "$2,999/month",
+  "enterprise": "$9,999/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "dbt Analytics Engineering Accelerator - Zion Tech Group",
+    "description": "Accelerate dbt implementation: project setup, modeling patterns, testing framework, CI/CD, and performance optimization for dbt Core and Cloud.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w176-dbt-accelerator"
+    }
+  },
+  "features": [
+    "dbt project architecture and setup",
+    "Modeling patterns and conventions",
+    "Testing framework (schema + data tests)",
+    "CI/CD pipeline for dbt",
+    "Documentation generation and hosting"
+  ],
+  "benefits": [
+    "Production dbt project in days, not months",
+    "Testing framework ensures data quality",
+    "CI/CD catches model changes before production",
+    "Performance optimization reduces run times"
+  ]
+}

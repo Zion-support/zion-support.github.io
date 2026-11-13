@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/system-intelligent---gaming-0b33e289",
+  "breadcrumbTitle": "System Intelligent - Gaming",
+  "title": "System Intelligent - Gaming",
+  "description": "Next-generation gaming solution: System Intelligent - Gaming. Combines maintenance scheduling with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "System Intelligent - Gaming - Zion Tech Group",
+    "description": "Next-generation gaming solution: System Intelligent - Gaming. Combines maintenance scheduling with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/system-intelligent---gaming-0b33e289"
+    }
+  },
+  "features": [
+    "Alerting system",
+    "Real-time processing",
+    "Zero-downtime updates",
+    "GDPR compliance",
+    "Multi-language support"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "Enterprise-grade security",
+    "50% reduction in operational costs",
+    "Cost optimization recommendations",
+    "99.9% uptime guarantee"
+  ]
+}

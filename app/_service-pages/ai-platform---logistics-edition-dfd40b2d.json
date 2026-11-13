@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-platform---logistics-edition-dfd40b2d",
+  "breadcrumbTitle": "AI Platform - Logistics Edition",
+  "title": "AI Platform - Logistics Edition",
+  "description": "Unlock unprecedented growth with AI Platform - Logistics Edition. This autonomous system provides network optimization with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Platform - Logistics Edition - Zion Tech Group",
+    "description": "Unlock unprecedented growth with AI Platform - Logistics Edition. This autonomous system provides network optimization with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-platform---logistics-edition-dfd40b2d"
+    }
+  },
+  "features": [
+    "Cloud-native architecture",
+    "Audit trails",
+    "Plugin architecture",
+    "Alerting system",
+    "Multi-region deployment"
+  ],
+  "benefits": [
+    "Scalable to millions of transactions",
+    "Enterprise-grade security",
+    "Dynamic resource allocation"
+  ]
+}

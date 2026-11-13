@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/director-intelligent---energy-1-b896a076",
+  "breadcrumbTitle": "Director Intelligent - Energy #1",
+  "title": "Director Intelligent - Energy #1",
+  "description": "Unlock unprecedented growth with Director Intelligent - Energy #1. This autonomous system provides decision support with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Director Intelligent - Energy #1 - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Director Intelligent - Energy #1. This autonomous system provides decision support with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/director-intelligent---energy-1-b896a076"
+    }
+  },
+  "features": [
+    "Machine learning integration",
+    "Data encryption",
+    "Multi-region deployment",
+    "Plugin architecture",
+    "API-first design"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "Intelligent load balancing",
+    "ROI in under 90 days"
+  ]
+}

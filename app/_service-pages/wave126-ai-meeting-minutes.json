@@ -1,0 +1,29 @@
+{
+  "title": "AI Meeting Minutes Generator",
+  "description": "Transform every meeting into structured, actionable records in real time. AI transcribes conversations, identifies decisions and action items, assigns owners, and distributes summaries — ensuring nothing falls through the cracks.",
+  "basic": "$N/A/month",
+  "pro": "$297/month",
+  "enterprise": "$697/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Meeting Minutes Generator - Zion Tech Group",
+    "description": "Transform every meeting into structured, actionable records in real time. AI transcribes conversations, identifies decisions and action items, assigns owners, a",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/wave126-ai-meeting-minutes"
+    }
+  },
+  "features": [
+    "Real-time transcription with speaker diarization",
+    "Action item extraction with owner assignment",
+    "Decision & key takeaway summarization",
+    "Multi-language support (40+ languages)",
+    "Calendar & project management integration"
+  ],
+  "benefits": [
+    "Never take manual notes again",
+    "100% capture of decisions and commitments",
+    "Instant accountability through action item tracking",
+    "Searchable institutional memory across all meetings"
+  ]
+}

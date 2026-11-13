@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "AI Agentic Workflows: starter template | Zion Tech Group",
+    "description": "AI Agentic Workflows: starter template",
+    "keywords": [
+      "security",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "AI Agentic Workflows: starter template",
+      "description": "AI Agentic Workflows: starter template",
+      "url": "https://ziontechgroup.com/blog/ai-agentic-workflows-starter-template/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/ai-agentic-workflows-starter-template/"
+    }
+  },
+  "values": [
+    "AI Agentic Workflows: starter template",
+    "AI Agentic Workflows: starter template",
+    "AI Agentic Workflows: starter template",
+    "Conversion path",
+    "If this guide matches your ai agentic workflows: starter template initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "Conversion path",
+    " If this guide matches your ai agentic workflows: starter template initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "/blog/accessibility-compliance-2026-7217",
+    "Accessibility Compliance 2026 7217",
+    "/blog/api-management-gateway-implementation-playbook",
+    "Api Management Gateway Implementation Playbook",
+    "/blog/graphql-federation-platform-2026-7239",
+    "Graphql Federation Platform 2026 7239",
+    "/blog/cloud-migration-services-case-study",
+    "Cloud Migration Services Case Study"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "AI Agentic Workflows: starter template",
+    "description": "AI Agentic Workflows: starter template",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T07:26:10Z",
+    "dateModified": "2026-08-07T07:26:10Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/ai-agentic-workflows-starter-template/"
+  }
+}

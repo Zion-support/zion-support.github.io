@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/neural-insights-for-legal-0811cc0e",
+  "breadcrumbTitle": "Neural Insights for Legal",
+  "title": "Neural Insights for Legal",
+  "description": "Unlock unprecedented growth with Neural Insights for Legal. This autonomous system provides maintenance scheduling with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Neural Insights for Legal - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Neural Insights for Legal. This autonomous system provides maintenance scheduling with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/neural-insights-for-legal-0811cc0e"
+    }
+  },
+  "features": [
+    "Zero-downtime updates",
+    "Mobile-responsive interface",
+    "Serverless functions",
+    "Offline capabilities",
+    "Real-time processing"
+  ],
+  "benefits": [
+    "Seamless integration with existing systems",
+    "Dynamic resource allocation",
+    "Self-healing infrastructure"
+  ]
+}

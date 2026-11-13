@@ -1,0 +1,29 @@
+{
+  "title": "AI Visual Inspection System",
+  "description": "AI-powered visual quality inspection for manufacturing: surface defects, dimension verification, color consistency, and assembly validation. 99.5% defect detection.",
+  "basic": "$799/mo/month",
+  "pro": "$2,499/mo/month",
+  "enterprise": "$7,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Visual Inspection System - Zion Tech Group",
+    "description": "AI-powered visual quality inspection for manufacturing: surface defects, dimension verification, color consistency, and assembly validation. 99.5% defect detect",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w175-ai-inspection-vision"
+    }
+  },
+  "features": [
+    "Surface defect detection (scratches, dents, cracks)",
+    "Dimension and tolerance verification",
+    "Color and finish consistency checking",
+    "Assembly and component validation",
+    "Multi-camera support with multi-angle"
+  ],
+  "benefits": [
+    "99.5% defect detection accuracy",
+    "Inspect 100% of products, not samples",
+    "Real-time edge inference with no cloud latency",
+    "Reduce quality costs by 60%"
+  ]
+}

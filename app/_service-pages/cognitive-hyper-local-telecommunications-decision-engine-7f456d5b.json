@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/cognitive-hyper-local-telecommunications-decision-engine-7f456d5b",
+  "breadcrumbTitle": "Cognitive Hyper-Local Telecommunications Decision Engine",
+  "title": "Cognitive Hyper-Local Telecommunications Decision Engine",
+  "description": "Cognitive decision engine that processes hyper-local signals to drive telecommunications strategy with deep learning.",
+  "basic": "$278/month",
+  "pro": "$698/month",
+  "enterprise": "$2098/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Cognitive Hyper-Local Telecommunications Decision Engine - Zion Tech Group",
+    "description": "Cognitive decision engine that processes hyper-local signals to drive telecommunications strategy with deep learning.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cognitive-hyper-local-telecommunications-decision-engine-7f456d5b"
+    }
+  },
+  "features": [
+    "Cognitive reasoning",
+    "Scenario analysis",
+    "Decision trees",
+    "Recommendation engine"
+  ],
+  "benefits": [
+    "Better decision quality",
+    "Reduced risk",
+    "Faster insights",
+    "Competitive intelligence"
+  ]
+}

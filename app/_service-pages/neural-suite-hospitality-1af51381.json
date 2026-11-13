@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/neural-suite-hospitality-1af51381",
+  "breadcrumbTitle": "Neural suite-hospitality",
+  "title": "Neural suite-hospitality",
+  "description": "The future of hospitality is here with Neural suite-hospitality. Powered by cutting-edge AI, this platform delivers compliance monitoring like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Neural suite-hospitality - Zion Tech Group",
+    "description": "The future of hospitality is here with Neural suite-hospitality. Powered by cutting-edge AI, this platform delivers compliance monitoring like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/neural-suite-hospitality-1af51381"
+    }
+  },
+  "features": [
+    "Cloud-native architecture",
+    "Custom integrations",
+    "Real-time processing",
+    "GDPR compliance",
+    "Role-based access control"
+  ],
+  "benefits": [
+    "Cost optimization recommendations",
+    "Automated compliance reporting",
+    "Real-time insights and alerts",
+    "3x faster decision making",
+    "50% reduction in operational costs"
+  ]
+}

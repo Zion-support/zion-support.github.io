@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/analytics-intelligent---logistics-1a609903",
+  "breadcrumbTitle": "Analytics Intelligent - Logistics",
+  "title": "Analytics Intelligent - Logistics",
+  "description": "Unlock unprecedented growth with Analytics Intelligent - Logistics. This autonomous system provides quality control with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Analytics Intelligent - Logistics - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Analytics Intelligent - Logistics. This autonomous system provides quality control with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/analytics-intelligent---logistics-1a609903"
+    }
+  },
+  "features": [
+    "HIPAA ready",
+    "Machine learning integration",
+    "Container orchestration",
+    "Cloud-native architecture",
+    "Zero-downtime updates"
+  ],
+  "benefits": [
+    "Performance benchmarking",
+    "Self-healing infrastructure",
+    "Predictive maintenance scheduling",
+    "Cost optimization recommendations"
+  ]
+}

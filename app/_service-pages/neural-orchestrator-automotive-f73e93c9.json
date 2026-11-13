@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/neural-orchestrator-automotive-f73e93c9",
+  "breadcrumbTitle": "Neural orchestrator-automotive",
+  "title": "Neural orchestrator-automotive",
+  "description": "Unlock unprecedented growth with Neural orchestrator-automotive. This autonomous system provides sales forecasting with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Neural orchestrator-automotive - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Neural orchestrator-automotive. This autonomous system provides sales forecasting with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/neural-orchestrator-automotive-f73e93c9"
+    }
+  },
+  "features": [
+    "Cloud-native architecture",
+    "Auto-scaling capabilities",
+    "Multi-language support",
+    "Offline capabilities",
+    "GDPR compliance"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "24/7 automated operations",
+    "Dynamic resource allocation"
+  ]
+}

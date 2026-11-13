@@ -1,0 +1,28 @@
+{
+  "title": "Autonomous Autonomous Insurtech Orchestrator",
+  "description": "Autonomous orchestrator that coordinates autonomous insurtech processes across distributed systems with self-healing capabilities.",
+  "basic": "$258/month",
+  "pro": "$648/month",
+  "enterprise": "$1948/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Autonomous Autonomous Insurtech Orchestrator - Zion Tech Group",
+    "description": "Autonomous orchestrator that coordinates autonomous insurtech processes across distributed systems with self-healing capabilities.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-autonomous-insurtech-orchestrator-48a69cfe"
+    }
+  },
+  "features": [
+    "Cross-system coordination",
+    "Self-healing workflows",
+    "Dependency mapping",
+    "Failure recovery"
+  ],
+  "benefits": [
+    "Self-healing systems",
+    "Reduced downtime",
+    "Automatic recovery",
+    "Lower operational overhead"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-security-system-35d97772",
+  "breadcrumbTitle": "AI-Powered Security System",
+  "title": "AI-Powered Security System",
+  "description": "Transform your sports operations with our AI-Powered Security System. This AI-driven solution automates document processing with unprecedented accuracy and effi",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Security System - Zion Tech Group",
+    "description": "Transform your sports operations with our AI-Powered Security System. This AI-driven solution automates document processing with unprecedented accuracy and effi",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-security-system-35d97772"
+    }
+  },
+  "features": [
+    "Offline capabilities",
+    "Container orchestration",
+    "Edge computing support",
+    "Microservices deployment",
+    "SOC 2 certified"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "Reduced human error by 95%",
+    "Zero manual intervention required"
+  ]
+}

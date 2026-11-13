@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligent-analyzer-for-insurance-4854a52e",
+  "breadcrumbTitle": "Intelligent Analyzer for Insurance",
+  "title": "Intelligent Analyzer for Insurance",
+  "description": "The future of insurance is here with Intelligent Analyzer for Insurance. Powered by cutting-edge AI, this platform delivers network optimization like never befo",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Analyzer for Insurance - Zion Tech Group",
+    "description": "The future of insurance is here with Intelligent Analyzer for Insurance. Powered by cutting-edge AI, this platform delivers network optimization like never befo",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-analyzer-for-insurance-4854a52e"
+    }
+  },
+  "features": [
+    "Open-source friendly",
+    "Role-based access control",
+    "Multi-region deployment",
+    "Zero-downtime updates",
+    "HIPAA ready"
+  ],
+  "benefits": [
+    "Automated compliance reporting",
+    "Performance benchmarking",
+    "Dynamic resource allocation",
+    "24/7 automated operations"
+  ]
+}

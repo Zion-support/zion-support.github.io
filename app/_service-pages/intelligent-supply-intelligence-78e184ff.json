@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-supply-intelligence-78e184ff",
+  "breadcrumbTitle": "Intelligent Supply Intelligence",
+  "title": "Intelligent Supply Intelligence",
+  "description": "Unlock unprecedented growth with Intelligent Supply Intelligence. This autonomous system provides content generation with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Supply Intelligence - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Intelligent Supply Intelligence. This autonomous system provides content generation with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-supply-intelligence-78e184ff"
+    }
+  },
+  "features": [
+    "Plugin architecture",
+    "Cloud-native architecture",
+    "Offline capabilities",
+    "Alerting system"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "Dynamic resource allocation",
+    "Seamless integration with existing systems",
+    "50% reduction in operational costs"
+  ]
+}

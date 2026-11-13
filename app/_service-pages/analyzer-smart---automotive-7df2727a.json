@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/analyzer-smart---automotive-7df2727a",
+  "breadcrumbTitle": "Analyzer Smart - Automotive",
+  "title": "Analyzer Smart - Automotive",
+  "description": "Unlock unprecedented growth with Analyzer Smart - Automotive. This autonomous system provides supply chain with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Analyzer Smart - Automotive - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Analyzer Smart - Automotive. This autonomous system provides supply chain with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/analyzer-smart---automotive-7df2727a"
+    }
+  },
+  "features": [
+    "Machine learning integration",
+    "Microservices deployment",
+    "SOC 2 certified",
+    "Auto-scaling capabilities",
+    "Role-based access control"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "Zero manual intervention required",
+    "ROI in under 90 days",
+    "Seamless integration with existing systems",
+    "Enterprise-grade security"
+  ]
+}

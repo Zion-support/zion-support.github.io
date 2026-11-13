@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/smart-system-for-construction-642d981c",
+  "breadcrumbTitle": "Smart System for Construction",
+  "title": "Smart System for Construction",
+  "description": "Transform your construction operations with our Smart System for Construction. This AI-driven solution automates resource optimization with unprecedented accura",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart System for Construction - Zion Tech Group",
+    "description": "Transform your construction operations with our Smart System for Construction. This AI-driven solution automates resource optimization with unprecedented accura",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-system-for-construction-642d981c"
+    }
+  },
+  "features": [
+    "Custom integrations",
+    "Serverless functions",
+    "HIPAA ready",
+    "GDPR compliance",
+    "Real-time processing"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "ROI in under 90 days",
+    "Reduced human error by 95%",
+    "Dynamic resource allocation"
+  ]
+}

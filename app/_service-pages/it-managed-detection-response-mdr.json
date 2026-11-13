@@ -1,0 +1,29 @@
+{
+  "title": "IT Managed Detection & Response (MDR)",
+  "description": "24/7 managed security operations with advanced threat detection, investigation, and response.",
+  "basic": "$3,000/mo/month",
+  "pro": "$7,500/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "IT Managed Detection & Response (MDR) - Zion Tech Group",
+    "description": "24/7 managed security operations with advanced threat detection, investigation, and response.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-managed-detection-response-mdr"
+    }
+  },
+  "features": [
+    "24/7 SOC with dedicated analysts",
+    "Endpoint Detection & Response (EDR)",
+    "Network Detection & Response (NDR)",
+    "Threat intelligence feeds",
+    "Automated incident response playbooks"
+  ],
+  "benefits": [
+    "Detect and respond in under 15 minutes",
+    "Reduce breach risk by 95%",
+    "Eliminate need for in-house SOC",
+    "Meet compliance continuously"
+  ]
+}

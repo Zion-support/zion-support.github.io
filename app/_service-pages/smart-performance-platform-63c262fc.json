@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/smart-performance-platform-63c262fc",
+  "breadcrumbTitle": "Smart Performance Platform",
+  "title": "Smart Performance Platform",
+  "description": "The future of hospitality is here with Smart Performance Platform. Powered by cutting-edge AI, this platform delivers data processing like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Performance Platform - Zion Tech Group",
+    "description": "The future of hospitality is here with Smart Performance Platform. Powered by cutting-edge AI, this platform delivers data processing like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-performance-platform-63c262fc"
+    }
+  },
+  "features": [
+    "Audit trails",
+    "Multi-language support",
+    "SOC 2 certified",
+    "Mobile-responsive interface",
+    "Container orchestration"
+  ],
+  "benefits": [
+    "24/7 automated operations",
+    "Scalable to millions of transactions",
+    "ROI in under 90 days",
+    "Self-healing infrastructure"
+  ]
+}

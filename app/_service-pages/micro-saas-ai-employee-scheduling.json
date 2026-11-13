@@ -1,0 +1,29 @@
+{
+  "title": "AI Employee Scheduling & Workforce Planning",
+  "description": "AI-powered employee scheduling that optimizes shifts based on demand forecasts, employee preferences, skills, and labor law compliance.",
+  "basic": "$8/employee/mo/month",
+  "pro": "$15/employee/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Employee Scheduling & Workforce Planning - Zion Tech Group",
+    "description": "AI-powered employee scheduling that optimizes shifts based on demand forecasts, employee preferences, skills, and labor law compliance.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-ai-employee-scheduling"
+    }
+  },
+  "features": [
+    "AI demand forecasting for staffing needs",
+    "Auto-scheduling with employee preference matching",
+    "Labor law compliance checking (breaks, overtime, minors)",
+    "Shift swapping and open shift marketplace",
+    "Time and attendance tracking"
+  ],
+  "benefits": [
+    "Reduce labor costs by 15%",
+    "Eliminate scheduling conflicts automatically",
+    "Ensure 100% labor law compliance",
+    "Improve employee satisfaction with preference matching"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/automated-orchestrator-tech-ba2bf99b",
+  "breadcrumbTitle": "Automated orchestrator-tech",
+  "title": "Automated orchestrator-tech",
+  "description": "Next-generation technology solution: Automated orchestrator-tech. Combines process automation with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated orchestrator-tech - Zion Tech Group",
+    "description": "Next-generation technology solution: Automated orchestrator-tech. Combines process automation with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-orchestrator-tech-ba2bf99b"
+    }
+  },
+  "features": [
+    "API-first design",
+    "HIPAA ready",
+    "Mobile-responsive interface",
+    "Role-based access control"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "Performance benchmarking",
+    "Seamless integration with existing systems",
+    "50% reduction in operational costs",
+    "24/7 automated operations"
+  ]
+}

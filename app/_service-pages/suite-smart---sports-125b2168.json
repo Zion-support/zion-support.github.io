@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/suite-smart---sports-125b2168",
+  "breadcrumbTitle": "Suite Smart - Sports",
+  "title": "Suite Smart - Sports",
+  "description": "The future of sports is here with Suite Smart - Sports. Powered by cutting-edge AI, this platform delivers process automation like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Suite Smart - Sports - Zion Tech Group",
+    "description": "The future of sports is here with Suite Smart - Sports. Powered by cutting-edge AI, this platform delivers process automation like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/suite-smart---sports-125b2168"
+    }
+  },
+  "features": [
+    "Machine learning integration",
+    "Audit trails",
+    "Container orchestration",
+    "Multi-region deployment"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "50% reduction in operational costs",
+    "Enterprise-grade security",
+    "24/7 automated operations",
+    "Zero manual intervention required"
+  ]
+}

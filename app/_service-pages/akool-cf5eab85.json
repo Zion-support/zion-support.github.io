@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/akool-cf5eab85",
+  "breadcrumbTitle": "Akool",
+  "title": "Akool",
+  "description": "Akool Inc. is an American company headquartered in Palo Alto, California that specializes in generative artificial intelligence research and technologies. The c",
+  "basic": "$N/A/month",
+  "pro": "$N/A/month",
+  "enterprise": "$N/A/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Akool - Zion Tech Group",
+    "description": "Akool Inc. is an American company headquartered in Palo Alto, California that specializes in generative artificial intelligence research and technologies. The c",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/akool-cf5eab85"
+    }
+  },
+  "features": [
+    "AI-driven automation",
+    "Cloud-native deployment",
+    "API-first architecture",
+    "Enterprise-grade security",
+    "Scalable infrastructure"
+  ],
+  "benefits": [
+    "Improved operational efficiency",
+    "Reduced manual processes",
+    "Data-driven decision making",
+    "Faster time-to value",
+    "Scalable performance"
+  ]
+}

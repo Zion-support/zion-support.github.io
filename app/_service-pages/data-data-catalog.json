@@ -1,0 +1,29 @@
+{
+  "title": "AI-Powered Data Catalog",
+  "description": "Automated data catalog with AI-powered discovery, classification, and lineage. Find, understand, and trust your data assets.",
+  "basic": "$599/mo/month",
+  "pro": "$1,799/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI-Powered Data Catalog - Zion Tech Group",
+    "description": "Automated data catalog with AI-powered discovery, classification, and lineage. Find, understand, and trust your data assets.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/data-data-catalog"
+    }
+  },
+  "features": [
+    "Automated data discovery",
+    "AI classification and tagging",
+    "Data lineage tracking",
+    "Quality scoring",
+    "Integration with Snowflake, Databricks, BigQuery"
+  ],
+  "benefits": [
+    "Find data assets instantly",
+    "Understand data lineage",
+    "Ensure data quality",
+    "Enable self-service analytics"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/enterprise-robust-sales-analytics-suite-70f1649f",
+  "breadcrumbTitle": "Enterprise Robust Sales Analytics Suite",
+  "title": "Enterprise Robust Sales Analytics Suite",
+  "description": "Enterprise analytics suite that delivers robust sales insights with unified dashboards and reporting.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Enterprise Robust Sales Analytics Suite - Zion Tech Group",
+    "description": "Enterprise analytics suite that delivers robust sales insights with unified dashboards and reporting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/enterprise-robust-sales-analytics-suite-70f1649f"
+    }
+  },
+  "features": [
+    "Data visualization",
+    "Custom dashboards",
+    "Report generation",
+    "KPI tracking"
+  ],
+  "benefits": [
+    "Unified data view",
+    "Faster insights",
+    "Customizable reports",
+    "Cross-functional collaboration"
+  ]
+}

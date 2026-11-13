@@ -1,0 +1,29 @@
+{
+  "title": "FinTech Fraud Detection Engine",
+  "description": "Real-time transaction monitoring with graph-based anomaly detection, behavioral biometrics, and adaptive ML models. Scores every transaction in under 50ms, reduces false positives by 80%, and integrates with payment processors for instant blocking.",
+  "basic": "$N/A/month",
+  "pro": "$24997/month",
+  "enterprise": "$49997/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "FinTech Fraud Detection Engine - Zion Tech Group",
+    "description": "Real-time transaction monitoring with graph-based anomaly detection, behavioral biometrics, and adaptive ML models. Scores every transaction in under 50ms, redu",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/wave127-fintech-fraud-detection"
+    }
+  },
+  "features": [
+    "Real-time transaction scoring (<50ms latency)",
+    "Graph-based fraud ring detection",
+    "Behavioral biometrics (keystroke, device fingerprint)",
+    "Adaptive ML with online learning from feedback",
+    "Multi-channel monitoring (card, ACH, wire, crypto)"
+  ],
+  "benefits": [
+    "80% reduction in false-positive decline rates",
+    "Detect fraud rings invisible to rule-based systems",
+    "Sub-50ms scoring — no customer experience impact",
+    "Regulatory-ready with explainable AI & SAR generation"
+  ]
+}

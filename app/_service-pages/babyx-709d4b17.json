@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/babyx-709d4b17",
+  "breadcrumbTitle": "BabyX",
+  "title": "BabyX",
+  "description": "BabyX is an interactive lifelike virtual infant created through the use of artificial intelligence by Mark Sagar, Creator and Director of the Laboratory for Ani",
+  "basic": "$N/A/month",
+  "pro": "$N/A/month",
+  "enterprise": "$N/A/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "BabyX - Zion Tech Group",
+    "description": "BabyX is an interactive lifelike virtual infant created through the use of artificial intelligence by Mark Sagar, Creator and Director of the Laboratory for Ani",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/babyx-709d4b17"
+    }
+  },
+  "features": [
+    "AI-driven automation",
+    "Cloud-native deployment",
+    "API-first architecture",
+    "Enterprise-grade security",
+    "Scalable infrastructure"
+  ],
+  "benefits": [
+    "Improved operational efficiency",
+    "Reduced manual processes",
+    "Data-driven decision making",
+    "Faster time-to value",
+    "Scalable performance"
+  ]
+}

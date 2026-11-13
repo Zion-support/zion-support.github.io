@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/edge-native-automated-food-service-processing-201d0e87",
+  "breadcrumbTitle": "Edge-Native Automated Food Service Processing",
+  "title": "Edge-Native Automated Food Service Processing",
+  "description": "Edge-native processing layer that delivers automated food service insights with sub-millisecond latency.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Edge-Native Automated Food Service Processing - Zion Tech Group",
+    "description": "Edge-native processing layer that delivers automated food service insights with sub-millisecond latency.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/edge-native-automated-food-service-processing-201d0e87"
+    }
+  },
+  "features": [
+    "Edge computing",
+    "Low-latency processing",
+    "Sensor fusion",
+    "Real-time analytics"
+  ],
+  "benefits": [
+    "Sub-millisecond response",
+    "Reduced latency",
+    "Edge efficiency",
+    "Real-time processing"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "Micro-SAAS AI Website Builder",
+  "description": "AI-powered website builder that creates professional websites from a simple description. Includes SEO optimization, responsive design, and built-in analytics.",
+  "basic": "$19/month",
+  "pro": "$49/month",
+  "enterprise": "$149/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Micro-SAAS AI Website Builder - Zion Tech Group",
+    "description": "AI-powered website builder that creates professional websites from a simple description. Includes SEO optimization, responsive design, and built-in analytics.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-ai-website-builder"
+    }
+  },
+  "features": [
+    "AI design generation",
+    "SEO auto-optimization",
+    "Responsive templates",
+    "Built-in analytics",
+    "E-commerce ready"
+  ],
+  "benefits": [
+    "Launch in minutes not weeks",
+    "Professional design without a designer",
+    "SEO-optimized from day one",
+    "No coding required"
+  ]
+}

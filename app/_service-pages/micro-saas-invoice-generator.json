@@ -1,0 +1,29 @@
+{
+  "title": "InvoiceFlow — Invoice Generator Micro-SaaS",
+  "description": "Professional invoice and payment collection for freelancers and small businesses. Custom templates, recurring invoices, payment tracking, and automatic late payment reminders. Multi-currency and tax support.",
+  "basic": "$29/mo/month",
+  "pro": "$89/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "InvoiceFlow — Invoice Generator Micro-SaaS - Zion Tech Group",
+    "description": "Professional invoice and payment collection for freelancers and small businesses. Custom templates, recurring invoices, payment tracking, and automatic late pay",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-invoice-generator"
+    }
+  },
+  "features": [
+    "Custom invoice templates",
+    "Recurring invoice automation",
+    "Payment tracking dashboard",
+    "Automatic late payment reminders",
+    "Multi-currency support"
+  ],
+  "benefits": [
+    "Get paid 2x faster",
+    "Automate invoicing workflows",
+    "Professional brand image",
+    "Accurate tax compliance"
+  ]
+}

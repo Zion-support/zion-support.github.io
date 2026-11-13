@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligence-adaptive---real-estate-3cdee100",
+  "breadcrumbTitle": "Intelligence Adaptive - Real-Estate",
+  "title": "Intelligence Adaptive - Real-Estate",
+  "description": "Transform your real-estate operations with our Intelligence Adaptive - Real-Estate. This AI-driven solution automates decision support with unprecedented accura",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligence Adaptive - Real-Estate - Zion Tech Group",
+    "description": "Transform your real-estate operations with our Intelligence Adaptive - Real-Estate. This AI-driven solution automates decision support with unprecedented accura",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligence-adaptive---real-estate-3cdee100"
+    }
+  },
+  "features": [
+    "Audit trails",
+    "API-first design",
+    "Multi-language support",
+    "Container orchestration"
+  ],
+  "benefits": [
+    "Cost optimization recommendations",
+    "3x faster decision making",
+    "Zero manual intervention required",
+    "Intelligent load balancing"
+  ]
+}

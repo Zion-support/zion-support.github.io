@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/neural-workflow-engine-1-a7ad1d7a",
+  "breadcrumbTitle": "Neural Workflow Engine #1",
+  "title": "Neural Workflow Engine #1",
+  "description": "Revolutionize manufacturing through intelligent automation. Our Neural Workflow Engine #1 leverages advanced machine learning to deliver security monitoring at ",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Neural Workflow Engine #1 - Zion Tech Group",
+    "description": "Revolutionize manufacturing through intelligent automation. Our Neural Workflow Engine #1 leverages advanced machine learning to deliver security monitoring at ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/neural-workflow-engine-1-a7ad1d7a"
+    }
+  },
+  "features": [
+    "SOC 2 certified",
+    "GDPR compliance",
+    "Offline capabilities",
+    "Rollback mechanisms",
+    "Comprehensive monitoring"
+  ],
+  "benefits": [
+    "Automated compliance reporting",
+    "Performance benchmarking",
+    "ROI in under 90 days",
+    "Seamless integration with existing systems"
+  ]
+}

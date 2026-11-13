@@ -1,0 +1,28 @@
+{
+  "title": "Enterprise IoT Device Management",
+  "description": "Provision, monitor, and secure 10K+ IoT devices (sensors, cameras, gateways) from a single dashboard with OTA updates and zero-touch enrollment.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Enterprise IoT Device Management - Zion Tech Group",
+    "description": "Provision, monitor, and secure 10K+ IoT devices (sensors, cameras, gateways) from a single dashboard with OTA updates and zero-touch enrollment.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-iot-device-management"
+    }
+  },
+  "features": [
+    "Device inventory & health monitoring",
+    "Remote command & control",
+    "Firmware OTA scheduling",
+    "Geofencing & alerting"
+  ],
+  "benefits": [
+    "Reduce costs with enterprise iot device management",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

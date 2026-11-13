@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-engine---real-estate-edition-2367385c",
+  "breadcrumbTitle": "AI Engine - Real-Estate Edition",
+  "title": "AI Engine - Real-Estate Edition",
+  "description": "Transform your real-estate operations with our AI Engine - Real-Estate Edition. This AI-driven solution automates maintenance scheduling with unprecedented accu",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Engine - Real-Estate Edition - Zion Tech Group",
+    "description": "Transform your real-estate operations with our AI Engine - Real-Estate Edition. This AI-driven solution automates maintenance scheduling with unprecedented accu",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-engine---real-estate-edition-2367385c"
+    }
+  },
+  "features": [
+    "Container orchestration",
+    "Auto-scaling capabilities",
+    "Microservices deployment",
+    "Edge computing support",
+    "Performance dashboards"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "50% reduction in operational costs",
+    "Cost optimization recommendations"
+  ]
+}

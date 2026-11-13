@@ -1,0 +1,29 @@
+{
+  "title": "AI Emotion Analytics for CX",
+  "description": "Real-time emotion detection from text, voice, and video for customer experience. Sentiment trends, frustration prediction, and agent coaching signals for contact centers.",
+  "basic": "$499/mo/month",
+  "pro": "$1,499/mo/month",
+  "enterprise": "$4,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Emotion Analytics for CX - Zion Tech Group",
+    "description": "Real-time emotion detection from text, voice, and video for customer experience. Sentiment trends, frustration prediction, and agent coaching signals for contac",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w174-ai-emotion-analytics"
+    }
+  },
+  "features": [
+    "Multi-modal emotion detection (text, voice, face)",
+    "Real-time customer sentiment scoring",
+    "Frustration and escalation prediction",
+    "Agent coaching signals during calls",
+    "Emotion trend analytics and reporting"
+  ],
+  "benefits": [
+    "Detect frustration before customers churn",
+    "Real-time coaching improves agent performance",
+    "Emotion trends reveal systemic CX issues",
+    "Data-driven CX improvement"
+  ]
+}

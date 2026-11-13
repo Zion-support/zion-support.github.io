@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/neural-optimizer-legal-4f267ca5",
+  "breadcrumbTitle": "Neural optimizer-legal",
+  "title": "Neural optimizer-legal",
+  "description": "Revolutionize legal through intelligent automation. Our Neural optimizer-legal leverages advanced machine learning to deliver maintenance scheduling at scale.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Neural optimizer-legal - Zion Tech Group",
+    "description": "Revolutionize legal through intelligent automation. Our Neural optimizer-legal leverages advanced machine learning to deliver maintenance scheduling at scale.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/neural-optimizer-legal-4f267ca5"
+    }
+  },
+  "features": [
+    "GDPR compliance",
+    "Container orchestration",
+    "Machine learning integration",
+    "SOC 2 certified"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "Intelligent load balancing",
+    "Enterprise-grade security",
+    "3x faster decision making"
+  ]
+}

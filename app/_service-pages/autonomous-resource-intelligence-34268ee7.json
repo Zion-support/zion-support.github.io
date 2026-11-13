@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/autonomous-resource-intelligence-34268ee7",
+  "breadcrumbTitle": "Autonomous Resource Intelligence",
+  "title": "Autonomous Resource Intelligence",
+  "description": "Next-generation telecom solution: Autonomous Resource Intelligence. Combines resource optimization with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous Resource Intelligence - Zion Tech Group",
+    "description": "Next-generation telecom solution: Autonomous Resource Intelligence. Combines resource optimization with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-resource-intelligence-34268ee7"
+    }
+  },
+  "features": [
+    "Open-source friendly",
+    "Multi-region deployment",
+    "Comprehensive monitoring",
+    "Offline capabilities"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "ROI in under 90 days",
+    "50% reduction in operational costs",
+    "3x faster decision making"
+  ]
+}

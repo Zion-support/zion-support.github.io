@@ -1,0 +1,29 @@
+{
+  "title": "Observability Data Lakehouse",
+  "description": "Unified observability: metrics, traces, logs, events in one Iceberg-format lakehouse. OpenMetadata catalog, standard SQL across all signals. Retention hours to years per data class.",
+  "basic": "$399/mo/month",
+  "pro": "$1,299/mo/month",
+  "enterprise": "$3,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Observability Data Lakehouse - Zion Tech Group",
+    "description": "Unified observability: metrics, traces, logs, events in one Iceberg-format lakehouse. OpenMetadata catalog, standard SQL across all signals. Retention hours to ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/observability-lakehouse"
+    }
+  },
+  "features": [
+    "Metrics + traces + logs + events in single Iceberg format",
+    "OpenMetadata catalog + lineage per signal type",
+    "Standard SQL query across all observability data",
+    "Per-signal retention (hours to years)",
+    "Built-in aggregations + rollups for dashboarding"
+  ],
+  "benefits": [
+    "Reduce costs with observability data lakehouse",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/brighter-ai-technologies-d366f194",
+  "breadcrumbTitle": "Brighter AI Technologies",
+  "title": "Brighter AI Technologies",
+  "description": "Brighter AI Technologies is an artificial intelligence and automation technology company.",
+  "basic": "$N/A/month",
+  "pro": "$N/A/month",
+  "enterprise": "$N/A/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Brighter AI Technologies - Zion Tech Group",
+    "description": "Brighter AI Technologies is an artificial intelligence and automation technology company.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/brighter-ai-technologies-d366f194"
+    }
+  },
+  "features": [
+    "AI-driven automation",
+    "Cloud-native deployment",
+    "API-first architecture",
+    "Enterprise-grade security",
+    "Scalable infrastructure"
+  ],
+  "benefits": [
+    "Improved operational efficiency",
+    "Reduced manual processes",
+    "Data-driven decision making",
+    "Faster time-to value",
+    "Scalable performance"
+  ]
+}

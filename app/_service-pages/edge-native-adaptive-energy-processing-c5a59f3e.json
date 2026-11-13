@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/edge-native-adaptive-energy-processing-c5a59f3e",
+  "breadcrumbTitle": "Edge-Native Adaptive Energy Processing",
+  "title": "Edge-Native Adaptive Energy Processing",
+  "description": "Edge-native processing layer that delivers adaptive energy insights with sub-millisecond latency.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Edge-Native Adaptive Energy Processing - Zion Tech Group",
+    "description": "Edge-native processing layer that delivers adaptive energy insights with sub-millisecond latency.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/edge-native-adaptive-energy-processing-c5a59f3e"
+    }
+  },
+  "features": [
+    "Edge computing",
+    "Low-latency processing",
+    "Sensor fusion",
+    "Real-time analytics"
+  ],
+  "benefits": [
+    "Sub-millisecond response",
+    "Reduced latency",
+    "Edge efficiency",
+    "Real-time processing"
+  ]
+}

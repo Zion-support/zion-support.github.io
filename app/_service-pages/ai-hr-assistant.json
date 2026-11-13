@@ -1,0 +1,29 @@
+{
+  "title": "AI HR Assistant",
+  "description": "Intelligent HR automation for recruitment, onboarding, employee engagement, and policy Q&A using conversational AI.",
+  "basic": "$99/mo/month",
+  "pro": "$299/mo/month",
+  "enterprise": "$999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI HR Assistant - Zion Tech Group",
+    "description": "Intelligent HR automation for recruitment, onboarding, employee engagement, and policy Q&A using conversational AI.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-hr-assistant"
+    }
+  },
+  "features": [
+    "AI resume screening & ranking",
+    "Automated interview scheduling",
+    "Employee onboarding chatbot",
+    "Policy Q&A knowledge base",
+    "Engagement & sentiment tracking"
+  ],
+  "benefits": [
+    "Reduce costs with ai hr assistant",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

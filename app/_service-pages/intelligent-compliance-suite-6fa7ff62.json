@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-compliance-suite-6fa7ff62",
+  "breadcrumbTitle": "Intelligent Compliance Suite",
+  "title": "Intelligent Compliance Suite",
+  "description": "Next-generation agriculture solution: Intelligent Compliance Suite. Combines process automation with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Compliance Suite - Zion Tech Group",
+    "description": "Next-generation agriculture solution: Intelligent Compliance Suite. Combines process automation with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-compliance-suite-6fa7ff62"
+    }
+  },
+  "features": [
+    "Plugin architecture",
+    "Container orchestration",
+    "Comprehensive monitoring",
+    "HIPAA ready",
+    "Edge computing support"
+  ],
+  "benefits": [
+    "24/7 automated operations",
+    "Real-time insights and alerts",
+    "Reduced human error by 95%"
+  ]
+}

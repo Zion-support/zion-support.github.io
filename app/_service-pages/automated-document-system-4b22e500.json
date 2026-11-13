@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/automated-document-system-4b22e500",
+  "breadcrumbTitle": "Automated Document System",
+  "title": "Automated Document System",
+  "description": "Next-generation energy solution: Automated Document System. Combines customer insights with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated Document System - Zion Tech Group",
+    "description": "Next-generation energy solution: Automated Document System. Combines customer insights with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-document-system-4b22e500"
+    }
+  },
+  "features": [
+    "Audit trails",
+    "Edge computing support",
+    "Machine learning integration",
+    "Container orchestration",
+    "Auto-scaling capabilities"
+  ],
+  "benefits": [
+    "50% reduction in operational costs",
+    "Reduced human error by 95%",
+    "Dynamic resource allocation",
+    "Cost optimization recommendations"
+  ]
+}

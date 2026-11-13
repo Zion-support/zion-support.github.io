@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/director-autonomous---retail-1ed8de4d",
+  "breadcrumbTitle": "Director Autonomous - Retail",
+  "title": "Director Autonomous - Retail",
+  "description": "Unlock unprecedented growth with Director Autonomous - Retail. This autonomous system provides data processing with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Director Autonomous - Retail - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Director Autonomous - Retail. This autonomous system provides data processing with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/director-autonomous---retail-1ed8de4d"
+    }
+  },
+  "features": [
+    "Comprehensive monitoring",
+    "Performance dashboards",
+    "API-first design",
+    "Mobile-responsive interface",
+    "Custom integrations"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "Self-healing infrastructure",
+    "ROI in under 90 days",
+    "Intelligent load balancing"
+  ]
+}

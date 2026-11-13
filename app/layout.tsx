@@ -37,7 +37,6 @@ export const metadata = {
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
   icons: { icon: '/favicon.ico', apple: '/icon.svg' },
   manifest: '/manifest.json',
-  viewport: { width: 'device-width', initialScale: 1, maximumScale: 5, userScalable: true },
   formatDetection: { telephone: false, address: false, email: false },
   appleWebApp: { capable: true, title: siteConfig.name },
   alternates: { canonical: '/' },
@@ -63,7 +62,12 @@ export default function RootLayout({
   children: ReactNode;
 }) {
   return (
-    <>
+      <html lang="en" dir="ltr">
+        <head>
+          <link rel="preconnect" href="https://www.googletagmanager.com" />
+          <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+        </head>
+        <body className="antialiased font-sans">
       {/* JSON-LD: Organization + aggregate rating + social profiles */}
       <script
         type="application/ld+json"
@@ -93,12 +97,6 @@ export default function RootLayout({
         }}
       />
       <AutoJsonLd />
-      <html lang="en" dir="ltr">
-        <head>
-          <link rel="preconnect" href="https://www.googletagmanager.com" />
-          <link rel="dns-prefetch" href="https://www.google-analytics.com" />
-        </head>
-        <body className="antialiased font-sans">
           <Analytics />
           <CtaTracking />
           <div className="flex min-h-screen flex-col bg-gradient-to-br from-slate-900 via-slate-900 to-slate-950">
@@ -123,6 +121,5 @@ export default function RootLayout({
           </div>
         </body>
       </html>
-    </>
   );
 }

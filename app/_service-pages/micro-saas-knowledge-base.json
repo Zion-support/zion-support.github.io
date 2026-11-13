@@ -1,0 +1,29 @@
+{
+  "title": "KnowledgeBase Pro — Knowledge Base Micro-SaaS",
+  "description": "Self-service knowledge base for SaaS companies. AI-powered search, article suggestions, and analytics. Reduce support tickets by 40%.",
+  "basic": "$39/mo/month",
+  "pro": "$119/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "KnowledgeBase Pro — Knowledge Base Micro-SaaS - Zion Tech Group",
+    "description": "Self-service knowledge base for SaaS companies. AI-powered search, article suggestions, and analytics. Reduce support tickets by 40%.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-knowledge-base"
+    }
+  },
+  "features": [
+    "AI-powered search",
+    "Article editor with templates",
+    "Category and tag management",
+    "Analytics and search insights",
+    "Custom branding and domain"
+  ],
+  "benefits": [
+    "Reduce support tickets by 40%",
+    "Improve customer self-service",
+    "AI-powered content suggestions",
+    "Professional knowledge base"
+  ]
+}

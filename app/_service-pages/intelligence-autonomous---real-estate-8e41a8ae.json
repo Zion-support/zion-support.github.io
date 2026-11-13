@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligence-autonomous---real-estate-8e41a8ae",
+  "breadcrumbTitle": "Intelligence Autonomous - Real-Estate",
+  "title": "Intelligence Autonomous - Real-Estate",
+  "description": "Transform your real-estate operations with our Intelligence Autonomous - Real-Estate. This AI-driven solution automates predictive analytics with unprecedented ",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligence Autonomous - Real-Estate - Zion Tech Group",
+    "description": "Transform your real-estate operations with our Intelligence Autonomous - Real-Estate. This AI-driven solution automates predictive analytics with unprecedented ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligence-autonomous---real-estate-8e41a8ae"
+    }
+  },
+  "features": [
+    "Microservices deployment",
+    "Custom integrations",
+    "Multi-region deployment",
+    "Real-time processing",
+    "Plugin architecture"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "Self-healing infrastructure",
+    "Intelligent load balancing"
+  ]
+}

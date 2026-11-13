@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/itam-construction-a1ed1f37",
+  "breadcrumbTitle": "IT Asset & Vendor Management for Construction",
+  "title": "IT Asset & Vendor Management for Construction",
+  "description": "IT asset and vendor management for Construction. Track hardware/software, optimize renewals, and reduce vendor risk across the lifecycle.",
+  "basic": "$299/month",
+  "pro": "$799/month",
+  "enterprise": "$2499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "IT Asset & Vendor Management for Construction - Zion Tech Group",
+    "description": "IT asset and vendor management for Construction. Track hardware/software, optimize renewals, and reduce vendor risk across the lifecycle.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/itam-construction-a1ed1f37"
+    }
+  },
+  "features": [
+    "Asset inventory and tracking",
+    "License compliance management",
+    "Vendor contract review",
+    "Renewal and cost optimization",
+    "Lifecycle planning"
+  ],
+  "benefits": [
+    "Avoid audit penalties",
+    "Reduce overspending",
+    "Improved visibility",
+    "Streamlined renewals",
+    "Better negotiating position"
+  ]
+}

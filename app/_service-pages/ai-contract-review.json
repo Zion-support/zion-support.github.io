@@ -1,0 +1,28 @@
+{
+  "title": "AI Contract Review Assistant",
+  "description": "Automatically reviews legal contracts, flags risky clauses, suggests amendments, and benchmarks against industry standards.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Contract Review Assistant - Zion Tech Group",
+    "description": "Automatically reviews legal contracts, flags risky clauses, suggests amendments, and benchmarks against industry standards.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-contract-review"
+    }
+  },
+  "features": [
+    "Clause risk scoring (1-10)",
+    "Comparison with 200K+ public contracts",
+    "AI-suggested redlines",
+    "Compliance checklist generation"
+  ],
+  "benefits": [
+    "Reduce costs with ai contract review assistant",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

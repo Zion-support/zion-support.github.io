@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/enterprise-resilient-agriculture-analytics-suite-52d06548",
+  "breadcrumbTitle": "Enterprise Resilient Agriculture Analytics Suite",
+  "title": "Enterprise Resilient Agriculture Analytics Suite",
+  "description": "Enterprise analytics suite that delivers resilient agriculture insights with unified dashboards and reporting.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Enterprise Resilient Agriculture Analytics Suite - Zion Tech Group",
+    "description": "Enterprise analytics suite that delivers resilient agriculture insights with unified dashboards and reporting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/enterprise-resilient-agriculture-analytics-suite-52d06548"
+    }
+  },
+  "features": [
+    "Data visualization",
+    "Custom dashboards",
+    "Report generation",
+    "KPI tracking"
+  ],
+  "benefits": [
+    "Unified data view",
+    "Faster insights",
+    "Customizable reports",
+    "Cross-functional collaboration"
+  ]
+}

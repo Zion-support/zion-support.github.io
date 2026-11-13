@@ -30,7 +30,7 @@ jobs:
       # heap. Non-blocking so the OOM does not fail the job; the detector is a
       # no-op stub while automation is paused.
       continue-on-error: true
-      run: "npm run build\nnohup npm start &\nfor i in 1 2 3 4 5; do\n  if curl -sf\
+      run: "NODE_OPTIONS=--max-old-space-size=6144 npm run build\nnohup npm start &\nfor i in 1 2 3 4 5; do\n  if curl -sf\
         \ http://localhost:3000 > /dev/null; then\n    echo \"App started\"\n    break\n\
         \  fi\n  echo \"Waiting for app...\"\n  sleep 5\ndone\n"
     - name: Run Visual Regression Detector

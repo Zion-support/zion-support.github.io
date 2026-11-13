@@ -1,0 +1,29 @@
+{
+  "title": "AI Patient Triage & Clinical Decision Support",
+  "description": "AI-powered patient triage system analyzing symptoms, medical history, and vital signs to recommend urgency levels and care pathways.",
+  "basic": "$2,000/mo/month",
+  "pro": "$5,000/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Patient Triage & Clinical Decision Support - Zion Tech Group",
+    "description": "AI-powered patient triage system analyzing symptoms, medical history, and vital signs to recommend urgency levels and care pathways.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-clinical-patient-triage-assistant"
+    }
+  },
+  "features": [
+    "Symptom analysis with NLP",
+    "Automated urgency classification (ESI levels)",
+    "Medical history via FHIR/HL7",
+    "Drug interaction checking",
+    "Clinical guideline recommendations"
+  ],
+  "benefits": [
+    "Reduce triage time from 15 min to 2 min",
+    "Improve patient outcomes",
+    "Reduce ER overcrowding",
+    "Ensure consistent triage quality"
+  ]
+}

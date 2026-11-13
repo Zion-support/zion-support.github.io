@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/orchestrator-intelligent---education-3f666215",
+  "breadcrumbTitle": "Orchestrator Intelligent - Education",
+  "title": "Orchestrator Intelligent - Education",
+  "description": "The future of education is here with Orchestrator Intelligent - Education. Powered by cutting-edge AI, this platform delivers threat detection like never before",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Orchestrator Intelligent - Education - Zion Tech Group",
+    "description": "The future of education is here with Orchestrator Intelligent - Education. Powered by cutting-edge AI, this platform delivers threat detection like never before",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/orchestrator-intelligent---education-3f666215"
+    }
+  },
+  "features": [
+    "SOC 2 certified",
+    "Microservices deployment",
+    "GDPR compliance",
+    "Auto-scaling capabilities",
+    "Offline capabilities"
+  ],
+  "benefits": [
+    "Cost optimization recommendations",
+    "24/7 automated operations",
+    "Automated compliance reporting",
+    "Intelligent load balancing",
+    "Predictive maintenance scheduling"
+  ]
+}

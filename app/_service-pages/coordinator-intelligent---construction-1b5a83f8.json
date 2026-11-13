@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/coordinator-intelligent---construction-1b5a83f8",
+  "breadcrumbTitle": "Coordinator Intelligent - Construction",
+  "title": "Coordinator Intelligent - Construction",
+  "description": "Next-generation construction solution: Coordinator Intelligent - Construction. Combines risk assessment with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Coordinator Intelligent - Construction - Zion Tech Group",
+    "description": "Next-generation construction solution: Coordinator Intelligent - Construction. Combines risk assessment with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/coordinator-intelligent---construction-1b5a83f8"
+    }
+  },
+  "features": [
+    "Machine learning integration",
+    "Cloud-native architecture",
+    "Real-time processing",
+    "Rollback mechanisms",
+    "Open-source friendly"
+  ],
+  "benefits": [
+    "50% reduction in operational costs",
+    "Intelligent load balancing",
+    "24/7 automated operations"
+  ]
+}

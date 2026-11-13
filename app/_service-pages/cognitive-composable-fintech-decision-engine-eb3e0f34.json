@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/cognitive-composable-fintech-decision-engine-eb3e0f34",
+  "breadcrumbTitle": "Cognitive Composable Fintech Decision Engine",
+  "title": "Cognitive Composable Fintech Decision Engine",
+  "description": "Cognitive decision engine that processes composable signals to drive fintech strategy with deep learning.",
+  "basic": "$278/month",
+  "pro": "$698/month",
+  "enterprise": "$2098/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Cognitive Composable Fintech Decision Engine - Zion Tech Group",
+    "description": "Cognitive decision engine that processes composable signals to drive fintech strategy with deep learning.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cognitive-composable-fintech-decision-engine-eb3e0f34"
+    }
+  },
+  "features": [
+    "Cognitive reasoning",
+    "Scenario analysis",
+    "Decision trees",
+    "Recommendation engine"
+  ],
+  "benefits": [
+    "Better decision quality",
+    "Reduced risk",
+    "Faster insights",
+    "Competitive intelligence"
+  ]
+}

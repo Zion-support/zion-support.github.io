@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligence-neural---energy-13403b55",
+  "breadcrumbTitle": "Intelligence Neural - Energy",
+  "title": "Intelligence Neural - Energy",
+  "description": "Revolutionize energy through intelligent automation. Our Intelligence Neural - Energy leverages advanced machine learning to deliver risk assessment at scale.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligence Neural - Energy - Zion Tech Group",
+    "description": "Revolutionize energy through intelligent automation. Our Intelligence Neural - Energy leverages advanced machine learning to deliver risk assessment at scale.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligence-neural---energy-13403b55"
+    }
+  },
+  "features": [
+    "Auto-scaling capabilities",
+    "Plugin architecture",
+    "Data encryption",
+    "Microservices deployment",
+    "Offline capabilities"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "50% reduction in operational costs",
+    "Zero manual intervention required",
+    "Scalable to millions of transactions"
+  ]
+}

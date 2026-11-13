@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/smart-suite-for-construction-aa1d5544",
+  "breadcrumbTitle": "Smart Suite for Construction",
+  "title": "Smart Suite for Construction",
+  "description": "Transform your construction operations with our Smart Suite for Construction. This AI-driven solution automates maintenance scheduling with unprecedented accura",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Suite for Construction - Zion Tech Group",
+    "description": "Transform your construction operations with our Smart Suite for Construction. This AI-driven solution automates maintenance scheduling with unprecedented accura",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-suite-for-construction-aa1d5544"
+    }
+  },
+  "features": [
+    "Custom integrations",
+    "Open-source friendly",
+    "Multi-region deployment",
+    "Alerting system",
+    "Zero-downtime updates"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Enterprise-grade security",
+    "Automated compliance reporting"
+  ]
+}

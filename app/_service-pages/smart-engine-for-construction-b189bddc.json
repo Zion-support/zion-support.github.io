@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/smart-engine-for-construction-b189bddc",
+  "breadcrumbTitle": "Smart Engine for Construction",
+  "title": "Smart Engine for Construction",
+  "description": "The future of construction is here with Smart Engine for Construction. Powered by cutting-edge AI, this platform delivers workflow management like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Engine for Construction - Zion Tech Group",
+    "description": "The future of construction is here with Smart Engine for Construction. Powered by cutting-edge AI, this platform delivers workflow management like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-engine-for-construction-b189bddc"
+    }
+  },
+  "features": [
+    "Multi-region deployment",
+    "Microservices deployment",
+    "GDPR compliance",
+    "Edge computing support",
+    "Zero-downtime updates"
+  ],
+  "benefits": [
+    "Scalable to millions of transactions",
+    "Automated compliance reporting",
+    "50% reduction in operational costs",
+    "3x faster decision making",
+    "24/7 automated operations"
+  ]
+}

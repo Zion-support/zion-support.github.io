@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/insights-automated---hospitality-0b22322d",
+  "breadcrumbTitle": "Insights Automated - Hospitality",
+  "title": "Insights Automated - Hospitality",
+  "description": "Revolutionize hospitality through intelligent automation. Our Insights Automated - Hospitality leverages advanced machine learning to deliver quality control at",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Insights Automated - Hospitality - Zion Tech Group",
+    "description": "Revolutionize hospitality through intelligent automation. Our Insights Automated - Hospitality leverages advanced machine learning to deliver quality control at",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/insights-automated---hospitality-0b22322d"
+    }
+  },
+  "features": [
+    "Alerting system",
+    "Rollback mechanisms",
+    "Performance dashboards",
+    "Cloud-native architecture",
+    "Machine learning integration"
+  ],
+  "benefits": [
+    "50% reduction in operational costs",
+    "Performance benchmarking",
+    "Predictive maintenance scheduling",
+    "Dynamic resource allocation"
+  ]
+}

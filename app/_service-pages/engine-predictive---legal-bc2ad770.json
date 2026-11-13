@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/engine-predictive---legal-bc2ad770",
+  "breadcrumbTitle": "Engine Predictive - Legal",
+  "title": "Engine Predictive - Legal",
+  "description": "Transform your legal operations with our Engine Predictive - Legal. This AI-driven solution automates maintenance scheduling with unprecedented accuracy and eff",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Engine Predictive - Legal - Zion Tech Group",
+    "description": "Transform your legal operations with our Engine Predictive - Legal. This AI-driven solution automates maintenance scheduling with unprecedented accuracy and eff",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/engine-predictive---legal-bc2ad770"
+    }
+  },
+  "features": [
+    "Multi-language support",
+    "Plugin architecture",
+    "Offline capabilities",
+    "Zero-downtime updates",
+    "Audit trails"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "Predictive maintenance scheduling",
+    "50% reduction in operational costs",
+    "Scalable to millions of transactions"
+  ]
+}

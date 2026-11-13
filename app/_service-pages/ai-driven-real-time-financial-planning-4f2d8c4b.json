@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-driven-real-time-financial-planning-4f2d8c4b",
+  "breadcrumbTitle": "AI-Driven Real-Time Financial Planning",
+  "title": "AI-Driven Real-Time Financial Planning",
+  "description": "Automated financial planning system that creates real-time personalized wealth strategies, tax optimization, and retirement planning using advanced algorithms.",
+  "basic": "$258/month",
+  "pro": "$648/month",
+  "enterprise": "$1948/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI-Driven Real-Time Financial Planning - Zion Tech Group",
+    "description": "Automated financial planning system that creates real-time personalized wealth strategies, tax optimization, and retirement planning using advanced algorithms.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-driven-real-time-financial-planning-4f2d8c4b"
+    }
+  },
+  "features": [
+    "Goal-based planning",
+    "Tax optimization",
+    "Monte Carlo simulation",
+    "Rebalancing automation"
+  ],
+  "benefits": [
+    "Personalized advice",
+    "Tax efficiency",
+    "Goal achievement",
+    "Lower fees"
+  ]
+}

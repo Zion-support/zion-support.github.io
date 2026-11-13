@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/ai-coordinator---manufacturing-edition-27d49790",
+  "breadcrumbTitle": "AI Coordinator - Manufacturing Edition",
+  "title": "AI Coordinator - Manufacturing Edition",
+  "description": "The future of manufacturing is here with AI Coordinator - Manufacturing Edition. Powered by cutting-edge AI, this platform delivers image recognition like never",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Coordinator - Manufacturing Edition - Zion Tech Group",
+    "description": "The future of manufacturing is here with AI Coordinator - Manufacturing Edition. Powered by cutting-edge AI, this platform delivers image recognition like never",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-coordinator---manufacturing-edition-27d49790"
+    }
+  },
+  "features": [
+    "Role-based access control",
+    "Data encryption",
+    "API-first design",
+    "Serverless functions",
+    "Multi-region deployment"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "50% reduction in operational costs",
+    "Cost optimization recommendations",
+    "Predictive maintenance scheduling",
+    "Seamless integration with existing systems"
+  ]
+}

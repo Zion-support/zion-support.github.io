@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/adaptive-insights-construction-8a413d32",
+  "breadcrumbTitle": "Adaptive insights-construction",
+  "title": "Adaptive insights-construction",
+  "description": "Revolutionize construction through intelligent automation. Our Adaptive insights-construction leverages advanced machine learning to deliver sales forecasting a",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Adaptive insights-construction - Zion Tech Group",
+    "description": "Revolutionize construction through intelligent automation. Our Adaptive insights-construction leverages advanced machine learning to deliver sales forecasting a",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/adaptive-insights-construction-8a413d32"
+    }
+  },
+  "features": [
+    "Multi-region deployment",
+    "Custom integrations",
+    "Machine learning integration",
+    "Microservices deployment",
+    "Zero-downtime updates"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Dynamic resource allocation",
+    "Predictive maintenance scheduling"
+  ]
+}

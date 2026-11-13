@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/optimization-neural---legal-146df32c",
+  "breadcrumbTitle": "Optimization Neural - Legal",
+  "title": "Optimization Neural - Legal",
+  "description": "Transform your legal operations with our Optimization Neural - Legal. This AI-driven solution automates user experience with unprecedented accuracy and efficien",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Optimization Neural - Legal - Zion Tech Group",
+    "description": "Transform your legal operations with our Optimization Neural - Legal. This AI-driven solution automates user experience with unprecedented accuracy and efficien",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/optimization-neural---legal-146df32c"
+    }
+  },
+  "features": [
+    "Microservices deployment",
+    "Plugin architecture",
+    "Audit trails",
+    "SOC 2 certified",
+    "Rollback mechanisms"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "Seamless integration with existing systems",
+    "Self-healing infrastructure"
+  ]
+}

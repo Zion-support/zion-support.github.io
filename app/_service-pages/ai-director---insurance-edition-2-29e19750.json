@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-director---insurance-edition-2-29e19750",
+  "breadcrumbTitle": "AI Director - Insurance Edition #2",
+  "title": "AI Director - Insurance Edition #2",
+  "description": "Unlock unprecedented growth with AI Director - Insurance Edition #2. This autonomous system provides market intelligence with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Director - Insurance Edition #2 - Zion Tech Group",
+    "description": "Unlock unprecedented growth with AI Director - Insurance Edition #2. This autonomous system provides market intelligence with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-director---insurance-edition-2-29e19750"
+    }
+  },
+  "features": [
+    "Multi-language support",
+    "Plugin architecture",
+    "Edge computing support",
+    "Machine learning integration",
+    "Comprehensive monitoring"
+  ],
+  "benefits": [
+    "Cost optimization recommendations",
+    "Performance benchmarking",
+    "Intelligent load balancing",
+    "24/7 automated operations"
+  ]
+}

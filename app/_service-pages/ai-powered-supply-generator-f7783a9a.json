@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/ai-powered-supply-generator-f7783a9a",
+  "breadcrumbTitle": "AI-Powered Supply Generator",
+  "title": "AI-Powered Supply Generator",
+  "description": "Revolutionize insurance through intelligent automation. Our AI-Powered Supply Generator leverages advanced machine learning to deliver supply chain at scale.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Supply Generator - Zion Tech Group",
+    "description": "Revolutionize insurance through intelligent automation. Our AI-Powered Supply Generator leverages advanced machine learning to deliver supply chain at scale.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-supply-generator-f7783a9a"
+    }
+  },
+  "features": [
+    "Open-source friendly",
+    "API-first design",
+    "Multi-language support",
+    "Comprehensive monitoring",
+    "Zero-downtime updates"
+  ],
+  "benefits": [
+    "Scalable to millions of transactions",
+    "Seamless integration with existing systems",
+    "3x faster decision making",
+    "Dynamic resource allocation",
+    "50% reduction in operational costs"
+  ]
+}

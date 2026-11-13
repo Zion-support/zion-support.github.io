@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/engine-smart---sports-316128f9",
+  "breadcrumbTitle": "Engine Smart - Sports",
+  "title": "Engine Smart - Sports",
+  "description": "Transform your sports operations with our Engine Smart - Sports. This AI-driven solution automates network optimization with unprecedented accuracy and efficien",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Engine Smart - Sports - Zion Tech Group",
+    "description": "Transform your sports operations with our Engine Smart - Sports. This AI-driven solution automates network optimization with unprecedented accuracy and efficien",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/engine-smart---sports-316128f9"
+    }
+  },
+  "features": [
+    "Open-source friendly",
+    "Plugin architecture",
+    "GDPR compliance",
+    "Cloud-native architecture",
+    "Real-time processing"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Seamless integration with existing systems",
+    "Scalable to millions of transactions",
+    "Real-time insights and alerts",
+    "3x faster decision making"
+  ]
+}

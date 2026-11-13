@@ -1,0 +1,29 @@
+{
+  "title": "Graph Analytics & Network Intelligence Engine",
+  "description": "Enterprise graph analytics for fraud, risk, ESG, and recommendations: ingest tabular data to build dynamic relationship graphs, community detection, shortest-path analysis, centrality scoring, and interactive visual exploration with Cypher-like query language.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Graph Analytics & Network Intelligence Engine - Zion Tech Group",
+    "description": "Enterprise graph analytics for fraud, risk, ESG, and recommendations: ingest tabular data to build dynamic relationship graphs, community detection, shortest-pa",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/data-graph-analytics-engine"
+    }
+  },
+  "features": [
+    "Auto-build relationship graphs from any tabular data via auto-linking columns",
+    "Community detection + clustering: Louvain, label propagation, clique percolation",
+    "Shortest-path, betweenness, PageRank — 20+ standard graph algorithms",
+    "Cypher-like graph query language with visual query builder",
+    "Interactive graph visualisation with zoom, filter, highlight, force-layout options"
+  ],
+  "benefits": [
+    "Reduce costs with graph analytics & network intelligence engine",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

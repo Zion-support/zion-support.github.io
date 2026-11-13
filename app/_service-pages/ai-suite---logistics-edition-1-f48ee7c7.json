@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-suite---logistics-edition-1-f48ee7c7",
+  "breadcrumbTitle": "AI Suite - Logistics Edition #1",
+  "title": "AI Suite - Logistics Edition #1",
+  "description": "Next-generation logistics solution: AI Suite - Logistics Edition #1. Combines quality control with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Suite - Logistics Edition #1 - Zion Tech Group",
+    "description": "Next-generation logistics solution: AI Suite - Logistics Edition #1. Combines quality control with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-suite---logistics-edition-1-f48ee7c7"
+    }
+  },
+  "features": [
+    "Machine learning integration",
+    "GDPR compliance",
+    "Rollback mechanisms",
+    "Performance dashboards"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Performance benchmarking",
+    "Automated compliance reporting",
+    "Dynamic resource allocation",
+    "Cost optimization recommendations"
+  ]
+}

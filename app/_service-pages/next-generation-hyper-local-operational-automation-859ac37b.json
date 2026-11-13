@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/next-generation-hyper-local-operational-automation-859ac37b",
+  "breadcrumbTitle": "Next-Generation Hyper-Local Operational Automation",
+  "title": "Next-Generation Hyper-Local Operational Automation",
+  "description": "Next-generation automation suite that streamlines hyper-local operational workflows with intelligent orchestration.",
+  "basic": "$218/month",
+  "pro": "$548/month",
+  "enterprise": "$1648/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Next-Generation Hyper-Local Operational Automation - Zion Tech Group",
+    "description": "Next-generation automation suite that streamlines hyper-local operational workflows with intelligent orchestration.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/next-generation-hyper-local-operational-automation-859ac37b"
+    }
+  },
+  "features": [
+    "Smart orchestration",
+    "Process automation",
+    "Event processing",
+    "Task scheduling"
+  ],
+  "benefits": [
+    "Faster execution",
+    "Reduced manual steps",
+    "Scalable processes",
+    "Error reduction"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "RAG as a Service — Knowledge Retrieval API",
+  "description": "Plug-and-play Retrieval Augmented Generation. Upload documents, get a chatbot API. No ML team required.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "RAG as a Service — Knowledge Retrieval API - Zion Tech Group",
+    "description": "Plug-and-play Retrieval Augmented Generation. Upload documents, get a chatbot API. No ML team required.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-services-rag-as-a-service"
+    }
+  },
+  "features": [
+    "Document upload and indexing",
+    "Automatic chunking and embedding",
+    "REST and WebSocket APIs",
+    "Custom knowledge bases",
+    "Source citation in responses"
+  ],
+  "benefits": [
+    "Build AI chatbots in minutes",
+    "No ML expertise required",
+    "Source-grounded responses",
+    "Scale without infrastructure"
+  ]
+}

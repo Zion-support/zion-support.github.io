@@ -1,0 +1,28 @@
+{
+  "title": "Fintech Fraud Graph",
+  "description": "Real-time fraud detection as a knowledge graph: entity resolution across accounts, IP, device, and card fingerprints; ML scoring per transaction in under 15ms; SAR and CTR auto-draft; global rule engine.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Fintech Fraud Graph - Zion Tech Group",
+    "description": "Real-time fraud detection as a knowledge graph: entity resolution across accounts, IP, device, and card fingerprints; ML scoring per transaction in under 15ms; ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-fintech-fraud-graph"
+    }
+  },
+  "features": [
+    "Entity resolution graph across accounts, IPs, devices, cards, and emails",
+    "Real-time ML scoring per transaction in under 15ms",
+    "SAR and CTR auto-draft — zero compliance team manual data entry",
+    "Global rule engine per jurisdiction, instant payment scheme, and card network"
+  ],
+  "benefits": [
+    "Reduce costs with fintech fraud graph",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

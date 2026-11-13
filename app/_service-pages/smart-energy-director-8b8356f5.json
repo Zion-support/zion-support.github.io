@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/smart-energy-director-8b8356f5",
+  "breadcrumbTitle": "Smart Energy Director",
+  "title": "Smart Energy Director",
+  "description": "Transform your telecom operations with our Smart Energy Director. This AI-driven solution automates user experience with unprecedented accuracy and efficiency.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Energy Director - Zion Tech Group",
+    "description": "Transform your telecom operations with our Smart Energy Director. This AI-driven solution automates user experience with unprecedented accuracy and efficiency.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-energy-director-8b8356f5"
+    }
+  },
+  "features": [
+    "Zero-downtime updates",
+    "Real-time processing",
+    "Cloud-native architecture",
+    "Audit trails",
+    "Custom integrations"
+  ],
+  "benefits": [
+    "Seamless integration with existing systems",
+    "Predictive maintenance scheduling",
+    "Scalable to millions of transactions",
+    "50% reduction in operational costs",
+    "Automated compliance reporting"
+  ]
+}

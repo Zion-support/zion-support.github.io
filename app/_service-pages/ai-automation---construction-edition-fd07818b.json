@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-automation---construction-edition-fd07818b",
+  "breadcrumbTitle": "AI Automation - Construction Edition",
+  "title": "AI Automation - Construction Edition",
+  "description": "The future of construction is here with AI Automation - Construction Edition. Powered by cutting-edge AI, this platform delivers quality control like never befo",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Automation - Construction Edition - Zion Tech Group",
+    "description": "The future of construction is here with AI Automation - Construction Edition. Powered by cutting-edge AI, this platform delivers quality control like never befo",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-automation---construction-edition-fd07818b"
+    }
+  },
+  "features": [
+    "HIPAA ready",
+    "Multi-region deployment",
+    "Auto-scaling capabilities",
+    "Data encryption",
+    "Role-based access control"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "Zero manual intervention required",
+    "Cost optimization recommendations",
+    "Performance benchmarking"
+  ]
+}

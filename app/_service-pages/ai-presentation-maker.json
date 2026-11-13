@@ -1,0 +1,29 @@
+{
+  "title": "AI Presentation & Pitch Deck Maker",
+  "description": "Generate polished presentations, pitch decks, and reports from outlines with data visualization, templates, and speaker notes.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Presentation & Pitch Deck Maker - Zion Tech Group",
+    "description": "Generate polished presentations, pitch decks, and reports from outlines with data visualization, templates, and speaker notes.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-presentation-maker"
+    }
+  },
+  "features": [
+    "Document-to-slide conversion from any file",
+    "Smart data visualization — auto charts, graphs",
+    "AI-generated speaker notes and timing cues",
+    "Brand-consistent — apply company guidelines",
+    "Multi-format export — PowerPoint, Google Slides, PDF"
+  ],
+  "benefits": [
+    "Reduce costs with ai presentation & pitch deck maker",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

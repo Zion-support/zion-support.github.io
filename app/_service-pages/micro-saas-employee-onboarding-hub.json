@@ -1,0 +1,29 @@
+{
+  "title": "Micro-SaaS Employee Onboarding Hub",
+  "description": "Automated employee onboarding platform that creates personalized onboarding journeys, tracks progress, collects e-signatures, and integrates with HRIS, Slack, and IT provisioning systems.",
+  "basic": "$199/mo/month",
+  "pro": "$499/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Micro-SaaS Employee Onboarding Hub - Zion Tech Group",
+    "description": "Automated employee onboarding platform that creates personalized onboarding journeys, tracks progress, collects e-signatures, and integrates with HRIS, Slack, a",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-employee-onboarding-hub"
+    }
+  },
+  "features": [
+    "Drag-and-drop onboarding journey builder",
+    "Role-based onboarding templates (engineer, sales, manager)",
+    "Automated IT provisioning (laptop, accounts, access)",
+    "E-signature collection for policies and agreements",
+    "Progress tracking dashboard for HR and managers"
+  ],
+  "benefits": [
+    "Reduce onboarding time from weeks to days",
+    "Ensure 100% compliance with policy acknowledgments",
+    "Improve new hire satisfaction scores by 35%",
+    "Free HR team from manual onboarding tasks"
+  ]
+}

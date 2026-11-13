@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-coordinator---education-edition-1-cfb1b5e5",
+  "breadcrumbTitle": "AI Coordinator - Education Edition #1",
+  "title": "AI Coordinator - Education Edition #1",
+  "description": "Next-generation education solution: AI Coordinator - Education Edition #1. Combines compliance monitoring with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Coordinator - Education Edition #1 - Zion Tech Group",
+    "description": "Next-generation education solution: AI Coordinator - Education Edition #1. Combines compliance monitoring with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-coordinator---education-edition-1-cfb1b5e5"
+    }
+  },
+  "features": [
+    "Role-based access control",
+    "Zero-downtime updates",
+    "GDPR compliance",
+    "Open-source friendly",
+    "API-first design"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "50% reduction in operational costs",
+    "ROI in under 90 days"
+  ]
+}

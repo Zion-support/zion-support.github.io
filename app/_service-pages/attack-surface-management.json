@@ -1,0 +1,29 @@
+{
+  "title": "Attack Surface Management (ASM)",
+  "description": "Continuous external attack surface discovery: internet-facing assets, domains, IPs, subdomains, APIs, TLS certs, shadow IT. Continuous monitoring. Attack vector prioritization.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Attack Surface Management (ASM) - Zion Tech Group",
+    "description": "Continuous external attack surface discovery: internet-facing assets, domains, IPs, subdomains, APIs, TLS certs, shadow IT. Continuous monitoring. Attack vector",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/attack-surface-management"
+    }
+  },
+  "features": [
+    "Continuous internet-facing asset discovery",
+    "Domain/IP/subdomain + API enumeration",
+    "Shadow-IT detection from DNS + cert transparency",
+    "Attack vector prioritization: exploit + impact",
+    "Instant alert on new/misconfigured asset"
+  ],
+  "benefits": [
+    "Reduce costs with attack surface management (asm)",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

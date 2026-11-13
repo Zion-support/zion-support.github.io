@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "Brand Voice Guardian: security and governance | Zion Tech Group",
+    "description": "Brand Voice Guardian: security and governance",
+    "keywords": [
+      "data",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "Brand Voice Guardian: security and governance",
+      "description": "Brand Voice Guardian: security and governance",
+      "url": "https://ziontechgroup.com/blog/brand-voice-guardian-security-and-governance/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/brand-voice-guardian-security-and-governance/"
+    }
+  },
+  "values": [
+    "Brand Voice Guardian: security and governance",
+    "Brand Voice Guardian: security and governance",
+    "Brand Voice Guardian: security and governance",
+    "Recommended next step",
+    "Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "Recommended next step",
+    " Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "/blog/cybersecurity-platform-msp-2026-7248",
+    "Cybersecurity Platform Msp 2026 7248",
+    "/blog/aiops-anomaly-detection-2026-7347",
+    "Aiops Anomaly Detection 2026 7347",
+    "/blog/network-infrastructure-2026-7123",
+    "Network Infrastructure 2026 7123",
+    "/blog/api-security-testing-2026-6899",
+    "Api Security Testing 2026 6899"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Brand Voice Guardian: security and governance",
+    "description": "Brand Voice Guardian: security and governance",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T04:52:06Z",
+    "dateModified": "2026-08-07T04:52:06Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/brand-voice-guardian-security-and-governance/"
+  }
+}

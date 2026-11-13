@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/ai21-labs-951a8b5c",
+  "breadcrumbTitle": "AI21 Labs",
+  "title": "AI21 Labs",
+  "description": "AI21 Labs is an Israeli company specializing in Natural Language Processing (NLP), which develops AI systems that can understand and generate natural language.",
+  "basic": "$N/A/month",
+  "pro": "$N/A/month",
+  "enterprise": "$N/A/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI21 Labs - Zion Tech Group",
+    "description": "AI21 Labs is an Israeli company specializing in Natural Language Processing (NLP), which develops AI systems that can understand and generate natural language.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai21-labs-951a8b5c"
+    }
+  },
+  "features": [
+    "AI-driven automation",
+    "Cloud-native deployment",
+    "API-first architecture",
+    "Enterprise-grade security",
+    "Scalable infrastructure"
+  ],
+  "benefits": [
+    "Improved operational efficiency",
+    "Reduced manual processes",
+    "Data-driven decision making",
+    "Faster time-to value",
+    "Scalable performance"
+  ]
+}

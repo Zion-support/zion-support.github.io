@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/next-generation-advanced-insurtech-automation-4ba9fc44",
+  "breadcrumbTitle": "Next-Generation Advanced Insurtech Automation",
+  "title": "Next-Generation Advanced Insurtech Automation",
+  "description": "Next-generation automation suite that streamlines advanced insurtech workflows with intelligent orchestration.",
+  "basic": "$218/month",
+  "pro": "$548/month",
+  "enterprise": "$1648/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Next-Generation Advanced Insurtech Automation - Zion Tech Group",
+    "description": "Next-generation automation suite that streamlines advanced insurtech workflows with intelligent orchestration.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/next-generation-advanced-insurtech-automation-4ba9fc44"
+    }
+  },
+  "features": [
+    "Smart orchestration",
+    "Process automation",
+    "Event processing",
+    "Task scheduling"
+  ],
+  "benefits": [
+    "Faster execution",
+    "Reduced manual steps",
+    "Scalable processes",
+    "Error reduction"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-resource-manager-1-22b68442",
+  "breadcrumbTitle": "Intelligent Resource Manager #1",
+  "title": "Intelligent Resource Manager #1",
+  "description": "Transform your logistics operations with our Intelligent Resource Manager #1. This AI-driven solution automates financial planning with unprecedented accuracy a",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Resource Manager #1 - Zion Tech Group",
+    "description": "Transform your logistics operations with our Intelligent Resource Manager #1. This AI-driven solution automates financial planning with unprecedented accuracy a",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-resource-manager-1-22b68442"
+    }
+  },
+  "features": [
+    "SOC 2 certified",
+    "Custom integrations",
+    "Comprehensive monitoring",
+    "Audit trails",
+    "Open-source friendly"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "3x faster decision making",
+    "Performance benchmarking"
+  ]
+}

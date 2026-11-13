@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "Chaos Engineering: checklist for IT leaders | Zion Tech Group",
+    "description": "Chaos Engineering: checklist for IT leaders",
+    "keywords": [
+      "ai",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "Chaos Engineering: checklist for IT leaders",
+      "description": "Chaos Engineering: checklist for IT leaders",
+      "url": "https://ziontechgroup.com/blog/chaos-engineering-checklist-for-it-leaders/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/chaos-engineering-checklist-for-it-leaders/"
+    }
+  },
+  "values": [
+    "Chaos Engineering: checklist for IT leaders",
+    "Chaos Engineering: checklist for IT leaders",
+    "Chaos Engineering: checklist for IT leaders",
+    "Recommended next step",
+    "Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "Recommended next step",
+    " Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "/blog/ai-accessibility-optimizer-2026-6927",
+    "Ai Accessibility Optimizer 2026 6927",
+    "/blog/cloud-cost-ai-optimizer-starter-template",
+    "Cloud Cost Ai Optimizer Starter Template",
+    "/blog/ai-for-fleet-management-and-logistics-optimization",
+    "Ai For Fleet Management And Logistics Optimization",
+    "/blog/etl-pipeline-optimization-checklist-for-it-leaders",
+    "Etl Pipeline Optimization Checklist For It Leaders"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Chaos Engineering: checklist for IT leaders",
+    "description": "Chaos Engineering: checklist for IT leaders",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T07:26:12Z",
+    "dateModified": "2026-08-07T07:26:12Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/chaos-engineering-checklist-for-it-leaders/"
+  }
+}

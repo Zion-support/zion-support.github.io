@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-driven-enterprise-grade-supply-chain-optimization-5feb9294",
+  "breadcrumbTitle": "AI-Driven Enterprise-Grade Supply Chain Optimization",
+  "title": "AI-Driven Enterprise-Grade Supply Chain Optimization",
+  "description": "End-to-end supply chain platform that uses enterprise-grade optimization algorithms for demand planning, inventory management, and logistics coordination.",
+  "basic": "$258/month",
+  "pro": "$648/month",
+  "enterprise": "$1948/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Driven Enterprise-Grade Supply Chain Optimization - Zion Tech Group",
+    "description": "End-to-end supply chain platform that uses enterprise-grade optimization algorithms for demand planning, inventory management, and logistics coordination.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-driven-enterprise-grade-supply-chain-optimization-5feb9294"
+    }
+  },
+  "features": [
+    "Demand forecasting",
+    "Inventory optimization",
+    "Supplier risk",
+    "Logistics planning"
+  ],
+  "benefits": [
+    "Reduced inventory costs",
+    "Improved service levels",
+    "Resilient supply chain",
+    "Faster response"
+  ]
+}

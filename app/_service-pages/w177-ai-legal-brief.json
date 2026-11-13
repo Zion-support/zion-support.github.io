@@ -1,0 +1,29 @@
+{
+  "title": "AI Legal Brief Analyzer",
+  "description": "Analyze legal briefs: argument extraction, precedent matching, strength scoring, counter-argument suggestions.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Legal Brief Analyzer - Zion Tech Group",
+    "description": "Analyze legal briefs: argument extraction, precedent matching, strength scoring, counter-argument suggestions.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w177-ai-legal-brief"
+    }
+  },
+  "features": [
+    "Argument and claim extraction",
+    "Precedent matching and citation analysis",
+    "Argument strength scoring",
+    "Counter-argument suggestions",
+    "Brief comparison between cases"
+  ],
+  "benefits": [
+    "Analyze briefs 10x faster",
+    "Precedent matching finds relevant cases",
+    "Strength scoring prioritizes arguments",
+    "Counter-argument prep strengthens cases"
+  ]
+}

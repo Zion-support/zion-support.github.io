@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-security-system-88fb52e3",
+  "breadcrumbTitle": "Intelligent Security System",
+  "title": "Intelligent Security System",
+  "description": "Transform your education operations with our Intelligent Security System. This AI-driven solution automates security monitoring with unprecedented accuracy and ",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Security System - Zion Tech Group",
+    "description": "Transform your education operations with our Intelligent Security System. This AI-driven solution automates security monitoring with unprecedented accuracy and ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-security-system-88fb52e3"
+    }
+  },
+  "features": [
+    "Real-time processing",
+    "Multi-region deployment",
+    "Serverless functions",
+    "Performance dashboards",
+    "HIPAA ready"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "Self-healing infrastructure",
+    "3x faster decision making"
+  ]
+}

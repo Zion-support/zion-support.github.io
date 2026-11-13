@@ -1,0 +1,29 @@
+{
+  "title": "Virtual Private Cloud",
+  "description": "Dedicated VPC with custom CIDR, isolated network topology, private subnet routing, VPC peering, and cross-VPC transit across any cloud provider.",
+  "basic": "$99/mo/month",
+  "pro": "$349/mo/month",
+  "enterprise": "$1,299/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Virtual Private Cloud - Zion Tech Group",
+    "description": "Dedicated VPC with custom CIDR, isolated network topology, private subnet routing, VPC peering, and cross-VPC transit across any cloud provider.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/virtual-private-cloud"
+    }
+  },
+  "features": [
+    "Custom CIDR and VPC design",
+    "Private subnet with no internet",
+    "VPC peering & transit gateway",
+    "Centralized network routing",
+    "DDoS with clean traffic"
+  ],
+  "benefits": [
+    "Reduce costs with virtual private cloud",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

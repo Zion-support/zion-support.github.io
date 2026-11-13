@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligent-generator-for-education-c258fc83",
+  "breadcrumbTitle": "Intelligent Generator for Education",
+  "title": "Intelligent Generator for Education",
+  "description": "Next-generation education solution: Intelligent Generator for Education. Combines process automation with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Generator for Education - Zion Tech Group",
+    "description": "Next-generation education solution: Intelligent Generator for Education. Combines process automation with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-generator-for-education-c258fc83"
+    }
+  },
+  "features": [
+    "Open-source friendly",
+    "GDPR compliance",
+    "Multi-region deployment",
+    "Role-based access control",
+    "Performance dashboards"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "Dynamic resource allocation",
+    "Self-healing infrastructure",
+    "Zero manual intervention required"
+  ]
+}

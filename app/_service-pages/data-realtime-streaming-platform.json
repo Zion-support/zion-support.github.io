@@ -1,0 +1,29 @@
+{
+  "title": "Real-Time Data Streaming Platform",
+  "description": "Managed real-time data streaming with Apache Kafka, Flink, and change data capture. Ingest, process, and serve data in milliseconds for event-driven architectures.",
+  "basic": "$999/mo/month",
+  "pro": "$2,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Real-Time Data Streaming Platform - Zion Tech Group",
+    "description": "Managed real-time data streaming with Apache Kafka, Flink, and change data capture. Ingest, process, and serve data in milliseconds for event-driven architectur",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/data-realtime-streaming-platform"
+    }
+  },
+  "features": [
+    "Managed Kafka clusters",
+    "Stream processing with Flink",
+    "Change data capture (Debezium)",
+    "Schema registry and evolution",
+    "Exactly-once processing guarantees"
+  ],
+  "benefits": [
+    "Process data in milliseconds",
+    "Eliminate batch delays",
+    "Event-driven architecture made easy",
+    "Scale without ops burden"
+  ]
+}

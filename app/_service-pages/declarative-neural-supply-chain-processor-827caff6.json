@@ -1,0 +1,28 @@
+{
+  "title": "Declarative Neural Supply Chain Processor",
+  "description": "Neural processing unit optimized for declarative supply chain workloads, delivering declarative inference at scale.",
+  "basic": "$278/month",
+  "pro": "$698/month",
+  "enterprise": "$2098/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Declarative Neural Supply Chain Processor - Zion Tech Group",
+    "description": "Neural processing unit optimized for declarative supply chain workloads, delivering declarative inference at scale.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/declarative-neural-supply-chain-processor-827caff6"
+    }
+  },
+  "features": [
+    "Accelerated inference",
+    "Model compression",
+    "Hardware acceleration",
+    "Batch optimization"
+  ],
+  "benefits": [
+    "10x inference speed",
+    "Reduced latency",
+    "Cost-effective scaling",
+    "Hardware optimization"
+  ]
+}

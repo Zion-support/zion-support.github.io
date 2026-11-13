@@ -1,0 +1,29 @@
+{
+  "title": "AI Security & Responsible AI",
+  "description": "Secure AI systems and responsible deployment. Adversarial robustness, prompt injection defense, data privacy, and AI safety controls for enterprise...",
+  "basic": "$399/mo/month",
+  "pro": "$999/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Security & Responsible AI - Zion Tech Group",
+    "description": "Secure AI systems and responsible deployment. Adversarial robustness, prompt injection defense, data privacy, and AI safety controls for enterprise...",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-security-responsible-ai"
+    }
+  },
+  "features": [
+    "Adversarial Robustness & Red-Teaming",
+    "Prompt & Input Guardrails",
+    "Data Privacy & Confidentiality",
+    "Model Supply Chain Security",
+    "Fairness & Bias Mitigation"
+  ],
+  "benefits": [
+    "Reduce costs with ai security & responsible ai",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

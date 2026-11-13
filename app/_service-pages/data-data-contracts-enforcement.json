@@ -1,0 +1,29 @@
+{
+  "title": "Data Contracts Enforcement Engine",
+  "description": "Automated data contract enforcement across your data mesh. Schema validation, quality checks, SLA monitoring, and breach notifications.",
+  "basic": "$599/mo/month",
+  "pro": "$1,799/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Data Contracts Enforcement Engine - Zion Tech Group",
+    "description": "Automated data contract enforcement across your data mesh. Schema validation, quality checks, SLA monitoring, and breach notifications.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/data-data-contracts-enforcement"
+    }
+  },
+  "features": [
+    "Schema validation and evolution",
+    "Quality rule enforcement",
+    "SLA monitoring and alerting",
+    "Data contract versioning",
+    "Integration with dbt, Great Expectations"
+  ],
+  "benefits": [
+    "Ensure data quality at scale",
+    "Automate governance",
+    "Reduce data incidents",
+    "Enable data mesh architecture"
+  ]
+}

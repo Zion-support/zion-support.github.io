@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-coordinator---energy-edition-bc574967",
+  "breadcrumbTitle": "AI Coordinator - Energy Edition",
+  "title": "AI Coordinator - Energy Edition",
+  "description": "Next-generation energy solution: AI Coordinator - Energy Edition. Combines predictive analytics with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Coordinator - Energy Edition - Zion Tech Group",
+    "description": "Next-generation energy solution: AI Coordinator - Energy Edition. Combines predictive analytics with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-coordinator---energy-edition-bc574967"
+    }
+  },
+  "features": [
+    "HIPAA ready",
+    "Comprehensive monitoring",
+    "Container orchestration",
+    "Mobile-responsive interface",
+    "Data encryption"
+  ],
+  "benefits": [
+    "Performance benchmarking",
+    "24/7 automated operations",
+    "Cost optimization recommendations",
+    "Enterprise-grade security"
+  ]
+}

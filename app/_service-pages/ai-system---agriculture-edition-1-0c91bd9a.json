@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/ai-system---agriculture-edition-1-0c91bd9a",
+  "breadcrumbTitle": "AI System - Agriculture Edition #1",
+  "title": "AI System - Agriculture Edition #1",
+  "description": "Next-generation agriculture solution: AI System - Agriculture Edition #1. Combines process automation with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI System - Agriculture Edition #1 - Zion Tech Group",
+    "description": "Next-generation agriculture solution: AI System - Agriculture Edition #1. Combines process automation with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-system---agriculture-edition-1-0c91bd9a"
+    }
+  },
+  "features": [
+    "Multi-region deployment",
+    "Data encryption",
+    "Custom integrations",
+    "Cloud-native architecture"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "Dynamic resource allocation",
+    "ROI in under 90 days"
+  ]
+}

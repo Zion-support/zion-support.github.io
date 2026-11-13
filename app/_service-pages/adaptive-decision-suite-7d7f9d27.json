@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/adaptive-decision-suite-7d7f9d27",
+  "breadcrumbTitle": "Adaptive Decision Suite",
+  "title": "Adaptive Decision Suite",
+  "description": "Unlock unprecedented growth with Adaptive Decision Suite. This autonomous system provides supply chain with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Adaptive Decision Suite - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Adaptive Decision Suite. This autonomous system provides supply chain with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/adaptive-decision-suite-7d7f9d27"
+    }
+  },
+  "features": [
+    "Serverless functions",
+    "Container orchestration",
+    "Multi-region deployment",
+    "Microservices deployment",
+    "Offline capabilities"
+  ],
+  "benefits": [
+    "Scalable to millions of transactions",
+    "Predictive maintenance scheduling",
+    "ROI in under 90 days"
+  ]
+}

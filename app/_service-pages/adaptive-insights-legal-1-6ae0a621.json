@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/adaptive-insights-legal-1-6ae0a621",
+  "breadcrumbTitle": "Adaptive insights-legal #1",
+  "title": "Adaptive insights-legal #1",
+  "description": "Unlock unprecedented growth with Adaptive insights-legal #1. This autonomous system provides customer insights with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Adaptive insights-legal #1 - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Adaptive insights-legal #1. This autonomous system provides customer insights with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/adaptive-insights-legal-1-6ae0a621"
+    }
+  },
+  "features": [
+    "SOC 2 certified",
+    "Audit trails",
+    "Role-based access control",
+    "Real-time processing",
+    "Zero-downtime updates"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "Intelligent load balancing",
+    "3x faster decision making"
+  ]
+}

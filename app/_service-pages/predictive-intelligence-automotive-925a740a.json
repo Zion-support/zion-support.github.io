@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/predictive-intelligence-automotive-925a740a",
+  "breadcrumbTitle": "Predictive intelligence-automotive",
+  "title": "Predictive intelligence-automotive",
+  "description": "The future of automotive is here with Predictive intelligence-automotive. Powered by cutting-edge AI, this platform delivers process automation like never befor",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Predictive intelligence-automotive - Zion Tech Group",
+    "description": "The future of automotive is here with Predictive intelligence-automotive. Powered by cutting-edge AI, this platform delivers process automation like never befor",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/predictive-intelligence-automotive-925a740a"
+    }
+  },
+  "features": [
+    "Alerting system",
+    "Offline capabilities",
+    "Rollback mechanisms",
+    "Custom integrations"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "3x faster decision making",
+    "50% reduction in operational costs"
+  ]
+}

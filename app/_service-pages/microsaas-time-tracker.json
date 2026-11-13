@@ -1,0 +1,28 @@
+{
+  "title": "TimeTrack Pro - Time Tracking",
+  "description": "Simple yet powerful time tracking and timesheet management for teams. Features project tracking, invoicing integration, and productivity analytics.",
+  "basic": "$15/mo/month",
+  "pro": "$39/mo/month",
+  "enterprise": "$79/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "TimeTrack Pro - Time Tracking - Zion Tech Group",
+    "description": "Simple yet powerful time tracking and timesheet management for teams. Features project tracking, invoicing integration, and productivity analytics.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/microsaas-time-tracker"
+    }
+  },
+  "features": [
+    "Time Tracking",
+    "Timesheets",
+    "Project Budgeting",
+    "Invoice Generation",
+    "Productivity Reports"
+  ],
+  "benefits": [
+    "Accurate billing",
+    "Improve productivity",
+    "Simplify payroll"
+  ]
+}

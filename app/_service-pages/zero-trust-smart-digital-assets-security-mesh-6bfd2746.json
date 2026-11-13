@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/zero-trust-smart-digital-assets-security-mesh-6bfd2746",
+  "breadcrumbTitle": "Zero-Trust Smart Digital Assets Security Mesh",
+  "title": "Zero-Trust Smart Digital Assets Security Mesh",
+  "description": "Zero-trust security mesh that protects smart digital assets infrastructure with continuous validation and adaptive threat response.",
+  "basic": "$298/month",
+  "pro": "$748/month",
+  "enterprise": "$2248/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Zero-Trust Smart Digital Assets Security Mesh - Zion Tech Group",
+    "description": "Zero-trust security mesh that protects smart digital assets infrastructure with continuous validation and adaptive threat response.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/zero-trust-smart-digital-assets-security-mesh-6bfd2746"
+    }
+  },
+  "features": [
+    "Continuous validation",
+    "Micro-segmentation",
+    "Threat isolation",
+    "Adaptive authentication"
+  ],
+  "benefits": [
+    "Zero breach risk",
+    "Continuous compliance",
+    "Threat isolation",
+    "Regulatory assurance"
+  ]
+}

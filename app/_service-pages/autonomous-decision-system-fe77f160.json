@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/autonomous-decision-system-fe77f160",
+  "breadcrumbTitle": "Autonomous Decision System",
+  "title": "Autonomous Decision System",
+  "description": "Next-generation telecom solution: Autonomous Decision System. Combines process automation with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous Decision System - Zion Tech Group",
+    "description": "Next-generation telecom solution: Autonomous Decision System. Combines process automation with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-decision-system-fe77f160"
+    }
+  },
+  "features": [
+    "Alerting system",
+    "Rollback mechanisms",
+    "Offline capabilities",
+    "Performance dashboards",
+    "SOC 2 certified"
+  ],
+  "benefits": [
+    "Cost optimization recommendations",
+    "Seamless integration with existing systems",
+    "ROI in under 90 days",
+    "Intelligent load balancing"
+  ]
+}

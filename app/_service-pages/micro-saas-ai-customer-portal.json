@@ -1,0 +1,29 @@
+{
+  "title": "Micro-SaaS AI Customer Self-Service Portal",
+  "description": "White-label customer portal with AI chatbot, knowledge base, ticket management, and account management. Reduce support tickets by 40% with self-service.",
+  "basic": "$199/mo/month",
+  "pro": "$499/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Micro-SaaS AI Customer Self-Service Portal - Zion Tech Group",
+    "description": "White-label customer portal with AI chatbot, knowledge base, ticket management, and account management. Reduce support tickets by 40% with self-service.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-ai-customer-portal"
+    }
+  },
+  "features": [
+    "AI chatbot trained on your knowledge base",
+    "Self-service account management",
+    "Ticket creation and tracking",
+    "Knowledge base with smart search",
+    "Custom branding and white-labeling"
+  ],
+  "benefits": [
+    "Reduce support tickets by 40%",
+    "24/7 self-service for customers",
+    "Improve CSAT with instant answers",
+    "Launch in days not months"
+  ]
+}

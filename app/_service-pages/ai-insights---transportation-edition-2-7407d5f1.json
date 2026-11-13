@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-insights---transportation-edition-2-7407d5f1",
+  "breadcrumbTitle": "AI Insights - Transportation Edition #2",
+  "title": "AI Insights - Transportation Edition #2",
+  "description": "The future of transportation is here with AI Insights - Transportation Edition #2. Powered by cutting-edge AI, this platform delivers customer insights like nev",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Insights - Transportation Edition #2 - Zion Tech Group",
+    "description": "The future of transportation is here with AI Insights - Transportation Edition #2. Powered by cutting-edge AI, this platform delivers customer insights like nev",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-insights---transportation-edition-2-7407d5f1"
+    }
+  },
+  "features": [
+    "Real-time processing",
+    "Audit trails",
+    "Comprehensive monitoring",
+    "Machine learning integration",
+    "Serverless functions"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "24/7 automated operations",
+    "Performance benchmarking"
+  ]
+}

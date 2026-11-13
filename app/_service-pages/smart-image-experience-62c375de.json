@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/smart-image-experience-62c375de",
+  "breadcrumbTitle": "Smart Image Experience",
+  "title": "Smart Image Experience",
+  "description": "Transform your Real Estate operations with our Smart Image Experience. This AI-driven solution automates budget optimization with unprecedented accuracy and eff",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Image Experience - Zion Tech Group",
+    "description": "Transform your Real Estate operations with our Smart Image Experience. This AI-driven solution automates budget optimization with unprecedented accuracy and eff",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-image-experience-62c375de"
+    }
+  },
+  "features": [
+    "Security monitoring with threat intelligence",
+    "GDPR compliance with data portability",
+    "Machine learning integration with automatic model training",
+    "Business intelligence with KPI dashboards",
+    "Market analysis with buyer behavior insights"
+  ],
+  "benefits": [
+    "Enterprise-grade security with end-to-end encryption",
+    "Reduced support tickets with self-service options",
+    "Performance benchmarking against industry standards",
+    "Enhanced decision making with data-driven insights"
+  ]
+}

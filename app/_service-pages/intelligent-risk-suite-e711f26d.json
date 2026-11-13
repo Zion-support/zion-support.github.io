@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligent-risk-suite-e711f26d",
+  "breadcrumbTitle": "Intelligent Risk Suite",
+  "title": "Intelligent Risk Suite",
+  "description": "Unlock unprecedented growth with Intelligent Risk Suite. This autonomous system provides manufacturing quality control with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Risk Suite - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Intelligent Risk Suite. This autonomous system provides manufacturing quality control with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-risk-suite-e711f26d"
+    }
+  },
+  "features": [
+    "Inventory prediction with demand forecasting",
+    "Performance dashboards with real-time metrics",
+    "Content generation with plagiarism checks",
+    "Custom integrations with webhook support",
+    "Maintenance scheduling with predictive analytics"
+  ],
+  "benefits": [
+    "Better compliance with automated audit trails",
+    "Improved employee productivity with automation",
+    "Reduced development time with code generation",
+    "24/7 automated operations without human intervention"
+  ]
+}

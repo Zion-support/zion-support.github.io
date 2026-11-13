@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-suite---logistics-edition-8-5d89d377",
+  "breadcrumbTitle": "AI Suite - Logistics Edition #8",
+  "title": "AI Suite - Logistics Edition #8",
+  "description": "The future of logistics is here with AI Suite - Logistics Edition #8. Powered by cutting-edge AI, this platform delivers fraud prevention like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Suite - Logistics Edition #8 - Zion Tech Group",
+    "description": "The future of logistics is here with AI Suite - Logistics Edition #8. Powered by cutting-edge AI, this platform delivers fraud prevention like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-suite---logistics-edition-8-5d89d377"
+    }
+  },
+  "features": [
+    "Rollback mechanisms",
+    "Multi-region deployment",
+    "Serverless functions",
+    "Data encryption",
+    "Offline capabilities"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Enterprise-grade security",
+    "Cost optimization recommendations",
+    "Reduced human error by 95%"
+  ]
+}

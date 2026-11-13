@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/autonomous-quality-suite-5ffc5ce6",
+  "breadcrumbTitle": "Autonomous Quality Suite",
+  "title": "Autonomous Quality Suite",
+  "description": "Next-generation construction solution: Autonomous Quality Suite. Combines performance monitoring with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous Quality Suite - Zion Tech Group",
+    "description": "Next-generation construction solution: Autonomous Quality Suite. Combines performance monitoring with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-quality-suite-5ffc5ce6"
+    }
+  },
+  "features": [
+    "API-first design",
+    "Rollback mechanisms",
+    "Open-source friendly",
+    "Machine learning integration"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Seamless integration with existing systems",
+    "Scalable to millions of transactions",
+    "Intelligent load balancing",
+    "Self-healing infrastructure"
+  ]
+}

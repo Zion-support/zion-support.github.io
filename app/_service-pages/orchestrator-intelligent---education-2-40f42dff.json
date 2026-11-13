@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/orchestrator-intelligent---education-2-40f42dff",
+  "breadcrumbTitle": "Orchestrator Intelligent - Education #2",
+  "title": "Orchestrator Intelligent - Education #2",
+  "description": "Next-generation education solution: Orchestrator Intelligent - Education #2. Combines security monitoring with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Orchestrator Intelligent - Education #2 - Zion Tech Group",
+    "description": "Next-generation education solution: Orchestrator Intelligent - Education #2. Combines security monitoring with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/orchestrator-intelligent---education-2-40f42dff"
+    }
+  },
+  "features": [
+    "Mobile-responsive interface",
+    "HIPAA ready",
+    "Container orchestration",
+    "Offline capabilities",
+    "Microservices deployment"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "24/7 automated operations",
+    "Predictive maintenance scheduling",
+    "Performance benchmarking"
+  ]
+}

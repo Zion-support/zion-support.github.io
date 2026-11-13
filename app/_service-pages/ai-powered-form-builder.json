@@ -1,0 +1,28 @@
+{
+  "title": "AI-Powered Form & Survey Builder",
+  "description": "Create intelligent forms and surveys with AI that suggests questions, analyzes responses, and generates insights. Includes conditional logic, multi-language support, 200+ templates, and integrations with 50+ tools.",
+  "basic": "$N/A/month",
+  "pro": "$N/A/month",
+  "enterprise": "$149/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI-Powered Form & Survey Builder - Zion Tech Group",
+    "description": "Create intelligent forms and surveys with AI that suggests questions, analyzes responses, and generates insights. Includes conditional logic, multi-language sup",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-form-builder"
+    }
+  },
+  "features": [
+    "AI question suggestions",
+    "Response analytics",
+    "Conditional logic",
+    "200+ templates",
+    "Multi-language"
+  ],
+  "benefits": [
+    "3x faster form creation",
+    "40% higher completion rates",
+    "Auto-generated insights"
+  ]
+}

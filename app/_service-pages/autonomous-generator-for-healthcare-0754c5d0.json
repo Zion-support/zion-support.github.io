@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/autonomous-generator-for-healthcare-0754c5d0",
+  "breadcrumbTitle": "Autonomous Generator for Healthcare",
+  "title": "Autonomous Generator for Healthcare",
+  "description": "Next-generation healthcare solution: Autonomous Generator for Healthcare. Combines supply chain with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous Generator for Healthcare - Zion Tech Group",
+    "description": "Next-generation healthcare solution: Autonomous Generator for Healthcare. Combines supply chain with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-generator-for-healthcare-0754c5d0"
+    }
+  },
+  "features": [
+    "GDPR compliance",
+    "Microservices deployment",
+    "Custom integrations",
+    "Offline capabilities",
+    "Container orchestration"
+  ],
+  "benefits": [
+    "50% reduction in operational costs",
+    "Predictive maintenance scheduling",
+    "ROI in under 90 days"
+  ]
+}

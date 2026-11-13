@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/autonomous-supply-director-312838d4",
+  "breadcrumbTitle": "Autonomous Supply Director",
+  "title": "Autonomous Supply Director",
+  "description": "Transform your insurance operations with our Autonomous Supply Director. This AI-driven solution automates fraud prevention with unprecedented accuracy and effi",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous Supply Director - Zion Tech Group",
+    "description": "Transform your insurance operations with our Autonomous Supply Director. This AI-driven solution automates fraud prevention with unprecedented accuracy and effi",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-supply-director-312838d4"
+    }
+  },
+  "features": [
+    "HIPAA ready",
+    "Open-source friendly",
+    "Serverless functions",
+    "Multi-language support",
+    "Comprehensive monitoring"
+  ],
+  "benefits": [
+    "Scalable to millions of transactions",
+    "Enterprise-grade security",
+    "Reduced human error by 95%",
+    "Self-healing infrastructure"
+  ]
+}

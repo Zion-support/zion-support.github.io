@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/self-optimizing-workflow-suite-2-d8bcf3ab",
+  "breadcrumbTitle": "Self-Optimizing Workflow Suite #2",
+  "title": "Self-Optimizing Workflow Suite #2",
+  "description": "Revolutionize logistics through intelligent automation. Our Self-Optimizing Workflow Suite #2 leverages advanced machine learning to deliver financial planning ",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Self-Optimizing Workflow Suite #2 - Zion Tech Group",
+    "description": "Revolutionize logistics through intelligent automation. Our Self-Optimizing Workflow Suite #2 leverages advanced machine learning to deliver financial planning ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/self-optimizing-workflow-suite-2-d8bcf3ab"
+    }
+  },
+  "features": [
+    "Machine learning integration",
+    "Audit trails",
+    "Custom integrations",
+    "GDPR compliance",
+    "Comprehensive monitoring"
+  ],
+  "benefits": [
+    "50% reduction in operational costs",
+    "Reduced human error by 95%",
+    "Seamless integration with existing systems"
+  ]
+}

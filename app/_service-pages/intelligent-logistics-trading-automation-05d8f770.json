@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-logistics-trading-automation-05d8f770",
+  "breadcrumbTitle": "Intelligent Logistics Trading Automation",
+  "title": "Intelligent Logistics Trading Automation",
+  "description": "Algorithmic trading platform that executes adaptive strategies using AI-driven market analysis, sentiment processing, and real-time risk management.",
+  "basic": "$318/month",
+  "pro": "$798/month",
+  "enterprise": "$2398/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Intelligent Logistics Trading Automation - Zion Tech Group",
+    "description": "Algorithmic trading platform that executes adaptive strategies using AI-driven market analysis, sentiment processing, and real-time risk management.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-logistics-trading-automation-05d8f770"
+    }
+  },
+  "features": [
+    "Signal generation",
+    "Execution optimization",
+    "Risk controls",
+    "Performance attribution"
+  ],
+  "benefits": [
+    "Alpha generation",
+    "Reduced latency",
+    "Disciplined execution",
+    "Scalable strategies"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-real-estate-matchmaking-engine-7bc66c11",
+  "breadcrumbTitle": "Intelligent Real Estate Matchmaking Engine",
+  "title": "Intelligent Real Estate Matchmaking Engine",
+  "description": "AI-driven matchmaking system that creates autonomous player matches based on skill, playstyle, and behavioral patterns for optimal gaming experiences.",
+  "basic": "$258/month",
+  "pro": "$648/month",
+  "enterprise": "$1948/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Real Estate Matchmaking Engine - Zion Tech Group",
+    "description": "AI-driven matchmaking system that creates autonomous player matches based on skill, playstyle, and behavioral patterns for optimal gaming experiences.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-real-estate-matchmaking-engine-7bc66c11"
+    }
+  },
+  "features": [
+    "Skill-based matching",
+    "Latency optimization",
+    "Fair play detection",
+    "Dynamic balancing"
+  ],
+  "benefits": [
+    "Better player experience",
+    "Reduced toxicity",
+    "Higher engagement",
+    "Longer sessions"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/autonomous-intelligence-education-1-9da9ca14",
+  "breadcrumbTitle": "Autonomous intelligence-education #1",
+  "title": "Autonomous intelligence-education #1",
+  "description": "Transform your education operations with our Autonomous intelligence-education #1. This AI-driven solution automates image recognition with unprecedented accura",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous intelligence-education #1 - Zion Tech Group",
+    "description": "Transform your education operations with our Autonomous intelligence-education #1. This AI-driven solution automates image recognition with unprecedented accura",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-intelligence-education-1-9da9ca14"
+    }
+  },
+  "features": [
+    "API-first design",
+    "Serverless functions",
+    "Microservices deployment",
+    "Mobile-responsive interface",
+    "Multi-language support"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "24/7 automated operations",
+    "Intelligent load balancing"
+  ]
+}

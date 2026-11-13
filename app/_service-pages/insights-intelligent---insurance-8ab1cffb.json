@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/insights-intelligent---insurance-8ab1cffb",
+  "breadcrumbTitle": "Insights Intelligent - Insurance",
+  "title": "Insights Intelligent - Insurance",
+  "description": "Unlock unprecedented growth with Insights Intelligent - Insurance. This autonomous system provides market intelligence with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Insights Intelligent - Insurance - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Insights Intelligent - Insurance. This autonomous system provides market intelligence with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/insights-intelligent---insurance-8ab1cffb"
+    }
+  },
+  "features": [
+    "Serverless functions",
+    "Role-based access control",
+    "Mobile-responsive interface",
+    "Rollback mechanisms",
+    "Offline capabilities"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "Dynamic resource allocation",
+    "Predictive maintenance scheduling"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/autonomous-image-intelligence-4626e0fd",
+  "breadcrumbTitle": "Autonomous Image Intelligence",
+  "title": "Autonomous Image Intelligence",
+  "description": "Transform your energy operations with our Autonomous Image Intelligence. This AI-driven solution automates compliance monitoring with unprecedented accuracy and",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous Image Intelligence - Zion Tech Group",
+    "description": "Transform your energy operations with our Autonomous Image Intelligence. This AI-driven solution automates compliance monitoring with unprecedented accuracy and",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-image-intelligence-4626e0fd"
+    }
+  },
+  "features": [
+    "Multi-region deployment",
+    "Plugin architecture",
+    "API-first design",
+    "Microservices deployment",
+    "Zero-downtime updates"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "Intelligent load balancing",
+    "Automated compliance reporting",
+    "99.9% uptime guarantee",
+    "ROI in under 90 days"
+  ]
+}

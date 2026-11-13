@@ -1,11 +1,47 @@
 /** @type {import('next').NextConfig} */
 import path from 'node:path';
+import { getHeapStatistics } from 'node:v8';
+import clientCatalog from './scripts/client-catalog.cjs';
+
+// Covers npm and direct Next CLI builds/development; content hashes avoid stale data.
+clientCatalog.ensureClientCatalog(process.cwd());
+
+// Observe compiler phases without retaining modules, paths, or source content.
+class BuildMemoryPhases {
+  apply(compiler) {
+    let current;
+    let timer;
+    const record = (phase) => {
+      console.log('[build-memory-phase]', JSON.stringify({
+        compiler: compiler.name || 'unknown', phase,
+        pid: process.pid, ...process.memoryUsage(),
+        modules: current?.modules.size || 0,
+        chunks: current?.chunks.size || 0,
+      }));
+    };
+    const stop = () => { clearInterval(timer); current = undefined; };
+    compiler.hooks.thisCompilation.tap('BuildMemoryPhases', compilation => {
+      current = compilation;
+      record('start');
+      clearInterval(timer);
+      timer = setInterval(() => record('sample'), 20000);
+      timer.unref();
+      for (const phase of ['finishModules', 'afterOptimizeDependencies',
+        'afterOptimizeModules', 'afterCodeGeneration', 'afterProcessAssets']) {
+        compilation.hooks[phase].tap('BuildMemoryPhases', () => record(phase));
+      }
+    });
+    compiler.hooks.done.tap('BuildMemoryPhases', () => { record('done'); stop(); });
+    compiler.hooks.failed.tap('BuildMemoryPhases', () => { record('failed'); stop(); });
+  }
+}
 
 const nextConfig = {
   output: 'export',
   experimental: {
     // Reduce webpack memory footprint (fixes OOM on GH-hosted runners, 125k+ file tree)
     webpackMemoryOptimizations: true,
+    webpackBuildWorker: true,
   },
   outputFileTracingRoot: path.join(process.cwd(), 'app'),
   basePath: '',
@@ -21,7 +57,17 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   // Static export via webpack
-  webpack: (config, { isServer }) => {
+  webpack: (config, { isServer, nextRuntime, dev }) => {
+    if (!dev) {
+      console.log('[build-memory]', JSON.stringify({
+        compiler: nextRuntime || (isServer ? 'server' : 'client'),
+        webpackBuildWorker: process.env.NEXT_PRIVATE_BUILD_WORKER === '1',
+        heapLimitBytes: getHeapStatistics().heap_size_limit,
+        rssBytes: process.memoryUsage().rss,
+        pid: process.pid,
+        ppid: process.ppid,
+      }));
+    }
     const appDir = path.join(process.cwd(), 'app');
     config.resolve.alias = {
       ...(config.resolve.alias || {}),
@@ -32,6 +78,7 @@ const nextConfig = {
     };
     // Reduce memory usage during build
     if (!isServer) {
+      config.plugins.push(new clientCatalog.ClientCatalogBoundaryPlugin());
       config.optimization = {
         ...config.optimization,
         splitChunks: {
@@ -41,6 +88,7 @@ const nextConfig = {
         },
       };
     }
+    if (!dev) config.plugins.push(new BuildMemoryPhases());
     // Limit parallelism in webpack
     config.parallelism = 1;
     return config;

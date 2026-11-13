@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-engine-for-hospitality-e28542c9",
+  "breadcrumbTitle": "Intelligent Engine for Hospitality",
+  "title": "Intelligent Engine for Hospitality",
+  "description": "Next-generation hospitality solution: Intelligent Engine for Hospitality. Combines compliance monitoring with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Engine for Hospitality - Zion Tech Group",
+    "description": "Next-generation hospitality solution: Intelligent Engine for Hospitality. Combines compliance monitoring with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-engine-for-hospitality-e28542c9"
+    }
+  },
+  "features": [
+    "Performance dashboards",
+    "Cloud-native architecture",
+    "Offline capabilities",
+    "Multi-language support"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "50% reduction in operational costs",
+    "Predictive maintenance scheduling",
+    "99.9% uptime guarantee"
+  ]
+}

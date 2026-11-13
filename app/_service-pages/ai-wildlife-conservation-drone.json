@@ -1,0 +1,29 @@
+{
+  "title": "AI Wildlife Conservation & Anti-Poaching Drone System",
+  "description": "Autonomous drone system with AI-powered wildlife tracking, poaching detection, and habitat monitoring for conservation organizations.",
+  "basic": "$2,000/mo/month",
+  "pro": "$5,000/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Wildlife Conservation & Anti-Poaching Drone System - Zion Tech Group",
+    "description": "Autonomous drone system with AI-powered wildlife tracking, poaching detection, and habitat monitoring for conservation organizations.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-wildlife-conservation-drone"
+    }
+  },
+  "features": [
+    "Autonomous drone patrol routes",
+    "AI animal species identification",
+    "Real-time poaching alert system",
+    "Thermal imaging for night patrols",
+    "Habitat change detection via satellite"
+  ],
+  "benefits": [
+    "Reduce poaching incidents by 70%",
+    "Monitor wildlife populations autonomously",
+    "Protect endangered species",
+    "Reduce ranger risk"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-coordinator-insurance-99c8d5e7",
+  "breadcrumbTitle": "Intelligent coordinator-insurance",
+  "title": "Intelligent coordinator-insurance",
+  "description": "Revolutionize insurance through intelligent automation. Our Intelligent coordinator-insurance leverages advanced machine learning to deliver document processing",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent coordinator-insurance - Zion Tech Group",
+    "description": "Revolutionize insurance through intelligent automation. Our Intelligent coordinator-insurance leverages advanced machine learning to deliver document processing",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-coordinator-insurance-99c8d5e7"
+    }
+  },
+  "features": [
+    "Role-based access control",
+    "API-first design",
+    "Offline capabilities",
+    "Performance dashboards",
+    "Cloud-native architecture"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "Reduced human error by 95%",
+    "ROI in under 90 days"
+  ]
+}

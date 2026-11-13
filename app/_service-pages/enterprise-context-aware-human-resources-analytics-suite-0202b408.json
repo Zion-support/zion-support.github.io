@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/enterprise-context-aware-human-resources-analytics-suite-0202b408",
+  "breadcrumbTitle": "Enterprise Context-Aware Human Resources Analytics Suite",
+  "title": "Enterprise Context-Aware Human Resources Analytics Suite",
+  "description": "Enterprise analytics suite that delivers context-aware human resources insights with unified dashboards and reporting.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Enterprise Context-Aware Human Resources Analytics Suite - Zion Tech Group",
+    "description": "Enterprise analytics suite that delivers context-aware human resources insights with unified dashboards and reporting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/enterprise-context-aware-human-resources-analytics-suite-0202b408"
+    }
+  },
+  "features": [
+    "Data visualization",
+    "Custom dashboards",
+    "Report generation",
+    "KPI tracking"
+  ],
+  "benefits": [
+    "Unified data view",
+    "Faster insights",
+    "Customizable reports",
+    "Cross-functional collaboration"
+  ]
+}

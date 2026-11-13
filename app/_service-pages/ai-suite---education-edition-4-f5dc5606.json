@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/ai-suite---education-edition-4-f5dc5606",
+  "breadcrumbTitle": "AI Suite - Education Edition #4",
+  "title": "AI Suite - Education Edition #4",
+  "description": "The future of education is here with AI Suite - Education Edition #4. Powered by cutting-edge AI, this platform delivers performance monitoring like never befor",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Suite - Education Edition #4 - Zion Tech Group",
+    "description": "The future of education is here with AI Suite - Education Edition #4. Powered by cutting-edge AI, this platform delivers performance monitoring like never befor",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-suite---education-edition-4-f5dc5606"
+    }
+  },
+  "features": [
+    "Performance dashboards",
+    "Machine learning integration",
+    "Offline capabilities",
+    "Rollback mechanisms",
+    "Microservices deployment"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "Cost optimization recommendations",
+    "Self-healing infrastructure",
+    "Dynamic resource allocation",
+    "Zero manual intervention required"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "Patch Management",
+  "description": "Automated OS, firmware, and application patching across Windows, Linux, and macOS fleets with compliance reporting and rollback.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Patch Management - Zion Tech Group",
+    "description": "Automated OS, firmware, and application patching across Windows, Linux, and macOS fleets with compliance reporting and rollback.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/patch-management"
+    }
+  },
+  "features": [
+    "Multi-OS patch support",
+    "Automated scheduling",
+    "Pre-deployment testing",
+    "Compliance reports",
+    "One-click rollback"
+  ],
+  "benefits": [
+    "Reduce costs with patch management",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

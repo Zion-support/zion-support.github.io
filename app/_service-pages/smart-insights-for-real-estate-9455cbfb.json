@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/smart-insights-for-real-estate-9455cbfb",
+  "breadcrumbTitle": "Smart Insights for Real-Estate",
+  "title": "Smart Insights for Real-Estate",
+  "description": "The future of real-estate is here with Smart Insights for Real-Estate. Powered by cutting-edge AI, this platform delivers user experience like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Insights for Real-Estate - Zion Tech Group",
+    "description": "The future of real-estate is here with Smart Insights for Real-Estate. Powered by cutting-edge AI, this platform delivers user experience like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-insights-for-real-estate-9455cbfb"
+    }
+  },
+  "features": [
+    "Role-based access control",
+    "Real-time processing",
+    "Custom integrations",
+    "Offline capabilities",
+    "Multi-region deployment"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "3x faster decision making",
+    "Seamless integration with existing systems",
+    "Predictive maintenance scheduling"
+  ]
+}

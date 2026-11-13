@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/system-ai---healthcare-85cc24fa",
+  "breadcrumbTitle": "System AI - Healthcare",
+  "title": "System AI - Healthcare",
+  "description": "The future of healthcare is here with System AI - Healthcare. Powered by cutting-edge AI, this platform delivers sales forecasting like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "System AI - Healthcare - Zion Tech Group",
+    "description": "The future of healthcare is here with System AI - Healthcare. Powered by cutting-edge AI, this platform delivers sales forecasting like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/system-ai---healthcare-85cc24fa"
+    }
+  },
+  "features": [
+    "Container orchestration",
+    "Cloud-native architecture",
+    "Audit trails",
+    "Microservices deployment",
+    "SOC 2 certified"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "3x faster decision making",
+    "Enterprise-grade security"
+  ]
+}

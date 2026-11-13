@@ -1,0 +1,28 @@
+{
+  "title": "AI Medical Diagnosis Assistant",
+  "description": "Clinical decision support for healthcare: symptom analysis, differential diagnoses with confidence scores, drug interaction checking. HIPAA-compliant.",
+  "basic": "$299/month",
+  "pro": "$899/month",
+  "enterprise": "$3499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Medical Diagnosis Assistant - Zion Tech Group",
+    "description": "Clinical decision support for healthcare: symptom analysis, differential diagnoses with confidence scores, drug interaction checking. HIPAA-compliant.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-medical-diagnosis-assistant"
+    }
+  },
+  "features": [
+    "Symptom analysis with NLP",
+    "Differential diagnosis suggestions",
+    "Drug interaction checking",
+    "Lab result interpretation",
+    "Clinical guideline integration"
+  ],
+  "benefits": [
+    "Reduce diagnostic errors by 35%",
+    "Cut chart review time by 50%",
+    "Improve patient outcomes"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/predictive-intelligence-for-insurance-1-14c2ea1c",
+  "breadcrumbTitle": "Predictive Intelligence for Insurance #1",
+  "title": "Predictive Intelligence for Insurance #1",
+  "description": "Revolutionize insurance through intelligent automation. Our Predictive Intelligence for Insurance #1 leverages advanced machine learning to deliver predictive a",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Predictive Intelligence for Insurance #1 - Zion Tech Group",
+    "description": "Revolutionize insurance through intelligent automation. Our Predictive Intelligence for Insurance #1 leverages advanced machine learning to deliver predictive a",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/predictive-intelligence-for-insurance-1-14c2ea1c"
+    }
+  },
+  "features": [
+    "Serverless functions",
+    "Role-based access control",
+    "Zero-downtime updates",
+    "Alerting system",
+    "Edge computing support"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "24/7 automated operations",
+    "Enterprise-grade security"
+  ]
+}

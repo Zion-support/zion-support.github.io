@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/enterprise-optimized-marketing-analytics-suite-7733ba7c",
+  "breadcrumbTitle": "Enterprise Optimized Marketing Analytics Suite",
+  "title": "Enterprise Optimized Marketing Analytics Suite",
+  "description": "Enterprise analytics suite that delivers optimized marketing insights with unified dashboards and reporting.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Enterprise Optimized Marketing Analytics Suite - Zion Tech Group",
+    "description": "Enterprise analytics suite that delivers optimized marketing insights with unified dashboards and reporting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/enterprise-optimized-marketing-analytics-suite-7733ba7c"
+    }
+  },
+  "features": [
+    "Data visualization",
+    "Custom dashboards",
+    "Report generation",
+    "KPI tracking"
+  ],
+  "benefits": [
+    "Unified data view",
+    "Faster insights",
+    "Customizable reports",
+    "Cross-functional collaboration"
+  ]
+}

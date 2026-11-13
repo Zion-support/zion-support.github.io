@@ -1,0 +1,29 @@
+{
+  "title": "AI Conversational Commerce Platform",
+  "description": "AI-powered shopping assistant that engages customers via chat, voice, and messaging apps. Product recommendations, order management, and personalized offers through natural conversation. Integrates with Shopify, WooCommerce, and custom stores.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Conversational Commerce Platform - Zion Tech Group",
+    "description": "AI-powered shopping assistant that engages customers via chat, voice, and messaging apps. Product recommendations, order management, and personalized offers thr",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-conversational-commerce-platform"
+    }
+  },
+  "features": [
+    "Multi-channel deployment (web, WhatsApp, Instagram)",
+    "Personalized product recommendations",
+    "Order tracking and management",
+    "Abandoned cart recovery via chat",
+    "Multilingual support (50+ languages)"
+  ],
+  "benefits": [
+    "Increase conversion rates by 35%",
+    "Reduce cart abandonment by 25%",
+    "24/7 automated customer engagement",
+    "Personalized shopping experiences at scale"
+  ]
+}

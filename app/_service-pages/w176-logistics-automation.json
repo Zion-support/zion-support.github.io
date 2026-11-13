@@ -1,0 +1,29 @@
+{
+  "title": "Logistics & Freight Automation",
+  "description": "Automate logistics operations: freight booking, route optimization, tracking, customs documentation, and carrier management across modes.",
+  "basic": "$499/mo/month",
+  "pro": "$1,499/mo/month",
+  "enterprise": "$4,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Logistics & Freight Automation - Zion Tech Group",
+    "description": "Automate logistics operations: freight booking, route optimization, tracking, customs documentation, and carrier management across modes.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w176-logistics-automation"
+    }
+  },
+  "features": [
+    "Freight booking and carrier selection",
+    "Route optimization across modes (road, rail, air, sea)",
+    "Real-time shipment tracking",
+    "Customs and compliance documentation",
+    "Carrier performance scoring"
+  ],
+  "benefits": [
+    "Carrier selection optimized for cost and reliability",
+    "Route optimization reduces transit time",
+    "Customs automation prevents delays",
+    "Freight audit catches billing errors"
+  ]
+}

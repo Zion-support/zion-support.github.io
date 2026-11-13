@@ -1,0 +1,29 @@
+{
+  "title": "SurveyPro — Survey Platform Micro-SaaS",
+  "description": "Advanced survey platform with AI-powered insights, sentiment analysis, and executive dashboards. For market research, customer feedback, and employee engagement.",
+  "basic": "$49/mo/month",
+  "pro": "$149/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "SurveyPro — Survey Platform Micro-SaaS - Zion Tech Group",
+    "description": "Advanced survey platform with AI-powered insights, sentiment analysis, and executive dashboards. For market research, customer feedback, and employee engagement",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/micro-saas-survey-platform"
+    }
+  },
+  "features": [
+    "AI-powered survey builder",
+    "Sentiment analysis",
+    "Executive dashboards",
+    "Integration with CRM and HRIS",
+    "Custom branding"
+  ],
+  "benefits": [
+    "Get insights faster",
+    "AI-powered analysis",
+    "Professional surveys",
+    "Integration with existing tools"
+  ]
+}

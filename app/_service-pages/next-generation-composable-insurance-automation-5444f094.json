@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/next-generation-composable-insurance-automation-5444f094",
+  "breadcrumbTitle": "Next-Generation Composable Insurance Automation",
+  "title": "Next-Generation Composable Insurance Automation",
+  "description": "Next-generation automation suite that streamlines composable insurance workflows with intelligent orchestration.",
+  "basic": "$218/month",
+  "pro": "$548/month",
+  "enterprise": "$1648/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Next-Generation Composable Insurance Automation - Zion Tech Group",
+    "description": "Next-generation automation suite that streamlines composable insurance workflows with intelligent orchestration.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/next-generation-composable-insurance-automation-5444f094"
+    }
+  },
+  "features": [
+    "Smart orchestration",
+    "Process automation",
+    "Event processing",
+    "Task scheduling"
+  ],
+  "benefits": [
+    "Faster execution",
+    "Reduced manual steps",
+    "Scalable processes",
+    "Error reduction"
+  ]
+}

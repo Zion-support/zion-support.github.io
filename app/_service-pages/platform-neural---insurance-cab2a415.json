@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/platform-neural---insurance-cab2a415",
+  "breadcrumbTitle": "Platform Neural - Insurance",
+  "title": "Platform Neural - Insurance",
+  "description": "Transform your insurance operations with our Platform Neural - Insurance. This AI-driven solution automates financial planning with unprecedented accuracy and e",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Platform Neural - Insurance - Zion Tech Group",
+    "description": "Transform your insurance operations with our Platform Neural - Insurance. This AI-driven solution automates financial planning with unprecedented accuracy and e",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/platform-neural---insurance-cab2a415"
+    }
+  },
+  "features": [
+    "Role-based access control",
+    "Performance dashboards",
+    "Serverless functions",
+    "HIPAA ready"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Self-healing infrastructure",
+    "50% reduction in operational costs"
+  ]
+}

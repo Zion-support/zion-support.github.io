@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/insights-smart---manufacturing-283aa745",
+  "breadcrumbTitle": "Insights Smart - Manufacturing",
+  "title": "Insights Smart - Manufacturing",
+  "description": "Revolutionize manufacturing through intelligent automation. Our Insights Smart - Manufacturing leverages advanced machine learning to deliver quality control at",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Insights Smart - Manufacturing - Zion Tech Group",
+    "description": "Revolutionize manufacturing through intelligent automation. Our Insights Smart - Manufacturing leverages advanced machine learning to deliver quality control at",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/insights-smart---manufacturing-283aa745"
+    }
+  },
+  "features": [
+    "Offline capabilities",
+    "Machine learning integration",
+    "Mobile-responsive interface",
+    "Zero-downtime updates",
+    "SOC 2 certified"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "3x faster decision making",
+    "Reduced human error by 95%",
+    "Performance benchmarking",
+    "Scalable to millions of transactions"
+  ]
+}

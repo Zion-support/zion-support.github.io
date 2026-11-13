@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/automated-decision-orchestrator-f2f49f74",
+  "breadcrumbTitle": "Automated Decision Orchestrator",
+  "title": "Automated Decision Orchestrator",
+  "description": "Next-generation retail solution: Automated Decision Orchestrator. Combines network optimization with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated Decision Orchestrator - Zion Tech Group",
+    "description": "Next-generation retail solution: Automated Decision Orchestrator. Combines network optimization with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-decision-orchestrator-f2f49f74"
+    }
+  },
+  "features": [
+    "SOC 2 certified",
+    "Alerting system",
+    "Data encryption",
+    "Open-source friendly"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "Predictive maintenance scheduling",
+    "Cost optimization recommendations"
+  ]
+}

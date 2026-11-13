@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-intelligence-energy-45e6cc20",
+  "breadcrumbTitle": "Intelligent intelligence-energy",
+  "title": "Intelligent intelligence-energy",
+  "description": "Next-generation energy solution: Intelligent intelligence-energy. Combines user experience with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent intelligence-energy - Zion Tech Group",
+    "description": "Next-generation energy solution: Intelligent intelligence-energy. Combines user experience with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-intelligence-energy-45e6cc20"
+    }
+  },
+  "features": [
+    "Serverless functions",
+    "API-first design",
+    "Role-based access control",
+    "Custom integrations",
+    "Multi-region deployment"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "Cost optimization recommendations",
+    "Real-time insights and alerts"
+  ]
+}

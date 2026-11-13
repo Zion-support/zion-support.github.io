@@ -1,0 +1,28 @@
+{
+  "title": "Predictive Integrated Retail Risk Scoring",
+  "description": "Predictive risk scoring engine that assesses integrated retail vulnerabilities with machine learning.",
+  "basic": "$278/month",
+  "pro": "$698/month",
+  "enterprise": "$2098/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Predictive Integrated Retail Risk Scoring - Zion Tech Group",
+    "description": "Predictive risk scoring engine that assesses integrated retail vulnerabilities with machine learning.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/predictive-integrated-retail-risk-scoring-58049778"
+    }
+  },
+  "features": [
+    "Risk assessment",
+    "Threat modeling",
+    "Compliance scoring",
+    "Mitigation planning"
+  ],
+  "benefits": [
+    "Proactive risk mitigation",
+    "Compliance assurance",
+    "Reduced exposure",
+    "Faster incident response"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/smart-advisor-retail-ce3e7804",
+  "breadcrumbTitle": "Smart advisor-retail",
+  "title": "Smart advisor-retail",
+  "description": "Revolutionize retail through intelligent automation. Our Smart advisor-retail leverages advanced machine learning to deliver risk assessment at scale.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart advisor-retail - Zion Tech Group",
+    "description": "Revolutionize retail through intelligent automation. Our Smart advisor-retail leverages advanced machine learning to deliver risk assessment at scale.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-advisor-retail-ce3e7804"
+    }
+  },
+  "features": [
+    "Cloud-native architecture",
+    "Alerting system",
+    "HIPAA ready",
+    "Offline capabilities",
+    "Mobile-responsive interface"
+  ],
+  "benefits": [
+    "3x faster decision making",
+    "Enterprise-grade security",
+    "Predictive maintenance scheduling",
+    "Cost optimization recommendations"
+  ]
+}

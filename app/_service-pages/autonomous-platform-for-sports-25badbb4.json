@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/autonomous-platform-for-sports-25badbb4",
+  "breadcrumbTitle": "Autonomous Platform for Sports",
+  "title": "Autonomous Platform for Sports",
+  "description": "Next-generation sports solution: Autonomous Platform for Sports. Combines workflow management with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous Platform for Sports - Zion Tech Group",
+    "description": "Next-generation sports solution: Autonomous Platform for Sports. Combines workflow management with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-platform-for-sports-25badbb4"
+    }
+  },
+  "features": [
+    "HIPAA ready",
+    "Rollback mechanisms",
+    "Machine learning integration",
+    "GDPR compliance",
+    "Mobile-responsive interface"
+  ],
+  "benefits": [
+    "Automated compliance reporting",
+    "Self-healing infrastructure",
+    "Intelligent load balancing",
+    "3x faster decision making",
+    "Zero manual intervention required"
+  ]
+}

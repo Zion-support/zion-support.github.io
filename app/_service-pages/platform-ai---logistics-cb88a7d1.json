@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/platform-ai---logistics-cb88a7d1",
+  "breadcrumbTitle": "Platform AI - Logistics",
+  "title": "Platform AI - Logistics",
+  "description": "The future of logistics is here with Platform AI - Logistics. Powered by cutting-edge AI, this platform delivers user experience like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Platform AI - Logistics - Zion Tech Group",
+    "description": "The future of logistics is here with Platform AI - Logistics. Powered by cutting-edge AI, this platform delivers user experience like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/platform-ai---logistics-cb88a7d1"
+    }
+  },
+  "features": [
+    "HIPAA ready",
+    "Rollback mechanisms",
+    "API-first design",
+    "Open-source friendly",
+    "Custom integrations"
+  ],
+  "benefits": [
+    "99.9% uptime guarantee",
+    "Zero manual intervention required",
+    "Automated compliance reporting",
+    "Reduced human error by 95%"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/cognitive-scalable-insurtech-decision-engine-764c72d7",
+  "breadcrumbTitle": "Cognitive Scalable Insurtech Decision Engine",
+  "title": "Cognitive Scalable Insurtech Decision Engine",
+  "description": "Cognitive decision engine that processes scalable signals to drive insurtech strategy with deep learning.",
+  "basic": "$278/month",
+  "pro": "$698/month",
+  "enterprise": "$2098/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Cognitive Scalable Insurtech Decision Engine - Zion Tech Group",
+    "description": "Cognitive decision engine that processes scalable signals to drive insurtech strategy with deep learning.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cognitive-scalable-insurtech-decision-engine-764c72d7"
+    }
+  },
+  "features": [
+    "Cognitive reasoning",
+    "Scenario analysis",
+    "Decision trees",
+    "Recommendation engine"
+  ],
+  "benefits": [
+    "Better decision quality",
+    "Reduced risk",
+    "Faster insights",
+    "Competitive intelligence"
+  ]
+}

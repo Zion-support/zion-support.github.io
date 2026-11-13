@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/cognitive-management-insurance-1-0aa857a0",
+  "breadcrumbTitle": "Cognitive management-insurance #1",
+  "title": "Cognitive management-insurance #1",
+  "description": "Revolutionize insurance through intelligent automation. Our Cognitive management-insurance #1 leverages advanced machine learning to deliver customer insights a",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Cognitive management-insurance #1 - Zion Tech Group",
+    "description": "Revolutionize insurance through intelligent automation. Our Cognitive management-insurance #1 leverages advanced machine learning to deliver customer insights a",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cognitive-management-insurance-1-0aa857a0"
+    }
+  },
+  "features": [
+    "Multi-region deployment",
+    "Open-source friendly",
+    "Offline capabilities",
+    "Role-based access control"
+  ],
+  "benefits": [
+    "Cost optimization recommendations",
+    "Zero manual intervention required",
+    "24/7 automated operations"
+  ]
+}

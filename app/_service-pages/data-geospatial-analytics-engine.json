@@ -1,0 +1,28 @@
+{
+  "title": "Geospatial Analytics Engine",
+  "description": "Location intelligence: PostGIS spatial queries, tile-based heatmaps, delivery-route optimisation, and geofence-triggered alerts.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Geospatial Analytics Engine - Zion Tech Group",
+    "description": "Location intelligence: PostGIS spatial queries, tile-based heatmaps, delivery-route optimisation, and geofence-triggered alerts.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/data-geospatial-analytics-engine"
+    }
+  },
+  "features": [
+    "PostGIS spatial index + SRID auto-detect",
+    "Tile-based cluster heatmap (deck.gl/Mapbox)",
+    "OSRM/Valhalla route optimisation per order",
+    "Geofence trigger alert per asset/customer"
+  ],
+  "benefits": [
+    "Reduce costs with geospatial analytics engine",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligent-sales-engine-aec6fffc",
+  "breadcrumbTitle": "Intelligent Sales Engine",
+  "title": "Intelligent Sales Engine",
+  "description": "Unlock unprecedented growth with Intelligent Sales Engine. This autonomous system provides content generation with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Sales Engine - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Intelligent Sales Engine. This autonomous system provides content generation with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-sales-engine-aec6fffc"
+    }
+  },
+  "features": [
+    "API-first design",
+    "Offline capabilities",
+    "GDPR compliance",
+    "Container orchestration"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "24/7 automated operations",
+    "Predictive maintenance scheduling",
+    "Automated compliance reporting",
+    "Enterprise-grade security"
+  ]
+}

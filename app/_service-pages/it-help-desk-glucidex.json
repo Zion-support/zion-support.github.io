@@ -1,0 +1,28 @@
+{
+  "title": "IT Help Desk (AI-Powered)",
+  "description": "AI triage + KB auto-resolution, ticket routing, asset CMDB auto-link, and agent copilot with runbook-snippet suggestion per ticket.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "IT Help Desk (AI-Powered) - Zion Tech Group",
+    "description": "AI triage + KB auto-resolution, ticket routing, asset CMDB auto-link, and agent copilot with runbook-snippet suggestion per ticket.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-help-desk-glucidex"
+    }
+  },
+  "features": [
+    "AI triage auto-categorise ticket",
+    "KB article suggestion per ticket similarity",
+    "Auto-routing to correct team/queue",
+    "Agent copilot with runbook snippet per ticket"
+  ],
+  "benefits": [
+    "Reduce costs with it help desk (ai-powered)",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

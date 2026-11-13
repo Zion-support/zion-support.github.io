@@ -1,0 +1,29 @@
+{
+  "title": "AssetTracker — Physical Asset Tracking",
+  "description": "Track physical assets with QR codes, barcodes, or RFID: check-in/out, maintenance scheduling, depreciation, and audit reporting.",
+  "basic": "$29/mo/month",
+  "pro": "$79/mo/month",
+  "enterprise": "$249/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AssetTracker — Physical Asset Tracking - Zion Tech Group",
+    "description": "Track physical assets with QR codes, barcodes, or RFID: check-in/out, maintenance scheduling, depreciation, and audit reporting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w176-asset-tracker"
+    }
+  },
+  "features": [
+    "QR code and barcode asset labeling",
+    "Check-in/check-out tracking",
+    "Maintenance and calibration scheduling",
+    "Depreciation and replacement forecasting",
+    "GPS tracking for mobile assets"
+  ],
+  "benefits": [
+    "Know where every asset is",
+    "Maintenance scheduling extends asset life",
+    "Depreciation tracking for accurate books",
+    "Mobile scanning for field operations"
+  ]
+}

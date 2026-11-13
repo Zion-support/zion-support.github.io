@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/enterprise-hyper-local-manufacturing-analytics-suite-61e7f6b3",
+  "breadcrumbTitle": "Enterprise Hyper-Local Manufacturing Analytics Suite",
+  "title": "Enterprise Hyper-Local Manufacturing Analytics Suite",
+  "description": "Enterprise analytics suite that delivers hyper-local manufacturing insights with unified dashboards and reporting.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Enterprise Hyper-Local Manufacturing Analytics Suite - Zion Tech Group",
+    "description": "Enterprise analytics suite that delivers hyper-local manufacturing insights with unified dashboards and reporting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/enterprise-hyper-local-manufacturing-analytics-suite-61e7f6b3"
+    }
+  },
+  "features": [
+    "Data visualization",
+    "Custom dashboards",
+    "Report generation",
+    "KPI tracking"
+  ],
+  "benefits": [
+    "Unified data view",
+    "Faster insights",
+    "Customizable reports",
+    "Cross-functional collaboration"
+  ]
+}

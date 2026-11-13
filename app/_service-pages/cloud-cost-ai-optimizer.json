@@ -1,0 +1,29 @@
+{
+  "title": "AI Cloud Cost Optimizer",
+  "description": "Continuously analyze cloud spend (AWS, Azure, GCP) and automatically implement cost-saving actions: rightsizing, reserved instances, spot instance switching, and idle resource cleanup.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Cloud Cost Optimizer - Zion Tech Group",
+    "description": "Continuously analyze cloud spend (AWS, Azure, GCP) and automatically implement cost-saving actions: rightsizing, reserved instances, spot instance switching, an",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cloud-cost-ai-optimizer"
+    }
+  },
+  "features": [
+    "Multi-cloud cost aggregation & normalization",
+    "AI-driven rightsizing recommendations",
+    "Automated RI/SP purchase optimization",
+    "Idle resource detection & auto-cleanup",
+    "Anomaly detection & budget alerts"
+  ],
+  "benefits": [
+    "Reduce costs with ai cloud cost optimizer",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/analytics-cognitive---healthcare-0657d9f9",
+  "breadcrumbTitle": "Analytics Cognitive - Healthcare",
+  "title": "Analytics Cognitive - Healthcare",
+  "description": "Revolutionize healthcare through intelligent automation. Our Analytics Cognitive - Healthcare leverages advanced machine learning to deliver process automation ",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Analytics Cognitive - Healthcare - Zion Tech Group",
+    "description": "Revolutionize healthcare through intelligent automation. Our Analytics Cognitive - Healthcare leverages advanced machine learning to deliver process automation ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/analytics-cognitive---healthcare-0657d9f9"
+    }
+  },
+  "features": [
+    "Serverless functions",
+    "Machine learning integration",
+    "API-first design",
+    "Role-based access control"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "Seamless integration with existing systems",
+    "Self-healing infrastructure",
+    "Automated compliance reporting",
+    "Dynamic resource allocation"
+  ]
+}

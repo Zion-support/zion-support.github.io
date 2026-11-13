@@ -1,0 +1,29 @@
+{
+  "title": "Multimodal AI Search",
+  "description": "Unified semantic search across text, images, video, and audio within a single query. Vision-language models understand visual content, speech-to-text handles audio, and cross-modal ranking surfaces the most relevant results regardless of format.",
+  "basic": "$N/A/month",
+  "pro": "$7997/month",
+  "enterprise": "$16997/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Multimodal AI Search - Zion Tech Group",
+    "description": "Unified semantic search across text, images, video, and audio within a single query. Vision-language models understand visual content, speech-to-text handles au",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/wave127-multimodal-ai-search"
+    }
+  },
+  "features": [
+    "Cross-modal search (text → image, image → video, etc.)",
+    "Vision-language model for visual understanding",
+    "Speech-to-text audio indexing & search",
+    "Video scene detection & timestamped retrieval",
+    "Hybrid semantic + keyword ranking"
+  ],
+  "benefits": [
+    "Find information regardless of format — text, image, or video",
+    "Search visual assets without manual tagging",
+    "Reduce time-to-insight across unstructured data",
+    "Enterprise-grade relevance with domain fine-tuning"
+  ]
+}

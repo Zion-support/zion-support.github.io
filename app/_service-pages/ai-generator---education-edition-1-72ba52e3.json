@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-generator---education-edition-1-72ba52e3",
+  "breadcrumbTitle": "AI Generator - Education Edition #1",
+  "title": "AI Generator - Education Edition #1",
+  "description": "Transform your education operations with our AI Generator - Education Edition #1. This AI-driven solution automates energy management with unprecedented accurac",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Generator - Education Edition #1 - Zion Tech Group",
+    "description": "Transform your education operations with our AI Generator - Education Edition #1. This AI-driven solution automates energy management with unprecedented accurac",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-generator---education-edition-1-72ba52e3"
+    }
+  },
+  "features": [
+    "GDPR compliance",
+    "Serverless functions",
+    "Auto-scaling capabilities",
+    "Container orchestration"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "Seamless integration with existing systems",
+    "24/7 automated operations",
+    "Reduced human error by 95%",
+    "Cost optimization recommendations"
+  ]
+}

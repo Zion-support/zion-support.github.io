@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/smart-coordinator-for-agriculture-9456b366",
+  "breadcrumbTitle": "Smart Coordinator for Agriculture",
+  "title": "Smart Coordinator for Agriculture",
+  "description": "Transform your agriculture operations with our Smart Coordinator for Agriculture. This AI-driven solution automates financial planning with unprecedented accura",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart Coordinator for Agriculture - Zion Tech Group",
+    "description": "Transform your agriculture operations with our Smart Coordinator for Agriculture. This AI-driven solution automates financial planning with unprecedented accura",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-coordinator-for-agriculture-9456b366"
+    }
+  },
+  "features": [
+    "Zero-downtime updates",
+    "Cloud-native architecture",
+    "Data encryption",
+    "HIPAA ready"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "Zero manual intervention required",
+    "24/7 automated operations"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/insights-cognitive---retail-ce2f7bb7",
+  "breadcrumbTitle": "Insights Cognitive - Retail",
+  "title": "Insights Cognitive - Retail",
+  "description": "The future of retail is here with Insights Cognitive - Retail. Powered by cutting-edge AI, this platform delivers document processing like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Insights Cognitive - Retail - Zion Tech Group",
+    "description": "The future of retail is here with Insights Cognitive - Retail. Powered by cutting-edge AI, this platform delivers document processing like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/insights-cognitive---retail-ce2f7bb7"
+    }
+  },
+  "features": [
+    "Container orchestration",
+    "Comprehensive monitoring",
+    "HIPAA ready",
+    "Edge computing support",
+    "Custom integrations"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "Self-healing infrastructure",
+    "50% reduction in operational costs",
+    "Scalable to millions of transactions"
+  ]
+}

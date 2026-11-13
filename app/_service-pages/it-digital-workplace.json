@@ -1,0 +1,29 @@
+{
+  "title": "IT Digital Workplace & Employee Experience",
+  "description": "Design and implement the modern digital workplace. From Microsoft 365 and Google Workspace to intranet, collaboration tools, and employee experience platforms.",
+  "basic": "$8/user/mo/month",
+  "pro": "$15/user/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "IT Digital Workplace & Employee Experience - Zion Tech Group",
+    "description": "Design and implement the modern digital workplace. From Microsoft 365 and Google Workspace to intranet, collaboration tools, and employee experience platforms.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-digital-workplace"
+    }
+  },
+  "features": [
+    "Microsoft 365 / Google Workspace deployment",
+    "Intranet and employee portal development",
+    "Collaboration tool selection and rollout",
+    "Identity and access management",
+    "Endpoint management and security"
+  ],
+  "benefits": [
+    "Increase employee productivity by 25%",
+    "Reduce IT support tickets by 40%",
+    "Improve employee satisfaction scores",
+    "Enable seamless hybrid work"
+  ]
+}

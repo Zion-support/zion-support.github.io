@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/smart-government-workflow-automation-075f56e2",
+  "breadcrumbTitle": "Smart Government Workflow Automation",
+  "title": "Smart Government Workflow Automation",
+  "description": "Intelligent workflow automation platform that streamlines government processes and eliminates manual tasks.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Smart Government Workflow Automation - Zion Tech Group",
+    "description": "Intelligent workflow automation platform that streamlines government processes and eliminates manual tasks.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-government-workflow-automation-075f56e2"
+    }
+  },
+  "features": [
+    "Process mapping",
+    "Task automation",
+    "Workflow optimization",
+    "Exception handling"
+  ],
+  "benefits": [
+    "Faster operations",
+    "Reduced errors",
+    "Improved productivity",
+    "Better resource utilization"
+  ]
+}

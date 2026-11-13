@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/enterprise-zero-trust-supply-chain-analytics-suite-ffba8682",
+  "breadcrumbTitle": "Enterprise Zero-Trust Supply Chain Analytics Suite",
+  "title": "Enterprise Zero-Trust Supply Chain Analytics Suite",
+  "description": "Enterprise analytics suite that delivers zero-trust supply chain insights with unified dashboards and reporting.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Enterprise Zero-Trust Supply Chain Analytics Suite - Zion Tech Group",
+    "description": "Enterprise analytics suite that delivers zero-trust supply chain insights with unified dashboards and reporting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/enterprise-zero-trust-supply-chain-analytics-suite-ffba8682"
+    }
+  },
+  "features": [
+    "Data visualization",
+    "Custom dashboards",
+    "Report generation",
+    "KPI tracking"
+  ],
+  "benefits": [
+    "Unified data view",
+    "Faster insights",
+    "Customizable reports",
+    "Cross-functional collaboration"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/director-neural---legal-00c0f0f5",
+  "breadcrumbTitle": "Director Neural - Legal",
+  "title": "Director Neural - Legal",
+  "description": "Next-generation legal solution: Director Neural - Legal. Combines user experience with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Director Neural - Legal - Zion Tech Group",
+    "description": "Next-generation legal solution: Director Neural - Legal. Combines user experience with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/director-neural---legal-00c0f0f5"
+    }
+  },
+  "features": [
+    "Rollback mechanisms",
+    "Data encryption",
+    "Custom integrations",
+    "Machine learning integration",
+    "Role-based access control"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "Performance benchmarking",
+    "Seamless integration with existing systems",
+    "50% reduction in operational costs",
+    "Dynamic resource allocation"
+  ]
+}

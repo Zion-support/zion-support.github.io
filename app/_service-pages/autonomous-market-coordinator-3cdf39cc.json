@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/autonomous-market-coordinator-3cdf39cc",
+  "breadcrumbTitle": "Autonomous Market Coordinator",
+  "title": "Autonomous Market Coordinator",
+  "description": "Next-generation logistics solution: Autonomous Market Coordinator. Combines decision support with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous Market Coordinator - Zion Tech Group",
+    "description": "Next-generation logistics solution: Autonomous Market Coordinator. Combines decision support with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-market-coordinator-3cdf39cc"
+    }
+  },
+  "features": [
+    "SOC 2 certified",
+    "Real-time processing",
+    "Open-source friendly",
+    "API-first design",
+    "Custom integrations"
+  ],
+  "benefits": [
+    "Automated compliance reporting",
+    "Cost optimization recommendations",
+    "Scalable to millions of transactions"
+  ]
+}

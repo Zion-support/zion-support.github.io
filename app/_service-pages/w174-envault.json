@@ -1,0 +1,29 @@
+{
+  "title": "EnVault — Environment Config Manager",
+  "description": "Manage application configuration and environment variables across dev/staging/prod. Encrypted at rest, audit trails, and instant rollback. Like Doppler/Envkey for teams.",
+  "basic": "$15/mo/month",
+  "pro": "$49/mo/month",
+  "enterprise": "$149/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "EnVault — Environment Config Manager - Zion Tech Group",
+    "description": "Manage application configuration and environment variables across dev/staging/prod. Encrypted at rest, audit trails, and instant rollback. Like Doppler/Envkey f",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w174-envault"
+    }
+  },
+  "features": [
+    "Encrypted environment variable storage",
+    "Environment promotion (dev → staging → prod)",
+    "Secret rotation and expiry policies",
+    "Full audit trail and change history",
+    "Instant rollback on misconfigurations"
+  ],
+  "benefits": [
+    "Never leak .env files again",
+    "Environment promotion eliminates copy-paste errors",
+    "Audit trail for compliance and debugging",
+    "Instant rollback on bad deployments"
+  ]
+}

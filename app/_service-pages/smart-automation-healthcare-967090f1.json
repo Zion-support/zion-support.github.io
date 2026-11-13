@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/smart-automation-healthcare-967090f1",
+  "breadcrumbTitle": "Smart automation-healthcare",
+  "title": "Smart automation-healthcare",
+  "description": "The future of healthcare is here with Smart automation-healthcare. Powered by cutting-edge AI, this platform delivers fraud prevention like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart automation-healthcare - Zion Tech Group",
+    "description": "The future of healthcare is here with Smart automation-healthcare. Powered by cutting-edge AI, this platform delivers fraud prevention like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-automation-healthcare-967090f1"
+    }
+  },
+  "features": [
+    "API-first design",
+    "Rollback mechanisms",
+    "Alerting system",
+    "Edge computing support"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "Self-healing infrastructure",
+    "Reduced human error by 95%",
+    "Automated compliance reporting"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "SOC Analytics & Threat Hunting",
+  "description": "Advanced SOC analytics with threat hunting: anomaly detection, MITRE ATT&CK mapping, kill chain analysis, and proactive threat hunting by experienced analysts.",
+  "basic": "$1,999/mo/month",
+  "pro": "$4,999/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "SOC Analytics & Threat Hunting - Zion Tech Group",
+    "description": "Advanced SOC analytics with threat hunting: anomaly detection, MITRE ATT&CK mapping, kill chain analysis, and proactive threat hunting by experienced analysts.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w175-soc-analytics"
+    }
+  },
+  "features": [
+    "Behavioral anomaly detection",
+    "MITRE ATT&CK technique mapping",
+    "Kill chain and attack path analysis",
+    "Proactive threat hunting campaigns",
+    "Threat intelligence correlation"
+  ],
+  "benefits": [
+    "Threat hunting finds what automated rules miss",
+    "ATT&CK mapping for detection coverage gaps",
+    "Kill chain analysis reveals full attack story",
+    "ML rule suggestions improve SOC efficiency"
+  ]
+}

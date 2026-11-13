@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-composable-insurance-analytics-91ccb44f",
+  "breadcrumbTitle": "AI-Powered Composable Insurance Analytics",
+  "title": "AI-Powered Composable Insurance Analytics",
+  "description": "AI-driven analytics platform that delivers composable insights into insurance operations, providing real-time monitoring, predictive modeling, and automated rep",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Composable Insurance Analytics - Zion Tech Group",
+    "description": "AI-driven analytics platform that delivers composable insights into insurance operations, providing real-time monitoring, predictive modeling, and automated rep",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-composable-insurance-analytics-91ccb44f"
+    }
+  },
+  "features": [
+    "Real-time monitoring",
+    "Predictive modeling",
+    "Automated reporting",
+    "Custom dashboards"
+  ],
+  "benefits": [
+    "Data-driven decision making",
+    "Improved operational efficiency",
+    "Proactive issue detection",
+    "Enhanced KPI tracking"
+  ]
+}

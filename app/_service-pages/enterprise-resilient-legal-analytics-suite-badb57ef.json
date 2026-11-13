@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/enterprise-resilient-legal-analytics-suite-badb57ef",
+  "breadcrumbTitle": "Enterprise Resilient Legal Analytics Suite",
+  "title": "Enterprise Resilient Legal Analytics Suite",
+  "description": "Enterprise analytics suite that delivers resilient legal insights with unified dashboards and reporting.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Enterprise Resilient Legal Analytics Suite - Zion Tech Group",
+    "description": "Enterprise analytics suite that delivers resilient legal insights with unified dashboards and reporting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/enterprise-resilient-legal-analytics-suite-badb57ef"
+    }
+  },
+  "features": [
+    "Data visualization",
+    "Custom dashboards",
+    "Report generation",
+    "KPI tracking"
+  ],
+  "benefits": [
+    "Unified data view",
+    "Faster insights",
+    "Customizable reports",
+    "Cross-functional collaboration"
+  ]
+}

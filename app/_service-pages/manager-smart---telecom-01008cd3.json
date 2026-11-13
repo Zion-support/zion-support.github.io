@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/manager-smart---telecom-01008cd3",
+  "breadcrumbTitle": "Manager Smart - Telecom",
+  "title": "Manager Smart - Telecom",
+  "description": "Unlock unprecedented growth with Manager Smart - Telecom. This autonomous system provides document processing with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Manager Smart - Telecom - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Manager Smart - Telecom. This autonomous system provides document processing with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/manager-smart---telecom-01008cd3"
+    }
+  },
+  "features": [
+    "Plugin architecture",
+    "Container orchestration",
+    "Real-time processing",
+    "Comprehensive monitoring",
+    "Mobile-responsive interface"
+  ],
+  "benefits": [
+    "Cost optimization recommendations",
+    "Automated compliance reporting",
+    "Enterprise-grade security"
+  ]
+}

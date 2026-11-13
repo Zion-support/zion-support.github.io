@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/enterprise-quantum-ready-sales-analytics-suite-81e7c3db",
+  "breadcrumbTitle": "Enterprise Quantum-Ready Sales Analytics Suite",
+  "title": "Enterprise Quantum-Ready Sales Analytics Suite",
+  "description": "Enterprise analytics suite that delivers quantum-ready sales insights with unified dashboards and reporting.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Enterprise Quantum-Ready Sales Analytics Suite - Zion Tech Group",
+    "description": "Enterprise analytics suite that delivers quantum-ready sales insights with unified dashboards and reporting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/enterprise-quantum-ready-sales-analytics-suite-81e7c3db"
+    }
+  },
+  "features": [
+    "Data visualization",
+    "Custom dashboards",
+    "Report generation",
+    "KPI tracking"
+  ],
+  "benefits": [
+    "Unified data view",
+    "Faster insights",
+    "Customizable reports",
+    "Cross-functional collaboration"
+  ]
+}

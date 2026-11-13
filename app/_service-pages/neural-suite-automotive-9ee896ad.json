@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/neural-suite-automotive-9ee896ad",
+  "breadcrumbTitle": "Neural suite-automotive",
+  "title": "Neural suite-automotive",
+  "description": "Revolutionize automotive through intelligent automation. Our Neural suite-automotive leverages advanced machine learning to deliver maintenance scheduling at sc",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Neural suite-automotive - Zion Tech Group",
+    "description": "Revolutionize automotive through intelligent automation. Our Neural suite-automotive leverages advanced machine learning to deliver maintenance scheduling at sc",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/neural-suite-automotive-9ee896ad"
+    }
+  },
+  "features": [
+    "SOC 2 certified",
+    "Data encryption",
+    "Cloud-native architecture",
+    "Role-based access control",
+    "GDPR compliance"
+  ],
+  "benefits": [
+    "Automated compliance reporting",
+    "Intelligent load balancing",
+    "99.9% uptime guarantee",
+    "3x faster decision making"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-suite-logistics-1-99311959",
+  "breadcrumbTitle": "Intelligent suite-logistics #1",
+  "title": "Intelligent suite-logistics #1",
+  "description": "Revolutionize logistics through intelligent automation. Our Intelligent suite-logistics #1 leverages advanced machine learning to deliver customer insights at s",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent suite-logistics #1 - Zion Tech Group",
+    "description": "Revolutionize logistics through intelligent automation. Our Intelligent suite-logistics #1 leverages advanced machine learning to deliver customer insights at s",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-suite-logistics-1-99311959"
+    }
+  },
+  "features": [
+    "Role-based access control",
+    "Plugin architecture",
+    "SOC 2 certified",
+    "Performance dashboards",
+    "Cloud-native architecture"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "ROI in under 90 days",
+    "Cost optimization recommendations"
+  ]
+}

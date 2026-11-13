@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/intelligent-maintenance-platform-1288f171",
+  "breadcrumbTitle": "Intelligent Maintenance Platform",
+  "title": "Intelligent Maintenance Platform",
+  "description": "Next-generation sports solution: Intelligent Maintenance Platform. Combines market intelligence with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Maintenance Platform - Zion Tech Group",
+    "description": "Next-generation sports solution: Intelligent Maintenance Platform. Combines market intelligence with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-maintenance-platform-1288f171"
+    }
+  },
+  "features": [
+    "Performance dashboards",
+    "Container orchestration",
+    "Alerting system",
+    "Machine learning integration"
+  ],
+  "benefits": [
+    "Scalable to millions of transactions",
+    "Automated compliance reporting",
+    "Predictive maintenance scheduling"
+  ]
+}

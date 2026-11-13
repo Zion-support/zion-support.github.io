@@ -1,0 +1,28 @@
+{
+  "title": "Hybrid + Multi-Cloud Networking",
+  "description": "Zero-trust networking across on-prem/edge/cloud: cloud-router fabric connects VPCs across AWS/GCP/Azure, on-prem data-centre via WireGuard or IPSec, global anycast front-door with WAF.",
+  "basic": "$99/mo/month",
+  "pro": "$349/mo/month",
+  "enterprise": "$1,299/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Hybrid + Multi-Cloud Networking - Zion Tech Group",
+    "description": "Zero-trust networking across on-prem/edge/cloud: cloud-router fabric connects VPCs across AWS/GCP/Azure, on-prem data-centre via WireGuard or IPSec, global anyc",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cloud-hybrid-multicloud-networking"
+    }
+  },
+  "features": [
+    "Cloud-router fabric — single control-plane connects up to 40 VPCs/accounts",
+    "Site-to-cloud connectivity via WireGuard tunnel or IPSec with automated failover",
+    "Global anycast front-door with WAF + geo-ip routing per user",
+    "Zero-trust per-connection IAM authorization beyond the network boundary"
+  ],
+  "benefits": [
+    "Reduce costs with hybrid + multi-cloud networking",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

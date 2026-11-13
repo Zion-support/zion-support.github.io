@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "AI Data Lakehouse Pipelines: policy and compliance | Zion Tech Group",
+    "description": "AI Data Lakehouse Pipelines: policy and compliance",
+    "keywords": [
+      "ai",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "AI Data Lakehouse Pipelines: policy and compliance",
+      "description": "AI Data Lakehouse Pipelines: policy and compliance",
+      "url": "https://ziontechgroup.com/blog/ai-data-lakehouse-pipelines-policy-and-compliance/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/ai-data-lakehouse-pipelines-policy-and-compliance/"
+    }
+  },
+  "values": [
+    "AI Data Lakehouse Pipelines: policy and compliance",
+    "AI Data Lakehouse Pipelines: policy and compliance",
+    "AI Data Lakehouse Pipelines: policy and compliance",
+    "Action checklist",
+    "For ai data lakehouse pipelines: policy and compliance: pick one workflow, assign ownership, define success metrics, instrument execution, and set a 30-day review date. Write the checklist down and share it with stakeholders so expectations are explicit. Before launch, verify access controls, monitoring, rollback criteria, and on-call coverage. After launch, review metrics weekly and escalate deviations immediately; small drifts become large incidents when ignored. Use the checklist as a living document and update it as the program learns from real operation.",
+    "Action checklist",
+    " For ai data lakehouse pipelines: policy and compliance: pick one workflow, assign ownership, define success metrics, instrument execution, and set a 30-day review date. Write the checklist down and share it with stakeholders so expectations are explicit. Before launch, verify access controls, monitoring, rollback criteria, and on-call coverage. After launch, review metrics weekly and escalate deviations immediately; small drifts become large incidents when ignored. Use the checklist as a living document and update it as the program learns from real operation.",
+    "/blog/ai-3d-asset-generator-2026-7132",
+    "Ai 3D Asset Generator 2026 7132",
+    "/blog/ai-email-intelligence-2026-6976",
+    "Ai Email Intelligence 2026 6976",
+    "/blog/apm-application-performance-2026-7084",
+    "Apm Application Performance 2026 7084",
+    "/blog/devsecops-pipeline-2026-6818",
+    "Devsecops Pipeline 2026 6818"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "AI Data Lakehouse Pipelines: policy and compliance",
+    "description": "AI Data Lakehouse Pipelines: policy and compliance",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T04:51:02Z",
+    "dateModified": "2026-08-07T04:51:02Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/ai-data-lakehouse-pipelines-policy-and-compliance/"
+  }
+}

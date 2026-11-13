@@ -1,0 +1,29 @@
+{
+  "title": "AI for Sustainable Operations (Green AI)",
+  "description": "Optimize compute & cloud resource usage to reduce carbon footprint: model carbon-aware scheduling, energy profiling, and sustainability reporting.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI for Sustainable Operations (Green AI) - Zion Tech Group",
+    "description": "Optimize compute & cloud resource usage to reduce carbon footprint: model carbon-aware scheduling, energy profiling, and sustainability reporting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-sustainable-ops"
+    }
+  },
+  "features": [
+    "Carbon intensity forecasting per region",
+    "Job scheduling to low-carbon time windows",
+    "Resource right-sizing recommendations",
+    "Sustainability KPI dashboards",
+    "Compliance with ESG reporting standards"
+  ],
+  "benefits": [
+    "Reduce costs with ai for sustainable operations (green ai)",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/director-autonomous---hospitality-bf12b394",
+  "breadcrumbTitle": "Director Autonomous - Hospitality",
+  "title": "Director Autonomous - Hospitality",
+  "description": "Revolutionize hospitality through intelligent automation. Our Director Autonomous - Hospitality leverages advanced machine learning to deliver network optimizat",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Director Autonomous - Hospitality - Zion Tech Group",
+    "description": "Revolutionize hospitality through intelligent automation. Our Director Autonomous - Hospitality leverages advanced machine learning to deliver network optimizat",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/director-autonomous---hospitality-bf12b394"
+    }
+  },
+  "features": [
+    "Edge computing support",
+    "Zero-downtime updates",
+    "Plugin architecture",
+    "Microservices deployment",
+    "Performance dashboards"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "Cost optimization recommendations",
+    "Dynamic resource allocation"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/declarative-vision-ai-for-human-resources-2d821c68",
+  "breadcrumbTitle": "Declarative Vision AI for Human Resources",
+  "title": "Declarative Vision AI for Human Resources",
+  "description": "Vision AI system powered by declarative computer vision models for human resources analysis and automated visual inspection.",
+  "basic": "$258/month",
+  "pro": "$648/month",
+  "enterprise": "$1948/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Declarative Vision AI for Human Resources - Zion Tech Group",
+    "description": "Vision AI system powered by declarative computer vision models for human resources analysis and automated visual inspection.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/declarative-vision-ai-for-human-resources-2d821c68"
+    }
+  },
+  "features": [
+    "Real-time object detection",
+    "Image classification",
+    "Anomaly detection",
+    "Visual inspection"
+  ],
+  "benefits": [
+    "Automated quality control",
+    "Reduced inspection costs",
+    "Defect detection",
+    "Visual search"
+  ]
+}

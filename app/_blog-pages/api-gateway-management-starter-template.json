@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "API Gateway Management: starter template | Zion Tech Group",
+    "description": "API Gateway Management: starter template",
+    "keywords": [
+      "it",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "API Gateway Management: starter template",
+      "description": "API Gateway Management: starter template",
+      "url": "https://ziontechgroup.com/blog/api-gateway-management-starter-template/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/api-gateway-management-starter-template/"
+    }
+  },
+  "values": [
+    "API Gateway Management: starter template",
+    "API Gateway Management: starter template",
+    "API Gateway Management: starter template",
+    "Conversion path",
+    "If this guide matches your api gateway management: starter template initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "Conversion path",
+    " If this guide matches your api gateway management: starter template initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "/blog/incident-response-retainer-evaluation-framework",
+    "Incident Response Retainer Evaluation Framework",
+    "/blog/ai-api-gateway-2026-7172",
+    "Ai Api Gateway 2026 7172",
+    "/blog/ai-msp-security-compliance-2026-7325",
+    "Ai Msp Security Compliance 2026 7325",
+    "/blog/etl-pipeline-optimization-executive-guide",
+    "Etl Pipeline Optimization Executive Guide"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "API Gateway Management: starter template",
+    "description": "API Gateway Management: starter template",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T04:52:35Z",
+    "dateModified": "2026-08-07T04:52:35Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/api-gateway-management-starter-template/"
+  }
+}

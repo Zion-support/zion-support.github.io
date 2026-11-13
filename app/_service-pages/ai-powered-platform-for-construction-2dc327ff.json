@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-powered-platform-for-construction-2dc327ff",
+  "breadcrumbTitle": "AI-Powered Platform for Construction",
+  "title": "AI-Powered Platform for Construction",
+  "description": "Next-generation construction solution: AI-Powered Platform for Construction. Combines customer insights with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI-Powered Platform for Construction - Zion Tech Group",
+    "description": "Next-generation construction solution: AI-Powered Platform for Construction. Combines customer insights with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-platform-for-construction-2dc327ff"
+    }
+  },
+  "features": [
+    "Offline capabilities",
+    "Alerting system",
+    "Microservices deployment",
+    "Open-source friendly",
+    "Plugin architecture"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "Enterprise-grade security",
+    "Self-healing infrastructure",
+    "Cost optimization recommendations"
+  ]
+}

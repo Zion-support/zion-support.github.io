@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-driven-data-driven-financial-planning-8743e787",
+  "breadcrumbTitle": "AI-Driven Data-Driven Financial Planning",
+  "title": "AI-Driven Data-Driven Financial Planning",
+  "description": "Automated financial planning system that creates data-driven personalized wealth strategies, tax optimization, and retirement planning using advanced algorithms",
+  "basic": "$258/month",
+  "pro": "$648/month",
+  "enterprise": "$1948/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Driven Data-Driven Financial Planning - Zion Tech Group",
+    "description": "Automated financial planning system that creates data-driven personalized wealth strategies, tax optimization, and retirement planning using advanced algorithms",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-driven-data-driven-financial-planning-8743e787"
+    }
+  },
+  "features": [
+    "Goal-based planning",
+    "Tax optimization",
+    "Monte Carlo simulation",
+    "Rebalancing automation"
+  ],
+  "benefits": [
+    "Personalized advice",
+    "Tax efficiency",
+    "Goal achievement",
+    "Lower fees"
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "Container Security Lifecycle: starter template | Zion Tech Group",
+    "description": "Container Security Lifecycle: starter template",
+    "keywords": [
+      "ai",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "Container Security Lifecycle: starter template",
+      "description": "Container Security Lifecycle: starter template",
+      "url": "https://ziontechgroup.com/blog/container-security-lifecycle-starter-template/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/container-security-lifecycle-starter-template/"
+    }
+  },
+  "values": [
+    "Container Security Lifecycle: starter template",
+    "Container Security Lifecycle: starter template",
+    "Container Security Lifecycle: starter template",
+    "Recommended next step",
+    "Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "Recommended next step",
+    " Start with one workflow, one owner, and one success metric. Expansion should follow evidence, not enthusiasm. A focused pilot beats a scattered roadmap because it produces proof points that stakeholders can verify. If this matches your current initiative, the next step is a short scoping call and a concrete pilot plan.",
+    "/blog/api-performance-testing-2026",
+    "Api Performance Testing 2026",
+    "/blog/managed-it-services-automation-roadmap",
+    "Managed It Services Automation Roadmap",
+    "/blog/ai-agent-safety-evaluation-2026-6791",
+    "Ai Agent Safety Evaluation 2026 6791",
+    "/blog/accessibility-compliance-2026-6734",
+    "Accessibility Compliance 2026 6734"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Container Security Lifecycle: starter template",
+    "description": "Container Security Lifecycle: starter template",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T04:52:16Z",
+    "dateModified": "2026-08-07T04:52:16Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/container-security-lifecycle-starter-template/"
+  }
+}

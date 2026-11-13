@@ -1,0 +1,29 @@
+{
+  "title": "ExpenseLite — Expense Management",
+  "description": "Simple expense management: receipt scanning, auto-categorization, approval flows, and reimbursement. Built for small and mid-size teams.",
+  "basic": "$5/user/mo/month",
+  "pro": "$10/user/mo/month",
+  "enterprise": "$20/user/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "ExpenseLite — Expense Management - Zion Tech Group",
+    "description": "Simple expense management: receipt scanning, auto-categorization, approval flows, and reimbursement. Built for small and mid-size teams.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w175-expensify-lite"
+    }
+  },
+  "features": [
+    "Receipt OCR scanning and data extraction",
+    "AI auto-categorization of expenses",
+    "Mileage tracking with GPS",
+    "Multi-level approval workflows",
+    "Corporate card reconciliation"
+  ],
+  "benefits": [
+    "Receipt scanning eliminates manual entry",
+    "AI categorization saves 80% of time",
+    "Approval flows enforce policy",
+    "Reimbursement automated, not manual"
+  ]
+}

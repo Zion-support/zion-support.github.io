@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/smart-orchestrator-hospitality-bd01ec47",
+  "breadcrumbTitle": "Smart orchestrator-hospitality",
+  "title": "Smart orchestrator-hospitality",
+  "description": "The future of hospitality is here with Smart orchestrator-hospitality. Powered by cutting-edge AI, this platform delivers quality control like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Smart orchestrator-hospitality - Zion Tech Group",
+    "description": "The future of hospitality is here with Smart orchestrator-hospitality. Powered by cutting-edge AI, this platform delivers quality control like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/smart-orchestrator-hospitality-bd01ec47"
+    }
+  },
+  "features": [
+    "Cloud-native architecture",
+    "Alerting system",
+    "Zero-downtime updates",
+    "Mobile-responsive interface"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "Scalable to millions of transactions",
+    "24/7 automated operations"
+  ]
+}

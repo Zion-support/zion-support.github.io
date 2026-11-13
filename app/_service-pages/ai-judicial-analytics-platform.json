@@ -1,0 +1,28 @@
+{
+  "title": "AI Judicial Analytics & Case Prediction",
+  "description": "Analyze case law, predict litigation outcomes, and optimize legal strategy. NLP across 50M+ cases, judge behavior analysis, and settlement range prediction. Used by 100+ law firms.",
+  "basic": "$299/month",
+  "pro": "$799/month",
+  "enterprise": "$2999/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Judicial Analytics & Case Prediction - Zion Tech Group",
+    "description": "Analyze case law, predict litigation outcomes, and optimize legal strategy. NLP across 50M+ cases, judge behavior analysis, and settlement range prediction. Use",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-judicial-analytics-platform"
+    }
+  },
+  "features": [
+    "Case outcome prediction (85% accuracy)",
+    "Judge behavior analysis",
+    "Settlement range estimation",
+    "Precedent citation mining",
+    "Brief quality scoring"
+  ],
+  "benefits": [
+    "85% litigation outcome accuracy",
+    "Negotiate better settlements",
+    "Win more cases"
+  ]
+}

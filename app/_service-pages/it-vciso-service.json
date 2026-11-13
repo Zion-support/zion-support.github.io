@@ -1,0 +1,29 @@
+{
+  "title": "vCISO as a Service",
+  "description": "Virtual Chief Information Security Officer for security strategy and compliance leadership.",
+  "basic": "$5,000/mo/month",
+  "pro": "$10,000/mo/month",
+  "enterprise": "$Custom/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "vCISO as a Service - Zion Tech Group",
+    "description": "Virtual Chief Information Security Officer for security strategy and compliance leadership.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/it-vciso-service"
+    }
+  },
+  "features": [
+    "Security strategy",
+    "Policy development",
+    "Compliance management",
+    "Incident response",
+    "Risk assessments"
+  ],
+  "benefits": [
+    "Executive expertise",
+    "Cost-effective",
+    "Compliance leadership",
+    "Incident readiness"
+  ]
+}

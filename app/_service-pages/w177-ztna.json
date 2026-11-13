@@ -1,0 +1,29 @@
+{
+  "title": "Zero Trust Network Access (ZTNA)",
+  "description": "ZTNA replaces VPN: identity-based access, device posture verification, per-application access, no network trust.",
+  "basic": "$8/user/mo/month",
+  "pro": "$15/user/mo/month",
+  "enterprise": "$25/user/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Zero Trust Network Access (ZTNA) - Zion Tech Group",
+    "description": "ZTNA replaces VPN: identity-based access, device posture verification, per-application access, no network trust.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w177-ztna"
+    }
+  },
+  "features": [
+    "Identity-based access control",
+    "Device posture verification",
+    "Per-application access (no network trust)",
+    "Continuous session verification",
+    "Split tunneling for performance"
+  ],
+  "benefits": [
+    "Replace VPN with zero trust",
+    "Device posture blocks non-compliant devices",
+    "Per-application access limits blast radius",
+    "Continuous verification prevents session hijacking"
+  ]
+}

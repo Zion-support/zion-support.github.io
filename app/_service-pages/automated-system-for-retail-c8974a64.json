@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/automated-system-for-retail-c8974a64",
+  "breadcrumbTitle": "Automated System for Retail",
+  "title": "Automated System for Retail",
+  "description": "The future of retail is here with Automated System for Retail. Powered by cutting-edge AI, this platform delivers predictive analytics like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated System for Retail - Zion Tech Group",
+    "description": "The future of retail is here with Automated System for Retail. Powered by cutting-edge AI, this platform delivers predictive analytics like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-system-for-retail-c8974a64"
+    }
+  },
+  "features": [
+    "Multi-region deployment",
+    "HIPAA ready",
+    "Zero-downtime updates",
+    "Role-based access control",
+    "API-first design"
+  ],
+  "benefits": [
+    "Self-healing infrastructure",
+    "50% reduction in operational costs",
+    "ROI in under 90 days",
+    "3x faster decision making",
+    "Cost optimization recommendations"
+  ]
+}

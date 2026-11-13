@@ -1,0 +1,28 @@
+{
+  "title": "Event-Driven Microservices Platform",
+  "description": "Event backbone as a service: managed Pub-Sub broker, event schema registry, replay from any timestamp, dead-letter queue management, per-service event-sourcing, per-event observability, and fan-out handler groups.",
+  "basic": "$49/mo/month",
+  "pro": "$199/mo/month",
+  "enterprise": "$699/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Event-Driven Microservices Platform - Zion Tech Group",
+    "description": "Event backbone as a service: managed Pub-Sub broker, event schema registry, replay from any timestamp, dead-letter queue management, per-service event-sourcing,",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/cloud-event-driven-microservices"
+    }
+  },
+  "features": [
+    "Managed Pub-Sub broker with dead-letter queue and exponential backoff retry",
+    "Schema registry with per-service event-sourcing and backward compatibility checks",
+    "Replay any consumer topic from any timestamp for incident forensics or backfill",
+    "Fan-out handler group — subscriber load-balanced and auto-scaled per event type"
+  ],
+  "benefits": [
+    "Reduce costs with event-driven microservices platform",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

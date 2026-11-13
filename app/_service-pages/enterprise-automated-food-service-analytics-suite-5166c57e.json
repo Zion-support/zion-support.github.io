@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/enterprise-automated-food-service-analytics-suite-5166c57e",
+  "breadcrumbTitle": "Enterprise Automated Food Service Analytics Suite",
+  "title": "Enterprise Automated Food Service Analytics Suite",
+  "description": "Enterprise analytics suite that delivers automated food service insights with unified dashboards and reporting.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Enterprise Automated Food Service Analytics Suite - Zion Tech Group",
+    "description": "Enterprise analytics suite that delivers automated food service insights with unified dashboards and reporting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/enterprise-automated-food-service-analytics-suite-5166c57e"
+    }
+  },
+  "features": [
+    "Data visualization",
+    "Custom dashboards",
+    "Report generation",
+    "KPI tracking"
+  ],
+  "benefits": [
+    "Unified data view",
+    "Faster insights",
+    "Customizable reports",
+    "Cross-functional collaboration"
+  ]
+}

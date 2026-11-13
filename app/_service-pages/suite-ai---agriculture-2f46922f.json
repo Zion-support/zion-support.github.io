@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/suite-ai---agriculture-2f46922f",
+  "breadcrumbTitle": "Suite AI - Agriculture",
+  "title": "Suite AI - Agriculture",
+  "description": "Transform your agriculture operations with our Suite AI - Agriculture. This AI-driven solution automates energy management with unprecedented accuracy and effic",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Suite AI - Agriculture - Zion Tech Group",
+    "description": "Transform your agriculture operations with our Suite AI - Agriculture. This AI-driven solution automates energy management with unprecedented accuracy and effic",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/suite-ai---agriculture-2f46922f"
+    }
+  },
+  "features": [
+    "Rollback mechanisms",
+    "Multi-region deployment",
+    "Auto-scaling capabilities",
+    "Serverless functions",
+    "Microservices deployment"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "Zero manual intervention required",
+    "99.9% uptime guarantee"
+  ]
+}

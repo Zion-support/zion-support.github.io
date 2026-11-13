@@ -1,0 +1,29 @@
+{
+  "title": "AI Drug Discovery & Molecular Design",
+  "description": "Accelerate pharmaceutical R&D with AI-powered molecular simulation, target identification, toxicity prediction, and clinical trial optimization.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Drug Discovery & Molecular Design - Zion Tech Group",
+    "description": "Accelerate pharmaceutical R&D with AI-powered molecular simulation, target identification, toxicity prediction, and clinical trial optimization.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-drug-discovery"
+    }
+  },
+  "features": [
+    "De novo molecular design with generative AI",
+    "Protein-ligand binding affinity prediction",
+    "ADMET toxicity and pharmacokinetics modeling",
+    "Clinical trial cohort matching and optimization",
+    "Multi-target drug candidate screening"
+  ],
+  "benefits": [
+    "Reduce costs with ai drug discovery & molecular design",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

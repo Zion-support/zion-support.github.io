@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/ai-insights---hospitality-edition-7-5850b8d9",
+  "breadcrumbTitle": "AI Insights - Hospitality Edition #7",
+  "title": "AI Insights - Hospitality Edition #7",
+  "description": "The future of hospitality is here with AI Insights - Hospitality Edition #7. Powered by cutting-edge AI, this platform delivers language processing like never b",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Insights - Hospitality Edition #7 - Zion Tech Group",
+    "description": "The future of hospitality is here with AI Insights - Hospitality Edition #7. Powered by cutting-edge AI, this platform delivers language processing like never b",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-insights---hospitality-edition-7-5850b8d9"
+    }
+  },
+  "features": [
+    "HIPAA ready",
+    "Alerting system",
+    "Plugin architecture",
+    "Audit trails",
+    "Serverless functions"
+  ],
+  "benefits": [
+    "Cost optimization recommendations",
+    "Real-time insights and alerts",
+    "Automated compliance reporting",
+    "3x faster decision making"
+  ]
+}

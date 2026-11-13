@@ -1,0 +1,29 @@
+{
+  "title": "Mobile Application Security",
+  "description": "Mobile app security testing and protection: SAST, DAST, code obfuscation, runtime protection, and app store compliance for iOS and Android.",
+  "basic": "$499/mo/month",
+  "pro": "$1,499/mo/month",
+  "enterprise": "$4,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Mobile Application Security - Zion Tech Group",
+    "description": "Mobile app security testing and protection: SAST, DAST, code obfuscation, runtime protection, and app store compliance for iOS and Android.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w176-mobile-security"
+    }
+  },
+  "features": [
+    "Mobile SAST (iOS Swift, Android Kotlin/Java)",
+    "Mobile DAST with device farm testing",
+    "Code obfuscation and anti-tampering",
+    "Runtime protection (RASP)",
+    "API security testing for mobile backends"
+  ],
+  "benefits": [
+    "Find mobile vulnerabilities before release",
+    "Runtime protection defends in production",
+    "Anti-tampering prevents reverse engineering",
+    "App store compliance prevents rejection"
+  ]
+}

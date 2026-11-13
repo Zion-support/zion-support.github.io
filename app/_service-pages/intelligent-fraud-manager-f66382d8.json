@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligent-fraud-manager-f66382d8",
+  "breadcrumbTitle": "Intelligent Fraud Manager",
+  "title": "Intelligent Fraud Manager",
+  "description": "Next-generation finance solution: Intelligent Fraud Manager. Combines threat detection with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Fraud Manager - Zion Tech Group",
+    "description": "Next-generation finance solution: Intelligent Fraud Manager. Combines threat detection with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-fraud-manager-f66382d8"
+    }
+  },
+  "features": [
+    "Audit trails",
+    "Auto-scaling capabilities",
+    "HIPAA ready",
+    "Edge computing support"
+  ],
+  "benefits": [
+    "50% reduction in operational costs",
+    "Dynamic resource allocation",
+    "99.9% uptime guarantee",
+    "Automated compliance reporting",
+    "3x faster decision making"
+  ]
+}

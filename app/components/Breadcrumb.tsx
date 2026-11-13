@@ -45,11 +45,11 @@ function truncateLabel(label: string): string {
   return label.slice(0, TRUNCATE_LENGTH) + '…';
 }
 
-export default function Breadcrumb({ className }: { className?: string }) {
+export default function Breadcrumb({ className, items: suppliedItems }: { className?: string; items?: BreadcrumbItem[] }) {
   const pathname = usePathname();
-  const items = pathToSegments(pathname);
+  const items = suppliedItems ?? pathToSegments(pathname ?? '/');
 
-  if (pathname === '/' || items.length === 0) {
+  if ((!suppliedItems && pathname === '/') || items.length === 0) {
     return (
       <nav aria-label="Breadcrumb" className={className}>
         <span className="text-sm text-slate-500">Home</span>
@@ -126,5 +126,5 @@ export function BreadcrumbLink({ href, label, current }: { href: string; label: 
 
 export function useBreadcrumb() {
   const pathname = usePathname();
-  return pathToSegments(pathname);
+  return pathToSegments(pathname ?? '/');
 }

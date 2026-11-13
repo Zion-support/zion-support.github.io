@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/adaptive-automation-automotive-1-dbe422aa",
+  "breadcrumbTitle": "Adaptive automation-automotive #1",
+  "title": "Adaptive automation-automotive #1",
+  "description": "Next-generation automotive solution: Adaptive automation-automotive #1. Combines inventory management with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Adaptive automation-automotive #1 - Zion Tech Group",
+    "description": "Next-generation automotive solution: Adaptive automation-automotive #1. Combines inventory management with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/adaptive-automation-automotive-1-dbe422aa"
+    }
+  },
+  "features": [
+    "Cloud-native architecture",
+    "Role-based access control",
+    "Alerting system",
+    "Performance dashboards",
+    "API-first design"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "Scalable to millions of transactions",
+    "Real-time insights and alerts"
+  ]
+}

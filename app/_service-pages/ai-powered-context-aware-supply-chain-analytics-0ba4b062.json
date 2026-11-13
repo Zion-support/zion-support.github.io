@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-powered-context-aware-supply-chain-analytics-0ba4b062",
+  "breadcrumbTitle": "AI-Powered Context-Aware Supply Chain Analytics",
+  "title": "AI-Powered Context-Aware Supply Chain Analytics",
+  "description": "AI-driven analytics platform that delivers context-aware insights into supply chain operations, providing real-time monitoring, predictive modeling, and automat",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI-Powered Context-Aware Supply Chain Analytics - Zion Tech Group",
+    "description": "AI-driven analytics platform that delivers context-aware insights into supply chain operations, providing real-time monitoring, predictive modeling, and automat",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-powered-context-aware-supply-chain-analytics-0ba4b062"
+    }
+  },
+  "features": [
+    "Real-time monitoring",
+    "Predictive modeling",
+    "Automated reporting",
+    "Custom dashboards"
+  ],
+  "benefits": [
+    "Data-driven decision making",
+    "Improved operational efficiency",
+    "Proactive issue detection",
+    "Enhanced KPI tracking"
+  ]
+}

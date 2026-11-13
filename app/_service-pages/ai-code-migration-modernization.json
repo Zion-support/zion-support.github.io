@@ -1,0 +1,29 @@
+{
+  "title": "AI Code Migration & Modernization",
+  "description": "Automatically migrate legacy codebases to modern frameworks (COBOL → Java, jQuery → React, Python 2 → Python 3) with AI-assisted refactoring.",
+  "basic": "$149/mo/month",
+  "pro": "$449/mo/month",
+  "enterprise": "$1,499/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "AI Code Migration & Modernization - Zion Tech Group",
+    "description": "Automatically migrate legacy codebases to modern frameworks (COBOL → Java, jQuery → React, Python 2 → Python 3) with AI-assisted refactoring.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-code-migration-modernization"
+    }
+  },
+  "features": [
+    "Automated code translation",
+    "Dependency analysis and mapping",
+    "Test generation and validation",
+    "Incremental migration planning",
+    "Code quality scoring post-migration"
+  ],
+  "benefits": [
+    "Reduce costs with ai code migration & modernization",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

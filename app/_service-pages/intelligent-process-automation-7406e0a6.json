@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligent-process-automation-7406e0a6",
+  "breadcrumbTitle": "Intelligent Process Automation",
+  "title": "Intelligent Process Automation",
+  "description": "Transform your construction operations with our Intelligent Process Automation. This AI-driven solution automates security monitoring with unprecedented accurac",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Process Automation - Zion Tech Group",
+    "description": "Transform your construction operations with our Intelligent Process Automation. This AI-driven solution automates security monitoring with unprecedented accurac",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-process-automation-7406e0a6"
+    }
+  },
+  "features": [
+    "Serverless functions",
+    "Mobile-responsive interface",
+    "Machine learning integration",
+    "Plugin architecture",
+    "GDPR compliance"
+  ],
+  "benefits": [
+    "50% reduction in operational costs",
+    "Reduced human error by 95%",
+    "Predictive maintenance scheduling",
+    "Zero manual intervention required"
+  ]
+}

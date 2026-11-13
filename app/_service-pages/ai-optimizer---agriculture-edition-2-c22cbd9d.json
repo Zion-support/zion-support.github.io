@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-optimizer---agriculture-edition-2-c22cbd9d",
+  "breadcrumbTitle": "AI Optimizer - Agriculture Edition #2",
+  "title": "AI Optimizer - Agriculture Edition #2",
+  "description": "The future of agriculture is here with AI Optimizer - Agriculture Edition #2. Powered by cutting-edge AI, this platform delivers supply chain like never before.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "AI Optimizer - Agriculture Edition #2 - Zion Tech Group",
+    "description": "The future of agriculture is here with AI Optimizer - Agriculture Edition #2. Powered by cutting-edge AI, this platform delivers supply chain like never before.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-optimizer---agriculture-edition-2-c22cbd9d"
+    }
+  },
+  "features": [
+    "Microservices deployment",
+    "Open-source friendly",
+    "Container orchestration",
+    "Performance dashboards",
+    "API-first design"
+  ],
+  "benefits": [
+    "Enterprise-grade security",
+    "Real-time insights and alerts",
+    "Predictive maintenance scheduling"
+  ]
+}

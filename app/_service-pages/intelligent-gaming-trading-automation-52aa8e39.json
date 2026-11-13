@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-gaming-trading-automation-52aa8e39",
+  "breadcrumbTitle": "Intelligent Gaming Trading Automation",
+  "title": "Intelligent Gaming Trading Automation",
+  "description": "Algorithmic trading platform that executes insightful strategies using AI-driven market analysis, sentiment processing, and real-time risk management.",
+  "basic": "$318/month",
+  "pro": "$798/month",
+  "enterprise": "$2398/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Gaming Trading Automation - Zion Tech Group",
+    "description": "Algorithmic trading platform that executes insightful strategies using AI-driven market analysis, sentiment processing, and real-time risk management.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-gaming-trading-automation-52aa8e39"
+    }
+  },
+  "features": [
+    "Signal generation",
+    "Execution optimization",
+    "Risk controls",
+    "Performance attribution"
+  ],
+  "benefits": [
+    "Alpha generation",
+    "Reduced latency",
+    "Disciplined execution",
+    "Scalable strategies"
+  ]
+}

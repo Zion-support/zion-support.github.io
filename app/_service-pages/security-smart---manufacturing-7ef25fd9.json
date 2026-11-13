@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/security-smart---manufacturing-7ef25fd9",
+  "breadcrumbTitle": "Security Smart - Manufacturing",
+  "title": "Security Smart - Manufacturing",
+  "description": "The future of Manufacturing is here with Security Smart - Manufacturing. Powered by cutting-edge AI, this platform delivers performance monitoring like never be",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Security Smart - Manufacturing - Zion Tech Group",
+    "description": "The future of Manufacturing is here with Security Smart - Manufacturing. Powered by cutting-edge AI, this platform delivers performance monitoring like never be",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/security-smart---manufacturing-7ef25fd9"
+    }
+  },
+  "features": [
+    "Role-based access control with SSO integration",
+    "Serverless functions for cost-effective scaling",
+    "Market analysis with buyer behavior insights",
+    "Brand monitoring across social channels",
+    "Language processing with sentiment analysis"
+  ],
+  "benefits": [
+    "Better financial planning with predictive models",
+    "Predictive maintenance scheduling to prevent downtime",
+    "Reduced shipping costs with route optimization",
+    "Improved brand awareness with social monitoring"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-suite---automotive-edition-3a076b7d",
+  "breadcrumbTitle": "AI Suite - Automotive Edition",
+  "title": "AI Suite - Automotive Edition",
+  "description": "Transform your automotive operations with our AI Suite - Automotive Edition. This AI-driven solution automates quality control with unprecedented accuracy and e",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Suite - Automotive Edition - Zion Tech Group",
+    "description": "Transform your automotive operations with our AI Suite - Automotive Edition. This AI-driven solution automates quality control with unprecedented accuracy and e",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-suite---automotive-edition-3a076b7d"
+    }
+  },
+  "features": [
+    "Mobile-responsive interface",
+    "Cloud-native architecture",
+    "Open-source friendly",
+    "Comprehensive monitoring"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "3x faster decision making",
+    "Scalable to millions of transactions",
+    "Enterprise-grade security"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/neural-intelligence-for-finance-eb448d67",
+  "breadcrumbTitle": "Neural Intelligence for Finance",
+  "title": "Neural Intelligence for Finance",
+  "description": "Transform your finance operations with our Neural Intelligence for Finance. This AI-driven solution automates energy management with unprecedented accuracy and ",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Neural Intelligence for Finance - Zion Tech Group",
+    "description": "Transform your finance operations with our Neural Intelligence for Finance. This AI-driven solution automates energy management with unprecedented accuracy and ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/neural-intelligence-for-finance-eb448d67"
+    }
+  },
+  "features": [
+    "Auto-scaling capabilities",
+    "Multi-language support",
+    "Microservices deployment",
+    "Offline capabilities"
+  ],
+  "benefits": [
+    "24/7 automated operations",
+    "Reduced human error by 95%",
+    "99.9% uptime guarantee",
+    "Cost optimization recommendations"
+  ]
+}

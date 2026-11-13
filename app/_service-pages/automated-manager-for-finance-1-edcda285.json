@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/automated-manager-for-finance-1-edcda285",
+  "breadcrumbTitle": "Automated Manager for Finance #1",
+  "title": "Automated Manager for Finance #1",
+  "description": "Revolutionize finance through intelligent automation. Our Automated Manager for Finance #1 leverages advanced machine learning to deliver network optimization a",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Automated Manager for Finance #1 - Zion Tech Group",
+    "description": "Revolutionize finance through intelligent automation. Our Automated Manager for Finance #1 leverages advanced machine learning to deliver network optimization a",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/automated-manager-for-finance-1-edcda285"
+    }
+  },
+  "features": [
+    "Cloud-native architecture",
+    "Performance dashboards",
+    "Role-based access control",
+    "Custom integrations"
+  ],
+  "benefits": [
+    "Cost optimization recommendations",
+    "Seamless integration with existing systems",
+    "24/7 automated operations"
+  ]
+}

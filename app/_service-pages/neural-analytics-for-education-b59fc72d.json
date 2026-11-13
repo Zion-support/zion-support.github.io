@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/neural-analytics-for-education-b59fc72d",
+  "breadcrumbTitle": "Neural Analytics for Education",
+  "title": "Neural Analytics for Education",
+  "description": "Transform your education operations with our Neural Analytics for Education. This AI-driven solution automates quality control with unprecedented accuracy and e",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Neural Analytics for Education - Zion Tech Group",
+    "description": "Transform your education operations with our Neural Analytics for Education. This AI-driven solution automates quality control with unprecedented accuracy and e",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/neural-analytics-for-education-b59fc72d"
+    }
+  },
+  "features": [
+    "Custom integrations",
+    "Zero-downtime updates",
+    "Plugin architecture",
+    "Role-based access control",
+    "API-first design"
+  ],
+  "benefits": [
+    "Real-time insights and alerts",
+    "Seamless integration with existing systems",
+    "Enterprise-grade security"
+  ]
+}

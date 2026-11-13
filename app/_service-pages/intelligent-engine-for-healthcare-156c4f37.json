@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/intelligent-engine-for-healthcare-156c4f37",
+  "breadcrumbTitle": "Intelligent Engine for Healthcare",
+  "title": "Intelligent Engine for Healthcare",
+  "description": "Unlock unprecedented growth with Intelligent Engine for Healthcare. This autonomous system provides workflow management with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Engine for Healthcare - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Intelligent Engine for Healthcare. This autonomous system provides workflow management with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-engine-for-healthcare-156c4f37"
+    }
+  },
+  "features": [
+    "Audit trails",
+    "Mobile-responsive interface",
+    "Plugin architecture",
+    "Comprehensive monitoring"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "Scalable to millions of transactions",
+    "Cost optimization recommendations",
+    "Predictive maintenance scheduling",
+    "Real-time insights and alerts"
+  ]
+}

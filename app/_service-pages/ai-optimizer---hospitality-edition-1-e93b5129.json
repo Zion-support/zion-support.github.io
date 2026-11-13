@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/ai-optimizer---hospitality-edition-1-e93b5129",
+  "breadcrumbTitle": "AI Optimizer - Hospitality Edition #1",
+  "title": "AI Optimizer - Hospitality Edition #1",
+  "description": "Transform your hospitality operations with our AI Optimizer - Hospitality Edition #1. This AI-driven solution automates process automation with unprecedented ac",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "AI Optimizer - Hospitality Edition #1 - Zion Tech Group",
+    "description": "Transform your hospitality operations with our AI Optimizer - Hospitality Edition #1. This AI-driven solution automates process automation with unprecedented ac",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-optimizer---hospitality-edition-1-e93b5129"
+    }
+  },
+  "features": [
+    "Cloud-native architecture",
+    "Auto-scaling capabilities",
+    "Offline capabilities",
+    "Data encryption",
+    "Microservices deployment"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "Cost optimization recommendations",
+    "Performance benchmarking"
+  ]
+}

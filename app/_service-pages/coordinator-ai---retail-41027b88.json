@@ -1,0 +1,30 @@
+{
+  "breadcrumbPath": "/services/coordinator-ai---retail-41027b88",
+  "breadcrumbTitle": "Coordinator AI - Retail",
+  "title": "Coordinator AI - Retail",
+  "description": "Next-generation retail solution: Coordinator AI - Retail. Combines decision support with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Coordinator AI - Retail - Zion Tech Group",
+    "description": "Next-generation retail solution: Coordinator AI - Retail. Combines decision support with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/coordinator-ai---retail-41027b88"
+    }
+  },
+  "features": [
+    "GDPR compliance",
+    "Cloud-native architecture",
+    "Container orchestration",
+    "Edge computing support",
+    "Offline capabilities"
+  ],
+  "benefits": [
+    "24/7 automated operations",
+    "Dynamic resource allocation",
+    "Real-time insights and alerts",
+    "Self-healing infrastructure"
+  ]
+}

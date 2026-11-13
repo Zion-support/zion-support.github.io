@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/suite-predictive---hospitality-a49cd423",
+  "breadcrumbTitle": "Suite Predictive - Hospitality",
+  "title": "Suite Predictive - Hospitality",
+  "description": "Revolutionize hospitality through intelligent automation. Our Suite Predictive - Hospitality leverages advanced machine learning to deliver predictive analytics",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Suite Predictive - Hospitality - Zion Tech Group",
+    "description": "Revolutionize hospitality through intelligent automation. Our Suite Predictive - Hospitality leverages advanced machine learning to deliver predictive analytics",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/suite-predictive---hospitality-a49cd423"
+    }
+  },
+  "features": [
+    "Serverless functions",
+    "Microservices deployment",
+    "Alerting system",
+    "Mobile-responsive interface",
+    "Plugin architecture"
+  ],
+  "benefits": [
+    "50% reduction in operational costs",
+    "Reduced human error by 95%",
+    "24/7 automated operations",
+    "Self-healing infrastructure",
+    "Performance benchmarking"
+  ]
+}

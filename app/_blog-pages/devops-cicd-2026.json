@@ -1,0 +1,63 @@
+{
+  "template": "tech-article",
+  "metadata": {
+    "title": "DevOps CI/CD | Zion Tech Group",
+    "description": "DevOps CI/CD",
+    "keywords": [
+      "it",
+      "guide",
+      "AI services",
+      "IT services",
+      "Zion Tech Group"
+    ],
+    "authors": {
+      "name": "Zion Tech Group"
+    },
+    "openGraph": {
+      "title": "DevOps CI/CD",
+      "description": "DevOps CI/CD",
+      "url": "https://ziontechgroup.com/blog/devops-cicd-2026/",
+      "type": "article",
+      "siteName": "Zion Tech Group"
+    },
+    "alternates": {
+      "canonical": "/blog/devops-cicd-2026/"
+    }
+  },
+  "values": [
+    "DevOps CI/CD",
+    "DevOps CI/CD",
+    "DevOps CI/CD",
+    "Conversion path",
+    "If this guide matches your devops ci/cd initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "Conversion path",
+    " If this guide matches your devops ci/cd initiative, the next step is a scoping call with Zion Tech Group. We will define one measurable outcome, identify dependencies, and outline a pilot plan you can start in days. Contact us to move from assessment to execution with a timeline and success criteria already in place.",
+    "/blog/api-management-gateway-2026-6738",
+    "Api Management Gateway 2026 6738",
+    "/blog/ai-performance-monitoring-2026-6873",
+    "Ai Performance Monitoring 2026 6873",
+    "/blog/cloud-finops-2026-6673",
+    "Cloud Finops 2026 6673",
+    "/blog/ai-api-gateway-2026-7241",
+    "Ai Api Gateway 2026 7241"
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "DevOps CI/CD",
+    "description": "DevOps CI/CD",
+    "author": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    },
+    "datePublished": "2026-08-07T04:51:00Z",
+    "dateModified": "2026-08-07T04:51:00Z",
+    "mainEntityOfPage": "https://ziontechgroup.com/blog/devops-cicd-2026/"
+  }
+}

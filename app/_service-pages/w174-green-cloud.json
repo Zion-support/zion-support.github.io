@@ -1,0 +1,29 @@
+{
+  "title": "Green Cloud & Sustainability Optimizer",
+  "description": "Optimize cloud workloads for carbon efficiency: right-size for energy, choose green regions, schedule non-critical workloads off-peak, and report carbon metrics.",
+  "basic": "$199/mo/month",
+  "pro": "$599/mo/month",
+  "enterprise": "$1,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Green Cloud & Sustainability Optimizer - Zion Tech Group",
+    "description": "Optimize cloud workloads for carbon efficiency: right-size for energy, choose green regions, schedule non-critical workloads off-peak, and report carbon metrics",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/w174-green-cloud"
+    }
+  },
+  "features": [
+    "Carbon footprint tracking per workload",
+    "Green region recommendation (AWS, Azure, GCP)",
+    "Right-sizing for energy efficiency",
+    "Non-critical workload scheduling (off-peak)",
+    "Carbon offset integration"
+  ],
+  "benefits": [
+    "Reduce cloud carbon footprint by 30-50%",
+    "Green regions use renewable energy",
+    "Off-peak scheduling reduces grid impact",
+    "ESG-aligned reporting for sustainability goals"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/enterprise-adaptive-healthcare-analytics-suite-4c7867f6",
+  "breadcrumbTitle": "Enterprise Adaptive Healthcare Analytics Suite",
+  "title": "Enterprise Adaptive Healthcare Analytics Suite",
+  "description": "Enterprise analytics suite that delivers adaptive healthcare insights with unified dashboards and reporting.",
+  "basic": "$238/month",
+  "pro": "$598/month",
+  "enterprise": "$1798/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Enterprise Adaptive Healthcare Analytics Suite - Zion Tech Group",
+    "description": "Enterprise analytics suite that delivers adaptive healthcare insights with unified dashboards and reporting.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/enterprise-adaptive-healthcare-analytics-suite-4c7867f6"
+    }
+  },
+  "features": [
+    "Data visualization",
+    "Custom dashboards",
+    "Report generation",
+    "KPI tracking"
+  ],
+  "benefits": [
+    "Unified data view",
+    "Faster insights",
+    "Customizable reports",
+    "Cross-functional collaboration"
+  ]
+}

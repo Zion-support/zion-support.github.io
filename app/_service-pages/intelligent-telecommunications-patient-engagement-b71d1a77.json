@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-telecommunications-patient-engagement-b71d1a77",
+  "breadcrumbTitle": "Intelligent Telecommunications Patient Engagement",
+  "title": "Intelligent Telecommunications Patient Engagement",
+  "description": "AI-driven patient engagement platform that delivers insightful personalized care journeys, remote monitoring, and adherence support through intelligent automati",
+  "basic": "$258/month",
+  "pro": "$648/month",
+  "enterprise": "$1948/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "metadata": {
+    "title": "Intelligent Telecommunications Patient Engagement - Zion Tech Group",
+    "description": "AI-driven patient engagement platform that delivers insightful personalized care journeys, remote monitoring, and adherence support through intelligent automati",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-telecommunications-patient-engagement-b71d1a77"
+    }
+  },
+  "features": [
+    "Personalized care plans",
+    "Remote monitoring",
+    "Medication adherence",
+    "Virtual consultations"
+  ],
+  "benefits": [
+    "Better outcomes",
+    "Higher satisfaction",
+    "Reduced readmissions",
+    "Lower costs"
+  ]
+}

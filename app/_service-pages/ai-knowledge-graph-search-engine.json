@@ -1,0 +1,29 @@
+{
+  "title": "Knowledge Graph Search Engine",
+  "description": "Semantic graph search engine: turn siloed docs, databases, and APIs into a unified knowledge graph with entity disambiguation, NL query rewriting, and cited ranked answers across 50+ connected tools.",
+  "basic": "$149/mo/month",
+  "pro": "$399/mo/month",
+  "enterprise": "$1,299/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Knowledge Graph Search Engine - Zion Tech Group",
+    "description": "Semantic graph search engine: turn siloed docs, databases, and APIs into a unified knowledge graph with entity disambiguation, NL query rewriting, and cited ran",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/ai-knowledge-graph-search-engine"
+    }
+  },
+  "features": [
+    "Multi-source entity and relation extractor from PDF, Notion, Slack, databases, and API specs",
+    "Entity disambiguation with canonical identity store",
+    "NL query rewriter — \\",
+    " becomes a graph query automatically",
+    "Every answer carries a primary-source footnote plus timestamp"
+  ],
+  "benefits": [
+    "Reduce costs with knowledge graph search engine",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

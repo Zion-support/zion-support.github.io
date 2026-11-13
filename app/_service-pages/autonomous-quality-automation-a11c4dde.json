@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/autonomous-quality-automation-a11c4dde",
+  "breadcrumbTitle": "Autonomous Quality Automation",
+  "title": "Autonomous Quality Automation",
+  "description": "Transform your education operations with our Autonomous Quality Automation. This AI-driven solution automates energy management with unprecedented accuracy and ",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous Quality Automation - Zion Tech Group",
+    "description": "Transform your education operations with our Autonomous Quality Automation. This AI-driven solution automates energy management with unprecedented accuracy and ",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-quality-automation-a11c4dde"
+    }
+  },
+  "features": [
+    "GDPR compliance",
+    "Open-source friendly",
+    "Auto-scaling capabilities",
+    "Edge computing support",
+    "Microservices deployment"
+  ],
+  "benefits": [
+    "ROI in under 90 days",
+    "Real-time insights and alerts",
+    "Intelligent load balancing"
+  ]
+}

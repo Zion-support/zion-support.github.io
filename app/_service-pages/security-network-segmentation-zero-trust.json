@@ -1,0 +1,28 @@
+{
+  "title": "Network Segmentation & Zero Trust",
+  "description": "Micro-segmentation policy design per workload, East-West traffic policy enforcement, and SIEM policy-deployment rollback alert.",
+  "basic": "$299/mo/month",
+  "pro": "$899/mo/month",
+  "enterprise": "$2,999/mo/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/consultation",
+  "layout": "simple",
+  "metadata": {
+    "title": "Network Segmentation & Zero Trust - Zion Tech Group",
+    "description": "Micro-segmentation policy design per workload, East-West traffic policy enforcement, and SIEM policy-deployment rollback alert.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/security-network-segmentation-zero-trust"
+    }
+  },
+  "features": [
+    "Service/workload inventory (K8s/VM/CNI)",
+    "East-West micro-segmentation policy designer",
+    "Policy deployment + rollback alert",
+    "Policy coverage heat-map per namespace"
+  ],
+  "benefits": [
+    "Reduce costs with network segmentation & zero trust",
+    "Improve operational efficiency",
+    "Scale without complexity",
+    "Enterprise-grade reliability"
+  ]
+}

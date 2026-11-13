@@ -1,0 +1,31 @@
+{
+  "breadcrumbPath": "/services/autonomous-coordinator-energy-5e4b5eb2",
+  "breadcrumbTitle": "Autonomous coordinator-energy",
+  "title": "Autonomous coordinator-energy",
+  "description": "Unlock unprecedented growth with Autonomous coordinator-energy. This autonomous system provides workflow management with zero manual intervention needed.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Autonomous coordinator-energy - Zion Tech Group",
+    "description": "Unlock unprecedented growth with Autonomous coordinator-energy. This autonomous system provides workflow management with zero manual intervention needed.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/autonomous-coordinator-energy-5e4b5eb2"
+    }
+  },
+  "features": [
+    "Microservices deployment",
+    "Real-time processing",
+    "Mobile-responsive interface",
+    "Audit trails",
+    "SOC 2 certified"
+  ],
+  "benefits": [
+    "Zero manual intervention required",
+    "99.9% uptime guarantee",
+    "Scalable to millions of transactions",
+    "Real-time insights and alerts",
+    "Predictive maintenance scheduling"
+  ]
+}

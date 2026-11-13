@@ -1,0 +1,28 @@
+{
+  "breadcrumbPath": "/services/intelligence-predictive---healthcare-1-1aee1dc0",
+  "breadcrumbTitle": "Intelligence Predictive - Healthcare #1",
+  "title": "Intelligence Predictive - Healthcare #1",
+  "description": "Transform your healthcare operations with our Intelligence Predictive - Healthcare #1. This AI-driven solution automates financial planning with unprecedented a",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligence Predictive - Healthcare #1 - Zion Tech Group",
+    "description": "Transform your healthcare operations with our Intelligence Predictive - Healthcare #1. This AI-driven solution automates financial planning with unprecedented a",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligence-predictive---healthcare-1-1aee1dc0"
+    }
+  },
+  "features": [
+    "Microservices deployment",
+    "Machine learning integration",
+    "Plugin architecture",
+    "HIPAA ready"
+  ],
+  "benefits": [
+    "Reduced human error by 95%",
+    "24/7 automated operations",
+    "Scalable to millions of transactions"
+  ]
+}

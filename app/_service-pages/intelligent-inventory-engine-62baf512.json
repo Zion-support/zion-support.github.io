@@ -1,0 +1,29 @@
+{
+  "breadcrumbPath": "/services/intelligent-inventory-engine-62baf512",
+  "breadcrumbTitle": "Intelligent Inventory Engine",
+  "title": "Intelligent Inventory Engine",
+  "description": "Next-generation hospitality solution: Intelligent Inventory Engine. Combines market intelligence with adaptive intelligence for optimal results.",
+  "basic": "$199/month",
+  "pro": "$499/month",
+  "enterprise": "$1499/month",
+  "consultationHref": "https://calendly.com/kleber-ziontechgroup/30min",
+  "metadata": {
+    "title": "Intelligent Inventory Engine - Zion Tech Group",
+    "description": "Next-generation hospitality solution: Intelligent Inventory Engine. Combines market intelligence with adaptive intelligence for optimal results.",
+    "alternates": {
+      "canonical": "https://ziontechgroup.com/services/intelligent-inventory-engine-62baf512"
+    }
+  },
+  "features": [
+    "HIPAA ready",
+    "Multi-region deployment",
+    "Rollback mechanisms",
+    "Performance dashboards",
+    "Offline capabilities"
+  ],
+  "benefits": [
+    "Predictive maintenance scheduling",
+    "Enterprise-grade security",
+    "Seamless integration with existing systems"
+  ]
+}
