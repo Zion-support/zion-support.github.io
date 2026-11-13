@@ -31,6 +31,7 @@ test('export package preserves files and HTTP behavior in workerd', async (t) =>
     'café/index.html': '<title>Café</title>',
     'flat.html': '<title>Flat</title>',
     '_next/static/test.js': 'console.log("fixture")',
+    '_next/static/catalog.js': '/*' + 'catalog data '.repeat(2300000) + '*/globalThis.fixture = true;',
     'icon.png': randomBytes(128),
     '_redirects': '/discovery/ /wrong/ 301',
     '_headers': '/*\n  X-Legacy: ignored',
@@ -44,7 +45,8 @@ test('export package preserves files and HTTP behavior in workerd', async (t) =>
   }
   const report = await packAssets(input, output);
   assert.ok(report.packs >= 2); assert.ok(report.maxPackBytes <= PACK_BYTES);
-  assert.equal(report.packedFiles, report.verifiedFiles);
+  assert.equal(report.packedFiles + report.streamedFiles, report.verifiedFiles);
+  assert.equal(report.streamedFiles, 1);
   assert.ok(report.uploadFiles < 20000);
   await assert.rejects(packAssets(input, output), { code: 'EEXIST' });
   for (const [name, bytes] of Object.entries(content)) assert.deepEqual(await fs.readFile(path.join(input, name)), Buffer.from(bytes));
@@ -81,6 +83,24 @@ test('export package preserves files and HTTP behavior in workerd', async (t) =>
   assert.equal(compressed.status, 200);
   assert.equal(compressed.headers['content-encoding'], 'gzip');
   assert.equal(gunzipSync(compressed.bytes).toString(), content['discovery/index.html']);
+  const largeCompressed = await new Promise((resolve, reject) => {
+    http.get(new URL('/_next/static/catalog.js', address), { headers: { 'Accept-Encoding': 'gzip' } }, res => {
+      const chunks = []; res.on('data', c => chunks.push(c));
+      res.on('end', () => resolve({ status: res.statusCode, headers: res.headers, bytes: Buffer.concat(chunks) }));
+      res.on('error', reject);
+    }).on('error', reject);
+  });
+  assert.equal(largeCompressed.status, 200);
+  assert.equal(largeCompressed.headers['content-encoding'], 'gzip');
+  assert.match(largeCompressed.headers['content-type'], /javascript/);
+  assert.match(largeCompressed.headers['cache-control'], /immutable/);
+  assert.equal(gunzipSync(largeCompressed.bytes).toString(), content['_next/static/catalog.js']);
+  const largeHead = await get('/_next/static/catalog.js', { method: 'HEAD', headers: { 'Accept-Encoding': 'identity' } });
+  assert.equal(Number(largeHead.headers.get('content-length')), Buffer.byteLength(content['_next/static/catalog.js']));
+  assert.equal(await largeHead.text(), '');
+  const largeConditional = await get('/_next/static/catalog.js', { headers: { 'Accept-Encoding': 'gzip', 'If-None-Match': largeCompressed.headers.etag } });
+  assert.equal(largeConditional.status, 304);
+  assert.equal((await get(PREFIX + 's0.bin')).status, 404);
   const etag = compressed.headers.etag;
   const conditional = await get('/discovery/', { headers: { 'Accept-Encoding': 'gzip', 'If-None-Match': 'W/' + etag } });
   assert.equal(conditional.status, 304); assert.equal(await conditional.text(), '');

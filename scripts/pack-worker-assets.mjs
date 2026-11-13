@@ -1,9 +1,21 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { createHash } from 'node:crypto';
-import { gzipSync, gunzipSync } from 'node:zlib';
+import { gzipSync, gunzipSync, createGzip, createGunzip } from 'node:zlib';
+import { createReadStream, createWriteStream } from 'node:fs';
+import { pipeline } from 'node:stream/promises';
 import { pathToFileURL } from 'node:url';
-import { PREFIX, PACK_BYTES, FILE_BYTES, INDEX_BYTES, SHARDS, MIME, shardFromDigest } from '../cloudflare/asset-format.mjs';
+import { PREFIX, PACK_BYTES, FILE_BYTES, INDEX_BYTES, SHARDS, MIME, ASSET_BYTES, STREAM_BYTES, STREAM_MIME, shardFromDigest } from '../cloudflare/asset-format.mjs';
+
+async function streamDigest(stream) {
+  const hash = createHash('sha256'); let size = 0;
+  for await (const bytes of stream) {
+    size += bytes.length;
+    if (size > STREAM_BYTES) throw new Error('Oversize JavaScript exceeds stream bound');
+    hash.update(bytes);
+  }
+  return { size, hash: hash.digest('hex') };
+}
 
 export async function verifyDiscovery(input, source) {
   const canonical = await fs.readFile(source);
@@ -32,7 +44,7 @@ export async function packAssets(input = 'out', output = '.worker-assets') {
   const indices = Array.from({ length: SHARDS }, () => Object.create(null));
   const exact = new Set();
   const aliases = [];
-  const report = { format: 1, inputFiles: 0, packedFiles: 0, directFiles: 0, controlFiles: [], originalBytes: 0, compressedBytes: 0, packs: 0, shards: SHARDS, maxPackBytes: 0, maxIndexBytes: 0, verifiedFiles: 0 };
+  const report = { format: 1, inputFiles: 0, packedFiles: 0, streamedFiles: 0, directFiles: 0, controlFiles: [], originalBytes: 0, compressedBytes: 0, packs: 0, shards: SHARDS, maxPackBytes: 0, maxIndexBytes: 0, verifiedFiles: 0 };
   let chunks = [], used = 0, packId = 0;
   const indexFor = (p) => indices[parseInt(shardFromDigest(createHash('sha256').update(p).digest()), 16)];
   const put = (p, entry) => { indexFor(p)[p] = entry; };
@@ -53,7 +65,21 @@ export async function packAssets(input = 'out', output = '.worker-assets') {
       const src = path.join(input, relative), stat = await fs.stat(src), type = MIME[path.extname(relative)];
       report.originalBytes += stat.size;
       let entry;
-      if (type && stat.size <= FILE_BYTES) {
+      // A legacy catalog produces a single >25 MiB JS module. Stream its gzip
+      // representation without changing the URL or loading it whole in the Worker.
+      if (stat.size > ASSET_BYTES && STREAM_MIME[path.extname(relative)]) {
+        if (stat.size > STREAM_BYTES) throw new Error(`Oversize JavaScript exceeds stream bound: ${relative}`);
+        const compressed = `s${report.streamedFiles}.bin`, dest = path.join(internal, compressed);
+        await pipeline(createReadStream(src), createGzip({ level: 6 }), createWriteStream(dest, { flags: 'wx' }));
+        const length = (await fs.stat(dest)).size;
+        if (length > ASSET_BYTES) throw new Error(`Compressed JavaScript exceeds 25 MiB: ${relative}`);
+        const original = await streamDigest(createReadStream(src));
+        const decoded = await streamDigest(createReadStream(dest).pipe(createGunzip()));
+        if (original.size !== decoded.size || original.hash !== decoded.hash) throw new Error(`Stream round-trip mismatch: ${relative}`);
+        entry = { stream: compressed, original: original.size, length, hash: original.hash, mime: STREAM_MIME[path.extname(relative)] };
+        put(url, entry); report.streamedFiles++; report.verifiedFiles++; report.compressedBytes += length;
+      }
+      if (!entry && type && stat.size <= FILE_BYTES) {
         const data = await fs.readFile(src), compressed = gzipSync(data, { level: 6 });
         if (compressed.length <= PACK_BYTES) {
           if (used + compressed.length > PACK_BYTES) await flush();
@@ -64,7 +90,7 @@ export async function packAssets(input = 'out', output = '.worker-assets') {
         }
       }
       if (!entry) {
-        if (stat.size > 25 * 1024 * 1024) throw new Error(`Direct asset exceeds 25 MiB: ${relative}`);
+        if (stat.size > ASSET_BYTES) throw new Error(`Direct asset exceeds 25 MiB: ${relative}`);
         const dest = path.join(output, relative);
         await fs.mkdir(path.dirname(dest), { recursive: true });
         try { await fs.link(src, dest); }
@@ -90,7 +116,7 @@ export async function packAssets(input = 'out', output = '.worker-assets') {
       await fs.writeFile(path.join(internal, `i${i.toString(16).padStart(3, '0')}.json`), bytes);
     }
     await fs.writeFile(path.join(output, '_headers'), '/*\n  Cache-Control: public, max-age=300, stale-while-revalidate=86400\n\n/_next/static/*\n  Cache-Control: public, max-age=31536000, immutable\n');
-    report.uploadFiles = report.directFiles + report.packs + SHARDS;
+    report.uploadFiles = report.directFiles + report.packs + report.streamedFiles + SHARDS;
     if (report.uploadFiles > 20000) throw new Error(`Package exceeds Free asset count: ${report.uploadFiles}`);
     await fs.writeFile(output + '.report.json', JSON.stringify(report, null, 2) + '\n');
     console.log(JSON.stringify({ event: 'worker-assets-packaged', ...report }));

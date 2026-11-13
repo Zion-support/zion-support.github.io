@@ -16,16 +16,23 @@ HTML and Next text/RSC files are stored as individually compressed gzip members
 in binary assets of at most 1 MiB. Sharded indices map the original paths to
 offsets. Each member is decompressed and compared with its source during the
 build. Nothing is removed from `out/`. Other assets use hardlinks where supported.
-The packer fails before upload if a file exceeds 25 MiB, an index exceeds 512 KiB,
+The legacy catalog also produces a JavaScript chunk larger than 25 MiB. Such JS
+files (bounded to 64 MiB uncompressed) use a separate streaming gzip asset, with
+source/decompressed SHA-256 and length equality checked before upload. Its URL,
+MIME type and executable bytes stay unchanged. The Worker streams gzip or a
+bounded decompression stream with backpressure, never a whole-file JS buffer.
+The packer fails before upload if an uploaded file exceeds 25 MiB, an index exceeds 512 KiB,
 or the upload exceeds 20,000 assets. Failed or existing package directories are
 not silently overwritten; move them aside before a deliberate local rebuild.
 
 The Worker reads at most one index and one bounded binary pack for a successful
 packed request. It serves precompressed gzip without recompression and respects
-the original client Accept-Encoding. Identity responses decode at most 4 MiB.
+the original client Accept-Encoding. Buffered identity responses decode at most
+4 MiB; exceptional large JS responses stream and validate their exact lengths.
 It supports HEAD, conditional ETags, folder aliases and custom 404; Range requests
 receive the complete 200 response, as with native Workers static assets.
-Missing/corrupt storage returns an uncached 503. Internal package paths are not
+Missing storage detected before headers returns an uncached 503; corruption
+detected during a large-file stream aborts the response. Internal package paths are not
 public routes. Ordinary assets are served directly without Worker invocation.
 
 The old public `_redirects` and `_headers` are Netlify controls, inactive on the

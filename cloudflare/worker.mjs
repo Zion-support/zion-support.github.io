@@ -1,4 +1,4 @@
-import { PREFIX, PACK_BYTES, FILE_BYTES, INDEX_BYTES, shardFromDigest } from './asset-format.mjs';
+import { PREFIX, PACK_BYTES, FILE_BYTES, INDEX_BYTES, ASSET_BYTES, STREAM_BYTES, shardFromDigest } from './asset-format.mjs';
 
 async function boundedBody(response, limit) {
   if (!response.ok || !response.body) throw new Error('Missing package asset');
@@ -33,7 +33,41 @@ function acceptsGzip(header) {
   return (values.get('gzip') ?? values.get('*') ?? 0) > 0;
 }
 
+function exactLength(stream, expected) {
+  let size = 0;
+  return stream.pipeThrough(new TransformStream({
+    transform(chunk, controller) {
+      size += chunk.byteLength;
+      if (size > expected) throw new Error('Stream exceeds declared length');
+      controller.enqueue(chunk);
+    },
+    flush() { if (size !== expected) throw new Error('Truncated stream'); },
+  }));
+}
+
+async function streamedResponse(entry, request, env) {
+  const { stream, original, length, hash, mime } = entry;
+  if (!/^s\d+\.bin$/.test(stream) || !Number.isSafeInteger(original) || original <= ASSET_BYTES || original > STREAM_BYTES ||
+      !Number.isSafeInteger(length) || length <= 0 || length > ASSET_BYTES || !/^[a-f0-9]{64}$/.test(hash) || mime !== 'text/javascript; charset=utf-8') throw new Error('Invalid streamed asset');
+  const gzip = acceptsGzip(request.cf?.clientAcceptEncoding ?? request.headers.get('Accept-Encoding'));
+  const etag = `"${hash}${gzip ? '-gz' : ''}"`;
+  const headers = new Headers({ 'Content-Type': mime, ETag: etag, Vary: 'Accept-Encoding', 'X-Content-Type-Options': 'nosniff',
+    'Cache-Control': new URL(request.url).pathname.startsWith('/_next/static/') ? 'public, max-age=31536000, immutable' : 'public, max-age=300' });
+  if (request.headers.get('If-None-Match')?.split(',').some(s => s.trim().replace(/^W\//, '') === etag || s.trim() === '*')) return new Response(null, { status: 304, headers });
+  if (gzip) headers.set('Content-Encoding', 'gzip');
+  headers.set('Content-Length', String(gzip ? length : original));
+  if (request.method === 'HEAD') return new Response(null, { headers, encodeBody: 'manual' });
+  const response = await env.ASSETS.fetch(`https://assets.invalid${PREFIX}${stream}`);
+  const storedLength = response.headers.get('Content-Length');
+  if (!response.ok || !response.body || (storedLength !== null && Number(storedLength) !== length)) throw new Error('Missing streamed package asset');
+  // Backpressure keeps memory bounded; never materialize the large JS file.
+  const encoded = exactLength(response.body, length);
+  const body = gzip ? encoded : exactLength(encoded.pipeThrough(new DecompressionStream('gzip')), original);
+  return new Response(body, { headers, encodeBody: 'manual' });
+}
+
 async function packedResponse(entry, request, env, status = 200) {
+  if (entry?.stream) return streamedResponse(entry, request, env);
   if (entry?.direct) {
     const response = await env.ASSETS.fetch(new Request(new URL(entry.direct, request.url), request));
     if (!response.ok && response.status !== 304) throw new Error('Missing direct package asset');
