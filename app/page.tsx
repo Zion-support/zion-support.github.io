@@ -851,7 +851,7 @@ export default function HomePage() {
                     <div className="mt-auto pt-3 border-t border-slate-700/50 flex justify-between items-center">
                       <span className="text-[10px] font-semibold uppercase tracking-wider bg-orange-500/12 text-orange-300 border-orange-500/25">★ Popular</span>
                       <span className="text-purple-300 text-xs font-semibold">
-                        From {(service.pricing as Record<string, string>)[Object.keys(service.pricing)[0]]}/mo
+                        From {(service.pricing as Record<string, string>)[Object.keys(service.pricing)[0]]}
                       </span>
                     </div>
                   </Link>
