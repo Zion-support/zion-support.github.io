@@ -201,7 +201,7 @@ def create_service_entry(service_name: str, industry: str, existing_ids: Set[str
         'contactInfo': {
             'website': f"/services/{service_id}",
             'email': 'hello@ziontechgroup.com',
-            'phone': '+1 (302) 464-0950'
+            'phone': '+55 11 97614-0076'
         },
         'icon': '💡',
         'href': f"/services/{service_id}",

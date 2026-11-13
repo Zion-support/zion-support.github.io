@@ -54,8 +54,8 @@ class VoiceVideoIntegration:
     def _gen_meeting(self, rec, recipients):
         mid = f"ZION-{datetime.now().strftime('%Y%m%d%H%M%S')}"
         if rec['medium'] == 'video':
-            return {'type': 'video_conference', 'platform': 'Zion Meet', 'meeting_id': mid, 'link': f'https://meet.ziontechgroup.com/{mid}', 'features': ['screen_share','recording','chat','whiteboard'], 'max_participants': 50, 'dial_in': '+1-302-464-0950'}
-        return {'type': 'voice_call', 'platform': 'Zion Voice', 'meeting_id': mid, 'link': f'https://voice.ziontechgroup.com/{mid}', 'dial_in': '+1-302-464-0950', 'features': ['recording','transcription'], 'max_participants': 20}
+            return {'type': 'video_conference', 'platform': 'Zion Meet', 'meeting_id': mid, 'link': f'https://meet.ziontechgroup.com/{mid}', 'features': ['screen_share','recording','chat','whiteboard'], 'max_participants': 50, 'dial_in': '+55 11 97614-0076'}
+        return {'type': 'voice_call', 'platform': 'Zion Voice', 'meeting_id': mid, 'link': f'https://voice.ziontechgroup.com/{mid}', 'dial_in': '+55 11 97614-0076', 'features': ['recording','transcription'], 'max_participants': 20}
 
     def _gen_response(self, rec, meeting, recipients, complexity):
         m = rec['medium']

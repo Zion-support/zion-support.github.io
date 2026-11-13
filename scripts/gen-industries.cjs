@@ -143,7 +143,7 @@ export default function Page() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/configurator" className="btn-primary text-lg px-10 py-4">Get Your Custom Proposal →</Link>
-              <a href="tel:+130****0950" className="btn-secondary text-lg px-10 py-4">☎ +1 302 464 0950</a>
+              <a href="tel:+5511976140076" className="btn-secondary text-lg px-10 py-4">☎ +55 11 97614-0076</a>
             </div>
             <p className="text-slate-500 text-xs mt-4">
               Categories: ${catBadges}
@@ -235,7 +235,7 @@ export default function IndustriesHub() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/configurator" className="btn-primary text-lg px-10 py-4">Get Your Custom Proposal →</Link>
-              <a href="tel:+130****0950" className="btn-secondary text-lg px-10 py-4">☎ +1 302 464 0950</a>
+              <a href="tel:+5511976140076" className="btn-secondary text-lg px-10 py-4">☎ +55 11 97614-0076</a>
             </div>
           </section>
         </div>

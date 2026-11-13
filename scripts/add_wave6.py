@@ -329,7 +329,7 @@ def make_service_obj(s):
     features_str = ', '.join(f'"{f}"' for f in s['features'])
     benefits_str = ', '.join(f'"{b}"' for b in s.get('benefits', []))
     pricing = s.get('pricing', {"basic": "$299/mo", "pro": "$799/mo", "enterprise": "Custom"})
-    contact = s.get('contactInfo', {"website": f"/services/{s['id']}", "email": "kleber@ziontechgroup.com", "phone": "+1 302 464 0950"})
+    contact = s.get('contactInfo', {"website": f"/services/{s['id']}", "email": "kleber@ziontechgroup.com", "phone": "+55 11 97614-0076"})
     
     return f"""  {{
     id: '{s['id']}',

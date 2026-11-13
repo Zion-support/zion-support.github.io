@@ -217,8 +217,8 @@ export default function V1066V1070Showcase() {
               Contact us today to learn how these engines can revolutionize your email workflows.
             </p>
             <div className="flex flex-wrap justify-center gap-6 text-white">
-              <a href="tel:+13024640950" className="flex items-center gap-2 hover:text-yellow-300 transition-colors">
-                <span>📱</span> +1 302 464 0950
+              <a href="tel:+5511976140076" className="flex items-center gap-2 hover:text-yellow-300 transition-colors">
+                <span>📱</span> +55 11 97614-0076
               </a>
               <a href="mailto:kleber@ziontechgroup.com" className="flex items-center gap-2 hover:text-yellow-300 transition-colors">
                 <span>✉️</span> kleber@ziontechgroup.com

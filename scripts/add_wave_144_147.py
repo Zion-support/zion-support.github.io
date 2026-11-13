@@ -5,7 +5,7 @@ import json
 with open('/data/data/com.termux/files/home/zion-support.github.io/app/data/servicesData.json', 'r') as f:
     services = json.load(f)
 
-C = {"website":"/contact","email":"kleber@ziontechgroup.com","phone":"+1 302 464 0950"}
+C = {"website":"/contact","email":"kleber@ziontechgroup.com","phone":"+55 11 97614-0076"}
 
 def s(id, title, desc, features, benefits, pricing, icon, cat, pop, ind, href):
     return {"id":id,"title":title,"description":desc,"features":features,"benefits":benefits,"pricing":pricing,"contactInfo":C,"icon":icon,"href":href,"popular":pop,"category":cat,"industry":ind}

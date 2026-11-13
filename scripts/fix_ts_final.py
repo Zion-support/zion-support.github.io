@@ -21,7 +21,7 @@ for s in missing:
     feats = ', '.join(f"'{f}'" for f in s.get('features', []))
     bens = ', '.join(f"'{b}'" for b in s.get('benefits', []))
     p = s.get('pricing', {})
-    entry = f"  {{ id: '{s['id']}', title: '{title}', description: '{desc}', features: [{feats}], benefits: [{bens}], pricing: {{ basic: '{p.get('basic','Contact')}', pro: '{p.get('pro','Contact')}', enterprise: '{p.get('enterprise','Custom')}' }}, contactInfo: {{ website: '/contact', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' }}, icon: '★', href: '{s.get('href','/services/'+s['id'])}', popular: {str(s.get('popular',False)).lower()}, category: '{s.get('category','ai')}', industry: '{s.get('industry','General')}' }},"
+    entry = f"  {{ id: '{s['id']}', title: '{title}', description: '{desc}', features: [{feats}], benefits: [{bens}], pricing: {{ basic: '{p.get('basic','Contact')}', pro: '{p.get('pro','Contact')}', enterprise: '{p.get('enterprise','Custom')}' }}, contactInfo: {{ website: '/contact', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' }}, icon: '★', href: '{s.get('href','/services/'+s['id'])}', popular: {str(s.get('popular',False)).lower()}, category: '{s.get('category','ai')}', industry: '{s.get('industry','General')}' }},"
     entries.append(entry)
 
 # Find the last '];' before 'export const getServiceById'

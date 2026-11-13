@@ -42,7 +42,7 @@ TPL_SD = (
     "    benefits: [{benefits}],\n"
     "    pricing: {{ basic: '{pb}', pro: '{pp}', enterprise: '{pe}' }},\n"
     "    contactInfo: {{ website: '{href}', email: 'kleber@ziontechgroup.com',\n"
-    "                    phone: '+1 302 464 0950' }},\n"
+    "                    phone: '+55 11 97614-0076' }},\n"
     "    href: '{href}',\n"
     "    category: '{cat}',\n"
     "    popular: {pop},\n"

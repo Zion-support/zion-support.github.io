@@ -180,8 +180,8 @@ export default function V1051V1055Showcase() {
           <h3 className="text-2xl font-bold text-white mb-4">Ready to Transform Your Email Workflow?</h3>
           <p className="text-gray-400 mb-6">Contact Zion Tech Group for a personalized demo and enterprise pricing.</p>
           <div className="flex flex-wrap justify-center gap-6 text-gray-300">
-            <a href="tel:+13024640950" className="flex items-center gap-2 hover:text-white transition-colors">
-              <span>📱</span> +1 302 464 0950
+            <a href="tel:+5511976140076" className="flex items-center gap-2 hover:text-white transition-colors">
+              <span>📱</span> +55 11 97614-0076
             </a>
             <a href="mailto:kleber@ziontechgroup.com" className="flex items-center gap-2 hover:text-white transition-colors">
               <span>✉️</span> kleber@ziontechgroup.com

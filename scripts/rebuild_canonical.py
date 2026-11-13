@@ -88,7 +88,7 @@ for cat in CAT_ORDER:
             'contactInfo': {
                 'website': f"/services/{info['id']}",
                 'email': 'kleber@ziontechgroup.com',
-                'phone': '+1 302 464 0950'
+                'phone': '+55 11 97614-0076'
             },
             'category': cat
         }
@@ -149,7 +149,7 @@ def block(en):
     L.append('    contactInfo: {')
     L.append(f"        website: '{ts(ci.get('website', f'/services/{cid}'))}',")
     L.append(f"        email: '{ts(ci.get('email','kleber@ziontechgroup.com'))}',")
-    L.append(f"        phone: '{ts(ci.get('phone','+1 302 464 0950'))}',")
+    L.append(f"        phone: '{ts(ci.get('phone','+55 11 97614-0076'))}',")
     L.append('    },')
     L.append('  },\n')
     return '\n'.join(L)

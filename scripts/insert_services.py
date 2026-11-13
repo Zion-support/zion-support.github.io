@@ -28,7 +28,7 @@ for cat, items in new_by_cat.items():
 # ── Format services as TS objects ─────────────────────────────────────────────────
 def fmt(svc):
     p = svc['pricing'] if isinstance(svc.get('pricing'), dict) else {'basic': svc.get('basic','0'), 'pro': svc.get('pro','0'), 'enterprise': svc.get('enterprise','0')}
-    ci = {"website": f"/services/{svc['id']}", "email": "kleber@ziontechgroup.com", "phone": "+1 302 464 0950"}
+    ci = {"website": f"/services/{svc['id']}", "email": "kleber@ziontechgroup.com", "phone": "+55 11 97614-0076"}
     pop = 'true' if svc.get('popular', False) else 'false'
     return (
         f"\n  {{\n"
@@ -117,7 +117,7 @@ for cat_items in new_by_cat.values():
             'id': item['id'], 'title': item['title'], 'description': item['description'],
             'icon': '★', 'features': item['features'], 'benefits': item['benefits'],
             'pricing': item.get('pricing', {'basic': item.get('basic','0'), 'pro': item.get('pro','0'), 'enterprise': item.get('enterprise','0')}),
-            'contactInfo': {'website': f"/services/{item['id']}", 'email': 'kleber@ziontechgroup.com', 'phone': '+1 302 464 0950'},
+            'contactInfo': {'website': f"/services/{item['id']}", 'email': 'kleber@ziontechgroup.com', 'phone': '+55 11 97614-0076'},
             'href': f"/services/{item['id']}",
             'category': item.get('category', cat_items[0].get('category','') if cat_items else ''),
             'popular': item.get('popular', False)

@@ -4,7 +4,7 @@ import json
 
 SERVICES_JSON = 'app/data/servicesData.json'
 SERVICES_TS = 'app/data/servicesData.ts'
-CONTACT = {"email": "kleber@ziontechgroup.com", "phone": "+1 302 464 0950", "address": "364 E Main St STE 1008, Middletown, DE 19709"}
+CONTACT = {"email": "kleber@ziontechgroup.com", "phone": "+55 11 97614-0076", "address": "364 E Main St STE 1008, Middletown, DE 19709"}
 
 REMAINING = [
     {

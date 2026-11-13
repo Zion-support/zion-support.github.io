@@ -47,7 +47,7 @@ def main():
         svc['contactInfo'] = {
             'website': f"https://ziontechgroup.com{svc['href']}",
             'email': 'kleber@ziontechgroup.com',
-            'phone': '+1 302 464 0950'
+            'phone': '+55 11 97614-0076'
         }
         data.append(svc)
         added += 1

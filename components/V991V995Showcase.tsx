@@ -247,7 +247,7 @@ export default function V991V995Showcase() {
               </button>
             </div>
             <div className="text-sm text-purple-200 space-y-1">
-              <div>📞 +1 302 464 0950</div>
+              <div>📞 +55 11 97614-0076</div>
               <div>✉️ kleber@ziontechgroup.com</div>
               <div>📍 364 E Main St STE 1008, Middletown, DE 19709</div>
             </div>

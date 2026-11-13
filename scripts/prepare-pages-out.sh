@@ -102,4 +102,8 @@ assert_money_path services/ai-automation/index.html
 assert_money_path plans/index.html
 assert_money_path discovery/index.html
 
+# Apply the owner-confirmed contact after every generator and recovery copy.
+node --test scripts/normalize-zion-contact.test.cjs
+node scripts/normalize-zion-contact.cjs out/
+
 echo "Prepared out ($(find out -type f | wc -l) files)"

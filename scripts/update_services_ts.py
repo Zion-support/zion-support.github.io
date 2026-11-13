@@ -25,7 +25,7 @@ for s in new_services:
     entry += f"    features: [{feats}],\n"
     entry += f"    benefits: [{bens}],\n"
     entry += f"    pricing: {{ basic: '{p.get('basic','Contact')}', pro: '{p.get('pro','Contact')}', enterprise: '{p.get('enterprise','Custom')} }},\n"
-    entry += f"    contactInfo: {{ website: '/contact', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' }},\n"
+    entry += f"    contactInfo: {{ website: '/contact', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' }},\n"
     entry += f"    icon: '★',\n"
     entry += f"    href: '{s.get('href','/services/'+s['id'])}',\n"
     entry += f"    popular: {str(s.get('popular',False)).lower()},\n"

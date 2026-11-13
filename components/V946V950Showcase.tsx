@@ -167,7 +167,7 @@ export default function V946V950Showcase() {
             </a>
           </div>
           <div className="text-gray-400 text-sm space-y-1">
-            <p>📞 <strong>+1 302 464 0950</strong> | 📧 <strong>kleber@ziontechgroup.com</strong></p>
+            <p>📞 <strong>+55 11 97614-0076</strong> | 📧 <strong>kleber@ziontechgroup.com</strong></p>
             <p>📍 364 E Main St STE 1008, Middletown, DE 19709</p>
           </div>
         </div>

@@ -13,7 +13,7 @@ new_services = [
         "features": ["Millions of events/sec throughput", "Sub-second query latency", "SQL + Python analytics", "Built-in anomaly detection", "Kafka, Kinesis, Pub/Sub connectors"],
         "benefits": ["Real-time business decisions", "Detect anomalies instantly", "Unify batch and streaming"],
         "pricing": {"basic": "$499/mo", "pro": "$1,499/mo", "enterprise": "Custom"},
-        "contactInfo": {"website": "/services/data-realtime-streaming-analytics", "email": "commercial@ziontechgroup.com", "phone": "+1 302 464 0950"},
+        "contactInfo": {"website": "/services/data-realtime-streaming-analytics", "email": "commercial@ziontechgroup.com", "phone": "+55 11 97614-0076"},
         "icon": "⚡", "href": "/services/data-realtime-streaming-analytics", "popular": True, "category": "data", "industry": "Finance"
     },
     {
@@ -23,7 +23,7 @@ new_services = [
         "features": ["Multi-cloud cluster management", "Built-in service mesh (Istio)", "GitOps continuous delivery", "Auto-scrolling policies", "Cost optimization dashboards"],
         "benefits": ["Reduce Kubernetes complexity by 80%", "Deploy in minutes not days", "Multi-cloud portability"],
         "pricing": {"basic": "$299/mo", "pro": "$799/mo", "enterprise": "$2,499/mo"},
-        "contactInfo": {"website": "/services/cloud-kubernetes-platform-service", "email": "commercial@ziontechgroup.com", "phone": "+1 302 464 0950"},
+        "contactInfo": {"website": "/services/cloud-kubernetes-platform-service", "email": "commercial@ziontechgroup.com", "phone": "+55 11 97614-0076"},
         "icon": "☸️", "href": "/services/cloud-kubernetes-platform-service", "popular": True, "category": "cloud", "industry": "Technology"
     },
     {
@@ -33,7 +33,7 @@ new_services = [
         "features": ["Function-as-a-Service (FaaS)", "Edge computing support", "API gateway with rate limiting", "Event-driven triggers", "Built-in observability"],
         "benefits": ["Zero infrastructure management", "Pay-per-execution pricing", "Auto-scrolling to millions of requests"],
         "pricing": {"basic": "$49/mo", "pro": "$199/mo", "enterprise": "$599/mo"},
-        "contactInfo": {"website": "/services/cloud-serverless-application-platform", "email": "commercial@ziontechgroup.com", "phone": "+1 302 464 0950"},
+        "contactInfo": {"website": "/services/cloud-serverless-application-platform", "email": "commercial@ziontechgroup.com", "phone": "+55 11 97614-0076"},
         "icon": "⚡", "href": "/services/cloud-serverless-application-platform", "popular": False, "category": "cloud", "industry": "Technology"
     },
     {
@@ -43,7 +43,7 @@ new_services = [
         "features": ["HD video consultations", "EHR/EMR integration (Epic, Cerner)", "Remote patient monitoring", "Automated scheduling & reminders", "HIPAA-compliant messaging"],
         "benefits": ["Increase patient reach by 300%", "Reduce no-shows by 45%", "Full HIPAA compliance"],
         "pricing": {"basic": "$399/mo", "pro": "$999/mo", "enterprise": "$2,999/mo"},
-        "contactInfo": {"website": "/services/healthcare-telehealth-platform", "email": "commercial@ziontechgroup.com", "phone": "+1 302 464 0950"},
+        "contactInfo": {"website": "/services/healthcare-telehealth-platform", "email": "commercial@ziontechgroup.com", "phone": "+55 11 97614-0076"},
         "icon": "🏥", "href": "/services/healthcare-telehealth-platform", "popular": True, "category": "it", "industry": "Healthcare"
     },
 ]

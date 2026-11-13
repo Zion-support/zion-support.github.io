@@ -21,7 +21,7 @@ DATA_PATH = os.path.join(
 
 CONTACT = {
     "email": "kleber@ziontechgroup.com",
-    "phone": "+1 302 464 0950",
+    "phone": "+55 11 97614-0076",
 }
 
 

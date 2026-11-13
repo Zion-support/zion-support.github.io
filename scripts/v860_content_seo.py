@@ -238,7 +238,7 @@ def generate_content_seo_response(analysis):
             response["body"].append(f"{i}. {action}")
     
     response["body"].append("\n📞 **Contact:**")
-    response["body"].append("Mobile: +1 302 464 0950")
+    response["body"].append("Mobile: +55 11 97614-0076")
     response["body"].append("Email: kleber@ziontechgroup.com")
     response["body"].append("Address: 364 E Main St STE 1008, Middletown, DE 19709")
     
