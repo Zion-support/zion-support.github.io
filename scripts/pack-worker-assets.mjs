@@ -79,7 +79,8 @@ export async function packAssets(input = 'out', output = '.worker-assets') {
         entry = { stream: compressed, original: original.size, length, hash: original.hash, mime: STREAM_MIME[path.extname(relative)] };
         put(url, entry); report.streamedFiles++; report.verifiedFiles++; report.compressedBytes += length;
       }
-      if (!entry && type && stat.size <= FILE_BYTES) {
+      const entryPage = ['index.html', 'discovery/index.html', 'plans/index.html'].includes(relative);
+      if (!entry && !entryPage && type && stat.size <= FILE_BYTES) {
         const data = await fs.readFile(src), compressed = gzipSync(data, { level: 6 });
         if (compressed.length <= PACK_BYTES) {
           if (used + compressed.length > PACK_BYTES) await flush();

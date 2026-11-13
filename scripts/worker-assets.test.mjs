@@ -24,6 +24,7 @@ test('export package preserves files and HTTP behavior in workerd', async (t) =>
   const content = {
     'index.html': '<!doctype html><title>Home</title>Olá, Zion',
     'discovery/index.html': '<!doctype html><title>Discovery</title>Plan',
+    'plans/index.html': '<!doctype html><title>Plans</title>Choose a plan',
     'discovery.html': '<!doctype html><title>Legacy exact file</title>',
     'discovery/index.txt': '1:"$Sreact.fragment"\n2:{"children":"Discovery"}',
     'discovery/__next._tree.txt': '0:["tree",{"segment":"discovery"}]',
@@ -47,6 +48,9 @@ test('export package preserves files and HTTP behavior in workerd', async (t) =>
   assert.ok(report.packs >= 2); assert.ok(report.maxPackBytes <= PACK_BYTES);
   assert.equal(report.packedFiles + report.streamedFiles, report.verifiedFiles);
   assert.equal(report.streamedFiles, 1);
+  for (const name of ['index.html', 'discovery/index.html', 'plans/index.html']) {
+    assert.deepEqual(await fs.readFile(path.join(output, name)), Buffer.from(content[name]));
+  }
   assert.ok(report.uploadFiles < 20000);
   await assert.rejects(packAssets(input, output), { code: 'EEXIST' });
   for (const [name, bytes] of Object.entries(content)) assert.deepEqual(await fs.readFile(path.join(input, name)), Buffer.from(bytes));
@@ -66,7 +70,7 @@ test('export package preserves files and HTTP behavior in workerd', async (t) =>
     assert.equal(res.status, 200, name);
     assert.deepEqual(Buffer.from(await res.arrayBuffer()), Buffer.from(bytes), name);
   }
-  for (const [url, name] of [['/', 'index.html'], ['/discovery/', 'discovery/index.html'], ['/caf%C3%A9/', 'café/index.html'], ['/flat', 'flat.html'], ['/large', 'large.html']]) {
+  for (const [url, name] of [['/', 'index.html'], ['/discovery/', 'discovery/index.html'], ['/plans/', 'plans/index.html'], ['/caf%C3%A9/', 'café/index.html'], ['/flat', 'flat.html'], ['/large', 'large.html']]) {
     const res = await get(url, { headers: { 'Accept-Encoding': 'identity' } });
     assert.equal(res.status, 200, url); assert.equal(await res.text(), content[name], url);
   }
@@ -105,7 +109,10 @@ test('export package preserves files and HTTP behavior in workerd', async (t) =>
   const conditional = await get('/discovery/', { headers: { 'Accept-Encoding': 'gzip', 'If-None-Match': 'W/' + etag } });
   assert.equal(conditional.status, 304); assert.equal(await conditional.text(), '');
   const head = await get('/discovery/', { method: 'HEAD', headers: { 'Accept-Encoding': 'identity' } });
-  assert.equal(head.status, 200); assert.equal(Number(head.headers.get('content-length')), Buffer.byteLength(content['discovery/index.html'])); assert.equal(await head.text(), '');
+  assert.equal(head.status, 200);
+  // Native ASSETS may omit Content-Length on HEAD; when present it must match.
+  if (head.headers.has('content-length')) assert.equal(Number(head.headers.get('content-length')), Buffer.byteLength(content['discovery/index.html']));
+  assert.equal(await head.text(), '');
   const noGzip = await get('/discovery/', { headers: { 'Accept-Encoding': 'gzip;q=0,*;q=1' } });
   assert.equal(noGzip.headers.get('content-encoding'), null); assert.equal(await noGzip.text(), content['discovery/index.html']);
   const range = await get('/discovery/', { headers: { Range: 'bytes=0-5', 'Accept-Encoding': 'identity' } });
@@ -116,12 +123,16 @@ test('export package preserves files and HTTP behavior in workerd', async (t) =>
   assert.equal((await get('/discovery/', { method: 'POST', body: 'x' })).status, 405);
   assert.equal((await get('/bad%escape')).status, 400);
   // A valid export with missing storage must fail explicitly, never serve truncated HTML.
-  const shard = shardFromDigest(createHash('sha256').update('/discovery/').digest());
+  const shard = shardFromDigest(createHash('sha256').update('/flat').digest());
   const index = JSON.parse(await fs.readFile(path.join(output, PREFIX, `i${shard}.json`)));
-  const missingPack = `p${index['/discovery/'][0]}.bin`;
+  const missingPack = `p${index['/flat'][0]}.bin`;
   await fs.rename(path.join(output, PREFIX, missingPack), path.join(output, PREFIX, missingPack + '.held'));
-  const failed = await get('/discovery/');
+  const failed = await get('/flat');
   assert.equal(failed.status, 503);
+  // Entry pages bypass both the index and pack even when packed storage fails.
+  assert.equal(await (await get('/discovery/')).text(), content['discovery/index.html']);
+  await fs.rename(path.join(output, 'discovery/index.html'), path.join(output, 'discovery/index.html.held'));
+  assert.equal((await get('/discovery/')).status, 503);
 });
 
 test('rejects symlinks and over-limit direct files before upload', async (t) => {

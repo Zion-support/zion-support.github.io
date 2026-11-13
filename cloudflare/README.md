@@ -13,6 +13,13 @@ the public route and questionnaire remain. A release gate checks byte equality
 between the source questionnaire and `out/discovery/index.html` before packaging.
 
 HTML and Next text/RSC files are stored as individually compressed gzip members
+except the homepage, Discovery and Plans entry HTML. Those three files stay as
+native assets; their canonical URLs call ASSETS directly before index lookup.
+This avoids copying a 1 MiB package for a small entry page. Native ASSETS owns
+compression and ETags, and may omit Content-Length on HEAD. Folder redirects
+and the remaining package routes keep the existing behavior.
+
+Other HTML and Next text/RSC files are stored as individually compressed members
 in binary assets of at most 1 MiB. Sharded indices map the original paths to
 offsets. Each member is decompressed and compared with its source during the
 build. Nothing is removed from `out/`. Other assets use hardlinks where supported.

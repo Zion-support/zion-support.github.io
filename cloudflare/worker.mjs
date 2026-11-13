@@ -106,6 +106,14 @@ export default {
     try { pathname = decodeURIComponent(url.pathname); } catch { return new Response('Bad Request', { status: 400 }); }
     if (pathname.startsWith(PREFIX) || pathname.includes('\0') || pathname.includes('\\') || pathname.split('/').some(p => p === '.' || p === '..')) return new Response('Not Found', { status: 404 });
     try {
+      // High-traffic entry pages remain native assets. Avoid loading/parsing a
+      // shard and copying a whole binary pack for these small HTML responses.
+      const directEntry = { '/': '/index.html', '/discovery/': '/discovery/index.html', '/plans/': '/plans/index.html' };
+      if (Object.hasOwn(directEntry, pathname)) {
+        const response = await env.ASSETS.fetch(new Request(new URL(directEntry[pathname], request.url), request));
+        if (!response.ok && response.status !== 304) throw new Error('Missing entry page asset');
+        return response;
+      }
       const entry = await lookup(pathname, env);
       if (entry?.redirect) { url.pathname = entry.redirect; return new Response(null, { status: 308, headers: { Location: url.href } }); }
       if (entry) return await packedResponse(entry, request, env);
