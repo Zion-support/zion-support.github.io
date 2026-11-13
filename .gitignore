@@ -107,3 +107,8 @@ Google Drive
 
 # Local gh-pages publishing worktree, never a repository submodule
 /.pageploy/
+
+# Reproducible Worker deployment package (source remains in out/)
+.worker-assets/
+.worker-assets.report.json
+.worker-assets.failed.json
