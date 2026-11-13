@@ -13,7 +13,6 @@ const CATEGORIES = [
   { id: 'security', label: 'Security & Compliance',  emoji: '🔐' },
 ];
 
-const DEBOUNCE_MS = 250;   // quick reaction, not instant
 const MAX_RESULTS = 12;    // dropdown cap
 
 export default function ServiceGridWithSearch({ totalCount, categoryCounts }: { totalCount: number; categoryCounts: Record<string, number> }) {
@@ -47,20 +46,29 @@ export default function ServiceGridWithSearch({ totalCount, categoryCounts }: { 
     return () => document.removeEventListener('mousedown', handler);
   }, []);
 
-  // Debounced results — recompute on every render but guarded by length ≤ MAX_RESULTS
+  // Preserve popular-first source order while retaining only dropdown candidates.
   const results = useMemo<SearchService[]>(() => {
     const q = query.toLowerCase().trim();
-    return searchServices
-      .filter(s => {
-        const matchCat  = catFilter ? s.category === catFilter : true;
-        const matchQ    = !q
-          || s.title.toLowerCase().includes(q)
-          || s.description.toLowerCase().includes(q)
-          || s.id.toLowerCase().includes(q);
-        return matchCat && matchQ;
-      })
-      .sort((a, b) => (b.popular ? 1 : 0) - (a.popular ? 1 : 0))
-      .slice(0, MAX_RESULTS);
+    const popularMatches: SearchService[] = [];
+    const otherMatches: SearchService[] = [];
+    const count = searchServices.length;
+    for (let index = 0; index < count; index++) {
+      if (!(index in searchServices)) continue;
+      const s = searchServices[index];
+      const matchCat = catFilter ? s.category === catFilter : true;
+      const matchQ = !q
+        || s.title.toLowerCase().includes(q)
+        || s.description.toLowerCase().includes(q)
+        || s.id.toLowerCase().includes(q);
+      if (!matchCat || !matchQ) continue;
+      if (s.popular) {
+        popularMatches.push(s);
+        if (popularMatches.length === MAX_RESULTS) return popularMatches;
+      } else if (otherMatches.length < MAX_RESULTS) {
+        otherMatches.push(s);
+      }
+    }
+    return popularMatches.concat(otherMatches.slice(0, MAX_RESULTS - popularMatches.length));
   }, [query, catFilter, searchServices]);
 
   const activeCount = catFilter ? (categoryCounts[catFilter] || 0) : totalCount;
