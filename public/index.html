@@ -64,7 +64,11 @@
     label { display: block; font-size: .8rem; color: #cbd5e1; margin: .7rem 0 .25rem; }
     input, select { width: 100%; background: #0f172a; color: #fff; border: 1px solid #334155; border-radius: .6rem; padding: .55rem .7rem; }
     .hidden { display: none !important; }
-    @media (max-width: 800px) { .nav-links { display: none; } }
+    [hidden] { display: none !important; }
+    .home-menu-toggle { font: inherit; color: #fff; background: #0f172a; border: 1px solid #64748b; border-radius: .6rem; min-height: 44px; padding: .6rem .9rem; }
+    .home-menu-toggle:focus-visible, .nav-links a:focus-visible { outline: 3px solid #67e8f9; outline-offset: 4px; }
+    @media (max-width: 800px) { .nav { flex-wrap: wrap; } .nav-links { width: 100%; gap: .35rem 1rem; } .nav-links a { padding: .5rem 0; } header { position: relative; } }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
   </style>
 </head>
 <body>
@@ -78,13 +82,16 @@
         <strong>Zion Tech Group</strong>
         <small>AI Delivery Studio</small>
       </a>
-      <nav class="nav-links" aria-label="Main">
+      <button class="home-menu-toggle" id="home-menu-toggle" type="button" aria-controls="home-primary-links" aria-expanded="true" hidden>Menu</button>
+      <nav id="home-primary-links" class="nav-links" aria-label="Main">
         <a href="/">Home</a>
         <a href="/solutions/">Solutions</a>
         <a href="/services/">Services</a>
         <a href="/pricing/">Pricing</a>
         <a href="/ai-services/">AI Services</a>
         <a href="/products/">Products</a>
+        <a href="/apps-network/">Apps</a>
+        <a href="/resources/">Resources</a>
         <a href="/about/">Company</a>
         <a href="/book/">Book</a>
         <a href="/search/">Quick Find <span class="pill">Ctrl/⌘ K</span></a>
@@ -263,8 +270,9 @@
         <a class="card" href="#advisor"><h3>Launch advisor</h3><p>Get a rollout recommendation by goal</p></a>
         <a class="card" href="/case-studies/"><h3>Case studies</h3><p>Real results from real teams</p></a>
         <a class="card" href="/industries/"><h3>Industry solutions</h3><p>AI workflows tailored to your vertical</p></a>
-        <a class="card" href="/services/"><h3>App library</h3><p>Browse featured AI apps by outcome</p></a>
-        <a class="card" href="/blog/"><h3>Blog &amp; resources</h3><p>AI strategy, security, and implementation insights</p></a>
+        <a class="card" href="/apps-network/"><h3>App library</h3><p>Browse featured AI apps by outcome</p></a>
+        <a class="card" href="/resources/"><h3>Resources &amp; practical guides</h3><p>Choose an AI app, prepare a field service request, or plan a pilot</p></a>
+        <a class="card" href="/search/"><h3>Search the site</h3><p>Find apps, services, articles, and guides by topic</p></a>
         <a class="card" href="/solutions/"><h3>Solutions hub</h3><p>Browse all AI solutions and product paths</p></a>
         <a class="card" href="#faq"><h3>Planning FAQ</h3><p>Review adoption and delivery answers</p></a>
       </div>
@@ -715,5 +723,6 @@
   <p style="margin-top:1rem;font-size:.9rem">Also available in <a href="/pt/apps-network/" style="color:#c4b5fd">Português</a> · <a href="/es/apps-network/" style="color:#c4b5fd">Español</a> · <a href="/fr/apps-network/" style="color:#c4b5fd">Français</a> · <a href="/de/apps-network/" style="color:#c4b5fd">Deutsch</a></p>
 </section>
 
+<script src="/assets/js/home-navigation.js" defer></script>
 </body>
 </html>

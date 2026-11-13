@@ -1,0 +1,26 @@
+'use strict';
+const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const vm = require('node:vm');
+function el(props = {}) { return Object.assign({ hidden: false, value: '', textContent: '', dataset: {}, handlers: {}, attrs: {}, addEventListener(e, fn) { this.handlers[e] = fn; }, focus() { this.focused = true; }, setAttribute(k,v) { this.attrs[k] = v; }, getAttribute(k) { return this.attrs[k]; } }, props); }
+const form=el(),input=el(),category=el(),count=el(),empty=el();
+const rows=[el({textContent:'Cloud cost estimate',dataset:{category:'Apps & tools'}}),el({textContent:'Field services in São Paulo',dataset:{category:'Field services'}}),el({textContent:'AI pilot guide',dataset:{category:'Guides & resources'}})];
+const ids={'site-query':input,'site-category':category,'results-count':count,'no-results':empty};
+const location={href:'https://ziontechgroup.com/search/?q=cloud',search:'?q=cloud'};
+const history={replaceState(a,b,url){this.url=url;}};
+const win={addEventListener(){}};
+vm.runInNewContext(fs.readFileSync('public/assets/js/site-search.js','utf8'),{document:{querySelector:()=>form,getElementById:id=>ids[id],querySelectorAll:()=>rows},location,history,window:win,URL,URLSearchParams});
+assert.equal(input.value,'cloud');assert.deepEqual(rows.map(x=>x.hidden),[false,true,true]);
+input.value='sao paulo';input.handlers.input();assert.deepEqual(rows.map(x=>x.hidden),[true,false,true]);
+category.value='Apps & tools';category.handlers.change();assert.equal(empty.hidden,false);assert.equal(count.textContent,'0 pages found');
+form.handlers.reset({preventDefault(){}});assert.equal(input.value,'');assert.equal(category.value,'');assert(rows.every(x=>!x.hidden));assert(input.focused);assert.equal(history.url,'/search/');
+input.value='cloud cost';input.handlers.input();assert.equal(count.textContent,'1 page found');assert(history.url.includes('q=cloud+cost'));
+input.value='<img src=x>';input.handlers.input();assert.equal(count.textContent,'0 pages found');assert(!count.textContent.includes('<img'));
+const button=el(),menu=el();const mobile={matches:true,addEventListener(e,fn){this.change=fn;}};const document={getElementById:id=>id==='home-menu-toggle'?button:menu,addEventListener(e,fn){this.keydown=fn;}};
+vm.runInNewContext(fs.readFileSync('public/assets/js/home-navigation.js','utf8'),{document,window:{matchMedia:()=>mobile,location:{assign(u){this.url=u;}}}});
+assert.equal(button.hidden,false);assert.equal(menu.hidden,true);assert.equal(button.attrs['aria-expanded'],'false');
+button.handlers.click();assert.equal(menu.hidden,false);assert.equal(button.attrs['aria-expanded'],'true');
+document.keydown({key:'Escape',target:{tagName:'BUTTON'}});assert.equal(menu.hidden,true);assert(button.focused);
+mobile.matches=false;mobile.change();assert.equal(menu.hidden,false);assert.equal(button.hidden,true);
+mobile.matches=true;mobile.change();button.handlers.click();menu.handlers.click({target:{closest:()=>({})}});assert.equal(menu.hidden,true);
+console.log('PASS: deep-link search, accent matching, combined filters, reset, empty state, safe text, mobile menu, Escape, resize, link close.');
