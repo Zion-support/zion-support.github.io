@@ -13,7 +13,7 @@
     "lint": "next lint",
     "lint:check": "npx eslint app components --ext .ts,.tsx,.js,.mjs --ignore-pattern \".next/**\" --ignore-pattern \"out/**\" --ignore-pattern \"dist/**\" --ignore-pattern \"build/**\" --quiet --cache --cache-location .eslintcache",
     "catalog:generate": "node scripts/client-catalog.cjs",
-    "catalog:test": "node --test scripts/client-catalog.test.cjs",
+    "catalog:test": "node --test scripts/client-catalog.test.cjs scripts/quiz-pricing.test.cjs",
     "pretype-check": "npm run catalog:generate",
     "type-check": "tsc --noEmit",
     "wrap": "bash scripts/error-wrapper.sh",

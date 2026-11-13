@@ -5,7 +5,7 @@ const path = require('node:path');
 const { createHash, randomUUID } = require('node:crypto');
 
 // Shared browser contract. Keep complete arrays and pricing enumeration order.
-// name/desc are retained for searchServices' additional fallbacks; href/tags
+// name/desc are retained only when searchServices can reach their fallback; href/tags
 // are consumed by search, recommendations, and the lazy release-news lookup.
 const CLIENT_FIELDS = Object.freeze([
   'id', 'icon', 'title', 'description', 'category', 'industry', 'popular',
@@ -26,7 +26,10 @@ function projectService(service) {
     href: service.href || `/services/${service.id}`,
   };
   return Object.fromEntries(CLIENT_FIELDS.filter(key =>
-    Object.prototype.hasOwnProperty.call(normalized, key)
+    Object.prototype.hasOwnProperty.call(normalized, key) &&
+    // Preserve falsy fallback values and absence; omit only unreachable copies.
+    !(key === 'name' && normalized.title) &&
+    !(key === 'desc' && normalized.description)
   ).map(key => [key, normalized[key]]));
 }
 

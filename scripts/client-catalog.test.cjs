@@ -33,16 +33,61 @@ function write(dir, file, content) {
   const target = path.join(dir, file); fs.mkdirSync(path.dirname(target), { recursive: true }); fs.writeFileSync(target, content);
 }
 
+// The two fallback fields have conditional presence. All other fields retain
+// the original presence/value contract; the real search module is checked below.
+function assertProjectedFields(out, row, index) {
+  for (const field of CLIENT_FIELDS) {
+    if ((field === 'name' && row.title) || (field === 'desc' && row.description)) {
+      assert.equal(own(out, field), false, `${index}:${field}:unreachable fallback`);
+    } else {
+      assert.equal(own(out, field), own(row, field), `${index}:${field}:presence`);
+      assert.deepEqual(out[field], row[field], `${index}:${field}:value`);
+    }
+  }
+}
+
+const searchCode = ts.transpileModule(fs.readFileSync(path.join(root, 'app/data/searchServices.ts'), 'utf8'), {
+  compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022 },
+}).outputText;
+function actualSearchRows(rows) {
+  const module = { exports: {} };
+  new Function('require', 'module', 'exports', searchCode)(request => {
+    assert.equal(request, './servicesClientData'); return { allServices: rows };
+  }, module, module.exports);
+  return module.exports.searchServices;
+}
+
+test('actual searchServices output preserves all real records after conditional fallback omission', () => {
+  assert.deepEqual(actualSearchRows(projected), actualSearchRows(original));
+});
+
+test('conditional fallbacks preserve absent, empty, null, false and zero source values', () => {
+  const input = [
+    { id: 'truthy', title: 'Title', name: 'Unused', description: 'Description', desc: 'Unused' },
+    { id: 'duplicate', title: '', name: null, description: '', desc: null },
+    { id: 'duplicate', title: '', name: false, description: false, desc: false },
+    { id: 'zero', title: 0, name: 0, description: 0, desc: 0 },
+    { id: 'empty', title: '', name: '', description: '', desc: '' },
+    { id: 'absent', title: '', description: '' },
+    { id: 'fallback', title: '', name: 'Fallback', description: '', desc: 'Description fallback' },
+    { id: 'numeric', title: '', name: 17, description: '', desc: 23 },
+  ];
+  const reference = normalized(input);
+  for (const shape of [input, { services: input }]) {
+    const output = JSON.parse(JSON.stringify(projectCatalog(shape)));
+    assert.deepEqual(output.map(row => row.id), input.map(row => row.id));
+    reference.forEach((row, index) => assertProjectedFields(output[index], row, index));
+    assert.deepEqual(actualSearchRows(output), actualSearchRows(reference));
+  }
+});
+
 test('real catalog preserves every consumer field, absence, ID order, pricing order and complete arrays', () => {
   assert.ok(original.length > 0);
   assert.equal(projected.length, original.length);
   original.forEach((row, index) => {
     const out = projected[index];
     assert.equal(out.id, row.id);
-    for (const field of CLIENT_FIELDS) {
-      assert.equal(own(out, field), own(row, field), `${index}:${field}:presence`);
-      assert.deepEqual(out[field], row[field], `${index}:${field}:value`);
-    }
+    assertProjectedFields(out, row, index);
     assert.ok(Object.keys(out).every(key => CLIENT_FIELDS.includes(key)));
     assert.deepEqual(Object.keys(out.pricing || {}), Object.keys(row.pricing || {}));
     assert.deepEqual(Object.values(out.pricing || {}), Object.values(row.pricing || {}));
@@ -58,10 +103,7 @@ test('fallbacks, missing/null/false values, duplicate IDs and numeric pricing ke
   const reference = normalized(input);
   for (const shape of [input, { services: input }]) {
     const output = JSON.parse(JSON.stringify(projectCatalog(shape)));
-    reference.forEach((row, index) => CLIENT_FIELDS.forEach(key => {
-      assert.equal(own(output[index], key), own(row, key));
-      assert.deepEqual(output[index][key], row[key]);
-    }));
+    reference.forEach((row, index) => assertProjectedFields(output[index], row, index));
   }
   assert.deepEqual(projectCatalog([]), []);
   assert.throws(() => projectCatalog({ missing: [] }), /must be an array/);
@@ -74,6 +116,11 @@ test('generation refreshes source changes, repairs corruption and caches only ma
   const first = ensureClientCatalog(dir);
   assert.equal(first.changed, true);
   assert.equal(ensureClientCatalog(dir).changed, false);
+  const metadataFile = path.join(dir, GENERATED + '.meta.json');
+  const staleGenerator = JSON.parse(fs.readFileSync(metadataFile, 'utf8'));
+  staleGenerator.generatorSha256 = 'previous-generator';
+  write(dir, GENERATED + '.meta.json', JSON.stringify(staleGenerator));
+  assert.equal(ensureClientCatalog(dir).changed, true);
   write(dir, GENERATED + '.meta.json', 'null');
   assert.equal(ensureClientCatalog(dir).changed, true);
   write(dir, GENERATED, 'corrupt');

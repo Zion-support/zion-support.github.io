@@ -332,7 +332,7 @@ export default function ServiceMatchQuiz({ initialStarted = false }: { initialSt
                   <div className="mt-auto pt-2 border-t border-slate-700/40 flex justify-between items-center">
                     <span className="text-[10px] text-slate-500">Match: {Math.min(Math.round(service._score / 80 * 100), 99)}%</span>
                     <span className="text-purple-300 text-xs font-semibold">
-                      From {Object.values(service.pricing as Record<string, string>)[0]}/mo
+                      From {Object.values(service.pricing as Record<string, string>)[0]}
                     </span>
                   </div>
                 </Link>
