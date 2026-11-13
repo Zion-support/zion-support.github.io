@@ -1,8 +1,14 @@
 {
   "total_crawled": 300,
-  "http_200": 287,
-  "broken_count": 13,
+  "http_200": 286,
+  "broken_count": 14,
   "broken": [
+    {
+      "url": "https://ziontechgroup.com/token-cost/",
+      "status": -1,
+      "final": "https://ziontechgroup.com/token-cost/",
+      "type": "external reference error"
+    },
     {
       "url": "https://ziontechgroup.com/agents/",
       "status": 404,
