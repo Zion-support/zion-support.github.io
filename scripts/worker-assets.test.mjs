@@ -8,7 +8,7 @@ import { randomBytes, createHash } from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 import { gunzipSync } from 'node:zlib';
 import http from 'node:http';
-import { packAssets } from './pack-worker-assets.mjs';
+import { packAssets, verifyDiscovery } from './pack-worker-assets.mjs';
 import { PREFIX, PACK_BYTES, FILE_BYTES, shardFromDigest } from '../cloudflare/asset-format.mjs';
 
 const require = createRequire(path.resolve(process.env.WORKER_TEST_MODULES || '.', 'package.json'));
@@ -113,4 +113,17 @@ test('rejects symlinks and over-limit direct files before upload', async (t) => 
   await fs.unlink(path.join(input, 'link'));
   const f = await fs.open(path.join(input, 'oversize.bin'), 'w'); await f.truncate(25 * 1024 * 1024 + 1); await f.close();
   await assert.rejects(packAssets(input, path.join(temp, 'oversize')), /25 MiB/);
+});
+
+test('release gate rejects a Next page shadowing the public Discovery questionnaire', async (t) => {
+  const temp = await fs.mkdtemp(path.join(os.tmpdir(), 'zion-discovery-gate-'));
+  t.after(() => fs.rm(temp, { recursive: true, force: true }));
+  const out = path.join(temp, 'out'); await fs.mkdir(path.join(out, 'discovery'), { recursive: true });
+  const source = path.join(temp, 'canonical.html');
+  const html = '<html><form id="dq"><input name="industry"></form></html>';
+  await fs.writeFile(source, html);
+  await fs.writeFile(path.join(out, 'discovery/index.html'), '<html><a href="/contact">Contact</a></html>');
+  await assert.rejects(verifyDiscovery(out, source), /canonical public questionnaire/);
+  await fs.writeFile(path.join(out, 'discovery/index.html'), html);
+  await verifyDiscovery(out, source);
 });

@@ -6,6 +6,12 @@ custom build packages the already validated `out/`; it does not compile Next a
 second time. Keep the dashboard build command `npm run build` and its existing
 branch upload command `npx wrangler versions upload`.
 
+The canonical Discovery questionnaire is `public/discovery/index.html`, the same
+source used by GitHub Pages. The duplicate React `/discovery` page previously
+overwrote it during Next export with a contact-only page. That duplicate is removed;
+the public route and questionnaire remain. A release gate checks byte equality
+between the source questionnaire and `out/discovery/index.html` before packaging.
+
 HTML and Next text/RSC files are stored as individually compressed gzip members
 in binary assets of at most 1 MiB. Sharded indices map the original paths to
 offsets. Each member is decompressed and compared with its source during the

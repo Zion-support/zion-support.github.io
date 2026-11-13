@@ -5,6 +5,14 @@ import { gzipSync, gunzipSync } from 'node:zlib';
 import { pathToFileURL } from 'node:url';
 import { PREFIX, PACK_BYTES, FILE_BYTES, INDEX_BYTES, SHARDS, MIME, shardFromDigest } from '../cloudflare/asset-format.mjs';
 
+export async function verifyDiscovery(input, source) {
+  const canonical = await fs.readFile(source);
+  const exported = await fs.readFile(path.join(input, 'discovery/index.html'));
+  if (!canonical.includes(Buffer.from('id="dq"')) || !canonical.equals(exported)) {
+    throw new Error('Discovery export must preserve the canonical public questionnaire byte-for-byte');
+  }
+}
+
 async function* files(dir, base = '') {
   for (const e of (await fs.readdir(dir, { withFileTypes: true })).sort((a, b) => a.name.localeCompare(b.name, 'en'))) {
     const relative = path.posix.join(base, e.name);
@@ -95,5 +103,6 @@ export async function packAssets(input = 'out', output = '.worker-assets') {
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
+  await verifyDiscovery(process.argv[2] || 'out', 'public/discovery/index.html');
   await packAssets(process.argv[2], process.argv[3]);
 }
