@@ -21,6 +21,13 @@
       "summary": "Bring a concrete process, constraints and acceptance criteria to the first scoping conversation.",
       "mode": "services",
       "publishedAt": "2026-11-14T13:15:44.692Z"
+    },
+    {
+      "slug": "backup-restoration-drill-for-automation",
+      "title": "Plan a restoration drill for your automation backups",
+      "summary": "A backup is useful when its contents, limits and restoration steps have been checked.",
+      "mode": "daily",
+      "publishedAt": "2026-11-14T13:20:39.003Z"
     }
   ]
 }
