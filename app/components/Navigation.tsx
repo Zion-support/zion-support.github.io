@@ -221,6 +221,16 @@ export default function Navigation() {
           <Link href="/contact" className="ml-2 px-5 py-2 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-sm font-semibold text-white hover:from-purple-500 hover:to-pink-500 transition-all shadow-lg shadow-purple-500/25">
             Get Free Consultation
           </Link>
+          {/* Language / locale switcher ── pt-BR locale starter */}
+          <div className="ml-1 flex items-center gap-1">
+            <Link
+              href={pathname === '/pt' ? '/' : '/pt'}
+              aria-label={pathname === '/pt' ? 'English' : 'Português (Brasil)'}
+              className="px-3 py-1.5 rounded-full border border-slate-700 text-xs font-medium text-slate-300 hover:text-white hover:border-purple-500/50 hover:bg-purple-500/10 transition-colors"
+            >
+              {pathname === '/pt' ? '🇺🇸 EN' : '🇧🇷 PT'}
+            </Link>
+          </div>
         </div>
 
         <button

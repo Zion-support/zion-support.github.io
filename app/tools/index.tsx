@@ -220,6 +220,14 @@ export default function ToolsIndexPage() {
             <Link href="/services/" className="btn-secondary text-lg">View Services</Link>
           </div>
         </section>
+      <GeoAnswer
+        heading="What are Zion Tech Group's free tools?"
+        answer="Zion Tech Group offers 28+ free, no-signup developer and business utilities — including an ROI calculator, service comparison, AI service router, health check, phishing analyzer, JSON formatter, and security scanners. Every tool runs entirely in your browser; no account, data collection, or payment is required, and all tools are free forever."
+        for={['Developers', 'IT and security teams', 'Business owners', 'Remote workers', 'Students & founders']}
+        features={['Browser-based, no signup required', 'No data stored, fully private', 'Scope an IT or AI project in one sitting', 'Pair any tool with a free Discovery assessment', 'Variant pages for industry-specific needs']}
+        ctaHref="/discovery/"
+        ctaCopy="Start free AI Discovery →"
+      />
       </div>
     </main>
   );
