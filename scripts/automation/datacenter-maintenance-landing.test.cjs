@@ -53,3 +53,12 @@ test('RFQ form bounds input and explicitly states no automatic sending', () => {
   assert.match(page, /não envia e-mail automaticamente/);
   assert.match(page, /role="status" aria-live="polite"/);
 });
+
+test('commercial sitemap discovers the canonical page exactly once without an invented lastmod', () => {
+  const site = fs.readFileSync(path.join(root, 'public/sitemap-0.xml'), 'utf8');
+  const canonical = 'https://ziontechgroup.com/services/datacenter-maintenance-brazil/';
+  assert.equal(site.split('<loc>' + canonical + '</loc>').length - 1, 1);
+  const entry = site.match(/<url>\s*<loc>https:\/\/ziontechgroup\.com\/services\/datacenter-maintenance-brazil\/<\/loc>[\s\S]*?<\/url>/);
+  assert.ok(entry, 'Sitemap missing the public canonical URL');
+  assert.doesNotMatch(entry[0], /<lastmod>/, 'Do not advertise an unverified publication date');
+});
