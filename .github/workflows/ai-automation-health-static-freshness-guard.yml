@@ -40,13 +40,9 @@ jobs:
       - name: Install dependencies
         run: npm ci --prefer-offline --no-audit --fund=false
 
-      - name: Refresh snapshot from actual production observations
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: node scripts/automation/generate-automation-health-snapshot.cjs
-
-      - name: Evaluate static health freshness
+      - name: Evaluate previously published static health freshness
         id: freshness
+        continue-on-error: true
         env:
           AUTOMATION_HEALTH_STATIC_MAX_HOURS: ${{ vars.AUTOMATION_HEALTH_STATIC_MAX_HOURS }}
         run: node scripts/automation/check-automation-health-static-freshness.cjs
@@ -78,6 +74,11 @@ jobs:
           RECOVERY_COMMENT: "Closing automatically: static automation health snapshot freshness recovered."
         run: node scripts/automation/gh-issue-close-on-recovery.cjs
 
+      - name: Refresh snapshot from actual production observations
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: node scripts/automation/generate-automation-health-snapshot.cjs
+
       - name: Persist and publish the measured snapshot
         if: ${{ github.event_name == 'schedule' || inputs.publish }}
         env:
@@ -93,3 +94,9 @@ jobs:
             automation/reports/automation-health-static-freshness-latest.json
             automation/reports/automation-health-latest.json
           if-no-files-found: error
+
+      - name: Preserve failed guard result when previous snapshot was stale
+        if: steps.freshness.outputs.static_health_fresh != 'true'
+        run: |
+          echo "::error::Previously published automation health snapshot was stale or invalid before refresh"
+          exit 1
