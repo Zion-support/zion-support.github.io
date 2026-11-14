@@ -8,6 +8,7 @@ import AnimatedCounter from '@/components/AnimatedCounter';
 import ServiceBrowser from '@/components/ServiceBrowser';
 import ServiceSpotlight from '@/components/ServiceSpotlight';
 import ServiceGridWithSearch from '@/components/ServiceGridWithSearch';
+import AppsNetworkShowcase from '@/components/AppsNetworkShowcase';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import ContactFunnel from '@/components/ContactFunnel';
 import ServiceCounter from '@/components/ServiceCounter';
@@ -1216,6 +1217,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* ── Apps Network — link to the Zion apps ── */}
+      <AppsNetworkShowcase />
 
       {/* ── Service Search — find any of {serviceCount}+ services ── */}
       <ServiceGridWithSearch />
