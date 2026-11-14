@@ -1,0 +1,106 @@
+{
+  "generatedAt": "2026-11-14T13:11:40.726Z",
+  "status": "observed",
+  "mode": "read_only",
+  "scope": "Open GitHub issues labelled automation-incident. No issues are suppressed, modified or closed by this report.",
+  "openIncidentCount": 16,
+  "incidents": [
+    {
+      "number": 34638,
+      "url": "https://github.com/Zion-support/zion-support.github.io/issues/34638",
+      "updatedAt": "2026-09-15T15:34:29Z",
+      "fingerprints": []
+    },
+    {
+      "number": 34637,
+      "url": "https://github.com/Zion-support/zion-support.github.io/issues/34637",
+      "updatedAt": "2026-09-15T15:34:27Z",
+      "fingerprints": []
+    },
+    {
+      "number": 34636,
+      "url": "https://github.com/Zion-support/zion-support.github.io/issues/34636",
+      "updatedAt": "2026-09-15T15:34:34Z",
+      "fingerprints": []
+    },
+    {
+      "number": 34635,
+      "url": "https://github.com/Zion-support/zion-support.github.io/issues/34635",
+      "updatedAt": "2026-09-15T15:34:26Z",
+      "fingerprints": []
+    },
+    {
+      "number": 34578,
+      "url": "https://github.com/Zion-support/zion-support.github.io/issues/34578",
+      "updatedAt": "2026-09-15T15:34:23Z",
+      "fingerprints": []
+    },
+    {
+      "number": 34556,
+      "url": "https://github.com/Zion-support/zion-support.github.io/issues/34556",
+      "updatedAt": "2026-09-15T15:34:28Z",
+      "fingerprints": []
+    },
+    {
+      "number": 34554,
+      "url": "https://github.com/Zion-support/zion-support.github.io/issues/34554",
+      "updatedAt": "2026-09-15T15:34:25Z",
+      "fingerprints": []
+    },
+    {
+      "number": 34530,
+      "url": "https://github.com/Zion-support/zion-support.github.io/issues/34530",
+      "updatedAt": "2026-09-15T15:34:24Z",
+      "fingerprints": []
+    },
+    {
+      "number": 34518,
+      "url": "https://github.com/Zion-support/zion-support.github.io/issues/34518",
+      "updatedAt": "2026-09-15T15:34:31Z",
+      "fingerprints": []
+    },
+    {
+      "number": 34516,
+      "url": "https://github.com/Zion-support/zion-support.github.io/issues/34516",
+      "updatedAt": "2026-09-15T15:34:30Z",
+      "fingerprints": []
+    },
+    {
+      "number": 34511,
+      "url": "https://github.com/Zion-support/zion-support.github.io/issues/34511",
+      "updatedAt": "2026-09-15T15:34:24Z",
+      "fingerprints": []
+    },
+    {
+      "number": 34510,
+      "url": "https://github.com/Zion-support/zion-support.github.io/issues/34510",
+      "updatedAt": "2026-09-15T15:34:34Z",
+      "fingerprints": []
+    },
+    {
+      "number": 34499,
+      "url": "https://github.com/Zion-support/zion-support.github.io/issues/34499",
+      "updatedAt": "2026-09-15T15:34:23Z",
+      "fingerprints": []
+    },
+    {
+      "number": 34497,
+      "url": "https://github.com/Zion-support/zion-support.github.io/issues/34497",
+      "updatedAt": "2026-09-15T15:34:30Z",
+      "fingerprints": []
+    },
+    {
+      "number": 34494,
+      "url": "https://github.com/Zion-support/zion-support.github.io/issues/34494",
+      "updatedAt": "2026-09-15T15:34:32Z",
+      "fingerprints": []
+    },
+    {
+      "number": 34463,
+      "url": "https://github.com/Zion-support/zion-support.github.io/issues/34463",
+      "updatedAt": "2026-10-29T02:58:31Z",
+      "fingerprints": []
+    }
+  ],
+  "duplicateFingerprints": []
+}
