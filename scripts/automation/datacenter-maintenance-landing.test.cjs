@@ -34,3 +34,22 @@ test('services hub links to landing and page points back to hub', () => {
   assert.match(hub, /href="\/services\/datacenter-maintenance-brazil\/"/);
   assert.match(page, /href="\/services\/"/);
 });
+
+
+test('RFQ draft is assembled on explicit user submit without remote transmission or storage', () => {
+  assert.match(page, /<form id="rfq-template"/);
+  assert.match(page, /<button class="button" type="submit">Gerar texto da RFQ<\/button>/);
+  assert.match(page, /event\.preventDefault\(\)/);
+  assert.match(page, /new FormData\(form\)/);
+  assert.match(page, /output\.textContent = body/);
+  assert.match(page, /encodeURIComponent\(body\)/);
+  assert.match(page, /mailto:commercial@ziontechgroup\.com/);
+  assert.doesNotMatch(page, /\bfetch\s*\(|XMLHttpRequest|localStorage|sessionStorage|sendBeacon/);
+});
+test('RFQ form bounds input and explicitly states no automatic sending', () => {
+  assert.match(page, /name="city" maxlength="100" required/);
+  assert.match(page, /name="scope" maxlength="500" rows="4" required/);
+  assert.match(page, /name="window" maxlength="120" required/);
+  assert.match(page, /não envia e-mail automaticamente/);
+  assert.match(page, /role="status" aria-live="polite"/);
+});
