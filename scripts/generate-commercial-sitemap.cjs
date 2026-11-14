@@ -73,6 +73,11 @@ const SKIP_TOP_DIRS = new Set([
 // Satellite sitemaps listed in the index when present (relative to public/).
 const SATELLITES = [
   'apps-network-sitemap.xml',
+  'sitemap-apps-network-en.xml',
+  'sitemap-apps-network-pt-BR.xml',
+  'sitemap-apps-network-es.xml',
+  'sitemap-apps-network-fr.xml',
+  'sitemap-apps-network-de.xml',
   'apps/apps-sitemap.xml',
   'sitemap-editorial.xml',
 ];

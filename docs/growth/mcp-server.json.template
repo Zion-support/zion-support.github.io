@@ -1,0 +1,13 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
+  "name": "io.github.zion-support/zion-app-network",
+  "description": "Zion AI App Network tools: FinOps, operations, governance, field service and AI controls.",
+  "version": "0.1.0",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://REPLACE-WITH-PUBLIC-MCP-ENDPOINT/mcp"
+    }
+  ],
+  "_comment": "TEMPLATE ONLY — NOT PUBLISHED. Replace the remote URL, verify the namespace (GitHub account / DNS / HTTP challenge), keep description <= 100 chars, then publish with `mcp-publisher publish`. Publishing is an external action requiring the owner."
+}
