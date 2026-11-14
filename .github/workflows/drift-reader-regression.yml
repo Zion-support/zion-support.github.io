@@ -1,0 +1,32 @@
+name: Drift reader offline regression
+
+"on":
+  pull_request:
+    paths:
+      - '.github/workflows/apps-deployed-source-drift.yml'
+      - '.github/workflows/drift-reader-regression.yml'
+      - 'scripts/ci/test_drift_reader.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: drift-reader-regression-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  regression:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Checkout only test inputs
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          persist-credentials: false
+          sparse-checkout: |
+            .github/workflows/apps-deployed-source-drift.yml
+            scripts/ci/test_drift_reader.py
+          sparse-checkout-cone-mode: false
+      - name: Verify complete reads, retries and real drift
+        run: python3 scripts/ci/test_drift_reader.py

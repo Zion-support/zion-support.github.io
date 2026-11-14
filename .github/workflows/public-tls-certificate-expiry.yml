@@ -1,0 +1,52 @@
+name: Public TLS Certificate Expiry Watch
+
+on:
+  schedule:
+    - cron: '11 8 * * 1,4'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: public-tls-expiry-watch
+  cancel-in-progress: false
+
+jobs:
+  certificate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Verify public TLS certificate and expiry
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import datetime, os, socket, ssl, sys
+          from pathlib import Path
+          hosts=['ziontechgroup.com','www.ziontechgroup.com']
+          now=datetime.datetime.now(datetime.timezone.utc)
+          rows=['## Zion TLS certificate expiry','','| Host | Expires (UTC) | Days remaining | Status |','|---|---|---:|---|']
+          failed=False
+          for host in hosts:
+              try:
+                  context=ssl.create_default_context()
+                  with socket.create_connection((host,443),timeout=12) as sock:
+                      with context.wrap_socket(sock,server_hostname=host) as tls:
+                          cert=tls.getpeercert()
+                  expiry=datetime.datetime.strptime(cert['notAfter'],'%b %d %H:%M:%S %Y %Z').replace(tzinfo=datetime.timezone.utc)
+                  days=(expiry-now).total_seconds()/86400
+                  status='CRITICAL' if days<14 else ('WARNING' if days<30 else 'OK')
+                  rows.append('| '+host+' | '+expiry.isoformat()+' | '+format(days,'.1f')+' | '+status+' |')
+                  print(host+': '+format(days,'.1f')+' days until expiry ('+status+')')
+                  if days<30:
+                      print('::error title=TLS certificate expiry approaching::'+host+' expires in '+format(days,'.1f')+' days')
+                      failed=True
+              except Exception as exc:
+                  rows.append('| '+host+' | unavailable | n/a | ERROR |')
+                  print('::error title=TLS verification failed::'+host+': '+str(exc))
+                  failed=True
+          with Path(os.environ['GITHUB_STEP_SUMMARY']).open('a',encoding='utf-8') as output:
+              output.write(chr(10).join(rows)+chr(10))
+          if failed: sys.exit(1)
+          PY

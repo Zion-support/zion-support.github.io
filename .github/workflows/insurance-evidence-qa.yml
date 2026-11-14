@@ -1,0 +1,28 @@
+name: Insurance Evidence Workbench QA
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'public/assets/js/insurance-evidence.js'
+      - 'scripts/render-insurance-evidence.cjs'
+      - 'scripts/test-insurance-evidence.cjs'
+      - '.github/workflows/insurance-evidence-qa.yml'
+  pull_request:
+    paths:
+      - 'public/assets/js/insurance-evidence.js'
+      - 'scripts/render-insurance-evidence.cjs'
+      - 'scripts/test-insurance-evidence.cjs'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --check public/assets/js/insurance-evidence.js
+      - run: node --check scripts/render-insurance-evidence.cjs
+      - run: node scripts/test-insurance-evidence.cjs

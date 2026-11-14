@@ -1,0 +1,141 @@
+name: Apps canonical hreflang contract
+
+"on":
+  pull_request:
+    paths:
+      - 'public/apps/index.html'
+      - 'public/pt/apps/index.html'
+      - 'public/es/apps/index.html'
+      - 'public/fr/apps/index.html'
+      - 'public/de/apps/index.html'
+      - 'public/discovery/index.html'
+      - 'public/pt/discovery/index.html'
+      - 'public/es/discovery/index.html'
+      - 'public/fr/discovery/index.html'
+      - 'public/de/discovery/index.html'
+      - 'apps/operations-reliability-ai-2026*.html'
+      - 'public/apps/operations-reliability-ai-2026*.html'
+      - '.github/workflows/apps-canonical-hreflang-contract.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'public/apps/index.html'
+      - 'public/pt/apps/index.html'
+      - 'public/es/apps/index.html'
+      - 'public/fr/apps/index.html'
+      - 'public/de/apps/index.html'
+      - 'public/discovery/index.html'
+      - 'public/pt/discovery/index.html'
+      - 'public/es/discovery/index.html'
+      - 'public/fr/discovery/index.html'
+      - 'public/de/discovery/index.html'
+      - 'apps/operations-reliability-ai-2026*.html'
+      - 'public/apps/operations-reliability-ai-2026*.html'
+      - '.github/workflows/apps-canonical-hreflang-contract.yml'
+  schedule:
+    - cron: '29 13 * * 4'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: apps-canonical-hreflang-contract-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  contract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+
+      - name: Verify canonical, hreflang and locale aliases
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from html.parser import HTMLParser
+          from pathlib import Path
+          import sys
+
+          class HeadLinks(HTMLParser):
+              def __init__(self):
+                  super().__init__()
+                  self.canonicals=[]
+                  self.alternates={}
+              def handle_starttag(self,tag,attrs):
+                  if tag.lower()!='link':
+                      return
+                  d={k.lower():v for k,v in attrs}
+                  rel=(d.get('rel') or '').lower()
+                  href=d.get('href')
+                  if not href:
+                      return
+                  if rel=='canonical':
+                      self.canonicals.append(href)
+                  elif rel=='alternate' and d.get('hreflang'):
+                      self.alternates[d['hreflang']]=href
+
+          base='https://ziontechgroup.com'
+          families={
+            'apps':{
+              'en':('public/apps/index.html',f'{base}/apps/'),
+              'pt-BR':('public/pt/apps/index.html',f'{base}/pt/apps/'),
+              'es':('public/es/apps/index.html',f'{base}/es/apps/'),
+              'fr':('public/fr/apps/index.html',f'{base}/fr/apps/'),
+              'de':('public/de/apps/index.html',f'{base}/de/apps/'),
+            },
+            'discovery':{
+              'en':('public/discovery/index.html',f'{base}/discovery/'),
+              'pt-BR':('public/pt/discovery/index.html',f'{base}/pt/discovery/'),
+              'es':('public/es/discovery/index.html',f'{base}/es/discovery/'),
+              'fr':('public/fr/discovery/index.html',f'{base}/fr/discovery/'),
+              'de':('public/de/discovery/index.html',f'{base}/de/discovery/'),
+            },
+            'operations':{
+              'en':('public/apps/operations-reliability-ai-2026.html',f'{base}/apps/operations-reliability-ai-2026.html'),
+              'pt-BR':('public/apps/operations-reliability-ai-2026-pt.html',f'{base}/apps/operations-reliability-ai-2026-pt.html'),
+              'es':('public/apps/operations-reliability-ai-2026-es.html',f'{base}/apps/operations-reliability-ai-2026-es.html'),
+              'fr':('public/apps/operations-reliability-ai-2026-fr.html',f'{base}/apps/operations-reliability-ai-2026-fr.html'),
+              'de':('public/apps/operations-reliability-ai-2026-de.html',f'{base}/apps/operations-reliability-ai-2026-de.html'),
+            },
+          }
+          errors=[]
+          for family,members in families.items():
+              expected={lang:url for lang,(_,url) in members.items()}
+              xdefault=expected['en']
+              for lang,(file_name,self_url) in members.items():
+                  p=Path(file_name)
+                  if not p.is_file():
+                      errors.append(f'{family}/{lang}: missing {file_name}')
+                      continue
+                  body=p.read_text(encoding='utf-8')
+                  parser=HeadLinks(); parser.feed(body)
+                  if parser.canonicals != [self_url]:
+                      errors.append(f'{file_name}: canonical={parser.canonicals!r}, expected exactly [{self_url!r}]')
+                  for alt_lang,alt_url in expected.items():
+                      if parser.alternates.get(alt_lang)!=alt_url:
+                          errors.append(f'{file_name}: hreflang {alt_lang}={parser.alternates.get(alt_lang)!r}, expected {alt_url!r}')
+                  if parser.alternates.get('x-default')!=xdefault:
+                      errors.append(f'{file_name}: x-default={parser.alternates.get("x-default")!r}, expected {xdefault!r}')
+                  if '/pt-br/discovery/' in body:
+                      errors.append(f'{file_name}: deprecated /pt-br/discovery/ alias present; canonical route is /pt/discovery/')
+                  if 'http-equiv="refresh"' in body.lower() or "http-equiv='refresh'" in body.lower():
+                      errors.append(f'{file_name}: meta refresh is forbidden in canonical locale pages')
+
+          for suffix in ['','-pt','-es','-fr','-de']:
+              src=Path(f'apps/operations-reliability-ai-2026{suffix}.html')
+              pub=Path(f'public/apps/operations-reliability-ai-2026{suffix}.html')
+              if not src.is_file() or not pub.is_file():
+                  errors.append(f'operations mirror missing: {src} / {pub}')
+              elif src.read_bytes()!=pub.read_bytes():
+                  errors.append(f'operations mirror drift: {src} != {pub}')
+
+          if errors:
+              for item in errors:
+                  print(f'::error::{item}')
+              raise SystemExit(1)
+          print('Apps canonical/hreflang contract: PASS')
+          PY

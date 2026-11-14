@@ -1,0 +1,24 @@
+name: Insurance Evidence Read-only Browser QA
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  browser-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install pinned read-only browser test runtime
+        run: python -m pip install playwright==1.63.0 && python -m playwright install --with-deps chromium
+      - name: Test five languages at desktop and mobile widths without outbound submissions
+        run: python scripts/test-insurance-evidence-browser.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: insurance-evidence-browser-qa
+          path: artifacts/insurance-evidence/browser-qa.json
+          if-no-files-found: warn

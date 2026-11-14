@@ -78,14 +78,14 @@ print(f"TOTAL_CRAWLED={total_crawled}")
 print(f"HTTP_200_COUNT={http_200}")
 print(f"BROKEN_COUNT={len(broken_urls)}")
 print("\nFIRST_10_BROKEN:")
-for i, b in enumerate(broken_urls[:10], 1):
+for i, b in enumerate(broken_urls, 1):
     print(f"{i}. URL={b['url']} STATUS={b['status']} TYPE={b['type']}")
 
 report = {
     "total_crawled": total_crawled,
     "http_200": http_200,
     "broken_count": len(broken_urls),
-    "broken": broken_urls[:10]
+    "broken": broken_urls
 }
 json.dump(report, open("/Users/miami2/zion.app/automation/site_integrity_report.json", "w"), indent=2)
 print("\nREPORT_WRITTEN")
