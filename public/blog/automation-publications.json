@@ -35,6 +35,13 @@
       "summary": "Use a small release checklist to catch missing pages, self-redirects and stale sitemap entries.",
       "mode": "ultra",
       "publishedAt": "2026-11-14T20:28:50.968Z"
+    },
+    {
+      "slug": "prepare-data-integration-acceptance-criteria",
+      "title": "Define acceptance criteria for a data integration project",
+      "summary": "Turn a request to connect systems into a testable agreement about data, ownership and recovery.",
+      "mode": "services",
+      "publishedAt": "2026-11-14T21:57:19.073Z"
     }
   ]
 }
