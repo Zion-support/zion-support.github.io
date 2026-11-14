@@ -337,6 +337,14 @@ export default function HomePage() {
           })
         }}
       />
+      <GeoAnswer
+        heading="What is Zion Tech Group?"
+        answer="Zion Tech Group is a US-based AI, IT, cloud, security, data, automation, and micro-SaaS company headquartered in Middletown, Delaware. We design and deliver production-ready AI and IT solutions for businesses of all sizes — from AI implementation and managed IT to free developer tools, micro-SaaS products, and strategic consulting."
+        for={['Mid-market companies', 'IT and engineering leaders', 'Small-to-medium businesses', 'Healthcare & finance teams', 'Startups & scale-ups']}
+        features={['Product-led free tools (28+ browser-based utilities)', '16,000+ packaged AI/IT service catalog', 'Free online Discovery assessment', 'AI agent coordination & automation', 'Micro-SaaS products with 99.9% SLA']}
+        ctaHref="/discovery/"
+        ctaCopy="Run free AI Discovery →"
+      />
       {/* ── Hero ── */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_30%,rgba(120,50,200,0.18),rgba(20,10,40,0.92))]" />
