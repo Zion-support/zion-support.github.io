@@ -1,0 +1,116 @@
+# build-and-ship-public.yml — Build zion.app (Next.js static export) and ship the
+# output into `public/` (the GitHub Pages source of truth), then commit + push main.
+# Pages (gh-pages.yml) then deploys public/ automatically.
+#
+# Run via: gh workflow run build-and-ship-public.yml -R Zion-support/zion-support.github.io
+#
+# The local machine OOMs on the 16k-service tree; this job runs on github-hosted
+# ubuntu-latest with 15GB heap + single-threaded webpack (memory optimizations).
+
+name: Build zion.app → public/ ship
+
+on:
+  workflow_dispatch:
+    inputs:
+      note:
+        description: 'Ship note'
+        required: false
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: build-and-ship-public
+  cancel-in-progress: false
+
+jobs:
+  build-and-ship:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      NODE_OPTIONS: '--max-old-space-size=15360'
+      NEXT_TURBOAMP_USE_WORKER: '0'
+      NEXT_BUILD_WORKER_COUNT: '1'
+      NEXT_TELEMETRY_DISABLED: '1'
+
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 100
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+          cache-dependency-path: package-lock.json
+
+      - name: Install deps
+        run: npm ci --prefer-offline --no-audit --fund=false
+
+      - name: Build zion.app (static export)
+        id: build
+        run: |
+          echo "=== NODE_OPTIONS=$(node -e "console.log(process.env.NODE_OPTIONS)") ==="
+          npm run build:ci
+          echo "BUILD_EXIT=$?"
+          echo "build_exit=${BUILD_EXIT}" >> $GITHUB_OUTPUT
+          echo "=== build wrapper artifacts ==="
+          ls -la out 2>/dev/null | head -15 || echo "no out dir"
+          test -f out/index.html && echo "out/index.html OK" || (echo "out/index.html MISSING" && exit 1)
+
+      - name: Ship built output into public/ (source of truth)
+        run: |
+          set -euo pipefail
+          rm -rf public
+          cp -a out/. public/
+          echo "=== public/ after ship (top level) ==="
+          ls public/ | head -20
+          echo "=== homepage size ==="
+          wc -c public/index.html
+
+      - name: Re-run money-path gate on shipped public/
+        run: bash scripts/prepare-pages-out.sh
+
+      - name: Commit & push public/
+        id: commit
+        run: |
+          git config user.name "Zion-support[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A public/
+          if git diff --cached --quiet; then
+            echo "public/ unchanged (nothing to ship)"
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            git commit -m "📦 Ship zion.app build 734dae5: GEO answer moat + pt-BR locale + lang switcher + hreflang"
+            echo "changed=true" >> $GITHUB_OUTPUT
+            echo "committed_new_sha=$(git rev-parse HEAD)" >> $GITHUB_OUTPUT
+          fi
+        env:
+          GIT_AUTHOR_NAME: Zion-support[bot]
+          GIT_AUTHOR_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
+
+      - name: Push main
+        if: steps.commit.outputs.changed == 'true'
+        run: |
+          git push origin main
+          echo "pushed=true" >> $GITHUB_OUTPUT
+
+      - name: Upload deploy report
+        if: always()
+        run: |
+          mkdir -p /tmp/ctx
+          cat > /tmp/ctx/ship-report.json <<'EOF'
+          {
+            "sha_build": "734dae5f195",
+            "build_exit": "${{ steps.build.outputs.build_exit }}",
+            "public_changed": "${{ steps.commit.outputs.changed }}",
+            "committed_sha": "${{ steps.commit.outputs.committed_new_sha }}",
+            "pushed": "${{ steps.commit.outputs.pushed }}"
+          }
+          EOF
+          echo "=== ship report ==="
+          cat /tmp/ctx/ship-report.json
