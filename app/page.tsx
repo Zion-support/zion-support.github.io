@@ -10,6 +10,7 @@ import ServiceSpotlight from '@/components/ServiceSpotlight';
 import ServiceGridWithSearch from '@/components/ServiceGridWithSearch';
 import AppsNetworkShowcase from '@/components/AppsNetworkShowcase';
 import ResultsRoiSection from '@/components/ResultsRoiSection';
+import DiscoveryBenefits from '@/components/DiscoveryBenefits';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import ContactFunnel from '@/components/ContactFunnel';
 import ServiceCounter from '@/components/ServiceCounter';
@@ -597,6 +598,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* ── Free Discovery — benefits + sourced benchmarks ── */}
+      <DiscoveryBenefits />
 
       {/* ── Service Match Quiz — Interactive AI Tool ── */}
       <ServiceMatchQuiz />
