@@ -1,8 +1,8 @@
 # Zion CEO-ops — standing orders (always on)
 
-Record every durable instruction, reply, and feedback on issue #71361.
+Record every durable instruction, reply, and feedback on issue #71438 (live forever-log; #71361 archived at 2500 comments).
 Board: https://ziontechgroup.com/ops/comms/
-Log: https://github.com/Zion-support/zion-support.github.io/issues/71361 (archived at 2500 comments, active log: #71479)
+Log: https://github.com/Zion-support/zion-support.github.io/issues/71438 (#71361 archived; #71479 successor volume)
 Notion: https://app.notion.com/p/Zion-War-Room-CEO-HQ-3ecb94b0eaf781f6b5a0f4768cec2ead
 
 ## Help Carlos first
@@ -167,21 +167,16 @@ Do not create extra labels.
 - Watchers: agent-presence-watchdog.yml + Pulse 8f51ca5f + Worker 2ff9fef3
 - static-deploy.yml paths-ignores STATUS.md so Hermes Monitor does not cancel Pages (commit e3dc41fb)
 
-## Checkpoint 2026-09-17 17:26 -03
-Already SENT today — do not clone:
-- Carlos → Laércio IMA: substantial discount on the live RFQ (thread 19c058d9fef831f9, 17:12 BRT). Wait market research. Bid numbers stay off this public page.
-- Carlos → Samuel Câmara: Folha de Rosto sent (thread 1a0b0ed1dc951e85, 16:51 BRT). Wait Samuel.
-- Kleber → Tainah Agilize: not pré-venda; route to Victoria + ticket #2423990 (thread 1a0b0b152d2b1a59). Two Zion replies already — no third.
-- German Business Thiago: not a Zion buyer. Aligned.
-- Discovery cap used (Ledervin). No free Discovery until 18 Sep.
+## Checkpoint 2026-11-14 19:13 -03
+Discovery cap until 18 Sep 2026 has expired. Closed/old cases remain Discovery GRÁTIS + 1h trial per standing rules. No new auto free Discovery invent. Live log is #71438.
 
-Carlos still owns (his clicks, not another brief):
-1. FAJ minuta — vence 07/10. One thread. Parque includes HPE MSA2060 + segundo storage. Gyovanna asked one email only.
+Carlos still owns (his clicks, not another brief; some deadlines past as of Nov 2026):
+1. FAJ minuta — vence 07/10 (past). One thread. Parque includes HPE MSA2060 + segundo storage. Gyovanna asked one email only.
 2. FUNCATE PDF to Paulo Blotto on the live thread.
 3. Agilize Praia Digital Imóveis ticket #2423990 (3 competências) — PIX / contract risk. Amount stays off this public page.
 4. Clicksign Ilha envelope 20260915 — Carlos is missing witness.
-5. Crypto.com BRL withdraw/convert before 25/10.
+5. Crypto.com BRL withdraw/convert before 25/10 (past).
 
 WAIT: HeyGen John · Elastic ticket 02151891 (do not mail admin@partners.elastic.co) · TDS stock · Microsoft Sergio Fri 10:00 BRT · LD NFs 95/96 baixa.
 
-HubSpot live named contacts only — IDs live on #71361, not here.
+HubSpot live named contacts only — IDs live on #71438, not here.
