@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "posts": [
+    {
+      "slug": "automation-recovery-evidence-checklist",
+      "title": "A practical checklist for verifying automation recovery",
+      "summary": "Verify outputs, delivery and recovery evidence before calling an automation healthy.",
+      "mode": "daily",
+      "publishedAt": "2026-11-14T13:13:15.291Z"
+    }
+  ]
+}
