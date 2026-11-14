@@ -56,3 +56,10 @@
 - Growth pages (commit 7542213d07): /nearshore-ai-it-services/ + /pt/servicos-nearshore-ia-ti/ and /ai-operations-retainer/ + /pt/retencao-operacoes-ia/ (EN/PT, FAQ schema, hreflang, sitemap-0).
 - Deploy run 43638810922 success. VERIFIED: 309/309 URLs HTTP 200.
 - Notion: https://app.notion.com/p/Zion-14-Nov-2026-Guard-fixes-Growth-GTM-pages-418b94b0eaf7818e90aed78a35c38e47
+
+### ROUND 2026-11-14 (INTEGRATIONS-3) — LGPD/IA + GEO PAGES
+- Published commit ee3833bc6c (deploy 43654215334 success): /lgpd-ai-data-residency/ + /pt/lgpd-ia-residencia-de-dados/ and /ai-search-visibility/ + /pt/visibilidade-busca-ia/. FAQ schema + hreflang + x-default; sitemap-0 now 85 locs.
+- VERIFIED LIVE: 4/4 new pages 200 with correct canonical + hreflang; 16/16 internal links 200; external sources checked (Planalto, ANPD, EUR-Lex 2026/179, demandDrive, CSP, HowlLouder, OMNIUS).
+- CONFLICT AVOIDED: /partner-program/ already existed as a deliberate redirect ("No public 20% program" -> /partners/). Restored it and dropped the partner page. Do not overwrite.
+- OPEN (needs owner): /pt/contact/ is 404 live; it is the CTA target on the PT pages for public-sector and pricing-models. One-line fix: /pt/contact/ -> /contact/.
+- Notion: https://app.notion.com/p/Zion-14-Nov-2026-Rodada-3-LGPD-IA-GEO-publicados-418b94b0eaf781eb9b65c9cc9b18d76b
