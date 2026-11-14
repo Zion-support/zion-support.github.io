@@ -1,0 +1,110 @@
+{
+  "generatedAt": "2026-11-14T13:07:43.621Z",
+  "status": "review_required",
+  "mode": "read_only",
+  "catalogServicesInspected": 29113,
+  "missingStaticPages": 23525,
+  "candidates": [
+    {
+      "id": "automation-neural-gaming-0dd17310",
+      "title": "Automation Neural - Gaming",
+      "source": "app/data/servicesData.json"
+    },
+    {
+      "id": "smart-supply-platform-tech-9de5b021",
+      "title": "Smart Supply Platform - Tech",
+      "source": "app/data/servicesData.json"
+    },
+    {
+      "id": "neural-insights-energy-dbb425b1",
+      "title": "Neural insights-energy",
+      "source": "app/data/servicesData.json"
+    },
+    {
+      "id": "intelligent-director-for-agriculture-fddd679f",
+      "title": "Intelligent Director for Agriculture",
+      "source": "app/data/servicesData.json"
+    },
+    {
+      "id": "ai-engine-insurance-edition-c3bdb541",
+      "title": "AI Engine - Insurance Edition",
+      "source": "app/data/servicesData.json"
+    },
+    {
+      "id": "cognitive-cognitive-solution-media-e4dca0a0",
+      "title": "Cognitive Cognitive Solution - Media",
+      "source": "app/data/servicesData.json"
+    },
+    {
+      "id": "self-optimizing-manager-logistics-f912d40d",
+      "title": "Self-Optimizing manager-logistics",
+      "source": "app/data/servicesData.json"
+    },
+    {
+      "id": "intelligent-management-for-construction-a0e6243a",
+      "title": "Intelligent Management for Construction",
+      "source": "app/data/servicesData.json"
+    },
+    {
+      "id": "quality-neural-automotive-d96b9722",
+      "title": "Quality Neural - Automotive",
+      "source": "app/data/servicesData.json"
+    },
+    {
+      "id": "intelligent-cloud-for-media-63b0252c",
+      "title": "Intelligent Cloud for Media",
+      "source": "app/data/servicesData.json"
+    },
+    {
+      "id": "intelligent-sales-for-automotive-e0462dcd",
+      "title": "Intelligent Sales for Automotive",
+      "source": "app/data/servicesData.json"
+    },
+    {
+      "id": "smart-devops-platform-finance-a167264d",
+      "title": "Smart DevOps Platform - Finance",
+      "source": "app/data/servicesData.json"
+    },
+    {
+      "id": "intelligent-manager-for-agriculture-7e7ce56e",
+      "title": "Intelligent Manager for Agriculture",
+      "source": "app/data/servicesData.json"
+    },
+    {
+      "id": "cognitive-devops-solution-sports-655fc716",
+      "title": "Cognitive DevOps Solution - Sports",
+      "source": "app/data/servicesData.json"
+    },
+    {
+      "id": "autonomous-performance-system-energy-ce02f0e3",
+      "title": "Autonomous Performance System - Energy",
+      "source": "app/data/servicesData.json"
+    },
+    {
+      "id": "smart-support-platform-legal-a44ca01a",
+      "title": "Smart Support Platform - Legal",
+      "source": "app/data/servicesData.json"
+    },
+    {
+      "id": "ai-cloud-retail-edition-31b27275",
+      "title": "AI Cloud - Retail Edition",
+      "source": "app/data/servicesData.json"
+    },
+    {
+      "id": "ai-insights-gaming-edition-59494a6d",
+      "title": "AI Insights - Gaming Edition",
+      "source": "app/data/servicesData.json"
+    },
+    {
+      "id": "insights-autonomous-tech-7a6b8973",
+      "title": "Insights Autonomous - Tech",
+      "source": "app/data/servicesData.json"
+    },
+    {
+      "id": "autonomous-risk-system-legal-e0985ae4",
+      "title": "Autonomous Risk System - Legal",
+      "source": "app/data/servicesData.json"
+    }
+  ],
+  "scope": "Catalog-to-public file comparison, not live availability. Legacy generated entries require review; this report does not publish or advertise them."
+}
