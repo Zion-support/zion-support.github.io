@@ -9,6 +9,7 @@ import ServiceBrowser from '@/components/ServiceBrowser';
 import ServiceSpotlight from '@/components/ServiceSpotlight';
 import ServiceGridWithSearch from '@/components/ServiceGridWithSearch';
 import AppsNetworkShowcase from '@/components/AppsNetworkShowcase';
+import ResultsRoiSection from '@/components/ResultsRoiSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import ContactFunnel from '@/components/ContactFunnel';
 import ServiceCounter from '@/components/ServiceCounter';
@@ -1220,6 +1221,9 @@ export default function HomePage() {
 
       {/* ── Apps Network — link to the Zion apps ── */}
       <AppsNetworkShowcase />
+
+      {/* ── Industry benchmarks (third-party, sourced) ── */}
+      <ResultsRoiSection />
 
       {/* ── Service Search — find any of {serviceCount}+ services ── */}
       <ServiceGridWithSearch />
