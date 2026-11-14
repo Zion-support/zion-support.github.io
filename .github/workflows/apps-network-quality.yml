@@ -1,0 +1,21 @@
+name: Apps network quality
+on:
+  pull_request:
+    paths: ['app/data/appsNetwork.ts', 'public/assets/js/zion-network-tools.js', 'public/index.html', 'public/token-cost/**', 'public/cloud-waste/**', 'public/incident-cost/**', 'public/change-risk/**', 'public/patch-window/**', 'public/rfp-readiness/**', 'scripts/test-zion-network-tools.mjs', 'scripts/test-app-network-integrity.mjs', '.github/workflows/apps-network-quality.yml']
+  push:
+    branches: [main]
+    paths: ['app/data/appsNetwork.ts', 'public/assets/js/zion-network-tools.js', 'public/index.html', 'public/token-cost/**', 'public/cloud-waste/**', 'public/incident-cost/**', 'public/change-risk/**', 'public/patch-window/**', 'public/rfp-readiness/**', 'scripts/test-zion-network-tools.mjs', 'scripts/test-app-network-integrity.mjs', '.github/workflows/apps-network-quality.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: node --check public/assets/js/zion-network-tools.js
+      - run: node --test scripts/test-zion-network-tools.mjs
+      - run: node --experimental-strip-types --test scripts/test-app-network-integrity.mjs
