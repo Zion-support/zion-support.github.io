@@ -40,7 +40,7 @@ jobs:
       - name: Install dependencies
         run: npm ci --prefer-offline --no-audit --fund=false
 
-      - name: Evaluate previously published static health freshness
+      - name: Evaluate published health snapshot before refreshing
         id: freshness
         continue-on-error: true
         env:
@@ -56,7 +56,7 @@ jobs:
           ISSUE_LABELS: automation-incident,automation-fp-automation-health-static-freshness,automation-observability
           ISSUE_TITLE: "Automation health static snapshot stale"
           ISSUE_BODY: |
-            The static automation health API snapshot under `public/api/automation-health.json` is stale or invalid.
+            The deployed automation health API at `https://ziontechgroup.com/api/automation-health.json` is stale, invalid, or unavailable.
 
             Investigate:
             - `scripts/automation/generate-automation-health-snapshot.cjs`
@@ -75,12 +75,14 @@ jobs:
         run: node scripts/automation/gh-issue-close-on-recovery.cjs
 
       - name: Refresh snapshot from actual production observations
+        id: refresh
+        if: ${{ !cancelled() && (github.event_name == 'schedule' || inputs.publish) }}
         env:
           GH_TOKEN: ${{ github.token }}
         run: node scripts/automation/generate-automation-health-snapshot.cjs
 
       - name: Persist and publish the measured snapshot
-        if: ${{ github.event_name == 'schedule' || inputs.publish }}
+        if: ${{ !cancelled() && steps.refresh.outcome == 'success' && (github.event_name == 'schedule' || inputs.publish) }}
         env:
           GH_TOKEN: ${{ github.token }}
         run: node scripts/automation/publish-health-snapshot.cjs
@@ -95,8 +97,6 @@ jobs:
             automation/reports/automation-health-latest.json
           if-no-files-found: error
 
-      - name: Preserve failed guard result when previous snapshot was stale
-        if: steps.freshness.outputs.static_health_fresh != 'true'
-        run: |
-          echo "::error::Previously published automation health snapshot was stale or invalid before refresh"
-          exit 1
+      - name: Fail when the previously published snapshot was stale
+        if: ${{ !cancelled() && steps.freshness.outputs.static_health_fresh != 'true' }}
+        run: exit 1
