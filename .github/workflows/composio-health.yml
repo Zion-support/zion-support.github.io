@@ -6,77 +6,27 @@ on:
   push:
     paths:
       - '.github/workflows/composio-health.yml'
-    branches:
-      - main
-
+      - 'scripts/automation/check-composio-health.py'
+    branches: [main]
+permissions:
+  contents: read
+concurrency:
+  group: composio-health
+  cancel-in-progress: false
 jobs:
   health-check:
     runs-on: ubuntu-latest
-    env:
-      COMPOSIO_API_KEY: ${{ secrets.COMPOSIO_API_KEY }}
+    timeout-minutes: 10
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
-
-      # 2026-11-05 fix: the v1 REST endpoint (/api/v1/connectedAccounts) now
-      # returns HTTP 410 "upgrade to v3 APIs". Use the Composio CLI v3 instead,
-      # matching composio-setup.yml.
-      - name: Install Composio CLI (v3)
-        run: |
-          curl -fsSL https://composio.dev/install | sh
-          echo "$HOME/.local/bin" >> $GITHUB_PATH
-
-      - name: Verify API key and login
-        run: |
-          set -euo pipefail
-          if [ -z "${COMPOSIO_API_KEY:-}" ]; then
-            echo "COMPOSIO_API_KEY secret is NOT set"; exit 1
-          fi
-          composio login --user-api-key "$COMPOSIO_API_KEY" --yes --no-skill-install
-
-      - name: Count active connected accounts
-        run: |
-          set -euo pipefail
-          composio connections list > /tmp/composio-connections.json
-          python3 - <<'PY'
-          import json
-          d = json.load(open('/tmp/composio-connections.json'))
-          total = 0
-          active = 0
-          lines = []
-          for toolkit, accounts in sorted(d.items()):
-              n = len(accounts) if isinstance(accounts, list) else 0
-              a = sum(1 for x in accounts if isinstance(x, dict) and str(x.get('status','')).upper() == 'ACTIVE') if isinstance(accounts, list) else 0
-              total += n
-              active += a
-              lines.append(f"- {toolkit}: {a} active / {n} total")
-          print(f"Active connected accounts: {active} (total {total})")
-          print("\n".join(lines))
-          PY
-
-      - name: Report accounts needing attention
-        run: |
-          set -euo pipefail
-          python3 - <<'PY'
-          import json
-          d = json.load(open('/tmp/composio-connections.json'))
-          problems = []
-          for toolkit, accounts in sorted(d.items()):
-              if not isinstance(accounts, list):
-                  continue
-              for a in accounts:
-                  status = str(a.get('status','')).upper()
-                  if status in ('EXPIRED','FAILED','REVOKED'):
-                      problems.append(f"- {toolkit}: {a.get('display_name') or a.get('word_id') or a.get('id')} -> {status}")
-          if problems:
-              print("Accounts needing attention:")
-              print("\n".join(problems))
-          else:
-              print("No expired/failed/revoked accounts.")
-          PY
-
-      - name: Summary
-        if: always()
-        run: |
-          echo "Composio health check completed at $(date -u)"
-          echo "Key set: $([ -n "$COMPOSIO_API_KEY" ] && echo 'yes' || echo 'no')"
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+      - name: Verify project authentication and inventory connection states
+        env:
+          COMPOSIO_API_KEY: ${{ secrets.COMPOSIO_API_KEY }}
+        run: python3 scripts/automation/check-composio-health.py
+      - name: Upload credential-free health inventory
+        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
+        with:
+          name: composio-health-${{ github.run_id }}
+          path: automation/reports/composio-health-latest.json
+          if-no-files-found: error
