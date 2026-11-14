@@ -28,6 +28,13 @@
       "summary": "A backup is useful when its contents, limits and restoration steps have been checked.",
       "mode": "daily",
       "publishedAt": "2026-11-14T13:20:39.003Z"
+    },
+    {
+      "slug": "redirect-and-sitemap-release-checks",
+      "title": "Check redirects and sitemaps before a website release",
+      "summary": "Use a small release checklist to catch missing pages, self-redirects and stale sitemap entries.",
+      "mode": "ultra",
+      "publishedAt": "2026-11-14T20:28:50.968Z"
     }
   ]
 }
