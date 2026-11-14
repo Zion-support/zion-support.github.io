@@ -1,0 +1,146 @@
+[
+  {
+    "id": "edge-ai-observability-001",
+    "name": "Edge AI / Low-Latency Infrastructure",
+    "title": "Edge AI / Low-Latency Infrastructure",
+    "description": "Deploy AI inference at the edge with sub-ms latency, data-residency-compliant processing, and 5G-ready edge nodes for real-time workloads (autonomous systems, industrial IoT, fintech).",
+    "category": "ai-infrastructure",
+    "industry": "technology",
+    "features": [
+      "Edge AI deployment (GPU/CPU nodes)",
+      "Sub-ms latency architecture",
+      "Data-residency compliance (LGPD)",
+      "5G-ready edge nodes",
+      "Multi-region failover",
+      "Real-time monitoring & alerting"
+    ],
+    "benefits": [
+      "23.5% CAGR market growth",
+      "Data sovereignty compliance",
+      "Reduced latency",
+      "5G-ready infrastructure"
+    ],
+    "pricing": {
+      "basic": "199",
+      "pro": "499",
+      "enterprise": "1499"
+    },
+    "timestamp": "2026-11-14T00:00:00.000000+00:00",
+    "contactInfo": {
+      "website": "/services/edge-ai-observability-001",
+      "email": "hello@ziontechgroup.com",
+      "phone": "+1 (302) 464-0950"
+    },
+    "icon": "\ud83d\udca1",
+    "href": "/services/edge-ai-observability-001",
+    "popular": true
+  },
+  {
+    "id": "cloud-migration-finops-002",
+    "name": "Cloud Migration & FinOps",
+    "title": "Cloud Migration & FinOps",
+    "description": "End-to-end cloud migration and FinOps services for Brazilian enterprises. Migrate legacy systems to cloud with cost-optimization governance, multi-cloud strategies, and SAP S/4HANA modernization.",
+    "category": "cloud",
+    "industry": "technology",
+    "features": [
+      "Cloud migration (multi-cloud)",
+      "FinOps assessment & cost optimization",
+      "SAP S/4HANA migration",
+      "Cloud-native microservices",
+      "Cost governance & budgeting",
+      "Hybrid & multi-cloud strategies"
+    ],
+    "benefits": [
+      "22.4% CAGR market growth",
+      "25-30% cloud spend reduction",
+      "Multi-cloud strategy",
+      "SAP S/4HANA readiness"
+    ],
+    "pricing": {
+      "basic": "249",
+      "pro": "599",
+      "enterprise": "1999"
+    },
+    "timestamp": "2026-11-14T00:00:00.000000+00:00",
+    "contactInfo": {
+      "website": "/services/cloud-migration-finops-002",
+      "email": "hello@ziontechgroup.com",
+      "phone": "+1 (302) 464-0950"
+    },
+    "icon": "\ud83c\ubfff",
+    "href": "/services/cloud-migration-finops-002",
+    "popular": true
+  },
+  {
+    "id": "financial-services-it-outsource-003",
+    "name": "Financial Services IT Outsourcing",
+    "title": "Financial Services IT Outsourcing",
+    "description": "Managed IT services for Brazilian banks, fintechs, and insurance companies. Covers cloud migration, cybersecurity, process automation, and AI adoption. Brazil's banking sector invests US$10B+ in technology annually.",
+    "category": "financial-services",
+    "industry": "finance",
+    "features": [
+      "Cloud migration & FinOps",
+      "Cybersecurity & compliance (LGPD, PCI-DSS)",
+      "Process automation (RPA, AI agents)",
+      "24/7 SOC & monitoring",
+      "Integration platforms (open-banking APIs)",
+      "SAP for financial services"
+    ],
+    "benefits": [
+      "US$10B+ banking IT spend",
+      "84% of banks prioritize cloud & AI",
+      "24/7 SOC support",
+      "LGPD compliance ready"
+    ],
+    "pricing": {
+      "basic": "399",
+      "pro": "899",
+      "enterprise": "2999"
+    },
+    "timestamp": "2026-11-14T00:00:00.000000+00:00",
+    "contactInfo": {
+      "website": "/services/financial-services-it-outsource-003",
+      "email": "hello@ziontechgroup.com",
+      "phone": "+1 (302) 464-0950"
+    },
+    "icon": "\ud83c\udf4e",
+    "href": "/services/financial-services-it-outsource-003",
+    "popular": true
+  },
+  {
+    "id": "managed-security-services-004",
+    "name": "Managed Cybersecurity Services",
+    "title": "Managed Cybersecurity Services",
+    "description": "24/7 managed security operations for Brazilian enterprises. MDR/SOC services, threat detection, incident response, and identity security. Brazil's banking sector spends US$1.3B+ on cybersecurity.",
+    "category": "security",
+    "industry": "finance",
+    "features": [
+      "24/7 Managed SOC / MDR",
+      "Threat detection & incident response",
+      "Identity-first security (zero-trust)",
+      "Cloud-native security monitoring",
+      "Security operations automation",
+      "Compliance reporting (LGPD, PCI-DSS)"
+    ],
+    "benefits": [
+      "US$6.98B market growth (2030)",
+      "24/7 SOC / MDR",
+      "Identity-first security",
+      "LGPD compliance ready"
+    ],
+    "pricing": {
+      "basic": "299",
+      "pro": "699",
+      "enterprise": "2299"
+    },
+    "timestamp": "2026-11-14T00:00:00.000000+00:00",
+    "contactInfo": {
+      "website": "/services/managed-security-services-004",
+      "email": "hello@ziontechgroup.com",
+      "phone": "+1 (302) 464-0950"
+    },
+    "icon": "\ud83d\ude25",
+    "href": "/services/managed-security-services-004",
+    "popular": true
+  }
+]

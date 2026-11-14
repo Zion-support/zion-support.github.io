@@ -1,0 +1,1 @@
+=== preserves: CI watchdog 03:36-04:17 (Automation Health, PM2 Guardian, Idea Guard, Growth Signal Monitor, Incident Suppression, Content Velocity, Content Accelerator); DSNs; SandaOpto/NIBO triage-only ===

@@ -1056,6 +1056,26 @@ export const appsNetworkCatalog: AppsNetworkApp[] = [
   },
 
 
+  {
+    slug: 'itad-tracker',
+    name: 'ITAD Tracker',
+    href: '/itad-tracker/',
+    description: 'Reverse logistics, electronic asset disposal, chain-of-custody documentation for ITAD.',
+    descriptionPt: 'Gestão de logística reversa, eliminação de ativos eletrônicos, documentação de cadeia de custódia para ITAD.',
+    group: 'ops',
+    related: ['asset-recycling', 'warranty-lens', 'eco-certify'],
+  },
+  {
+    slug: 'amazon-dc-field-services',
+    name: 'Amazon DC Field Services',
+    href: '/amazon-dc-field-services/',
+    description: 'Field services for Amazon data center BEL1: construction, power, cooling, network, commissioning.',
+    descriptionPt: 'Serviços de campo para data center Amazônia BEL1: construção, energia, refrigeração, rede, commisionamento.',
+    group: 'field',
+    related: ['field-dispatch', 'dc-capacity', 'ssl-monitor'],
+  },
+];
+
 export const appsNetworkBySlug = Object.fromEntries(
   appsNetworkCatalog.map((app) => [app.slug, app])
 ) as Record<string, AppsNetworkApp>;

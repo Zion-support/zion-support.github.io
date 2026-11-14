@@ -27,7 +27,7 @@ concurrency:
 jobs:
   build-and-ship:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 90
     env:
       NODE_OPTIONS: '--max-old-space-size=15360'
       NEXT_TURBOAMP_USE_WORKER: '0'
