@@ -995799,4 +995799,39 @@
     "href": "/services/zero-trust-declarative-cybersecurity-security-mesh-7e9e8d5f",
     "popular": false
   }
+    {
+        "id": "suporte-tecnico-datacenter-2026-11-14",
+        "name": "Suporte Técnico e Datacenter",
+        "title": "Suporte Técnico e Datacenter",
+        "description": "Atendimento técnico presencial e infraestrutura de datacenter, com avaliação técnica, orçamento formal e liberação antes de qualquer execução.",
+        "category": "it",
+        "industry": "general",
+        "features": [
+            "Avaliação técnica de equipamentos e infraestrutura",
+            "Suporte presencial em escritório ou no datacenter",
+            "Monitoramento e manutenção de dispositivos e servidores",
+            "Janela de atendimento definida com o cliente"
+        ],
+        "benefits": [
+            "Resposta rápida a incidentes",
+            "Escopo e preço definidos antes da execução",
+            "Atendimento em fuso e janela combinada"
+        ],
+        "caseStudyMetrics": [],
+        "outreachTemplates": [],
+        "pricing": {
+            "basic": "199",
+            "pro": "499",
+            "enterprise": "1499"
+        },
+        "timestamp": "2026-11-14T13:20:00.000Z",
+        "contactInfo": {
+            "website": "/services/technical-support-datacenter",
+            "email": "info@ziontechgroup.com",
+            "phone": "+1 (302) 464 0950"
+        },
+        "icon": "\ud83d\udca1",
+        "href": "/services/technical-support-datacenter",
+        "popular": false
+    },
 ]
