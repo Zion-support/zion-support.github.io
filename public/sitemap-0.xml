@@ -55,6 +55,7 @@
 <url><loc>https://ziontechgroup.com/plans/</loc><lastmod>2026-09-17</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
 <url><loc>https://ziontechgroup.com/public-roadmap/</loc><lastmod>2026-09-18</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
 <url><loc>https://ziontechgroup.com/services/</loc><lastmod>2026-09-18</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://ziontechgroup.com/services/datacenter-maintenance-brazil/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 <url><loc>https://ziontechgroup.com/solutions/</loc><lastmod>2026-09-18</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
 <url><loc>https://ziontechgroup.com/status-page/</loc><lastmod>2026-09-18</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
 <url><loc>https://ziontechgroup.com/telegram/</loc><lastmod>2026-09-17</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
@@ -69,4 +70,13 @@
 <url><loc>https://ziontechgroup.com/fr/apps-network-showcase/</loc><lastmod>2026-11-12</lastmod></url>
 <url><loc>https://ziontechgroup.com/de/</loc><lastmod>2026-11-12</lastmod></url>
 <url><loc>https://ziontechgroup.com/de/apps-network-showcase/</loc><lastmod>2026-11-12</lastmod></url>
+<url><loc>https://ziontechgroup.com/managed-ai-operations/</loc><lastmod>2026-11-14</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+<url><loc>https://ziontechgroup.com/pt/managed-ai-operations/</loc><lastmod>2026-11-14</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+<url><loc>https://ziontechgroup.com/es/managed-ai-operations/</loc><lastmod>2026-11-14</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+<url><loc>https://ziontechgroup.com/fr/managed-ai-operations/</loc><lastmod>2026-11-14</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+<url><loc>https://ziontechgroup.com/de/managed-ai-operations/</loc><lastmod>2026-11-14</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+<url><loc>https://ziontechgroup.com/nearshore-ai-it-services/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://ziontechgroup.com/ai-operations-retainer/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://ziontechgroup.com/pt/servicos-nearshore-ia-ti/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://ziontechgroup.com/pt/retencao-operacoes-ia/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 </urlset>
