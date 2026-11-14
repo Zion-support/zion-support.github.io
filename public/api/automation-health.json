@@ -1,15 +1,190 @@
 {
+  "timestamp": "2026-11-14T12:50:49.726Z",
   "status": "ok",
-  "timestamp": "2026-07-07T23:06:26.830Z",
-  "checks": {
-    "build": true,
-    "deploy": true,
-    "pages": true
-  },
-  "generatedAt": "2026-07-07T23:06:26.830Z",
   "severity": "nominal",
-  "sloScore": 100,
-  "emaOpenIncidents": 0,
-  "previewUnhealthyCount": 0,
-  "openFingerprintIssues": 0
+  "scope": "Live production route sample and latest completed Simple Static Deploy. The full Next.js application build is not measured by this snapshot.",
+  "checks": {
+    "pages": true,
+    "deploy": true,
+    "build": null
+  },
+  "deployment": {
+    "url": "https://github.com/Zion-support/zion-support.github.io/actions/runs/43477114731",
+    "conclusion": "success",
+    "headSha": "348f9997c38abc6b648b5e1baaf3d2720951d18e",
+    "completedAt": "2026-11-13T17:53:23Z"
+  },
+  "routes": [
+    {
+      "route": "/",
+      "status": 200,
+      "healthy": true,
+      "finalUrl": "https://ziontechgroup.com/",
+      "chain": [
+        {
+          "url": "https://ziontechgroup.com/",
+          "status": 200,
+          "finalUrl": "https://ziontechgroup.com/"
+        }
+      ]
+    },
+    {
+      "route": "/services/",
+      "status": 200,
+      "healthy": true,
+      "finalUrl": "https://ziontechgroup.com/services/",
+      "chain": [
+        {
+          "url": "https://ziontechgroup.com/services/",
+          "status": 200,
+          "finalUrl": "https://ziontechgroup.com/services/"
+        }
+      ]
+    },
+    {
+      "route": "/plans/",
+      "status": 200,
+      "healthy": true,
+      "finalUrl": "https://ziontechgroup.com/plans/",
+      "chain": [
+        {
+          "url": "https://ziontechgroup.com/plans/",
+          "status": 200,
+          "finalUrl": "https://ziontechgroup.com/plans/"
+        }
+      ]
+    },
+    {
+      "route": "/discovery/",
+      "status": 200,
+      "healthy": true,
+      "finalUrl": "https://ziontechgroup.com/discovery/",
+      "chain": [
+        {
+          "url": "https://ziontechgroup.com/discovery/",
+          "status": 200,
+          "finalUrl": "https://ziontechgroup.com/discovery/"
+        }
+      ]
+    },
+    {
+      "route": "/book/",
+      "status": 200,
+      "healthy": true,
+      "finalUrl": "https://ziontechgroup.com/book/",
+      "chain": [
+        {
+          "url": "https://ziontechgroup.com/book/",
+          "status": 200,
+          "finalUrl": "https://ziontechgroup.com/book/"
+        }
+      ]
+    },
+    {
+      "route": "/contact/",
+      "status": 200,
+      "healthy": true,
+      "finalUrl": "https://ziontechgroup.com/contact/",
+      "chain": [
+        {
+          "url": "https://ziontechgroup.com/contact/",
+          "status": 200,
+          "finalUrl": "https://ziontechgroup.com/contact/"
+        }
+      ]
+    },
+    {
+      "route": "/enterprise-ai-services/",
+      "status": 200,
+      "healthy": true,
+      "finalUrl": "https://ziontechgroup.com/services/",
+      "chain": [
+        {
+          "url": "https://ziontechgroup.com/enterprise-ai-services/",
+          "status": 200,
+          "finalUrl": "https://ziontechgroup.com/enterprise-ai-services/"
+        },
+        {
+          "url": "https://ziontechgroup.com/services/",
+          "status": 200,
+          "finalUrl": "https://ziontechgroup.com/services/"
+        }
+      ]
+    },
+    {
+      "route": "/why-ai-consulting-firm/",
+      "status": 200,
+      "healthy": true,
+      "finalUrl": "https://ziontechgroup.com/services/",
+      "chain": [
+        {
+          "url": "https://ziontechgroup.com/why-ai-consulting-firm/",
+          "status": 200,
+          "finalUrl": "https://ziontechgroup.com/why-ai-consulting-firm/"
+        },
+        {
+          "url": "https://ziontechgroup.com/services/",
+          "status": 200,
+          "finalUrl": "https://ziontechgroup.com/services/"
+        }
+      ]
+    },
+    {
+      "route": "/stripe/",
+      "status": 200,
+      "healthy": true,
+      "finalUrl": "https://ziontechgroup.com/services/",
+      "chain": [
+        {
+          "url": "https://ziontechgroup.com/stripe/",
+          "status": 200,
+          "finalUrl": "https://ziontechgroup.com/stripe/"
+        },
+        {
+          "url": "https://ziontechgroup.com/services/",
+          "status": 200,
+          "finalUrl": "https://ziontechgroup.com/services/"
+        }
+      ]
+    },
+    {
+      "route": "/services/ai-automation/",
+      "status": 200,
+      "healthy": true,
+      "finalUrl": "https://ziontechgroup.com/services/ai-automation/",
+      "chain": [
+        {
+          "url": "https://ziontechgroup.com/services/ai-automation/",
+          "status": 200,
+          "finalUrl": "https://ziontechgroup.com/services/ai-automation/"
+        }
+      ]
+    },
+    {
+      "route": "/industries/",
+      "status": 200,
+      "healthy": true,
+      "finalUrl": "https://ziontechgroup.com/industries/",
+      "chain": [
+        {
+          "url": "https://ziontechgroup.com/industries/",
+          "status": 200,
+          "finalUrl": "https://ziontechgroup.com/industries/"
+        }
+      ]
+    },
+    {
+      "route": "/apps-network-showcase/",
+      "status": 200,
+      "healthy": true,
+      "finalUrl": "https://ziontechgroup.com/apps-network-showcase/",
+      "chain": [
+        {
+          "url": "https://ziontechgroup.com/apps-network-showcase/",
+          "status": 200,
+          "finalUrl": "https://ziontechgroup.com/apps-network-showcase/"
+        }
+      ]
+    }
+  ]
 }

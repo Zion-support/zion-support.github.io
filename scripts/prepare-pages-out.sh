@@ -110,4 +110,8 @@ node scripts/normalize-zion-contact.cjs out/
 node --test scripts/check-legacy-redirects.test.cjs
 node scripts/check-legacy-redirects.cjs out/
 
+# Retired generated service URLs resolve to the current catalog and are not indexed.
+node --test scripts/render-legacy-service-aliases.test.cjs
+node scripts/render-legacy-service-aliases.cjs out/
+
 echo "Prepared out ($(find out -type f | wc -l) files)"

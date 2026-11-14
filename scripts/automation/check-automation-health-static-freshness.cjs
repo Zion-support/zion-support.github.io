@@ -1,5 +1,7 @@
 const { readFileSync, existsSync } = require('fs');
 const { join } = require('path');
+const { writeReport } = require('../../automation/reliability-reports.cjs');
+const { appendFileSync } = require('fs');
 
 const healthPath = join('public', 'api', 'automation-health.json');
 
@@ -7,6 +9,9 @@ let staticHealthFresh = 'false';
 let staticHealthAgeHours = null;
 let staticHealthTimestamp = null;
 let staticHealthValid = false;
+let snapshotStatus = 'unknown';
+const configuredHours = process.env.AUTOMATION_HEALTH_STATIC_MAX_HOURS;
+const maxHours = configuredHours ? Number(configuredHours) : 24;
 
 try {
   if (!existsSync(healthPath)) {
@@ -15,12 +20,12 @@ try {
   const raw = readFileSync(healthPath, 'utf8').trim();
   if (!raw) throw new Error('Empty ' + healthPath);
   const data = JSON.parse(raw);
+  snapshotStatus = data.status || 'unknown';
   staticHealthTimestamp = data.timestamp || data.generatedAt;
   if (!staticHealthTimestamp) throw new Error('Missing timestamp in ' + healthPath);
   staticHealthValid = true;
 
-  const maxHoursEnv = process.env.AUTOMATION_HEALTH_STATIC_MAX_HOURS;
-  const maxHours = maxHoursEnv ? Number(maxHoursEnv) : 24;
+  if (!Number.isFinite(maxHours) || maxHours <= 0) throw new Error('Invalid freshness threshold');
   const ts = new Date(staticHealthTimestamp);
   const now = new Date();
   staticHealthAgeHours = (now - ts) / 36e5;
@@ -31,7 +36,7 @@ try {
   console.error('Automation health static freshness check failed:', err.message);
 }
 
-const coreStatus = staticHealthFresh === 'true' ? 'nominal' : 'stale';
+const coreStatus = staticHealthFresh === 'true' ? snapshotStatus : 'stale';
 
 const report = {
   check: 'automation_health_static_freshness',
@@ -41,9 +46,11 @@ const report = {
   staticHealthAgeHours,
   staticHealthTimestamp,
   staticHealthPath: healthPath,
-  maxHoursAllowed: Number.isFinite(Number(process.env.AUTOMATION_HEALTH_STATIC_MAX_HOURS)) ? Number(process.env.AUTOMATION_HEALTH_STATIC_MAX_HOURS) : 24,
+  maxHoursAllowed: maxHours,
 };
 
+writeReport('automation-health-static-freshness-latest', report);
+if (process.env.GITHUB_OUTPUT) appendFileSync(process.env.GITHUB_OUTPUT, `static_health_fresh=${staticHealthFresh}\n`);
 console.log(JSON.stringify(report, null, 2));
 
 if (staticHealthFresh !== 'true') {
