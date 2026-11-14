@@ -4,6 +4,7 @@ export type AppsNetworkApp = {
   name: string;
   href: string;
   description: string;
+  descriptionPt?: string;
   group: 'money' | 'ops' | 'govern' | 'work' | 'ai' | 'field' | 'hub';
   related: string[];
 };
@@ -23,67 +24,67 @@ export const APPS_NETWORK_HUB = {
 export const appsNetworkCatalog: AppsNetworkApp[] = [
   {
     slug: 'roi-calc',
-    name: 'ROI calculator',
+    name: 'ROI Calculator',
     href: '/roi-calc/',
-    description: 'Hours leaked vs Discovery / Consulting / Starter.',
+    description: 'Hours leaked vs official SKUs.',
     group: 'money',
-    related: ['token-cost', 'finops-estimator', 'cloud-waste'],
+    related: ['token-cost', 'finops-estimator', 'cloud-waste', 'agent-brief'],
   },
   {
     slug: 'token-cost',
-    name: 'Token cost',
+    name: 'Token Cost',
     href: '/token-cost/',
     description: 'LLM spend envelope before you ship an agent.',
     group: 'money',
-    related: ['llm-gateway', 'finops-estimator', 'roi-calc'],
+    related: ['llm-gateway', 'finops-estimator', 'roi-calc', 'model-observatory'],
   },
   {
     slug: 'finops-estimator',
-    name: 'FinOps estimator',
+    name: 'FinOps Estimator',
     href: '/finops-estimator/',
     description: 'Compute, storage, egress and model spend sketch.',
     group: 'money',
-    related: ['cloud-waste', 'finops-autopilot', 'token-cost'],
+    related: ['cloud-waste', 'finops-autopilot', 'cloud-cost-estimator', 'roi-calc'],
   },
   {
     slug: 'cloud-waste',
-    name: 'Cloud waste',
+    name: 'Cloud Waste',
     href: '/cloud-waste/',
     description: 'Idle / over-provision sketch for cloud + model lines.',
     group: 'money',
-    related: ['finops-estimator', 'finops-autopilot', 'cloud-cost-estimator'],
+    related: ['finops-estimator', 'finops-autopilot', 'cloud-cost-estimator', 'roi-calc'],
   },
   {
     slug: 'sla-calculator',
-    name: 'SLA calculator',
+    name: 'SLA Calculator',
     href: '/sla-calculator/',
     description: 'Allowed downtime and penalty exposure.',
     group: 'ops',
-    related: ['incident-cost', 'change-risk', 'patch-window'],
+    related: ['incident-cost', 'change-risk', 'patch-window', 'zion-ai-sla-breach-sentinel'],
   },
   {
     slug: 'incident-cost',
-    name: 'Incident cost',
+    name: 'Incident Cost',
     href: '/incident-cost/',
     description: 'Revenue + users + hours down → a Discovery number.',
     group: 'ops',
-    related: ['sla-calculator', 'change-risk', 'zion-ai-incident-commander'],
+    related: ['sla-calculator', 'change-risk', 'zion-ai-incident-commander', 'ops-runbook-ai'],
   },
   {
     slug: 'patch-window',
-    name: 'Patch window',
+    name: 'Patch Window',
     href: '/patch-window/',
     description: 'Maintenance nights for a patch batch.',
     group: 'ops',
-    related: ['change-risk', 'incident-cost', 'sla-calculator'],
+    related: ['change-risk', 'incident-cost', 'sla-calculator', 'ops-runbook-ai'],
   },
   {
     slug: 'change-risk',
-    name: 'Change risk',
+    name: 'Change Risk',
     href: '/change-risk/',
     description: 'Score change risk before a patch window.',
     group: 'ops',
-    related: ['patch-window', 'incident-cost', 'stack-audit'],
+    related: ['patch-window', 'incident-cost', 'stack-audit', 'ops-runbook-ai'],
   },
   {
     slug: 'ai-governance',
@@ -95,35 +96,35 @@ export const appsNetworkCatalog: AppsNetworkApp[] = [
   },
   {
     slug: 'stack-audit',
-    name: 'Stack audit',
+    name: 'Stack Audit',
     href: '/stack-audit/',
     description: 'Ten yes/no checks that pick the next SKU.',
     group: 'govern',
-    related: ['ai-governance', 'agent-brief', 'rfp-readiness'],
+    related: ['ai-governance-checklist', 'agent-brief', 'rfp-readiness', 'prompt-library'],
   },
   {
     slug: 'rfp-readiness',
-    name: 'RFP readiness',
+    name: 'RFP Readiness',
     href: '/rfp-readiness/',
     description: 'Score an edital / RFQ before you bid.',
     group: 'govern',
-    related: ['edital-desk', 'licitacao-radar', 'ai-tender-scout'],
+    related: ['edital-desk', 'licitacao-radar', 'ai-tender-scout', 'stack-audit'],
   },
   {
     slug: 'prompt-library',
-    name: 'Prompt library',
+    name: 'Prompt Library',
     href: '/prompt-library/',
     description: 'Ten enterprise IT-ops prompts, copy-ready.',
     group: 'work',
-    related: ['agent-brief', 'prompt-shield', 'llm-gateway'],
+    related: ['agent-brief', 'prompt-shield', 'llm-gateway', 'ai-governance-checklist'],
   },
   {
     slug: 'agent-brief',
-    name: 'Agent brief',
+    name: 'Agent Brief',
     href: '/agent-brief/',
     description: 'One-pager for Discovery. Nothing stored.',
     group: 'work',
-    related: ['prompt-library', 'stack-audit', 'llm-gateway'],
+    related: ['prompt-library', 'stack-audit', 'llm-gateway', 'ai-governance-checklist'],
   },
   {
     slug: 'discovery',
@@ -132,134 +133,6 @@ export const appsNetworkCatalog: AppsNetworkApp[] = [
     description: 'Free online discovery to map your AI opportunity. No commitment.',
     group: 'work',
     related: ['agent-brief', 'stack-audit', 'rfp-readiness'],
-  },
-  {
-    slug: 'llm-gateway',
-    name: 'LLM Gateway',
-    href: '/llm-gateway/',
-    description: 'Smart model routing, caching & failover.',
-    group: 'ai',
-    related: ['token-cost', 'model-observatory', 'prompt-shield'],
-  },
-  {
-    slug: 'prompt-shield',
-    name: 'Prompt Shield',
-    href: '/prompt-shield/',
-    description: 'LLM security testing & prompt-injection defense.',
-    group: 'ai',
-    related: ['ai-governance', 'secrets-sentinel', 'llm-gateway'],
-  },
-  {
-    slug: 'finops-autopilot',
-    name: 'FinOps Autopilot',
-    href: '/finops-autopilot/',
-    description: 'Cloud cost anomaly detection & rightsizing.',
-    group: 'money',
-    related: ['cloud-waste', 'finops-estimator', 'cloud-cost-estimator'],
-  },
-  {
-    slug: 'field-dispatch',
-    name: 'AI Field Dispatch',
-    href: '/zion-ai-field-dispatch-optimizer/',
-    description: 'Roteirização e despacho inteligente de técnicos.',
-    group: 'field',
-    related: ['zion-ai-spare-parts-matcher', 'warranty-lens', 'zion-ai-rma-tracker'],
-  },
-  {
-    slug: 'licitacao-radar',
-    name: 'Licitação Radar',
-    href: '/licitacao-radar/',
-    description: 'Monitoramento de licitações públicas no Brasil.',
-    group: 'govern',
-    related: ['rfp-readiness', 'edital-desk', 'ai-tender-scout'],
-  },
-  {
-    slug: 'zion-ai-incident-commander',
-    name: 'AI Incident Commander',
-    href: '/zion-ai-incident-commander/',
-    description: 'Incident response orchestration and automation.',
-    group: 'ops',
-    related: ['incident-cost', 'ops-runbook-ai', 'change-risk'],
-  },
-  {
-    slug: 'model-observatory',
-    name: 'Model Observatory',
-    href: '/model-observatory/',
-    description: 'ML/LLM observability, drift detection, cost telemetry.',
-    group: 'ai',
-    related: ['llm-gateway', 'token-cost', 'finops-autopilot'],
-  },
-  {
-    slug: 'secrets-sentinel',
-    name: 'Secrets Sentinel',
-    href: '/secrets-sentinel/',
-    description: 'Secret scanning and leak response.',
-    group: 'govern',
-    related: ['prompt-shield', 'ai-governance', 'stack-audit'],
-  },
-  {
-    slug: 'edital-desk',
-    name: 'Edital desk',
-    href: '/edital-desk/',
-    description: 'RFQ / TR brief. No invented hardware prices.',
-    group: 'work',
-    related: ['rfp-readiness', 'licitacao-radar', 'agent-brief'],
-  },
-  {
-    slug: 'cloud-cost-estimator',
-    name: 'Cloud cost estimator',
-    href: '/cloud-cost-estimator/',
-    description: 'Multi-cloud compute & serverless price comparison.',
-    group: 'money',
-    related: ['cloud-waste', 'finops-estimator', 'finops-autopilot'],
-  },
-  {
-    slug: 'zion-ai-spare-parts-matcher',
-    name: 'AI Spare Parts Matcher',
-    href: '/zion-ai-spare-parts-matcher/',
-    description: 'Match spare parts by part number, photo, and equivalence.',
-    group: 'field',
-    related: ['field-dispatch', 'warranty-lens', 'depot-stock-balancer'],
-  },
-  {
-    slug: 'warranty-lens',
-    name: 'Warranty Lens',
-    href: '/warranty-lens/',
-    description: 'Warranty lookup by serial with coverage history.',
-    group: 'field',
-    related: ['field-dispatch', 'zion-ai-rma-tracker', 'zion-ai-spare-parts-matcher'],
-  },
-  {
-    slug: 'ops-runbook-ai',
-    name: 'Ops Runbook AI',
-    href: '/ops-runbook-ai/',
-    description: 'Operational runbooks generated from incidents.',
-    group: 'ops',
-    related: ['zion-ai-incident-commander', 'incident-cost', 'change-risk'],
-  },
-  {
-    slug: 'ai-tender-scout',
-    name: 'AI Tender Scout',
-    href: '/ai-tender-scout/',
-    description: 'Public-sector bid discovery & proposal support.',
-    group: 'govern',
-    related: ['licitacao-radar', 'rfp-readiness', 'edital-desk'],
-  },
-  {
-    slug: 'depot-stock-balancer',
-    name: 'Depot Stock Balancer',
-    href: '/depot-stock-balancer/',
-    description: 'Balance inventory across depots with recommendations.',
-    group: 'field',
-    related: ['zion-ai-spare-parts-matcher', 'field-dispatch', 'warranty-lens'],
-  },
-  {
-    slug: 'zion-ai-rma-tracker',
-    name: 'AI RMA Tracker',
-    href: '/zion-ai-rma-tracker/',
-    description: 'RMA tracking with status, deadlines, and alerts.',
-    group: 'field',
-    related: ['warranty-lens', 'field-dispatch', 'zion-ai-spare-parts-matcher'],
   },
   {
     slug: 'llm-gateway',
@@ -278,14 +151,6 @@ export const appsNetworkCatalog: AppsNetworkApp[] = [
     related: ['ai-governance-checklist', 'secrets-sentinel', 'llm-gateway', 'stack-audit'],
   },
   {
-    slug: 'model-observatory',
-    name: 'Model Observatory',
-    href: '/model-observatory/',
-    description: 'ML/LLM observability, drift detection, cost telemetry.',
-    group: 'ai',
-    related: ['llm-gateway', 'token-cost', 'finops-autopilot', 'prompt-shield'],
-  },
-  {
     slug: 'finops-autopilot',
     name: 'FinOps Autopilot',
     href: '/finops-autopilot/',
@@ -294,12 +159,52 @@ export const appsNetworkCatalog: AppsNetworkApp[] = [
     related: ['cloud-waste', 'finops-estimator', 'cloud-cost-estimator', 'token-cost'],
   },
   {
-    slug: 'cloud-waste',
-    name: 'Cloud Waste',
-    href: '/cloud-waste/',
-    description: 'Idle / over-provision sketch for cloud + model lines.',
-    group: 'money',
-    related: ['finops-estimator', 'finops-autopilot', 'cloud-cost-estimator', 'roi-calc'],
+    slug: 'field-dispatch',
+    name: 'AI Field Dispatch',
+    href: '/zion-ai-field-dispatch-optimizer/',
+    description: 'Roteirização e despacho inteligente de técnicos.',
+    group: 'field',
+    related: ['zion-ai-spare-parts-matcher', 'warranty-lens', 'zion-ai-rma-tracker'],
+  },
+  {
+    slug: 'licitacao-radar',
+    name: 'Licitação Radar',
+    href: '/licitacao-radar/',
+    description: 'Monitoramento de licitações públicas no Brasil.',
+    group: 'govern',
+    related: ['rfp-readiness', 'edital-desk', 'ai-tender-scout', 'zion-ai-trade-compliance-checker'],
+  },
+  {
+    slug: 'zion-ai-incident-commander',
+    name: 'AI Incident Commander',
+    href: '/zion-ai-incident-commander/',
+    description: 'Incident response orchestration and automation.',
+    group: 'ops',
+    related: ['incident-cost', 'ops-runbook-ai', 'change-risk', 'patch-window'],
+  },
+  {
+    slug: 'model-observatory',
+    name: 'Model Observatory',
+    href: '/model-observatory/',
+    description: 'ML/LLM observability, drift detection, cost telemetry.',
+    group: 'ai',
+    related: ['llm-gateway', 'token-cost', 'finops-autopilot', 'prompt-shield'],
+  },
+  {
+    slug: 'secrets-sentinel',
+    name: 'Secrets Sentinel',
+    href: '/secrets-sentinel/',
+    description: 'Secret scanning and leak response.',
+    group: 'govern',
+    related: ['prompt-shield', 'ai-governance-checklist', 'stack-audit', 'model-observatory'],
+  },
+  {
+    slug: 'edital-desk',
+    name: 'Edital Desk',
+    href: '/edital-desk/',
+    description: 'RFQ / TR brief. No invented hardware prices.',
+    group: 'work',
+    related: ['rfp-readiness', 'licitacao-radar', 'ai-tender-scout', 'agent-brief'],
   },
   {
     slug: 'cloud-cost-estimator',
@@ -308,6 +213,22 @@ export const appsNetworkCatalog: AppsNetworkApp[] = [
     description: 'Multi-cloud compute & serverless price comparison.',
     group: 'money',
     related: ['cloud-waste', 'finops-estimator', 'finops-autopilot', 'roi-calc'],
+  },
+  {
+    slug: 'zion-ai-spare-parts-matcher',
+    name: 'AI Spare Parts Matcher',
+    href: '/zion-ai-spare-parts-matcher/',
+    description: 'Match spare parts by part number, photo, and equivalence.',
+    group: 'field',
+    related: ['zion-ai-field-dispatch-optimizer', 'warranty-lens', 'depot-stock-balancer', 'zion-ai-rma-tracker'],
+  },
+  {
+    slug: 'warranty-lens',
+    name: 'Warranty Lens',
+    href: '/warranty-lens/',
+    description: 'Warranty lookup by serial with coverage history.',
+    group: 'field',
+    related: ['zion-ai-spare-parts-matcher', 'zion-ai-rma-tracker', 'zion-ai-field-dispatch-optimizer', 'zion-ai-warranty-tracker'],
   },
   {
     slug: 'ops-runbook-ai',
@@ -334,92 +255,12 @@ export const appsNetworkCatalog: AppsNetworkApp[] = [
     related: ['zion-ai-spare-parts-matcher', 'warranty-lens', 'zion-ai-field-dispatch-optimizer', 'zion-ai-rma-tracker'],
   },
   {
-    slug: 'edital-desk',
-    name: 'Edital Desk',
-    href: '/edital-desk/',
-    description: 'RFQ / TR brief. No invented hardware prices.',
-    group: 'work',
-    related: ['rfp-readiness', 'licitacao-radar', 'ai-tender-scout', 'agent-brief'],
-  },
-  {
-    slug: 'licitacao-radar',
-    name: 'Licitação Radar',
-    href: '/licitacao-radar/',
-    description: 'Monitoramento de licitações públicas no Brasil.',
-    group: 'govern',
-    related: ['rfp-readiness', 'edital-desk', 'ai-tender-scout', 'zion-ai-trade-compliance-checker'],
-  },
-  {
-    slug: 'rfp-readiness',
-    name: 'RFP Readiness',
-    href: '/rfp-readiness/',
-    description: 'Score an edital / RFQ before you bid.',
-    group: 'govern',
-    related: ['edital-desk', 'licitacao-radar', 'ai-tender-scout', 'stack-audit'],
-  },
-  {
-    slug: 'incident-cost',
-    name: 'Incident Cost',
-    href: '/incident-cost/',
-    description: 'Revenue + users + hours down → a Discovery number.',
-    group: 'ops',
-    related: ['sla-calculator', 'change-risk', 'zion-ai-incident-commander', 'ops-runbook-ai'],
-  },
-  {
-    slug: 'change-risk',
-    name: 'Change Risk',
-    href: '/change-risk/',
-    description: 'Score change risk before a patch window.',
-    group: 'ops',
-    related: ['patch-window', 'incident-cost', 'stack-audit', 'ops-runbook-ai'],
-  },
-  {
-    slug: 'patch-window',
-    name: 'Patch Window',
-    href: '/patch-window/',
-    description: 'Maintenance nights for a patch batch.',
-    group: 'ops',
-    related: ['change-risk', 'incident-cost', 'sla-calculator', 'ops-runbook-ai'],
-  },
-  {
-    slug: 'token-cost',
-    name: 'Token Cost',
-    href: '/token-cost/',
-    description: 'LLM spend envelope before you ship an agent.',
-    group: 'money',
-    related: ['llm-gateway', 'finops-estimator', 'roi-calc', 'model-observatory'],
-  },
-  {
-    slug: 'sla-calculator',
-    name: 'SLA Calculator',
-    href: '/sla-calculator/',
-    description: 'Allowed downtime and penalty exposure.',
-    group: 'ops',
-    related: ['incident-cost', 'change-risk', 'patch-window', 'zion-ai-sla-breach-sentinel'],
-  },
-  {
-    slug: 'roi-calc',
-    name: 'ROI Calculator',
-    href: '/roi-calc/',
-    description: 'Hours leaked vs official SKUs.',
-    group: 'money',
-    related: ['token-cost', 'finops-estimator', 'cloud-waste', 'agent-brief'],
-  },
-  {
-    slug: 'finops-estimator',
-    name: 'FinOps Estimator',
-    href: '/finops-estimator/',
-    description: 'Compute, storage, egress and model spend sketch.',
-    group: 'money',
-    related: ['cloud-waste', 'finops-autopilot', 'cloud-cost-estimator', 'roi-calc'],
-  },
-  {
-    slug: 'stack-audit',
-    name: 'Stack Audit',
-    href: '/stack-audit/',
-    description: 'Ten yes/no checks that pick the next SKU.',
-    group: 'govern',
-    related: ['ai-governance-checklist', 'agent-brief', 'rfp-readiness', 'prompt-library'],
+    slug: 'zion-ai-rma-tracker',
+    name: 'AI RMA Tracker',
+    href: '/zion-ai-rma-tracker/',
+    description: 'RMA tracking with status, deadlines, and alerts.',
+    group: 'field',
+    related: ['warranty-lens', 'field-dispatch', 'zion-ai-spare-parts-matcher'],
   },
   {
     slug: 'ai-governance-checklist',
@@ -430,60 +271,12 @@ export const appsNetworkCatalog: AppsNetworkApp[] = [
     related: ['prompt-shield', 'stack-audit', 'secrets-sentinel', 'model-observatory'],
   },
   {
-    slug: 'prompt-library',
-    name: 'Prompt Library',
-    href: '/prompt-library/',
-    description: 'Ten enterprise IT-ops prompts, copy-ready.',
-    group: 'work',
-    related: ['agent-brief', 'prompt-shield', 'llm-gateway', 'ai-governance-checklist'],
-  },
-  {
-    slug: 'agent-brief',
-    name: 'Agent Brief',
-    href: '/agent-brief/',
-    description: 'One-pager for Discovery. Nothing stored.',
-    group: 'work',
-    related: ['prompt-library', 'stack-audit', 'llm-gateway', 'ai-governance-checklist'],
-  },
-  {
     slug: 'zion-ai-field-dispatch-optimizer',
     name: 'AI Field Dispatch Optimizer',
     href: '/zion-ai-field-dispatch-optimizer/',
     description: 'Roteirização e despacho inteligente de técnicos.',
     group: 'field',
     related: ['zion-ai-spare-parts-matcher', 'warranty-lens', 'zion-ai-rma-tracker', 'depot-stock-balancer'],
-  },
-  {
-    slug: 'zion-ai-spare-parts-matcher',
-    name: 'AI Spare Parts Matcher',
-    href: '/zion-ai-spare-parts-matcher/',
-    description: 'Match spare parts by part number, photo, and equivalence.',
-    group: 'field',
-    related: ['zion-ai-field-dispatch-optimizer', 'warranty-lens', 'depot-stock-balancer', 'zion-ai-rma-tracker'],
-  },
-  {
-    slug: 'warranty-lens',
-    name: 'Warranty Lens',
-    href: '/warranty-lens/',
-    description: 'Warranty lookup by serial with coverage history.',
-    group: 'field',
-    related: ['zion-ai-spare-parts-matcher', 'zion-ai-rma-tracker', 'zion-ai-field-dispatch-optimizer', 'zion-ai-warranty-tracker'],
-  },
-  {
-    slug: 'zion-ai-incident-commander',
-    name: 'AI Incident Commander',
-    href: '/zion-ai-incident-commander/',
-    description: 'Incident response orchestration and automation.',
-    group: 'ops',
-    related: ['incident-cost', 'ops-runbook-ai', 'change-risk', 'patch-window'],
-  },
-  {
-    slug: 'secrets-sentinel',
-    name: 'Secrets Sentinel',
-    href: '/secrets-sentinel/',
-    description: 'Secret scanning and leak response.',
-    group: 'govern',
-    related: ['prompt-shield', 'ai-governance-checklist', 'stack-audit', 'model-observatory'],
   },
   {
     slug: 'zion-ai-warranty-tracker',
@@ -535,11 +328,11 @@ export const appsNetworkCatalog: AppsNetworkApp[] = [
   },
   {
     slug: 'zion-chatbot-builder',
-    name: 'AI Chatbot Builder',
+    name: 'Zion Chatbot Builder',
     href: '/zion-chatbot-builder/',
-    description: 'Build custom AI chatbots for customer service and support.',
+    description: 'Simplified chatbot builder for quick customer support deployment.',
     group: 'ai',
-    related: ['llm-gateway', 'prompt-shield', 'model-observatory', 'ai-governance-checklist'],
+    related: ['ai-chatbot-builder', 'zion-ai-chatbot-builder', 'ai-customer-support-pro', 'llm-gateway'],
   },
   {
     slug: 'zion-edge-ai-platform',
@@ -604,14 +397,6 @@ export const appsNetworkCatalog: AppsNetworkApp[] = [
     description: 'Analytics and performance monitoring for AI chatbots.',
     group: 'ops',
     related: ['zion-ai-chatbot-builder', 'ai-chatbot-builder', 'ai-customer-support-pro'],
-  },
-  {
-    slug: 'zion-chatbot-builder',
-    name: 'Zion Chatbot Builder',
-    href: '/zion-chatbot-builder/',
-    description: 'Simplified chatbot builder for quick customer support deployment.',
-    group: 'ai',
-    related: ['ai-chatbot-builder', 'zion-ai-chatbot-builder', 'ai-customer-support-pro', 'llm-gateway'],
   },
   {
     slug: 'it-support-services',
@@ -718,7 +503,7 @@ export const appsNetworkCatalog: AppsNetworkApp[] = [
     description: 'Managed security monitoring: SIEM, threat intel and 24/7 response for SMBs and enterprises.',
     descriptionPt: 'Monitorização de segurança gerida: SIEM, Inteligência de Ameaças e resposta 24/7 para pequenas e grandes empresas.',
     group: 'govern',
-    related: ['secrets-sentinel', 'zion-security-shield'],
+    related: ['secrets-sentinel'],
   },
 ];
 
@@ -727,19 +512,21 @@ export const appsNetworkBySlug = Object.fromEntries(
 ) as Record<string, AppsNetworkApp>;
 
 export function relatedApps(slug: string, limit = 4): AppsNetworkApp[] {
+  const size = Math.max(0, Math.min(12, Number.isFinite(limit) ? Math.floor(limit) : 4));
   const app = appsNetworkBySlug[slug];
-  if (!app) return appsNetworkCatalog.slice(0, limit);
-  const fromRelated = app.related
-    .map((s) => appsNetworkBySlug[s])
-    .filter(Boolean) as AppsNetworkApp[];
-  if (fromRelated.length >= limit) return fromRelated.slice(0, limit);
-  const fillers = appsNetworkCatalog.filter(
-    (a) => a.slug !== slug && !fromRelated.some((r) => r.slug === a.slug)
-  );
-  return [...fromRelated, ...fillers].slice(0, limit);
+  const seen = new Set<string>([slug]);
+  const candidates = [
+    ...(app?.related ?? []).map((s) => appsNetworkBySlug[s]).filter(Boolean),
+    ...appsNetworkCatalog,
+  ];
+  return candidates.filter((candidate) => {
+    if (seen.has(candidate.slug)) return false;
+    seen.add(candidate.slug);
+    return true;
+  }).slice(0, size);
 }
 
-export const homepageFeaturedApps = [
+export const homepageFeaturedApps = [...new Set([
   'llm-gateway',
   'prompt-shield',
   'finops-autopilot',
@@ -788,6 +575,6 @@ export const homepageFeaturedApps = [
   'zion-ai-chatbot-analytics',
   'zion-chatbot-builder',
   'it-support-services',
-]
+])]
   .map((s) => appsNetworkBySlug[s])
   .filter(Boolean) as AppsNetworkApp[];
