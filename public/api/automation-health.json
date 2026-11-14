@@ -1,18 +1,18 @@
 {
-  "timestamp": "2026-11-14T13:19:04.758Z",
-  "status": "ok",
-  "severity": "nominal",
+  "timestamp": "2026-11-14T17:59:45.225Z",
+  "status": "degraded",
+  "severity": "critical",
   "scope": "Live production route sample and latest completed Simple Static Deploy. The full Next.js application build is not measured by this snapshot.",
   "checks": {
-    "pages": true,
+    "pages": false,
     "deploy": true,
     "build": null
   },
   "deployment": {
-    "url": "https://github.com/Zion-support/zion-support.github.io/actions/runs/43598890526",
+    "url": "https://github.com/Zion-support/zion-support.github.io/actions/runs/43599150572",
     "conclusion": "success",
-    "headSha": "74079fef39a04f9916352fc2ddb4f85ae9067465",
-    "completedAt": "2026-11-14T13:17:00Z"
+    "headSha": "cc17de22c376700d64ecb64b6a371f8dceddfb1d",
+    "completedAt": "2026-11-14T13:20:14Z"
   },
   "routes": [
     {
@@ -82,16 +82,16 @@
     },
     {
       "route": "/contact/",
-      "status": 200,
-      "healthy": true,
-      "finalUrl": "https://ziontechgroup.com/contact/",
+      "status": 503,
+      "healthy": false,
       "chain": [
         {
           "url": "https://ziontechgroup.com/contact/",
-          "status": 200,
+          "status": 503,
           "finalUrl": "https://ziontechgroup.com/contact/"
         }
-      ]
+      ],
+      "error": "http_status"
     },
     {
       "route": "/enterprise-ai-services/",
