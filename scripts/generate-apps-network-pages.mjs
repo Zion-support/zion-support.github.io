@@ -254,7 +254,7 @@ ${relatedCards}
       <p class="note">${esc(t.ctaBody)}</p>
       <div class="cta-row">
         <a class="btn" href="/discovery/">${esc(t.ctaPrimary)}</a>
-        <a class="btn alt" href="${lang.prefix ? `/${lang.prefix}` : ''}/apps-network/">${esc(t.hubLink)}</a>
+        <a class="btn alt" href="${lang.prefix ? `/${lang.prefix}` : '/'}apps-network/">${esc(t.hubLink)}</a>
       </div>
     </section>
   </div>
@@ -360,7 +360,7 @@ for (const app of APPS) {
   }
 }
 for (const lang of LANGS) {
-  sitemapUrls.push(`  <url><loc>${lang.prefix ? `${SITE}/${lang.prefix}` : SITE}/apps-network/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>`);
+  sitemapUrls.push(`  <url><loc>${lang.prefix ? `${SITE}/${lang.prefix}` : `${SITE}/`}apps-network/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>`);
 }
 write(
   path.join(PUBLIC, 'apps-network-sitemap.xml'),

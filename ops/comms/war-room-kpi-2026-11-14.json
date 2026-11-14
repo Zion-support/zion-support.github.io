@@ -1,0 +1,60 @@
+{
+  "generated_at_utc": "2026-11-14T00:00:00Z",
+  "generated_by": "Hermes Agent (agent-orchestrator)",
+  "scope": "ziontechgroup.com — measured snapshot + sample-based checks",
+  "population": {
+    "live_sitemap_index_entries": 6,
+    "live_sitemap_urls_total": 55904,
+    "live_sitemap_urls_unique": 55879,
+    "sitemap_0_urls": 68,
+    "sitemap_1_urls": 49997,
+    "sitemap_2_urls": 5747,
+    "apps_sitemap_urls": 8,
+    "apps_network_sitemap_urls": 80,
+    "sitemap_editorial_urls": 4,
+    "public_top_level_dirs": 7618,
+    "public_top_level_noindex": 7351,
+    "public_top_level_indexable": 261,
+    "public_blog_dirs": 336,
+    "public_blog_noindex": 298,
+    "public_blog_indexable": 38,
+    "public_services_dirs": 12706,
+    "public_services_indexable": 0
+  },
+  "sample_checks": {
+    "note": "Sample only. Rates are NOT extrapolated to population totals.",
+    "total_sampled": 262,
+    "sitemap_1": { "sampled": 120, "200": 33, "404": 87, "sample_404_rate": 0.725 },
+    "sitemap_2": { "sampled": 80, "200": 2, "404": 78, "sample_404_rate": 0.975 },
+    "sitemap_0": { "sampled": 30, "200": 30, "404": 0 },
+    "apps_sitemap": { "sampled": 8, "200": 8, "404": 0 },
+    "apps_network_sitemap": { "sampled": 20, "200": 20, "404": 0 },
+    "sitemap_editorial": { "sampled": 4, "200": 4, "404": 0 }
+  },
+  "after_cleanup": {
+    "sitemap_0_indexable_urls": 304,
+    "sitemap_index_entries": 4,
+    "sitemap_index_files": [
+      "sitemap-0.xml",
+      "apps-network-sitemap.xml",
+      "apps/apps-sitemap.xml",
+      "sitemap-editorial.xml"
+    ],
+    "dropped_from_index": ["sitemap-1.xml", "sitemap-2.xml"],
+    "new_page": "/ai-department/"
+  },
+  "kpis": {
+    "indexed_pages": "NAO_REGISTRADO (no Search Console access)",
+    "lead_flow": "NAO_REGISTRADO (Composio HubSpot/Calendly/Stripe connections expired; no readback)",
+    "content_coverage": {
+      "indexable_blog_posts": 38,
+      "published_apps": 57,
+      "languages": ["en", "pt-BR", "es", "fr", "de"]
+    }
+  },
+  "evidence_sources": [
+    "curl https://ziontechgroup.com/sitemap.xml and each child sitemap (2026-11-14)",
+    "local scan of public/ in git worktree at 86fa7808c7",
+    "scripts/generate-commercial-sitemap.cjs output"
+  ]
+}

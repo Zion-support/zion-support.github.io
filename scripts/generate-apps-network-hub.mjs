@@ -160,7 +160,7 @@ const groups = GROUP_ORDER.map((g) => renderGroup(g, GROUP_LABEL.en[g] || g, t))
 
 const langNav = LANGS.map(
   (l) =>
-    `<a href="${l.prefix ? `/${l.prefix}` : ''}/apps-network/"${l.code === 'en' ? ' aria-current="true"' : ''}>${l.code.toUpperCase()}</a>`
+    `<a href="${l.prefix ? `/${l.prefix}` : '/'}apps-network/"${l.code === 'en' ? ' aria-current="true"' : ''}>${l.code.toUpperCase()}</a>`
 ).join('');
 
 const html = `<!DOCTYPE html>
@@ -172,7 +172,7 @@ const html = `<!DOCTYPE html>
 <meta name="description" content="Zion Apps Network: ${apps.length} interlinked AI, FinOps, security, operations and field-service apps, each with related-tool links. Free to try, no credit card.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="${SITE}/apps-network/">
-${LANGS.map((l) => `  <link rel="alternate" hreflang="${l.code}" href="${l.prefix ? `${SITE}/${l.prefix}` : SITE}/apps-network/">`).join('\n')}
+${LANGS.map((l) => `  <link rel="alternate" hreflang="${l.code}" href="${l.prefix ? `${SITE}/${l.prefix}` : `${SITE}/`}apps-network/">`).join('\n')}
   <link rel="alternate" hreflang="x-default" href="${SITE}/apps-network/">
 <script type="application/ld+json">${JSON.stringify({
   '@context': 'https://schema.org',

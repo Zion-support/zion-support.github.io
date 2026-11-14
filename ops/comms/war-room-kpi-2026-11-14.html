@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>War Room KPI — 2026-11-14 · Zion Tech Group</title>
+<meta name="robots" content="noindex, follow"/>
+<style>
+  body{background:#0b1220;color:#e5e7eb;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;line-height:1.6;margin:0;padding:2rem}
+  .wrap{max-width:960px;margin:0 auto}
+  h1{color:#f8fafc;font-size:1.8rem}
+  h2{color:#f8fafc;font-size:1.2rem;margin-top:2rem}
+  .note{color:#94a3b8;font-size:.9rem}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem}
+  .card{border:1px solid #334155;border-radius:.8rem;padding:1rem;background:#0f172a}
+  .card .num{font-size:1.8rem;font-weight:800;color:#c4b5fd}
+  .card .lbl{color:#94a3b8;font-size:.85rem}
+  table{width:100%;border-collapse:collapse;font-size:.9rem}
+  th,td{text-align:left;padding:.5rem .6rem;border-bottom:1px solid #1e293b}
+  th{color:#c4b5fd}
+  code{background:#1e293b;padding:.1rem .35rem;border-radius:.3rem}
+  .flag{color:#fbbf24}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>War Room KPI — 2026-11-14</h1>
+  <p class="note">Internal snapshot. Population counts are exact; HTTP status rates are <strong>sample-only</strong> and are not extrapolated. Missing readings are marked <span class="flag">NÃO REGISTRADO</span>.</p>
+
+  <h2>Sitemap</h2>
+  <div class="grid">
+    <div class="card"><div class="num">55,904</div><div class="lbl">live sitemap URLs before cleanup (6 files)</div></div>
+    <div class="card"><div class="num">304</div><div class="lbl">indexable URLs after cleanup (sitemap-0)</div></div>
+    <div class="card"><div class="num">72.5%</div><div class="lbl">404 in sitemap-1 — sample n=120</div></div>
+    <div class="card"><div class="num">97.5%</div><div class="lbl">404 in sitemap-2 — sample n=80</div></div>
+  </div>
+  <table>
+    <tr><th>Sitemap</th><th>URLs</th><th>Sampled</th><th>200</th><th>404</th></tr>
+    <tr><td>sitemap-0</td><td>68</td><td>30</td><td>30</td><td>0</td></tr>
+    <tr><td>sitemap-1</td><td>49,997</td><td>120</td><td>33</td><td>87</td></tr>
+    <tr><td>sitemap-2</td><td>5,747</td><td>80</td><td>2</td><td>78</td></tr>
+    <tr><td>apps/apps-sitemap</td><td>8</td><td>8</td><td>8</td><td>0</td></tr>
+    <tr><td>apps-network-sitemap</td><td>80</td><td>20</td><td>20</td><td>0</td></tr>
+    <tr><td>sitemap-editorial</td><td>4</td><td>4</td><td>4</td><td>0</td></tr>
+  </table>
+  <p class="note">Cleanup: <code>sitemap-1.xml</code> and <code>sitemap-2.xml</code> removed from the index; index now points at <code>sitemap-0.xml</code>, <code>apps-network-sitemap.xml</code>, <code>apps/apps-sitemap.xml</code>, <code>sitemap-editorial.xml</code>.</p>
+
+  <h2>Indexable surface (local scan of public/ @ 86fa7808c7)</h2>
+  <div class="grid">
+    <div class="card"><div class="num">261</div><div class="lbl">indexable top-level pages</div></div>
+    <div class="card"><div class="num">7,351</div><div class="lbl">noindex top-level stubs</div></div>
+    <div class="card"><div class="num">38</div><div class="lbl">indexable blog posts (of 336)</div></div>
+    <div class="card"><div class="num">12,706</div><div class="lbl">noindex /services/* placeholders</div></div>
+  </div>
+
+  <h2>KPIs</h2>
+  <table>
+    <tr><th>KPI</th><th>Value</th></tr>
+    <tr><td>Indexed pages</td><td class="flag">NÃO REGISTRADO — no Search Console access</td></tr>
+    <tr><td>Lead flow</td><td class="flag">NÃO REGISTRADO — Composio HubSpot/Calendly/Stripe expired; no readback</td></tr>
+    <tr><td>Published apps</td><td>57</td></tr>
+    <tr><td>Languages</td><td>en, pt-BR, es, fr, de</td></tr>
+  </table>
+
+  <h2>Actions in this pass</h2>
+  <ul>
+    <li>Sitemap generator rebuilt to emit only real, indexable pages (<code>scripts/generate-commercial-sitemap.cjs</code>).</li>
+    <li>Homepage hreflang cluster added (en, pt-BR, es, fr, de, x-default).</li>
+    <li>Apps-network double-slash bug fixed in generators and 220 emitted pages + sitemap.</li>
+    <li>New page <code>/ai-department/</code> (productized tier + outcome-based pilot, FAQPage schema).</li>
+  </ul>
+
+  <p class="note">Data file: <code>ops/comms/war-room-kpi-2026-11-14.json</code>. Sources: live sitemap fetch and local scan, 2026-11-14.</p>
+</div>
+</body>
+</html>

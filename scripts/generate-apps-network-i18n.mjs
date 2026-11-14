@@ -209,7 +209,7 @@ ${cards}
 <meta name="description" content="${esc(t.hubDescription || 'Zion Apps Network: interlinked AI, FinOps, security, operations and field-service apps. Free to try, no credit card.')}">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="${canonical}">
-${LANGS.map((l) => `  <link rel="alternate" hreflang="${l.code}" href="${l.prefix ? `${SITE}/${l.prefix}` : SITE}/apps-network/">`).join('\n')}
+${LANGS.map((l) => `  <link rel="alternate" hreflang="${l.code}" href="${l.prefix ? `${SITE}/${l.prefix}` : `${SITE}/`}apps-network/">`).join('\n')}
   <link rel="alternate" hreflang="x-default" href="${SITE}/apps-network/">
 <script type="application/ld+json">${JSON.stringify({
   '@context': 'https://schema.org',
@@ -370,7 +370,7 @@ ${relatedCards}
       <p class="note">${esc(t.ctaBody)}</p>
       <div class="cta-row">
         <a class="btn" href="/discovery/">${esc(t.ctaPrimary)}</a>
-        <a class="btn alt" href="${lang.prefix ? `/${lang.prefix}` : ''}/apps-network/">${esc(t.hubLink)}</a>
+        <a class="btn alt" href="${lang.prefix ? `/${lang.prefix}` : '/'}apps-network/">${esc(t.hubLink)}</a>
       </div>
     </section>
   </div>
@@ -397,7 +397,7 @@ for (const app of appsNetworkCatalog) {
   }
 }
 for (const lang of LANGS) {
-  urls.push(`  <url><loc>${lang.prefix ? `${SITE}/${lang.prefix}` : SITE}/apps-network/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>`);
+  urls.push(`  <url><loc>${lang.prefix ? `${SITE}/${lang.prefix}` : `${SITE}/`}apps-network/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>`);
 }
 write(
   path.join(PUBLIC, 'apps-network-sitemap.xml'),
