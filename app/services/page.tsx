@@ -1,156 +1,95 @@
-// app/services/page.tsx - Full Service Catalog
-'use client';
-
-import { useState, useMemo, Suspense } from 'react';
-import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
-import SmartSearchBar from '@/components/SmartSearchBar';
-import JsonLd from '@/components/JsonLd';
-import { ServiceGridSkeleton } from '@/components/Skeletons';
-import { allServices } from '../data/servicesData';
-import type { Service } from '../data/servicesData';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 
-const SVC_CAT_LABELS: Record<string,string> = { ai: 'AI Services', it: 'IT', cloud: 'Cloud', security: 'Security', data: 'Data & Analytics', automation: 'Automation', 'micro-saas': 'Micro-SaaS', devops: 'DevOps', blockchain: 'Blockchain', iot: 'IoT & Edge', 'email-intelligence': 'Email Intelligence', observability: 'Observability', identity: 'Identity & Access', cms: 'CMS & Content', ecommerce: 'E-Commerce', documentation: 'Documentation', 'ai-ml-ops': 'AI/ML Ops', devsecops: 'DevSecOps', fintech: 'FinTech', edtech: 'EdTech', 'healthcare-it': 'Healthcare IT', 'data-streaming': 'Data Streaming', search: 'Search', api: 'API Management' };
-const CATEGORIES = [
-  { key: 'all' as const, label: 'All' },
-  { key: 'ai' as const, label: 'AI' },
-  { key: 'it' as const, label: 'IT' },
-  { key: 'cloud' as const, label: 'Cloud' },
-  { key: 'security' as const, label: 'Security' },
-  { key: 'data' as const, label: 'Data' },
-  { key: 'automation' as const, label: 'Automation' },
-  { key: 'micro-saas' as const, label: 'Micro-SaaS' },
-  { key: 'devops' as const, label: 'DevOps' },
-  { key: 'blockchain' as const, label: 'Blockchain' },
-  { key: 'iot' as const, label: 'IoT' },
-  { key: 'email-intelligence' as const, label: 'Email Intel' },
-  { key: 'observability' as const, label: 'Observability' },
-  { key: 'identity' as const, label: 'Identity' },
-  { key: 'cms' as const, label: 'CMS' },
-  { key: 'ecommerce' as const, label: 'E-Commerce' },
-  { key: 'documentation' as const, label: 'Docs' },
-  { key: 'ai-ml-ops' as const, label: 'AI/ML Ops' },
-  { key: 'devsecops' as const, label: 'DevSecOps' },
-  { key: 'fintech' as const, label: 'FinTech' },
-  { key: 'edtech' as const, label: 'EdTech' },
-  { key: 'healthcare-it' as const, label: 'Healthcare' },
-  { key: 'data-streaming' as const, label: 'Streaming' },
-  { key: 'search' as const, label: 'Search' },
-  { key: 'api' as const, label: 'API' },
-];
-
-function ServicesContent() {
-  const searchParams = useSearchParams();
-  const urlCategory = (searchParams?.get('category') || 'all');
-  const [activeCategory, setActiveCategory] = useState(urlCategory);
-  const [searchQuery, setSearchQuery] = useState('');
-
-  const firstTier = (pricing: Record<string,string>): string =>
-    Object.values(pricing)[0] || 'Contact for Quote';
-
-  const filteredServices = useMemo(() => {
-    let services = allServices;
-    if (activeCategory !== 'all') services = services.filter((s: Service) => s.category === activeCategory);
-    if (searchQuery.trim()) {
-      const q = searchQuery.toLowerCase();
-      services = services.filter((s: Service) => s.title.toLowerCase().includes(q) || s.description.toLowerCase().includes(q) || s.category.toLowerCase().includes(q));
-    }
-    return services;
-  }, [activeCategory, searchQuery]);
-
-  return (
-    <>
-      <JsonLd
-        data={{
-          '@context': 'https://schema.org',
-          '@type': 'CollectionPage',
-          name: 'Zion Tech Group Service Catalog',
-          description: 'Browse AI, IT, cloud, security, data, automation, and DevOps services across multiple categories.',
-          url: 'https://ziontechgroup.com/services',
-          isPartOf: { '@type': 'WebSite', url: 'https://ziontechgroup.com/', name: 'Zion Tech Group' },
-          about: {
-            '@type': 'Organization',
-            name: 'Zion Tech Group',
-            url: 'https://ziontechgroup.com',
-            email: 'kleber@ziontechgroup.com',
-            telephone: '+1 302 464 0950',
-            address: '364 E Main St STE 1008, Middletown, DE 19709',
-          },
-          breadcrumb: {
-            '@type': 'BreadcrumbList',
-            itemListElement: [
-              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ziontechgroup.com/' },
-              { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://ziontechgroup.com/services' },
-            ],
-          },
-        }}
-      />
-    <main className="min-h-screen bg-slate-950 py-20">
-      <div className="container-page">
-        <h1 className="text-4xl font-bold text-white mb-2 text-center">Our Complete Service Catalog</h1>
-        <p className="section-subheading text-center">{allServices.length}+ real-world services across 10 categories</p>
-        {/* Smart Fuzzy Search Bar */}
-        <div className="max-w-3xl mx-auto mt-8">
-          <SmartSearchBar
-            initialQuery={urlCategory !== 'all' ? '' : ''}
-            initialCategory={urlCategory}
-          />
-        </div>
-        <div className="flex flex-wrap justify-center gap-3 mt-8 mb-12">
-          {CATEGORIES.map((cat) => (
-            <button key={cat.key} onClick={() => setActiveCategory(cat.key)} className={`rounded-full px-6 py-2.5 text-sm font-semibold transition ${activeCategory === cat.key ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg' : 'bg-slate-900/50 text-slate-400 border border-slate-700/50 hover:border-purple-500/50'}`}>{cat.label}</button>
-          ))}
-        </div>
-        <div className="text-center mb-12"><span className="text-slate-400">Showing <span className="text-purple-400 font-semibold">{filteredServices.length}</span> of <span className="text-purple-400 font-semibold">{allServices.length}</span> services</span></div>
-        <div className="feature-grid">
-          {filteredServices.map((service: Service) => (
-            <div key={service.id} className="glass-card flex flex-col h-full">
-              <div className="flex-1">
-                <div className="flex items-center justify-between mb-2">
-                  <span className="text-xs font-semibold px-3 py-1 rounded-full bg-purple-900/30 text-purple-300 uppercase tracking-wider">{SVC_CAT_LABELS[service.category as string] || service.category}</span>
-                  <span className="text-xs text-slate-500">{service.category}</span>
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2 leading-snug">{service.title}</h3>
-                <p className="text-slate-400 text-sm mb-4 leading-relaxed">{service.description}</p>
-                <ul className="space-y-2 mb-4">{service.features.slice(0,5).map((f:string,i:number) => <li key={i} className="text-slate-300 text-sm flex items-start gap-2"><span className="text-purple-400 mt-1 shrink-0">•</span><span>{f}</span></li>)}</ul>
-              </div>
-              <div className="mt-auto pt-4 border-t border-slate-700/50">
-                <div className="flex justify-between items-center">
-                  <span className="text-purple-300 text-sm font-medium">Starting at {firstTier(service.pricing)}</span>
-                </div>
-                <Link href={`/services/${service.id}`} className="text-sm text-purple-400 hover:underline inline-flex items-center gap-1 mt-1">View Details →</Link>
-              </div>
-            </div>
-          ))}
-        </div>
-        <div className="text-center mt-16">
-          <Link href="/configurator/" className="btn-primary text-lg">Get Your Custom Proposal →</Link>
-          <div className="mt-6 space-y-2">
-            <p className="text-slate-400 text-sm">📞 <a href="tel:+130****0950" className="text-purple-300 hover:underline">+1 302 464 0950</a></p>
-            <p className="text-slate-400 text-sm">✉️ <a href="mailto:kleber@ziontechgroup.com" className="text-purple-300 hover:underline">kleber@ziontechgroup.com</a></p>
-            <p className="text-slate-400 text-sm">📍 364 E Main St STE 1008, Middletown, DE 19709</p>
-          </div>
-        </div>
-      </div>
-    </main>
-    </>
-  );
-}
+export const metadata = {
+  title: "All Services — Zion Tech Group",
+  description: "Discover our premium AI and IT services. From quantum computing to healthcare innovation.",
+  alternates: { canonical: "https://ziontechgroup.com/services/" }
+};
 
 export default function ServicesPage() {
   return (
-    <Suspense fallback={
-      <main className="min-h-screen bg-slate-950 py-20">
-        <div className="container-page">
-          <h1 className="text-4xl font-bold text-white mb-2 text-center">Our Complete Service Catalog</h1>
-          <p className="section-subheading text-center">Browse all services</p>
-          <div className="mt-8">
-            <ServiceGridSkeleton />
-          </div>
+    <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
+      <div className="max-w-4xl mx-auto">
+        <BreadcrumbSchema path="/services/" title="All Services" />
+        <h1 className="text-4xl font-bold mb-4">Our Services</h1>
+        <p className="text-lg text-gray-300 mb-8">Zion Tech Group delivers premium AI and IT services that transform businesses. Each solution is engineered for impact, backed by expert consultation.</p>
+              <div className="bg-slate-900 rounded-xl p-6 mb-4 border border-slate-800 hover:border-purple-500 transition-colors">
+        <h3 className="text-xl font-bold mb-2"><Link href="/services/premium/quantum-computing-optimization" className="text-purple-300 hover:text-purple-200">Quantum Computing Optimization Service</Link></h3>
+        <p className="text-gray-400 mb-3">Enterprise-grade quantum computing optimization service that helps organizations leverage quantum algorithms for complex optimization problems in logistics, finance, and cryptography.</p>
+        <div className="flex flex-wrap gap-2">
+          <span className="bg-purple-900/50 text-purple-300 px-2 py-1 rounded text-xs">Quantum</span>
+          <span className="bg-slate-800 text-gray-400 px-2 py-1 rounded text-xs">$25,000/month</span>
         </div>
-      </main>
-    }>
-      <ServicesContent />
-    </Suspense>
+      </div>
+      <div className="bg-slate-900 rounded-xl p-6 mb-4 border border-slate-800 hover:border-purple-500 transition-colors">
+        <h3 className="text-xl font-bold mb-2"><Link href="/services/premium/enterprise-ai-governance" className="text-purple-300 hover:text-purple-200">Enterprise AI Governance Platform</Link></h3>
+        <p className="text-gray-400 mb-3">Comprehensive AI governance solution that ensures compliance, transparency, and ethical AI deployment across your organization.</p>
+        <div className="flex flex-wrap gap-2">
+          <span className="bg-purple-900/50 text-purple-300 px-2 py-1 rounded text-xs">AI Governance</span>
+          <span className="bg-slate-800 text-gray-400 px-2 py-1 rounded text-xs">$22,000/month</span>
+        </div>
+      </div>
+      <div className="bg-slate-900 rounded-xl p-6 mb-4 border border-slate-800 hover:border-purple-500 transition-colors">
+        <h3 className="text-xl font-bold mb-2"><Link href="/services/premium/advanced-cybersecurity-ai" className="text-purple-300 hover:text-purple-200">Advanced Cybersecurity AI Defense</Link></h3>
+        <p className="text-gray-400 mb-3">Next-generation AI-powered cybersecurity platform that provides proactive threat detection, automated response, and continuous security posture management.</p>
+        <div className="flex flex-wrap gap-2">
+          <span className="bg-purple-900/50 text-purple-300 px-2 py-1 rounded text-xs">Cybersecurity</span>
+          <span className="bg-slate-800 text-gray-400 px-2 py-1 rounded text-xs">$28,000/month</span>
+        </div>
+      </div>
+      <div className="bg-slate-900 rounded-xl p-6 mb-4 border border-slate-800 hover:border-purple-500 transition-colors">
+        <h3 className="text-xl font-bold mb-2"><Link href="/services/premium/hyperautomation-enterprise" className="text-purple-300 hover:text-purple-200">Hyperautomation Enterprise Suite</Link></h3>
+        <p className="text-gray-400 mb-3">End-to-end hyperautomation platform combining RPA, AI, and process mining to automate complex business processes at scale.</p>
+        <div className="flex flex-wrap gap-2">
+          <span className="bg-purple-900/50 text-purple-300 px-2 py-1 rounded text-xs">Automation</span>
+          <span className="bg-slate-800 text-gray-400 px-2 py-1 rounded text-xs">$20,000/month</span>
+        </div>
+      </div>
+      <div className="bg-slate-900 rounded-xl p-6 mb-4 border border-slate-800 hover:border-purple-500 transition-colors">
+        <h3 className="text-xl font-bold mb-2"><Link href="/services/premium/ai-powered-digital-twin" className="text-purple-300 hover:text-purple-200">AI-Powered Digital Twin</Link></h3>
+        <p className="text-gray-400 mb-3">Create intelligent digital twins of physical assets, systems, or processes using AI and IoT data for predictive analytics and optimization.</p>
+        <div className="flex flex-wrap gap-2">
+          <span className="bg-purple-900/50 text-purple-300 px-2 py-1 rounded text-xs">Digital Twin</span>
+          <span className="bg-slate-800 text-gray-400 px-2 py-1 rounded text-xs">$24,000/month</span>
+        </div>
+      </div>
+      <div className="bg-slate-900 rounded-xl p-6 mb-4 border border-slate-800 hover:border-purple-500 transition-colors">
+        <h3 className="text-xl font-bold mb-2"><Link href="/services/premium/enterprise-risk-management" className="text-purple-300 hover:text-purple-200">AI-Powered Enterprise Risk Management Platform</Link></h3>
+        <p className="text-gray-400 mb-3">Leverage artificial intelligence to identify, assess, and mitigate enterprise risks in real-time across financial, operational, strategic, and compliance domains.</p>
+        <div className="flex flex-wrap gap-2">
+          <span className="bg-purple-900/50 text-purple-300 px-2 py-1 rounded text-xs">Risk Management</span>
+          <span className="bg-slate-800 text-gray-400 px-2 py-1 rounded text-xs">$25,000/month</span>
+        </div>
+      </div>
+      <div className="bg-slate-900 rounded-xl p-6 mb-4 border border-slate-800 hover:border-purple-500 transition-colors">
+        <h3 className="text-xl font-bold mb-2"><Link href="/services/premium/supply-chain-optimization" className="text-purple-300 hover:text-purple-200">AI-Powered Supply Chain Optimization Platform</Link></h3>
+        <p className="text-gray-400 mb-3">Transform your supply chain with artificial intelligence for end-to-end visibility, predictive analytics, and autonomous optimization across global networks.</p>
+        <div className="flex flex-wrap gap-2">
+          <span className="bg-purple-900/50 text-purple-300 px-2 py-1 rounded text-xs">Supply Chain</span>
+          <span className="bg-slate-800 text-gray-400 px-2 py-1 rounded text-xs">$22,000/month</span>
+        </div>
+      </div>
+      <div className="bg-slate-900 rounded-xl p-6 mb-4 border border-slate-800 hover:border-purple-500 transition-colors">
+        <h3 className="text-xl font-bold mb-2"><Link href="/services/premium/customer-experience-intelligence" className="text-purple-300 hover:text-purple-200">AI-Powered Customer Experience Intelligence Platform</Link></h3>
+        <p className="text-gray-400 mb-3">Elevate customer experiences with artificial intelligence that analyzes behavior, predicts needs, and personalizes interactions across all touchpoints.</p>
+        <div className="flex flex-wrap gap-2">
+          <span className="bg-purple-900/50 text-purple-300 px-2 py-1 rounded text-xs">Customer Experience</span>
+          <span className="bg-slate-800 text-gray-400 px-2 py-1 rounded text-xs">$18,000/month</span>
+        </div>
+      </div>
+      <div className="bg-slate-900 rounded-xl p-6 mb-4 border border-slate-800 hover:border-purple-500 transition-colors">
+        <h3 className="text-xl font-bold mb-2"><Link href="/services/premium/healthcare-innovation" className="text-purple-300 hover:text-purple-200">AI-Powered Healthcare Innovation Platform</Link></h3>
+        <p className="text-gray-400 mb-3">Revolutionize healthcare delivery with artificial intelligence for improved patient outcomes, operational efficiency, and medical research acceleration.</p>
+        <div className="flex flex-wrap gap-2">
+          <span className="bg-purple-900/50 text-purple-300 px-2 py-1 rounded text-xs">Healthcare</span>
+          <span className="bg-slate-800 text-gray-400 px-2 py-1 rounded text-xs">$28,000/month</span>
+        </div>
+      </div>
+        <div className="text-center mt-8">
+          <a href="https://calendly.com/kleber-ziontechgroup/30min" target="_blank" rel="noopener noreferrer" className="inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-full text-lg">Book a Consultation</a>
+        </div>
+      </div>
+    </main>
   );
 }

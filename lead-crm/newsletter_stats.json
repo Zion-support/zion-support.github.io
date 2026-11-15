@@ -1,0 +1,17 @@
+{
+  "last_bulk_send": "2026-09-18T03:42:03Z",
+  "last_bulk_status": "all_sent",
+  "last_bulk_total": 30,
+  "last_bulk_sent": 30,
+  "last_bulk_failed": 0,
+  "last_generic_bulk_send": "2026-09-18T03:42:03.199967+00:00",
+  "last_generic_bulk_total": 26,
+  "last_generic_bulk_sent": 26,
+  "last_generic_bulk_failed": 0,
+  "last_generic_bulk_status": "all_sent",
+  "last_bulk_newsletters": 4,
+  "last_bulk_generic_leads": 26,
+  "backend_used": "gog_gmail",
+  "resend_api_blocked": true,
+  "resend_block_error": "Cloudflare Error 1010 — browser signature banned"
+}

@@ -46,7 +46,7 @@ const serviceKnowledge: { keywords: string[]; services: ServiceMatch[] }[] = [
   {
     keywords: ['cloud', 'aws', 'azure', 'gcp', 'infrastructure', 'server', 'kubernetes', 'k8s'],
     services: [
-      { title: 'Cloud Cost Optimization', href: '/services/cloud-cost-optimization-service', price: '$1,499/mo', icon: '☁️', match: 95, description: '35% cloud cost reduction' },
+      { title: 'Cloud Cost Optimization', href: '/services/cloud-cost-optimization-platform', price: '$1,499/mo', icon: '☁️', match: 95, description: '35% cloud cost reduction' },
       { title: 'Cloud FinOps Platform', href: '/services/cloud-finops-platform', price: '$2,999/mo', icon: '💰', match: 92, description: 'Multi-cloud financial management' },
       { title: 'Kubernetes Autoscaling', href: '/services/kubernetes-autoscaling-intelligence', price: '$2,399/mo', icon: '⚡', match: 88, description: 'ML-based traffic prediction & scaling' },
     ]
@@ -189,7 +189,7 @@ export default function ServiceFinderChat() {
       if (matches.length > 0) {
         botContent = `Great question! I found ${matches.length} services that match your needs. Here are my top recommendations:`;
       } else {
-        botContent = "I'd love to help! Could you tell me more about what you're looking for? Try keywords like: email, security, AI, cloud, sales, marketing, HR, finance, support, healthcare, or manufacturing. You can also call us at +1 302 464 0950 for personalized assistance!";
+        botContent = "I'd love to help! Could you tell me more about what you're looking for? Try keywords like: email, security, AI, cloud, sales, marketing, HR, finance, support, healthcare, or manufacturing. You can also call us at +55 11 97614-0076 for personalized assistance!";
       }
       
       setMessages(prev => [...prev, { 
@@ -303,7 +303,7 @@ export default function ServiceFinderChat() {
               </button>
             </div>
             <p className="text-xs text-slate-500 mt-2 text-center">
-              📞 Need human help? <a href="tel:+13024640950" className="text-purple-400">+1 302 464 0950</a>
+              📞 Need human help? <a href="tel:+5511976140076" className="text-purple-400">+55 11 97614-0076</a>
             </p>
           </div>
         </div>

@@ -1,6 +1,6 @@
 name: outreach-live-llm-tailoring
 
-on:
+"on":
   workflow_dispatch:
   schedule:
     - cron: "*/5 * * * *"
@@ -10,9 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 25
     env:
-      ZION_LLM_API_ENDPOINT: ${{ secrets.ZION_LLM_API_ENDPOINT }}
-      ZION_LLM_API_KEY: ${{ secrets.ZION_LLM_API_KEY }}
-      ZION_LLM_MODEL: ${{ secrets.ZION_LLM_MODEL }}
+      ZION_LLM_API_ENDPOINT: ${{ secrets.ZION_LLM_API_ENDPOINT || 'https://openrouter.ai/api/v1' }}
+      ZION_LLM_API_KEY: ${{ secrets.ZION_LLM_API_KEY || secrets.OPENROUTER_API_KEY }}
+      ZION_LLM_MODEL: ${{ secrets.ZION_LLM_MODEL || 'openai/gpt-4o-mini' }}
       OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
       GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
       GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
@@ -32,11 +32,18 @@ jobs:
           pip install google-api-python-client google-auth google-auth-httplib2 google-auth-oauthlib requests beautifulsoup4
 
       - name: Run outreach worker
-        run: python scripts/outreach/outreach_worker_automation.py
+        id: outreach-worker
+        run: |
+          echo "[trace] start outreach_worker_automation.py"
+          python scripts/outreach/outreach_worker_automation.py | tee outreach_run.log
+          echo "[trace] outreach exit=$?"
+        continue-on-error: true
 
       - name: Discover outreach blockers
         if: always()
+        id: outreach-blockers
         run: |
+          echo "[trace] start outreach blocker discovery"
           set -euo pipefail
           python - <<'PY'
           import json, os
@@ -67,12 +74,13 @@ jobs:
           print(json.dumps(report, ensure_ascii=False))
           PY
 
-      - name: Upload outreach reports
+      - name: Upload outreach reports and trace logs
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: outreach-reports
+          name: outreach-reports-${{ github.run_id }}
           path: |
+            outreach_run.log
             outreach_monitor/processed/sent_ledger.jsonl
             outreach_monitor/processed/hot_followup_reply_ledger.jsonl
             outreach_monitor/processed/dry_run_report.jsonl

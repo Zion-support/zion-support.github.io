@@ -1,0 +1,56 @@
+name: War Room Pulse
+# Atualiza o board do War Room (STATUS.md) na main branch
+# Dispara via: gh workflow run war-room-pulse ou comentário em issue
+on:
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: 'Motivo do pulso'
+        required: false
+        default: 'Check-in agente'
+  issue_comment:
+    types: [created, updated]
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  pulse:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'workflow_dispatch' || (github.event_name == 'issue_comment' && contains(github.event.comment.body, 'war room'))
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Pulse war room
+        run: |
+          echo "## CHECK-IN — $(date -u +'%Y-%m-%d %H:%M UTC')" >> ops/STATUS.md
+          echo "**Agent:** $AGENT_NAME" >> ops/STATUS.md
+          echo "**Session:** $(date -u +'%Y-%m-%dT%H:%M:%SZ')" >> ops/STATUS.md
+          echo "" >> ops/STATUS.md
+          echo "### Status" >> ops/STATUS.md
+          echo "- War Room atualizado via workflow estático" >> ops/STATUS.md
+          echo "- Commit: ${{ github.sha }}" >> ops/STATUS.md
+          echo "" >> ops/STATUS.md
+        env:
+          AGENT_NAME: ${{ github.actor }}
+
+      - name: Configurar git
+        run: |
+          git config user.name "Zion Agent"
+          git config user.email "agent@ziontechgroup.com"
+
+      - name: Pull antes de push (evita conflito)
+        run: |
+          git pull --rebase origin main 2>/dev/null || true
+
+      - name: Commit board updates
+        run: |
+          git add ops/STATUS.md
+          git diff --cached --quiet && echo "Sem mudanças" && exit 0
+          git commit -m "war-room: pulso $(date -u +'%Y-%m-%d %H:%M UTC') [skip ci]"
+          git push origin main

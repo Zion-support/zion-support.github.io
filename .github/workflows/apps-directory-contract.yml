@@ -1,0 +1,77 @@
+name: Apps directory translation and navigation contract
+
+on:
+  pull_request:
+    paths:
+      - '_data/apps-directory.json'
+      - 'scripts/render-apps-directory.cjs'
+      - 'scripts/render-service-request-promotion.cjs'
+      - 'scripts/test-apps-directory.cjs'
+      - 'scripts/ensure-pages-sitemap-index.py'
+      - 'tests/ci/test_pages_sitemap_index.py'
+      - 'scripts/prepare-pages-out.sh'
+      - 'public/sitemap.xml'
+      - 'public/sitemap-index.xml'
+      - 'public/assets/css/apps-directory.css'
+      - 'public/assets/js/apps-directory.js'
+      - 'public/index.html'
+      - 'public/en/index.html'
+      - 'public/es/index.html'
+      - 'public/fr/index.html'
+      - 'public/de/index.html'
+      - 'public/apps/index.html'
+      - 'public/pt/apps/index.html'
+      - 'public/es/apps/index.html'
+      - 'public/fr/apps/index.html'
+      - 'public/de/apps/index.html'
+      - '.github/workflows/apps-directory-contract.yml'
+  push:
+    branches: [main]
+    paths:
+      - '_data/apps-directory.json'
+      - 'scripts/render-apps-directory.cjs'
+      - 'scripts/render-service-request-promotion.cjs'
+      - 'scripts/test-apps-directory.cjs'
+      - 'scripts/ensure-pages-sitemap-index.py'
+      - 'tests/ci/test_pages_sitemap_index.py'
+      - 'scripts/prepare-pages-out.sh'
+      - 'public/sitemap.xml'
+      - 'public/sitemap-index.xml'
+      - 'public/assets/css/apps-directory.css'
+      - 'public/assets/js/apps-directory.js'
+      - 'public/index.html'
+      - 'public/en/index.html'
+      - 'public/es/index.html'
+      - 'public/fr/index.html'
+      - 'public/de/index.html'
+      - 'public/apps/index.html'
+      - 'public/pt/apps/index.html'
+      - 'public/es/apps/index.html'
+      - 'public/fr/apps/index.html'
+      - 'public/de/apps/index.html'
+      - '.github/workflows/apps-directory-contract.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: apps-directory-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  catalog-contract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+      - name: Validate translations, generated pages, search and published routes
+        run: node scripts/test-apps-directory.cjs
+      - name: Verify localized homepage service-request promotions
+        run: node scripts/render-service-request-promotion.cjs --check
+      - name: Test sitemap index preservation
+        run: python3 tests/ci/test_pages_sitemap_index.py
+      - name: Validate browser script syntax
+        run: node --check public/assets/js/apps-directory.js

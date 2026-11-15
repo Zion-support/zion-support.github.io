@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Managed AI Operations · Zion Tech Group</title>
+<meta name="description" content="A production AI agent is not a project, it is an operating responsibility. Zion Managed AI Operations takes over the day-to-day of your agent systems: monitoring against the original test set, evaluation refreshes when a model vendor changes behaviour, prompt and model versioning, drift detection, cost and token control, and incident response with severity-based escalation. Reporting is mapped to KPIs you already track — resolution rate, uptime, accuracy and cost per agent action — so you can see what you are paying for.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://ziontechgroup.commanaged-ai-operations/">
+  <link rel="alternate" hreflang="en" href="https://ziontechgroup.commanaged-ai-operations/">
+  <link rel="alternate" hreflang="pt" href="https://ziontechgroup.com/pt/managed-ai-operations/">
+  <link rel="alternate" hreflang="es" href="https://ziontechgroup.com/es/managed-ai-operations/">
+  <link rel="alternate" hreflang="fr" href="https://ziontechgroup.com/fr/managed-ai-operations/">
+  <link rel="alternate" hreflang="de" href="https://ziontechgroup.com/de/managed-ai-operations/">
+  <link rel="alternate" hreflang="x-default" href="https://ziontechgroup.commanaged-ai-operations/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"Managed AI Operations","inLanguage":"en","url":"https://ziontechgroup.commanaged-ai-operations/","provider":{"@type":"Organization","name":"Zion Tech Group","address":"364 E Main St STE 1008, Middletown, DE 19709"},"description":"A production AI agent is not a project, it is an operating responsibility. Zion Managed AI Operations takes over the day-to-day of your agent systems: monitoring against the original test set, evaluation refreshes when a model vendor changes behaviour, prompt and model versioning, drift detection, cost and token control, and incident response with severity-based escalation. Reporting is mapped to KPIs you already track — resolution rate, uptime, accuracy and cost per agent action — so you can see what you are paying for.","offers":[{"@type":"Offer","name":"Light","price":"3000","priceCurrency":"USD"},{"@type":"Offer","name":"Standard","price":"8000","priceCurrency":"USD"},{"@type":"Offer","name":"Heavy","price":"20000","priceCurrency":"USD"}]}</script>
+<style>
+:root{--bg:#0b1220;--card:#121a2b;--ink:#e8eef8;--muted:#9aa8bd;--line:#243049;--accent:#7dd3fc;--brand:#a78bfa}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+a{color:var(--accent);text-decoration:none}a:hover{color:#a5d7ff;text-decoration:underline}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px 72px}
+header.site{border-bottom:1px solid var(--line);background:rgba(11,18,32,.92)}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:14px;padding-bottom:14px;flex-wrap:wrap}
+.brand{color:var(--ink);font-weight:700}.brand span{color:var(--brand)}
+.langs{display:flex;flex-wrap:wrap;gap:6px;font-size:.8rem}
+.langs a{color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:3px 10px}
+.langs a[aria-current="true"]{color:#042033;background:var(--accent);border-color:var(--accent);font-weight:700}
+.hero{padding:56px 0 40px;background:radial-gradient(ellipse at top,rgba(167,139,250,.16),transparent 60%)}
+.hero h1{font-size:clamp(2rem,5vw,3rem);line-height:1.1;margin:0 0 14px;letter-spacing:-.02em}
+.lede{color:var(--muted);font-size:1.12rem;max-width:48rem;margin:0 0 26px}
+section{padding:40px 0;border-top:1px solid var(--line)}
+h2{font-size:1.4rem;margin:0 0 18px;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:0 0 6px}
+p{margin:0 0 14px}
+ul.feat{list-style:none;padding:0;margin:0;display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+ul.feat li{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px}
+.tiers{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.tier{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+.tier h3{margin-bottom:2px}
+.tier .price{color:var(--accent);font-weight:700;margin:0 0 4px}
+.tier .sys{color:var(--muted);font-size:.85rem;margin:0 0 12px}
+.tier ul{margin:0;padding-left:18px;color:var(--muted);font-size:.88rem}
+.note{color:var(--muted);font-size:.88rem;max-width:48rem}
+.kpis{display:flex;flex-wrap:wrap;gap:10px}
+.kpi{border:1px solid var(--line);border-radius:999px;padding:8px 16px;font-size:.85rem;color:var(--muted)}
+.grid{display:grid;gap:10px;grid-template-columns:repeat(auto-fill,minmax(240px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px}
+.card h3{font-size:.98rem;margin:0 0 4px}
+.card h3 a{color:var(--ink)}
+.card h3 a:hover{color:var(--accent)}
+.btn{display:inline-block;background:linear-gradient(90deg,#7c3aed,#ec4899);color:#fff;font-weight:700;padding:12px 20px;border-radius:10px}
+.btn.alt{background:transparent;border:1px solid var(--line);color:var(--ink)}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px}
+footer{margin-top:12px;border-top:1px solid var(--line);padding-top:20px;color:var(--muted);font-size:.85rem}
+footer .wrap{display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;align-items:center;padding-top:18px;padding-bottom:18px}
+@media(max-width:640px){.hero{padding:40px 0 28px}section{padding:30px 0}}
+</style>
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="/">Zion <span>Tech Group</span></a>
+    <nav class="langs" aria-label="Language"><a href="https://ziontechgroup.commanaged-ai-operations/" aria-current="true">EN</a><a href="https://ziontechgroup.com/pt/managed-ai-operations/">PT</a><a href="https://ziontechgroup.com/es/managed-ai-operations/">ES</a><a href="https://ziontechgroup.com/fr/managed-ai-operations/">FR</a><a href="https://ziontechgroup.com/de/managed-ai-operations/">DE</a></nav>
+  </div>
+</header>
+<main id="main">
+  <div class="wrap">
+    <div class="hero">
+      <h1>Managed AI Operations</h1>
+      <p class="lede">We run your production AI agents — monitoring, evals, drift and cost — so they keep working after launch.</p>
+      <div class="cta-row">
+        <a class="btn" href="/discovery/">Start Free Discovery</a>
+      </div>
+    </div>
+    <section id="about">
+      <h2>Managed AI Operations</h2>
+      <p class="note">A production AI agent is not a project, it is an operating responsibility. Zion Managed AI Operations takes over the day-to-day of your agent systems: monitoring against the original test set, evaluation refreshes when a model vendor changes behaviour, prompt and model versioning, drift detection, cost and token control, and incident response with severity-based escalation. Reporting is mapped to KPIs you already track — resolution rate, uptime, accuracy and cost per agent action — so you can see what you are paying for.</p>
+    </section>
+    <section id="included">
+      <h2>What is included</h2>
+      <ul class="feat">
+<li>Continuous monitoring of every production agent against its own test set</li>
+<li>Evaluation refresh when a model vendor changes behaviour or deprecates a version</li>
+<li>Prompt, model and dependency versioning with rollback</li>
+<li>Drift and accuracy review on a fixed cadence, with a written report</li>
+<li>Token and inference cost control, including cost per agent action</li>
+<li>Incident response with severity levels, escalation path and post-incident review</li>
+      </ul>
+    </section>
+    <section id="tiers">
+      <h2>Retention tiers</h2>
+      <p class="note">Priced per system under management, not per seat. Scope, coverage hours and SLAs are written into the contract.</p>
+      <div class="tiers">
+<div class="tier">
+  <h3>Light</h3>
+  <p class="price">USD 3,000 / month</p>
+  <p class="sys">1 production system</p>
+  <ul><li>Business-hours coverage with 24/7 alerting</li><li>Monthly accuracy and drift review</li><li>Incident response for one agent</li></ul>
+</div>
+<div class="tier">
+  <h3>Standard</h3>
+  <p class="price">USD 8,000 / month</p>
+  <p class="sys">Up to 3 production systems</p>
+  <ul><li>Everything in Light, plus</li><li>Monthly improvements and a roadmap</li><li>Response targets per severity level</li></ul>
+</div>
+<div class="tier">
+  <h3>Heavy</h3>
+  <p class="price">USD 20,000 / month</p>
+  <p class="sys">5+ systems or an agent platform</p>
+  <ul><li>Everything in Standard, plus</li><li>24/7 monitoring with on-call response</li><li>Quarterly strategy and full operating partnership</li></ul>
+</div>
+      </div>
+    </section>
+    <section id="kpis">
+      <h2>Reported as KPIs, not activity</h2>
+      <div class="kpis"><span class="kpi">Resolution rate</span><span class="kpi">Uptime</span><span class="kpi">Accuracy</span><span class="kpi">Cost per agent action</span></div>
+    </section>
+    <section id="related">
+      <h2>Paired with these Apps Network tools</h2>
+      <div class="grid">
+<div class="card"><h3><a href="/token-cost/">Token Cost Calculator</a></h3></div>
+<div class="card"><h3><a href="/model-observatory/">Model Observatory</a></h3></div>
+<div class="card"><h3><a href="/change-risk/">Change Risk Score</a></h3></div>
+<div class="card"><h3><a href="/ai-ticket-sentinel/">AI Ticket Sentinel</a></h3></div>
+<div class="card"><h3><a href="/ops-runbook-ai/">Ops Runbook AI</a></h3></div>
+<div class="card"><h3><a href="/ai-governance-checklist/">AI Governance Checklist</a></h3></div>
+      </div>
+    </section>
+    <section id="cta">
+      <h2>Start with a Discovery, then scope the operations</h2>
+      <p class="note">A Discovery maps which of your agent workflows are ready for managed operations and what they would cost to run. One process, one report, one 30-minute session.</p>
+      <div class="cta-row">
+        <a class="btn" href="/discovery/">Start Free Discovery</a>
+        <a class="btn alt" href="/pricing/">View pricing</a>
+      </div>
+    </section>
+  </div>
+</main>
+<footer>
+  <div class="wrap">
+    <div>Zion Tech Group · Delaware, USA</div>
+    <div class="langs"><a href="https://ziontechgroup.commanaged-ai-operations/" aria-current="true">EN</a><a href="https://ziontechgroup.com/pt/managed-ai-operations/">PT</a><a href="https://ziontechgroup.com/es/managed-ai-operations/">ES</a><a href="https://ziontechgroup.com/fr/managed-ai-operations/">FR</a><a href="https://ziontechgroup.com/de/managed-ai-operations/">DE</a></div>
+  </div>
+</footer>
+</body>
+</html>

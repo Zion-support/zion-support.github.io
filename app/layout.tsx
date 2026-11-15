@@ -21,38 +21,34 @@ import FieldPerformanceCollector from './components/FieldPerformanceCollector';
 import FloatingAgentStatus from './components/FloatingAgentStatus';
 import { AutoJsonLd } from './hooks/useAutoJsonLdPage';
 import GlobalErrorBoundary from './GlobalErrorBoundary';
+import { siteConfig } from './lib/siteConfig';
 import './globals.css';
 
 export const siteUrl = 'https://ziontechgroup.com';
 
 export const metadata = {
-  metadataBase: new URL(siteUrl),
-  title: {
-    default: 'Zion Tech Group | AI & IT Solutions',
-    template: '%s | Zion Tech Group',
-  },
-  description:
-    'Zion Tech Group delivers AI & IT solutions including automation, cybersecurity, cloud, quantum computing, enterprise software, and managed services for modern enterprises.',
-  applicationName: 'Zion Tech Group',
-  alternates: {
-    canonical: undefined,
-  },
-  icons: {
-    icon: '/icon.svg',
-    apple: '/icon.svg',
-  },
+  metadataBase: new URL(siteConfig.url),
+  title: { default: siteConfig.name, template: `%s | ${siteConfig.name}` },
+  description: siteConfig.description,
+  keywords: [...siteConfig.keywords],
+  authors: [{ name: siteConfig.name, url: siteConfig.url }],
+  creator: siteConfig.name,
+  publisher: siteConfig.name,
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
+  icons: { icon: '/favicon.ico', apple: '/icon.svg' },
   manifest: '/manifest.json',
-  formatDetection: {
-    telephone: false,
-    address: false,
-    email: false,
+  viewport: { width: 'device-width', initialScale: 1, maximumScale: 5, userScalable: true },
+  formatDetection: { telephone: false, address: false, email: false },
+  appleWebApp: { capable: true, title: siteConfig.name },
+  alternates: {
+    canonical: '/',
+    languages: {
+      en: ['/', '/pt/'],
+      pt: ['/pt/', '/'],
+    },
   },
-  referrer: 'strict-origin-when-cross-origin',
-  appleWebApp: {
-    capable: true,
-    statusBarStyle: 'default',
-    title: 'Zion Tech Group',
-  },
+  openGraph: { type: 'website', locale: 'en_US', url: siteConfig.url, title: siteConfig.name, description: siteConfig.description, siteName: siteConfig.name },
+  twitter: { card: 'summary_large_image', title: siteConfig.name, description: siteConfig.description },
 };
 
 export const viewport: Viewport = {

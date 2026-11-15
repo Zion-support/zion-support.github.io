@@ -3,7 +3,7 @@ name: AI Site Improvement Agent
 permissions:
   contents: read
 
-on:
+"on":
   schedule:
     - cron: '0 7 * * *'
   workflow_dispatch:
@@ -40,12 +40,19 @@ jobs:
       - name: Install Python deps for site integrity checks
         run: python -m pip install --upgrade pip && pip install requests beautifulsoup4
 
+      - name: Prepare report directory
+        run: mkdir -p automation/reports
+
       - name: Run site improvement agent
+        id: site-improv-run
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-        run: node automation/ai-site-improvement-agent.cjs --base https://ziontechgroup.com
+        run: |
+          echo "[trace] start ai-site-improvement-agent.cjs"
+          node automation/ai-site-improvement-agent.cjs --base https://ziontechgroup.com | tee site_improv_run.log
+          echo "[trace] site improv exit=$?"
 
       - name: Surface site improvement agent results
         id: site-improv-result
@@ -62,11 +69,13 @@ jobs:
             echo 'site-improvement-agent report missing after run'
           fi
 
-      - name: Upload site improvement report
+      - name: Upload site improvement report and trace log
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: site-improvement-agent-${{ github.run_id }}
-          path: automation/reports/site-improvement-agent-latest.json
+          path: |
+            site_improv_run.log
+            automation/reports/site-improvement-agent-latest.json
           retention-days: 14
           if-no-files-found: ignore

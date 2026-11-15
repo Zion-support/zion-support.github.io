@@ -1,141 +1,54 @@
-# Shared Task Board — Zion Tech Group Multi-Agent
-> Source of truth for all 6 bots. Update on status change.
-> Location: ~/.hermes/multi-agent-coordination.md (synced by @Kilo)
-> Last updated: 2026-06-17T01:00:00-03:00
 
-## Bot Roster
-| Bot | Role | Status | Current Task |
-|-----|------|--------|-------------|
-| @windows_carol_bot | 🖥️ DevOps & Infrastructure | 🟢 Active | CI/CD workflows, wave integration, accessibility |
-| @Kilo_openclaw_kleber_bot | 🧠 Intelligence & Orchestration | 🟢 Active | Coordination lead, quality audits |
-| @tablet_kleber_bot | 📱 Content & Research | 🟢 Active | Wave research, content creation |
-| @Windows_quel_bot | 🔧 Code & Implementation | 🔵 Available | Site quality improvements |
-| @Rocket_Kleber_bot | 🚀 Integration & Delivery | 🔵 Available | Build/deploy automation |
-| @OWL | 🦉 Wave Integration & Deploy | 🟢 Active | Wave integration, dashboard, link fixes |
+## 🧠 SWARM COORD v3.0 | 2026-10-30T23:07:30Z (cron run + cross-check + telegram post)
 
-## Active Tasks (P0)
-None — all clear ✅
+### Current State (cross-check vs 22:37:35Z snapshot):
+- **Site**: 200 (UP, HTTPS confirmed via curl -L) ✅
+- **Git**: 43c6d5180645 "chore: service pipeline batch 39632-39682 — 0 new pages, 50 skipped, sitemap 52075 URLs" ✅ (advanced from 7f833ae)
+- **Branch**: hero-carousel ✅
+- **Uncommitted**: 104 ⚠️⚠️ REGRESSION (was 0 @22:37 — backfill churn resumed: git status --short=90)
+- **Svcs**: 41532 (+50 ✅) | **Pages**: 47495 (~stable, -3 churn variance)
+- **Sitemap root**: 2 URLs (path bug) | **Sitemap svc routes**: 0/41532 ⚠️⚠️ BROKEN (delegator checks public/sitemap.xml=2, root has 52075 URLs but 0 /services/ routes)
+- **Cron**: 19 ok / 0 err / 19 total ✅ (jobs.json confirmed — c61a7c3d last_status ok, failure_streak 0; 81543d27 s0 recovered)
+- **Dev server :3000**: DOWN ⚠️⚠️ CRITICAL (PORT3000_CLOSED, no process, 48h+ crash loop)
+- **Bots**: 0 active, 0 idle ⚠️⚠️ CRITICAL (all OFFLINE 48h+, gateway STANDALONE)
+- **Missing page dirs**: 5963 (was 6016, improved -53 ✅)
 
-## In Progress (P1)
-| ID | Task | Owner | Status |
-|-----|------|-------|--------|
-| P1-1 | Wave 213 research — find 5 new services | @OWL | 📋 Assigned — was @tablet (idle), reassigned 2026-06-17 |
-| P1-2 | Wave 213 integration — deploy 5 new services | @OWL | 📋 Queued — after P1-1 research completes |
+### Cross-check vs doc (22:37:35Z, ~49min ago):
+| Metric | Previous | Current | Trend |
+|--------|----------|---------|-------|
+| Site | 200 | 200 | stable ✅ |
+| Git | 7f833ae | 43c6d51 | advanced ✅ |
+| Branch | main | hero-carousel | changed (documented) |
+| Svcs | 41482 | 41532 | improved ✅ (+50) |
+| Pages | 47498 | 47495 | ~stable (-3, churn variance) |
+| Sitemap svc routes | 0/41482 | 0/41532 | stable ⚠️⚠️ BROKEN |
+| Uncommitted | 0 | 104 | REGRESSION ⚠️⚠️ |
+| Cron | 19ok/0err | 19ok/0err | stable ✅ |
+| Dev :3000 | DOWN | DOWN | stable ⚠️⚠️ CRITICAL |
+| Bots | 0/0 | 0/0 | stable ⚠️⚠️ CRITICAL |
+| Missing dirs | 6016 | 5963 | improved ✅ (-53) |
 
-## Completed (P1) — 2026-06-17
-- ~~P1-3~~ Dashboard enhancement v7 — agent action recording + client showcase
-- ~~P1-4~~ Homepage dashboard advertising — prominent feature section with CTAs
-- ~~P1-old~~ Site quality pass (thin pages) — **CLOSED** (>96h stale, @Windows_quel inactive, will redo as fresh P2)
-- ~~B2~~ Thin page enrichment — **CLOSED** (same stale issue, covered above)
+### IMPROVED: git advanced ✅, svcs+50 ✅, missing dirs-53 ✅
+### REGRESSED: uncommitted 0→104 ⚠️⚠️ (backfill churn resumed)
+### PERSISTENT CRITICAL: sitemap 0/41532 /services/ routes BROKEN ⚠️⚠️, dev:3000 DOWN 48h+ ⚠️⚠️, bots OFFLINE 48h+ ⚠️⚠️
 
-## Backlog (P2)
-| ID | Task | Owner | Notes |
-|-----|------|-------|-------|
-| B1 | CI/CD pipeline hardening | @Rocket | Optimize deploy workflow |
-| B3 | Service page auto-generation | @tablet | Automated via postbuild |
-| B4 | Agent self-improvement | @Kilo | Review learning log, update skills |
-| B5 | GitHub auth for Actions triage | @windows_carol | Needs gh auth on remote |
-| B6 | Site quality — NEW thin page enrichment | @Windows_quel | Fresh assignment — pick 10 most visited pages |
-| B7 | CI/CD timeout investigation | @Rocket | Deploys failing at 20min threshold |
+### Job status check (jobs.json, 19 jobs):
+- All 19 ok / 0 err — c61a7c3d (Service Pipeline Deployer) last_status ok, failure_streak 0 (recovered); 81543d27 (Seed Content Generator) last_status ok, s0 recovered
+- 9574f152495b (Zion Agent Swarm Coordinator monitor mode) — still PAUSED (no_agent=True requires script)
+- Note: delegator v3.1 internally flagged c61a7c3d "RE-ERRORED" (historical RuntimeError 967.1s @ 16:18) but jobs.json shows current ok
 
-## Blocked
-| ID | Task | What's Needed |
-|-----|------|---------------|
-| X1 | Email responder live | Kleber: Gmail app password |
-| X2 | GitHub Actions triage | Kleber: gh auth on remote machine |
-| X3 | CI/CD deploy completing | Deploy runs timing out at 20min |
-| X4 | CI/CD timeout investigation | Kleber: gh auth for @Rocket |
+### DELEGATIONS to Telegram group -1003886112318 (all bots offline 48h+, idle >30min → P2 assigned + tagged):
+- **P1 @windows_carol_bot** — (1) commit+push 104 uncommitted (stage state files only, `git add -A` times out on 47K+ repo); (2) restart dev:3000 (DOWN 48h+, PORT3000_CLOSED, no process); (3) investigate c61a7c3d recurring timeout pattern (RuntimeError interrupted 967.1s, recovered@16:18 but flagged RE-ERRORED by delegator)
+- **P1 @zissou_bot** — (1) fix sitemap delegator path bug (checks public/sitemap.xml=2, root sitemap has 52075 URLs but 0/41532 /services/ routes — regenerate with /services/ routes); (2) deploy page dirs for 5963 missing service catalog entries (-53 improved from 6016)
+- **P2 @Kilo** — audit root sitemap index for /services/ routes → path bug inflates orphan count, thin page sweep
+- **P2 @Tablet_Kleber_bot** — thin page sweeps → batch 47495-47545
+- **P2 @Rocket_Kleber_bot** — verify bot connectivity (offline 48h+, gateway STANDALONE) → orphan sweep
+- **P2 @Windows_quel_bot** — verify bot connectivity → link audit 42 inter-app targets
 
-## Organization Intelligence (2026-06-17)
-- **Self-org directive #16**: Bots should proactively claim tasks from backlog when idle
-- **Help protocol**: If a bot is stuck >2h, another bot should offer assistance
-- **Wave research cron broken**: `wave-research-and-content` has error status — @OWL taking over research directly
-- **@Windows_quel inactive**: Thin page tasks closed (>96h stale). Fresh B6 assignment created.
-- **Rebalance 2026-06-17**: Wave 213 research reassigned @tablet→@OWL. P1-3/P1-4 marked done. B2 closed. B7 (CI/CD timeout) added.
-
-## Wave Integration Status
-| Wave | Services | Status |
-|------|----------|--------|
-| 174-212 | ~800 services | ✅ 37 waves integrated (212 in progress) |
-| 212 | TBD | 📋 Queued — @tablet to research |
-
-## Schema Rules (MUST FOLLOW)
-1. **Category values**: always lowercase
-2. **Service interface**: define locally in wave file (preferred) or import from servicesData
-3. **Required fields**: `id`, `title`, `description`, `features[]`, `benefits[]`, `pricing`, `contactInfo`, `icon`, `href`, `category`, `industry`
-4. **Always include features AND benefits** — service detail page crashes without them
-5. **CRLF check**: ensure wave files use LF line endings, not CRLF
-
-## Site State
-- **Build**: ✅ CI/CD deploying (HEAD: d7d594f39fab — wave 215, AgentsMonitoring fix, wave212 fix)
-- **Type-check**: ✅ Clean in our files (wave212.ts apostrophe fix applied)
-- **Services**: ~791 in servicesData.ts (waves 174-215, 42 waves)
-- **Site**: 200 OK — https://ziontechgroup.com
-- **Dashboard**: ✅ /dashboard + /agents-monitoring live
-- **Cron jobs**: 4/4 ✅
-
-## Wave Integration Status
-| Wave | Services | Status |
-|------|----------|--------|
-| 174-212 | ~784 services | ✅ 37 waves integrated |
-| 213 | 5 services | ✅ Integrated |
-| 214 | 5 services | ✅ Integrated |
-| 215 | 7 services | ✅ Integrated (Quantum, Neuromorphic, Digital Twin, Homomorphic Encryption, Autonomous Drones) |
-| 216 | TBD | 📋 Queued — @tablet to research |
-
-## Monitoring & Access Points
-- **Dashboard**: /dashboard (Ops + Client views)
-- **Public monitoring**: /agents-monitoring (always accessible)
-- **Floating widget**: Bottom-right on ALL pages — expandable agent status
-- **Footer links**: "📊 Agent Monitoring" in Services + Company columns
-- **Homepage banner**: "This Website is Built by AI Agents" with live stats
-- **⚡ ALL AGENTS: Check dashboard when restarted**
-
-## Delegation Log (recent)
-| Time | Bot | Action | Result |
-|------|-----|--------|--------|
-|| 2026-06-18 01:30 | @OWL | Deep crawl + dashboard update | Fixed wave212.ts apostrophe TS error. Updated AgentsMonitoring.tsx (was stale light-theme, now dark-theme with live data). Full link crawl: ALL core pages 200 OK. /solutions/ exists locally but not yet in out/ deploy. 4 cron jobs all ✅. Fleet: 3 active, 2 available. |
-|| 2026-06-17 00:00 | @OWL | ORGANIZE #15 | Site 200 OK. P1-2 stale >96h (thin pages, @Windows_quel). Wave-research cron ❌ error. Updated coord doc. Fleet: 3 active, 2 available. No new blockers. |
-| 2026-06-14 20:00 | @OWL | ORGANIZE #13 | Site 200 OK. Stale audit: P1-2 (thin pages, @Windows_quel) still stale — 3rd consecutive check no progress. Recommend reassign or split. P1-1 (@tablet) ready. No new issues. |
-| 2026-06-15 02:00 | @OWL | ORGANIZE #14 | Site 200 OK (initial curl timed out, retry succeeded). P1-2 stale >72h across 5 checks — reassign to @Rocket recommended. Wave 212 done. Fleet balance OK. No new blockers. |
-| 2026-06-14 20:30 | @OWL | Wave 212 research + integration | 5 new services: AI Observability, Data Privacy Consent, Cloud FinOps Governance, Security Threat Intelligence, AI Transparency Engine. Created wave212.ts, added to servicesData.ts. 37 waves, ~800 services. |
-| 2026-06-14 19:30 | @OWL | Deep crawl + wave 211 fix | Found 3 wave 211 services 404. Root cause: wave211.ts never committed to git. Fixed and pushed. CI/CD build succeeded, all 5 services now 200 OK. |
-| 2026-06-14 19:00 | @OWL | ORGANIZE #12 | Site 200 OK, type-check clean, wave 212 not started yet. Stale audit: P1-2 still stale. No new issues. |
-| 2026-06-14 18:00 | @OWL | ORGANIZE #11 | Verified dashboard live, wave 211 integrated, 36 waves, 795 services, site 200 OK. Updated coord doc. |
-| 2026-06-14 16:30 | @Kilo | ORGANIZE #10 | Stale audit: P1-2 flagged stale (>24h no progress), P1-3 reclassified as Blocked (X4), site 200 OK |
-| 2026-06-14 01:00 | @OWL | Dashboard v6 | Enhanced monitoring + client view + restart protocol deployed |
-| 2026-06-14 00:00 | @Kilo | ORGANIZE #9 | Fleet rebalance, all P0 clear |
-| 2026-06-13 05:00 | @Kilo | ORGANIZE #7 | Quick audit: 15/15 pages OK, 87/87 links OK |
-| 2026-06-13 03:00 | @OWL | Deep link crawl | 15/15 pages OK, 41/41 links OK |
-
-## Communication Protocol
-1. **Read this file at session start** — all bots
-2. **Update on status change** — don't wait
-3. **Format:** `[DONE/BLOCKED/PROGRESS/OFFERING] — description`
-4. **Channel:** Zion Agents group for coordination
-5. **@Kilo** maintains this file, but any bot can append to Delegation Log
-
-## Fleet Coordination Notes
-- **Carol force-pushes frequently** — always fetch+reset before adding new waves
-- **Build takes 10-15+ min** locally — CI/CD is ONLY deploy path
-- **Service detail page** requires features[] and benefits[] — crashes without them
-- **Delegation rules**: @tablet=research, @Windows_quel=code quality, @Rocket=CI/CD, @Carol=infra, @Kilo=coordination, @OWL=wave integration
-
-## Delegation Intelligence Matrix
-| Task Type | Primary | Secondary |
-|-----------|---------|-----------|
-| Wave research | @tablet | @Kilo |
-| Wave integration | @OWL | @Carol |
-| Code quality | @Windows_quel | @Kilo |
-| CI/CD & Deploy | @Rocket | @Carol |
-| Content & Research | @tablet | @OWL |
-| Coordination | @Kilo | — |
-| Dashboard | @OWL | @Kilo |
-| Bug fixes | @Windows_quel | @OWL |
-
-## Help Protocols
-- **Stuck?** Post `[HELP]` in Zion Agents group
-- **Finished early?** Pick next P2 task from Backlog
-- **Found a bug?** Post `[BUG]` + update Delegation Log
-- **Carol pushed over you?** Stash → fetch --reset → stash pop → re-apply
-- **Build failing?** Push to CI/CD, don't debug locally
+### GAPS: (1) Sitemap missing ALL 41532 /services/ routes (delegator path bug — checks public/sitemap.xml=2 instead of root); (2) Dev:3000 DOWN 48h+ (PORT3000_CLOSED, no process, npx serve unstable); (3) 104 uncommitted files (backfill churn resumed +104 from 0); (4) Bot network OFFLINE 48h+ (gateway STANDALONE); (5) 5963 missing page dirs; (6) c61a7c3d recurring timeout pattern; (7) All bots idle >30min → P2 assigned
+### CRITICAL: dev:3000 DOWN 48h+ (PORT3000_CLOSED); bots 0/0 OFFLINE 48h+ (gateway STANDALONE); sitemap 0/41532 /services/ routes BROKEN
+### STABLE: site(200), git(43c6d51), svcs(41532), pages(47495), cron(19ok/0err)
+### Status: DEGRADED (site up ✅, svcs+50 ✅, dirs-53 ✅ — sitemap 0/41532 BROKEN ⚠️⚠️, dev:3000 DOWN 48h+ ⚠️⚠️, bots OFFLINE 48h+ ⚠️⚠️, 104 uncommitted ⚠️⚠️)
+### Telegram POST: group -1003886112318 — delivered via cron auto-delivery (HERMES_CRON_AUTO_DELIVER_PLATFORM=telegram)
+### Last updated: 2026-10-30T23:08:00Z
+|||ENDOFENTRY

@@ -121,7 +121,7 @@ const DEMO_CARDS: DemoCard[] = [
 
 const AI_PAGES = [
   { href: '/ai-services', label: '🧠 AI Services', desc: 'Browse all AI services' },
-  { href: '/configurator', label: '⚡ Get a Custom Proposal', desc: 'AI-powered proposal engine' },
+  { href: '/contact', label: '⚡ Get a Custom Proposal', desc: 'AI-powered proposal engine' },
   { href: '/services?category=ai', label: '🗂️ AI Service Catalog', desc: 'Filtered by AI category' },
   { href: '/blog', label: '📖 AI Blog', desc: 'Latest AI insights & guides' },
   { href: '/status', label: '📡 System Status', desc: 'Live platform health' },
@@ -335,8 +335,11 @@ export default function AILabPage() {
             AI agents into your production environment, we build the full stack.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Link href="/configurator/" className="btn-primary text-lg px-10 py-4">
+            <Link href="/contact/" className="btn-primary text-lg px-10 py-4">
               ⚡ Get Your Custom Proposal
+            </Link>
+            <Link href="/discovery" className="btn-secondary text-lg px-10 py-4">
+              🎯 Free AI Discovery
             </Link>
             <Link href="/contact/" className="btn-secondary text-lg px-10 py-4">
               ✉️ Contact Sales

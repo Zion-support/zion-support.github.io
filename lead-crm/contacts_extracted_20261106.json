@@ -1,0 +1,146 @@
+{
+  "updated_at": "2026-11-06T01:56:55.175658+00:00",
+  "contacts": [
+    {
+      "name": "CI&T",
+      "email": "chico@ciandt.com",
+      "roles": [
+        "CTO",
+        "technical contact"
+      ],
+      "source": "web research",
+      "tags": [
+        "brazil",
+        "it-services",
+        "ai-automation"
+      ],
+      "status": "contacted_2026-11-06"
+    },
+    {
+      "name": "BRQ",
+      "email": "sales@brq.com.br",
+      "roles": [
+        "sales",
+        "business development"
+      ],
+      "source": "research",
+      "tags": [
+        "brazil",
+        "it-services",
+        "cloud",
+        "software-engineering"
+      ],
+      "status": "contacted_2026-11-06"
+    },
+    {
+      "name": "Sonda",
+      "email": "contato@sonda.com.br",
+      "roles": [
+        "general contact"
+      ],
+      "source": "web research",
+      "tags": [
+        "brazil",
+        "infrastructure",
+        "applications"
+      ],
+      "status": "contacted_2026-11-06"
+    },
+    {
+      "name": "Walar IT",
+      "email": "contato@walar.com.br",
+      "roles": [
+        "general contact"
+      ],
+      "source": "web research",
+      "tags": [
+        "brazil",
+        "field-services",
+        "it-support"
+      ],
+      "status": "contacted_2026-11-06"
+    },
+    {
+      "name": "Fancold Service",
+      "email": "commercial@fancold.com.br",
+      "roles": [
+        "commercial"
+      ],
+      "source": "web research",
+      "tags": [
+        "brazil",
+        "facilities",
+        "hvac-maintenance"
+      ],
+      "status": "contacted_2026-11-06"
+    },
+    {
+      "name": "FB Bombas",
+      "email": "comercial@fbbombas.com.br",
+      "roles": [
+        "commercial"
+      ],
+      "source": "web research",
+      "tags": [
+        "brazil",
+        "pumps-spares-support"
+      ],
+      "status": "contacted_2026-11-06"
+    },
+    {
+      "name": "Fibrasca",
+      "email": "sdm@ziontechgroup.com",
+      "roles": [
+        "sales development"
+      ],
+      "source": "inbound triage",
+      "tags": [
+        "brazil",
+        "telecom",
+        "it-support",
+        "ai-automation"
+      ],
+      "status": "responded_2026-11-06"
+    },
+    {
+      "name": "Martiplast",
+      "email": "sdm@ziontechgroup.com",
+      "roles": [
+        "sales development"
+      ],
+      "source": "inbound triage",
+      "tags": [
+        "brazil",
+        "building-materials",
+        "it-support",
+        "ai-automation"
+      ],
+      "status": "responded_2026-11-06"
+    },
+    {
+      "name": "Zion Tech Group / Ouvidor Oficial",
+      "email": "commercial@ziontechgroup.com",
+      "roles": [
+        "commercial department"
+      ],
+      "source": "internal",
+      "tags": [
+        "commercial"
+      ],
+      "status": "handled_2026-11-06"
+    },
+    {
+      "name": "Fernanda Visintin Alcatrao",
+      "email": "fernanda@ziontechgroup.com",
+      "role": "White-label AI & field services partnership - KSK IT x Zion",
+      "source": "fernanda@ziontechgroup.com 02:01",
+      "tags": [
+        "brazil",
+        "white-label",
+        "field-services",
+        "partnership"
+      ],
+      "status": "lead_received_2026-11-06"
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+name: AI Autonomous Idea Guarded Cycle
+
+permissions:
+  contents: write
+
+"on":
+  workflow_dispatch:
+    inputs:
+      auto_commit:
+        description: 'Commit and push generated guarded-cycle report'
+        required: false
+        default: true
+        type: boolean
+  schedule:
+    - cron: '35 */6 * * *'
+
+concurrency:
+  group: ai-autonomous-idea-guarded-cycle
+  cancel-in-progress: false
+
+env:
+  NODE_OPTIONS: '--max-old-space-size=8192'
+
+jobs:
+  run-guarded-cycle:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    env:
+      NEXT_TELEMETRY_DISABLED: "1"
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          token: ${{ github.token }}
+          ref: main
+
+      - name: Setup Node.js
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
+        with:
+          node-version-file: '.nvmrc'
+          cache: npm
+          cache-dependency-path: package-lock.json
+
+      - name: Install dependencies
+        run: npm ci --prefer-offline --no-audit --fund=false
+
+      - name: Record the existing guarded-cycle pause
+        run: |
+          node -e "const fs=require('fs');fs.mkdirSync('automation/reports',{recursive:true});fs.writeFileSync('automation/reports/autonomous-idea-guarded-cycle-latest.json',JSON.stringify({status:'automation_paused_post_P0',mode:'paused',note:'The content generator remains deliberately paused; no application content generated.',executedAt:new Date().toISOString()},null,2))"
+
+      - name: Check for application source changes
+        id: source_changes
+        run: node scripts/automation/content-change-gate.cjs automation/validate-autonomous-content-dedup.cjs
+
+      - name: Dedup and quality gates
+        if: steps.source_changes.outputs.changed == 'true'
+        run: |
+          set -euo pipefail
+          node automation/validate-autonomous-content-dedup.cjs
+          npm run lint:check
+          npm run type-check
+          npm run test:ci
+          npm run rsc:guard
+          npm run build
+
+      - name: Persist the observed guarded-cycle state
+        if: ${{ github.event_name == 'schedule' || github.event.inputs.auto_commit != 'false' }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: node scripts/automation/persist-observation.cjs automation/reports/autonomous-idea-guarded-cycle-latest.json
+
+      - name: Upload guarded-cycle state
+        if: always()
+        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
+        with:
+          name: guarded-cycle-state-${{ github.run_id }}
+          path: |
+            automation/reports/autonomous-idea-guarded-cycle-latest.json
+            automation/reports/content-change-gate-*.json
+          if-no-files-found: error

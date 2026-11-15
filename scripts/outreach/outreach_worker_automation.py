@@ -1,5 +1,6 @@
 import sys, base64, json, time, os, re
 from pathlib import Path
+from typing import Optional
 import json as _json
 import time as _time
 from datetime import datetime, timezone
@@ -7,6 +8,8 @@ from email.utils import parsedate_to_datetime
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 PROJECT_ROOT = SCRIPT_DIR.parent.parent
+sys.path.insert(0, str(PROJECT_ROOT))
+sys.path.insert(0, str(SCRIPT_DIR))
 _google_scripts = PROJECT_ROOT / '.hermes' / 'skills' / 'productivity' / 'google-workspace' / 'scripts'
 if _google_scripts.exists():
     sys.path.insert(0, str(_google_scripts))
@@ -71,11 +74,14 @@ FORBIDDEN_ADDR_PREFIXES = (
 FORBIDDEN_DOMAIN_SUBSTRINGS = (
     'servi.co','servi.io','servi.ai','manag.co','manag.io','manag.ai','manag.br','manag.com',
     'legalys.com.pa','start.co','start.com','github.com','hcl.com','zendesk.com','calendly.com',
-    'datadog','mercadobitcoin','suzano.com.br',
+    'datadog','mercadobitcoin','suzano.com.br','airbnb.com','booking.com','vrbo.com','expedia.com',
 )
 MAX_AGE_DAYS = 180
 DEDUP_COOLDOWN_SECONDS = 24 * 3600  # 24 hours
 SEND_REQUIRES_ALIVE_THREAD = True
+CONTINUOUS_IMPROVEMENT_FILE = BASE_DIR / 'outreach_monitor' / 'processed' / 'continuous_improvement_metrics.jsonl'
+MAX_DISCOVERY_QUERIES = 12
+HIGH_FREQUENCY_MIN_INTERVAL_SECONDS = 30
 LLM_TAILOR_ENABLED = bool(
     (os.getenv('ZION_LLM_API_ENDPOINT') and os.getenv('ZION_LLM_API_KEY') and os.getenv('ZION_LLM_MODEL')) or
     os.getenv('OPENROUTER_API_KEY') or
@@ -108,8 +114,30 @@ try:
         if LLM_API_ENDPOINT and LLM_API_KEY and LLM_MODEL:
             LLM_TAILOR_ENABLED = True
 except Exception:
-    pass
-LLM_FALLBACK_MODELS = [m.strip() for m in os.getenv('ZION_LLM_FALLBACK_MODELS', '').split(',') if m.strip()]
+    LLM_FALLBACK_MODELS = [m.strip() for m in os.getenv('ZION_LLM_FALLBACK_MODELS', '').split(',') if m.strip()]
+    # Record partial LLM configuration for monitoring/debugging.
+    try:
+        _partial_llm_env = sorted({k for k in os.environ if k in {
+            'ZION_LLM_API_ENDPOINT','ZION_LLM_API_KEY','ZION_LLM_MODEL',
+            'OPENROUTER_API_KEY','OPENROUTER_MODEL','GROQ_API_KEY','GROQ_MODEL',
+            'GEMINI_API_KEY','GEMINI_MODEL','LLM_API_ENDPOINT','LLM_API_KEY','LLM_MODEL'}})
+        if _partial_llm_env and not LLM_TAILOR_ENABLED:
+            _ci_entry = {
+                'ts': int(time.time()),
+                'event': 'partial_llm_env_detected',
+                'env_vars': _partial_llm_env,
+                'llm_tailor_enabled': False,
+                'endpoint': bool(LLM_API_ENDPOINT),
+                'key': bool(LLM_API_KEY),
+                'model': bool(LLM_MODEL),
+                'detail': 'LLM tailoring blocked because not all required values are configured.'
+            }
+            CONTINUOUS_IMPROVEMENT_FILE.parent.mkdir(parents=True, exist_ok=True)
+            with CONTINUOUS_IMPROVEMENT_FILE.open('a', encoding='utf-8') as _f:
+                _f.write(json.dumps(_ci_entry, ensure_ascii=False) + '\n')
+    except Exception:
+        pass
+
 
 def load_state():
     if STATE_FILE.exists():
@@ -140,7 +168,7 @@ def is_bouncing_domain(addr: str) -> bool:
     if any(addr.endswith(d) for d in ('.servi.io','.servi.ai','.servi.com','.servi.co','.manag.co','.manag.io','.manag.ai','.manag.br','.manag.com','legalys.com.pa','start.co','start.com')):
         return True
     local = addr.split('@', 1)[-1]
-    for bad in ('servi','manag','legalys.com.pa','start.co','start.com','github.com','hcl.com','zendesk.com','calendly.com','datadog','mercadobitcoin','suzano.com.br'):
+    for bad in ('servi','manag','legalys.com.pa','start.co','start.com','github.com','hcl.com','zendesk.com','calendly.com','datadog','mercadobitcoin','suzano.com.br','airbnb.com','booking.com','vrbo.com','expedia.com'):
         if bad in local:
             return True
     return False
@@ -535,21 +563,46 @@ def _call_nous_hermes(thread_text: str, contact_name: str, company_name: str, la
         import os as _os
         url = ''
         token = ''
-        model = _os.environ.get('HERMES_LLM_MODEL') or _os.environ.get('ZION_LLM_MODEL') or 'stepfun/step-3.7-flash:free'
-        try:
-            _url, _token = _url_and_token_from_auth()
-            url = url or _url
-            token = token or _token
-        except Exception:
-            pass
+        model = ''
+        provider = ''
+        # 1) Explicit Zion LLM config
+        if _os.environ.get('ZION_LLM_API_ENDPOINT') and _os.environ.get('ZION_LLM_API_KEY') and _os.environ.get('ZION_LLM_MODEL'):
+            url = _os.environ['ZION_LLM_API_ENDPOINT'].rstrip('/')
+            token = _os.environ['ZION_LLM_API_KEY']
+            model = _os.environ['ZION_LLM_MODEL']
+            provider = 'zion'
+        # 2) OpenRouter
+        elif _os.environ.get('OPENROUTER_API_KEY') and (_os.environ.get('OPENROUTER_MODEL') or _os.environ.get('ZION_LLM_MODEL')):
+            token = _os.environ['OPENROUTER_API_KEY']
+            url = 'https://openrouter.ai/api/v1'
+            model = _os.environ.get('OPENROUTER_MODEL') or _os.environ.get('ZION_LLM_MODEL')
+            provider = 'openrouter'
+        # 3) Groq
+        elif _os.environ.get('GROQ_API_KEY') and (_os.environ.get('GROQ_MODEL') or _os.environ.get('ZION_LLM_MODEL')):
+            token = _os.environ['GROQ_API_KEY']
+            url = 'https://api.groq.com/openai/v1'
+            model = _os.environ.get('GROQ_MODEL') or _os.environ.get('ZION_LLM_MODEL')
+            provider = 'groq'
+        # 4) Hermes fallback auth
+        if not url or not token:
+            try:
+                _url, _token = _url_and_token_from_auth()
+                url = url or _url
+                token = token or _token
+                provider = provider or 'hermes-auth'
+            except Exception:
+                pass
+        # 5) Legacy Nous defaults
         if not url:
             url = _os.environ.get('NOUS_BASE_URL', 'https://inference-api.nousresearch.com/v1').rstrip('/')
         if not token:
             token = _os.environ.get('NOUS_TOKEN') or _os.environ.get('HERMES_LLM_TOKEN') or ''
+        if not model:
+            model = _os.environ.get('HERMES_LLM_MODEL') or _os.environ.get('ZION_LLM_MODEL') or 'stepfun/step-3.7-flash:free'
         if not token or not url:
             return ''
         chat_url = url.rstrip('/') + '/chat/completions'
-        print('NOUS_CALL', chat_url, 'model=', model, 'token_prefix=', token[:8], flush=True)
+        print(f'LLM_ACTIVATED provider={provider} model={model} endpoint={chat_url}', flush=True)
         trimmed = (thread_text or '').strip()[:2400]
         prompt = (
             f"You are the CEO of Zion Tech Group writing in {language} to {contact_name} at {company_name}.\n\n"
@@ -559,6 +612,7 @@ def _call_nous_hermes(thread_text: str, contact_name: str, company_name: str, la
             "- Start with a warm thanks for the past collaboration; if possible, name the project area.\n"
             "- Propose 2 concrete, mutually beneficial next business ideas for both companies.\n"
             "- Advance the conversation toward a meeting/call next week, and include Calendly: https://calendly.com/kleber-ziontechgroup\n"
+            "- Also include a direct meeting link: https://meet.google.com/ouu-khao-kuy\n"
             "- Share our website: https://ziontechgroup.com, invite them to explore our new AI services, and mention that we offer many free services/tools there.\n"
             "- Keep it friendly, professional, and concise.\n"
             "- End with signature: Kleber Garcia Alcatrão | CEO, Zion Tech Group and https://ziontechgroup.com\n\n"
@@ -588,91 +642,11 @@ def _call_nous_hermes(thread_text: str, contact_name: str, company_name: str, la
         if not isinstance(content, str) or not content.strip():
             print('NOUS_EMPTY_CONTENT', flush=True)
             return ''
-        def _call_nous_hermes(thread_text: str, contact_name: str, company_name: str, language: str) -> str:
-    endpoint = LLM_API_ENDPOINT or os.getenv('OPENROUTER_API_ENDPOINT') or os.getenv('GROQ_API_ENDPOINT') or os.getenv('GEMINI_API_ENDPOINT')
-    api_key = LLM_API_KEY or os.getenv('OPENROUTER_API_KEY') or os.getenv('GROQ_API_KEY') or os.getenv('GEMINI_API_KEY')
-    model = os.getenv('LLM_MODEL') or os.getenv('ZION_LLM_MODEL') or os.getenv('OPENROUTER_MODEL') or os.getenv('GROQ_MODEL') or os.getenv('GEMINI_MODEL') or 'openai/gpt-4o-mini'
-    if not endpoint or not api_key:
-        # Hermes/Nous fallback if configured.
-        try:
-            nous_reply = _call_nous_hermes(thread_text, contact_name, company_name, language)
-            if nous_reply:
-                return nous_reply
-        except Exception as e:
-            print('LLM_NOUS_ERR', repr(e), flush=True)
+        return content.strip()
+    except Exception:
         return ''
-    trimmed = (thread_text or '').strip()
-    trimmed = trimmed[:2400]
-    prompt = (
-        f"You are the CEO of Zion Tech Group writing in {language} to {contact_name} at {company_name}.\n\n"
-        "Context from recent thread:\n"
-        f"{trimmed}\n\n"
-        "Write ONE complete email. Requirements:\n"
-        "- Start with a warm thanks for the past collaboration; if possible, name the project area.\n"
-        "- Propose 2 concrete, mutually beneficial next business ideas for both companies.\n"
-        "- Advance the conversation toward a meeting/call next week, and include Calendly: https://calendly.com/kleber-ziontechgroup\n"
-        "- Share our website: https://ziontechgroup.com, invite them to explore our new AI services, and mention that we offer many free services/tools there.\n"
-        "- Keep it friendly, professional, and concise.\n"
-        "- End with signature: Kleber Garcia Alcatrão | CEO, Zion Tech Group and https://ziontechgroup.com\n\n"
-        "Attention: do not invent false claims. Use only facts plausibly supported by the thread.\n"
-    )
-    headers = {
-        'Authorization': f"Bearer {api_key}",
-        'Content-Type': 'application/json',
-    }
-    body = json.dumps({
-        'model': model,
-        'messages': [
-            {'role': 'system', 'content': f'Write one complete email in {language}. No signature block. Friendly but professional CEO tone.'},
-            {'role': 'user', 'content': prompt},
-        ],
-        'temperature': 0.35,
-        'max_tokens': 480,
-    }).encode('utf-8')
-    last_err = None
-    models = [model] + [m.strip() for m in (os.getenv('ZION_LLM_FALLBACK_MODELS') or '').split(',') if m.strip()]
-    required = [
-        'calendly.com/kleber-ziontechgroup',
-        'ziontechgroup.com',
-        'free',
-        'thank',
-    ]
-    positive_signals = [
-        'opportunity',
-        'pleasure',
-        'collaboration',
-        'partnership',
-        'project',
-        'worked with',
-        'worked together',
-    ]
-    for m in models:
-        for attempt in range(3):
-            try:
-                import urllib.request
-                payload = json.loads(body.decode('utf-8'))
-                payload['model'] = m
-                req = urllib.request.Request(endpoint, data=json.dumps(payload).encode('utf-8'), headers=headers, method='POST')
-                with urllib.request.urlopen(req, timeout=35) as resp:
-                    data = json.loads(resp.read().decode('utf-8'))
-                reply = ((data.get('choices') or [{}])[0].get('message') or {}).get('content')
-                if not isinstance(reply, str) or not reply.strip():
-                    continue
-                reply = reply.strip()
-                lower = reply.lower()
-                if not all(r in lower for r in required):
-                    print('LLM_MISSING_REQUIRED_RETRY', m, flush=True)
-                    continue
-                if not any(s in lower for s in positive_signals):
-                    print('LLM_MISSING_POSITIVE_SIGNAL_RETRY', m, flush=True)
-                    continue
-                return reply
-            except Exception as e:
-                last_err = repr(e)
-                print('LLM_ERR', m, last_err, f'attempt={attempt+1}', flush=True)
-                time.sleep(1.8 if attempt else 0.25)
-    print('LLM_FINAL_ERR', last_err)
-    return ''
+
+llm_tailor_reply = _call_nous_hermes
 
 _PROJECT_KEYWORDS = {
     'aiops': ['monitor', 'observability', 'incident', 'opsgenie', 'pagerduty', 'metric', 'trace', 'log', 'alert', 'runbook', 'oncall', 'reliability', 'mttr', 'change'],
@@ -853,6 +827,8 @@ Today Zion Tech Group is expanding into AI/IT services, and I see a few fast, mu
 
 {p['cta'] if isinstance(p, dict) else 'If this aligns, I’m happy to advance by email or a quick call.'}
 https://calendly.com/kleber-ziontechgroup
+
+If a call is easier, here’s a direct meeting link: https://meet.google.com/ouu-khao-kuy
 
 You can also explore our new AI services and free tools here:
 https://ziontechgroup.com
@@ -1087,8 +1063,39 @@ def _llm_readiness_report() -> dict:
     return report
 
 
+def _resolve_hot_label_id():
+    try:
+        labels = _timed_gmail_call(service.users().labels().list(userId='me')) if service is not None else None
+        if labels:
+            for lab in labels.get('labels', []) or []:
+                if 'hot-follow-up' in ((lab.get('name') or '') + str(lab.get('id') or '')).lower():
+                    return lab.get('id')
+                    break
+    except Exception:
+        pass
+    return None
+
+def _is_safe_hot_thread(msg_id: str, thread_id: Optional[str] = None) -> dict:
+    try:
+        full = _timed_gmail_call(service.users().messages().get(userId='me', id=msg_id, format='full'))
+    except Exception as e:
+        return {'safe': False, 'reason': f'access_error:{e}'}
+    t = full.get('threadId') or thread_id or msg_id
+    headers = {x['name']: x['value'] for x in full.get('payload', {}).get('headers', [])}
+    from_addr = (next((x['value'] for x in full.get('payload', {}).get('headers', []) if x['name'] == 'From'), '')).lower()
+    subject = headers.get('Subject', '')
+    if 'kleber@ziontechgroup.com' in from_addr:
+        return {'safe': False, 'reason': 'existing_ceo_outbound'}
+    try:
+        tmsgs = _timed_gmail_call(service.users().threads().get(userId='me', id=t, format='metadata', metadataHeaders=['From'])) or {}
+        tmsgs = tmsgs.get('messages', []) or []
+        if any('kleber@ziontechgroup.com' in ({x['name']: x['value'] for x in m.get('payload', {}).get('headers', [])}).get('From', '').lower() for m in tmsgs):
+            return {'safe': False, 'reason': 'existing_ceo_outbound_thread'}
+    except Exception:
+        pass
+    return {'safe': True, 'thread_id': t, 'subject': subject, 'from': from_addr}
+
 def run_high_frequency_outreach():
-    # If LLM creds exist, enable tailoring; otherwise rely on personalized defaults.
     _llm_readiness_report()
     if service is None:
         print('AUTH_FAIL', GMAIL_AUTH_ERROR)
@@ -1097,16 +1104,21 @@ def run_high_frequency_outreach():
     print('TRACE_START', flush=True)
     print('LLM_TAILOR_ENABLED=', bool(LLM_TAILOR_ENABLED), 'ENDPOINT=', bool(LLM_API_ENDPOINT), flush=True)
     discovery_queries = [
-        'label:"!!!hot-follow-up"',
         'in:anywhere label:"!!!hot-follow-up"',
-        '!category:promotions !in:spam !in:trash "partnership" OR "collaboration" OR "proposal"',
-        '!category:promotions !in:spam !in:trash "AI services" OR "AI support" OR "project"',
-        '!category:promotions !in:spam !in:trash "interested" OR "next steps" OR "opportunity"',
-        '!category:promotions !in:spam !in:trash "integration" OR "workflow" OR "ROI"',
-        '"follow-up" OR "follow up" OR "next steps" newer_than:7d',
-        '"partnership" OR "collaboration" newer_than:14d',
-        'in:anywhere "partnership" OR "collaboration" OR "proposal"',
+        'in:anywhere label:"!!!hot-follow-up" newer_than:30d',
+        '!category:promotions !in:spam !in:trash ("partnership" OR "collaboration" OR "proposal")',
+        '!category:promotions !in:spam !in:trash ("AI services" OR "project" OR "opportunity")',
+        '!category:promotions !in:spam !in:trash ("next steps" OR "interested" OR "integration")',
+        '"follow-up" OR "follow up" OR "next steps" newer_than:14d',
+        '"partnership" OR "collaboration" newer_than:30d',
+        'in:anywhere label:"!!!hot-followup-sent"',
     ]
+
+    hot_label_id = 'Label_946'
+    try:
+        hot_label_id = _resolve_hot_label_id() or hot_label_id
+    except Exception:
+        pass
 
     hit_ids = set()
     contacts = []
@@ -1369,7 +1381,6 @@ def _load_excluded() -> set:
     except Exception:
         return set()
 
-
 def send_ceo_reply(thread_id, to_addr, subject, body, references_message_id):
     to_key = (to_addr or '').lower()
     if to_key and to_key in _load_excluded():
@@ -1384,22 +1395,28 @@ def send_ceo_reply(thread_id, to_addr, subject, body, references_message_id):
         f"References: {msg_id_str}",
         f"In-Reply-To: {msg_id_str}",
     ]
+    crlf = "\r\n"
     try:
-        thread = _timed_gmail_call(service.users().threads().get(userId="me", id=thread_id, format="metadata", metadataHeaders=["To", "Cc"]))
-        messages = thread.get("messages", []) or []
-        all_cc = []
-        for m in messages:
-            h = {x["name"]: x["value"] for x in m.get("payload", {}).get("headers", [])}
-            c = h.get("Cc") or ""
-            if c and c not in all_cc:
-                all_cc.append(c)
-        cc_list = [x for x in all_cc if x and x.lower() != to_addr.lower() and x.lower() != "kleber@ziontechgroup.com"]
+        thread = _timed_gmail_call(service.users().threads().get(userId="me", id=thread_id, format="metadata", metadataHeaders=["From", "Cc"]))
+        msgs = thread.get("messages", []) or []
+        if msgs:
+            newest = msgs[-1]
+            hdr_map = {h["name"]: h["value"] for h in newest.get("payload", {}).get("headers", [])}
+            if "kleber@ziontechgroup.com" in hdr_map.get("From", "").lower():
+                return {"skipped": True, "reason": "thread_last_message_already_ceo", "thread_id": thread_id}
+        cc_added = []
+        for m in msgs:
+            h = {hdr["name"]: hdr["value"] for hdr in m.get("payload", {}).get("headers", [])}
+            cc = h.get("Cc") or ""
+            if cc and cc not in cc_added:
+                cc_added.append(cc)
+        cc_list = [x for x in cc_added if x and x.lower() != (to_addr or '').lower() and x.lower() != "kleber@ziontechgroup.com"]
         if cc_list:
             raw_headers.append("Cc: " + ", ".join(cc_list[:10]))
     except Exception:
         pass
-    raw = base64.urlsafe_b64encode(("\r\n".join(raw_headers) + "\r\n\r\n" + body).encode("utf-8")).decode("utf-8")
-    return _timed_gmail_call(service.users().messages().send(userId="me", body={"raw": raw, "threadId": thread_id})).execute()
+    raw = base64.urlsafe_b64encode((crlf.join(raw_headers) + crlf + crlf + body).encode("utf-8")).decode("utf-8")
+    return _timed_gmail_call(service.users().messages().send(userId="me", body={"raw": raw, "threadId": thread_id}))
 
 
 if __name__ == '__main__':

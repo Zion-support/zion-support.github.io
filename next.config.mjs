@@ -3,7 +3,11 @@ import path from 'node:path';
 
 const nextConfig = {
   output: 'export',
-  outputFileTracingRoot: process.cwd(),
+  experimental: {
+    // Reduce webpack memory footprint (fixes OOM on GH-hosted runners, 125k+ file tree)
+    webpackMemoryOptimizations: true,
+  },
+  outputFileTracingRoot: path.join(process.cwd(), 'app'),
   basePath: '',
   trailingSlash: true,
   compress: true,
@@ -16,7 +20,8 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
-  webpack: (config) => {
+  // Static export via webpack
+  webpack: (config, { isServer }) => {
     const appDir = path.join(process.cwd(), 'app');
     config.resolve.alias = {
       ...(config.resolve.alias || {}),
@@ -25,6 +30,19 @@ const nextConfig = {
       'ndata': path.join(appDir, 'data'),
       'nlib': path.join(appDir, 'lib'),
     };
+    // Reduce memory usage during build
+    if (!isServer) {
+      config.optimization = {
+        ...config.optimization,
+        splitChunks: {
+          chunks: 'all',
+          minSize: 20000,
+          maxSize: 100000,
+        },
+      };
+    }
+    // Limit parallelism in webpack
+    config.parallelism = 1;
     return config;
   },
   generateBuildId: async () => 'zion-tech-group-v1',
@@ -60,8 +78,6 @@ const nextConfig = {
       { source: '/ai-financial-services/', destination: '/ai-fraud-detection/', permanent: true },
       { source: '/services/ai-chatbot-builder-pro', destination: '/services/ai-chatbot-builder', permanent: true },
       { source: '/services/ai-chatbot-builder-pro/', destination: '/services/ai-chatbot-builder/', permanent: true },
-      { source: '/services/ai-customer-support-pro', destination: '/services', permanent: true },
-      { source: '/services/ai-customer-support-pro/', destination: '/services/', permanent: true },
       { source: '/services/ai-fraud-detection', destination: '/ai-fraud-detection', permanent: true },
       { source: '/services/ai-fraud-detection/', destination: '/ai-fraud-detection/', permanent: true },
       { source: '/services/ai-automation', destination: '/services/?category=ai', permanent: true },
@@ -72,6 +88,16 @@ const nextConfig = {
       { source: '/services/ai-network-performance-and-wan-optimization-for-it-in-2026/', destination: '/services/ai-first-network-performance-and-wan-optimization-for-it-in-2026/', permanent: true },
       { source: '/services/ai-endpoint-management-and-zero-trust-access-for-it-in-2026', destination: '/services/ai-first-endpoint-management-and-zero-trust-access-for-it-in-2026', permanent: true },
       { source: '/services/ai-endpoint-management-and-zero-trust-access-for-it-in-2026/', destination: '/services/ai-first-endpoint-management-and-zero-trust-access-for-it-in-2026/', permanent: true },
+      { source: '/services/ai-development-acceleration', destination: '/services/', permanent: true },
+      { source: '/services/ai-development-acceleration/', destination: '/services/', permanent: true },
+      { source: '/services/ai-help-desk-automation', destination: '/services/', permanent: true },
+      { source: '/services/ai-help-desk-automation/', destination: '/services/', permanent: true },
+      { source: '/services/devops-automation-consulting', destination: '/services/', permanent: true },
+      { source: '/services/devops-automation-consulting/', destination: '/services/', permanent: true },
+      { source: '/services/fleet-management-gps-tracking', destination: '/services/', permanent: true },
+      { source: '/services/fleet-management-gps-tracking/', destination: '/services/', permanent: true },
+      { source: '/services/lead-generation-outreach-automation', destination: '/services/', permanent: true },
+      { source: '/services/lead-generation-outreach-automation/', destination: '/services/', permanent: true },
     ];
   },
 };

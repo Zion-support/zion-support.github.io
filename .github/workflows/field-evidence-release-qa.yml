@@ -1,0 +1,21 @@
+name: Field Evidence Release Read-only QA
+on:
+  workflow_run:
+    workflows: [Simple Static Deploy]
+    types: [completed]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Read-only five-language guide publication checks
+        run: node scripts/test-field-evidence-release.cjs out --live

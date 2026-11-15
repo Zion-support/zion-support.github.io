@@ -1,0 +1,32 @@
+name: Composio Health & Credentials Sync
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '*/30 * * * *'
+  push:
+    paths:
+      - '.github/workflows/composio-health.yml'
+      - 'scripts/automation/check-composio-health.py'
+    branches: [main]
+permissions:
+  contents: read
+concurrency:
+  group: composio-health
+  cancel-in-progress: false
+jobs:
+  health-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+      - name: Verify project authentication and inventory connection states
+        env:
+          COMPOSIO_API_KEY: ${{ secrets.COMPOSIO_API_KEY }}
+        run: python3 scripts/automation/check-composio-health.py
+      - name: Upload credential-free health inventory
+        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
+        with:
+          name: composio-health-${{ github.run_id }}
+          path: automation/reports/composio-health-latest.json
+          if-no-files-found: error

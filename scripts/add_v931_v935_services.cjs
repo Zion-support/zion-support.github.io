@@ -5,7 +5,7 @@ const dataPath = path.join(__dirname, '..', 'app', 'data', 'servicesData.json');
 const data = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
 
 const ci = {
-  mobile: '+1 302 464 0950',
+  mobile: '+55 11 97614-0076',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709'
 };

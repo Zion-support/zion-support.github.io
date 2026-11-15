@@ -8,7 +8,7 @@ concurrency:
   group: production-health
   cancel-in-progress: true
 
-on:
+"on":
   schedule:
     - cron: '0 */6 * * *'
   workflow_dispatch:
@@ -23,7 +23,22 @@ jobs:
         id: health
         run: |
           SITE="https://ziontechgroup.com"
-          PAGES=("/" "/solutions/" "/services/" "/about/" "/contact/" "/blog/" "/pricing/" "/industries/" "/case-studies/" "/products/" "/ai-services/" "/consultation/" "/site-map")
+          PAGES=(
+            "/"
+            "/services/"
+            "/services/ai-automation/"
+            "/discovery/"
+            "/plans/"
+            "/about/"
+            "/contact/"
+            "/pricing/"
+            "/blog/"
+            "/partners/"
+            "/tools/"
+            "/ai-services/"
+            "/privacy/"
+            "/terms/"
+          )
           FAILURES=0
           REPORT=""
 

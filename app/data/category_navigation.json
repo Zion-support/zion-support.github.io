@@ -1,0 +1,82 @@
+{
+  "agritech": {
+    "total": 5,
+    "examples": [
+      "agritech-crop-disease-detection",
+      "agritech-greenhouse-automation",
+      "agritech-irrigation-optimization"
+    ]
+  },
+  "ai": {
+    "total": 1725,
+    "examples": [
+      "ai-anti-money-laundering-intelligence",
+      "ai-kyc-identity-verification",
+      "ai-credit-risk-scoring"
+    ]
+  },
+  "ai-services": {
+    "total": 12,
+    "examples": [
+      "ai-services-model-observability",
+      "ai-services-rag-as-a-service",
+      "w129-agent-orchestrator"
+    ]
+  },
+  "analytics": {
+    "total": 314,
+    "examples": [
+      "ad-hoc-analysis-ai-powered-customer-journey-mapping-5ed0881c",
+      "ad-hoc-analysis-ai-powered-inventory-optimization-61cb2747",
+      "augmented-analytics-ai-powered-capacity-planning-a6367145"
+    ]
+  },
+  "api": {
+    "total": 355,
+    "examples": [
+      "ai-powered-api-gateway-5ce281c8",
+      "api-analytics-ai-powered-predictive-analytics-suite-5f91cece",
+      "api-analytics-ai-powered-resume-screening-f95fb28f"
+    ]
+  },
+  "automation": {
+    "total": 597,
+    "examples": [
+      "agentic-workflow-orchestrator",
+      "ai-automation-ai-powered-edge-ai-platform-44da4398",
+      "ai-automation-ai-powered-security-information--event-management-0e957f47"
+    ]
+  },
+  "blockchain": {
+    "total": 64,
+    "examples": [
+      "ai-powered-blockchain-analytics-20ccea91",
+      "predictive-intelligence-engine-education-predictive-intelligence-engine-for-education",
+      "predictive-intelligence-engine-for-education-9f0de5f4"
+    ]
+  },
+  "cloud": {
+    "total": 593,
+    "examples": [
+      "ai-cdn-edge-optimizer",
+      "ai-powered-capacity-planning-0f53dd11",
+      "ai-powered-cloud-governance-2ee53d44"
+    ]
+  },
+  "construction-tech": {
+    "total": 5,
+    "examples": [
+      "construction-bim-platform",
+      "construction-project-management-ai",
+      "construction-tech-bim-management"
+    ]
+  },
+  "customer": {
+    "total": 299,
+    "examples": [
+      "community-ai-code-generation--optimization-184a02e4",
+      "community-ai-customer-churn-prediction-044415df",
+      "community-ai-financial-planning--analysis-041536d1"
+    ]
+  }
+}
