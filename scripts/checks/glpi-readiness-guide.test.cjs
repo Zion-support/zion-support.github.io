@@ -44,7 +44,8 @@ test('no automated capture, booking, payment, client data or credential transfer
 test('no unsupported official-partnership, fixed quote or SLA commitment', () => {
   assert.match(html, /não comprova credenciamento/i);
   assert.match(html, /não fornece cotação/i);
-  assert.match(html, /não.*garante implantação ou suporte 24/i);
+  assert.match(html, /O diagnóstico garante implantação ou suporte 24×7\?/);
+  assert.match(html, /Não\. Capacidade, equipe, horário, SLA, preço e datas/);
   assert.doesNotMatch(html, /aggregateRating|"@type":\s*"Offer"/);
 });
 
