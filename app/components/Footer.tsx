@@ -28,6 +28,17 @@ const FOOTER_LINKS: { title: string; links: FooterLink[] }[] = [
     ],
   },
   {
+    title: 'Apps',
+    links: [
+      { name: 'AI Field Service Manager', href: '/zion-ai-field-service-manager' },
+      { name: 'AI Help Desk', href: '/zion-ai-help-desk' },
+      { name: 'AI Incident Response', href: '/zion-ai-incident-response' },
+      { name: 'AI Resource Scheduler', href: '/zion-ai-resource-scheduler' },
+      { name: 'AI Predictive Analytics', href: '/zion-ai-predictive-analytics' },
+      { name: 'AI Vendor Manager', href: '/zion-ai-vendor-manager' },
+    ],
+  },
+  {
     title: 'Company',
     links: [
       { name: 'About Us', href: '/about' },
