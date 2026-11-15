@@ -1,0 +1,34 @@
+name: Datacenter RFQ landing validation
+
+permissions:
+  contents: read
+
+"on":
+  pull_request:
+    paths:
+      - 'public/services/datacenter-maintenance-brazil/**'
+      - 'public/services/index.html'
+      - 'public/sitemap-0.xml'
+      - 'scripts/automation/datacenter-maintenance-landing.test.cjs'
+      - '.github/workflows/datacenter-rfq-pr-validation.yml'
+
+concurrency:
+  group: datacenter-rfq-landing-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: Static RFQ and SEO contract
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout PR
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          persist-credentials: false
+      - name: Setup Node
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
+        with:
+          node-version: '22'
+      - name: Validate RFQ landing, form and sitemap without live network
+        run: node --test scripts/automation/datacenter-maintenance-landing.test.cjs
