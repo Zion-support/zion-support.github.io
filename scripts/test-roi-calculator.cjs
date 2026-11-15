@@ -2,7 +2,16 @@ const test = require("node:test");
 const assert = require("node:assert/strict");
 const fs = require("node:fs");
 const path = require("node:path");
-const { calculate } = require("../public/assets/js/roi-calculator.js");
+const vm = require("node:vm");
+const calculatorModule = { exports: {} };
+// This repo treats .js as ESM, while the browser uses a classic <script>.
+// Execute the exact shipping source in a DOM-free CommonJS-shaped VM instead.
+vm.runInNewContext(
+  fs.readFileSync(path.join(__dirname, "../public/assets/js/roi-calculator.js"), "utf8"),
+  { module: calculatorModule, document: undefined },
+  { filename: "roi-calculator.js", timeout: 3000 }
+);
+const { calculate } = calculatorModule.exports;
 const root = path.join(__dirname, "..", "public");
 
 test("calculates 52/12 monthly hours and net value with transparent costs", () => {
