@@ -240,6 +240,7 @@ ${LANGS.map((l) => `  <link rel="alternate" hreflang="${l.code}" href="${pageUrl
         <a class="btn alt" href="${hrefFor(lang, '/apps/')}">${esc(t.allApps)}</a>
         <a class="btn alt" href="${hrefFor(lang, '/apps-network-guide/')}">${esc(({en:'Explore by goal',pt:'Explorar por objetivo',es:'Explorar por objetivo',fr:'Explorer par objectif',de:'Nach Ziel entdecken'})[lang.code])}</a>
       </div>
+      <p class="note"><a href="${hrefFor(lang, '/apps-network-guide/')}">${esc({en:'Choose apps by business goal',pt:'Escolher apps por objetivo',es:'Elegir apps por objetivo',fr:'Choisir les apps selon l’objectif',de:'Apps nach Ziel auswählen'}[lang.code])} →</a></p>
       <div class="stats">
         <div class="stat"><b>${appsNetworkCatalog.length}</b><span>${esc(t.statApps)}</span></div>
         <div class="stat"><b>${totalRelated}</b><span>${esc(t.statLinks)}</span></div>
