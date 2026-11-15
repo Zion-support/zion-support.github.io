@@ -8,6 +8,11 @@ import AnimatedCounter from '@/components/AnimatedCounter';
 import ServiceBrowser from '@/components/ServiceBrowser';
 import ServiceSpotlight from '@/components/ServiceSpotlight';
 import ServiceGridWithSearch from '@/components/ServiceGridWithSearch';
+import AppsNetworkShowcase from '@/components/AppsNetworkShowcase';
+import ResultsRoiSection from '@/components/ResultsRoiSection';
+import DiscoveryBenefits from '@/components/DiscoveryBenefits';
+import MultiVendorMaintenance from '@/components/MultiVendorMaintenance';
+import ClientPortalSection from '@/components/ClientPortalSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import ContactFunnel from '@/components/ContactFunnel';
 import ServiceCounter from '@/components/ServiceCounter';
@@ -853,6 +858,9 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── Free Discovery — benefits + sourced benchmarks ── */}
+      <DiscoveryBenefits />
+
       {/* ── Service Match Quiz — Interactive AI Tool ── */}
       <ServiceMatchQuiz />
       
@@ -1408,6 +1416,18 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* ── Apps Network — link to the Zion apps ── */}
+      <AppsNetworkShowcase />
+
+      {/* ── Industry benchmarks (third-party, sourced) ── */}
+      <ResultsRoiSection />
+
+      {/* ── Multi-vendor maintenance ── */}
+      <MultiVendorMaintenance />
+
+      {/* ── Client portal ── */}
+      <ClientPortalSection />
 
       {/* ── Service Search — find any of {serviceCount}+ services ── */}
       <ServiceGridWithSearch />

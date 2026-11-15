@@ -1,5 +1,6 @@
 import { ReactNode } from 'react';
 import Link from 'next/link';
+import RelatedApps from './RelatedApps';
 
 interface Feature {
   title: string;
@@ -89,6 +90,9 @@ export default function ProductPageLayout({ data }: ProductPageLayoutProps) {
             </div>
           </div>
         )}
+
+        {/* Related apps (interlinks across the apps network) */}
+        <RelatedApps />
 
         {/* CTA */}
         <section className="cta-section text-center">
