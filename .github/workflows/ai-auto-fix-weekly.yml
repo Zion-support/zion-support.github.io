@@ -19,14 +19,9 @@ jobs:
     - name: Install dependencies
       run: npm ci
     - name: Apply non-breaking dependency fixes
-      run: |
-        # npm audit fix returns 1 when residual advisories remain, even if
-        # the non-breaking changes were successfully applied.
-        audit_fix_status=0
-        npm audit fix || audit_fix_status=$?
-        if [ "$audit_fix_status" -ne 0 ]; then
-          echo "::warning::npm audit fix exited $audit_fix_status; inspect the complete audit report."
-        fi
+      # Set the exit threshold directly; never suppress an install/registry error.
+      # Moderate/low advisories remain in the full audit report.
+      run: npm audit fix --audit-level=high
     - name: Enforce high and critical dependency audit
       run: npm audit --audit-level=high
     - name: Run actual lint check
