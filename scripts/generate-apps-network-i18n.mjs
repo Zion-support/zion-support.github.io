@@ -399,7 +399,7 @@ for (const app of appsNetworkCatalog) {
   }
 }
 for (const lang of LANGS) {
-  urls.push(`  <url><loc>${pageUrl(lang, '/apps-network/').replace(/\/$/, '')}/apps-network/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>`);
+  urls.push(`  <url><loc>${pageUrl(lang, '/apps-network/')}</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>`);
 }
 for (const lang of LANGS) {
   urls.push(`  <url><loc>${pageUrl(lang, '/apps-network-guide/')}</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>`);
