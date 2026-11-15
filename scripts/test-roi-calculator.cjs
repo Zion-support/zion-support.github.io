@@ -157,7 +157,7 @@ test("browser-only privacy contract and truthful localized app metadata", () => 
 test("comparison scenarios preserve modeled costs and horizon", () => {
   const scenarios = compareScenarios(baseline);
   assert.equal(scenarios.length, 3);
-  assert.deepEqual(scenarios.map(s => s.factor), [0.5, 1, 1.25]);
+  assert.equal(Array.from(scenarios, s => s.factor).join(","), "0.5,1,1.25");
   assert.ok(Math.abs(scenarios[0].netValue - 800) < 1e-8);
   assert.ok(Math.abs(scenarios[0].roiPercent - 44.44444444444444) < 1e-8);
   assert.ok(Math.abs(scenarios[1].netValue - 3400) < 1e-8);
