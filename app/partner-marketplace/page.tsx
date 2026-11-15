@@ -21,7 +21,7 @@ const FEATURES = [
 
 export const metadata: Metadata = {
   title: 'AI Partner Marketplace — Zion Tech Group',
-  description: 'Discover vetted partners, integrators, and AI service providers who can build on Zion's platform.',
+  description: 'Discover vetted partners, integrators, and AI service providers who can build on Zion\'s platform.',
   alternates: { canonical: `https://ziontechgroup.com/partner-marketplace/` },
 };
 
@@ -80,11 +80,11 @@ export default function Page({ searchParams }: { searchParams: { lang?: string }
                 <Link
                   key={l}
                   href={`/partner-marketplace?lang=${ l }`}
-                  className={{
+                  className={
                     (locale === l
                       ? 'bg-purple-500/20 text-purple-200'
                       : 'hover:bg-slate-800')
-                  }}
+                  }
                 >
                   {l.toUpperCase()}
                 </Link>

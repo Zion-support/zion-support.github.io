@@ -80,11 +80,11 @@ export default function Page({ searchParams }: { searchParams: { lang?: string }
                 <Link
                   key={l}
                   href={`/ai-soc?lang=${ l }`}
-                  className={{
+                  className={
                     (locale === l
                       ? 'bg-purple-500/20 text-purple-200'
                       : 'hover:bg-slate-800')
-                  }}
+                  }
                 >
                   {l.toUpperCase()}
                 </Link>
