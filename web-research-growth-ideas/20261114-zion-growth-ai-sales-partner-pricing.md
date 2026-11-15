@@ -53,8 +53,8 @@ Baseado em AWS, Ingram Micro, iboss:
 Baseado em Simon-Kucher, BVP, HGCapital, arXiv:
 - **O que:** Para produtos/produtos-chave (ex.: AI Workflow Bundles, AI Agent Marketplace), implementar:
   - Base anual previsível (plataforma fee ou assinatura)
-  + Uso/Outcome (credits por ação resolvida, ou % de resultado verificável)
-  + Flags de límites/spend cap, ganchos de desconto progressivo
+  - Uso/Outcome (credits por ação resolvida, ou % de resultado verificável)
+  - Flags de límites/spend cap, ganchos de desconto progressivo
 - **Impacto:** Captura mais valor que US$/hora, atrai clientes que buscam orçamento previsível, aumenta LTV
 - **Custo/Esforço:** Médio — precisa de tracking, métricas de resultado e infra de cobrança
 
@@ -74,7 +74,7 @@ Baseado em McKinsey: agentes que preservam contexto entre contatos:
   - Contatos, demos, propostas e fechamentos recentes
   - Comportamento do cliente (quais recursos são baixados, quais demos são solicitadas)
   - SLAs, possíveis gargalos, win/loss por mercado/pilha/features
-- **Impacto:** Reduz incertezas de、翌 month sales, direciona equipes para o que funciona
+- **Impacto:** Reduz incertezas de[next month sales, direciona equipes para o que funciona
 - **Custo/Esforço:** Baixo/Médio
 
 ### F. **Ai-Powered Service Desk (Service Desk AI)**
@@ -120,7 +120,23 @@ Arquivos criados/modificados nesta rodada:
 
 ---
 
-## 5. Próximos Passos
+## 5. Research round 3 (2026-11-14) — do mais recente
+
+Energia do momento é a adoção prática de agentes AI e a monetização no marketplace. Destaques:
+- **Agent marketplaces (2026):** AWS 15% / Microsoft 3% / Salesforce 15% / Google A2A / ServiceNow annual member fee; mercado de agentes cresce a CAGR ~64% (140M -> 1,650M em 2031).
+- **Consulting shift:** 78% de consultores britânicos citam AI como principal driver; 50% dos compradores esperam taxas subirem; os compradores querem **entrega + outcome** (sem "PowerPoint"). A fábrica de estratégia está se fechando — sobram só entrega e prova.
+- **Mid-market AI adoption:** firmas como Phos AI Labs, Tenex, Quantum Rise; fixes de $10K-$50K/mês, outcome/suscrição.
+- **Co-sell com agentes:** 47% dos ISVs querem AI no GTM; os que usam AI projetam 58% de crescimento de equipe.
+
+### Ideias concretas para implementação (não cobertas antes)
+- **Agent marketplace / ISV slot:** criar um "Zion AI Solutions" listing no marketplace local (ex.: AWS/Agentforce, TechCrunch/Startup). Diferencia Zion de concorrentes genéricos.
+- **Outcome / KPI-based packaging:** converter descrição de serviço em contrato de entrega com KPIs medíveis (redução de custos, velocidade, taxa de resolução).
+- **Co-sell com agentes:** usar AI para run-down do cliente e qualificar a stack do cliente no pitch.
+- **Trial-to-Production Gate:** adesão estruturada para transformar pilots em produção com KPI cruzado.
+
+---
+
+## 6. Próximos Passos
 
 1. Revisar os 4 arquivos acima com o time.
 2. Decidir prioridade P0/P1.
