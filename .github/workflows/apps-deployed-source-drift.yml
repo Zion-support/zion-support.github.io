@@ -17,6 +17,7 @@ name: Apps deployed-source drift guard
 
 permissions:
   contents: read
+  actions: read
   issues: write
 
 concurrency:
@@ -30,47 +31,137 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - name: Resolve release SHA
+      - name: Resolve release SHA from an executed Pages deployment
         id: release
-        shell: bash
-        env:
-          EVENT_NAME: ${{ github.event_name }}
-          DEPLOYED_SHA: ${{ github.event.workflow_run.head_sha }}
-          CURRENT_SHA: ${{ github.sha }}
-        run: |
-          set -euo pipefail
-          if [ "$EVENT_NAME" = "workflow_run" ] && [ -n "${DEPLOYED_SHA:-}" ]; then
-            echo "sha=$DEPLOYED_SHA" >> "$GITHUB_OUTPUT"
-          else
-            echo "sha=$CURRENT_SHA" >> "$GITHUB_OUTPUT"
-          fi
+        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8.0.0
+        with:
+          script: |
+            // A successful run does not prove that its deployment step ran.
+            // Scheduled/manual audits must not silently substitute current main.
+            const owner=context.repo.owner, repo=context.repo.repo;
+            const publishers=[
+              {name:'Continuous Pages Deploy',file:'gh-pages.yml',step:'Deploy to GitHub Pages'},
+              {name:'Simple Static Deploy',file:'static-deploy.yml',step:'Run actions/deploy-pages@v4'}
+            ];
+            async function verify(run,publisher) {
+              if(run.status!=='completed' || run.conclusion!=='success' || run.head_branch!=='main') return null;
+              const jobs=await github.paginate(github.rest.actions.listJobsForWorkflowRun,{
+                owner,repo,run_id:run.id,filter:'latest',per_page:100
+              });
+              const deployJobs=jobs.filter(job=>job.name==='deploy');
+              if(deployJobs.length!==1) throw new Error('Missing/ambiguous deploy job evidence: '+run.id);
+              const job=deployJobs[0];
+              if(job.status==='completed' && job.conclusion==='skipped') return null;
+              if(job.status!=='completed' || job.conclusion!=='success')
+                throw new Error('Deploy job did not succeed: '+run.id);
+              if(!Array.isArray(job.steps)) throw new Error('Missing deploy steps: '+run.id);
+              const steps=job.steps.filter(step=>step.name===publisher.step);
+              if(steps.length!==1) throw new Error('Missing/ambiguous deploy step: '+run.id);
+              const step=steps[0];
+              if(step.status==='completed' && step.conclusion==='skipped') return null;
+              if(step.status!=='completed' || step.conclusion!=='success')
+                throw new Error('Deployment step not executed successfully: '+run.id);
+              if(!/^[0-9a-f]{40}$/.test(run.head_sha||'') || job.head_sha!==run.head_sha)
+                throw new Error('Unverified deployed SHA: '+run.id);
+              if(!Number.isFinite(Date.parse(step.completed_at)))
+                throw new Error('Missing deployment completion timestamp: '+run.id);
+              return {sha:run.head_sha,run_id:run.id,completed_at:step.completed_at};
+            }
+            let candidates=[];
+            if(context.eventName==='workflow_run') {
+              const run=context.payload.workflow_run;
+              const publisher=publishers.find(p=>p.name===run?.name);
+              if(!publisher) throw new Error('Unknown workflow_run publisher');
+              candidates=[{run,publisher}];
+            }
+            // Always reconcile against the latest executed publisher, even if a
+            // delayed workflow_run event was triggered by an older deployment.
+            for(const publisher of publishers){
+              const {data}=await github.rest.actions.listWorkflowRuns({
+                owner,repo,workflow_id:publisher.file,branch:'main',per_page:30
+              });
+              candidates.push(...(data.workflow_runs||[])
+                .filter(run=>run.status==='completed' && run.conclusion==='success')
+                .map(run=>({run,publisher})));
+            }
+            const seen=new Set();
+            candidates=candidates.filter(item=>{
+              if(seen.has(item.run.id)) return false;
+              seen.add(item.run.id);
+              return true;
+            });
+            candidates.sort((a,b)=>Date.parse(b.run.updated_at)-Date.parse(a.run.updated_at));
+            const verified=[];
+            for(const item of candidates.slice(0,20)){
+              const evidence=await verify(item.run,item.publisher);
+              if(evidence) verified.push(evidence);
+            }
+            verified.sort((a,b)=>Date.parse(b.completed_at)-Date.parse(a.completed_at));
+            if(!verified.length) throw new Error('No verified executed Pages deployment');
+            core.setOutput('sha',verified[0].sha);
+            core.setOutput('deploy_run_id',String(verified[0].run_id));
+            core.setOutput('deploy_completed_at',verified[0].completed_at);
 
       - name: Checkout release source
+        id: checkout
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
           ref: ${{ steps.release.outputs.sha }}
           persist-credentials: false
 
       - name: Rebuild exact Pages artifact used by production deploy
+        id: rebuild
         shell: bash
         run: |
           set -euo pipefail
+          # Both production publishers run exactly this recipe (no extra renderers).
           bash scripts/prepare-pages-out.sh
-          node scripts/render-productivity-release.cjs out
-          node scripts/render-field-evidence-release.cjs out
-          python3 scripts/assert-no-private-ops.py out
+
+      - name: Record failed rebuild as validator error
+        if: ${{ failure() && (steps.release.outcome == 'failure' || steps.checkout.outcome == 'failure' || steps.rebuild.outcome == 'failure') }}
+        shell: bash
+        env:
+          RELEASE_SHA: ${{ steps.release.outputs.sha }}
+          RELEASE_RUN_ID: ${{ steps.release.outputs.deploy_run_id }}
+          RELEASE_COMPLETED_AT: ${{ steps.release.outputs.deploy_completed_at }}
+          RELEASE_OUTCOME: ${{ steps.release.outcome }}
+          CHECKOUT_OUTCOME: ${{ steps.checkout.outcome }}
+          REBUILD_OUTCOME: ${{ steps.rebuild.outcome }}
+        run: |
+          mkdir -p automation/reports
+          python3 - <<'PY'
+          from datetime import datetime,timezone
+          from pathlib import Path
+          import json,os
+          report={
+            'schema':'zion.apps.deployed-source-drift.v1',
+            'generated_at_utc':datetime.now(timezone.utc).isoformat(),
+            'classification':'VALIDATOR_ERROR',
+            'reason':'Release selection, checkout, or artifact rebuild failed; comparison not executed',
+            'release_sha':os.getenv('RELEASE_SHA',''),
+            'deployment_run_id':os.getenv('RELEASE_RUN_ID',''),
+            'deployment_completed_at':os.getenv('RELEASE_COMPLETED_AT',''),
+            'stage_outcomes':{k:os.getenv(k+'_OUTCOME','') for k in ('RELEASE','CHECKOUT','REBUILD')},
+            'checks':[],
+            'failure_count':None,
+          }
+          Path('automation/reports/apps-deployed-source-drift.json').write_text(json.dumps(report,indent=2)+'\n')
+          PY
 
       - name: Compare production bodies with deployed artifact
         id: drift
         shell: bash
         env:
           RELEASE_SHA: ${{ steps.release.outputs.sha }}
+          RELEASE_RUN_ID: ${{ steps.release.outputs.deploy_run_id }}
+          RELEASE_COMPLETED_AT: ${{ steps.release.outputs.deploy_completed_at }}
         run: |
           set -euo pipefail
           mkdir -p automation/reports
           python3 - <<'PY'
           from pathlib import Path
           import hashlib,json,os,sys,time,urllib.request
+          from urllib.error import HTTPError
           from datetime import datetime,timezone
 
           def read_complete_response(resp, max_bytes=52_428_800):
@@ -122,7 +213,9 @@ jobs:
           for route,path in pairs.items():
             p=Path(path)
             if not p.is_file():
-              failures.append({'route':route,'path':path,'reason':'source_missing'})
+              row={'route':route,'source_path':path,'reason':'SOURCE_MISSING','match':False}
+              rows.append(row)
+              failures.append(row)
               continue
             source=p.read_bytes()
             source_sha=hashlib.sha256(source).hexdigest()
@@ -137,6 +230,12 @@ jobs:
                   live=read_complete_response(resp)
                 error=None
                 if status==200: break
+              except HTTPError as exc:
+                live=None
+                status=exc.code
+                error=str(exc)
+                if status==404: break
+                time.sleep(2)
               except Exception as exc:
                 live=None
                 status=0
@@ -156,7 +255,10 @@ jobs:
               missing=[]
               match=status==200 and live_sha==source_sha
               mode='exact'
-            row={'route':route,'source_path':path,'http_status':status,'source_sha256':source_sha,'live_sha256':live_sha,'match':match,'mode':mode,'missing_markers':missing,'error':error}
+            reason=(None if match else
+              'HTTP_UNAVAILABLE' if status!=200 else
+              'CONTENT_MISMATCH' if missing else 'BYTE_MISMATCH')
+            row={'route':route,'source_path':path,'http_status':status,'source_sha256':source_sha,'live_sha256':live_sha,'match':match,'mode':mode,'missing_markers':missing,'error':error,'reason':reason}
             rows.append(row)
             if not match:
               failures.append(row)
@@ -170,6 +272,10 @@ jobs:
             'schema':'zion.apps.deployed-source-drift.v1',
             'generated_at_utc':datetime.now(timezone.utc).isoformat(),
             'release_sha':os.environ.get('RELEASE_SHA',''),
+            'deployment_run_id':os.environ.get('RELEASE_RUN_ID',''),
+            'deployment_completed_at':os.environ.get('RELEASE_COMPLETED_AT',''),
+            'classification':'PASS' if not failures else 'COMPARISON_FAILED',
+            'expected_route_count':len(pairs),
             'checks':rows,
             'failure_count':len(failures),
           }
@@ -177,10 +283,58 @@ jobs:
           out.write_text(json.dumps(report,indent=2,sort_keys=True)+'\n',encoding='utf-8')
           if failures:
             Path('automation/reports/apps-deployed-source-drift-failures.txt').write_text(
-              '\n'.join(f"{x.get('route')} status={x.get('http_status')} reason={x.get('reason','hash_mismatch')}" for x in failures)+'\n',
+              '\n'.join(f"{x.get('route')} status={x.get('http_status')} reason={x.get('reason','UNKNOWN')}" for x in failures)+'\n',
               encoding='utf-8'
             )
             sys.exit(1)
+          PY
+
+      - name: Classify unexpected comparison failure
+        # A failed Python process without a complete mismatch report is a
+        # validator error, not evidence of source-to-production drift.
+        if: ${{ failure() && steps.drift.outcome == 'failure' }}
+        shell: bash
+        env:
+          RELEASE_SHA: ${{ steps.release.outputs.sha }}
+          RELEASE_RUN_ID: ${{ steps.release.outputs.deploy_run_id }}
+          RELEASE_COMPLETED_AT: ${{ steps.release.outputs.deploy_completed_at }}
+        run: |
+          python3 - <<'PY'
+          from datetime import datetime,timezone
+          from pathlib import Path
+          import json,os,sys
+          out=Path('automation/reports/apps-deployed-source-drift.json')
+          try:
+            report=json.loads(out.read_text(encoding='utf-8'))
+            valid=(report.get('classification')=='COMPARISON_FAILED'
+                   and isinstance(report.get('checks'),list)
+                   and isinstance(report.get('expected_route_count'),int)
+                   and report['expected_route_count']>0
+                   and len(report['checks'])==report['expected_route_count']
+                   and isinstance(report.get('failure_count'),int)
+                   and report['failure_count']>0
+                   and report.get('release_sha')==os.getenv('RELEASE_SHA','')
+                   and report.get('deployment_run_id')==os.getenv('RELEASE_RUN_ID',''))
+            if valid:
+              print('Completed comparison mismatch evidence exists; retain COMPARISON_FAILED')
+              sys.exit(0)
+          except (OSError,ValueError,TypeError,AttributeError):
+            pass
+          out.parent.mkdir(parents=True,exist_ok=True)
+          report={
+            'schema':'zion.apps.deployed-source-drift.v1',
+            'generated_at_utc':datetime.now(timezone.utc).isoformat(),
+            'classification':'VALIDATOR_ERROR',
+            'reason':'Comparison process failed without a complete route-level mismatch report',
+            'release_sha':os.getenv('RELEASE_SHA',''),
+            'deployment_run_id':os.getenv('RELEASE_RUN_ID',''),
+            'deployment_completed_at':os.getenv('RELEASE_COMPLETED_AT',''),
+            'checks':[],
+            'failure_count':None,
+          }
+          out.write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8')
+          print('::error::Comparison validator failed; source drift NOT established')
+          sys.exit(1)
           PY
 
       - name: Upload drift evidence
@@ -199,25 +353,28 @@ jobs:
         uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8.0.0
         with:
           script: |
-            const title='Apps deployed/source drift detected';
+            const title='Apps deployed/source verification failed';
+            const legacyTitle='Apps deployed/source drift detected';
             const marker='<!-- apps-deployed-source-drift -->';
             const {data:issues}=await github.rest.issues.listForRepo({...context.repo,state:'open',per_page:100});
-            const existing=issues.find(i=>i.title===title || (i.body||'').includes(marker));
-            const body=marker+'\nProduction content differs from the static source checked out for this release, or a critical route was unavailable. Do not auto-revert; inspect the drift artifact and latest successful deploy first.\n\nRun: '+context.serverUrl+'/'+context.repo.owner+'/'+context.repo.repo+'/actions/runs/'+context.runId;
+            const existing=issues.find(i=>i.title===title || i.title===legacyTitle || (i.body||'').includes(marker));
+            const body=marker+'\nDeployed/source verification failed. A validator/rebuild error does NOT prove production drift. Inspect artifact classification and compare-step outcome before changes or rollback.\n\nRun: '+context.serverUrl+'/'+context.repo.owner+'/'+context.repo.repo+'/actions/runs/'+context.runId;
             if(existing){
+              if(existing.title!==title) await github.rest.issues.update({...context.repo,issue_number:existing.number,title});
               await github.rest.issues.createComment({...context.repo,issue_number:existing.number,body});
             } else {
               await github.rest.issues.create({...context.repo,title,body});
             }
 
       - name: Close prior drift issue on recovery
-        if: success()
+        if: success() && steps.drift.outcome == 'success'
         uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8.0.0
         with:
           script: |
-            const title='Apps deployed/source drift detected';
+            const title='Apps deployed/source verification failed';
+            const legacyTitle='Apps deployed/source drift detected';
             const {data:issues}=await github.rest.issues.listForRepo({...context.repo,state:'open',per_page:100});
-            for(const issue of issues.filter(i=>i.title===title)){
+            for(const issue of issues.filter(i=>i.title===title || i.title===legacyTitle || (i.body||'').includes('<!-- apps-deployed-source-drift -->'))){
               await github.rest.issues.createComment({...context.repo,issue_number:issue.number,body:'Recovered: deployed/source drift guard is green on run '+context.runId+'.'});
               await github.rest.issues.update({...context.repo,issue_number:issue.number,state:'closed'});
             }
