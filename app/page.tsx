@@ -12,6 +12,7 @@ import AppsNetworkShowcase from '@/components/AppsNetworkShowcase';
 import ResultsRoiSection from '@/components/ResultsRoiSection';
 import DiscoveryBenefits from '@/components/DiscoveryBenefits';
 import MultiVendorMaintenance from '@/components/MultiVendorMaintenance';
+import ClientPortalSection from '@/components/ClientPortalSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import ContactFunnel from '@/components/ContactFunnel';
 import ServiceCounter from '@/components/ServiceCounter';
@@ -1232,6 +1233,9 @@ export default function HomePage() {
 
       {/* ── Multi-vendor maintenance ── */}
       <MultiVendorMaintenance />
+
+      {/* ── Client portal ── */}
+      <ClientPortalSection />
 
       {/* ── Service Search — find any of {serviceCount}+ services ── */}
       <ServiceGridWithSearch />
