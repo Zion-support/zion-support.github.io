@@ -238,6 +238,7 @@ ${LANGS.map((l) => `  <link rel="alternate" hreflang="${l.code}" href="${pageUrl
       <div class="cta-row">
         <a class="btn" href="/discovery/">${esc(t.ctaPrimary)}</a>
         <a class="btn alt" href="${hrefFor(lang, '/apps/')}">${esc(t.allApps)}</a>
+        <a class="btn alt" href="${hrefFor(lang, '/apps-network-guide/')}">${esc(({en:'Explore by goal',pt:'Explorar por objetivo',es:'Explorar por objetivo',fr:'Explorer par objectif',de:'Nach Ziel entdecken'})[lang.code])}</a>
       </div>
       <div class="stats">
         <div class="stat"><b>${appsNetworkCatalog.length}</b><span>${esc(t.statApps)}</span></div>
