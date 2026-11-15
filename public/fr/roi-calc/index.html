@@ -40,12 +40,18 @@
 <p class="note">Saisissez tous les montants dans la devise sélectionnée. Le changement de devise ne modifie que l'affichage, sans conversion automatique.</p><div class="actions"><button type="reset">Effacer les hypothèses</button><p id="roiStatus" role="status" aria-live="polite">Renseignez les six champs numériques ; indiquez zéro pour les coûts non applicables.</p></div>
 </form>
 </section>
-<section id="roiResults" class="panel" aria-labelledby="results-title" hidden><h2 id="results-title">Scénario indicatif</h2><div class="metrics"><div class="metric"><span>Heures récupérées par mois</span><output id="roiHours">—</output></div>
+<section id="roiResults" class="panel" aria-labelledby="results-title" data-summary-title="Scénario de ROI — à titre indicatif" data-summary-disclaimer="Valeur de capacité estimée, ni économie de trésorerie prouvée ni rendement garanti. Les heures et tarifs sont supposés constants sur la période. Les montants utilisent la devise choisie, sans conversion." hidden><h2 id="results-title">Scénario indicatif</h2><div class="metrics"><div class="metric"><span>Heures récupérées par mois</span><output id="roiHours">—</output></div>
 <div class="metric"><span>Valeur mensuelle brute de capacité</span><output id="roiGross">—</output></div>
 <div class="metric"><span>Coûts totaux modélisés</span><output id="roiCosts">—</output></div>
 <div class="metric"><span>Valeur nette modélisée</span><output id="roiNet">—</output></div>
 <div class="metric"><span>ROI sur la période</span><output id="roiPercent">—</output></div>
-<div class="metric"><span>Délai de retour sur mise en place</span><output id="roiPayback">—</output></div></div></section>
+<div class="metric"><span>Délai de retour sur mise en place</span><output id="roiPayback">—</output></div></div>
+<details class="share-tools"><summary>Vérifier et copier le scénario</summary>
+<p class="note">Généré localement. La copie nécessite votre action.</p>
+<label for="roiSummary">Résumé du scénario (sans envoi automatique)</label>
+<textarea id="roiSummary" rows="12" readonly></textarea>
+<div class="actions"><button id="roiCopySummary" type="button" data-copied="Résumé copié. Partagez-le avec les personnes de votre choix." data-manual="Presse-papiers indisponible. Texte sélectionné ; copiez-le manuellement.">Copier le résumé</button><p id="roiCopyStatus" role="status" aria-live="polite"></p></div>
+</details></section>
 <p class="warning">La valeur de capacité n'est pas nécessairement une économie de trésorerie. Ce scénario n'est ni un devis ni un rendement garanti.</p>
 <section class="panel" aria-labelledby="related-title"><h2 id="related-title">Outils associés</h2><p class="note">Vérifiez les coûts et risques avant de financer un pilote.</p><nav class="related" aria-label="Outils associés"><a href="/fr/apps-network/">Réseau d'apps</a><a href="/fr/finops-estimator/">Estimateur FinOps</a><a href="/fr/token-cost/">Coût des tokens</a><a href="/fr/cloud-waste/">Gaspillage cloud</a></nav></section>
 <section class="panel faq" aria-labelledby="faq-title"><h2 id="faq-title">Comprendre cette estimation</h2>

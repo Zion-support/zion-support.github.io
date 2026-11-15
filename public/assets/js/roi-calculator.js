@@ -35,7 +35,32 @@
     if (paybackMonths !== null && !Number.isFinite(paybackMonths)) paybackMonths = null;
     return { recoveredHours, grossMonthly, totalCost, netValue, roiPercent, paybackMonths };
   }
-  if (typeof module !== "undefined" && module.exports) module.exports = { calculate };
+  // No network calls, URL parameters or persistent storage: users explicitly opt to copy.
+  function formatScenarioSummary(input, result, options) {
+    if (!input || !result || !options || !Array.isArray(options.fieldLabels) ||
+        !Array.isArray(options.metricLabels) || options.fieldLabels.length !== 6 ||
+        options.metricLabels.length !== 6 || !["USD", "BRL", "EUR"].includes(options.currency)) return null;
+    const number = new Intl.NumberFormat(options.locale || "en", { maximumFractionDigits: 2 });
+    const money = new Intl.NumberFormat(options.locale || "en", { style: "currency", currency: options.currency, maximumFractionDigits: 2 });
+    const inputLines = fields.map((key, i) =>
+      options.fieldLabels[i] + ": " + (["rate", "monthly", "setup"].includes(key) ?
+        money.format(Number(input[key])) : number.format(Number(input[key]))));
+    const payback = result.paybackMonths;
+    const metrics = [
+      number.format(result.recoveredHours),
+      money.format(result.grossMonthly),
+      money.format(result.totalCost),
+      money.format(result.netValue),
+      result.roiPercent === null ? options.roiNa : number.format(result.roiPercent) + "%",
+      payback === null ? options.paybackNa :
+        number.format(payback) + " " + options.monthsUnit +
+        (payback > Number(input.months) ? " (" + options.paybackBeyond + ")" : "")
+    ];
+    return [options.title, ...inputLines, options.currencyLabel + ": " + options.currency,
+      "", ...options.metricLabels.map((label, i) => label + ": " + metrics[i]),
+      "", options.disclaimer].join("\n");
+  }
+  if (typeof module !== "undefined" && module.exports) module.exports = { calculate, formatScenarioSummary };
   if (typeof document === "undefined") return;
   function init() {
     const form = document.getElementById("roiForm");
@@ -44,6 +69,10 @@
     if (!form || !results || !status) return;
     const locale = document.documentElement.lang || "en";
     const number = new Intl.NumberFormat(locale, { maximumFractionDigits: 2 });
+    const summary = document.getElementById("roiSummary");
+    const copyButton = document.getElementById("roiCopySummary");
+    const copyStatus = document.getElementById("roiCopyStatus");
+    const metricIds = ["roiHours", "roiGross", "roiCosts", "roiNet", "roiPercent", "roiPayback"];
     function update() {
       const input = {};
       let firstInvalid = null;
@@ -98,12 +127,48 @@
       put("roiPayback", payback === null ? form.dataset.paybackNa :
         number.format(payback) + " " + form.dataset.monthsUnit +
         (payback > Number(input.months) ? " (" + form.dataset.paybackBeyond + ")" : ""));
+      if (summary) {
+        const labelFor = element => element && element.labels && element.labels[0] ?
+          element.labels[0].textContent.trim() : "";
+        const metricLabels = metricIds.map(id => {
+          const output = document.getElementById(id);
+          return output.previousElementSibling ? output.previousElementSibling.textContent.trim() : id;
+        });
+        summary.value = formatScenarioSummary(input, result, {
+          locale, currency,
+          title: results.dataset.summaryTitle, disclaimer: results.dataset.summaryDisclaimer,
+          currencyLabel: labelFor(form.elements.namedItem("currency")),
+          fieldLabels: fields.map(key => labelFor(form.elements.namedItem(key))),
+          metricLabels,
+          roiNa: form.dataset.roiNa, paybackNa: form.dataset.paybackNa,
+          monthsUnit: form.dataset.monthsUnit, paybackBeyond: form.dataset.paybackBeyond
+        }) || "";
+        if (copyStatus) copyStatus.textContent = "";
+      }
       results.hidden = false;
       status.textContent = form.dataset.ready;
     }
     form.addEventListener("input", update);
     form.addEventListener("change", update);
     form.addEventListener("submit", (event) => event.preventDefault());
+    if (copyButton && summary && copyStatus) {
+      copyButton.addEventListener("click", async () => {
+        if (results.hidden || !summary.value) return;
+        if (typeof navigator !== "undefined" && navigator.clipboard &&
+            typeof navigator.clipboard.writeText === "function") {
+          try {
+            await navigator.clipboard.writeText(summary.value);
+            copyStatus.textContent = copyButton.dataset.copied;
+            return;
+          } catch (_error) {
+            // Text stays available for manual copying if access was denied.
+          }
+        }
+        summary.focus();
+        summary.select();
+        copyStatus.textContent = copyButton.dataset.manual;
+      });
+    }
     form.addEventListener("reset", () => {
       for (const key of fields) {
         const element = form.elements.namedItem(key);
@@ -111,6 +176,8 @@
         element.removeAttribute("aria-describedby");
       }
       results.hidden = true;
+      if (summary) summary.value = "";
+      if (copyStatus) copyStatus.textContent = "";
       status.textContent = form.dataset.prompt;
     });
     update();

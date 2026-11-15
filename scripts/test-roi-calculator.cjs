@@ -11,7 +11,7 @@ vm.runInNewContext(
   { module: calculatorModule, document: undefined },
   { filename: "roi-calculator.js", timeout: 3000 }
 );
-const { calculate } = calculatorModule.exports;
+const { calculate, formatScenarioSummary } = calculatorModule.exports;
 const root = path.join(__dirname, "..", "public");
 
 test("calculates 52/12 monthly hours and net value with transparent costs", () => {
@@ -47,6 +47,10 @@ test("all five localized pages are substantive, reciprocal and use shared assets
     assert.match(html, /assets\/css\/roi-calculator\.css/);
     assert.match(html, /rel="canonical"/);
     assert.match(html, /data-months-unit=/);
+    for (const attr of ["data-summary-title", "data-summary-disclaimer", "data-copied", "data-manual"]) assert.ok(html.includes(attr + "="));
+    for (const id of ["roiSummary", "roiCopySummary", "roiCopyStatus"]) assert.ok(html.includes('id="' + id + '"'));
+    assert.match(html, /id="roiCopyStatus" role="status" aria-live="polite"/);
+    assert.match(html, /id="roiSummary" rows="12" readonly/);
     for(const attr of ["data-error-prefix","data-roi-na","data-payback-na","data-payback-beyond"]) assert.ok(html.includes(attr+"="));
     assert.match(html, /href="#team"/);
     assert.match(html, /class="panel conversion"/);
@@ -86,4 +90,40 @@ assert.equal(calculate({...baseline,...over}),null,JSON.stringify(over));
 test("zero-denominator and numeric overflow do not display Infinity",()=>{
 const free=calculate({...baseline,monthly:0,setup:0});assert.equal(free.roiPercent,null);
 const tiny=calculate({...baseline,monthly:0,setup:1e-308});assert.equal(tiny.roiPercent,null);
+});
+
+const scenarioOptions={
+ locale:"en",currency:"USD",title:"Illustrative Zion ROI",
+ disclaimer:"Capacity value is not verified cash savings. No FX conversion.",
+ currencyLabel:"Currency",fieldLabels:["Team","Hours/week","Hourly cost","Monthly cost","Setup","Horizon"],
+ metricLabels:["Recovered hours","Gross capacity","Total costs","Net scenario","ROI","Setup payback"],
+ roiNa:"Undefined",paybackNa:"Not reached",paybackBeyond:"beyond horizon",monthsUnit:"months"
+};
+test("scenario summary includes modeled inputs, outputs and disclaimer",()=>{
+ const summary=formatScenarioSummary(baseline,calculate(baseline),scenarioOptions);
+ assert.match(summary,/ROI: 188\.89%/);
+ assert.match(summary,/Total costs: \$1,800\.00/);
+ assert.match(summary,/Net scenario: \$3,400\.00/);
+ assert.match(summary,/Currency: USD/);
+ assert.match(summary,/not verified cash savings/);
+ assert.doesNotMatch(summary,/https?:\/\//);
+});
+test("scenario summary handles payback beyond horizon and undefined ROI",()=>{
+ const short={...baseline,months:1};
+ assert.match(formatScenarioSummary(short,calculate(short),scenarioOptions),/1\.8 months \(beyond horizon\)/);
+ const free={...baseline,monthly:0,setup:0};
+ assert.match(formatScenarioSummary(free,calculate(free),scenarioOptions),/ROI: Undefined/);
+});
+test("currency switch in summary does not convert underlying values",()=>{
+ const result=calculate(baseline);
+ const a=formatScenarioSummary(baseline,result,scenarioOptions);
+ const b=formatScenarioSummary(baseline,result,{...scenarioOptions,currency:"BRL",locale:"pt-BR"});
+ assert.match(a,/\$3,400\.00/);
+ assert.match(b,/3\.400,00/);
+ assert.equal(result.netValue,3400);
+});
+test("invalid summary options are rejected",()=>{
+ assert.equal(formatScenarioSummary(null,calculate(baseline),scenarioOptions),null);
+ assert.equal(formatScenarioSummary(baseline,calculate(baseline),{...scenarioOptions,currency:"ABC"}),null);
+ assert.equal(formatScenarioSummary(baseline,calculate(baseline),{...scenarioOptions,fieldLabels:[]}),null);
 });

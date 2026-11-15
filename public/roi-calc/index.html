@@ -40,12 +40,18 @@
 <p class="note">Enter all monetary amounts in the selected currency. Changing currency only changes the display; no exchange rates are applied.</p><div class="actions"><button type="reset">Clear assumptions</button><p id="roiStatus" role="status" aria-live="polite">Complete all six numeric fields; enter zero for costs that do not apply.</p></div>
 </form>
 </section>
-<section id="roiResults" class="panel" aria-labelledby="results-title" hidden><h2 id="results-title">Illustrative scenario</h2><div class="metrics"><div class="metric"><span>Hours recovered per month</span><output id="roiHours">—</output></div>
+<section id="roiResults" class="panel" aria-labelledby="results-title" data-summary-title="ROI scenario — illustrative only" data-summary-disclaimer="Estimated capacity value, not verified cash savings or a guaranteed return. Assumes constant hours and hourly rates during the period. Monetary values use the selected currency without FX conversion." hidden><h2 id="results-title">Illustrative scenario</h2><div class="metrics"><div class="metric"><span>Hours recovered per month</span><output id="roiHours">—</output></div>
 <div class="metric"><span>Gross capacity value / month</span><output id="roiGross">—</output></div>
 <div class="metric"><span>Total modeled costs</span><output id="roiCosts">—</output></div>
 <div class="metric"><span>Net modeled value</span><output id="roiNet">—</output></div>
 <div class="metric"><span>ROI over period</span><output id="roiPercent">—</output></div>
-<div class="metric"><span>Setup payback period</span><output id="roiPayback">—</output></div></div></section>
+<div class="metric"><span>Setup payback period</span><output id="roiPayback">—</output></div></div>
+<details class="share-tools"><summary>Review and copy your scenario</summary>
+<p class="note">Generated locally. Copying requires your action.</p>
+<label for="roiSummary">Scenario summary (not sent automatically)</label>
+<textarea id="roiSummary" rows="12" readonly></textarea>
+<div class="actions"><button id="roiCopySummary" type="button" data-copied="Summary copied. Share only with people you choose." data-manual="Clipboard unavailable. Text selected; please copy manually.">Copy scenario summary</button><p id="roiCopyStatus" role="status" aria-live="polite"></p></div>
+</details></section>
 <p class="warning">Capacity value is not automatically realized cash savings. This is a scenario, not a quote, guaranteed return or approved business case.</p>
 <section class="panel" aria-labelledby="related-title"><h2 id="related-title">Explore connected tools</h2><p class="note">Validate cost drivers and risk before deciding whether to fund a pilot.</p><nav class="related" aria-label="Explore connected tools"><a href="/apps-network/">Apps Network</a><a href="/cloud-cost-estimator/">Cloud Cost Estimator</a><a href="/token-cost/">Token Cost</a><a href="/cloud-waste/">Cloud Waste</a></nav></section>
 <section class="panel faq" aria-labelledby="faq-title"><h2 id="faq-title">Interpreting this estimate</h2>

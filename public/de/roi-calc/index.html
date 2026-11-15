@@ -40,12 +40,18 @@
 <p class="note">Geben Sie alle Geldbeträge in der gewählten Währung ein. Die Auswahl ändert nur die Anzeige; es erfolgt keine automatische Umrechnung.</p><div class="actions"><button type="reset">Annahmen zurücksetzen</button><p id="roiStatus" role="status" aria-live="polite">Füllen Sie alle sechs Zahlenfelder aus; geben Sie für nicht anfallende Kosten null ein.</p></div>
 </form>
 </section>
-<section id="roiResults" class="panel" aria-labelledby="results-title" hidden><h2 id="results-title">Beispielszenario</h2><div class="metrics"><div class="metric"><span>Gewonnene Stunden pro Monat</span><output id="roiHours">—</output></div>
+<section id="roiResults" class="panel" aria-labelledby="results-title" data-summary-title="ROI-Szenario — nur zur Veranschaulichung" data-summary-disclaimer="Geschätzter Kapazitätswert, keine nachgewiesene Ersparnis oder Renditegarantie. Konstante Stunden und Stundensätze über den Zeitraum werden angenommen. Beträge gelten in der gewählten Währung, ohne Umrechnung." hidden><h2 id="results-title">Beispielszenario</h2><div class="metrics"><div class="metric"><span>Gewonnene Stunden pro Monat</span><output id="roiHours">—</output></div>
 <div class="metric"><span>Monatlicher Bruttokapazitätswert</span><output id="roiGross">—</output></div>
 <div class="metric"><span>Gesamte modellierte Kosten</span><output id="roiCosts">—</output></div>
 <div class="metric"><span>Modellierter Nettowert</span><output id="roiNet">—</output></div>
 <div class="metric"><span>ROI im Zeitraum</span><output id="roiPercent">—</output></div>
-<div class="metric"><span>Amortisation der Einführung</span><output id="roiPayback">—</output></div></div></section>
+<div class="metric"><span>Amortisation der Einführung</span><output id="roiPayback">—</output></div></div>
+<details class="share-tools"><summary>Szenario prüfen und kopieren</summary>
+<p class="note">Lokal erstellt. Kopieren erfolgt nur auf Wunsch.</p>
+<label for="roiSummary">Szenarioübersicht (keine automatische Übertragung)</label>
+<textarea id="roiSummary" rows="12" readonly></textarea>
+<div class="actions"><button id="roiCopySummary" type="button" data-copied="Übersicht kopiert. Teilen Sie sie nur mit ausgewählten Personen." data-manual="Zwischenablage nicht verfügbar. Text markiert; bitte manuell kopieren.">Szenarioübersicht kopieren</button><p id="roiCopyStatus" role="status" aria-live="polite"></p></div>
+</details></section>
 <p class="warning">Kapazitätswert ist nicht automatisch eine realisierte Kosteneinsparung. Dies ist weder ein Angebot noch eine Renditegarantie.</p>
 <section class="panel" aria-labelledby="related-title"><h2 id="related-title">Verwandte Tools</h2><p class="note">Prüfen Sie Kosten und Risiken vor der Finanzierung eines Piloten.</p><nav class="related" aria-label="Verwandte Tools"><a href="/de/apps-network/">App-Netzwerk</a><a href="/de/finops-estimator/">FinOps-Schätzer</a><a href="/de/token-cost/">Token-Kosten</a><a href="/de/cloud-waste/">Cloud-Verschwendung</a></nav></section>
 <section class="panel faq" aria-labelledby="faq-title"><h2 id="faq-title">So interpretieren Sie die Schätzung</h2>
