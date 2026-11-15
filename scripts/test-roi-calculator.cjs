@@ -38,6 +38,9 @@ test("all five localized pages are substantive, reciprocal and use shared assets
     assert.match(html, /assets\/css\/roi-calculator\.css/);
     assert.match(html, /rel="canonical"/);
     assert.match(html, /data-months-unit=/);
+    assert.match(html, /<details>/);
+    assert.match(html, /href="\\/discovery\\/"/);
+    assert.match(html, /class="panel conversion"/);
     for (const link of routes) assert.ok(html.includes("https://ziontechgroup.com" + link), file + " missing " + link);
     assert.equal((html.match(/rel="alternate" hreflang=/g) || []).length, 6);
   }
