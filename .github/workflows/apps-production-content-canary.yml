@@ -45,12 +45,12 @@ jobs:
           base='https://ziontechgroup.com'
           checks={
             '/': ['Apps'],
-            '/apps/': ['Zion Apps Network','Free Discovery','Operations &amp; Reliability'],
-            '/pt/apps/': ['Discovery gratuito','Operações'],
-            '/es/apps/': ['Discovery gratuito','Operaciones'],
-            '/fr/apps/': ['Discovery gratuit','Opérations'],
-            '/de/apps/': ['Discovery','Operations'],
-            '/discovery/': ['Free AI & Automation Discovery','No payment or meeting is required.'],
+            '/apps/': ['Zion Apps Network','Free Discovery','<h2>Operations</h2>'],
+            '/pt/apps/': ['<body class="zion-showcase"','Planeje um atendimento de campo'],
+            '/es/apps/': ['<body class="zion-showcase"','Planifique un servicio de campo'],
+            '/fr/apps/': ['<body class="zion-showcase"','Préparer une intervention sur site'],
+            '/de/apps/': ['<body class="zion-showcase"','Einen Vor-Ort-Service planen'],
+            '/discovery/': ['Diagnóstico de Automação e IA em 7 dias','Questionário Discovery'],
             '/pt/discovery/': ['Discovery'],
             '/es/discovery/': ['Discovery'],
             '/fr/discovery/': ['Discovery'],
@@ -59,7 +59,7 @@ jobs:
             '/apps/operations-reliability-ai-2026-pt.html': ['Operações','Confiabilidade'],
             '/apps/operations-reliability-ai-2026-es.html': ['Operaciones'],
             '/apps/operations-reliability-ai-2026-fr.html': ['Opérations'],
-            '/apps/operations-reliability-ai-2026-de.html': ['Operations','Reliability'],
+            '/apps/operations-reliability-ai-2026-de.html': ['Betrieb','Zuverlässigkeit'],
             '/zion-app-network/app-network-operations-reliability-2026.html': ['Operations','Reliability'],
             '/zion-app-network/app-network-operations-reliability-2026-pt-br.html': ['Operações','Confiabilidade'],
             '/zion-app-network/app-network-operations-reliability-2026-es.html': ['Operaciones'],
@@ -87,11 +87,13 @@ jobs:
                 continue
               missing=[m for m in markers if m not in body]
               if missing:
-                failures.append(f'{path}: missing markers {missing}')
+                failures.append(f'{path}: CONTENT_MISMATCH missing markers {missing}')
               else:
                 print(f'OK {path} HTTP 200 markers={len(markers)}')
-            except (HTTPError,URLError,TimeoutError) as exc:
-              failures.append(f'{path}: {exc}')
+            except HTTPError as exc:
+              failures.append(f'{path}: HTTP {exc.code}')
+            except (URLError,TimeoutError) as exc:
+              failures.append(f'{path}: NETWORK_ERROR {exc}')
           if failures:
             for item in failures:
               print(f'::error::{item}')
@@ -109,7 +111,8 @@ jobs:
           retention-days: 30
 
       - name: Open deduped issue on canary failure
-        if: failure()
+        # A PR run probes production but must not mutate production incident state.
+        if: failure() && github.event_name != 'pull_request'
         uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8.0.0
         with:
           script: |
@@ -125,7 +128,8 @@ jobs:
             }
 
       - name: Close prior canary issue on recovery
-        if: success()
+        # A green PR test is not evidence of a newly recovered deployment.
+        if: success() && github.event_name != 'pull_request'
         uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8.0.0
         with:
           script: |
