@@ -1479,8 +1479,6 @@ export default function HomePage() {
             <Link href="/status/" className="hover:text-green-400 transition">● System Status</Link>
             <Link href="/industries/" className="hover:text-purple-400 transition">🏭 Industries</Link>
           </div>
-        </div>
-      </section>
 
           <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
@@ -1501,8 +1499,7 @@ export default function HomePage() {
               </Link>
             ))}
           </div>
-        </div>
-      </section>
+          <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {homepageFeaturedApps.map((app) => (
               <Link
                 key={app.slug}
