@@ -499,7 +499,6 @@ export const appsNetworkCatalog: AppsNetworkApp[] = [
     related: ["prompt-shield", "stack-audit", "secrets-sentinel", "model-observatory"],
   },
   {
-      {
     slug: "ai-tender-scout",
     name: "AI Tender Scout",
     href: "/ai-tender-scout/",
@@ -515,8 +514,8 @@ export const appsNetworkCatalog: AppsNetworkApp[] = [
     group: "govern",
     related: ["licitacao-radar", "rfp-readiness", "edital-desk", "ai-governance-checklist"],
   },
-
-slug: "licitacao-radar",
+  {
+    slug: "licitacao-radar",
     name: "Licitação Radar",
     href: "/licitacao-radar/",
     description: "Monitoramento de licitações públicas no Brasil.",
@@ -645,6 +644,20 @@ slug: "licitacao-radar",
   },
   {
     slug: "edital-desk",
+    name: "Edital Desk",
+    href: "/edital-desk/",
+    description: "Reads the notice and produces a requirements matrix, an eligibility check, a compliance gap list and a go or no-go recommendation — with no invented hardware prices and every claim traced back to a clause.",
+    descriptionPt: "Lê o edital e produz uma matriz de requisitos, uma verificação de elegibilidade, uma lista de lacunas de conformidade e uma recomendação de participar ou não — sem preços de hardware inventados e com cada afirmação rastreada até uma cláusula.",
+    descriptionEs: "Lee el pliego y produce una matriz de requisitos, una verificación de elegibilidad, una lista de brechas de conformidad y una recomendación de participar o no — sin precios de hardware inventados y con cada afirmación rastreada hasta una cláusula.",
+    descriptionFr: "Lit l'appel d'offres et produit une matrice des exigences, un contrôle d'éligibilité, une liste des écarts de conformité et une recommandation go ou no-go — sans prix matériel inventé et chaque affirmation rattachée à une clause.",
+    descriptionDe: "Liest die Ausschreibung und erstellt eine Anforderungsmatrix, eine Eligibilitätsprüfung, eine Liste der Compliance-Lücken und eine Go-/No-Go-Empfehlung — ohne erfundene Hardwarepreise und mit jeder Aussage bis zur Klausel zurückverfolgbar.",
+    namePt: "Edital Desk",
+    nameEs: "Edital Desk",
+    nameFr: "Edital Desk",
+    nameDe: "Edital Desk",
+    group: "govern",
+    related: ["licitacao-radar", "rfp-readiness", "ai-tender-scout", "ai-governance-checklist"],
+  },
   {
     slug: "services-hub",
     name: "Services Hub",
@@ -660,21 +673,6 @@ slug: "licitacao-radar",
     nameDe: "Services-Hub",
     group: "work",
     related: ["zion-project-master", "discovery", "prompt-library", "edital-desk"],
-  },
-
-    name: "Edital desk",
-    href: "/edital-desk/",
-    description: "RFQ / TR brief. No invented hardware prices.",
-    descriptionPt: "Briefing de RFQ / TR. Sem preços de hardware inventados.",
-    descriptionEs: "Brief de RFQ / TR. Sin precios de hardware inventados.",
-    descriptionFr: "Brief RFQ / TR. Aucun prix matériel inventé.",
-    descriptionDe: "RFQ / TR-Brief. Keine erfundenen Hardwarepreise.",
-    namePt: "Edital Desk",
-    nameEs: "Edital Desk",
-    nameFr: "Edital Desk",
-    nameDe: "Edital Desk",
-    group: "work",
-    related: ["rfp-readiness", "licitacao-radar", "agent-brief", "ai-tender-scout"],
   },
   {
     slug: "prompt-library",
@@ -806,6 +804,20 @@ slug: "licitacao-radar",
   },
   {
     slug: "zion-edge-ai-platform",
+    name: "Edge AI Deployment Platform",
+    href: "/zion-edge-ai-platform/",
+    description: "Deploy and manage AI models at the edge for low-latency inference.",
+    descriptionPt: "Implante e gerencie modelos de IA na borda para inferência de baixa latência.",
+    descriptionEs: "Despliega y gestiona modelos de IA en el borde para inferencia de baja latencia.",
+    descriptionFr: "Déployez et gérez des modèles IA au bord pour une inférence à faible latence.",
+    descriptionDe: "Stellen Sie KI-Modelle am Edge bereit und verwalten Sie sie für Inferenz mit niedriger Latenz.",
+    namePt: "Plataforma de Edge AI",
+    nameEs: "Plataforma de Edge AI",
+    nameFr: "Plateforme Edge IA",
+    nameDe: "Edge-KI-Platform",
+    group: "ai",
+    related: ["llm-gateway", "model-observatory", "finops-autopilot", "ai-governance-checklist"],
+  },
   {
     slug: "zion-ai-chatbot-builder",
     name: "Zion AI Chatbot Builder",
@@ -821,21 +833,6 @@ slug: "licitacao-radar",
     nameDe: "Zion KI-Chatbot-Builder",
     group: "ai",
     related: ["ai-chatbot-builder", "zion-chatbot-builder", "llm-gateway", "ai-customer-support-pro", "zion-ai-chatbot-analytics"],
-  },
-
-    name: "Edge AI Deployment Platform",
-    href: "/zion-edge-ai-platform/",
-    description: "Deploy and manage AI models at the edge for low-latency inference.",
-    descriptionPt: "Implante e gerencie modelos de IA na borda para inferência de baixa latência.",
-    descriptionEs: "Despliega y gestiona modelos de IA en el borde para inferencia de baja latencia.",
-    descriptionFr: "Déployez et gérez des modèles IA au bord pour une inférence à faible latence.",
-    descriptionDe: "Stellen Sie KI-Modelle am Edge bereit und verwalten Sie sie für Inferenz mit niedriger Latenz.",
-    namePt: "Plataforma de Edge AI",
-    nameEs: "Plataforma de Edge AI",
-    nameFr: "Plateforme Edge IA",
-    nameDe: "Edge-KI-Platform",
-    group: "ai",
-    related: ["llm-gateway", "model-observatory", "finops-autopilot", "ai-governance-checklist"],
   },
   {
     slug: "depot-stock-balancer",
@@ -903,6 +900,20 @@ slug: "licitacao-radar",
   },
   {
     slug: "zion-ai-rma-tracker",
+    name: "AI RMA Tracker",
+    href: "/zion-ai-rma-tracker/",
+    description: "RMA tracking with status, deadlines, and alerts.",
+    descriptionPt: "Acompanhamento de RMA com estado, prazos e alertas.",
+    descriptionEs: "Seguimiento de RMA con estado, plazos y alertas.",
+    descriptionFr: "Suivi des RMA avec statut, échéances et alertes.",
+    descriptionDe: "RMA-Verfolgung mit Status, Fristen und Alarmen.",
+    namePt: "Rastreador de RMA com IA",
+    nameEs: "Seguimiento de RMA con IA",
+    nameFr: "Suivi des RMA par IA",
+    nameDe: "KI-RMA-Tracker",
+    group: "field",
+    related: ["zion-ai-spare-parts-matcher", "zion-ai-hour-tracker", "zion-ai-site-survey-planner", "depot-stock-balancer"],
+  },
   {
     slug: "zion-ai-hour-tracker",
     name: "Zion AI Hour Tracker",
@@ -918,21 +929,6 @@ slug: "licitacao-radar",
     nameDe: "Zion KI-Stunden-Tracker",
     group: "field",
     related: ["zion-ai-hours-tracker", "zion-ai-site-survey-brief", "zion-ai-site-survey-planner", "depot-stock-balancer"],
-  },
-
-    name: "AI RMA Tracker",
-    href: "/zion-ai-rma-tracker/",
-    description: "RMA tracking with status, deadlines, and alerts.",
-    descriptionPt: "Rastreamento de RMA com status, prazos e alertas.",
-    descriptionEs: "Seguimiento de RMA con estado, plazos y alertas.",
-    descriptionFr: "Suivi des RMA avec statut, échéances et alertes.",
-    descriptionDe: "RMA-Verfolgung mit Status, Fristen und Alarmen.",
-    namePt: "Rastreador de RMA IA",
-    nameEs: "Rastreador de RMA IA",
-    nameFr: "Suivi RMA IA",
-    nameDe: "KI-RMA-Tracker",
-    group: "field",
-    related: ["warranty-lens", "zion-ai-field-dispatch-optimizer", "zion-ai-spare-parts-matcher"],
   },
   {
     slug: "zion-ai-site-survey-brief",
@@ -1658,7 +1654,7 @@ slug: "licitacao-radar",
   },
 ] as const;
 
-export const homepageFeaturedApps
+export const homepageFeaturedApps = [
   {
     slug: 'zion-ai-outcome-pricing',
     name: 'Outcome-Priced Services',
@@ -1743,7 +1739,9 @@ export const homepageFeaturedApps
     nameFr: 'Marketplace d\'agents',
     nameDe: 'Agenten-Marktplatz',
     group: 'hub',
-    related: ['zion-crm-intelligence', 'zion-ai-agent-cards', 'zion-ai-usage-pricing'  {
+    related: ['zion-crm-intelligence', 'zion-ai-agent-cards', 'zion-ai-usage-pricing'],
+  },
+  {
     slug: 'services-hub',
     name: 'Services Hub',
     href: '/services-hub/',
@@ -1770,8 +1768,6 @@ export const homepageFeaturedApps
     href: '/zion-ai-governance-checklist/',
     description: 'Practical checklist for AI adoption: data residency, model risk, human oversight, and compliance.',
     group: 'govern',
-  },
-],
   },
   {
     slug: 'zion-ai-agent-cards',
@@ -1951,7 +1947,9 @@ export const homepageFeaturedApps
   },
 ] as const;
 
-export const appsNetworkBySlug
+export const appsNetworkBySlug = Object.fromEntries(
+  appsNetworkCatalog.map((app) => [app.slug, app])
+) as Record<string, AppsNetworkApp>;
 
 export function relatedApps(slug: string, limit = 4): AppsNetworkApp[] {
   const app = appsNetworkBySlug[slug];
@@ -1964,20 +1962,5 @@ export function relatedApps(slug: string, limit = 4): AppsNetworkApp[] {
     (a) => a.slug !== slug && !fromRelated.some((r) => r.slug === a.slug)
   );
   return [...fromRelated, ...fillers].slice(0, limit);
-}  {
-    slug: "zion-ai-governance-checklist",
-    name: "Zion AI Governance Checklist",
-    href: "/zion-ai-governance-checklist/",
-    description: "Practical checklist for AI adoption: data residency, model risk, human oversight, audit trails, and compliance — for finance, health, and public sectors.",
-    descriptionPt: "Checklist prático para adoção de IA: residência de dados, risco de modelos, supervisão humana, trilhas de auditoria e conformidade — para finanças, saúde e setor público.",
-    descriptionEs: "Checklist práctico para adopción de IA: residencia de datos, riesgo de modelos, supervisión humana, métodos de auditoría y cumplimiento — para finanzas, salud y sector público.",
-    descriptionFr: "Checklist pratique pour l'adoption d'IA : résidence des données, risque de modèle, surveillance humaine, traces d'audit et conformité — pour les finances, la santé et le secteur public.",
-    descriptionDe: "Praktische Checkliste für KI-Einführung: Datenspeicherort, Modellrisiko, menschengemachte Aufsicht, Audit-Trails und Compliance – für Finanzen, Gesundheit und öffentliche Sector.",
-    namePt: "Checklist de Governança IA Zion",
-    nameEs: "Checklist de Gobernanza IA Zion",
-    nameFr: "Checklist de Gouvernance IA Zion",
-    nameDe: "Zion KI-Governance-Checkliste",
-    group: "govern",
-    related: ["ai-governance-checklist", "prompt-shield", "secrets-sentinel", "model-observatory", "stack-audit"],
-  },
+}
 
