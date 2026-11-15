@@ -145,6 +145,10 @@
         Math.round(estimate).toLocaleString("en-US") +
         ". Valor calculado sobre premissas informadas, nao representa economia comprovada ou garantida.";
     }
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      calculate();
+    });
     form.addEventListener("input", calculate);
     form.addEventListener("change", calculate);
     calculate();
