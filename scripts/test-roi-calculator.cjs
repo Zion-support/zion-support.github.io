@@ -11,7 +11,7 @@ vm.runInNewContext(
   { module: calculatorModule, document: undefined },
   { filename: "roi-calculator.js", timeout: 3000 }
 );
-const { calculate, formatScenarioSummary } = calculatorModule.exports;
+const { calculate, formatScenarioSummary, compareScenarios } = calculatorModule.exports;
 const root = path.join(__dirname, "..", "public");
 
 test("calculates 52/12 monthly hours and net value with transparent costs", () => {
@@ -51,6 +51,11 @@ test("all five localized pages are substantive, reciprocal and use shared assets
     for (const id of ["roiSummary", "roiCopySummary", "roiCopyStatus"]) assert.ok(html.includes('id="' + id + '"'));
     assert.match(html, /id="roiCopyStatus" role="status" aria-live="polite"/);
     assert.match(html, /id="roiSummary" rows="12" readonly/);
+    assert.match(html, /id="roiComparison" aria-describedby="roiComparisonNote"/);
+    assert.match(html, /class="compare-scroll" role="region" aria-labelledby="roiComparisonTitle" tabindex="0"/);
+    for (const index of [0, 1, 2]) {
+      for (const suffix of ["Name", "Net", "Roi", "Payback"]) assert.ok(html.includes('id="roiCompare'+index+suffix+'"'));
+    }
     for(const attr of ["data-error-prefix","data-roi-na","data-payback-na","data-payback-beyond"]) assert.ok(html.includes(attr+"="));
     assert.match(html, /href="#team"/);
     assert.match(html, /class="panel conversion"/);
@@ -147,4 +152,35 @@ test("browser-only privacy contract and truthful localized app metadata", () => 
     assert.equal(meta["@type"], "SoftwareApplication");
     assert.equal(meta.url, "https://ziontechgroup.com/" + (lang === "en" ? "" : lang + "/") + "roi-calc/");
   }
+});
+
+test("comparison scenarios preserve modeled costs and horizon", () => {
+  const scenarios = compareScenarios(baseline);
+  assert.equal(scenarios.length, 3);
+  assert.deepEqual(scenarios.map(s => s.factor), [0.5, 1, 1.25]);
+  assert.ok(Math.abs(scenarios[0].netValue - 800) < 1e-8);
+  assert.ok(Math.abs(scenarios[0].roiPercent - 44.44444444444444) < 1e-8);
+  assert.ok(Math.abs(scenarios[1].netValue - 3400) < 1e-8);
+  assert.ok(Math.abs(scenarios[2].netValue - 4700) < 1e-8);
+  assert.ok(Math.abs(scenarios[2].roiPercent - 261.1111111111111) < 1e-8);
+  for (const s of scenarios) assert.equal(s.totalCost, 1800);
+});
+test("comparison scenarios handle loss, zero costs, and invalid inputs", () => {
+  const loss = compareScenarios({...baseline, monthly:1000});
+  assert.equal(loss.length,3);
+  assert.ok(loss.every(s => s.netValue < 0 && s.paybackMonths === null));
+  assert.ok(compareScenarios({...baseline, setup:0, monthly:0}).every(s => s.roiPercent === null));
+  assert.equal(compareScenarios({...baseline, hours:0.01}), null);
+});
+test("copied summary includes sensitivity comparison when provided", () => {
+  const scenarios=compareScenarios(baseline);
+  const lines=scenarios.map((s,i)=>["Cautious","Expected","Upside"][i] + ": " + s.netValue);
+  const summary=formatScenarioSummary(baseline,calculate(baseline),{
+    ...scenarioOptions,comparisonTitle:"Sensitivity scenarios",comparisonLines:lines
+  });
+  assert.match(summary,/Sensitivity scenarios/);
+  assert.match(summary,/Cautious: 800/);
+  assert.match(summary,/Expected: 3400/);
+  assert.match(summary,/Upside: 4700/);
+  assert.match(summary,/not verified cash savings/);
 });

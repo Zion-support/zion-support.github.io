@@ -35,6 +35,27 @@
     if (paybackMonths !== null && !Number.isFinite(paybackMonths)) paybackMonths = null;
     return { recoveredHours, grossMonthly, totalCost, netValue, roiPercent, paybackMonths };
   }
+  // Sensitivity multipliers are illustrative gross capacity value factors, not forecasts.
+  const sensitivityFactors = Object.freeze([0.5, 1, 1.25]);
+  function compareScenarios(input) {
+    const baseline = calculate(input);
+    if (!baseline) return null;
+    const months = Number(input.months);
+    const monthly = Number(input.monthly);
+    const setup = Number(input.setup);
+    const comparisons = sensitivityFactors.map(factor => {
+      const grossMonthly = baseline.grossMonthly * factor;
+      const netValue = grossMonthly * months - baseline.totalCost;
+      const monthlyNet = grossMonthly - monthly;
+      let roiPercent = baseline.totalCost > 0 ? netValue / baseline.totalCost * 100 : null;
+      let paybackMonths = monthlyNet > 0 ? setup / monthlyNet : null;
+      if (![grossMonthly, netValue, monthlyNet].every(Number.isFinite)) return null;
+      if (roiPercent !== null && !Number.isFinite(roiPercent)) roiPercent = null;
+      if (paybackMonths !== null && !Number.isFinite(paybackMonths)) paybackMonths = null;
+      return { factor, grossMonthly, totalCost: baseline.totalCost, netValue, roiPercent, paybackMonths };
+    });
+    return comparisons.every(Boolean) ? comparisons : null;
+  }
   // No network calls, URL parameters or persistent storage: users explicitly opt to copy.
   function formatScenarioSummary(input, result, options) {
     if (!input || !result || !options || !Array.isArray(options.fieldLabels) ||
@@ -56,11 +77,14 @@
         number.format(payback) + " " + options.monthsUnit +
         (payback > Number(input.months) ? " (" + options.paybackBeyond + ")" : "")
     ];
+    const comparisonLines = Array.isArray(options.comparisonLines) && options.comparisonLines.length === 3 &&
+      options.comparisonLines.every(line => typeof line === "string")
+      ? ["", options.comparisonTitle || "", ...options.comparisonLines] : [];
     return [options.title, ...inputLines, options.currencyLabel + ": " + options.currency,
       "", ...options.metricLabels.map((label, i) => label + ": " + metrics[i]),
-      "", options.disclaimer].join("\n");
+      ...comparisonLines, "", options.disclaimer].join("\n");
   }
-  if (typeof module !== "undefined" && module.exports) module.exports = { calculate, formatScenarioSummary };
+  if (typeof module !== "undefined" && module.exports) module.exports = { calculate, formatScenarioSummary, compareScenarios };
   if (typeof document === "undefined") return;
   function init() {
     const form = document.getElementById("roiForm");
@@ -127,6 +151,28 @@
       put("roiPayback", payback === null ? form.dataset.paybackNa :
         number.format(payback) + " " + form.dataset.monthsUnit +
         (payback > Number(input.months) ? " (" + form.dataset.paybackBeyond + ")" : ""));
+      const comparisons = compareScenarios(input);
+      const comparisonLines = [];
+      if (comparisons) {
+        const titles = ["roiCompareNetHeader", "roiCompareRoiHeader", "roiComparePaybackHeader"]
+          .map(id => document.getElementById(id).textContent.trim());
+        for (let index = 0; index < comparisons.length; index++) {
+          const comparison = comparisons[index];
+          const prefix = "roiCompare" + index;
+          const netText = money.format(comparison.netValue);
+          const roiText = comparison.roiPercent === null ? form.dataset.roiNa :
+            number.format(comparison.roiPercent) + "%";
+          const paybackText = comparison.paybackMonths === null ? form.dataset.paybackNa :
+            number.format(comparison.paybackMonths) + " " + form.dataset.monthsUnit +
+            (comparison.paybackMonths > Number(input.months) ? " (" + form.dataset.paybackBeyond + ")" : "");
+          put(prefix + "Net", netText);
+          put(prefix + "Roi", roiText);
+          put(prefix + "Payback", paybackText);
+          const rowName = document.getElementById(prefix + "Name").textContent.trim();
+          comparisonLines.push(rowName + " | " + titles[0] + ": " + netText +
+            " | " + titles[1] + ": " + roiText + " | " + titles[2] + ": " + paybackText);
+        }
+      }
       if (summary) {
         const labelFor = element => element && element.labels && element.labels[0] ?
           element.labels[0].textContent.trim() : "";
@@ -140,6 +186,8 @@
           currencyLabel: labelFor(form.elements.namedItem("currency")),
           fieldLabels: fields.map(key => labelFor(form.elements.namedItem(key))),
           metricLabels,
+          comparisonTitle: document.getElementById("roiComparisonTitle").textContent.trim(),
+          comparisonLines,
           roiNa: form.dataset.roiNa, paybackNa: form.dataset.paybackNa,
           monthsUnit: form.dataset.monthsUnit, paybackBeyond: form.dataset.paybackBeyond
         }) || "";
