@@ -11,6 +11,7 @@ import ServiceGridWithSearch from '@/components/ServiceGridWithSearch';
 import AppsNetworkShowcase from '@/components/AppsNetworkShowcase';
 import ResultsRoiSection from '@/components/ResultsRoiSection';
 import DiscoveryBenefits from '@/components/DiscoveryBenefits';
+import MultiVendorMaintenance from '@/components/MultiVendorMaintenance';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import ContactFunnel from '@/components/ContactFunnel';
 import ServiceCounter from '@/components/ServiceCounter';
@@ -1228,6 +1229,9 @@ export default function HomePage() {
 
       {/* ── Industry benchmarks (third-party, sourced) ── */}
       <ResultsRoiSection />
+
+      {/* ── Multi-vendor maintenance ── */}
+      <MultiVendorMaintenance />
 
       {/* ── Service Search — find any of {serviceCount}+ services ── */}
       <ServiceGridWithSearch />
