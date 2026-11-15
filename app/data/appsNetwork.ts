@@ -1652,6 +1652,24 @@ export const appsNetworkCatalog: AppsNetworkApp[] = [
     group: 'ops',
     related: ['zion-ai-observability', 'field-dispatch', 'ssl-monitor'],
   },
+  {
+    slug: 'esg-compliance',
+    name: 'ESG Compliance',
+    href: '/esg-compliance/',
+    description: 'ESG reporting, ANEEL compliance, CVM disclosure, carbon accounting, CSRD readiness.',
+    descriptionPt: 'Compliance ESG: relatórios de sustentabilidade, conformidade ANEEL, divulgação CVM, contabilidade de carbono, preparação CSRD.',
+    group: 'govern',
+    related: ['ai-governance', 'itad-tracker', 'secrets-sentinel'],
+  },
+  {
+    slug: 'dc-energyservices',
+    name: 'DC Energy Services',
+    href: '/dc-energyservices/',
+    description: 'Data center energy services: electrical, fire protection, automation, commissioning, energy management.',
+    descriptionPt: 'Serviços de energia para data center: eletricidade, proteção contra incêndio, automação, commissionamento, gestão de energia.',
+    group: 'ops',
+    related: ['dc-capacity', 'cooling-eff', 'cloud-waste'],
+  },
 ] as const;
 
 export const homepageFeaturedApps = [

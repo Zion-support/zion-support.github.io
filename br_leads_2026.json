@@ -1,7 +1,7 @@
 {
   "generated": "2026-11-14",
   "source": "Web research round 3 (Mordor Intelligence, revenuebase.ai, echoglobal.tech, Oski Solutions, native sites)",
-  "total_leads": 38,
+  "total_leads": 43,
   "category": "br_leads_2026",
   "leads": [
     {
@@ -349,6 +349,51 @@
       "service": "Water supply, smart metering, IoT network monitoring, leak detection",
       "category": "Water / sanitation",
       "note": "30M people served, 375 municipalities, world's largest IoT water metering"
+    },
+    {
+      "company": "Clenergize",
+      "contact": null,
+      "domain": "clenergize.com",
+      "location": "Rio de Janeiro/RJ",
+      "service": "Solar energy consulting, ESG reporting, ANEEL compliance, ESG strategy",
+      "category": "ESG / sustainability",
+      "note": "Solar feasibility, ESG strategy, ANEEL compliance, CVM/B3 disclosure"
+    },
+    {
+      "company": "Anthesis Brazil",
+      "contact": "cristina.knapp@anthesisgroup.com",
+      "domain": "anthesisgroup.com",
+      "location": "São Paulo/SP",
+      "service": "ESG strategy, sustainability consulting, net zero transition, CSRD readiness",
+      "category": "ESG / sustainability",
+      "note": "Sustainability consulting, ESG software, climate risk analysis, SBTi alignment"
+    },
+    {
+      "company": "Mangue Tech",
+      "contact": null,
+      "domain": "mangutech.com.br",
+      "location": "Brazil (remote)",
+      "service": "ESG platform, GHG inventory, CSRD readiness, carbon credits",
+      "category": "ESG / sustainability",
+      "note": "18 deliverables, REDD+ partnership, CSRD/ESRS, ISO 14064"
+    },
+    {
+      "company": "MSE Engenharia",
+      "contact": null,
+      "domain": "mse.com.br",
+      "location": "Brazil (national)",
+      "service": "Data center electrical, fire protection, automation, commissioning",
+      "category": "Data center construction",
+      "note": "47 years experience, MV/LV electrical, fire protection, L1-L5 commissioning"
+    },
+    {
+      "company": "Engemon IT",
+      "contact": null,
+      "domain": "engemon.com",
+      "location": "Brazil (national)",
+      "service": "Data center construction, managed services, field service, NOC, monitoring",
+      "category": "Data center / managed services",
+      "note": "35 years experience, 600+ projects, managed services, NOC, monitoring"
     }
   ]
 }
