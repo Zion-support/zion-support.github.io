@@ -127,3 +127,24 @@ test("invalid summary options are rejected",()=>{
  assert.equal(formatScenarioSummary(baseline,calculate(baseline),{...scenarioOptions,currency:"ABC"}),null);
  assert.equal(formatScenarioSummary(baseline,calculate(baseline),{...scenarioOptions,fieldLabels:[]}),null);
 });
+
+
+test("browser-only privacy contract and truthful localized app metadata", () => {
+  const js = fs.readFileSync(path.join(root, "assets/js/roi-calculator.js"), "utf8");
+  for (const api of [
+    /\bfetch\s*\(/, /\bXMLHttpRequest\b/, /\bWebSocket\b/,
+    /\bsendBeacon\b/, /\blocalStorage\b/, /\bsessionStorage\b/, /\bindexedDB\b/
+  ]) assert.doesNotMatch(js, api, "Scenario data must remain local to the browser");
+  for (const lang of ["en", "pt", "es", "fr", "de"]) {
+    const file = path.join(root, lang === "en" ? "roi-calc" : lang + "/roi-calc", "index.html");
+    const html = fs.readFileSync(file, "utf8");
+    assert.doesNotMatch(html, /<form[^>]*\baction=/i, file + " must not submit assumptions");
+    const scripts = [...html.matchAll(/<script[^>]+src="([^"]+)"/g)].map(x => x[1]);
+    assert.deepEqual(scripts, ["/assets/js/roi-calculator.js"]);
+    const ld = html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/);
+    assert.ok(ld, file + " structured data");
+    const meta = JSON.parse(ld[1]);
+    assert.equal(meta["@type"], "SoftwareApplication");
+    assert.equal(meta.url, "https://ziontechgroup.com/" + (lang === "en" ? "" : lang + "/") + "roi-calc/");
+  }
+});
