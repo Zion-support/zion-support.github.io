@@ -7,3 +7,4 @@
 .faq details p{margin:.5rem 0 .25rem}
 .buttonlink{display:inline-block;padding:12px 18px;border:1px solid #a9b7db;border-radius:11px;background:#213d64;color:#fff;text-decoration:none;font-weight:700}
 .buttonlink:hover{background:#2b5187;text-decoration:underline}
+.field input[aria-invalid="true"]{border-color:#e8ca80;box-shadow:0 0 0 1px #e8ca80}

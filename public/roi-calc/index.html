@@ -18,7 +18,7 @@
 <script defer src="/assets/js/roi-calculator.js"></script>
 </head>
 <body>
-<a class="skip" href="#roiForm">Skip to calculator</a>
+<a class="skip" href="#team">Skip to calculator</a>
 <header><div class="wrap bar"><a class="brand" href="/">Zion Tech Group</a><nav class="langs" aria-label="Languages"><a href="/roi-calc/" hreflang="en" aria-current="page">EN</a> <a href="/pt/roi-calc/" hreflang="pt-BR">PT</a> <a href="/es/roi-calc/" hreflang="es">ES</a> <a href="/fr/roi-calc/" hreflang="fr">FR</a> <a href="/de/roi-calc/" hreflang="de">DE</a></nav></div></header>
 <main class="wrap">
 <section class="hero">
@@ -30,14 +30,14 @@
 <section class="panel" aria-labelledby="method-title"><h2 id="method-title">How this model works</h2><p class="note">Monthly recovered hours = team members × hours saved per person per week × 52 ÷ 12. Gross monthly capacity value = hours × fully loaded hourly cost. Net scenario value = gross value across the selected period minus setup and recurring costs.</p></section>
 <section class="panel" aria-labelledby="assumptions-title">
 <h2 id="assumptions-title">Your assumptions</h2>
-<form id="roiForm" novalidate data-prompt="Enter a team size, weekly hours and hourly cost above zero to see an estimate." data-ready="Estimates updated from your assumptions." data-na="Not reached / undefined" data-months-unit="months">
+<form id="roiForm" novalidate data-prompt="Complete all six numeric fields; enter zero for costs that do not apply." data-ready="Estimates updated from your assumptions." data-roi-na="Undefined" data-payback-na="Not reached" data-payback-beyond="beyond selected period" data-error-prefix="Check this field:" data-error-integer="whole numbers only" data-months-unit="months">
 <div class="fields"><div class="field"><label for="team">Team members</label><input id="team" name="team" type="number" inputmode="decimal" min="1" max="100000" step="1" placeholder="4" required></div>
 <div class="field"><label for="hours">Hours saved per person / week</label><input id="hours" name="hours" type="number" inputmode="decimal" min="0.1" max="168" step="any" placeholder="2" required></div>
 <div class="field"><label for="rate">Fully loaded hourly cost</label><input id="rate" name="rate" type="number" inputmode="decimal" min="0.01" max="1000000" step="any" placeholder="35" required></div>
-<div class="field"><label for="monthly">Monthly operating cost</label><input id="monthly" name="monthly" type="number" inputmode="decimal" min="0" max="1000000000" step="any" value="0"></div>
-<div class="field"><label for="setup">One-time setup cost</label><input id="setup" name="setup" type="number" inputmode="decimal" min="0" max="1000000000" step="any" value="0"></div>
-<div class="field"><label for="months">Evaluation period (months)</label><input id="months" name="months" type="number" inputmode="decimal" min="1" max="120" step="1" value="12"></div><div class="field"><label for="currency">Currency (no exchange conversion)</label><select id="currency" name="currency"><option value="USD" selected>USD</option><option value="BRL">BRL</option><option value="EUR">EUR</option></select></div></div>
-<p class="note">Currency changes the label only; amounts are not converted.</p><div class="actions"><button type="reset">Clear assumptions</button><p id="roiStatus" role="status" aria-live="polite">Enter a team size, weekly hours and hourly cost above zero to see an estimate.</p></div>
+<div class="field"><label for="monthly">Monthly operating cost</label><input id="monthly" name="monthly" type="number" inputmode="decimal" min="0" max="1000000000" step="any" value="0" required></div>
+<div class="field"><label for="setup">One-time setup cost</label><input id="setup" name="setup" type="number" inputmode="decimal" min="0" max="1000000000" step="any" value="0" required></div>
+<div class="field"><label for="months">Evaluation period (months)</label><input id="months" name="months" type="number" inputmode="decimal" min="1" max="120" step="1" value="12" required></div><div class="field"><label for="currency">Currency (no exchange conversion)</label><select id="currency" name="currency"><option value="USD" selected>USD</option><option value="BRL">BRL</option><option value="EUR">EUR</option></select></div></div>
+<p class="note">Enter all monetary amounts in the selected currency. Changing currency only changes the display; no exchange rates are applied.</p><div class="actions"><button type="reset">Clear assumptions</button><p id="roiStatus" role="status" aria-live="polite">Complete all six numeric fields; enter zero for costs that do not apply.</p></div>
 </form>
 </section>
 <section id="roiResults" class="panel" aria-labelledby="results-title" hidden><h2 id="results-title">Illustrative scenario</h2><div class="metrics"><div class="metric"><span>Hours recovered per month</span><output id="roiHours">—</output></div>
@@ -47,7 +47,7 @@
 <div class="metric"><span>ROI over period</span><output id="roiPercent">—</output></div>
 <div class="metric"><span>Setup payback period</span><output id="roiPayback">—</output></div></div></section>
 <p class="warning">Capacity value is not automatically realized cash savings. This is a scenario, not a quote, guaranteed return or approved business case.</p>
-<section class="panel" aria-labelledby="related-title"><h2 id="related-title">Explore connected tools</h2><p class="note">Validate cost drivers and risk before deciding whether to fund a pilot.</p><nav class="related" aria-label="Explore connected tools"><a href="/apps-network/">Apps Network</a><a href="/finops-estimator/">FinOps Estimator</a><a href="/token-cost/">Token Cost</a><a href="/cloud-waste/">Cloud Waste</a></nav></section>
+<section class="panel" aria-labelledby="related-title"><h2 id="related-title">Explore connected tools</h2><p class="note">Validate cost drivers and risk before deciding whether to fund a pilot.</p><nav class="related" aria-label="Explore connected tools"><a href="/apps-network/">Apps Network</a><a href="/cloud-cost-estimator/">Cloud Cost Estimator</a><a href="/token-cost/">Token Cost</a><a href="/cloud-waste/">Cloud Waste</a></nav></section>
 <section class="panel faq" aria-labelledby="faq-title"><h2 id="faq-title">Interpreting this estimate</h2>
 <details><summary>Is recovered time the same as cash saved?</summary><p class="note">No. Recovered capacity has value, but cash savings require a verified reduction in spending or a measurable business outcome.</p></details>
 <details><summary>What does the setup payback figure mean?</summary><p class="note">Setup cost divided by positive monthly net capacity value. If the scenario has no positive monthly net, payback is undefined.</p></details>

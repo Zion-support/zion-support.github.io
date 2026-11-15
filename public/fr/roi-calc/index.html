@@ -18,8 +18,8 @@
 <script defer src="/assets/js/roi-calculator.js"></script>
 </head>
 <body>
-<a class="skip" href="#roiForm">Aller au calculateur</a>
-<header><div class="wrap bar"><a class="brand" href="/fr/">Zion Tech Group</a><nav class="langs" aria-label="Languages"><a href="/roi-calc/" hreflang="en">EN</a> <a href="/pt/roi-calc/" hreflang="pt-BR">PT</a> <a href="/es/roi-calc/" hreflang="es">ES</a> <a href="/fr/roi-calc/" hreflang="fr" aria-current="page">FR</a> <a href="/de/roi-calc/" hreflang="de">DE</a></nav></div></header>
+<a class="skip" href="#team">Aller au calculateur</a>
+<header><div class="wrap bar"><a class="brand" href="/fr/">Zion Tech Group</a><nav class="langs" aria-label="Langues"><a href="/roi-calc/" hreflang="en">EN</a> <a href="/pt/roi-calc/" hreflang="pt-BR">PT</a> <a href="/es/roi-calc/" hreflang="es">ES</a> <a href="/fr/roi-calc/" hreflang="fr" aria-current="page">FR</a> <a href="/de/roi-calc/" hreflang="de">DE</a></nav></div></header>
 <main class="wrap">
 <section class="hero">
 <p class="eyebrow">Outil local dans le navigateur</p>
@@ -30,14 +30,14 @@
 <section class="panel" aria-labelledby="method-title"><h2 id="method-title">Méthode de calcul</h2><p class="note">Heures récupérées par mois = personnes × heures gagnées par personne et par semaine × 52 ÷ 12. Valeur brute mensuelle = heures × coût horaire chargé. Valeur nette = valeur brute sur la période moins mise en place et coûts récurrents.</p></section>
 <section class="panel" aria-labelledby="assumptions-title">
 <h2 id="assumptions-title">Vos hypothèses</h2>
-<form id="roiForm" novalidate data-prompt="Saisissez un effectif, des heures et un coût horaire supérieurs à zéro." data-ready="Estimations mises à jour à partir de vos hypothèses." data-na="Non atteint / indéfini" data-months-unit="mois">
+<form id="roiForm" novalidate data-prompt="Renseignez les six champs numériques ; indiquez zéro pour les coûts non applicables." data-ready="Estimations mises à jour à partir de vos hypothèses." data-roi-na="Indéfini" data-payback-na="Non atteint" data-payback-beyond="au-delà de la période choisie" data-error-prefix="Vérifiez ce champ :" data-error-integer="nombres entiers uniquement" data-months-unit="mois">
 <div class="fields"><div class="field"><label for="team">Personnes dans l'équipe</label><input id="team" name="team" type="number" inputmode="decimal" min="1" max="100000" step="1" placeholder="4" required></div>
 <div class="field"><label for="hours">Heures gagnées par personne / semaine</label><input id="hours" name="hours" type="number" inputmode="decimal" min="0.1" max="168" step="any" placeholder="2" required></div>
 <div class="field"><label for="rate">Coût horaire chargé</label><input id="rate" name="rate" type="number" inputmode="decimal" min="0.01" max="1000000" step="any" placeholder="35" required></div>
-<div class="field"><label for="monthly">Coût d'exploitation mensuel</label><input id="monthly" name="monthly" type="number" inputmode="decimal" min="0" max="1000000000" step="any" value="0"></div>
-<div class="field"><label for="setup">Coût initial de mise en place</label><input id="setup" name="setup" type="number" inputmode="decimal" min="0" max="1000000000" step="any" value="0"></div>
-<div class="field"><label for="months">Période d'évaluation (mois)</label><input id="months" name="months" type="number" inputmode="decimal" min="1" max="120" step="1" value="12"></div><div class="field"><label for="currency">Devise (sans conversion)</label><select id="currency" name="currency"><option value="USD">USD</option><option value="BRL">BRL</option><option value="EUR" selected>EUR</option></select></div></div>
-<p class="note">La devise ne modifie que l'étiquette ; aucun montant n'est converti.</p><div class="actions"><button type="reset">Effacer les hypothèses</button><p id="roiStatus" role="status" aria-live="polite">Saisissez un effectif, des heures et un coût horaire supérieurs à zéro.</p></div>
+<div class="field"><label for="monthly">Coût d'exploitation mensuel</label><input id="monthly" name="monthly" type="number" inputmode="decimal" min="0" max="1000000000" step="any" value="0" required></div>
+<div class="field"><label for="setup">Coût initial de mise en place</label><input id="setup" name="setup" type="number" inputmode="decimal" min="0" max="1000000000" step="any" value="0" required></div>
+<div class="field"><label for="months">Période d'évaluation (mois)</label><input id="months" name="months" type="number" inputmode="decimal" min="1" max="120" step="1" value="12" required></div><div class="field"><label for="currency">Devise (sans conversion)</label><select id="currency" name="currency"><option value="USD">USD</option><option value="BRL">BRL</option><option value="EUR" selected>EUR</option></select></div></div>
+<p class="note">Saisissez tous les montants dans la devise sélectionnée. Le changement de devise ne modifie que l'affichage, sans conversion automatique.</p><div class="actions"><button type="reset">Effacer les hypothèses</button><p id="roiStatus" role="status" aria-live="polite">Renseignez les six champs numériques ; indiquez zéro pour les coûts non applicables.</p></div>
 </form>
 </section>
 <section id="roiResults" class="panel" aria-labelledby="results-title" hidden><h2 id="results-title">Scénario indicatif</h2><div class="metrics"><div class="metric"><span>Heures récupérées par mois</span><output id="roiHours">—</output></div>

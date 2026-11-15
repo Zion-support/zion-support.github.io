@@ -47,10 +47,43 @@ test("all five localized pages are substantive, reciprocal and use shared assets
     assert.match(html, /assets\/css\/roi-calculator\.css/);
     assert.match(html, /rel="canonical"/);
     assert.match(html, /data-months-unit=/);
+    for(const attr of ["data-error-prefix","data-roi-na","data-payback-na","data-payback-beyond"]) assert.ok(html.includes(attr+"="));
+    assert.match(html, /href="#team"/);
+    assert.match(html, /class="panel conversion"/);
+    assert.match(html, /<details>/);
+    const nav = {en:"Languages",pt:"Idiomas",es:"Idiomas",fr:"Langues",de:"Sprachen"}[lang];
+    assert.ok(html.includes('aria-label="'+nav+'"'));
+    assert.ok(html.includes('href="/discovery/"'));
+    for(const name of ["monthly","setup","months"]) {
+      const input=html.match(new RegExp('<input\\b[^>]*\\bname="'+name+'"[^>]*>'));
+      assert.ok(input && /\brequired\b/.test(input[0]),lang+" "+name);
+    }
     assert.match(html, /<details>/);
     assert.ok(html.includes('href="/discovery/"'));
     assert.match(html, /class="panel conversion"/);
     for (const link of routes) assert.ok(html.includes("https://ziontechgroup.com" + link), file + " missing " + link);
     assert.equal((html.match(/rel="alternate" hreflang=/g) || []).length, 6);
   }
+});
+
+const baseline={team:4,hours:1,rate:25,monthly:100,setup:600,months:12};
+const near=(x,y)=>assert.ok(Math.abs(x-y)<1e-8, x+" != "+y);
+test("high costs, insufficient benefit and horizons",()=>{
+for(const [input,cost,net,roi,payback] of [
+  [{...baseline,months:1},700,-266.66666666666663,-38.09523809523809,1.8],
+  [{...baseline,months:24},3000,7400,246.66666666666666,1.8],
+  [{...baseline,months:120},12600,39400,312.6984126984127,1.8],
+  [{...baseline,monthly:1000},12600,-7400,-58.73015873015873,null],
+  [{team:1,hours:0.1,rate:1,monthly:10,setup:100,months:12},220,-214.8,-97.63636363636364,null]
+]) {
+const r=calculate(input);assert.equal(r.totalCost,cost);near(r.netValue,net);near(r.roiPercent,roi);
+if(payback===null)assert.equal(r.paybackMonths,null);else near(r.paybackMonths,payback);
+}});
+test("reject HTML-out-of-range and malformed inputs",()=>{
+for(const over of [{hours:0.05},{rate:0.001},{team:1.5},{team:false},{monthly:-1},{months:0},{hours:" "},{rate:"0x10"}])
+assert.equal(calculate({...baseline,...over}),null,JSON.stringify(over));
+});
+test("zero-denominator and numeric overflow do not display Infinity",()=>{
+const free=calculate({...baseline,monthly:0,setup:0});assert.equal(free.roiPercent,null);
+const tiny=calculate({...baseline,monthly:0,setup:1e-308});assert.equal(tiny.roiPercent,null);
 });
