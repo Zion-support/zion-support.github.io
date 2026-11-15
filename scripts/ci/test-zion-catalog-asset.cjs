@@ -27,3 +27,68 @@ const fakeDocument = {
 };
 vm.runInNewContext(source, {document: fakeDocument, console}, {timeout:1000});
 console.log('PASS: first-party links, no paid Discovery, parseable JS, no global DOM injection.');
+
+
+// Isolated DOM model: assert a FinOps form neither navigates nor sends data,
+// and the local estimate responds to input with bounded arithmetic.
+const byId = new Map();
+class Node {
+  constructor(tag) {
+    this.tagName = tag;
+    this.children = [];
+    this.listeners = {};
+    this.textContent = '';
+    this.value = '';
+  }
+  set id(value) { this._id = value; byId.set(value, this); }
+  get id() { return this._id; }
+  appendChild(child) { this.children.push(child); return child; }
+  addEventListener(event, fn) { (this.listeners[event] ||= []).push(fn); }
+  setAttribute(name, value) { this[name] = value; }
+}
+const host = new Node('section');
+host.id = 'finops-estimator';
+const dom = {
+  readyState: 'complete',
+  getElementById: id => byId.get(id) || null,
+  createElement: tag => new Node(tag)
+};
+class LocalFormData {
+  constructor(form) {
+    this.values = new Map();
+    function walk(node, target) {
+      if (node.name) target.set(node.name, node.value);
+      for (const child of node.children) walk(child, target);
+    }
+    walk(form, this.values);
+  }
+  get(name) { return this.values.get(name); }
+}
+vm.runInNewContext(source, {document: dom, FormData: LocalFormData, console}, {timeout:1000});
+const form = byId.get('finops-form'), output = byId.get('finops-out');
+assert.ok(form && output, 'Optional FinOps host must initialize an offline calculator');
+function walk(node, results=[]) {
+  if (node.name) results.push(node);
+  for (const child of node.children) walk(child, results);
+  return results;
+}
+const fields = Object.fromEntries(walk(form).map(node=>[node.name,node]));
+assert.deepEqual(Object.keys(fields).sort(),['hours','idle','rate','spend']);
+fields.spend.value = '1000';
+fields.idle.value = '20';
+fields.hours.value = '2';
+fields.rate.value = '50';
+assert.equal(form.listeners.input.length,1);
+form.listeners.input[0]();
+assert.match(output.textContent,/USD 3,600\b/);
+assert.match(output.textContent,/nao representa economia comprovada ou garantida/);
+let blocked = false;
+assert.equal(form.listeners.submit.length,1,'Implicit form submit must be intercepted');
+form.listeners.submit[0]({preventDefault() {blocked = true;}});
+assert.equal(blocked,true,'Form must not submit a GET request with customer inputs');
+fields.spend.value = '-100';
+fields.hours.value = '-2';
+fields.idle.value = '0';
+form.listeners.input[0]();
+assert.match(output.textContent,/USD 0\b/);
+console.log('PASS: offline FinOps interaction, bounded example, prevented submit and zero network');
