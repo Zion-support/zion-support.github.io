@@ -1,0 +1,70 @@
+{
+  "session_id": "2026-11-14",
+  "timestamp": "2026-11-14T20:00:00Z",
+  "status": "IMPLEMENTATION_IN_PROGRESS",
+  "website": {
+    "approved_content": "MERGED_to_origin/main",
+    "growth_pages": "MERGED_to_origin/main",
+    "city_pages": ["sp", "rj", "curitiba", "belo-horizonte", "salvador", "fortaleza"],
+    "case_study_page": "public/services/cases/index.html",
+    "catalog_fix": "MERGED_to_origin/main",
+    "deploy_hold": "active"
+  },
+  "incident": {
+    "name": "35-send incident (2026-11-06)",
+    "status": "CONTAINED_NOT_RESOLVED",
+    "pause": "EM VALOR",
+    "crons_paused": 7,
+    "sends_executed": 0,
+    "test_send": false,
+    "new_sendgrid_connection": false,
+    "global_origin_containment": "PENDING",
+    "evidence_delivered_to_comms": true
+  },
+  "lead_outreach": {
+    "campaign": "brazil-strategic-outreach-20261106",
+    "leads_registered": 15,
+    "leads_activated": 0,
+    "sendgrid_authorization": "PENDING",
+    "external_sends": "NOT_executed",
+    "incident_leads_paused": true
+  },
+  "editorial": {
+    "campaign": "8-card catalog review",
+    "routes_preserved": 8,
+    "publication": "NONE",
+    "new_versions": "NONE"
+  },
+  "bridge_chain": {
+    "commit": "40c41e6b97c50e26c835737938dc0dfe7db8d0e1",
+    "bridge_py_sha256": "15e6aa712e17f7363483b88ba7a634746f1ddfafa5a68a89d0bd4c2bb2abe12e",
+    "read_events": {
+      "README.md": "5f180303f1727969eba3b93eea397726d4556562",
+      "github_bridge/state.json": "fd24eb119b37114f66be5293bb3de273cca40b24"
+    },
+    "register_event": "content-publisher-github-register-20261114-v1 (seq 47)",
+    "capability_post": "content-publisher-github-capability-20261114-v1 (seq 48)",
+    "native_readiness_post": "content-publisher-github-native-readiness-20261114-v1 (seq 66)"
+  },
+  "actions_completed_20261114": [
+    "Website content (approved + growth) merged to origin/main",
+    "Catalog JSON fixed (29,121 items, valid)",
+    "Growth pages (6 Brazilian city pages + case-studies) merged to origin/main",
+    "Incident containment verified (7/7 crons paused, 0 sends)"
+  ],
+  "pending": [
+    "Deploy hold (active) - content not yet live",
+    "Notion War Room update (new session record)",
+    "Memory update (new session record)",
+    "Lead generation (new leads from web research)",
+    "Apps network consolidation",
+    "GitHub Actions fix (deploy hold)"
+  ],
+  "notable_records": {
+    "approved_content_commit": "69f8b2d9af0",
+    "catalog_fix_commit": "c39661405b4",
+    "growth_pages_commit": "59f4d2356ba",
+    "deploy_on_push_commit": "14fbb3e44e",
+    "apps_network_commit": "913-additions (PR #71945)"
+  }
+}

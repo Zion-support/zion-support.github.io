@@ -14,7 +14,7 @@ NEW_SERVICES = [
     "features": ["Online appointment scheduling", "Automated SMS/email reminders", "Telehealth integration", "Patient portal with records access", "Post-visit surveys", "Prescription refill requests", "Secure messaging with providers", "HIPAA-compliant messaging"],
     "benefits": ["Reduce no-shows by 40%", "Improve patient satisfaction scores", "Automate administrative tasks", "Increase patient retention"],
     "pricing": {"basic": "$499/mo", "pro": "$1,499/mo", "enterprise": "Custom"},
-    "contactInfo": {"website": "/services/healthcare-patient-engagement-platform", "email": "kleber@ziontechgroup.com", "phone": "+1 302 464 0950"},
+    "contactInfo": {"website": "/services/healthcare-patient-engagement-platform", "email": "kleber@ziontechgroup.com", "phone": "+55 11 97614-0076"},
     "icon": "🏥", "href": "/services/healthcare-patient-engagement-platform", "popular": True, "category": "healthcare-it", "industry": "Healthcare"
   },
   {
@@ -24,7 +24,7 @@ NEW_SERVICES = [
     "features": ["Evidence-based treatment suggestions", "Drug interaction alerts", "Clinical guideline integration", "Patient risk stratification", "EHR integration (Epic, Cerner)", "Lab result interpretation", "Clinical trial matching", "Physician workflow integration"],
     "benefits": ["Reduce diagnostic errors by 30%", "Improve treatment outcomes", "Stay current with medical literature", "Enhance clinical efficiency"],
     "pricing": {"basic": "$1,999/mo", "pro": "$5,999/mo", "enterprise": "Custom"},
-    "contactInfo": {"website": "/services/healthcare-clinical-decision-support", "email": "kleber@ziontechgroup.com", "phone": "+1 302 464 0950"},
+    "contactInfo": {"website": "/services/healthcare-clinical-decision-support", "email": "kleber@ziontechgroup.com", "phone": "+55 11 97614-0076"},
     "icon": "🩺", "href": "/services/healthcare-clinical-decision-support", "popular": False, "category": "healthcare-it", "industry": "Healthcare"
   },
   {
@@ -34,7 +34,7 @@ NEW_SERVICES = [
     "features": ["Automated medical coding (ICD-10, CPT)", "Electronic claims submission", "Denial prediction and prevention", "Payment reconciliation", "Patient cost estimation", "Prior authorization automation", "Compliance reporting", "Integration with billing systems"],
     "benefits": ["Reduce claim denials by 50%", "Accelerate payment cycles", "Improve coding accuracy", "Increase revenue capture"],
     "pricing": {"basic": "$2,499/mo", "pro": "$7,499/mo", "enterprise": "Custom"},
-    "contactInfo": {"website": "/services/healthcare-revenue-cycle-management", "email": "kleber@ziontechgroup.com", "phone": "+1 302 464 0950"},
+    "contactInfo": {"website": "/services/healthcare-revenue-cycle-management", "email": "kleber@ziontechgroup.com", "phone": "+55 11 97614-0076"},
     "icon": "💰", "href": "/services/healthcare-revenue-cycle-management", "popular": False, "category": "healthcare-it", "industry": "Healthcare"
   },
 
@@ -46,7 +46,7 @@ NEW_SERVICES = [
     "features": ["Real-time transaction monitoring", "Suspicious activity detection (AI)", "Customer due diligence (CDD/EDD)", "Sanctions screening", "SAR filing automation", "Risk scoring models", "Regulatory reporting", "Audit trail and documentation"],
     "benefits": ["Reduce false positives by 60%", "Automate compliance reporting", "Meet regulatory requirements", "Reduce compliance costs"],
     "pricing": {"basic": "$2,999/mo", "pro": "$8,999/mo", "enterprise": "Custom"},
-    "contactInfo": {"website": "/services/fintech-aml-compliance-platform", "email": "kleber@ziontechgroup.com", "phone": "+1 302 464 0950"},
+    "contactInfo": {"website": "/services/fintech-aml-compliance-platform", "email": "kleber@ziontechgroup.com", "phone": "+55 11 97614-0076"},
     "icon": "🏦", "href": "/services/fintech-aml-compliance-platform", "popular": True, "category": "fintech", "industry": "Finance"
   },
   {
@@ -56,7 +56,7 @@ NEW_SERVICES = [
     "features": ["PSD2-compliant APIs", "Consent management", "Account aggregation", "Payment initiation", "Third-party provider management", "Strong customer authentication", "API analytics and reporting", "Sandbox environment"],
     "benefits": ["Enable open banking partnerships", "PSD2 compliance", "New revenue streams from APIs", "Enhanced customer experience"],
     "pricing": {"basic": "$1,999/mo", "pro": "$5,999/mo", "enterprise": "Custom"},
-    "contactInfo": {"website": "/services/fintech-open-banking-platform", "email": "kleber@ziontechgroup.com", "phone": "+1 302 464 0950"},
+    "contactInfo": {"website": "/services/fintech-open-banking-platform", "email": "kleber@ziontechgroup.com", "phone": "+55 11 97614-0076"},
     "icon": "🔓", "href": "/services/fintech-open-banking-platform", "popular": False, "category": "fintech", "industry": "Finance"
   },
   {
@@ -66,7 +66,7 @@ NEW_SERVICES = [
     "features": ["Alternative data analysis", "ML-based credit scoring", "Bank transaction analysis", "Behavioral scoring", "Explainable AI decisions", "Fair lending compliance", "API for loan origination", "Model monitoring and validation"],
     "benefits": ["Expand credit access to underbanked", "Reduce default rates by 25%", "Faster credit decisions", "Regulatory compliance"],
     "pricing": {"basic": "$1,499/mo", "pro": "$4,499/mo", "enterprise": "Custom"},
-    "contactInfo": {"website": "/services/fintech-credit-scoring-engine", "email": "kleber@ziontechgroup.com", "phone": "+1 302 464 0950"},
+    "contactInfo": {"website": "/services/fintech-credit-scoring-engine", "email": "kleber@ziontechgroup.com", "phone": "+55 11 97614-0076"},
     "icon": "📊", "href": "/services/fintech-credit-scoring-engine", "popular": False, "category": "fintech", "industry": "Finance"
   },
 
@@ -78,7 +78,7 @@ NEW_SERVICES = [
     "features": ["Demand forecasting by SKU and location", "Automatic purchase orders", "Markdown optimization", "Omnichannel inventory visibility", "Seasonal trend analysis", "Supplier lead time optimization", "Dead stock identification", "Integration with POS and ERP"],
     "benefits": ["Reduce stockouts by 45%", "Decrease excess inventory by 30%", "Optimize markdown timing", "Improve inventory turnover"],
     "pricing": {"basic": "$799/mo", "pro": "$2,499/mo", "enterprise": "Custom"},
-    "contactInfo": {"website": "/services/retail-inventory-optimization", "email": "kleber@ziontechgroup.com", "phone": "+1 302 464 0950"},
+    "contactInfo": {"website": "/services/retail-inventory-optimization", "email": "kleber@ziontechgroup.com", "phone": "+55 11 97614-0076"},
     "icon": "🛍️", "href": "/services/retail-inventory-optimization", "popular": True, "category": "retail-tech", "industry": "Retail"
   },
   {
@@ -88,7 +88,7 @@ NEW_SERVICES = [
     "features": ["Real-time product recommendations", "Personalized search results", "Dynamic pricing optimization", "Customer segmentation", "A/B testing framework", "Cross-sell and upsell engine", "Email personalization", "In-store beacon integration"],
     "benefits": ["Increase conversion by 25%", "Improve average order value", "Enhance customer loyalty", "Unified personalization across channels"],
     "pricing": {"basic": "$599/mo", "pro": "$1,799/mo", "enterprise": "Custom"},
-    "contactInfo": {"website": "/services/retail-personalization-engine", "email": "kleber@ziontechgroup.com", "phone": "+1 302 464 0950"},
+    "contactInfo": {"website": "/services/retail-personalization-engine", "email": "kleber@ziontechgroup.com", "phone": "+55 11 97614-0076"},
     "icon": "🎯", "href": "/services/retail-personalization-engine", "popular": False, "category": "retail-tech", "industry": "Retail"
   },
   {
@@ -98,7 +98,7 @@ NEW_SERVICES = [
     "features": ["Real-time video analytics", "Shoplifting detection", "Employee theft detection", "Self-checkout monitoring", "POS exception detection", "Heatmap analytics", "Integration with existing CCTV", "Alert management dashboard"],
     "benefits": ["Reduce shrinkage by 35%", "Real-time theft alerts", "Improve store safety", "Data-driven loss prevention"],
     "pricing": {"basic": "$999/mo", "pro": "$2,999/mo", "enterprise": "Custom"},
-    "contactInfo": {"website": "/services/retail-loss-prevention-system", "email": "kleber@ziontechgroup.com", "phone": "+1 302 464 0950"},
+    "contactInfo": {"website": "/services/retail-loss-prevention-system", "email": "kleber@ziontechgroup.com", "phone": "+55 11 97614-0076"},
     "icon": "🔒", "href": "/services/retail-loss-prevention-system", "popular": False, "category": "retail-tech", "industry": "Retail"
   },
 
@@ -110,7 +110,7 @@ NEW_SERVICES = [
     "features": ["Real-time defect detection", "Dimensional measurement", "Surface inspection", "Assembly verification", "Statistical process control", "Integration with PLC/SCADA", "Custom model training", "Defect trend analytics"],
     "benefits": ["Reduce defect escape rate by 90%", "Eliminate manual inspection", "Improve product quality", "Reduce warranty costs"],
     "pricing": {"basic": "$2,999/mo", "pro": "$7,999/mo", "enterprise": "Custom"},
-    "contactInfo": {"website": "/services/manufacturing-quality-inspection", "email": "kleber@ziontechgroup.com", "phone": "+1 302 464 0950"},
+    "contactInfo": {"website": "/services/manufacturing-quality-inspection", "email": "kleber@ziontechgroup.com", "phone": "+55 11 97614-0076"},
     "icon": "🔍", "href": "/services/manufacturing-quality-inspection", "popular": True, "category": "manufacturing-tech", "industry": "Manufacturing"
   },
   {
@@ -120,7 +120,7 @@ NEW_SERVICES = [
     "features": ["Constraint-based scheduling", "Multi-site optimization", "Changeover minimization", "What-if scenario planning", "Real-time schedule adjustment", "Integration with MES/ERP", "Resource utilization analytics", "On-time delivery tracking"],
     "benefits": ["Improve on-time delivery by 25%", "Reduce changeover time by 30%", "Optimize resource utilization", "Handle complex scheduling constraints"],
     "pricing": {"basic": "$1,999/mo", "pro": "$5,999/mo", "enterprise": "Custom"},
-    "contactInfo": {"website": "/services/manufacturing-production-scheduling", "email": "kleber@ziontechgroup.com", "phone": "+1 302 464 0950"},
+    "contactInfo": {"website": "/services/manufacturing-production-scheduling", "email": "kleber@ziontechgroup.com", "phone": "+55 11 97614-0076"},
     "icon": "📅", "href": "/services/manufacturing-production-scheduling", "popular": False, "category": "manufacturing-tech", "industry": "Manufacturing"
   },
   {
@@ -130,7 +130,7 @@ NEW_SERVICES = [
     "features": ["Real-time energy monitoring", "Peak demand management", "Energy consumption forecasting", "Equipment efficiency analysis", "Carbon footprint tracking", "Integration with smart meters", "Energy cost optimization", "Sustainability reporting"],
     "benefits": ["Reduce energy costs by 20-35%", "Meet sustainability targets", "Optimize peak demand charges", "Improve equipment efficiency"],
     "pricing": {"basic": "$999/mo", "pro": "$2,999/mo", "enterprise": "Custom"},
-    "contactInfo": {"website": "/services/manufacturing-energy-management", "email": "kleber@ziontechgroup.com", "phone": "+1 302 464 0950"},
+    "contactInfo": {"website": "/services/manufacturing-energy-management", "email": "kleber@ziontechgroup.com", "phone": "+55 11 97614-0076"},
     "icon": "⚡", "href": "/services/manufacturing-energy-management", "popular": False, "category": "manufacturing-tech", "industry": "Manufacturing"
   },
 
@@ -142,7 +142,7 @@ NEW_SERVICES = [
     "features": ["Adaptive learning paths", "AI content recommendations", "Automated grading and feedback", "Learning analytics dashboard", "Video lecture with AI summaries", "Discussion forum with AI moderation", "SCORM/xAPI compliance", "Mobile learning app"],
     "benefits": ["Improve learning outcomes by 30%", "Reduce instructor workload", "Personalized learning at scale", "Data-driven education decisions"],
     "pricing": {"basic": "$399/mo", "pro": "$1,299/mo", "enterprise": "Custom"},
-    "contactInfo": {"website": "/services/edtech-learning-management-system", "email": "kleber@ziontechgroup.com", "phone": "+1 302 464 0950"},
+    "contactInfo": {"website": "/services/edtech-learning-management-system", "email": "kleber@ziontechgroup.com", "phone": "+55 11 97614-0076"},
     "icon": "🎓", "href": "/services/edtech-learning-management-system", "popular": True, "category": "edtech", "industry": "Education"
   },
   {
@@ -152,7 +152,7 @@ NEW_SERVICES = [
     "features": ["Physics simulations", "Chemistry lab simulations", "Biology virtual dissections", "Engineering design tools", "Collaborative experiments", "Assessment and grading integration", "VR/AR support", "Curriculum alignment"],
     "benefits": ["Enable remote STEM education", "Reduce lab costs by 70%", "Safe experimentation environment", "Unlimited experiment repetitions"],
     "pricing": {"basic": "$299/mo", "pro": "$899/mo", "enterprise": "Custom"},
-    "contactInfo": {"website": "/services/edtech-virtual-lab-platform", "email": "kleber@ziontechgroup.com", "phone": "+1 302 464 0950"},
+    "contactInfo": {"website": "/services/edtech-virtual-lab-platform", "email": "kleber@ziontechgroup.com", "phone": "+55 11 97614-0076"},
     "icon": "🧪", "href": "/services/edtech-virtual-lab-platform", "popular": False, "category": "edtech", "industry": "Education"
   },
   {
@@ -162,7 +162,7 @@ NEW_SERVICES = [
     "features": ["Early warning system for at-risk students", "Engagement tracking across platforms", "Predictive analytics for retention", "Automated intervention recommendations", "Advisor dashboard", "Communication automation", "Success outcome tracking", "Integration with SIS and LMS"],
     "benefits": ["Improve retention rates by 20%", "Identify at-risk students early", "Data-driven intervention strategies", "Improve graduation rates"],
     "pricing": {"basic": "$499/mo", "pro": "$1,499/mo", "enterprise": "Custom"},
-    "contactInfo": {"website": "/services/edtech-student-success-platform", "email": "kleber@ziontechgroup.com", "phone": "+1 302 464 0950"},
+    "contactInfo": {"website": "/services/edtech-student-success-platform", "email": "kleber@ziontechgroup.com", "phone": "+55 11 97614-0076"},
     "icon": "📈", "href": "/services/edtech-student-success-platform", "popular": False, "category": "edtech", "industry": "Education"
   },
 ]

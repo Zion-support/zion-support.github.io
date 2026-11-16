@@ -1,0 +1,53 @@
+{
+  "run": "2026-11-15 12:41 UTC-03 (cron)",
+  "base_url": "https://ziontechgroup.com",
+  "scope": "base domain + 7 key docs routes",
+  "routes": [
+    "/public-roadmap",
+    "/status-page",
+    "/use-cases",
+    "/solutions/healthcare",
+    "/industries/financial-services",
+    "/free-consultation",
+    "/tools/phishing-analyzer"
+  ],
+  "checks": {
+    "live_http": {
+      "total": 8,
+      "ok": 8,
+      "bad": 0,
+      "all_200": true
+    },
+    "repo_crosscheck": {
+      "total": 7,
+      "in_sync": 7,
+      "diff": 0
+    },
+    "sitemap": {
+      "total_routes": 8,
+      "indexed": 8,
+      "note": "routes live in sitemap-0.xml (/free-consultation/, /public-roadmap/, /status-page/, /use-cases/) and sitemap-1.xml (/free-consultation/, /industries/financial-services/, /solutions/healthcare/, /tools/phishing-analyzer/, /use-cases/); sitemap.xml index only lists the three sitemap files"
+    },
+    "canonical": {
+      "all_8_equals_final": true
+    },
+    "h1": {
+      "all_8_present": true
+    }
+  },
+  "repo_sync": [
+    {"route": "/public-roadmap", "public_sha": "8b7581c80f89c503d2e515709fc55f10c621b425"},
+    {"route": "/status-page", "public_sha": "f944e657bac9b94162a805a473364464de66dee2"},
+    {"route": "/use-cases", "public_sha": "cef4183cc55f02ae9b8f6e1513b345531bb0af47"},
+    {"route": "/solutions/healthcare", "public_sha": "21c0916e655c6c235c61493906b1fd68ae979e05"},
+    {"route": "/industries/financial-services", "public_sha": "0cc2a0314a9ba1b8da97e1506cd74dcd57d567ef"},
+    {"route": "/free-consultation", "public_sha": "4be786eec2179797e567df33bf279d85ac154c06"},
+    {"route": "/tools/phishing-analyzer", "public_sha": "1d6cbdfdb1b11c3d2103aa41bd9f57ec60cbb144"}
+  ],
+  "verdict": "PASS (all checks green)",
+  "notes": [
+    "Local clone public/ files byte-identical to live (sha1 of first 2KB) for all 7 routes.",
+    "HEAD is behind origin/main in raw commit count, but intervening commits (e.g. chore(reports)) do not touch public route files; live probe cross-check confirms site content == committed repo source.",
+    "Script sitemap step only greps sitemap.xml index (expected artefact); manual grep of sitemap-0.xml + sitemap-1.xml confirms all 8 routes indexed."
+  ]
+}

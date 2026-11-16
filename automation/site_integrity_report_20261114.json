@@ -1,0 +1,137 @@
+{
+  "routes_checked": 8,
+  "ok": 8,
+  "bad": 0,
+  "routes": [
+    {
+      "path": "/",
+      "status": 200,
+      "final": "https://ziontechgroup.com/",
+      "title": "Zion Tech Group | Advanced AI Services & IT Solutions",
+      "canonical": "https://ziontechgroup.com/",
+      "h1": "Design, Launch, and ScaleAI OperationsWith Confidence",
+      "ok": true
+    },
+    {
+      "path": "/public-roadmap/",
+      "status": 200,
+      "final": "https://ziontechgroup.com/public-roadmap/",
+      "title": "Public Roadmap \u00b7 Zion Tech Group",
+      "canonical": "https://ziontechgroup.com/public-roadmap/",
+      "h1": "Public Roadmap",
+      "ok": true
+    },
+    {
+      "path": "/status-page/",
+      "status": 200,
+      "final": "https://ziontechgroup.com/status-page/",
+      "title": "Status Page \u00b7 Zion Tech Group",
+      "canonical": "https://ziontechgroup.com/status-page/",
+      "h1": "Status Page",
+      "ok": true
+    },
+    {
+      "path": "/use-cases/",
+      "status": 200,
+      "final": "https://ziontechgroup.com/use-cases/",
+      "title": "Use cases \u2014 Free Discovery \u00b7 Zion Tech Group",
+      "canonical": "https://ziontechgroup.com/use-cases/",
+      "h1": "Use cases",
+      "ok": true
+    },
+    {
+      "path": "/solutions/healthcare/",
+      "status": 200,
+      "final": "https://ziontechgroup.com/solutions/healthcare/",
+      "title": "Not a packaged SKU \u2014 Healthcare \u00b7 Zion Tech Group",
+      "canonical": "https://ziontechgroup.com/solutions/healthcare/",
+      "h1": "Healthcare & Life Sciences",
+      "ok": true
+    },
+    {
+      "path": "/industries/financial-services/",
+      "status": 200,
+      "final": "https://ziontechgroup.com/industries/financial-services/",
+      "title": "Not a packaged SKU \u2014 Financial Services \u00b7 Zion Tech Group",
+      "canonical": "https://ziontechgroup.com/industries/financial-services/",
+      "h1": "AI for Financial Services & FinTech",
+      "ok": true
+    },
+    {
+      "path": "/free-consultation/",
+      "status": 200,
+      "final": "https://ziontechgroup.com/free-consultation/",
+      "title": "This is the Free Discovery \u2014 Zion Tech Group",
+      "canonical": "https://ziontechgroup.com/free-consultation/",
+      "h1": "This is the Free Discovery",
+      "ok": true
+    },
+    {
+      "path": "/tools/phishing-analyzer/",
+      "status": 200,
+      "final": "https://ziontechgroup.com/tools/phishing-analyzer/",
+      "title": "Phishing Analyzer \u00b7 Zion Tech Group",
+      "canonical": "https://ziontechgroup.com/tools/phishing-analyzer/",
+      "h1": "Phishing Analyzer",
+      "ok": true
+    }
+  ],
+  "repo_sync": [
+    {
+      "path": "/",
+      "public_committed": "9b682acaec65c3dd28c3983b910344fe2cfd0b77",
+      "docs_mirrors_public": false,
+      "out_matches_public": false,
+      "public_missing": false
+    },
+    {
+      "path": "/public-roadmap/",
+      "public_committed": "8b7581c80f89c503d2e515709fc55f10c621b425",
+      "docs_mirrors_public": true,
+      "out_matches_public": false,
+      "public_missing": false
+    },
+    {
+      "path": "/status-page/",
+      "public_committed": "f944e657bac9b94162a805a473364464de66dee2",
+      "docs_mirrors_public": true,
+      "out_matches_public": true,
+      "public_missing": false
+    },
+    {
+      "path": "/use-cases/",
+      "public_committed": "cef4183cc55f02ae9b8f6e1513b345531bb0af47",
+      "docs_mirrors_public": false,
+      "out_matches_public": true,
+      "public_missing": false
+    },
+    {
+      "path": "/solutions/healthcare/",
+      "public_committed": "21c0916e655c6c235c61493906b1fd68ae979e05",
+      "docs_mirrors_public": false,
+      "out_matches_public": false,
+      "public_missing": false
+    },
+    {
+      "path": "/industries/financial-services/",
+      "public_committed": "0cc2a0314a9ba1b8da97e1506cd74dcd57d567ef",
+      "docs_mirrors_public": false,
+      "out_matches_public": false,
+      "public_missing": false
+    },
+    {
+      "path": "/free-consultation/",
+      "public_committed": "4be786eec2179797e567df33bf279d85ac154c06",
+      "docs_mirrors_public": false,
+      "out_matches_public": true,
+      "public_missing": false
+    },
+    {
+      "path": "/tools/phishing-analyzer/",
+      "public_committed": "1d6cbdfdb1b11c3d2103aa41bd9f57ec60cbb144",
+      "docs_mirrors_public": true,
+      "out_matches_public": true,
+      "public_missing": false
+    }
+  ]
+}

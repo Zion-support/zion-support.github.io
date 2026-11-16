@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Managed AI Operations · Zion Tech Group</title>
+<meta name="description" content="Um agente de IA em produção não é um projeto, é uma responsabilidade operacional. O Zion Managed AI Operations assume o dia a dia dos seus sistemas de agentes: monitorização contra o conjunto de testes original, renovação das evaluções quando um fornecedor de modelo altera comportamento, versionamento de prompts e modelos, deteção de drift, controlo de custo e tokens, e resposta a incidentes com escalonamento por severidade. Os relatórios são mapeados para KPIs que já acompanha — taxa de resolução, uptime, precisão e custo por ação de agente — para que veja exatamente o que está a pagar.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://ziontechgroup.com/pt/managed-ai-operations/">
+  <link rel="alternate" hreflang="en" href="https://ziontechgroup.commanaged-ai-operations/">
+  <link rel="alternate" hreflang="pt" href="https://ziontechgroup.com/pt/managed-ai-operations/">
+  <link rel="alternate" hreflang="es" href="https://ziontechgroup.com/es/managed-ai-operations/">
+  <link rel="alternate" hreflang="fr" href="https://ziontechgroup.com/fr/managed-ai-operations/">
+  <link rel="alternate" hreflang="de" href="https://ziontechgroup.com/de/managed-ai-operations/">
+  <link rel="alternate" hreflang="x-default" href="https://ziontechgroup.commanaged-ai-operations/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"Managed AI Operations","inLanguage":"pt-BR","url":"https://ziontechgroup.com/pt/managed-ai-operations/","provider":{"@type":"Organization","name":"Zion Tech Group","address":"364 E Main St STE 1008, Middletown, DE 19709"},"description":"Um agente de IA em produção não é um projeto, é uma responsabilidade operacional. O Zion Managed AI Operations assume o dia a dia dos seus sistemas de agentes: monitorização contra o conjunto de testes original, renovação das evaluções quando um fornecedor de modelo altera comportamento, versionamento de prompts e modelos, deteção de drift, controlo de custo e tokens, e resposta a incidentes com escalonamento por severidade. Os relatórios são mapeados para KPIs que já acompanha — taxa de resolução, uptime, precisão e custo por ação de agente — para que veja exatamente o que está a pagar.","offers":[{"@type":"Offer","name":"Light","price":"3.000","priceCurrency":"USD"},{"@type":"Offer","name":"Standard","price":"8.000","priceCurrency":"USD"},{"@type":"Offer","name":"Heavy","price":"20.000","priceCurrency":"USD"}]}</script>
+<style>
+:root{--bg:#0b1220;--card:#121a2b;--ink:#e8eef8;--muted:#9aa8bd;--line:#243049;--accent:#7dd3fc;--brand:#a78bfa}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+a{color:var(--accent);text-decoration:none}a:hover{color:#a5d7ff;text-decoration:underline}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px 72px}
+header.site{border-bottom:1px solid var(--line);background:rgba(11,18,32,.92)}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:14px;padding-bottom:14px;flex-wrap:wrap}
+.brand{color:var(--ink);font-weight:700}.brand span{color:var(--brand)}
+.langs{display:flex;flex-wrap:wrap;gap:6px;font-size:.8rem}
+.langs a{color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:3px 10px}
+.langs a[aria-current="true"]{color:#042033;background:var(--accent);border-color:var(--accent);font-weight:700}
+.hero{padding:56px 0 40px;background:radial-gradient(ellipse at top,rgba(167,139,250,.16),transparent 60%)}
+.hero h1{font-size:clamp(2rem,5vw,3rem);line-height:1.1;margin:0 0 14px;letter-spacing:-.02em}
+.lede{color:var(--muted);font-size:1.12rem;max-width:48rem;margin:0 0 26px}
+section{padding:40px 0;border-top:1px solid var(--line)}
+h2{font-size:1.4rem;margin:0 0 18px;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:0 0 6px}
+p{margin:0 0 14px}
+ul.feat{list-style:none;padding:0;margin:0;display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+ul.feat li{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px}
+.tiers{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.tier{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+.tier h3{margin-bottom:2px}
+.tier .price{color:var(--accent);font-weight:700;margin:0 0 4px}
+.tier .sys{color:var(--muted);font-size:.85rem;margin:0 0 12px}
+.tier ul{margin:0;padding-left:18px;color:var(--muted);font-size:.88rem}
+.note{color:var(--muted);font-size:.88rem;max-width:48rem}
+.kpis{display:flex;flex-wrap:wrap;gap:10px}
+.kpi{border:1px solid var(--line);border-radius:999px;padding:8px 16px;font-size:.85rem;color:var(--muted)}
+.grid{display:grid;gap:10px;grid-template-columns:repeat(auto-fill,minmax(240px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px}
+.card h3{font-size:.98rem;margin:0 0 4px}
+.card h3 a{color:var(--ink)}
+.card h3 a:hover{color:var(--accent)}
+.btn{display:inline-block;background:linear-gradient(90deg,#7c3aed,#ec4899);color:#fff;font-weight:700;padding:12px 20px;border-radius:10px}
+.btn.alt{background:transparent;border:1px solid var(--line);color:var(--ink)}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px}
+footer{margin-top:12px;border-top:1px solid var(--line);padding-top:20px;color:var(--muted);font-size:.85rem}
+footer .wrap{display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;align-items:center;padding-top:18px;padding-bottom:18px}
+@media(max-width:640px){.hero{padding:40px 0 28px}section{padding:30px 0}}
+</style>
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="/pt/">Zion <span>Tech Group</span></a>
+    <nav class="langs" aria-label="Language"><a href="https://ziontechgroup.commanaged-ai-operations/">EN</a><a href="https://ziontechgroup.com/pt/managed-ai-operations/" aria-current="true">PT</a><a href="https://ziontechgroup.com/es/managed-ai-operations/">ES</a><a href="https://ziontechgroup.com/fr/managed-ai-operations/">FR</a><a href="https://ziontechgroup.com/de/managed-ai-operations/">DE</a></nav>
+  </div>
+</header>
+<main id="main">
+  <div class="wrap">
+    <div class="hero">
+      <h1>Managed AI Operations</h1>
+      <p class="lede">Operamos os seus agentes de IA em produção — monitorização, evaluções, drift e custo — para continuarem a funcionar após o lançamento.</p>
+      <div class="cta-row">
+        <a class="btn" href="/discovery/">Começar Discovery gratuita</a>
+      </div>
+    </div>
+    <section id="about">
+      <h2>Managed AI Operations</h2>
+      <p class="note">Um agente de IA em produção não é um projeto, é uma responsabilidade operacional. O Zion Managed AI Operations assume o dia a dia dos seus sistemas de agentes: monitorização contra o conjunto de testes original, renovação das evaluções quando um fornecedor de modelo altera comportamento, versionamento de prompts e modelos, deteção de drift, controlo de custo e tokens, e resposta a incidentes com escalonamento por severidade. Os relatórios são mapeados para KPIs que já acompanha — taxa de resolução, uptime, precisão e custo por ação de agente — para que veja exatamente o que está a pagar.</p>
+    </section>
+    <section id="included">
+      <h2>O que está incluído</h2>
+      <ul class="feat">
+<li>Monitorização contínua de cada agente em produção contra o seu conjunto de testes</li>
+<li>Renovação das evaluções quando um fornecedor altera ou descontinua uma versão</li>
+<li>Versionamento de prompts, modelos e dependências com rollback</li>
+<li>Revisão de drift e precisão em cadência fixa, com relatório escrito</li>
+<li>Controlo de custo de tokens e inferência, incluindo custo por ação de agente</li>
+<li>Resposta a incidentes com níveis de severidade, escalonamento e revisão pós-incidente</li>
+      </ul>
+    </section>
+    <section id="tiers">
+      <h2>Níveis de retabilidade</h2>
+      <p class="note">Preço por sistema gerido, não por assento. Abrangência, horas de cobertura e SLAs ficam escritos no contrato.</p>
+      <div class="tiers">
+<div class="tier">
+  <h3>Light</h3>
+  <p class="price">USD 3.000 / mês</p>
+  <p class="sys">1 sistema em produção</p>
+  <ul><li>Cobertura em horário comercial com alertas 24/7</li><li>Revisão mensal de precisão e drift</li><li>Resposta a incidentes para um agente</li></ul>
+</div>
+<div class="tier">
+  <h3>Standard</h3>
+  <p class="price">USD 8.000 / mês</p>
+  <p class="sys">Até 3 sistemas em produção</p>
+  <ul><li>Tudo do Light, mais</li><li>Melhorias mensais e um roadmap</li><li>Metas de resposta por nível de severidade</li></ul>
+</div>
+<div class="tier">
+  <h3>Heavy</h3>
+  <p class="price">USD 20.000 / mês</p>
+  <p class="sys">5+ sistemas ou uma plataforma de agentes</p>
+  <ul><li>Tudo do Standard, mais</li><li>Monitorização 24/7 com resposta de sobreaviso</li><li>Estratégia trimestral e parceria operacional completa</li></ul>
+</div>
+      </div>
+    </section>
+    <section id="kpis">
+      <h2>Reportado como KPI, não como atividade</h2>
+      <div class="kpis"><span class="kpi">Taxa de resolução</span><span class="kpi">Uptime</span><span class="kpi">Precisão</span><span class="kpi">Custo por ação de agente</span></div>
+    </section>
+    <section id="related">
+      <h2>Pares úteis na Apps Network</h2>
+      <div class="grid">
+<div class="card"><h3><a href="/pt/token-cost/">Token Cost Calculator</a></h3></div>
+<div class="card"><h3><a href="/model-observatory/">Model Observatory</a></h3></div>
+<div class="card"><h3><a href="/pt/change-risk/">Escore de Risco de Mudança</a></h3></div>
+<div class="card"><h3><a href="/pt/ai-ticket-sentinel/">AI Ticket Sentinel</a></h3></div>
+<div class="card"><h3><a href="/ops-runbook-ai/">Ops Runbook AI</a></h3></div>
+<div class="card"><h3><a href="/pt/ai-governance-checklist/">AI Governance Checklist</a></h3></div>
+      </div>
+    </section>
+    <section id="cta">
+      <h2>Comece com uma Discovery e depois escope a operação</h2>
+      <p class="note">Uma Discovery mapeia quais dos seus fluxos de agentes estão prontos para operação gerida e quanto custariam para correr. Um processo, um relatório, uma sessão de 30 minutos.</p>
+      <div class="cta-row">
+        <a class="btn" href="/discovery/">Começar Discovery gratuita</a>
+        <a class="btn alt" href="/pricing/">Ver preços</a>
+      </div>
+    </section>
+  </div>
+</main>
+<footer>
+  <div class="wrap">
+    <div>Zion Tech Group · Delaware, EUA</div>
+    <div class="langs"><a href="https://ziontechgroup.commanaged-ai-operations/">EN</a><a href="https://ziontechgroup.com/pt/managed-ai-operations/" aria-current="true">PT</a><a href="https://ziontechgroup.com/es/managed-ai-operations/">ES</a><a href="https://ziontechgroup.com/fr/managed-ai-operations/">FR</a><a href="https://ziontechgroup.com/de/managed-ai-operations/">DE</a></div>
+  </div>
+</footer>
+</body>
+</html>
