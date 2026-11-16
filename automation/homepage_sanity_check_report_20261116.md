@@ -1,6 +1,6 @@
 # Homepage Sanity Check — 2026-11-16
 
-**Run time:** 2026-11-16 03:00 -03
+**Run time:** 2026-11-16 06:00 -03
 **Command:** `python3 scripts/homepage_sanity_check.py` (from `automation/`)
 
 ## Result: ✅ Homepage OK — no build-failed fallback detected
