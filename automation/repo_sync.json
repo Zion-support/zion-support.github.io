@@ -1,0 +1,72 @@
+{
+  "public-roadmap": {
+    "repo_file": "/Users/miami2/zion-support/zion-support.github.io/out/public-roadmap/index.html",
+    "repo_exists": true,
+    "repo_size": null,
+    "live_title": "Public Roadmap \u00b7 Zion Tech Group",
+    "repo_title": "Public Roadmap \u00b7 Zion Tech Group",
+    "live_desc_starts": "No leftover product roadmap. Heritage is on /heritage/. New ",
+    "repo_desc_starts": "No leftover product roadmap. Heritage is on /heritage/. New ",
+    "titles_match": true
+  },
+  "status-page": {
+    "repo_file": "/Users/miami2/zion-support/zion-support.github.io/out/status-page/index.html",
+    "repo_exists": true,
+    "repo_size": null,
+    "live_title": "Status Page \u00b7 Zion Tech Group",
+    "repo_title": "Status Page \u00b7 Zion Tech Group",
+    "live_desc_starts": "Canonical status is /status/. This URL is an alias, not a 99",
+    "repo_desc_starts": "Canonical status is /status/. This URL is an alias, not a 99",
+    "titles_match": true
+  },
+  "use-cases": {
+    "repo_file": "/Users/miami2/zion-support/zion-support.github.io/out/use-cases/index.html",
+    "repo_exists": true,
+    "repo_size": null,
+    "live_title": "Use cases \u2014 Free Discovery \u00b7 Zion Tech Group",
+    "repo_title": "Use cases \u2014 Free Discovery \u00b7 Zion Tech Group",
+    "live_desc_starts": "Zion does not sell a leftover use-case catalog. Work is scop",
+    "repo_desc_starts": "Zion does not sell a leftover use-case catalog. Work is scop",
+    "titles_match": true
+  },
+  "solutions/healthcare": {
+    "repo_file": "/Users/miami2/zion-support/zion-support.github.io/out/solutions/healthcare/index.html",
+    "repo_exists": true,
+    "repo_size": null,
+    "live_title": "Not a packaged SKU \u2014 Healthcare \u00b7 Zion Tech Group",
+    "repo_title": "Not a packaged SKU \u2014 Healthcare \u00b7 Zion Tech Group",
+    "live_desc_starts": "Not a packaged healthcare SKU. Zion scopes work after the Fr",
+    "repo_desc_starts": "Not a packaged healthcare SKU. Zion scopes work after the Fr",
+    "titles_match": true
+  },
+  "industries/financial-services": {
+    "repo_file": "/Users/miami2/zion-support/zion-support.github.io/out/industries/financial-services/index.html",
+    "repo_exists": true,
+    "repo_size": null,
+    "live_title": "Not a packaged SKU \u2014 Financial Services \u00b7 Zion Tech Group",
+    "repo_title": "Not a packaged SKU \u2014 Financial Services \u00b7 Zion Tech Group",
+    "live_desc_starts": "Not a packaged financial-services SKU. Zion scopes work afte",
+    "repo_desc_starts": "Not a packaged financial-services SKU. Zion scopes work afte",
+    "titles_match": true
+  },
+  "free-consultation": {
+    "repo_file": "/Users/miami2/zion-support/zion-support.github.io/out/free-consultation/index.html",
+    "repo_exists": true,
+    "repo_size": null,
+    "live_title": "This is the Free Discovery \u2014 Zion Tech Group",
+    "repo_title": "This is the Free Discovery \u2014 Zion Tech Group",
+    "live_desc_starts": "There is no free consultation. Zion Tech Group scopes work a",
+    "repo_desc_starts": "There is no free consultation. Zion Tech Group scopes work a",
+    "titles_match": true
+  },
+  "tools/phishing-analyzer": {
+    "repo_file": "/Users/miami2/zion-support/zion-support.github.io/out/tools/phishing-analyzer/index.html",
+    "repo_exists": true,
+    "repo_size": null,
+    "live_title": "Phishing Analyzer \u00b7 Zion Tech Group",
+    "repo_title": "Phishing Analyzer \u00b7 Zion Tech Group",
+    "live_desc_starts": "Analise URLs suspeitas e detecte tentativas de phishing ante",
+    "repo_desc_starts": "Analise URLs suspeitas e detecte tentativas de phishing ante",
+    "titles_match": true
+  }
+}
