@@ -1,20 +1,8 @@
 {
   "total_crawled": 300,
-  "http_200": 286,
-  "broken_count": 14,
+  "http_200": 293,
+  "broken_count": 7,
   "broken": [
-    {
-      "url": "https://ziontechgroup.com/token-cost/",
-      "status": -1,
-      "final": "https://ziontechgroup.com/token-cost/",
-      "type": "external reference error"
-    },
-    {
-      "url": "https://ziontechgroup.com/agents/",
-      "status": 404,
-      "final": "https://ziontechgroup.com/agents/",
-      "type": "missing page"
-    },
     {
       "url": "https://ziontechgroup.com/apps/discovery-first-win-guide.html",
       "status": 404,
@@ -46,45 +34,15 @@
       "type": "missing page"
     },
     {
-      "url": "https://ziontechgroup.com/site-uptime-watchdog/",
+      "url": "https://ziontechgroup.com/agents/",
       "status": 404,
-      "final": "https://ziontechgroup.com/site-uptime-watchdog/",
+      "final": "https://ziontechgroup.com/agents/",
       "type": "missing page"
     },
     {
-      "url": "https://ziontechgroup.com/ai-smart-hands-scheduler/",
+      "url": "https://ziontechgroup.com/apps-network/apps-network/",
       "status": 404,
-      "final": "https://ziontechgroup.com/ai-smart-hands-scheduler/",
-      "type": "missing page"
-    },
-    {
-      "url": "https://ziontechgroup.com/undefined/",
-      "status": 404,
-      "final": "https://ziontechgroup.com/undefined/",
-      "type": "missing page"
-    },
-    {
-      "url": "https://ziontechgroup.com/pt/undefined/",
-      "status": 404,
-      "final": "https://ziontechgroup.com/pt/undefined/",
-      "type": "missing page"
-    },
-    {
-      "url": "https://ziontechgroup.com/es/undefined/",
-      "status": 404,
-      "final": "https://ziontechgroup.com/es/undefined/",
-      "type": "missing page"
-    },
-    {
-      "url": "https://ziontechgroup.com/fr/undefined/",
-      "status": 404,
-      "final": "https://ziontechgroup.com/fr/undefined/",
-      "type": "missing page"
-    },
-    {
-      "url": "https://ziontechgroup.com/de/undefined/",
-      "status": 404,
-      "final": "https://ziontechgroup.com/de/undefined/",
+      "final": "https://ziontechgroup.com/apps-network/apps-network/",
       "type": "missing page"
     }
   ]
