@@ -48,6 +48,9 @@ const EXTRA = [
   '/industries/legal/',
   '/public-roadmap/',
   '/status-page/',
+  '/solutions/healthcare/',
+  '/industries/financial-services/',
+  '/tools/phishing-analyzer/',
 ];
 
 function publicFileFor(urlPath) {
