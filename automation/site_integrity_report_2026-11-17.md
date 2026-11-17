@@ -1,6 +1,6 @@
 # Zion Tech Group — Homepage Sanity Check Report
 
-**Run:** 2026-11-17 07:30 -03 (Tuesday)
+**Run:** 2026-11-17 09:30 -03 (Tuesday)
 **Script:** automation/scripts/homepage_sanity_check.py
 **Target:** https://ziontechgroup.com
 **Result:** ✅ PASS — no build-failed fallback detected
