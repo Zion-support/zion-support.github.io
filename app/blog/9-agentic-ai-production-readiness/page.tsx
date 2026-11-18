@@ -1,6 +1,6 @@
 export const metadata = {
   title: 'Agentic AI Production Readiness — Closing the Pilot-to-Production Gap | Zion Tech Group',
-  description: 'AI pilots stall at 88% — Zion's Agentic AI Production Readiness moves enterprise agents into production with governance, gates, and evaluation.',
+  description: 'AI pilots stall at 88% — Zion\'s Agentic AI Production Readiness moves enterprise agents into production with governance, gates, and evaluation.',
 };
 
 export default function Page() {
