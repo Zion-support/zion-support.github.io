@@ -1096,6 +1096,7 @@ def _is_safe_hot_thread(msg_id: str, thread_id: Optional[str] = None) -> dict:
     return {'safe': True, 'thread_id': t, 'subject': subject, 'from': from_addr}
 
 def run_high_frequency_outreach():
+    from followup_safety import FollowupBlocked
     _llm_readiness_report()
     if service is None:
         print('AUTH_FAIL', GMAIL_AUTH_ERROR)
@@ -1340,6 +1341,10 @@ def run_high_frequency_outreach():
             mark_seen_message_id(lead['msg_id'])
             sent_count += 1
             print('CONTACT_END', email, 'live_sent', flush=True)
+        except FollowupBlocked:
+            # A policy hold is not a delivery failure or a processed message.
+            skipped += 1
+            print('CONTACT_END', email, 'policy_hold', flush=True)
         except Exception as e:
             print('CONTACT_ERR', email, repr(e), flush=True)
             record_bounce(email, f'SEND_ERR: {e}', lead.get('msg_id'))
@@ -1382,6 +1387,8 @@ def _load_excluded() -> set:
         return set()
 
 def send_ceo_reply(thread_id, to_addr, subject, body, references_message_id):
+    from followup_safety import require_live_clearance
+    require_live_clearance()
     to_key = (to_addr or '').lower()
     if to_key and to_key in _load_excluded():
         return {'error': 'excluded', 'to': to_addr}
