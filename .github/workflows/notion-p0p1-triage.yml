@@ -1,0 +1,29 @@
+name: Notion P0/P1 Triage
+
+permissions:
+  issues: read
+
+"on":
+  schedule:
+    - cron: "17 12 * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: notion-p0p1-triage
+  cancel-in-progress: false
+
+jobs:
+  triage:
+    name: Sync P0/P1 issues to Notion
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Sync P0/P1 issues to Notion
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          NOTION_DATABASE_ID: b391c5fb-634e-456b-9298-1c0d5c1889da
+        run: python3 scripts/notion_p0p1_triage.py
