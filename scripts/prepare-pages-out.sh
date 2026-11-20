@@ -50,6 +50,10 @@ for f in assets/css/site.css assets/js/zion-shell.js css/site.css; do
   fi
 done
 
+# Scoped SQL examples and existing-homepage links; no deployment or guard bypass.
+node scripts/test-sql-worked-examples.cjs
+node scripts/render-sql-worked-examples.cjs out
+
 touch out/.nojekyll
 
 # DURABLE GUARD: reject stub / placeholder money paths before Pages publish.
@@ -115,3 +119,4 @@ node --test scripts/render-legacy-service-aliases.test.cjs
 node scripts/render-legacy-service-aliases.cjs out/
 
 echo "Prepared out ($(find out -type f | wc -l) files)"
+
