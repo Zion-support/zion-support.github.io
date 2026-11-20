@@ -18,10 +18,14 @@ jobs:
         node-version-file: .nvmrc
     - name: Install dependencies
       run: npm ci
-    - name: Run npm audit fix
-      run: npm audit fix
-    - name: Run lint fix
-      run: npm run lint:fix
+    - name: Apply non-breaking dependency fixes
+      # Set the exit threshold directly; never suppress an install/registry error.
+      # Moderate/low advisories remain in the full audit report.
+      run: npm audit fix --audit-level=high
+    - name: Enforce high and critical dependency audit
+      run: npm audit --audit-level=high
+    - name: Run actual lint check
+      run: npm run lint:check
     - name: Run type check
       run: npm run type-check
     - name: Commit changes
