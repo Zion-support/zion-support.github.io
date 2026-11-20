@@ -2,12 +2,73 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Stub — Zion Tech Group</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ROI Calculator · Zion Tech Group</title>
+<meta name="description" content="Model the value of time recovered by a team, one-time setup and recurring costs. Transparent assumptions; no account connection.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://ziontechgroup.com/roi-calc/">
+  <link rel="alternate" hreflang="en" href="https://ziontechgroup.com/roi-calc/">
+  <link rel="alternate" hreflang="pt-BR" href="https://ziontechgroup.com/pt/roi-calc/">
+  <link rel="alternate" hreflang="es" href="https://ziontechgroup.com/es/roi-calc/">
+  <link rel="alternate" hreflang="fr" href="https://ziontechgroup.com/fr/roi-calc/">
+  <link rel="alternate" hreflang="de" href="https://ziontechgroup.com/de/roi-calc/">
+<link rel="alternate" hreflang="x-default" href="https://ziontechgroup.com/roi-calc/">
+<link rel="stylesheet" href="/assets/css/roi-calculator.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"ROI Calculator","url":"https://ziontechgroup.com/roi-calc/","inLanguage":"en","description":"Model the value of time recovered by a team, one-time setup and recurring costs. Transparent assumptions; no account connection.","applicationCategory":"FinanceApplication","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<script defer src="/assets/js/roi-calculator.js"></script>
 </head>
 <body>
-<h1>Coming soon</h1>
-<p>This page is being prepared.</p>
-<script>/* reciprocity stub for deployment */</script>
+<a class="skip" href="#team">Skip to calculator</a>
+<header><div class="wrap bar"><a class="brand" href="/">Zion Tech Group</a><nav class="langs" aria-label="Languages"><a href="/roi-calc/" hreflang="en" aria-current="page">EN</a> <a href="/pt/roi-calc/" hreflang="pt-BR">PT</a> <a href="/es/roi-calc/" hreflang="es">ES</a> <a href="/fr/roi-calc/" hreflang="fr">FR</a> <a href="/de/roi-calc/" hreflang="de">DE</a></nav></div></header>
+<main class="wrap">
+<section class="hero">
+<p class="eyebrow">Browser-only planning tool</p>
+<h1>ROI Calculator</h1>
+<p class="lead">Estimate capacity value and project ROI from your own assumptions. No login, account connection or data upload.</p>
+<p><a href="/">Home</a> · <a href="/apps-network/">Apps Network</a></p>
+</section>
+<section class="panel" aria-labelledby="method-title"><h2 id="method-title">How this model works</h2><p class="note">Monthly recovered hours = team members × hours saved per person per week × 52 ÷ 12. Gross monthly capacity value = hours × fully loaded hourly cost. Net scenario value = gross value across the selected period minus setup and recurring costs.</p></section>
+<section class="panel" aria-labelledby="assumptions-title">
+<h2 id="assumptions-title">Your assumptions</h2>
+<form id="roiForm" novalidate data-prompt="Complete all six numeric fields; enter zero for costs that do not apply." data-ready="Estimates updated from your assumptions." data-roi-na="Undefined" data-payback-na="Not reached" data-payback-beyond="beyond selected period" data-error-prefix="Check this field:" data-error-integer="whole numbers only" data-months-unit="months">
+<div class="fields"><div class="field"><label for="team">Team members</label><input id="team" name="team" type="number" inputmode="decimal" min="1" max="100000" step="1" placeholder="4" required></div>
+<div class="field"><label for="hours">Hours saved per person / week</label><input id="hours" name="hours" type="number" inputmode="decimal" min="0.1" max="168" step="any" placeholder="2" required></div>
+<div class="field"><label for="rate">Fully loaded hourly cost</label><input id="rate" name="rate" type="number" inputmode="decimal" min="0.01" max="1000000" step="any" placeholder="35" required></div>
+<div class="field"><label for="monthly">Monthly operating cost</label><input id="monthly" name="monthly" type="number" inputmode="decimal" min="0" max="1000000000" step="any" value="0" required></div>
+<div class="field"><label for="setup">One-time setup cost</label><input id="setup" name="setup" type="number" inputmode="decimal" min="0" max="1000000000" step="any" value="0" required></div>
+<div class="field"><label for="months">Evaluation period (months)</label><input id="months" name="months" type="number" inputmode="decimal" min="1" max="120" step="1" value="12" required></div><div class="field"><label for="currency">Currency (no exchange conversion)</label><select id="currency" name="currency"><option value="USD" selected>USD</option><option value="BRL">BRL</option><option value="EUR">EUR</option></select></div></div>
+<p class="note">Enter all monetary amounts in the selected currency. Changing currency only changes the display; no exchange rates are applied.</p><div class="actions"><button type="reset">Clear assumptions</button><p id="roiStatus" role="status" aria-live="polite">Complete all six numeric fields; enter zero for costs that do not apply.</p></div>
+</form>
+</section>
+<section id="roiResults" class="panel" aria-labelledby="results-title" data-summary-title="ROI scenario — illustrative only" data-summary-disclaimer="Estimated capacity value, not verified cash savings or a guaranteed return. Assumes constant hours and hourly rates during the period. Monetary values use the selected currency without FX conversion." hidden><h2 id="results-title">Illustrative scenario</h2><div class="metrics"><div class="metric"><span>Hours recovered per month</span><output id="roiHours">—</output></div>
+<div class="metric"><span>Gross capacity value / month</span><output id="roiGross">—</output></div>
+<div class="metric"><span>Total modeled costs</span><output id="roiCosts">—</output></div>
+<div class="metric"><span>Net modeled value</span><output id="roiNet">—</output></div>
+<div class="metric"><span>ROI over period</span><output id="roiPercent">—</output></div>
+<div class="metric"><span>Setup payback period</span><output id="roiPayback">—</output></div></div>
+<section class="sensitivity" aria-labelledby="roiComparisonTitle">
+<h3 id="roiComparisonTitle">Compare three assumptions</h3>
+<p id="roiComparisonNote" class="note">Illustrative gross capacity-value multipliers: 50% cautious, 100% as entered, 125% upside. Setup, recurring costs and months stay unchanged. These are not forecasts, probabilities or verified savings.</p>
+<div class="compare-scroll" role="region" aria-labelledby="roiComparisonTitle" tabindex="0"><table id="roiComparison" aria-describedby="roiComparisonNote">
+<thead><tr><th scope="col">Compare three assumptions</th><th id="roiCompareNetHeader" scope="col">Net value over period</th><th id="roiCompareRoiHeader" scope="col">ROI</th><th id="roiComparePaybackHeader" scope="col">Setup payback</th></tr></thead>
+<tbody><tr><th id="roiCompare0Name" scope="row">Cautious (50%)</th><td><output id="roiCompare0Net">—</output></td><td><output id="roiCompare0Roi">—</output></td><td><output id="roiCompare0Payback">—</output></td></tr>
+<tr><th id="roiCompare1Name" scope="row">Entered (100%)</th><td><output id="roiCompare1Net">—</output></td><td><output id="roiCompare1Roi">—</output></td><td><output id="roiCompare1Payback">—</output></td></tr>
+<tr><th id="roiCompare2Name" scope="row">Upside (125%)</th><td><output id="roiCompare2Net">—</output></td><td><output id="roiCompare2Roi">—</output></td><td><output id="roiCompare2Payback">—</output></td></tr></tbody></table></div></section>
+<details class="share-tools"><summary>Review and copy your scenario</summary>
+<p class="note">Generated locally. Copying requires your action.</p>
+<label for="roiSummary">Scenario summary (not sent automatically)</label>
+<textarea id="roiSummary" rows="12" readonly></textarea>
+<div class="actions"><button id="roiCopySummary" type="button" data-copied="Summary copied. Share only with people you choose." data-manual="Clipboard unavailable. Text selected; please copy manually.">Copy scenario summary</button><p id="roiCopyStatus" role="status" aria-live="polite"></p></div>
+</details></section>
+<p class="warning">Capacity value is not automatically realized cash savings. This is a scenario, not a quote, guaranteed return or approved business case.</p>
+<section class="panel" aria-labelledby="related-title"><h2 id="related-title">Explore connected tools</h2><p class="note">Validate cost drivers and risk before deciding whether to fund a pilot.</p><nav class="related" aria-label="Explore connected tools"><a href="/apps-network/">Apps Network</a><a href="/cloud-cost-estimator/">Cloud Cost Estimator</a><a href="/token-cost/">Token Cost</a><a href="/cloud-waste/">Cloud Waste</a></nav></section>
+<section class="panel faq" aria-labelledby="faq-title"><h2 id="faq-title">Interpreting this estimate</h2>
+<details><summary>Is recovered time the same as cash saved?</summary><p class="note">No. Recovered capacity has value, but cash savings require a verified reduction in spending or a measurable business outcome.</p></details>
+<details><summary>What does the setup payback figure mean?</summary><p class="note">Setup cost divided by positive monthly net capacity value. If the scenario has no positive monthly net, payback is undefined.</p></details>
+<details><summary>How should I decide whether to proceed?</summary><p class="note">Validate your baseline, compare cautious and optimistic assumptions, and test one workflow before committing budget.</p></details>
+</section>
+<section class="panel conversion" aria-labelledby="conversion-title"><h2 id="conversion-title">Want help evaluating the assumptions?</h2><p class="note">Zion offers a free online AI Discovery for one process. The current questionnaire is in Portuguese; no commitment to paid services is required.</p><a class="buttonlink" href="/discovery/">Open free Discovery (Portuguese questionnaire)</a></section>
+</main>
+<footer><div class="wrap">Values stay in this browser session and are not sent to Zion. Review assumptions with your team before committing spend. · <a href="https://ziontechgroup.com/">Home</a></div></footer>
 </body>
 </html>

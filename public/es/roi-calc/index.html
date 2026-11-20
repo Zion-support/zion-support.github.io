@@ -1,17 +1,74 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <title>ROI Calculator · Zion Tech Group</title>
-  <meta name="robots" content="index, follow" />
-  <meta name="description" content="Calculate return on investment for IT infrastructure projects." />
-  <link rel="canonical" href="https://ziontechgroup.com/es/roi-calc/" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calculadora de ROI · Zion Tech Group</title>
+<meta name="description" content="Simula el valor del tiempo recuperado, la inversión inicial y los costes recurrentes sin conectar cuentas.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://ziontechgroup.com/es/roi-calc/">
+  <link rel="alternate" hreflang="en" href="https://ziontechgroup.com/roi-calc/">
+  <link rel="alternate" hreflang="pt-BR" href="https://ziontechgroup.com/pt/roi-calc/">
+  <link rel="alternate" hreflang="es" href="https://ziontechgroup.com/es/roi-calc/">
+  <link rel="alternate" hreflang="fr" href="https://ziontechgroup.com/fr/roi-calc/">
+  <link rel="alternate" hreflang="de" href="https://ziontechgroup.com/de/roi-calc/">
+<link rel="alternate" hreflang="x-default" href="https://ziontechgroup.com/roi-calc/">
+<link rel="stylesheet" href="/assets/css/roi-calculator.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Calculadora de ROI","url":"https://ziontechgroup.com/es/roi-calc/","inLanguage":"es","description":"Simula el valor del tiempo recuperado, la inversión inicial y los costes recurrentes sin conectar cuentas.","applicationCategory":"FinanceApplication","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<script defer src="/assets/js/roi-calculator.js"></script>
 </head>
 <body>
-  <main data-finops-promotion="2026-10-09-finops-scenario-v1">
-    <h1>ROI Calculator</h1>
-    <p>Calculate return on investment for IT infrastructure projects.</p>
-    <p><a href="/es/apps/finops-scenario-estimator.html">FinOps AI Estimator</a></p>
-  </main>
+<a class="skip" href="#team">Ir a la calculadora</a>
+<header><div class="wrap bar"><a class="brand" href="/es/">Zion Tech Group</a><nav class="langs" aria-label="Idiomas"><a href="/roi-calc/" hreflang="en">EN</a> <a href="/pt/roi-calc/" hreflang="pt-BR">PT</a> <a href="/es/roi-calc/" hreflang="es" aria-current="page">ES</a> <a href="/fr/roi-calc/" hreflang="fr">FR</a> <a href="/de/roi-calc/" hreflang="de">DE</a></nav></div></header>
+<main class="wrap">
+<section class="hero">
+<p class="eyebrow">Herramienta local en el navegador</p>
+<h1>Calculadora de ROI</h1>
+<p class="lead">Estima el valor de la capacidad recuperada y el ROI de un proyecto con tus propios supuestos. Sin registro ni envío de datos.</p>
+<p><a href="/es/">Inicio</a> · <a href="/es/apps-network/">Red de Apps</a></p>
+</section>
+<section class="panel" aria-labelledby="method-title"><h2 id="method-title">Cómo se calcula</h2><p class="note">Horas recuperadas al mes = personas × horas ahorradas por persona y semana × 52 ÷ 12. Valor bruto mensual = horas × coste horario total. Valor neto del escenario = valor bruto del período menos implantación y costes recurrentes.</p></section>
+<section class="panel" aria-labelledby="assumptions-title">
+<h2 id="assumptions-title">Tus supuestos</h2>
+<form id="roiForm" novalidate data-prompt="Completa los seis campos numéricos; escribe cero para los costes que no se aplican." data-ready="Estimaciones actualizadas con tus supuestos." data-roi-na="Indefinido" data-payback-na="No alcanzado" data-payback-beyond="fuera del período seleccionado" data-error-prefix="Revisa este campo:" data-error-integer="solo números enteros" data-months-unit="meses">
+<div class="fields"><div class="field"><label for="team">Personas en el equipo</label><input id="team" name="team" type="number" inputmode="decimal" min="1" max="100000" step="1" placeholder="4" required></div>
+<div class="field"><label for="hours">Horas ahorradas por persona / semana</label><input id="hours" name="hours" type="number" inputmode="decimal" min="0.1" max="168" step="any" placeholder="2" required></div>
+<div class="field"><label for="rate">Coste horario total</label><input id="rate" name="rate" type="number" inputmode="decimal" min="0.01" max="1000000" step="any" placeholder="35" required></div>
+<div class="field"><label for="monthly">Coste operativo mensual</label><input id="monthly" name="monthly" type="number" inputmode="decimal" min="0" max="1000000000" step="any" value="0" required></div>
+<div class="field"><label for="setup">Coste inicial de implantación</label><input id="setup" name="setup" type="number" inputmode="decimal" min="0" max="1000000000" step="any" value="0" required></div>
+<div class="field"><label for="months">Período de evaluación (meses)</label><input id="months" name="months" type="number" inputmode="decimal" min="1" max="120" step="1" value="12" required></div><div class="field"><label for="currency">Moneda (sin cambio de divisa)</label><select id="currency" name="currency"><option value="USD" selected>USD</option><option value="BRL">BRL</option><option value="EUR">EUR</option></select></div></div>
+<p class="note">Introduce todos los importes en la moneda seleccionada. Cambiarla solo altera la visualización; no se aplican tipos de cambio.</p><div class="actions"><button type="reset">Borrar supuestos</button><p id="roiStatus" role="status" aria-live="polite">Completa los seis campos numéricos; escribe cero para los costes que no se aplican.</p></div>
+</form>
+</section>
+<section id="roiResults" class="panel" aria-labelledby="results-title" data-summary-title="Escenario de ROI — solo ilustrativo" data-summary-disclaimer="Valor estimado de capacidad, no ahorro monetario comprobado ni rentabilidad garantizada. Se suponen horas y tarifas constantes durante el período. Los importes usan la moneda elegida, sin conversión de divisas." hidden><h2 id="results-title">Escenario ilustrativo</h2><div class="metrics"><div class="metric"><span>Horas recuperadas al mes</span><output id="roiHours">—</output></div>
+<div class="metric"><span>Valor bruto mensual de capacidad</span><output id="roiGross">—</output></div>
+<div class="metric"><span>Costes totales estimados</span><output id="roiCosts">—</output></div>
+<div class="metric"><span>Valor neto estimado</span><output id="roiNet">—</output></div>
+<div class="metric"><span>ROI del período</span><output id="roiPercent">—</output></div>
+<div class="metric"><span>Recuperación de la inversión inicial</span><output id="roiPayback">—</output></div></div>
+<section class="sensitivity" aria-labelledby="roiComparisonTitle">
+<h3 id="roiComparisonTitle">Compara tres hipótesis</h3>
+<p id="roiComparisonNote" class="note">Multiplicadores ilustrativos del valor bruto de capacidad: 50% prudente, 100% introducido, 125% optimista. La implantación, los costes recurrentes y los meses no cambian. No son pronósticos, probabilidades ni ahorros comprobados.</p>
+<div class="compare-scroll" role="region" aria-labelledby="roiComparisonTitle" tabindex="0"><table id="roiComparison" aria-describedby="roiComparisonNote">
+<thead><tr><th scope="col">Compara tres hipótesis</th><th id="roiCompareNetHeader" scope="col">Valor neto del período</th><th id="roiCompareRoiHeader" scope="col">ROI</th><th id="roiComparePaybackHeader" scope="col">Retorno de implantación</th></tr></thead>
+<tbody><tr><th id="roiCompare0Name" scope="row">Prudente (50%)</th><td><output id="roiCompare0Net">—</output></td><td><output id="roiCompare0Roi">—</output></td><td><output id="roiCompare0Payback">—</output></td></tr>
+<tr><th id="roiCompare1Name" scope="row">Introducido (100%)</th><td><output id="roiCompare1Net">—</output></td><td><output id="roiCompare1Roi">—</output></td><td><output id="roiCompare1Payback">—</output></td></tr>
+<tr><th id="roiCompare2Name" scope="row">Optimista (125%)</th><td><output id="roiCompare2Net">—</output></td><td><output id="roiCompare2Roi">—</output></td><td><output id="roiCompare2Payback">—</output></td></tr></tbody></table></div></section>
+<details class="share-tools"><summary>Revisar y copiar el escenario</summary>
+<p class="note">Generado localmente. La copia requiere tu acción.</p>
+<label for="roiSummary">Resumen del escenario (sin envío automático)</label>
+<textarea id="roiSummary" rows="12" readonly></textarea>
+<div class="actions"><button id="roiCopySummary" type="button" data-copied="Resumen copiado. Compártelo solo con quien elijas." data-manual="Portapapeles no disponible. Texto seleccionado; cópialo manualmente.">Copiar resumen</button><p id="roiCopyStatus" role="status" aria-live="polite"></p></div>
+</details></section>
+<p class="warning">El valor de capacidad no equivale a ahorro monetario realizado. Esta simulación no es una oferta ni una rentabilidad garantizada.</p>
+<section class="panel" aria-labelledby="related-title"><h2 id="related-title">Herramientas relacionadas</h2><p class="note">Valida costes y riesgos antes de financiar un piloto.</p><nav class="related" aria-label="Herramientas relacionadas"><a href="/es/apps-network/">Red de Apps</a><a href="/es/finops-estimator/">Estimador FinOps</a><a href="/es/token-cost/">Coste de tokens</a><a href="/es/cloud-waste/">Desperdicio en la nube</a></nav></section>
+<section class="panel faq" aria-labelledby="faq-title"><h2 id="faq-title">Cómo interpretar esta estimación</h2>
+<details><summary>¿El tiempo recuperado equivale a ahorro de dinero?</summary><p class="note">No. La capacidad recuperada tiene valor, pero ahorrar dinero exige reducir gastos de forma comprobada o generar un resultado medible.</p></details>
+<details><summary>¿Qué indica el plazo de recuperación?</summary><p class="note">Coste inicial dividido entre el valor neto mensual positivo. Si el valor neto mensual no es positivo, no hay plazo calculable.</p></details>
+<details><summary>¿Cómo decidir si conviene continuar?</summary><p class="note">Valida la situación inicial, compara escenarios conservadores y optimistas y prueba un proceso antes de comprometer presupuesto.</p></details>
+</section>
+<section class="panel conversion" aria-labelledby="conversion-title"><h2 id="conversion-title">¿Quieres validar los supuestos con Zion?</h2><p class="note">Zion ofrece un Discovery gratuito de un proceso. El cuestionario actual está en portugués y no obliga a contratar.</p><a class="buttonlink" href="/discovery/">Abrir Discovery gratuito (formulario en portugués)</a></section>
+</main>
+<footer><div class="wrap">Los valores permanecen en esta sesión del navegador y no se envían a Zion. Revisa los supuestos antes de invertir. · <a href="https://ziontechgroup.com/">Inicio</a></div></footer>
 </body>
 </html>
