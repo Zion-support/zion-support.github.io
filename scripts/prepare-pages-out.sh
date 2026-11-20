@@ -114,4 +114,12 @@ node scripts/check-legacy-redirects.cjs out/
 node --test scripts/render-legacy-service-aliases.test.cjs
 node scripts/render-legacy-service-aliases.cjs out/
 
+# Offline generated-network regression checks; never submit the questionnaire.
+node --test scripts/refresh-app-network-links.test.mjs
+node scripts/refresh-app-network-links.mjs out/
+# Recheck the unchanged money-path protections after generated navigation/promotion.
+assert_money_path services/ai-automation/index.html
+assert_money_path plans/index.html
+assert_money_path discovery/index.html
+
 echo "Prepared out ($(find out -type f | wc -l) files)"
