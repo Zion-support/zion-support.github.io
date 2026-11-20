@@ -70,7 +70,8 @@ jobs:
             '/zion-app-network/app-network-operations-evidence-checklist-2026-es.html': ['Checklist de Evidencia Operativa 2026'],
             '/zion-app-network/app-network-operations-evidence-checklist-2026-fr.html': ['Checklist de Preuves Opérationnelles 2026'],
             '/zion-app-network/app-network-operations-evidence-checklist-2026-de.html': ['Operations-Evidenz-Checkliste 2026'],
-            '/sitemap.xml': ['sitemapindex','apps/apps-sitemap.xml'],
+            '/sitemap.xml': ['sitemapindex','https://ziontechgroup.com/sitemap-0.xml'],
+            '/robots.txt': ['Sitemap: https://ziontechgroup.com/sitemap.xml','Sitemap: https://ziontechgroup.com/apps/apps-sitemap.xml'],
             '/apps/apps-sitemap.xml': ['operations-reliability-ai-2026','/pt/apps/'],
           }
           headers={'User-Agent':'Zion-Apps-Production-Canary/1.0'}
