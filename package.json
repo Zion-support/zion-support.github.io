@@ -107,7 +107,7 @@
     "openclaw:runtime:apply": "echo 'openclaw:runtime:apply: OK (stub - automation paused post-P0)'",
     "package:scripts:dedup-check": "echo 'package:scripts:dedup-check: OK (stub - automation paused post-P0)'",
     "perf:regression": "echo 'perf:regression: OK (stub - automation paused post-P0)'",
-    "pin-actions": "echo 'pin-actions: OK (stub - automation paused post-P0)'",
+    "pin-actions": "node scripts/pin-actions.mjs",
     "promotions:confidence:report": "echo 'promotions:confidence:report: OK (stub - automation paused post-P0)'",
     "promotions:stale:guard": "echo 'promotions:stale:guard: OK (stub - automation paused post-P0)'",
     "release:risk:score": "node automation/release-risk-score.cjs",
