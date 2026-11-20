@@ -985,7 +985,7 @@ def fetch_or_create_lead_from_inbox(email, thread_subject=None):
         'lang': lang,
     }
 
-DRY_RUN = os.getenv('OUTREACH_DRY_RUN', '').lower() in ('1','true','yes')
+DRY_RUN = os.getenv('OUTREACH_DRY_RUN', '1').strip().lower() not in ('0','false','no')
 REQUIRES_APPROVAL = os.getenv('OUTREACH_REQUIRES_APPROVAL', 'true').lower() in ('1','true','yes')
 PENDING_APPROVAL_FILE = BASE_DIR / 'outreach_monitor' / 'processed' / 'pending_approval_queue.jsonl'
 DRY_RUN_REPORT = BASE_DIR / 'outreach_monitor' / 'processed' / 'dry_run_report.jsonl'
@@ -1097,10 +1097,13 @@ def _is_safe_hot_thread(msg_id: str, thread_id: Optional[str] = None) -> dict:
 
 def run_high_frequency_outreach():
     _llm_readiness_report()
-    if service is None:
-        print('AUTH_FAIL', GMAIL_AUTH_ERROR)
-        append_dry_run_report({'mode':'auth_failure','error':GMAIL_AUTH_ERROR,'ts':int(time.time())})
-        return {'sent':0,'skipped':0,'adds':0,'dead':[],'auth_error':GMAIL_AUTH_ERROR}
+    if service is None or not callable(getattr(service, 'users', None)):
+        # A credential probe returning True is not a usable Gmail client.
+        print('AUTH_FAIL', 'gmail_client_unavailable')
+        append_dry_run_report({'mode':'auth_failure','error':'gmail_client_unavailable','ts':int(time.time())})
+        return {'status':'auth_unavailable','mode':'dry_run' if DRY_RUN else 'live',
+                'sent':0,'simulated':0,'pending_approval':0,'failed':0,
+                'skipped':0,'adds':0,'dead':[]}
     print('TRACE_START', flush=True)
     print('LLM_TAILOR_ENABLED=', bool(LLM_TAILOR_ENABLED), 'ENDPOINT=', bool(LLM_API_ENDPOINT), flush=True)
     discovery_queries = [
@@ -1250,6 +1253,9 @@ def run_high_frequency_outreach():
     contacts = clean_contacts[-40:]
 
     sent_count = 0
+    simulated_count = 0
+    pending_count = 0
+    failed_count = 0
     skipped = 0
     newest_used = []
     dead = []
@@ -1318,8 +1324,8 @@ def run_high_frequency_outreach():
                 }
                 append_dry_run_report(record)
                 print('DRY_RUN_WOULD_SEND', email, lead['subject'], lead.get('msg_id'))
-                sent_count += 1
-                print('CONTACT_END', email, 'dry_sent', flush=True)
+                simulated_count += 1
+                print('CONTACT_END', email, 'simulated', flush=True)
                 continue
             if REQUIRES_APPROVAL:
                 append_pending_approval({
@@ -1333,14 +1339,21 @@ def run_high_frequency_outreach():
                     'dedup_last_outbound_ts': (load_state().get('contacts', {}).get(email.lower(), {}) or {}).get('last_outbound_ts'),
                 })
                 print('PENDING_APPROVAL', email, lead['subject'], lead.get('msg_id'))
+                pending_count += 1
                 print('CONTACT_END', email, 'pending_approval', flush=True)
                 continue
             sent = send_ceo_reply(thread_id, email, lead['subject'], body, lead['msg_id'])
+            if isinstance(sent, dict) and (sent.get('skipped') or sent.get('error') == 'excluded'):
+                skipped += 1
+                continue
+            if not isinstance(sent, dict) or sent.get('error') or not sent.get('id'):
+                raise RuntimeError('send_receipt_missing')
+            sent_count += 1  # Receipt confirmed, even if local bookkeeping later fails.
             record_send(contact_key, email, lead['subject'], sent.get('id'), sent.get('threadId'), f'tailored CEO reply from inbox msg {lead["msg_id"]}')
             mark_seen_message_id(lead['msg_id'])
-            sent_count += 1
             print('CONTACT_END', email, 'live_sent', flush=True)
         except Exception as e:
+            failed_count += 1
             print('CONTACT_ERR', email, repr(e), flush=True)
             record_bounce(email, f'SEND_ERR: {e}', lead.get('msg_id'))
             print('CONTACT_END', email, 'err', flush=True)
@@ -1351,6 +1364,9 @@ def run_high_frequency_outreach():
 
     print('ADDS', len(newest_used))
     print('SENT_TOTAL', sent_count)
+    print('SIMULATED_TOTAL', simulated_count)
+    print('PENDING_APPROVAL_TOTAL', pending_count)
+    print('FAILED_TOTAL', failed_count)
     print('SKIPPED', skipped)
     if dead:
         print('DEAD_THREADS', len(dead))
@@ -1366,7 +1382,10 @@ def run_high_frequency_outreach():
         print('REPLY_LEDGER_LINES', sum(1 for l in used if 'hot_followup_reply_ledger' not in str(l)))
     except Exception:
         pass
-    return {'sent': sent_count, 'skipped': skipped, 'adds': len(newest_used), 'dead': dead}
+    return {'status': 'send_failed' if failed_count else 'ok',
+            'mode': 'dry_run' if DRY_RUN else 'live', 'sent': sent_count,
+            'simulated': simulated_count, 'pending_approval': pending_count,
+            'failed': failed_count, 'skipped': skipped, 'adds': len(newest_used), 'dead': dead}
 
 
 EXCLUSION_FILE = PROJECT_ROOT / 'lead-crm' / 'exclusion-list.json'
@@ -1419,5 +1438,14 @@ def send_ceo_reply(thread_id, to_addr, subject, body, references_message_id):
     return _timed_gmail_call(service.users().messages().send(userId="me", body={"raw": raw, "threadId": thread_id}))
 
 
+def main():
+    result = run_high_frequency_outreach()
+    # Emit counts only: no contacts, credentials or exception text.
+    summary = {key: result[key] for key in
+               ('status', 'mode', 'sent', 'simulated', 'pending_approval', 'failed')}
+    print('OUTREACH_RESULT', json.dumps(summary, sort_keys=True))
+    return 0 if result['status'] == 'ok' else 1
+
+
 if __name__ == '__main__':
-    run_high_frequency_outreach()
+    sys.exit(main())

@@ -5,6 +5,12 @@ name: outreach-live-llm-tailoring
   schedule:
     - cron: "*/5 * * * *"
 
+# One executing run across all refs; never cancel an in-flight send.
+# This does not coordinate other workflows, Hermes or SDM senders.
+concurrency:
+  group: outreach-live-llm-tailoring
+  cancel-in-progress: false
+
 jobs:
   outreach:
     runs-on: ubuntu-latest
@@ -33,11 +39,12 @@ jobs:
 
       - name: Run outreach worker
         id: outreach-worker
+        shell: bash
         run: |
+          set -euo pipefail
           echo "[trace] start outreach_worker_automation.py"
           python scripts/outreach/outreach_worker_automation.py | tee outreach_run.log
           echo "[trace] outreach exit=$?"
-        continue-on-error: true
 
       - name: Discover outreach blockers
         if: always()
