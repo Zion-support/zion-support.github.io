@@ -1,0 +1,387 @@
+'use strict';
+const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),os=require('node:os'),path=require('node:path');
+const {audit}=require('./github-workflow-integrity-auditor.cjs');
+const {identifyNoopScript,workflowScriptDependencies}=require('./github-workflow-integrity-auditor.cjs');
+test('static audit produces real bounded findings without network',()=>{
+ const dir=fs.mkdtempSync(path.join(os.tmpdir(),'zion-integrity-'));
+ try{
+  fs.writeFileSync(path.join(dir,'unsafe.yml'),"name: unsafe\non:\n  schedule:\n    - cron: '*/10 * * * *'\njobs:\n  test:\n    steps:\n      - uses: actions/checkout@v4\n");
+  const report=audit(dir);
+  assert.equal(report.workflowCount,1);
+  assert.equal(report.status,'needs_review');
+  assert.ok(report.findings.some(x=>x.type==='action-not-sha-pinned'));
+  assert.ok(report.findings.some(x=>x.type==='implicit-permissions'));
+  assert.ok(report.findings.some(x=>x.type==='high-frequency'));
+ } finally {fs.rmSync(dir,{recursive:true,force:true});}
+});
+test('weekly schedule containing a shell cron string is not high frequency',()=>{
+ const dir=fs.mkdtempSync(path.join(os.tmpdir(),'zion-integrity-'));
+ try {
+  const yaml=[
+   'name: smoke',
+   'on:',
+   '  schedule:',
+   "    - cron: '15 12 * * 3'",
+   'permissions:',
+   '  contents: read',
+   'jobs:',
+   '  check:',
+   '    steps:',
+   "      - run: grep -Fq 'cron: */10 * * * *' workflow.yml",
+   ''
+  ].join('\n');
+  fs.writeFileSync(path.join(dir,'weekly.yml'),yaml);
+  const result=audit(dir);
+  assert.equal(result.findings.filter(x=>x.type==='high-frequency').length,0);
+ } finally {fs.rmSync(dir,{recursive:true,force:true});}
+});
+test('two actual triggers in the same hour are flagged',()=>{
+ const dir=fs.mkdtempSync(path.join(os.tmpdir(),'zion-integrity-'));
+ try {
+  fs.writeFileSync(path.join(dir,'twice.yml'),"name: twice\n'on':\n  schedule:\n    - cron: '0,30 * * * *'\npermissions:\n  contents: read\n");
+  assert.equal(audit(dir).findings.filter(x=>x.type==='high-frequency').length,1);
+ } finally {fs.rmSync(dir,{recursive:true,force:true});}
+});
+
+test('a workflow depending on a success-returning no-op helper is flagged',()=>{
+ const root=fs.mkdtempSync(path.join(os.tmpdir(),'zion-noop-'));
+ try{
+  const wfDir=path.join(root,'.github','workflows');
+  const scriptDir=path.join(root,'scripts','automation');
+  fs.mkdirSync(wfDir,{recursive:true});
+  fs.mkdirSync(scriptDir,{recursive:true});
+  fs.writeFileSync(path.join(scriptDir,'gh-issue-dedupe-or-create.cjs'),
+    "process.stderr.write('stub: not implemented\\n');\nprocess.exitCode = 0;\n");
+  fs.writeFileSync(path.join(wfDir,'guard.yml'), [
+    'name: guard','"on":','  workflow_dispatch:','permissions:','  contents: read',
+    'jobs:','  test:','    steps:','      - run: |',
+    '          node scripts/automation/gh-issue-dedupe-or-create.cjs || true',''
+  ].join('\n'));
+  const r=audit(wfDir);
+  const found=r.findings.filter(f=>f.type==='workflow-calls-successful-noop');
+  assert.equal(found.length,1,JSON.stringify(r.findings));
+  assert.equal(found[0].script,'scripts/automation/gh-issue-dedupe-or-create.cjs');
+ }finally{fs.rmSync(root,{recursive:true,force:true});}
+});
+test('real helper and commented references never produce a no-op warning',()=>{
+ const root=fs.mkdtempSync(path.join(os.tmpdir(),'zion-noop-'));
+ try{
+  const wfDir=path.join(root,'.github','workflows');
+  const scriptDir=path.join(root,'scripts','automation');
+  fs.mkdirSync(wfDir,{recursive:true}); fs.mkdirSync(scriptDir,{recursive:true});
+  fs.writeFileSync(path.join(scriptDir,'real.cjs'),"console.log('checked');\n");
+  fs.writeFileSync(path.join(wfDir,'guard.yml'), [
+    'name: guard','on:','  workflow_dispatch:','permissions:','  contents: read','jobs:',
+    '  check:','    steps:','      - run: |',
+    '          node scripts/automation/real.cjs',
+    '          # node scripts/automation/gh-issue-dedupe-or-create.cjs',''
+  ].join('\n'));
+  assert.equal(audit(wfDir).findings.filter(f=>f.type==='workflow-calls-successful-noop').length,0);
+ }finally{fs.rmSync(root,{recursive:true,force:true});}
+});
+
+test('SHA-pinned workflow with explicit permissions is accepted',()=>{
+ const dir=fs.mkdtempSync(path.join(os.tmpdir(),'zion-integrity-'));
+ try{
+  fs.writeFileSync(path.join(dir,'safe.yml'),"name: safe\n\"on\":\n  workflow_dispatch:\npermissions:\n  contents: read\njobs:\n  test:\n    steps:\n      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd\n");
+  const report=audit(dir);
+  assert.equal(report.status,'healthy');
+  assert.equal(report.counts.totalFindings,0);
+ }finally{fs.rmSync(dir,{recursive:true,force:true});}
+});
+
+test('PR auditor tests cannot supersede the scheduled integrity report',()=>{
+ const yaml=fs.readFileSync(path.resolve(__dirname,'../.github/workflows/ai-github-workflow-integrity-audit-daily.yml'),'utf8');
+ assert.ok(yaml.includes("format('pr-{0}', github.event.pull_request.number)"));
+ assert.ok(yaml.includes("|| 'production'"));
+ assert.match(yaml,/cancel-in-progress:\s*false/);
+ assert.doesNotMatch(yaml,/actions\/checkout@|persist-credentials:\s*true|GITHUB_TOKEN|secrets\./);
+ assert.match(yaml,/EXPECTED_SHA: \$\{\{ github\.sha \}\}/);
+ assert.match(yaml,/cron:\s*'17 13 \* \* \*'/);
+});
+
+function withFixture(run,files={}) {
+ const root=fs.mkdtempSync(path.join(os.tmpdir(),'zion-integrity-fixture-'));
+ const wfDir=path.join(root,'.github','workflows');
+ try {
+  fs.mkdirSync(wfDir,{recursive:true});
+  fs.mkdirSync(path.join(root,'automation'),{recursive:true});
+  for(const [file,content] of Object.entries(files)) {
+   const target=path.join(root,file);fs.mkdirSync(path.dirname(target),{recursive:true});fs.writeFileSync(target,content);
+  }
+  return run(root,wfDir);
+ }finally{fs.rmSync(root,{recursive:true,force:true});}
+}
+function workflow(commands) {
+ return ['name: fixture','on:','  workflow_dispatch:','permissions:','  contents: read',
+  'jobs:','  audit:','    steps:','      - run: |',...commands.map(c=>'          '+c),''].join('\n');
+}
+test('implicit-success logging-only placeholders are recognized without executing them',()=>{
+ for(const source of [
+  'console.log("stub: automation/check.cjs no-op - automation paused post-P0");\n',
+  "#!/usr/bin/env node\n'use strict';\n/* note */ console.warn('not implemented'); // paused\n",
+  "console.log('stub')\nprocess.exit(0)\n",
+  "process.stderr.write('stub: not implemented\\n');process.exitCode = 0;"
+ ])assert.equal(identifyNoopScript(source),true,source);
+});
+test('real work, throwing placeholders and text-only mentions are not successful no-ops',()=>{
+ for(const source of [
+  "// stub\nconsole.log('completed');process.exit(0);",
+  "console.log('stub');require('node:fs').writeFileSync('output','done');process.exit(0);",
+  "console.log('stub');process.exit(1);",
+  "console.log('stub');throw new Error('not implemented');",
+  "console.log(`stub ${doWork()}`);",
+  "console.log('stub') + doWork();",
+  "console.log('stub')console.log('stub');",
+  "console.log('stub');/* unfinished",
+  "console.log('stub');"+' '.repeat(3000)
+ ])assert.equal(identifyNoopScript(source),false,source.slice(0,120));
+});
+test('literal node commands are collected only from run fields with bounded syntax',()=>{
+ const yaml=[
+  'name: node automation/not-a-command.cjs',
+  'description: |','  node automation/not-a-command.cjs',
+  ...workflow([
+   'node automation/implicit.cjs',
+   'node "./scripts/automation/explicit.js" --no-fail',
+   "node 'automation/module.mjs'",
+   '# node automation/comment.cjs',
+   'echo node automation/quoted.cjs',
+   'node "$SCRIPT"',
+   'node automation/$(command).cjs',
+   "cat <<'TEXT'",'node automation/heredoc.cjs','TEXT'
+  ]).split('\n'),
+  '      - run: node automation/inline.cjs'
+ ].join('\n');
+ assert.deepEqual(workflowScriptDependencies(yaml),[
+  'automation/implicit.cjs','scripts/automation/explicit.js','automation/module.mjs','automation/inline.cjs'
+ ]);
+});
+test('audit reports missing literal scripts and both implicit and explicit placeholder sources',()=>{
+ withFixture((root,wfDir)=>{
+  fs.writeFileSync(path.join(wfDir,'audit.yml'),workflow([
+   'node automation/implicit.cjs', 'node scripts/automation/explicit.cjs',
+   'node automation/absent.cjs','node automation/implicit.cjs'
+  ]));
+  const result=audit(wfDir);
+  assert.equal(result.status,'needs_review');
+  assert.equal(result.counts.byType['workflow-calls-successful-noop'],2);
+  assert.equal(result.counts.byType['missing-local-script'],1);
+  assert.equal(result.counts.totalFindings,3);
+  assert.ok(!JSON.stringify(result).includes('do not copy this text'));
+ },{
+  'automation/implicit.cjs':"console.log('stub: do not copy this text');",
+  'scripts/automation/explicit.cjs':"process.stderr.write('not implemented');process.exitCode=0;"
+ });
+});
+test('traversal, script symlinks, ancestor symlinks and non-files are reported without reading',()=>{
+ withFixture((root,wfDir)=>{
+  const outside=fs.mkdtempSync(path.join(os.tmpdir(),'zion-integrity-outside-'));
+  try {
+   fs.writeFileSync(path.join(outside,'secret.cjs'),"console.log('stub: OUTSIDE_SECRET');");
+   fs.symlinkSync(path.join(outside,'secret.cjs'),path.join(root,'automation','link.cjs'));
+   fs.symlinkSync(outside,path.join(root,'automation','linked-dir'));
+   fs.mkdirSync(path.join(root,'automation','directory.cjs'));
+   fs.writeFileSync(path.join(wfDir,'paths.yml'),workflow([
+    'node automation/../../secret.cjs','node automation/link.cjs',
+    'node automation/linked-dir/secret.cjs','node automation/directory.cjs'
+   ]));
+   const result=audit(wfDir);
+   assert.deepEqual(result.findings.map(f=>f.reason).sort(),['not-regular-file','symlink','symlink-or-non-directory','unsafe-path']);
+   assert.equal(result.counts.byType['workflow-calls-successful-noop'],undefined);
+   assert.ok(!JSON.stringify(result).includes('OUTSIDE_SECRET'));
+  }finally{fs.rmSync(outside,{recursive:true,force:true});}
+ });
+});
+test('oversized sources and workflow symlinks remain explicitly uninspected',()=>{
+ withFixture((root,wfDir)=>{
+  fs.writeFileSync(path.join(root,'automation','large.cjs'),"console.log('stub');"+' '.repeat(3001));
+  fs.writeFileSync(path.join(wfDir,'script.yml'),workflow(['node automation/large.cjs']));
+  fs.writeFileSync(path.join(wfDir,'large.yml'),'#'.repeat(256*1024+1));
+  fs.symlinkSync(path.join(wfDir,'script.yml'),path.join(wfDir,'link.yml'));
+  const result=audit(wfDir);
+  assert.equal(result.counts.byType['workflow-source-uninspected'],2);
+  assert.equal(result.counts.byType['local-script-uninspected'],1);
+  assert.equal(result.findings.find(f=>f.file==='link.yml').reason,'symlink');
+ });
+});
+test('symlinked workflow directories cannot cause external directory scanning',()=>{
+ withFixture((root,wfDir)=>{
+  fs.renameSync(wfDir,wfDir+'-real');fs.symlinkSync(wfDir+'-real',wfDir);
+  assert.throws(()=>audit(wfDir),/regular directories/);
+ });
+});
+test('bounded report retains aggregate findings when evidence list is truncated',()=>{
+ withFixture((root,wfDir)=>{
+  fs.writeFileSync(path.join(wfDir,'missing.yml'),workflow(Array.from({length:105},(_,i)=>`node automation/missing-${i}.cjs`)));
+  const result=audit(wfDir);
+  assert.equal(result.counts.totalFindings,105);
+  assert.equal(result.counts.byType['missing-local-script'],105);
+  assert.equal(result.findings.length,100);
+  assert.equal(result.truncatedFindings,5);
+ });
+});
+
+// Exercise the workflow's actual Bash, not a second acquisition implementation.
+// Only the fixed public fetch is redirected to a local Git fixture: no network.
+const {spawnSync}=require('node:child_process');
+const {pathToFileURL}=require('node:url');
+const publicOrigin='https://github.com/Zion-support/zion-support.github.io.git';
+function acquisitionScript() {
+ const yaml=fs.readFileSync(path.resolve(__dirname,'../.github/workflows/ai-github-workflow-integrity-audit-daily.yml'),'utf8');
+ const block=yaml.match(/^        run: \|\n((?:          .*\n)+)/m);
+ assert.ok(block,'Public acquisition run block must exist');
+ return block[1].replace(/^          /gm,'');
+}
+function acquisitionFixture(t,mode='normal') {
+ const root=fs.mkdtempSync(path.join(os.tmpdir(),'zion-public-acquisition-'));
+ t.after(()=>fs.rmSync(root,{recursive:true,force:true}));
+ const origin=path.join(root,'origin'),bin=path.join(root,'bin'),home=path.join(root,'home');
+ for(const dir of [origin,bin,home])fs.mkdirSync(dir);
+ const realGit=process.env.PATH.split(path.delimiter).map(p=>path.join(p,'git')).find(p=>fs.existsSync(p));
+ assert.ok(realGit);
+ const cleanEnv={PATH:process.env.PATH,HOME:home,GIT_CONFIG_NOSYSTEM:'1',GIT_CONFIG_GLOBAL:'/dev/null',GIT_TERMINAL_PROMPT:'0'};
+ const git=(args,cwd=origin)=>spawnSync(realGit,args,{cwd,env:cleanEnv,encoding:'utf8'});
+ const mustGit=(args,cwd)=>{const r=git(args,cwd);assert.equal(r.status,0,r.stderr);return r.stdout.trim();};
+ mustGit(['init','-q']);
+ for(const file of ['.github/workflows/fixture.yml','automation/input.cjs','scripts/automation/input.cjs','.nvmrc','excluded.txt']) {
+  const target=path.join(origin,file);fs.mkdirSync(path.dirname(target),{recursive:true});fs.writeFileSync(target,'fixture\n');
+ }
+ mustGit(['add','.']);
+ const gitlink='d919f24b003164826ecd6d1fe8c7e5727eaf391a';
+ mustGit(['update-index','--add','--cacheinfo',`160000,${gitlink},.pageploy`]);
+ mustGit(['-c','user.name=CI fixture','-c','user.email=ci-fixture@example.invalid','commit','-qm','orphan gitlink fixture']);
+ const sha=mustGit(['rev-parse','HEAD']),trace=path.join(root,'git-calls.jsonl');
+ fs.writeFileSync(path.join(bin,'git'),`#!${process.execPath}
+'use strict';
+const fs=require('node:fs'),assert=require('node:assert/strict'),cp=require('node:child_process');
+const args=process.argv.slice(2),mode=${JSON.stringify(mode)};
+fs.appendFileSync(${JSON.stringify(trace)},JSON.stringify(args)+'\\n');
+for(const key of ['GITHUB_TOKEN','GH_TOKEN','GIT_CONFIG_COUNT','GIT_CONFIG_KEY_0','GIT_CONFIG_VALUE_0','GIT_SSH_COMMAND','BASH_ENV','HTTP_PROXY','HTTPS_PROXY','TEST_AUTH_SENTINEL'])assert.equal(process.env[key],undefined,key+' leaked');
+for(const [key,value] of Object.entries({GIT_CONFIG_NOSYSTEM:'1',GIT_CONFIG_GLOBAL:'/dev/null',GIT_TERMINAL_PROMPT:'0',GIT_ASKPASS:'/bin/false',SSH_ASKPASS:'/bin/false',HOME:${JSON.stringify(home)}}))assert.equal(process.env[key],value,key);
+if(args[0]==='remote')assert.deepEqual(args,['remote','add','origin',${JSON.stringify(publicOrigin)}]);
+if(args.includes('fetch')) {
+ assert.deepEqual(args,['-c','credential.helper=','fetch','--depth=1','--filter=blob:none','--no-tags','--no-recurse-submodules','origin',${JSON.stringify(sha)}]);
+ if(mode==='fetch-failure')process.exit(42);
+ args[args.indexOf('origin')]=${JSON.stringify(pathToFileURL(origin).href)};
+}
+if(args.includes('checkout'))assert.deepEqual(args,['-c','credential.helper=','checkout','--detach','FETCH_HEAD']);
+if((mode==='fetch-mismatch'&&args.join(' ')==='rev-parse FETCH_HEAD')||(mode==='head-mismatch'&&args.join(' ')==='rev-parse HEAD')) {console.log('0'.repeat(40));process.exit(0);}
+const result=cp.spawnSync(${JSON.stringify(realGit)},args,{env:process.env,stdio:'inherit'});
+process.exit(result.status===null?1:result.status);
+`,{mode:0o755});
+ const env={...process.env,PATH:bin+path.delimiter+process.env.PATH,RUNNER_TEMP:home,EXPECTED_SHA:sha,
+  GITHUB_TOKEN:'synthetic-do-not-inherit',GH_TOKEN:'synthetic-do-not-inherit',TEST_AUTH_SENTINEL:'synthetic',
+  GIT_CONFIG_COUNT:'1',GIT_CONFIG_KEY_0:'credential.helper',GIT_CONFIG_VALUE_0:'synthetic-helper',
+  GIT_SSH_COMMAND:'false',HTTP_PROXY:'http://example.invalid',HTTPS_PROXY:'http://example.invalid'};
+ const calls=()=>fs.existsSync(trace)?fs.readFileSync(trace,'utf8').trim().split('\n').map(JSON.parse):[];
+ const acquire=(expected=sha,script=acquisitionScript())=>{
+  const work=fs.mkdtempSync(path.join(root,'work-'));
+  const result=spawnSync('bash',['--noprofile','--norc','-c',script],{cwd:work,env:{...env,EXPECTED_SHA:expected},encoding:'utf8',timeout:15000});
+  assert.ifError(result.error);
+  return {work,result};
+ };
+ return {root,sha,gitlink,git,mustGit,calls,acquire};
+}
+test('public acquisition rejects invalid SHA before any Git call',t=>{
+ const f=acquisitionFixture(t);
+ for(const sha of ['', 'main','a'.repeat(39),'a'.repeat(41),'g'.repeat(40),'$(touch injected)','a'.repeat(40)+'\n']) {
+  const {work,result}=f.acquire(sha);
+  assert.notEqual(result.status,0,JSON.stringify(sha));
+  assert.deepEqual(fs.readdirSync(work),[]);
+ }
+ assert.deepEqual(f.calls(),[],'No Git or network operation for invalid input');
+});
+test('public acquisition preserves orphan gitlink and exact revision without inherited auth',t=>{
+ const f=acquisitionFixture(t),{work,result}=f.acquire();
+ assert.equal(result.status,0,result.stderr);
+ assert.equal(f.mustGit(['rev-parse','HEAD'],work),f.sha);
+ assert.equal(f.mustGit(['rev-parse','FETCH_HEAD'],work),f.sha);
+ assert.equal(f.mustGit(['remote','get-url','origin'],work),publicOrigin);
+ assert.equal(f.mustGit(['ls-files','--stage','.pageploy'],work),`160000 ${f.gitlink} 0\t.pageploy`);
+ assert.equal(fs.existsSync(path.join(work,'.pageploy')),false);
+ assert.equal(fs.existsSync(path.join(work,'.gitmodules')),false);
+ assert.equal(fs.existsSync(path.join(work,'excluded.txt')),false);
+ for(const file of ['.github/workflows/fixture.yml','automation/input.cjs','scripts/automation/input.cjs','.nvmrc'])assert.ok(fs.existsSync(path.join(work,file)),file);
+ assert.equal(f.git(['config','--local','--get-regexp','credential|extraheader|includeif'],work).status,1);
+ assert.ok(!f.calls().some(args=>args.includes('submodule')),'Acquisition must not clean submodule auth');
+ // Reproduce the old checkout cleanup failure against that same sparse index.
+ const old=f.git(['submodule','foreach','--recursive','sh','-c',"git config --local --name-only --get-regexp 'core\\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"],work);
+ assert.equal(old.status,128);
+ assert.match(old.stderr,/No url found for submodule path '\.pageploy' in \.gitmodules/);
+});
+test('public acquisition stops on fetch failure or either revision mismatch',t=>{
+ for(const mode of ['fetch-failure','fetch-mismatch','head-mismatch']) {
+  const f=acquisitionFixture(t,mode),{result}=f.acquire();
+  assert.notEqual(result.status,0,mode);
+  const checkedOut=f.calls().some(args=>args.includes('checkout'));
+  assert.equal(checkedOut,mode==='head-mismatch',mode);
+ }
+});
+test('public acquisition rejects an existing Git directory',t=>{
+ const f=acquisitionFixture(t);
+ const {result}=f.acquire(f.sha,'mkdir .git\n'+acquisitionScript());
+ assert.notEqual(result.status,0);
+ assert.deepEqual(f.calls(),[]);
+});
+
+for(const replacement of ['ancestor','file'])test(`source ${replacement} replacement during open never reads an external inode`,t=>{
+ withFixture((root,wfDir)=>{
+  const outside=fs.mkdtempSync(path.join(os.tmpdir(),'zion-race-outside-'));
+  const dir=path.join(root,'automation','swap'),target=path.join(dir,'race.cjs');
+  const external=path.join(outside,'race.cjs');
+  fs.mkdirSync(dir);fs.writeFileSync(target,"console.log('original safe source');");
+  fs.writeFileSync(external,"console.log('stub: EXTERNAL_CONTENT_MUST_NOT_BE_READ');");
+  fs.writeFileSync(path.join(wfDir,'race.yml'),workflow(['node automation/swap/race.cjs']));
+  const externalStat=fs.statSync(external),open=fs.openSync,read=fs.readSync;
+  let swapped=false,externalReads=0;
+  t.mock.method(fs,'openSync',function(file,...args){
+   if(!swapped&&String(file).endsWith('/race.cjs')) {
+    swapped=true;
+    if(replacement==='ancestor') {fs.renameSync(dir,dir+'-original');fs.symlinkSync(outside,dir);}
+    else {fs.renameSync(target,target+'.original');fs.symlinkSync(external,target);}
+   }
+   return open.call(this,file,...args);
+  });
+  t.mock.method(fs,'readSync',function(fd,...args){
+   const stat=fs.fstatSync(fd);
+   if(stat.dev===externalStat.dev&&stat.ino===externalStat.ino)externalReads++;
+   return read.call(this,fd,...args);
+  });
+  try {
+   const result=audit(wfDir);
+   assert.ok(swapped,'Swap must occur at the actual file-open boundary');
+   assert.equal(externalReads,0,'No bytes from the external inode may be read');
+   assert.equal(result.counts.byType['workflow-calls-successful-noop'],undefined);
+   if(replacement==='file')assert.equal(result.findings.find(f=>f.script==='automation/swap/race.cjs').reason,'symlink');
+  }finally{t.mock.restoreAll();fs.rmSync(outside,{recursive:true,force:true});}
+ });
+});
+
+test('source growth after fstat remains byte-bounded and explicitly uninspected',t=>{
+ withFixture((root,wfDir)=>{
+  const target=path.join(root,'automation','growing.cjs');
+  fs.writeFileSync(target,"console.log('safe');");
+  fs.writeFileSync(path.join(wfDir,'growth.yml'),workflow(['node automation/growing.cjs']));
+  const original=fs.statSync(target),fstat=fs.fstatSync,read=fs.readSync;
+  let grown=false,bytesRead=0;
+  t.mock.method(fs,'fstatSync',function(fd,...args){
+   const stat=fstat.call(this,fd,...args);
+   if(!grown&&stat.dev===original.dev&&stat.ino===original.ino) {
+    grown=true;fs.appendFileSync(target,'x'.repeat(10000));
+   }
+   return stat;
+  });
+  t.mock.method(fs,'readSync',function(fd,...args){
+   const stat=fstat(fd),count=read.call(this,fd,...args);
+   if(stat.dev===original.dev&&stat.ino===original.ino)bytesRead+=count;
+   return count;
+  });
+  try {
+   const result=audit(wfDir);
+   assert.ok(grown);
+   assert.equal(bytesRead,3001,'Read at most the limit plus one overflow byte');
+   assert.equal(result.findings.find(f=>f.script==='automation/growing.cjs').reason,'source-size-limit');
+  }finally{t.mock.restoreAll();}
+ });
+});
