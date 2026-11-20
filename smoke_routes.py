@@ -32,3 +32,6 @@ for p in paths:
         fails.append({"route": p, "status": status, "content_type": content_type})
 
 print(str(fails))
+
+# Make cron and CI fail when any route failed instead of reporting success.
+raise SystemExit(1 if fails else 0)
