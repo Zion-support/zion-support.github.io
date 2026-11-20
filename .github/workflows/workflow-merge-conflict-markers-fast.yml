@@ -9,10 +9,12 @@ permissions:
   pull_request:
     paths:
       - 'scripts/automation/check-merge-conflict-markers.cjs'
+      - 'scripts/automation/check-merge-conflict-markers.test.cjs'
   push:
     branches: [main]
     paths:
       - 'scripts/automation/check-merge-conflict-markers.cjs'
+      - 'scripts/automation/check-merge-conflict-markers.test.cjs'
   workflow_dispatch:
 
 concurrency:
@@ -28,16 +30,25 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          persist-credentials: false
 
       - name: Setup Node.js
         uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
         with:
-          node-version-file: '.nvmrc'
-          cache: npm
-          cache-dependency-path: package-lock.json
+          node-version: '22'
 
-      - name: Install dependencies
-        run: npm ci --prefer-offline --no-audit --fund=false
+      - name: Offline marker scanner regression tests
+        run: node --test scripts/automation/check-merge-conflict-markers.test.cjs
 
-      - name: Check tracked files for merge conflict markers
+      - name: Fail closed on tracked source merge markers
         run: node scripts/automation/check-merge-conflict-markers.cjs
+
+      - name: Upload safe marker evidence even on detection
+        if: always()
+        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
+        with:
+          name: tracked-merge-markers-${{ github.run_id }}
+          path: automation/reports/merge-conflict-markers-latest.json
+          if-no-files-found: error
+          retention-days: 7
