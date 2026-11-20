@@ -1,0 +1,52 @@
+name: Actions queue health digest (read-only)
+
+on:
+  workflow_dispatch:
+    inputs:
+      head_sha:
+        description: Optional full commit SHA to inspect (not a merge approval)
+        required: false
+        type: string
+        default: ''
+  pull_request:
+    paths:
+      - '.github/workflows/actions-queue-health-digest.yml'
+      - '.github/scripts/actions_queue_health.py'
+      - '.github/scripts/test_actions_queue_health.py'
+
+permissions:
+  actions: read
+  contents: read
+
+concurrency:
+  group: actions-queue-health-digest-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  summarize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Fetch only diagnostic sources at the exact tested commit
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          SOURCE_SHA: ${{ github.sha }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/queue-health"
+          for file in actions_queue_health.py test_actions_queue_health.py; do
+            gh api "repos/$GH_REPO/contents/.github/scripts/$file?ref=$SOURCE_SHA" \
+              --jq '.content' | base64 --decode > "$RUNNER_TEMP/queue-health/$file"
+          done
+      - name: Verify queue and failure classification
+        shell: bash
+        run: python3 "$RUNNER_TEMP/queue-health/test_actions_queue_health.py" -v
+      - name: Inspect current Actions evidence
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          TARGET_HEAD_SHA: ${{ github.event.pull_request.head.sha || inputs.head_sha }}
+        shell: bash
+        run: python3 "$RUNNER_TEMP/queue-health/actions_queue_health.py" --head-sha "$TARGET_HEAD_SHA" --output "$RUNNER_TEMP/queue-health/report.json"
