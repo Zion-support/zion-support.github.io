@@ -31,14 +31,35 @@ jobs:
           cache: npm
           cache-dependency-path: package-lock.json
 
+      - name: Detect intentional release guardian pause
+        id: guardian_mode
+        run: |
+          node <<'NODE'
+          const fs = require('node:fs');
+          const command = JSON.parse(fs.readFileSync('package.json', 'utf8')).scripts?.['autonomy:release-guardian'];
+          if (typeof command !== 'string' || !command.trim()) {
+            throw new Error('Release guardian command is missing or empty; refusing to skip an unknown configuration.');
+          }
+          const pausedStub = "echo 'autonomy:release-guardian: OK (stub - automation paused post-P0)'";
+          const paused = command.trim() === pausedStub;
+          fs.appendFileSync(process.env.GITHUB_OUTPUT, `enabled=${!paused}\n`);
+          if (paused) {
+            const message = 'Release guardian is intentionally PAUSED post-P0. No release-health checks ran; no health report is expected, and no incident will be opened or closed.';
+            console.log(message);
+            fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, `## Release guardian paused\n\n${message}\n`);
+          }
+          NODE
+
       - name: Install dependencies
+        if: steps.guardian_mode.outputs.enabled == 'true'
         run: npm ci --prefer-offline --no-audit --fund=false
 
       - name: Run release guardian
+        if: steps.guardian_mode.outputs.enabled == 'true'
         run: npm run autonomy:release-guardian
 
       - name: Upload release guardian artifacts
-        if: always()
+        if: always() && steps.guardian_mode.outputs.enabled == 'true'
         uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
         with:
           name: autonomous-release-guardian-${{ github.run_id }}
@@ -49,7 +70,7 @@ jobs:
           retention-days: 30
 
       - name: Escalate release health incident
-        if: always()
+        if: always() && steps.guardian_mode.outputs.enabled == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
