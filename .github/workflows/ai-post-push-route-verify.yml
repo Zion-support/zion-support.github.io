@@ -3,26 +3,76 @@ name: AI Post Push Route Verify
 permissions:
   contents: read
   issues: write
+  actions: read
 
 "on":
   push:
     branches: [main]
+  workflow_run:
+    workflows: [Continuous Pages Deploy, Simple Static Deploy]
+    types: [completed]
   workflow_dispatch:
+
+concurrency:
+  group: ai-post-push-route-verify-${{ github.event_name }}-${{ github.event.workflow_run.id || github.ref }}
+  cancel-in-progress: true
 
 jobs:
   verify-routes:
+    if: >-
+      ${{ github.event_name != 'workflow_run' ||
+          (github.event.workflow_run.conclusion == 'success' &&
+           github.event.workflow_run.head_branch == 'main' &&
+           github.event.workflow_run.repository.full_name == github.repository) }}
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    # 60 promoted probes x 12s + 26 critical probes x 20s can exceed 20m.
+    # Keep finite budgets without loosening HTTP success requirements.
+    timeout-minutes: 35
     steps:
+      - name: Validate executed Pages publication
+        timeout-minutes: 3
+        if: github.event_name == 'workflow_run'
+        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd
+        with:
+          script: |
+            const run = context.payload.workflow_run;
+            const expected = {
+              '.github/workflows/gh-pages.yml': 'Deploy to GitHub Pages',
+              '.github/workflows/static-deploy.yml': 'Run actions/deploy-pages@v4'
+            };
+            const stepName = run && expected[run.path];
+            if (!run || !stepName || run.status !== 'completed' || run.conclusion !== 'success' ||
+                run.head_branch !== 'main' || run.repository?.full_name !== `${context.repo.owner}/${context.repo.repo}` ||
+                !/^[0-9a-f]{40}$/.test(run.head_sha || '')) {
+              throw new Error('Unverified publisher event; refusing release evidence');
+            }
+            const jobs = await github.paginate(github.rest.actions.listJobsForWorkflowRun, {
+              ...context.repo, run_id: run.id, filter: 'latest', per_page: 100
+            });
+            const published = jobs.some(job => job.name === 'deploy' &&
+              job.status === 'completed' && job.conclusion === 'success' &&
+              (job.steps || []).some(step => step.name === stepName &&
+                step.status === 'completed' && step.conclusion === 'success' &&
+                Number.isFinite(Date.parse(step.started_at)) &&
+                Number.isFinite(Date.parse(step.completed_at)) &&
+                Date.parse(step.completed_at) >= Date.parse(step.started_at) &&
+                Date.parse(step.completed_at) <= Date.now()));
+            if (!published) throw new Error('No successful executed Pages deploy step; refusing release evidence');
+            core.info(`Verified publisher run ${run.id} at ${run.head_sha}`);
+
       - name: Checkout
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          ref: ${{ github.event_name == 'workflow_run' && github.event.workflow_run.head_sha || github.sha }}
+          persist-credentials: false
 
       - name: Setup Node.js
         uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
         with:
           node-version-file: '.nvmrc'
 
-      - name: Verify critical Apps release routes
+      - name: Verify promoted routes
+        timeout-minutes: 15
         id: verify
         run: |
           set -euo pipefail
@@ -50,10 +100,66 @@ jobs:
             echo "has_failures=false" >> "$GITHUB_OUTPUT"
           fi
 
+      - name: Verify critical Apps release routes
+        timeout-minutes: 10
+        id: critical
+        run: |
+          set -euo pipefail
+          base="https://ziontechgroup.com"
+          critical_failures_file="critical-route-failures.txt"
+          : > "$critical_failures_file"
+          routes=(
+            "/"
+            "/apps/"
+            "/pt/apps/"
+            "/es/apps/"
+            "/fr/apps/"
+            "/de/apps/"
+            "/discovery/"
+            "/pt/discovery/"
+            "/es/discovery/"
+            "/fr/discovery/"
+            "/de/discovery/"
+            "/apps/operations-reliability-ai-2026.html"
+            "/apps/operations-reliability-ai-2026-pt.html"
+            "/apps/operations-reliability-ai-2026-es.html"
+            "/apps/operations-reliability-ai-2026-fr.html"
+            "/apps/operations-reliability-ai-2026-de.html"
+            "/zion-app-network/app-network-operations-reliability-2026.html"
+            "/zion-app-network/app-network-operations-reliability-2026-pt-br.html"
+            "/zion-app-network/app-network-operations-reliability-2026-es.html"
+            "/zion-app-network/app-network-operations-reliability-2026-fr.html"
+            "/zion-app-network/app-network-operations-reliability-2026-de.html"
+            "/zion-app-network/app-network-operations-evidence-checklist-2026.html"
+            "/zion-app-network/app-network-operations-evidence-checklist-2026-pt-br.html"
+            "/zion-app-network/app-network-operations-evidence-checklist-2026-es.html"
+            "/zion-app-network/app-network-operations-evidence-checklist-2026-fr.html"
+            "/zion-app-network/app-network-operations-evidence-checklist-2026-de.html"
+          )
+          failed=0
+          for path in "${routes[@]}"; do
+            code=$(curl --location --silent --show-error --max-time 20 -o /dev/null -w "%{http_code}" "${base}${path}" || echo "000")
+            if [ "$code" = "200" ]; then
+              echo "OK critical $path ($code)"
+            else
+              echo "::error::critical route $path returned $code"
+              echo "- $path => $code" >> "$critical_failures_file"
+              failed=1
+            fi
+          done
+          if [ "$failed" -ne 0 ]; then
+            echo "has_failures=true" >> "$GITHUB_OUTPUT"
+            exit 1
+          fi
+          echo "has_failures=false" >> "$GITHUB_OUTPUT"
+
       - name: Create or update route failure issue
-        if: steps.verify.outputs.has_failures == 'true'
+        if: ${{ !cancelled() && (steps.verify.outputs.has_failures == 'true' || steps.critical.outputs.has_failures == 'true') }}
         env:
           GH_TOKEN: ${{ github.token }}
+          VERIFIED_SOURCE_SHA: ${{ github.event_name == 'workflow_run' && github.event.workflow_run.head_sha || github.sha }}
+          VERIFIED_SOURCE_BRANCH: ${{ github.event_name == 'workflow_run' && github.event.workflow_run.head_branch || github.ref_name }}
+          PUBLISHER_RUN_ID: ${{ github.event_name == 'workflow_run' && github.event.workflow_run.id || 'not-applicable' }}
         run: |
           set -euo pipefail
           body_file="issue-body.md"
@@ -62,16 +168,21 @@ jobs:
             echo ""
             echo "- **Dedupe key:** \`post-push-route-verify\`"
             echo ""
-            echo "Branch: \`${GITHUB_REF}\`"
-            echo "Commit: \`${GITHUB_SHA}\`"
+            echo "Branch: \`${VERIFIED_SOURCE_BRANCH}\`"
+            echo "Commit: \`${VERIFIED_SOURCE_SHA}\`"
             echo "Workflow: \`${GITHUB_WORKFLOW}\`"
             echo ""
-            echo "### Failing routes"
-            cat route-failures.txt
+            echo "Publisher run: ${PUBLISHER_RUN_ID}"
+            echo "Verifier run: ${GITHUB_RUN_ID}"
+            echo "### Promoted route failures (advisory)"
+            if [ -s route-failures.txt ]; then cat route-failures.txt; else echo "None recorded."; fi
+            echo "### Critical route failures"
+            if [ -s critical-route-failures.txt ]; then cat critical-route-failures.txt; else echo "None recorded."; fi
           } > "$body_file"
           export ISSUE_TITLE="AI route verification failures on production"
           export ISSUE_BODY_FILE="$body_file"
           export ISSUE_LABELS="bug"
           export ISSUE_FINGERPRINT="post-push-route-verify"
           node scripts/automation/gh-issue-dedupe-or-create.cjs || true
+
 
