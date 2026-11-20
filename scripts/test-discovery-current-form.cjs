@@ -5,10 +5,13 @@ const path = require('node:path');
 const vm = require('node:vm');
 const assert = require('node:assert/strict');
 const html = fs.readFileSync(process.argv[2] || path.join(__dirname, '../public/discovery/index.html'), 'utf8');
-const source = [...html.matchAll(/<script>([\s\S]*?)<\/script>/g)].map(m => m[1]).find(s => s.includes("var MAP="));
+function questionnaireSource(markup) {
+  return [...markup.matchAll(/<script>([\s\S]*?)<\/script>/gi)].map(m => m[1]).find(s => s.includes("var MAP="));
+}
+const source = questionnaireSource(html);
 assert.ok(source, 'Questionnaire script exists');
 let scenarios = 0;
-function fixture(mode = 'accepted') {
+function fixture(mode = 'accepted', script = source) {
   const nodes = new Map(), calls = [], timers = new Map();
   const answers = {name:'Synthetic Visitor',email:'client@example.test',industry:'finance',challenge:'costs',size:'1-10',speed:'days',aiuse:'none',outcome:'save-time',deploy:'saas'};
   let valid = true, handler, release, serial = 0;
@@ -38,13 +41,21 @@ function fixture(mode = 'accepted') {
       return response;
     }
   };
-  vm.runInNewContext(source,context);
+  vm.runInNewContext(script,context);
   return {answers,calls,get,button,submit:()=>handler({preventDefault(){}}),
     setValid(v){valid=v;},expire(){for(const fn of [...timers.values()])fn();},
     release(v){release(v);},timers};
 }
 const flush=()=>new Promise(r=>setImmediate(r));
 async function run() {
+  {
+    const mixedCase = '<SCRIPT>' + source + '</ScRiPt>';
+    const extracted = questionnaireSource(mixedCase);
+    assert.equal(extracted, source, 'HTML script tag names are case-insensitive');
+    const f=fixture('accepted', extracted);await f.submit();
+    assert.equal(f.calls.length,1);
+    scenarios++;
+  }
   for(const mode of ['accepted','string-true','rejected','string-false','http-error','invalid-json','missing','null','network']) {
     const f=fixture(mode); await f.submit();
     assert.equal(f.calls.length,1);
