@@ -13,10 +13,10 @@ export default function BlogPage() {
   return (
     <main className="max-w-6xl mx-auto px-4 py-10">
       <ArticleStructuredData
-        title="AI Contract Review and Legal Operations Automation for IT Teams 2026"
+        headline="AI Contract Review and Legal Operations Automation for IT Teams 2026"
         description="IT-focused guide to AI contract review and legal operations automation in 2026. Reduce risk, speed approvals, and build compliant intake workflows."
-        canonical="https://ziontechgroup.com/blog/ai-contract-review-and-legal-operations-automation-2026"
-        publishDate="2026-07-08"
+        slug="ai-contract-review-and-legal-operations-automation-2026"
+        datePublished="2026-07-08"
       />
       <SiteBreadcrumbs
         items={[

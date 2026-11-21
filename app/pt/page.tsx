@@ -3,7 +3,7 @@
 // with hreflang support. Copy stays fact-only and mirrors the English homepage.
 
 import Link from 'next/link';
-import { allServices } from './data/servicesData';
+import { allServices } from '../data/servicesData';
 
 const serviceCount = allServices.length;
 

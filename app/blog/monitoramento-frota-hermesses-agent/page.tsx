@@ -1,8 +1,8 @@
 /* eslint-disable */
 import Metadata from 'next';
 import Link from 'next/link';
-import ArticleStructuredData from '@/app/components/ArticleStructuredData';
-import Breadcrumb from '@/app/components/Breadcrumb';
+import ArticleStructuredData from '@/components/ArticleStructuredData';
+import Breadcrumb from '@/components/Breadcrumb';
 
 export const metadata = {
   title: 'Monitoramento de Frota com Hermes Agent: Visibilidade em Tempo Real | Zion Tech Group Blog',

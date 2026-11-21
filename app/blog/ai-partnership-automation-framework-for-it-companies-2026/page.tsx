@@ -13,10 +13,10 @@ export default function BlogPage() {
   return (
     <main className="max-w-6xl mx-auto px-4 py-10">
       <ArticleStructuredData
-        title="AI Partnership Automation Framework for IT Companies"
+        headline="AI Partnership Automation Framework for IT Companies"
         description="A practical framework for IT companies to automate AI partnership workflows and reduce manual work."
-        canonical="https://ziontechgroup.com/blog/ai-partnership-automation-framework-for-it-companies-2026"
-        publishDate="2026-07-07"
+        slug="ai-partnership-automation-framework-for-it-companies-2026"
+        datePublished="2026-07-07"
       />
       <SiteBreadcrumbs
         items={[

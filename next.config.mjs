@@ -6,6 +6,7 @@ const nextConfig = {
   experimental: {
     // Reduce webpack memory footprint (fixes OOM on GH-hosted runners, 125k+ file tree)
     webpackMemoryOptimizations: true,
+    webpackBuildWorker: true,
   },
   outputFileTracingRoot: path.join(process.cwd(), 'app'),
   basePath: '',
@@ -21,7 +22,10 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   // Static export via webpack
-  webpack: (config, { isServer }) => {
+  webpack: (config, { dev, isServer }) => {
+    if (!dev) {
+      config.cache = false;
+    }
     const appDir = path.join(process.cwd(), 'app');
     config.resolve.alias = {
       ...(config.resolve.alias || {}),

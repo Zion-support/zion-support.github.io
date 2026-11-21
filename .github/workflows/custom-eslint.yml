@@ -23,7 +23,7 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v6.0.2
       with:
-        fetch-depth: 0
+        fetch-depth: 1
     - name: Setup Node.js
       uses: actions/setup-node@v6.3.0
       with:
@@ -37,12 +37,20 @@ jobs:
       env:
         TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
         TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-      run: "npx eslint -c .eslintrc-autonomous.cjs . \\\n  --ignore-pattern \".next/**\"\
-        \ \\\n  --ignore-pattern \"out/**\" \\\n  --ignore-pattern \"dist/**\" \\\n\
-        \  --ignore-pattern \"build/**\" \\\n  --ignore-pattern \"coverage/**\" \\\
-        \n  --ignore-pattern \".hermes/**\" \\\n  --ignore-pattern \"automation/reports/**\"\
-        \ \\\n  --max-warnings 0 \\\n  --format json > /tmp/eslint-report.json ||\
-        \ true\necho \"exit_code=$?\" >> $GITHUB_OUTPUT\n"
+      run: |
+        eslint_exit=0
+        npx eslint -c .eslintrc-autonomous.cjs . \
+          --ignore-pattern ".next/**" \
+          --ignore-pattern "out/**" \
+          --ignore-pattern "dist/**" \
+          --ignore-pattern "build/**" \
+          --ignore-pattern "coverage/**" \
+          --ignore-pattern ".hermes/**" \
+          --ignore-pattern "automation/reports/**" \
+          --max-warnings 0 \
+          --format json > /tmp/eslint-report.json || eslint_exit=$?
+        echo "exit_code=$eslint_exit" >> "$GITHUB_OUTPUT"
+        exit "$eslint_exit"
     - name: Upload ESLint report
       if: always()
       uses: actions/upload-artifact@v4
@@ -51,8 +59,11 @@ jobs:
         path: /tmp/eslint-report.json
         retention-days: 7
     - name: Check for errors
-      run: "if [ \"${{ steps.eslint.outputs.exit_code }}\" -ne 0 ]; then\n  echo \"\
-        ESLint violations detected\"\n  exit 1\nfi\n"
+      run: |
+        if [ "${{ steps.eslint.outputs.exit_code }}" != "0" ]; then
+          echo "ESLint failed or did not report success"
+          exit 1
+        fi
     - name: Parse and comment on PR
       if: github.event_name == 'pull_request' && failure()
       uses: actions/github-script@v7
@@ -60,10 +71,10 @@ jobs:
         script: "const fs = require('fs');\nconst reportPath = '/tmp/eslint-report.json';\n\
           let body = '\U0001F6A8 **Custom ESLint Rules Violations**\\n\\n';\ntry {\n\
           \  const data = JSON.parse(fs.readFileSync(reportPath, 'utf8'));\n  const\
-          \ errors = data.filter((f: any) => f.severity === 2); // 2 = error\n  if\
+          \ errors = data.filter((f) => f.severity === 2); // 2 = error\n  if\
           \ (errors.length === 0) {\n    body += 'No error-level violations found,\
           \ but warnings exist.';\n  } else {\n    body += `Found ${errors.length}\
-          \ error(s):\\n\\n`;\n    errors.slice(0, 25).forEach((err: any) => {\n \
+          \ error(s):\\n\\n`;\n    errors.slice(0, 25).forEach((err) => {\n \
           \     const relPath = err.filePath.replace(process.env.GITHUB_WORKSPACE\
           \ + '/', '');\n      body += `- **${relPath}:${err.line}:${err.column}**\
           \ \u2014 ${err.message} (${err.ruleId})\\n`;\n    });\n    if (errors.length\
@@ -81,9 +92,9 @@ jobs:
           \ Rules Violations on Main';\nconst reportPath = '/tmp/eslint-report.json';\n\
           let body = '**Code hygiene violations detected on `main`.** The autonomous\
           \ linter found errors that must be fixed.\\n\\n';\ntry {\n  const data =\
-          \ JSON.parse(fs.readFileSync(reportPath, 'utf8'));\n  const errors = data.filter((f:\
-          \ any) => f.severity === 2);\n  body += `**Total errors:** ${errors.length}\\\
-          n\\n`;\n  errors.slice(0, 30).forEach((err: any) => {\n    const rel = err.filePath.replace(process.env.GITHUB_WORKSPACE\
+          \ JSON.parse(fs.readFileSync(reportPath, 'utf8'));\n  const errors = data.filter((f\
+          ) => f.severity === 2);\n  body += `**Total errors:** ${errors.length}\\\
+          n\\n`;\n  errors.slice(0, 30).forEach((err) => {\n    const rel = err.filePath.replace(process.env.GITHUB_WORKSPACE\
           \ + '/', '');\n    body += `- ${rel}:${err.line}:${err.column} \u2014 [${err.ruleId}]\
           \ ${err.message}\\n`;\n  });\n  if (errors.length > 30) body += `\\n\u2026\
           \ plus ${errors.length - 30} more.\\n`;\n} catch (e) {\n  body += 'Could\
@@ -92,7 +103,7 @@ jobs:
           \ ${context.payload.headCommit?.id?.slice(0, 7) || 'N/A'}*\\n`;\n\nconst\
           \ existing = await github.rest.issues.listForRepo({\n  owner: context.repo.owner,\n\
           \  repo: context.repo.repo,\n  labels: ['eslint-autonomous', 'code-quality'],\n\
-          \  state: 'open'\n});\nconst already = existing.data.find((i: any) => i.title\
+          \  state: 'open'\n});\nconst already = existing.data.find((i) => i.title\
           \ === title);\nif (!already) {\n  await github.rest.issues.create({\n  \
           \  owner: context.repo.owner,\n    repo: context.repo.repo,\n    title,\n\
           \    body,\n    labels: ['eslint-autonomous', 'autonomous', 'code-quality',\

@@ -12,9 +12,9 @@ export const metadata = {
 export default function Service() {
   return (
     <div className="min-h-[calc(100vh-4.5rem)] pb-16">
-      <BreadcrumbSchema 
-        serviceName="Hyperautomation Enterprise Suite"
-        serviceDescription="Accelerate business process automation at unprecedented scale with our Hyperautomation Enterprise Suite. This comprehensive platform combines robotic process automation (RPA), artificial intelligence, machine learning, and advanced analytics to automate complex end-to-end business processes with minimal human intervention."
+      <BreadcrumbSchema
+        path="/services/hyperautomation-enterprise-suite-5d6e7f8a"
+        title={metadata.title}
       />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <header className="mb-12">

@@ -13,10 +13,10 @@ export default function BlogPage() {
   return (
     <main className="max-w-6xl mx-auto px-4 py-10">
       <ArticleStructuredData
-        title="How to Build AI Partnerships That Actually Close Deals"
+        headline="How to Build AI Partnerships That Actually Close Deals"
         description="A practical guide to building AI partnerships that produce revenue, referrals, and repeatable delivery models."
-        canonical="https://ziontechgroup.com/blog/how-to-build-ai-partnerships-that-close-deals-2026"
-        publishDate="2026-07-07"
+        slug="how-to-build-ai-partnerships-that-close-deals-2026"
+        datePublished="2026-07-07"
       />
       <SiteBreadcrumbs
         items={[

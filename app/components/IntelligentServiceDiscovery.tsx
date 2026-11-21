@@ -297,7 +297,9 @@ export default function IntelligentServiceDiscovery() {
 
         {/* Service Cards Grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-          {recommendations.map((service: any) => (
+          {recommendations.map((service: any) => {
+            const startingPrice = service.pricing ? Object.values(service.pricing)[0] : 'Contact';
+            return (
             <div
               key={service.id}
               className="glass-card group hover:border-cyan-500/40 transition-all flex flex-col"
@@ -340,7 +342,7 @@ export default function IntelligentServiceDiscovery() {
               
               <div className="mt-auto pt-3 border-t border-slate-700/50 flex justify-between items-center">
                 <span className="text-xs font-semibold text-cyan-400">
-                  ${service.pricing ? Object.values(service.pricing)[0] : 'Contact'}
+                  ${typeof startingPrice === 'string' ? startingPrice : null}
                 </span>
                 <a
                   href={service.href || `/services/${service.id}`}
@@ -350,7 +352,8 @@ export default function IntelligentServiceDiscovery() {
                 </a>
               </div>
             </div>
-          ))}
+            );
+          })}
         </div>
 
         {/* Empty State */}
@@ -385,6 +388,7 @@ export default function IntelligentServiceDiscovery() {
                 {comparisonIds.map((id, index) => {
                   const service = services.find(s => s.id === id);
                   if (!service) return null;
+                   const startingPrice = service.pricing ? Object.values(service.pricing)[0] : 'Contact';
                   
                   return (
                     <div key={id} className="border-b border-slate-800 pb-4 last:border-b-0 last:pb-0">
@@ -400,7 +404,7 @@ export default function IntelligentServiceDiscovery() {
                         </div>
                         <div>
                           <p className="text-slate-500">Starting Price</p>
-                          <p className="text-slate-300">${service.pricing ? Object.values(service.pricing)[0] : 'Contact'}</p>
+                          <p className="text-slate-300">${typeof startingPrice === 'string' ? startingPrice : null}</p>
                         </div>
                       </div>
                       {index < comparisonIds.length - 1 && (

@@ -21,12 +21,13 @@ export default function HealthcareCRMAutomationPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-slate-50">
       <ArticleStructuredData
-        title="Healthcare CRM Automation"
+        headline="Healthcare CRM Automation"
         description="Healthcare CRM automation with AI patient workflows, appointment reminders, intake enrichment, and HIPAA-aware automation for clinics and providers."
-        url="https://ziontechgroup.com/blog/healthcare-crm-automation-ai-patient-workflows-2026"
+        slug="healthcare-crm-automation-ai-patient-workflows-2026"
         datePublished="2026-07-07"
-        authorName="Kleber Garcia Alcatrão"
-        publisherName="Zion Tech Group"
+        author="Kleber Garcia Alcatrão"
+        authorType="Person"
+        publisher="Zion Tech Group"
       />
       <SiteBreadcrumbs
         items={[
