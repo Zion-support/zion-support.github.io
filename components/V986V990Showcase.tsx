@@ -233,7 +233,7 @@ export default function V986V990Showcase() {
             </a>
           </div>
           <div className="mt-8 text-sm text-gray-400">
-            <p>📞 +1 302 464 0950 | ✉️ kleber@ziontechgroup.com</p>
+            <p>📞 +55 11 97614-0076 | ✉️ kleber@ziontechgroup.com</p>
             <p className="mt-2">📍 364 E Main St STE 1008, Middletown, DE 19709</p>
           </div>
         </div>

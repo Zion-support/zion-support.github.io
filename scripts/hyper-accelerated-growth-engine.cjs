@@ -174,7 +174,7 @@ function generateService(index, industry, type) {
     contactInfo: {
       website: `/services/${id}`,
       email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950'
+      phone: '+55 11 97614-0076'
     },
     icon: '💡',
     href: `/services/${id}`,

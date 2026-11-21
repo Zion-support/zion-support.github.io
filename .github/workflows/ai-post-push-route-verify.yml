@@ -22,7 +22,7 @@ jobs:
         with:
           node-version-file: '.nvmrc'
 
-      - name: Verify promoted routes
+      - name: Verify critical Apps release routes
         id: verify
         run: |
           set -euo pipefail

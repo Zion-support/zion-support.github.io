@@ -1,0 +1,341 @@
+name: Apps release confidence gate
+
+"on":
+  workflow_run:
+    workflows:
+      - Apps production content canary
+      - Apps deployed-source drift guard
+      - Apps link graph orphan guard
+    types: [completed]
+  schedule:
+    - cron: '29 16 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/apps-release-confidence-gate.yml'
+
+permissions:
+  contents: read
+  actions: read
+  issues: write
+
+concurrency:
+  group: apps-release-confidence-gate
+  cancel-in-progress: true
+
+jobs:
+  confidence:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Correlate release evidence
+        id: gate
+        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8.0.0
+        with:
+          script: |
+            const fs = require('fs');
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const now = Date.now();
+            const advisoryFreshMs = 7 * 24 * 60 * 60 * 1000;
+
+            async function runsFor(workflow_id, per_page=30) {
+              const {data} = await github.rest.actions.listWorkflowRuns({
+                owner, repo, workflow_id, branch: 'main', per_page
+              });
+              return data.workflow_runs || [];
+            }
+
+            async function jobsFor(run_id) {
+              // Retry only this idempotent jobs read on HTTP 502. Exhausted or
+              // other errors must still fail deployment evidence validation.
+              for (let attempt=0; ; attempt++) {
+                try {
+                  return await github.paginate(github.rest.actions.listJobsForWorkflowRun, {
+                    owner, repo, run_id, filter:'latest', per_page:100
+                  });
+                } catch (error) {
+                  if (error?.status !== 502 || attempt >= 2) throw error;
+                  await new Promise(resolve => setTimeout(resolve, (attempt + 1) * 1000));
+                }
+              }
+            }
+
+            const {data:repoRunsData} = await github.rest.actions.listWorkflowRunsForRepo({
+              owner, repo, per_page:100
+            });
+            const repoRuns = repoRunsData.workflow_runs || [];
+            const queueCount = repoRuns.filter(r => ['queued','pending','waiting','requested'].includes(r.status)).length;
+            const graceMinutes = queueCount >= 35 ? 180 : (queueCount >= 20 ? 120 : 20);
+            const graceMs = graceMinutes * 60 * 1000;
+
+            // These are the two publishers observed by the deployed-source drift
+            // guard. A successful source-freshness gate can skip publication, so
+            // require the publisher's actual deployment step to have succeeded.
+            const publishers = [
+              {file:'gh-pages.yml', step:'Deploy to GitHub Pages'},
+              {file:'static-deploy.yml', step:'Run actions/deploy-pages@v4'},
+            ];
+            const deploys = [];
+            for (const publisher of publishers) {
+              const runs = (await runsFor(publisher.file, 30))
+                .filter(r => r.status === 'completed' && r.conclusion === 'success');
+              for (const run of runs) {
+                // Do not recover from a jobs API error using an older candidate:
+                // without these jobs, the latest publication is unverified.
+                const jobs = await jobsFor(run.id);
+                const deployJobs = jobs.filter(job => job.name === 'deploy');
+                if (!deployJobs.length) {
+                  throw new Error('Missing deployment job evidence for successful run '+run.id);
+                }
+                for (const job of deployJobs) {
+                  // Only an explicit completed skip proves this job did not
+                  // publish. Unknown metadata must not expose an older PASS.
+                  if (job.status === 'completed' && job.conclusion === 'skipped') continue;
+                  if (job.status !== 'completed' || job.conclusion !== 'success') {
+                    throw new Error('Unverified deployment job outcome for successful run '+run.id);
+                  }
+                  if (!Array.isArray(job.steps)) {
+                    throw new Error('Missing deployment step evidence for successful run '+run.id);
+                  }
+                  const deploymentSteps = job.steps.filter(s => s.name === publisher.step);
+                  if (deploymentSteps.length !== 1) {
+                    throw new Error('Missing or ambiguous expected deployment step for successful run '+run.id);
+                  }
+                  const step = deploymentSteps[0];
+                  if (step.status === 'completed' && step.conclusion === 'skipped') continue;
+                  if (step.status !== 'completed' || step.conclusion !== 'success') {
+                    throw new Error('Unverified deployment step outcome for successful run '+run.id);
+                  }
+                  if (!Number.isFinite(Date.parse(step.completed_at))) {
+                    throw new Error('Missing deployment completion time for run '+run.id);
+                  }
+                  // Both publishers check out the event SHA with checkout@v4's
+                  // default ref/commit contract; neither overrides ref with main.
+                  if (!/^[0-9a-f]{40}$/.test(run.head_sha || '') || job.head_sha !== run.head_sha) {
+                    throw new Error('Unverified deployment source commit for run '+run.id);
+                  }
+                  deploys.push({run, evidence:{
+                    run_id:run.id,
+                    run_attempt:run.run_attempt,
+                    head_sha:run.head_sha,
+                    workflow_id:run.workflow_id,
+                    workflow_path:run.path || '.github/workflows/'+publisher.file,
+                    job_id:job.id,
+                    job_name:job.name,
+                    job_url:job.html_url,
+                    step_name:step.name,
+                    completed_at:step.completed_at,
+                    updated_at:run.updated_at,
+                    html_url:run.html_url
+                  }});
+                }
+              }
+            }
+            if (!deploys.length) {
+              core.setOutput('status', 'FAIL');
+              core.setFailed('No successful executed Pages deployment found in the two publisher histories');
+              return;
+            }
+            deploys.sort((a,b) => Date.parse(b.evidence.completed_at) - Date.parse(a.evidence.completed_at));
+            const {run:deploy, evidence:deploymentEvidence} = deploys[0];
+            core.setOutput('deployment_evidence', JSON.stringify(deploymentEvidence));
+            const deployAt = Date.parse(deploymentEvidence.completed_at);
+            const ageMs = now - deployAt;
+
+            const defs = {
+              canary: {file:'apps-production-content-canary.yml', critical:true, afterDeploy:true},
+              drift: {file:'apps-deployed-source-drift.yml', critical:true, afterDeploy:true},
+              route: {file:'ai-post-push-route-verify.yml', critical:false, afterDeploy:false},
+              i18n: {file:'apps-i18n-release-contract.yml', critical:false, afterDeploy:false},
+              manifest: {file:'apps-release-evidence-manifest.yml', critical:false, afterDeploy:false},
+              graph: {file:'apps-link-graph-orphan-guard.yml', critical:false, afterDeploy:false},
+            };
+
+            const signals = {};
+            let hardFail = false;
+            let pending = false;
+            let degraded = false;
+
+            for (const [key, def] of Object.entries(defs)) {
+              const runs = await runsFor(def.file, 40);
+              // A skipped run has no executed health evidence (for example, an
+              // ignored deploy completion). Keep cancelled runs conservative:
+              // cancellation can coexist with a failed job.
+              const completed = runs.filter(r => r.status === 'completed' && r.conclusion !== 'skipped');
+              const active = runs.filter(r => ['queued','pending','in_progress','waiting','requested'].includes(r.status));
+              let chosen = null;
+
+              if (def.afterDeploy) {
+                chosen = completed.find(r => Date.parse(r.updated_at || r.created_at) >= deployAt - 60000) || null;
+                if (!chosen) {
+                  const activeAfterDeploy = active.find(r => Date.parse(r.updated_at || r.created_at) >= deployAt - 60000) || null;
+                  if (activeAfterDeploy) {
+                    signals[key] = {
+                      state:'PENDING',
+                      reason:'post-deploy signal is still active in Actions',
+                      run_id:activeAfterDeploy.id,
+                      status:activeAfterDeploy.status,
+                      head_sha:activeAfterDeploy.head_sha,
+                      html_url:activeAfterDeploy.html_url
+                    };
+                    pending = true;
+                    continue;
+                  }
+                  if (ageMs < graceMs) {
+                    signals[key] = {
+                      state:'PENDING',
+                      reason:'no completed run after latest deploy within adaptive grace window',
+                      queue_count:queueCount,
+                      grace_minutes:graceMinutes
+                    };
+                    pending = true;
+                    continue;
+                  }
+                  signals[key] = {
+                    state:'MISSING',
+                    reason:'no completed or active run after latest deploy beyond adaptive grace window',
+                    queue_count:queueCount,
+                    grace_minutes:graceMinutes
+                  };
+                  hardFail = true;
+                  continue;
+                }
+              } else {
+                chosen = completed[0] || null;
+                if (!chosen) {
+                  signals[key] = {state:'MISSING', reason:'no completed run recorded'};
+                  degraded = true;
+                  continue;
+                }
+                const t = Date.parse(chosen.updated_at || chosen.created_at);
+                if (now - t > advisoryFreshMs) {
+                  signals[key] = {
+                    state:'STALE',
+                    run_id:chosen.id,
+                    conclusion:chosen.conclusion,
+                    head_sha:chosen.head_sha,
+                    html_url:chosen.html_url,
+                    updated_at:chosen.updated_at
+                  };
+                  degraded = true;
+                  continue;
+                }
+              }
+
+              const ok = chosen.conclusion === 'success';
+              signals[key] = {
+                state: ok ? 'PASS' : 'FAIL',
+                run_id: chosen.id,
+                conclusion: chosen.conclusion,
+                head_sha: chosen.head_sha,
+                html_url: chosen.html_url,
+                updated_at: chosen.updated_at
+              };
+              if (!ok && def.critical) hardFail = true;
+              if (!ok && !def.critical) degraded = true;
+            }
+
+            let status = 'PASS';
+            if (hardFail) status = 'FAIL';
+            else if (pending) status = 'PENDING';
+            else if (degraded) status = 'DEGRADED';
+
+            const report = {
+              schema:'zion.apps.release-confidence.v1',
+              generated_at_utc:new Date().toISOString(),
+              status,
+              grace_minutes:graceMinutes,
+              actions_queue_count:queueCount,
+              latest_successful_deploy:deploymentEvidence,
+              rollback_review:{
+                candidate_sha:deploy.head_sha,
+                automatic_rollback_allowed:false,
+                compare_url:context.serverUrl+'/'+owner+'/'+repo+'/compare/'+deploy.head_sha+'...main',
+                operator_note:'Review current incident evidence and changed commits before any revert; never auto-merge or auto-rollback.'
+              },
+              signals
+            };
+
+            fs.mkdirSync('automation/reports', {recursive:true});
+            fs.writeFileSync(
+              'automation/reports/apps-release-confidence.json',
+              JSON.stringify(report,null,2)+'\n'
+            );
+
+            await core.summary
+              .addHeading('Apps release confidence')
+              .addTable([
+                [{data:'Signal',header:true},{data:'State',header:true},{data:'Run',header:true}],
+                ['Deploy','PASS',String(deploy.id)],
+                ...Object.entries(signals).map(([k,v]) => [k,v.state,String(v.run_id || '-')])
+              ])
+              .addRaw('\n**Overall:** '+status+'\n')
+              .addRaw('**Actions queued/pending:** '+queueCount+' · adaptive grace: '+graceMinutes+' min\n')
+              .write();
+
+            core.setOutput('status', status);
+            core.setOutput('report', JSON.stringify(report));
+
+            if (status === 'FAIL') {
+              core.setFailed('Critical Apps release evidence failed or is missing beyond grace window');
+            }
+
+      - name: Upload confidence report
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: apps-release-confidence-${{ github.run_id }}
+          path: automation/reports/apps-release-confidence.json
+          if-no-files-found: warn
+          retention-days: 30
+
+      - name: Open or update release confidence incident
+        if: failure()
+        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8.0.0
+        env:
+          DEPLOYMENT_EVIDENCE: ${{ steps.gate.outputs.deployment_evidence }}
+        with:
+          script: |
+            const title='Apps release confidence gate failed';
+            const marker='<!-- apps-release-confidence-gate -->';
+            const {data:issues}=await github.rest.issues.listForRepo({
+              ...context.repo,state:'open',per_page:100
+            });
+            const existing=issues.find(i=>i.title===title || (i.body||'').includes(marker));
+            // Reuse only the deployment validated above; a second run-level
+            // success lookup could turn a source-gate-only run into a rollback SHA.
+            const deploy=process.env.DEPLOYMENT_EVIDENCE
+              ? JSON.parse(process.env.DEPLOYMENT_EVIDENCE)
+              : null;
+            const candidate=deploy ? deploy.head_sha : null;
+            const compare=candidate
+              ? context.serverUrl+'/'+context.repo.owner+'/'+context.repo.repo+'/compare/'+candidate+'...main'
+              : null;
+            const rollback = candidate
+              ? '\n\n**Rollback review candidate:** `'+candidate+'`\n**Compare candidate → main:** '+compare+'\nAutomatic rollback is **not allowed**. Review the diff and incident evidence before preparing any revert.'
+              : '\n\nNo successful executed deploy candidate could be verified; inspect deploy history manually.';
+            const body=marker+'\nDeployment evidence or a critical post-deploy signal is failed or missing. Inspect this confidence run and any report artifact before changing source or attempting rollback.'+rollback+'\n\nRun: '+context.serverUrl+'/'+context.repo.owner+'/'+context.repo.repo+'/actions/runs/'+context.runId;
+            if(existing){
+              await github.rest.issues.createComment({...context.repo,issue_number:existing.number,body});
+            }else{
+              await github.rest.issues.create({...context.repo,title,body,labels:['automation','bug']});
+            }
+
+      - name: Close prior confidence incident on recovery
+        if: success() && steps.gate.outputs.status == 'PASS'
+        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8.0.0
+        with:
+          script: |
+            const title='Apps release confidence gate failed';
+            const {data:issues}=await github.rest.issues.listForRepo({
+              ...context.repo,state:'open',per_page:100
+            });
+            for(const issue of issues.filter(i=>i.title===title)){
+              await github.rest.issues.createComment({
+                ...context.repo,issue_number:issue.number,
+                body:'Recovered: Apps release confidence is PASS on run '+context.runId+'.'
+              });
+              await github.rest.issues.update({...context.repo,issue_number:issue.number,state:'closed'});
+            }

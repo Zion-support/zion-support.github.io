@@ -191,7 +191,7 @@ export default function V976V980Showcase() {
           <h4 className="text-2xl font-bold text-white mb-2">Transform Your Email Intelligence</h4>
           <p className="text-gray-400 mb-6">Deploy V976-V980 for advanced visualization, automation, and protection.</p>
           <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-300">
-            <span>📞 +1 302 464 0950</span>
+            <span>📞 +55 11 97614-0076</span>
             <span>✉️ kleber@ziontechgroup.com</span>
             <span>📍 364 E Main St STE 1008, Middletown, DE 19709</span>
           </div>

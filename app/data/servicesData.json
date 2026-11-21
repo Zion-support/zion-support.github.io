@@ -995798,5 +995798,318 @@
     "icon": "\ud83d\udca1",
     "href": "/services/zero-trust-declarative-cybersecurity-security-mesh-7e9e8d5f",
     "popular": false
+  },
+  {
+    "id": "suporte-tecnico-datacenter-2026-11-14",
+    "name": "Suporte T\u00e9cnico e Datacenter",
+    "title": "Suporte T\u00e9cnico e Datacenter",
+    "description": "Atendimento t\u00e9cnico presencial e infraestrutura de datacenter, com avalia\u00e7\u00e3o t\u00e9cnica, or\u00e7amento formal e libera\u00e7\u00e3o antes de qualquer execu\u00e7\u00e3o.",
+    "category": "it",
+    "industry": "general",
+    "features": [
+      "Avalia\u00e7\u00e3o t\u00e9cnica de equipamentos e infraestrutura",
+      "Suporte presencial em escrit\u00f3rio ou no datacenter",
+      "Monitoramento e manuten\u00e7\u00e3o de dispositivos e servidores",
+      "Janela de atendimento definida com o cliente"
+    ],
+    "benefits": [
+      "Resposta r\u00e1pida a incidentes",
+      "Escopo e pre\u00e7o definidos antes da execu\u00e7\u00e3o",
+      "Atendimento em fuso e janela combinada"
+    ],
+    "caseStudyMetrics": [],
+    "outreachTemplates": [],
+    "pricing": {
+      "basic": "199",
+      "pro": "499",
+      "enterprise": "1499"
+    },
+    "timestamp": "2026-11-14T13:20:00.000Z",
+    "contactInfo": {
+      "website": "/services/technical-support-datacenter",
+      "email": "info@ziontechgroup.com",
+      "phone": "+1 (302) 464 0950"
+    },
+    "icon": "\ud83d\udce1",
+    "href": "/services/technical-support-datacenter",
+    "popular": false
+  },
+  {
+    "id": "zion-ai-spend-optimization-advisor",
+    "name": "AI Spend Optimization Advisor",
+    "title": "AI Spend Optimization Advisor",
+    "description": "Total Cost of AI (TCA) measurement, model routing, and AI cost-per-outcome advisory.",
+    "category": "finops",
+    "industry": "it-services",
+    "features": [
+      "AI spend visibility across tokens, infra and licenses",
+      "Total Cost of AI (TCA) reporting",
+      "Model routing to lowest-cost eligible model",
+      "Cost-per-outcome benchmarking",
+      "Budget forecasting and spend guardrails"
+    ]
+  },
+  {
+    "id": "zion-ai-sovereignty-compliance-readiness",
+    "name": "AI Sovereignty & Compliance Readiness",
+    "title": "AI Sovereignty & Compliance Readiness",
+    "description": "EU AI Act, GDPR and LGPD readiness assessments \u2014 traceability, risk classification and audit-ready evidence.",
+    "category": "security",
+    "industry": "compliance",
+    "features": [
+      "EU AI Act risk classification (high/low)",
+      "AI Act documentation and traceability",
+      "GDPR and LGPD consent mapping",
+      "Audit-ready evidence packs",
+      "Cloud sovereignty self-assessment (levels 1-4)"
+    ]
+  },
+  {
+    "id": "zion-nearshore-ai-augmented-pod",
+    "name": "Nearshore AI-Augmented Delivery Pod",
+    "title": "Nearshore AI-Augmented Delivery Pod",
+    "description": "Certified-brazilian engineering pods augmented with autonomous AI agents, 20-30% faster delivery at fixed cost.",
+    "category": "it-services",
+    "industry": "nearshore",
+    "features": [
+      "Certified Brazilian engineers (US/EMEA overlapping time zones)",
+      "Autonomous AI agents for triage, testing and reporting",
+      "20-30% faster release cycles",
+      "Fixed-price AI delivery models",
+      "Dual-track delivery (human engineer + AI agent)"
+    ]
+  },
+  {
+    "id": "zion-agentic-ai-production-readiness",
+    "name": "Agentic AI Production Readiness",
+    "title": "Agentic AI Production Readiness & Governance",
+    "description": "Move AI agents from pilot to production with lifecycle governance, readiness gates, and reliability evaluation.",
+    "category": "ai",
+    "industry": "it-services",
+    "features": [
+      "Agentic lifecycle governance (pilot to production)",
+      "Production readiness gates before go-live",
+      "Multi-agent orchestration oversight",
+      "Reliability and risk evaluation for agents",
+      "Audit-ready agent activity logs"
+    ]
+  },
+  {
+    "id": "zion-ai-customer-success-churn-reduction",
+    "name": "AI Customer Success & Churn Reduction",
+    "title": "AI Customer Success & Churn Reduction",
+    "description": "AI-powered health scores, churn prediction, and retention playbooks that lift NRR and cut attrition.",
+    "category": "ai",
+    "industry": "it-services",
+    "features": [
+      "AI customer health scores",
+      "Churn prediction with 90-day warning",
+      "Retention playbooks and intervention timing",
+      "NRR and expansion revenue tracking",
+      "CSM productivity automation"
+    ]
+  },
+  {
+    "id": "zion-nearshore-ai-talent-desk",
+    "name": "Nearshore AI Talent Desk",
+    "title": "Nearshore AI Talent Desk",
+    "description": "AI-augmented sourcing and readiness for nearshore engineering teams \u2014 faster hire, lower cost.",
+    "category": "it-services",
+    "industry": "nearshore",
+    "features": [
+      "AI-augmented engineering sourcing",
+      "Skills-first candidacy screening",
+      "Nearshore time-zone-ready teams",
+      "Fixed-cost talent pods",
+      "AI-ready skills certification"
+    ]
+  },
+  {
+    "id": "edge-ai-observability-001",
+    "name": "Edge AI / Low-Latency Infrastructure",
+    "title": "Edge AI / Low-Latency Infrastructure",
+    "description": "Deploy AI inference at the edge with sub-ms latency, data-residency-compliant processing, and 5G-ready edge nodes. Designed for real-time workloads (autonomous systems, industrial IoT, fintech) where central-cloud latency breaks SLAs.",
+    "category": "ai",
+    "industry": "infrastructure",
+    "features": [
+      "Edge AI deployment (GPU/CPU nodes)",
+      "Sub-ms latency architecture",
+      "Data-residency compliance (LGPD)",
+      "5G-ready edge nodes",
+      "Multi-region failover",
+      "Real-time monitoring & alerting"
+    ],
+    "benefits": [
+      "Sub-ms latency for real-time workloads",
+      "Data-residency compliance without sacrifice",
+      "5G-ready infrastructure",
+      "Multi-region failover for resilience"
+    ],
+    "caseStudyMetrics": [
+      "25% reduction in cloud costs",
+      "40% faster processing",
+      "99.9% uptime"
+    ],
+    "outreachTemplates": [
+      {
+        "subject": "Edge AI for real-time workloads",
+        "body": "I noticed you're working with real-time workloads. Edge AI delivers sub-ms latency for autonomous systems, industrial IoT, and fintech where central cloud breaks SLAs. Interested in a brief overview?"
+      }
+    ],
+    "pricing": {
+      "basic": "999",
+      "pro": "2499",
+      "enterprise": "4999"
+    },
+    "timestamp": "2026-11-14T21:00:00Z",
+    "contactInfo": {
+      "website": "/services/edge-ai-observability-001",
+      "email": "commercial@ziontechgroup.com",
+      "phone": "+55 11 4000-0000"
+    },
+    "icon": "\u26a1",
+    "href": "/services/edge-ai-observability-001",
+    "popular": true
+  },
+  {
+    "id": "cloud-migration-finops-002",
+    "name": "Cloud Migration & FinOps",
+    "title": "Cloud Migration & FinOps",
+    "description": "End-to-end cloud migration and FinOps services for Brazilian enterprises. Migrate legacy systems to cloud with cost-optimization governance, multi-cloud strategies, and SAP S/4HANA modernization. FinOps assessments typically reduce cloud spend by 25-30%.",
+    "category": "cloud",
+    "industry": "enterprise",
+    "features": [
+      "Cloud migration (multi-cloud)",
+      "FinOps assessment & cost optimization",
+      "SAP S/4HANA migration",
+      "Cloud-native microservices",
+      "Cost governance & budgeting",
+      "Hybrid & multi-cloud strategies"
+    ],
+    "benefits": [
+      "25-30% cloud spend reduction",
+      "SAP S/4HANA modernization",
+      "Multi-cloud strategy",
+      "Cost governance & budgeting"
+    ],
+    "caseStudyMetrics": [
+      "28% average cloud cost reduction",
+      "90-day migration completion",
+      "30% waste eliminated"
+    ],
+    "outreachTemplates": [
+      {
+        "subject": "Cloud migration and FinOps",
+        "body": "Brazil's cloud market is growing 17.7% CAGR. We can migrate your legacy systems and reduce cloud spend by 25-30% through FinOps. Interested in a assessment?"
+      }
+    ],
+    "pricing": {
+      "basic": "1499",
+      "pro": "3499",
+      "enterprise": "6999"
+    },
+    "timestamp": "2026-11-14T21:00:00Z",
+    "contactInfo": {
+      "website": "/services/cloud-migration-finops-002",
+      "email": "commercial@ziontechgroup.com",
+      "phone": "+55 11 4000-0000"
+    },
+    "icon": "\u2601\ufe0f",
+    "href": "/services/cloud-migration-finops-002",
+    "popular": true
+  },
+  {
+    "id": "financial-services-it-outsource-003",
+    "name": "Financial Services IT Outsourcing",
+    "title": "Financial Services IT Outsourcing",
+    "description": "Managed IT services for Brazilian banks, fintechs, and insurance companies. Covers cloud migration, cybersecurity, process automation, and AI adoption. Brazil's banking sector invests US$10B+ in technology annually; Zion delivers the outsourced execution.",
+    "category": "financial-services",
+    "industry": "financial-services",
+    "features": [
+      "Cloud migration & FinOps",
+      "Cybersecurity & compliance (LGPD, PCI-DSS)",
+      "Process automation (RPA, AI agents)",
+      "24/7 SOC & monitoring",
+      "Integration platforms (open-banking APIs)",
+      "SAP for financial services"
+    ],
+    "benefits": [
+      "LGPD & PCI-DSS compliance",
+      "24/7 SOC monitoring",
+      "Open-banking integration",
+      "AI adoption for financial services"
+    ],
+    "caseStudyMetrics": [
+      "35% cost reduction",
+      "40% faster processing",
+      "99.99% uptime"
+    ],
+    "outreachTemplates": [
+      {
+        "subject": "IT outsourcing for financial services",
+        "body": "Brazil's banking sector invests US$10B+ in technology annually. We provide managed IT services with LGPD compliance, 24/7 SOC, and AI adoption. Interested in discussing your needs?"
+      }
+    ],
+    "pricing": {
+      "basic": "2499",
+      "pro": "5999",
+      "enterprise": "12999"
+    },
+    "timestamp": "2026-11-14T21:00:00Z",
+    "contactInfo": {
+      "website": "/services/financial-services-it-outsource-003",
+      "email": "commercial@ziontechgroup.com",
+      "phone": "+55 11 4000-0000"
+    },
+    "icon": "\ud83c\udfe6",
+    "href": "/services/financial-services-it-outsource-003",
+    "popular": true
+  },
+  {
+    "id": "managed-security-services-004",
+    "name": "Managed Cybersecurity Services",
+    "title": "Managed Cybersecurity Services",
+    "description": "24/7 managed security operations for Brazilian enterprises. MDR/SOC services, threat detection, incident response, and identity security. Brazil's banking sector spends US$1.3B+ on cybersecurity; Zion provides the outsourced execution.",
+    "category": "security",
+    "industry": "security",
+    "features": [
+      "24/7 Managed SOC / MDR",
+      "Threat detection & incident response",
+      "Identity-first security (zero-trust)",
+      "Cloud-native security monitoring",
+      "Security operations automation",
+      "Compliance reporting (LGPD, PCI-DSS)"
+    ],
+    "benefits": [
+      "24/7 threat detection",
+      "Automated incident response",
+      "Zero-trust architecture",
+      "LGPD compliance"
+    ],
+    "caseStudyMetrics": [
+      "95% threat detection in <5min",
+      "70% faster response time",
+      "Zero breaches"
+    ],
+    "outreachTemplates": [
+      {
+        "subject": "Managed cybersecurity for your business",
+        "body": "Brazil's cybersecurity market is growing 8.6% CAGR. We provide 24/7 managed SOC/MDR with threat detection, incident response, and LGPD compliance. Interested in a free security assessment?"
+      }
+    ],
+    "pricing": {
+      "basic": "1499",
+      "pro": "3499",
+      "enterprise": "6999"
+    },
+    "timestamp": "2026-11-14T21:00:00Z",
+    "contactInfo": {
+      "website": "/services/managed-security-services-004",
+      "email": "commercial@ziontechgroup.com",
+      "phone": "+55 11 4000-0000"
+    },
+    "icon": "\ud83d\udee1\ufe0f",
+    "href": "/services/managed-security-services-004",
+    "popular": true
   }
 ]

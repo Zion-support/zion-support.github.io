@@ -3,11 +3,11 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'AI Experiences | Zion Tech Group',
-  description: 'Explore Zion's portfolio of AI-powered experiences: chatbots, agents, advisors, and automation tools built for enterprise scale.',
+  description: 'Explore Zion\'s portfolio of AI-powered experiences: chatbots, agents, advisors, and automation tools built for enterprise scale.',
   keywords: 'ai experiences, ai-powered experiences, enterprise AI, ai agents, ai chatbots',
   openGraph: {
     title: 'AI Experiences | Zion Tech Group',
-    description: 'Explore Zion's portfolio of AI-powered experiences: chatbots, agents, advisors, and automation tools built for enterprise scale.',
+    description: 'Explore Zion\'s portfolio of AI-powered experiences: chatbots, agents, advisors, and automation tools built for enterprise scale.',
     url: 'https://ziontechgroup.com/ai-experienc',
     siteName: 'Zion Tech Group',
     type: 'website',
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'AI Experiences | Zion Tech Group',
-    description: 'Explore Zion's portfolio of AI-powered experiences: chatbots, agents, advisors, and automation tools built for enterprise scale.',
+    description: 'Explore Zion\'s portfolio of AI-powered experiences: chatbots, agents, advisors, and automation tools built for enterprise scale.',
   },
   alternates: {
     canonical: 'https://ziontechgroup.com/ai-experienc',

@@ -101,7 +101,7 @@ for cat in CAT_ORDER:
             'pricing':{'basic':'Custom','pro':'Custom','enterprise':'Custom'},
             'contactInfo':{'website':f'/services/{sid}',
                            'email':'kleber@ziontechgroup.com',
-                           'phone':'+1 302 464 0950'},
+                           'phone':'+55 11 97614-0076'},
             'category':cat
         })
 

@@ -315,7 +315,7 @@ class ServiceInnovationEngine:
                     "contactInfo": {
                         "website": f"/services/{service_id}",
                         "email": "kleber@ziontechgroup.com",
-                        "phone": "+1 302 464 0950"
+                        "phone": "+55 11 97614-0076"
                     },
                     "icon": self.get_category_icon(template["category"]),
                     "href": f"/services/{service_id}",

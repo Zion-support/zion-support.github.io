@@ -1,0 +1,84 @@
+name: Website Monitor Workflow Config Guard
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/public-*.yml'
+      - '.github/workflows/dependency-security-baseline.yml'
+      - '.github/workflows/website-monitor-*.yml'
+      - '.github/workflows/monitor-run-summary.yml'
+      - '.github/workflows/apps-*.yml'
+      - '.github/workflows/actions-queue-pressure.yml'
+  pull_request:
+    paths:
+      - '.github/workflows/public-site-smoke-check.yml'
+      - '.github/workflows/dependency-security-baseline.yml'
+      - '.github/workflows/public-sitemap-integrity.yml'
+      - '.github/workflows/public-navigation-link-audit.yml'
+      - '.github/workflows/website-monitor-config-guard.yml'
+      - '.github/workflows/public-tls-certificate-expiry.yml'
+      - '.github/workflows/monitor-run-summary.yml'
+      - '.github/workflows/website-monitor-freshness.yml'
+      - '.github/workflows/apps-change-impact-report.yml'
+      - '.github/workflows/apps-rollback-readiness.yml'
+      - '.github/workflows/apps-release-evidence-manifest.yml'
+      - '.github/workflows/apps-production-content-canary.yml'
+      - '.github/workflows/apps-i18n-release-contract.yml'
+      - '.github/workflows/apps-deployed-source-drift.yml'
+      - '.github/workflows/actions-queue-pressure.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          persist-credentials: false
+      - name: Validate monitor workflow YAML and required safeguards
+        shell: bash
+        run: |
+          set -euo pipefail
+          ruby <<'RUBY'
+          require 'yaml'
+          files = %w[
+            .github/workflows/public-site-smoke-check.yml
+            .github/workflows/dependency-security-baseline.yml
+            .github/workflows/public-sitemap-integrity.yml
+            .github/workflows/public-navigation-link-audit.yml
+            .github/workflows/website-monitor-config-guard.yml
+            .github/workflows/public-tls-certificate-expiry.yml
+            .github/workflows/monitor-run-summary.yml
+            .github/workflows/website-monitor-freshness.yml
+            .github/workflows/apps-change-impact-report.yml
+            .github/workflows/apps-rollback-readiness.yml
+            .github/workflows/apps-release-evidence-manifest.yml
+            .github/workflows/apps-production-content-canary.yml
+            .github/workflows/apps-i18n-release-contract.yml
+            .github/workflows/apps-deployed-source-drift.yml
+            .github/workflows/actions-queue-pressure.yml
+          ]
+          failures = []
+          files.each do |file|
+            begin
+              raw = File.read(file)
+              doc = YAML.safe_load(raw, permitted_classes: [], aliases: false)
+              raise 'workflow must be a mapping' unless doc.is_a?(Hash)
+              raise 'missing workflow name' unless doc['name'].is_a?(String)
+              raise 'missing jobs' unless doc['jobs'].is_a?(Hash) && !doc['jobs'].empty?
+              raise 'missing read-only permissions' unless doc['permissions'].is_a?(Hash) && doc['permissions']['contents'] == 'read'
+              raise 'unbounded job timeout' unless doc['jobs'].values.all? { |job| job.is_a?(Hash) && job['timeout-minutes'].is_a?(Integer) && job['timeout-minutes'] <= 15 }
+              raise 'missing trigger' unless doc.key?('on') || doc.key?(true)
+              puts "PASS #{file}"
+            rescue => error
+              failures << "#{file}: #{error.message}"
+            end
+          end
+          failures.each { |message| warn "::error::#{message}" }
+          exit(failures.empty? ? 0 : 1)
+          RUBY
