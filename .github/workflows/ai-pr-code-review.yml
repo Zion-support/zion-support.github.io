@@ -24,12 +24,16 @@ jobs:
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
           fetch-depth: 0
+          filter: blob:none
 
       - name: Get diff
         id: diff
         run: |
-          DIFF=$(git diff origin/main...HEAD -- '*.ts' '*.tsx' '*.js' '*.jsx' '*.css' '*.yml' '*.yaml' '*.json' \
-            ':!package-lock.json' ':!*.lock' ':!.next/**' ':!out/**' | head -c 12000)
+          DIFF_FILE=$(mktemp)
+          trap 'rm -f "$DIFF_FILE"' EXIT
+          git diff origin/main...HEAD -- '*.ts' '*.tsx' '*.js' '*.jsx' '*.css' '*.yml' '*.yaml' '*.json' \
+            ':!package-lock.json' ':!*.lock' ':!.next/**' ':!out/**' > "$DIFF_FILE"
+          DIFF=$(head -c 12000 "$DIFF_FILE")
           if [ -z "$DIFF" ]; then
             echo "empty=true" >> "$GITHUB_OUTPUT"
           else
@@ -53,10 +57,11 @@ jobs:
           DIFF_END
           )
 
-          ESCAPED_DIFF=$(echo "$DIFF_CONTENT" | python3 -c "import sys,json; print(json.dumps(sys.stdin.read()))")
+          PAYLOAD=$(printf '%s\n' "$DIFF_CONTENT" | python3 -c '
+          import json
+          import sys
 
-          PAYLOAD=$(cat <<PAYLOAD_END
-          {
+          payload = {
             "model": "openrouter/auto",
             "max_tokens": 2048,
             "messages": [
@@ -66,12 +71,12 @@ jobs:
               },
               {
                 "role": "user",
-                "content": "Review this pull request diff:\n\n${ESCAPED_DIFF}"
+                "content": "Review this pull request diff:\n\n" + sys.stdin.read()
               }
             ]
           }
-          PAYLOAD_END
-          )
+          print(json.dumps(payload))
+          ')
 
           RESPONSE=$(curl -sS --max-time 60 \
             -H "Authorization: Bearer $OPENROUTER_API_KEY" \
