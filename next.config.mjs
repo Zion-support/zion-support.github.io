@@ -22,7 +22,10 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   // Static export via webpack
-  webpack: (config, { isServer }) => {
+  webpack: (config, { dev, isServer }) => {
+    if (!dev) {
+      config.cache = false;
+    }
     const appDir = path.join(process.cwd(), 'app');
     config.resolve.alias = {
       ...(config.resolve.alias || {}),
