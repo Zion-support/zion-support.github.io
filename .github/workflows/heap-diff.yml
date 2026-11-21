@@ -1,90 +1,446 @@
+# Temporary diagnostic branch only. Never replace the default-branch workflow with this file.
+# This is NOT an AI Content Burst validation run and never enables Gmail cleanup.
+name: DIAGNOSTIC ONLY - pinned54d5 build memory
+run-name: DIAGNOSTIC ONLY | source54d5 | build+postbuild memory | no full CI or Gmail resolution
+'on':
+  workflow_dispatch: null
 permissions:
   contents: read
-name: Autonomous Memory Leak Detector
-"on":
-  schedule:
-  - cron: 0 * * * *
-  workflow_dispatch: null
+concurrency:
+  group: diagnostic-build-memory-54d5
+  cancel-in-progress: false
 jobs:
-  heap-diff:
-    name: Memory Leak Detector
+  diagnose-build-memory:
+    if: ${{ github.event_name == 'workflow_dispatch' }}
+    name: DIAGNOSTIC ONLY - original build memory
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      issues: write
+    timeout-minutes: 60
+    env:
+      NEXT_TELEMETRY_DISABLED: '1'
+      NODE_OPTIONS: --max-old-space-size=4096
+      NEXT_BUILD_WORKER_COUNT: '1'
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v6.0.2
+    - name: Checkout exact previously validated source
+      uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
       with:
-        fetch-depth: 0
-    - name: Setup Node.js
-      uses: actions/setup-node@v6.3.0
+        ref: 54d5f76a6b6dd1814194f2951d1752fcebc4c6b2
+        fetch-depth: 1
+        persist-credentials: false
+    - name: Use the original Node22 declaration
+      uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f
       with:
-        node-version: '20'
+        node-version-file: .nvmrc
         cache: npm
-    - name: Install dependencies
-      run: npm ci
-    - name: Install PM2 globally (for process query)
-      run: npm install -g pm2
-    - name: Start test app if not running
-      id: start-app
-      continue-on-error: true
-      run: "# Check if any PM2 processes exist; if not, start a long-running Node\
-        \ app to simulate\nif ! pm2 jlist --format json | grep -q '\"name\"'; then\n\
-        \  echo \"No PM2 processes found. Starting sample long-lived app for demo...\"\
-        \n  cat > /tmp/heap-test-app.js << 'EOF'\n    setInterval(() => { const arr\
-        \ = new Array(1000000).fill('x'); }, 1000);\n  EOF\n  pm2 start /tmp/heap-test-app.js\
-        \ --name heap-test || true\n  sleep 2\nelse\n  echo \"PM2 processes already\
-        \ running.\"\nfi\n"
-    - name: Run Heap Diff Detector
-      id: detector
-      continue-on-error: true
-      run: 'node automation/heap-diff-detector.cjs > /tmp/heap-diff-output.txt ||
-        true
+        cache-dependency-path: package-lock.json
+    - name: Verify source identity and Node major
+      run: |
+        set -euo pipefail
+        test "$(git rev-parse HEAD)" = "54d5f76a6b6dd1814194f2951d1752fcebc4c6b2"
+        test "$(tr -d '\r\n' < .nvmrc)" = "22"
+        node -e 'if (process.versions.node.split(".")[0] !== "22") process.exit(1)'
+        mkdir -p "$RUNNER_TEMP/burst-build-memory-diagnostic54d5/evidence"
+        python3 - <<'PY'
+        import hashlib, json, os, subprocess
+        from pathlib import Path
+        files = ['package.json', 'package-lock.json', '.nvmrc', 'next.config.mjs', 'tsconfig.json']
+        data = {
+            'diagnostic_only': True,
+            'full_validation_success': False,
+            'gmail_eligible': False,
+            'source_sha': subprocess.check_output(['git', 'rev-parse', 'HEAD'], text=True).strip(),
+            'node_version': subprocess.check_output(['node', '--version'], text=True).strip(),
+            'source_file_sha256': {name: hashlib.sha256(Path(name).read_bytes()).hexdigest() for name in files},
+        }
+        assert data['source_sha'] == '54d5f76a6b6dd1814194f2951d1752fcebc4c6b2'
+        path = Path(os.environ['RUNNER_TEMP']) / 'burst-build-memory-diagnostic54d5/evidence/source-identity.json'
+        path.write_text(json.dumps(data, indent=2) + '\n')
+        PY
+    - name: Prepare observer outside the source tree
+      run: |
+        cat > "$RUNNER_TEMP/burst-build-memory-diagnostic54d5/observe_build_memory.py" <<'PY'
+        #!/usr/bin/env python3
+        """Read-only process-memory observer. Diagnostic output never establishes CI/Gmail success."""
+        import argparse
+        import json
+        import os
+        import select
+        import signal
+        import subprocess
+        import sys
+        import time
+        from datetime import datetime, timezone
+        from pathlib import Path
 
-        echo "exit_code=$?" >> $GITHUB_OUTPUT
+        MEM_KEYS = ("MemTotal", "MemAvailable", "SwapTotal", "SwapFree", "SwapCached")
+        CG_KEYS = ("memory.current", "memory.peak", "memory.max",
+                   "memory.swap.current", "memory.swap.peak", "memory.swap.max")
+        EVENT_KEYS = ("low", "high", "max", "oom", "oom_kill", "oom_group_kill")
+        PROC = Path("/proc")
+        PAGE_KIB = os.sysconf("SC_PAGE_SIZE") // 1024
 
-        '
-    - name: Upload snapshot artifact
-      if: always()
-      uses: actions/upload-artifact@v4
+
+        def timestamp():
+            return datetime.now(timezone.utc).isoformat()
+
+
+        def process_snapshot():
+            """Read stat fields only; never read cmdline, environ, maps or process memory."""
+            rows = {}
+            for path in PROC.iterdir():
+                if not path.name.isdigit():
+                    continue
+                try:
+                    raw = (path / "stat").read_text()
+                    left, _, tail = raw.rpartition(")")
+                    pid_text, _, comm = left.partition("(")
+                    fields = tail.split()
+                    pid = int(pid_text)
+                    rows[pid] = {
+                        "pid": pid, "ppid": int(fields[1]), "comm": comm,
+                        "rss_kib": max(0, int(fields[21])) * PAGE_KIB,
+                        # Used only for process ownership/cancellation; never serialized.
+                        "_group": int(fields[2]), "_state": fields[0], "_start_ticks": int(fields[19]),
+                    }
+                except (OSError, ValueError, IndexError):
+                    continue  # A process can exit while /proc is being enumerated.
+            return rows
+
+
+        def owned_processes(rows, root_pid, identities):
+            # A fresh session/process group belongs exclusively to this command.
+            # Group membership also retains descendants reparented after a parent exits.
+            selected = {pid for pid, start in identities.items()
+                        if pid in rows and rows[pid]["_start_ticks"] == start}
+            if any(rows[pid]["_group"] == root_pid for pid in selected):
+                selected |= {pid for pid, row in rows.items() if row["_group"] == root_pid}
+            while True:
+                more = {pid for pid, row in rows.items() if row["ppid"] in selected}
+                if more <= selected:
+                    break
+                selected |= more
+            return [rows[pid] for pid in sorted(selected)]
+
+
+        class ObservedProcesses:
+            """Hold stable kernel handles for positively observed descendants, never bare kill(PID)."""
+            def __init__(self, root_pid):
+                self.root_pid = root_pid
+                self.handles = {}
+                self.signalled = set()
+                row = process_snapshot().get(root_pid)
+                if row is not None:
+                    self.remember(row)
+
+            def remember(self, row):
+                key = (row["pid"], row["_start_ticks"])
+                if key in self.handles:
+                    return
+                try:
+                    fd = os.pidfd_open(row["pid"])
+                except ProcessLookupError:
+                    return
+                # Verify the identity after obtaining the stable handle. Start ticks
+                # are used only internally for PID-reuse protection, never serialized.
+                current = process_snapshot().get(row["pid"])
+                if current is None or current["_start_ticks"] != row["_start_ticks"]:
+                    os.close(fd)
+                    return
+                self.handles[key] = fd
+
+            def refresh(self):
+                rows = process_snapshot()
+                identities = {pid: start for (pid, start) in self.handles}
+                owned = owned_processes(rows, self.root_pid, identities)
+                for row in owned:
+                    self.remember(row)
+                return owned
+
+            def live(self):
+                result = []
+                for key, fd in self.handles.items():
+                    poller = select.poll()
+                    poller.register(fd, select.POLLIN)
+                    if not poller.poll(0):
+                        result.append((key, fd))
+                return result
+
+            def send(self, signum):
+                for key, fd in self.live():
+                    if (key, signum) in self.signalled:
+                        continue
+                    try:
+                        signal.pidfd_send_signal(fd, signum)
+                    except ProcessLookupError:
+                        pass
+                    self.signalled.add((key, signum))
+
+            def close(self):
+                for fd in self.handles.values():
+                    os.close(fd)
+
+
+        def cgroup2_directory():
+            """Resolve this observer's inherited cgroup without logging its pathname."""
+            membership = None
+            for line in (PROC / "self/cgroup").read_text().splitlines():
+                if line.startswith("0::"):
+                    membership = line[3:]
+                    break
+            if membership is None:
+                return None
+            for line in (PROC / "self/mountinfo").read_text().splitlines():
+                left, sep, right = line.partition(" - ")
+                if not sep or right.split()[0] != "cgroup2":
+                    continue
+                columns = left.split()
+                root, mount = columns[3], columns[4]
+                if membership != root and not membership.startswith(root.rstrip("/") + "/"):
+                    continue
+                relative = membership[len(root):].lstrip("/")
+                directory = (Path(mount) / relative).resolve()
+                if directory.is_relative_to(Path(mount).resolve()):
+                    return directory
+            return None
+
+
+        def read_cgroup(directory):
+            values = {key: None for key in CG_KEYS}
+            events = {key: None for key in EVENT_KEYS}
+            if directory is not None:
+                for key in CG_KEYS:
+                    try:
+                        text = (directory / key).read_text().strip()
+                        values[key] = "max" if text == "max" else int(text)
+                    except (OSError, ValueError):
+                        pass
+                try:
+                    for line in (directory / "memory.events").read_text().splitlines():
+                        key, value = line.split()
+                        if key in events:
+                            events[key] = int(value)
+                except (OSError, ValueError):
+                    pass
+            return {"values_bytes": values, "events": events,
+                    "readable": isinstance(values["memory.current"], int)}
+
+
+        def collect(owned, directory):
+            processes = [{k: row[k] for k in ("pid", "ppid", "comm", "rss_kib")}
+                         for row in owned]
+            memory = {key: None for key in MEM_KEYS}
+            for line in (PROC / "meminfo").read_text().splitlines():
+                key, _, value = line.partition(":")
+                if key in memory:
+                    memory[key] = int(value.split()[0])
+            return {
+                "timestamp_utc": timestamp(),
+                "processes": processes,
+                "tree_rss_sum_kib": sum(row["rss_kib"] for row in processes),
+                "host_memory_kib": memory,
+                "cgroup": read_cgroup(directory),
+            }
+
+
+        def verify(output):
+            summary = json.loads((output / "summary.json").read_text())
+            samples = [json.loads(line) for line in (output / "samples.jsonl").read_text().splitlines()]
+            valid = (
+                summary["diagnostic_only"] is True
+                and summary["full_validation_success"] is False
+                and summary["gmail_eligible"] is False
+                and summary["sampler_stopped"] is True
+                and summary["received_signal"] is None
+                and summary["command_started"] is True
+                and summary["cleanup_complete"] is True
+                and summary["collector_errors"] == []
+                and summary["sample_count"] == len(samples) >= 2
+                and summary["root_process_seen"] is True
+                and all(s["host_memory_kib"]["MemAvailable"] is not None for s in samples)
+                and all(s["cgroup"]["readable"] for s in samples)
+            )
+            print("Memory capture complete." if valid else "Memory capture incomplete; inspect diagnostic evidence.")
+            return 0 if valid else 1
+
+
+        def run_observed(command, output, interval):
+            output.mkdir(parents=True, exist_ok=True)
+            stream = (output / "samples.jsonl").open("x", buffering=1)
+            started = time.monotonic()
+            summary = {
+                "diagnostic_only": True, "full_validation_success": False, "gmail_eligible": False,
+                "started_at": timestamp(), "interval_seconds": interval,
+                "sample_count": 0, "root_process_seen": False, "collector_errors": [],
+                "peak_sampled_tree_rss_sum_kib": 0, "peak_sample_timestamp_utc": None,
+                "minimum_sampled_mem_available_kib": None, "peak_sampled_swap_used_kib": None,
+                "peak_sampled_cgroup_current_bytes": None,
+                "cgroup_first": None, "cgroup_last": None,
+                "sampler_stopped": False, "received_signal": None, "command_started": False, "command_returncode": None,
+                "shell_exit_code": None, "forced_child_group_cleanup": False,
+                "cleanup_deadline_seconds": 5, "cleanup_complete": False,
+                "cleanup_remaining_observed_pids": [],
+                "limits": [
+                    "Five-second samples can miss shorter peaks; /proc reads are not atomic.",
+                    "RSS sums count shared pages more than once and are not unique physical memory.",
+                    "Inherited cgroup metrics can include runner/other processes and earlier activity.",
+                    "Cgroup peak counters are read only and never reset; their lifetime may predate this command.",
+                    "Processes that detach from both ancestry and this process group between samples can escape attribution.",
+                    "SIGKILL or whole-runner loss cannot execute a cleanup handler or write a final summary.",
+                ],
+            }
+            proc = None
+            directory = None
+            observed = None
+
+            def forward(signum, _frame):
+                summary["received_signal"] = signum
+
+            previous = {sig: signal.signal(sig, forward) for sig in (signal.SIGINT, signal.SIGTERM)}
+            def sample():
+                try:
+                    item = collect(observed.refresh(), directory)
+                    stream.write(json.dumps(item, separators=(",", ":")) + "\n")
+                    stream.flush()
+                    summary["sample_count"] += 1
+                    summary["root_process_seen"] |= any(p["pid"] == proc.pid for p in item["processes"])
+                    if item["tree_rss_sum_kib"] >= summary["peak_sampled_tree_rss_sum_kib"]:
+                        summary["peak_sampled_tree_rss_sum_kib"] = item["tree_rss_sum_kib"]
+                        summary["peak_sample_timestamp_utc"] = item["timestamp_utc"]
+                    available = item["host_memory_kib"]["MemAvailable"]
+                    old = summary["minimum_sampled_mem_available_kib"]
+                    if available is not None:
+                        summary["minimum_sampled_mem_available_kib"] = available if old is None else min(old, available)
+                    mem = item["host_memory_kib"]
+                    if mem["SwapTotal"] is not None and mem["SwapFree"] is not None:
+                        used = mem["SwapTotal"] - mem["SwapFree"]
+                        old = summary["peak_sampled_swap_used_kib"]
+                        summary["peak_sampled_swap_used_kib"] = used if old is None else max(old, used)
+                    current = item["cgroup"]["values_bytes"]["memory.current"]
+                    old = summary["peak_sampled_cgroup_current_bytes"]
+                    if isinstance(current, int):
+                        summary["peak_sampled_cgroup_current_bytes"] = current if old is None else max(old, current)
+                    if summary["cgroup_first"] is None:
+                        summary["cgroup_first"] = item["cgroup"]
+                    summary["cgroup_last"] = item["cgroup"]
+                except Exception as error:
+                    # Exception type only: no path, command, environment or exception payload.
+                    summary["collector_errors"].append(type(error).__name__)
+
+            def cleanup():
+                begin = time.monotonic()
+                summary["cleanup_reason"] = "signal" if summary["received_signal"] else "root_command_exited"
+                while True:
+                    observed.refresh()
+                    live = observed.live()
+                    if not live:
+                        break
+                    age = time.monotonic() - begin
+                    if age >= summary["cleanup_deadline_seconds"]:
+                        break
+                    signum = summary["received_signal"] or signal.SIGTERM
+                    if age >= 2:
+                        signum = signal.SIGKILL
+                        summary["forced_child_group_cleanup"] = True
+                    observed.send(signum)
+                    proc.poll()  # Reap only if already exited; never wait without a deadline.
+                    time.sleep(.1)
+                summary["cleanup_remaining_observed_pids"] = sorted(key[0] for key, _ in observed.live())
+                summary["cleanup_complete"] = not summary["cleanup_remaining_observed_pids"]
+                summary["cleanup_elapsed_seconds"] = round(time.monotonic() - begin, 3)
+
+            code = 127
+            try:
+                if not hasattr(os, "pidfd_open") or not hasattr(signal, "pidfd_send_signal"):
+                    raise OSError
+                try:
+                    directory = cgroup2_directory()
+                except (OSError, ValueError):
+                    directory = None
+                if summary["received_signal"]:
+                    code = 128 + summary["received_signal"]
+                    raise InterruptedError
+                proc = subprocess.Popen(command, start_new_session=True)  # Original argv/env inherited, never recorded.
+                summary["command_started"] = True
+                observed = ObservedProcesses(proc.pid)
+                next_sample = started
+                while True:
+                    now = time.monotonic()
+                    if now >= next_sample:
+                        sample()
+                        next_sample = now + interval
+                    code = proc.poll()
+                    if summary["received_signal"] is not None or code is not None:
+                        break
+                    time.sleep(min(0.2, max(0.01, next_sample - time.monotonic())))
+                cleanup()
+                code = proc.poll()
+                sample()  # End-of-command snapshot as well as the regular five-second series.
+            except InterruptedError:
+                code = 128 + summary["received_signal"]
+            except OSError as error:
+                summary["collector_errors"].append(type(error).__name__)
+                code = 127
+            finally:
+                if observed is not None and "cleanup_elapsed_seconds" not in summary:
+                    cleanup()
+                if proc is not None:
+                    code = proc.poll()
+                summary["command_returncode"] = code
+                if code is None:
+                    # A process stuck past the bounded cleanup has no available actual result.
+                    summary["shell_exit_code"] = 128 + summary["received_signal"] if summary["received_signal"] else 70
+                else:
+                    summary["shell_exit_code"] = 128 - code if code < 0 else code
+                summary["sampler_stopped"] = True  # No child sampler or background thread exists.
+                summary["completed_at"] = timestamp()
+                summary["elapsed_seconds"] = round(time.monotonic() - started, 3)
+                stream.close()
+                if observed is not None:
+                    observed.close()
+                for sig, handler in previous.items():
+                    signal.signal(sig, handler)
+                try:
+                    (output / "summary.json").write_text(json.dumps(summary, indent=2) + "\n")
+                except OSError:
+                    print("Memory diagnostic summary could not be written.", file=sys.stderr)
+            # The command's real result is preserved. Capture quality is a separate workflow step.
+            return summary["shell_exit_code"]
+
+
+        def main():
+            parser = argparse.ArgumentParser(description=__doc__)
+            parser.add_argument("--output", type=Path, required=True)
+            parser.add_argument("--interval-seconds", type=float, default=5)
+            parser.add_argument("--verify", action="store_true")
+            parser.add_argument("command", nargs=argparse.REMAINDER)
+            args = parser.parse_args()
+            if args.verify:
+                return verify(args.output)
+            command = args.command[1:] if args.command[:1] == ["--"] else args.command
+            if not command or args.interval_seconds <= 0:
+                parser.error("A command and a positive sample interval are required.")
+            return run_observed(command, args.output, args.interval_seconds)
+
+
+        if __name__ == "__main__":
+            sys.exit(main())
+
+        PY
+    - name: Install dependencies with the original strict command
+      run: npm ci --prefer-offline --no-audit --fund=false
+    - name: DIAGNOSTIC ONLY - observe original build and postbuild
+      env:
+        NODE_OPTIONS: --max-old-space-size=12288
+      run: python3 "$RUNNER_TEMP/burst-build-memory-diagnostic54d5/observe_build_memory.py" --output "$RUNNER_TEMP/burst-build-memory-diagnostic54d5/evidence"
+        --interval-seconds 5 -- npm run build
+    - name: Verify memory capture completeness separately
+      if: ${{ always() }}
+      run: python3 "$RUNNER_TEMP/burst-build-memory-diagnostic54d5/observe_build_memory.py" --output "$RUNNER_TEMP/burst-build-memory-diagnostic54d5/evidence"
+        --verify
+    - name: Upload memory-only diagnostic evidence
+      if: ${{ always() }}
+      uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f
       with:
-        name: heap-diff-snapshot
-        path: .hermes/memory/heap-diff/snapshots/*.json
+        name: build-memory-diagnostic54d5-${{ github.run_id }}
+        path: ${{ runner.temp }}/burst-build-memory-diagnostic54d5/evidence/
+        if-no-files-found: error
         retention-days: 7
-    - name: Check for alerts
-      run: "if [ \"${{ steps.detector.outputs.exit_code }}\" -ne 0 ]; then\n  echo\
-        \ \"Memory leak alerts detected\"\n  exit 1\nfi\n"
-    - name: Open GitHub issue on sustained alerts
-      if: failure()
-      uses: actions/github-script@v7
-      with:
-        script: "const fs = require('fs');\nconst snapshotDir = '.hermes/memory/heap-diff/snapshots';\n\
-          const files = fs.readdirSync(snapshotDir).sort().slice(-3); // last 3 snapshots\n\
-          let body = '\U0001F6A8 **Potential Memory Leak Detected**\\n\\n';\nbody\
-          \ += 'Heap retention growth exceeded threshold across one or more processes.\\\
-          n\\n';\nbody += '**Recent snapshots:**\\n';\nfor (const f of files) {\n\
-          \  const data = JSON.parse(fs.readFileSync(path.join(snapshotDir, f), 'utf8'));\n\
-          \  body += `- ${f} (${data.timestamp}): ${data.processes.map((p: any) =>\
-          \ `${p.name} ${p.heapUsedMB}MB${p.alert ? ' \U0001F534' : ''}`).join(',\
-          \ ')}\\n`;\n}\nbody += '\\nReview the attached artifacts and process metrics.\
-          \ Consider heap profile analysis and code review for leak sources.';\nbody\
-          \ += `\\n\\n*Committed by: ${context.payload.committer?.name || 'scheduler'}*\\\
-          n`;\n\nconst title = `\U0001F6A8 Memory Leak Alert \u2014 ${new Date().toISOString().slice(0,10)}`;\n\
-          const existing = await github.rest.issues.listForRepo({\n  owner: context.repo.owner,\n\
-          \  repo: context.repo.repo,\n  labels: ['memory-leak', 'autonomous', 'performance'],\n\
-          \  state: 'open'\n});\nconst already = existing.data.find((i: any) => i.title.startsWith('\U0001F6A8\
-          \ Memory Leak Alert'));\nif (!already) {\n  await github.rest.issues.create({\n\
-          \    owner: context.repo.owner,\n    repo: context.repo.repo,\n    title,\n\
-          \    body,\n    labels: ['memory-leak', 'autonomous', 'performance', 'blocker']\n\
-          \  });\n}\n"
-    - name: Notify Telegram on alerts
-      if: failure()
-      run: "node automation/notify-telegram.js \"\U0001F6A8 Memory leak detected.\
-        \ Check GitHub issues for heap diff details.\"\n"
-    - name: Weekly memory health digest
-      if: success() && github.event_name == 'schedule' && github.event.schedule ==
-        '0 0 * * 0'
-      run: "node automation/notify-telegram.js \"\u2705 Weekly memory leak scan complete\
-        \ \u2014 no abnormal heap growth.\"\n"
-    timeout-minutes: 10
