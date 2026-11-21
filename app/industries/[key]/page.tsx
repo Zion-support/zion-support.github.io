@@ -287,8 +287,10 @@ export default async function IndustryPage({ params }: { params: Promise<{ key: 
 
           {industryServices.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {industryServices.map((service: Service) => (
-                <Link
+              {industryServices.map((service: Service) => {
+                const startingPrice = Object.values(service.pricing ?? {})[0];
+
+                return <Link
                   key={service.id}
                   href={`/services/${service.id}`}
                   className="group block bg-slate-900/60 border border-slate-700/50 rounded-xl p-5
@@ -308,13 +310,13 @@ export default async function IndustryPage({ params }: { params: Promise<{ key: 
                           {service.category}
                         </span>
                         <span className="text-purple-400 font-medium">
-                          Starting at {Object.values(service.pricing)[0] || 'Contact for Quote'}
+                          Starting at {typeof startingPrice === 'string' && startingPrice ? startingPrice : 'Contact for Quote'}
                         </span>
                       </div>
                     </div>
                   </div>
-                </Link>
-              ))}
+                </Link>;
+              })}
             </div>
           ) : (
             <div className="text-center py-12 text-slate-500">

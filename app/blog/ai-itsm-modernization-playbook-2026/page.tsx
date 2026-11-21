@@ -18,10 +18,10 @@ export default function Page() {
         { label: 'AI ITSM Modernization Playbook 2026' },
       ]} />
       <ArticleStructuredData
-        title={metadata.title as string}
+        headline={metadata.title as string}
         description={metadata.description as string}
-        canonical="/blog/ai-itsm-modernization-playbook-2026/"
-        authorName="Zion Tech Group"
+        slug="ai-itsm-modernization-playbook-2026"
+        author="Zion Tech Group"
       />
 
       <header className="post-header">

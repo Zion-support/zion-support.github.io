@@ -13,10 +13,10 @@ export default function BlogPage() {
   return (
     <main className="max-w-6xl mx-auto px-4 py-10">
       <ArticleStructuredData
-        title="Free AI Support Automation Playbook 2026"
+        headline="Free AI Support Automation Playbook 2026"
         description="Free AI support automation playbook for MSPs and IT teams in 2026. Step-by-step guide to deploy AI triage, reduce ticket volume, and expand managed services revenue."
-        canonical="https://ziontechgroup.com/blog/ai-support-automation-playbook-2026"
-        publishDate="2026-07-08"
+        slug="ai-support-automation-playbook-2026"
+        datePublished="2026-07-08"
       />
       <SiteBreadcrumbs
         items={[
