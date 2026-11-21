@@ -11,6 +11,7 @@
     "steps": ["Choose one outcome: a clearer service brief, a cloud cost scenario or an app comparison.", "Use assumptions or fictional data first. Record what is known, what is missing and who will validate it.", "Review the result with the responsible team. Agree scope, evidence, acceptance criteria and next steps before implementation."],
     "discoveryBody": "Describe the process you want to improve in our free online questionnaire. Review the on-screen result and request an email copy. Email delivery depends on the provider and recipient inbox.",
     "discoveryLanguage": "The linked questionnaire is in Portuguese. You can also contact our commercial team to discuss your project.",
+    "operationsNav": {"label": "Operations & reliability guide", "title": "Operations & reliability — prepare a technical brief", "checklist": "Start with the operations evidence checklist", "guide": "Operations & reliability guide", "discovery": "Free Discovery", "catalog": "English catalog"},
     "contact": "Contact Zion", "promo": "Explore the Zion apps network by goal", "promoBody": "Prepare a field service request, model cloud costs or compare an AI app with six practical resources and five complete language editions.",
     "groups": ["Plan a field service", "Model a cloud cost scenario", "Evaluate an AI app"],
     "cards": [
@@ -35,6 +36,7 @@
     "steps": ["Escolha um resultado: uma solicitação mais clara, um cenário de custos de nuvem ou uma comparação de apps.", "Comece com premissas ou dados fictícios. Registre o que está confirmado, o que falta e quem fará a validação.", "Revise o resultado com a equipe responsável. Combine escopo, evidências, critérios de aceite e próximos passos antes da implementação."],
     "discoveryBody": "Descreva o processo que deseja melhorar no questionário online gratuito. Consulte o resultado na tela e solicite uma cópia por e-mail. A entrega depende do provedor e da caixa de entrada do destinatário.",
     "discoveryLanguage": "O questionário está em português. Você também pode conversar com nossa equipe comercial sobre o projeto.",
+    "operationsNav": {"label": "Guia de operações e confiabilidade", "title": "Operações e confiabilidade — prepare o briefing técnico", "checklist": "Abrir o checklist de evidências operacionais", "guide": "Guia de operações e confiabilidade", "discovery": "Discovery gratuito", "catalog": "English catalog"},
     "contact": "Fale com a Zion", "promo": "Explore a rede de apps da Zion por objetivo", "promoBody": "Prepare um atendimento de campo, simule custos de nuvem ou compare um app de IA com seis recursos práticos e cinco versões completas de idioma.",
     "groups": ["Planeje um atendimento de campo", "Simule custos de nuvem", "Avalie um app de IA"],
     "cards": [
@@ -59,6 +61,7 @@
     "steps": ["Elija un resultado: una solicitud más clara, un escenario de costes de nube o una comparación de apps.", "Empiece con hipótesis o datos ficticios. Registre lo confirmado, lo pendiente y quién lo validará.", "Revise el resultado con el equipo responsable. Acuerde alcance, evidencias, criterios de aceptación y siguientes pasos antes de implementar."],
     "discoveryBody": "Describa el proceso que quiere mejorar en el cuestionario gratuito en línea. Revise el resultado en pantalla y solicite una copia por correo. La entrega depende del proveedor y del buzón del destinatario.",
     "discoveryLanguage": "El cuestionario enlazado está en portugués. También puede contactar con nuestro equipo comercial para hablar de su proyecto.",
+    "operationsNav": {"label": "Guía de operaciones y fiabilidad", "title": "Operaciones y fiabilidad — prepare la solicitud técnica", "checklist": "Abrir la lista de evidencias operativas", "guide": "Guía de operaciones y fiabilidad", "discovery": "Discovery gratuito", "catalog": "English catalog"},
     "contact": "Contactar con Zion", "promo": "Explore la red de apps de Zion según su objetivo", "promoBody": "Prepare un servicio de campo, modele costes de nube o compare una app de IA con seis recursos prácticos y cinco versiones completas de idioma.",
     "groups": ["Planifique un servicio de campo", "Modele costes de nube", "Evalúe una app de IA"],
     "cards": [
@@ -83,6 +86,7 @@
     "steps": ["Choisissez un résultat : une demande plus claire, un scénario de coûts cloud ou une comparaison d’apps.", "Commencez avec des hypothèses ou des données fictives. Notez les faits confirmés, les points manquants et la personne chargée de les valider.", "Examinez le résultat avec l’équipe responsable. Convenez du périmètre, des preuves, des critères d’acceptation et des prochaines étapes avant la mise en œuvre."],
     "discoveryBody": "Décrivez le processus à améliorer dans notre questionnaire gratuit en ligne. Consultez le résultat à l’écran et demandez une copie par e-mail. La réception dépend du fournisseur et de la boîte du destinataire.",
     "discoveryLanguage": "Le questionnaire lié est en portugais. Vous pouvez aussi contacter notre équipe commerciale pour discuter de votre projet.",
+    "operationsNav": {"label": "Guide opérations et fiabilité", "title": "Opérations et fiabilité — préparer la demande technique", "checklist": "Ouvrir la liste de preuves opérationnelles", "guide": "Guide opérations et fiabilité", "discovery": "Discovery gratuit", "catalog": "English catalog"},
     "contact": "Contacter Zion", "promo": "Explorez le réseau d’apps Zion selon votre objectif", "promoBody": "Préparez une intervention, estimez les coûts cloud ou comparez une app d’IA grâce à six ressources pratiques et cinq versions linguistiques complètes.",
     "groups": ["Préparer une intervention sur site", "Estimer les coûts cloud", "Évaluer une app d’IA"],
     "cards": [
@@ -107,6 +111,7 @@
     "steps": ["Wählen Sie ein Ziel: eine klarere Serviceanfrage, ein Cloud-Kostenszenario oder einen App-Vergleich.", "Beginnen Sie mit Annahmen oder fiktiven Daten. Halten Sie bestätigte Fakten, offene Punkte und die zuständigen Prüfer fest.", "Prüfen Sie das Ergebnis mit dem verantwortlichen Team. Vereinbaren Sie Umfang, Nachweise, Abnahmekriterien und nächste Schritte vor der Umsetzung."],
     "discoveryBody": "Beschreiben Sie im kostenlosen Online-Fragebogen den zu verbessernden Prozess. Prüfen Sie das Ergebnis am Bildschirm und fordern Sie eine E-Mail-Kopie an. Die Zustellung hängt vom Anbieter und dem Postfach des Empfängers ab.",
     "discoveryLanguage": "Der verlinkte Fragebogen ist auf Portugiesisch. Sie können Ihr Projekt auch mit unserem Vertrieb besprechen.",
+    "operationsNav": {"label": "Leitfaden Betrieb und Zuverlässigkeit", "title": "Betrieb und Zuverlässigkeit — technische Anfrage vorbereiten", "checklist": "Checkliste für Betriebsnachweise öffnen", "guide": "Leitfaden Betrieb und Zuverlässigkeit", "discovery": "Kostenloses Discovery", "catalog": "English catalog"},
     "contact": "Zion kontaktieren", "promo": "Das Zion-App-Netzwerk nach Ihrem Ziel erkunden", "promoBody": "Bereiten Sie einen Vor-Ort-Service vor, modellieren Sie Cloud-Kosten oder vergleichen Sie eine KI-App mit sechs praktischen Ressourcen und fünf vollständigen Sprachversionen.",
     "groups": ["Einen Vor-Ort-Service planen", "Cloud-Kosten modellieren", "Eine KI-App bewerten"],
     "cards": [
