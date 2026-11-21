@@ -1,18 +1,18 @@
 import { Metadata } from 'next';
 
-export async function generateMetadata({ params }: {
-  readonly params: { readonly slug: string; };
-}): Promise<Metadata> {
+const app = 'healthtech-compliance';
+
+export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: `${app.replace(/-/g, ' ').replace(/\w/g, l => l.toUpperCase())} — Zion Tech Group`,
+    title: `${app.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())} — Zion Tech Group`,
     description: 'AI-powered solution for your business.',
   };
 }
 
-export default function {slug}Page() {
+export default function Page() {
   return (
     <div className="container">
-      <h1>{app.replace(/-/g, ' ').replace(/\w/g, l => l.toUpperCase())}</h1>
+      <h1>{app.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}</h1>
       <p>AI-powered solution for your business.</p>
     </div>
   );
