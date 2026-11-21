@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PNCP AI Tender Radar · Zion Tech Group</title>
+<meta name="description" content="Le Portail National des Marchés Publics (PNCP) publie tous les marchés fédéraux, étatiques et municipaux du Brésil et expose une API officielle ouverte. La plupart des fournisseurs ne voient jamais ceux qui leur correspondent, car le portail est trop vaste pour être suivi manuellement. Zion PNCP AI Tender Radar lit l’API officielle, filtre les opportunités IA, IT, cloud, sécurité et services terrain correspondant à votre CNAE et à votre capacité de livraison, note chaque marché sur l’adéquation de qualification, la pression du délai et l’intensité concurrentielle, puis envoie une courte liste avec une recommandation écrite go ou no-go avant la clôture des propositions.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://ziontechgroup.com/fr/pncp-tender-radar/">
+  <link rel="alternate" hreflang="en" href="https://ziontechgroup.com/pncp-tender-radar/">
+  <link rel="alternate" hreflang="pt" href="https://ziontechgroup.com/pt/pncp-tender-radar/">
+  <link rel="alternate" hreflang="es" href="https://ziontechgroup.com/es/pncp-tender-radar/">
+  <link rel="alternate" hreflang="fr" href="https://ziontechgroup.com/fr/pncp-tender-radar/">
+  <link rel="alternate" hreflang="de" href="https://ziontechgroup.com/de/pncp-tender-radar/">
+  <link rel="alternate" hreflang="x-default" href="https://ziontechgroup.com/pncp-tender-radar/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"PNCP AI Tender Radar","inLanguage":"fr","url":"https://ziontechgroup.com/fr/pncp-tender-radar/","provider":{"@type":"Organization","name":"Zion Tech Group","address":"364 E Main St STE 1008, Middletown, DE 19709"},"description":"Le Portail National des Marchés Publics (PNCP) publie tous les marchés fédéraux, étatiques et municipaux du Brésil et expose une API officielle ouverte. La plupart des fournisseurs ne voient jamais ceux qui leur correspondent, car le portail est trop vaste pour être suivi manuellement. Zion PNCP AI Tender Radar lit l’API officielle, filtre les opportunités IA, IT, cloud, sécurité et services terrain correspondant à votre CNAE et à votre capacité de livraison, note chaque marché sur l’adéquation de qualification, la pression du délai et l’intensité concurrentielle, puis envoie une courte liste avec une recommandation écrite go ou no-go avant la clôture des propositions."}</script>
+<style>
+:root{--bg:#0b1220;--card:#121a2b;--ink:#e8eef8;--muted:#9aa8bd;--line:#243049;--accent:#7dd3fc;--brand:#a78bfa}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+a{color:var(--accent);text-decoration:none}a:hover{color:#a5d7ff;text-decoration:underline}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px 72px}
+header.site{border-bottom:1px solid var(--line);background:rgba(11,18,32,.92)}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:14px;padding-bottom:14px;flex-wrap:wrap}
+.brand{color:var(--ink);font-weight:700}.brand span{color:var(--brand)}
+.langs{display:flex;flex-wrap:wrap;gap:6px;font-size:.8rem}
+.langs a{color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:3px 10px}
+.langs a[aria-current="true"]{color:#042033;background:var(--accent);border-color:var(--accent);font-weight:700}
+.hero{padding:56px 0 40px;background:radial-gradient(ellipse at top,rgba(167,139,250,.16),transparent 60%)}
+.hero h1{font-size:clamp(1.8rem,4.5vw,2.6rem);line-height:1.12;margin:0 0 14px;letter-spacing:-.02em}
+.lede{color:var(--muted);font-size:1.1rem;max-width:48rem;margin:0 0 26px}
+section{padding:40px 0;border-top:1px solid var(--line)}
+h2{font-size:1.4rem;margin:0 0 18px;letter-spacing:-.01em}
+p{margin:0 0 14px}
+ul.feat{list-style:none;padding:0;margin:0;display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+ul.feat li{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px}
+ul.facts{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+ul.facts li{border-left:3px solid var(--brand);padding:6px 12px;color:var(--muted);background:var(--card);border-radius:0 10px 10px 0;font-size:.92rem}
+.note{color:var(--muted);font-size:.88rem;max-width:48rem}
+.grid{display:grid;gap:10px;grid-template-columns:repeat(auto-fill,minmax(240px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px}
+.card h3{font-size:.98rem;margin:0}
+.card h3 a{color:var(--ink)}
+.card h3 a:hover{color:var(--accent)}
+.btn{display:inline-block;background:linear-gradient(90deg,#7c3aed,#ec4899);color:#fff;font-weight:700;padding:12px 20px;border-radius:10px}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px}
+.price{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;color:var(--muted);font-size:.9rem;display:inline-block}
+footer{margin-top:12px;border-top:1px solid var(--line);padding-top:20px;color:var(--muted);font-size:.85rem}
+footer .wrap{display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;align-items:center;padding-top:18px;padding-bottom:18px}
+@media(max-width:640px){.hero{padding:40px 0 28px}section{padding:30px 0}}
+</style>
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="/fr/">Zion <span>Tech Group</span></a>
+    <nav class="langs" aria-label="Language"><a href="https://ziontechgroup.com/pncp-tender-radar/">EN</a><a href="https://ziontechgroup.com/pt/pncp-tender-radar/">PT</a><a href="https://ziontechgroup.com/es/pncp-tender-radar/">ES</a><a href="https://ziontechgroup.com/fr/pncp-tender-radar/" aria-current="true">FR</a><a href="https://ziontechgroup.com/de/pncp-tender-radar/">DE</a></nav>
+  </div>
+</header>
+<main id="main">
+  <div class="wrap">
+    <div class="hero">
+      <h1>PNCP AI Tender Radar</h1>
+      <p class="lede">Tous les appels d’offres IA et IT ouverts au Brésil, recoupés avec ce que vous vendez vraiment.</p>
+      <div class="cta-row"><a class="btn" href="/discovery/">Démarrer le Discovery gratuit</a></div>
+    </div>
+    <section id="about"><h2>PNCP AI Tender Radar</h2><p class="note">Le Portail National des Marchés Publics (PNCP) publie tous les marchés fédéraux, étatiques et municipaux du Brésil et expose une API officielle ouverte. La plupart des fournisseurs ne voient jamais ceux qui leur correspondent, car le portail est trop vaste pour être suivi manuellement. Zion PNCP AI Tender Radar lit l’API officielle, filtre les opportunités IA, IT, cloud, sécurité et services terrain correspondant à votre CNAE et à votre capacité de livraison, note chaque marché sur l’adéquation de qualification, la pression du délai et l’intensité concurrentielle, puis envoie une courte liste avec une recommandation écrite go ou no-go avant la clôture des propositions.</p></section>
+    <section id="steps"><h2>Comment ça marche</h2><ul class="feat"><li>Connexion à l’API officielle de consultation du PNCP : avis ouverts et intentions d’enregistrement de prix</li><li>Filtrage des marchés par domaine (IA, IT, cloud, sécurité, données, services terrain) et par votre CNAE et vos régions</li><li>Notation de chaque opportunité sur la qualification, les certifications exigées, le délai et la concurrence</li><li>Une courte liste hebdomadaire avec objet, entité acheteuse, échéance, valeur estimée et documents</li><li>Pour chaque marché retenu, une recommandation écrite go ou no-go avec le raisonnement</li><li>Optionnel : préparation du dossier de qualification et de la proposition, taxes et importation détaillées</li></ul></section>
+    <section id="facts"><h2>Un marché réel et ouvert</h2><ul class="facts"><li>Le PNCP centralise tous les marchés fédéraux, étatiques et municipaux du Brésil sous la loi 14.133/2021</li><li>L’API officielle de consultation du PNCP est publique et gratuite, maintenue par Serpro</li><li>Des marchés IA réels sont attribués aujourd’hui, y compris des systèmes d’IA juridique au niveau étatique et municipal</li><li>Les dépenses brésiliennes en implémentation IA dépassent 3,4 milliards USD en 2026, en hausse de plus de 30 % par an</li><li>La plupart des fournisseurs ratent les marchés adaptés car le portail ne peut pas être surveillé manuellement</li></ul></section>
+    <section id="deliver"><h2>Ce que vous recevez</h2><ul class="feat"><li>Une courte liste hebdomadaire recoupée avec votre CNAE et vos régions de livraison</li><li>Une note de qualification par marché, avec les preuves</li><li>Une recommandation écrite go ou no-go avant la clôture des propositions</li><li>Des alertes à l’ouverture d’une intention d’enregistrement de prix (IRP) pertinente</li><li>Optionnel : préparation du dossier et de la proposition avec taxes détaillées</li></ul></section>
+    <section id="related"><h2>Outils Apps Network associés</h2><div class="grid"><div class="card"><h3><a href="/fr/edital-desk/">Edital Desk</a></h3></div>
+<div class="card"><h3><a href="/fr/rfp-readiness/">Score de Préparation RFP</a></h3></div>
+<div class="card"><h3><a href="/ai-tender-scout/">AI Tender Scout</a></h3></div>
+<div class="card"><h3><a href="/licitacao-radar/">Licitação Radar</a></h3></div>
+<div class="card"><h3><a href="/fr/agent-inventory-shadow-ai/">Inventaire des Agents</a></h3></div>
+<div class="card"><h3><a href="/fr/managed-ai-operations/">Managed AI Operations</a></h3></div></div></section>
+    <section id="cta">
+      <h2>Commencez par un Discovery</h2>
+      <p class="note">Un Discovery identifie les profils d’appels d’offres qui correspondent à votre entreprise et ce qui manque pour qualifier. Un processus, un rapport, une session de 30 minutes.</p>
+      <p><span class="price">Surveillance mensuelle par entreprise, plus des honoraires de succès optionnels sur les marchés gagnés.</span></p>
+      <div class="cta-row">
+        <a class="btn" href="/discovery/">Démarrer le Discovery gratuit</a>
+        <a class="btn alt" href="/edital-desk/">Edital Desk</a>
+      </div>
+    </section>
+  </div>
+</main>
+<footer>
+  <div class="wrap">
+    <div>Zion Tech Group · Delaware, États-Unis</div>
+    <div class="langs"><a href="https://ziontechgroup.com/pncp-tender-radar/">EN</a><a href="https://ziontechgroup.com/pt/pncp-tender-radar/">PT</a><a href="https://ziontechgroup.com/es/pncp-tender-radar/">ES</a><a href="https://ziontechgroup.com/fr/pncp-tender-radar/" aria-current="true">FR</a><a href="https://ziontechgroup.com/de/pncp-tender-radar/">DE</a></div>
+  </div>
+</footer>
+</body>
+</html>

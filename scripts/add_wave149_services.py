@@ -3,7 +3,7 @@
 import json, os
 
 SERVICES_FILE = os.path.join(os.path.dirname(__file__), '..', 'app', 'data', 'servicesData.json')
-CONTACT = {"website": "https://ziontechgroup.com", "email": "kleber@ziontechgroup.com", "phone": "+1 302 464 0950"}
+CONTACT = {"website": "https://ziontechgroup.com", "email": "kleber@ziontechgroup.com", "phone": "+55 11 97614-0076"}
 
 new_services = [
     # === MICRO-SAAS (5) ===

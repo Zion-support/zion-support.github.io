@@ -97,3 +97,15 @@ References: [ESLint migration guide](https://eslint.org/docs/latest/use/configur
 ## Reconciliation with current CI
 
 The verified shallow event-SHA checkout and honest exit gate from #71960 are retained. Notification handlers now read ESLint file results and nested messages with valid JavaScript. Public summaries contain only aggregate error/warning counts and a workflow link, never source, file paths or diagnostic text. Missing/invalid reports and execution failures are distinguished from lint findings; no passing result is inferred from an empty failed report. The five reporting fixtures run alongside the existing 68 configuration tests. No publisher, branch protection, compiler options or application files are changed.
+
+The workflow also requires `tests/ci/test_custom_eslint_workflow.cjs`. These fourteen
+cases compile and execute the actual YAML notification handlers with synthetic
+reports and mocked GitHub/file capabilities. They cover nested diagnostics,
+warnings, invalid/missing reports, configuration failures, missing exit status,
+private-detail exclusion, existing-issue deduplication, and mandatory CI wiring.
+They make no outbound calls. A TypeScript annotation in either JavaScript handler
+now fails this regression instead of being discovered only after source lint fails.
+
+Run all three suites together with the command in the workflow's
+`Test autonomous lint configuration and reporting` step. They validate configuration
+and reporting behavior, not repository-wide lint compliance or production readiness.

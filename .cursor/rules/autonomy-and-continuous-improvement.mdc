@@ -1,0 +1,32 @@
+---
+description: Zion Autonomy & Continuous Improvement rules for AI agents working in this repository
+alwaysApply: true
+---
+
+# Zion Autonomy & Continuous Improvement
+
+## Purpose
+
+This rule defines how autonomous agents (Cursor, CI agents, and ops bots) must behave in the Zion Tech Group repository to guarantee safe, continuous improvement.
+
+## Core principles
+
+- Never commit secrets, credentials, API keys, or tokens. Use GitHub Actions secrets and environment variables.
+- All automation lives in `.github/workflows/` and `automation/`; keep workflow names and npm scripts in sync.
+- Respect the Node version pinned in `.nvmrc` (Node 22) for all scripts and CI jobs.
+- Read and maintain `AGENTS.md` and `MEMORY.md` before and after autonomous work; record decisions and checkpoints there.
+- Prefer small, reversible commits with clear conventional-commit messages.
+- Keep everything documented in writing: issues, PR descriptions, and the war-room log.
+
+## Continuous improvement loop
+
+1. Detect: monitor CI failures, smoke checks, and freshness guards.
+2. Diagnose: read job logs before changing anything.
+3. Fix: implement the minimal correct fix; add or repair npm scripts rather than weakening checks.
+4. Verify: re-run failed jobs and confirm green before closing a case.
+
+## Guardrails
+
+- Do not disable or delete a check to make it pass; fix the underlying cause.
+- Do not force-push to main; use retries or new commits.
+- Escalate to a human (Kleber / Carlos) when a change affects production deploys, billing, or external communications.
