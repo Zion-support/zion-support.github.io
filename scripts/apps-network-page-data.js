@@ -30,7 +30,7 @@ const LANGS = [
 const GROUP_LABEL = {
   en: { money: 'Money & FinOps', ops: 'Operations & reliability', govern: 'Governance & bids', work: 'Work & briefs', ai: 'AI & automation', field: 'Field & support', hub: 'Hub & CRM' },
   pt: { money: 'Dinheiro & FinOps', ops: 'Operações & confiabilidade', govern: 'Governança & licitações', work: 'Trabalho & briefs', ai: 'IA & automação', field: 'Campo & suporte', hub: 'Hub & CRM' },
-  es: { money: 'Dinero & FinOps', ops: 'Operaciones & fiabilidad', govern: 'Gobernanza & licitaciones', work: 'Trabajo & briefs', ia: 'IA & automatización', field: 'Campo & soporte', hub: 'Hub & CRM' },
+  es: { money: 'Dinero & FinOps', ops: 'Operaciones & fiabilidad', govern: 'Gobernanza & licitaciones', work: 'Trabajo & briefs', ai: 'IA & automatización', field: 'Campo & soporte', hub: 'Hub & CRM' },
   fr: { money: 'Argent & FinOps', ops: 'Opérations & fiabilité', govern: 'Gouvernance & appels d\'offres', work: 'Travail & briefs', ai: 'IA & automatisation', field: 'Terrain & support', hub: 'Hub & CRM' },
   de: { money: 'Geld & FinOps', ops: 'Betrieb & Zuverlässigkeit', govern: 'Governance & Ausschreibungen', work: 'Arbeit & Briefs', ai: 'KI & Automatisierung', field: 'Field & Support', hub: 'Hub & CRM' },
 };
