@@ -1,1 +1,4 @@
-console.log("stub: automation/generate-incident-suppression-registry.cjs no-op - automation paused post-P0");
+require('./reliability-reports.cjs').main('suppression').catch(error => {
+  console.error(error.message);
+  process.exitCode = 1;
+});

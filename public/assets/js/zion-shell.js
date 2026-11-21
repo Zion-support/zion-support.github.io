@@ -47,7 +47,7 @@
     '<div><h3>Recursos</h3><a href="/blog/">Blog</a><a href="/autonomous-ai-agents/">Agentes</a><a href="/telegram/">Telegram</a><a href="/finops-consulting/">FinOps</a></div>' +
     '<div><h3>Legal</h3><a href="/privacidade/">Privacidade</a><a href="/terms/">Termos</a><a href="/cookies/">Cookies</a><a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></div>' +
     '</div>' +
-    '<div class="wrap"><p class="muted">Zion Tech Group · +1 302 464 0950 · 364 E Main St STE 1008, Middletown, DE 19709</p></div>' +
+    '<div class="wrap"><p class="muted">Zion Tech Group · +55 11 97614-0076 · 364 E Main St STE 1008, Middletown, DE 19709</p></div>' +
     '</footer>';
 
   var FOOTER_EN = '<footer><div class="wrap foot">' +
@@ -56,7 +56,7 @@
     '<div><h3>Resources</h3><a href="/blog/">Blog</a><a href="/autonomous-ai-agents/">Agents</a><a href="/telegram/">Telegram</a><a href="/finops-consulting/">FinOps</a></div>' +
     '<div><h3>Legal</h3><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="/cookies/">Cookies</a><a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></div>' +
     '</div>' +
-    '<div class="wrap"><p class="muted">Zion Tech Group · +1 302 464 0950 · 364 E Main St STE 1008, Middletown, DE 19709</p></div>' +
+    '<div class="wrap"><p class="muted">Zion Tech Group · +55 11 97614-0076 · 364 E Main St STE 1008, Middletown, DE 19709</p></div>' +
     '</footer>';
 
   function hideLegacyChrome() {

@@ -1,13 +1,19 @@
 name: Automation health static freshness guard
 
 permissions:
-  contents: read
+  contents: write
+  actions: write
   issues: write
 
 "on":
   schedule:
     - cron: '12 */6 * * *'
   workflow_dispatch:
+    inputs:
+      publish:
+        description: 'Persist and deploy the newly measured health snapshot'
+        type: boolean
+        default: false
 
 env:
   NODE_OPTIONS: '--max-old-space-size=8192'
@@ -15,7 +21,7 @@ env:
 jobs:
   guard:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 20
     env:
       NEXT_TELEMETRY_DISABLED: "1"
     steps:
@@ -33,6 +39,11 @@ jobs:
 
       - name: Install dependencies
         run: npm ci --prefer-offline --no-audit --fund=false
+
+      - name: Refresh snapshot from actual production observations
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: node scripts/automation/generate-automation-health-snapshot.cjs
 
       - name: Evaluate static health freshness
         id: freshness
@@ -67,10 +78,18 @@ jobs:
           RECOVERY_COMMENT: "Closing automatically: static automation health snapshot freshness recovered."
         run: node scripts/automation/gh-issue-close-on-recovery.cjs
 
+      - name: Persist and publish the measured snapshot
+        if: ${{ github.event_name == 'schedule' || inputs.publish }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: node scripts/automation/publish-health-snapshot.cjs
+
       - name: Upload freshness report
         if: always()
         uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
         with:
           name: automation-health-static-freshness-${{ github.run_id }}
-          path: automation/reports/automation-health-static-freshness-latest.json
-          if-no-files-found: warn
+          path: |
+            automation/reports/automation-health-static-freshness-latest.json
+            automation/reports/automation-health-latest.json
+          if-no-files-found: error

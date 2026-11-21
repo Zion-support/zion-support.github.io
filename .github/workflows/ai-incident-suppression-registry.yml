@@ -8,6 +8,11 @@ permissions:
   schedule:
     - cron: '17 */6 * * *'
   workflow_dispatch:
+    inputs:
+      publish:
+        description: 'Persist measured report on main'
+        type: boolean
+        default: false
 
 concurrency:
   group: ai-incident-suppression-registry
@@ -36,22 +41,21 @@ jobs:
       - name: Install dependencies
         run: npm ci --prefer-offline --no-audit --fund=false
 
-      - name: Write suppression registry snapshot
+      - name: Generate read-only incident registry
         env:
           GH_TOKEN: ${{ github.token }}
-          GITHUB_RUN_ID: ${{ github.run_id }}
-          GITHUB_REPOSITORY: ${{ github.repository }}
-          GITHUB_SHA: ${{ github.sha }}
-          GITHUB_WORKFLOW: ${{ github.workflow }}
-          GITHUB_SERVER_URL: ${{ github.server_url }}
-        run: |
-          set -euo pipefail
-          node automation/generate-incident-suppression-registry.cjs
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -f automation/reports/incident-suppression-registry-latest.json
-          if git diff --staged --quiet; then
-            echo "No suppression registry changes."
-            exit 0
-          fi
-          bash scripts/automation/commit-and-push-main.sh "chore(reports): refresh incident suppression registry snapshot"
+        run: node automation/generate-incident-suppression-registry.cjs
+
+
+      - name: Persist measured report
+        if: ${{ github.event_name == 'schedule' || inputs.publish }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: node scripts/automation/persist-observation.cjs automation/reports/incident-suppression-registry-latest.json
+
+      - name: Upload incident registry
+        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
+        with:
+          name: incident-registry-${{ github.run_id }}
+          path: automation/reports/incident-suppression-registry-latest.json
+          if-no-files-found: error

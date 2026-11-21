@@ -105,7 +105,7 @@ function relatedFor(app, lang = LANGS[0]) {
   const seen = new Set([app.slug]);
   const hrefFor = (slug) =>
     lang.code !== 'en' && fs.existsSync(path.join(PUBLIC, lang.prefix, slug, 'index.html'))
-      ? `${lang.prefix}${slug}/`
+      ? `/${lang.prefix}${slug}/`
       : `/${slug}/`;
   const push = (slug, meta) => {
     if (seen.has(slug) || !AVAILABLE.has(slug)) return;
@@ -360,7 +360,8 @@ for (const app of APPS) {
   }
 }
 for (const lang of LANGS) {
-  sitemapUrls.push(`  <url><loc>${lang.prefix ? `${SITE}/${lang.prefix}` : SITE}/apps-network/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>`);
+  const base = lang.prefix ? `${SITE}/${lang.prefix}` : `${SITE}/`;
+  sitemapUrls.push(`  <url><loc>${base}apps-network/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>`);
 }
 write(
   path.join(PUBLIC, 'apps-network-sitemap.xml'),

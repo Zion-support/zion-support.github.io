@@ -94,7 +94,7 @@ Best regards,
 Kleber Garcia Alcatrão
 CEO, Zion Tech Group
 📧 kleber@ziontechgroup.com
-📞 +1 302 464 0950
+📞 +55 11 97614-0076
 📍 364 E Main St STE 1008, Middletown DE 19709
 🌐 https://ziontechgroup.com""",
     },
@@ -111,13 +111,13 @@ Next steps:
 2. We'll provide an initial assessment within {response_time}
 3. A dedicated engineer will be assigned if needed
 
-For urgent issues, please call us directly at +1 302 464 0950 for immediate assistance.
+For urgent issues, please call us directly at +55 11 97614-0076 for immediate assistance.
 
 Best regards,
 Kleber Garcia Alcatrão
 CEO, Zion Tech Group
 📧 kleber@ziontechgroup.com
-📞 +1 302 464 0950""",
+📞 +55 11 97614-0076""",
     },
     "partnership": {
         "subject": "Re: {original_subject} — Partnership Opportunities at Zion Tech Group",
@@ -137,7 +137,7 @@ Best regards,
 Kleber Garcia Alcatrão
 CEO, Zion Tech Group
 📧 kleber@ziontechgroup.com
-📞 +1 302 464 0950
+📞 +55 11 97614-0076
 📍 364 E Main St STE 1008, Middletown DE 19709""",
     },
     "job_inquiry": {
@@ -173,7 +173,7 @@ Best regards,
 Kleber Garcia Alcatrão
 CEO, Zion Tech Group
 📧 kleber@ziontechgroup.com
-📞 +1 302 464 0950""",
+📞 +55 11 97614-0076""",
     },
     "complaint": {
         "subject": "Re: {original_subject} — We Take This Seriously",
@@ -186,13 +186,13 @@ I've personally flagged this for immediate review. Here's what we're doing:
 2. Assigning a dedicated resolution specialist
 3. Will follow up within 24 hours with a concrete action plan
 
-Your satisfaction is our priority. Please call me directly at +1 302 464 0950 if you'd like to discuss this further.
+Your satisfaction is our priority. Please call me directly at +55 11 97614-0076 if you'd like to discuss this further.
 
 Best regards,
 Kleber Garcia Alcatrão
 CEO, Zion Tech Group
 📧 kleber@ziontechgroup.com
-📞 +1 302 464 0950""",
+📞 +55 11 97614-0076""",
     },
     "information_request": {
         "subject": "Re: {original_subject} — Zion Tech Group Capabilities",
@@ -226,7 +226,7 @@ Best regards,
 Kleber Garcia Alcatrão
 CEO, Zion Tech Group
 📧 kleber@ziontechgroup.com
-📞 +1 302 464 0950
+📞 +55 11 97614-0076
 📍 364 E Main St STE 1008, Middletown DE 19709""",
     },
     "meeting_request": {
@@ -250,7 +250,7 @@ Best regards,
 Kleber Garcia Alcatrão
 CEO, Zion Tech Group
 📧 kleber@ziontechgroup.com
-📞 +1 302 464 0950""",
+📞 +55 11 97614-0076""",
     },
     "thank_you": {
         "subject": "Re: {original_subject}",
@@ -266,7 +266,7 @@ Best regards,
 Kleber Garcia Alcatrão
 CEO, Zion Tech Group
 📧 kleber@ziontechgroup.com
-📞 +1 302 464 0950""",
+📞 +55 11 97614-0076""",
     },
     "spam": {
         "subject": None,  # No reply for spam
@@ -286,7 +286,7 @@ Best regards,
 Kleber Garcia Alcatrão
 CEO, Zion Tech Group
 📧 kleber@ziontechgroup.com
-📞 +1 302 464 0950
+📞 +55 11 97614-0076
 📍 364 E Main St STE 1008, Middletown DE 19709""",
     },
 }

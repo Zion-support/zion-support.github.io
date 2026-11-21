@@ -21,7 +21,7 @@ from datetime import datetime, timezone
 # ─── Configuration ────────────────────────────────────────────────────────────
 
 ZION_EMAIL = "kleber@ziontechgroup.com"
-ZION_PHONE = "+1 302 464 0950"
+ZION_PHONE = "+55 11 97614-0076"
 OUTPUT_DIR = "/Users/klebergarciaalcatrao/data/leads"
 
 # Each industry has multiple search queries for broad coverage.

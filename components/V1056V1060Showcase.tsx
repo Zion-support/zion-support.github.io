@@ -226,8 +226,8 @@ export default function V1056V1060Showcase() {
             Questions about these new engines? Contact us for a personalized demo.
           </p>
           <div className="flex flex-wrap justify-center gap-6 text-gray-700">
-            <a href="tel:+13024640950" className="flex items-center hover:text-blue-600">
-              <span className="mr-2">📱</span> +1 302 464 0950
+            <a href="tel:+5511976140076" className="flex items-center hover:text-blue-600">
+              <span className="mr-2">📱</span> +55 11 97614-0076
             </a>
             <a href="mailto:kleber@ziontechgroup.com" className="flex items-center hover:text-blue-600">
               <span className="mr-2">✉️</span> kleber@ziontechgroup.com
