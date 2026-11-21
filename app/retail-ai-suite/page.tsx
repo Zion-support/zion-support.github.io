@@ -7,7 +7,6 @@ import Head from 'next/head';
 const LOCALES = ['en', 'pt', 'es', 'fr', 'de'];
 
 const FEATURES = [
-[
         "Inventory management",
         "Demand forecasting",
         "Personalized marketing",
@@ -16,7 +15,6 @@ const FEATURES = [
         "Dynamic pricing",
         "Supply chain optimization",
         "Customer sentiment analysis"
-    ]
 ];
 
 export const metadata: Metadata = {
@@ -80,11 +78,7 @@ export default function Page({ searchParams }: { searchParams: { lang?: string }
                 <Link
                   key={l}
                   href={`/retail-ai-suite?lang=${ l }`}
-                  className={{
-                    (locale === l
-                      ? 'bg-purple-500/20 text-purple-200'
-                      : 'hover:bg-slate-800')
-                  }}
+                  className={locale === l ? 'bg-purple-500/20 text-purple-200' : 'hover:bg-slate-800'}
                 >
                   {l.toUpperCase()}
                 </Link>

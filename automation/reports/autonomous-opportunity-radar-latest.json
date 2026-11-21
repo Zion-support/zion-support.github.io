@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-11-14T13:07:43.621Z",
+  "generatedAt": "2026-11-20T14:03:59.864Z",
   "status": "review_required",
   "mode": "read_only",
-  "catalogServicesInspected": 29113,
-  "missingStaticPages": 23525,
+  "catalogServicesInspected": 29124,
+  "missingStaticPages": 23536,
   "candidates": [
     {
       "id": "automation-neural-gaming-0dd17310",
