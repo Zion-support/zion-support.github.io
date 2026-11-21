@@ -45,7 +45,7 @@ permissions:
 jobs:
   burst-ultra:
     runs-on: ubuntu-latest
-    timeout-minutes: 22
+    timeout-minutes: 60
     env:
       NEXT_TELEMETRY_DISABLED: "1"
       NODE_OPTIONS: '--max-old-space-size=4096'
@@ -67,10 +67,12 @@ jobs:
 
       - name: Lint and type-check content changes
         env:
-          NODE_OPTIONS: '--max-old-space-size=20480'
+          NODE_OPTIONS: '--max-old-space-size=12288'
         run: |
-          npm run lint:check
-          npm run type-check
+          free -m
+          nproc
+          /usr/bin/time -v npm run lint:check
+          /usr/bin/time -v npm run type-check
 
       - name: Content burst (template only)
         if: ${{ github.event_name != 'workflow_dispatch' || !inputs.validate_only }}
@@ -105,7 +107,7 @@ jobs:
         run: |
           set -euo pipefail
           npm run rsc:guard
-          npm run build
+          /usr/bin/time -v npm run build
 
       - name: Commit, push, and deploy
         if: ${{ github.event_name != 'workflow_dispatch' || !inputs.validate_only }}
