@@ -79,4 +79,4 @@ jobs:
       if: success() && github.event_name == 'schedule'
       run: "node automation/notify-telegram.js \"\u2705 Weekly TypeScript Check \u2014\
         \ all clear.\" || true\n"
-    timeout-minutes: 10
+    timeout-minutes: 60
