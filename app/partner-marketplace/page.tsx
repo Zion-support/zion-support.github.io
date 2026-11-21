@@ -19,7 +19,7 @@ const FEATURES = [
 
 export const metadata: Metadata = {
   title: 'AI Partner Marketplace — Zion Tech Group',
-  description: 'Discover vetted partners, integrators, and AI service providers who can build on Zion's platform.',
+  description: 'Discover vetted partners, integrators, and AI service providers who can build on Zion\'s platform.',
   alternates: { canonical: `https://ziontechgroup.com/partner-marketplace/` },
 };
 
@@ -35,7 +35,7 @@ function getTranslation(app: AppsNetworkApp, locale: string) {
 
 export default function Page({ searchParams }: { searchParams: { lang?: string } }) {
   const locale = (searchParams?.lang && LOCALES.includes(searchParams.lang)) ? searchParams.lang : 'en';
-  const app = appsNetworkBySlug('partner-marketplace');
+  const app = appsNetworkBySlug['partner-marketplace'];
   const { name, description } = getTranslation(app, locale);
   const related = relatedApps('partner-marketplace', 5);
 

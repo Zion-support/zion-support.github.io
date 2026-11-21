@@ -1,27 +1,21 @@
-<<<<<<< Updated upstream
-import RelatedApps from '@/components/RelatedApps';
-export default function Page() {
-  return (<>
-    <main className="min-h-screen">
-      <section className="relative overflow-hidden bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 pt-20 pb-16">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-orange-500/20 via-transparent to-transparent" />
-        <div className="container-page relative">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-orange-400/20 bg-orange-400/5 mb-6">
-            <span className="text-orange-400 text-xs font-semibold uppercase tracking-wider">Marketing</span>
-=======
 import Link from 'next/link';
-import DefaultSEO from '@/components/DefaultSEO';
+import type { Metadata } from 'next';
+import RelatedApps from '@/components/RelatedApps';
+
+export const metadata: Metadata = {
+  title: 'AI Lead Scoring — Zion',
+  description: 'AI lead scoring, routing and qualification: MQL-to-SQL conversion and SDR throughput.',
+  alternates: { canonical: 'https://ziontechgroup.com/zion-ai-lead-scoring/' },
+};
 
 export default function ZionLeadScoringPage() {
   return (
-    <main>
-      <DefaultSEO
-        title="AI Lead Scoring — Zion"
-        description="AI lead scoring, routing and qualification: MQL-to-SQL conversion and SDR throughput."
-        canonical="https://ziontechgroup.com/zion-ai-lead-scoring/"
-      />
+    <main className="min-h-screen">
       <section className="container py-16">
         <div className="max-w-3xl">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-orange-400/20 bg-orange-400/5 mb-6">
+            <span className="text-orange-400 text-xs font-semibold uppercase tracking-wider">Marketing</span>
+          </div>
           <h1 className="text-3xl font-bold mb-4">AI Lead Scoring</h1>
           <p className="text-lg text-gray-600 mb-8">
             AI-powered lead scoring and routing that turns marketing-qualified leads into sales opportunities
@@ -47,7 +41,6 @@ export default function ZionLeadScoringPage() {
                 <p className="text-gray-600 text-sm">+15 percentage points vs rep self-selection</p>
               </div>
             </div>
->>>>>>> Stashed changes
           </div>
           <div className="bg-white rounded-xl border p-6 mb-6">
             <h2 className="text-xl font-semibold mb-2">How it works</h2>
@@ -70,7 +63,6 @@ export default function ZionLeadScoringPage() {
           </div>
         </div>
       </section>
-<<<<<<< Updated upstream
       <section className="py-20 bg-gradient-to-b from-slate-900 to-slate-950 border-t border-slate-800/60">
         <div className="container-page text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>
@@ -78,14 +70,10 @@ export default function ZionLeadScoringPage() {
           <a href="/contact" className="inline-flex items-center px-8 py-3 rounded-lg bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold text-lg">Free Consultation</a>
         </div>
       </section>
-          <RelatedApps />
-      </main>
-  </>);
-=======
+      <RelatedApps />
       <div className="container py-8">
         <Link href="/apps/" className="text-blue-600 underline">Back to Apps Network →</Link>
       </div>
     </main>
   );
->>>>>>> Stashed changes
 }
