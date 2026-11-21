@@ -55,10 +55,11 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          # Mirror the canonical publisher (gh-pages.yml / static-deploy.yml):
+          # prepare-pages-out.sh is the only production build step. The retired
+          # productivity/field-evidence renderers were removed from main and are
+          # not part of the deployed artifact, so calling them broke this guard.
           bash scripts/prepare-pages-out.sh
-          node scripts/render-productivity-release.cjs out
-          node scripts/render-field-evidence-release.cjs out
-          python3 scripts/assert-no-private-ops.py out
 
       - name: Compare production bodies with deployed artifact
         id: drift
