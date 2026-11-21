@@ -33,6 +33,8 @@ jobs:
       run: npm ci
     - name: Run TypeScript Check
       id: type-check
+      env:
+        NODE_OPTIONS: --max-old-space-size=12288
       run: 'npm run type-check
 
         echo "exit_code=$?" >> $GITHUB_OUTPUT
