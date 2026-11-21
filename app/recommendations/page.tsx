@@ -1,3 +1,5 @@
+'use client';
+
 // app/recommendations/page.tsx - AI-Powered Service Recommendations
 import { useState } from 'react';
 import Link from 'next/link';
