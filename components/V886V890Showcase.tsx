@@ -174,8 +174,8 @@ export default function V886V890Showcase() {
             <h3 className="text-2xl font-bold text-white mb-3">Ready to Transform Your Business with Spatial Computing?</h3>
             <p className="text-gray-400 mb-6">Contact our AR/VR experts for a personalized consultation and discover how spatial computing can revolutionize your operations.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center text-sm">
-              <a href="tel:+13024640950" className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-purple-500/25 transition-all">
-                📞 +1 302 464 0950
+              <a href="tel:+5511976140076" className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-purple-500/25 transition-all">
+                📞 +55 11 97614-0076
               </a>
               <a href="mailto:kleber@ziontechgroup.com" className="bg-gray-700/50 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-600/50 transition-all border border-gray-600/50">
                 ✉️ kleber@ziontechgroup.com

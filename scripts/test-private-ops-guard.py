@@ -7,6 +7,7 @@ import unittest
 import shutil
 import subprocess
 import os
+import json
 
 spec = importlib.util.spec_from_file_location("privacy_guard", Path(__file__).with_name("assert-no-private-ops.py"))
 g = importlib.util.module_from_spec(spec)
@@ -137,53 +138,141 @@ class GuardTests(unittest.TestCase):
                 self.assertNotEqual(result.returncode, 0)
                 self.assertFalse((root / 'output').exists())
 
-    def test_prepare_synthetic_site_excludes_private_source(self):
+    def preparation_fixture(self):
         source = Path(__file__).resolve().parent
-        with tempfile.TemporaryDirectory() as td:
-            root = Path(td)
-            (root / 'scripts').mkdir()
-            for name in ('prepare-pages-out.sh', 'assert-no-private-ops.py', 'export-public-pages.py'):
-                shutil.copyfile(source / name, root / 'scripts' / name)
-            # Mock only the unrelated renderer; keep real bash, Python and file-copy logic.
-            (root / 'bin').mkdir()
-            node = root / 'bin/node'
-            node.write_text('#!/bin/sh\nexit 0\n')
-            node.chmod(0o755)
-            for rel in ('services/ai-automation/index.html', 'plans/index.html', 'discovery/index.html'):
-                file = root / 'public' / rel
-                file.parent.mkdir(parents=True, exist_ok=True)
-                file.write_text('7sY00k7JScFV99Bf044ZG06' + 'x' * 6000)
-            env = dict(os.environ, PATH=str(root / 'bin') + os.pathsep + os.environ['PATH'])
-            def run():
-                return subprocess.run(['bash', str(root / 'scripts/prepare-pages-out.sh')],
-                                      env=env, capture_output=True, text=True)
-            self.assertEqual(run().returncode, 0)
-            self.assertTrue((root / 'out/plans/index.html').is_file())
-            private = root / 'public/ops/comms/state.json'
-            private.parent.mkdir(parents=True)
-            private.write_text('SYNTHETIC_PRIVATE_FIXTURE')
-            result = run()
-            self.assertEqual(result.returncode, 0)
-            self.assertNotIn('SYNTHETIC_PRIVATE_FIXTURE', result.stdout + result.stderr)
-            self.assertFalse((root / 'out/ops/comms/state.json').exists())
-            # Reproduce the excluded-source alias through a root blog ancestor.
-            hidden = root / 'public/ops/comms/private/index.html'
-            hidden.parent.mkdir(parents=True)
-            hidden.write_text('SYNTHETIC_PRIVATE_FIXTURE')
-            (root / 'blog').mkdir()
-            (root / 'blog/customer').symlink_to('../public/ops/comms/private', target_is_directory=True)
-            result = run()
+        temp = tempfile.TemporaryDirectory()
+        self.addCleanup(temp.cleanup)
+        root = Path(temp.name)
+        (root / 'scripts').mkdir()
+        for name in ('prepare-pages-out.sh', 'assert-no-private-ops.py', 'export-public-pages.py',
+                     'normalize-zion-contact.cjs', 'normalize-zion-contact.test.cjs',
+                     'check-legacy-redirects.cjs', 'check-legacy-redirects.test.cjs',
+                     'render-legacy-service-aliases.cjs', 'render-legacy-service-aliases.test.cjs'):
+            shutil.copyfile(source / name, root / 'scripts' / name)
+        for rel in ('public/.well-known/zion-contact.json', 'content/legacy-service-aliases.json'):
+            target = root / rel
+            target.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copyfile(source.parent / rel, target)
+        # Mock only FinOps. All later Node commands and their existing tests
+        # execute the real current-main implementation against synthetic pages.
+        real_node = shutil.which('node')
+        self.assertIsNotNone(real_node)
+        (root / 'bin').mkdir()
+        node = root / 'bin/node'
+        node.write_text('''#!/bin/sh
+set -eu
+printf '%s\\n' "$*" >> "$ZION_FIXTURE_TRACE"
+if [ "$1" = scripts/render-finops-scenario.cjs ]; then
+  case "$ZION_FIXTURE_RENDER_MODE" in
+    private) mkdir -p "$2/ops/comms"; printf synthetic > "$2/ops/comms/late.json" ;;
+    fifo) mkfifo "$2/fifo" ;;
+  esac
+  exit 0
+fi
+"$ZION_FIXTURE_NODE_BIN" "$@"
+if [ "$1" = scripts/render-legacy-service-aliases.cjs ] && [ "$ZION_FIXTURE_LATE_PRIVATE" = 1 ]; then
+  mkdir -p "$2/ops/comms"
+  printf synthetic > "$2/ops/comms/after-aliases.json"
+fi
+''')
+        node.chmod(0o755)
+        for rel in ('services/ai-automation/index.html', 'plans/index.html', 'discovery/index.html'):
+            file = root / 'public' / rel
+            file.parent.mkdir(parents=True, exist_ok=True)
+            file.write_text('<p>+1 302 464 0950</p>7sY00k7JScFV99Bf044ZG06' + 'x' * 6000)
+        (root / 'public/services/index.html').write_text('<h1>Synthetic services catalog</h1>')
+        for route in ('why-ai-consulting-firm', 'enterprise-ai-services', 'stripe'):
+            file = root / 'public' / route / 'index.html'
+            file.parent.mkdir()
+            file.write_text('<link rel="canonical" href="https://ziontechgroup.com/services/">'
+                            '<meta http-equiv="refresh" content="0; url=/services/">')
+        env = dict(os.environ, PATH=str(root / 'bin') + os.pathsep + os.environ['PATH'],
+                   ZION_FIXTURE_NODE_BIN=real_node, ZION_FIXTURE_TRACE=str(root / 'node-trace'),
+                   ZION_FIXTURE_RENDER_MODE='none', ZION_FIXTURE_LATE_PRIVATE='0')
+        return root, env
+
+    def run_preparation(self, root, env, **extra):
+        return subprocess.run(['bash', str(root / 'scripts/prepare-pages-out.sh')],
+                              env=dict(env, **extra), capture_output=True, text=True)
+
+    def test_prepare_synthetic_site_excludes_private_source(self):
+        root, env = self.preparation_fixture()
+        self.assertEqual(self.run_preparation(root, env).returncode, 0)
+        self.assertTrue((root / 'out/plans/index.html').is_file())
+        private = root / 'public/ops/comms/state.json'
+        private.parent.mkdir(parents=True)
+        private.write_text('SYNTHETIC_PRIVATE_FIXTURE')
+        result = self.run_preparation(root, env)
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertNotIn('SYNTHETIC_PRIVATE_FIXTURE', result.stdout + result.stderr)
+        self.assertFalse((root / 'out/ops/comms/state.json').exists())
+        # Reproduce the excluded-source alias through a root blog ancestor.
+        hidden = root / 'public/ops/comms/private/index.html'
+        hidden.parent.mkdir(parents=True)
+        hidden.write_text('SYNTHETIC_PRIVATE_FIXTURE')
+        (root / 'blog').mkdir()
+        (root / 'blog/customer').symlink_to('../public/ops/comms/private', target_is_directory=True)
+        result = self.run_preparation(root, env)
+        self.assertNotEqual(result.returncode, 0)
+        self.assertFalse((root / 'out/blog/customer/index.html').exists())
+        self.assertEqual(hidden.read_text(), 'SYNTHETIC_PRIVATE_FIXTURE')
+        (root / 'blog/customer').unlink()
+        for mode, path in [('private', 'ops/comms/late.json'), ('fifo', 'fifo')]:
+            result = self.run_preparation(root, env, ZION_FIXTURE_RENDER_MODE=mode)
             self.assertNotEqual(result.returncode, 0)
-            self.assertFalse((root / 'out/blog/customer/index.html').exists())
-            self.assertEqual(hidden.read_text(), 'SYNTHETIC_PRIVATE_FIXTURE')
-            (root / 'blog/customer').unlink()
-            # A renderer reintroducing a denied file must fail the final gate.
-            node.write_text('#!/bin/sh\nmkdir -p "$2/ops/comms"\nprintf synthetic > "$2/ops/comms/late.json"\n')
-            self.assertNotEqual(run().returncode, 0)
-            node.write_text('#!/bin/sh\nmkfifo "$2/fifo"\n')
-            result = run()
-            self.assertNotEqual(result.returncode, 0)
+            self.assertIn('private operational files cannot be published', result.stderr)
+            self.assertIn(path, result.stderr)
             self.assertNotIn('SYNTHETIC_PRIVATE_FIXTURE', result.stdout + result.stderr)
+
+    def test_current_transforms_preserve_source_and_run_before_final_boundary(self):
+        root, env = self.preparation_fixture()
+        before = {p.relative_to(root / 'public'): p.read_bytes()
+                  for p in (root / 'public').rglob('*') if p.is_file()}
+        result = self.run_preparation(root, env)
+        self.assertEqual(result.returncode, 0, result.stderr)
+        contact = json.loads((root / 'public/.well-known/zion-contact.json').read_text())
+        page = (root / 'out/plans/index.html').read_text()
+        self.assertIn(contact['phoneDisplay'], page)
+        self.assertNotIn('+1 302 464 0950', page)
+        self.assertEqual(before, {p.relative_to(root / 'public'): p.read_bytes()
+                                 for p in (root / 'public').rglob('*') if p.is_file()})
+        self.assertEqual((root / 'node-trace').read_text().splitlines(), [
+            'scripts/render-finops-scenario.cjs out/',
+            '--test scripts/normalize-zion-contact.test.cjs',
+            'scripts/normalize-zion-contact.cjs out/',
+            '--test scripts/check-legacy-redirects.test.cjs',
+            'scripts/check-legacy-redirects.cjs out/',
+            '--test scripts/render-legacy-service-aliases.test.cjs',
+            'scripts/render-legacy-service-aliases.cjs out/',
+        ])
+        aliases = json.loads((root / 'content/legacy-service-aliases.json').read_text())
+        for alias in aliases:
+            html = (root / 'out/services' / alias['slug'] / 'index.html').read_text()
+            self.assertIn('noindex, follow', html)
+            self.assertIn('href="https://ziontechgroup.com/services/"', html)
+        self.assertIn('OK: public ops/comms', result.stdout)
+
+    def test_current_redirect_rejection_stops_preparation(self):
+        root, env = self.preparation_fixture()
+        (root / 'public/stripe/index.html').write_text(
+            '<meta http-equiv="refresh" content="0; url=/stripe/">')
+        result = self.run_preparation(root, env)
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn('Self-refresh loop', result.stderr)
+        self.assertNotIn('Prepared out (', result.stdout)
+        self.assertNotIn('scripts/render-legacy-service-aliases.cjs out/',
+                         (root / 'node-trace').read_text())
+
+    def test_final_guard_rejects_private_output_after_current_alias_renderer(self):
+        root, env = self.preparation_fixture()
+        result = self.run_preparation(root, env, ZION_FIXTURE_LATE_PRIVATE='1')
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn('scripts/render-legacy-service-aliases.cjs out/',
+                      (root / 'node-trace').read_text())
+        self.assertIn('ops/comms/after-aliases.json', result.stderr)
+        self.assertIn('private operational files cannot be published', result.stderr)
+        self.assertNotIn('Prepared out (', result.stdout)
+        self.assertFalse((root / 'public/ops/comms/after-aliases.json').exists())
 
 
     def test_special_files_rejected_anywhere_in_artifact(self):

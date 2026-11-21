@@ -2,7 +2,6 @@
 'use client';
 
 import Link from 'next/link';
-import { metadata } from './metadata';
 
 export const metadata = {
   title: 'Solutions Hub | Zion Tech Group',

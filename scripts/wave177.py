@@ -115,7 +115,7 @@ for svc in NEW_SERVICES:
             "contactInfo": {
                 "website": f"/services/{svc['id']}",
                 "email": "kleber@ziontechgroup.com",
-                "phone": "+1 302 464 0950"
+                "phone": "+55 11 97614-0076"
             },
             "icon": svc["icon"],
             "href": f"/services/{svc['id']}",
@@ -146,7 +146,7 @@ def make_entry(svc):
     features: {feats},
     benefits: {benefits},
     pricing: {pricing},
-    contactInfo: {{website:'/services/{svc['id']}', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'}},
+    contactInfo: {{website:'/services/{svc['id']}', email:'kleber@ziontechgroup.com', phone:'+55 11 97614-0076'}},
     icon: '{svc['icon']}', href: '/services/{svc['id']}', popular: {str(svc['popular']).lower()}, category: '{svc['category']}', industry: '{svc['industry']}',
   }}"""
 

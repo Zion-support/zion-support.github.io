@@ -10,6 +10,11 @@ on:
       - 'scripts/prepare-pages-out.sh'
       - 'scripts/test-private-ops-guard.py'
       - 'scripts/test-public-pages-export.py'
+      - 'scripts/normalize-zion-contact*.cjs'
+      - 'scripts/check-legacy-redirects*.cjs'
+      - 'scripts/render-legacy-service-aliases*.cjs'
+      - 'public/.well-known/zion-contact.json'
+      - 'content/legacy-service-aliases.json'
 
 permissions:
   contents: read
