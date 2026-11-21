@@ -25,7 +25,7 @@
     '<a href="/services/">Serviços</a><a href="/plans/">Planos</a><a href="/autonomous-ai-agents/">Agentes</a>' +
     '<a href="/discovery/">Discovery</a><a href="/field-services/">Field</a><a href="/offers/">Ofertas</a>' +
     '<a href="/cases/">Casos</a><a href="/contact/">Contato</a><a href="/blog/">Blog</a>' +
-    '<a class="cta" href="/discovery/">Discovery $99</a>' +
+    '<a class="cta" href="/discovery/">Free Discovery</a>' +
     '<span class="langsw" aria-label="Idioma"><a href="/">PT</a><a href="/en/">EN</a><a href="/es/">ES</a><a href="/fr/">FR</a></span>' +
     '</nav></div></header>';
 
@@ -37,13 +37,13 @@
     '<a href="/services/">Services</a><a href="/plans/">Plans</a><a href="/autonomous-ai-agents/">Agents</a>' +
     '<a href="/discovery/">Discovery</a><a href="/field-services/">Field</a><a href="/offers/">Offers</a>' +
     '<a href="/cases/">Cases</a><a href="/contact/">Contact</a><a href="/blog/">Blog</a>' +
-    '<a class="cta" href="/discovery/">Discovery $99</a>' +
+    '<a class="cta" href="/discovery/">Free Discovery</a>' +
     '<span class="langsw" aria-label="Language"><a href="/">PT</a><a href="/en/">EN</a><a href="/es/">ES</a><a href="/fr/">FR</a></span>' +
     '</nav></div></header>';
 
   var FOOTER_PT = '<footer><div class="wrap foot">' +
     '<div><h3>Empresa</h3><a href="/about/">Sobre</a><a href="/cases/">Casos</a><a href="/contact/">Contato</a><a href="/status-page/">Status</a></div>' +
-    '<div><h3>Oferta</h3><a href="/plans/">Planos</a><a href="/discovery/">Discovery $99</a><a href="/offers/">Ofertas</a><a href="/field-services/">Field</a></div>' +
+    '<div><h3>Oferta</h3><a href="/plans/">Planos</a><a href="/discovery/">Free Discovery</a><a href="/offers/">Ofertas</a><a href="/field-services/">Field</a></div>' +
     '<div><h3>Recursos</h3><a href="/blog/">Blog</a><a href="/autonomous-ai-agents/">Agentes</a><a href="/telegram/">Telegram</a><a href="/finops-consulting/">FinOps</a></div>' +
     '<div><h3>Legal</h3><a href="/privacidade/">Privacidade</a><a href="/terms/">Termos</a><a href="/cookies/">Cookies</a><a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></div>' +
     '</div>' +
@@ -52,7 +52,7 @@
 
   var FOOTER_EN = '<footer><div class="wrap foot">' +
     '<div><h3>Company</h3><a href="/about/">About</a><a href="/cases/">Cases</a><a href="/contact/">Contact</a><a href="/status-page/">Status</a></div>' +
-    '<div><h3>Offer</h3><a href="/plans/">Plans</a><a href="/discovery/">Discovery $99</a><a href="/offers/">Offers</a><a href="/field-services/">Field</a></div>' +
+    '<div><h3>Offer</h3><a href="/plans/">Plans</a><a href="/discovery/">Free Discovery</a><a href="/offers/">Offers</a><a href="/field-services/">Field</a></div>' +
     '<div><h3>Resources</h3><a href="/blog/">Blog</a><a href="/autonomous-ai-agents/">Agents</a><a href="/telegram/">Telegram</a><a href="/finops-consulting/">FinOps</a></div>' +
     '<div><h3>Legal</h3><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="/cookies/">Cookies</a><a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></div>' +
     '</div>' +
