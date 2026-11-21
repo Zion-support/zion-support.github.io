@@ -1,0 +1,107 @@
+name: Canonical Public Pages Publisher
+
+# Assemble the event SHA so native Pages/OIDC provenance matches the checkout.
+on:
+  workflow_call:
+    outputs:
+      source_sha:
+        description: 'Immutable source actually assembled and published'
+        value: ${{ jobs.publish.outputs.source_sha }}
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  publish:
+    concurrency:
+      group: canonical-public-pages
+      cancel-in-progress: false
+      queue: max
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    outputs:
+      source_sha: ${{ steps.source.outputs.sha }}
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Require main invocation
+        run: |
+          set -euo pipefail
+          test "$GITHUB_REF" = refs/heads/main
+      - name: Checkout public event without stored credentials
+        env:
+          CANDIDATE_SHA: ${{ github.sha }}
+          GIT_TERMINAL_PROMPT: '0'
+        run: |
+          set -euo pipefail
+          if [[ ! "$CANDIDATE_SHA" =~ ^[0-9a-f]{40}$ ]]; then
+            echo "::error::Invalid checkout candidate SHA."
+            exit 1
+          fi
+          if [[ -n "$(find . -mindepth 1 -maxdepth 1 -print -quit)" ]]; then
+            echo "::error::Checkout requires an empty workspace; existing files were not changed."
+            exit 1
+          fi
+          git init --quiet
+          git remote add origin https://github.com/Zion-support/zion-support.github.io.git
+          git -c credential.helper= fetch --no-tags --depth=1 origin "$CANDIDATE_SHA"
+          git checkout --detach FETCH_HEAD
+          if [[ "$(git rev-parse HEAD)" != "$CANDIDATE_SHA" ]]; then
+            echo "::error::Checked out revision differs from publication candidate."
+            exit 1
+          fi
+      - name: Record immutable source
+        id: source
+        run: |
+          set -euo pipefail
+          sha="$(git rev-parse HEAD)"
+          [[ "$sha" =~ ^[0-9a-f]{40}$ ]]
+          test "$sha" = "$GITHUB_SHA"
+          echo "sha=$sha" >> "$GITHUB_OUTPUT"
+      - name: Reject obsolete event inputs before assembly
+        env:
+          SOURCE_SHA: ${{ steps.source.outputs.sha }}
+        run: |
+          set -euo pipefail
+          git fetch --no-tags --depth=1 origin refs/heads/main
+          git diff --no-renames --name-only -z "$SOURCE_SHA" FETCH_HEAD > "$RUNNER_TEMP/pages-changed-paths"
+          python3 - "$RUNNER_TEMP/pages-changed-paths" <<'PY_GUARD'
+          import pathlib, sys
+          paths = pathlib.Path(sys.argv[1]).read_bytes().split(b'\0')
+          changed_inputs = [p for p in paths if p and
+                            p != b'ops/comms/STATUS.md']
+          if changed_inputs:
+              sys.exit('Publication inputs advanced; refusing this artifact.')
+          PY_GUARD
+      - name: Prepare canonical pages from public
+        run: bash scripts/prepare-pages-out.sh
+      - name: Validate final publication boundary
+        run: python3 scripts/assert-no-private-ops.py out
+      - name: Upload canonical Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          name: canonical-pages-${{ github.run_id }}-${{ github.run_attempt }}
+          path: out
+      - name: Reject changed publication inputs before deploy
+        env:
+          SOURCE_SHA: ${{ steps.source.outputs.sha }}
+        run: |
+          set -euo pipefail
+          git fetch --no-tags --depth=1 origin refs/heads/main
+          git diff --no-renames --name-only -z "$SOURCE_SHA" FETCH_HEAD > "$RUNNER_TEMP/pages-changed-paths"
+          python3 - "$RUNNER_TEMP/pages-changed-paths" <<'PY_GUARD'
+          import pathlib, sys
+          paths = pathlib.Path(sys.argv[1]).read_bytes().split(b'\0')
+          changed_inputs = [p for p in paths if p and
+                            p != b'ops/comms/STATUS.md']
+          if changed_inputs:
+              sys.exit('Publication inputs advanced; refusing this artifact.')
+          PY_GUARD
+      - name: Deploy canonical artifact
+        id: deployment
+        uses: actions/deploy-pages@v4
+        with:
+          artifact_name: canonical-pages-${{ github.run_id }}-${{ github.run_attempt }}
