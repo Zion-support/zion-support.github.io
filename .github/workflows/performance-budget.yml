@@ -25,36 +25,88 @@ jobs:
         cache: npm
     - name: Install dependencies
       run: npm ci --include=dev
+    - name: Validate pinned Next entry metadata guard
+      env:
+        NODE_OPTIONS: --max-old-space-size=512
+      run: |
+        node scripts/ci/test-next-static-entry-helper.cjs
+        node scripts/ci/test-next-static-entry-loader.cjs
+        node scripts/ci/test-next-static-entry-scale.cjs
+    - name: Remove redundant pinned Next static-entry metadata
+      run: node scripts/ci/install-next-static-entry-guard.cjs
+    - name: Validate adjacent slot cache
+      env:
+        NODE_OPTIONS: --max-old-space-size=512
+      run: node scripts/ci/test-next-adjacent-slot-cache.cjs
+    - name: Cache unchanged adjacent slot names
+      run: |
+        node scripts/ci/install-next-adjacent-slot-cache.cjs
+        node scripts/ci/test-next-static-entry-loader.cjs
+    - name: Validate directory snapshot coverage
+      env:
+        NODE_OPTIONS: --max-old-space-size=512
+      run: |
+        node scripts/ci/test-next-directory-dependencies.cjs
+        node scripts/ci/test-next-directory-eligibility.cjs
+        node scripts/ci/test-next-directory-tokens.cjs
+        node scripts/ci/test-next-directory-snapshots.cjs
+        node scripts/ci/test-next-directory-cache.cjs
+    - name: Collapse redundant missing-file snapshots
+      run: |
+        node scripts/ci/install-next-directory-dependencies.cjs
+        node scripts/ci/test-next-static-entry-loader.cjs
+    - name: Validate bounded Next build observer
+      env:
+        NODE_OPTIONS: --max-old-space-size=512
+      run: |
+        node scripts/ci/test-next-build-memory-observer.cjs
+        node scripts/ci/test-webpack-aggregates.cjs
+    - name: Validate performance metric semantics
+      run: node tests/test-performance-metrics.cjs automation/performance-budget-enforcer.cjs
     - name: Build site
       env:
-        NODE_OPTIONS: --max-old-space-size=12288 --max-semi-space-size=64
+        NODE_OPTIONS: --max-old-space-size=12288 --max-semi-space-size=64 --require=./scripts/ci/observe-next-build-memory.cjs
+        DEBUG: next:build:webpack-build
+        ZION_NEXT_MEMORY_OBSERVER: "1"
         NEXT_BUILD_WORKER_COUNT: "1"
       run: |
         set -euo pipefail
-        if npm run build; then
-          echo "Next.js build succeeded"
-        else
-          echo "::warning::Next.js build failed (heap OOM on 90k+ file tree); falling back to serving the static repository root."
-          rm -rf out
+        timeout --signal=TERM --kill-after=30s 300s npm run build 2>&1 | tee "$RUNNER_TEMP/performance-build.log"
+        if [ ! -s out/index.html ]; then
+          echo "::error::Build did not produce out/index.html; refusing to audit a fallback."
+          exit 1
         fi
+        echo "Next.js build succeeded"
     - name: Start local server (background)
       run: |
-        if [ -d out ]; then nohup npx serve out -l 3000 > /tmp/next-start.log 2>&1 & else nohup npx serve . -l 3000 > /tmp/next-start.log 2>&1 & fi
-        echo "PID=$!" > /tmp/server.pid
+        set -euo pipefail
+        test -s out/index.html
+        nohup npx serve out -l 3000 > "$RUNNER_TEMP/performance-server.log" 2>&1 &
+        server_pid=$!
+        echo "$server_pid" > "$RUNNER_TEMP/performance-server.pid"
         for i in 1 2 3 4 5 6 7 8 9 10; do
-          if curl -s -o /dev/null -w "%{http_code}" http://localhost:3000 | grep -q '^2'; then
+          if ! kill -0 "$server_pid" 2>/dev/null; then
+            echo "::error::Performance server exited before readiness."
+            exit 1
+          fi
+          if curl --silent --show-error --max-time 5 -o /dev/null -w "%{http_code}" http://localhost:3000 | grep -q '^2[0-9][0-9]$'; then
             echo "Server ready"
-            break
+            exit 0
           fi
           echo "Waiting for server... ($i)"
           sleep 10
         done
+        echo "::error::Performance server did not become ready."
+        exit 1
     - name: Run Performance Budget Enforcer
       id: perf
-      continue-on-error: true
       run: |
-        node automation/performance-budget-enforcer.cjs > /tmp/perf-output.txt || true
-        echo "exit_code=$?" >> $GITHUB_OUTPUT
+        set -euo pipefail
+        status=0
+        node automation/performance-budget-enforcer.cjs --url http://localhost:3000 > "$RUNNER_TEMP/perf-output.txt" 2>&1 || status=$?
+        echo "exit_code=$status" >> "$GITHUB_OUTPUT"
+        cat "$RUNNER_TEMP/perf-output.txt"
+        exit "$status"
     - name: Upload performance artifacts
       if: always()
       uses: actions/upload-artifact@v4
@@ -62,18 +114,16 @@ jobs:
         name: performance-budget-state
         path: |
           .hermes/memory/performance-budget/
-          /tmp/perf-output.txt
+          ${{ runner.temp }}/perf-output.txt
+          ${{ runner.temp }}/performance-build.log
+          ${{ runner.temp }}/performance-server.log
         retention-days: 30
-    - name: Post PR comment (if PR)
-      if: github.event_name == 'pull_request' && steps.perf.outputs.exit_code != '0'
-      run: |
-        echo "Comment posted by enforcer script."
     - name: Notify Telegram on failure
       if: failure()
       run: node automation/notify-telegram.js "⚠️ Performance budget check failed. See CI logs."
       continue-on-error: true
     - name: Notify Telegram on success
-      if: success()
+      if: success() && steps.perf.outcome == 'success' && steps.perf.outputs.exit_code == '0'
       run: node automation/notify-telegram.js "⚡ Performance budget check passed."
       continue-on-error: true
     timeout-minutes: 20

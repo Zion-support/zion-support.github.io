@@ -1,0 +1,30 @@
+'use strict';
+const fs = require('node:fs');
+const path = require('node:path');
+const assert = require('node:assert/strict');
+const { createDirectoryEligibility } = require('./install-next-directory-dependencies.cjs');
+(async () => {
+ const root=fs.mkdtempSync('/tmp/eligibility-review-');
+ let scans=0, checks=0;
+ const io={...fs.promises,readdir:async (...args)=>{scans++;return fs.promises.readdir(...args)}};
+ const factory=createDirectoryEligibility(io), comp={}, eligible=factory(comp);
+ const dir=root+'/regular';fs.mkdirSync(dir);fs.writeFileSync(dir+'/page.tsx','a');
+ assert.equal(await eligible(dir),true);checks++;
+ const n=scans;assert.ok((await Promise.all(Array.from({length:128},()=>eligible(dir)))).every(Boolean));assert.equal(scans,n);checks++;
+ fs.symlinkSync(root+'/absent',dir+'/layout.tsx');assert.equal(await eligible(dir),false);checks++;
+ fs.unlinkSync(dir+'/layout.tsx');assert.equal(await eligible(dir),true);checks++;
+ const link=root+'/link';fs.symlinkSync(dir,link);assert.equal(await eligible(link),false);checks++;
+ fs.mkdirSync(dir+'/child');assert.equal(await eligible(link+'/child'),false);checks++;
+ assert.equal(await eligible(root+'/missing'),false);checks++;
+ assert.equal(await eligible('relative'),false);checks++;
+ assert.equal(await eligible(dir+'/../regular'),false);checks++;
+ assert.equal(await factory(null)(dir),false);checks++;
+ const failIO={...fs.promises,lstat:async()=>{throw new Error('read failure')}};assert.equal(await createDirectoryEligibility(failIO)({})(dir),false);checks++;
+ const failRead={...fs.promises,readdir:async()=>{throw new Error('read failure')}};assert.equal(await createDirectoryEligibility(failRead)({})(dir),false);checks++;
+ const changed=root+'/changing';fs.mkdirSync(changed);const raceIO={...fs.promises,readdir:async (...args)=>{const result=await fs.promises.readdir(...args);fs.symlinkSync(root+'/absent',changed+'/layout.tsx');return result}};assert.equal(await createDirectoryEligibility(raceIO)({})(changed),false);checks++;
+ // Replacing an ancestor with a symlink must reject an earlier cached result.
+ const ancestor=root+'/parent';fs.mkdirSync(ancestor);fs.mkdirSync(ancestor+'/child');assert.equal(await eligible(ancestor+'/child'),true);fs.renameSync(ancestor,root+'/old-parent');fs.symlinkSync(root+'/old-parent',ancestor);assert.equal(await eligible(ancestor+'/child'),false);checks++;
+ const cold=root+'/cold';fs.mkdirSync(cold);const nCold=scans;assert.ok((await Promise.all(Array.from({length:128},()=>eligible(cold)))).every(Boolean));assert.equal(scans,nCold+1);checks++;
+ const n2=scans;assert.equal(await factory({})(dir),true);assert.ok(scans>n2);checks++;
+ console.log('NEXT_DIRECTORY_ELIGIBILITY_PASS '+checks);fs.rmSync(root,{recursive:true,force:true});
+})().catch(e=>{console.error(e);process.exitCode=1});
