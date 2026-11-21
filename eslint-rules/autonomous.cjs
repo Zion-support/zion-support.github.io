@@ -148,7 +148,40 @@ const requireAsyncTryCatch = {
   },
 };
 
+function isDefaultPageComponent(node) {
+  if (node.parent.type === 'ExportDefaultDeclaration') return true;
+  if (node.type !== 'FunctionDeclaration') return false;
+  const declaration = node.parent.type === 'ExportNamedDeclaration' ? node.parent : node;
+  const program = declaration.parent;
+  if (program.type !== 'Program') return false;
+  // A separate default export must reference this module-level declaration.
+  // Nested functions with the same name cannot satisfy this check.
+  return program.body.some(statement => statement.type === 'ExportDefaultDeclaration'
+    && statement.declaration.type === 'Identifier' && statement.declaration.name === node.id.name);
+}
+
+const pageComponentName = {
+  meta: {
+    type: 'problem',
+    docs: { description: 'Reserve Page for the default-exported Next route component.' },
+    schema: [],
+    messages: { helper: 'Page is reserved for the default-exported route component. Helper functions must use camelCase.' },
+  },
+  create(context) {
+    function check(node) {
+      if (node.id?.name === 'Page' && !isDefaultPageComponent(node)) {
+        context.report({ node: node.id, messageId: 'helper' });
+      }
+    }
+    return { FunctionDeclaration: check, FunctionExpression: check };
+  },
+};
+
 module.exports = {
   meta: { name: 'zion-autonomous', version: '1.0.0' },
-  rules: { 'no-inner-html': noInnerHtml, 'require-async-try-catch': requireAsyncTryCatch },
+  rules: {
+    'no-inner-html': noInnerHtml,
+    'require-async-try-catch': requireAsyncTryCatch,
+    'page-component-name': pageComponentName,
+  },
 };

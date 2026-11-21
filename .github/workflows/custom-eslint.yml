@@ -1,7 +1,7 @@
 permissions:
   contents: read
 name: Autonomous Custom ESLint Rules
-'on':
+"on":
   push:
     branches:
     - main
@@ -20,19 +20,11 @@ jobs:
       issues: write
       pull-requests: write
     steps:
-    - name: Checkout public candidate without stored credentials
-      env:
-        CANDIDATE_SHA: ${{ github.sha }}
-        GIT_TERMINAL_PROMPT: '0'
-      run: "set -euo pipefail\nif [[ ! \"$CANDIDATE_SHA\" =~ ^[0-9a-f]{40}$ ]]; then\n\
-        \  echo \"::error::Invalid checkout candidate SHA.\"\n  exit 1\nfi\nif [[\
-        \ -n \"$(find . -mindepth 1 -maxdepth 1 -print -quit)\" ]]; then\n  echo \"\
-        ::error::Checkout requires an empty workspace; existing files were not changed.\"\
-        \n  exit 1\nfi\ngit init --quiet\ngit remote add origin https://github.com/Zion-support/zion-support.github.io.git\n\
-        git -c credential.helper= fetch --no-tags --depth=1 origin \"$CANDIDATE_SHA\"\
-        \ngit checkout --detach FETCH_HEAD\nif [[ \"$(git rev-parse HEAD)\" != \"\
-        $CANDIDATE_SHA\" ]]; then\n  echo \"::error::Checked out revision differs\
-        \ from publication candidate.\"\n  exit 1\nfi\n"
+    - name: Checkout repository
+      uses: actions/checkout@v6.0.2
+      with:
+        fetch-depth: 1
+        persist-credentials: false
     - name: Setup Node.js
       uses: actions/setup-node@v6.3.0
       with:
@@ -48,12 +40,22 @@ jobs:
       env:
         TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
         TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-      run: "set +e\nnpx eslint -c .eslintrc-autonomous.cjs . \\\n  --ignore-pattern\
-        \ \".next/**\" \\\n  --ignore-pattern \"out/**\" \\\n  --ignore-pattern \"\
-        dist/**\" \\\n  --ignore-pattern \"build/**\" \\\n  --ignore-pattern \"coverage/**\"\
-        \ \\\n  --ignore-pattern \".hermes/**\" \\\n  --ignore-pattern \"automation/reports/**\"\
-        \ \\\n  --max-warnings 0 --format json > /tmp/eslint-report.json\nstatus=$?\n\
-        echo \"exit_code=$status\" >> \"$GITHUB_OUTPUT\"\nexit \"$status\"\n"
+      shell: bash
+      run: |
+        set +e
+        npx eslint -c .eslintrc-autonomous.cjs . \
+          --ignore-pattern ".next/**" \
+          --ignore-pattern "out/**" \
+          --ignore-pattern "dist/**" \
+          --ignore-pattern "build/**" \
+          --ignore-pattern "coverage/**" \
+          --ignore-pattern ".hermes/**" \
+          --ignore-pattern "automation/reports/**" \
+          --max-warnings 0 --format json > /tmp/eslint-report.json
+        status=$?
+        set -e
+        echo "exit_code=$status" >> "$GITHUB_OUTPUT"
+        exit "$status"
     - name: Upload ESLint report
       if: always()
       uses: actions/upload-artifact@v4
@@ -64,9 +66,12 @@ jobs:
     - name: Check for errors
       env:
         ESLINT_EXIT_CODE: ${{ steps.eslint.outputs.exit_code }}
-      run: "if [ \"$ESLINT_EXIT_CODE\" != \"0\" ]; then\n  echo \"::error::ESLint\
-        \ failed or did not return a valid result. See the lint step and report.\"\
-        \n  exit 1\nfi\n"
+      shell: bash
+      run: |
+        if [ "${ESLINT_EXIT_CODE:-}" != "0" ]; then
+          echo "::error::ESLint failed or did not return a valid result. See the lint step and report."
+          exit 1
+        fi
     - name: Parse and comment on PR
       if: github.event_name == 'pull_request' && failure()
       uses: actions/github-script@v7
@@ -111,14 +116,10 @@ jobs:
         ESLINT_EXIT_CODE: ${{ steps.eslint.outputs.exit_code }}
     - name: Notify Telegram on failure
       if: failure()
-      run: 'node automation/notify-telegram.js "🚨 Custom ESLint check found violations.
-        Fix code hygiene issues. See GitHub issues."
-
-        '
+      run: "node automation/notify-telegram.js \"\U0001F6A8 Custom ESLint check found\
+        \ violations. Fix code hygiene issues. See GitHub issues.\"\n"
     - name: Notify Telegram on success (weekly digest)
       if: success() && github.event_name == 'schedule'
-      run: 'node automation/notify-telegram.js "✅ Weekly ESLint hygiene scan passed
-        — no violations found."
-
-        '
+      run: "node automation/notify-telegram.js \"\u2705 Weekly ESLint hygiene scan\
+        \ passed \u2014 no violations found.\"\n"
     timeout-minutes: 10

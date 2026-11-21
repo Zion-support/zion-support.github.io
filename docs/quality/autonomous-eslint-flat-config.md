@@ -30,7 +30,7 @@ The unsupported ignoreRestParams/ignoreRestArrays options are replaced by the
 installed rule's supported `ignoreRestArgs: false`. CommonJS files are parsed as
 CommonJS; their require calls remain valid module syntax.
 
-Fixed ESLint plugin and rule identifiers have line-scoped naming-convention suppressions explaining their API contract. Source naming checks remain unchanged. The complexity limit remains 20.
+Fixed ESLint plugin and rule identifiers have line-scoped naming-convention suppressions explaining their API contract. Source naming checks retain their selectors, with the narrow route-component exception documented below. The complexity limit remains 20.
 
 The configured naming selectors do not filter by inferred types. These checks
 therefore do not require `parserOptions.project`, which would construct the full
@@ -89,6 +89,30 @@ work. It does not mean all repository source files meet the policy. The unchange
 workflow must still report and fail for real violations; do not hide them by
 changing its warning threshold or replacing commands with success placeholders.
 
+## Next route component name
+
+The current source scan flags the framework's default-exported `Page` function
+as a camelCase violation. React component names begin with a capital letter, and
+Next's documented App Router example uses `export default function Page` in
+`app/**/page.tsx`. Renaming those components to satisfy a universal helper-function
+convention is inappropriate.
+
+Only that exact exported function name in `app/**/page.tsx` receives a PascalCase
+selector. The paired `zion-autonomous/page-component-name` AST guard requires the
+function to be the module's default export, either directly or through a separate
+default reference to the same top-level declaration. Exported or nested helpers
+named `Page` still fail. Other function names, PascalCase outside this file scope,
+variables, quoted data keys and all body/safety rules retain their existing checks.
+No source file, generated-asset exclusion, severity or warning threshold changes.
+
+Regression cases exercise both default-export forms and the rejection boundaries,
+including invalid JSX and body violations. This narrow convention repair is not a
+general React naming policy and does not certify the repository's remaining lint.
+
+Sources: [React component naming](https://react.dev/learn/your-first-component#step-2-define-the-function),
+[Next App Router page convention](https://nextjs.org/docs/app/api-reference/file-conventions/page),
+and [naming-convention selectors](https://typescript-eslint.io/rules/naming-convention/).
+
 References: [ESLint migration guide](https://eslint.org/docs/latest/use/configure/migration-guide),
 [custom-rule API](https://eslint.org/docs/latest/extend/custom-rules), and
 [TypeScript unused-variable rule](https://typescript-eslint.io/rules/no-unused-vars/).
@@ -96,7 +120,7 @@ References: [ESLint migration guide](https://eslint.org/docs/latest/use/configur
 
 ## Reconciliation with current CI
 
-The verified shallow event-SHA checkout and honest exit gate from #71960 are retained. Notification handlers now read ESLint file results and nested messages with valid JavaScript. Public summaries contain only aggregate error/warning counts and a workflow link, never source, file paths or diagnostic text. Missing/invalid reports and execution failures are distinguished from lint findings; no passing result is inferred from an empty failed report. The five reporting fixtures run alongside the existing 68 configuration tests. No publisher, branch protection, compiler options or application files are changed.
+The bounded complete-tree checkout and honest exit gate merged in #72123 are retained verbatim. The checkout uses depth 1 without persisted credentials; the source lint command, captured exit status and literal-zero final gate keep their main-branch behavior. Notification handlers now read ESLint file results and nested messages with valid JavaScript. Public summaries contain only aggregate error/warning counts and a workflow link, never source, file paths or diagnostic text. Missing/invalid reports and execution failures are distinguished from lint findings; no passing result is inferred from an empty failed report. The five reporting fixtures run alongside the 80 configuration tests, including the 12 route-name regressions. No publisher, branch protection, compiler options or application files are changed.
 
 The workflow also requires `tests/ci/test_custom_eslint_workflow.cjs`. These fourteen
 cases compile and execute the actual YAML notification handlers with synthetic
@@ -109,3 +133,8 @@ now fails this regression instead of being discovered only after source lint fai
 Run all three suites together with the command in the workflow's
 `Test autonomous lint configuration and reporting` step. They validate configuration
 and reporting behavior, not repository-wide lint compliance or production readiness.
+
+The 13 offline checkout/status regressions from #72123 run unchanged against this
+workflow. They verify complete current-tree checkout, exact base comparisons,
+status 0/1/2 propagation, and rejection of missing or malformed status. These tests
+remain independent of the 99 configuration/reporting/handler regression cases.

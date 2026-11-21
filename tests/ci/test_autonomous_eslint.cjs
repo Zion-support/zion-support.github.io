@@ -144,6 +144,64 @@ test('production configuration yields a clean result for a valid module', () => 
   });
 });
 
+for (const code of [
+  'export default function Page() { return <main>Fixture</main>; }',
+  'function Page() { return <main>Fixture</main>; } export default Page;',
+]) {
+  test('Next route permits its default-exported Page component: ' + code, () => {
+    return eslint.lintText(code, { filePath: 'app/naming-fixture/page.tsx' }).then(([result]) => {
+      assert.equal(result.errorCount, 0, JSON.stringify(result.messages));
+      assert.equal(result.warningCount, 0, JSON.stringify(result.messages));
+    });
+  });
+}
+
+const rejectedPageNames = [
+  ['app/naming-fixture/page.tsx', 'export function Page() { return 1; } export default function renderPage() { return <main>{Page()}</main>; }'],
+  ['app/naming-fixture/page.tsx', 'function Page() { return 1; } export default function renderPage() { return <main>{Page()}</main>; }'],
+  ['app/naming-fixture/page.tsx', 'export default function Page() { function Page() { return 1; } return <main>{Page()}</main>; }'],
+  ['app/naming-fixture/helper.tsx', 'export default function Page() { return <main>Fixture</main>; }'],
+  ['src/app/naming-fixture/page.tsx', 'export default function Page() { return <main>Fixture</main>; }'],
+  ['lib/naming-fixture.ts', 'export function Page() { return 1; }'],
+  ['app/naming-fixture/page.tsx', 'export default function OtherPage() { return <main>Fixture</main>; }'],
+];
+for (const [filePath, code] of rejectedPageNames) {
+  test('Page exception rejects helpers and unrelated PascalCase: ' + filePath + ' ' + code, () => {
+    return eslint.lintText(code, { filePath }).then(([result]) => {
+      assert.equal(result.fatalErrorCount, 0, JSON.stringify(result.messages));
+      assert.ok(result.messages.some(item => item.severity === 2 && [
+        '@typescript-eslint/naming-convention', 'zion-autonomous/page-component-name',
+      ].includes(item.ruleId)), JSON.stringify(result.messages));
+    });
+  });
+}
+
+test('Page exception retains variable, any and HTML-sink errors inside the component', () => {
+  return eslint.lintText('export default function Page() { const bad_name: any = window; bad_name.innerHTML = "unsafe"; return <main>Fixture</main>; }', {
+    filePath: 'app/naming-fixture/page.tsx',
+  }).then(([result]) => {
+    const ids = result.messages.map(item => item.ruleId);
+    for (const id of ['@typescript-eslint/naming-convention', '@typescript-eslint/no-explicit-any', 'zion-autonomous/no-inner-html']) {
+      assert.ok(ids.includes(id), JSON.stringify(result.messages));
+    }
+  });
+});
+
+test('Page exception retains invalid JSX parsing errors', () => {
+  return eslint.lintText('export default function Page() { return <main>; }', {
+    filePath: 'app/naming-fixture/page.tsx',
+  }).then(([result]) => assert.ok(result.fatalErrorCount > 0));
+});
+
+test('Page exception leaves quoted-property naming diagnostics visible', () => {
+  return eslint.lintText('export default function Page() { const labels = { "pt-BR": "Fixture" }; return <main>{labels["pt-BR"]}</main>; }', {
+    filePath: 'app/naming-fixture/page.tsx',
+  }).then(([result]) => {
+    assert.ok(result.messages.some(item => item.ruleId === '@typescript-eslint/naming-convention'
+      && item.message.includes('pt-BR')), JSON.stringify(result.messages));
+  });
+});
+
 test('unused imports and variables remain visible warnings for the workflow zero-warning gate', () => {
   return eslint.lintText('import { readFile, writeFile as _writeFile } from "node:fs"; const unused = true; const _unused = true; export const ready = true;', {
     filePath: 'app/lint-fixture.ts',
