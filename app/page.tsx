@@ -20,6 +20,7 @@ import FloatingActionDock from '@/components/FloatingActionDock';
 import ServiceMatchQuiz from '@/components/ServiceMatchQuiz';
 import AgentsMonitoring from '@/components/AgentsMonitoring';
 import NavigationQuickLinks from '@/components/NavigationQuickLinks';
+import GeoAnswer from '@/components/GeoAnswer';
 import { appsNetworkCatalog, homepageFeaturedApps, APPS_NETWORK_HUB } from './data/appsNetwork';
 
 // Category accent color for showcase cards (maps category key → gradient)
