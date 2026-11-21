@@ -1944,7 +1944,7 @@ export const homepageFeaturedApps = [
     nameEs: 'Zero Trust para Agentes IA',
     nameFr: 'Zero Trust pour Agents IA',
     nameDe: 'Zero Trust für KI-Agenten',
-    group: 'security',
+    group: 'govern',
     related: ['zion-ai-agent-governance', 'zion-ai-agent-cards', 'zion-ai-agent-certification'],
   },
   {
@@ -1960,7 +1960,7 @@ export const homepageFeaturedApps = [
     nameEs: 'Certificación de Agentes y Marco de Confianza',
     nameFr: 'Certification d\'Agents & Cadre de Confiance',
     nameDe: 'Agentenzertifizierung & Trust Framework',
-    group: 'security',
+    group: 'govern',
     related: ['zion-ai-agent-cards', 'zion-ai-zero-trust', 'zion-ai-agent-governance'],
   },
 ] as const;

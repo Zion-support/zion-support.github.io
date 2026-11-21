@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import {
   APPS_NETWORK_HUB,
   appsNetworkCatalog,
+  appsNetworkBySlug,
   homepageFeaturedApps,
   type AppsNetworkApp,
 } from '../data/appsNetwork';
@@ -23,8 +24,10 @@ const GROUPS: { key: AppsNetworkApp['group']; label: string; href: string }[] = 
   { key: 'work', label: 'Worksheets & briefs', href: '/apps-network/#work' },
 ];
 
-function AppCard({ app }: { app: AppsNetworkApp }) {
-  const related = app.related
+type AppCardData = Omit<AppsNetworkApp, 'related'> & { readonly related?: readonly string[] };
+
+function AppCard({ app }: { app: AppCardData }) {
+  const related = (app.related ?? appsNetworkBySlug[app.slug]?.related ?? [])
     .map((slug) => appsNetworkCatalog.find((a) => a.slug === slug))
     .filter(Boolean)
     .slice(0, 3) as AppsNetworkApp[];

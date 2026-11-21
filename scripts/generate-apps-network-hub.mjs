@@ -160,7 +160,7 @@ const groups = GROUP_ORDER.map((g) => renderGroup(g, GROUP_LABEL.en[g] || g, t))
 
 const langNav = LANGS.map(
   (l) =>
-    `<a href="${l.prefix ? `/${l.prefix}` : ''}apps-network/"${l.code === 'en' ? ' aria-current="true"' : ''}>${l.code.toUpperCase()}</a>`
+    `<a href="/${l.prefix}apps-network/"${l.code === 'en' ? ' aria-current="true"' : ''}>${l.code.toUpperCase()}</a>`
 ).join('');
 
 const html = `<!DOCTYPE html>

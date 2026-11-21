@@ -19,6 +19,11 @@ permissions:
     - cron: '0 17 * * *'
   workflow_dispatch:
     inputs:
+      validate_only:
+        description: 'Run validation checks without generating, syncing, committing or deploying content'
+        required: false
+        default: false
+        type: boolean
       max_template_blog:
         description: 'Template blog posts (default 3)'
         required: false
@@ -68,6 +73,7 @@ jobs:
           npm run type-check
 
       - name: Content burst (template only)
+        if: ${{ github.event_name != 'workflow_dispatch' || !inputs.validate_only }}
         env:
           MAX_TEMPLATE_BLOG: ${{ github.event.inputs.max_template_blog || '3' }}
           MAX_TEMPLATE_CASE_STUDIES: ${{ github.event.inputs.max_template_case_studies || '3' }}
@@ -77,15 +83,19 @@ jobs:
         run: node automation/ai-content-burst-agent.cjs
 
       - name: Homepage industry sync
+        if: ${{ github.event_name != 'workflow_dispatch' || !inputs.validate_only }}
         run: node automation/ai-homepage-industry-sync-agent.cjs run --apply || true
 
       - name: Front page core services sync
+        if: ${{ github.event_name != 'workflow_dispatch' || !inputs.validate_only }}
         run: node automation/ai-front-page-core-services-sync-agent.cjs run || true
 
       - name: Front page advanced AI sync
+        if: ${{ github.event_name != 'workflow_dispatch' || !inputs.validate_only }}
         run: node automation/ai-front-page-advanced-ai-sync-agent.cjs run || true
 
       - name: Front page services advertiser
+        if: ${{ github.event_name != 'workflow_dispatch' || !inputs.validate_only }}
         env:
           MAX_ADD: "8"
         run: node automation/ai-front-page-services-advertiser-agent.cjs || true
@@ -98,6 +108,7 @@ jobs:
           npm run build
 
       - name: Commit, push, and deploy
+        if: ${{ github.event_name != 'workflow_dispatch' || !inputs.validate_only }}
         env:
           TRIGGER_DEPLOY: ${{ github.event.inputs.trigger_deploy != 'false' && '1' || '' }}
 #           NETLIFY_BUILD_HOOK removed (Netlify decommissioned → GitHub Pages)
@@ -111,4 +122,5 @@ jobs:
               echo "# NO-OP: Netlify deploy removed (migrated to GitHub Pages)"
             fi
           fi
+
 

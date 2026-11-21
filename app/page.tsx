@@ -1480,7 +1480,11 @@ export default function HomePage() {
             <Link href="/status/" className="hover:text-green-400 transition">● System Status</Link>
             <Link href="/industries/" className="hover:text-purple-400 transition">🏭 Industries</Link>
           </div>
+        </div>
+      </section>
 
+      <section className="py-16 border-t border-slate-800">
+        <div className="container-page">
           <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
               { slug: 'services-hub', name: 'Services Hub', href: '/services-hub/', emoji: '📦', description: 'End-to-end services portal: discovery, engagement, delivery, and managed support.' },
@@ -1500,7 +1504,11 @@ export default function HomePage() {
               </Link>
             ))}
           </div>
-          <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        </div>
+      </section>
+      <section className="py-16 border-t border-slate-800">
+        <div className="container-page">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {homepageFeaturedApps.map((app) => (
               <Link
                 key={app.slug}
