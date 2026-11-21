@@ -8,6 +8,11 @@ import AnimatedCounter from '@/components/AnimatedCounter';
 import ServiceBrowser from '@/components/ServiceBrowser';
 import ServiceSpotlight from '@/components/ServiceSpotlight';
 import ServiceGridWithSearch from '@/components/ServiceGridWithSearch';
+import AppsNetworkShowcase from '@/components/AppsNetworkShowcase';
+import ResultsRoiSection from '@/components/ResultsRoiSection';
+import DiscoveryBenefits from '@/components/DiscoveryBenefits';
+import MultiVendorMaintenance from '@/components/MultiVendorMaintenance';
+import ClientPortalSection from '@/components/ClientPortalSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import ContactFunnel from '@/components/ContactFunnel';
 import ServiceCounter from '@/components/ServiceCounter';
@@ -853,6 +858,9 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── Free Discovery — benefits + sourced benchmarks ── */}
+      <DiscoveryBenefits />
+
       {/* ── Service Match Quiz — Interactive AI Tool ── */}
       <ServiceMatchQuiz />
       
@@ -1409,6 +1417,18 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── Apps Network — link to the Zion apps ── */}
+      <AppsNetworkShowcase />
+
+      {/* ── Industry benchmarks (third-party, sourced) ── */}
+      <ResultsRoiSection />
+
+      {/* ── Multi-vendor maintenance ── */}
+      <MultiVendorMaintenance />
+
+      {/* ── Client portal ── */}
+      <ClientPortalSection />
+
       {/* ── Service Search — find any of {serviceCount}+ services ── */}
       <ServiceGridWithSearch />
 
@@ -1462,18 +1482,27 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── Zion Apps Network — product apps + path calculators ── */}
-      <section id="apps-network" className="py-16 border-t border-slate-800 bg-gradient-to-b from-slate-950 via-purple-950/10 to-slate-950">
-        <div className="container-page">
-          <div className="text-center mb-10">
-            <p className="text-xs font-semibold uppercase tracking-widest text-purple-400 mb-2">Zion Apps Network</p>
-            <h2 className="text-2xl font-bold text-white mb-3">Free apps &amp; calculators — interlinked</h2>
-            <p className="text-slate-400 max-w-2xl mx-auto text-sm">
-              Path tools on this domain and product apps from the GitHub constellation. Every card links to the app
-              and back into the <Link href="/apps-network/" className="text-purple-300 hover:text-pink-300">network hub</Link>.
-            </p>
+          <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              { slug: 'services-hub', name: 'Services Hub', href: '/services-hub/', emoji: '📦', description: 'End-to-end services portal: discovery, engagement, delivery, and managed support.' },
+              { slug: 'zion-ai-chatbot-builder', name: 'Zion AI Chatbot Builder', href: '/zion-ai-chatbot-builder/', emoji: '🤖', description: 'No-code AI chatbot builder for customer service, support, and lead capture.' },
+              { slug: 'zion-ai-hour-tracker', name: 'Zion AI Hour Tracker', href: '/zion-ai-hour-tracker/', emoji: '⏱️', description: 'AI-assisted time tracking with auto-categorization and utilization auditing.' },
+              { slug: 'zion-ai-governance-checklist', name: 'Zion AI Governance Checklist', href: '/zion-ai-governance-checklist/', emoji: '🛡️', description: 'Practical AI governance: data residency, model risk, human oversight, compliance.' },
+            ].map(app => (
+              <Link
+                key={app.slug}
+                href={app.href}
+                className="group block rounded-xl border border-slate-800 bg-slate-900/50 hover:bg-slate-800/80 hover:border-purple-500/30 p-5 transition-all"
+              >
+                <div className="text-2xl mb-2">{app.emoji}</div>
+                <h3 className="text-base font-semibold text-white group-hover:text-purple-300 transition-colors">{app.name}</h3>
+                <p className="text-xs text-slate-400 mt-1 leading-relaxed line-clamp-2">{app.description}</p>
+                <span className="inline-block mt-3 text-xs text-purple-300">Open {app.href} →</span>
+              </Link>
+            ))}
           </div>
-          <div className="max-w-6xl mx-auto grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        </div>
+      </section>
             {homepageFeaturedApps.map((app) => (
               <Link
                 key={app.slug}
@@ -1495,6 +1524,37 @@ export default function HomePage() {
             ))}
             <Link href="/discovery" className="text-purple-300 font-semibold hover:text-pink-300">Free Discovery →</Link>
             <Link href="/discovery/" className="text-purple-300 font-semibold hover:text-pink-300">Discovery $99 →</Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Services & Delivery — free Discovery → paid delivery funnel ── */}
+      <section id="services" className="py-16 border-t border-slate-800">
+        <div className="container-page">
+          <div className="text-center mb-10">
+            <p className="text-xs font-semibold uppercase tracking-widest text-purple-400 mb-2">Services &amp; delivery</p>
+            <h2 className="text-2xl font-bold text-white mb-3">From free discovery to paid delivery</h2>
+            <p className="text-slate-400 max-w-2xl mx-auto text-sm">
+              Start free, then move to a paid program when you are ready. Discovery is always online and free.
+            </p>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              { emoji: '🔍', title: 'Free Discovery', description: 'Online, no commitment, no charge. Maps the AI opportunity and risk check. No credit card.' },
+              { emoji: '📋', title: 'Strategy &amp; Plan', description: 'A scoped plan: use-case, readiness, roadmap and budget. Quoted before any work begins.' },
+              { emoji: '⚙️', title: 'Implementation', description: 'Build and deploy the agreed solution on a fixed scope, with documented milestones.' },
+              { emoji: '🛡️', title: 'Managed Delivery', description: 'Ongoing monitoring, support and iteration under a service agreement.' },
+            ].map(s => (
+              <div key={s.title} className="rounded-xl border border-slate-800 bg-slate-900/50 p-4">
+                <div className="text-2xl mb-2">{s.emoji}</div>
+                <h3 className="text-sm font-semibold text-white mb-1">{s.title}</h3>
+                <p className="text-xs text-slate-500 leading-relaxed">{s.description}</p>
+                <Link href="/en/plans/" className="text-xs text-purple-300 mt-2 inline-block">See plans →</Link>
+              </div>
+            ))}
+          </div>
+          <div className="mt-6 text-center text-xs text-slate-500">
+            Paid services have a separate quote and contract. Discovery is always free.
           </div>
         </div>
       </section>
@@ -1619,7 +1679,38 @@ export default function HomePage() {
                   <div className="flex items-center justify-between mb-3">
                     <span className="text-2xl">{ind.emoji}</span>
                     <span className="text-xs text-slate-500 bg-slate-800/80 px-2 py-0.5 rounded-full">{ind.count}+</span>
-                  </div>
+            
+      {/* ── Lead Generation ── */}
+      <section id="lead-gen" className="py-16 border-t border-slate-800">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <p className="text-xs font-semibold uppercase tracking-widest text-purple-400 mb-2">Lead Generation</p>
+            <h2 className="text-2xl font-bold text-white mb-3">Consultant websites convert at 4.2% — top quartile at 9.1%</h2>
+            <p className="text-slate-400 max-w-2xl mx-auto text-sm leading-relaxed">
+              Our website is optimized for conversion: clear service pages, trust signals, and one primary action per page.
+              Every section is designed to move visitors toward the free discovery or paid package.
+            </p>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { emoji: '📊', title: 'Conversion Benchmark', desc: 'Consultant websites convert at 4.2% on average. Top quartile: 9.1%. Our site is optimized for the top quartile.' },
+              { emoji: '📝', title: 'Lead Magnet', desc: 'Free AI/IT Discovery — always online, always free. No commitment, no credit card, no data stored.' },
+              { emoji: '📧', title: 'Email Automation', desc: 'Follow-up sequences that nurture leads and schedule Discovery calls automatically.' },
+              { emoji: '🔗', title: 'Internal Links', desc: 'Every page links to the apps network, discovery, and plans. No dead ends, ever.' },
+              { emoji: '📱', title: 'Mobile-First', desc: 'Responsive design on every device. 92% of discovery sessions start on mobile.' },
+              { emoji: '📊', title: 'Analytics', desc: 'Track every conversion. Session recordings, heatmaps, and conversion funnel analysis.' },
+            ].map(app => (
+              <div key={app.title} className="rounded-xl border border-slate-800 bg-slate-900/50 p-5">
+                <div className="text-2xl mb-2">{app.emoji}</div>
+                <h3 className="text-sm font-semibold text-white mb-1">{app.title}</h3>
+                <p className="text-xs text-slate-400 leading-relaxed">{app.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      </div>
                   <h3 className="text-sm font-semibold text-white group-hover:text-purple-300 transition-colors mb-1 leading-snug">{ind.label}</h3>
                   <p className="text-xs text-slate-500 line-clamp-2 leading-relaxed">{ind.sample}</p>
                   <div className="mt-3 h-1 rounded-full overflow-hidden bg-slate-800">
@@ -1704,4 +1795,76 @@ export default function HomePage() {
     </main>
   );
 }
+
+      {/* ── Productized AI Services — fixed-scope packages ── */}
+      <section id="productized-services" className="py-16 border-t border-slate-800">
+        <div className="container-page">
+          <div className="text-center mb-10">
+            <p className="text-xs font-semibold uppercase tracking-widest text-purple-400 mb-2">Productized Services</p>
+            <h2 className="text-2xl font-bold text-white mb-3">Fixed-price AI packages — no hourly billing</h2>
+            <p className="text-slate-400 max-w-2xl mx-auto text-sm leading-relaxed">
+              Productized AI services at fixed prices. You get a defined scope, a working deliverable, and predictable cost.
+              No hourly billing, no scope creep, no open-ended projects.
+            </p>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              {
+                name: 'AI Sprint (2-4 weeks)',
+                price: '$8,000 - $35,000',
+                desc: 'Fixed-scope build: RAG chatbot, AI lead qualification, automated reporting, or workflow automation.',
+                emoji: '⚡',
+                features: ['2-4 week delivery', 'Working deliverable', 'Documentation included', 'One named owner'],
+              },
+              {
+                name: 'AI Audit / Assessment',
+                price: '$5,000 - $25,000',
+                desc: 'Full AI readiness assessment: opportunity scoring, tooling analysis, build vs. buy recommendation, roadmap.',
+                emoji: '🔍',
+                features: ['Opportunity scoring', 'Tooling analysis', 'Build vs buy recommendation', 'Implementation roadmap'],
+              },
+              {
+                name: 'AI Subscription ($3K-$15K/mo)',
+                price: '$3,000 - $15,000',
+                desc: 'Monthly retainer for live AI systems: monitoring, optimization, new use cases, and team support.',
+                emoji: '📊',
+                features: ['Monthly monitoring', 'New use case development', 'Strategy and advisory', 'Quarterly reviews'],
+              },
+              {
+                name: 'Managed Operations ($6K-$40K/mo)',
+                price: '$6,000 - $40,000',
+                desc: 'Full managed operations: 24/7 monitoring, incident response, ongoing strategy, and expansion advisory.',
+                emoji: '🛡️',
+                features: ['24/7 monitoring', 'Incident response', 'Ongoing strategy', 'Expansion advisory'],
+              },
+              {
+                name: 'Micro-SaaS Product ($99-$2K/mo)',
+                price: '$99 - $2,000',
+                desc: 'Turnkey AI product for self-serve use: calculator, quiz, or automation tool with billing and support.',
+                emoji: '🛍️',
+                features: ['Self-serve onboarding', 'Usage-based billing', 'Support included', 'Brand whitelist'],
+              },
+              {
+                name: 'White-Label Platform ($2K-$20K/mo)',
+                price: '$2,000 - $20,000',
+                desc: 'Full AI agent platform under your brand: infrastructure, agents, billing, support, and everything included.',
+                emoji: '🏗️',
+                features: ['White-label branding', 'Full infrastructure', 'Agent marketplace', 'Support team'],
+              },
+            ].map(app => (
+              <div key={app.name} className="rounded-xl border border-slate-800 bg-slate-900/50 p-5">
+                <div className="text-2xl mb-2">{app.emoji}</div>
+                <h3 className="text-sm font-semibold text-white mb-1">{app.name}</h3>
+                <p className="text-xs text-purple-300 font-medium mb-2">{app.price}</p>
+                <p className="text-xs text-slate-400 leading-relaxed mb-3">{app.desc}</p>
+                <ul className="text-xs text-slate-300 list-disc list-inside mb-3">
+                  {app.features.map(f => <li key={f}>{f}</li>)}
+                </ul>
+                <Link href="/discovery/" className="text-xs text-purple-300 hover:text-pink-300">Book Discovery →</Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
 

@@ -7,7 +7,6 @@ import Head from 'next/head';
 const LOCALES = ['en', 'pt', 'es', 'fr', 'de'];
 
 const FEATURES = [
-[
         "Vendor directory",
         "Integration marketplace",
         "Partner testimonials",
@@ -16,7 +15,6 @@ const FEATURES = [
         "Request for proposal (RFP)",
         "Partner verification",
         "Deal marketplace"
-    ]
 ];
 
 export const metadata: Metadata = {
@@ -80,11 +78,7 @@ export default function Page({ searchParams }: { searchParams: { lang?: string }
                 <Link
                   key={l}
                   href={`/partner-marketplace?lang=${ l }`}
-                  className={{
-                    (locale === l
-                      ? 'bg-purple-500/20 text-purple-200'
-                      : 'hover:bg-slate-800')
-                  }}
+                  className={locale === l ? 'bg-purple-500/20 text-purple-200' : 'hover:bg-slate-800'}
                 >
                   {l.toUpperCase()}
                 </Link>
