@@ -1,0 +1,235 @@
+name: Validate the integrated Next.js route manifest
+
+on:
+  push:
+    branches: [validate/72149-integracao-20261122]
+    paths: ['.github/workflows/validate-72149.yml']
+
+permissions:
+  contents: read
+
+env:
+  INTEGRATION: 7bca1dbbff73c98f4a6c79eb90b929d4414df33c
+  CANDIDATE: 39edfc9465b8a0771a7ab105db9f0dd32efad37b
+  FIXTURE: b242d3547c2c57d41d31ea3935d319176ee1e8b0
+  NEXT_TELEMETRY_DISABLED: '1'
+  NODE_OPTIONS: --max-old-space-size=12288
+
+jobs:
+  validate:
+    name: ${{ matrix.phase }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 200
+    strategy:
+      fail-fast: false
+      matrix:
+        phase: [quality, full-build]
+    steps:
+      - name: Check out the pinned integration tree
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        with:
+          ref: ${{ env.INTEGRATION }}
+          fetch-depth: 1
+          persist-credentials: false
+      - uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f
+        with:
+          node-version: '22.23.5'
+          package-manager-cache: false
+      - name: Prepare evidence directory
+        run: |
+          mkdir -p "$RUNNER_TEMP/evidence"
+          test "$(git rev-parse HEAD)" = "$INTEGRATION"
+          node --version
+          npm --version
+          free -m
+          df -h .
+      - name: Measure stock rendering with cold and reused caches
+        if: matrix.phase == 'quality'
+        run: |
+          npm ci --prefer-offline --no-audit --fund=false
+          printf '%s  %s\n' \
+            42bce6601be85db8019657324eba0ab5fa2a3cf0b62dd636705a4cc17a3d42ac node_modules/next/dist/build/entries.js \
+            61dec03764a93db3db816346c00f31b1a14f3b743b3498d7dab534dcdb7709f3 node_modules/next/dist/build/webpack/loaders/next-app-loader/index.js | sha256sum -c -
+          git fetch --no-tags --depth=1 --filter=blob:none origin "$FIXTURE"
+          fixture_path=scripts/ci/shared-next-routes/render-fixture.cjs
+          test "$(git rev-parse "$FIXTURE:$fixture_path")" = ce342a425eca261cbb85d1d9380046cb6111ef6e
+          git show "$FIXTURE:$fixture_path" > "$RUNNER_TEMP/original-fixture.cjs"
+          # Reuse the pinned source pages, HTTP assertions and real Next server.
+          python3 - "$RUNNER_TEMP/original-fixture.cjs" <<'PY'
+          from pathlib import Path
+          import sys
+          source = Path(sys.argv[1]).read_text()
+          boundary = 'async function inspect(patched) {'
+          assert source.count(boundary) == 1
+          Path('.ci-72149-routing.cjs').write_text(source.split(boundary)[0])
+          PY
+          cat >> .ci-72149-routing.cjs <<'JS'
+          const crypto = require('node:crypto');
+          const mode = process.argv[2];
+          const resultFile = process.argv[3];
+          const out = path.join(fixture, '.next');
+          const cache = path.join(out, 'cache');
+          const sentinel = path.join(cache, 'reuse-probe');
+          const primary = 'app/(catalog)/products/(fixed)/blue/page.js';
+          const slot = 'app/(catalog)/products/@aside/blue/page.js';
+          const blue = cases.find(([url]) => url === '/products/blue');
+          function write(rel, source) {
+            const target = path.join(fixture, rel);
+            fs.mkdirSync(path.dirname(target), {recursive: true});
+            fs.writeFileSync(target, source);
+          }
+          function manifestKeys() {
+            const dir = path.join(cache, 'app-route-lists');
+            return fs.readdirSync(dir).filter(name => name.endsWith('.json')).map(name => {
+              const bytes = fs.readFileSync(path.join(dir, name));
+              assert.equal(name, crypto.createHash('sha256').update(bytes).digest('hex') + '.json');
+              assert.ok(Array.isArray(JSON.parse(bytes)));
+              return name;
+            });
+          }
+          async function measure() {
+            const env = {...process.env};
+            delete env.ZION_NEXT_SHARED_ROUTE_MANIFEST;
+            run(cli, ['build', fixture, '--webpack'], env);
+            const routes = JSON.parse(fs.readFileSync(path.join(out, 'server', 'app-paths-manifest.json')));
+            return {paths: Object.keys(routes).sort(), pages: await readPages(env)};
+          }
+          (async () => {
+            try {
+              for (const [file, content] of Object.entries(sources)) write(file, content);
+              const cold = await measure();
+              assert.equal(cold.paths.length, 10);
+              assert.equal(cold.pages.length, 6);
+              const initial = mode === 'candidate' ? manifestKeys() : [];
+              if (mode === 'candidate') assert.ok(initial.length);
+              fs.writeFileSync(sentinel, 'keep');
+              write(primary, text('static-blue'));
+              write(slot, 'export default function Page(){return <output id="aside">aside-static-blue</output>}');
+              blue.splice(2, 2, 'static-blue', 'aside-static-blue');
+              const added = await measure();
+              assert.equal(fs.readFileSync(sentinel, 'utf8'), 'keep');
+              assert.notDeepEqual(added.paths, cold.paths);
+              if (mode === 'candidate') assert.ok(manifestKeys().some(key => !initial.includes(key)));
+              for (const file of [primary, slot]) fs.rmSync(path.join(fixture, file));
+              blue.splice(2, 2, 'sku-blue', 'aside-blue');
+              const removed = await measure();
+              assert.equal(fs.readFileSync(sentinel, 'utf8'), 'keep');
+              assert.deepEqual(removed, cold);
+              if (mode === 'candidate') assert.ok(initial.every(key => manifestKeys().includes(key)));
+              fs.writeFileSync(resultFile, JSON.stringify({cold, added, removed}, null, 2));
+            } finally {
+              fs.rmSync(fixture, {recursive: true, force: true});
+            }
+          })().catch(error => { console.error(error); process.exitCode = 1; });
+          JS
+          node .ci-72149-routing.cjs stock "$RUNNER_TEMP/evidence/stock.json"
+      - name: Apply and verify the approved patch
+        id: install_candidate
+        run: |
+          git fetch --no-tags --depth=2 --filter=blob:none origin "$CANDIDATE"
+          git cherry-pick --no-commit "$CANDIDATE"
+          git diff --cached --check
+          git diff --cached --name-only | LC_ALL=C sort > "$RUNNER_TEMP/paths"
+          printf '%s\n' package.json scripts/next-route-manifest/{install.cjs,manifest.cjs,manifest.test.cjs} | LC_ALL=C sort | diff -u - "$RUNNER_TEMP/paths"
+          git write-tree | tee "$RUNNER_TEMP/evidence/integration-tree.txt"
+          npm ci --prefer-offline --no-audit --fund=false
+          printf '%s  %s\n' \
+            2f811f65ae12f6eeec22d9fa2701d0d27c4aeccd3495573da8d386c3cbcc5a09 node_modules/next/dist/build/entries.js \
+            26a56c3af9131b5db8f9018490b63c74009f87eda7113567be7e9ef38c6863d3 node_modules/next/dist/build/webpack/loaders/next-app-loader/index.js | sha256sum -c -
+          cmp scripts/next-route-manifest/manifest.cjs node_modules/next/dist/build/zion-route-manifest.cjs
+      - name: Run the focused tests and compare all three rendered states
+        if: matrix.phase == 'quality'
+        run: |
+          node --test scripts/next-route-manifest/manifest.test.cjs
+          node .ci-72149-routing.cjs candidate "$RUNNER_TEMP/evidence/candidate.json"
+          diff -u "$RUNNER_TEMP/evidence/stock.json" "$RUNNER_TEMP/evidence/candidate.json"
+          rm .ci-72149-routing.cjs
+      - name: Lint the integrated source
+        if: "!cancelled() && matrix.phase == 'quality' && steps.install_candidate.outcome == 'success'"
+        run: /usr/bin/time -v npm run lint:check
+      - name: Type-check the integrated source
+        if: "!cancelled() && matrix.phase == 'quality' && steps.install_candidate.outcome == 'success'"
+        run: /usr/bin/time -v npm run type-check
+      - name: Run the production build, static export and npm postbuild
+        if: matrix.phase == 'full-build'
+        shell: bash
+        run: |
+          set -euo pipefail
+          evidence="$RUNNER_TEMP/evidence"
+          test ! -e out
+          test ! -e .next
+          report=automation/reports/build-and-verify-latest.json
+          if [ -f "$report" ]; then mv "$report" "$RUNNER_TEMP/preexisting-report.json"; fi
+          cat > "$RUNNER_TEMP/observe-72149.cjs" <<'JS'
+          const fs = require('node:fs');
+          const path = require('node:path');
+          const started = Date.now();
+          const target = path.join(process.env.RUNNER_TEMP, 'evidence', 'memory-' + process.pid + '.ndjson');
+          function sample(event) {
+            let stage;
+            try {
+              stage = JSON.parse(fs.readFileSync('.next/diagnostics/build-diagnostics.json')).buildStage;
+            } catch {}
+            const {rss, heapUsed} = process.memoryUsage();
+            const record = {time: new Date().toISOString(), elapsedMs: Date.now() - started,
+              pid: process.pid, ppid: process.ppid, event, stage, compiler: process.env.NEXT_COMPILER_NAME,
+              rssMiB: Math.round(rss / 1048576), heapMiB: Math.round(heapUsed / 1048576),
+              userCpuUs: process.cpuUsage().user};
+            try { fs.appendFileSync(target, JSON.stringify(record) + '\n'); } catch {}
+          }
+          sample('start');
+          setInterval(() => sample('sample'), 30000).unref();
+          process.on('exit', () => sample('exit'));
+          JS
+          export NODE_OPTIONS="$NODE_OPTIONS --require=$RUNNER_TEMP/observe-72149.cjs"
+          timeout --kill-after=30s 180m /usr/bin/time -v -o "$evidence/time.txt" npm run build 2>&1 | tee "$evidence/build.log"
+          unset NODE_OPTIONS
+          python3 - "$evidence" "$report" <<'PY'
+          from pathlib import Path
+          import hashlib, json, sys
+          evidence = Path(sys.argv[1])
+          report = json.loads(Path(sys.argv[2]).read_text())
+          assert report['missingCount'] == 0 and not report['buildError'], report
+          data = {}
+          for name in ['index.html', '404.html', 'data/services.json', 'service-index.json']:
+              p = Path('out') / name
+              raw = p.read_bytes()
+              assert raw, p
+              if name.endswith('.json'):
+                  assert isinstance(json.loads(raw), (list, dict)), p
+              else:
+                  assert b'<html' in raw.lower(), p
+              data[name] = {'bytes': len(raw), 'sha256': hashlib.sha256(raw).hexdigest()}
+          data['htmlFiles'] = sum(1 for p in Path('out').rglob('*.html') if p.is_file())
+          data['postbuild'] = report
+          text = json.dumps(data, indent=2)
+          (evidence / 'export.json').write_text(text)
+          print(text)
+          PY
+      - name: Save build phase diagnostics
+        if: always() && matrix.phase == 'full-build'
+        run: |
+          evidence="$RUNNER_TEMP/evidence"
+          if [ -f .next/diagnostics/build-diagnostics.json ]; then
+            cp .next/diagnostics/build-diagnostics.json "$evidence/next-diagnostics.json"
+          fi
+          if [ -f .next/trace ]; then
+            python3 - "$evidence" <<'PY'
+          import json, pathlib, sys
+          with open('.next/trace') as src, (pathlib.Path(sys.argv[1]) / 'phases.ndjson').open('w') as dst:
+              for line in src:
+                  try: items = json.loads(line)
+                  except ValueError: continue
+                  for item in items:
+                      if item.get('name') in {'next-build', 'run-webpack', 'webpack-compilation', 'webpack-make', 'compile', 'collect-page-data', 'static-check', 'export-app'}:
+                          dst.write(json.dumps({k: item[k] for k in ('name','timestamp','duration') if k in item}) + '\n')
+          PY
+          fi
+      - name: Upload diagnostic evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: route-manifest-72149-${{ matrix.phase }}
+          path: ${{ runner.temp }}/evidence
+          retention-days: 7
+          if-no-files-found: error
