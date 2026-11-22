@@ -153,7 +153,7 @@ export const metadata = {{
   }}
 }};
 
-export default function ServicePage() {{
+export default function Page() {{
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">

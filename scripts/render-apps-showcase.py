@@ -62,6 +62,10 @@ def render(locale, is_home=False, *, is_catalog=False):
             cards += f'<article class="resource"><p class="kind">{e(kind)}</p><h4>{e(name)}</h4><p>{e(description)}</p><a href="{routes[i]}" hreflang="{c["lang"]}">{e(c["open"])} <span aria-hidden="true">↗</span></a></article>'
         cards += '</div></section>'
     steps = ''.join(f'<li><span aria-hidden="true">0{i+1}</span><p>{e(s)}</p></li>' for i,s in enumerate(c['steps']))
+    next_step = (
+        f'<p><a href="{catalog(locale)}discovery-app-paths.html">{e(c["nextStepGuide"])}</a></p>\n'
+        if is_catalog else ''
+    )
     operations = operations_navigation(locale) if is_catalog else ''
     schema = json.dumps({'@context':'https://schema.org','@type':'CollectionPage','name':title,'description':intro,'url':canonical,'inLanguage':c['lang']},ensure_ascii=False).replace('<','\\u003c')
     return f'''<!doctype html>
@@ -75,7 +79,7 @@ def render(locale, is_home=False, *, is_catalog=False):
 <header class="wrap"><div class="top"><a class="brand" href="{home(locale)}">ZION<span>TECH GROUP</span></a><nav aria-label="{e(c['network'])}"><a href="{home(locale)}">{e(c['home'])}</a><a href="{showcase(locale)}">{e(c['network'])}</a><a href="{network(locale)}">{e(c['directory'])}</a><a class="button secondary" href="/discovery/" hreflang="pt-BR">{e(c['discovery'])}</a></nav></div><nav class="languages" aria-label="{e(c['languages'])}">{languages(locale,is_home)}</nav></header>
 <main id="main" class="wrap" tabindex="-1"><section class="hero"><p class="eyebrow">{e(c['eyebrow'])}</p><h1>{e(title)}</h1><p class="intro">{e(intro)}</p><div class="actions"><a class="button" href="#resources">{e(c['tools'])} <span aria-hidden="true">↓</span></a><a href="{network(locale)}">{e(c['directory'])} <span aria-hidden="true">↗</span></a></div></section>
 <section id="resources" class="resources" aria-labelledby="resources-title"><p class="eyebrow">{e(c['network'])}</p><h2 id="resources-title">{e(c['featured'])}</h2>{cards}</section>
-<section class="process" aria-labelledby="process-title"><h2 id="process-title">{e(c['stepsTitle'])}</h2><ol>{steps}</ol><p class="scope">{e(c['scope'])}</p></section>
+{next_step}<section class="process" aria-labelledby="process-title"><h2 id="process-title">{e(c['stepsTitle'])}</h2><ol>{steps}</ol><p class="scope">{e(c['scope'])}</p></section>
 <section class="discovery" aria-labelledby="discovery-title"><div><p class="eyebrow">Zion Tech Group</p><h2 id="discovery-title">{e(c['discovery'])}</h2><p>{e(c['discoveryBody'])}</p><p class="note">{e(c['discoveryLanguage'])}</p></div><div class="actions"><a class="button" href="/discovery/" hreflang="pt-BR">{e(c['discovery'])} <span aria-hidden="true">↗</span></a><a href="mailto:commercial@ziontechgroup.com">{e(c['contact'])}</a></div></section>
 <p class="field-note">{e(c['fieldNote'])}</p>{operations}</main>
 <footer class="wrap"><a class="brand" href="{home(locale)}">ZION<span>TECH GROUP</span></a><nav aria-label="{e(c['network'])}"><a href="{showcase(locale)}">{e(c['network'])}</a><a href="{network(locale)}">{e(c['directory'])}</a><a href="https://github.com/Zion-support/zion-app-network">{e(c['source'])}</a></nav><span>© 2026 Zion Tech Group</span></footer>
