@@ -13,22 +13,38 @@ jobs:
           node-version-file: '.nvmrc'
           cache: npm
       - run: npm ci --prefer-offline --no-audit --fund=false
-      - name: Measure compiler input and available memory
+      - name: Count source files selected by the project configuration
         run: |
           free -h
-          npm run --silent type-check -- --listFilesOnly > "$RUNNER_TEMP/typescript-inputs.txt"
-          wc -l "$RUNNER_TEMP/typescript-inputs.txt"
-          python3 - <<'PY'
-          import collections, os, pathlib
-          root = pathlib.Path.cwd()
-          paths = pathlib.Path(os.environ["RUNNER_TEMP"], "typescript-inputs.txt").read_text().splitlines()
-          counts = collections.Counter()
-          for item in paths:
-              rel = pathlib.Path(item)
-              if rel.is_relative_to(root):
-                  counts[rel.relative_to(root).parts[0]] += 1
-          print(counts.most_common(12))
-          PY
+          node <<'JS'
+          const fs = require("node:fs");
+          const path = require("node:path");
+          const ts = require("typescript");
+          const cfg = ts.readConfigFile("tsconfig.json", ts.sys.readFile);
+          const parsed = ts.parseJsonConfigFileContent(cfg.config, ts.sys, process.cwd());
+          if (cfg.error || parsed.errors.length) process.exit(1);
+          const totals = new Map();
+          for (const name of parsed.fileNames) {
+            const group = path.relative(process.cwd(), name).split(path.sep)[0];
+            const item = totals.get(group) || { files: 0, bytes: 0 };
+            item.files++;
+            item.bytes += fs.statSync(name).size;
+            totals.set(group,item);
+          }
+          console.log("Selected input files", parsed.fileNames.length);
+          console.log([...totals.entries()].sort((a,b)=>b[1].bytes-a[1].bytes).slice(0,18));
+          JS
+
+  compile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+      - uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f
+        with:
+          node-version-file: '.nvmrc'
+          cache: npm
+      - run: npm ci --prefer-offline --no-audit --fund=false
       - name: Run complete project type check
         env:
           NODE_OPTIONS: '--max-old-space-size=12288'
