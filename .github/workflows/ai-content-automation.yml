@@ -95,5 +95,10 @@ jobs:
             node automation/ai-content-turbo-pipeline.cjs
           fi
           git add -A
-          git diff --staged --quiet || git commit -m "chore(content): AI-generated content via OpenRouter pipeline"
-          git push
+          if git diff --staged --quiet; then
+            echo "::notice::No content changes generated; skipping commit and push."
+            printf '%s\n' '### AI content: no changes' 'No content changes were generated; no commit or push was attempted.' >> "$GITHUB_STEP_SUMMARY"
+          else
+            git commit -m "chore(content): AI-generated content via OpenRouter pipeline"
+            git push
+          fi
