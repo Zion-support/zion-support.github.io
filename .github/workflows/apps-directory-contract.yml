@@ -3,19 +3,20 @@ name: Apps directory translation and navigation contract
 on:
   pull_request:
     paths:
-      - '_data/apps-directory.json'
-      - 'scripts/render-apps-directory.cjs'
-      - 'scripts/render-service-request-promotion.cjs'
-      - 'scripts/test-apps-directory.cjs'
-      - 'scripts/ensure-pages-sitemap-index.py'
-      - 'tests/ci/test_pages_sitemap_index.py'
+      - 'content/apps-showcase.json'
+      - 'scripts/render-apps-showcase.py'
+      - 'scripts/test-apps-showcase.py'
+      - 'tests/ci/test_apps_directory_contract.py'
+      - 'scripts/ci/test-zion-catalog-asset.cjs'
       - 'scripts/prepare-pages-out.sh'
       - 'public/sitemap.xml'
-      - 'public/sitemap-index.xml'
-      - 'public/assets/css/apps-directory.css'
-      - 'public/assets/js/apps-directory.js'
+      - 'public/sitemap-0.xml'
+      - 'public/apps/apps-sitemap.xml'
+      - 'public/assets/css/apps-showcase.css'
+      - 'public/assets/js/zion-catalog.js'
       - 'public/index.html'
       - 'public/en/index.html'
+      - 'public/pt/index.html'
       - 'public/es/index.html'
       - 'public/fr/index.html'
       - 'public/de/index.html'
@@ -24,23 +25,30 @@ on:
       - 'public/es/apps/index.html'
       - 'public/fr/apps/index.html'
       - 'public/de/apps/index.html'
+      - 'public/apps-network-showcase/index.html'
+      - 'public/pt/apps-network-showcase/index.html'
+      - 'public/es/apps-network-showcase/index.html'
+      - 'public/fr/apps-network-showcase/index.html'
+      - 'public/de/apps-network-showcase/index.html'
+      - 'apps-network-showcase/index.html'
       - '.github/workflows/apps-directory-contract.yml'
   push:
     branches: [main]
     paths:
-      - '_data/apps-directory.json'
-      - 'scripts/render-apps-directory.cjs'
-      - 'scripts/render-service-request-promotion.cjs'
-      - 'scripts/test-apps-directory.cjs'
-      - 'scripts/ensure-pages-sitemap-index.py'
-      - 'tests/ci/test_pages_sitemap_index.py'
+      - 'content/apps-showcase.json'
+      - 'scripts/render-apps-showcase.py'
+      - 'scripts/test-apps-showcase.py'
+      - 'tests/ci/test_apps_directory_contract.py'
+      - 'scripts/ci/test-zion-catalog-asset.cjs'
       - 'scripts/prepare-pages-out.sh'
       - 'public/sitemap.xml'
-      - 'public/sitemap-index.xml'
-      - 'public/assets/css/apps-directory.css'
-      - 'public/assets/js/apps-directory.js'
+      - 'public/sitemap-0.xml'
+      - 'public/apps/apps-sitemap.xml'
+      - 'public/assets/css/apps-showcase.css'
+      - 'public/assets/js/zion-catalog.js'
       - 'public/index.html'
       - 'public/en/index.html'
+      - 'public/pt/index.html'
       - 'public/es/index.html'
       - 'public/fr/index.html'
       - 'public/de/index.html'
@@ -49,7 +57,14 @@ on:
       - 'public/es/apps/index.html'
       - 'public/fr/apps/index.html'
       - 'public/de/apps/index.html'
+      - 'public/apps-network-showcase/index.html'
+      - 'public/pt/apps-network-showcase/index.html'
+      - 'public/es/apps-network-showcase/index.html'
+      - 'public/fr/apps-network-showcase/index.html'
+      - 'public/de/apps-network-showcase/index.html'
+      - 'apps-network-showcase/index.html'
       - '.github/workflows/apps-directory-contract.yml'
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -67,11 +82,12 @@ jobs:
         with:
           ref: ${{ github.event.pull_request.head.sha || github.sha }}
           persist-credentials: false
-      - name: Validate translations, generated pages, search and published routes
-        run: node scripts/test-apps-directory.cjs
-      - name: Verify localized homepage service-request promotions
-        run: node scripts/render-service-request-promotion.cjs --check
-      - name: Test sitemap index preservation
-        run: python3 tests/ci/test_pages_sitemap_index.py
-      - name: Validate browser script syntax
-        run: node --check public/assets/js/apps-directory.js
+      - uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
+        with:
+          node-version: '22'
+      - name: Validate maintained translations and generated source parity
+        run: python3 scripts/test-apps-showcase.py
+      - name: Validate current catalog, homepage navigation and sitemap contracts
+        run: python3 tests/ci/test_apps_directory_contract.py
+      - name: Validate current browser catalog and offline calculator behavior
+        run: node scripts/ci/test-zion-catalog-asset.cjs

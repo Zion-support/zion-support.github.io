@@ -18,6 +18,9 @@ def showcase(locale):
 def home(locale):
     return '/en/' if locale == 'en' else f'/{locale}/'
 
+def catalog(locale):
+    return '/apps/' if locale == 'en' else f'/{locale}/apps/'
+
 def network(locale):
     return '/zion-app-network/' if locale == 'en' else f'/zion-app-network/home-{locale}.html'
 
@@ -35,10 +38,11 @@ def languages(locale, is_home=False):
                    + (' aria-current="page"' if l == locale else '') + f'>{c["name"]}</a>'
                    for l,c in COPY.items())
 
-def render(locale, is_home=False):
+def render(locale, is_home=False, *, is_catalog=False):
+    assert not (is_home and is_catalog), 'A page belongs to one route family'
     c = COPY[locale]
     title, intro = (c['homeTitle'], c['homeIntro']) if is_home else (c['title'], c['intro'])
-    route = home if is_home else showcase
+    route = catalog if is_catalog else home if is_home else showcase
     canonical = ORIGIN + route(locale)
     alternates = ''.join(f'<link rel="alternate" hreflang="{v["lang"]}" href="{ORIGIN+route(l)}">' for l,v in COPY.items())
     cards = ''
@@ -81,9 +85,9 @@ def files():
         result['public'+showcase(locale)+'index.html']=render(locale)
         if locale != 'en':
             result['public'+home(locale)+'index.html']=render(locale,True)
-            # Recover the catalog entry used by the existing network navigation.
-            # These curated entries share the showcase canonical, without a redirect.
-            result[f'public/{locale}/apps/index.html']=render(locale)
+            # Preserve the published catalog route family in canonical, alternate,
+            # Open Graph and structured metadata; the showcase is a separate page.
+            result[f'public/{locale}/apps/index.html']=render(locale,is_catalog=True)
     # Keep the historical root path in sync with the deployable English source.
     result['apps-network-showcase/index.html']=render('en')
     for path in ('public/index.html','public/en/index.html','public/apps/index.html'):
