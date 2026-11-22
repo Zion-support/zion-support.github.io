@@ -67,6 +67,41 @@ function fixture(mode = 'accepted', script = source) {
     release(v){release(v);},timers};
 }
 const flush=()=>new Promise(r=>setImmediate(r));
+async function testRecommendationMatrix() {
+  const choices = name => [...html.matchAll(new RegExp('name="' + name + '"\\s+value="([^"]+)"', 'g'))]
+    .map(match => match[1]);
+  const industries = choices('industry');
+  const challenges = choices('challenge');
+  assert.equal(new Set(industries).size, 6);
+  assert.equal(new Set(challenges).size, 5);
+  const overlappingRoutes = {
+    'healthcare/data': ['/ai-readiness-assessment/', '/ai-readiness-framework/', '/zion-app-network/'],
+    'finance/costs': ['/finops-consulting/', '/apps/cloud-cost-optimizer.html', '/roi-calculator/'],
+    'energy/costs': ['/finops-consulting/', '/apps/cloud-cost-optimizer.html', '/ai-energy-optimization/'],
+    'retail/sales': ['/ai-lead-generation/', '/lead-score-copilot/', '/zion-app-network/'],
+  };
+  const represented = new Set();
+  for (const industry of industries) {
+    for (const challenge of challenges) {
+      const pair = industry + '/' + challenge;
+      const form = fixture();
+      Object.assign(form.answers, { industry, challenge });
+      await form.submit();
+      const screen = [...form.get('dq-results').innerHTML.matchAll(/<li><a href="([^"]+)">([^<]+)<\/a><\/li>/g)];
+      const paths = screen.map(match => match[1]);
+      assert.ok(paths.length >= 3 && paths.length <= 4, pair + ' result count');
+      assert.equal(new Set(paths).size, paths.length, pair + ' repeats a URL');
+      if (overlappingRoutes[pair]) assert.deepEqual(paths, overlappingRoutes[pair], pair);
+      assert.equal(form.calls.length, 1, pair);
+      const emailLines = form.calls[0].data.results.split('\n').filter(line => line.startsWith('- '));
+      assert.deepEqual(emailLines, screen.map(([, url, label]) =>
+        '- ' + label + ': https://ziontechgroup.com' + url), pair + ' screen/email mismatch');
+      for (const url of paths) represented.add(url);
+      scenarios++;
+    }
+  }
+  assert.equal(represented.size, 15, 'All reviewed resource destinations must remain reachable');
+}
 async function run() {
   {
     const mixedCase = '<SCRIPT>' + source + '</ScRiPt>';
@@ -145,6 +180,7 @@ async function run() {
     assert.doesNotMatch(f.get('dq-results').innerHTML,/<img/);
     assert.doesNotMatch(f.get('dq-fallback').innerHTML,/<img/);scenarios++;
   }
+  await testRecommendationMatrix();
   console.log('Current Discovery: '+scenarios+' synthetic runtime scenarios passed; all fetches mocked.');
 }
 let completed=false;

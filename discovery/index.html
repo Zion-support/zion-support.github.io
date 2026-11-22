@@ -189,6 +189,23 @@
       'sales':[['AI Lead Generation Services','/ai-lead-generation/'],['Lead Scoring Planning Guide','/lead-score-copilot/']],
       'data':[['AI Readiness Assessment Service','/ai-readiness-assessment/'],['Manual AI Readiness Guide','/ai-readiness-framework/']]
     };
+    function recommendedResources(industry, challenge) {
+      const ranked = (MAP[challenge] || []).concat(MAP[industry] || []);
+      const seen = new Set();
+      const picks = [];
+      for (const resource of ranked) {
+        const url = resource[1];
+        if (!seen.has(url)) {
+          seen.add(url);
+          picks.push(resource);
+        }
+      }
+      const catalog = MAP.other[0];
+      if (ranked.length >= 3 && picks.length < 3 && !seen.has(catalog[1])) {
+        picks.push(catalog);
+      }
+      return picks.slice(0, 4);
+    }
     var form=document.getElementById('dq');
     if(!form)return;
     function esc(s){return String(s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
@@ -203,7 +220,7 @@
       var a=Object.fromEntries(new FormData(form).entries());
       a.email = String(a.email || '').trim();
       if (!/^[^\s@,;<>]+@[^\s@,;<>]+\.[^\s@,;<>]+$/.test(a.email)) return;
-      var picks=(MAP[a.challenge]||[]).concat(MAP[a.industry]||[]).slice(0,4);
+      var picks=recommendedResources(a.industry,a.challenge);
       var lines=picks.map(function(p){return '- '+p[0]+': https://ziontechgroup.com'+p[1];}).join('\n');
       var summary='FREE AI DISCOVERY\nName: '+a.name+'\nEmail: '+a.email+'\nIndustry: '+a.industry+'\nChallenge: '+a.challenge+'\nSize: '+a.size+'\nSpeed: '+a.speed+'\nAI usage: '+a.aiuse+'\nOutcome: '+a.outcome+'\nDeploy: '+a.deploy+'\n\nRecommended resources:\n'+lines;
       var box=document.getElementById('dq-results');
