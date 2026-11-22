@@ -1,0 +1,62 @@
+
+═══════════════════════════════════════════════════════════
+  ENQUETE PARA TELEGRAM — PRONTA PARA COLAGEM MANUAL
+  Grupo: @ZIONTECHGROUP_AGENTS  (ID: -1003886112318)
+═══════════════════════════════════════════════════════════
+
+  Como o bot nao esta disponivel (token redactado/ausente),
+  o Kleber deve criar esta enquete manualmente no Telegram.
+
+  HOW TO CREATE (no bot needed):
+  ──────────────────────────────
+  1. Abra o Telegram → entre no grupo @ZIONTECHGROUP_AGENTS
+  2. Toque no icone de envelope (Nova mensagem)
+  3. Toque no icone de "ENQUETE" (barra de progresso)
+  4. Preencha conforme abaixo e envie.
+
+  ────────────────────────────────────────────────────────────
+  CONTEUDO DA ENQUETE (copiar/colar nos campos do Telegram):
+  ────────────────────────────────────────────────────────────
+
+  PERGUNTA (question):
+  Teste enquete - qual turno prefere?
+
+  OPCAO 1:
+  Manha
+
+  OPCAO 2:
+  Tarde
+
+  OPCAO 3:
+  Noite
+
+  TIPO DE ENQUETE: Poll de votacao (cada um vota 1 opcao)
+  - Permitir votos anonimos: SIM
+  - Permitir escolha multipla: NAO
+  - Duracao: 24 horas (ou permanente - sua escolha)
+
+  ────────────────────────────────────────────────────────────
+  ALTERNATIVA: SE O TELEGRAM NAO TIVER BOTAO DE ENQUETE,
+  use esta mensagem de texto para votacao manual:
+  ────────────────────────────────────────────────────────────
+
+  ENQUETE MANUAL - qual turno prefere?
+
+  Reaja com um emoji:
+  Manha  = Manha
+  Tarde  = Tarde  
+  Noite  = Noite
+
+  Votos registrados:
+  Manha: ____ votos
+  Tarde: ____ votos
+  Noite: ____ votos
+
+  O Kleber vai atualizar os totais conforme os reagem.
+
+═══════════════════════════════════════════════════════════
+  STATUS DO BOT:
+  Token disponivel no env: 8883584259:***  (token REDACTADO - incompleto)
+  API getMe: 404 Not Found (token invalido/falso)
+  Bot NAO pode criar enquetes automaticamente.
+═══════════════════════════════════════════════════════════

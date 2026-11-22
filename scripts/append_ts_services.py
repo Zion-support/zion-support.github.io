@@ -41,7 +41,7 @@ for svc in new_services:
     ind = svc.get('industry', 'Technology')
     pop = 'true' if svc.get('popular', False) else 'false'
     
-    entry = f"""  {{ id: '{sid}', title: '{title}', description: '{desc}', features: {json.dumps(features)}, benefits: {json.dumps(benefits)}, pricing: {{ basic: '{pricing.get('basic','Contact')}', pro: '{pricing.get('pro','Contact')}', enterprise: '{pricing.get('enterprise','Custom')}' }}, contactInfo: {{ website: '/services/{sid}', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' }}, icon: '{icon}', href: '/services/{sid}', popular: {pop}, category: '{cat}', industry: '{ind}' }}"""
+    entry = f"""  {{ id: '{sid}', title: '{title}', description: '{desc}', features: {json.dumps(features)}, benefits: {json.dumps(benefits)}, pricing: {{ basic: '{pricing.get('basic','Contact')}', pro: '{pricing.get('pro','Contact')}', enterprise: '{pricing.get('enterprise','Custom')}' }}, contactInfo: {{ website: '/services/{sid}', email: 'kleber@ziontechgroup.com', phone: '+55 11 97614-0076' }}, icon: '{icon}', href: '/services/{sid}', popular: {pop}, category: '{cat}', industry: '{ind}' }}"""
     new_entries.append(entry)
     print(f"  + {sid}")
 

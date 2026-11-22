@@ -163,8 +163,8 @@ export default function V1046V1050Showcase() {
           <div className="inline-block bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/20">
             <h4 className="text-xl font-bold text-white mb-4">Ready to Transform Your Email Workflow?</h4>
             <div className="flex flex-wrap justify-center gap-6 text-gray-300">
-              <a href="tel:+13024640950" className="flex items-center gap-2 hover:text-white transition">
-                <span>📱</span> +1 302 464 0950
+              <a href="tel:+5511976140076" className="flex items-center gap-2 hover:text-white transition">
+                <span>📱</span> +55 11 97614-0076
               </a>
               <a href="mailto:kleber@ziontechgroup.com" className="flex items-center gap-2 hover:text-white transition">
                 <span>✉️</span> kleber@ziontechgroup.com

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Governança e Operação de Agentes de IA | Zion Tech Group</title>
+<meta name="description" content="Governança, segurança e operação de agentes de IA em produção: identidade, registro, guardrails, monitoramento e controle de custo, no caminho planejar-implementar-operar.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://ziontechgroup.com/pt/governanca-de-agentes-ia/">
+<link rel="alternate" hreflang="en" href="https://ziontechgroup.com/ai-agent-governance/">
+<link rel="alternate" hreflang="pt-BR" href="https://ziontechgroup.com/pt/governanca-de-agentes-ia/">
+<link rel="alternate" hreflang="x-default" href="https://ziontechgroup.com/ai-agent-governance/">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Qual é a diferença entre um agente e um chatbot?", "acceptedAnswer": {"@type": "Answer", "text": "Um agente planeja, usa ferramentas e executa ações para atingir um objetivo. É exatamente por isso que precisa de identidade, ferramentas limitadas e aprovações."}}, {"@type": "Question", "name": "Precisamos de uma plataforma nova?", "acceptedAnswer": {"@type": "Answer", "text": "Não necessariamente. O plano de controle pode ficar sobre os agentes que você já executa, em vários fornecedores."}}, {"@type": "Question", "name": "Quem aprova uma ação do agente?", "acceptedAnswer": {"@type": "Answer", "text": "Um owner nomeado, com uma política escrita sobre quais ações precisam de uma pessoa antes de executar."}}, {"@type": "Question", "name": "Como vocês medem sucesso?", "acceptedAnswer": {"@type": "Answer", "text": "Pelos resultados do caso de uso e pelo custo por fluxo, não pela atividade do modelo."}}]}</script>
+<style>body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;background:#0b1220;color:#e8eef8;line-height:1.65}a{color:#7dd3fc;text-decoration:none}a:hover{text-decoration:underline}.wrap{max-width:940px;margin:0 auto;padding:36px 20px 80px}.crumb{font-size:.85rem;color:#9aa8bd;margin-bottom:18px}.crumb a{color:#9aa8bd}.hero{padding:32px 0 8px;border-bottom:1px solid #243049}.hero h1{font-size:clamp(1.9rem,4.5vw,2.7rem);line-height:1.12;margin:0 0 14px;letter-spacing:-.02em}.lede{color:#c7d2e4;font-size:1.12rem;max-width:52rem}.badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}.badge{font-size:.78rem;color:#9aa8bd;border:1px solid #243049;border-radius:999px;padding:5px 12px}section{padding:30px 0;border-bottom:1px solid #243049}h2{font-size:1.45rem;margin:0 0 12px;letter-spacing:-.01em}h3{font-size:1.05rem;margin:18px 0 6px}p{margin:0 0 14px}.answer{color:#c7d2e4;font-size:1.02rem;max-width:52rem}.grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin:16px 0}.card{background:#121a2b;border:1px solid #243049;border-radius:12px;padding:16px}.card h3{margin:0 0 6px;font-size:.98rem}.card p{margin:0;color:#9aa8bd;font-size:.88rem}.card a{font-size:.85rem}.stat{background:#121a2b;border:1px solid #243049;border-radius:12px;padding:16px}.stat b{display:block;font-size:1.5rem;color:#e8eef8;letter-spacing:-.01em}.stat span{color:#9aa8bd;font-size:.85rem}ul.src{margin:8px 0 0;padding-left:20px;color:#9aa8bd;font-size:.9rem}ul.src li{margin:6px 0}details{background:#121a2b;border:1px solid #243049;border-radius:10px;padding:12px 16px;margin:8px 0}summary{cursor:pointer;font-weight:600;color:#e8eef8}details p{margin:10px 0 0;color:#9aa8bd}.cta{display:inline-block;background:linear-gradient(90deg,#7c3aed,#ec4899);color:#fff;font-weight:700;padding:13px 22px;border-radius:10px;margin:6px 10px 0 0}.cta.alt{background:transparent;border:1px solid #243049;color:#e8eef8}footer{padding:22px 0;color:#9aa8bd;font-size:.85rem}.note{background:#111c2e;border:1px solid #243049;border-left:4px solid #a855f7;border-radius:10px;padding:16px 18px;color:#cdd7e3;font-size:.95rem}</style>
+</head>
+<body>
+<div class="wrap">
+<p class="crumb"><a href="/pt/">Zion Tech Group</a> &middot; <a href="/pt/apps-network/">Apps Network</a> &middot; <a href="/pt/discovery/">Free Discovery</a></p>
+
+<div class="hero">
+<h1>Agentes em produção precisam de um plano de controle, não só de um prompt</h1>
+<p class="lede">Gerenciar agentes em produção é menos sobre o modelo e mais sobre supervisão: quem é o agente, quais ferramentas ele pode usar, quais ações exigem aprovação e se o resultado foi alcançado dentro da política. Os fornecedores já oferecem registro de agentes, gateway e guardrails em runtime (Google Agent Platform; IBM watsonx Orchestrate e governance), e serviços gerenciados operam isso 24/7. A Zion implementa esse plano de controle com você.</p>
+<div class="badges"><span class="badge">● Discovery gratuita</span><span class="badge">Planejar, implementar, operar</span><span class="badge">Fontes citadas</span></div>
+</div>
+<section><h2>O que o plano de controle cobre</h2><div class="grid">
+<div class="stat"><b>24/7</b><span>Governança contínua de agentes em serviço gerenciado (Rimini Govern for AI)</span></div>
+<div class="stat"><b>3 fases</b><span>Planejar, implementar, operar — o caminho padrão de adoção</span></div>
+<div class="stat"><b>1 identidade</b><span>Cada agente com identidade rastreável e trilha de ações</span></div>
+<div class="stat"><b>Runtime</b><span>Guardrails de segurança e conformidade aplicados em runtime</span></div>
+<div class="stat"><b>ROI</b><span>Medido por caso de uso, não por atividade do modelo</span></div>
+</div></section>
+<section><h2>O que implementamos</h2><div class="grid">
+<div class="card"><h3>Inventário e identidade de agentes</h3><p>Todo agente registrado, com dono e rastreável, incluindo agentes de terceiros.</p><p><a href="/pt/prompt-shield/">Open &rarr;</a></p></div>
+<div class="card"><h3>Registro de ferramentas e acesso</h3><p>Uma fonte única de verdade para ferramentas, skills e credenciais aprovadas.</p><p><a href="/pt/secrets-sentinel/">Open &rarr;</a></p></div>
+<div class="card"><h3>Aprovações e revisão humana</h3><p>Ações que precisam de uma pessoa antes de executar, com motivo escrito.</p><p><a href="/pt/ai-governance-checklist/">Open &rarr;</a></p></div>
+<div class="card"><h3>Monitoramento e auditoria em runtime</h3><p>Atividade, conclusão de fluxos, anomalias e trilha de auditoria completa.</p><p><a href="/pt/stack-audit/">Open &rarr;</a></p></div>
+<div class="card"><h3>Controle de mudança e risco</h3><p>Pontuação de risco antes de uma mudança chegar a um agente em produção.</p><p><a href="/pt/change-risk/">Open &rarr;</a></p></div>
+<div class="card"><h3>Custo por agente e por fluxo</h3><p>Gasto ligado a resultados, para o agente ser mantido ou descontinuado com evidência.</p></div>
+</div></section>
+<section><h2>O caminho</h2><div class="grid">
+<div class="card"><h3>1. Planejar</h3><p>Prontidão, prioridades de governança e um roadmap com donos.</p></div>
+<div class="card"><h3>2. Implementar</h3><p>Descobrir agentes, configurar acesso, estabelecer controles e guardrails.</p></div>
+<div class="card"><h3>3. Operar</h3><p>Monitoramento contínuo, aplicação de políticas, resposta a incidentes e relatório de ROI.</p></div>
+</div></section>
+<p class="note">A governança não termina quando o agente é implantado. O plano de controle existe para que o agente possa ser avaliado e melhorado ao longo do tempo.</p>
+<section><h2>Páginas relacionadas</h2><ul class="src">
+<li><a href="/pt/governanca-de-custos-de-ia/">Governança de custos de IA</a></li>
+<li><a href="/pt/lgpd-ia-residencia-de-dados/">LGPD, IA e residência de dados</a></li>
+<li><a href="/pt/framework-prontidao-ia/">Framework de prontidão em IA</a></li>
+</ul></section>
+<section><h2>FAQ</h2>
+<details><summary>Qual é a diferença entre um agente e um chatbot?</summary><p>Um agente planeja, usa ferramentas e executa ações para atingir um objetivo. É exatamente por isso que precisa de identidade, ferramentas limitadas e aprovações.</p></details>
+<details><summary>Precisamos de uma plataforma nova?</summary><p>Não necessariamente. O plano de controle pode ficar sobre os agentes que você já executa, em vários fornecedores.</p></details>
+<details><summary>Quem aprova uma ação do agente?</summary><p>Um owner nomeado, com uma política escrita sobre quais ações precisam de uma pessoa antes de executar.</p></details>
+<details><summary>Como vocês medem sucesso?</summary><p>Pelos resultados do caso de uso e pelo custo por fluxo, não pela atividade do modelo.</p></details>
+</section>
+<section><h2>Fontes</h2><ul class="src">
+<li><a href="https://www.riministreet.com/solutions/support-services/rimini-govern-for-ai/" rel="nofollow noopener" target="_blank">Rimini Street — Rimini Govern for AI (planejar, implementar, operar; 24/7/365)</a></li>
+<li><a href="https://cloud.google.com/blog/products/ai-machine-learning/introducing-gemini-enterprise-agent-platform" rel="nofollow noopener" target="_blank">Google Cloud — Gemini Enterprise Agent Platform (Agent Identity, Registry, Gateway)</a></li>
+<li><a href="https://www.ibm.com/new/announcements/ibm-named-a-leader-in-the-2026-gartner-magic-quadrant-for-ai-agent-management-platforms" rel="nofollow noopener" target="_blank">IBM — 2026 Gartner Magic Quadrant para Plataformas de Gestão de Agentes de IA (watsonx Orchestrate e governance)</a></li>
+<li><a href="https://cloud.google.com/discover/managed-ai-agents" rel="nofollow noopener" target="_blank">Google Cloud — O que são agentes de IA gerenciados?</a></li>
+</ul></section>
+<section>
+<h2>Coloque um plano de controle sob seus agentes</h2>
+<p class="answer">Comece com uma Discovery gratuita e mapeamos seus agentes, donos e ações de maior risco.</p>
+<a class="cta" href="/pt/discovery/">Começar Discovery gratuita</a><a class="cta alt" href="/contact/">Falar com o time</a>
+</section>
+<footer>
+<p>Zion Tech Group &middot; <a href="/pt/">Home</a> &middot; <a href="/pt/apps-network/">Apps Network</a> &middot; <a href="/pt/discovery/">Free Discovery</a> &middot; <a href="mailto:commercial@ziontechgroup.com">commercial@ziontechgroup.com</a></p>
+</footer>
+</div>
+</body>
+</html>

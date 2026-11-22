@@ -1,0 +1,60 @@
+name: Storybook and Puppeteer smoke
+
+permissions:
+  contents: read
+
+"on":
+  pull_request:
+    paths:
+      - package.json
+      - package-lock.json
+      - .nvmrc
+      - .storybook/**
+      - src/**
+      - scripts/checks/security-tooling-smoke.mjs
+      - .github/workflows/security-tooling-smoke.yml
+  workflow_dispatch:
+
+concurrency:
+  group: security-tooling-smoke-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  browser-tooling:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      CI: "1"
+      STORYBOOK_DISABLE_TELEMETRY: "1"
+      PUPPETEER_SKIP_DOWNLOAD: "true"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          persist-credentials: false
+          sparse-checkout: |
+            .storybook
+            src
+            scripts/checks
+
+      - name: Setup Node.js
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+          cache-dependency-path: package-lock.json
+
+      - name: Install locked dependencies
+        run: npm ci --no-audit --no-fund
+
+      - name: Validate dependency and peer resolution
+        run: npm ls --all
+
+      - name: Install the Chrome revision paired with Puppeteer
+        run: npx --no-install puppeteer browsers install chrome
+
+      - name: Build the repository Storybook configuration
+        run: npm run build-storybook -- --output-dir "$RUNNER_TEMP/storybook-repository-build"
+
+      - name: Exercise a rendered story through CDP and WebDriver BiDi
+        run: node scripts/checks/security-tooling-smoke.mjs

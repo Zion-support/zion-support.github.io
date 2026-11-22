@@ -47,6 +47,15 @@ const Footer: React.FC = () => {
     { name: 'Sitemap', href: '/sitemap.xml' },
   ];
 
+  const appsLinks = [
+    { name: 'AI Field Service Manager', href: '/zion-ai-field-service-manager' },
+    { name: 'AI Help Desk', href: '/zion-ai-help-desk' },
+    { name: 'AI Incident Response', href: '/zion-ai-incident-response' },
+    { name: 'AI Resource Scheduler', href: '/zion-ai-resource-scheduler' },
+    { name: 'AI Predictive Analytics', href: '/zion-ai-predictive-analytics' },
+    { name: 'AI Vendor Manager', href: '/zion-ai-vendor-manager' },
+  ];
+
   return (
     <footer id="site-footer" className="bg-slate-950 border-t border-slate-800/60">
       {/* Back to Top */}
@@ -182,6 +191,23 @@ const Footer: React.FC = () => {
             <h4 className="text-sm font-semibold text-white uppercase tracking-wider">Resources</h4>
             <ul className="space-y-2.5">
               {resourceLinks.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="text-slate-400 hover:text-purple-400 text-sm transition-colors hover:translate-x-1 inline-block"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* ── Apps ── */}
+          <div className="lg:col-span-2 space-y-4">
+            <h4 className="text-sm font-semibold text-white uppercase tracking-wider">Apps</h4>
+            <ul className="space-y-2.5">
+              {appsLinks.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
