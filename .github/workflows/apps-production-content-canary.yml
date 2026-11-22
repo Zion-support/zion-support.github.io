@@ -40,16 +40,55 @@ jobs:
           set -euo pipefail
           python3 - <<'PY'
           import sys, urllib.request
+          from html.parser import HTMLParser
+          from urllib.parse import urljoin, urlsplit
           from urllib.error import HTTPError, URLError
 
           base='https://ziontechgroup.com'
+          catalog_languages = {'/apps/': 'en', **{f'/{lang}/apps/': lang for lang in ('pt', 'es', 'fr', 'de')}}
+
+          class CatalogNavigation(HTMLParser):
+              def __init__(self, page_url):
+                  super().__init__()
+                  self.page_url = page_url
+                  self.host = urlsplit(page_url).netloc
+                  self.language = ''
+                  self.links = set()
+
+              def handle_starttag(self, tag, attrs):
+                  attrs = dict(attrs)
+                  if tag == 'html':
+                      self.language = (attrs.get('lang') or '').lower().split('-')[0]
+                  if tag != 'a' or not attrs.get('href'):
+                      return
+                  try:
+                      target = urlsplit(urljoin(self.page_url, attrs['href']))
+                  except ValueError:
+                      return
+                  if target.scheme in ('http', 'https') and target.netloc == self.host:
+                      self.links.add(target.path)
+
+          def catalog_problems(path, body):
+              language = catalog_languages.get(path)
+              if not language:
+                  return []
+              nav = CatalogNavigation(base + path)
+              nav.feed(body)
+              suffix = '' if language == 'en' else '-' + language
+              discovery = path.removesuffix('apps/') + 'discovery/'
+              operations = f'/apps/operations-reliability-ai-2026{suffix}.html'
+              errors = [target for target in (discovery, operations) if target not in nav.links]
+              if nav.language != language:
+                  errors.append('document language ' + language)
+              return errors
+
           checks={
             '/': ['Apps'],
-            '/apps/': ['Zion Apps Network','Free Discovery','Operations &amp; Reliability'],
-            '/pt/apps/': ['Discovery gratuito','Operações'],
-            '/es/apps/': ['Discovery gratuito','Operaciones'],
-            '/fr/apps/': ['Discovery gratuit','Opérations'],
-            '/de/apps/': ['Discovery','Operations'],
+            '/apps/': ['Zion Apps Network','Free Discovery'],
+            '/pt/apps/': ['Discovery'],
+            '/es/apps/': ['Discovery'],
+            '/fr/apps/': ['Discovery'],
+            '/de/apps/': ['Discovery'],
             '/discovery/': ['questionário online gratuito','Não é necessário pagamento','reuniões são opcionais'],
             '/pt/discovery/': ['Discovery'],
             '/es/discovery/': ['Discovery'],
@@ -85,7 +124,7 @@ jobs:
               if status!=200:
                 failures.append(f'{path}: HTTP {status}')
                 continue
-              missing=[m for m in markers if m not in body]
+              missing=[m for m in markers if m not in body] + catalog_problems(path, body)
               if missing:
                 failures.append(f'{path}: missing markers {missing}')
               else:
