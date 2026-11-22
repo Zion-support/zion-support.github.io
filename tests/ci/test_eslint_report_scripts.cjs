@@ -42,10 +42,13 @@ async function runScript(script, { report, raw, missing = false, existing = [], 
   } } };
   const context = {
     repo: { owner: 'fixture-owner', repo: 'fixture-repo' },
-    issue: { number: 123 },
+    issue: { number: 123 }, runId: 42,
     payload: { committer: { name: 'Fixture' }, headCommit: { id: 'abcdef0123456789' } },
   };
   const mockRequire = (name) => {
+    if (name === './scripts/checks/eslint-report-summary.cjs') {
+      return require('../../scripts/checks/eslint-report-summary.cjs');
+    }
     assert.equal(name, 'fs');
     return { readFileSync: (file, encoding) => {
       assert.equal(file, '/tmp/eslint-report.json');
@@ -55,7 +58,7 @@ async function runScript(script, { report, raw, missing = false, existing = [], 
     } };
   };
   const execute = new AsyncFunction('github', 'context', 'require', 'process', script);
-  await execute(github, context, mockRequire, { env: { GITHUB_WORKSPACE: '/workspace' } });
+  await execute(github, context, mockRequire, { env: { GITHUB_WORKSPACE: '/workspace', ESLINT_EXIT_CODE: '1' } });
   return calls;
 }
 
@@ -70,7 +73,7 @@ test('both exact workflow scripts compile as github-script JavaScript', () => {
   assert.doesNotThrow(() => new AsyncFunction('github', 'context', 'require', 'process', mainScript));
 });
 
-test('PR report flattens per-file messages, counts errors and retains locations', async () => {
+test('PR report flattens per-file messages, publishes counts while keeping locations out of comments', async () => {
   const report = fileReport(2);
   report[0].messages.push({ severity: 1, line: 9, column: 1, message: 'Warning only', ruleId: 'warning' });
   report.push({ filePath: '/workspace/components/widget.tsx', messages: [
@@ -79,37 +82,33 @@ test('PR report flattens per-file messages, counts errors and retains locations'
   const [comment] = await runScript(prScript, { report });
   assert.equal(comment.kind, 'comment');
   assert.equal(comment.issue_number, 123);
-  assert.match(comment.body, /Found 3 error\(s\)/);
-  assert.match(comment.body, /app\/page\.tsx:1:2/);
-  assert.match(comment.body, /components\/widget\.tsx:7:4/);
-  assert.match(comment.body, /Widget error \(fixture\/widget\)/);
-  assert.doesNotMatch(comment.body, /Warning only/);
+  assert.match(comment.body, /3 error\(s\) and 1 warning\(s\)/);
+  assert.doesNotMatch(comment.body, /page\.tsx|widget\.tsx|Widget error|Warning only|fixture\/widget/);
 });
 
-test('PR report retains 25-item cap and warnings-only message', async () => {
+test('PR summary stays bounded for large reports and counts warnings', async () => {
   const [capped] = await runScript(prScript, { report: fileReport(26) });
-  assert.equal((capped.body.match(/^- \*\*/gm) || []).length, 25);
-  assert.match(capped.body, /and 1 more/);
+  assert.match(capped.body, /26 error\(s\) and 0 warning\(s\)/);
+  assert.doesNotMatch(capped.body, /page\.tsx|fixture\/rule|Error 25/);
   const report = [{ filePath: '/workspace/a.ts', messages: [{ severity: 1, message: 'Warning' }] }];
   const [warning] = await runScript(prScript, { report });
-  assert.match(warning.body, /No error-level violations found, but warnings exist/);
+  assert.match(warning.body, /0 error\(s\) and 1 warning\(s\)/);
 });
 
 test('missing, invalid and malformed reports retain explicit failure explanation', async () => {
   for (const fixture of [{ missing: true }, { raw: '{invalid' }, { report: [{ filePath: 'x' }] }]) {
     const [comment] = await runScript(prScript, fixture);
-    assert.match(comment.body, /Could not parse ESLint report/);
+    assert.match(comment.body, /missing or invalid/);
     const calls = await runScript(mainScript, fixture);
-    assert.match(calls.find((call) => call.kind === 'issue').body, /Could not parse full report/);
+    assert.match(calls.find((call) => call.kind === 'issue').body, /missing or invalid/);
   }
 });
 
-test('main report retains count, 30-item cap, labels and duplicate suppression', async () => {
+test('main summary retains counts, labels and duplicate suppression', async () => {
   const calls = await runScript(mainScript, { report: fileReport(31) });
   const issue = calls.find((call) => call.kind === 'issue');
-  assert.match(issue.body, /Total errors:\*\* 31/);
-  assert.equal((issue.body.match(/^- app\//gm) || []).length, 30);
-  assert.match(issue.body, /plus 1 more/);
+  assert.match(issue.body, /31 error\(s\) and 0 warning\(s\)/);
+  assert.doesNotMatch(issue.body, /page\.tsx|fixture\/rule|Error 30/);
   assert.deepEqual(issue.labels, ['eslint-autonomous', 'autonomous', 'code-quality', 'blocker']);
   const duplicate = await runScript(mainScript, {
     report: fileReport(1), existing: [{ title: '🚨 Custom ESLint Rules Violations on Main' }],
