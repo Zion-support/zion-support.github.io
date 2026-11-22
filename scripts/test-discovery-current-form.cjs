@@ -19,8 +19,12 @@ assert.equal(discovery.offers?.url, 'https://ziontechgroup.com/discovery/',
   'The free offer must lead to the online questionnaire');
 assert.match(html, /<a\b[^>]*\bhref=["']#dq["'][^>]*>/i,
   'The page must link directly to its free online questionnaire');
-assert.doesNotMatch(html, /https:\/\/buy\.stripe\.com\/(?:9B69AU8NW5dt71t8BG4ZG09|8x214o8NW35l5Xp3hm4ZG0b)/,
-  'Legacy paid Discovery checkouts must not return');
+for (const checkout of [
+  'https://buy.stripe.com/9B69AU8NW5dt71t8BG4ZG09',
+  'https://buy.stripe.com/8x214o8NW35l5Xp3hm4ZG0b',
+]) {
+  assert.ok(!html.includes(checkout), 'Legacy paid Discovery checkouts must not return');
+}
 function questionnaireSource(markup) {
   return [...markup.matchAll(/<script>([\s\S]*?)<\/script>/gi)].map(m => m[1]).find(s => s.includes("var MAP="));
 }
