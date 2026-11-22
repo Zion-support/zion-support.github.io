@@ -79,7 +79,13 @@ jobs:
         run: |
           PIPELINE="${{ github.event.inputs.pipeline || 'maximum' }}"
           MAX="${{ github.event.inputs.max_blog_posts }}"
-          [ -z "$MAX" ] && MAX=$( [ "$PIPELINE" = "maximum" ] && echo 6 || [ "$PIPELINE" = "turbo" ] && echo 4 || echo 2 )
+          if [ -z "$MAX" ]; then
+            case "$PIPELINE" in
+              maximum) MAX=6 ;;
+              turbo) MAX=4 ;;
+              *) MAX=2 ;;
+            esac
+          fi
           export MAX_BLOG_POSTS="$MAX"
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
