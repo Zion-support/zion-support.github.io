@@ -70,50 +70,68 @@ jobs:
           echo "::error::ESLint failed or did not return a valid result. See the lint step and report."
           exit 1
         fi
-    - name: Parse and comment on PR
-      if: github.event_name == 'pull_request' && failure()
+    - name: Report lint failure
+      if: failure() && (github.event_name == 'pull_request' || (github.event_name == 'push' && github.ref == 'refs/heads/main'))
       uses: actions/github-script@v7
+      env:
+        ESLINT_EXIT_CODE: ${{ steps.eslint.outputs.exit_code }}
       with:
-        script: "const fs = require('fs');\nconst reportPath = '/tmp/eslint-report.json';\n\
-          let body = '\U0001F6A8 **Custom ESLint Rules Violations**\\n\\n';\ntry {\n\
-          \  const data = JSON.parse(fs.readFileSync(reportPath, 'utf8'));\n  const\
-          \ errors = data.filter((f: any) => f.severity === 2); // 2 = error\n  if\
-          \ (errors.length === 0) {\n    body += 'No error-level violations found,\
-          \ but warnings exist.';\n  } else {\n    body += `Found ${errors.length}\
-          \ error(s):\\n\\n`;\n    errors.slice(0, 25).forEach((err: any) => {\n \
-          \     const relPath = err.filePath.replace(process.env.GITHUB_WORKSPACE\
-          \ + '/', '');\n      body += `- **${relPath}:${err.line}:${err.column}**\
-          \ \u2014 ${err.message} (${err.ruleId})\\n`;\n    });\n    if (errors.length\
-          \ > 25) body += `\\n\u2026 and ${errors.length - 25} more. See full report.\\\
-          n`;\n  }\n  body += '\\nPlease address these code hygiene issues before\
-          \ merging.';\n} catch (e) {\n  body += 'Could not parse ESLint report. Check\
-          \ workflow logs for details.';\n}\ngithub.rest.issues.createComment({\n\
-          \  owner: context.repo.owner,\n  repo: context.repo.repo,\n  issue_number:\
-          \ context.issue.number,\n  body\n});\n"
-    - name: Open GitHub issue on main branch violations
-      if: github.event_name == 'push' && failure() && github.ref == 'refs/heads/main'
-      uses: actions/github-script@v7
-      with:
-        script: "const fs = require('fs');\nconst title = '\U0001F6A8 Custom ESLint\
-          \ Rules Violations on Main';\nconst reportPath = '/tmp/eslint-report.json';\n\
-          let body = '**Code hygiene violations detected on `main`.** The autonomous\
-          \ linter found errors that must be fixed.\\n\\n';\ntry {\n  const data =\
-          \ JSON.parse(fs.readFileSync(reportPath, 'utf8'));\n  const errors = data.filter((f:\
-          \ any) => f.severity === 2);\n  body += `**Total errors:** ${errors.length}\\\
-          n\\n`;\n  errors.slice(0, 30).forEach((err: any) => {\n    const rel = err.filePath.replace(process.env.GITHUB_WORKSPACE\
-          \ + '/', '');\n    body += `- ${rel}:${err.line}:${err.column} \u2014 [${err.ruleId}]\
-          \ ${err.message}\\n`;\n  });\n  if (errors.length > 30) body += `\\n\u2026\
-          \ plus ${errors.length - 30} more.\\n`;\n} catch (e) {\n  body += 'Could\
-          \ not parse full report; see artifact.\\n';\n}\nbody += `\\n*Committed by:\
-          \ ${context.payload.committer?.name || 'unknown'}*\\n`;\nbody += `*Commit:\
-          \ ${context.payload.headCommit?.id?.slice(0, 7) || 'N/A'}*\\n`;\n\nconst\
-          \ existing = await github.rest.issues.listForRepo({\n  owner: context.repo.owner,\n\
-          \  repo: context.repo.repo,\n  labels: ['eslint-autonomous', 'code-quality'],\n\
-          \  state: 'open'\n});\nconst already = existing.data.find((i: any) => i.title\
-          \ === title);\nif (!already) {\n  await github.rest.issues.create({\n  \
-          \  owner: context.repo.owner,\n    repo: context.repo.repo,\n    title,\n\
-          \    body,\n    labels: ['eslint-autonomous', 'autonomous', 'code-quality',\
-          \ 'blocker']\n  });\n}\n"
+        script: |
+          const fs = require('node:fs');
+          const path = require('node:path');
+          const code = process.env.ESLINT_EXIT_CODE;
+          const run = `${process.env.GITHUB_SERVER_URL}/${process.env.GITHUB_REPOSITORY}/actions/runs/${process.env.GITHUB_RUN_ID}`;
+          const sections = [];
+          if (code === '1') {
+            try {
+              const files = JSON.parse(fs.readFileSync('/tmp/eslint-report.json', 'utf8'));
+              if (!Array.isArray(files)) throw new Error('Expected an ESLint file list');
+              const details = [];
+              let errors = 0;
+              let warnings = 0;
+              function oneLine(value) {
+                return String(value).replace(/[\r\n\t]+/g, ' ').replace(/`/g, "'").replace(/@/g, '@\u200b').slice(0, 180);
+              }
+              for (const file of files) {
+                if (typeof file.filePath !== 'string' || !Array.isArray(file.messages)) {
+                  throw new Error('Invalid ESLint file result');
+                }
+                for (const message of file.messages) {
+                  if (message.severity !== 1 && message.severity !== 2) continue;
+                  if (message.severity === 2) errors++;
+                  else warnings++;
+                  if (details.length < 25) {
+                    const location = oneLine(path.relative(process.env.GITHUB_WORKSPACE, file.filePath));
+                    const rule = oneLine(message.ruleId || (message.fatal ? 'fatal' : 'lint'));
+                    details.push(`- \`${location}:${Number(message.line) || 0}:${Number(message.column) || 0}\` ${message.severity === 2 ? 'error' : 'warning'} \`${rule}\` — \`${oneLine(message.message)}\``);
+                  }
+                }
+              }
+              if (errors + warnings === 0) throw new Error('No diagnostics for exit 1');
+              sections.push(`ESLint reported **${errors} ${errors === 1 ? 'error' : 'errors'}** and **${warnings} ${warnings === 1 ? 'warning' : 'warnings'}**. The workflow allows zero warnings.`);
+              sections.push(details.join('\n'));
+              if (errors + warnings > details.length) sections.push('The artifact contains the remaining diagnostics.');
+            } catch {
+              sections.push('ESLint exited with code 1, but its JSON report was unavailable or invalid. See the lint step.');
+            }
+          } else if (code === '0') {
+            sections.push('ESLint exited successfully. A different workflow step failed.');
+          } else {
+            sections.push(code ? `ESLint could not complete (exit ${code}). See the lint step for the configuration or execution error.` : 'The lint step did not return an exit code. Check setup and execution logs.');
+          }
+          sections.push(`[Workflow run](${run}) · Commit \`${context.sha}\``);
+          const body = sections.join('\n\n');
+          const { owner, repo } = context.repo;
+          if (context.eventName === 'pull_request') {
+            await github.rest.issues.createComment({ owner, repo, issue_number: context.issue.number, body });
+          } else {
+            const title = '🚨 Custom ESLint Rules Violations on Main';
+            const labels = ['eslint-autonomous', 'code-quality'];
+            const open = await github.paginate(github.rest.issues.listForRepo, { owner, repo, labels: labels.join(','), state: 'open' });
+            if (!open.some(issue => !issue.pull_request && issue.title === title)) {
+              await github.rest.issues.create({ owner, repo, title, body, labels: [...labels, 'autonomous', 'blocker'] });
+            }
+          }
     - name: Notify Telegram on failure
       if: failure()
       run: "node automation/notify-telegram.js \"\U0001F6A8 Custom ESLint check found\
