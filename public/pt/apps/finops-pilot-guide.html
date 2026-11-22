@@ -1,16 +1,60 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Em breve — Zion Tech Group</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guia de piloto FinOps · Zion Tech Group</title>
+<meta name="description" content="Guia para planejar um piloto FinOps com visibilidade de gastos, otimização e governança.">
 <link rel="canonical" href="https://ziontechgroup.com/pt/apps/finops-pilot-guide.html">
-<link rel="alternate" hreflang="en" href="https://ziontechgroup.com/apps/finops-pilot-guide.html">
 <link rel="alternate" hreflang="pt-BR" href="https://ziontechgroup.com/pt/apps/finops-pilot-guide.html">
+<link rel="alternate" hreflang="en" href="https://ziontechgroup.com/apps/finops-pilot-guide.html">
+<style>
+:root{--bg:#0b1220;--card:#121a2b;--ink:#e8eef8;--muted:#9aa8bd;--line:#243049;--accent:#7dd3fc}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:ui-sans-serif,system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+.wrap{max-width:900px;margin:0 auto;padding:2.5rem 1.25rem}
+h1{font-size:1.8rem;margin-bottom:.5rem}
+.lede{color:var(--muted);font-size:1.05rem;margin-bottom:1.25rem}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin-top:1.25rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
+.btn{display:inline-block;margin-top:10px;color:#042033;background:var(--accent);padding:8px 12px;border-radius:999px;font-weight:700;text-decoration:none}
+.muted{color:var(--muted);font-size:.92rem;margin-top:1rem}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+.nav{display:flex;gap:.75rem;flex-wrap:wrap;margin-bottom:1.25rem}
+.nav a,.related a{color:var(--accent)}
+.related{margin-top:1.25rem}
+</style>
 </head>
 <body>
-<h1>Em breve</h1>
-<p>Esta página está sendo preparada.</p>
-<script>/* reciprocity stub for deployment */</script>
+<main class="wrap">
+  <nav class="nav" aria-label="Navegação de recursos">
+    <a href="/pt/apps/">← Catálogo de apps</a>
+    <a href="/apps/finops-pilot-guide.html" lang="en" hreflang="en">English</a>
+  </nav>
+  <h1>Guia de piloto FinOps</h1>
+  <p class="lede">Comece em um serviço ou equipe. Crie visibilidade dos custos, defina responsabilidades e teste uma oportunidade de otimização antes de ampliar o piloto.</p>
+  <section aria-labelledby="resources-title">
+    <h2 id="resources-title">Três etapas do piloto</h2>
+    <div class="grid">
+      <article class="card">
+        <h3>Visibilidade</h3>
+        <p>Identifique recursos sem rótulos, combine como atribuir os gastos e monte uma visão de custos que Finanças e Engenharia consigam interpretar. Registre uma linha de base e a fonte dos dados.</p>
+      </article>
+      <article class="card">
+        <h3>Otimização</h3>
+        <p>Compare redimensionamento, compromissos e redução de recursos ociosos. Teste em pequena escala, registre o impacto no custo e observe os indicadores de desempenho e confiabilidade.</p>
+      </article>
+      <article class="card">
+        <h3>Governança</h3>
+        <p>Defina quem responde pelos orçamentos e alertas, como investigar anomalias e quais métricas entram no relatório executivo. Revise resultados e riscos antes de ampliar.</p>
+      </article>
+    </div>
+  </section>
+  <p class="muted">Documente o objetivo, o responsável, o período de medição e o critério para seguir ou parar. Este guia não conecta contas, altera recursos ou automatiza decisões.</p>
+  <nav class="nav related" aria-label="Próximos passos">
+    <a href="/pt/apps/finops-scenario-estimator.html">Estimador de cenários FinOps</a>
+    <a href="/discovery/#dq">Discovery online gratuito</a>
+  </nav>
+</main>
 </body>
 </html>
