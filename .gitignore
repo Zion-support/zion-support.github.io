@@ -104,3 +104,6 @@ Google Drive
 .ssh/
 .netrc
 .npmrc
+
+# Local worktree used by the gh-pages export helper.
+/.pageploy/
