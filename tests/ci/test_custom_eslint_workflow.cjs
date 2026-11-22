@@ -11,6 +11,14 @@ const reportSummary = require('../../scripts/checks/eslint-report-summary.cjs');
 const root = path.resolve(__dirname, '../..');
 const workflow = yaml.safeLoad(fs.readFileSync(path.join(root, '.github/workflows/custom-eslint.yml'), 'utf8'));
 const steps = workflow.jobs['custom-eslint'].steps;
+const packageManifest = JSON.parse(fs.readFileSync(path.join(root, 'package.json'), 'utf8'));
+
+test('workflow Node runtime matches the repository engine contract', () => {
+  const setup = steps.find(step => step.name === 'Setup Node.js');
+  assert.equal(setup.with['node-version'], packageManifest.engines.node);
+  assert.equal(packageManifest.engines.node, '22');
+});
+
 const handlers = [
   ['Parse and comment on PR', 'comment'],
   ['Open GitHub issue on main branch violations', 'issue'],
