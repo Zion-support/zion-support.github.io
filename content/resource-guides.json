@@ -1,0 +1,44 @@
+[
+  {
+    "slug": "choosing-an-ai-app",
+    "title": "Choose the right AI app for your workflow",
+    "summary": "Compare apps by the job they need to do, the information they need, and how your team will review the result.",
+    "category": "AI & automation",
+    "intro": "A useful evaluation begins with one real task: triaging a support request, preparing a sales handoff, or finding an answer in approved documents. Write down what happens today before choosing a tool. That gives you a fair comparison and makes the next step easier to scope.",
+    "sections": [
+      {"id":"define","title":"1. Define the task and its boundaries","body":"Describe the input, the expected output, and the person responsible for accepting it. Separate assistance, such as drafting a response, from an action, such as sending it. Decide which steps always need a person to review them.","items":["Name the team and the recurring task.","Collect a small set of representative examples, including difficult cases.","Record current turnaround time and the common reasons for rework."]},
+      {"id":"compare","title":"2. Compare the complete workflow","body":"Check what the app actually does today. A product description, an interactive demonstration, and an integration with your own systems are different stages. Ask how data enters the workflow, where results appear, and how errors reach a person.","items":["Identify required connectors and permissions.","Check whether a result can be edited, exported, or traced to its source.","Ask what happens when information is missing or the service is unavailable.","Confirm the scope and price for your use case before committing."]},
+      {"id":"evaluate","title":"3. Test with a clear acceptance rule","body":"Use the same examples for each candidate and have the people doing the work review the outputs. Measure accepted results and time spent correcting them, rather than counting generated responses. Use approved sample data and agree how it will be handled before connecting production systems.","items":["Record useful output, incorrect output, and cases requiring escalation.","Include human review and integration effort in the cost comparison.","Choose a narrow pilot with an owner and a decision date."]}
+    ],
+    "takeaway":"Bring a one-paragraph workflow description, sample inputs, an acceptance rule, and a list of required systems to your discovery discussion.",
+    "links":[["/apps-network/","Browse the apps network"],["/services/","Explore implementation services"],["/resources/ai-pilot-launch-plan/","Build your pilot plan"]]
+  },
+  {
+    "slug":"field-service-request-checklist",
+    "title":"Prepare a field service request that can be scoped",
+    "summary":"Gather site, equipment, access, timing, and acceptance details before requesting on-site IT support.",
+    "category":"Field services",
+    "intro":"A clear brief helps the service team assess the work, identify the right skills, and ask fewer follow-up questions. Use this checklist for a site survey, equipment intervention, installation, or smart-hands request. Share sensitive access details only through an agreed secure channel.",
+    "sections":[
+      {"id":"site","title":"1. Describe the site and the work","body":"Start with the location and the outcome you need. Distinguish diagnosis from a known repair, and state whether remote engineering support will direct the technician.","items":["City, country, site type, and an operational contact.","Equipment manufacturer, model, quantity, and relevant fault symptoms.","Requested tasks, exclusions, and any required skills or certifications.","Available spares, tools, cabling, and responsibility for supplying them."]},
+      {"id":"access","title":"2. Confirm access and the service window","body":"Specify a date, time, and time zone. Explain access procedures early so that security checks or site restrictions can be considered when availability is reviewed.","items":["Preferred service window and any outage or change restrictions.","Check-in instructions, escort requirements, and authorization contact.","Remote bridge details and escalation path, when applicable.","Travel, freight, parking, or other site-specific costs to include in the quote."]},
+      {"id":"closeout","title":"3. Agree acceptance and closeout evidence","body":"Define the evidence needed to close the task before work starts: test results, a service report, approved photographs, or an inventory update. Keep credentials and unnecessary personal data out of routine reports.","items":["Name the person who will accept completion.","Specify the tests and required service-report fields.","Clarify what to do if the fault, access conditions, or scope changes.","Review the written scope and price. Scheduling follows formal client confirmation, a received purchase order, and Zion operational release."]}
+    ],
+    "takeaway":"A request is a scoping step. Resource availability, response time, pricing, and dispatch are confirmed for the specific location and approved scope.",
+    "links":[["/field-services/","Explore field services"],["/field-services/brazil/","Field services in Brazil"],["/resources/choosing-an-ai-app/","Evaluate supporting apps"]]
+  },
+  {
+    "slug":"ai-pilot-launch-plan",
+    "title":"Turn an AI idea into a measurable pilot",
+    "summary":"Set a baseline, define review and escalation, and decide what evidence will justify the next rollout.",
+    "category":"Planning & delivery",
+    "intro":"A pilot should answer a business question. Can a team finish a specific task more reliably, with less effort, or with a better result? Start with a limited workflow and make success measurable before expanding the scope.",
+    "sections":[
+      {"id":"baseline","title":"1. Write the decision you need to make","body":"State the problem, the people affected, and what a useful result looks like. Record the current process so that the comparison includes the work people do before and after the AI step.","items":["Select one workflow and assign a business owner.","Measure current task volume, completion time, and rework.","Choose an acceptance threshold and a review date.","List dependencies, data sources, and the people who approve access."]},
+      {"id":"operate","title":"2. Design review, escalation, and recovery","body":"Agree who reviews outputs, what the system may do, and when it must stop or ask for help. Run initial evaluations with approved examples and keep a usable manual process available.","items":["Define the actions allowed during the pilot.","Route uncertain or sensitive cases to a named reviewer.","Record errors and the time needed to resolve them.","Define how to pause the pilot and return work to the existing process."]},
+      {"id":"decide","title":"3. Review evidence before expanding","body":"Compare accepted outcomes against the baseline. Include operating cost, review time, integration maintenance, and exceptions. An improvement on a few easy examples does not establish readiness for a broader rollout.","items":["Review results with the people who performed and accepted the work.","Document unresolved issues and the changes needed to address them.","Choose to expand, revise, or stop based on the agreed criteria.","For expansion, specify the next scope, owner, budget, and monitoring needs."]}
+    ],
+    "takeaway":"Keep a short pilot brief: objective, baseline, scope, owner, acceptance criteria, review date, and a recovery plan.",
+    "links":[["/resources/choosing-an-ai-app/","Compare AI apps"],["/ai-consulting-services/","Explore AI consulting"],["/plans/","Review plans and engagement options"]]
+  }
+]
