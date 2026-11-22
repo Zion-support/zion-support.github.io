@@ -20,7 +20,7 @@ let server;
 
 try {
   await writeFile(path.join(configDir, 'main.ts'), `
-import base from '../.storybook/main';
+import base from '../.storybook/main.ts';
 export default {
   ...base,
   stories: ['./Dependency.stories.tsx'],
@@ -33,7 +33,7 @@ function Counter({ initialCount = 2 }: { initialCount?: number }) {
   const [count, setCount] = useState(initialCount);
   return <section>
     <h1>Dependency validation</h1>
-    <button type="button" onClick={() => setCount(count + 1)}>Increment</button>
+    <button data-testid="increment" type="button" onClick={() => setCount(count + 1)}>Increment</button>
     <output data-testid="count">{count}</output>
   </section>;
 }
@@ -87,15 +87,18 @@ export const Interactive = { args: { initialCount: 2 } };
       const pageErrors = [];
       page.on('pageerror', (error) => pageErrors.push(error.message));
       await page.goto(url, { waitUntil: 'networkidle0', timeout: 30_000 });
-      await page.waitForSelector('[data-testid="count"]', { timeout: 15_000 });
+      await page.waitForSelector('[data-testid="count"]', { visible: true, timeout: 15_000 });
       assert.equal(await page.$eval('[data-testid="count"]', (element) => element.textContent), '2');
-      await page.click('button');
+      await page.waitForSelector('[data-testid="increment"]', { visible: true, timeout: 15_000 });
+      await page.click('[data-testid="increment"]');
       await page.waitForFunction(() => document.querySelector('[data-testid="count"]')?.textContent === '3');
       const png = Buffer.from(await page.screenshot({ type: 'png' }));
       assert.equal(png.subarray(0, 8).toString('hex'), '89504e470d0a1a0a');
       assert.ok(png.length > 100, 'The rendered page screenshot must not be empty');
       assert.deepEqual(pageErrors, [], `${protocol}: browser page errors`);
-      results.push({ protocol, browser: await browser.version(), interaction: 'pass', screenshotBytes: png.length });
+      const result = { protocol, browser: await browser.version(), interaction: 'pass', screenshotBytes: png.length };
+      results.push(result);
+      console.log(JSON.stringify(result));
     } finally {
       await browser.close();
     }
