@@ -56,8 +56,6 @@ jobs:
         run: |
           set -euo pipefail
           bash scripts/prepare-pages-out.sh
-          node scripts/render-productivity-release.cjs out
-          node scripts/render-field-evidence-release.cjs out
           python3 scripts/assert-no-private-ops.py out
 
       - name: Compare production bodies with deployed artifact
