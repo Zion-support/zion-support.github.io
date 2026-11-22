@@ -1,0 +1,30 @@
+name: Service page template contracts
+
+permissions:
+  contents: read
+
+"on":
+  pull_request:
+    paths:
+      - scripts/growth-automation/service_pipeline_deployer.py
+      - scripts/growth-automation/service_pipeline_optimizer.py
+      - scripts/growth-automation/instant_pipeline_orchestrator.py
+      - scripts/growth-automation/comprehensive_growth_pipeline.py
+      - tests/ci/test_service_page_templates.py
+      - .github/workflows/service-page-template-contracts.yml
+
+jobs:
+  templates:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          persist-credentials: false
+          sparse-checkout: |
+            scripts/growth-automation
+            tests/ci
+
+      - name: Validate inert renderer outputs
+        run: python3 tests/ci/test_service_page_templates.py

@@ -317,7 +317,7 @@ export default function Home() {
               </Link>
             </div>
           </section>
-        </main>
+        </section>
           {/* ALL SERVICES CATALOG */}
           <section id="all-services" className="mt-10 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
             <p className="text-xs font-semibold uppercase tracking-wide text-blue-600">Complete Service Catalog</p>
