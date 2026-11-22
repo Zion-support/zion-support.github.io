@@ -176,8 +176,8 @@ const V1031V1035Showcase: React.FC = () => {
             Join 10,000+ businesses using Zion Tech Group&apos;s AI email engines
           </p>
           <div className="flex flex-wrap justify-center gap-6 text-white">
-            <a href="tel:+13024640950" className="flex items-center gap-2 hover:text-blue-200 transition">
-              📱 +1 302 464 0950
+            <a href="tel:+5511976140076" className="flex items-center gap-2 hover:text-blue-200 transition">
+              📱 +55 11 97614-0076
             </a>
             <a href="mailto:kleber@ziontechgroup.com" className="flex items-center gap-2 hover:text-blue-200 transition">
               ✉️ kleber@ziontechgroup.com

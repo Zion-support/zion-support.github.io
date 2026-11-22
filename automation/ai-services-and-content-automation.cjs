@@ -1,1 +1,1 @@
-console.log("stub: automation/ai-services-and-content-automation.cjs no-op - automation paused post-P0");
+require('./static-editorial-publisher.cjs').main('services');

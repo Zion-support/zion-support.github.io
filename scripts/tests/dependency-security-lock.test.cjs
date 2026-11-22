@@ -43,3 +43,21 @@ test('all locked follow-redirects copies include the cross-realm credential fix'
     assert.ok(stableAtLeast(entry.version, [1, 16, 2]), `${name}@${entry.version} is below the patched release`);
   }
 });
+// The weekly audit failed after compatible updates on these three advisories.
+// Keep older callback-based glob/minimatch consumers outside the modern overrides.
+for (const [name, minimum, affectedMajor] of [
+  ['glob', [14, 0, 2], 9],
+  ['minimatch', [11, 0, 1], 7],
+  ['postcss-selector-parser', [6, 1, 5], 0],
+]) {
+  test(`locked ${name} copies exclude the November audit advisory`, () => {
+    const copies = Object.entries(lock.packages).filter(([entry]) => entry.endsWith(`/node_modules/${name}`) || entry === `node_modules/${name}`);
+    assert.ok(copies.length > 0, `Expected ${name} in the dependency tree`);
+    for (const [entry, details] of copies) {
+      const major = Number(details.version.split('.')[0]);
+      if (major < affectedMajor) continue;
+      const patched = name === 'postcss-selector-parser' && major === 7 ? [7, 1, 6] : minimum;
+      assert.ok(stableAtLeast(details.version, patched), `${entry}@${details.version} is below the patched release`);
+    }
+  });
+}

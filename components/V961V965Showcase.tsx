@@ -208,7 +208,7 @@ export default function V961V965Showcase() {
           <h4 className="text-2xl font-bold text-white mb-2">Transform Your Email Operations</h4>
           <p className="text-gray-400 mb-6">Deploy V961-V965 for intelligent intent routing, revenue tracking, and security.</p>
           <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-300">
-            <span>📞 +1 302 464 0950</span>
+            <span>📞 +55 11 97614-0076</span>
             <span>✉️ kleber@ziontechgroup.com</span>
             <span>📍 364 E Main St STE 1008, Middletown, DE 19709</span>
           </div>

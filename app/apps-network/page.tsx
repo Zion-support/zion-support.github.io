@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import {
   APPS_NETWORK_HUB,
   appsNetworkCatalog,
+  appsNetworkBySlug,
   homepageFeaturedApps,
   type AppsNetworkApp,
 } from '../data/appsNetwork';
@@ -23,8 +24,10 @@ const GROUPS: { key: AppsNetworkApp['group']; label: string; href: string }[] = 
   { key: 'work', label: 'Worksheets & briefs', href: '/apps-network/#work' },
 ];
 
-function AppCard({ app }: { app: AppsNetworkApp }) {
-  const related = app.related
+type AppCardData = Omit<AppsNetworkApp, 'related'> & { readonly related?: readonly string[] };
+
+function AppCard({ app }: { app: AppCardData }) {
+  const related = (app.related ?? appsNetworkBySlug[app.slug]?.related ?? [])
     .map((slug) => appsNetworkCatalog.find((a) => a.slug === slug))
     .filter(Boolean)
     .slice(0, 3) as AppsNetworkApp[];
@@ -132,9 +135,49 @@ export default function AppsNetworkPage() {
         </div>
       </section>
 
+{/* ── Free AI/IT Discovery — always online, always free ── */}
       <section className="border-t border-slate-800">
         <div className="mx-auto max-w-5xl px-4 py-14 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-white mb-3">Full path-tool catalog</h2>
+          <div className="rounded-2xl border border-emerald-500/20 bg-gradient-to-br from-emerald-950/40 to-slate-900 p-6 sm:p-8">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+              <div>
+                <h2 className="text-2xl font-bold text-white mb-2">Free AI/IT Discovery — always online, always free</h2>
+                <p className="text-slate-400 text-sm leading-relaxed">
+                  No commitment, no sales call required. Start with a free online discovery that maps your
+                  AI opportunity, runs 7 quick checks, and shares a clear recommendation in minutes.
+                  Nothing is stored. Nothing is sold.
+                </p>
+              </div>
+              <Link href="/discovery/" className="inline-flex items-center gap-2 rounded-full bg-emerald-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-emerald-500 transition">
+                Start free discovery →
+              </Link>
+            </div>
+            <div className="mt-5 grid sm:grid-cols-3 gap-4 text-sm">
+              {[
+                { label: 'What you get', value: 'use-case map + 7 risk checks' },
+                { label: 'How long', value: 'minutes, online' },
+                { label: 'Cost', value: 'free, no credit card' },
+              ].map(f => (
+                <div key={f.label} className="rounded-xl border border-slate-800 bg-slate-900/50 p-4">
+                  <dt className="text-[10px] uppercase tracking-widest text-slate-500">{f.label}</dt>
+                  <dd className="text-white font-semibold mt-1">{f.value}</dd>
+                </div>
+              ))}
+            </div>
+            <div className="mt-5 flex flex-wrap gap-3">
+              <Link href="/discovery/" className="rounded-full border border-emerald-500/40 bg-emerald-500/10 px-4 py-2 text-sm font-medium text-emerald-300 hover:bg-emerald-500/20 transition">
+                Take the free discovery now
+              </Link>
+              <Link href="/discovery/" className="text-slate-400 hover:text-white">
+                How discovery works
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-t border-slate-800">
+        <div className="mx-auto max-w-5xl px-4 py-14 sm:px-6 lg:px-8">
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {appsNetworkCatalog.map((app) => (
               <AppCard key={app.slug} app={app} />
