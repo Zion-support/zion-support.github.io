@@ -5,6 +5,22 @@ const path = require('node:path');
 const vm = require('node:vm');
 const assert = require('node:assert/strict');
 const html = fs.readFileSync(process.argv[2] || path.join(__dirname, '../public/discovery/index.html'), 'utf8');
+assert.equal((html.match(/<form\b[^>]*\bid=["']dq["']/gi) || []).length, 1,
+  'Exactly one current questionnaire is required');
+assert.equal((html.match(/\bid=["']dq-results["']/gi) || []).length, 1,
+  'Exactly one results region is required');
+const schemas = [...html.matchAll(/<script\b[^>]*\btype=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)]
+  .map(match => JSON.parse(match[1]));
+const discovery = schemas.find(schema => schema['@type'] === 'Service' &&
+  schema.url === 'https://ziontechgroup.com/discovery/');
+assert.ok(discovery, 'The Discovery service must have structured data');
+assert.equal(String(discovery.offers?.price), '0', 'Discovery must remain free');
+assert.equal(discovery.offers?.url, 'https://ziontechgroup.com/discovery/',
+  'The free offer must lead to the online questionnaire');
+assert.match(html, /<a\b[^>]*\bhref=["']#dq["'][^>]*>/i,
+  'The page must link directly to its free online questionnaire');
+assert.doesNotMatch(html, /https:\/\/buy\.stripe\.com\/(?:9B69AU8NW5dt71t8BG4ZG09|8x214o8NW35l5Xp3hm4ZG0b)/,
+  'Legacy paid Discovery checkouts must not return');
 function questionnaireSource(markup) {
   return [...markup.matchAll(/<script>([\s\S]*?)<\/script>/gi)].map(m => m[1]).find(s => s.includes("var MAP="));
 }
@@ -60,6 +76,10 @@ async function run() {
     const f=fixture(mode); await f.submit();
     assert.equal(f.calls.length,1);
     assert.equal(f.calls[0].url,'https://formsubmit.co/ajax/commercial@ziontechgroup.com');
+    assert.equal(f.calls[0].options.method,'POST');
+    assert.deepEqual(Object.keys(f.calls[0].data).sort(),
+      ['_cc','_replyto','_subject','email','name','results'].sort(),
+      'Only the reviewed report and recipient fields may be submitted');
     assert.equal(f.calls[0].data._cc,'client@example.test');
     assert.equal(f.calls[0].data._replyto,'client@example.test');
     assert.match(f.calls[0].data.results,/Industry: finance\nChallenge: costs/);
