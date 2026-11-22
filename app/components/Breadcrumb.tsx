@@ -45,9 +45,14 @@ function truncateLabel(label: string): string {
   return label.slice(0, TRUNCATE_LENGTH) + '…';
 }
 
-export default function Breadcrumb({ className, items: providedItems }: { className?: string; items?: BreadcrumbItem[] }) {
+interface BreadcrumbProps {
+  className?: string;
+  items?: readonly BreadcrumbItem[];
+}
+
+export default function Breadcrumb({ className, items: suppliedItems }: BreadcrumbProps) {
   const pathname = usePathname();
-  const items = providedItems ?? pathToSegments(pathname ?? '/');
+  const items = suppliedItems ?? pathToSegments(pathname ?? '/');
 
   if (items.length === 0) {
     return (
@@ -64,13 +69,13 @@ export default function Breadcrumb({ className, items: providedItems }: { classN
           const isLast = i === items.length - 1;
           const content = (
             <>
-              {isLast ? (
-                <span className="text-slate-200 font-medium" aria-current="page">
+              {isLast || !item.href ? (
+                <span className="text-slate-200 font-medium" aria-current={isLast ? "page" : undefined}>
                   {item.label}
                 </span>
               ) : (
                 <Link
-                  href={item.href!}
+                  href={item.href}
                   className="text-blue-400 hover:text-blue-300 transition-colors truncated"
                   aria-current={undefined}
                 >

@@ -24,6 +24,7 @@ jobs:
       uses: actions/checkout@v6.0.2
       with:
         fetch-depth: 1
+        persist-credentials: false
     - name: Setup Node.js
       uses: actions/setup-node@v6.3.0
       with:
@@ -37,8 +38,9 @@ jobs:
       env:
         TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
         TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      shell: bash
       run: |
-        eslint_exit=0
+        set +e
         npx eslint -c .eslintrc-autonomous.cjs . \
           --ignore-pattern ".next/**" \
           --ignore-pattern "out/**" \
@@ -47,10 +49,11 @@ jobs:
           --ignore-pattern "coverage/**" \
           --ignore-pattern ".hermes/**" \
           --ignore-pattern "automation/reports/**" \
-          --max-warnings 0 \
-          --format json > /tmp/eslint-report.json || eslint_exit=$?
-        echo "exit_code=$eslint_exit" >> "$GITHUB_OUTPUT"
-        exit "$eslint_exit"
+          --max-warnings 0 --format json > /tmp/eslint-report.json
+        status=$?
+        set -e
+        echo "exit_code=$status" >> "$GITHUB_OUTPUT"
+        exit "$status"
     - name: Upload ESLint report
       if: always()
       uses: actions/upload-artifact@v4
@@ -59,9 +62,12 @@ jobs:
         path: /tmp/eslint-report.json
         retention-days: 7
     - name: Check for errors
+      env:
+        ESLINT_EXIT_CODE: ${{ steps.eslint.outputs.exit_code }}
+      shell: bash
       run: |
-        if [ "${{ steps.eslint.outputs.exit_code }}" != "0" ]; then
-          echo "ESLint failed or did not report success"
+        if [ "${ESLINT_EXIT_CODE:-}" != "0" ]; then
+          echo "::error::ESLint failed or did not return a valid result. See the lint step and report."
           exit 1
         fi
     - name: Parse and comment on PR

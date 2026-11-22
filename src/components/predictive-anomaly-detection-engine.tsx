@@ -44,3 +44,5 @@ export default function PredictiveAnomalyDetectionEngine() {
         </div>
       </div>
     </div>
+  );
+}
