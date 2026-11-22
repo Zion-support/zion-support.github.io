@@ -45,11 +45,16 @@ function truncateLabel(label: string): string {
   return label.slice(0, TRUNCATE_LENGTH) + '…';
 }
 
-export default function Breadcrumb({ className }: { className?: string }) {
-  const pathname = usePathname();
-  const items = pathToSegments(pathname);
+interface BreadcrumbProps {
+  className?: string;
+  items?: readonly BreadcrumbItem[];
+}
 
-  if (pathname === '/' || items.length === 0) {
+export default function Breadcrumb({ className, items: suppliedItems }: BreadcrumbProps) {
+  const pathname = usePathname();
+  const items = suppliedItems ?? pathToSegments(pathname ?? '/');
+
+  if (items.length === 0) {
     return (
       <nav aria-label="Breadcrumb" className={className}>
         <span className="text-sm text-slate-500">Home</span>
@@ -64,13 +69,13 @@ export default function Breadcrumb({ className }: { className?: string }) {
           const isLast = i === items.length - 1;
           const content = (
             <>
-              {isLast ? (
-                <span className="text-slate-200 font-medium" aria-current="page">
+              {isLast || !item.href ? (
+                <span className="text-slate-200 font-medium" aria-current={isLast ? "page" : undefined}>
                   {item.label}
                 </span>
               ) : (
                 <Link
-                  href={item.href!}
+                  href={item.href}
                   className="text-blue-400 hover:text-blue-300 transition-colors truncated"
                   aria-current={undefined}
                 >
@@ -126,5 +131,5 @@ export function BreadcrumbLink({ href, label, current }: { href: string; label: 
 
 export function useBreadcrumb() {
   const pathname = usePathname();
-  return pathToSegments(pathname);
+  return pathToSegments(pathname ?? '/');
 }
