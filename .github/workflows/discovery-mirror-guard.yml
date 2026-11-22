@@ -66,10 +66,20 @@ jobs:
   mirror:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - name: Checkout localized questionnaires and delivery suite
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
         with:
-          fetch-depth: 1
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+          sparse-checkout: |
+            /public/assets/js/discovery-delivery.js
+            /public/discovery/index.html
+            /public/pt/discovery/index.html
+            /public/es/discovery/index.html
+            /public/fr/discovery/index.html
+            /public/de/discovery/index.html
+            /scripts/test-discovery-delivery-contract.cjs
+          sparse-checkout-cone-mode: false
 
       - name: Require canonical shared Discovery contract
         shell: bash
@@ -100,6 +110,21 @@ jobs:
             DISCOVERY_HTML="$file" node --test scripts/test-discovery-delivery-contract.cjs
           done
           echo "Canonical Discovery recipients, fallback, duplicate suppression and acceptance wording validated offline."
+
+  legacy-redirects:
+    name: Legacy questionnaire links
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout legacy redirects
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+          sparse-checkout: |
+            /discovery/questionnaire.html
+            /public/discovery/questionnaire.html
+          sparse-checkout-cone-mode: false
 
       - name: Require safe legacy-route redirects
         shell: bash
