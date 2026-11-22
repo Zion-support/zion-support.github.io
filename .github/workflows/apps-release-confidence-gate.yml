@@ -74,8 +74,8 @@ jobs:
             // guard. A successful source-freshness gate can skip publication, so
             // require the publisher's actual deployment step to have succeeded.
             const publishers = [
-              {file:'gh-pages.yml', step:'Deploy to GitHub Pages'},
-              {file:'static-deploy.yml', step:'Run actions/deploy-pages@v4'},
+              {file:'gh-pages.yml', steps:['Deploy to GitHub Pages']},
+              {file:'static-deploy.yml', steps:['Deploy Pages artifact', 'Run actions/deploy-pages@v4']},
             ];
             const deploys = [];
             for (const publisher of publishers) {
@@ -99,7 +99,7 @@ jobs:
                   if (!Array.isArray(job.steps)) {
                     throw new Error('Missing deployment step evidence for successful run '+run.id);
                   }
-                  const deploymentSteps = job.steps.filter(s => s.name === publisher.step);
+                  const deploymentSteps = job.steps.filter(s => publisher.steps.includes(s.name));
                   if (deploymentSteps.length !== 1) {
                     throw new Error('Missing or ambiguous expected deployment step for successful run '+run.id);
                   }
