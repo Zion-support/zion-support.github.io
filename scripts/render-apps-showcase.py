@@ -38,6 +38,14 @@ def languages(locale, is_home=False):
                    + (' aria-current="page"' if l == locale else '') + f'>{c["name"]}</a>'
                    for l,c in COPY.items())
 
+# Keep generated localized catalogs aligned with the checked-in navigation contract.
+CATALOG_NAV = {
+  "pt": "\n<!-- zion-apps-navigation-graph-72132:start -->\n<nav aria-label=\"Apps, Discovery and operations navigation\" style=\"display:flex;flex-wrap:wrap;gap:1rem;margin:2rem auto;max-width:960px;padding:1rem;border-top:1px solid #75829a\"><a href=\"/pt/apps/\">Diretório de apps</a> <a href=\"/pt/discovery/\">Discovery online gratuito</a> <a href=\"/apps/operations-reliability-ai-2026-pt.html\">Operações e confiabilidade</a> <a href=\"/apps/content-hub.html\">Central de conteúdo</a> <a href=\"/apps/\" lang=\"en\" hreflang=\"en\">English Apps (x-default)</a></nav>\n<!-- zion-apps-navigation-graph-72132:end -->\n",
+  "es": "\n<!-- zion-apps-navigation-graph-72132:start -->\n<nav aria-label=\"Apps, Discovery and operations navigation\" style=\"display:flex;flex-wrap:wrap;gap:1rem;margin:2rem auto;max-width:960px;padding:1rem;border-top:1px solid #75829a\"><a href=\"/es/apps/\">Directorio de apps</a> <a href=\"/es/discovery/\">Discovery gratuito online</a> <a href=\"/apps/operations-reliability-ai-2026-es.html\">Operaciones y fiabilidad</a> <a href=\"/apps/content-hub.html\">Centro de contenido</a> <a href=\"/apps/\" lang=\"en\" hreflang=\"en\">English Apps (x-default)</a></nav>\n<!-- zion-apps-navigation-graph-72132:end -->\n",
+  "fr": "\n<!-- zion-apps-navigation-graph-72132:start -->\n<nav aria-label=\"Apps, Discovery and operations navigation\" style=\"display:flex;flex-wrap:wrap;gap:1rem;margin:2rem auto;max-width:960px;padding:1rem;border-top:1px solid #75829a\"><a href=\"/fr/apps/\">Répertoire des apps</a> <a href=\"/fr/discovery/\">Discovery gratuit en ligne</a> <a href=\"/apps/operations-reliability-ai-2026-fr.html\">Opérations et fiabilité</a> <a href=\"/apps/content-hub.html\">Centre de contenu</a> <a href=\"/apps/\" lang=\"en\" hreflang=\"en\">English Apps (x-default)</a></nav>\n<!-- zion-apps-navigation-graph-72132:end -->\n",
+  "de": "\n<!-- zion-apps-navigation-graph-72132:start -->\n<nav aria-label=\"Apps, Discovery and operations navigation\" style=\"display:flex;flex-wrap:wrap;gap:1rem;margin:2rem auto;max-width:960px;padding:1rem;border-top:1px solid #75829a\"><a href=\"/de/apps/\">App-Verzeichnis</a> <a href=\"/de/discovery/\">Kostenloses Online-Discovery</a> <a href=\"/apps/operations-reliability-ai-2026-de.html\">Betrieb und Zuverlässigkeit</a> <a href=\"/apps/content-hub.html\">Content-Hub</a> <a href=\"/apps/\" lang=\"en\" hreflang=\"en\">English Apps (x-default)</a></nav>\n<!-- zion-apps-navigation-graph-72132:end -->\n"
+}
+
 def render(locale, is_home=False, *, is_catalog=False):
     assert not (is_home and is_catalog), 'A page belongs to one route family'
     c = COPY[locale]
@@ -59,7 +67,7 @@ def render(locale, is_home=False, *, is_catalog=False):
         if is_catalog else ''
     )
     schema = json.dumps({'@context':'https://schema.org','@type':'CollectionPage','name':title,'description':intro,'url':canonical,'inLanguage':c['lang']},ensure_ascii=False).replace('<','\\u003c')
-    return f'''<!doctype html>
+    page = f'''<!doctype html>
 <html lang="{c['lang']}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{e(title)} | Zion Tech Group</title><meta name="description" content="{e(intro)}">
 <link rel="canonical" href="{canonical}">{alternates}<link rel="alternate" hreflang="x-default" href="{ORIGIN+route('en')}">
@@ -76,6 +84,8 @@ def render(locale, is_home=False, *, is_catalog=False):
 <footer class="wrap"><a class="brand" href="{home(locale)}">ZION<span>TECH GROUP</span></a><nav aria-label="{e(c['network'])}"><a href="{showcase(locale)}">{e(c['network'])}</a><a href="{network(locale)}">{e(c['directory'])}</a><a href="https://github.com/Zion-support/zion-app-network">{e(c['source'])}</a></nav><span>© 2026 Zion Tech Group</span></footer>
 </body></html>
 '''
+    return page.replace('</body>', CATALOG_NAV[locale]+'</body>', 1) if is_catalog and locale in CATALOG_NAV else page
+
 
 def promotion(locale):
     c=COPY[locale]
