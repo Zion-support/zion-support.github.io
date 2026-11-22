@@ -1,0 +1,30 @@
+name: Legacy source TSX syntax contracts
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'src/app/page.tsx'
+      - 'src/components/**'
+      - 'tests/ci/test_legacy_source_syntax.cjs'
+      - '.github/workflows/legacy-source-syntax.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  syntax:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v6.0.2
+        with:
+          fetch-depth: 1
+          persist-credentials: false
+      - uses: actions/setup-node@v6.3.0
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - name: Parse the twelve diagnosed TSX files and check their JSX structure
+        run: node --test tests/ci/test_legacy_source_syntax.cjs

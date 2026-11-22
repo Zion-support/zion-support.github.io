@@ -32,3 +32,5 @@ export default function CognitiveEmulationLayer() {
         <span className="text-sm">Cognitive layer active</span>
       </div>
     </div>
+  );
+}
