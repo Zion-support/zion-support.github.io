@@ -72,10 +72,10 @@ jobs:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           OPENROUTER_MODEL: openrouter/free
           MAX_BLOG_POSTS: ${{ github.event.inputs.max_blog_posts }}
-          SKIP_FRONT_PAGE: ${{ github.event.inputs.skip_front_page && '1' || '' }}
-          TRIGGER_DEPLOY: ${{ github.event.inputs.trigger_deploy && '1' || '' }}
+          SKIP_FRONT_PAGE: ${{ inputs.skip_front_page && '1' || '' }}
+          TRIGGER_DEPLOY: ${{ inputs.trigger_deploy && '1' || '' }}
 #           NETLIFY_BUILD_HOOK removed (Netlify decommissioned → GitHub Pages)
-          SKIP_SERVICES_ADVERTISE: ${{ github.event.inputs.skip_services_advertise && '1' || '' }}
+          SKIP_SERVICES_ADVERTISE: ${{ inputs.skip_services_advertise && '1' || '' }}
         run: |
           PIPELINE="${{ github.event.inputs.pipeline || 'maximum' }}"
           MAX="${{ github.event.inputs.max_blog_posts }}"
@@ -94,9 +94,9 @@ jobs:
           elif [ "$PIPELINE" = "services" ]; then
             node automation/ai-services-and-content-automation.cjs
           elif [ "$PIPELINE" = "ideas" ]; then
-            AUTO_COMMIT=1 TRIGGER_DEPLOY=${{ github.event.inputs.trigger_deploy && '1' || '' }} node automation/ai-ideas-to-implementation-pipeline.cjs
+            AUTO_COMMIT=1 TRIGGER_DEPLOY=${{ inputs.trigger_deploy && '1' || '' }} node automation/ai-ideas-to-implementation-pipeline.cjs
           elif [ "$PIPELINE" = "maximum" ]; then
-            AUTO_COMMIT=1 TRIGGER_DEPLOY=${{ github.event.inputs.trigger_deploy && '1' || '' }} node automation/ai-content-maximum-pipeline.cjs
+            AUTO_COMMIT=1 TRIGGER_DEPLOY=${{ inputs.trigger_deploy && '1' || '' }} node automation/ai-content-maximum-pipeline.cjs
           else
             node automation/ai-content-turbo-pipeline.cjs
           fi
