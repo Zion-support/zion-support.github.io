@@ -26,7 +26,7 @@ import './globals.css';
 
 export const siteUrl = 'https://ziontechgroup.com';
 
-export const metadata: Metadata = {
+export const metadata = {
   metadataBase: new URL(siteConfig.url),
   title: { default: siteConfig.name, template: `%s | ${siteConfig.name}` },
   description: siteConfig.description,
@@ -40,7 +40,13 @@ export const metadata: Metadata = {
   viewport: { width: 'device-width', initialScale: 1, maximumScale: 5, userScalable: true },
   formatDetection: { telephone: false, address: false, email: false },
   appleWebApp: { capable: true, title: siteConfig.name },
-  alternates: { canonical: '/' },
+  alternates: {
+    canonical: '/',
+    languages: {
+      en: ['/', '/pt/'],
+      pt: ['/pt/', '/'],
+    },
+  },
   openGraph: { type: 'website', locale: 'en_US', url: siteConfig.url, title: siteConfig.name, description: siteConfig.description, siteName: siteConfig.name },
   twitter: { card: 'summary_large_image', title: siteConfig.name, description: siteConfig.description },
 };

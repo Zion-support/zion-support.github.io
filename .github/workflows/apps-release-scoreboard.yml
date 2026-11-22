@@ -1,0 +1,127 @@
+name: Apps release scoreboard
+
+"on":
+  schedule:
+    - cron: '17 */6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: apps-release-scoreboard
+  cancel-in-progress: true
+
+jobs:
+  scoreboard:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - name: Build Apps release scoreboard
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p automation/reports
+          python3 - <<'PY'
+          import json, os, subprocess, sys
+          from datetime import datetime, timezone
+          from pathlib import Path
+
+          repo=os.environ['GITHUB_REPOSITORY']
+          workflows=[
+            ('AI post-push route verify','ai-post-push-route-verify.yml',True),
+            ('Apps i18n release contract','apps-i18n-release-contract.yml',True),
+            ('Apps production content canary','apps-production-content-canary.yml',True),
+            ('Apps translation family coupling','apps-translation-family-coupling.yml',False),
+            ('Apps release evidence manifest','apps-release-evidence-manifest.yml',False),
+            ('Apps deployed/source drift','apps-deployed-source-drift.yml',True),
+            ('Apps rollback readiness','apps-rollback-readiness.yml',False),
+          ]
+
+          def api(path):
+            raw=subprocess.check_output(['gh','api',path],text=True)
+            return json.loads(raw)
+
+          rows=[]
+          hard_failures=[]
+          for label,file_name,critical in workflows:
+            data=api(f'repos/{repo}/actions/workflows/{file_name}/runs?branch=main&per_page=10')
+            runs=data.get('workflow_runs',[])
+            chosen=None
+            # Prefer newest non-cancelled run. Cancellation is often concurrency cleanup,
+            # so do not treat it as health evidence when a newer/older usable run exists.
+            for run in runs:
+              if run.get('conclusion')!='cancelled':
+                chosen=run
+                break
+            if chosen is None and runs:
+              chosen=runs[0]
+
+            if chosen is None:
+              state='unknown'
+              row={
+                'label':label,'workflow':file_name,'critical':critical,
+                'state':state,'run_id':None,'status':'missing','conclusion':None,
+                'head_sha':None,'html_url':None,
+              }
+            else:
+              status=chosen.get('status')
+              conclusion=chosen.get('conclusion')
+              if status!='completed':
+                state='pending'
+              elif conclusion=='success':
+                state='green'
+              elif conclusion=='cancelled':
+                state='unknown'
+              else:
+                state='red'
+              row={
+                'label':label,'workflow':file_name,'critical':critical,
+                'state':state,'run_id':chosen.get('id'),'status':status,
+                'conclusion':conclusion,'head_sha':chosen.get('head_sha'),
+                'html_url':chosen.get('html_url'),'updated_at':chosen.get('updated_at'),
+              }
+              if critical and state=='red':
+                hard_failures.append(row)
+            rows.append(row)
+
+          report={
+            'schema':'zion.apps.release-scoreboard.v1',
+            'generated_at_utc':datetime.now(timezone.utc).isoformat(),
+            'repository':repo,
+            'signals':rows,
+            'critical_terminal_failures':len(hard_failures),
+            'overall':'red' if hard_failures else 'no-terminal-failure',
+            'policy_note':'queued/in_progress, cancelled and first-run-missing are not treated as release failures',
+          }
+          out=Path('automation/reports/apps-release-scoreboard.json')
+          out.write_text(json.dumps(report,indent=2,sort_keys=True)+'\n',encoding='utf-8')
+
+          icons={'green':'✅','red':'❌','pending':'⏳','unknown':'➖'}
+          summary=Path(os.environ['GITHUB_STEP_SUMMARY'])
+          with summary.open('a',encoding='utf-8') as f:
+            f.write('## Apps release scoreboard\n\n')
+            f.write('| Signal | State | Run | SHA |\n|---|---|---:|---|\n')
+            for row in rows:
+              run=f"[{row['run_id']}]({row['html_url']})" if row.get('run_id') and row.get('html_url') else '—'
+              sha=(row.get('head_sha') or '—')[:12]
+              f.write(f"| {row['label']} | {icons[row['state']]} {row['state']} | {run} | `{sha}` |\n")
+            f.write(f"\nCritical terminal failures: **{len(hard_failures)}**\n")
+            f.write('\nQueued/in-progress runs are deliberately informational, not failures.\n')
+
+          print(json.dumps(report,indent=2))
+          if hard_failures:
+            sys.exit(1)
+          PY
+
+      - name: Upload scoreboard
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: apps-release-scoreboard-${{ github.run_id }}
+          path: automation/reports/apps-release-scoreboard.json
+          if-no-files-found: error
+          retention-days: 30

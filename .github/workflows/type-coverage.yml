@@ -2,6 +2,9 @@ permissions:
   contents: read
 name: TypeScript Type Coverage & Dead Code Check
 "on":
+  push:
+    branches:
+    - main
   pull_request:
     branches:
     - main

@@ -1,3 +1,1 @@
-// npm-patch-only-auto-pr.cjs - placeholder (Zion Agent 2026-09-20): stop module-not-found failures. No-op.
-console.log('npm-patch-only-auto-pr.cjs placeholder: nothing to do.');process.exit(0);
-
+console.log("stub: automation/npm-patch-only-auto-pr.cjs no-op - automation paused post-P0");

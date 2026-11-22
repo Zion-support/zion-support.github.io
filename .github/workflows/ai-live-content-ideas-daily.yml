@@ -1,0 +1,64 @@
+name: AI Live Content Ideas Daily
+
+"on":
+  schedule:
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+    inputs:
+      content_count:
+        description: 'Reviewed guide topics to publish (1 to 3, available queue permitting)'
+        default: '1'
+        required: false
+      trigger_deploy:
+        description: 'Deploy validated content after committing it'
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+  actions: write
+concurrency:
+  group: content-commit
+  cancel-in-progress: false
+
+jobs:
+  daily-content:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Checkout production source
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          token: ${{ github.token }}
+          fetch-depth: 2
+      - name: Setup Node.js
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
+        with:
+          node-version-file: '.nvmrc'
+      - name: Verify publisher invariants
+        run: node --test automation/static-editorial-publisher.test.cjs
+      - name: Generate reviewed static content
+        id: generate
+        env:
+          CONTENT_LIMIT: ${{ inputs.content_count || '1' }}
+        run: node automation/static-editorial-publisher.cjs daily
+      - name: Prepare and validate the production artifact
+        if: steps.generate.outputs.changed == 'true'
+        run: |
+          bash scripts/prepare-pages-out.sh
+          node scripts/automation/validate-editorial-artifact.cjs daily out
+      - name: Commit verified content and request deployment
+        if: steps.generate.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TRIGGER_DEPLOY: ${{ github.event_name == 'schedule' || inputs.trigger_deploy != false }}
+        run: |
+          if [ "$TRIGGER_DEPLOY" = "false" ]; then export TRIGGER_DEPLOY=0; fi
+          node scripts/automation/publish-generated-content.cjs daily
+      - name: Upload publication evidence
+        if: always()
+        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
+        with:
+          name: editorial-daily-${{ github.run_id }}
+          path: automation/reports/editorial-daily-latest.json
+          if-no-files-found: error

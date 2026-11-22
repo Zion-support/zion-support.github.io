@@ -1,3 +1,4 @@
+import RelatedApps from '@/components/RelatedApps';
 export default function Page() {
   return (<>
     <main className="min-h-screen">
@@ -22,6 +23,7 @@ export default function Page() {
           <a href="/contact" className="inline-flex items-center px-8 py-3 rounded-lg bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold text-lg">Free Consultation</a>
         </div>
       </section>
-    </main>
+          <RelatedApps />
+      </main>
   </>);
 }

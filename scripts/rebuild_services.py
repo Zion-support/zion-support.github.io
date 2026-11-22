@@ -121,7 +121,7 @@ def service_block(en, level=2):
     if ci:
         site = ci.get('website',f'/services/{cid}')
         eml  = ci.get('email','kleber@ziontechgroup.com')
-        phn  = ci.get('phone','+1 302 464 0950')
+        phn  = ci.get('phone','+55 11 97614-0076')
         L.append(f"{ind2}contactInfo: {{")
         L.append(f"{ind2}  website: '{esc(site)}',")
         L.append(f"{ind2}  email: '{esc(eml)}',")

@@ -289,6 +289,9 @@ export default function BlogIndex() {
                 <Link href="/services/" className="btn-secondary">
                   Browse services instead
                 </Link>
+                <Link href="/discovery" className="btn-secondary">
+                  Free AI Discovery
+                </Link>
               </div>
             </div>
           </div>

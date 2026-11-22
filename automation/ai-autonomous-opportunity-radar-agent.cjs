@@ -1,3 +1,4 @@
-// ai-autonomous-opportunity-radar-agent.cjs - placeholder (Zion Agent 2026-09-20): stop module-not-found failures. No-op.
-console.log('ai-autonomous-opportunity-radar-agent.cjs placeholder: nothing to do.');process.exit(0);
-
+require('./reliability-reports.cjs').main('radar').catch(error => {
+  console.error(error.message);
+  process.exitCode = 1;
+});

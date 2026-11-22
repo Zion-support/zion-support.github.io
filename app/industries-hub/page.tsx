@@ -416,6 +416,12 @@ export default function IndustriesHubPage() {
                 📋 Request a Proposal
               </Link>
               <Link
+                href="/discovery"
+                className="px-8 py-3.5 rounded-full bg-slate-800/70 border border-slate-700 text-slate-300 font-semibold text-sm hover:bg-slate-700/70 transition-all"
+              >
+                🎯 Free AI Discovery
+              </Link>
+              <Link
                 href="/services/"
                 className="px-8 py-3.5 rounded-full bg-slate-800/70 border border-slate-700 text-slate-300 font-semibold text-sm hover:bg-slate-700/70 transition-all"
               >

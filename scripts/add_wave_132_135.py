@@ -8,7 +8,7 @@ with open('/data/data/com.termux/files/home/zion-support.github.io/app/data/serv
 CONTACT = {
     "website": "/contact",
     "email": "kleber@ziontechgroup.com",
-    "phone": "+1 302 464 0950"
+    "phone": "+55 11 97614-0076"
 }
 
 def svc(id, title, desc, features, benefits, pricing, icon, category, popular, industry, href):

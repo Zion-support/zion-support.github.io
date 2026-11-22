@@ -1,3 +1,1 @@
-// aggregate-regression-escalate.cjs - placeholder (Zion Agent 2026-09-20): stop module-not-found failures. No-op.
-console.log('aggregate-regression-escalate.cjs placeholder: nothing to do.');process.exit(0);
-
+console.log("stub: automation/aggregate-regression-escalate.cjs no-op - automation paused post-P0");

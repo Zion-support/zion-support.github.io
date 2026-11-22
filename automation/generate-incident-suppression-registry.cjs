@@ -1,3 +1,4 @@
-// generate-incident-suppression-registry.cjs - placeholder (Zion Agent 2026-09-20): stop module-not-found failures. No-op.
-console.log('generate-incident-suppression-registry.cjs placeholder: nothing to do.');process.exit(0);
-
+require('./reliability-reports.cjs').main('suppression').catch(error => {
+  console.error(error.message);
+  process.exitCode = 1;
+});

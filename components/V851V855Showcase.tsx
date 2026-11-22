@@ -202,7 +202,7 @@ export default function V851V855Showcase() {
             Schedule a demo of our Emerging Technologies Suite today
           </p>
           <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-300">
-            <span>📞 +1 302 464 0950</span>
+            <span>📞 +55 11 97614-0076</span>
             <span>✉️ kleber@ziontechgroup.com</span>
             <span>📍 364 E Main St STE 1008, Middletown DE 19709</span>
           </div>

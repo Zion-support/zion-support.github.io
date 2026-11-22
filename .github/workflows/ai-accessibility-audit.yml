@@ -1,0 +1,116 @@
+name: AI Accessibility Audit
+
+permissions:
+  contents: read
+  pull-requests: write
+
+concurrency:
+  group: ai-a11y-audit-${{ github.ref }}
+  cancel-in-progress: true
+
+"on":
+  pull_request:
+    branches: [main]
+    paths:
+      - 'app/**'
+      - 'src/**'
+      - 'components/**'
+  schedule:
+    - cron: '0 8 * * 2'
+  workflow_dispatch:
+
+env:
+  NODE_OPTIONS: '--max-old-space-size=8192'
+
+jobs:
+  accessibility-audit:
+    name: Accessibility Audit
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      NEXT_TELEMETRY_DISABLED: "1"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
+        with:
+          node-version-file: '.nvmrc'
+          cache: npm
+          cache-dependency-path: package-lock.json
+
+      - name: Install dependencies
+        run: npm ci --prefer-offline --no-audit --fund=false
+
+      # Full `npm run build` removed: the 125k-file tree needs >16GB heap and
+      # OOMs (exit 134) on GitHub-hosted 15GB runners. The audit targets the
+      # committed static mirror in public/ (the same HTML GitHub Pages serves).
+      - name: Validate source (rsc guard; full build moved to Deploy on Push)
+        run: |
+          set -euo pipefail
+          npm run rsc:guard
+
+      - name: Install Playwright chromium
+        continue-on-error: true
+        run: npx playwright install chromium
+
+      - name: Serve static mirror and run axe audit
+        id: audit
+        run: |
+          npx serve public -l 3000 > /tmp/a11y-serve.log 2>&1 &
+          SERVER_PID=$!
+          for i in $(seq 1 30); do
+            if curl -sf -o /dev/null http://localhost:3000/; then
+              echo "Static server ready"
+              break
+            fi
+            sleep 1
+          done
+
+          node scripts/checks/a11y-static-audit.cjs
+          STATUS=$?
+
+          kill $SERVER_PID || true
+          exit $STATUS
+
+      - name: Comment on PR
+        if: github.event_name == 'pull_request'
+        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8.0.0
+        with:
+          script: |
+            const total = '${{ steps.audit.outputs.total }}';
+            const emoji = total === '0' ? '\U0001F7E2' : '\U0001F534';
+            const body = `### ${emoji} Accessibility Audit
+
+            **${total}** accessibility violation(s) detected across key pages.
+
+            > Run #${context.runNumber} on \`${context.sha.substring(0, 7)}\``;
+
+            const { data: comments } = await github.rest.issues.listComments({
+              ...context.repo,
+              issue_number: context.issue.number,
+            });
+
+            const existing = comments.find(c =>
+              c.user.type === 'Bot' && c.body.includes('### ') && c.body.includes('Accessibility Audit')
+            );
+
+            if (existing) {
+              await github.rest.issues.updateComment({
+                ...context.repo,
+                comment_id: existing.id,
+                body,
+              });
+            } else {
+              await github.rest.issues.createComment({
+                ...context.repo,
+                issue_number: context.issue.number,
+                body,
+              });
+            }
+
+      - name: Warn on critical violations
+        if: steps.audit.outputs.total != '0'
+        run: |
+          echo "::warning::Found ${{ steps.audit.outputs.total }} accessibility violation(s). Review the audit summary."

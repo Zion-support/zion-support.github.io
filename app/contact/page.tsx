@@ -9,7 +9,8 @@ export const metadata = {
 const quickActions = [
   { label: 'Request Proposal', href: 'mailto:kleber@ziontechgroup.com?subject=Proposal%20Request%20-%20Zion%20Tech%20Group', icon: '📄' },
   { label: 'Our Services', href: '/services/', icon: '🧩' },
-  { label: 'Call Now', href: 'tel:+13024640950', icon: '📞' },
+  { label: 'Free AI Discovery', href: '/discovery', icon: '🎯' },
+  { label: 'Call Now', href: 'tel:+130****0950', icon: '📞' },
   { label: 'Book Consultation', href: 'https://calendly.com/kleber-ziontechgroup', icon: '📅' },
   { label: 'WhatsApp', href: 'https://wa.me/13024640950', icon: '💬' },
 ];

@@ -338,6 +338,9 @@ export default function AILabPage() {
             <Link href="/contact/" className="btn-primary text-lg px-10 py-4">
               ⚡ Get Your Custom Proposal
             </Link>
+            <Link href="/discovery" className="btn-secondary text-lg px-10 py-4">
+              🎯 Free AI Discovery
+            </Link>
             <Link href="/contact/" className="btn-secondary text-lg px-10 py-4">
               ✉️ Contact Sales
             </Link>

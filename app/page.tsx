@@ -8,6 +8,11 @@ import AnimatedCounter from '@/components/AnimatedCounter';
 import ServiceBrowser from '@/components/ServiceBrowser';
 import ServiceSpotlight from '@/components/ServiceSpotlight';
 import ServiceGridWithSearch from '@/components/ServiceGridWithSearch';
+import AppsNetworkShowcase from '@/components/AppsNetworkShowcase';
+import ResultsRoiSection from '@/components/ResultsRoiSection';
+import DiscoveryBenefits from '@/components/DiscoveryBenefits';
+import MultiVendorMaintenance from '@/components/MultiVendorMaintenance';
+import ClientPortalSection from '@/components/ClientPortalSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import ContactFunnel from '@/components/ContactFunnel';
 import ServiceCounter from '@/components/ServiceCounter';
@@ -15,7 +20,8 @@ import FloatingActionDock from '@/components/FloatingActionDock';
 import ServiceMatchQuiz from '@/components/ServiceMatchQuiz';
 import AgentsMonitoring from '@/components/AgentsMonitoring';
 import NavigationQuickLinks from '@/components/NavigationQuickLinks';
-import { homepageFeaturedApps, APPS_NETWORK_HUB } from './data/appsNetwork';
+import GeoAnswer from '@/components/GeoAnswer';
+import { appsNetworkCatalog, homepageFeaturedApps, APPS_NETWORK_HUB } from './data/appsNetwork';
 
 // Category accent color for showcase cards (maps category key → gradient)
 // Category accent color for showcase card styles (static RGBA + hex)
@@ -337,6 +343,14 @@ export default function HomePage() {
           })
         }}
       />
+      <GeoAnswer
+        heading="What is Zion Tech Group?"
+        answer="Zion Tech Group is a US-based AI, IT, cloud, security, data, automation, and micro-SaaS company headquartered in Middletown, Delaware. We design and deliver production-ready AI and IT solutions for businesses of all sizes — from AI implementation and managed IT to free developer tools, micro-SaaS products, and strategic consulting."
+        for={['Mid-market companies', 'IT and engineering leaders', 'Small-to-medium businesses', 'Healthcare & finance teams', 'Startups & scale-ups']}
+        features={['Product-led free tools (28+ browser-based utilities)', '16,000+ packaged AI/IT service catalog', 'Free online Discovery assessment', 'AI agent coordination & automation', 'Micro-SaaS products with 99.9% SLA']}
+        ctaHref="/discovery/"
+        ctaCopy="Run free AI Discovery →"
+      />
       {/* ── Hero ── */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_30%,rgba(120,50,200,0.18),rgba(20,10,40,0.92))]" />
@@ -463,6 +477,187 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── Free Discovery — always online, no commitment ── */}
+      <section className="py-14 bg-gradient-to-b from-slate-950 via-emerald-950/20 to-slate-950 border-y border-emerald-500/20">
+        <div className="container-page">
+          <div className="text-center max-w-4xl mx-auto">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-300 text-sm mb-6">
+              <span className="text-green-400">●</span> Always Free · Online · No Commitment
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+              Free AI Discovery — Map Your Opportunity in Minutes
+            </h2>
+            <p className="text-slate-300 text-lg mb-8 max-w-3xl mx-auto leading-relaxed">
+              Answer a short questionnaire and get an instant, personalized report with AI/IT recommendations,
+              app suggestions, and a rollout plan — completely free. No credit card, no sales call required.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4 mb-8">
+              <Link href="/discovery/" className="btn-primary text-lg px-10 py-4">
+                🚀 Start Free Discovery Now →
+              </Link>
+              <Link href="/discovery" className="btn-secondary text-lg px-10 py-4">
+                📄 Discovery $99 (Deep Dive)
+              </Link>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-left">
+              <div className="bg-slate-900/60 rounded-xl p-5 border border-emerald-500/20">
+                <div className="text-2xl mb-2">⚡</div>
+                <h3 className="text-white font-semibold mb-1">Instant Report</h3>
+                <p className="text-slate-400 text-sm">Get your AI opportunity map immediately after completing the questionnaire.</p>
+              </div>
+              <div className="bg-slate-900/60 rounded-xl p-5 border border-emerald-500/20">
+                <div className="text-2xl mb-2">🔒</div>
+                <h3 className="text-white font-semibold mb-1">No Commitment</h3>
+                <p className="text-slate-400 text-sm">Free discovery with no obligation. Your data stays in your browser.</p>
+              </div>
+              <div className="bg-slate-900/60 rounded-xl p-5 border border-emerald-500/20">
+                <div className="text-2xl mb-2">📋</div>
+                <h3 className="text-white font-semibold mb-1">Actionable Plan</h3>
+                <p className="text-slate-400 text-sm">Receive app recommendations, ROI estimates, and a step-by-step pilot plan.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Quick Access — Find What You Need ── */}
+      <section className="py-14 bg-slate-900/30 border-y border-slate-800/60">
+        <div className="container-page">
+          <div className="flex items-center gap-3 mb-8">
+            <span className="text-2xl">⚡</span>
+            <div>
+              <h2 className="text-2xl font-bold text-white">Quick Access</h2>
+              <p className="text-slate-400 text-sm">Find what you need — fast</p>
+            </div>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
+            {[
+              { name: 'AI Lab', href: '/ai', emoji: '🧪', color: 'from-purple-500/20 to-indigo-500/20' },
+              { name: 'Services', href: '/services', emoji: '⚙️', color: 'from-blue-500/20 to-cyan-500/20' },
+              { name: 'Tools', href: '/tools/service-comparison', emoji: '🔧', color: 'from-emerald-500/20 to-teal-500/20' },
+              { name: 'Blog', href: '/blog', emoji: '📝', color: 'from-sky-500/20 to-indigo-500/20' },
+              { name: 'Industries', href: '/industries', emoji: '🏭', color: 'from-amber-500/20 to-orange-500/20' },
+              { name: 'Solutions', href: '/solutions', emoji: '🎯', color: 'from-pink-500/20 to-rose-500/20' },
+              { name: 'Contact', href: '/contact', emoji: '📞', color: 'from-red-500/20 to-orange-500/20' },
+              { name: 'Free Discovery', href: '/discovery/', emoji: '🔍', color: 'from-green-500/20 to-emerald-500/20' },
+              { name: 'Pricing', href: '/pricing', emoji: '💰', color: 'from-amber-500/20 to-yellow-500/20' },
+              { name: 'FAQ', href: '/faq', emoji: '❓', color: 'from-slate-500/20 to-gray-500/20' },
+              { name: 'About', href: '/about', emoji: 'ℹ️', color: 'from-violet-500/20 to-purple-500/20' },
+              { name: 'Partners', href: '/partners', emoji: '🤝', color: 'from-cyan-500/20 to-blue-500/20' },
+            ].map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="group relative overflow-hidden rounded-xl border border-slate-800/80 bg-slate-900/60 p-4 text-slate-300 hover:text-white hover:border-purple-500/40 transition-all hover:scale-[1.02] hover:shadow-lg"
+              >
+                <div className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none`}
+                  style={{ background: `linear-gradient(135deg, rgba(139,92,246,0.08), transparent 60%)` }}
+                />
+                <div className="relative text-center">
+                  <span className="text-3xl block mb-2">{item.emoji}</span>
+                  <span className="text-sm font-medium text-white group-hover:text-purple-300 transition-colors block">{item.name}</span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Browse by Business Goal ── */}
+      <section className="py-14">
+        <div className="container-page">
+          <div className="flex items-center gap-3 mb-8">
+            <span className="text-2xl">🎯</span>
+            <div>
+              <h2 className="text-2xl font-bold text-white">Browse by Business Goal</h2>
+              <p className="text-slate-400 text-sm">What are you trying to achieve?</p>
+            </div>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {[
+              { name: 'Reduce Costs', href: '/services/?category=cloud', emoji: '💰', desc: 'Cloud cost optimization, FinOps, automated operations, infrastructure efficiency', cats: ['Cloud', 'FinOps', 'Automation'], color: 'from-emerald-500/20 to-teal-500/20' },
+              { name: 'Increase Revenue', href: '/services/?category=ai', emoji: '📈', desc: 'AI-driven sales, personalization, pricing intelligence, customer acquisition', cats: ['AI', 'Data', 'Marketing'], color: 'from-green-500/20 to-emerald-500/20' },
+              { name: 'Improve Security', href: '/services/?category=security', emoji: '🔐', desc: 'Threat detection, compliance automation, identity management, zero trust', cats: ['Security', 'Compliance', 'Identity'], color: 'from-red-500/20 to-orange-500/20' },
+              { name: 'Scale Operations', href: '/services/?category=devops', emoji: '⚙️', desc: 'DevOps automation, cloud infrastructure, IT managed services, monitoring', cats: ['DevOps', 'Cloud', 'IT'], color: 'from-cyan-500/20 to-blue-500/20' },
+              { name: 'Automate Workflows', href: '/services/?category=automation', emoji: '🤖', desc: 'RPA, AI workflow automation, document processing, business process automation', cats: ['Automation', 'RPA', 'AI'], color: 'from-pink-500/20 to-rose-500/20' },
+              { name: 'Enhance CX', href: '/services/?category=ai', emoji: '😊', desc: 'Chatbots, voice agents, personalization, omnichannel support, customer analytics', cats: ['AI', 'Data', 'CX'], color: 'from-purple-500/20 to-pink-500/20' },
+            ].map((goal) => (
+              <Link
+                key={goal.href}
+                href={goal.href}
+                className="group relative overflow-hidden rounded-2xl border border-slate-800/80 bg-slate-900/60 p-6 text-slate-300 hover:text-white hover:border-purple-500/40 transition-all hover:scale-[1.01] hover:shadow-lg hover:shadow-purple-500/5"
+              >
+                <div className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none`}
+                  style={{ background: `linear-gradient(135deg, rgba(139,92,246,0.08), transparent 60%)` }}
+                />
+                <div className="relative">
+                  <div className="flex items-start gap-4">
+                    <span className={`text-3xl shrink-0 inline-block w-12 h-12 rounded-xl bg-gradient-to-br ${goal.color} flex items-center justify-center`}>
+                      {goal.emoji}
+                    </span>
+                    <div className="min-w-0">
+                      <h3 className="text-lg font-semibold text-white mb-1 group-hover:text-purple-300 transition-colors">{goal.name}</h3>
+                      <p className="text-slate-400 text-sm leading-relaxed mb-3">{goal.desc}</p>
+                      <div className="flex flex-wrap gap-1.5">
+                        {goal.cats.map((c) => (
+                          <span key={c} className="px-2 py-0.5 rounded-full bg-slate-800 text-slate-400 text-xs">{c}</span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Popular Free Tools ── */}
+      <section className="py-14 bg-slate-900/30 border-y border-slate-800/60">
+        <div className="container-page">
+          <div className="flex items-center gap-3 mb-8">
+            <span className="text-2xl">🛠️</span>
+            <div>
+              <h2 className="text-2xl font-bold text-white">Popular Free Tools</h2>
+              <p className="text-slate-400 text-sm">Try before you buy — no login required</p>
+            </div>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { name: 'ROI Calculator', href: '/tools/roi-calculator', emoji: '💰', desc: 'Estimate payback and TCO of AI and IT projects' },
+              { name: 'AI Service Router', href: '/tools/ai-service-router', emoji: '🧠', desc: 'Smart model routing, caching & failover' },
+              { name: 'SSL Checker', href: '/tools/ssl-checker', emoji: '🔒', desc: 'Verify SSL certificate configuration and expiration' },
+              { name: 'Port Scanner', href: '/tools/port-scanner', emoji: '🔌', desc: 'Scan open ports on your servers and networks' },
+              { name: 'JSON Formatter', href: '/tools/json-formatter', emoji: '📋', desc: 'Format, validate, and beautify JSON data' },
+              { name: 'Health Check', href: '/tools/health-check', emoji: '❤️', desc: 'Check the health and performance of your services' },
+            ].map((tool) => (
+              <Link
+                key={tool.href}
+                href={tool.href}
+                className="group relative overflow-hidden rounded-xl border border-slate-800/80 bg-slate-900/60 p-5 text-slate-300 hover:text-white hover:border-emerald-500/40 transition-all hover:scale-[1.01] hover:shadow-lg hover:shadow-emerald-500/5"
+              >
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" style={{ background: 'linear-gradient(135deg, rgba(16,185,129,0.08), transparent 60%)' }} />
+                <div className="relative">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-2xl">{tool.emoji}</span>
+                    <span className="text-xs px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-300">Free</span>
+                  </div>
+                  <h3 className="text-base font-semibold text-white mb-1 group-hover:text-emerald-300 transition-colors">{tool.name}</h3>
+                  <p className="text-slate-400 text-sm leading-relaxed">{tool.desc}</p>
+                  <div className="mt-3 flex items-center gap-1 text-emerald-400 text-sm font-medium group-hover:gap-2 transition-all">
+                    Open tool →
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+          <div className="mt-6 text-center">
+            <Link href="/tools-hub" className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl border border-slate-700 hover:border-emerald-500/40 text-slate-300 hover:text-white text-sm transition-all">
+              View all tools in Tools Hub →
+            </Link>
+          </div>
+        </div>
+      </section>
 
       {/* ── AI Agent Monitoring — Live Fleet Banner (Priority) ── */}
       <AgentsMonitoring />
@@ -663,6 +858,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* ── Free Discovery — benefits + sourced benchmarks ── */}
+      <DiscoveryBenefits />
 
       {/* ── Service Match Quiz — Interactive AI Tool ── */}
       <ServiceMatchQuiz />
@@ -1220,6 +1418,18 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── Apps Network — link to the Zion apps ── */}
+      <AppsNetworkShowcase />
+
+      {/* ── Industry benchmarks (third-party, sourced) ── */}
+      <ResultsRoiSection />
+
+      {/* ── Multi-vendor maintenance ── */}
+      <MultiVendorMaintenance />
+
+      {/* ── Client portal ── */}
+      <ClientPortalSection />
+
       {/* ── Service Search — find any of {serviceCount}+ services ── */}
       <ServiceGridWithSearch />
 
@@ -1273,27 +1483,38 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── Zion Apps Network — product apps + path calculators ── */}
-      <section id="apps-network" className="py-16 border-t border-slate-800 bg-gradient-to-b from-slate-950 via-purple-950/10 to-slate-950">
+      <section className="py-16 border-t border-slate-800">
         <div className="container-page">
-          <div className="flex items-center justify-between mb-8">
-            <div>
-              <h2 className="text-2xl font-bold text-white mb-2">Free apps &amp; calculators — interlinked</h2>
-              <p className="text-sm text-slate-400">
-                Path tools on this domain and product apps from the GitHub constellation. Every card links to the app
-                and back into the <Link href="/apps-network/" className="text-purple-300 hover:text-pink-300">network hub</Link>.
-              </p>
-            </div>
-            <Link href="/apps-network/" className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-purple-600 text-white text-sm font-medium hover:bg-purple-500 transition-colors">
-              View all apps <span>→</span>
-            </Link>
+          <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              { slug: 'services-hub', name: 'Services Hub', href: '/services-hub/', emoji: '📦', description: 'End-to-end services portal: discovery, engagement, delivery, and managed support.' },
+              { slug: 'zion-ai-chatbot-builder', name: 'Zion AI Chatbot Builder', href: '/zion-ai-chatbot-builder/', emoji: '🤖', description: 'No-code AI chatbot builder for customer service, support, and lead capture.' },
+              { slug: 'zion-ai-hour-tracker', name: 'Zion AI Hour Tracker', href: '/zion-ai-hour-tracker/', emoji: '⏱️', description: 'AI-assisted time tracking with auto-categorization and utilization auditing.' },
+              { slug: 'zion-ai-governance-checklist', name: 'Zion AI Governance Checklist', href: '/zion-ai-governance-checklist/', emoji: '🛡️', description: 'Practical AI governance: data residency, model risk, human oversight, compliance.' },
+            ].map(app => (
+              <Link
+                key={app.slug}
+                href={app.href}
+                className="group block rounded-xl border border-slate-800 bg-slate-900/50 hover:bg-slate-800/80 hover:border-purple-500/30 p-5 transition-all"
+              >
+                <div className="text-2xl mb-2">{app.emoji}</div>
+                <h3 className="text-base font-semibold text-white group-hover:text-purple-300 transition-colors">{app.name}</h3>
+                <p className="text-xs text-slate-400 mt-1 leading-relaxed line-clamp-2">{app.description}</p>
+                <span className="inline-block mt-3 text-xs text-purple-300">Open {app.href} →</span>
+              </Link>
+            ))}
           </div>
-
-          {/* Featured apps grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+        </div>
+      </section>
+      <section className="py-16 border-t border-slate-800">
+        <div className="container-page">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {homepageFeaturedApps.map((app) => (
-              <Link key={app.slug} href={app.href} className="block rounded-xl border border-slate-800 bg-slate-900/50 p-5 hover:border-purple-500/40 transition-colors">
-
+              <Link
+                key={app.slug}
+                href={app.href}
+                className="group block rounded-xl border border-slate-800 bg-slate-900/50 hover:bg-slate-800/80 hover:border-purple-500/30 p-5 transition-all"
+              >
                 <p className="text-[10px] uppercase tracking-wider text-purple-300/80 font-semibold mb-2">{app.group}</p>
                 <h3 className="text-base font-semibold text-white group-hover:text-purple-300 transition-colors">{app.name}</h3>
                 <p className="text-xs text-slate-500 mt-1 leading-relaxed line-clamp-2">{app.description}</p>
@@ -1301,158 +1522,48 @@ export default function HomePage() {
               </Link>
             ))}
           </div>
-
-          {/* Category groups */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
-            <div className="rounded-xl border border-slate-800 bg-slate-900/30 p-6">
-              <h3 className="text-lg font-bold text-white mb-4">🧠 AI Product Apps</h3>
-              <div className="flex flex-wrap gap-2">
-                {[
-                  {{ name: 'AI Agent Swarm', href: '/zion-ai-agent-swarm/' }},
-                  {{ name: 'Multi-Agent Orchestrator', href: '/multi-agent-orchestrator/' }},
-                  {{ name: 'AI Service Router', href: '/ai-service-router/' }},
-                  {{ name: 'AI Content Strategy', href: '/ai-content-strategy-engine/' }},
-                  {{ name: 'AI SEO Generator', href: '/ai-seo-content-generator/' }},
-                  {{ name: 'AI Lead Generator', href: '/zion-ai-lead-generator/' }},
-                  {{ name: 'AI Fraud Detection', href: '/ai-fraud-detection/' }},
-                  {{ name: 'AI Recommendation Engine', href: '/ai-recommendation-engine/' }},
-                ].map((app) => (
-                  <Link key={app.href} href={app.href} className="px-3 py-1.5 rounded-lg bg-purple-600/20 text-purple-300 text-xs hover:bg-purple-600/30 transition-colors">
-                    {app.name}
-                  </Link>
-                ))}
-              </div>
-            </div>
-            <div className="rounded-xl border border-slate-800 bg-slate-900/30 p-6">
-              <h3 className="text-lg font-bold text-white mb-4">💰 Money &amp; FinOps</h3>
-              <div className="flex flex-wrap gap-2">
-                {[
-                  {{ name: 'ROI Calculator', href: '/roi-calc/' }},
-                  {{ name: 'Token Cost', href: '/token-cost/' }},
-                  {{ name: 'FinOps Autopilot', href: '/finops-autopilot/' }},
-                  {{ name: 'Cloud Waste', href: '/cloud-waste/' }},
-                  {{ name: 'Pricing Calculator', href: '/pricing-calculator/' }},
-                  {{ name: 'FinOps Estimator', href: '/finops-estimator/' }},
-                  {{ name: 'AI Cloud Cost Opt.', href: '/ai-first-cloud-cost-optimization/' }},
-                ].map((app) => (
-                  <Link key={app.href} href={app.href} className="px-3 py-1.5 rounded-lg bg-green-600/20 text-green-300 text-xs hover:bg-green-600/30 transition-colors">
-                    {app.name}
-                  </Link>
-                ))}
-              </div>
-            </div>
-            <div className="rounded-xl border border-slate-800 bg-slate-900/30 p-6">
-              <h3 className="text-lg font-bold text-white mb-4">🔧 Ops &amp; Incidents</h3>
-              <div className="flex flex-wrap gap-2">
-                {[
-                  {{ name: 'Incident Cost', href: '/incident-cost/' }},
-                  {{ name: 'AI Incident Commander', href: '/zion-ai-incident-commander/' }},
-                  {{ name: 'Change Risk', href: '/change-risk/' }},
-                  {{ name: 'Ops Runbook AI', href: '/ops-runbook-ai/' }},
-                  {{ name: 'Agents Monitoring', href: '/agents-monitoring/' }},
-                  {{ name: 'SLA Calculator', href: '/sla-calculator/' }},
-                ].map((app) => (
-                  <Link key={app.href} href={app.href} className="px-3 py-1.5 rounded-lg bg-red-600/20 text-red-300 text-xs hover:bg-red-600/30 transition-colors">
-                    {app.name}
-                  </Link>
-                ))}
-              </div>
-            </div>
-            <div className="rounded-xl border border-slate-800 bg-slate-900/30 p-6">
-              <h3 className="text-lg font-bold text-white mb-4">🛡️ Governance &amp; Security</h3>
-              <div className="flex flex-wrap gap-2">
-                {[
-                  {{ name: 'AI Governance Checklist', href: '/ai-governance-checklist/' }},
-                  {{ name: 'AI Compliance Auditor', href: '/zion-ai-compliance-auditor/' }},
-                  {{ name: 'Security Scanning', href: '/security-scanning/' }},
-                  {{ name: 'Identity Management', href: '/identity-management/' }},
-                  {{ name: 'Prompt Shield', href: '/prompt-shield/' }},
-                  {{ name: 'Secret Notes', href: '/secret-notes/' }},
-                  {{ name: 'AI Tender Scout', href: '/ai-tender-scout/' }},
-                ].map((app) => (
-                  <Link key={app.href} href={app.href} className="px-3 py-1.5 rounded-lg bg-amber-600/20 text-amber-300 text-xs hover:bg-amber-600/30 transition-colors">
-                    {app.name}
-                  </Link>
-                ))}
-              </div>
-            </div>
-            <div className="rounded-xl border border-slate-800 bg-slate-900/30 p-6">
-              <h3 className="text-lg font-bold text-white mb-4">📡 Field &amp; Support</h3>
-              <div className="flex flex-wrap gap-2">
-                {[
-                  {{ name: 'Field Dispatch', href: '/field-dispatch/' }},
-                  {{ name: 'Parts Desk', href: '/parts-desk/' }},
-                  {{ name: 'Warranty Lens', href: '/warranty-lens/' }},
-                  {{ name: 'AI Lead Generator', href: '/zion-ai-lead-generator/' }},
-                  {{ name: 'Rapid Outreach', href: '/rapid-outreach/' }},
-                  {{ name: 'Sales Lead Gen Suite', href: '/sales-leadgen-suite/' }},
-                  {{ name: 'Customer Success', href: '/customer-success/' }},
-                  {{ name: 'AI CRM Integration', href: '/zion-ai-crm-integration/' }},
-                ].map((app) => (
-                  <Link key={app.href} href={app.href} className="px-3 py-1.5 rounded-lg bg-blue-600/20 text-blue-300 text-xs hover:bg-blue-600/30 transition-colors">
-                    {app.name}
-                  </Link>
-                ))}
-              </div>
-            </div>
-            <div className="rounded-xl border border-slate-800 bg-slate-900/30 p-6">
-              <h3 className="text-lg font-bold text-white mb-4">📋 Governance &amp; Bids</h3>
-              <div className="flex flex-wrap gap-2">
-                {[
-                  {{ name: 'Licitação Radar', href: '/licitacao-radar/' }},
-                  {{ name: 'RFP Readiness', href: '/rfp-readiness/' }},
-                  {{ name: 'Edital Desk', href: '/edital-desk/' }},
-                  {{ name: 'AI Tender Scout', href: '/ai-tender-scout/' }},
-                ].map((app) => (
-                  <Link key={app.href} href={app.href} className="px-3 py-1.5 rounded-lg bg-cyan-600/20 text-cyan-300 text-xs hover:bg-cyan-600/30 transition-colors">
-                    {app.name}
-                  </Link>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* Interlink map */}
-          <div className="rounded-xl border border-slate-800 bg-slate-900/30 p-6 mb-8">
-            <h3 className="text-lg font-bold text-white mb-4">🔗 Interlink Map — All Apps Connected</h3>
-            <p className="text-sm text-slate-400 mb-4">Every app in the Zion Apps Network is interlinked. Click any app to see its related apps.</p>
-            <div className="flex flex-wrap gap-2">
-              {[
-                'AI Agent Swarm', 'Multi-Agent Orchestrator', 'AI Service Router', 'AI Content Strategy',
-                'AI SEO Generator', 'AI Lead Generator', 'ROI Calculator', 'Token Cost',
-                'FinOps Autopilot', 'Cloud Waste', 'Pricing Calculator', 'Incident Cost',
-                'AI Incident Commander', 'Change Risk', 'Ops Runbook AI', 'Agents Monitoring',
-                'AI Governance Checklist', 'AI Compliance Auditor', 'Security Scanning',
-                'Identity Management', 'Prompt Shield', 'Field Dispatch', 'Parts Desk',
-                'Warranty Lens', 'Licitação Radar', 'RFP Readiness', 'Edital Desk',
-                'AI Tender Scout', 'Rapid Outreach', 'Sales Lead Gen Suite',
-                'Customer Success', 'AI CRM Integration', 'Zion App Network',
-                'Service Discovery', 'Service Comparison', 'AI Workflow Automation',
-                'Process Automation', 'Blog Automation', 'Zion Tech Blog',
-                'Free AI Tools', 'AI Email Intelligence', 'Email Automation',
-                'Data Analytics Suite', 'AI Predictive Analytics', 'AI Fraud Detection',
-                'AI Recommendation Engine', 'Data Services', 'LLM Gateway',
-                'Model Observatory', 'FinOps Estimator', 'AI Cloud Cost Opt.',
-                'AI DevSecOps 2026', 'AI Cloud Migration 2026', 'AI Low-Code Workflow',
-                'AI Agent Services', 'AI Consulting Services', 'Zion Apps Hub',
-                'Secret Notes', 'Churn Notes', 'Zion AI Field Dispatch',
-              ].map((name) => (
-                <span key={name} className="inline-flex items-center gap-1 px-2 py-1 rounded text-xs bg-slate-800 text-slate-300">
-                  <span className="text-purple-400">↔</span> {name}
-                </span>
-              ))}
-            </div>
-          </div>
-
-          <div className="text-center py-8">
-            <Link href="/apps-network/" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-purple-600 text-white font-medium hover:bg-purple-500 transition-colors text-lg">
-              Explore the Full Apps Network →
-            </Link>
-            <p className="text-sm text-slate-500 mt-3">35,000+ services | 60+ interlinked apps | 500+ GitHub repositories</p>
+          <div className="mt-8 flex flex-wrap justify-center gap-3 text-sm">
+            {APPS_NETWORK_HUB.hubs.map((h) => (
+              <Link key={h.href} href={h.href} className="text-slate-400 hover:text-purple-300 underline-offset-2 hover:underline">
+                {h.name}
+              </Link>
+            ))}
+            <Link href="/discovery" className="text-purple-300 font-semibold hover:text-pink-300">Free Discovery →</Link>
+            <Link href="/discovery/" className="text-purple-300 font-semibold hover:text-pink-300">Discovery $99 →</Link>
           </div>
         </div>
-      </section></section>
+      </section>
 
+      {/* ── Services & Delivery — free Discovery → paid delivery funnel ── */}
+      <section id="services" className="py-16 border-t border-slate-800">
+        <div className="container-page">
+          <div className="text-center mb-10">
+            <p className="text-xs font-semibold uppercase tracking-widest text-purple-400 mb-2">Services &amp; delivery</p>
+            <h2 className="text-2xl font-bold text-white mb-3">From free discovery to paid delivery</h2>
+            <p className="text-slate-400 max-w-2xl mx-auto text-sm">
+              Start free, then move to a paid program when you are ready. Discovery is always online and free.
+            </p>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              { emoji: '🔍', title: 'Free Discovery', description: 'Online, no commitment, no charge. Maps the AI opportunity and risk check. No credit card.' },
+              { emoji: '📋', title: 'Strategy &amp; Plan', description: 'A scoped plan: use-case, readiness, roadmap and budget. Quoted before any work begins.' },
+              { emoji: '⚙️', title: 'Implementation', description: 'Build and deploy the agreed solution on a fixed scope, with documented milestones.' },
+              { emoji: '🛡️', title: 'Managed Delivery', description: 'Ongoing monitoring, support and iteration under a service agreement.' },
+            ].map(s => (
+              <div key={s.title} className="rounded-xl border border-slate-800 bg-slate-900/50 p-4">
+                <div className="text-2xl mb-2">{s.emoji}</div>
+                <h3 className="text-sm font-semibold text-white mb-1">{s.title}</h3>
+                <p className="text-xs text-slate-500 leading-relaxed">{s.description}</p>
+                <Link href="/en/plans/" className="text-xs text-purple-300 mt-2 inline-block">See plans →</Link>
+              </div>
+            ))}
+          </div>
+          <div className="mt-6 text-center text-xs text-slate-500">
+            Paid services have a separate quote and contract. Discovery is always free.
+          </div>
+        </div>
+      </section>
 
       {/* ── Free Tools & Interactive Utilities — {serviceCount}+-service catalog ── */}
       <section id="free-tools" className="py-16 border-t border-slate-800">
@@ -1574,7 +1685,38 @@ export default function HomePage() {
                   <div className="flex items-center justify-between mb-3">
                     <span className="text-2xl">{ind.emoji}</span>
                     <span className="text-xs text-slate-500 bg-slate-800/80 px-2 py-0.5 rounded-full">{ind.count}+</span>
-                  </div>
+            
+      {/* ── Lead Generation ── */}
+      <section id="lead-gen" className="py-16 border-t border-slate-800">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <p className="text-xs font-semibold uppercase tracking-widest text-purple-400 mb-2">Lead Generation</p>
+            <h2 className="text-2xl font-bold text-white mb-3">Consultant websites convert at 4.2% — top quartile at 9.1%</h2>
+            <p className="text-slate-400 max-w-2xl mx-auto text-sm leading-relaxed">
+              Our website is optimized for conversion: clear service pages, trust signals, and one primary action per page.
+              Every section is designed to move visitors toward the free discovery or paid package.
+            </p>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { emoji: '📊', title: 'Conversion Benchmark', desc: 'Consultant websites convert at 4.2% on average. Top quartile: 9.1%. Our site is optimized for the top quartile.' },
+              { emoji: '📝', title: 'Lead Magnet', desc: 'Free AI/IT Discovery — always online, always free. No commitment, no credit card, no data stored.' },
+              { emoji: '📧', title: 'Email Automation', desc: 'Follow-up sequences that nurture leads and schedule Discovery calls automatically.' },
+              { emoji: '🔗', title: 'Internal Links', desc: 'Every page links to the apps network, discovery, and plans. No dead ends, ever.' },
+              { emoji: '📱', title: 'Mobile-First', desc: 'Responsive design on every device. 92% of discovery sessions start on mobile.' },
+              { emoji: '📊', title: 'Analytics', desc: 'Track every conversion. Session recordings, heatmaps, and conversion funnel analysis.' },
+            ].map(app => (
+              <div key={app.title} className="rounded-xl border border-slate-800 bg-slate-900/50 p-5">
+                <div className="text-2xl mb-2">{app.emoji}</div>
+                <h3 className="text-sm font-semibold text-white mb-1">{app.title}</h3>
+                <p className="text-xs text-slate-400 leading-relaxed">{app.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      </div>
                   <h3 className="text-sm font-semibold text-white group-hover:text-purple-300 transition-colors mb-1 leading-snug">{ind.label}</h3>
                   <p className="text-xs text-slate-500 line-clamp-2 leading-relaxed">{ind.sample}</p>
                   <div className="mt-3 h-1 rounded-full overflow-hidden bg-slate-800">
@@ -1589,7 +1731,146 @@ export default function HomePage() {
         </div>
       </section>
     <FloatingActionDock />
+      {/* ── What's New — advertises latest improvements & AI insights ── */}
+      <section id="whats-new" className="py-20 bg-gradient-to-b from-slate-950 via-purple-950/20 to-slate-950 border-t border-slate-800">
+        <div className="container-page">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-12">
+              <p className="text-xs font-semibold uppercase tracking-widest text-purple-400 mb-2">🚀 New This Cycle</p>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-violet-400 bg-clip-text text-transparent">
+                  What's New in Zion
+                </span>
+              </h2>
+              <p className="text-slate-400 max-w-2xl mx-auto">
+                Fresh AI capabilities, live agent intelligence, and open-source tools — shipped continuously by our
+                autonomous AI fleet. Here is what just landed.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {/* Hermes Agent insights blog posts */}
+              <Link
+                href="/blog/monitoramento-frota-hermesses-agent"
+                className="group block rounded-2xl border border-purple-500/20 bg-slate-900/60 hover:bg-slate-800/70 hover:border-purple-400/40 transition-all p-6"
+              >
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="text-2xl">🤖</span>
+                  <span className="text-[10px] uppercase tracking-wider font-semibold text-purple-300 bg-purple-400/10 border border-purple-500/30 px-2 py-0.5 rounded-full">New Blog</span>
+                </div>
+                <h3 className="text-base font-semibold text-white group-hover:text-purple-300 transition-colors mb-1">Monitorando a Frota de Agentes Hermes</h3>
+                <p className="text-xs text-slate-400 leading-relaxed mb-3 line-clamp-2">How the autonomous Hermes fleet monitors service operations, quality, and uptime in real time.</p>
+                <span className="text-xs text-purple-300 font-medium">Read the article →</span>
+              </Link>
+              <Link
+                href="/blog/treinamento-certificacao-especialistas-hermesses-agent"
+                className="group block rounded-2xl border border-pink-500/20 bg-slate-900/60 hover:bg-slate-800/70 hover:border-pink-400/40 transition-all p-6"
+              >
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="text-2xl">🎓</span>
+                  <span className="text-[10px] uppercase tracking-wider font-semibold text-pink-300 bg-pink-400/10 border border-pink-500/30 px-2 py-0.5 rounded-full">New Blog</span>
+                </div>
+                <h3 className="text-base font-semibold text-white group-hover:text-pink-300 transition-colors mb-1">Treinamento & Certificação de Especialistas Hermes</h3>
+                <p className="text-xs text-slate-400 leading-relaxed mb-3 line-clamp-2">Building certified specialist capability for the Hermes autonomous agent fleet.</p>
+                <span className="text-xs text-pink-300 font-medium">Read the article →</span>
+              </Link>
+              <Link
+                href="/tools/ai-service-router/"
+                className="group block rounded-2xl border border-emerald-500/20 bg-slate-900/60 hover:bg-slate-800/70 hover:border-emerald-400/40 transition-all p-6"
+              >
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="text-2xl">🧭</span>
+                  <span className="text-[10px] uppercase tracking-wider font-semibold text-emerald-300 bg-emerald-400/10 border border-emerald-500/30 px-2 py-0.5 rounded-full">New Tool</span>
+                </div>
+                <h3 className="text-base font-semibold text-white group-hover:text-emerald-300 transition-colors mb-1">AI Service Router</h3>
+                <p className="text-xs text-slate-400 leading-relaxed mb-3 line-clamp-2">Point your need at our live {services.length}+ service catalog and get AI-ranked recommendations instantly.</p>
+                <span className="text-xs text-emerald-300 font-medium">Open the tool →</span>
+              </Link>
+            </div>
+
+            <div className="mt-12 text-center">
+              <Link href="/blog" className="btn-primary text-base px-8 py-3">📝 Read the Full Blog</Link>
+              <span className="mx-3 text-slate-600">·</span>
+              <Link href="/agents-monitoring" className="btn-secondary text-base px-8 py-3">🤖 Watch the Agents Live</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <FloatingActionDock />
     </main>
   );
 }
+
+      {/* ── Productized AI Services — fixed-scope packages ── */}
+      <section id="productized-services" className="py-16 border-t border-slate-800">
+        <div className="container-page">
+          <div className="text-center mb-10">
+            <p className="text-xs font-semibold uppercase tracking-widest text-purple-400 mb-2">Productized Services</p>
+            <h2 className="text-2xl font-bold text-white mb-3">Fixed-price AI packages — no hourly billing</h2>
+            <p className="text-slate-400 max-w-2xl mx-auto text-sm leading-relaxed">
+              Productized AI services at fixed prices. You get a defined scope, a working deliverable, and predictable cost.
+              No hourly billing, no scope creep, no open-ended projects.
+            </p>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              {
+                name: 'AI Sprint (2-4 weeks)',
+                price: '$8,000 - $35,000',
+                desc: 'Fixed-scope build: RAG chatbot, AI lead qualification, automated reporting, or workflow automation.',
+                emoji: '⚡',
+                features: ['2-4 week delivery', 'Working deliverable', 'Documentation included', 'One named owner'],
+              },
+              {
+                name: 'AI Audit / Assessment',
+                price: '$5,000 - $25,000',
+                desc: 'Full AI readiness assessment: opportunity scoring, tooling analysis, build vs. buy recommendation, roadmap.',
+                emoji: '🔍',
+                features: ['Opportunity scoring', 'Tooling analysis', 'Build vs buy recommendation', 'Implementation roadmap'],
+              },
+              {
+                name: 'AI Subscription ($3K-$15K/mo)',
+                price: '$3,000 - $15,000',
+                desc: 'Monthly retainer for live AI systems: monitoring, optimization, new use cases, and team support.',
+                emoji: '📊',
+                features: ['Monthly monitoring', 'New use case development', 'Strategy and advisory', 'Quarterly reviews'],
+              },
+              {
+                name: 'Managed Operations ($6K-$40K/mo)',
+                price: '$6,000 - $40,000',
+                desc: 'Full managed operations: 24/7 monitoring, incident response, ongoing strategy, and expansion advisory.',
+                emoji: '🛡️',
+                features: ['24/7 monitoring', 'Incident response', 'Ongoing strategy', 'Expansion advisory'],
+              },
+              {
+                name: 'Micro-SaaS Product ($99-$2K/mo)',
+                price: '$99 - $2,000',
+                desc: 'Turnkey AI product for self-serve use: calculator, quiz, or automation tool with billing and support.',
+                emoji: '🛍️',
+                features: ['Self-serve onboarding', 'Usage-based billing', 'Support included', 'Brand whitelist'],
+              },
+              {
+                name: 'White-Label Platform ($2K-$20K/mo)',
+                price: '$2,000 - $20,000',
+                desc: 'Full AI agent platform under your brand: infrastructure, agents, billing, support, and everything included.',
+                emoji: '🏗️',
+                features: ['White-label branding', 'Full infrastructure', 'Agent marketplace', 'Support team'],
+              },
+            ].map(app => (
+              <div key={app.name} className="rounded-xl border border-slate-800 bg-slate-900/50 p-5">
+                <div className="text-2xl mb-2">{app.emoji}</div>
+                <h3 className="text-sm font-semibold text-white mb-1">{app.name}</h3>
+                <p className="text-xs text-purple-300 font-medium mb-2">{app.price}</p>
+                <p className="text-xs text-slate-400 leading-relaxed mb-3">{app.desc}</p>
+                <ul className="text-xs text-slate-300 list-disc list-inside mb-3">
+                  {app.features.map(f => <li key={f}>{f}</li>)}
+                </ul>
+                <Link href="/discovery/" className="text-xs text-purple-300 hover:text-pink-300">Book Discovery →</Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
 

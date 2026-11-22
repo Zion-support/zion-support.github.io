@@ -4,6 +4,20 @@ permissions:
   pages: write
   id-token: write
 "on":
+  workflow_run:
+    workflows:
+    - CI/CD Pipeline
+    types:
+    - completed
+    branches:
+    - main
+  push:
+    branches:
+    - main
+    # Narrow race fix: war-room pulse may commit STATUS.md without intending a Pages publish.
+    # Do NOT disable war-room pulse - only stop Deploy on Push from calling deploy-pages on STATUS.md-only pushes.
+    paths-ignore:
+    - '**/STATUS.md'
   workflow_dispatch: null
 jobs:
   build:
@@ -11,7 +25,7 @@ jobs:
     timeout-minutes: 20
     env:
       NEXT_TELEMETRY_DISABLED: '1'
-      NODE_OPTIONS: '--max-old-space-size=6144'
+      NODE_OPTIONS: '--max-old-space-size=8192'
     outputs:
       sha: ${{ steps.resolve-sha.outputs.sha }}
     steps:
@@ -36,7 +50,7 @@ jobs:
       # and must not block the deploy.
       continue-on-error: true
       env:
-        NODE_OPTIONS: '--max-old-space-size=12288 --max-semi-space-size=64'
+        NODE_OPTIONS: '--max-old-space-size=4096 --max-semi-space-size=64'
         NEXT_BUILD_WORKER_COUNT: '1'
       run: npm run build
     - name: Overlay docs pages onto out/

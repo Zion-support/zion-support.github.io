@@ -1,0 +1,507 @@
+{
+  "en": {
+    "lang": "en",
+    "name": "English",
+    "title": "Find your next step in the Zion app network",
+    "description": "Choose a practical route through Zion tools, field-service resources and sector guides. Compare evidence, plan a small test and explore the source.",
+    "intro": "Start with the work you need to do. Each path connects a useful question to a tool or guide, then to the evidence you need for the next decision.",
+    "nav": "Network navigation",
+    "home": "Home",
+    "catalog": "Apps catalog",
+    "directory": "Network directory",
+    "discovery": "Free Discovery",
+    "languages": "Map language",
+    "skip": "Skip to content",
+    "eyebrow": "Zion App Network",
+    "choose": "Choose a task",
+    "collections": "Browse all guide collections",
+    "tasksTitle": "What are you working on?",
+    "tasksIntro": "Follow a short sequence. Keep the result of each step so that the next person can review your assumptions.",
+    "tasks": [
+      {
+        "title": "Evaluate an automation opportunity",
+        "description": "Describe one process, compare candidate resources and define a baseline, reviewer and stop rule for a small pilot.",
+        "links": [
+          "Describe the process in Discovery",
+          "Compare app evidence",
+          "Plan a reversible pilot"
+        ]
+      },
+      {
+        "title": "Prepare a field-service visit",
+        "description": "Collect the scope and supplier evidence, prepare the handoff, then record completion. Purchase, reservation or dispatch requires formal written client confirmation, the corresponding PO and specific Zion operational release.",
+        "links": [
+          "Review the field-service evidence guide",
+          "Prepare the visit handoff",
+          "Build the completion pack"
+        ]
+      },
+      {
+        "title": "Compare cost and service scenarios",
+        "description": "Record your own input assumptions before calculating. Compare the results with written costs and contract terms before using them in a proposal.",
+        "links": [
+          "Explore a FinOps scenario",
+          "Plan a FinOps pilot",
+          "Check tool capabilities and evidence"
+        ]
+      },
+      {
+        "title": "Prepare an operational review",
+        "description": "Structure an incident plan, review access and collect evidence for handover. These resources support preparation; they do not operate your systems.",
+        "links": [
+          "Prepare an incident plan",
+          "Review access decisions",
+          "Collect operational evidence"
+        ]
+      }
+    ],
+    "guidesTitle": "Explore a sector with a clear question",
+    "guidesIntro": "These collections explain what each linked resource provides and what still needs checking before a connected service or operational change.",
+    "guides": [
+      {
+        "title": "Energy and education",
+        "description": "Compare energy-planning and education resources, their examples and the evidence needed for a bounded pilot."
+      },
+      {
+        "title": "Infrastructure and space operations",
+        "description": "Separate local calculation demonstrations from reference pages and sample dashboards."
+      },
+      {
+        "title": "Public-sector workflows",
+        "description": "Explore service information, documents, public budgets and infrastructure planning through one defined administrative question."
+      },
+      {
+        "title": "Legal operations",
+        "description": "Compare document and workflow references, then define the professional review and source evidence your use case requires."
+      }
+    ],
+    "openGuide": "Read the guide",
+    "stepsTitle": "Keep a useful record of your test",
+    "steps": [
+      "State the question, owner and measured starting point. Choose one success measure before testing.",
+      "Use synthetic or explicitly authorized data. Record assumptions, permissions and anything the resource cannot yet do.",
+      "Save the observed result, exceptions and reviewer decision. Expand only after comparing the result with the starting point."
+    ],
+    "verify": "Use the app verification guide",
+    "capabilityTitle": "Understand the resource you open",
+    "capabilities": [
+      "A local tool calculates or organizes information in your browser; it does not establish a connection to your business systems.",
+      "A guide or demonstration helps you explore a process; a sample result is not a verified operational result.",
+      "A repository provides source to inspect. Check its implementation, license and deployment separately before relying on it."
+    ],
+    "deliveryTitle": "Start with free Discovery",
+    "delivery": "Discovery requires no card, purchase or mandatory meeting. The report appears in your browser, with copy and download options. The service requests email delivery to the validated participant and commercial@ziontechgroup.com; provider acceptance does not confirm inbox receipt. Use the manual option when needed. Paid implementation is optional and separate.",
+    "archiveTitle": "Continue your research",
+    "archiveIntro": "The original map destinations remain available below. Their language, availability and implementation vary; these links are references, not a claim that every project is a working app.",
+    "repositories": "Original source repositories",
+    "routes": "Earlier pages and service routes",
+    "external": "Earlier hosted destinations",
+    "externalNote": "These destinations were listed in the earlier map. Availability and capabilities have not been confirmed by this map release.",
+    "footer": "This map is available in five languages. The language and capabilities of each linked destination must be checked on that resource.",
+    "source": "Map source"
+  },
+  "pt": {
+    "lang": "pt-BR",
+    "name": "Português",
+    "title": "Encontre o próximo passo na rede de apps Zion",
+    "description": "Escolha um caminho prático entre ferramentas Zion, recursos de serviços de campo e guias setoriais. Compare evidências, planeje um teste e consulte o código.",
+    "intro": "Comece pelo trabalho que precisa realizar. Cada caminho conecta uma pergunta útil a uma ferramenta ou guia e às evidências necessárias para a próxima decisão.",
+    "nav": "Navegação da rede",
+    "home": "Início",
+    "catalog": "Catálogo de apps",
+    "directory": "Diretório da rede",
+    "discovery": "Discovery gratuito",
+    "languages": "Idioma do mapa",
+    "skip": "Pular para o conteúdo",
+    "eyebrow": "Rede de apps Zion",
+    "choose": "Escolher uma tarefa",
+    "collections": "Explorar todas as coleções de guias",
+    "tasksTitle": "O que você precisa preparar?",
+    "tasksIntro": "Siga uma sequência curta. Guarde o resultado de cada etapa para que a próxima pessoa possa revisar suas premissas.",
+    "tasks": [
+      {
+        "title": "Avaliar uma oportunidade de automação",
+        "description": "Descreva um processo, compare recursos candidatos e defina uma linha de base, um revisor e uma regra de parada para um piloto pequeno.",
+        "links": [
+          "Descrever o processo no Discovery",
+          "Comparar evidências dos apps",
+          "Planejar um piloto reversível"
+        ]
+      },
+      {
+        "title": "Preparar uma visita técnica",
+        "description": "Reúna escopo e evidências do fornecedor, prepare a passagem do atendimento e registre a conclusão. Compra, reserva ou despacho exige confirmação formal escrita do cliente, PO correspondente e liberação operacional específica da Zion.",
+        "links": [
+          "Consultar o guia de evidências de campo",
+          "Preparar a passagem da visita",
+          "Montar o pacote de conclusão"
+        ]
+      },
+      {
+        "title": "Comparar cenários de custo e serviço",
+        "description": "Registre suas premissas antes de calcular. Compare os resultados com custos documentados e condições contratuais antes de utilizá-los em uma proposta.",
+        "links": [
+          "Explorar um cenário FinOps",
+          "Planejar um piloto FinOps",
+          "Verificar funcionalidades e evidências"
+        ]
+      },
+      {
+        "title": "Preparar uma revisão operacional",
+        "description": "Estruture um plano de incidente, revise acessos e reúna evidências para a passagem de responsabilidade. Esses recursos apoiam a preparação; não operam seus sistemas.",
+        "links": [
+          "Preparar um plano de incidente",
+          "Revisar decisões de acesso",
+          "Reunir evidências operacionais"
+        ]
+      }
+    ],
+    "guidesTitle": "Explore um setor com uma pergunta clara",
+    "guidesIntro": "Estas coleções explicam o que cada recurso oferece e o que ainda precisa ser verificado antes de conectar um serviço ou alterar a operação.",
+    "guides": [
+      {
+        "title": "Energia e educação",
+        "description": "Compare recursos de planejamento energético e educação, seus exemplos e as evidências necessárias para um piloto delimitado."
+      },
+      {
+        "title": "Infraestrutura e operações espaciais",
+        "description": "Diferencie demonstrações de cálculo local, páginas de referência e painéis de exemplo."
+      },
+      {
+        "title": "Processos do setor público",
+        "description": "Explore informações de serviços, documentos, orçamentos públicos e planejamento de infraestrutura a partir de uma pergunta administrativa definida."
+      },
+      {
+        "title": "Operações jurídicas",
+        "description": "Compare referências de documentos e processos e defina a revisão profissional e as fontes que seu caso exige."
+      }
+    ],
+    "openGuide": "Ler o guia",
+    "stepsTitle": "Mantenha um registro útil do teste",
+    "steps": [
+      "Defina a pergunta, o responsável e a situação inicial medida. Escolha uma métrica de sucesso antes de testar.",
+      "Use dados sintéticos ou expressamente autorizados. Registre premissas, permissões e o que o recurso ainda não realiza.",
+      "Guarde o resultado observado, as exceções e a decisão do revisor. Amplie somente após comparar o resultado com a situação inicial."
+    ],
+    "verify": "Consultar o guia de verificação de apps",
+    "capabilityTitle": "Entenda o recurso que você abre",
+    "capabilities": [
+      "Uma ferramenta local calcula ou organiza informações no navegador; ela não estabelece uma conexão com os sistemas da sua empresa.",
+      "Um guia ou uma demonstração ajuda a explorar um processo; um resultado de exemplo não é um resultado operacional verificado.",
+      "Um repositório oferece código para consulta. Verifique implementação, licença e publicação separadamente antes de depender dele."
+    ],
+    "deliveryTitle": "Comece pelo Discovery gratuito",
+    "delivery": "O Discovery não exige cartão, compra ou reunião obrigatória. O relatório aparece no navegador, com opções de copiar e baixar. O serviço solicita entrega por e-mail ao participante validado e a commercial@ziontechgroup.com; aceitação pelo provedor não confirma recebimento na caixa de entrada. Use a opção manual quando necessário. A implementação paga é opcional e separada.",
+    "archiveTitle": "Continue sua pesquisa",
+    "archiveIntro": "Os destinos do mapa original continuam disponíveis abaixo. Idioma, disponibilidade e implementação variam; os links são referências e não comprovam que todo projeto é um app funcional.",
+    "repositories": "Repositórios originais de código",
+    "routes": "Páginas anteriores e rotas de serviços",
+    "external": "Destinos hospedados anteriormente listados",
+    "externalNote": "Estes destinos constavam no mapa anterior. Esta publicação do mapa não confirma sua disponibilidade ou suas funcionalidades.",
+    "footer": "Este mapa está disponível em cinco idiomas. Confira o idioma e as funcionalidades de cada destino no próprio recurso.",
+    "source": "Código do mapa"
+  },
+  "es": {
+    "lang": "es",
+    "name": "Español",
+    "title": "Encuentre el siguiente paso en la red de apps Zion",
+    "description": "Elija una ruta práctica entre herramientas Zion, recursos de servicios de campo y guías sectoriales. Compare evidencias, planifique una prueba y consulte el código.",
+    "intro": "Empiece por el trabajo que necesita realizar. Cada ruta conecta una pregunta útil con una herramienta o guía y con las evidencias necesarias para la siguiente decisión.",
+    "nav": "Navegación de la red",
+    "home": "Inicio",
+    "catalog": "Catálogo de apps",
+    "directory": "Directorio de la red",
+    "discovery": "Discovery gratuito",
+    "languages": "Idioma del mapa",
+    "skip": "Saltar al contenido",
+    "eyebrow": "Red de apps Zion",
+    "choose": "Elegir una tarea",
+    "collections": "Explorar todas las colecciones de guías",
+    "tasksTitle": "¿Qué necesita preparar?",
+    "tasksIntro": "Siga una secuencia breve. Conserve el resultado de cada paso para que la siguiente persona pueda revisar sus supuestos.",
+    "tasks": [
+      {
+        "title": "Evaluar una oportunidad de automatización",
+        "description": "Describa un proceso, compare recursos candidatos y defina una línea base, un revisor y una regla de parada para un piloto pequeño.",
+        "links": [
+          "Describir el proceso en Discovery",
+          "Comparar evidencias de las apps",
+          "Planificar un piloto reversible"
+        ]
+      },
+      {
+        "title": "Preparar una visita técnica",
+        "description": "Reúna el alcance y las evidencias del proveedor, prepare el traspaso y registre el cierre. Toda compra, reserva o despacho requiere confirmación formal escrita del cliente, la orden de compra correspondiente y la autorización operativa específica de Zion.",
+        "links": [
+          "Consultar la guía de evidencias de campo",
+          "Preparar el traspaso de la visita",
+          "Crear el paquete de cierre"
+        ]
+      },
+      {
+        "title": "Comparar escenarios de coste y servicio",
+        "description": "Registre sus supuestos antes de calcular. Compare los resultados con los costes documentados y las condiciones contractuales antes de utilizarlos en una propuesta.",
+        "links": [
+          "Explorar un escenario FinOps",
+          "Planificar un piloto FinOps",
+          "Verificar funciones y evidencias"
+        ]
+      },
+      {
+        "title": "Preparar una revisión operativa",
+        "description": "Estructure un plan de incidentes, revise los accesos y reúna evidencias para el traspaso. Estos recursos apoyan la preparación; no operan sus sistemas.",
+        "links": [
+          "Preparar un plan de incidentes",
+          "Revisar decisiones de acceso",
+          "Reunir evidencias operativas"
+        ]
+      }
+    ],
+    "guidesTitle": "Explore un sector con una pregunta clara",
+    "guidesIntro": "Estas colecciones explican qué ofrece cada recurso y qué falta verificar antes de conectar un servicio o cambiar la operación.",
+    "guides": [
+      {
+        "title": "Energía y educación",
+        "description": "Compare recursos de planificación energética y educación, sus ejemplos y las evidencias necesarias para un piloto delimitado."
+      },
+      {
+        "title": "Infraestructura y operaciones espaciales",
+        "description": "Distinga demostraciones de cálculo local, páginas de referencia y paneles de ejemplo."
+      },
+      {
+        "title": "Procesos del sector público",
+        "description": "Explore información de servicios, documentos, presupuestos públicos y planificación de infraestructuras a partir de una pregunta administrativa definida."
+      },
+      {
+        "title": "Operaciones jurídicas",
+        "description": "Compare referencias de documentos y procesos y defina la revisión profesional y las fuentes que requiere su caso."
+      }
+    ],
+    "openGuide": "Leer la guía",
+    "stepsTitle": "Conserve un registro útil de la prueba",
+    "steps": [
+      "Defina la pregunta, el responsable y el punto de partida medido. Elija una medida de éxito antes de probar.",
+      "Use datos sintéticos o expresamente autorizados. Registre supuestos, permisos y lo que el recurso todavía no realiza.",
+      "Guarde el resultado observado, las excepciones y la decisión del revisor. Amplíe solo después de comparar el resultado con el punto de partida."
+    ],
+    "verify": "Consultar la guía de verificación de apps",
+    "capabilityTitle": "Comprenda el recurso que abre",
+    "capabilities": [
+      "Una herramienta local calcula u organiza información en el navegador; no establece una conexión con los sistemas de su empresa.",
+      "Una guía o demostración ayuda a explorar un proceso; un resultado de ejemplo no es un resultado operativo verificado.",
+      "Un repositorio proporciona código para consultar. Verifique la implementación, la licencia y la publicación por separado antes de depender de él."
+    ],
+    "deliveryTitle": "Empiece con Discovery gratuito",
+    "delivery": "Discovery no exige tarjeta, compra ni reunión obligatoria. El informe aparece en el navegador, con opciones para copiar y descargar. El servicio solicita el envío por correo al participante validado y a commercial@ziontechgroup.com; la aceptación del proveedor no confirma la recepción en la bandeja de entrada. Use la opción manual cuando sea necesario. La implementación de pago es opcional y separada.",
+    "archiveTitle": "Continúe su investigación",
+    "archiveIntro": "Los destinos del mapa original siguen disponibles abajo. Su idioma, disponibilidad e implementación varían; estos enlaces son referencias y no demuestran que todos los proyectos sean apps funcionales.",
+    "repositories": "Repositorios originales de código",
+    "routes": "Páginas anteriores y rutas de servicios",
+    "external": "Destinos alojados anteriormente listados",
+    "externalNote": "Estos destinos figuraban en el mapa anterior. Esta publicación del mapa no confirma su disponibilidad ni sus funciones.",
+    "footer": "Este mapa está disponible en cinco idiomas. Consulte el idioma y las funciones de cada destino en el propio recurso.",
+    "source": "Código del mapa"
+  },
+  "fr": {
+    "lang": "fr",
+    "name": "Français",
+    "title": "Trouvez la prochaine étape dans le réseau d’apps Zion",
+    "description": "Choisissez un parcours pratique parmi les outils Zion, les ressources d’intervention et les guides sectoriels. Comparez les preuves, préparez un test et consultez le code.",
+    "intro": "Partez du travail à accomplir. Chaque parcours relie une question utile à un outil ou un guide, puis aux preuves nécessaires à la prochaine décision.",
+    "nav": "Navigation du réseau",
+    "home": "Accueil",
+    "catalog": "Catalogue des apps",
+    "directory": "Annuaire du réseau",
+    "discovery": "Discovery gratuit",
+    "languages": "Langue de la carte",
+    "skip": "Aller au contenu",
+    "eyebrow": "Réseau d’apps Zion",
+    "choose": "Choisir une tâche",
+    "collections": "Explorer toutes les collections de guides",
+    "tasksTitle": "Que souhaitez-vous préparer ?",
+    "tasksIntro": "Suivez un parcours court. Conservez le résultat de chaque étape pour permettre à la personne suivante de vérifier vos hypothèses.",
+    "tasks": [
+      {
+        "title": "Évaluer une possibilité d’automatisation",
+        "description": "Décrivez un processus, comparez les ressources candidates et définissez une référence initiale, un réviseur et une règle d’arrêt pour un petit pilote.",
+        "links": [
+          "Décrire le processus dans Discovery",
+          "Comparer les preuves des apps",
+          "Préparer un pilote réversible"
+        ]
+      },
+      {
+        "title": "Préparer une intervention sur site",
+        "description": "Réunissez le périmètre et les preuves du fournisseur, préparez la transmission et consignez la clôture. Tout achat, réservation ou déploiement d’une équipe exige la confirmation écrite formelle du client, le bon de commande correspondant et l’autorisation opérationnelle spécifique de Zion.",
+        "links": [
+          "Consulter le guide des preuves d’intervention",
+          "Préparer la transmission de l’intervention",
+          "Constituer le dossier de clôture"
+        ]
+      },
+      {
+        "title": "Comparer des scénarios de coût et de service",
+        "description": "Notez vos hypothèses avant de calculer. Comparez les résultats aux coûts documentés et aux conditions contractuelles avant de les utiliser dans une proposition.",
+        "links": [
+          "Explorer un scénario FinOps",
+          "Préparer un pilote FinOps",
+          "Vérifier les fonctions et les preuves"
+        ]
+      },
+      {
+        "title": "Préparer une revue opérationnelle",
+        "description": "Structurez un plan d’incident, examinez les accès et réunissez les preuves pour la transmission. Ces ressources aident à préparer le travail ; elles ne pilotent pas vos systèmes.",
+        "links": [
+          "Préparer un plan d’incident",
+          "Examiner les décisions d’accès",
+          "Réunir les preuves opérationnelles"
+        ]
+      }
+    ],
+    "guidesTitle": "Explorez un secteur avec une question précise",
+    "guidesIntro": "Ces collections décrivent ce que chaque ressource fournit et les vérifications restantes avant de connecter un service ou de modifier une opération.",
+    "guides": [
+      {
+        "title": "Énergie et éducation",
+        "description": "Comparez les ressources de planification énergétique et d’éducation, leurs exemples et les preuves nécessaires à un pilote délimité."
+      },
+      {
+        "title": "Infrastructure et opérations spatiales",
+        "description": "Distinguez démonstrations de calcul local, pages de référence et tableaux de bord d’exemple."
+      },
+      {
+        "title": "Processus du secteur public",
+        "description": "Explorez l’information sur les services, les documents, les budgets publics et la planification des infrastructures à partir d’une question administrative précise."
+      },
+      {
+        "title": "Opérations juridiques",
+        "description": "Comparez les références documentaires et les processus, puis définissez la revue professionnelle et les sources requises pour votre cas."
+      }
+    ],
+    "openGuide": "Lire le guide",
+    "stepsTitle": "Conservez une trace utile du test",
+    "steps": [
+      "Définissez la question, le responsable et le point de départ mesuré. Choisissez un critère de réussite avant le test.",
+      "Utilisez des données synthétiques ou expressément autorisées. Notez les hypothèses, les permissions et les fonctions que la ressource ne réalise pas encore.",
+      "Conservez le résultat observé, les exceptions et la décision du réviseur. Élargissez seulement après comparaison avec le point de départ."
+    ],
+    "verify": "Consulter le guide de vérification des apps",
+    "capabilityTitle": "Comprenez la ressource consultée",
+    "capabilities": [
+      "Un outil local calcule ou organise des informations dans votre navigateur ; il ne crée pas de connexion aux systèmes de votre entreprise.",
+      "Un guide ou une démonstration aide à explorer un processus ; un résultat d’exemple n’est pas un résultat opérationnel vérifié.",
+      "Un dépôt fournit du code à examiner. Vérifiez séparément l’implémentation, la licence et le déploiement avant de vous y fier."
+    ],
+    "deliveryTitle": "Commencez avec Discovery gratuit",
+    "delivery": "Discovery n’exige ni carte, ni achat, ni réunion obligatoire. Le rapport apparaît dans le navigateur, avec des options de copie et de téléchargement. Le service demande l’envoi par e-mail au participant validé et à commercial@ziontechgroup.com ; l’acceptation du prestataire ne confirme pas la réception dans la boîte de réception. Utilisez l’option manuelle si nécessaire. L’implémentation payante est facultative et distincte.",
+    "archiveTitle": "Poursuivez vos recherches",
+    "archiveIntro": "Les destinations de la carte originale restent disponibles ci-dessous. Leur langue, leur disponibilité et leur implémentation varient ; ces liens sont des références et ne prouvent pas que chaque projet est une app fonctionnelle.",
+    "repositories": "Dépôts de code d’origine",
+    "routes": "Pages antérieures et parcours de services",
+    "external": "Destinations hébergées précédemment listées",
+    "externalNote": "Ces destinations figuraient dans la carte précédente. Cette publication de la carte ne confirme ni leur disponibilité ni leurs fonctions.",
+    "footer": "Cette carte est disponible en cinq langues. Vérifiez la langue et les fonctions de chaque destination sur la ressource elle-même.",
+    "source": "Code de la carte"
+  },
+  "de": {
+    "lang": "de",
+    "name": "Deutsch",
+    "title": "Finden Sie den nächsten Schritt im Zion-App-Netzwerk",
+    "description": "Wählen Sie einen praktischen Weg durch Zion-Werkzeuge, Vor-Ort-Service-Ressourcen und Branchenleitfäden. Vergleichen Sie Nachweise, planen Sie einen Test und prüfen Sie den Code.",
+    "intro": "Beginnen Sie mit der anstehenden Aufgabe. Jeder Weg verbindet eine konkrete Frage mit einem Werkzeug oder Leitfaden und den Nachweisen für die nächste Entscheidung.",
+    "nav": "Netzwerknavigation",
+    "home": "Startseite",
+    "catalog": "App-Katalog",
+    "directory": "Netzwerkverzeichnis",
+    "discovery": "Kostenloses Discovery",
+    "languages": "Sprache der Übersicht",
+    "skip": "Zum Inhalt",
+    "eyebrow": "Zion-App-Netzwerk",
+    "choose": "Aufgabe auswählen",
+    "collections": "Alle Leitfadensammlungen erkunden",
+    "tasksTitle": "Was möchten Sie vorbereiten?",
+    "tasksIntro": "Folgen Sie einer kurzen Abfolge. Bewahren Sie das Ergebnis jedes Schritts auf, damit die nächste Person Ihre Annahmen prüfen kann.",
+    "tasks": [
+      {
+        "title": "Eine Automatisierungsmöglichkeit bewerten",
+        "description": "Beschreiben Sie einen Prozess, vergleichen Sie geeignete Ressourcen und legen Sie Ausgangswert, Prüfer und Abbruchregel für einen kleinen Pilotversuch fest.",
+        "links": [
+          "Den Prozess in Discovery beschreiben",
+          "App-Nachweise vergleichen",
+          "Einen reversiblen Pilotversuch planen"
+        ]
+      },
+      {
+        "title": "Einen Vor-Ort-Einsatz vorbereiten",
+        "description": "Sammeln Sie Umfang und Anbieternachweise, bereiten Sie die Übergabe vor und dokumentieren Sie den Abschluss. Kauf, Reservierung oder Entsendung erfordern die formelle schriftliche Kundenbestätigung, die zugehörige Bestellung und die spezifische operative Freigabe von Zion.",
+        "links": [
+          "Den Nachweisleitfaden für Vor-Ort-Service lesen",
+          "Die Einsatzübergabe vorbereiten",
+          "Die Abschlussdokumentation erstellen"
+        ]
+      },
+      {
+        "title": "Kosten- und Serviceszenarien vergleichen",
+        "description": "Halten Sie Ihre Annahmen vor der Berechnung fest. Vergleichen Sie Ergebnisse mit dokumentierten Kosten und Vertragsbedingungen, bevor Sie diese in einem Angebot verwenden.",
+        "links": [
+          "Ein FinOps-Szenario erkunden",
+          "Einen FinOps-Pilotversuch planen",
+          "Funktionen und Nachweise prüfen"
+        ]
+      },
+      {
+        "title": "Eine betriebliche Prüfung vorbereiten",
+        "description": "Strukturieren Sie einen Vorfallplan, prüfen Sie Zugriffe und sammeln Sie Übergabenachweise. Diese Ressourcen unterstützen die Vorbereitung; sie betreiben Ihre Systeme nicht.",
+        "links": [
+          "Einen Vorfallplan vorbereiten",
+          "Zugriffsentscheidungen prüfen",
+          "Betriebsnachweise sammeln"
+        ]
+      }
+    ],
+    "guidesTitle": "Eine Branche mit einer konkreten Frage erkunden",
+    "guidesIntro": "Diese Sammlungen erläutern, was jede verlinkte Ressource bietet und was vor einer Systemanbindung oder betrieblichen Änderung noch zu prüfen ist.",
+    "guides": [
+      {
+        "title": "Energie und Bildung",
+        "description": "Vergleichen Sie Ressourcen für Energieplanung und Bildung, deren Beispiele und die Nachweise für einen begrenzten Pilotversuch."
+      },
+      {
+        "title": "Infrastruktur und Raumfahrtbetrieb",
+        "description": "Unterscheiden Sie lokale Rechenbeispiele, Referenzseiten und Beispieldashboards."
+      },
+      {
+        "title": "Prozesse im öffentlichen Sektor",
+        "description": "Erkunden Sie Serviceinformationen, Dokumente, öffentliche Haushalte und Infrastrukturplanung anhand einer festgelegten Verwaltungsfrage."
+      },
+      {
+        "title": "Juristische Abläufe",
+        "description": "Vergleichen Sie Dokument- und Prozessreferenzen und bestimmen Sie die fachliche Prüfung und die Quellen für Ihren Anwendungsfall."
+      }
+    ],
+    "openGuide": "Leitfaden lesen",
+    "stepsTitle": "Ein nützliches Testprotokoll führen",
+    "steps": [
+      "Bestimmen Sie Frage, Verantwortliche und gemessenen Ausgangspunkt. Wählen Sie vor dem Test ein Erfolgskriterium.",
+      "Nutzen Sie synthetische oder ausdrücklich autorisierte Daten. Dokumentieren Sie Annahmen, Berechtigungen und noch fehlende Funktionen.",
+      "Bewahren Sie beobachtetes Ergebnis, Abweichungen und Prüferentscheidung auf. Erweitern Sie erst nach dem Vergleich mit dem Ausgangspunkt."
+    ],
+    "verify": "Den Leitfaden zur App-Prüfung nutzen",
+    "capabilityTitle": "Die geöffnete Ressource richtig einordnen",
+    "capabilities": [
+      "Ein lokales Werkzeug berechnet oder ordnet Informationen im Browser; es stellt keine Verbindung zu Ihren Geschäftssystemen her.",
+      "Ein Leitfaden oder eine Demonstration hilft bei der Prozesserkundung; ein Beispielergebnis ist kein verifiziertes Betriebsergebnis.",
+      "Ein Repository bietet Quellcode zur Prüfung. Prüfen Sie Implementierung, Lizenz und Bereitstellung getrennt, bevor Sie sich darauf verlassen."
+    ],
+    "deliveryTitle": "Mit kostenlosem Discovery beginnen",
+    "delivery": "Discovery erfordert weder Karte noch Kauf oder Pflichttermin. Der Bericht erscheint im Browser und kann kopiert oder heruntergeladen werden. Der Dienst fordert die E-Mail-Zustellung an den validierten Teilnehmer und commercial@ziontechgroup.com an; die Annahme durch den Anbieter bestätigt keinen Postfacheingang. Nutzen Sie bei Bedarf die manuelle Option. Eine kostenpflichtige Implementierung ist optional und getrennt.",
+    "archiveTitle": "Die Recherche fortsetzen",
+    "archiveIntro": "Die Ziele der ursprünglichen Übersicht bleiben unten verfügbar. Sprache, Verfügbarkeit und Implementierung unterscheiden sich; diese Links sind Referenzen und kein Nachweis, dass jedes Projekt eine funktionsfähige App ist.",
+    "repositories": "Ursprüngliche Quellcode-Repositories",
+    "routes": "Frühere Seiten und Servicepfade",
+    "external": "Zuvor aufgeführte gehostete Ziele",
+    "externalNote": "Diese Ziele waren in der vorherigen Übersicht aufgeführt. Diese Veröffentlichung bestätigt weder ihre Verfügbarkeit noch ihre Funktionen.",
+    "footer": "Diese Übersicht ist in fünf Sprachen verfügbar. Prüfen Sie Sprache und Funktionen jedes Ziels direkt in der jeweiligen Ressource.",
+    "source": "Quellcode der Übersicht"
+  }
+}

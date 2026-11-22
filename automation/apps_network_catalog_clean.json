@@ -1,0 +1,739 @@
+[
+ {
+  "slug": "roi-calc",
+  "name": "ROI calculator",
+  "href": "/roi-calc/",
+  "description": "Hours leaked vs Discovery / Consulting / Starter.",
+  "group": "money",
+  "related": [
+   "token-cost",
+   "finops-estimator",
+   "cloud-waste"
+  ]
+ },
+ {
+  "slug": "token-cost",
+  "name": "Token cost",
+  "href": "/token-cost/",
+  "description": "LLM spend envelope before you ship an agent.",
+  "group": "money",
+  "related": [
+   "llm-gateway",
+   "finops-estimator",
+   "roi-calc"
+  ]
+ },
+ {
+  "slug": "finops-estimator",
+  "name": "FinOps estimator",
+  "href": "/finops-estimator/",
+  "description": "Compute, storage, egress and model spend sketch.",
+  "group": "money",
+  "related": [
+   "cloud-waste",
+   "finops-autopilot",
+   "token-cost"
+  ]
+ },
+ {
+  "slug": "cloud-waste",
+  "name": "Cloud waste",
+  "href": "/cloud-waste/",
+  "description": "Idle / over-provision sketch for cloud + model lines.",
+  "group": "money",
+  "related": [
+   "finops-estimator",
+   "finops-autopilot",
+   "cloud-cost-estimator"
+  ]
+ },
+ {
+  "slug": "sla-calculator",
+  "name": "SLA calculator",
+  "href": "/sla-calculator/",
+  "description": "Allowed downtime and penalty exposure.",
+  "group": "ops",
+  "related": [
+   "incident-cost",
+   "change-risk",
+   "patch-window"
+  ]
+ },
+ {
+  "slug": "incident-cost",
+  "name": "Incident cost",
+  "href": "/incident-cost/",
+  "description": "Revenue + users + hours down → a Discovery number.",
+  "group": "ops",
+  "related": [
+   "sla-calculator",
+   "change-risk",
+   "zion-ai-incident-commander"
+  ]
+ },
+ {
+  "slug": "patch-window",
+  "name": "Patch window",
+  "href": "/patch-window/",
+  "description": "Maintenance nights for a patch batch.",
+  "group": "ops",
+  "related": [
+   "change-risk",
+   "incident-cost",
+   "sla-calculator"
+  ]
+ },
+ {
+  "slug": "change-risk",
+  "name": "Change risk",
+  "href": "/change-risk/",
+  "description": "Score change risk before a patch window.",
+  "group": "ops",
+  "related": [
+   "patch-window",
+   "incident-cost",
+   "stack-audit"
+  ]
+ },
+ {
+  "slug": "ai-governance",
+  "name": "AI governance",
+  "href": "/ai-governance-checklist/",
+  "description": "Ten controls. Live readiness score.",
+  "group": "govern",
+  "related": [
+   "prompt-shield",
+   "stack-audit",
+   "secrets-sentinel"
+  ]
+ },
+ {
+  "slug": "stack-audit",
+  "name": "Stack audit",
+  "href": "/stack-audit/",
+  "description": "Ten yes/no checks that pick the next SKU.",
+  "group": "govern",
+  "related": [
+   "ai-governance",
+   "agent-brief",
+   "rfp-readiness"
+  ]
+ },
+ {
+  "slug": "rfp-readiness",
+  "name": "RFP readiness",
+  "href": "/rfp-readiness/",
+  "description": "Score an edital / RFQ before you bid.",
+  "group": "govern",
+  "related": [
+   "edital-desk",
+   "licitacao-radar",
+   "ai-tender-scout"
+  ]
+ },
+ {
+  "slug": "prompt-library",
+  "name": "Prompt library",
+  "href": "/prompt-library/",
+  "description": "Ten enterprise IT-ops prompts, copy-ready.",
+  "group": "work",
+  "related": [
+   "agent-brief",
+   "prompt-shield",
+   "llm-gateway"
+  ]
+ },
+ {
+  "slug": "agent-brief",
+  "name": "Agent brief",
+  "href": "/agent-brief/",
+  "description": "One-pager for Discovery. Nothing stored.",
+  "group": "work",
+  "related": [
+   "prompt-library",
+   "stack-audit",
+   "llm-gateway"
+  ]
+ },
+ {
+  "slug": "discovery",
+  "name": "Free AI Discovery",
+  "href": "/discovery/",
+  "description": "Free online discovery to map your AI opportunity. No commitment.",
+  "group": "work",
+  "related": [
+   "agent-brief",
+   "stack-audit",
+   "rfp-readiness"
+  ]
+ },
+ {
+  "slug": "llm-gateway",
+  "name": "LLM Gateway",
+  "href": "/llm-gateway/",
+  "description": "Smart model routing, caching & failover for LLM deployments.",
+  "group": "ai",
+  "related": [
+   "token-cost",
+   "model-observatory",
+   "prompt-shield",
+   "finops-estimator"
+  ]
+ },
+ {
+  "slug": "prompt-shield",
+  "name": "Prompt Shield",
+  "href": "/prompt-shield/",
+  "description": "LLM security testing & prompt-injection defense.",
+  "group": "ai",
+  "related": [
+   "ai-governance",
+   "secrets-sentinel",
+   "llm-gateway"
+  ]
+ },
+ {
+  "slug": "finops-autopilot",
+  "name": "FinOps Autopilot",
+  "href": "/finops-autopilot/",
+  "description": "Cloud cost anomaly detection & rightsizing.",
+  "group": "money",
+  "related": [
+   "cloud-waste",
+   "finops-estimator",
+   "cloud-cost-estimator"
+  ]
+ },
+ {
+  "slug": "field-dispatch",
+  "name": "AI Field Dispatch",
+  "href": "/zion-ai-field-dispatch-optimizer/",
+  "description": "Roteirização e despacho inteligente de técnicos.",
+  "group": "field",
+  "related": [
+   "zion-ai-spare-parts-matcher",
+   "warranty-lens",
+   "zion-ai-rma-tracker"
+  ]
+ },
+ {
+  "slug": "licitacao-radar",
+  "name": "Licitação Radar",
+  "href": "/licitacao-radar/",
+  "description": "Monitoramento de licitações públicas no Brasil.",
+  "group": "govern",
+  "related": [
+   "rfp-readiness",
+   "edital-desk",
+   "ai-tender-scout"
+  ]
+ },
+ {
+  "slug": "zion-ai-incident-commander",
+  "name": "AI Incident Commander",
+  "href": "/zion-ai-incident-commander/",
+  "description": "Incident response orchestration and automation.",
+  "group": "ops",
+  "related": [
+   "incident-cost",
+   "ops-runbook-ai",
+   "change-risk"
+  ]
+ },
+ {
+  "slug": "model-observatory",
+  "name": "Model Observatory",
+  "href": "/model-observatory/",
+  "description": "ML/LLM observability, drift detection, cost telemetry.",
+  "group": "ai",
+  "related": [
+   "llm-gateway",
+   "token-cost",
+   "finops-autopilot"
+  ]
+ },
+ {
+  "slug": "secrets-sentinel",
+  "name": "Secrets Sentinel",
+  "href": "/secrets-sentinel/",
+  "description": "Secret scanning and leak response.",
+  "group": "govern",
+  "related": [
+   "prompt-shield",
+   "ai-governance",
+   "stack-audit"
+  ]
+ },
+ {
+  "slug": "edital-desk",
+  "name": "Edital desk",
+  "href": "/edital-desk/",
+  "description": "RFQ / TR brief. No invented hardware prices.",
+  "group": "work",
+  "related": [
+   "rfp-readiness",
+   "licitacao-radar",
+   "agent-brief"
+  ]
+ },
+ {
+  "slug": "cloud-cost-estimator",
+  "name": "Cloud cost estimator",
+  "href": "/cloud-cost-estimator/",
+  "description": "Multi-cloud compute & serverless price comparison.",
+  "group": "money",
+  "related": [
+   "cloud-waste",
+   "finops-estimator",
+   "finops-autopilot"
+  ]
+ },
+ {
+  "slug": "zion-ai-spare-parts-matcher",
+  "name": "AI Spare Parts Matcher",
+  "href": "/zion-ai-spare-parts-matcher/",
+  "description": "Match spare parts by part number, photo, and equivalence.",
+  "group": "field",
+  "related": [
+   "field-dispatch",
+   "warranty-lens",
+   "depot-stock-balancer"
+  ]
+ },
+ {
+  "slug": "warranty-lens",
+  "name": "Warranty Lens",
+  "href": "/warranty-lens/",
+  "description": "Warranty lookup by serial with coverage history.",
+  "group": "field",
+  "related": [
+   "field-dispatch",
+   "zion-ai-rma-tracker",
+   "zion-ai-spare-parts-matcher"
+  ]
+ },
+ {
+  "slug": "ops-runbook-ai",
+  "name": "Ops Runbook AI",
+  "href": "/ops-runbook-ai/",
+  "description": "Operational runbooks generated from incidents.",
+  "group": "ops",
+  "related": [
+   "zion-ai-incident-commander",
+   "incident-cost",
+   "change-risk"
+  ]
+ },
+ {
+  "slug": "ai-tender-scout",
+  "name": "AI Tender Scout",
+  "href": "/ai-tender-scout/",
+  "description": "Public-sector bid discovery & proposal support.",
+  "group": "govern",
+  "related": [
+   "licitacao-radar",
+   "rfp-readiness",
+   "edital-desk"
+  ]
+ },
+ {
+  "slug": "depot-stock-balancer",
+  "name": "Depot Stock Balancer",
+  "href": "/depot-stock-balancer/",
+  "description": "Balance inventory across depots with recommendations.",
+  "group": "field",
+  "related": [
+   "zion-ai-spare-parts-matcher",
+   "field-dispatch",
+   "warranty-lens"
+  ]
+ },
+ {
+  "slug": "zion-ai-rma-tracker",
+  "name": "AI RMA Tracker",
+  "href": "/zion-ai-rma-tracker/",
+  "description": "RMA tracking with status, deadlines, and alerts.",
+  "group": "field",
+  "related": [
+   "warranty-lens",
+   "field-dispatch",
+   "zion-ai-spare-parts-matcher"
+  ]
+ },
+ {
+  "slug": "ai-governance-checklist",
+  "name": "AI Governance Checklist",
+  "href": "/ai-governance-checklist/",
+  "description": "Ten controls. Live readiness score.",
+  "group": "govern",
+  "related": [
+   "prompt-shield",
+   "stack-audit",
+   "secrets-sentinel",
+   "model-observatory"
+  ]
+ },
+ {
+  "slug": "zion-ai-field-dispatch-optimizer",
+  "name": "AI Field Dispatch Optimizer",
+  "href": "/zion-ai-field-dispatch-optimizer/",
+  "description": "Roteirização e despacho inteligente de técnicos.",
+  "group": "field",
+  "related": [
+   "zion-ai-spare-parts-matcher",
+   "warranty-lens",
+   "zion-ai-rma-tracker",
+   "depot-stock-balancer"
+  ]
+ },
+ {
+  "slug": "zion-ai-warranty-tracker",
+  "name": "AI Warranty Tracker",
+  "href": "/zion-ai-warranty-tracker/",
+  "description": "Hardware warranty & EOSL tracking with renewal alerts.",
+  "group": "field",
+  "related": [
+   "warranty-lens",
+   "zion-ai-warranty-lifecycle",
+   "zion-ai-rma-tracker",
+   "zion-ai-spare-parts-matcher"
+  ]
+ },
+ {
+  "slug": "zion-ai-warranty-lifecycle",
+  "name": "AI Warranty Lifecycle",
+  "href": "/zion-ai-warranty-lifecycle/",
+  "description": "AI-powered warranty & EOL/EOSL lifecycle tracker for enterprise hardware.",
+  "group": "field",
+  "related": [
+   "zion-ai-warranty-tracker",
+   "warranty-lens",
+   "zion-ai-rma-tracker",
+   "zion-ai-spare-parts-matcher"
+  ]
+ },
+ {
+  "slug": "zion-ai-site-survey-planner",
+  "name": "AI Site Survey Planner",
+  "href": "/zion-ai-site-survey-planner/",
+  "description": "Pre-visit checklists, site access docs and deployment readiness packs.",
+  "group": "field",
+  "related": [
+   "zion-ai-site-survey-brief",
+   "zion-ai-field-dispatch-optimizer",
+   "warranty-lens",
+   "zion-ai-spare-parts-matcher"
+  ]
+ },
+ {
+  "slug": "zion-ai-site-survey-brief",
+  "name": "AI Site Survey Brief",
+  "href": "/zion-ai-site-survey-brief/",
+  "description": "AI-generated pre-visit briefs for data-center and field deployments.",
+  "group": "field",
+  "related": [
+   "zion-ai-site-survey-planner",
+   "zion-ai-field-dispatch-optimizer",
+   "warranty-lens",
+   "zion-ai-spare-parts-matcher"
+  ]
+ },
+ {
+  "slug": "zion-ai-sla-breach-sentinel",
+  "name": "AI SLA Breach Sentinel",
+  "href": "/zion-ai-sla-breach-sentinel/",
+  "description": "SLA monitoring, breach early-warning and credit calculation.",
+  "group": "ops",
+  "related": [
+   "sla-calculator",
+   "incident-cost",
+   "change-risk",
+   "patch-window"
+  ]
+ },
+ {
+  "slug": "zion-ai-trade-compliance-checker",
+  "name": "AI Trade Compliance Checker",
+  "href": "/zion-ai-trade-compliance-checker/",
+  "description": "Import/export classification (HS/ECCN), duties estimation.",
+  "group": "govern",
+  "related": [
+   "licitacao-radar",
+   "rfp-readiness",
+   "ai-tender-scout",
+   "edital-desk"
+  ]
+ },
+ {
+  "slug": "zion-chatbot-builder",
+  "name": "Zion Chatbot Builder",
+  "href": "/zion-chatbot-builder/",
+  "description": "Simplified chatbot builder for quick customer support deployment.",
+  "group": "ai",
+  "related": [
+   "ai-chatbot-builder",
+   "zion-ai-chatbot-builder",
+   "ai-customer-support-pro",
+   "llm-gateway"
+  ]
+ },
+ {
+  "slug": "zion-edge-ai-platform",
+  "name": "Edge AI Deployment Platform",
+  "href": "/zion-edge-ai-platform/",
+  "description": "Deploy and manage AI models at the edge for low-latency inference.",
+  "group": "ai",
+  "related": [
+   "llm-gateway",
+   "model-observatory",
+   "finops-autopilot",
+   "ai-governance-checklist"
+  ]
+ },
+ {
+  "slug": "ai-customer-support-pro",
+  "name": "AI Customer Support Pro",
+  "href": "/ai-customer-support-pro/",
+  "description": "AI-powered customer support automation and ticket management.",
+  "group": "ai",
+  "related": [
+   "ai-ticket-triage",
+   "ai-chatbot-builder",
+   "ai-rag-knowledge-platform",
+   "ai-governance-checklist"
+  ]
+ },
+ {
+  "slug": "zion-ai-customer-support-pro",
+  "name": "Zion AI Customer Support Pro",
+  "href": "/zion-ai-customer-support-pro/",
+  "description": "Enterprise AI customer support with triage, sentiment analysis, and CRM integration.",
+  "group": "ai",
+  "related": [
+   "ai-customer-support-pro",
+   "ai-ticket-triage",
+   "ai-chatbot-builder",
+   "ai-rag-knowledge-platform"
+  ]
+ },
+ {
+  "slug": "zion-ai-help-desk",
+  "name": "Zion AI Help Desk",
+  "href": "/zion-ai-help-desk/",
+  "description": "Automated help desk with ticket routing, SLA tracking, and knowledge base.",
+  "group": "ops",
+  "related": [
+   "ai-customer-support-pro",
+   "ai-ticket-triage",
+   "ai-ticket-sentinel",
+   "sla-calculator"
+  ]
+ },
+ {
+  "slug": "ai-ticket-sentinel",
+  "name": "AI Ticket Sentinel",
+  "href": "/ai-ticket-sentinel/",
+  "description": "Continuous ticket monitoring and alerting for support operations.",
+  "group": "ops",
+  "related": [
+   "ai-ticket-triage",
+   "zion-ai-help-desk",
+   "ai-customer-support-pro",
+   "agent-sla-monitor"
+  ]
+ },
+ {
+  "slug": "ai-chatbot-builder",
+  "name": "AI Chatbot Builder",
+  "href": "/ai-chatbot-builder/",
+  "description": "Build custom chatbots for customer service and support.",
+  "group": "ai",
+  "related": [
+   "ai-customer-support-pro",
+   "zion-ai-chatbot-builder",
+   "zion-ai-chatbot-analytics",
+   "llm-gateway"
+  ]
+ },
+ {
+  "slug": "zion-ai-chatbot-builder",
+  "name": "Zion AI Chatbot Builder",
+  "href": "/zion-ai-chatbot-builder/",
+  "description": "Enterprise chatbot builder with NLP, RAG, and multi-channel deployment.",
+  "group": "ai",
+  "related": [
+   "ai-chatbot-builder",
+   "ai-customer-support-pro",
+   "zion-ai-chatbot-analytics",
+   "ai-rag-knowledge-platform"
+  ]
+ },
+ {
+  "slug": "zion-ai-chatbot-analytics",
+  "name": "Zion AI Chatbot Analytics",
+  "href": "/zion-ai-chatbot-analytics/",
+  "description": "Analytics and performance monitoring for AI chatbots.",
+  "group": "ops",
+  "related": [
+   "zion-ai-chatbot-builder",
+   "ai-chatbot-builder",
+   "ai-customer-support-pro",
+   "agent-sla-monitor"
+  ]
+ },
+ {
+  "slug": "it-support-services",
+  "name": "IT Support Services",
+  "href": "/it-support-services/",
+  "description": "Managed IT support and help desk services.",
+  "group": "ops",
+  "related": [
+   "zion-ai-help-desk",
+   "ai-customer-support-pro",
+   "ai-ticket-triage",
+   "ai-ticket-sentinel"
+  ]
+ },
+ {
+  "slug": "zion-ai-sales-campaign-orbiter",
+  "name": "Zion AI Sales Campaign Orbiter",
+  "href": "/zion-ai-sales-campaign-orbiter/",
+  "description": "Automated multi-channel sales campaigns: email, WhatsApp and LinkedIn sequences with deliverability guardrails.",
+  "group": "money",
+  "related": [
+   "zion-ai-email-marketing-pro",
+   "zion-ai-lead-scoring",
+   "zion-ai-lead-enrichment",
+   "zion-ai-quote-builder"
+  ]
+ },
+ {
+  "slug": "zion-ai-billing-harmonizer",
+  "name": "Zion AI Billing Harmonizer",
+  "href": "/zion-ai-billing-harmonizer/",
+  "description": "Invoice & billing reconciliation: matching, dispute triage and revenue recognition checks.",
+  "group": "money",
+  "related": [
+   "zion-invoice-genius",
+   "zion-ai-report-generator",
+   "zion-ai-cost-optimizer",
+   "zion-email-automation"
+  ]
+ },
+ {
+  "slug": "zion-ai-workforce-optimizer",
+  "name": "Zion AI Workforce Optimizer",
+  "href": "/zion-ai-workforce-optimizer/",
+  "description": "Optics of people, shifts and overtime across service territories.",
+  "group": "ops",
+  "related": [
+   "field-dispatch",
+   "ai-ticket-triage",
+   "zion-ai-field-service-manager",
+   "zion-ai-schedule-optimizer"
+  ]
+ },
+ {
+  "slug": "zion-ai-hours-tracker",
+  "name": "Zion AI Hours Tracker",
+  "href": "/zion-ai-hours-tracker/",
+  "description": "Track field hours and billable time with automatic clock-in and validation.",
+  "group": "field",
+  "related": [
+   "field-dispatch",
+   "zion-ai-spare-parts-matcher",
+   "zion-ai-rma-tracker",
+   "zion-ai-site-survey-planner"
+  ]
+ },
+ {
+  "slug": "zion-ai-payroll-cleaner",
+  "name": "Zion AI Payroll Cleaner",
+  "href": "/zion-ai-payroll-cleaner/",
+  "description": "Consolidates timesheet, expense and commission data into clean payroll inputs.",
+  "group": "money",
+  "related": [
+   "zion-ai-billing-harmonizer",
+   "zion-ai-hours-tracker",
+   "zion-ai-workforce-optimizer",
+   "zion-ai-cost-optimizer"
+  ]
+ },
+ {
+  "slug": "zion-crm-intelligence",
+  "name": "Zion CRM Intelligence",
+  "href": "/zion-crm-intelligence/",
+  "description": "Single source of truth for accounts, contacts, pipeline and engagement history.",
+  "group": "hub",
+  "related": [
+   "zion-ai-lead-scoring",
+   "zion-ai-sales-campaign-orbiter",
+   "zion-ai-help-desk",
+   "zion-ai-quote-builder"
+  ]
+ },
+ {
+  "slug": "zion-invoice-genius",
+  "name": "Zion Invoice Genius",
+  "href": "/zion-invoice-genius/",
+  "description": "Invoice generation, smart formatting and PORTO compliance for service delivery.",
+  "group": "money",
+  "related": [
+   "zion-ai-billing-harmonizer",
+   "zion-ai-cost-optimizer",
+   "zion-ai-report-generator",
+   "zion-ai-contract-lifecycle"
+  ]
+ },
+ {
+  "slug": "zion-lead-magnet",
+  "name": "Zion Lead Magnet",
+  "href": "/zion-lead-magnet/",
+  "description": "Turn a page into a qualified, tracked lead engine.",
+  "group": "hub",
+  "related": [
+   "zion-ai-lead-scoring",
+   "zion-ai-market-intelligence",
+   "zion-ai-seo-optimizer",
+   "zion-ai-sales-campaign-orbiter"
+  ]
+ },
+ {
+  "slug": "zion-performance-monitor",
+  "name": "Zion Performance Monitor",
+  "href": "/zion-performance-monitor/",
+  "description": "Monitor site and app performance with SLO tracking and alerts.",
+  "group": "ops",
+  "related": [
+   "zion-ai-ssl-monitor",
+   "ai-api-health-monitor",
+   "zion-ai-cost-optimizer",
+   "ai-incident-timeline"
+  ]
+ },
+ {
+  "slug": "zion-project-master",
+  "name": "Zion Project Master",
+  "href": "/zion-project-master/",
+  "description": "Run delivery with automated reporting, capacity planning and risk scoring.",
+  "group": "ops",
+  "related": [
+   "zion-ai-project-portfolio",
+   "zion-ai-workforce-optimizer",
+   "zion-devops-automation",
+   "zion-ai-resource-scheduler"
+  ]
+ },
+ {
+  "slug": "zion-security-shield",
+  "name": "Zion Security Shield",
+  "href": "/zion-security-shield/",
+  "description": "Managed security monitoring: SIEM, threat intel and 24/7 response for SMBs and enterprises.",
+  "group": "govern",
+  "related": [
+   "zion-ai-ssl-monitor",
+   "secrets-sentinel",
+   "zion-security-shield"
+  ]
+ }
+]

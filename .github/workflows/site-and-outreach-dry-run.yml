@@ -5,10 +5,6 @@ name: site-and-outreach-dry-run
     branches: [main]
   workflow_dispatch:
 
-concurrency:
-  group: site-outreach-dry-run-${{ github.ref }}
-  cancel-in-progress: true
-
 jobs:
   integrity:
     runs-on: ubuntu-latest

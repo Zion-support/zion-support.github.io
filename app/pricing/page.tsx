@@ -40,6 +40,7 @@ export default function PricingPage() {
           <div className="flex flex-wrap justify-center gap-3 mt-6">
             <a href="mailto:kleber@ziontechgroup.com" className="btn-primary text-lg px-8 py-3">Email for pricing</a>
             <a href="/contact/" className="btn-secondary text-lg px-8 py-3">Request proposal</a>
+            <Link href="/discovery" className="btn-secondary text-lg px-8 py-3">Free AI Discovery</Link>
           </div>
         </div>
 
