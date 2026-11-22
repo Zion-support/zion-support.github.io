@@ -1,82 +1,88 @@
+name: Observe production webpack phases
+on:
+  workflow_dispatch:
 permissions:
   contents: read
-name: TypeScript Type Coverage & Dead Code Check
-"on":
-  push:
-    branches:
-    - main
-  pull_request:
-    branches:
-    - main
-  schedule:
-  - cron: 0 15 * * 1
-  workflow_dispatch: null
 jobs:
-  type-coverage:
-    name: Type Coverage & Dead Code
+  observe:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      issues: write
-      pull-requests: write
+    timeout-minutes: 20
+    env:
+      CI: "true"
+      NEXT_TELEMETRY_DISABLED: "1"
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v6.0.2
-      with:
-        fetch-depth: 1
-    - name: Setup Node.js
-      uses: actions/setup-node@v6.3.0
-      with:
-        node-version: '20'
-        cache: npm
-    - name: Install dependencies
-      run: npm ci
-    - name: Run TypeScript Check
-      id: type-check
-      env:
-        NODE_OPTIONS: --max-old-space-size=12288
-      run: 'npm run type-check
-
-        echo "exit_code=$?" >> $GITHUB_OUTPUT
-
-        '
-    - name: Run ESLint Check
-      id: lint-check
-      run: 'npm run lint:check || true
-
-        echo "exit_code=$?" >> $GITHUB_OUTPUT
-
-        '
-    - name: Comment on PR if failed
-      if: github.event_name == 'pull_request' && failure()
-      uses: actions/github-script@v7
-      with:
-        script: "const body = '\U0001F6A8 **TypeScript Type Check Failed**\\n\\n'\
-          \ +\n  'The TypeScript `tsc --noEmit` check found type errors. ' +\n  'Fix\
-          \ typing issues before merging.\\n\\n' +\n  'To reproduce locally:\\n' +\n\
-          \  '```\\n' +\n  'npm run type-check\\n' +\n  '```\\n';\ngithub.rest.issues.createComment({\n\
-          \  owner: context.repo.owner,\n  repo: context.repo.repo,\n  issue_number:\
-          \ context.issue.number,\n  body\n});\n"
-    - name: Open issue on main branch regression
-      if: github.event_name == 'push' && failure() && github.ref == 'refs/heads/main'
-      uses: actions/github-script@v7
-      with:
-        script: "const title = '\U0001F6A8 TypeScript Check Regression on Main';\n\
-          const body = '**TypeScript check failed on `main`.**\\n\\n' +\n  'Run `npm\
-          \ run type-check` locally to reproduce.\\n\\n' +\n  `*Commit: ${context.payload.headCommit?.id?.slice(0,\
-          \ 7) || 'N/A'}*\\n`;\n\nconst existing = await github.rest.issues.listForRepo({\n\
-          \  owner: context.repo.owner,\n  repo: context.repo.repo,\n  labels: ['type-coverage',\
-          \ 'autonomous'],\n  state: 'open'\n});\nconst already = existing.data.find((i:\
-          \ any) => i.title === title);\nif (!already) {\n  await github.rest.issues.create({\n\
-          \    owner: context.repo.owner,\n    repo: context.repo.repo,\n    title,\n\
-          \    body,\n    labels: ['type-coverage', 'autonomous', 'code-quality']\n\
-          \  });\n}\n"
-    - name: Notify Telegram on failure
-      if: failure()
-      run: "node automation/notify-telegram.js \"\U0001F6A8 TypeScript check failed\
-        \ \u2014 type errors detected. Review GitHub issues.\" || true\n"
-    - name: Notify Telegram on success (weekly digest)
-      if: success() && github.event_name == 'schedule'
-      run: "node automation/notify-telegram.js \"\u2705 Weekly TypeScript Check \u2014\
-        \ all clear.\" || true\n"
-    timeout-minutes: 60
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        with:
+          ref: 54d5f76a6b6dd1814194f2951d1752fcebc4c6b2
+          fetch-depth: 1
+          persist-credentials: false
+      - uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f
+        with:
+          node-version: '22.23.5'
+      - run: |
+          test "$(git rev-parse HEAD)" = 54d5f76a6b6dd1814194f2951d1752fcebc4c6b2
+          sha256sum next.config.mjs package-lock.json
+          npm ci --prefer-offline --no-audit --fund=false
+      - name: Instrument compiler lifecycle for this checkout
+        run: |
+          cat > "$RUNNER_TEMP/observe-webpack-phase.mjs" <<'JS'
+          export default class PhaseMeasurements {
+            apply(compiler) {
+              const name = 'PhaseMeasurements';
+              const target = compiler.name || compiler.options.name || 'unnamed';
+              let stage = 'plugin-apply';
+              let modulesStarted = 0;
+              let modulesFinished = 0;
+              function report(event) {
+                const { heapUsed, rss } = process.memoryUsage();
+                const mib = n => Math.round(n / 1048576);
+                process.stderr.write('[webpack-phase] ' + JSON.stringify({
+                  pid: process.pid, target, stage, event, modulesStarted, modulesFinished,
+                  heapMiB: mib(heapUsed), rssMiB: mib(rss)
+                }) + '\n');
+              }
+              function mark(next) { stage = next; report('phase'); }
+              report('install');
+              const timer = setInterval(() => report('sample'), 15000);
+              timer.unref();
+              for (const stageName of ['beforeRun', 'beforeCompile', 'compile', 'make', 'finishMake', 'afterCompile', 'emit']) {
+                compiler.hooks[stageName].tap(name, () => mark(stageName));
+              }
+              compiler.hooks.thisCompilation.tap(name, compilation => {
+                mark('thisCompilation');
+                compilation.hooks.buildModule.tap(name, () => {
+                  modulesStarted++;
+                  if (modulesStarted % 2048 === 0) report('modules');
+                });
+                compilation.hooks.succeedModule.tap(name, () => { modulesFinished++; });
+                for (const step of ['finishModules', 'seal', 'afterOptimizeModules', 'afterSeal']) {
+                  compilation.hooks[step].tap(name, () => mark(step));
+                }
+              });
+              for (const end of ['done', 'failed']) {
+                compiler.hooks[end].tap(name, () => { mark(end); clearInterval(timer); });
+              }
+            }
+          }
+          JS
+          python3 - <<'PY'
+          import os
+          from pathlib import Path
+          src = Path('next.config.mjs')
+          original = src.read_text()
+          needle = '    return config;'
+          if original.count(needle) != 1:
+              raise SystemExit('Unexpected webpack callback shape')
+          observer = (Path(os.environ['RUNNER_TEMP']) / 'observe-webpack-phase.mjs').as_uri()
+          src.write_text(f'import PhaseMeasurements from "{observer}";\n' + original.replace(
+              needle, '    config.plugins.push(new PhaseMeasurements());\n' + needle))
+          PY
+          node --check next.config.mjs
+          node --check "$RUNNER_TEMP/observe-webpack-phase.mjs"
+          git diff --stat
+      - name: Run the production build with phase observations
+        env:
+          NODE_OPTIONS: '--max-old-space-size=12288'
+        run: |
+          ulimit -c 0
+          /usr/bin/time -v npm run build
