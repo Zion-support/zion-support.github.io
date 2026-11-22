@@ -33,7 +33,7 @@ export default function PredictiveMaintenanceEngine() {
       ...system,
       risk: ['low', 'medium', 'high'][Math.floor(Math.random() * 3)],
       predictedFailureTime: new Date(Date.now() + Math.random() * 86400000).toISOString().split('T')[0],
-    })
+    }))
     .filter(system => system.risk !== 'low');
 
   const getRiskColor = (risk) => {
@@ -91,10 +91,10 @@ export default function PredictiveMaintenanceEngine() {
                   </div>
                   <div className="ml-2 text-xs text-red-600">⚠️ Issue detected</div>
                 </div>
-              />
-              </div>
+              )}
             </div>
           ))}
+        </div>
       </div>
 
       {issues.length > 0 && (
@@ -109,11 +109,11 @@ export default function PredictiveMaintenanceEngine() {
                 <span className="font-medium">{issue.system}</span>: 
                 <span className="ml-2 text-red-600">{issue.description}</span>
                 <span className="ml-2 text-xs text-red-500">({issue.risk} risk)</span>
-              </ul>
+              </li>
             ))}
           </ul>
         </div>
-      </div>
+      )}
 
       {isAnalyzing && (
         <div className="mt-6 p-3 bg-indigo-50 rounded-lg">
