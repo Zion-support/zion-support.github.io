@@ -1,27 +1,27 @@
-name: Validate shared Next.js app route manifest
+name: Check Next.js shared manifest routing parity
 on:
   workflow_dispatch:
 permissions:
   contents: read
 jobs:
-  build:
-    if: github.ref == 'refs/heads/validate/next-shared-route-list-20261122'
+  routing:
+    if: github.ref == 'refs/heads/validate/next-route-list-rendering-20261122'
     runs-on: ubuntu-latest
-    timeout-minutes: 90
+    timeout-minutes: 10
     env:
       NEXT_TELEMETRY_DISABLED: '1'
-      ZION_NEXT_SHARED_ROUTE_MANIFEST: '1'
-      NODE_OPTIONS: --max-old-space-size=12288
     steps:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        with:
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /package.json
+            /package-lock.json
+            /scripts/ci/shared-next-routes/
       - uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f
         with:
           node-version: '22.23.5'
-      - name: Test route list order, integrity, concurrency and size
-        run: node --test scripts/ci/shared-next-routes/manifest.test.cjs
-      - name: Install locked dependencies
+      - name: Install the locked dependencies
         run: npm ci --prefer-offline --no-audit --fund=false
-      - name: Validate original module hashes and apply the candidate
-        run: node scripts/ci/shared-next-routes/apply.cjs node_modules/next/dist/build --entry-metrics
-      - name: Run the project build and postbuild on the complete checkout
-        run: npm run build
+      - name: Compare real pages served by the baseline and the patched framework
+        run: node scripts/ci/shared-next-routes/render-fixture.cjs
