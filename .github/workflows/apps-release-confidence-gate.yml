@@ -85,7 +85,7 @@ jobs:
                 // Do not recover from a jobs API error using an older candidate:
                 // without these jobs, the latest publication is unverified.
                 const jobs = await jobsFor(run.id);
-                const deployJobs = jobs.filter(job => job.name === 'deploy');
+                const deployJobs = jobs.filter(job => job.name.startsWith('deploy') || job.name.includes('/deploy'));
                 if (!deployJobs.length) {
                   throw new Error('Missing deployment job evidence for successful run '+run.id);
                 }
