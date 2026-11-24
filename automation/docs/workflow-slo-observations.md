@@ -14,6 +14,16 @@ reconstructed. Failure rate is the number of `failure`, `timed_out`,
 conclusions plus `success`. Cancelled, skipped, neutral and active runs are counted
 separately and excluded from both measured rates and durations.
 
+Workflow identity is the positive safe-integer `workflow_id`. Names must still be
+strings that remain nonempty after control-character sanitization and trimming.
+Valid generated names can be longer than the report's display limit: Dependabot
+[run 45374839508](https://github.com/Zion-support/zion-support.github.io/actions/runs/45374839508)
+returned a 512-character name for workflow `165744176`. The JSON report limits
+only the displayed name to 500 UTF-16 code units and records `nameTruncated` when
+that label is shortened. Every valid run remains in its workflow's measurements;
+labels never determine grouping. Invalid IDs or names still fail the entire
+collection with null metrics.
+
 The duration is `updated_at - run_started_at`. Its nearest-rank p95 is an API
 timestamp elapsed-time proxy, not summed job time. Later changes to a workflow run
 can change `updated_at`. These workflow metrics do not measure production uptime

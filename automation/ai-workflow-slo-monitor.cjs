@@ -119,10 +119,14 @@ function summarize(cfg, sample) {
   const groups = new Map();
   const totals = { observedRuns: sample.runs.length, eligibleRuns: 0, failedRuns: 0, activeRuns: 0, excludedRuns: 0 };
   for (const run of sample.runs) {
-    if (!Number.isSafeInteger(run.workflow_id) || run.workflow_id <= 0 || typeof run.name !== 'string' || !run.name.trim() || run.name.length > 500) fail('invalid_workflow_identity');
+    if (!Number.isSafeInteger(run.workflow_id) || run.workflow_id <= 0 || typeof run.name !== 'string') fail('invalid_workflow_identity');
+    const name = run.name.replace(/[\u0000-\u001f\u007f]/g, ' ').trim();
+    if (!name) fail('invalid_workflow_identity');
     let group = groups.get(run.workflow_id);
     if (!group) {
-      group = { workflowId: run.workflow_id, name: run.name.replace(/[\u0000-\u001f\u007f]/g, ' '), observedRuns: 0, totalRuns: 0, failedRuns: 0, activeRuns: 0, excludedRuns: 0, durations: [] };
+      // Generated Dependabot names can exceed 500 characters. Bound the label,
+      // not the measured population; workflow_id remains the grouping identity.
+      group = { workflowId: run.workflow_id, name: name.slice(0, 500), nameTruncated: name.length > 500, observedRuns: 0, totalRuns: 0, failedRuns: 0, activeRuns: 0, excludedRuns: 0, durations: [] };
       groups.set(run.workflow_id, group);
     }
     group.observedRuns++;
