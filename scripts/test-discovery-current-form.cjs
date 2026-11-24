@@ -7,6 +7,12 @@ const assert = require('node:assert/strict');
 const html = fs.readFileSync(process.argv[2] || path.join(__dirname, '../public/discovery/index.html'), 'utf8');
 assert.equal((html.match(/<form\b[^>]*\bid=["']dq["']/gi) || []).length, 1,
   'Exactly one current questionnaire is required');
+assert.match(html, /<form\b[^>]*\bid="dq"[^>]*\bmethod="post"/i,
+  'Native fallback must never place participant data in a GET URL');
+assert.match(html, /<button\b[^>]*\btype="submit"[^>]*\bdisabled/i,
+  'Sending starts disabled until the reviewed handler is installed');
+assert.match(html, /<noscript>[\s\S]*?commercial@ziontechgroup\.com[\s\S]*?<\/noscript>/i,
+  'No-JavaScript users get an explicit manual contact path');
 assert.equal((html.match(/\bid=["']dq-results["']/gi) || []).length, 1,
   'Exactly one results region is required');
 const schemas = [...html.matchAll(/<script\b[^>]*\btype=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)]

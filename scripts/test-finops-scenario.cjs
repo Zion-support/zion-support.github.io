@@ -9,6 +9,17 @@ const prefix=l=>l==='en'?'/':'/'+l+'/';
 const route=(l,guide=false)=>prefix(l)+'apps/finops-'+(guide?'pilot-guide':'scenario-estimator')+'.html';
 const esc=s=>String(s).replace(/[&<>"']/g,x=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[x]));
 const file=(dir,u)=>path.join(dir,u.slice(1)+(u.endsWith('/')?'index.html':''));
+function checkLegacyAlias(h){
+ const target=route('en');
+ assert(h.includes('<html lang="en"'), 'Legacy FinOps entry language');
+ const refresh=[...h.matchAll(/<meta\b[^>]*http-equiv="refresh"[^>]*content="([^"]*)"[^>]*>/gi)];
+ assert.equal(refresh.length,1,'One legacy FinOps redirect');
+ assert.equal(refresh[0][1],'0;url='+target,'Legacy FinOps opens the calculator');
+ assert(h.includes('rel="canonical" href="'+origin+target+'"'),'Legacy FinOps canonical calculator');
+ assert(h.includes('href="'+target+'"'),'Legacy FinOps usable fallback link');
+ for(const locale of L)assert(h.includes('href="'+route(locale)+'"'),'Legacy FinOps language destination '+locale);
+ assert(!/finops-consulting|<script\b|<form\b/i.test(h),'Legacy FinOps has no service detour or duplicate runtime');
+}
 function checkPage(h,l,guide){
  const c=copy[l],u=route(l,guide),title=guide?c.guide:c.title;
  assert(h.includes('<html lang="'+c.lang+'"'),u+' language');
@@ -16,6 +27,8 @@ function checkPage(h,l,guide){
  assert(h.includes('rel="canonical" href="'+origin+u+'"'),u+' canonical');
  assert(!/http-equiv\s*=\s*["']refresh/i.test(h),u+' must not redirect');
  assert.equal((h.match(/<h1\b/g)||[]).length,1,u+' one h1');
+ assert(h.includes('href="/'+l+'/discovery/#dq"'),u+' matching-language Discovery form');
+ assert(!h.includes('(Português)'),u+' no cross-language fallback label');
  for(const k of L)assert(h.includes('hreflang="'+copy[k].lang+'" href="'+origin+route(k,guide)+'"'),u+' alternate '+k);
  assert.equal((h.match(/rel="alternate"/g)||[]).length,6,u+' six alternates');
  if(guide){
@@ -35,6 +48,15 @@ function checkPage(h,l,guide){
 function verify(output){
  const dir=path.resolve(output),read=u=>fs.readFileSync(file(dir,u),'utf8');
  const before=new Map(),capture=u=>{const f=file(dir,u);before.set(f,crypto.createHash('sha256').update(fs.readFileSync(f)).digest('hex'));};
+ capture('/finops-estimator/');
+ const alias=read('/finops-estimator/');
+ checkLegacyAlias(alias);
+ for(const bad of [
+  alias.replaceAll(route('en'),'/finops-consulting/'),
+  alias.replace('content="0;url='+route('en')+'"','content="0;url=/finops-estimator/"'),
+  alias.replace('<html lang="en"','<html lang="pt-BR"'),
+  alias.replaceAll('href="'+route('en')+'"','href="/missing-calculator/"')
+ ])assert.throws(()=>checkLegacyAlias(bad));
  for(const l of L){
   for(const guide of [false,true]){capture(route(l,guide));checkPage(read(route(l,guide)),l,guide);}
   for(const u of ['/'+l+'/',...['roi-calc','sla-calculator','ai-governance-checklist'].map(s=>prefix(l)+s+'/'),prefix(l)+'apps/network-learning-paths.html']){
@@ -56,7 +78,7 @@ function verify(output){
   good.replace('<html lang="en"','<html lang="pt-BR"')
  ])assert.throws(()=>checkPage(bad,'en',false));
  for(const [f,hash] of before)assert.equal(crypto.createHash('sha256').update(fs.readFileSync(f)).digest('hex'),hash,'Validation changed '+f);
- console.log('PASS: 10 real FinOps pages, 25 localized promotions, runtime, manifest, 4 negative cases; all artifact bytes preserved.');
+ console.log('PASS: 10 real FinOps pages, legacy calculator alias, 25 localized promotions, runtime, manifest, 8 negative cases; all artifact bytes preserved.');
 }
-module.exports={verify,checkPage};
+module.exports={verify,checkPage,checkLegacyAlias};
 if(require.main===module)verify(process.argv[2]||path.join(root,'out'));
