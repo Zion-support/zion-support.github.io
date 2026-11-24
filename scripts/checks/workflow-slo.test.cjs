@@ -54,6 +54,71 @@ test('keeps different workflow IDs distinct even when their names match', async 
   assert.equal(summary.flagged[0].workflowId, 11);
 });
 
+test('accepts the observed Dependabot run and bounds only its display label', async t => {
+  // Actual API response fields: https://github.com/Zion-support/zion-support.github.io/actions/runs/45374839508
+  const observed = {
+    "id": 45374839508,
+    "workflow_id": 165744176,
+    "name": "go_modules in /go/pkg/mod/github.com/!hyaxia/blogwatcher@v0.0.3, /go/pkg/mod/github.com/!puerkito!bio/goquery@v1.10.3, /go/pkg/mod/github.com/99designs/keyring@v1.2.2, /go/pkg/mod/github.com/andybalholm/cascadia@v1.3.3, /go/pkg/mod/github.com/spf13/afero@v1.11.0, /go/pkg/mod/github.com/spf13/viper@v1.19.0, /go/pkg/mod/github.com/steipete/blucli@v0.1.3, /go/pkg/mod/golang.org/x/net@v0.39.0, /go/pkg/mod/golang.org/x/net@v0.48.0 for github.com/dvsekhvalnov/jose2go, github.com/dvsekhvalnov/jose2go, github.co...",
+    "path": "dynamic/dependabot/dependabot-updates",
+    "status": "completed",
+    "conclusion": "success",
+    "created_at": "2026-11-24T10:26:37Z",
+    "run_started_at": "2026-11-24T10:26:37Z",
+    "updated_at": "2026-11-24T10:35:45Z",
+    "head_branch": "main",
+    "html_url": "https://github.com/Zion-support/zion-support.github.io/actions/runs/45374839508"
+  };
+  const root = temp(t);
+  const observedNow = new Date('2026-11-24T11:13:27.683Z');
+  assert.equal(observed.name.length, 512);
+  assert.equal(await main({ root, env, now: observedNow, client: api([observed]) }), 0);
+  const result = report(root);
+  assert.equal(result.complete, true);
+  assert.equal(result.totals.observedRuns, 1);
+  assert.equal(result.totals.eligibleRuns, 1);
+  assert.equal(result.workflows[0].workflowId, observed.workflow_id);
+  assert.equal(result.workflows[0].name, observed.name.slice(0, 500));
+  assert.equal(result.workflows[0].nameTruncated, true);
+  assert.equal(result.workflows[0].totalRuns, 1);
+  assert.equal(result.workflows[0].failedRuns, 0);
+  assert.equal(result.workflows[0].p95Minutes, 548 / 60);
+  assert.equal(result.recoveryEligible, false, 'one valid run still cannot certify recovery');
+});
+
+test('display label limits do not merge distinct workflows or change measured outcomes', () => {
+  const prefix = 'x'.repeat(500);
+  const summary = summarize(cfg, { requests: 1, runs: [
+    run(1, { workflow_id: 10, name: prefix + 'A' }),
+    run(2, { workflow_id: 11, name: prefix + 'B', conclusion: 'failure' }),
+  ] });
+  assert.equal(summary.workflows.length, 2);
+  assert.deepEqual(summary.workflows.map(w => w.name), [prefix, prefix]);
+  assert.deepEqual(summary.workflows.map(w => w.nameTruncated), [true, true]);
+  assert.deepEqual(summary.workflows.map(w => w.failedRuns), [0, 1]);
+  const normalized = summarize(cfg, { requests: 1, runs: [run(1, { name: '  Build\ncheck\u0000  ' })] });
+  assert.equal(normalized.workflows[0].name, 'Build check');
+  assert.equal(normalized.workflows[0].nameTruncated, false);
+});
+
+test('invalid workflow identities still fail closed and produce no metrics', async t => {
+  for (const patch of [
+    { workflow_id: 0 }, { workflow_id: -1 }, { workflow_id: '10' },
+    { workflow_id: Number.MAX_SAFE_INTEGER + 1 },
+    { name: null }, { name: 12 }, { name: '' }, { name: ' \n ' },
+    { name: '\u0000\u001f\u007f' },
+  ]) assert.throws(() => summarize(cfg, { runs: [run(1, patch)], requests: 1 }), /invalid_workflow_identity/);
+  const root = temp(t);
+  assert.equal(await main({ root, env, now, client: api([run(1, { workflow_id: 0, name: 'x'.repeat(512) })]) }), 1);
+  const result = report(root);
+  assert.equal(result.complete, false);
+  assert.equal(result.recoveryEligible, false);
+  assert.equal(result.totals, null);
+  assert.equal(result.workflows, null);
+  assert.equal(result.flagged, null);
+  assert.deepEqual(result.errors, [{ code: 'invalid_workflow_identity' }]);
+});
+
 test('mixed healthy and under-sampled workflows cannot certify recovery', async () => {
   const healthy = Array.from({ length: 5 }, (_, i) => run(i + 1));
   const sparse = run(6, { workflow_id: 11, conclusion: 'failure' });
