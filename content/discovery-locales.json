@@ -1,0 +1,562 @@
+{
+  "en": {
+    "title": "Free online AI Discovery",
+    "description": "Answer seven questions, view relevant resources immediately and request the same results by email for you and Zion Commercial.",
+    "eyebrow": "Free · online · no purchase required",
+    "intro": "Find a practical starting point for your automation or AI project. Your answers guide a short list of tools, guides and services; the results appear here as soon as you submit.",
+    "start": "Start the free questionnaire",
+    "questions": {
+      "industry": "What is your industry?",
+      "challenge": "What is your biggest challenge now?",
+      "size": "How many people work at your company?",
+      "speed": "When do you want results?",
+      "aiuse": "Do you already use AI tools?",
+      "outcome": "What is your priority outcome?",
+      "deploy": "Which deployment model do you prefer?"
+    },
+    "contact": "Where should we send your results?",
+    "name": "Your name",
+    "email": "Your email",
+    "consent": "When you submit, your name, email, answers and recommendations are sent to FormSubmit to request copies for you and commercial@ziontechgroup.com. Acceptance by the service does not confirm inbox delivery.",
+    "submit": "Get my free Discovery results",
+    "limitsTitle": "What this result means",
+    "limits": "These recommendations use your selected answers. They are a starting point for evaluation, not a technical audit, a price quote or a promise of savings. Do not enter passwords, confidential customer information or regulated data.",
+    "nextTitle": "Continue at your own pace",
+    "next": "Review the suggested resources and discuss your scope with Zion in writing. Consulting, Starter and Growth remain optional paid services. This questionnaire does not create a purchase or book a meeting.",
+    "plans": "View optional plans",
+    "catalog": "Explore tools and guides",
+    "home": "Home",
+    "language": "Language",
+    "noScript": "JavaScript is needed to show your personalized result. You can contact Commercial by email instead.",
+    "reportTitle": "FREE AI DISCOVERY",
+    "recommendations": "Your recommended resources",
+    "manual": "Send these results manually",
+    "duplicate": "Automatic resubmission is blocked on this page.",
+    "uncertain": "Acceptance could not be confirmed. The request may have been received; no automatic retry will be made. Check your email before using the manual option.",
+    "sending": "Submitting the email request…",
+    "accepted": "The email service accepted the request. Delivery to your inbox and Commercial’s inbox has not yet been confirmed.",
+    "rejected": "The service rejected the request. You may try again or use the manual email option.",
+    "lang": "en",
+    "fields": {
+      "name": "Name",
+      "email": "Email",
+      "industry": "Industry",
+      "challenge": "Challenge",
+      "size": "Company size",
+      "speed": "Timing",
+      "aiuse": "AI usage",
+      "outcome": "Priority outcome",
+      "deploy": "Deployment"
+    },
+    "answers": {
+      "industry": {
+        "field-service": "Field service / MSP",
+        "healthcare": "Healthcare",
+        "finance": "Finance / FinOps",
+        "energy": "Energy",
+        "retail": "Retail / e-commerce",
+        "other": "Other"
+      },
+      "challenge": {
+        "support": "Support overload",
+        "sla": "SLA / reliability",
+        "costs": "Cloud and operating costs",
+        "sales": "Sales and lead generation",
+        "data": "Data and reporting"
+      },
+      "size": {
+        "1-10": "1–10",
+        "11-100": "11–100",
+        "101-1000": "101–1,000",
+        "1000+": "1,000+"
+      },
+      "speed": {
+        "days": "Days",
+        "weeks": "Weeks",
+        "quarter": "This quarter"
+      },
+      "aiuse": {
+        "none": "Not yet",
+        "some": "Some",
+        "many": "Many"
+      },
+      "outcome": {
+        "save-time": "Save time",
+        "cut-costs": "Reduce costs",
+        "grow-revenue": "Grow revenue",
+        "reduce-risk": "Reduce risk"
+      },
+      "deploy": {
+        "saas": "SaaS",
+        "cloud": "Our cloud",
+        "onprem": "On premises / hybrid"
+      }
+    },
+    "resources": {
+      "/zion-app-network/field-visit-handoff-2026.html": "Field Visit Handoff Checklist",
+      "/ai-field-service-automation/": "Field Service Automation Services",
+      "/ai-readiness-assessment/": "AI Readiness Assessment Service",
+      "/finops-consulting/": "FinOps Consulting",
+      "/roi-calculator/": "Illustrative AI ROI Calculator",
+      "/ai-energy-optimization/": "Energy Optimization Services",
+      "/apps/cloud-cost-optimizer.html": "Cloud Cost Optimization Overview",
+      "/ai-lead-generation/": "AI Lead Generation Services",
+      "/zion-app-network/": "Zion Tools and Guides Catalog",
+      "/services/": "Full Service Catalog",
+      "/ai-powered-customer-support/": "Customer Support Automation Services",
+      "/ai-observability-and-incident-management/": "Observability and Incident Management Services",
+      "/ai-incident-response/": "Incident Response and Review Services",
+      "/lead-score-copilot/": "Lead Scoring Planning Guide",
+      "/ai-readiness-framework/": "Manual AI Readiness Guide"
+    },
+    "formTitle": "Seven questions about your priorities"
+  },
+  "pt": {
+    "title": "Discovery de IA online e gratuito",
+    "description": "Responda a sete perguntas, veja recursos relevantes imediatamente e solicite o mesmo resultado por e-mail para você e Commercial da Zion.",
+    "eyebrow": "Gratuito · online · sem obrigação de compra",
+    "intro": "Encontre um ponto de partida prático para seu projeto de automação ou IA. Suas respostas orientam uma lista curta de ferramentas, guias e serviços; os resultados aparecem aqui assim que você envia.",
+    "start": "Começar o questionário gratuito",
+    "questions": {
+      "industry": "Qual é seu setor?",
+      "challenge": "Qual é seu maior desafio agora?",
+      "size": "Quantas pessoas trabalham na empresa?",
+      "speed": "Quando você deseja resultados?",
+      "aiuse": "Você já usa ferramentas de IA?",
+      "outcome": "Qual é o resultado prioritário?",
+      "deploy": "Qual é sua preferência de implantação?"
+    },
+    "contact": "Onde devemos enviar seus resultados?",
+    "name": "Seu nome",
+    "email": "Seu e-mail",
+    "consent": "Ao enviar, seu nome, e-mail, respostas e recomendações são transmitidos ao FormSubmit para solicitar cópias para você e commercial@ziontechgroup.com. A aceitação pelo serviço não confirma a entrega nas caixas de entrada.",
+    "submit": "Receber meu Discovery gratuito",
+    "limitsTitle": "O que este resultado significa",
+    "limits": "As recomendações usam as respostas selecionadas. São um ponto de partida para avaliação, não uma auditoria técnica, uma cotação ou uma promessa de economia. Não informe senhas, informações confidenciais de clientes ou dados regulados.",
+    "nextTitle": "Continue no seu ritmo",
+    "next": "Consulte os recursos sugeridos e converse com a Zion por escrito sobre seu escopo. Consulting, Starter e Growth continuam sendo serviços pagos opcionais. Este questionário não cria uma compra nem agenda uma reunião.",
+    "plans": "Ver planos opcionais",
+    "catalog": "Explorar ferramentas e guias",
+    "home": "Início",
+    "language": "Idioma",
+    "noScript": "É necessário JavaScript para exibir seu resultado personalizado. Você também pode entrar em contato com Commercial por e-mail.",
+    "reportTitle": "DISCOVERY DE IA GRATUITO",
+    "recommendations": "Seus recursos recomendados",
+    "manual": "Enviar estes resultados manualmente",
+    "duplicate": "Reenvio automático bloqueado nesta página.",
+    "uncertain": "Não foi possível confirmar a aceitação. A solicitação pode ter sido recebida; nenhum reenvio automático será feito. Confira seu e-mail antes de usar o envio manual.",
+    "sending": "Enviando a solicitação de e-mail…",
+    "accepted": "Solicitação aceita pelo serviço de e-mail. A entrega nas caixas do cliente e do Commercial ainda não foi confirmada.",
+    "rejected": "O serviço recusou a solicitação. Você pode tentar novamente ou usar o envio manual.",
+    "lang": "pt-BR",
+    "fields": {
+      "name": "Nome",
+      "email": "E-mail",
+      "industry": "Setor",
+      "challenge": "Desafio",
+      "size": "Tamanho da empresa",
+      "speed": "Prazo",
+      "aiuse": "Uso de IA",
+      "outcome": "Resultado prioritário",
+      "deploy": "Implantação"
+    },
+    "answers": {
+      "industry": {
+        "field-service": "Serviços de campo / MSP",
+        "healthcare": "Saúde",
+        "finance": "Finanças / FinOps",
+        "energy": "Energia",
+        "retail": "Varejo / comércio eletrônico",
+        "other": "Outro"
+      },
+      "challenge": {
+        "support": "Sobrecarga de suporte",
+        "sla": "SLA / confiabilidade",
+        "costs": "Custos de nuvem e operação",
+        "sales": "Vendas e geração de leads",
+        "data": "Dados e relatórios"
+      },
+      "size": {
+        "1-10": "1–10",
+        "11-100": "11–100",
+        "101-1000": "101–1.000",
+        "1000+": "1.000+"
+      },
+      "speed": {
+        "days": "Dias",
+        "weeks": "Semanas",
+        "quarter": "Neste trimestre"
+      },
+      "aiuse": {
+        "none": "Ainda não",
+        "some": "Algumas",
+        "many": "Muitas"
+      },
+      "outcome": {
+        "save-time": "Economizar tempo",
+        "cut-costs": "Reduzir custos",
+        "grow-revenue": "Aumentar receita",
+        "reduce-risk": "Reduzir risco"
+      },
+      "deploy": {
+        "saas": "SaaS",
+        "cloud": "Nossa nuvem",
+        "onprem": "Local / híbrido"
+      }
+    },
+    "resources": {
+      "/zion-app-network/field-visit-handoff-2026.html": "Checklist de passagem de visita técnica",
+      "/ai-field-service-automation/": "Serviços de automação de campo",
+      "/ai-readiness-assessment/": "Serviço de avaliação de prontidão para IA",
+      "/finops-consulting/": "Consultoria FinOps",
+      "/roi-calculator/": "Calculadora ilustrativa de ROI em IA",
+      "/ai-energy-optimization/": "Serviços de otimização de energia",
+      "/apps/cloud-cost-optimizer.html": "Visão geral da otimização de custos de nuvem",
+      "/ai-lead-generation/": "Serviços de geração de leads com IA",
+      "/zion-app-network/": "Catálogo Zion de ferramentas e guias",
+      "/services/": "Catálogo completo de serviços",
+      "/ai-powered-customer-support/": "Serviços de automação de suporte ao cliente",
+      "/ai-observability-and-incident-management/": "Serviços de observabilidade e gestão de incidentes",
+      "/ai-incident-response/": "Serviços de resposta e revisão de incidentes",
+      "/lead-score-copilot/": "Guia de planejamento de pontuação de leads",
+      "/ai-readiness-framework/": "Guia manual de prontidão para IA"
+    },
+    "formTitle": "Sete perguntas sobre suas prioridades"
+  },
+  "es": {
+    "title": "Discovery de IA gratuito en línea",
+    "description": "Responda siete preguntas, vea recursos relevantes al instante y solicite el mismo resultado por correo para usted y el equipo comercial de Zion.",
+    "eyebrow": "Gratuito · en línea · sin obligación de compra",
+    "intro": "Encuentre un punto de partida práctico para su proyecto de automatización o IA. Sus respuestas orientan una breve lista de herramientas, guías y servicios; los resultados aparecen aquí al enviar el formulario.",
+    "start": "Comenzar el cuestionario gratuito",
+    "questions": {
+      "industry": "¿Cuál es su sector?",
+      "challenge": "¿Cuál es su mayor desafío ahora?",
+      "size": "¿Cuántas personas trabajan en su empresa?",
+      "speed": "¿Cuándo quiere obtener resultados?",
+      "aiuse": "¿Ya utiliza herramientas de IA?",
+      "outcome": "¿Cuál es su resultado prioritario?",
+      "deploy": "¿Qué modelo de despliegue prefiere?"
+    },
+    "contact": "¿Dónde debemos enviar sus resultados?",
+    "name": "Su nombre",
+    "email": "Su correo electrónico",
+    "consent": "Al enviar, su nombre, correo, respuestas y recomendaciones se transmiten a FormSubmit para solicitar copias para usted y commercial@ziontechgroup.com. La aceptación del servicio no confirma la entrega en las bandejas de entrada.",
+    "submit": "Recibir mis resultados gratuitos",
+    "limitsTitle": "Qué significa este resultado",
+    "limits": "Las recomendaciones se basan en sus respuestas. Son un punto de partida para la evaluación, no una auditoría técnica, una cotización ni una promesa de ahorro. No introduzca contraseñas, información confidencial de clientes ni datos regulados.",
+    "nextTitle": "Continúe a su ritmo",
+    "next": "Revise los recursos sugeridos y trate su alcance con Zion por escrito. Consulting, Starter y Growth siguen siendo servicios de pago opcionales. Este cuestionario no genera compras ni reserva reuniones.",
+    "plans": "Ver planes opcionales",
+    "catalog": "Explorar herramientas y guías",
+    "home": "Inicio",
+    "language": "Idioma",
+    "noScript": "Se necesita JavaScript para mostrar su resultado personalizado. También puede contactar al equipo comercial por correo.",
+    "reportTitle": "DISCOVERY DE IA GRATUITO",
+    "recommendations": "Sus recursos recomendados",
+    "manual": "Enviar estos resultados manualmente",
+    "duplicate": "El reenvío automático está bloqueado en esta página.",
+    "uncertain": "No se pudo confirmar la aceptación. La solicitud puede haberse recibido; no habrá un reintento automático. Revise su correo antes de usar la opción manual.",
+    "sending": "Enviando la solicitud de correo…",
+    "accepted": "El servicio de correo aceptó la solicitud. La entrega en su bandeja y en la del equipo comercial aún no está confirmada.",
+    "rejected": "El servicio rechazó la solicitud. Puede volver a intentarlo o usar el envío manual.",
+    "lang": "es",
+    "fields": {
+      "name": "Nombre",
+      "email": "Correo",
+      "industry": "Sector",
+      "challenge": "Desafío",
+      "size": "Tamaño de la empresa",
+      "speed": "Plazo",
+      "aiuse": "Uso de IA",
+      "outcome": "Resultado prioritario",
+      "deploy": "Despliegue"
+    },
+    "answers": {
+      "industry": {
+        "field-service": "Servicios de campo / MSP",
+        "healthcare": "Salud",
+        "finance": "Finanzas / FinOps",
+        "energy": "Energía",
+        "retail": "Comercio minorista / electrónico",
+        "other": "Otro"
+      },
+      "challenge": {
+        "support": "Sobrecarga de soporte",
+        "sla": "SLA / fiabilidad",
+        "costs": "Costes de nube y operación",
+        "sales": "Ventas y generación de clientes potenciales",
+        "data": "Datos e informes"
+      },
+      "size": {
+        "1-10": "1–10",
+        "11-100": "11–100",
+        "101-1000": "101–1.000",
+        "1000+": "1.000+"
+      },
+      "speed": {
+        "days": "Días",
+        "weeks": "Semanas",
+        "quarter": "Este trimestre"
+      },
+      "aiuse": {
+        "none": "Todavía no",
+        "some": "Algunas",
+        "many": "Muchas"
+      },
+      "outcome": {
+        "save-time": "Ahorrar tiempo",
+        "cut-costs": "Reducir costes",
+        "grow-revenue": "Aumentar ingresos",
+        "reduce-risk": "Reducir riesgos"
+      },
+      "deploy": {
+        "saas": "SaaS",
+        "cloud": "Nuestra nube",
+        "onprem": "Local / híbrido"
+      }
+    },
+    "resources": {
+      "/zion-app-network/field-visit-handoff-2026.html": "Lista de entrega de visita técnica",
+      "/ai-field-service-automation/": "Servicios de automatización de campo",
+      "/ai-readiness-assessment/": "Servicio de evaluación de preparación para IA",
+      "/finops-consulting/": "Consultoría FinOps",
+      "/roi-calculator/": "Calculadora ilustrativa de ROI en IA",
+      "/ai-energy-optimization/": "Servicios de optimización energética",
+      "/apps/cloud-cost-optimizer.html": "Resumen de optimización de costes de nube",
+      "/ai-lead-generation/": "Servicios de generación de clientes potenciales con IA",
+      "/zion-app-network/": "Catálogo Zion de herramientas y guías",
+      "/services/": "Catálogo completo de servicios",
+      "/ai-powered-customer-support/": "Servicios de automatización de soporte al cliente",
+      "/ai-observability-and-incident-management/": "Servicios de observabilidad y gestión de incidentes",
+      "/ai-incident-response/": "Servicios de respuesta y revisión de incidentes",
+      "/lead-score-copilot/": "Guía de planificación de puntuación de clientes potenciales",
+      "/ai-readiness-framework/": "Guía manual de preparación para IA"
+    },
+    "formTitle": "Siete preguntas sobre sus prioridades"
+  },
+  "fr": {
+    "title": "Discovery IA gratuit en ligne",
+    "description": "Répondez à sept questions, consultez immédiatement les ressources pertinentes et demandez le même résultat par courriel pour vous et l’équipe commerciale de Zion.",
+    "eyebrow": "Gratuit · en ligne · sans obligation d’achat",
+    "intro": "Trouvez un point de départ concret pour votre projet d’automatisation ou d’IA. Vos réponses orientent une courte liste d’outils, de guides et de services ; les résultats apparaissent ici dès l’envoi du formulaire.",
+    "start": "Commencer le questionnaire gratuit",
+    "questions": {
+      "industry": "Quel est votre secteur ?",
+      "challenge": "Quel est votre principal défi actuel ?",
+      "size": "Combien de personnes travaillent dans votre entreprise ?",
+      "speed": "Quand souhaitez-vous obtenir des résultats ?",
+      "aiuse": "Utilisez-vous déjà des outils d’IA ?",
+      "outcome": "Quel résultat est prioritaire ?",
+      "deploy": "Quel modèle de déploiement préférez-vous ?"
+    },
+    "contact": "Où devons-nous envoyer vos résultats ?",
+    "name": "Votre nom",
+    "email": "Votre adresse électronique",
+    "consent": "À l’envoi, votre nom, votre adresse électronique, vos réponses et les recommandations sont transmis à FormSubmit pour demander une copie pour vous et commercial@ziontechgroup.com. L’acceptation par le service ne confirme pas la réception dans les boîtes mail.",
+    "submit": "Recevoir mes résultats gratuits",
+    "limitsTitle": "Ce que signifie ce résultat",
+    "limits": "Les recommandations reposent sur vos réponses. Elles servent de point de départ à l’évaluation, sans constituer un audit technique, un devis ou une promesse d’économies. Ne saisissez pas de mots de passe, d’informations confidentielles sur vos clients ni de données réglementées.",
+    "nextTitle": "Continuez à votre rythme",
+    "next": "Consultez les ressources proposées et discutez de votre périmètre avec Zion par écrit. Consulting, Starter et Growth restent des services payants facultatifs. Ce questionnaire ne crée ni achat ni rendez-vous.",
+    "plans": "Voir les offres facultatives",
+    "catalog": "Explorer les outils et les guides",
+    "home": "Accueil",
+    "language": "Langue",
+    "noScript": "JavaScript est nécessaire pour afficher votre résultat personnalisé. Vous pouvez aussi contacter l’équipe commerciale par courriel.",
+    "reportTitle": "DISCOVERY IA GRATUIT",
+    "recommendations": "Vos ressources recommandées",
+    "manual": "Envoyer ces résultats manuellement",
+    "duplicate": "Le renvoi automatique est bloqué sur cette page.",
+    "uncertain": "L’acceptation n’a pas pu être confirmée. La demande a peut-être été reçue ; aucun nouvel essai automatique ne sera effectué. Vérifiez votre boîte mail avant d’utiliser l’envoi manuel.",
+    "sending": "Envoi de la demande de courriel…",
+    "accepted": "Le service de messagerie a accepté la demande. La réception dans votre boîte mail et celle de l’équipe commerciale n’est pas encore confirmée.",
+    "rejected": "Le service a refusé la demande. Vous pouvez réessayer ou utiliser l’envoi manuel.",
+    "lang": "fr",
+    "fields": {
+      "name": "Nom",
+      "email": "Courriel",
+      "industry": "Secteur",
+      "challenge": "Défi",
+      "size": "Taille de l’entreprise",
+      "speed": "Échéance",
+      "aiuse": "Usage de l’IA",
+      "outcome": "Résultat prioritaire",
+      "deploy": "Déploiement"
+    },
+    "answers": {
+      "industry": {
+        "field-service": "Interventions sur site / MSP",
+        "healthcare": "Santé",
+        "finance": "Finance / FinOps",
+        "energy": "Énergie",
+        "retail": "Commerce de détail / en ligne",
+        "other": "Autre"
+      },
+      "challenge": {
+        "support": "Surcharge du support",
+        "sla": "SLA / fiabilité",
+        "costs": "Coûts du cloud et d’exploitation",
+        "sales": "Ventes et acquisition de prospects",
+        "data": "Données et rapports"
+      },
+      "size": {
+        "1-10": "1–10",
+        "11-100": "11–100",
+        "101-1000": "101–1 000",
+        "1000+": "1 000+"
+      },
+      "speed": {
+        "days": "Quelques jours",
+        "weeks": "Quelques semaines",
+        "quarter": "Ce trimestre"
+      },
+      "aiuse": {
+        "none": "Pas encore",
+        "some": "Quelques-uns",
+        "many": "Beaucoup"
+      },
+      "outcome": {
+        "save-time": "Gagner du temps",
+        "cut-costs": "Réduire les coûts",
+        "grow-revenue": "Augmenter le chiffre d’affaires",
+        "reduce-risk": "Réduire les risques"
+      },
+      "deploy": {
+        "saas": "SaaS",
+        "cloud": "Notre cloud",
+        "onprem": "Sur site / hybride"
+      }
+    },
+    "resources": {
+      "/zion-app-network/field-visit-handoff-2026.html": "Liste de transmission après intervention",
+      "/ai-field-service-automation/": "Services d’automatisation des interventions",
+      "/ai-readiness-assessment/": "Service d’évaluation de la préparation à l’IA",
+      "/finops-consulting/": "Conseil FinOps",
+      "/roi-calculator/": "Calculateur illustratif de retour sur investissement IA",
+      "/ai-energy-optimization/": "Services d’optimisation énergétique",
+      "/apps/cloud-cost-optimizer.html": "Présentation de l’optimisation des coûts du cloud",
+      "/ai-lead-generation/": "Services d’acquisition de prospects avec l’IA",
+      "/zion-app-network/": "Catalogue Zion des outils et guides",
+      "/services/": "Catalogue complet des services",
+      "/ai-powered-customer-support/": "Services d’automatisation du support client",
+      "/ai-observability-and-incident-management/": "Services d’observabilité et de gestion des incidents",
+      "/ai-incident-response/": "Services de réponse et de revue des incidents",
+      "/lead-score-copilot/": "Guide de planification de la notation des prospects",
+      "/ai-readiness-framework/": "Guide manuel de préparation à l’IA"
+    },
+    "formTitle": "Sept questions sur vos priorités"
+  },
+  "de": {
+    "title": "Kostenlose Online-Discovery für KI",
+    "description": "Beantworten Sie sieben Fragen, sehen Sie sofort passende Ressourcen und fordern Sie dieselben Ergebnisse per E-Mail für sich und das Zion-Vertriebsteam an.",
+    "eyebrow": "Kostenlos · online · ohne Kaufverpflichtung",
+    "intro": "Finden Sie einen praktischen Ausgangspunkt für Ihr Automatisierungs- oder KI-Projekt. Ihre Antworten führen zu einer kurzen Auswahl an Werkzeugen, Leitfäden und Dienstleistungen. Die Ergebnisse erscheinen hier direkt nach dem Absenden.",
+    "start": "Kostenlosen Fragebogen starten",
+    "questions": {
+      "industry": "In welcher Branche arbeiten Sie?",
+      "challenge": "Was ist derzeit Ihre größte Herausforderung?",
+      "size": "Wie viele Menschen arbeiten in Ihrem Unternehmen?",
+      "speed": "Wann möchten Sie Ergebnisse erzielen?",
+      "aiuse": "Nutzen Sie bereits KI-Werkzeuge?",
+      "outcome": "Welches Ergebnis hat Priorität?",
+      "deploy": "Welches Bereitstellungsmodell bevorzugen Sie?"
+    },
+    "contact": "Wohin sollen wir Ihre Ergebnisse senden?",
+    "name": "Ihr Name",
+    "email": "Ihre E-Mail-Adresse",
+    "consent": "Beim Absenden werden Ihr Name, Ihre E-Mail-Adresse, Ihre Antworten und die Empfehlungen an FormSubmit übertragen, um Kopien für Sie und commercial@ziontechgroup.com anzufordern. Die Annahme durch den Dienst bestätigt noch keine Zustellung im Postfach.",
+    "submit": "Meine kostenlosen Ergebnisse erhalten",
+    "limitsTitle": "Was dieses Ergebnis bedeutet",
+    "limits": "Die Empfehlungen beruhen auf Ihren ausgewählten Antworten. Sie sind ein Ausgangspunkt für die Bewertung, kein technisches Audit, kein Angebot und kein Einsparversprechen. Geben Sie keine Passwörter, vertraulichen Kundendaten oder regulierten Daten ein.",
+    "nextTitle": "In Ihrem Tempo fortfahren",
+    "next": "Prüfen Sie die vorgeschlagenen Ressourcen und besprechen Sie Ihren Bedarf schriftlich mit Zion. Consulting, Starter und Growth bleiben optionale kostenpflichtige Dienstleistungen. Dieser Fragebogen löst weder einen Kauf noch eine Terminbuchung aus.",
+    "plans": "Optionale Angebote ansehen",
+    "catalog": "Werkzeuge und Leitfäden entdecken",
+    "home": "Startseite",
+    "language": "Sprache",
+    "noScript": "JavaScript wird benötigt, um Ihr persönliches Ergebnis anzuzeigen. Alternativ können Sie das Vertriebsteam per E-Mail kontaktieren.",
+    "reportTitle": "KOSTENLOSE KI-DISCOVERY",
+    "recommendations": "Ihre empfohlenen Ressourcen",
+    "manual": "Diese Ergebnisse manuell senden",
+    "duplicate": "Die automatische erneute Übermittlung ist auf dieser Seite gesperrt.",
+    "uncertain": "Die Annahme konnte nicht bestätigt werden. Die Anfrage könnte eingegangen sein; es erfolgt kein automatischer Wiederholungsversuch. Prüfen Sie Ihr Postfach, bevor Sie die manuelle Option verwenden.",
+    "sending": "E-Mail-Anfrage wird übermittelt…",
+    "accepted": "Der E-Mail-Dienst hat die Anfrage angenommen. Die Zustellung in Ihrem Postfach und beim Vertriebsteam ist noch nicht bestätigt.",
+    "rejected": "Der Dienst hat die Anfrage abgelehnt. Sie können es erneut versuchen oder die manuelle E-Mail-Option verwenden.",
+    "lang": "de",
+    "fields": {
+      "name": "Name",
+      "email": "E-Mail",
+      "industry": "Branche",
+      "challenge": "Herausforderung",
+      "size": "Unternehmensgröße",
+      "speed": "Zeitraum",
+      "aiuse": "KI-Nutzung",
+      "outcome": "Prioritäres Ergebnis",
+      "deploy": "Bereitstellung"
+    },
+    "answers": {
+      "industry": {
+        "field-service": "Außendienst / MSP",
+        "healthcare": "Gesundheitswesen",
+        "finance": "Finanzen / FinOps",
+        "energy": "Energie",
+        "retail": "Einzelhandel / E-Commerce",
+        "other": "Andere"
+      },
+      "challenge": {
+        "support": "Überlasteter Support",
+        "sla": "SLA / Zuverlässigkeit",
+        "costs": "Cloud- und Betriebskosten",
+        "sales": "Vertrieb und Interessentengewinnung",
+        "data": "Daten und Berichte"
+      },
+      "size": {
+        "1-10": "1–10",
+        "11-100": "11–100",
+        "101-1000": "101–1.000",
+        "1000+": "1.000+"
+      },
+      "speed": {
+        "days": "In Tagen",
+        "weeks": "In Wochen",
+        "quarter": "In diesem Quartal"
+      },
+      "aiuse": {
+        "none": "Noch nicht",
+        "some": "Einige",
+        "many": "Viele"
+      },
+      "outcome": {
+        "save-time": "Zeit sparen",
+        "cut-costs": "Kosten senken",
+        "grow-revenue": "Umsatz steigern",
+        "reduce-risk": "Risiken reduzieren"
+      },
+      "deploy": {
+        "saas": "SaaS",
+        "cloud": "Unsere Cloud",
+        "onprem": "Vor Ort / hybrid"
+      }
+    },
+    "resources": {
+      "/zion-app-network/field-visit-handoff-2026.html": "Checkliste zur Übergabe von Außendiensteinsätzen",
+      "/ai-field-service-automation/": "Dienstleistungen zur Außendienstautomatisierung",
+      "/ai-readiness-assessment/": "Dienstleistung zur Bewertung der KI-Bereitschaft",
+      "/finops-consulting/": "FinOps-Beratung",
+      "/roi-calculator/": "Beispielhafter KI-ROI-Rechner",
+      "/ai-energy-optimization/": "Dienstleistungen zur Energieoptimierung",
+      "/apps/cloud-cost-optimizer.html": "Überblick zur Optimierung von Cloud-Kosten",
+      "/ai-lead-generation/": "Dienstleistungen zur KI-gestützten Interessentengewinnung",
+      "/zion-app-network/": "Zion-Katalog für Werkzeuge und Leitfäden",
+      "/services/": "Vollständiger Dienstleistungskatalog",
+      "/ai-powered-customer-support/": "Dienstleistungen zur Automatisierung des Kundensupports",
+      "/ai-observability-and-incident-management/": "Dienstleistungen für Observability und Incident-Management",
+      "/ai-incident-response/": "Dienstleistungen zur Vorfallreaktion und Nachbereitung",
+      "/lead-score-copilot/": "Planungsleitfaden zur Bewertung von Interessenten",
+      "/ai-readiness-framework/": "Manueller Leitfaden zur KI-Bereitschaft"
+    },
+    "formTitle": "Sieben Fragen zu Ihren Prioritäten"
+  }
+}
