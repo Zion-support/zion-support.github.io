@@ -22,6 +22,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
 
+      - name: Fail-closed contract diagnostic (no capability bypass)
+        run: python3 scripts/checks/ci-smoke-diagnostics.py reusable
+
       - name: reusable-workflow-ci.yml anchors
         run: |
           set -euo pipefail
