@@ -1,5 +1,98 @@
-/* Discovery CSS */
-body { font-family: Arial, sans-serif; }
-.container { max-width: 1200px; margin: 0 auto; padding: 20px; }
-.header { background: #f5f5f5; padding: 10px; }
-.footer { background: #333; color: white; padding: 10px; }
+/* Shared Zion planning-tool surface. Calculations and forms remain in their pages. */
+:root {
+  color-scheme: dark;
+  --zion-bg: #080f20;
+  --zion-panel: #101c31;
+  --zion-text: #edf3ff;
+  --zion-muted: #bdcbe0;
+  --zion-line: #4c5e7a;
+  --zion-link: #88d4ff;
+  --zion-focus: #fbbf24;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--zion-bg);
+  color: var(--zion-text);
+  font: 1rem/1.65 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  overflow-wrap: anywhere;
+}
+header, main, footer, .container {
+  width: min(100%, 72rem);
+  margin-inline: auto;
+  padding: 1.5rem;
+}
+.header { background: var(--zion-panel); }
+.footer, footer { border-top: 1px solid var(--zion-line); color: var(--zion-muted); }
+main { min-width: 0; }
+h1, h2, h3 { line-height: 1.25; color: var(--zion-text); }
+h1 { font-size: clamp(2rem, 5vw, 3.5rem); }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.2rem; }
+a { color: var(--zion-link); text-underline-offset: .2em; }
+a:hover { color: #c4e9ff; }
+nav { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem; }
+nav a { display: inline-block; padding-block: .35rem; }
+a:focus-visible, button:focus-visible, input:focus-visible,
+select:focus-visible, textarea:focus-visible, summary:focus-visible {
+  outline: 3px solid var(--zion-focus);
+  outline-offset: 4px;
+}
+.skip { display: inline-block; margin: .75rem 1.5rem; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr)); gap: 1.25rem; }
+.card, .panel {
+  min-width: 0;
+  padding: 1.25rem;
+  border: 1px solid var(--zion-line);
+  border-radius: .9rem;
+  background: var(--zion-panel);
+  color: var(--zion-text);
+  margin-block: 1.25rem;
+}
+label, legend { font-size: 1rem; font-weight: 650; }
+input, select, textarea, button { font: inherit; }
+input:not([type="checkbox"]):not([type="radio"]), select, textarea {
+  width: 100%;
+  max-width: 100%;
+  padding: .75rem;
+  border: 1px solid #7185a5;
+  border-radius: .5rem;
+  background: var(--zion-bg);
+  color: var(--zion-text);
+}
+input::placeholder, textarea::placeholder { color: var(--zion-muted); opacity: 1; }
+input[type="checkbox"], input[type="radio"] { accent-color: #a78bfa; }
+fieldset { min-width: 0; border: 1px solid var(--zion-line); border-radius: .75rem; }
+button, .btn {
+  display: inline-block;
+  min-height: 2.75rem;
+  padding: .75rem 1.25rem;
+  border: 1px solid #b9a1ff;
+  border-radius: .6rem;
+  background: #6d28d9;
+  color: #fff;
+  font-weight: 650;
+  text-decoration: none;
+  cursor: pointer;
+}
+button:hover, .btn:hover { background: #5b21b6; color: #fff; }
+button:disabled { opacity: .65; cursor: not-allowed; }
+.btn.alt { background: transparent; color: var(--zion-link); }
+pre { white-space: pre-wrap; overflow-wrap: anywhere; }
+img, svg { max-width: 100%; }
+[aria-current="page"] { font-weight: 750; }
+/* More specific than the historical inline ROI styles, preserving contrast. */
+.roi-page .roi-eyebrow, .roi-page .roi-note, .roi-page #ops-result dt { color: var(--zion-muted); }
+.roi-page .roi-note { font-size: 1rem; }
+.roi-page #ops-result dd { color: var(--zion-text); }
+.roi-page .roi-error { color: #ffb4b8; }
+@media (max-width: 40rem) {
+  header, main, footer, .container { padding: 1rem; }
+  .card, .panel { padding: 1rem; }
+}
+@media print {
+  :root { color-scheme: light; }
+  body, .card, .panel { background: #fff; color: #172033; }
+  h1, h2, h3, .roi-page #ops-result dd { color: #172033; }
+  a, .roi-page .roi-note, .roi-page #ops-result dt { color: #334155; }
+}
