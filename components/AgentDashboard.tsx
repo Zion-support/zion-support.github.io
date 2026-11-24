@@ -64,7 +64,7 @@ function MiniBarChart({ data, color = 'bg-purple-500', height = 40 }: { data: nu
 }
 
 // Horizontal bar for CSS charts
-function HBar({ label, value, max, color, showPercent = true }: { label: string; value: number; max: number; color: string; showPercent?: boolean }) {
+function HBar({ label, value, max, color, showPercent = true }: { label: string; value: number; max: number; color: string; showPercent?: boolean; key?: React.Key }) {
   const pct = Math.round((value / max) * 100);
   return (
     <div className="flex items-center gap-2 text-xs">
