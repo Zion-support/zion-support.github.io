@@ -1,0 +1,51 @@
+name: Localized Discovery questionnaire
+
+on:
+  pull_request:
+    paths:
+      - 'public/*/discovery/index.html'
+      - 'public/assets/js/discovery-questionnaire.js'
+      - 'content/discovery-locales.json'
+      - 'scripts/render-localized-discovery.cjs'
+      - 'scripts/test-localized-discovery.cjs'
+      - '.github/workflows/discovery-localized-form.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'public/*/discovery/index.html'
+      - 'public/assets/js/discovery-questionnaire.js'
+      - 'content/discovery-locales.json'
+      - 'scripts/render-localized-discovery.cjs'
+      - 'scripts/test-localized-discovery.cjs'
+      - '.github/workflows/discovery-localized-form.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  localized-form:
+    name: Five-language questionnaire contract
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+          sparse-checkout: |
+            /public/en/discovery/index.html
+            /public/pt/discovery/index.html
+            /public/es/discovery/index.html
+            /public/fr/discovery/index.html
+            /public/de/discovery/index.html
+            /public/assets/js/discovery-questionnaire.js
+            /content/discovery-locales.json
+            /scripts/render-localized-discovery.cjs
+            /scripts/test-localized-discovery.cjs
+          sparse-checkout-cone-mode: false
+      - uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
+        with:
+          node-version: '22'
+      - name: Validate real runtime without submitting email
+        run: node scripts/test-localized-discovery.cjs
