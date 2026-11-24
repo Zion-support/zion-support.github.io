@@ -38,6 +38,14 @@ def languages(locale, is_home=False):
                    + (' aria-current="page"' if l == locale else '') + f'>{c["name"]}</a>'
                    for l,c in COPY.items())
 
+def operations_navigation(locale):
+    c = COPY[locale]['operationsNav']
+    suffix = '' if locale == 'en' else f'-{locale}'
+    prefix = '/' if locale == 'en' else f'/{locale}/'
+    return f'''
+<section class="wrap" aria-label="{e(c['label'])}" style="max-width:960px;margin:1.25rem auto;padding:1.25rem;border:1px solid #475569;border-radius:1rem;background:#111f33;color:#e2e8f0"><h2>{e(c['title'])}</h2><p><a href="/apps/content-hub{suffix}.html">{e(c['checklist'])}</a> · <a href="/apps/operations-reliability-ai-2026{suffix}.html">{e(c['guide'])}</a> · <a href="{prefix}discovery/">{e(c['discovery'])}</a> · <a href="/apps/">{e(c['catalog'])}</a></p></section>
+'''
+
 def render(locale, is_home=False, *, is_catalog=False):
     assert not (is_home and is_catalog), 'A page belongs to one route family'
     c = COPY[locale]
@@ -58,6 +66,7 @@ def render(locale, is_home=False, *, is_catalog=False):
         f'<p><a href="{catalog(locale)}discovery-app-paths.html">{e(c["nextStepGuide"])}</a></p>\n'
         if is_catalog else ''
     )
+    operations = operations_navigation(locale) if is_catalog else ''
     schema = json.dumps({'@context':'https://schema.org','@type':'CollectionPage','name':title,'description':intro,'url':canonical,'inLanguage':c['lang']},ensure_ascii=False).replace('<','\\u003c')
     return f'''<!doctype html>
 <html lang="{c['lang']}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
@@ -72,7 +81,7 @@ def render(locale, is_home=False, *, is_catalog=False):
 <section id="resources" class="resources" aria-labelledby="resources-title"><p class="eyebrow">{e(c['network'])}</p><h2 id="resources-title">{e(c['featured'])}</h2>{cards}</section>
 {next_step}<section class="process" aria-labelledby="process-title"><h2 id="process-title">{e(c['stepsTitle'])}</h2><ol>{steps}</ol><p class="scope">{e(c['scope'])}</p></section>
 <section class="discovery" aria-labelledby="discovery-title"><div><p class="eyebrow">Zion Tech Group</p><h2 id="discovery-title">{e(c['discovery'])}</h2><p>{e(c['discoveryBody'])}</p><p class="note">{e(c['discoveryLanguage'])}</p></div><div class="actions"><a class="button" href="/discovery/" hreflang="pt-BR">{e(c['discovery'])} <span aria-hidden="true">↗</span></a><a href="mailto:commercial@ziontechgroup.com">{e(c['contact'])}</a></div></section>
-<p class="field-note">{e(c['fieldNote'])}</p></main>
+<p class="field-note">{e(c['fieldNote'])}</p>{operations}</main>
 <footer class="wrap"><a class="brand" href="{home(locale)}">ZION<span>TECH GROUP</span></a><nav aria-label="{e(c['network'])}"><a href="{showcase(locale)}">{e(c['network'])}</a><a href="{network(locale)}">{e(c['directory'])}</a><a href="https://github.com/Zion-support/zion-app-network">{e(c['source'])}</a></nav><span>© 2026 Zion Tech Group</span></footer>
 </body></html>
 '''

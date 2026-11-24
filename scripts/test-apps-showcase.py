@@ -1,7 +1,9 @@
 """Translation, navigation and publication checks for the maintained showcase."""
 import importlib.util
 import json
+import tempfile
 import unittest
+from unittest.mock import patch
 from html.parser import HTMLParser
 from pathlib import Path
 
@@ -50,6 +52,43 @@ class Showcase(unittest.TestCase):
         for path in ['public/index.html','public/en/index.html','public/apps/index.html']:
             s=(ROOT/path).read_text();self.assertEqual(s.count('id="zion-apps-showcase"'),1)
             self.assertEqual(s.count('id="zion-apps-showcase-title"'),1)
+
+    def test_catalog_generation_preserves_operations_navigation(self):
+        expected={
+            'pt':('/pt/apps/','/pt/discovery/','-pt'),
+            'es':('/es/apps/','/es/discovery/','-es'),
+            'fr':('/fr/apps/','/fr/discovery/','-fr'),
+            'de':('/de/apps/','/de/discovery/','-de'),
+        }
+        for locale,(catalog,discovery,suffix) in expected.items():
+            with self.subTest(locale=locale):
+                p=Page(m.render(locale,is_catalog=True))
+                canonical=[a['href'] for a in p.find('link') if a.get('rel')=='canonical']
+                self.assertEqual(canonical,['https://ziontechgroup.com'+catalog])
+                links={a['href'] for a in p.find('a')}
+                required={discovery,'/apps/',f'/apps/content-hub{suffix}.html',
+                          f'/apps/operations-reliability-ai-2026{suffix}.html'}
+                self.assertTrue(required<=links,required-links)
+                for href in required:
+                    source=ROOT/'public'/href.lstrip('/')
+                    if href.endswith('/'):source=source/'index.html'
+                    self.assertTrue(source.is_file(),href)
+                nav=[a for a in p.find('section') if a.get('aria-label')==m.COPY[locale]['operationsNav']['label']]
+                self.assertEqual(len(nav),1)
+
+    def test_repeated_generation_is_byte_identical(self):
+        inputs=('public/index.html','public/en/index.html','public/apps/index.html','public/sitemap-0.xml')
+        with tempfile.TemporaryDirectory() as temp:
+            target=Path(temp)
+            for path in inputs:
+                output=target/path;output.parent.mkdir(parents=True,exist_ok=True)
+                output.write_text((ROOT/path).read_text())
+            with patch.object(m,'ROOT',target):
+                first=m.files()
+                for path,content in first.items():
+                    output=target/path;output.parent.mkdir(parents=True,exist_ok=True)
+                    output.write_text(content)
+                self.assertEqual(first,m.files())
 
     def test_all_selected_resources_have_matching_locale(self):
         for l in m.COPY:
