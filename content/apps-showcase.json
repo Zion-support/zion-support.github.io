@@ -1,5 +1,6 @@
 {
   "en": {
+    "nextStepGuide": "Choose your next step after Discovery",
     "lang": "en", "name": "English", "home": "Home", "network": "Apps network", "directory": "Browse the directory", "languages": "Language", "skip": "Skip to content", "open": "Explore resource", "tools": "Planning tools", "guides": "Service guides", "discovery": "Free online Discovery", "source": "Source on GitHub",
     "title": "Find the right starting point for your next IT project",
     "intro": "Explore Zion tools and practical guides for service requests, cloud cost planning and AI app selection. Start with one business question, document your assumptions and take a clear brief into a conversation with our team.",
@@ -24,6 +25,7 @@
     "fieldNote": "Before a purchase, reservation, supplier commitment or dispatch: formal written client confirmation of scope and price, the corresponding PO and a separate Zion operational release are required."
   },
   "pt": {
+    "nextStepGuide": "Escolha seu próximo passo após o Discovery",
     "lang": "pt-BR", "name": "Português", "home": "Início", "network": "Rede de apps", "directory": "Explorar o diretório", "languages": "Idioma", "skip": "Ir para o conteúdo", "open": "Explorar recurso", "tools": "Ferramentas de planejamento", "guides": "Guias de serviços", "discovery": "Discovery online gratuito", "source": "Código no GitHub",
     "title": "Encontre o ponto de partida para seu próximo projeto de TI",
     "intro": "Explore ferramentas e guias da Zion para solicitações de serviços, planejamento de custos de nuvem e seleção de apps de IA. Comece com uma necessidade, registre as premissas e prepare uma conversa objetiva com nossa equipe.",
@@ -48,6 +50,7 @@
     "fieldNote": "Antes de compra, reserva, compromisso com fornecedor ou despacho: são necessários confirmação formal escrita do cliente sobre escopo e preço, o PO correspondente e uma liberação operacional separada da Zion."
   },
   "es": {
+    "nextStepGuide": "Elija su siguiente paso después de Discovery",
     "lang": "es", "name": "Español", "home": "Inicio", "network": "Red de apps", "directory": "Explorar el directorio", "languages": "Idioma", "skip": "Ir al contenido", "open": "Explorar recurso", "tools": "Herramientas de planificación", "guides": "Guías de servicios", "discovery": "Discovery gratuito en línea", "source": "Código en GitHub",
     "title": "Encuentre el punto de partida para su próximo proyecto de TI",
     "intro": "Explore herramientas y guías de Zion para solicitudes de servicio, planificación de costes de nube y selección de apps de IA. Empiece con una necesidad, documente las hipótesis y prepare una conversación concreta con nuestro equipo.",
@@ -72,6 +75,7 @@
     "fieldNote": "Antes de comprar, reservar, comprometer a un proveedor o despachar: se requieren confirmación formal escrita del cliente sobre alcance y precio, el PO correspondiente y una autorización operativa separada de Zion."
   },
   "fr": {
+    "nextStepGuide": "Choisissez votre prochaine étape après Discovery",
     "lang": "fr", "name": "Français", "home": "Accueil", "network": "Réseau d’apps", "directory": "Parcourir le répertoire", "languages": "Langue", "skip": "Aller au contenu", "open": "Explorer la ressource", "tools": "Outils de planification", "guides": "Guides de services", "discovery": "Discovery gratuit en ligne", "source": "Code sur GitHub",
     "title": "Trouvez le point de départ de votre prochain projet informatique",
     "intro": "Découvrez les outils et guides Zion pour préparer une intervention, estimer les coûts du cloud et sélectionner une app d’IA. Partez d’un besoin, documentez vos hypothèses et préparez un échange concret avec notre équipe.",
@@ -96,6 +100,7 @@
     "fieldNote": "Avant tout achat, réservation, engagement fournisseur ou envoi : une confirmation formelle écrite du client sur le périmètre et le prix, le bon de commande correspondant et une autorisation opérationnelle distincte de Zion sont requis."
   },
   "de": {
+    "nextStepGuide": "Wählen Sie Ihren nächsten Schritt nach Discovery",
     "lang": "de", "name": "Deutsch", "home": "Startseite", "network": "App-Netzwerk", "directory": "Verzeichnis durchsuchen", "languages": "Sprache", "skip": "Zum Inhalt", "open": "Ressource ansehen", "tools": "Planungswerkzeuge", "guides": "Service-Leitfäden", "discovery": "Kostenlose Online-Discovery", "source": "Quellcode auf GitHub",
     "title": "Finden Sie den Einstieg für Ihr nächstes IT-Projekt",
     "intro": "Entdecken Sie Zion-Werkzeuge und Leitfäden für Serviceanfragen, Cloud-Kostenplanung und die Auswahl von KI-Apps. Beginnen Sie mit einer konkreten Frage, dokumentieren Sie Ihre Annahmen und bereiten Sie das Gespräch mit unserem Team vor.",

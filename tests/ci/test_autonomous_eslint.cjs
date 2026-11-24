@@ -259,9 +259,12 @@ test('legacy dotfile ignores preserve application and active configuration cover
 test('new lint configuration and regression suite obey their own enabled policy', () => {
   return eslint.lintFiles([
     '.eslintrc-autonomous.cjs',
+    'scripts/checks/eslint-report-summary.cjs',
     'tests/ci/test_autonomous_eslint.cjs',
+    'tests/ci/test_custom_eslint_workflow.cjs',
+    'tests/ci/test_eslint_report_summary.cjs',
   ]).then((results) => {
-    assert.equal(results.length, 2);
+    assert.equal(results.length, 5);
     for (const result of results) {
       assert.equal(result.errorCount, 0, JSON.stringify(result.messages));
       assert.equal(result.warningCount, 0, JSON.stringify(result.messages));

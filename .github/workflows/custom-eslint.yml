@@ -72,48 +72,39 @@ jobs:
           echo "::error::ESLint failed or did not return a valid result. See the lint step and report."
           exit 1
         fi
-    - name: Parse and comment on PR
-      if: github.event_name == 'pull_request' && failure()
+    - name: Report lint failure
+      if: failure() && (github.event_name == 'pull_request' || (github.event_name == 'push' && github.ref == 'refs/heads/main'))
       uses: actions/github-script@v7
-      with:
-        script: 'const fs = require(''fs'');
-
-          const { summarize } = require(''./scripts/checks/eslint-report-summary.cjs'');
-
-          let report = '''';
-
-          try { report = fs.readFileSync(''/tmp/eslint-report.json'', ''utf8''); }
-          catch {}
-
-          const summary = summarize(report, process.env.ESLINT_EXIT_CODE);
-
-          const runUrl = `https://github.com/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
-
-          const body = summary + ''\n\nWorkflow: '' + runUrl;
-
-          await github.rest.issues.createComment({ owner: context.repo.owner, repo:
-          context.repo.repo, issue_number: context.issue.number, body });
-
-          '
       env:
         ESLINT_EXIT_CODE: ${{ steps.eslint.outputs.exit_code }}
-    - name: Open GitHub issue on main branch violations
-      if: github.event_name == 'push' && failure() && github.ref == 'refs/heads/main'
-      uses: actions/github-script@v7
       with:
-        script: "const fs = require('fs');\nconst { summarize } = require('./scripts/checks/eslint-report-summary.cjs');\n\
-          let report = '';\ntry { report = fs.readFileSync('/tmp/eslint-report.json',\
-          \ 'utf8'); } catch {}\nconst summary = summarize(report, process.env.ESLINT_EXIT_CODE);\n\
-          const runUrl = `https://github.com/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;\n\
-          const body = summary + '\\n\\nWorkflow: ' + runUrl;\nconst title = '\U0001F6A8\
-          \ Custom ESLint Rules Violations on Main';\nconst existing = await github.rest.issues.listForRepo({\
-          \ owner: context.repo.owner, repo: context.repo.repo, labels: ['eslint-autonomous',\
-          \ 'code-quality'], state: 'open' });\nif (!existing.data.some(item => item.title\
-          \ === title)) {\n  await github.rest.issues.create({ owner: context.repo.owner,\
-          \ repo: context.repo.repo, title, body, labels: ['eslint-autonomous', 'autonomous',\
-          \ 'code-quality', 'blocker'] });\n}\n"
-      env:
-        ESLINT_EXIT_CODE: ${{ steps.eslint.outputs.exit_code }}
+        script: |
+          const fs = require('node:fs');
+          const { summarize } = require('./scripts/checks/eslint-report-summary.cjs');
+          const code = process.env.ESLINT_EXIT_CODE;
+          const run = `${process.env.GITHUB_SERVER_URL}/${process.env.GITHUB_REPOSITORY}/actions/runs/${process.env.GITHUB_RUN_ID}`;
+          const sections = [];
+          if (code === '0') {
+            sections.push('ESLint exited successfully. A different workflow step failed.');
+          } else {
+            let report = '';
+            try { report = fs.readFileSync('/tmp/eslint-report.json', 'utf8'); }
+            catch {}
+            sections.push(summarize(report, code));
+          }
+          sections.push(`[Workflow run](${run}) · Commit \`${context.sha}\``);
+          const body = sections.join('\n\n');
+          const { owner, repo } = context.repo;
+          if (context.eventName === 'pull_request') {
+            await github.rest.issues.createComment({ owner, repo, issue_number: context.issue.number, body });
+          } else {
+            const title = '🚨 Custom ESLint Rules Violations on Main';
+            const labels = ['eslint-autonomous', 'code-quality'];
+            const open = await github.paginate(github.rest.issues.listForRepo, { owner, repo, labels: labels.join(','), state: 'open' });
+            if (!open.some(issue => !issue.pull_request && issue.title === title)) {
+              await github.rest.issues.create({ owner, repo, title, body, labels: [...labels, 'autonomous', 'blocker'] });
+            }
+          }
     - name: Notify Telegram on failure
       if: failure()
       run: "node automation/notify-telegram.js \"\U0001F6A8 Custom ESLint check found\

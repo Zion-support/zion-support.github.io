@@ -33,3 +33,5 @@ export default function QuantumHybridOrchestrator() {
         <span className="text-sm font-medium">Active</span>
       </div>
     </div>
+  );
+}

@@ -43,3 +43,5 @@ export default function AIDrivenGrowthIntelligence() {
         </ul>
       </div>
     </div>
+  );
+}

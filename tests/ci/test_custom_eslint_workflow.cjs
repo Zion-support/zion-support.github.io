@@ -20,8 +20,8 @@ test('workflow Node runtime matches the repository engine contract', () => {
 });
 
 const handlers = [
-  ['Parse and comment on PR', 'comment'],
-  ['Open GitHub issue on main branch violations', 'issue'],
+  ['pull_request', 'comment'],
+  ['push', 'issue'],
 ];
 const syntheticTitle = '🚨 Custom ESLint Rules Violations on Main';
 const runUrl = 'https://github.com/fixture/repository/actions/runs/1';
@@ -34,11 +34,12 @@ const reportWithDetails = JSON.stringify([{
   ],
 }]);
 
-function executeHandler(name, report, status, existing = []) {
-  const step = steps.find(item => item.name === name);
+function executeHandler(eventName, report, status, existing = [], apiError = null) {
+  const step = steps.find(item => item.name === 'Report lint failure');
   assert.equal(step.uses, 'actions/github-script@v7');
   const calls = [];
   function record(kind, payload) {
+    if (apiError) {return Promise.reject(apiError);}
     calls.push({ kind, payload: JSON.parse(JSON.stringify(payload)) });
     return Promise.resolve({});
   }
@@ -50,9 +51,16 @@ function executeHandler(name, report, status, existing = []) {
       return Promise.resolve({ data: existing });
     },
   } } };
-  const context = { repo: { owner: 'fixture', repo: 'repository' }, issue: { number: 1 }, runId: 1 };
+  github.paginate = (method, payload) => {
+    assert.equal(method, github.rest.issues.listForRepo);
+    return method(payload).then(result => result.data);
+  };
+  const context = {
+    repo: { owner: 'fixture', repo: 'repository' }, issue: { number: 1 },
+    eventName, sha: 'fixture-sha',
+  };
   function mockedRequire(moduleName) {
-    if (moduleName === 'fs') {
+    if (moduleName === 'node:fs') {
       return { readFileSync: (filename, encoding) => {
         assert.equal(filename, '/tmp/eslint-report.json');
         assert.equal(encoding, 'utf8');
@@ -68,7 +76,12 @@ function executeHandler(name, report, status, existing = []) {
   const invoke = new scriptConstructor(`(async (github, context, require, process) => {
 ${step.with.script}
 })`).runInNewContext();
-  return invoke(github, context, mockedRequire, { env: { ESLINT_EXIT_CODE: status } }).then(() => calls);
+  return invoke(github, context, mockedRequire, { env: {
+    ESLINT_EXIT_CODE: status,
+    GITHUB_SERVER_URL: 'https://github.com',
+    GITHUB_REPOSITORY: 'fixture/repository',
+    GITHUB_RUN_ID: '1',
+  } }).then(() => calls);
 }
 
 const cases = [
@@ -90,14 +103,14 @@ for (const [name, kind] of handlers) {
         assert.equal(payload.owner, 'fixture');
         assert.equal(payload.repo, 'repository');
         assert.match(payload.body, expected);
-        assert.ok(payload.body.endsWith('\n\nWorkflow: ' + runUrl));
+        assert.ok(payload.body.endsWith(`\n\n[Workflow run](${runUrl}) · Commit \`fixture-sha\``));
         assert.doesNotMatch(payload.body, /synthetic-private-sentinel|customer\.ts/);
         if (kind === 'comment') {
           assert.equal(payload.issue_number, 1);
           assert.equal(calls.length, 1);
         } else {
           assert.equal(payload.title, syntheticTitle);
-          assert.deepEqual(calls[0].payload.labels, ['eslint-autonomous', 'code-quality']);
+          assert.equal(calls[0].payload.labels, 'eslint-autonomous,code-quality');
         }
       });
     });
@@ -110,6 +123,26 @@ test('main failure handler preserves existing-issue deduplication', () => {
     assert.equal(calls[0].kind, 'list');
   });
 });
+
+test('main failure handler does not mistake a pull request for an existing issue', () => {
+  return executeHandler('push', reportWithDetails, '1', [
+    { title: syntheticTitle, 'pull_request': { url: 'https://example.invalid/pull/1' } },
+  ]).then(calls => assert.equal(calls.filter(call => call.kind === 'issue').length, 1));
+});
+
+for (const [eventName] of handlers) {
+  test(`${eventName}: API failures propagate instead of claiming a completed notification`, () => {
+    return assert.rejects(executeHandler(eventName, reportWithDetails, '1', [],
+      new Error('Synthetic API failure')), /Synthetic API failure/);
+  });
+
+  test(`${eventName}: a different failed step does not invent a lint violation`, () => {
+    return executeHandler(eventName, null, '0').then(calls => {
+      const write = calls.find(call => call.kind === 'comment' || call.kind === 'issue');
+      assert.match(write.payload.body, /ESLint exited successfully\. A different workflow step failed/);
+    });
+  });
+}
 
 test('actual handler regressions run as a required step before the source lint gate', () => {
   const regression = steps.findIndex(step => step.name === 'Test autonomous lint configuration and reporting');

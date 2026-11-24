@@ -120,15 +120,17 @@ References: [ESLint migration guide](https://eslint.org/docs/latest/use/configur
 
 ## Reconciliation with current CI
 
-The bounded complete-tree checkout and honest exit gate merged in #72123 are retained verbatim. The checkout uses depth 1 without persisted credentials; the source lint command, captured exit status and literal-zero final gate keep their main-branch behavior. Notification handlers now read ESLint file results and nested messages with valid JavaScript. Public summaries contain only aggregate error/warning counts and a workflow link, never source, file paths or diagnostic text. Missing/invalid reports and execution failures are distinguished from lint findings; no passing result is inferred from an empty failed report. The five reporting fixtures run alongside the 80 configuration tests, including the 12 route-name regressions. No publisher, branch protection, compiler options or application files are changed.
+The bounded complete-tree checkout and honest exit gate merged in #72123 are retained verbatim. The checkout uses depth 1 without persisted credentials; the source lint command, captured exit status and literal-zero final gate keep their main-branch behavior. The current consolidated notification handler and its paginated issue lookup are preserved. It reads ESLint file results and nested messages with valid JavaScript. Public summaries contain only aggregate error/warning counts and a workflow link, never source, file paths or diagnostic text. Missing/invalid reports and execution failures are distinguished from lint findings; no passing result is inferred from an empty failed report. Reporting fixtures run alongside the configuration and route-name regressions. No publisher, branch protection, compiler options or application files are changed.
 
-The workflow also requires `tests/ci/test_custom_eslint_workflow.cjs`. These fourteen
-cases compile and execute the actual YAML notification handlers with synthetic
+The workflow also requires `tests/ci/test_custom_eslint_workflow.cjs`. These
+cases compile and execute the actual YAML notification handler with synthetic
 reports and mocked GitHub/file capabilities. They cover nested diagnostics,
 warnings, invalid/missing reports, configuration failures, missing exit status,
-private-detail exclusion, existing-issue deduplication, and mandatory CI wiring.
-They make no outbound calls. A TypeScript annotation in either JavaScript handler
-now fails this regression instead of being discovered only after source lint fails.
+private-detail exclusion, existing-issue deduplication, API failure propagation,
+and mandatory CI wiring. A pull request sharing the incident title does not hide
+an issue, and a failure after successful lint is not described as a lint violation.
+They make no outbound calls. A TypeScript annotation in the JavaScript handler
+fails this regression instead of being discovered only after source lint fails.
 
 Run all three suites together with the command in the workflow's
 `Test autonomous lint configuration and reporting` step. They validate configuration
@@ -137,4 +139,4 @@ and reporting behavior, not repository-wide lint compliance or production readin
 The 13 offline checkout/status regressions from #72123 run unchanged against this
 workflow. They verify complete current-tree checkout, exact base comparisons,
 status 0/1/2 propagation, and rejection of missing or malformed status. These tests
-remain independent of the 99 configuration/reporting/handler regression cases.
+remain independent of the configuration/reporting/handler regression cases.
