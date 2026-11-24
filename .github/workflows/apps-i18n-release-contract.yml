@@ -9,6 +9,7 @@ name: Apps i18n release contract
       - 'public/fr/apps/**'
       - 'public/de/apps/**'
       - 'public/discovery/**'
+      - 'public/en/discovery/**'
       - 'public/pt/discovery/**'
       - 'public/es/discovery/**'
       - 'public/fr/discovery/**'
@@ -27,6 +28,7 @@ name: Apps i18n release contract
       - 'public/fr/apps/**'
       - 'public/de/apps/**'
       - 'public/discovery/**'
+      - 'public/en/discovery/**'
       - 'public/pt/discovery/**'
       - 'public/es/discovery/**'
       - 'public/fr/discovery/**'
@@ -60,11 +62,45 @@ jobs:
         run: |
           set -euo pipefail
           python3 - <<'PY'
+          from html.parser import HTMLParser
           from pathlib import Path
           import sys
 
           root=Path('.')
           errors=[]
+
+          class HeadLinks(HTMLParser):
+            def __init__(self):
+              super().__init__()
+              self.languages=[]
+              self.canonicals=[]
+              self.alternates=[]
+            def handle_starttag(self,tag,attrs):
+              d={k.lower():v for k,v in attrs}
+              if tag.lower()=='html':
+                self.languages.append(d.get('lang'))
+              if tag.lower()!='link':
+                return
+              rel=(d.get('rel') or '').lower()
+              href=d.get('href')
+              if not href:
+                return
+              if rel=='canonical':
+                self.canonicals.append(href)
+              elif rel=='alternate' and d.get('hreflang'):
+                self.alternates.append((d['hreflang'],href))
+
+          def validate_locale(path,locale,canonical,expected):
+            text=path.read_text(encoding='utf-8')
+            parser=HeadLinks(); parser.feed(text)
+            if parser.languages != [locale]:
+              errors.append(f'{path}: html lang={parser.languages!r}, expected exactly [{locale!r}]')
+            if parser.canonicals != [canonical]:
+              errors.append(f'{path}: canonical={parser.canonicals!r}, expected exactly [{canonical!r}]')
+            alternates=sorted([*expected.items(),('x-default',expected['en'])])
+            if sorted(parser.alternates) != alternates:
+              errors.append(f'{path}: hreflang={parser.alternates!r}, expected exactly {alternates!r}')
+            return text
 
           locale_hubs={
             'en': Path('public/apps/index.html'),
@@ -85,26 +121,20 @@ jobs:
             if not path.is_file():
               errors.append(f'missing localized Apps hub: {path}')
               continue
-            text=path.read_text(encoding='utf-8')
-            for lang,url in expected_hreflang.items():
-              token=f'hreflang="{lang}" href="{url}"'
-              if token not in text:
-                errors.append(f'{path}: missing reciprocal {token}')
-            if 'hreflang="x-default" href="https://ziontechgroup.com/apps/"' not in text:
-              errors.append(f'{path}: missing x-default Apps hreflang')
+            text=validate_locale(path,locale,expected_hreflang[locale],expected_hreflang)
             if 'discovery' not in text.lower():
               errors.append(f'{path}: missing Discovery navigation')
 
           discovery_pages={
-            'en':('public/discovery/index.html','https://ziontechgroup.com/discovery/'),
-            'pt-BR':('public/pt/discovery/index.html','https://ziontechgroup.com/pt/discovery/'),
+            'en':('public/en/discovery/index.html','https://ziontechgroup.com/en/discovery/'),
+            'pt-BR':('public/discovery/index.html','https://ziontechgroup.com/discovery/'),
             'es':('public/es/discovery/index.html','https://ziontechgroup.com/es/discovery/'),
             'fr':('public/fr/discovery/index.html','https://ziontechgroup.com/fr/discovery/'),
             'de':('public/de/discovery/index.html','https://ziontechgroup.com/de/discovery/'),
           }
           expected_discovery={
-            'en':'https://ziontechgroup.com/discovery/',
-            'pt-BR':'https://ziontechgroup.com/pt/discovery/',
+            'en':'https://ziontechgroup.com/en/discovery/',
+            'pt-BR':'https://ziontechgroup.com/discovery/',
             'es':'https://ziontechgroup.com/es/discovery/',
             'fr':'https://ziontechgroup.com/fr/discovery/',
             'de':'https://ziontechgroup.com/de/discovery/',
@@ -114,15 +144,14 @@ jobs:
             if not path.is_file():
               errors.append(f'missing localized Discovery page: {path}')
               continue
-            text=path.read_text(encoding='utf-8')
-            if f'<link rel="canonical" href="{canonical}"' not in text:
-              errors.append(f'{path}: canonical mismatch, expected {canonical}')
-            for lang,url in expected_discovery.items():
-              token=f'hreflang="{lang}" href="{url}"'
-              if token not in text:
-                errors.append(f'{path}: missing reciprocal Discovery {token}')
-            if 'hreflang="x-default" href="https://ziontechgroup.com/discovery/"' not in text:
-              errors.append(f'{path}: missing Discovery x-default hreflang')
+            validate_locale(path,locale,canonical,expected_discovery)
+
+          canonical_pt=Path('public/discovery/index.html')
+          alias_pt=Path('public/pt/discovery/index.html')
+          if not canonical_pt.is_file() or not alias_pt.is_file():
+            errors.append('missing canonical Portuguese Discovery or its /pt/discovery/ compatibility alias')
+          elif canonical_pt.read_bytes()!=alias_pt.read_bytes():
+            errors.append('Portuguese Discovery compatibility alias must match the canonical /discovery/ page')
 
           variants=['','-pt','-es','-fr','-de']
           for suffix in variants:
@@ -141,7 +170,7 @@ jobs:
             text=sitemap.read_text(encoding='utf-8')
             required=[
               '/apps/','/pt/apps/','/es/apps/','/fr/apps/','/de/apps/',
-              '/discovery/','/pt/discovery/','/es/discovery/','/fr/discovery/','/de/discovery/',
+              '/discovery/','/en/discovery/','/pt/discovery/','/es/discovery/','/fr/discovery/','/de/discovery/',
               '/apps/operations-reliability-ai-2026.html',
               '/apps/operations-reliability-ai-2026-pt.html',
               '/apps/operations-reliability-ai-2026-es.html',
