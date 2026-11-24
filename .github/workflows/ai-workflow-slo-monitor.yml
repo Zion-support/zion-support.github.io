@@ -6,7 +6,7 @@ permissions:
   issues: write
 
 concurrency:
-  group: ai-workflow-slo-monitor
+  group: ai-workflow-slo-monitor-${{ github.event.pull_request.number || github.ref }}
   cancel-in-progress: false
 
 "on":
