@@ -33,6 +33,10 @@ upload on `main`. PR validation is an offline contract job with `contents: read`
 a manual topic-branch run can collect read-only evidence but cannot run the issue
 step. Paused issue/push helpers are unchanged.
 
+Concurrency is scoped by pull request number or ref, keeping
+`cancel-in-progress: false`. This prevents an unrelated PR from replacing a
+pending read-only manual run in the old repository-wide concurrency group.
+
 ## Verification
 
 Run `node --test scripts/checks/workflow-slo.test.cjs`. Fixtures cover complete
