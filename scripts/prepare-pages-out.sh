@@ -10,6 +10,8 @@ python3 scripts/export-public-pages.py public out
 # Generate FinOps scenario pages and promotion blocks into out/
 node scripts/render-operational-tools.cjs out/
 node scripts/render-finops-scenario.cjs out/
+node --test scripts/test-reconcile-review-field-evidence.cjs
+node scripts/reconcile-review-field-evidence.cjs out/
 # public/sitemap-0.xml + sitemap.xml (index → sitemap-0) + robots.txt ship as-is.
 
 # Validate every legacy fallback source before copy. The checkout must remain quiescent.
