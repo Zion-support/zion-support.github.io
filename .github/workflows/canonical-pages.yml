@@ -80,6 +80,8 @@ jobs:
         run: bash scripts/prepare-pages-out.sh
       - name: Validate final publication boundary
         run: python3 scripts/assert-no-private-ops.py out
+      - name: Validate semantic publication contracts before upload
+        run: node scripts/verify-productivity-publication.cjs out
       - name: Upload canonical Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
