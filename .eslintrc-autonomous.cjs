@@ -12,10 +12,22 @@ const nextPlugin = require('@next/eslint-plugin-next');
 const globals = require('globals');
 const autonomous = require('./eslint-rules/autonomous.cjs');
 const complexityLimit = 20;
+const namingConventions = [
+  { selector: 'variable', format: ['camelCase', 'UPPER_CASE'], leadingUnderscore: 'allow' },
+  { selector: 'function', format: ['camelCase'] },
+  { selector: 'parameter', format: ['camelCase'] },
+  { selector: 'property', format: ['camelCase', 'snake_case', 'UPPER_CASE'] },
+  { selector: 'memberLike', format: ['camelCase'] },
+  { selector: 'typeLike', format: ['PascalCase'] },
+];
 
 module.exports = [
   {
     ignores: [
+      // Preserve legacy dotfile ignores before the explicit project exclusions.
+      '**/.*', '!**/.eslintrc.*',
+      // Keep this active custom configuration covered by its self-lint regression.
+      '!.eslintrc-autonomous.cjs',
       '**/node_modules/**', '**/.next/**', '**/out/**', '**/dist/**', '**/build/**',
       '**/coverage/**', '**/.hermes/**', 'automation/reports/**',
       '**/*.config.js', '**/*.config.cjs', 'scripts/automation/**',
@@ -71,15 +83,7 @@ module.exports = [
       }],
       camelcase: ['error', { properties: 'always' }],
       // eslint-disable-next-line @typescript-eslint/naming-convention -- ESLint plugin and rule IDs are fixed API keys.
-      '@typescript-eslint/naming-convention': [
-        'error',
-        { selector: 'variable', format: ['camelCase', 'UPPER_CASE'], leadingUnderscore: 'allow' },
-        { selector: 'function', format: ['camelCase'] },
-        { selector: 'parameter', format: ['camelCase'] },
-        { selector: 'property', format: ['camelCase', 'snake_case', 'UPPER_CASE'] },
-        { selector: 'memberLike', format: ['camelCase'] },
-        { selector: 'typeLike', format: ['PascalCase'] },
-      ],
+      '@typescript-eslint/naming-convention': ['error', ...namingConventions],
       complexity: ['warn', complexityLimit],
       curly: ['error', 'all'],
       // eslint-disable-next-line @typescript-eslint/naming-convention -- ESLint plugin and rule IDs are fixed API keys.
@@ -87,6 +91,20 @@ module.exports = [
         ignoreArrayIndexes: true,
         ignore: [-1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 24, 48, 60, 100, 1024, 86400],
       }],
+    },
+  },
+  {
+    files: ['app/**/page.tsx'],
+    rules: {
+      // React/Next route components use PascalCase. The paired AST guard below
+      // reserves this exact name for the default export, never a Page helper.
+      // eslint-disable-next-line @typescript-eslint/naming-convention -- ESLint rule IDs are fixed API keys.
+      '@typescript-eslint/naming-convention': ['error', ...namingConventions, {
+        selector: 'function', modifiers: ['exported'],
+        filter: { regex: '^Page$', match: true }, format: ['PascalCase'],
+      }],
+      // eslint-disable-next-line @typescript-eslint/naming-convention -- ESLint rule IDs are fixed API keys.
+      'zion-autonomous/page-component-name': 'error',
     },
   },
   {
