@@ -54,6 +54,18 @@ test('keeps different workflow IDs distinct even when their names match', async 
   assert.equal(summary.flagged[0].workflowId, 11);
 });
 
+test('mixed healthy and under-sampled workflows cannot certify recovery', async () => {
+  const healthy = Array.from({ length: 5 }, (_, i) => run(i + 1));
+  const sparse = run(6, { workflow_id: 11, conclusion: 'failure' });
+  const summary = summarize(cfg, await collect(cfg, api([...healthy, sparse])));
+  assert.equal(summary.eligibleWorkflows, 1);
+  assert.deepEqual(summary.flagged, []);
+  assert.equal(summary.recoveryEligible, false);
+  const alert = summarize(cfg, await collect(cfg, api([...healthy.map(r => ({ ...r, conclusion: 'failure' })), sparse])));
+  assert.equal(alert.recoveryEligible, false);
+  assert.equal(alert.flagged.length, 1, 'under-sampling must not suppress a different eligible regression');
+});
+
 test('splits capped searches into disjoint windows and reads every page exactly once', async () => {
   const runs = Array.from({ length: 1250 }, (_, i) => run(i + 1));
   const calls = [];
@@ -63,6 +75,20 @@ test('splits capped searches into disjoint windows and reads every page exactly 
   assert.ok(calls.some(c => c.page > 1));
   assert.ok(calls.some(c => c.start > cfg.start));
   assert.equal(sample.requests, calls.length);
+});
+
+test('split children must reconcile the parent lower bound and visible run identities', async () => {
+  const parent = Array.from({ length: 100 }, (_, i) => run(i + 1));
+  await assert.rejects(collect(cfg, async (start, end) => {
+    if (start === cfg.start && end === cfg.end) return { total_count: 1000, workflow_runs: parent };
+    return { total_count: start === cfg.start ? 5 : 0, workflow_runs: start === cfg.start ? parent.slice(0, 5) : [] };
+  }), /incomplete_split_window/);
+  const replacements = Array.from({ length: 1000 }, (_, i) => run(i + 101));
+  const childApi = api(replacements);
+  await assert.rejects(collect(cfg, async (start, end, page) => {
+    if (start === cfg.start && end === cfg.end) return { total_count: 1000, workflow_runs: parent };
+    return childApi(start, end, page);
+  }), /incomplete_split_window/);
 });
 
 test('rejects truncated, changing and duplicate pagination instead of measuring partial samples', async () => {
