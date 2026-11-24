@@ -27,7 +27,6 @@
     "catalog": "Explore tools and guides",
     "home": "Home",
     "language": "Language",
-    "noScript": "JavaScript is needed to show your personalized result. You can contact Commercial by email instead.",
     "reportTitle": "FREE AI DISCOVERY",
     "recommendations": "Your recommended resources",
     "manual": "Send these results manually",
@@ -109,7 +108,8 @@
       "/lead-score-copilot/": "Lead Scoring Planning Guide",
       "/ai-readiness-framework/": "Manual AI Readiness Guide"
     },
-    "formTitle": "Seven questions about your priorities"
+    "formTitle": "Seven questions about your priorities",
+    "unavailable": "The questionnaire is unavailable until it finishes loading. If it remains unavailable, contact Commercial by email."
   },
   "pt": {
     "title": "Discovery de IA online e gratuito",
@@ -139,7 +139,6 @@
     "catalog": "Explorar ferramentas e guias",
     "home": "Início",
     "language": "Idioma",
-    "noScript": "É necessário JavaScript para exibir seu resultado personalizado. Você também pode entrar em contato com Commercial por e-mail.",
     "reportTitle": "DISCOVERY DE IA GRATUITO",
     "recommendations": "Seus recursos recomendados",
     "manual": "Enviar estes resultados manualmente",
@@ -221,7 +220,8 @@
       "/lead-score-copilot/": "Guia de planejamento de pontuação de leads",
       "/ai-readiness-framework/": "Guia manual de prontidão para IA"
     },
-    "formTitle": "Sete perguntas sobre suas prioridades"
+    "formTitle": "Sete perguntas sobre suas prioridades",
+    "unavailable": "O questionário fica indisponível até concluir o carregamento. Se continuar indisponível, entre em contato com Commercial por e-mail."
   },
   "es": {
     "title": "Discovery de IA gratuito en línea",
@@ -251,7 +251,6 @@
     "catalog": "Explorar herramientas y guías",
     "home": "Inicio",
     "language": "Idioma",
-    "noScript": "Se necesita JavaScript para mostrar su resultado personalizado. También puede contactar al equipo comercial por correo.",
     "reportTitle": "DISCOVERY DE IA GRATUITO",
     "recommendations": "Sus recursos recomendados",
     "manual": "Enviar estos resultados manualmente",
@@ -333,7 +332,8 @@
       "/lead-score-copilot/": "Guía de planificación de puntuación de clientes potenciales",
       "/ai-readiness-framework/": "Guía manual de preparación para IA"
     },
-    "formTitle": "Siete preguntas sobre sus prioridades"
+    "formTitle": "Siete preguntas sobre sus prioridades",
+    "unavailable": "El cuestionario no está disponible hasta que termine de cargar. Si sigue sin estar disponible, contacte al equipo comercial por correo."
   },
   "fr": {
     "title": "Discovery IA gratuit en ligne",
@@ -363,7 +363,6 @@
     "catalog": "Explorer les outils et les guides",
     "home": "Accueil",
     "language": "Langue",
-    "noScript": "JavaScript est nécessaire pour afficher votre résultat personnalisé. Vous pouvez aussi contacter l’équipe commerciale par courriel.",
     "reportTitle": "DISCOVERY IA GRATUIT",
     "recommendations": "Vos ressources recommandées",
     "manual": "Envoyer ces résultats manuellement",
@@ -445,7 +444,8 @@
       "/lead-score-copilot/": "Guide de planification de la notation des prospects",
       "/ai-readiness-framework/": "Guide manuel de préparation à l’IA"
     },
-    "formTitle": "Sept questions sur vos priorités"
+    "formTitle": "Sept questions sur vos priorités",
+    "unavailable": "Le questionnaire reste indisponible tant que son chargement n’est pas terminé. S’il reste indisponible, contactez l’équipe commerciale par courriel."
   },
   "de": {
     "title": "Kostenlose Online-Discovery für KI",
@@ -475,7 +475,6 @@
     "catalog": "Werkzeuge und Leitfäden entdecken",
     "home": "Startseite",
     "language": "Sprache",
-    "noScript": "JavaScript wird benötigt, um Ihr persönliches Ergebnis anzuzeigen. Alternativ können Sie das Vertriebsteam per E-Mail kontaktieren.",
     "reportTitle": "KOSTENLOSE KI-DISCOVERY",
     "recommendations": "Ihre empfohlenen Ressourcen",
     "manual": "Diese Ergebnisse manuell senden",
@@ -557,6 +556,7 @@
       "/lead-score-copilot/": "Planungsleitfaden zur Bewertung von Interessenten",
       "/ai-readiness-framework/": "Manueller Leitfaden zur KI-Bereitschaft"
     },
-    "formTitle": "Sieben Fragen zu Ihren Prioritäten"
+    "formTitle": "Sieben Fragen zu Ihren Prioritäten",
+    "unavailable": "Der Fragebogen ist erst nach dem vollständigen Laden verfügbar. Falls er nicht verfügbar bleibt, kontaktieren Sie das Vertriebsteam per E-Mail."
   }
 }

@@ -15,7 +15,7 @@ function render(locale) {
   const url = `https://ziontechgroup.com/${locale}/discovery/`;
   const alternate = Object.entries(locales).map(([key, copy]) => `<link rel="alternate" hreflang="${copy.lang}" href="https://ziontechgroup.com/${key}/discovery/">`).join('\n');
   const navigation = Object.entries(languages).map(([key, label]) => `<a href="/${key}/discovery/" lang="${locales[key].lang}" hreflang="${locales[key].lang}"${key === locale ? ' aria-current="page"' : ''}>${label}</a>`).join('');
-  const fields = Object.entries(t.questions).map(([name, question], index) => `<fieldset><legend>${index + 1}. ${escape(question)}</legend>${Object.entries(t.answers[name]).map(([value, label]) => `<label class="choice"><input type="radio" name="${name}" value="${value}" required> <span>${escape(label)}</span></label>`).join('')}</fieldset>`).join('\n');
+  const fields = Object.entries(t.questions).map(([name, question], index) => `<fieldset disabled><legend>${index + 1}. ${escape(question)}</legend>${Object.entries(t.answers[name]).map(([value, label]) => `<label class="choice"><input type="radio" name="${name}" value="${value}" required> <span>${escape(label)}</span></label>`).join('')}</fieldset>`).join('\n');
   const schema = {'@context': 'https://schema.org', '@type': 'Service', name: t.title, description: t.description, url, inLanguage: t.lang, provider: {'@type': 'Organization', name: 'Zion Tech Group', url: 'https://ziontechgroup.com'}, offers: {'@type': 'Offer', price: '0', priceCurrency: 'USD', url}};
   // Preserve the existing Portuguese paid-plan prices and live Starter checkout.
   // These are optional next steps and never a condition for the free form.
@@ -42,11 +42,11 @@ ${alternate}
 <main>
 <section class="hero"><p class="eyebrow">${escape(t.eyebrow)}</p><h1>${escape(t.title)}</h1><p class="lead">${escape(t.intro)}</p><a class="btn" href="#dq">${escape(t.start)}</a></section>
 <section aria-labelledby="questionnaire-title"><h2 id="questionnaire-title">${escape(t.formTitle)}</h2><p>${escape(t.description)}</p>
-<noscript><p>${escape(t.noScript)} <a href="mailto:commercial@ziontechgroup.com">commercial@ziontechgroup.com</a></p></noscript>
-<form id="dq">
+<p id="dq-unavailable" role="status">${escape(t.unavailable)} <a href="mailto:commercial@ziontechgroup.com">commercial@ziontechgroup.com</a></p>
+<form id="dq" method="post">
 ${fields}
-<fieldset><legend>8. ${escape(t.contact)}</legend><label for="dq-name">${escape(t.name)}</label><input id="dq-name" type="text" name="name" autocomplete="name" maxlength="120" required><label for="dq-email">${escape(t.email)}</label><input id="dq-email" type="email" name="email" autocomplete="email" maxlength="254" aria-describedby="dq-consent" required><p class="note" id="dq-consent">${escape(t.consent)}</p></fieldset>
-<button class="btn" type="submit">${escape(t.submit)}</button>
+<fieldset disabled><legend>8. ${escape(t.contact)}</legend><label for="dq-name">${escape(t.name)}</label><input id="dq-name" type="text" name="name" autocomplete="name" maxlength="120" required><label for="dq-email">${escape(t.email)}</label><input id="dq-email" type="email" name="email" autocomplete="email" maxlength="254" aria-describedby="dq-consent" required><p class="note" id="dq-consent">${escape(t.consent)}</p></fieldset>
+<button class="btn" type="submit" disabled>${escape(t.submit)}</button>
 </form>
 <div id="dq-results" class="result" hidden></div></section>
 <section class="cards"><div class="card"><h2>${escape(t.limitsTitle)}</h2><p>${escape(t.limits)}</p><a href="/zion-app-network/">${escape(t.catalog)}</a></div><div class="card"><h2>${escape(t.nextTitle)}</h2><p>${escape(t.next)}</p><a href="/plans/">${escape(t.plans)}</a></div></section>

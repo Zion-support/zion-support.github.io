@@ -15,14 +15,27 @@
       'sales':[['AI Lead Generation Services','/ai-lead-generation/'],['Lead Scoring Planning Guide','/lead-score-copilot/']],
       'data':[['AI Readiness Assessment Service','/ai-readiness-assessment/'],['Manual AI Readiness Guide','/ai-readiness-framework/']]
     };
-    var copy=JSON.parse(document.getElementById('dq-copy').textContent);
+    // HTML controls stay disabled unless the runtime and locale data initialize.
+    // A visible contact fallback remains available if script/data loading fails.
+    var copyNode=document.getElementById('dq-copy');
+    var copy;
+    try {copy=JSON.parse(copyNode.textContent);} catch (error) {return;}
     var form=document.getElementById('dq');
     if(!form)return;
+    var questionKeys=['industry','challenge','size','speed','aiuse','outcome','deploy'];
+    var copyKeys=['reportTitle','recommendations','manual','duplicate','uncertain','sending','accepted','rejected'];
+    if(!copy||!copy.answers||!copy.fields||!copy.resources)return;
+    if(!copyKeys.every(function(key){return typeof copy[key]==='string'&&copy[key].length>0;}))return;
+    if(!questionKeys.every(function(key){return copy.answers[key]&&typeof copy.answers[key]==='object'&&Object.keys(copy.answers[key]).length>0&&typeof copy.fields[key]==='string';}))return;
+    if(typeof copy.fields.name!=='string'||typeof copy.fields.email!=='string')return;
     function esc(s){return String(s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
     // Page-session deduplication: uncertain requests must never retry automatically.
     var submissions = new Map();
     var pending = false;
     var button = form.querySelector('button[type="submit"]');
+    var unavailable=document.getElementById('dq-unavailable');
+    var fieldsets=Array.from(form.querySelectorAll('fieldset'));
+    if(!button||!unavailable||fieldsets.length!==8)return;
     form.addEventListener('submit', async function(e){
       e.preventDefault();
       if (pending) return;
@@ -104,4 +117,8 @@
         form.setAttribute('aria-busy', 'false');
       }
     });
+    // Bind the submit handler before making any personal-data control usable.
+    fieldsets.forEach(function(fieldset){fieldset.disabled=false;});
+    button.disabled=false;
+    unavailable.hidden=true;
   })();

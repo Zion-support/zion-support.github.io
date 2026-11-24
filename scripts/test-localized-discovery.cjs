@@ -11,20 +11,22 @@ const source = fs.readFileSync(path.join(root, 'public/assets/js/discovery-quest
 const flush = () => new Promise(resolve => setImmediate(resolve));
 let scenarios = 0;
 
-function fixture(copy, mode = 'accepted') {
+function fixture(copy, mode = 'accepted', configuration = JSON.stringify(copy), execute = true) {
   const nodes = new Map(), calls = [], timers = new Map();
   const answers = {name: 'Synthetic Visitor', email: 'client@example.test', industry: 'finance', challenge: 'costs', size: '1-10', speed: 'days', aiuse: 'none', outcome: 'save-time', deploy: 'saas'};
   let valid = true, handler, release, serial = 0;
-  const button = {disabled: false};
+  const button = {disabled: true};
+  const fieldsets = Array.from({length: 8}, () => ({disabled: true}));
   function get(id) {
     if (!nodes.has(id)) nodes.set(id, {hidden: true, innerHTML: '', textContent: '', attrs: {},
       scrollIntoView() {}, addEventListener(type, fn) {handler = fn;}, reportValidity() {return valid;},
-      querySelector() {return button;}, setAttribute(k, v) {this.attrs[k] = v;}});
+      querySelector() {return button;}, querySelectorAll() {return fieldsets;}, setAttribute(k, v) {this.attrs[k] = v;}});
     return nodes.get(id);
   }
-  get('dq-copy').textContent = JSON.stringify(copy);
-  vm.runInNewContext(source, {
-    document: {getElementById: get},
+  get('dq-copy').textContent = configuration;
+  get('dq-unavailable').hidden = false;
+  if (execute) vm.runInNewContext(source, {
+    document: {getElementById: id => id === 'dq-copy' && configuration === null ? null : get(id)},
     FormData: class {entries() {return Object.entries(answers);}},
     AbortController,
     setTimeout(fn) {timers.set(++serial, fn); return serial;},
@@ -41,7 +43,7 @@ function fixture(copy, mode = 'accepted') {
       return response;
     },
   });
-  return {answers, calls, get, button, timers, submit: () => handler({preventDefault() {}}),
+  return {answers, calls, get, button, fieldsets, timers, hasHandler: () => !!handler, submit: () => handler({preventDefault() {}}),
     setValid(value) {valid = value;}, expire() {for (const fn of [...timers.values()]) fn();}, release(value) {release(value);}};
 }
 
@@ -51,6 +53,10 @@ async function testLocale(locale, copy) {
   assert.ok(html.includes(`<html lang="${copy.lang}">`));
   assert.equal((html.match(/id="dq"/g) || []).length, 1);
   assert.equal((html.match(/id="dq-results"/g) || []).length, 1);
+  assert.ok(html.includes('<form id="dq" method="post">'), 'Never default to personal data in a GET URL');
+  assert.equal((html.match(/<fieldset disabled>/g) || []).length, 8, 'No usable fields before runtime initialization');
+  assert.ok(html.includes('type="submit" disabled'));
+  assert.ok(html.includes('<p id="dq-unavailable" role="status">'), 'Contact fallback is visible without JavaScript');
   assert.equal((html.match(/src="\/assets\/js\/discovery-questionnaire\.js"/g) || []).length, 1);
   assert.ok(html.includes('href="#dq"'));
   const schema = JSON.parse(html.match(/<script type="application\/ld\+json">(.*?)<\/script>/s)[1]);
@@ -69,8 +75,31 @@ async function testLocale(locale, copy) {
   }
   scenarios++;
 
+  for (const configuration of [null, '{', 'null', '{}', JSON.stringify({...copy, answers: {}}), JSON.stringify({...copy, accepted: ''})]) {
+    const f = fixture(copy, 'accepted', configuration);
+    assert.equal(f.hasHandler(), false);
+    assert.equal(f.button.disabled, true);
+    assert.ok(f.fieldsets.every(fieldset => fieldset.disabled));
+    assert.equal(f.get('dq-unavailable').hidden, false);
+    assert.equal(f.calls.length, 0);
+    scenarios++;
+  }
+  {
+    const f = fixture(copy, 'accepted', JSON.stringify(copy), false);
+    assert.equal(f.hasHandler(), false, 'A missing or blocked script cannot enable the form');
+    assert.equal(f.button.disabled, true);
+    assert.ok(f.fieldsets.every(fieldset => fieldset.disabled));
+    assert.equal(f.get('dq-unavailable').hidden, false);
+    assert.equal(f.calls.length, 0);
+    scenarios++;
+  }
+
   for (const mode of ['accepted', 'string-true', 'rejected', 'string-false', 'http-error', 'invalid-json', 'missing', 'null', 'network']) {
     const f = fixture(copy, mode);
+    assert.equal(f.hasHandler(), true);
+    assert.equal(f.button.disabled, false);
+    assert.ok(f.fieldsets.every(fieldset => !fieldset.disabled));
+    assert.equal(f.get('dq-unavailable').hidden, true);
     assert.equal(f.calls.length, 0, 'No request occurs on page load');
     await f.submit();
     assert.equal(f.calls.length, 1);
