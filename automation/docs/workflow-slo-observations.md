@@ -22,11 +22,16 @@ completed runs, failure rate at least 15%, or elapsed p95 at least 20 minutes.
 
 Filtered GitHub Actions searches return at most 1,000 results. The collector splits
 time windows until each has fewer than 1,000, then reads every page and checks its
-count and run identities. It fails on incomplete/changing pagination, unknown
+count and run identities. Every split must cover at least the count and all visible
+run IDs already observed in its parent response. It fails on incomplete/changing pagination, unknown
 states, invalid timestamps, API errors, an unsplittable one-second window, or the
 bounded request/time budget. An incomplete report contains null metrics and cannot
-be used as recovery evidence. An empty or under-sampled result cannot close an
-incident either.
+be used as recovery evidence. Closure requires every observed workflow to have a
+sufficient sample; an empty or partially under-sampled population cannot close an
+incident. This conservative gate can require manual review for infrequent workflows.
+It describes only the observed population, not proof of recovery for a previously
+flagged workflow that has disappeared from the current window. Eligible measured
+regressions still generate alerts even when another workflow is under-sampled.
 
 The existing issue step is allowed only after successful collection and artifact
 upload on `main`. PR validation is an offline contract job with `contents: read`;

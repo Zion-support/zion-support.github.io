@@ -64,13 +64,28 @@ async function collect(cfg, client) {
   }
   async function window(start, end) {
     const first = await page(start, end, 1);
+    function validRun(run) {
+      const created = Date.parse(run?.created_at) / 1000;
+      if (!Number.isSafeInteger(run?.id) || run.id <= 0 || !Number.isSafeInteger(created) || created < start || created > end || run.head_branch !== cfg.branch) fail('invalid_or_duplicate_run');
+    }
     // Filtered Actions searches expose at most 1,000 results. Split instead of
     // silently reporting only the first 1,000. Keep second boundaries disjoint.
     if (first.total_count >= 1000) {
       if (start === end) fail('unsplittable_search_limit');
+      if (first.workflow_runs.length !== 100) fail('incomplete_page');
+      const parentIds = new Set();
+      for (const run of first.workflow_runs) {
+        validRun(run);
+        if (parentIds.has(run.id)) fail('invalid_or_duplicate_run');
+        parentIds.add(run.id);
+      }
+      const before = runs.size;
       const middle = Math.floor((start + end) / 2);
       await window(start, middle);
       await window(middle + 1, end);
+      // The parent's count may itself be capped, but its lower bound and its
+      // visible IDs must still be covered. Never discard contradictory evidence.
+      if (runs.size - before < first.total_count || [...parentIds].some(id => !runs.has(id))) fail('incomplete_split_window');
       return;
     }
     const count = first.total_count;
@@ -82,8 +97,8 @@ async function collect(cfg, client) {
       const expected = Math.min(100, count - (n - 1) * 100);
       if (data.workflow_runs.length !== expected) fail('incomplete_page');
       for (const run of data.workflow_runs) {
-        const created = Date.parse(run.created_at) / 1000;
-        if (!Number.isSafeInteger(run.id) || run.id <= 0 || !Number.isSafeInteger(created) || created < start || created > end || run.head_branch !== cfg.branch || local.has(run.id) || runs.has(run.id)) fail('invalid_or_duplicate_run');
+        validRun(run);
+        if (local.has(run.id) || runs.has(run.id)) fail('invalid_or_duplicate_run');
         local.set(run.id, run);
       }
     }
@@ -144,7 +159,7 @@ function summarize(cfg, sample) {
       p95Minutes: 'Nearest-rank p95 of (updated_at - run_started_at) for eligible completed runs. This is an API timestamp elapsed-time proxy, not summed job time; updated_at can include later run changes.',
     },
     requests: sample.requests, totals, eligibleWorkflows,
-    recoveryEligible: eligibleWorkflows > 0,
+    recoveryEligible: workflows.length > 0 && workflows.every(w => w.eligible),
     workflows, flagged: workflows.filter(w => w.reasons.length), errors: [],
   };
 }
@@ -166,7 +181,7 @@ async function main({ root = process.cwd(), env = process.env, now = new Date(),
     const cfg = config(env, now);
     report = summarize(cfg, await collect(cfg, client || githubClient(cfg, env.GITHUB_TOKEN || env.GH_TOKEN)));
   } catch (error) {
-    const code = typeof error.code === 'string' && /^(invalid_[a-z_]+|missing_github_token|github_(http_\d{3}|request_failed)|collection_limit_reached|unsplittable_search_limit|pagination_changed|incomplete_(page|window)|unknown_run_(status|conclusion))$/.test(error.code) ? error.code : 'collection_failed';
+    const code = typeof error.code === 'string' && /^(invalid_[a-z_]+|missing_github_token|github_(http_\d{3}|request_failed)|collection_limit_reached|unsplittable_search_limit|pagination_changed|incomplete_(page|window|split_window)|unknown_run_(status|conclusion))$/.test(error.code) ? error.code : 'collection_failed';
     report = { schema: SCHEMA, status: 'error', complete: false, recoveryEligible: false, totals: null, workflows: null, flagged: null, errors: [{ code }] };
   }
   report.collectionStartedAt = now.toISOString();

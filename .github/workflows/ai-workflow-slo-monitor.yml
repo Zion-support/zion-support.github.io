@@ -89,13 +89,13 @@ jobs:
           set -euo pipefail
           report="automation/reports/workflow-slo-latest.json"
           node -e "const r=require('./'+process.argv[1]);if(r.schema!=='zion.workflow-slo.v1'||r.status!=='completed'||r.complete!==true||!Array.isArray(r.flagged))process.exit(1)" "$report"
-          eligible=$(node -e "const r=require('./'+process.argv[1]);console.log(r.recoveryEligible===true?'yes':'no')" "$report")
-          if [ "$eligible" != "yes" ]; then
-            echo "Insufficient measured runs; no incident recovery inferred."
-            exit 0
-          fi
           flagged=$(node -e "const fs=require('fs');const r=JSON.parse(fs.readFileSync('$report','utf8'));console.log((r.flagged||[]).length)")
           if [ "$flagged" = "0" ]; then
+            eligible=$(node -e "const r=require('./'+process.argv[1]);console.log(r.recoveryEligible===true?'yes':'no')" "$report")
+            if [ "$eligible" != "yes" ]; then
+              echo "At least one workflow has insufficient measured runs; no incident recovery inferred."
+              exit 0
+            fi
             echo "No threshold flags in the complete eligible workflow sample."
             export ISSUE_FINGERPRINT="workflow-slo-regressions"
             export CLOSE_COMMENT="Auto-closing: a complete workflow SLO sample has eligible workflows and no threshold flags. See the workflow artifact for its window, exclusions and elapsed-time proxy."
