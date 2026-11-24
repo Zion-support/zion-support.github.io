@@ -15,7 +15,7 @@ const locales = ['en', 'pt', 'es', 'fr', 'de'];
 const slugs = ['roi-calc', 'sla-calculator', 'ai-governance-checklist'];
 const version = '2026-10-30-operational-tools-v2';
 const prefix = locale => locale === 'en' ? '/' : '/' + locale + '/';
-const home = locale => locale === 'pt' ? '/' : '/' + locale + '/';
+const home = locale => locale === 'en' ? '/' : '/' + locale + '/';
 const disk = (out, route) => path.join(out, route.slice(1) + (route.endsWith('/') ? 'index.html' : ''));
 const script = fs.readFileSync(path.join(reviewed, 'operational-tools.js'), 'utf8');
 

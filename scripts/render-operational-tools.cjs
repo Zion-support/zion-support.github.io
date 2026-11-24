@@ -3,7 +3,7 @@ const fs=require('node:fs'),path=require('node:path'),assert=require('node:asser
 const roiBaseline=require('./render-roi-baseline.cjs');
 const examples=JSON.parse(fs.readFileSync(path.join(__dirname,'..','content','operational-examples.json'),'utf8'));
 const out=process.argv[2]||'out',base='https://ziontechgroup.com',version='2026-10-30-operational-tools-v2',copy=JSON.parse(fs.readFileSync('content/operational-tools.json','utf8')),L=['en','pt','es','fr','de'],slugs=['roi-calc','sla-calculator','ai-governance-checklist'];
-const prefix=l=>l==='en'?'/':'/'+l+'/',home=l=>l==='pt'?'/':'/'+l+'/',catalog=l=>prefix(l)+'apps/',guide=l=>prefix(l)+'apps/operational-planning-tools.html';
+const prefix=l=>l==='en'?'/':'/'+l+'/',home=l=>l==='en'?'/':'/'+l+'/',catalog=l=>prefix(l)+'apps/',guide=l=>prefix(l)+'apps/operational-planning-tools.html';
 const esc=s=>String(s).replace(/[&<>"']/g,x=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[x]));
 const file=r=>path.join(out,r.slice(1)+(r.endsWith('/')?'index.html':'')),write=(r,s)=>{fs.mkdirSync(path.dirname(file(r)),{recursive:true});fs.writeFileSync(file(r),s);};
 const manifest={version,pages:[],homepages:[],source:'Local numeric calculators and self-reported controls; no model inference or external submission'};

@@ -14,7 +14,7 @@ const origin = 'https://ziontechgroup.com';
 const names = { en: 'English', pt: 'Português', es: 'Español', fr: 'Français', de: 'Deutsch' };
 const prefix = locale => locale === 'en' ? '/' : '/' + locale + '/';
 const route = locale => prefix(locale) + 'roi-calc/';
-const home = locale => locale === 'pt' ? '/' : '/' + locale + '/';
+const home = locale => locale === 'en' ? '/' : '/' + locale + '/';
 const htmlEntities = new Map([
   ['&', '&amp;'], ['<', '&lt;'], ['>', '&gt;'], ['"', '&quot;'], ["'", '&#39;']
 ]);

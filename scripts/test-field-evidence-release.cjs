@@ -36,7 +36,7 @@ async function verifyFinalNavigation(readOnly){
    verify(await readFinal(alias),l);console.log('PASS final canonical-preserving alias '+alias);
   }
   for(const l of Object.keys(locales)){
-   const home=l==='pt'?'/':'/'+l+'/';const html=await readFinal(home);
+   const home='/'+l+'/';const html=await readFinal(home);
    assert(html.includes('href="'+route(l)+'"'),'Homepage lost localized field guide '+l);
    const promos=html.match(/<!--field-evidence-locales:start-->[\s\S]*?<!--field-evidence-locales:end-->/g)||[];
    assert.equal(promos.length,1,'Duplicate or missing owned homepage promotion '+l);
@@ -57,7 +57,7 @@ if(process.argv.includes('--live')){
    const url=origin+route(l)+'?qa=field-evidence-20261009-'+Date.now();
    const r=await fetch(url,{headers:{'Cache-Control':'no-cache'},signal:AbortSignal.timeout(30000)});
    assert.equal(r.status,200,url);verify(await r.text(),l);console.log('PASS live '+route(l));
-   const discovery=l==='en'?'/discovery/':'/'+l+'/discovery/';
+   const discovery='/'+l+'/discovery/';
    const d=await fetch(origin+discovery+'?qa=field-return-'+Date.now(),{headers:{'Cache-Control':'no-cache'},signal:AbortSignal.timeout(30000)});
    assert.equal(d.status,200,discovery);verifyDiscovery(await d.text(),l);console.log('PASS live localized return '+discovery);
   }
@@ -81,12 +81,12 @@ if(process.argv.includes('--live')){
   assert.throws(()=>verify(bad,l),/wrong-language ROI tool link/,'reject extra wrong-language ROI destination '+l);
  }
  for(const l of Object.keys(locales)){
-  const rel=l==='pt'?'index.html':l+'/index.html',f=path.join(out,rel);if(!fs.existsSync(f))continue;
+  const rel=l+'/index.html',f=path.join(out,rel);if(!fs.existsSync(f))continue;
   const html=fs.readFileSync(f,'utf8');if(/http-equiv\s*=\s*["']?refresh/i.test(html))continue;
   assert(html.includes('href="'+route(l)+'"'),'localized homepage '+l);
  }
  for(const l of Object.keys(locales)){
-  const rel=l==='en'?'discovery/index.html':l+'/discovery/index.html';
+  const rel=l+'/discovery/index.html';
   const html=fs.readFileSync(path.join(out,rel),'utf8');verifyDiscovery(html,l);
   // Reject an extra wrong-language map even when the correct map is retained.
   const wrong=networkRoute(l==='en'?'pt':'en');

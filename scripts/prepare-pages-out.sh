@@ -8,6 +8,7 @@ cd "$ROOT"
 rm -rf out
 python3 scripts/export-public-pages.py public out
 # Generate FinOps scenario pages and promotion blocks into out/
+node scripts/render-operational-tools.cjs out/
 node scripts/render-finops-scenario.cjs out/
 # public/sitemap-0.xml + sitemap.xml (index → sitemap-0) + robots.txt ship as-is.
 
