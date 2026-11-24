@@ -9,6 +9,10 @@ permissions:
   pull_request:
     paths:
       - "automation/audit-push-helper-adoption.cjs"
+      - "automation/report-size-budget-guard.cjs"
+      - "scripts/checks/report-audits.test.cjs"
+      - ".github/workflows/ai-push-helper-adoption-audit-weekly.yml"
+      - "package-lock.json"
   workflow_dispatch:
 
 concurrency:
@@ -35,10 +39,14 @@ jobs:
       - name: Install dependencies
         run: npm ci --prefer-offline --no-audit --fund=false
 
+      - name: Verify read-only audit contracts
+        run: node --test scripts/checks/report-audits.test.cjs
+
       - name: Run push-helper adoption audit
         run: node automation/audit-push-helper-adoption.cjs
 
       - name: Upload adoption report artifact
+        if: always()
         uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
         with:
           name: push-helper-adoption-${{ github.run_id }}
