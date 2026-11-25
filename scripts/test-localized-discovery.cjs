@@ -11,6 +11,35 @@ const source = fs.readFileSync(path.join(root, 'public/assets/js/discovery-quest
 const flush = () => new Promise(resolve => setImmediate(resolve));
 let scenarios = 0;
 
+// Compare complete resource URLs, not a trusted-domain substring inside a URL.
+function assertRecommendationParity(links, report) {
+  const reportLinks = report.split('\n').filter(line => line.startsWith('- ')).map(line => {
+    const delimiter = line.lastIndexOf(': ');
+    assert.ok(delimiter > 1, 'Recommendation row must contain its full URL');
+    return line.slice(delimiter + 2);
+  });
+  assert.deepEqual(reportLinks, links.map(link => 'https://ziontechgroup.com' + link),
+    'Screen and email contain the same ordered full recommendation URLs');
+}
+
+const syntheticPaths = ['/synthetic-first/', '/synthetic-second/'];
+assertRecommendationParity(syntheticPaths, 'Synthetic report\n- First: https://ziontechgroup.com/synthetic-first/\n- Second: https://ziontechgroup.com/synthetic-second/');
+scenarios++;
+for (const target of [
+  'https://not-zion.example.invalid/?next=https://ziontechgroup.com/synthetic-first/',
+  'https://ziontechgroup.com.example.invalid/synthetic-first/',
+  'https://ziontechgroup.com@not-zion.example.invalid/synthetic-first/',
+  'http://ziontechgroup.com/synthetic-first/',
+  'https://ziontechgroup.com/synthetic-first/?extra=1',
+  'https://ziontechgroup.com/synthetic-first/#extra',
+]) {
+  assert.throws(() => assertRecommendationParity([syntheticPaths[0]], '- First: ' + target), assert.AssertionError);
+  scenarios++;
+}
+assert.throws(() => assertRecommendationParity(syntheticPaths, '- Second: https://ziontechgroup.com/synthetic-second/\n- First: https://ziontechgroup.com/synthetic-first/'), assert.AssertionError);
+scenarios++;
+
+
 function fixture(copy, mode = 'accepted', configuration = JSON.stringify(copy), execute = true) {
   const nodes = new Map(), calls = [], timers = new Map();
   const answers = {name: 'Synthetic Visitor', email: 'client@example.test', industry: 'finance', challenge: 'costs', size: '1-10', speed: 'days', aiuse: 'none', outcome: 'save-time', deploy: 'saas'};
@@ -184,8 +213,7 @@ async function testLocale(locale, copy) {
       const links = [...f.get('dq-results').innerHTML.matchAll(/<a href="([^"]+)">/g)].map(match => match[1]);
       assert.equal(new Set(links).size, links.length);
       assert.ok(links.length >= 3 && links.length <= 4);
-      const reportLinks = [...f.calls[0].data.results.matchAll(/https:\/\/ziontechgroup\.com(\S+)/g)].map(match => match[1]);
-      assert.deepEqual(links, reportLinks, 'Screen and email contain the same ordered recommendations');
+      assertRecommendationParity(links, f.calls[0].data.results);
       for (const link of links) assert.ok(Object.hasOwn(copy.resources, link));
       scenarios++;
     }
