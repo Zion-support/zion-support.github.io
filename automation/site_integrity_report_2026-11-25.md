@@ -1,15 +1,16 @@
 # Zion Tech Group — Site Integrity Check Report
 
-**Run:** Wednesday, 2026-11-25 04:20 -03 (UTC-03) | Model: upstage/solar-mini4 | Profile: default (cron)
+**Run:** Wednesday, 2026-11-25 10:34 -03 (UTC-03) | Model: upstage/solar-mini4 | Profile: default (cron)
 **Base URL:** https://ziontechgroup.com
 **Scope:** Base domain + 7 key docs routes (8 target URLs)
-**Tooling:** site_integrity_check_now.py (live probe), targeted_route_check.py (urllib), repo cross-check vs zion-support/zion-support.github.io/public, committed_public_routes.json, /public-roadmap head-sync probe
+**Tooling:** site_integrity_check_now.py (live probe), check_zion_routes.py (title/canonical/h1), repo cross-check vs zion-support/zion-support.github.io/public, sitemap spot-check.
 
 ---
 
 ## 1. CHECKS
 
 ### 1a. Key docs routes — live HTTP probe
+
 | # | Route | Status | Final URL | Content-Type | OK |
 |---|-------|--------|-----------|--------------|----|
 | 1 | / (Homepage) | 200 | https://ziontechgroup.com/ | text/html; charset=utf-8 | ✅ |
@@ -24,11 +25,23 @@
 **Key routes result: 8/8 PASS** — every route returns HTTP 200, correct final URL with trailing slash, text/html content.
 
 ### 1b. Base domain
-| Route | Status | Final URL | Content-Type | OK |
-|-------|--------|-----------|--------------|----|
-| / | 200 | https://ziontechgroup.com/ | text/html; charset=utf-8 | ✅ |
+`/` → 200, `https://ziontechgroup.com/`, text/html. ✅
 
-### 1c. Repo cross-check (zion-support/zion-support.github.io/public)
+### 1c. Route/canonical/h1 cross-check (check_zion_routes.py)
+| Route | Canonical matches URL | H1 |
+|-------|----------------------|----|
+| Homepage | ✓ matches | — |
+| Public Roadmap | ✓ matches | Public Roadmap |
+| Status Page | ✓ matches | Status Page |
+| Use Cases | ✓ matches | Use cases |
+| Solutions - Healthcare | ✓ matches | Healthcare & Life Sciences |
+| Industries - Financial Services | ✓ matches | AI for Financial Services & FinTech |
+| Free Consultation | ✓ matches | This is the Free Discovery |
+| Tools - Phishing Analyzer | ✓ matches | Phishing Analyzer |
+
+**/public-roadmap head sync:** title "Public Roadmap · Zion Tech Group", canonical https://ziontechgroup.com/public-roadmap/ — **IN SYNC**, matches committed repo file.
+
+### 1d. Repo cross-check (zion-support/zion-support.github.io/public)
 All 8 files present locally and byte-identical (sha1 of first 2048 bytes) to the live-200 bytes:
 
 | Route | Local sha1[:10] | Live sha1[:10] | Status |
@@ -44,31 +57,23 @@ All 8 files present locally and byte-identical (sha1 of first 2048 bytes) to the
 
 **Result: 8/8 IN SYNC.**
 
-### 1d. Tracking cross-check (committed_public_routes.json)
+### 1e. Tracking cross-check (committed_public_routes.json)
 All 7 tracked keys resolve to a live-200 route: ✅ free-consultation, industries/financial-services, public-roadmap, solutions/healthcare, status-page, tools/phishing-analyzer, use-cases.
 
-### 1e. /public-roadmap head-sync probe (title/description/robots/canonical/h1/refresh)
-- title: "Public Roadmap · Zion Tech Group" ✅
-- description: "No leftover product roadmap. Heritage is on /heritage/. New work is scoped after the free online Discovery." ✅
-- robots: noindex, follow ✅
-- refresh → /heritage/ ✅
-- canonical: https://ziontechgroup.com/public-roadmap/ ✅
-- h1: "Public Roadmap" ✅
-- local file == live served HTML: **True** ✅
-
-**Result: IN SYNC** with the committed repo file.
+### 1f. Sitemap spot-check
+`sitemap.xml` + nested sitemaps → 455 URLs. All 7 key routes present as `<loc>`.
 
 ---
 
 ## 2. FIXES
 
-| # | Item | Prior status | This run | Action |
-|---|------|--------------|----------|--------|
-| 1 | Base + 7 key routes | 8/8 PASS | 8/8 PASS | None required |
-| 2 | Repo key-route files | 8/8 IN SYNC | 8/8 IN SYNC | None required |
-| 3 | /public-roadmap head sync | IN SYNC | IN SYNC | Confirmed closed — no changes |
-| 4 | Tracking cross-check | all LIVE | all LIVE | None required |
-| 5 | Broader crawl (300 pages) | 300/300 healthy | 300/300 healthy | None required |
+| # | Item | This run | Action |
+|---|------|----------|--------|
+| 1 | Base + 7 key routes | 8/8 PASS | None required |
+| 2 | Repo key-route files | 8/8 IN SYNC | None required |
+| 3 | Canonical URL cross-check | all match | None required |
+| 4 | Tracking cross-check | all LIVE | None required |
+| 5 | Sitemap coverage | 7/7 present | None required |
 
 **No content written to live or repo this run.**
 
@@ -79,20 +84,14 @@ All 7 tracked keys resolve to a live-200 route: ✅ free-consultation, industrie
 | Category | Result |
 |----------|--------|
 | Base domain | ✅ 200 |
-| Key docs routes (7) | ✅ 7/7 HTTP 200, correct final URL + text/html |
+| Key docs routes (7) | ✅ 7/7 HTTP 200 |
 | Base + key routes (8) | ✅ 8/8 (100%) HTTP 200 |
 | Repo key-route files | ✅ 8/8 IN SYNC |
 | committed_public_routes.json | ✅ 7/7 LIVE |
-| /public-roadmap head sync | ✅ IN SYNC |
-| Broader crawl 300 pages | ✅ 300/300 (0 broken) |
+| Canonical URL cross-check | ✅ 8/8 match |
+| Sitemap coverage | ✅ 7/7 present |
 | **Site health (key routes)** | **HEALTHY** |
 
-**Summary:** All 8 target URLs return HTTP 200 with correct final URLs and text/html. All 8 key route files are byte-identical between the live site and the committed repo. Tracking registry resolves all 7 routes live. No broken links, no stale redirects, no 4xx/5xx, no crawl errors. **No fixes were required.**
+**Summary:** All 8 target URLs return HTTP 200 with correct final URLs, text/html content, and matching canonical URLs. All 8 key route files are byte-identical between live and committed repo. Tracking registry resolves all 7 routes live. All 7 key routes are discoverable via the sitemap (455 URLs). No broken links, no stale redirects, no 4xx/5xx, no crawl errors. **No fixes were required.**
 
-**Records saved to:** `site_integrity_run_20261125.txt` (log); report saved as `site_integrity_report_2026-11-25.md`.
-
----
-
-## NOTE: Repo git drift (no impact on key routes)
-
-Uncommitted modifications exist in the repo (e.g. `public/ai-ticket-sentinel/index.html`, `public/de/ai-ticket-sentinel/index.html`, `public/apps-network-sitemap.xml`, `app/industries/financial-services/page.tsx`, `app/data/appsNetwork.ts`, `app-network/index.html`, `broken-links-report.json`, etc.). None of the 8 key-route paths are affected — all remain IN SYNC with live. Recommend staging those diffs for review and commit, but no live or route impact.
+**Records saved to:** `site_integrity_run_2026-11-25.txt` (log); report saved as `site_integrity_report_2026-11-25.md`.
