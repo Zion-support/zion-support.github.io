@@ -156,6 +156,19 @@ class RollbackEvidenceTests(unittest.TestCase):
         self.assert_blocked(result, report, "validator_error")
         self.assertEqual(report["validation_stage"], "resolving_deployment")
 
+    def test_reusable_publisher_distinguishes_build_from_publish(self):
+        data = fixtures()
+        jobs = data[jobs_path(10)]
+        publish = jobs["jobs"][0]
+        publish["name"] = "deploy / publish"
+        publish["steps"][0]["name"] = "Deploy canonical artifact"
+        jobs["jobs"].insert(0, dict(publish, id=99, name="deploy / build", steps=[]))
+        jobs["total_count"] = 2
+        result, report = self.run_validator(data)
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertEqual(report["last_successful_deploy"]["deployment_job_id"], 100)
+        self.assertEqual(report["validation_status"], "verified")
+
     def test_verified_probe_retains_success_semantics(self):
         result, report = self.run_validator(fixtures())
         self.assertEqual(result.returncode, 0, result.stderr)

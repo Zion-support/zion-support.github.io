@@ -20,6 +20,7 @@ import FloatingActionDock from '@/components/FloatingActionDock';
 import ServiceMatchQuiz from '@/components/ServiceMatchQuiz';
 import AgentsMonitoring from '@/components/AgentsMonitoring';
 import NavigationQuickLinks from '@/components/NavigationQuickLinks';
+import GeoAnswer from '@/components/GeoAnswer';
 import { appsNetworkCatalog, homepageFeaturedApps, APPS_NETWORK_HUB } from './data/appsNetwork';
 
 // Category accent color for showcase cards (maps category key → gradient)
@@ -1482,6 +1483,8 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="py-16 border-t border-slate-800">
+        <div className="container-page">
           <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
               { slug: 'services-hub', name: 'Services Hub', href: '/services-hub/', emoji: '📦', description: 'End-to-end services portal: discovery, engagement, delivery, and managed support.' },
@@ -1503,6 +1506,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      <section className="py-16 border-t border-slate-800">
+        <div className="container-page">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {homepageFeaturedApps.map((app) => (
               <Link
                 key={app.slug}

@@ -124,7 +124,10 @@ jobs:
               for run in runs:
                   if run.get('head_branch') != 'main' or run.get('status') != 'completed' or run.get('conclusion') != 'success':
                       raise RuntimeError(f"Inconsistent successful publisher run {run.get('id')}")
-                  deploy_jobs=[job for job in jobs_for(run) if job.get('name') == 'deploy']
+                  publisher_jobs = {'deploy'}
+                  if workflow in ('gh-pages.yml', 'static-deploy.yml'):
+                      publisher_jobs.add('deploy / publish')
+                  deploy_jobs = [job for job in jobs_for(run) if job.get('name') in publisher_jobs]
                   if not deploy_jobs:
                       raise RuntimeError(f"Missing deploy job evidence for run {run['id']}")
                   for job in deploy_jobs:
@@ -137,6 +140,8 @@ jobs:
                           raise RuntimeError(f"Missing deployment steps for job {job.get('id')}")
                       publish_steps=[step for step in steps
                                      if step.get('name') == 'Deploy to GitHub Pages'
+                                     or (job.get('name') == 'deploy / publish' and step.get('name') == 'Deploy canonical artifact')
+                                     or (workflow == 'static-deploy.yml' and step.get('name') == 'Deploy Pages artifact')
                                      or (isinstance(step.get('name'),str) and step['name'].startswith('Run actions/deploy-pages@'))]
                       if len(publish_steps) != 1:
                           raise RuntimeError(f"Expected one Pages deployment step for job {job.get('id')}")

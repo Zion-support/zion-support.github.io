@@ -32,3 +32,5 @@ export default function ContinuousCodeEvolutionSystem() {
         <span className="text-sm font-medium">Evolving...</span>
       </div>
     </div>
+  );
+}
