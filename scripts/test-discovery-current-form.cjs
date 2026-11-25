@@ -73,6 +73,73 @@ function fixture(mode = 'accepted', script = source) {
     release(v){release(v);},timers};
 }
 const flush=()=>new Promise(r=>setImmediate(r));
+const resourceKinds = {
+  pt: ['Ferramenta', 'Guia ou catálogo', 'Serviço'],
+  en: ['Tool', 'Guide or catalog', 'Service'],
+  es: ['Herramienta', 'Guía o catálogo', 'Servicio'],
+  fr: ['Outil', 'Guide ou catalogue', 'Service'],
+  de: ['Werkzeug', 'Leitfaden oder Katalog', 'Dienstleistung'],
+};
+async function testRecommendationMatrix(markup, locale) {
+  const runtime = questionnaireSource(markup);
+  assert.ok(runtime, locale + ' questionnaire script');
+  const [tool, guide, service] = resourceKinds[locale];
+  const choices = name => [...markup.matchAll(new RegExp('name="' + name + '"\\s+value="([^"]+)"', 'g'))]
+    .map(match => match[1]);
+  const industries = choices('industry');
+  const challenges = choices('challenge');
+  assert.equal(new Set(industries).size, 6);
+  assert.equal(new Set(challenges).size, 5);
+  const overlappingRoutes = {
+    'healthcare/data': ['/ai-readiness-assessment/', '/ai-readiness-framework/', '/zion-app-network/'],
+    'finance/costs': ['/finops-consulting/', '/apps/cloud-cost-optimizer.html', '/roi-calculator/'],
+    'energy/costs': ['/finops-consulting/', '/apps/cloud-cost-optimizer.html', '/ai-energy-optimization/'],
+    'retail/sales': ['/ai-lead-generation/', '/lead-score-copilot/', '/zion-app-network/'],
+  };
+  const challengeOrder = {
+    support: ['/ai-powered-customer-support/', '/ai-observability-and-incident-management/'],
+    sla: ['/ai-observability-and-incident-management/', '/ai-incident-response/'],
+    costs: ['/finops-consulting/', '/apps/cloud-cost-optimizer.html'],
+    sales: ['/ai-lead-generation/', '/lead-score-copilot/'],
+    data: ['/ai-readiness-assessment/', '/ai-readiness-framework/'],
+  };
+  const sectorOrder = {
+    'field-service': ['/zion-app-network/field-visit-handoff-2026.html', '/ai-field-service-automation/'],
+    healthcare: ['/ai-readiness-assessment/'],
+    finance: ['/finops-consulting/', '/roi-calculator/'],
+    energy: ['/ai-energy-optimization/', '/apps/cloud-cost-optimizer.html'],
+    retail: ['/ai-lead-generation/'],
+    other: ['/zion-app-network/', '/services/'],
+  };
+  const guideRoutes = new Set([
+    '/apps/cloud-cost-optimizer.html', '/ai-readiness-framework/', '/lead-score-copilot/',
+    '/zion-app-network/', '/zion-app-network/field-visit-handoff-2026.html',
+  ]);
+  const expectedKind = url => url === '/roi-calculator/' ? tool :
+    (guideRoutes.has(url) ? guide : service);
+  const represented = new Set();
+  for (const industry of industries) {
+    for (const challenge of challenges) {
+      const pair = industry + '/' + challenge;
+      const form = fixture('accepted', runtime);
+      Object.assign(form.answers, { industry, challenge });
+      await form.submit();
+      const screen = [...form.get('dq-results').innerHTML.matchAll(/<li><strong>([^<]+)<\/strong>: <a href="([^"]+)">([^<]+)<\/a><\/li>/g)];
+      const paths = screen.map(match => match[2]);
+      assert.ok(paths.length >= 3 && paths.length <= 4, pair + ' result count');
+      assert.equal(new Set(paths).size, paths.length, pair + ' repeats a URL');
+      assert.deepEqual(paths, overlappingRoutes[pair] || challengeOrder[challenge].concat(sectorOrder[industry]), pair + ' order');
+      for (const [, kind, url] of screen) assert.equal(kind, expectedKind(url), pair + ' kind: ' + url);
+      assert.equal(form.calls.length, 1, pair);
+      const emailLines = form.calls[0].data.results.split('\n').filter(line => line.startsWith('- '));
+      assert.deepEqual(emailLines, screen.map(([, kind, url, label]) =>
+        '- [' + kind + '] ' + label + ': https://ziontechgroup.com' + url), pair + ' screen/email mismatch');
+      for (const url of paths) represented.add(url);
+      scenarios++;
+    }
+  }
+  assert.equal(represented.size, 15, 'All reviewed resource destinations must remain reachable');
+}
 async function run() {
   {
     const mixedCase = '<SCRIPT>' + source + '</ScRiPt>';
@@ -150,6 +217,11 @@ async function run() {
     const f=fixture('rejected');f.answers.name='<img src=x onerror=alert(1)>';await f.submit();
     assert.doesNotMatch(f.get('dq-results').innerHTML,/<img/);
     assert.doesNotMatch(f.get('dq-fallback').innerHTML,/<img/);scenarios++;
+  }
+  await testRecommendationMatrix(html, 'pt');
+  for (const locale of Object.keys(resourceKinds)) {
+    const localizedPath = path.join(__dirname, '../public', locale, 'discovery/index.html');
+    await testRecommendationMatrix(fs.readFileSync(localizedPath, 'utf8'), locale);
   }
   console.log('Current Discovery: '+scenarios+' synthetic runtime scenarios passed; all fetches mocked.');
 }

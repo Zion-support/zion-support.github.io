@@ -56,6 +56,11 @@ jobs:
           sparse-checkout: |
             /public/discovery/index.html
             /discovery/index.html
+            /public/en/discovery/index.html
+            /public/pt/discovery/index.html
+            /public/es/discovery/index.html
+            /public/fr/discovery/index.html
+            /public/de/discovery/index.html
             /scripts/test-discovery-current-form.cjs
           sparse-checkout-cone-mode: false
       - name: Setup Node.js
