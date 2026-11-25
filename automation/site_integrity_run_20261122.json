@@ -1,0 +1,129 @@
+{
+  "run_time": "2026-11-22T23:47:00-03:00",
+  "base": "https://ziontechgroup.com",
+  "routes": {
+    "/": {
+      "status": 200,
+      "final": "https://ziontechgroup.com/",
+      "size": 70784,
+      "ct": "text/html; charset=utf-8",
+      "title": "Zion Tech Group | Advanced AI Services & IT Solutions",
+      "canonical": "https://ziontechgroup.com/",
+      "h1": "Design, Launch, and Scale <span>AI Operations</span> With Confidence"
+    },
+    "/public-roadmap": {
+      "status": 200,
+      "final": "https://ziontechgroup.com/public-roadmap/",
+      "size": 888,
+      "ct": "text/html; charset=utf-8",
+      "title": "Public Roadmap · Zion Tech Group",
+      "canonical": "https://ziontechgroup.com/public-roadmap/",
+      "h1": "Public Roadmap"
+    },
+    "/status-page": {
+      "status": 200,
+      "final": "https://ziontechgroup.com/status-page/",
+      "size": 792,
+      "ct": "text/html; charset=utf-8",
+      "title": "Status Page · Zion Tech Group",
+      "canonical": "https://ziontechgroup.com/status-page/",
+      "h1": "Status Page"
+    },
+    "/use-cases": {
+      "status": 200,
+      "final": "https://ziontechgroup.com/use-cases/",
+      "size": 1145,
+      "ct": "text/html; charset=utf-8",
+      "title": "Use cases — Free Discovery · Zion Tech Group",
+      "canonical": "https://ziontechgroup.com/use-cases/",
+      "h1": "Use cases"
+    },
+    "/solutions/healthcare": {
+      "status": 200,
+      "final": "https://ziontechgroup.com/solutions/healthcare/",
+      "size": 2636,
+      "ct": "text/html; charset=utf-8",
+      "title": "Not a packaged SKU — Healthcare · Zion Tech Group",
+      "canonical": "https://ziontechgroup.com/solutions/healthcare/",
+      "h1": "Healthcare &amp; Life Sciences"
+    },
+    "/industries/financial-services": {
+      "status": 200,
+      "final": "https://ziontechgroup.com/industries/financial-services/",
+      "size": 3061,
+      "ct": "text/html; charset=utf-8",
+      "title": "Not a packaged SKU — Financial Services · Zion Tech Group",
+      "canonical": "https://ziontechgroup.com/industries/financial-services/",
+      "h1": "AI for Financial Services &amp; FinTech"
+    },
+    "/free-consultation": {
+      "status": 200,
+      "final": "https://ziontechgroup.com/free-consultation/",
+      "size": 1098,
+      "ct": "text/html; charset=utf-8",
+      "title": "This is the Free Discovery — Zion Tech Group",
+      "canonical": "https://ziontechgroup.com/free-consultation/",
+      "h1": "This is the Free Discovery"
+    },
+    "/tools/phishing-analyzer": {
+      "status": 200,
+      "final": "https://ziontechgroup.com/tools/phishing-analyzer/",
+      "size": 4221,
+      "ct": "text/html; charset=utf-8",
+      "title": "Phishing Analyzer · Zion Tech Group",
+      "canonical": "https://ziontechgroup.com/tools/phishing-analyzer/",
+      "h1": "Phishing Analyzer"
+    }
+  },
+  "repo_sync": {
+    "public-roadmap": {
+      "local_sha": "8b7581c80f",
+      "live_sha": "8b7581c80f",
+      "in_sync": true
+    },
+    "status-page": {
+      "local_sha": "f944e657ba",
+      "live_sha": "f944e657ba",
+      "in_sync": true
+    },
+    "use-cases": {
+      "local_sha": "cef4183cc5",
+      "live_sha": "cef4183cc5",
+      "in_sync": true
+    },
+    "solutions/healthcare": {
+      "local_sha": "9f57820d18",
+      "live_sha": "9f57820d18",
+      "in_sync": true
+    },
+    "industries/financial-services": {
+      "local_sha": "df51da8433",
+      "live_sha": "df51da8433",
+      "in_sync": true
+    },
+    "free-consultation": {
+      "local_sha": "4be786eec2",
+      "live_sha": "4be786eec2",
+      "in_sync": true
+    },
+    "tools/phishing-analyzer": {
+      "local_sha": "7cdac51b37",
+      "live_sha": "7cdac51b37",
+      "in_sync": true
+    }
+  },
+  "summary": {
+    "live_ok": 8,
+    "total": 8,
+    "repo_all_sync": true,
+    "sitemap_all_key": {
+      "public-roadmap": true,
+      "status-page": true,
+      "use-cases": true,
+      "solutions/healthcare": true,
+      "industries/financial-services": true,
+      "free-consultation": true,
+      "tools/phishing-analyzer": true
+    }
+  }
+}

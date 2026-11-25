@@ -1,0 +1,58 @@
+{
+  "/": {
+    "status": 200,
+    "final": "https://ziontechgroup.com/",
+    "title": "Zion Tech Group | Advanced AI Services & IT Solutions",
+    "canonical": "https://ziontechgroup.com/",
+    "h1": "Design, Launch, and Scale <span>AI Operations</span> With Confidence"
+  },
+  "/public-roadmap": {
+    "status": 200,
+    "final": "https://ziontechgroup.com/public-roadmap/",
+    "title": "Public Roadmap \u00b7 Zion Tech Group",
+    "canonical": "https://ziontechgroup.com/public-roadmap/",
+    "h1": "Public Roadmap"
+  },
+  "/status-page": {
+    "status": 200,
+    "final": "https://ziontechgroup.com/status-page/",
+    "title": "Status Page \u00b7 Zion Tech Group",
+    "canonical": "https://ziontechgroup.com/status-page/",
+    "h1": "Status Page"
+  },
+  "/use-cases": {
+    "status": 200,
+    "final": "https://ziontechgroup.com/use-cases/",
+    "title": "Use cases \u2014 Free Discovery \u00b7 Zion Tech Group",
+    "canonical": "https://ziontechgroup.com/use-cases/",
+    "h1": "Use cases"
+  },
+  "/solutions/healthcare": {
+    "status": 200,
+    "final": "https://ziontechgroup.com/solutions/healthcare/",
+    "title": "Not a packaged SKU \u2014 Healthcare \u00b7 Zion Tech Group",
+    "canonical": "https://ziontechgroup.com/solutions/healthcare/",
+    "h1": "Healthcare &amp; Life Sciences"
+  },
+  "/industries/financial-services": {
+    "status": 200,
+    "final": "https://ziontechgroup.com/industries/financial-services/",
+    "title": "Not a packaged SKU \u2014 Financial Services \u00b7 Zion Tech Group",
+    "canonical": "https://ziontechgroup.com/industries/financial-services/",
+    "h1": "AI for Financial Services &amp; FinTech"
+  },
+  "/free-consultation": {
+    "status": 200,
+    "final": "https://ziontechgroup.com/free-consultation/",
+    "title": "This is the Free Discovery \u2014 Zion Tech Group",
+    "canonical": "https://ziontechgroup.com/free-consultation/",
+    "h1": "This is the Free Discovery"
+  },
+  "/tools/phishing-analyzer": {
+    "status": 200,
+    "final": "https://ziontechgroup.com/tools/phishing-analyzer/",
+    "title": "Phishing Analyzer \u00b7 Zion Tech Group",
+    "canonical": "https://ziontechgroup.com/tools/phishing-analyzer/",
+    "h1": "Phishing Analyzer"
+  }
+}

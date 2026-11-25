@@ -1,0 +1,30 @@
+{
+  "report_date": "2026-11-23T23:17:00-03:00",
+  "site": "https://ziontechgroup.com",
+  "repo": "/Users/miami2/zion-support/zion-support.github.io",
+  "routes_checked": [
+    {"path": "/", "label": "Homepage"},
+    {"path": "/public-roadmap", "label": "Public Roadmap"},
+    {"path": "/status-page", "label": "Status Page"},
+    {"path": "/use-cases", "label": "Use Cases"},
+    {"path": "/solutions/healthcare", "label": "Solutions - Healthcare"},
+    {"path": "/industries/financial-services", "label": "Industries - Financial Services"},
+    {"path": "/free-consultation", "label": "Free Consultation"},
+    {"path": "/tools/phishing-analyzer", "label": "Tools - Phishing Analyzer"}
+  ],
+  "summary": {
+    "live_http_200": 8,
+    "live_total": 8,
+    "repo_sync": "ALL IN SYNC",
+    "sitemap_routes_found": 7,
+    "sitemap_total_routes": 377,
+    "result": "PASS"
+  },
+  "script": "_fresh_site_integrity_check.py",
+  "notes": [
+    "Canonical URLs match live URLs for all 8 routes.",
+    "sitemap-0.xml contains 377 URLs; all 7 key routes present.",
+    "deep_route_check.py: no error/404/under-construction markers on any route.",
+    "Repos insights in git status show unrelated stale modifications elsewhere; key-checked routes unaffected (IN SYNC)."
+  ]
+}

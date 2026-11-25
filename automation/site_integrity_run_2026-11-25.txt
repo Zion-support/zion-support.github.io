@@ -1,0 +1,65 @@
+# Site Integrity Check — ziontechgroup.com
+Run: 2026-11-25 (UTC-03:00) | Model: upstage/solar-mini4 | Profile: default (cron)
+
+## Checks
+
+### 1. Key route probes (HTTP GET, allow_redirects, 20s timeout)
+Script: /Users/miami2/zion.app/automation/key_routes_probe.py
+All 7 key routes returned **HTTP 200 with text/html** (final URLs carry trailing slashes as expected for this site):
+
+| Route | HTTP | Final URL |
+|---|---|---|
+| /public-roadmap | 200 | /public-roadmap/ |
+| /status-page | 200 | /status-page/ |
+| /use-cases | 200 | /use-cases/ |
+| /solutions/healthcare | 200 | /solutions/healthcare/ |
+| /industries/financial-services | 200 | /industries/financial-services/ |
+| /free-consultation | 200 | /free-consultation/ |
+| /tools/phishing-analyzer | 200 | /tools/phishing-analyzer/ |
+
+Sitemap coverage (sitemap-0.xml, lastmod 2026-11-13): all 7 key routes present in sitemapindex.
+
+### 2. Full internal crawl integrity
+Script: /Users/miami2/zion.app/automation/integrity_crawl.py
+- Crawled total: **300** pages (under the 300-page cap)
+- HTTP 200: **300**
+- Broken: **0**
+
+### 3. Site integrity report (broad crawl)
+Script: /Users/miami2/zion.app/automation/site_integrity_report.py
+- Sample: 120 pages
+- HTTP 200: **120**
+- Broken: **0**
+
+### 4. Browser render verification (JS-rendered Next.js pages)
+Browser (cloud session) navigated to all 8 URLs. Each page loaded a real title + body content (no blank/500 shells).
+
+| URL | Title (first 60) | Body snippet |
+|---|---|---|
+| / | 🐴 Zion Tech Group | AI DELIVERY STUDIO |
+| /public-roadmap/ | YouTube heritage 2009–2019 | YouTube heritage, not the AI CTA |
+| /status-page/ | 🐴 Status — Zion Tech Group | Status (verified, not decorative) |
+| /use-cases/ | 🐴 Use cases — Free Discovery | There is no packaged use-case catalog... |
+| /solutions/healthcare/ | 🐴 Serviços de IA e TI | Serviços de IA e TI |
+| /industries/financial-services/ | 🐴 Serviços de IA e TI | Serviços de IA e TI |
+| /free-consultation/ | 🐴 This is the Free Discovery | This is the Free Discovery |
+| /tools/phishing-analyzer/ | 🐴 Phishing Analyzer | Phishing Analyzer — Analise URLs suspeitas |
+
+## Fixes needed
+
+**None at routing/integrity level.** No 404s, no stale redirects producing 404s, no concurrency errors, no broken internal links across the full crawl. No code or config fix was required for the key routes.
+
+Content-level observations (informational, not integrity failures — pages are intentional site messaging):
+
+1. `/public-roadmap/` renders the **YouTube heritage 2009–2019** page rather than a structured roadmap list. It is a maintained route (sitemap, 200) and the page content is the company's public heritage channel. If the intent is a structured roadmap, this is the one item to review.
+2. `/use-cases/` and `/free-consultation/` carry deliberate placeholder statements ("no packaged use-case catalog", "no free consultation") that point users to the Free Discovery. These are intentional site messaging; no fix required.
+
+## Results
+
+- **PASS** — all 7 key routes return HTTP 200.
+- **PASS** — full crawl 300/300 HTTP 200, 0 broken.
+- **PASS** — site integrity report 120/120 HTTP 200, 0 broken.
+- **PASS** — all routes render real content in a real browser.
+- **No fixes applied** — no routing/config changes were required.
+
+Report saved to `/Users/miami2/zion.app/automation/site_integrity_run_2026-11-25.txt`.

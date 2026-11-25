@@ -1,0 +1,50 @@
+{
+  "/": {
+    "final": "https://ziontechgroup.com/",
+    "status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "ok": true
+  },
+  "/public-roadmap": {
+    "final": "https://ziontechgroup.com/public-roadmap/",
+    "status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "ok": true
+  },
+  "/status-page": {
+    "final": "https://ziontechgroup.com/status-page/",
+    "status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "ok": true
+  },
+  "/use-cases": {
+    "final": "https://ziontechgroup.com/use-cases/",
+    "status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "ok": true
+  },
+  "/solutions/healthcare": {
+    "final": "https://ziontechgroup.com/solutions/healthcare/",
+    "status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "ok": true
+  },
+  "/industries/financial-services": {
+    "final": "https://ziontechgroup.com/industries/financial-services/",
+    "status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "ok": true
+  },
+  "/free-consultation": {
+    "final": "https://ziontechgroup.com/free-consultation/",
+    "status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "ok": true
+  },
+  "/tools/phishing-analyzer": {
+    "final": "https://ziontechgroup.com/tools/phishing-analyzer/",
+    "status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "ok": true
+  }
+}

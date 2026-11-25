@@ -1,0 +1,122 @@
+[
+  {
+    "route": "/services/ai-financial-planning",
+    "status": 404,
+    "final": "https://ziontechgroup.com/services/ai-financial-planning"
+  },
+  {
+    "route": "/services/ai-risk-management",
+    "status": 404,
+    "final": "https://ziontechgroup.com/services/ai-risk-management"
+  },
+  {
+    "route": "/services/ai-wealth-management",
+    "status": 404,
+    "final": "https://ziontechgroup.com/services/ai-wealth-management"
+  },
+  {
+    "route": "/services/ai-credit-scoring",
+    "status": 404,
+    "final": "https://ziontechgroup.com/services/ai-credit-scoring"
+  },
+  {
+    "route": "/apps/discovery-first-win-guide.html",
+    "status": 404,
+    "final": "https://ziontechgroup.com/apps/discovery-first-win-guide.html"
+  },
+  {
+    "route": "/apps/discovery-showcase.html",
+    "status": 404,
+    "final": "https://ziontechgroup.com/apps/discovery-showcase.html"
+  },
+  {
+    "route": "/apps/app-verification-guide.html",
+    "status": 404,
+    "final": "https://ziontechgroup.com/apps/app-verification-guide.html"
+  },
+  {
+    "route": "/apps/operational-planning-tools.html",
+    "status": 404,
+    "final": "https://ziontechgroup.com/apps/operational-planning-tools.html"
+  },
+  {
+    "route": "/apps/october-2026-batch111-agriculture.html",
+    "status": 404,
+    "final": "https://ziontechgroup.com/apps/october-2026-batch111-agriculture.html"
+  },
+  {
+    "route": "/agents/",
+    "status": 404,
+    "final": "https://ziontechgroup.com/agents/"
+  },
+  {
+    "route": "/apps-network/apps-network/",
+    "status": 404,
+    "final": "https://ziontechgroup.com/apps-network/apps-network/"
+  },
+  {
+    "route": "/site-uptime-watchdog/",
+    "status": 404,
+    "final": "https://ziontechgroup.com/site-uptime-watchdog/"
+  },
+  {
+    "route": "/ai-smart-hands-scheduler/",
+    "status": 404,
+    "final": "https://ziontechgroup.com/ai-smart-hands-scheduler/"
+  },
+  {
+    "route": "/llm-cost-calculator/",
+    "status": 404,
+    "final": "https://ziontechgroup.com/llm-cost-calculator/"
+  },
+  {
+    "route": "/ai-red-team-playbook/",
+    "status": 404,
+    "final": "https://ziontechgroup.com/ai-red-team-playbook/"
+  },
+  {
+    "route": "/finops-alert-triage/",
+    "status": 404,
+    "final": "https://ziontechgroup.com/finops-alert-triage/"
+  },
+  {
+    "route": "/mcp-server-scaffold/",
+    "status": 404,
+    "final": "https://ziontechgroup.com/mcp-server-scaffold/"
+  },
+  {
+    "route": "/ai-vendor-comparison/",
+    "status": 404,
+    "final": "https://ziontechgroup.com/ai-vendor-comparison/"
+  },
+  {
+    "route": "/synthetic-data-studio/",
+    "status": 404,
+    "final": "https://ziontechgroup.com/synthetic-data-studio/"
+  },
+  {
+    "route": "/undefined/",
+    "status": 404,
+    "final": "https://ziontechgroup.com/undefined/"
+  },
+  {
+    "route": "/pt/undefined/",
+    "status": 404,
+    "final": "https://ziontechgroup.com/pt/undefined/"
+  },
+  {
+    "route": "/es/undefined/",
+    "status": 404,
+    "final": "https://ziontechgroup.com/es/undefined/"
+  },
+  {
+    "route": "/fr/undefined/",
+    "status": 404,
+    "final": "https://ziontechgroup.com/fr/undefined/"
+  },
+  {
+    "route": "/de/undefined/",
+    "status": 404,
+    "final": "https://ziontechgroup.com/de/undefined/"
+  }
+]

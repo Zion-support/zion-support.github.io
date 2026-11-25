@@ -1,0 +1,16 @@
+{
+  "run": "2026-11-23 19:05 -03",
+  "base": "https://ziontechgroup.com",
+  "checks": {
+    "key_routes_probe": "7/7 PASS (HTTP 200, text/html, canonical final)",
+    "repo_vs_live": "7/7 IN SYNC (sha1 of first 2KB equal)",
+    "sitemap": "index 200 / 377 URLs; all 7 routes + homepage present",
+    "broader_crawl": "120/120 OK, 0 broken (refreshed walk; prior run 119/120, /agents/ 404 now fixed)"
+  },
+  "results": {
+    "key_docs_routes": "7/7 PASS",
+    "repo_sync": "ALL IN SYNC",
+    "live_health": "8/8 200",
+    "broken": []
+  }
+}

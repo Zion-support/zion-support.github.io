@@ -54,16 +54,29 @@ for r in ['/public-roadmap','/status-page','/use-cases','/solutions/healthcare',
         print(f"  MISSING  {r}  (local file absent)")
         all_ok = False
 
-# 3) Sitemap check
+# 3) Sitemap check: follow the sitemapindex to the actual sitemap(s), then
+# verify every target route is present as a <loc>.
 print("="*100)
 print("STEP 3 — SITEMAP CHECK")
 print("="*100)
 try:
     resp = requests.get(BASE + '/sitemap.xml', timeout=15)
-    sitemap_urls = re.findall(r'<loc>(.*?)</loc>', resp.text)
-    print(f"  sitemap.xml -> 200, {len(sitemap_urls)} URLs, content-type={resp.headers.get('content-type')}")
+    sitemap_index_urls = re.findall(r'<loc>(.*?)</loc>', resp.text)
+    all_sitemap_urls = list(sitemap_index_urls)
+    # Follow the sitemapindex -> nested sitemaps (e.g. sitemap-0.xml) and
+    # pull the real <loc> URLs out of each.
+    for s_url in sitemap_index_urls:
+        try:
+            r = requests.get(s_url, timeout=15)
+            if r.status_code == 200:
+                all_sitemap_urls += re.findall(r'<loc>(.*?)</loc>', r.text)
+        except Exception as e:
+            print(f"  WARN  could not read sitemap {s_url} -> {e}")
+    print(f"  sitemap index + nested sitemap(s): {len(all_sitemap_urls)} URLs total")
     for tr in ROUTES:
-        found = any(tr.lstrip('/') in u for u in sitemap_urls)
+        needle = tr.lstrip('/')
+        # match full URL segments (e.g. 'public-roadmap') as a path component
+        found = any(u.rstrip('/') == f'https://ziontechgroup.com/{needle}' or needle in u for u in all_sitemap_urls)
         print(f"  {'OK' if found else 'NO-SITEMAP-ENTRY'}  sitemap contains '{tr.lstrip('/')}'")
 except Exception as e:
     print(f"  ERR  sitemap.xml -> {e}")

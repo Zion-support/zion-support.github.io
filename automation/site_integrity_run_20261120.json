@@ -1,0 +1,39 @@
+{
+  "base_url": "https://ziontechgroup.com",
+  "max_pages": 200,
+  "total_crawled": 200,
+  "http_200_count": 195,
+  "broken_count": 5,
+  "first_10_broken_urls": [
+    {
+      "url": "https://ziontechgroup.com/zion-ai-code-assistant/",
+      "status": 301,
+      "classification": "stale redirect",
+      "redirect_target": "https://code-assistant.ziontechgroup.com/"
+    },
+    {
+      "url": "https://ziontechgroup.com/zion-ai-chatbot-builder/",
+      "status": 301,
+      "classification": "stale redirect",
+      "redirect_target": "https://chatbot-builder.ziontechgroup.com/"
+    },
+    {
+      "url": "https://ziontechgroup.com/fr/undefined/",
+      "status": 404,
+      "classification": "missing page",
+      "redirect_target": null
+    },
+    {
+      "url": "https://ziontechgroup.com/pt/undefined/",
+      "status": 404,
+      "classification": "missing page",
+      "redirect_target": null
+    },
+    {
+      "url": "https://ziontechgroup.com/undefined/",
+      "status": 404,
+      "classification": "missing page",
+      "redirect_target": null
+    }
+  ]
+}
