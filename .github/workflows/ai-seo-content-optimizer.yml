@@ -87,11 +87,9 @@ jobs:
             exit 0
           fi
 
-          METADATA=$(cat seo-reports/metadata-audit.json | python3 -c "import sys,json; data=json.load(sys.stdin); print(json.dumps(data[:20]))")
-
           PAYLOAD=$(python3 -c "
-          import json, sys
-          metadata = $METADATA
+          import json
+          metadata = json.load(open('seo-reports/metadata-audit.json', encoding='utf-8'))[:20]
           prompt = '''Analyze this SEO metadata audit for ziontechgroup.com (a Next.js AI solutions website).
           For each page with issues, provide specific, actionable SEO improvements.
           Focus on: missing/weak titles, missing/short descriptions, keyword optimization for AI/tech services.
