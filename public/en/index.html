@@ -14,7 +14,27 @@
 
 <link rel="preload" href="/assets/css/site.css" as="style">
 <link rel="stylesheet" href="/assets/css/site.css">
-<link rel="alternate" hreflang="en" href="https://ziontechgroup.com/en/"><link rel="alternate" hreflang="pt-BR" href="https://ziontechgroup.com/pt/"><link rel="alternate" hreflang="es" href="https://ziontechgroup.com/es/"><link rel="alternate" hreflang="fr" href="https://ziontechgroup.com/fr/"><link rel="alternate" hreflang="de" href="https://ziontechgroup.com/de/"><link rel="alternate" hreflang="x-default" href="https://ziontechgroup.com/en/"></head>
+<link rel="alternate" hreflang="en" href="https://ziontechgroup.com/en/"><link rel="alternate" hreflang="pt-BR" href="https://ziontechgroup.com/pt/"><link rel="alternate" hreflang="es" href="https://ziontechgroup.com/es/"><link rel="alternate" hreflang="fr" href="https://ziontechgroup.com/fr/"><link rel="alternate" hreflang="de" href="https://ziontechgroup.com/de/"><link rel="alternate" hreflang="x-default" href="https://ziontechgroup.com/en/"><style id="zion-home-guides-styles">
+.home-language-nav{max-width:1200px;margin:0 auto;padding:.65rem 1.25rem;display:flex;flex-wrap:wrap;gap:.5rem 1.25rem;border-top:1px solid #334155}
+.home-language-nav a{display:inline-flex;align-items:center;min-height:2.75rem;color:#cbd5e1;font-size:.9375rem;text-decoration:none}
+.home-language-nav a[aria-current="page"]{color:#e9d5ff;text-decoration:underline;text-underline-offset:.4rem}
+.home-language-nav a:focus-visible,.zion-home-guides a:focus-visible{outline:3px solid #a5f3fc;outline-offset:4px}
+.zion-home-guides{max-width:1160px;margin:2rem auto;padding:clamp(1.25rem,3vw,2rem);border:1px solid #475569;border-radius:1rem;background:#0f172a;color:#e2e8f0}
+.zion-home-guides .zhg-kicker{margin:0 0 .6rem;color:#c4b5fd;font-size:.875rem;letter-spacing:.06em}
+.zion-home-guides h2{max-width:34ch;margin:0 0 1rem;color:#fff;font-size:clamp(1.6rem,3vw,2.25rem);line-height:1.2}
+.zion-home-guides .zhg-intro{max-width:74ch;margin:0 0 1.5rem;color:#cbd5e1;font-size:1rem;line-height:1.65}
+.zion-home-guides .zhg-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,17rem),1fr));gap:1rem}
+.zion-home-guides .zhg-card{display:flex;flex-direction:column;min-width:0;padding:1.25rem;border:1px solid #334155;border-radius:.75rem;background:#111d32}
+.zion-home-guides .zhg-card h3{margin:0 0 .75rem;color:#fff;font-size:1.1875rem;line-height:1.35}
+.zion-home-guides .zhg-card p{margin:0 0 1rem;color:#cbd5e1;font-size:1rem;line-height:1.65}
+.zion-home-guides .zhg-card a{margin-top:auto;padding-top:.4rem;color:#c4b5fd;font-size:1rem;font-weight:650;text-underline-offset:.25rem;overflow-wrap:anywhere}
+.zion-home-guides .zhg-actions{display:flex;align-items:center;flex-wrap:wrap;gap:1rem 1.5rem;margin-top:1.5rem}
+.zion-home-guides .zhg-actions a{color:#c4b5fd;font-size:1rem;text-underline-offset:.25rem}
+.zion-home-guides .zhg-actions .zhg-button{display:inline-flex;align-items:center;justify-content:center;min-height:2.75rem;padding:.65rem 1rem;border:1px solid #c4b5fd;border-radius:.5rem;color:#f3e8ff;font-weight:650;text-decoration:none}
+.zion-home-guides .zhg-scope{max-width:90ch;margin:1rem 0 0;color:#b7c5d8;font-size:.9375rem;line-height:1.65}
+@media(max-width:540px){.home-language-nav{gap:.25rem 1rem}.zion-home-guides{margin:1.5rem auto}.zion-home-guides .zhg-grid{grid-template-columns:1fr}}
+</style>
+</head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="nav"><div class="wrap navin">
@@ -23,21 +43,34 @@
 <nav class="links" aria-label="Primary">
 <a href="/en/services/">Services</a>
 <a href="/en/plans/">Plans</a>
-<a href="/discovery/">Discovery</a>
+<a href="/en/discovery/#dq" hreflang="en" title="Questionnaire in English">Discovery</a>
 <a href="/blog/">Blog</a>
 <a href="/contact/">Contact</a>
-<a class="cta" href="/discovery/#dq">Free Discovery</a>
-<span class="langsw" aria-label="Language"><a href="/">PT</a><a href="/en/" aria-current="true">EN</a><a href="/es/">ES</a><a href="/fr/">FR</a></span>
-</nav></div></header>
+<a class="cta" href="/en/discovery/#dq" hreflang="en" title="Questionnaire in English">Free Discovery</a>
+</nav></div><nav class="home-language-nav" data-home-language-selector aria-label="Homepage language"><a href="/en/" lang="en" hreflang="en" aria-current="page">English</a><a href="/pt/" lang="pt-BR" hreflang="pt-BR">Português</a><a href="/es/" lang="es" hreflang="es">Español</a><a href="/fr/" lang="fr" hreflang="fr">Français</a><a href="/de/" lang="de" hreflang="de">Deutsch</a></nav></header>
 <main class="page" id="main"><div class="wrap">
 <p class="eyebrow">Official menu only</p>
 <h1>AI &amp; IT that operators can buy today.</h1>
-<p class="lead">Start with a free online Discovery questionnaire. Consulting, Starter and Growth are optional paid plans.</p>
+<p class="lead">Start with a free online Discovery questionnaire in your preferred language. Consulting, Starter and Growth are optional paid plans.</p>
 <p class="actions">
-  <a class="btn" href="/discovery/#dq">Start Free Discovery</a>
+  <a class="btn" href="/en/discovery/#dq" hreflang="en" title="Questionnaire in English">Start Free Discovery</a>
   <a class="btn alt" href="/en/plans/">See plans</a>
   <a class="btn alt" href="/contact/">Contact</a>
 </p>
+<!--zion-network-home:start--><section id="app-paths-home" class="zion-home-guides" data-home-guides="2026-11-24" lang="en" aria-labelledby="app-paths-home-title">
+<p class="zhg-kicker">Zion apps network · Planning guides</p>
+<h2 id="app-paths-home-title">A clear brief for your next IT task</h2>
+<p class="zhg-intro">Use five practical guides to prepare a field visit, classify a ticket, define completion evidence or plan a measurable AI pilot. Start with the task you need to scope.</p>
+<div class="zhg-grid">
+  <article class="zhg-card"><h3>Define the evidence before a field visit</h3><p>Agree the checks, records and acceptance criteria that show what was completed and what still needs review.</p><a data-home-guide="field-service-evidence-guide" href="/apps/field-service-evidence-guide.html" hreflang="en">Prepare the evidence checklist</a></article>
+  <article class="zhg-card"><h3>Turn Discovery into a measurable pilot</h3><p>Choose one process, record a baseline and name an owner before testing a change with clear success and stop criteria.</p><a data-home-guide="discovery-first-win-guide" href="/apps/discovery-first-win-guide.html" hreflang="en">Plan the first measurable result</a></article>
+  <article class="zhg-card"><h3>Prepare a smart hands request</h3><p>Bring equipment, location, access rules, permitted tasks and the proposed maintenance window into a brief the service team can assess.</p><a data-home-guide="field-services-smart-hands-playbook" href="/apps/field-services-smart-hands-playbook.html" hreflang="en">Build a field service brief</a></article>
+  <article class="zhg-card"><h3>Choose the right field ticket</h3><p>Compare common onsite request types, identify the skills and inputs required, and clarify the limits of the work.</p><a data-home-guide="field-ticket-types" href="/apps/field-ticket-types.html" hreflang="en">Review ticket types</a></article>
+  <article class="zhg-card"><h3>Organize an IT operations review</h3><p>Connect service priorities, costs, accountable owners, changes and evidence so your team can review the next decision.</p><a data-home-guide="ai-it-ops-command-center" href="/apps/ai-it-ops-command-center.html" hreflang="en">Explore the operations guide</a></article>
+</div>
+<div class="zhg-actions"><a class="zhg-button" data-home-app-catalog href="/apps/" hreflang="en">Browse the apps catalog</a><a href="/en/discovery/#dq" hreflang="en" title="Questionnaire in English">Free online Discovery</a></div>
+<p class="zhg-scope">These guides support planning and review with your team. Technician availability, commercial terms and implementation are confirmed separately. <a href="/apps/discovery-app-paths.html#device-exchange">See a worked example of a device exchange</a>.</p>
+</section><!--zion-network-home:end-->
 <p class="chips" aria-label="Published commercial menu">
   <span class="chip">Free Discovery</span>
   <span class="chip">Consulting $499</span>
@@ -50,7 +83,7 @@
   <div class="price">Free online</div>
   <p>See up to four app recommendations immediately and request a copy by email. No payment or meeting is required.</p>
   <div class="payrow">
-    <a class="btn" href="/discovery/#dq">Open the free questionnaire</a>
+    <a class="btn" href="/en/discovery/#dq" hreflang="en" title="Questionnaire in English">Open the free questionnaire</a>
   </div>
 </article>
 <article class="card">
@@ -91,18 +124,21 @@
     <article class="card"><h3>Midrange / HPE maintenance</h3><p>On-site midrange storage work with parts and labor. Recurring HPE/Dell parts demand on enterprise accounts. No invoice value on this page.</p></article>
   </div>
 </section>
-<p class="see-also">Also: <a href="/en/services/">Services</a> · <a href="/en/plans/">Plans</a> · <a href="/discovery/">Discovery hub</a> · <a href="/autonomous-ai-agents/">Autonomous AI</a> · <a href="/field-services/">Field</a> · <a href="/finops-consulting/">FinOps</a> · <a href="/es/">Español</a> · <a href="/fr/">Français</a></p>
+<p class="see-also">Also: <a href="/en/services/">Services</a> · <a href="/en/plans/">Plans</a> · <a href="/en/discovery/#dq" hreflang="en" title="Questionnaire in English">Discovery hub</a> · <a href="/autonomous-ai-agents/">Autonomous AI</a> · <a href="/field-services/">Field</a> · <a href="/finops-consulting/">FinOps</a> · <a href="/es/">Español</a> · <a href="/fr/">Français</a></p>
 </div><!-- apps-showcase-2026-11-12-v1:start -->
 <section id="zion-apps-showcase" class="wrap" style="max-width:1200px;margin:2rem auto;padding:2rem 1.25rem;border:1px solid #475569;border-radius:1rem;background:#0f172a;color:#e2e8f0" aria-labelledby="zion-apps-showcase-title"><p style="color:#67e8f9">Zion Tech Group · Apps network</p><h2 id="zion-apps-showcase-title">Explore the Zion apps network by goal</h2><p>Prepare a field service request, model cloud costs or compare an AI app with six practical resources and five complete language editions.</p><p><a href="/apps-network-showcase/" style="color:#c4b5fd">Apps network →</a> · <a href="/zion-app-network/" style="color:#c4b5fd">Browse the directory</a></p><nav aria-label="Language" style="display:flex;flex-wrap:wrap;gap:1rem"><a href="/apps-network-showcase/" lang="en" hreflang="en" aria-current="page">English</a><a href="/pt/apps-network-showcase/" lang="pt-BR" hreflang="pt-BR">Português</a><a href="/es/apps-network-showcase/" lang="es" hreflang="es">Español</a><a href="/fr/apps-network-showcase/" lang="fr" hreflang="fr">Français</a><a href="/de/apps-network-showcase/" lang="de" hreflang="de">Deutsch</a></nav></section>
 <!-- apps-showcase-2026-11-12-v1:end -->
+<!--multi-site-planning:start--><aside class="wrap" aria-labelledby="multi-site-planning-title" style="max-width:1120px;margin:2rem auto;padding:1.5rem;border:1px solid #475569;border-radius:1rem;background:#0f172a;color:#e2e8f0">
+<h2 id="multi-site-planning-title">Plan IT support across multiple locations</h2><p style="font-size:1rem;line-height:1.65">Compare per-visit and monthly per-user support using site details, operating hours, demand and written service boundaries.</p>
+<p><a href="/apps/multi-site-it-support-planning.html" hreflang="en" style="color:#a5f3fc;text-decoration:underline;text-underline-offset:.25rem">Read the multi-site support planning guide</a></p></aside><!--multi-site-planning:end-->
 </main>
 <footer><div class="wrap foot">
 <div><h3>Company</h3><a href="/about/">About</a><a href="/contact/">Contact</a></div>
 <div><h3>Offer</h3><a href="/en/plans/">Plans</a><a href="/en/services/">Services</a><a href="/field-services/">Field</a></div>
-<div><h3>Resources</h3><a href="/blog/">Blog</a><a href="/discovery/">Free Discovery</a></div>
+<div><h3>Resources</h3><a href="/blog/">Blog</a><a href="/en/discovery/#dq" hreflang="en" title="Questionnaire in English">Free Discovery</a></div>
 <div><h3>Legal</h3><a href="/privacy/">Privacy</a><a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></div>
 </div>
-<p class="muted"><a href="/">Português</a> · <a href="/en/">English</a> · <a href="/es/">Español</a> · <a href="/fr/">Français</a></p>
+<p class="muted"><a href="/pt/" lang="pt-BR" hreflang="pt-BR">Português</a> · <a href="/en/" lang="en" hreflang="en" aria-current="page">English</a> · <a href="/es/" lang="es" hreflang="es">Español</a> · <a href="/fr/" lang="fr" hreflang="fr">Français</a> · <a href="/de/" lang="de" hreflang="de">Deutsch</a></p>
 <p class="muted">Zion Tech Group · +55 11 97614-0076 · 364 E Main St STE 1008, Middletown, DE 19709</p>
 </footer>
 <script src="/assets/js/zion-shell.js" defer></script>

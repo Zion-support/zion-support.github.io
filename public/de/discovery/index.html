@@ -1,148 +1,129 @@
 <!DOCTYPE html>
-<html lang="de">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Kostenloses Discovery · Zion Tech Group</title>
-<meta name="description" content="Kostenloses Online-Discovery, um Ihre KI-Chance zu kartieren. Ohne Verpflichtung.">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://ziontechgroup.com/de/discovery/"><link rel="alternate" hreflang="en" href="https://ziontechgroup.com/discovery/"><link rel="alternate" hreflang="pt-BR" href="https://ziontechgroup.com/pt/discovery/"><link rel="alternate" hreflang="es" href="https://ziontechgroup.com/es/discovery/"><link rel="alternate" hreflang="fr" href="https://ziontechgroup.com/fr/discovery/"><link rel="alternate" hreflang="de" href="https://ziontechgroup.com/de/discovery/"><link rel="alternate" hreflang="x-default" href="https://ziontechgroup.com/discovery/">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Kostenloses Discovery","applicationCategory":"BusinessApplication","inLanguage":"de","url":"https://ziontechgroup.com/de/discovery/","description":"Kostenloses Online-Discovery, um Ihre KI-Chance zu kartieren. Ohne Verpflichtung.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"isPartOf":{"@type":"CollectionPage","name":"Zion Apps Network","url":"https://ziontechgroup.com/apps-network/"}}</script>
-<style>
-:root{--bg:#0b1220;--card:#121a2b;--ink:#e8eef8;--muted:#9aa8bd;--line:#243049;--accent:#7dd3fc;--brand:#a78bfa}
-*{box-sizing:border-box}html{scroll-behavior:smooth}
-body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
-a{color:var(--accent);text-decoration:none}a:hover{color:#a5d7ff;text-decoration:underline}
-.wrap{max-width:1080px;margin:0 auto;padding:0 20px 72px}
-.skip{position:absolute;left:-9999px;top:0;background:var(--accent);color:#042033;padding:8px 14px;z-index:10}
-.skip:focus{left:8px;top:8px}
-header.site{border-bottom:1px solid var(--line);background:rgba(11,18,32,.92)}
-header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:14px;padding-bottom:14px;flex-wrap:wrap}
-.brand{color:var(--ink);font-weight:700;letter-spacing:-.01em}
-.brand span{color:var(--brand)}
-.langs{display:flex;flex-wrap:wrap;gap:6px;font-size:.8rem}
-.langs a{color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:3px 10px}
-.langs a[aria-current="true"]{color:#042033;background:var(--accent);border-color:var(--accent);font-weight:700}
-.hero{padding:56px 0 40px;background:radial-gradient(ellipse at top,rgba(167,139,250,.16),transparent 60%)}
-.chip{display:inline-block;font-size:.72rem;text-transform:uppercase;letter-spacing:.14em;color:var(--brand);border:1px solid rgba(167,139,250,.4);border-radius:999px;padding:4px 12px;margin-bottom:16px}
-.hero h1{font-size:clamp(2rem,5vw,3rem);line-height:1.1;margin:0 0 14px;letter-spacing:-.02em}
-.lede{color:var(--muted);font-size:1.12rem;max-width:46rem;margin:0 0 26px}
-.cta-row{display:flex;flex-wrap:wrap;gap:12px}
-.btn{display:inline-block;background:linear-gradient(90deg,#7c3aed,#ec4899);color:#fff;font-weight:700;padding:12px 20px;border-radius:10px}
-.btn.alt{background:transparent;border:1px solid var(--line);color:var(--ink)}
-section{padding:44px 0;border-top:1px solid var(--line)}
-h2{font-size:1.5rem;margin:0 0 18px;letter-spacing:-.01em}
-h3{font-size:1.05rem;margin:0 0 6px}
-p{margin:0 0 14px}
-ul.feat{list-style:none;padding:0;margin:0;display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
-ul.feat li{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px}
-ul.feat li strong{display:block;color:var(--ink);margin-bottom:4px}
-ul.feat li span{color:var(--muted);font-size:.9rem}
-.grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(230px,1fr))}
-.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;display:block;color:inherit}
-.card:hover{border-color:rgba(167,139,250,.5)}
-.card .g{font-size:.7rem;text-transform:uppercase;letter-spacing:.12em;color:var(--brand);margin-bottom:6px}
-.card p{color:var(--muted);font-size:.88rem;margin:0}
-.card .rel{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;font-size:.75rem}
-.card .rel a{color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:2px 8px}
-.card .rel a:hover{color:var(--accent);border-color:rgba(125,211,252,.4)}
-.note{color:var(--muted);font-size:.9rem;max-width:46rem}
-.stats{display:flex;flex-wrap:wrap;gap:22px;margin-top:26px}
-.stat b{display:block;font-size:1.5rem;color:var(--ink)}
-.stat span{color:var(--muted);font-size:.82rem}
-.badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
-.badge{font-size:.78rem;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:5px 12px}
-footer{margin-top:12px;border-top:1px solid var(--line);padding-top:20px;color:var(--muted);font-size:.85rem}
-footer .wrap{display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;align-items:center;padding-top:18px;padding-bottom:18px}
-footer a{color:var(--muted)}
-@media(max-width:640px){.hero{padding:40px 0 28px}section{padding:32px 0}}
-</style>
-</head>
-<body>
-<a class="skip" href="#main">Zum Inhalt springen</a>
-<header class="site">
-  <div class="wrap">
-    <a class="brand" href="/de/">Zion <span>Apps Network</span></a>
-    <nav class="langs" aria-label="Sprache"><a href="https://ziontechgroup.com/discovery/" hreflang="en">EN</a><a href="https://ziontechgroup.com/pt/discovery/" hreflang="pt">PT</a><a href="https://ziontechgroup.com/es/discovery/" hreflang="es">ES</a><a href="https://ziontechgroup.com/fr/discovery/" hreflang="fr">FR</a><a href="https://ziontechgroup.com/de/discovery/" aria-current="true" hreflang="de">DE</a></nav>
-  </div>
-</header>
-<main id="main">
-  <div class="wrap">
-    <div class="hero">
-      <span class="chip">Arbeit &amp; Briefs</span>
-      <h1>Kostenloses Discovery</h1>
-      <p class="lede">Kostenloses Online-Discovery, um Ihre KI-Chance zu kartieren. Ohne Verpflichtung.</p>
-      <div class="cta-row">
-        <a class="btn" href="/discovery/">Kostenloses Discovery starten</a>
-        <a class="btn alt" href="/pricing/">Preise ansehen</a>
-      </div>
-      <div class="badges">
-        <span class="badge">● Kostenlos nutzbar</span>
-        <span class="badge">Ohne Kreditkarte</span>
-        <span class="badge">Vernetzt</span>
-      </div>
-    </div>
-
-    <section id="what">
-      <h2>Was es tut</h2>
-      <p class="note">Kostenloses Online-Discovery, um Ihre KI-Chance zu kartieren. Ohne Verpflichtung.</p>
-    </section>
-
-    <section id="capabilities">
-      <h2>Kernfunktionen</h2>
-      <ul class="feat">
-<li><strong>Kopierfertiger Brief oder Prompt</strong></li>
-<li><strong>Nichts wird ohne Einwilligung gespeichert</strong></li>
-<li><strong>Speist einen Discovery-Bericht</strong></li>
-      </ul>
-    </section>
-
-    <section id="when">
-      <h2>Wann es sinnvoll ist</h2>
-      <ul class="feat">
-<li><strong>Discovery-Sitzung vorbereiten</strong></li>
-<li><strong>RFQ-Antwort entwerfen</strong></li>
-<li><strong>SOP dokumentieren</strong></li>
-      </ul>
-    </section>
-
-    <section id="related">
-      <h2>Verbundene Apps in diesem Netz</h2>
-      <p class="note">Jede App verlinkt ihre Geschwister — keine Sackgassen im Netz.</p>
-      <div class="grid">
-<a class="card" href="/de/agent-brief/">
-  <div class="g">Arbeit &amp; Briefs</div>
-  <h3>Agenten-Brief</h3>
-  <p>Einseitig für Discovery. Nichts wird gespeichert.</p>
-</a>
-<a class="card" href="/de/stack-audit/">
-  <div class="g">Governance &amp; Ausschreibungen</div>
-  <h3>Stack-Audit</h3>
-  <p>Zehn Ja/Nein-Prüfungen, die die nächste SKU wählen.</p>
-</a>
-<a class="card" href="/de/rfp-readiness/">
-  <div class="g">Governance &amp; Ausschreibungen</div>
-  <h3>RFP-Ready</h3>
-  <p>Bewerten Sie eine Ausschreibung / RFQ vor der Abgabe.</p>
-</a>
-      </div>
-    </section>
-
-    <section id="cta">
-      <h2>Brauchen Sie das in Produktion?</h2>
-      <p class="note">Starten Sie mit einem kostenlosen Discovery: ein Prozess, ein Bericht, eine 30-minütige Sitzung. Dann ein Pilotprojekt mit messbaren KPIs.</p>
-      <div class="cta-row">
-        <a class="btn" href="/discovery/">Kostenloses Discovery starten</a>
-        <a class="btn alt" href="/de//apps-network/">Apps Network Hub</a>
-      </div>
-    </section>
-  </div>
-</main>
-<footer>
-  <div class="wrap">
-    <div>Zion Apps Network · <a href="/de/">Zion Tech Group</a></div>
-    <div class="langs"><a href="https://ziontechgroup.com/discovery/" hreflang="en">EN</a><a href="https://ziontechgroup.com/pt/discovery/" hreflang="pt">PT</a><a href="https://ziontechgroup.com/es/discovery/" hreflang="es">ES</a><a href="https://ziontechgroup.com/fr/discovery/" hreflang="fr">FR</a><a href="https://ziontechgroup.com/de/discovery/" aria-current="true" hreflang="de">DE</a></div>
-  </div>
-</footer>
-</body>
-</html>
+<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Kostenloser Online-Discovery für KI und IT | Zion Tech Group</title><meta name="description" content="Wählen Sie den Prozess, den Sie verbessern möchten. Beantworten Sie sieben Fragen, sehen Sie bis zu vier vorgeschlagene Ressourcen und fordern Sie eine E-Mail-Kopie an. Zahlung und Besprechung sind nicht erforderlich."><link rel="canonical" href="https://ziontechgroup.com/de/discovery/"><link rel="alternate" hreflang="en" href="https://ziontechgroup.com/en/discovery/"><link rel="alternate" hreflang="pt-BR" href="https://ziontechgroup.com/discovery/"><link rel="alternate" hreflang="es" href="https://ziontechgroup.com/es/discovery/"><link rel="alternate" hreflang="fr" href="https://ziontechgroup.com/fr/discovery/"><link rel="alternate" hreflang="de" href="https://ziontechgroup.com/de/discovery/"><link rel="alternate" hreflang="x-default" href="https://ziontechgroup.com/en/discovery/"><meta property="og:title" content="Kostenloser Online-Discovery für KI und IT"><meta property="og:description" content="Wählen Sie den Prozess, den Sie verbessern möchten. Beantworten Sie sieben Fragen, sehen Sie bis zu vier vorgeschlagene Ressourcen und fordern Sie eine E-Mail-Kopie an. Zahlung und Besprechung sind nicht erforderlich."><meta property="og:url" content="https://ziontechgroup.com/de/discovery/"><style>*{box-sizing:border-box}body{margin:0;background:#080f20;color:#edf3ff;font:1rem/1.65 system-ui,sans-serif}header,main,footer{max-width:1120px;margin:auto;padding:24px}a{color:#88d4ff;text-underline-offset:.2em}nav{display:flex;gap:12px;flex-wrap:wrap}nav a{padding:6px}h1{font-size:clamp(2rem,6vw,3.8rem);line-height:1.12;max-width:20ch}h2{font-size:1.5rem}p{max-width:78ch}.lead{font-size:1.15rem}.badge{color:#a7f3d0;font-weight:700}.btn{display:inline-block;border:1px solid #a78bfa;background:#8b5cf6;color:white;padding:12px 20px;border-radius:10px;font:inherit;font-weight:650;text-decoration:none;cursor:pointer}.btn:disabled{opacity:.65}.q,section{border:1px solid #35445f;border-radius:14px;background:#101c31;padding:20px;margin:20px 0}.q legend{font-weight:700;padding:0 8px}.q label{display:block;padding:7px 0}.q input[type=radio]{margin-right:10px}.q input[type=text],.q input[type=email]{display:block;width:100%;max-width:540px;padding:12px;border:1px solid #64748b;border-radius:8px;background:#080f20;color:#fff;font:inherit}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:18px}.grid a{display:block;border:1px solid #475569;border-radius:10px;padding:18px}a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #fbbf24;outline-offset:4px}[aria-current=page]{font-weight:750}#dq-results{padding:24px;border:1px solid #34d399;border-radius:12px}footer{border-top:1px solid #334155;margin-top:32px}</style><script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"Kostenloser Online-Discovery für KI und IT","description":"Wählen Sie den Prozess, den Sie verbessern möchten. Beantworten Sie sieben Fragen, sehen Sie bis zu vier vorgeschlagene Ressourcen und fordern Sie eine E-Mail-Kopie an. Zahlung und Besprechung sind nicht erforderlich.","url":"https://ziontechgroup.com/de/discovery/","inLanguage":"de","provider":{"@type":"Organization","name":"Zion Tech Group","url":"https://ziontechgroup.com"},"offers":{"@type":"Offer","price":"0","priceCurrency":"USD","url":"https://ziontechgroup.com/de/discovery/"}}</script></head><body>
+<header><p><strong>Zion Tech Group</strong></p><nav aria-label="Startseite"><a href="/de/">Startseite</a><a href="/de/apps/">Werkzeuge und Leitfäden</a><a href="mailto:commercial@ziontechgroup.com">commercial@ziontechgroup.com</a></nav><nav aria-label="Language"><a lang="en" hreflang="en" href="/en/discovery/">English</a><a lang="pt-BR" hreflang="pt-BR" href="/discovery/">Português</a><a lang="es" hreflang="es" href="/es/discovery/">Español</a><a lang="fr" hreflang="fr" href="/fr/discovery/">Français</a><a lang="de" hreflang="de" href="/de/discovery/" aria-current="page">Deutsch</a></nav></header>
+<main id="main"><span class="badge">Discovery · Kostenlos</span><h1>Kostenloser Online-Discovery für KI und IT</h1><p class="lead">Wählen Sie den Prozess, den Sie verbessern möchten. Beantworten Sie sieben Fragen, sehen Sie bis zu vier vorgeschlagene Ressourcen und fordern Sie eine E-Mail-Kopie an. Zahlung und Besprechung sind nicht erforderlich.</p><a class="btn" href="#dq">Kostenlosen Discovery starten</a><section><h2>Die nächsten Schritte</h2><ol><li>Empfehlungen erscheinen auf dieser Seite anhand Ihrer Branche und Herausforderung. Sie bilden den Ausgangspunkt für Ihre eigene Prüfung.</li><li>Werkzeuge, Leitfäden und Leistungsseiten werden getrennt gekennzeichnet. Eine Empfehlung aktiviert keine Integration und bucht keinen Techniker.</li><li>Besprechen Sie Umfang, Kosten oder Umsetzung anschließend per E-Mail. Besprechungen und kostenpflichtige Leistungen sind optional.</li></ol></section><h2>Ihre Prioritäten</h2><p>Beschreiben Sie Ihren Geschäftskontext kurz. Geben Sie keine Passwörter, medizinischen Angaben oder vertraulichen Kundendaten ein. Detaillierte ROI-Berechnungen und Umsetzungspläne benötigen zusätzliche Informationen.</p><noscript><p>Aktivieren Sie JavaScript für Empfehlungen und die E-Mail-Anfrage, oder kontaktieren Sie unser Team direkt. Ohne JavaScript bleibt dieses Formular deaktiviert. <a href="mailto:commercial@ziontechgroup.com">commercial@ziontechgroup.com</a></p></noscript><form id="dq" method="post"><fieldset class="q"><legend>1. In welcher Branche arbeiten Sie?</legend><label><input type="radio" name="industry" value="field-service" required>Vor-Ort-Service / MSP</label><label><input type="radio" name="industry" value="healthcare">Gesundheitswesen</label><label><input type="radio" name="industry" value="finance">Finanzen / FinOps</label><label><input type="radio" name="industry" value="energy">Energie</label><label><input type="radio" name="industry" value="retail">Handel / E-Commerce</label><label><input type="radio" name="industry" value="other">Sonstiges</label></fieldset>
+<fieldset class="q"><legend>2. Was ist Ihre größte Herausforderung?</legend><label><input type="radio" name="challenge" value="support" required>Supportaufwand</label><label><input type="radio" name="challenge" value="sla">SLA / Zuverlässigkeit</label><label><input type="radio" name="challenge" value="costs">Cloud- und Betriebskosten</label><label><input type="radio" name="challenge" value="sales">Vertrieb und Kundengewinnung</label><label><input type="radio" name="challenge" value="data">Daten und Berichte</label></fieldset>
+<fieldset class="q"><legend>3. Wie groß ist Ihr Unternehmen?</legend><label><input type="radio" name="size" value="1-10" required>1–10</label><label><input type="radio" name="size" value="11-100">11–100</label><label><input type="radio" name="size" value="101-1000">101–1.000</label><label><input type="radio" name="size" value="1000+">1.000+</label></fieldset>
+<fieldset class="q"><legend>4. Wann wünschen Sie Ergebnisse?</legend><label><input type="radio" name="speed" value="days" required>Tage</label><label><input type="radio" name="speed" value="weeks">Wochen</label><label><input type="radio" name="speed" value="quarter">Dieses Quartal</label></fieldset>
+<fieldset class="q"><legend>5. Nutzen Sie bereits KI-Werkzeuge?</legend><label><input type="radio" name="aiuse" value="none" required>Noch nicht</label><label><input type="radio" name="aiuse" value="some">Einige</label><label><input type="radio" name="aiuse" value="many">Viele</label></fieldset>
+<fieldset class="q"><legend>6. Welches Ergebnis hat Vorrang?</legend><label><input type="radio" name="outcome" value="save-time" required>Zeit sparen</label><label><input type="radio" name="outcome" value="cut-costs">Kosten senken</label><label><input type="radio" name="outcome" value="grow-revenue">Umsatz steigern</label><label><input type="radio" name="outcome" value="reduce-risk">Risiken verringern</label></fieldset>
+<fieldset class="q"><legend>7. Welche Bereitstellung bevorzugen Sie?</legend><label><input type="radio" name="deploy" value="saas" required>SaaS</label><label><input type="radio" name="deploy" value="cloud">Unsere Cloud</label><label><input type="radio" name="deploy" value="onprem">Vor Ort / hybrid</label></fieldset><fieldset class="q"><legend>Wohin sollen wir Ihre Zusammenfassung senden?</legend><label>Ihr Name<input type="text" name="name" autocomplete="name" maxlength="160" required></label><label>Geschäftliche E-Mail<input type="email" name="email" autocomplete="email" maxlength="254" required></label><p>Beim Absenden werden Ihr Name, Ihre E-Mail-Adresse, Antworten und Empfehlungen an FormSubmit übertragen, um Kopien für Sie und commercial@ziontechgroup.com anzufordern. Die Annahme durch den Dienst bestätigt keine Zustellung in den Postfächern.</p></fieldset><button class="btn" type="submit" disabled>Empfehlungen anzeigen und E-Mail anfordern</button></form><div id="dq-results" hidden></div>
+<script>
+  (function(){
+    var MAP={
+      'field-service':[['Field Visit Handoff Checklist','/zion-app-network/field-visit-handoff-2026.html'],['Field Service Automation Services','/ai-field-service-automation/']],
+      'healthcare':[['AI Readiness Assessment Service','/ai-readiness-assessment/']],
+      'finance':[['FinOps Consulting','/finops-consulting/'],['Illustrative AI ROI Calculator','/roi-calculator/']],
+      'energy':[['Energy Optimization Services','/ai-energy-optimization/'],['Cloud Cost Optimization Overview','/apps/cloud-cost-optimizer.html']],
+      'retail':[['AI Lead Generation Services','/ai-lead-generation/']],
+      'other':[['Zion Tools and Guides Catalog','/zion-app-network/'],['Full Service Catalog','/services/']],
+      'support':[['Customer Support Automation Services','/ai-powered-customer-support/'],['Observability and Incident Management Services','/ai-observability-and-incident-management/']],
+      'sla':[['Observability and Incident Management Services','/ai-observability-and-incident-management/'],['Incident Response and Review Services','/ai-incident-response/']],
+      'costs':[['FinOps Consulting','/finops-consulting/'],['Cloud Cost Optimization Overview','/apps/cloud-cost-optimizer.html']],
+      'sales':[['AI Lead Generation Services','/ai-lead-generation/'],['Lead Scoring Planning Guide','/lead-score-copilot/']],
+      'data':[['AI Readiness Assessment Service','/ai-readiness-assessment/'],['Manual AI Readiness Guide','/ai-readiness-framework/']]
+    };
+    function recommendedResources(industry, challenge) {
+      const ranked = (MAP[challenge] || []).concat(MAP[industry] || []);
+      const seen = new Set();
+      const picks = [];
+      for (const resource of ranked) {
+        const url = resource[1];
+        if (!seen.has(url)) {
+          seen.add(url);
+          picks.push(resource);
+        }
+      }
+      const catalog = MAP.other[0];
+      if (ranked.length >= 3 && picks.length < 3 && !seen.has(catalog[1])) {
+        picks.push(catalog);
+      }
+      return picks.slice(0, 4);
+    }
+    function recommendationKind(path){
+      if (/^\/(?:pt\/|es\/|fr\/|de\/)?(?:roi-calc|roi-calculator|sla-calculator)\//.test(path)) return 'Werkzeug';
+      if (path.includes('/apps/') || path.includes('/zion-app-network/') || path.includes('/lead-score-copilot/') || path.includes('/ai-readiness-framework/')) return 'Leitfaden oder Katalog';
+      return 'Dienstleistung';
+    }
+    var form=document.getElementById('dq');
+    if(!form)return;
+    function esc(s){return String(s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+    // Page-session deduplication: uncertain requests must never retry automatically.
+    var submissions = new Map();
+    var pending = false;
+    var button = form.querySelector('button[type="submit"]');
+    form.addEventListener('submit', async function(e){
+      e.preventDefault();
+      if (pending) return;
+      if (!form.reportValidity()) return;
+      var a=Object.fromEntries(new FormData(form).entries());
+      a.email = String(a.email || '').trim();
+      if (!/^[^\s@,;<>]+@[^\s@,;<>]+\.[^\s@,;<>]+$/.test(a.email)) return;
+      var picks=recommendedResources(a.industry,a.challenge);
+      var lines=picks.map(function(p){return '- ['+recommendationKind(p[1])+'] '+p[0]+': https://ziontechgroup.com'+p[1];}).join('\n');
+      var summary='FREE AI DISCOVERY\nName: '+a.name+'\nEmail: '+a.email+'\nIndustry: '+a.industry+'\nChallenge: '+a.challenge+'\nSize: '+a.size+'\nSpeed: '+a.speed+'\nAI usage: '+a.aiuse+'\nOutcome: '+a.outcome+'\nDeploy: '+a.deploy+'\n\nRecommended resources:\n'+lines;
+      var box=document.getElementById('dq-results');
+      box.hidden=false;
+      box.innerHTML='<h3>Ihre vorgeschlagenen Ressourcen</h3><ul>'+picks.map(function(p){return '<li><strong>'+esc(recommendationKind(p[1]))+'</strong>: <a href="'+esc(p[1])+'">'+esc(p[0])+'</a></li>';}).join('')+'</ul><p id="dq-mail-status" role="status" aria-live="polite"></p><p id="dq-fallback"></p>';
+      box.scrollIntoView({behavior:'smooth'});
+      var status = document.getElementById('dq-mail-status');
+      var fallback = document.getElementById('dq-fallback');
+      var key = summary;
+      function manual(){
+        var href='mailto:'+encodeURIComponent(a.email)+'?cc=commercial@ziontechgroup.com&subject='+encodeURIComponent('Free AI Discovery results')+'&body='+encodeURIComponent(summary);
+        fallback.innerHTML='<a class="btn alt" href="'+esc(href)+'">Diese Ergebnisse manuell senden</a>';
+      }
+      if (submissions.has(key)) {
+        status.textContent = submissions.get(key) + ' Automatisches erneutes Senden ist auf dieser Seite gesperrt.';
+        manual();
+        return;
+      }
+      var uncertain = 'Die Annahme konnte nicht bestätigt werden. Die Anfrage wurde möglicherweise empfangen; sie wird nicht automatisch erneut gesendet. Prüfen Sie vor dem manuellen Versand Ihr Postfach.';
+      pending = true;
+      button.disabled = true;
+      form.setAttribute('aria-busy', 'true');
+      submissions.set(key, uncertain);
+      status.textContent = 'E-Mail wird angefordert…';
+      var controller = new AbortController();
+      var timer;
+      try {
+        var response = await Promise.race([
+          (async function(){
+            var r = await fetch('https://formsubmit.co/ajax/commercial@ziontechgroup.com', {
+              method:'POST',
+              signal:controller.signal,
+              headers:{'Content-Type':'application/json','Accept':'application/json'},
+              body:JSON.stringify({name:a.name,email:a.email,_cc:a.email.toLowerCase() === 'commercial@ziontechgroup.com' ? '' : a.email,_replyto:a.email,_subject:'Free AI Discovery — '+a.name,results:summary})
+            });
+            if (!r.ok) throw new Error('uncertain-http');
+            return r.json();
+          })(),
+          new Promise(function(resolve, reject){
+            timer = setTimeout(function(){ controller.abort(); reject(new Error('timeout')); }, 15000);
+          })
+        ]);
+        if (response && (response.success === true || response.success === 'true')) {
+          status.textContent = 'Die Anfrage wurde vom E-Mail-Dienst angenommen. Die Zustellung beim Kunden und beim Vertrieb ist noch nicht bestätigt.';
+          submissions.set(key, status.textContent);
+        } else if (response && (response.success === false || response.success === 'false')) {
+          status.textContent = 'Der Dienst hat die Anfrage abgelehnt. Sie können es erneut versuchen oder manuell senden.';
+          submissions.delete(key);
+          manual();
+        } else {
+          throw new Error('uncertain-response');
+        }
+      } catch (error) {
+        status.textContent = uncertain;
+        manual();
+      } finally {
+        clearTimeout(timer);
+        pending = false;
+        button.disabled = false;
+        form.setAttribute('aria-busy', 'false');
+      }
+    });
+    // Enable sending only after the handler prevents native form submission.
+    button.disabled = false;
+  })();
+  </script>
+<section><h2>Mit einem praktischen Leitfaden fortfahren</h2><div class="grid"><a href="/de/apps/discovery-first-win-guide.html">Eine erste messbare Verbesserung wählen</a><a href="/de/apps/field-services-smart-hands-playbook.html">Einen Vor-Ort-Einsatz planen</a><a href="/de/apps/ai-it-ops-command-center.html">Einen IT-Betriebsplan vorbereiten</a></div></section></main><footer><p>© 2026 Zion Tech Group · <a href="mailto:commercial@ziontechgroup.com">commercial@ziontechgroup.com</a> · <a href="https://wa.me/5511976140076">WhatsApp +55 11 97614-0076</a></p><a href="/privacy/">Datenschutz</a></footer></body></html>
