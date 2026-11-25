@@ -61,6 +61,8 @@ jobs:
         with:
           name: mttr-fingerprint-regression-guard-${{ github.run_id }}
           path: |
+            automation/reports/mttr-availability/issue-index.json
+            automation/reports/mttr-availability/fingerprint-regression.json
             automation/reports/automation-open-issues-index-latest.json
             automation/reports/automation-issue-mttr-history.json
             automation/reports/mttr-fingerprint-regression-latest.json

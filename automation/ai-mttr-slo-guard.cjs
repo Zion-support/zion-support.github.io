@@ -1,3 +1,5 @@
-// ai-mttr-slo-guard.cjs - placeholder (Zion Agent 2026-09-20): stop module-not-found failures. No-op.
-console.log('ai-mttr-slo-guard.cjs placeholder: nothing to do.');process.exit(0);
+#!/usr/bin/env node
+'use strict';
 
+// Fail explicitly until this component has a reviewed implementation.
+require('./lib/mttr-unavailable.cjs').reportUnavailable('slo-guard');

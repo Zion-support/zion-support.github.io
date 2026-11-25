@@ -68,6 +68,8 @@ jobs:
         with:
           name: mttr-slo-guard-${{ github.run_id }}
           path: |
+            automation/reports/mttr-availability/issue-index.json
+            automation/reports/mttr-availability/slo-guard.json
             automation/reports/automation-open-issues-index-latest.json
             automation/reports/automation-issue-mttr-history.json
             automation/reports/mttr-slo-guard-latest.json
