@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Discovery de Automação e IA online e gratuito | Free Discovery — Zion Tech Group</title>
 <meta name="description" content="Responda ao questionário online gratuito, veja recomendações imediatas e solicite uma cópia por e-mail. Continue a avaliação com a Zion por escrito.">
-<link rel="canonical" href="https://ziontechgroup.com/discovery/"><link rel="alternate" hreflang="en" href="https://ziontechgroup.com/discovery/"><link rel="alternate" hreflang="pt-BR" href="https://ziontechgroup.com/pt/discovery/"><link rel="alternate" hreflang="es" href="https://ziontechgroup.com/es/discovery/"><link rel="alternate" hreflang="fr" href="https://ziontechgroup.com/fr/discovery/"><link rel="alternate" hreflang="de" href="https://ziontechgroup.com/de/discovery/"><link rel="alternate" hreflang="x-default" href="https://ziontechgroup.com/discovery/">
+<link rel="canonical" href="https://ziontechgroup.com/discovery/"><link rel="alternate" hreflang="en" href="https://ziontechgroup.com/en/discovery/"><link rel="alternate" hreflang="pt-BR" href="https://ziontechgroup.com/discovery/"><link rel="alternate" hreflang="es" href="https://ziontechgroup.com/es/discovery/"><link rel="alternate" hreflang="fr" href="https://ziontechgroup.com/fr/discovery/"><link rel="alternate" hreflang="de" href="https://ziontechgroup.com/de/discovery/"><link rel="alternate" hreflang="x-default" href="https://ziontechgroup.com/en/discovery/">
 <meta name="robots" content="index,follow">
 <meta property="og:title" content="Discovery de Automação e IA online e gratuito | Free Discovery — Zion Tech Group">
 <meta property="og:description" content="Responda ao questionário online gratuito, veja recomendações imediatas e solicite uma cópia por e-mail. Continue a avaliação com a Zion por escrito.">
@@ -123,7 +123,8 @@
     #dq-results{border:1px solid rgba(52,211,153,.4);border-radius:14px;padding:1rem 1.1rem;margin:1rem 0;background:rgba(6,78,59,.25)}
     #dq-results ul{margin:.5rem 0 0;padding-left:1.2rem}
   </style>
-  <form id="dq">
+  <noscript><p>Ative o JavaScript para ver recomendações e solicitar o resumo nesta página, ou escreva para <a href="mailto:commercial@ziontechgroup.com">commercial@ziontechgroup.com</a>. O formulário permanece desativado sem JavaScript.</p></noscript>
+  <form id="dq" method="post">
     <div class="q"><h3>1. Qual é o seu setor?</h3>
       <label><input type="radio" name="industry" value="field-service" required> Field Service / MSP</label>
       <label><input type="radio" name="industry" value="healthcare"> Saúde</label>
@@ -171,7 +172,7 @@
       <input type="email" name="email" placeholder="voce@empresa.com" required>
       <p class="lead" style="margin:.4rem 0 0">Ao enviar, seu nome, e-mail, respostas e recomendações são transmitidos ao FormSubmit para solicitar cópias para você e commercial@ziontechgroup.com. A aceitação pelo serviço não confirma a entrega nas caixas de entrada.</p>
     </div>
-    <p><button class="btn" type="submit">Receber meu Discovery gratuito →</button></p>
+    <p><button class="btn" type="submit" disabled>Receber meu Discovery gratuito</button></p>
   </form>
   <div id="dq-results" hidden></div>
   <script>
@@ -206,6 +207,11 @@
       }
       return picks.slice(0, 4);
     }
+    function recommendationKind(path){
+      if (/^\/(?:pt\/|es\/|fr\/|de\/)?(?:roi-calc|roi-calculator|sla-calculator)\//.test(path)) return 'Ferramenta';
+      if (path.includes('/apps/') || path.includes('/zion-app-network/') || path.includes('/lead-score-copilot/') || path.includes('/ai-readiness-framework/')) return 'Guia ou catálogo';
+      return 'Serviço';
+    }
     var form=document.getElementById('dq');
     if(!form)return;
     function esc(s){return String(s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
@@ -221,11 +227,11 @@
       a.email = String(a.email || '').trim();
       if (!/^[^\s@,;<>]+@[^\s@,;<>]+\.[^\s@,;<>]+$/.test(a.email)) return;
       var picks=recommendedResources(a.industry,a.challenge);
-      var lines=picks.map(function(p){return '- '+p[0]+': https://ziontechgroup.com'+p[1];}).join('\n');
+      var lines=picks.map(function(p){return '- ['+recommendationKind(p[1])+'] '+p[0]+': https://ziontechgroup.com'+p[1];}).join('\n');
       var summary='FREE AI DISCOVERY\nName: '+a.name+'\nEmail: '+a.email+'\nIndustry: '+a.industry+'\nChallenge: '+a.challenge+'\nSize: '+a.size+'\nSpeed: '+a.speed+'\nAI usage: '+a.aiuse+'\nOutcome: '+a.outcome+'\nDeploy: '+a.deploy+'\n\nRecommended resources:\n'+lines;
       var box=document.getElementById('dq-results');
       box.hidden=false;
-      box.innerHTML='<h3>Suas recomendações personalizadas</h3><ul>'+picks.map(function(p){return '<li><a href="'+esc(p[1])+'">'+esc(p[0])+'</a></li>';}).join('')+'</ul><p id="dq-mail-status" role="status" aria-live="polite"></p><p id="dq-fallback"></p>';
+      box.innerHTML='<h3>Suas recomendações personalizadas</h3><ul>'+picks.map(function(p){return '<li><strong>'+esc(recommendationKind(p[1]))+'</strong>: <a href="'+esc(p[1])+'">'+esc(p[0])+'</a></li>';}).join('')+'</ul><p id="dq-mail-status" role="status" aria-live="polite"></p><p id="dq-fallback"></p>';
       box.scrollIntoView({behavior:'smooth'});
       var status = document.getElementById('dq-mail-status');
       var fallback = document.getElementById('dq-fallback');
@@ -283,6 +289,8 @@
         form.setAttribute('aria-busy', 'false');
       }
     });
+    // Enable sending only after the handler prevents native form submission.
+    button.disabled = false;
   })();
   </script>
 </section>

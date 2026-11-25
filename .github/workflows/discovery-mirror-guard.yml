@@ -7,6 +7,7 @@ on:
     paths:
       - 'discovery/index.html'
       - 'public/discovery/index.html'
+      - 'public/en/discovery/index.html'
       - 'public/pt/discovery/index.html'
       - 'public/es/discovery/index.html'
       - 'public/fr/discovery/index.html'
@@ -14,6 +15,8 @@ on:
       - 'public/assets/js/discovery-delivery.js'
       - 'scripts/test-discovery-delivery-contract.cjs'
       - 'scripts/test-discovery-current-form.cjs'
+      - 'scripts/render-discovery-locales.cjs'
+      - 'scripts/test-discovery-locales.cjs'
       - 'discovery/questionnaire.html'
       - 'public/discovery/questionnaire.html'
       - '.github/workflows/discovery-mirror-guard.yml'
@@ -21,6 +24,7 @@ on:
     paths:
       - 'discovery/index.html'
       - 'public/discovery/index.html'
+      - 'public/en/discovery/index.html'
       - 'public/pt/discovery/index.html'
       - 'public/es/discovery/index.html'
       - 'public/fr/discovery/index.html'
@@ -28,6 +32,8 @@ on:
       - 'public/assets/js/discovery-delivery.js'
       - 'scripts/test-discovery-delivery-contract.cjs'
       - 'scripts/test-discovery-current-form.cjs'
+      - 'scripts/render-discovery-locales.cjs'
+      - 'scripts/test-discovery-locales.cjs'
       - 'discovery/questionnaire.html'
       - 'public/discovery/questionnaire.html'
       - '.github/workflows/discovery-mirror-guard.yml'
@@ -58,13 +64,16 @@ jobs:
           node-version: '22'
       - name: Verify free access, recipients, delivery states and failure behavior
         run: |
+          cmp public/discovery/index.html discovery/index.html
           node scripts/test-discovery-current-form.cjs public/discovery/index.html
           node scripts/test-discovery-current-form.cjs discovery/index.html
 
-  # Keep this independent release gate: the current single-language form does
-  # not establish the shared five-language contract or safe legacy redirects.
+  # This independent gate validates the real dq questionnaires generated from
+  # canonical Portuguese. The imported dform runtime is not their application.
   mirror:
+    name: Five-language questionnaire source and runtime contract
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     steps:
       - name: Checkout localized questionnaires and delivery suite
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
@@ -72,44 +81,28 @@ jobs:
           ref: ${{ github.event.pull_request.head.sha || github.sha }}
           persist-credentials: false
           sparse-checkout: |
-            /public/assets/js/discovery-delivery.js
             /public/discovery/index.html
+            /public/en/discovery/index.html
             /public/pt/discovery/index.html
             /public/es/discovery/index.html
             /public/fr/discovery/index.html
             /public/de/discovery/index.html
-            /scripts/test-discovery-delivery-contract.cjs
+            /scripts/render-discovery-locales.cjs
+            /scripts/test-discovery-locales.cjs
           sparse-checkout-cone-mode: false
 
-      - name: Require canonical shared Discovery contract
+      - name: Setup Node.js
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
+        with:
+          node-version: '22'
+
+      - name: Validate authored sources, five languages and mocked delivery
         shell: bash
         run: |
           set -euo pipefail
-          # Production is public/ plus the shared module, not legacy root HTML.
-          node <<'NODE'
-          const fs = require('node:fs');
-          const assert = require('node:assert/strict');
-          const source = fs.readFileSync('public/assets/js/discovery-delivery.js', 'utf8');
-          assert(source.includes('https://formsubmit.co/ajax/commercial@ziontechgroup.com'), 'Commercial endpoint missing');
-          assert(!source.toLowerCase().includes('carlos@ziontechgroup.com'), 'Unexpected extra recipient');
-          assert(!/(^|[^\w])_autoresponse\s*:/m.test(source), 'Unsupported AJAX autoresponse');
-          const ids = ['dform','form-errors','rscore','rbar','rsummary','rapps','rnext','report-text','email-fallback','result','copy-report','rsent','submit-report','download-report'];
-          for (const [locale, lang] of [['en','en'],['pt','pt-BR'],['es','es'],['fr','fr'],['de','de']]) {
-            const file = locale === 'en' ? 'public/discovery/index.html' : 'public/' + locale + '/discovery/index.html';
-            const html = fs.readFileSync(file, 'utf8');
-            assert(html.includes('<html lang="' + lang + '"'), 'Wrong language: ' + file);
-            assert.equal((html.match(/src="\/assets\/js\/discovery-delivery\.js"/g) || []).length, 1, 'One shared application required: ' + file);
-            assert(!html.includes('const APPMAP='), 'Obsolete inline application: ' + file);
-            assert(!html.includes('data-discovery-parity'), 'Duplicate submit handler: ' + file);
-            assert(!html.toLowerCase().includes('carlos@ziontechgroup.com'), 'Unexpected recipient: ' + file);
-            for (const id of ids) assert.equal((html.match(new RegExp('id="' + id + '"', 'g')) || []).length, 1, 'Unique element ' + id + ': ' + file);
-          }
-          console.log('Five canonical questionnaires use one shared application; no email sent.');
-          NODE
-          for file in public/discovery/index.html public/{pt,es,fr,de}/discovery/index.html; do
-            DISCOVERY_HTML="$file" node --test scripts/test-discovery-delivery-contract.cjs
-          done
-          echo "Canonical Discovery recipients, fallback, duplicate suppression and acceptance wording validated offline."
+          # Read and compare committed sources. This gate never generates pages
+          # to repair a failing fixture or uses the incompatible dform runtime.
+          node scripts/test-discovery-locales.cjs public --source-parity
 
   legacy-redirects:
     name: Legacy questionnaire links
@@ -151,4 +144,4 @@ jobs:
               exit 1
             fi
           done
-          echo "Legacy routes are safe redirects; canonical /discovery/ remains the single questionnaire."
+          echo "Legacy routes safely redirect to the canonical Portuguese questionnaire at /discovery/."

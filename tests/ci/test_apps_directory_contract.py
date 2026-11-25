@@ -11,6 +11,9 @@ ROOT = Path(__file__).resolve().parents[2]
 PUBLIC = ROOT / 'public'
 ORIGIN = 'https://ziontechgroup.com'
 LANGUAGES = {'en': 'en', 'pt': 'pt-BR', 'es': 'es', 'fr': 'fr', 'de': 'de'}
+PLANNING_GUIDES = ('field-service-evidence-guide', 'discovery-first-win-guide',
+                  'field-services-smart-hands-playbook', 'field-ticket-types',
+                  'ai-it-ops-command-center', 'multi-site-it-support-planning')
 NS = '{http://www.sitemaps.org/schemas/sitemap/0.9}'
 
 spec = importlib.util.spec_from_file_location('showcase_contract_source', ROOT / 'scripts/render-apps-showcase.py')
@@ -73,13 +76,28 @@ def validate_page(text, locale, family):
         if link.startswith('#'):
             assert link[1:] in ids, 'Anchor destination'
     assert route(locale, 'showcase') in links, 'Localized showcase entry'
+    if family == 'catalog':
+        planning = [x for x in page.find('a') if 'data-catalog-guide' in x]
+        assert len(planning) == len(PLANNING_GUIDES), 'Six translated planning guide links'
+        expected_guides = {slug: route(locale, 'catalog') + slug + '.html' for slug in PLANNING_GUIDES}
+        assert {x['data-catalog-guide']: x.get('href') for x in planning} == expected_guides, 'Localized planning destinations'
+        assert all(x.get('hreflang') == LANGUAGES[locale] for x in planning), 'Planning guide language'
+        assert all(route(other, 'catalog') in links for other in LANGUAGES), 'Catalog language navigation'
+        suffix = '' if locale == 'en' else '-' + locale
+        assert '/apps/operations-reliability-ai-2026' + suffix + '.html' in links, 'Localized operations entry'
+        assert '/apps/content-hub.html' in links, 'Content hub entry'
+        assert route(locale, 'catalog') + 'discovery-app-paths.html' in links, 'Published next-step map'
+        assert all(link in links for link in showcase.resource_routes(locale)), 'Every localized resource destination'
+    discovery_url = '/' + locale + '/discovery/#dq'
+    assert any(x.get('href') == discovery_url and x.get('hreflang') == LANGUAGES[locale]
+               for x in page.find('a')), 'Discovery language disclosure'
     # The English legacy homepage/catalog retain their additive showcase
     # promotion; the maintained six-card interface is the linked showcase.
     if locale != 'en' or family == 'showcase':
-        assert len(page.find('article')) == 6, 'Six maintained resource cards'
+        maintained = [x for x in page.find('article') if 'resource' in x.get('class', '').split()]
+        assert len(maintained) == 6, 'Six maintained resource cards'
         assert all(link in links for link in showcase.resource_routes(locale)), 'Every localized resource destination'
         assert 'mailto:commercial@ziontechgroup.com' in links, 'Commercial contact'
-        assert any(x.get('href') == '/discovery/' and x.get('hreflang') == 'pt-BR' for x in page.find('a')), 'Discovery language disclosure'
         collection = [x for x in page.schemas if x.get('@type') == 'CollectionPage']
         assert len(collection) == 1, 'One collection schema'
         assert collection[0].get('url') == canonical, 'Structured canonical'
@@ -170,6 +188,24 @@ class CurrentDirectoryContract(unittest.TestCase):
         for bad in (text.replace(resource, '/missing-resource/'), text.replace('href="#resources"', 'href="#missing-resources"')):
             with self.assertRaises(AssertionError):
                 validate_page(bad, 'pt', 'catalog')
+
+    def test_missing_planning_guide_or_wrong_discovery_locale_is_rejected(self):
+        text = self.source()
+        for bad in (text.replace('/pt/apps/field-service-evidence-guide.html', '/missing-guide.html'),
+                    text.replace('/pt/apps/multi-site-it-support-planning.html', '/missing-guide.html'),
+                    text.replace('href="/pt/discovery/#dq"', 'href="/en/discovery/#dq"'),
+                    text.replace('href="/apps/operations-reliability-ai-2026-pt.html"', 'href="/missing-operations.html"')):
+            with self.assertRaises(AssertionError):
+                validate_page(bad, 'pt', 'catalog')
+
+    def test_showcase_discovery_must_keep_the_selected_language(self):
+        for locale in LANGUAGES:
+            text = self.source(locale, 'showcase')
+            current = 'href="/' + locale + '/discovery/#dq"'
+            self.assertIn(current, text)
+            wrong = text.replace(current, 'href="/discovery/"')
+            with self.subTest(locale=locale), self.assertRaisesRegex(AssertionError, 'Discovery language disclosure'):
+                validate_page(wrong, locale, 'showcase')
 
     def test_wrong_structured_url_is_rejected(self):
         text = self.source().replace('"url": "https://ziontechgroup.com/pt/apps/"', '"url": "https://ziontechgroup.com/apps/"')

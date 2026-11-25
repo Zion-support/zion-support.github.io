@@ -9,6 +9,7 @@ name: Apps canonical hreflang contract
       - 'public/fr/apps/index.html'
       - 'public/de/apps/index.html'
       - 'public/discovery/index.html'
+      - 'public/en/discovery/index.html'
       - 'public/pt/discovery/index.html'
       - 'public/es/discovery/index.html'
       - 'public/fr/discovery/index.html'
@@ -25,6 +26,7 @@ name: Apps canonical hreflang contract
       - 'public/fr/apps/index.html'
       - 'public/de/apps/index.html'
       - 'public/discovery/index.html'
+      - 'public/en/discovery/index.html'
       - 'public/pt/discovery/index.html'
       - 'public/es/discovery/index.html'
       - 'public/fr/discovery/index.html'
@@ -63,12 +65,15 @@ jobs:
           class HeadLinks(HTMLParser):
               def __init__(self):
                   super().__init__()
+                  self.languages=[]
                   self.canonicals=[]
-                  self.alternates={}
+                  self.alternates=[]
               def handle_starttag(self,tag,attrs):
+                  d={k.lower():v for k,v in attrs}
+                  if tag.lower()=='html':
+                      self.languages.append(d.get('lang'))
                   if tag.lower()!='link':
                       return
-                  d={k.lower():v for k,v in attrs}
                   rel=(d.get('rel') or '').lower()
                   href=d.get('href')
                   if not href:
@@ -76,7 +81,7 @@ jobs:
                   if rel=='canonical':
                       self.canonicals.append(href)
                   elif rel=='alternate' and d.get('hreflang'):
-                      self.alternates[d['hreflang']]=href
+                      self.alternates.append((d['hreflang'],href))
 
           base='https://ziontechgroup.com'
           families={
@@ -88,8 +93,8 @@ jobs:
               'de':('public/de/apps/index.html',f'{base}/de/apps/'),
             },
             'discovery':{
-              'en':('public/discovery/index.html',f'{base}/discovery/'),
-              'pt-BR':('public/pt/discovery/index.html',f'{base}/pt/discovery/'),
+              'en':('public/en/discovery/index.html',f'{base}/en/discovery/'),
+              'pt-BR':('public/discovery/index.html',f'{base}/discovery/'),
               'es':('public/es/discovery/index.html',f'{base}/es/discovery/'),
               'fr':('public/fr/discovery/index.html',f'{base}/fr/discovery/'),
               'de':('public/de/discovery/index.html',f'{base}/de/discovery/'),
@@ -113,17 +118,24 @@ jobs:
                       continue
                   body=p.read_text(encoding='utf-8')
                   parser=HeadLinks(); parser.feed(body)
+                  if parser.languages != [lang]:
+                      errors.append(f'{file_name}: html lang={parser.languages!r}, expected exactly [{lang!r}]')
                   if parser.canonicals != [self_url]:
                       errors.append(f'{file_name}: canonical={parser.canonicals!r}, expected exactly [{self_url!r}]')
-                  for alt_lang,alt_url in expected.items():
-                      if parser.alternates.get(alt_lang)!=alt_url:
-                          errors.append(f'{file_name}: hreflang {alt_lang}={parser.alternates.get(alt_lang)!r}, expected {alt_url!r}')
-                  if parser.alternates.get('x-default')!=xdefault:
-                      errors.append(f'{file_name}: x-default={parser.alternates.get("x-default")!r}, expected {xdefault!r}')
+                  alternates=sorted([*expected.items(),('x-default',xdefault)])
+                  if sorted(parser.alternates) != alternates:
+                      errors.append(f'{file_name}: hreflang={parser.alternates!r}, expected exactly {alternates!r}')
                   if '/pt-br/discovery/' in body:
-                      errors.append(f'{file_name}: deprecated /pt-br/discovery/ alias present; canonical route is /pt/discovery/')
+                      errors.append(f'{file_name}: deprecated /pt-br/discovery/ alias present; canonical PT route is /discovery/')
                   if 'http-equiv="refresh"' in body.lower() or "http-equiv='refresh'" in body.lower():
                       errors.append(f'{file_name}: meta refresh is forbidden in canonical locale pages')
+
+          canonical_pt=Path('public/discovery/index.html')
+          alias_pt=Path('public/pt/discovery/index.html')
+          if not canonical_pt.is_file() or not alias_pt.is_file():
+              errors.append('missing canonical Portuguese Discovery or its /pt/discovery/ compatibility alias')
+          elif canonical_pt.read_bytes()!=alias_pt.read_bytes():
+              errors.append('Portuguese Discovery compatibility alias must match the canonical /discovery/ page')
 
           for suffix in ['','-pt','-es','-fr','-de']:
               src=Path(f'apps/operations-reliability-ai-2026{suffix}.html')
