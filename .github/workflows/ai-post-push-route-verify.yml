@@ -130,3 +130,9 @@ jobs:
           export ISSUE_FINGERPRINT="post-push-route-verify"
           node scripts/automation/gh-issue-dedupe-or-create.cjs || true
 
+      - name: Fail when critical route verification fails
+        if: steps.verify.outputs.has_failures == 'true'
+        run: |
+          echo "::error::One or more critical production routes did not return HTTP 200."
+          exit 1
+
