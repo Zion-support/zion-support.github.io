@@ -108,6 +108,19 @@ module.exports = [
     },
   },
   {
+    files: ['app/services/**/page.tsx'],
+    rules: {
+      // Approved component names still require a module-level default export.
+      // eslint-disable-next-line @typescript-eslint/naming-convention -- ESLint rule IDs are fixed API keys.
+      '@typescript-eslint/naming-convention': ['error', ...namingConventions, {
+        selector: 'function', modifiers: ['exported'],
+        filter: { regex: '^(?:Page|ServicePage)$', match: true }, format: ['PascalCase'],
+      }],
+      // eslint-disable-next-line @typescript-eslint/naming-convention -- ESLint rule IDs are fixed API keys.
+      'zion-autonomous/page-component-name': ['error', 'service-route'],
+    },
+  },
+  {
     files: ['**/*.cjs'],
     languageOptions: { sourceType: 'commonjs' },
     // eslint-disable-next-line @typescript-eslint/naming-convention -- ESLint plugin and rule IDs are fixed API keys.

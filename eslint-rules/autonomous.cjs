@@ -163,14 +163,16 @@ function isDefaultPageComponent(node) {
 const pageComponentName = {
   meta: {
     type: 'problem',
-    docs: { description: 'Reserve Page for the default-exported Next route component.' },
-    schema: [],
-    messages: { helper: 'Page is reserved for the default-exported route component. Helper functions must use camelCase.' },
+    docs: { description: 'Reserve approved component names for the default-exported Next route component.' },
+    schema: [{ enum: ['service-route'] }],
+    messages: { helper: '{{name}} is reserved for the default-exported route component. Helper functions must use camelCase.' },
   },
   create(context) {
+    const allowServicePage = context.options[0] === 'service-route';
     function check(node) {
-      if (node.id?.name === 'Page' && !isDefaultPageComponent(node)) {
-        context.report({ node: node.id, messageId: 'helper' });
+      const name = node.id?.name;
+      if ((name === 'Page' || (allowServicePage && name === 'ServicePage')) && !isDefaultPageComponent(node)) {
+        context.report({ node: node.id, messageId: 'helper', data: { name } });
       }
     }
     return { FunctionDeclaration: check, FunctionExpression: check };
