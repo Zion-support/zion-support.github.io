@@ -6,7 +6,10 @@
   "packageManager": "npm@10.9.8",
   "scripts": {
     "dev": "next dev",
+    "postinstall": "node scripts/next-route-manifest/install.cjs",
+    "prebuild": "node scripts/next-route-manifest/install.cjs",
     "build": "next build --webpack",
+    "prebuild:ci": "node scripts/next-route-manifest/install.cjs",
     "build:ci": "node scripts/build-wrapper.cjs",
     "build:check": "npm run type-check && node scripts/build-wrapper.cjs",
     "start": "next start",
