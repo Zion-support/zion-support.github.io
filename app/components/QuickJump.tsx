@@ -2,6 +2,7 @@
 'use client';
 
 import { useEffect, useRef, useState, useCallback } from 'react';
+import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 interface Heading {
@@ -183,7 +184,7 @@ export function PageJump() {
     { name: 'Site Map', href: '/site-map' },
   ];
 
-  const currentPage = links.find((l) => pathname.startsWith(l.href))?.name || 'Jump to...';
+  const currentPage = links.find((l) => pathname?.startsWith(l.href))?.name || 'Jump to...';
 
   return (
     <div className="relative">
@@ -215,7 +216,7 @@ export function PageJump() {
                   href={link.href}
                   onClick={() => setOpen(false)}
                   className={`block px-3 py-2 text-sm transition-colors ${
-                    pathname.startsWith(link.href)
+                    pathname?.startsWith(link.href)
                       ? 'text-purple-300 bg-purple-500/10'
                       : 'text-slate-300 hover:text-white hover:bg-slate-800'
                   }`}
