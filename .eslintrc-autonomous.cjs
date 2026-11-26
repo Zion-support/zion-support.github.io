@@ -28,7 +28,7 @@ module.exports = [
       '**/.*', '!**/.eslintrc.*',
       // Keep this active custom configuration covered by its self-lint regression.
       '!.eslintrc-autonomous.cjs',
-      '**/node_modules/**', '**/.next/**', '**/out/**', '**/dist/**', '**/build/**',
+      '**/node_modules/**', '**/.next/**', '_next/**', '**/out/**', '**/dist/**', '**/build/**',
       '**/coverage/**', '**/.hermes/**', 'automation/reports/**',
       '**/*.config.js', '**/*.config.cjs', 'scripts/automation/**',
       'automation/**/*.cjs', 'eslint-rules/**',
