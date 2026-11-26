@@ -1970,15 +1970,21 @@ export const appsNetworkBySlug = Object.fromEntries(
 ) as Record<string, AppsNetworkApp>;
 
 export function relatedApps(slug: string, limit = 4): AppsNetworkApp[] {
+  const count = Number.isFinite(limit) ? Math.max(0, Math.floor(limit)) : 0;
   const app = appsNetworkBySlug[slug];
-  if (!app) return appsNetworkCatalog.slice(0, limit);
-  const fromRelated = app.related
-    .map((s) => appsNetworkBySlug[s])
-    .filter(Boolean) as AppsNetworkApp[];
-  if (fromRelated.length >= limit) return fromRelated.slice(0, limit);
-  const fillers = appsNetworkCatalog.filter(
-    (a) => a.slug !== slug && !fromRelated.some((r) => r.slug === a.slug)
-  );
-  return [...fromRelated, ...fillers].slice(0, limit);
+  const seen = new Set<string>([slug]);
+  const results: AppsNetworkApp[] = [];
+  const add = (candidate: AppsNetworkApp | undefined) => {
+    if (!candidate || seen.has(candidate.slug) || results.length >= count) return;
+    seen.add(candidate.slug);
+    results.push(candidate);
+  };
+  if (app) {
+    app.related.forEach((relatedSlug) => add(appsNetworkBySlug[relatedSlug]));
+    // Prefer reciprocal links and relevant categories over unrelated fillers.
+    appsNetworkCatalog.filter((candidate) => candidate.related.includes(slug)).forEach(add);
+    appsNetworkCatalog.filter((candidate) => candidate.group === app.group).forEach(add);
+  }
+  appsNetworkCatalog.forEach(add);
+  return results;
 }
-
