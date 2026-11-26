@@ -17,8 +17,17 @@ const C = {
 const originalUI=['Suas recomendações personalizadas','Enviar estes resultados manualmente',' Reenvio automático bloqueado nesta página.','Não foi possível confirmar a aceitação. A solicitação pode ter sido recebida; nenhum reenvio automático será feito. Confira seu e-mail antes de usar o envio manual.','Enviando a solicitação de e-mail…','Solicitação aceita pelo serviço de e-mail. A entrega nas caixas do cliente e do Commercial ainda não foi confirmada.','O serviço recusou a solicitação. Você pode tentar novamente ou usar o envio manual.','Ferramenta','Guia ou catálogo','Serviço'];
 const fields=[['industry',['field-service','healthcare','finance','energy','retail','other']],['challenge',['support','sla','costs','sales','data']],['size',['1-10','11-100','101-1000','1000+']],['speed',['days','weeks','quarter']],['aiuse',['none','some','many']],['outcome',['save-time','cut-costs','grow-revenue','reduce-risk']],['deploy',['saas','cloud','onprem']]];
 const css='*{box-sizing:border-box}body{margin:0;background:#080f20;color:#edf3ff;font:1rem/1.65 system-ui,sans-serif}header,main,footer{max-width:1120px;margin:auto;padding:24px}a{color:#88d4ff;text-underline-offset:.2em}nav{display:flex;gap:12px;flex-wrap:wrap}nav a{padding:6px}h1{font-size:clamp(2rem,6vw,3.8rem);line-height:1.12;max-width:20ch}h2{font-size:1.5rem}p{max-width:78ch}.lead{font-size:1.15rem}.badge{color:#a7f3d0;font-weight:700}.btn{display:inline-block;border:1px solid #a78bfa;background:#8b5cf6;color:white;padding:12px 20px;border-radius:10px;font:inherit;font-weight:650;text-decoration:none;cursor:pointer}.btn:disabled{opacity:.65}.q,section{border:1px solid #35445f;border-radius:14px;background:#101c31;padding:20px;margin:20px 0}.q legend{font-weight:700;padding:0 8px}.q label{display:block;padding:7px 0}.q input[type=radio]{margin-right:10px}.q input[type=text],.q input[type=email]{display:block;width:100%;max-width:540px;padding:12px;border:1px solid #64748b;border-radius:8px;background:#080f20;color:#fff;font:inherit}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:18px}.grid a{display:block;border:1px solid #475569;border-radius:10px;padding:18px}a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #fbbf24;outline-offset:4px}[aria-current=page]{font-weight:750}#dq-results{padding:24px;border:1px solid #34d399;border-radius:12px}footer{border-top:1px solid #334155;margin-top:32px}';
+const incidentGuideTitles = {
+ en:'Incident response: planning guide',
+ es:'Respuesta a incidentes: guía de planificación',
+ fr:'Réponse aux incidents : guide de planification',
+ de:'Reaktion auf Vorfälle: Planungsleitfaden',
+};
+const canonicalIncidentGuide = "['Resposta a incidentes: guia de planejamento','/ai-incident-response/']";
 function runtime(source,l){
- let result=source;
+ assert(source.includes(canonicalIncidentGuide),'Reviewed incident planning guide entry');
+ let result=source.replace(canonicalIncidentGuide,
+  "['"+incidentGuideTitles[l]+"','/ai-incident-response/']");
  for(let i=0;i<originalUI.length;i++){
   assert(result.includes(originalUI[i]),'Reviewed delivery text missing: '+originalUI[i]);
   // Replacement text is inside JS literals. Escape ASCII quotes and backslashes.
