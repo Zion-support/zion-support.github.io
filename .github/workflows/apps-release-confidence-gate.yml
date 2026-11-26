@@ -73,9 +73,14 @@ jobs:
             // These are the two publishers observed by the deployed-source drift
             // guard. A successful source-freshness gate can skip publication, so
             // require the publisher's actual deployment step to have succeeded.
+            // Both publishers delegate to canonical-pages.yml through a reusable
+            // workflow call from their `deploy` job, so Actions reports the called
+            // jobs as "<caller job> / <called job>" (for example "deploy / publish").
+            // Accept the legacy single-job shape too so older successful runs remain
+            // verifiable instead of aborting the whole correlation.
             const publishers = [
-              {file:'gh-pages.yml', step:'Deploy to GitHub Pages'},
-              {file:'static-deploy.yml', step:'Run actions/deploy-pages@v4'},
+              {file:'gh-pages.yml', jobNames:['deploy / publish','deploy'], steps:['Deploy canonical artifact','Deploy to GitHub Pages']},
+              {file:'static-deploy.yml', jobNames:['deploy / publish','deploy'], steps:['Deploy canonical artifact','Deploy Pages artifact','Run actions/deploy-pages@v4']},
             ];
             const deploys = [];
             for (const publisher of publishers) {
@@ -85,7 +90,7 @@ jobs:
                 // Do not recover from a jobs API error using an older candidate:
                 // without these jobs, the latest publication is unverified.
                 const jobs = await jobsFor(run.id);
-                const deployJobs = jobs.filter(job => job.name === 'deploy');
+                const deployJobs = jobs.filter(job => publisher.jobNames.includes(job.name));
                 if (!deployJobs.length) {
                   throw new Error('Missing deployment job evidence for successful run '+run.id);
                 }
@@ -99,7 +104,7 @@ jobs:
                   if (!Array.isArray(job.steps)) {
                     throw new Error('Missing deployment step evidence for successful run '+run.id);
                   }
-                  const deploymentSteps = job.steps.filter(s => s.name === publisher.step);
+                  const deploymentSteps = job.steps.filter(s => publisher.steps.includes(s.name));
                   if (deploymentSteps.length !== 1) {
                     throw new Error('Missing or ambiguous expected deployment step for successful run '+run.id);
                   }

@@ -6,16 +6,40 @@ permissions:
   issues: write
 
 concurrency:
-  group: ai-workflow-slo-monitor
+  group: ai-workflow-slo-monitor-${{ github.event.pull_request.number || github.ref }}
   cancel-in-progress: false
 
 "on":
+  pull_request:
+    paths:
+      - 'automation/ai-workflow-slo-monitor.cjs'
+      - 'automation/report-size-budget-guard.cjs'
+      - 'scripts/checks/workflow-slo.test.cjs'
+      - '.github/workflows/ai-workflow-slo-monitor.yml'
   schedule:
     - cron: '20 13 * * 1'
   workflow_dispatch:
 
 jobs:
+  contract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          fetch-depth: 1
+      - name: Setup Node.js
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
+        with:
+          node-version-file: '.nvmrc'
+      - name: Verify measured SLO reporting
+        run: node --test scripts/checks/workflow-slo.test.cjs
   slo-monitor:
+    needs: contract
+    if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
     timeout-minutes: 15
     env:
@@ -40,11 +64,13 @@ jobs:
         run: npm ci --prefer-offline --no-audit --fund=false
 
       - name: Generate workflow SLO report
+        id: report
         env:
           GITHUB_TOKEN: ${{ github.token }}
         run: node automation/ai-workflow-slo-monitor.cjs
 
       - name: Upload workflow SLO artifacts
+        id: upload
         if: always()
         uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
         with:
@@ -56,18 +82,23 @@ jobs:
           retention-days: 30
 
       - name: Open issue on SLO regressions
-        if: always()
+        if: github.ref == 'refs/heads/main' && steps.report.outcome == 'success' && steps.upload.outcome == 'success'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
           report="automation/reports/workflow-slo-latest.json"
-          [ -f "$report" ] || exit 0
+          node -e "const r=require('./'+process.argv[1]);if(r.schema!=='zion.workflow-slo.v1'||r.status!=='completed'||r.complete!==true||!Array.isArray(r.flagged))process.exit(1)" "$report"
           flagged=$(node -e "const fs=require('fs');const r=JSON.parse(fs.readFileSync('$report','utf8'));console.log((r.flagged||[]).length)")
           if [ "$flagged" = "0" ]; then
-            echo "No SLO regressions detected."
+            eligible=$(node -e "const r=require('./'+process.argv[1]);console.log(r.recoveryEligible===true?'yes':'no')" "$report")
+            if [ "$eligible" != "yes" ]; then
+              echo "At least one workflow has insufficient measured runs; no incident recovery inferred."
+              exit 0
+            fi
+            echo "No threshold flags in the complete eligible workflow sample."
             export ISSUE_FINGERPRINT="workflow-slo-regressions"
-            export CLOSE_COMMENT="Auto-closing: workflow SLO monitor reports no regressions."
+            export CLOSE_COMMENT="Auto-closing: a complete workflow SLO sample has eligible workflows and no threshold flags. See the workflow artifact for its window, exclusions and elapsed-time proxy."
             node scripts/automation/gh-issue-close-on-recovery.cjs || true
             exit 0
           fi
@@ -78,10 +109,11 @@ jobs:
             echo "- Flagged workflow count: **${flagged}**"
             echo "- Repository: \`${{ github.repository }}\`"
             echo "- Workflow run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
-            echo "- Thresholds: failure >= 15% or p95 >= 20 min (min 5 runs)"
+            echo "- Thresholds: failure >= 15% or elapsed p95 >= 20 min (min 5 eligible completed runs)"
+            echo "- Scope: latest API state/attempt; cancelled, skipped, neutral and active runs excluded from metrics."
+            echo "- Duration is updated_at minus run_started_at, an elapsed-time proxy rather than summed job time."
             echo ""
-            echo "### Flagged workflows"
-            node -e "const fs=require('fs');const r=JSON.parse(fs.readFileSync('$report','utf8'));for(const wf of (r.flagged||[])){console.log('- '+wf.name+' (failure '+(wf.failureRate*100).toFixed(1)+'%, p95 '+wf.p95Minutes.toFixed(2)+' min, runs '+wf.totalRuns+')')}"
+            echo "Detailed workflow measurements and exclusions are retained in the workflow artifact."
           } > "$body_file"
           export ISSUE_TITLE="Workflow SLO regressions detected"
           export ISSUE_BODY_FILE="$body_file"

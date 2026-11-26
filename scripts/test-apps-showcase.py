@@ -23,9 +23,14 @@ class Showcase(unittest.TestCase):
             self.assertEqual(len(c['cards']),6)
             self.assertEqual(len(c['steps']),3)
             self.assertEqual(len(c['groups']),3)
+            self.assertEqual(len(c['planningGuides']),6)
+            self.assertEqual([card[0] for card in c['planningGuides']], [card[0] for card in m.COPY['en']['planningGuides']])
             self.assertTrue(all(len(card)==3 and all(card) for card in c['cards']))
+            self.assertTrue(all(len(card)==3 and all(card) for card in c['planningGuides']))
             if locale!='en':
                 for key in ['title','intro','homeTitle','homeIntro','scope','discoveryBody','fieldNote']:
+                    self.assertNotEqual(c[key],m.COPY['en'][key])
+                for key in ['catalogTitle','catalogIntro','catalogGuidesTitle','catalogGuidesIntro','localizedDiscoveryLanguage']:
                     self.assertNotEqual(c[key],m.COPY['en'][key])
 
     def test_pages_have_real_content_and_reciprocal_language_metadata(self):
@@ -57,5 +62,42 @@ class Showcase(unittest.TestCase):
             for path in m.resource_routes(l):
                 if '/zion-app-network/' in path:self.assertTrue(path.endswith(suffix+'.html'))
                 else:self.assertTrue(path.startswith('/apps/' if l=='en' else '/'+l+'/apps/'))
+
+    def test_catalog_language_navigation_preserves_resource_and_local_discovery(self):
+        for locale,c in m.COPY.items():
+            text=m.render(locale,is_catalog=True);page=Page(text)
+            links=page.find('a')
+            self.assertTrue(any(a.get('href')==m.discovery(locale) and a.get('hreflang')==c['lang'] for a in links))
+            guide_links=[a for a in links if 'data-catalog-guide' in a]
+            self.assertEqual(len(guide_links),6)
+            self.assertEqual({a['href'] for a in guide_links},{m.catalog(locale)+slug+'.html' for slug,_,_ in c['planningGuides']})
+            self.assertIn(m.operations_guide(locale),[a['href'] for a in links])
+            self.assertIn(m.catalog(locale)+'discovery-app-paths.html',[a['href'] for a in links])
+            self.assertIn('/apps/content-hub.html',[a['href'] for a in links])
+            self.assertTrue(all(m.catalog(l) in [a['href'] for a in links] for l in m.COPY))
+            self.assertEqual(len(page.find('article')),12)
+
+    def test_homepage_composition_preserves_owned_extensions_and_is_idempotent(self):
+        for locale in ('pt','es','fr','de'):
+            source=(ROOT/('public'+m.home(locale)+'index.html')).read_text()
+            composed=m.compose_home(locale,source)
+            self.assertEqual(composed,source)
+            self.assertEqual(m.compose_home(locale,composed),composed)
+            self.assertEqual(m.protected_parts(composed),m.protected_parts(source))
+            self.assertEqual(composed.count('<!--zion-network-home:start-->'),1)
+            self.assertEqual(composed.count('id="app-paths-home"'),1)
+            for marker in ('<!--zion-network-home:start-->','id="zion-home-guides-styles"','data-home-language-selector'):
+                with self.assertRaises(AssertionError):m.compose_home(locale,source.replace(marker,''))
+            with self.assertRaises(AssertionError):
+                m.compose_home(locale,source.replace('</body>','<script>window.keep=true;</script></body>'))
+
+    def test_english_catalog_retains_legacy_links_and_is_idempotent(self):
+        source=(ROOT/'public/apps/index.html').read_text()
+        self.assertEqual(m.english_catalog(source),source)
+        links=[a['href'] for a in Page(source).find('a')]
+        for path in ('/prompt-library/','/ai-governance-checklist/','/roi-calc/','/ai-tender-scout/','/partners/'):
+            self.assertIn(path,links)
+        self.assertIn('/en/discovery/#dq',links)
+        self.assertIn('/discovery/#dq',links)
 
 if __name__=='__main__':unittest.main()
