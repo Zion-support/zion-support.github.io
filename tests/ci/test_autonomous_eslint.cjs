@@ -176,30 +176,34 @@ for (const [filePath, code] of rejectedPageNames) {
   });
 }
 
-test('ServicePage exception admits only the default route component under app/services', async () => {
+test('ServicePage exception admits only the default route component under app/services', () => {
   const code = 'export default function ServicePage() { return <main>Fixture</main>; }';
-  for (const filePath of ['app/services/fixture/page.tsx', 'app/services/services/fixture/page.tsx']) {
-    const [result] = await eslint.lintText(code, { filePath });
-    assert.equal(result.errorCount, 0, JSON.stringify(result.messages));
-    assert.equal(result.warningCount, 0, JSON.stringify(result.messages));
-  }
-  for (const filePath of ['app/data/services/fixture/page.tsx', 'app/services/fixture/helper.tsx']) {
-    const [result] = await eslint.lintText(code, { filePath });
-    assert.ok(result.messages.some(item => item.ruleId === '@typescript-eslint/naming-convention'));
-  }
+  const allowed = ['app/services/fixture/page.tsx', 'app/services/services/fixture/page.tsx'];
+  const rejected = ['app/data/services/fixture/page.tsx', 'app/services/fixture/helper.tsx'];
+  return Promise.all([
+    ...allowed.map(filePath => eslint.lintText(code, { filePath }).then(([result]) => {
+      assert.equal(result.errorCount, 0, JSON.stringify(result.messages));
+      assert.equal(result.warningCount, 0, JSON.stringify(result.messages));
+    })),
+    ...rejected.map(filePath => eslint.lintText(code, { filePath }).then(([result]) => {
+      assert.ok(result.messages.some(item => item.ruleId === '@typescript-eslint/naming-convention'));
+    })),
+  ]);
 });
 
-test('ServicePage still rejects naming, unsafe HTML and non-default helper names', async () => {
+test('ServicePage still rejects naming, unsafe HTML and non-default helper names', () => {
   const filePath = 'app/services/fixture/page.tsx';
   const helper = 'export function ServicePage() { return <main>Helper</main>; } export default function Page() { return <ServicePage />; }';
-  const [helperResult] = await eslint.lintText(helper, { filePath });
-  assert.ok(helperResult.messages.some(item => item.ruleId === 'zion-autonomous/page-component-name'));
   const untrusted = 'export default function ServicePage() { const bad_name: any = window; bad_name.innerHTML = "unsafe"; return <main>Fixture</main>; }';
-  const [result] = await eslint.lintText(untrusted, { filePath });
-  const ids = result.messages.map(item => item.ruleId);
-  for (const id of ['@typescript-eslint/naming-convention', '@typescript-eslint/no-explicit-any', 'zion-autonomous/no-inner-html']) {
-    assert.ok(ids.includes(id), JSON.stringify(result.messages));
-  }
+  return eslint.lintText(helper, { filePath }).then(([helperResult]) => {
+    assert.ok(helperResult.messages.some(item => item.ruleId === 'zion-autonomous/page-component-name'));
+    return eslint.lintText(untrusted, { filePath });
+  }).then(([result]) => {
+    const ids = result.messages.map(item => item.ruleId);
+    for (const id of ['@typescript-eslint/naming-convention', '@typescript-eslint/no-explicit-any', 'zion-autonomous/no-inner-html']) {
+      assert.ok(ids.includes(id), JSON.stringify(result.messages));
+    }
+  });
 });
 
 test('Page exception retains variable, any and HTML-sink errors inside the component', () => {
