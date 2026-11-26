@@ -1,17 +1,74 @@
-<!DOCTYPE html>
-<html lang="pt">
+<!doctype html>
+<html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <title>ROI Calculator · Zion Tech Group</title>
-  <meta name="robots" content="index, follow" />
-  <meta name="description" content="Calculate return on investment for IT infrastructure projects." />
-  <link rel="canonical" href="https://ziontechgroup.com/pt/roi-calc/" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calculadora de ROI · Zion Tech Group</title>
+<meta name="description" content="Simule o valor de horas recuperadas, investimento inicial e custos recorrentes com premissas transparentes, sem conectar contas.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://ziontechgroup.com/pt/roi-calc/">
+  <link rel="alternate" hreflang="en" href="https://ziontechgroup.com/roi-calc/">
+  <link rel="alternate" hreflang="pt-BR" href="https://ziontechgroup.com/pt/roi-calc/">
+  <link rel="alternate" hreflang="es" href="https://ziontechgroup.com/es/roi-calc/">
+  <link rel="alternate" hreflang="fr" href="https://ziontechgroup.com/fr/roi-calc/">
+  <link rel="alternate" hreflang="de" href="https://ziontechgroup.com/de/roi-calc/">
+<link rel="alternate" hreflang="x-default" href="https://ziontechgroup.com/roi-calc/">
+<link rel="stylesheet" href="/assets/css/roi-calculator.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Calculadora de ROI","url":"https://ziontechgroup.com/pt/roi-calc/","inLanguage":"pt-BR","description":"Simule o valor de horas recuperadas, investimento inicial e custos recorrentes com premissas transparentes, sem conectar contas.","applicationCategory":"FinanceApplication","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<script defer src="/assets/js/roi-calculator.js"></script>
 </head>
 <body>
-  <main data-finops-promotion="2026-10-09-finops-scenario-v1">
-    <h1>ROI Calculator</h1>
-    <p>Calculate return on investment for IT infrastructure projects.</p>
-    <p><a href="/pt/apps/finops-scenario-estimator.html">FinOps AI Estimator</a></p>
-  </main>
+<a class="skip" href="#team">Ir para a calculadora</a>
+<header><div class="wrap bar"><a class="brand" href="/pt/">Zion Tech Group</a><nav class="langs" aria-label="Idiomas"><a href="/roi-calc/" hreflang="en">EN</a> <a href="/pt/roi-calc/" hreflang="pt-BR" aria-current="page">PT</a> <a href="/es/roi-calc/" hreflang="es">ES</a> <a href="/fr/roi-calc/" hreflang="fr">FR</a> <a href="/de/roi-calc/" hreflang="de">DE</a></nav></div></header>
+<main class="wrap">
+<section class="hero">
+<p class="eyebrow">Ferramenta local no navegador</p>
+<h1>Calculadora de ROI</h1>
+<p class="lead">Estime o valor da capacidade recuperada e o ROI de um projeto usando suas próprias premissas. Sem login ou envio de dados.</p>
+<p><a href="/pt/">Início</a> · <a href="/pt/apps-network/">Rede de Apps</a></p>
+</section>
+<section class="panel" aria-labelledby="method-title"><h2 id="method-title">Como funciona o cálculo</h2><p class="note">Horas recuperadas por mês = pessoas × horas economizadas por pessoa por semana × 52 ÷ 12. Valor bruto mensal = horas × custo horário integral. Valor líquido do cenário = valor bruto no período menos implantação e custos recorrentes.</p></section>
+<section class="panel" aria-labelledby="assumptions-title">
+<h2 id="assumptions-title">Suas premissas</h2>
+<form id="roiForm" novalidate data-prompt="Preencha os seis campos numéricos; use zero para custos que não se aplicam." data-ready="Estimativas atualizadas com suas premissas." data-roi-na="Indefinido" data-payback-na="Não atingido" data-payback-beyond="fora do período selecionado" data-error-prefix="Verifique este campo:" data-error-integer="somente números inteiros" data-months-unit="meses">
+<div class="fields"><div class="field"><label for="team">Pessoas na equipe</label><input id="team" name="team" type="number" inputmode="decimal" min="1" max="100000" step="1" placeholder="4" required></div>
+<div class="field"><label for="hours">Horas por pessoa economizadas / semana</label><input id="hours" name="hours" type="number" inputmode="decimal" min="0.1" max="168" step="any" placeholder="2" required></div>
+<div class="field"><label for="rate">Custo horário integral</label><input id="rate" name="rate" type="number" inputmode="decimal" min="0.01" max="1000000" step="any" placeholder="35" required></div>
+<div class="field"><label for="monthly">Custo operacional mensal</label><input id="monthly" name="monthly" type="number" inputmode="decimal" min="0" max="1000000000" step="any" value="0" required></div>
+<div class="field"><label for="setup">Custo inicial de implantação</label><input id="setup" name="setup" type="number" inputmode="decimal" min="0" max="1000000000" step="any" value="0" required></div>
+<div class="field"><label for="months">Período de avaliação (meses)</label><input id="months" name="months" type="number" inputmode="decimal" min="1" max="120" step="1" value="12" required></div><div class="field"><label for="currency">Moeda (sem conversão cambial)</label><select id="currency" name="currency"><option value="USD">USD</option><option value="BRL" selected>BRL</option><option value="EUR">EUR</option></select></div></div>
+<p class="note">Informe todos os valores monetários na moeda selecionada. Trocar a moeda altera apenas a exibição; não há conversão cambial automática.</p><div class="actions"><button type="reset">Limpar premissas</button><p id="roiStatus" role="status" aria-live="polite">Preencha os seis campos numéricos; use zero para custos que não se aplicam.</p></div>
+</form>
+</section>
+<section id="roiResults" class="panel" aria-labelledby="results-title" data-summary-title="Cenário de ROI — apenas ilustrativo" data-summary-disclaimer="Valor estimado de capacidade, não economia financeira comprovada nem garantia de retorno. Pressupõe horas e valores constantes no período. Os valores usam a moeda selecionada, sem conversão cambial." hidden><h2 id="results-title">Cenário ilustrativo</h2><div class="metrics"><div class="metric"><span>Horas recuperadas por mês</span><output id="roiHours">—</output></div>
+<div class="metric"><span>Valor bruto mensal da capacidade</span><output id="roiGross">—</output></div>
+<div class="metric"><span>Custos totais modelados</span><output id="roiCosts">—</output></div>
+<div class="metric"><span>Valor líquido modelado</span><output id="roiNet">—</output></div>
+<div class="metric"><span>ROI no período</span><output id="roiPercent">—</output></div>
+<div class="metric"><span>Retorno do investimento inicial</span><output id="roiPayback">—</output></div></div>
+<section class="sensitivity" aria-labelledby="roiComparisonTitle">
+<h3 id="roiComparisonTitle">Compare três hipóteses</h3>
+<p id="roiComparisonNote" class="note">Multiplicadores ilustrativos do valor bruto da capacidade: 50% conservador, 100% informado, 125% otimista. Implantação, custos recorrentes e prazo permanecem iguais. Não são previsões, probabilidades nem economias comprovadas.</p>
+<div class="compare-scroll" role="region" aria-labelledby="roiComparisonTitle" tabindex="0"><table id="roiComparison" aria-describedby="roiComparisonNote">
+<thead><tr><th scope="col">Compare três hipóteses</th><th id="roiCompareNetHeader" scope="col">Valor líquido no período</th><th id="roiCompareRoiHeader" scope="col">ROI</th><th id="roiComparePaybackHeader" scope="col">Retorno da implantação</th></tr></thead>
+<tbody><tr><th id="roiCompare0Name" scope="row">Conservador (50%)</th><td><output id="roiCompare0Net">—</output></td><td><output id="roiCompare0Roi">—</output></td><td><output id="roiCompare0Payback">—</output></td></tr>
+<tr><th id="roiCompare1Name" scope="row">Informado (100%)</th><td><output id="roiCompare1Net">—</output></td><td><output id="roiCompare1Roi">—</output></td><td><output id="roiCompare1Payback">—</output></td></tr>
+<tr><th id="roiCompare2Name" scope="row">Otimista (125%)</th><td><output id="roiCompare2Net">—</output></td><td><output id="roiCompare2Roi">—</output></td><td><output id="roiCompare2Payback">—</output></td></tr></tbody></table></div></section>
+<details class="share-tools"><summary>Revisar e copiar seu cenário</summary>
+<p class="note">Gerado localmente. A cópia depende de sua ação.</p>
+<label for="roiSummary">Resumo do cenário (sem envio automático)</label>
+<textarea id="roiSummary" rows="12" readonly></textarea>
+<div class="actions"><button id="roiCopySummary" type="button" data-copied="Resumo copiado. Compartilhe apenas com quem desejar." data-manual="Área de transferência indisponível. Texto selecionado; copie manualmente.">Copiar resumo do cenário</button><p id="roiCopyStatus" role="status" aria-live="polite"></p></div>
+</details></section>
+<p class="warning">Valor de capacidade não significa economia financeira realizada. Esta simulação não é cotação, garantia de retorno ou aprovação comercial.</p>
+<section class="panel" aria-labelledby="related-title"><h2 id="related-title">Ferramentas relacionadas</h2><p class="note">Valide os fatores de custo e risco antes de financiar um piloto.</p><nav class="related" aria-label="Ferramentas relacionadas"><a href="/pt/apps-network/">Rede de Apps</a><a href="/pt/finops-estimator/">Estimador FinOps</a><a href="/pt/token-cost/">Custo de tokens</a><a href="/pt/cloud-waste/">Desperdício em nuvem</a></nav></section>
+<section class="panel faq" aria-labelledby="faq-title"><h2 id="faq-title">Como interpretar a estimativa</h2>
+<details><summary>Horas recuperadas são economia em dinheiro?</summary><p class="note">Não. Capacidade recuperada tem valor, mas economia financeira exige redução comprovada de gastos ou resultado de negócio mensurável.</p></details>
+<details><summary>O que significa o retorno da implantação?</summary><p class="note">Custo inicial dividido pelo valor líquido mensal positivo. Sem valor líquido mensal positivo, o prazo de retorno é indefinido.</p></details>
+<details><summary>Como decidir se vale prosseguir?</summary><p class="note">Valide a linha de base, compare premissas conservadoras e otimistas e teste um processo antes de comprometer orçamento.</p></details>
+</section>
+<section class="panel conversion" aria-labelledby="conversion-title"><h2 id="conversion-title">Quer ajuda para validar as premissas?</h2><p class="note">O Free Discovery online da Zion é gratuito para avaliar um processo. Não exige contratação posterior.</p><a class="buttonlink" href="/discovery/">Iniciar Discovery gratuito</a></section>
+</main>
+<footer><div class="wrap">Os valores ficam nesta sessão do navegador e não são enviados à Zion. Revise as premissas antes de aprovar gastos. · <a href="https://ziontechgroup.com/">Início</a></div></footer>
 </body>
 </html>
