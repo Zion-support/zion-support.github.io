@@ -83,45 +83,56 @@ jobs:
               {file:'static-deploy.yml', jobNames:['deploy / publish','deploy'], steps:['Deploy canonical artifact','Deploy Pages artifact','Run actions/deploy-pages@v4']},
             ];
             const deploys = [];
+            const unverified = [];
             for (const publisher of publishers) {
               const runs = (await runsFor(publisher.file, 30))
-                .filter(r => r.status === 'completed' && r.conclusion === 'success');
+                .filter(r => r.status === 'completed' || r.status === 'in_progress');
               for (const run of runs) {
                 // Do not recover from a jobs API error using an older candidate:
                 // without these jobs, the latest publication is unverified.
                 const jobs = await jobsFor(run.id);
                 const deployJobs = jobs.filter(job => publisher.jobNames.includes(job.name));
                 if (!deployJobs.length) {
-                  throw new Error('Missing deployment job evidence for successful run '+run.id);
+                  unverified.push(run);
+                  continue;
                 }
                 for (const job of deployJobs) {
                   // Only an explicit completed skip proves this job did not
                   // publish. Unknown metadata must not expose an older PASS.
                   if (job.status === 'completed' && job.conclusion === 'skipped') continue;
-                  if (job.status !== 'completed' || job.conclusion !== 'success') {
-                    throw new Error('Unverified deployment job outcome for successful run '+run.id);
+                  if (job.status !== 'completed' && run.status === 'completed') {
+                    unverified.push(run);
+                    continue;
                   }
                   if (!Array.isArray(job.steps)) {
-                    throw new Error('Missing deployment step evidence for successful run '+run.id);
+                    unverified.push(run);
+                    continue;
                   }
                   const deploymentSteps = job.steps.filter(s => publisher.steps.includes(s.name));
                   if (deploymentSteps.length !== 1) {
-                    throw new Error('Missing or ambiguous expected deployment step for successful run '+run.id);
+                    unverified.push(run);
+                    continue;
                   }
                   const step = deploymentSteps[0];
                   if (step.status === 'completed' && step.conclusion === 'skipped') continue;
+                  if (step.status !== 'completed' && step.status === 'queued') continue;
                   if (step.status !== 'completed' || step.conclusion !== 'success') {
-                    throw new Error('Unverified deployment step outcome for successful run '+run.id);
+                    unverified.push(run);
+                    continue;
                   }
                   if (!Number.isFinite(Date.parse(step.completed_at))) {
-                    throw new Error('Missing deployment completion time for run '+run.id);
+                    unverified.push(run);
+                    continue;
                   }
                   // Both publishers check out the event SHA with checkout@v4's
                   // default ref/commit contract; neither overrides ref with main.
-                  if (!/^[0-9a-f]{40}$/.test(run.head_sha || '') || job.head_sha !== run.head_sha) {
-                    throw new Error('Unverified deployment source commit for run '+run.id);
+                  if (!/^[0-9a-f]{40}$/.test(run.head_sha || '') || job.head_sha !== run.head_sha ||
+                      job.run_id !== run.id || !Number.isSafeInteger(run.run_attempt) ||
+                      run.run_attempt < 1 || job.run_attempt !== run.run_attempt) {
+                    unverified.push(run);
+                    continue;
                   }
-                  deploys.push({run, evidence:{
+                  deploys.push({run, jobs, evidence:{
                     run_id:run.id,
                     run_attempt:run.run_attempt,
                     head_sha:run.head_sha,
@@ -144,14 +155,24 @@ jobs:
               return;
             }
             deploys.sort((a,b) => Date.parse(b.evidence.completed_at) - Date.parse(a.evidence.completed_at));
-            const {run:deploy, evidence:deploymentEvidence} = deploys[0];
-            core.setOutput('deployment_evidence', JSON.stringify(deploymentEvidence));
+            const {run:deploy, jobs:deployJobs, evidence:deploymentEvidence} = deploys[0];
             const deployAt = Date.parse(deploymentEvidence.completed_at);
+            // Older workflow metadata is not required to certify a later
+            // executed publish. A same-time/newer unknown cannot expose a PASS.
+            const unresolved = unverified.find(run => !(Date.parse(run.updated_at) < deployAt));
+            if (unresolved) {
+              if (unresolved.status === 'completed') {
+                throw new Error('Potentially newer deployment outcome is unverified for run '+unresolved.id);
+              }
+              core.setOutput('status','PENDING');
+              await core.summary.addRaw('A potentially newer deployment is not yet verified; no prior PASS certified.').write();
+              return;
+            }
+            core.setOutput('deployment_evidence', JSON.stringify(deploymentEvidence));
             const ageMs = now - deployAt;
 
             const defs = {
               canary: {file:'apps-production-content-canary.yml', critical:true, afterDeploy:true},
-              drift: {file:'apps-deployed-source-drift.yml', critical:true, afterDeploy:true},
               route: {file:'ai-post-push-route-verify.yml', critical:false, afterDeploy:false},
               i18n: {file:'apps-i18n-release-contract.yml', critical:false, afterDeploy:false},
               manifest: {file:'apps-release-evidence-manifest.yml', critical:false, afterDeploy:false},
@@ -162,6 +183,62 @@ jobs:
             let hardFail = false;
             let pending = false;
             let degraded = false;
+
+            // A separately dispatched or scheduled result cannot prove the exact
+            // deployment. Only the same-run publisher job and immutable receipt count.
+            const sameRunDrift = deployJobs.filter(job => job.name === 'drift / audit');
+            function setDrift(state, reason, job, artifact) {
+              signals.drift = {
+                state, reason, run_id:deploy.id, run_attempt:deploy.run_attempt,
+                head_sha:deploy.head_sha, job_id:job?.id, artifact_id:artifact?.id,
+                html_url:job?.html_url || deploy.html_url,
+                updated_at:job?.completed_at
+              };
+              if (state === 'PENDING') pending = true;
+              if (state === 'FAIL' || state === 'MISSING') hardFail = true;
+            }
+            if (sameRunDrift.length > 1) {
+              setDrift('FAIL', 'Ambiguous same-run publisher drift job');
+            } else if (sameRunDrift.length === 0) {
+              setDrift(ageMs < graceMs ? 'PENDING' : 'MISSING', 'No exact same-run publisher drift job');
+            } else {
+              const job = sameRunDrift[0];
+              if (job.status !== 'completed') {
+                setDrift(ageMs < graceMs ? 'PENDING' : 'MISSING', 'Exact publisher drift job not completed', job);
+              } else {
+                const pass = (job.steps || []).filter(s => s.name === 'Record verified canonical drift PASS');
+                const uploaded = (job.steps || []).filter(s => s.name === 'Upload immutable deployment drift receipt');
+                const completed = s => s.length === 1 && s[0].status === 'completed' && s[0].conclusion === 'success';
+                if (!Number.isSafeInteger(deploy.run_attempt) || deploy.run_attempt < 1 ||
+                    job.run_id !== deploy.id || job.run_attempt !== deploy.run_attempt ||
+                    job.head_sha !== deploy.head_sha || job.conclusion !== 'success' ||
+                    !completed(pass) || !completed(uploaded) ||
+                    !(Date.parse(job.started_at) >= deployAt &&
+                      Date.parse(uploaded[0].completed_at) >= Date.parse(job.started_at) &&
+                      Date.parse(pass[0].completed_at) >= Date.parse(uploaded[0].completed_at))) {
+                  setDrift('FAIL', 'No verified exact-artifact comparison PASS for this publisher run', job);
+                } else {
+                  const name = 'canonical-drift-'+deploy.id+'-'+deploy.run_attempt+'-'+deploy.head_sha;
+                  const artifacts = await github.paginate(github.rest.actions.listWorkflowRunArtifacts, {
+                    owner, repo, run_id:deploy.id, per_page:100
+                  });
+                  const matches = artifacts.filter(a => a.name === name);
+                  const artifact = matches[0];
+                  const proof = artifact?.workflow_run;
+                  if (matches.length !== 1 || artifact.expired !== false || !(artifact.size_in_bytes > 0) ||
+                      !/^sha256:[0-9a-f]{64}$/.test(artifact.digest || '') ||
+                      proof?.id !== deploy.id || proof.head_sha !== deploy.head_sha ||
+                      proof.head_branch !== 'main' || !Number.isSafeInteger(proof.repository_id) ||
+                      String(proof.repository_id) !== process.env.GITHUB_REPOSITORY_ID ||
+                      proof.head_repository_id !== proof.repository_id ||
+                      !(Date.parse(artifact.created_at) >= deployAt)) {
+                    setDrift('MISSING', 'Exact publisher report identity, integrity or freshness was not verified', job);
+                  } else {
+                    setDrift('PASS', 'Exact publisher run, attempt, source SHA and report verified', job, artifact);
+                  }
+                }
+              }
+            }
 
             for (const [key, def] of Object.entries(defs)) {
               const runs = await runsFor(def.file, 40);
