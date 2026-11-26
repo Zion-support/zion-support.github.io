@@ -43,7 +43,16 @@ jobs:
       run: |
         targets=(.)
         if [ "${GITHUB_EVENT_NAME}" = "pull_request" ]; then
-          mapfile -t targets < <(git diff --name-only --diff-filter=ACMRT "${BASE_SHA}" "${GITHUB_SHA}" -- '*.js' '*.jsx' '*.mjs' '*.cjs' '*.ts' '*.tsx')
+          if ! git cat-file -e "${BASE_SHA}^{commit}" 2>/dev/null; then
+            git fetch --no-tags --depth=1 origin "${BASE_SHA}"
+          fi
+          if ! git diff --name-only --diff-filter=ACMRT "${BASE_SHA}" "${GITHUB_SHA}" -- '*.js' '*.jsx' '*.mjs' '*.cjs' '*.ts' '*.tsx' > /tmp/eslint-targets.txt; then
+            printf '[]\n' > /tmp/eslint-report.json
+            echo "exit_code=2" >> "$GITHUB_OUTPUT"
+            echo "::error::Unable to resolve the PR lint target set."
+            exit 2
+          fi
+          mapfile -t targets < /tmp/eslint-targets.txt
           if [ "${#targets[@]}" -eq 0 ]; then
             printf '[]\n' > /tmp/eslint-report.json
             echo "exit_code=0" >> "$GITHUB_OUTPUT"
