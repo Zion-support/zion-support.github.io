@@ -1,0 +1,42 @@
+name: Offline Contact Reservation Tests
+
+"on":
+  pull_request:
+    paths:
+      - 'experiments/offline-contact-reservations/**'
+      - '.github/workflows/offline-contact-reservations.yml'
+
+# Public source download needs no repository token or application secrets.
+permissions: {}
+
+concurrency:
+  group: offline-contact-reservations-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  offline-tests:
+    name: Python reservation tests
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      # Avoid checkout's auth cleanup on unrelated, unmapped gitlinks.
+      # Both files come from the exact PR merge commit, never a floating branch.
+      - name: Fetch two public source files at the tested commit
+        env:
+          SOURCE_REPOSITORY: ${{ github.repository }}
+          SOURCE_COMMIT: ${{ github.sha }}
+        run: |
+          mkdir -p experiments/offline-contact-reservations
+          cd experiments/offline-contact-reservations
+          for file in reservations.py test_reservations.py; do
+            curl --proto '=https' --tlsv1.2 --fail --silent --show-error \
+              --retry 2 --connect-timeout 10 --max-time 60 \
+              --output "$file" \
+              "https://raw.githubusercontent.com/$SOURCE_REPOSITORY/$SOURCE_COMMIT/experiments/offline-contact-reservations/$file"
+          done
+      - name: Run offline Python tests
+        env:
+          PYTHONDONTWRITEBYTECODE: '1'
+        run: |
+          python3 --version
+          python3 experiments/offline-contact-reservations/test_reservations.py -v
