@@ -1972,11 +1972,12 @@ export const appsNetworkBySlug = Object.fromEntries(
 export function relatedApps(slug: string, limit = 4): AppsNetworkApp[] {
   const app = appsNetworkBySlug[slug];
   if (!app) return appsNetworkCatalog.slice(0, limit);
-  const fromRelated = app.related
+  const fromRelated = [...new Set(app.related)]
+    .filter((s) => s !== slug)
     .map((s) => appsNetworkBySlug[s])
     .filter(Boolean) as AppsNetworkApp[];
   if (fromRelated.length >= limit) return fromRelated.slice(0, limit);
-  const fillers = appsNetworkCatalog.filter(
+  const fillers = [...appsNetworkCatalog].sort((a, b) => Number(b.group === app.group) - Number(a.group === app.group)).filter(
     (a) => a.slug !== slug && !fromRelated.some((r) => r.slug === a.slug)
   );
   return [...fromRelated, ...fillers].slice(0, limit);
