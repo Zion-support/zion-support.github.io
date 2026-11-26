@@ -1,4 +1,4 @@
-# Ensures ai-production-deploy-validation.yml keeps workflow_run chain and validation anchors (grep-only).
+# Ensures ai-production-deploy-validation.yml keeps its reusable-workflow contract and validation anchors (grep-only).
 name: ai production deploy validation workflow smoke (weekly)
 permissions:
   contents: read
@@ -24,8 +24,9 @@ jobs:
           test -s "$f"
           grep -Fq 'name: AI Production Deploy Validation' "$f"
           grep -Fq 'group: ai-production-deploy-validation' "$f"
-          grep -Fq 'workflows: [Deploy on Push]' "$f"
-          grep -Fq 'Wait for Netlify build' "$f"
+          grep -Fq 'workflow_call:' "$f"
+          grep -Fq 'source_sha:' "$f"
+          grep -Fq 'Netlify deploy removed (migrated to GitHub Pages)' "$f"
           grep -Fq 'npm run sitemap:validate' "$f"
           grep -Fq 'npm run seo:audit' "$f"
           grep -Fq 'https://ziontechgroup.com' "$f"
