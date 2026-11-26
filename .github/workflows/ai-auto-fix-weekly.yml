@@ -18,18 +18,41 @@ jobs:
         node-version-file: .nvmrc
     - name: Install dependencies
       run: npm ci
-    - name: Run npm audit fix
-      run: npm audit fix
-    - name: Run lint fix
-      run: npm run lint:fix
+    - name: Apply non-breaking dependency fixes
+      # Set the exit threshold directly; never suppress an install/registry error.
+      # Moderate/low advisories remain in the full audit report.
+      run: npm audit fix --audit-level=high
+    - name: Enforce high and critical dependency audit
+      run: npm audit --audit-level=high
+    - name: Run actual lint check
+      run: npm run lint:check
     - name: Run type check
       run: npm run type-check
     - name: Commit changes
-      run: "git config --local user.email \"action@github.com\"\ngit config --local\
-        \ user.name \"GitHub Action\"\ngit checkout -b auto-fix/$(date +%Y-%m-%d)\n\
-        if ! git diff --quiet; then\n  git add -a\n  git commit -m \"chore: auto-fix\
-        \ dependencies and lint\"\n  git push origin HEAD\n  gh pr create --title\
-        \ \"Auto-fix: dependencies and lint\" --body \"Automated fixes from the AI\
-        \ Auto Fix Weekly workflow.\" --base main --head $(git rev-parse --abbrev-ref\
-        \ HEAD)\nfi\n"
+      env:
+        GH_TOKEN: ${{ github.token }}
+      run: |
+        set -euo pipefail
+        node -e '
+          const { execFileSync } = require("node:child_process");
+          const status = execFileSync("git", ["status", "--porcelain=v1", "--untracked-files=all", "-z"]);
+          if (status.length && !status.equals(Buffer.from(" M package-lock.json\0"))) {
+            console.error("Unexpected workspace change; review manually. No branch or PR will be created.");
+            process.exit(1);
+          }
+        '
+        diff_status=0
+        git diff --quiet -- package-lock.json || diff_status=$?
+        case "$diff_status" in
+          0) exit 0 ;;
+          1) ;;
+          *) exit "$diff_status" ;;
+        esac
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git checkout -b auto-fix/$(date +%Y-%m-%d)
+        git add -- package-lock.json
+        git commit -m "chore: auto-fix dependencies and lint"
+        git push origin HEAD
+        gh pr create --title "Auto-fix: dependencies and lint" --body "Automated fixes from the AI Auto Fix Weekly workflow." --base main --head "$(git rev-parse --abbrev-ref HEAD)"
     timeout-minutes: 10
