@@ -1,0 +1,33 @@
+name: Apps directory localized SEO contract
+
+on:
+  pull_request:
+    paths:
+      - "public/apps/index.html"
+      - "public/pt/apps/index.html"
+      - "public/es/apps/index.html"
+      - "public/fr/apps/index.html"
+      - "public/de/apps/index.html"
+      - "scripts/ci/test-apps-localized-seo.cjs"
+      - ".github/workflows/apps-directory-localized-seo.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: apps-directory-localized-seo-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  seo-contract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
+        with:
+          node-version: '22'
+      - name: Verify five localized Apps SEO contracts
+        run: node scripts/ci/test-apps-localized-seo.cjs
