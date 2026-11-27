@@ -94,7 +94,9 @@ export default function IntelligentServiceDiscovery() {
           service.title?.toLowerCase().includes(q) ||
           service.description?.toLowerCase().includes(q) ||
           service.id?.toLowerCase().includes(q);
-        if (!matchesSearch) return false;
+        if (!matchesSearch) {
+          return false;
+        }
       }
 
       // Price range filter
@@ -111,7 +113,9 @@ export default function IntelligentServiceDiscovery() {
 
   // AI-powered recommendations based on selected filters
   const recommendations = useMemo(() => {
-    if (filteredServices.length === 0) return [];
+    if (filteredServices.length === 0) {
+      return [];
+    }
     
     // Score services based on relevance
     return filteredServices
@@ -119,29 +123,43 @@ export default function IntelligentServiceDiscovery() {
         let score = 0;
         
         // Category match bonus
-        if (filters.categories.includes(service.category)) score += 10;
+        if (filters.categories.includes(service.category)) {
+          score += 10;
+        }
         
         // Industry match bonus
         if (filters.industries.length > 0 && service.industry) {
           const industryMatch = filters.industries.some(ind => 
             service.industry?.toLowerCase().includes(ind.split(' ')[0].toLowerCase())
           );
-          if (industryMatch) score += 8;
+          if (industryMatch) {
+            score += 8;
+          }
         }
         
         // Benefit/outcome matching
         if (service.benefits) {
           const benefitText = service.benefits.join(' ').toLowerCase();
-          if (benefitText.includes('cost')) score += 3;
-          if (benefitText.includes('efficiency') || benefitText.includes('automation')) score += 3;
-          if (benefitText.includes('insight') || benefitText.includes('analytics')) score += 3;
+          if (benefitText.includes('cost')) {
+            score += 3;
+          }
+          if (benefitText.includes('efficiency') || benefitText.includes('automation')) {
+            score += 3;
+          }
+          if (benefitText.includes('insight') || benefitText.includes('analytics')) {
+            score += 3;
+          }
         }
         
         // Popularity bonus
-        if (service.popular) score += 5;
+        if (service.popular) {
+          score += 5;
+        }
         
         // Feature count bonus (more features = more comprehensive)
-        if (service.features) score += service.features.length;
+        if (service.features) {
+          score += service.features.length;
+        }
         
         return { ...service, _score: score };
       })
@@ -169,8 +187,12 @@ export default function IntelligentServiceDiscovery() {
 
   const addToComparison = useCallback((id: string) => {
     setComparisonIds(prev => {
-      if (prev.includes(id)) return prev.filter(i => i !== id);
-      if (prev.length >= 3) return prev.slice(1);
+      if (prev.includes(id)) {
+        return prev.filter(i => i !== id);
+      }
+      if (prev.length >= 3) {
+        return prev.slice(1);
+      }
       return [...prev, id];
     });
   }, []);
@@ -384,7 +406,9 @@ export default function IntelligentServiceDiscovery() {
               <div className="p-6">
                 {comparisonIds.map((id, index) => {
                   const service = services.find(s => s.id === id);
-                  if (!service) return null;
+                  if (!service) {
+                    return null;
+                  }
                   
                   return (
                     <div key={id} className="border-b border-slate-800 pb-4 last:border-b-0 last:pb-0">
