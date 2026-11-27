@@ -43,7 +43,9 @@ function main() {
 
   // ── Category breakdown ──
   const byCat = {};
-  for (const s of feed) byCat[s.category] = (byCat[s.category] || 0) + 1;
+  for (const s of feed) {
+    byCat[s.category] = (byCat[s.category] || 0) + 1;
+  }
 
   // ── Write output ──
   const output = {
