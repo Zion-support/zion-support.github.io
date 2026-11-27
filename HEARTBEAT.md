@@ -1,4 +1,18 @@
-# zion.app — Workspace Status
+# HEARTBEAT.md
+
+### Operating Mandate
+
+This repository's heartbeat is an evidence-backed operations and CI checkpoint, not an authorization to act without explicit owner, credential, budget, or customer controls.
+
+- **USER.md**: consult user/company operating instructions where available and current.
+- **AGENTS**: coordinate ownership and cross-agent handoffs; do not duplicate messages, supplier commitments, or patches.
+- **SOUL**: preserve professionalism, confidentiality, and truthful reporting of actual tool results.
+- **Never commit secrets**: do not place tokens, client private data, keys, banking details or unpublished supplier economics in commits or publicly rendered content.
+- Check current branch, job logs and exact failing assertion before changing CI or declaring a fix; run non-destructive tests and keep risky changes in review.
+- Prior status snapshots below are historical and do not establish present account connections, user permissions, deployed state, or active operations.
+
+## Historical workspace status (snapshot captured 2026-06-06)
+
 CI/CD, V32, Partners, Gmail, ghcli
 
 - V32 RESPONDER — COMPLETE
