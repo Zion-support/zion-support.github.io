@@ -7,11 +7,15 @@ const MONTH_NAMES = ['January', 'February', 'March', 'April', 'May', 'June', 'Ju
 const DOW_NAMES = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
 function describeField(field: string, fieldName: string, monthNames?: string[], dowNames?: string[]): string {
-  if (field === '*') return `every ${fieldName}`;
+  if (field === '*') {
+    return `every ${fieldName}`;
+  }
 
   // */n pattern
   const everyMatch = field.match(/^\*\/(\d+)$/);
-  if (everyMatch) return `every ${everyMatch[1]} ${fieldName}s`;
+  if (everyMatch) {
+    return `every ${everyMatch[1]} ${fieldName}s`;
+  }
 
   // List
   if (field.includes(',')) {
@@ -37,25 +41,35 @@ function describeField(field: string, fieldName: string, monthNames?: string[], 
     } else {
       desc = `${start} through ${end}`;
     }
-    if (step) desc += ` (every ${step})`;
+    if (step) {
+      desc += ` (every ${step})`;
+    }
     return desc;
   }
 
   // Single value
-  if (fieldName === 'month' && monthNames) return monthNames[parseInt(field) - 1] ?? field;
-  if (fieldName === 'day of week' && dowNames) return dowNames[parseInt(field) % 7] ?? field;
+  if (fieldName === 'month' && monthNames) {
+    return monthNames[parseInt(field) - 1] ?? field;
+  }
+  if (fieldName === 'day of week' && dowNames) {
+    return dowNames[parseInt(field) % 7] ?? field;
+  }
 
   return `at ${field}`;
 }
 
 function humanizeCron(expr: string): string {
   const parts = expr.trim().split(/\s+/);
-  if (parts.length !== 5) return 'Invalid cron expression — must have exactly 5 fields';
+  if (parts.length !== 5) {
+    return 'Invalid cron expression — must have exactly 5 fields';
+  }
 
   const [minute, hour, dom, month, dow] = parts;
 
   // Check for common patterns
-  if (expr === '* * * * *') return 'Every minute';
+  if (expr === '* * * * *') {
+    return 'Every minute';
+  }
   if (minute.startsWith('*/') && hour === '*' && dom === '*' && month === '*' && dow === '*') {
     return `Every ${minute.slice(2)} minutes`;
   }
@@ -79,7 +93,9 @@ function humanizeCron(expr: string): string {
 
 function getNextRuns(expr: string, count: number = 5): string[] {
   const parts = expr.trim().split(/\s+/);
-  if (parts.length !== 5) return [];
+  if (parts.length !== 5) {
+    return [];
+  }
 
   const now = new Date();
   const runs: string[] = [];
@@ -89,9 +105,15 @@ function getNextRuns(expr: string, count: number = 5): string[] {
   const [minExpr, hourExpr, domExpr, monthExpr, dowExpr] = parts;
 
   function matchesField(value: number, expr: string, max: number): boolean {
-    if (expr === '*') return true;
-    if (expr.startsWith('*/')) return value % parseInt(expr.slice(2)) === 0;
-    if (expr.includes(',')) return expr.split(',').some(v => parseInt(v) === value);
+    if (expr === '*') {
+      return true;
+    }
+    if (expr.startsWith('*/')) {
+      return value % parseInt(expr.slice(2)) === 0;
+    }
+    if (expr.includes(',')) {
+      return expr.split(',').some(v => parseInt(v) === value);
+    }
     const rangeMatch = expr.match(/^(\d+)-(\d+)(?:\/(\d+))?$/);
     if (rangeMatch) {
       const [, s, e, step] = rangeMatch;
@@ -146,7 +168,9 @@ export default function CronExpressionParserPage() {
 
   const validation = useMemo(() => {
     const parts = cronExpr.trim().split(/\s+/);
-    if (parts.length !== 5) return { valid: false, error: 'Must have exactly 5 fields (minute hour day month weekday)' };
+    if (parts.length !== 5) {
+      return { valid: false, error: 'Must have exactly 5 fields (minute hour day month weekday)' };
+    }
 
     const ranges = [
       { min: 0, max: 59, name: 'minute' },
@@ -160,12 +184,16 @@ export default function CronExpressionParserPage() {
       const field = parts[i];
       const { min, max, name } = ranges[i];
 
-      if (field === '*') continue;
+      if (field === '*') {
+        continue;
+      }
 
       // */n
       if (/^\*\/\d+$/.test(field)) {
         const n = parseInt(field.slice(2));
-        if (n < 1 || n > max) return { valid: false, error: `Invalid step in ${name}: /${n}` };
+        if (n < 1 || n > max) {
+          return { valid: false, error: `Invalid step in ${name}: /${n}` };
+        }
         continue;
       }
 
@@ -190,18 +218,24 @@ export default function CronExpressionParserPage() {
   }, [cronExpr]);
 
   const humanized = useMemo(() => {
-    if (!validation.valid) return '';
+    if (!validation.valid) {
+      return '';
+    }
     return humanizeCron(cronExpr);
   }, [cronExpr, validation.valid]);
 
   const nextRuns = useMemo(() => {
-    if (!validation.valid) return [];
+    if (!validation.valid) {
+      return [];
+    }
     return getNextRuns(cronExpr, 6);
   }, [cronExpr, validation.valid]);
 
   const fieldBreakdown = useMemo(() => {
     const parts = cronExpr.trim().split(/\s+/);
-    if (parts.length !== 5) return [];
+    if (parts.length !== 5) {
+      return [];
+    }
     return [
       { field: 'Minute', value: parts[0], desc: describeField(parts[0], 'minute') },
       { field: 'Hour', value: parts[1], desc: describeField(parts[1], 'hour') },
