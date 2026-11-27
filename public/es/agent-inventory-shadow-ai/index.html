@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inventario de Agentes y Detección de Shadow AI · Zion Tech Group</title>
+<meta name="description" content="La mayoría de las empresas no puede decir qué agentes de IA están en ejecución. En 2026, solo alrededor de una de cada cinco organizaciones tenía todos los agentes formalmente inventariados, cerca de la mitad tenía monitorización continua y casi la mitad admitió que no podía inventariar de forma fiable los agentes ya en producción, mientras el 46% escalaba IA agente en varios departamentos. El shadow AI no es un problema de políticas, es un problema de inventario. Este servicio descubre todos los agentes, modelos, plugins y conexiones MCP de su entorno, mapea quién es el propietario y a qué llega cada uno, clasifica el riesgo y entrega un inventario gobernado, un rastro de auditoría y un plan de corrección.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://ziontechgroup.com/es/agent-inventory-shadow-ai/">
+  <link rel="alternate" hreflang="en" href="https://ziontechgroup.com/agent-inventory-shadow-ai/">
+  <link rel="alternate" hreflang="pt" href="https://ziontechgroup.com/pt/agent-inventory-shadow-ai/">
+  <link rel="alternate" hreflang="es" href="https://ziontechgroup.com/es/agent-inventory-shadow-ai/">
+  <link rel="alternate" hreflang="fr" href="https://ziontechgroup.com/fr/agent-inventory-shadow-ai/">
+  <link rel="alternate" hreflang="de" href="https://ziontechgroup.com/de/agent-inventory-shadow-ai/">
+  <link rel="alternate" hreflang="x-default" href="https://ziontechgroup.com/agent-inventory-shadow-ai/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"Inventario de Agentes y Detección de Shadow AI","inLanguage":"es","url":"https://ziontechgroup.com/es/agent-inventory-shadow-ai/","provider":{"@type":"Organization","name":"Zion Tech Group","address":"364 E Main St STE 1008, Middletown, DE 19709"},"description":"La mayoría de las empresas no puede decir qué agentes de IA están en ejecución. En 2026, solo alrededor de una de cada cinco organizaciones tenía todos los agentes formalmente inventariados, cerca de la mitad tenía monitorización continua y casi la mitad admitió que no podía inventariar de forma fiable los agentes ya en producción, mientras el 46% escalaba IA agente en varios departamentos. El shadow AI no es un problema de políticas, es un problema de inventario. Este servicio descubre todos los agentes, modelos, plugins y conexiones MCP de su entorno, mapea quién es el propietario y a qué llega cada uno, clasifica el riesgo y entrega un inventario gobernado, un rastro de auditoría y un plan de corrección."}</script>
+<style>
+:root{--bg:#0b1220;--card:#121a2b;--ink:#e8eef8;--muted:#9aa8bd;--line:#243049;--accent:#7dd3fc;--brand:#a78bfa}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+a{color:var(--accent);text-decoration:none}a:hover{color:#a5d7ff;text-decoration:underline}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px 72px}
+header.site{border-bottom:1px solid var(--line);background:rgba(11,18,32,.92)}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:14px;padding-bottom:14px;flex-wrap:wrap}
+.brand{color:var(--ink);font-weight:700}.brand span{color:var(--brand)}
+.langs{display:flex;flex-wrap:wrap;gap:6px;font-size:.8rem}
+.langs a{color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:3px 10px}
+.langs a[aria-current="true"]{color:#042033;background:var(--accent);border-color:var(--accent);font-weight:700}
+.hero{padding:56px 0 40px;background:radial-gradient(ellipse at top,rgba(167,139,250,.16),transparent 60%)}
+.hero h1{font-size:clamp(1.8rem,4.5vw,2.6rem);line-height:1.12;margin:0 0 14px;letter-spacing:-.02em}
+.lede{color:var(--muted);font-size:1.1rem;max-width:48rem;margin:0 0 26px}
+section{padding:40px 0;border-top:1px solid var(--line)}
+h2{font-size:1.4rem;margin:0 0 18px;letter-spacing:-.01em}
+p{margin:0 0 14px}
+ul.feat{list-style:none;padding:0;margin:0;display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+ul.feat li{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px}
+ul.facts{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+ul.facts li{border-left:3px solid var(--brand);padding:6px 12px;color:var(--muted);background:var(--card);border-radius:0 10px 10px 0;font-size:.92rem}
+.note{color:var(--muted);font-size:.88rem;max-width:48rem}
+.grid{display:grid;gap:10px;grid-template-columns:repeat(auto-fill,minmax(240px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px}
+.card h3{font-size:.98rem;margin:0}
+.card h3 a{color:var(--ink)}
+.card h3 a:hover{color:var(--accent)}
+.btn{display:inline-block;background:linear-gradient(90deg,#7c3aed,#ec4899);color:#fff;font-weight:700;padding:12px 20px;border-radius:10px}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px}
+.price{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;color:var(--muted);font-size:.9rem;display:inline-block}
+footer{margin-top:12px;border-top:1px solid var(--line);padding-top:20px;color:var(--muted);font-size:.85rem}
+footer .wrap{display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;align-items:center;padding-top:18px;padding-bottom:18px}
+@media(max-width:640px){.hero{padding:40px 0 28px}section{padding:30px 0}}
+</style>
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="/es/">Zion <span>Tech Group</span></a>
+    <nav class="langs" aria-label="Language"><a href="https://ziontechgroup.com/agent-inventory-shadow-ai/">EN</a><a href="https://ziontechgroup.com/pt/agent-inventory-shadow-ai/">PT</a><a href="https://ziontechgroup.com/es/agent-inventory-shadow-ai/" aria-current="true">ES</a><a href="https://ziontechgroup.com/fr/agent-inventory-shadow-ai/">FR</a><a href="https://ziontechgroup.com/de/agent-inventory-shadow-ai/">DE</a></nav>
+  </div>
+</header>
+<main id="main">
+  <div class="wrap">
+    <div class="hero">
+      <h1>Inventario de Agentes y Detección de Shadow AI</h1>
+      <p class="lede">Localice todos los agentes de IA de su empresa, incluidos los que nadie aprobó.</p>
+      <div class="cta-row"><a class="btn" href="/discovery/">Empezar Discovery gratuito</a></div>
+    </div>
+    <section id="about"><h2>Inventario de Agentes y Detección de Shadow AI</h2><p class="note">La mayoría de las empresas no puede decir qué agentes de IA están en ejecución. En 2026, solo alrededor de una de cada cinco organizaciones tenía todos los agentes formalmente inventariados, cerca de la mitad tenía monitorización continua y casi la mitad admitió que no podía inventariar de forma fiable los agentes ya en producción, mientras el 46% escalaba IA agente en varios departamentos. El shadow AI no es un problema de políticas, es un problema de inventario. Este servicio descubre todos los agentes, modelos, plugins y conexiones MCP de su entorno, mapea quién es el propietario y a qué llega cada uno, clasifica el riesgo y entrega un inventario gobernado, un rastro de auditoría y un plan de corrección.</p></section>
+    <section id="steps"><h2>Cómo funciona el descubrimiento</h2><ul class="feat"><li>Descubrimiento automatizado de agentes, modelos, plugins, servidores MCP y herramientas conectadas</li><li>Atribución de cada agente a un propietario humano, aplicación, endpoint e intención</li><li>Mapeo de permisos y rutas de ataque, incluidas identidades de máquina con privilegios excesivos</li><li>Clasificación de riesgo y rastro de auditoría completo de 30 días por agente</li><li>Registro de inventario gobernado con puertas de revisión y recomendaciones de mínimo privilegio</li><li>Plan de corrección escrito y revisión trimestral para que el inventario no quede obsoleto</li></ul></section>
+    <section id="facts"><h2>Por qué es urgente ahora</h2><ul class="facts"><li>Solo alrededor del 18% de las organizaciones tiene todos los agentes formalmente inventariados y aprobados</li><li>El 47% no puede inventariar de forma fiable los agentes de su entorno</li><li>El 74% descubrió más herramientas de IA en ejecución de las esperadas; el 30% encontró 16 o más</li><li>El 52% encontró aplicaciones de IA no autorizadas dentro de su perímetro en el último año</li><li>Solo el 23% puede detener un agente que se comporta mal a mitad de acción, y el 11% detecta drift</li></ul></section>
+    <section id="deliver"><h2>Qué recibe</h2><ul class="feat"><li>Inventario completo de agentes y modelos con propietarios y permisos</li><li>Registro de shadow AI: agentes, modelos y conexiones MCP no autorizados</li><li>Clasificación de riesgo por agente con su evidencia</li><li>Rastro de auditoría de 30 días que un auditor lee sin su ayuda</li><li>Plan de corrección con quick wins y una hoja de ruta de 90 días</li></ul></section>
+    <section id="related"><h2>Herramientas de la Apps Network</h2><div class="grid"><div class="card"><h3><a href="/es/ai-governance-checklist/">AI Governance Checklist</a></h3></div>
+<div class="card"><h3><a href="/es/ai-ticket-sentinel/">AI Ticket Sentinel</a></h3></div>
+<div class="card"><h3><a href="/ops-runbook-ai/">Ops Runbook AI</a></h3></div>
+<div class="card"><h3><a href="/es/change-risk/">Puntuación de Riesgo de Cambio</a></h3></div>
+<div class="card"><h3><a href="/model-observatory/">Model Observatory</a></h3></div>
+<div class="card"><h3><a href="/es/managed-ai-operations/">Managed AI Operations</a></h3></div></div></section>
+    <section id="cta">
+      <h2>Empiece con un Discovery</h2>
+      <p class="note">Un Discovery identifica qué flujos de agentes importan más y dónde están las brechas de inventario. Un proceso, un informe, una sesión de 30 minutos.</p>
+      <p><span class="price">Discovery de tarifa fija y luego retención de revisión trimestral.</span></p>
+      <div class="cta-row">
+        <a class="btn" href="/discovery/">Empezar Discovery gratuito</a>
+        <a class="btn alt" href="/managed-ai-operations/">Managed AI Operations</a>
+      </div>
+    </section>
+  </div>
+</main>
+<footer>
+  <div class="wrap">
+    <div>Zion Tech Group · Delaware, EE. UU.</div>
+    <div class="langs"><a href="https://ziontechgroup.com/agent-inventory-shadow-ai/">EN</a><a href="https://ziontechgroup.com/pt/agent-inventory-shadow-ai/">PT</a><a href="https://ziontechgroup.com/es/agent-inventory-shadow-ai/" aria-current="true">ES</a><a href="https://ziontechgroup.com/fr/agent-inventory-shadow-ai/">FR</a><a href="https://ziontechgroup.com/de/agent-inventory-shadow-ai/">DE</a></div>
+  </div>
+</footer>
+</body>
+</html>

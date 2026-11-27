@@ -59,11 +59,11 @@
     "app:ux-audit": "echo 'app:ux-audit: OK (stub - automation paused post-P0)'",
     "artifacts:freshness:mesh": "echo 'artifacts:freshness:mesh: OK (stub - automation paused post-P0)'",
     "automation:health": "node automation/weekly-automation-health-sla-orchestrator.cjs",
-    "autonomy:growth-signal": "echo 'autonomy:growth-signal: OK (stub - automation paused post-P0)'",
+    "autonomy:growth-signal": "node automation/reliability-reports.cjs growth",
     "autonomy:intelligence:plan": "node automation/autonomy-intelligence-planner.cjs",
     "autonomy:quality-drift": "echo 'autonomy:quality-drift: OK (stub - automation paused post-P0)'",
     "autonomy:queue-guard": "node scripts/automation/autonomous-writer-queue-guard.cjs",
-    "autonomy:release-guardian": "echo 'autonomy:release-guardian: OK (stub - automation paused post-P0)'",
+    "autonomy:release-guardian": "node automation/reliability-reports.cjs release",
     "build:lock:check": "echo 'build:lock:check: OK (stub - automation paused post-P0)'",
     "content:services-and-content": "node automation/ai-services-and-content-automation.cjs",
     "cron:health": "echo 'cron:health: OK (stub - automation paused post-P0)'",
@@ -114,7 +114,7 @@
     "reports:aggregate": "echo 'reports:aggregate: OK (stub - automation paused post-P0)'",
     "reports:aggregate:guard:runner": "echo 'reports:aggregate:guard:runner: OK (stub - automation paused post-P0)'",
     "reports:hygiene:check": "echo 'reports:hygiene:check: OK (stub - automation paused post-P0)'",
-    "reports:size:guard": "echo 'reports:size:guard: OK (stub - automation paused post-P0)'",
+    "reports:size:guard": "node automation/report-size-budget-guard.cjs",
     "routes:drift:sitemap": "echo 'routes:drift:sitemap: OK (stub - automation paused post-P0)'",
     "seo:audit": "echo 'seo:audit: OK (stub - automation paused post-P0)'",
     "site:links:audit": "node automation/ai-site-link-audit-automation.cjs audit",
@@ -174,6 +174,9 @@
     "js-yaml": "^3.15.2",
     "esbuild": "^0.28.1",
     "uuid": "^11.1.1",
-    "postcss": "^8.5.10"
+    "postcss": "^8.5.10",
+    "@tailwindcss/typography": {
+      "postcss-selector-parser": "6.1.5"
+    }
   }
 }

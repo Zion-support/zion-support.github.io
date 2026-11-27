@@ -1,120 +1,64 @@
-# AI Live Content Ideas - Daily
-# Daily run: ideation + content audit ideas (both use live site) → content burst → commit + deploy.
-# Complements ai-live-content-ideas (Mon/Wed/Fri) with an extra live-informed run every day at 6 UTC.
-
 name: AI Live Content Ideas Daily
-
-concurrency:
-  group: content-commit
-  cancel-in-progress: false
-
-permissions:
-  contents: write
 
 "on":
   schedule:
     - cron: '0 6 * * *'
   workflow_dispatch:
     inputs:
-      max_template_blog:
-        description: 'Template blog posts (default 4)'
+      content_count:
+        description: 'Reviewed guide topics to publish (1 to 3, available queue permitting)'
+        default: '1'
         required: false
-        default: '4'
-      max_template_case_studies:
-        description: 'Template case studies (default 4)'
-        required: false
-        default: '4'
-      max_industry_pages:
-        description: 'Industry pages (default 3)'
-        required: false
-        default: '3'
       trigger_deploy:
-        description: 'Trigger deploy after commit (GitHub Pages)'
-        required: false
-        default: true
+        description: 'Deploy validated content after committing it'
         type: boolean
+        default: true
 
-env:
-  NODE_OPTIONS: '--max-old-space-size=20480'
+permissions:
+  contents: write
+  actions: write
+concurrency:
+  group: content-commit
+  cancel-in-progress: false
 
 jobs:
-  live-daily:
+  daily-content:
     runs-on: ubuntu-latest
     timeout-minutes: 25
-    env:
-      NEXT_TELEMETRY_DISABLED: "1"
     steps:
-      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+      - name: Checkout production source
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
           token: ${{ github.token }}
-
-      - uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
+          fetch-depth: 2
+      - name: Setup Node.js
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
         with:
           node-version-file: '.nvmrc'
-          cache: 'npm'
-          cache-dependency-path: package-lock.json
-
-      - name: Restore content runtime cache
-        uses: actions/cache@668228422ae6a00e4ad889ee87cd7109ec5666a7 # v5.0.4
+      - name: Verify publisher invariants
+        run: node --test automation/static-editorial-publisher.test.cjs
+      - name: Generate reviewed static content
+        id: generate
+        env:
+          CONTENT_LIMIT: ${{ inputs.content_count || '1' }}
+        run: node automation/static-editorial-publisher.cjs daily
+      - name: Prepare and validate the production artifact
+        if: steps.generate.outputs.changed == 'true'
+        run: |
+          bash scripts/prepare-pages-out.sh
+          node scripts/automation/validate-editorial-artifact.cjs daily out
+      - name: Commit verified content and request deployment
+        if: steps.generate.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TRIGGER_DEPLOY: ${{ github.event_name == 'schedule' || inputs.trigger_deploy != false }}
+        run: |
+          if [ "$TRIGGER_DEPLOY" = "false" ]; then export TRIGGER_DEPLOY=0; fi
+          node scripts/automation/publish-generated-content.cjs daily
+      - name: Upload publication evidence
+        if: always()
+        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
         with:
-          path: |
-            automation/reports/.runtime
-          key: content-runtime-${{ runner.os }}-${{ hashFiles('automation/openrouter-content-generator.cjs') }}
-          restore-keys: |
-            content-runtime-${{ runner.os }}-
-
-      - name: Install dependencies
-        run: npm ci --prefer-offline --no-audit --fund=false
-
-      - name: Ideation (live site)
-        env:
-          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
-          OPENROUTER_MODEL: openrouter/free
-        run: node automation/ai-content-ideation-agent.cjs
-
-      - name: Content audit ideas (live site)
-        env:
-          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
-          OPENROUTER_MODEL: openrouter/free
-        run: node automation/ai-content-audit-ideas-agent.cjs
-
-      - name: Content burst (template blog + case studies + industry)
-        env:
-          MAX_TEMPLATE_BLOG: ${{ github.event.inputs.max_template_blog || '4' }}
-          MAX_TEMPLATE_CASE_STUDIES: ${{ github.event.inputs.max_template_case_studies || '4' }}
-          MAX_INDUSTRY_PAGES: ${{ github.event.inputs.max_industry_pages || '3' }}
-          MAX_ADD: "3"
-        run: node automation/ai-content-burst-agent.cjs
-
-      - name: Homepage industry sync
-        run: node automation/ai-homepage-industry-sync-agent.cjs run --apply
-
-      - name: Add swap space (mitigate Next.js build OOM on 90k+ file tree)
-        run: |
-          SWAP_MB=$(swapon --show=SIZE --noheadings --bytes | awk '{s+=$1} END {print int(s/1048576)}')
-          echo "existing swap: ${SWAP_MB} MB"
-          if [ "${SWAP_MB:-0}" -lt 24576 ]; then
-            sudo fallocate -l 24G /swapfile2 || sudo dd if=/dev/zero of=/swapfile2 bs=1M count=24576
-            sudo chmod 600 /swapfile2
-            sudo mkswap /swapfile2
-            sudo swapon /swapfile2
-          fi
-          free -h
-
-      - name: Validate build
-        run: |
-          set -euo pipefail
-          npm run rsc:guard
-          npm run build
-
-      - name: Commit, push, and deploy
-        env:
-          TRIGGER_DEPLOY: ${{ github.event.inputs.trigger_deploy != 'false' && '1' || '' }}
-#           NETLIFY_BUILD_HOOK removed (Netlify decommissioned → GitHub Pages)
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add -A
-          if ! git diff --staged --quiet; then
-            bash scripts/automation/commit-and-push-main.sh "chore(content): live content ideas daily - ideation + audit ideas + burst"
-          fi
+          name: editorial-daily-${{ github.run_id }}
+          path: automation/reports/editorial-daily-latest.json
+          if-no-files-found: error

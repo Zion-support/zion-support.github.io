@@ -6,20 +6,85 @@
 <title>Contact | Zion Tech Group</title>
 <link rel="canonical" href="https://ziontechgroup.com/contact/">
 <meta name="robots" content="index,follow">
-<meta name="description" content="Zion Tech Group — Contact. Explore AI &amp; IT services, automation, and growth tools.">
+<meta name="description" content="Contact Zion Tech Group — AI services, managed IT, field operations, hardware procurement and field engineers. Email commercial@ziontechgroup.com or send the form.">
 <style>
-body{font-family:Inter,system-ui,sans-serif;background:#0b0f17;color:#e7ecf1;margin:0}
+body{font-family:Inter,system-ui,sans-serif;background:#0b0f17;color:#e7ecf1;margin:0;line-height:1.6}
 .wrap{max-width:960px;margin:0 auto;padding:48px 24px}
-h1{font-size:28px;margin-bottom:12px}
 a{color:#7dd3fc}
 .btn{display:inline-block;margin-top:18px;padding:10px 14px;background:#0ea5e9;color:#fff;border-radius:10px;text-decoration:none}
+h1{font-size:32px;margin-bottom:8px}
+h2{font-size:22px;margin:0 0 8px}
+.cards{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin:22px 0}
+.card{background:#121a2b;border:1px solid #243049;border-radius:12px;padding:16px}
+.card h3{margin:0 0 6px;font-size:15px}
+.card p{margin:0;color:#9aa8bd;font-size:14px}
 </style>
 </head>
 <body>
 <div class="wrap">
 <h1>Contact</h1>
-<p>This page is temporarily unavailable. Explore our AI &amp; IT services and free tools.</p>
-<a class="btn" href="/services/">Browse Services</a>
+<p style="color:#9aa8bd;max-width:44rem">Talk to Zion Tech Group about AI services and agents, managed IT, field operations, hardware and software procurement, or field engineers and technicians. Every message is copied to our commercial team.</p>
+<div class="cards">
+<div class="card"><h3>Commercial</h3><p><a href="mailto:commercial@ziontechgroup.com">commercial@ziontechgroup.com</a></p></div>
+<div class="card"><h3>CEO</h3><p><a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p></div>
+<div class="card"><h3>Phone / WhatsApp</h3><p><a href="tel:+13024640950">+1 302 464 0950</a></p></div>
+<div class="card"><h3>Registered office</h3><p>364 E Main St STE 1008, Middletown, DE 19709, USA</p></div>
 </div>
+<p><a class="btn" href="/plans/">See plans and pricing</a> <a class="btn" href="/discovery/" style="background:#1e293b">Start Free Discovery</a></p>
+
+<section id="contact-form" style="margin-top:2rem">
+<h2>Send a message</h2>
+<p style="color:#9aa8bd">Commercial is copied on every message. We reply within one business day.</p>
+<form id="zion-contact-form">
+<p><label>Name<br><input required name="name" autocomplete="name" style="width:100%%;padding:.6rem;border-radius:8px;border:1px solid #243049;background:#0f172a;color:#e8eef8"></label></p>
+<p><label>Work email<br><input required type="email" name="email" autocomplete="email" style="width:100%%;padding:.6rem;border-radius:8px;border:1px solid #243049;background:#0f172a;color:#e8eef8"></label></p>
+<p><label>Company<br><input name="company" autocomplete="organization" style="width:100%%;padding:.6rem;border-radius:8px;border:1px solid #243049;background:#0f172a;color:#e8eef8"></label></p>
+<p><label>Country<br><input name="country" style="width:100%%;padding:.6rem;border-radius:8px;border:1px solid #243049;background:#0f172a;color:#e8eef8"></label></p>
+<p><label>I need<br><select name="interest" style="width:100%%;padding:.6rem;border-radius:8px;border:1px solid #243049;background:#0f172a;color:#e8eef8">
+<option value="ai-services">AI services and agents</option>
+<option value="managed-it">Managed IT and field operations</option>
+<option value="managed-ai-ops">Managed AI Operations</option>
+<option value="agent-inventory">Agent inventory and shadow AI</option>
+<option value="hardware">Hardware or software procurement</option>
+<option value="field-engineer">Field engineer or technician</option>
+<option value="other">Something else</option>
+</select></label></p>
+<p><label>Message<br><textarea required name="message" rows="5" style="width:100%%;padding:.6rem;border-radius:8px;border:1px solid #243049;background:#0f172a;color:#e8eef8"></textarea></label></p>
+<p><button type="submit" style="padding:.7rem 1.2rem;border:0;border-radius:10px;background:#0ea5e9;color:#fff;font-weight:700;cursor:pointer">Send message</button></p>
+<p id="zc-status" role="status" aria-live="polite" style="color:#7dd3fc"></p>
+</form>
+</section>
+
+</div>
+<script src="/assets/js/zion-shell.js" defer></script>
+
+<script>
+(function(){
+  var f=document.getElementById('zion-contact-form');
+  if(!f) return;
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var d=Object.fromEntries(new FormData(f).entries());
+    var status=document.getElementById('zc-status');
+    status.textContent='Sending…';
+    var body=JSON.stringify({
+      name:d.name, email:d.email, company:d.company||'', country:d.country||'',
+      interest:d.interest||'', message:d.message||'',
+      _subject:'Contact — '+d.name,
+      _replyto:d.email,
+      _cc:d.email
+    });
+    fetch('https://formsubmit.co/ajax/commercial@ziontechgroup.com',{
+      method:'POST', headers:{'Content-Type':'application/json','Accept':'application/json'}, body:body
+    }).then(function(r){ if(!r.ok) throw new Error('rejected');
+      status.textContent='Thank you — your message was sent. We reply within one business day.';
+      f.reset();
+    }).catch(function(){
+      status.textContent='Automatic sending failed. Please email commercial@ziontechgroup.com directly.';
+    });
+  });
+})();
+</script>
+
 </body>
 </html>

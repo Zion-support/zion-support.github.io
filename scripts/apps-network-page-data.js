@@ -30,7 +30,7 @@ const LANGS = [
 const GROUP_LABEL = {
   en: { money: 'Money & FinOps', ops: 'Operations & reliability', govern: 'Governance & bids', work: 'Work & briefs', ai: 'AI & automation', field: 'Field & support', hub: 'Hub & CRM' },
   pt: { money: 'Dinheiro & FinOps', ops: 'Operações & confiabilidade', govern: 'Governança & licitações', work: 'Trabalho & briefs', ai: 'IA & automação', field: 'Campo & suporte', hub: 'Hub & CRM' },
-  es: { money: 'Dinero & FinOps', ops: 'Operaciones & fiabilidad', govern: 'Gobernanza & licitaciones', work: 'Trabajo & briefs', ia: 'IA & automatización', field: 'Campo & soporte', hub: 'Hub & CRM' },
+  es: { money: 'Dinero & FinOps', ops: 'Operaciones & fiabilidad', govern: 'Gobernanza & licitaciones', work: 'Trabajo & briefs', ai: 'IA & automatización', field: 'Campo & soporte', hub: 'Hub & CRM' },
   fr: { money: 'Argent & FinOps', ops: 'Opérations & fiabilité', govern: 'Gouvernance & appels d\'offres', work: 'Travail & briefs', ai: 'IA & automatisation', field: 'Terrain & support', hub: 'Hub & CRM' },
   de: { money: 'Geld & FinOps', ops: 'Betrieb & Zuverlässigkeit', govern: 'Governance & Ausschreibungen', work: 'Arbeit & Briefs', ai: 'KI & Automatisierung', field: 'Field & Support', hub: 'Hub & CRM' },
 };
@@ -38,6 +38,12 @@ const GROUP_LABEL = {
 const T = {
   en: {
     taglinePrefix: 'Zion Apps Network',
+    hubLede: "Production-ready AI, FinOps, security, operations and field-service apps — every one interlinked with its siblings, so you never hit a dead end. Free to try, no credit card.",
+    hubDescription: "Zion Apps Network: interlinked AI, FinOps, security, operations and field-service apps. Free to try, no credit card.",
+    statApps: "published apps",
+    statLinks: "internal interlinks",
+    statCategories: "categories",
+    statLanguages: "languages",
     whatItDoes: 'What it does',
     capabilities: 'Key capabilities',
     whenToUse: 'When to use it',
@@ -57,6 +63,12 @@ const T = {
   },
   pt: {
     taglinePrefix: 'Zion Apps Network',
+    hubLede: "Apps de IA, FinOps, segurança, operações e campo — todos interligados aos seus pares, para que nunca haja um caminho sem saída. Gratuito para experimentar, sem cartão de crédito.",
+    hubDescription: "Zion Apps Network: apps de IA, FinOps, segurança, operações e campo interligados. Gratuito, sem cartão de crédito.",
+    statApps: "apps publicados",
+    statLinks: "interligações internas",
+    statCategories: "categorias",
+    statLanguages: "idiomas",
     whatItDoes: 'O que faz',
     capabilities: 'Principais capacidades',
     whenToUse: 'Quando usar',
@@ -76,6 +88,12 @@ const T = {
   },
   es: {
     taglinePrefix: 'Zion Apps Network',
+    hubLede: "Apps de IA, FinOps, seguridad, operaciones y campo — todas interconectadas con sus hermanas, para que nunca haya un callejón sin salida. Gratis para probar, sin tarjeta de crédito.",
+    hubDescription: "Zion Apps Network: apps de IA, FinOps, seguridad, operaciones y campo interconectadas. Gratis, sin tarjeta de crédito.",
+    statApps: "apps publicadas",
+    statLinks: "interconexiones internas",
+    statCategories: "categorías",
+    statLanguages: "idiomas",
     whatItDoes: 'Qué hace',
     capabilities: 'Capacidades clave',
     whenToUse: 'Cuándo usarlo',
@@ -95,6 +113,12 @@ const T = {
   },
   fr: {
     taglinePrefix: 'Zion Apps Network',
+    hubLede: "Apps IA, FinOps, sécurité, opérations et terrain — toutes interconnectées à leurs partenaires, pour qu'il n'y ait jamais d'impasse. Gratuit pour essayer, sans carte de crédit.",
+    hubDescription: "Zion Apps Network : apps IA, FinOps, sécurité, opérations et terrain interconnectées. Gratuit, sans carte de crédit.",
+    statApps: "apps publiées",
+    statLinks: "interconnexions internes",
+    statCategories: "catégories",
+    statLanguages: "langues",
     whatItDoes: 'Ce qu\'il fait',
     capabilities: 'Capacités clés',
     whenToUse: 'Quand l\'utiliser',
@@ -114,6 +138,12 @@ const T = {
   },
   de: {
     taglinePrefix: 'Zion Apps Network',
+    hubLede: "Produktionsreife KI-, FinOps-, Sicherheits-, Betriebs- und Field-Apps — alle mit ihren Geschwistern vernetzt, damit es keine Sackgassen gibt. Kostenlos ausprobierbar, ohne Kreditkarte.",
+    hubDescription: "Zion Apps Network: vernetzte KI-, FinOps-, Sicherheits-, Betriebs- und Field-Apps. Kostenlos, ohne Kreditkarte.",
+    statApps: "veröffentlichte Apps",
+    statLinks: "interne Verlinkungen",
+    statCategories: "Kategorien",
+    statLanguages: "Sprachen",
     whatItDoes: 'Was es tut',
     capabilities: 'Kernfunktionen',
     whenToUse: 'Wann es sinnvoll ist',

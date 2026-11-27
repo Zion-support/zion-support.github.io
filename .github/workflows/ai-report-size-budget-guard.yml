@@ -5,10 +5,18 @@ permissions:
   issues: write
 
 concurrency:
-  group: ai-report-size-budget-guard
+  group: ai-report-size-budget-guard-${{ github.event.pull_request.number || github.ref }}
   cancel-in-progress: false
 
 "on":
+  pull_request:
+    paths:
+      - 'automation/report-size-budget-guard.cjs'
+      - 'automation/audit-push-helper-adoption.cjs'
+      - 'scripts/checks/report-audits.test.cjs'
+      - '.github/workflows/ai-report-size-budget-guard.yml'
+      - 'package.json'
+      - 'package-lock.json'
   schedule:
     - cron: '15 16 * * 1'
   workflow_dispatch:
@@ -35,6 +43,9 @@ jobs:
       - name: Install dependencies
         run: npm ci --prefer-offline --no-audit --fund=false
 
+      - name: Verify read-only audit contracts
+        run: node --test scripts/checks/report-audits.test.cjs
+
       - name: Run report size budget guard
         id: size_guard
         continue-on-error: true
@@ -52,7 +63,7 @@ jobs:
           retention-days: 30
 
       - name: Open issue on budget breach (deduped)
-        if: steps.size_guard.outcome != 'success'
+        if: github.event_name != 'pull_request' && steps.size_guard.outcome != 'success'
         env:
           GH_TOKEN: ${{ github.token }}
           ISSUE_TITLE: Report size budget breached
@@ -73,8 +84,7 @@ jobs:
             echo "- Oversized file count: ${oversized}"
             echo "- Total size budget exceeded: ${total_exceeded}"
             echo ""
-            echo "### Top largest report files"
-            node -e "const fs=require('fs');const r=JSON.parse(fs.readFileSync('$report','utf8'));for(const f of (r.topLargest||[]).slice(0,10)){console.log('- '+f.path+' ('+f.sizeKb+' KB)')}"
+            echo "Detailed file measurements are retained in the workflow artifact."
           } > "$body_file"
           export ISSUE_TITLE="Report size budget breached"
           export ISSUE_FINGERPRINT="report-size-budget"
@@ -83,7 +93,7 @@ jobs:
           node scripts/automation/gh-issue-dedupe-or-create.cjs || true
 
       - name: Close report size fingerprint issue on recovery
-        if: steps.size_guard.outcome == 'success'
+        if: github.event_name != 'pull_request' && steps.size_guard.outcome == 'success'
         env:
           GH_TOKEN: ${{ github.token }}
           ISSUE_FINGERPRINT: report-size-budget

@@ -262,7 +262,7 @@ def generate_new_services(batch_size: int, existing_ids: Set[str]) -> List[Dict]
             'contactInfo': {
                 'website': f"/services/{service_id}",
                 'email': 'hello@ziontechgroup.com',
-                'phone': '+1 (302) 464-0950'
+                'phone': '+55 11 97614-0076'
             },
             'icon': '💡',
             'href': f"/services/{service_id}",
@@ -347,7 +347,7 @@ export const metadata = {{
   }}
 }};
 
-export default function ServicePage() {{
+export default function Page() {{
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">

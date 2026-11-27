@@ -8,11 +8,13 @@ permissions:
     paths:
       - '.github/workflows/**'
       - 'automation/ai-cron-collision-tuner.cjs'
+      - 'tests/ci/cron-schedule-audit.test.cjs'
   push:
     branches: [main]
     paths:
       - '.github/workflows/**'
       - 'automation/ai-cron-collision-tuner.cjs'
+      - 'tests/ci/cron-schedule-audit.test.cjs'
   workflow_dispatch:
 
 concurrency:
@@ -41,13 +43,11 @@ jobs:
         if: hashFiles('automation/ai-cron-collision-tuner.cjs') != ''
         run: npm ci --prefer-offline --no-audit --fund=false
 
+      - name: Test the read-only schedule audit
+        run: node --test tests/ci/cron-schedule-audit.test.cjs
+
       - name: Generate cron collision report
-        run: |
-          if [ -f automation/ai-cron-collision-tuner.cjs ]; then
-            node automation/ai-cron-collision-tuner.cjs
-          else
-            echo "automation/ai-cron-collision-tuner.cjs is not on this branch; skipping"
-          fi
+        run: node automation/ai-cron-collision-tuner.cjs
 
       - name: Upload cron collision report
         if: always()
@@ -57,5 +57,5 @@ jobs:
           path: |
             automation/reports/cron-collision-latest.json
             automation/reports/cron-collision-latest.md
-          if-no-files-found: ignore
+          if-no-files-found: error
           retention-days: 14

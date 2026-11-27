@@ -1,0 +1,152 @@
+name: Discovery Mirror Guard
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'discovery/index.html'
+      - 'public/discovery/index.html'
+      - 'public/en/discovery/index.html'
+      - 'public/pt/discovery/index.html'
+      - 'public/es/discovery/index.html'
+      - 'public/fr/discovery/index.html'
+      - 'public/de/discovery/index.html'
+      - 'public/assets/js/discovery-delivery.js'
+      - 'scripts/test-discovery-delivery-contract.cjs'
+      - 'scripts/test-discovery-current-form.cjs'
+      - 'scripts/render-discovery-locales.cjs'
+      - 'scripts/test-discovery-locales.cjs'
+      - 'discovery/questionnaire.html'
+      - 'public/discovery/questionnaire.html'
+      - '.github/workflows/discovery-mirror-guard.yml'
+  pull_request:
+    paths:
+      - 'discovery/index.html'
+      - 'public/discovery/index.html'
+      - 'public/en/discovery/index.html'
+      - 'public/pt/discovery/index.html'
+      - 'public/es/discovery/index.html'
+      - 'public/fr/discovery/index.html'
+      - 'public/de/discovery/index.html'
+      - 'public/assets/js/discovery-delivery.js'
+      - 'scripts/test-discovery-delivery-contract.cjs'
+      - 'scripts/test-discovery-current-form.cjs'
+      - 'scripts/render-discovery-locales.cjs'
+      - 'scripts/test-discovery-locales.cjs'
+      - 'discovery/questionnaire.html'
+      - 'public/discovery/questionnaire.html'
+      - '.github/workflows/discovery-mirror-guard.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  current-form:
+    name: Current questionnaire offline contract
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout current questionnaire and regression suite
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+          sparse-checkout: |
+            /public/discovery/index.html
+            /discovery/index.html
+            /public/en/discovery/index.html
+            /public/pt/discovery/index.html
+            /public/es/discovery/index.html
+            /public/fr/discovery/index.html
+            /public/de/discovery/index.html
+            /scripts/test-discovery-current-form.cjs
+          sparse-checkout-cone-mode: false
+      - name: Setup Node.js
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
+        with:
+          node-version: '22'
+      - name: Verify free access, recipients, delivery states and failure behavior
+        run: |
+          cmp public/discovery/index.html discovery/index.html
+          node scripts/test-discovery-current-form.cjs public/discovery/index.html
+          node scripts/test-discovery-current-form.cjs discovery/index.html
+
+  # This independent gate validates the real dq questionnaires generated from
+  # canonical Portuguese. The imported dform runtime is not their application.
+  mirror:
+    name: Five-language questionnaire source and runtime contract
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout localized questionnaires and delivery suite
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+          sparse-checkout: |
+            /public/discovery/index.html
+            /public/en/discovery/index.html
+            /public/pt/discovery/index.html
+            /public/es/discovery/index.html
+            /public/fr/discovery/index.html
+            /public/de/discovery/index.html
+            /scripts/render-discovery-locales.cjs
+            /scripts/test-discovery-locales.cjs
+          sparse-checkout-cone-mode: false
+
+      - name: Setup Node.js
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
+        with:
+          node-version: '22'
+
+      - name: Validate authored sources, five languages and mocked delivery
+        shell: bash
+        run: |
+          set -euo pipefail
+          # Read and compare committed sources. This gate never generates pages
+          # to repair a failing fixture or uses the incompatible dform runtime.
+          node scripts/test-discovery-locales.cjs public --source-parity
+
+  legacy-redirects:
+    name: Legacy questionnaire links
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout legacy redirects
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+          sparse-checkout: |
+            /discovery/questionnaire.html
+            /public/discovery/questionnaire.html
+          sparse-checkout-cone-mode: false
+
+      - name: Require safe legacy-route redirects
+        shell: bash
+        run: |
+          set -euo pipefail
+          for file in 'discovery/questionnaire.html' 'public/discovery/questionnaire.html'; do
+            if [ ! -f "$file" ]; then
+              echo "::error::Missing legacy-route compatibility redirect: $file"
+              exit 1
+            fi
+
+            if grep -Eiq '<form([[:space:]>])|formsubmit|_autoresponse|name="(q[0-9]+|email|company|challenge|goal)"' "$file"; then
+              echo "::error::Legacy Discovery questionnaire behavior returned in $file. Compatibility routes must redirect only."
+              exit 1
+            fi
+
+            if ! grep -Fq 'rel="canonical" href="https://ziontechgroup.com/discovery/"' "$file"; then
+              echo "::error::Canonical /discovery/ marker missing from $file"
+              exit 1
+            fi
+
+            if ! grep -Eq 'http-equiv="refresh"[^>]+(/discovery/|https://ziontechgroup.com/discovery/)' "$file"; then
+              echo "::error::Compatibility redirect to /discovery/ missing from $file"
+              exit 1
+            fi
+          done
+          echo "Legacy routes safely redirect to the canonical Portuguese questionnaire at /discovery/."
